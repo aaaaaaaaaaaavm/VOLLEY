@@ -1,0 +1,73 @@
+{
+  "analysis": "A5",
+  "tool": "GMAT R2022a (GmatConsole, headless)",
+  "invocation": "GmatConsole --run <script> (R2022a headless)",
+  "bands_declared_in": "validation/A5_astro_orekit.md",
+  "force_models": {
+    "atmosphere": "MSISE90",
+    "gravity": "20x20",
+    "integrator": "RungeKutta89",
+    "point_masses": [
+      "Luna",
+      "Sun"
+    ],
+    "srp": true
+  },
+  "reference": {
+    "multiplier": 1.8,
+    "base_years": {
+      "low_activity": 2.61,
+      "mean": 1.3,
+      "high_activity": 0.52
+    },
+    "source": "analysis/results/astro_results.json"
+  },
+  "levels": {
+    "low": {
+      "baseline_days": 2359.05,
+      "boosted_days": 4892.35,
+      "baseline_years": 6.459,
+      "boosted_years": 13.395,
+      "astro_baseline_years": 2.61,
+      "multiplier": 2.0739,
+      "deviation_pct": 15.21,
+      "within_band": false
+    },
+    "mean": {
+      "baseline_days": 429.94,
+      "boosted_days": 763.13,
+      "baseline_years": 1.177,
+      "boosted_years": 2.089,
+      "astro_baseline_years": 1.3,
+      "multiplier": 1.775,
+      "deviation_pct": -1.39,
+      "within_band": true
+    },
+    "high": {
+      "baseline_days": 144.51,
+      "boosted_days": 250.03,
+      "baseline_years": 0.396,
+      "boosted_years": 0.685,
+      "astro_baseline_years": 0.52,
+      "multiplier": 1.7302,
+      "deviation_pct": -3.88,
+      "within_band": true
+    }
+  },
+  "ephemerides": [],
+  "window_leg": {
+    "file": "validation/gmat/output/sma_window_30d.txt",
+    "window_days": 30.0,
+    "samples": 31,
+    "gmat_rate_km_per_day": -0.16184,
+    "astro_rate_km_per_day": -0.12159,
+    "ratio_gmat_over_astro": 1.331,
+    "osculating_residual_rms_km": 4.24,
+    "note": "Rates, not endpoints: reported SMA is osculating and its short-period variation exceeds the decay over this window. A rate difference is expected -- static exponential atmosphere vs MSIS -- and is not a failure. E6 defends the ratio, not the absolutes."
+  },
+  "invariance": {
+    "spread_pct": 18.48,
+    "within_band": false
+  },
+  "verdict": "FAIL -- open a P-item; do not edit analysis/astro.py"
+}

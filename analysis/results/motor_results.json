@@ -1,0 +1,62 @@
+{
+  "Kt_N_per_kA": 11.22,
+  "ripple_pct": 1.26,
+  "K_rated_kA": 140.0,
+  "regen": {
+    "s_m": 0.24,
+    "F_brake": 1413.448,
+    "K_kA": 140.0,
+    "mult_of_rated": 1.0,
+    "W_mech": 339.309,
+    "Q_copper": 15.177,
+    "Q_esr": 8.156,
+    "E_recovered": 296.614,
+    "Q_converter": 16.207,
+    "Q_aux": 3.124,
+    "t_ms": 15.62,
+    "v_end": 14.199,
+    "I_peak": 225.3,
+    "KE_sled_in": 1291.419,
+    "KE_to_brake": 952.126,
+    "frac_recovered_pct": 22.968
+  },
+  "regen_copper_pessimistic_J": 82.2,
+  "regen_E_recovered_pessimistic_J": 235.9,
+  "E_drawn_net_J": 2584.6,
+  "eff_net_pct": 21.16,
+  "shot": {
+    "F_cmd": 1413.448,
+    "v_exit": 16.537,
+    "a_g": 10.716,
+    "t_ms": 157.3,
+    "I_peak": 346.771,
+    "sag_pct": 5.354,
+    "E_drawn": 2881.217,
+    "Q_copper": 827.853,
+    "Q_esr": 85.578,
+    "KE_payload": 546.922,
+    "eff_pct": 18.982,
+    "J_Amm2": 21.0
+  },
+  "v_fleet_setpoint": 16.2,
+  "closed_loop_mean": 16.201,
+  "closed_loop_3sigma": 0.0271,
+  "family": {
+    "1U": {
+      "v_exit": 18.5,
+      "a_g": 13.4
+    },
+    "3U": {
+      "v_exit": 16.5,
+      "a_g": 10.7
+    },
+    "6U": {
+      "v_exit": 14.5,
+      "a_g": 8.3
+    },
+    "12U": {
+      "v_exit": 13.1,
+      "a_g": 6.7
+    }
+  }
+}
