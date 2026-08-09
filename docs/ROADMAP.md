@@ -7,8 +7,8 @@
 >
 > Last updated **2026-08-05**.
 
-This project publishes its own defects: **37 numbered problems and 27 open engineering
-items**. That is deliberate, and it only reads as rigour if there is also a plan for closing
+This project publishes its own defects: **31 live defects out of 64 numbered
+entries**. That is deliberate, and it only reads as rigour if there is also a plan for closing
 them. This is that plan.
 
 ---

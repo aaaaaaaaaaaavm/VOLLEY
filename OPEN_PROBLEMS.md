@@ -3,6 +3,26 @@
 Two categories: **P-items are errors in the currently published paper** and should be
 fixed first. **E-items are genuinely unsolved engineering.**
 
+> ## How to read the counts
+>
+> **64 numbered entries, of which 31 are live.** Every entry carries a `Status:` line written by
+> `tools/register_status.py`, which also derives the headline counts, so this file and the numbers
+> quoted elsewhere cannot drift apart again.
+>
+> | Status | Count | Meaning |
+> |---|---:|---|
+> | `LIVE` | **31** (16 P, 15 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **8** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CLOSED` | **25** | resolved, with the closer named in the entry |
+>
+> **This distinction did not exist until 2026-08-06** and its absence was itself a defect: a
+> reader could not separate live engineering debt from published history, so "37 defects" counted
+> both. `docs/PHASE_I_CLOSURE.md` §0 named fixing it as the first act of closing Phase I.
+>
+> The statuses are classified from each entry's own text. A handful sit close to the boundary
+> between `LIVE` and `CORRECTED` — where the defect is fixed but a consequence remains — and are
+> marked `LIVE`, which is the conservative direction.
+
 Last reviewed 2026-08-05.
 
 ---
@@ -16,6 +36,8 @@ Last reviewed 2026-08-05.
 > stale `astro.py` docstring value was corrected, both logged in `CHANGELOG.md`.
 
 ### P1. Conjunction minimum is wrong AND not a robust quantity: HIGH PRIORITY
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 **RESOLVED 2026-07-23, see CHANGELOG.md P2-01.**
 The paper states a 30-day minimum satellite-to-stage approach of **45.3 km**. That
 figure was computed at **20.65 m/s**, the superseded operating point. At the paper's
@@ -61,6 +83,8 @@ of the host stage before the first realignment. State plainly that per-shot COLA
 mandatory because the approach geometry is sensitive to exact ejection velocity.
 
 ### P2. Peak current is stale: MEDIUM PRIORITY
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 **RESOLVED 2026-07-23, see CHANGELOG.md P2-02.**
 Paper says **323 A**. That belongs to the superseded 130 kA/m point. At the rated
 140 kA/m, `motor_model.py` gives **392 A**. Fix the paper, and check that the SiC
@@ -68,6 +92,8 @@ device derating discussion still holds at the higher current (it should, 96 V ra
 1200 V devices, but the current rating of the bridge and busbars needs restating).
 
 ### P3. Far-field stray values don't reproduce exactly: LOW PRIORITY
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
 
 > **QUANTIFIED 2026-08-05 by `analysis/far_field_sensitivity.py`.** P3's diagnosis was right and
 > the size of it was not known. Sweeping `build_field(n_wave)` from 3 to 15 wavelengths against a
@@ -95,6 +121,8 @@ one that sets the keep-out spec, so this is minor, but resolve it before anyone 
 the 20/50 mm numbers.
 
 ### P4. Brake fin temperature rise conflates per-shot with per-campaign: MEDIUM PRIORITY
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 **RESOLVED 2026-07-23, see CHANGELOG.md P2-04.**
 The paper states the 0.86 kg copper fin sees "an adiabatic 37 K transient rise" **per
 shot**, and later refers to "the adiabatic per-shot rises (0.3 K coil, 37 K fin)".
@@ -121,6 +149,8 @@ radiation between shots relieves. Same correction applies to the coil: 0.28 K pe
 > `analysis/*.py` or `paper/paper.tex` has been changed** on the strength of the CAD.
 
 ### P5. CAD sled mass contradicts the parametric assumption: RESOLVED 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **RESOLVED.** `motor_model.M_SLED` and `sizing.M_SLED` now carry the CAD-derived **9.445 kg**
 > (P15), not the 4.86 kg parametric estimate. A4 ran, the drawn plate passed all three
 > structural bands, and the measurement fell in the decision rule's ≥ 6.80 kg branch, so the
@@ -148,11 +178,15 @@ Code_Aster, both free, both read `cad/step/gen3/EMOCD_Sled_Gen3.step`). Source:
 `cad/parameters.json` (sled group, `PROVISIONAL_PENDING_FEA`).
 
 ### P6. Payload seating / orientation: RESOLVED (by CAD, 2026-07-23)
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 Resolved via the rail interface: the 3U payload now models the four CubeSat Design
 Specification corner rails (8.5 mm, `cad/parameters.json` `payload_3u`), which fix seating
 and orientation against the sled cradle. No further action.
 
 ### P7. Brake sits past the release point: geometry / ConOps
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 The eddy brake occupies **x = 1530-1740 mm**, beyond the **1500 mm** satellite release
 point, on an 1800 mm longeron. The sled runs on into the brake after the payload departs
 consistent with the fire-then-arrest ConOps, but it forces the track and enclosure to
@@ -160,6 +194,8 @@ extend past release, which drives the envelope length (see P9). Source:
 `cad/parameters.json` (brake, track).
 
 ### P8. Exit velocity provisionally 17.88 m/s pending sled structural FEA: RESOLVED 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **RESOLVED, and not at 17.88 m/s.** That figure came from the 7.50 kg CAD estimate. The
 > CAD-derived mass is 9.445 kg, so the rated velocity is **16.537 m/s at 10.7 g**, now
 > propagated into `analysis/`, `paper/paper.tex`, the figures and every front page. The
@@ -178,6 +214,8 @@ which fixes in advance which of the two estimates wins at which mass). Do not ha
 20.37 to 17.88 anywhere. Source: 2026-07-23 CAD Master Plan; see README headline note.
 
 ### P9. Closed envelope exceeds ESPA Grande by ~44%: packaging / host
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 The closed installed envelope is **1839x 530x 940 mm** (`cad/parameters.json`). The
 1839 mm length exceeds ESPA Grande's ~1270 mm longest-dimension class by ~44%, because
 the brake lives past the 1500 mm release point and the enclosure spans it. Owner decision
@@ -187,6 +225,8 @@ the earlier 1825x 516x ~1030 mm figure; the height change (1030 to 940) exceeds 
 thickness explains and is **flagged for re-verification** in `cad/parameters.json`.
 
 ### P10. Enclosure, radiator, and packaged avionics absent from the mass rollup: MEDIUM (NEW)
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 The ninth document (`EMOCD_Enclosure`) adds 2 mm aluminium skins, a 1600x 200x 3 mm
 radiator, and equipment bays for the supercapacitor bank, PPU, sequencer, and IMU. **None
 have line items in `analysis/mass_properties.py`**, so the 72.3 kg dry-mass rollup is
@@ -194,6 +234,8 @@ incomplete. Add line items once masses are estimated (do not alter existing item
 cause). Source: `cad/parameters.json` (`enclosure.mass_note`).
 
 ### P11. The corrections may never have reached the submitted paper: RESOLVED 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **RESOLVED: nothing has been submitted anywhere.** checked 2026-07-29.
 > There is no version of record, so P1, P4 are not loose in any published document and no
 > corrigendum is needed. `paper/archive/EMOCD_submission_uncorrected.pdf` is a draft build
@@ -221,6 +263,8 @@ the outcome here. If the submitted build was in fact compiled from the corrected
 `paper.tex`, delete this item and say so in `CHANGELOG.md`.
 
 ### P12. The paper contradicts the CAD in two places: RESOLVED 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **RESOLVED in `paper/paper.tex`.** The Limitations section no longer says masses derive
 > from a parametric model rather than detailed CAD; it states what the CAD solid-volume calculation gives and what
 > that costs. The ESPA-Grande envelope is no longer asserted as a capability, the
@@ -253,6 +297,8 @@ version of record, it is not clear whether this is a camera-ready edit or a corr
 Resolve P11 first, then fix both items in one pass and rebuild.
 
 ### P13. The committed STEP set was mixed-generation, with two stubs: RESOLVED 2026-07-28
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 Found while importing `EMOCD_figs.zip`. The nine files in `cad/step/` matched no single CAD
 generation, and two of them were single solids:
 
@@ -274,6 +320,8 @@ generations. Body counts measured on import with `grep -c MANIFOLD_SOLID_BREP`, 
 from the source changelog.
 
 ### P14. Gen3 CAD defects not previously tracked: NEW 2026-07-28
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 From the Gen3 audit in `cad/CHANGELOG_CAD.md`, verified against the exports where possible.
 None of these were in this file before.
 
@@ -306,6 +354,8 @@ The sled fix **is** verifiable: Gen2 chassis half-length measures 180 mm (360 mm
 Gen3 measures 244 mm (488 mm plate), so G2-D1 is genuinely closed.
 
 ### P15. The Gen3 sled as drawn is 9.45 kg, above BOTH existing estimates: RESOLVED 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **RESOLVED by adoption.** 9.445 kg is now the operating point across `analysis/`, the
 > paper and the figures. `mass_properties.py` keeps the parametric breakdown for the record
 > and carries the 4.59 kg difference as an explicit reconciliation line, so system dry mass
@@ -337,6 +387,8 @@ supported by the geometry that currently exists.**
 Do not edit `analysis/*.py` on the strength of this. Run A4, then propagate once.
 
 ### P16. The lifetime-multiplier INVARIANCE claim is falsified: HIGH, NEW 2026-07-28
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
 GMAT R2022a, run headless against the bands declared in `validation/A5_astro_orekit.md`
 before the run:
 
@@ -437,6 +489,8 @@ atmosphere in the script or dropping the invariance claim and keeping the point 
 that is a judgement, not a patch. Paper edits batch with P11/P12.
 
 ### P17. The inter-array attraction feeding the A4 FEA is 37 % high: **RESOLVED 2026-07-31 by A12**
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **Closed by [`validation/A12_inter_array_force.md`](validation/A12_inter_array_force.md), five
 > of five declared bands.** A second numerical method — a Maxwell stress tensor integrated over
 > the mid-gap plane, sharing only the block model of the magnets — gives **2627.6 N** against
@@ -518,6 +572,8 @@ move `plate_stress_MPa`, ~~the retention-gate sizing,~~ and the A4 load together
 > from a 24 kg ascent stack at 25 g. This entry was wrong about its own blast radius.
 
 ### P18. Four physical effects are absent from the model, not merely unvalidated: MEDIUM, NEW 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 Distinct from the E-items, which record analyses not yet run. These are terms that no script
 contains, found by reading `sizing.py` and `motor_model.py` rather than the prose. Each is
 carried as an E-item below (E19-E22); this entry exists so they are visible from the P-list,
@@ -534,6 +590,15 @@ analysis has not been run".
 ---
 
 ### P19. Every validation run predates the operating point they validate: HIGH, NEW 2026-07-29
+
+> **RE-AUDITED 2026-08-06 and largely false now.** This entry was true when written. Since then
+> **A10, A11, A12, A13, A14, A15, A16, A17, A18 and A8-R2 have all run at or after the operating
+> point they test**, and A8-R2 in particular exists because this item's rule was followed rather
+> than bent: its bands were declared a third time rather than the earlier ones rewritten to fit.
+> What survives is **A4 and A5**, which still predate the current point. The entry stays LIVE for
+> those two, and its general claim no longer holds.
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Adopting the CAD-derived 9.445 kg sled moved the rated velocity from 20.37 to 16.537 m/s. The
 three analyses that have actually been run were all executed at the **old** point, so none of
 them currently validates the design as it stands:
@@ -556,6 +621,8 @@ argues for closing the rib-stiffened-chassis question (P5, E2) **first**.
 quotes A5 or A8 numbers now needs the velocity they were obtained at stated alongside.
 
 ### P20. The A1 run sheet's array-surface reference is mis-specified: LOW, NEW 2026-07-29
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 A1 ran and missed two of its seven declared bands. **One of the two is a defect in the run
 sheet, not in the model.**
 
@@ -579,6 +646,8 @@ correction belongs in the *next* run sheet.
 value and against the **fundamental**, not a raw peak. Two references need naming, not one.
 
 ### P21. Stray field at 50 mm: 2-D cannot test the far field: LOW, NEW 2026-07-29
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
 
 > **QUANTIFIED 2026-08-05 by `analysis/far_field_sensitivity.py`.** P3's diagnosis was right and
 > the size of it was not known. Sweeping `build_field(n_wave)` from 3 to 15 wavelengths against a
@@ -618,6 +687,8 @@ exactly, is the more trustworthy number here and the FEM is not evidence against
 **Do not** change `verify_field.py`. The row needs A2, a 3-D solve.
 
 ### P22. The novelty claim was wrong, and its replacement rests on abstracts: HIGH, NEW 2026-07-30
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
 A literature check found **published work on this exact concept that the paper did not cite.**
 Full record in [`docs/PRIOR_ART.md`](docs/PRIOR_ART.md).
 
@@ -678,6 +749,8 @@ project has measured nothing. `docs/BENCHTOP_TESTS.md` already specified the ans
 rather than chosen, by `validation/bench/bench_predict.py`. See E4.
 
 ### P23. The stroke time is stale in six places, and A8's band was set at the old one: MEDIUM, NEW 2026-07-30
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Found while building the shot animation, which draws its time axis from `motor_model.shot()`
 and came out at **157.3 ms** against the **127.7 ms** printed everywhere else.
 
@@ -712,6 +785,8 @@ Fresh bands were written and committed before the deck was touched, and the re-r
 pulse-duration row at 157.26 ms against 157.3. It failed a different row, which is P24.
 
 ### P24. No script carries a bank ESR, and the placeholder standing in for it is a factor of two high: HIGH, NEW 2026-07-30
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
 Found by A8-R, the re-run of the pulse-power simulation at the current operating point
 (`validation/A8_pulse_spice.md`). Five of six bands passed. Energy closure failed at **97.0 %**
 against a declared 98-102 %.
@@ -786,6 +861,8 @@ number, which is what E17 asked for, and it is still one model checking another.
 > figure is therefore the ESR loss of a bank nobody can build. See **P26**.
 
 ### P25. A retracted claim stayed live in the paper, the wiki and two docs for a day: MEDIUM, NEW 2026-07-30
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
 P22 withdrew ADR-003's assertion that coilgun efficiency is "1-2 % in the literature", after
 Feng et al. were found reporting **14.9-19.9 %** for a multi-stage on-orbit CubeSat launcher.
 The withdrawal was recorded in `docs/adr/003`, `docs/PRIOR_ART.md`, `docs/RELATED_WORK.md` and
@@ -826,6 +903,8 @@ guard. Catching that needs a list of load-bearing claims and where each is asser
 half of this defect cannot recur silently.
 
 ### P26. The supercapacitor bank cannot source the shot: HIGH, NEW 2026-07-30
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
 P24 recorded that the 12 mohm bank ESR had no source. Looking for one found that the value is
 not merely unsourced, it is **not attainable from the cells the design specifies**, and that the
 shot does not close without it. Full run: [`validation/A10_bank_esr.md`](validation/A10_bank_esr.md).
@@ -880,6 +959,8 @@ numbers move, though the ceiling at 65 mohm does not: that is set by this design
 demand and is independent of any datasheet.
 
 ### P27. A numerical guard hid the failure it was written next to: MEDIUM, NEW 2026-07-30
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Found by A10 on its first run, before it found anything about the bank.
 
 `shot()` solves `R I^2 - Vc I + P = 0` for the current drawn at the bank terminal. When the
@@ -905,6 +986,8 @@ value and continued. A guard that degrades silently is worse than no guard, beca
 a detectable failure into a credible wrong answer.
 
 ### P28. The regen stator and the eddy fin do not both fit the arrest section: MEDIUM, NEW 2026-07-31
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Opened by A11 in the act of adopting regenerative braking, and recorded rather than designed
 around.
 
@@ -942,6 +1025,8 @@ handover below 1.5 m/s. It is mechanical design, and it is the reason A11 says p
 answers the electromagnetic question only.
 
 ### P29. The paper says the winding is segmented; the model charges copper for all 1.3 m: MEDIUM, NEW 2026-07-31
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Found while pricing a longer track, and it is a question about the machine as built rather than
 about any proposal.
 
@@ -981,6 +1066,8 @@ energised at once, then `motor_model.py` computing `vol_cu` from that rather tha
 Both numbers then follow from one stated fact instead of two unstated ones.
 
 ### P30. An acceptance band was set at the easier of two available comparators: MEDIUM, NEW 2026-07-31
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 **A defect in how a band was chosen, not in a number.** This repository has no other entry of that
 kind, which is the reason to write it down.
 
@@ -1015,6 +1102,8 @@ document, record which document, which revision, and whether a tighter comparato
 same family.* One line, and it would have caught this.
 
 ### P31. The repository carries two different inter-shot cadences and reconciles neither: **RESOLVED 2026-08-05 by ADR-020**
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 
 > **The ConOps interval is 1200 s.** Adopted in [`docs/adr/020-inter-shot-cadence.md`](docs/adr/020-inter-shot-cadence.md) because it is the number `astro.py`'s conjunction model,
 > the realignment period and the deployment safety case were already computed against, so
@@ -1051,6 +1140,8 @@ answer is 1200 s, A13's bands 3–5 should be re-declared against it and re-run;
 change and belongs declared and dated, not quietly applied to an existing failure.**
 
 ### P32. The working Gen4 geometry has no corresponding operating point: HIGH, NEW 2026-08-03
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 
 The published Phase I result assumes a uniform 1.30 m active stator and release at 1500 mm.
 `EMOCD_Gen4_Open v7` instead places the same 488 mm sled at s = 300 mm stowed and s = 1200 mm
@@ -1073,6 +1164,8 @@ propagation through power, energy, thermal, braking, orbit, paper and validation
 then the Gen4 export gate stays closed and the Phase I baseline remains the only rated point.
 
 ### P33. The paper credits a winding inductance nobody had computed: MEDIUM, NEW 2026-08-05
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 
 `paper/paper.tex` says the drive switches at 20-40 kHz, "high enough that the current ripple is
 filtered by the winding inductance and low enough to keep switching loss within the converter's
@@ -1124,6 +1217,8 @@ is a **lower bound** and the ripple figures are upper bounds. `docs/PHASE_II.md`
 segmentation decision in **P29** both move it: energising less stator cuts L and R together.
 
 ### P34. A payload carrying a magnetometer cannot fly in this magazine: HIGH, NEW 2026-08-05
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 
 > **EXTENT BOUNDED 2026-08-05.** `analysis/far_field_sensitivity.py` profiles the field outward
 > from the thrust line. It falls below magnetometer full scale only at **z = 251 mm** and below
@@ -1165,6 +1260,8 @@ Shielding the payload is the option that should be resisted: it adds mass to the
 satellite, which is the modification the architecture exists to avoid.
 
 ### P35. The GMAT script generator is pinned to a superseded operating point: LOW, NEW 2026-08-05
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 
 `validation/gmat/build_scripts.py` carries `DV = 20.37` under a header saying the operating point
 is "identical to `astro.py` __main__ and `conjunction()` defaults". **It is not.** `astro.py`'s
@@ -1187,6 +1284,8 @@ together, or mark `DV` explicitly as the frozen historical value those two analy
 and delete the claim that it tracks `astro.py`. The second is honest and costs nothing.
 
 ### P36. The track has no dynamic design case, and A17 says it needs one: HIGH, NEW 2026-08-05
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 
 `sizing.py::track_first_mode()` checks the track against one static target -- above 70 Hz to clear
 the launch primary band. **A17 shows that is necessary and not sufficient.** Every shot chirps the
@@ -1210,6 +1309,8 @@ rests on an assumed effective mass and the unmodelled moving load, so it shows t
 matters without establishing that it breaks anything.
 
 ### P37. The retention gates were sized against a quasi-static load, not the launch environment: HIGH, NEW 2026-08-06
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 
 **Found by A18 band 9, against a band declared before the run.** `sizing.py` sizes the retention
 gate at **5.9 kN** through two D6 A-286 pins at MoS 1.2. Miles' equation on the GEVS protoflight
@@ -1242,6 +1343,8 @@ pins. **This is analysis only -- T-1 closes the test half of E10 and nothing her
 ## E: Unsolved engineering
 
 ### E1. Three-dimensional field closure: 2-D HALF CLOSED 2026-07-29 by A1
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **A1 has run.** A meshed 2-D magnetostatic FEM (scikit-fem P1, 141 k elements, gmsh) gives
 > **K_t = 11.228 N per kA/m against the model's 11.22 (a ratio of 1.0007**) with force
 > ripple 1.25 % against 1.26 %. Midgap peak and winding mean both land at ratio 1.001.
@@ -1260,6 +1363,8 @@ winding-resolved model and should not be used. **Nothing has been run.** A1 clos
 options). Acceptance band declared in `validation/A1_field_femm.md`.
 
 ### E2. No FEA confirmation of anything: PARTIALLY CLOSED
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **Two FEA results now exist.** A4 (CalculiX, structural) ran 2026-07-28. **A1 (magnetostatic)
 > ran 2026-07-29** and is the one that matters most: K_t had only ever been checked
 > analytic-against-analytic, a closed-form wave model against magpylib, both superposing
@@ -1278,6 +1383,8 @@ built (`validation/gmat/`) though not yet run. A8 (pulse-power, E17) is
 the cheapest of them and needs no CAD, no mesh, and no licence.
 
 ### E3. Masses are parametric and unchecked against vendor data
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 CAD now exists (`cad/`, nine documents), so the "no CAD" half of this item is closed,
 but the mass problem is not. `mass_properties.py` still uses primitive solids with
 shell/fill factors, and no component mass is checked against a vendor datasheet;
@@ -1288,6 +1395,8 @@ propagates directly into the headline velocity (see P5 and P8) and the enclosure
 radiator, and avionics are still missing from the rollup entirely (P10).
 
 ### E4. No hardware at any level
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 > **A protocol now exists, 2026-07-29.** `docs/BENCHTOP_TESTS.md` specifies four sub-scale
 > experiments, cheapest first, each closing a named claim with its acceptance band declared
 > in advance: a Halbach pair on a gaussmeter (B-1), single-coil thrust against
@@ -1312,10 +1421,14 @@ TRL 2-3. Nothing has been built, fired, or measured. The velocity, dispersion, a
 tip-off claims are all model outputs.
 
 ### E5. Host stage properties unavailable
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Recoil budgets are parametric across 300-900 kg host classes because no candidate
 stage publishes its mass and control authority. Cannot be closed from public data.
 
 ### E6. Absolute orbital lifetimes are uncertain
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Static exponential atmosphere at mean solar activity. Absolute lifetimes swing
 severalfold across the solar cycle. The x1.80 ratio was believed invariant and defensible;
 **P16 has since falsified the invariance**: GMAT gives 1.73 / 1.78 / 2.07 across low to high
@@ -1327,6 +1440,8 @@ from CelesTrak / Space-Track TLE histories, band 15 % on time-to-decay. Two mode
 agreeing is weaker than a model reproducing a flown decay, and the flight data is free.
 
 ### E7. Velocity dispersion rests on assumed sensor noise
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 The 0.027 m/s (3σ) result is a closed-loop simulation using an assumed 8 mm/s sensor
 sigma and assumed tolerance distributions. No sensor has been selected or characterised.
 The separation side of this is specified in `validation/A7_separation_chrono.md`, whose
@@ -1337,15 +1452,21 @@ publisher calls provisional, while the internal NRCSD that has flown hundreds of
 them. See **P30**.
 
 ### E8. Brake energy is thrown away
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 ~1.0 kJ per shot dissipated in the fin. Whether any of it is worth recovering (and what
 that would cost in mass and complexity) has not been examined since the efficiency
 correction.
 
 ### E9. 6U/12U variants are force-limited, not designed
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 The payload family table is arithmetic from the same thrust constant. No mechanism,
 cassette, or structural design exists for larger classes.
 
 ### E10. Launch restraint is drawn but not analysed
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 
 > **ANALYSIS HALF CLOSED 2026-08-06 by A18, and it FAILED.** Miles' equation on the GEVS
 > spectrum gives 11.7-20.2 kN through the retention pins against the 5.9 kN they were sized for.
@@ -1355,6 +1476,8 @@ mm, 2 off). The rest, escapement caging, cam lock, tolerance stack-up under vibr
 is drawn or described, not analysed.
 
 ### E11. No contamination or outgassing analysis
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 > **ADR-004 gains external support 2026-07-29:** coreless construction lowers outgassing and
 > vacuum-rated ironless linear motors are catalogue products, so this architecture converges
 > with fielded vacuum practice. Does not close the item, T-4 tests *this* material set.
@@ -1366,6 +1489,8 @@ Materials were selected against E595 limits by rule, not by analysis. No contami
 budget for customer optics exists.
 
 ### E12. EMC beyond stray field
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
 > **Specified 2026-07-29** as T-6 in `docs/QUALIFICATION_PLAN.md`: MIL-STD-461 RE102/CE102
 > class emissions during a 330 A pulse, plus static field measured at the payload envelope
 > against the 22.7 / 4.3 / 0.4 mT model. A customer flying a magnetometer or magnetorquer
@@ -1413,6 +1538,8 @@ adjacent payloads are discussed but not calculated.
 > `analysis/results/`; nothing in it is measured, and E12 closes on T-6.
 
 ### E13. Two numbers in source documents were never traced
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 - The "780 deg/s" tumble rate from a third-party document. Falsified as
   implausible (would require a ~7.6 m line-of-action offset on a 1 m vehicle) but its
   origin was never found.
@@ -1420,6 +1547,8 @@ adjacent payloads are discussed but not calculated.
   to this design.
 
 ### E14. Patent / disclosure: the disclosure has now happened
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Concept and results are public (LinkedIn, and this repository, which is now a **public**
 repo carrying the scripts and therefore the operating point). No provisional application
 was filed first, so this is done and cannot be undone. What remains is not a decision but
@@ -1430,9 +1559,13 @@ wanted, establish that earliest date and take advice quickly.** If it is not, cl
 item out explicitly so it stops reading as pending.
 
 ### E15. Sponsorship not secured
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 The build is the declared next step and is unfunded.
 
 ### E16. Reference hygiene
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Three references in `paper/paper.tex` were flagged verify-before-submission and have
 not been fully verified: eddy-damper heritage [15], Yudintsev separation dynamics [17],
 and the vibro-impact deployment paper [18]. `docs/RELATED_WORK.md` adds a further list of
@@ -1442,6 +1575,8 @@ Planet Labs results) is the one worth chasing first, since the paper's 25-day ba
 currently a model output rather than a measurement.
 
 ### E17. The pulse-power chain: PARTIALLY CLOSED 2026-07-28 by A8, with two findings
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 **A8 has been run** (ngspice 42, `validation/spice/emocd_shot.cir`). All five declared bands
 were met, exit velocity and pulse duration agree to 0.03 % across two different integrators,
 peak current +5.98 %, sag +0.18 points, energy +3.59 %. Two findings came out of it anyway:
@@ -1499,6 +1634,8 @@ This is the least expensive analysis in the plan: no geometry, no mesh, no licen
 attacks three headline-adjacent numbers at once.
 
 ### E18. Conjunction covariance is invented: NEW 2026-07-27
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Any probability-of-collision result (A6) inherits whatever covariance it is given, and no
 covariance exists for a satellite that has never flown. Space-Track **Conjunction Data
 Messages** carry real post-deployment covariances for comparable objects and are the
@@ -1507,6 +1644,8 @@ input, with an explicitly documented assumption as the fallback. Until that is d
 figure from this project should be quoted as anything but conditional on its assumption.
 
 ### E19. Eddy-current heating inside the magnet blocks is not modelled: NEW 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 
 > **CLOSED 2026-08-06 by A18, benign by a factor of 400.** 25.2 W of eddy loss in 3.67 kg of
 > NdFeB over a 158.6 ms pulse is **0.0025 K per shot, 0.030 K per campaign** against a 1 K band.
@@ -1537,6 +1676,8 @@ grows with current density, so it works directly against the "raise sheet curren
 calls thermally hard for the winding alone.
 
 ### E20. The brake's force-time profile does not exist: NEW 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 
 > **CLOSED 2026-08-06 by A18.** Velocity-proportional eddy drag gives a peak of **15.1 kN at
 > 162.9 g** at a 0.5 T pole field, arresting in 124 mm and 40 ms, with energy matching
@@ -1559,6 +1700,8 @@ E5 covers the *magnitude* of the recoil budget across host mass classes. Nothing
 question, and it is the natural companion to A7.
 
 ### E21. No vacuum tribology anywhere: SUBSTANTIALLY RETIRED BY CITATION 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 > **This is solved engineering with a handbook.** The ESA Space Tribology Handbook (Roberts,
 > ESTL) covers lubricant and component selection, cold welding, and rolling-element life in
 > vacuum; MoS2 is the broadly accepted solid lubricant. **Twelve cycles is a trivial life
@@ -1576,6 +1719,8 @@ covers outgassing and contamination. Neither covers the roller-to-rail interface
 lubricant, coating, or material pair is specified for it in `cad/parameters.json`.
 
 ### E22. Parasitic eddy drag on the track structure is not in the thrust model: REFRAMED 2026-07-29
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 
 > **CLOSED 2026-08-06 by A18 as the design rule it was reframed to be: no conductive structure
 > within 20 mm of the array back face**, where drag is 0.285 % of thrust. At 10 mm it is 3.9 %
@@ -1601,6 +1746,8 @@ whatever is actually there, and the standoff is not a single number in `cad/para
 The check is cheap once that geometry is pinned, and it belongs with A1.
 
 ### E23. Force-ripple harmonics sweep the track's own structural modes every shot: **CLOSED 2026-08-05 by A17, and it FAILED**
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 
 > **This item predicted the answer would be benign. It is not.** Peak amplification is **8.18x**
 > at the fundamental crossing of the 109 Hz fixed-fixed mode and **3.34x** at the 6th-harmonic
@@ -1646,6 +1793,8 @@ dwell-time check, and it does not exist.
 Cheap to close, and it belongs with A4's dynamic leg rather than with A1.
 
 ### E24. Attitude disturbance from magazine indexing is not modelled: NEW 2026-07-30
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 Found by reading a competitor's problem statement rather than by examining this design, which is
 worth stating plainly: Xu et al. (*Aerospace* 11(5) 394, 2024) build a **cost model for attitude
 disturbance caused by moving CubeSats around inside the deployer**, and optimise their transfer
@@ -1706,6 +1855,8 @@ claimed to be negligible until that is done.
 > Full working, the three fixes and what each costs: [`validation/A13_indexing_disturbance.md`](validation/A13_indexing_disturbance.md).
 
 ### E25. A13 now leaves attitude restoration and structural settling open: CORRECTED 2026-08-03
+> **Status:** `LIVE` — open engineering; something still has to be done
+
 
 The corrected rigid-body budget does not leave a residual angular rate after an internal mass
 starts and stops. It leaves a transient rate and an attitude offset. At the assumed 166 mm
@@ -1719,6 +1870,8 @@ trigger. The previous 8.2 s rate-null and 18.1 s cadence floor are superseded. P
 versus 1200 s cadence contradiction remains unresolved.
 
 ### E26. Brake-fin transient temperature across a campaign is not modelled: NEW 2026-08-03
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 
 > **CLOSED 2026-08-06 by A18, and ADR-020 is what closed it.** All sixteen swept
 > (emissivity, contact-conductance) pairs fully decay between shots at the 1200 s cadence, so
@@ -1736,6 +1889,8 @@ surface properties, and the resolved P31 cadence are required. The 0.32 m2 radia
 an assumed 130 W steady rejection case, not a demonstrated campaign transient.
 
 ### E27. Gen4 finite-stator force and energy are not modelled: **CLOSED 2026-08-05 by A16**
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
 
 > **Run against bands declared at `13b4b3b`.** Thrust per metre of overlapped array is 4086.0 N/m;
 > at full overlap that reproduces `F_cmd` to **0.000 %**, the self-consistency test the analysis
