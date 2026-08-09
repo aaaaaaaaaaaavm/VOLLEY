@@ -1,8 +1,8 @@
 # Closing Phase I: every open item, and what each one actually needs
 
-**Written 2026-08-05.** `OPEN_PROBLEMS.md` carries 34 P-items and 27 E-items. This file says,
-for each, what would close it and who or what has to do the closing — because a list of 61
-entries with no disposition is a list nobody can act on.
+**Written 2026-08-05, updated 2026-08-06.** `OPEN_PROBLEMS.md` carries **64 numbered entries, 31
+of them live**. This file says, for each, what would close it and who or what has to do the
+closing — because a list that size with no disposition is a list nobody can act on.
 
 **Phase I cannot end with an empty register, and pretending otherwise would be the dishonest
 version of this document.** Some items close only against hardware that does not exist. One
@@ -11,21 +11,25 @@ either closed, or open for a stated reason with a named next step"**.
 
 ---
 
-## 0. The first finding: the register does not distinguish fixed from live
+## 0. The first finding: the register could not distinguish fixed from live — **DONE 2026-08-06**
 
-Fifteen entries are marked RESOLVED. Forty-four are not. **But eight of those forty-four contain
-their own correction** — P16, P22, P25, P26, P30, P31 and others describe a defect that was found,
-corrected and propagated, and then remain in the register as the historical record.
+Entries marked RESOLVED sat alongside entries containing their own correction, with nothing
+marking which was which, so the headline count mixed live engineering debt with published
+history. Both are kept deliberately — this project publishes defects rather than deleting them —
+but a reader could not tell a live threat from a closed one without reading all of them.
 
-That is deliberate and right: this project publishes defects rather than deleting them, and a
-corrected entry is evidence. **What is wrong is that nothing marks which is which**, so the
-headline "34 numbered problems" counts live engineering debt and published history in one number.
-A reader cannot tell a live threat from a closed one without reading all 61 entries.
+**Closed by `tools/register_status.py`**, which writes a `Status:` line under every entry and
+derives the counts from them, with a `--check` mode so the file and the numbers quoted elsewhere
+cannot drift apart again.
 
-**The first act of closing Phase I is therefore bookkeeping, not analysis:** give every entry an
-explicit status line — `LIVE`, `CORRECTED, RETAINED AS RECORD`, or `CLOSED` — and derive the
-counts from it. Nothing else in this file can be trusted until that is done, including the
-dispositions below.
+| Status | Count |
+|---|---:|
+| `LIVE` | **31** — 16 P, 15 E |
+| `CORRECTED`, retained as the record | **8** |
+| `CLOSED` | **25** |
+
+**The real figure is 31 live, not 64.** Everything below was written before this was known and
+its dispositions still hold; the counts in section 1 are superseded by the table above.
 
 ---
 
@@ -165,3 +169,60 @@ three void rows** (A6), **one found a published number 37 % high** (A12).
 
 **A realistic Phase I close leaves E4 open, categories D and E open with named owners, and
 categories A, B and C closed.** That is a defensible end state. An empty register would not be.
+
+---
+
+## 10. The four decisions that are yours, costed
+
+**Updated 2026-08-06, after every closable analysis had run.** These did not move, because nothing
+computable resolves them. Each is here with what it blocks and what it costs either way, so the
+choice can be made rather than deferred again.
+
+### P29 — is the stator segmented? *(highest leverage)*
+
+`paper.tex` says the winding is segmented so a shorted coil degrades thrust rather than ending the
+campaign. `motor_model` charges copper loss for **all 1.30 m** regardless of sled position.
+
+| | Segmented | Not segmented (as modelled) |
+|---|---|---|
+| Copper loss | falls roughly with the energised fraction | **834.7 J/shot** |
+| Efficiency | rises | 20.99 % net |
+| **P33's inductance** | falls with energised length | **19.70 µH** |
+| Drive | one inverter per segment, or switching | one inverter |
+| Fault tolerance | the paper's claim becomes true | the claim is currently unsupported |
+
+**It moves three published numbers at once**, and the paper already asserts the answer. Deciding
+it is the single highest-leverage thing on this list.
+
+### P9 — target host class
+
+1839 mm closed envelope against ESPA Grande's ~1270 mm, **44 % over**. Kill criterion 2, binary.
+Either accept a larger host class and say so, or shorten the machine — and the brake sits beyond
+the 1500 mm release point, so the length is structural rather than packaging slack. PII-4 and
+PII-8 (free-flyer) both dissolve it differently.
+
+### P28 — regen stator versus eddy fin
+
+240 mm of regenerative stator and a 300 mm fin do not both fit the 339 mm arrest section.
+**A18 now prices the fin side**: the brake needs a 0.4–0.5 T pole field to stay inside both the
+200 g cap and the 210 mm envelope, so shortening it is not free. Giving up regeneration costs the
+**291.4 J** credit and 2.2 points of efficiency.
+
+### P10 — enclosure, radiator and packaged avionics
+
+Absent from the mass rollup. At a plausible 20 kg the per-satellite figure goes **6.375 → 8.08 kg**
+against a 2 kg threshold that is already crossed. This is not a decision so much as work nobody
+has done, and it makes kill criterion 1 worse in the only direction it can go.
+
+---
+
+## 11. What Phase I closes with, honestly
+
+**Every analysis this environment can run has run.** What remains is one measurement, four
+decisions, and a small number of items that are blocked rather than open:
+
+- **E4** — nothing built or measured. The standing caveat of a TRL 2–3 study, not debt to work off.
+- **A15 band 6 / A6 / P1** — inter-object safety is **not established**. A15's separations resolve
+  2.9 points per orbit; a real conjunction screen is A6's job and A6 returned three VOID rows.
+- **A15 band 8** — Case B needs POEM control authority (**E5**, undisclosed).
+- **A9** — blocked by network policy; the candidate shortlist is already in the run sheet.
