@@ -47,6 +47,9 @@ the analysis says 5.9 kN through two D6 A-286 pins at margin 1.2, and margin 1.2
 enough that this test is the one that matters. Launch locks hold the sled. No mass simulator
 moves in its cassette.
 
+> **This is now a predicted failure, not a ranked risk (2026-08-06).** A18 band 9 gives
+> 11.7-20.2 kN through retention pins sized for 5.9 kN. **P37.**
+
 **What this is really testing.** `sizing.py` gives the track a first mode of 48 Hz
 pinned-pinned and 109 Hz fixed-fixed against a 70-100 Hz secondary-structure convention. The
 design *specifies* end-fixed mounting to clear it. If the as-built joint is anywhere between
@@ -54,6 +57,13 @@ pinned and fixed (which is what A4 had to bracket for the chassis plate) the rea
 sit inside the primary band. **This is the single most likely qualification failure.**
 
 ## T-2: Sine sweep and low-frequency
+
+> **Promoted to pass/fail 2026-08-06, and it must now report Q.** A17 found the force ripple
+> amplifies **8.18x** at the 109 Hz mode and that no plausible damping rescues it (**P36**),
+> and A18 found the retention load scales as sqrt(Q) with the margin going negative by Q = 30
+> (**P37**). A signature comparison cannot answer either. **T-2 must measure the damping at
+> each mode**, and it is a qualification item rather than a before-and-after check. See
+> [`STRUCTURAL_GAP.md`](STRUCTURAL_GAP.md).
 
 Vehicle-specific, typically 5-100 Hz at 1.25x flight limit. Pre- and post-signature sweeps
 either side of every other test in this plan; they are how you detect damage that a visual
