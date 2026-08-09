@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **64 numbered entries, of which 31 are live.** Every entry carries a `Status:` line written by
+> **65 numbered entries, of which 32 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which also derives the headline counts, so this file and the numbers
 > quoted elsewhere cannot drift apart again.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **31** (16 P, 15 E) | open engineering; something still has to be done |
+> | `LIVE` | **32** (16 P, 16 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **8** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **25** | resolved, with the closer named in the entry |
 >
@@ -1334,6 +1334,34 @@ most likely qualification failure"*; **it is now a predicted failure rather than
 **What would close it:** a damping specification with measurement behind it, then resize the gates
 against the random-vibration case, or isolate the cassette stack so the mode does not drive the
 pins. **This is analysis only -- T-1 closes the test half of E10 and nothing here substitutes.**
+
+### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found by A15, and only because two GMAT runs stopped early.** R2 (350 km, 55.2 deg) and R3
+(350 km, 9.6 deg) never reached the declared 90 days: their twelve satellites **reentered**, R2
+halting at **36 days** with all twelve between 182 and 190 km, R3 at **29 days** between 103 and
+115 km. Only the 450 km case ran the full 90.
+
+**Nothing in this project models campaign mission life.** `astro.py` computes a lifetime
+*multiplier* (x1.62) for a single boosted satellite against an unboosted one, which is a ratio and
+not a duration. The deployment story -- twelve satellites, spread in altitude and plane -- has
+always been told without saying how long the fleet exists.
+
+**At 350 km that duration is about one month**, and the plane spread this project is pleased about
+develops *faster* there, 365 deg in 29 to 36 days against 367 deg in 90 at 450 km, **because the
+same drag that separates the nodes is what pulls the satellites down.** The two are not
+independent effects to be traded; they are the same effect.
+
+**Why it matters beyond the analysis.** `docs/MARKET.md`, `SUMMARY.md` and `paper.tex` Sec. VII
+all present POEM as the flown precedent, and POEM missions have operated near 350 km. A
+twelve-satellite campaign there is a **month-long** product, which is materially different from
+what a reader assumes when the analysis is quoted at 90 days.
+
+**What would close it:** a stated campaign mission life per host altitude, computed rather than
+assumed, with the customer-facing consequence written where the host is described rather than only
+in a run sheet. The GMAT runs already contain the data for 350 and 450 km.
 
 > **Not all of these weigh the same.** Three of the entries below are threats to whether the
 > machine has a reason to exist rather than engineering work, and they are hard to see in a

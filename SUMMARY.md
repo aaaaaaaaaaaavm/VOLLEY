@@ -82,6 +82,11 @@ feed, a serial command link, and an authorized firing window.
   capacity, falling to **22 %** and **13 %** on the announced 550 kg and 900 kg variants, so
   early flights are dedicated demonstrations and later ones ordinary manifest items.
 
+> **Campaign mission life, added 2026-08-06.** A GMAT propagation of the full twelve-satellite
+> campaign reaches 90 days at 450 km but only **29 to 36 days at 350 km**, where the satellites
+> reenter. POEM missions have operated near 350 km, so a campaign hosted there is a **month-long**
+> product. Logged as **E28**; nothing in this project previously modelled campaign duration.
+
 Recoil is the satellite's momentum only, **65.6 N·s** per shot, nulled by a few grams of cold
 gas.
 

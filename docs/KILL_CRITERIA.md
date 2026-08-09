@@ -1,6 +1,6 @@
 # What would make VOLLEY pointless
 
-`OPEN_PROBLEMS.md` lists 64 numbered entries, **31 of them live**, of very different weight.
+`OPEN_PROBLEMS.md` lists 65 numbered entries, **32 of them live**, of very different weight.
 Most are engineering work.
 A few are threats to whether the machine has any reason to exist, and they are hard to see when
 they sit in a numbered list next to a stale cross-reference.

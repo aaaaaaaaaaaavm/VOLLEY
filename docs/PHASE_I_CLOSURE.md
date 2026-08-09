@@ -1,6 +1,6 @@
 # Closing Phase I: every open item, and what each one actually needs
 
-**Written 2026-08-05, updated 2026-08-06.** `OPEN_PROBLEMS.md` carries **64 numbered entries, 31
+**Written 2026-08-05, updated 2026-08-06.** `OPEN_PROBLEMS.md` carries **65 numbered entries, 32
 of them live**. This file says, for each, what would close it and who or what has to do the
 closing — because a list that size with no disposition is a list nobody can act on.
 
@@ -24,11 +24,11 @@ cannot drift apart again.
 
 | Status | Count |
 |---|---:|
-| `LIVE` | **31** — 16 P, 15 E |
+| `LIVE` | **32** — 16 P, 16 E |
 | `CORRECTED`, retained as the record | **8** |
 | `CLOSED` | **25** |
 
-**The real figure is 31 live, not 64.** Everything below was written before this was known and
+**The real figure is 32 live, not 65.** Everything below was written before this was known and
 its dispositions still hold; the counts in section 1 are superseded by the table above.
 
 ---

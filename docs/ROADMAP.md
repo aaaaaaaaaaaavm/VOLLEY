@@ -7,7 +7,7 @@
 >
 > Last updated **2026-08-05**.
 
-This project publishes its own defects: **31 live defects out of 64 numbered
+This project publishes its own defects: **32 live defects out of 65 numbered
 entries**. That is deliberate, and it only reads as rigour if there is also a plan for closing
 them. This is that plan.
 
