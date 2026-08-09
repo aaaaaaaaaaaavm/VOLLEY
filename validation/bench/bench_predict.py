@@ -195,7 +195,7 @@ def main():
         "B2_thrust": {
             "quantity": "thrust per unit sheet current [N per kA/m]",
             "model_value": round(kt, 3),
-            "ripple_pct": round(ripple * 100, 3),
+            "ripple_pct": round(ripple, 3),   # thrust_constant() already returns per cent
             "terms": b2_terms,
             "rss_frac": round(b2_rss, 4),
         },

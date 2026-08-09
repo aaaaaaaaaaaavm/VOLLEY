@@ -64,8 +64,8 @@
   ],
   "B2_thrust": {
     "quantity": "thrust per unit sheet current [N per kA/m]",
-    "model_value": 11.218,
-    "ripple_pct": 125.78,
+    "model_value": 11.026,
+    "ripple_pct": 0.987,
     "terms": {
       "gap +/-0.5 mm at -13 %/mm": 0.065,
       "Br +/-3 %": 0.03,

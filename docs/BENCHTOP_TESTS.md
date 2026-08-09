@@ -1,5 +1,34 @@
 # Benchtop tests: the cheapest route to a measured number
 
+> ## Predictions refreshed 2026-08-06, before anything is ordered
+>
+> `validation/results/bench_predictions.json` was carrying **B-2 at 11.218 N per kA/m**, the
+> pre-quadrature value, against the current **11.026**. Ordering hardware against a stale
+> prediction would waste the one thing this programme exists to produce.
+>
+> **B-1's five field rows are unchanged** — 0.69421 T peak, 0.55184 T winding mean, and the three
+> stray stations — because the quadrature correction moved the thrust integral and not the field.
+> That they are unchanged was **checked, not assumed**, and it is the reason B-1 was still
+> orderable on the old file while B-2 was not.
+>
+> **A defect fell out of the refresh.** `bench_predict.py` reported `ripple_pct = 125.78`, which
+> matched neither the ±0.99 % force ripple nor the 13.5 % measurement uncertainty. Cause:
+> `motor_model.thrust_constant()` already returns ripple as a percentage and the generator
+> multiplied by 100 again. It now reads **0.987 %**. A prediction that wrong would have been
+> compared against a real measurement.
+>
+> **These values are the acceptance band.** They are dated and committed before the parts exist,
+> which is the same discipline every `validation/A*.md` sheet follows — a prediction refreshed
+> after a measurement would be worthless.
+>
+> ### B-4 is more decisive than its position suggests
+>
+> A18 showed the eddy brake works **only for a 0.4–0.5 T pole field**: below it the sled overruns
+> the 210 mm arrest envelope, above it deceleration exceeds the 200 g cap the magnet bond is sized
+> to. Nothing in `cad/parameters.json` states that field. **B-4 is the only test that would bound
+> it**, which makes it more urgent than a fourth-in-line coupon test looks.
+
+
 **E4 says it plainly: nothing in this project has been built, fired, or measured.** Every
 number in this repository is a model output, and two of them are cross-checked only against
 another model. That is the one gap no amount of further analysis closes.
