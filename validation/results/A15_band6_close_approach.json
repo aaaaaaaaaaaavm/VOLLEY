@@ -1,0 +1,55 @@
+{
+  "analysis": "A15 band 6",
+  "band_m": 100.0,
+  "method": "cubic spline in row index, Brent refinement of every interior local minimum; refinement is monotone-checked",
+  "cases": {
+    "r1": {
+      "rows": 60473,
+      "pairs": 66,
+      "worst": {
+        "pair": "sat11-sat12",
+        "sampled_km": 0.481576553227891,
+        "refined_km": 0.39603948106688186,
+        "at_index": 4539.873708685835,
+        "local_minima": 2771
+      },
+      "min_sampled_km": 0.481576553227891,
+      "min_refined_km": 0.39603948106688186,
+      "refinement_tightened_pct": 17.761884707150887,
+      "total_local_minima": 182411,
+      "verdict": "PASS"
+    },
+    "r2": {
+      "rows": 24517,
+      "pairs": 66,
+      "worst": {
+        "pair": "sat02-sat07",
+        "sampled_km": 3.0054940217151724,
+        "refined_km": 1.2744603040083897,
+        "at_index": 24386.58244909898,
+        "local_minima": 1138
+      },
+      "min_sampled_km": 1.7280983435988344,
+      "min_refined_km": 1.2744603040083897,
+      "refinement_tightened_pct": 26.2507073900508,
+      "total_local_minima": 75296,
+      "verdict": "PASS"
+    },
+    "r3": {
+      "rows": 21592,
+      "pairs": 66,
+      "worst": {
+        "pair": "sat08-sat11",
+        "sampled_km": 21.993263035933857,
+        "refined_km": 21.97910194531814,
+        "at_index": 12706.18040217472,
+        "local_minima": 816
+      },
+      "min_sampled_km": 21.993263035933857,
+      "min_refined_km": 21.97910194531814,
+      "refinement_tightened_pct": 0.0643883110595378,
+      "total_local_minima": 52132,
+      "verdict": "PASS"
+    }
+  }
+}

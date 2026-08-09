@@ -37,32 +37,60 @@ deployment story this project tells survives an independent propagator.
 
 ## Result, all three cases, 2026-08-06
 
-GMAT R2022a, 90 days, twelve satellites per case, ~60 000 rows each. Bands at `e067da8`.
+GMAT R2022a, twelve satellites per case. Bands at `e067da8`. **R1 ran the full 90 days; R2 and
+R3 stopped early at 36 and 29 days because their satellites reentered — see the correction below.**
 
 | | R1 450/51.6 | R2 350/55.2 | R3 350/9.6 | Band |
 |---|---:|---:|---:|---|
 | 1 max inclination change | 0.1229° | 0.1220° | 0.1220° | ≤ 0.13° **PASS** |
 | 2 altitude extent | 117.2 km | 114.6 km | 114.6 km | ≥ 100 km **PASS** |
 | 3 max RAAN change at epoch | 0.1568° | 0.1486° | 0.7315° | ≤ 0.75° **PASS** |
-| 4 RAAN spread at 90 d | 367.0° | 364.8° | 366.2° | ≥ 5° **PASS** |
+| 4 RAAN spread at end of run | 367.0° | 364.8° | 366.2° | ≥ 5° **PASS** |
 | 5 SMA vs `astro.boosted_elements` | 0.0000 % | 0.0000 % | 0.0000 % | ≤ 0.5 % **PASS** |
-| 6 min inter-object separation | 2.275 km | 3.763 km | 22.578 km | **NOT RELIABLY EVALUATED** |
+| 6 min inter-object separation | **0.396 km** | 1.275 km | 21.979 km | > 100 m **PASS** |
+
+> ### Correction, 2026-08-06: two of those columns were never 90-day values
+>
+> **R2 and R3 did not reach 90 days. Their satellites reentered.** R2's propagation stops at
+> **36 days** with all twelve between 182 and 190 km altitude; R3's at **29 days**, between 103
+> and 115 km. GMAT halted because the objects were entering the atmosphere, and I read the final
+> row as an endpoint without checking its epoch.
+>
+> So the R2 and R3 columns are **36-day and 29-day figures**, and the row labelled "RAAN spread
+> at 90 d" was wrong for both. Only R1 ran the declared 90 days.
+>
+> **This is a result, not only a bookkeeping error.** At 350 km a twelve-satellite campaign has a
+> mission life of about **one month**, and the plane spread develops *faster* there — 365° in 29
+> to 36 days against R1's 367° in 90 — because the same drag that separates the nodes is what
+> pulls the satellites down. **The deployment story at 350 km is a month long**, and that belongs
+> in any claim made about a POEM-class host.
 
 **R3 exercises band 3 hardest**, reaching 0.7315° against a 0.75° limit — the low-inclination
 case gives the largest RAAN change per cross-track shot, as predicted, and very nearly fails.
 
-### Band 6 is not a pass and is not recorded as one
+### Band 6 is now evaluated, and the coarse number was wrong by 5.7x
 
-The minimum separations above are **sampled**, and the sampling is far too coarse to mean
-anything: 4031 samples over 90 days is one point every **1929 s against a 5560 s orbital
-period — 2.9 samples per orbit.** Two objects closing at kilometres per second can pass each
-other entirely between samples.
+`validation/conjunction/close_approach.py` splines each satellite's Cartesian track and refines
+**every interior local minimum** with Brent minimisation — 182 411 of them for R1 alone — rather
+than reading a minimum off a 2.9-samples-per-orbit series.
 
-So 2.275 km is *a distance seen at three arbitrary points per orbit*, not a minimum. **Band 6
-remains unevaluated**, and the honest statement is that A15 has not established inter-object
-safety. Closing it needs a real conjunction screen with adaptive refinement near candidate
-minima — which is what `astro.py`'s `conjunction()` already does at 0.25 s sampling, and what
-**A6** exists for. A6 returned three VOID rows and **P1 is still open**.
+| | Sampled | **Refined** | Tightened by |
+|---|---:|---:|---:|
+| R1, 450 km, 90 d | 0.482 km | **0.396 km** | 17.8 % |
+| R2, 350 km, 36 d | 1.728 km | **1.275 km** | 26.3 % |
+| R3, 350 km, 29 d | 21.993 km | **21.979 km** | 0.06 % |
+
+**Band 6 PASSES on all three**, worst case **396 m between sat11 and sat12 at 450 km**, about
+four times the 100 m band.
+
+**The figure I first reported was 2.275 km — 5.7× too large.** That is what a 2.9-sample-per-orbit
+series does, and it is why the row was recorded as unevaluated rather than passed. The refinement
+is monotone-checked: it can only return separations equal to or smaller than the sampled minimum,
+and the script asserts on any violation.
+
+**This does not close P1.** Band 6 tests *distance*, which is robust; A6's collision probability
+is still VOID on three rows. And 396 m is a **modelled** separation between two objects whose
+positions carry no covariance.
 
 **This matters because of band 4.** 367° of nodal spread means the planes wrap and pairs
 re-align during the campaign, so close approaches are plausible rather than hypothetical, and
@@ -80,9 +108,8 @@ GMAT R2022a, 90 days, twelve satellites, 60 474 rows each. Bands committed at `e
 | 4 | RAAN spread after 90 days | ≥ 5° | 13.2° | **367.0°** | **PASS** |
 | 5 | GMAT SMA vs `astro.boosted_elements` | ≤ 0.5 % | — | **0.0000 %** | **PASS** |
 
-Bands 6, 7 and 8 were **not evaluated**: band 6 needs Cartesian positions the report set does not
-carry, band 7 is a property of the script rather than a GMAT output, band 8's Case B is not
-generated. They are open, not passed.
+Band 6 has since been evaluated — see above. Bands 7 and 8 remain **not evaluated**: band 7 is a
+property of the script rather than a GMAT output, and band 8's Case B is not generated.
 
 ### Band 4 passed, and my prediction of it was badly wrong
 
@@ -101,8 +128,8 @@ the design is 28 times better than thought. Two consequences follow and neither 
 
 - **367° is more than a full revolution of relative nodal position.** The planes do not simply
   spread — they wrap, so pairs of satellites re-align in RAAN at some point during the campaign.
-  A15 band 6 was the one that would have caught whether that matters, and it could not be
-  evaluated.
+  A15 band 6 was the one written to catch whether that matters, and it now has: the closest
+  approach anywhere in the campaign is **396 m**.
 - **The spread is a decay artefact as much as a design feature.** Satellites separating in plane
   because they are falling at different rates is not the same product claim as satellites placed
   in different planes, and `SUMMARY.md` and the paper should not conflate them.
