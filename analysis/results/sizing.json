@@ -40,9 +40,9 @@
   "retention_gate": {
     "load_kN": 5.89,
     "n_pins": 2,
-    "pin_dia_mm": 6.0,
-    "capacity_kN": 18.2,
-    "margin": 1.2
+    "pin_dia_mm": 9.0,
+    "capacity_kN": 41.0,
+    "margin": 4.0
   },
   "track_mode": {
     "pinned_pinned_Hz": 48.0,

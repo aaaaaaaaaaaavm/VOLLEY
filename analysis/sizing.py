@@ -14,7 +14,7 @@ Reproduces:
     inter-array attraction      2.69 kN, side plate 24 MPa vs 880 MPa Ti yield (A12)
     arrest load                 9.5 kN axial, ~0.76 kN per roller pair
     abort latch                 0.64 kN, M4 A-286 margin ~5
-    retention gate              5.9 kN, two D6 A-286 pins, MoS 1.2
+    retention gate              two D9 A-286 pins, 41.0 kN, MoS +0.45 at Q=30 (A22)
     track first mode            48 Hz pinned / 109 Hz fixed-fixed  (target >70 Hz)
     gap tolerance               -13 %/mm  -> +/-0.05 mm shim -> +/-0.65 %
     magnet temperature          -0.11 %/K -> +/-40 K -> 132 kA/m needed < 140 rated
@@ -159,11 +159,20 @@ def abort_latch():
                 capacity_N=m4_a286_ult, margin=round(m4_a286_ult / (2 * F) - 1, 1))
 
 
-def retention_gate(n_pins=2, d=0.006, stack_kg=24.0, g_ascent=25.0, design_factor=1.4):
+def retention_gate(n_pins=2, d=0.009, stack_kg=24.0, g_ascent=25.0, design_factor=1.4):
     """Gate carries ascent preload of a six-satellite stack straight into structure.
 
     NOTE: an earlier iteration sized this as a single D5 pin and got margin 0.5,
-    which is inadequate. Resized to two D6 pins.
+    which is inadequate. Resized to two D6 pins, and then to two D9.
+
+    THE QUASI-STATIC CASE BELOW IS NOT THE SIZING CASE, and D6 was chosen as though it were.
+    A18 band 9 found the governing load is random vibration through the track's 109 Hz mode:
+    20.2 kN at Q = 30 against a D6 capacity of 18.2 kN, i.e. a NEGATIVE margin. A22 resized to
+    D9 -- capacity 41.0 kN, margin +0.45 at Q = 30 and positive across Q = 10..30, for 11 g --
+    so the design no longer depends on where the unmeasured Q lands (P37, STRUCTURAL_GAP).
+
+    The figure this function returns is still the quasi-static margin, which is now +3.98. Read
+    validation/A22_gate_resize.md for the case that actually governs.
     """
     F = stack_kg * g_ascent * G
     tau_ult = 537e6 * 0.6                       # A-286 shear ~0.6 x tensile

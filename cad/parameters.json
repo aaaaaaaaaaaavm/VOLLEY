@@ -7,16 +7,26 @@
     "units": "millimetres unless stated",
     "coordinate_frame": "x = firing axis, positive toward the muzzle. Origin x=0 at the ESPA flange aft mating face. y = lateral (P = +y port, S = -y starboard). z = vertical, z=0 at the stator mid-plane."
   },
-
   "envelope": {
-    "installed_closed_mm": [1839, 530, 940],
-    "extremes_min_mm": [-32, -265, -230],
-    "extremes_max_mm": [1807, 265, 710],
+    "installed_closed_mm": [
+      1839,
+      530,
+      940
+    ],
+    "extremes_min_mm": [
+      -32,
+      -265,
+      -230
+    ],
+    "extremes_max_mm": [
+      1807,
+      265,
+      710
+    ],
     "status": "authoritative",
     "reconciliation_note": "SUPERSEDES the 1825 x 516 x ~1030 figure in EMOCD_CAD_Master_Plan.md. That earlier value was measured on the now-superseded single-file model (MOCD_Deployer_Assembly_v1, closed and archived) BEFORE the enclosure existed, before the ESPA interface was rebuilt from a flat plate into a ring flange, and before the cassette septum/pin corrections. Length and width grow by skin clearance plus 2 mm shell (1825->1839, 516->530). CAUTION: the height change (1030->940) is larger than skin thickness explains — the lower bound is now set by the flange ring (z=-230) and the upper by the radiator (z=+710); the earlier model's height is believed to have included annotation-plane text and a differently-measured follower-motor stack. FLAGGED FOR RE-VERIFICATION.",
     "espa_grande_conflict": "Longest dimension exceeds ESPA Grande's ~1270 mm class limit by ~44%. Open problem P9 — host claim must be re-scoped or the machine repackaged."
   },
-
   "groups": {
     "track": {
       "_document": "EMOCD_Track",
@@ -43,7 +53,6 @@
       "release_point": 1500,
       "status": "authoritative"
     },
-
     "stator": {
       "_document": "EMOCD_Stator (v4)",
       "topology": "ironless, single-layer, three-phase",
@@ -60,15 +69,25 @@
       "wavelength": 48,
       "active_span_start": 0,
       "active_span_end": 1296,
-      "belt_sequence": ["A+", "C-", "B+", "A-", "C+", "B-"],
-      "phase_colours": {"A": "red", "B": "green", "C": "blue"},
-      "winding_fill_factor_for_mass": 0.60,
+      "belt_sequence": [
+        "A+",
+        "C-",
+        "B+",
+        "A-",
+        "C+",
+        "B-"
+      ],
+      "phase_colours": {
+        "A": "red",
+        "B": "green",
+        "C": "blue"
+      },
+      "winding_fill_factor_for_mass": 0.6,
       "end_turns_modelled": false,
       "end_turns_note": "Omitted — correct for field and force computation, WRONG for packaging. Real racetrack ends wrap beyond the 90 mm active depth and are not in the envelope.",
       "layer_count_decision": "OPEN — single vs two-layer is an unmade electromagnetic design decision. Single layer as drawn.",
       "status": "authoritative_for_field_geometry"
     },
-
     "sled": {
       "_document": "EMOCD_Sled",
       "overall_length": 488,
@@ -99,7 +118,6 @@
       "status": "PROVISIONAL_PENDING_FEA",
       "provisional_note": "The 6 mm chassis is a first-pass stiffness-driven design (0.0115 mm deflection under 3.7 kN inter-array attraction -- superseded, A12 gives 2.69 kN, so the deflection is conservative -- against a +/-0.05 mm gap budget) with NO structural FEA behind it. Sled mass from this geometry contradicts the 4.86 kg assumed by mass_properties.py and drives exit velocity. Open problems P5/P8. ANSYS analysis A4 must close this before any number downstream is locked."
     },
-
     "magazine": {
       "_document": "EMOCD_Magazine_Cassette (one document, inserted twice; second instance is a 180-degree rotation about z through x=210.25, NOT a mirror — Fusion rejects mirror transforms for external references)",
       "cassette_length_x": 380.5,
@@ -114,9 +132,12 @@
       "escapement_finger_count": 2,
       "gate_frame_z_min": 46,
       "gate_frame_z_max": 626,
-      "gate_pin_diameter": 6,
+      "gate_pin_diameter": 9,
       "gate_pin_count": 2,
-      "gate_pin_x_positions": [110, 290],
+      "gate_pin_x_positions": [
+        110,
+        290
+      ],
       "gate_pin_material": "A-286",
       "gate_ascent_preload_N": 5900,
       "septum_thickness": 1.0,
@@ -127,9 +148,9 @@
       "septum_material": "silicon steel",
       "shell_panel_thickness": 4.0,
       "shell_construction_decision": "OPEN — drawn as closed 4 mm panels (upper bound, and the mounting surface the silicon-steel septa need). mass_properties.py assumes a 6% fill open frame (lower bound). The ~4.8 kg difference is a real design decision, not an error.",
-      "status": "authoritative_geometry_open_decision"
+      "status": "authoritative_geometry_open_decision",
+      "gate_pin_diameter_note": "6 -> 9 mm, 2026-08-10 by validation/A22_gate_resize.md. D6 was sized against a quasi-static 25 g case; the governing case is random vibration through the 109 Hz mode, where D6 gives a negative margin at Q = 30. D9 gives +0.45 there and stays positive across Q = 10..30 for 11 g. See P37."
     },
-
     "brake": {
       "_document": "EMOCD_Brake",
       "x_start": 1530,
@@ -144,7 +165,6 @@
       "status": "PROVISIONAL",
       "provisional_note": "Poles were lightened from solid blocks to 15 mm plates on structural reasoning alone. Magnetic sizing against the required pole area has NOT been done — pending the eddy-brake field check."
     },
-
     "interface_espa": {
       "_document": "EMOCD_Interface_ESPA",
       "flange_outer_diameter": 460,
@@ -163,7 +183,6 @@
       "flange_protrudes_through_aft_skin": true,
       "status": "authoritative"
     },
-
     "payload_3u": {
       "_document": "EMOCD_Payload_3U (one document, twelve instances)",
       "length_x": 340.5,
@@ -176,7 +195,6 @@
       "modelled_as": "solid aluminium proxy — real 3U flight mass is 4 kg, NOT the Fusion-computed value",
       "status": "authoritative"
     },
-
     "enclosure": {
       "_document": "EMOCD_Enclosure (NEW — the ninth document; this is the flight unit as seen from outside)",
       "skin_thickness": 2.0,
@@ -204,17 +222,68 @@
       "radiator_z": 707,
       "radiator_area_m2": 0.32,
       "bays": {
-        "supercap_bank_96V_6F": {"x": [0, 300], "y": [-255, -115], "z": [-180, -30]},
-        "ppu_sic_inverter": {"x": [330, 580], "y": [-255, -115], "z": [-130, -30]},
-        "avionics_sequencer": {"x": [610, 760], "y": [-255, -135], "z": [-130, -50]},
-        "imu_unit": {"x": [790, 850], "y": [-255, -195], "z": [-130, -80]}
+        "supercap_bank_96V_6F": {
+          "x": [
+            0,
+            300
+          ],
+          "y": [
+            -255,
+            -115
+          ],
+          "z": [
+            -180,
+            -30
+          ]
+        },
+        "ppu_sic_inverter": {
+          "x": [
+            330,
+            580
+          ],
+          "y": [
+            -255,
+            -115
+          ],
+          "z": [
+            -130,
+            -30
+          ]
+        },
+        "avionics_sequencer": {
+          "x": [
+            610,
+            760
+          ],
+          "y": [
+            -255,
+            -135
+          ],
+          "z": [
+            -130,
+            -50
+          ]
+        },
+        "imu_unit": {
+          "x": [
+            790,
+            850
+          ],
+          "y": [
+            -255,
+            -195
+          ],
+          "z": [
+            -130,
+            -80
+          ]
+        }
       },
       "bays_verified_clear_of_track": true,
       "status": "authoritative_geometry",
       "mass_note": "The enclosure, radiator, and packaged avionics have NO line items in mass_properties.py. The dry-mass rollup is incomplete until they are added. Open problem P10."
     }
   },
-
   "documents": {
     "EMOCD_Track": "longerons, roller channels, guide rails, launch locks",
     "EMOCD_Stator": "162-conductor three-phase belt winding; also the FEMM geometry source",
@@ -226,7 +295,6 @@
     "EMOCD_Enclosure": "skins, muzzle panel, aft flange cutout, radiator, equipment bays",
     "EMOCD_Assembly": "inserts all eight above; carries sled_slider_X and payload_on_sled_rigid joints"
   },
-
   "open_problems_referenced": {
     "P5": "CAD sled mass contradicts the parametric assumption",
     "P8": "exit velocity provisional pending sled structural FEA",
