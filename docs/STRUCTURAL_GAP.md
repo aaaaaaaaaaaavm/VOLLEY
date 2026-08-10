@@ -59,6 +59,20 @@ It does not measure Q. What it does is produce **the first measured number in a 
 standing caveat is E4: nothing built or measured at any scale.** The modal survey is the second
 step and needs a track to exist.
 
+## A19 ranked it against everything else, 2026-08-10
+
+`validation/A19_sensitivity_ranking.md` swept nine assumed inputs against `v_exit`, net efficiency
+and kg per satellite. **Structural Q returns exactly zero on all three** — it has no path to any
+headline number, and a ranking that stopped there would have reported it harmless.
+
+**It is the only input on that list that moves a margin of safety through zero.** Across its
+declared range of Q = 10 to 30 the retention-gate margin goes **+0.559 → −0.100**, while the three
+ranked outputs move by single-digit percentages under every input that touches them.
+
+**That asymmetry is the argument this file was written to make**, and it now has a number behind
+it: the headline results are not what is at risk from the unmeasured damping. **The design's
+viability is.** A19's measurement priority puts Q first for exactly that reason.
+
 ## What this file is not
 
 It is not a new result, and nothing in it is measured. It is four existing findings put next to

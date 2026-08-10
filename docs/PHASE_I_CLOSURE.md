@@ -251,6 +251,35 @@ has done, and it makes kill criterion 1 worse in the only direction it can go.
 
 ---
 
+## 10b. What to measure first — A19, 2026-08-10
+
+The register says what is open. It has never said what is **worth** resolving first.
+`validation/A19_sensitivity_ranking.md` ranks nine assumed inputs by how much each moves
+`v_exit`, net efficiency and kg per satellite, with the bands committed before the script existed.
+
+**Band 1 failed**, and usefully: net efficiency has one leader by range-swing (**bank ESR**,
+23.24 %) and a different one by local elasticity (**magnet remanence**, 0.487 against −0.038).
+Both rankings are published rather than the more convenient one being chosen. Bank ESR leads on
+swing **because nobody knows what it is**, not because efficiency is especially sensitive to it —
+which is a different reason to measure something, and worth keeping separate.
+
+**Six of the nine inputs return exactly zero on all three headline numbers**, and two of those six
+move a pass/fail transition inside their own declared range:
+
+| Input | Effect on the three headline numbers | What it actually moves |
+|---|---|---|
+| **Structural Q** | **0.000 %** | **retention-gate margin +0.559 → −0.100** — through zero |
+| **Brake pole field** | **0.000 %** | brake stopping distance 0.345 → 0.063 m against a 0.210 m section |
+
+**The headline numbers are not what is at risk from the unmeasured assumptions. The design's
+viability is.** A ranking that looked only at exit velocity, efficiency and kg per satellite would
+have reported six harmless zeros and missed both of these, which is why A19 reports a binding
+output for every input that ranks zero.
+
+**Measurement order:** structural Q, then the magnet grade (a look-up, not a measurement), then a
+sourced bank ESR, then B-4 for the brake pole field. **This ranks assumptions and makes none of
+them less assumed** — every input is exactly as unmeasured afterwards, and E4 is untouched.
+
 ## 11. What Phase I closes with, honestly
 
 **Every analysis this environment can run has run.** What remains is one measurement, four

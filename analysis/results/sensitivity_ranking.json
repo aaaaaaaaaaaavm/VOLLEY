@@ -1,0 +1,540 @@
+{
+  "analysis": "A19",
+  "bands_declared_commit": "03628da",
+  "framing": "ranks assumptions; does not make any of them less assumed",
+  "nominal": {
+    "v_exit": 16.387939109293626,
+    "eff_net_pct": 20.98598613301918,
+    "kg_per_satellite": 6.375
+  },
+  "perturbation": 0.05,
+  "inputs": [
+    {
+      "key": "BR",
+      "label": "magnet remanence",
+      "nominal": 1.32,
+      "lo": 1.25,
+      "hi": 1.4,
+      "provenance": "assumed; CAD states no grade",
+      "swing": {
+        "v_exit": 0.056603232832695055,
+        "eff_net_pct": 0.054979206199860804,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.5028373266077727,
+        "eff_net_pct": 0.4868878381176335,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "B_POLE",
+      "label": "brake pole field",
+      "nominal": 0.5,
+      "lo": 0.3,
+      "hi": 0.7,
+      "provenance": "A18 sweep; unstated in CAD, B-4 bounds it",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "Q",
+      "label": "structural Q",
+      "nominal": 20.0,
+      "lo": 10.0,
+      "hi": 30.0,
+      "provenance": "A18 sweep; never measured (STRUCTURAL_GAP)",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "EPS",
+      "label": "fin emissivity",
+      "nominal": 0.5,
+      "lo": 0.04999999999999999,
+      "hi": 0.9,
+      "provenance": "A18 sweep; surface finish unspecified",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "H_CONT",
+      "label": "contact conductance",
+      "nominal": 500.0,
+      "lo": 100.0,
+      "hi": 5000.0,
+      "provenance": "A18 sweep; joint unspecified",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "R_ESR",
+      "label": "bank ESR",
+      "nominal": 0.012,
+      "lo": 0.006,
+      "hi": 0.065,
+      "provenance": "nominal unsourced (E17); ceiling from A10",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.23240382669653975,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": -0.0375889013798094,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "BC",
+      "label": "ballistic coefficient",
+      "nominal": 61.0,
+      "lo": 40.0,
+      "hi": 90.0,
+      "provenance": "A5 sweep",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "PACK",
+      "label": "packing efficiency",
+      "nominal": 0.5618876251191532,
+      "lo": 0.4,
+      "hi": 0.6,
+      "provenance": "calibrated to the 3U layout",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.5
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": -0.9090909090909084
+      }
+    },
+    {
+      "key": "RHO_MAG_E",
+      "label": "magnet resistivity",
+      "nominal": 1.4e-06,
+      "lo": 1.2e-06,
+      "hi": 1.6e-06,
+      "provenance": "assumed; grade unstated",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    }
+  ],
+  "halved_ranges": [
+    {
+      "key": "BR",
+      "label": "magnet remanence",
+      "nominal": 1.32,
+      "lo": 1.2850000000000001,
+      "hi": 1.3599999999999999,
+      "provenance": "assumed; CAD states no grade",
+      "swing": {
+        "v_exit": 0.0283732660782067,
+        "eff_net_pct": 0.02758830048242832,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.5028373266077727,
+        "eff_net_pct": 0.4868878381176335,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "B_POLE",
+      "label": "brake pole field",
+      "nominal": 0.5,
+      "lo": 0.4,
+      "hi": 0.6,
+      "provenance": "A18 sweep; unstated in CAD, B-4 bounds it",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "Q",
+      "label": "structural Q",
+      "nominal": 20.0,
+      "lo": 15.0,
+      "hi": 25.0,
+      "provenance": "A18 sweep; never measured (STRUCTURAL_GAP)",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "EPS",
+      "label": "fin emissivity",
+      "nominal": 0.5,
+      "lo": 0.275,
+      "hi": 0.7,
+      "provenance": "A18 sweep; surface finish unspecified",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "H_CONT",
+      "label": "contact conductance",
+      "nominal": 500.0,
+      "lo": 300.0,
+      "hi": 2750.0,
+      "provenance": "A18 sweep; joint unspecified",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "R_ESR",
+      "label": "bank ESR",
+      "nominal": 0.012,
+      "lo": 0.009000000000000001,
+      "hi": 0.038500000000000006,
+      "provenance": "nominal unsourced (E17); ceiling from A10",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.09922402470304402,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": -0.0375889013798094,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "BC",
+      "label": "ballistic coefficient",
+      "nominal": 61.0,
+      "lo": 50.5,
+      "hi": 75.5,
+      "provenance": "A5 sweep",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    },
+    {
+      "key": "PACK",
+      "label": "packing efficiency",
+      "nominal": 0.5618876251191532,
+      "lo": 0.48094381255957663,
+      "hi": 0.5809438125595766,
+      "provenance": "calibrated to the 3U layout",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.20000000000000007
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": -0.9090909090909084
+      }
+    },
+    {
+      "key": "RHO_MAG_E",
+      "label": "magnet resistivity",
+      "nominal": 1.4e-06,
+      "lo": 1.2999999999999998e-06,
+      "hi": 1.5e-06,
+      "provenance": "assumed; grade unstated",
+      "swing": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      },
+      "elasticity": {
+        "v_exit": 0.0,
+        "eff_net_pct": 0.0,
+        "kg_per_satellite": 0.0
+      }
+    }
+  ],
+  "bands": {
+    "1_leader_agrees": {
+      "per_output": {
+        "v_exit": {
+          "swing": "BR",
+          "elasticity": "BR",
+          "agree": true
+        },
+        "eff_net_pct": {
+          "swing": "R_ESR",
+          "elasticity": "BR",
+          "agree": false
+        },
+        "kg_per_satellite": {
+          "swing": "PACK",
+          "elasticity": "PACK",
+          "agree": true
+        }
+      },
+      "passed": false
+    },
+    "2_top3_agrees": {
+      "per_output": {
+        "v_exit": {
+          "swing": [
+            "BR",
+            "B_POLE",
+            "Q"
+          ],
+          "elasticity": [
+            "BR",
+            "B_POLE",
+            "Q"
+          ],
+          "agree": true
+        },
+        "eff_net_pct": {
+          "swing": [
+            "R_ESR",
+            "BR",
+            "B_POLE"
+          ],
+          "elasticity": [
+            "BR",
+            "R_ESR",
+            "B_POLE"
+          ],
+          "agree": true
+        },
+        "kg_per_satellite": {
+          "swing": [
+            "PACK",
+            "BR",
+            "B_POLE"
+          ],
+          "elasticity": [
+            "PACK",
+            "BR",
+            "B_POLE"
+          ],
+          "agree": true
+        }
+      },
+      "passed": true
+    },
+    "3_declared_zeros": {
+      "violations": [],
+      "passed": true
+    },
+    "4_v_exit_moves": {
+      "max_swing_pct": 5.660323283269506,
+      "by": "BR",
+      "passed": 1.0
+    },
+    "5_rank_stable_halved": {
+      "per_output": {
+        "v_exit": {
+          "full": [
+            "BR",
+            "B_POLE",
+            "Q"
+          ],
+          "halved": [
+            "BR",
+            "B_POLE",
+            "Q"
+          ],
+          "unchanged": true
+        },
+        "eff_net_pct": {
+          "full": [
+            "R_ESR",
+            "BR",
+            "B_POLE"
+          ],
+          "halved": [
+            "R_ESR",
+            "BR",
+            "B_POLE"
+          ],
+          "unchanged": true
+        },
+        "kg_per_satellite": {
+          "full": [
+            "PACK",
+            "BR",
+            "B_POLE"
+          ],
+          "halved": [
+            "PACK",
+            "BR",
+            "B_POLE"
+          ],
+          "unchanged": true
+        }
+      },
+      "passed": true
+    },
+    "6_leader_provenance": {
+      "per_output": {
+        "v_exit": {
+          "leader": "BR",
+          "provenance": "assumed; CAD states no grade",
+          "unsourced": true
+        },
+        "eff_net_pct": {
+          "leader": "R_ESR",
+          "provenance": "nominal unsourced (E17); ceiling from A10",
+          "unsourced": true
+        },
+        "kg_per_satellite": {
+          "leader": "PACK",
+          "provenance": "calibrated to the 3U layout",
+          "unsourced": false
+        }
+      },
+      "verdict": "REPORT"
+    }
+  },
+  "binding_outputs": [
+    {
+      "key": "B_POLE",
+      "label": "brake pole field",
+      "quantity": "brake stop distance",
+      "unit": "m",
+      "at_lo": 0.34482584514044246,
+      "at_nominal": 0.12413730425055929,
+      "at_hi": 0.06333535931150984,
+      "swing": 2.2675736961451247
+    },
+    {
+      "key": "Q",
+      "label": "structural Q",
+      "quantity": "gate margin of safety",
+      "unit": "-",
+      "at_lo": 0.5590554546707787,
+      "at_nominal": 0.10241868424358369,
+      "at_hi": -0.09987891356427159,
+      "swing": 6.433732019715251
+    },
+    {
+      "key": "EPS",
+      "label": "fin emissivity",
+      "quantity": "fin residual above ambient after 12 shots",
+      "unit": "K",
+      "at_lo": 0.00035908026728748155,
+      "at_nominal": 0.0002470782637828961,
+      "at_hi": 0.00017714621498043925,
+      "swing": 0.7363417951928988
+    },
+    {
+      "key": "H_CONT",
+      "label": "contact conductance",
+      "quantity": "fin residual above ambient after 12 shots",
+      "unit": "K",
+      "at_lo": 0.1084773553419609,
+      "at_nominal": 0.0002470782637828961,
+      "at_hi": 5.684341886080802e-14,
+      "swing": 439.04046305433593
+    },
+    {
+      "key": "BC",
+      "label": "ballistic coefficient",
+      "quantity": "unboosted lifetime",
+      "unit": "yr",
+      "at_lo": 0.8558952955009069,
+      "at_nominal": 1.304960122710553,
+      "at_hi": 1.925169646960142,
+      "swing": 0.8193923575520674
+    },
+    {
+      "key": "RHO_MAG_E",
+      "label": "magnet resistivity",
+      "quantity": "magnet eddy rise per shot",
+      "unit": "K",
+      "at_lo": 0.002881582550896759,
+      "at_nominal": 0.002469927900768651,
+      "at_hi": 0.002161186913172569,
+      "swing": 0.2916666666666667
+    }
+  ]
+}

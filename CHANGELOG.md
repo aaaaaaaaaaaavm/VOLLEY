@@ -9,6 +9,29 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (fourth pass): A19 ranks the assumptions, and band 1 fails usefully
+
+| ID | Item | Detail |
+|---|---|---|
+| A19-00 | **Bands committed before the script existed** | `validation/A19_sensitivity_ranking.md` at `03628da`; `analysis/sensitivity_ranking.py` did not exist at that commit and the absence was checked, not assumed. The bands are about **rank stability**, not a pass/fail value, because a sensitivity ranking has no correct answer to check against. |
+| **A19-01** | **Band 1 FAILS: net efficiency has two different leaders** | By range-swing the leader is **bank ESR at 23.240 %**; by local elasticity it is **magnet remanence at 0.4869** against bank ESR's −0.0376, a factor of thirteen the other way. Both are correct and measure different things: ESR wins on swing because its range is a factor of eleven wide, **because the nominal has no source at all** (E17). The rule fixed in advance was to publish both and not pick the convenient one. Both tables are in the sheet. |
+| A19-02 | **`v_exit` does not respond to the bank at all, and the mechanism matters** | Bank ESR was declared as having a path to exit velocity and its swing is **exactly zero to the ceiling**. `shot()` commands a sheet current, so force is fixed and ESR changes energy drawn and sag, not push — until the bank cannot source the demand, at which point `BankLimitError` is raised rather than a plausible current substituted. **The bank's effect on exit velocity is nil, then total. A cliff, not a slope**, which is a more useful thing to know about P26 than a coefficient — and P27's fix is what makes it visible. |
+| A19-03 | **Bands 2–5 pass; band 3 passes exactly** | All declared no-path entries return **0.000**, not merely small, so no undeclared coupling and no module-routing bug. Largest `v_exit` swing 5.660 % clears the 1 % floor. Rank order survives halving every range. |
+| A19-04 | **Six of nine inputs are zero on every headline number, and two of them move a pass/fail transition** | **Structural Q**: 0.000 % on all three, and the retention-gate margin **+0.559 → −0.100** across its range — through zero. **Brake pole field**: 0.000 %, and the brake stopping distance 0.345 → 0.063 m against a 0.210 m arrest section. **The headline numbers are not what is at risk from these assumptions; the design's viability is.** A ranking that looked only at the three outputs would have reported six harmless zeros and missed both, which is why every zero-ranked input also reports the quantity it does govern. |
+| A19-05 | **Band 6 reports, and two of three leaders lead on unsourced ranges** | `v_exit`'s leader is magnet remanence over a ±0.075 T interval that exists **because the CAD states no magnet grade**; efficiency's leader is bank ESR over a range that exists because the nominal has no provenance. Reported as the band required. The ordering is stable and the zeros are real, so the ranking stands with its top two entries flagged as resting on intervals of my own construction. |
+| **A19-06** | **Limitation found on the first run: one-at-a-time cannot see interactions** | Fin emissivity returns **exactly zero on every output including its own binding quantity**, because at the nominal 500 W/m²K contact conductance the joint sinks the heat. That is true at the nominal point and false generally — at 100 W/m²K the fin residual moves **0.1701 → 0.0746 K** across the emissivity range. **A18 swept the two as a grid and would have caught it; A19 sweeps one at a time and does not.** Where two uncertain inputs gate each other, this ranking understates the one currently masked. |
+| A19-07 | **And band 5 passes vacuously on two of three outputs** | Rank stability under halved ranges is a real test only where entries are non-zero. On net efficiency bank ESR leads magnet remanence 23.24 % to 5.50 % at full range and 9.92 % to 2.76 % at half, so that ordering is physics. On `v_exit` and kg per satellite only one input is non-zero and second and third place are **ties among structural zeros broken by list order**. The band passed; on two outputs it passed on nothing, and the sheet says so. |
+| A19-08 | **Measurement order, which is the deliverable** | Structural Q first — the only input that moves a margin through zero, with four findings already queued behind it in `STRUCTURAL_GAP.md`. Then the magnet grade, a look-up rather than a measurement. Then a sourced bank ESR. Then B-4 for the brake pole field. Propagated to `PHASE_I_CLOSURE.md` §10b and `STRUCTURAL_GAP.md`. |
+| A19-09 | **The framing, fixed before any number existed** | **It ranks assumptions and makes none of them less assumed.** Every input is exactly as unmeasured after this as before. The project's existing Monte Carlo measures *dispersion*, which is a different question. E4 is unaffected and no band that any of these inputs feeds has moved. |
+
+**What authorised it.** A new analysis with bands declared and committed before the script, the
+discipline `validation/README.md` exists to enforce. No operating point moved — the sweep harness
+reproduces `v_exit` 16.388 m/s, net efficiency 20.99 % and 6.375 kg per satellite exactly, which
+is itself the check that it drives the real pipeline rather than a copy of it. K<sub>t</sub> stays
+11.0258 N/kA·m.
+
+---
+
 ## 2026-08-10 (third pass): the bookkeeping items, and the three that would not close
 
 | ID | Item | Detail |
