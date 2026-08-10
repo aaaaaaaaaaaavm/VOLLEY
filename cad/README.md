@@ -70,8 +70,15 @@ and `OPEN_PROBLEMS.md` P13.
 - `parameters.json`, the 9-group geometry parameter set, source of truth
 - `CHANGELOG_CAD.md`, generation history, per-file inventories, defect IDs (G1-D*, G2-D*,
   G3-D*), and the cross-generation comparison
-- `step/gen1/`, `step/gen2/`, `step/gen3/`, STEP exports (`.f3d` is not diffable, so STEP
-  is what gets committed)
+- `step/gen1/`, `step/gen2/`, `step/gen3/`, STEP exports from Fusion (`.f3d` is not diffable,
+  so STEP is what gets committed)
+- `step/gen5/`, **generated** by `build_gen5.py` from `parameters.json` — nothing is drawn, so
+  it cannot drift from the parameters, it regenerates byte-identically from a clean clone, and
+  `build_gen5.py --check` reads 23 dimensions back out of the built solids and compares them to
+  the parameter file. See [ADR-026](../docs/adr/026-generated-cad.md).
+  **It is a geometry and interface model, not a manufacturing model:** no fillets, no chamfers,
+  no fasteners, no harness routing, no tolerancing. Do not send it to a machine shop; do use it
+  to check fit, envelope, clearance and station alignment
 - `renders/`, the published PNG set, and `renders/source/`, the uncropped frames it is
   generated from by `tools/prepare_renders.py`. **These are Gen4 shots and Gen4 has no
   committed STEP export**, so they show geometry no file in `step/` matches, and Gen4's

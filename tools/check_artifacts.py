@@ -51,6 +51,10 @@ PAIRS = [
     # a group it does not cite leaves it correctly byte-identical and permanently "stale".
     ("cad/BUILD.json", ["cad/parameters.json", "analysis/mass_properties.py",
                         "cad/tools/make_cad_package.py"]),
+    # Gen5 is generated from parameters.json by cad/build_gen5.py. Guarding one STEP is
+    # enough: they are all written by the same call, so any of them being older than the
+    # parameter file means the whole generation is.
+    ("cad/step/gen5/VOLLEY_Track_Gen5.step", ["cad/parameters.json", "cad/build_gen5.py"]),
     ("docs/BASELINE.md", ["analysis/results/motor_results.json",
                           "analysis/results/sizing.json",
                           "analysis/results/astro_results.json",

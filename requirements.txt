@@ -1,3 +1,8 @@
 numpy>=2.0
 matplotlib>=3.8
 magpylib>=5.0
+
+# CAD generation only (cad/build_gen5.py). NOT required by anything in analysis/ or by any
+# number in the repository -- install it only to regenerate cad/step/gen5/. It pulls a large
+# OCC stack, which is why it is optional rather than a hard dependency. See ADR-026.
+cadquery==2.8.0

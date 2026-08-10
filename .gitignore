@@ -43,10 +43,3 @@ paper/cv/*.aux
 paper/cv/*.log
 paper/cv/*.out
 
-# Gen5 STEP output, DELIBERATELY not committed yet. cad/build_gen5.py generates it, but its
-# own --check currently fails three assertions against cad/parameters.json (track overall
-# width, cassette width, enclosure z extent), so the geometry is known-wrong. Committing it
-# would publish geometry that contradicts the parameters it claims to be generated from --
-# the same defect class as P43, where renders showed a machine no committed file matched.
-# Delete these three lines and commit the STEP the moment --check passes.
-cad/step/gen5/
