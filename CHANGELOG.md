@@ -9,6 +9,23 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (thirteenth pass): Gen5, generated from the parameters instead of drawn
+
+| ID | Item | Detail |
+|---|---|---|
+| **ADR-026** | **The CAD is generated, not drawn** | `cad/build_gen5.py` reads `cad/parameters.json` and emits STEP and STL for all eight documents using CadQuery 2.8.0. **Nothing is drawn**, so the drift `parameters.json` warns about — *"user parameters are document-scoped and will silently drift across the nine documents"* — becomes structurally impossible. Matches ADR-015: derive, never paste. |
+| GEN5-01 | **It resolves Gen4 rather than stacking on it** | Gen4 exists only in Fusion, has never been exported, and releases at s = 1200 mm where `analysis/` assumes 1500 (P39). Gen5 depends on no unexported document, so it closes the gap P43 had to publish around. **It does not open Gen4's export gate and does not supersede Gen4 as a design — it supersedes the method.** |
+| GEN5-02 | **Byte-stable, and deliberately so** | Two consecutive builds are identical. The STEP header timestamp is normalised to a fixed epoch precisely so "the geometry changed" and "the clock changed" cannot be confused. |
+| GEN5-03 | **Checked against its own source, and the check earned its place immediately** | `--check` reads **23 dimensions** back out of the built solids — envelope, stations, cassette, flange, payload, and the magnetic air gap — and compares them to the parameter file. It **failed three on its first run**: a longeron built to the roller-channel width (180) instead of the track's overall width (205); a gate pin extruded outboard because a CadQuery `XZ` workplane extrudes along −Y, reporting the cassette as 332 mm against 166; and a check that called the radiator standing proud of the top skin an error when `parameters.json` records it as intended. **Two geometry bugs and one bad check. None would have been visible in a render.** |
+| GEN5-04 | **The output was held out of the repository until the check passed** | A `.gitignore` guard kept `cad/step/gen5/` uncommitted while `--check` failed, with its own removal condition written into the comment. Committing known-wrong geometry would have been the same defect class as P43. The guard is now lifted at 23 of 23. |
+| GEN5-05 | **Guarded going forward** | `check_artifacts.py` ties the Gen5 STEP to `parameters.json` and `build_gen5.py`, so a dimension changed without a rebuild is caught. |
+| GEN5-06 | **The limitation, stated rather than implied** | **Geometry and interface model, not a manufacturing model.** No fillets, chamfers, fasteners, harness routing or tolerancing. One value is derived rather than read — the Halbach array is given in assembly coordinates and centred on the 488 mm sled for the sled's own frame — and is flagged as an assumption in the docstring. |
+| GEN5-07 | **CadQuery recorded as optional** | `requirements.txt` marks it CAD-only: nothing in `analysis/` and no number in the repository depends on it. |
+
+**What authorised it.** ADR-026, and P39's own named next step. No operating point moved.
+
+---
+
 ## 2026-08-10 (twelfth pass): a flywheel clears the ceiling the bank fails, and the shot's angular impulse turns out to be unmodelled
 
 | ID | Item | Detail |
