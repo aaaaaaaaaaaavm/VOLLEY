@@ -37,3 +37,22 @@ generated-not-maintained rule the companion repositories follow, for the same re
   measured, and the profile has to agree with it. This changes the day `B-1` produces a number.
 - **No skill-percentage bars, trophy widgets or streak counters.**
 - **The paper is described as a manuscript**, because it is written and unsubmitted.
+
+---
+
+## This template forked from its own output once, and that is worth guarding
+
+**Found 2026-08-10.** The published `aaaaaaaaaaaavm/README.md` was *more current* than this
+directory's copy: the published one had been edited in place with the corrected operating point
+while this source still carried 16.5 m/s, 10.7 g, 2.58 kJ and "Thirty-one numbered defects".
+
+**The source was staler than the artifact generated from it**, which is the opposite of how this
+repository is supposed to work and the same class as **P42** (the Pages site) one layer out.
+
+**Both copies are now byte-identical.** When updating the profile, edit *here* and copy across —
+or if you edit the published one directly, copy it back. `diff` them before assuming either is
+current:
+
+```bash
+diff tools/profile-readme/README.md ../aaaaaaaaaaaavm/README.md
+```

@@ -2,12 +2,14 @@
 
 **Mechanical engineer. Powertrain, ECUs, CubeSat deployment. Asking spacecraft inconvenient questions.**
 
-BTech Mechanical Engineering, Symbiosis Institute of Technology, Pune · 2023-2027
+BTech Mechanical Engineering, Symbiosis Institute of Technology, Pune · 2023–2027
 
 In 2021 I got stuck on a dumb question: why do we still deploy CubeSats with springs. I never
 really got unstuck. That question is now **VOLLEY**: an electromagnetic deployer that ejects
-unmodified 3U CubeSats at a programmable velocity, around seven times what a spring gives you, from a
-spent rideshare upper stage. I've presented it at DRDO ARDE and the India Science Festival.
+unmodified 3U CubeSats at a programmable velocity from a spent rideshare upper stage. Against the
+fastest published spring it is 6.6 times the velocity — but **7.5 times the orbital lifetime it
+buys**, which is the number that matters and the one I had been under-quoting. I've presented it
+at DRDO ARDE and the India Science Festival.
 
 Before that there was rocketry, where our payload took **2nd globally** at the SDL Payload
 Challenge, IREC 2025 in Texas. Alongside it there are engines, I run Poona Motor Club, tune Royal
@@ -22,47 +24,77 @@ proven it yet.
 
 ### The thing I'd actually like you to look at
 
+The idea is not really the motor. A launch vehicle's upper stage does its job in ten minutes and
+then becomes debris; POEM has already flown the counter-example. **VOLLEY turns that spent stage
+into a last-mile delivery vehicle** — it repositions between altitude shells on its own reaction
+control and fires satellites off at individually commanded velocities at each one. Altitude and
+phase are in; **plane change is not**, at 133 m/s per degree, and I say so everywhere rather than
+letting the word "orbit" do work it hasn't earned.
+
 **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)**, a magazine-fed ironless double-sided
-Halbach linear synchronous motor that ejects unmodified CubeSats at 16.5 m/s, 10.7 g, on a net
-2.58 kJ a shot. TRL 2-3, nothing built, nothing measured.
+Halbach linear synchronous motor that ejects unmodified CubeSats at **16.388 m/s and 10.533 g**,
+drawing **2.85 kJ gross and 2.56 kJ net** per shot. TRL 2–3. Nothing built, fired or measured.
 
-**Open it for the defect record, not the numbers.** Thirty-one numbered defects, published as I
-find them, including the ones that damage the claims. An independent propagator falsified a claim
-in my paper's own abstract; that's P16, logged rather than quietly dropped. The supercapacitor bank
-turns out not to be buyable at the resistance the design assumes, which is P26 and is on the front
-page. A force I'd been feeding into my own structural FEA was 37 % too high, and when I chased it
-down, the *explanation* I'd written for it was backwards too.
+**Open it for the defect record, not the numbers.** Every error I've found in my own work is
+published and numbered, including the ones that damage the claims. An independent propagator
+falsified a claim in my paper's own abstract; that's logged as P16 rather than quietly dropped.
+The pulse-power chain does not close on a commercially realistic single supercapacitor string.
+A covariance claim, an internal-momentum conclusion and the brake-fin thermal model have all
+been superseded in public.
 
-**Acceptance bands go in the repository before each analysis runs**, so a miss can't be
-rationalised afterwards. Three rows of one analysis came back not-pass and not-fail but **void** —
-the quantity they tested didn't exist — and they're recorded that way, because a band you can
-reinterpret isn't a band.
+**Acceptance bands are written down *before* each analysis runs**, so a failure cannot be
+rationalised afterwards. That is not a formality. Twice this month a band failed, I went looking
+for the design flaw, and found the bug in **my own analysis script** instead — once a sign
+convention that had quietly cost 57 km of a delivery envelope, once a limit I had computed for
+one burn of a two-burn manoeuvre. A band chosen after seeing the answer would have passed both
+and shipped both.
 
-That habit is the actual portfolio: **[skills, with the file that proves each one](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/SKILLS.md)**
+The most recent one is the flavour of the whole thing: modelling the release properly showed the
+release was never the problem — the payload arrives in its cradle at **18 to 115 times** the
+tip-off limit at the *start* of the stroke, which nothing had looked at.
+
+That habit is the actual portfolio:
+**[skills, with the file that proves each one](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/SKILLS.md)**
 
 | | |
 |---|---|
-| 🛰 **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | The engineering record. Start at `SUMMARY.md` |
-| 📄 **[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | IEEE manuscript + reproducibility package. Reproduces from a clean clone |
+| 🛰 **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | The authoritative engineering record. Start at [`docs/CONCEPT.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/CONCEPT.md) |
+| 📄 **[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | IEEE manuscript and reproducibility package |
 | 🎓 **[VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis)** | Final-year submission |
-| 🧪 **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | Where I'm allowed to break things. Nothing here is citable |
+| 🧪 **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | Phase II work. Deliberately unstable and not citable |
+
+---
+
+### Three smaller tools that survived the extraction
+
+I pulled out the parts that still make sense without the spacecraft around them. Each repository
+keeps its VOLLEY source commit and file hashes, and each keeps the failed or void evidence beside
+the useful result.
+
+| Repository | What it does | Boundary |
+|---|---|---|
+| **[Pulsed Linear Motor Design Lab](https://github.com/aaaaaaaaaaaavm/pulsed-linear-motor-design-lab)** | Screens force, stroke, moving mass, source impedance and energy | Constant-force model; no hardware validation |
+| **[Engineering Evidence Toolkit](https://github.com/aaaaaaaaaaaavm/engineering-evidence-toolkit)** | Checks finite results, local links, source presence and artifact hashes | Consistency is not physics validation |
+| **[Orbital Deployment Trade Study](https://github.com/aaaaaaaaaaaavm/orbital-deployment-trade-study)** | Screens tangential impulses, phase drift, recoil and internal-mass disturbance | Two-body and rigid-body only; not conjunction assessment |
 
 ---
 
 ### What I actually do
 
 **Simulation**: scikit-fem, gmsh, GetDP, CalculiX, ngspice, GMAT, magpylib. I wrote a 2-D
-magnetostatic FEM from the weak form to check my own thrust constant; it agreed to 0.07 %, which
-was the first time that number rested on a PDE solve instead of superposition.
+magnetostatic FEM from the weak form to check my own thrust constant; it agrees to **0.03%** at
+the corrected operating point, the first time that number rested on a PDE solve instead of
+another superposition model.
 
 **CAD/CAE**: Fusion 360, SolidWorks, AutoCAD, ANSYS. Three CAD generations of the deployer, all
-in the repo as STEP.
+in the repository as STEP.
 
 **Engines**: combustion airflow, head porting, camshaft profiling, ECU calibration. 46 to ~60 bhp
 on an RE Super Meteor 650, dyno-validated across the band.
 
-**Code**: Python for the numerics, MATLAB, C. Applied AI at work: I own AI systems architecture
-and product design for a telecom CRM platform, which is not what I was hired to do.
+**Code**: Python for numerics, traceability tools and engineering automation; MATLAB and C where
+the problem needs them. At work I own systems architecture and product design for a telecom CRM
+platform, which is not what I was hired to do.
 
 <sub>Hindi and English native · Marathi, Maithili · Russian, French elementary. Friends call me AVM,
 pronounced how it's spelled, *Aevium*. Recognised by the ISRO Chairman for aerospace STEM
