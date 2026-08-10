@@ -1,0 +1,80 @@
+{
+  "E_shot": 2559.5,
+  "P_peak": 32526.368520652566,
+  "rotor": {
+    "rotor_kg": 3.0,
+    "E_store_J": 5119.0,
+    "v_tip_m_s": 58.418033745297066,
+    "sigma_Pa": 26618800.000000004,
+    "margin": 18.78371677160503
+  },
+  "droop": {
+    "E_after_J": 2559.5,
+    "speed_ratio": 0.7071067811865476,
+    "droop_pct": 29.28932188134524,
+    "energy_retained_pct": 50.0
+  },
+  "mass": {
+    "rotor_kg": 3.0,
+    "containment_kg": 3.0,
+    "mg_kg": 9.75791055619577,
+    "bearings_kg": 1.6,
+    "converter_kg": 3.252636852065257,
+    "total_kg": 20.610547408261027,
+    "bank_kg": 19.5,
+    "delta_kg": 1.1105474082610272
+  },
+  "mom": {
+    "r_m": 0.1,
+    "I_kg_m2": 0.030000000000000006,
+    "rpm": 5578.511301763906,
+    "H_single_N_m_s": 17.525410123589122,
+    "H_pair_residual_N_m_s": 0.17525410123589122
+  },
+  "imp": {
+    "R_winding": 0.02,
+    "R_converter": 0.015,
+    "R_total": 0.035,
+    "ceiling": 0.068,
+    "headroom": 0.033,
+    "P_max_W": 65828.57142857142
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "demand imported, not restated",
+      "detail": "2559.5 J net, 32.5 kW peak, from motor_model",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "rim stress margin >= 3.0",
+      "detail": "tip 58 m/s, sigma 27 MPa, margin 18.78",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "speed droop over one shot <= 30 %",
+      "detail": "29.3 %, 50 % energy retained",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "lighter than the 3-string bank it replaces",
+      "detail": "20.6 kg against 19.5 kg (+1.1 kg)",
+      "pass_": false
+    },
+    {
+      "band": "5",
+      "name": "net stored angular momentum <= 0.5 N.m.s",
+      "detail": "single rotor 17.53, counter-rotating pair residual 0.175",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "series resistance <= the 68 mohm ceiling the bank fails",
+      "detail": "35 mohm, headroom +33 mohm, P_max 66 kW",
+      "pass_": true
+    }
+  ]
+}

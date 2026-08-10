@@ -9,6 +9,28 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (twelfth pass): a flywheel clears the ceiling the bank fails, and the shot's angular impulse turns out to be unmodelled
+
+| ID | Item | Detail |
+|---|---|---|
+| **A25** | **A flywheel motor-generator against P26, bands declared at `d254759` before the script** | **Band 6 — the reason the analysis exists — passes decisively: 35 mΩ series resistance against A10's 68 mΩ ceiling, delivering 66 kW against 32.5 kW required.** P26 is a property of capacitors; a rotating machine is not subject to the mechanism. **It requires no architecture change** — the LSM, sled, track, cassettes and all of A1–A24 stand untouched. |
+| A25-01 | **And it breaks the coupling that made P26 poisonous** | The bank's ESR ceiling *tightens* as velocity rises, which is why it inverted the ranking of every lever in `DESIGN_OPTIONS_exit_velocity.md`. A store with 66 kW against a 32.5 kW demand does not. |
+| **P45** | **Band 4 failed by 1.1 kg: the flywheel is at mass parity, not a saving** | 20.61 kg against a 19.50 kg three-string bank. **Band not widened.** The miss is owned by one unsourced number — `MG_KG_PER_KW = 0.30`; at **0.25 it passes**, and against the four-string bank the same file calls "with margin" it wins by **5.4–10.3 kg** at every value tested. One datasheet decides it. |
+| A25-02 | **A script bug found and fixed before the result was written** | The first run failed band 4 by **16.9 kg**: `system_mass()` doubled a full-size rotor *and* a full-power machine for the counter-rotating pair, sizing a store that holds and delivers twice what the shot needs. A pair **splits** the duty. Same class as the A20 apsides bug — model wrong, band untouched. |
+| A25-03 | **Band 2 passing by 18.8× is itself informative** | The rotor is nowhere near a material limit, so the design is not energy-density-constrained. **The machine is the binding item** — which is where band 4 landed from the other side. |
+| **E29** | **Nothing computes the shot's angular impulse about the host** | `astro.py` models the host interaction as one line, `4.0 * DV` — **linear only**. A13 covers indexing and sled return; the shot's own angular impulse is unmodelled. At a 50 mm CoM miss it is **3.28 N·m·s per shot, 39.3 over a campaign — 2.6× saturation of a 15 N·m·s ESPA-class wheel**, saturating around shot four. Bigger wheels and CMGs do not help: the constraint is momentum *storage*. |
+| E29-01 | **The linear recoil is a non-problem, and should say so** | 0.393 m/s over a campaign on a 2000 kg spent stage, −1.4 km of orbit, and retrograde — the direction a stage wants for disposal. **No wheel can cancel it in any case**; linear momentum has three exits and none is a flywheel. |
+| E29-02 | **No interface requirement exists that the thrust line pass through the host CoM** | ADR-010 specifies the mount host-agnostically. The cheapest fix by orders of magnitude attacks the moment *arm*, and it is currently nobody's requirement. |
+| E29-03 | **One number drives three open problems** | `payload_com_offset_above_thrust_line = 70 mm` sets A23's tip-off, E29's angular impulse, and the 96 N transverse load that fixes the track's EI requirement — which scales as L³ and is what makes any longer track expensive. **Cradle geometry, not an architecture change.** |
+| **PII-14** | **The cable-driven gondola, assessed and declined** | Recorded in `VOLLEY-lab` and registered here. The **+49.7 %** headline assumed **zero drivetrain inertia**; `m_eff = I/r²` adds directly to moving mass, a 34 kW machine at a 100 mm drum is 1–5 kg of it before drum or gearbox, and **at 7.4 kg the entire gain vanishes**. Honest range **+15 to +30 %**, against deleting the LSM and the 24 validations behind it. **Entry criterion: m_eff ≤ 2 kg, and a measured baseline.** |
+| CNT-07 | **Register 72 → 74, 29 → 31 live** | P45, E29. Header propagated. |
+
+**What authorised it.** A25 is a validation with bands declared before its script; P45 is a band
+miss, which `validation/README.md` requires to become a numbered defect; E29 is unmodelled
+engineering. No operating point moved — `v_exit` 16.388 m/s and Kt 11.0258 N/kA·m untouched.
+
+---
+
 ## 2026-08-10 (eleventh pass): the payload ladder was arithmetic, and building it as a design moved the answer
 
 | ID | Item | Detail |

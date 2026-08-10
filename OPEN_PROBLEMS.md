@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **72 numbered entries, of which 29 are live.** Every entry carries a `Status:` line written by
+> **74 numbered entries, of which 31 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **29** (15 P, 14 E) | open engineering; something still has to be done |
+> | `LIVE` | **31** (16 P, 15 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
@@ -32,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 72 entries stand, and the 29 live
+> nothing in it has been deleted, closed or downgraded — all 74 entries stand, and the 31 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -1895,6 +1895,114 @@ dispersion across a swarm** — a distribution of velocities produced once, at c
 than an interface between every pair. That is a different mechanism with a different acceptance
 argument, and it is **PII-13**. Until it exists, **the fixed-cell architecture is qualified for
 PocketQube 1P and above, and is not qualified for ChipSat/femtosat.**
+
+### P45. The flywheel buys the impedance and pays it back in mass: LOW, NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**A25 band 4 miss, 2026-08-10.** Declared ≤ the 3-string bank it replaces (19.5 kg), measured
+**20.61 kg** — over by **1.11 kg**. The band is not widened; see `validation/README.md`.
+
+A25 tested a flywheel motor-generator against **P26**, the supercapacitor bank that cannot source
+the shot. **Band 6, the reason the analysis exists, passed decisively**: 35 mΩ series resistance
+against A10's 68 mΩ ceiling, delivering 66 kW against 32.5 kW required. The impedance problem is
+solved and the coupling that made P26 poisonous — the ceiling tightening as velocity rises — is
+broken.
+
+**It is not free.** The store lands at **mass parity**, not a saving:
+
+| | Mass |
+|---|---:|
+| Motor-generators (the dominant term) | **9.76 kg** |
+| Rotors + containment, counter-rotating pair | 6.00 kg |
+| Bearings + converter | 4.85 kg |
+| **Total** | **20.61 kg** vs a 19.50 kg bank |
+
+**The miss is owned by a single unsourced assumption.** `MG_KG_PER_KW = 0.30` is an engineering
+estimate for a high-speed PM machine with no datasheet behind it. At **0.25 the band passes**; at
+0.20 it passes by 2.1 kg. And against the **four-string** bank that
+`docs/DESIGN_OPTIONS_exit_velocity.md` calls the configuration "with margin", the flywheel wins at
+every value tested, by **5.4 to 10.3 kg**.
+
+**Two independent things would close this**, and neither is analysis:
+
+1. **A real specific-mass figure for a 16 kW high-speed PM machine.** One datasheet decides the
+   band. This is the same class of gap as E3 (no vendor quotations anywhere in this project) and
+   is the cheapest thing on this list to close.
+2. **Deciding whether the comparator is three strings or four.** The repository currently says
+   both — 3 in the ESR table, "4 with margin" in the same paragraph. Against four, the flywheel
+   already wins and this entry would not exist.
+
+**What this does not settle, and is the real risk.** Bearings for a multi-thousand-rpm rotor in
+vacuum across a multi-year mission are not designed here, and are a more credible route to
+rejecting the flywheel than mass ever was. Neither is the launch restraint for a rotor. Band 5's
+0.175 N·m·s residual also assumes the controller holds two rotors to **1 % speed match**, against
+a single-rotor store of 17.5 N·m·s — five times the shot disturbance it sits beside.
+
+### E29. Nothing computes the shot's angular impulse about the host, and a reaction wheel saturates in about four shots: NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found 2026-08-10 while pricing momentum management, not by any check.**
+
+`analysis/astro.py` models the host interaction as one line:
+
+```python
+res['recoil_Ns_per_shot'] = round(4.0 * DV, 1)
+```
+
+**That is linear momentum only.** A13 covers the *indexing* and *sled-return* disturbance —
+0.44 °/s peak and a 1.37° attitude offset on a 200 kg host — but **nothing anywhere computes the
+angular impulse the shot itself delivers about the host's centre of mass**, which is the term
+that decides whether the host can hold attitude across a campaign at all.
+
+**The linear part is mostly a non-problem, and should be said so plainly:**
+
+| Host | Δv per shot | Campaign, 12 shots | Orbit change |
+|---:|---:|---:|---:|
+| 200 kg | 0.328 m/s | 3.93 m/s | −14 km |
+| **2000 kg spent stage** | 0.033 m/s | **0.393 m/s** | **−1.4 km** |
+
+On the ConOps ADR-024 adopted it is noise, and it is retrograde — the direction a stage wants for
+disposal. **No flywheel, reaction wheel or CMG can cancel it anyway**: those store *angular*
+momentum, and linear momentum in a closed system has three exits only — expel propellant, accept
+the Δv, or fire something the other way.
+
+**The angular part is the severe one and it is unmodelled:**
+
+| Thrust line misses host CoM by | H per shot | Campaign | vs a 15 N·m·s ESPA-class wheel |
+|---:|---:|---:|---:|
+| 50 mm | 3.28 N·m·s | 39.3 | **2.6× saturated** |
+| 250 mm | 16.39 N·m·s | 196.7 | 13× saturated |
+| 500 mm | 32.78 N·m·s | 393.3 | 26× saturated |
+
+**A wheel saturates around shot four at a 50 mm offset.** Desaturating 393 N·m·s needs thrusters,
+which is the OTV this project exists not to be, or magnetorquers, which are orders of magnitude
+short in any useful time. Bigger wheels do not help and CMGs do not help: the constraint is
+momentum **storage**, not torque.
+
+**There is no interface requirement anywhere in this repository that the thrust line pass through
+the host centre of mass.** [ADR-010](docs/adr/010-host-agnostic-interface.md) specifies the mount
+host-agnostically and `docs/PAYLOAD_ENVIRONMENT.md` covers the inward-facing half, but neither
+states a permissible thrust-line-to-CoM offset. That absence is the defect: the cheapest fix by orders of magnitude attacks the moment arm rather
+than the momentum, and it is currently nobody's requirement.
+
+**The related lever, and it is the highest-leverage geometric number in the machine.**
+`cad/parameters.json` carries `payload_com_offset_above_thrust_line = 70 mm`. That single number
+drives **three separate open problems**:
+
+1. **tip-off** — A23's 36–231 °/s cradle arrival, and the 2 °/s release band;
+2. **this entry** — the angular impulse, via the payload's 413 N reacting 70 mm off-axis;
+3. **track bending stiffness** — the same couple is the 96 N transverse load that sets the
+   track's EI requirement, which scales as L³ and is what makes any longer track expensive
+   (PII-11, PII-14).
+
+Driving it toward zero is **cradle geometry, not new hardware, and not an architecture change**.
+
+**What would close it:** a rigid-body angular-momentum budget for the shot over a campaign,
+against a named host inertia and a stated CoM tolerance, with bands declared first — and an
+interface requirement, in ADR-010's successor or an amendment to it, stating the permissible
+thrust-line-to-CoM offset, which is the number the budget exists to set. Neither exists.
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done
