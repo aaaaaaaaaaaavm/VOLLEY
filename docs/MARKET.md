@@ -72,6 +72,33 @@ the gap is worth, they come from [`RESULTS.md`](RESULTS.md), and the lifetime on
 independent propagator behind it that **disagrees at low solar activity** — which is why it is
 quoted at a stated activity level and not claimed invariant.
 
+**Stated as a ratio against the incumbent** ([A21](../validation/A21_comparators.md)): **7.52×
+the orbital lifetime extension of the fastest published spring**, 9.45× against a typical one, at
+**mass parity** per satellite — and against a designed inter-satellite differential of **zero**,
+which is what a spring can command.
+
+### And the product is not a deployer, it is a delivery vehicle
+
+[`CONCEPT.md`](CONCEPT.md) states the concept this market section was written without: **a spent
+upper stage that, after primary separation, repositions on its own reaction control between
+altitude shells and fires satellites off at commanded velocities at each, then deorbits.** The
+stage is being thrown away regardless; VOLLEY converts that interval into deliveries.
+
+**With the boundary attached**, from [A20](../validation/A20_reachable_envelope.md): altitude
+shells cost **27.8 m/s each** and are real propellant; along-track distribution is free and is
+VOLLEY's own job; RAAN separation is free from differential J2; **and plane change is excluded
+entirely at 133 m/s per degree.** Above ~100 m/s of host budget the *stage* supplies most of the
+altitude range, so the honest division is that the host buys range and VOLLEY buys distribution
+within it.
+
+### Against transfer vehicles: right-sizing, not superiority
+
+An OTV changes planes, rendezvouses, and delivers hundreds of m/s. **VOLLEY does none of that and
+should not claim to.** The argument is that a constellation needing phase and altitude separation
+does not need a spacecraft's worth of propulsion to get it, and an OTV makes the customer buy
+exactly that — with the Δv shared across everything aboard. **No cost comparison is offered**,
+because there is no OTV price here and no quotation for VOLLEY.
+
 ## 4. Market size, and why these figures are the weakest thing on this page
 
 **These are third-party market projections, not measurements, and they disagree with each
@@ -116,6 +143,22 @@ A market document that argues one way is a brochure. These come from
 - **The velocity is not the selling point and should not be sold as one.** It is 16.5 m/s, set by
   a qualification limit rather than by the motor, and it does not improve with payload class.
   What is on offer is *programmability* per satellite, which no spring provides.
+- **No cost advantage is claimed over anything**, and A21 band 7 records why: `analysis/cost.py`
+  carries no vendor quotation on any line item and no price exists here for any alternative.
+  Closing that needs **E3**, not analysis.
+
+### The argument at the small end, which is different and stronger
+
+The product is not the same at every payload class, and the repository has not said so:
+
+| Class | What the customer is buying |
+|---|---|
+| **3U / 6U** | Per-satellite commanded velocity. Mass per satellite is at parity with a dispenser and loses to a propulsion module by 7.5× |
+| **1U / PocketQube** | Distribution at volume. Deployer mass per satellite falls by up to 30×, which is where the commercial case actually closes |
+| **ChipSat / femtosat** | **A designed dispersion across a swarm.** Individual velocity control stops meaning anything; what matters is the *shape* of the velocity distribution across hundreds of units — and **no other deployer can produce one**, because every alternative gives every unit the same push |
+
+The last row is the strongest claim in this file and the least designed: until 2026-08 no
+cassette, cradle or gate existed for any class except 3U.
 
 ## 6. What would actually establish the case
 

@@ -1,0 +1,113 @@
+{
+  "analysis": "A21",
+  "bands_declared_commit": "881c260",
+  "note": "class figures only; no manufacturer named; no cost comparison computed",
+  "lifetime_multipliers": {
+    "spring_low": 1.0323246635860925,
+    "spring_typ": 1.0653421898978725,
+    "spring_fast": 1.082127025741422,
+    "volley": 1.6176006636345404
+  },
+  "lifetime_extensions": {
+    "spring_low": 0.03232466358609254,
+    "spring_typ": 0.06534218989787255,
+    "spring_fast": 0.08212702574142194,
+    "volley": 0.6176006636345404
+  },
+  "ratio_vs_fastest_spring": 7.520066117809556,
+  "ratio_vs_typical_spring": 9.451790100696465,
+  "velocity_ratio": 6.555200000000001,
+  "days_to_30deg_volley": 1.379324174299751,
+  "days_to_30deg_drag": 25.0,
+  "kg_per_3U_volley": 6.375,
+  "kg_per_3U_dispenser": 6.0,
+  "coldgas_loss_ratio": 7.5,
+  "rows": [
+    {
+      "option": "Spring deployer (canisterised class)",
+      "dv_m_s": 2.5,
+      "lifetime_multiplier": 1.082127025741422,
+      "designed_differential_m_s": 0.0,
+      "days_to_30deg": null,
+      "deployer_kg_per_3U": 6.0,
+      "satellite_carries": "nothing",
+      "host_provides": "one deploy signal",
+      "schedulable": true,
+      "maturity": "TRL 9, thousands deployed"
+    },
+    {
+      "option": "VOLLEY",
+      "dv_m_s": 16.388,
+      "lifetime_multiplier": 1.6176006636345404,
+      "designed_differential_m_s": 16.388,
+      "days_to_30deg": 1.379324174299751,
+      "deployer_kg_per_3U": 6.375,
+      "satellite_carries": "nothing",
+      "host_provides": "150-300 W, serial link, firing window",
+      "schedulable": true,
+      "maturity": "TRL 2-3, nothing measured"
+    },
+    {
+      "option": "Differential drag",
+      "dv_m_s": 0.0,
+      "lifetime_multiplier": 1.0,
+      "designed_differential_m_s": 0.0,
+      "days_to_30deg": 25.0,
+      "deployer_kg_per_3U": 0.0,
+      "satellite_carries": "nothing, but needs attitude authority to modulate area",
+      "host_provides": "nothing",
+      "schedulable": false,
+      "maturity": "flown on a 12-satellite constellation"
+    },
+    {
+      "option": "Cold-gas module (carried by the satellite)",
+      "dv_m_s": 16.388,
+      "lifetime_multiplier": 1.6176006636345404,
+      "designed_differential_m_s": 16.388,
+      "days_to_30deg": 1.379324174299751,
+      "deployer_kg_per_3U": 0.85,
+      "satellite_carries": "0.5-1.2 kg, pressure vessel, qualification, range safety",
+      "host_provides": "nothing",
+      "schedulable": true,
+      "maturity": "COTS, flown"
+    }
+  ],
+  "bands": {
+    "1_lifetime_ratio_vs_fastest_spring": {
+      "value": 7.520066117809556,
+      "band": ">= 5x",
+      "passed": true
+    },
+    "2_lifetime_multiplier_vs_astro": {
+      "value": 1.6176006636345404,
+      "band": "1.62 +/- 0.02",
+      "passed": true
+    },
+    "3_spring_designed_differential": {
+      "value": 0.0,
+      "band": "exactly 0",
+      "passed": true
+    },
+    "4_mass_parity_vs_dispenser": {
+      "value": 1.0625,
+      "band": "within +/-25 %",
+      "passed": true
+    },
+    "5_coldgas_loss_at_3U": {
+      "value": 7.5,
+      "band": "VOLLEY loses by >= 5x",
+      "passed": true
+    },
+    "6_phase_vs_drag": {
+      "value": 18.124818273914386,
+      "band": ">= 10x faster",
+      "passed": true
+    },
+    "7_cost_comparison": {
+      "value": "NOT COMPUTED",
+      "band": "must return NOT COMPUTED",
+      "reason": "no vendor quotation for VOLLEY (cost.py), no price for any alternative; closing this needs E3, not another analysis",
+      "passed": true
+    }
+  }
+}

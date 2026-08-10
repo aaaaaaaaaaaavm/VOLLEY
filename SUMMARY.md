@@ -24,6 +24,18 @@ supercapacitor bank.
 One shot buys a propulsion-less satellite **1.62x its orbital lifetime**, or seeds 30° of
 constellation phase spacing in **1.4-6.9 days** against roughly 25 for differential drag.
 
+> **The comparison that matters, computed rather than quoted** ([A21](validation/A21_comparators.md)).
+> Against the fastest published spring VOLLEY is 6.6× on *velocity* — but **7.52× on orbital
+> lifetime extension**, because lifetime is superlinear in Δv (+61.8 % against +8.2 %); against a
+> typical 2 m/s spring it is **9.45×**. Deployer mass per 3U satellite is at **parity** with a
+> canisterised dispenser, 6.375 kg against ~6 kg, a ratio of 1.062. And a spring's **designed
+> differential between satellites is exactly zero**, so a spring-deployed fleet phases only by
+> drag — 25 days, unschedulable — against VOLLEY's **1.38 days**.
+>
+> **Where it loses, on the same footing:** a cold-gas module beats VOLLEY on mass at 3U by
+> **7.5×**; a spring beats it on maturity by TRL 9 against TRL 2–3. **No cost comparison is
+> made against anything** — there is no vendor quotation on any line of `analysis/cost.py`.
+
 ## The numbers, with their caveats attached
 
 | | | |

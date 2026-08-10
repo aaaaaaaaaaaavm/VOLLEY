@@ -33,10 +33,21 @@ unmodified CubeSat. Springs cannot, and OTVs solve a different problem at a diff
 > [`PAYLOAD_CLASSES.md`](PAYLOAD_CLASSES.md), where smaller payloads reverse it.
 
 **Mass per satellite is the surprise, and it is not embarrassing.** VOLLEY's 76.5 kg dry
-carries twelve 3U satellites, **6.4 kg of deployer per satellite**. Planetary Systems'
-canisterized dispensers run about 2 kg per U (12 kg for 6U, 24 kg for 12U, 54 kg for 27U),
-so a 3U-equivalent slot is in the same 6 kg neighbourhood. A magazine-fed electromagnetic
-launcher lands in the same mass class as a canister of springs, per satellite.
+carries twelve 3U satellites, **6.375 kg of deployer per satellite**. Canisterised dispensers
+run about **2 kg per U** as a class figure, so a 3U-equivalent slot is around 6 kg. **A21
+computes the ratio at 1.062 — parity inside 7 %.** A magazine-fed electromagnetic launcher lands
+in the same mass class as a canister of springs, per satellite.
+
+> **And the headline ratio this file used to quote was the weakest one available.** 6.6× is a
+> ratio of *velocities*, and nobody buys velocity. Lifetime extension is **superlinear** in Δv
+> here: a 2.5 m/s spring buys **+8.2 %** of orbital life, VOLLEY buys **+61.8 %** — a ratio of
+> **7.52×**, or **9.45×** against a typical 2 m/s spring. See
+> [`../validation/A21_comparators.md`](../validation/A21_comparators.md).
+>
+> **The advantage with no ratio at all is the designed differential.** A spring gives every
+> satellite the same nominal push, so its commandable spread is **exactly zero** and a
+> spring-deployed fleet can only phase by drag — **25 days, and unschedulable**, against VOLLEY's
+> **1.38 days**. That is 18.1×, and it is a capability springs do not have at any price.
 
 Two caveats that cut against VOLLEY: the 76.9 kg **excludes** the enclosure, radiator and
 avionics (P10, open), and springs need no power, no capacitor bank, no thermal system and no
