@@ -46,9 +46,11 @@ PAIRS = [
     # cad/tools/make_cad_package.py, so a dimension changed in parameters.json without a
     # regenerate leaves them quoting geometry the machine no longer has -- the same shape
     # of defect as P42, aimed at whoever is cutting metal.
-    ("cad/DIMENSIONS.md", ["cad/parameters.json", "cad/tools/make_cad_package.py"]),
-    ("cad/BOM.md", ["cad/parameters.json", "analysis/mass_properties.py",
-                    "cad/tools/make_cad_package.py"]),
+    # Checked through the build stamp rather than the .md files, for the same reason the
+    # figures are (see below). BOM.md quotes only part of parameters.json, so a change to
+    # a group it does not cite leaves it correctly byte-identical and permanently "stale".
+    ("cad/BUILD.json", ["cad/parameters.json", "analysis/mass_properties.py",
+                        "cad/tools/make_cad_package.py"]),
     ("docs/BASELINE.md", ["analysis/results/motor_results.json",
                           "analysis/results/sizing.json",
                           "analysis/results/astro_results.json",

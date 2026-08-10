@@ -14,6 +14,7 @@ mass; duplicating it is how the operating point forked once already.
 
 Run:  python3 cad/tools/make_cad_package.py
 """
+import hashlib
 import json
 import os
 import sys
@@ -175,6 +176,24 @@ def main():
         with open(os.path.join(CAD, fn), "w") as fh:
             fh.write(body)
         print(f"  wrote cad/{fn}  ({len(body.splitlines())} lines)")
+
+    # A build stamp, for the reason paper/figures/BUILD.json has one: a regenerate whose
+    # output happens to be byte-identical leaves nothing in git, so commit times cannot
+    # tell "not rebuilt" from "rebuilt, unchanged" and check_artifacts.py can never clear.
+    # BOM.md hit exactly that on 2026-08-10 -- parameters.json grew a payload_cell group
+    # that the BOM does not quote, so the file was correctly unchanged and permanently
+    # stale. The stamp carries the input digests, so it moves whenever an input moves.
+    stamp = {"generated_from": {}}
+    for src in ("parameters.json", "../analysis/mass_properties.py",
+                "tools/make_cad_package.py"):
+        with open(os.path.join(CAD, src), "rb") as fh:
+            stamp["generated_from"][os.path.normpath(src)] = \
+                hashlib.sha256(fh.read()).hexdigest()[:16]
+    stamp["dry_kg"], _cg, stamp["sled_kg"] = (round(v, 3) for v in mass_properties.build())
+    with open(os.path.join(CAD, "BUILD.json"), "w") as fh:
+        json.dump(stamp, fh, indent=2, sort_keys=True)
+        fh.write("\n")
+    print("  wrote cad/BUILD.json")
 
 
 if __name__ == "__main__":
