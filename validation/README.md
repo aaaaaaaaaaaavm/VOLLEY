@@ -72,6 +72,21 @@ they predated the P3 correction, and was fixed on 2026-07-27.
 
 When a band is missed, the outcome is a new P-item, not a quietly widened band.
 
+**A field band must name which field, at which plane, as which quantity.** Added 2026-08-10 from
+**P20**, and it is aimed at **A2** in particular. A1's array-surface band was declared against
+`analytic_B0_surface_T` = 0.7714 T, the fundamental amplitude of a **single** array's ideal wave
+at its own surface. Any measurement at that plane in a **double-sided** machine includes the
+opposing array, worth `B0·exp(-k·GAP)` = 0.160 T there, so the correct double-sided reference is
+**0.9317 T** — and the FEM's fundamental is 0.9312 T, a ratio of 0.9994. **The row failed as
+declared and the model was right.** A raw peak at that plane reads 1.4641 T and is a third
+quantity again, mesh-dependent, because the plane sits on the magnet face where block-corner
+harmonics dominate and the field is formally singular at the corners.
+
+So a band at a magnet surface needs **two references named, not one**: single-sided or
+double-sided, and fundamental or raw peak. A1's sheet is left exactly as written — a band is
+never edited after its run — and this is where the correction lives instead, so the next sheet
+meets it without having to know to search the register for it.
+
 **And when a band cites an external document, record which document, which revision, and whether
 a tighter comparator exists in the same family.** Added 2026-07-31 after **P30**: A7's tip-off
 band was set at 5 °/s from the external NRCSD-E, whose publisher calls that figure provisional,

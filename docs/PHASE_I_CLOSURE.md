@@ -1,6 +1,6 @@
 # Closing Phase I: every open item, and what each one actually needs
 
-**Written 2026-08-05, updated 2026-08-06.** `OPEN_PROBLEMS.md` carries **66 numbered entries, 33
+**Written 2026-08-05, updated 2026-08-06.** `OPEN_PROBLEMS.md` carries **66 numbered entries, 28
 of them live**. This file says, for each, what would close it and who or what has to do the
 closing — because a list that size with no disposition is a list nobody can act on.
 
@@ -24,11 +24,11 @@ cannot drift apart again.
 
 | Status | Count |
 |---|---:|
-| `LIVE` | **33** — 17 P, 16 E |
-| `CORRECTED`, retained as the record | **8** |
-| `CLOSED` | **25** |
+| `LIVE` | **28** — 14 P, 14 E |
+| `CORRECTED`, retained as the record | **9** |
+| `CLOSED` | **29** |
 
-**The real figure is 33 live, not 66.** Everything below was written before this was known and
+**The real figure is 28 live, not 66.** Everything below was written before this was known and
 its dispositions still hold; the counts in section 1 are superseded by the table above.
 
 ---
@@ -86,17 +86,42 @@ the discipline `validation/README.md` exists to enforce. Ordered by value.
 
 Closes by writing. No computation needed.
 
-| Item | What it needs |
-|---|---|
-| **P19** | Every validation predating the current operating point — now largely false; A10, A11, A12, A13, A14 all post-date it. Re-audit and mark |
-| **P20** | A1's array-surface reference is mis-specified in the run sheet. Fix the sheet |
-| **P23** | Stroke time stale in six places. Sweep and correct |
-| **P25** | A retracted claim stayed live for a day. Closed in substance; needs marking |
-| **P27** | A numerical guard hid a failure. Fixed in `shot()`; needs marking |
-| **P30** | Band chosen at the easier comparator. Corrected; retain as record |
-| **P7** | Brake sits past the release point — Gen4's 22 mm gap resolves it geometrically. Record against P32 |
-| **P14** | Gen3 CAD defects. Audit each against Gen4 and close or carry |
-| **E16** | Three references flagged verify-before-submission. Verify them |
+**Worked 2026-08-10.** Outcome against each, because "closes by writing" turned out to be true of
+five of them and false of three.
+
+| Item | What it needed | Outcome |
+|---|---|---|
+| **P7** | Brake sits past the release point — Gen4's 22 mm gap resolves it geometrically | **CLOSED.** Recorded against A16/P32. The envelope-length half was always P9's |
+| **P23** | Stroke time stale in six places. Sweep and correct | **CLOSED.** Swept: four prose occurrences already corrected, two survivors are A8's *declared band* and are correct precisely because they were never edited |
+| **P27** | A numerical guard hid a failure. Fixed in `shot()`; needs marking | **CORRECTED.** Verified in source — `BankLimitError` is raised on `disc <= 0`; the silent fallback is gone |
+| **E8** | Brake energy thrown away; not examined since the efficiency correction | **CLOSED into P28.** The premise was false: A11 recovers 291.4 J, 934.7 J reaches the fin, and the remaining question is P28's layout decision, already priced by A18 |
+| **E13** | Two untraced third-party numbers | **CLOSED.** Both already falsified or ruled inapplicable, and neither is load-bearing anywhere in the tree |
+| **P20** | A1's array-surface reference is mis-specified in the run sheet | **CARRIES, and the sheet was deliberately not edited** — see below |
+| **P14** | Gen3 CAD defects. Audit each against Gen4 | **CARRIES.** Audited: two of six answered by Gen4, four untouched |
+| **E16** | Three references flagged verify-before-submission. Verify them | **NARROWED.** Two of the three are no longer in the paper at all; the third is now identified and bibliographically verified but **not read** |
+| **P19** | Every validation predating the current operating point | Not worked in this pass |
+| **P25** | A retracted claim stayed live for a day | Already `CORRECTED` |
+| **P30** | Band chosen at the easier comparator | Already `CORRECTED` |
+
+> **P20 is the one where "fix the sheet" was the wrong instruction, and it is worth stating why.**
+> The obvious action is to correct the mis-specified band in `validation/A1_field_femm.md`. **That
+> is the single action this project forbids.** The band was declared on 2026-07-27, A1 ran against
+> it, and editing an acceptance band after its result is known is the move `validation/README.md`
+> exists to prevent — regardless of the correction being provably right. The entry had already
+> ruled it out in its own second paragraph. The fix is forward-only, and it now lives in
+> `validation/README.md`'s conventions so that **A2** meets it without having to know to search
+> the register. P20 closes when A2 is specified, and A2 does not exist.
+
+> **E16 was the item most able to be closed dishonestly, and checking it changed the answer.**
+> The instruction was "verify the three references". Two of them — Yudintsev separation dynamics
+> and the vibro-impact deployment paper — **return zero matches in `paper.tex`**. They were
+> removed from the manuscript at some point and the register went on guarding citations the
+> deliverable no longer makes; the bracket numbers were stale too. The third is now a full
+> citation. But retrieval of the full text is **blocked by this environment's egress policy**,
+> re-tested rather than assumed, so it is verified *bibliographically* and not *substantively* —
+> and it is cited for "flight heritage" while what the metadata describes is a bench-tested
+> prototype. **Closing that by assertion would have been worse than leaving it live**, which is
+> what the item itself says.
 
 ## 4. Category C — needs a decision from you
 
