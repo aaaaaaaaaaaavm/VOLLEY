@@ -105,11 +105,28 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   <h2>The idea</h2>
   <p class="sub">CubeSats flown as rideshare secondaries inherit the primary customer's
   orbit. The spring that ejects them adds 1-2 m/s, enough to drift clear, not enough to
-  change an orbit. A satellite with no propulsion of its own is stuck there for life.
+  change an orbit. About <b>92 % of flown CubeSats carry no propulsion</b> to fix that, so they
+  stay where the manifest put them for life.
   VOLLEY replaces the spring with an ironless double-sided Halbach linear synchronous motor
   driving a reusable magnetic sled along a 1.5 m track. Twelve 3U CubeSats feed from two
   transverse cassettes and fire one at a time. <b>The satellite is never modified, the
   magnets ride the sled, not the payload.</b></p>
+  <div class="note"><b>The machine is half the idea.</b> A launch vehicle's upper stage does its
+  job in ten minutes and then becomes debris &mdash; deorbited, or left to decay. POEM has already
+  flown the counter-example: a spent PS4 operated as a stabilised platform after its job is done.
+  <b>VOLLEY is what makes that reuse worth something.</b> After the primary payload separates the
+  stage becomes a <b>last-mile delivery vehicle</b>: it repositions between altitude shells on its
+  own reaction control, fires satellites off at individually commanded velocities at each station,
+  and makes a final burn to reenter.
+  <br><br>
+  <b>With the boundary attached, because a delivery claim is easy to overstate.</b> An altitude
+  shell change costs <b>27.8 m/s</b>; along-track distribution is what the deployer itself does;
+  nodal separation develops free from differential J<sub>2</sub>, measured at <b>367&deg; over 90
+  days</b> in GMAT. <b>Plane change is excluded</b> &mdash; 133 m/s per degree, eight times the
+  whole shot &mdash; and no claim here implies VOLLEY or its host selects an orbit plane. Above
+  roughly 100 m/s of host budget the <em>stage</em> supplies most of the altitude range and the
+  deployer supplies the distribution within it; they are complements, and saying which does which
+  is the difference between a positioning argument and a brochure.</div>
   <div class="grid g2">
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/interior_open.png" alt="Interior">
       <figcaption><b>Interior.</b> Track, stator belts, sled, and both cassettes with the enclosure open.</figcaption></figure>
@@ -151,14 +168,16 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   a genuine independent cross-check; everything else is single-sourced.</p>
   <table>
     <tr><th>Quantity</th><th>Value</th><th>Source</th></tr>
-    <tr><td>Thrust constant</td><td class="num">11.22 N per kA/m, ±1.26 % ripple</td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Exit velocity, 3U</td><td class="num"><b>16.54 m/s at 10.7 g</b></td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Electrical to payload efficiency</td><td class="num">21.2 %</td><td><code>motor_model.py</code></td></tr>
+    <tr><td>Thrust constant</td><td class="num">11.03 N per kA/m, ±0.99 % ripple, <b>FEM-verified to 0.03 %</b></td><td><code>motor_model.py</code></td></tr>
+    <tr><td>Exit velocity, 3U</td><td class="num"><b>16.388 m/s at 10.53 g</b></td><td><code>motor_model.py</code></td></tr>
+    <tr><td>Electrical to payload efficiency</td><td class="num">20.99 % net of regeneration</td><td><code>motor_model.py</code></td></tr>
     <tr><td>Closed-loop dispersion</td><td class="num">0.027 m/s (3σ) to ±0.10 km apogee</td><td><code>motor_model.py</code></td></tr>
     <tr><td>Orbital lifetime multiplier</td><td class="num">x1.62 at mean activity, <b>not invariant, P16</b></td><td><code>astro.py</code></td></tr>
     <tr><td>Constellation seeding, 30°</td><td class="num">1.4-6.9 days vs 25 by differential drag</td><td><code>astro.py</code></td></tr>
-    <tr><td>Dry / loaded mass</td><td class="num">76.9 kg / 124.9 kg</td><td><code>mass_properties.py</code></td></tr>
-    <tr><td>Recoil per shot</td><td class="num">66.1 N·s</td><td><code>astro.py</code></td></tr>
+    <tr><td><b>Against a spring, on lifetime</b></td><td class="num"><b>7.52x</b> the extension of the fastest published spring; 6.6x is the weaker velocity ratio</td><td><code>comparators.py</code></td></tr>
+    <tr><td>Deployer mass per 3U satellite</td><td class="num">6.375 kg — <b>parity</b> with a canisterised dispenser</td><td><code>payload_family.py</code></td></tr>
+    <tr><td>Dry / loaded mass</td><td class="num">76.5 kg / 124.5 kg</td><td><code>mass_properties.py</code></td></tr>
+    <tr><td>Recoil per shot</td><td class="num">65.6 N·s</td><td><code>astro.py</code></td></tr>
     <tr><td>Track first mode</td><td class="num">109 Hz fixed-fixed (target &gt;70)</td><td><code>sizing.py</code></td></tr>
   </table>
   <p></p>
@@ -169,7 +188,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   and the measurement landed in the ≥ 6.80 kg branch, "the headline changes and the paper
   changes materially". A4 has since run and the drawn plate passes all three bands, so
   nothing forces a lighter chassis. The scripts moved first, then the paper. Exit velocity is
-  down 19 % and efficiency from 32 % to 19 %, since taken back to 21.2 % by regeneration
+  down 19 % and efficiency from 32 % to 19 %, since taken back to 20.99 % by regeneration
   (A11), but the lifetime multiplier fell only
   x1.80 to x1.62, lifetime is a weak function of Δv, so the mission case survives better than
   the machine spec. 9.445 kg is the as-drawn, unpocketed geometry and A4 reports a 17x stress
@@ -185,7 +204,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 <section>
   <h2>Where the energy goes</h2>
   <p class="sub">2881 J leaves the capacitor bank per shot, 296 J comes back through the
-  regenerative section, and 547 J of the net 2585 J reaches the payload &mdash; the 21.2 %.
+  regenerative section, and 537 J of the net 2560 J reaches the payload &mdash; the 20.99 %.
   Source <code>sizing.py</code> <code>energy_closure</code>; 100.0 % accounted.
   This chart said "no regeneration credit" and put the sled's whole 1291 J in the brake until
   2026-07-31. The 2025 decision behind that argued the motor cannot <em>arrest</em> the sled,
@@ -225,7 +244,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   reproduces at mean and high activity. At low activity it does not, and the
   <em>invariance</em> the paper nominated as its defensible result is falsified. <b>These
   runs were propagated at 20.37 m/s</b>, before the measured sled mass moved the rated point
-  to 16.54 m/s, the falsification survives, since a uniform density scale cannot move a
+  to 16.388 m/s, the falsification survives, since a uniform density scale cannot move a
   ratio at any Δv, but the absolute numbers are historical (P19).</p>
   <div class="chart">
     <div class="row"><span class="lbl">High, F10.7 250</span><span class="track"><span class="fill" style="width:83.4%"></span></span><span class="val">x1.7302</span></div>
@@ -252,27 +271,42 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 
 <section>
   <h2>What has actually been verified</h2>
-  <p class="sub">Two results have a genuine independent cross-check: the Halbach airgap
-  field (analytic wave model vs magpylib, agreeing to three digits) and orbital decay
-  (orbit-averaged Gauss vs an independent Cowell RK4, 99.4 %). Nothing has been validated by
-  hardware, FEA, or third-party review. Each cross-check below carries an acceptance band
-  declared <em>before</em> its run. Three have now been run, and one of the three failed , 
-  which is the point of declaring the band first.</p>
+  <p class="sub"><b>Nineteen of twenty-one</b> specified cross-checks have run, each against an
+  acceptance band declared <em>in writing before the script existed</em>. <b>Two failed
+  outright</b>, several missed individual bands, one found a published number 37&nbsp;% high,
+  and one returned three rows that could not be evaluated at all. That mix is the point of
+  declaring the band first. <b>Nothing has been validated by hardware</b> &mdash; every row below
+  is one model against another model.</p>
   <table>
-    <tr><th>Analysis</th><th>Tool</th><th>Closes</th><th>Status</th></tr>
-    <tr><td>A1 airgap field</td><td>FEMM</td><td>E1, E2</td><td>specified</td></tr>
-    <tr><td><b>A4 sled chassis</b></td><td>CalculiX ccx 2.21</td><td><b>P5, P8</b></td><td><b>run, all 3 bands pass</b></td></tr>
-    <tr><td>A5 lifetime &amp; seeding</td><td>GMAT R2022a</td><td>E6, <b>P16</b></td><td><b>run, FAIL, invariance falsified</b></td></tr>
-    <tr><td>A6 conjunction P<sub>c</sub></td><td>NASA CARA</td><td>P1</td><td>specified</td></tr>
-    <tr><td>A7 separation &amp; tip-off</td><td>Project Chrono</td><td>E7</td><td>specified</td></tr>
-    <tr><td>A8 pulse-power chain</td><td>ngspice</td><td>E17</td><td><b>run, bands met, 2 findings</b></td></tr>
+    <tr><th>Analysis</th><th>Closes</th><th>Status</th></tr>
+    <tr><td>A1 airgap field</td><td>E1 (2-D), E2</td><td><b>run, partial</b> &mdash; K<sub>t</sub> agrees to 0.03&nbsp;% against a meshed PDE solve</td></tr>
+    <tr><td><b>A4 sled chassis</b></td><td><b>P5, P8</b></td><td><b>run, all 3 bands pass</b></td></tr>
+    <tr><td>A5 lifetime &amp; seeding</td><td>E6, <b>P16</b></td><td><b>run, FAIL</b> &mdash; invariance claim in the paper's own abstract falsified</td></tr>
+    <tr><td>A6 conjunction P<sub>c</sub></td><td>P1 &mdash; not closed</td><td><b>corrected</b>, three rows <b>VOID</b></td></tr>
+    <tr><td>A7 / A7-R separation</td><td>E7</td><td>superseded in substance by A23; the multibody run has still never happened</td></tr>
+    <tr><td>A8 pulse-power chain</td><td>E17</td><td><b>re-run</b>, six of six bands</td></tr>
+    <tr><td>A9 decay vs flown CubeSats</td><td>E6, against reality</td><td><b>not run</b> &mdash; blocked by network policy, not difficulty</td></tr>
+    <tr><td>A10 / A11 bank ESR, regeneration</td><td>opened <b>P26</b></td><td>run; hard ESR ceiling 68&nbsp;m&#8486;, 291&nbsp;J recovered</td></tr>
+    <tr><td>A12 inter-array attraction</td><td><b>P17</b></td><td>run &mdash; found the published value <b>37&nbsp;% high</b></td></tr>
+    <tr><td>A13 indexing disturbance</td><td>E24</td><td><b>corrected</b>, two transient rows <b>FAIL</b></td></tr>
+    <tr><td>A14 EMI scoping</td><td>opened <b>P34</b></td><td><b>run, band 4 FAIL at 611x</b> &mdash; the dominant term is the magnets, not the drive</td></tr>
+    <tr><td>A15 POEM campaign</td><td>exercises the ConOps</td><td><b>run in GMAT</b>, all evaluable bands pass; band 8 VOID as a capability claim</td></tr>
+    <tr><td>A16 / A17 Gen4 thrust, ripple chirp</td><td>E27, E23; opened <b>P36</b></td><td>A17 <b>FAIL</b> &mdash; 8.18x amplification at the 109&nbsp;Hz crossing</td></tr>
+    <tr><td>A18 Phase&nbsp;I closeout, five analyses</td><td>E19, E20, E22, E26; opened <b>P37</b></td><td>run &mdash; <b>E10 failed at every Q</b></td></tr>
+    <tr><td>A19 sensitivity ranking</td><td>ranks the assumptions</td><td><b>run, band 1 FAIL</b> &mdash; two different leaders depending on the metric, so both are published</td></tr>
+    <tr><td>A20 reachable envelope</td><td>quantifies the ConOps</td><td><b>run, band 1 FAIL</b> &mdash; my band named a two-burn transfer and its limit was computed for one burn</td></tr>
+    <tr><td>A21 comparators</td><td>replaces the headline ratio</td><td>run, seven of seven</td></tr>
+    <tr><td><b>A22 gate resize</b></td><td><b>P37</b>, E10's analysis half</td><td><b>run</b> &mdash; margin at Q=30 from <b>&minus;0.36 to +0.45</b> for 11&nbsp;g</td></tr>
+    <tr><td><b>A23 tip-off at release</b></td><td>opened <b>P41</b></td><td><b>run</b> &mdash; the release is fine; the payload <b>arrives in its cradle at 36&ndash;231&nbsp;&deg;/s</b></td></tr>
   </table>
   <p></p>
-  <div class="note">The paper once carried four numbers its own scripts did not reproduce.
-  All four were found by rebuilding the analysis from scratch and corrected against the
-  scripts; the conjunction claim was reframed rather than patched, because that minimum
-  turned out to be a near-resonant beat sample that swings an order of magnitude with a
-  ±2.5 % velocity change. The defects stay documented as P1, P4 for the audit trail.</div>
+  <div class="note"><b>The failures are the reason to trust the rest.</b> The paper once carried
+  four numbers its own scripts did not reproduce, all found by rebuilding the analysis from
+  scratch. An independent propagator then falsified a claim in the paper's own abstract, and
+  that is recorded as <b>P16</b> rather than quietly dropped. Twice this month a band failed and
+  the investigation found the bug in <em>my own analysis script</em> rather than in the design
+  &mdash; which is exactly what a band declared beforehand is for. Every defect is numbered and
+  published, including the ones that damage the project's own claims.</div>
 </section>
 
 <section>

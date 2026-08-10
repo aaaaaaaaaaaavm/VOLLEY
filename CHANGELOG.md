@@ -9,6 +9,22 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (ninth pass): the public site was a two-month-old snapshot of the project
+
+| ID | Item | Detail |
+|---|---|---|
+| **P42** | **The Pages site served the pre-quadrature operating point for seven days** | `docs/index.html` carried **11.22 N/kA·m, 16.54 m/s at 10.7 g, 21.2 %, 76.9/124.9 kg, 66.1 N·s** — every one superseded on 2026-08-03. It is the most public artifact this project has and it contradicted the repository's own baseline. |
+| P42-01 | **Its validation section was wrong about the project's own record** | It said *"Three have now been run, and one of the three failed"* and listed A1, A6 and A7 as "specified", against an actual **19 of 21**. Anyone judging this work on its evidence discipline was reading a two-month-old snapshot of that discipline. |
+| P42-02 | **The cause is P38's gap, one layer out** | `check_artifacts.py` guarded the paper, the CV, `BASELINE.md` and the figures. **It did not guard the website** — the one published artifact with no tie to the numbers it quotes. Now added, against `motor_results`, `mass_properties` and `astro_results`; it fired immediately on a 70-hour drift. |
+| P42-03 | **What is not fixed, stated rather than implied** | The site is **hand-authored HTML**, so the guard detects drift but cannot prevent it, unlike `BASELINE.md` which is generated and cannot drift at all. **The durable fix is to generate the headline table from `analysis/results/*.json`.** Not done; until it is, this failure mode is detectable rather than impossible. |
+| SITE-01 | **The site now carries the concept** | "The idea" gains the last-mile framing with A20's boundary attached — 27.8 m/s per shell, 367° of free nodal spread, **plane change excluded at 133 m/s/deg**, and the honest division that above ~100 m/s the *stage* supplies most of the altitude range. |
+| SITE-02 | **And the real validation record** | The verification table is rebuilt from A1 through A23: the two outright failures, A12's 37 % finding, A14's 611× band-4 miss, A17's 8.18× amplification, A19 and A20's band-1 failures, and A22/A23's outcomes. Plus the note that **twice this month a failed band led to a bug in my own analysis script rather than in the design** — which is what declaring a band beforehand is for. |
+
+**What authorised it.** A defect that made a published Phase I artifact wrong, which
+`docs/BASELINE.md` change control names explicitly. No operating point moved.
+
+---
+
 ## 2026-08-10 (eighth pass): WS2 closes both predicted failures, and the paper catches up
 
 | ID | Item | Detail |

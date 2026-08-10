@@ -35,6 +35,13 @@ PAIRS = [
     ("paper/VOLLEY_IEEE_Conference.pdf", ["paper/paper.tex"]),
     ("paper/cv/cv.tex", ["paper/cv/make_cv.py", "analysis/results/motor_results.json"]),
     ("paper/cv/cv.pdf", ["paper/cv/cv.tex"]),
+    # The public Pages site. It served pre-quadrature numbers -- 11.22 N/kA.m, 16.54 m/s,
+    # 76.9 kg -- from 2026-08-03 until 2026-08-10, because nothing compared it to the
+    # operating point it quotes. That is P42, and this pair is the fix: the site is an
+    # artifact of the results, exactly like BASELINE.md and the paper.
+    ("docs/index.html", ["analysis/results/motor_results.json",
+                         "analysis/results/mass_properties.json",
+                         "analysis/results/astro_results.json"]),
     ("docs/BASELINE.md", ["analysis/results/motor_results.json",
                           "analysis/results/sizing.json",
                           "analysis/results/astro_results.json",

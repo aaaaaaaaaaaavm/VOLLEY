@@ -1736,6 +1736,47 @@ trimming it. **Preload is the cheap route and the redesign is the expensive one.
 **This is analysis only.** The rattle question is exactly what the multibody run **A7** was
 specified for and has never had, and **T-5** is the test that would settle it on hardware.
 
+### P42. The public site served superseded numbers for a week, and nothing was watching it: MEDIUM, NEW 2026-08-10
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Corrected.** 2026-08-10, and the guard that would have caught it is added in the same pass.
+
+`docs/index.html` is the GitHub Pages site — **the most public artifact this project has**, and
+the first thing anyone following a link sees. It carried the **pre-quadrature operating point**:
+
+| Quantity | Site said | Correct since 2026-08-03 |
+|---|---|---|
+| Thrust constant | 11.22 N/kA·m, ±1.26 % | **11.03, ±0.99 %** |
+| Exit velocity | 16.54 m/s at 10.7 g | **16.388 m/s at 10.53 g** |
+| Net efficiency | 21.2 % | **20.99 %** |
+| Dry / loaded mass | 76.9 / 124.9 kg | **76.5 / 124.5 kg** |
+| Recoil per shot | 66.1 N·s | **65.6 N·s** |
+
+**Seven days of a public page contradicting the repository's own baseline.**
+
+**Its validation section was worse than stale — it was wrong about the project's own record.** It
+said *"Three have now been run, and one of the three failed"* and listed A1, A6 and A7 as
+"specified", against an actual **19 of 21 run**. A reader judging this project on its evidence
+discipline was being shown a two-month-old snapshot of it.
+
+**The cause is the one P38 already named, in a place nobody had checked.**
+`tools/check_artifacts.py` guarded the paper PDF, the CV, `BASELINE.md` and the figures against
+their sources. **It did not guard the website**, so the website was the one published artifact
+with no tie to the numbers it quotes. P38 recorded that *"nothing catches a source older than its
+own validation result"*; this is the same gap one layer out — nothing caught an **artifact** older
+than its own **source**, for the one artifact that was not in the list.
+
+**Fixed:** `docs/index.html` is now a guarded artifact of `motor_results.json`,
+`mass_properties.json` and `astro_results.json`. It fired immediately on a 70-hour drift, which is
+the check doing exactly what it exists for.
+
+**What is not fixed, and is the honest remainder.** The site is **hand-authored HTML**, so the
+guard can only detect drift, not prevent it — unlike `BASELINE.md`, which is *generated* and
+therefore cannot drift at all. **The durable fix is to generate the headline table from
+`analysis/results/*.json`** the way `make_baseline.py` does. That is not done, and until it is,
+this failure mode is detectable rather than impossible.
+
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done
 
