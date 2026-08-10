@@ -106,6 +106,8 @@ THESIS_MANIFEST = [
     ("analysis", "analysis"),
     ("validation", "validation"),
     ("cad", "cad"),
+    ("CAD_BRIEF.md", "appendix/CAD_BRIEF.md"),
+    ("docs/GEN4_STATUS.md", "appendix/GEN4_STATUS.md"),
     ("docs/BASELINE.md", "appendix/BASELINE.md"),
     ("OPEN_PROBLEMS.md", "appendix/OPEN_PROBLEMS.md"),
     ("docs/VALIDATION_REPORT.md", "appendix/VALIDATION_REPORT.md"),
