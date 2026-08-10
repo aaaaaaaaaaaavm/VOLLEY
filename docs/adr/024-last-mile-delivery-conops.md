@@ -38,7 +38,7 @@ envelope against a host Δv budget.
 
 | Manoeuvre | Cost | In scope? |
 |---|---|---|
-| Altitude shell change, 50 km | ~14 m/s per Hohmann leg | **Yes** |
+| Altitude shell change, 50 km | **27.8 m/s**, two-burn Hohmann (A20 band 1) | **Yes**, at a real propellant cost |
 | Along-track phase distribution | free, from commanded differential velocity | **Yes** |
 | RAAN separation | free over time, differential J2 — A15 measured **367° in 90 days** | **Yes** |
 | **Inclination change, 1°** | **133 m/s**, A15 band 8 | **No** |
@@ -47,6 +47,28 @@ envelope against a host Δv budget.
 buys 0.1229°, confirmed analytically and in GMAT. **No document, figure or abstract may imply
 that VOLLEY or its host selects an orbit plane.** Where planes do separate, it is J2 acting over
 the campaign, and that must be described as what it is rather than as a manoeuvre.
+
+> ### Amended 2026-08-10, hours after acceptance, by A20 band 6
+>
+> **Above about 100 m/s of host budget, the stage does most of the delivering.** A20 measured the
+> host's share of the fleet's altitude extent at **30 % at 50 m/s, 56 % at 100, 75 % at 200 and
+> 87 % at 400**. Band 6 declared in advance that if this happened it must be stated plainly
+> rather than left for a reviewer to find.
+>
+> **So the division of labour is now stated, and it is narrower than this ADR was written:**
+>
+> - **The host buys altitude range. VOLLEY buys distribution within it.** They are complements,
+>   and the product claim must say which does which rather than merging them into "delivery".
+> - **At zero host budget VOLLEY alone still delivers 117.2 km of altitude extent and 13.2° of
+>   RAAN spread** over 90 days — so the dedicated configuration stands on its own, and the hosted
+>   one is an amplifier rather than a prerequisite.
+> - **Repositioning is not cheap.** 27.8 m/s per 50 km shell, not the ~14 m/s this ADR originally
+>   stated — see **P40**.
+>
+> The decision is unaffected: the ConOps is still the right framing and the machine still does
+> the part no alternative does. What changes is that the *altitude* half of the delivery claim is
+> mostly bought with the host's propellant, and saying so is the difference between a positioning
+> argument and a brochure.
 
 ## Why this framing rather than the deployer framing
 

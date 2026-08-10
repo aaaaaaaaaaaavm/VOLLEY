@@ -1188,7 +1188,7 @@ handover below 1.5 m/s. It is mechanical design, and it is the reason A11 says p
 answers the electromagnetic question only.
 
 ### P29. The paper says the winding is segmented; the model charges copper for all 1.3 m: MEDIUM, NEW 2026-07-31 — CLOSED 2026-08-10
-> **Status:** `LIVE` — open engineering; something still has to be done
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
 
 Found while pricing a longer track, and it is a question about the machine as built rather than
 about any proposal.
@@ -1642,6 +1642,37 @@ it does, commit the decks — `build_deck.py` regenerates them and needs only `g
 export republishes them with real provenance. If it does not, `validation/README.md`'s convention
 about committing input decks should say so. **Either answer closes this; the current state
 answers it by accident**, which is what made the leak possible.
+
+### P40. The repositioning cost was stated at half its real value, in the ADR that adopted the ConOps: MEDIUM, NEW 2026-08-10
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Corrected.** Same day, 2026-08-10, by the band that caught it.
+
+`docs/CONCEPT.md` §4 and **ADR-024** both stated altitude repositioning at *"~14 m/s per Hohmann
+leg"* and called it cheap. **A 50 km shell change is a two-burn transfer costing 27.82 m/s** —
+13.92 m/s on the first burn and 13.90 m/s on the second. **14 m/s is one burn. The quantity is
+two.**
+
+**Found by A20 band 1 failing**, which is the only reason it was found at all. The band was
+declared at 10–20 m/s against a row explicitly naming a two-burn Hohmann, so the band carried the
+same error as the documents and **failed against the correct answer**. It is recorded as a
+failure and **was not widened**.
+
+**This is the A15 band 2 error repeating**: a band whose named quantity and whose stated limit
+describe different things. There it was apogee spread against altitude extent; here it is one
+burn against two. **Both times the error was in the band, not the model, and both times the run
+is what exposed it.**
+
+**What it changes.** Repositioning is not cheap. At 100 m/s of host budget the stage reaches four
+shells rather than the seven the halved figure implied, and the propellant bill is a real
+constraint against a budget nobody has disclosed (**E5**) rather than a rounding item. The
+delivery claim in `CONCEPT.md` survives — A20 bands 2 and 3 both pass — but it survives at twice
+the stated price.
+
+**Why this is numbered under the freeze.** [ADR-021](docs/adr/021-freeze-the-register.md) admits
+two of the three categories here at once: it is a defect that made a published Phase I deliverable
+wrong, and it is a validation band miss. Both were live within hours of each other.
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

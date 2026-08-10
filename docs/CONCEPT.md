@@ -83,7 +83,7 @@ both halves of it.
 
 | Manoeuvre | Cost | Available? |
 |---|---|---|
-| **Altitude shell change**, 50 km | ~14 m/s per Hohmann leg at LEO | **Yes** — inside an ordinary RCS budget |
+| **Altitude shell change**, 50 km | **27.8 m/s**, two-burn Hohmann at LEO | **Yes**, but it is a real propellant bill — see A20 |
 | **Phase / along-track spacing** | free; it is what differential velocity produces | **Yes** — this is VOLLEY's own job |
 | **RAAN separation** | free, over time, from differential J2 | **Yes** — A15 measured **367°** of nodal spread in 90 days |
 | **Inclination change**, 1° | **133 m/s** — A15 band 8 | **No.** 8.1× VOLLEY's entire shot, and beyond a spent stage's RCS |
