@@ -210,6 +210,21 @@ and drag cannot be scheduled. The lifetime case is modest. **The plane-change ce
 means VOLLEY cannot change orbit in the way "deployment at a chosen orbit" might suggest**, and
 any framing implying otherwise is wrong.
 
+> **The plane-change row now has two independent confirmations**, added 2026-08-10.
+> [`../validation/A15_poem_campaign.md`](../validation/A15_poem_campaign.md) band 1 measured
+> **0.1229°** in GMAT, and band 8 computes the same ceiling in closed form from
+> Δv = 2·v·sin(Δi/2). The exchange rate at POEM circular velocity is **133 m/s per degree**, so
+> one degree costs **8.1× the entire shot**. The 0.12° figure in the table above was an estimate
+> when it was written; it is now a propagated result and a closed-form one that agree.
+
+> **And the host cannot rescue it either.** A15's Case B asked what a host plane-change
+> manoeuvre would cost. It is **VOID as a capability claim** — POEM's control authority is
+> undisclosed (E5) — but the exchange rate holds regardless of who spends it. A plane change
+> worth having costs one to two orders of magnitude more Δv than VOLLEY delivers, from a host
+> that would have to already possess it. **There is no configuration of this architecture in
+> which plane change becomes a product feature**, and the threshold above should be read with
+> that settled rather than pending.
+
 ---
 
 ## What this list says, taken together

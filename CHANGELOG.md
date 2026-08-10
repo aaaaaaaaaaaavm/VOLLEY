@@ -9,6 +9,22 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10: A15 band 8 was never waiting on a propagator
+
+| ID | Item | Detail |
+|---|---|---|
+| A15B8-01 | **Band 8 was recorded as not evaluated for the wrong reason** | The sheet said "Case B is not generated", which reads as a missing GMAT run. An impulsive plane change at a circular orbit is closed form, Δv = 2·v·sin(Δi/2), and no integrator contributes to it. What Case B is actually missing is the **host**: POEM's mass and control authority are undisclosed (**E5**), so there is nothing to spend the Δv from. Only the second kind of missing is real, and the sheet now says which one it is. |
+| A15B8-02 | **The number, and a second confirmation of band 1** | `validation/gmat/case_b_plane_change.py`, importing `MU` and `RE` from `astro.py` rather than restating them. **133.3 m/s per degree** at R1's 7.640 km/s, 134.3 at R2/R3. One 16.388 m/s shot spent entirely on plane change buys **0.1229°** — the identical figure GMAT measured for band 1. Two independent routes to the same ceiling. |
+| A15B8-03 | **Verdict: VOID as a capability claim, as declared in advance** | The committed band reads "**report**; VOID as a capability claim". The report is made and the void stands on the reason it always named. This is the pre-declared disposition being applied, not a judgement formed after seeing the result. |
+| A15B8-04 | **The trade shape is worse than the ceiling alone suggests** | One degree costs the host **8.1× the entire VOLLEY shot**. Case B is not a capability the deployer adds to a host; it is one the host would have to already possess, at a scale that makes the deployer's contribution irrelevant. `KILL_CRITERIA.md` §7 carried "plane change 0.12°, effectively nil" as an estimate; it is now a propagated result and a closed-form one that agree, and the row can be read as settled rather than pending. |
+| A15B8-05 | **Band 7 is still open, and is not being folded in quietly** | Band 7 asks whether the campaign spans exactly 12 × 1200 s. That is a property of `build_poem_campaign.py`'s shot scheduling, not a GMAT output, so no propagator run will ever produce it. It closes by reading the generator against ADR-020, which has not been done. Recorded as not evaluated in both the results table and `PHASE_I_CLOSURE.md`. |
+
+**What authorised it.** Evaluating a band by the method the band itself implies, with the
+disposition unchanged from the one committed before the run. No acceptance band was edited. No
+operating point moved: `v_exit` stays 16.388 m/s and K<sub>t</sub> stays 11.0258 N/kA·m.
+
+---
+
 ## 2026-08-05 (second pass): reading the silo paper, and what it says about ADR-003
 
 | ID | Item | Detail |

@@ -224,5 +224,11 @@ decisions, and a small number of items that are blocked rather than open:
 - **E4** — nothing built or measured. The standing caveat of a TRL 2–3 study, not debt to work off.
 - **A15 band 6 / A6 / P1** — inter-object safety is **not established**. A15's separations resolve
   2.9 points per orbit; a real conjunction screen is A6's job and A6 returned three VOID rows.
-- **A15 band 8** — Case B needs POEM control authority (**E5**, undisclosed).
+- **A15 band 8** — **evaluated 2026-08-10, and it never needed a propagator.** The plane-change
+  cost is closed form: **133 m/s per degree** at POEM circular velocity, against a 16.388 m/s
+  shot. It remains **VOID as a capability claim**, which is the disposition the band declared in
+  advance, because POEM's control authority is undisclosed (**E5**) — but the void is now about
+  the host, not about a missing number. **A15 band 7 is the one still not evaluated**: campaign
+  duration is a property of the generator script, not a GMAT output, and closing it means reading
+  `build_poem_campaign.py` against ADR-020.
 - **A9** — blocked by network policy; the candidate shortlist is already in the run sheet.

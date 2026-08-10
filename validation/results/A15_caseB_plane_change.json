@@ -1,0 +1,285 @@
+{
+  "analysis": "A15",
+  "band": 8,
+  "question": "host delta-v per degree of plane change",
+  "disposition": "REPORT; VOID as a capability claim",
+  "disposition_declared": "in advance, in the A15 band table",
+  "void_reason": "POEM mass and control authority are undisclosed (E5)",
+  "method": "closed form, dv = 2 v sin(di/2); no propagator involved",
+  "dv_shot_m_s": 16.388,
+  "cases": [
+    {
+      "case": "R1",
+      "alt_km": 450.0,
+      "inc_deg": 51.6,
+      "provenance": "repo default, used by astro.py, A5 and A6",
+      "v_circular_m_s": 7640.429535277371,
+      "dv_per_degree_m_s": 133.34895912484527,
+      "di_from_one_shot_deg": 0.12289406116728331,
+      "grid": [
+        {
+          "di_deg": 0.01,
+          "dv_m_s": 1.3335065148795648,
+          "shots_equivalent": 0.08137091255062025,
+          "propellant_fraction": {
+            "cold gas": 0.0022637641678927567,
+            "monopropellant": 0.0006178991186355232,
+            "bipropellant": 0.00045316336156464576
+          }
+        },
+        {
+          "di_deg": 0.02,
+          "dv_m_s": 2.667013019603897,
+          "shots_equivalent": 0.16274182448156557,
+          "propellant_fraction": {
+            "cold gas": 0.004522403690396692,
+            "monopropellant": 0.0012354164332489814,
+            "bipropellant": 0.0009061213626484488
+          }
+        },
+        {
+          "di_deg": 0.05,
+          "dv_m_s": 6.667532371293169,
+          "shots_equivalent": 0.40685455035960266,
+          "propellant_fraction": {
+            "cold gas": 0.011267690094340588,
+            "monopropellant": 0.003085679864525237,
+            "bipropellant": 0.002263764099012744
+          }
+        },
+        {
+          "di_deg": 0.1,
+          "dv_m_s": 13.335063473182291,
+          "shots_equivalent": 0.813709023259842,
+          "propellant_fraction": {
+            "cold gas": 0.022408417239576317,
+            "monopropellant": 0.006161837724071417,
+            "bipropellant": 0.0045224031406034815
+          }
+        },
+        {
+          "di_deg": 0.123,
+          "dv_m_s": 16.402127004247436,
+          "shots_equivalent": 1.0008620334542002,
+          "propellant_fraction": {
+            "cold gas": 0.027490911523344486,
+            "monopropellant": 0.007573680784243697,
+            "bipropellant": 0.0055596591834750075
+          }
+        },
+        {
+          "di_deg": 0.2,
+          "dv_m_s": 26.67011679113366,
+          "shots_equivalent": 1.6274174268448656,
+          "propellant_fraction": {
+            "cold gas": 0.044314680821711416,
+            "monopropellant": 0.012285702554809763,
+            "bipropellant": 0.009024350730373332
+          }
+        },
+        {
+          "di_deg": 0.5,
+          "dv_m_s": 66.67511426145536,
+          "shots_equivalent": 4.06853272281275,
+          "propellant_fraction": {
+            "cold gas": 0.1071316722965513,
+            "monopropellant": 0.03043174724596398,
+            "bipropellant": 0.022408349750265955
+          }
+        },
+        {
+          "di_deg": 1.0,
+          "dv_m_s": 133.34895912484527,
+          "shots_equivalent": 8.13698798662712,
+          "propellant_fraction": {
+            "cold gas": 0.20278442949191366,
+            "monopropellant": 0.05993685014165584,
+            "bipropellant": 0.04431415300728869
+          }
+        }
+      ]
+    },
+    {
+      "case": "R2",
+      "alt_km": 350.0,
+      "inc_deg": 55.2,
+      "provenance": "POEM-4-like. UNVERIFIED",
+      "v_circular_m_s": 7696.999791897062,
+      "dv_per_degree_m_s": 134.336283829933,
+      "di_from_one_shot_deg": 0.12199083245463249,
+      "grid": [
+        {
+          "di_deg": 0.01,
+          "dv_m_s": 1.3433798872341505,
+          "shots_equivalent": 0.08197338828619419,
+          "propellant_fraction": {
+            "cold gas": 0.0022805061044326447,
+            "monopropellant": 0.0006224726612771292,
+            "bipropellant": 0.0004565178477361487
+          }
+        },
+        {
+          "di_deg": 0.02,
+          "dv_m_s": 2.686759764237878,
+          "shots_equivalent": 0.16394677594812535,
+          "propellant_fraction": {
+            "cold gas": 0.0045558114834652885,
+            "monopropellant": 0.0012445578456042883,
+            "bipropellant": 0.0009128272834527662
+          }
+        },
+        {
+          "di_deg": 0.05,
+          "dv_m_s": 6.716899231562297,
+          "shots_equivalent": 0.40986692894571003,
+          "propellant_fraction": {
+            "cold gas": 0.011350641564739528,
+            "monopropellant": 0.0031084909008607386,
+            "bipropellant": 0.0022805060350437056
+          }
+        },
+        {
+          "di_deg": 0.1,
+          "dv_m_s": 13.433797184321794,
+          "shots_equivalent": 0.8197337798585423,
+          "propellant_fraction": {
+            "cold gas": 0.022572443941245912,
+            "monopropellant": 0.0062073184969855255,
+            "bipropellant": 0.0045558109296198745
+          }
+        },
+        {
+          "di_deg": 0.123,
+          "dv_m_s": 16.523569461043206,
+          "shots_equivalent": 1.0082724835881867,
+          "propellant_fraction": {
+            "cold gas": 0.027691611568362084,
+            "monopropellant": 0.00762954236721336,
+            "bipropellant": 0.00560070778674826
+          }
+        },
+        {
+          "di_deg": 0.2,
+          "dv_m_s": 26.867584138222643,
+          "shots_equivalent": 1.6394669354541518,
+          "propellant_fraction": {
+            "cold gas": 0.044635356046203944,
+            "monopropellant": 0.012376101507858506,
+            "bipropellant": 0.009090863000250304
+          }
+        },
+        {
+          "di_deg": 0.5,
+          "dv_m_s": 67.16878131335375,
+          "shots_equivalent": 4.098656414044041,
+          "propellant_fraction": {
+            "cold gas": 0.10788047509803411,
+            "monopropellant": 0.0306535768411329,
+            "bipropellant": 0.022572375963647806
+          }
+        },
+        {
+          "di_deg": 1.0,
+          "dv_m_s": 134.336283829933,
+          "shots_equivalent": 8.197234795578044,
+          "propellant_fraction": {
+            "cold gas": 0.20412102356725692,
+            "monopropellant": 0.060366954958956165,
+            "bipropellant": 0.044634824502223225
+          }
+        }
+      ]
+    },
+    {
+      "case": "R3",
+      "alt_km": 350.0,
+      "inc_deg": 9.6,
+      "provenance": "POEM-3-like. UNVERIFIED",
+      "v_circular_m_s": 7696.999791897062,
+      "dv_per_degree_m_s": 134.336283829933,
+      "di_from_one_shot_deg": 0.12199083245463249,
+      "grid": [
+        {
+          "di_deg": 0.01,
+          "dv_m_s": 1.3433798872341505,
+          "shots_equivalent": 0.08197338828619419,
+          "propellant_fraction": {
+            "cold gas": 0.0022805061044326447,
+            "monopropellant": 0.0006224726612771292,
+            "bipropellant": 0.0004565178477361487
+          }
+        },
+        {
+          "di_deg": 0.02,
+          "dv_m_s": 2.686759764237878,
+          "shots_equivalent": 0.16394677594812535,
+          "propellant_fraction": {
+            "cold gas": 0.0045558114834652885,
+            "monopropellant": 0.0012445578456042883,
+            "bipropellant": 0.0009128272834527662
+          }
+        },
+        {
+          "di_deg": 0.05,
+          "dv_m_s": 6.716899231562297,
+          "shots_equivalent": 0.40986692894571003,
+          "propellant_fraction": {
+            "cold gas": 0.011350641564739528,
+            "monopropellant": 0.0031084909008607386,
+            "bipropellant": 0.0022805060350437056
+          }
+        },
+        {
+          "di_deg": 0.1,
+          "dv_m_s": 13.433797184321794,
+          "shots_equivalent": 0.8197337798585423,
+          "propellant_fraction": {
+            "cold gas": 0.022572443941245912,
+            "monopropellant": 0.0062073184969855255,
+            "bipropellant": 0.0045558109296198745
+          }
+        },
+        {
+          "di_deg": 0.123,
+          "dv_m_s": 16.523569461043206,
+          "shots_equivalent": 1.0082724835881867,
+          "propellant_fraction": {
+            "cold gas": 0.027691611568362084,
+            "monopropellant": 0.00762954236721336,
+            "bipropellant": 0.00560070778674826
+          }
+        },
+        {
+          "di_deg": 0.2,
+          "dv_m_s": 26.867584138222643,
+          "shots_equivalent": 1.6394669354541518,
+          "propellant_fraction": {
+            "cold gas": 0.044635356046203944,
+            "monopropellant": 0.012376101507858506,
+            "bipropellant": 0.009090863000250304
+          }
+        },
+        {
+          "di_deg": 0.5,
+          "dv_m_s": 67.16878131335375,
+          "shots_equivalent": 4.098656414044041,
+          "propellant_fraction": {
+            "cold gas": 0.10788047509803411,
+            "monopropellant": 0.0306535768411329,
+            "bipropellant": 0.022572375963647806
+          }
+        },
+        {
+          "di_deg": 1.0,
+          "dv_m_s": 134.336283829933,
+          "shots_equivalent": 8.197234795578044,
+          "propellant_fraction": {
+            "cold gas": 0.20412102356725692,
+            "monopropellant": 0.060366954958956165,
+            "bipropellant": 0.044634824502223225
+          }
+        }
+      ]
+    }
+  ]
+}

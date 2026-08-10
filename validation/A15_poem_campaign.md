@@ -48,6 +48,11 @@ R3 stopped early at 36 and 29 days because their satellites reentered — see th
 | 4 RAAN spread at end of run | 367.0° | 364.8° | 366.2° | ≥ 5° **PASS** |
 | 5 SMA vs `astro.boosted_elements` | 0.0000 % | 0.0000 % | 0.0000 % | ≤ 0.5 % **PASS** |
 | 6 min inter-object separation | **0.396 km** | 1.275 km | 21.979 km | > 100 m **PASS** |
+| 7 campaign duration | — | — | — | **NOT EVALUATED** — a generator property, not a GMAT output |
+| 8 host Δv per degree of plane change | 133.3 m/s | 134.3 m/s | 134.3 m/s | report; **VOID as a capability claim** (E5) |
+
+Rows 7 and 8 were added 2026-08-10. **Band 8 is closed form and needed no propagator**; band 7
+is still open. Both are set out below.
 
 > ### Correction, 2026-08-06: two of those columns were never 90-day values
 >
@@ -108,8 +113,74 @@ GMAT R2022a, 90 days, twelve satellites, 60 474 rows each. Bands committed at `e
 | 4 | RAAN spread after 90 days | ≥ 5° | 13.2° | **367.0°** | **PASS** |
 | 5 | GMAT SMA vs `astro.boosted_elements` | ≤ 0.5 % | — | **0.0000 %** | **PASS** |
 
-Band 6 has since been evaluated — see above. Bands 7 and 8 remain **not evaluated**: band 7 is a
-property of the script rather than a GMAT output, and band 8's Case B is not generated.
+Band 6 has since been evaluated — see above, and **band 8 has now been evaluated in closed form**
+— see below. **Band 7 remains not evaluated**, and it is worth being precise about why: band 7
+asks whether the campaign spans exactly 12 × 1200 s, which is a property of
+`build_poem_campaign.py`'s shot scheduling rather than anything GMAT reports. No propagator run
+will ever produce it. It closes by reading the generator against ADR-020, which has not been
+done, so it stays open rather than being quietly folded into the evaluated set.
+
+## Band 8, Case B: evaluated 2026-08-10, and it needed no propagator
+
+**Band 8 was recorded as not evaluated because "Case B is not generated."** That was true and it
+pointed at the wrong obstacle. An impulsive plane change at a circular orbit is closed form,
+
+    Δv = 2·v·sin(Δi/2)
+
+and no integrator adds anything to it. **What is missing from Case B is not the number. It is the
+host.** POEM's mass and control authority are undisclosed (**E5**), so there is nothing to spend
+the Δv from. Those are different kinds of missing and only the second one is real.
+
+`validation/gmat/case_b_plane_change.py` computes it, importing `MU` and `RE` from `astro.py`
+rather than restating them. Results in `validation/results/A15_caseB_plane_change.json`.
+
+| Case | Altitude | v<sub>circ</sub> | **Δv per degree** | Δi bought by one 16.388 m/s shot |
+|---|---:|---:|---:|---:|
+| R1 | 450 km | 7.640 km/s | **133.3 m/s** | **0.1229°** |
+| R2 | 350 km | 7.697 km/s | 134.3 m/s | 0.1220° |
+| R3 | 350 km | 7.697 km/s | 134.3 m/s | 0.1220° |
+
+**The closed form reproduces band 1's GMAT result exactly.** Band 1 measured a maximum
+inclination change of **0.1229°** in the propagator; spending the entire shot on plane change is
+computed here as **0.1229°**. Two independent routes to the same ceiling, and it is the same
+figure [`../docs/KILL_CRITERIA.md`](../docs/KILL_CRITERIA.md) §7 already carries as **"plane
+change 0.12°, effectively nil"**.
+
+### The exchange rate, R1, against what the machine actually has
+
+Propellant is given as a **fraction of host wet mass**. With POEM's mass undisclosed there is no
+kilogram figure to state, and inventing one is precisely what E5 exists to prevent. The Isp
+values are the textbook class ranges.
+
+| Δi | Host Δv | In units of a VOLLEY shot | Cold gas, 60 s | Monoprop, 220 s | Biprop, 300 s |
+|---:|---:|---:|---:|---:|---:|
+| 0.01° | 1.33 m/s | 0.08 | 0.23 % | 0.06 % | 0.05 % |
+| 0.05° | 6.67 m/s | 0.41 | 1.13 % | 0.31 % | 0.23 % |
+| 0.10° | 13.34 m/s | 0.81 | 2.24 % | 0.62 % | 0.45 % |
+| **0.123°** | **16.40 m/s** | **1.00** | 2.75 % | 0.76 % | 0.56 % |
+| 0.20° | 26.67 m/s | 1.63 | 4.43 % | 1.23 % | 0.90 % |
+| 0.50° | 66.68 m/s | 4.07 | 10.71 % | 3.04 % | 2.24 % |
+| **1.00°** | **133.35 m/s** | **8.14** | 20.28 % | 5.99 % | 4.43 % |
+
+**One degree costs the host 133 m/s — eight times the entire VOLLEY shot.** The row that matters
+is the 0.123° one: the point at which the host would have to spend exactly what the deployer
+spends, and it buys a tenth of a degree.
+
+### Verdict: **VOID as a capability claim**
+
+**This is the disposition band 8 declared in advance**, not a judgement formed after seeing the
+number. The band as committed reads *"**report**; VOID as a capability claim — POEM's authority
+is undisclosed (E5)"*. The report is now made; the void stands for the reason it always named.
+
+What the number does establish is the **shape of the trade**, and it is unfavourable in a way
+worth stating plainly: any plane change worth having costs the host one to two orders of
+magnitude more Δv than VOLLEY's entire shot. **Case B is not a capability this deployer adds to
+a host. It is a capability the host would have to already possess**, at a scale that makes the
+deployer's contribution to plane change irrelevant. A15's own framing — that plane separation
+comes from differential J2 and not from the impulse — is the argument that survives, and band 8
+is the reason it has to be the argument.
+
+This does **not** change bands 1–6, and it does not move `v_exit`.
 
 ### Band 4 passed, and my prediction of it was badly wrong
 
