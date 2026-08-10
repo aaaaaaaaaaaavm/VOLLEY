@@ -39,7 +39,14 @@ published number 37 % high, and one returned three rows that could not be evalua
 > **[`docs/CONCEPT.md`](docs/CONCEPT.md)** states it properly, with the boundary attached —
 > altitude and phase are in, **plane change is not**, at 133 m/s per degree.
 
-**[🎯 The concept](docs/CONCEPT.md)** · **[📄 One-page summary](SUMMARY.md)** · **[🧊 Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[🗺 Roadmap](docs/ROADMAP.md)** · **[⚠ Open problems](OPEN_PROBLEMS.md)** · **[✓ Validation](docs/VALIDATION_REPORT.md)** · **[🏗 Manufacturing](docs/MANUFACTURING.md)** · **[📐 ADRs](docs/adr/)** · **[📚 Literature](docs/LITERATURE.md)** · **[🎯 Research position](docs/RESEARCH_POSITION.md)** · **[⛔ Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[☠ Kill criteria](docs/KILL_CRITERIA.md)** · **[🏁 Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[🔩 Structural gap](docs/STRUCTURAL_GAP.md)** · **[📦 Payload classes](docs/PAYLOAD_CLASSES.md)** · **[🧲 Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[🧪 B-1 order](docs/B1_ORDER.md)** · **[📈 Market](docs/MARKET.md)**
+> **Building it, or modelling it?** Start at **[`CAD_BRIEF.md`](CAD_BRIEF.md)** — object,
+> coordinate frame, part list and assembly order, which dimensions cannot move and which are
+> free, the tolerances that matter, and **a table resolving every place where two files in this
+> repository disagree**, with the side to build. Then
+> [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both generated from
+> [`cad/parameters.json`](cad/parameters.json) so they cannot drift from it.
+
+**[🧊 CAD brief](CAD_BRIEF.md)** · **[📐 Dimensions](cad/DIMENSIONS.md)** · **[🔧 BOM](cad/BOM.md)** · **[🎯 The concept](docs/CONCEPT.md)** · **[📄 One-page summary](SUMMARY.md)** · **[🧊 Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[🗺 Roadmap](docs/ROADMAP.md)** · **[⚠ Open problems](OPEN_PROBLEMS.md)** · **[✓ Validation](docs/VALIDATION_REPORT.md)** · **[🏗 Manufacturing](docs/MANUFACTURING.md)** · **[📐 ADRs](docs/adr/)** · **[📚 Literature](docs/LITERATURE.md)** · **[🎯 Research position](docs/RESEARCH_POSITION.md)** · **[⛔ Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[☠ Kill criteria](docs/KILL_CRITERIA.md)** · **[🏁 Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[🔩 Structural gap](docs/STRUCTURAL_GAP.md)** · **[📦 Payload classes](docs/PAYLOAD_CLASSES.md)** · **[🧲 Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[🧪 B-1 order](docs/B1_ORDER.md)** · **[📈 Market](docs/MARKET.md)**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |

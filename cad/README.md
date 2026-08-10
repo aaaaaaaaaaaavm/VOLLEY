@@ -59,6 +59,12 @@ and `OPEN_PROBLEMS.md` P13.
    x2 force for the same current against x2 copper mass and winding complexity, has never
    been computed (P14).
 
+> **Modelling from this repository?** [`../CAD_BRIEF.md`](../CAD_BRIEF.md) is written to be read
+> first: coordinate frame, part list and assembly order, critical versus soft dimensions, and a
+> table resolving **every conflict between files here** with the side to build. `DIMENSIONS.md`
+> and `BOM.md` below are generated from `parameters.json` and `analysis/mass_properties.py`, so
+> they cannot drift from their sources.
+
 ## Contents
 
 - `parameters.json`, the 9-group geometry parameter set, source of truth
@@ -75,5 +81,10 @@ and `OPEN_PROBLEMS.md` P13.
 - `tools/prepare_renders.py`, which crops the raw frames to content, fits them to a
   publishing box and draws the departure direction on each. The direction is per-render
   because the camera flips between views; P43 is what happens when it is wrong
+- `DIMENSIONS.md` and `BOM.md`, **generated** by `tools/make_cad_package.py` from
+  `parameters.json` and `analysis/mass_properties.py`. Both are guarded by
+  `tools/check_artifacts.py`, so a dimension changed without a regenerate is caught
+- `tools/make_cad_package.py`, the generator. Edit the sources and re-run it; never edit
+  `DIMENSIONS.md` or `BOM.md` directly
 
 The 2-D magnetic cross-section and its FEMM run sheet live in `../analysis/femm/`.
