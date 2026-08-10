@@ -9,6 +9,29 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (eighth pass): WS2 closes both predicted failures, and the paper catches up
+
+| ID | Item | Detail |
+|---|---|---|
+| **A22** | **Retention gates resized, and the fix is eleven grams** | 2 × D6 → **2 × D9 A-286**. Capacity 18.2 → **41.0 kN**, margin at Q = 30 **−0.36 → +0.45**, positive across Q = 10–30. **The design no longer depends on where the unmeasured Q lands**, which is the whole point — A19 found Q was the only assumed input moving a margin through zero. Band 1 reproduced A18 band 9 to **0.000 %** because the load relation is imported, not reimplemented. |
+| A22-01 | **No architecture change needed** | Splitting the stack across two gates was in the allowed space and is not required, so the magazine is untouched. Quasi-static margin 1.21 → 3.98; pin shear still governs over bearing. D8 misses the 0.20 target by 0.06 and is named because a reader will ask. |
+| A22-02 | **A definitional discrepancy** | A18 quotes this margin as **−0.10** (capacity/load − 1); `sizing.py` applies a **1.4 design factor** and gives **−0.36** for the same hardware. Both correct, different quantities. The factored form is used — dropping a design factor while resizing would be a silent relaxation. |
+| A22-03 | **Adopted, not just asserted** | `sizing.py` and `cad/parameters.json` both carry D9, with the reason and run sheet named. The analysis said D9 while the scripts said D6 for one commit; that drift is the class this project logs, closed in the same pass. |
+| **A23** | **The release was never the risk** | Acceleration ends at 1300 mm and release is at 1500, so the payload coasts **12.2 ms at zero commanded force**. At the ~1 N residual that leaves, the mechanism has **250 µs** of slack and lands two orders of magnitude inside the 2 °/s band. **A7-R's 50.7 µs was a full-push worst case that does not occur.** |
+| **P41** | **The payload slams into its cradle at the start of every shot** | The 70 mm CoM offset gives a 28.92 N·m moment and **688 rad/s²**; the payload crosses its cradle clearance and **arrives at 36–231 °/s — 18 to 115× the band.** An impact load on the payload's own rails, twelve times per campaign, that appears nowhere in this repository. After impact it rattles, and whether that has settled by release needs a restitution model this project does not have. |
+| P41-01 | **Tightening the clearance does not fix it** | Arrival goes as √(clearance): ten times tighter buys √10, 115 → 36 °/s, still 18×. **Preload the cradle** instead — A23 band 4 measured the couple reaction it must exceed at **85.0 N per contact**. The geometric alternative needs the CoM offset cut **70 mm → 3.5 mm**. |
+| KC-01 | **Kill criterion 4 moves from unmodelled to modelled, and is still not passed** | It is now a stated requirement on a cradle preload and a release residual, against a mechanism that does not exist. `STRUCTURAL_GAP.md` loses one of its four findings, and its stale margins are reconciled rather than deleted. |
+| **PAPER** | **Three factual errors corrected** | The gate passage described a **negative margin as an open problem** — now D9 at +0.45. Tip-off said the analytic budget "remains a failure against the comparator" — now A23's result. And the claim that the 10–20 s versus 1200 s cadence contradiction **"remains open"** was simply wrong: **ADR-020 closed it at 1200 s** on 2026-08-05 and the paper never caught up. |
+| PAPER-01 | **Two additions** | §VII gains the **last-mile ConOps** with A20's boundary attached — 27.8 m/s per 50 km shell, plane change excluded at 133 m/s/deg, and the honest division that above ~100 m/s the *stage* supplies most of the altitude range. The abstract gains A21's **7.5× lifetime-extension** ratio, which the velocity ratio of 6.6 understated. **13 pages, zero undefined references.** |
+| SWEEP-01 | **Repo-wide consistency pass** | Validation counts 9-of-11 → **19 of 21** in `README.md` and `SUMMARY.md`; D6 corrected in **ADR-008** (amended, not rewritten), `QUALIFICATION_PLAN.md`, `PROVENANCE.md`, `INVENTORY.md`, E10 and the paper. **A18's run sheet keeps its D6 record and gains a forward pointer** — the record of what it found is not edited. `README.md` gains the concept paragraph; page counts corrected in three places; `BASELINE.md` regenerated. |
+
+**What authorised it.** Two validation outcomes against bands declared before their scripts
+existed, one design change adopted under `BASELINE.md` change-control rule 2, and a correction
+pass over documents that a defect had made wrong. **No operating point moved:** `v_exit` stays
+16.388 m/s, K<sub>t</sub> stays 11.0258 N/kA·m.
+
+---
+
 ## 2026-08-10 (seventh pass): two owner decisions, both branches priced first
 
 | ID | Item | Detail |

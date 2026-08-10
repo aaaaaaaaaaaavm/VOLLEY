@@ -235,7 +235,7 @@ Six analyses, each with its acceptance band declared before the run. Progress so
 | A4 sled chassis | `████████░░` **run, as-drawn plate passes all 3 bands**; lightest-chassis question open |
 | A5 lifetime & seeding | `████████░░` **run, FAIL (P16), and now superseded: it was propagated at 20.37 m/s (P19)** |
 | A6 conjunction Pc | `░░░░░░░░░░` specified |
-| A7 separation & tip-off | `░░░░░░░░░░` specified |
+| A7 separation & tip-off | `███████░░░` **modelled by A23** — A7's multibody run still not done |
 | A8 pulse-power chain | `████████░░` **run, all bands met, 2 findings; netlist still at the old operating point (P19)** |
 
 ## GMAT cross-check (A5): first real validation output

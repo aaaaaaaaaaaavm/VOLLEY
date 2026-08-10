@@ -43,7 +43,7 @@ spring dispenser's qualification.**
 
 **Pass criteria.** No change in first mode > 5 % between pre- and post-test signature sweeps
 (a shift means something loosened). Retention gates hold the six-satellite stack preload,
-the analysis says 5.9 kN through two D6 A-286 pins at margin 1.2, and margin 1.2 is thin
+the analysis said 5.9 kN through two D6 A-286 pins at margin 1.2 — **superseded 2026-08-10: the sizing case was quasi-static and the governing one is random vibration, so the gate is now two D9 pins at 41.0 kN, margin +0.45 at Q = 30 (A22)**. Margin 1.2 was thin
 enough that this test is the one that matters. Launch locks hold the sled. No mass simulator
 moves in its cassette.
 

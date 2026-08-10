@@ -55,6 +55,8 @@ the paper's former 10–20 s it would not have.
 **Band 9 fails at every Q.** Miles' equation on the GEVS protoflight spectrum at the 109 Hz track
 mode gives 11.7–20.2 kN through the retention pins, against the **5.9 kN they were sized for**.
 Band 10 fails at Q = 30, where the two D6 A-286 pins are past their 18.2 kN shear capacity.
+**Resized 2026-08-10 by [A22](A22_gate_resize.md) to two D9 pins, 41.0 kN, margin +0.45 at Q = 30.
+This record is left as it ran; the fix is recorded there, not here.**
 
 **The pins are not necessarily undersized; the load case was.** 5.9 kN is a quasi-static figure.
 Random vibration through a lightly-damped 109 Hz mode is a different problem, and the margin the

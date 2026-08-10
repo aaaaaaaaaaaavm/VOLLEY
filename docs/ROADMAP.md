@@ -31,7 +31,7 @@ there is also a plan for closing them. This is that plan.
 | Of those nine | **two failed** — A5 (invariance) and A13 (host attitude) — one is PARTIAL (A1), one returned three **void** rows (A6), and one found a published number 37 % high (A12) |
 | Biggest single gap | ~~K<sub>t</sub> single-method~~ closed by A1. Now: **nothing has been measured at any scale** (E4) |
 | Largest open defect | **P26** — the supercapacitor bank cannot source the shot on purchasable cells |
-| Paper | Source and PDF current as of 2026-08-03, 12 pages, zero undefined references |
+| Paper | Source and PDF current as of 2026-08-10, 13 pages, zero undefined references |
 
 ---
 

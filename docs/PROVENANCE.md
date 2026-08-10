@@ -51,7 +51,7 @@ Recorded because they calibrate how much to trust the rest:
    dissipates that energy in the brake. Double-counting; efficiency corrected 40 % to 32 %.
 4. Two sign errors in the Halbach array convention, caught by empirically probing a
    single array rather than asserting the convention.
-5. A retention gate pin was sized at margin 0.5 (inadequate); resized to two D6 pins,
+5. A retention gate pin was sized at margin 0.5 (inadequate); resized to two D6 pins, and then to two **D9** pins in 2026-08-10 after A18 showed the quasi-static sizing case was the wrong one (P37, A22),
    margin 1.2.
 6. **Found while building this repo:** the paper's conjunction minimum (45.3 km) and
    peak current (323 A) both belong to a superseded operating point. See

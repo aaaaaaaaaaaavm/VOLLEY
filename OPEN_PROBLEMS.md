@@ -1921,7 +1921,11 @@ cassette, or structural design exists for larger classes.
 
 > **ANALYSIS HALF CLOSED 2026-08-06 by A18, and it FAILED.** Miles' equation on the GEVS
 > spectrum gives 11.7-20.2 kN through the retention pins against the 5.9 kN they were sized for.
-> Opened as **P37**. T-1 closes the test half and nothing here substitutes for it.Retention gate pin sizing exists (two D6 A-286, margin 1.2) and the breech launch-lock
+> Opened as **P37**. T-1 closes the test half and nothing here substitutes for it.
+> **RESIZED 2026-08-10 by A22: two D9 pins, 41.0 kN, margin +0.45 at Q = 30 and positive across
+> the whole range. The analysis half now passes; the test half is still T-1's.**
+
+Retention gate pin sizing exists (**two D9 A-286 since 2026-08-10**, quasi-static margin 3.98) and the breech launch-lock
 blocks are now modelled in CAD (`cad/parameters.json` `track`: `launch_lock`, x = 30-50
 mm, 2 off). The rest, escapement caging, cam lock, tolerance stack-up under vibration,
 is drawn or described, not analysed.

@@ -47,7 +47,7 @@ entries are kept only so the record of what changed stays legible.
 | A33 | Refined conjunction at final velocity | `analysis/astro.py`, see P1 |
 | A34 | Strategy-doc verification (recoil, propellant, capacitor, trim tables) | verification only |
 | A35 | Mechanical/thermal/electrical sizing anchors | `analysis/sizing.py` |
-| A36 | Retention-gate resize (margin 0.5 to two D6 pins, 1.2) | `analysis/sizing.py` |
+| A36 | Retention-gate resize (margin 0.5 to two D6 pins, 1.2; **D6 to D9 in 2026-08-10, A22**) | `analysis/sizing.py` |
 | A37 | **Recurring hardware cost, parametric BOM**: all prices assumed, no quotations | `analysis/cost.py`, corrects the paper's claim that magnets dominate |
 
 ## B. Design decisions and when they changed

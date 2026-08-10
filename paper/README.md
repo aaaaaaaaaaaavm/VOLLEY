@@ -2,7 +2,7 @@
 
 `paper.tex` is the source. `VOLLEY_IEEE_Conference.pdf` is the last compiled build.
 
-**Built 2026-08-10** from the current source with pdfTeX (TeX Live 2023): 12 pages, zero
+**Built 2026-08-10** from the current source with pdfTeX (TeX Live 2023): 13 pages, zero
 undefined references, zero missing figures. Source and PDF agree. The one-page CV was
 regenerated from `analysis/results/*.json` and rebuilt in the same environment on 2026-08-06
 and is unchanged by this build.
@@ -11,6 +11,15 @@ To rebuild: run `pdflatex paper.tex` from this directory until the cross-referen
 (three passes from a clean build), or upload `paper.tex`, `IEEEtran.cls` and `figures/` to Overleaf.
 
 ## What changed in the current build
+
+**2026-08-10, second pass.** Three factual corrections and two additions. The retention gate now
+states **two D9 pins at 41.0 kN**, margin **+0.45 at Q = 30**, after A22 resized it — the text
+previously described a negative margin as an open problem. Tip-off is rewritten to A23's result:
+the release is comfortable because it happens 12.2 ms into coast at zero force, and the risk is
+the **36–231 °/s** cradle arrival at the *start* of the stroke. The claim that the 10–20 s versus
+1200 s cadence contradiction "remains open" is removed — **ADR-020 closed it at 1200 s**.
+Added: the last-mile ConOps in §VII with its envelope bounded by A20, and the **7.5×**
+lifetime-extension ratio from A21 in the abstract.
 
 **2026-08-10, the payload magnetic environment (P34, P38).** Sec. VII gains the inward-facing
 half of the interface, and Sec. on space environment and EMC has a falsified sentence removed:

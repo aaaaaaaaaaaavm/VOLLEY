@@ -52,9 +52,9 @@ constellation phase spacing in **1.4-6.9 days** against roughly 25 for different
 > of that capacitance achieves, and the shot does not close at a realistic value (**P26**). The
 > velocity and dispersion figures are unaffected, the bank sizing is. Not quietly re-sized.
 
-**Maturity: TRL 2-3. Nothing has been built, fired, or measured.** **Nine of eleven** specified
-validations have been run, each against an acceptance band declared *before* the run — and the
-results are mixed on purpose:
+**Maturity: TRL 2-3. Nothing has been built, fired, or measured.** **Nineteen of twenty-one**
+specified validations have been run, each against an acceptance band declared *before* the run —
+and the results are mixed on purpose:
 
 | | |
 |---|---|
@@ -64,9 +64,17 @@ results are mixed on purpose:
 | **A13 FAILED / corrected** | transient return rate still misses rows 3 and 4, but the ideal residual rate is zero; the former 18.1 s cadence floor is superseded, while attitude restoration and structural settling remain open (E25) |
 | A1, A4, A10, A11, A12 | passed, partially or fully, with every miss logged; the ngspice A8 run now predates the corrected operating point |
 
-**A7 (tip-off) and A9 (decay against flown CubeSats) are outstanding.** A9 is the only analysis
-anywhere in this project that compares the model against something that actually happened, and
-it is blocked by network policy rather than by difficulty.
+**A9 (decay against flown CubeSats) is outstanding**, and it is the only analysis anywhere in this
+project that compares the model against something that actually happened — blocked by network
+policy rather than by difficulty. **A7** is superseded in substance by **A23**, which modelled the
+release rather than bounding it, though the multibody run A7 specifies has still never happened.
+
+| | |
+|---|---|
+| **A22** | resized the retention gates from D6 to **D9** after A18 found the sizing case was wrong; margin at Q = 30 goes **−0.36 → +0.45** for **11 g**, and no longer depends on the unmeasured damping |
+| **A23** | found the release itself is comfortable — 12.2 ms of coast at zero force — but that the payload **arrives in its cradle at 36–231 °/s**, 18–115× the tip-off band, which nothing had modelled (**P41**) |
+| **A20** | priced the delivery envelope: **27.8 m/s per 50 km shell**, and above ~100 m/s of host budget the *stage* supplies most of the altitude range, not VOLLEY |
+| **A21** | replaced the headline: **7.52×** a spring on lifetime extension, not 6.6× on velocity — and **withdrew any cost claim**, since no line of `cost.py` carries a quotation |
 
 ## Where it sits against what flies
 
