@@ -1,0 +1,113 @@
+{
+  "analysis": "P34 payload magnetic environment",
+  "method": "magpylib finite-block analytic field, exact in free space; peak over one wavelength at each station",
+  "unblocked_by": "P3 and P21 both CORRECTED; far_field_sensitivity.py showed n_wave=7 converged",
+  "reference_frame": "z measured from the stator mid-plane; array back face at z = 14 mm",
+  "envelope": {
+    "near_face_mm": 20.0,
+    "far_face_mm": 120.0,
+    "note": "3U payload envelope from cad/parameters.json"
+  },
+  "comparators": {
+    "earth_field_uT": 45.0,
+    "magnetometer_full_scale_uT": 100.0,
+    "magnetometer_note": "class figure, not a datasheet; replace with a specific part before this is cited"
+  },
+  "stations": [
+    {
+      "z_mm": 20.0,
+      "B_mT": 61.0810225903062,
+      "vs_earth": 1357.3560575623599,
+      "vs_magnetometer_fullscale": 610.8102259030619,
+      "dB_dz_mT_per_mm": -17.14463744955983
+    },
+    {
+      "z_mm": 30.0,
+      "B_mT": 7.8270622631046,
+      "vs_earth": 173.93471695788,
+      "vs_magnetometer_fullscale": 78.270622631046,
+      "dB_dz_mT_per_mm": -1.1916683350669783
+    },
+    {
+      "z_mm": 40.0,
+      "B_mT": 2.2273832088386953,
+      "vs_earth": 49.49740464085989,
+      "vs_magnetometer_fullscale": 22.273832088386953,
+      "dB_dz_mT_per_mm": -0.2406183167178047
+    },
+    {
+      "z_mm": 50.0,
+      "B_mT": 0.8871325975541924,
+      "vs_earth": 19.714057723426496,
+      "vs_magnetometer_fullscale": 8.871325975541923,
+      "dB_dz_mT_per_mm": -0.0644679049637479
+    },
+    {
+      "z_mm": 60.0,
+      "B_mT": 0.5383830101654019,
+      "vs_earth": 11.964066892564485,
+      "vs_magnetometer_fullscale": 5.383830101654018,
+      "dB_dz_mT_per_mm": -0.015610530430318965
+    },
+    {
+      "z_mm": 70.0,
+      "B_mT": 0.46288325690286414,
+      "vs_earth": 10.286294597841424,
+      "vs_magnetometer_fullscale": 4.628832569028641,
+      "dB_dz_mT_per_mm": -0.003728044420374106
+    },
+    {
+      "z_mm": 80.0,
+      "B_mT": 0.43544455275534866,
+      "vs_earth": 9.676545616785525,
+      "vs_magnetometer_fullscale": 4.354445527553486,
+      "dB_dz_mT_per_mm": -0.002213261275331896
+    },
+    {
+      "z_mm": 90.0,
+      "B_mT": 0.4141483355891001,
+      "vs_earth": 9.203296346424445,
+      "vs_magnetometer_fullscale": 4.141483355891,
+      "dB_dz_mT_per_mm": -0.0021487676360957956
+    },
+    {
+      "z_mm": 100.0,
+      "B_mT": 0.3916058144902627,
+      "vs_earth": 8.702351433116949,
+      "vs_magnetometer_fullscale": 3.9160581449026273,
+      "dB_dz_mT_per_mm": -0.0023694989003161097
+    },
+    {
+      "z_mm": 110.0,
+      "B_mT": 0.36686886658620277,
+      "vs_earth": 8.152641479693393,
+      "vs_magnetometer_fullscale": 3.6686886658620277,
+      "dB_dz_mT_per_mm": -0.0025638146029725558
+    },
+    {
+      "z_mm": 120.0,
+      "B_mT": 0.34065274318602223,
+      "vs_earth": 7.570060959689382,
+      "vs_magnetometer_fullscale": 3.406527431860222,
+      "dB_dz_mT_per_mm": -0.0026622667845234912
+    }
+  ],
+  "crossings": {
+    "below_magnetometer_fullscale_mm": 250.51282051282053,
+    "below_earth_field_mm": 331.53846153846155
+  },
+  "exposure": {
+    "drive_transient_ms": 158.6,
+    "drive_transient_note": "one shot. A14 found the drive is NOT the dominant term",
+    "static_note": "the Halbach array is a permanent magnet. The static field is present continuously while the payload is cradled, not only during the shot",
+    "cadence_s": 1200.0,
+    "cadence_source": "ADR-020",
+    "campaign_s": 14400.0,
+    "static_bound_note": "lower bound one cadence interval if indexed immediately before firing; upper bound the whole campaign if cradled throughout. Cradle dwell is not specified anywhere in this repository"
+  },
+  "soft_magnetic_parts_in_the_load_path": {
+    "magazine_septum": "silicon steel, 1.0 mm, cad/parameters.json groups.magazine",
+    "gate_pins": "A-286",
+    "note": "this is the deployer own materials, NOT a payload materials list. P34 step 2 still needs the latter"
+  }
+}

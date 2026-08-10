@@ -15,7 +15,7 @@ venv/
 *.bbl
 *.blg
 # Transient pdflatex/latexmk/tectonic output. The committed PDF is
-# EMOCD_IEEE_Conference.pdf, refreshed from paper.tex whenever the paper changes.
+# VOLLEY_IEEE_Conference.pdf, refreshed from paper.tex whenever the paper changes.
 # NOTE: this comment is on its own line deliberately. It was previously trailing the
 # pattern on line 17, and '#' only opens a comment at the START of a line in .gitignore --
 # so the pattern was the entire string including the comment text, and matched nothing.

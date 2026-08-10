@@ -2,16 +2,23 @@
 
 `paper.tex` is the source. `VOLLEY_IEEE_Conference.pdf` is the last compiled build.
 
-**Built 2026-08-06** from the current source with pdfTeX 3.141592653 (TeX Live 2023):
-12 pages, zero undefined references, zero missing figures. Source and PDF agree. The
-one-page CV was regenerated from `analysis/results/*.json` and rebuilt in the same environment.
+**Built 2026-08-10** from the current source with pdfTeX (TeX Live 2023): 12 pages, zero
+undefined references, zero missing figures. Source and PDF agree. The one-page CV was
+regenerated from `analysis/results/*.json` and rebuilt in the same environment on 2026-08-06
+and is unchanged by this build.
 
 To rebuild: run `pdflatex paper.tex` from this directory until the cross-references settle
 (three passes from a clean build), or upload `paper.tex`, `IEEEtran.cls` and `figures/` to Overleaf.
 
 ## What changed in the current build
 
-Three groups, all traceable to `CHANGELOG.md` and the P-items in `OPEN_PROBLEMS.md`:
+**2026-08-10, the payload magnetic environment (P34, P38).** Sec. VII gains the inward-facing
+half of the interface, and Sec. on space environment and EMC has a falsified sentence removed:
+it claimed a magnetometer-carrying customer payload "sees a field comparable to a conventional
+reaction-wheel assembly at the same standoff", which A14 band 4 had already falsified at 611×
+magnetometer full scale five days earlier. See `docs/PAYLOAD_ENVIRONMENT.md`.
+
+The three groups below are from the 2026-08-06 build and still describe the rated point:
 
 1. **The rated point moved.** The sled mass was computed as 9.445 kg from the Gen3 CAD solid volumes, against the 4.86 kg the parametric model assumed (P15). Exit velocity is now
    16.4 m/s at 10.5 g, efficiency 21.0 %, lifetime multiplier x1.62, dry mass 76.5 kg. This

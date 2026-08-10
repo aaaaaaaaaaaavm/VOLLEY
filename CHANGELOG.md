@@ -9,6 +9,27 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (second pass): what the deployer does to the satellite inside it
+
+| ID | Item | Detail |
+|---|---|---|
+| P34-01 | **The block on P34 step 1 was stale, and had been for days** | Step 1 read "resolve P3 first". **P3 and P21 are both `CORRECTED`** — magpylib's `Cuboid` is an exact analytic solution for a uniformly magnetised block, so the finite-array field was already three-dimensional and correct with no mesh, and `far_field_sensitivity.py` had shown the 7-wavelength default converged to 0.64 % at 10 mm. `PHASE_I_CLOSURE.md` A-13 also carried "blocked behind A-8/A-9". **A blocked item needs its block re-tested, not inherited**, which is the same failure class as the A1 row that said "not run" while three other files recorded the result. |
+| P34-02 | **The exposure is published as a payload environment specification** | New `docs/PAYLOAD_ENVIRONMENT.md`, from new `analysis/payload_environment.py`. Field across the whole 3U envelope, z = 20 to 120 mm: **61.081 mT at the near face, 0.341 mT at the far face**, below magnetometer full scale only at **z = 251 mm** and below Earth's field at **332 mm**. Every part of the payload sits above both, 611× to 3.4×. Attached to **ADR-010** and the paper's interface section, which previously specified only what VOLLEY asks of a *host*. |
+| P34-03 | **The profile has two regimes and one mitigation does not cover both** | Not visible in the single 61 mT figure. The near face is a steep exponential, **−17.1 mT/mm**, so 10 mm of standoff is worth a factor of eight and carries essentially all the magnetic force, which goes as ∇(B²). Beyond ~60 mm the field is a nearly uniform 0.54 → 0.34 mT tail with a gradient three orders of magnitude smaller. **Standoff fixes the near face and does nothing for the tail.** |
+| P34-04 | **The exposure was understated as "one shot plus dwell"** | The Halbach array is a permanent magnet. The static field is continuous from magazine loading through ground handling, launch and the whole campaign — not the 158.6 ms of a shot, which A14 had already found is not the dominant term. **Cradle dwell is specified nowhere in this repository**, so it is recorded as a bound: one 1200 s cadence interval at the low end, the full 4.0 h campaign plus ground time at the high end. That is a ConOps gap, not a physics one. |
+| P34-05 | **The deployer's own load path contains soft-magnetic material** | `cad/parameters.json` gives the magazine septum as **silicon steel, 1.0 mm**, between adjacent satellites. It will both shunt flux and itself magnetise, changing the field a neighbouring satellite sees. **Nothing has modelled that.** It is a second reason the in-cassette field is not simply the sled field at greater distance, and the cassette case is stated as unmodelled rather than assumed benign. |
+| P34-06 | **P34 narrows, it does not close** | Step 1 done. Step 2, the **payload** materials list that would separate recoverable saturation from permanent magnetisation, is now the whole of the item and needs a customer or a stated reference payload — A14 band 5 was declared VOID-able in advance on exactly this ground. Step 3, T-6, still needs measurement. **"The satellite is never modified" holds mechanically and electrically and is not established magnetically**, and that qualification now sits next to the claim rather than in an appendix. |
+| **P38** | **The paper asserted a payload environment its own validation had falsified** | **New numbered defect.** The EMC section said a magnetometer-carrying customer payload "sees a field comparable to a conventional reaction-wheel assembly at the same standoff". **A14 band 4 falsified that on 2026-08-05 at 611× full scale** and opened P34 on the strength of it. The sentence survived five days in the published PDF because A14's outcome was propagated to `OPEN_PROBLEMS.md` and `KILL_CRITERIA.md` and not to `paper.tex`. Corrected, and the PDF rebuilt: 12 pages, zero undefined references. |
+| P38-01 | **The general case is the part worth keeping** | `check_artifacts.py` catches a PDF older than its source. **Nothing catches a source older than its own validation result.** `BASELINE.md` change control already requires a baseline change to state which validations it invalidates; that rule runs in one direction only. Carried as the open half of P38. |
+| CNT-01 | **Register counts** | 65 entries / 32 live → **66 / 33** (17 P live, 16 E live), derived from `tools/register_status.py` and propagated to `KILL_CRITERIA.md`, `ROADMAP.md`, `PHASE_I_CLOSURE.md` and the `OPEN_PROBLEMS.md` header. |
+
+**What authorised it.** P34-01 through P34-06 are an analysis whose block had lifted. P38 is a
+defect that makes a Phase I deliverable wrong, which `docs/BASELINE.md` change control names
+explicitly as a permitted trigger. No operating point moved: `v_exit` stays 16.388 m/s and
+K<sub>t</sub> stays 11.0258 N/kA·m.
+
+---
+
 ## 2026-08-10: A15 band 8 was never waiting on a propagator
 
 | ID | Item | Detail |

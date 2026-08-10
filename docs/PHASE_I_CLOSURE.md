@@ -1,6 +1,6 @@
 # Closing Phase I: every open item, and what each one actually needs
 
-**Written 2026-08-05, updated 2026-08-06.** `OPEN_PROBLEMS.md` carries **65 numbered entries, 32
+**Written 2026-08-05, updated 2026-08-06.** `OPEN_PROBLEMS.md` carries **66 numbered entries, 33
 of them live**. This file says, for each, what would close it and who or what has to do the
 closing — because a list that size with no disposition is a list nobody can act on.
 
@@ -24,11 +24,11 @@ cannot drift apart again.
 
 | Status | Count |
 |---|---:|
-| `LIVE` | **32** — 16 P, 16 E |
+| `LIVE` | **33** — 17 P, 16 E |
 | `CORRECTED`, retained as the record | **8** |
 | `CLOSED` | **25** |
 
-**The real figure is 32 live, not 65.** Everything below was written before this was known and
+**The real figure is 33 live, not 66.** Everything below was written before this was known and
 its dispositions still hold; the counts in section 1 are superseded by the table above.
 
 ---
@@ -48,6 +48,16 @@ its dispositions still hold; the counts in section 1 are superseded by the table
 Toolchain confirmed present in this environment: `getdp`, `ccx` (CalculiX), `ngspice`, `gmsh`,
 `skfem`, `magpylib`, `scipy`, `pdflatex`. **GMAT is not installed.** That is a wider toolchain
 than the repository's own notes assume, and it is why category A is as large as it is.
+
+> **A-13's block was stale, and it is worth recording why rather than only that.** A-13 was
+> written as blocked behind A-8 and A-9, on the reasoning that the extent of the 61 mT region
+> needed a trustworthy 3-D far field. **It never needed a mesh.** magpylib's `Cuboid` is an
+> exact analytic solution for a uniformly magnetised block, so the finite-array field was
+> already three-dimensional and correct, and `analysis/far_field_sensitivity.py` had since
+> resolved **P3** and **P21** and shown the 7-wavelength default converged. The dependency was
+> real when it was written and had been lifted for days without anything noticing — which is the
+> same failure class as the A1 row in `validation/README.md` that said "not run" while three
+> other files recorded the result. **A blocked item needs its block re-tested, not inherited.**
 
 ---
 
@@ -70,7 +80,7 @@ the discipline `validation/README.md` exists to enforce. Ordered by value.
 | A-10 | **Launch restraint** | E10 | ccx | Needs loads defined first |
 | A-11 | **Parasitic eddy drag on the track** | E22 | analytic | |
 | A-12 | **The four absent physical effects** | P18 | mixed | Scope each, then close or convert to E-items |
-| A-13 | **Payload magnetic environment** | **P34** | 3-D from A-8 | Blocked behind A-8/A-9: the extent of the 61 mT region needs a trustworthy far field |
+| A-13 | **Payload magnetic environment** | **P34**, narrowed not closed | magpylib | ~~Blocked behind A-8/A-9~~ — **the block was stale. DONE 2026-08-10**, see below |
 
 ## 3. Category B — bookkeeping
 

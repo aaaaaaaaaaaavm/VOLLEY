@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **65 numbered entries, of which 32 are live.** Every entry carries a `Status:` line written by
+> **66 numbered entries, of which 33 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which also derives the headline counts, so this file and the numbers
 > quoted elsewhere cannot drift apart again.
 >
@@ -1246,15 +1246,54 @@ figures, 0.463 and 0.341 mT, sit in the edge-effect tail that **P3** already rec
 getting wrong, so the *extent* of the affected volume is not established. A14's band 5 is VOID
 for that reason and for the absence of a materials list.
 
+> **NARROWED 2026-08-10. Step 1 is done, and the block behind it was stale.** Step 1 was written
+> as "resolve P3 first", and P3 and P21 are both `CORRECTED` — magpylib's Cuboid is an exact
+> analytic solution in free space, so the finite-array field was already three-dimensional and
+> correct, and `far_field_sensitivity.py` showed the 7-wavelength default converged to 0.64 % at
+> 10 mm. The far field has been trustworthy for some time and this entry went on citing a block
+> that had been lifted.
+>
+> The exposure is now published as [`docs/PAYLOAD_ENVIRONMENT.md`](docs/PAYLOAD_ENVIRONMENT.md),
+> a payload environment specification rather than a host keep-out, and attached to **ADR-010**
+> and the paper's interface section — the two places that previously specified only what VOLLEY
+> asks of a *host*.
+>
+> **Two things the profile shows that the single 61 mT figure did not.** The near face sits in a
+> steep exponential with a gradient of **−17 mT/mm**, so 10 mm of standoff is worth a factor of
+> eight and carries essentially all of the magnetic force, which goes as ∇(B²). Everything beyond
+> ~60 mm sits in a nearly uniform tail — 0.54 down to 0.34 mT — with a gradient three orders of
+> magnitude smaller. **Standoff fixes the near face and does nothing for the tail**, so one
+> mitigation does not cover both regimes.
+>
+> **And the exposure is not "one shot plus dwell".** The Halbach array is a permanent magnet: the
+> static field is present continuously from magazine loading onward, through ground handling and
+> launch, not only during the 158.6 ms shot. Cradle dwell is specified nowhere in this
+> repository, so the bound runs from one 1200 s cadence interval to the whole campaign plus
+> ground time. The original wording understated it and is corrected above.
+>
+> **P34 stays open.** The extent is established; the materials are not.
+
 **What would close it,** in the order that costs least:
 
-1. **State the exposure.** Compute the field over the payload envelope with a model whose far
-   field is trustworthy, which means resolving P3 first. Publish it as a payload environment
-   specification rather than a host keep-out.
-2. **Decide whether it is a constraint or a defect.** Exposure lasts one shot plus dwell time in
-   the cradle, so a saturated magnetometer recovers; **remanent magnetisation of soft-magnetic
-   parts does not.** That distinction needs a materials list and is the question worth answering.
-3. **T-6** measures it. Its priority rises on this result.
+1. ~~**State the exposure.**~~ **DONE 2026-08-10**, `docs/PAYLOAD_ENVIRONMENT.md`. The field is
+   published across the whole 3U envelope, z = 20 to 120 mm, against both comparators, with the
+   two-regime structure and the exposure duration stated. P3 no longer blocks it and had not for
+   some time.
+2. **Decide whether it is a constraint or a defect.** **This is now the whole of P34.** A
+   saturated magnetometer recovers and a magnetorquer becomes uncommandable but recovers;
+   **remanent magnetisation of soft-magnetic parts does not**, and only the third is a
+   modification. That distinction needs a **payload materials list**, which this project does not
+   have and will not invent — A14's band 5 was declared VOID-able in advance on exactly this
+   ground. It needs a customer or a stated reference payload. **Open.**
+3. **T-6** measures it. Its priority rises on this result. **Open.**
+
+**One thing the specification found that was not in the original entry.** The deployer's own load
+path contains soft-magnetic material: the magazine septum is **silicon steel**, 1.0 mm, between
+adjacent satellites (`cad/parameters.json` `groups.magazine.septum_material`). It will both shunt
+flux, which helps, and itself magnetise, which changes the field a neighbouring satellite sees.
+**Nothing has modelled that**, and it is a second reason the in-cassette field is not simply the
+sled field at greater distance. The cassette case remains unmodelled and is stated as such in the
+specification rather than left to be assumed benign.
 
 Shielding the payload is the option that should be resisted: it adds mass to the customer's
 satellite, which is the modification the architecture exists to avoid.
@@ -1334,6 +1373,32 @@ most likely qualification failure"*; **it is now a predicted failure rather than
 **What would close it:** a damping specification with measurement behind it, then resize the gates
 against the random-vibration case, or isolate the cassette stack so the mode does not drive the
 pins. **This is analysis only -- T-1 closes the test half of E10 and nothing here substitutes.**
+
+### P38. The paper claimed a payload magnetic environment its own validation had already falsified: MEDIUM, NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Corrected in the manuscript and the PDF rebuilt, 2026-08-10.** The EMC section stated that
+because the Halbach self-shielding weak side faces outward, *"a magnetometer-carrying customer
+payload sees a field comparable to a conventional reaction-wheel assembly at the same standoff"*.
+
+**A14 band 4 falsified that on 2026-08-05** at **611× magnetometer full scale**, and opened
+**P34** on the strength of it. The sentence survived for five days after the run that disproved
+it, in the published PDF, because A14's outcome was propagated into `OPEN_PROBLEMS.md` and
+`docs/KILL_CRITERIA.md` and not into `paper.tex`.
+
+**This is the P25 failure mode with a longer fuse.** P25 recorded a retracted claim staying live
+for a day; this is a falsified claim staying live for five, in the artifact most likely to be
+read by someone outside the project. The defect is not the original sentence — it was written
+before A14 existed and was a reasonable guess — it is that **nothing connects a failed validation
+band to the deliverables that repeat the claim it failed.** `tools/check_artifacts.py` catches a
+PDF older than its source; nothing catches a source older than its own validation result.
+
+**What would close it:** the correction is made, so the sentence itself is closed. The general
+case is not, and is the part worth keeping: a band that FAILS should name the documents that
+assert the thing it falsified, the way `docs/BASELINE.md` change control already requires a
+baseline change to *"state which validations it invalidates"*. That rule exists in one direction
+only. **Carried as the open half of this entry.**
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done
