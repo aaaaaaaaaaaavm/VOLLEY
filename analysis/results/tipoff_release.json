@@ -1,0 +1,266 @@
+{
+  "analysis": "A23",
+  "bands_declared_commit": "bc113e6",
+  "band_deg_s": 2.0,
+  "band_source": "P30, fixed 2026-07-31, not re-declared",
+  "F_push_N": 413.31498698400895,
+  "I_transverse": 0.04198008333333334,
+  "moment_Nm": 28.93204908888063,
+  "alpha_rad_s2": 689.1851276033029,
+  "angular_impulse_budget_Nms": 0.001465381348856526,
+  "clearance_takeup": [
+    {
+      "clearance_mm": 0.05,
+      "theta_rad": 0.0002936857562408223,
+      "t_s": 0.0009231844724576242,
+      "t_ms": 0.9231844724576243,
+      "arrival_deg_s": 36.454153720570474,
+      "vs_band": 18.227076860285237
+    },
+    {
+      "clearance_mm": 0.1,
+      "theta_rad": 0.0005873715124816446,
+      "t_s": 0.0013055800015218232,
+      "t_ms": 1.3055800015218233,
+      "arrival_deg_s": 51.55395859646438,
+      "vs_band": 25.77697929823219
+    },
+    {
+      "clearance_mm": 0.25,
+      "theta_rad": 0.0014684287812041115,
+      "t_s": 0.00206430323618753,
+      "t_ms": 2.06430323618753,
+      "arrival_deg_s": 81.51396578142244,
+      "vs_band": 40.75698289071122
+    },
+    {
+      "clearance_mm": 0.5,
+      "theta_rad": 0.002936857562408223,
+      "t_s": 0.0029193656334670754,
+      "t_ms": 2.9193656334670752,
+      "arrival_deg_s": 115.27815593090399,
+      "vs_band": 57.639077965451996
+    },
+    {
+      "clearance_mm": 1.0,
+      "theta_rad": 0.005873715124816446,
+      "t_s": 0.00412860647237506,
+      "t_ms": 4.12860647237506,
+      "arrival_deg_s": 163.02793156284488,
+      "vs_band": 81.51396578142244
+    },
+    {
+      "clearance_mm": 2.0,
+      "theta_rad": 0.011747430249632892,
+      "t_s": 0.005838731266934151,
+      "t_ms": 5.8387312669341505,
+      "arrival_deg_s": 230.55631186180798,
+      "vs_band": 115.27815593090399
+    }
+  ],
+  "cradle_reaction_N": 84.96930716264501,
+  "release_grid": [
+    {
+      "residual_fraction": 1.0,
+      "skew_us": 1.0,
+      "tipoff_deg_s": 0.03948739911485435,
+      "passes": true
+    },
+    {
+      "residual_fraction": 1.0,
+      "skew_us": 5.0,
+      "tipoff_deg_s": 0.19743699557427172,
+      "passes": true
+    },
+    {
+      "residual_fraction": 1.0,
+      "skew_us": 10.0,
+      "tipoff_deg_s": 0.39487399114854344,
+      "passes": true
+    },
+    {
+      "residual_fraction": 1.0,
+      "skew_us": 25.0,
+      "tipoff_deg_s": 0.9871849778713586,
+      "passes": true
+    },
+    {
+      "residual_fraction": 1.0,
+      "skew_us": 50.7,
+      "tipoff_deg_s": 2.0020111351231153,
+      "passes": false
+    },
+    {
+      "residual_fraction": 1.0,
+      "skew_us": 100.0,
+      "tipoff_deg_s": 3.9487399114854345,
+      "passes": false
+    },
+    {
+      "residual_fraction": 1.0,
+      "skew_us": 250.0,
+      "tipoff_deg_s": 9.871849778713589,
+      "passes": false
+    },
+    {
+      "residual_fraction": 0.1,
+      "skew_us": 1.0,
+      "tipoff_deg_s": 0.0039487399114854355,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.1,
+      "skew_us": 5.0,
+      "tipoff_deg_s": 0.019743699557427177,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.1,
+      "skew_us": 10.0,
+      "tipoff_deg_s": 0.039487399114854355,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.1,
+      "skew_us": 25.0,
+      "tipoff_deg_s": 0.09871849778713589,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.1,
+      "skew_us": 50.7,
+      "tipoff_deg_s": 0.20020111351231157,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.1,
+      "skew_us": 100.0,
+      "tipoff_deg_s": 0.39487399114854355,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.1,
+      "skew_us": 250.0,
+      "tipoff_deg_s": 0.9871849778713588,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.01,
+      "skew_us": 1.0,
+      "tipoff_deg_s": 0.00039487399114854346,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.01,
+      "skew_us": 5.0,
+      "tipoff_deg_s": 0.0019743699557427173,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.01,
+      "skew_us": 10.0,
+      "tipoff_deg_s": 0.003948739911485435,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.01,
+      "skew_us": 25.0,
+      "tipoff_deg_s": 0.009871849778713587,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.01,
+      "skew_us": 50.7,
+      "tipoff_deg_s": 0.020020111351231155,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.01,
+      "skew_us": 100.0,
+      "tipoff_deg_s": 0.03948739911485435,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.01,
+      "skew_us": 250.0,
+      "tipoff_deg_s": 0.09871849778713589,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.0024,
+      "skew_us": 1.0,
+      "tipoff_deg_s": 9.476975787565042e-05,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.0024,
+      "skew_us": 5.0,
+      "tipoff_deg_s": 0.00047384878937825213,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.0024,
+      "skew_us": 10.0,
+      "tipoff_deg_s": 0.0009476975787565043,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.0024,
+      "skew_us": 25.0,
+      "tipoff_deg_s": 0.0023692439468912608,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.0024,
+      "skew_us": 50.7,
+      "tipoff_deg_s": 0.004804826724295476,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.0024,
+      "skew_us": 100.0,
+      "tipoff_deg_s": 0.009476975787565043,
+      "passes": true
+    },
+    {
+      "residual_fraction": 0.0024,
+      "skew_us": 250.0,
+      "tipoff_deg_s": 0.023692439468912606,
+      "passes": true
+    }
+  ],
+  "skew_tolerance_full_push_us": 50.649068939251585,
+  "com_offset_for_1ms_skew_mm": 3.5454348257476114,
+  "bands": {
+    "1_skew_tolerance_vs_a7r": {
+      "value_us": 50.649068939251585,
+      "band": "50.7 us +/- 2 %",
+      "passed": true
+    },
+    "2_ideal_release": {
+      "value_deg_s": 0.0,
+      "band": "<= 2 deg/s",
+      "passed": true
+    },
+    "3_clearance_arrival": {
+      "value_deg_s": 115.27815593090399,
+      "band": "REPORT",
+      "verdict": "REPORT"
+    },
+    "4_cradle_reaction": {
+      "value_N": 84.96930716264501,
+      "band": "<= 200 N per contact",
+      "passed": true
+    },
+    "5_com_offset_for_1ms_skew": {
+      "value_mm": 3.5454348257476114,
+      "band": "REPORT",
+      "verdict": "REPORT"
+    },
+    "6_any_achievable_pass": {
+      "n_passing": 25,
+      "band": "at least one achievable combination",
+      "passed": true
+    }
+  }
+}

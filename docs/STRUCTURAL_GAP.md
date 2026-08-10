@@ -13,11 +13,22 @@ That convergence is not visible from any one run sheet, which is why this file e
 | Finding | What it says | Where Q enters |
 |---|---|---|
 | **P36** — no dynamic design case | Force ripple amplifies **8.18×** at the 109 Hz fixed-fixed mode, twelve times per campaign | A17 swept Q = 20–500 and the answer barely moved |
-| **P37** — retention gates | Random vibration gives **11.7–20.2 kN** through pins sized for 5.9 kN | Load scales as √Q; margin goes 0.56 → −0.10 across Q = 10–30 |
+| **P37** — retention gates | ~~Random vibration gives **11.7–20.2 kN** through pins sized for 5.9 kN~~ **RESIZED 2026-08-10 by A22** | ~~Load scales as √Q; margin goes 0.56 → −0.10~~ **Margin is now positive across the whole range, +0.45 at Q = 30** |
 | **A7-R** — release tolerance | Full push may act unbalanced for only **50.7 µs** before 2 °/s tip-off | The release transient is a structural event on the same track |
 | **E25 / A13** — attitude settling | Ideal rigid-body residual is zero; **structural ringing is not modelled** | Ringing decay time is Q/πf |
 
 **Two are HIGH defects. One is a kill criterion. None can be resolved by more analysis.**
+
+> ### One of the four is off the list, 2026-08-10
+>
+> **P37 is resized.** A22 took the retention gates from 2 × D6 to **2 × D9 A-286 pins** —
+> capacity 18.2 → **41.0 kN**, margin at Q = 30 from **−0.36 to +0.45**, and **positive across
+> the entire Q = 10–30 range** for **eleven grams**. **That finding no longer turns on Q.**
+>
+> **The other three still do**, and the asymmetry below is unchanged: P36 does not scale with Q
+> at all, so a low measurement rescues nothing. What has changed is that the measurement is no
+> longer holding a *negative margin* hostage — it is holding an amplification factor and two
+> unmodelled transients.
 
 ## Why Q is the binding unknown and not just an input
 
@@ -27,13 +38,18 @@ check for launch and it is the only structural criterion the design has.
 
 Everything above is a *dynamic* question, and each one answers differently depending on Q:
 
-- **P37 scales as √Q.** At Q = 10 the pins hold with margin 0.56; at Q = 30 they are past
-  capacity. There is no analysis that resolves this — only a measurement.
+- ~~**P37 scales as √Q.** At Q = 10 the pins hold with margin 0.56; at Q = 30 they are past
+  capacity. There is no analysis that resolves this — only a measurement.~~ **Superseded
+  2026-08-10 by A22.** The load still scales as √Q; the *margin* no longer crosses zero, because
+  the pins were resized to carry the Q = 30 case. **Analysis did resolve this one**, by sizing
+  against the conservative end instead of waiting for the measurement.
 - **P36 does not scale with Q at all**, and that is the finding. Amplification moves from 6.51 to
   8.33 between Q = 20 and Q = 500, so it is saturated at the lowest damping anyone would assign
   to bolted aluminium. **P36 is bad news regardless of what the measurement returns.**
-- The two together mean **the same test is decisive for both**, in opposite directions: a low Q
-  rescues P37 and does nothing for P36.
+- ~~The two together mean **the same test is decisive for both**, in opposite directions: a low Q
+  rescues P37 and does nothing for P36.~~ **P37 no longer needs rescuing.** The test is now
+  decisive for P36 alone, and P36 is the finding a low Q does *not* help — which makes the
+  measurement's expected value lower than this file originally argued, not higher.
 
 ## What one test would settle
 
@@ -46,7 +62,9 @@ check.
 
 **T-1** is the other half. The plan already calls it *"the single most likely qualification
 failure"*, on the argument that the as-built joint may sit between pinned and fixed and drop the
-mode into the primary band. **P37 makes it a predicted failure rather than a ranked risk.**
+mode into the primary band. ~~**P37 makes it a predicted failure rather than a ranked risk.**~~
+**Since A22 resized the gates, T-1 is back to being a ranked risk rather than a predicted
+failure** — the mode question stands, but nothing downstream of it is now sized negative.
 
 ## What this does to the roadmap
 
@@ -65,9 +83,14 @@ step and needs a track to exist.
 and kg per satellite. **Structural Q returns exactly zero on all three** — it has no path to any
 headline number, and a ranking that stopped there would have reported it harmless.
 
-**It is the only input on that list that moves a margin of safety through zero.** Across its
-declared range of Q = 10 to 30 the retention-gate margin goes **+0.559 → −0.100**, while the three
+**It was the only input on that list that moved a margin of safety through zero.** Across its
+declared range of Q = 10 to 30 the retention-gate margin went **+0.559 → −0.100**, while the three
 ranked outputs move by single-digit percentages under every input that touches them.
+
+**A22 acted on exactly that ranking, and the margin no longer crosses zero: +1.51 at Q = 10 to
++0.45 at Q = 30.** A19 said measure Q first because it was holding a negative margin hostage;
+resizing the gates released the hostage for eleven grams, which was cheaper than the
+measurement.
 
 **That asymmetry is the argument this file was written to make**, and it now has a number behind
 it: the headline results are not what is at risk from the unmeasured damping. **The design's

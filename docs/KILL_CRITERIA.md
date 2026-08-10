@@ -151,10 +151,27 @@ So the band was set against the looser comparator, from the provisional document
 that the tighter flown number existed. **A7's band is now 2 °/s** and is 2.5x harder to pass than
 it was. See **P30**.
 
-**Status: unmodelled, and the threshold just moved the wrong way for us.** A7 is specified and not
-run; E7 is open. This is the least validated part of the design, it gates PII-1, and the payload's
-centre of mass sits 70 mm off the thrust line, which is the term that drives tip-off in the first
-place.
+**Status, until 2026-08-10: unmodelled.** A7 is specified and not run; E7 is open.
+
+**Status now: MODELLED, and the risk moved.**
+[`../validation/A23_tipoff_release.md`](../validation/A23_tipoff_release.md) modelled the release
+rather than bounding it, and the answer is not the one A7-R implied.
+
+**The release itself is comfortable.** Acceleration ends at 1300 mm and release is at 1500 mm, so
+the payload coasts **12.2 ms with the commanded force already at zero**. At the ~1 N residual that
+leaves, the mechanism has **250 µs of slack and still lands two orders of magnitude inside the
+2 °/s band**. A7-R's 50.7 µs was a full-push worst case that does not occur.
+
+**The risk is the clearance take-up, and it is new.** Under the 28.92 N·m offset moment the
+payload accelerates across its cradle clearance at 688 rad/s² and **arrives at 36–231 °/s
+depending on the fit — 18 to 115 times the band.** After impact it rebounds and rattles, and
+whether that has settled by release depends on a restitution model this project does not have.
+
+> **The threshold is unchanged and is not passed.** Tip-off is no longer *unmodelled*, but it is
+> **not demonstrated below 2 °/s either** — it is now a stated requirement on a cradle preload
+> (> 85 N per contact) and a release residual (≤ 1 N), against a mechanism that does not exist.
+> Logged as **P41**. The payload's centre of mass sitting 70 mm off the thrust line is still the
+> term that drives all of it; A23 band 5 prices removing it at a cut from 70 mm to **3.5 mm**.
 
 ---
 

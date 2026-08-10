@@ -1,6 +1,6 @@
 # Validation plan
 
-Independent cross-checks of the claims in `analysis/`. **Seventeen of the nineteen below have run.**
+Independent cross-checks of the claims in `analysis/`. **Nineteen of the twenty-one below have run.**
 **Two of them failed**, two are partial, one returned three rows that could not be evaluated at
 all, and one found a published number 37 % high.
 
@@ -39,6 +39,8 @@ another model (E4). Each analysis closes a specific named item.
 | A18 | Brake, magnet eddy, fin transient, launch restraint, standoff | numpy + Miles | **E20, E19, E26, E22**, and E10's analysis half; **opened P37** | **RUN 2026-08-06**: E19/E26/E22 pass, E20 passes only for a 0.4-0.5 T pole field, **E10 FAILS at every Q** |
 | A20 | Reachable orbit envelope vs host Δv budget | numpy + `astro.py` | nothing; quantifies **ADR-024**, advances PII-6 | **RUN 2026-08-10**, verdict **band 1 FAIL**: the band named a two-burn Hohmann and its limit was computed for one burn. Band 3 caught a sign bug in the script. Host supplies 56 % of the altitude extent at 100 m/s |
 | A21 | VOLLEY against springs, drag and cold gas, identical axes | numpy + `astro.py` | nothing; **replaces the headline ratio** | **RUN 2026-08-10**: seven of seven. **7.52×** the lifetime extension of the fastest spring against 6.56× on velocity; mass parity at 1.062; cold gas wins at 3U by 7.5×, declared as a loss in advance |
+| A22 | Retention gate resize against the random-vibration case | numpy + `phase1_closeout.e10` | **P37**, E10's analysis half | **RUN 2026-08-10**: six of six. 2 × D6 → **2 × D9** takes the margin at Q = 30 from **−0.36 to +0.45** and keeps it positive across Q = 10–30, for **11 g** |
+| A23 | Tip-off at release, modelled rather than bounded | numpy rigid body | advances **E7**; **opened P41** | **RUN 2026-08-10**: release is comfortable — it happens 12.2 ms into coast at zero force. **The payload arrives in its cradle at 36–231 °/s**, 18–115× the band, and nothing had modelled it |
 | A19 | Sensitivity ranking of nine assumed inputs | numpy + the real pipeline | nothing; **ranks** the assumptions behind P29, P28, `STRUCTURAL_GAP` | **RUN 2026-08-10**, verdict **band 1 FAIL**: net efficiency has two different leaders depending on the metric, so both rankings are published. `v_exit` does not respond to bank ESR at all — nil, then total |
 
 A10 and A11 are cross-checks of the model against its own physics rather than against an

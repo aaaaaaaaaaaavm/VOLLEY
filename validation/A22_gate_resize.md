@@ -7,6 +7,78 @@
 > Everything below the "Acceptance bands" heading is committed before the script is written,
 > and the script is absent at this commit.
 
+## Result, 2026-08-10: six of six, and the fix is 11 grams
+
+`analysis/gate_sizing.py`, bands committed at `bc113e6` before it existed. Results in
+`analysis/results/gate_sizing.json`.
+
+### Band 1: the load model reproduces A18 exactly
+
+| Q | This script | A18 band 9 | Error |
+|---:|---:|---:|---:|
+| 10 | 11.69 kN | 11.69 kN | **0.000 %** |
+| 20 | 16.53 kN | 16.53 kN | **0.000 %** |
+| 30 | 20.24 kN | 20.24 kN | **0.000 %** |
+
+Because `phase1_closeout.e10`'s own relation is imported rather than reimplemented. **PASS.**
+
+### The chosen fix: two D9 pins instead of two D6
+
+| | Baseline | **Chosen** |
+|---|---|---|
+| Gates per cassette | 1 | 1 — unchanged |
+| Pins | 2 × D6 | **2 × D9** |
+| Capacity | 18.2 kN | **41.0 kN** |
+| MoS at Q = 30 | **−0.36** | **+0.45** |
+| MoS at Q = 10 | +0.31 | +1.51 |
+| Quasi-static, 25 g | +1.21 | **+3.98** |
+| Added mass | — | **+11 g per cassette** |
+| Governing mode | — | pin shear, not bearing |
+
+**The entire fix is three millimetres of pin diameter and eleven grams.** Capacity goes as d², so
+6 → 9 mm is 2.25× the shear area, and it converts a negative margin at Q = 30 into +0.45.
+
+**No intermediate restraint is needed.** The second lever — splitting the stack across two gates —
+was in the allowed space and is not required, which is the better answer: it leaves the magazine
+architecture alone.
+
+**26 of 30 candidates in the space pass.** The four that fail are all at two pins:
+
+| Candidate | Capacity | MoS at Q = 30 |
+|---|---:|---:|
+| 2 × D6 — **as designed today** | 18.2 kN | **−0.357** |
+| 2 × D7 | 24.8 kN | **−0.125** |
+| 2 × D8 | 32.4 kN | +0.143 — below the 0.20 target |
+| **2 × D9** | **41.0 kN** | **+0.447** |
+
+**D8 misses the target by 0.06 and is worth naming**, because it is the more standard size and a
+reader will ask. If a 0.15 margin at Q = 30 were acceptable it would do; the band said 0.20 and
+the band was declared first. **3 × D8 also passes at +0.71** and is the alternative if D9 stock is
+awkward — the selection rule picked minimum change, not minimum risk.
+
+### Band 3, 4, 5, 6
+
+- **Band 3 PASS.** +11 g against a 400 g budget. The fix costs kill criterion 1 essentially
+  nothing, which is the outcome the budget was set to force.
+- **Band 4 PASS.** Quasi-static MoS goes 1.21 → 3.98. Nothing regresses.
+- **Band 5 PASS.** MoS stays positive across the whole sweep, **+0.45 at Q = 30 to +1.51 at
+  Q = 10**. **The design no longer depends on where Q lands**, which is the point of the exercise
+  — A19 found Q was the only assumed input moving a margin through zero, and it no longer does.
+- **Band 6 REPORT: pin shear governs**, 41.0 kN against a bearing capacity of 52.2 kN on a 4 mm
+  frame. Resizing pins for shear was the right fix rather than the wrong one.
+
+> ### A definitional discrepancy, found while doing this and worth recording
+>
+> **A18 and `sizing.py` report margins of safety against different things.** A18 band 9 quotes
+> MoS at Q = 30 as **−0.10**, computed as capacity/load − 1. `sizing.py::retention_gate` applies a
+> **1.4 design factor** and reports capacity/(1.4·load) − 1, which gives **−0.36** for the same
+> hardware and the same load.
+>
+> **Both are correct and they are not the same quantity.** This sheet uses the factored form,
+> because it is how the gate was originally sized and because dropping a design factor while
+> resizing would be a silent relaxation. The unfactored figure is the more optimistic one, and
+> **P37's −0.10 is therefore the kinder of the two readings of the same failure.**
+
 ## The defect being fixed
 
 `sizing.py::retention_gate()` sizes the gate against a **quasi-static 25 g ascent load**:
