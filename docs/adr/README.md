@@ -52,6 +52,7 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | [021](021-freeze-the-register.md) | Freeze the defect register; measurement takes priority | Accepted | I |
 | [022](022-stator-segmented-not-block-commutated.md) | Winding segmented for fault isolation, driven as one; closes P29 | Accepted | I |
 | [023](023-target-host-class.md) | Target host is a spent upper stage, not an ESPA-Grande port; closes P9 | Accepted | I |
+| [024](024-last-mile-delivery-conops.md) | VOLLEY is a last-mile delivery vehicle; plane change excluded | Accepted | I |
 
 Every decision in `DECISION_LOG.md` appears above. ADRs 012-018 record decisions that were
 never written down anywhere before.
