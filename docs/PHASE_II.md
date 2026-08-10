@@ -218,6 +218,24 @@ line at 17.8 %.
 consequence, and the honest Phase I position is the one now published: the rated point assumes
 a bank that cannot be bought, and that is stated rather than quietly re-sized.
 
+### PII-12, PII-13: the per-satellite shoe, and swarm dispersion
+
+Both are deferred by **ADR-025**, which chose a fixed cell with class-specific inserts over a
+per-satellite shoe.
+
+| | |
+|---|---|
+| **PII-12** | **The per-satellite shoe.** Every class gets its own cradle, retention and release, so velocity stays programmable **per satellite** all the way down the ladder instead of per cell. The cost is a new pitch, a new gate, a new cradle and a new qualification campaign per class — which is exactly what ADR-025 declined to spend in Phase I. **Entry criterion: a customer who needs true per-satellite velocity control below 3U.** Nothing else opens it |
+| **PII-13** | **Designed dispersion across a swarm** (P44). A24 band 6 failed at femtosat scale: 720 ChipSats in one cell need 719 shim interfaces, **7.19 kg of separation hardware for 3.6 kg of satellites**. The mechanism is twice the mass of what it acts on. The finding is that the *requirement* is wrong at that scale — 8640 femtosats do not want 10 m of pairwise separation in 120 s, they want a velocity **distribution produced once at cell level**. Different mechanism, different acceptance argument. **Entry criterion: P44, and a femtosat customer.** Until then the fixed cell is qualified for PocketQube 1P and above and **not** for ChipSat |
+
+> **PII-13 is the one worth watching**, because it is the only item in the programme that a
+> *market* argument points at rather than an engineering one: `docs/MARKET.md` argues that a
+> designed dispersion across a swarm is a product no spring and no OTV can offer, since every
+> alternative gives every unit the same push. That argument currently has **no mechanism behind
+> it**, and P44 is the measurement that says so.
+
+---
+
 ### PII-8 to PII-11: recorded in the lab, not here
 
 Four items live in [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) rather than this

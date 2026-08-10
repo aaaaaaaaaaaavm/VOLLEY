@@ -46,7 +46,7 @@ def unit_for(k):
     if k.endswith("_m2"):
         return "m^2"
     if k.endswith(("_count", "_per_side", "_per_phase", "_per_cassette", "_in_assembly",
-                   "count", "_factor")):
+                   "count", "_factor", "_total", "_sat", "satellites_per_cassette")):
         return "-"
     if k.endswith(("_g_cap",)):
         return "g"

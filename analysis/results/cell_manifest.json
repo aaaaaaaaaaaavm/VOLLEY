@@ -1,0 +1,278 @@
+{
+  "cell_mm": [
+    340.5,
+    100.0,
+    100.0
+  ],
+  "cells_total": 12,
+  "divider_mm": 1.5,
+  "deployer_dry_kg": 76.5,
+  "sep_target_m": 10.0,
+  "sep_time_s": 120.0,
+  "classes": [
+    {
+      "tag": "ChipSat / femtosat",
+      "mass_kg": 0.005,
+      "box_mm": [
+        35,
+        35,
+        2.5
+      ],
+      "accommodated": true,
+      "n_per_cell": 720,
+      "cells_per_sat": 0.0014,
+      "arrangement": "9 x 2 x 40",
+      "oriented_mm": [
+        35,
+        35,
+        2.5
+      ],
+      "n_per_load": 8640,
+      "kg_per_satellite": 0.009,
+      "volumetric_n": 13322,
+      "sep": 0.08333333333333333,
+      "shim": {
+        "spread_m_s": 0.08333333333333333,
+        "shim_kg": 0.01,
+        "mean_shift_m_s": 0.08321759259259258,
+        "mean_shift_pct": 0.5077959030546288
+      },
+      "note": "Sprite class. Volumetric only -- see mechanism_limited"
+    },
+    {
+      "tag": "PocketQube 1P",
+      "mass_kg": 0.25,
+      "box_mm": [
+        50,
+        50,
+        50
+      ],
+      "accommodated": true,
+      "n_per_cell": 24,
+      "cells_per_sat": 0.0417,
+      "arrangement": "6 x 2 x 2",
+      "oriented_mm": [
+        50,
+        50,
+        50
+      ],
+      "n_per_load": 288,
+      "kg_per_satellite": 0.266,
+      "volumetric_n": 326,
+      "sep": 0.08333333333333333,
+      "shim": {
+        "spread_m_s": 0.08333333333333333,
+        "shim_kg": 0.01,
+        "mean_shift_m_s": 0.001597222222222222,
+        "mean_shift_pct": 0.009746291324275213
+      },
+      "note": "PocketQube standard, 1P"
+    },
+    {
+      "tag": "ThinSat",
+      "mass_kg": 0.28,
+      "box_mm": [
+        114,
+        114,
+        25.4
+      ],
+      "accommodated": false,
+      "reason": "exceeds the 100 x 100 mm cell section in two axes; the section is fixed by the cassette width and the stack pitch",
+      "n_per_cell": 0,
+      "cells_per_sat": null,
+      "n_per_load": 0,
+      "kg_per_satellite": null,
+      "volumetric_n": 123,
+      "sep": null,
+      "shim": null,
+      "note": "ThinSat published envelope"
+    },
+    {
+      "tag": "PocketQube 3P",
+      "mass_kg": 0.75,
+      "box_mm": [
+        50,
+        50,
+        150
+      ],
+      "accommodated": true,
+      "n_per_cell": 8,
+      "cells_per_sat": 0.125,
+      "arrangement": "2 x 2 x 2",
+      "oriented_mm": [
+        150,
+        50,
+        50
+      ],
+      "n_per_load": 96,
+      "kg_per_satellite": 0.797,
+      "volumetric_n": 108,
+      "sep": 0.08333333333333333,
+      "shim": {
+        "spread_m_s": 0.08333333333333333,
+        "shim_kg": 0.01,
+        "mean_shift_m_s": 0.00048611111111111115,
+        "mean_shift_pct": 0.002966262576953326
+      },
+      "note": "PocketQube standard, 3P"
+    },
+    {
+      "tag": "TubeSat",
+      "mass_kg": 0.75,
+      "box_mm": [
+        88,
+        88,
+        127
+      ],
+      "accommodated": true,
+      "n_per_cell": 2,
+      "cells_per_sat": 0.5,
+      "arrangement": "2 x 1 x 1",
+      "oriented_mm": [
+        127,
+        88,
+        88
+      ],
+      "n_per_load": 24,
+      "kg_per_satellite": 3.188,
+      "volumetric_n": 41,
+      "sep": 0.08333333333333333,
+      "shim": {
+        "spread_m_s": 0.08333333333333333,
+        "shim_kg": 0.01,
+        "mean_shift_m_s": 0.0002777777777777778,
+        "mean_shift_pct": 0.001695007186830472
+      },
+      "note": "Boxed from the 88 mm cylinder"
+    },
+    {
+      "tag": "1U CubeSat",
+      "mass_kg": 1.33,
+      "box_mm": [
+        100,
+        100,
+        100
+      ],
+      "accommodated": true,
+      "n_per_cell": 3,
+      "cells_per_sat": 0.3333,
+      "arrangement": "3 x 1 x 1",
+      "oriented_mm": [
+        100,
+        100,
+        100
+      ],
+      "n_per_load": 36,
+      "kg_per_satellite": 2.125,
+      "volumetric_n": 40,
+      "sep": 0.08333333333333333,
+      "shim": {
+        "spread_m_s": 0.08333333333333333,
+        "shim_kg": 0.01,
+        "mean_shift_m_s": 0.00020885547201336674,
+        "mean_shift_pct": 0.0012744414938574977
+      },
+      "note": "Typical flight mass, CDS allows 2 kg"
+    },
+    {
+      "tag": "3U CubeSat",
+      "mass_kg": 4.0,
+      "box_mm": [
+        340,
+        100,
+        100
+      ],
+      "accommodated": true,
+      "n_per_cell": 1,
+      "cells_per_sat": 1.0,
+      "arrangement": "1 x 1 x 1",
+      "oriented_mm": [
+        340,
+        100,
+        100
+      ],
+      "n_per_load": 12,
+      "kg_per_satellite": 6.375,
+      "volumetric_n": 12,
+      "sep": null,
+      "shim": null,
+      "note": "The reference payload, and the only one laid out"
+    },
+    {
+      "tag": "6U CubeSat",
+      "mass_kg": 8.0,
+      "box_mm": [
+        340,
+        200,
+        100
+      ],
+      "accommodated": false,
+      "reason": "exceeds the 100 x 100 mm cell section in two axes; the section is fixed by the cassette width and the stack pitch",
+      "n_per_cell": 0,
+      "cells_per_sat": null,
+      "n_per_load": 0,
+      "kg_per_satellite": null,
+      "volumetric_n": 6,
+      "sep": null,
+      "shim": null,
+      "note": "Arithmetic only, no cassette exists"
+    },
+    {
+      "tag": "12U CubeSat",
+      "mass_kg": 12.0,
+      "box_mm": [
+        340,
+        200,
+        200
+      ],
+      "accommodated": false,
+      "reason": "exceeds the 100 x 100 mm cell section in two axes; the section is fixed by the cassette width and the stack pitch",
+      "n_per_cell": 0,
+      "cells_per_sat": null,
+      "n_per_load": 0,
+      "kg_per_satellite": null,
+      "volumetric_n": 3,
+      "sep": null,
+      "shim": null,
+      "note": "Arithmetic only, no cassette exists"
+    }
+  ],
+  "bands": [
+    {
+      "band": "1",
+      "name": "cell model reproduces the 3U machine",
+      "detail": "12 per load, 6.375 kg/sat (against 12 and 6.375)",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "designed cell never beats the volume ratio",
+      "detail": "all classes at or below",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "a designed class closes kill criterion 1 (<= 2.0 kg/sat)",
+      "detail": "PocketQube 1P 0.266, PocketQube 3P 0.797",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "whole cells only, refusals printed as refusals",
+      "detail": "3 refused (ThinSat, 6U CubeSat, 12U CubeSat), 0 fractional",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "intra-cell differential <= 1 % of v_exit (0.164 m/s)",
+      "detail": "5 classes share cells, required 0.0833 m/s",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "mechanism shifts cell mean by <= 0.5 % (0.082 m/s)",
+      "detail": "worst 8.32e-02 m/s",
+      "pass_": false
+    }
+  ]
+}

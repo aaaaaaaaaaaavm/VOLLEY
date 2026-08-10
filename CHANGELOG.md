@@ -9,6 +9,24 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (eleventh pass): the payload ladder was arithmetic, and building it as a design moved the answer
+
+| ID | Item | Detail |
+|---|---|---|
+| **A24** | **The fixed-cell manifest, bands declared at `5fdc978` before the script existed** | One cell of **340.5 × 100 × 100 mm** on the existing 104 mm pitch, twelve cells, with class-specific inserts subdividing along x. **Five of six bands passed.** `validation/A24_fixed_cell_manifest.md`, `analysis/cell_manifest.py`. |
+| A24-01 | **1U no longer closes kill criterion 1 — the rung the repository leaned on** | A real insert fits three 100 mm units plus two dividers in a 340.5 mm cell, wasting 37.5 mm: **36 per load and 2.125 kg**, not 40 and 1.913. TubeSat is worse — 41 → **24**, 1.866 kg → **3.188 kg**. Threat 1 still closes, on **PocketQube 1P (0.266) and 3P (0.797)** — two rungs lower, and on the classes with **no corner rails and no designed interface at all**. |
+| A24-02 | **Three classes refused outright, which a volume ratio structurally cannot find** | **ThinSat** (114 × 114 × 25.4) exceeds the 100 mm cell section in two axes in every orientation. **12U** needs 200 mm in both section axes and there is **no second cell in y**. **6U** survives only as 340 × 100 × 200 across two cells in z. **The binding constraint is the 166 mm cassette width**, written down nowhere else in this repository. |
+| **P44** | **Band 6 failed: at femtosat scale the separation hardware outweighs the satellites** | Declared ≤ 0.5 % of exit velocity, measured **0.508 %**. 720 ChipSats in one cell need 719 shim interfaces — **7.19 kg of hardware to disperse 3.6 kg of payload**, and it stops being momentum-neutral because that mass departs with one side. **The band was not widened.** ChipSat was already 43× outside the mechanism's 200-shot limit; that does not rescue a band declared over every class sharing a cell. |
+| ADR-025 | **One cell, class-specific inserts; the per-satellite shoe deferred** | One pitch, one gate, one cradle, one campaign, and A22/A23's results carry across the ladder unchanged. **The cost is stated rather than buried: velocity is programmable per _cell_, not per satellite.** At 3U cell = satellite and nothing is lost; below 3U it is a real reduction. |
+| PII-12/13 | **Two Phase II entries with entry criteria** | **PII-12** the per-satellite shoe, entered only by a customer needing per-satellite control below 3U. **PII-13** designed swarm dispersion, entered by P44 — and the only programme item a *market* argument points at rather than an engineering one, since `MARKET.md` claims a designed dispersion no spring can offer and P44 says there is no mechanism behind it. |
+| CAD-03 | **`payload_cell` added to `parameters.json`** | The cell, pitch, divider thickness, accommodated classes and the three refusals, with `section_limit_origin` recording *why* y and z cannot grow. Status `PARAMETRIC_ONLY_NOT_DRAWN` — **no insert exists in CAD for any class.** |
+| CNT-06 | **Register 71 → 72, 28 → 29 live** | P44. Header propagated. |
+
+**What authorised it.** A24 is a validation with bands declared before its script; P44 is a band
+miss, which `validation/README.md` requires to become a numbered defect. No operating point moved.
+
+---
+
 ## 2026-08-10 (tenth pass): the renders showed the satellite being fired into its own host
 
 | ID | Item | Detail |

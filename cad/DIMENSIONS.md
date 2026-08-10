@@ -159,6 +159,25 @@ Fusion document: **`EMOCD_Magazine_Cassette`**
 **Status:** `authoritative_geometry_open_decision`
 
 
+## payload cell
+
+Fusion document: **`EMOCD_Payload_Cell`**
+
+| Parameter | Value | Units |
+|---|---:|---|
+| `cell_length_x` | 340.5 | mm |
+| `cell_section_y` | 100.0 | mm |
+| `cell_section_z` | 100.0 | mm |
+| `cell_pitch_z` | 104.0 | mm |
+| `cells_per_cassette` | 6 | - |
+| `cells_total` | 12 | - |
+| `insert_divider_thickness` | 1.5 | mm |
+
+- **`provisional_note`** — No insert exists in CAD for any class. These parameters define the cell A24 analysed and ADR-025 adopted; the insert's retention, thermal path, ground handling, and the CDS-rail-to-class interface it must present are all undesigned. The cradle, escapement and retention gate are unchanged by this group — a fixed cell changes what is inside a slot and nothing about the machine around it.
+
+**Status:** `PARAMETRIC_ONLY_NOT_DRAWN`
+
+
 ## brake
 
 Fusion document: **`EMOCD_Brake`**

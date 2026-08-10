@@ -44,13 +44,32 @@ missing mass the figure becomes 8.08 kg per satellite.
 
 Smaller payloads. The deployer mass is fixed; the number of satellites it carries is not:
 
-| Payload | Fits the existing magazine volume | Deployer mass per satellite |
-|---|---|---|
-| 3U CubeSat | 12 | 6.375 kg, **fails** |
-| 1U | 40 | 1.92 kg, marginal |
-| TubeSat | 41 | 1.88 kg, marginal |
-| PocketQube 3P | 108 | 0.71 kg, passes |
-| **PocketQube 1P** | 326 | **0.24 kg, passes by 2 to 5x** |
+| Payload | Volume ratio said | **Designed cell (A24)** | Deployer mass per satellite |
+|---|---:|---:|---|
+| 3U CubeSat | 12 | **12** | 6.375 kg, **fails** |
+| ThinSat | 123 | **NOT ACCOMMODATED** | — |
+| 1U | 40 | **36** | **2.125 kg, now fails** |
+| TubeSat | 41 | **24** | **3.188 kg, now fails** |
+| PocketQube 3P | 108 | **96** | 0.797 kg, passes |
+| **PocketQube 1P** | 326 | **288** | **0.266 kg, passes by 2 to 4x** |
+
+> **Corrected again on 2026-08-10, and this time the correction moves the answer.** The counts
+> above were volumetric until **A24** built the ladder as an actual design — a fixed cell of
+> 340.5 × 100 × 100 mm with class-specific inserts (**ADR-025**). Three consequences:
+>
+> **1U and TubeSat no longer close this threat.** They were the marginal rungs, and a real
+> insert takes both over the line: three 100 mm units plus two dividers fit a 340.5 mm cell with
+> 37.5 mm wasted, so 1U gives **36 per load and 2.125 kg**, not 40 and 1.92. A 127 mm TubeSat
+> fits twice with 84 mm wasted: **24 and 3.188 kg**, not 41 and 1.88.
+>
+> **ThinSat is refused outright.** At 114 × 114 × 25.4 mm, two of its dimensions exceed the
+> 100 mm cell section in every orientation. **The cassette is 166 mm wide** — a constraint that
+> appears nowhere else in this repository, and that a volumetric model structurally cannot find.
+>
+> **The threat still closes, two rungs lower than claimed**, on the PocketQube classes — which
+> are precisely the classes with **no corner rails and no designed interface at all**. And at
+> femtosat scale the separation hardware outweighs the satellites (**P44**), so ChipSat is
+> **not qualified** for this architecture.
 
 **These counts were wrong here until 2026-07-31 and the correction is downward.** They were
 raw volumetric bounds carrying a note that realistic packing is 40 to 60 % of them, and then

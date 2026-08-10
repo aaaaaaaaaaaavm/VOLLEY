@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **71 numbered entries, of which 28 are live.** Every entry carries a `Status:` line written by
+> **72 numbered entries, of which 29 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **28** (14 P, 14 E) | open engineering; something still has to be done |
+> | `LIVE` | **29** (15 P, 14 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
@@ -32,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 71 entries stand, and the 28 live
+> nothing in it has been deleted, closed or downgraded — all 72 entries stand, and the 29 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -1853,6 +1853,48 @@ appears.
    requirement by anything currently in `tools/`. The renders remain the one class of published
    artifact with no automated tie to the repository's own claims — the same shape of gap as P42,
    one layer further out, and this time with no fix proposed because none is cheap.
+
+### P44. At femtosat scale the separation hardware outweighs the satellites it separates: MEDIUM, NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**A24 band 6 miss, 2026-08-10.** Declared ≤ 0.5 % of exit velocity, measured **0.508 %**.
+The band is not widened; see `validation/README.md`.
+
+The fixed-cell manifest (ADR-025) puts several satellites in one cell, and everything in a cell
+leaves on the same shot at the same commanded velocity — so **cell-mates have a designed
+differential of exactly zero and never separate from each other.** A24 band 6 tested the obvious
+mechanism: a compressed shim at each internal interface, momentum-neutral because it pushes
+cell-mates against each other rather than against the sled.
+
+**It works for every class except the smallest, and there it inverts.**
+
+| Class | Per cell | Payload in the cell | Shim hardware | Mean shift |
+|---|---:|---:|---:|---:|
+| **ChipSat / femtosat** | 720 | 3.600 kg | **7.190 kg** | **0.0832 m/s, 0.508 %** |
+| PocketQube 1P | 24 | 6.000 kg | 0.230 kg | 0.010 % |
+| 1U CubeSat | 3 | 3.990 kg | 0.020 kg | 0.001 % |
+
+**720 ChipSats need 719 interfaces. At 10 g each that is 7.19 kg of separation hardware to
+disperse 3.6 kg of satellites** — twice the mass of everything it exists to act on. It also stops
+being momentum-neutral, because that mass leaves with one side of each interface, which is the
+term the band actually caught.
+
+**The 10 g shim is an assumption**, carried explicitly in `cell_manifest.py` and not sourced.
+A lighter interface moves the number; nothing plausible moves it by the factor needed, because
+the ratio is set by count, not by mass — 719 of anything is heavy next to 3.6 kg.
+
+**ChipSat was already outside the mechanism's declared limit.** `payload_family.py` flags
+anything above 200 per load as "a different machine, not a bigger magazine", and 8640 is 43× that.
+**This does not rescue the band**, which was declared over every class sharing a cell, before the
+script existed, and which one class missed.
+
+**What would close it.** Not a lighter shim. The requirement itself is wrong at this scale:
+8640 femtosats do not want 10 m of pairwise separation within 120 s, they want a **designed
+dispersion across a swarm** — a distribution of velocities produced once, at cell level, rather
+than an interface between every pair. That is a different mechanism with a different acceptance
+argument, and it is **PII-13**. Until it exists, **the fixed-cell architecture is qualified for
+PocketQube 1P and above, and is not qualified for ChipSat/femtosat.**
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

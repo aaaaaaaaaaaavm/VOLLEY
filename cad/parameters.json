@@ -1,9 +1,9 @@
 {
-  "_WARNING": "THIS FILE IS THE SINGLE SOURCE OF TRUTH FOR VOLLEY GEOMETRY. Do NOT edit dimensions inside Fusion 360 — user parameters there are document-scoped and will silently drift across the nine documents. Change a value here, then regenerate the affected document from script. Fusion is authoritative for geometry and fit only; analysis/*.py remains authoritative for mass and performance. Fusion-computed masses are proxies (solid-copper stator, solid-aluminium CubeSats, steel standing in for NdFeB) and are deliberately excluded from this file.",
+  "_WARNING": "THIS FILE IS THE SINGLE SOURCE OF TRUTH FOR VOLLEY GEOMETRY. Do NOT edit dimensions inside Fusion 360 \u2014 user parameters there are document-scoped and will silently drift across the nine documents. Change a value here, then regenerate the affected document from script. Fusion is authoritative for geometry and fit only; analysis/*.py remains authoritative for mass and performance. Fusion-computed masses are proxies (solid-copper stator, solid-aluminium CubeSats, steel standing in for NdFeB) and are deliberately excluded from this file.",
   "_PROVENANCE": {
     "regenerated": "2026-07-23",
-    "method": "Rebuilt by reading the nine-document Autodesk Fusion model directly during the CAD build of 2026-07-23. The prior parameters.json (described as 62 dimensions / seven groups) was not available at the time, so this file's schema is NEW, not the original. DIFF THIS AGAINST THE REPO COPY BEFORE MERGING — the original may carry provenance fields or analysis-script cross-references not reproduced here.",
-    "final_verification_read": "INCOMPLETE — the confirming read did not complete. All values below come from earlier reads of the live model and were individually verified on all three axes at creation time. Re-run a verification pass against the CAD.",
+    "method": "Rebuilt by reading the nine-document Autodesk Fusion model directly during the CAD build of 2026-07-23. The prior parameters.json (described as 62 dimensions / seven groups) was not available at the time, so this file's schema is NEW, not the original. DIFF THIS AGAINST THE REPO COPY BEFORE MERGING \u2014 the original may carry provenance fields or analysis-script cross-references not reproduced here.",
+    "final_verification_read": "INCOMPLETE \u2014 the confirming read did not complete. All values below come from earlier reads of the live model and were individually verified on all three axes at creation time. Re-run a verification pass against the CAD.",
     "units": "millimetres unless stated",
     "coordinate_frame": "x = firing axis, positive toward the muzzle. Origin x=0 at the ESPA flange aft mating face. y = lateral (P = +y port, S = -y starboard). z = vertical, z=0 at the stator mid-plane."
   },
@@ -24,8 +24,8 @@
       710
     ],
     "status": "authoritative",
-    "reconciliation_note": "SUPERSEDES the 1825 x 516 x ~1030 figure in EMOCD_CAD_Master_Plan.md. That earlier value was measured on the now-superseded single-file model (MOCD_Deployer_Assembly_v1, closed and archived) BEFORE the enclosure existed, before the ESPA interface was rebuilt from a flat plate into a ring flange, and before the cassette septum/pin corrections. Length and width grow by skin clearance plus 2 mm shell (1825->1839, 516->530). CAUTION: the height change (1030->940) is larger than skin thickness explains — the lower bound is now set by the flange ring (z=-230) and the upper by the radiator (z=+710); the earlier model's height is believed to have included annotation-plane text and a differently-measured follower-motor stack. FLAGGED FOR RE-VERIFICATION.",
-    "espa_grande_conflict": "Longest dimension exceeds ESPA Grande's ~1270 mm class limit by ~44%. Open problem P9 — host claim must be re-scoped or the machine repackaged."
+    "reconciliation_note": "SUPERSEDES the 1825 x 516 x ~1030 figure in EMOCD_CAD_Master_Plan.md. That earlier value was measured on the now-superseded single-file model (MOCD_Deployer_Assembly_v1, closed and archived) BEFORE the enclosure existed, before the ESPA interface was rebuilt from a flat plate into a ring flange, and before the cassette septum/pin corrections. Length and width grow by skin clearance plus 2 mm shell (1825->1839, 516->530). CAUTION: the height change (1030->940) is larger than skin thickness explains \u2014 the lower bound is now set by the flange ring (z=-230) and the upper by the radiator (z=+710); the earlier model's height is believed to have included annotation-plane text and a differently-measured follower-motor stack. FLAGGED FOR RE-VERIFICATION.",
+    "espa_grande_conflict": "Longest dimension exceeds ESPA Grande's ~1270 mm class limit by ~44%. Open problem P9 \u2014 host claim must be re-scoped or the machine repackaged."
   },
   "groups": {
     "track": {
@@ -84,8 +84,8 @@
       },
       "winding_fill_factor_for_mass": 0.6,
       "end_turns_modelled": false,
-      "end_turns_note": "Omitted — correct for field and force computation, WRONG for packaging. Real racetrack ends wrap beyond the 90 mm active depth and are not in the envelope.",
-      "layer_count_decision": "OPEN — single vs two-layer is an unmade electromagnetic design decision. Single layer as drawn.",
+      "end_turns_note": "Omitted \u2014 correct for field and force computation, WRONG for packaging. Real racetrack ends wrap beyond the 90 mm active depth and are not in the envelope.",
+      "layer_count_decision": "OPEN \u2014 single vs two-layer is an unmade electromagnetic design decision. Single layer as drawn.",
       "status": "authoritative_for_field_geometry"
     },
     "sled": {
@@ -119,7 +119,7 @@
       "provisional_note": "The 6 mm chassis is a first-pass stiffness-driven design (0.0115 mm deflection under 3.7 kN inter-array attraction -- superseded, A12 gives 2.69 kN, so the deflection is conservative -- against a +/-0.05 mm gap budget) with NO structural FEA behind it. Sled mass from this geometry contradicts the 4.86 kg assumed by mass_properties.py and drives exit velocity. Open problems P5/P8. ANSYS analysis A4 must close this before any number downstream is locked."
     },
     "magazine": {
-      "_document": "EMOCD_Magazine_Cassette (one document, inserted twice; second instance is a 180-degree rotation about z through x=210.25, NOT a mirror — Fusion rejects mirror transforms for external references)",
+      "_document": "EMOCD_Magazine_Cassette (one document, inserted twice; second instance is a 180-degree rotation about z through x=210.25, NOT a mirror \u2014 Fusion rejects mirror transforms for external references)",
       "cassette_length_x": 380.5,
       "cassette_width_y": 166,
       "cassette_height_z": 690,
@@ -147,9 +147,36 @@
       "septum_z_max": 646,
       "septum_material": "silicon steel",
       "shell_panel_thickness": 4.0,
-      "shell_construction_decision": "OPEN — drawn as closed 4 mm panels (upper bound, and the mounting surface the silicon-steel septa need). mass_properties.py assumes a 6% fill open frame (lower bound). The ~4.8 kg difference is a real design decision, not an error.",
+      "shell_construction_decision": "OPEN \u2014 drawn as closed 4 mm panels (upper bound, and the mounting surface the silicon-steel septa need). mass_properties.py assumes a 6% fill open frame (lower bound). The ~4.8 kg difference is a real design decision, not an error.",
       "status": "authoritative_geometry_open_decision",
       "gate_pin_diameter_note": "6 -> 9 mm, 2026-08-10 by validation/A22_gate_resize.md. D6 was sized against a quasi-static 25 g case; the governing case is random vibration through the 109 Hz mode, where D6 gives a negative margin at Q = 30. D9 gives +0.45 there and stays positive across Q = 10..30 for 11 g. See P37."
+    },
+    "payload_cell": {
+      "_document": "EMOCD_Payload_Cell (NEW, ADR-025 \u2014 not yet drawn; parameters only)",
+      "cell_length_x": 340.5,
+      "cell_section_y": 100.0,
+      "cell_section_z": 100.0,
+      "cell_pitch_z": 104.0,
+      "cells_per_cassette": 6,
+      "cells_total": 12,
+      "insert_divider_thickness": 1.5,
+      "insert_divider_axis": "x \u2014 dividers subdivide the cell lengthwise; the cell's own walls serve in y and z, which is what makes the pitch, gate and cradle common to every class",
+      "section_limit_origin": "y is set by the 166 mm cassette width less structure; z by the 104 mm stack pitch less the 1 mm septum. Both are fixed by the existing magazine and neither may be grown for a payload class.",
+      "classes_accommodated": [
+        "PocketQube 1P",
+        "PocketQube 3P",
+        "TubeSat",
+        "1U CubeSat",
+        "3U CubeSat",
+        "6U CubeSat (2 whole cells in z)"
+      ],
+      "classes_refused": {
+        "ThinSat": "114 x 114 x 25.4 \u2014 two dimensions exceed the 100 mm section in every orientation",
+        "12U CubeSat": "needs 200 mm in both section axes; there is no second cell in y",
+        "ChipSat / femtosat": "geometrically fits at 720 per cell, but NOT QUALIFIED \u2014 P44, the separation hardware outweighs the payload"
+      },
+      "status": "PARAMETRIC_ONLY_NOT_DRAWN",
+      "provisional_note": "No insert exists in CAD for any class. These parameters define the cell A24 analysed and ADR-025 adopted; the insert's retention, thermal path, ground handling, and the CDS-rail-to-class interface it must present are all undesigned. The cradle, escapement and retention gate are unchanged by this group \u2014 a fixed cell changes what is inside a slot and nothing about the machine around it."
     },
     "brake": {
       "_document": "EMOCD_Brake",
@@ -163,7 +190,7 @@
       "arrest_g_cap": 200,
       "taper_purpose": "Tapered pole entry is the 200 g deceleration limiter protecting the brittle sintered NdFeB bonding.",
       "status": "PROVISIONAL",
-      "provisional_note": "Poles were lightened from solid blocks to 15 mm plates on structural reasoning alone. Magnetic sizing against the required pole area has NOT been done — pending the eddy-brake field check."
+      "provisional_note": "Poles were lightened from solid blocks to 15 mm plates on structural reasoning alone. Magnetic sizing against the required pole area has NOT been done \u2014 pending the eddy-brake field check."
     },
     "interface_espa": {
       "_document": "EMOCD_Interface_ESPA",
@@ -192,11 +219,11 @@
       "corner_rail_count": 4,
       "corner_rail_standard": "CubeSat Design Specification rail interface",
       "instances_in_assembly": 12,
-      "modelled_as": "solid aluminium proxy — real 3U flight mass is 4 kg, NOT the Fusion-computed value",
+      "modelled_as": "solid aluminium proxy \u2014 real 3U flight mass is 4 kg, NOT the Fusion-computed value",
       "status": "authoritative"
     },
     "enclosure": {
-      "_document": "EMOCD_Enclosure (NEW — the ninth document; this is the flight unit as seen from outside)",
+      "_document": "EMOCD_Enclosure (NEW \u2014 the ninth document; this is the flight unit as seen from outside)",
       "skin_thickness": 2.0,
       "skin_material": "aluminium",
       "x_min": -32,
@@ -211,7 +238,7 @@
       "muzzle_panel_x": 1805,
       "muzzle_aperture_verified": "point-containment probe on the satellite exit line returns OUTSIDE (open); probe above the aperture returns INSIDE (solid panel)",
       "aft_flange_cutout_diameter": 466,
-      "aft_cutout_profile": "horseshoe — the cutout breaches the panel's lower edge by design, because the flange OD extends below the belly line",
+      "aft_cutout_profile": "horseshoe \u2014 the cutout breaches the panel's lower edge by design, because the flange OD extends below the belly line",
       "belly_notch_x_min": -27,
       "belly_notch_x_max": 2,
       "belly_notch_y_half_width": 110,
@@ -300,6 +327,7 @@
     "P8": "exit velocity provisional pending sled structural FEA",
     "P9": "closed envelope exceeds ESPA Grande by ~44%",
     "P10": "enclosure + packaged avionics absent from mass_properties.py",
-    "E1": "3-D end effects on the thrust constant — closed only by FEMM/Maxwell"
+    "E1": "3-D end effects on the thrust constant \u2014 closed only by FEMM/Maxwell",
+    "P44": "intra-cell separation hardware outweighs the payload at femtosat scale"
   }
 }
