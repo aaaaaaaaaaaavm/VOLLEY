@@ -1783,6 +1783,24 @@ therefore cannot drift at all. **The durable fix is to generate the headline tab
 `analysis/results/*.json`** the way `make_baseline.py` does. That is not done, and until it is,
 this failure mode is detectable rather than impossible.
 
+**And the fix did not reach every surface. Found 2026-08-10, while replacing the renders.**
+The **GitHub wiki** — a third public surface, and one nothing in this repository had ever
+compared against anything — was serving the same pre-quadrature operating point the site was
+(**11.22 N/kA·m, 16.54 m/s at 10.7 g, 19 % efficiency, 76.9/124.9 kg, 66.1 N·s**), plus the
+render set withdrawn under P43, plus a repository link still reading `aaaaaaaaaaaavm/emocd`
+under the old project name.
+
+`wiki/Home.md` **in this repository is correct** and has been for a week; the live wiki is a
+*separate git repository* (`VOLLEY.wiki.git`) that nothing syncs it to. So the flagship's copy
+being right was never evidence that the wiki was, and `check_artifacts.py` cannot help: the
+artifact it would guard is not in this repository at all.
+
+**This is not closed.** The corrected page cannot be pushed from the working environment — a
+wiki is not addressable as a repository through the GitHub API, so the credential proxy refuses
+it. **Until `wiki/Home.md` is copied into the live wiki by hand, the wiki still publishes
+superseded numbers.** That is the one part of P42 that remains outstanding, and it is recorded
+here rather than left to be rediscovered.
+
 ### P43. The renders on the front page showed the satellite being fired into its own host: HIGH, NEW 2026-08-10
 > **Status:** `CLOSED` — resolved; see the entry for what closed it
 > a provenance gap of its own, recorded below and not hidden
