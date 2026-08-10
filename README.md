@@ -9,7 +9,7 @@
 > change log.
 
 <p align="center">
-  <img src="cad/renders/exterior_closed.png" alt="VOLLEY deployer, closed, mounted on its ESPA interface" width="100%">
+  <img src="cad/renders/envelope_closed.png" alt="VOLLEY deployer, closed, 1839 mm along the track, on its ESPA interface" width="100%">
 </p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -65,14 +65,29 @@ modified, the magnets ride the sled, not the payload.
 
 <table>
 <tr>
-<td width="50%"><a href="cad/renders/interior_open.png"><img src="cad/renders/interior_open.png" alt="Interior, enclosure open"></a><br><sub><b>Interior.</b> Track, stator belts, sled, and both cassettes with the enclosure open.</sub></td>
-<td width="50%"><a href="cad/renders/exploded_view.png"><img src="cad/renders/exploded_view.png" alt="Exploded view of the nine documents"></a><br><sub><b>Exploded.</b> The nine documents: track, stator, sled, cassettes, brake, ESPA interface, enclosure, payload.</sub></td>
+<td width="50%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Interior, enclosure open, payload departing along the track axis"></a><br><sub><b>Interior.</b> Track, stator belts, sled and cassette, enclosure open. The payload leaves along the track axis at 16.388 m/s.</sub></td>
+<td width="50%"><a href="cad/renders/espa_interface.png"><img src="cad/renders/espa_interface.png" alt="ESPA mounting interface with the payload departing away from the flange"></a><br><sub><b>Aft mounting.</b> Ø460 mm ring flange, Ø400 mm bolt circle, 24 holes. The payload departs <b>away from</b> the flange, out the muzzle.</sub></td>
 </tr>
 <tr>
-<td width="50%"><a href="cad/renders/exterior_aft_mounting.png"><img src="cad/renders/exterior_aft_mounting.png" alt="Aft ESPA mounting interface"></a><br><sub><b>Aft mounting.</b> Ø460 mm ring flange, Ø400 mm bolt circle, 24 holes, four gussets.</sub></td>
-<td width="50%"><a href="cad/renders/seq2_midstroke.png"><img src="cad/renders/seq2_midstroke.png" alt="Sled at mid-stroke"></a><br><sub><b>Mid-stroke.</b> Sled under thrust, payload still cradled, 158.6 ms from breech to release.</sub></td>
+<td width="50%"><a href="cad/renders/track_stator.png"><img src="cad/renders/track_stator.png" alt="Track and stator, side elevation"></a><br><sub><b>Track and stator.</b> Side elevation. Gen4 stows the sled at s = 300 mm and releases at s = 1200 mm.</sub></td>
+<td width="50%"><a href="cad/renders/brake.png"><img src="cad/renders/brake.png" alt="Eddy brake arresting the sled after release"></a><br><sub><b>Brake.</b> The sled is arrested by the eddy brake after the payload has gone. Gen4 brake-fin entry at s = 1222 mm.</sub></td>
+</tr>
+<tr>
+<td width="50%"><a href="cad/renders/sled_detail.png"><img src="cad/renders/sled_detail.png" alt="Reusable sled"></a><br><sub><b>Sled.</b> Reusable, 488 mm. The magnets ride the sled and never leave the machine.</sub></td>
+<td width="50%"><a href="cad/renders/magazine_feed.png"><img src="cad/renders/magazine_feed.png" alt="Axial view down the bore"></a><br><sub><b>Down the bore.</b> Axial view along the departure axis, cassette feeding transversely into the breech.</sub></td>
 </tr>
 </table>
+
+<sub>Renders are from the Gen4 Fusion model, cropped and annotated by
+<a href="cad/tools/prepare_renders.py"><code>cad/tools/prepare_renders.py</code></a> from the
+uncropped frames in <a href="cad/renders/source/"><code>cad/renders/source/</code></a>.
+<b>Gen4 has no committed STEP export</b>, so these show geometry no file in <code>cad/step/</code>
+matches — see <a href="docs/GEN4_STATUS.md">docs/GEN4_STATUS.md</a>, ADR-019 and P43.
+<b>Gen4 stations are not the analysis model's</b>: Gen4 releases at s = 1200 mm where
+<code>analysis/</code> assumes 1500 mm, and Gen4's 340 mm Halbach array leaves the stator edge at
+s = 1051.5 mm, so no performance number on this page is taken from Gen4 and none should be.
+<code>exploded_view.png</code> is retained from Gen3 because Gen4 has no equivalent shot. The
+payload is a plain rectangular 3U proxy, not a modelled satellite.</sub>
 
 **Spin it in the browser:** [`cad/stl/EMOCD_Assembly_Gen3.stl`](cad/stl/EMOCD_Assembly_Gen3.stl)
 and [`cad/stl/EMOCD_Sled_Gen3.stl`](cad/stl/EMOCD_Sled_Gen3.stl), GitHub renders STL

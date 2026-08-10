@@ -9,7 +9,7 @@ before citing anything here.** Every quantity on this page is a model output. No
 has been measured, tested, or reviewed by a third party.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exterior_closed.png" alt="VOLLEY deployer, closed" width="100%">
+  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/envelope_closed.png" alt="VOLLEY deployer, closed" width="100%">
 </p>
 
 ---
@@ -30,14 +30,25 @@ transfer vehicles (hundreds of m/s).
 
 <table>
 <tr>
-<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/interior_open.png" alt="Interior"><br><sub><b>Interior.</b> Track, stator, sled, both cassettes.</sub></td>
-<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exploded_view.png" alt="Exploded view"><br><sub><b>Exploded.</b> The nine documents.</sub></td>
+<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/hero_open.png" alt="Interior"><br><sub><b>Interior.</b> Track, stator, sled, cassette. The payload leaves along the track axis.</sub></td>
+<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/espa_interface.png" alt="ESPA interface"><br><sub><b>ESPA interface.</b> Ring flange, 24 bolt holes. The payload departs <b>away from</b> the flange.</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exterior_aft_mounting.png" alt="Aft mounting"><br><sub><b>Aft mounting.</b> ESPA ring flange, 24 bolt holes.</sub></td>
-<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/seq2_midstroke.png" alt="Mid-stroke"><br><sub><b>Mid-stroke.</b> Sled under thrust, payload cradled.</sub></td>
+<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/track_stator.png" alt="Track and stator"><br><sub><b>Track and stator.</b> Side elevation, breech to muzzle.</sub></td>
+<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/brake.png" alt="Braking"><br><sub><b>Braking.</b> Payload gone; the sled runs on into the eddy brake.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/sled_detail.png" alt="Sled"><br><sub><b>Sled.</b> Reusable. The magnets never leave the machine.</sub></td>
+<td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exploded_view.png" alt="Exploded view"><br><sub><b>Exploded.</b> The nine documents. Gen3, the one shot Gen4 has no equivalent of.</sub></td>
 </tr>
 </table>
+
+<sub>Gen4 Fusion renders, replacing a Gen3 set whose firing-sequence frames showed the payload
+leaving <b>through</b> the ESPA flange (P43). <b>Gen4 has no committed STEP export</b> and its
+stations are not the analysis model's — it releases at s = 1200 mm where the analysis assumes
+1500 mm — so no number on this page comes from Gen4. See
+<a href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/GEN4_STATUS.md">GEN4_STATUS.md</a>.
+The payload is a rectangular 3U proxy, not a modelled satellite.</sub>
 
 Spin the geometry in the browser:
 [`cad/stl/EMOCD_Assembly_Gen3.stl`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/cad/stl/EMOCD_Assembly_Gen3.stl)

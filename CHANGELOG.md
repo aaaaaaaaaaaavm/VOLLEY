@@ -9,6 +9,23 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (tenth pass): the renders showed the satellite being fired into its own host
+
+| ID | Item | Detail |
+|---|---|---|
+| **P43** | **Two published renders fired the payload through the ESPA mounting flange** | `seq2_midstroke.png` and `seq3_release.png` — in `README.md`, on the Pages site and in the wiki — showed the payload departing **through the face that bolts to the host**, and drew the CubeSat as a **wheeled road vehicle** from a sample-asset library. The geometry *is* the interface argument, so this was not cosmetic: a reader taking those frames at face value would conclude the machine fires backwards into the vehicle it is bolted to. |
+| P43-01 | **No check could have caught it** | Nothing in `tools/` looks at an image. `check_artifacts.py` guards numbers against sources and has no notion of a picture being wrong about what it depicts. This is P42's shape one layer further out, and **no fix is proposed because none is cheap** — stated rather than implied. |
+| P43-02 | **Seven Gen4 shots replace them** | `hero_open`, `espa_interface`, `track_stator`, `brake`, `sled_detail`, `envelope_closed`, `magazine_feed`. In each the payload leaves along the track axis, away from the flange, with a drawn departure arrow so the direction is **stated** rather than merely happening to be right. `seq1_stowed` and `seq3_release` are withdrawn with no replacement. `exploded_view.png` is the only Gen3 render retained, labelled as Gen3 wherever it appears. |
+| P43-03 | **The replacement carries a provenance gap, and it is published anyway** | **Gen4 has no committed STEP export** (ADR-019), so the renders now show geometry **no file in `cad/step/` matches**. A set that was wrong about physics is traded for one that is right about physics and unverifiable against a committed model. Deliberate, and recorded as a trade rather than a fix. |
+| P43-04 | **Every caption stripped of performance figures** | Gen4 releases at s = 1200 mm over a 900 mm stroke where `analysis/` assumes 1500 mm over 1.5 m, and `CHANGELOG_CAD.md` forbids a Gen4 performance claim until the partial-overlap calculation is done. **A caption is a claim.** The `track_stator` caption asserting the 1.3 m acceleration zone was removed before publication for this reason. |
+| REN-01 | **The published set is generated, not hand-edited** | `cad/tools/prepare_renders.py` crops to content, fits to a 1600x900 box, draws the arrow and adds the caption bar, from uncropped frames committed to `cad/renders/source/`. Arrow direction is **per-render** because the camera flips between views — the first pass drew every arrow leftward and pointed the brake shot's arrow **back into its own machine**, which would have reproduced, in the fix, the exact error the fix exists to correct. |
+| CNT-05 | **The register head was stale by four entries, under a claim it could not be** | It read 67 / 29 live against an actual **71 / 28** (14 P, 14 E), 11 `CORRECTED`, 32 `CLOSED`. The sentence saying this file and the numbers elsewhere "cannot drift apart again" was **removed rather than repaired**: `register_status.py --check` validates each entry's own `Status:` line and never read the summary table, so the promise was never enforced by anything. |
+
+**What authorised it.** Freeze rule 2 — a defect that makes a published Phase I deliverable
+wrong. No operating point moved; `v_exit` 16.388 m/s and Kt 11.0258 N/kA·m are untouched.
+
+---
+
 ## 2026-08-10 (ninth pass): the public site was a two-month-old snapshot of the project
 
 | ID | Item | Detail |

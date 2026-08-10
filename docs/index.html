@@ -7,7 +7,7 @@
 <meta name="description" content="A magazine-fed electromagnetic deployer that ejects unmodified CubeSats at programmable velocity. Design study, TRL 2-3, model outputs only.">
 <meta property="og:title" content="VOLLEY: an electromagnetic orbital CubeSat deployer">
 <meta property="og:description" content="Ejecting unmodified CubeSats at 16.5 m/s from a rideshare host. Design study, TRL 2-3, unvalidated.">
-<meta property="og:image" content="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exterior_closed.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/envelope_closed.png">
 <style>
 :root{
   --bg:#0b0e13; --panel:#141920; --line:#232b36; --ink:#e8edf4; --dim:#93a1b3;
@@ -70,7 +70,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exterior_closed.png" alt="VOLLEY deployer, closed, on its ESPA interface">
+  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/envelope_closed.png" alt="VOLLEY deployer, closed, on its ESPA interface">
 </header>
 
 <div class="wrap">
@@ -128,10 +128,10 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   deployer supplies the distribution within it; they are complements, and saying which does which
   is the difference between a positioning argument and a brochure.</div>
   <div class="grid g2">
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/interior_open.png" alt="Interior">
-      <figcaption><b>Interior.</b> Track, stator belts, sled, and both cassettes with the enclosure open.</figcaption></figure>
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exploded_view.png" alt="Exploded view">
-      <figcaption><b>Exploded.</b> Nine documents: track, stator, sled, cassettes, brake, ESPA interface, enclosure, payload.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/hero_open.png" alt="Interior, enclosure open, payload departing along the track axis">
+      <figcaption><b>Interior.</b> Track, stator belts, sled and cassette, enclosure open. The payload leaves <em>along the track axis</em>, out the muzzle.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/espa_interface.png" alt="ESPA interface, payload departing away from the flange">
+      <figcaption><b>ESPA interface.</b> &Oslash;460 mm ring flange, 24 holes. The payload departs <em>away from</em> the flange, never through it.</figcaption></figure>
   </div>
 </section>
 
@@ -143,13 +143,29 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   remaining 952 J, so efficiency is quoted electrical-to-payload net of a 23 % sled-energy
   credit.</p>
   <div class="grid g3">
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/seq2_midstroke.png" alt="Mid-stroke">
-      <figcaption><b>Mid-stroke.</b> Under thrust, payload cradled.</figcaption></figure>
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/seq3_release.png" alt="Release">
-      <figcaption><b>Release.</b> Payload departs at 1500 mm.</figcaption></figure>
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/seq4_braking.png" alt="Braking">
-      <figcaption><b>Braking.</b> Sled runs on into the eddy brake.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/track_stator.png" alt="Track and stator, side elevation">
+      <figcaption><b>Track and stator.</b> Side elevation, breech to muzzle.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/sled_detail.png" alt="Reusable sled">
+      <figcaption><b>Sled.</b> Reusable. The magnets ride it and never leave the machine.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/brake.png" alt="Eddy brake arresting the sled">
+      <figcaption><b>Braking.</b> The payload has gone; the sled runs on into the eddy brake.</figcaption></figure>
   </div>
+
+  <div class="grid g2" style="margin-top:22px">
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/magazine_feed.png" alt="Axial view down the bore">
+      <figcaption><b>Down the bore.</b> Axial view along the departure axis, cassette feeding transversely into the breech.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exploded_view.png" alt="Exploded view">
+      <figcaption><b>Exploded.</b> Nine documents: track, stator, sled, cassettes, brake, ESPA interface, enclosure, payload. Gen3, the one shot Gen4 has no equivalent of.</figcaption></figure>
+  </div>
+
+  <div class="note"><b>About these renders.</b> They come from the Gen4 Fusion model and replace a
+  Gen3 set that was wrong in a way that mattered: two of its frames showed the payload leaving
+  <em>through</em> the ESPA mounting flange, and drew the CubeSat as a wheeled road vehicle from a
+  sample-asset library. That is P43. <b>Gen4 has no committed STEP export</b>, so these show
+  geometry no file in <code>cad/step/</code> matches, and <b>Gen4's stations are not the analysis
+  model's</b> &mdash; it releases at s = 1200 mm where the analysis assumes 1500 mm. No number on
+  this page is taken from Gen4. The payload is a plain rectangular 3U proxy, not a modelled
+  satellite.</div>
 
   <figure style="margin-top:26px">
     <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/paper/figures/shot.gif" alt="Animated shot: position, velocity, commanded force and bank current against time"

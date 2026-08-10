@@ -5,15 +5,21 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **67 numbered entries, of which 29 are live.** Every entry carries a `Status:` line written by
-> `tools/register_status.py`, which also derives the headline counts, so this file and the numbers
-> quoted elsewhere cannot drift apart again.
+> **71 numbered entries, of which 28 are live.** Every entry carries a `Status:` line written by
+> `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **29** (15 P, 14 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **9** | found, fixed and propagated — **retained as the published record, not as debt** |
-> | `CLOSED` | **29** | resolved, with the closer named in the entry |
+> | `LIVE` | **28** (14 P, 14 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CLOSED` | **32** | resolved, with the closer named in the entry |
+>
+> **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
+> "cannot drift apart again".** They could: `register_status.py --check` validates each entry's
+> own `Status:` line, and never read this table. The claim has been removed rather than repaired,
+> because the table is still hand-copied from the tool's output and a promise the checks do not
+> enforce is worth less than none. Run `python3 tools/register_status.py` and compare before
+> quoting these numbers anywhere.
 >
 > **This distinction did not exist until 2026-08-06** and its absence was itself a defect: a
 > reader could not separate live engineering debt from published history, so "37 defects" counted
@@ -26,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 67 entries stand, and the 29 live
+> nothing in it has been deleted, closed or downgraded — all 71 entries stand, and the 28 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -1776,6 +1782,59 @@ guard can only detect drift, not prevent it — unlike `BASELINE.md`, which is *
 therefore cannot drift at all. **The durable fix is to generate the headline table from
 `analysis/results/*.json`** the way `make_baseline.py` does. That is not done, and until it is,
 this failure mode is detectable rather than impossible.
+
+### P43. The renders on the front page showed the satellite being fired into its own host: HIGH, NEW 2026-08-10
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> a provenance gap of its own, recorded below and not hidden
+
+
+**Corrected.** 2026-08-10. Found by inspection of the render set, not by any check.
+
+`cad/renders/seq2_midstroke.png` and `cad/renders/seq3_release.png` — used in `README.md`, on
+the Pages site and in the wiki, three of the four surfaces a stranger sees first — showed the
+payload **departing through the ESPA mounting flange**: the face that bolts to the host. They
+also drew the CubeSat as a **wheeled road vehicle**, a sample-asset placeholder that was never
+replaced.
+
+**This is worse than a cosmetic defect, because the geometry is the argument.** The entire
+interface case rests on the payload leaving along the track axis, out the muzzle, away from the
+host. A reader taking those frames at face value would conclude the machine fires backwards into
+the vehicle it is bolted to — and would be right to stop reading. The images had been the
+project's most-viewed artifact for the whole time they were wrong.
+
+**Cause.** The renders were produced as illustration and were never checked against the
+requirement they illustrate. Nothing in `tools/` looks at an image, so no check could have caught
+it; `check_artifacts.py` guards numbers against their sources and has no notion of a picture
+being wrong about the thing it depicts. The render brief in `cad/FUSION_RENDER_BRIEF.md` was
+written *after* the defective set existed, which is why it now specifies the departure direction
+explicitly.
+
+**Fixed.** The seven-shot Gen4 set replaces them: `hero_open`, `espa_interface`, `track_stator`,
+`brake`, `sled_detail`, `envelope_closed`, `magazine_feed`. In every one the payload leaves along
+the track axis, away from the flange, and each carries a drawn departure arrow so the direction is
+stated rather than merely happening to be right. `cad/tools/prepare_renders.py` regenerates the
+published set from the uncropped frames in `cad/renders/source/`. Only `exploded_view.png` is
+retained from Gen3, because Gen4 has no equivalent shot, and it is labelled as Gen3 wherever it
+appears.
+
+**The honest remainder, and it is not small.**
+
+1. **Gen4 has no committed STEP export** (ADR-019, `docs/GEN4_STATUS.md`), so the published
+   renders now show geometry that **no file in `cad/step/` matches**. The repository trades a
+   set that was wrong about physics for a set that is right about physics and unverifiable
+   against a committed model. That trade is deliberate — a reader misled about the deployment
+   direction is worse off than one told the picture is ahead of the export — but it is a trade,
+   and it stands until the Gen4 export gate opens or Gen5 supersedes it.
+2. **Gen4's stations are not the analysis model's.** Gen4 releases at s = 1200 mm over a 900 mm
+   stroke; `analysis/` assumes release at 1500 mm over 1.5 m. P39 already holds this. Every
+   caption on every surface has therefore been stripped of performance figures, and each states
+   that no number is taken from Gen4.
+3. **The payload is still a plain rectangular proxy**, not a modelled 3U satellite. Correct in
+   its envelope and its direction of travel, and nothing more than that.
+4. **No check exists that would catch the next one.** An image cannot be diffed against a
+   requirement by anything currently in `tools/`. The renders remain the one class of published
+   artifact with no automated tie to the repository's own claims — the same shape of gap as P42,
+   one layer further out, and this time with no fix proposed because none is cheap.
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

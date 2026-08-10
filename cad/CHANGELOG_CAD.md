@@ -21,6 +21,38 @@ superseded content is marked SUPERSEDED in place.
 
 ---
 
+## 2026-08-10: GEN4 RENDER SET PUBLISHED, GEN4 STILL NOT EXPORTED
+
+Seven Gen4 shots replace the Gen3 render set on every public surface. The Gen3 firing-sequence
+frames were withdrawn under **P43**: two of them showed the payload departing *through* the ESPA
+mounting flange and drew the CubeSat as a wheeled road vehicle from a sample-asset library.
+
+| Published | Superseded |
+|---|---|
+| `hero_open.png` | `interior_open.png` |
+| `espa_interface.png` | `exterior_aft_mounting.png` |
+| `envelope_closed.png` | `exterior_closed.png` |
+| `sled_detail.png` | `seq2_midstroke.png` |
+| `brake.png` | `seq4_braking.png` |
+| `track_stator.png`, `magazine_feed.png` | new shots |
+| — | `seq1_stowed.png`, `seq3_release.png` withdrawn without replacement |
+
+`exploded_view.png` is the only Gen3 render retained, because Gen4 has no equivalent, and it is
+labelled Gen3 wherever it appears.
+
+**This does not open the Gen4 export gate and does not create a Gen4 performance claim.** The
+gate stated above stands: the 340 mm array leaves the finite stator at s = 1051.5 mm and the
+position-dependent electromagnetic calculation is not done. The renders are published *ahead of*
+the export, which is a deliberate trade recorded in P43 — a reader misled about the deployment
+direction is worse off than one told the picture is ahead of the model. Every caption on every
+surface has been stripped of performance figures for this reason, and each states that no number
+is taken from Gen4.
+
+Uncropped frames are committed to `renders/source/`; `tools/prepare_renders.py` generates the
+published set from them and is the only thing that should.
+
+---
+
 ## 2026-08-03: PROVISIONAL GEN4 OPEN ASSEMBLY, NOT EXPORTED
 
 `EMOCD_Gen4_Open v7` exists in Fusion 360 as a working open-mechanism configuration. It is

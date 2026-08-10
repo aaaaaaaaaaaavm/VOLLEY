@@ -107,18 +107,31 @@ WHAT NOT TO DO
 
 ## After the renders come back
 
-Drop them into `cad/renders/` **using the existing filenames** where they correspond, because
-`README.md`, `wiki/Home.md` and `docs/index.html` all reference them by absolute
-`raw.githubusercontent.com` URL. Replacing in place updates every surface at once. New
-filenames mean editing four files and are only worth it when the shot is genuinely new.
+**Done, 2026-08-10.** The seven shots below were delivered and installed. The Gen3 filenames
+were *not* reused: the old set was withdrawn under P43 rather than overwritten, so that the
+defect and its replacement are both visible in history instead of one silently becoming the
+other. `README.md`, `wiki/Home.md` and `docs/index.html` were edited to match.
 
-| New shot | Replaces |
+| Shot | Superseded |
 |---|---|
 | `hero_open.png` | `interior_open.png` |
-| `sled_detail.png` | `seq2_midstroke.png` |
+| `sled_detail.png` | `seq2_midstroke.png` (P43) |
 | `envelope_closed.png` | `exterior_closed.png` |
 | `espa_interface.png` | `exterior_aft_mounting.png` |
-| `track_stator.png`, `magazine_feed.png`, `brake.png` | new, need link edits |
+| `brake.png` | `seq4_braking.png` |
+| `track_stator.png`, `magazine_feed.png` | new shots |
+| — | `seq1_stowed.png`, `seq3_release.png` (P43) withdrawn, no replacement |
+
+Raw frames land in `cad/renders/source/`. `cad/tools/prepare_renders.py` produces the published
+set from them: crop to content, fit to a 1600x900 box, draw the departure arrow, add a caption
+bar. **Run it rather than hand-editing an image**, and check the per-render direction in its
+`SPEC` table against the frame — the first pass pointed the brake shot's arrow back into its own
+machine, which would have reproduced, in the fix, the exact error the fix exists to correct.
+
+**Captions must not carry performance figures while Gen4 is unexported.** The stations differ
+from the analysis model's (release at s = 1200 mm against 1500 mm) and `CHANGELOG_CAD.md`
+forbids a Gen4 performance claim until the partial-overlap calculation is done. A caption is a
+claim.
 
 **A new CAD generation is not a picture change.** `analysis/mass_properties.py` reads the STEP
 solids and the sled mass sets the exit velocity. If the geometry moved at all, re-run it and

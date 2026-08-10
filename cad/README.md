@@ -66,7 +66,14 @@ and `OPEN_PROBLEMS.md` P13.
   G3-D*), and the cross-generation comparison
 - `step/gen1/`, `step/gen2/`, `step/gen3/`, STEP exports (`.f3d` is not diffable, so STEP
   is what gets committed)
-- `renders/`, exterior, interior, exploded, and firing-sequence PNGs, from the Gen3
-  monolithic model
+- `renders/`, the published PNG set, and `renders/source/`, the uncropped frames it is
+  generated from by `tools/prepare_renders.py`. **These are Gen4 shots and Gen4 has no
+  committed STEP export**, so they show geometry no file in `step/` matches, and Gen4's
+  stations are not the analysis model's — see `../docs/GEN4_STATUS.md`, ADR-019 and P43.
+  No performance number anywhere in this repository is taken from them.
+  `exploded_view.png` alone is retained from the Gen3 monolithic model
+- `tools/prepare_renders.py`, which crops the raw frames to content, fits them to a
+  publishing box and draws the departure direction on each. The direction is per-render
+  because the camera flips between views; P43 is what happens when it is wrong
 
 The 2-D magnetic cross-section and its FEMM run sheet live in `../analysis/femm/`.
