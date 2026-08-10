@@ -264,8 +264,8 @@ authoritative until analysis A4 locks the sled mass (`validation/A4_sled_structu
 which fixes in advance which of the two estimates wins at which mass). Do not hard-swap
 20.37 to 17.88 anywhere. Source: 2026-07-23 CAD Master Plan; see README headline note.
 
-### P9. Closed envelope exceeds ESPA Grande by ~44%: packaging / host
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P9. Closed envelope exceeds ESPA Grande by ~44%: packaging / host — CLOSED 2026-08-10
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
 
 The closed installed envelope is **1839x 530x 940 mm** (`cad/parameters.json`). The
 1839 mm length exceeds ESPA Grande's ~1270 mm longest-dimension class by ~44%, because
@@ -274,6 +274,39 @@ the brake lives past the 1500 mm release point and the enclosure spans it. Owner
 already leans host-agnostic), or shorten the track / repackage the brake. This supersedes
 the earlier 1825x 516x ~1030 mm figure; the height change (1030 to 940) exceeds what skin
 thickness explains and is **flagged for re-verification** in `cad/parameters.json`.
+
+> **CLOSED 2026-08-10 by [ADR-023](docs/adr/023-target-host-class.md): re-scope the host.** The
+> target class is a restartable upper stage, kick stage or hosted platform — POEM class. **ESPA
+> Grande envelope compliance is not a requirement of this design.** The ESPA *bolt pattern* stays
+> as the mechanical interface; what is given up is compliance with a *port envelope*, which is a
+> different thing — the deployer mounts on a stage, not in a port.
+>
+> **The alternative was priced first.** Overhead that is not acceleration zone is 539 mm and does
+> not shrink, so fitting 1270 mm means a 731 mm accel zone, and velocity goes as √s:
+>
+> | | Accel zone | Exit velocity | Lifetime multiplier |
+> |---|---:|---:|---:|
+> | As designed | 1300 mm | **16.388 m/s** | ×1.62 |
+> | Fit ESPA Grande | 731 mm | **12.286 m/s** (−25.0 %) | ×1.44 |
+> | Fit, 150 mm repackaged | 881 mm | 13.495 m/s (−17.7 %) | ×1.49 |
+>
+> **Why re-scope rather than shorten.** ADR-002 put the host as a spent upper stage in 2023 and
+> ADR-010 specified the interface host-agnostically; **the ESPA-Grande requirement was a leftover
+> from an earlier framing that two accepted decisions had already contradicted.** Shortening
+> spends 25 % of the number every product claim rests on, to enter a market this architecture was
+> not designed for, and it barely touches the mass threat that is closest. The repackaging branch
+> depends on a brake layout nobody has drawn, and **P28** already says the arrest section is
+> oversubscribed.
+>
+> **What this does not do, and it is the part that matters: it does not make kill criterion 2
+> pass.** Re-scoping a target after seeing the geometry fail is the band rule violated on a
+> threshold. The criterion is unchanged — **it has moved from CROSSED to NOT EVALUABLE**, because
+> no accommodation envelope for a POEM-class host is public (**E5**). This design cannot currently
+> demonstrate that it fits anything, which is a worse epistemic position than a clean fail against
+> a published number, and it is recorded as such. **A decision that converts a measured failure
+> into an unmeasurable unknown is not progress.** What it buys is that the project stops carrying
+> a requirement it had already abandoned twice. **E5 rises in priority accordingly**, and
+> `docs/MARKET.md` needs re-scoping against the lost port population.
 
 ### P10. Enclosure, radiator, and packaged avionics absent from the mass rollup: MEDIUM (NEW)
 > **Status:** `LIVE` — open engineering; something still has to be done
@@ -1154,7 +1187,7 @@ authority rather than on heat, checked against the 200 g deceleration cap and th
 handover below 1.5 m/s. It is mechanical design, and it is the reason A11 says plainly that it
 answers the electromagnetic question only.
 
-### P29. The paper says the winding is segmented; the model charges copper for all 1.3 m: MEDIUM, NEW 2026-07-31
+### P29. The paper says the winding is segmented; the model charges copper for all 1.3 m: MEDIUM, NEW 2026-07-31 — CLOSED 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 
 Found while pricing a longer track, and it is a question about the machine as built rather than
@@ -1194,6 +1227,40 @@ about drive segmentation, so the CAD cannot settle it either.
 energised at once, then `motor_model.py` computing `vol_cu` from that rather than from
 `ACCEL_ZONE`, with the paper's redundancy sentence and the drive description made to agree.
 Both numbers then follow from one stated fact instead of two unstated ones.
+
+> **CLOSED 2026-08-10 by [ADR-022](docs/adr/022-stator-segmented-not-block-commutated.md):
+> possibility 1.** The winding is segmented **for fault isolation** and driven as a single
+> energised section. `vol_cu = ACCEL_ZONE` stands and **no baseline value moves.**
+>
+> **Both branches were priced before choosing**, by `analysis/owner_decisions.py` re-running the
+> real pipeline with the energised length as a parameter:
+>
+> | | Whole winding | ~One sled length | 4 segments |
+> |---|---:|---:|---:|
+> | Copper per shot | **834.7 J** | 218.3 J | 208.7 J |
+> | Net efficiency | **20.99 %** | 28.07 % | 28.22 % |
+> | P33 inductance | **19.70 µH** | 5.15 µH | 4.92 µH |
+> | **Exit velocity** | **16.388** | **16.388** | **16.388 m/s** |
+>
+> **The last row decides it. Segmentation changes what the shot costs, not what it delivers** —
+> force is commanded, so copper loss is a power draw and not a thrust reduction.
+>
+> **Why the conservative branch.** Efficiency appears in **no** kill criterion; mass appears in
+> the one that is crossed by a factor of three. Block commutation buys 7.09 points and costs an
+> inverter per segment or a switching assembly, **none of it in the mass rollup** (**P10**).
+> Buying efficiency with mass is the wrong direction for the threat that is live.
+>
+> **This entry's estimate of "24.4 %" is superseded** — it predates the quadrature correction; the
+> computed figure is 28.07 %.
+>
+> **The price is recorded rather than glossed: 7.09 points of efficiency and 616 J of copper per
+> shot, paid for drive simplicity, with 74 % of the copper dissipating under no field.** That was
+> possibility 2 — conservatism that was real judgement *"written down nowhere"* — and writing it
+> down with both branches costed is the whole of what this entry asked for. `shot()` keeps its
+> `energised` parameter, so **the default is now a recorded decision rather than an unexamined
+> one**, and the alternative stays priceable without editing the model. Block commutation goes to
+> Phase II with a stated entry criterion: it becomes attractive if the mass rollup ever closes
+> with room to spare.
 
 ### P30. An acceptance band was set at the easier of two available comparators: MEDIUM, NEW 2026-07-31
 > **Status:** `CLOSED` — resolved; see the entry for what closed it

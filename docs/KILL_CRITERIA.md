@@ -85,11 +85,35 @@ found the 8x themselves would allow.**
 > **Kill threshold: if it will not fit a rideshare port, the entire hosted-deployer concept has
 > no vehicle.** This is binary.
 
-**Status: crossed for ESPA Grande.** Open as **P9**; the fix is PII-4 and needs an owner decision
-on target host class rather than analysis. The brake sits beyond the 1500 mm release point and
-the enclosure must span it, so the length is structural rather than packaging slack.
+**Status, until 2026-08-10: crossed for ESPA Grande.** 1839 mm against ~1270 mm. The brake sits
+beyond the 1500 mm release point and the enclosure must span it, so the length is structural
+rather than packaging slack.
 
-A free-flyer removes this constraint entirely, which is one of the arguments for PII-8.
+**Status now: NOT EVALUABLE, blocked on E5.**
+[ADR-023](adr/023-target-host-class.md) re-scoped the target host to a spent upper stage or
+hosted platform of POEM class, closing **P9**. **The threshold above is unchanged** — it has not
+been weakened, deleted or re-baselined, because re-scoping a target after seeing the geometry
+fail is `validation/README.md`'s band rule violated on a threshold instead of a band.
+
+**What changed is which host it is evaluated against, and the honest consequence is that it can
+no longer be evaluated at all.** No accommodation envelope for a POEM-class host is public — that
+is **E5**, the same undisclosed data that keeps the recoil table parametric. **This design cannot
+currently demonstrate that it fits anything.**
+
+> **That is a worse epistemic position than a clean fail against a published number, and it is
+> recorded as one.** A decision that converts a measured failure into an unmeasurable unknown is
+> not progress. What the re-scope buys is that the project stops carrying a requirement two of its
+> own accepted decisions — ADR-002 and ADR-010 — had already abandoned.
+
+**The alternative was priced before it was rejected.** Fitting 1270 mm means a 731 mm acceleration
+zone, since the 539 mm of overhead does not shrink, and velocity goes as √s: **16.388 → 12.286 m/s,
+−25 %**, lifetime ×1.62 → ×1.44. Repackaging 150 mm of brake recovers about a third of that, and
+depends on a layout nobody has drawn against an arrest section **P28** already says is
+oversubscribed.
+
+**E5 is now the only thing that can put a number back on this criterion**, and its priority rises
+accordingly. A free-flyer removes the constraint entirely, which is one of the arguments for
+PII-8.
 
 ---
 

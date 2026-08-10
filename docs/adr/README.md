@@ -50,6 +50,8 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | [019](019-gen4-open-assembly-before-export.md) | Keep Gen4 open assembly separate from the Phase I baseline | Accepted | Gen4 transition |
 | [020](020-inter-shot-cadence.md) | The inter-shot cadence is 1200 s, closing P31 | Accepted | Load-bearing |
 | [021](021-freeze-the-register.md) | Freeze the defect register; measurement takes priority | Accepted | I |
+| [022](022-stator-segmented-not-block-commutated.md) | Winding segmented for fault isolation, driven as one; closes P29 | Accepted | I |
+| [023](023-target-host-class.md) | Target host is a spent upper stage, not an ESPA-Grande port; closes P9 | Accepted | I |
 
 Every decision in `DECISION_LOG.md` appears above. ADRs 012-018 record decisions that were
 never written down anywhere before.

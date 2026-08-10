@@ -160,16 +160,25 @@ class BankLimitError(RuntimeError):
     """
 
 
-def shot(Kt, K_lim=K_RATED, dt=1e-4, trace=False):
+def shot(Kt, K_lim=K_RATED, dt=1e-4, trace=False, energised=None):
     """Integrate one shot: constant commanded force against bank sag + copper loss.
 
     trace=True additionally returns the time series (t, x, v, Vc, I) so figures can be
     drawn from this integrator rather than a second copy of it.
+
+    `energised` is the length of stator carrying current, in metres. It defaults to
+    ACCEL_ZONE -- the whole 1.30 m winding energised for the entire stroke -- which is the
+    Phase I baseline and is what this model has always computed. **P29 is the open question
+    of whether that is right**, because paper.tex says the winding is segmented and a
+    segmented long-stator machine energises only the section under the mover. The parameter
+    exists so both branches can be priced without either being adopted; the default changes
+    nothing, which make_baseline.py --check verifies. Do not change the default without an
+    ADR -- it moves copper loss, efficiency and P33's inductance together.
     """
     m = M_SAT + M_SLED
     F = 0.9 * Kt * K_lim
     J = (K_lim * 0.9) / WIND_THICK / FILL                     # A/m^2 in copper
-    vol_cu = ACCEL_ZONE * DEPTH * WIND_THICK * FILL
+    vol_cu = (ACCEL_ZONE if energised is None else energised) * DEPTH * WIND_THICK * FILL
     P_cu = RHO_CU * J * J * vol_cu
     x = v = t = E = Q = Q_esr = 0.0
     Vc, Imax = V0, 0.0

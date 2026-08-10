@@ -110,8 +110,33 @@ the track, repackage the brake, or accept a host that does not impose the envelo
 > question. If ESPA Grande is retained, a packaging concept that fits ~1270 mm without
 > reducing stroke below what the velocity claim needs.
 
-**Note:** P9 stays open as a Phase I *defect*, the paper must state the overrun honestly,
-which it now does. Only the *fix* is Phase II.
+> **The owner decision was made 2026-08-10: [ADR-023](adr/023-target-host-class.md) re-scopes to
+> a spent upper stage, and ESPA-Grande compliance is not a requirement.** So the entry criterion
+> above is satisfied in the direction that **does not** require repackaging, and **PII-4 narrows**
+> — it is no longer about fitting 1270 mm. It becomes live again only if a host accommodation
+> envelope arrives (**E5**) that 1839 mm does not fit either, which is ADR-023's stated falsifier.
+> The priced alternative is on record: fitting 1270 mm costs **25 % of exit velocity**.
+
+**Note:** ~~P9 stays open as a Phase I *defect*~~ — **P9 closed 2026-08-10 by ADR-023.** The paper
+states the overrun honestly and now also states the re-scope and its cost. Kill criterion 2 is
+**not** thereby passed; it is `NOT EVALUABLE` pending E5.
+
+### PII-12: Block-commutated stator (P29)
+
+`analysis/owner_decisions.py` priced it against the branch [ADR-022](adr/022-stator-segmented-not-block-commutated.md)
+adopted. Energising roughly one sled length instead of the whole 1.30 m winding takes copper loss
+from **834.7 J to 218 J**, net efficiency from **20.99 % to 28.07 %**, phase inductance from
+**19.70 µH to 5.15 µH**, and peak current from **339 A to 288 A**. **Exit velocity does not
+change at all** — force is commanded, so copper loss is a power draw and not a thrust reduction.
+
+It was not adopted because it costs an inverter per segment or a segment-switching assembly,
+**none of which is in the mass rollup**, and mass per satellite is crossed by a factor of three
+while net efficiency appears in no kill criterion.
+
+> **Entry criterion.** **P10 closes with margin** — the enclosure, radiator and packaged avionics
+> land in the rollup and per-satellite mass has room in it — **or** some claim becomes
+> efficiency-limited, which nothing currently is. Until one of those, 7 points of efficiency
+> bought with drive hardware is the wrong trade for the threat that is live.
 
 ### PII-5: Variable-shape atmosphere in `astro.py`
 

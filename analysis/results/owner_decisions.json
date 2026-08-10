@@ -1,0 +1,85 @@
+{
+  "purpose": "decision support for P29 and P9; adopts nothing",
+  "note": "no branch is written to the baseline; adoption requires an ADR",
+  "p29": [
+    {
+      "option": "as modelled: whole winding energised",
+      "energised_m": 1.3,
+      "segments": 1,
+      "Q_copper_J": 834.6949883999944,
+      "E_drawn_J": 2850.895015481705,
+      "E_net_J": 2559.465602880184,
+      "eff_net_pct": 20.98598613301918,
+      "I_peak_A": 338.81633875679756,
+      "v_exit": 16.387939109293626,
+      "L_phase_uH": 19.7,
+      "esr_note": "lower peak current relaxes P26; requires an A10 re-run to quantify"
+    },
+    {
+      "option": "4 segments, one energised",
+      "energised_m": 0.325,
+      "segments": 4,
+      "Q_copper_J": 208.6737470999986,
+      "E_drawn_J": 2194.822471323004,
+      "E_net_J": 1903.2032591627162,
+      "eff_net_pct": 28.22237162078697,
+      "I_peak_A": 287.3785336445298,
+      "v_exit": 16.387939109293626,
+      "L_phase_uH": 4.925,
+      "esr_note": "lower peak current relaxes P26; requires an A10 re-run to quantify"
+    },
+    {
+      "option": "one segment under the mover",
+      "energised_m": 0.34,
+      "segments": null,
+      "Q_copper_J": 218.30484312000874,
+      "E_drawn_J": 2204.850580531254,
+      "E_net_J": 1913.2341997993317,
+      "eff_net_pct": 28.074403884070627,
+      "I_peak_A": 288.15252105686363,
+      "v_exit": 16.387939109293626,
+      "L_phase_uH": 5.1523076923076925,
+      "esr_note": "lower peak current relaxes P26; requires an A10 re-run to quantify"
+    }
+  ],
+  "p9": [
+    {
+      "option": "as designed",
+      "envelope_m": 1.839,
+      "overhead_saved_m": 0.0,
+      "accel_zone_m": 1.3,
+      "v_exit": 16.387939109293626,
+      "a_g": 10.533001626935276,
+      "t_ms": 158.59999999999886,
+      "KE_payload_J": 537.1290964998311,
+      "lifetime_multiplier": 1.6176004610688772,
+      "vs_espa_pct": 44.80314960629921
+    },
+    {
+      "option": "fit ESPA Grande, as drawn",
+      "envelope_m": 1.27,
+      "overhead_saved_m": 0.0,
+      "accel_zone_m": 0.7310000000000001,
+      "v_exit": 12.285787894672076,
+      "a_g": 10.533001626935276,
+      "t_ms": 118.90000000000238,
+      "KE_payload_J": 301.88116838574183,
+      "lifetime_multiplier": 1.44441618161212,
+      "vs_espa_pct": 0.0
+    },
+    {
+      "option": "fit ESPA Grande, 150 mm of overhead repackaged",
+      "envelope_m": 1.27,
+      "overhead_saved_m": 0.15,
+      "accel_zone_m": 0.8810000000000001,
+      "v_exit": 13.49473422240689,
+      "a_g": 10.533001626935276,
+      "t_ms": 130.60000000000193,
+      "KE_payload_J": 364.2157034667994,
+      "lifetime_multiplier": 1.4940546486862911,
+      "vs_espa_pct": 0.0
+    }
+  ],
+  "espa_grande_m": 1.27,
+  "envelope_overhead_m": 0.5389999999999999
+}

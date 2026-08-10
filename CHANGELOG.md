@@ -9,6 +9,29 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (seventh pass): two owner decisions, both branches priced first
+
+| ID | Item | Detail |
+|---|---|---|
+| OD-00 | **Both branches costed before either was chosen** | New `analysis/owner_decisions.py` → `results/owner_decisions.json`. It re-runs the real pipeline rather than reasoning about it, and **adopts nothing** — no branch is written to the baseline. `shot()` gains an `energised` parameter defaulting to `ACCEL_ZONE`, so the alternative is priceable without editing the model; `make_baseline.py --check` confirms the default moves nothing. |
+| **ADR-022** | **P29: the winding is segmented for fault isolation and driven as one section** | `vol_cu = ACCEL_ZONE` stands and **no baseline value moves.** |
+| OD-01 | **The row that decided it** | Copper 834.7 → 218.3 J, net efficiency 20.99 → 28.07 %, P33 inductance 19.70 → 5.15 µH, peak current 339 → 288 A — and **exit velocity identical at 16.388 m/s in every case.** Force is commanded, so copper loss is a power draw and not a thrust reduction. **Segmentation changes what the shot costs, not what it delivers.** Robust to segment count: four segments and one-sled-length differ by 0.15 points. |
+| OD-02 | **Why the conservative branch** | **Efficiency appears in no kill criterion; mass appears in the one crossed by a factor of three.** Block commutation costs an inverter per segment or a switching assembly, none of it in the mass rollup (**P10**). Buying efficiency with mass is the wrong direction for the live threat. It is also the conservative direction in a model with nothing measured behind it. |
+| OD-03 | **The price is recorded, not glossed** | **7.09 points of efficiency and 616 J of copper per shot, paid for drive simplicity, with 74 % of the copper dissipating under no field.** P29's second possibility was conservatism that was real judgement *"written down nowhere"*; it is now written down with both branches costed, which is what the entry asked for. The `energised` default is now **a recorded decision rather than an unexamined one**. P29's own "24.4 %" estimate is superseded — it predates the quadrature correction. |
+| **ADR-023** | **P9: the target host is a spent upper stage, not an ESPA-Grande port** | ESPA-Grande *port envelope* compliance is not a requirement; the ESPA *bolt pattern* remains the mechanical interface. The deployer mounts on a stage, not in a port. |
+| OD-04 | **The alternative was priced and rejected** | Overhead that is not acceleration zone is 539 mm and does not shrink, so fitting 1270 mm means a 731 mm accel zone. Velocity goes as √s: **16.388 → 12.286 m/s, −25 %**, payload KE 537 → 302 J, lifetime ×1.62 → ×1.44. Repackaging 150 mm recovers about a third and depends on a brake layout nobody has drawn, against an arrest section **P28** already calls oversubscribed. |
+| OD-05 | **Why re-scope** | **ADR-002 put the host as a spent upper stage in 2023 and ADR-010 specified the interface host-agnostically.** The ESPA-Grande requirement was a leftover from an earlier framing that two accepted decisions had already contradicted. Shortening spends 25 % of the number every product claim rests on, to enter a market this architecture was not designed for, and barely touches the mass threat that is closest. |
+| **OD-06** | **It does NOT make kill criterion 2 pass, and that is stated as loudly as the decision** | Re-scoping a target after seeing the geometry fail is `validation/README.md`'s band rule violated on a threshold. The threshold is unchanged. **Kill criterion 2 moves from CROSSED to NOT EVALUABLE**, because no accommodation envelope for a POEM-class host is public (**E5**). **A decision that converts a measured failure into an unmeasurable unknown is not progress**, and `KILL_CRITERIA.md`, the paper's limitations section and P9's entry all say so in those terms. E5 rises in priority; `MARKET.md` needs re-scoping against the lost port population. |
+| OD-07 | **Paper** | Driving requirements drop ESPA-Grande envelope compliance and state the host class; the redundancy sentence says the segmentation is fault isolation and **not** block commutation, because a segmented long-stator machine would normally imply the latter; the layout caption and the limitations paragraph carry the re-scope and its 25 % cost. `sec:host` label added — the host section had none. PDF rebuilt: 12 pages, zero undefined references. |
+| OD-08 | **Phase II** | **PII-12** opened for block commutation with a stated entry criterion: P10 closing with margin, or some claim becoming efficiency-limited. **PII-4 narrows** — no longer about fitting 1270 mm, live again only if a host envelope arrives that 1839 mm also fails. |
+| CNT-04 | **Register** | 29 live → **27 live**; 31 closed. P29 and P9 both closed by decision. |
+
+**What authorised it.** Two owner decisions taken with both branches priced, recorded as ADRs
+with their falsifiers named. **No operating point moved:** `v_exit` stays 16.388 m/s,
+K<sub>t</sub> stays 11.0258 N/kA·m, net efficiency stays 20.99 %.
+
+---
+
 ## 2026-08-10 (sixth pass): freeze the register, and turn B-1 into an order
 
 | ID | Item | Detail |

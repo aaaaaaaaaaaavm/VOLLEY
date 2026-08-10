@@ -216,6 +216,26 @@ categories A, B and C closed.** That is a defensible end state. An empty registe
 computable resolves them. Each is here with what it blocks and what it costs either way, so the
 choice can be made rather than deferred again.
 
+> ## Two of the four were decided 2026-08-10
+>
+> **P29 → [ADR-022](adr/022-stator-segmented-not-block-commutated.md).** The winding is segmented
+> **for fault isolation** and driven as one section. `vol_cu = ACCEL_ZONE` stands, **no baseline
+> value moves**, and the paper now says so explicitly so no reader infers block commutation.
+> Both branches were priced first by `analysis/owner_decisions.py`: block commutation is worth
+> **+7.09 points of efficiency** (20.99 → 28.07 %) and **exactly zero exit velocity**, because
+> force is commanded. It costs drive hardware that is not in the mass rollup, and mass is a
+> crossed kill criterion while efficiency is in none of them.
+>
+> **P9 → [ADR-023](adr/023-target-host-class.md).** Target host is a spent upper stage or hosted
+> platform of POEM class; **ESPA-Grande port compliance is not a requirement.** Shortening to fit
+> was priced at **−25 % exit velocity** (16.388 → 12.286 m/s) and rejected. **Kill criterion 2 is
+> not thereby passed** — it moves from *crossed* to **NOT EVALUABLE**, because no accommodation
+> envelope for the target class is public (**E5**). A measured failure has become an unmeasured
+> unknown, which is recorded as the cost it is.
+>
+> **P28 and P10 remain open**, and P10 is now the sharper of the two: ADR-022's reasoning rests on
+> the mass rollup being tight, so the packaging mass P10 tracks is what would reopen it.
+
 ### P29 — is the stator segmented? *(highest leverage)*
 
 `paper.tex` says the winding is segmented so a shorted coil degrades thrust rather than ending the
