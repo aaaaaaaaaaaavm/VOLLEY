@@ -1,7 +1,9 @@
 # What would make VOLLEY pointless
 
-`OPEN_PROBLEMS.md` lists 67 numbered entries, **29 of them live**, of very different weight.
-Most are engineering work.
+[`../OPEN_PROBLEMS.md`](../OPEN_PROBLEMS.md) carries the numbered entries and its own live count,
+derived by `tools/register_status.py`. **That count is not restated here** — one number in five
+places was five chances to drift ([ADR-021](adr/021-freeze-the-register.md)). Most of those
+entries are engineering work.
 A few are threats to whether the machine has any reason to exist, and they are hard to see when
 they sit in a numbered list next to a stale cross-reference.
 

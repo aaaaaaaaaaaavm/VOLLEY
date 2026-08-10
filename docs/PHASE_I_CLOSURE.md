@@ -1,8 +1,14 @@
 # Closing Phase I: every open item, and what each one actually needs
 
-**Written 2026-08-05, updated 2026-08-06.** `OPEN_PROBLEMS.md` carries **67 numbered entries, 29
-of them live**. This file says, for each, what would close it and who or what has to do the
-closing — because a list that size with no disposition is a list nobody can act on.
+**Written 2026-08-05, updated 2026-08-10.** [`../OPEN_PROBLEMS.md`](../OPEN_PROBLEMS.md) carries
+the numbered entries and its own live count — **not restated here**, per
+[ADR-021](adr/021-freeze-the-register.md). This file says, for each, what would close it and who
+or what has to do the closing, because a list that size with no disposition is a list nobody can
+act on.
+
+> **The register was frozen on 2026-08-10 (ADR-021), and this file's dispositions are what it was
+> frozen against.** Nothing below is deleted or downgraded. What changed is that closing entries
+> is no longer the highest-value work available: **B-1 is**, and the argument is in the ADR.
 
 **Phase I cannot end with an empty register, and pretending otherwise would be the dishonest
 version of this document.** Some items close only against hardware that does not exist. One
@@ -22,14 +28,11 @@ but a reader could not tell a live threat from a closed one without reading all 
 derives the counts from them, with a `--check` mode so the file and the numbers quoted elsewhere
 cannot drift apart again.
 
-| Status | Count |
-|---|---:|
-| `LIVE` | **29** — 15 P, 14 E |
-| `CORRECTED`, retained as the record | **9** |
-| `CLOSED` | **29** |
-
-**The real figure is 29 live, not 67.** Everything below was written before this was known and
-its dispositions still hold; the counts in section 1 are superseded by the table above.
+**The live figure is far smaller than the entry count**, and the three-way split is carried in
+`OPEN_PROBLEMS.md`'s own header rather than duplicated here — per ADR-021, which stopped this
+number being maintained in five places. Run `python3 tools/register_status.py` for the current
+tally. Everything below was written before the distinction existed and its dispositions still
+hold; the counts in section 1 are superseded by the register's own.
 
 ---
 

@@ -7,9 +7,16 @@
 >
 > Last updated **2026-08-05**.
 
-This project publishes its own defects: **29 live defects out of 67 numbered
-entries**. That is deliberate, and it only reads as rigour if there is also a plan for closing
-them. This is that plan.
+This project publishes its own defects; [`../OPEN_PROBLEMS.md`](../OPEN_PROBLEMS.md) carries the
+register and its live count, derived by `tools/register_status.py` rather than restated here
+([ADR-021](adr/021-freeze-the-register.md)). That is deliberate, and it only reads as rigour if
+there is also a plan for closing them. This is that plan.
+
+> **The register was frozen on 2026-08-10 and the priority changed with it.** Closing entries is
+> no longer the top of this roadmap. **B-1 is** — it is the only available act that changes the
+> project's category rather than its contents, from a design study with no measurements to one
+> with a measured number. See [`B1_ORDER.md`](B1_ORDER.md), which is a purchase order rather than
+> a procedure, and ADR-021 for why the emphasis moved.
 
 ---
 

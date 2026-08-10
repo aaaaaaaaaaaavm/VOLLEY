@@ -9,6 +9,29 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (sixth pass): freeze the register, and turn B-1 into an order
+
+| ID | Item | Detail |
+|---|---|---|
+| **ADR-021** | **The register is frozen** | `OPEN_PROBLEMS.md` is closed to new entries except for **a defect in the machine**, **a defect that makes a published Phase I deliverable wrong**, or **a validation band miss**. Everything else — defects in `tools/`, bookkeeping drift, stale cross-references, observations about the register — is fixed in place with a `CHANGELOG.md` line and no number. |
+| ADR21-01 | **What the discipline bought, stated first** | It caught a separation figure wrong by **5.7×**, an inter-array force **37 % high**, an invariance claim **in the paper's own abstract**, and **P38**. It is not overhead and freezing it is not a repudiation. |
+| ADR21-02 | **What it now costs** | ~**16,000** lines of prose around ~**3,200** lines of analysis, and **five** tools whose only job is policing the record. Of the three entries opened on 2026-08-10, **one was in the paper and one was in the export tool's file-copying semantics** — the apparatus has begun generating its own defect load. **A19** confirmed what `STRUCTURAL_GAP.md` already said four days earlier. And **B-1 has never been ordered**. |
+| ADR21-03 | **Nothing is deleted, and it is not retroactive** | All 67 entries stand with their dispositions; the 29 live ones keep their named next steps. **A freeze is not a purge** — a register that shed its inconvenient entries would destroy the only thing this project has instead of hardware. **P39 keeps its number** although it would not be opened under the new rule. |
+| ADR21-04 | **The band rule is untouched** | Bands still declared before runs, still never widened after one, still producing a numbered defect on a miss. That half is load-bearing and is not what became expensive. Phase II is unaffected: `VOLLEY-lab`'s register is not frozen. |
+| ADR21-05 | **The counts stop being propagated** | One number in five places was five chances to drift and a tax on every register change. `OPEN_PROBLEMS.md` carries the count from `tools/register_status.py`; `KILL_CRITERIA.md`, `ROADMAP.md` and `PHASE_I_CLOSURE.md` now point at the register instead of restating it. |
+| ADR21-06 | **The risk this accepts, stated rather than hidden** | A real defect in `tools/` will now be fixed and logged rather than tracked, so one could be forgotten. Judged cheaper than the alternative on the evidence that the last two apparatus defects consumed a working session between them while three kill criteria sat crossed and unmoved. **The falsifier is named in the ADR: if the next machine-level defect is found late, this was wrong. The counter-test is whether B-1 gets ordered.** |
+| **B1-01** | **B-1 becomes a purchase order** | New `docs/B1_ORDER.md`. B-1 has had a method since 2026-07-29 and a bill of materials since 2026-07-30 and has not been ordered. **A procedure invites more analysis; a purchase order invites a purchase.** |
+| B1-02 | **The magnetisation sketch and quotation wording** | The near-certain failure mode is a supplier magnetising **through the largest face**, the default tooling orientation, yielding eight identical blocks and no Halbach array — invisible on arrival because the blocks are correctly magnetised, just not on the axis needed. The order now carries an ASCII sketch of the four-block wavelength and paste-ready enquiry wording requiring written confirmation of the axis per group before production. |
+| B1-03 | **Receiving inspection, before assembly** | Added: confirm the axis on every block individually with a compass or second magnet and sort into two piles of four **before anything closes across the gap**. If all eight behave identically the order was magnetised on one axis. Once a pair closes at 12 mm it does not come apart by hand, and by then the mistake has already cost the fixture. |
+| B1-04 | **Bands restated unchanged** | The five B-1 rows are carried verbatim from `BENCHTOP_TESTS.md` with the derived rig error beside each, and the absolute accept ranges spelled out — 0.590–0.798 T, 0.469–0.635 T, 18.1–27.2 mT, 2.60–6.06 mT, order-of-magnitude. **Declared 2026-07-30, derived 2026-08-06, and not editable after a reading.** |
+| B1-05 | **Supplier names removed from the repository** | The existing bill of materials named four companies and an institution. Replaced with supplier *classes* and a three-quotation instruction, which is better ordering practice than a named vendor regardless. |
+
+**What authorised it.** A governance decision recorded as an ADR, and a document that converts an
+existing specification into an actionable order without changing a single declared band. No
+operating point moved: `v_exit` stays 16.388 m/s, K<sub>t</sub> stays 11.0258 N/kA·m.
+
+---
+
 ## 2026-08-10 (fifth pass): the companions were not a function of the commit they name
 
 | ID | Item | Detail |

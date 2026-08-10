@@ -23,7 +23,37 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > between `LIVE` and `CORRECTED` — where the defect is fixed but a consequence remains — and are
 > marked `LIVE`, which is the conservative direction.
 
-Last reviewed 2026-08-05.
+> ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
+>
+> **This register is closed to new entries except in three cases.** It remains authoritative and
+> nothing in it has been deleted, closed or downgraded — all 67 entries stand, and the 29 live
+> ones still carry their named next steps. **A freeze is not a purge.**
+>
+> **A new numbered entry may be opened only for:**
+>
+> 1. **a defect in the machine** — an error in the design or a model of it that changes what the
+>    hardware would do;
+> 2. **a defect that makes a published Phase I deliverable wrong** — the paper, `BASELINE.md`,
+>    the portfolio. This is the **P38** case and it stays numbered;
+> 3. **a validation band miss.** `validation/README.md`'s rule is untouched: a missed band
+>    produces a numbered defect, never a widened band.
+>
+> **Everything else is fixed in place with a `CHANGELOG.md` line and no number** — defects in
+> `tools/`, bookkeeping drift, stale cross-references, and observations about this file.
+> **P39 would not be numbered under this rule.** It keeps its number because the freeze is not
+> retroactive and this project does not rewrite its record.
+>
+> **Why.** The discipline caught a separation figure wrong by 5.7×, a force 37 % high, a claim in
+> the paper's own abstract, and P38. It also grew to ~16,000 lines of prose around ~3,200 lines of
+> analysis, and began producing its own defects: of the three entries opened on 2026-08-10, one
+> was in the paper and one was in the export tool's file-copying semantics. Meanwhile **B-1 — the
+> first measured number in this project, ~₹22,000, bill of materials already written — has never
+> been ordered.** ADR-021 has the full argument and states what the freeze risks.
+>
+> **The band rule is not affected**, and neither is Phase II: `VOLLEY-lab`'s register is not
+> frozen. Reviewed at the next baseline boundary.
+
+Last reviewed 2026-08-10.
 
 ---
 

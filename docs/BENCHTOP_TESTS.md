@@ -171,9 +171,9 @@ identical blocks and no Halbach array.
 
 | Item | Spec | Qty | Est. INR | Source |
 |---|---|---|---|---|
-| N45SH block, magnetised through thickness | 12 x 8 x 90 mm | 4 | 2,000-4,000 | Magnaplast Technologies (Pune) or Meena Magnetic; both list custom NdFeB blocks |
+| N45SH block, magnetised through thickness | 12 x 8 x 90 mm | 4 | 2,000-4,000 | any sintered-NdFeB manufacturer offering custom magnetisation |
 | N45SH block, magnetised along length | 12 x 8 x 90 mm | 4 | 2,000-4,000 | as above, same order |
-| Digital teslameter with transverse Hall probe | **1 T minimum range**, 2 % or better | 1 | 15,000-45,000 | Permanent Magnets Ltd (TM-901EXP class), or an imported PCE unit |
+| Digital teslameter with transverse Hall probe | **1 T minimum range**, 2 % or better | 1 | 15,000-45,000 | instrument supplier, or borrowed from a materials lab |
 | Aluminium plate for the fixture | 200 x 150 x 10 mm, 2 off | 2 | 1,500 | any local stockist |
 | Non-magnetic fasteners | A4 / 316 stainless M6 | 10 | 500 | local |
 | Printed spacers | PETG or nylon, 12.0 mm nominal plus a shim set | set | 500 | own printer |
@@ -182,8 +182,15 @@ identical blocks and no Halbach array.
 
 The teslameter dominates and is the only line worth shopping hard. **1 T range is the binding
 requirement**: the model predicts 0.694 T at midgap, so a 200 mT instrument, which is what most
-cheap "gauss meters" are, saturates and reads nothing useful. If a lab at SIT has one, borrowing
-it removes two thirds of the cost.
+cheap "gauss meters" are, saturates and reads nothing useful. **Borrowing one from any materials
+lab with a magnetics bench removes about two thirds of the total cost** and is the largest single
+saving available on this order.
+
+> **This bill of materials is now carried forward as an order.** See
+> [`B1_ORDER.md`](B1_ORDER.md), which adds the magnetisation sketch to send with the enquiry, the
+> quotation wording, and the receiving inspection that catches the one failure mode most likely to
+> waste the whole purchase. **Supplier names are deliberately not carried in this repository** —
+> specify to the spec and compare three quotations, which is better practice regardless.
 
 ### The safety item, quantified
 
