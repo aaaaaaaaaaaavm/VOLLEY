@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **66 numbered entries, of which 28 are live.** Every entry carries a `Status:` line written by
+> **67 numbered entries, of which 29 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which also derives the headline counts, so this file and the numbers
 > quoted elsewhere cannot drift apart again.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **28** (14 P, 14 E) | open engineering; something still has to be done |
+> | `LIVE` | **29** (15 P, 14 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **9** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **29** | resolved, with the closer named in the entry |
 >
@@ -1499,6 +1499,52 @@ case is not, and is the part worth keeping: a band that FAILS should name the do
 assert the thing it falsified, the way `docs/BASELINE.md` change control already requires a
 baseline change to *"state which validations it invalidates"*. That rule exists in one direction
 only. **Carried as the open half of this entry.**
+
+### P39. The companion repositories were not a function of the commit they claim: MEDIUM, NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Corrected 2026-08-10 in `tools/export_companion.py`.** Found while regenerating the companions
+from a clean clone, because the regeneration **deleted twelve files nobody had removed**.
+
+`copy()` walked the **working tree** with `shutil.copytree`, so every file sitting inside a
+manifest directory went into the companion whether or not the flagship tracked it. The published
+`VOLLEY-paper` and `VOLLEY-thesis` therefore carried `validation/fea/plate.inp`,
+`plate_clamped.frd`, `plate_clamped.dat`, `plate_modal.*` and the rest of A4's CalculiX
+input decks and solver output — **twelve paths that are in no VOLLEY commit at all.**
+`git log --all --diff-filter=A -- 'validation/fea/plate*'` returns nothing. The flagship tracks
+exactly one file in that directory, `build_deck.py`.
+
+**The stray files are not the defect. The provenance is.** Each companion carries a banner
+reading *"generated from VOLLEY flagship 45332a7"*, and that statement was false: the tree it
+described contained files that commit does not have. Worse, the output depended on **what
+happened to be lying around when the export ran** — a machine that had executed A4 produced a
+different companion from a clean clone of the identical commit.
+
+**A generated artifact that is not a function of its stated input is not generated. It is
+collected.** That is the same class as P19 and as the duplicate `results/sizing.json` that
+`motor_model.py`'s header records: a second copy of something, produced by a path nobody
+declared, that then disagrees with the original.
+
+**Fixed:** `copy()` now filters against `git ls-files`, so nothing untracked can enter a
+companion, and the export **names every path it skipped** rather than silently dropping it. On a
+clean clone the filter is a byte-for-byte no-op, which was verified rather than assumed — and it
+was verified to fire, by planting an untracked `plate_clamped.frd` and confirming it was excluded
+and reported.
+
+**What this does not fix, and it is the part worth arguing about.** `validation/README.md`'s own
+conventions say to *"commit input decks and result JSON, never vendored solver code"* — and the
+A4 decks are **not committed**. So the correct end state is probably that `plate*.inp` belongs in
+the flagship and the solver output does not, rather than that all of it disappears. **The
+companions have lost the input decks in this regeneration**, and they were the only published
+copy. Recorded here rather than quietly restored, because restoring them means committing them to
+the flagship first, and that is a decision about what the repository tracks.
+
+**What would close it:** decide whether `validation/fea/plate*.inp` belongs in the flagship. If
+it does, commit the decks — `build_deck.py` regenerates them and needs only `gmsh` — and the next
+export republishes them with real provenance. If it does not, `validation/README.md`'s convention
+about committing input decks should say so. **Either answer closes this; the current state
+answers it by accident**, which is what made the leak possible.
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

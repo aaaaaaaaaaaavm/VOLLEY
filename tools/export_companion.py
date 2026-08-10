@@ -217,13 +217,56 @@ has actually got.
 """
 
 
+def tracked():
+    """Every path git tracks in the flagship, as a set of repo-relative paths.
+
+    WHY THIS EXISTS (P39). copy() used to walk the WORKING TREE, so anything sitting in a
+    copied directory went into the companion whether or not it was in the flagship at all.
+    That is how twelve CalculiX build artifacts -- plate.inp, plate_clamped.frd and the rest,
+    outputs of running A4 -- ended up published in VOLLEY-paper and VOLLEY-thesis under a
+    banner reading "generated from VOLLEY flagship 45332a7". They are in no VOLLEY commit,
+    and `git log --diff-filter=A` finds them in none.
+
+    The consequence is worse than the stray files: the companion depended on what happened to
+    be lying around when the export ran, so the same flagship commit produced different
+    companions on a machine that had run the analyses and on a clean clone. A generated
+    artifact that is not a function of its stated input is not generated, it is collected.
+    """
+    out = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT,
+                         capture_output=True, text=True, check=True).stdout
+    return {p for p in out.split("\0") if p}
+
+
+TRACKED = None          # populated in main(), so importing this module costs no subprocess
+SKIPPED = []
+
+
 def copy(src, dst):
     s, d = os.path.join(ROOT, src), os.path.join(dst)
     os.makedirs(os.path.dirname(d) or d, exist_ok=True)
     if os.path.isdir(s):
-        shutil.copytree(s, d, dirs_exist_ok=True,
-                        ignore=shutil.ignore_patterns('__pycache__', '*.pyc', 'output'))
+        def ignore(dirpath, names):
+            drop = set(shutil.ignore_patterns('__pycache__', '*.pyc', 'output')(dirpath, names))
+            rel_dir = os.path.relpath(dirpath, ROOT)
+            for n in names:
+                if n in drop:
+                    continue
+                full = os.path.join(dirpath, n)
+                rel = os.path.normpath(os.path.join(rel_dir, n))
+                if os.path.isdir(full):
+                    # keep a directory if anything under it is tracked
+                    if not any(t.startswith(rel.replace(os.sep, "/") + "/") for t in TRACKED):
+                        drop.add(n)
+                elif rel.replace(os.sep, "/") not in TRACKED:
+                    drop.add(n)
+                    SKIPPED.append(rel.replace(os.sep, "/"))
+            return drop
+        shutil.copytree(s, d, dirs_exist_ok=True, ignore=ignore)
     elif os.path.exists(s):
+        if src not in TRACKED:
+            print(f"    UNTRACKED (skipped): {src}")
+            SKIPPED.append(src)
+            return 0
         shutil.copy2(s, d)
     else:
         print(f"    MISSING (skipped): {src}")
@@ -267,13 +310,24 @@ def main():
     commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT,
                             capture_output=True, text=True).stdout.strip()
 
+    global TRACKED
+    TRACKED = tracked()
+
     out_root = os.path.abspath(args.out)
     os.makedirs(out_root, exist_ok=True)
-    print(f"generating companions from flagship {commit} into {out_root}")
+    print(f"generating companions from flagship {commit} into {out_root} "
+          f"({len(TRACKED)} tracked paths)")
     if args.only in (None, "paper"):
         build("paper", PAPER_MANIFEST, PAPER_README, out_root, commit)
     if args.only in (None, "thesis"):
         build("thesis", THESIS_MANIFEST, THESIS_README, out_root, commit)
+    if SKIPPED:
+        print(f"\nskipped {len(SKIPPED)} untracked path(s) -- these are in the working tree "
+              f"but in no flagship commit, so they may not be published under its banner:")
+        for p in sorted(set(SKIPPED))[:20]:
+            print(f"    {p}")
+        if len(set(SKIPPED)) > 20:
+            print(f"    ... and {len(set(SKIPPED)) - 20} more")
     print("done. These are output -- do not edit them; edit the flagship and re-run.")
 
 

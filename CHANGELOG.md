@@ -9,6 +9,21 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (fifth pass): the companions were not a function of the commit they name
+
+| ID | Item | Detail |
+|---|---|---|
+| **P39** | **Twelve published files are in no VOLLEY commit** | Found because regenerating the companions from a clean clone **deleted twelve files nobody had removed**. `export_companion.py`'s `copy()` walked the **working tree**, so anything sitting in a manifest directory went into the companion regardless of whether the flagship tracked it. `VOLLEY-paper` and `VOLLEY-thesis` carried A4's CalculiX decks and solver output — `plate.inp`, `plate_clamped.frd`, `plate_modal.*` and the rest. `git log --all --diff-filter=A` finds them in **no commit**; the flagship tracks exactly one file in that directory. |
+| P39-01 | **The stray files are not the defect; the provenance is** | Each companion carries a banner reading "generated from VOLLEY flagship 45332a7", and that was false — the tree it described contained files that commit does not have. The output depended on **what happened to be lying around when the export ran**, so a machine that had executed A4 produced a different companion from a clean clone of the same commit. **A generated artifact that is not a function of its stated input is not generated, it is collected.** Same class as P19 and as the duplicate `results/sizing.json` in `motor_model.py`'s header. |
+| P39-02 | **Fixed, and the fix was verified to fire** | `copy()` now filters against `git ls-files`, and the export **names every path it skips** instead of silently dropping it. On a clean clone the filter is a byte-for-byte no-op — checked by diffing a pre-fix and post-fix export, not assumed. That it actually catches a leak was checked too, by planting an untracked `plate_clamped.frd` and confirming it was excluded and reported. |
+| P39-03 | **What the fix does not settle, and it is left open deliberately** | `validation/README.md`'s conventions say to "commit input decks and result JSON" — and the A4 decks **are not committed**. So the right end state is probably that `plate*.inp` belongs in the flagship and the solver output does not, rather than that all of it vanishes. **This regeneration removes the input decks from the companions, which were their only published copy.** Restoring them means first deciding what the flagship tracks, which is why P39 stays open rather than being quietly patched. |
+| CNT-03 | **Register counts** | 66 / 28 live → **67 / 29 live** (15 P, 14 E), 9 `CORRECTED`, 29 `CLOSED`, propagated to all five places that quote them. |
+
+**What authorised it.** A defect in a tool whose output is published under a provenance claim it
+could not support. No operating point moved.
+
+---
+
 ## 2026-08-10 (fourth pass): A19 ranks the assumptions, and band 1 fails usefully
 
 | ID | Item | Detail |
