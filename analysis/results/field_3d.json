@@ -1,0 +1,38 @@
+{
+  "Kt_centre_plane": 11.02583324948699,
+  "Kt_depth_resolved": 10.538611491665296,
+  "depth_factor": 0.9558108900436743,
+  "Kt_motor_model": 11.02583324948699,
+  "convergence_900mm": 0.9986773959429543,
+  "far_field_real_T": 1.1011428314305904e-20,
+  "far_field_deep_T": 2.981555974335137e-19,
+  "fundamental_7": 0.7032447823525072,
+  "fundamental_21": 0.703315972683991,
+  "midgap_fundamental_T": 0.7032447823525072,
+  "bands": [
+    {
+      "band": "1",
+      "name": "depth-resolved integral converges to centre-plane at 900 mm",
+      "detail": "ratio 0.9987",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "Kt(depth-resolved)/Kt(centre-plane) >= 0.95",
+      "detail": "0.9558",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "far field at 500 mm <= 0.60x the infinite-depth case",
+      "detail": "0.0369",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "7-wavelength array within 2 % of 21 at its centre",
+      "detail": "0.99990",
+      "pass_": true
+    }
+  ]
+}

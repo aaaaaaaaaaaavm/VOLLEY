@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **74 numbered entries, of which 31 are live.** Every entry carries a `Status:` line written by
+> **75 numbered entries, of which 32 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **31** (16 P, 15 E) | open engineering; something still has to be done |
+> | `LIVE` | **32** (17 P, 15 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
@@ -32,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 74 entries stand, and the 31 live
+> nothing in it has been deleted, closed or downgraded — all 75 entries stand, and the 32 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -2004,6 +2004,62 @@ against a named host inertia and a stated CoM tolerance, with bands declared fir
 interface requirement, in ADR-010's successor or an amendment to it, stating the permissible
 thrust-line-to-CoM offset, which is the number the budget exists to set. Neither exists.
 
+### P46. K_t is a centre-plane value and overstates thrust by 4.42 %: HIGH, NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found by A2, 2026-08-10.** The correction is **computed and held, not applied.** See below.
+
+`motor_model.build_field()` has always used magpylib `Cuboid` sources with the real **90 mm
+depth**, so the field was never two-dimensional. **The two-dimensional assumption is in the
+thrust integral**, which samples `B_y` on the centre plane z = 0 and then multiplies by the full
+depth as though that value held across all 90 mm:
+
+```python
+By = field.getB(np.stack([X.ravel(), Y.ravel(), np.zeros(X.size)], 1))[:, 1]
+...
+return float((...).sum() * dx * (WIND_THICK / 2) * DEPTH)
+```
+
+It does not hold. The field falls off toward the array's z-edges.
+
+| | K_t, N per kA·m |
+|---|---:|
+| Centre-plane — reproduces the published value to 0.000 % | **11.0258** |
+| **Depth-resolved**, Gauss-Legendre over z ∈ [−45, +45] mm | **10.5386** |
+| Ratio | **0.9558** |
+
+**A2 band 2 was declared at ≥ 0.95 and this passes by 0.008.** The model is inside the tolerance
+that was declared for it, which is why this is a defect rather than a band miss. **But the better
+number is now known, and it is 4.42 % lower.**
+
+**What it moves, computed through `motor_model.shot()` with nothing else changed:**
+
+| | Published | Depth-resolved |
+|---|---:|---:|
+| K_t | 11.0258 N/kA·m | **10.5386** |
+| **v_exit** | **16.388 m/s** | **16.029 m/s** (−2.19 %) |
+| Acceleration | 10.53 g | 10.07 g |
+| Peak current | 339 A | 320 A |
+| Stroke time | 158.6 ms | 162.3 ms |
+
+**Why it has not been applied.** `docs/BASELINE.md` fixes K_t and v_exit, and every published
+number in the repository, the paper and the CV descends from them. A re-baseline is a change-
+control action with its own propagation pass across `BASELINE.md`, `paper.tex`, `docs/index.html`,
+`SUMMARY.md`, the wiki, the companions and 23 guarded baseline values — **not something a
+validation run does to itself.** The correction is recorded here, computed, reproducible from
+`analysis/field_3d.py`, and waiting on that decision.
+
+**What would close it:** either the propagation pass, or a decision that the centre-plane value
+is retained deliberately as a stated approximation with its 4.42 % error quoted alongside it.
+**Both are defensible; leaving the two numbers coexisting silently is not.**
+
+**And the correction is probably not final.** A2 band 4 — an independent `getdp` 3-D FEM
+cross-check — **was not run**, so 10.5386 is still magpylib, which is analytic superposition.
+E2's objection that nothing here *solves a field equation* in 3-D stands. Re-baselining onto a
+number that a different method has never checked would repeat the mistake this entry is about,
+one level down.
+
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done
 
@@ -2050,6 +2106,16 @@ in a run sheet. The GMAT runs already contain the data for 350 and 450 km.
 > What remains open is the 3-D half: end effects on a 340 mm array of finite 90 mm depth.
 > P21 is that limitation showing up directly, the 2-D model overestimates far field because
 > it has infinite depth. That needs A2.
+>
+> **A2 ran 2026-08-10 and closed the 3-D half.** The field was never 2-D — magpylib has always
+> used the real 90 mm depth. The 2-D assumption was in the *thrust integral*, which sampled
+> `B_y` at z = 0 and multiplied by the full depth. Resolving it costs **4.42 % of K_t**
+> (11.0258 → 10.5386), which is **P46**, computed and held rather than applied. Band 5 also
+> settled a background assumption never stated: seven wavelengths is enough for the array
+> centre to be effectively infinite, to 0.01 %.
+>
+> **E2's half is NOT closed by this.** A2 band 4, an independent `getdp` 3-D FEM solve, was not
+> run, so the depth-resolved number is still analytic superposition.
 `motor_model.py` resolves the winding in 2-D. End effects of a few percent on Kt remain
 uncomputed. This is the declared close-out task for the electromagnetic model. The
 magnetostatic package now exists, `analysis/femm/emocd_cross_section.dxf` plus

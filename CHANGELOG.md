@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (fourteenth pass): the thrust constant is a centre-plane value, and it is 4.42 % high
+
+| ID | Item | Detail |
+|---|---|---|
+| **A2** | **The 3-D field, bands declared at `964af2c` before the script** | The field was **never** 2-D — `build_field()` has always used magpylib cuboids with the real 90 mm depth. **The 2-D assumption is in the thrust integral**, which samples `B_y` on the plane z = 0 and multiplies by the full depth as though it held across all 90 mm. It falls off toward the array's z-edges. |
+| **P46** | **Resolving the depth costs 4.42 % of K_t** | 11.0258 → **10.5386 N/kA·m**, ratio **0.9558** against a declared band of ≥ 0.95 — **passes by 0.008**. Propagated: **v_exit 16.388 → 16.029 m/s**, 10.53 → 10.07 g, 339 → 320 A. **The baseline is NOT changed**; a re-baseline is a change-control action with its own propagation pass, not something a validation does to itself. Computed, reproducible, and held. |
+| A2-01 | **Band 1 caught a bug in the analysis, which is what band 1 was for** | The first run reported centre-plane K_t as **17.2954** against 11.0258 — a **56.9 %** reproduction error, from normalising by `45e3 * DEPTH` instead of `SLED_ACTIVE_LEN / LAM`. The 0.9558 ratio survived the fix because both sides carried the same error, **but that is luck, not method**. Third time a declared band has caught a bug in the analysis rather than the design (A19, A20, A2). |
+| A2-02 | **Band 3 passes and is uninformative — the band was badly chosen** | Both sides come out at 10⁻²⁰–10⁻¹⁹ T, fourteen orders below Earth's field, because the probe sits on the array's **symmetry axis** where the net dipole cancels. It measures numerical cancellation, not field. **Left exactly as declared and not re-run**; recorded so the next sheet probes off-axis. |
+| A2-03 | **Band 5 settles an assumption the model never stated** | A 7-wavelength array is within **0.01 %** of a 21-wavelength one at its centre, so seven wavelengths is effectively infinite. `build_field` has used `n_wave=7` throughout without justification. |
+| A2-04 | **E1's 3-D half closes. E2 does not** | Band 4, an independent `getdp` 3-D FEM cross-check, **was not run**, so 10.5386 is still analytic superposition — exactly the *"neither solving a field equation"* E2 objects to. Stated as not-run rather than quietly dropped. `gmsh` 4.15.2 and `getdp` 3.2.0 are now installed and working, so the obstacle is work, not tooling. |
+| CNT-08 | **Register 74 → 75, 31 → 32 live** | P46. Header propagated. |
+
+**What authorised it.** A2 is a validation with bands declared before its script; P46 is a defect
+in a model of the machine that changes what the hardware would do, which freeze rule 1 covers.
+**No baseline value was changed** — `make_baseline.py --check` still passes 23 of 23 against the
+published K_t and v_exit.
+
+---
+
 ## 2026-08-10 (thirteenth pass): Gen5, generated from the parameters instead of drawn
 
 | ID | Item | Detail |

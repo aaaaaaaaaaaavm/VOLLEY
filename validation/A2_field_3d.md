@@ -9,6 +9,91 @@
 > commit. Verify with `git show --stat <this commit> -- analysis/field_3d.py`, which returns
 > nothing.
 
+## Result, 2026-08-10: the depth assumption costs 4.42 % of K<sub>t</sub>
+
+`analysis/field_3d.py`, bands committed at `964af2c` before it existed. Results in
+`analysis/results/field_3d.json`.
+
+### Band 2 — the finding
+
+| | K<sub>t</sub>, N per kA·m |
+|---|---:|
+| Centre-plane only — reproduces `motor_model.thrust_constant()` to **0.000 %** | **11.0258** |
+| **Depth-resolved**, `B_y` Gauss-Legendre averaged over z ∈ [−45, +45] mm | **10.5386** |
+| **Ratio** | **0.9558** |
+
+**The band was ≥ 0.95 and the result is 0.9558. It passes — by 0.008.**
+
+**The published K<sub>t</sub> is a centre-plane value and overstates thrust by 4.42 %.** Nothing
+about the field was wrong; magpylib has always modelled the blocks with their real 90 mm depth.
+What was wrong is the integral treating that centre-plane value as though it held uniformly
+across the full depth. It falls off toward the array's z-edges, and 4.42 % is what that costs.
+
+**Propagated through `motor_model.shot()`, unchanged in every other respect:**
+
+| | Published | Depth-resolved |
+|---|---:|---:|
+| K<sub>t</sub> | 11.0258 N/kA·m | **10.5386** (−4.42 %) |
+| **v_exit** | **16.388 m/s** | **16.029 m/s** (−2.19 %) |
+| Acceleration | 10.53 g | 10.07 g |
+| Peak current | 339 A | 320 A |
+| Stroke time | 158.6 ms | 162.3 ms |
+
+> **The baseline has NOT been changed.** `docs/BASELINE.md` still reads 11.0258 and 16.388, and
+> every downstream number still descends from them. Moving a frozen baseline value is not a
+> validation's decision to take on its own, and this one is recorded as **P46** with the
+> correction computed and held rather than applied.
+
+### Band 1 caught a bug in this analysis, which is the reason it exists
+
+The first run reported the centre-plane K<sub>t</sub> as **17.2954** against `motor_model`'s
+11.0258 — **a 56.9 % reproduction error.** `kt_depth_resolved()` normalised the one-wavelength
+force by `45e3 * DEPTH` where `motor_model` scales it by `SLED_ACTIVE_LEN / LAM`.
+
+**Had band 1 not been declared, the 0.9558 would have been reported off a broken integral and
+happened to look plausible.** The ratio is unchanged by the fix — both sides carried the same
+error — but that is luck, not method. Reproduction now exact at **0.000 %**.
+
+This is the third time in this project a declared band has caught a bug in the analysis rather
+than a problem in the design (A19, A20, and now A2).
+
+### Band 3 — PASSES, and is uninformative. The band was badly chosen
+
+| | \|B\| at 500 mm along +z |
+|---|---:|
+| Real 90 mm depth | 1.101 × 10⁻²⁰ T |
+| Infinite-depth proxy, 900 mm | 2.982 × 10⁻¹⁹ T |
+| Ratio | **0.0369** — passes the ≤ 0.60 band |
+
+**Both figures are physically meaningless.** 10⁻²⁰ T is fourteen orders of magnitude below
+Earth's field and below float64's ability to resolve the cancellation producing it. The probe
+point sits on the array's **symmetry axis**, where the net dipole moment cancels, so the band
+measures numerical cancellation rather than field.
+
+**The band is left exactly as declared and is not re-run** — a band is never edited after its
+run. Recorded here so the next sheet does not repeat it: **a far-field band must probe off the
+symmetry axis**, and P21's mechanism should be tested where the field is actually large enough to
+matter, which is the standoff A14 already uses.
+
+### Bands 4 and 5
+
+| Band | Test | Result | |
+|---|---|---|---|
+| 5 | 7-wavelength array within 2 % of 21 at its centre | **0.99990** | **PASS** |
+| 4 | `getdp` 3-D FEM within 5 % of magpylib | **NOT RUN** | — |
+
+**Band 5 passing at 0.9999 settles a background assumption** the model makes everywhere and had
+never stated: seven wavelengths is enough for the array centre to be effectively infinite.
+
+**Band 4 was not run and E2's "different physical method" gap therefore stays open.** `gmsh`
+4.15.2 and `getdp` 3.2.0 are now installed and working in this environment, so the obstacle is
+work rather than tooling. **Stating this as not-run rather than quietly dropping it**: the
+depth-resolved result above is still magpylib, which is analytic superposition — exactly the
+*"neither solving a field equation"* that E2 objects to. **A2 closes E1's 3-D half. It does not
+close E2.**
+
+---
+
 ## What is actually being tested, which is narrower and sharper than "3-D"
 
 `motor_model.build_field()` already builds the array from **magpylib `Cuboid` sources with the
