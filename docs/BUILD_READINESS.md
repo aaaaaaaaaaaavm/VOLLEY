@@ -1,0 +1,163 @@
+# Build readiness
+
+**What is settled, what is not, and — for each thing that is not — whether the answer comes from
+more computation or from metal.**
+
+This file exists because "TRL 2–3" is a label, not information. A reader deciding whether this
+work is worth taking seriously needs to know which subsystems are finished as designs, which are
+finished as analyses, and which are neither. Those are three different states and the repository
+has all three.
+
+> ## The one sentence that governs everything below
+>
+> **Nothing has been built, fired, or measured at any scale.** That is `OPEN_PROBLEMS.md` **E4**,
+> it is still open, and no amount of the analysis below changes it. Twenty-four validation runs
+> exist. **Zero measurements exist.** Every number in this repository is a model output, and the
+> field model has only ever been checked *analytic against analytic* — a closed-form wave model
+> against magpylib, two implementations of the same physics.
+>
+> **[`B1_ORDER.md`](B1_ORDER.md) is the order that changes the category of evidence**, it costs
+> ₹22,000–52,000, it has had a method since 2026-07-29 and a bill of materials since 2026-07-30,
+> and **it has not been placed.** Nothing on this page matters as much as that.
+
+## How to read the columns
+
+| Column | Means |
+|---|---|
+| **Design** | Is the geometry frozen in `cad/parameters.json` and generated into `cad/step/gen5/`? |
+| **Analysis** | Has the governing physics been computed against a band declared before the script? |
+| **Blocked by** | What the next step actually requires |
+
+**"Metal"** means the remaining uncertainty cannot be reduced by computation — a material
+property, a manufacturing tolerance, a contact behaviour, or a number that only a measurement
+settles. **"Computation"** means the work is specified and simply has not been done.
+
+---
+
+## Subsystem by subsystem
+
+### Track — design frozen, structure unanalysed
+
+| | |
+|---|---|
+| **Design** | **Frozen.** 1800 mm longerons, roller channels, guide rails, launch locks, all in `parameters.json` and generated into Gen5 |
+| **Analysis** | **Incomplete.** No structural FEA of the track exists — E2 records FEA for the sled (A4) and the field (A1) and nothing else |
+| **Blocked by** | **Computation.** A modal and static case against the GEVS protoflight spectrum, using the method A18 already established |
+
+### Stator — design frozen, thrust constant known to 4.4 %
+
+| | |
+|---|---|
+| **Design** | **Frozen.** 162 conductors, three-phase belt, 48 mm wavelength, 90 mm active depth |
+| **Analysis** | **Substantially complete, with a live correction.** A1 agreed with a 2-D meshed FEM to 0.07 %. **A2 then found K<sub>t</sub> is a centre-plane value overstating thrust by 4.42 %** — P46, computed and held, not applied |
+| **Blocked by** | **Both.** A2 band 4 (an independent 3-D FEM solve) is *computation* and was not run. The 4.42 % correction then needs a change-control decision. **And B-1 is the measurement that would settle whether either number is right at all** |
+
+**This is the subsystem the whole machine rests on**, and it is the one where the gap between
+"computed twice" and "measured once" is widest.
+
+### Sled — design frozen, mass is the sensitive number
+
+| | |
+|---|---|
+| **Design** | **Frozen but unpocketed.** 488 mm, 9.445 kg from the Gen3 solids (P15), drawn solid with no lightening |
+| **Analysis** | **Complete for the governing case.** A4 ran CalculiX; A12 corrected the inter-array force from 3.7 to 2.69 kN; A23 settled the release |
+| **Blocked by** | **Computation, then metal.** Pocketing the sled is the single largest velocity lever available without an architecture change (+13 % at 60 %), and it requires re-running `mass_properties.py` then `motor_model.py`. The gap shim tolerance of ±0.05 mm is then a *manufacturing* question |
+
+### Magazine and retention — design frozen, cycle life unmeasured
+
+| | |
+|---|---|
+| **Design** | **Frozen.** Two cassettes, six cells each, 104 mm pitch, **two D9 A-286 pins** after A22 resized them from D6 |
+| **Analysis** | **Complete for the governing case.** A22 closed P37 and the analysis half of E10: margin **+0.45 at Q = 30**, positive across Q = 10…30 |
+| **Blocked by** | **Metal.** Q is **unmeasured** — `STRUCTURAL_GAP.md` records this. A22 sized against Q = 30 as the conservative end, but the actual structural Q of the built article is a measurement, and escapement cycle life is a test, not a calculation |
+
+### Payload cell — a design, and no insert exists
+
+| | |
+|---|---|
+| **Design** | **Parametric only.** ADR-025 fixed the cell at 340.5 × 100 × 100 mm; `parameters.json` marks it `PARAMETRIC_ONLY_NOT_DRAWN` |
+| **Analysis** | **Complete, and it moved the answer.** A24 found **1U no longer closes kill criterion 1** (2.125 kg, not 1.913) and that **ThinSat and 12U do not fit at all** — the 166 mm cassette width is a constraint written down nowhere else |
+| **Blocked by** | **Computation.** No insert exists in CAD for any class, and the insert must present CDS corner rails to the machine and a class-specific interface to the satellite. That is real mechanical design, not a parameter change |
+
+### Brake — the least finished subsystem in the machine
+
+| | |
+|---|---|
+| **Design** | **Provisional.** Two tapered pole plates at 15 mm, **lightened from solid blocks on structural reasoning alone** |
+| **Analysis** | **Not done.** `parameters.json` states it plainly: *"Magnetic sizing against the required pole area has NOT been done."* A11 adopted regenerative braking and opened **P28** in the same act — the regen stator and the eddy fin do not both fit the arrest section |
+| **Blocked by** | **Computation.** An eddy-brake field solve, and a resolution of P28 |
+
+**If one subsystem would embarrass this repository under review, it is this one.** It is stated
+here rather than left for a reader to find.
+
+### Drive and energy store — the largest open defect
+
+| | |
+|---|---|
+| **Design** | **Not frozen.** The bank is 96 V, 6 F in `parameters.json`, but **P26 says it cannot source the shot on purchasable parts** |
+| **Analysis** | **Complete, and negative.** A10 derived the **68 mΩ ESR ceiling**; a single commercial string is 116–185 mΩ. Three to four parallel strings are required. **A25 then showed a flywheel clears the ceiling at 35 mΩ with 66 kW deliverable**, at mass parity (P45) |
+| **Blocked by** | **Metal, and one datasheet.** P45's band miss turns entirely on an unsourced machine specific-mass figure. **One datasheet decides whether the flywheel is lighter than the bank or heavier** |
+
+### Host interface — specified, with one requirement missing
+
+| | |
+|---|---|
+| **Design** | **Frozen.** Ø460 mm ring flange, Ø400 mm bolt circle, 24 holes, per ADR-010 |
+| **Analysis** | **Incomplete in one specific way.** **E29**: nothing computes the shot's angular impulse about the host CoM. `astro.py` models the interaction as one line and that line is linear only |
+| **Blocked by** | **Computation.** At a 50 mm CoM miss a 15 N·m·s wheel saturates around shot four. **No interface requirement exists that the thrust line pass through the host centre of mass**, and that absence is the defect |
+
+### Avionics, thermal and packaging — absent from the rollup
+
+| | |
+|---|---|
+| **Design** | Equipment bays are located and verified clear of the track |
+| **Analysis** | **Missing.** **P10**: the enclosure, radiator and packaged avionics have **no line items** in `mass_properties.py`. The 76.5 kg dry mass is a **floor, not a total** |
+| **Blocked by** | **Computation.** Straightforward bookkeeping that has simply not been done, and it makes every kg-per-satellite figure in the project optimistic |
+
+---
+
+## What this adds up to
+
+**Four subsystems are frozen as designs and analysed against declared bands**: stator, sled,
+magazine, interface. **Three are frozen but under-analysed**: track, avionics, payload cell.
+**One is genuinely provisional**: the brake. **One is a known negative result with a candidate
+fix**: the energy store.
+
+**Of the remaining work, most is computation, not metal.** That is the honest position and it
+cuts both ways: it means the design is further along than a TRL label suggests, and it means
+the claim "everything computable is done" is **not yet true**.
+
+The specific things that still need computing, in the order they matter:
+
+1. **A2 band 4** — a 3-D FEM solve, so K<sub>t</sub> has been checked by a method that solves a
+   field equation. Everything downstream rests on it, and P46 should not be applied without it.
+2. **The brake's magnetic sizing**, and P28.
+3. **P10's mass line items**, without which no kg-per-satellite figure is trustworthy.
+4. **E29's angular momentum budget**, and the interface requirement it would set.
+5. **Track structural FEA.**
+
+And the things that need metal, which no amount of the above replaces:
+
+- **The thrust constant.** B-1, ₹22,000, unordered.
+- **Structural Q**, which A22's margins are conditional on.
+- **Escapement and gate cycle life.**
+- **Manufacturing tolerance on the 1.0 mm air gap**, which sets everything.
+
+---
+
+## The claim this repository is entitled to make
+
+**Not** "it is ready to build."
+
+**This:** the design is specified to the level where a builder knows what to make; the physics has
+been computed against bands declared before the analyses that tested them; **twenty-four
+validation runs exist, two failed outright, several missed individual bands, and every one of
+those is recorded rather than removed**; and the remaining uncertainty has been enumerated rather
+than estimated.
+
+**Three times a declared band caught a bug in the analysis rather than a problem in the design**
+(A19, A20, A2). That is what declaring bands first is for, and it is the strongest evidence here
+that the numbers were not fitted to the conclusion.
+
+**What is missing is a measurement.** Not a model, not a document, not another analysis — a
+gaussmeter, eight magnets, and an afternoon.

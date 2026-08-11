@@ -110,6 +110,26 @@ feed, a serial command link, and an authorized firing window.
 Recoil is the satellite's momentum only, **65.6 N·s** per shot, nulled by a few grams of cold
 gas.
 
+## How far along it actually is
+
+**Four subsystems are frozen as designs and analysed against bands declared before the
+analyses ran** — stator, sled, magazine, host interface. **Three are frozen but under-analysed**
+— track, avionics, payload cell. **The brake is genuinely provisional**: its pole plates were
+lightened on structural reasoning alone and no magnetic sizing has been done. **The energy store
+is a known negative result with a candidate fix** — the supercapacitor bank cannot source the
+shot on purchasable parts (P26), and a flywheel clears the ceiling at mass parity (A25).
+
+**Most of what remains is computation, not metal**, and that cuts both ways: the design is
+further along than a TRL label suggests, and *"everything computable is done"* is **not yet
+true**. [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md) says which is which, subsystem by
+subsystem, and names the least finished one rather than leaving it to be found.
+
+**Nothing has been built, fired, or measured at any scale.** Twenty-four validation runs exist;
+**zero measurements** do. The field model has only ever been checked *analytic against
+analytic*. The order that changes that costs **₹22,000**, has had a bill of materials since
+2026-07-30, and has not been placed —
+[`docs/B1_ORDER.md`](docs/B1_ORDER.md).
+
 ## What makes this repository worth opening
 
 Every defect found in this work is published, numbered, and tracked, including the ones that
@@ -119,6 +139,12 @@ rebuilding its analysis from scratch. An independent propagator (GMAT) then **fa
 claim in the paper's own abstract**, and that is recorded as P16 rather than quietly dropped.
 The scripts are authoritative over the paper, never the reverse.
 
+**Three times a declared band has caught a bug in the analysis rather than a problem in the
+design** (A19, A20, A2) — most recently a 57 % normalisation error that would otherwise have
+been reported as a plausible-looking result. That is what declaring bands first is for, and it
+is the strongest evidence here that the numbers were not fitted to the conclusion.
+
+**[`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md)**: subsystem by subsystem, what is settled and whether the rest needs computation or metal
 **[`docs/PROGRAMME.md`](docs/PROGRAMME.md)**: the four repositories of this programme
 **[`docs/BASELINE.md`](docs/BASELINE.md)**: what is frozen, and what may move it
 **[`docs/GEN4_STATUS.md`](docs/GEN4_STATUS.md)**: what exists in the provisional open assembly, and what is not yet calculated

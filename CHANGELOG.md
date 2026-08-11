@@ -9,6 +9,22 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (fifteenth pass): the build-readiness position, stated subsystem by subsystem
+
+| ID | Item | Detail |
+|---|---|---|
+| **BR-01** | **`docs/BUILD_READINESS.md`** | Nine subsystems, each with: is the design frozen, is the analysis complete, and — for everything unfinished — **whether the answer comes from more computation or from metal**. "TRL 2–3" is a label; this is information. |
+| BR-02 | **It names the least finished subsystem rather than leaving it to be found** | **The brake.** Pole plates lightened from solid blocks on structural reasoning alone, **no magnetic sizing done**, and P28 opened by A11 in the act of adopting regen. Written as *"if one subsystem would embarrass this repository under review, it is this one."* |
+| BR-03 | **The honest aggregate** | Four subsystems frozen and analysed; three frozen but under-analysed; one provisional; one a known negative with a candidate fix. **Most of what remains is computation, not metal** — which means the design is further along than the label suggests **and** that "everything computable is done" is **not yet true**. |
+| BR-04 | **The claim the repository is entitled to make, written out** | Not "ready to build". Instead: specified to the level where a builder knows what to make, computed against bands declared first, 24 runs with two outright failures **all recorded rather than removed**, and the remaining uncertainty enumerated rather than estimated. |
+| BR-05 | **README and SUMMARY lead with readiness** | Both now open on how far along the work is, not on the motor. `SUMMARY.md` gains a "How far along it actually is" section ahead of the discipline argument, and both carry **E4 and the unplaced ₹22,000 B-1 order** where a reader meets them rather than deep in the register. |
+| BR-06 | **Three bands caught bugs in the analysis, surfaced as evidence** | A19, A20 and now A2 — most recently a **57 % normalisation error** that would otherwise have been reported as a plausible result. Promoted to the front door as the strongest available evidence the numbers were not fitted to the conclusion. |
+
+**What authorised it.** Documentation of existing state. No operating point moved, no band edited,
+no register entry changed.
+
+---
+
 ## 2026-08-10 (fourteenth pass): the thrust constant is a centre-plane value, and it is 4.42 % high
 
 | ID | Item | Detail |
