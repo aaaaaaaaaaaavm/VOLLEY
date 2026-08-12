@@ -279,7 +279,7 @@ answer does not dispose of that.
 | **12** | Shock spectrum at the payload interface, at release and at brake engagement | A23 covers release *kinematics*; `grep -ri "shock spectrum"` returns nothing | High |
 | **15** | Why not an LSM-driven tug beneath the track, cable-and-pulley to the carriage, EMALS-like with reversed tug motion? | **PII-14** assessed a cable-driven gondola on 2026-08-10 and declined it on margin — but that concept moves the motor *off* the vehicle entirely. **The tug variant, where the LSM stays and only the coupling changes, was not assessed** | Medium |
 | **16** | Would separating the mover from the payload sled reduce field exposure and simplify the sled? | PII-11's side-rail layout and PII-14 both touch it. **Neither computes the field-exposure benefit**, which is the point of the question given 611× | **High** — it may be the cheapest fix to 7 and 9 |
-| **18** | Why a linear motor at all, rather than a lead screw, rack-and-pinion, or staged spring? | Nothing. `grep -ri "lead screw"` and `"rack and pinion"` both return zero | **High** — an unmade top-level trade |
+| **18** | Why a linear motor rather than a screw, rack, or staged spring? | **ANSWERED 2026-08-10** — A27. Screw disqualified by kinematics, rack by vacuum contact, **spring works and fails only on commandability** | Answered, and it narrows the case |
 | **19** | Cable in vacuum: fretting, cold welding, lubricant, pulley bearing life at 16.4 m/s, single load path | PII-14 flags it as unresolved; E21 covers tribology generally | Medium — only bites if a cable architecture is adopted |
 | **20** | How reliable is a system with this many failure points? | **Now partly answered — see below.** The *structure* is quantified in **E30**; **p itself is still unestimated** | **High** |
 | **22** | Sled jam loses the campaign | **Nothing** — see above | **Lethal** |
@@ -382,6 +382,33 @@ anywhere in this repository.** That absence is the finding.
 **CFD was not used and is not needed.** The conclusion turns on the bus being below a gas
 constant, which no venting model changes. A venting time constant would be orifice flow, not a
 Navier–Stokes solve, and using one here would be theatre.
+
+---
+
+## 18, answered: the screw is dead, the rack is marginal, and the spring works
+
+`validation/A27_actuator_trade.md`, criteria declared before the script. **The repository had no
+recorded answer to this at all** — `DECISION_LOG.md` records the choice of eddy brake and ironless
+stator, never the choice of linear motor over every other way of pushing a satellite.
+
+| Candidate | Verdict |
+|---|---|
+| **Ball screw** | **Disqualified by kinematics, twice.** 16.388 m/s on a 20 mm lead needs **49,164 rpm**: DN = 1.23 × 10⁶ against a 1.5 × 10⁵ ceiling (**8.2× over**), and whirling critical speed for a 25 mm screw over 1500 mm is **1,333 rpm — 37× under**. The two limits worsen in opposite directions, so no geometry closes it |
+| **Rack and pinion** | Pitch-line velocity **is** 16.4 m/s against ~10 m/s practice (1.64× over), and it carries the drive load through **tooth contact at full speed in vacuum** — making **E21**'s open tribology gap the load path |
+| **Staged spring** | **Works.** 537 J, 826 N peak, **21.1 g — inside the 25 g cap**, about **1.8 kg of steel**. Fails only on **C3 (commandability)** and **C5 (stores 537 J at rest)** |
+
+**So the answer to "why the hardest actuator" is: against a screw the choice is forced, against a
+rack it is well-founded, and against a spring it rests on exactly one criterion — that velocity is
+commanded per shot rather than built in.**
+
+**This narrows the product argument rather than supporting it.** A spring architecture needs no
+sled, stator, bank, converter or sequencer, so it has almost none of the nine manifest-forfeiting
+elements in `docs/FMEA.md` — it would score dramatically better on **E30**. **A four-stage spring
+giving four discrete velocities at ~2 kg is a real competitor** for any mission not needing
+continuous control, and nothing in this repository had acknowledged it.
+
+**The honest position: VOLLEY buys continuous per-shot velocity control, and pays for it in mass,
+complexity and shared-failure exposure.**
 
 ## What this file changes
 

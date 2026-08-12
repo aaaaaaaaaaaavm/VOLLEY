@@ -1,0 +1,126 @@
+{
+  "duty": {
+    "m_total": 13.445,
+    "v": 16.388,
+    "L": 1.3,
+    "g_cap": 25.0,
+    "E_total_J": 1805.4385920400005,
+    "E_payload_J": 537.1330880000002
+  },
+  "results": [
+    {
+      "candidate": {
+        "name": "Linear synchronous motor (incumbent)",
+        "F_N": 1389.2549894353606,
+        "a_g": 10.533001626935276,
+        "v_max": 16.388,
+        "contact": false,
+        "control": "continuous",
+        "stored_at_rest_J": 0.0,
+        "limit_name": "sheet current and bank ESR",
+        "limit_value": null,
+        "limit_ok": true
+      },
+      "screen": {
+        "C1": true,
+        "C2": "True",
+        "C3": "PASS",
+        "C4": true,
+        "C5": true
+      }
+    },
+    {
+      "candidate": {
+        "name": "Ball screw, 20 mm lead, D25, 1500 mm",
+        "rpm": 49164.00000000001,
+        "DN": 1229100.0000000002,
+        "DN_limit": 150000.0,
+        "DN_over": 8.194,
+        "n_crit_rpm": 1333.3333333333333,
+        "crit_over": 36.873000000000005,
+        "F_N": 1388.7989169538466,
+        "a_g": 10.52954379361719,
+        "contact": true,
+        "control": "continuous",
+        "stored_at_rest_J": 0.0,
+        "limit_name": "DN number and whirling critical speed",
+        "limit_ok": false
+      },
+      "screen": {
+        "C1": false,
+        "C2": true,
+        "C3": "PASS",
+        "C4": false,
+        "C5": true
+      }
+    },
+    {
+      "candidate": {
+        "name": "Rack and pinion, D100 pinion",
+        "rpm": 3129.8774488679774,
+        "pitch_line_v": 16.388,
+        "plv_limit": 10.0,
+        "plv_over": 1.6388000000000003,
+        "torque_Nm": 69.43994584769233,
+        "F_N": 1388.7989169538466,
+        "a_g": 10.52954379361719,
+        "contact": true,
+        "control": "continuous",
+        "stored_at_rest_J": 0.0,
+        "limit_name": "pitch-line velocity",
+        "limit_ok": false
+      },
+      "screen": {
+        "C1": false,
+        "C2": true,
+        "C3": "PASS",
+        "C4": false,
+        "C5": true
+      }
+    },
+    {
+      "candidate": {
+        "name": "Staged mechanical spring, 1 stage(s)",
+        "E_J": 537.1330880000002,
+        "F_mean_N": 413.17929846153856,
+        "F_peak_N": 826.3585969230771,
+        "a_g": 21.05908758723438,
+        "spring_mass_kg": 1.7904436266666672,
+        "contact": false,
+        "control": "discrete, 1 level(s)",
+        "stored_at_rest_J": 537.1330880000002,
+        "limit_name": "peak acceleration at release",
+        "limit_ok": true
+      },
+      "screen": {
+        "C1": true,
+        "C2": true,
+        "C3": "PARTIAL",
+        "C4": true,
+        "C5": false
+      }
+    },
+    {
+      "candidate": {
+        "name": "Staged mechanical spring, 4 stage(s)",
+        "E_J": 537.1330880000002,
+        "F_mean_N": 413.17929846153856,
+        "F_peak_N": 826.3585969230771,
+        "a_g": 21.05908758723438,
+        "spring_mass_kg": 1.7904436266666672,
+        "contact": false,
+        "control": "discrete, 4 level(s)",
+        "stored_at_rest_J": 537.1330880000002,
+        "limit_name": "peak acceleration at release",
+        "limit_ok": true
+      },
+      "screen": {
+        "C1": true,
+        "C2": true,
+        "C3": "PARTIAL",
+        "C4": true,
+        "C5": false
+      }
+    }
+  ]
+}

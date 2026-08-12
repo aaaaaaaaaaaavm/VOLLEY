@@ -9,6 +9,23 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (nineteenth pass): the actuator trade nobody had made, and it narrows the case
+
+| ID | Item | Detail |
+|---|---|---|
+| **A27** | **Why a linear motor rather than a screw, rack or spring — criteria declared at `9857b3c` before the script** | Review item 18. **The repository had no recorded answer**: `DECISION_LOG.md` records the eddy brake and the ironless stator, never the choice of linear motor over every other way of pushing a satellite. |
+| A27-01 | **The ball screw is disqualified by kinematics, twice over** | 16.388 m/s on a 20 mm lead needs **49,164 rpm**. **DN = 1.23 × 10⁶ against a 1.5 × 10⁵ ceiling, 8.2× over**; **whirling critical speed 1,333 rpm, 37× under**. The two limits worsen in opposite directions — a fatter screw raises critical speed and worsens DN — so no geometry closes it. |
+| A27-02 | **The rack fails on vacuum contact, not on speed** | Pitch-line velocity **is** 16.4 m/s against ~10 m/s practice (1.64× over), and torque is a comfortable 69.4 N·m. **C4 screens it**: a contacting drive at full speed makes **E21**'s open tribology gap the load path rather than an incidental. |
+| **A27-03** | **The spring works, and that is the finding** | **537 J, 826 N peak, 21.1 g — inside the 25 g cap — from about 1.8 kg of spring steel.** No sled, no stator, no bank, no converter, no sequencer, and therefore almost none of the nine manifest-forfeiting elements in `docs/FMEA.md`. **It fails on exactly one criterion: C3, commandability.** And on C5, storing 537 J at rest. |
+| **A27-04** | **What that costs the argument** | **The linear motor is not chosen for performance; it is chosen for commandability, and that is the whole of the case.** Against a screw the choice is forced, against a rack well-founded, against a spring it rests on one criterion. **A four-stage spring giving four discrete velocities at ~2 kg is a real competitor** for any mission not needing continuous control, and no document here had acknowledged it. |
+| A27-05 | **A detail worth keeping** | A linear spring's force **peaks at release and falls to zero**, so its peak is twice its mean — **21.1 g against the motor's flat 10.5 g**. Inside the cap, with far less margin, which is why staging exists. |
+
+**What authorised it.** A trade study with screening criteria declared before the script, answering
+an external review item. **No operating point moved.** The outcome narrows the product argument and
+is recorded that way.
+
+---
+
 ## 2026-08-10 (eighteenth pass): segmentation is real redundancy except at the breech, and neither breakdown mechanism is credible
 
 | ID | Item | Detail |
