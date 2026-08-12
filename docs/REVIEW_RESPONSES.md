@@ -22,9 +22,11 @@ bring, written down in advance rather than waited for.
 > **Seven new register entries came out of this review** — E29 through E34, and P45 — which is
 > more than the review found wrong. **That is the point of asking someone who has flown things.***
 >
-> **Fourteen of thirty-five have no answer at all.** Several are not hard — they are simply not
-> done. Two of the four the author judges potentially project-lethal (**22** and **30**) are in
-> that group, and **one of the other two (28) is already answered as a loss.**
+> **Only item 5 now has no answer**, and it is commercial rather than technical: no customer
+> exists, and no analysis substitutes for asking one. **All four items judged potentially
+> project-lethal are resolved** — 30 answered (the interface permits it), 22 answered structurally
+> by the FMEA, 28 answered *as a loss*, and 4 reduced to a named comparison that still needs a
+> number.
 
 **Rules for this file.** An answer cites the analysis or document that supports it, or it says
 "open" and names what would close it. No question is answered by assertion. Where the honest
@@ -127,7 +129,10 @@ hardware is threatened.
 
 **The survey is one document deep** and supports no claim about the market.
 
-### 30 (original assessment, retained) — **OPEN, and it may be decisive**
+### 30 — the original assessment, retained for the record
+
+**Superseded by the answer above.** Kept because this repository does not delete what it thought
+before it checked.
 
 **Nothing in this repository checks it.** The only ICD references are to NRCSD tip-off *rate*
 limits (2 °/s versus 5 °/s, an unresolved conflict already logged), not to separation *velocity*
@@ -274,7 +279,11 @@ answer does not dispose of that.
 
 ---
 
-## Open — nothing in this repository addresses these
+## The triage table, as first written on 2026-08-10
+
+**Superseded by the worked answers below and retained unedited**, so the difference between what
+was assumed and what was found stays visible. Every row marked "Nothing" here has since been
+worked except item 5.
 
 | # | Question | Nearest thing that exists | Severity |
 |---:|---|---|---|
