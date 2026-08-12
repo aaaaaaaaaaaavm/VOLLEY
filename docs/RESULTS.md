@@ -204,9 +204,16 @@ function of Δv. The mission case survives considerably better than the machine 
 
 ## Validation status
 
+> **This diagram was superseded on 2026-08-10 and is retained as history.** It shows A1, A4, A6,
+> A7 and A8 as "specified, not run"; **all five have since run**, and the record now stands at
+> **24 run sheets through A27**. The live status is
+> [`validation/README.md`](../validation/README.md) — a table rather than a diagram, because the
+> diagram stopped being maintainable at about a dozen entries and then silently went stale, which
+> is the failure this note exists to stop repeating.
+
 ```mermaid
 flowchart LR
-    subgraph SPEC["Specified, not run"]
+    subgraph SPEC["Specified, not run — AS OF 2026-07, SUPERSEDED"]
         A1["A1 · FEMM<br/>airgap field"]
         A4["A4 · CalculiX<br/>sled chassis"]
         A6["A6 · NASA CARA<br/>conjunction Pc"]

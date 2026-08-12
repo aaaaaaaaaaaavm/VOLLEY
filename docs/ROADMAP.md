@@ -27,10 +27,13 @@ there is also a plan for closing them. This is that plan.
 | Maturity | TRL 2-3. Phase I analysis and committed Gen3 CAD complete; the Fusion Gen4 open assembly is provisional; **nothing built or measured** |
 | Rated performance | **16.4 m/s at 10.5 g**, from a sled mass computed from CAD solid volumes, not estimated |
 | Efficiency | **21.0 %** electrical-to-payload, net of the regeneration adopted 2026-07-31 (A11) |
-| Validations run | **10 of 12**. A7 (tip-off) and A9 (flown decay) outstanding; A9 is blocked by network policy, not difficulty |
-| Of those nine | **two failed** — A5 (invariance) and A13 (host attitude) — one is PARTIAL (A1), one returned three **void** rows (A6), and one found a published number 37 % high (A12) |
-| Biggest single gap | ~~K<sub>t</sub> single-method~~ closed by A1. Now: **nothing has been measured at any scale** (E4) |
-| Largest open defect | **P26** — the supercapacitor bank cannot source the shot on purchasable cells |
+| Validations run | **24 run sheets, A1 through A27** *(updated 2026-08-10; this line read "10 of 12" for three weeks after it stopped being true)* |
+| Of those | **two failed outright** — A5 (invariance) and A13 (host attitude). Several missed individual bands, and **three times a declared band caught a bug in the analysis rather than the design** (A19, A20, A2) |
+| External review | **35 questions answered or conceded** — [`REVIEW_RESPONSES.md`](REVIEW_RESPONSES.md). **20 answered, 14 partial or scoped, 1 open.** It produced **eight new register entries (E29–E35, P45)** — more than it found wrong |
+| Biggest single gap | **Nothing has been measured at any scale** (E4). Unchanged, and **B-1 is still unordered** |
+| Largest open defect | **P26** — the bank cannot source the shot on purchasable cells. **A25 found a flywheel clears the ceiling** at 35 mΩ against 68, at mass parity (P45) |
+| Live correction held | **P46** — K<sub>t</sub> is a centre-plane value and **4.42 % high** (10.5386 against 11.0258). v_exit would fall to **16.029 m/s**. **Baseline deliberately not changed** pending A2 band 4 |
+| Reliability | **E30**: the design needs **r ≥ 0.99326** per element per cycle to beat a spring on delivered life. **r is unmeasured**, so the claim cannot yet be made |
 | Paper | Source and PDF current as of 2026-08-10, 13 pages, zero undefined references |
 
 ---

@@ -1,3 +1,11 @@
+> **Current as of 2026-08-10:** this file is a **dated snapshot** and is retained as history.
+> The live validation record is [`validation/README.md`](../validation/README.md), which now carries **24 run
+> sheets** through A27. Since this snapshot: **A24** (the payload ladder is a design, and
+> 1U no longer closes kill criterion 1), **A25** (a flywheel clears the ESR ceiling the bank
+> misses), **A2** (K<sub>t</sub> is a centre-plane value, **4.42 % high** — P46, computed and
+> held), **A27** (the actuator trade), plus `ICD_COMPLIANCE.md`, `FMEA.md` and
+> `REVIEW_RESPONSES.md` from external review.
+>
 > **Numerical audit correction, 2026-08-03.** The current operating point is 11.03 N per
 > kA/m, 16.388 m/s, 10.53 g, 291.4 J recovered, 934.7 J to the brake, and 20.99% net
 > efficiency. A13's former residual-rate/cadence conclusion is superseded, A6's 3.7e-8
