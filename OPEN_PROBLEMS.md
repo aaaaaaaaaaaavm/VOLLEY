@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **80 numbered entries, of which 37 are live.** Every entry carries a `Status:` line written by
+> **81 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **37** (17 P, 20 E) | open engineering; something still has to be done |
+> | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
@@ -32,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 80 entries stand, and the 37 live
+> nothing in it has been deleted, closed or downgraded — all 81 entries stand, and the 38 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -2316,6 +2316,54 @@ compared against a stated payload shock qualification level, and — if it does 
 lower arrest cap (the 50 g row costs 202 mm of run-out, which the envelope may not have, P9) or
 isolation between the brake reaction and the cassette mounts. **Adjacent to P28**, which already
 records that the regen stator and the eddy fin do not both fit the arrest section.
+
+### E35. The payload's field exposure is a design variable nobody varied, and fixing it would make the product claim true: NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Review items 16 and 14, computed 2026-08-10.** `analysis/mover_separation.py`.
+
+The payload rides **on** the sled, 20 mm from the Halbach faces, and `docs/PAYLOAD_ENVIRONMENT.md`
+concedes two losses because of it: a magnetometer-carrying payload cannot use its magnetometer,
+and **soft-magnetic parts leave permanently magnetised** — *"the satellite leaves permanently
+altered."*
+
+**Nobody had asked what happens if the payload simply sits further away.**
+
+| Standoff | \|B\| | × magnetometer FS | × Earth |
+|---:|---:|---:|---:|
+| **20 mm — today** | 44.2 mT | **442×** | 983× |
+| 100 mm | 306 µT | 3.1× | 6.8× |
+| **251 mm** | 90 µT | **0.90× — usable** | 2.0× |
+| **400 mm** | 23.7 µT | 0.24× | **0.53× — below Earth's own field** |
+
+(The 251 mm crossing reproduces `PAYLOAD_ENVIRONMENT`'s own figure, which is the cross-check that
+the model is the same one.)
+
+**At 400 mm the satellite sees less than Earth's field, and both conceded losses disappear.**
+
+**Why this is more than an optimisation.** The project's central claim is that the satellite is
+never modified. **Item 9 established that it is** — magnetically, invisibly, and without the
+customer's knowledge. That makes the current configuration the *worst* of the available options,
+because it is the only one where the modification is undisclosed:
+
+| | |
+|---|---|
+| Today | modified, invisibly, unspecified |
+| With separation | **genuinely unmodified** |
+| With a declared magnetic-cleanliness spec | modified, **knowingly**, to a written interface |
+
+**Separation is what makes the product claim true**, rather than what makes it faster.
+
+**Perpendicular separation is unaffordable** — the machine is 530 mm wide. **Longitudinal is**, and
+it is what a tug-and-carriage architecture gives for free (**PII-15**), which also halves the
+acceleration zone and therefore bears on **P9**.
+
+**What would close it:** either a longitudinal-separation layout carried into `cad/parameters.json`
+with its field recomputed at the real payload station, or — if separation proves unaffordable — a
+**declared magnetic-cleanliness zone in a payload interface document**, which does not exist.
+ADR-010 covers mechanical mounting only, and **E29 already asks for that same document for an
+unrelated reason.**
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

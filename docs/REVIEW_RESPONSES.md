@@ -10,9 +10,9 @@ bring, written down in advance rather than waited for.
 >
 > | | Count | Meaning |
 > |---|---:|---|
-> | **Answered** | **17** | An analysis or document exists, with a band or criteria declared before it ran |
-> | **Partial / scoped** | **13** | Something exists, or the path is named; neither fully answers the question |
-> | **Open** | **5** | **Nothing in this repository addresses it** |
+> | **Answered** | **20** | An analysis or document exists, with a band or criteria declared before it ran |
+> | **Partial / scoped** | **14** | Something exists, or the path is named; neither fully answers the question |
+> | **Open** | **1** | **Item 5 — no customer exists, and no analysis substitutes for asking one** |
 >
 > *Updated 2026-08-10 as the register was worked: **30** answered (the interface permits it, and
 > the survey found three worse problems), **20/22** answered structurally by the FMEA, **26**
@@ -453,6 +453,130 @@ policy, part selection and a TID budget for the mission duration are all absent.
 undemanding), a SEE-qualified part selection with the drain derating stated, and single-event
 burnout test data for the specific device. **None of this is analysis** — it is procurement and
 test, and it belongs in `docs/QUALIFICATION_PLAN.md`, which does not currently mention radiation.
+
+---
+
+## The last five, worked 2026-08-10
+
+Taken in dependency order rather than list order: **16 → 14 → 15 → 19 → 5**. Item 16 attacks a
+loss the repository already concedes; its answer decides 14; 15 is what 16 points at; 19 only
+bites if 15 is adopted; and 5 depends on what the product turns out to be.
+
+### 16 — separating the mover from the payload. **Answered, and it is the cheapest fix available**
+
+`analysis/mover_separation.py`. Field perpendicular to the array plane, reproducing
+`PAYLOAD_ENVIRONMENT`'s own 251 mm figure as a cross-check:
+
+| Standoff | \|B\| | × magnetometer FS | × Earth |
+|---:|---:|---:|---:|
+| 20 mm — where the payload sits today | 44.2 mT | **442×** | 983× |
+| 100 mm | 306 µT | 3.1× | 6.8× |
+| **251 mm** | 90 µT | **0.90× — usable** | 2.0× |
+| **400 mm** | 23.7 µT | 0.24× | **0.53× — below Earth's field** |
+
+**Yes, and by a wide margin.** Separation converts the field exposure from a fixed property of the
+architecture into a design variable. At **251 mm the payload's magnetometer becomes usable**; at
+**400 mm the satellite sees less than Earth's own field**, which also collapses the remanent-
+magnetisation problem behind item 9 — *the* claim that "the satellite is never modified" currently
+fails on.
+
+**Perpendicular separation is not affordable** — the whole machine is 530 mm wide. **Longitudinal
+separation is**, and it is what item 15 delivers for free: a payload carried *ahead* of the
+magnets sits beyond the array's end, where an ideal Halbach's field is smaller still.
+
+**This is the cheapest available fix to two conceded losses**, and no document in this repository
+had evaluated it.
+
+### 15 — an LSM tug reeved to a separate carriage. **Answered, and it also attacks P9**
+
+Distinct from **PII-14**, which moved the motor off the vehicle entirely and was declined. Here
+the linear motor **stays**; only the coupling changes. A reeving ratio *n* means the carriage
+moves *n* times the tug's distance at *n* times its speed, for *n* times the force — and the
+tug's inertia referred to the carriage falls as **1/n²**, which is the one favourable term and the
+reason reeving is interesting at all.
+
+| Ratio | Track length needed | Effective mass | Exit velocity | Tug speed |
+|---:|---:|---:|---:|---:|
+| 1:1 | 1.30 m | 15.45 kg | 15.29 m/s | 15.29 m/s |
+| **2:1** | **0.65 m** | **8.36 kg** | **14.70 m/s** | 7.35 m/s |
+| 3:1 | 0.43 m | 7.05 kg | 13.07 m/s | 4.36 m/s |
+
+**A 2:1 reeving halves the acceleration zone — 1.30 m to 0.65 m — for 4 % of exit velocity**,
+because the tug's 9.445 kg is divided by four. Against **P9**, where the closed envelope is
+1839 mm and **44 % over the ESPA Grande class**, that is the only lever found so far that shortens
+the machine without lengthening anything else.
+
+**And it separates the payload from the magnets longitudinally at the same time**, which is
+item 16's fix. **The two items are one architecture.**
+
+**What it costs**, and none of it is analysed: a cable and pulleys in vacuum (item 19), a second
+guided body, and a single tension load path. Recorded as **PII-15**.
+
+### 14 — is zero modification actually necessary? **The claim is already compromised, and that changes the question**
+
+**Item 9 settled the physics and the repository conceded it**: soft-magnetic parts inside the
+payload leave *"permanently altered — a residual dipole perturbs attitude control for the rest of
+the mission."* **A satellite that leaves permanently magnetised has been modified**, whatever the
+mechanical interface says.
+
+So the honest position is not "zero modification versus a small interface change". It is:
+
+| | |
+|---|---|
+| **Today** | The satellite is modified — magnetically, invisibly, and without the customer's consent or knowledge |
+| **With item 16's separation** | The satellite is genuinely unmodified, because the field never reaches it |
+| **With a declared interface** | The satellite is modified, *knowingly*, to a written spec |
+
+**The worst of the three is the current one**, because it is the only one where the modification is
+undisclosed. **Item 16 is therefore not merely an optimisation — it is what makes the product
+claim true**, and that reframing is the answer to item 14.
+
+**A small interface change is not needed if separation works.** If it does not, the least-bad
+alternative is a declared magnetic-cleanliness zone in the payload interface document, which is a
+*specification* rather than a hardware modification. **No such document exists** (ADR-010 covers
+mechanical mounting only), and E29 already asks for one for a different reason.
+
+### 19 — cable in vacuum. **Gated behind 15, and the risks are named**
+
+Only bites if a cable architecture is adopted. **PII-14 flagged it and did not analyse it**, and
+**E21** records that this repository contains nothing on lubrication, cold welding or galling.
+
+The specific risks, none quantified here: **fretting** at the pulley wrap under 12 reversing
+cycles; **cold welding** of a bare steel cable on a bare steel sheave in vacuum; **lubricant**
+selection with no outgassing budget (item 10); **pulley bearing life** at the rope speeds item 15
+implies; and a **single tension load path** whose failure is one more of the manifest-forfeiting
+elements in `docs/FMEA.md`.
+
+**A27 makes this sharper, not softer.** The actuator trade screened out a rack and pinion
+*specifically because* a contacting drive at 16 m/s in vacuum makes E21 load-bearing. **A cable
+over a sheave is also a contacting drive at speed**, so item 15 cannot claim the exemption that
+screened the rack out — it must answer the same objection.
+
+### 5 — which specific customer has asked for this? **No answer, and the honest one is uncomfortable**
+
+**None. No customer exists and none has been approached.**
+
+`docs/MARKET.md` describes a segment, not a customer. Every cost claim in the project was withdrawn
+for lack of a vendor quotation (**E3**). And the strongest technical findings of this review
+narrow the addressable set rather than widen it:
+
+- **A24** — the payload ladder closes kill criterion 1 only at **PocketQube** class, two rungs
+  below where the repository had been claiming, and those classes have **no corner rails and no
+  designed interface**;
+- **A21** — at 3U a cold-gas module wins on mass by **7.5×**;
+- **A27** — a **~2 kg staged spring** does the job for any mission not needing continuous control;
+- **E30** — the reliability case only closes above **93.5 %** per-shot reliability, which is
+  unmeasured.
+
+**So the customer question cannot be answered until it is clear what is being sold.** On this
+review's evidence that is: *continuous per-shot velocity control, to an operator distributing a
+fleet from one release event, who values schedulability over mass.* **That is a narrower product
+than "a better deployer", and it is the first time this repository has been able to state it in a
+sentence.**
+
+**What would close it:** approach one operator with that sentence and the review responses
+attached, and record what they say — including if it is no. **That is not analysis and no further
+analysis substitutes for it.**
 
 ## What this file changes
 

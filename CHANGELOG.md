@@ -9,6 +9,26 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (twenty-first pass): the last five review items, and the field exposure turns out to be optional
+
+| ID | Item | Detail |
+|---|---|---|
+| **E35** | **The payload's field exposure is a design variable nobody varied** | Review item 16. The payload rides **on** the sled, 20 mm from the magnets, at **442× magnetometer full scale**. At **251 mm it is usable (0.90×)**; at **400 mm the satellite sees less than Earth's own field**. The 251 mm crossing reproduces `PAYLOAD_ENVIRONMENT`'s own figure, which is the cross-check. |
+| **E35-01** | **And it reframes item 14 rather than optimising it** | Item 9 established the satellite **is** modified — magnetically, invisibly, without the customer's knowledge. That makes today's configuration the **worst** of three options, being the only one where the modification is undisclosed. **Separation is what makes the "never modified" claim true**, not what makes it faster. |
+| **PII-15** | **An LSM tug reeved to a separate carriage** | Review item 15, and distinct from PII-14: the motor **stays**, only the coupling changes. **2:1 reeving halves the acceleration zone — 1.30 m to 0.65 m — for 4 % of exit velocity**, because the tug's 9.445 kg is divided by *n²*. **The only lever found that shortens the machine without lengthening anything else**, against P9's 44 % overrun — and it delivers E35's separation for free. |
+| REV-07 | **Item 19 gated, and A27 makes it sharper** | A cable over a sheave **is** a contacting drive at speed, so it **cannot claim the exemption that screened out the rack** in A27. It must answer the same E21 objection: fretting, cold welding, lubricant with no outgassing budget, sheave bearing life, and a single tension load path that becomes another manifest-forfeiting element. |
+| **REV-08** | **Item 5 answered as far as it can be: no customer exists** | And this review's strongest findings **narrow** the addressable set — A24 (threat 1 closes only at PocketQube), A21 (cold gas wins 7.5× at 3U), A27 (a ~2 kg spring suffices without continuous control), E30 (the case needs 93.5 % per-shot reliability, unmeasured). **The product the evidence supports is one sentence: continuous per-shot velocity control, to an operator distributing a fleet from one release event, who values schedulability over mass.** First time the repository has been able to state it. |
+| REV-09 | **Review register closed out** | **20 answered, 14 partial or scoped, 1 open.** From 11/10/14 at triage. The one still open is item 5, and **no analysis substitutes for asking an operator.** |
+| CNT-13 | **Register 80 → 81, 37 → 38 live** | E35. Header propagated. |
+
+**What authorised it.** E35 is unmodelled engineering raised in external review; PII-15 is a
+candidate architecture recorded in Phase II, not adopted. **No operating point moved.**
+
+**Eight register entries came out of this review — E29 through E35 and P45.** More than the review
+found wrong, which is the argument for having asked.
+
+---
+
 ## 2026-08-10 (twentieth pass): the magnets torque the host while idle, and the brake shakes eleven stowed satellites
 
 | ID | Item | Detail |
