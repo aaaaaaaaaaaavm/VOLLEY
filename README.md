@@ -44,6 +44,14 @@ citing anything here.
 
 ## Against a spring dispenser
 
+**A rideshare CubeSat does not choose its orbit. It inherits whoever paid for the launch** — and
+about ninety-two percent of catalogued nanosatellites carry no propulsion to change it. A spring
+delivers 1–2 m/s, which exists to create clearance from the stage, not to change an orbit, and
+its designed differential between satellites is zero. **That is not a deployment problem, it is
+a distribution problem**, and it is the one axis where a spring does not compete at any price:
+**deterministic orbit seeding rather than orbit inheritance**, at a velocity programmable per
+satellite.
+
 The metrics on which the two differ. Losses are in the same table as the wins.
 
 | | Spring dispenser | VOLLEY | |
@@ -430,6 +438,12 @@ and **P29** (the paper says the winding is segmented; the model charges copper f
 1.3 m). Most recently closed: **P17**, the inter-array attraction feeding the A4 FEA, 37 %
 high — resolved by A12, which also found that P17's *explanation* of its own finding was
 backwards.
+
+## Using this work
+
+This work is intended to be built, not only read. I am available to work on it with anyone who
+is building it. Contact: **Adityavardhanmishra@icloud.com**.
+Attribution is required under CC BY 4.0, including an indication of what was changed.
 
 ## Author
 

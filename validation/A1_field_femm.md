@@ -33,6 +33,9 @@ The original result remains below as the superseded run record.
 >
 > **K<sub>t</sub> = 11.228 N per kA/m against the model's 11.22, a ratio of 1.0007**, with force
 > ripple 1.25 % against 1.26 %. Full results in `validation/results/A1_femm.json`.
+
+> **Superseded figure, annotated 2026-08-10.** The ±1.26 % ripple above is a **pre-quadrature record** and is left intact as the historical value. The current figure is **±0.99 %** (0.9874 % unrounded), derived from `analysis/motor_model.py` via `analysis/results/motor_results.json`. The change came from the 2026-08-03 quadrature correction to the winding-thickness integral, which also moved K<sub>t</sub> from 11.22 to 11.0258 N per kA/m. Nothing in this file is edited.
+
 >
 > **Neither missed band is a model error, and both are logged rather than argued away.**
 > **P20**: the array-surface reference in this sheet is mis-specified — it names a *single*

@@ -8,9 +8,9 @@ authors:
     given-names: Adityavardhan
     affiliation: "Department of Mechanical Engineering, Symbiosis Institute of Technology, Symbiosis International (Deemed University), Pune, India"
     email: adityavardhanmishr@gmail.com
-version: "0.1.0"   # NEEDS AUTHOR DECISION: repository tags run to v1.1; this field
-                   # still reads the initial release. Not changed without your call.
-date-released: "2026-07-23"   # matches version above, not the latest commit
+version: "v1.1"    # set from the latest git tag (git tag --sort=-v:refname | head -1)
+date-released: "2026-07-30"   # commit date of the v1.1 tag
+                   # (git log -1 --format=%ci v1.1). Was 2026-07-23, the v0.1.0 date.
 # doi:              # left empty deliberately. Populate after minting a DOI (e.g. via a
 #                   # Zenodo release); nothing in this repository supplies one.
 keywords:
