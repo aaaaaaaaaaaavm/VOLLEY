@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **75 numbered entries, of which 32 are live.** Every entry carries a `Status:` line written by
+> **76 numbered entries, of which 33 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **32** (17 P, 15 E) | open engineering; something still has to be done |
+> | `LIVE` | **33** (17 P, 16 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
@@ -32,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 75 entries stand, and the 32 live
+> nothing in it has been deleted, closed or downgraded — all 76 entries stand, and the 33 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -2059,6 +2059,64 @@ cross-check — **was not run**, so 10.5386 is still magpylib, which is analytic
 E2's objection that nothing here *solves a field equation* in 3-D stands. Re-baselining onto a
 number that a different method has never checked would repeat the mistake this entry is about,
 one level down.
+
+### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Raised in review, 2026-08-10, and it is the strongest structural criticism this design has
+received.**
+
+A spring dispenser is **twelve independent one-shot mechanisms in parallel**. One failure costs
+**one** satellite. VOLLEY is **one mechanism in series with itself, cycled twelve times**: the
+sled, stator, bank, sequencer and brake serve every shot, and the escapement and retention gate
+cycle twelve times each. A failure at shot *k* forfeits shots *k* through 12.
+
+**That is a real and unfavourable structural change, and no amount of component quality removes
+it.** It is arithmetic, not opinion:
+
+| Per-shot p (or per-unit q) | VOLLEY satellites | Spring satellites | VOLLEY fleet-years | Spring fleet-years |
+|---:|---:|---:|---:|---:|
+| 0.99 | 11.25 | 11.88 | 23.74 | 16.78 |
+| 0.95 | **8.73** | 11.40 | 18.44 | 16.10 |
+| **0.935** | 7.96 | 11.22 | **16.81** | **15.84** — break-even |
+| 0.90 | **6.46** | 10.80 | 13.63 | 15.25 — **spring wins** |
+| 0.80 | 3.73 | 9.60 | 7.86 | 13.56 |
+
+**The two crossover numbers are the answer to "what is the risk/reward ratio":**
+
+- To match a 0.99-reliable spring **on satellites delivered**, VOLLEY needs per-shot
+  **p = 0.9985**. For a twelve-cycle electromechanical system with no flight heritage, that is
+  not a realistic target.
+- To match it **on delivered orbital life**, VOLLEY needs only **p = 0.9347** — because each
+  satellite it *does* deliver is worth **1.495×** a spring-deployed one (2.111 yr against
+  1.412 yr at 450 km).
+
+**The gap between 0.9347 and 0.9985 is the risk/reward ratio, and it is the whole argument.**
+VOLLEY can afford to lose satellites and still deliver more total mission value — but only above
+about **93.5 % per-shot reliability.** Below it, the spring wins outright.
+
+**And a correction the project should make to itself.** The headline **7.52× lifetime extension**
+is a ratio of *gains* (+61.8 % against +8.2 %). On **delivered orbital life** the ratio is
+**1.495×**. Both are true; the second is the one that governs a risk-weighted comparison, because
+a satellite that is never released delivers nothing. **The 7.5× figure flatters in exactly the
+comparison a reviewer will make.**
+
+**What is missing, and it is the finding.** **Nothing in this repository estimates p.** There is
+no FMEA, no fault tree, no parts count, and no cycle-life test for the escapement, the gate or
+the sled. `grep -ri "failure point"` returns nothing. **The project therefore cannot say which
+side of 0.9347 it is on**, which means it cannot presently answer whether it beats a spring at
+all.
+
+**What would close it:** a parts count and an FMEA to the level of naming every element whose
+failure forfeits the remaining manifest; a stated single-failure-loses-N figure; cycle-life tests
+for the three cycling mechanisms; and a per-shot p with the reasoning behind it. Adjacent to
+**P28** (brake), and it subsumes the specific jam case raised as review item 22.
+
+**Mitigations that exist but are unquantified:** the winding is segmented, so losing one segment
+degrades rather than stops (`paper.tex` §VII, and P29 closed the modelling half). The retention
+gates are per-cassette, so one gate failure forfeits six rather than twelve. **Neither has been
+credited in a reliability model because no reliability model exists.**
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

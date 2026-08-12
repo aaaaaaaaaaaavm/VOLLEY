@@ -237,13 +237,58 @@ answer does not dispose of that.
 | **16** | Would separating the mover from the payload sled reduce field exposure and simplify the sled? | PII-11's side-rail layout and PII-14 both touch it. **Neither computes the field-exposure benefit**, which is the point of the question given 611× | **High** — it may be the cheapest fix to 7 and 9 |
 | **18** | Why a linear motor at all, rather than a lead screw, rack-and-pinion, or staged spring? | Nothing. `grep -ri "lead screw"` and `"rack and pinion"` both return zero | **High** — an unmade top-level trade |
 | **19** | Cable in vacuum: fretting, cold welding, lubricant, pulley bearing life at 16.4 m/s, single load path | PII-14 flags it as unresolved; E21 covers tribology generally | Medium — only bites if a cable architecture is adopted |
-| **20** | How reliable is a system with this many failure points? | Nothing. No FMEA, no fault tree, no parts count | **High** |
+| **20** | How reliable is a system with this many failure points? | **Now partly answered — see below.** The *structure* is quantified in **E30**; **p itself is still unestimated** | **High** |
 | **22** | Sled jam loses the campaign | **Nothing** — see above | **Lethal** |
 | **25** | Radiation and single-event-effect qualification for the SiC drive | Nothing | High |
 | **26** | Multipaction and Paschen breakdown in the windings during ascent depressurisation | Nothing. **A 96 V bank switching hundreds of amps through a winding in a depressurising volume is a textbook Paschen case** | High |
 | **30** | Do LV ICDs permit deployment at 16 m/s? | **Nothing** — see above | **Lethal** |
 
 ---
+
+---
+
+## 20, expanded: redundancy of springs against a shared serial mechanism
+
+**Raised in review as the risk/reward question, and it deserves a number rather than an argument.**
+
+A spring dispenser is **twelve independent one-shot mechanisms in parallel** — one failure costs
+one satellite. VOLLEY is **one mechanism in series with itself, cycled twelve times**. The sled,
+stator, bank, sequencer and brake serve every shot; the escapement and gate cycle twelve times
+each. **A failure at shot k forfeits shots k through 12.**
+
+`analysis/reliability_architecture.py`:
+
+| Per-shot p (or per-unit q) | VOLLEY sats | Spring sats | VOLLEY fleet-years | Spring fleet-years |
+|---:|---:|---:|---:|---:|
+| 0.99 | 11.25 | 11.88 | 23.74 | 16.78 |
+| 0.95 | **8.73** | 11.40 | 18.44 | 16.10 |
+| **0.935** | 7.96 | 11.22 | **16.81** | **15.84** — break-even |
+| 0.90 | **6.46** | 10.80 | 13.63 | 15.25 — **spring wins** |
+
+**The risk/reward ratio is the gap between two numbers:**
+
+- Matching a 0.99 spring **on satellites delivered** needs **p = 0.9985** — not a realistic
+  target for a twelve-cycle electromechanical system with no flight heritage.
+- Matching it **on delivered orbital life** needs **p = 0.9347**, because each delivered
+  satellite is worth **1.495×** a spring-deployed one.
+
+**So VOLLEY can afford to lose satellites and still deliver more mission value — but only above
+about 93.5 % per-shot reliability.** Below that the spring wins outright, on both metrics.
+
+> **A correction this analysis forces on the project's own headline.** The **7.52× lifetime
+> extension** figure is a ratio of *gains* (+61.8 % against +8.2 %). On **delivered orbital
+> life** the ratio is **1.495×**. Both are true, but the second governs any risk-weighted
+> comparison — a satellite never released delivers nothing — and **the 7.5× figure flatters in
+> exactly the comparison a reviewer makes.**
+
+**And the finding: nothing in this repository estimates p.** No FMEA, no fault tree, no parts
+count, no cycle-life test. **The project cannot currently say which side of 0.9347 it sits on**,
+which means it cannot yet claim to beat a spring at all. Logged as **E30**, which subsumes the
+jam case of item 22.
+
+**Two mitigations exist and neither is credited**, because there is no reliability model to credit
+them in: the winding is segmented, so losing a segment degrades rather than stops; and gates are
+per-cassette, so one gate failure forfeits six rather than twelve.
 
 ## What this file changes
 

@@ -9,6 +9,27 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (sixteenth pass): a reviewer's register, and the reliability arithmetic it forces
+
+| ID | Item | Detail |
+|---|---|---|
+| **REV-01** | **`docs/REVIEW_RESPONSES.md`** | Thirty-five reviewer questions, answered or conceded. **11 answered, 10 partial, 14 with no answer in this repository at all.** Each answer cites the analysis behind it or says "open" and names what would close it. |
+| REV-02 | **Three answers are losses, stated plainly** | A cold-gas module beats VOLLEY at 3U by **7.5×** (A21 band 5, declared as a loss *before* the run); the satellite **leaves permanently magnetised** by remanent magnetisation of soft-magnetic parts; and a payload's **magnetometer is unusable** inside the deployer at 611× full scale. All three predate the review and come from the project's own analyses. |
+| REV-03 | **Two of the four judged potentially lethal have nothing behind them** | **Item 22** — a jammed sled forfeits the manifest, not one satellite; `grep -ri jam` returns zero. **Item 30** — no launch-vehicle ICD has ever been checked for whether it permits separation at 16 m/s, and if one caps near 1–2 m/s the central number is non-compliant by 8× regardless of the physics. **Item 30 is also the cheapest question here to answer.** |
+| REV-04 | **A unit correction** | Review item 35 cites 18 kW. Peak is **32.5 kW** (96 V × 339 A); **16.1 kW** is the average over the 158.6 ms stroke. |
+| **E30** | **The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism** | A spring dispenser fails one satellite at a time. VOLLEY's sled, stator, bank, sequencer and brake serve every shot, so a failure at shot *k* forfeits shots *k*–12. **Arithmetic, not opinion.** |
+| E30-01 | **The risk/reward ratio, as two numbers** | Matching a 0.99-reliable spring **on satellites delivered** needs per-shot **p = 0.9985**; matching it **on delivered orbital life** needs **p = 0.9347**, because each delivered satellite is worth **1.495×** a spring-deployed one. **Break-even is p ≈ 0.935; below it the spring wins outright.** |
+| **E30-02** | **A correction to the project's own headline** | The **7.52× lifetime extension** is a ratio of *gains* (+61.8 % against +8.2 %). On **delivered orbital life** it is **1.495×**. Both are true, but the second governs any risk-weighted comparison, and **7.5× flatters in exactly the comparison a reviewer makes.** |
+| E30-03 | **And nothing estimates p** | No FMEA, no fault tree, no parts count, no cycle-life test for the escapement, gate or sled. **The project cannot say which side of 0.9347 it is on**, so it cannot presently claim to beat a spring at all. Two mitigations exist — segmented winding, per-cassette gates — and neither is credited, because there is no model to credit them in. |
+| CNT-09 | **Register 75 → 76, 32 → 33 live** | E30. Header propagated. |
+
+**What authorised it.** E30 is unmodelled engineering raised in external review.
+`REVIEW_RESPONSES.md` is triage and claims no analysis. **No operating point moved and no band
+was edited** — but E30-02 identifies a headline figure that overstates the case in the comparison
+that matters, and that correction is now on the record.
+
+---
+
 ## 2026-08-10 (fifteenth pass): the build-readiness position, stated subsystem by subsystem
 
 | ID | Item | Detail |
