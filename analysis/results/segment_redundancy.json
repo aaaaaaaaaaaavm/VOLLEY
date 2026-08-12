@@ -1,0 +1,247 @@
+{
+  "v_nominal": 16.388,
+  "m_total": 13.445,
+  "accel_zone_m": 1.3,
+  "nominal_life_yr": 2.1109043605132016,
+  "spring_life_yr": 1.4121326162999317,
+  "unboosted_yr": 1.304960122710553,
+  "sweep": [
+    {
+      "n_segments": 2,
+      "seg_len_mm": 650.0,
+      "rows": [
+        {
+          "dead": 0,
+          "v_exit": 0.0,
+          "started": false,
+          "frac_of_nominal": 0.0
+        },
+        {
+          "dead": 1,
+          "v_exit": 11.589968496432837,
+          "started": true,
+          "frac_of_nominal": 0.707222876277327
+        }
+      ],
+      "degraded_v": 11.589968496432837,
+      "degraded_frac": 0.707222876277327,
+      "n_fatal": 1
+    },
+    {
+      "n_segments": 4,
+      "seg_len_mm": 325.0,
+      "rows": [
+        {
+          "dead": 0,
+          "v_exit": 0.0,
+          "started": false,
+          "frac_of_nominal": 0.0
+        },
+        {
+          "dead": 1,
+          "v_exit": 14.194754475596202,
+          "started": true,
+          "frac_of_nominal": 0.8661675906514645
+        },
+        {
+          "dead": 2,
+          "v_exit": 14.194754475596202,
+          "started": true,
+          "frac_of_nominal": 0.8661675906514645
+        },
+        {
+          "dead": 3,
+          "v_exit": 14.194754475596202,
+          "started": true,
+          "frac_of_nominal": 0.8661675906514645
+        }
+      ],
+      "degraded_v": 14.194754475596202,
+      "degraded_frac": 0.8661675906514645,
+      "n_fatal": 1
+    },
+    {
+      "n_segments": 6,
+      "seg_len_mm": 216.66666666666666,
+      "rows": [
+        {
+          "dead": 0,
+          "v_exit": 0.0,
+          "started": false,
+          "frac_of_nominal": 0.0
+        },
+        {
+          "dead": 1,
+          "v_exit": 14.962584989917664,
+          "started": true,
+          "frac_of_nominal": 0.9130208072929987
+        },
+        {
+          "dead": 2,
+          "v_exit": 14.962584989917664,
+          "started": true,
+          "frac_of_nominal": 0.9130208072929987
+        },
+        {
+          "dead": 3,
+          "v_exit": 14.962584989917664,
+          "started": true,
+          "frac_of_nominal": 0.9130208072929987
+        },
+        {
+          "dead": 4,
+          "v_exit": 14.962584989917664,
+          "started": true,
+          "frac_of_nominal": 0.9130208072929987
+        },
+        {
+          "dead": 5,
+          "v_exit": 14.962584989917664,
+          "started": true,
+          "frac_of_nominal": 0.9130208072929987
+        }
+      ],
+      "degraded_v": 14.962584989917664,
+      "degraded_frac": 0.9130208072929987,
+      "n_fatal": 1
+    },
+    {
+      "n_segments": 8,
+      "seg_len_mm": 162.5,
+      "rows": [
+        {
+          "dead": 0,
+          "v_exit": 0.0,
+          "started": false,
+          "frac_of_nominal": 0.0
+        },
+        {
+          "dead": 1,
+          "v_exit": 15.332087172317237,
+          "started": true,
+          "frac_of_nominal": 0.9355679260628043
+        },
+        {
+          "dead": 2,
+          "v_exit": 15.332087172317237,
+          "started": true,
+          "frac_of_nominal": 0.9355679260628043
+        },
+        {
+          "dead": 3,
+          "v_exit": 15.332087172317237,
+          "started": true,
+          "frac_of_nominal": 0.9355679260628043
+        },
+        {
+          "dead": 4,
+          "v_exit": 15.332087172317237,
+          "started": true,
+          "frac_of_nominal": 0.9355679260628043
+        },
+        {
+          "dead": 5,
+          "v_exit": 15.332087172317237,
+          "started": true,
+          "frac_of_nominal": 0.9355679260628043
+        },
+        {
+          "dead": 6,
+          "v_exit": 15.332087172317237,
+          "started": true,
+          "frac_of_nominal": 0.9355679260628043
+        },
+        {
+          "dead": 7,
+          "v_exit": 15.332087172317237,
+          "started": true,
+          "frac_of_nominal": 0.9355679260628043
+        }
+      ],
+      "degraded_v": 15.332087172317237,
+      "degraded_frac": 0.9355679260628043,
+      "n_fatal": 1
+    },
+    {
+      "n_segments": 12,
+      "seg_len_mm": 108.33333333333333,
+      "rows": [
+        {
+          "dead": 0,
+          "v_exit": 0.0,
+          "started": false,
+          "frac_of_nominal": 0.0
+        },
+        {
+          "dead": 1,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 2,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 3,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 4,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 5,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 6,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 7,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 8,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 9,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 10,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        },
+        {
+          "dead": 11,
+          "v_exit": 15.692891528923543,
+          "started": true,
+          "frac_of_nominal": 0.9575843012523518
+        }
+      ],
+      "degraded_v": 15.692891528923543,
+      "degraded_frac": 0.9575843012523518,
+      "n_fatal": 1
+    }
+  ]
+}

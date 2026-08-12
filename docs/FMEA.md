@@ -32,6 +32,10 @@ worth taking, then found that **nothing estimated per-shot reliability**. This d
 > **Nine of thirteen elements forfeit the remaining manifest on a single failure.**
 > **A spring dispenser has zero such elements** — every failure costs exactly one satellite.
 >
+> **Revised 2026-08-10:** segmentation analysis moves the stator from *forfeits* to *degrades*
+> for all but its breech segment, so the honest count is **eight and a fraction**, not nine. The
+> table above is left as first computed; the correction is in the mitigations section.
+>
 > **Nine shared elements × twelve cycles is 108 chances to fail.**
 
 **This is the answer to review item 22.** A jammed sled is not a special case to be analysed
@@ -85,10 +89,27 @@ falsifiable by test rather than by argument.
 Both are real and **neither is in the numbers above**, because crediting them without analysis
 would be exactly the optimism this file exists to avoid:
 
-1. **The stator winding is segmented** (`paper.tex` §VII, and P29 closed the modelling half), so
-   losing one segment should degrade thrust rather than stop the machine. **Never analysed as a
-   redundancy.** If it holds, the winding stops being a manifest-forfeiting element and the
-   requirement above loosens.
+1. **The stator winding is segmented** (`paper.tex` §VII, and P29 closed the modelling half).
+   **Analysed 2026-08-10 — `analysis/segment_redundancy.py` — and it mostly holds**, with one
+   exception that matters:
+
+   | Segments | Segment length | If a **later** segment dies | Still worth |
+   |---:|---:|---:|---:|
+   | 4 | 325 mm | **14.19 m/s (86.6 %)** | 1.41× a spring |
+   | 8 | 162 mm | 15.33 m/s (93.6 %) | 1.45× a spring |
+   | 12 | 108 mm | 15.69 m/s (95.8 %) | 1.47× a spring |
+
+   **A dead segment is a length the sled coasts over, not a stopped machine** — provided the sled
+   is already moving. **The breech segment is the exception: there is no force on a stationary
+   sled, so if the first segment dies the shot never starts.**
+
+   **So the stator is not one element, it is two.** The breech segment forfeits the manifest; every
+   other segment degrades the shot. At four segments **three of four stator failures are
+   survivable**; at twelve, eleven of twelve.
+
+   **The design action this points at is cheap:** duplicate or overlap the breech segment, or
+   provide any independent means of getting the sled moving. That converts the last
+   manifest-forfeiting mode of the winding into a degradation.
 2. **Retention gates are per-cassette**, so one gate failure forfeits six rather than twelve —
    already credited in the model's structure, but the escapement and follower share that scope
    and their cycle life is untested.

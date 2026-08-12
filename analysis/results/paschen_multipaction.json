@@ -1,0 +1,56 @@
+{
+  "paschen": {
+    "bus_V": 96.0,
+    "gases": {
+      "air": {
+        "v_min": 327.0,
+        "margin": 3.40625,
+        "breaks_down": false
+      },
+      "argon": {
+        "v_min": 137.0,
+        "margin": 1.4270833333333333,
+        "breaks_down": false
+      },
+      "helium": {
+        "v_min": 156.0,
+        "margin": 1.625,
+        "breaks_down": false
+      },
+      "neon": {
+        "v_min": 245.0,
+        "margin": 2.5520833333333335,
+        "breaks_down": false
+      }
+    },
+    "gap_m": 0.001,
+    "critical_pressure_Pa": 760.0
+  },
+  "multipaction": {
+    "f_Hz": 40000.0,
+    "gap_m": 0.001,
+    "fd_Hz_m": 40.0,
+    "threshold_fd_Hz_m": 1000000.0,
+    "ratio": 25000.0,
+    "credible": false
+  },
+  "fault": {
+    "L_H": 1.9697451732456676e-05,
+    "I_A": 373.2,
+    "stored_J": 1.3717132048907583,
+    "interruptions": {
+      "1us": {
+        "di_dt_A_s": 373200000.0,
+        "V_induced": 7351.088986552832
+      },
+      "10us": {
+        "di_dt_A_s": 37320000.0,
+        "V_induced": 735.1088986552832
+      },
+      "100us": {
+        "di_dt_A_s": 3732000.0,
+        "V_induced": 73.51088986552831
+      }
+    }
+  }
+}

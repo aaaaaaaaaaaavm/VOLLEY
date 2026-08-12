@@ -9,6 +9,24 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (eighteenth pass): segmentation is real redundancy except at the breech, and neither breakdown mechanism is credible
+
+| ID | Item | Detail |
+|---|---|---|
+| **SEG-01** | **The segmented stator is genuine redundancy, and it was only ever an assertion** | `analysis/segment_redundancy.py`. A dead segment is a length the sled **coasts over**, not a stopped machine: at four segments a later failure still exits at **14.19 m/s — 86.6 % of nominal, and 1.41× a spring**. At twelve segments, 95.8 %. |
+| **SEG-02** | **Except at the breech, and that asymmetry is the finding** | **There is no force on a stationary sled**, so if the *first* segment dies the shot never starts. **The stator is two elements, not one** — three of four stator failures are survivable at four segments, eleven of twelve at twelve. `docs/FMEA.md`'s count of nine manifest-forfeiting elements becomes **eight and a fraction**. |
+| SEG-03 | **And it names a cheap design action** | Duplicate or overlap the **breech segment**, or provide any independent means of starting the sled. That converts the winding's last manifest-forfeiting mode into a degradation. |
+| **PAS-01** | **Review item 26 answered: neither mechanism is credible in normal use** | The 96 V bus is **3.41× below air's 327 V Paschen minimum**, and below a gas's minimum nothing breaks down at **any** pd. Multipaction is the wrong regime by **2.5 × 10⁴** — f × d = 40 Hz·m against ~10⁶ Hz·m. Both results are **geometry-independent**, which is why this is arithmetic. |
+| **E32** | **The fault case is not safe, and nothing inhibits it** | The winding stores **1.37 J per phase** at 19.70 µH and 373.2 A. An **unclamped** interruption induces **7,351 V in 1 µs** and 735 V in 10 µs, against a 327 V minimum — and for a 1 mm gap air reaches that minimum at **760 Pa**, which the vehicle transits on **every ascent**. **No requirement anywhere in this repository keeps the bank uncharged during ascent.** |
+| PAS-02 | **CFD was installed, and deliberately not used** | The conclusion turns on the bus sitting below a gas constant, which no venting model changes; a depressurisation time constant is orifice flow, not a Navier–Stokes solve. **Using a CFD solver here would have been theatre**, and is recorded as declined rather than omitted. |
+| CNT-11 | **Register 77 → 78, 34 → 35 live** | E32. Header propagated. E30 gains the segmentation result and stays LIVE — **r is still unmeasured**. |
+
+**What authorised it.** SEG closes a mitigation `docs/FMEA.md` explicitly declined to credit
+without analysis; E32 is unmodelled engineering raised in external review. **No operating point
+moved.**
+
+---
+
 ## 2026-08-10 (seventeenth pass): the launch interface permits it, and the FMEA turns E30 into a requirement
 
 | ID | Item | Detail |

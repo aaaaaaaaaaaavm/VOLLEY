@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **77 numbered entries, of which 34 are live.** Every entry carries a `Status:` line written by
+> **78 numbered entries, of which 35 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **34** (17 P, 17 E) | open engineering; something still has to be done |
+> | `LIVE` | **35** (17 P, 18 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
@@ -32,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 77 entries stand, and the 34 live
+> nothing in it has been deleted, closed or downgraded — all 78 entries stand, and the 35 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -2123,6 +2123,14 @@ for the three cycling mechanisms; and a per-shot p with the reasoning behind it.
 > probability 0.922). To match it on **satellite count** needs **r ≥ 0.99984**, which is not a
 > realistic target — **VOLLEY should not be sold on satellite count.**
 >
+> **Segmentation analysed 2026-08-10** (`analysis/segment_redundancy.py`): a dead segment is a
+> length the sled **coasts over**, not a stopped machine, so at four segments a later failure
+> still exits at **14.19 m/s — 86.6 % of nominal and 1.41× a spring**. **The breech segment is the
+> exception**: no force acts on a stationary sled, so if the first segment dies the shot never
+> starts. **The stator is therefore two elements, not one** — three of four stator failures are
+> survivable at four segments, eleven of twelve at twelve — and the cheap design action is to
+> duplicate or overlap the breech segment.
+>
 > **This entry stays LIVE because r is still unmeasured.** No cycle-life test exists for the
 > escapement, the gate or the sled, and that is metal rather than computation. The jam case of
 > review item 22 is answered structurally — it is one of nine ways to lose the manifest, not a
@@ -2182,6 +2190,44 @@ engineering preference.
 
 **The survey is one document deep.** No claim about the market should be made from it, only about
 this interface at this revision.
+
+### E32. Nothing inhibits the drive during the ascent pressure transit, and a fault there would break down: NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found answering review item 26, 2026-08-10.** `analysis/paschen_multipaction.py`.
+
+**Ordinary operation is safe, by a margin that does not depend on geometry.** The 96 V bus is
+**3.41× below air's 327 V Paschen minimum**, and below a gas's *minimum* no voltage breaks down at
+any pressure-distance product. Multipaction is the wrong regime by **2.5 × 10⁴** — the converter
+gives f × d = 40 Hz·m against a ~10⁶ Hz·m threshold. **Neither mechanism is credible in normal
+use, and review item 26 is answered.**
+
+**The fault case is not safe.** The winding is **19.70 µH at 373.2 A, storing 1.37 J per phase**.
+A healthy bridge freewheels through its antiparallel diodes and clamps near the bus; an
+**open-circuit fault has no such path**:
+
+| Interrupted in | Induced | vs air's 327 V minimum |
+|---:|---:|---|
+| 1 µs | **7,351 V** | **exceeds by 22×** |
+| 10 µs | **735 V** | **exceeds** |
+| 100 µs | 74 V | below |
+
+For a 1 mm gap, air reaches its Paschen minimum at **760 Pa (~5.7 Torr)**, a pressure the vehicle
+passes through on **every ascent**.
+
+**The defect is that nothing prevents the coincidence.** There is no requirement anywhere in this
+repository that the bank be uncharged or the winding unenergised during ascent. The machine has no
+reason to be energised then; the rideshare guide read for E31 calls out **power inhibits** as
+separately-verified testing; and **the requirement is simply not written down.**
+
+**What would close it:** a stated inhibit — *the bank shall be uncharged and the winding
+unenergised while the vehicle transits the Paschen-critical pressure band* — carried into the
+qualification plan as a verified inhibit, plus a clamping requirement on the bridge so that a
+fault during *operation* in vacuum has a defined current path. Neither exists.
+
+**What this does not need:** a CFD venting model. The conclusion turns on the bus sitting below a
+gas constant, which no depressurisation model changes.
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

@@ -284,7 +284,7 @@ answer does not dispose of that.
 | **20** | How reliable is a system with this many failure points? | **Now partly answered — see below.** The *structure* is quantified in **E30**; **p itself is still unestimated** | **High** |
 | **22** | Sled jam loses the campaign | **Nothing** — see above | **Lethal** |
 | **25** | Radiation and single-event-effect qualification for the SiC drive | Nothing | High |
-| **26** | Multipaction and Paschen breakdown in the windings during ascent depressurisation | Nothing. **A 96 V bank switching hundreds of amps through a winding in a depressurising volume is a textbook Paschen case** | High |
+| **26** | Multipaction and Paschen breakdown during ascent depressurisation | **ANSWERED 2026-08-10** — see below. Both ruled out on ordinary operation; an **inhibit requirement** falls out | Closed to an inhibit |
 | **30** | Do LV ICDs permit deployment at 16 m/s? | **Nothing** — see above | **Lethal** |
 
 ---
@@ -333,6 +333,55 @@ jam case of item 22.
 **Two mitigations exist and neither is credited**, because there is no reliability model to credit
 them in: the winding is segmented, so losing a segment degrades rather than stops; and gates are
 per-cassette, so one gate failure forfeits six rather than twelve.
+
+---
+
+## 26, answered: neither mechanism is credible, and the requirement is an inhibit
+
+`analysis/paschen_multipaction.py`. Both are ruled out for reasons **independent of geometry**,
+which is why this is arithmetic rather than a simulation.
+
+**Paschen: the bus is below the minimum, so no pressure and no gap breaks down.**
+
+| Gas | Paschen minimum | Margin over the 96 V bus |
+|---|---:|---:|
+| Air | 327 V | **3.41×** |
+| Neon | 245 V | 2.55× |
+| Helium | 156 V | 1.62× |
+| Argon | 137 V | 1.43× |
+
+Below a gas's Paschen **minimum**, breakdown cannot occur at *any* pd. For a 1 mm gap air reaches
+that minimum at **760 Pa (~5.7 Torr)** — a pressure the vehicle passes through on every ascent —
+and **at 96 V that transit is harmless.**
+
+**Multipaction: the wrong regime by four orders of magnitude.** It requires electron transit time
+comparable to the RF half-period. The converter gives **f × d = 40 Hz·m** against a lowest
+relevant threshold of ~10⁶ Hz·m (1 GHz·mm) — a ratio of **2.5 × 10⁴**. At 40 kHz the half-period
+is 12.5 µs and an electron crosses 1 mm in nanoseconds, so **electrons are collected, not
+resonantly multiplied.**
+
+**The one case that is not ruled out is a fault.** An *unclamped* interruption of winding current
+— 19.70 µH at 373.2 A, **1.37 J stored per phase**:
+
+| Interrupted in | dI/dt | Induced | vs air's 327 V |
+|---:|---:|---:|---|
+| 1 µs | 3.73 × 10⁸ A/s | **7,351 V** | **exceeds** |
+| 10 µs | 3.73 × 10⁷ A/s | **735 V** | **exceeds** |
+| 100 µs | 3.73 × 10⁶ A/s | 74 V | below |
+
+A healthy bridge freewheels through its antiparallel diodes and holds the winding near the bus.
+**An open-circuit fault has no such path**, and at the critical ascent pressure that is a
+breakdown.
+
+**So the requirement is an inhibit, not a design change:** *the bank shall be uncharged and the
+winding unenergised while the vehicle transits the Paschen-critical pressure band during ascent.*
+The machine has no reason to be energised then, the rideshare guide already calls out **power
+inhibits** as separately-verified testing, and **no such requirement is currently written down
+anywhere in this repository.** That absence is the finding.
+
+**CFD was not used and is not needed.** The conclusion turns on the bus being below a gas
+constant, which no venting model changes. A venting time constant would be orifice flow, not a
+Navier–Stokes solve, and using one here would be theatre.
 
 ## What this file changes
 
