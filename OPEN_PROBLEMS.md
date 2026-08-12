@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **76 numbered entries, of which 33 are live.** Every entry carries a `Status:` line written by
+> **77 numbered entries, of which 34 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **33** (17 P, 16 E) | open engineering; something still has to be done |
+> | `LIVE` | **34** (17 P, 17 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
@@ -32,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 76 entries stand, and the 33 live
+> nothing in it has been deleted, closed or downgraded — all 77 entries stand, and the 34 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -2117,6 +2117,56 @@ for the three cycling mechanisms; and a per-shot p with the reasoning behind it.
 degrades rather than stops (`paper.tex` §VII, and P29 closed the modelling half). The retention
 gates are per-cassette, so one gate failure forfeits six rather than twelve. **Neither has been
 credited in a reliability model because no reliability model exists.**
+
+### E31. The two ConOps have different launch-interface compliance positions, and nothing distinguishes them: NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found by the ICD survey, 2026-08-10.** See [`docs/ICD_COMPLIANCE.md`](docs/ICD_COMPLIANCE.md).
+
+The review question was whether a published rideshare interface permits deployment at 16.388 m/s.
+**It does** — §3.2.2 of the Rideshare Payload User's Guide, Version 10 (September 2024), caps
+separation at 1.0 m/s and then exempts containerised CubeSat deployments explicitly, with no
+numeric ceiling. **That question is closed and the premise survives.**
+
+**What the survey found instead is that VOLLEY's two configurations are not equally compliant, and
+the repository has always treated them as one product.**
+
+| | Dedicated: VOLLEY as a dispenser on the launch vehicle | Hosted: VOLLEY on a separated stage (ADR-024) |
+|---|---|---|
+| Deployment class | primary, from the launch vehicle | **secondary deployment** — a deployed object deploying sub-payloads |
+| Seven-day hold before first shot | **no** | **yes** |
+| Active attitude control required at every release | yes | yes |
+
+**The seven-day hold is the expensive one.** E28 found campaign mission life at a real POEM
+altitude is about a month — two GMAT runs at 350 km reentered at **36 and 29 days**. **Seven days
+is 20–24 % of the window, spent before the first satellite leaves**, and ADR-024 adopted the
+hosted configuration as the product framing without this cost in view.
+
+**And it compounds with E29.** The same document requires that *"all secondary deployments must be
+performed while under active attitude control. Deployments in uncontrolled directions or during
+Payload tumbling are not allowed."* E29 computes wheel saturation at roughly **shot four of
+twelve** for a 50 mm thrust-line-to-CoM offset. **After that point the remaining deployments are
+not merely degraded, they are non-compliant** — an engineering problem converted into an approval
+problem.
+
+**What would close it:** a compliance matrix per configuration, a campaign timeline for the hosted
+case that carries the seven-day hold against E28's reentry window, and the CoM-alignment
+requirement E29 already asks for — which is now a compliance requirement rather than an
+engineering preference.
+
+**Two further items from the same document, neither in any analysis here:**
+
+1. **A dispenser quasi-static case of 10 g axial and 17 g lateral (RSS).** The structural work in
+   A18 and A22 is random-vibration and axial-dominated; **lateral is the larger number** and the
+   retention gates are least studied in that axis.
+2. **An exit-direction requirement** that deployed payloads leave through the +X face of the
+   allowable payload volume. VOLLEY fires along its track axis, which on a radial ESPA port is not
+   the launch vehicle's +X. Whether the deployer's own volume is the governing frame is an
+   interface-review question and is unanswered.
+
+**The survey is one document deep.** No claim about the market should be made from it, only about
+this interface at this revision.
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

@@ -10,9 +10,12 @@ bring, written down in advance rather than waited for.
 >
 > | | Count | Meaning |
 > |---|---:|---|
-> | **Answered** | **11** | An analysis or document exists, with a band declared before it ran |
-> | **Partial** | **10** | Something exists; it does not fully answer the question as asked |
-> | **Open** | **14** | **Nothing in this repository addresses it** |
+> | **Answered** | **12** | An analysis or document exists, with a band declared before it ran |
+> | **Partial** | **11** | Something exists; it does not fully answer the question as asked |
+> | **Open** | **12** | **Nothing in this repository addresses it** |
+>
+> *Updated 2026-08-10: item **30** moved to answered (the interface permits it), and item **20**
+> to partial (E30 quantified the structure; per-shot reliability is still unestimated).*
 >
 > **Fourteen of thirty-five have no answer at all.** Several are not hard — they are simply not
 > done. Two of the four the author judges potentially project-lethal (**22** and **30**) are in
@@ -78,7 +81,43 @@ rails and no designed interface at all**.
 
 **This is the strongest argument against the project and it is stated in its own kill criteria.**
 
-### 30. Do launch vehicle ICDs even permit deployment at 16 m/s? — **OPEN, and it may be decisive**
+### 30. Do launch vehicle ICDs even permit deployment at 16 m/s? — **ANSWERED 2026-08-10. Yes. And the survey found three worse problems**
+
+**Rideshare Payload User's Guide, Version 10 (September 2024), §3.3.2**, read in full:
+
+> *"Payloads must target a minimum separation velocity of 0.3 m/s and a maximum separation
+> velocity of 1.0 m/s. **Containerized deployments such as CubeSats may be deployed at a velocity
+> greater than 1.0 m/s.**"*
+
+**A 1.0 m/s cap exists and containerised CubeSat deployments are explicitly exempt, with no
+numeric ceiling anywhere in the document.** VOLLEY is a containerised CubeSat deployment.
+**16.388 m/s is not prohibited on this interface at this revision.** The question expected to be
+lethal is not.
+
+**But the same document contains three requirements that matter more**, all recorded in
+[`docs/ICD_COMPLIANCE.md`](ICD_COMPLIANCE.md) and **E31**:
+
+1. **Deployments must be under active attitude control**, and *"deployments in uncontrolled
+   directions or during Payload tumbling are not allowed."* **E29 puts wheel saturation at about
+   shot four of twelve.** After that, remaining releases are **non-compliant**, not merely
+   degraded.
+2. **A seven-day hold before secondary deployments**, which applies to the hosted last-mile
+   configuration ADR-024 adopted. **E28 found the campaign window at a real POEM altitude is
+   29–36 days**, so the hold costs 20–24 % of it before the first shot.
+3. **An exit-direction requirement** — deployed payloads must leave through the +X face of the
+   allowable payload volume. VOLLEY fires along its track axis, which on a radial ESPA port is
+   not +X.
+
+**Plus a qualification gap that is paperwork, not physics.** NRCSD-E reportedly requires CubeSats
+to withstand **0.5–2.5 m/s** at ejection *(second-hand, not read in the primary document)*.
+VOLLEY is 6.6× that ceiling. **Physically irrelevant** — a satellite is damaged by acceleration,
+not velocity, and 10.53 g sits well inside the 25 g CDS cap. **Programmatically real**: a customer
+qualified "per NRCSD-E" has no qualification basis for 16.4 m/s even though nothing about their
+hardware is threatened.
+
+**The survey is one document deep** and supports no claim about the market.
+
+### 30 (original assessment, retained) — **OPEN, and it may be decisive**
 
 **Nothing in this repository checks it.** The only ICD references are to NRCSD tip-off *rate*
 limits (2 °/s versus 5 °/s, an unresolved conflict already logged), not to separation *velocity*
