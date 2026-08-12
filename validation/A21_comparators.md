@@ -1,5 +1,19 @@
 # A21: VOLLEY against the alternatives, on identical axes
 
+> ## Forward note, 2026-08-10: what this ratio does and does not govern
+>
+> **Nothing below is edited. Band 1 was declared before the run and it passed at 7.52×**, and a
+> band is never rewritten after its run — the same rule that left A1's sheet untouched and put
+> its correction elsewhere.
+>
+> **But 7.52× is a ratio of _gains_** (+61.8 % against +8.2 %). On **delivered orbital life** —
+> total years, 2.111 against 1.412 at 450 km — the ratio is **1.495×**.
+>
+> **Use 1.495× for any risk-weighted comparison**, because a satellite the deployer never
+> releases delivers nothing, and `docs/FMEA.md` shows this architecture forfeits satellites in
+> ways a spring does not. **E30** records the correction and the reason it matters: 7.52× flatters
+> in exactly the comparison a reviewer will make.
+
 **Closes:** nothing. **Establishes** the competitive position on computed numbers rather than on
 assertion, and removes a claim the repository cannot support.
 

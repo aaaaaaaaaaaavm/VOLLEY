@@ -21,6 +21,11 @@ the **36–231 °/s** cradle arrival at the *start* of the stroke. The claim tha
 Added: the last-mile ConOps in §VII with its envelope bounded by A20, and the **7.5×**
 lifetime-extension ratio from A21 in the abstract.
 
+> **Outstanding for the next build (E30-02).** The abstract's **7.5×** is a ratio of *gains*.
+> On **delivered orbital life** it is **1.495×**, and that is the figure a risk-weighted
+> comparison uses. `paper.tex` has not yet been updated to carry both, so **the compiled PDF
+> currently quotes the flattering half alone.**
+
 **2026-08-10, the payload magnetic environment (P34, P38).** Sec. VII gains the inward-facing
 half of the interface, and Sec. on space environment and EMC has a falsified sentence removed:
 it claimed a magnetometer-carrying customer payload "sees a field comparable to a conventional

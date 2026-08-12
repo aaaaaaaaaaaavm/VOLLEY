@@ -9,6 +9,19 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (twenty-second pass): propagating the correction I logged and then left in the register
+
+| ID | Item | Detail |
+|---|---|---|
+| **E30-04** | **The delivered-life correction was logged and never propagated** | E30-02 established on 2026-08-10 that the headline **7.52×** is a ratio of *gains*, and that on **delivered orbital life** it is **1.495×**. That correction went into the register and `REVIEW_RESPONSES.md` and **nowhere else** — `SUMMARY.md`, `docs/index.html`, `docs/LANDSCAPE.md` and `paper/README.md` all continued to publish the flattering half alone. **This is the P42 defect class**: a known correction sitting in the register while the public pages say something different. |
+| E30-05 | **Fixed on all four surfaces, without touching a band** | **7.52× is not wrong** — A21 band 1 was declared before its run and passed. The fix is to carry **1.495×** alongside it, not to delete it, which would be editing a passed band's result. A **forward note** was added to `A21_comparators.md` that alters nothing below it, following the precedent set when A1's sheet was left as written and its correction placed elsewhere. |
+| E30-06 | **And the paper is flagged rather than quietly fixed** | `paper.tex` still carries **7.5×** in the abstract with no delivered-life figure. `paper/README.md` now records that explicitly: **the compiled PDF currently quotes the flattering half alone**, outstanding for the next build. |
+
+**What authorised it.** Propagation of an existing register entry. **No band edited, no operating
+point moved**, and `make_baseline.py --check` still passes 23 of 23.
+
+---
+
 ## 2026-08-10 (twenty-first pass): the last five review items, and the field exposure turns out to be optional
 
 | ID | Item | Detail |

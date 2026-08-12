@@ -27,7 +27,10 @@ constellation phase spacing in **1.4-6.9 days** against roughly 25 for different
 > **The comparison that matters, computed rather than quoted** ([A21](validation/A21_comparators.md)).
 > Against the fastest published spring VOLLEY is 6.6× on *velocity* — but **7.52× on orbital
 > lifetime extension**, because lifetime is superlinear in Δv (+61.8 % against +8.2 %); against a
-> typical 2 m/s spring it is **9.45×**. Deployer mass per 3U satellite is at **parity** with a
+> typical 2 m/s spring it is **9.45×**. **But read that ratio with E30 attached:** 7.52× is a
+> ratio of *gains*, and on **delivered orbital life** the ratio is **1.495×** — which is the
+> number a risk-weighted comparison uses, because a satellite that is never released delivers
+> nothing. Deployer mass per 3U satellite is at **parity** with a
 > canisterised dispenser, 6.375 kg against ~6 kg, a ratio of 1.062. And a spring's **designed
 > differential between satellites is exactly zero**, so a spring-deployed fleet phases only by
 > drag — 25 days, unschedulable — against VOLLEY's **1.38 days**.

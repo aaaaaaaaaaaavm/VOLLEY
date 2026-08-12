@@ -44,6 +44,13 @@ in the same mass class as a canister of springs, per satellite.
 > **7.52×**, or **9.45×** against a typical 2 m/s spring. See
 > [`../validation/A21_comparators.md`](../validation/A21_comparators.md).
 >
+> **And the correction that ratio needs, from E30.** 7.52× is a ratio of *gains*. On **delivered
+> orbital life** — total years, 2.111 against 1.412 at 450 km — it is **1.495×**. That is the
+> figure any *risk-weighted* comparison must use, because a satellite the deployer never releases
+> delivers nothing, and `docs/FMEA.md` shows this architecture forfeits satellites in ways a
+> spring does not. **Quoting 7.52× alone flatters in exactly the comparison a reviewer will
+> make.**
+>
 > **The advantage with no ratio at all is the designed differential.** A spring gives every
 > satellite the same nominal push, so its commandable spread is **exactly zero** and a
 > spring-deployed fleet can only phase by drag — **25 days, and unschedulable**, against VOLLEY's
