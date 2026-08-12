@@ -39,6 +39,11 @@ published number 37 % high, and one returned three rows that could not be evalua
 > **[`docs/CONCEPT.md`](docs/CONCEPT.md)** states it properly, with the boundary attached —
 > altitude and phase are in, **plane change is not**, at 133 m/s per degree.
 
+> **Deciding whether to use it?** **[`docs/CASE_STUDY.md`](docs/CASE_STUDY.md)** is the case for
+> VOLLEY written for an operator rather than a reviewer: a worked twelve-satellite mission —
+> **30° of phase in 1.4 days against 25 by drag** — with the losses stated in the same voice as
+> the wins, because an operator who finds the losses themselves discounts the wins too.
+
 > **Reviewing it?** **[`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md)** answers
 > thirty-five reviewer questions, or concedes them. **Fourteen have no answer in this repository
 > at all**, and they are listed as openly as the eleven that do. Three of the answers are losses:
@@ -59,7 +64,7 @@ published number 37 % high, and one returned three rows that could not be evalua
 > [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both generated from
 > [`cad/parameters.json`](cad/parameters.json) so they cannot drift from it.
 
-**[🔍 Review responses](docs/REVIEW_RESPONSES.md)** · **[🏗 Build readiness](docs/BUILD_READINESS.md)** · **[🧊 CAD brief](CAD_BRIEF.md)** · **[📐 Dimensions](cad/DIMENSIONS.md)** · **[🔧 BOM](cad/BOM.md)** · **[🎯 The concept](docs/CONCEPT.md)** · **[📄 One-page summary](SUMMARY.md)** · **[🧊 Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[🗺 Roadmap](docs/ROADMAP.md)** · **[⚠ Open problems](OPEN_PROBLEMS.md)** · **[✓ Validation](docs/VALIDATION_REPORT.md)** · **[🏗 Manufacturing](docs/MANUFACTURING.md)** · **[📐 ADRs](docs/adr/)** · **[📚 Literature](docs/LITERATURE.md)** · **[🎯 Research position](docs/RESEARCH_POSITION.md)** · **[⛔ Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[☠ Kill criteria](docs/KILL_CRITERIA.md)** · **[🏁 Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[🔩 Structural gap](docs/STRUCTURAL_GAP.md)** · **[📦 Payload classes](docs/PAYLOAD_CLASSES.md)** · **[🧲 Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[🧪 B-1 order](docs/B1_ORDER.md)** · **[📈 Market](docs/MARKET.md)**
+**[📈 The case](docs/CASE_STUDY.md)** · **[🔍 Review responses](docs/REVIEW_RESPONSES.md)** · **[🏗 Build readiness](docs/BUILD_READINESS.md)** · **[🧊 CAD brief](CAD_BRIEF.md)** · **[📐 Dimensions](cad/DIMENSIONS.md)** · **[🔧 BOM](cad/BOM.md)** · **[🎯 The concept](docs/CONCEPT.md)** · **[📄 One-page summary](SUMMARY.md)** · **[🧊 Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[🗺 Roadmap](docs/ROADMAP.md)** · **[⚠ Open problems](OPEN_PROBLEMS.md)** · **[✓ Validation](docs/VALIDATION_REPORT.md)** · **[🏗 Manufacturing](docs/MANUFACTURING.md)** · **[📐 ADRs](docs/adr/)** · **[📚 Literature](docs/LITERATURE.md)** · **[🎯 Research position](docs/RESEARCH_POSITION.md)** · **[⛔ Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[☠ Kill criteria](docs/KILL_CRITERIA.md)** · **[🏁 Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[🔩 Structural gap](docs/STRUCTURAL_GAP.md)** · **[📦 Payload classes](docs/PAYLOAD_CLASSES.md)** · **[🧲 Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[🧪 B-1 order](docs/B1_ORDER.md)** · **[📈 Market](docs/MARKET.md)**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |

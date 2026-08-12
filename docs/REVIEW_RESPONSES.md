@@ -587,6 +587,12 @@ sentence.**
 attached, and record what they say — including if it is no. **That is not analysis and no further
 analysis substitutes for it.**
 
+> **The sentence has since been built out into [`CASE_STUDY.md`](CASE_STUDY.md)**, written for an
+> operator rather than a reviewer: the customer profile, a worked twelve-satellite mission
+> (**30° of phase in 1.4 days against 25 by drag**, and **+49 % orbital life each**), the four
+> alternatives each with the axis they win on, and the four things that must become true before
+> anyone can buy it. **It is the document to send, not this one.**
+
 ## What this file changes
 
 **Nothing yet.** It is a triage, not a set of results. Its purpose is to record — before any of
