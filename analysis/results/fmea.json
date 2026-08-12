@@ -1,0 +1,131 @@
+{
+  "n_elements": 13,
+  "n_shared": 9,
+  "elements": [
+    {
+      "name": "Sled chassis and rollers",
+      "scope": "shared",
+      "cycles": 12,
+      "costs": "all remaining",
+      "note": "One sled serves all twelve cells. No redundant sled, no manual release. Review item 22"
+    },
+    {
+      "name": "Stator winding",
+      "scope": "shared",
+      "cycles": 12,
+      "costs": "all remaining",
+      "note": "Segmented per paper.tex Sec.VII, so losing one segment degrades rather than stops. NOT credited below -- segmentation is stated, never analysed"
+    },
+    {
+      "name": "Power converter (SiC bridge)",
+      "scope": "shared",
+      "cycles": 12,
+      "costs": "all remaining",
+      "note": "No radiation or SEE qualification path exists. Review item 25"
+    },
+    {
+      "name": "Energy store (bank or flywheel)",
+      "scope": "shared",
+      "cycles": 12,
+      "costs": "all remaining",
+      "note": "P26: the bank cannot source the shot on purchasable parts. A25's flywheel adds a rotating mechanism"
+    },
+    {
+      "name": "Avionics and shot sequencer",
+      "scope": "shared",
+      "cycles": 12,
+      "costs": "all remaining",
+      "note": ""
+    },
+    {
+      "name": "Position sensing / commutation",
+      "scope": "shared",
+      "cycles": 12,
+      "costs": "all remaining",
+      "note": "A synchronous machine that loses position feedback cannot commutate"
+    },
+    {
+      "name": "Eddy brake",
+      "scope": "shared",
+      "cycles": 12,
+      "costs": "all remaining",
+      "note": "PROVISIONAL: pole plates lightened on structural reasoning alone, no magnetic sizing. P28. Failure may also eject the sled -- review item 23"
+    },
+    {
+      "name": "Sled return",
+      "scope": "shared",
+      "cycles": 12,
+      "costs": "all remaining",
+      "note": ""
+    },
+    {
+      "name": "Launch lock release",
+      "scope": "shared",
+      "cycles": 1,
+      "costs": "all",
+      "note": "One-shot, fires once. The only shared element that does not cycle"
+    },
+    {
+      "name": "Cassette follower drive",
+      "scope": "cassette",
+      "cycles": 6,
+      "costs": "six",
+      "note": ""
+    },
+    {
+      "name": "Escapement",
+      "scope": "cassette",
+      "cycles": 6,
+      "costs": "six",
+      "note": ""
+    },
+    {
+      "name": "Retention gate (2 x D9 pins)",
+      "scope": "cassette",
+      "cycles": 6,
+      "costs": "six",
+      "note": "A22 resized D6 -> D9 for the vibration case. Cycle life untested"
+    },
+    {
+      "name": "Individual release event",
+      "scope": "shot",
+      "cycles": 1,
+      "costs": "one",
+      "note": ""
+    }
+  ],
+  "sweep": [
+    {
+      "r": 0.9999,
+      "p_shot": 0.998950498608714,
+      "expected": 11.922908962930642
+    },
+    {
+      "r": 0.999,
+      "p_shot": 0.9895497339521168,
+      "expected": 11.256089969747627
+    },
+    {
+      "r": 0.995,
+      "p_shot": 0.9487293754665997,
+      "expected": 8.802092341365173
+    },
+    {
+      "r": 0.99,
+      "p_shot": 0.8998488029781773,
+      "expected": 6.619761180414527
+    },
+    {
+      "r": 0.98,
+      "p_shot": 0.8088608114626351,
+      "expected": 4.018682505834761
+    },
+    {
+      "r": 0.95,
+      "p_shot": 0.5835765813396857,
+      "expected": 1.3674506782792906
+    }
+  ],
+  "required_r_delivered_life": 0.9932567706733433,
+  "required_r_satellite_count": 0.9998439913043206
+}

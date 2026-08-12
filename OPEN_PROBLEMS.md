@@ -2113,6 +2113,21 @@ failure forfeits the remaining manifest; a stated single-failure-loses-N figure;
 for the three cycling mechanisms; and a per-shot p with the reasoning behind it. Adjacent to
 **P28** (brake), and it subsumes the specific jam case raised as review item 22.
 
+> **The FMEA half was done 2026-08-10** — [`docs/FMEA.md`](docs/FMEA.md),
+> `analysis/fmea.py`. **Nine of thirteen elements forfeit the remaining manifest on a single
+> failure, against zero for a spring dispenser, and nine shared elements over twelve cycles is
+> 108 chances to fail.**
+>
+> It converts this entry into a **requirement**: to beat a 0.99-reliable spring on delivered
+> orbital life, each element needs **r ≥ 0.99326 per cycle** (surviving the campaign with
+> probability 0.922). To match it on **satellite count** needs **r ≥ 0.99984**, which is not a
+> realistic target — **VOLLEY should not be sold on satellite count.**
+>
+> **This entry stays LIVE because r is still unmeasured.** No cycle-life test exists for the
+> escapement, the gate or the sled, and that is metal rather than computation. The jam case of
+> review item 22 is answered structurally — it is one of nine ways to lose the manifest, not a
+> special case — but there is still no recovery mode and no accepted-risk statement.
+
 **Mitigations that exist but are unquantified:** the winding is segmented, so losing one segment
 degrades rather than stops (`paper.tex` §VII, and P29 closed the modelling half). The retention
 gates are per-cassette, so one gate failure forfeits six rather than twelve. **Neither has been

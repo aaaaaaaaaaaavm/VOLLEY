@@ -59,9 +59,14 @@ a P-POD-class dispenser, where each tube's failure costs one satellite.
 **It is worse than a generic reliability concern**, because a jam mid-stroke leaves a satellite
 retained by a partially-actuated mechanism with a charged bank behind it.
 
-**Closing it:** an FMEA with the jam case explicitly enumerated, a stated
-single-failure-loses-N figure, and either a recovery mode or an accepted-risk statement with the
-number attached. **None of this exists.**
+**Answered structurally, 2026-08-10** — [`docs/FMEA.md`](FMEA.md). **The jam is not a special
+case: it is one of nine elements that forfeit the remaining manifest on a single failure**, and
+the sled is merely the most obvious. A spring dispenser has **zero** such elements. Nine shared
+elements over twelve cycles is **108 chances to fail**.
+
+**What is still missing is what was asked for second:** there is **no recovery mode and no
+accepted-risk statement**, and the per-element reliability that would make the risk quantifiable
+is **unmeasured** — cycle-life testing is metal, not computation. See **E30**.
 
 ### 28. How does the mass compare against a COTS cold-gas module delivering the same Δv? — **ANSWERED, and it is a loss**
 

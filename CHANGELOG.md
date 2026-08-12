@@ -9,6 +9,26 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (seventeenth pass): the launch interface permits it, and the FMEA turns E30 into a requirement
+
+| ID | Item | Detail |
+|---|---|---|
+| **ICD-01** | **Review item 30 answered: the interface permits 16.388 m/s** | Rideshare Payload User's Guide **Version 10, September 2024, §3.3.2**, read in full: a 1.0 m/s cap exists and *"containerized deployments such as CubeSats may be deployed at a velocity greater than 1.0 m/s"*, with **no numeric ceiling anywhere in the document**. The question expected to be lethal is not. `docs/ICD_COMPLIANCE.md`. |
+| **E31** | **The same document found three worse problems** | **(1)** Deployments must be under **active attitude control** and are *"not allowed"* while tumbling — and **E29 puts wheel saturation at about shot four of twelve**, so the remainder are non-compliant, not merely degraded. **(2)** A **seven-day hold** on secondary deployments, which applies to the hosted ConOps ADR-024 adopted and costs **20–24 %** of the 29–36 day campaign window E28 measured. **(3)** An **exit-direction requirement** (+X face) that a radially-mounted deployer may not satisfy. |
+| ICD-02 | **Numbers to adopt, not previously in any analysis** | **10 g axial / 17 g lateral (RSS)** quasi-static for a CubeSat dispenser — **lateral is larger**, and the structural work in A18/A22 is random-vibration and axial-dominated. Launch vehicle rates before separation: **±2.0 °/s roll, ±1.0 °/s pitch and yaw**. |
+| ICD-03 | **A qualification gap that is paperwork, not physics** | NRCSD-E reportedly requires CubeSats to withstand **0.5–2.5 m/s** at ejection *(second-hand, not read in the primary document, and flagged as such)*. VOLLEY is **6.6×** that. Physically irrelevant — satellites are damaged by acceleration, not velocity, and 10.53 g sits inside the 25 g CDS cap — but a customer qualified "per NRCSD-E" has **no qualification basis** for 16.4 m/s. |
+| **FMEA-01** | **Nine of thirteen elements forfeit the remaining manifest on a single failure** | Against **zero** for a spring dispenser. **Nine shared elements over twelve cycles is 108 chances to fail.** `docs/FMEA.md`, `analysis/fmea.py`. **This answers review item 22 structurally**: a jammed sled is not a special case, it is one of nine. |
+| **FMEA-02** | **E30 becomes a requirement instead of a criticism** | To beat a 0.99-reliable spring **on delivered orbital life**, each element needs **r ≥ 0.99326 per cycle** — surviving the campaign with probability 0.922. **The first quantitative reliability requirement this project has had.** |
+| FMEA-03 | **And a claim the project should stop making** | Matching a spring **on satellite count** needs **r ≥ 0.99984**, which is not realistic for a twelve-cycle electromechanical system with no flight heritage. **VOLLEY should not be sold on satellite count**; the defensible claim is fewer satellites and more total mission value, above r ≈ 0.9933. |
+| FMEA-04 | **Two mitigations exist and are deliberately not credited** | The winding is **segmented** (P29 closed the modelling half) so losing a segment should degrade rather than stop — **never analysed as redundancy**, and crediting it without analysis would be the optimism this file exists to avoid. Gates are **per-cassette**, already in the model's structure. |
+| CNT-10 | **Register 76 → 77, 33 → 34 live** | E31. Header propagated. E30 stays LIVE: **r is unmeasured**, and cycle-life testing is metal, not computation. |
+
+**What authorised it.** `ICD_COMPLIANCE.md` is a document review and declares no band, which it
+says of itself; `FMEA.md` sweeps reliability as a parameter rather than asserting one. **No
+operating point moved.**
+
+---
+
 ## 2026-08-10 (sixteenth pass): a reviewer's register, and the reliability arithmetic it forces
 
 | ID | Item | Detail |
