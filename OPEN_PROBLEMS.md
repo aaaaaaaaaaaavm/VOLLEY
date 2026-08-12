@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **78 numbered entries, of which 35 are live.** Every entry carries a `Status:` line written by
+> **80 numbered entries, of which 37 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **35** (17 P, 18 E) | open engineering; something still has to be done |
+> | `LIVE` | **37** (17 P, 20 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
@@ -32,7 +32,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > ## FROZEN 2026-08-10 — [ADR-021](docs/adr/021-freeze-the-register.md)
 >
 > **This register is closed to new entries except in three cases.** It remains authoritative and
-> nothing in it has been deleted, closed or downgraded — all 78 entries stand, and the 35 live
+> nothing in it has been deleted, closed or downgraded — all 80 entries stand, and the 37 live
 > ones still carry their named next steps. **A freeze is not a purge.**
 >
 > **A new numbered entry may be opened only for:**
@@ -2228,6 +2228,94 @@ fault during *operation* in vacuum has a defined current path. Neither exists.
 
 **What this does not need:** a CFD venting model. The conclusion turns on the bus sitting below a
 gas constant, which no depressurisation model changes.
+
+### E33. Magnet tolerance leaves a residual dipole that saturates the host's wheel in days, with the machine idle: NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Review item 11, computed 2026-08-10.** `analysis/residual_dipole.py`.
+
+**The reassuring half first: an ideal Halbach array has no net moment.** Summing all 56 blocks
+over seven whole wavelengths gives **3.5 × 10⁻¹⁴ A·m²** — numerically zero, as it must be, because
+the magnetisations rotate through 360° and cancel.
+
+**Tolerance does not cancel.** With class figures for sintered NdFeB — **±2 % on Br, ±2° on
+magnetisation axis**, 4000 Monte-Carlo trials over 56 blocks:
+
+| | Residual dipole |
+|---|---:|
+| median | **0.77 A·m²** |
+| 95th percentile | **1.56 A·m²** |
+| 99th percentile | **1.92 A·m²** |
+
+**This is at or above typical small-spacecraft magnetic cleanliness allocations**, which commonly
+sit in the 0.1–1 A·m² range.
+
+**What it does to the host, in a 30 µT field at 450 km:**
+
+| Residual | Torque | H per orbit | **Wheel saturated in** |
+|---|---:|---:|---:|
+| median | 2.30 × 10⁻⁵ N·m | 0.129 N·m·s | **7.5 days** |
+| 95th | 4.69 × 10⁻⁵ N·m | 0.263 N·m·s | **3.7 days** |
+| 99th | 5.76 × 10⁻⁵ N·m | 0.323 N·m·s | **3.0 days** |
+
+**against a 15 N·m·s ESPA-class wheel, and this happens whether or not the machine ever fires.**
+
+**Three independent paths now lead to the same failure**, and this is the one that does not
+require a shot:
+
+1. **E29** — the shot's mechanical angular impulse saturates the wheel at about **shot four**;
+2. **E33** — the residual dipole saturates it in **3–7.5 days**, idle;
+3. **E31** — and once attitude authority is gone, remaining deployments are **not compliant**,
+   not merely degraded.
+
+**Against E28's 29–36 day campaign window and E31's seven-day hold, the magnets alone can exhaust
+the wheel before the campaign finishes.**
+
+**Worst case, deliberately.** No orbital averaging is credited. A body-fixed dipole in a rotating
+geomagnetic field averages partially, so these are an **upper bound** — but the bound is the number
+that decides whether the ACS can hold a campaign, and no lower bound has been computed either.
+
+**What would close it, and the fix is cheap.** **Magnet screening and matched-set assembly**: measure
+each block's moment and axis on receipt, sort into matched sets, and place them to cancel. That is
+a manufacturing procedure, not a design change, and it is the standard answer to exactly this
+problem. **B-1 already buys a teslameter and eight blocks**, so the screening method could be
+demonstrated on the bench article at no additional hardware cost. A compensating magnet is the
+fallback. Neither is specified anywhere.
+
+### E34. The brake dumps 18.5 kN into a structure holding eleven stowed satellites, eleven times: NEW 2026-08-10
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Review item 12, 2026-08-10.**
+
+**Release is the benign half and A23 already showed why:** separation happens **12.2 ms into
+coast, at zero commanded force**, so the payload leaves with no force step. The only shock sources
+are gate withdrawal and stiction break, both small.
+
+**Brake engagement is not benign, and the payload is the wrong thing to worry about.** By then it
+has gone — but **eleven satellites are still in the cassettes**, and they see the arrest through
+the structure:
+
+| Arrest | Force into the track | Stops in | Over |
+|---:|---:|---:|---:|
+| 50 g | 4.6 kN | 201.7 mm | 28.7 ms |
+| 100 g | 9.3 kN | 100.9 mm | 14.3 ms |
+| **200 g** — the design cap | **18.5 kN** | 50.4 mm | **7.2 ms** |
+
+The sled enters the brake at **14.07 m/s carrying 935 J**, and `cad/parameters.json` sets
+`arrest_g_cap: 200` — the tapered pole entry exists specifically to limit deceleration to it.
+
+**A stowed 3U's qualification case is the 25 g CDS cap and the launch random-vibration
+spectrum.** It is **not** a 200 g mechanical shock delivered through its own dispenser, **repeated
+eleven times**. Nothing in this repository computes what actually reaches a cassette — there is no
+shock response spectrum anywhere; `grep -ri "shock spectrum"` returns nothing.
+
+**What would close it:** a shock response spectrum at the cassette interface for the 200 g arrest,
+compared against a stated payload shock qualification level, and — if it does not close — either a
+lower arrest cap (the 50 g row costs 202 mm of run-out, which the envelope may not have, P9) or
+isolation between the brake reaction and the cassette mounts. **Adjacent to P28**, which already
+records that the regen stator and the eddy fin do not both fit the arrest section.
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done

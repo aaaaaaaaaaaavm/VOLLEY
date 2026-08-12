@@ -10,12 +10,17 @@ bring, written down in advance rather than waited for.
 >
 > | | Count | Meaning |
 > |---|---:|---|
-> | **Answered** | **12** | An analysis or document exists, with a band declared before it ran |
-> | **Partial** | **11** | Something exists; it does not fully answer the question as asked |
-> | **Open** | **12** | **Nothing in this repository addresses it** |
+> | **Answered** | **17** | An analysis or document exists, with a band or criteria declared before it ran |
+> | **Partial / scoped** | **13** | Something exists, or the path is named; neither fully answers the question |
+> | **Open** | **5** | **Nothing in this repository addresses it** |
 >
-> *Updated 2026-08-10: item **30** moved to answered (the interface permits it), and item **20**
-> to partial (E30 quantified the structure; per-shot reliability is still unestimated).*
+> *Updated 2026-08-10 as the register was worked: **30** answered (the interface permits it, and
+> the survey found three worse problems), **20/22** answered structurally by the FMEA, **26**
+> answered and reduced to an inhibit, **18** answered by the actuator trade, **11** and **12**
+> answered and severe, **10** and **25** scoped as qualification paths rather than analyses.*
+>
+> **Seven new register entries came out of this review** — E29 through E34, and P45 — which is
+> more than the review found wrong. **That is the point of asking someone who has flown things.***
 >
 > **Fourteen of thirty-five have no answer at all.** Several are not hard — they are simply not
 > done. Two of the four the author judges potentially project-lethal (**22** and **30**) are in
@@ -274,16 +279,16 @@ answer does not dispose of that.
 | # | Question | Nearest thing that exists | Severity |
 |---:|---|---|---|
 | **5** | Which specific customer or mission has asked for this? | `MARKET.md` describes a segment. **No customer exists, and none has been approached** | **High** — commercial |
-| **10** | Contamination and outgassing from rails, bearings, cable, brake | **E11** (no contamination or outgassing analysis) and **E21** (nothing on lubrication, cold welding or galling) — both open | High |
-| **11** | Does the array's residual dipole produce a secular magnetic torque on the host, and can the ACS null it? | **E29** covers the shot's *mechanical* angular impulse. The **magnetic** dipole torque is not modelled at all | High |
-| **12** | Shock spectrum at the payload interface, at release and at brake engagement | A23 covers release *kinematics*; `grep -ri "shock spectrum"` returns nothing | High |
+| **10** | Contamination and outgassing | **Scoped 2026-08-10, not analysed** — see below. **E11** and **E21** both open, and **A27 made E21 load-bearing** | High |
+| **11** | Residual dipole → secular torque on the host | **ANSWERED 2026-08-10** — **E33**. Ideal Halbach cancels exactly; **tolerance leaves 0.77–1.92 A·m², saturating a 15 N·m·s wheel in 3–7.5 days with the machine idle** | Answered, and severe |
+| **12** | Shock spectrum at release and brake engagement | **ANSWERED 2026-08-10** — **E34**. Release is benign (zero force, per A23). **Brake arrest puts 18.5 kN through a structure holding eleven stowed satellites, eleven times** | Answered, and open |
 | **15** | Why not an LSM-driven tug beneath the track, cable-and-pulley to the carriage, EMALS-like with reversed tug motion? | **PII-14** assessed a cable-driven gondola on 2026-08-10 and declined it on margin — but that concept moves the motor *off* the vehicle entirely. **The tug variant, where the LSM stays and only the coupling changes, was not assessed** | Medium |
 | **16** | Would separating the mover from the payload sled reduce field exposure and simplify the sled? | PII-11's side-rail layout and PII-14 both touch it. **Neither computes the field-exposure benefit**, which is the point of the question given 611× | **High** — it may be the cheapest fix to 7 and 9 |
 | **18** | Why a linear motor rather than a screw, rack, or staged spring? | **ANSWERED 2026-08-10** — A27. Screw disqualified by kinematics, rack by vacuum contact, **spring works and fails only on commandability** | Answered, and it narrows the case |
 | **19** | Cable in vacuum: fretting, cold welding, lubricant, pulley bearing life at 16.4 m/s, single load path | PII-14 flags it as unresolved; E21 covers tribology generally | Medium — only bites if a cable architecture is adopted |
 | **20** | How reliable is a system with this many failure points? | **Now partly answered — see below.** The *structure* is quantified in **E30**; **p itself is still unestimated** | **High** |
 | **22** | Sled jam loses the campaign | **Nothing** — see above | **Lethal** |
-| **25** | Radiation and single-event-effect qualification for the SiC drive | Nothing | High |
+| **25** | Radiation and SEE qualification for the SiC drive | **Scoped 2026-08-10, not analysed** — see below | High |
 | **26** | Multipaction and Paschen breakdown during ascent depressurisation | **ANSWERED 2026-08-10** — see below. Both ruled out on ordinary operation; an **inhibit requirement** falls out | Closed to an inhibit |
 | **30** | Do LV ICDs permit deployment at 16 m/s? | **Nothing** — see above | **Lethal** |
 
@@ -409,6 +414,45 @@ continuous control, and nothing in this repository had acknowledged it.
 
 **The honest position: VOLLEY buys continuous per-shot velocity control, and pays for it in mass,
 complexity and shared-failure exposure.**
+
+---
+
+## 10 and 25, scoped rather than answered
+
+**Both are qualification paths, not analyses, and pretending otherwise would be worse than saying
+so.** Neither can be closed by computation; both need parts selection and test.
+
+### 10 — contamination and outgassing
+
+**Nothing exists.** `OPEN_PROBLEMS.md` **E11** records the absence of any contamination or
+outgassing analysis and **E21** records that this repository contains nothing on lubrication, cold
+welding or galling.
+
+**A27 made E21 worse rather than better.** The actuator trade screened out a rack and pinion
+*specifically because* a contacting drive at 16 m/s in vacuum would make the tribology gap the
+load path. That reasoning only holds if the incumbent's own rolling contacts — four rollers, the
+cassette follower leadscrew, the escapement — are benign, and **that has never been shown.**
+
+**What the path looks like:** screen every non-metallic against ASTM E595 (**TML ≤ 1.0 %,
+CVCM ≤ 0.10 %**), which the PEEK formers and any potting must meet; specify a vacuum-rated dry
+lubricant for the rolling elements; and state a molecular contamination budget for the payload,
+which matters because a CubeSat with an optical payload sits inside this machine for the whole
+ascent. **Nothing in `cad/BOM.md` currently carries an outgassing spec at all.**
+
+### 25 — radiation and single-event effects in the SiC drive
+
+**Nothing exists**, and the converter is one of the manifest-forfeiting elements in `docs/FMEA.md`
+— so an unqualified part here is not a degraded shot, it is the end of the campaign.
+
+**SiC is not a neutral choice in this respect.** SiC MOSFETs are known to be susceptible to
+single-event burnout at derated drain voltages, and the derating required is often severe. The
+bus here is 96 V, which is modest, and that is the honest mitigating factor — but **derating
+policy, part selection and a TID budget for the mission duration are all absent.**
+
+**What the path looks like:** a TID budget from the orbit and duration (short, at LEO, so likely
+undemanding), a SEE-qualified part selection with the drain derating stated, and single-event
+burnout test data for the specific device. **None of this is analysis** — it is procurement and
+test, and it belongs in `docs/QUALIFICATION_PLAN.md`, which does not currently mention radiation.
 
 ## What this file changes
 
