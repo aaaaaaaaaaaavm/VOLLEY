@@ -55,9 +55,9 @@ constellation phase spacing in **1.4-6.9 days** against roughly 25 for different
 > of that capacitance achieves, and the shot does not close at a realistic value (**P26**). The
 > velocity and dispersion figures are unaffected, the bank sizing is. Not quietly re-sized.
 
-**Maturity: TRL 2-3. Nothing has been built, fired, or measured.** **Nineteen of twenty-one**
-specified validations have been run, each against an acceptance band declared *before* the run —
-and the results are mixed on purpose:
+**Maturity: TRL 2-3. Nothing has been built, fired, or measured.** **Twenty-four run sheets**
+exist, each against an acceptance band declared *before* the run — and the results are mixed on
+purpose:
 
 | | |
 |---|---|

@@ -10,7 +10,7 @@ between stator and magnets, and mass.
 Ironless: the winding sits in the airgap between two opposed Halbach arrays with no back-iron.
 
 ## Alternatives
-- **Iron-core stator.** Rejected: heavy, and the cogging torque conflicts directly with a
+- **Iron-core stator.** Rejected: heavy, and the cogging force conflicts directly with a
   dispersion claim measured in centimetres per second.
 - **Single-sided array with back-iron.** Rejected: halves the useful field for the same magnet
   mass.

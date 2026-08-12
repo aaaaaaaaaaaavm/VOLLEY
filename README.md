@@ -21,23 +21,46 @@ A magazine-fed electromagnetic deployer that ejects unmodified CubeSats from a h
 stage at programmable velocity, aimed at the unserved regime between spring deployers
 (~2 m/s) and propulsive orbital transfer vehicles (hundreds of m/s).
 
-**Status: design study, TRL 2-3.** Phase I CAD is complete across 9 Fusion 360 documents in three
-generations, with Gen3 STEP exports committed. A provisional Gen4 open assembly exists in Fusion
-but has no rated operating point or repository export yet ([status](docs/GEN4_STATUS.md)).
-**Nineteen of twenty-one planned validations have run**, each against an acceptance band declared
-*before* the run — **two of them failed outright**, several missed individual bands, one found a
-published number 37 % high, and one returned three rows that could not be evaluated at all.
-**Nothing has been built and nothing has been measured at any scale.**
-**Read `docs/PROVENANCE.md` before citing anything here.**
+## Design point
 
-> **What the machine is for**, in one paragraph, because the rest of this page is about the motor.
-> A rideshare CubeSat inherits whoever paid for the launch's orbit, and about 92 % of flown
-> CubeSats carry no propulsion to change it. VOLLEY turns a **spent upper stage** — which is
-> deorbited or left to decay regardless — into a **last-mile delivery vehicle**: it repositions
-> between altitude shells on its own reaction control and fires satellites off at individually
-> commanded velocities at each station, then deorbits. The satellites are never modified.
-> **[`docs/CONCEPT.md`](docs/CONCEPT.md)** states it properly, with the boundary attached —
-> altitude and phase are in, **plane change is not**, at 133 m/s per degree.
+| | | Source |
+|---|---|---|
+| Thrust constant | 11.03 N per kA/m, ±0.99 % ripple | `analysis/motor_model.py`, A1 |
+| Exit velocity, 3U | **16.39 m/s at 10.5 g** | `analysis/motor_model.py` |
+| Acceleration zone / track | 1.3 m / 1.5 m | `cad/parameters.json` |
+| Closed-loop dispersion | 0.027 m/s (3σ) at a 16.2 m/s setpoint | `analysis/motor_model.py` |
+| **Mass, dry / loaded** | **76.5 kg / 124.5 kg** | `analysis/mass_properties.py` |
+| Deployer mass per 3U satellite | **6.375 kg** | `analysis/payload_family.py` |
+| **Energy drawn per shot** | **2.85 kJ gross, 2.56 kJ net of regeneration** | `analysis/motor_model.py` |
+| Delivered to payload | 537 J — **21.0 % electrical-to-payload** | `analysis/motor_model.py` |
+| Recoil per shot | 65.6 N·s | `analysis/astro.py` |
+| Magazine | 12 × 3U, two transverse cassettes | `cad/parameters.json` |
+
+**TRL 2–3. Nothing has been built, fired, or measured at any scale.** Twenty-four validation
+run sheets exist, each against an acceptance band declared *before* the run; **two failed
+outright**, several missed individual bands, and **three times a declared band caught a bug in
+the analysis rather than in the design**. Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before
+citing anything here.
+
+## Against a spring dispenser
+
+The metrics on which the two differ. Losses are in the same table as the wins.
+
+| | Spring dispenser | VOLLEY | |
+|---|---|---|---|
+| Exit velocity | ~2 m/s (NRCSD-E specifies 0.5–2.5) | **16.39 m/s** | 6.6× |
+| Commanded differential between satellites | **zero by design** | per shot, continuous | categorical |
+| 30° of constellation phase | 25 days, by differential drag | **1.4–6.9 days** | `analysis/astro.py` |
+| Orbital life delivered, per satellite | 1.41 yr | **2.11 yr** | 1.495× |
+| Deployer mass per 3U satellite | ~6 kg, canisterised class | 6.375 kg | parity |
+| Maturity | **TRL 9** | TRL 2–3 | spring wins |
+| Elements whose single failure forfeits the remaining manifest | **0** | **9 of 13** | spring wins, `docs/FMEA.md` |
+| Reliability needed to match it on delivered life | — | **r ≥ 0.99326** per element per cycle, **unmeasured** | `docs/FMEA.md` |
+
+A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators.md`), and a
+~1.8 kg staged spring reaches the same velocity inside the g-cap
+(`validation/A27_actuator_trade.md`). **What VOLLEY sells is a fleet distributed on a schedule**
+— see [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md).
 
 > **Deciding whether to use it?** **[`docs/CASE_STUDY.md`](docs/CASE_STUDY.md)** is the case for
 > VOLLEY written for an operator rather than a reviewer: a worked twelve-satellite mission —
@@ -77,16 +100,18 @@ published number 37 % high, and one returned three rows that could not be evalua
 
 Four repositories, one programme, see **[`docs/PROGRAMME.md`](docs/PROGRAMME.md)**.
 
-## The idea
+## Background
 
-CubeSats flown as rideshare secondaries inherit the primary customer's orbit. The
-spring that ejects them adds 1-2 m/s, enough to drift clear, not enough to change an
-orbit. A satellite with no propulsion of its own is stuck there for life.
+Rideshare secondaries inherit the primary customer's orbit, and about 92 % of flown CubeSats
+carry no propulsion to change it. An ironless double-sided Halbach linear synchronous motor
+drives a reusable sled along the track; the magnets ride the sled, so the customer satellite
+takes no armature, no plating and no electrical interface.
 
-VOLLEY replaces the spring with an ironless double-sided Halbach linear synchronous
-motor driving a reusable magnetic sled along a 1.5 m track. Twelve 3U CubeSats feed
-from two transverse cassettes and are fired one at a time. The satellite is never
-modified, the magnets ride the sled, not the payload.
+The concept is a **last-mile delivery vehicle** rather than a deployer bolted to a passive host:
+a spent upper stage repositions between altitude shells on its own reaction control and fires
+satellites at individually commanded velocities at each station, then deorbits.
+**[`docs/CONCEPT.md`](docs/CONCEPT.md)** states it with the boundary attached — altitude and
+phase are in, **plane change is not**, at 133 m/s per degree.
 
 <table>
 <tr>

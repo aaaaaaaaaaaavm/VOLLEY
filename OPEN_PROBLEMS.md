@@ -63,6 +63,54 @@ Last reviewed 2026-08-10.
 
 ---
 
+## DRAFT RANKING — pending author confirmation
+
+**Ordered by how likely each live entry is to be design-fatal**, not by ID, date, or the
+HIGH/MEDIUM/LOW severity already carried in each entry. Those severities rank *how wrong a
+published number is*; this ranks *how likely the machine is not worth building*. The two orders
+are different, and neither replaces the other.
+
+**Nothing below is deleted, renumbered, or reworded.** This section only orders what already
+exists. **The author has not confirmed this ranking.**
+
+### The five most likely to be design-fatal
+
+| # | Entry | The failure it would cause | What would settle it either way |
+|---|---|---|---|
+| **1** | **E30** | Below **r = 0.99326** per element per cycle, the machine delivers less total mission value than a spring dispenser — nine of thirteen elements forfeit the remaining manifest where a spring forfeits one satellite. The product then has no reason to exist | **Cycle-life test of the escapement, retention gate and sled** to twelve cycles with margin, giving a measured per-element reliability. This is metal, not computation |
+| **2** | **E4** | Every number in the repository descends from a field model checked only analytic-against-analytic. If the measured thrust constant departs materially from 11.03 N per kA/m, the design point, the velocity, the lifetime multiplier and the comparison against a spring all move together | **B-1** — a gaussmeter and eight magnetised blocks, ₹22,000, method and bill of materials already written in `docs/B1_ORDER.md`. Unordered |
+| **3** | **E33** | The residual dipole from magnet tolerance saturates a 15 N·m·s wheel in **3.0–7.5 days with the machine idle**. Combined with **E31**, a host that has lost attitude authority may not legally deploy, so the campaign ends before the manifest does | **Measure the moment and axis of each block on receipt** and compute the assembled residual, rather than assuming the Monte-Carlo tolerance distribution. The same instrument B-1 buys |
+| **4** | **E34** | The 200 g arrest puts **18.5 kN through the structure eleven times** while eleven satellites are still stowed. A stowed CubeSat is qualified to 25 g and launch random vibration, not to this. If it does not close, the arrest cap must fall, and the 50 g case needs 202 mm of run-out the envelope does not have | **A shock response spectrum at the cassette interface** for the 200 g arrest, against a stated payload shock qualification level |
+| **5** | **E35** | The payload sits 20 mm from the array at **442× a magnetometer's full scale**, and soft-magnetic parts leave permanently magnetised. The claim that the satellite is never modified is therefore false as built, and that claim is the product | **Carry a longitudinal-separation layout into `cad/parameters.json` and recompute the field at the real payload station**, or write a magnetic-cleanliness limit into a payload interface document. Computation, not test |
+
+### Where the rest sit
+
+**Serious but not fatal — each has a known fix and the fix is affordable.** **P46** (K_t is
+4.42 % high) moves the design point but not the architecture; **P28**, **P36**, **P37**, **P41**
+and **P32** are design or analysis work with no result yet suggesting the machine cannot be
+built; **E29** and **E31** compound E33 rather than standing alone; **E32** reduces to a written
+inhibit.
+
+**Bounded scope rather than viability.** **E9**, **P44** and **E28** narrow what the machine can
+serve without threatening whether it works at all.
+
+**Bookkeeping, provenance and hygiene.** **P10**, **P14**, **P19**, **P20**, **P33**, **P35**,
+**P38**, **P39**, **E16**, **E18** and **E25** are records that disagree with each other or with
+their sources. They matter for whether the repository can be trusted; none of them is a reason
+the hardware would fail.
+
+**Not engineering.** **E14** and **E15** are disclosure and funding.
+
+### The disagreement this ranking has with the register's own severities
+
+**E4 carries no severity label at all** and is ranked second here. **P34** is labelled HIGH and
+does not appear in the top five, because a magnetometer-carrying payload being excluded bounds
+the market rather than the machine — and **E35** may remove the constraint entirely. **P45** is
+labelled LOW and is genuinely low. **If the author disagrees with any of this, the entries
+themselves are unchanged and this section is the only thing that needs editing.**
+
+---
+
 ## P: Errors found while building this repo (paper does not match its own scripts)
 
 > **STATUS (2026-07-23): P1, P4 all RESOLVED in `paper/paper.tex`.** Fixes, causes and
