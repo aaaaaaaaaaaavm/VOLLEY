@@ -9,6 +9,24 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (twenty-ninth pass): the Phase II items interact, and two of them cancel
+
+| ID | Item | Detail |
+|---|---|---|
+| **PRIOR-01** | **The operational shipboard electromagnetic launcher, cited for the first time** | The only electromagnetic launch system in routine service anywhere, and `PRIOR_ART.md` had never mentioned it. **Three of its architectural choices are choices this project reached independently**: linear induction with a passive armature, a segmented stator energised only under the shuttle (**ADR-022**), and flywheel pulsed storage (**A25**). Three convergences with a flown system is a stronger credibility argument than anything in `VALIDATION_REPORT.md`, and it was not being made. |
+| **PII-18** | **The plate does not have to be on the satellite** | As a **reusable shuttle** it is 0.398 kg against the Gen5 sled's 9.445, so the arrest falls from **1938 J to 82 J**. The satellite is **unmodified** again — no consumable, no interface to publish, no adopters to recruit — which **dissolves decision D2**, because every payload class works. The geometry that decides it is **twin fins straddling the satellite**, which puts the thrust line through its own axis and removes **P41**'s centre-of-mass offset. Nobody has drawn it. |
+| **SYN-01** | **PII-1 is superseded, and the reason is arithmetic** | The momentum-transfer release is the project's self-declared strongest idea, and its lever **is the mover's mass**: Δv = √(2EM/(m(M+m))). On a 0.6 kg shuttle the same 41.8 J buys **1.65 m/s instead of 3.83**, and matching the original costs **225 J**. PII-18 reaches the same velocity by not putting the energy into a sled, and **adds no mechanism to the release path** — which is PII-1's own stated reason for deferring. |
+| **SYN-02** | **PII-15 is superseded by margin nobody is spending** | Gen5 runs at **10.5 g of a 25 g budget**, which was never a choice — it is where thrust over mass landed with a 9.445 kg sled aboard. At **16.1 g the stroke is 850 mm instead of 1300**. PII-15's 2:1 reeving was "the only lever found that shortens the machine"; the margin does it for free and **without a cable over a sheave**, which `REV-07` records cannot claim the exemption that screened out the rack. |
+| **SYN-03** | **And together they close kill criterion 2** | Brake run-out **240 → 105 mm**. Closed envelope **1839 → 1254 mm** at Gen5's own exit velocity — **inside ESPA-Grande's ~1270 mm**, with 3.9 g of qualification margin still unspent. That criterion has been crossed or unevaluable since the envelope was first drawn, and **ADR-023's re-scope could be reversed on evidence** rather than defended. |
+| SYN-04 | **Mass, as a labelled sketch** | Scaling `mass_properties.py`'s own lumps to an 850 mm machine with a 0.6 kg shuttle, **plus** 3 kg of LIM stator iron: dry **76.5 → 59.6 kg**, per 3U satellite **6.378 → 4.967 kg**. **Kill criterion 1 still does not close at 3U** and no version of this architecture makes it — but at PocketQube 1P it is **0.207 kg, passing by 10×**, and those classes are reachable because the satellite is unmodified. |
+| SYN-05 | **What the combination does not touch** | **E4** — nothing measured. **P52** — the 30 % segment-handover ripple is topology-level and applies to every variant. **P36** — a shorter, stiffer track has different modes, so that analysis is redone rather than inherited. |
+
+**What authorised it.** Phase II analysis, recorded as interactions rather than promotions:
+`PHASE_II.md`'s gate is untouched and **no item's status was changed**. **Nothing in Gen5 moved.**
+All four checks pass.
+
+---
+
 ## 2026-08-13 (twenty-eighth pass): the plate drive, tested where it could have died
 
 | ID | Item | Detail |

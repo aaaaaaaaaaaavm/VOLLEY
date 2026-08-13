@@ -39,6 +39,13 @@ it was given.
 
 ### PII-1: Momentum-transfer release
 
+> **SUPERSEDED IF PII-18 IS PROMOTED, 2026-08-13.** The lever here *is* the mover's mass:
+> Δv = √(2EM/(m(M+m))). On PII-18's 0.6 kg shuttle the same 41.8 J buys **1.65 m/s instead of
+> 3.83**, and matching the original costs **225 J**. PII-18 reaches the same exit velocity by not
+> putting the energy into a sled at all, and adds no mechanism to the release path — which is
+> this entry's own stated reason for deferring. See [`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md).
+> **Recorded as an interaction, not as a status change:** the gate below still applies.
+
 **The strongest idea in the project, and it defers.**
 
 Sled and payload need not separate at the same speed. A momentum-conserving spring push at the
@@ -340,7 +347,7 @@ stop the numbers forking, which they briefly did.
 
 | **PII-14** | **[A cable-driven gondola on a deployed truss](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md).** Propulsion moved off the vehicle onto a cable, energy from a flywheel, a permanently-locked deployed truss, and a tensioned wire as the running surface. A 2 kg gondola carries no magnets, no chassis resisting 2.69 kN, and no brake fin, so it reaches **24.5 m/s in the existing 1.30 m track** — **if the drivetrain has no rotating inertia.** It does. `m_eff = I/r²` adds directly to the moving mass, a 34 kW machine at a 100 mm drum is **1–5 kg** of it before the drum or any gearbox, and at **7.4 kg the entire gain is gone**. **Assessed and declined for Phase I on 2026-08-10** — +15 to +30 % velocity, uncertain, against deleting the LSM and the 24 validations behind it. **Entry criterion: a computed drivetrain inertia budget showing m_eff ≤ 2 kg, and a Phase I baseline that has been measured rather than modelled** |
 
-| **PII-15** | **An LSM tug reeved to a separate payload carriage.** Distinct from PII-14: the linear motor **stays**, only the coupling changes. A reeving ratio *n* moves the carriage *n* times the tug's distance, and divides the tug's 9.445 kg by *n²* — so **2:1 halves the acceleration zone, 1.30 m to 0.65 m, for 4 % of exit velocity**. That is the only lever found that shortens the machine without lengthening anything else, against **P9**'s 44 % envelope overrun. **And it separates the payload from the magnets longitudinally at the same time, which is E35's fix.** Costs, none analysed: a cable and pulleys in vacuum (**E21**, and A27 screened out a rack for exactly this), a second guided body, and a single tension load path that becomes another manifest-forfeiting element in `docs/FMEA.md`. **Entry criterion: E35 shows separation is required, and a vacuum cable/sheave life case exists** |
+| **PII-15** | **SUPERSEDED IF PII-18 IS PROMOTED, 2026-08-13** — its only claimed benefit is shortening the machine, and spending the qualification margin Gen5 leaves idle does the same for free: **850 mm at 16.1 g against 1300 mm at 10.5 g**, with no cable over a sheave. See [`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md). **An LSM tug reeved to a separate payload carriage.** Distinct from PII-14: the linear motor **stays**, only the coupling changes. A reeving ratio *n* moves the carriage *n* times the tug's distance, and divides the tug's 9.445 kg by *n²* — so **2:1 halves the acceleration zone, 1.30 m to 0.65 m, for 4 % of exit velocity**. That is the only lever found that shortens the machine without lengthening anything else, against **P9**'s 44 % envelope overrun. **And it separates the payload from the magnets longitudinally at the same time, which is E35's fix.** Costs, none analysed: a cable and pulleys in vacuum (**E21**, and A27 screened out a rack for exactly this), a second guided body, and a single tension load path that becomes another manifest-forfeiting element in `docs/FMEA.md`. **Entry criterion: E35 shows separation is required, and a vacuum cable/sheave life case exists** |
 
 > **Entry criterion for PII-8, PII-9 and PII-11: none, deliberately.** None is a candidate for
 > this baseline. The correct outcome for the thesis is that all stay closed until the Phase I

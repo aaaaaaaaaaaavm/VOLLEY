@@ -1,0 +1,108 @@
+{
+  "pii1": [
+    {
+      "mover": "Gen5 sled, what PII-1 was sized on",
+      "M_kg": 9.445,
+      "dv": 3.831719603632653,
+      "E_for_3p83": 41.76249031233457
+    },
+    {
+      "mover": "PII-18 shuttle + pusher + latch",
+      "M_kg": 0.6,
+      "dv": 1.6510865987348269,
+      "E_for_3p83": 224.92313333333334
+    },
+    {
+      "mover": "PII-18 bare plate",
+      "M_kg": 0.398,
+      "dv": 1.375267140943394,
+      "E_for_3p83": 324.19006130653264
+    }
+  ],
+  "stroke": [
+    {
+      "v": 16.387939109293626,
+      "a_g": 10.533001626935276,
+      "stroke_m": 1.299563571367012
+    },
+    {
+      "v": 16.387939109293626,
+      "a_g": 16.1,
+      "stroke_m": 0.8502052926406554
+    },
+    {
+      "v": 16.387939109293626,
+      "a_g": 21.6,
+      "stroke_m": 0.6337178338664146
+    },
+    {
+      "v": 16.387939109293626,
+      "a_g": 25.0,
+      "stroke_m": 0.5475322084605821
+    },
+    {
+      "v": 20.0,
+      "a_g": 10.533001626935276,
+      "stroke_m": 1.9355697985240994
+    },
+    {
+      "v": 20.0,
+      "a_g": 16.1,
+      "stroke_m": 1.2662956420435476
+    },
+    {
+      "v": 20.0,
+      "a_g": 21.6,
+      "stroke_m": 0.9438592517083851
+    },
+    {
+      "v": 20.0,
+      "a_g": 25.0,
+      "stroke_m": 0.8154943934760448
+    }
+  ],
+  "envelope": [
+    {
+      "label": "Gen5 velocity at 16.1 g",
+      "v": 16.387939109293626,
+      "a_g": 16.1,
+      "envelope_m": 1.2538096759230202,
+      "fits": true
+    },
+    {
+      "label": "Gen5 velocity at 21.6 g",
+      "v": 16.387939109293626,
+      "a_g": 21.6,
+      "envelope_m": 1.0373222171487795,
+      "fits": true
+    },
+    {
+      "label": "20 m/s at 21.6 g",
+      "v": 20.0,
+      "a_g": 21.6,
+      "envelope_m": 1.34746363499075,
+      "fits": false
+    }
+  ],
+  "mass_sketch": {
+    "lumps": {
+      "Track longerons (2x Al box section)": -2.3631245136059498,
+      "Stator copper (1.3 m, 60% fill)": -2.176286712087453,
+      "Stator formers / potting (PEEK eq.)": -0.336644350776028,
+      "Sled Halbach magnets (2 faces)": -3.6720000000000006,
+      "Sled Ti chassis (shell equivalent)": -0.7367975999999999,
+      "Sled rollers / latch / backstop": -0.45,
+      "Eddy brake magnets + yoke": -1.2635999999999998,
+      "Fixed brake hardware + ring spring (moving Cu fin is in sled)": -0.642,
+      "Supercapacitor cells + busbars": -2.9250000000000003,
+      "Panels / closeouts": -1.375,
+      "Sled CAD reconciliation (P15, CAD-derived 9.445 kg)": -4.5862023999999995
+    },
+    "iron_add": 3.0,
+    "shuttle": 0.6,
+    "net_kg": -16.92665557646943,
+    "dry_before": 76.53158800000001,
+    "dry_after": 59.604932423530585
+  },
+  "caveat": "SKETCH, NOT VALIDATION. No band is declared for anything here. The mass figures are a scaling argument over mass_properties.py's lumps, not a re-run of the rollup."
+}
