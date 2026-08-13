@@ -63,7 +63,7 @@ Last reviewed 2026-08-10.
 
 ---
 
-## DRAFT RANKING — pending author confirmation
+## Lethality ranking — confirmed 2026-08-10
 
 **Ordered by how likely each live entry is to be design-fatal**, not by ID, date, or the
 HIGH/MEDIUM/LOW severity already carried in each entry. Those severities rank *how wrong a
@@ -71,7 +71,10 @@ published number is*; this ranks *how likely the machine is not worth building*.
 are different, and neither replaces the other.
 
 **Nothing below is deleted, renumbered, or reworded.** This section only orders what already
-exists. **The author has not confirmed this ranking.**
+exists, and the entries it points at remain the authority on their own content.
+
+**Confirmed by the author on 2026-08-10**, including the two places where it disagrees with the
+register's own severity labels.
 
 ### The five most likely to be design-fatal
 
@@ -106,8 +109,8 @@ the hardware would fail.
 **E4 carries no severity label at all** and is ranked second here. **P34** is labelled HIGH and
 does not appear in the top five, because a magnetometer-carrying payload being excluded bounds
 the market rather than the machine — and **E35** may remove the constraint entirely. **P45** is
-labelled LOW and is genuinely low. **If the author disagrees with any of this, the entries
-themselves are unchanged and this section is the only thing that needs editing.**
+labelled LOW and is genuinely low. **Confirmed as written.** If it is revised later, the entries themselves are unchanged and this
+section is the only thing that needs editing.
 
 ---
 

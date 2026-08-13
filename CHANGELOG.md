@@ -9,6 +9,28 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-10 (twenty-third pass): CC BY 4.0 across the repository, and the front matter raised
+
+| ID | Item | Detail |
+|---|---|---|
+| **LIC-01** | **The whole repository is relicensed CC BY 4.0**, single licence at root | A code/documents split placing Apache-2.0 on `analysis/` and `tools/` was considered and **rejected**. This repository does not separate cleanly: `validation/` holds fourteen Python files beside its run sheets, `cad/` holds the generator that produces the geometry, `paper/` holds figure generators — and **`analysis/` is not incidental tooling**. `motor_model.py` computes the thrust constant and `sizing.py` sets the geometry, so that code **is the design expressed executably**. A carve-out would have drawn a line through the middle of one disclosure. |
+| LIC-02 | **The licence text is canonical, not reproduced from memory** | CC BY 4.0 legal code taken from the SPDX `license-list-data` source, all eight sections verified before installing. `creativecommons.org` is blocked by the network egress proxy, and writing legal text from memory was declined. |
+| LIC-03 | **Not retroactive, stated in three places** | `LICENSING.md`, the README licence section, and `NOTICE`. The previous MIT text is retained at `LICENSE-MIT-superseded`; every snapshot taken before this change stays available under it and nothing revokes rights already granted. |
+| LIC-04 | **`paper/` marked as a separate case** | The reproducibility package is CC BY 4.0; the manuscript is CC BY 4.0 **provisionally**, because **an IEEE copyright transfer on acceptance would supersede this licence for the accepted version.** The repository cannot license rights it has transferred. |
+| **LIC-05** | **The companion export is deliberately held** | The manifest now carries `LICENSE`, `NOTICE`, `LICENSING.md`, `LICENSE-MIT-superseded` and `CITATION.cff`, so one export run would relicense both companions. **That run is held pending the IEEE decision**, so `VOLLEY-paper` and `VOLLEY-thesis` remain MIT while this repository is CC BY 4.0. **Intentional divergence, recorded rather than left to be found as drift.** |
+| LIC-06 | **Sibling repositories relicensed, and two of them not as first planned** | `VOLLEY-lab`, `pulsed-linear-motor-design-lab` and `orbital-deployment-trade-study` → **CC BY 4.0**; `engineering-evidence-toolkit` → **Apache-2.0**. The two design-lab repositories were originally assigned Apache-2.0 and reassigned on inspection: **both carry `reference/volley/motor_model.py`**, so a patent-granting licence there would have defeated the reason for the split. |
+| **RANK-01** | **`OPEN_PROBLEMS.md` opens with a lethality ranking, confirmed** | Live entries ordered by how likely each is to be **design-fatal**, which is a different question from the HIGH/MEDIUM/LOW severities already carried — those rank how wrong a published number is. Top five: **E30, E4, E33, E34, E35**. **Nothing deleted, renumbered or reworded.** It disagrees with the register's own labels in two places and says so. |
+| README-01 | **The front matter leads with the design point** | Design point, mass and energy budget, TRL, and the spring comparison on the first screen; background below. The comparison table carries **losses in the same table as the wins** — TRL 9 against 2–3, and **nine of thirteen single-failure elements against zero** — under a framing line naming the axis where a spring does not compete at any price. |
+| DOC-01 | **Three superseded ripple figures annotated, none edited** | The ±1.26 % records in `CROSS_INDUSTRY.md`, `A1_field_femm.md` and `VALIDATION_REPORT.md` are pre-quadrature. Current value **±0.99 % (0.9874 unrounded)** from `motor_model.py`, with identical wording in all three and a matching entry in `PROVENANCE.md`. |
+| DOC-02 | **Smaller corrections** | `CITATION.cff` v0.1.0 → **v1.1** with that tag's commit date and `license: CC-BY-4.0`; **cogging *torque* → cogging *force*** in ADR-004, a linear machine having no torque; SUMMARY's validation count corrected from "nineteen of twenty-one" to twenty-four run sheets. |
+
+**What authorised it.** A licensing decision by the sole copyright holder, plus documentation
+work. **No script, CAD file, result, or manuscript body changed** —
+`git diff main repo-altitude -- analysis/ cad/ paper/paper.tex` is empty, and all four checks
+pass unchanged.
+
+---
+
 ## 2026-08-10 (twenty-second pass): propagating the correction I logged and then left in the register
 
 | ID | Item | Detail |
