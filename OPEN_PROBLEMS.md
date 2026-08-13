@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **82 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
+> **83 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
 > | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **12** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CORRECTED` | **13** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
@@ -2164,6 +2164,43 @@ selected (**E7**).
 
 Full sheet: `validation/A28_control_stability.md`. ADR-027.
 
+
+### P48. Two A29 bands failed, and neither failure is in the machine: LOW, NEW 2026-08-13
+> **Status:** `CORRECTED` — the bands stand as declared and the lesson is recorded; see below
+
+
+**Found by A29, 2026-08-13**, on bands declared at `949fdf4` before `validation/cfd/` existed.
+Numbered under [ADR-021](docs/adr/021-freeze-the-register.md) case 3: **a missed band produces a
+numbered defect, never a widened band.**
+
+**Band 2 — drag coefficient in 0.7 ≤ C_d ≤ 2.5. Result 0.523.**
+
+The floor of 0.7 came from a rectangular bluff body normal to the flow, which sits near 1.05–1.2.
+**The assembly is a stepped body, not a solid one:** the 3U payload leads with a 100 × 100 mm
+face and the sled behind it is 172 × 140 mm, so a large part of the reference frontal area lies
+in the payload's own wake. A coefficient referenced to a partly shadowed area is below the
+textbook value for the shape the band compared it against.
+
+Three checks say the solve is sound: peak C_p on the body is **0.975** where stagnation should
+approach 1.000; the meshed wetted area is **0.4173 m² of 0.5612 m²** of raw STL, the difference
+being the interior payload–sled interface; and the drag splits as forward faces **+0.233**, base
+suction **+0.156**, sides **+0.001**, which is the classic bluff-body signature.
+
+**Band 5 — the stator channel raises C_d by ≥ 10 %. Result −12.7 %.**
+
+The plates **lower** drag, from 0.523 to 0.457, and tighten the spread from ±8.3 % to ±3.5 %.
+The plate sits in the mid-plane the sled straddles and is acting as a **splitter**, not a wall —
+a splitter plate in the near wake suppresses wake oscillation and raises base pressure, which is
+what the tighter spread reports. **The consequence is useful: the free-stream figure is the
+conservative one**, so the ground-test correction is quoted from the free case.
+
+**Corrected.** What changes is the practice, not a number: no result moved and no band was edited.
+**A drag band must name its reference area and the shape it is being compared against**, because
+a drag coefficient without its reference area is not a number. This is the same class as A2's
+band 3, which passed while measuring numerical cancellation on a symmetry axis: **a band can be
+satisfiable and still be the wrong question.**
+
+Full sheet: `validation/A29_ground_test_air_drag.md`.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

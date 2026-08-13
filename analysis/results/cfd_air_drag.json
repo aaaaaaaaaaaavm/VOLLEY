@@ -1,0 +1,121 @@
+{
+  "v_exit": 16.388,
+  "moving_mass_kg": 13.445,
+  "accel_zone_m": 1.3,
+  "dispersion_3sigma": 0.0267,
+  "history": {
+    "free": [
+      {
+        "time": 1720.0,
+        "drag_N": 1.6014550095293376,
+        "Cd": 0.48297360265793565,
+        "Cd_pressure": 0.3792696895081132
+      },
+      {
+        "time": 1760.0,
+        "drag_N": 1.8548128875242949,
+        "Cd": 0.5593823474361963,
+        "Cd_pressure": 0.4556784342863739
+      },
+      {
+        "time": 1800.0,
+        "drag_N": 1.8884989088744928,
+        "Cd": 0.5695415208091023,
+        "Cd_pressure": 0.4658376076592798
+      },
+      {
+        "time": 1840.0,
+        "drag_N": 1.6885476388689067,
+        "Cd": 0.509239367669621,
+        "Cd_pressure": 0.40553545451979855
+      },
+      {
+        "time": 1880.0,
+        "drag_N": 1.6369670812961474,
+        "Cd": 0.49368348407015467,
+        "Cd_pressure": 0.3899795709203322
+      }
+    ],
+    "channel": [
+      {
+        "time": 1720.0,
+        "drag_N": 1.584162102780079,
+        "Cd": 0.47775833440286813,
+        "Cd_pressure": 0.3894326668028424
+      },
+      {
+        "time": 1760.0,
+        "drag_N": 1.4786345713280686,
+        "Cd": 0.44593289332478564,
+        "Cd_pressure": 0.35760722572475984
+      },
+      {
+        "time": 1800.0,
+        "drag_N": 1.4953781191575823,
+        "Cd": 0.45098248358387905,
+        "Cd_pressure": 0.36265681598385324
+      },
+      {
+        "time": 1840.0,
+        "drag_N": 1.4991542756289595,
+        "Cd": 0.4521213128886855,
+        "Cd_pressure": 0.3637956452886597
+      },
+      {
+        "time": 1880.0,
+        "drag_N": 1.5139555127259285,
+        "Cd": 0.4565851328286652,
+        "Cd_pressure": 0.3682594652286394
+      }
+    ]
+  },
+  "free": {
+    "drag_N": 1.7340563052186362,
+    "Cd": 0.5229640645286019,
+    "work_J": 1.1271365983921136,
+    "v_vacuum": 16.388,
+    "v_air": 16.382883681311267,
+    "deficit_m_s": 0.0051163186887350776,
+    "deficit_pct": 0.031219909011075648
+  },
+  "channel": {
+    "drag_N": 1.5142569163241235,
+    "Cd": 0.4566760314057767,
+    "work_J": 0.9842669956106803,
+    "v_vacuum": 16.388,
+    "v_air": 16.38353228600334,
+    "deficit_m_s": 0.004467713996660905,
+    "deficit_pct": 0.02726210639895597
+  },
+  "bands": [
+    {
+      "band": "2",
+      "name": "0.7 <= Cd <= 2.5",
+      "detail": "0.5230",
+      "passed": false
+    },
+    {
+      "band": "3",
+      "name": "deficit below 1.0 % of v_exit",
+      "detail": "0.0312 % (5.12 mm/s)",
+      "passed": true
+    },
+    {
+      "band": "4",
+      "name": "deficit >= 10 % of the 0.0267 m/s dispersion",
+      "detail": "19.2 % of it",
+      "passed": true
+    },
+    {
+      "band": "5",
+      "name": "channel Cd exceeds free-stream Cd by >= 10 %",
+      "detail": "-12.7 %",
+      "passed": false
+    }
+  ],
+  "closed_loop": {
+    "extra_force_N": 1.7340563052186362,
+    "pct_of_commanded_force": 0.12481915164736755,
+    "note": "The bands measure the OPEN-LOOP deficit, which is what a raw shot comparison sees. A servo tracking the velocity profile nulls it instead, and it appears as commanded force rather than as velocity error."
+  }
+}

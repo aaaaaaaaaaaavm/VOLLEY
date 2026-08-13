@@ -60,6 +60,12 @@ def residuals(case):
 
 
 def surface_cp(case, meta, time=None):
+    """Cp on the body, with each face's x-normal, so forward and rearward faces separate.
+
+    Plotting Cp against x alone mixes the stagnation face with the side walls beside it and
+    hides the only two places drag actually comes from: the front, pushed on, and the base,
+    sucked back.
+    """
     path = os.path.join(HERE, case)
     t = forces.latest_time(path) if time is None else time
     pts = forces.read_points(path)
@@ -68,9 +74,11 @@ def surface_cp(case, meta, time=None):
     owner = forces.read_owner(path)
     pin = forces.read_internal(os.path.join(path, t, "p"))
     p = pin[owner[start:start + n]]
+    Sf = forces.area_vectors(pts, faces[start:start + n])
+    nx = Sf[:, 0] / np.linalg.norm(Sf, axis=1)
     xc = np.array([pts[f].mean(0)[0] for f in faces[start:start + n]])
     U = meta["U_inf"]
-    return xc, p / (0.5 * U * U)          # kinematic p, so Cp = p / (0.5 U^2)
+    return xc, p / (0.5 * U * U), nx
 
 
 def main():
@@ -90,7 +98,8 @@ def main():
     ax[0].legend(fontsize=6, ncol=2, frameon=False, loc='upper right')
     ax[0].set_title("(a) it does not converge, and that is the answer", fontsize=8.5)
     ax[0].axvspan(it.max() - 200, it.max(), color='0.88', zorder=0)
-    ax[0].text(it.max() - 190, ax[0].get_ylim()[0] * 4, "averaging\nwindow", fontsize=6.5)
+    ax[0].text(it.max() - 700, ax[0].get_ylim()[0] * 3, "averaging window",
+               fontsize=6.5)
 
     h = res["history"]["free"]
     t = [x["time"] for x in h]
@@ -104,20 +113,22 @@ def main():
     ax[1].set_title(f"(b) mean {m:.3f} N, spread $\\pm${0.5*(max(d)-min(d)):.3f} N",
                     fontsize=8.5)
 
-    xc, cp = surface_cp("free", meta["free"])
-    ax[2].plot(xc * 1e3, cp, ".", ms=1.2, color='k', alpha=0.35)
-    # binned mean, so the structure is legible through the scatter
-    bins = np.linspace(xc.min(), xc.max(), 60)
-    idx = np.digitize(xc, bins)
-    bm = np.array([cp[idx == i].mean() if (idx == i).any() else np.nan
-                   for i in range(1, len(bins))])
-    ax[2].plot(0.5 * (bins[1:] + bins[:-1]) * 1e3, bm, color='#c1452b', lw=1.6)
+    xc, cp, nx = surface_cp("free", meta["free"])
+    fwd, rev = nx > 0.5, nx < -0.5
+    ax[2].plot(xc[abs(nx) <= 0.5] * 1e3, cp[abs(nx) <= 0.5], ".", ms=1.0,
+               color='0.7', label="side")
+    ax[2].plot(xc[rev] * 1e3, cp[rev], ".", ms=2.0, color='#2b62c1', label="rearward")
+    ax[2].plot(xc[fwd] * 1e3, cp[fwd], ".", ms=2.0, color='#c1452b', label="forward")
     ax[2].axhline(0, color='0.5', lw=0.7)
     ax[2].axhline(1, color='0.5', lw=0.7, ls=':')
-    ax[2].text(xc.min() * 1e3 + 5, 1.05, "$C_p$ = 1, stagnation", fontsize=6.5)
+    ax[2].text(xc.max() * 1e3, 1.03, f"$C_p$ = 1; peak on the body {cp.max():.3f}",
+               fontsize=6.5, ha='right')
     ax[2].set_xlabel("Position along the body, mm (flow left to right)")
     ax[2].set_ylabel("$C_p$")
-    ax[2].set_title("(c) stagnation face, edge separation, base suction", fontsize=8.5)
+    ax[2].set_ylim(-0.75, 1.15)
+    ax[2].legend(fontsize=6.5, frameon=False, loc='lower right', markerscale=3)
+    ax[2].set_title("(c) forward faces push, the base sucks, sides do nothing",
+                    fontsize=8.5)
 
     path = os.path.join(OUT, "A29_cfd_report.png")
     fig.savefig(path)

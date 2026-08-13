@@ -9,6 +9,30 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (twenty-fifth pass): the machine flies in vacuum, the test happens in a room
+
+| ID | Item | Detail |
+|---|---|---|
+| **A29** | **What air costs a ground test, computed for the first time** | Every velocity in this repository is computed with no aerodynamic term. The TRL-5 step fires a mass simulator down a full 1.5 m track **at sea level**, and nothing said what the air was worth. Steady RANS (`simpleFoam`, k-ω SST) on the **Gen5 sled and payload as generated**, meshed by `snappyHexMesh` from `cad/stl` — not an idealised box. |
+| **A29-01** | **The answer, and why it is the comparison that matters** | C_d **0.523** on a 201.6 cm² projected frontal area at Re 7.0 × 10⁵ → **1.734 N** at exit velocity → **1.127 J** over the 1.30 m stroke → deficit **5.116 mm/s (0.0312 %)**. Small against the design point; **19.2 % of the 3σ dispersion the test exists to resolve.** No vacuum chamber needed; an air correction on every measured velocity is. |
+| A29-02 | **Open loop and closed loop are different tests** | Open-loop the deficit is 5.1 mm/s of velocity; closed-loop the servo nulls it and it appears as **1.734 N of extra command, 0.125 % of the shot**. `QUALIFICATION_PLAN.md` does not currently say which the full-scale test is. |
+| **A29-03** | **The solve does not converge, and that is reported** | Velocity residuals fall three orders then **plateau near 5 × 10⁻² and oscillate** — what a steady solver does on a massively separated wake. The drag is a **windowed mean, 1.734 ± 0.144 N (8.3 %)**. The first attempt read a single iteration, 1.946 N, **12 % high**. |
+| A29-04 | **Two OpenFOAM function objects abort in this build, and the workaround is stronger than the tool** | `forceCoeffs` and `wallShearStress` both fail with an IOstream error before the first iteration. Pressure drag is integrated in `validation/cfd/forces.py` as **F = ρ Σ p S_f** directly from `constant/polyMesh` and the solved field, so every step from solve to coefficient is inspectable. Viscous drag is a **flat-plate bound**, 17.7 % of the total, labelled as one everywhere. |
+| A29-05 | **The sign convention was inverted and produced a negative drag** | OpenFOAM boundary normals point out of the **fluid**, i.e. into the body, so the body's outward normal is −S_f and the force is +Σ p S_f. `forces.py` now **asserts** drag is positive: a bluff body in a uniform stream does not produce thrust. |
+| **P48** | **Two of five bands fail, and neither failure is in the machine** | **Band 2** (0.7 ≤ C_d ≤ 2.5) fails at 0.523 — the band was declared against a *solid* bluff body and the assembly is a **stepped** one, so part of the reference frontal area sits in the payload's own wake. Three checks say the solve is sound: peak C_p **0.975** where stagnation should approach 1; meshed wetted area **0.4173 of 0.5612 m²** of raw STL, the difference being the interior payload–sled interface; drag splitting as forward **+0.233**, base **+0.156**, sides **+0.001**. |
+| P48-01 | **Band 5 fails in the opposite direction to the one predicted** | The stator plates were expected to **raise** C_d by ≥ 10 % through confinement. They **lower** it by **12.7 %** and tighten the spread from ±8.3 % to ±3.5 % — the plate acts as a **wake splitter**, not a wall. **The consequence is useful: the free-stream figure is the conservative one**, so the correction is quoted from it. |
+| P48-02 | **What is corrected is the practice** | **A drag band must name its reference area and the shape it is being compared against**, because a drag coefficient without its reference area is not a number. Same class as A2 band 3, which passed while measuring numerical cancellation on a symmetry axis: **a band can be satisfiable and still be the wrong question.** No band edited, no result moved. |
+| **PAPER-10** | **§VI-E added; the manuscript is 14 → 15 pages** | With `F14_airdrag.png`. Reports the plateau and the viscous bound in the body text rather than in a footnote. Zero undefined references. |
+| FIG-07 | **The figure stamp now carries A29 too** | `BUILD.json` gained the drag and the deficit, because F14 is drawn from them and a stamp that cannot see a figure's source cannot police it. |
+| **INDEX-01** | **`docs/FIGURE_INDEX.md`** — every figure with its generator, its source, and its class of evidence | Five classes, and the count that matters is that **class D — something physically observed — has zero members.** Records the Gen4 render mismatch where the renders appear rather than only in the register. |
+| CNT-15 | **Register 82 → 83, 12 → 13 corrected** | P48. Header propagated. Live count unchanged at 38. |
+
+**What authorised it.** A validation outcome against bands declared before the case directory
+existed, verified by `git show --stat 949fdf4 -- validation/cfd` returning nothing. **Two bands
+failed and produced a numbered defect, not a widened band.** All four checks pass.
+
+---
+
 ## 2026-08-13 (twenty-fourth pass): the velocity loop was never designed, and the 3-D solve lands
 
 | ID | Item | Detail |

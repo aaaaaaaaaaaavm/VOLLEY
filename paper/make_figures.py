@@ -48,6 +48,12 @@ plt.rcParams.update({
 })
 
 
+def _cfd():
+    """A29's result, which F14 is drawn from and the stamp therefore has to carry."""
+    return json.load(open(os.path.join(os.path.dirname(OUT), '..', 'analysis', 'results',
+                                       'cfd_air_drag.json')))
+
+
 def save(fig, name):
     path = os.path.join(OUT, name)
     fig.savefig(path)
@@ -413,17 +419,22 @@ def f14_airdrag():
     a1.text(0.04 * L, F * 0.9, f"$C_d$ = {d['free']['Cd']:.2f}\n"
             f"{d['free']['work_J']:.2f} J over the stroke", fontsize=7.5, va='top')
 
+    dfc = d['free']['deficit_m_s']
     labels = ['Air deficit', 'Dispersion\n(3$\\sigma$)', 'Design point']
-    vals = [d['free']['deficit_m_s'], d['dispersion_3sigma'], d['v_exit']]
+    vals = [dfc, d['dispersion_3sigma'], d['v_exit']]
+    tags = ['', f'deficit is {100*dfc/d["dispersion_3sigma"]:.0f} % of it',
+            f'deficit is {100*dfc/d["v_exit"]:.3f} % of it']
     a2.barh(range(3), vals, color=['0.25', '0.55', '0.85'], edgecolor='k', height=0.6)
     a2.set_yticks(range(3))
     a2.set_yticklabels(labels, fontsize=8)
     a2.set_xscale('log')
     a2.set_xlabel('m/s (log scale)')
     a2.invert_yaxis()
-    for i, v in enumerate(vals):
-        a2.text(v * 1.25, i, f'{v:.4g}', va='center', fontsize=7.5)
-    a2.set_xlim(min(vals) * 0.4, max(vals) * 6)
+    for i, (v, tg) in enumerate(zip(vals, tags)):
+        a2.text(v * 1.3, i + 0.02, f'{v:.4g}', va='bottom', fontsize=7.5)
+        if tg:
+            a2.text(v * 1.3, i + 0.06, tg, va='top', fontsize=6.5, color='0.35')
+    a2.set_xlim(min(vals) * 0.35, max(vals) * 40)
     save(fig, 'F14_airdrag.png')
 
 
@@ -467,7 +478,9 @@ def main():
                  E_recovered_J=round(float(mm.regen_brake(
                      Kt, dv, mm.V0 * (1 - s_['sag_pct'] / 100))['E_recovered']), 1),
                  closed_loop_3sigma=float(mm.closed_loop_mc(Kt)['sigma3']),
-                 motor_results_sha256_16=digest)
+                 motor_results_sha256_16=digest,
+                 air_drag_N=_cfd()['free']['drag_N'],
+                 air_deficit_m_s=_cfd()['free']['deficit_m_s'])
     with open(os.path.join(OUT, 'BUILD.json'), 'w') as fh:
         json.dump(stamp, fh, indent=2)
         fh.write("\n")

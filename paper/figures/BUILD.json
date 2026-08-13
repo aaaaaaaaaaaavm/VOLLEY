@@ -5,5 +5,7 @@
   "E_drawn_J": 2850.9,
   "E_recovered_J": 291.4,
   "closed_loop_3sigma": 0.026729706035066532,
-  "motor_results_sha256_16": "86f86318b5efee81"
+  "motor_results_sha256_16": "86f86318b5efee81",
+  "air_drag_N": 1.7340563052186362,
+  "air_deficit_m_s": 0.0051163186887350776
 }

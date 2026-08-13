@@ -145,7 +145,7 @@ PAPER_README = """# VOLLEY: IEEE companion
 Everything needed to reproduce the conference paper. Manuscript source, figures, the analysis
 scripts behind every number in it, the validation run sheets, and the literature record.
 
-**[Read the paper](paper/VOLLEY_IEEE_Conference.pdf)** (14 pages)
+**[Read the paper](paper/VOLLEY_IEEE_Conference.pdf)** (15 pages)
 
 ## Reproduce it in one command
 

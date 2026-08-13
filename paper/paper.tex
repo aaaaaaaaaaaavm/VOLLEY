@@ -301,6 +301,19 @@ Flight status & flown, extensive & design study & announced\\
 \end{table}
 
 \subsection{Demonstration Path}
+\subsection{What Air Costs a Ground Test}\label{sec:airdrag}
+The machine operates in vacuum and every velocity above is computed with no aerodynamic term, but the full-scale demonstration fires a mass simulator down the track in a laboratory at sea level, so the comparison that test exists to make is between a measured velocity and a computed one that omits the air. A steady RANS solution ($k$-$\omega$ SST) around the sled and payload \emph{as generated}, meshed directly from the CAD surfaces rather than from an idealised body, gives a drag coefficient of \textbf{0.52} on a 201.6~cm$^2$ projected frontal area at $Re = 7.0\times10^5$, i.e. 1.73~N at exit velocity. Because the profile is position-scheduled, $v^2$ rises linearly with distance and so does the drag, making the work over the 1.30~m acceleration zone 1.13~J and the exit-velocity deficit \textbf{5.1~mm/s}, or 0.031~\% (Fig.~\ref{fig:airdrag}).
+
+That figure is small against the design point and \emph{not} small against the quantity a ground test resolves: it is \textbf{19~\% of the 3$\sigma$ closed-loop dispersion}. A full-scale test therefore needs no vacuum chamber, but every velocity it reports must carry the air correction, or it is compared to the model with an error one-fifth the size of the dispersion being verified. The distinction depends on how the test is run: open-loop, the deficit appears as 5.1~mm/s of velocity; closed-loop, the servo nulls it and it appears instead as 1.73~N of additional commanded force, 0.125~\% of the shot.
+
+Two properties of the solution are reported rather than presented as convergence. The velocity residuals fall three orders and then plateau near $5\times10^{-2}$, which is what a steady solver does on a massively separated wake, so the force is a mean over a window of iterations quoted with its spread, $1.734 \pm 0.144$~N. And the viscous contribution is a turbulent flat-plate bound over the meshed wetted area rather than a solved wall shear stress, 17.7~\% of the total; the pressure term, which dominates, is integrated directly from the solved field over the body surface. Adding the stator plates \emph{reduces} drag by 13~\% and halves the oscillation, the plate acting as a wake splitter rather than as a confining wall, so the free-stream figure quoted above is the conservative one.
+
+\begin{figure}[t]
+\centering\includegraphics[width=\columnwidth]{F14_airdrag.png}
+\caption{Air drag along the acceleration zone, and the resulting exit-velocity deficit set against the design point and against the dispersion a ground test exists to resolve.}
+\label{fig:airdrag}
+\end{figure}
+
 The programme is ground-testable to an unusual degree: a full-scale 1.5~m track firing a mass simulator into the eddy brake, with the complete feed cycle, sits within a university laboratory budget and converts the velocity, dispersion, and tip-off claims into measured quantities. The flight step is a captive\-carry demonstration, full sled cycles with a payload never released, requiring no deployment approvals while gathering the reaction-load and servo data that certify the firing event; any hosted platform of the POEM class serves.
 
 \section{Sensitivity and Uncertainty}\label{sec:sens}

@@ -67,8 +67,14 @@ if __name__ == "__main__":
     v = float(res["shot"]["v_exit"])
 
     hist = {}
-    for case in [c for c in ("free", "channel", "free_fine", "channel_fine")
-                 if os.path.isdir(os.path.join(HERE, c))]:
+    def ready(c):
+        """A case counts only if it has a finished mesh and at least one written field."""
+        d = os.path.join(HERE, c)
+        if not os.path.exists(os.path.join(d, "constant", "polyMesh", "boundary")):
+            return False
+        return any(x.replace('.', '', 1).isdigit() and x != "0" for x in os.listdir(d))
+
+    for case in [c for c in ("free", "channel", "free_fine", "channel_fine") if ready(c)]:
         hist[case] = force_history(case, meta[case])
         d = np.array([h["drag_N"] for h in hist[case]])
         print(f"{case:14s} drag over last {len(d)} written times: "
