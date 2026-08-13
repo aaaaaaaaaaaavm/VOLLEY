@@ -25,10 +25,19 @@ WHAT THIS FILE IS AND IS NOT
 is claimed. It answers one question -- is the thrust in the right order of magnitude -- and
 the honest answer to "is this real" is A30, which does not exist yet.
 
-**The largest uncertainty is stated, not buried.** `EDGE` derates the ideal sheet-secondary
-thrust for the transverse edge effect: an 8.5 mm rail against a 36-48 mm pole pitch gives the
-induced current a short, high-resistance transverse return path. 0.55 is an assumption. It is
-the number most likely to be wrong and the one the whole result scales on.
+**REJECTED 2026-08-13 BY A30 BAND 1. THIS FILE IS KEPT AS THE RECORD OF A FAILED PROPOSAL.**
+
+`EDGE` derated the ideal sheet-secondary thrust for the transverse edge effect and assumed
+**0.55**, declared here as the number most likely to be wrong and the one the whole result
+scaled on. `analysis/edge_effect.py` measured it: **0.0253**, a factor of 22 out. Four rails at a
+generous 0.60 T make **41.9 N** against the 413 N required. The architecture does not close, and
+no pole pitch rescues it -- the edge factor wants the secondary wide against the pole pitch and
+the airgap wants the pole pitch large against the gap, and an 8.5 mm conductor in a 10.5 mm gap
+demands both at once.
+
+`EDGE` below is set to the measured value, so running this file now reports the rejection rather
+than the proposal. The original assumption is recorded above rather than deleted. See
+`validation/A30_rail_drive.md` and **P49**.
 
 Provenance: model output, first-principles. Nothing here is measured. E4 stands.
 """
@@ -56,7 +65,8 @@ RAIL_KG = N_RAILS * RAIL_W * RAIL_W * RAIL_LEN * RHO_AL
 # not get to choose what its customers' rails are made of.
 ALLOYS = {'6061-T6': 2.5e7, '7075-T6': 1.9e7}
 
-EDGE = 0.55                       # transverse edge-effect derating. STATED ASSUMPTION.
+EDGE = 0.0253                     # MEASURED by edge_effect.py, A30 band 1.
+                                  # Was assumed 0.55 -- wrong by 22x. See P49.
 G_QUAL = 25.0                     # payload qualification acceleration cap
 CONV_EFF = 0.90                   # converter + copper, stated
 
@@ -148,8 +158,13 @@ if __name__ == '__main__':
           f"({ref['E_drawn']/pick['E_in_J']:.2f}x less), rails warm {pick['rail_dT_K']:.1f} K")
     print(f"  payload gets {pick['E_mech_J']:.0f} J = {pick['eff_overall_pct']:.1f} % of drawn, "
           f"against {100*ref['KE_payload']/ref['E_drawn']:.1f} % today")
-    print(f"  and it is FASTER: {pick['v_exit']:.2f} vs {ref['v_exit']:.2f} m/s, because the "
-          f"moving mass is {mm.M_SAT} kg instead of {m_move_today:.2f} kg")
+    verdict = "FASTER" if pick['v_exit'] > ref['v_exit'] else "SLOWER"
+    print(f"  and it is {verdict}: {pick['v_exit']:.2f} vs {ref['v_exit']:.2f} m/s "
+          f"(moving mass {mm.M_SAT} kg against {m_move_today:.2f} kg)")
+    if pick['F_N'] < ref['F_cmd']:
+        print(f"\n  REJECTED: {pick['F_N']:.0f} N against the {ref['F_cmd']:.0f} N Gen5 "
+              f"commands. A30 band 1 measured the edge factor at {EDGE}, not the 0.55 this "
+              f"file assumed.")
 
     os.makedirs(RESULTS, exist_ok=True)
     json.dump(dict(coupling_area_m2=A_COUPLE, rail_kg=RAIL_KG, edge_derating=EDGE,

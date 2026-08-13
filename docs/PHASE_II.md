@@ -236,7 +236,7 @@ per-satellite shoe.
 
 ---
 
-### PII-16: the satellite's own CDS rails as the motor secondary — **Gen6**
+### PII-16: the satellite's own CDS rails as the motor secondary — **REJECTED 2026-08-13**
 
 **Full proposal: [`GEN6_RAIL_DRIVE.md`](GEN6_RAIL_DRIVE.md). Sizing in
 `analysis/rail_drive.py`. No band declared, nothing validated.**
@@ -252,7 +252,11 @@ realistic 2 mm clearance and the worse of the two rail alloys gives **513 N, 13.
 on 1182 J** — faster than Gen5 on 2.4× less energy, because the moving mass is 4 kg instead of
 13.45 kg.
 
-**Entry criterion: A30 band 1.** The transverse edge-effect derating — assumed at 0.55 —
+**Entry criterion A30 band 1 was run and FAILED: the edge factor is 0.0253, not the 0.55
+assumed — a factor of 22, and four rails make 41.9 N against 413 N required. The architecture
+is rejected (P49). What survived is band 4: a 90 mm plate is at 0.6691 and weighs 0.248 kg.**
+
+**Original entry criterion, as declared:** The transverse edge-effect derating — assumed at 0.55 —
 is what the entire result scales on, and a 3-D transient eddy-current solve is what settles it.
 **If it comes in near 0.2 the idea is dead**, and that is the cheapest possible way to find out.
 

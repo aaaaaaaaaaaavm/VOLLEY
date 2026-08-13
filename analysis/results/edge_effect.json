@@ -1,0 +1,91 @@
+{
+  "sweep": [
+    {
+      "secondary": "CDS corner rail",
+      "width_m": 0.0085,
+      "tau_m": 0.036,
+      "numeric": 0.043905603441179955,
+      "russell_norsworthy": 0.043461506505437675,
+      "diff_pct": 1.021816709659425
+    },
+    {
+      "secondary": "CDS corner rail",
+      "width_m": 0.0085,
+      "tau_m": 0.048,
+      "numeric": 0.025272987352463368,
+      "russell_norsworthy": 0.02501734550058654,
+      "diff_pct": 1.0218584216732078
+    },
+    {
+      "secondary": "flat plate, 3U section",
+      "width_m": 0.09,
+      "tau_m": 0.036,
+      "numeric": 0.7530942966580138,
+      "russell_norsworthy": 0.7455497245992446,
+      "diff_pct": 1.0119475347971676
+    },
+    {
+      "secondary": "flat plate, 3U section",
+      "width_m": 0.09,
+      "tau_m": 0.048,
+      "numeric": 0.6690714614649464,
+      "russell_norsworthy": 0.6623423079589545,
+      "diff_pct": 1.015963109276255
+    }
+  ],
+  "rail": {
+    "secondary": "CDS corner rail",
+    "width_m": 0.0085,
+    "tau_m": 0.048,
+    "numeric": 0.025272987352463368,
+    "russell_norsworthy": 0.02501734550058654,
+    "diff_pct": 1.0218584216732078
+  },
+  "plate": {
+    "secondary": "flat plate, 3U section",
+    "width_m": 0.09,
+    "tau_m": 0.048,
+    "numeric": 0.6690714614649464,
+    "russell_norsworthy": 0.6623423079589545,
+    "diff_pct": 1.015963109276255
+  },
+  "rail_area_m2": 0.011577000000000002,
+  "plate_area_m2": 0.030645000000000002,
+  "rail_thrust_N_at_0p60T": 41.909767776644564,
+  "plate_thrust_N_at_0p45T": 1652.0276029085878,
+  "plate_thickness_m": 0.003,
+  "plate_mass_kg": 0.24822450000000001,
+  "assumed_by_rail_drive": 0.55,
+  "bands": [
+    {
+      "band": "1",
+      "name": "CDS rail edge factor >= 0.35",
+      "detail": "0.0253",
+      "passed": false
+    },
+    {
+      "band": "2",
+      "name": "numeric agrees with Russell-Norsworthy within 25 %",
+      "detail": "+1.0 %",
+      "passed": true
+    },
+    {
+      "band": "3",
+      "name": "rails make >= 413 N at <= 0.60 T",
+      "detail": "41.9 N",
+      "passed": false
+    },
+    {
+      "band": "4",
+      "name": "90 mm plate edge factor >= 0.55",
+      "detail": "0.6691",
+      "passed": true
+    },
+    {
+      "band": "5",
+      "name": "that plate weighs < 0.5 kg",
+      "detail": "0.248 kg",
+      "passed": true
+    }
+  ]
+}

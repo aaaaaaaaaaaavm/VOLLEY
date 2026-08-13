@@ -1,5 +1,23 @@
 # Gen6: the satellite is the mover, and it already has the hardware
 
+> # REJECTED, 2026-08-13, by A30 band 1.
+>
+> **The transverse edge factor this document rests on was assumed at 0.55. It is 0.0253** — a
+> factor of 22. Four CDS rails at a generous 0.60 T make **41.9 N** against the **413 N** needed
+> to reproduce Gen5. No pole pitch rescues it: the edge factor wants the secondary wide against
+> the pole pitch, the airgap wants the pole pitch large against the gap, and an 8.5 mm conductor
+> in a 10.5 mm effective gap demands both at once.
+>
+> **The document is kept unedited below**, because this project publishes what it got wrong. It
+> named 0.20 as the value at which the idea would be dead, and it named A30 band 1 as the
+> cheapest way to find out. Both were right.
+>
+> **What survived is in the same sheet.** A **90 mm flat plate** — the widest that fits inside a
+> 3U's own section — has an edge factor of **0.6691**, makes **1652 N at 0.45 T**, and weighs
+> **0.248 kg**, against 0.5–1.2 kg for the cold-gas module it would replace. **The drive is
+> sound; the rail is the wrong conductor.** See [`../validation/A30_rail_drive.md`](../validation/A30_rail_drive.md)
+> and **P49**.
+
 **Proposal, 2026-08-13. Sizing exists; no acceptance band has been declared and nothing here is
 a validated result.** [`../analysis/rail_drive.py`](../analysis/rail_drive.py),
 `analysis/results/rail_drive.json`.

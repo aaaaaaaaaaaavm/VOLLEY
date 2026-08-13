@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **83 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
+> **84 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
 > | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **13** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CORRECTED` | **14** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
@@ -2203,6 +2203,54 @@ band 3, which passed while measuring numerical cancellation on a symmetry axis: 
 satisfiable and still be the wrong question.**
 
 Full sheet: `validation/A29_ground_test_air_drag.md`.
+
+### P49. A Gen6 proposal was sized on an assumption wrong by 22x, and the band declared to kill it did: CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — the proposal is rejected, the sizing is corrected, and the direction it produced is kept
+
+
+**Found by A30 band 1, 2026-08-13**, on bands declared at `7df75ac` before
+`analysis/edge_effect.py` existed. Numbered under [ADR-021](docs/adr/021-freeze-the-register.md)
+case 3.
+
+**PII-16 proposed driving a linear induction motor on the CubeSat Design Specification's own
+aluminium corner rails** — the interface every deployer already touches, on every satellite,
+requiring nothing to be added. `analysis/rail_drive.py` sized it at **513 N, 18.26 m/s on 1182 J**
+and it looked better than Gen5 on every axis.
+
+**It rested on a transverse edge-effect derating assumed at 0.55.** The file declared that at the
+top as its dominant assumption; `docs/GEN6_RAIL_DRIVE.md` named 0.20 as the value at which the
+idea would be dead. **The measured figure is 0.0253.**
+
+| | |
+|---|---:|
+| Assumed | 0.55 |
+| **Measured** | **0.0253** |
+| Thrust, four rails at a generous 0.60 T | **41.9 N** |
+| Required to reproduce Gen5's 10.5 g on a 3U | 413 N |
+
+**No pole pitch rescues it**, and the reason is a contradiction rather than a shortfall: the edge
+factor wants the secondary wide against the pole pitch, the airgap wants the pole pitch large
+against the gap, and an 8.5 mm conductor in a 10.5 mm effective gap demands both at once. For a
+narrow secondary the factor collapses as **(πc/τ)²/3** — quadratically, not gradually.
+
+**Band 2 caught a bug in the solver before any of that was read off it.** The first run returned
+**exactly 0.0000 for every geometry**, including one Russell–Norsworthy puts at 0.66. The imposed
+field had been written as a real `cos(kx)`, which puts the stream function 90° out of phase and
+integrates the thrust to zero for every width. With the travelling wave carried as a phasor the
+solver agrees with the closed form to **1.0 %**. Fourth time a declared band has caught a defect
+in an analysis rather than in the design; second time a solver has returned identically zero and
+reported success.
+
+**Corrected.** `rail_drive.py`'s `EDGE` is set to the measured 0.0253, so the file now reports
+the rejection instead of the proposal, with the original assumption recorded rather than deleted.
+`docs/GEN6_RAIL_DRIVE.md` carries a rejection header. **Nothing in Gen5 was ever changed on the
+strength of the proposal**, which is why this is a corrected defect and not a baseline event.
+
+**What survives, and it is the reason band 4 was declared in advance.** The same solver puts a
+**90 mm flat plate** — the widest that fits inside a 3U's own section — at **0.6691**, 26× the
+rail, making **1652 N at only 0.45 T** for **0.248 kg** of aluminium. **The drive is sound; the
+rail is the wrong conductor.** Those are different findings and the band structure exists to keep
+them apart.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

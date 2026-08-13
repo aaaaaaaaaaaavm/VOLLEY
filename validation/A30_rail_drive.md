@@ -15,6 +15,87 @@ top as its dominant assumption and the proposal names as the thing that would ki
 > The script is absent at this commit. Verify with
 > `git show --stat <this commit> -- analysis/edge_effect.py`, which returns nothing.
 
+## Result, 2026-08-13: the rail is 22x too narrow, and the drive is fine
+
+`analysis/edge_effect.py`, bands committed at `7df75ac` before it existed. Results in
+`analysis/results/edge_effect.json`.
+
+| Band | Test | Result | |
+|---|---|---:|---|
+| 1 | CDS rail edge factor ≥ 0.35 | **0.0253** | **FAIL** |
+| 2 | numeric agrees with Russell–Norsworthy within 25 % | **+1.0 %** | **PASS** |
+| 3 | rails make ≥ 413 N at ≤ 0.60 T | **41.9 N** | **FAIL** |
+| 4 | 90 mm plate edge factor ≥ 0.55 | **0.6691** | **PASS** |
+| 5 | that plate weighs < 0.5 kg | **0.248 kg** | **PASS** |
+
+### Band 1 — PII-16 is rejected
+
+**`analysis/rail_drive.py` assumed 0.55. The answer is 0.0253 — a factor of 22 out.**
+
+| | |
+|---|---:|
+| Edge factor, 8.5 mm CDS rail at a 48 mm pole pitch | **0.0253** |
+| Assumed by the sizing that made the proposal look viable | 0.55 |
+| Thrust on four rails at **0.60 T** — a high flux density, chosen to be generous | **41.9 N** |
+| Thrust required to reproduce Gen5's 10.5 g on a 3U | 413 N |
+| **Short by** | **a factor of 10** |
+
+**The entry criterion for PII-16 is not met and the architecture is rejected.** No pole pitch
+rescues it, and the reason is a contradiction rather than a shortfall: the edge factor wants the
+secondary **wide compared with the pole pitch**, and the airgap wants the pole pitch **large
+compared with the gap**. With an 8.5 mm conductor and a ~10.5 mm effective magnetic gap, those
+two demand τ ≪ 8.5 mm and τ ≫ 10.5 mm at the same time. **There is no design point between
+them.**
+
+For c ≪ τ the factor collapses as (πc/τ)²/3 — **with the square of the width-to-pole-pitch
+ratio.** A narrow secondary is not slightly worse. It is quadratically worse.
+
+### Band 2 caught a bug in this analysis, which is why it was declared
+
+**The first run of `edge_effect.py` returned an edge factor of 0.0000 for every geometry** —
+including the 90 mm plate, which Russell–Norsworthy puts at 0.66. A number that is zero for a
+case known to couple well is not a small answer, it is a wrong one.
+
+The cause: the imposed field was written as a real `cos(kx)`. That makes the stream function 90°
+out of phase with it, so the time-average thrust `⟨K_y·B_n⟩` integrates to **exactly zero for
+every width**. The travelling wave has to be carried as a spatial phasor `B e^{−jkx}`, with
+thrust `½ Re{K_y · conj(B_n)}`. With the phasor restored the solver agrees with the closed form
+to **1.0 %**.
+
+**This is the fourth time a declared band has caught a bug in the analysis rather than a problem
+in the design** — after A19, A20 and A2. It is also the second time in this repository that a
+solver has returned identically zero, converged cleanly, and reported success; the first was the
+3-D magnetostatic solve in `validation/fem3d/`.
+
+**What band 2 does and does not check.** The numerical solve discretises the same
+boundary-value problem Russell & Norsworthy solved in closed form, so agreement validates the
+**discretisation**, not the physics. It is not an independent physical method, and it is not
+offered as one.
+
+### Bands 4 and 5 — the drive is sound; the rail is the wrong conductor
+
+**This distinction is the entire value of having declared band 4 in advance**, and it is why a
+failure here produces a direction rather than only a rejection.
+
+| 90 mm flat plate, 3 mm thick, inside a 3U's own 100 mm section | |
+|---|---:|
+| Edge factor at a 48 mm pole pitch | **0.6691** — 26× the rail |
+| Thrust at only **0.45 T** over 306 cm² | **1652 N** |
+| Against the requirement | **4× more than needed** |
+| Mass | **0.248 kg** |
+| A COTS 3U cold-gas module delivering the same Δv | 0.5–1.2 kg |
+
+**A quarter-kilogram of plain aluminium beats the lightest propulsion module on the market by
+2×, and makes four times the thrust the machine needs.** The linear induction drive — no sled, no
+brake, no arrest section, no cradle — is intact. What fails is the belief that an interface which
+already exists happened to be the right shape.
+
+**Band 5 is the design rule that matters more than any of the thrust numbers.** An interface the
+customer must carry is worth carrying only if it costs them less than the propulsion module it
+replaces. At 0.248 kg it does, by a factor of two to five.
+
+---
+
 ## The physics being tested, stated precisely
 
 A linear induction motor makes thrust from **transverse** current induced in its secondary. In a
