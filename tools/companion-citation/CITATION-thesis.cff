@@ -1,0 +1,19 @@
+# DRAFT for aaaaaaaaaaaavm/VOLLEY-thesis. Not yet placed in that repository.
+# Title and abstract are taken from that repository's own README; author, affiliation and
+# email are carried across from the flagship CITATION.cff, which is the only place in the
+# programme that holds them.
+cff-version: 1.2.0
+message: "This is a generated companion repository. The authoritative engineering record is the VOLLEY flagship; where the two disagree, the flagship is right. Cite the flagship unless you specifically mean this submission copy."
+title: "VOLLEY-thesis: thesis companion to the VOLLEY electromagnetic CubeSat deployer programme"
+abstract: "University submission companion to the VOLLEY programme. Every file is generated from the VOLLEY flagship by tools/export_companion.py and nothing here is authored independently; the repository collects the manuscript source, the analysis scripts, the validation run sheets, the CAD record and the appendix documents into a single submission copy. Design study only: nothing has been built or measured."
+type: software
+authors:
+  - family-names: Mishra
+    given-names: Adityavardhan
+    affiliation: "Department of Mechanical Engineering, Symbiosis Institute of Technology, Symbiosis International (Deemed University), Pune, India"
+    email: adityavardhanmishr@gmail.com
+repository-code: "https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis"
+license: CC-BY-4.0
+# version:          # NEEDS SOURCE: VOLLEY-thesis carries no tags. It tracks flagship commits.
+# date-released:    # NEEDS SOURCE: follows from the version above.
+# doi:              # left empty deliberately. Populate after minting a DOI.

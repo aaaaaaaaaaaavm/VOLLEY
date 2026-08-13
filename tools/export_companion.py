@@ -96,6 +96,9 @@ PAPER_MANIFEST = [
     ("docs/LITERATURE.md", "LITERATURE.md"),
     ("docs/BASELINE.md", "BASELINE.md"),
     ("LICENSE", "LICENSE"),
+    ("NOTICE", "NOTICE"),
+    ("LICENSING.md", "LICENSING.md"),
+    ("LICENSE-MIT-superseded", "LICENSE-MIT-superseded"),
     ("CITATION.cff", "CITATION.cff"),
 ]
 
@@ -120,6 +123,10 @@ THESIS_MANIFEST = [
     ("docs/LITERATURE.md", "appendix/LITERATURE.md"),
     ("docs/RELATED_WORK.md", "appendix/RELATED_WORK.md"),
     ("LICENSE", "LICENSE"),
+    ("NOTICE", "NOTICE"),
+    ("LICENSING.md", "LICENSING.md"),
+    ("LICENSE-MIT-superseded", "LICENSE-MIT-superseded"),
+    ("CITATION.cff", "CITATION.cff"),
 ]
 
 PAPER_README = """# VOLLEY: IEEE companion

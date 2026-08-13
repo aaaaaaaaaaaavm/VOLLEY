@@ -12,7 +12,7 @@
   <img src="cad/renders/envelope_closed.png" alt="VOLLEY deployer, closed, 1839 mm along the track, on its ESPA interface" width="100%">
 </p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](requirements.txt)
 [![Maturity: TRL 2-3](https://img.shields.io/badge/maturity-TRL%202--3-orange.svg)](OPEN_PROBLEMS.md)
 [![Validation: model only](https://img.shields.io/badge/validation-model%20only%2C%20unverified-red.svg)](docs/PROVENANCE.md)
@@ -438,6 +438,19 @@ and **P29** (the paper says the winding is segmented; the model charges copper f
 1.3 m). Most recently closed: **P17**, the inter-array attraction feeding the A4 FEA, 37 %
 high — resolved by A12, which also found that P17's *explanation* of its own finding was
 backwards.
+
+## Licence
+
+**The whole of this repository is CC BY 4.0** — a single licence at the root, no directory
+split. Full text in [`LICENSE`](LICENSE), attribution form in [`NOTICE`](NOTICE), scope and
+reasoning in [`LICENSING.md`](LICENSING.md).
+
+**This is not retroactive.** Snapshots taken before this change — clones, forks, archives, and
+every commit reachable before it — **remain available under the MIT licence** they carried at
+the time; that text is kept at [`LICENSE-MIT-superseded`](LICENSE-MIT-superseded).
+
+The IEEE manuscript in `paper/` is a separate case: **an IEEE copyright transfer on acceptance
+would supersede this licence for the accepted version.** See [`LICENSING.md`](LICENSING.md).
 
 ## Using this work
 

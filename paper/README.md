@@ -83,3 +83,18 @@ directly. Run `python3 paper/make_figures.py` after any change to the operating 
 ## Archive
 
 `archive/` holds superseded builds. Nothing in it should be cited; see its own README.
+
+## Licensing, and why this directory is a separate case
+
+The **reproducibility package** — `make_figures.py`, `make_animation.py`, `figures/` and these
+build notes — is **CC BY 4.0**, like the rest of the repository. See [`../LICENSING.md`](../LICENSING.md).
+
+**The manuscript is different.** `paper.tex` and the compiled PDF are published here under
+CC BY 4.0 **today, and that position is provisional**: if the manuscript is accepted for
+publication, **an IEEE copyright transfer would supersede this licence for the accepted
+version**. This repository cannot license rights it has transferred, and the preprint published
+here would not automatically carry the same terms as the accepted paper.
+
+**Nothing about the analysis changes.** The scripts, the results, and the run sheets the
+manuscript draws on stay CC BY 4.0 regardless of what happens to the manuscript itself, which is
+the practical reason the two are separated here rather than treated as one artifact.

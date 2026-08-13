@@ -1,0 +1,22 @@
+# DRAFT for aaaaaaaaaaaavm/VOLLEY-lab. Not yet placed in that repository.
+# Title and abstract are taken from that repository's own README; author, affiliation and
+# email are carried across from the flagship CITATION.cff.
+#
+# TENSION TO RESOLVE BEFORE PLACING THIS FILE: VOLLEY-lab's own README states
+# "Nothing in this repository should be cited." A CITATION.cff invites the opposite.
+# The message field below carries the warning, but the two still disagree.
+cff-version: 1.2.0
+message: "This repository makes no promises: no frozen baseline, no stability requirement, and numbers here may be wrong, half-finished, or abandoned mid-thought. Its own README states that nothing in it should be cited. Cite the VOLLEY flagship instead; this file exists so that a reference made anyway is at least attributed correctly."
+title: "VOLLEY-lab: the Phase II research track of the VOLLEY programme"
+abstract: "The research track of the VOLLEY electromagnetic CubeSat deployer programme, and the pressure valve that lets the flagship stay frozen. Holds deferred programme directions and scaling studies rather than the engineering record: a deployable track, a free-flyer case, the lunar case, and a cable-driven gondola architecture. Deliberately unstable by design."
+type: software
+authors:
+  - family-names: Mishra
+    given-names: Adityavardhan
+    affiliation: "Department of Mechanical Engineering, Symbiosis Institute of Technology, Symbiosis International (Deemed University), Pune, India"
+    email: adityavardhanmishr@gmail.com
+repository-code: "https://github.com/aaaaaaaaaaaavm/VOLLEY-lab"
+license: CC-BY-4.0
+# version:          # NEEDS SOURCE: VOLLEY-lab carries no tags.
+# date-released:    # NEEDS SOURCE: follows from the version above.
+# doi:              # left empty deliberately.
