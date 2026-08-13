@@ -51,6 +51,17 @@ already granted.
   IEEE copyright transfer would supersede this licence for the accepted version.** This
   repository cannot license rights it has transferred. See [`paper/README.md`](paper/README.md).
 
+## Citation, across the programme
+
+**One work, one citation.** `CITATION.cff` in this repository is the only citation record in the
+programme, and the generated companions carry it verbatim rather than declaring titles of their
+own. A companion that is a copy of this work should not become a second citable identity for it —
+that is the same fork-of-truth problem `ADR-015` exists to prevent, applied to metadata.
+
+**`VOLLEY-lab` carries no `CITATION.cff` deliberately.** Its own README states that nothing in it
+should be cited, and adding a citation file would contradict that in the same repository. The
+contradiction is removed rather than annotated: cite this repository instead.
+
 ## Attribution
 
 CC BY 4.0 requires credit, a link to the licence, and **an indication of whether changes were
