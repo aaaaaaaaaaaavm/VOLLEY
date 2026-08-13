@@ -73,8 +73,24 @@ def main(out):
                                      mm.BR / (4e-7 * math.pi) * math.sin(ang), 0.0])
     json.dump(dict(n_wave=N_WAVE, Br=mm.BR, mags=mags_out),
               open(os.path.join(os.path.dirname(out), "magnetisation.json"), "w"), indent=1)
-    surf = [t for d, t in gmsh.model.getBoundary([(3, air_v)], oriented=False)]
-    gmsh.model.addPhysicalGroup(2, surf, 3000, name="Outer")
+    # ONLY the six outer faces of the air box. getBoundary() on the air volume returns the
+    # magnet-air interfaces as well, and tagging those as "Outer" pins phi = 0 on every magnet
+    # surface -- which makes phi identically zero throughout the air by uniqueness, since the
+    # air carries no source. That is exactly what happened on the first run: phi came back at
+    # 1470.69 inside a magnet and exactly 0 at every point in the gap.
+    bb = gmsh.model.getBoundingBox(3, air_v)
+    eps = 1e-6
+    outer = []
+    for d, t in gmsh.model.getEntities(2):
+        sb = gmsh.model.getBoundingBox(2, t)
+        on_face = any(abs(sb[i] - bb[i]) < eps and abs(sb[i + 3] - bb[i]) < eps
+                      for i in range(3)) or \
+                  any(abs(sb[i] - bb[i + 3]) < eps and abs(sb[i + 3] - bb[i + 3]) < eps
+                      for i in range(3))
+        if on_face:
+            outer.append(t)
+    assert len(outer) == 6, f"expected 6 outer faces, found {len(outer)}"
+    gmsh.model.addPhysicalGroup(2, outer, 3000, name="Outer")
 
     # A uniform mesh fine enough for the gap would fill the whole air box, so refinement is
     # confined to a box around the arrays and the gap between them. Everything outside it is

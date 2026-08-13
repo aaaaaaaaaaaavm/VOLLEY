@@ -52,3 +52,6 @@ paper/cv/*.out
 validation/fem3d/*.msh
 validation/fem3d/*.pre
 validation/fem3d/*.res
+validation/fem3d/*.pos
+validation/fem3d/diag_*.txt
+validation/fem3d/p[0-9].txt
