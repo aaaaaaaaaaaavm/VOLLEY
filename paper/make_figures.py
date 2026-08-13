@@ -387,6 +387,46 @@ def f13_latency():
     save(fig, 'F13_latency.png')
 
 
+# --------------------------------------------------------------------------- F14
+def f14_airdrag():
+    """A29: what air costs a ground test, against the two things it must be compared to.
+
+    Left: the drag force along the stroke, which rises linearly because the profile is
+    position-scheduled and v^2 is therefore linear in x. Right: the resulting exit-velocity
+    deficit set beside the design point and beside the dispersion the test exists to
+    resolve -- the comparison that decides whether the correction can be ignored.
+    """
+    d = json.load(open(os.path.join(os.path.dirname(OUT), '..', 'analysis', 'results',
+                                    'cfd_air_drag.json')))
+    L = d['accel_zone_m']
+    F = d['free']['drag_N']
+    x = np.linspace(0, L, 200)
+
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(6.6, 2.9),
+                                 gridspec_kw=dict(width_ratios=[1.15, 1], wspace=0.35))
+    a1.plot(x, F * x / L, color='k', lw=1.6)
+    a1.fill_between(x, F * x / L, color='0.85')
+    a1.set_xlabel('Position along the acceleration zone, m')
+    a1.set_ylabel('Air drag, N')
+    a1.set_xlim(0, L)
+    a1.set_ylim(0, F * 1.15)
+    a1.text(0.04 * L, F * 0.9, f"$C_d$ = {d['free']['Cd']:.2f}\n"
+            f"{d['free']['work_J']:.2f} J over the stroke", fontsize=7.5, va='top')
+
+    labels = ['Air deficit', 'Dispersion\n(3$\\sigma$)', 'Design point']
+    vals = [d['free']['deficit_m_s'], d['dispersion_3sigma'], d['v_exit']]
+    a2.barh(range(3), vals, color=['0.25', '0.55', '0.85'], edgecolor='k', height=0.6)
+    a2.set_yticks(range(3))
+    a2.set_yticklabels(labels, fontsize=8)
+    a2.set_xscale('log')
+    a2.set_xlabel('m/s (log scale)')
+    a2.invert_yaxis()
+    for i, v in enumerate(vals):
+        a2.text(v * 1.25, i, f'{v:.4g}', va='center', fontsize=7.5)
+    a2.set_xlim(min(vals) * 0.4, max(vals) * 6)
+    save(fig, 'F14_airdrag.png')
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     print("regenerating figures from analysis/ ...")
@@ -408,6 +448,7 @@ def main():
     f11_uq(dv)
     f12_bode()
     f13_latency()
+    f14_airdrag()
 
     # A rebuild that produces byte-identical PNGs leaves no trace in git, and
     # tools/check_artifacts.py compares commit times, so it cannot tell "not rebuilt"

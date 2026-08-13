@@ -1,0 +1,9 @@
+# The case directories are a function of build_case.py, cad/stl/*.stl and
+# analysis/motor_model.py, all of which are committed -- so storing them would be storing an
+# output of a committed input. Same reasoning as validation/fem3d/ and ADR-015.
+free/
+channel/
+free_fine/
+channel_fine/
+__pycache__/
+forces_*.json
