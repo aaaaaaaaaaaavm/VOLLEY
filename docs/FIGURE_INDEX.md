@@ -24,7 +24,7 @@ measurement look identical on a page and are not the same thing.
 
 ## Paper figures
 
-All are drawn by [`../paper/make_figures.py`](../paper/make_figures.py), which imports
+All are drawn by [`../paper/make_figures.py`](../tools/make_figures.py), which imports
 `analysis/` and re-derives nothing. A figure that reimplemented its own physics could drift from
 the number it illustrates, which is the defect the generator was written to remove.
 
@@ -44,7 +44,7 @@ the number it illustrates, which is the defect the generator was written to remo
 | **F11** | Solar-activity sweep against GMAT | `f11_uq()` | `astro.lifetime()` + GMAT R2022a | **P16.** The figure exists to show the static model returns a flat ratio *by construction*; an independent propagator does not | **X** |
 | **F12** | Open-loop velocity-loop response, both gains | `f12_bode()` | `analysis/control_design.py` | **A28.** Margins, the 48–109 Hz mode band, both crossovers | **M** |
 | **F13** | Phase margin against transport delay | `f13_latency()` | `analysis/control_design.py` | **A28 band 5.** The stability floor at 0.35 ms | **M** |
-| **shot.gif** | The stroke, animated | `paper/make_animation.py` | `motor_model.shot(trace=True)` | Same integrator as F01 | **M** |
+| **shot.gif** | The stroke, animated | `tools/make_animation.py` | `motor_model.shot(trace=True)` | Same integrator as F01 | **M** |
 
 **Numbering note: there is no F10.** It was withdrawn and the gap is left rather than
 renumbered, so a reference to F10 in any older document resolves to nothing instead of silently
@@ -52,7 +52,7 @@ to the wrong figure.
 
 ### The build stamps
 
-`paper/figures/BUILD.json` and `BUILD_anim.json` record the operating point each figure set was
+`figures/BUILD.json` and `BUILD_anim.json` record the operating point each figure set was
 drawn from, plus a digest of `analysis/results/motor_results.json`. **A rebuild whose PNGs come
 out byte-identical leaves nothing in git**, so commit times alone cannot distinguish "not
 rebuilt" from "rebuilt, unchanged". The stamps are what `tools/check_artifacts.py` compares.

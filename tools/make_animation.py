@@ -8,8 +8,8 @@ the animation is drawn from the same integrator the paper's numbers come from. T
 second copy of the physics here, for the same reason make_figures.py has none: the two would
 drift, and the figure would start disagreeing with the number it illustrates.
 
-Run:  python3 paper/make_animation.py
-Out:  paper/figures/shot.gif
+Run:  python3 tools/make_animation.py
+Out:  figures/shot.gif
 """
 import hashlib
 import os
@@ -22,8 +22,8 @@ import matplotlib.pyplot as plt                    # noqa: E402
 from matplotlib.animation import FuncAnimation, PillowWriter   # noqa: E402
 import numpy as np                                 # noqa: E402
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "analysis"))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(HERE, "analysis"))
 import motor_model as mm                           # noqa: E402
 
 FPS = 25
@@ -105,7 +105,7 @@ def main():
     # The four fields below are the shot, which is all this animation draws -- so a change
     # elsewhere in the results leaves them identical and the stamp permanently "stale".
     # The digest is of the whole results file, so any regeneration is visible.
-    with open(os.path.join(HERE, "..", "analysis", "results",
+    with open(os.path.join(HERE, "analysis", "results",
                            "motor_results.json"), "rb") as fh:
         digest = hashlib.sha256(fh.read()).hexdigest()[:16]
     stamp = dict(v_exit=round(float(out['v_exit']), 3), a_g=round(float(out['a_g']), 2),

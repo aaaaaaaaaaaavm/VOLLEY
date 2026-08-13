@@ -253,12 +253,31 @@ external solvers, gmsh and scikit-fem for the magnetostatic FEM, GetDP, CalculiX
 ngspice, and a LaTeX install for the manuscript. `tools/env-setup.sh` installs all of
 them on a Debian/Ubuntu machine and verifies each one before exiting.
 
+## Results
+
+**Every image below is a script output.** Nothing here has been measured — see
+**[`docs/FIGURE_INDEX.md`](docs/FIGURE_INDEX.md)** for each figure's generator, its source data
+and its class of evidence, and note that the class for *measured* has **zero members**.
+
 <table>
 <tr>
-<td width="50%"><img src="paper/figures/F01_shot.png" alt="Shot simulation: force, velocity, current"><br><sub><b>The shot.</b> Force, velocity and current through the 158.6 ms stroke (<code>motor_model.py</code>).</sub></td>
-<td width="50%"><img src="paper/figures/F04_life.png" alt="Orbital lifetime with and without the boost"><br><sub><b>Lifetime.</b> Boosted vs unboosted decay, the x1.62 multiplier at mean activity is the current model result, not the absolute years (<code>astro.py</code>).</sub></td>
+<td width="50%"><img src="figures/F01_shot.png" alt="Shot simulation: force, velocity, current"><br><sub><b>The shot.</b> Force, velocity and current through the 158.6 ms stroke (<code>motor_model.py</code>).</sub></td>
+<td width="50%"><img src="figures/F04_life.png" alt="Orbital lifetime with and without the boost"><br><sub><b>Lifetime.</b> Boosted vs unboosted decay; the x1.62 multiplier at mean activity is the model result, not the absolute years (<code>astro.py</code>).</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="figures/F12_bode.png" alt="Open-loop velocity-loop response at both gains"><br><sub><b>The velocity loop, A28.</b> The gain published until 2026-08-13 put the crossover at <b>557 Hz</b> — above both track modes — with <b>-50.4&deg;</b> of phase margin. The designed gain is 195 s<sup>-1</sup>: +82.2&deg;, +21.2 dB, and the dispersion does not move (<code>control_design.py</code>).</sub></td>
+<td width="50%"><img src="figures/F13_latency.png" alt="Phase margin against transport delay"><br><sub><b>The stability floor.</b> The old gain crosses into instability at <b>0.35 ms</b> of sensor delay. Its dispersion figure came from a simulation that fed back an undelayed state (<b>P47</b>).</sub></td>
+</tr>
+<tr>
+<td colspan="2"><img src="figures/A29_cfd_report.png" alt="CFD convergence, force history and surface pressure"><br><sub><b>CFD, A29 — the full report, not just the answer.</b> <b>(a)</b> the solve <i>does not converge</i>, which is what a steady solver does on a separated wake, so the force is a windowed mean; <b>(b)</b> that mean, 1.734 &plusmn; 0.144 N; <b>(c)</b> surface pressure — forward faces push, the base sucks, the sides do nothing, with a peak C<sub>p</sub> of <b>0.975</b> where stagnation should approach 1. Meshed by <code>snappyHexMesh</code> from the <b>generated Gen5 CAD</b>, not an idealised box.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="figures/F14_airdrag.png" alt="Air drag along the stroke and the resulting velocity deficit"><br><sub><b>What air costs a ground test.</b> The machine flies in vacuum; the full-scale test fires in a room. The deficit is <b>5.1 mm/s</b> — 0.031 % of the design point, but <b>19 % of the dispersion the test exists to resolve</b>. No vacuum chamber needed; an air correction on every measured velocity is.</sub></td>
+<td width="50%"><img src="figures/F03_mc.png" alt="Closed-loop exit-velocity dispersion"><br><sub><b>Dispersion.</b> 800 Monte Carlo runs, 0.0267 m/s (3&sigma;) about a 16.2 m/s setpoint. The gain behind it is now <i>designed against margins</i> rather than asserted (<b>ADR-027</b>).</sub></td>
 </tr>
 </table>
+
+**[Every figure &rarr;](figures/)** &middot; **[what stands behind each one &rarr;](docs/FIGURE_INDEX.md)**
 
 ## Validation
 
@@ -382,7 +401,9 @@ flown DSOD, is in [`docs/LANDSCAPE.md`](docs/LANDSCAPE.md).
   `step/gen1|gen2|gen3/` exports (**Gen3 current**), `stl/` (browser-viewable meshes),
   `renders/`, `CHANGELOG_CAD.md` (generation history and per-file defect list)
 - `legacy/`, superseded scripts, kept for history, **do not cite**
-- `paper/`, IEEE conference paper (LaTeX source, figures, PDF)
+- `figures/`, every result figure, regenerated from `analysis/` by `tools/make_figures.py`
+- **No LaTeX lives here.** The IEEE manuscript, its `.cls`, the built PDF and the CV are
+  authored in **[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** (ADR-028)
 - `validation/`, independent cross-check plan (FEMM, CalculiX, Orekit, CARA, Chrono),
   each with an acceptance band declared before the run; nothing run yet
 - `docs/`, computation notes, FEMM run sheet, related work and comparator sources
@@ -449,7 +470,7 @@ reasoning in [`LICENSING.md`](LICENSING.md).
 every commit reachable before it — **remain available under the MIT licence** they carried at
 the time; that text is kept at [`LICENSE-MIT-superseded`](LICENSE-MIT-superseded).
 
-The IEEE manuscript in `paper/` is a separate case: **an IEEE copyright transfer on acceptance
+The IEEE manuscript, which now lives in [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper), is a separate case: **an IEEE copyright transfer on acceptance
 would supersede this licence for the accepted version.** See [`LICENSING.md`](LICENSING.md).
 
 ### Across the programme

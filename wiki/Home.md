@@ -172,7 +172,8 @@ These were argued out and should not be silently reopened; reasoning is in
 | `analysis/results/` | script outputs as JSON |
 | `cad/stl/` | browser-viewable meshes derived from the Gen3 STEP files |
 | [`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad) | `parameters.json` (geometry source of truth), `step/gen1\|gen2\|gen3/` exports (Gen3 current), `renders/`, `CHANGELOG_CAD.md` |
-| [`paper/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/paper) | IEEE conference paper, LaTeX source, figures, PDF |
+| [`figures/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/figures) | every result figure, regenerated from `analysis/` by `tools/make_figures.py` |
+| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | the IEEE manuscript: LaTeX source, PDF, reproducibility package. **No LaTeX lives in this repository** |
 | [`legacy/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/legacy) | superseded scripts, kept for history, **do not cite** |
 | [`docs/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/docs) | computation notes C1, C10, FEMM run sheet, decision log, related work |
 | [`validation/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/validation) | cross-check plan (FEMM, CalculiX, Orekit, CARA, Chrono) with acceptance bands declared before the runs; nothing run yet |

@@ -1,4 +1,4 @@
-"""Regenerate every figure in paper/figures/ from analysis/.
+"""Regenerate every figure in figures/ from analysis/.
 
 Why this exists: until 2026-07-29 the committed PNGs had no generator in the
 repository. `legacy/make_figs.py` sits at a superseded operating point (4.0 kg sled,
@@ -17,7 +17,7 @@ than copied into this file.
 D01_block.png and D02_layout.png are schematics, not plots, and are not regenerated
 here -- see `legacy/make_diagrams.py`.
 
-Run:  python3 paper/make_figures.py
+Run:  python3 tools/make_figures.py
 """
 
 import hashlib
@@ -32,14 +32,15 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'analysis'))
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, 'analysis'))
 
 import astro
 import control_design as cd
 import motor_model as mm
 import sizing
 
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'figures')
+OUT = os.path.join(ROOT, 'figures')
 
 plt.rcParams.update({
     'font.family': 'serif', 'font.size': 10, 'axes.grid': True, 'grid.alpha': 0.3,
@@ -50,7 +51,7 @@ plt.rcParams.update({
 
 def _cfd():
     """A29's result, which F14 is drawn from and the stamp therefore has to carry."""
-    return json.load(open(os.path.join(os.path.dirname(OUT), '..', 'analysis', 'results',
+    return json.load(open(os.path.join(ROOT, 'analysis', 'results',
                                        'cfd_air_drag.json')))
 
 
@@ -402,7 +403,7 @@ def f14_airdrag():
     deficit set beside the design point and beside the dispersion the test exists to
     resolve -- the comparison that decides whether the correction can be ignored.
     """
-    d = json.load(open(os.path.join(os.path.dirname(OUT), '..', 'analysis', 'results',
+    d = json.load(open(os.path.join(ROOT, 'analysis', 'results',
                                     'cfd_air_drag.json')))
     L = d['accel_zone_m']
     F = d['free']['drag_N']
@@ -470,7 +471,7 @@ def main():
     # which is the same blind spot the stamp exists to close: on 2026-08-13 the velocity-loop
     # gain changed, F03 was redrawn, and every field here stayed identical. The digest is of
     # the whole results file, so ANY change to the operating point moves the stamp.
-    with open(os.path.join(os.path.dirname(OUT), '..', 'analysis', 'results',
+    with open(os.path.join(ROOT, 'analysis', 'results',
                            'motor_results.json'), 'rb') as fh:
         digest = hashlib.sha256(fh.read()).hexdigest()[:16]
     stamp = dict(v_exit=round(float(dv), 3), Kt_N_per_kA=round(float(Kt) * 1e3, 2),

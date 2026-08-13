@@ -9,6 +9,23 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (twenty-sixth pass): no LaTeX in the engineering record
+
+| ID | Item | Detail |
+|---|---|---|
+| **ADR-028** | **The flagship holds no LaTeX, no `.cls`, and no compiled PDF** | `paper.tex`, `IEEEtran.cls`, the built PDF, `archive/` and `cv/` are now **authored** in `VOLLEY-paper`; the thesis carries its own copy in `source/`. A `.tex` file is not a derived artefact — it is written, submitted, reviewed and revised, and it acquires a copyright status the flagship cannot license, which is why `PAPER_MANIFEST` already carried a deliberate licence hold. |
+| MOVE-01 | **`paper/figures/` → `figures/`; the generators → `tools/`** | A figure is a **result**: drawn from `analysis/`, indexed by `docs/FIGURE_INDEX.md`. It belongs in the engineering record whether or not a paper cites it. `tools/make_figures.py` and `tools/make_animation.py` regenerate at the new location and were re-run to prove it. |
+| **MOVE-02** | **`export_companion.py` no longer wipes the companion** | It called `shutil.rmtree(dest)` and now removes only the paths in its own manifest. **Run unchanged after this move, it would have deleted the paper.** ADR-017's "delete and regenerate" rule now applies to the manifest paths only, and the ADR says so. |
+| MOVE-03 | **What the flagship stops having to carry** | `check_artifacts.py` loses the two pairs it could verify only by page count. `env-setup.sh`'s LaTeX dependency now exists for nothing in this repository. |
+| **FRONT-01** | **The front page leads with results, and shows the ones that were missing** | README gains a **Results** section: the shot, lifetime, **both A28 control figures**, the **full A29 CFD report** and the air-drag result, each captioned with what it shows and what it cost. Opens by stating that every image is a script output and pointing at the figure index. |
+| FRONT-02 | **`docs/index.html` gains two sections** | *Control stability, and a gain that was never designed* and *CFD: what air costs a ground test* — the second showing the convergence history and the surface-pressure distribution, not only the answer. |
+| FRONT-03 | **Historical paths are not rewritten** | `CHANGELOG.md` and `OPEN_PROBLEMS.md` describe edits made to `paper/paper.tex` on dates when that path existed. They are the audit record; the paths in them are historical facts, not links. |
+
+**What authorised it.** A structural decision by the sole author, recorded as ADR-028. **No
+script value, no band and no operating point moved** — all four checks pass unchanged.
+
+---
+
 ## 2026-08-13 (twenty-fifth pass): the machine flies in vacuum, the test happens in a room
 
 | ID | Item | Detail |

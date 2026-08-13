@@ -49,7 +49,7 @@ already granted.
 - **The manuscript itself** (`paper.tex` and the compiled PDF) is CC BY 4.0 **as published here
   today**, and that position is provisional. **If the manuscript is accepted for publication, an
   IEEE copyright transfer would supersede this licence for the accepted version.** This
-  repository cannot license rights it has transferred. See [`paper/README.md`](paper/README.md).
+  repository cannot license rights it has transferred. See [`paper/README.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper).
 
 ## Citation, across the programme
 

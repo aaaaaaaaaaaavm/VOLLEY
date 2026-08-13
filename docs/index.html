@@ -88,7 +88,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
     </div>
     <div class="pills">
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY">Repository</a>
-      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/paper/VOLLEY_IEEE_Conference.pdf">Paper (PDF)</a>
+      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY-paper/blob/main/paper/VOLLEY_IEEE_Conference.pdf">Paper (PDF)</a>
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/cad/stl/EMOCD_Assembly_Gen3.stl">Spin the 3D model</a>
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/RESULTS.md">All charts</a>
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/OPEN_PROBLEMS.md">Open problems</a>
@@ -169,12 +169,12 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   satellite.</div>
 
   <figure style="margin-top:26px">
-    <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/paper/figures/shot.gif" alt="Animated shot: position, velocity, commanded force and bank current against time"
+    <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/shot.gif" alt="Animated shot: position, velocity, commanded force and bank current against time"
          style="max-width:620px;width:100%;display:block;margin:0 auto">
     <figcaption style="text-align:center"><b>The stroke, drawn as it happens.</b>
       157.3 ms from breech to release. Position, velocity, commanded force and bank current,
       all four from the same integrator that produces the paper's numbers
-      (<code>paper/make_animation.py</code> imports <code>motor_model.py</code> rather than
+      (<code>tools/make_animation.py</code> imports <code>motor_model.py</code> rather than
       reimplementing it).</figcaption>
   </figure>
 </section>
@@ -212,11 +212,35 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   the machine spec. 9.445 kg is the as-drawn, unpocketed geometry and A4 reports a 17x stress
   margin, so a rib-stiffened redesign would recover mass; nobody has designed one.</div>
   <div class="grid g2" style="margin-top:18px">
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/paper/figures/F01_shot.png" alt="Shot simulation">
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F01_shot.png" alt="Shot simulation">
       <figcaption><b>The shot.</b> Force, velocity and current through the 157.3 ms stroke.</figcaption></figure>
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/paper/figures/F04_life.png" alt="Orbital lifetime">
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F04_life.png" alt="Orbital lifetime">
       <figcaption><b>Lifetime.</b> Boosted vs unboosted decay. The x1.62 ratio is the claim, not the absolute years.</figcaption></figure>
   </div>
+</section>
+
+<section>
+  <h2>Control stability, and a gain that was never designed</h2>
+  <p class="sub">The dispersion figure above was produced by a loop nobody had drawn a Bode plot
+  of. When one was drawn, the published gain turned out to be <b>linearly unstable</b>.</p>
+  <div class="grid g2" style="margin-top:18px">
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F12_bode.png" alt="Open-loop velocity-loop response at both gains">
+      <figcaption><b>The loop is feedback-linearised</b>, so <code>L(s) = Kp&middot;e<sup>&minus;s&tau;</sup>/s</code> and <b>Kp is the crossover in rad/s, not a current gain</b> &mdash; a fact written down nowhere. 3500 s<sup>&minus;1</sup> is <b>557 Hz</b>, above both track modes, at <b>&minus;50.4&deg;</b> of phase margin.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F13_latency.png" alt="Phase margin against transport delay">
+      <figcaption><b>Marginally stable at 0.35 ms</b> of sensor delay. The simulation fed back an <i>undelayed</i> state, which is the one condition under which that gain holds. The designed gain is <b>195 s<sup>&minus;1</sup></b>: +82.2&deg;, +21.2 dB, and the dispersion does not move. <b>P47</b>, <b>ADR-027</b>.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>CFD: what air costs a ground test</h2>
+  <p class="sub">The machine flies in vacuum. The full-scale demonstration fires a mass simulator
+  down a 1.5 m track <i>in a room</i>, and nothing said what the air was worth. Steady RANS on
+  the <b>generated Gen5 CAD</b> &mdash; meshed from the STL the repository ships, not an
+  idealised box.</p>
+  <figure style="margin-top:18px"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/A29_cfd_report.png" alt="CFD convergence, force history and surface pressure distribution">
+    <figcaption><b>The report, not just the answer.</b> <b>(a)</b> the solve <i>does not converge</i> &mdash; velocity residuals plateau near 5&times;10<sup>&minus;2</sup>, which is what a steady solver does on a massively separated wake &mdash; so the force is a windowed mean rather than a reading. <b>(b)</b> that mean: <b>1.734 &plusmn; 0.144 N</b>; reading one iteration would have given 1.60 or 1.89 with equal confidence. <b>(c)</b> where the drag comes from: forward faces push, the base sucks, the sides do nothing, peak C<sub>p</sub> <b>0.975</b> where stagnation should approach 1.000.</figcaption></figure>
+  <figure style="margin-top:14px"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F14_airdrag.png" alt="Air drag along the stroke and the resulting exit-velocity deficit">
+    <figcaption><b>5.1 mm/s.</b> That is 0.031 % of the design point and <b>19 % of the 3&sigma; dispersion a ground test exists to resolve</b>. So: no vacuum chamber needed, but every velocity the test measures has to carry the correction. Two of five bands failed and <b>neither failure is in the machine</b> &mdash; <b>P48</b>.</figcaption></figure>
 </section>
 
 <section>

@@ -32,9 +32,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # (artifact, [sources]) -- the artifact must not predate any of its sources.
 PAIRS = [
-    ("paper/VOLLEY_IEEE_Conference.pdf", ["paper/paper.tex"]),
-    ("paper/cv/cv.tex", ["paper/cv/make_cv.py", "analysis/results/motor_results.json"]),
-    ("paper/cv/cv.pdf", ["paper/cv/cv.tex"]),
+    # The manuscript, the .cls, the built PDF and the CV moved to VOLLEY-paper on
+    # 2026-08-13 (ADR-028). They are authored there and are not artifacts of this
+    # repository any more, so nothing here can or should guard them.
     # The public Pages site. It served pre-quadrature numbers -- 11.22 N/kA.m, 16.54 m/s,
     # 76.9 kg -- from 2026-08-03 until 2026-08-10, because nothing compared it to the
     # operating point it quotes. That is P42, and this pair is the fix: the site is an
@@ -63,12 +63,12 @@ PAIRS = [
     # whose output happens to be byte-identical leaves nothing in git, so commit times
     # cannot distinguish "not rebuilt" from "rebuilt, unchanged" -- and F01 hit exactly
     # that on 2026-07-31, when the shot was untouched but the figure script was not.
-    # make_figures.py writes BUILD.json with the operating point it drew from, so the
+    # tools/make_figures.py writes BUILD.json with the operating point it drew from, so the
     # stamp moves whenever the figures are actually regenerated.
-    ("paper/figures/BUILD.json", ["analysis/results/motor_results.json",
-                                  "paper/make_figures.py"]),
-    ("paper/figures/BUILD_anim.json", ["analysis/results/motor_results.json",
-                                       "paper/make_animation.py"]),
+    ("figures/BUILD.json", ["analysis/results/motor_results.json",
+                            "tools/make_figures.py"]),
+    ("figures/BUILD_anim.json", ["analysis/results/motor_results.json",
+                                 "tools/make_animation.py"]),
 ]
 
 
