@@ -9,6 +9,22 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (thirtieth pass): Phase I closes on Gen5, and the exploration stops
+
+| ID | Item | Detail |
+|---|---|---|
+| **ADR-029** | **Phase I closes on Gen5. Gen6 is the Phase II design target and is not built** | Gen6 beats Gen5 on every axis that has been measured, and is **nine measured bands against a hundred analyses**. Re-baselining would move K_t, v_exit, the mass rollup, the cost model, the CAD and the manuscript — to replace an architecture with a hundred analyses by one with nine bands. **The cost is stated plainly: Phase I closes on an architecture its own author now believes is second-best.** |
+| **STOP-01** | **And the reason is that the exploration demonstrated ADR-021's failure mode** | Six register entries opened in one day; **two are defects in the machine** (P47, P52) and **four are defects in analyses written that day** (P48–P51). That is the apparatus generating its own workload, which is the sentence ADR-021 froze the register over. Meanwhile **B-1 — one measurement, ₹22,000 — is still unordered.** |
+| STOP-02 | **No further architecture exploration before B-1** | Exploration does not terminate on its own. The ADR's own validation test is measurable: **if B-1 is still unordered in a month, the stopping rule did not bind and this decision bought nothing.** |
+| **CLOSE-01** | **`PHASE_I_CLOSURE.md` §10c — distance to close, measured** | Against §9's own 2026-08-05 definition rather than against an empty register: **three analyses** (P36 the only substantial one, plus P41 and A15 band 7), **a handful of bookkeeping records**, and **four decisions, none of which is engineering work** (D3 the held K_t correction, D8 retiring Gen4, P28, P10). Categories D, E and E4 stay open with named owners, as they were always meant to. |
+| CLOSE-02 | **P52 is not a Phase I blocker, and the reason is on the record** | Gen5's winding is segmented for fault isolation and driven as one section (**ADR-022**), so it has no segment handover. P52 is a property of the Gen6 drive and travels with it. |
+| PII-TGT | **`PHASE_II.md` names Gen6 as the design target** | With its nine bands and its unsized remainder both stated, and the gate untouched: a target is not a promotion, and Gen6's entry criteria are not all written yet, let alone met. |
+
+**What authorised it.** A programme decision by the sole author, recorded as ADR-029. **No script
+value, no band, no operating point and no baseline moved.** All four checks pass.
+
+---
+
 ## 2026-08-13 (twenty-ninth pass): the Phase II items interact, and two of them cancel
 
 | ID | Item | Detail |

@@ -303,6 +303,62 @@ output for every input that ranks zero.
 sourced bank ESR, then B-4 for the brake pole field. **This ranks assumptions and makes none of
 them less assumed** — every input is exactly as unmeasured afterwards, and E4 is untouched.
 
+## 10c. Distance to close, measured 2026-08-13
+
+**Phase I is closer than the live register count suggests, and the reason is that most of that
+count is not supposed to close.** §9 defined a defensible end state on 2026-08-05: **categories
+A, B and C closed; D, E and E4 open with named owners.** Measured against that definition rather
+than against an empty register:
+
+| Category | Status | What is left |
+|---|---|---|
+| **A — closable here by analysis** | **near-complete** | **P36** is the only substantial one. **P41** and **A15 band 7** are small |
+| **B — bookkeeping** | **near-complete** | A handful of records that disagree with their sources |
+| **C — owner decisions** | **the actual gate** | Four, and none is engineering work |
+| D — hardware / external party | **stays open by design** | Named owners; **B-1 is the one that matters** |
+| E — blocked | **stays open by design** | Network policy, undisclosed host data |
+| F — E4 | **stays open permanently** | The standing caveat of a TRL 2–3 study |
+
+### The three analyses
+
+1. **P36 — the track has no dynamic design case.** A17 asked for one on 2026-08-05 and it has
+   never been produced. This is the largest single item and it is the only one that could still
+   change a Gen5 number: the first mode at 109 Hz is a beam-model output that A28's velocity-loop
+   bandwidth is now designed against, so the two are coupled.
+2. **P41 — the payload's cradle impact.** Currently stated as a *requirement* on cradle preload
+   (> 85 N) and release residual (≤ 1 N) rather than as a result, because no restitution model
+   exists. Closing it means either building that model or accepting the requirement as the
+   deliverable and saying so.
+3. **A15 band 7 — campaign duration.** Reading `build_poem_campaign.py` against ADR-020. Not a
+   propagator run; a script read.
+
+### The four decisions, and none of them is engineering
+
+Carried from [`STATE_OF_THE_PROJECT.md`](STATE_OF_THE_PROJECT.md), which holds all ten:
+
+| | | Blocks |
+|---|---|---|
+| **D3** | **Apply P46's K<sub>t</sub> correction, or write the ADR that says why not.** The depth-resolved value is 4.42 % lower and has been *computed and held* since 2026-08-10 | The published design point |
+| **D8** | **Retire Gen4.** It exists only inside Fusion, has never been exported, and its stations do not match the parameters every number rests on | **P32**, **P39**, and the renders' provenance |
+| **P28** | Regen stator versus eddy fin in the arrest section | An arrest-section layout |
+| **P10** | Enclosure, radiator and packaged avionics in the mass rollup | The mass number kill criterion 1 is computed from — and ADR-022's reasoning rests on the rollup being tight |
+
+### And two that are not Phase I work at all
+
+**Order B-1**, and **decide what happens to the paper**. Neither closes a register entry. Both
+decide whether any of this leaves the repository.
+
+> **Honest summary: two working sessions of analysis, one of bookkeeping, and four decisions
+> only the author can take.** Then Phase I closes with E4, category D and category E open and
+> named — which is exactly the end state §9 defined before any of this year's work was done.
+
+**What is explicitly not on this list: P52, and the whole of Gen6.**
+[ADR-029](adr/029-phase-one-closes-on-gen5.md) closes Phase I on Gen5, and Gen5's winding is
+segmented for fault isolation and driven as one section (**ADR-022**) — so it has no segment
+handover and P52 cannot apply to it. Gen6's debts travel with Gen6.
+
+---
+
 ## 11. What Phase I closes with, honestly
 
 **Every analysis this environment can run has run.** What remains is one measurement, four

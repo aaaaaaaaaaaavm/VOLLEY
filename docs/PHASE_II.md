@@ -35,6 +35,25 @@ it was given.
 
 ---
 
+## The Phase II design target
+
+**Set 2026-08-13 by [ADR-029](adr/029-phase-one-closes-on-gen5.md).**
+
+**Gen6 — a linear induction drive on a passive aluminium mover** — is the architecture Phase II
+develops. No magnets, no 9.445 kg sled, an arrest of 82 J instead of 1938, and the satellite
+untouched. It carries **nine measured bands** (A30 4–5, A31 1–4, A32 1–2) and an unsized
+remainder that is larger than that: the twin-fin geometry, retention, release, the 850 mm stroke
+and the stator iron have **zero** bands between them.
+
+**[`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md) is the combined statement**, including the two
+items below it supersedes and the reason kill criterion 2 closes.
+
+**It is a target, not a promotion.** The gate below is unchanged: an item is promoted at a
+baseline boundary by meeting the criterion it was given, and Gen6's criteria are not all written
+yet, let alone met.
+
+---
+
 ## Deferred items
 
 ### PII-1: Momentum-transfer release
