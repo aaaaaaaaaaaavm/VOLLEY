@@ -13,7 +13,9 @@
 > cheapest way to find out. Both were right.
 >
 > **What survived is in the same sheet.** A **90 mm flat plate** — the widest that fits inside a
-> 3U's own section — has an edge factor of **0.6691**, makes **1652 N at 0.45 T**, and weighs
+> 3U's own section — has an edge factor of **0.6691**, makes **378 N at 0.45 T** (A31; the
+> 1652 N first reported here assumed the magnetic-pressure ceiling and was 4.4× high, **P50**),
+> and weighs
 > **0.248 kg**, against 0.5–1.2 kg for the cold-gas module it would replace. **The drive is
 > sound; the rail is the wrong conductor.** See [`../validation/A30_rail_drive.md`](../validation/A30_rail_drive.md)
 > and **P49**.

@@ -80,13 +80,15 @@ failure here produces a direction rather than only a rejection.
 | 90 mm flat plate, 3 mm thick, inside a 3U's own 100 mm section | |
 |---|---:|
 | Edge factor at a 48 mm pole pitch | **0.6691** — 26× the rail |
-| Thrust at only **0.45 T** over 306 cm² | **1652 N** |
-| Against the requirement | **4× more than needed** |
+| Thrust at only **0.45 T** over 306 cm² | ~~1652 N~~ → **378 N**, corrected by A31 (**P50**) |
+| Against the 413 N requirement | **short at 0.45 T; closes at 0.60–0.75 T** — A31's sweep |
 | Mass | **0.248 kg** |
 | A COTS 3U cold-gas module delivering the same Δv | 0.5–1.2 kg |
 
 **A quarter-kilogram of plain aluminium beats the lightest propulsion module on the market by
-2×, and makes four times the thrust the machine needs.** The linear induction drive — no sled, no
+2×.** The thrust figure quoted here took the magnetic-pressure ceiling and applied the edge
+factor; **A31's layered solve puts it at 378 N, a factor of 4.4 lower**, and the design closes at
+0.60–0.75 T rather than 0.45 T. Corrected as **P50**; the edge factor itself is unaffected. The linear induction drive — no sled, no
 brake, no arrest section, no cradle — is intact. What fails is the belief that an interface which
 already exists happened to be the right shape.
 

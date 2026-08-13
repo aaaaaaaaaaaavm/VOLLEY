@@ -18,6 +18,98 @@ cold-welding and lubricant problem, which is what screened out the screw drive i
 > The script is absent at this commit. Verify with
 > `git show --stat <this commit> -- analysis/plate_normal_force.py`, which returns nothing.
 
+## Result, 2026-08-13: it centres itself, and A30's thrust was 4.4x optimistic
+
+`analysis/plate_normal_force.py`, bands committed at `f3b73d6` before it existed. Results in
+`analysis/results/plate_normal_force.json`.
+
+| Band | Test | Result | |
+|---|---|---:|---|
+| 1 | normal force restoring inside ±1.0 mm | **restoring at every offset** | **PASS** |
+| 2 | \|F_normal\| at 0.5 mm ≤ 20 % of thrust | **0.1 %** | **PASS** |
+| 3 | thrust at 0.5 mm offset within 10 % | **0.10 %** | **PASS** |
+| 4 | thrust within 10 % at 3 mm lateral offset | **1.69 %** | **PASS** |
+| 5 | peak thrust in 0.5–1.0 × B²/2μ₀ | **22.9 %** | **FAIL, low** |
+
+### Bands 1–4 — the alignment question is answered, and decisively
+
+**The plate centres itself, and the force doing it is negligible.**
+
+| Offset from centre | Thrust | Net transverse force | Direction |
+|---:|---:|---:|---|
+| 0.00 mm | 377.5 N | 0.0 N | centred |
+| 0.25 mm | 377.4 N | −0.2 N | **restoring** |
+| 0.50 mm | 377.1 N | −0.5 N | **restoring** |
+| 1.00 mm | 376.0 N | −0.9 N | **restoring** |
+
+A conducting non-magnetic sheet between two travelling fields is pushed **away** from whichever
+stator it approaches: the nearer stator induces the larger eddy current, and eddy forces are
+repulsive. The equilibrium is stable and the machine holds its own payload centred **with no
+bearing at all** — which is the outcome that keeps **E21**'s fretting, cold-welding and
+lubricant problem out of this architecture, and it is why A27 screened out the screw drive.
+
+**And the restoring force is 0.1 % of thrust**, so it is not a load case the customer's
+satellite has to be qualified for. Band 2 allowed 20 %; the answer is two hundred times inside
+it. Thrust is essentially blind to alignment — **0.10 % over half a millimetre of gap error and
+1.69 % over three millimetres of lateral error** — so **A28**'s velocity loop is not regulating
+against a disturbance it cannot see.
+
+**This was the band most likely to kill the plate drive, and it did the opposite.**
+
+### Band 5 fails low, and it corrects A30 rather than this sheet
+
+**Peak thrust is 22.9 % of the magnetic-pressure ceiling, not the 50–100 % the band required.**
+
+The band is written to catch a solve that exceeds physics *or* falls far short of it. It caught
+the second. The machine does not reach B²/2μ₀ at a 7 mm magnetic gap and a 48 mm pole pitch —
+the field decays across the gap and the coupling is imperfect long before the ideal thin-sheet
+limit applies.
+
+**The consequence lands on A30, not here.** `A30_rail_drive.md` reported the plate making
+**1652 N at 0.45 T** by taking the ceiling and applying the edge factor. The layered solve says
+**378 N** at the same flux density and geometry — **a factor of 4.4.** That figure is corrected
+in place and logged as **P50**. Nothing about A30 band 4 changes: the edge factor is 0.6691 and
+that is a separate measurement.
+
+### Band 5 caught two bugs before any of that was readable
+
+**The first run returned a peak thrust of 568 kPa against a 80.6 kPa ceiling — 705 % of
+physics.** Two faults, both structural rather than arithmetic:
+
+1. **The model was single-sided.** One current sheet and a flux return is not a double-sided
+   machine. It now carries two sheets, each backed by iron, which is what the geometry is.
+2. **The flux density was normalised on the wrong surface** — on the field at the plate *with
+   the plate present*, which is screened. Demanding 0.45 T there drove the source arbitrarily
+   hard. It is now normalised on the **open-gap** field, computed with σ = 0, which is what a
+   designer means by airgap flux density.
+
+**Fifth time a declared band has caught a defect in an analysis rather than in the design**, and
+the second time today: A30 band 2 caught a solver returning identically zero hours earlier.
+
+### The design sweep, kept separate from the bands
+
+**A failed band is never re-run at a geometry chosen after the fact.** Bands 1–5 stand exactly as
+declared, at the geometry A30 implied. The sweep below is separate work asking what *would*
+close, and it is reported as a direction rather than as a result.
+
+| B_g | Pole pitch | Clearance | Plate | % of ceiling | Thrust | a/g | v_exit | Plate mass |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0.75 T | 48 mm | 2.0 mm | 5 mm | 29.5 % | 1356 N | **31.3 g** | 28.26 m/s | 0.414 kg |
+| 0.75 T | 48 mm | 1.5 mm | 5 mm | 26.3 % | 1208 N | **27.9 g** | 26.68 m/s | 0.414 kg |
+| **0.75 T** | **48 mm** | **1.5 mm** | **3 mm** | 19.6 % | **900 N** | **21.6 g** | **23.48 m/s** | **0.248 kg** |
+| 0.60 T | 48 mm | 2.0 mm | 5 mm | 29.5 % | 868 N | 20.0 g | 22.61 m/s | 0.414 kg |
+| 0.60 T | 48 mm | 2.0 mm | 3 mm | 22.8 % | 671 N | 16.1 g | 20.26 m/s | 0.248 kg |
+
+**The best point inside the 25 g payload qualification cap is 900 N, 21.6 g, 23.48 m/s** — on a
+**0.248 kg** plate, against Gen5's 16.39 m/s from a 9.445 kg sled. The two rows above it exceed
+the cap and are excluded, not quoted.
+
+**Read conservatively, the 0.60 T row is the one to design to**: **20.26 m/s at 16.1 g**, still
+24 % faster than Gen5 with a moving mass of 4.25 kg instead of 13.45 kg, and with the flux
+density well inside what an iron-cored stator gives without arguing about saturation.
+
+---
+
 ## What is being computed
 
 A layered-media solution of the double-sided machine in the plane of travel: two travelling

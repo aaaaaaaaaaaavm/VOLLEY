@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **84 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
+> **85 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
 > | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **14** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CORRECTED` | **15** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
@@ -2251,6 +2251,46 @@ strength of the proposal**, which is why this is a corrected defect and not a ba
 rail, making **1652 N at only 0.45 T** for **0.248 kg** of aluminium. **The drive is sound; the
 rail is the wrong conductor.** Those are different findings and the band structure exists to keep
 them apart.
+
+### P50. The plate drive's thrust was quoted at the magnetic-pressure ceiling, and it reaches 23 % of it: CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — the figure is corrected in place and the architecture still closes, at a higher flux density
+
+
+**Found by A31 band 5, 2026-08-13**, on bands declared at `f3b73d6` before
+`analysis/plate_normal_force.py` existed.
+
+`validation/A30_rail_drive.md` reported that a 90 mm × 340 mm × 3 mm aluminium plate makes
+**1652 N at 0.45 T**, obtained by taking the magnetic-pressure ceiling **B²/2μ₀** and applying
+A30's measured edge factor. **A layered-media solve of the actual double-sided geometry gives
+378 N** — a factor of **4.4**.
+
+| | |
+|---|---:|
+| Quoted in A30 | 1652 N |
+| **A31, layered solve, same 0.45 T and same geometry** | **378 N** |
+| Fraction of the magnetic-pressure ceiling actually reached | **22.9 %** |
+
+**The ceiling is not reached because the gap is not zero.** B²/2μ₀ is the ideal thin-sheet limit;
+with a 7 mm magnetic gap against a 48 mm pole pitch the field decays across the gap and the
+coupling falls well short of it. The error was to treat a bound as an estimate.
+
+**A30 band 4 is unaffected** — the edge factor is 0.6691 and that is a separate measurement, made
+with a separate solver, and it still stands.
+
+**Corrected, and the architecture still closes.** A31's design sweep puts the best point inside
+the 25 g payload qualification cap at **900 N, 21.6 g, 23.48 m/s** at 0.75 T, and a conservative
+**671 N, 16.1 g, 20.26 m/s** at 0.60 T — both on the same 0.248 kg plate, against Gen5's
+16.39 m/s from a 9.445 kg sled. **What changes is the flux density the stator has to produce**,
+from 0.45 T to 0.60–0.75 T, which is inside what an iron-cored stator gives.
+
+**Band 5 also caught two structural faults in the solver before any of this was readable.** The
+first run returned **705 % of the magnetic-pressure ceiling**: the model had one current sheet
+and a flux return, which is a single-sided machine rather than the double-sided one being
+designed; and the flux density was normalised on the **screened** field at the plate instead of
+the **open-gap** field. Fifth time a declared band has caught a defect in an analysis rather than
+in the design, and the second time in one day.
+
+Full sheets: `validation/A31_plate_drive_normal_force.md`, `validation/A30_rail_drive.md`.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
