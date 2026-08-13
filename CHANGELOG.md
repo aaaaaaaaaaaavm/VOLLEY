@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (twenty-eighth pass): the plate drive, tested where it could have died
+
+| ID | Item | Detail |
+|---|---|---|
+| **A31** | **The plate centres itself, with no bearing** | Layered-media solve, Maxwell stress on planes either side of the plate. **The transverse force is restoring at every offset inside ±1 mm** — the nearer stator induces the larger eddy current and eddy forces are repulsive. **0.1 % of thrust** against a 20 % band. Thrust is blind to alignment: **0.10 %** over half a millimetre of gap error, **1.69 %** over three laterally. This keeps **E21**'s fretting and cold-welding problem — what screened out the screw drive in A27 — out of the architecture entirely. |
+| **P50** | **And A30's thrust figure was 4.4× optimistic** | A30 reported **1652 N at 0.45 T** by taking the magnetic-pressure ceiling **B²/2μ₀** and applying the edge factor. The layered solve gives **378 N**: the ceiling is the zero-gap limit and a 7 mm magnetic gap falls far short of it. **The error was treating a bound as an estimate.** Corrected in place; A30 band 4's edge factor of 0.6691 is a separate measurement and stands. |
+| A31-01 | **The architecture still closes, at a higher flux density** | Design sweep, kept separate from the bands: **900 N, 21.6 g, 23.48 m/s** at 0.75 T inside the qualification cap, or a conservative **671 N, 16.1 g, 20.26 m/s** at 0.60 T — both on the same **0.248 kg** plate, against Gen5's 16.39 m/s from a 9.445 kg sled. |
+| **A32** | **Entry is a non-event** | Time-domain thin-sheet solve, a different model from A31 on purpose. Plate diffusion time **3.198 ms**; thrust reaches 90 % after **0.679 mm** of travel — **0.05 %** of the acceleration zone. The concern that motivated the sheet does not survive contact with the time constant. |
+| A32-01 | **And the thrust figure is no longer single-sourced** | Band 1: the time-domain solver agrees with A31's frequency-domain layered solve to **−9.0 %**. Different domain, different implementation, same answer. |
+| **P52** | **The segmented stator puts a 30 % force ripple through the track's first mode** | Band 4: **30.1 %** peak-to-peak at a segment boundary against a 20 % band, and **closing the joint gap to zero leaves 25 %** — so it is the longitudinal **truncation** of the travelling field at the edge of an energised section, not the joint. The segment-crossing frequency sweeps **0 → 61.5 Hz** and the track modes are at **48 and 109 Hz**. **A17's chirp problem in a new place**, against a track **P36** says has no dynamic design case. First defect in three sheets that is in the machine rather than in an analysis. |
+| P51 | **And one band asked the wrong question** | Band 3 required the transient transverse force not to exceed its steady-state value; it peaks at **2.73×** — but **restoring throughout**, and the absolute peak is ~2.25 N against 611 N of thrust. **A stability band must be on the excursion or the absolute force, never on the ratio to the steady state it is overshooting.** As written it fails on a harmless over-restoring transient and would have passed a destabilising force that was smaller than its own steady state. Band left as declared. |
+| **PROC-01** | **Three new solvers, three first runs wrong, three caught by their own verification bands** | A30 returned **exactly zero** for every geometry (travelling wave written as a real cosine). A31 returned **705 % of physics** (single-sided model; flux normalised on the screened field). A32 returned **+304 %** against A31 (thrust as K × B_imposed rather than K × B_total). **Every one would have been published as a result.** In all three the band that caught it was the *verification* band — the one that adds no new physics and is the easiest to leave out. |
+
+**What authorised it.** Two validation outcomes against bands declared before their scripts
+existed, verified by `git show --stat` returning nothing at each band commit. **Nothing in Gen5
+moved** — no band edited, no operating point, no baseline. All four checks pass.
+
+---
+
 ## 2026-08-13 (twenty-seventh pass): the interface has been on every CubeSat since 2003
 
 | ID | Item | Detail |

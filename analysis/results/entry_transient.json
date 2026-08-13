@@ -1,0 +1,67 @@
+{
+  "Bg": 0.6,
+  "tau": 0.048,
+  "g_eff": 0.007,
+  "sigma_s": 75000.0,
+  "seg_len": 0.325,
+  "edge_factor": 0.6690714614649464,
+  "f_opt_Hz": 51.794746792312125,
+  "tau_mode_ms": 3.1978692581575565,
+  "F_a31_N": 670.8669178270254,
+  "F_transient_ss_N": 610.6483453164965,
+  "band1_err_pct": -8.976232231808385,
+  "t90_ms": 5.750000000000115,
+  "x90_mm": 0.6787474942561692,
+  "transient_force_ratio": 2.7340876737789563,
+  "Fy_05mm_N": -0.8238396991699556,
+  "handover_ripple_pct": 30.133625896291402,
+  "joint_sweep": [
+    {
+      "dead_mm": 10.0,
+      "thrust_N": 611.7883564132092,
+      "ripple_pct": 30.133625896291402
+    },
+    {
+      "dead_mm": 5.0,
+      "thrust_N": 616.7286314838169,
+      "ripple_pct": 31.38267819966437
+    },
+    {
+      "dead_mm": 2.0,
+      "thrust_N": 613.8377735902766,
+      "ripple_pct": 29.535450778149123
+    },
+    {
+      "dead_mm": 0.0,
+      "thrust_N": 613.2926127793863,
+      "ripple_pct": 25.00596353769211
+    }
+  ],
+  "segment_crossing_Hz_at_20ms": 61.53846153846153,
+  "bands": [
+    {
+      "band": "1",
+      "name": "transient solver within 15 % of A31 steady state",
+      "detail": "-9.0 %",
+      "passed": true
+    },
+    {
+      "band": "2",
+      "name": "90 % thrust within 65 mm of travel",
+      "detail": "0.679 mm",
+      "passed": true
+    },
+    {
+      "band": "3",
+      "name": "transient transverse force does not exceed steady state or change sign",
+      "detail": "2.7341x, restoring",
+      "passed": false
+    },
+    {
+      "band": "4",
+      "name": "segment handover ripple <= 20 % pk-pk",
+      "detail": "30.1 %",
+      "passed": false
+    }
+  ]
+}

@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **85 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
+> **87 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **15** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **16** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
@@ -2166,7 +2166,7 @@ Full sheet: `validation/A28_control_stability.md`. ADR-027.
 
 
 ### P48. Two A29 bands failed, and neither failure is in the machine: LOW, NEW 2026-08-13
-> **Status:** `CORRECTED` — the bands stand as declared and the lesson is recorded; see below
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **Found by A29, 2026-08-13**, on bands declared at `949fdf4` before `validation/cfd/` existed.
@@ -2205,7 +2205,7 @@ satisfiable and still be the wrong question.**
 Full sheet: `validation/A29_ground_test_air_drag.md`.
 
 ### P49. A Gen6 proposal was sized on an assumption wrong by 22x, and the band declared to kill it did: CORRECTED 2026-08-13
-> **Status:** `CORRECTED` — the proposal is rejected, the sizing is corrected, and the direction it produced is kept
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **Found by A30 band 1, 2026-08-13**, on bands declared at `7df75ac` before
@@ -2253,7 +2253,7 @@ rail is the wrong conductor.** Those are different findings and the band structu
 them apart.
 
 ### P50. The plate drive's thrust was quoted at the magnetic-pressure ceiling, and it reaches 23 % of it: CORRECTED 2026-08-13
-> **Status:** `CORRECTED` — the figure is corrected in place and the architecture still closes, at a higher flux density
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **Found by A31 band 5, 2026-08-13**, on bands declared at `f3b73d6` before
@@ -2292,6 +2292,59 @@ the **open-gap** field. Fifth time a declared band has caught a defect in an ana
 in the design, and the second time in one day.
 
 Full sheets: `validation/A31_plate_drive_normal_force.md`, `validation/A30_rail_drive.md`.
+
+### P51. An A32 band tested a ratio where it should have tested an excursion: CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found by A32 band 3, 2026-08-13**, on bands declared at `0635b5c` before
+`analysis/entry_transient.py` existed. Numbered under
+[ADR-021](docs/adr/021-freeze-the-register.md) case 3.
+
+Band 3 required the transverse force on the plate during the entry transient not to exceed its
+own steady-state value. **It peaks at 2.73×.** But it never changes sign — it is **restoring
+throughout**, and the overshoot is *toward* centre.
+
+| | |
+|---|---:|
+| Steady-state transverse force at 0.5 mm offset | **0.824 N** |
+| Thrust at the same point | 611 N |
+| Transient peak | **~2.25 N**, for about 6 ms |
+
+**The band asked the wrong question.** What decides whether the plate touches a stator is the
+**excursion** across its 2 mm clearance, not a ratio to a steady state it is transiently
+overshooting. As written, the band fails on a harmless over-restoring transient and **would have
+passed a genuinely destabilising force that happened to be smaller than its own steady state.**
+
+**Corrected.** The change is to the practice, not to a number: no result moved and no band
+was edited. **A
+stability band must be on the excursion or on the absolute force.** Same class as A2 band 3,
+which passed while measuring numerical cancellation on a symmetry axis: **a band can be
+well-formed, falsifiable, and still not be the question.**
+
+### P52. The segmented stator puts a 30 % force ripple through the track's first mode: HIGH, NEW 2026-08-13
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found by A32 band 4, 2026-08-13.** This one is in the machine.
+
+Thrust ripple as the plate crosses a segment boundary is **30.1 % peak-to-peak** against a 20 %
+band. **It is not the joint gap:** closing the unenergised gap from 10 mm to zero leaves **25 %**.
+The cause is the **longitudinal truncation of the travelling field** at the edge of an energised
+section — the end effect of a segmented long stator with a short secondary, intrinsic to the
+topology rather than to the joint.
+
+**Why it matters.** With four segments over the 1.30 m acceleration zone, the segment-crossing
+frequency sweeps **0 → 61.5 Hz** across the stroke, and `analysis/sizing.py` puts the track's
+first two modes at **48 Hz and 109 Hz**. A 30 % force disturbance sweeping through 48 Hz is
+**A17's force-ripple chirp in a new place**, and **P36** already records that the track has no
+dynamic design case. It cannot be assumed clear.
+
+**What would close it.** Energising **overlapping** segments so the field under the plate is
+never truncated is the obvious candidate and is not computed. Longer segments lower the crossing
+frequency without removing the truncation. Either way this is a drive-and-track question that has
+to be answered before the plate architecture is adopted, and it is the first item found in three
+sheets that is a defect in the *machine* rather than in an analysis.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
