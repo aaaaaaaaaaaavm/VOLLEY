@@ -1577,7 +1577,7 @@ together, or mark `DV` explicitly as the frozen historical value those two analy
 and delete the claim that it tracks `astro.py`. The second is honest and costs nothing.
 
 ### P36. The track has no dynamic design case, and A17 says it needs one: CORRECTED 2026-08-13
-> **Status:** `CORRECTED` — the analysis half is closed by A33; the damping specification needs measurement
+> **Status:** `LIVE` — open engineering; something still has to be done
 
 > **A33 ran 2026-08-13 and closed two of the three missing pieces, both as negative results.**
 > Bands declared at `7baa062` before the script existed; **six of six pass.**
@@ -1600,7 +1600,8 @@ and delete the claim that it tracks `astro.py`. The second is honest and costs n
 > axis → bending → gap change → thrust change → ripple. **Loop gain 0.095**, an order of
 > magnitude from self-excitation, scaling with the square of eccentricity.
 >
-> **What stays open is the first of P36's three items: there is still no measured damping.**
+> **What stays live is the first of P36's three items: there is no measured damping anywhere
+> in this project.** A17's 8.18x is used as given, and no bolted-aluminium Q has been measured.
 > A17's 8.18× is used as given. That is a measurement, not an analysis, and it belongs to T-2's
 > sine sweep in `docs/QUALIFICATION_PLAN.md`. Full sheet: `validation/A33_track_dynamics.md`.
 
