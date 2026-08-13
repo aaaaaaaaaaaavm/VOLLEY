@@ -20,6 +20,7 @@ here -- see `legacy/make_diagrams.py`.
 Run:  python3 paper/make_figures.py
 """
 
+import hashlib
 import math
 import os
 import sys
@@ -413,10 +414,19 @@ def main():
     # from "rebuilt, unchanged". This stamp is what it checks instead: it records the
     # operating point the figures were actually drawn from, so a stale figure set is
     # visible as a stale stamp even when the images happen not to move.
+    # The hand-picked subset below cannot move for a change it does not happen to quote,
+    # which is the same blind spot the stamp exists to close: on 2026-08-13 the velocity-loop
+    # gain changed, F03 was redrawn, and every field here stayed identical. The digest is of
+    # the whole results file, so ANY change to the operating point moves the stamp.
+    with open(os.path.join(os.path.dirname(OUT), '..', 'analysis', 'results',
+                           'motor_results.json'), 'rb') as fh:
+        digest = hashlib.sha256(fh.read()).hexdigest()[:16]
     stamp = dict(v_exit=round(float(dv), 3), Kt_N_per_kA=round(float(Kt) * 1e3, 2),
                  sled_kg=float(mm.M_SLED), E_drawn_J=round(float(s_['E_drawn']), 1),
                  E_recovered_J=round(float(mm.regen_brake(
-                     Kt, dv, mm.V0 * (1 - s_['sag_pct'] / 100))['E_recovered']), 1))
+                     Kt, dv, mm.V0 * (1 - s_['sag_pct'] / 100))['E_recovered']), 1),
+                 closed_loop_3sigma=float(mm.closed_loop_mc(Kt)['sigma3']),
+                 motor_results_sha256_16=digest)
     with open(os.path.join(OUT, 'BUILD.json'), 'w') as fh:
         json.dump(stamp, fh, indent=2)
         fh.write("\n")

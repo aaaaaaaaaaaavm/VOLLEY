@@ -3,5 +3,7 @@
   "Kt_N_per_kA": 11.03,
   "sled_kg": 9.445,
   "E_drawn_J": 2850.9,
-  "E_recovered_J": 291.4
+  "E_recovered_J": 291.4,
+  "closed_loop_3sigma": 0.026729706035066532,
+  "motor_results_sha256_16": "86f86318b5efee81"
 }

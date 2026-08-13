@@ -11,6 +11,7 @@ drift, and the figure would start disagreeing with the number it illustrates.
 Run:  python3 paper/make_animation.py
 Out:  paper/figures/shot.gif
 """
+import hashlib
 import os
 import json
 import sys
@@ -101,9 +102,15 @@ def main():
     # Same reason make_figures.py writes one: a rebuild whose GIF comes out
     # byte-identical is invisible to git, so tools/check_artifacts.py has nothing to
     # compare commit times against. The stamp is what it checks.
+    # The four fields below are the shot, which is all this animation draws -- so a change
+    # elsewhere in the results leaves them identical and the stamp permanently "stale".
+    # The digest is of the whole results file, so any regeneration is visible.
+    with open(os.path.join(HERE, "..", "analysis", "results",
+                           "motor_results.json"), "rb") as fh:
+        digest = hashlib.sha256(fh.read()).hexdigest()[:16]
     stamp = dict(v_exit=round(float(out['v_exit']), 3), a_g=round(float(out['a_g']), 2),
                  t_ms=round(float(out['t_ms']), 1), I_peak=round(float(out['I_peak']), 1),
-                 frames=n)
+                 frames=n, motor_results_sha256_16=digest)
     with open(os.path.join(HERE, "figures", "BUILD_anim.json"), "w") as fh:
         json.dump(stamp, fh, indent=2)
         fh.write("\n")
