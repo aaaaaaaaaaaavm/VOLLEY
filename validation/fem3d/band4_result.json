@@ -1,0 +1,9 @@
+{
+  "n_wave": 3,
+  "fundamental_getdp_T": 0.7018210498566718,
+  "fundamental_magpylib_T": 0.7014038627905802,
+  "error_pct": 0.059478866345533406,
+  "raw_peak_getdp_T": 0.6945314442229606,
+  "raw_peak_magpylib_T": 0.6939977730860398,
+  "band4_pass": true
+}

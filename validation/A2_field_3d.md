@@ -80,17 +80,47 @@ matter, which is the standoff A14 already uses.
 | Band | Test | Result | |
 |---|---|---|---|
 | 5 | 7-wavelength array within 2 % of 21 at its centre | **0.99990** | **PASS** |
-| 4 | `getdp` 3-D FEM within 5 % of magpylib | **NOT RUN** | — |
+| 4 | `getdp` 3-D FEM within 5 % of magpylib | **0.059 %** | **PASS** |
 
 **Band 5 passing at 0.9999 settles a background assumption** the model makes everywhere and had
 never stated: seven wavelengths is enough for the array centre to be effectively infinite.
 
-**Band 4 was not run and E2's "different physical method" gap therefore stays open.** `gmsh`
-4.15.2 and `getdp` 3.2.0 are now installed and working in this environment, so the obstacle is
-work rather than tooling. **Stating this as not-run rather than quietly dropping it**: the
-depth-resolved result above is still magpylib, which is analytic superposition — exactly the
-*"neither solving a field equation"* that E2 objects to. **A2 closes E1's 3-D half. It does not
-close E2.**
+### Band 4, run 2026-08-13 — the meshed PDE solve agrees to 0.059 %
+
+`validation/fem3d/`, result in `validation/fem3d/band4_result.json`.
+
+| Double-sided fundamental of B<sub>y</sub> at midgap, z = 0 | |
+|---|---:|
+| `getdp` 3-D magnetostatic FEM, 274,105 DoF | **0.70182 T** |
+| magpylib analytic superposition, identical geometry | **0.70140 T** |
+| **Error** | **+0.059 %** |
+| *(raw peak \|B_y\|, the other named reference, for scale)* | *0.69453 / 0.69400 T, +0.077 %* |
+
+**Band was ≤ 5 %. Both named references agree to better than a tenth of a percent**, so the
+result does not depend on which of the two the band had picked — which is the ambiguity P20
+exists to prevent.
+
+**This closes E2.** The field model has now been checked against a genuinely different physical
+method: a scalar-potential magnetostatic PDE solved on a 315,370-node tetrahedral mesh, not a
+superposition of closed forms. **A2 now closes E1's 3-D half and E2.**
+
+**The formulation, and what it does and does not share with magpylib.** Reduced scalar potential
+φ with **B** = −μ₀∇φ + μ₀**M**, φ = 0 on the outer air-box boundary, μ_r = 1 throughout — because
+that is what magpylib assumes, so the comparison isolates the *method* and not the material
+model. Geometry and magnetisation are imported from `motor_model`, never re-entered, so the two
+solvers cannot be describing different machines. What the two share is the geometry and the
+remanence; what they do not share is a single line of solution mathematics.
+
+**A run completing is not a run being right.** The first solve of this problem converged cleanly
+— residual 150.2 → 4 × 10⁻¹³, no warning at any stage — and returned **exactly zero field at
+every sampled point**. `gmsh.model.getBoundary()` on the air volume returns the six outer box
+faces *and* all twenty-four magnet–air interfaces; tagging them all as the outer boundary pinned
+φ = 0 on every magnet surface, and the source-free air then forces φ ≡ 0 by uniqueness. The
+solver solved exactly the problem it was given. What caught it was checking the number against
+physical expectation: midgap should be of order 0.7 T, and 0.00000 is not a small number, it is a
+wrong one. The fix selects boundary faces by bounding box and **asserts that exactly six are
+found**, so the same class of error fails loudly instead of returning a plausible-looking zero.
+Full write-up in [`fem3d/README.md`](fem3d/README.md).
 
 ---
 

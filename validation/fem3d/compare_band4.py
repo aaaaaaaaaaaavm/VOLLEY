@@ -60,7 +60,14 @@ def fem_result(path):
         d = d[None, :]
     xs, By = d[:, 0], d[:, 4]
     order = np.argsort(xs)
-    return xs[order], By[order]
+    xs, By = xs[order], By[order]
+    # getdp's OnLine includes both endpoints. x = -LAM/2 and x = +LAM/2 are the same
+    # point of a LAM-periodic field, so keeping both weights one phase twice in the
+    # projection. Drop the duplicate; the sample set is then a full period exactly once,
+    # matching the reference's endpoint=False grid.
+    if len(xs) > 1 and abs((xs[-1] - xs[0]) - LAM) < 1e-9:
+        xs, By = xs[:-1], By[:-1]
+    return xs, By
 
 
 if __name__ == "__main__":

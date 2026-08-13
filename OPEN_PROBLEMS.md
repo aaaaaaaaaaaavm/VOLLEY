@@ -2481,17 +2481,21 @@ winding-resolved model and should not be used. **Nothing has been run.** A1 clos
 2-D half; the 3-D end effects still need a 3-D solver (Elmer or GetDP are the free
 options). Acceptance band declared in `validation/A1_field_femm.md`.
 
-### E2. No FEA confirmation of anything: PARTIALLY CLOSED
+### E2. No FEA confirmation of anything: CLOSED
 > **Status:** `CLOSED` — resolved; see the entry for what closed it
 
-> **Two FEA results now exist.** A4 (CalculiX, structural) ran 2026-07-28. **A1 (magnetostatic)
-> ran 2026-07-29** and is the one that matters most: K_t had only ever been checked
-> analytic-against-analytic, a closed-form wave model against magpylib, both superposing
-> analytic solutions for uniform blocks, neither solving a field equation. A1 solves the PDE on
-> a mesh and agrees to 0.07 %.
+> **Closed 2026-08-13 by A2 band 4.** A `getdp` 3-D magnetostatic solve — reduced scalar
+> potential, 274,105 degrees of freedom on a 315,370-node tetrahedral mesh, geometry imported
+> from `motor_model` — agrees with magpylib on the double-sided midgap fundamental to
+> **0.059 %** (0.70182 T against 0.70140 T). The objection this item raised was that the field
+> had only ever been checked analytic-against-analytic; it has now been checked against a
+> meshed PDE solve in three dimensions. `validation/fem3d/`.
 >
-> Still open: no FEA of the track, the brake, or the cassette structure; and no 3-D
-> electromagnetic solve (E1).
+> **Two earlier FEA results.** A4 (CalculiX, structural) ran 2026-07-28. **A1 (magnetostatic,
+> 2-D) ran 2026-07-29** and agreed to 0.07 %.
+>
+> **What is still not FEA-checked, tracked elsewhere:** no FEA of the track, the brake, or the
+> cassette structure. Those belong to the structural items, not to this one.
 The field cross-check is analytic-vs-analytic (both magpylib and the wave model assume
 ironless geometry, where superposition is exact). That is a genuine check of the wave
 model but is NOT independent confirmation from a different physical method. Two analyses
