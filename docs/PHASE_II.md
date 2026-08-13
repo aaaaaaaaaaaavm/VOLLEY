@@ -264,6 +264,49 @@ is what the entire result scales on, and a 3-D transient eddy-current solve is w
 classes that carry CDS rails, and kill criterion 1 fails at 3U and closes only at PocketQube,
 which has a different rail standard. That is decision **D2**, not an analysis.
 
+### PII-18: the plate as a reusable shuttle — the catapult, with a quarter-kilo carriage
+
+**Proposed 2026-08-13. Not sized beyond the arithmetic below, and it inherits nine measured bands
+rather than needing them re-run.**
+
+**PII-16** put the conductor on the satellite's own rails and died on the edge factor. **PII-17**
+put it on the satellite as a fin and was declined on mass, because the fin carried magnets.
+**A30/A31 measured that the right conductor is a 90 mm plate weighing 0.248 kg.** This entry asks
+the obvious next question: *does the plate have to be on the satellite at all?*
+
+**It does not.** A plate that stays with the machine is a **shuttle** — which is exactly the
+architecture the operational shipboard launcher uses (`PRIOR_ART.md` §2b) and exactly what Gen5's
+sled already is. **The only thing that made Gen5's sled 9.445 kg was carrying permanent magnets
+and surviving the brake that carrying them made necessary.**
+
+| Mover | Mass | Energy to arrest at 20.26 m/s | |
+|---|---:|---:|---|
+| Gen5 sled, Halbach + Ti chassis | 9.445 kg | **1938 J** | 200 g arrest, **18.5 kN** through eleven stowed satellites (**E34**) |
+| Plate bolted to the satellite (Gen6a) | 0.248 kg | — | departs; nothing to arrest, but the customer pays and classes without room are excluded |
+| **Plate as a reusable shuttle** | **0.398 kg** | **82 J** | **23.7× less** |
+| Shuttle + pusher + latch, generous | 0.600 kg | 123 J | 15.7×; at a 200 g arrest that is **1177 N** over **105 mm** |
+
+**What this buys over Gen6a, and it is a lot.** The satellite is **unmodified** again — no plate,
+no consumable, no interface to publish and no adopters to recruit — so **decision D2 dissolves**:
+every payload class works, including the PocketQube classes that are the only ones where kill
+criterion 1 closes, because a small satellite rides a carrier that *is* the shuttle. And there
+are still **no permanent magnets anywhere**, so **E33** and **E35** stay dissolved.
+
+**What it costs.** The brake comes back, at 1/16th to 1/24th the energy. The return stroke comes
+back, at 1/24th the mass, so **E24**'s dominant attitude term shrinks by the same factor rather
+than vanishing.
+
+**The geometry question that decides it.** A single fin below the satellite reinstates **P41**'s
+centre-of-mass offset, which is the whole tip-off problem. **Twin fins straddling the satellite,
+running in two stator channels**, put the thrust line through the satellite's own axis and remove
+it. That doubles the plate mass to about 0.5 kg and doubles the thrust with it. **Nobody has
+drawn it.**
+
+**Entry criterion:** A31's bands 1–4 and A32's bands 1–2 transfer unchanged, because the plate is
+the same object in the same gap. What does not transfer is the retention, the release and the
+twin-fin geometry, and **P52** — the 30 % segment-handover ripple — is topology-level and applies
+to every variant here.
+
 ### PII-17: the mover departs with the satellite
 
 Considered and **not recommended in the naive form**, recorded because the reasoning is worth

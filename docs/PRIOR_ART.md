@@ -119,6 +119,39 @@ limitations stated for extreme conditions.
 
 ---
 
+## 2b. The one that actually flies, and this file had never cited it
+
+### The operational shipboard electromagnetic aircraft launcher
+
+**The only electromagnetic launch system in routine operational service anywhere**, with launch
+counts in the thousands. It is not a CubeSat system and it is not a comparator on performance.
+**It is a comparator on architecture, and this repository had never mentioned it** — an omission
+found on 2026-08-13 when the concept was proposed from outside as if it were new.
+
+**Three of its choices are choices this project made independently, and that is the finding.**
+
+| Its choice | This project |
+|---|---|
+| **Linear induction motor**, passive conductive armature on the shuttle — not a permanent-magnet synchronous machine | Gen1–Gen5 chose PM synchronous. **A30/A31 pushed toward LIM on independent grounds** and arrived at the same topology |
+| **Segmented stator, energised only under the shuttle** | [ADR-022](adr/022-stator-segmented-not-block-commutated.md), reached from a fault-isolation argument |
+| **Rotating-machine (flywheel) pulsed energy storage**, decoupling a large peak from a modest average | **A25**, `analysis/flywheel_store.py`, reached from the supercapacitor ESR ceiling (**P26**) |
+
+**Three independent convergences with a flown system is a stronger credibility argument than
+anything in `VALIDATION_REPORT.md`, and the repository was not making it.**
+
+**The differences are equally informative.** Its shuttle is heavy because an aircraft is heavy,
+and it is arrested and returned — the same shuttle-plus-brake architecture as Gen5, with the same
+consequences: an arrest that has to absorb the shuttle's whole kinetic energy, and a return
+stroke between launches. **Gen5 is that architecture with permanent magnets substituted for the
+passive armature**, which is what makes its sled 9.445 kg. Nothing about the topology requires
+that.
+
+> **Recorded as prior art rather than as a comparator.** It launches a 20-tonne aircraft at
+> 70 m/s from a 91 m stroke; VOLLEY launches 4 kg at 16 m/s from 1.3 m. The performance numbers
+> have no bearing on each other. The architecture does.
+
+---
+
 ## 3. The experimental benchmark, and why it cannot settle what it was expected to
 
 ### Einat & Orbach (2023): *A multi-stage 130 m/s reluctance linear electromagnetic launcher*
