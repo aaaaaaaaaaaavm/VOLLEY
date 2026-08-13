@@ -2257,7 +2257,8 @@ them apart.
 
 
 **Found by A31 band 5, 2026-08-13**, on bands declared at `f3b73d6` before
-`analysis/plate_normal_force.py` existed.
+`analysis/plate_normal_force.py` existed. The figure has been corrected wherever it appeared and
+propagated.
 
 `validation/A30_rail_drive.md` reported that a 90 mm × 340 mm × 3 mm aluminium plate makes
 **1652 N at 0.45 T**, obtained by taking the magnetic-pressure ceiling **B²/2μ₀** and applying
@@ -2277,7 +2278,7 @@ coupling falls well short of it. The error was to treat a bound as an estimate.
 **A30 band 4 is unaffected** — the edge factor is 0.6691 and that is a separate measurement, made
 with a separate solver, and it still stands.
 
-**Corrected, and the architecture still closes.** A31's design sweep puts the best point inside
+**Corrected in place, and the architecture still closes.** A31's design sweep puts the best point inside
 the 25 g payload qualification cap at **900 N, 21.6 g, 23.48 m/s** at 0.75 T, and a conservative
 **671 N, 16.1 g, 20.26 m/s** at 0.60 T — both on the same 0.248 kg plate, against Gen5's
 16.39 m/s from a 9.445 kg sled. **What changes is the flux density the stator has to produce**,
