@@ -1,0 +1,103 @@
+# A30: can an induction drive couple to what the satellite already has?
+
+**Entry criterion for [PII-16](../docs/PHASE_II.md) and the whole of
+[`../docs/GEN6_RAIL_DRIVE.md`](../docs/GEN6_RAIL_DRIVE.md).**
+
+`analysis/rail_drive.py` sizes a linear induction drive coupling to the CubeSat Design
+Specification's four aluminium corner rails, and it clears the thrust requirement — **but only
+because it assumes a transverse edge-effect derating of 0.55**, which the file declares at the
+top as its dominant assumption and the proposal names as the thing that would kill it.
+
+**This sheet is that assumption, tested.**
+
+> ## BANDS DECLARED 2026-08-13, BEFORE `analysis/edge_effect.py` EXISTS.
+>
+> The script is absent at this commit. Verify with
+> `git show --stat <this commit> -- analysis/edge_effect.py`, which returns nothing.
+
+## The physics being tested, stated precisely
+
+A linear induction motor makes thrust from **transverse** current induced in its secondary. In a
+wide sheet that current crosses under the pole and returns longitudinally, roughly a pole pitch
+away, so the return path is cheap. **In a secondary narrower than the pole pitch, the useful
+transverse leg is short and the return legs are long**, so the loop is dominated by resistance
+that produces no thrust.
+
+The **transverse edge factor** is the ratio of the thrust a finite-width secondary produces to
+the thrust an infinitely wide one of the same conductance would produce under the same imposed
+field. It is a purely geometric penalty, and the CDS rail is **8.5 mm wide against a pole pitch
+of 36–48 mm.**
+
+## Acceptance bands
+
+**Band 1 can fail, and if it does the proposal is rejected rather than re-scoped.** That is the
+point of running it first and the reason PII-16 was logged as a proposal rather than adopted.
+
+### Band 1 — the transverse edge factor on a CDS corner rail
+
+**Quantity:** thrust on the real 8.5 mm rail geometry divided by thrust on an infinitely wide
+secondary of identical sheet conductance, identical imposed travelling field, identical pole
+pitch and identical slip. Dimensionless, in [0, 1].
+
+**Band: ≥ 0.35.**
+
+`rail_drive.py` assumes 0.55. `GEN6_RAIL_DRIVE.md` states that at 0.20 the design point falls to
+187 N and the idea is dead. **0.35 is the midpoint of the range the proposal itself named as the
+live/dead boundary**, and it is set here before the answer is known.
+
+**FAIL below 0.35.** A failure is not a reason to lower the band, change the pole pitch until the
+band passes, or re-scope the claim. It is a rejected architecture, and the entry criterion for
+PII-16 is not met.
+
+### Band 2 — an independent check on band 1
+
+**Band: the numerical result agrees with the Russell–Norsworthy closed-form transverse edge
+factor to within 25 %**, evaluated at the same width-to-pole-pitch ratio.
+
+Russell and Norsworthy's 1958 result is the standard closed form for exactly this geometry. A
+numerical answer that disagrees with it materially is a broken solver, not a discovery — this is
+the same reasoning as A2 band 1, which caught a 57 % error in a new integral before the headline
+was read off it.
+
+### Band 3 — the consequence, at an achievable flux density
+
+**Band: at the edge factor band 1 measures, with airgap clearance 2.0 mm and airgap flux density
+no greater than 0.60 T, the drive produces ≥ 413 N on a 3U** — the thrust Gen5 delivers, and
+therefore the minimum at which Gen6 is not a downgrade.
+
+**This band may fail even if band 1 passes**, because band 1 is a ratio and this is a force.
+
+### Band 4 — is there a secondary geometry that does work
+
+**Quantity:** the same edge factor, computed for a **flat plate secondary** of width 90 mm — the
+widest that fits inside a 3U's 100 mm section — at the same pole pitch.
+
+**Band: ≥ 0.55.**
+
+This band exists so that a band 1 failure produces a *direction* rather than only a rejection.
+The edge factor rises with width, and the question a failure immediately raises is how wide a
+secondary has to be before an induction drive is worth building. **If band 1 fails and band 4
+passes, the conclusion is that the drive is sound and the CDS rail is the wrong conductor** —
+which is a different finding from the drive being unsound, and the two must not be confused.
+
+### Band 5 — and what such a plate would cost the customer
+
+**Band: a plate meeting band 4, sized to carry the thrust of band 3, has a mass below 0.5 kg** —
+the lower bound of the COTS cold-gas module range the mass-per-satellite kill criterion measures
+against.
+
+**This is the design rule the whole payload-interface question turns on**: an interface the
+customer must carry is only worth carrying if it costs less than the propulsion module it
+replaces. Below 0.5 kg it does. Above 1.2 kg it does not, at any performance.
+
+## What this cannot settle
+
+- **The reaction field is not modelled.** Band 1 measures the *geometric* edge factor in the
+  thin-sheet quasi-static limit, which is how the transverse edge effect is defined and how
+  Russell–Norsworthy derive it. The secondary's own field distorting the airgap flux is a
+  separate penalty, in the same direction, and is not included. **The result is therefore an
+  upper bound on the coupling**, which is the conservative direction for a band that can reject.
+- **No end effect.** The longitudinal entry and exit effects of a short primary are not modelled
+  and are a further loss.
+- **Nothing is measured.** **E4** stands. This is a computation about a machine that does not
+  exist, coupling to a rail nobody has instrumented.
