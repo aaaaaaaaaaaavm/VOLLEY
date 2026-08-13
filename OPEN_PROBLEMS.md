@@ -2181,8 +2181,10 @@ face and the sled behind it is 172 × 140 mm, so a large part of the reference f
 in the payload's own wake. A coefficient referenced to a partly shadowed area is below the
 textbook value for the shape the band compared it against.
 
-Three checks say the solve is sound: peak C_p on the body is **0.975** where stagnation should
-approach 1.000; the meshed wetted area is **0.4173 m² of 0.5612 m²** of raw STL, the difference
+**Band 1 settles that this is not a mesh artefact:** 6.3× the cells (92,774 → 581,779) moves
+C_d by **4.86 %**, to 0.5497 — still far below the 0.7 floor. Refining does not recover the
+missing drag. Three further checks say the solve is sound: peak C_p on the body is **0.975**
+where stagnation should approach 1.000; the meshed wetted area is **0.4173 m² of 0.5612 m²** of raw STL, the difference
 being the interior payload–sled interface; and the drag splits as forward faces **+0.233**, base
 suction **+0.156**, sides **+0.001**, which is the classic bluff-body signature.
 

@@ -29,7 +29,7 @@ model plus an unquantified error.
 
 | Band | Test | Result | |
 |---|---|---:|---|
-| 1 | fine and coarse mesh agree within 10 % | *running* | — |
+| 1 | fine and coarse mesh agree within 10 % | **4.86 %** | **PASS** |
 | 2 | 0.7 ≤ C_d ≤ 2.5 | **0.523** | **FAIL** |
 | 3 | deficit below 1.0 % of v_exit | **0.0312 %** | **PASS** |
 | 4 | deficit ≥ 10 % of the 0.0267 m/s dispersion | **19.2 % of it** | **PASS** |
@@ -63,6 +63,20 @@ velocity and hides the air in the current trace; an *open-loop* one measures 5.1
 of those a test is depends on how it is run, and the run sheet in
 [`../docs/QUALIFICATION_PLAN.md`](../docs/QUALIFICATION_PLAN.md) does not currently say.
 
+### Band 1 — the coarse mesh is converged, and it settles band 2
+
+| Mesh | Cells | C_d |
+|---|---:|---:|
+| Coarse, refinement level 4 | 92,774 | **0.5230** |
+| Fine, refinement level 5 | **581,779** | **0.5497** |
+| | | **4.86 % apart** |
+
+**6.3× the cells moves the answer by under 5 %**, so the coarse result is not mesh-limited. The
+fine mesh reports a *slightly higher* drag, and it is still **well below band 2's floor of 0.7**.
+**That settles what band 2's failure means**: refining the mesh does not recover the missing
+drag, so the low coefficient is a property of the geometry and the reference area, not of the
+discretisation. Everything in the next section rests on this band having passed first.
+
 ### Band 2 fails, and the solve is not what is wrong
 
 C_d = **0.523** against a declared floor of 0.7 — 0.419 of pressure drag solved plus 0.104 of
@@ -75,7 +89,8 @@ sled behind it is wider — 172 × 140 mm — so a large part of the reference f
 the payload's own wake. Referencing a coefficient to an area that is partly shadowed gives a
 coefficient below the textbook value for the shape it was compared against.
 
-**Three checks say the solve is right and the band was the wrong shape of question:**
+**Band 1 above is the first of four checks that the solve is right and the band was the wrong
+shape of question:**
 
 | Check | Result |
 |---|---|
