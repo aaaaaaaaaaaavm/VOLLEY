@@ -9,6 +9,24 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (twenty-seventh pass): the interface has been on every CubeSat since 2003
+
+| ID | Item | Detail |
+|---|---|---|
+| **PII-16** | **Gen6 proposal: the satellite's own CDS corner rails as the motor secondary** | The CubeSat Design Specification has mandated four hard-anodised aluminium corner rails since 2003. Every deployer built since — P-POD, NRCSD, this project's own cassette — treats them as a **bearing surface**. They are also **116 cm² of standardised, structural, conductive, axially symmetric induction-motor armature that every customer already owns and already qualifies.** Nobody has driven on them. |
+| A30-00 | **Sizing, and it clears the requirement** | `analysis/rail_drive.py`, goodness-factor sheet secondary, double-sided stators straddling each rail, holding G·s = 1. At a modest **0.45 T**, a realistic **2 mm** clearance and the **worse** of the two rail alloys: **513 N, 13.1 g, 18.26 m/s in 142 ms on 1182 J** — faster than Gen5 on **2.4× less energy**, because the moving mass is 4 kg instead of 13.45 kg. Rails warm **1.7 K**. |
+| **PII-16-01** | **What stops existing rather than being solved** | No sled → no brake → no arrest section → no sled return → no cradle. That removes the source of **E34** (18.5 kN through eleven stowed satellites), **E24** (the attitude budget's dominant term), **P28**, **P41** and the 339 mm of envelope behind **kill criterion 2**. No permanent magnets anywhere removes **E33** and **E35**. |
+| PII-16-02 | **And "unmodified" stops being a claim** | It becomes a property of the topology: nothing is attached, added or left behind. The contradiction between the abstract and **E35** dissolves rather than being qualified. |
+| **PII-16-03** | **What would kill it, stated first** | The **transverse edge-effect derating is the whole result** — assumed at **0.55** and declared as an assumption at the top of the file. At 0.2 the design point falls to 187 N and the idea is dead. **A30 band 1 is a 3-D transient eddy-current solve**, and it is the cheapest possible way to find out. |
+| PII-16-04 | **The tension that better engineering does not fix** | The drive works only on classes carrying CDS rails, and kill criterion 1 fails at 3U and closes only at PocketQube, which has a different rail standard. That is decision **D2**, unmade. |
+| PII-17 | **The mover-departs family, considered and not recommended in its naive form** | A fin or keel carrying the Halbach array weighs **6.04 kg at the full array, 3.20 kg at 170 mm**, against a COTS cold-gas module at 0.5–1.2 kg for the same Δv — so VOLLEY would compete with cold gas on its own ground and lose 3–6×, forfeiting kill criterion 1's only escape clause. Recoil rises 74 %. **What the idea is right about** is that dropping "unmodified" re-opens the topology trade; taken to its conclusion that is PII-16. |
+
+**What authorised it.** Phase II is where candidate architectures are recorded with entry
+criteria, not adopted. **Nothing in Gen5 moved** — no band, no operating point, no baseline.
+All four checks pass.
+
+---
+
 ## 2026-08-13 (twenty-sixth pass): no LaTeX in the engineering record
 
 | ID | Item | Detail |

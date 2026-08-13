@@ -236,6 +236,47 @@ per-satellite shoe.
 
 ---
 
+### PII-16: the satellite's own CDS rails as the motor secondary — **Gen6**
+
+**Full proposal: [`GEN6_RAIL_DRIVE.md`](GEN6_RAIL_DRIVE.md). Sizing in
+`analysis/rail_drive.py`. No band declared, nothing validated.**
+
+The CubeSat Design Specification has mandated four hard-anodised aluminium corner rails on every
+CubeSat since 2003. Every deployer built since treats them as a bearing surface. They are also,
+by accident, **116 cm² of standardised, structural, conductive, axially symmetric linear
+induction motor secondary that every customer already owns and already qualifies.**
+
+Drive on them and the satellite becomes the mover: **no sled, therefore no brake, therefore no
+arrest section, no sled return and no cradle.** First-principles sizing at a modest 0.45 T, a
+realistic 2 mm clearance and the worse of the two rail alloys gives **513 N, 13.1 g, 18.26 m/s
+on 1182 J** — faster than Gen5 on 2.4× less energy, because the moving mass is 4 kg instead of
+13.45 kg.
+
+**Entry criterion: A30 band 1.** The transverse edge-effect derating — assumed at 0.55 —
+is what the entire result scales on, and a 3-D transient eddy-current solve is what settles it.
+**If it comes in near 0.2 the idea is dead**, and that is the cheapest possible way to find out.
+
+**The tension that is not resolved by making the machine better:** the drive works only on
+classes that carry CDS rails, and kill criterion 1 fails at 3U and closes only at PocketQube,
+which has a different rail standard. That is decision **D2**, not an analysis.
+
+### PII-17: the mover departs with the satellite
+
+Considered and **not recommended in the naive form**, recorded because the reasoning is worth
+keeping. If the mover is integrated into the satellite as a fin or keel carrying the Halbach
+array, the sled and brake disappear — but the array's mass moves onto the *customer's* budget:
+**6.04 kg at the full 340 mm array, 3.20 kg at 170 mm**, against a COTS cold-gas module at
+0.5–1.2 kg for the same Δv. VOLLEY would then be competing with cold gas on cold gas's own
+ground and losing 3–6×, and kill criterion 1's only escape clause — *"VOLLEY requires none of
+that, because the satellite is never modified"* — is lost with it. Recoil also rises 74 % at a
+170 mm array, since the whole moving mass departs instead of the sled's share returning through
+the brake.
+
+**What the idea is right about is that dropping "unmodified" re-opens the topology trade**, and
+the topology that wins when the payload can carry something is the one where the payload carries
+the *cheap passive half*. Taken to its conclusion, that is **PII-16**, where the payload carries
+nothing at all because the passive half is already bolted to it.
+
 ### PII-8 to PII-11: recorded in the lab, not here
 
 Four items live in [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) rather than this
