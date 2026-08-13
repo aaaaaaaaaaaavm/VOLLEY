@@ -4,7 +4,7 @@
 > Every value below is read from the scripts at generation time, so this file cannot silently
 > disagree with them. Regenerate after any authorised baseline change.
 >
-> Flagship commit at generation: `99b7b12` · Phase **I** · governed by
+> Flagship commit at generation: `a551b7e` · Phase **I** · governed by
 > [`docs/programme/ENGINEERING_PROGRAMME.md`](programme/ENGINEERING_PROGRAMME.md)
 
 This is the engineering baseline the Phase I deliverables (portfolio, IEEE paper, thesis)
@@ -31,7 +31,7 @@ what makes "stable" mean something.
 | Copper loss per shot | **850 J (shot + regen)** | `motor_results.shot.Q_copper` |
 | Payload kinetic energy | **537 J** | `motor_results.shot.KE_payload` |
 | Electrical-to-payload efficiency | **21.0 % (net of regeneration)** | `motor_results.eff_net_pct` |
-| Closed-loop dispersion | **0.0271 m/s (3σ)** | `motor_results.closed_loop_3sigma` |
+| Closed-loop dispersion | **0.0267 m/s (3σ)** | `motor_results.closed_loop_3sigma` |
 | Fleet setpoint | **16.2 m/s** | `motor_results.v_fleet_setpoint` |
 | Sled mass | **9.45 kg (computed from CAD solid volumes)** | `mass_properties.sled_kg` |
 | Dry / loaded mass | **76.5 / 124.5 kg** | `mass_properties.dry_kg` |

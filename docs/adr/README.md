@@ -53,6 +53,9 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | [022](022-stator-segmented-not-block-commutated.md) | Winding segmented for fault isolation, driven as one; closes P29 | Accepted | I |
 | [023](023-target-host-class.md) | Target host is a spent upper stage, not an ESPA-Grande port; closes P9 | Accepted | I |
 | [024](024-last-mile-delivery-conops.md) | VOLLEY is a last-mile delivery vehicle; plane change excluded | Accepted | I |
+| [025](025-fixed-cell-manifest.md) | One cell geometry with class-specific inserts, not a cassette per class | Accepted | I |
+| [026](026-generated-cad.md) | The CAD is generated from parameters, not drawn | Accepted | I |
+| [027](027-designed-velocity-loop.md) | The velocity loop is designed against margins; closes P47 | Accepted | I |
 
 Every decision in `DECISION_LOG.md` appears above. ADRs 012-018 record decisions that were
 never written down anywhere before.

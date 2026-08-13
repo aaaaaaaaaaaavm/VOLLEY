@@ -9,6 +9,27 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (twenty-fourth pass): the velocity loop was never designed, and the 3-D solve lands
+
+| ID | Item | Detail |
+|---|---|---|
+| **A2-04** | **Band 4 runs and E2 closes** | A `getdp` 3-D magnetostatic solve — reduced scalar potential, **274,105 DoF** on a **315,370-node** tetrahedral mesh, geometry imported from `motor_model` — agrees with magpylib on the double-sided midgap fundamental to **0.059 %** (0.70182 T against 0.70140 T). Band was ≤ 5 %. Both of the two named references agree to better than a tenth of a percent, so the result does not turn on which the band picked. |
+| A2-05 | **The first solve of it returned exactly zero and reported success** | Residual 150.2 → 4 × 10⁻¹³, clean log, **zero field at every sampled point**. `gmsh.model.getBoundary()` on the air volume returns the six outer faces *and* all twenty-four magnet–air interfaces; tagging them all as the outer boundary pinned φ = 0 on every magnet surface and the source-free air then gave φ ≡ 0 by uniqueness. Caught by checking the value against physical expectation, not by any tool. The fix selects faces by bounding box and **asserts exactly six are found**. |
+| A2-06 | **Periodic endpoint dropped before projection** | `getdp`'s `OnLine` includes both ends; x = ±λ/2 are the same point of a periodic field, so keeping both weighted one phase twice. Moves the result 0.084 % → **0.059 %**. |
+| **P47** | **The published velocity-loop gain is linearly unstable** | A28, bands declared at `3ae36ad` before the script existed. **Four of six bands fail.** The controller is feedback-linearised, so `L(s) = Kp/s·exp(−sτ)` and **Kp is the crossover in rad/s, not a current gain** — a fact stated nowhere. 3500 s⁻¹ is a crossover at **557 Hz**, above both track modes, with **−50.4°** phase margin and **−3.86 dB** gain margin at 0.7 ms of total lag. |
+| P47-01 | **Why it was invisible** | `closed_loop_mc` feeds back the **undelayed** state, so its own loop sits at zero latency where 3500 does hold +69.9°. And the command is clipped to `[0, K_RATED]`, turning an unstable loop into a **bang-bang relay** whose mean follows the feedforward term, with the terminal ±0.3 m/s trim removing the residual. **The dispersion figure was set by the saturation limits and the terminal correction, not by the feedback.** |
+| **P47-02** | **Corrected: `motor_model.KP_VELOCITY = 195` s⁻¹** | `design_gain()` returns 195.2 s⁻¹ as the largest gain holding ≥ 50° phase margin at 0.6 ms **and** bandwidth ≤ one third of the 109 Hz first mode; implemented value rounded **down**. Result: PM **+82.2°**, GM **+21.2 dB**, bandwidth **36.3 Hz**, **0.0 %** of stroke above rating. |
+| **BASE-05** | **Baseline: dispersion 0.0271 → 0.0267 m/s** | Change-control rules 1 and 2. **The gain falls 18× and the dispersion does not move** — both are 0.027 to two significant figures — because dispersion is set by the terminal trim and the K_t and mass tolerances, not by loop gain. **K_t stays 11.0258 N/kA·m, v_exit stays 16.388 m/s.** **Validations invalidated: none**; nothing else reads `closed_loop_mc`. |
+| ADR-027 | **The loop is designed against a named constraint set** | Phase margin ≥ 50°, bandwidth ≤ f_mode/3, command within rating. Alternatives recorded and rejected: keep 3500 and declare zero latency; raise the controller rate; notch at 109 Hz (deferred to Phase II — a notch commits to a mode frequency `STRUCTURAL_GAP.md` says is unmeasured); design to the 45° band exactly. |
+| FIG-06 | **Two figures added, both generated** | `F12_bode.png` — open-loop Bode at both gains with the 48–109 Hz mode band shaded and both crossovers marked. `F13_latency.png` — phase margin against transport delay, with the stability floor. Both import `analysis/control_design.py`; nothing re-derived in the figure script. |
+| CNT-14 | **Register 81 → 82, 11 → 12 corrected** | P47. Header propagated. Live count unchanged at 38. |
+
+**What authorised it.** Two validation outcomes against bands declared before their scripts
+existed. **A2 band 4 passed; A28 bands 2, 3, 4 and 5 failed and produced a numbered defect, not a
+widened band.** All four checks pass.
+
+---
+
 ## 2026-08-10 (twenty-third pass): CC BY 4.0 across the repository, and the front matter raised
 
 | ID | Item | Detail |

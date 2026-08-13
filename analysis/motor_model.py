@@ -298,8 +298,23 @@ def regen_brake(Kt, v0, Vc0, s=S_REGEN, K_lim=K_RATED, energised=None, dt=1e-5):
                 frac_recovered_pct=E_rec / KE0 * 100)
 
 
+# Velocity-loop proportional gain, s^-1. DESIGNED, not asserted: A28 (validation/
+# A28_control_stability.md) sizes it as the largest gain that holds >= 50 deg of phase margin
+# against a 0.6 ms measurement delay AND keeps closed-loop bandwidth at or below one third of
+# the track's 109 Hz first mode. That maximum is 195.2 s^-1; the implemented gain is rounded
+# DOWN to sit at or below it. The previous value of 3500 s^-1 put the crossover at 557 Hz --
+# above both track modes -- with -50.4 deg of phase margin and -3.9 dB of gain margin. See P47.
+KP_VELOCITY = 195.0
+
+
 def closed_loop_mc(Kt, n=800, v_target=V_FLEET, seed0=0):
-    """Position-scheduled profile + coast-trim correction from photogate measurement."""
+    """Position-scheduled profile + coast-trim correction from photogate measurement.
+
+    The loop is feedback-linearised: dividing by Kt and multiplying by m cancels the plant's
+    own Kt/m, so KP_VELOCITY is an acceleration per unit velocity error with units of s^-1 and
+    the loop transfer is KP_VELOCITY/s. Its numeric value is therefore the crossover frequency
+    in rad/s, which is the fact A28 turns on.
+    """
     m = M_SAT + M_SLED
     out = []
     for s in range(seed0, seed0 + n):
@@ -311,7 +326,7 @@ def closed_loop_mc(Kt, n=800, v_target=V_FLEET, seed0=0):
         while x < ACCEL_ZONE:
             v_plan = v_target * math.sqrt(max(x, 1e-6) / ACCEL_ZONE)
             Kc = min(max((mf * v_target ** 2 / (2 * ACCEL_ZONE)
-                          + 3500 * (v_plan - v) * mf) / Ktf, 0), K_RATED)
+                          + KP_VELOCITY * (v_plan - v) * mf) / Ktf, 0), K_RATED)
             v += Ktf * Kc * (1 + r.normal(0, 0.005)) / mf * dt
             x += v * dt
         v_meas = v + r.normal(0, 0.008)           # 8 mm/s sensor sigma

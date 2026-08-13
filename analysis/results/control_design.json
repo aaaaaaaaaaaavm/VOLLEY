@@ -1,0 +1,198 @@
+{
+  "M_kg": 13.445,
+  "Kt_N_per_kA": 11.02583324948699,
+  "plant": "physical Kt/(M s); loop after feedback linearisation Kp/s",
+  "plant_gain_per_A_per_m": 0.0008200694123828181,
+  "f_sample_Hz": 5000.0,
+  "latency_s": 0.0006,
+  "total_lag_s": 0.0007,
+  "tau_marginal_s": 0.0004487989505128276,
+  "track_modes_Hz": [
+    48.0,
+    109.0
+  ],
+  "band1_open_loop_v": 16.390690635132223,
+  "band1_reference_v": 16.387939109293626,
+  "band1_error_pct": 0.016789944240378017,
+  "published": {
+    "Kp": 3500.0,
+    "wc_rad_s": 3500.0,
+    "f_c_Hz": 557.0423008216337,
+    "phase_margin_deg": -50.3746598070517,
+    "gain_margin_dB": -3.860924146687597,
+    "w_180_rad_s": 2243.994752564138,
+    "bandwidth_Hz": 671.0105456657387,
+    "scan_check": {
+      "f_c_Hz": 557.04976047767,
+      "phase_margin_deg": -50.37653964037284,
+      "gain_margin_dB": -3.860893335836628
+    }
+  },
+  "designed": {
+    "Kp": 195.22533426400403,
+    "wc_rad_s": 195.22533426400403,
+    "f_c_Hz": 31.071076964883808,
+    "phase_margin_deg": 82.17008860484928,
+    "gain_margin_dB": 21.209713238342417,
+    "w_180_rad_s": 2243.994752564138,
+    "bandwidth_Hz": 36.33333333333333
+  },
+  "gain_sweep": [
+    {
+      "Kp": 50,
+      "f_c_Hz": 7.957747154594767,
+      "pm": 87.99464771704211,
+      "gm": 33.04103665359754,
+      "bw_Hz": 8.232161291468676
+    },
+    {
+      "Kp": 100,
+      "f_c_Hz": 15.915494309189533,
+      "pm": 85.98929543408424,
+      "gm": 27.020436740317916,
+      "bw_Hz": 17.120099873582458
+    },
+    {
+      "Kp": 195.2,
+      "f_c_Hz": 31.067044891537968,
+      "pm": 82.17110468733243,
+      "gm": 21.210840473704454,
+      "bw_Hz": 36.32774593127358
+    },
+    {
+      "Kp": 250,
+      "f_c_Hz": 39.78873577297384,
+      "pm": 79.9732385852106,
+      "gm": 19.061636566877162,
+      "bw_Hz": 49.132204098182854
+    },
+    {
+      "Kp": 500,
+      "f_c_Hz": 79.57747154594767,
+      "pm": 69.94647717042119,
+      "gm": 13.04103665359754,
+      "bw_Hz": 135.9555807924874
+    },
+    {
+      "Kp": 1000,
+      "f_c_Hz": 159.15494309189535,
+      "pm": 49.89295434084238,
+      "gm": 7.0204367403179155,
+      "bw_Hz": 382.3053605921986
+    },
+    {
+      "Kp": 2000,
+      "f_c_Hz": 318.3098861837907,
+      "pm": 9.78590868168476,
+      "gm": 0.9998368270382917,
+      "bw_Hz": 565.5901236645067
+    },
+    {
+      "Kp": 3500,
+      "f_c_Hz": 557.0423008216337,
+      "pm": -50.3746598070517,
+      "gm": -3.860924146687597,
+      "bw_Hz": 671.0105456657387
+    },
+    {
+      "Kp": 5000,
+      "f_c_Hz": 795.7747154594767,
+      "pm": -110.53522829578813,
+      "gm": -6.95896334640246,
+      "bw_Hz": 732.560724415757
+    }
+  ],
+  "latency_sweep": [
+    {
+      "latency_s": 0.0,
+      "phase_margin_deg": 69.94647717042119,
+      "gain_margin_dB": 13.04103665359754
+    },
+    {
+      "latency_s": 0.0001,
+      "phase_margin_deg": 49.89295434084237,
+      "gain_margin_dB": 7.0204367403179155
+    },
+    {
+      "latency_s": 0.0002,
+      "phase_margin_deg": 29.839431511263555,
+      "gain_margin_dB": 3.4986115592042912
+    },
+    {
+      "latency_s": 0.0004,
+      "phase_margin_deg": -10.267614147894065,
+      "gain_margin_dB": -0.9383634331228369
+    },
+    {
+      "latency_s": 0.0006,
+      "phase_margin_deg": -50.3746598070517,
+      "gain_margin_dB": -3.860924146687597
+    },
+    {
+      "latency_s": 0.001,
+      "phase_margin_deg": -130.58875112536694,
+      "gain_margin_dB": -7.786817049566962
+    },
+    {
+      "latency_s": 0.002,
+      "phase_margin_deg": -331.12397942115507,
+      "gain_margin_dB": -13.403349241080846
+    }
+  ],
+  "monte_carlo": {
+    "published 3500": {
+      "mean": 16.200173728101785,
+      "sigma3": 0.02730417698964245,
+      "sat_frac": 0.2971642596360834,
+      "stalled_frac": 0.0,
+      "v_min": 16.173401132381695,
+      "v_max": 16.231265166408164
+    },
+    "designed 195": {
+      "mean": 16.200410535306677,
+      "sigma3": 0.026556675163832436,
+      "sat_frac": 9.433962264150944e-06,
+      "stalled_frac": 0.0,
+      "v_min": 16.17095648216101,
+      "v_max": 16.225386696705243
+    }
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "plant reproduces motor_model.shot within 1 %",
+      "detail": "0.0168 %",
+      "passed": true
+    },
+    {
+      "band": "2",
+      "name": "published gain: PM >= 45 deg and GM >= 6 dB",
+      "detail": "PM -50.4 deg, GM -3.86 dB",
+      "passed": false
+    },
+    {
+      "band": "3",
+      "name": "closed-loop bandwidth <= 36.3 Hz",
+      "detail": "671.0 Hz",
+      "passed": false
+    },
+    {
+      "band": "4",
+      "name": "command at or below K_RATED for >= 95 % of stroke",
+      "detail": "70.3 %",
+      "passed": false
+    },
+    {
+      "band": "5",
+      "name": "PM >= 30 deg at 0.6 ms latency",
+      "detail": "-50.4 deg",
+      "passed": false
+    },
+    {
+      "band": "6",
+      "name": "designed-controller 3sigma within 2x of 0.027 m/s",
+      "detail": "0.0266 m/s",
+      "passed": true
+    }
+  ]
+}

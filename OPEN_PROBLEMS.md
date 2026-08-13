@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **81 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
+> **82 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
 > | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **11** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CORRECTED` | **12** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
@@ -2110,6 +2110,60 @@ cross-check — **was not run**, so 10.5386 is still magpylib, which is analytic
 E2's objection that nothing here *solves a field equation* in 3-D stands. Re-baselining onto a
 number that a different method has never checked would repeat the mistake this entry is about,
 one level down.
+
+### P47. The published velocity-loop gain is linearly unstable, and its numeric value is a bandwidth: HIGH, CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found by A28, 2026-08-13, on bands declared at `3ae36ad` before the script existed.** Raised in
+external review as an essential missing piece of work, and the review was right.
+
+`motor_model.closed_loop_mc()` carried **proportional velocity feedback at a gain of 3500**, with
+no plant model, no transfer function, no margin, no controller rate, no sensor dynamics, and no
+check against the track's modes. Four of A28's six bands failed.
+
+**The controller is feedback-linearised.** It divides the command by the modelled thrust constant
+and multiplies by the modelled mass, so the plant's own K_t/m cancels and the loop transfer is
+`L(s) = Kp/s · exp(−sτ)`. **Kp is not a current gain — it is an acceleration per unit velocity
+error, in s⁻¹, and its numeric value is the gain crossover in rad/s.** 3500 s⁻¹ is a crossover at
+**557 Hz**. That was never stated anywhere, and read as a current gain the number looks harmless.
+
+| At Kp = 3500 s⁻¹, τ = 0.700 ms | | Band |
+|---|---:|---|
+| Gain crossover | 557.0 Hz | — |
+| Phase margin | **−50.4°** | ≥ 45° |
+| Gain margin | **−3.86 dB** | ≥ 6 dB |
+| Closed-loop bandwidth | **671.0 Hz** | ≤ 36.3 Hz |
+| Stroke with command above rating | **29.7 %** | ≤ 5 % |
+
+**Two things made this invisible for as long as it was.** `closed_loop_mc` feeds back the
+*undelayed* state, so its loop sits at zero latency, where 3500 does hold +69.9° of phase margin;
+the published gain is marginally stable at a total lag of **449 µs** and no real sensor is that
+fast. And the command is clipped to `[0, K_RATED]`, which turns a linearly unstable loop into a
+bang-bang relay whose mean follows the feedforward term, with the terminal ±0.3 m/s photogate trim
+removing the residual. **The dispersion figure was dominated by the saturation limits and the
+terminal correction, not by the feedback it was attributed to.**
+
+**Corrected.** `motor_model.KP_VELOCITY = 195` s⁻¹ — `design_gain()` returns 195.2 s⁻¹ as the
+largest gain holding ≥ 50° of phase margin at 0.6 ms *and* bandwidth at or below a third of the
+109 Hz first mode; the implemented value is rounded down to sit at or below it. Result: PM
+**+82.2°**, GM **+21.2 dB**, bandwidth **36.3 Hz**, **0.0 %** of the stroke above rating.
+
+**The gain falls 18× and the dispersion does not move**: 0.0271 → **0.0267 m/s**, both 0.027 to
+two significant figures. The loop never needed the bandwidth; the dispersion is set by the
+terminal trim and by the K_t and mass tolerances.
+
+**Baseline change under rules 1 and 2** of `docs/BASELINE.md`. Only the dispersion row moved.
+**K_t stays 11.0258 N/kA·m and v_exit stays 16.388 m/s** — neither depends on the controller.
+**Validations invalidated: none**; nothing else reads `closed_loop_mc`.
+
+**Two limits belong to other entries, not to this one:** the plant is rigid, so the 48 Hz and
+109 Hz modes appear as a frequency the bandwidth is held away from rather than as a compliant
+model in the loop (**P36**); and the delay is a stated assumption, because no sensor has been
+selected (**E7**).
+
+Full sheet: `validation/A28_control_stability.md`. ADR-027.
+
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

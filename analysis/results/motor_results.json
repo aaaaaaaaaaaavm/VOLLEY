@@ -39,8 +39,8 @@
     "J_Amm2": 21.0
   },
   "v_fleet_setpoint": 16.2,
-  "closed_loop_mean": 16.201,
-  "closed_loop_3sigma": 0.0271,
+  "closed_loop_mean": 16.2,
+  "closed_loop_3sigma": 0.0267,
   "family": {
     "1U": {
       "v_exit": 18.3,
