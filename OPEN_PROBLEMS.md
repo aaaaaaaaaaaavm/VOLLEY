@@ -1576,8 +1576,33 @@ and cannot go stale.
 together, or mark `DV` explicitly as the frozen historical value those two analyses were run at
 and delete the claim that it tracks `astro.py`. The second is honest and costs nothing.
 
-### P36. The track has no dynamic design case, and A17 says it needs one: HIGH, NEW 2026-08-05
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P36. The track has no dynamic design case, and A17 says it needs one: CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — the analysis half is closed by A33; the damping specification needs measurement
+
+> **A33 ran 2026-08-13 and closed two of the three missing pieces, both as negative results.**
+> Bands declared at `7baa062` before the script existed; **six of six pass.**
+>
+> **The moving-load model exists now, and the effect is not the problem.** With the sled aboard
+> the first mode really does fall — **109.0 → 66.4 Hz** at midspan — so the track's first mode is
+> not a number during a shot. But the ripple chirp reaches the fundamental at **x = 133 mm, 9 %
+> into the stroke**, while the sled is still near the anchored end: the mode is depressed
+> **0.8 %** there. **The excitation and the depression are separated in space, and A17's
+> fixed-frequency SDOF was adequate.**
+>
+> **The travelling load is quasi-static.** Exit velocity is **5.01 %** of the beam's 327 m/s
+> critical speed.
+>
+> **A dynamic acceptance criterion now exists** beside the static 70 Hz one, in the form of six
+> declared bands, and the arrest — applied where it actually acts rather than at midspan —
+> deflects the track **0.142 mm, 1.18 % of the winding gap.**
+>
+> **And a feedback path nobody had named is quantified.** Ripple acts 57.5 mm off the neutral
+> axis → bending → gap change → thrust change → ripple. **Loop gain 0.095**, an order of
+> magnitude from self-excitation, scaling with the square of eccentricity.
+>
+> **What stays open is the first of P36's three items: there is still no measured damping.**
+> A17's 8.18× is used as given. That is a measurement, not an analysis, and it belongs to T-2's
+> sine sweep in `docs/QUALIFICATION_PLAN.md`. Full sheet: `validation/A33_track_dynamics.md`.
 
 
 `sizing.py::track_first_mode()` checks the track against one static target -- above 70 Hz to clear

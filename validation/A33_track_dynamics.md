@@ -20,6 +20,96 @@ P36 names three things the project does not have. **This sheet addresses the sec
 > The script is absent at this commit. Verify with
 > `git show --stat <this commit> -- analysis/track_dynamics.py`, which returns nothing.
 
+## Result, 2026-08-13: six of six, and A17 was not underestimating
+
+`analysis/track_dynamics.py`, bands committed at `7baa062` before it existed. Results in
+`analysis/results/track_dynamics.json`.
+
+| Band | Test | Result | |
+|---|---|---:|---|
+| 1 | modal model reproduces `sizing.py` within 2 % | **+0.04 % / +0.23 %** | **PASS** |
+| 2 | launch case stays above 70 Hz | **109.0 Hz** | **PASS** |
+| 3 | mode within 10 % of undepressed at the chirp crossing | **0.8 %** | **PASS** |
+| 4 | K<sub>t</sub> modulation from track motion ≤ 0.5 % pk-pk | **0.1877 %** | **PASS** |
+| 5 | exit velocity ≤ 20 % of critical speed | **5.01 %** | **PASS** |
+| 6 | arrest deflection ≤ 5 % of the gap | **1.18 %** | **PASS** |
+
+### Band 3 — the answer to P36, and it is a negative result
+
+**The mode really does move.** With the sled aboard, the track's first mode falls from **109.0 Hz
+to 66.4 Hz** as the sled reaches midspan, and recovers as it leaves. The track's first mode is not
+a number during a shot.
+
+**And it does not matter, because of where the crossing happens.**
+
+| | |
+|---|---:|
+| Ripple chirp sweeps | 0 → **338 Hz** |
+| Mode falls to | 66.4 Hz, at x = 750 mm |
+| **They cross at** | **x = 133 mm, v = 5.19 m/s, 108.2 Hz** |
+| Mode depression there | **0.8 %** |
+
+The chirp reaches the fundamental **9 % into the stroke**, while the sled is still near the
+anchored end where the mode shape is almost zero — so it depresses nothing. **The excitation and
+the mode depression are separated in space, and A17's fixed-frequency SDOF was adequate.**
+
+**This is the moving-load model P36 asked for, and it returns "the effect exists and is not the
+problem."** A negative result, obtained cheaply, on an item that had been open eight days.
+
+### Band 5 — and the travelling load is quasi-static anyway
+
+Critical speed for a load traversing this beam is **2·f₁·L = 327 m/s**. The sled leaves at
+16.39 m/s — **5.01 % of it**. Below roughly a fifth of critical a moving load is quasi-static, so
+the classic amplification is not in play at any point in the stroke.
+
+### Band 4 — and there is a feedback path, an order of magnitude from mattering
+
+The mechanism is worth naming because nothing in the project had: the ripple acts **along** the
+track at the stator plane, **57.5 mm off the longerons' neutral axis**, so it applies a bending
+moment; bending changes the **12 mm winding gap**; and the gap changes thrust at **13.1 % per
+millimetre**. That is a closed loop — ripple → deflection → gap → thrust → ripple.
+
+| | |
+|---|---:|
+| Ripple force | 13.8 N |
+| Static midspan deflection | 1.75 µm |
+| × A17's 8.18 amplification | 14.3 µm |
+| Gap modulation | 0.0143 mm pk-pk |
+| **K<sub>t</sub> modulation** | **0.1877 % pk-pk** |
+| **Loop gain of the feedback path** | **0.095** |
+
+**A gain of 0.095 is an order of magnitude from self-excitation**, and it is reported rather than
+merely passed because the mechanism is the kind that would be found late and expensively. It
+scales with the *square* of eccentricity and linearly with amplification, so a track with three
+times the offset and a Q at the top of A17's range would be at the edge.
+
+### Band 6 — and where a load acts is the whole question
+
+The arrest applies **18.5 kN eccentrically, near the far clamp**. Deflection **0.142 mm peak,
+1.18 % of the gap.**
+
+**The same load at midspan gives zero midspan deflection** — a couple at midspan of a fixed-fixed
+beam produces an antisymmetric shape — and a naive `M L²/8EI` expression gives **4.7 mm, 39 % of
+the gap.** Three answers spanning four orders of magnitude for the same force, depending only on
+where it is applied and how it is modelled.
+
+### The solver was wrong until it was checked, and no band required checking it
+
+**This is the fourth new solver in four sheets to be wrong on its first run.** The finite-difference
+beam represents a point load as a distributed intensity `P/h`, and the first implementation
+omitted the `h`. Deflections came out **three orders of magnitude too small**, and **bands 4 and 6
+both passed on them** — at 0.0004 % and 0.00 % respectively.
+
+**Band 1 verifies the modal model. Nothing verified the deflection solver**, because when the
+bands were written the analysis was expected to be modal. The check that caught it — a point load
+at midspan against **P L³/192 EI**, agreeing to **−0.37 %** — is now an assertion at the top of
+the run, so the script refuses to report anything if it cannot reproduce the closed form.
+
+**The lesson is the same one A30, A31 and A32 produced, and it is now unambiguous: every solver
+needs a verification band, including the ones that were not the point of the analysis.**
+
+---
+
 ## What is being computed, and the mechanism that makes it non-trivial
 
 **The sled is 13.445 kg riding a track whose whole distributed mass is 20 kg.** A mass that large,

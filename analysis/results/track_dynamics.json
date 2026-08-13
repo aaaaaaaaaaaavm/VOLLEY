@@ -1,0 +1,77 @@
+{
+  "L": 1.5,
+  "EI_kNm2": 63.318816000000005,
+  "mu": 13.333333333333334,
+  "eccentricity_m": 0.0575,
+  "f_bare_ff": 109.04371073125213,
+  "f_bare_pp": 48.1118205148618,
+  "published": {
+    "pinned_pinned_Hz": 48.0,
+    "fixed_fixed_Hz": 109.0,
+    "EI_kNm2": 63.3,
+    "target_Hz": 70
+  },
+  "generalised_mass_kg": 7.929558403210293,
+  "f_launch_Hz": 109.04371073125213,
+  "f_launch_midspan_Hz": 37.977007377219394,
+  "f_mode_min_Hz": 66.41658875891795,
+  "x_at_min_mm": 749.8672336168086,
+  "chirp_max_Hz": 337.5,
+  "crossing": {
+    "x_mm": 133.4064032016008,
+    "v": 5.189573604555441,
+    "f_Hz": 108.20005390750323,
+    "depression_pct": 0.7736868253027107
+  },
+  "ripple_N": 13.75362439541007,
+  "deflection_static_um": 0.875676966981094,
+  "deflection_dynamic_um": 7.163037589905349,
+  "kt_modulation_pct": 0.18767158485552013,
+  "kt_modulation_local_pct": 0.19395214782646933,
+  "feedback_gain": 0.09478362871490915,
+  "v_critical": 327.1311321937564,
+  "speed_ratio_pct": 5.009593247636002,
+  "brake_station_m": 1.48,
+  "brake_deflection_midspan_mm": 0.12061251310264662,
+  "brake_deflection_peak_mm": 0.14200058338200458,
+  "brake_if_midspan_mm": 1.538824852192917e-08,
+  "damping": "NOT SPECIFIED ANYWHERE IN THIS PROJECT; A17's 8.18x used as given",
+  "bands": [
+    {
+      "band": "1",
+      "name": "modal model reproduces sizing.py within 2 %",
+      "detail": "ff +0.04 %, pp +0.23 %",
+      "passed": true
+    },
+    {
+      "band": "2",
+      "name": "launch case stays above 70 Hz",
+      "detail": "109.0 Hz",
+      "passed": true
+    },
+    {
+      "band": "3",
+      "name": "mode within 10 % of undepressed at the chirp crossing",
+      "detail": "0.8 % depressed",
+      "passed": true
+    },
+    {
+      "band": "4",
+      "name": "Kt modulation from track motion <= 0.5 % pk-pk",
+      "detail": "0.1877 %",
+      "passed": true
+    },
+    {
+      "band": "5",
+      "name": "exit velocity <= 20 % of critical speed",
+      "detail": "5.01 %",
+      "passed": true
+    },
+    {
+      "band": "6",
+      "name": "arrest deflection <= 5 % of the gap",
+      "detail": "1.18 %",
+      "passed": true
+    }
+  ]
+}
