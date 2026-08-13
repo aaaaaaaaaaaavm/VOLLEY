@@ -43,3 +43,12 @@ paper/cv/*.aux
 paper/cv/*.log
 paper/cv/*.out
 
+
+# A2 band 4 (validation/fem3d): the 3-D mesh and the getdp working files are DERIVED and
+# large -- 109 MB and 6.3 MB. build_mesh.py and make_pro.py regenerate them from
+# analysis/motor_model.py in one command, so committing them would store an output that is
+# already a function of a committed input. The RESULT (b_midgap.txt, band4_result.json) is
+# small and is committed.
+validation/fem3d/*.msh
+validation/fem3d/*.pre
+validation/fem3d/*.res
