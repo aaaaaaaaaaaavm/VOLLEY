@@ -7,6 +7,20 @@ Technology, Symbiosis International (Deemed University), Pune
 
 ---
 
+## Where the design is going, in one paragraph
+
+**Everything below describes Gen5, which is the measured baseline and the record of what a
+self-contained deployer costs.** On 2026-08-14 five analyses replaced the design target
+([ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)): **Gen6 is the payload accelerated
+directly, by gas, along a rail the spent stage provides.** No mover, no pulse-power chain, no
+brake, no return stroke. **29.75 kg is deleted, 43.33 kg becomes stage structure, 11.45 kg of
+containment and ~3 kg of gas store remain** — added mass per satellite **1.608 kg** against an
+unchanged 2 kg threshold, while **dry mass per satellite still crosses at 7.042 kg** and both are
+reported together. Nothing in it is measured, the fluid system is unsized, and no launch provider
+has agreed to lend a stage.
+
+---
+
 ## The idea
 
 Rideshare CubeSats inherit the orbit of whoever paid for the launch. Spring deployers release
@@ -48,6 +62,7 @@ a **28.8 km rise in semi-major axis** and **+60.2 % of orbital life**, which no 
 | Thrust constant | **10.54 N per kA/m** | Winding-resolved, and **independently computed by a meshed magnetostatic FEM to 0.03 %**, a PDE solve, not another superposition |
 | Energy per shot | **2.78 kJ gross, 2.74 kJ net**, 18.5 % electrical-to-payload | Under one watt-hour. 291 J of the sled's 1268 J comes back through 240 mm of regen stator ([A11](validation/A11_regen_braking.md), adopted 2026-07-31); the brake still takes 935 J |
 | System mass | **84.5 kg dry**, 132.5 kg loaded | **7.04 kg of deployer per 3U satellite**, the same class as canisterized dispensers at ~2 kg/U |
+| Under ADR-032 | **11.45 kg added**, the rest deleted or supplied by the stage | **1.608 kg per 3U satellite added** — the 2 kg threshold is unchanged and dry mass still crosses it |
 | Recurring hardware | ~₹1.35 M per unit, ₹112 k per satellite | **Every price assumed, no quotations.** Useful part: avionics + energy storage are ~42 % of cost and the magnet set only ~5 %, which holds even at 2x price errors |
 | Envelope | 1839 mm closed | **Exceeds the ESPA-Grande class by ~44 %.** Open packaging problem (P9) |
 

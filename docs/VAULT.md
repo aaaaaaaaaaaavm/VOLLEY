@@ -50,20 +50,57 @@ Each entry gets one of three outcomes, recorded here:
 
 ## The design target main is working toward
 
-**Set 2026-08-13 by [ADR-029](adr/029-phase-one-closes-on-gen5.md).**
+**Reset 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md).**
 
-**Gen6 — a linear induction drive on a passive aluminium mover** — is the architecture Phase II
-develops. No magnets, no 9.445 kg sled, an arrest of 82 J instead of 1938, and the satellite
-untouched. It carries **nine measured bands** (A30 4–5, A31 1–4, A32 1–2) and an unsized
-remainder that is larger than that: the twin-fin geometry, retention, release, the 850 mm stroke
-and the stator iron have **zero** bands between them.
+**Gen6 is the payload accelerated directly, by gas, along a rail the host stage provides.** No
+mover, no pulse-power chain, no brake, no return stroke. Added hardware is **11.45 kg of
+containment plus about 3 kg of store**, and added mass per satellite is **1.608 kg** on a
+kick-stage class.
 
-**[`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md) is the combined statement**, including the two
-items below it supersedes and the reason kill criterion 2 closes.
+> **The previous definition is superseded and is worth stating, because it was the target for one
+> day.** ADR-029 set Gen6 as *a linear induction drive on a passive aluminium mover* — no magnets,
+> a 0.6 kg shuttle, an arrest of 82 J instead of 1938. **Its nine measured bands (A30 4–5, A31 1–4,
+> A32 1–2) stand as declared.** What retired it was not a refutation but
+> [A35](../validation/A35_constraint_ledger.md): the mover it optimised is **11 % of dry mass**,
+> so an architecture built around making it lighter was optimising the wrong term.
 
-**It is a target, not a promotion.** The gate below is unchanged: an item is promoted at a
-baseline boundary by meeting the criterion it was given, and Gen6's criteria are not all written
-yet, let alone met.
+**Five runs on 2026-08-14 built the replacement**, and not one set out to: A35 attributed every
+kilogram, A36 closed the manifest route, A37 made the stage the machine, A38 showed tip-off does
+not bind, A39 replaced the spring with gas.
+
+**It is still a target, not a promotion.** Nothing is measured; the fluid system is unsized, the
+cradle mechanism does not exist, and no provider has agreed to lend a stage.
+
+---
+
+## Nine entries stopped on 2026-08-14, and for a reason none of them anticipated
+
+**The vault's one rule is that every entry states why it stopped.** These nine stopped the same
+way, and the reason is worth stating once rather than nine times: **[ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+deletes the subsystem each of them improves.** Not one was refuted. Each was a correct optimisation
+of a part that no longer exists.
+
+| | Improves | Why it stopped |
+|---|---|---|
+| **PII-1** | the release, by a momentum-conserving kick off the mover | **Δv = √(2EM/(m(M+m))) and the lever is *M*.** With no mover, M = 0 and the kick delivers nothing. The project's self-declared strongest idea is deleted by arithmetic it wrote itself |
+| **PII-2** | the sled chassis, by ribbing it | No sled |
+| **PII-3** | K<sub>t</sub>, by a two-layer stator | No stator |
+| **PII-4** | the envelope, by repackaging 1839 mm | No envelope — the stage is the structure |
+| **PII-7** | the supercapacitor bank, by four parallel strings | **No bank.** This is P26, the largest live defect this project carried, and A39's answer is 25–131 W |
+| **PII-11** | the track, by making it deployable | The stage is already deployed, already long, and already straight |
+| **PII-12** | copper loss, by block commutation | No stator |
+| **PII-17** | the mover, by letting it depart with the satellite | No mover |
+| **PII-18** | the mover, by making it a 0.25 kg shuttle | No mover |
+
+**They are not struck through and not deleted.** Each records a real analysis at a real operating
+point, and **PII-1's arithmetic is the reason the mover went** — it is the entry that measured how
+much of the machine existed to serve the sled. **A vault whose entries disappear when the design
+moves is a graveyard.**
+
+**Three entries survive untouched and one gains:** PII-5 and PII-6 are astrodynamics and are
+independent of the drive; PII-9's lunar case never depended on this architecture; and **PII-8, the
+free-flyer, gets closer** — its hardest problem was airgap straightness over a deployed structure,
+and ADR-032 has no airgap.
 
 ---
 

@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (fortieth pass): ADR-032, and the nine vault entries it deletes the subject of
+
+| ID | Item | Detail |
+|---|---|---|
+| **ADR-032** | **Gen6 is a stage-integrated, payload-direct, gas-driven deployer** | Five runs on one day, **none of which set out to replace an architecture**: A35 attributed every kilogram, A36 closed the manifest route, A37 made the stage the machine, A38 showed tip-off does not bind, A39 replaced the spring with gas. **Four things are deleted rather than improved** — the mover, the pulse chain, the brake and the return stroke. |
+| SUPER-01 | **The Gen6 of ADR-029 is superseded, not refuted** | *A linear induction drive on a passive aluminium mover* was the target for one day. **Its nine measured bands stand as declared.** What retired it is A35: the mover it optimises is **11 % of dry mass**, so the synthesis is a careful, banded, correct optimisation of the wrong term. `GEN6_ARCHITECTURE.md` and `GEN6_RAIL_DRIVE.md` carry that at the top and are **not edited below it**. |
+| **VAULT-02** | **Nine entries stopped together, for a reason none anticipated** | PII-1, 2, 3, 4, 7, 11, 12, 17 and 18 all improve a subsystem ADR-032 deletes. **Not one was refuted.** **PII-1's own arithmetic is why the mover went** — Δv = √(2EM/(m(M+m))), and with no mover the lever is zero. **PII-7 was P26**, the largest live defect this project carried, and A39's answer is 25–131 W. |
+| VAULT-03 | **And one gains** | **PII-8**'s hardest problem was airgap straightness at 0.7–2 ppm over a deployed structure. ADR-032 has no airgap. |
+| **LAB-03** | **PII-19 written into `VOLLEY-lab`** | The induction-drive Gen6 as a long-form entry, carrying the two results that outlive it: **A30's 0.0253 edge factor**, which kills any future proposal to use a CubeSat's own rails as a secondary, and **A32 band 4's 30.1 % segment ripple**, which applies to any segmented long stator with a short secondary. |
+| STATE-01 | **The kill-criteria table restated, and it is weaker news than it looks** | **Three of seven were Gen5 problems ADR-032 deletes rather than solves.** Criterion 1 is **not declared met**: 1.608 kg added against 7.042 kg dry, both reported, threshold unmoved, **P59 stays LIVE**. Criterion 4 is **not declared passed** — A38 shows only that raising acceleration does not worsen it. |
+| D2-01 | **D2 narrows rather than closes** | It was *which payload class is the product*. It is now *which numerator a customer actually pays*, because A37 closes the criterion at 3U on added mass. Still an owner decision, still High. |
+| CONCEPT-01 | **`CONCEPT.md` stopped one step short and now takes it** | It already argued a spent stage is a waste rather than a necessity, then treated it as a **host**. ADR-032: **the stage is not the host, it is the machine.** |
+
+**What authorised it.** A35 through A39, and the fact that they compounded. **No band was edited,
+widened or moved, and no superseded document was rewritten** — both Gen6 files carry their notice
+at the top and stand unaltered below it. All four checks pass.
+
+---
+
 ## 2026-08-14 (thirty-ninth pass): the store was the wrong store, and A35's falsifier passes
 
 | ID | Item | Detail |

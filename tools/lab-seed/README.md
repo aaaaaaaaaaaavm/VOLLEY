@@ -37,8 +37,24 @@ than a line on the floor.
 
 Not "deferred" — *why*, with the number that decided it. The rail-drive entry upstream carries
 the transverse edge factor of **0.0253** that killed it, against the **0.55** it had been sized
-on. PII-14 below carries the drivetrain inertia that eats its own gain. **That is what makes
-this evidence rather than a pile**, and it is the only rule here.
+on. PII-14 below carries the drivetrain inertia that eats its own gain. PII-19 carries the **11 %**
+that made a whole architecture the wrong answer. **That is what makes this evidence rather than a
+pile**, and it is the only rule here.
+
+> ### Nine entries stopped together on 2026-08-14
+>
+> [ADR-032](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/adr/032-gen6-stage-integrated-gas-store.md)
+> made the payload accelerate directly, by gas, along a rail the spent stage provides — and
+> **deleted the subsystem that nine vault entries improve.** No mover, so PII-1, PII-2, PII-17 and
+> PII-18 have nothing to act on; no stator, so PII-3 and PII-12; no bank, so **PII-7**, which was
+> P26, the largest live defect the project carried; no envelope and no track, so PII-4 and PII-11.
+>
+> **Not one was refuted.** Each is a correct optimisation of a part that stopped existing, and
+> **PII-1's own arithmetic is why the mover went**. The full list is in the main repository's
+> [`docs/VAULT.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/VAULT.md).
+>
+> **PII-8 gains.** Its hardest problem was airgap straightness over a deployed structure, and the
+> new architecture has no airgap.
 
 An entry without a reason is not deferred. It is abandoned with extra steps.
 
@@ -54,6 +70,7 @@ and its entry criterion — is kept in the main repository so the numbering cann
 | [**PII-9** — the lunar case](PII-9_lunar.md) | Where this technology has always belonged, and the mass driver it descends from. 1.33 MJ/kg to lunar orbit, so 15 kW launches a tonne a day. **Stopped by having no host**: it describes a different programme, not this one. The payload is ore, so the g-limit governing the whole design disappears |
 | [**PII-11** — a deployable track, and the side-rail layout](PII-11_deployable_track.md) | A telescoping track long enough to accelerate *and* regeneratively arrest reaches **48 % electrical-to-payload efficiency**, deletes the eddy brake and stows inside the ESPA Grande envelope the main design misses by 44 %. The only option that improves velocity and envelope together. **Stopped by type, not by number**: a deployable structure is an architecture change however good its numbers are |
 | [**PII-14** — a cable-driven gondola on a deployed truss](PII-14_cable_driven_gondola.md) | Propulsion off the vehicle onto a cable, energy from a flywheel. **Stopped by the assumption inside its own headline**: +49.7 % assumed a drivetrain with zero rotating inertia, and a real one gives +15 to +30 %, possibly zero — in exchange for deleting the linear synchronous motor and the 24 validations behind it. Its two dead ends are recorded too, because both will otherwise be re-proposed |
+| [**PII-19** — the induction-drive Gen6](PII-19_induction_drive_gen6.md) | A linear induction drive on a 0.25 kg passive plate instead of a 9.445 kg magnet sled. **It was the main repository's design target for one day.** **Stopped by attribution, not refutation**: A35 measured the mover it optimises at **11 % of dry mass**, so the whole synthesis is a careful, banded, correct optimisation of the wrong term. Its nine measured bands stand |
 | [`notes/`](notes/) | Unstructured, date-stamped, finished by nobody |
 
 **PII-11 is the one that is hardest to leave shut**, because unlike the others it improves the

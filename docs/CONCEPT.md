@@ -1,5 +1,24 @@
 # What VOLLEY actually is: a last-mile delivery vehicle, not a bigger spring
 
+> ## Extended 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+>
+> **This file already had the idea and stopped one step short of it.** §2 argues that a spent
+> stage is a waste rather than a necessity, and then treats it as a *host* — something VOLLEY is
+> mounted on.
+>
+> **ADR-032 takes the step: the stage is not the host, it is the machine.** Its structure is the
+> rail, its skin and avionics are the enclosure, and the deployer is what gets added —
+> **11.45 kg of containment and about 3 kg of gas store.**
+>
+> Four constraints dissolve rather than improve: the 44 % envelope overrun (nothing is stowed), the
+> deployable-structure precision that killed PII-8 and PII-11 (no airgap, so millimetres rather
+> than ppm), the supercapacitor bank no supplier sells (25–131 W), and the acceleration length that
+> capped velocity at 1.30 m.
+>
+> **What it does not dissolve** is that no launch provider has agreed to any of it. Everything
+> below stands; the concept is the same and the vehicle it runs on has moved from *beside the
+> stage* to *the stage*.
+
 **Written 2026-08-10.** This repository has always described the machine and rarely the
 concept. Every document opens with a linear synchronous motor and works outward, which is the
 right order for an engineer and the wrong order for anyone asking why the thing should exist.

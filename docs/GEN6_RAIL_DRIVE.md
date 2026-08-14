@@ -1,3 +1,13 @@
+> # SUPERSEDED 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+>
+> **The rail drive was rejected by its own band** — a measured transverse edge factor of **0.0253**
+> against the **0.55** it had been sized on — and the Gen6 it belonged to has since been replaced
+> for a different reason: [A35](../validation/A35_constraint_ledger.md) found the mover it
+> optimises is 11 % of dry mass.
+>
+> **Nothing below is edited.** Both records are kept: a variant killed by measurement, inside an
+> architecture retired by attribution.
+
 # Gen6: the satellite is the mover, and it already has the hardware
 
 > # REJECTED, 2026-08-13, by A30 band 1.

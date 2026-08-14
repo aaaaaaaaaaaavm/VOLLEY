@@ -1,3 +1,20 @@
+> # SUPERSEDED 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+>
+> **This file defines a Gen6 that no longer exists.** It combines the vault's Phase II items into
+> a linear induction drive on a passive aluminium mover, and it was the target for one day.
+>
+> **What retired it is not a refutation.** Every number below stands, and A30's, A31's and A32's
+> bands stand as declared. What changed is that [A35](../validation/A35_constraint_ledger.md)
+> attributed every kilogram to the requirement causing it and found the mover this file optimises
+> is **11 % of dry mass** — so the whole synthesis below is a careful optimisation of the wrong
+> term. The pulse was **28.1 %**, and an unmodified satellite cost **nothing**.
+>
+> **Gen6 is now** the payload accelerated directly, by gas, along a rail the host stage provides:
+> A35, A36, A37, A38, A39, and [ADR-032](adr/032-gen6-stage-integrated-gas-store.md).
+>
+> **Nothing below is edited.** It is the record of an architecture that was correct about its own
+> arithmetic and aimed at the wrong quantity, which is worth more kept than deleted.
+
 # Do the Phase II items combine?
 
 **Written 2026-08-13.** `analysis/architecture_synthesis.py`,

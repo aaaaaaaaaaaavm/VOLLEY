@@ -20,7 +20,7 @@ enough that the not-deciding is itself a decision.
 | # | The decision | Why it is still open | What it blocks | Cost of deciding wrong |
 |---|---|---|---|---|
 | **D1** | **Order B-1** — a gaussmeter and eight magnetised blocks, ₹22,000–52,000, bill of materials written since 2026-07-30 | Never ordered. [ADR-021](adr/021-freeze-the-register.md) made it the top of the roadmap and it stayed there | **E4.** Every number in the repository descends from a field model checked only calculation-against-calculation | Low. The instrument is reusable and the magnets are the sled's own class |
-| **D2** | **Which payload class is the product** | Every CAD file, cassette and cost model is 3U. But 3U **fails** kill criterion 1 at 7.042 kg/satellite, and the criterion only closes at **PocketQube** (0.266 kg) — a class with no corner rails and no designed interface at all | The market case, the CAD, the qualification plan, and what B-2 should measure | High. It is the difference between refining a design and starting a different one |
+| **D2** | **Which payload class is the product** | Every CAD file, cassette and cost model is 3U. 3U **fails** kill criterion 1 at 7.042 kg/satellite on dry mass. **Narrowed 2026-08-14:** [A37](../validation/A37_host_integrated.md) band 5 closes the criterion at 3U on **added** mass — 1.608 kg/satellite — if the deployer *is* a spent stage. **Both numerators are reported together and the threshold has not moved**, so the decision is now *which numerator a customer actually pays* rather than which class to serve | The market case, the CAD, the qualification plan, and what B-2 should measure | High. It is the difference between refining a design and starting a different one |
 | **D3** | **Apply or hold the K_t correction (P46)** | A2 computed K_t as **4.42 % high** — 10.5386 → 10.5386 N/kA·m, moving v_exit 16.029 → 16.029 m/s. Computed and **held**, not applied | Whether the published design point is the best known one. Every downstream number descends from it | Medium. Applying it moves ~20 published figures; not applying it means the repository publishes a number it knows is beaten |
 | **D4** | **Submit to IEEE, or publish openly** | The paper is CC BY 4.0 **provisionally**; an IEEE copyright transfer on acceptance would supersede it. The companion export is **held** for this reason, so `VOLLEY-paper` and `VOLLEY-thesis` sit at MIT while the flagship is CC BY | The licence state of two repositories, and the companion export run | Low, but it is currently a *divergence being carried*, not a position |
 | **D5** | **File a US provisional, or let it go** | The design is publicly disclosed, so an Indian filing is foreclosed. **35 USC 102(b)(1) leaves a US provisional possible until roughly August 2027** | Nothing technical. Everything commercial | High and one-way. The date passes whether or not it is decided |
@@ -110,16 +110,18 @@ design point:
 
 | | Threshold | Where it sits | State |
 |---|---|---|---|
-| **1. Mass per satellite** | ~2 kg | **7.042 kg** at 3U | **Crossed.** Closes only at PocketQube (0.266 kg) |
-| **2. Envelope** | fits a rideshare port | 1839 mm vs ~1270 mm | **Was crossed by 44 %; now NOT EVALUABLE**, blocked on E5 |
-| **3. Bank ESR** | 65 mΩ | 116–185 mΩ | **Crossed as designed.** Fix known (PII-7), costs 4× mass |
-| 4. Tip-off | 2 °/s | release is fine; **cradle arrival is 36–231 °/s** | Not demonstrated |
+| **1. Mass per satellite** | ~2 kg | **7.042 kg** dry at 3U; **1.608 kg added** under ADR-032 | **Crossed on dry mass. Closes on added mass** (A37 band 5), with both reported together and the threshold unmoved. **P59** stays LIVE |
+| **2. Envelope** | fits a rideshare port | 1839 mm vs ~1270 mm | **Dissolved under ADR-032** — nothing is stowed. Stands as crossed for Gen5 |
+| **3. Bank ESR** | 65 mΩ | 116–185 mΩ | **Crossed as designed for Gen5. Ceases to exist under ADR-032** — 25–131 W needs no bank (A39) |
+| 4. Tip-off | 2 °/s | release fine; cradle arrival **355 °/s at 25 g**, residual **zero** | **Not demonstrated**, and A38 shows raising acceleration does **not** worsen it. Ceiling 30.9 g |
 | 5. Attitude at trigger | servo-nullable | bands **fail** on transient peak rate | Not demonstrated |
-| 6. Host recoil | host accepts it | 64.1 N·s/shot, ~0.37 kg propellant per manifest | **Healthy** |
-| 7. Is 16.5 m/s worth anything | beats drag or propulsion | 18× faster phasing, schedulable | **Survives, narrowly, on one axis** |
+| 6. Host recoil | host accepts it | 64.1 N·s/shot; ~125 at the Gen6 point | **Healthy**, and it scales linearly with velocity |
+| 7. Is the velocity worth anything | beats drag or propulsion | **+28.8 km of semi-major axis**, ×1.60 of orbital life | **Survives on orbit change.** The phasing claim it used to rest on was **false** (P56) |
 
-**Two of the three crossed thresholds have fixes that make the third worse.** A bigger bank and a
-repackaged envelope both add mass, and mass is criterion 1.
+**Three of the seven were Gen5 problems that ADR-032 deletes rather than solves**, which is a
+different and weaker kind of good news than solving them. **Criterion 1 is the one that matters and
+it is not declared met** — a second numerator argued on its merits is not the criterion being
+passed, and the whole result rests on 43.33 kg credited to a stage nobody has agreed to lend.
 
 ### 3.3 Statements the project makes that its own evidence contradicts
 
