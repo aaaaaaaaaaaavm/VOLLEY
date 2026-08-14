@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **90 numbered entries, of which 36 are live.** Every entry carries a `Status:` line written by
+> **92 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **36** (15 P, 21 E) | open engineering; something still has to be done |
+> | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **24** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
@@ -2569,6 +2569,81 @@ them would produce four numbers that look derived and are assumed.
 **What would close it.** Re-derive K<sub>t</sub> for each distinct magnetic geometry in the table
 with `thrust_constant(nz=9)`, the same way the as-drawn value was re-derived, and re-run. It is
 one solve per distinct geometry, four in total.
+
+### P56. The phase-spacing claim is compared against the wrong baseline: HIGH, NEW 2026-08-14
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+**Found by a literature check, 2026-08-14.** The front door, `SUMMARY.md`, `docs/CONCEPT.md`,
+`docs/LANDSCAPE.md` and the manuscript all carry a version of:
+
+> 30° of constellation phase spacing in **1.4–6.9 days**, against roughly **25 days** by
+> differential drag, and **not achievable by design** with a spring.
+
+**Differential drag is not the baseline a reviewer will use.** Satellites released at different
+times from the same host arrive at different true anomalies **in the same orbit**, at zero Δv. At
+450 km the in-track rate is **0.0641 °/s**, so:
+
+| | |
+|---|---|
+| 30° of in-track separation, by waiting | **468 s — 7.8 minutes** |
+| 30° by commanded differential velocity | 1.4 days |
+| 30° by differential drag | ~25 days |
+
+**And this project's own adopted cadence already does it.** [ADR-020](docs/adr/020-inter-shot-cadence.md)
+sets the inter-shot interval at **1200 s**, which is **76.9° of in-track separation per shot** —
+two and a half times the spacing the claim celebrates, for free, before the motor does anything.
+
+**A spring and a clock deliver 30° of phase. The claim that a spring cannot is false.**
+
+**What the two things actually do is different, and that difference is the fix.**
+
+| | Timed release | Commanded differential |
+|---|---|---|
+| Satellites end up in | **the same orbit**, different true anomaly | **different orbits**, different period |
+| Phase behaviour | **static — holds forever** | **drifts — never stops** |
+| Cost | zero | the whole machine |
+
+For a string-of-pearls constellation, **timed release is not merely cheaper, it is better**: it
+gives a spacing that holds. Commanded differential velocity passes *through* 30° at 1.4 days and
+keeps going, and a propulsion-less satellite cannot null it. **The design cannot hold a
+constellation it phases.**
+
+**What survives, and it is the stronger claim.** No amount of waiting changes an *orbit*. Raised
+apogee (450 → 507.6 km), **+60.2 % of orbital life** against a spring's +8.2 %, and placement into
+a chosen altitude shell are things only Δv buys. **The differentiator is orbit change, not phase
+change**, and the repository has been leading with the weaker of the two.
+
+**What would close it.** Restate the claim wherever it appears — front door, `SUMMARY.md`,
+`CONCEPT.md`, `LANDSCAPE.md`, `MARKET.md`, `REVIEW_RESPONSES.md` and the manuscript — as orbit
+change rather than phase spacing, with timed release named as the correct free baseline for phase.
+`analysis/comparators.py` band 3 asserts *"a spring's designed differential is zero"*, which is
+true and no longer sufficient; it needs a companion row for release timing. **The band is not
+edited** — it passed as declared. A re-declared A21-R adds the row.
+
+### P57. A voice-coil CubeSat deployer making this project's core claim has been on the reading list unread since 2026-07-30: HIGH, NEW 2026-08-14
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+[`RELATED_WORK.md`](docs/RELATED_WORK.md) already flags it: *"the nearest published neighbour to
+this design's topology that has turned up so far. It has not been read."* A search on 2026-08-14
+establishes what it claims, and it is this project's claim.
+
+**Zhao, Yue, F. Yang & Zhu (2022),** *IEEE Trans. Ind. Electron.* **69**, 13305 — a double
+magnetic-circuit voice coil actuator **for CubeSat deployers**, whose stated purpose is *to control
+precisely the separation velocity of CubeSats with different masses*, where *the separation speed
+of the CubeSat can be directly controlled by regulating the current value*. It is a **direct-drive
+linear machine with no moving magnet carrier** — the sled-free topology this project has been
+treating as an open design direction — and it is cited by **all three** Harbin papers.
+
+**Why this is a defect and not a reading task.** `docs/PROVENANCE.md` records **P22**: a literature
+check found published work on this exact concept that the paper did not cite, and two claims did
+not survive it. **This is the same failure, on the paper the project had already identified as the
+nearest neighbour and then did not retrieve for two weeks.** Any novelty claim about programmable
+separation velocity is unsupported until it is read.
+
+**What would close it.** Retrieve and read it in full; record thrust, stroke, actuator mass,
+velocity range, payload range and whether hardware was tested, in `PRIOR_ART.md` under the same
+five fields as the other five; then state explicitly what this project claims that it does not.
+IEEE Xplore is blocked from this environment, so this needs institutional access.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
