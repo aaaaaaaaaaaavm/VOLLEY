@@ -74,11 +74,11 @@ nothing for the tail. The tail is a whole-volume condition.
 
 | Term | Duration | Notes |
 |---|---|---|
-| **Drive transient** | **158.6 ms** per shot | One shot per satellite. A14 found this is **not** the dominant term |
+| **Drive transient** | **162.3 ms** per shot | One shot per satellite. A14 found this is **not** the dominant term |
 | **Static Halbach field** | **continuous while cradled** | The array is a permanent magnet. It does not switch off between shots, or on the ground |
 
 **A14's finding was that the dominant term is the static magnet field, not the drive**, and the
-exposure profile is why that matters more than the field ratio alone. A 158.6 ms transient is a
+exposure profile is why that matters more than the field ratio alone. A 162.3 ms transient is a
 transient. A permanent magnet is a permanent magnet: it is at full strength during integration,
 through launch, throughout the coast, and for the whole campaign.
 

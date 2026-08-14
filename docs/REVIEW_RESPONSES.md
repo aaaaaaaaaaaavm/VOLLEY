@@ -78,7 +78,7 @@ is **unmeasured** — cycle-life testing is metal, not computation. See **E30**.
 ### 28. How does the mass compare against a COTS cold-gas module delivering the same Δv? — **ANSWERED, and it is a loss**
 
 **A cold-gas module wins by 7.5× at 3U.** `validation/A21_comparators.md` band 5 **declared this
-loss in advance** rather than discovering it: 6.375 kg of shared deployer per satellite against a
+loss in advance** rather than discovering it: 7.042 kg of shared deployer per satellite against a
 0.5–1.2 kg module.
 
 **What the module costs instead is the thing VOLLEY exists to avoid:** a pressure vessel, a
@@ -103,7 +103,7 @@ rails and no designed interface at all**.
 
 **A 1.0 m/s cap exists and containerised CubeSat deployments are explicitly exempt, with no
 numeric ceiling anywhere in the document.** VOLLEY is a containerised CubeSat deployment.
-**16.388 m/s is not prohibited on this interface at this revision.** The question expected to be
+**16.029 m/s is not prohibited on this interface at this revision.** The question expected to be
 lethal is not.
 
 **But the same document contains three requirements that matter more**, all recorded in
@@ -123,8 +123,8 @@ lethal is not.
 **Plus a qualification gap that is paperwork, not physics.** NRCSD-E reportedly requires CubeSats
 to withstand **0.5–2.5 m/s** at ejection *(second-hand, not read in the primary document)*.
 VOLLEY is 6.6× that ceiling. **Physically irrelevant** — a satellite is damaged by acceleration,
-not velocity, and 10.53 g sits well inside the 25 g CDS cap. **Programmatically real**: a customer
-qualified "per NRCSD-E" has no qualification basis for 16.4 m/s even though nothing about their
+not velocity, and 10.07 g sits well inside the 25 g CDS cap. **Programmatically real**: a customer
+qualified "per NRCSD-E" has no qualification basis for 16.0 m/s even though nothing about their
 hardware is threatened.
 
 **The survey is one document deep** and supports no claim about the market.
@@ -154,11 +154,11 @@ rule that would govern it.**
 
 ## Answered
 
-### 1. Why 16.4 m/s when the satellite is already travelling at 7.6 km/s?
+### 1. Why 16.0 m/s when the satellite is already travelling at 7.6 km/s?
 
 Orbital speed is not the quantity that matters; **Δv relative to the host is.** 7.6 km/s is shared
 by the host and every satellite on it, so it produces no separation and no orbit change. The
-16.388 m/s is *differential*, and differential velocity is what changes an orbit.
+16.029 m/s is *differential*, and differential velocity is what changes an orbit.
 
 Computed in `analysis/astro.py`: one shot raises apogee from 450 to **508.9 km** and extends
 orbital lifetime **+61.8 %**. A 2.5 m/s spring gives +8.2 %.
@@ -209,13 +209,13 @@ that sentence was removed from `paper.tex`.
 
 Saturation is recoverable. Remanent magnetisation is not — see 9.
 
-### 8. Is 10.5 g tolerable for typical CubeSat payloads?
+### 8. Is 10.1 g tolerable for typical CubeSat payloads?
 
 **Yes, with margin.** The CubeSat Design Specification qualification cap used here is **25 g**;
-the shot is **10.53 g**, about **42 %** of it. `docs/VELOCITY_CEILING.md` records that the 25 g
+the shot is **10.07 g**, about **42 %** of it. `docs/VELOCITY_CEILING.md` records that the 25 g
 cap — not the motor — is what limits exit velocity to 25.25 m/s over the 1.30 m stroke.
 
-**The caveat is duration, not magnitude:** 158.6 ms is long compared with a pyroshock, and
+**The caveat is duration, not magnitude:** 162.3 ms is long compared with a pyroshock, and
 whether 25 g survives review as a *sustained* load rather than a transient is flagged in
 `docs/PHASE_II.md` as an unresolved question.
 
@@ -254,7 +254,7 @@ identical velocity and never separate from each other, and the shim mechanism pr
 
 Partly answered by `docs/PRIOR_ART.md` and `LANDSCAPE.md`: electromagnetic launch has flown
 nowhere in space, and the published CubeSat electromagnetic-deployer work sizes for **6.91 MJ per
-shot**, which is why those papers need a solar array for recharge. This design's **2.56 kJ** is
+shot**, which is why those papers need a solar array for recharge. This design's **2.74 kJ** is
 three orders of magnitude lower because it targets metres per second, not kilometres.
 
 **The honest remainder:** absence of flight heritage is also evidence about difficulty, and this
@@ -268,13 +268,13 @@ answer does not dispose of that.
 |---:|---|---|---|
 | **13** | Where does ~2250 J of loss per shot go thermally, with no convection? | A18's campaign case: **24.4 kJ over twelve shots** at the 1200 s cadence, a 0.32 m² radiator, brake-fin capacity with radiation and conduction | The **per-shot** path, transient fin temperature, and the joint conductance the answer depends on (A19 found it sensitive at 500 W/m²K) |
 | **21** | Power, batteries from Earth, POEM-style array mass | P26 (the bank), A10 (68 mΩ ESR ceiling), A25 (flywheel alternative) | **No array sizing, no battery mass, no recharge energy budget.** `mass_properties.py` carries no line item for any of it (P10) |
-| **23** | If the brake fails, doesn't the sled exit at 16.4 m/s and become debris? | A tapered pole entry as a 200 g arrest limiter, a ring-spring stop as backstop | **No failure case analysed.** Whether the ring spring alone arrests a 9.445 kg sled at 16 m/s is not computed. Adjacent to 22 |
+| **23** | If the brake fails, doesn't the sled exit at 16.0 m/s and become debris? | A tapered pole entry as a 200 g arrest limiter, a ring-spring stop as backstop | **No failure case analysed.** Whether the ring spring alone arrests a 9.445 kg sled at 16 m/s is not computed. Adjacent to 22 |
 | **24** | Supercapacitor imbalance, venting, ESR growth over storage and cycling | A10's ESR ceiling; E17 records that the 12 mΩ figure comes from a superseded document with no cell datasheet checked | **No balancing scheme, no venting path, no ageing model.** ESR growth would tighten a ceiling already missed |
 | **27** | Ascent random vibration and separation shock for the loaded 124.5 kg stack | A18's Miles case, GEVS protoflight; A22 resized the gates to **+0.45 at Q = 30** | **Q is unmeasured** (`STRUCTURAL_GAP.md`), and the analysis covers the retention gates, not the whole stack |
 | **29** | No flight heritage — qualification path and honest TRL | `docs/QUALIFICATION_PLAN.md` specifies a campaign; badges read TRL 2–3 | The campaign is **specified, not costed or scheduled**, and no article exists to qualify |
-| **31** | How to verify 16.4 m/s over 1.3 m on the ground in 1 g | `docs/BENCHTOP_TESTS.md`; B-1 measures the **field**, not the shot | **No answer for the full-stroke shot.** A horizontal 1.5 m track on air bearings is the obvious approach and is not specified |
+| **31** | How to verify 16.0 m/s over 1.3 m on the ground in 1 g | `docs/BENCHTOP_TESTS.md`; B-1 measures the **field**, not the shot | **No answer for the full-stroke shot.** A horizontal 1.5 m track on air bearings is the obvious approach and is not specified |
 | **33** | Who pays — rideshare customer or launch provider? | `docs/MARKET.md` frames the customer | **No commercial model, no price, and every cost claim was withdrawn** for lack of a vendor quotation (E3) |
-| **35** | Host power, peak isolation, interface ownership | 96 V bank, **32.5 kW peak** at 339 A (not 18 kW — the average over the 158.6 ms stroke is 16.1 kW) | **No host bus interface defined, no isolation scheme, no ownership boundary.** ADR-010 specifies the mechanical interface only |
+| **35** | Host power, peak isolation, interface ownership | 96 V bank, **32.5 kW peak** at 320 A (not 18 kW — the average over the 162.3 ms stroke is 16.1 kW) | **No host bus interface defined, no isolation scheme, no ownership boundary.** ADR-010 specifies the mechanical interface only |
 | **14** | Is zero modification actually necessary, or would a small interface change simplify it? | The premise of ADR-002 and the whole product argument | **Never revisited as a trade.** And 9 shows the claim is already compromised by remanent magnetisation, which strengthens the question rather than answering it |
 
 ---
@@ -294,7 +294,7 @@ worked except item 5.
 | **15** | Why not an LSM-driven tug beneath the track, cable-and-pulley to the carriage, EMALS-like with reversed tug motion? | **PII-14** assessed a cable-driven gondola on 2026-08-10 and declined it on margin — but that concept moves the motor *off* the vehicle entirely. **The tug variant, where the LSM stays and only the coupling changes, was not assessed** | Medium |
 | **16** | Would separating the mover from the payload sled reduce field exposure and simplify the sled? | PII-11's side-rail layout and PII-14 both touch it. **Neither computes the field-exposure benefit**, which is the point of the question given 611× | **High** — it may be the cheapest fix to 7 and 9 |
 | **18** | Why a linear motor rather than a screw, rack, or staged spring? | **ANSWERED 2026-08-10** — A27. Screw disqualified by kinematics, rack by vacuum contact, **spring works and fails only on commandability** | Answered, and it narrows the case |
-| **19** | Cable in vacuum: fretting, cold welding, lubricant, pulley bearing life at 16.4 m/s, single load path | PII-14 flags it as unresolved; E21 covers tribology generally | Medium — only bites if a cable architecture is adopted |
+| **19** | Cable in vacuum: fretting, cold welding, lubricant, pulley bearing life at 16.0 m/s, single load path | PII-14 flags it as unresolved; E21 covers tribology generally | Medium — only bites if a cable architecture is adopted |
 | **20** | How reliable is a system with this many failure points? | **Now partly answered — see below.** The *structure* is quantified in **E30**; **p itself is still unestimated** | **High** |
 | **22** | Sled jam loses the campaign | **Nothing** — see above | **Lethal** |
 | **25** | Radiation and SEE qualification for the SiC drive | **Scoped 2026-08-10, not analysed** — see below | High |
@@ -407,9 +407,9 @@ stator, never the choice of linear motor over every other way of pushing a satel
 
 | Candidate | Verdict |
 |---|---|
-| **Ball screw** | **Disqualified by kinematics, twice.** 16.388 m/s on a 20 mm lead needs **49,164 rpm**: DN = 1.23 × 10⁶ against a 1.5 × 10⁵ ceiling (**8.2× over**), and whirling critical speed for a 25 mm screw over 1500 mm is **1,333 rpm — 37× under**. The two limits worsen in opposite directions, so no geometry closes it |
-| **Rack and pinion** | Pitch-line velocity **is** 16.4 m/s against ~10 m/s practice (1.64× over), and it carries the drive load through **tooth contact at full speed in vacuum** — making **E21**'s open tribology gap the load path |
-| **Staged spring** | **Works.** 537 J, 826 N peak, **21.1 g — inside the 25 g cap**, about **1.8 kg of steel**. Fails only on **C3 (commandability)** and **C5 (stores 537 J at rest)** |
+| **Ball screw** | **Disqualified by kinematics, twice.** 16.029 m/s on a 20 mm lead needs **49,164 rpm**: DN = 1.23 × 10⁶ against a 1.5 × 10⁵ ceiling (**8.2× over**), and whirling critical speed for a 25 mm screw over 1500 mm is **1,333 rpm — 37× under**. The two limits worsen in opposite directions, so no geometry closes it |
+| **Rack and pinion** | Pitch-line velocity **is** 16.0 m/s against ~10 m/s practice (1.64× over), and it carries the drive load through **tooth contact at full speed in vacuum** — making **E21**'s open tribology gap the load path |
+| **Staged spring** | **Works.** 514 J, 826 N peak, **21.1 g — inside the 25 g cap**, about **1.8 kg of steel**. Fails only on **C3 (commandability)** and **C5 (stores 514 J at rest)** |
 
 **So the answer to "why the hardest actuator" is: against a screw the choice is forced, against a
 rack it is well-founded, and against a spring it rests on exactly one criterion — that velocity is

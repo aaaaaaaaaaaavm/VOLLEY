@@ -69,7 +69,7 @@ delivers like a transfer vehicle over a narrow band.**
 
 ### 3.2 Dedicated — VOLLEY as the whole payload
 
-On a small launcher, VOLLEY *is* the mission. The vehicle's job is to put one 76.5 kg machine
+On a small launcher, VOLLEY *is* the mission. The vehicle's job is to put one 84.5 kg machine
 into a parking orbit; the machine then distributes its manifest. There is no primary customer
 whose orbit everyone else inherits, because there is no primary customer.
 
@@ -123,11 +123,11 @@ Because a spring gives every satellite the same push, and **distribution require
 
 | | Spring | VOLLEY |
 |---|---|---|
-| Velocity | 1–2 m/s, one value for every satellite | **16.388 m/s**, commanded per cell |
-| Designed differential between satellites | **zero** — any spread is manufacturing scatter | up to the full range, resolvable to 0.027 m/s (3σ) |
+| Velocity | 1–2 m/s, one value for every satellite | **16.029 m/s**, commanded per cell |
+| Designed differential between satellites | **zero** — any spread is manufacturing scatter | up to the full range, resolvable to 0.0274 m/s (3σ) |
 | Orbital lifetime extension | +6.5 % at 2 m/s, +8.2 % at 2.5 m/s | **+61.8 %** |
 | 30° of phase spacing | not achievable by design; ~25 days by differential drag | **1.4 days** at 10 m/s of commanded differential |
-| Deployer mass per 3U satellite | ~6 kg, canisterised class | **6.375 kg** |
+| Deployer mass per 3U satellite | ~6 kg, canisterised class | **7.042 kg** |
 
 **The lifetime figure is the one to read, not the velocity ratio.** VOLLEY is 6.6× a spring on
 raw Δv but **7.5–9.5× on what that Δv actually buys**, because lifetime extension is superlinear

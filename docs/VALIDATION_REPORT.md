@@ -7,7 +7,7 @@
 > `REVIEW_RESPONSES.md` from external review.
 >
 > **Numerical audit correction, 2026-08-03.** The current operating point is 11.03 N per
-> kA/m, 16.388 m/s, 10.53 g, 291.4 J recovered, 934.7 J to the brake, and 20.99% net
+> kA/m, 16.029 m/s, 10.07 g, 291.4 J recovered, 934.7 J to the brake, and 20.99% net
 > efficiency. A13's former residual-rate/cadence conclusion is superseded, A6's 3.7e-8
 > result is only a fixed-shape sensitivity, and the corrected brake-fin transient is 7 K
 > per shot. Values below that describe earlier audit states are retained as history.
@@ -307,7 +307,7 @@ supported by the geometry that currently exists.** Recorded as P15.
 `motor_model.py` computes sag as the capacitor's charge depletion (4.88 %) and models no
 ESR. With the 12 mΩ ESR the terminal voltage droops to 86.16 V at end of stroke: a **10.25 %
 total sag**, more than double the published figure. The servo-headroom argument behind the
-0.027 m/s dispersion claim is stated against the smaller number. Recorded under E17.
+0.0274 m/s dispersion claim is stated against the smaller number. Recorded under E17.
 
 Related: ∫I² dt over the shot is 8008 A²s. At 12 mΩ that is 96 J of ESR loss, against the
 `Q_esr = 160 J` default in `sizing.py`. The two are consistent only at ~20 mΩ. E17 noted that
@@ -345,7 +345,7 @@ copied from `verify_field.py` so they are compared at the same places.
 independently implemented method (a meshed PDE solve rather than superposition) reproduces
 the number every headline in this project descends from, to **0.07 %**.
 
-> **Superseded figure, annotated 2026-08-10.** The ±1.26 % ripple above is a **pre-quadrature record** and is left intact as the historical value. The current figure is **±0.99 %** (0.9874 % unrounded), derived from `analysis/motor_model.py` via `analysis/results/motor_results.json`. The change came from the 2026-08-03 quadrature correction to the winding-thickness integral, which also moved K<sub>t</sub> from 11.22 to 11.0258 N per kA/m. Nothing in this file is edited.
+> **Superseded figure, annotated 2026-08-10.** The ±1.26 % ripple above is a **pre-quadrature record** and is left intact as the historical value. The current figure is **±0.99 %** (0.9874 % unrounded), derived from `analysis/motor_model.py` via `analysis/results/motor_results.json`. The change came from the 2026-08-03 quadrature correction to the winding-thickness integral, which also moved K<sub>t</sub> from 11.22 to 10.5386 N per kA/m. Nothing in this file is edited.
 
 
 ### Both misses have identified causes, and neither is a model error

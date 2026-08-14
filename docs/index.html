@@ -185,16 +185,16 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   a genuine independent cross-check; everything else is single-sourced.</p>
   <table>
     <tr><th>Quantity</th><th>Value</th><th>Source</th></tr>
-    <tr><td>Thrust constant</td><td class="num">11.03 N per kA/m, ±0.99 % ripple, <b>FEM-verified to 0.03 %</b></td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Exit velocity, 3U</td><td class="num"><b>16.388 m/s at 10.53 g</b></td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Electrical to payload efficiency</td><td class="num">20.99 % net of regeneration</td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Closed-loop dispersion</td><td class="num">0.0267 m/s (3σ) to ±0.10 km apogee</td><td><code>motor_model.py</code></td></tr>
+    <tr><td>Thrust constant</td><td class="num">10.54 N per kA/m, ±0.99 % ripple, <b>FEM-verified to 0.03 %</b></td><td><code>motor_model.py</code></td></tr>
+    <tr><td>Exit velocity, 3U</td><td class="num"><b>16.029 m/s at 10.07 g</b></td><td><code>motor_model.py</code></td></tr>
+    <tr><td>Electrical to payload efficiency</td><td class="num">18.47 % net of regeneration</td><td><code>motor_model.py</code></td></tr>
+    <tr><td>Closed-loop dispersion</td><td class="num">0.0274 m/s (3σ) to ±0.10 km apogee</td><td><code>motor_model.py</code></td></tr>
     <tr><td>Velocity-loop margins</td><td class="num">31.1 Hz crossover, <b>+82.2° phase / +21.2 dB gain</b>, bandwidth a third of the 109 Hz mode. The gain published until 2026-08-13 was <b>unstable</b> — 557 Hz crossover, −50.4°. P47</td><td><code>control_design.py</code></td></tr>
     <tr><td>Orbital lifetime multiplier</td><td class="num">x1.62 at mean activity, <b>not invariant, P16</b></td><td><code>astro.py</code></td></tr>
     <tr><td>Constellation seeding, 30°</td><td class="num">1.4-6.9 days vs 25 by differential drag</td><td><code>astro.py</code></td></tr>
     <tr><td><b>Against a spring, on lifetime</b></td><td class="num"><b>7.52x</b> the <i>extension</i> of the fastest published spring (6.6x is the weaker velocity ratio) &mdash; but <b>1.495x</b> on <i>delivered orbital life</i>, which is what a risk-weighted comparison uses. E30</td><td><code>comparators.py</code></td></tr>
-    <tr><td>Deployer mass per 3U satellite</td><td class="num">6.375 kg — <b>parity</b> with a canisterised dispenser</td><td><code>payload_family.py</code></td></tr>
-    <tr><td>Dry / loaded mass</td><td class="num">76.5 kg / 124.5 kg</td><td><code>mass_properties.py</code></td></tr>
+    <tr><td>Deployer mass per 3U satellite</td><td class="num">7.042 kg — <b>parity</b> with a canisterised dispenser</td><td><code>payload_family.py</code></td></tr>
+    <tr><td>Dry / loaded mass</td><td class="num">84.5 kg / 124.5 kg</td><td><code>mass_properties.py</code></td></tr>
     <tr><td>Recoil per shot</td><td class="num">65.6 N·s</td><td><code>astro.py</code></td></tr>
     <tr><td>Track first mode</td><td class="num">109 Hz fixed-fixed (target &gt;70)</td><td><code>sizing.py</code></td></tr>
   </table>
@@ -206,7 +206,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   and the measurement landed in the ≥ 6.80 kg branch, "the headline changes and the paper
   changes materially". A4 has since run and the drawn plate passes all three bands, so
   nothing forces a lighter chassis. The scripts moved first, then the paper. Exit velocity is
-  down 19 % and efficiency from 32 % to 19 %, since taken back to 20.99 % by regeneration
+  down 19 % and efficiency from 32 % to 19 %, since taken back to 18.47 % by regeneration
   (A11), but the lifetime multiplier fell only
   x1.80 to x1.62, lifetime is a weak function of Δv, so the mission case survives better than
   the machine spec. 9.445 kg is the as-drawn, unpocketed geometry and A4 reports a 17x stress
@@ -246,7 +246,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 <section>
   <h2>Where the energy goes</h2>
   <p class="sub">2881 J leaves the capacitor bank per shot, 296 J comes back through the
-  regenerative section, and 537 J of the net 2560 J reaches the payload &mdash; the 20.99 %.
+  regenerative section, and 514 J of the net 2735 J reaches the payload &mdash; the 18.47 %.
   Source <code>sizing.py</code> <code>energy_closure</code>; 100.0 % accounted.
   This chart said "no regeneration credit" and put the sled's whole 1291 J in the brake until
   2026-07-31. The 2025 decision behind that argued the motor cannot <em>arrest</em> the sled,
@@ -286,7 +286,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   reproduces at mean and high activity. At low activity it does not, and the
   <em>invariance</em> the paper nominated as its defensible result is falsified. <b>These
   runs were propagated at 20.37 m/s</b>, before the measured sled mass moved the rated point
-  to 16.388 m/s, the falsification survives, since a uniform density scale cannot move a
+  to 16.029 m/s, the falsification survives, since a uniform density scale cannot move a
   ratio at any Δv, but the absolute numbers are historical (P19).</p>
   <div class="chart">
     <div class="row"><span class="lbl">High, F10.7 250</span><span class="track"><span class="fill" style="width:83.4%"></span></span><span class="val">x1.7302</span></div>

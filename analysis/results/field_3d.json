@@ -2,7 +2,7 @@
   "Kt_centre_plane": 11.02583324948699,
   "Kt_depth_resolved": 10.538611491665296,
   "depth_factor": 0.9558108900436743,
-  "Kt_motor_model": 11.02583324948699,
+  "Kt_motor_model": 10.538611491665296,
   "convergence_900mm": 0.9986773959429543,
   "far_field_real_T": 1.1011428314305904e-20,
   "far_field_deep_T": 2.981555974335137e-19,

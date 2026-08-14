@@ -21,7 +21,7 @@ then arrested by an eddy brake and returned for the next shot. The satellite is 
 and carries no magnets — **the magnets ride the sled, not the payload.** Satellites feed
 transversely from two six-slot cassettes into the breech.
 
-**Design intent, in one line:** replace a ~2 m/s spring with a **16.388 m/s** commanded,
+**Design intent, in one line:** replace a ~2 m/s spring with a **16.029 m/s** commanded,
 programmable push, without asking the customer to change their satellite.
 
 ---
@@ -74,7 +74,7 @@ styling choices.
 
 | Dimension | Value | Why it is fixed |
 |---|---:|---|
-| Magnetic **air gap per side** | **1.0 mm** | Sets the thrust constant Kt = 11.0258 N/kA·m. Everything downstream is a function of it |
+| Magnetic **air gap per side** | **1.0 mm** | Sets the thrust constant Kt = 10.5386 N/kA·m. Everything downstream is a function of it |
 | Sled gap shim **tolerance** | **±0.05 mm** | The 6 mm chassis exists to hold this against the inter-array attraction |
 | **Pole pitch / wavelength** | **24 / 48 mm** | Fixes the winding and the Halbach period together. They must stay in a 1:2 ratio |
 | Halbach array **length** | **340 mm** | With a finite stator this sets where end effects begin |

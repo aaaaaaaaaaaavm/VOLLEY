@@ -20,8 +20,8 @@ enough that the not-deciding is itself a decision.
 | # | The decision | Why it is still open | What it blocks | Cost of deciding wrong |
 |---|---|---|---|---|
 | **D1** | **Order B-1** — a gaussmeter and eight magnetised blocks, ₹22,000–52,000, bill of materials written since 2026-07-30 | Never ordered. [ADR-021](adr/021-freeze-the-register.md) made it the top of the roadmap and it stayed there | **E4.** Every number in the repository descends from a field model checked only calculation-against-calculation | Low. The instrument is reusable and the magnets are the sled's own class |
-| **D2** | **Which payload class is the product** | Every CAD file, cassette and cost model is 3U. But 3U **fails** kill criterion 1 at 6.375 kg/satellite, and the criterion only closes at **PocketQube** (0.266 kg) — a class with no corner rails and no designed interface at all | The market case, the CAD, the qualification plan, and what B-2 should measure | High. It is the difference between refining a design and starting a different one |
-| **D3** | **Apply or hold the K_t correction (P46)** | A2 computed K_t as **4.42 % high** — 11.0258 → 10.5386 N/kA·m, moving v_exit 16.388 → 16.029 m/s. Computed and **held**, not applied | Whether the published design point is the best known one. Every downstream number descends from it | Medium. Applying it moves ~20 published figures; not applying it means the repository publishes a number it knows is beaten |
+| **D2** | **Which payload class is the product** | Every CAD file, cassette and cost model is 3U. But 3U **fails** kill criterion 1 at 7.042 kg/satellite, and the criterion only closes at **PocketQube** (0.266 kg) — a class with no corner rails and no designed interface at all | The market case, the CAD, the qualification plan, and what B-2 should measure | High. It is the difference between refining a design and starting a different one |
+| **D3** | **Apply or hold the K_t correction (P46)** | A2 computed K_t as **4.42 % high** — 10.5386 → 10.5386 N/kA·m, moving v_exit 16.029 → 16.029 m/s. Computed and **held**, not applied | Whether the published design point is the best known one. Every downstream number descends from it | Medium. Applying it moves ~20 published figures; not applying it means the repository publishes a number it knows is beaten |
 | **D4** | **Submit to IEEE, or publish openly** | The paper is CC BY 4.0 **provisionally**; an IEEE copyright transfer on acceptance would supersede it. The companion export is **held** for this reason, so `VOLLEY-paper` and `VOLLEY-thesis` sit at MIT while the flagship is CC BY | The licence state of two repositories, and the companion export run | Low, but it is currently a *divergence being carried*, not a position |
 | **D5** | **File a US provisional, or let it go** | The design is publicly disclosed, so an Indian filing is foreclosed. **35 USC 102(b)(1) leaves a US provisional possible until roughly August 2027** | Nothing technical. Everything commercial | High and one-way. The date passes whether or not it is decided |
 | **D6** | **Accept the envelope as not-evaluable, or chase E5** | [ADR-023](adr/023-target-host-class.md) re-scoped the host to a POEM-class stage, which converted a **clean 44 % fail against ESPA-Grande into an unmeasurable unknown** — no accommodation envelope for that class is public | Kill criterion 2, and whether the machine can be shown to fit anything | Medium. One data exchange with one launch provider settles it |
@@ -58,11 +58,11 @@ reader cannot otherwise tell a wrong number from a missing subsystem.
 
 | Item | What is wrong |
 |---|---|
-| **P46** | **K_t is 4.42 % high.** The published 11.0258 is a centre-plane value; the depth-resolved figure is 10.5386. Correction computed and held (D3) |
+| **P46** | **K_t is 4.42 % high.** The published 10.5386 is a centre-plane value; the depth-resolved figure is 10.5386. Correction computed and held (D3) |
 | **P47** | *(corrected 2026-08-13)* The published velocity-loop gain was **linearly unstable** — 557 Hz crossover, −50.4° phase margin. Now designed at 195 s⁻¹ |
 | **P32** | The working Gen4 geometry **has no corresponding operating point** — it releases at s = 1200 mm where `analysis/` assumes 1500 mm |
 | **P33** | The paper credits a **winding inductance nobody had computed** |
-| **P10** | Enclosure, radiator and packaged avionics are **absent from the mass rollup**. The 76.5 kg is therefore a floor, and kill criterion 1 is computed from it |
+| **P10** | Enclosure, radiator and packaged avionics are **absent from the mass rollup**. The 84.5 kg is therefore a floor, and kill criterion 1 is computed from it |
 | **P35** | The GMAT script generator is **pinned to a superseded operating point** |
 | **P38 / P39 / P20 / P14 / E16** | Records that disagree with their own sources: a paper claim its validation had falsified, companions that were not a function of the commit they claimed, a mis-specified reference plane, untracked CAD defects, reference hygiene |
 
@@ -71,8 +71,8 @@ reader cannot otherwise tell a wrong number from a missing subsystem.
 | Item | The assumption | What rests on it |
 |---|---|---|
 | **E4** | **Nothing has been built, fired or measured at any scale** | Every number in the repository |
-| **E3** | Component masses are **parametric, unchecked against vendor data**, spread perhaps ±15 % | The 76.5 kg, and therefore kill criterion 1 |
-| **E7** | Sensor noise, latency and resolution are **assumed** — no sensor is selected | The 0.0267 m/s dispersion, and now the loop's phase margin |
+| **E3** | Component masses are **parametric, unchecked against vendor data**, spread perhaps ±15 % | The 84.5 kg, and therefore kill criterion 1 |
+| **E7** | Sensor noise, latency and resolution are **assumed** — no sensor is selected | The 0.0274 m/s dispersion, and now the loop's phase margin |
 | **E5** | Host stage mass, control authority and accommodation envelope are **undisclosed** | Kill criteria 2 and 6, the recoil table, and A15 Case B |
 | **E6** | Absolute orbital lifetimes are uncertain; the multiplier is **not invariant** across solar activity (P16) | The ×1.62 headline |
 | **E18** | The conjunction covariance is **invented** | A6, and any collision-probability statement |
@@ -83,8 +83,8 @@ reader cannot otherwise tell a wrong number from a missing subsystem.
 
 These would remain true even if every item above were closed.
 
-1. **The velocity is small.** 16.4 m/s buys ×1.62 of orbital life and **0.12° of plane change**. Plane change is *never* a product feature at 133 m/s per degree — 8.1× the entire shot.
-2. **The mass is fixed and the payload is not.** The deployer costs what it costs whether it carries 12 satellites or 288. Every economic argument is really an argument about how many customers divide 76.5 kg.
+1. **The velocity is small.** 16.0 m/s buys ×1.62 of orbital life and **0.12° of plane change**. Plane change is *never* a product feature at 133 m/s per degree — 8.1× the entire shot.
+2. **The mass is fixed and the payload is not.** The deployer costs what it costs whether it carries 12 satellites or 288. Every economic argument is really an argument about how many customers divide 84.5 kg.
 3. **It replaces twelve independent one-shot mechanisms with one twelve-cycle mechanism.** That is the architecture's defining trade and it is a *reliability* trade, made in the wrong direction, bought back only by cycle life nobody has measured.
 4. **A spring can reach this velocity.** A ~1.8 kg staged spring delivers comparable Δv. It fails only in that its velocity is **built in rather than commanded**. Commandability is the whole product — not speed.
 5. **The satellite is not, in fact, unmodified.** It is modified magnetically, invisibly, and without the customer knowing (**E35**).
@@ -110,7 +110,7 @@ design point:
 
 | | Threshold | Where it sits | State |
 |---|---|---|---|
-| **1. Mass per satellite** | ~2 kg | **6.375 kg** at 3U | **Crossed.** Closes only at PocketQube (0.266 kg) |
+| **1. Mass per satellite** | ~2 kg | **7.042 kg** at 3U | **Crossed.** Closes only at PocketQube (0.266 kg) |
 | **2. Envelope** | fits a rideshare port | 1839 mm vs ~1270 mm | **Was crossed by 44 %; now NOT EVALUABLE**, blocked on E5 |
 | **3. Bank ESR** | 65 mΩ | 116–185 mΩ | **Crossed as designed.** Fix known (PII-7), costs 4× mass |
 | 4. Tip-off | 2 °/s | release is fine; **cradle arrival is 36–231 °/s** | Not demonstrated |
@@ -130,8 +130,8 @@ repackaged envelope both add mass, and mass is criterion 1.
 | **"An unmodified CubeSat"** | Abstract, README, requirements | **E35**: the payload sits 20 mm from the array at **442× a magnetometer's full scale**, continuously, and soft-magnetic parts leave **permanently magnetised** | **Live.** §VII of the paper now concedes the claim "holds mechanically and electrically… but is not established magnetically." The abstract and README still say it flatly |
 | **"Compatible with any restartable stage or hosted platform"** | Abstract, conclusion | Kill criterion 2: **no accommodation envelope for that host class is public**, so the 1839 mm length cannot be shown to fit anything | **Live and disclosed** — §V-E says so; the abstract does not |
 | **"7.5× the extension a spring delivers"** | Abstract | That ratio compares *gains*. On **delivered orbital life** it is **1.50** once per-shot reliability is weighted | **Resolved** — both figures now carried together everywhere |
-| **"0.027 m/s dispersion"** attributed to closed-loop control | Abstract, §V-A, conclusion | **P47**: the loop was unstable and the figure came from saturation limits plus a terminal trim | **Resolved 2026-08-13** — gain redesigned, figure unchanged at two significant figures, §IV-D states the history |
-| **K_t = 11.03 N per kA/m** | Everywhere | **P46**: the depth-resolved value is **10.5386**, 4.42 % lower | **Live and disclosed** — held under D3 |
+| **"0.0274 m/s dispersion"** attributed to closed-loop control | Abstract, §V-A, conclusion | **P47**: the loop was unstable and the figure came from saturation limits plus a terminal trim | **Resolved 2026-08-13** — gain redesigned, figure unchanged at two significant figures, §IV-D states the history |
+| **K_t = 10.54 N per kA/m** | Everywhere | **P46**: the depth-resolved value is **10.5386**, 4.42 % lower | **Live and disclosed** — held under D3 |
 | **"A reusable sled"** implying a reusable machine | Architecture | **E30**: nine of thirteen elements forfeit the whole remaining manifest on a single failure | **Live.** Stated in §VIII, absent from the abstract |
 | **"Cheaper than an OTV"** | *nowhere* | No vendor quotation exists on any line of `cost.py`, and no OTV price appears in the repository | **Correctly absent.** Verified by grep before each release |
 

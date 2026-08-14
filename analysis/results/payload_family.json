@@ -2,7 +2,7 @@
   "pack_efficiency": 0.562,
   "bay_mm3": 72612384,
   "deployer_dry_kg": 76.5,
-  "F_cmd": 1389.3,
+  "F_cmd": 1327.9,
   "mechanism_shot_limit": 200,
   "classes": [
     {
@@ -13,8 +13,8 @@
         35,
         2.5
       ],
-      "a_g": 15.0,
-      "v_exit": 19.6,
+      "a_g": 14.3,
+      "v_exit": 19.1,
       "n_per_load": 13322,
       "kg_per_satellite": 0.006,
       "mechanism_limited": true,
@@ -28,8 +28,8 @@
         50,
         50
       ],
-      "a_g": 14.6,
-      "v_exit": 19.3,
+      "a_g": 14.0,
+      "v_exit": 18.9,
       "n_per_load": 326,
       "kg_per_satellite": 0.235,
       "mechanism_limited": true,
@@ -43,8 +43,8 @@
         114,
         25.4
       ],
-      "a_g": 14.6,
-      "v_exit": 19.3,
+      "a_g": 13.9,
+      "v_exit": 18.8,
       "n_per_load": 123,
       "kg_per_satellite": 0.622,
       "mechanism_limited": false,
@@ -58,8 +58,8 @@
         50,
         150
       ],
-      "a_g": 13.9,
-      "v_exit": 18.8,
+      "a_g": 13.3,
+      "v_exit": 18.4,
       "n_per_load": 108,
       "kg_per_satellite": 0.708,
       "mechanism_limited": false,
@@ -73,8 +73,8 @@
         88,
         127
       ],
-      "a_g": 13.9,
-      "v_exit": 18.8,
+      "a_g": 13.3,
+      "v_exit": 18.4,
       "n_per_load": 41,
       "kg_per_satellite": 1.866,
       "mechanism_limited": false,
@@ -88,8 +88,8 @@
         100,
         100
       ],
-      "a_g": 13.1,
-      "v_exit": 18.3,
+      "a_g": 12.6,
+      "v_exit": 17.9,
       "n_per_load": 40,
       "kg_per_satellite": 1.913,
       "mechanism_limited": false,
@@ -103,8 +103,8 @@
         100,
         100
       ],
-      "a_g": 10.5,
-      "v_exit": 16.4,
+      "a_g": 10.1,
+      "v_exit": 16.0,
       "n_per_load": 12,
       "kg_per_satellite": 6.375,
       "mechanism_limited": false,
@@ -118,8 +118,8 @@
         200,
         100
       ],
-      "a_g": 8.1,
-      "v_exit": 14.4,
+      "a_g": 7.8,
+      "v_exit": 14.1,
       "n_per_load": 6,
       "kg_per_satellite": 12.75,
       "mechanism_limited": false,
@@ -133,8 +133,8 @@
         200,
         200
       ],
-      "a_g": 6.6,
-      "v_exit": 13.0,
+      "a_g": 6.3,
+      "v_exit": 12.7,
       "n_per_load": 3,
       "kg_per_satellite": 25.5,
       "mechanism_limited": false,
@@ -144,27 +144,27 @@
   "sled_scaling": [
     {
       "array_mm": 340,
-      "Kt_N_per_kA": 11.03,
+      "Kt_N_per_kA": 10.54,
       "sled_kg": 9.45,
-      "F_N": 1389.0,
-      "a_g": 10.5,
-      "v_exit": 16.4
+      "F_N": 1328.0,
+      "a_g": 10.1,
+      "v_exit": 16.0
     },
     {
       "array_mm": 240,
-      "Kt_N_per_kA": 7.78,
+      "Kt_N_per_kA": 7.44,
       "sled_kg": 7.18,
-      "F_N": 981.0,
-      "a_g": 8.9,
-      "v_exit": 15.1
+      "F_N": 937.0,
+      "a_g": 8.5,
+      "v_exit": 14.8
     },
     {
       "array_mm": 150,
-      "Kt_N_per_kA": 4.86,
+      "Kt_N_per_kA": 4.65,
       "sled_kg": 5.15,
-      "F_N": 613.0,
-      "a_g": 6.8,
-      "v_exit": 13.2
+      "F_N": 586.0,
+      "a_g": 6.5,
+      "v_exit": 12.9
     }
   ]
 }

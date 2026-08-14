@@ -39,9 +39,9 @@ entries are kept only so the record of what changed stays legible.
 | A25 | Sled-arrest force mismatch, earlier regen claim falsified | design decision D8 |
 | A26 | Abort commit point recomputed (~45 %) | paper Sec. III-D |
 | A27 | Efficiency bookkeeping error found (40 % to 32 %; now 20 % at the CAD-derived sled mass) | paper Sec. V-A |
-| A28 | Winding-resolved thrust constant Kt = 11.03 N per kA/m | `analysis/motor_model.py` |
-| A29 | Closed-loop servo Monte Carlo (3σ = 0.027 m/s) | `analysis/motor_model.py` |
-| A30 | Solid mass properties (76.5 kg dry, sled 9.445 kg CAD-derived) | `analysis/mass_properties.py`, parametric 4.86 kg superseded 2026-07-29 |
+| A28 | Winding-resolved thrust constant Kt = 10.54 N per kA/m | `analysis/motor_model.py` |
+| A29 | Closed-loop servo Monte Carlo (3σ = 0.0274 m/s) | `analysis/motor_model.py` |
+| A30 | Solid mass properties (84.5 kg dry, sled 9.445 kg CAD-derived) | `analysis/mass_properties.py`, parametric 4.86 kg superseded 2026-07-29 |
 | A31 | Cowell RK4 cross-validation (99.4 %) | `analysis/astro.py` |
 | A32 | Solar-activity UQ, x1.62 multiplier | `analysis/astro.py`, **invariance falsified by GMAT, see P16**; BC half is the same tautology |
 | A33 | Refined conjunction at final velocity | `analysis/astro.py`, see P1 |

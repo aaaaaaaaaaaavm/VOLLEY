@@ -49,7 +49,7 @@ Combined with A4's deflection bias (0.0194 mm, always closing) the total gap err
 spread, which the paper states as ±2.1 % RSS from manufacturing terms. That figure was built
 from magnet grade, gap, resistance and ESR, **with the gap term taken as the ±0.05 mm shim
 rather than the real stack.** The closed-loop servo collapses delivered dispersion regardless
-(ADR-014), so the headline 0.027 m/s survives. But the open-loop number is optimistic and
+(ADR-014), so the headline 0.0274 m/s survives. But the open-loop number is optimistic and
 should be restated once these contributors are replaced with real ones.
 
 **The individual values above are assumed.** The useful output is the ranking: **track

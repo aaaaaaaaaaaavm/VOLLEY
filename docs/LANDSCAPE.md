@@ -32,8 +32,8 @@ unmodified CubeSat. Springs cannot, and OTVs solve a different problem at a diff
 > 3U. See [`KILL_CRITERIA.md`](KILL_CRITERIA.md) threat 1 and
 > [`PAYLOAD_CLASSES.md`](PAYLOAD_CLASSES.md), where smaller payloads reverse it.
 
-**Mass per satellite is the surprise, and it is not embarrassing.** VOLLEY's 76.5 kg dry
-carries twelve 3U satellites, **6.375 kg of deployer per satellite**. Canisterised dispensers
+**Mass per satellite is the surprise, and it is not embarrassing.** VOLLEY's 84.5 kg dry
+carries twelve 3U satellites, **7.042 kg of deployer per satellite**. Canisterised dispensers
 run about **2 kg per U** as a class figure, so a 3U-equivalent slot is around 6 kg. **A21
 computes the ratio at 1.062 — parity inside 7 %.** A magazine-fed electromagnetic launcher lands
 in the same mass class as a canister of springs, per satellite.
@@ -82,7 +82,7 @@ Three things follow, and none of them are comfortable:
   it.
 - **They measure their ejection velocity on orbit.** VOLLEY's entire differentiator is
   velocity *accuracy*, and the incumbent already flies the instrumentation that would
-  settle such a claim. This project's 0.027 m/s (3σ) is a model output; theirs is telemetry.
+  settle such a claim. This project's 0.0274 m/s (3σ) is a model output; theirs is telemetry.
 - **Non-pyrotechnic release is not a differentiator.** It is already the fielded standard,
   so VOLLEY's contactless release has to compete on velocity and programmability alone.
 
@@ -108,7 +108,7 @@ multibody model behind it, A7 is specified and unrun. Claiming a gentler release
 spring is not yet supported by anything.
 
 **Deployment velocity accuracy is VOLLEY's genuine differentiator**, and it is also the least
-validated part. The 0.027 m/s (3σ) dispersion rests on assumed sensor noise (E7), and the
+validated part. The 0.0274 m/s (3σ) dispersion rests on assumed sensor noise (E7), and the
 servo headroom argument behind it is stated against a bank sag figure that A8 has just shown
 is the wrong quantity. The claim may well hold; it has not been earned yet.
 

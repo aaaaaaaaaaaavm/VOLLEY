@@ -1,15 +1,15 @@
 {
-  "E_shot": 2559.5,
-  "P_peak": 32526.368520652566,
+  "E_shot": 2735.3,
+  "P_peak": 30675.73563765455,
   "rotor": {
     "rotor_kg": 3.0,
-    "E_store_J": 5119.0,
-    "v_tip_m_s": 58.418033745297066,
-    "sigma_Pa": 26618800.000000004,
-    "margin": 18.78371677160503
+    "E_store_J": 5470.6,
+    "v_tip_m_s": 60.39094854915484,
+    "sigma_Pa": 28447120.000000007,
+    "margin": 17.57647171312948
   },
   "droop": {
-    "E_after_J": 2559.5,
+    "E_after_J": 2735.3,
     "speed_ratio": 0.7071067811865476,
     "droop_pct": 29.28932188134524,
     "energy_retained_pct": 50.0
@@ -17,19 +17,19 @@
   "mass": {
     "rotor_kg": 3.0,
     "containment_kg": 3.0,
-    "mg_kg": 9.75791055619577,
+    "mg_kg": 9.202720691296365,
     "bearings_kg": 1.6,
-    "converter_kg": 3.252636852065257,
-    "total_kg": 20.610547408261027,
+    "converter_kg": 3.067573563765455,
+    "total_kg": 19.870294255061822,
     "bank_kg": 19.5,
-    "delta_kg": 1.1105474082610272
+    "delta_kg": 0.3702942550618218
   },
   "mom": {
     "r_m": 0.1,
     "I_kg_m2": 0.030000000000000006,
-    "rpm": 5578.511301763906,
-    "H_single_N_m_s": 17.525410123589122,
-    "H_pair_residual_N_m_s": 0.17525410123589122
+    "rpm": 5766.91078776379,
+    "H_single_N_m_s": 18.117284564746456,
+    "H_pair_residual_N_m_s": 0.18117284564746455
   },
   "imp": {
     "R_winding": 0.02,
@@ -43,13 +43,13 @@
     {
       "band": "1",
       "name": "demand imported, not restated",
-      "detail": "2559.5 J net, 32.5 kW peak, from motor_model",
+      "detail": "2735.3 J net, 30.7 kW peak, from motor_model",
       "pass_": true
     },
     {
       "band": "2",
       "name": "rim stress margin >= 3.0",
-      "detail": "tip 58 m/s, sigma 27 MPa, margin 18.78",
+      "detail": "tip 60 m/s, sigma 28 MPa, margin 17.58",
       "pass_": true
     },
     {
@@ -61,13 +61,13 @@
     {
       "band": "4",
       "name": "lighter than the 3-string bank it replaces",
-      "detail": "20.6 kg against 19.5 kg (+1.1 kg)",
+      "detail": "19.9 kg against 19.5 kg (+0.4 kg)",
       "pass_": false
     },
     {
       "band": "5",
       "name": "net stored angular momentum <= 0.5 N.m.s",
-      "detail": "single rotor 17.53, counter-rotating pair residual 0.175",
+      "detail": "single rotor 18.12, counter-rotating pair residual 0.181",
       "pass_": true
     },
     {

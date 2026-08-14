@@ -3,8 +3,8 @@
   "bands_declared_commit": "03628da",
   "framing": "ranks assumptions; does not make any of them less assumed",
   "nominal": {
-    "v_exit": 16.387939109293626,
-    "eff_net_pct": 20.98598613301918,
+    "v_exit": 16.029192806414976,
+    "eff_net_pct": 18.786265848357935,
     "kg_per_satellite": 6.375
   },
   "perturbation": 0.05,
@@ -17,13 +17,13 @@
       "hi": 1.4,
       "provenance": "assumed; CAD states no grade",
       "swing": {
-        "v_exit": 0.056603232832695055,
-        "eff_net_pct": 0.054979206199860804,
+        "v_exit": 0.05659646371291018,
+        "eff_net_pct": 0.052489697040705545,
         "kg_per_satellite": 0.0
       },
       "elasticity": {
-        "v_exit": 0.5028373266077727,
-        "eff_net_pct": 0.4868878381176335,
+        "v_exit": 0.495378927910811,
+        "eff_net_pct": 0.4640113445008432,
         "kg_per_satellite": 0.0
       }
     },
@@ -108,12 +108,12 @@
       "provenance": "nominal unsourced (E17); ceiling from A10",
       "swing": {
         "v_exit": 0.0,
-        "eff_net_pct": 0.23240382669653975,
+        "eff_net_pct": 0.18977897897531593,
         "kg_per_satellite": 0.0
       },
       "elasticity": {
         "v_exit": 0.0,
-        "eff_net_pct": -0.0375889013798094,
+        "eff_net_pct": -0.030301688119870142,
         "kg_per_satellite": 0.0
       }
     },
@@ -181,13 +181,13 @@
       "hi": 1.3599999999999999,
       "provenance": "assumed; CAD states no grade",
       "swing": {
-        "v_exit": 0.0283732660782067,
-        "eff_net_pct": 0.02758830048242832,
+        "v_exit": 0.028351910976666006,
+        "eff_net_pct": 0.026314194495913622,
         "kg_per_satellite": 0.0
       },
       "elasticity": {
-        "v_exit": 0.5028373266077727,
-        "eff_net_pct": 0.4868878381176335,
+        "v_exit": 0.495378927910811,
+        "eff_net_pct": 0.4640113445008432,
         "kg_per_satellite": 0.0
       }
     },
@@ -272,12 +272,12 @@
       "provenance": "nominal unsourced (E17); ceiling from A10",
       "swing": {
         "v_exit": 0.0,
-        "eff_net_pct": 0.09922402470304402,
+        "eff_net_pct": 0.08133571197759877,
         "kg_per_satellite": 0.0
       },
       "elasticity": {
         "v_exit": 0.0,
-        "eff_net_pct": -0.0375889013798094,
+        "eff_net_pct": -0.030301688119870142,
         "kg_per_satellite": 0.0
       }
     },
@@ -406,7 +406,7 @@
       "passed": true
     },
     "4_v_exit_moves": {
-      "max_swing_pct": 5.660323283269506,
+      "max_swing_pct": 5.659646371291018,
       "by": "BR",
       "passed": 1.0
     },

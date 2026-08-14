@@ -27,10 +27,10 @@ rocket equation is unkind to VOLLEY here.
 |---|---|
 | Propellant for 16.5 m/s on a 4 kg 3U, cold gas at Isp 60 s | **0.111 kg** |
 | A COTS 3U cold-gas module, wet, including tank, valves and drive | **0.5 to 1.2 kg** |
-| VOLLEY's share, 76.5 kg over 12 satellites | **6.38 kg** |
+| VOLLEY's share, 84.5 kg over 12 satellites | **7.04 kg** |
 | **Ratio** | **VOLLEY is about 8x heavier for the same delta-v** |
 
-The 76.5 kg rollup includes parametric enclosure, thermal and avionics lumps, but none is physically measured and the packaging masses remain provisional. At a plausible 20 kg of
+The 84.5 kg rollup includes parametric enclosure, thermal and avionics lumps, but none is physically measured and the packaging masses remain provisional. At a plausible 20 kg of
 missing mass the figure becomes 8.08 kg per satellite.
 
 > **Kill threshold: above roughly 2 kg per satellite, a rational customer buys a propulsion
@@ -38,7 +38,7 @@ missing mass the figure becomes 8.08 kg per satellite.
 > and cold-gas modules at 0.5 to 1.2 kg. It is not a sourced industry figure and should be
 > refined before it carries any more weight than it already does.
 
-**Status at 3U: crossed.** 6.375 kg against a 2 kg threshold.
+**Status at 3U: crossed.** 7.042 kg against a 2 kg threshold.
 
 ### What closes it, and it is not an engineering fix
 
@@ -46,7 +46,7 @@ Smaller payloads. The deployer mass is fixed; the number of satellites it carrie
 
 | Payload | Volume ratio said | **Designed cell (A24)** | Deployer mass per satellite |
 |---|---:|---:|---|
-| 3U CubeSat | 12 | **12** | 6.375 kg, **fails** |
+| 3U CubeSat | 12 | **12** | 7.042 kg, **fails** |
 | ThinSat | 123 | **NOT ACCOMMODATED** | — |
 | 1U | 40 | **36** | **2.125 kg, now fails** |
 | TubeSat | 41 | **24** | **3.188 kg, now fails** |
@@ -125,7 +125,7 @@ currently demonstrate that it fits anything.**
 > own accepted decisions — ADR-002 and ADR-010 — had already abandoned.
 
 **The alternative was priced before it was rejected.** Fitting 1270 mm means a 731 mm acceleration
-zone, since the 539 mm of overhead does not shrink, and velocity goes as √s: **16.388 → 12.286 m/s,
+zone, since the 539 mm of overhead does not shrink, and velocity goes as √s: **16.029 → 12.286 m/s,
 −25 %**, lifetime ×1.62 → ×1.44. Repackaging 150 mm of brake recovers about a third of that, and
 depends on a layout nobody has drawn against an arrest section **P28** already says is
 oversubscribed.
@@ -204,7 +204,7 @@ whether that has settled by release depends on a restitution model this project 
 
 ## 5. Attitude rate at the moment of firing
 
-The 0.027 m/s dispersion claim assumes the host is pointing where the model says. Twelve
+The 0.0274 m/s dispersion claim assumes the host is pointing where the model says. Twelve
 satellites index across two transverse cassettes between shots, moving kilograms of mass around
 the structure.
 

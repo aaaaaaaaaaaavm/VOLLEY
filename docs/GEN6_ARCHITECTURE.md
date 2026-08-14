@@ -43,12 +43,12 @@ complexity."** That objection never goes away; the alternative removed the need 
 
 ## 2. PII-15 is superseded by qualification margin nobody is spending
 
-**Gen5 runs at 10.5 g of a 25 g payload budget.** That was never a choice. It is where thrust
+**Gen5 runs at 10.1 g of a 25 g payload budget.** That was never a choice. It is where thrust
 over mass landed with a 9.445 kg sled aboard.
 
 | Target | a | Acceleration zone | vs 1.30 m |
 |---:|---:|---:|---:|
-| 16.39 m/s | 10.5 g | 1300 mm | 1.00× |
+| 16.39 m/s | 10.1 g | 1300 mm | 1.00× |
 | 16.39 m/s | **16.1 g** | **850 mm** | **0.65×** |
 | 16.39 m/s | 21.6 g | 634 mm | 0.49× |
 | 20.00 m/s | 21.6 g | 944 mm | 0.73× |

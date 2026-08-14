@@ -11,10 +11,10 @@
   },
   "force_per_metre_N_per_m": 4086.04408657459,
   "F_full_overlap_N": 1389.2549894353606,
-  "F_periodic_N": 1389.255,
+  "F_periodic_N": 1327.865,
   "work_J": 1205.2655317720166,
   "v_exit_reported_m_s": 13.389857741374735,
-  "v_phase1_m_s": 16.388,
+  "v_phase1_m_s": 16.029,
   "profile": [
     {
       "s_m": 0.3,
@@ -1108,8 +1108,8 @@
       "band": 1,
       "q": "Fully-overlapped thrust vs the Phase I periodic result",
       "limit_pct": 2.0,
-      "result_pct": 7.604535901681862e-07,
-      "verdict": "PASS"
+      "result_pct": 4.623210148272646,
+      "verdict": "FAIL"
     },
     {
       "band": 2,
@@ -1134,7 +1134,7 @@
     {
       "band": 5,
       "q": "Ratio to the Phase I 16.388 m/s",
-      "result": 0.817052583681641,
+      "result": 0.8353520332756089,
       "verdict": "REPORT"
     }
   ]

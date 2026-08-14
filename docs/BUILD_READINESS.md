@@ -111,7 +111,7 @@ here rather than left for a reader to find.
 | | |
 |---|---|
 | **Design** | Equipment bays are located and verified clear of the track |
-| **Analysis** | **Missing.** **P10**: the enclosure, radiator and packaged avionics have **no line items** in `mass_properties.py`. The 76.5 kg dry mass is a **floor, not a total** |
+| **Analysis** | **Missing.** **P10**: the enclosure, radiator and packaged avionics have **no line items** in `mass_properties.py`. The 84.5 kg dry mass is a **floor, not a total** |
 | **Blocked by** | **Computation.** Straightforward bookkeeping that has simply not been done, and it makes every kg-per-satellite figure in the project optimistic |
 
 ---

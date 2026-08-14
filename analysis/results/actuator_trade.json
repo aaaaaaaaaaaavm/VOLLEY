@@ -11,8 +11,8 @@
     {
       "candidate": {
         "name": "Linear synchronous motor (incumbent)",
-        "F_N": 1389.2549894353606,
-        "a_g": 10.533001626935276,
+        "F_N": 1327.8650479498274,
+        "a_g": 10.067557659872477,
         "v_max": 16.388,
         "contact": false,
         "control": "continuous",

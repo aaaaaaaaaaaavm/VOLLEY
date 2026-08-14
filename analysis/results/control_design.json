@@ -1,8 +1,8 @@
 {
   "M_kg": 13.445,
-  "Kt_N_per_kA": 11.02583324948699,
+  "Kt_N_per_kA": 10.538611491665296,
   "plant": "physical Kt/(M s); loop after feedback linearisation Kp/s",
-  "plant_gain_per_A_per_m": 0.0008200694123828181,
+  "plant_gain_per_A_per_m": 0.0007838312749472143,
   "f_sample_Hz": 5000.0,
   "latency_s": 0.0006,
   "total_lag_s": 0.0007,
@@ -11,9 +11,9 @@
     48.0,
     109.0
   ],
-  "band1_open_loop_v": 16.390690635132223,
-  "band1_reference_v": 16.387939109293626,
-  "band1_error_pct": 0.016789944240378017,
+  "band1_open_loop_v": 16.0244539898465,
+  "band1_reference_v": 16.029192806414976,
+  "band1_error_pct": 0.02956366315950745,
   "published": {
     "Kp": 3500.0,
     "wc_rad_s": 3500.0,
@@ -141,27 +141,27 @@
   ],
   "monte_carlo": {
     "published 3500": {
-      "mean": 16.200173728101785,
-      "sigma3": 0.02730417698964245,
-      "sat_frac": 0.2971642596360834,
+      "mean": 15.799656115031981,
+      "sigma3": 0.02567175850751987,
+      "sat_frac": 0.29603372841845454,
       "stalled_frac": 0.0,
-      "v_min": 16.173401132381695,
-      "v_max": 16.231265166408164
+      "v_min": 15.772110110090633,
+      "v_max": 15.826505732630398
     },
     "designed 195": {
-      "mean": 16.200410535306677,
-      "sigma3": 0.026556675163832436,
-      "sat_frac": 9.433962264150944e-06,
+      "mean": 15.79998406879723,
+      "sigma3": 0.026021219873902685,
+      "sat_frac": 3.0674846625766875e-06,
       "stalled_frac": 0.0,
-      "v_min": 16.17095648216101,
-      "v_max": 16.225386696705243
+      "v_min": 15.769879210655978,
+      "v_max": 15.827822034481837
     }
   },
   "bands": [
     {
       "band": "1",
       "name": "plant reproduces motor_model.shot within 1 %",
-      "detail": "0.0168 %",
+      "detail": "0.0296 %",
       "passed": true
     },
     {
@@ -179,7 +179,7 @@
     {
       "band": "4",
       "name": "command at or below K_RATED for >= 95 % of stroke",
-      "detail": "70.3 %",
+      "detail": "70.4 %",
       "passed": false
     },
     {
@@ -191,7 +191,7 @@
     {
       "band": "6",
       "name": "designed-controller 3sigma within 2x of 0.027 m/s",
-      "detail": "0.0266 m/s",
+      "detail": "0.0260 m/s",
       "passed": true
     }
   ]

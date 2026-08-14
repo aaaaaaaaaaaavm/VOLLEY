@@ -2,8 +2,8 @@
   "analysis": "A17",
   "bands_declared_commit": "13b4b3b",
   "caveat": "SDOF per mode, normalised so amplification is independent of modal mass. The ripple force travels with the sled; this moving-load aspect is not modelled, and band 4 additionally assumes a uniform-beam effective mass of half the distributed 20 kg.",
-  "ripple_amplitude_N": 13.7536245,
-  "sled_acceleration_m_s2": 103.32874674600224,
+  "ripple_amplitude_N": 13.1458635,
+  "sled_acceleration_m_s2": 98.76273707698029,
   "modes": {
     "pinned_pinned_Hz": 48.0,
     "fixed_fixed_Hz": 109.0,
@@ -23,64 +23,64 @@
       "case": "6th harmonic through the pinned mode",
       "f_mode_Hz": 48.0,
       "harmonic": 6,
-      "sweep_rate_Hz_s": 12916.093343250279,
+      "sweep_rate_Hz_s": 12345.342134622537,
       "v_at_crossing_m_s": 0.38400000000000006,
-      "t_at_crossing_s": 0.0037162939849055793,
-      "distance_into_stroke_m": 0.0007135284451018714,
-      "force_amplitude_N": 13.7536245,
+      "t_at_crossing_s": 0.0038881060951226226,
+      "distance_into_stroke_m": 0.0007465163702635437,
+      "force_amplitude_N": 13.1458635,
       "amplification": {
-        "20": 1.092763997244594,
-        "50": 1.116726152046017,
-        "100": 1.1249058083286245,
-        "200": 1.1289897834161142,
-        "350": 1.13074341317476,
-        "500": 1.1314448955610026
+        "20": 1.1164901214063958,
+        "50": 1.140326630157996,
+        "100": 1.148921486401587,
+        "200": 1.1531630600723255,
+        "350": 1.1549984506278363,
+        "500": 1.1557350480094244
       },
-      "static_deflection_m": 1.5120806355384727e-05,
-      "peak_disp_m": 1.7108359167566415e-05,
-      "peak_disp_pct_of_gap_budget": 34.216718335132825
+      "static_deflection_m": 1.44526307489215e-05,
+      "peak_disp_m": 1.6703411892467273e-05,
+      "peak_disp_pct_of_gap_budget": 33.406823784934545
     },
     {
       "case": "6th harmonic through the fixed mode",
       "f_mode_Hz": 109.0,
       "harmonic": 6,
-      "sweep_rate_Hz_s": 12916.093343250279,
+      "sweep_rate_Hz_s": 12345.342134622537,
       "v_at_crossing_m_s": 0.872,
-      "t_at_crossing_s": 0.008439084257389751,
-      "distance_into_stroke_m": 0.0036794407362219315,
-      "force_amplitude_N": 13.7536245,
+      "t_at_crossing_s": 0.008829240924340953,
+      "distance_into_stroke_m": 0.0038495490430126554,
+      "force_amplitude_N": 13.1458635,
       "amplification": {
-        "20": 2.96431246211871,
-        "50": 3.207054010693802,
-        "100": 3.2947539871409233,
-        "200": 3.3384464510665266,
-        "350": 3.3579378416280643,
-        "500": 3.365770674370079
+        "20": 3.079545357541347,
+        "50": 3.3255293236842047,
+        "100": 3.4130013305694518,
+        "200": 3.4577179890134744,
+        "350": 3.4772820222533105,
+        "500": 3.485189311101961
       },
-      "static_deflection_m": 2.9322731960951443e-06,
-      "peak_disp_m": 9.86935913265846e-06,
-      "peak_disp_pct_of_gap_budget": 19.73871826531692
+      "static_deflection_m": 2.80269853089093e-06,
+      "peak_disp_m": 9.767934962102239e-06,
+      "peak_disp_pct_of_gap_budget": 19.535869924204476
     },
     {
       "case": "fundamental through the fixed mode",
       "f_mode_Hz": 109.0,
       "harmonic": 1,
-      "sweep_rate_Hz_s": 2152.6822238750465,
+      "sweep_rate_Hz_s": 2057.5570224370895,
       "v_at_crossing_m_s": 5.232,
-      "t_at_crossing_s": 0.05063450554433851,
-      "distance_into_stroke_m": 0.13245986650398955,
-      "force_amplitude_N": 13.7536245,
+      "t_at_crossing_s": 0.052975445546045725,
+      "distance_into_stroke_m": 0.1385837655484556,
+      "force_amplitude_N": 13.1458635,
       "amplification": {
-        "20": 6.510195744243942,
-        "50": 7.507316352620219,
-        "100": 7.9506164008582205,
-        "200": 8.183854738063776,
-        "350": 8.286055665053485,
-        "500": 8.328071888236284
+        "20": 6.621352177103363,
+        "50": 7.7380096479206,
+        "100": 8.159415840085003,
+        "200": 8.380128252747078,
+        "350": 8.476684326920076,
+        "500": 8.515695625586904
       },
-      "static_deflection_m": 2.9322731960951443e-06,
-      "peak_disp_m": 2.442018197302873e-05,
-      "peak_disp_pct_of_gap_budget": 48.84036394605746
+      "static_deflection_m": 2.80269853089093e-06,
+      "peak_disp_m": 2.3866927619346734e-05,
+      "peak_disp_pct_of_gap_budget": 47.733855238693465
     }
   ],
   "q_for_2x": {
@@ -92,13 +92,13 @@
     {
       "band": 1,
       "q": "Amplification at the 109 Hz fixed mode, Q <= 200",
-      "result": 3.3384464510665266,
+      "result": 3.4577179890134744,
       "verdict": "FAIL"
     },
     {
       "band": 2,
       "q": "Amplification at the 48 Hz pinned mode, Q <= 200",
-      "result": 1.1289897834161142,
+      "result": 1.1531630600723255,
       "verdict": "PASS"
     },
     {
@@ -114,13 +114,13 @@
     {
       "band": 4,
       "q": "Peak displacement vs the +/-0.05 mm gap budget",
-      "result_pct": 48.84036394605746,
+      "result_pct": 47.733855238693465,
       "verdict": "FAIL"
     },
     {
       "band": 5,
       "q": "Amplification at the fundamental crossing of 109 Hz",
-      "result": 8.183854738063776,
+      "result": 8.380128252747078,
       "verdict": "FAIL"
     }
   ]

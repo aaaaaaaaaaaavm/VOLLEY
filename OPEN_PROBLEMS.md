@@ -5,14 +5,14 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **87 numbered entries, of which 34 are live.** Every entry carries a `Status:` line written by
+> **87 numbered entries, of which 31 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **34** (13 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **21** | found, fixed and propagated — **retained as the published record, not as debt** |
-> | `CLOSED` | **32** | resolved, with the closer named in the entry |
+> | `LIVE` | **31** (10 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **22** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CLOSED` | **34** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
 > "cannot drift apart again".** They could: `register_status.py --check` validates each entry's
@@ -365,9 +365,13 @@ thickness explains and is **flagged for re-verification** in `cad/parameters.jso
 > a requirement it had already abandoned twice. **E5 rises in priority accordingly**, and
 > `docs/MARKET.md` needs re-scoping against the lost port population.
 
-### P10. Enclosure, radiator, and packaged avionics absent from the mass rollup: MEDIUM (NEW)
-> **Status:** `LIVE` — open engineering; something still has to be done
-
+### P10. Enclosure, radiator, and packaged avionics absent from the mass rollup: CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+> **Corrected.** An **8.0 kg placeholder with no derivation** now sits in `mass_properties.py`,
+> named `(P10 PLACEHOLDER, 8.0 kg, no derivation)` so it cannot be cited as computed. Dry mass
+> 76.5 → **84.5 kg**, per 3U satellite 6.378 → **7.042 kg**, and **kill criterion 1 goes from
+> crossed by 3.2× to crossed by 3.5×**. `KILL_CRITERIA.md` already flagged a plausible 20 kg; 8 kg
+> is the lean end and deliberately the less flattering choice to leave un-taken. **ADR-030.**
 The ninth document (`EMOCD_Enclosure`) adds 2 mm aluminium skins, a 1600x 200x 3 mm
 radiator, and equipment bays for the supercapacitor bank, PPU, sequencer, and IMU. **None
 have line items in `analysis/mass_properties.py`**, so the 72.3 kg dry-mass rollup is
@@ -1248,9 +1252,12 @@ entry's word for it: `analysis/motor_model.py` defines `BankLimitError` and `sho
 `I = P/Vc` fallback is gone. Retained as the published record — the defect is worth keeping
 because the lesson about silently degrading guards is, not because anything remains to be done.
 
-### P28. The regen stator and the eddy fin do not both fit the arrest section: MEDIUM, NEW 2026-07-31
-> **Status:** `LIVE` — open engineering; something still has to be done
-
+### P28. The regen stator and the eddy fin do not both fit the arrest section: CORRECTED 2026-08-13
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> **Corrected.** `S_REGEN` 240 → 39 mm, so 39 + 300 fits the 339 mm section. Recovery falls
+> 291 → 47 J and efficiency to 18.8 % net. **Dropping regen entirely was recommended first and
+> withdrawn**: it costs 2 points of efficiency, which is in no kill criterion, to raise brake duty
+> 24 %, which makes **E34** — fourth on the lethality ranking — worse. **ADR-030.**
 Opened by A11 in the act of adopting regenerative braking, and recorded rather than designed
 around.
 
@@ -1436,9 +1443,14 @@ either irrelevant or dominant depending on a number nobody has written down.**
 answer is 1200 s, A13's bands 3–5 should be re-declared against it and re-run; **that is a band
 change and belongs declared and dated, not quietly applied to an existing failure.**
 
-### P32. The working Gen4 geometry has no corresponding operating point: HIGH, NEW 2026-08-03
-> **Status:** `LIVE` — open engineering; something still has to be done
-
+### P32. The working Gen4 geometry has no corresponding operating point: CORRECTED 2026-08-13
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> **Corrected by retirement.** Gen4 exists only inside Fusion, has never been exported, and
+> releases at s = 1200 mm over a 900 mm stroke where `analysis/` assumes 1500 mm over 1.3 m.
+> Gen5 is generated from `cad/parameters.json` and `build_gen5.py --check` reads **23 dimensions**
+> back out of it. **A geometry that cannot be exported, cannot be checked, and does not match the
+> parameters is not a generation this project has.** The renders remain as the only visual record
+> and are labelled historical where they appear. **ADR-030.**
 
 The published Phase I result assumes a uniform 1.30 m active stator and release at 1500 mm.
 `EMOCD_Gen4_Open v7` instead places the same 488 mm sled at s = 300 mm stowed and s = 1200 mm
@@ -2168,9 +2180,15 @@ against a named host inertia and a stated CoM tolerance, with bands declared fir
 interface requirement, in ADR-010's successor or an amendment to it, stating the permissible
 thrust-line-to-CoM offset, which is the number the budget exists to set. Neither exists.
 
-### P46. K_t is a centre-plane value and overstates thrust by 4.42 %: HIGH, NEW 2026-08-10
+### P46. K_t is a centre-plane value and overstates thrust by 4.42 %: CORRECTED 2026-08-13
 > **Status:** `LIVE` — open engineering; something still has to be done
-
+> **Corrected.** Applied 2026-08-13, three days after being computed and held. `thrust_constant()`
+> now Gauss-Legendre averages `B_y` over z ∈ [−45, +45] mm before the Lorentz sum, which is a
+> change to the physics rather than a pasted factor (ADR-015). **K_t 11.0258 → 10.5386, ratio
+> 0.9558 — exactly A2 band 2's measurement — and v_exit 16.388 → 16.029 m/s.** `nz = 1`
+> reproduces the superseded value exactly, so A2's ratio stays checkable. Propagated across 214
+> occurrences in 37 live documents by `tools/propagate_baseline.py`, with the audit record
+> excluded by construction. **ADR-030.**
 
 **Found by A2, 2026-08-10.** The correction is **computed and held, not applied.** See below.
 

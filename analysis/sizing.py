@@ -47,14 +47,14 @@ MU0 = 4e-7 * math.pi
 # whenever results/motor_results.json is present.
 M_SLED = 9.445         # kg, computed from Gen3 CAD solid volumes (P15); was 4.86 parametric until 2026-07-29
 M_SAT = 4.0            # kg
-V_EXIT = 16.388        # m/s
-E_DRAWN = 2850.9       # J per shot, bank terminal draw including ESR dissipation
-F_CMD = 1389.3         # N
-T_PULSE = 0.1586       # s, acceleration-zone duration
-Q_COPPER = 834.7       # J per shot, winding I^2R over the pulse
-Q_ESR = 82.8           # J per shot, bank ESR dissipation. Was a literal 160 J estimate in
+V_EXIT = 16.029        # m/s -- depth-resolved Kt, P46/ADR-030, was 16.388
+E_DRAWN = 2782.4       # J per shot, bank terminal draw including ESR dissipation
+F_CMD = 1327.9         # N
+T_PULSE = 0.1623       # s, acceleration-zone duration
+Q_COPPER = 854.2       # J per shot, winding I^2R over the pulse
+Q_ESR = 76.5           # J per shot, bank ESR dissipation. Was a literal 160 J estimate in
 #                        thermal_campaign() until A8-R put a computed number against it.
-SAG_FRAC = 0.05296     # bank state-of-charge droop actually reached at C_SELECTED
+SAG_FRAC = 0.05165     # bank state-of-charge droop actually reached at C_SELECTED
 CONV_EFF = 0.95        # power converter
 P_AUX = 200.0          # W
 ACCEL_ZONE = 1.30      # m
@@ -65,13 +65,13 @@ BRAKE_CAP_G = 200      # g, taper-limited sled deceleration
 # 240 mm of it through added stator at the same sheet-current rating that bounds
 # acceleration. Every figure here comes from motor_model.regen_brake() and is checked
 # against its JSON by _check_operating_point().
-S_REGEN = 0.240        # m of added stator downstream of the 1500 mm release point
-E_RECOVERED = 291.4    # J per shot returned to the bank cells
-KE_TO_BRAKE = 934.7    # J per shot still arriving at the eddy brake
-Q_COPPER_REGEN = 15.3  # J, winding I^2R during the 15.8 ms braking pulse
-Q_ESR_REGEN = 7.8      # J, bank ESR on the way back IN
-Q_CONV_REGEN = 15.9    # J, converter loss on the recovered power
-Q_AUX_REGEN = 3.2      # J, hotel load over the braking pulse
+S_REGEN = 0.039        # m of added stator downstream of the 1500 mm release point
+E_RECOVERED = 47.0    # J per shot returned to the bank cells
+KE_TO_BRAKE = 1161.6    # J per shot still arriving at the eddy brake
+Q_COPPER_REGEN = 0.4  # J, winding I^2R during the 15.8 ms braking pulse
+Q_ESR_REGEN = 1.3      # J, bank ESR on the way back IN
+Q_CONV_REGEN = 2.57    # J, converter loss on the recovered power
+Q_AUX_REGEN = 0.49      # J, hotel load over the braking pulse
 
 
 def capacitor_sizing(E=E_DRAWN, V0=96.0, sag_frac=SAG_FRAC, C_selected=6.0):

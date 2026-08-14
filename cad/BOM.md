@@ -34,9 +34,10 @@ re-entered by hand. Quantities and interface dimensions come from
 | 15 | Thermal (pipes, radiator, MLI) | 1 | Al radiator | 6.00 | 0.70 | 0.32 m^2 radiator |
 | 16 | ESPA bracket + fasteners | 1 | Aluminium | 9.00 | 0.35 | ring flange, 24 x M8 holes |
 | 17 | Panels / closeouts | 1 | Aluminium, 2 mm skin | 5.50 | 0.75 | enclosure |
-| 18 | Sled CAD reconciliation (P15, CAD-derived 9.445 kg) | 1 | — | 4.59 | 0.15 | see note |
-| | **DRY TOTAL** | | | **76.5** | **0.44** | P10: incomplete |
-| | **LOADED** (12 x 3U at 4 kg) | | | **124.5** | | |
+| 18 | Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation) | 1 | — | 8.00 | 0.50 | — |
+| 19 | Sled CAD reconciliation (P15, CAD-derived 9.445 kg) | 1 | — | 4.59 | 0.15 | see note |
+| | **DRY TOTAL** | | | **84.5** | **0.44** | P10: incomplete |
+| | **LOADED** (12 x 3U at 4 kg) | | | **132.5** | | |
 
 **Sled assembly: 9.45 kg**, the CAD-derived value from the Gen3 STEP solids (P15).
 This is the single mass the exit velocity is most sensitive to, and it is the mass of

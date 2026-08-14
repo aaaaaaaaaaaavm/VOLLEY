@@ -228,7 +228,7 @@ choice can be made rather than deferred again.
 >
 > **P9 → [ADR-023](adr/023-target-host-class.md).** Target host is a spent upper stage or hosted
 > platform of POEM class; **ESPA-Grande port compliance is not a requirement.** Shortening to fit
-> was priced at **−25 % exit velocity** (16.388 → 12.286 m/s) and rejected. **Kill criterion 2 is
+> was priced at **−25 % exit velocity** (16.029 → 12.286 m/s) and rejected. **Kill criterion 2 is
 > not thereby passed** — it moves from *crossed* to **NOT EVALUABLE**, because no accommodation
 > envelope for the target class is public (**E5**). A measured failure has become an unmeasured
 > unknown, which is recorded as the cost it is.
@@ -244,7 +244,7 @@ campaign. `motor_model` charges copper loss for **all 1.30 m** regardless of sle
 | | Segmented | Not segmented (as modelled) |
 |---|---|---|
 | Copper loss | falls roughly with the energised fraction | **834.7 J/shot** |
-| Efficiency | rises | 20.99 % net |
+| Efficiency | rises | 18.47 % net |
 | **P33's inductance** | falls with energised length | **19.70 µH** |
 | Drive | one inverter per segment, or switching | one inverter |
 | Fault tolerance | the paper's claim becomes true | the claim is currently unsupported |
@@ -368,7 +368,7 @@ decisions, and a small number of items that are blocked rather than open:
 - **A15 band 6 / A6 / P1** — inter-object safety is **not established**. A15's separations resolve
   2.9 points per orbit; a real conjunction screen is A6's job and A6 returned three VOID rows.
 - **A15 band 8** — **evaluated 2026-08-10, and it never needed a propagator.** The plane-change
-  cost is closed form: **133 m/s per degree** at POEM circular velocity, against a 16.388 m/s
+  cost is closed form: **133 m/s per degree** at POEM circular velocity, against a 16.029 m/s
   shot. It remains **VOID as a capability claim**, which is the disposition the band declared in
   advance, because POEM's control authority is undisclosed (**E5**) — but the void is now about
   the host, not about a missing number. **A15 band 7 is the one still not evaluated**: campaign

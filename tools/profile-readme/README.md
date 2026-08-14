@@ -32,8 +32,8 @@ phase are in; **plane change is not**, at 133 m/s per degree, and I say so every
 letting the word "orbit" do work it hasn't earned.
 
 **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)**, a magazine-fed ironless double-sided
-Halbach linear synchronous motor that ejects unmodified CubeSats at **16.388 m/s and 10.533 g**,
-drawing **2.85 kJ gross and 2.56 kJ net** per shot. TRL 2–3. Nothing built, fired or measured.
+Halbach linear synchronous motor that ejects unmodified CubeSats at **16.029 m/s and 10.533 g**,
+drawing **2.78 kJ gross and 2.74 kJ net** per shot. TRL 2–3. Nothing built, fired or measured.
 
 **Open it for the defect record, not the numbers.** Every error I've found in my own work is
 published and numbered, including the ones that damage the claims. An independent propagator

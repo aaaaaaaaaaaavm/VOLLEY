@@ -75,7 +75,7 @@ Phase II item, and the strongest single thing to take from this literature.
 **On "precise velocity control".** Their mechanism is **charging-voltage selection** (10 to 16 kV,
 approximately linear in exit velocity), with armature position/velocity feedback used for *stage
 trigger timing*. That is real velocity selection. **They quote no dispersion figure**, so this
-design's 0.027 m/s 3σ has nothing to compare against, the differentiator survives, but as a claim
+design's 0.0274 m/s 3σ has nothing to compare against, the differentiator survives, but as a claim
 about absent evidence rather than about impossibility.
 
 ---

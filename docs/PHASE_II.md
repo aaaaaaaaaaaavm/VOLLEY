@@ -76,7 +76,7 @@ guided rail.
 **Re-run 2026-07-31 with regeneration in the model, and the two compound.** Regeneration takes a
 fixed ~296 J over the 240 mm of regen stator whatever speed the sled enters at, so the kick and
 the recovery act on different terms rather than competing. Together they take
-electrical-to-payload efficiency from **21.0 % to 31.8 %** and brake duty from **1268 J with
+electrical-to-payload efficiency from **18.5 % to 31.8 %** and brake duty from **1268 J with
 neither to 711 J with both**. That is past the 31.5 % the superseded 4.86 kg design claimed, on a
 sled twice the mass.
 
@@ -106,7 +106,7 @@ one**, which is why the 60 % pocketing row in `DESIGN_OPTIONS_exit_velocity.md` 
 
 > **Entry criterion.** A rib-stiffened design that meets A4's three declared bands, 0.025 mm
 > airgap closure per plate, 587 MPa allowable, first mode > 200 Hz, at a mass whose exit
-> velocity beats 16.388 m/s by more than the ±20 % uncertainty on K<sub>t</sub>. Anything
+> velocity beats 16.029 m/s by more than the ±20 % uncertainty on K<sub>t</sub>. Anything
 > inside that uncertainty is not yet a demonstrated gain.
 
 ### PII-3: Two-layer stator (G3-D4)
@@ -151,8 +151,8 @@ states the overrun honestly and now also states the re-scope and its cost. Kill 
 
 `analysis/owner_decisions.py` priced it against the branch [ADR-022](adr/022-stator-segmented-not-block-commutated.md)
 adopted. Energising roughly one sled length instead of the whole 1.30 m winding takes copper loss
-from **834.7 J to 218 J**, net efficiency from **20.99 % to 28.07 %**, phase inductance from
-**19.70 µH to 5.15 µH**, and peak current from **339 A to 288 A**. **Exit velocity does not
+from **834.7 J to 218 J**, net efficiency from **18.47 % to 28.07 %**, phase inductance from
+**19.70 µH to 5.15 µH**, and peak current from **320 A to 288 A**. **Exit velocity does not
 change at all** — force is commanded, so copper loss is a power draw and not a thrust reduction.
 
 It was not adopted because it costs an inverter per segment or a segment-switching assembly,
@@ -362,11 +362,11 @@ stop the numbers forking, which they briefly did.
 | **PII-8** | **VOLLEY as a free-flyer.** A long deployed track plus release at perigee reaches TLI and Mars-class C3 without exceeding CubeSat qualification. Three unsolved problems in front of it: airgap straightness at 0.7 to 2 ppm over a deployed structure, a 294 kJ shot against a bank that already fails at 2.88, and whether 25 g survives review as a *sustained* load rather than a transient |
 | **PII-9** | **The lunar case.** Where this technology has always belonged, and the O'Neill mass driver it descends from. 1.33 MJ/kg to lunar orbit, so 15 kW launches a tonne a day. The payload is ore, so the g-limit that governs this entire design disappears |
 | **PII-10** | **Magazine indexing disturbance** (E24). Designing an indexing sequence that minimises attitude disturbance. The *bookkeeping* half is an error correction and belongs upstream in Phase I; only the optimisation belongs in the lab |
-| **PII-11** | **[A deployable track, and the side-rail layout](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-11_deployable_track.md).** A telescoping track long enough to accelerate *and* regeneratively arrest the sled reaches **48 % electrical-to-payload efficiency against 21.0 %**, deletes the eddy brake, closes P28, and stows at 1150 mm — **inside** the ESPA Grande envelope this design misses by 44 %. The only option in the programme that improves velocity and envelope together. The side-rail half loses on thrust in every variant priced and is there because it drives the tip-off moment to zero |
+| **PII-11** | **[A deployable track, and the side-rail layout](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-11_deployable_track.md).** A telescoping track long enough to accelerate *and* regeneratively arrest the sled reaches **48 % electrical-to-payload efficiency against 18.5 %**, deletes the eddy brake, closes P28, and stows at 1150 mm — **inside** the ESPA Grande envelope this design misses by 44 %. The only option in the programme that improves velocity and envelope together. The side-rail half loses on thrust in every variant priced and is there because it drives the tip-off moment to zero |
 
 | **PII-14** | **[A cable-driven gondola on a deployed truss](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md).** Propulsion moved off the vehicle onto a cable, energy from a flywheel, a permanently-locked deployed truss, and a tensioned wire as the running surface. A 2 kg gondola carries no magnets, no chassis resisting 2.69 kN, and no brake fin, so it reaches **24.5 m/s in the existing 1.30 m track** — **if the drivetrain has no rotating inertia.** It does. `m_eff = I/r²` adds directly to the moving mass, a 34 kW machine at a 100 mm drum is **1–5 kg** of it before the drum or any gearbox, and at **7.4 kg the entire gain is gone**. **Assessed and declined for Phase I on 2026-08-10** — +15 to +30 % velocity, uncertain, against deleting the LSM and the 24 validations behind it. **Entry criterion: a computed drivetrain inertia budget showing m_eff ≤ 2 kg, and a Phase I baseline that has been measured rather than modelled** |
 
-| **PII-15** | **SUPERSEDED IF PII-18 IS PROMOTED, 2026-08-13** — its only claimed benefit is shortening the machine, and spending the qualification margin Gen5 leaves idle does the same for free: **850 mm at 16.1 g against 1300 mm at 10.5 g**, with no cable over a sheave. See [`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md). **An LSM tug reeved to a separate payload carriage.** Distinct from PII-14: the linear motor **stays**, only the coupling changes. A reeving ratio *n* moves the carriage *n* times the tug's distance, and divides the tug's 9.445 kg by *n²* — so **2:1 halves the acceleration zone, 1.30 m to 0.65 m, for 4 % of exit velocity**. That is the only lever found that shortens the machine without lengthening anything else, against **P9**'s 44 % envelope overrun. **And it separates the payload from the magnets longitudinally at the same time, which is E35's fix.** Costs, none analysed: a cable and pulleys in vacuum (**E21**, and A27 screened out a rack for exactly this), a second guided body, and a single tension load path that becomes another manifest-forfeiting element in `docs/FMEA.md`. **Entry criterion: E35 shows separation is required, and a vacuum cable/sheave life case exists** |
+| **PII-15** | **SUPERSEDED IF PII-18 IS PROMOTED, 2026-08-13** — its only claimed benefit is shortening the machine, and spending the qualification margin Gen5 leaves idle does the same for free: **850 mm at 16.1 g against 1300 mm at 10.1 g**, with no cable over a sheave. See [`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md). **An LSM tug reeved to a separate payload carriage.** Distinct from PII-14: the linear motor **stays**, only the coupling changes. A reeving ratio *n* moves the carriage *n* times the tug's distance, and divides the tug's 9.445 kg by *n²* — so **2:1 halves the acceleration zone, 1.30 m to 0.65 m, for 4 % of exit velocity**. That is the only lever found that shortens the machine without lengthening anything else, against **P9**'s 44 % envelope overrun. **And it separates the payload from the magnets longitudinally at the same time, which is E35's fix.** Costs, none analysed: a cable and pulleys in vacuum (**E21**, and A27 screened out a rack for exactly this), a second guided body, and a single tension load path that becomes another manifest-forfeiting element in `docs/FMEA.md`. **Entry criterion: E35 shows separation is required, and a vacuum cable/sheave life case exists** |
 
 > **Entry criterion for PII-8, PII-9 and PII-11: none, deliberately.** None is a candidate for
 > this baseline. The correct outcome for the thesis is that all stay closed until the Phase I

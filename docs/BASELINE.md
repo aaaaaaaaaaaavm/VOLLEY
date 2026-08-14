@@ -4,7 +4,7 @@
 > Every value below is read from the scripts at generation time, so this file cannot silently
 > disagree with them. Regenerate after any authorised baseline change.
 >
-> Flagship commit at generation: `a551b7e` · Phase **I** · governed by
+> Flagship commit at generation: `0f20871` · Phase **I** · governed by
 > [`docs/programme/ENGINEERING_PROGRAMME.md`](programme/ENGINEERING_PROGRAMME.md)
 
 This is the engineering baseline the Phase I deliverables (portfolio, IEEE paper, thesis)
@@ -18,23 +18,23 @@ what makes "stable" mean something.
 
 | Quantity | Value | Source field |
 |---|---|---|
-| Thrust constant | **11.03 N per kA/m, ±0.99 % ripple** | `motor_results.Kt_N_per_kA` |
-| Exit velocity, 3U | **16.388 m/s** | `motor_results.shot.v_exit` |
-| Payload acceleration | **10.53 g** | `motor_results.shot.a_g` |
-| Pulse duration | **158.6 ms** | `motor_results.shot.t_ms` |
-| Peak current | **339 A** | `motor_results.shot.I_peak` |
-| Bank sag | **5.30 %** | `motor_results.shot.sag_pct` |
-| Energy drawn per shot, gross | **2851 J** | `motor_results.shot.E_drawn` |
-| Energy recovered per shot | **291 J (23.0 % of sled KE)** | `motor_results.regen.E_recovered` |
-| Energy drawn per shot, net | **2560 J** | `motor_results.E_drawn_net_J` |
-| Sled energy to the brake | **935 J** | `motor_results.regen.KE_to_brake` |
-| Copper loss per shot | **850 J (shot + regen)** | `motor_results.shot.Q_copper` |
-| Payload kinetic energy | **537 J** | `motor_results.shot.KE_payload` |
-| Electrical-to-payload efficiency | **21.0 % (net of regeneration)** | `motor_results.eff_net_pct` |
-| Closed-loop dispersion | **0.0267 m/s (3σ)** | `motor_results.closed_loop_3sigma` |
-| Fleet setpoint | **16.2 m/s** | `motor_results.v_fleet_setpoint` |
+| Thrust constant | **10.54 N per kA/m, ±1.01 % ripple** | `motor_results.Kt_N_per_kA` |
+| Exit velocity, 3U | **16.029 m/s** | `motor_results.shot.v_exit` |
+| Payload acceleration | **10.07 g** | `motor_results.shot.a_g` |
+| Pulse duration | **162.3 ms** | `motor_results.shot.t_ms` |
+| Peak current | **320 A** | `motor_results.shot.I_peak` |
+| Bank sag | **5.17 %** | `motor_results.shot.sag_pct` |
+| Energy drawn per shot, gross | **2782 J** | `motor_results.shot.E_drawn` |
+| Energy recovered per shot | **47 J (3.9 % of sled KE)** | `motor_results.regen.E_recovered` |
+| Energy drawn per shot, net | **2735 J** | `motor_results.E_drawn_net_J` |
+| Sled energy to the brake | **1162 J** | `motor_results.regen.KE_to_brake` |
+| Copper loss per shot | **855 J (shot + regen)** | `motor_results.shot.Q_copper` |
+| Payload kinetic energy | **514 J** | `motor_results.shot.KE_payload` |
+| Electrical-to-payload efficiency | **18.8 % (net of regeneration)** | `motor_results.eff_net_pct` |
+| Closed-loop dispersion | **0.0274 m/s (3σ)** | `motor_results.closed_loop_3sigma` |
+| Fleet setpoint | **15.8 m/s** | `motor_results.v_fleet_setpoint` |
 | Sled mass | **9.45 kg (computed from CAD solid volumes)** | `mass_properties.sled_kg` |
-| Dry / loaded mass | **76.5 / 124.5 kg** | `mass_properties.dry_kg` |
+| Dry / loaded mass | **84.5 / 132.5 kg** | `mass_properties.dry_kg` |
 | Lifetime multiplier, mean activity | **x1.62** | `astro_results.lifetime.mean` |
 | Recoil per shot | **65.6 N·s** | `astro_results.recoil_Ns_per_shot` |
 | Phase realignment period | **10.0 days** | `astro_results.conjunction.realign_days` |

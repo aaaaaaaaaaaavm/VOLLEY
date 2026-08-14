@@ -56,7 +56,7 @@ which nothing else available competes.
 |---|---:|---:|
 | No deployer boost | 1.30 yr | 15.7 yr |
 | Spring, 2.5 m/s | 1.41 yr | 16.9 yr |
-| **VOLLEY, 16.388 m/s** | **2.11 yr** | **25.3 yr** |
+| **VOLLEY, 16.029 m/s** | **2.11 yr** | **25.3 yr** |
 
 **+49 % of orbital life per satellite**, on hardware the customer does not modify.
 
@@ -74,7 +74,7 @@ axis they win on, not without it.
 
 | Alternative | Where it beats VOLLEY | Why it cannot do *this* job |
 |---|---|---|
-| **Spring dispenser** | **Maturity (TRL 9 vs 2–3), reliability, simplicity.** A ~1.8 kg spring reaches the same 16.4 m/s within the g-cap (A27) | **Its designed differential is exactly zero.** Every satellite gets the same push, so the fleet can only phase by drag — 25 days, and not schedulable |
+| **Spring dispenser** | **Maturity (TRL 9 vs 2–3), reliability, simplicity.** A ~1.8 kg spring reaches the same 16.0 m/s within the g-cap (A27) | **Its designed differential is exactly zero.** Every satellite gets the same push, so the fleet can only phase by drag — 25 days, and not schedulable |
 | **Differential drag** | **Free**, and it has flown on a 12-satellite constellation | 25 days, and it needs differential ballistic coefficient — attitude control or deployable area — **which is itself a satellite modification** |
 | **Cold-gas module** | **Mass, by 7.5× at 3U** (A21, declared as a loss before the run) | Puts a **pressure vessel, a propulsion system and a regulatory path on the customer's satellite.** VOLLEY's whole proposition is that the satellite carries nothing |
 | **Orbital transfer vehicle** | **Δv, by hundreds of m/s.** It can change plane; VOLLEY cannot at any price (133 m/s per degree) | **Over-specified for a job needing ~16 m/s**, and it makes the customer buy a spacecraft. Right-sizing is the argument, not superiority |
@@ -91,8 +91,8 @@ than a spring until shown otherwise.
 |---|---|
 | **Satellite modification** | **None mechanically** — no armature, no plating, no electrical interface |
 | **Magnetic environment** | **Severe, and currently a real cost.** 61 mT at the near face — **611× a magnetometer's full scale.** A magnetometer cannot be used inside the deployer, and **soft-magnetic parts leave permanently magnetised** |
-| **Acceleration** | **10.53 g**, against the 25 g CubeSat Design Specification cap — 42 % of it |
-| **Deployer mass per satellite** | **6.375 kg at 3U.** A cold-gas module is 0.5–1.2 kg |
+| **Acceleration** | **10.07 g**, against the 25 g CubeSat Design Specification cap — 42 % of it |
+| **Deployer mass per satellite** | **7.042 kg at 3U.** A cold-gas module is 0.5–1.2 kg |
 | **Maturity** | **TRL 2–3. Nothing has been built, fired or measured at any scale** |
 
 **The magnetic environment is the item an operator should press hardest on**, and there is a known

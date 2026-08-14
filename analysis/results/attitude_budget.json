@@ -3,9 +3,9 @@
   "supersedes": "A13 result run 2026-07-31",
   "method": "angular-momentum conservation with numerical time integration",
   "software": {
-    "python": "3.11.9",
+    "python": "3.11.15",
     "python_license": "PSF License",
-    "numpy": "2.3.5",
+    "numpy": "2.4.6",
     "numpy_license": "BSD-3-Clause",
     "source_sha256": "5784c50dddae19bc4bc055cdad8b780443529eb7b5c106ead6553ef6cf52be3d"
   },

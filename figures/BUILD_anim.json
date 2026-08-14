@@ -1,8 +1,8 @@
 {
-  "v_exit": 16.388,
-  "a_g": 10.53,
-  "t_ms": 158.6,
-  "I_peak": 338.8,
+  "v_exit": 16.029,
+  "a_g": 10.07,
+  "t_ms": 162.3,
+  "I_peak": 319.5,
   "frames": 150,
-  "motor_results_sha256_16": "86f86318b5efee81"
+  "motor_results_sha256_16": "afadd4d66271d9d1"
 }

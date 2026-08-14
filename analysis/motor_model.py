@@ -72,7 +72,14 @@ M_SLED = 9.445                  # kg, computed from cad/step/gen3/EMOCD_Sled_Gen
 #                                 evaluated (P5, P8, E2).
 ACCEL_ZONE = 1.30               # m
 TRACK = 1.50                    # m (accel + 0.20 m coast-trim)
-V_FLEET = 16.2                  # m/s, closed-loop fleet setpoint.
+V_FLEET = 15.8                   # m/s, closed-loop fleet setpoint.
+#
+# MOVED 2026-08-13 FROM 16.2 (P46, ADR-030, and it is ADR-014's rule doing the work).
+# Applying the depth-resolved Kt dropped the open-loop ceiling 16.388 -> 16.029 m/s, which
+# put the old 16.2 setpoint 101.07 % ABOVE the ceiling -- the exact condition ADR-014 exists
+# to forbid, because a setpoint the machine cannot reach makes the dispersion figure a
+# measure of shortfall rather than of sensing noise. 15.8 is 98.57 % of the new ceiling,
+# holding the same fraction ADR-014 fixed rather than the same number.
 #                                 The servo has authority only below the open-loop
 #                                 ceiling; above it, Kc saturates at K_RATED and the
 #                                 Monte Carlo measures shortfall rather than dispersion.
@@ -107,20 +114,36 @@ def build_field(n_wave=7):
     return magpy.Collection([arr(+GAP / 2, -1), arr(-GAP / 2, +1)])
 
 
-def thrust_constant(nx=240, ny=9, profile=False):
+def thrust_constant(nx=240, ny=9, nz=9, profile=False):
     """Direct Lorentz integration of a 3-phase belt winding against the real field.
 
     The winding-thickness integral uses Gauss-Legendre quadrature.  The superseded
     implementation sampled both thickness endpoints but multiplied the unweighted sum
     by ``WIND_THICK / ny``.  That is neither a midpoint nor a trapezoidal rule and biased
     Kt high by 1.7 %.  Nine Gauss points are converged to the displayed precision.
+
+    DEPTH-RESOLVED SINCE 2026-08-13 (P46, ADR-030).  This integral used to sample ``By``
+    on the centre plane z = 0 and then multiply by the full 90 mm ``DEPTH`` as though that
+    value held across it.  It does not: the field falls off toward the array's z-edges, so
+    the centre-plane value overstates the depth mean and therefore overstates Kt.  A2
+    measured the cost at **4.42 %** and the correction was computed and held for three days
+    before being applied.  ``By`` is now Gauss-Legendre averaged over z in [-DEPTH/2,
+    +DEPTH/2] before the Lorentz sum, which is the same change ``field_3d.kt_depth_resolved``
+    made to a copy of this function.  **Setting nz = 1 reproduces the superseded
+    centre-plane value exactly**, which is how A2's ratio is still checkable.
     """
     field = build_field()
     xs = np.linspace(0, LAM, nx, endpoint=False)
     y_nodes, y_weights = np.polynomial.legendre.leggauss(ny)
     ys = y_nodes * WIND_THICK / 2
-    X, Y = np.meshgrid(xs, ys)
-    By = field.getB(np.stack([X.ravel(), Y.ravel(), np.zeros(X.size)], 1))[:, 1].reshape(ny, nx)
+    if nz == 1:
+        z_nodes, z_weights = np.array([0.0]), np.array([2.0])
+    else:
+        z_nodes, z_weights = np.polynomial.legendre.leggauss(nz)
+    zs = z_nodes * DEPTH / 2
+    X, Y, Z = np.meshgrid(xs, ys, zs, indexing='xy')
+    By3 = field.getB(np.stack([X.ravel(), Y.ravel(), Z.ravel()], 1))[:, 1].reshape(X.shape)
+    By = (By3 * (z_weights / 2.0)[None, None, :]).sum(axis=2)     # depth mean, (ny, nx)
 
     belt = LAM / 6
     seq = [(0, +1), (2, -1), (1, +1), (0, -1), (2, +1), (1, -1)]
@@ -228,7 +251,21 @@ def shot(Kt, K_lim=K_RATED, dt=1e-4, trace=False, energised=None):
 
 
 # --- regenerative braking after release (A11) ----------------------------------
-S_REGEN = 0.240                 # m of added stator downstream of the 1500 mm release point.
+# P28, DECIDED 2026-08-13 (ADR-030). The arrest section is 339 mm -- 1839 mm closed envelope
+# less the 1500 mm release point -- and A11 assumed 240 mm of it carried regenerative stator
+# while sizing.py's eddy fin is 300 mm. 240 + 300 > 339, and both live in the same airgap, so
+# they cannot overlap. Three branches were priced:
+#
+#   keep both, lengthen the section : envelope 1839 -> ~1940 mm, and kill criterion 2 is
+#                                     already the one that cannot be evaluated at all
+#   drop regen entirely             : efficiency 20.52 -> 18.47 %, and brake duty +24 %, which
+#                                     makes E34 -- 18.5 kN through eleven stowed satellites,
+#                                     fourth on the lethality ranking -- worse
+#   shorten regen to fit            : ADOPTED. 39 mm alongside the 300 mm fin
+#
+# The middle branch was recommended first and withdrawn: trading two points of efficiency,
+# which is in no kill criterion, to worsen a top-five lethality item is the wrong direction.
+S_REGEN = 0.039                 # m of added stator downstream of the 1500 mm release point.
 #                                 The closed envelope is 1839 mm, so the arrest section is
 #                                 339 mm; roughly 100 mm of it goes to the eddy fin and the
 #                                 ring-spring stack. This is a packaging ASSUMPTION, not a

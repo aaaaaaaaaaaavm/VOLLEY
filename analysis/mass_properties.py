@@ -79,6 +79,15 @@ def build():
     lump('Thermal (pipes, radiator, MLI)', 6.00, 0.70)
     lump('ESPA bracket + fasteners', 9.00, 0.35)
     lump('Panels / closeouts', 5.50, 0.75)
+    # P10, DECIDED 2026-08-13 (ADR-030). Enclosure, radiator and packaged avionics were
+    # ABSENT from this rollup, so 76.5 kg was a floor rather than an estimate and kill
+    # criterion 1 was computed from it anyway. This is an 8.0 kg PLACEHOLDER with no
+    # derivation behind it, entered because a number carrying a caveat is auditable and a
+    # hole is not. KILL_CRITERIA.md already flagged a plausible 20 kg; 8 kg is the lean end
+    # and is deliberately the less flattering choice to leave un-taken.
+    # It is NOT a computed lump and must not be cited as one.
+    lump('Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)',
+         8.00, 0.50)
 
     # The three 'Sled ...' lines above are the parametric estimate, kept visible for
     # the audit trail. Exact OCC solid volumes from cad/step/gen3/EMOCD_Sled_Gen3.step

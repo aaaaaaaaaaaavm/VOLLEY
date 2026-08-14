@@ -58,7 +58,7 @@ Recorded because they calibrate how much to trust the rest:
    `OPEN_PROBLEMS.md` P1 and P2.
 7. **The ±1.26 % force ripple** is a pre-quadrature record. The current figure is **±0.99 %**
    (0.9874 % unrounded) from `analysis/motor_model.py`; the 2026-08-03 quadrature correction to
-   the winding-thickness integral moved it, and moved K<sub>t</sub> from 11.22 to 11.0258 N per
+   the winding-thickness integral moved it, and moved K<sub>t</sub> from 11.22 to 10.5386 N per
    kA/m with it. Three occurrences survive in dated records and are **annotated in place rather
    than edited**: `docs/CROSS_INDUSTRY.md`, `validation/A1_field_femm.md` and
    `docs/VALIDATION_REPORT.md`.

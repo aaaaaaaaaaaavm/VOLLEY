@@ -3,239 +3,239 @@
   "bands_declared_commit": "bc113e6",
   "band_deg_s": 2.0,
   "band_source": "P30, fixed 2026-07-31, not re-declared",
-  "F_push_N": 413.31498698400895,
+  "F_push_N": 395.05094830792115,
   "I_transverse": 0.04198008333333334,
-  "moment_Nm": 28.93204908888063,
-  "alpha_rad_s2": 689.1851276033029,
+  "moment_Nm": 27.653566381554484,
+  "alpha_rad_s2": 658.730621422964,
   "angular_impulse_budget_Nms": 0.001465381348856526,
   "clearance_takeup": [
     {
       "clearance_mm": 0.05,
       "theta_rad": 0.0002936857562408223,
-      "t_s": 0.0009231844724576242,
-      "t_ms": 0.9231844724576243,
-      "arrival_deg_s": 36.454153720570474,
-      "vs_band": 18.227076860285237
+      "t_s": 0.0009442837445530505,
+      "t_ms": 0.9442837445530505,
+      "arrival_deg_s": 35.639614539105615,
+      "vs_band": 17.819807269552808
     },
     {
       "clearance_mm": 0.1,
       "theta_rad": 0.0005873715124816446,
-      "t_s": 0.0013055800015218232,
-      "t_ms": 1.3055800015218233,
-      "arrival_deg_s": 51.55395859646438,
-      "vs_band": 25.77697929823219
+      "t_s": 0.0013354188782753753,
+      "t_ms": 1.3354188782753753,
+      "arrival_deg_s": 50.40202623895251,
+      "vs_band": 25.201013119476254
     },
     {
       "clearance_mm": 0.25,
       "theta_rad": 0.0014684287812041115,
-      "t_s": 0.00206430323618753,
-      "t_ms": 2.06430323618753,
-      "arrival_deg_s": 81.51396578142244,
-      "vs_band": 40.75698289071122
+      "t_s": 0.0021114826428686676,
+      "t_ms": 2.1114826428686677,
+      "arrival_deg_s": 79.69260080132999,
+      "vs_band": 39.846300400664994
     },
     {
       "clearance_mm": 0.5,
       "theta_rad": 0.002936857562408223,
-      "t_s": 0.0029193656334670754,
-      "t_ms": 2.9193656334670752,
-      "arrival_deg_s": 115.27815593090399,
-      "vs_band": 57.639077965451996
+      "t_s": 0.002986087390260256,
+      "t_ms": 2.986087390260256,
+      "arrival_deg_s": 112.70235687402585,
+      "vs_band": 56.351178437012926
     },
     {
       "clearance_mm": 1.0,
       "theta_rad": 0.005873715124816446,
-      "t_s": 0.00412860647237506,
-      "t_ms": 4.12860647237506,
-      "arrival_deg_s": 163.02793156284488,
-      "vs_band": 81.51396578142244
+      "t_s": 0.004222965285737335,
+      "t_ms": 4.222965285737335,
+      "arrival_deg_s": 159.38520160265998,
+      "vs_band": 79.69260080132999
     },
     {
       "clearance_mm": 2.0,
       "theta_rad": 0.011747430249632892,
-      "t_s": 0.005838731266934151,
-      "t_ms": 5.8387312669341505,
-      "arrival_deg_s": 230.55631186180798,
-      "vs_band": 115.27815593090399
+      "t_s": 0.005972174780520512,
+      "t_ms": 5.972174780520512,
+      "arrival_deg_s": 225.4047137480517,
+      "vs_band": 112.70235687402585
     }
   ],
-  "cradle_reaction_N": 84.96930716264501,
+  "cradle_reaction_N": 81.21458555522608,
   "release_grid": [
     {
       "residual_fraction": 1.0,
       "skew_us": 1.0,
-      "tipoff_deg_s": 0.03948739911485435,
+      "tipoff_deg_s": 0.037742484443565844,
       "passes": true
     },
     {
       "residual_fraction": 1.0,
       "skew_us": 5.0,
-      "tipoff_deg_s": 0.19743699557427172,
+      "tipoff_deg_s": 0.1887124222178292,
       "passes": true
     },
     {
       "residual_fraction": 1.0,
       "skew_us": 10.0,
-      "tipoff_deg_s": 0.39487399114854344,
+      "tipoff_deg_s": 0.3774248444356584,
       "passes": true
     },
     {
       "residual_fraction": 1.0,
       "skew_us": 25.0,
-      "tipoff_deg_s": 0.9871849778713586,
+      "tipoff_deg_s": 0.9435621110891461,
       "passes": true
     },
     {
       "residual_fraction": 1.0,
       "skew_us": 50.7,
-      "tipoff_deg_s": 2.0020111351231153,
-      "passes": false
+      "tipoff_deg_s": 1.9135439612887883,
+      "passes": true
     },
     {
       "residual_fraction": 1.0,
       "skew_us": 100.0,
-      "tipoff_deg_s": 3.9487399114854345,
+      "tipoff_deg_s": 3.7742484443565845,
       "passes": false
     },
     {
       "residual_fraction": 1.0,
       "skew_us": 250.0,
-      "tipoff_deg_s": 9.871849778713589,
+      "tipoff_deg_s": 9.43562111089146,
       "passes": false
     },
     {
       "residual_fraction": 0.1,
       "skew_us": 1.0,
-      "tipoff_deg_s": 0.0039487399114854355,
+      "tipoff_deg_s": 0.003774248444356585,
       "passes": true
     },
     {
       "residual_fraction": 0.1,
       "skew_us": 5.0,
-      "tipoff_deg_s": 0.019743699557427177,
+      "tipoff_deg_s": 0.018871242221782922,
       "passes": true
     },
     {
       "residual_fraction": 0.1,
       "skew_us": 10.0,
-      "tipoff_deg_s": 0.039487399114854355,
+      "tipoff_deg_s": 0.037742484443565844,
       "passes": true
     },
     {
       "residual_fraction": 0.1,
       "skew_us": 25.0,
-      "tipoff_deg_s": 0.09871849778713589,
+      "tipoff_deg_s": 0.09435621110891462,
       "passes": true
     },
     {
       "residual_fraction": 0.1,
       "skew_us": 50.7,
-      "tipoff_deg_s": 0.20020111351231157,
+      "tipoff_deg_s": 0.19135439612887883,
       "passes": true
     },
     {
       "residual_fraction": 0.1,
       "skew_us": 100.0,
-      "tipoff_deg_s": 0.39487399114854355,
+      "tipoff_deg_s": 0.3774248444356585,
       "passes": true
     },
     {
       "residual_fraction": 0.1,
       "skew_us": 250.0,
-      "tipoff_deg_s": 0.9871849778713588,
+      "tipoff_deg_s": 0.9435621110891463,
       "passes": true
     },
     {
       "residual_fraction": 0.01,
       "skew_us": 1.0,
-      "tipoff_deg_s": 0.00039487399114854346,
+      "tipoff_deg_s": 0.00037742484443565845,
       "passes": true
     },
     {
       "residual_fraction": 0.01,
       "skew_us": 5.0,
-      "tipoff_deg_s": 0.0019743699557427173,
+      "tipoff_deg_s": 0.0018871242221782923,
       "passes": true
     },
     {
       "residual_fraction": 0.01,
       "skew_us": 10.0,
-      "tipoff_deg_s": 0.003948739911485435,
+      "tipoff_deg_s": 0.0037742484443565845,
       "passes": true
     },
     {
       "residual_fraction": 0.01,
       "skew_us": 25.0,
-      "tipoff_deg_s": 0.009871849778713587,
+      "tipoff_deg_s": 0.009435621110891461,
       "passes": true
     },
     {
       "residual_fraction": 0.01,
       "skew_us": 50.7,
-      "tipoff_deg_s": 0.020020111351231155,
+      "tipoff_deg_s": 0.01913543961288788,
       "passes": true
     },
     {
       "residual_fraction": 0.01,
       "skew_us": 100.0,
-      "tipoff_deg_s": 0.03948739911485435,
+      "tipoff_deg_s": 0.037742484443565844,
       "passes": true
     },
     {
       "residual_fraction": 0.01,
       "skew_us": 250.0,
-      "tipoff_deg_s": 0.09871849778713589,
+      "tipoff_deg_s": 0.09435621110891462,
       "passes": true
     },
     {
       "residual_fraction": 0.0024,
       "skew_us": 1.0,
-      "tipoff_deg_s": 9.476975787565042e-05,
+      "tipoff_deg_s": 9.058196266455802e-05,
       "passes": true
     },
     {
       "residual_fraction": 0.0024,
       "skew_us": 5.0,
-      "tipoff_deg_s": 0.00047384878937825213,
+      "tipoff_deg_s": 0.00045290981332279007,
       "passes": true
     },
     {
       "residual_fraction": 0.0024,
       "skew_us": 10.0,
-      "tipoff_deg_s": 0.0009476975787565043,
+      "tipoff_deg_s": 0.0009058196266455801,
       "passes": true
     },
     {
       "residual_fraction": 0.0024,
       "skew_us": 25.0,
-      "tipoff_deg_s": 0.0023692439468912608,
+      "tipoff_deg_s": 0.0022645490666139503,
       "passes": true
     },
     {
       "residual_fraction": 0.0024,
       "skew_us": 50.7,
-      "tipoff_deg_s": 0.004804826724295476,
+      "tipoff_deg_s": 0.004592505507093092,
       "passes": true
     },
     {
       "residual_fraction": 0.0024,
       "skew_us": 100.0,
-      "tipoff_deg_s": 0.009476975787565043,
+      "tipoff_deg_s": 0.009058196266455801,
       "passes": true
     },
     {
       "residual_fraction": 0.0024,
       "skew_us": 250.0,
-      "tipoff_deg_s": 0.023692439468912606,
+      "tipoff_deg_s": 0.022645490666139505,
       "passes": true
     }
   ],
-  "skew_tolerance_full_push_us": 50.649068939251585,
-  "com_offset_for_1ms_skew_mm": 3.5454348257476114,
+  "skew_tolerance_full_push_us": 52.99068223742622,
+  "com_offset_for_1ms_skew_mm": 3.7093477566198363,
   "bands": {
     "1_skew_tolerance_vs_a7r": {
-      "value_us": 50.649068939251585,
+      "value_us": 52.99068223742622,
       "band": "50.7 us +/- 2 %",
-      "passed": true
+      "passed": false
     },
     "2_ideal_release": {
       "value_deg_s": 0.0,
@@ -243,22 +243,22 @@
       "passed": true
     },
     "3_clearance_arrival": {
-      "value_deg_s": 115.27815593090399,
+      "value_deg_s": 112.70235687402585,
       "band": "REPORT",
       "verdict": "REPORT"
     },
     "4_cradle_reaction": {
-      "value_N": 84.96930716264501,
+      "value_N": 81.21458555522608,
       "band": "<= 200 N per contact",
       "passed": true
     },
     "5_com_offset_for_1ms_skew": {
-      "value_mm": 3.5454348257476114,
+      "value_mm": 3.7093477566198363,
       "band": "REPORT",
       "verdict": "REPORT"
     },
     "6_any_achievable_pass": {
-      "n_passing": 25,
+      "n_passing": 26,
       "band": "at least one achievable combination",
       "passed": true
     }

@@ -1,5 +1,5 @@
 > **Numerical audit correction, 2026-08-03.** The current operating point is 11.03 N per
-> kA/m, 16.388 m/s, 10.53 g, 291.4 J recovered, 934.7 J to the brake, and 20.99% net
+> kA/m, 16.029 m/s, 10.07 g, 291.4 J recovered, 934.7 J to the brake, and 20.99% net
 > efficiency. A13's former residual-rate/cadence conclusion is superseded, A6's 3.7e-8
 > result is only a fixed-shape sensitivity, and the corrected brake-fin transient is 7 K
 > per shot. Values below that describe earlier audit states are retained as history.

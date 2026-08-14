@@ -1,80 +1,80 @@
 {
   "I_payload": 0.042,
   "com_offset_m": 0.07,
-  "F_payload_N": 413.3149838409402,
-  "moment_Nm": 28.932048868865817,
-  "alpha_rad_s2": 688.858306401567,
-  "t_powered_ms": 146.39999999999887,
+  "F_payload_N": 395.050962573396,
+  "moment_Nm": 27.653567380137723,
+  "alpha_rad_s2": 658.41827095566,
+  "t_powered_ms": 150.09999999999846,
   "coast_ms": 12.2,
   "arrival": [
     {
       "clearance_mm": 0.05,
-      "arrival_deg_s": 36.445509161488964
+      "arrival_deg_s": 35.63116391465574
     },
     {
       "clearance_mm": 0.1,
-      "arrival_deg_s": 51.54173334377058
+      "arrival_deg_s": 50.39007525124497
     },
     {
       "clearance_mm": 0.25,
-      "arrival_deg_s": 81.49463595968069
+      "arrival_deg_s": 79.67370463060774
     },
     {
       "clearance_mm": 0.5,
-      "arrival_deg_s": 115.25081943483855
+      "arrival_deg_s": 112.67563365311355
     },
     {
       "clearance_mm": 1.0,
-      "arrival_deg_s": 162.98927191936139
+      "arrival_deg_s": 159.3474092612155
     },
     {
       "clearance_mm": 2.0,
-      "arrival_deg_s": 230.5016388696771
+      "arrival_deg_s": 225.3512673062271
     }
   ],
   "restitution_sweep": [
     {
       "e": 0.1,
-      "settle_ms": 1.2978035918701072,
+      "settle_ms": 1.3274647106843542,
       "residual_deg_s": 0.0
     },
     {
       "e": 0.3,
-      "settle_ms": 5.005813854356128,
+      "settle_ms": 5.120221026925366,
       "residual_deg_s": 0.0
     },
     {
       "e": 0.5,
-      "settle_ms": 11.680232326830964,
+      "settle_ms": 11.947182396159187,
       "residual_deg_s": 0.0
     },
     {
       "e": 0.7,
-      "settle_ms": 27.253875429272245,
+      "settle_ms": 27.876758924371433,
       "residual_deg_s": 0.0
     },
     {
       "e": 0.9,
-      "settle_ms": 105.1220909414787,
+      "settle_ms": 107.52464156543272,
       "residual_deg_s": 0.0
     }
   ],
-  "e_critical": 0.9261119992366776,
-  "settle_at_e07_ms": 27.253875429272245,
+  "e_critical": 0.9262734333328188,
+  "settle_at_e07_ms": 27.876758924371433,
   "residual_worst_deg_s": 0.0,
-  "preload_N": 84.96930651649285,
+  "preload_N": 81.21458848792282,
   "restitution": "SWEPT, NOT MEASURED. No coupon test exists. E4 stands.",
   "bands": [
     {
       "band": "1",
       "name": "arrival rate reproduces A23 within 5 %",
-      "detail": "0.15 %",
+      "detail": "2.38 %",
       "passed": true
     },
     {
       "band": "2",
-      "name": "settles inside the 146.4 ms powered stroke at e = 0.7",
-      "detail": "27.25 ms",
+      "name": "settles inside the 150.1 ms powered stroke at e = 0.7",
+      "detail": "27.88 ms",
       "passed": true
     },
     {
@@ -86,13 +86,13 @@
     {
       "band": "4",
       "name": "critical restitution e* >= 0.80",
-      "detail": "0.9261",
+      "detail": "0.9263",
       "passed": true
     },
     {
       "band": "5",
       "name": "preload within 20 % of A23's 85 N",
-      "detail": "85.0 N",
+      "detail": "81.2 N",
       "passed": true
     }
   ]

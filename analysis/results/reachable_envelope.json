@@ -3,7 +3,7 @@
   "bands_declared_commit": "881c260",
   "parametric_in": "host delta-v budget; POEM-class propellant undisclosed (E5)",
   "plane_change": "EXCLUDED; reported only to demonstrate the exclusion",
-  "dv_shot_m_s": 16.388,
+  "dv_shot_m_s": 16.029,
   "hohmann_50km_m_s": 27.82126949391659,
   "campaign_days": 90.0,
   "rows": [
@@ -14,9 +14,9 @@
       ],
       "n_shells": 1,
       "dv_spent_m_s": 0.0,
-      "altitude_extent_km": 117.16890791537242,
-      "raan_spread_deg": 13.17631104083219,
-      "volley_only_extent_km": 117.16890791537242,
+      "altitude_extent_km": 114.60203676126525,
+      "raan_spread_deg": 12.88764955796058,
+      "volley_only_extent_km": 114.60203676126525,
       "host_fraction_of_extent": 0.0,
       "inclination_if_spent_on_plane_deg": 0.0,
       "sats_per_shell": 12.0
@@ -28,9 +28,9 @@
       ],
       "n_shells": 1,
       "dv_spent_m_s": 0.0,
-      "altitude_extent_km": 117.16890791537242,
-      "raan_spread_deg": 13.17631104083219,
-      "volley_only_extent_km": 117.16890791537242,
+      "altitude_extent_km": 114.60203676126525,
+      "raan_spread_deg": 12.88764955796058,
+      "volley_only_extent_km": 114.60203676126525,
       "host_fraction_of_extent": 0.0,
       "inclination_if_spent_on_plane_deg": 0.18747573290308267,
       "sats_per_shell": 12.0
@@ -43,10 +43,10 @@
       ],
       "n_shells": 2,
       "dv_spent_m_s": 27.82126949391659,
-      "altitude_extent_km": 167.81820355338692,
-      "raan_spread_deg": 24.09718379245935,
-      "volley_only_extent_km": 117.16890791537242,
-      "host_fraction_of_extent": 0.30181049829854584,
+      "altitude_extent_km": 165.2370085429083,
+      "raan_spread_deg": 23.81161220257624,
+      "volley_only_extent_km": 114.60203676126525,
+      "host_fraction_of_extent": 0.30643844395484987,
       "inclination_if_spent_on_plane_deg": 0.374951967607669,
       "sats_per_shell": 6.0
     },
@@ -60,10 +60,10 @@
       ],
       "n_shells": 4,
       "dv_spent_m_s": 82.56405796715899,
-      "altitude_extent_km": 269.123930553521,
-      "raan_spread_deg": 44.896767307797134,
-      "volley_only_extent_km": 117.16890791537242,
-      "host_fraction_of_extent": 0.564628430944862,
+      "altitude_extent_km": 266.5139293056307,
+      "raan_spread_deg": 44.617112629887146,
+      "volley_only_extent_km": 114.60203676126525,
+      "host_fraction_of_extent": 0.5699960709001335,
       "inclination_if_spent_on_plane_deg": 0.7499079496998979,
       "sats_per_shell": 3.0
     },
@@ -81,10 +81,10 @@
       ],
       "n_shells": 8,
       "dv_spent_m_s": 188.59760019430996,
-      "altitude_extent_km": 471.76369304188717,
-      "raan_spread_deg": 82.6911833786518,
-      "volley_only_extent_km": 117.16890791537242,
-      "host_fraction_of_extent": 0.7516364450178892,
+      "altitude_extent_km": 469.09545035409184,
+      "raan_spread_deg": 82.42239487994102,
+      "volley_only_extent_km": 114.60203676126525,
+      "host_fraction_of_extent": 0.7556956975925495,
       "inclination_if_spent_on_plane_deg": 1.4998480175974918,
       "sats_per_shell": 1.5
     },
@@ -110,10 +110,10 @@
       ],
       "n_shells": 16,
       "dv_spent_m_s": 387.9296260905221,
-      "altitude_extent_km": 877.1546492669202,
-      "raan_spread_deg": 145.52230567718345,
-      "volley_only_extent_km": 117.16890791537242,
-      "host_fraction_of_extent": 0.8664216076226741,
+      "altitude_extent_km": 874.3674473181889,
+      "raan_spread_deg": 145.2719533106711,
+      "volley_only_extent_km": 114.60203676126525,
+      "host_fraction_of_extent": 0.8689314920028574,
       "inclination_if_spent_on_plane_deg": 2.9999530550853213,
       "sats_per_shell": 0.75
     }
@@ -130,7 +130,7 @@
       "passed": true
     },
     "3_extent_at_100": {
-      "value_km": 269.123930553521,
+      "value_km": 266.5139293056307,
       "band": ">= 250 km",
       "passed": true
     },
@@ -140,12 +140,12 @@
       "passed": true
     },
     "5_raan_at_zero_budget": {
-      "value_deg": 13.17631104083219,
+      "value_deg": 12.88764955796058,
       "band": ">= 5 deg",
       "passed": true
     },
     "6_host_fraction_at_100": {
-      "value": 0.564628430944862,
+      "value": 0.5699960709001335,
       "band": "REPORT, no pass/fail",
       "verdict": "REPORT"
     }

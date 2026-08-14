@@ -224,7 +224,7 @@ derived the bands, so the reading is interpretable the day it is taken: the rig 
 
 ## B-2: Single-coil thrust constant
 
-**Closes:** the analytic-only status of **K<sub>t</sub> = 11.03 N per kA/m**: the number every
+**Closes:** the analytic-only status of **K<sub>t</sub> = 10.54 N per kA/m**: the number every
 headline is downstream of. Partially closes **E1**.
 **Cost:** moderate, B-1's magnets, wound coil, load cell, bench supply.
 **Time:** a few days including winding.
@@ -244,7 +244,7 @@ a genuine hazard, and the linearity is the whole point.
 
 | Quantity | Model says | Accept if |
 |---|---|---|
-| Thrust per unit sheet current | 11.03 N per kA/m | within **±20 %** |
+| Thrust per unit sheet current | 10.54 N per kA/m | within **±20 %** |
 | Force ripple over one wavelength | ±0.99 % | within **±2 pts**, i.e. under ±3.3 % |
 | Linearity of force vs current | linear | R² > 0.98 over the swept range |
 

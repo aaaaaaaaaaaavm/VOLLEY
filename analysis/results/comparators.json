@@ -6,17 +6,17 @@
     "spring_low": 1.0323246635860925,
     "spring_typ": 1.0653421898978725,
     "spring_fast": 1.082127025741422,
-    "volley": 1.6176006636345404
+    "volley": 1.6019385942146134
   },
   "lifetime_extensions": {
     "spring_low": 0.03232466358609254,
     "spring_typ": 0.06534218989787255,
     "spring_fast": 0.08212702574142194,
-    "volley": 0.6176006636345404
+    "volley": 0.6019385942146134
   },
-  "ratio_vs_fastest_spring": 7.520066117809556,
-  "ratio_vs_typical_spring": 9.451790100696465,
-  "velocity_ratio": 6.555200000000001,
+  "ratio_vs_fastest_spring": 7.3293606919338,
+  "ratio_vs_typical_spring": 9.212097041060629,
+  "velocity_ratio": 6.4116,
   "days_to_30deg_volley": 1.379324174299751,
   "days_to_30deg_drag": 25.0,
   "kg_per_3U_volley": 6.375,
@@ -37,9 +37,9 @@
     },
     {
       "option": "VOLLEY",
-      "dv_m_s": 16.388,
-      "lifetime_multiplier": 1.6176006636345404,
-      "designed_differential_m_s": 16.388,
+      "dv_m_s": 16.029,
+      "lifetime_multiplier": 1.6019385942146134,
+      "designed_differential_m_s": 16.029,
       "days_to_30deg": 1.379324174299751,
       "deployer_kg_per_3U": 6.375,
       "satellite_carries": "nothing",
@@ -61,9 +61,9 @@
     },
     {
       "option": "Cold-gas module (carried by the satellite)",
-      "dv_m_s": 16.388,
-      "lifetime_multiplier": 1.6176006636345404,
-      "designed_differential_m_s": 16.388,
+      "dv_m_s": 16.029,
+      "lifetime_multiplier": 1.6019385942146134,
+      "designed_differential_m_s": 16.029,
       "days_to_30deg": 1.379324174299751,
       "deployer_kg_per_3U": 0.85,
       "satellite_carries": "0.5-1.2 kg, pressure vessel, qualification, range safety",
@@ -74,12 +74,12 @@
   ],
   "bands": {
     "1_lifetime_ratio_vs_fastest_spring": {
-      "value": 7.520066117809556,
+      "value": 7.3293606919338,
       "band": ">= 5x",
       "passed": true
     },
     "2_lifetime_multiplier_vs_astro": {
-      "value": 1.6176006636345404,
+      "value": 1.6019385942146134,
       "band": "1.62 +/- 0.02",
       "passed": true
     },

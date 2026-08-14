@@ -1,13 +1,13 @@
 {
   "method": "armature-reaction field energy, harmonic sum; turns closed on the bus voltage",
   "inputs": {
-    "v_exit": 16.388,
-    "F_cmd": 1389.255,
-    "P_mech_W": 22767.110940000002,
-    "P_copper_W": 5262.894073139975,
-    "sag_pct": 5.296,
-    "V_bus_sagged": 90.91584,
-    "V_phase_available_peak": 52.49028469760095,
+    "v_exit": 16.029,
+    "F_cmd": 1327.865,
+    "P_mech_W": 21284.348085,
+    "P_copper_W": 5262.895871842267,
+    "sag_pct": 5.165,
+    "V_bus_sagged": 91.0416,
+    "V_phase_available_peak": 52.56289226745424,
     "K_amplitude_A_per_m": 126000.0,
     "energised_length_m": 1.3
   },
@@ -22,32 +22,32 @@
     "19": 0.05026463753339437,
     "23": 0.04152495374693644
   },
-  "commutation_Hz": 341.4166666666667,
-  "phase_current_peak_A": 373.2493081950929,
-  "phase_inductance_H": 1.9697451732456676e-05,
-  "phase_resistance_ohm": 0.025184616793253775,
-  "back_emf_peak_V": 40.66470754733886,
-  "resistive_drop_V": 9.40014079524049,
-  "reactive_drop_V": 15.77152332749536,
-  "electrical_tau_s": 0.0007821223524724446,
+  "commutation_Hz": 333.9375,
+  "phase_current_peak_A": 354.0748484575519,
+  "phase_inductance_H": 2.1888596323797692e-05,
+  "phase_resistance_ohm": 0.02798616320768922,
+  "back_emf_peak_V": 40.075044730834954,
+  "resistive_drop_V": 9.909196496670877,
+  "reactive_drop_V": 16.26140438063411,
+  "electrical_tau_s": 0.000782122085166136,
   "modulation_index_at_exit": 1.0,
-  "didt_commutation_A_per_s": 800688.5124895457,
-  "didt_pwm_A_per_s": 4873726.881219616,
+  "didt_commutation_A_per_s": 742916.7288792479,
+  "didt_pwm_A_per_s": 4385845.422880178,
   "ripple": {
     "20000": {
-      "pp_A": 60.921586015245204,
-      "pct_of_peak": 16.32195550739031,
-      "rms_A": 17.58654704268038,
-      "extra_copper_W": 23.367796287624287,
-      "extra_copper_J": 3.7061324912172116
+      "pp_A": 54.82306778600223,
+      "pct_of_peak": 15.483468544808165,
+      "rms_A": 15.826056472024744,
+      "extra_copper_W": 21.028584472598116,
+      "extra_copper_J": 3.412939259902674
     },
     "40000": {
-      "pp_A": 30.460793007622602,
-      "pct_of_peak": 8.160977753695155,
-      "rms_A": 8.79327352134019,
-      "extra_copper_W": 5.841949071906072,
-      "extra_copper_J": 0.9265331228043029
+      "pp_A": 27.411533893001113,
+      "pct_of_peak": 7.7417342724040825,
+      "rms_A": 7.913028236012372,
+      "extra_copper_W": 5.257146118149529,
+      "extra_copper_J": 0.8532348149756686
     }
   },
-  "copper_loss_J": 834.695
+  "copper_loss_J": 854.168
 }

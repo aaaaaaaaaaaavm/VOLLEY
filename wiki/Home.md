@@ -59,7 +59,7 @@ GitHub renders STL natively. Derived meshes; `cad/step/gen3/` is the master geom
 ```mermaid
 flowchart LR
     A["Cassette feed<br/>12 x 3U"] --> B["Retention gate"]
-    B --> C["Accelerate<br/>1.3 m, 10.5 g"]
+    B --> C["Accelerate<br/>1.3 m, 10.1 g"]
     C --> D["Coast &amp; trim"]
     D --> E["Release<br/>16.39 m/s"]
     E --> F["Eddy brake"]
@@ -84,18 +84,18 @@ All figures are script outputs, not measurements.
 
 | Quantity | Value | Script |
 |---|---|---|
-| Thrust constant | 11.03 N per kA/m, ±0.99 % ripple | `motor_model.py` |
-| Exit velocity, 3U | **16.39 m/s at 10.5 g** | `motor_model.py` |
-| Electrical to payload efficiency | 21.0 % (2.56 kJ net of regeneration, 537 J delivered) | `motor_model.py` |
-| Closed-loop dispersion | 0.027 m/s (3σ) at a 16.2 m/s setpoint to ±0.10 km apogee | `motor_model.py` |
+| Thrust constant | 10.54 N per kA/m, ±0.99 % ripple | `motor_model.py` |
+| Exit velocity, 3U | **16.39 m/s at 10.1 g** | `motor_model.py` |
+| Electrical to payload efficiency | 18.5 % (2.74 kJ net of regeneration, 514 J delivered) | `motor_model.py` |
+| Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint to ±0.10 km apogee | `motor_model.py` |
 | Orbital lifetime multiplier | x1.62 at mean activity, **not invariant, see P16** | `astro.py` |
 | Constellation seeding | 30° in 1.4-6.9 days vs 25 days by differential drag | `astro.py` |
-| Dry / loaded mass | 76.5 kg / 124.5 kg | `mass_properties.py` |
+| Dry / loaded mass | 84.5 kg / 124.5 kg | `mass_properties.py` |
 | Recoil per shot | 65.6 N·s | `astro.py` |
 | Track first mode | 109 Hz fixed-fixed (target >70) | `sizing.py` |
 | Energy closure | 100.0 % accounted | `sizing.py` |
 
-Payload family (`motor_model.py`): 1U 18.5 m/s at 13.4 g · 3U 16.4 m/s at 10.5 g ·
+Payload family (`motor_model.py`): 1U 18.5 m/s at 13.4 g · 3U 16.0 m/s at 10.1 g ·
 6U 14.5 m/s at 8.3 g · 12U 13.1 m/s at 6.7 g. The 6U and 12U cases are force-limited
 consequences of the 3U design, not designed variants (see E9).
 
@@ -155,7 +155,7 @@ These were argued out and should not be silently reopened; reasoning is in
   braking force is bounded by the same thrust constant as acceleration.
 - **Most of the sled's kinetic energy is dissipated; 23 % of it is recovered.** 240 mm of
   stator downstream of release returns 291 J of the sled's 1268 J to the bank, and the brake
-  takes the other 935 J. The 21.0 % figure is electrical-to-payload net of that. This page
+  takes the other 935 J. The 18.5 % figure is electrical-to-payload net of that. This page
   said "not recovered" until 2026-07-31, which was wider than the decision it rested on.
 - **No CMGs or thrusters in attached mode**; the host stage absorbs recoil.
 - **Two transverse cassettes of six**, alternating feed to keep the centre of mass

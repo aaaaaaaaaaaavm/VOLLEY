@@ -97,7 +97,7 @@
     "below_earth_field_mm": 331.53846153846155
   },
   "exposure": {
-    "drive_transient_ms": 158.6,
+    "drive_transient_ms": 162.3,
     "drive_transient_note": "one shot. A14 found the drive is NOT the dominant term",
     "static_note": "the Halbach array is a permanent magnet. The static field is present continuously while the payload is cradled, not only during the shot",
     "cadence_s": 1200.0,

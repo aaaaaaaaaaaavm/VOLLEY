@@ -1,62 +1,62 @@
 {
-  "Kt_N_per_kA": 11.03,
-  "ripple_pct": 0.99,
+  "Kt_N_per_kA": 10.54,
+  "ripple_pct": 1.01,
   "K_rated_kA": 140.0,
   "regen": {
-    "s_m": 0.24,
-    "F_brake": 1389.255,
+    "s_m": 0.039,
+    "F_brake": 1327.865,
     "K_kA": 140.0,
     "mult_of_rated": 1.0,
-    "W_mech": 333.643,
-    "Q_copper": 15.322,
-    "Q_esr": 7.79,
-    "E_recovered": 291.429,
-    "Q_converter": 15.916,
-    "Q_aux": 3.154,
-    "t_ms": 15.77,
-    "v_end": 14.068,
-    "I_peak": 219.183,
-    "KE_sled_in": 1268.296,
-    "KE_to_brake": 934.67,
-    "frac_recovered_pct": 22.978
+    "W_mech": 51.798,
+    "Q_copper": 0.388,
+    "Q_esr": 1.301,
+    "E_recovered": 47.041,
+    "Q_converter": 2.57,
+    "Q_aux": 0.492,
+    "t_ms": 2.46,
+    "v_end": 15.683,
+    "I_peak": 212.296,
+    "KE_sled_in": 1213.376,
+    "KE_to_brake": 1161.58,
+    "frac_recovered_pct": 3.877
   },
-  "regen_copper_pessimistic_J": 83.0,
-  "regen_E_recovered_pessimistic_J": 230.1,
-  "E_drawn_net_J": 2559.5,
-  "eff_net_pct": 20.99,
+  "regen_copper_pessimistic_J": 12.9,
+  "regen_E_recovered_pessimistic_J": 35.7,
+  "E_drawn_net_J": 2735.3,
+  "eff_net_pct": 18.79,
   "shot": {
-    "F_cmd": 1389.255,
-    "v_exit": 16.388,
-    "a_g": 10.533,
-    "t_ms": 158.6,
-    "I_peak": 338.816,
-    "sag_pct": 5.296,
-    "E_drawn": 2850.895,
-    "Q_copper": 834.695,
-    "Q_esr": 82.834,
-    "KE_payload": 537.129,
-    "eff_pct": 18.841,
+    "F_cmd": 1327.865,
+    "v_exit": 16.029,
+    "a_g": 10.068,
+    "t_ms": 162.3,
+    "I_peak": 319.539,
+    "sag_pct": 5.165,
+    "E_drawn": 2782.391,
+    "Q_copper": 854.168,
+    "Q_esr": 76.489,
+    "KE_payload": 513.87,
+    "eff_pct": 18.469,
     "J_Amm2": 21.0
   },
-  "v_fleet_setpoint": 16.2,
-  "closed_loop_mean": 16.2,
-  "closed_loop_3sigma": 0.0267,
+  "v_fleet_setpoint": 15.8,
+  "closed_loop_mean": 15.8,
+  "closed_loop_3sigma": 0.0274,
   "family": {
     "1U": {
-      "v_exit": 18.3,
-      "a_g": 13.2
+      "v_exit": 17.9,
+      "a_g": 12.6
     },
     "3U": {
-      "v_exit": 16.4,
-      "a_g": 10.5
+      "v_exit": 16.0,
+      "a_g": 10.1
     },
     "6U": {
-      "v_exit": 14.4,
-      "a_g": 8.1
+      "v_exit": 14.1,
+      "a_g": 7.8
     },
     "12U": {
-      "v_exit": 13.0,
-      "a_g": 6.6
+      "v_exit": 12.7,
+      "a_g": 6.3
     }
   }
 }

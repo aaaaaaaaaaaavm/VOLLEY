@@ -16,21 +16,21 @@
   "f_launch_midspan_Hz": 37.977007377219394,
   "f_mode_min_Hz": 66.41658875891795,
   "x_at_min_mm": 749.8672336168086,
-  "chirp_max_Hz": 337.5,
+  "chirp_max_Hz": 329.1666666666667,
   "crossing": {
-    "x_mm": 133.4064032016008,
-    "v": 5.189573604555441,
-    "f_Hz": 108.20005390750323,
-    "depression_pct": 0.7736868253027107
+    "x_mm": 139.90915457728863,
+    "v": 5.183325436040394,
+    "f_Hz": 108.04114920231723,
+    "depression_pct": 0.9194125201826719
   },
-  "ripple_N": 13.75362439541007,
-  "deflection_static_um": 0.875676966981094,
-  "deflection_dynamic_um": 7.163037589905349,
-  "kt_modulation_pct": 0.18767158485552013,
-  "kt_modulation_local_pct": 0.19395214782646933,
-  "feedback_gain": 0.09478362871490915,
+  "ripple_N": 13.14586397470329,
+  "deflection_static_um": 0.8369815850959061,
+  "deflection_dynamic_um": 6.846509366084511,
+  "kt_modulation_pct": 0.1793785453914142,
+  "kt_modulation_local_pct": 0.1853815749380376,
+  "feedback_gain": 0.09059522494515869,
   "v_critical": 327.1311321937564,
-  "speed_ratio_pct": 5.009593247636002,
+  "speed_ratio_pct": 4.899928875286944,
   "brake_station_m": 1.48,
   "brake_deflection_midspan_mm": 0.12061251310264662,
   "brake_deflection_peak_mm": 0.14200058338200458,
@@ -52,19 +52,19 @@
     {
       "band": "3",
       "name": "mode within 10 % of undepressed at the chirp crossing",
-      "detail": "0.8 % depressed",
+      "detail": "0.9 % depressed",
       "passed": true
     },
     {
       "band": "4",
       "name": "Kt modulation from track motion <= 0.5 % pk-pk",
-      "detail": "0.1877 %",
+      "detail": "0.1794 %",
       "passed": true
     },
     {
       "band": "5",
       "name": "exit velocity <= 20 % of critical speed",
-      "detail": "5.01 %",
+      "detail": "4.90 %",
       "passed": true
     },
     {

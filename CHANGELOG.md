@@ -9,6 +9,28 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (thirty-first pass): the baseline moves, and every number moves the wrong way
+
+| ID | Item | Detail |
+|---|---|---|
+| **ADR-030** | **Four decisions taken together; the baseline moves** | P46, P28, P10 and P32, taken at a boundary rather than piecemeal because **propagation is the expensive part and doing it once is cheaper than twice.** |
+| **P46** | **The thrust integral is depth-resolved** | `thrust_constant()` now Gauss-Legendre averages `B_y` over z ∈ [−45, +45] mm before the Lorentz sum — **a change to the physics, not a pasted factor** (ADR-015). **K_t 11.0258 → 10.5386**, ratio **0.9558, exactly A2 band 2's measurement**; **v_exit 16.388 → 16.029 m/s**. `nz = 1` reproduces the superseded value exactly, so A2's ratio stays checkable. Computed and held for three days before being applied. |
+| **BASE-06** | **And it dropped the ceiling below the fleet setpoint** | 16.2 m/s against a new ceiling of 16.029 is **101.07 % of it** — the exact condition **ADR-014** forbids, because a setpoint the machine cannot reach makes the dispersion figure a measure of shortfall rather than of sensing noise. **`V_FLEET` 16.2 → 15.8 m/s**, holding ADR-014's *fraction* rather than its number. **The rule survived contact with the correction.** |
+| P28 | **Regen section 240 → 39 mm** | 39 + 300 fits the 339 mm arrest section. Recovery 291 → **47 J**. **Dropping regen entirely was recommended first and withdrawn**: 2 points of efficiency, which is in no kill criterion, against **+24 % brake duty**, which worsens **E34**, fourth on the lethality ranking. |
+| P10 | **Packaging enters the rollup as a labelled placeholder** | **8.0 kg, no derivation**, named `(P10 PLACEHOLDER, 8.0 kg, no derivation)` so it cannot be cited as computed. Dry **76.5 → 84.5 kg**, per 3U **6.378 → 7.042 kg**. |
+| P32 | **Gen4 retired** | Never exported, releases at s = 1200 mm over a 900 mm stroke where `analysis/` assumes 1500 over 1.3 m. **A geometry that cannot be exported, cannot be checked, and does not match the parameters is not a generation this project has.** |
+| **SYNC-01** | **`sizing.py`'s fork guard walked the propagation through eleven coupled constants** | `_check_operating_point` refused the run at each one — V_EXIT, E_DRAWN, F_CMD, T_PULSE, Q_COPPER, Q_ESR, SAG_FRAC, E_RECOVERED, KE_TO_BRAKE, S_REGEN and four regen loss terms — until every one matched `motor_model`. **It also caught a unit error I introduced**: `T_PULSE` is in seconds and a blind substitution set it to 162.3 instead of 0.1623. |
+| PROP-01 | **`tools/propagate_baseline.py`: 214 occurrences across 37 live documents** | A whitelist, not a `sed`. **Most occurrences of `16.388` in this repository are historical and must not change**, so `CHANGELOG.md`, `OPEN_PROBLEMS.md`, `HISTORY.md`, `DECISION_LOG.md`, `CHANGELOG_CAD.md`, `RESULTS.md`, the ADRs and every `validation/A*.md` run sheet are excluded **by construction**. |
+| **COST-01** | **Every headline number moved the wrong way** | Efficiency **21.0 → 18.8 %**, brake duty **977 → 1162 J**, kg per 3U **6.378 → 7.042**, lifetime multiplier 1.618 → 1.602. **Kill criterion 1 goes from crossed by 3.2× to crossed by 3.5×.** Nothing improved. That is what taking these decisions costs, and it is why they were deferred. |
+| VALID-01 | **Validations invalidated: none, and it was checked** | Every run sheet records the point it ran at. **A28 is unaffected because the loop is feedback-linearised and K_t cancels out of the loop transfer entirely** — the fact P47 turned on. A4 and A5 already predate the point and say so (P19). |
+| CNT-16 | **Register 34 → 31 live** | P46, P28, P10, P32 corrected or closed. 10 P-items live, 21 E-items. |
+
+**What authorised it.** `docs/BASELINE.md` change-control rules 1 and 2, and an explicit owner
+decision on all four after the composite cost was put in front of them. **Propagated in the
+required order: scripts, then results, then figures, then the baseline.** All four checks pass.
+
+---
+
 ## 2026-08-13 (thirtieth pass): Phase I closes on Gen5, and the exploration stops
 
 | ID | Item | Detail |

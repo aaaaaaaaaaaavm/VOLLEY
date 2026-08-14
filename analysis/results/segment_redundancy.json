@@ -18,13 +18,13 @@
         },
         {
           "dead": 1,
-          "v_exit": 11.589968496432837,
+          "v_exit": 11.331000081032288,
           "started": true,
-          "frac_of_nominal": 0.707222876277327
+          "frac_of_nominal": 0.69142055656775
         }
       ],
-      "degraded_v": 11.589968496432837,
-      "degraded_frac": 0.707222876277327,
+      "degraded_v": 11.331000081032288,
+      "degraded_frac": 0.69142055656775,
       "n_fatal": 1
     },
     {
@@ -39,25 +39,25 @@
         },
         {
           "dead": 1,
-          "v_exit": 14.194754475596202,
+          "v_exit": 13.877584236981974,
           "started": true,
-          "frac_of_nominal": 0.8661675906514645
+          "frac_of_nominal": 0.8468137806310698
         },
         {
           "dead": 2,
-          "v_exit": 14.194754475596202,
+          "v_exit": 13.877584236981974,
           "started": true,
-          "frac_of_nominal": 0.8661675906514645
+          "frac_of_nominal": 0.8468137806310698
         },
         {
           "dead": 3,
-          "v_exit": 14.194754475596202,
+          "v_exit": 13.877584236981974,
           "started": true,
-          "frac_of_nominal": 0.8661675906514645
+          "frac_of_nominal": 0.8468137806310698
         }
       ],
-      "degraded_v": 14.194754475596202,
-      "degraded_frac": 0.8661675906514645,
+      "degraded_v": 13.877584236981974,
+      "degraded_frac": 0.8468137806310698,
       "n_fatal": 1
     },
     {
@@ -72,37 +72,37 @@
         },
         {
           "dead": 1,
-          "v_exit": 14.962584989917664,
+          "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.9130208072929987
+          "frac_of_nominal": 0.8926201002707863
         },
         {
           "dead": 2,
-          "v_exit": 14.962584989917664,
+          "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.9130208072929987
+          "frac_of_nominal": 0.8926201002707863
         },
         {
           "dead": 3,
-          "v_exit": 14.962584989917664,
+          "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.9130208072929987
+          "frac_of_nominal": 0.8926201002707863
         },
         {
           "dead": 4,
-          "v_exit": 14.962584989917664,
+          "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.9130208072929987
+          "frac_of_nominal": 0.8926201002707863
         },
         {
           "dead": 5,
-          "v_exit": 14.962584989917664,
+          "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.9130208072929987
+          "frac_of_nominal": 0.8926201002707863
         }
       ],
-      "degraded_v": 14.962584989917664,
-      "degraded_frac": 0.9130208072929987,
+      "degraded_v": 14.628258203237648,
+      "degraded_frac": 0.8926201002707863,
       "n_fatal": 1
     },
     {
@@ -117,49 +117,49 @@
         },
         {
           "dead": 1,
-          "v_exit": 15.332087172317237,
+          "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9355679260628043
+          "frac_of_nominal": 0.9146634220180667
         },
         {
           "dead": 2,
-          "v_exit": 15.332087172317237,
+          "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9355679260628043
+          "frac_of_nominal": 0.9146634220180667
         },
         {
           "dead": 3,
-          "v_exit": 15.332087172317237,
+          "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9355679260628043
+          "frac_of_nominal": 0.9146634220180667
         },
         {
           "dead": 4,
-          "v_exit": 15.332087172317237,
+          "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9355679260628043
+          "frac_of_nominal": 0.9146634220180667
         },
         {
           "dead": 5,
-          "v_exit": 15.332087172317237,
+          "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9355679260628043
+          "frac_of_nominal": 0.9146634220180667
         },
         {
           "dead": 6,
-          "v_exit": 15.332087172317237,
+          "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9355679260628043
+          "frac_of_nominal": 0.9146634220180667
         },
         {
           "dead": 7,
-          "v_exit": 15.332087172317237,
+          "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9355679260628043
+          "frac_of_nominal": 0.9146634220180667
         }
       ],
-      "degraded_v": 15.332087172317237,
-      "degraded_frac": 0.9355679260628043,
+      "degraded_v": 14.989504160032078,
+      "degraded_frac": 0.9146634220180667,
       "n_fatal": 1
     },
     {
@@ -174,73 +174,73 @@
         },
         {
           "dead": 1,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 2,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 3,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 4,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 5,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 6,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 7,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 8,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 9,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 10,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         },
         {
           "dead": 11,
-          "v_exit": 15.692891528923543,
+          "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9575843012523518
+          "frac_of_nominal": 0.9361878592185285
         }
       ],
-      "degraded_v": 15.692891528923543,
-      "degraded_frac": 0.9575843012523518,
+      "degraded_v": 15.342246636873247,
+      "degraded_frac": 0.9361878592185285,
       "n_fatal": 1
     }
   ]

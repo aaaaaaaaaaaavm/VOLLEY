@@ -24,15 +24,15 @@ length sets thrust and sled mass together: a shorter array is a lighter sled *an
 
 | Payload | Mass | Moving mass with the 9.445 kg sled | Acceleration | Exit velocity |
 |---|---|---|---|---|
-| ChipSat / femtosat | 0.005 kg | 9.45 kg | 15.0 g | 19.6 m/s |
-| PocketQube 1P | 0.250 kg | 9.70 kg | 14.6 g | 19.3 m/s |
-| ThinSat | 0.280 kg | 9.72 kg | 14.6 g | 19.3 m/s |
-| PocketQube 3P | 0.750 kg | 10.20 kg | 13.9 g | 18.8 m/s |
-| TubeSat | 0.750 kg | 10.20 kg | 13.9 g | 18.8 m/s |
-| 1U CubeSat | 1.330 kg | 10.78 kg | 13.1 g | 18.3 m/s |
-| 3U CubeSat | 4.000 kg | 13.45 kg | 10.5 g | 16.4 m/s |
-| 6U CubeSat | 8.000 kg | 17.45 kg | 8.1 g | 14.4 m/s |
-| 12U CubeSat | 12.000 kg | 21.45 kg | 6.6 g | 13.0 m/s |
+| ChipSat / femtosat | 0.005 kg | 9.45 kg | 14.3 g | 19.1 m/s |
+| PocketQube 1P | 0.250 kg | 9.70 kg | 14.0 g | 18.9 m/s |
+| ThinSat | 0.280 kg | 9.72 kg | 13.9 g | 18.8 m/s |
+| PocketQube 3P | 0.750 kg | 10.20 kg | 13.3 g | 18.4 m/s |
+| TubeSat | 0.750 kg | 10.20 kg | 13.3 g | 18.4 m/s |
+| 1U CubeSat | 1.330 kg | 10.78 kg | 12.6 g | 17.9 m/s |
+| 3U CubeSat | 4.000 kg | 13.45 kg | 10.1 g | 16.0 m/s |
+| 6U CubeSat | 8.000 kg | 17.45 kg | 7.8 g | 14.1 m/s |
+| 12U CubeSat | 12.000 kg | 21.45 kg | 6.3 g | 12.7 m/s |
 
 ### Deployer mass per customer, which moves by a factor of thirty
 
@@ -52,9 +52,9 @@ length sets thrust and sled mass together: a shorter array is a lighter sled *an
 
 | Array length | K<sub>t</sub> | Sled mass | Force | Acceleration, 3U | Exit velocity |
 |---|---|---|---|---|---|
-| 340 mm | 11.03 | 9.45 kg | 1389 N | 10.5 g | 16.4 m/s |
-| 240 mm | 7.78 | 7.18 kg | 981 N | 8.9 g | 15.1 m/s |
-| 150 mm | 4.86 | 5.15 kg | 613 N | 6.8 g | 13.2 m/s |
+| 340 mm | 10.54 | 9.45 kg | 1328 N | 10.1 g | 16.0 m/s |
+| 240 mm | 7.44 | 7.18 kg | 937 N | 8.5 g | 14.8 m/s |
+| 150 mm | 4.65 | 5.15 kg | 586 N | 6.5 g | 12.9 m/s |
 
 <!-- PAYLOAD-TABLES-END -->
 
@@ -78,7 +78,7 @@ this one.
 The deployer's mass is fixed. The number of customers it carries is not, and
 [`KILL_CRITERIA.md`](KILL_CRITERIA.md) threat 1 is the one that decides whether VOLLEY has a
 reason to exist. Against a cold-gas module at 0.5 to 1.2 kg giving the same 16.5 m/s, the **3U
-configuration loses by about 8x** at 6.375 kg per satellite, and the **PocketQube configuration
+configuration loses by about 8x** at 7.042 kg per satellite, and the **PocketQube configuration
 wins by 2 to 5x** at 0.236 kg. That is the entire commercial argument, and it turns on payload
 class rather than on any machine parameter.
 

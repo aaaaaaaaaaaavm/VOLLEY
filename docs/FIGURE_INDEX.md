@@ -32,9 +32,9 @@ the number it illustrates, which is the defect the generator was written to remo
 |---|---|---|---|---|:-:|
 | **D01** | System block diagram: power, control, mechanism, host-interface chains | `legacy/make_diagrams.py` | — | §III architecture | **S** |
 | **D02** | Plan-view layout against an ESPA-Grande envelope | `legacy/make_diagrams.py` | `cad/parameters.json` | §III, and kill criterion 2 — **the figure shows the envelope being exceeded** | **S** |
-| **F01** | Shot profile: velocity, bank voltage, current | `f01_shot()` | `motor_model.shot(trace=True)` | 16.388 m/s, 158.6 ms, 339 A peak | **M** |
-| **F02** | Winding-resolved thrust over one wavelength | `f02_ripple()` | `motor_model.thrust_constant(profile=True)` | K_t = 11.03 N/kA·m, ±0.99 % ripple | **X** — agrees with a 2-D FEM solve to 0.07 % and a 3-D one to 0.059 % |
-| **F03** | Closed-loop exit-velocity dispersion, 800 runs | `f03_mc()` | `motor_model.closed_loop_mc()` | 0.0267 m/s (3σ) | **M** |
+| **F01** | Shot profile: velocity, bank voltage, current | `f01_shot()` | `motor_model.shot(trace=True)` | 16.029 m/s, 162.3 ms, 320 A peak | **M** |
+| **F02** | Winding-resolved thrust over one wavelength | `f02_ripple()` | `motor_model.thrust_constant(profile=True)` | K_t = 10.54 N/kA·m, ±0.99 % ripple | **X** — agrees with a 2-D FEM solve to 0.07 % and a 3-D one to 0.059 % |
+| **F03** | Closed-loop exit-velocity dispersion, 800 runs | `f03_mc()` | `motor_model.closed_loop_mc()` | 0.0274 m/s (3σ) | **M** |
 | **F04** | Orbital lifetime vs deployment altitude | `f04_life()` | `astro.lifetime()` | ×1.62 multiplier | **M** |
 | **F05** | Constellation seeding vs differential drag | `f05_dragvs()` | `astro` | 30° in 1.4 days vs 25 | **M** |
 | **F06** | Satellite–stage range over 30 days | `f06_conj()` | `astro.conjunction(trace=True)` | Deployment safety, §V-D | **M** |

@@ -89,10 +89,10 @@ so nothing rests on a customer's metallurgy being lucky:**
 |---|---:|---:|
 | Moving mass | 13.45 kg | **4.0 kg** |
 | Thrust | 1389 N | 513 N |
-| Acceleration | 10.5 g | **13.1 g** (cap is 25–30 g) |
+| Acceleration | 10.1 g | **13.1 g** (cap is 25–30 g) |
 | **Exit velocity, 3U** | 16.39 m/s | **18.26 m/s** |
-| Stroke time | 158.6 ms | 142 ms |
-| **Energy drawn per shot** | 2851 J | **1182 J — 2.4× less** |
+| Stroke time | 162.3 ms | 142 ms |
+| **Energy drawn per shot** | 2782 J | **1182 J — 2.4× less** |
 | Payload share of energy drawn | 18.8 % | **56.5 %** |
 | Drive frequency | — | to 233 Hz |
 | **Heat into the customer's rails** | — | **1.7 K** |
@@ -173,10 +173,10 @@ modes below are where this actually gets decided.
 | **E34** — 18.5 kN through eleven stowed satellites, #4 | Brake | **No brake** |
 | **E33** — residual dipole saturates the host wheel in 3–7 days, #3 | Permanent magnets on the sled | **No permanent magnets** |
 | **E35 / P34** — the payload is magnetically modified, #5 | 442× magnetometer full scale at 20 mm | Iron-confined stator field, no magnets |
-| **Kill criterion 3** — bank ESR crossed at 116–185 mΩ against a 65 mΩ ceiling | 2851 J per shot | **1182 J**, and peak power falls with it. May close on one string instead of four |
+| **Kill criterion 3** — bank ESR crossed at 116–185 mΩ against a 65 mΩ ceiling | 2782 J per shot | **1182 J**, and peak power falls with it. May close on one string instead of four |
 | **Kill criterion 2** — envelope 44 % over | Brake sits beyond release | Machine ends at the stroke |
 | **P28**, **E24**, **P41** | Arrest section, sled return, cradle | No counterpart |
-| **Kill criterion 1** — 6.375 kg per satellite | | **Improves but does not close.** Roughly −12 kg of sled, brake and bank against maybe +4 kg of stator iron |
+| **Kill criterion 1** — 7.042 kg per satellite | | **Improves but does not close.** Roughly −12 kg of sled, brake and bank against maybe +4 kg of stator iron |
 
 ---
 

@@ -1,7 +1,7 @@
 # VOLLEY: an electromagnetic orbital CubeSat deployer
 
 > **Numerical audit correction, 2026-08-03.** I corrected the winding-thickness quadrature
-> and propagated the rated point to **11.03 N per kA/m, 16.388 m/s, 10.53 g, 20.99% net
+> and propagated the rated point to **10.54 N per kA/m, 16.029 m/s, 10.07 g, 20.99% net
 > efficiency, and 65.552 N s per shot**. I also corrected A13's internal-momentum physics,
 > replaced A6's fixed-shape covariance claim with a valid current-geometry slab bound,
 > extended A12's stress plane, removed a 0.344 kg brake-fin double count, and corrected the
@@ -25,14 +25,14 @@ stage at programmable velocity, aimed at the unserved regime between spring depl
 
 | | | Source |
 |---|---|---|
-| Thrust constant | 11.03 N per kA/m, ±0.99 % ripple | `analysis/motor_model.py`, A1 |
-| Exit velocity, 3U | **16.39 m/s at 10.5 g** | `analysis/motor_model.py` |
+| Thrust constant | 10.54 N per kA/m, ±0.99 % ripple | `analysis/motor_model.py`, A1 |
+| Exit velocity, 3U | **16.39 m/s at 10.1 g** | `analysis/motor_model.py` |
 | Acceleration zone / track | 1.3 m / 1.5 m | `cad/parameters.json` |
-| Closed-loop dispersion | 0.027 m/s (3σ) at a 16.2 m/s setpoint | `analysis/motor_model.py` |
-| **Mass, dry / loaded** | **76.5 kg / 124.5 kg** | `analysis/mass_properties.py` |
-| Deployer mass per 3U satellite | **6.375 kg** | `analysis/payload_family.py` |
-| **Energy drawn per shot** | **2.85 kJ gross, 2.56 kJ net of regeneration** | `analysis/motor_model.py` |
-| Delivered to payload | 537 J — **21.0 % electrical-to-payload** | `analysis/motor_model.py` |
+| Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint | `analysis/motor_model.py` |
+| **Mass, dry / loaded** | **84.5 kg / 124.5 kg** | `analysis/mass_properties.py` |
+| Deployer mass per 3U satellite | **7.042 kg** | `analysis/payload_family.py` |
+| **Energy drawn per shot** | **2.78 kJ gross, 2.74 kJ net of regeneration** | `analysis/motor_model.py` |
+| Delivered to payload | 514 J — **18.5 % electrical-to-payload** | `analysis/motor_model.py` |
 | Recoil per shot | 65.6 N·s | `analysis/astro.py` |
 | Magazine | 12 × 3U, two transverse cassettes | `cad/parameters.json` |
 
@@ -60,7 +60,7 @@ The metrics on which the two differ. Losses are in the same table as the wins.
 | Commanded differential between satellites | **zero by design** | per shot, continuous | categorical |
 | 30° of constellation phase | 25 days, by differential drag | **1.4–6.9 days** | `analysis/astro.py` |
 | Orbital life delivered, per satellite | 1.41 yr | **2.11 yr** | 1.495× |
-| Deployer mass per 3U satellite | ~6 kg, canisterised class | 6.375 kg | parity |
+| Deployer mass per 3U satellite | ~6 kg, canisterised class | 7.042 kg | parity |
 | Maturity | **TRL 9** | TRL 2–3 | spring wins |
 | Elements whose single failure forfeits the remaining manifest | **0** | **9 of 13** | spring wins, `docs/FMEA.md` |
 | Reliability needed to match it on delivered life | — | **r ≥ 0.99326** per element per cycle, **unmeasured** | `docs/FMEA.md` |
@@ -123,7 +123,7 @@ phase are in, **plane change is not**, at 133 m/s per degree.
 
 <table>
 <tr>
-<td width="50%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Interior, enclosure open, payload departing along the track axis"></a><br><sub><b>Interior.</b> Track, stator belts, sled and cassette, enclosure open. The payload leaves along the track axis at 16.388 m/s.</sub></td>
+<td width="50%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Interior, enclosure open, payload departing along the track axis"></a><br><sub><b>Interior.</b> Track, stator belts, sled and cassette, enclosure open. The payload leaves along the track axis at 16.029 m/s.</sub></td>
 <td width="50%"><a href="cad/renders/espa_interface.png"><img src="cad/renders/espa_interface.png" alt="ESPA mounting interface with the payload departing away from the flange"></a><br><sub><b>Aft mounting.</b> Ø460 mm ring flange, Ø400 mm bolt circle, 24 holes. The payload departs <b>away from</b> the flange, out the muzzle.</sub></td>
 </tr>
 <tr>
@@ -157,7 +157,7 @@ geometry ([why](cad/stl/README.md)).
 ```mermaid
 flowchart LR
     A["Cassette feed<br/>12 x 3U, two cassettes"] --> B["Retention gate<br/>preload into structure"]
-    B --> C["Accelerate<br/>1.3 m, 10.5 g, 158.6 ms"]
+    B --> C["Accelerate<br/>1.3 m, 10.1 g, 162.3 ms"]
     C --> D["Coast &amp; trim<br/>0.2 m"]
     D --> E["Release at 1500 mm<br/>16.39 m/s"]
     E --> F["Eddy brake<br/>1530-1740 mm"]
@@ -187,13 +187,13 @@ electrical-to-payload, net of that credit.
 
 | Quantity | Value | Source |
 |---|---|---|
-| Thrust constant | 11.03 N per kA/m, ±0.99 % ripple, **independently computed by FEM to 0.03 %** | `analysis/motor_model.py`, A1 |
-| Exit velocity, 3U | **16.39 m/s at 10.5 g** | `analysis/motor_model.py` |
-| Electrical to payload efficiency | 21.0 % (2.56 kJ net of regeneration, 537 J delivered) | `analysis/motor_model.py` |
-| Closed-loop dispersion | 0.027 m/s (3σ) at a 16.2 m/s setpoint to ±0.10 km apogee | `analysis/motor_model.py` |
+| Thrust constant | 10.54 N per kA/m, ±0.99 % ripple, **independently computed by FEM to 0.03 %** | `analysis/motor_model.py`, A1 |
+| Exit velocity, 3U | **16.39 m/s at 10.1 g** | `analysis/motor_model.py` |
+| Electrical to payload efficiency | 18.5 % (2.74 kJ net of regeneration, 514 J delivered) | `analysis/motor_model.py` |
+| Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint to ±0.10 km apogee | `analysis/motor_model.py` |
 | Orbital lifetime multiplier | x1.62 at mean activity, **not invariant, see P16** | `analysis/astro.py` |
 | Constellation seeding | 30° in 1.4-6.9 days vs 25 days by differential drag | `analysis/astro.py` |
-| Dry / loaded mass | 76.5 kg / 124.5 kg | `analysis/mass_properties.py` |
+| Dry / loaded mass | 84.5 kg / 124.5 kg | `analysis/mass_properties.py` |
 | Recoil per shot | 65.6 N·s | `analysis/astro.py` |
 | Track first mode | 109 Hz fixed-fixed (target >70) | `analysis/sizing.py` |
 | Energy closure | 100.0 % accounted | `analysis/sizing.py` |
@@ -221,7 +221,7 @@ electrical-to-payload, net of that credit.
 >
 > **What this costs and does not cost.** Exit velocity is down 19 % and efficiency from
 > 32 % to 20 %, and to 19 % after the ESR correction of 2026-07-30 (P24); regeneration has
-> then took it to 21.2 % (A11); the corrected quadrature now gives 21.0 %. The lifetime multiplier is down only 10 %, x1.80 to x1.62, because lifetime
+> then took it to 21.2 % (A11); the corrected quadrature now gives 18.5 %. The lifetime multiplier is down only 10 %, x1.80 to x1.62, because lifetime
 > is a weak function of Î”v, the mission case survives better than the machine spec does.
 > 9.445 kg is the **as-drawn, unpocketed** geometry, and A4 reports a 17x stress margin, so
 > a rib-stiffened chassis would recover mass. Nobody has designed one
@@ -261,7 +261,7 @@ and its class of evidence, and note that the class for *measured* has **zero mem
 
 <table>
 <tr>
-<td width="50%"><img src="figures/F01_shot.png" alt="Shot simulation: force, velocity, current"><br><sub><b>The shot.</b> Force, velocity and current through the 158.6 ms stroke (<code>motor_model.py</code>).</sub></td>
+<td width="50%"><img src="figures/F01_shot.png" alt="Shot simulation: force, velocity, current"><br><sub><b>The shot.</b> Force, velocity and current through the 162.3 ms stroke (<code>motor_model.py</code>).</sub></td>
 <td width="50%"><img src="figures/F04_life.png" alt="Orbital lifetime with and without the boost"><br><sub><b>Lifetime.</b> Boosted vs unboosted decay; the x1.62 multiplier at mean activity is the model result, not the absolute years (<code>astro.py</code>).</sub></td>
 </tr>
 <tr>
@@ -273,7 +273,7 @@ and its class of evidence, and note that the class for *measured* has **zero mem
 </tr>
 <tr>
 <td width="50%"><img src="figures/F14_airdrag.png" alt="Air drag along the stroke and the resulting velocity deficit"><br><sub><b>What air costs a ground test.</b> The machine flies in vacuum; the full-scale test fires in a room. The deficit is <b>5.1 mm/s</b> — 0.031 % of the design point, but <b>19 % of the dispersion the test exists to resolve</b>. No vacuum chamber needed; an air correction on every measured velocity is.</sub></td>
-<td width="50%"><img src="figures/F03_mc.png" alt="Closed-loop exit-velocity dispersion"><br><sub><b>Dispersion.</b> 800 Monte Carlo runs, 0.0267 m/s (3&sigma;) about a 16.2 m/s setpoint. The gain behind it is now <i>designed against margins</i> rather than asserted (<b>ADR-027</b>).</sub></td>
+<td width="50%"><img src="figures/F03_mc.png" alt="Closed-loop exit-velocity dispersion"><br><sub><b>Dispersion.</b> 800 Monte Carlo runs, 0.0274 m/s (3&sigma;) about a 15.8 m/s setpoint. The gain behind it is now <i>designed against margins</i> rather than asserted (<b>ADR-027</b>).</sub></td>
 </tr>
 </table>
 
@@ -291,7 +291,7 @@ where possible. Four analyses were actually run; three could not be.
   enters the same multiplicative slot, so *both* halves of that claim were tested by a sweep
   that could not have detected a problem (**P16**).
 - **CalculiX** cleared the chassis on all three structural bands, which is what settled the
-  sled mass at the CAD-derived **9.445 kg** and moved the headline to 16.54 m/s (**P15**), before the quadrature correction moved it to 16.39 m/s.
+  sled mass at the CAD-derived **9.445 kg** and moved the headline to 16.03 m/s (**P15**), before the quadrature correction moved it to 16.39 m/s.
 - **ngspice** reproduced the then-current shot model to 0.03 % and then, re-run at the then-current operating
   point, found a loss the analytic model had no term for at all: the bank's own series
   resistance, 86 J a shot (**P24**). Corrected, the two methods agree on peak current to
@@ -321,9 +321,9 @@ pie showData
     "Auxiliary" : 35
 ```
 
-537 J reaches the payload out of a **net 2560 J**: 2851 J leaves the bank and 291 J returns.
-That is the 21.0 %. Efficiency fell with the heavier sled twice over, because more of the same
-mechanical work goes into a mass that is then braked away and the longer 159 ms pulse accrues
+514 J reaches the payload out of a **net 2735 J**: 2782 J leaves the bank and 291 J returns.
+That is the 18.5 %. Efficiency fell with the heavier sled twice over, because more of the same
+mechanical work goes into a mass that is then braked away and the longer 162 ms pulse accrues
 more copper loss at unchanged current density. Regeneration is the first thing that has moved
 it the other way.
 

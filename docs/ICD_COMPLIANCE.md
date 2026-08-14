@@ -1,6 +1,6 @@
 # Launch vehicle interface compliance
 
-**Does a published rideshare interface actually permit deployment at 16.388 m/s?**
+**Does a published rideshare interface actually permit deployment at 16.029 m/s?**
 
 Raised in review as the question most likely to invalidate the project independently of whether
 the physics works. **It had never been checked.** Conventional dispensers release at 1–2 m/s; if a
@@ -33,7 +33,7 @@ regardless of everything else in this repository.
 **A 1.0 m/s cap exists, and containerised CubeSat deployments are explicitly exempted from it.**
 No numeric upper bound is placed on containerised deployment velocity anywhere in the document.
 
-**VOLLEY is a containerised CubeSat deployment.** On this interface, at this revision, **16.388 m/s
+**VOLLEY is a containerised CubeSat deployment.** On this interface, at this revision, **16.029 m/s
 is not prohibited.** The question that was expected to be lethal is not.
 
 **What this does *not* establish.** One guide is not the market. The exemption is permissive
@@ -122,15 +122,15 @@ withstanding a deployment velocity of 0.5 to 2.5 m/s at ejection."* **This figur
 the primary document and is flagged as second-hand.**
 
 If it holds, **customer satellites are qualified to a velocity range whose ceiling is 2.5 m/s.
-VOLLEY deploys at 16.388 m/s — 6.6× that ceiling.**
+VOLLEY deploys at 16.029 m/s — 6.6× that ceiling.**
 
 **Physically this is a non-issue and the repository can show why:** a satellite is not damaged by
-velocity, it is damaged by acceleration, and VOLLEY's **10.53 g against the 25 g CDS cap** is well
+velocity, it is damaged by acceleration, and VOLLEY's **10.07 g against the 25 g CDS cap** is well
 inside qualification. Velocity is a consequence of acceleration and stroke, and the stroke is the
 deployer's problem, not the satellite's.
 
 **Programmatically it is a real barrier.** A customer whose satellite is qualified "per NRCSD-E"
-has **no qualification basis** for a 16.4 m/s release, even though nothing about their hardware is
+has **no qualification basis** for a 16.0 m/s release, even though nothing about their hardware is
 actually threatened. **Paperwork barriers of this kind end space projects that physics does not**,
 and closing it means either a qualification argument that translates velocity limits into
 acceleration limits, or an accepted difference negotiated per customer.
