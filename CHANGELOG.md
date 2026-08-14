@@ -9,6 +9,28 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (thirty-fourth pass): the sweep that found the propagation had stopped at the documents
+
+| ID | Item | Detail |
+|---|---|---|
+| **P53** | **Eight analysis scripts were still running at the superseded 16.388 m/s** | ADR-030 was carried through the prose by `propagate_baseline.py` and through `sizing.py` and `motor_model.py` by hand. The tool walks `.md` and `.html` only, so a number pasted into a `.py` was invisible to it, and nothing else had a fork guard. `astro.py` was one of the eight, which put **every astrodynamic headline in the repository** at the wrong operating point. |
+| **MASS-01** | **`payload_family.py` carried `DEPLOYER_DRY_KG = 76.5` under a comment reading "mass_properties.json"** | Dry mass had moved to 84.5. Kilograms per satellite — **kill criterion 1's entire subject** — was computed 8 kg light while the documents carried the corrected 7.042. A comment claiming a source is not reading the source; it now reads it. |
+| **FORK-01** | **`motor_model.operating_point()`, and no literal anywhere else** | Nine call sites read the rated shot instead of restating it. A literal cannot fork if there is no literal. `payload_family.py` reads `mass_properties.json` the same way. |
+| MOVED-01 | **What the corrected point actually changed** | Lifetime multiplier **×1.62 → ×1.60**; extension **+61.8 % → +60.2 %**; ratio against the fastest spring **7.52× → 7.33×** and **6.6× → 6.4×** on velocity; recoil **65.6 → 64.1 N·s**; campaign impulse **0.787 → 0.769 kN·s**; cold-gas loss at 3U **7.5× → 8.3×**; conjunction minimum **54.9 → 42.2 km**; loaded mass **124.5 → 132.5 kg**. **Every direction is unfavourable**, which is the expected sign. |
+| **P54** | **A24 band 1 now fails, and is not being edited** | It requires agreement within ±1 % of `payload_family.py` and encodes that figure as the literal **6.375**. The model and its reference still agree — both return 7.042 — but the band's frozen snapshot does not. It stands as declared and as failed. Closing it needs a **re-declared A24-R band 1**, committed before the re-run. |
+| **P55** | **`velocity_levers.py` prices every lever at the centre-plane K<sub>t</sub>** | All four distinct geometries in the table predate the depth-resolved solve. **Not fixed by scaling**: applying 0.9558 to the changed-geometry rows assumes the depth factor is independent of magnet thickness and airgap, and nothing has measured that. Four solves would close it. |
+| **REG-01** | **The register classifier was matching a hyphenated adjective, and then reading its own answer back** | `\bRESOLVED\b` matches inside *depth-resolved*, so an entry citing ADR-030 by filename was classified `CLOSED`; the `Status:` line it wrote then sat inside the window the next run scanned, carrying the note *"resolved; see the entry for what closed it"*. One wrong call re-justified itself forever. **P18, P30, P32 and P43 were sitting on that latch** and move to their correct statuses. Counts: **90 entries, 36 LIVE, 24 CORRECTED, 30 CLOSED**. |
+| SUPER-01 | **The superlinearity table is generated now** | `docs/REVIEW_RESPONSES.md` pasted it by hand, so it kept the operating point it was written at while `astro.py` moved underneath it. `comparators.py` emits it as a REPORT block; no band was touched. |
+| BANNER-01 | **The companion banner said "nothing here is authored"** | False since ADR-028 moved the manuscript into the companions. A banner telling a contributor every file will be overwritten, in a repository where some files never are, is wrong in the direction that loses work. It now names what is generated, what is authored, and the freeze rule from ADR-031. |
+| **LAB-01** | **`VOLLEY-lab`'s front page still described a Phase II research track** | Rewritten by hand — it is authored, never generated — to the vault role, with the one rule stated and each of the four long-form entries carrying **why it stopped**. |
+| LAB-02 | **`PII-14_cable_driven_gondola.md` was linked from `docs/VAULT.md` and did not exist** | Written from the record already held in `CHANGELOG.md` and `VAULT.md`: the +49.7 % headline assumed zero drivetrain inertia, `m_eff = I/r²` adds directly to moving mass, and at **7.4 kg** the entire gain is gone. |
+| LINK-01 | **`tools/lab-seed/` is exempt from link resolution, not from the block check** | Its relative links resolve in the repository it seeds. It stays inside the cross-link consistency check, which is the check it actually needs. |
+
+**What authorised it.** A consistency sweep, not a design change. **No acceptance band was edited,
+widened or moved.** One band verdict changed and it changed to FAIL (**P54**). All four checks pass.
+
+---
+
 ## 2026-08-13 (thirty-third pass): four repositories, not two phases
 
 | ID | Item | Detail |

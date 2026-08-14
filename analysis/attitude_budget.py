@@ -12,10 +12,13 @@ import os
 import platform
 import numpy as np
 
+import motor_model as mm
+
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
 M_SAT, M_SLED, M_DEPLOYER = 4.0, 9.445, 124.5
 SLED_TRAVEL, CASSETTE_PITCH, ASSUMED_ARM = 1.50, 0.104, 0.166
-T_INDEX, T_RETURN, V_EXIT, N_SHOTS = 4.0, 6.0, 16.388, 12
+T_INDEX, T_RETURN, N_SHOTS = 4.0, 6.0, 12
+V_EXIT = mm.operating_point()['v_exit']    # never a literal; see mm.operating_point
 RCS_TORQUE = 0.1
 HOST_MASSES = (200.0, 500.0, 1000.0, 2000.0, 5000.0)
 

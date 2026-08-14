@@ -61,10 +61,10 @@ flowchart LR
     A["Cassette feed<br/>12 x 3U"] --> B["Retention gate"]
     B --> C["Accelerate<br/>1.3 m, 10.1 g"]
     C --> D["Coast &amp; trim"]
-    D --> E["Release<br/>16.39 m/s"]
+    D --> E["Release<br/>16.03 m/s"]
     E --> F["Eddy brake"]
     F --> G["Sled recovered"]
-    E -.->|"payload departs"| H["Own orbit<br/>x1.62 lifetime"]
+    E -.->|"payload departs"| H["Own orbit<br/>x1.60 lifetime"]
 ```
 
 ## Maturity
@@ -84,14 +84,14 @@ All figures are script outputs, not measurements.
 
 | Quantity | Value | Script |
 |---|---|---|
-| Thrust constant | 10.54 N per kA/m, ±0.99 % ripple | `motor_model.py` |
-| Exit velocity, 3U | **16.39 m/s at 10.1 g** | `motor_model.py` |
+| Thrust constant | 10.54 N per kA/m, ±1.01 % ripple | `motor_model.py` |
+| Exit velocity, 3U | **16.03 m/s at 10.1 g** | `motor_model.py` |
 | Electrical to payload efficiency | 18.5 % (2.74 kJ net of regeneration, 514 J delivered) | `motor_model.py` |
 | Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint to ±0.10 km apogee | `motor_model.py` |
-| Orbital lifetime multiplier | x1.62 at mean activity, **not invariant, see P16** | `astro.py` |
+| Orbital lifetime multiplier | x1.60 at mean activity, **not invariant, see P16** | `astro.py` |
 | Constellation seeding | 30° in 1.4-6.9 days vs 25 days by differential drag | `astro.py` |
-| Dry / loaded mass | 84.5 kg / 124.5 kg | `mass_properties.py` |
-| Recoil per shot | 65.6 N·s | `astro.py` |
+| Dry / loaded mass | 84.5 kg / 132.5 kg | `mass_properties.py` |
+| Recoil per shot | 64.1 N·s | `astro.py` |
 | Track first mode | 109 Hz fixed-fixed (target >70) | `sizing.py` |
 | Energy closure | 100.0 % accounted | `sizing.py` |
 

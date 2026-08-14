@@ -109,7 +109,7 @@ independent justification for ADR-004.
 harmonic in `motor_model.py`, sweeping from zero through the track's 48 Hz and 109 Hz modes
 during every shot, crossing both inside the first 4-50 ms.
 
-> **Superseded figure, annotated 2026-08-10.** The ±1.26 % ripple above is a **pre-quadrature record** and is left intact as the historical value. The current figure is **±0.99 %** (0.9874 % unrounded), derived from `analysis/motor_model.py` via `analysis/results/motor_results.json`. The change came from the 2026-08-03 quadrature correction to the winding-thickness integral, which also moved K<sub>t</sub> from 11.22 to 10.5386 N per kA/m. Nothing in this file is edited.
+> **Superseded figure, annotated 2026-08-10.** The ±1.26 % ripple above is a **pre-quadrature record** and is left intact as the historical value. The current figure is **±1.01 %** (1.0138 % unrounded), derived from `analysis/motor_model.py` via `analysis/results/motor_results.json`. The change came from the 2026-08-03 quadrature correction to the winding-thickness integral, which also moved K<sub>t</sub> from 11.22 to 10.5386 N per kA/m. Nothing in this file is edited.
  Industrial stages run at constant or
 slowly varying velocity and do not chirp. **No citation found addresses this**, and the item
 stays open as written.

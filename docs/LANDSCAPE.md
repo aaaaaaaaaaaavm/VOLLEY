@@ -38,17 +38,17 @@ run about **2 kg per U** as a class figure, so a 3U-equivalent slot is around 6 
 computes the ratio at 1.062 — parity inside 7 %.** A magazine-fed electromagnetic launcher lands
 in the same mass class as a canister of springs, per satellite.
 
-> **And the headline ratio this file used to quote was the weakest one available.** 6.6× is a
+> **And the headline ratio this file used to quote was the weakest one available.** 6.4× is a
 > ratio of *velocities*, and nobody buys velocity. Lifetime extension is **superlinear** in Δv
-> here: a 2.5 m/s spring buys **+8.2 %** of orbital life, VOLLEY buys **+61.8 %** — a ratio of
-> **7.52×**, or **9.45×** against a typical 2 m/s spring. See
+> here: a 2.5 m/s spring buys **+8.2 %** of orbital life, VOLLEY buys **+60.2 %** — a ratio of
+> **7.33×**, or **9.45×** against a typical 2 m/s spring. See
 > [`../validation/A21_comparators.md`](../validation/A21_comparators.md).
 >
-> **And the correction that ratio needs, from E30.** 7.52× is a ratio of *gains*. On **delivered
+> **And the correction that ratio needs, from E30.** 7.33× is a ratio of *gains*. On **delivered
 > orbital life** — total years, 2.111 against 1.412 at 450 km — it is **1.495×**. That is the
 > figure any *risk-weighted* comparison must use, because a satellite the deployer never releases
 > delivers nothing, and `docs/FMEA.md` shows this architecture forfeits satellites in ways a
-> spring does not. **Quoting 7.52× alone flatters in exactly the comparison a reviewer will
+> spring does not. **Quoting 7.33× alone flatters in exactly the comparison a reviewer will
 > make.**
 >
 > **The advantage with no ratio at all is the designed differential.** A spring gives every
@@ -70,7 +70,7 @@ Published ejection velocity is **< 2 m/s** across the whole family.
 interface document specifies that a CubeSat *"shall be capable of withstanding a deployment
 velocity of **0.5 to 2.5 m/s** at ejection"*. That is the widest published figure in the flown
 spring family, and it is the number the "eight times a spring" comparison should be made against
-rather than the 2 m/s used elsewhere here: **16.5 / 2.5 = 6.6x, not 8x.** The comparison is
+rather than the 2 m/s used elsewhere here: **16.5 / 2.5 = 6.4x, not 8x.** The comparison is
 weaker than the one this project has been making, and the honest version is still an order of
 magnitude in the regime that matters.
 
@@ -147,7 +147,7 @@ than a physics one.
 | Concept occupies a genuinely unserved regime | **yes** |
 | Mass per satellite competitive with fielded dispensers | **yes**, with P10 outstanding |
 | Programmable velocity, no satellite modification | **yes**, and unique |
-| Delivers the velocity it advertises | **yes, since 2026-07-29**: it now advertises the 16.39 m/s the CAD geometry gives |
+| Delivers the velocity it advertises | **yes, since 2026-07-29**: it now advertises the 16.03 m/s the CAD geometry gives |
 | Gentler tip-off than a spring | **unproven**: A7 not run |
 | Dispersion better than a spring | **unproven**: rests on assumed sensor noise (E7) |
 | Anything built or measured | **no** |

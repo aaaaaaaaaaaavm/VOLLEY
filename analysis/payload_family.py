@@ -64,9 +64,22 @@ PITCH_Z = 104.0                 # mm
 BAY_MM3 = (CASSETTES * (CASSETTE_LEN_X - DRIVE_BAY_X) * CASSETTE_WID_Y
            * SATS_PER_CASSETTE * PITCH_Z)
 
-DEPLOYER_DRY_KG = 76.5          # mass_properties.json. Several packaging line items remain
-#                                 parametric rather than measured, so every kg-per-satellite
-#                                 figure remains provisional.
+def _deployer_dry_kg():
+    """Dry mass, read from mass_properties rather than pasted next to a comment saying so.
+
+    It was pasted, at 76.5 kg, and it stayed at 76.5 when mass_properties moved to 84.5 --
+    so kg-per-satellite, which is kill criterion 1's whole subject, was computed 8 kg light
+    while the documents carried the corrected figure. The comment claimed the source; only
+    reading the source makes that true.
+    """
+    path = os.path.join(RESULTS, 'mass_properties.json')
+    with open(path, encoding='utf-8') as fh:
+        return json.load(fh)['dry_kg']
+
+
+# Several packaging line items remain parametric rather than measured, so every
+# kg-per-satellite figure below is provisional whatever its source.
+DEPLOYER_DRY_KG = _deployer_dry_kg()
 
 
 # (tag, mass kg, bounding box mm, note)

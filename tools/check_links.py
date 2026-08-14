@@ -57,11 +57,20 @@ def tracked_files():
                 yield os.path.join(base, f)
 
 
+# tools/lab-seed/ is a template for VOLLEY-lab, not a directory of this repository's own
+# pages. Its RELATIVE links -- to PII-8_free_flyer.md and its siblings -- resolve in the
+# repository it seeds and cannot resolve here. It is exempted from link resolution only; it
+# stays inside the cross-link block check, which is the check it actually needs.
+SEED_DIRS = {os.path.join("tools", "lab-seed")}
+
+
 def check_links():
     """Relative links resolve against the linking file; absolute ones against the repo root."""
     bad = []
     for path in tracked_files():
         rel = os.path.relpath(path, ROOT)
+        if any(rel == d or rel.startswith(d + os.sep) for d in SEED_DIRS):
+            continue
         with open(path, encoding="utf-8", errors="replace") as fh:
             text = fh.read()
         for m in REL.finditer(text):

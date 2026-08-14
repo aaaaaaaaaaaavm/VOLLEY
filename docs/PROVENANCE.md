@@ -56,8 +56,8 @@ Recorded because they calibrate how much to trust the rest:
 6. **Found while building this repo:** the paper's conjunction minimum (45.3 km) and
    peak current (323 A) both belong to a superseded operating point. See
    `OPEN_PROBLEMS.md` P1 and P2.
-7. **The ±1.26 % force ripple** is a pre-quadrature record. The current figure is **±0.99 %**
-   (0.9874 % unrounded) from `analysis/motor_model.py`; the 2026-08-03 quadrature correction to
+7. **The ±1.26 % force ripple** is a pre-quadrature record. The current figure is **±1.01 %**
+   (1.0138 % unrounded) from `analysis/motor_model.py`; the 2026-08-03 quadrature correction to
    the winding-thickness integral moved it, and moved K<sub>t</sub> from 11.22 to 10.5386 N per
    kA/m with it. Three occurrences survive in dated records and are **annotated in place rather
    than edited**: `docs/CROSS_INDUSTRY.md`, `validation/A1_field_femm.md` and

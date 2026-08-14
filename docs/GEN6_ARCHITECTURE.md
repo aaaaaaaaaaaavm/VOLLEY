@@ -48,9 +48,9 @@ over mass landed with a 9.445 kg sled aboard.
 
 | Target | a | Acceleration zone | vs 1.30 m |
 |---:|---:|---:|---:|
-| 16.39 m/s | 10.1 g | 1300 mm | 1.00× |
-| 16.39 m/s | **16.1 g** | **850 mm** | **0.65×** |
-| 16.39 m/s | 21.6 g | 634 mm | 0.49× |
+| 16.03 m/s | 10.1 g | 1300 mm | 1.00× |
+| 16.03 m/s | **16.1 g** | **850 mm** | **0.65×** |
+| 16.03 m/s | 21.6 g | 634 mm | 0.49× |
 | 20.00 m/s | 21.6 g | 944 mm | 0.73× |
 
 **PII-15's 2:1 reeving was recorded as "the only lever found that shortens the machine without

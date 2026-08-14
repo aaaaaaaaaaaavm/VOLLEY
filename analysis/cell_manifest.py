@@ -49,7 +49,7 @@ DEPLOYER_DRY_KG = pf.DEPLOYER_DRY_KG
 # --- intra-cell separation ------------------------------------------------------
 SEP_TARGET_M = 10.0             # m, the separation to open
 SEP_TIME_S = 120.0              # s, within which to open it
-V_EXIT_3U = 16.388              # m/s, the frozen baseline shot
+V_EXIT_3U = mm.operating_point()['v_exit']   # the rated shot, never a literal
 
 
 def fit_in_cell(box):

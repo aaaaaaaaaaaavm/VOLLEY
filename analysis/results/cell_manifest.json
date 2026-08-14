@@ -6,7 +6,7 @@
   ],
   "cells_total": 12,
   "divider_mm": 1.5,
-  "deployer_dry_kg": 76.5,
+  "deployer_dry_kg": 84.5,
   "sep_target_m": 10.0,
   "sep_time_s": 120.0,
   "classes": [
@@ -28,14 +28,14 @@
         2.5
       ],
       "n_per_load": 8640,
-      "kg_per_satellite": 0.009,
+      "kg_per_satellite": 0.01,
       "volumetric_n": 13322,
       "sep": 0.08333333333333333,
       "shim": {
         "spread_m_s": 0.08333333333333333,
         "shim_kg": 0.01,
         "mean_shift_m_s": 0.08321759259259258,
-        "mean_shift_pct": 0.5077959030546288
+        "mean_shift_pct": 0.5191689599637693
       },
       "note": "Sprite class. Volumetric only -- see mechanism_limited"
     },
@@ -57,14 +57,14 @@
         50
       ],
       "n_per_load": 288,
-      "kg_per_satellite": 0.266,
+      "kg_per_satellite": 0.293,
       "volumetric_n": 326,
       "sep": 0.08333333333333333,
       "shim": {
         "spread_m_s": 0.08333333333333333,
         "shim_kg": 0.01,
         "mean_shift_m_s": 0.001597222222222222,
-        "mean_shift_pct": 0.009746291324275213
+        "mean_shift_pct": 0.00996457809109877
       },
       "note": "PocketQube standard, 1P"
     },
@@ -105,14 +105,14 @@
         50
       ],
       "n_per_load": 96,
-      "kg_per_satellite": 0.797,
+      "kg_per_satellite": 0.88,
       "volumetric_n": 108,
       "sep": 0.08333333333333333,
       "shim": {
         "spread_m_s": 0.08333333333333333,
         "shim_kg": 0.01,
         "mean_shift_m_s": 0.00048611111111111115,
-        "mean_shift_pct": 0.002966262576953326
+        "mean_shift_pct": 0.0030326976798996266
       },
       "note": "PocketQube standard, 3P"
     },
@@ -134,14 +134,14 @@
         88
       ],
       "n_per_load": 24,
-      "kg_per_satellite": 3.188,
+      "kg_per_satellite": 3.521,
       "volumetric_n": 41,
       "sep": 0.08333333333333333,
       "shim": {
         "spread_m_s": 0.08333333333333333,
         "shim_kg": 0.01,
         "mean_shift_m_s": 0.0002777777777777778,
-        "mean_shift_pct": 0.001695007186830472
+        "mean_shift_pct": 0.0017329701027997864
       },
       "note": "Boxed from the 88 mm cylinder"
     },
@@ -163,14 +163,14 @@
         100
       ],
       "n_per_load": 36,
-      "kg_per_satellite": 2.125,
+      "kg_per_satellite": 2.347,
       "volumetric_n": 40,
       "sep": 0.08333333333333333,
       "shim": {
         "spread_m_s": 0.08333333333333333,
         "shim_kg": 0.01,
         "mean_shift_m_s": 0.00020885547201336674,
-        "mean_shift_pct": 0.0012744414938574977
+        "mean_shift_pct": 0.0013029850396990875
       },
       "note": "Typical flight mass, CDS allows 2 kg"
     },
@@ -192,7 +192,7 @@
         100
       ],
       "n_per_load": 12,
-      "kg_per_satellite": 6.375,
+      "kg_per_satellite": 7.042,
       "volumetric_n": 12,
       "sep": null,
       "shim": null,
@@ -241,8 +241,8 @@
     {
       "band": "1",
       "name": "cell model reproduces the 3U machine",
-      "detail": "12 per load, 6.375 kg/sat (against 12 and 6.375)",
-      "pass_": true
+      "detail": "12 per load, 7.042 kg/sat (against 12 and 6.375)",
+      "pass_": false
     },
     {
       "band": "2",
@@ -253,7 +253,7 @@
     {
       "band": "3",
       "name": "a designed class closes kill criterion 1 (<= 2.0 kg/sat)",
-      "detail": "PocketQube 1P 0.266, PocketQube 3P 0.797",
+      "detail": "PocketQube 1P 0.293, PocketQube 3P 0.88",
       "pass_": true
     },
     {
@@ -264,13 +264,13 @@
     },
     {
       "band": "5",
-      "name": "intra-cell differential <= 1 % of v_exit (0.164 m/s)",
+      "name": "intra-cell differential <= 1 % of v_exit (0.160 m/s)",
       "detail": "5 classes share cells, required 0.0833 m/s",
       "pass_": true
     },
     {
       "band": "6",
-      "name": "mechanism shifts cell mean by <= 0.5 % (0.082 m/s)",
+      "name": "mechanism shifts cell mean by <= 0.5 % (0.080 m/s)",
       "detail": "worst 8.32e-02 m/s",
       "pass_": false
     }

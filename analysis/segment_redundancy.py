@@ -37,7 +37,7 @@ RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 M_PAY = 4.0
 M_TOT = mm.M_SLED + M_PAY
 L_ZONE = mm.ACCEL_ZONE                     # 1.30 m of acceleration
-V_NOM = 16.388
+V_NOM = mm.operating_point()['v_exit']
 
 
 def shot_with_dead_segment(n_seg, dead_index, F=None):

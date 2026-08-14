@@ -5,7 +5,7 @@
   "nominal": {
     "v_exit": 16.029192806414976,
     "eff_net_pct": 18.786265848357935,
-    "kg_per_satellite": 6.375
+    "kg_per_satellite": 7.041666666666667
   },
   "perturbation": 0.05,
   "inputs": [
@@ -145,7 +145,7 @@
       "swing": {
         "v_exit": 0.0,
         "eff_net_pct": 0.0,
-        "kg_per_satellite": 0.5
+        "kg_per_satellite": 0.49999999999999994
       },
       "elasticity": {
         "v_exit": 0.0,
@@ -309,7 +309,7 @@
       "swing": {
         "v_exit": 0.0,
         "eff_net_pct": 0.0,
-        "kg_per_satellite": 0.20000000000000007
+        "kg_per_satellite": 0.19999999999999984
       },
       "elasticity": {
         "v_exit": 0.0,
@@ -531,10 +531,10 @@
       "label": "magnet resistivity",
       "quantity": "magnet eddy rise per shot",
       "unit": "K",
-      "at_lo": 0.002881582550896759,
-      "at_nominal": 0.002469927900768651,
-      "at_hi": 0.002161186913172569,
-      "swing": 0.2916666666666667
+      "at_lo": 0.002756715911151344,
+      "at_nominal": 0.002362899352415438,
+      "at_hi": 0.002067536933363508,
+      "swing": 0.2916666666666666
     }
   ]
 }

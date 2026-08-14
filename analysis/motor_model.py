@@ -8,15 +8,15 @@ one-half traveling-wave factor inherent to synchronous extraction; this one reso
 the three-phase belt winding directly against the verified field.
 
 Reproduces (paper Secs. IV-B, V-A):
-    thrust constant Kt          11.03 N per kA/m
-    force ripple                +/-0.99 % (6th harmonic)
-    exit velocity (3U)          16.39 m/s at 10.5 g
-    pulse duration              159 ms
-    bank SoC sag                5.3 %
-    energy drawn                2.85 kJ
-    payload KE                  537 J  -> 18.8 % gross electrical-to-payload
-    copper heat                 835 J/shot
-    closed-loop dispersion      0.027 m/s (3 sigma) at a 16.2 m/s setpoint
+    thrust constant Kt          10.54 N per kA/m
+    force ripple                +/-1.01 % (6th harmonic)
+    exit velocity (3U)          16.03 m/s at 10.07 g
+    pulse duration              162 ms
+    bank SoC sag                5.17 %
+    energy drawn                2.78 kJ
+    payload KE                  514 J  -> 18.5 % gross electrical-to-payload
+    copper heat                 854 J/shot
+    closed-loop dispersion      0.0274 m/s (3 sigma) at a 15.8 m/s setpoint
 
 IMPORTANT: the sled field must TRANSLATE with the sled (np.roll on the field array).
 An early version held the field fixed while commutating the current, which produced
@@ -371,6 +371,29 @@ def closed_loop_mc(Kt, n=800, v_target=V_FLEET, seed0=0):
         out.append(v)
     a = np.array(out)
     return dict(mean=float(a.mean()), sigma3=float(3 * a.std()), samples=a)
+
+
+def operating_point():
+    """The rated shot, from the one place it is computed.
+
+    WHY THIS EXISTS. Three scripts -- actuator_trade, attitude_budget and
+    sensitivity_ranking -- each carried their own literal `16.388`, so the 2026-08-13
+    baseline change (ADR-030) moved the headline everywhere the propagation tool looks
+    and left those three behind. The tool walks .md and .html only; a number pasted into
+    a .py is invisible to it. sizing.py survives that because it declares a fork guard;
+    the other three declared nothing, so nothing failed.
+
+    A literal cannot fork if there is no literal. Callers ask for the shot instead of
+    restating it, which is ADR-015 applied to the operating point itself.
+
+    Prefers the published result so an importer costs no solve; recomputes when the
+    result is absent, so a clean clone still works.
+    """
+    path = os.path.join(RESULTS, 'motor_results.json')
+    if os.path.exists(path):
+        return json.load(open(path))['shot']
+    Kt, _ = thrust_constant()
+    return shot(Kt)
 
 
 def payload_family(Kt, F_cmd):

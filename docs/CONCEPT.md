@@ -125,12 +125,12 @@ Because a spring gives every satellite the same push, and **distribution require
 |---|---|---|
 | Velocity | 1–2 m/s, one value for every satellite | **16.029 m/s**, commanded per cell |
 | Designed differential between satellites | **zero** — any spread is manufacturing scatter | up to the full range, resolvable to 0.0274 m/s (3σ) |
-| Orbital lifetime extension | +6.5 % at 2 m/s, +8.2 % at 2.5 m/s | **+61.8 %** |
+| Orbital lifetime extension | +6.5 % at 2 m/s, +8.2 % at 2.5 m/s | **+60.2 %** |
 | 30° of phase spacing | not achievable by design; ~25 days by differential drag | **1.4 days** at 10 m/s of commanded differential |
 | Deployer mass per 3U satellite | ~6 kg, canisterised class | **7.042 kg** |
 
-**The lifetime figure is the one to read, not the velocity ratio.** VOLLEY is 6.6× a spring on
-raw Δv but **7.5–9.5× on what that Δv actually buys**, because lifetime extension is superlinear
+**The lifetime figure is the one to read, not the velocity ratio.** VOLLEY is 6.4× a spring on
+raw Δv but **7.3–9.2× on what that Δv actually buys**, because lifetime extension is superlinear
 in this regime. And the differential row has no ratio at all: it is a capability springs do not
 have, at any price.
 

@@ -56,7 +56,7 @@ def standoff_sweep():
 
 
 def reeving(n_values=(1, 2, 3), m_carriage=2.0, m_pay=4.0, m_tug=9.445,
-            v_exit=16.388, L_payload=1.30):
+            v_exit=None, L_payload=1.30):
     """Item 15: what a pulley ratio buys and costs.
 
     Carriage moves n x the tug's distance at n x its speed. Force at the tug is n x the
@@ -64,6 +64,8 @@ def reeving(n_values=(1, 2, 3), m_carriage=2.0, m_pay=4.0, m_tug=9.445,
     referred to the CARRIAGE, a tug moving 1/n as far contributes m_tug/n^2. That is the
     one genuinely favourable term, and it is why reeving is interesting at all.
     """
+    if v_exit is None:
+        v_exit = mm.operating_point()['v_exit']
     out = []
     for n in n_values:
         L_tug = L_payload / n                     # the track only has to be this long

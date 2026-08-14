@@ -90,7 +90,7 @@ so nothing rests on a customer's metallurgy being lucky:**
 | Moving mass | 13.45 kg | **4.0 kg** |
 | Thrust | 1389 N | 513 N |
 | Acceleration | 10.1 g | **13.1 g** (cap is 25–30 g) |
-| **Exit velocity, 3U** | 16.39 m/s | **18.26 m/s** |
+| **Exit velocity, 3U** | 16.03 m/s | **18.26 m/s** |
 | Stroke time | 162.3 ms | 142 ms |
 | **Energy drawn per shot** | 2782 J | **1182 J — 2.4× less** |
 | Payload share of energy drawn | 18.8 % | **56.5 %** |

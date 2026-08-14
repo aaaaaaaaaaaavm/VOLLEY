@@ -12,7 +12,7 @@
 > orderable on the old file while B-2 was not.
 >
 > **A defect fell out of the refresh.** `bench_predict.py` reported `ripple_pct = 125.78`, which
-> matched neither the ±0.99 % force ripple nor the 13.5 % measurement uncertainty. Cause:
+> matched neither the ±1.01 % force ripple nor the 13.5 % measurement uncertainty. Cause:
 > `motor_model.thrust_constant()` already returns ripple as a percentage and the generator
 > multiplied by 100 again. It now reads **0.987 %**. A prediction that wrong would have been
 > compared against a real measurement.
@@ -245,7 +245,7 @@ a genuine hazard, and the linearity is the whole point.
 | Quantity | Model says | Accept if |
 |---|---|---|
 | Thrust per unit sheet current | 10.54 N per kA/m | within **±20 %** |
-| Force ripple over one wavelength | ±0.99 % | within **±2 pts**, i.e. under ±3.3 % |
+| Force ripple over one wavelength | ±1.01 % | within **±2 pts**, i.e. under ±3.3 % |
 | Linearity of force vs current | linear | R² > 0.98 over the swept range |
 
 ±20 % is wide, and deliberately so: a single coil is not a three-phase belt winding, and the

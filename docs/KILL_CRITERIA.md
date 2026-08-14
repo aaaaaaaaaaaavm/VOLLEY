@@ -126,7 +126,7 @@ currently demonstrate that it fits anything.**
 
 **The alternative was priced before it was rejected.** Fitting 1270 mm means a 731 mm acceleration
 zone, since the 539 mm of overhead does not shrink, and velocity goes as √s: **16.029 → 12.286 m/s,
-−25 %**, lifetime ×1.62 → ×1.44. Repackaging 150 mm of brake recovers about a third of that, and
+−25 %**, lifetime ×1.60 → ×1.44. Repackaging 150 mm of brake recovers about a third of that, and
 depends on a layout nobody has drawn against an arrest section **P28** already says is
 oversubscribed.
 
@@ -248,7 +248,7 @@ still decides whether this failure is operationally significant or a rounding er
 
 ## 6. Host recoil
 
-65.6 N·s per shot, **0.787 kN·s** for a full manifest, about 0.37 kg of
+64.1 N·s per shot, **0.769 kN·s** for a full manifest, about 0.37 kg of
 hydrazine-class propellant for the host to null.
 
 > **Kill threshold: if a host will not accept the momentum and the pointing disturbance, nobody
@@ -267,7 +267,7 @@ mass, the envelope and the bank are all irrelevant.
 
 | What one shot buys | | |
 |---|---|---|
-| Orbital lifetime | ×1.62 at mean activity | **not invariant across solar activity** (P16) |
+| Orbital lifetime | ×1.60 at mean activity | **not invariant across solar activity** (P16) |
 | Constellation phasing, 30° | 1.4 to 6.9 days | against **25 days** by differential drag |
 | Apogee placement | ±0.10 km | from the closed-loop dispersion |
 | **Plane change** | **0.12°** | **effectively nil** |

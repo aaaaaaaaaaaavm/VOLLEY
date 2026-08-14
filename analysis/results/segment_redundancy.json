@@ -1,8 +1,8 @@
 {
-  "v_nominal": 16.388,
+  "v_nominal": 16.029,
   "m_total": 13.445,
   "accel_zone_m": 1.3,
-  "nominal_life_yr": 2.1109043605132016,
+  "nominal_life_yr": 2.0904659844810727,
   "spring_life_yr": 1.4121326162999317,
   "unboosted_yr": 1.304960122710553,
   "sweep": [
@@ -20,11 +20,11 @@
           "dead": 1,
           "v_exit": 11.331000081032288,
           "started": true,
-          "frac_of_nominal": 0.69142055656775
+          "frac_of_nominal": 0.7069062375090329
         }
       ],
       "degraded_v": 11.331000081032288,
-      "degraded_frac": 0.69142055656775,
+      "degraded_frac": 0.7069062375090329,
       "n_fatal": 1
     },
     {
@@ -41,23 +41,23 @@
           "dead": 1,
           "v_exit": 13.877584236981974,
           "started": true,
-          "frac_of_nominal": 0.8468137806310698
+          "frac_of_nominal": 0.8657797889439125
         },
         {
           "dead": 2,
           "v_exit": 13.877584236981974,
           "started": true,
-          "frac_of_nominal": 0.8468137806310698
+          "frac_of_nominal": 0.8657797889439125
         },
         {
           "dead": 3,
           "v_exit": 13.877584236981974,
           "started": true,
-          "frac_of_nominal": 0.8468137806310698
+          "frac_of_nominal": 0.8657797889439125
         }
       ],
       "degraded_v": 13.877584236981974,
-      "degraded_frac": 0.8468137806310698,
+      "degraded_frac": 0.8657797889439125,
       "n_fatal": 1
     },
     {
@@ -74,35 +74,35 @@
           "dead": 1,
           "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.8926201002707863
+          "frac_of_nominal": 0.9126120284008764
         },
         {
           "dead": 2,
           "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.8926201002707863
+          "frac_of_nominal": 0.9126120284008764
         },
         {
           "dead": 3,
           "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.8926201002707863
+          "frac_of_nominal": 0.9126120284008764
         },
         {
           "dead": 4,
           "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.8926201002707863
+          "frac_of_nominal": 0.9126120284008764
         },
         {
           "dead": 5,
           "v_exit": 14.628258203237648,
           "started": true,
-          "frac_of_nominal": 0.8926201002707863
+          "frac_of_nominal": 0.9126120284008764
         }
       ],
       "degraded_v": 14.628258203237648,
-      "degraded_frac": 0.8926201002707863,
+      "degraded_frac": 0.9126120284008764,
       "n_fatal": 1
     },
     {
@@ -119,47 +119,47 @@
           "dead": 1,
           "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9146634220180667
+          "frac_of_nominal": 0.9351490523446303
         },
         {
           "dead": 2,
           "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9146634220180667
+          "frac_of_nominal": 0.9351490523446303
         },
         {
           "dead": 3,
           "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9146634220180667
+          "frac_of_nominal": 0.9351490523446303
         },
         {
           "dead": 4,
           "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9146634220180667
+          "frac_of_nominal": 0.9351490523446303
         },
         {
           "dead": 5,
           "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9146634220180667
+          "frac_of_nominal": 0.9351490523446303
         },
         {
           "dead": 6,
           "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9146634220180667
+          "frac_of_nominal": 0.9351490523446303
         },
         {
           "dead": 7,
           "v_exit": 14.989504160032078,
           "started": true,
-          "frac_of_nominal": 0.9146634220180667
+          "frac_of_nominal": 0.9351490523446303
         }
       ],
       "degraded_v": 14.989504160032078,
-      "degraded_frac": 0.9146634220180667,
+      "degraded_frac": 0.9351490523446303,
       "n_fatal": 1
     },
     {
@@ -176,71 +176,71 @@
           "dead": 1,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 2,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 3,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 4,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 5,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 6,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 7,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 8,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 9,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 10,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         },
         {
           "dead": 11,
           "v_exit": 15.342246636873247,
           "started": true,
-          "frac_of_nominal": 0.9361878592185285
+          "frac_of_nominal": 0.9571555703333487
         }
       ],
       "degraded_v": 15.342246636873247,
-      "degraded_frac": 0.9361878592185285,
+      "degraded_frac": 0.9571555703333487,
       "n_fatal": 1
     }
   ]

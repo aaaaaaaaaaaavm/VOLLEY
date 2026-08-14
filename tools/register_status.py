@@ -31,9 +31,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REGISTER = os.path.join(ROOT, 'OPEN_PROBLEMS.md')
 MARKER = '> **Status:** '
 
+# The leading (?<!-) on each word matters. `\bRESOLVED\b` matches inside "depth-resolved",
+# so an entry whose first lines cite ADR-030 by filename was classified CLOSED on the strength
+# of a hyphenated adjective in a link target. Two entries were silently restatused that way on
+# 2026-08-14 before it was noticed. A word used as half of a compound is not a status keyword.
 CLOSED_RE = re.compile(
-    r'\bRESOLVED\b|\bFULLY CLOSED\b|\bWITHDRAWN\b|\bRETIRED\b|CLOSED \d{4}|'
-    r'CLOSED \d{4}-\d{2}-\d{2}|\bHALF CLOSED\b|\bPARTIALLY CLOSED\b|ANALYSIS HALF CLOSED',
+    r'(?<!-)\bRESOLVED\b|\bFULLY CLOSED\b|(?<!-)\bWITHDRAWN\b|(?<!-)\bRETIRED\b|'
+    r'CLOSED \d{4}|CLOSED \d{4}-\d{2}-\d{2}|\bHALF CLOSED\b|\bPARTIALLY CLOSED\b|'
+    r'ANALYSIS HALF CLOSED',
     re.I)
 CORRECTED_RE = re.compile(
     r'\bCorrected\.|\bhas been corrected\b|\bnow fixed\b|\bpropagated\b|'
@@ -50,6 +55,11 @@ def entries(text):
 
 
 def classify(body):
+    # Drop the tool's own Status line before reading anything. It sits inside the window the
+    # keyword scan looks at, and the note it carries ("resolved; see the entry for what closed
+    # it") contains a status keyword -- so a single misclassification used to write a line that
+    # then re-justified itself on every later run. A classifier must not read its own output.
+    body = '\n'.join(l for l in body.split('\n') if not l.startswith(MARKER))
     head = body.split('\n')[0]
     if CLOSED_RE.search(head):
         return 'CLOSED'

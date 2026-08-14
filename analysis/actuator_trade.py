@@ -25,9 +25,9 @@ G = 9.81
 M_SLED, M_PAY = mm.M_SLED, 4.0
 M_TOT = M_SLED + M_PAY
 L = mm.ACCEL_ZONE
-V = 16.388
+V = mm.operating_point()['v_exit']    # never a literal; see mm.operating_point
 G_CAP = 25.0
-E_PAY = 0.5 * M_PAY * V ** 2          # 537 J to the payload
+E_PAY = 0.5 * M_PAY * V ** 2          # the payload KE the actuator must deliver
 E_TOT = 0.5 * M_TOT * V ** 2          # everything the actuator must supply
 
 # Published class limits, named per the run sheet's requirement.

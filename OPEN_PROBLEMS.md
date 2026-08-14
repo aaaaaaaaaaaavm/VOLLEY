@@ -5,14 +5,20 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **87 numbered entries, of which 31 are live.** Every entry carries a `Status:` line written by
+> **90 numbered entries, of which 36 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **31** (10 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **22** | found, fixed and propagated — **retained as the published record, not as debt** |
-> | `CLOSED` | **34** | resolved, with the closer named in the entry |
+> | `LIVE` | **36** (15 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **24** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CLOSED` | **30** | resolved, with the closer named in the entry |
+>
+> **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
+> inside *depth-resolved*, and the tool read its own `Status:` line back in on the next run, so a
+> single wrong call re-justified itself forever. P18, P30 and P32 were sitting as `CLOSED` on the
+> strength of a hyphenated adjective; P43 was sitting as `CLOSED` on the same latch. **The
+> conservative direction is `LIVE`, and the repair moved three entries into it.**
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
 > "cannot drift apart again".** They could: `register_status.py --check` validates each entry's
@@ -766,7 +772,7 @@ move `plate_stress_MPa`, ~~the retention-gate sizing,~~ and the A4 load together
 > from a 24 kg ascent stack at 25 g. This entry was wrong about its own blast radius.
 
 ### P18. Four physical effects are absent from the model, not merely unvalidated: MEDIUM, NEW 2026-07-29
-> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> **Status:** `LIVE` — open engineering; something still has to be done
 
 Distinct from the E-items, which record analyses not yet run. These are terms that no script
 contains, found by reading `sizing.py` and `motor_model.py` rather than the prose. Each is
@@ -1370,7 +1376,7 @@ Both numbers then follow from one stated fact instead of two unstated ones.
 > with room to spare.
 
 ### P30. An acceptance band was set at the easier of two available comparators: MEDIUM, NEW 2026-07-31
-> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> **Status:** `LIVE` — open engineering; something still has to be done
 
 **A defect in how a band was chosen, not in a number.** This repository has no other entry of that
 kind, which is the reason to write it down.
@@ -1444,7 +1450,7 @@ answer is 1200 s, A13's bands 3–5 should be re-declared against it and re-run;
 change and belongs declared and dated, not quietly applied to an existing failure.**
 
 ### P32. The working Gen4 geometry has no corresponding operating point: CORRECTED 2026-08-13
-> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> **Status:** `LIVE` — open engineering; something still has to be done
 > **Corrected by retirement.** Gen4 exists only inside Fusion, has never been exported, and
 > releases at s = 1200 mm over a 900 mm stroke where `analysis/` assumes 1500 mm over 1.3 m.
 > Gen5 is generated from `cad/parameters.json` and `build_gen5.py --check` reads **23 dimensions**
@@ -1978,7 +1984,7 @@ superseded numbers.** That is the one part of P42 that remains outstanding, and 
 here rather than left to be rediscovered.
 
 ### P43. The renders on the front page showed the satellite being fired into its own host: HIGH, NEW 2026-08-10
-> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 > a provenance gap of its own, recorded below and not hidden
 
 
@@ -2476,6 +2482,93 @@ never truncated is the obvious candidate and is not computed. Longer segments lo
 frequency without removing the truncation. Either way this is a drive-and-track question that has
 to be answered before the plate architecture is adopted, and it is the first item found in three
 sheets that is a defect in the *machine* rather than in an analysis.
+
+### P53. The 2026-08-13 baseline change reached the documents and not the scripts: CRITICAL, NEW 2026-08-14
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+**Found by a consistency sweep, 2026-08-14.** [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md)
+moved the rated shot from 16.388 to **16.029 m/s**. `tools/propagate_baseline.py` carried that
+through the prose, and `sizing.py` and `motor_model.py` were edited by hand. **Eight other
+analysis scripts were not**, because the propagation tool walks `.md` and `.html` only and a
+number pasted into a `.py` is invisible to it:
+
+| Script | What it carried | What it fed |
+|---|---|---|
+| `astro.py` | `DV = 16.388` | **every astrodynamic headline in the repository** |
+| `attitude_budget.py` | `V_EXIT = 16.388` | recoil and campaign impulse |
+| `actuator_trade.py` | `V = 16.388` | the whole A27 trade |
+| `cell_manifest.py` | `V_EXIT_3U = 16.388` | A24 bands 5 and 6 |
+| `mover_separation.py` | `v_exit=16.388` default | the reeving study |
+| `reliability_architecture.py` | `16.388`, twice | delivered-life ratio |
+| `segment_redundancy.py` | `V_NOM = 16.388` | dead-segment velocities |
+| `sensitivity_ranking.py` | `pc.e19(16.388)` | the magnet-eddy elasticity |
+
+**And one more, of a different kind:** `payload_family.py` carried `DEPLOYER_DRY_KG = 76.5`
+under a comment reading *"mass_properties.json"*. Dry mass had moved to **84.5 kg**. So
+kg-per-satellite — **kill criterion 1's entire subject** — was computed **8 kg light** while the
+documents carried the corrected 7.042. A comment claiming a source is not reading the source.
+
+**What moved when they were re-run.**
+
+| Quantity | Published | Correct |
+|---|---|---|
+| Orbital lifetime multiplier | ×1.62 | **×1.60** |
+| Lifetime extension | +61.8 % | **+60.2 %** |
+| Lifetime ratio, fastest spring | 7.52× | **7.33×** |
+| Velocity ratio, fastest spring | 6.6× | **6.4×** |
+| Recoil per shot | 65.6 N·s | **64.1 N·s** |
+| Campaign impulse | 0.787 kN·s | **0.769 kN·s** |
+| Cold-gas mass loss at 3U | 7.5× | **8.3×** |
+| Conjunction minimum | 54.9 km | **42.2 km** |
+
+**No band verdict changed except A24 band 1** (**P54**). Every direction is unfavourable, which
+is the expected sign: the correction lowered the velocity and raised the mass.
+
+**Corrected.** No script holds a literal operating point any more. `motor_model.operating_point()`
+is the single source and the eight callers read it; `payload_family.py` reads
+`mass_properties.json`. A literal cannot fork if there is no literal.
+
+**What this does not fix.** `tools/propagate_baseline.py` still walks `.md` and `.html` only. The
+repair here removes the *literals it could not see*, rather than teaching it to see them — which
+is the stronger fix, but only for the values that were de-forked.
+
+### P54. A24 band 1 fails against a reference literal that has since been corrected: MEDIUM, NEW 2026-08-14
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+A24 band 1 requires the fixed-cell model to return deployer mass per satellite within ±1 % of
+`payload_family.py`'s figure, and encodes that figure as the literal **6.375 kg**. That literal
+was `payload_family.py`'s output when the band was declared. **P53** corrected the output to
+**7.042 kg**, so the band now reads `7.042 against 6.375` and **FAILS by 10.5 %**.
+
+**The model and its reference still agree.** Both return 7.042. What disagrees is the band's
+frozen snapshot of the reference.
+
+**The band is not being edited.** It stands as declared and it stands as failed, because the rule
+that bands are never adjusted after a result is known does not carry an exception for the times
+it is inconvenient — and a band that references a moving quantity by value is a real defect in
+the band, not a technicality.
+
+**What would close it.** A **re-declared A24-R band 1** stating the tolerance against
+`payload_family.py`'s *current* output rather than a snapshot of it, dated, with the original
+band quoted beside it, and committed **before** the re-run. Every other band in A24 is unaffected.
+
+### P55. `velocity_levers.py` prices every lever at the superseded centre-plane K<sub>t</sub>: MEDIUM, NEW 2026-08-14
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+`analysis/velocity_levers.py` drives `motor_model.shot()` with a per-row K<sub>t</sub>, and every
+row carries a value derived **before** [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md): the
+as-drawn rows at `11.0258e-3`, the thinner-magnet rows at `9.14e-3` and `8.02e-3`, the two-layer
+rows at `7.33e-3`. All four are **centre-plane** figures. The depth-resolved solve measured the
+as-drawn array at **0.9558** of its centre-plane value, so every row in the table is optimistic
+and `docs/DESIGN_OPTIONS_exit_velocity.md` inherits it.
+
+**Why it is not fixed by scaling.** Applying 0.9558 to the changed-geometry rows assumes the depth
+factor is independent of magnet thickness and airgap, and **nothing has measured that**. Scaling
+them would produce four numbers that look derived and are assumed.
+
+**What would close it.** Re-derive K<sub>t</sub> for each distinct magnetic geometry in the table
+with `thrust_constant(nz=9)`, the same way the as-drawn value was re-derived, and re-run. It is
+one solve per distinct geometry, four in total.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

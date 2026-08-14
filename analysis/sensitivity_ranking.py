@@ -158,7 +158,7 @@ def binding_output(key, value):
         old = pc.SIG_NDFEB
         pc.SIG_NDFEB = 1.0 / value
         try:
-            r = pc.e19(16.388)
+            r = pc.e19(mm.operating_point()['v_exit'])
         finally:
             pc.SIG_NDFEB = old
         return 'magnet eddy rise per shot', r['dT_per_shot_K'], 'K'

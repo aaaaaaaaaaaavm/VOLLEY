@@ -7,7 +7,7 @@
     "python_license": "PSF License",
     "numpy": "2.4.6",
     "numpy_license": "BSD-3-Clause",
-    "source_sha256": "5784c50dddae19bc4bc055cdad8b780443529eb7b5c106ead6553ef6cf52be3d"
+    "source_sha256": "af28fd9ef95ab67bbce2cf74e629142ff258badd8e2e4f8f8afad8b7afc71e86"
   },
   "solver_settings": {
     "time_samples": 20001,
@@ -22,8 +22,8 @@
     "deployer_inertia": "124.5 kg box at the 1.839 x 0.530 m envelope",
     "rigid_body": "no structural modes, damping, flexible coupling, or controller"
   },
-  "shot_impulse_Ns": 65.552,
-  "campaign_impulse_Ns": 786.624,
+  "shot_impulse_Ns": 64.116,
+  "campaign_impulse_Ns": 769.392,
   "host_sweep": [
     {
       "host_kg": 200.0,
@@ -154,12 +154,12 @@
   "bands": [
     {
       "row": 1,
-      "result_pct": 0.31730534537466437,
+      "result_pct": 0.32441200324412006,
       "verdict": "PASS"
     },
     {
       "row": 2,
-      "result_pct": 7.204204295826213,
+      "result_pct": 7.365556179424793,
       "verdict": "PASS"
     },
     {

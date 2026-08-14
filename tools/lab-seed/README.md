@@ -1,74 +1,85 @@
-# VOLLEY, Phase II
+# VOLLEY-lab
 
-The research track of the VOLLEY programme.
+**The vault: ideas that never became a complete thing, and why each one stopped.**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
 |---|---|---|
-| [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) | Main: the authoritative engineering record. Improved continuously | |
-| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | The concept at its most reliable, as a conference contribution. **Frozen when published** | |
-| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | The same concept as a full submission. **Frozen when presented** | |
-| **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | The vault: ideas that never became a complete thing, and why each stopped | |
+| [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) | Main: the authoritative engineering record. Improved continuously |  |
+| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | The concept at its most reliable, as a conference contribution. **Frozen when published** |  |
+| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | The same concept as a full submission. **Frozen when presented** |  |
+| **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | The vault: ideas that never became a complete thing, and why each stopped | ← |
 <!-- PROGRAMME-HEADER-END -->
 
-> ## This repository makes no promises
+> ## Nothing here should be cited
 >
-> No frozen baseline. No stability requirement. Numbers here may be wrong, half-finished, or
-> abandoned mid-thought. **Nothing in this repository should be cited.**
->
-> The engineering record is the [flagship](https://github.com/aaaaaaaaaaaavm/VOLLEY). If
-> anything here disagrees with it, the flagship is right.
+> No baseline, no stability promise, no acceptance bands. Numbers on these pages may be
+> wrong, half-finished or abandoned mid-thought. The engineering record is
+> [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY), and where anything here disagrees
+> with it, **it is right and this is not**.
 
-## Why this exists
+## What this repository is for
 
-The [flagship](https://github.com/aaaaaaaaaaaavm/VOLLEY) is a Phase I deliverable and its
-stability is a design requirement. This repository is the pressure valve that lets it stay
-frozen.
+Every project accumulates work that was real but did not finish: an architecture that was
+priced and declined, a scaling study that answers a question nobody has asked yet, a
+measurement that killed something. Most of it is deleted, and the reasoning is lost with it.
 
-A Phase II track kept *inside* the flagship is a soft boundary, one `git checkout` from
-becoming an edit to the frozen baseline. This is a hard wall instead of a line on the floor.
+**This is where that work is kept instead.** It is a vault, not a graveyard — the difference
+is that a vault is organised for retrieval.
 
-**Redesign freely here. Do not touch the baseline there.**
+The main record stays clean because this exists. A research track kept *inside* it is one
+`git checkout` from becoming an edit to the record; a separate repository is a wall rather
+than a line on the floor.
 
-## What belongs here
+## The one rule
 
-Anything that would make the design **better** rather than **correct**. The deferred list and
-each item's entry criterion live in the flagship's
-[`docs/VAULT.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/VAULT.md):
+**Every entry states why it stopped.**
+
+Not "deferred" — *why*, with the number that decided it. The rail-drive entry carries the
+transverse edge factor of **0.0253** that killed it, against the **0.55** it had been sized
+on. The cable gondola carries the drivetrain inertia that eats its own gain. **That is what
+makes this evidence rather than a pile**, and it is the only rule here.
+
+An entry without a reason is not deferred. It is abandoned with extra steps.
+
+## What is here
+
+Long-form entries live in this repository. The complete register — every entry, its status
+and its entry criterion — is kept in the main repository so the numbering cannot fork:
+**[`docs/VAULT.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/VAULT.md)**.
 
 | | |
 |---|---|
-| PII-1 | Momentum-transfer release, recovers the full velocity shortfall for 1.6 % of shot energy |
-| PII-2 | Rib-stiffened chassis, A4 leaves a 17x stress margin unspent |
-| PII-3 | Two-layer stator (G3-D4), sits upstream of K<sub>t</sub> |
-| PII-4 | Envelope repackaging (P9), currently 44 % over ESPA Grande |
-| PII-5 | Variable-shape atmosphere, the root cause behind P16 |
+| [**PII-8** — VOLLEY as a free-flyer](PII-8_free_flyer.md) | A long deployed track and release at perigee reaches TLI and Mars-class C3 without exceeding CubeSat qualification. **Stopped by three problems named in the file**: airgap straightness at 0.7–2 ppm over a deployed structure, a 294 kJ shot against a bank that already fails at 2.88 kJ, and whether 25 g survives review as a *sustained* load |
+| [**PII-9** — the lunar case](PII-9_lunar.md) | Where this technology has always belonged, and the mass driver it descends from. 1.33 MJ/kg to lunar orbit, so 15 kW launches a tonne a day. **Stopped by having no host**: it describes a different programme, not this one. The payload is ore, so the g-limit governing the whole design disappears |
+| [**PII-11** — a deployable track, and the side-rail layout](PII-11_deployable_track.md) | A telescoping track long enough to accelerate *and* regeneratively arrest reaches **48 % electrical-to-payload against 18.5 %**, deletes the eddy brake and stows at 1150 mm. The only option that improves velocity and envelope together. **Stopped by type, not by number**: a deployable structure is an architecture change however good its numbers are |
+| [**PII-14** — a cable-driven gondola](PII-14_cable_driven_gondola.md) | Propulsion off the vehicle and onto a cable, energy from a flywheel. A 2 kg gondola reaches **24.5 m/s in the existing 1.30 m track** — *if the drivetrain has no rotating inertia*. **Stopped by `m_eff = I/r²`**: at 7.4 kg of referred inertia the entire gain is gone |
+| [`notes/`](notes/) | Unstructured, date-stamped, finished by nobody |
 
-More arrived on 2026-07-30, from reading the nearest published work and from the bank finding:
+**PII-11 is the one that is hardest to leave shut**, because unlike the others it improves the
+machine actually being built rather than describing a different one. That is exactly why it
+needs a gate.
 
-| | |
+## How something leaves
+
+| From → to | Condition |
 |---|---|
-| PII-6 | **Reachable-domain analysis.** Feng et al. compute a 3-D envelope of the orbits one shot makes available. The flagship reports a scalar lifetime multiplier instead, which answers a smaller question. Their method is better and this is where adopting it belongs |
-| PII-7 | **A bank that can source the shot.** P26 found the flagship's supercapacitor bank specified at an ESR no commercial cell achieves, and the shot does not close at a realistic value. Costed at four parallel strings in the flagship's VAULT.md |
-| **PII-8** | **[VOLLEY as a free-flyer](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-8_free_flyer.md).** A long deployed track plus release at perigee reaches TLI and Mars-class C3 without exceeding CubeSat qualification. Three hard problems in front of it, named in the file |
-| **PII-9** | **[The lunar case](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-9_lunar.md).** Where this technology actually belongs, and the mass driver it descends from. 1.33 MJ/kg to lunar orbit, so 15 kW launches a tonne a day |
-| PII-10 | **Magazine indexing disturbance** (E24). Xu et al. treat the attitude disturbance from moving satellites inside a deployer as a cost worth optimising against. The flagship budgets recoil from the shot and nothing from the indexing between shots. The bookkeeping half is an error correction and belongs upstream; designing an indexing sequence that minimises it belongs here |
+| **vault → main** | Its acceptance bands were declared **before its script existed**, and run |
+| **main → paper / thesis** | Stable, effective and reliable against the problem statement |
+| **paper / thesis → frozen** | Presented or published |
 
-Also: anything from dossier §8's cross-industry list that turns into real work, and any idea
-that does not yet have a home.
+**Nothing crosses upward on enthusiasm.** An item is promoted by meeting the criterion it was
+given — written when it was deferred, not when it is reviewed, because a criterion written
+afterwards is written by someone who already knows what they want the answer to be.
 
 ## What does not belong here
 
-**Error corrections.** If something in the flagship is *wrong*, fix it in the flagship. The
-distinction is the whole of the change-control rule in
-[`BASELINE.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/BASELINE.md), and it is by
-type, not by convenience. P17 is tedious and belongs upstream; the momentum-transfer release
-is fascinating and belongs here.
+**Corrections.** If something in the main repository is *wrong*, fix it there. The distinction
+is by type, not by convenience: a tedious bookkeeping error belongs upstream, and a fascinating
+architecture belongs here.
 
-## How work gets out
+## Adding an entry
 
-Only at a **baseline boundary**: the next opens after thesis submission, and only by meeting
-the entry criterion written when the item was deferred. Not by seeming promising.
-
-That rule exists for the same reason acceptance bands are declared before runs: a criterion
-written afterwards is written by someone who already knows what they want the answer to be.
+Name it. State what it buys, with a number. Say why it is improvement rather than correction.
+Then write its entry criterion **before you stop thinking about it** — and when it stops, write
+down what stopped it.

@@ -74,7 +74,7 @@ reader cannot otherwise tell a wrong number from a missing subsystem.
 | **E3** | Component masses are **parametric, unchecked against vendor data**, spread perhaps ±15 % | The 84.5 kg, and therefore kill criterion 1 |
 | **E7** | Sensor noise, latency and resolution are **assumed** — no sensor is selected | The 0.0274 m/s dispersion, and now the loop's phase margin |
 | **E5** | Host stage mass, control authority and accommodation envelope are **undisclosed** | Kill criteria 2 and 6, the recoil table, and A15 Case B |
-| **E6** | Absolute orbital lifetimes are uncertain; the multiplier is **not invariant** across solar activity (P16) | The ×1.62 headline |
+| **E6** | Absolute orbital lifetimes are uncertain; the multiplier is **not invariant** across solar activity (P16) | The ×1.60 headline |
 | **E18** | The conjunction covariance is **invented** | A6, and any collision-probability statement |
 | **E11** | **No contamination or outgassing analysis** exists | Payload compatibility, and any flight approval |
 | — | Structural **Q is unmeasured**; every Miles-equation result is quoted at an assumed Q | P37, E10, and the gate sizing that resolved them |
@@ -83,7 +83,7 @@ reader cannot otherwise tell a wrong number from a missing subsystem.
 
 These would remain true even if every item above were closed.
 
-1. **The velocity is small.** 16.0 m/s buys ×1.62 of orbital life and **0.12° of plane change**. Plane change is *never* a product feature at 133 m/s per degree — 8.1× the entire shot.
+1. **The velocity is small.** 16.0 m/s buys ×1.60 of orbital life and **0.12° of plane change**. Plane change is *never* a product feature at 133 m/s per degree — 8.1× the entire shot.
 2. **The mass is fixed and the payload is not.** The deployer costs what it costs whether it carries 12 satellites or 288. Every economic argument is really an argument about how many customers divide 84.5 kg.
 3. **It replaces twelve independent one-shot mechanisms with one twelve-cycle mechanism.** That is the architecture's defining trade and it is a *reliability* trade, made in the wrong direction, bought back only by cycle life nobody has measured.
 4. **A spring can reach this velocity.** A ~1.8 kg staged spring delivers comparable Δv. It fails only in that its velocity is **built in rather than commanded**. Commandability is the whole product — not speed.
@@ -115,7 +115,7 @@ design point:
 | **3. Bank ESR** | 65 mΩ | 116–185 mΩ | **Crossed as designed.** Fix known (PII-7), costs 4× mass |
 | 4. Tip-off | 2 °/s | release is fine; **cradle arrival is 36–231 °/s** | Not demonstrated |
 | 5. Attitude at trigger | servo-nullable | bands **fail** on transient peak rate | Not demonstrated |
-| 6. Host recoil | host accepts it | 65.6 N·s/shot, ~0.37 kg propellant per manifest | **Healthy** |
+| 6. Host recoil | host accepts it | 64.1 N·s/shot, ~0.37 kg propellant per manifest | **Healthy** |
 | 7. Is 16.5 m/s worth anything | beats drag or propulsion | 18× faster phasing, schedulable | **Survives, narrowly, on one axis** |
 
 **Two of the three crossed thresholds have fixes that make the third worse.** A bigger bank and a
@@ -129,7 +129,7 @@ repackaged envelope both add mass, and mass is criterion 1.
 |---|---|---|---|
 | **"An unmodified CubeSat"** | Abstract, README, requirements | **E35**: the payload sits 20 mm from the array at **442× a magnetometer's full scale**, continuously, and soft-magnetic parts leave **permanently magnetised** | **Live.** §VII of the paper now concedes the claim "holds mechanically and electrically… but is not established magnetically." The abstract and README still say it flatly |
 | **"Compatible with any restartable stage or hosted platform"** | Abstract, conclusion | Kill criterion 2: **no accommodation envelope for that host class is public**, so the 1839 mm length cannot be shown to fit anything | **Live and disclosed** — §V-E says so; the abstract does not |
-| **"7.5× the extension a spring delivers"** | Abstract | That ratio compares *gains*. On **delivered orbital life** it is **1.50** once per-shot reliability is weighted | **Resolved** — both figures now carried together everywhere |
+| **"7.3× the extension a spring delivers"** | Abstract | That ratio compares *gains*. On **delivered orbital life** it is **1.50** once per-shot reliability is weighted | **Resolved** — both figures now carried together everywhere |
 | **"0.0274 m/s dispersion"** attributed to closed-loop control | Abstract, §V-A, conclusion | **P47**: the loop was unstable and the figure came from saturation limits plus a terminal trim | **Resolved 2026-08-13** — gain redesigned, figure unchanged at two significant figures, §IV-D states the history |
 | **K_t = 10.54 N per kA/m** | Everywhere | **P46**: the depth-resolved value is **10.5386**, 4.42 % lower | **Live and disclosed** — held under D3 |
 | **"A reusable sled"** implying a reusable machine | Architecture | **E30**: nine of thirteen elements forfeit the whole remaining manifest on a single failure | **Live.** Stated in §VIII, absent from the abstract |

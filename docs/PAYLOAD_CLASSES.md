@@ -39,14 +39,14 @@ length sets thrust and sled mass together: a shorter array is a lighter sled *an
 | Payload | Envelope, mm | Per load | Deployer kg per satellite | |
 |---|---|---|---|---|
 | ChipSat / femtosat | 35 x 35 x 2.5 | 13322 | **0.006** | **beyond the mechanism** |
-| PocketQube 1P | 50 x 50 x 50 | 326 | **0.235** | **beyond the mechanism** |
-| ThinSat | 114 x 114 x 25.4 | 123 | **0.622** |  |
-| PocketQube 3P | 50 x 50 x 150 | 108 | **0.708** |  |
-| TubeSat | 88 x 88 x 127 | 41 | **1.866** |  |
-| 1U CubeSat | 100 x 100 x 100 | 40 | **1.913** |  |
-| 3U CubeSat | 340 x 100 x 100 | 12 | **6.375** |  |
-| 6U CubeSat | 340 x 200 x 100 | 6 | **12.750** |  |
-| 12U CubeSat | 340 x 200 x 200 | 3 | **25.500** |  |
+| PocketQube 1P | 50 x 50 x 50 | 326 | **0.259** | **beyond the mechanism** |
+| ThinSat | 114 x 114 x 25.4 | 123 | **0.687** |  |
+| PocketQube 3P | 50 x 50 x 150 | 108 | **0.782** |  |
+| TubeSat | 88 x 88 x 127 | 41 | **2.061** |  |
+| 1U CubeSat | 100 x 100 x 100 | 40 | **2.112** |  |
+| 3U CubeSat | 340 x 100 x 100 | 12 | **7.042** |  |
+| 6U CubeSat | 340 x 200 x 100 | 6 | **14.083** |  |
+| 12U CubeSat | 340 x 200 x 200 | 3 | **28.167** |  |
 
 ### Shortening the magnet array, which buys nothing
 

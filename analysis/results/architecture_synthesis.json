@@ -21,29 +21,29 @@
   ],
   "stroke": [
     {
-      "v": 16.387939109293626,
-      "a_g": 10.533001626935276,
-      "stroke_m": 1.299563571367012
+      "v": 16.029192806414976,
+      "a_g": 10.067557659872477,
+      "stroke_m": 1.3007689962405293
     },
     {
-      "v": 16.387939109293626,
+      "v": 16.029192806414976,
       "a_g": 16.1,
-      "stroke_m": 0.8502052926406554
+      "stroke_m": 0.8133892466972654
     },
     {
-      "v": 16.387939109293626,
+      "v": 16.029192806414976,
       "a_g": 21.6,
-      "stroke_m": 0.6337178338664146
+      "stroke_m": 0.6062762440660173
     },
     {
-      "v": 16.387939109293626,
+      "v": 16.029192806414976,
       "a_g": 25.0,
-      "stroke_m": 0.5475322084605821
+      "stroke_m": 0.523822674873039
     },
     {
       "v": 20.0,
-      "a_g": 10.533001626935276,
-      "stroke_m": 1.9355697985240994
+      "a_g": 10.067557659872477,
+      "stroke_m": 2.025055184750674
     },
     {
       "v": 20.0,
@@ -64,16 +64,16 @@
   "envelope": [
     {
       "label": "Gen5 velocity at 16.1 g",
-      "v": 16.387939109293626,
+      "v": 16.029192806414976,
       "a_g": 16.1,
-      "envelope_m": 1.2538096759230202,
+      "envelope_m": 1.2169936299796302,
       "fits": true
     },
     {
       "label": "Gen5 velocity at 21.6 g",
-      "v": 16.387939109293626,
+      "v": 16.029192806414976,
       "a_g": 21.6,
-      "envelope_m": 1.0373222171487795,
+      "envelope_m": 1.0098806273483822,
       "fits": true
     },
     {
@@ -86,9 +86,9 @@
   ],
   "mass_sketch": {
     "lumps": {
-      "Track longerons (2x Al box section)": -2.3631245136059498,
-      "Stator copper (1.3 m, 60% fill)": -2.176286712087453,
-      "Stator formers / potting (PEEK eq.)": -0.336644350776028,
+      "Track longerons (2x Al box section)": -2.556548089382625,
+      "Stator copper (1.3 m, 60% fill)": -2.354417468779951,
+      "Stator formers / potting (PEEK eq.)": -0.36419895220189874,
       "Sled Halbach magnets (2 faces)": -3.6720000000000006,
       "Sled Ti chassis (shell equivalent)": -0.7367975999999999,
       "Sled rollers / latch / backstop": -0.45,
@@ -100,9 +100,9 @@
     },
     "iron_add": 3.0,
     "shuttle": 0.6,
-    "net_kg": -16.92665557646943,
-    "dry_before": 76.53158800000001,
-    "dry_after": 59.604932423530585
+    "net_kg": -17.325764510364472,
+    "dry_before": 84.53158800000001,
+    "dry_after": 67.20582348963555
   },
   "caveat": "SKETCH, NOT VALIDATION. No band is declared for anything here. The mass figures are a scaling argument over mass_properties.py's lumps, not a re-run of the rollup."
 }

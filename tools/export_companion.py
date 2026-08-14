@@ -64,18 +64,43 @@ def header_table(here):
     return "\n".join(out)
 
 
+AUTHORED = {
+    "paper": ("the manuscript, its class file, the built PDF, the CV and the submission "
+              "archive, all under `paper/`"),
+    "thesis": ("the manuscript and its figures under `source/`, and everything under "
+               "`university/`"),
+}
+
+FREEZE = {
+    "paper": "published",
+    "thesis": "presented",
+}
+
+
 def banner(commit, kind):
-    return f"""> ## Generated repository, do not edit here
+    """The provenance block at the top of a companion README.
+
+    THIS USED TO SAY "nothing here is authored". That stopped being true on 2026-08-13,
+    when ADR-028 moved the manuscript out of the engineering record and into the companions
+    and ADR-031 gave the companions a role of their own. A banner that tells a contributor
+    every file will be overwritten, in a repository where some files never are, is worse
+    than no banner: it is wrong in the direction that loses work.
+    """
+    return f"""> ## What is generated here, and what is not
 >
-> Every file in this repository is generated from the **VOLLEY flagship** by
-> `tools/export_companion.py`. Nothing here is authored, and any edit made here will be
-> destroyed the next time it is regenerated.
+> **Generated** from [{OWNER}/{FLAGSHIP}](https://github.com/{OWNER}/{FLAGSHIP}) at commit
+> `{commit}` by `tools/export_companion.py`: the analysis scripts and their results, the
+> validation run sheets, the figures, and the reference records. Any edit to those is
+> destroyed on the next export. **Fix them in {FLAGSHIP} and this repository picks the fix up.**
 >
-> **Source:** [{OWNER}/{FLAGSHIP}](https://github.com/{OWNER}/{FLAGSHIP}) at commit `{commit}`
-> **Found a mistake?** Fix it in the flagship. This repository will pick it up.
+> **Authored here, and never overwritten:** {AUTHORED[kind]}. {FLAGSHIP} is an engineering
+> record and holds no manuscript source.
 >
-> The flagship is the authoritative engineering record. Where this repository and the
-> flagship disagree, the flagship is right and this copy is stale.
+> Where a generated file disagrees with {FLAGSHIP}, {FLAGSHIP} is right and this copy is stale.
+>
+> **This repository may be improved until the work is {FREEZE[kind]}, and freezes at that
+> moment.** What enters it has to be stable, effective and reliable against the problem
+> statement -- not merely newer.
 
 {header_table(kind)}
 """
@@ -152,25 +177,28 @@ scripts behind every number in it, the validation run sheets, and the literature
 ```bash
 pip install -r requirements.txt
 cd analysis && python3 verify_field.py && python3 mass_properties.py \\
-  && python3 motor_model.py && python3 sizing.py && python3 astro.py && python3 cost.py
+  && python3 motor_model.py && python3 sizing.py && python3 payload_family.py \\
+  && python3 astro.py && python3 comparators.py && python3 cost.py
 ```
 
-Roughly two minutes. Results land in `analysis/results/*.json`.
+Roughly two minutes, and the order matters: everything downstream reads the rated shot from
+`motor_results.json` rather than restating it. Results land in `analysis/results/*.json`.
 
 This has been checked from a clean clone rather than assumed: run that way, `motor_results.json`
-returns `shot.v_exit = 16.388`, which is the figure the paper's abstract quotes.
+returns `shot.v_exit = 16.029`, which is the figure the paper's abstract quotes.
 
 ## What reproduces, and how well
 
 | Quantity | Value | Cross-checked against |
 |---|---|---|
-| Thrust constant | 11.03 N per kA/m | A meshed magnetostatic FEM, agreeing to 0.03 % |
+| Thrust constant, depth-resolved | 10.54 N per kA/m | Nothing independent. The FEM check below is of the centre-plane value it derives from |
+| Thrust constant, centre-plane | 11.03 N per kA/m | A meshed 2-D magnetostatic FEM, agreeing to 0.03 % |
 | Airgap field | 0.694 T midgap peak | magpylib, agreeing to three digits |
-| Orbital decay | x1.62 lifetime | Cowell RK4, agreeing to 99.4 % |
-| Exit velocity | 16.388 m/s at 10.53 g | Single-sourced |
-| Dispersion | 0.027 m/s, 3 sigma | Single-sourced, and resting on assumed sensor noise |
+| Orbital decay | x1.60 lifetime | Cowell RK4, agreeing to 99.4 % |
+| Exit velocity | 16.029 m/s at 10.07 g | Single-sourced |
+| Dispersion | 0.0274 m/s, 3 sigma | Single-sourced, and resting on assumed sensor noise |
 
-The last two have no independent check. `PROVENANCE.md` says which of these carry weight.
+Only two rows carry an independent check. `PROVENANCE.md` says which of these carry weight.
 
 ## Figures
 
@@ -204,30 +232,34 @@ Final-year thesis submission material, generated from the VOLLEY flagship.
 | | |
 |---|---|
 | `source/` | Manuscript and figures |
-| `analysis/` | Six scripts producing every number in the work |
-| `validation/` | Nine analyses, each with its acceptance band declared before the run |
-| `cad/` | Three CAD generations, with the defect audit for each |
+| `analysis/` | The scripts producing every number in the work |
+| `validation/` | The analyses, each with its acceptance bands declared before the run |
+| `cad/` | The CAD generations, with the defect audit for each |
 | `appendix/` | Baseline, defect ledger, validation report, provenance, prior art, literature, decision records |
 
 ## For an examiner, in reading order
 
 1. `appendix/PROVENANCE.md`, which says what stands behind each claim and what does not.
-2. `appendix/BASELINE.md`, the twenty frozen values, and the rule for changing any of them.
-3. `appendix/adr/`, eighteen decision records. Each states the alternatives considered and the
+2. `appendix/BASELINE.md`, the frozen values, and the rule for changing any of them.
+3. `appendix/adr/`, the decision records. Each states the alternatives considered and the
    consequences accepted. ADR-003 carries its own amendment showing an argument it got wrong.
 4. `appendix/OPEN_PROBLEMS.md`, every known defect, including the ones that damage the work's own
-   claims.
+   claims — and the ones found by checking this work against itself rather than by anyone asking.
 5. `appendix/PRIOR_ART.md`, the nearest published work, and the two claims retracted after reading
    it.
 
 The decision records are the part most worth reading. They are where the reasoning lives, and
 several of them record the alternative that was rejected and why.
 
-## University material goes in `university/`
+## What is authored here
 
-That directory is the one place in this repository where hand-written content survives.
-Submission forms, formatting mandates and viva material are university-specific and do not belong
-upstream. **Everything outside `university/` is regenerated and will be overwritten.**
+`source/` holds the manuscript, which is written in this repository — the main record is an
+engineering record and carries no manuscript source. `university/` holds submission forms,
+formatting mandates and viva material, which are university-specific and do not belong upstream.
+**Neither is ever touched by the export. Everything else is regenerated and will be overwritten.**
+
+This repository may be improved until the thesis is presented, and freezes at that moment. What
+enters it has to be stable, effective and reliable against the problem statement.
 
 ## Before citing
 

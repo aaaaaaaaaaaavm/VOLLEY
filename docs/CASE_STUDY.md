@@ -61,7 +61,7 @@ which nothing else available competes.
 **+49 % of orbital life per satellite**, on hardware the customer does not modify.
 
 **Two ways to read that ratio, and the honest one is the second.** On *lifetime extension* — the
-gain against an unboosted satellite — VOLLEY is **7.52×** a spring. On **delivered orbital life**,
+gain against an unboosted satellite — VOLLEY is **7.33×** a spring. On **delivered orbital life**,
 which is what a risk-weighted comparison uses, it is **1.495×**. Both are true. The second is the
 one an operator should plan with.
 
@@ -76,7 +76,7 @@ axis they win on, not without it.
 |---|---|---|
 | **Spring dispenser** | **Maturity (TRL 9 vs 2–3), reliability, simplicity.** A ~1.8 kg spring reaches the same 16.0 m/s within the g-cap (A27) | **Its designed differential is exactly zero.** Every satellite gets the same push, so the fleet can only phase by drag — 25 days, and not schedulable |
 | **Differential drag** | **Free**, and it has flown on a 12-satellite constellation | 25 days, and it needs differential ballistic coefficient — attitude control or deployable area — **which is itself a satellite modification** |
-| **Cold-gas module** | **Mass, by 7.5× at 3U** (A21, declared as a loss before the run) | Puts a **pressure vessel, a propulsion system and a regulatory path on the customer's satellite.** VOLLEY's whole proposition is that the satellite carries nothing |
+| **Cold-gas module** | **Mass, by 8.3× at 3U** (A21, declared as a loss before the run) | Puts a **pressure vessel, a propulsion system and a regulatory path on the customer's satellite.** VOLLEY's whole proposition is that the satellite carries nothing |
 | **Orbital transfer vehicle** | **Δv, by hundreds of m/s.** It can change plane; VOLLEY cannot at any price (133 m/s per degree) | **Over-specified for a job needing ~16 m/s**, and it makes the customer buy a spacecraft. Right-sizing is the argument, not superiority |
 
 **No cost comparison is offered against any of them.** Every cost claim in this project was
@@ -107,7 +107,7 @@ invisibly.
 
 **Stated here rather than left to be discovered.**
 
-- **At 3U against a cold-gas module, VOLLEY loses on mass by 7.5×.** The answer is smaller
+- **At 3U against a cold-gas module, VOLLEY loses on mass by 8.3×.** The answer is smaller
   classes — but **A24 found the payload ladder closes kill criterion 1 only at PocketQube scale**,
   two rungs lower than this project used to claim, and those classes have no corner rails and no
   designed interface yet.

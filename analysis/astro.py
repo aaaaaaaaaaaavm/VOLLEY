@@ -23,6 +23,7 @@ import numpy as np
 import math
 import json
 import os
+import motor_model as mm
 
 # Outputs go next to this script, not next to whoever ran it. Every script here used to
 # write to a cwd-relative "results/", so running one from the repository root created a
@@ -131,8 +132,10 @@ def propagate(a, e, inc, argp, M0, t):
                      (sw * si) * xo + (cw * si) * yo], -1)
 
 
-def conjunction(dv=16.388, alt_m=450e3, inc_deg=51.6, n_shots=12, spacing_s=1200.0,
+def conjunction(dv=None, alt_m=450e3, inc_deg=51.6, n_shots=12, spacing_s=1200.0,
                 days=30, trace=False):
+    if dv is None:
+        dv = mm.operating_point()['v_exit']
     r0 = RE + alt_m
     inc = math.radians(inc_deg)
     a1, e1 = boosted_elements(alt_m, dv)
@@ -188,7 +191,7 @@ def seeding(alt_m=450e3, splits=(2, 5, 10), target_deg=30):
 if __name__ == '__main__':
     # Rated exit velocity, from motor_model.py at the CAD-derived 9.445 kg sled (P15).
     # Was 20.37 m/s against the 4.86 kg parametric estimate until 2026-07-29.
-    DV = 16.388
+    DV = mm.operating_point()['v_exit']
     res = {}
 
     print("=== lifetime multiplier, 450 km ===")

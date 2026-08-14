@@ -72,7 +72,7 @@ the gap is worth, they come from [`RESULTS.md`](RESULTS.md), and the lifetime on
 independent propagator behind it that **disagrees at low solar activity** — which is why it is
 quoted at a stated activity level and not claimed invariant.
 
-**Stated as a ratio against the incumbent** ([A21](../validation/A21_comparators.md)): **7.52×
+**Stated as a ratio against the incumbent** ([A21](../validation/A21_comparators.md)): **7.33×
 the orbital lifetime extension of the fastest published spring**, 9.45× against a typical one, at
 **mass parity** per satellite — and against a designed inter-satellite differential of **zero**,
 which is what a spring can command.
@@ -153,7 +153,7 @@ The product is not the same at every payload class, and the repository has not s
 
 | Class | What the customer is buying |
 |---|---|
-| **3U / 6U** | Per-satellite commanded velocity. Mass per satellite is at parity with a dispenser and loses to a propulsion module by 7.5× |
+| **3U / 6U** | Per-satellite commanded velocity. Mass per satellite is at parity with a dispenser and loses to a propulsion module by 8.3× |
 | **1U / PocketQube** | Distribution at volume. Deployer mass per satellite falls by up to 30×, which is where the commercial case actually closes |
 | **ChipSat / femtosat** | **A designed dispersion across a swarm.** Individual velocity control stops meaning anything; what matters is the *shape* of the velocity distribution across hundreds of units — and **no other deployer can produce one**, because every alternative gives every unit the same push |
 

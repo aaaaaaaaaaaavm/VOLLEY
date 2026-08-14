@@ -48,15 +48,15 @@ stage at programmable velocity, aimed at the unserved regime between spring depl
 
 | | | Source |
 |---|---|---|
-| Thrust constant | 10.54 N per kA/m, ±0.99 % ripple | `analysis/motor_model.py`, A1 |
-| Exit velocity, 3U | **16.39 m/s at 10.1 g** | `analysis/motor_model.py` |
+| Thrust constant | 10.54 N per kA/m, ±1.01 % ripple | `analysis/motor_model.py`, A1 |
+| Exit velocity, 3U | **16.03 m/s at 10.1 g** | `analysis/motor_model.py` |
 | Acceleration zone / track | 1.3 m / 1.5 m | `cad/parameters.json` |
 | Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint | `analysis/motor_model.py` |
-| **Mass, dry / loaded** | **84.5 kg / 124.5 kg** | `analysis/mass_properties.py` |
+| **Mass, dry / loaded** | **84.5 kg / 132.5 kg** | `analysis/mass_properties.py` |
 | Deployer mass per 3U satellite | **7.042 kg** | `analysis/payload_family.py` |
 | **Energy drawn per shot** | **2.78 kJ gross, 2.74 kJ net of regeneration** | `analysis/motor_model.py` |
 | Delivered to payload | 514 J — **18.5 % electrical-to-payload** | `analysis/motor_model.py` |
-| Recoil per shot | 65.6 N·s | `analysis/astro.py` |
+| Recoil per shot | 64.1 N·s | `analysis/astro.py` |
 | Magazine | 12 × 3U, two transverse cassettes | `cad/parameters.json` |
 
 **TRL 2–3. Nothing has been built, fired, or measured at any scale.** Twenty-four validation
@@ -79,7 +79,7 @@ The metrics on which the two differ. Losses are in the same table as the wins.
 
 | | Spring dispenser | VOLLEY | |
 |---|---|---|---|
-| Exit velocity | ~2 m/s (NRCSD-E specifies 0.5–2.5) | **16.39 m/s** | 6.6× |
+| Exit velocity | ~2 m/s (NRCSD-E specifies 0.5–2.5) | **16.03 m/s** | 6.4× |
 | Commanded differential between satellites | **zero by design** | per shot, continuous | categorical |
 | 30° of constellation phase | 25 days, by differential drag | **1.4–6.9 days** | `analysis/astro.py` |
 | Orbital life delivered, per satellite | 1.41 yr | **2.11 yr** | 1.495× |
@@ -101,7 +101,7 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 > **Reviewing it?** **[`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md)** answers
 > thirty-five reviewer questions, or concedes them. **Fourteen have no answer in this repository
 > at all**, and they are listed as openly as the eleven that do. Three of the answers are losses:
-> a cold-gas module beats this design at 3U by 7.5×, the satellite leaves permanently magnetised,
+> a cold-gas module beats this design at 3U by 8.3×, the satellite leaves permanently magnetised,
 > and a payload's magnetometer is unusable inside the deployer.
 
 > **Judging how far along this is?** **[`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md)**
@@ -182,10 +182,10 @@ flowchart LR
     A["Cassette feed<br/>12 x 3U, two cassettes"] --> B["Retention gate<br/>preload into structure"]
     B --> C["Accelerate<br/>1.3 m, 10.1 g, 162.3 ms"]
     C --> D["Coast &amp; trim<br/>0.2 m"]
-    D --> E["Release at 1500 mm<br/>16.39 m/s"]
+    D --> E["Release at 1500 mm<br/>16.03 m/s"]
     E --> F["Eddy brake<br/>1530-1740 mm"]
     F --> G["Sled recovered<br/>reusable, next shot"]
-    E -.->|"payload departs"| H["Own orbit<br/>x1.62 lifetime"]
+    E -.->|"payload departs"| H["Own orbit<br/>x1.60 lifetime"]
 ```
 
 The satellite is never modified: the magnets ride the sled, not the payload. The sled leaves
@@ -210,14 +210,15 @@ electrical-to-payload, net of that credit.
 
 | Quantity | Value | Source |
 |---|---|---|
-| Thrust constant | 10.54 N per kA/m, ±0.99 % ripple, **independently computed by FEM to 0.03 %** | `analysis/motor_model.py`, A1 |
-| Exit velocity, 3U | **16.39 m/s at 10.1 g** | `analysis/motor_model.py` |
+| Thrust constant | 10.54 N per kA/m, ±1.01 % ripple | `analysis/motor_model.py`, A2 |
+| — its centre-plane value | 11.03 N per kA/m, **independently computed by a 2-D FEM to 0.03 %** | `analysis/motor_model.py`, A1 |
+| Exit velocity, 3U | **16.03 m/s at 10.1 g** | `analysis/motor_model.py` |
 | Electrical to payload efficiency | 18.5 % (2.74 kJ net of regeneration, 514 J delivered) | `analysis/motor_model.py` |
 | Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint to ±0.10 km apogee | `analysis/motor_model.py` |
-| Orbital lifetime multiplier | x1.62 at mean activity, **not invariant, see P16** | `analysis/astro.py` |
+| Orbital lifetime multiplier | x1.60 at mean activity, **not invariant, see P16** | `analysis/astro.py` |
 | Constellation seeding | 30° in 1.4-6.9 days vs 25 days by differential drag | `analysis/astro.py` |
-| Dry / loaded mass | 84.5 kg / 124.5 kg | `analysis/mass_properties.py` |
-| Recoil per shot | 65.6 N·s | `analysis/astro.py` |
+| Dry / loaded mass | 84.5 kg / 132.5 kg | `analysis/mass_properties.py` |
+| Recoil per shot | 64.1 N·s | `analysis/astro.py` |
 | Track first mode | 109 Hz fixed-fixed (target >70) | `analysis/sizing.py` |
 | Energy closure | 100.0 % accounted | `analysis/sizing.py` |
 
@@ -244,7 +245,7 @@ electrical-to-payload, net of that credit.
 >
 > **What this costs and does not cost.** Exit velocity is down 19 % and efficiency from
 > 32 % to 20 %, and to 19 % after the ESR correction of 2026-07-30 (P24); regeneration has
-> then took it to 21.2 % (A11); the corrected quadrature now gives 18.5 %. The lifetime multiplier is down only 10 %, x1.80 to x1.62, because lifetime
+> then took it to 21.2 % (A11); the corrected quadrature now gives 18.5 %. The lifetime multiplier is down only 10 %, x1.80 to x1.60, because lifetime
 > is a weak function of Î”v, the mission case survives better than the machine spec does.
 > 9.445 kg is the **as-drawn, unpocketed** geometry, and A4 reports a 17x stress margin, so
 > a rib-stiffened chassis would recover mass. Nobody has designed one
@@ -285,7 +286,7 @@ and its class of evidence, and note that the class for *measured* has **zero mem
 <table>
 <tr>
 <td width="50%"><img src="figures/F01_shot.png" alt="Shot simulation: force, velocity, current"><br><sub><b>The shot.</b> Force, velocity and current through the 162.3 ms stroke (<code>motor_model.py</code>).</sub></td>
-<td width="50%"><img src="figures/F04_life.png" alt="Orbital lifetime with and without the boost"><br><sub><b>Lifetime.</b> Boosted vs unboosted decay; the x1.62 multiplier at mean activity is the model result, not the absolute years (<code>astro.py</code>).</sub></td>
+<td width="50%"><img src="figures/F04_life.png" alt="Orbital lifetime with and without the boost"><br><sub><b>Lifetime.</b> Boosted vs unboosted decay; the x1.60 multiplier at mean activity is the model result, not the absolute years (<code>astro.py</code>).</sub></td>
 </tr>
 <tr>
 <td width="50%"><img src="figures/F12_bode.png" alt="Open-loop velocity-loop response at both gains"><br><sub><b>The velocity loop, A28.</b> The gain published until 2026-08-13 put the crossover at <b>557 Hz</b> — above both track modes — with <b>-50.4&deg;</b> of phase margin. The designed gain is 195 s<sup>-1</sup>: +82.2&deg;, +21.2 dB, and the dispersion does not move (<code>control_design.py</code>).</sub></td>
@@ -314,7 +315,7 @@ where possible. Four analyses were actually run; three could not be.
   enters the same multiplicative slot, so *both* halves of that claim were tested by a sweep
   that could not have detected a problem (**P16**).
 - **CalculiX** cleared the chassis on all three structural bands, which is what settled the
-  sled mass at the CAD-derived **9.445 kg** and moved the headline to 16.03 m/s (**P15**), before the quadrature correction moved it to 16.39 m/s.
+  sled mass at the CAD-derived **9.445 kg** and moved the headline to 16.03 m/s (**P15**), before the quadrature correction moved it to 16.03 m/s.
 - **ngspice** reproduced the then-current shot model to 0.03 % and then, re-run at the then-current operating
   point, found a loss the analytic model had no term for at all: the bank's own series
   resistance, 86 J a shot (**P24**). Corrected, the two methods agree on peak current to
@@ -412,7 +413,7 @@ authority are undisclosed, which is why the recoil budget is parametric. Obtaini
 thruster impulse budget and coast duration is the single data exchange that converts this
 analysis from parametric to specific, for any candidate vehicle, Indian or otherwise.
 
-Recoil is the satellite's momentum only, **65.6 N·s** per shot, nulled by a few grams of cold
+Recoil is the satellite's momentum only, **64.1 N·s** per shot, nulled by a few grams of cold
 gas. Comparison against fielded deployers and transfer vehicles, including Dhruva Space's
 flown DSOD, is in [`docs/LANDSCAPE.md`](docs/LANDSCAPE.md).
 

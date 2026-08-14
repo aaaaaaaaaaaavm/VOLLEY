@@ -185,17 +185,17 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   a genuine independent cross-check; everything else is single-sourced.</p>
   <table>
     <tr><th>Quantity</th><th>Value</th><th>Source</th></tr>
-    <tr><td>Thrust constant</td><td class="num">10.54 N per kA/m, ±0.99 % ripple, <b>FEM-verified to 0.03 %</b></td><td><code>motor_model.py</code></td></tr>
+    <tr><td>Thrust constant</td><td class="num">10.54 N per kA/m, ±1.01 % ripple, <b>FEM-verified to 0.03 %</b></td><td><code>motor_model.py</code></td></tr>
     <tr><td>Exit velocity, 3U</td><td class="num"><b>16.029 m/s at 10.07 g</b></td><td><code>motor_model.py</code></td></tr>
     <tr><td>Electrical to payload efficiency</td><td class="num">18.47 % net of regeneration</td><td><code>motor_model.py</code></td></tr>
     <tr><td>Closed-loop dispersion</td><td class="num">0.0274 m/s (3σ) to ±0.10 km apogee</td><td><code>motor_model.py</code></td></tr>
     <tr><td>Velocity-loop margins</td><td class="num">31.1 Hz crossover, <b>+82.2° phase / +21.2 dB gain</b>, bandwidth a third of the 109 Hz mode. The gain published until 2026-08-13 was <b>unstable</b> — 557 Hz crossover, −50.4°. P47</td><td><code>control_design.py</code></td></tr>
-    <tr><td>Orbital lifetime multiplier</td><td class="num">x1.62 at mean activity, <b>not invariant, P16</b></td><td><code>astro.py</code></td></tr>
+    <tr><td>Orbital lifetime multiplier</td><td class="num">x1.60 at mean activity, <b>not invariant, P16</b></td><td><code>astro.py</code></td></tr>
     <tr><td>Constellation seeding, 30°</td><td class="num">1.4-6.9 days vs 25 by differential drag</td><td><code>astro.py</code></td></tr>
-    <tr><td><b>Against a spring, on lifetime</b></td><td class="num"><b>7.52x</b> the <i>extension</i> of the fastest published spring (6.6x is the weaker velocity ratio) &mdash; but <b>1.495x</b> on <i>delivered orbital life</i>, which is what a risk-weighted comparison uses. E30</td><td><code>comparators.py</code></td></tr>
+    <tr><td><b>Against a spring, on lifetime</b></td><td class="num"><b>7.33x</b> the <i>extension</i> of the fastest published spring (6.4x is the weaker velocity ratio) &mdash; but <b>1.495x</b> on <i>delivered orbital life</i>, which is what a risk-weighted comparison uses. E30</td><td><code>comparators.py</code></td></tr>
     <tr><td>Deployer mass per 3U satellite</td><td class="num">7.042 kg — <b>parity</b> with a canisterised dispenser</td><td><code>payload_family.py</code></td></tr>
-    <tr><td>Dry / loaded mass</td><td class="num">84.5 kg / 124.5 kg</td><td><code>mass_properties.py</code></td></tr>
-    <tr><td>Recoil per shot</td><td class="num">65.6 N·s</td><td><code>astro.py</code></td></tr>
+    <tr><td>Dry / loaded mass</td><td class="num">84.5 kg / 132.5 kg</td><td><code>mass_properties.py</code></td></tr>
+    <tr><td>Recoil per shot</td><td class="num">64.1 N·s</td><td><code>astro.py</code></td></tr>
     <tr><td>Track first mode</td><td class="num">109 Hz fixed-fixed (target &gt;70)</td><td><code>sizing.py</code></td></tr>
   </table>
   <p></p>
@@ -208,14 +208,14 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   nothing forces a lighter chassis. The scripts moved first, then the paper. Exit velocity is
   down 19 % and efficiency from 32 % to 19 %, since taken back to 18.47 % by regeneration
   (A11), but the lifetime multiplier fell only
-  x1.80 to x1.62, lifetime is a weak function of Δv, so the mission case survives better than
+  x1.80 to x1.60, lifetime is a weak function of Δv, so the mission case survives better than
   the machine spec. 9.445 kg is the as-drawn, unpocketed geometry and A4 reports a 17x stress
   margin, so a rib-stiffened redesign would recover mass; nobody has designed one.</div>
   <div class="grid g2" style="margin-top:18px">
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F01_shot.png" alt="Shot simulation">
       <figcaption><b>The shot.</b> Force, velocity and current through the 157.3 ms stroke.</figcaption></figure>
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F04_life.png" alt="Orbital lifetime">
-      <figcaption><b>Lifetime.</b> Boosted vs unboosted decay. The x1.62 ratio is the claim, not the absolute years.</figcaption></figure>
+      <figcaption><b>Lifetime.</b> Boosted vs unboosted decay. The x1.60 ratio is the claim, not the absolute years.</figcaption></figure>
   </div>
 </section>
 

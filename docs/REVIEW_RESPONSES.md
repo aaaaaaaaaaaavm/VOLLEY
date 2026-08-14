@@ -122,7 +122,7 @@ lethal is not.
 
 **Plus a qualification gap that is paperwork, not physics.** NRCSD-E reportedly requires CubeSats
 to withstand **0.5–2.5 m/s** at ejection *(second-hand, not read in the primary document)*.
-VOLLEY is 6.6× that ceiling. **Physically irrelevant** — a satellite is damaged by acceleration,
+VOLLEY is 6.4× that ceiling. **Physically irrelevant** — a satellite is damaged by acceleration,
 not velocity, and 10.07 g sits well inside the 25 g CDS cap. **Programmatically real**: a customer
 qualified "per NRCSD-E" has no qualification basis for 16.0 m/s even though nothing about their
 hardware is threatened.
@@ -160,8 +160,8 @@ Orbital speed is not the quantity that matters; **Δv relative to the host is.**
 by the host and every satellite on it, so it produces no separation and no orbit change. The
 16.029 m/s is *differential*, and differential velocity is what changes an orbit.
 
-Computed in `analysis/astro.py`: one shot raises apogee from 450 to **508.9 km** and extends
-orbital lifetime **+61.8 %**. A 2.5 m/s spring gives +8.2 %.
+Computed in `analysis/astro.py`: one shot raises apogee from 450 to **507.6 km** and extends
+orbital lifetime **+60.2 %**. A 2.5 m/s spring gives +8.2 %.
 
 ### 2. Why go beyond conventional 1–2 m/s deployment velocity at all?
 
@@ -169,9 +169,10 @@ Because the payoff is **superlinear in Δv**, so the marginal value of each m/s 
 
 | Δv | Lifetime gain | per m/s |
 |---:|---:|---:|
-| 2.5 m/s (spring) | +8.2 % | 3.29 %/m/s |
-| 16.39 m/s | +61.8 % | 3.77 %/m/s |
-| 25.3 m/s | +104 % | 4.11 %/m/s |
+| 2.0 m/s (spring, typical) | +6.5 % | 3.27 %/m/s |
+| 2.5 m/s (spring, fastest published) | +8.2 % | 3.29 %/m/s |
+| 16.029 m/s (the rated shot) | +60.2 % | 3.76 %/m/s |
+| 25.252 m/s (the 25 g payload cap) | +103.8 % | 4.11 %/m/s |
 
 And a spring's *designed differential is zero*, so a spring-deployed fleet can only phase by drag.
 
@@ -270,7 +271,7 @@ answer does not dispose of that.
 | **21** | Power, batteries from Earth, POEM-style array mass | P26 (the bank), A10 (68 mΩ ESR ceiling), A25 (flywheel alternative) | **No array sizing, no battery mass, no recharge energy budget.** `mass_properties.py` carries no line item for any of it (P10) |
 | **23** | If the brake fails, doesn't the sled exit at 16.0 m/s and become debris? | A tapered pole entry as a 200 g arrest limiter, a ring-spring stop as backstop | **No failure case analysed.** Whether the ring spring alone arrests a 9.445 kg sled at 16 m/s is not computed. Adjacent to 22 |
 | **24** | Supercapacitor imbalance, venting, ESR growth over storage and cycling | A10's ESR ceiling; E17 records that the 12 mΩ figure comes from a superseded document with no cell datasheet checked | **No balancing scheme, no venting path, no ageing model.** ESR growth would tighten a ceiling already missed |
-| **27** | Ascent random vibration and separation shock for the loaded 124.5 kg stack | A18's Miles case, GEVS protoflight; A22 resized the gates to **+0.45 at Q = 30** | **Q is unmeasured** (`STRUCTURAL_GAP.md`), and the analysis covers the retention gates, not the whole stack |
+| **27** | Ascent random vibration and separation shock for the loaded 132.5 kg stack | A18's Miles case, GEVS protoflight; A22 resized the gates to **+0.45 at Q = 30** | **Q is unmeasured** (`STRUCTURAL_GAP.md`), and the analysis covers the retention gates, not the whole stack |
 | **29** | No flight heritage — qualification path and honest TRL | `docs/QUALIFICATION_PLAN.md` specifies a campaign; badges read TRL 2–3 | The campaign is **specified, not costed or scheduled**, and no article exists to qualify |
 | **31** | How to verify 16.0 m/s over 1.3 m on the ground in 1 g | `docs/BENCHTOP_TESTS.md`; B-1 measures the **field**, not the shot | **No answer for the full-stroke shot.** A horizontal 1.5 m track on air bearings is the obvious approach and is not specified |
 | **33** | Who pays — rideshare customer or launch provider? | `docs/MARKET.md` frames the customer | **No commercial model, no price, and every cost claim was withdrawn** for lack of a vendor quotation (E3) |
@@ -333,10 +334,10 @@ each. **A failure at shot k forfeits shots k through 12.**
 **So VOLLEY can afford to lose satellites and still deliver more mission value — but only above
 about 93.5 % per-shot reliability.** Below that the spring wins outright, on both metrics.
 
-> **A correction this analysis forces on the project's own headline.** The **7.52× lifetime
-> extension** figure is a ratio of *gains* (+61.8 % against +8.2 %). On **delivered orbital
+> **A correction this analysis forces on the project's own headline.** The **7.33× lifetime
+> extension** figure is a ratio of *gains* (+60.2 % against +8.2 %). On **delivered orbital
 > life** the ratio is **1.495×**. Both are true, but the second governs any risk-weighted
-> comparison — a satellite never released delivers nothing — and **the 7.5× figure flatters in
+> comparison — a satellite never released delivers nothing — and **the 7.3× figure flatters in
 > exactly the comparison a reviewer makes.**
 
 **And the finding: nothing in this repository estimates p.** No FMEA, no fault tree, no parts
@@ -572,7 +573,7 @@ narrow the addressable set rather than widen it:
 - **A24** — the payload ladder closes kill criterion 1 only at **PocketQube** class, two rungs
   below where the repository had been claiming, and those classes have **no corner rails and no
   designed interface**;
-- **A21** — at 3U a cold-gas module wins on mass by **7.5×**;
+- **A21** — at 3U a cold-gas module wins on mass by **8.3×**;
 - **A27** — a **~2 kg staged spring** does the job for any mission not needing continuous control;
 - **E30** — the reliability case only closes above **93.5 %** per-shot reliability, which is
   unmeasured.
@@ -600,7 +601,7 @@ these are worked — which the repository can answer, which it cannot, and which
 itself*.
 
 Three of the answers above are losses stated plainly: **the cold-gas module beats VOLLEY at 3U by
-7.5×** (28), **the satellite leaves permanently magnetised** (9), and **a payload's magnetometer
+8.3×** (28), **the satellite leaves permanently magnetised** (9), and **a payload's magnetometer
 is unusable inside the deployer** (7). All three predate this review and are in the repository's
 own analyses, which is the only reason this file can be written honestly.
 

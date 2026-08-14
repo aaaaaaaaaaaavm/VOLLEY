@@ -1,7 +1,7 @@
 {
   "pack_efficiency": 0.562,
   "bay_mm3": 72612384,
-  "deployer_dry_kg": 76.5,
+  "deployer_dry_kg": 84.5,
   "F_cmd": 1327.9,
   "mechanism_shot_limit": 200,
   "classes": [
@@ -31,7 +31,7 @@
       "a_g": 14.0,
       "v_exit": 18.9,
       "n_per_load": 326,
-      "kg_per_satellite": 0.235,
+      "kg_per_satellite": 0.259,
       "mechanism_limited": true,
       "note": "PocketQube standard, 1P"
     },
@@ -46,7 +46,7 @@
       "a_g": 13.9,
       "v_exit": 18.8,
       "n_per_load": 123,
-      "kg_per_satellite": 0.622,
+      "kg_per_satellite": 0.687,
       "mechanism_limited": false,
       "note": "ThinSat published envelope"
     },
@@ -61,7 +61,7 @@
       "a_g": 13.3,
       "v_exit": 18.4,
       "n_per_load": 108,
-      "kg_per_satellite": 0.708,
+      "kg_per_satellite": 0.782,
       "mechanism_limited": false,
       "note": "PocketQube standard, 3P"
     },
@@ -76,7 +76,7 @@
       "a_g": 13.3,
       "v_exit": 18.4,
       "n_per_load": 41,
-      "kg_per_satellite": 1.866,
+      "kg_per_satellite": 2.061,
       "mechanism_limited": false,
       "note": "Boxed from the 88 mm cylinder"
     },
@@ -91,7 +91,7 @@
       "a_g": 12.6,
       "v_exit": 17.9,
       "n_per_load": 40,
-      "kg_per_satellite": 1.913,
+      "kg_per_satellite": 2.112,
       "mechanism_limited": false,
       "note": "Typical flight mass, CDS allows 2 kg"
     },
@@ -106,7 +106,7 @@
       "a_g": 10.1,
       "v_exit": 16.0,
       "n_per_load": 12,
-      "kg_per_satellite": 6.375,
+      "kg_per_satellite": 7.042,
       "mechanism_limited": false,
       "note": "The reference payload, and the only one laid out"
     },
@@ -121,7 +121,7 @@
       "a_g": 7.8,
       "v_exit": 14.1,
       "n_per_load": 6,
-      "kg_per_satellite": 12.75,
+      "kg_per_satellite": 14.083,
       "mechanism_limited": false,
       "note": "Arithmetic only, no cassette exists"
     },
@@ -136,7 +136,7 @@
       "a_g": 6.3,
       "v_exit": 12.7,
       "n_per_load": 3,
-      "kg_per_satellite": 25.5,
+      "kg_per_satellite": 28.167,
       "mechanism_limited": false,
       "note": "Arithmetic only, no cassette exists"
     }

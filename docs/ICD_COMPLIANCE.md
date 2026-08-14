@@ -122,7 +122,7 @@ withstanding a deployment velocity of 0.5 to 2.5 m/s at ejection."* **This figur
 the primary document and is flagged as second-hand.**
 
 If it holds, **customer satellites are qualified to a velocity range whose ceiling is 2.5 m/s.
-VOLLEY deploys at 16.029 m/s — 6.6× that ceiling.**
+VOLLEY deploys at 16.029 m/s — 6.4× that ceiling.**
 
 **Physically this is a non-issue and the repository can show why:** a satellite is not damaged by
 velocity, it is damaged by acceleration, and VOLLEY's **10.07 g against the 25 g CDS cap** is well

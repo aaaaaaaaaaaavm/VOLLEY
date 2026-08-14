@@ -27,15 +27,17 @@ import json
 import os
 
 import astro
+import motor_model as mm
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 N_SHOTS = 12
 ALT = 450e3
+V_RATED = mm.operating_point()['v_exit']
 
 
 def lives():
     base = astro.lifetime(astro.RE + ALT, 0.0)
-    a, e = astro.boosted_elements(ALT, 16.388)
+    a, e = astro.boosted_elements(ALT, V_RATED)
     volley = astro.lifetime(abs(a), abs(e))
     a, e = astro.boosted_elements(ALT, 2.5)
     spring = astro.lifetime(abs(a), abs(e))
@@ -70,7 +72,7 @@ def crossover(metric, q_spring=0.99):
 if __name__ == '__main__':
     base, spring, volley = lives()
     print(f"orbital life at {ALT/1e3:.0f} km: unboosted {base:.3f} yr, "
-          f"spring(2.5 m/s) {spring:.3f}, VOLLEY(16.388) {volley:.3f}")
+          f"spring(2.5 m/s) {spring:.3f}, VOLLEY({V_RATED:.3f}) {volley:.3f}")
     print(f"reward per DELIVERED satellite: {volley/spring:.3f}x\n")
     print(f"{'p or q':>8s} {'VOLLEY sats':>12s} {'spring sats':>12s} "
           f"{'VOLLEY yr':>10s} {'spring yr':>10s} {'ratio':>7s}")

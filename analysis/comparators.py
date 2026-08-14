@@ -30,6 +30,7 @@ import math
 import os
 
 import astro
+import motor_model as mm
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 
@@ -42,6 +43,7 @@ DISPENSER_KG_PER_U = 2.0        # canisterised class figure
 COLDGAS_KG_LOW, COLDGAS_KG_HIGH = 0.5, 1.2
 DRAG_DAYS_30DEG = 25.0          # astro.py model output, NOT the flown result -- see E16
 PHASE_TARGET_DEG = 30.0
+G_CAP = 25.0                    # g, the payload qualification ceiling
 
 
 def lifetime_multiplier(dv):
@@ -69,6 +71,8 @@ def days_to_phase(dv_differential, target_deg=PHASE_TARGET_DEG):
 
 
 def main():
+    global V_G_CAP
+    V_G_CAP = math.sqrt(2 * G_CAP * 9.81 * mm.ACCEL_ZONE)
     with open(os.path.join(RESULTS, 'motor_results.json'), encoding='utf-8') as f:
         motor = json.load(f)
     dv_volley = motor['shot']['v_exit']
@@ -168,7 +172,27 @@ def main():
     for k, v in bands.items():
         print(f"  {k:36} {'PASS' if v['passed'] else 'FAIL'}")
 
+    # REPORT, not a band. docs/REVIEW_RESPONSES.md used to paste this table by hand, so it
+    # kept the operating point it was written at while astro.py moved underneath it. A table
+    # that is read off a result cannot do that.
+    superlinearity = []
+    for dv, label in ((SPRING_DV_TYP, 'spring, typical'),
+                      (SPRING_DV_FAST, 'spring, fastest published'),
+                      (dv_volley, 'VOLLEY, rated shot'),
+                      (V_G_CAP, 'the 25 g payload cap')):
+        gain = (lifetime_multiplier(dv) - 1.0) * 100.0
+        superlinearity.append(dict(dv_m_s=dv, label=label, lifetime_gain_pct=gain,
+                                   gain_per_m_s=gain / dv))
+    apogee_km = (astro.boosted_elements(ALT_M, dv_volley)[0]
+                 * (1 + astro.boosted_elements(ALT_M, dv_volley)[1]) - astro.RE) / 1e3
+    print("\nlifetime gain is superlinear in dv:")
+    for r in superlinearity:
+        print(f"  {r['dv_m_s']:6.3f} m/s  {r['lifetime_gain_pct']:7.1f} %  "
+              f"{r['gain_per_m_s']:5.2f} %/m/s   {r['label']}")
+    print(f"  one shot raises apogee to {apogee_km:.1f} km")
+
     out = dict(analysis='A21', bands_declared_commit='881c260',
+               superlinearity=superlinearity, apogee_after_shot_km=apogee_km,
                note='class figures only; no manufacturer named; no cost comparison computed',
                lifetime_multipliers=mult, lifetime_extensions=ext,
                ratio_vs_fastest_spring=ratio_fast, ratio_vs_typical_spring=ratio_typ,
