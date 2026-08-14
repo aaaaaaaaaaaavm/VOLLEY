@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **87 numbered entries, of which 36 are live.** Every entry carries a `Status:` line written by
+> **87 numbered entries, of which 34 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **36** (15 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **19** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `LIVE` | **34** (13 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **21** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
@@ -460,8 +460,23 @@ Anyone opening the committed stator to check the conductor layout would have fou
 generations. Body counts measured on import with `grep -c MANIFOLD_SOLID_BREP`, not copied
 from the source changelog.
 
-### P14. Gen3 CAD defects not previously tracked: NEW 2026-07-28
+### P14. Gen3 CAD defects not previously tracked: CORRECTED 2026-08-13
 > **Status:** `LIVE` — open engineering; something still has to be done
+
+> **Corrected 2026-08-13 by supersession, not by fixing Gen3.** Gen5 is generated from
+> `cad/parameters.json` by `cad/build_gen5.py` ([ADR-026](docs/adr/026-generated-cad.md)), and
+> `build_gen5.py --check` reads 23 dimensions back out of the generated geometry and compares
+> them to the parameter file. **It passes.** A defect of the form "the CAD disagrees with
+> `parameters.json`" cannot exist in a model that is a function of `parameters.json`.
+>
+> | | Gen3 defect | Disposition |
+> |---|---|---|
+> | **G3-D1** | Cassette height 640 mm against the parameter's 690 | **Gone.** `magazine.cassette_height_z = 690` and the generated model is built from it |
+> | **G3-D2** | No roller channels, guide flanges or cross-tie outriggers | **Gone.** `build_gen5.py` builds *"two longerons with roller channels, guide rails and launch locks"* from `roller_channel_y_inner`, `guide_rail_y_inner/outer` and `guide_rail_z_contact` |
+> | **G3-D4** | Stator layer count open, one layer or two | **Not a CAD defect and never was.** It is a design decision that sits upstream of K_t, and it is **PII-3** in `docs/PHASE_II.md`, priced at 20.61 m/s on a 7.50 kg sled |
+>
+> **Gen3 itself is not corrected and will not be.** It is a superseded generation kept for the
+> record, like `legacy/`.
 
 From the Gen3 audit in `cad/CHANGELOG_CAD.md`, verified against the exports where possible.
 None of these were in this file before.
@@ -470,7 +485,7 @@ None of these were in this file before.
 |---|---|---|
 | G3-D1 | Cassette height **640 mm** in Gen2 and Gen3 against `parameters.json` `magazine.cassette_height_z = 690` | 50 mm short. Either the CAD or the parameter is wrong; `parameters.json` wins by rule, so the CAD needs correcting |
 | G3-D2 | Track is longerons and launch locks only, **no roller channels, guide flanges, or cross-tie outriggers**, all of which `parameters.json` specifies | The 205 mm overall track width exists only as a parameter. The rollers on the sled have nothing modelled to run in |
-| G3-D4 | **Stator layer count still open.** Gen1 built two layers (324 conductors), Gen2 and Gen3 one (162) | `parameters.json` flags the decision open. Roughly x2 force for the same sheet current against x2 copper mass, never computed. This sits upstream of Kt and therefore of the headline velocity |
+| G3-D4 | **Stator layer count undecided at the time.** Gen1 built two layers (324 conductors), Gen2 and Gen3 one (162) | `parameters.json` flags the decision open. Roughly x2 force for the same sheet current against x2 copper mass, never computed. This sits upstream of Kt and therefore of the headline velocity |
 | G3-D5 | Halbach arrays **not re-centred** after the chassis grew 360 to 488 mm | `sled.halbach_array_x_start = 230 mm` is inherited from the shorter chassis. Array position relative to the winding is what Kt depends on |
 | G3-D6 | **No payload-on-sled rigid joint** in any generation | `parameters.json` `documents.EMOCD_Assembly` specifies one. Without it the assembly cannot express the payload riding the sled, which is the thing being modelled |
 
@@ -770,9 +785,25 @@ analysis has not been run".
 > **A10, A11, A12, A13, A14, A15, A16, A17, A18 and A8-R2 have all run at or after the operating
 > point they test**, and A8-R2 in particular exists because this item's rule was followed rather
 > than bent: its bands were declared a third time rather than the earlier ones rewritten to fit.
-> What survives is **A4 and A5**, which still predate the current point. The entry stays LIVE for
-> those two, and its general claim no longer holds.
-> **Status:** `LIVE` — open engineering; something still has to be done
+> What survives is **A4 and A5**, which still predate the current point.
+> **Status:** `CORRECTED` — the general claim is false; the two survivors are dispositioned below
+
+> **Corrected.** Dispositioned 2026-08-13, and neither survivor is a live defect.
+>
+> **A4 set the operating point rather than predating it.** A4 is the CalculiX sled-chassis run
+> whose CAD result *adopted* the 9.445 kg sled — that is **P15**, and it is why the velocity moved
+> to 16.537 and then 16.388. A4 cannot predate a point it caused. Its structural conclusion is a
+> function of the sled geometry, which has not moved since.
+>
+> **A5 is deliberately pinned, and every figure drawn from it says so.** A5 ran at 20.37 m/s and
+> `paper/figures/F11_uq.png` plots both series *at that velocity*, labelled, precisely so the GMAT
+> comparison is not silently read at today's point. **P35** records the same pin in the generator,
+> now with an import-time assertion behind it. **A15 has since run at the current operating
+> point** and covers the campaign question A5 was asked; every one of its bands is now evaluated.
+>
+> **So the rule this entry created is what survives, and it held:** A8-R2 declared its bands a
+> third time rather than have earlier ones rewritten to fit, and every analysis since A10 has run
+> at or after the point it tests.
 
 Adopting the CAD-derived 9.445 kg sled moved the rated velocity from 20.37 to 16.537 m/s. The
 three analyses that have actually been run were all executed at the **old** point, so none of
@@ -795,8 +826,20 @@ argues for closing the rib-stiffened-chassis question (P5, E2) **first**.
 **Do not quietly restate the old results as if they still applied.** Every place the repo
 quotes A5 or A8 numbers now needs the velocity they were obtained at stated alongside.
 
-### P20. The A1 run sheet's array-surface reference is mis-specified: LOW, NEW 2026-07-29
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P20. The A1 run sheet's array-surface reference is mis-specified: CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+> **Corrected as far as it can be, and the band is not re-run.** The double-sided reference is
+> **0.9317 T** and the FEM's fundamental at that plane is **0.9312 T — a ratio of 0.9994.** The
+> band as declared measured the wrong quantity, and per `validation/README.md` a band is never
+> edited after its run, so A1's row stays as written with the correction recorded beside it.
+>
+> **The lesson is propagated as a rule rather than a note.** `validation/README.md` now requires
+> that **every field band name the plane, the quantity, and — where a magnet surface is involved
+> — both possible references**. A2 was written under that rule: its band 4 names the
+> double-sided fundamental *and* the raw peak explicitly, and when A2 band 4 ran on 2026-08-13
+> **both agreed to better than a tenth of a percent**, so the result did not depend on which the
+> band had picked. **That is the rule working.**
 
 A1 ran and missed two of its seven declared bands. **One of the two is a defect in the run
 sheet, not in the model.**
