@@ -214,6 +214,22 @@ built, fired or measured, and the paper says so.
 claims the paper had to retract after reading it. [`LITERATURE.md`](LITERATURE.md) maps the wider
 field.
 
+
+## The manuscript describes Gen5, and the design target has moved
+
+**This is deliberate and worth stating plainly.** Everything reproduced here is **Gen5** — the
+measured baseline, and the record of what a self-contained deployer costs. On 2026-08-14 five
+analyses in the main repository replaced the design target: **Gen6 is the payload accelerated
+directly, by cold gas, along a rail a spent upper stage provides** (ADR-032). No mover, no
+pulse-power chain, no brake, no return stroke.
+
+**Nothing in Gen6 is measured**, its fluid system is unsized, its cradle mechanism does not exist,
+and no launch provider has agreed to lend a stage — which is exactly why the manuscript still
+carries Gen5. A paper reports what has been analysed to a declared standard, not what looks best
+this week.
+
+**The main repository carries both**, and the failures at the same standard as the results.
+
 ## What is deliberately absent
 
 The engineering record. Decision log, defect ledger, CAD generations, roadmap and change history
@@ -260,6 +276,22 @@ formatting mandates and viva material, which are university-specific and do not 
 
 This repository may be improved until the thesis is presented, and freezes at that moment. What
 enters it has to be stable, effective and reliable against the problem statement.
+
+
+## The manuscript describes Gen5, and the design target has moved
+
+**This is deliberate and worth stating plainly.** Everything reproduced here is **Gen5** — the
+measured baseline, and the record of what a self-contained deployer costs. On 2026-08-14 five
+analyses in the main repository replaced the design target: **Gen6 is the payload accelerated
+directly, by cold gas, along a rail a spent upper stage provides** (ADR-032). No mover, no
+pulse-power chain, no brake, no return stroke.
+
+**Nothing in Gen6 is measured**, its fluid system is unsized, its cradle mechanism does not exist,
+and no launch provider has agreed to lend a stage — which is exactly why the manuscript still
+carries Gen5. A paper reports what has been analysed to a declared standard, not what looks best
+this week.
+
+**The main repository carries both**, and the failures at the same standard as the results.
 
 ## Before citing
 
