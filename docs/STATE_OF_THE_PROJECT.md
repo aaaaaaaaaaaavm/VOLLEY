@@ -6,7 +6,7 @@ what fixes each.**
 
 Nothing here is new evidence. It is the disposition layer over three files that already exist —
 [`../OPEN_PROBLEMS.md`](../OPEN_PROBLEMS.md) (numbered defects),
-[`KILL_CRITERIA.md`](KILL_CRITERIA.md) (thresholds) and [`PHASE_II.md`](PHASE_II.md) (deferred
+[`KILL_CRITERIA.md`](KILL_CRITERIA.md) (thresholds) and [`VAULT.md`](VAULT.md) (deferred
 work) — plus the decisions that have no home in any of them because **only the author can take
 them.** Every number is carried from a file that already holds it.
 

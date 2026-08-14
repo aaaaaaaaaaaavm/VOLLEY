@@ -6,10 +6,10 @@ engineering record.** If any other repository disagrees with this one, this one 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
 |---|---|---|
-| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Flagship, authoritative engineering record, portfolio | |
-| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | IEEE companion, manuscript and reproducibility package *(generated)* | |
-| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | Thesis companion, university submission *(generated)* | |
-| [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | Phase II, research, redesign, deliberately unstable | |
+| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Main: the authoritative engineering record. Improved continuously | |
+| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | The concept at its most reliable, as a conference contribution. **Frozen when published** | |
+| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | The same concept as a full submission. **Frozen when presented** | |
+| [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | The vault: ideas that never became a complete thing, and why each stopped | |
 <!-- PROGRAMME-HEADER-END -->
 
 ---
@@ -77,7 +77,7 @@ envelope repackaging.
 
 It has no baseline and makes no stability promise. That is deliberate: it is the pressure
 valve that lets the flagship stay frozen. Items leave it only at baseline boundaries, against
-criteria written when they were deferred, see [`docs/PHASE_II.md`](PHASE_II.md).
+criteria written when they were deferred, see [`docs/VAULT.md`](VAULT.md).
 
 ## Reading order
 

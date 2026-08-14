@@ -1,41 +1,54 @@
-# Phase II: deferred work, and how it gets back
+# The vault: ideas, and why each one stopped
 
-Everything here would make the design **better**. Nothing here makes it **correct**. That
-distinction is the whole of the change-control rule in [`../BASELINE.md`](BASELINE.md), and
-it is why these items are deferred while P17, which is tedious and improves nothing anyone
-will notice, is not.
+**Everything here would make the design better. Nothing here makes it correct.**
 
-Phase II lives in **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)**, a separate
-repository with no baseline and no stability promise. It is separate because a soft boundary
-inside the flagship is one `git checkout` from becoming an edit to the frozen baseline.
+This is where concepts live that never became a complete thing — possibilities for the future,
+rejected architectures, and the evidence behind both. **A vault, not a graveyard**
+([ADR-031](adr/031-four-repositories-not-two-phases.md)).
+
+It lives in **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)**, a repository with no
+baseline and no stability promise. It is separate because a soft boundary inside the flagship is
+one `git checkout` from becoming an edit to the record.
 
 ---
 
-## The gate
+## The one rule
 
-**Phase II items are reviewed only at baseline boundaries.** The next boundary opens after
-thesis submission. Between boundaries, items may be *added* and *worked on* freely, that is
-what the lab is for, but nothing is promoted into the Phase I baseline.
+**Every entry states why it stopped.**
 
-**Every item carries an entry criterion written when it was deferred**, not when it is
-reviewed. This is the same discipline as declaring acceptance bands before a run, and for
-exactly the same reason: a criterion written afterwards is written by someone who already knows
-what they want the answer to be.
+Not "deferred". *Why.* **PII-16** carries the measurement that killed it — a transverse edge
+factor of **0.0253** against the **0.55** it had been sized on, a factor of 22. **PII-17** carries
+the mass arithmetic that declined it. **PII-1**, the project's self-declared strongest idea,
+carries the arithmetic showing a lighter mover collapses its own lever.
 
-At a boundary each item gets one of three outcomes, recorded here:
+**That is what makes this evidence rather than a pile**, and it is the only rule the vault has.
+
+---
+
+## How something leaves the vault
+
+| From → to | Condition |
+|---|---|
+| **vault → main** | Its acceptance bands were declared **before its script existed**, and run |
+| **main → paper / thesis** | **Stable, effective and reliable against the problem statement** |
+| **paper / thesis → frozen** | Presented or published |
+
+**Nothing crosses upward on enthusiasm.** An item is not promoted by being interesting. It is
+promoted by meeting the criterion it was given — **written when it was deferred, not when it is
+reviewed**, because a criterion written afterwards is written by someone who already knows what
+they want the answer to be.
+
+Each entry gets one of three outcomes, recorded here:
 
 | | |
 |---|---|
-| **Promoted** | Criterion met. Becomes baseline work, gets an ADR, propagates scripts to figures to paper |
-| **Held** | Criterion not yet met. Stays with the reason recorded |
-| **Dropped** | Criterion shown unreachable, or the item is superseded. Stays in this file struck through, dropped items are evidence too |
-
-An item may not be promoted by finding it interesting. It is promoted by meeting the criterion
-it was given.
+| **Promoted** | Criterion met. Becomes work in main, gets an ADR, propagates scripts → figures → paper |
+| **Held** | Criterion not yet met. Stays, with the reason recorded |
+| **Rejected** | Criterion shown unreachable, or superseded. **Stays, struck through — rejected items are evidence too** |
 
 ---
 
-## The Phase II design target
+## The design target main is working toward
 
 **Set 2026-08-13 by [ADR-029](adr/029-phase-one-closes-on-gen5.md).**
 

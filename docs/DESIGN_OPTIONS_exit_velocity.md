@@ -63,7 +63,7 @@ it. Not one. The as-drawn baseline needs 66 mohm, and every lever that buys velo
 **So the ranking inverts.** The two rows that looked best electromagnetically, two-layer and
 raised sheet current, are the two that make the bank hardest to buy, and the bank is already the
 largest open defect in the project. **PII-3 is now explicitly gated behind PII-7**: a two-layer
-stator cannot be evaluated before a bank that can source it exists, and `docs/PHASE_II.md` says
+stator cannot be evaluated before a bank that can source it exists, and `docs/VAULT.md` says
 so at PII-3's entry criterion.
 
 The one row that gets *easier* on the bank is thinning the magnets, which reaches 95 mohm — and

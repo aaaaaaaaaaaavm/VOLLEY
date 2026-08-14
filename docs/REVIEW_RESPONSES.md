@@ -217,7 +217,7 @@ cap — not the motor — is what limits exit velocity to 25.25 m/s over the 1.3
 
 **The caveat is duration, not magnitude:** 162.3 ms is long compared with a pyroshock, and
 whether 25 g survives review as a *sustained* load rather than a transient is flagged in
-`docs/PHASE_II.md` as an unresolved question.
+`docs/VAULT.md` as an unresolved question.
 
 ### 9. Do soft-magnetic parts inside the payload retain permanent magnetisation — and isn't that itself a modification?
 

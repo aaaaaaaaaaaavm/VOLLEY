@@ -477,7 +477,7 @@ from the source changelog.
 > |---|---|---|
 > | **G3-D1** | Cassette height 640 mm against the parameter's 690 | **Gone.** `magazine.cassette_height_z = 690` and the generated model is built from it |
 > | **G3-D2** | No roller channels, guide flanges or cross-tie outriggers | **Gone.** `build_gen5.py` builds *"two longerons with roller channels, guide rails and launch locks"* from `roller_channel_y_inner`, `guide_rail_y_inner/outer` and `guide_rail_z_contact` |
-> | **G3-D4** | Stator layer count open, one layer or two | **Not a CAD defect and never was.** It is a design decision that sits upstream of K_t, and it is **PII-3** in `docs/PHASE_II.md`, priced at 20.61 m/s on a 7.50 kg sled |
+> | **G3-D4** | Stator layer count open, one layer or two | **Not a CAD defect and never was.** It is a design decision that sits upstream of K_t, and it is **PII-3** in `docs/VAULT.md`, priced at 20.61 m/s on a 7.50 kg sled |
 >
 > **Gen3 itself is not corrected and will not be.** It is a superseded generation kept for the
 > record, like `legacy/`.
@@ -1377,7 +1377,7 @@ kind, which is the reason to write it down.
 
 `validation/A7_separation_chrono.md` declared its tip-off band as **≤ 5 °/s/axis**, citing the
 NanoRacks NRCSD-E interface document. Three other files — E7 above, `docs/KILL_CRITERIA.md` §4 and
-PII-1's entry criterion in `docs/PHASE_II.md` — carried a standing flag that this "conflicts" with
+PII-1's entry criterion in `docs/VAULT.md` — carried a standing flag that this "conflicts" with
 a sibling NRCSD ICD quoting 2 °/s, and that the conflict had to be resolved before the band meant
 anything. PII-1, the best available velocity lever, was gated on it.
 
@@ -1522,7 +1522,7 @@ rewound for any speed, it just pays in current — and it should not be written 
 **What would close it:** a winding layout with an actual turns count, conductor cross-section
 and end-turn geometry, at which point L stops being inferred from an energy balance and becomes
 a property of drawn hardware. The 2-D energy method here omits end turns entirely, so 19.70 µH
-is a **lower bound** and the ripple figures are upper bounds. `docs/PHASE_II.md` PII-7 and the
+is a **lower bound** and the ripple figures are upper bounds. `docs/VAULT.md` PII-7 and the
 segmentation decision in **P29** both move it: energising less stator cuts L and R together.
 
 ### P34. A payload carrying a magnetometer cannot fly in this magazine: HIGH, NEW 2026-08-05

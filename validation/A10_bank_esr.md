@@ -139,4 +139,4 @@ against a hard ceiling of 65 mohm, and the ceiling is a limit on deliverable pow
 efficiency target. Nothing about the winding, the magnets or the control loop is implicated.
 
 **What it does not establish** is what to build instead. That is a sizing decision and it is
-not taken here. The options are costed in `docs/PHASE_II.md` PII-7.
+not taken here. The options are costed in `docs/VAULT.md` PII-7.

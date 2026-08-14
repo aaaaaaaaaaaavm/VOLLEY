@@ -1,6 +1,6 @@
 # A30: can an induction drive couple to what the satellite already has?
 
-**Entry criterion for [PII-16](../docs/PHASE_II.md) and the whole of
+**Entry criterion for [PII-16](../docs/VAULT.md) and the whole of
 [`../docs/GEN6_RAIL_DRIVE.md`](../docs/GEN6_RAIL_DRIVE.md).**
 
 `analysis/rail_drive.py` sizes a linear induction drive coupling to the CubeSat Design

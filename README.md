@@ -1,6 +1,10 @@
 # VOLLEY: an electromagnetic orbital CubeSat deployer
 
-> ## Phase I closed, 2026-08-13
+> ## The design is frozen at Gen5, and the record is closed on it
+>
+> *(Closed 2026-08-13 as "Phase I". The two-phase model was retired the same day —
+> [ADR-031](docs/adr/031-four-repositories-not-two-phases.md) — and the programme is now
+> described by the four repositories and their roles.)*
 >
 > **The design is frozen at Gen5.** Categories A, B and C of
 > [`docs/PHASE_I_CLOSURE.md`](docs/PHASE_I_CLOSURE.md) are closed; **E4 — nothing built, fired or
@@ -14,8 +18,8 @@
 > efficiency 21.0 → **18.8 %**, deployer mass per 3U satellite 6.378 → **7.042 kg**. Nothing
 > improved. That is what the corrections cost.
 >
-> **Next: [`docs/GEN6_ARCHITECTURE.md`](docs/GEN6_ARCHITECTURE.md)** is the Phase II design
-> target, and **[`docs/B1_ORDER.md`](docs/B1_ORDER.md)** is the one action that changes the
+> **Next: [`docs/GEN6_ARCHITECTURE.md`](docs/GEN6_ARCHITECTURE.md)** is the design target main
+> is working toward, and **[`docs/B1_ORDER.md`](docs/B1_ORDER.md)** is the one action that changes the
 > category of evidence rather than its degree.
 
 
@@ -119,10 +123,10 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
 |---|---|---|
-| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Flagship, authoritative engineering record, portfolio | |
-| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | IEEE companion, manuscript and reproducibility package *(generated)* | |
-| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | Thesis companion, university submission *(generated)* | |
-| [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | Phase II, research, redesign, deliberately unstable | |
+| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Main: the authoritative engineering record. Improved continuously | |
+| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | The concept at its most reliable, as a conference contribution. **Frozen when published** | |
+| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | The same concept as a full submission. **Frozen when presented** | |
+| [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | The vault: ideas that never became a complete thing, and why each stopped | |
 <!-- PROGRAMME-HEADER-END -->
 
 Four repositories, one programme, see **[`docs/PROGRAMME.md`](docs/PROGRAMME.md)**.
@@ -200,7 +204,7 @@ electrical-to-payload, net of that credit.
 >
 > **Exit velocity, stroke time and dispersion are unaffected** and the mechanical design is not
 > implicated. What is affected is that the rated point assumes a bank nobody can buy. Fixing it
-> is a sizing decision, costed at four parallel strings in `docs/PHASE_II.md` PII-7, and it is
+> is a sizing decision, costed at four parallel strings in `docs/VAULT.md` PII-7, and it is
 > **not** silently applied here. See **P26**.
 
 
@@ -439,7 +443,7 @@ flown DSOD, is in [`docs/LANDSCAPE.md`](docs/LANDSCAPE.md).
 - `docs/HISTORY.md`, project timeline since 2021, and how the git history was reconstructed
 - `docs/programme/`, the governing dossier, adopted verbatim, plus its amendment record
 - `docs/adr/`, nineteen architecture decision records
-- `docs/PHASE_II.md`, deferred work and the gate it must clear to return
+- `docs/VAULT.md`, deferred work and the gate it must clear to return
 - `docs/MANUFACTURING.md`, tolerance stack, assembly hazard, make-vs-buy
 - `docs/CROSS_INDUSTRY.md`, which open items are actually solved elsewhere
 - `docs/QUALIFICATION_PLAN.md`, environmental and qualification campaign, specified not run

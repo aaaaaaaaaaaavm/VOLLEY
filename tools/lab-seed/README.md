@@ -5,10 +5,10 @@ The research track of the VOLLEY programme.
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
 |---|---|---|
-| [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) | Flagship, authoritative engineering record, portfolio | |
-| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | IEEE companion, manuscript and reproducibility package *(generated)* | |
-| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | Thesis companion, university submission *(generated)* | |
-| **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | Phase II, research, redesign, deliberately unstable | |
+| [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) | Main: the authoritative engineering record. Improved continuously | |
+| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | The concept at its most reliable, as a conference contribution. **Frozen when published** | |
+| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | The same concept as a full submission. **Frozen when presented** | |
+| **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | The vault: ideas that never became a complete thing, and why each stopped | |
 <!-- PROGRAMME-HEADER-END -->
 
 > ## This repository makes no promises
@@ -34,7 +34,7 @@ becoming an edit to the frozen baseline. This is a hard wall instead of a line o
 
 Anything that would make the design **better** rather than **correct**. The deferred list and
 each item's entry criterion live in the flagship's
-[`docs/PHASE_II.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/PHASE_II.md):
+[`docs/VAULT.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/VAULT.md):
 
 | | |
 |---|---|
@@ -49,7 +49,7 @@ More arrived on 2026-07-30, from reading the nearest published work and from the
 | | |
 |---|---|
 | PII-6 | **Reachable-domain analysis.** Feng et al. compute a 3-D envelope of the orbits one shot makes available. The flagship reports a scalar lifetime multiplier instead, which answers a smaller question. Their method is better and this is where adopting it belongs |
-| PII-7 | **A bank that can source the shot.** P26 found the flagship's supercapacitor bank specified at an ESR no commercial cell achieves, and the shot does not close at a realistic value. Costed at four parallel strings in the flagship's PHASE_II.md |
+| PII-7 | **A bank that can source the shot.** P26 found the flagship's supercapacitor bank specified at an ESR no commercial cell achieves, and the shot does not close at a realistic value. Costed at four parallel strings in the flagship's VAULT.md |
 | **PII-8** | **[VOLLEY as a free-flyer](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-8_free_flyer.md).** A long deployed track plus release at perigee reaches TLI and Mars-class C3 without exceeding CubeSat qualification. Three hard problems in front of it, named in the file |
 | **PII-9** | **[The lunar case](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-9_lunar.md).** Where this technology actually belongs, and the mass driver it descends from. 1.33 MJ/kg to lunar orbit, so 15 kW launches a tonne a day |
 | PII-10 | **Magazine indexing disturbance** (E24). Xu et al. treat the attitude disturbance from moving satellites inside a deployer as a cost worth optimising against. The flagship budgets recoil from the shot and nothing from the indexing between shots. The bookkeeping half is an error correction and belongs upstream; designing an indexing sequence that minimises it belongs here |

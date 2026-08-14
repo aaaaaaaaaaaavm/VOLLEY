@@ -39,7 +39,7 @@ The project does not have an engineering problem. **It has a stopping problem:**
 1. **Gen5 is frozen** as the Phase I design — the baseline, the CAD, the paper, the cost model
    and the mass rollup all continue to describe it, unchanged.
 2. **Gen6 — the passive-mover linear induction architecture — is recorded as the Phase II design
-   target**, in `PHASE_II.md` and `GEN6_ARCHITECTURE.md`, with its nine measured bands and its
+   target**, in `VAULT.md` and `GEN6_ARCHITECTURE.md`, with its nine measured bands and its
    unsized remainder both stated. It is promoted at a baseline boundary or not at all.
 3. **Phase I is not re-baselined onto it.** That would move K<sub>t</sub>, v_exit, the mass
    rollup, the cost model, the CAD and the manuscript — to replace an architecture with a hundred

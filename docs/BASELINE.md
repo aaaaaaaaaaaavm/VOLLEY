@@ -4,7 +4,7 @@
 > Every value below is read from the scripts at generation time, so this file cannot silently
 > disagree with them. Regenerate after any authorised baseline change.
 >
-> Flagship commit at generation: `0f20871` · Phase **I** · governed by
+> Flagship commit at generation: `81fb1ee` · Phase **I** · governed by
 > [`docs/programme/ENGINEERING_PROGRAMME.md`](programme/ENGINEERING_PROGRAMME.md)
 
 This is the engineering baseline the Phase I deliverables (portfolio, IEEE paper, thesis)
@@ -57,9 +57,16 @@ what makes "stable" mean something.
 
 ### What may not
 
-Performance improvement. Architecture change. Anything whose motivation is *better* rather
-than *correct*. These go to [`docs/PHASE_II.md`](PHASE_II.md) with an entry criterion,
-and are reviewed at the next baseline boundary.
+**Nothing is forbidden from moving the baseline any more, and that is a change.**
+[ADR-031](adr/031-four-repositories-not-two-phases.md) retired the phase model: main improves
+continuously, so *"performance improvement may not move the baseline"* -- which was a pure freeze
+artefact -- is withdrawn.
+
+**What replaces it is a condition on where a change goes, not on whether it may happen.** An idea
+enters main when its bands were declared before its script existed and run; it reaches the paper
+or the thesis only when it is **stable, effective and reliable against the problem statement**.
+Architecture changes are developed in [`VAULT.md`](VAULT.md) with an entry criterion for exactly
+that reason, and Gen6 is there now.
 
 **The boundary is by type, not by convenience.** The momentum-transfer release in
 `docs/DESIGN_OPTIONS_exit_velocity.md` recovers the entire velocity shortfall for 1.6 % of

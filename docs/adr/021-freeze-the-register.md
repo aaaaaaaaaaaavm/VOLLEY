@@ -71,7 +71,7 @@ barred from the register:
   superseded figure. Fix it and log it.
 - **Observations about the register itself.**
 - Anything whose motivation is *better* rather than *correct*, which already belongs in
-  [`../PHASE_II.md`](../PHASE_II.md) and `VOLLEY-lab`.
+  [`../VAULT.md`](../VAULT.md) and `VOLLEY-lab`.
 
 **The headline counts stop being propagated.** `OPEN_PROBLEMS.md` carries the count, derived by
 `tools/register_status.py`. `KILL_CRITERIA.md`, `ROADMAP.md` and `PHASE_I_CLOSURE.md` now point at

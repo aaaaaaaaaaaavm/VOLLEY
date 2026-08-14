@@ -59,6 +59,7 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | [028](028-no-latex-in-the-flagship.md) | No LaTeX in the flagship; the manuscript is authored in VOLLEY-paper | Accepted | I |
 | [029](029-phase-one-closes-on-gen5.md) | Phase I closes on Gen5; Gen6 is the Phase II design target | Accepted | I |
 | [030](030-apply-the-depth-resolved-thrust-constant.md) | Apply the depth-resolved K_t and the three decisions beside it; **moves the baseline** | Accepted | I |
+| [031](031-four-repositories-not-two-phases.md) | Four repositories by role, replacing the two-phase model | Accepted | — |
 
 Every decision in `DECISION_LOG.md` appears above. ADRs 012-018 record decisions that were
 never written down anywhere before.

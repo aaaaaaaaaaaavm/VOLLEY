@@ -96,7 +96,7 @@ actually about. The parameter stays so the alternative remains priceable without
 - `paper.tex` §VII's redundancy sentence states that the segmentation is for fault isolation and
   that the winding is driven as one section, so the reader cannot infer block commutation.
 - **P29 closes.** Both numbers now follow from one stated fact instead of two unstated ones.
-- The Phase II entry criterion above goes to `docs/PHASE_II.md`.
+- The Phase II entry criterion above goes to `docs/VAULT.md`.
 
 ## Validation
 

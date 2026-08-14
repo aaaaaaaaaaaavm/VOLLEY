@@ -57,7 +57,7 @@ reconciled.
 deliverables stay bound to scope. **It does not say how work leaves Phase II.**
 
 Without a route back, Phase II is not a research track but a graveyard: a place ideas are
-filed to be safely forgotten. The gate is defined in [`../PHASE_II.md`](../PHASE_II.md):
+filed to be safely forgotten. The gate is defined in [`../VAULT.md`](../VAULT.md):
 items are reviewed **only at baseline boundaries**, each against an entry criterion **written
 at the time it was deferred**, the same discipline as declaring acceptance bands before a run,
 and for the same reason. A criterion written after the fact is written by someone who already
@@ -97,7 +97,7 @@ includes "44.8 % is thrown away" when 23.6 % of it is retrievable with no envelo
 design that has to be defended rather than presented.
 
 **Against, recorded because it is the stronger procedural argument.** This is exactly the
-reasoning §5 exists to refuse. Every deferred item in [`../PHASE_II.md`](../PHASE_II.md) had a
+reasoning §5 exists to refuse. Every deferred item in [`../VAULT.md`](../VAULT.md) had a
 sponsor who thought it was worth the exception, and PII-1 recovers the entire velocity shortfall
 for 1.5 % of shot energy — a better return than this one — and still defers. **The honest
 alternative was to open PII-11 and leave it there.**
@@ -149,3 +149,37 @@ The parts of the dossier that constrain rather than enable are unchanged and bin
 Add a numbered section: what the dossier says, what was done instead, who authorised it, the
 reasoning, and the risk it creates with its mitigation. **Do not edit the dossier.** A
 governing document that quietly changes to match practice is not governing anything.
+
+---
+
+## Amendment 4: the two-phase model is retired, 2026-08-13
+
+**The dossier says** (§§2, 10) that the programme runs in two phases: Phase I develops three
+deliverables against a frozen baseline, and *"Phase II begins after Phase I and may fundamentally
+redesign any aspect."*
+
+**What is done instead:** the programme is described by **the four repositories and their roles**.
+[ADR-031](../adr/031-four-repositories-not-two-phases.md) has the full reasoning; the summary is
+that the phase model measures **calendar position** while every decision that mattered turned on
+**evidence maturity**.
+
+| Repository | Role | Changes |
+|---|---|---|
+| **VOLLEY-lab** | Ideas that never became a complete thing, and the evidence behind them | Freely |
+| **VOLLEY** | The authoritative record. The concept, improved continuously | Freely, subject to the consistency checks |
+| **VOLLEY-paper / -thesis** | The same concept at its most reliable | **Frozen when presented or published** |
+
+**What the dossier was protecting is kept.** The freeze made the verification tools mean
+something, and the boundary is what let Gen6 be developed and then *not* adopted on the day it
+looked best. **That line moves from a date to a publication; it does not disappear.** Promotion
+conditions are stated per tier in `../VAULT.md`, and the strictest one is unchanged and not
+negotiable: **an idea enters the record only when its acceptance bands were declared before its
+script existed, and run.**
+
+**What is given up, stated plainly:** the dossier's phase language, and with it the ability to
+answer "what phase are we in?" **That question should stop mattering, and if it starts mattering
+again this amendment failed.**
+
+**Phase I is not being un-closed.** It closed on 2026-08-13 under
+[ADR-029](../adr/029-phase-one-closes-on-gen5.md) and `PHASE_I_CLOSURE.md` records it as the
+historical event it was. This amendment governs what comes after.

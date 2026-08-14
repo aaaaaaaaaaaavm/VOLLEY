@@ -31,10 +31,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # The shared cross-link block. Byte-identical in all four repositories -- the flagship's copy
 # in PROGRAMME.md is the source, and this is checked by tools/check_links.py.
 HEADER_ROWS = [
-    ("VOLLEY", "Flagship: the authoritative engineering record, and the portfolio", ""),
-    ("VOLLEY-paper", "IEEE companion: manuscript and reproducibility package *(generated)*", "paper"),
-    ("VOLLEY-thesis", "Thesis companion: university submission *(generated)*", "thesis"),
-    ("VOLLEY-lab", "Phase II: research, redesign, deliberately unstable", "lab"),
+    ("VOLLEY", "Main: the authoritative engineering record. Improved continuously", ""),
+    ("VOLLEY-paper", "The concept at its most reliable, as a conference contribution. **Frozen when published**", "paper"),
+    ("VOLLEY-thesis", "The same concept as a full submission. **Frozen when presented**", "thesis"),
+    ("VOLLEY-lab", "The vault: ideas that never became a complete thing, and why each stopped", "lab"),
 ]
 OWNER = "aaaaaaaaaaaavm"
 

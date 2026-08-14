@@ -5,7 +5,7 @@
 for anything here, and the mass figures are a scaling argument over `mass_properties.py`'s own
 lumps rather than a re-run of the rollup.
 
-[`PHASE_II.md`](PHASE_II.md) holds eighteen deferred items, each sized on its own. **Nothing had
+[`VAULT.md`](VAULT.md) holds eighteen deferred items, each sized on its own. **Nothing had
 ever asked whether they interact.** Two of them turn out to be *alternatives* rather than
 complements — and that is only visible once **PII-18** puts a 0.6 kg shuttle where a 9.445 kg
 sled used to be.
@@ -140,7 +140,7 @@ that analysis has to be redone rather than inherited.
 
 ## What this page is not
 
-**It is not a promotion.** [`PHASE_II.md`](PHASE_II.md)'s gate is explicit: items are reviewed
+**It is not a promotion.** [`VAULT.md`](VAULT.md)'s gate is explicit: items are reviewed
 only at baseline boundaries, and *"an item may not be promoted by finding it interesting. It is
 promoted by meeting the criterion it was given."* PII-1 and PII-15 are recorded here as
 **superseded if PII-18 is promoted** — which is a finding about their interaction, not a decision

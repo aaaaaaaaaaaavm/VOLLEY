@@ -108,7 +108,7 @@ constant and re-run the motor model, then the paper.
 
 > **Superseded as the authoritative list.** The frozen baseline is [`../BASELINE.md`](BASELINE.md),
 > the sequenced plan is [`../ROADMAP.md`](ROADMAP.md), and deferred work is
-> [`PHASE_II.md`](PHASE_II.md). This section is kept only so the file is not misleading;
+> [`VAULT.md`](VAULT.md). This section is kept only so the file is not misleading;
 > update those three, not this.
 
 As of 2026-07-29: P1, P4 fixed in the paper; **P5, P8, P11, P12, P15 closed**; the measured

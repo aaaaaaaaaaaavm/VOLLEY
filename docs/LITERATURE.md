@@ -223,7 +223,7 @@ The two entries this cluster started with, both harvested from the coilgun sourc
 - Kim, S. & Kim, J. Control of discharge time using physical contact in a two-stage coil gun. Adv. Mech. Eng. 11(9), 1–8 (2019) `E`
 - Akay, C., Bavuk, U., Tunçdamar, A. & Özer, M. Coilgun design and evaluation without capacitor. J. Mechatron. Artif. Intell. Eng. 1(2), 53–62 (2020) `E`
 
-**What this cluster still does not contain, and PII-7 needs:** a manufacturer datasheet for a specific cell, with DC ESR at the operating temperature and its derating with age. That is a procurement document rather than literature, and the entry criterion in [`PHASE_II.md`](PHASE_II.md) says so.
+**What this cluster still does not contain, and PII-7 needs:** a manufacturer datasheet for a specific cell, with DC ESR at the operating temperature and its derating with age. That is a procurement document rather than literature, and the entry criterion in [`VAULT.md`](VAULT.md) says so.
 
 ---
 
