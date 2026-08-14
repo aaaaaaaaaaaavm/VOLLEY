@@ -114,11 +114,29 @@ GMAT R2022a, 90 days, twelve satellites, 60 474 rows each. Bands committed at `e
 | 5 | GMAT SMA vs `astro.boosted_elements` | ≤ 0.5 % | — | **0.0000 %** | **PASS** |
 
 Band 6 has since been evaluated — see above, and **band 8 has now been evaluated in closed form**
-— see below. **Band 7 remains not evaluated**, and it is worth being precise about why: band 7
-asks whether the campaign spans exactly 12 × 1200 s, which is a property of
-`build_poem_campaign.py`'s shot scheduling rather than anything GMAT reports. No propagator run
-will ever produce it. It closes by reading the generator against ADR-020, which has not been
-done, so it stays open rather than being quietly folded into the evaluated set.
+— see below. **Band 7 was evaluated 2026-08-13 by reading the generator**, which is the only way
+it could ever have been: band 7 asks whether the campaign spans exactly 12 × 1200 s, which is a
+property of `build_poem_campaign.py`'s shot scheduling rather than anything GMAT reports. **No
+propagator run will ever produce it.**
+
+### Band 7, evaluated 2026-08-13: PASS
+
+| Read from the generator | | |
+|---|---:|---|
+| `SPACING_S` | **1200.0 s** | ADR-020's value, with the ADR named in the source comment |
+| `N_SHOTS` | **12** | the manifest |
+| Campaign duration | **4.0000 h** | 12 × 1200 s exactly |
+| Emitted shot times | 0 … 13200 s | twelve, spacing **min 1200.0, max 1200.0 s** |
+| `astro.conjunction`'s own default `spacing_s` | **1200.0 s** | the two agree, which is the point |
+
+**The spacing is uniform across the whole campaign**, not merely correct on average, and the
+generator's cadence is the same number `astro.py` uses for the conjunction geometry — so the
+deployment-safety case and the GMAT campaign are scheduled against one value rather than two.
+That agreement is what band 7 was really protecting, because **P31 was exactly the failure of the
+repository carrying two inter-shot intervals at once**, and ADR-020 closed it at 1200 s.
+
+**A15 now has every band evaluated.** Band 8 is closed form and VOID as a capability claim on
+**E5**; band 7 is a generator property and passes.
 
 ## Band 8, Case B: evaluated 2026-08-10, and it needed no propagator
 
