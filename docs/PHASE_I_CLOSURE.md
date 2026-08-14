@@ -359,6 +359,67 @@ handover and P52 cannot apply to it. Gen6's debts travel with Gen6.
 
 ---
 
+## 10d. CLOSED, 2026-08-13
+
+**Measured against §9's own definition, written 2026-08-05: *categories A, B and C closed;
+D, E and E4 open with named owners.* That state is now reached.**
+
+### Category A — closable here by analysis: CLOSED
+
+| | |
+|---|---|
+| **P36** — the track had no dynamic design case | **A33**, six of six bands. The mode does fall 109.0 → 66.4 Hz with the sled aboard, but the ripple chirp crosses it at x = 133 mm where the sled has depressed it **0.8 %** — excitation and depression are separated in space, so A17's fixed-frequency treatment was adequate. The travelling load is **5.01 %** of critical speed |
+| **P41** — the payload's cradle impact was unmodelled | **A34**, five of five. The rattle settles in **27.25 ms of a 146.4 ms powered stroke** and the residual rate at force removal is **exactly zero** for every clearance. A23's 36–231 °/s arrival never becomes a release rate |
+| **A15 band 7** | Evaluated by reading the generator, which is the only way it could have been. **PASS.** A15 now has every band evaluated |
+
+### Category B — bookkeeping: CLOSED
+
+**P14** superseded by generated CAD; **P19**'s general claim shown false with both survivors
+dispositioned; **P20**'s lesson is a standing rule in `validation/README.md` that A2 band 4 was
+then written under; **P35**'s false header struck and the pin given an import-time assertion;
+**P38** and **P39** closed on their own criteria.
+
+### Category C — owner decisions: CLOSED
+
+**All four taken together under [ADR-030](adr/030-apply-the-depth-resolved-thrust-constant.md)**,
+at a boundary rather than piecemeal, because propagation is the expensive part.
+
+**P46** applied — the thrust integral is depth-resolved, K_t 11.0258 → **10.5386**, v_exit
+16.388 → **16.029 m/s**. **P28** — regen section 240 → **39 mm**. **P10** — an **8.0 kg labelled
+placeholder** enters the rollup. **P32** — **Gen4 retired**.
+
+> **Every headline number moved the wrong way and nothing improved.** Efficiency 21.0 → 18.8 %,
+> kg per 3U satellite 6.378 → **7.042**, kill criterion 1 from crossed by 3.2× to **3.5×**. That
+> is what taking these decisions cost, and it is why they had been deferred. **This project's
+> numbers have got worse every time they got truer**, and 20.65 → 20.37 → 16.537 → 16.388 →
+> 16.029 m/s is the whole trajectory in one line.
+
+### What stays open, by design and with owners
+
+| | | Owner |
+|---|---|---|
+| **E4** | Nothing built, fired or measured at any scale | **B-1**, ₹22,000, still unordered |
+| **Category D** | Vendor quotations, a host data exchange, cycle-life and shock tests | Hardware and external parties |
+| **Category E** | Network policy; undisclosed host accommodation (**E5**) | Blocked, not open |
+| **P36's damping half** | No measured Q for a bolted aluminium track | **T-2** sine sweep |
+| **The kill criteria** | 1, 2 and 3 remain crossed at the 3U design point | Stated, not solved |
+
+**Register at close: 87 entries, 31 live** — 10 P-items and 21 E-items, of which **E4, E5, E14
+and E15 are permanent caveats rather than debt.**
+
+### What Phase I is
+
+**A design that is frozen, internally consistent, and knows what is wrong with it.** Four
+independent verification tools pass on every commit; the baseline is generated from the scripts
+and cannot silently disagree with them; every analysis declared its acceptance bands before its
+script existed, and **twelve bands were missed and published as numbered defects rather than
+widened.**
+
+**It is not a design that has been shown to work.** Nothing has been measured. That distinction
+is the whole of `PROVENANCE.md` and it is the first thing a reader should be told.
+
+---
+
 ## 11. What Phase I closes with, honestly
 
 **Every analysis this environment can run has run.** What remains is one measurement, four

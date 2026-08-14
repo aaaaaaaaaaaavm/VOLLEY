@@ -9,6 +9,26 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-13 (thirty-second pass): Phase I closed
+
+| ID | Item | Detail |
+|---|---|---|
+| **CLOSE-03** | **Phase I is closed on Gen5** | Measured against `PHASE_I_CLOSURE.md` §9's own 2026-08-05 definition — *categories A, B and C closed; D, E and E4 open with named owners* — and that state is now reached. §10d records it. |
+| CLOSE-04 | **Category A closed by A33, A34 and A15 band 7** | The track's dynamic case, the cradle restitution model, and the one band that could only ever be closed by reading a generator. |
+| CLOSE-05 | **Category B closed** | P14 superseded by generated CAD, P19's general claim shown false, P20's lesson made a standing rule that A2 band 4 was then written under, P35's false header struck and given an assertion, P38 and P39 closed on their own criteria. |
+| CLOSE-06 | **Category C closed by ADR-030** | All four decisions taken together rather than piecemeal. |
+| **CLOSE-07** | **What stays open, with owners** | **E4** — nothing measured, owner **B-1** at ₹22,000, still unordered. Category D to hardware and external parties. Category E blocked, not open. **P36's damping half** to T-2's sine sweep. **Kill criteria 1, 2 and 3 remain crossed** at the 3U design point. |
+| CLOSE-08 | **Register at close: 87 entries, 31 live** | 10 P-items, 21 E-items, of which **E4, E5, E14 and E15 are permanent caveats rather than debt.** |
+| FRONT-04 | **The front door says so** | README opens with the closure, the four corrections and what they cost, and points at the Phase II target and at B-1. |
+
+**What Phase I is:** a design that is frozen, internally consistent, and knows what is wrong with
+it — four verification tools passing on every commit, a baseline generated from the scripts, and
+**twelve missed acceptance bands published as numbered defects rather than widened.**
+
+**What it is not:** a design that has been shown to work. **Nothing has been measured.**
+
+---
+
 ## 2026-08-13 (thirty-first pass): the baseline moves, and every number moves the wrong way
 
 | ID | Item | Detail |

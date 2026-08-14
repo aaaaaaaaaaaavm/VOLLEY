@@ -1,5 +1,24 @@
 # VOLLEY: an electromagnetic orbital CubeSat deployer
 
+> ## Phase I closed, 2026-08-13
+>
+> **The design is frozen at Gen5.** Categories A, B and C of
+> [`docs/PHASE_I_CLOSURE.md`](docs/PHASE_I_CLOSURE.md) are closed; **E4 — nothing built, fired or
+> measured at any scale — stays open**, along with the items that need hardware, a vendor
+> quotation or a host data exchange. **Three kill criteria remain crossed at the 3U design
+> point** and are stated rather than solved.
+>
+> **The last four deferred decisions were taken together** in
+> [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md), and **every headline number
+> moved the wrong way**: K_t 11.03 → **10.54 N per kA/m**, exit velocity 16.388 → **16.029 m/s**,
+> efficiency 21.0 → **18.8 %**, deployer mass per 3U satellite 6.378 → **7.042 kg**. Nothing
+> improved. That is what the corrections cost.
+>
+> **Next: [`docs/GEN6_ARCHITECTURE.md`](docs/GEN6_ARCHITECTURE.md)** is the Phase II design
+> target, and **[`docs/B1_ORDER.md`](docs/B1_ORDER.md)** is the one action that changes the
+> category of evidence rather than its degree.
+
+
 > **Numerical audit correction, 2026-08-03.** I corrected the winding-thickness quadrature
 > and propagated the rated point to **10.54 N per kA/m, 16.029 m/s, 10.07 g, 20.99% net
 > efficiency, and 65.552 N s per shot**. I also corrected A13's internal-momentum physics,
