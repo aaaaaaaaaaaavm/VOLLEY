@@ -35,10 +35,10 @@ than a line on the floor.
 
 **Every entry states why it stopped.**
 
-Not "deferred" — *why*, with the number that decided it. The rail-drive entry carries the
-transverse edge factor of **0.0253** that killed it, against the **0.55** it had been sized
-on. The cable gondola carries the drivetrain inertia that eats its own gain. **That is what
-makes this evidence rather than a pile**, and it is the only rule here.
+Not "deferred" — *why*, with the number that decided it. The rail-drive entry upstream carries
+the transverse edge factor of **0.0253** that killed it, against the **0.55** it had been sized
+on. PII-14 below carries the drivetrain inertia that eats its own gain. **That is what makes
+this evidence rather than a pile**, and it is the only rule here.
 
 An entry without a reason is not deferred. It is abandoned with extra steps.
 
@@ -52,8 +52,8 @@ and its entry criterion — is kept in the main repository so the numbering cann
 |---|---|
 | [**PII-8** — VOLLEY as a free-flyer](PII-8_free_flyer.md) | A long deployed track and release at perigee reaches TLI and Mars-class C3 without exceeding CubeSat qualification. **Stopped by three problems named in the file**: airgap straightness at 0.7–2 ppm over a deployed structure, a 294 kJ shot against a bank that already fails at 2.88 kJ, and whether 25 g survives review as a *sustained* load |
 | [**PII-9** — the lunar case](PII-9_lunar.md) | Where this technology has always belonged, and the mass driver it descends from. 1.33 MJ/kg to lunar orbit, so 15 kW launches a tonne a day. **Stopped by having no host**: it describes a different programme, not this one. The payload is ore, so the g-limit governing the whole design disappears |
-| [**PII-11** — a deployable track, and the side-rail layout](PII-11_deployable_track.md) | A telescoping track long enough to accelerate *and* regeneratively arrest reaches **48 % electrical-to-payload against 18.5 %**, deletes the eddy brake and stows at 1150 mm. The only option that improves velocity and envelope together. **Stopped by type, not by number**: a deployable structure is an architecture change however good its numbers are |
-| [**PII-14** — a cable-driven gondola](PII-14_cable_driven_gondola.md) | Propulsion off the vehicle and onto a cable, energy from a flywheel. A 2 kg gondola reaches **24.5 m/s in the existing 1.30 m track** — *if the drivetrain has no rotating inertia*. **Stopped by `m_eff = I/r²`**: at 7.4 kg of referred inertia the entire gain is gone |
+| [**PII-11** — a deployable track, and the side-rail layout](PII-11_deployable_track.md) | A telescoping track long enough to accelerate *and* regeneratively arrest reaches **48 % electrical-to-payload efficiency**, deletes the eddy brake and stows inside the ESPA Grande envelope the main design misses by 44 %. The only option that improves velocity and envelope together. **Stopped by type, not by number**: a deployable structure is an architecture change however good its numbers are |
+| [**PII-14** — a cable-driven gondola on a deployed truss](PII-14_cable_driven_gondola.md) | Propulsion off the vehicle onto a cable, energy from a flywheel. **Stopped by the assumption inside its own headline**: +49.7 % assumed a drivetrain with zero rotating inertia, and a real one gives +15 to +30 %, possibly zero — in exchange for deleting the linear synchronous motor and the 24 validations behind it. Its two dead ends are recorded too, because both will otherwise be re-proposed |
 | [`notes/`](notes/) | Unstructured, date-stamped, finished by nobody |
 
 **PII-11 is the one that is hardest to leave shut**, because unlike the others it improves the
@@ -83,3 +83,15 @@ architecture belongs here.
 Name it. State what it buys, with a number. Say why it is improvement rather than correction.
 Then write its entry criterion **before you stop thinking about it** — and when it stops, write
 down what stopped it.
+
+## Licence
+
+**CC BY 4.0** — full text in [`LICENSE`](LICENSE), attribution form in [`NOTICE`](NOTICE).
+Attribution requires credit, a link to the licence, and **an indication of whether changes were
+made**.
+
+**Not retroactive:** snapshots taken before this change remain available under the MIT licence
+they carried at the time, retained at [`LICENSE-MIT-superseded`](LICENSE-MIT-superseded).
+
+This repository carries copies of VOLLEY analysis code under `reference/volley/`. CC BY 4.0 does
+not license patent rights, which is why a patent-granting licence was not used here.

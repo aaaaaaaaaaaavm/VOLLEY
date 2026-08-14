@@ -126,7 +126,7 @@ currently demonstrate that it fits anything.**
 
 **The alternative was priced before it was rejected.** Fitting 1270 mm means a 731 mm acceleration
 zone, since the 539 mm of overhead does not shrink, and velocity goes as √s: **16.029 → 12.286 m/s,
-−25 %**, lifetime ×1.60 → ×1.44. Repackaging 150 mm of brake recovers about a third of that, and
+−25 %**, lifetime ×1.60 → ×1.43. Repackaging 150 mm of brake recovers about a third of that, and
 depends on a layout nobody has drawn against an arrest section **P28** already says is
 oversubscribed.
 
