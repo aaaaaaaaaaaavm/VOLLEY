@@ -119,7 +119,7 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 > [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both generated from
 > [`cad/parameters.json`](cad/parameters.json) so they cannot drift from it.
 
-**[🏁 Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[🧩 Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[🧭 State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[🖼 Figure index](docs/FIGURE_INDEX.md)** · **[📈 The case](docs/CASE_STUDY.md)** · **[🔍 Review responses](docs/REVIEW_RESPONSES.md)** · **[🏗 Build readiness](docs/BUILD_READINESS.md)** · **[🧊 CAD brief](CAD_BRIEF.md)** · **[📐 Dimensions](cad/DIMENSIONS.md)** · **[🔧 BOM](cad/BOM.md)** · **[🎯 The concept](docs/CONCEPT.md)** · **[📄 One-page summary](SUMMARY.md)** · **[🧊 Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[🗺 Roadmap](docs/ROADMAP.md)** · **[⚠ Open problems](OPEN_PROBLEMS.md)** · **[✓ Validation](docs/VALIDATION_REPORT.md)** · **[🏗 Manufacturing](docs/MANUFACTURING.md)** · **[📐 ADRs](docs/adr/)** · **[📚 Literature](docs/LITERATURE.md)** · **[🎯 Research position](docs/RESEARCH_POSITION.md)** · **[⛔ Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[☠ Kill criteria](docs/KILL_CRITERIA.md)** · **[🔩 Structural gap](docs/STRUCTURAL_GAP.md)** · **[📦 Payload classes](docs/PAYLOAD_CLASSES.md)** · **[🧲 Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[🧪 B-1 order](docs/B1_ORDER.md)** · **[📈 Market](docs/MARKET.md)**
+**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[warning Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
@@ -524,7 +524,7 @@ Attribution is required under CC BY 4.0, including an indication of what was cha
 **Adityavardhan Mishra**: Department of Mechanical Engineering, Symbiosis Institute of
 Technology, Symbiosis International (Deemed University), Pune. Project begun April 2021.
 
-📧 [adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com)
+ [adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com)
 
 Questions, corrections and reproduction attempts are all welcome, particularly reproduction
 attempts. If a number in this repository does not reproduce for you, that is a defect and I

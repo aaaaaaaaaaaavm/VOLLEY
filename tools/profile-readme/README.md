@@ -58,10 +58,10 @@ That habit is the actual portfolio:
 
 | | |
 |---|---|
-| 🛰 **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | The authoritative engineering record. Start at [`docs/CONCEPT.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/CONCEPT.md) |
-| 📄 **[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | IEEE manuscript and reproducibility package |
-| 🎓 **[VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis)** | Final-year submission |
-| 🧪 **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | Phase II work. Deliberately unstable and not citable |
+| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | The authoritative engineering record. Start at [`docs/CONCEPT.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/CONCEPT.md) |
+| **[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | IEEE manuscript and reproducibility package |
+| **[VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis)** | Final-year submission |
+| **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | The vault: ideas that never became a complete thing, and why each stopped. Not citable |
 
 ---
 
@@ -100,5 +100,5 @@ platform, which is not what I was hired to do.
 pronounced how it's spelled, *Aevium*. Recognised by the ISRO Chairman for aerospace STEM
 outreach; member, Space Generation Advisory Council.</sub>
 
-📫 [adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com) ·
+[adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/adityavardhanmishra/) · Pune, India

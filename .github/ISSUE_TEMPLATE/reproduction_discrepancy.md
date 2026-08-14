@@ -18,8 +18,8 @@ labels: discrepancy
 <!-- Where the differing value appears, with section or line. e.g. paper/paper.tex Sec. V-A -->
 
 **Is the document value traceable to any script?**
-- [ ] Yes, to: `analysis/<script>.py`
-- [ ] No, not traceable (do NOT reconstruct it; flag it)
+- [] Yes, to: `analysis/<script>.py`
+- [] No, not traceable (do NOT reconstruct it; flag it)
 
 **Environment**
 - OS:
