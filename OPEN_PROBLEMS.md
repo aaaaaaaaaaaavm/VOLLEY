@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **94 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
+> **95 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
+> | `LIVE` | **40** (19 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **25** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
@@ -2712,6 +2712,55 @@ has stopped being kind.
 
 **What would close it.** An owner decision on payload class (**D2**), taken explicitly and recorded
 as an ADR. No analysis closes this; two have now tried.
+
+> ### A third route opened the same day, 2026-08-14 (**A37 band 5**)
+>
+> **If the deployer is not carried by a stage but *is* one**, 43.33 kg of this ledger becomes stage
+> structure that names the subsystem providing it, and 29.75 kg is deleted outright by a design
+> with no mover and no pulse. What remains is **11.45 kg of containment**, and on a small
+> kick-stage class **added mass per satellite is 1.608 kg against the unchanged 2.0 kg threshold.**
+>
+> **The threshold did not move and dry mass per satellite still crosses at 7.044 kg.** Both
+> numerators are reported together wherever either appears, which is what A37 bands 1–3 exist to
+> enforce. **This entry stays LIVE** — a second numerator argued on its merits is not the same as
+> the criterion being met, and D2 remains the decision that settles which numerator a customer
+> actually pays.
+
+### P60. The energy store scales as v² and is now the binding constraint: HIGH, NEW 2026-08-14
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+**A37 bands 4 and 8 missed.** Band 4 was the falsification test
+[A35](validation/A35_constraint_ledger.md) declared and left open: the pulse chain released
+**23.76 kg**, so its replacement had to weigh under **14.26 kg** or the mass had merely relocated.
+Band 8 required the store to stay under half of everything added.
+
+At the selected point the store and its mechanism weigh **41.86 kg — 78.5 %** of added mass.
+
+**The physics.** Store energy goes as **v²**, so spring mass does too: 4.91 kg at 1.5 m of stroke,
+9.81 kg at 3.0 m, **26.16 kg at 8.0 m**. Stage length is free and the spring that exploits it is
+not. **Every previous run in this project was about where the kilograms live. This one says the
+next question is a store trade.**
+
+**Two things about this failure are recorded rather than glossed.**
+
+**The selection rule was badly designed.** No declared stage class satisfied every band, so the
+script fell back to maximum velocity — the worst case for both failing bands. **At the small class
+the falsifier passes comfortably at 7.85 kg.** The bands are evaluated as declared and the failure
+stands, but its proximate cause is a fallback rule rather than the physics.
+
+**And the declared classes bracket the answer without containing it.** Derived after the run and
+not a band: every declared band is satisfied for stroke between **1.83 m and 2.18 m**, at
+**30.0–32.7 m/s** and about **1.83 kg/satellite**. The classes declared were 1.5, 3.0 and 8.0 m.
+**No class was added after the run and none will be.**
+
+**What would close it.** A store trade at metre-scale strokes with its own bands, declared against
+the window above rather than around it, and carrying at minimum: a gas store with a real
+pressure-vessel mass fraction — deliberately excluded from A37 because inventing one to win a trade
+is worse than leaving it out — and a mechanism model derived rather than assumed, A37's being
+**60 % of store mass floored at 2 kg** and the largest guess in that run.
+
+**What it does not undo.** A37 band 5 passed at **1.608 kg/satellite**, so kill criterion 1 closes
+at 3U on the small class. **P60 is about how fast the machine can be, not whether it closes.**
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

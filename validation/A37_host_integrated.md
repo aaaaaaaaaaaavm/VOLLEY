@@ -108,4 +108,91 @@ survives every architecture on this page and gets worse with acceleration.
 
 ## Results
 
-*(Filled after the run. Nothing above this line changes.)*
+**RUN 2026-08-14. Six of eight bands pass. Bands 4 and 8 fail, and the failure is the result.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reassignment reproduces the ledger to 0.01 kg | 84.5316 against 84.5316 | **PASS** |
+| 2 | every stage-provided item names its subsystem | 0 unjustified | **PASS** |
+| 3 | both numerators reported, threshold unchanged | dry **7.044**, added **4.442 kg** | **PASS** |
+| 4 | A35 falsifier: store + mechanism ≤ 14.26 kg | **41.86 kg** at the selected point | **FAIL** |
+| 5 | added mass/satellite ≤ 2.0 kg on some class | **1.608 kg** | **PASS** |
+| 6 | ≥ 30 m/s at ≤ 25 g | 62.6 m/s at 25 g | **PASS** |
+| 7 | peak electrical ≤ 200 W | 131 W | **PASS** |
+| 8 | store ≤ 50 % of added mass | **78.5 %** | **FAIL** |
+
+### Where the 84.53 kg goes
+
+| | |
+|---|---:|
+| **Deleted by Gen6 physics** — no mover, no pulse | **29.75 kg** |
+| **Provided by a live stage**, each item naming its subsystem | **43.33 kg** |
+| **Added — what the machine still costs** | **11.45 kg** |
+
+The entire added base is **cassette shells (8.85 kg) and followers, gates and escapements
+(2.60 kg)**. Nothing else survives as a cost. **A36's containment floor and this run's added base
+are the same 11.45 kg**, arrived at from opposite directions.
+
+### Band 5 passes, and it is the largest result this project has produced
+
+| Stage class | L | v | store + mech | **added kg/satellite** | charge |
+|---|---:|---:|---:|---:|---:|
+| **small kick stage** | 1.5 m | 27.1 m/s | 7.85 kg | **1.608 kg** | 25 W |
+| medium restartable upper stage | 3.0 m | 38.4 m/s | 15.70 kg | 2.262 kg | 49 W |
+| large upper stage | 8.0 m | 62.6 m/s | 41.86 kg | 4.442 kg | 131 W |
+
+**On the small class, added mass per satellite is 1.608 kg against an unchanged 2.0 kg threshold.
+Kill criterion 1 closes at 3U, without changing payload class** — the route P59 recorded as the
+only one left is no longer the only one.
+
+**Both numerators, as band 3 requires:** dry mass per satellite remains **7.044 kg and crosses**.
+Nothing about that has changed and it is not being withdrawn. What has changed is that a second,
+differently-argued numerator exists, and **both are reported wherever either is.**
+
+### Bands 4 and 8 fail because the store scales as v², and that is now the binding constraint
+
+The run sheet predicted this shape: *"A comfortable pass at 16 m/s and a failure at 38 m/s is a real
+possibility and would be the most useful outcome this run can produce."*
+
+**Stage length is free. The spring that exploits it is not.** Store mass goes as v², so the 8 m
+class needs **26.16 kg of spring steel** and the store becomes 78.5 % of everything added.
+
+**And the selection rule was badly designed.** No declared class satisfied every band, so the
+script fell back to maximum velocity — the worst case for bands 4 and 8. At the *small* class the
+falsifier passes comfortably at 7.85 kg. **The bands are evaluated as declared and the failure
+stands**, but its proximate cause is a fallback rule, not the physics, and that is recorded rather
+than glossed.
+
+### The window the three declared classes bracket without containing
+
+*Derived after the run from its own outputs. Not a band, and not to be read as one.*
+
+Every declared band is satisfied for **L between 1.83 m and 2.18 m — 30.0 to 32.7 m/s** — at
+about **1.83 kg/satellite**, a **10.5 kg** store and **33 W**. The three classes declared were
+1.5 m, 3.0 m and 8.0 m. **None lies inside the window.** 1.5 m misses only on velocity; 3.0 m
+misses on mass, falsifier and store fraction.
+
+**No stage class was added after the run**, and none will be. The window is reported so the next
+run can declare its classes against it rather than around it.
+
+### What this means
+
+1. **The stage does not solve the mass problem — it deletes it.** 43.33 kg becomes someone else's
+   structure and 29.75 kg stops existing. What remains is containment, which no architecture can
+   remove.
+2. **The binding constraint has moved from mass to energy storage.** Every previous run was about
+   where the kilograms live. This one says the next question is a store trade, at metre-scale
+   strokes, and **band 8's failure is the warning the run sheet declared in advance**: this is
+   becoming a spring-design problem wearing a deployer's clothes.
+3. **Velocity and kill criterion 1 are now in direct tension**, priced for the first time. 27 m/s
+   closes the criterion; 38 m/s does not. Where to sit on that curve is a product decision.
+
+### What is still not priced, and every omission flatters this run
+
+Stage **availability** — a different stage each launch multiplies the interface problem rather than
+solving it. Attitude control and power through a campaign A36 puts at up to 42 hours, against a
+vehicle designed to be passivated. The debris-mitigation case for keeping a stage manoeuvring.
+Gas stores, excluded deliberately. The mechanism model is **60 % of store mass floored at 2 kg**,
+a declared assumption with no derivation and the largest guess in this run.
+**Tip-off is untouched:** A23's 36–231 °/s survives every architecture here and worsens with
+acceleration.

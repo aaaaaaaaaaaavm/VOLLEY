@@ -9,6 +9,24 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (thirty-seventh pass): the stage is the deployer, and the binding constraint moves to the store
+
+| ID | Item | Detail |
+|---|---|---|
+| **A37** | **Six of eight bands, 4 and 8 FAIL** | Bands 1–3 enforce the honesty rules mechanically: **the 2.0 kg threshold does not move**, added mass per satellite is never reported without dry mass per satellite beside it, and nothing is credited to the stage without naming the subsystem that provides it. All three pass. |
+| **SPLIT-02** | **Where 84.53 kg goes once the stage is the machine** | **29.75 kg deleted** by a design with no mover and no pulse; **43.33 kg provided** by stage structure, skin, avionics, thermal and harness, each naming its subsystem; **11.45 kg added.** The entire added base is cassette shells and gates — **the same 11.45 kg A36 measured as the containment floor, reached from the opposite direction.** |
+| **CRIT-01** | **Kill criterion 1 closes at 3U, on a second numerator argued on its merits** | **1.608 kg per satellite** on a small kick-stage class against the unchanged 2.0 kg threshold. **Dry mass per satellite still crosses at 7.044 kg and that is not withdrawn.** P59 stays LIVE: a second numerator is not the criterion being met, and D2 still decides which one a customer pays. |
+| **P60** | **The store scales as v², and it is now what binds** | 4.91 kg of spring at 1.5 m, 9.81 at 3.0, **26.16 at 8.0** — **78.5 % of everything added.** Band 4 was A35's own falsifier, declared and left open: the pulse released 23.76 kg and its replacement had to stay under 14.26. **Stage length is free; the spring that exploits it is not.** |
+| SELECT-01 | **And the selection rule was badly designed** | No declared class satisfied every band, so the script fell back to maximum velocity — the worst case for both failing bands. **At the small class the falsifier passes comfortably at 7.85 kg.** The bands are evaluated as declared and the failure stands; its proximate cause is recorded rather than glossed. |
+| WINDOW-01 | **The declared classes bracket the answer without containing it** | Derived after the run and **not a band**: every declared band is satisfied between **1.83 m and 2.18 m of stroke, 30.0–32.7 m/s, about 1.83 kg/satellite.** The classes declared were 1.5, 3.0 and 8.0 m. **No class was added after the run and none will be.** |
+| TENSION-01 | **Velocity and kill criterion 1 are now in direct tension, priced** | 27 m/s closes the criterion; 38 m/s does not. Where to sit on that curve is a product decision rather than an analysis. |
+
+**What authorised it.** A question about scale, and the arithmetic it prompted. **No band was
+edited, widened or moved**; A37's eight were committed before `analysis/host_integrated.py`
+existed. Two failed and produced **P60**. All four checks pass.
+
+---
+
 ## 2026-08-14 (thirty-sixth pass): the last route to kill criterion 1 closes, and it is a market decision
 
 | ID | Item | Detail |

@@ -1,0 +1,332 @@
+{
+  "analysis": "A37",
+  "bands_declared_commit": "ec9d6a1",
+  "note": "the 2.0 kg threshold is UNCHANGED and applied to both numerators; gas stores excluded deliberately; tip-off untouched; stage availability, attitude control through the campaign and debris mitigation NOT priced",
+  "ledger_total_kg": 84.53158800000001,
+  "deleted_kg": 29.748692,
+  "stage_provided_kg": 43.32992,
+  "added_base_kg": 11.452976,
+  "dry_kg_per_satellite": 7.044299000000001,
+  "target_kg": 2.0,
+  "a35_c3_released_kg": 23.76,
+  "falsifier_kg": 14.256,
+  "added_items": [
+    {
+      "part": "Cassette shells (2x Al sheet eq.)",
+      "kg": 8.852976,
+      "cg_m": 0.35,
+      "full": [],
+      "partial": [
+        "C6"
+      ],
+      "note": "payload containment survives; count changes"
+    },
+    {
+      "part": "Followers, gates, escapements (2x)",
+      "kg": 2.6,
+      "cg_m": 0.3,
+      "full": [],
+      "partial": [
+        "C6"
+      ],
+      "note": "ascent restraint survives; count changes"
+    }
+  ],
+  "stage_items": [
+    {
+      "part": "Track longerons (2x Al box section)",
+      "kg": 6.829919999999998,
+      "cg_m": 0.75,
+      "full": [],
+      "partial": [
+        "C2",
+        "C4"
+      ],
+      "note": "rails survive; section and length do not",
+      "provided_by": "primary structure -- the stage IS a long stiff cylinder"
+    },
+    {
+      "part": "Battery + avionics + IMU",
+      "kg": 5.5,
+      "cg_m": 0.12,
+      "full": [],
+      "partial": [
+        "C3",
+        "C5"
+      ],
+      "note": "command and sensing survive; the store does not",
+      "provided_by": "stage power, command and IMU, kept alive past passivation"
+    },
+    {
+      "part": "Harness",
+      "kg": 2.5,
+      "cg_m": 0.6,
+      "full": [],
+      "partial": [
+        "C3"
+      ],
+      "note": "320 A conductors; signal harness survives",
+      "provided_by": "stage harness, extended rather than added"
+    },
+    {
+      "part": "Thermal (pipes, radiator, MLI)",
+      "kg": 6.0,
+      "cg_m": 0.7,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "sized on 10 kJ of copper heat per manifest",
+      "provided_by": "stage thermal control loop"
+    },
+    {
+      "part": "ESPA bracket + fasteners",
+      "kg": 9.0,
+      "cg_m": 0.35,
+      "full": [],
+      "partial": [
+        "C4"
+      ],
+      "note": "scales with what it carries",
+      "provided_by": "the stage needs no adapter to itself"
+    },
+    {
+      "part": "Panels / closeouts",
+      "kg": 5.5,
+      "cg_m": 0.75,
+      "full": [],
+      "partial": [
+        "C4"
+      ],
+      "note": "scales with enclosed length",
+      "provided_by": "stage skin and thrust structure"
+    },
+    {
+      "part": "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
+      "kg": 8.0,
+      "cg_m": 0.5,
+      "full": [],
+      "partial": [
+        "C3",
+        "C4"
+      ],
+      "note": "P10 placeholder; radiator half is C3",
+      "provided_by": "stage thermal control and avionics bay"
+    }
+  ],
+  "deleted_items": [
+    {
+      "part": "Stator copper (1.3 m, 60% fill)",
+      "kg": 6.2899199999999995,
+      "cg_m": 0.65,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "no stroke-time energy, no stator"
+    },
+    {
+      "part": "Stator formers / potting (PEEK eq.)",
+      "kg": 0.9729720000000001,
+      "cg_m": 0.65,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "holds the stator"
+    },
+    {
+      "part": "Sled Halbach magnets (2 faces)",
+      "kg": 3.6720000000000006,
+      "cg_m": 0.15,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "the mover IS the magnets"
+    },
+    {
+      "part": "Sled Ti chassis (shell equivalent)",
+      "kg": 0.7367975999999999,
+      "cg_m": 0.15,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "chassis for the mover"
+    },
+    {
+      "part": "Sled rollers / latch / backstop",
+      "kg": 0.45,
+      "cg_m": 0.15,
+      "full": [],
+      "partial": [
+        "C2"
+      ],
+      "note": "a payload cradle still needs guidance"
+    },
+    {
+      "part": "Eddy brake magnets + yoke",
+      "kg": 1.6847999999999996,
+      "cg_m": 1.42,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "nothing to arrest without a mover"
+    },
+    {
+      "part": "Fixed brake hardware + ring spring (moving Cu fin is in sled)",
+      "kg": 0.856,
+      "cg_m": 1.4,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "ditto"
+    },
+    {
+      "part": "Supercapacitor cells + busbars",
+      "kg": 6.5,
+      "cg_m": 0.1,
+      "full": [
+        "C3",
+        "C5"
+      ],
+      "partial": [],
+      "note": "17 kW for 162 ms is the only reason it exists"
+    },
+    {
+      "part": "PPU (SiC bridge, filters)",
+      "kg": 4.0,
+      "cg_m": 0.1,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "a bridge with no pulse to switch"
+    },
+    {
+      "part": "Sled CAD reconciliation (P15, CAD-derived 9.445 kg)",
+      "kg": 4.5862023999999995,
+      "cg_m": 0.15,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "the rest of the same mover"
+    }
+  ],
+  "points": [
+    {
+      "stage_class": "small kick stage",
+      "length_m": 1.5,
+      "v_exit": 27.124711980037688,
+      "a_g": 25.0,
+      "force_N": 981.0,
+      "energy_J": 1471.5000000000002,
+      "spring_kg": 4.905000000000001,
+      "charge_W_60s": 24.525000000000002,
+      "campaign_J": 17658.000000000004,
+      "mechanism_kg": 2.9430000000000005,
+      "store_plus_mechanism_kg": 7.848000000000002,
+      "added_total_kg": 19.300976000000002,
+      "added_kg_per_satellite": 1.6084146666666668
+    },
+    {
+      "stage_class": "medium restartable upper stage",
+      "length_m": 3.0,
+      "v_exit": 38.360135557633264,
+      "a_g": 25.0,
+      "force_N": 981.0,
+      "energy_J": 2942.9999999999995,
+      "spring_kg": 9.809999999999999,
+      "charge_W_60s": 49.04999999999999,
+      "campaign_J": 35315.99999999999,
+      "mechanism_kg": 5.885999999999999,
+      "store_plus_mechanism_kg": 15.695999999999998,
+      "added_total_kg": 27.148975999999998,
+      "added_kg_per_satellite": 2.2624146666666665
+    },
+    {
+      "stage_class": "large upper stage",
+      "length_m": 8.0,
+      "v_exit": 62.6418390534633,
+      "a_g": 25.0,
+      "force_N": 981.0,
+      "energy_J": 7848.0,
+      "spring_kg": 26.16,
+      "charge_W_60s": 130.8,
+      "campaign_J": 94176.0,
+      "mechanism_kg": 15.696,
+      "store_plus_mechanism_kg": 41.856,
+      "added_total_kg": 53.308976,
+      "added_kg_per_satellite": 4.442414666666667
+    }
+  ],
+  "selected": {
+    "stage_class": "large upper stage",
+    "length_m": 8.0,
+    "v_exit": 62.6418390534633,
+    "a_g": 25.0,
+    "force_N": 981.0,
+    "energy_J": 7848.0,
+    "spring_kg": 26.16,
+    "charge_W_60s": 130.8,
+    "campaign_J": 94176.0,
+    "mechanism_kg": 15.696,
+    "store_plus_mechanism_kg": 41.856,
+    "added_total_kg": 53.308976,
+    "added_kg_per_satellite": 4.442414666666667
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "added + stage + deleted reproduces the A35 ledger to 0.01 kg",
+      "detail": "84.5316 against 84.5316",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "every stage-provided item names the subsystem providing it",
+      "detail": "0 unjustified",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "both numerators reported, threshold unchanged at 2.0 kg",
+      "detail": "dry 7.044 kg, added 4.442 kg",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "A35 falsifier: store + mechanism <= 14.26 kg",
+      "detail": "41.86 kg at 62.6 m/s",
+      "pass_": false
+    },
+    {
+      "band": "5",
+      "name": "added mass per satellite <= 2.0 kg on at least one class",
+      "detail": "best 1.608 kg",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "selected point delivers >= 30 m/s at <= 25 g",
+      "detail": "62.6 m/s at 25 g",
+      "pass_": true
+    },
+    {
+      "band": "7",
+      "name": "peak electrical <= 200 W",
+      "detail": "131 W",
+      "pass_": true
+    },
+    {
+      "band": "8",
+      "name": "energy store <= 50 % of total added mass",
+      "detail": "78.5 %",
+      "pass_": false
+    }
+  ]
+}
