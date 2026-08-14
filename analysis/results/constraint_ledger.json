@@ -1,0 +1,1038 @@
+{
+  "analysis": "A35",
+  "bands_declared_commit": "198aaeb",
+  "note": "attribution and an upper bound; NOT a sizing model",
+  "dry_kg": 84.53,
+  "constraints": {
+    "C1": "the satellite is unmodified",
+    "C2": "a reusable mover carries the magnets",
+    "C3": "the energy arrives during the shot",
+    "C4": "the machine is rigid, and one length stowed or deployed",
+    "C5": "the deployer carries its own energy store",
+    "C6": "twelve satellites share one drive"
+  },
+  "parts": [
+    {
+      "part": "Track longerons (2x Al box section)",
+      "kg": 6.829919999999998,
+      "cg_m": 0.75,
+      "full": [],
+      "partial": [
+        "C2",
+        "C4"
+      ],
+      "note": "rails survive; section and length do not"
+    },
+    {
+      "part": "Stator copper (1.3 m, 60% fill)",
+      "kg": 6.2899199999999995,
+      "cg_m": 0.65,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "no stroke-time energy, no stator"
+    },
+    {
+      "part": "Stator formers / potting (PEEK eq.)",
+      "kg": 0.9729720000000001,
+      "cg_m": 0.65,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "holds the stator"
+    },
+    {
+      "part": "Sled Halbach magnets (2 faces)",
+      "kg": 3.6720000000000006,
+      "cg_m": 0.15,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "the mover IS the magnets"
+    },
+    {
+      "part": "Sled Ti chassis (shell equivalent)",
+      "kg": 0.7367975999999999,
+      "cg_m": 0.15,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "chassis for the mover"
+    },
+    {
+      "part": "Sled rollers / latch / backstop",
+      "kg": 0.45,
+      "cg_m": 0.15,
+      "full": [],
+      "partial": [
+        "C2"
+      ],
+      "note": "a payload cradle still needs guidance"
+    },
+    {
+      "part": "Eddy brake magnets + yoke",
+      "kg": 1.6847999999999996,
+      "cg_m": 1.42,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "nothing to arrest without a mover"
+    },
+    {
+      "part": "Fixed brake hardware + ring spring (moving Cu fin is in sled)",
+      "kg": 0.856,
+      "cg_m": 1.4,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "ditto"
+    },
+    {
+      "part": "Cassette shells (2x Al sheet eq.)",
+      "kg": 8.852976,
+      "cg_m": 0.35,
+      "full": [],
+      "partial": [
+        "C6"
+      ],
+      "note": "payload containment survives; count changes"
+    },
+    {
+      "part": "Followers, gates, escapements (2x)",
+      "kg": 2.6,
+      "cg_m": 0.3,
+      "full": [],
+      "partial": [
+        "C6"
+      ],
+      "note": "ascent restraint survives; count changes"
+    },
+    {
+      "part": "Supercapacitor cells + busbars",
+      "kg": 6.5,
+      "cg_m": 0.1,
+      "full": [
+        "C3",
+        "C5"
+      ],
+      "partial": [],
+      "note": "17 kW for 162 ms is the only reason it exists"
+    },
+    {
+      "part": "PPU (SiC bridge, filters)",
+      "kg": 4.0,
+      "cg_m": 0.1,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "a bridge with no pulse to switch"
+    },
+    {
+      "part": "Battery + avionics + IMU",
+      "kg": 5.5,
+      "cg_m": 0.12,
+      "full": [],
+      "partial": [
+        "C3",
+        "C5"
+      ],
+      "note": "command and sensing survive; the store does not"
+    },
+    {
+      "part": "Harness",
+      "kg": 2.5,
+      "cg_m": 0.6,
+      "full": [],
+      "partial": [
+        "C3"
+      ],
+      "note": "320 A conductors; signal harness survives"
+    },
+    {
+      "part": "Thermal (pipes, radiator, MLI)",
+      "kg": 6.0,
+      "cg_m": 0.7,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "sized on 10 kJ of copper heat per manifest"
+    },
+    {
+      "part": "ESPA bracket + fasteners",
+      "kg": 9.0,
+      "cg_m": 0.35,
+      "full": [],
+      "partial": [
+        "C4"
+      ],
+      "note": "scales with what it carries"
+    },
+    {
+      "part": "Panels / closeouts",
+      "kg": 5.5,
+      "cg_m": 0.75,
+      "full": [],
+      "partial": [
+        "C4"
+      ],
+      "note": "scales with enclosed length"
+    },
+    {
+      "part": "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
+      "kg": 8.0,
+      "cg_m": 0.5,
+      "full": [],
+      "partial": [
+        "C3",
+        "C4"
+      ],
+      "note": "P10 placeholder; radiator half is C3"
+    },
+    {
+      "part": "Sled CAD reconciliation (P15, CAD-derived 9.445 kg)",
+      "kg": 4.5862023999999995,
+      "cg_m": 0.15,
+      "full": [
+        "C2"
+      ],
+      "partial": [],
+      "note": "the rest of the same mover"
+    }
+  ],
+  "unattributed": [],
+  "single_requirement_kg": {
+    "C1": 0,
+    "C2": 11.54,
+    "C3": 23.76,
+    "C4": 0,
+    "C5": 6.5,
+    "C6": 0
+  },
+  "shared_driver_parts": [
+    "Track longerons (2x Al box section)",
+    "Supercapacitor cells + busbars",
+    "Battery + avionics + IMU",
+    "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)"
+  ],
+  "corners": [
+    {
+      "deleted": [],
+      "removed_kg": 0,
+      "removed_pct": 0.0,
+      "flagged_kg": 0,
+      "sum_of_singles_kg": 0,
+      "overlap_kg": 0
+    },
+    {
+      "deleted": [
+        "C1"
+      ],
+      "removed_kg": 0,
+      "removed_pct": 0.0,
+      "flagged_kg": 0,
+      "sum_of_singles_kg": 0,
+      "overlap_kg": 0
+    },
+    {
+      "deleted": [
+        "C2"
+      ],
+      "removed_kg": 11.54,
+      "removed_pct": 13.6,
+      "flagged_kg": 7.28,
+      "sum_of_singles_kg": 11.54,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C3"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 16.0,
+      "sum_of_singles_kg": 23.76,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C4"
+      ],
+      "removed_kg": 0,
+      "removed_pct": 0.0,
+      "flagged_kg": 29.33,
+      "sum_of_singles_kg": 0,
+      "overlap_kg": 0
+    },
+    {
+      "deleted": [
+        "C5"
+      ],
+      "removed_kg": 6.5,
+      "removed_pct": 7.7,
+      "flagged_kg": 5.5,
+      "sum_of_singles_kg": 6.5,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C6"
+      ],
+      "removed_kg": 0,
+      "removed_pct": 0.0,
+      "flagged_kg": 11.45,
+      "sum_of_singles_kg": 0,
+      "overlap_kg": 0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2"
+      ],
+      "removed_kg": 11.54,
+      "removed_pct": 13.6,
+      "flagged_kg": 7.28,
+      "sum_of_singles_kg": 11.54,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C3"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 16.0,
+      "sum_of_singles_kg": 23.76,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C4"
+      ],
+      "removed_kg": 0,
+      "removed_pct": 0.0,
+      "flagged_kg": 29.33,
+      "sum_of_singles_kg": 0,
+      "overlap_kg": 0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C5"
+      ],
+      "removed_kg": 6.5,
+      "removed_pct": 7.7,
+      "flagged_kg": 5.5,
+      "sum_of_singles_kg": 6.5,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C6"
+      ],
+      "removed_kg": 0,
+      "removed_pct": 0.0,
+      "flagged_kg": 11.45,
+      "sum_of_singles_kg": 0,
+      "overlap_kg": 0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C3"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 23.28,
+      "sum_of_singles_kg": 35.3,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C4"
+      ],
+      "removed_kg": 11.54,
+      "removed_pct": 13.6,
+      "flagged_kg": 29.78,
+      "sum_of_singles_kg": 11.54,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C5"
+      ],
+      "removed_kg": 18.04,
+      "removed_pct": 21.3,
+      "flagged_kg": 12.78,
+      "sum_of_singles_kg": 18.04,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C6"
+      ],
+      "removed_kg": 11.54,
+      "removed_pct": 13.6,
+      "flagged_kg": 18.73,
+      "sum_of_singles_kg": 11.54,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C3",
+        "C4"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 37.33,
+      "sum_of_singles_kg": 23.76,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C3",
+        "C5"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 16.0,
+      "sum_of_singles_kg": 30.26,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C3",
+        "C6"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 27.45,
+      "sum_of_singles_kg": 23.76,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C4",
+        "C5"
+      ],
+      "removed_kg": 6.5,
+      "removed_pct": 7.7,
+      "flagged_kg": 34.83,
+      "sum_of_singles_kg": 6.5,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C4",
+        "C6"
+      ],
+      "removed_kg": 0,
+      "removed_pct": 0.0,
+      "flagged_kg": 40.78,
+      "sum_of_singles_kg": 0,
+      "overlap_kg": 0
+    },
+    {
+      "deleted": [
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 6.5,
+      "removed_pct": 7.7,
+      "flagged_kg": 16.95,
+      "sum_of_singles_kg": 6.5,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 23.28,
+      "sum_of_singles_kg": 35.3,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C4"
+      ],
+      "removed_kg": 11.54,
+      "removed_pct": 13.6,
+      "flagged_kg": 29.78,
+      "sum_of_singles_kg": 11.54,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C5"
+      ],
+      "removed_kg": 18.04,
+      "removed_pct": 21.3,
+      "flagged_kg": 12.78,
+      "sum_of_singles_kg": 18.04,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C6"
+      ],
+      "removed_kg": 11.54,
+      "removed_pct": 13.6,
+      "flagged_kg": 18.73,
+      "sum_of_singles_kg": 11.54,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C3",
+        "C4"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 37.33,
+      "sum_of_singles_kg": 23.76,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C3",
+        "C5"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 16.0,
+      "sum_of_singles_kg": 30.26,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C1",
+        "C3",
+        "C6"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 27.45,
+      "sum_of_singles_kg": 23.76,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C4",
+        "C5"
+      ],
+      "removed_kg": 6.5,
+      "removed_pct": 7.7,
+      "flagged_kg": 34.83,
+      "sum_of_singles_kg": 6.5,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C4",
+        "C6"
+      ],
+      "removed_kg": 0,
+      "removed_pct": 0.0,
+      "flagged_kg": 40.78,
+      "sum_of_singles_kg": 0,
+      "overlap_kg": 0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 6.5,
+      "removed_pct": 7.7,
+      "flagged_kg": 16.95,
+      "sum_of_singles_kg": 6.5,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 37.78,
+      "sum_of_singles_kg": 35.3,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 23.28,
+      "sum_of_singles_kg": 41.8,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C2",
+        "C3",
+        "C6"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 34.73,
+      "sum_of_singles_kg": 35.3,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C4",
+        "C5"
+      ],
+      "removed_kg": 18.04,
+      "removed_pct": 21.3,
+      "flagged_kg": 35.28,
+      "sum_of_singles_kg": 18.04,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C4",
+        "C6"
+      ],
+      "removed_kg": 11.54,
+      "removed_pct": 13.6,
+      "flagged_kg": 41.23,
+      "sum_of_singles_kg": 11.54,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 18.04,
+      "removed_pct": 21.3,
+      "flagged_kg": 24.23,
+      "sum_of_singles_kg": 18.04,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 37.33,
+      "sum_of_singles_kg": 30.26,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C3",
+        "C4",
+        "C6"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 48.78,
+      "sum_of_singles_kg": 23.76,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 27.45,
+      "sum_of_singles_kg": 30.26,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 6.5,
+      "removed_pct": 7.7,
+      "flagged_kg": 46.28,
+      "sum_of_singles_kg": 6.5,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 37.78,
+      "sum_of_singles_kg": 35.3,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 23.28,
+      "sum_of_singles_kg": 41.8,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C3",
+        "C6"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 34.73,
+      "sum_of_singles_kg": 35.3,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C4",
+        "C5"
+      ],
+      "removed_kg": 18.04,
+      "removed_pct": 21.3,
+      "flagged_kg": 35.28,
+      "sum_of_singles_kg": 18.04,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C4",
+        "C6"
+      ],
+      "removed_kg": 11.54,
+      "removed_pct": 13.6,
+      "flagged_kg": 41.23,
+      "sum_of_singles_kg": 11.54,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 18.04,
+      "removed_pct": 21.3,
+      "flagged_kg": 24.23,
+      "sum_of_singles_kg": 18.04,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 37.33,
+      "sum_of_singles_kg": 30.26,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C1",
+        "C3",
+        "C4",
+        "C6"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 48.78,
+      "sum_of_singles_kg": 23.76,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 27.45,
+      "sum_of_singles_kg": 30.26,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C1",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 6.5,
+      "removed_pct": 7.7,
+      "flagged_kg": 46.28,
+      "sum_of_singles_kg": 6.5,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 37.78,
+      "sum_of_singles_kg": 41.8,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C2",
+        "C3",
+        "C4",
+        "C6"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 49.23,
+      "sum_of_singles_kg": 35.3,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C2",
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 34.73,
+      "sum_of_singles_kg": 41.8,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C2",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 18.04,
+      "removed_pct": 21.3,
+      "flagged_kg": 46.73,
+      "sum_of_singles_kg": 18.04,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 48.78,
+      "sum_of_singles_kg": 30.26,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 37.78,
+      "sum_of_singles_kg": 41.8,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C6"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 49.23,
+      "sum_of_singles_kg": 35.3,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 34.73,
+      "sum_of_singles_kg": 41.8,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 18.04,
+      "removed_pct": 21.3,
+      "flagged_kg": 46.73,
+      "sum_of_singles_kg": 18.04,
+      "overlap_kg": 0.0
+    },
+    {
+      "deleted": [
+        "C1",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 23.76,
+      "removed_pct": 28.1,
+      "flagged_kg": 48.78,
+      "sum_of_singles_kg": 30.26,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 49.23,
+      "sum_of_singles_kg": 41.8,
+      "overlap_kg": 6.5
+    },
+    {
+      "deleted": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "removed_kg": 35.3,
+      "removed_pct": 41.8,
+      "flagged_kg": 49.23,
+      "sum_of_singles_kg": 41.8,
+      "overlap_kg": 6.5
+    }
+  ],
+  "bands": [
+    {
+      "band": "1",
+      "name": "ledger reproduces mass_properties.dry_kg to 0.01 kg",
+      "detail": "84.5316 against 84.5316",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "every line item carries a driver",
+      "detail": "0 unattributed",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "C1 alone removes <= 15 % (calibration against BOLLEY)",
+      "detail": "0.0 %",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "C3 alone removes >= 25 %",
+      "detail": "28.1 %",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "at least three items carry more than one driver",
+      "detail": "4 items",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "C3 is the largest single-requirement removal",
+      "detail": "largest is C3",
+      "pass_": true
+    },
+    {
+      "band": "7",
+      "name": "no corner removes > 100 %, no partial counted as full",
+      "detail": "max 41.8 %",
+      "pass_": true
+    }
+  ]
+}

@@ -86,4 +86,72 @@ is judged separately and in public.
 
 ## Results
 
-*(Filled after the run. Nothing above this line changes.)*
+**RUN 2026-08-14. Seven of seven bands pass. The prediction attached to band 4 was wrong.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces `dry_kg` to 0.01 kg | 84.5316 against 84.5316 | **PASS** |
+| 2 | every item attributed | 0 unattributed | **PASS** |
+| 3 | C1 alone removes ≤ 15 % | **0.0 %** | **PASS** |
+| 4 | C3 alone removes ≥ 25 % | **28.1 %** | **PASS** |
+| 5 | ≥ 3 items with multiple drivers | 4 items | **PASS** |
+| 6 | C3 is the largest single removal | largest is C3 | **PASS** |
+| 7 | bound is a bound | max corner 41.8 % | **PASS** |
+
+### What one requirement is worth
+
+| | Removed | Flagged | |
+|---|---:|---:|---|
+| **C3** the energy arrives during the shot | **23.76 kg (28.1 %)** | 16.00 kg | stator, formers, bank, PPU, thermal |
+| **C2** a reusable mover carries the magnets | **11.54 kg (13.6 %)** | 7.28 kg | magnets, chassis, both brake lines |
+| **C5** the deployer carries its own energy store | 6.50 kg (7.7 %) | 5.50 kg | the bank, shared with C3 |
+| **C1** the satellite is unmodified | **0.00 kg** | 0.00 kg | — |
+| **C4** rigid, one length | 0.00 kg | 29.33 kg | all of it structural, none abolished |
+| **C6** twelve share one drive | 0.00 kg | 11.45 kg | containment survives; only the count moves |
+
+### The four findings
+
+**1. The prediction failed, by a wide margin.** Stated before the run: *deleting C3 removes more
+than 40 % of dry mass.* It removes **28.1 %**. Even crediting half the 16.00 kg flagged — which
+this run is not entitled to do — it reaches about 37 %. **The band was set at 25 % precisely so
+the argument and the prediction could be judged separately, and the argument survives while the
+prediction does not.**
+
+**2. C1 costs nothing, and that is not the same as saying BOLLEY was wrong.** No item in this
+ledger exists *because* the satellite is unmodified. The sled is attributed to **C2** — the choice
+that a reusable mover carries the magnets — and C1 only *implies* C2 when nothing else can carry
+them. **C1's cost is entirely mediated.** That is the most contestable line in the attribution and
+a reader is invited to disagree with it specifically. It is also exactly consistent with the
+sibling result: deleting C1 and C2 together is worth 13.6 % here, and BOLLEY's primary grew back
+to 15.91 kg because it kept **C3**, which this run finds is the requirement that was costing the
+mass all along.
+
+**3. The lattice saturates at 41.8 %, and this is the important number.**
+**49.23 kg — 58.2 % of dry mass — survives every deletion of every requirement, in every
+combination.** Structure, containment, brackets, closeouts, harness and avionics are `partial`
+against everything: they scale, and nothing abolishes them.
+
+**At 49.23 kg over twelve satellites that is 4.10 kg each — still twice kill criterion 1.**
+
+> **No combination of requirement deletions closes kill criterion 1.** The criterion is not
+> reachable by architecture at all, on this ledger. That is a harder result than any of the
+> individual figures and it was not expected.
+
+**4. The one divisor nobody has pulled.** The surviving mass is per *machine*, not per satellite.
+At twenty-four satellites the same 49.23 kg is **2.05 kg each**, and the criterion closes — even
+allowing the containment lines to grow with the manifest, it lands near 2.5 kg. **Magazine density
+is the only lever in this run that reaches the criterion**, it is outside the physics entirely,
+and it has never been studied. It needs its own sizing run and its own bands; nothing here sizes it.
+
+### Limitations, restated because the findings above are easy to over-read
+
+- **This is a bound, not a sizing model.** 41.8 % of the present design loses its reason at the
+  best corner. Nothing here says what the replacement weighs.
+- **`partial` is never counted**, so C4 and C6 score zero despite carrying 29.33 kg and 11.45 kg
+  of flagged mass between them. **The deployable track cannot be evaluated by this method** — all
+  of its mass is structural and structure only ever scales.
+- **The requirements are treated as independent and are not.** C1 implies C2; C5 is a consequence
+  of C3. A dependency graph would change the single-requirement column and would not change
+  finding 3, which is where the value is.
+- The 8.00 kg enclosure line is still the P10 placeholder with no derivation behind it, and it
+  is 9.5 % of the total.
