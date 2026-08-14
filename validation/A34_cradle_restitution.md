@@ -22,6 +22,27 @@ whether that has settled by release depends on a restitution model this project 
 > The script is absent at this commit. Verify with
 > `git show --stat <this commit> -- analysis/cradle_restitution.py`, which returns nothing.
 
+> ## Annotated 2026-08-14 by A38. Nothing below is edited.
+>
+> This run was recorded on 2026-08-13 at the operating point
+> [ADR-030](../docs/adr/030-apply-the-depth-resolved-thrust-constant.md) superseded the same day.
+> `analysis/cradle_restitution.py` computes its inputs live from `motor_model`, so **the script
+> tracked the correction and this record did not.**
+>
+> | | Recorded here | Current |
+> |---|---:|---:|
+> | Payload force | 413.2 N | **395.1 N** |
+> | Offset moment | 28.92 N·m | **27.65 N·m** |
+> | Angular acceleration | 688 rad/s² | **658 rad/s²** |
+> | Settling at e = 0.7 | 27.25 ms | **27.88 ms** |
+> | Powered stroke | 146.4 ms | **150.1 ms** |
+> | Critical restitution | 0.9261 | **0.9263** |
+> | Preload per contact | 85.0 N | **81.2 N** |
+>
+> **Every band below still passes when re-run**, and no verdict changes; the figures are stale by
+> about 2.3 %. Found by [A38](A38_tipoff_at_gen6.md) band 1, which exists to catch exactly this.
+> Recorded as **P61**.
+
 ## Result, 2026-08-13: it settles in 27 ms of a 146 ms stroke, and leaves at zero
 
 `analysis/cradle_restitution.py`, bands committed at `77d45bb` before it existed. Results in

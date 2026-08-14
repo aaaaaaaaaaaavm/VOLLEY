@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **95 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
+> **96 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
 > | `LIVE` | **40** (19 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **25** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CORRECTED` | **26** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
 > **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
@@ -2761,6 +2761,41 @@ is worse than leaving it out — and a mechanism model derived rather than assum
 
 **What it does not undo.** A37 band 5 passed at **1.608 kg/satellite**, so kill criterion 1 closes
 at 3U on the small class. **P60 is about how fast the machine can be, not whether it closes.**
+
+### P61. A34's recorded figures are stale against its own script: MEDIUM, NEW 2026-08-14
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+**A38 band 1 missed.** It drove A34's own imported closed forms at the Gen5 point and required
+A34's published answer back within 1 %. It returns **27.88 ms** against a recorded **27.25**, a
+2.3 % miss.
+
+A34 was recorded on **2026-08-13**, at the operating point
+[ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md) superseded **the same day**.
+`analysis/cradle_restitution.py` computes its inputs live from `motor_model`, so **the script
+tracked the correction and the record did not.**
+
+| | Recorded | Current |
+|---|---:|---:|
+| Payload force | 413.2 N | **395.1 N** |
+| Offset moment | 28.92 N·m | **27.65 N·m** |
+| Angular acceleration | 688 rad/s² | **658 rad/s²** |
+| Settling at e = 0.7 | 27.25 ms | **27.88 ms** |
+| Preload per contact | 85.0 N | **81.2 N** |
+
+**No band verdict flips.** Re-running A34 today passes all five of its bands. Only the recorded
+detail values are stale.
+
+**Corrected.** A34's run sheet is **not edited** — it is a record of a run at its own operating
+point, which is why `validation/A*.md` is excluded from every propagation this project runs. It is
+**annotated in place** with both columns side by side, the treatment `docs/CROSS_INDUSTRY.md` and
+`docs/VALIDATION_REPORT.md` already carry, so a reader reaches the current figures without the
+record being rewritten.
+
+**The general case is not fixed.** Every run sheet whose script reads `motor_model` live has the
+same exposure, and **nothing checks it.** A regression band comparing a run sheet's recorded
+figures against its script's current output would catch the whole class; A38 band 1 caught this one
+by being pointed at it deliberately. **Recorded rather than built**, alongside the cross-repository
+manuscript check **P58** names and the same tool does not exist for either.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

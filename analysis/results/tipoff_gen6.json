@@ -1,0 +1,72 @@
+{
+  "analysis": "A38",
+  "bands_declared_commit": "4e4bd58",
+  "note": "A34 is imported, not restated; its bands are untouched and its result stands at the point it was declared for. Restitution swept not measured; the cradle mechanism still does not exist.",
+  "gen5": {
+    "a_g": 10.067557659872477,
+    "stroke_m": 1.3,
+    "v_exit": 16.029192806414976,
+    "F_payload_N": 395.050962573396,
+    "moment_Nm": 27.653567380137723,
+    "alpha_rad_s2": 658.41827095566,
+    "t_powered_s": 0.15009999999999846,
+    "preload_N": 81.21458848792282
+  },
+  "gen6": {
+    "a_g": 25.0,
+    "stroke_m": 2.18,
+    "v_exit": 32.7,
+    "F_payload_N": 981.0,
+    "moment_Nm": 68.67,
+    "alpha_rad_s2": 1635.0,
+    "t_powered_s": 0.13333333333333333,
+    "preload_N": 201.67400881057267
+  },
+  "e_aluminium": 0.7,
+  "gen5_settle_ms": 27.876758924371433,
+  "gen5_e_crit": 0.9262734333328188,
+  "gen6_worst_arrival_deg_s": 355.11412431328995,
+  "gen6_settle_ms": 17.690264965228742,
+  "gen6_residual_deg_s": 0.0,
+  "gen6_e_crit": 0.9461977161521322,
+  "tipoff_ceiling_g": 30.9,
+  "qualification_cap_g": 25.0,
+  "bands": [
+    {
+      "band": "1",
+      "name": "model reproduces A34 at the Gen5 point, within 1 %",
+      "detail": "settle 27.88 against 27.25 ms, e* 0.9263 against 0.9261",
+      "pass_": 0.0
+    },
+    {
+      "band": "2",
+      "name": "residual at force removal < 2.0 deg/s, every clearance",
+      "detail": "worst 0.0000 deg/s",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "settling completes inside the powered stroke at e = 0.7",
+      "detail": "17.69 ms of 133.3 ms",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "critical restitution >= 0.80, A34 threshold unrelaxed",
+      "detail": "0.9462",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "preload <= 250 N per contact",
+      "detail": "201.7 N against A34's 85",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "tip-off ceiling >= 25 g",
+      "detail": "30.9 g",
+      "pass_": true
+    }
+  ]
+}

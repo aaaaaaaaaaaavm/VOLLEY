@@ -84,4 +84,72 @@ still a closure at 2.4× the moment.**
 
 ## Results
 
-*(Filled after the run. Nothing above this line changes.)*
+**RUN 2026-08-14. Five of six bands pass. Band 1, the regression check, fails — and that is the
+find.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces A34 at the Gen5 point within 1 % | settle **27.88** against a recorded **27.25 ms** | **FAIL** |
+| 2 | residual < 2 °/s, every clearance | **0.0000 °/s** | **PASS** |
+| 3 | settling inside the powered stroke at e = 0.7 | **17.69 ms of 133.3** | **PASS** |
+| 4 | critical restitution ≥ 0.80, unrelaxed | **0.9462** | **PASS** |
+| 5 | preload ≤ 250 N per contact | **201.7 N** | **PASS** |
+| 6 | tip-off ceiling ≥ 25 g | **30.9 g** | **PASS** |
+
+### The answer to the question asked
+
+| | Gen5 | **Gen6** |
+|---|---:|---:|
+| Acceleration | 10.07 g | **25.00 g** |
+| Payload force | 395 N | **981 N** |
+| Offset moment | 27.65 N·m | **68.67 N·m** |
+| Worst arrival rate | 225.4 °/s | **355.1 °/s** |
+| **Settling at e = 0.7** | 27.88 ms | **17.69 ms** |
+| Powered stroke | 150.1 ms | 133.3 ms |
+| **Residual at release** | 0.0000 °/s | **0.0000 °/s** |
+| **Critical restitution** | 0.9263 | **0.9462** |
+| Preload per contact | 81.2 N | **201.7 N** |
+
+**A34's closure does not merely survive the Gen6 point — it improves.** Settling occupies **13 % of
+the stroke instead of 19 %**, and margin against the published aluminium range of 0.3–0.7 widens.
+The arrival rate worsens to 355 °/s and remains what A34 established it to be: **transient, and
+never a release rate.**
+
+**Band 6 is what the store trade needed.** The ceiling tip-off imposes is **30.9 g**, above the
+**25 g** qualification cap. **Tip-off is not the binding limit and A37's 1.83–2.18 m window
+stands.** The cost lands exactly where the prediction said it would: **preload rises from 81 N to
+202 N per contact.**
+
+### The prediction, and it held
+
+Written before the script: arrival to *roughly 55–356 °/s* (**355.1**), settling *falling to
+roughly 18 ms* (**17.69**), stroke *about 134 ms* (**133.3**), preload *about 204 N* (**201.7**),
+and *the margin should improve, not degrade* — it did. **The first prediction this session that a
+band did not overturn.**
+
+### Band 1 fails because A34's recorded numbers are stale, and its script is not
+
+Driving A34's own imported forms at today's Gen5 point returns **27.88 ms** and **e\* = 0.9263**.
+A34's run sheet records **27.25 ms**, **0.9261**, an **85.0 N** preload and a **146.4 ms** stroke,
+from a **413.2 N** push, a **28.92 N·m** moment and **688 rad/s²**.
+
+**Today those are 395.1 N, 27.65 N·m and 658 rad/s².** A34 was recorded on 2026-08-13 at the
+operating point that ADR-030 superseded the same day, and `analysis/cradle_restitution.py` computes
+its inputs live from `motor_model`, so **the script moved and the record did not.**
+
+**No band verdict flips.** Re-running A34 today passes every one of its five bands: settling
+27.88 ms inside a 150.1 ms stroke, e\* 0.9263 ≥ 0.80, preload 81.2 N within 20 % of A23's 85.
+**Only the recorded detail values are stale, and they are stale by 2.3 %.**
+
+**A34's run sheet is not edited.** It is a record of a run at its own operating point, which is why
+`validation/A*.md` is excluded from every propagation this project runs. It is **annotated in
+place**, the same treatment `docs/CROSS_INDUSTRY.md` and `docs/VALIDATION_REPORT.md` carry for the
+same reason. Recorded as **P61**.
+
+### What has not changed
+
+The cradle mechanism still does not exist, and A34 said so. Restitution is still swept rather than
+measured. **A 202 N preload that must release cleanly inside a 1 N residual is a harder mechanism
+than an 81 N one**, and passing band 5 is not the same as that mechanism being easy. Kill criterion
+4 remains *modelled, not demonstrated* — what this run establishes is that raising the acceleration
+does not make it worse.

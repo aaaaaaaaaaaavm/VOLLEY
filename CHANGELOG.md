@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (thirty-eighth pass): tip-off does not bind Gen6, and a run sheet was stale against its own script
+
+| ID | Item | Detail |
+|---|---|---|
+| **A38** | **Five of six bands, band 1 FAIL** | A34 closed kill criterion 4's open half well, and **every number in it was computed at Gen5.** A37 takes the payload's share of the push from 395 N to 981, a factor of **2.4 on the term driving the whole result.** Checking before adopting is the P19 and P53 pattern applied *before* the point moves rather than after. |
+| **TIPOFF-01** | **The closure does not merely survive — it improves** | Settling falls **27.88 → 17.69 ms** in a **133.3 ms** stroke, so it occupies **13 % instead of 19 %**. Critical restitution rises **0.9263 → 0.9462** against a published aluminium range of 0.3–0.7. **Residual at force removal is still exactly zero** for every clearance A23 tabulated. Arrival worsens to 355 °/s and stays what A34 established: transient, never a release rate. |
+| **CEILING-01** | **Tip-off is not the binding limit** | The ceiling it imposes is **30.9 g** against a **25 g** qualification cap, so **A37's 1.83–2.18 m window stands** and the store trade has its acceleration. |
+| COST-01 | **The cost lands on preload, as predicted** | **81.2 → 201.7 N per contact.** Band 5 passes at a 250 N limit, and passing it is not the same as the mechanism being easy: A34 already records that the cradle mechanism does not exist, and a 202 N preload releasing inside a 1 N residual is harder than an 81 N one. |
+| PRED-01 | **The prediction held** | Written before the script: arrival ~55–356 °/s (**355.1**), settling falling to ~18 ms (**17.69**), stroke ~134 ms (**133.3**), preload ~204 N (**201.7**). **The first prediction this session a band did not overturn.** |
+| **P61** | **A34's recorded figures are stale against its own script** | Band 1 drove A34's imported forms at the Gen5 point and got **27.88 ms** against a recorded **27.25**. A34 was recorded on 2026-08-13 at the point ADR-030 superseded **the same day**, and `cradle_restitution.py` reads `motor_model` live — **so the script tracked the correction and the record did not.** No verdict flips; all five of A34's bands still pass. |
+| RECORD-01 | **Annotated, not edited** | `validation/A*.md` is excluded from every propagation this project runs because each is a record of a run at its own point. A34 carries both columns side by side now, the treatment `CROSS_INDUSTRY.md` and `VALIDATION_REPORT.md` already have. |
+| GAP-02 | **And the general case is not fixed** | Every run sheet whose script reads `motor_model` live has the same exposure and **nothing checks it.** A regression band comparing recorded figures against current script output would catch the class; A38 band 1 caught this one by being aimed at it. **Recorded rather than built**, beside the cross-repository manuscript check P58 names. |
+
+**What authorised it.** A37's design point, checked before adoption rather than after. **No band was
+edited, widened or moved**; A38's six were committed before `analysis/tipoff_gen6.py` existed, and
+A34's five are untouched. All four checks pass.
+
+---
+
 ## 2026-08-14 (thirty-seventh pass): the stage is the deployer, and the binding constraint moves to the store
 
 | ID | Item | Detail |
