@@ -22,6 +22,70 @@ whether that has settled by release depends on a restitution model this project 
 > The script is absent at this commit. Verify with
 > `git show --stat <this commit> -- analysis/cradle_restitution.py`, which returns nothing.
 
+## Result, 2026-08-13: it settles in 27 ms of a 146 ms stroke, and leaves at zero
+
+`analysis/cradle_restitution.py`, bands committed at `77d45bb` before it existed. Results in
+`analysis/results/cradle_restitution.json`.
+
+| Band | Test | Result | |
+|---|---|---:|---|
+| 1 | arrival rate reproduces A23 within 5 % | **0.15 %** | **PASS** |
+| 2 | settles inside the 146.4 ms powered stroke at e = 0.7 | **27.25 ms** | **PASS** |
+| 3 | residual rate at force removal < 2 °/s | **0.0000 °/s** | **PASS** |
+| 4 | critical restitution e\* ≥ 0.80 | **0.9261** | **PASS** |
+| 5 | preload within 20 % of A23's 85 N | **85.0 N** | **PASS** |
+
+### The answer
+
+**The payload is resting against its cradle stop long before the force is removed.**
+
+| Restitution | Settling time, worst 2 mm clearance | Residual rate at force removal |
+|---:|---:|---:|
+| 0.3 | 5.01 ms | **0** |
+| 0.5 | 11.68 ms | **0** |
+| **0.7** — top of the aluminium range | **27.25 ms** | **0** |
+| 0.9 | 105.12 ms | **0** |
+
+**Every plausible restitution settles inside the 146.4 ms powered stroke, and the residual rate
+at the instant force is removed is exactly zero for every clearance in A23's table.** The
+36–231 °/s arrival is real and it is transient: it is spent in the first tens of milliseconds,
+against a stop, while the force that caused it is still holding the payload there.
+
+**Critical restitution is 0.9261** — the value above which bouncing would still be in progress at
+force removal. Aluminium-on-aluminium is 0.3–0.7, so the margin is not marginal.
+
+**A23's 36–231 °/s therefore never becomes a release rate**, and kill criterion 4's last open
+question resolves in the design's favour rather than against it. The release itself was already
+comfortable; the start of the stroke is now shown to be transient rather than persistent.
+
+### Band 5 reproduces A23's preload from a different direction
+
+A23 asserted a cradle preload of **> 85 N per contact**. Computed here independently from the
+same moment and geometry — two contacts a half-length either side reacting 28.92 N·m as a couple
+— the answer is **85.0 N**. **The requirement stands, and it now has a derivation behind it
+rather than only an assertion.**
+
+**That, not the restitution sweep, is what closes P41's analysis half.** The rattle settling is
+the reason the design survives *without* the preload; the preload is the reason it does not have
+to rely on that.
+
+### Band 1 caught the fifth first-run solver error in five sheets
+
+**Arrival rate came out 56.84 °/s against A23's 36.5 — 55.7 % high — and the preload came out
+206.7 N against 85, 143 % high.** One cause: **the lever that takes up the clearance is not the
+lever that applies the moment.**
+
+The moment arm is the **70 mm** centre-of-mass offset. The clearance is taken up at the cradle
+contacts, which sit at the payload's **ends**, so a rotation moves them by half the payload
+length — **170.25 mm**. Using 70 mm for both inflates the angle for a given gap and shrinks the
+couple arm for a given force, which is exactly the pair of errors observed.
+
+**Five new solvers in five sheets, five wrong on first run, five caught.** A33's was the only one
+whose verification band was missing, and it was added afterwards. This one had a verification band
+and it did its job on the first execution.
+
+---
+
 ## What is being computed
 
 A payload bouncing in a clearance under a constant angular acceleration is the **bouncing-ball

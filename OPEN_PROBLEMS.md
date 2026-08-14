@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **87 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
+> **87 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **16** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **17** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
@@ -1776,8 +1776,28 @@ the stated price.
 two of the three categories here at once: it is a defect that made a published Phase I deliverable
 wrong, and it is a validation band miss. Both were live within hours of each other.
 
-### P41. The payload slams into its cradle at the start of every shot, and nothing modelled it: HIGH, NEW 2026-08-10
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P41. The payload slams into its cradle at the start of every shot, and nothing modelled it: CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — A34 modelled it; the arrival is transient and the preload now has a derivation
+
+> **A34 ran 2026-08-13. Bands declared at `77d45bb` before the script existed; five of five pass.**
+>
+> **The rattle settles long before the force is removed.** At a restitution of 0.7 — the top of
+> the aluminium-on-aluminium range — bouncing stops after **27.25 ms of a 146.4 ms powered
+> stroke**, and **the residual angular rate at force removal is exactly zero for every clearance
+> in A23's table.** Critical restitution, above which bouncing would still be in progress, is
+> **0.9261**.
+>
+> **So the 36–231 °/s arrival never becomes a release rate.** It is spent in the first tens of
+> milliseconds, against a stop, while the force that caused it is still holding the payload
+> there. Kill criterion 4's last open question resolves in the design's favour.
+>
+> **And A23's preload is now derived rather than asserted.** Computed independently from the same
+> moment and geometry — two contacts a half-length either side reacting 28.92 N·m as a couple —
+> the answer is **85.0 N per contact**, reproducing A23's stated > 85 N.
+>
+> **What is not closed:** restitution is **swept, not measured**, and `cad/parameters.json` still
+> specifies no cradle fit. The requirement stands as a requirement. Full sheet:
+> `validation/A34_cradle_restitution.md`.
 
 
 **Found by A23 band 3**, which was declared as a `REPORT` row precisely because nobody knew what
@@ -1810,7 +1830,7 @@ gap-shim tolerance.
 **Tightening the clearance does not fix it.** Arrival rate goes as √(clearance), so a factor of
 ten tighter buys √10 — 115 °/s becomes 36 °/s, still 18× the band.
 
-**What would close it:** **preload the cradle** so there is no gap to accelerate across. A23 band
+**What closed it, written before A34 ran:** **preload the cradle** so there is no gap to accelerate across. A23 band
 4 measured the couple reaction the preload must exceed at **85.0 N per contact**, which is modest
 and achievable. The alternative is geometric — A23 band 5 prices it — and needs the CoM offset
 cut from **70 mm to 3.5 mm**, which is aligning the payload CoM with the thrust line rather than

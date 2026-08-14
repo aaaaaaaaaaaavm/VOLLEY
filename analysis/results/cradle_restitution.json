@@ -1,0 +1,99 @@
+{
+  "I_payload": 0.042,
+  "com_offset_m": 0.07,
+  "F_payload_N": 413.3149838409402,
+  "moment_Nm": 28.932048868865817,
+  "alpha_rad_s2": 688.858306401567,
+  "t_powered_ms": 146.39999999999887,
+  "coast_ms": 12.2,
+  "arrival": [
+    {
+      "clearance_mm": 0.05,
+      "arrival_deg_s": 36.445509161488964
+    },
+    {
+      "clearance_mm": 0.1,
+      "arrival_deg_s": 51.54173334377058
+    },
+    {
+      "clearance_mm": 0.25,
+      "arrival_deg_s": 81.49463595968069
+    },
+    {
+      "clearance_mm": 0.5,
+      "arrival_deg_s": 115.25081943483855
+    },
+    {
+      "clearance_mm": 1.0,
+      "arrival_deg_s": 162.98927191936139
+    },
+    {
+      "clearance_mm": 2.0,
+      "arrival_deg_s": 230.5016388696771
+    }
+  ],
+  "restitution_sweep": [
+    {
+      "e": 0.1,
+      "settle_ms": 1.2978035918701072,
+      "residual_deg_s": 0.0
+    },
+    {
+      "e": 0.3,
+      "settle_ms": 5.005813854356128,
+      "residual_deg_s": 0.0
+    },
+    {
+      "e": 0.5,
+      "settle_ms": 11.680232326830964,
+      "residual_deg_s": 0.0
+    },
+    {
+      "e": 0.7,
+      "settle_ms": 27.253875429272245,
+      "residual_deg_s": 0.0
+    },
+    {
+      "e": 0.9,
+      "settle_ms": 105.1220909414787,
+      "residual_deg_s": 0.0
+    }
+  ],
+  "e_critical": 0.9261119992366776,
+  "settle_at_e07_ms": 27.253875429272245,
+  "residual_worst_deg_s": 0.0,
+  "preload_N": 84.96930651649285,
+  "restitution": "SWEPT, NOT MEASURED. No coupon test exists. E4 stands.",
+  "bands": [
+    {
+      "band": "1",
+      "name": "arrival rate reproduces A23 within 5 %",
+      "detail": "0.15 %",
+      "passed": true
+    },
+    {
+      "band": "2",
+      "name": "settles inside the 146.4 ms powered stroke at e = 0.7",
+      "detail": "27.25 ms",
+      "passed": true
+    },
+    {
+      "band": "3",
+      "name": "residual rate at force removal < 2.0 deg/s",
+      "detail": "0.0000 deg/s",
+      "passed": true
+    },
+    {
+      "band": "4",
+      "name": "critical restitution e* >= 0.80",
+      "detail": "0.9261",
+      "passed": true
+    },
+    {
+      "band": "5",
+      "name": "preload within 20 % of A23's 85 N",
+      "detail": "85.0 N",
+      "passed": true
+    }
+  ]
+}
