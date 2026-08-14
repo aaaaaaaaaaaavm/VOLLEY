@@ -27,9 +27,29 @@ REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, os.path.join(REPO, 'analysis'))
 
 from astro import MU, RE, boosted_elements, _kepE          # noqa: E402  the whole point
+import astro                                              # noqa: E402  for the pin check
 
-# --- operating point: identical to astro.py __main__ and conjunction() defaults --------
-DV = 20.37                # m/s, rated exit velocity (motor_model.py)
+# --- operating point: DELIBERATELY PINNED, and NOT astro.py's current default ----------
+#
+# This header used to claim the point was "identical to astro.py __main__ and conjunction()
+# defaults". It is not, and has not been since 2026-07-29: astro.conjunction() now defaults to
+# 16.388 m/s, three corrections later. That false claim was P35.
+#
+# The VALUE stays at 20.37 on purpose. A5 and A6 were run at 20.37 and their run sheets say so,
+# so the generator matches the results it actually produced; regenerating at today's point would
+# silently break the correspondence between a published result and the script that made it.
+# The defect was never the number. It was a file claiming to track a source it did not read.
+#
+# The assertion below is what stops it drifting back into a false claim: if this ever DOES equal
+# astro.py's default, the comment above is wrong and should be deleted rather than left to rot.
+DV = 20.37                # m/s, the point A5 and A6 were run at. NOT the current baseline.
+
+import inspect as _inspect
+_CURRENT_DV = float(_inspect.signature(astro.conjunction).parameters['dv'].default)
+assert DV != _CURRENT_DV, (
+    "DV here equals astro.py's current default. This file is deliberately pinned to the point "
+    "A5 and A6 were run at; if the two have converged, delete the pin and the comment above "
+    "rather than leaving a stale explanation in place.")
 ALT_M = 450e3             # host orbit
 INC_DEG = 51.6
 N_SHOTS = 12

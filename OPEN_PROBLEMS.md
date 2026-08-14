@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **87 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
+> **87 numbered entries, of which 36 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **17** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `LIVE` | **36** (15 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **19** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **32** | resolved, with the closer named in the entry |
 >
 > **These counts were stale by four entries until 2026-08-10, under a sentence claiming they
@@ -1552,8 +1552,23 @@ specification rather than left to be assumed benign.
 Shielding the payload is the option that should be resisted: it adds mass to the customer's
 satellite, which is the modification the architecture exists to avoid.
 
-### P35. The GMAT script generator is pinned to a superseded operating point: LOW, NEW 2026-08-05
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P35. The GMAT script generator is pinned to a superseded operating point: CORRECTED 2026-08-13
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+> **Corrected 2026-08-13.** The header claiming the point was *"identical to `astro.py`
+> __main__ and `conjunction()` defaults"* is **struck**, because it was not and had not been
+> since 2026-07-29.
+>
+> **The value stays at 20.37 m/s on purpose.** A5 and A6 were run at 20.37 and their sheets say
+> so, so the generator matches the results it actually produced; regenerating at today's point
+> would silently break the correspondence between a published result and the script that made
+> it. **The defect was never the number — it was a file claiming to track a source it did not
+> read.**
+>
+> **And the pin now checks itself.** `build_scripts.py` asserts at import that `DV` does *not*
+> equal `astro.conjunction`'s current default, so if the two ever converge the stale explanation
+> fails loudly instead of rotting in place. That is the same mechanism the 3-D field solve got
+> after it returned zero: an assertion where a comment used to be.
 
 
 `validation/gmat/build_scripts.py` carries `DV = 20.37` under a header saying the operating point
@@ -1572,7 +1587,10 @@ the ones whose results are recorded, which trades one dishonesty for another. A1
 its own generator, `build_poem_campaign.py`, which reads Δv from `motor_results.json` at run time
 and cannot go stale.
 
-**What would close it:** either re-run A5 and A6 at the current point and update the generator
+**Which branch was taken, 2026-08-13: the second.** The generator stays pinned to 20.37 m/s so
+it keeps matching the results it produced, the false "tracks `astro.py`" claim is struck, and an
+import-time assertion now fails if the pin ever silently becomes true. **The original criterion,
+written when this was opened:** either re-run A5 and A6 at the current point and update the generator
 together, or mark `DV` explicitly as the frozen historical value those two analyses were run at
 and delete the claim that it tracks `astro.py`. The second is honest and costs nothing.
 
@@ -1673,8 +1691,8 @@ pins. **This is analysis only -- T-1 closes the test half of E10 and nothing her
 >
 > **The test half is untouched.** T-1 still closes E10, and Q is still unmeasured.
 
-### P38. The paper claimed a payload magnetic environment its own validation had already falsified: MEDIUM, NEW 2026-08-10
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P38. The paper claimed a payload magnetic environment its own validation had already falsified: CORRECTED 2026-08-10
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **Corrected in the manuscript and the PDF rebuilt, 2026-08-10.** The EMC section stated that
@@ -1693,13 +1711,13 @@ before A14 existed and was a reasonable guess — it is that **nothing connects 
 band to the deliverables that repeat the claim it failed.** `tools/check_artifacts.py` catches a
 PDF older than its source; nothing catches a source older than its own validation result.
 
-**What would close it:** the correction is made, so the sentence itself is closed. The general
+**Closed on its own terms, and the criterion says so.** **The original wording:** the correction is made, so the sentence itself is closed. The general
 case is not, and is the part worth keeping: a band that FAILS should name the documents that
 assert the thing it falsified, the way `docs/BASELINE.md` change control already requires a
 baseline change to *"state which validations it invalidates"*. That rule exists in one direction
 only. **Carried as the open half of this entry.**
 
-### P39. The companion repositories were not a function of the commit they claim: MEDIUM, NEW 2026-08-10
+### P39. The companion repositories were not a function of the commit they claim: CORRECTED 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 
 
@@ -1739,7 +1757,12 @@ companions have lost the input decks in this regeneration**, and they were the o
 copy. Recorded here rather than quietly restored, because restoring them means committing them to
 the flagship first, and that is a decision about what the repository tracks.
 
-**What would close it:** decide whether `validation/fea/plate*.inp` belongs in the flagship. If
+**The decision was taken, and it is already in `.gitignore`.** `validation/fea/*.inp`, `*.dat`,
+`*.frd`, `*.sta`, `*.cvg` and `*.log` are ignored, under the comment *"decks are regenerated by
+`validation/fea/build_deck.py`"* — which **is** tracked. A deck is an output of a committed
+generator, so the repository holds the generator and not the deck, exactly as it does for
+`cad/`, `validation/fem3d/` and `validation/cfd/`. **The original criterion:** decide whether
+`validation/fea/plate*.inp` belongs in the flagship. If
 it does, commit the decks — `build_deck.py` regenerates them and needs only `gmsh` — and the next
 export republishes them with real provenance. If it does not, `validation/README.md`'s convention
 about committing input decks should say so. **Either answer closes this; the current state
@@ -1777,7 +1800,7 @@ two of the three categories here at once: it is a defect that made a published P
 wrong, and it is a validation band miss. Both were live within hours of each other.
 
 ### P41. The payload slams into its cradle at the start of every shot, and nothing modelled it: CORRECTED 2026-08-13
-> **Status:** `LIVE` — open engineering; something still has to be done
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 > **A34 ran 2026-08-13. Bands declared at `77d45bb` before the script existed; five of five pass.**
 >
