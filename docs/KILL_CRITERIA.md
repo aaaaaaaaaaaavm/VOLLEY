@@ -186,6 +186,14 @@ payload accelerates across its cradle clearance at 688 rad/s² and **arrives at 
 depending on the fit — 18 to 115 times the band.** After impact it rebounds and rattles, and
 whether that has settled by release depends on a restitution model this project does not have.
 
+> **A34 closed this on 2026-08-13, and the threshold did not move.** The rattle settles after
+> **27.25 ms of a 146.4 ms powered stroke** at the top of the aluminium restitution range, and the
+> **residual angular rate at force removal is exactly zero** for every clearance A23 tabulated —
+> so the 36–231 °/s arrival is transient and never becomes a release rate. Critical restitution
+> is **0.9261** against an aluminium range of 0.3–0.7. The cradle preload is now **derived** at
+> **85.0 N per contact** rather than asserted. **The mechanism still does not exist**, and
+> restitution is swept rather than measured. `validation/A34_cradle_restitution.md`.
+
 > **The threshold is unchanged and is not passed.** Tip-off is no longer *unmodelled*, but it is
 > **not demonstrated below 2 °/s either** — it is now a stated requirement on a cradle preload
 > (> 85 N per contact) and a release residual (≤ 1 N), against a mechanism that does not exist.

@@ -1777,7 +1777,7 @@ two of the three categories here at once: it is a defect that made a published P
 wrong, and it is a validation band miss. Both were live within hours of each other.
 
 ### P41. The payload slams into its cradle at the start of every shot, and nothing modelled it: CORRECTED 2026-08-13
-> **Status:** `CORRECTED` — A34 modelled it; the arrival is transient and the preload now has a derivation
+> **Status:** `LIVE` — open engineering; something still has to be done
 
 > **A34 ran 2026-08-13. Bands declared at `77d45bb` before the script existed; five of five pass.**
 >
@@ -1791,9 +1791,10 @@ wrong, and it is a validation band miss. Both were live within hours of each oth
 > milliseconds, against a stop, while the force that caused it is still holding the payload
 > there. Kill criterion 4's last open question resolves in the design's favour.
 >
-> **And A23's preload is now derived rather than asserted.** Computed independently from the same
+> **Corrected.** And A23's preload is now derived rather than asserted: Computed independently from the same
 > moment and geometry — two contacts a half-length either side reacting 28.92 N·m as a couple —
-> the answer is **85.0 N per contact**, reproducing A23's stated > 85 N.
+> the answer is **85.0 N per contact**, reproducing A23's stated > 85 N. Propagated to
+> `docs/KILL_CRITERIA.md` threat 4.
 >
 > **What is not closed:** restitution is **swept, not measured**, and `cad/parameters.json` still
 > specifies no cradle fit. The requirement stands as a requirement. Full sheet:
