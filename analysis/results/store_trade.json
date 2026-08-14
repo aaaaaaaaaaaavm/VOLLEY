@@ -1,0 +1,126 @@
+{
+  "analysis": "A39",
+  "bands_declared_commit": "8d78d1a",
+  "note": "compares stores on mass and standby at a declared point; designs no cylinder, valve, seal or latch, models no blowdown transient or temperature effect, and prices no pressure-vessel qualification. Every declared assumption makes gas look better than a detailed design will.",
+  "budget_kg": 12.55,
+  "falsifier_kg": 14.256,
+  "added_base_kg": 11.45,
+  "at_32_7": {
+    "steel spring": {
+      "option": "steel spring",
+      "store_kg": 7.128600000000001,
+      "mechanism_kg": 4.27716,
+      "total_kg": 11.40576,
+      "standby": "holds indefinitely; no maintenance",
+      "maintained_by": null
+    },
+    "cold gas": {
+      "option": "cold gas",
+      "store_kg": 0.6345863733333337,
+      "mechanism_kg": 2.3443169924441882,
+      "total_kg": 2.978903365777522,
+      "bore_mm": 15.805366135494582,
+      "wall_mm": 1.0,
+      "cylinder_kg": 0.8443169924441881,
+      "vessel_kg": 0.23253333333333343,
+      "gas_kg": 0.4020530400000002,
+      "reservoir_litre": 1.7108640000000008,
+      "standby": "leaks; needs a seal that holds from integration to the last shot",
+      "maintained_by": "none commanded, but the seal is a standby requirement"
+    },
+    "keep the LSM (control)": {
+      "option": "keep the LSM (control)",
+      "store_kg": 23.759999999999998,
+      "mechanism_kg": 0.0,
+      "total_kg": 23.759999999999998,
+      "standby": "bank self-discharges; P26 says no commercial string sources the shot",
+      "maintained_by": "the bank, which A10 shows cannot be bought"
+    }
+  },
+  "gas_detail": {
+    "option": "cold gas",
+    "store_kg": 0.6345863733333337,
+    "mechanism_kg": 2.3443169924441882,
+    "total_kg": 2.978903365777522,
+    "bore_mm": 15.805366135494582,
+    "wall_mm": 1.0,
+    "cylinder_kg": 0.8443169924441881,
+    "vessel_kg": 0.23253333333333343,
+    "gas_kg": 0.4020530400000002,
+    "reservoir_litre": 1.7108640000000008,
+    "standby": "leaks; needs a seal that holds from integration to the last shot",
+    "maintained_by": "none commanded, but the seal is a standby requirement"
+  },
+  "ceilings": {
+    "steel spring": {
+      "budget_v": 34.30105683503061,
+      "falsifier_v": 36.55817282086182
+    },
+    "cold gas": {
+      "budget_v": 89.38383683978344,
+      "falsifier_v": 96.03623137764737
+    }
+  },
+  "selected": "cold gas",
+  "screened_out": [
+    {
+      "option": "lead screw",
+      "screened_by": "A27",
+      "reason": "DN limit exceeded 8x, whirling critical speed 36x"
+    },
+    {
+      "option": "rack and pinion",
+      "screened_by": "A27",
+      "reason": "contact drive at full speed in vacuum, E21"
+    },
+    {
+      "option": "flywheel through a cable or drum",
+      "screened_by": "VOLLEY-lab PII-14",
+      "reason": "m_eff = I/r^2 refers rotating inertia straight onto the moving mass"
+    }
+  ],
+  "bands": [
+    {
+      "band": "1",
+      "name": "steel spring reproduces A37's store + mechanism to 1 %",
+      "detail": "41.80 against 41.86 kg",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "some store <= 12.55 kg at >= 30 m/s",
+      "detail": "best 2.98 kg at 32.7 m/s",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "selected store inside the 14.26 kg falsifier",
+      "detail": "cold gas at 2.98 kg",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "selected store reaches >= 35 m/s inside the falsifier",
+      "detail": "96.0 m/s",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "every screened-out option cites the run that screened it",
+      "detail": "3 options, 3 cited",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "the control exceeds the 12.55 kg budget",
+      "detail": "LSM 23.76 kg",
+      "pass_": true
+    },
+    {
+      "band": "7",
+      "name": "selected store holds without active maintenance, or names what maintains it",
+      "detail": "leaks; needs a seal that holds from integration to the last shot",
+      "pass_": true
+    }
+  ]
+}

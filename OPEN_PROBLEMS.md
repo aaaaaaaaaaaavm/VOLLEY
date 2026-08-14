@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **96 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
+> **96 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **40** (19 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **26** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **27** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
 > **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
@@ -2726,8 +2726,21 @@ as an ADR. No analysis closes this; two have now tried.
 > the criterion being met, and D2 remains the decision that settles which numerator a customer
 > actually pays.
 
-### P60. The energy store scales as v² and is now the binding constraint: HIGH, NEW 2026-08-14
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P60. The energy store scales as v² and is now the binding constraint: **CORRECTED 2026-08-14 by A39**
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+> **Corrected.** A39 ran the store trade the entry asked for, seven of seven bands. **The store was
+> the wrong store.** A steel spring is 11.41 kg at 32.7 m/s and busts the budget at 34.3; **cold gas
+> is 2.98 kg and busts it at 89.4.** The reason is not energy density — **a spring must be cocked
+> twelve times and gas does not**, so 4.28 kg of wind mechanism becomes a valve. Corrected for the
+> three assumptions most likely to be optimistic, gas lands near 6 kg and every band still passes.
+>
+> **A35's falsification test passes with it:** the pulse chain released 23.76 kg and its replacement
+> weighs 2.98, against a 14.26 kg falsifier. **The mass did not relocate.**
+>
+> **What replaces it:** gas removes a mass problem and introduces a fluid-system problem. Filling a
+> 0.43 litre swept volume in a 133 ms stroke is roughly **3 L/s** through a regulator, and A39
+> models none of it. The binding constraint on velocity is now **stroke length**, not mass.
 
 **A37 bands 4 and 8 missed.** Band 4 was the falsification test
 [A35](validation/A35_constraint_ledger.md) declared and left open: the pulse chain released
@@ -2753,11 +2766,11 @@ not a band: every declared band is satisfied for stroke between **1.83 m and 2.1
 **30.0–32.7 m/s** and about **1.83 kg/satellite**. The classes declared were 1.5, 3.0 and 8.0 m.
 **No class was added after the run and none will be.**
 
-**What would close it.** A store trade at metre-scale strokes with its own bands, declared against
-the window above rather than around it, and carrying at minimum: a gas store with a real
-pressure-vessel mass fraction — deliberately excluded from A37 because inventing one to win a trade
-is worse than leaving it out — and a mechanism model derived rather than assumed, A37's being
-**60 % of store mass floored at 2 kg** and the largest guess in that run.
+**What closed it.** [A39](validation/A39_store_trade.md), the store trade this entry asked for,
+declared against the window above rather than around it and carrying the gas store A37 deliberately
+excluded. Seven of seven bands. **The gas mechanism model is still assumed rather than derived** —
+1.5 kg of piston, seals, regulator and valving, the largest guess in that run and over half the
+selected total.
 
 **What it does not undo.** A37 band 5 passed at **1.608 kg/satellite**, so kill criterion 1 closes
 at 3U on the small class. **P60 is about how fast the machine can be, not whether it closes.**

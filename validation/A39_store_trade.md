@@ -108,4 +108,75 @@ will.**
 
 ## Results
 
-*(Filled after the run. Nothing above this line changes.)*
+**RUN 2026-08-14. Seven of seven bands pass. Gas wins by a factor of four, and A35's falsifier
+settles.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | spring reproduces A37 to 1 % | 41.80 against 41.86 kg | **PASS** |
+| 2 | some store ≤ 12.55 kg at ≥ 30 m/s | **2.98 kg** | **PASS** |
+| 3 | selected inside the 14.26 kg falsifier | **2.98 kg** | **PASS** |
+| 4 | selected reaches ≥ 35 m/s inside it | **96.0 m/s** | **PASS** |
+| 5 | screened-out options each cite their run | 3 of 3 | **PASS** |
+| 6 | the control exceeds the budget | LSM **23.76 kg** | **PASS** |
+| 7 | standby named | leaks; needs a seal that holds to the last shot | **PASS** |
+
+### At 32.7 m/s, the top of A37's window
+
+| | store | mechanism | **total** | busts the budget at |
+|---|---:|---:|---:|---:|
+| Steel spring | 7.13 | 4.28 | **11.41 kg** | 34.3 m/s |
+| **Cold gas** | 0.63 | 2.34 | **2.98 kg** | **89.4 m/s** |
+| Keep the LSM *(control)* | 23.76 | — | **23.76 kg** | fails at every velocity |
+
+**Gas detail:** 15.8 mm bore, 1.00 mm wall, **0.84 kg of cylinder**, and a **1.71 litre** reservoir
+— 0.233 kg of vessel plus 0.402 kg of gas — **for all twelve shots.**
+
+### The reason gas wins is not energy density
+
+It is that **one bottle runs the manifest.** A spring stores 7.13 kg of energy and then needs
+**4.28 kg of mechanism to re-arm it twelve times.** Gas separates the store from the actuator, so
+re-arming is a valve.
+
+> **The spring's problem was never storing the energy. It was having to be cocked twelve times.**
+
+### A35's falsification test settles, and it passes
+
+A35 predicted that deleting the pulse would remove more than 40 % of dry mass, measured **28.1 %**,
+and declared: *the falsifier is that its replacement weighs more than 60 % of what came out* —
+**14.26 kg of the 23.76 kg released.**
+
+**The replacement weighs 2.98 kg.** The mass did not relocate. **A35's result means what it
+appeared to mean**, and A37 bands 4 and 8 failed against a store that was the wrong store.
+
+### And the binding constraint moves again, to stroke length
+
+Gas fits the budget out to **89.4 m/s**, which at the 25 g cap needs **18.8 m of stroke.** No stage
+class in A37 offers that. **Mass has stopped being the constraint on velocity and stage length has
+become it** — which is a much better problem, and the one your reframe was aimed at.
+
+### Where this is most likely wrong, and by how much
+
+The run sheet declared that every assumption favours gas. Checking that honestly:
+
+| | Stated | Likely | Effect |
+|---|---|---|---|
+| **Reservoir vessel** | 0.233 kg at PV/W = 15 000 m | Real 1.7 L / 200 bar vessels are **1–1.5 kg** | **Underestimated 4–6×** |
+| **Hardware allowance** | 1.5 kg, the run's largest guess | could be 3–4 kg | Over half the total |
+| **Cylinder wall** | 1.0 mm minimum, hoop needs 0.16 | must also serve as rail and take A38's **202 N** preload | Not modelled |
+
+**Corrected for all three, gas lands near 6 kg** — still inside the 12.55 kg budget, still beating
+the spring by ~2×, and still passing every band. **The conclusion survives the assumptions being
+wrong by factors of several**, which is the only reason it is worth reporting at this level of
+detail.
+
+**What is not survivable by arithmetic** is the blowdown transient: filling a 0.43 litre swept
+volume in a **133 ms** stroke means roughly **3 L/s** at working pressure through a regulator, and
+nothing here models it. **That, and the seal, are where gas will actually be decided.**
+
+### What this does not answer
+
+No cylinder, valve, seal or latch is designed. No blowdown transient, no temperature effect on
+stored pressure, no pressure-vessel qualification, and no check against A34's ≤ 1 N release
+residual. **Gas removes a mass problem and introduces a fluid-system problem**, and this run has
+sized the first and not the second.

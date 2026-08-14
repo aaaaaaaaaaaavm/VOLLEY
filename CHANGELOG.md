@@ -9,6 +9,24 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (thirty-ninth pass): the store was the wrong store, and A35's falsifier passes
+
+| ID | Item | Detail |
+|---|---|---|
+| **A39** | **Seven of seven bands** | The store trade P60 asked for, declared against A37's window rather than around it, and carrying the gas option A37 deliberately excluded because inventing a pressure-vessel figure to win a trade is worse than leaving it out. |
+| **STORE-01** | **Gas wins by four times, and not on energy density** | At 32.7 m/s a steel spring is **11.41 kg** and busts the budget at **34.3 m/s**; **cold gas is 2.98 kg and busts it at 89.4.** A **1.71 litre** bottle runs **all twelve shots** — 15.8 mm bore, 1.00 mm wall, 0.84 kg of cylinder. |
+| **WHY-01** | **The spring's problem was never storing the energy** | It was **having to be cocked twelve times.** 7.13 kg of store needs **4.28 kg of mechanism** to re-arm; gas separates the store from the actuator, so re-arming is a valve. |
+| **P60** | **Closed. The store is no longer the binding constraint** | Gas fits the budget to 89.4 m/s, which at the 25 g cap needs **18.8 m of stroke** — more than any stage class in A37. **Mass has stopped constraining velocity and stage length has started**, which is the problem the host-integrated reframe was aimed at. |
+| **A35-FALSIFIER** | **Settled, and it passes** | A35 declared: *the falsifier is that C3's replacement weighs more than 60 % of what came out* — **14.26 kg of the 23.76 released.** The replacement weighs **2.98 kg. The mass did not relocate**, and A37 bands 4 and 8 failed against a store that was the wrong store. |
+| HONEST-01 | **Where this is most likely wrong, checked rather than asserted** | The reservoir vessel at 0.233 kg is **underestimated 4–6×** against real 1.7 L / 200 bar hardware; the 1.5 kg allowance is over half the total; the 1 mm cylinder wall must also serve as rail and take A38's 202 N preload, unmodelled. **Corrected for all three, gas lands near 6 kg and every band still passes.** |
+| RISK-01 | **What arithmetic cannot survive** | Filling a 0.43 litre swept volume in a **133 ms** stroke is roughly **3 L/s** through a regulator, and A39 models none of it. **Gas removes a mass problem and introduces a fluid-system problem.** That, and the seal, are where it will actually be decided. |
+
+**What authorised it.** P60, and A38 having established that tip-off does not bind. **No band was
+edited, widened or moved**; A39's seven were committed before `analysis/store_trade.py` existed.
+All four checks pass.
+
+---
+
 ## 2026-08-14 (thirty-eighth pass): tip-off does not bind Gen6, and a run sheet was stale against its own script
 
 | ID | Item | Detail |
