@@ -22,7 +22,7 @@ double-sided Halbach track, arrested by a contactless eddy brake and powered fro
 supercapacitor bank.
 
 One shot buys a propulsion-less satellite **1.60x its orbital lifetime**, or seeds 30° of
-constellation phase spacing in **1.4-6.9 days** against roughly 25 for differential drag.
+a **28.8 km rise in semi-major axis** and **+60.2 % of orbital life**, which no amount of waiting and no spring at any preload can reach (A21-R bands R5, R6). Phase spacing is *not* the claim: 30° of in-track separation costs **468 seconds of waiting** between releases and no velocity at all (**P56**).
 
 > **The comparison that matters, computed rather than quoted** ([A21](validation/A21_comparators.md)).
 > Against the fastest published spring VOLLEY is 6.4× on *velocity* — but **7.33× on orbital

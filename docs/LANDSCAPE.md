@@ -123,13 +123,23 @@ propulsion, carrying satellites to a destination. VOLLEY imparts one impulse alo
 velocity vector and cannot change plane meaningfully (`astro.py` puts the plane-change
 ceiling at 0.15°).
 
-Where VOLLEY competes is cost and simplicity for the specific job of *spreading a
-constellation in one plane*: no propulsion on the satellites, no propulsion on the deployer,
-one shot each. The comparison that matters is against **differential drag**, which is free
-and needs no hardware at all, `astro.py` puts 30° of phasing at 25 days by drag against
-1.4 days at 10 m/s. Planet Labs has flown differential-drag phasing on a 12-satellite
-constellation, which is exactly the comparison case, and **that flown result should replace
-the modelled 25-day baseline in the paper** (`RELATED_WORK.md`).
+> **Corrected 2026-08-14 (P56, A21-R).** The paragraph below named differential drag as the
+> comparison that matters. **It is not the binding one.** Satellites released at different times
+> from the same host arrive at different true anomalies *in the same orbit*, for no velocity at
+> all: at 450 km, **30° costs 468 seconds of waiting**, and ADR-020's adopted 1200 s cadence
+> already gives **76.9° per shot**. Release timing beats commanded differential by 255× and beats
+> drag by four orders. **A spring and a clock do phase spacing, and do it better** — timing sets
+> an offset that holds, while a differential sets a 21.75 °/day drift a propulsion-less satellite
+> cannot null.
+>
+> **What survives is orbit change**, which no clock can imitate: **+28.8 km of semi-major axis and
+> ×1.602 of orbital life**, against ×1.0000 for release timing at any cadence (bands R5, R6).
+
+Where VOLLEY competes is **placing a propulsion-less satellite into a different orbit from the one
+its host is in**: no propulsion on the satellites, no propulsion on the deployer, one shot each.
+Against differential drag — free, flown by Planet Labs on a 12-satellite constellation, and the
+right baseline for *phasing* — VOLLEY offers nothing on phase and everything on orbit. Drag
+changes when a satellite decays; it cannot raise an apogee.
 
 ## Prior art VOLLEY must distinguish itself from
 

@@ -81,7 +81,8 @@ The metrics on which the two differ. Losses are in the same table as the wins.
 |---|---|---|---|
 | Exit velocity | ~2 m/s (NRCSD-E specifies 0.5–2.5) | **16.03 m/s** | 6.4× |
 | Commanded differential between satellites | **zero by design** | per shot, continuous | categorical |
-| 30° of constellation phase | 25 days, by differential drag | **1.4–6.9 days** | `analysis/astro.py` |
+| Semi-major axis change | **0 m** — a spring imparts none | **+28.8 km** | `analysis/astro.py`, A21-R |
+| 30° of in-track phase | **468 s of waiting** | 468 s of waiting | **no advantage; see P56** |
 | Orbital life delivered, per satellite | 1.41 yr | **2.11 yr** | 1.495× |
 | Deployer mass per 3U satellite | ~6 kg, canisterised class | 7.042 kg | parity |
 | Maturity | **TRL 9** | TRL 2–3 | spring wins |
@@ -95,7 +96,7 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 
 > **Deciding whether to use it?** **[`docs/CASE_STUDY.md`](docs/CASE_STUDY.md)** is the case for
 > VOLLEY written for an operator rather than a reviewer: a worked twelve-satellite mission —
-> **30° of phase in 1.4 days against 25 by drag** — with the losses stated in the same voice as
+> **+60.2 % of orbital life against a spring's +8.2 %** — with the losses stated in the same voice as
 > the wins, because an operator who finds the losses themselves discounts the wins too.
 
 > **Reviewing it?** **[`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md)** answers
@@ -216,7 +217,7 @@ electrical-to-payload, net of that credit.
 | Electrical to payload efficiency | 18.5 % (2.74 kJ net of regeneration, 514 J delivered) | `analysis/motor_model.py` |
 | Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint to ±0.10 km apogee | `analysis/motor_model.py` |
 | Orbital lifetime multiplier | x1.60 at mean activity, **not invariant, see P16** | `analysis/astro.py` |
-| Constellation seeding | 30° in 1.4-6.9 days vs 25 days by differential drag | `analysis/astro.py` |
+| Semi-major axis change | **+28.8 km**, unreachable by waiting or by drag | `analysis/astro.py`, A21-R |
 | Dry / loaded mass | 84.5 kg / 132.5 kg | `analysis/mass_properties.py` |
 | Recoil per shot | 64.1 N·s | `analysis/astro.py` |
 | Track first mode | 109 Hz fixed-fixed (target >70) | `analysis/sizing.py` |

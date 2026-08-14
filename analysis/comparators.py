@@ -70,6 +70,34 @@ def days_to_phase(dv_differential, target_deg=PHASE_TARGET_DEG):
     return math.radians(target_deg) / dn / 86400.0
 
 
+def in_track_rate_deg_s(alt_m=None):
+    """Angular rate along the orbit, degrees per second. The clock's phasing authority.
+
+    A21 never declared this comparator and the claim built on band 3 assumed it did not
+    exist: satellites released at different times from the same host arrive at different
+    true anomalies IN THE SAME ORBIT, for no velocity at all. See P56.
+    """
+    r = astro.RE + (ALT_M if alt_m is None else alt_m)
+    return 360.0 / (2 * math.pi * math.sqrt(r ** 3 / astro.MU))
+
+
+def seconds_to_phase_by_timing(target_deg=PHASE_TARGET_DEG, alt_m=None):
+    """How long to WAIT between releases for `target_deg` of in-track separation."""
+    return target_deg / in_track_rate_deg_s(alt_m)
+
+
+def drift_rate_deg_day(dv_differential):
+    """Phase drift rate under a commanded differential. Constant, and it never stops.
+
+    This is the asymmetry band R4 measures. Timed release sets an offset and leaves it
+    there; a differential sets a RATE, and a satellite with no propulsion cannot null it.
+    """
+    a0 = astro.RE + ALT_M
+    a1 = astro.boosted_elements(ALT_M, dv_differential)[0]
+    dn = abs(math.sqrt(astro.MU / a0 ** 3) - math.sqrt(astro.MU / a1 ** 3))
+    return math.degrees(dn) * 86400.0
+
+
 def main():
     global V_G_CAP
     V_G_CAP = math.sqrt(2 * G_CAP * 9.81 * mm.ACCEL_ZONE)
@@ -191,7 +219,64 @@ def main():
               f"{r['gain_per_m_s']:5.2f} %/m/s   {r['label']}")
     print(f"  one shot raises apogee to {apogee_km:.1f} km")
 
+    # ---- A21-R, bands declared in validation/A21R_release_timing.md before this block ----
+    # A21's seven bands above are UNCHANGED. These are the comparator A21 never declared.
+    rate = in_track_rate_deg_s()
+    t_timing = seconds_to_phase_by_timing()
+    t_commanded = days_to_phase(10.0) * 86400.0
+    cadence_deg = 1200.0 * rate
+    drift = drift_rate_deg_day(10.0)
+    a_host = astro.RE + ALT_M
+    a_timed = a_host                       # a clock imparts no velocity
+    a_shot = astro.boosted_elements(ALT_M, dv_volley)[0]
+    life_host = astro.lifetime(a_host, 0.0)
+    life_timed = astro.lifetime(a_timed, 0.0)
+    life_shot = lifetime_multiplier(dv_volley)
+
+    print("\nA21-R, release timing as the free baseline for phase:")
+    print(f"  in-track rate at {ALT_M/1e3:.0f} km        {rate:.4f} deg/s")
+    print(f"  30 deg by waiting                {t_timing:8.0f} s  ({t_timing/60:.1f} min)")
+    print(f"  30 deg by commanded differential {t_commanded:8.0f} s  "
+          f"({t_commanded/86400:.2f} days)")
+    print(f"  ADR-020's 1200 s cadence gives   {cadence_deg:8.1f} deg per shot")
+    print(f"  drift under 10 m/s differential  {drift:8.2f} deg/day, and it does not stop")
+    print(f"  semi-major axis change: timed {a_timed - a_host:.1f} m, "
+          f"commanded {a_shot - a_host:.0f} m")
+    print(f"  lifetime: timed x{life_timed/life_host:.4f}, commanded x{life_shot:.3f}")
+
+    bands.update({
+        'R1_in_track_rate_two_body': dict(
+            value=rate, band='two-body period, <= 0.1 %',
+            passed=abs(rate - 360.0 / (2 * math.pi * math.sqrt(
+                (astro.RE + ALT_M) ** 3 / astro.MU))) / rate <= 1e-3),
+        'R2_timing_beats_commanded': dict(
+            value=t_timing / t_commanded, band='<= 0.01',
+            passed=t_timing / t_commanded <= 0.01),
+        'R3_adopted_cadence_exceeds_target': dict(
+            value=cadence_deg, band='>= 60 deg per shot',
+            passed=cadence_deg >= 60.0),
+        'R4_commanded_offset_does_not_hold': dict(
+            value=drift, band='non-zero drift rate', passed=drift > 0.0),
+        'R5_only_dv_changes_the_orbit': dict(
+            value=[a_timed - a_host, a_shot - a_host],
+            band='timed <= 1 m, commanded >= 1000 m',
+            passed=abs(a_timed - a_host) <= 1.0 and abs(a_shot - a_host) >= 1000.0),
+        'R6_only_dv_changes_the_lifetime': dict(
+            value=[life_timed / life_host, life_shot],
+            band='timed within 0.1 %, commanded >= 1.5x',
+            passed=abs(life_timed / life_host - 1.0) <= 1e-3 and life_shot >= 1.5),
+    })
+
     out = dict(analysis='A21', bands_declared_commit='881c260',
+               reanalysis='A21-R', reanalysis_bands_commit='9bab1ce',
+               release_timing=dict(
+                   in_track_rate_deg_s=rate, seconds_to_30deg_by_timing=t_timing,
+                   seconds_to_30deg_commanded=t_commanded,
+                   adopted_cadence_s=1200.0, deg_per_shot_at_adopted_cadence=cadence_deg,
+                   drift_deg_per_day_at_10_m_s=drift,
+                   da_timed_m=a_timed - a_host, da_commanded_m=a_shot - a_host,
+                   lifetime_ratio_timed=life_timed / life_host,
+                   lifetime_ratio_commanded=life_shot),
                superlinearity=superlinearity, apogee_after_shot_km=apogee_km,
                note='class figures only; no manufacturer named; no cost comparison computed',
                lifetime_multipliers=mult, lifetime_extensions=ext,

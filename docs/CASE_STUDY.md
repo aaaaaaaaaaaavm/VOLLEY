@@ -42,6 +42,7 @@ single largest open item in this project that no further analysis can close.
 | **Differential drag** — what a spring-deployed fleet must use | **25.0 days** |
 | Commanded differential, 2 m/s | 6.9 days |
 | Commanded differential, 5 m/s | 2.8 days |
+| **Release timing, no velocity at all** | **468 s** |
 | **Commanded differential, 10 m/s** | **1.4 days** |
 
 *(`analysis/astro.py`, `seeding()`.)*
@@ -151,7 +152,7 @@ wrong thing to do next.
 *A fleet of propulsion-less CubeSats released from a single rideshare must either accept the orbit
 it inherits or wait about a month for atmospheric drag to spread it along track. VOLLEY replaces
 the spring with a linear motor that gives every satellite a separately commanded exit velocity, so
-a twelve-satellite plane reaches 30° of spacing in **1.4 days instead of 25**, and each satellite
+a twelve-satellite plane reaches 30° of spacing in **468 s by release timing alone** — which costs nothing and is not a VOLLEY capability (**P56**) — and each satellite
 gains **49 % of orbital life**, without carrying propulsion, a pressure vessel, or any
 modification. It is heavier than a cold-gas module, less mature than a spring, and has never been
 built. What it offers that neither can is a constellation that is usable on a schedule.*

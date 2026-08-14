@@ -189,7 +189,7 @@ orbits from one release event.
 ### 6. What's wrong with free drag-differential phasing over three weeks?
 
 Nothing, and `A21` treats it as the real comparator rather than the spring. It is free and has
-flown. VOLLEY's advantage is **time and schedulability**: ~**1.4 days** to 30° of phase against
+flown. **VOLLEY's advantage is not phase** — release timing gives 30° in 468 s for free (**P56**, A21-R). It is **orbit change**: ~**1.4 days** to 30° of phase against
 ~**25 days** by drag, roughly **18×**.
 
 Drag phasing also requires differential ballistic coefficient — attitude control or deployable
@@ -590,7 +590,7 @@ analysis substitutes for it.**
 
 > **The sentence has since been built out into [`CASE_STUDY.md`](CASE_STUDY.md)**, written for an
 > operator rather than a reviewer: the customer profile, a worked twelve-satellite mission
-> (**30° of phase in 1.4 days against 25 by drag**, and **+49 % orbital life each**), the four
+> (**+60.2 % of orbital life each against a spring's +8.2 %**), the four
 > alternatives each with the axis they win on, and the four things that must become true before
 > anyone can buy it. **It is the document to send, not this one.**
 

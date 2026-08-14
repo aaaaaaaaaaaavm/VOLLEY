@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (thirty-fifth pass): the phase claim was measured against the wrong thing
+
+| ID | Item | Detail |
+|---|---|---|
+| **P56** | **30° of phase costs 468 seconds of waiting, and the repository sold it as 1.4 days** | Satellites released at different times from the same host arrive at different true anomalies **in the same orbit**, at zero Δv. At 450 km the in-track rate is **0.0641 °/s**. [ADR-020](docs/adr/020-inter-shot-cadence.md)'s adopted 1200 s cadence already gives **76.9° per shot** before the motor is energised. **A spring and a clock do phase spacing.** |
+| **A21-R** | **Six bands, declared before `comparators.py` changed, six pass** | Timing beats commanded differential by **255×** and drag by four orders. **`comparators.py` changed by addition only** — the diff deletes no line, so A21's seven bands are provably untouched, and band 3 remains true: a spring's *designed differential* is zero. The error was inferring that phase therefore requires differential velocity. |
+| **DRIFT-01** | **And the free method is the better one** | A commanded differential sets a **rate**, not an offset: **21.75 °/day at 10 m/s, and it never stops.** The design passes *through* 30° and keeps going, and a propulsion-less satellite cannot null a drift it has been given. Timed release sets an offset that holds. **For a string of pearls the free method wins outright**, and that is stated rather than softened. |
+| **R5, R6** | **What survives, and it is the stronger claim** | A clock changes semi-major axis by **0 m** at any cadence, and lifetime by **×1.0000**. One shot changes them by **+28.8 km** and **×1.602**. **The differentiator is orbit change, and the repository had been leading with the one claim of the two that a clock deletes.** |
+| DIR-01 | **It argues for more velocity, not less** | Phase spacing needed only a *differential* and would have justified a much smaller machine. Orbit change scales with **absolute** Δv. The design point moves the other way, and an earlier suggestion in the opposite direction is withdrawn. |
+| **P57** | **The nearest published neighbour is still unread** | `RELATED_WORK.md` identified it on 2026-07-30. A voice-coil deployer whose stated purpose is *to control precisely the separation velocity of CubeSats with different masses*, by *regulating the current value*, on a direct-drive linear machine with **no moving magnet carrier**. That is this project's claim and the sled-free topology it treats as open. **Every publisher domain is blocked from this environment**; recorded in `RELATED_WORK.md` at `confirmed`, and **nothing was written into `PRIOR_ART.md`**, whose header states all its entries have been read. |
+| **P58** | **The thesis manuscript was a stale fork of the conference manuscript** | ADR-031 says they carry the same concept and not different designs. They shared 414 of 447 lines; **all 33 differences were superseded numbers** — K<sub>t</sub>, exit velocity, efficiency, dry mass, and **6.38 kg against 7.04 kg per satellite** — plus a depth-averaging sentence the thesis lacked. **Not one difference was thesis-specific.** ADR-028 moved the manuscript out of the export tool's reach and nothing replaced it, so the baseline change reached one repository and not the other. **The same shape as P53.** |
+| GAP-01 | **And nothing checks it** | Two authored manuscripts in two repositories, and neither `check_links.py` nor `make_baseline.py` can see across a repository boundary. **A cross-repository manuscript check is the missing tool.** Recorded rather than built. |
+
+**What authorised it.** A literature check, and the arithmetic it prompted. **No acceptance band was
+edited, widened or moved**; A21-R's six were declared before the script changed, and the change was
+purely additive. All four checks pass.
+
+---
+
 ## 2026-08-14 (thirty-fourth pass): the sweep that found the propagation had stopped at the documents
 
 | ID | Item | Detail |

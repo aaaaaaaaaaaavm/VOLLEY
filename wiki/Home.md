@@ -89,7 +89,8 @@ All figures are script outputs, not measurements.
 | Electrical to payload efficiency | 18.5 % (2.74 kJ net of regeneration, 514 J delivered) | `motor_model.py` |
 | Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint to ±0.10 km apogee | `motor_model.py` |
 | Orbital lifetime multiplier | x1.60 at mean activity, **not invariant, see P16** | `astro.py` |
-| Constellation seeding | 30° in 1.4-6.9 days vs 25 days by differential drag | `astro.py` |
+| Semi-major axis change | **+28.8 km**; 0 m by release timing at any cadence | `astro.py`, A21-R |
+| 30° of in-track phase | **468 s of waiting** — free, and not a VOLLEY claim (**P56**) | `comparators.py`, A21-R |
 | Dry / loaded mass | 84.5 kg / 132.5 kg | `mass_properties.py` |
 | Recoil per shot | 64.1 N·s | `astro.py` |
 | Track first mode | 109 Hz fixed-fixed (target >70) | `sizing.py` |

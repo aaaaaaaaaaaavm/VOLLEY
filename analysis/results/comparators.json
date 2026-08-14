@@ -1,6 +1,20 @@
 {
   "analysis": "A21",
   "bands_declared_commit": "881c260",
+  "reanalysis": "A21-R",
+  "reanalysis_bands_commit": "9bab1ce",
+  "release_timing": {
+    "in_track_rate_deg_s": 0.06411183109514268,
+    "seconds_to_30deg_by_timing": 467.9323533199303,
+    "seconds_to_30deg_commanded": 119173.6086594985,
+    "adopted_cadence_s": 1200.0,
+    "deg_per_shot_at_adopted_cadence": 76.93419731417121,
+    "drift_deg_per_day_at_10_m_s": 21.74978192869726,
+    "da_timed_m": 0.0,
+    "da_commanded_m": 28800.77515554987,
+    "lifetime_ratio_timed": 1.0,
+    "lifetime_ratio_commanded": 1.6019385942146134
+  },
   "superlinearity": [
     {
       "dv_m_s": 2.0,
@@ -134,6 +148,42 @@
       "value": "NOT COMPUTED",
       "band": "must return NOT COMPUTED",
       "reason": "no vendor quotation for VOLLEY (cost.py), no price for any alternative; closing this needs E3, not another analysis",
+      "passed": true
+    },
+    "R1_in_track_rate_two_body": {
+      "value": 0.06411183109514268,
+      "band": "two-body period, <= 0.1 %",
+      "passed": true
+    },
+    "R2_timing_beats_commanded": {
+      "value": 0.003926476327967054,
+      "band": "<= 0.01",
+      "passed": true
+    },
+    "R3_adopted_cadence_exceeds_target": {
+      "value": 76.93419731417121,
+      "band": ">= 60 deg per shot",
+      "passed": true
+    },
+    "R4_commanded_offset_does_not_hold": {
+      "value": 21.74978192869726,
+      "band": "non-zero drift rate",
+      "passed": true
+    },
+    "R5_only_dv_changes_the_orbit": {
+      "value": [
+        0.0,
+        28800.77515554987
+      ],
+      "band": "timed <= 1 m, commanded >= 1000 m",
+      "passed": true
+    },
+    "R6_only_dv_changes_the_lifetime": {
+      "value": [
+        1.0,
+        1.6019385942146134
+      ],
+      "band": "timed within 0.1 %, commanded >= 1.5x",
       "passed": true
     }
   }

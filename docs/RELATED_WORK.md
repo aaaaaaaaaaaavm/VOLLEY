@@ -39,7 +39,29 @@ One entry deserves promotion out of it. Zhao, Yue, Yang and Zhu, "A High Thrust 
 Actuator With a New Structure of Double Magnetic Circuits for CubeSat Deployers", *IEEE Trans. Ind.
 Electron.* 69 (2022) 13305, is cited by **all three** Harbin papers. It is the actuator underneath
 their deployer line, it is a linear machine rather than a coilgun, and it is the nearest published
-neighbour to this design's topology that has turned up so far. It has not been read.
+neighbour to this design's topology that has turned up so far.
+
+> ### Status raised to `confirmed`, 2026-08-14. It is still not read, and that is now **P57**.
+>
+> A search on 2026-08-14 establishes what it claims, from the publisher's own listing and the
+> authors' summaries: the actuator exists **to control precisely the separation velocity of
+> CubeSats with different masses**, and **the separation speed is directly controlled by
+> regulating the current value**, on a **direct-drive linear machine with no moving magnet
+> carrier**.
+>
+> **That is this project's core claim, published in 2022, on the sled-free topology this project
+> has been treating as an open design direction.** Any novelty claim about programmable separation
+> velocity is unsupported until this is read in full.
+>
+> **Nothing from this has been written into [`PRIOR_ART.md`](PRIOR_ART.md)**, whose header states
+> that every work in it has been read. `confirmed` is not `verified`, the E16 rule applies with
+> full force, and **no number from this source may support anything in the manuscript.**
+>
+> **Blocked, not deferred.** IEEE Xplore, ResearchGate, MDPI, doi.org, Crossref and Semantic
+> Scholar are all refused by this environment's network policy. Retrieval needs institutional
+> access. `docs/PROVENANCE.md` records **P22** — a literature check that found published work on
+> this exact concept the paper did not cite, and two claims that did not survive it. This is the
+> same exposure, on the source already identified as nearest.
 
 ## Direct competitors: added 2026-07-30
 

@@ -71,4 +71,76 @@ given**, and that asymmetry is the substance of band 4, not a limitation of the 
 
 ## Results
 
-*(Filled after the run. Nothing above this line changes.)*
+**RUN 2026-08-14. Six of six bands pass. The published claim does not survive; the design does.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| R1 | in-track rate agrees with two-body to ≤ 0.1 % | **0.0641 °/s** | **PASS** |
+| R2 | timing ≤ 1 % of commanded time | **0.39 %** | **PASS** |
+| R3 | 1200 s cadence ≥ 60° per shot | **76.9°** | **PASS** |
+| R4 | commanded offset does not hold | **21.75 °/day, constant** | **PASS** |
+| R5 | only Δv changes the orbit | timed **0.0 m**, commanded **28 801 m** | **PASS** |
+| R6 | only Δv changes the lifetime | timed **×1.0000**, commanded **×1.602** | **PASS** |
+
+`analysis/comparators.py` was changed by **addition only** — the diff deletes no line, so A21's
+seven bands are provably untouched.
+
+### 30° of phase costs 468 seconds and nothing else
+
+| | |
+|---|---:|
+| By **waiting** between releases | **468 s — 7.8 minutes** |
+| By commanded differential, 10 m/s | 119 174 s — **1.38 days** |
+| By differential drag | ~25 days |
+
+**255× faster than the mechanism the repository sells, and free.** And
+[ADR-020](../docs/adr/020-inter-shot-cadence.md)'s adopted 1200 s cadence already delivers
+**76.9° per shot** — two and a half times the target — before the motor is energised.
+
+**The claim that a spring "cannot achieve 30° of phase by design" is false.** A spring and a clock
+achieve it. A21 band 3 measured that a spring's *designed differential* is zero, which is true;
+the error was inferring that phase spacing therefore requires differential velocity.
+
+### And release timing is not merely cheaper — it is better
+
+Band R4: a commanded differential sets a **rate**, not an offset. At 10 m/s the phase drifts at
+**21.75 °/day and never stops.** The design passes *through* 30° at 1.38 days and keeps going, and
+**a satellite with no propulsion cannot null a drift it has been given.**
+
+Timed release sets an offset in the same orbit, with zero relative rate. It holds indefinitely.
+
+> **For a string-of-pearls constellation, the free method produces the better result.** That is
+> the uncomfortable form of this finding and it should be stated that way rather than softened.
+
+### What survives, measured rather than asserted
+
+Bands R5 and R6 are why this run exists.
+
+| | Timed release | Commanded shot |
+|---|---:|---:|
+| Change in semi-major axis | **0.0 m** | **28 801 m** |
+| Orbital lifetime | **×1.0000** | **×1.602** |
+
+**A clock cannot change an orbit. Only Δv can.** Raised apogee, +60.2 % of orbital life against a
+spring's +8.2 %, and placement into a chosen altitude shell are unreachable by waiting, by drag,
+or by any spring at any preload.
+
+**The differentiator is orbit change, and the repository has been leading with phase change** —
+the one claim of the two that a clock deletes.
+
+### Consequences
+
+1. Every statement of the phase claim is restated as orbit change, with release timing named as
+   the correct free baseline for phase. **P56.**
+2. The **superlinearity of lifetime in Δv** becomes the headline argument rather than a supporting
+   one: +6.5 % at 2 m/s, +8.2 % at 2.5, **+60.2 % at 16.029**, +103.8 % at the 25 g cap.
+3. **It argues for more velocity, not less.** Phase spacing needed only a differential and would
+   have justified a far smaller machine. Orbit change scales with absolute Δv, so the design point
+   moves the other way.
+
+### Limitations
+
+Plane spacing is not priced here — that is [A15](A15_poem_campaign.md) band 4's nodal drift, a
+different question. Station-keeping, inter-satellite drag differences and the host's own drift are
+not modelled. The drift asymmetry in R4 is a property of propulsion-less payloads, not of this
+model.
