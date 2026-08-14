@@ -9,6 +9,23 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (thirty-sixth pass): the last route to kill criterion 1 closes, and it is a market decision
+
+| ID | Item | Detail |
+|---|---|---|
+| **A36** | **Magazine density measured, six of seven bands, band 4 FAIL** | A35 named the divisor as the only lever reaching kill criterion 1. It reaches it at **N = 116**, not the **N ≤ 30** the band required. **The band is not widened; it produces P59.** |
+| SPLIT-01 | **Where the mass actually goes as the manifest grows** | Fixed **59.58 kg**, magazine skin **13.50 kg** growing as N^(2/3), and **0.954 kg per satellite** of containment read from A35's C6 tagging rather than restated. The split was declared in the run sheet **before the script existed** so it could not be tuned to pass. |
+| **ENV-01** | **N = 116 cannot be packaged at all** | Every factorisation puts the stack or the width outside the 1500 mm track length — 4 × 29 is a 3016 mm stack, 29 × 4 a 4814 mm width. The largest that fits is **N = 126** at **1.941 kg/satellite**, on a **244.6 kg** machine running a **42-hour** campaign. |
+| **CORR-01** | **A number reported from A35 was wrong by more than a factor of two** | A35's saturation figure was divided naively: 49.23 kg over 24 satellites, "2.05 kg each", allowed to be "near 2.5" if containment grew. **It is 4.330 kg** — the naive division held the machine constant while containment *and* skin grow with N. **Band 4 was written to test exactly that claim and caught it.** |
+| **P59** | **Two of the three routes to kill criterion 1 are now closed by measurement** | **Architecture**, by A35: 49.23 kg survives all 64 corners. **Manifest size**, by A36: reachable only outside the envelope or at its edge. **Smaller payloads is the only route left**, and it is a different market, a different customer and a different qualification campaign against a repository whose every CAD file is 3U. |
+| KILL-01 | **`KILL_CRITERIA.md` states it, and the threshold is not moved** | ~2 kg is what canisterised dispensers achieve; a threshold revised after a result is known is not a threshold. The honest options are recorded as: change the payload class (**D2**), or publish the criterion as crossed on the front page. |
+| WARN-01 | **And the flattering metric is named rather than adopted** | *Δv per kilogram per satellite* puts this design **5.4×** ahead of a dispenser and would rescue the criterion. It is recorded as exactly the sort of metric a project reaches for once the plain one has stopped being kind. |
+
+**What authorised it.** A35's own conclusion, tested. **No band was edited, widened or moved**;
+A36's seven were committed before `analysis/magazine_density.py` existed. All four checks pass.
+
+---
+
 ## 2026-08-14 (thirty-fifth pass): the phase claim was measured against the wrong thing
 
 | ID | Item | Detail |

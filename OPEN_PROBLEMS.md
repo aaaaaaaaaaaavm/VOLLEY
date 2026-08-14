@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **93 numbered entries, of which 38 are live.** Every entry carries a `Status:` line written by
+> **94 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **38** (17 P, 21 E) | open engineering; something still has to be done |
+> | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **25** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
@@ -2681,6 +2681,37 @@ at fifteen pages with no undefined references.
 again the moment either is edited, and neither `check_links.py` nor `make_baseline.py` can see
 across a repository boundary. **A cross-repository manuscript check is the missing tool**, and
 until it exists this defect is one edit away from recurring.
+
+### P59. Kill criterion 1 is unreachable by architecture and unreachable by manifest size: CRITICAL, NEW 2026-08-14
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+**A36 band 4 missed.** The band required kilograms per satellite to reach the ~2 kg threshold at a
+manifest of **N ≤ 30**. It first reaches it at **N = 116**.
+
+Two runs have now closed two of the three routes to this criterion by measurement:
+
+| Route | |
+|---|---|
+| **Architecture** | **Closed by [A35](validation/A35_constraint_ledger.md).** 49.23 kg — 58.2 % of dry mass — survives every deletion of every requirement in all 64 corners. The deletable fraction caps at 41.8 % |
+| **Manifest size** | **Closed by [A36](validation/A36_magazine_density.md) band 4.** The N → ∞ limit is a healthy 0.954 kg/satellite, but 2.0 kg is first reached at **N = 116**, and no factorisation of 116 packages inside the 1500 mm track length. The largest manifest that fits is **N = 126**, at **1.941 kg/satellite** on a **244.6 kg** machine running a **42-hour** campaign |
+| **Smaller payloads** | **Open.** `docs/PAYLOAD_CLASSES.md` already puts PocketQube at 0.266 kg/satellite |
+
+**The criterion survives by one route, and that route is a different market.** A PocketQube
+deployer is not a 3U deployer with smaller cells — it is a different product, a different customer
+and a different qualification campaign, and every CAD file, cassette and cost model in this
+repository is 3U. That is **D2** in `docs/STATE_OF_THE_PROJECT.md`, which has been open since
+2026-08-13 and is now the only thing standing between this project and a crossed kill criterion.
+
+**What this is not.** It is not a reason to widen the criterion. `docs/KILL_CRITERIA.md` sets ~2 kg
+because that is the class figure a canisterised dispenser achieves, and a threshold moved after a
+result is known is not a threshold. **The correct outcomes are: change the payload class, accept
+the criterion as crossed and say so on the front page, or renegotiate it against a stated
+capability-normalised metric** — and the third needs care, because *Δv per kilogram per satellite*
+flatters this design by 5.4× and is exactly the sort of metric a project adopts when the plain one
+has stopped being kind.
+
+**What would close it.** An owner decision on payload class (**D2**), taken explicitly and recorded
+as an ADR. No analysis closes this; two have now tried.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

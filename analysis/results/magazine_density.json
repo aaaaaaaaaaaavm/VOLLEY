@@ -1,0 +1,190 @@
+{
+  "analysis": "A36",
+  "bands_declared_commit": "39c0d21",
+  "note": "reports mass and envelope only; indexing reach, follower travel, stack structural depth and doubled ascent loads are NOT priced, and every omission makes this optimistic",
+  "n_reference": 12,
+  "target_kg": 2.0,
+  "skin_exponent": 0.6666666666666666,
+  "fixed_kg": 59.57861200000002,
+  "skin_kg_at_reference": 13.5,
+  "per_satellite_kg": 0.9544146666666666,
+  "asymptote_kg_per_satellite": 0.9544146666666666,
+  "first_n_at_target": 116,
+  "curve": [
+    {
+      "n": 6,
+      "dry_kg": 73.80956708679042,
+      "kg_per_sat": 12.301594514465071,
+      "campaign_h": 2.0,
+      "arrangement": {
+        "cassettes": 2,
+        "per_cassette": 3,
+        "stack_z_mm": 312.0,
+        "width_y_mm": 332.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 12,
+      "dry_kg": 84.53158800000003,
+      "kg_per_sat": 7.044299000000002,
+      "campaign_h": 4.0,
+      "arrangement": {
+        "cassettes": 3,
+        "per_cassette": 4,
+        "stack_z_mm": 416.0,
+        "width_y_mm": 498.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 18,
+      "dry_kg": 94.44808041091007,
+      "kg_per_sat": 5.247115578383893,
+      "campaign_h": 6.0,
+      "arrangement": {
+        "cassettes": 3,
+        "per_cassette": 6,
+        "stack_z_mm": 624.0,
+        "width_y_mm": 498.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 24,
+      "dry_kg": 103.91447820157072,
+      "kg_per_sat": 4.329769925065446,
+      "campaign_h": 8.0,
+      "arrangement": {
+        "cassettes": 4,
+        "per_cassette": 6,
+        "stack_z_mm": 624.0,
+        "width_y_mm": 664.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 30,
+      "dry_kg": 113.07826461582263,
+      "kg_per_sat": 3.7692754871940877,
+      "campaign_h": 10.0,
+      "arrangement": {
+        "cassettes": 5,
+        "per_cassette": 6,
+        "stack_z_mm": 624.0,
+        "width_y_mm": 830.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 36,
+      "dry_kg": 122.01867161120072,
+      "kg_per_sat": 3.3894075447555756,
+      "campaign_h": 12.0,
+      "arrangement": {
+        "cassettes": 4,
+        "per_cassette": 9,
+        "stack_z_mm": 936.0,
+        "width_y_mm": 664.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 48,
+      "dry_kg": 139.4083843471616,
+      "kg_per_sat": 2.9043413405658662,
+      "campaign_h": 16.0,
+      "arrangement": {
+        "cassettes": 6,
+        "per_cassette": 8,
+        "stack_z_mm": 832.0,
+        "width_y_mm": 996.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 60,
+      "dry_kg": 156.31773146587372,
+      "kg_per_sat": 2.6052955244312286,
+      "campaign_h": 20.0,
+      "arrangement": {
+        "cassettes": 6,
+        "per_cassette": 10,
+        "stack_z_mm": 1040.0,
+        "width_y_mm": 996.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 96,
+      "dry_kg": 205.20242000000002,
+      "kg_per_sat": 2.1375252083333334,
+      "campaign_h": 32.0,
+      "arrangement": {
+        "cassettes": 8,
+        "per_cassette": 12,
+        "stack_z_mm": 1248.0,
+        "width_y_mm": 1328.0,
+        "length_x_mm": 380.5
+      }
+    },
+    {
+      "n": 240,
+      "dry_kg": 388.1069824632905,
+      "kg_per_sat": 1.617112426930377,
+      "campaign_h": 80.0,
+      "arrangement": null
+    },
+    {
+      "n": 1200,
+      "dry_kg": 1495.7248951543042,
+      "kg_per_sat": 1.2464374126285869,
+      "campaign_h": 400.0,
+      "arrangement": null
+    }
+  ],
+  "bands": [
+    {
+      "band": "1",
+      "name": "model reproduces payload_family at N = 12, within 1 %",
+      "detail": "7.044 against 7.042 kg",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "fixed + skin + N x per-satellite reproduces dry mass, to 0.01 kg",
+      "detail": "84.5316 against 84.5316",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "N -> infinity limit <= 2.0 kg/satellite",
+      "detail": "0.954 kg",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "kg/satellite <= 2.0 at N <= 30",
+      "detail": "first at N = 116",
+      "pass_": false
+    },
+    {
+      "band": "5",
+      "name": "N = 24 arrangement exists: track axis unchanged, transverse <= track length",
+      "detail": "5 arrangement(s), best 664 mm",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "no arrangement violates the 166 mm section, 104 mm pitch or 340.5 mm cell",
+      "detail": "cassette length unchanged in every arrangement",
+      "pass_": true
+    },
+    {
+      "band": "7",
+      "name": "N = 24 campaign completes in <= 12 h at the 1200 s cadence",
+      "detail": "8.0 h",
+      "pass_": true
+    }
+  ]
+}
