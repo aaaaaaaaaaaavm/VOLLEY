@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **96 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
+> **97 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
 > | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **27** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CORRECTED` | **28** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
 > **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
@@ -2809,6 +2809,38 @@ same exposure, and **nothing checks it.** A regression band comparing a run shee
 figures against its script's current output would catch the whole class; A38 band 1 caught this one
 by being pointed at it deliberately. **Recorded rather than built**, alongside the cross-repository
 manuscript check **P58** names and the same tool does not exist for either.
+
+### P62. The published wiki drifted sixteen days and four corrections behind its own source: MEDIUM, NEW 2026-08-14
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+`wiki/Home.md` is tracked here and is corrected by every propagation this project runs. **The live
+wiki is a different git repository** — `VOLLEY.wiki.git` — that nothing here writes to, and
+**nothing anywhere said so.**
+
+On 2026-08-14 the live page had not been touched since **2026-07-30**. It still named the project
+*emocd*, still quoted a **20.37 m/s** headline from before the CAD sled reconciliation, still
+reported a **×1.62** lifetime multiplier from before the depth-resolved thrust constant, and still
+made the phase-spacing claim withdrawn the same week as **P56** — **a claim shown to be false, on
+the most public surface this project has.**
+
+**Two charts on it were worse than the prose.** The energy split carried the pre-correction values,
+and the conjunction chart plotted **20.00–21.00 m/s**, a velocity regime three corrections out of
+date. Both are recomputed at the current point, and the conjunction chart gained the caption it
+needed: a 2.5 % change in velocity moves the minimum approach from **42.2 km to 9.3**, which is why
+this project quotes the realignment period as the robust quantity.
+
+**This is P58 and P61's class.** Every check here walks tracked files; the wiki is tracked, so it
+was corrected. **It is published across a repository boundary no check can see.**
+
+**Corrected.** `tools/publish_wiki.sh` publishes the source and `--dry-run` shows the delta first;
+`wiki/README.md` states that committing `Home.md` changes nothing a reader sees until it is
+published. **The publish itself is not done** — GitHub does not expose wiki content through its
+API and this environment's git proxy will not credential a `.wiki` repository, so it needs an
+ordinary checkout.
+
+**And the honest disposition of the surface itself.** The wiki is **the least trustworthy thing
+this project publishes**, because it is the only one that can be stale without anything failing.
+The page says the repository is authoritative; it now also says so where it can be checked.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

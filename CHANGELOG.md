@@ -9,6 +9,26 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (forty-first pass): the surfaces outside this repository, and the wiki that drifted
+
+| ID | Item | Detail |
+|---|---|---|
+| **FRONT-01** | **The front page pointed at a superseded document as the design target** | It read *"Next: `GEN6_ARCHITECTURE.md` is the design target main is working toward."* That file was superseded the same day and carries a notice saying so — **and the front door still sent readers to it.** |
+| **PROFILE-01** | **The profile card carried a claim withdrawn the same week** | The public front page of everything quoted the pre-correction operating point (16.388 m/s, 2.85 kJ) **and the phase-spacing claim P56 shows is false.** It now leads with orbit change and says the design target moved, with the 11 % / 28 % attribution that moved it. |
+| SPIN-01 | **`pulsed-linear-motor-design-lab`: the reference case moved, and the band held** | K_t 11.025833 → 10.538611, force 1389.255 → 1327.865 N, input 2850.895 → 2782.391 J. The standalone screen returns **16.024 m/s against VOLLEY's 16.029** — 0.005 inside a 0.01 band declared long before, against 0.003 at the old point. **The band was not widened**, and an independent check surviving a baseline change is worth more than the agreement itself. |
+| SPIN-02 | **`orbital-deployment-trade-study`: a boundary it did not have** | Its central question is phase accumulated from a mean-motion difference, which it computes correctly and which **is the wrong comparator for a deployment product**. Recorded there with P56's numbers. **Nothing withdrawn** — what changed is which of its four questions carries the value. |
+| SPIN-03 | **`engineering-evidence-toolkit`: nothing wrong, one thing unsaid** | Its `reference/volley/` already named its source commit. It now says it is **a dated snapshot, not a mirror**, so stale figures inside it read as deliberate rather than as drift. |
+| **P62** | **The published wiki was sixteen days and four corrections behind its own source** | `wiki/Home.md` is tracked and corrected by every propagation here. **The live wiki is a different repository that nothing writes to, and nothing said so.** It still named the project *emocd*, quoted **20.37 m/s**, reported **×1.62**, and made the withdrawn phase claim — **on the most public surface this project has.** |
+| CHART-01 | **Two charts were worse than the prose** | The energy split carried pre-correction values. The conjunction chart plotted **20.00–21.00 m/s**, three corrections out of date. Both recomputed; the conjunction chart gained the caption it needed — a 2.5 % velocity change moves the minimum approach from **42.2 km to 9.3**, which is why the realignment period is the robust quantity. |
+| TOOL-01 | **`tools/publish_wiki.sh` and `wiki/README.md`** | The publish step exists now, with `--dry-run`, and the source states that committing `Home.md` changes nothing a reader sees. **The publish itself is not done**: GitHub does not expose wiki content through its API and this environment will not credential a `.wiki` repository. |
+| CLASS-01 | **All three are one class, and it now has three members** | **P58** — two authored manuscripts in two repositories forked. **P61** — a run sheet drifted from its own script. **P62** — a page published across a repository boundary. Every check here walks tracked files, and **none can see across a boundary.** |
+
+**What authorised it.** A question about whether the front pages were updated. They were not. **No
+band was edited, widened or moved**, and the one band affected by a corrected reference case — the
+motor lab's 0.01 m/s regression — held at the new point without being touched. All four checks pass.
+
+---
+
 ## 2026-08-14 (fortieth pass): ADR-032, and the nine vault entries it deletes the subject of
 
 | ID | Item | Detail |
