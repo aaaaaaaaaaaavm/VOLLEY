@@ -31,6 +31,21 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # (artifact, [sources]) -- the artifact must not predate any of its sources.
+#
+# REGENERATORS. Commit time is a proxy for currency and it is a lossy one: a source can change
+# in a way the artifact does not depend on, and the artifact then stays byte-identical and
+# permanently "stale". That is not hypothetical -- cad/parameters.json gained gen6_drive and
+# gen6_store on 2026-08-14, and Gen5's STEP was reported stale against it while regenerating
+# BYTE-IDENTICALLY. A false positive in a check is a defect in the check.
+#
+# Where an artifact can be rebuilt cheaply and deterministically, name the command. A pair that
+# looks stale by time is then REBUILT and compared: if nothing changes, it was current and the
+# timestamp was lying. Artifacts with no regenerator fall back to the time comparison.
+REGENERATORS = {
+    "cad/step/gen5/VOLLEY_Track_Gen5.step": ["python3", "cad/build_gen5.py"],
+    "cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step": ["python3", "cad/build_gen6.py"],
+}
+
 PAIRS = [
     # The manuscript, the .cls, the built PDF and the CV moved to VOLLEY-paper on
     # 2026-08-13 (ADR-028). They are authored there and are not artifacts of this
@@ -84,13 +99,35 @@ def last_commit_time(path):
     return int(out) if out else None
 
 
+def _regenerates_identically(artifact):
+    """Rebuild `artifact` and report whether it came back unchanged.
+
+    Returns False when there is no regenerator, when the build fails, or when the file
+    genuinely moved -- all three mean the time comparison should stand.
+    """
+    cmd = REGENERATORS.get(artifact)
+    if not cmd:
+        return False
+    path = os.path.join(ROOT, artifact)
+    try:
+        with open(path, "rb") as fh:
+            before = fh.read()
+        r = subprocess.run(cmd, cwd=ROOT, capture_output=True, timeout=900)
+        if r.returncode != 0:
+            return False
+        with open(path, "rb") as fh:
+            return fh.read() == before
+    except Exception:
+        return False
+
+
 def main():
     dirty = subprocess.run(["git", "-C", ROOT, "status", "--porcelain"],
                            capture_output=True, text=True).stdout.strip()
     if dirty:
         print("note: working tree is dirty, so this compares committed state only.\n")
 
-    stale, missing, ok = [], [], 0
+    stale, missing, proven, ok = [], [], [], 0
     for artifact, sources in PAIRS:
         if not os.path.exists(os.path.join(ROOT, artifact)):
             missing.append(artifact)
@@ -105,8 +142,15 @@ def main():
                 continue
             if a_time < s_time:
                 behind = (s_time - a_time) / 3600.0
-                stale.append((artifact, src, behind))
+                if _regenerates_identically(artifact):
+                    proven.append((artifact, src))
+                else:
+                    stale.append((artifact, src, behind))
         ok += 1
+
+    for artifact, src in proven:
+        print(f"CURRENT  {artifact}")
+        print(f"         older than {src} by commit time, but rebuilds byte-identically")
 
     for artifact, src, behind in stale:
         print(f"STALE  {artifact}")
