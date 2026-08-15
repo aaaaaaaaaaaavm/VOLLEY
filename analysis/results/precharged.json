@@ -1,0 +1,247 @@
+{
+  "analysis": "A41",
+  "bands_declared_commit": "3d61bab",
+  "note": "ideal gas, adiabatic closed expansion, vented residual. No gas recovery, no temperature effect on charge, no fill-time check against the indexing window, no valve/seal/fill-circuit design, A34 release residual unchecked. Every omission is optimistic.",
+  "p_charge_max_Pa": 4999999.999999999,
+  "constant_pressure_ceiling_J": 2138.5800000000004,
+  "budget_kg": 12.55,
+  "sweep": [
+    {
+      "chamber_kg": 0.23762496362980276,
+      "reservoir_l": 1.4999999999999998,
+      "vessel_kg": 0.2038735983690112,
+      "gas_kg": 0.3525,
+      "hardware_kg": 1.5,
+      "total_kg": 2.293998561998814,
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 0.5,
+      "work_J": 1369.0765060196904,
+      "v_exit": 26.16368194673382,
+      "a_peak_g": 25.0,
+      "charge_barL": 24.999999999999996
+    },
+    {
+      "chamber_kg": 0.4680000000000001,
+      "reservoir_l": 2.9999999999999996,
+      "vessel_kg": 0.4077471967380224,
+      "gas_kg": 0.705,
+      "hardware_kg": 1.5,
+      "total_kg": 3.0807471967380224,
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 1.0,
+      "work_J": 1659.4009383571931,
+      "v_exit": 28.804521679392572,
+      "a_peak_g": 25.0,
+      "charge_barL": 49.99999999999999
+    },
+    {
+      "chamber_kg": 0.936,
+      "reservoir_l": 5.999999999999999,
+      "vessel_kg": 0.8154943934760448,
+      "gas_kg": 1.41,
+      "hardware_kg": 1.5,
+      "total_kg": 4.661494393476045,
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 2.0,
+      "work_J": 1864.8214972796507,
+      "v_exit": 30.535401563428398,
+      "a_peak_g": 25.0,
+      "charge_barL": 99.99999999999999
+    },
+    {
+      "chamber_kg": 1.872000000000001,
+      "reservoir_l": 11.999999999999998,
+      "vessel_kg": 1.6309887869520896,
+      "gas_kg": 2.82,
+      "hardware_kg": 1.5,
+      "total_kg": 7.82298878695209,
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 4.0,
+      "work_J": 1991.0621067281086,
+      "v_exit": 31.552037230011855,
+      "a_peak_g": 25.0,
+      "charge_barL": 199.99999999999997
+    },
+    {
+      "chamber_kg": 3.7440000000000007,
+      "reservoir_l": 23.999999999999996,
+      "vessel_kg": 3.261977573904179,
+      "gas_kg": 5.64,
+      "hardware_kg": 1.5,
+      "total_kg": 14.14597757390418,
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 8.0,
+      "work_J": 2061.818031974483,
+      "v_exit": 32.107771893845914,
+      "a_peak_g": 25.0,
+      "charge_barL": 399.99999999999994
+    },
+    {
+      "chamber_kg": 7.488,
+      "reservoir_l": 47.99999999999999,
+      "vessel_kg": 6.523955147808358,
+      "gas_kg": 11.28,
+      "hardware_kg": 1.5,
+      "total_kg": 26.79195514780836,
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 16.0,
+      "work_J": 2099.398485873505,
+      "v_exit": 32.39906237743235,
+      "a_peak_g": 25.0,
+      "charge_barL": 799.9999999999999
+    },
+    {
+      "chamber_kg": 14.975999999999999,
+      "reservoir_l": 95.99999999999999,
+      "vessel_kg": 13.047910295616717,
+      "gas_kg": 22.56,
+      "hardware_kg": 1.5,
+      "total_kg": 52.08391029561672,
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 32.0,
+      "work_J": 2118.782384177864,
+      "v_exit": 32.54829015615002,
+      "a_peak_g": 25.0,
+      "charge_barL": 1599.9999999999998
+    },
+    {
+      "chamber_kg": 29.952000000000005,
+      "reservoir_l": 191.99999999999997,
+      "vessel_kg": 26.095820591233434,
+      "gas_kg": 45.12,
+      "hardware_kg": 1.5,
+      "total_kg": 102.66782059123344,
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 64.0,
+      "work_J": 2128.6286022772492,
+      "v_exit": 32.6238302646796,
+      "a_peak_g": 25.0,
+      "charge_barL": 3199.9999999999995
+    }
+  ],
+  "selected": {
+    "chamber_kg": 0.936,
+    "reservoir_l": 5.999999999999999,
+    "vessel_kg": 0.8154943934760448,
+    "gas_kg": 1.41,
+    "hardware_kg": 1.5,
+    "total_kg": 4.661494393476045,
+    "p0_bar": 49.99999999999999,
+    "chamber_l": 2.0,
+    "work_J": 1864.8214972796507,
+    "v_exit": 30.535401563428398,
+    "a_peak_g": 25.0,
+    "charge_barL": 99.99999999999999
+  },
+  "command_sweep": [
+    {
+      "p0_bar": 14.999999999999998,
+      "chamber_l": 2.0,
+      "work_J": 559.4464491838953,
+      "v_exit": 16.72492823876825,
+      "a_peak_g": 7.5,
+      "charge_barL": 29.999999999999996
+    },
+    {
+      "p0_bar": 19.999999999999996,
+      "chamber_l": 2.0,
+      "work_J": 745.9285989118604,
+      "v_exit": 19.312283641660045,
+      "a_peak_g": 9.999999999999998,
+      "charge_barL": 39.99999999999999
+    },
+    {
+      "p0_bar": 24.999999999999996,
+      "chamber_l": 2.0,
+      "work_J": 932.4107486398253,
+      "v_exit": 21.591789511754524,
+      "a_peak_g": 12.5,
+      "charge_barL": 49.99999999999999
+    },
+    {
+      "p0_bar": 29.999999999999996,
+      "chamber_l": 2.0,
+      "work_J": 1118.8928983677906,
+      "v_exit": 23.65262034498282,
+      "a_peak_g": 15.0,
+      "charge_barL": 59.99999999999999
+    },
+    {
+      "p0_bar": 34.99999999999999,
+      "chamber_l": 2.0,
+      "work_J": 1305.3750480957553,
+      "v_exit": 25.547749882286652,
+      "a_peak_g": 17.499999999999996,
+      "charge_barL": 69.99999999999999
+    },
+    {
+      "p0_bar": 42.49999999999999,
+      "chamber_l": 2.0,
+      "work_J": 1585.098272687703,
+      "v_exit": 28.152249223531882,
+      "a_peak_g": 21.249999999999996,
+      "charge_barL": 84.99999999999999
+    },
+    {
+      "p0_bar": 49.99999999999999,
+      "chamber_l": 2.0,
+      "work_J": 1864.8214972796507,
+      "v_exit": 30.535401563428398,
+      "a_peak_g": 25.0,
+      "charge_barL": 99.99999999999999
+    }
+  ],
+  "precision_pct_per_pct": 0.49875621120890273,
+  "leak_allow_mbarL_s": 0.8333333333333333,
+  "friction_allow_N": 83.40371375447981,
+  "bands": [
+    {
+      "band": "1",
+      "name": "large-chamber limit approaches p0*A*L within 1 %",
+      "detail": "2139 against 2139 J",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "selected point >= 30 m/s at <= 25 g",
+      "detail": "30.54 m/s at 25.00 g",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "total store <= 12.55 kg",
+      "detail": "4.66 kg",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "the twelve-shot reservoir keeps band 3",
+      "detail": "6.0 L, 1.41 kg of gas",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "charge pressure spans 20 -> 30 m/s monotonically",
+      "detail": "16.7 -> 30.5 m/s, monotonic True",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "+/-1 % charge pressure gives <= 1 % velocity error",
+      "detail": "0.499 %",
+      "pass_": true
+    },
+    {
+      "band": "7",
+      "name": "permissible leak >= 1e-4 mbar.L/s (the prediction)",
+      "detail": "0.8333 mbar.L/s",
+      "pass_": true
+    },
+    {
+      "band": "8",
+      "name": "friction budget >= 20 N for <= 5 % velocity loss",
+      "detail": "83.4 N",
+      "pass_": true
+    }
+  ]
+}

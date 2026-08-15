@@ -70,6 +70,27 @@ actuator, so re-arming is a valve. **The spring's problem was never storing the 
 > pressure is held, and the repair this points at is a **pre-charged chamber** fired as a closed
 > expansion, which removes the flow-rate question entirely and commands velocity by charge pressure.
 > **That is a different machine and it needs its own bands.**
+>
+> ### Resolved the same day by A41, and the store is now specified
+>
+> **[A41](../../validation/A41_precharged_chamber.md), eight of eight bands.** A **2 litre chamber
+> at 50 bar**, charged over the indexing window and fired as a closed adiabatic expansion, gives
+> **30.54 m/s at 25 g on a 4.66 kg store** — against A39's regulated 2.98 kg estimate and A40's
+> fixed-orifice 14.16 m/s.
+>
+> **There is no regulator.** P63 is closed by deleting the component rather than pricing it.
+>
+> | | |
+> |---|---:|
+> | Chamber / charge | **2 L at 50 bar** |
+> | Reservoir | 6 L at 200 bar, 1.41 kg of gas |
+> | Store total | **4.66 kg** |
+> | **Added mass per satellite** | **1.343 kg**, against A37's 1.608 and a 2.0 threshold |
+> | Velocity precision | **0.499 % per 1 % of charge**, against valve timing at 10.53 % per ms |
+>
+> **The expansion ratio is the binding variable, not the pressure.** Velocity saturates toward a
+> 2139 J constant-pressure ceiling while gas grows linearly with chamber volume, so 2 L → 4 L buys
+> 1.0 m/s and costs 3.2 kg.
 
 **A fluid system nobody has sized.** Filling a 0.43 litre swept volume in a **133 ms** stroke is
 roughly **3 L/s** through a regulator. A39 models none of it. **Gas removes a mass problem and
@@ -122,10 +143,11 @@ the moat, and BOLLEY is the evidence for that rather than the alternative to it.
 
 1. **The 43.33 kg stage credit is optimistic by more than 30 %.** Then added mass per satellite
    exceeds 2.0 kg and A37 band 5 fails retrospectively.
-2. **The blowdown transient needs a regulator that weighs more than the store it feeds.** A39's
-   selected total is 2.98 kg and its hardware allowance is 1.5 kg of that. **A40 has moved this
-   from a falsifier to an open defect (P63):** the unregulated version is measured and does not
-   work, so the regulator is required rather than merely possible.
+2. ~~**The blowdown transient needs a regulator that weighs more than the store it feeds.**~~
+   **Retired 2026-08-14 by A41.** There is no regulator: a pre-charged chamber removes the
+   flow-rate problem by construction. The store is **4.66 kg**, not the 2.98 A39 estimated, and it
+   still fits. **Replaced by a narrower falsifier:** *a 2 L chamber cannot be filled to 50 bar
+   inside the inter-shot window*, which A41 did not check.
 3. **No launch provider will keep a stage alive past passivation** on terms that do not require
    spending its disposal propellant.
 4. **The unread voice-coil deployer (P57)** already claims the programmable-velocity result on a

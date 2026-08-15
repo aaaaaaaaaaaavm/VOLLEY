@@ -9,6 +9,24 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (forty-third pass): the store is specified, and three predictions in a row were wrong
+
+| ID | Item | Detail |
+|---|---|---|
+| **A41** | **Eight of eight bands. Gen6's energy store is specified** | A **2 litre chamber at 50 bar**, charged over the sixty seconds already spent indexing and fired as a closed adiabatic expansion. **30.54 m/s at 25 g on a 4.66 kg store.** |
+| **P63** | **Closed by deleting the component rather than pricing it** | A40 showed the fixed orifice fails and A39's 2.98 kg assumed an unnamed regulator. **There is no regulator.** A pre-charged chamber has no flow-rate problem by construction. |
+| MASS-02 | **Added mass per satellite improves while velocity rises** | **1.343 kg** against A37's 1.608, at **30.54 m/s** against 27.1 — because A37's selected point was the large stage class and this needs only 2.18 m of stroke. Threshold unmoved at 2.0 kg; dry mass per satellite still crosses at 7.042. |
+| **PRECISION-01** | **The precision argument finally lands on a mechanism** | Charge pressure gives **0.499 % of velocity per 1 %**, and it is a **static** measurement taken before the shot. A40 measured valve timing at **10.53 % per ms**. Commanding on the charge stroke is ~21× more precise than commanding during it. |
+| RATIO-01 | **The expansion ratio is the binding variable, not the pressure** | Velocity saturates toward a **2139 J** constant-pressure ceiling — exactly A39's assumption — while gas grows linearly with chamber volume. **2 L → 4 L buys 1.0 m/s and costs 3.2 kg.** |
+| **PRED-02** | **Three predictions, three wrong, on a run where every band passed** | The **seal** was predicted to bite: tolerance is **0.83 mbar·L/s** against static seals at 10⁻⁶, wrong by four orders. Refined to **friction**: tolerance **83.4 N**, wrong by 4×. Then **the gas budget**: **4.66 kg** against a 12.55 budget, wrong by 2.7×. The first two were caught and corrected **before** declaring; the third was declared in confidence and failed. |
+| HONEST-02 | **And that is the pattern, stated rather than buried** | Every intuition about what would bite has been wrong since A35, and every band has caught it. **It is an argument for declaring bands, not for trusting the person declaring them.** |
+| ADR-02 | **ADR-032's second falsifier retired and replaced with a narrower one** | Not *"the regulator weighs more than the store"* — there is none. Now: *"a 2 L chamber cannot be filled to 50 bar inside the inter-shot window"*, which **A41 did not check** and A42 should ask first. |
+
+**What authorised it.** P63, and A40's third named repair. **No band was edited, widened or moved**;
+A41's eight were committed before `analysis/precharged.py` existed. All four checks pass.
+
+---
+
 ## 2026-08-14 (forty-second pass): the gas does not arrive in time, and A39 assumed a regulator
 
 | ID | Item | Detail |

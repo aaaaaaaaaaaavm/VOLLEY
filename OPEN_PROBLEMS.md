@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **98 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
+> **98 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **40** (19 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **28** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **29** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
 > **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
@@ -2842,8 +2842,18 @@ ordinary checkout.
 this project publishes**, because it is the only one that can be stale without anything failing.
 The page says the repository is authoritative; it now also says so where it can be checked.
 
-### P63. A39's gas result assumed a regulator it did not price: CRITICAL, NEW 2026-08-14
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P63. A39's gas result assumed a regulator it did not price: **CORRECTED 2026-08-14 by A41**
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+> **Corrected.** The regulator was removed rather than priced. A41 ran the third repair —
+> a chamber charged to a commanded pressure over the indexing window, fired as a closed adiabatic
+> expansion. Eight of eight bands. **A 2 L chamber at 50 bar gives 30.54 m/s at 25 g, on a 4.66 kg
+> store**, against A39's regulated estimate of 2.98 and A40's fixed-orifice **14.16 m/s**.
+> **Added mass per satellite is 1.343 kg** against A37's 1.608, at a higher velocity.
+>
+> **There is no regulator, no flow-rate problem and no valve timed to a millisecond.** Velocity is
+> commanded by charge pressure at **0.499 % per 1 %**, a static measurement taken before the shot,
+> against A40's valve timing at **10.53 % per ms**.
 
 **A40 bands 1, 3, 6, 7 and 8 missed.** [A39](validation/A39_store_trade.md) selected cold gas at
 **2.98 kg** on a quasi-static argument: swept volume times a **50 bar working pressure** equals the
@@ -2872,12 +2882,11 @@ valving" — **the largest guess in that run, and now the component the whole re
 **What survives.** One **1.71 L** bottle does run twelve shots, with **4.5 %** velocity droop
 (A40 band 5). That was the result most likely to fail on a transient and it held.
 
-**What would close it.** Any one of three, each a different machine needing its own bands: a
-**regulator**, priced rather than allowed for; a **profiled orifice** whose area tracks piston
-position, needing no fast feedback; or a **pre-charged chamber** fired as a closed adiabatic
-expansion, which removes the flow-rate problem entirely and makes velocity a function of **charge
-pressure** rather than valve timing. **The third is what the failure points at** and a first-order
-check says the expansion ratio is its binding variable, not the pressure.
+**What closed it.** The third of the three: a **pre-charged chamber**, in
+[A41](validation/A41_precharged_chamber.md). The first-order guess that the expansion ratio would
+be the binding variable was right — **velocity saturates toward the 2139 J constant-pressure
+ceiling while gas grows linearly with chamber volume**, so 2 L to 4 L buys 1.0 m/s and costs
+3.2 kg. **The regulator and the profiled orifice are not disproved, only unnecessary.**
 
 **And one band failure was a declaration error, recorded as such.** A40 band 1 assumed a wide
 orifice reproduces A39's case. It does not — it reproduces the *unregulated* 200 bar case, which is

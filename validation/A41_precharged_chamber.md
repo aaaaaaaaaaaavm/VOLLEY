@@ -95,4 +95,76 @@ optimistic.**
 
 ## Results
 
-*(Filled after the run. Nothing above this line changes.)*
+**RUN 2026-08-14. Eight of eight bands pass. All three of my predictions were wrong.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | large-chamber limit approaches p₀·A·L within 1 % | 2139 against 2139 J | **PASS** |
+| 2 | ≥ 30 m/s at ≤ 25 g | **30.54 m/s at 25.00 g** | **PASS** |
+| 3 | total store ≤ 12.55 kg | **4.66 kg** | **PASS** |
+| 4 | the twelve-shot reservoir keeps band 3 | 6.0 L, 1.41 kg of gas | **PASS** |
+| 5 | charge pressure spans 20 → 30 m/s monotonically | **16.7 → 30.5 m/s** | **PASS** |
+| 6 | ±1 % charge gives ≤ 1 % velocity error | **0.499 %** | **PASS** |
+| 7 | permissible leak ≥ 10⁻⁴ mbar·L/s | **0.83 mbar·L/s** | **PASS** |
+| 8 | friction budget ≥ 20 N | **83.4 N** | **PASS** |
+
+### The chamber sweep, and why it has an optimum
+
+| Chamber | Exit | Reservoir | Gas | **Store total** |
+|---:|---:|---:|---:|---:|
+| 0.5 L | 26.16 m/s | 1.50 L | 0.35 kg | 2.29 kg |
+| 1.0 L | 28.80 | 3.00 | 0.70 | 3.08 |
+| **2.0 L** | **30.54** | **6.00** | **1.41** | **4.66** |
+| 4.0 L | 31.55 | 12.00 | 2.82 | 7.82 |
+| 8.0 L | 32.11 | 24.00 | 5.64 | 14.15 |
+| 64.0 L | 32.62 | 192.00 | 45.12 | 102.67 |
+
+**Velocity saturates and gas does not.** The expansion flattens toward the constant-pressure
+ceiling of **2139 J — 32.7 m/s, which is exactly A39's assumption** — while the charge, and so the
+reservoir, grows linearly with chamber volume. **Doubling from 2 L to 4 L buys 1.0 m/s and costs
+3.2 kg.** The selected point is 2 L at 50 bar.
+
+### Against A39's regulator, and against A40's valve
+
+| | |
+|---|---|
+| Store mass | **4.66 kg**, against A39's regulated estimate of 2.98 |
+| Exit velocity | **30.54 m/s**, against A40's fixed-orifice 14.16 |
+| **Added mass per satellite** | **(11.45 + 4.66) / 12 = 1.343 kg** against a 2.0 kg threshold |
+| Velocity precision | **0.499 % per 1 % of charge pressure** |
+
+**A37's selected point was 1.608 kg/satellite at 27.1 m/s. This is 1.343 kg at 30.54 m/s** — better
+on both, and reached without a regulator, without a flow-rate problem and without a valve timed to
+a millisecond.
+
+**Band 6 is the argument for this architecture.** A40 measured valve timing at **10.53 % of
+velocity per millisecond**. Charge pressure gives **0.499 % per 1 %**, and it is a **static**
+measurement taken before the shot rather than a transient one during it — which is exactly the
+precision case made for moving control onto the charge stroke.
+
+### All three predictions failed, and that is the record
+
+| Predicted | Declared tolerance | Actual | |
+|---|---|---|---|
+| **The seal** would bite | ≥ 10⁻⁴ mbar·L/s | **0.83** | wrong by ~4 orders |
+| Refined: **friction** at 32 m/s | ≥ 20 N | **83.4 N** | wrong by 4× |
+| Then: **the gas budget** | ≤ 12.55 kg | **4.66 kg** | wrong by 2.7× |
+
+The seal and friction predictions were checked and corrected **before** the bands were declared,
+and are recorded in the declaration above. **The gas-budget prediction was not** — it was made in
+the declaration, in confidence, and it is wrong because it assumed the 4 L chamber rather than
+letting the sweep find the optimum. **At 4 L the store is 7.82 kg and the prediction would have
+looked much closer to right.**
+
+> **Three predictions, three failures, on a run where every band passed.** The bands were right and
+> the intuition behind them was not, three times in a row, which is the same pattern this
+> architecture has shown since A35. **It is an argument for declaring bands, not for trusting the
+> person declaring them.**
+
+### What this does not settle
+
+No chamber, valve, seal or fill circuit is designed. **Gas recovery is not modelled** — the
+residual 43 bar in the chamber is vented, and recovering it is the obvious lever if the reservoir
+ever needs to shrink. No temperature effect on charge pressure, and **no check that a 2 L chamber
+can be filled to 50 bar inside the indexing window**, which is now the first thing A42 should ask.
+A34's ≤ 1 N release residual is still unchecked against a 202 N preload.
