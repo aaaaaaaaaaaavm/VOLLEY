@@ -9,6 +9,22 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (forty-fifth pass): Gen6 exists as geometry
+
+| ID | Item | Detail |
+|---|---|---|
+| **CAD-G6** | **`cad/build_gen6.py`, generated from the same `parameters.json`** | Six parts, byte-stable across rebuilds, and every dimension is a run result rather than a choice: bore and stroke from A39, chamber from A41, reservoir from A42, cradle preload from A38. Six geometry checks read back against the parameter file and pass. |
+| PARAM-01 | **`gen6_drive` and `gen6_store` added to the parameter file** | The single source of truth now carries both generations. Gen5 regenerates **byte-identically** against the extended file, which is what a generated model is for. |
+| INHERIT-01 | **One part of six is inherited, and it is the right one** | The magazine cassette. **A36 and A37 agree from opposite directions** that the containment is the only subsystem surviving every architecture deletion — 11.45 kg of it. |
+| **HONEST-03** | **Three things it draws that are not settled, in the script's own header** | The reservoir carries **11.25 L**, the adiabatic end of **P64**, when the isothermal figure at this cadence is 7.65. **The cradle is an envelope, not a design** — A34 says the mechanism does not exist and A38 raised its preload to **201.7 N** against a ≤ 1 N release residual. And the stage rail is a straight extrusion of unknown provenance, because **no provider has agreed to anything** and A37's 43.33 kg stage credit is the least-examined number in the architecture. |
+| GUARD-01 | **`check_artifacts.py` guards Gen6 against its sources** | One STEP guards the set: they are written in a single pass or not at all, the same rule Gen5 uses. |
+
+**What authorised it.** A41 and A42 fixing the last free dimensions. **No band was edited**, no
+analysis was re-run to suit the geometry, and the geometry check reads the parameter file rather
+than restating it. All four checks pass.
+
+---
+
 ## 2026-08-14 (forty-fourth pass): filling is not the constraint, and the bottle cannot give its gas back
 
 | ID | Item | Detail |

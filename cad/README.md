@@ -1,5 +1,30 @@
 # CAD
 
+> ## Gen6 is here too, and it is a different machine
+>
+> **[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md).** The payload is accelerated
+> directly by cold gas along a rail the host stage provides — **no mover, no stator, no brake, no
+> return stroke.** `cad/build_gen6.py` generates it from the same `parameters.json`, and it is
+> byte-stable across rebuilds like Gen5.
+>
+> **Six parts, and only one of them is inherited:** the magazine cassette. A36 and A37 agree from
+> opposite directions that the containment is the only subsystem surviving every architecture
+> deletion.
+>
+> | | |
+> |---|---|
+> | Bore / stroke | 15.805 mm / 2180 mm — A39, sized on the 25 g payload cap |
+> | Chamber | 2 L at 50 bar — A41, where velocity saturates and gas does not |
+> | Reservoir | 11.25 L at 200 bar — A42, **the conservative end of P64** |
+> | Exit velocity | 30.54 m/s at 25 g |
+>
+> **Three things it draws that are not settled**, and they are in the script's own header rather
+> than only here: the reservoir carries the adiabatic figure when the isothermal one at this
+> cadence is 7.65 L; **the cradle is an envelope, not a design**, because A34 says the mechanism
+> does not exist and A38 raised its preload to 201.7 N; and the stage rail is a straight extrusion
+> of unknown provenance, because **no launch provider has agreed to anything.**
+
+
 Fusion 360 CAD for VOLLEY, across nine documents (Track, Stator, Sled, Payload_3U,
 Magazine_Cassette, Brake, Interface_ESPA, Enclosure, Assembly), in **three generations**.
 

@@ -55,6 +55,10 @@ PAIRS = [
     # enough: they are all written by the same call, so any of them being older than the
     # parameter file means the whole generation is.
     ("cad/step/gen5/VOLLEY_Track_Gen5.step", ["cad/parameters.json", "cad/build_gen5.py"]),
+    # Gen6 is generated the same way, from the same parameter file, by cad/build_gen6.py.
+    # Guarding one STEP guards the set: they are written in a single pass or not at all.
+    ("cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step",
+     ["cad/parameters.json", "cad/build_gen6.py"]),
     ("docs/BASELINE.md", ["analysis/results/motor_results.json",
                           "analysis/results/sizing.json",
                           "analysis/results/astro_results.json",
