@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **98 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
+> **99 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
+> | `LIVE` | **40** (19 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **29** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
@@ -2891,6 +2891,36 @@ ceiling while gas grows linearly with chamber volume**, so 2 L to 4 L buys 1.0 m
 **And one band failure was a declaration error, recorded as such.** A40 band 1 assumed a wide
 orifice reproduces A39's case. It does not — it reproduces the *unregulated* 200 bar case, which is
 **100 g** on this piston. The band stands as failed; what it exposed is this entry.
+
+### P64. A41's reservoir is sized on gas the bottle cannot give back: HIGH, NEW 2026-08-14
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+**A42 band 3 missed.** [A41](validation/A41_precharged_chamber.md) sized the reservoir by dividing
+total charge by storage pressure — **6 L at 200 bar for twelve 100 bar·L charges.** That assumes
+the bottle can be drawn to **zero**. It cannot: below the charge pressure it can no longer fill a
+50 bar chamber, and the last quarter of the gas is stranded.
+
+**A42 measures it running out at shot seven of twelve.**
+
+**The correction is bounded, not single-valued, and the reason is A42's own model.** It treats the
+reservoir as **adiabatic**, so it cools as it empties and loses pressure faster than mass alone
+would give. That is right for a fast blowdown and **wrong for a cadence of twenty minutes**
+([ADR-020](docs/adr/020-inter-shot-cadence.md)), where the bottle re-equilibrates between shots.
+
+| | Reservoir | Store | Added per satellite |
+|---|---:|---:|---:|
+| **Isothermal**, the cadence case | **7.65 L** | **4.67 kg** | **1.344 kg** |
+| **Adiabatic**, as modelled | **11.25 L** | **6.01 kg** | **1.455 kg** |
+
+**Band 3 fails at either end and bands 5 and 6 pass at either end**, so the architecture is not in
+doubt — **the store mass is, by about 1.3 kg**, and the truth sits nearer the isothermal figure.
+
+**What would close it.** A thermal model of the reservoir between shots, which is the only term
+separating the two columns. Failing that, **carry the adiabatic figure**, which is the conservative
+one, and say that it is.
+
+**And the cheap repair if the reservoir ever needs to shrink:** the fired chamber vents **43 bar of
+a 2 L volume every shot** and A41 models no recovery of it at all.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

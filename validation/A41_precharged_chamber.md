@@ -161,6 +161,20 @@ looked much closer to right.**
 > architecture has shown since A35. **It is an argument for declaring bands, not for trusting the
 > person declaring them.**
 
+### Corrected 2026-08-14 by A42, the same day
+
+**The 6 L reservoir above is undersized and this run's 4.66 kg store is optimistic.** A41 divided
+total charge by storage pressure, which assumes the bottle can be drawn to zero; below the charge
+pressure it cannot fill the chamber, and A42 measures it running out at **shot seven of twelve**.
+
+**The correction is bounded rather than single-valued** — **7.65 L / 4.67 kg** treating the
+reservoir as isothermal, which is right at ADR-020's twenty-minute cadence, and **11.25 L /
+6.01 kg** treating it as adiabatic, which A42 modelled. **Added mass per satellite is 1.344 to
+1.455 kg**, under the 2.0 kg threshold at either end. **P64.**
+
+**Nothing else in this run moves**: velocity, precision, chamber volume, leak and friction
+tolerances are all properties of the chamber, not of the bottle behind it.
+
 ### What this does not settle
 
 No chamber, valve, seal or fill circuit is designed. **Gas recovery is not modelled** — the

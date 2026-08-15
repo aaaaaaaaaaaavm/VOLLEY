@@ -72,4 +72,66 @@ is the obvious repair if band 3's correction ever becomes expensive.**
 
 ## Results
 
-*(Filled after the run. Nothing above this line changes.)*
+**RUN 2026-08-14. Five of six bands pass. Band 3 fails as predicted, and by more than predicted.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | first charge fills in ≤ 10 s | **4.14 s** at 1.0 mm | **PASS** |
+| 2 | orifice ≤ 5 mm | **1.0 mm** | **PASS** |
+| 3 | A41's 6 L delivers twelve charges | **fails on shot 7** | **FAIL** |
+| 4 | twelfth charge ≤ 60 s | **14.46 s** | **PASS** |
+| 5 | store with the required reservoir ≤ 12.55 kg | **6.01 kg** at 11.25 L | **PASS** |
+| 6 | added mass per satellite ≤ 2.0 kg | **1.455 kg** | **PASS** |
+
+### The fill window is not the problem
+
+**4.14 s through a 1 mm orifice**, against the 4 s index plus 6 s return already in the cadence.
+ADR-032's replacement falsifier is answered and it is not the constraint.
+
+### The bottle is
+
+| Shot | Reservoir | Fill |
+|---:|---:|---:|
+| 1 | 200.0 bar | 4.14 s |
+| 4 | 131.4 | 6.52 s |
+| 6 | 86.0 | 10.68 s |
+| **7** | **63.6** | **cannot fill** |
+
+**A41's 6 L bottle runs out at shot seven of twelve**, because it can only be drawn to the charge
+pressure. Below 50 bar it cannot fill a 50 bar chamber, and the last quarter of the gas is stranded.
+
+### The correction is smaller than this run reports, and the reason is my model
+
+**The reservoir is modelled as adiabatic**, so it cools as it empties and its pressure falls faster
+than mass alone would give. **That is right for a fast blowdown and wrong for this cadence** —
+[ADR-020](../docs/adr/020-inter-shot-cadence.md) puts twenty minutes between shots, ample for a
+bottle to re-equilibrate with its surroundings.
+
+**So the answer is bounded rather than single-valued:**
+
+| | Reservoir | Store | Added per satellite |
+|---|---:|---:|---:|
+| **Isothermal** — the 1200 s cadence case | **7.65 L** | **4.67 kg** | **1.344 kg** |
+| **Adiabatic** — what this run modelled | **11.25 L** | **6.01 kg** | **1.455 kg** |
+
+**Band 3 fails either way**, since 6 L is short of both. **Bands 5 and 6 pass either way.** What is
+model-dependent is the size of the correction, not its direction, and **the truth sits nearer the
+isothermal end** at this cadence. Recorded as **P64**.
+
+### The prediction, and this one held
+
+Written in the declaration: *band 3 fails and everything else passes; fill is roughly 4 s at 1 mm;
+the correction is 6 L → 8 L.* **Fill was 4.14 s, band 3 failed alone, and the isothermal correction
+is 7.65 L.** The adiabatic figure of 11.25 L is outside what was predicted, and the reason is the
+thermal assumption rather than the arithmetic.
+
+**Four predictions this session, one right.** It is the first that was checked with a calculation
+before being written down.
+
+## What this run does not do
+
+Unchanged from the declaration, and now with one addition that matters: **no thermal model of the
+reservoir between shots**, which is exactly the term that separates 7.65 L from 11.25. No fill
+valve, line or manifold; no heat of compression in the chamber; and **no gas recovery from the
+fired chamber**, which vents 43 bar of a 2 L volume every shot and is the obvious repair if the
+reservoir ever needs to shrink.

@@ -147,7 +147,10 @@ the moat, and BOLLEY is the evidence for that rather than the alternative to it.
    **Retired 2026-08-14 by A41.** There is no regulator: a pre-charged chamber removes the
    flow-rate problem by construction. The store is **4.66 kg**, not the 2.98 A39 estimated, and it
    still fits. **Replaced by a narrower falsifier:** *a 2 L chamber cannot be filled to 50 bar
-   inside the inter-shot window*, which A41 did not check.
+   inside the inter-shot window*, which A41 did not check. **A42 answered it: 4.14 s through a
+   1 mm orifice, against a 10 s window. Not the constraint.** What A42 found instead is that
+   A41's reservoir is sized on gas the bottle cannot give back — **P64**, a store correction of
+   about 1.3 kg that leaves added mass per satellite at 1.34–1.46 kg.
 3. **No launch provider will keep a stage alive past passivation** on terms that do not require
    spending its disposal propellant.
 4. **The unread voice-coil deployer (P57)** already claims the programmable-velocity result on a

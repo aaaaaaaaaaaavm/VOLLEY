@@ -1,0 +1,169 @@
+{
+  "analysis": "A42",
+  "bands_declared_commit": "9c5c6e2",
+  "note": "choked isentropic flow, ideal gas, adiabatic reservoir. No line losses, valve dynamics, heat of compression, reservoir cooling across a sequence, or gas recovery from the fired chamber.",
+  "charge_kg": 0.11230907457322552,
+  "orifice_mm": 1.0,
+  "reservoir_a41_l": 6.0,
+  "reservoir_required_l": 11.250000000000005,
+  "store_a41_kg": 4.0636943934760446,
+  "store_required_kg": 6.011001987767586,
+  "added_kg_per_satellite": 1.455083498980632,
+  "sequence_a41": [
+    {
+      "shot": 1,
+      "p_res_bar": 200.0,
+      "fill_s": 4.138300000003694,
+      "p_res_end_bar": 177.0618524581459
+    },
+    {
+      "shot": 2,
+      "p_res_bar": 177.0618524581459,
+      "fill_s": 4.712900000002355,
+      "p_res_end_bar": 154.17631025324505
+    },
+    {
+      "shot": 3,
+      "p_res_bar": 154.17631025324505,
+      "fill_s": 5.471100000000588,
+      "p_res_end_bar": 131.35859944870754
+    },
+    {
+      "shot": 4,
+      "p_res_bar": 131.35859944870754,
+      "fill_s": 6.516599999998151,
+      "p_res_end_bar": 108.63299066218201
+    },
+    {
+      "shot": 5,
+      "p_res_bar": 108.63299066218201,
+      "fill_s": 8.050699999994576,
+      "p_res_end_bar": 86.03888726390485
+    },
+    {
+      "shot": 6,
+      "p_res_bar": 86.03888726390485,
+      "fill_s": 10.68329999998844,
+      "p_res_end_bar": 63.647533275702216
+    },
+    {
+      "shot": 7,
+      "p_res_bar": 63.647533275702216,
+      "fill_s": null,
+      "p_res_end_bar": 44.07654990400402
+    }
+  ],
+  "sequence_required": [
+    {
+      "shot": 1,
+      "p_res_bar": 200.0,
+      "fill_s": 4.020400000003969,
+      "p_res_end_bar": 187.66709489220744
+    },
+    {
+      "shot": 2,
+      "p_res_bar": 187.66709489220744,
+      "fill_s": 4.293800000003332,
+      "p_res_end_bar": 175.34147704587195
+    },
+    {
+      "shot": 3,
+      "p_res_bar": 175.34147704587195,
+      "fill_s": 4.606800000002602,
+      "p_res_end_bar": 163.02444848149972
+    },
+    {
+      "shot": 4,
+      "p_res_bar": 163.02444848149972,
+      "fill_s": 4.9688000000017585,
+      "p_res_end_bar": 150.71721873020232
+    },
+    {
+      "shot": 5,
+      "p_res_bar": 150.71721873020232,
+      "fill_s": 5.3923000000007715,
+      "p_res_end_bar": 138.42116871196575
+    },
+    {
+      "shot": 6,
+      "p_res_bar": 138.42116871196575,
+      "fill_s": 5.894099999999602,
+      "p_res_end_bar": 126.13858189264069
+    },
+    {
+      "shot": 7,
+      "p_res_bar": 126.13858189264069,
+      "fill_s": 6.498299999998194,
+      "p_res_end_bar": 113.87189807294202
+    },
+    {
+      "shot": 8,
+      "p_res_bar": 113.87189807294202,
+      "fill_s": 7.239399999996467,
+      "p_res_end_bar": 101.62475607386449
+    },
+    {
+      "shot": 9,
+      "p_res_bar": 101.62475607386449,
+      "fill_s": 8.170099999994298,
+      "p_res_end_bar": 89.40182595258649
+    },
+    {
+      "shot": 10,
+      "p_res_bar": 89.40182595258649,
+      "fill_s": 9.389499999991456,
+      "p_res_end_bar": 77.20989071116576
+    },
+    {
+      "shot": 11,
+      "p_res_bar": 77.20989071116576,
+      "fill_s": 11.140399999987375,
+      "p_res_end_bar": 65.05887469442311
+    },
+    {
+      "shot": 12,
+      "p_res_bar": 65.05887469442311,
+      "fill_s": 14.456599999979646,
+      "p_res_end_bar": 52.964306669837825
+    }
+  ],
+  "failed_on_shot": 7,
+  "bands": [
+    {
+      "band": "1",
+      "name": "first charge fills in <= 10 s",
+      "detail": "4.14 s at 1.0 mm",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "fill orifice <= 5 mm",
+      "detail": "1.0 mm",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "A41's 6 L reservoir delivers twelve full charges",
+      "detail": "fails on shot 7",
+      "pass_": false
+    },
+    {
+      "band": "4",
+      "name": "twelfth charge fills in <= 60 s, inside the 1200 s cadence",
+      "detail": "14.46 s",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "store with the required reservoir <= 12.55 kg",
+      "detail": "6.01 kg at 11.25 L",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "added mass per satellite <= 2.0 kg",
+      "detail": "1.455 kg",
+      "pass_": true
+    }
+  ]
+}

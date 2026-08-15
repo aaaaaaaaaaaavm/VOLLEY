@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (forty-fourth pass): filling is not the constraint, and the bottle cannot give its gas back
+
+| ID | Item | Detail |
+|---|---|---|
+| **A42** | **Five of six bands. ADR-032's replacement falsifier is answered** | *Can a 2 L chamber be filled to 50 bar inside the inter-shot window?* **Yes — 4.14 s through a 1 mm orifice**, against the 4 s index plus 6 s return already in the cadence. Filling is not the constraint. |
+| **P64** | **A41's reservoir is sized on gas the bottle cannot give back** | A41 divided total charge by storage pressure, which assumes the bottle can be drawn to **zero**. Below the charge pressure it cannot fill a 50 bar chamber. **A42 measures it running out at shot seven of twelve.** |
+| BOUND-01 | **The correction is bounded, not single-valued, and the reason is A42's own model** | It treats the reservoir as **adiabatic**, so it cools as it empties — right for a fast blowdown, **wrong for a twenty-minute cadence** where the bottle re-equilibrates. **Isothermal 7.65 L / 4.67 kg; adiabatic 11.25 L / 6.01 kg.** Band 3 fails at either end and bands 5 and 6 pass at either end, so the architecture is not in doubt — **the store mass is, by about 1.3 kg.** |
+| MASS-03 | **Added mass per satellite, corrected** | **1.344 to 1.455 kg** against an unmoved 2.0 kg threshold, from A41's optimistic 1.343. Dry mass per satellite still crosses at 7.042 and both are still reported together. |
+| **PRED-03** | **The first prediction this session that held** | Declared before the run: *band 3 fails, everything else passes, fill is roughly 4 s at 1 mm, the correction is 6 L → 8 L.* Fill was **4.14 s**, band 3 failed alone, and the isothermal correction is **7.65 L**. **It is also the first that was checked with a calculation before being written down** — three of the four wrong ones were intuitions. |
+| REPAIR-02 | **And the cheap repair is already visible** | The fired chamber vents **43 bar of a 2 L volume every shot** and nothing models recovering it. That is where the reservoir shrinks if it ever needs to. |
+
+**What authorised it.** ADR-032's own replacement falsifier, and a second question found while
+scoping it. **No band was edited, widened or moved**; A42's six were committed before
+`analysis/fill_window.py` existed, and **band 3 was deliberately declared at A41's 6 L rather than
+at the 8 L the scoping arithmetic gave**, because a band restated to match a number already
+computed tests nothing. All four checks pass.
+
+---
+
 ## 2026-08-14 (forty-third pass): the store is specified, and three predictions in a row were wrong
 
 | ID | Item | Detail |
