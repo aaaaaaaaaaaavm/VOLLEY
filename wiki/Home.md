@@ -28,6 +28,30 @@ the magnets ride the sled, not the payload.
 The target regime is the gap between spring deployers (~2 m/s) and propulsive orbital
 transfer vehicles (hundreds of m/s).
 
+### The design target moved on 2026-08-14
+
+Everything on this page describes **Gen5**, which is the measured baseline and the record of what
+a self-contained deployer costs.
+[ADR-032](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/adr/032-gen6-stage-integrated-gas-store.md)
+set a different target: **the payload accelerated directly, by cold gas, along a rail a spent
+upper stage provides.** No mover, no pulse-power chain, no brake, no return stroke.
+
+| | Gen5 | Gen6 |
+|---|---|---|
+| What moves | 9.445 kg sled + payload | **payload only** |
+| Energy | supercapacitor bank, ~17 kW for 162 ms | **one 1.71 L gas bottle for twelve shots** |
+| Structure | 84.5 kg of deployer | **the spent stage** |
+| Added hardware | — | **11.45 kg containment + ~3 kg store** |
+
+Five runs built it, and none set out to: **A35** attributed every kilogram to the requirement
+causing it and found **49.23 kg survives every requirement deletion in all 64 corners**; **A36**
+closed the manifest route; **A37** made the stage the machine; **A38** showed tip-off does not
+bind; **A39** replaced the spring with gas.
+
+**Nothing in Gen6 is measured.** Its fluid system is unsized, its cradle mechanism does not exist,
+and no launch provider has agreed to lend a stage — which is why the manuscript and this page
+still describe Gen5.
+
 <table>
 <tr>
 <td width="50%"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/hero_open.png" alt="Interior"><br><sub><b>Interior.</b> Track, stator, sled, cassette. The payload leaves along the track axis.</sub></td>
@@ -72,10 +96,12 @@ flowchart LR
 | | |
 |---|---|
 | TRL | 2-3 |
-| Analysis | 6 Python scripts, reproducible, outputs committed as JSON |
-| CAD | 9 Fusion 360 documents in 3 generations, Gen3 current, STEP exports committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
-| FEA | magnetostatic (A1) and structural (A4) have run; no 3-D solve |
-| Hardware | none. Nothing here has been built, fired or measured |
+| Analysis | 40 Python scripts, reproducible, outputs committed as JSON |
+| Validation | 39 analyses, each with its acceptance bands declared **before** its script existed |
+| Register | 96 numbered entries, 39 live, including the ones that damage the work's own claims |
+| CAD | script-generated from `cad/parameters.json`, Gen5 current, STEP and STL committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
+| FEA | magnetostatic 2-D (A1) and 3-D (A2), structural (A4), CFD (A29) |
+| Hardware | **none. Nothing here has been built, fired or measured** |
 | Independent review | none |
 
 ## Headline results
@@ -121,21 +147,26 @@ is single-sourced and correspondingly weaker.
 ```mermaid
 pie showData
     title Energy per shot (J), net of regeneration
-    "Sled KE to the eddy brake" : 952
-    "Payload KE, the useful output" : 547
-    "Copper loss, shot + regen" : 843
-    "Converter loss" : 113
-    "Bank ESR loss" : 94
-    "Auxiliary" : 35
+    "Sled KE to the eddy brake" : 1162
+    "Payload KE, the useful output" : 514
+    "Copper loss, shot + regen" : 855
+    "Bank ESR loss" : 78
+    "Converter loss" : 3
 ```
 
 ```mermaid
 xychart-beta
     title "Minimum approach vs ejection velocity - not a robust quantity"
-    x-axis "Ejection velocity (m/s)" [20.00, 20.37, 20.50, 20.65, 21.00]
+    x-axis "Ejection velocity (m/s)" [15.63, 15.87, 16.03, 16.19, 16.43]
     y-axis "Minimum approach (km)" 0 --> 70
-    line [37.5, 4.6, 56.1, 45.3, 63.4]
+    line [21.4, 34.2, 42.2, 50.1, 9.3]
 ```
+
+**Read the chart above as the caption says.** A 2.5 % change in ejection velocity moves the
+minimum approach from 42.2 km to 9.3 km, which is why this project quotes the **phase realignment
+period** as the robust quantity and treats the minimum as a near-resonant beat sample. Recomputed
+2026-08-14 at the corrected operating point; it previously plotted a velocity regime three
+corrections out of date.
 
 Full set, including the GMAT cross-check, in
 [`RESULTS.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/RESULTS.md).
@@ -163,6 +194,13 @@ These were argued out and should not be silently reopened; reasoning is in
   symmetric.
 - **Retention gate carries ascent preload straight into structure**, bypassing the
   release mechanism, this is the NanoRacks ball-lock lesson, and it is deliberate.
+- **The product is orbit change, not phase spacing.** Satellites released at different times from
+  the same host reach different true anomalies **in the same orbit** for no velocity at all — at
+  450 km, **30° costs 468 seconds of waiting**. A spring and a clock do phase spacing, and do it
+  better, because timing sets an offset that holds while a differential sets a drift a
+  propulsion-less satellite cannot null. **What no clock can imitate is +28.8 km of semi-major
+  axis and ×1.60 of orbital life.** This page claimed the opposite until 2026-08-14; it is logged
+  as **P56**.
 
 ## Repository map
 
