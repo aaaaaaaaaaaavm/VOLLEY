@@ -10,7 +10,8 @@
 > [`docs/PHASE_I_CLOSURE.md`](docs/PHASE_I_CLOSURE.md) are closed; **E4 — nothing built, fired or
 > measured at any scale — stays open**, along with the items that need hardware, a vendor
 > quotation or a host data exchange. **Three kill criteria remain crossed at the 3U design
-> point** and are stated rather than solved.
+> point** and are stated rather than solved. *(Two of the three are deleted rather than solved by
+> ADR-032 below — a weaker kind of good news, and it is recorded that way.)*
 >
 > **The last four deferred decisions were taken together** in
 > [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md), and **every headline number
@@ -18,9 +19,22 @@
 > efficiency 21.0 → **18.8 %**, deployer mass per 3U satellite 6.378 → **7.042 kg**. Nothing
 > improved. That is what the corrections cost.
 >
-> **Next: [`docs/GEN6_ARCHITECTURE.md`](docs/GEN6_ARCHITECTURE.md)** is the design target main
-> is working toward, and **[`docs/B1_ORDER.md`](docs/B1_ORDER.md)** is the one action that changes the
-> category of evidence rather than its degree.
+> **The design target moved on 2026-08-14, and Gen5 stays the measured baseline.**
+> [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md): **Gen6 is the payload accelerated
+> directly, by cold gas, along a rail a spent upper stage provides.** No mover, no pulse-power
+> chain, no brake, no return stroke. **29.75 kg is deleted, 43.33 kg becomes stage structure,
+> 11.45 kg of containment and about 3 kg of store remain.**
+>
+> Five runs built it and none set out to: **A35** attributed every kilogram to the requirement
+> causing it and found **49.23 kg survives every requirement deletion in all 64 corners**;
+> **A36** closed the manifest route; **A37** made the stage the machine; **A38** showed tip-off
+> does not bind; **A39** replaced the spring with gas at **2.98 kg**.
+>
+> **What it does not do.** Kill criterion 1 is **not declared met** — 1.608 kg per satellite on
+> added mass against **7.042 kg on dry mass**, both reported, threshold unmoved. Nothing in Gen6
+> is measured, its fluid system is unsized, its cradle mechanism does not exist, and no launch
+> provider has agreed to lend a stage. **[`docs/B1_ORDER.md`](docs/B1_ORDER.md)** is still the one
+> action that changes the category of evidence rather than its degree.
 
 
 > **Numerical audit correction, 2026-08-03.** I corrected the winding-thickness quadrature
