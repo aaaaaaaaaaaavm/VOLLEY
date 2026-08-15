@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-14 (forty-second pass): the gas does not arrive in time, and A39 assumed a regulator
+
+| ID | Item | Detail |
+|---|---|---|
+| **A40** | **Three of eight bands. The fixed-orifice architecture fails** | A39 chose gas on a quasi-static argument and said plainly it had sized the mass problem and not the fluid one. **Nothing about Gen6's geometry could be drawn until this closed**, so it was run before any CAD. |
+| **PHYS-01** | **A fixed orifice cannot hold force over a 2.18 m stroke** | The cylinder is smallest at the start, so pressure peaks there; as the piston runs away the volume grows faster than the orifice can fill it. **Mean acceleration delivered 4.7 g against 25 needed. Exit 14.16 m/s against a 30 m/s band.** |
+| FLOW-01 | **And flow area was never the constraint** | **0.71 mm of orifice against a 10 mm limit.** A fixed *area* cannot track a growing *volume*, which is a different problem from not having enough of it. |
+| **P63** | **A39's 2.98 kg assumed a regulator it never named** | Holding 50 bar at the piston through the stroke **is** a regulator. A39's mass result is **not refuted, it is conditional**: it holds if a regulator that maintains 50 bar while flowing ~0.36 kg/s and settles inside 133 ms fits the **1.5 kg** allowance A39 declared for "piston, seals, regulator and valving" — **the largest guess in that run, now the component the whole result depends on.** |
+| SURVIVES-01 | **One bottle does run twelve shots** | Band 5 passes at **95.5 %** — 4.5 % velocity droop from reservoir depletion across the manifest. **That was the result most likely to fail on a transient and it held.** |
+| **BAND1-01** | **One failure was a declaration error and is recorded as one** | Band 1 assumed a wide orifice reproduces A39's case. It reproduces the **unregulated 200 bar** case instead — **100 g on this piston** — and returns 59.47 m/s. **The band stands as failed and the error is mine.** What it exposed became P63. |
+| REPAIR-01 | **Three repairs named, none chosen** | A **regulator**, priced rather than allowed for. A **profiled orifice** whose area tracks piston position, needing no fast feedback. A **pre-charged chamber** fired as a closed adiabatic expansion, which removes the flow-rate problem entirely and commands velocity by **charge pressure** rather than valve timing — *"charge slowly, fire fast"*, which is the principle the architecture was built on. **The third is what the failure points at**, and a first-order check says its expansion ratio is the binding variable. |
+| ADR-01 | **ADR-032 amended the same day it was written** | It said the fluid system was unpriced. It has now been priced once, in its simplest form, and failed. **The decision is not withdrawn**; its second falsifier moves from possible to open. |
+
+**What authorised it.** A39's own closing sentence, taken seriously before drawing anything. **No
+band was edited, widened or moved**; A40's eight were committed before `analysis/blowdown.py`
+existed. Five failed. All four checks pass.
+
+---
+
 ## 2026-08-14 (forty-first pass): the surfaces outside this repository, and the wiki that drifted
 
 | ID | Item | Detail |

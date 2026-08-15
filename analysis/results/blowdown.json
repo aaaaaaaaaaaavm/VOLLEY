@@ -1,0 +1,223 @@
+{
+  "analysis": "A40",
+  "bands_declared_commit": "0d05ea2",
+  "note": "isentropic choked flow, ideal gas, adiabatic. No line losses, wall heat transfer, seal friction or valve dynamics beyond a 2 ms ramp; every omission makes this optimistic. Designs no valve, seal or manifold and does not check A34 release residual.",
+  "bore_m": 0.015805366135494582,
+  "area_m2": 0.00019620000000000003,
+  "stroke_m": 2.18,
+  "reservoir_m3": 0.001710864,
+  "p_store_Pa": 20000000.0,
+  "orifice_m2": 3.976953903515694e-07,
+  "orifice_mm": 0.711590821859378,
+  "quasi_static": {
+    "v_exit": 59.47351057402295,
+    "t_s": 0.06947399999993789,
+    "x_m": 2.180000956902684,
+    "a_peak_g": 99.88259640327666,
+    "gas_used_kg": 0.07103031581196173,
+    "p_res_end": 15023599.00918483
+  },
+  "nominal": {
+    "v_exit": 14.162292793594935,
+    "t_s": 0.2342382000046758,
+    "x_m": 2.1800020188444327,
+    "a_peak_g": 25.0,
+    "gas_used_kg": 0.003387598142018944,
+    "p_res_end": 19753610.6824021
+  },
+  "sequence": [
+    {
+      "shot": 1,
+      "p_res_bar": 200.0,
+      "v_exit": 14.162292793594935,
+      "a_peak_g": 25.0,
+      "gas_used_g": 3.387598142018944
+    },
+    {
+      "shot": 2,
+      "p_res_bar": 197.536106824021,
+      "v_exit": 14.103812911287385,
+      "a_peak_g": 24.795064583959277,
+      "gas_used_g": 3.3596542155497344
+    },
+    {
+      "shot": 3,
+      "p_res_bar": 195.0925558830889,
+      "v_exit": 14.045326728874878,
+      "a_peak_g": 24.590964299100587,
+      "gas_used_g": 3.331823004460721
+    },
+    {
+      "shot": 4,
+      "p_res_bar": 192.669265042828,
+      "v_exit": 13.986849069411322,
+      "a_peak_g": 24.387699508908856,
+      "gas_used_g": 3.3041116220697275
+    },
+    {
+      "shot": 5,
+      "p_res_bar": 190.26614700439484,
+      "v_exit": 13.928370907038563,
+      "a_peak_g": 24.18527013541872,
+      "gas_used_g": 3.276515726925666
+    },
+    {
+      "shot": 6,
+      "p_res_bar": 187.88311762100946,
+      "v_exit": 13.869889307226323,
+      "a_peak_g": 23.98367637155634,
+      "gas_used_g": 3.249033932910761
+    },
+    {
+      "shot": 7,
+      "p_res_bar": 185.52009375217148,
+      "v_exit": 13.811412793241427,
+      "a_peak_g": 23.782918490736673,
+      "gas_used_g": 3.221670277802957
+    },
+    {
+      "shot": 8,
+      "p_res_bar": 183.1769893259724,
+      "v_exit": 13.75293253572625,
+      "a_peak_g": 23.582996518226384,
+      "gas_used_g": 3.1944205871621834
+    },
+    {
+      "shot": 9,
+      "p_res_bar": 180.8537213011,
+      "v_exit": 13.69445682856945,
+      "a_peak_g": 23.383910738357873,
+      "gas_used_g": 3.1672887592881227
+    },
+    {
+      "shot": 10,
+      "p_res_bar": 178.550203806171,
+      "v_exit": 13.635982447625333,
+      "a_peak_g": 23.18566118804956,
+      "gas_used_g": 3.140273266616034
+    },
+    {
+      "shot": 11,
+      "p_res_bar": 176.266352078821,
+      "v_exit": 13.577506263563208,
+      "a_peak_g": 22.988248003924035,
+      "gas_used_g": 3.1133726511801685
+    },
+    {
+      "shot": 12,
+      "p_res_bar": 174.00208241508628,
+      "v_exit": 13.519030688044225,
+      "a_peak_g": 22.791671408069117,
+      "gas_used_g": 3.0865880362000997
+    }
+  ],
+  "droop_shot12_over_shot1": 0.9545792397512335,
+  "cutoff_sweep": [
+    {
+      "cutoff_ms": 2,
+      "v_exit": 1.4183683417818682,
+      "a_peak_g": 4.630015429975959
+    },
+    {
+      "cutoff_ms": 3,
+      "v_exit": 2.0056105199977368,
+      "a_peak_g": 9.187042944321657
+    },
+    {
+      "cutoff_ms": 4,
+      "v_exit": 2.4560985558929556,
+      "a_peak_g": 13.518781305355894
+    },
+    {
+      "cutoff_ms": 5,
+      "v_exit": 2.835570901871717,
+      "a_peak_g": 17.40032018194389
+    },
+    {
+      "cutoff_ms": 6,
+      "v_exit": 3.1692722922903465,
+      "a_peak_g": 20.595291291013485
+    },
+    {
+      "cutoff_ms": 8,
+      "v_exit": 3.74611092807723,
+      "a_peak_g": 24.36505998308976
+    },
+    {
+      "cutoff_ms": 10,
+      "v_exit": 4.240889366703291,
+      "a_peak_g": 25.0
+    },
+    {
+      "cutoff_ms": 15,
+      "v_exit": 5.256805900100913,
+      "a_peak_g": 25.0
+    },
+    {
+      "cutoff_ms": 20,
+      "v_exit": 6.074125809622722,
+      "a_peak_g": 25.0
+    },
+    {
+      "cutoff_ms": 40,
+      "v_exit": 8.377441274699567,
+      "a_peak_g": 25.0
+    },
+    {
+      "cutoff_ms": null,
+      "v_exit": 14.162292793594935,
+      "a_peak_g": 25.0
+    }
+  ],
+  "timing_sensitivity_pct_per_ms": 10.52927485058321,
+  "bands": [
+    {
+      "band": "1",
+      "name": "wide orifice reproduces A39 32.7 m/s within 2 %",
+      "detail": "59.47 m/s",
+      "pass_": false
+    },
+    {
+      "band": "2",
+      "name": "peak acceleration <= 25 g",
+      "detail": "25.00 g",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "shot 1 exit velocity >= 30 m/s",
+      "detail": "14.16 m/s",
+      "pass_": false
+    },
+    {
+      "band": "4",
+      "name": "orifice diameter <= 10 mm",
+      "detail": "0.71 mm",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "shot 12 reaches >= 95 % of shot 1",
+      "detail": "95.5 % (13.52 against 14.16 m/s)",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "cut-off spans 20 -> 30 m/s monotonically",
+      "detail": "1.4 -> 8.4 m/s, monotonic True",
+      "pass_": false
+    },
+    {
+      "band": "7",
+      "name": "+/-1 ms timing error gives <= 1 % velocity error",
+      "detail": "10.53 %",
+      "pass_": false
+    },
+    {
+      "band": "8",
+      "name": "gas per shot within 20 % of A39's swept-volume figure",
+      "detail": "3.39 g against 24.02 g",
+      "pass_": false
+    }
+  ]
+}

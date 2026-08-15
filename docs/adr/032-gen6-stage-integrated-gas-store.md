@@ -55,6 +55,22 @@ actuator, so re-arming is a valve. **The spring's problem was never storing the 
 
 ## What this costs, stated rather than absorbed
 
+> ### Amended 2026-08-14 by A40, the same day. The fluid system has now been modelled once and it failed.
+>
+> The paragraph below said the fluid system was unpriced. **[A40](../../validation/A40_blowdown_transient.md)
+> priced the simplest version of it — a fixed orifice fed from the bottle — and it delivers
+> 4.7 g mean where 25 is needed, reaching 14.16 m/s against a 30 m/s band.**
+>
+> **A39's 2.98 kg assumed 50 bar held at the piston throughout, which is a regulator it never
+> named.** So this decision now rests explicitly on a component inside A39's **1.5 kg** allowance
+> for "piston, seals, regulator and valving" — the largest guess in that run. **P63.**
+>
+> **The decision is not withdrawn.** One 1.71 L bottle does run twelve shots with 4.5 % droop, and
+> flow area was never the problem — 0.71 mm against a 10 mm limit. What is unresolved is how the
+> pressure is held, and the repair this points at is a **pre-charged chamber** fired as a closed
+> expansion, which removes the flow-rate question entirely and commands velocity by charge pressure.
+> **That is a different machine and it needs its own bands.**
+
 **A fluid system nobody has sized.** Filling a 0.43 litre swept volume in a **133 ms** stroke is
 roughly **3 L/s** through a regulator. A39 models none of it. **Gas removes a mass problem and
 hands back a fluid-system problem**, and that trade is accepted here with its second half unpriced.
@@ -107,7 +123,9 @@ the moat, and BOLLEY is the evidence for that rather than the alternative to it.
 1. **The 43.33 kg stage credit is optimistic by more than 30 %.** Then added mass per satellite
    exceeds 2.0 kg and A37 band 5 fails retrospectively.
 2. **The blowdown transient needs a regulator that weighs more than the store it feeds.** A39's
-   selected total is 2.98 kg and its hardware allowance is 1.5 kg of that.
+   selected total is 2.98 kg and its hardware allowance is 1.5 kg of that. **A40 has moved this
+   from a falsifier to an open defect (P63):** the unregulated version is measured and does not
+   work, so the regulator is required rather than merely possible.
 3. **No launch provider will keep a stage alive past passivation** on terms that do not require
    spending its disposal propellant.
 4. **The unread voice-coil deployer (P57)** already claims the programmable-velocity result on a

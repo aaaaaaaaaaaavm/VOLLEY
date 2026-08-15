@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **97 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
+> **98 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **39** (18 P, 21 E) | open engineering; something still has to be done |
+> | `LIVE` | **40** (19 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **28** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **30** | resolved, with the closer named in the entry |
 >
@@ -2841,6 +2841,47 @@ ordinary checkout.
 **And the honest disposition of the surface itself.** The wiki is **the least trustworthy thing
 this project publishes**, because it is the only one that can be stale without anything failing.
 The page says the repository is authoritative; it now also says so where it can be checked.
+
+### P63. A39's gas result assumed a regulator it did not price: CRITICAL, NEW 2026-08-14
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+**A40 bands 1, 3, 6, 7 and 8 missed.** [A39](validation/A39_store_trade.md) selected cold gas at
+**2.98 kg** on a quasi-static argument: swept volume times a **50 bar working pressure** equals the
+energy needed. **Holding 50 bar at the piston through a 2.18 m stroke is a regulator**, and A39
+neither said so nor sized one.
+
+[A40](validation/A40_blowdown_transient.md) modelled the unregulated version — a fixed orifice fed
+from the 200 bar bottle — and it does not work:
+
+| | |
+|---|---:|
+| Mean acceleration needed for 32.7 m/s over 2.18 m | **25.0 g** |
+| Mean acceleration delivered by a fixed orifice | **4.7 g** |
+| Exit velocity | **14.16 m/s** against a 30 m/s band |
+| Gas consumed | **3.39 g** against A39's 24.02 |
+
+**The cylinder is smallest at the start, so pressure peaks there; as the piston runs away the
+volume grows faster than a fixed orifice can fill it.** Flow area is not the constraint — the
+orifice is **0.71 mm** against a 10 mm limit. A fixed area cannot track a growing volume.
+
+**What this does and does not overturn.** A39's mass result is **not refuted, it is conditional**:
+2.98 kg holds *if* a regulator that maintains 50 bar while flowing ~0.36 kg/s, and settles inside a
+133 ms stroke, fits inside the **1.5 kg** allowance A39 declared for "piston, seals, regulator and
+valving" — **the largest guess in that run, and now the component the whole result depends on.**
+
+**What survives.** One **1.71 L** bottle does run twelve shots, with **4.5 %** velocity droop
+(A40 band 5). That was the result most likely to fail on a transient and it held.
+
+**What would close it.** Any one of three, each a different machine needing its own bands: a
+**regulator**, priced rather than allowed for; a **profiled orifice** whose area tracks piston
+position, needing no fast feedback; or a **pre-charged chamber** fired as a closed adiabatic
+expansion, which removes the flow-rate problem entirely and makes velocity a function of **charge
+pressure** rather than valve timing. **The third is what the failure points at** and a first-order
+check says the expansion ratio is its binding variable, not the pressure.
+
+**And one band failure was a declaration error, recorded as such.** A40 band 1 assumed a wide
+orifice reproduces A39's case. It does not — it reproduces the *unregulated* 200 bar case, which is
+**100 g** on this piston. The band stands as failed; what it exposed is this entry.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

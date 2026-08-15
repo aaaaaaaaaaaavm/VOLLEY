@@ -95,4 +95,84 @@ whether it lasts twelve shots, and whether velocity can be commanded.**
 
 ## Results
 
-*(Filled after the run. Nothing above this line changes.)*
+**RUN 2026-08-14. Three of eight bands pass. The fixed-orifice architecture fails, and one of the
+five failures is a badly designed band rather than the physics.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | wide orifice reproduces A39's 32.7 m/s within 2 % | **59.47 m/s** | **FAIL** |
+| 2 | peak acceleration ≤ 25 g | 25.00 g | **PASS** *(by construction — the orifice is bisected on it)* |
+| 3 | shot 1 ≥ 30 m/s | **14.16 m/s** | **FAIL** |
+| 4 | orifice ≤ 10 mm | **0.71 mm** | **PASS** |
+| 5 | shot 12 ≥ 95 % of shot 1 | **95.5 %** — 13.52 against 14.16 m/s | **PASS** |
+| 6 | cut-off spans 20 → 30 m/s monotonically | **1.4 → 8.4 m/s**, monotonic | **FAIL** |
+| 7 | ±1 ms timing gives ≤ 1 % velocity error | **10.53 %** | **FAIL** |
+| 8 | gas per shot within 20 % of A39 | **3.39 g against 24.02** | **FAIL** |
+
+### The physics, in one line
+
+**A fixed orifice cannot hold force over a 2.18 m stroke.** The cylinder is smallest at the start,
+so pressure peaks there; as the piston runs away the volume grows faster than the orifice can fill
+it and the force collapses.
+
+| | |
+|---|---:|
+| Mean acceleration needed for 32.7 m/s over 2.18 m | **25.0 g** |
+| Mean acceleration actually delivered | **4.7 g** |
+| Peak, at the very start | 25.00 g |
+
+Bands 3, 6, 7 and 8 are all that one fact. Cut-off can only subdivide a 14 m/s shot; ±1 ms is 10 %
+because at a 6 ms cut-off the payload has barely moved; and 3.39 g of gas is consumed because the
+cylinder never approaches working pressure.
+
+### Band 1 failed because I declared it wrong, and the failure is informative anyway
+
+The band assumed that opening the orifice wide gives A39's quasi-static case. **It does not.** A
+wide orifice fills the cylinder toward **reservoir** pressure — 200 bar on this piston is **3924 N,
+100 g** — and the model returns 59.47 m/s accordingly.
+
+**A39's 32.7 m/s assumed 50 bar held *at the piston throughout*. That is a regulator.** A39 never
+said so and this run did not model one, so the two are different machines and the band compared
+them as if they were the same. **The band stands as failed and the error is mine**, and what it
+exposes is worth more than the band was: **A39's 1.5 kg "piston, seals, regulator and valving"
+allowance is not a rounding item. It is the component the whole result depends on**, and A39 priced
+it without knowing that.
+
+### What survives, and it is not nothing
+
+**Band 5 passes: one 1.71 L bottle does run twelve shots**, with 4.5 % velocity droop from
+reservoir depletion. That was the result most likely to fail on a transient and it held.
+
+**Band 4 passes by a wide margin**: 0.71 mm of orifice, against a 10 mm limit. **Flow area was
+never the problem.** The problem is that a fixed area cannot track a growing volume.
+
+### What A39's result now rests on
+
+**Not refuted, but conditional.** Cold gas at 2.98 kg assumed a regulated 50 bar at the piston.
+This run shows the unregulated version delivers 4.7 g mean where 25 is needed. So the architecture
+needs **a regulator that holds 50 bar while flowing ~0.36 kg/s and settles inside a 133 ms stroke**,
+and that component is unpriced. **P63.**
+
+### Three repairs, named and not chosen
+
+Each is a different machine and each needs its own bands:
+
+1. **A regulator**, as A39 implicitly assumed. Reopens the hardware allowance and asks whether a
+   regulator with that response is inside 1.5 kg.
+2. **A profiled orifice** — flow area opening as the piston travels, cam- or piston-position-driven,
+   so area tracks volume. No fast feedback needed.
+3. **A pre-charged chamber.** Charge a fixed volume to a **commanded** pressure over the 60 s
+   already spent indexing, then fire it as a closed adiabatic expansion. **No flow-rate problem
+   exists at all**, and velocity is commanded by charge pressure rather than by valve timing —
+   which is the *"charge slowly, fire fast"* principle the whole architecture was built on. A
+   first-order check says a 25 g start caps it near 25 m/s at equal chamber and swept volume, so
+   **the expansion ratio is the design variable and it is not free.**
+
+**Option 3 is the one this failure points at**, and it is not adopted here. It is a different run.
+
+## What this run does not do
+
+Unchanged from the declaration: no valve, seal, regulator or manifold is designed; no line losses,
+wall heat transfer, seal friction, reservoir cooling across a sequence, or two-phase behaviour; and
+A34's ≤ 1 N release residual is not checked. **Every one of those omissions makes the numbers above
+optimistic, and they still fail.**
