@@ -27,13 +27,21 @@ proven it yet.
 The idea is not really the motor. A launch vehicle's upper stage does its job in ten minutes and
 then becomes debris; POEM has already flown the counter-example. **VOLLEY turns that spent stage
 into a last-mile delivery vehicle** — it repositions between altitude shells on its own reaction
-control and fires satellites off at individually commanded velocities at each one. Altitude and
-phase are in; **plane change is not**, at 133 m/s per degree, and I say so everywhere rather than
-letting the word "orbit" do work it hasn't earned.
+control and fires satellites off at individually commanded velocities at each one. **Altitude is
+in; plane change is not**, at 133 m/s per degree — and **phase is not either**, which I found by
+checking rather than by being told: satellites released minutes apart from the same host separate
+in true anomaly for no velocity at all, so 30° costs **468 seconds of waiting**. The claim that
+survives is **orbit change**, which no clock can imitate.
 
 **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)**, a magazine-fed ironless double-sided
-Halbach linear synchronous motor that ejects unmodified CubeSats at **16.029 m/s and 10.533 g**,
+Halbach linear synchronous motor that ejects unmodified CubeSats at **16.029 m/s and 10.07 g**,
 drawing **2.78 kJ gross and 2.74 kJ net** per shot. TRL 2–3. Nothing built, fired or measured.
+
+**The design target has since moved.** Attributing every kilogram to the requirement that causes
+it showed the reusable magnet sled is **11 % of dry mass** and the pulse-power chain is **28 %**,
+so the current target deletes the second: the payload accelerated directly, by cold gas, along a
+rail the spent stage provides. **The architecture that was the target the day before is kept in
+full**, with the measurement that retired it at the top of it.
 
 **Open it for the defect record, not the numbers.** Every error I've found in my own work is
 published and numbered, including the ones that damage the claims. An independent propagator
