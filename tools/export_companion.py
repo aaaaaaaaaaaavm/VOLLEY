@@ -165,12 +165,18 @@ THESIS_MANIFEST = [
     ("CITATION.cff", "CITATION.cff"),
 ]
 
-PAPER_README = """# VOLLEY: IEEE companion
+PAPER_README = """# VOLLEY: the conference paper
 
-Everything needed to reproduce the conference paper. Manuscript source, figures, the analysis
-scripts behind every number in it, the validation run sheets, and the literature record.
+**The manuscript, and everything needed to check it.**
+
+Rideshare CubeSats inherit the orbit of whoever paid for the launch. This paper describes a
+deployer that gives each of twelve satellites an orbit chosen for it, without modifying any of
+them — and reports, in the same voice, the three thresholds the design currently fails.
 
 **[Read the paper](paper/VOLLEY_IEEE_Conference.pdf)** (15 pages)
+
+Every number in it comes from a script in this repository, and every analysis behind it declared
+what would count as failure **before** it ran. Nothing has been built, fired or measured.
 
 ## Reproduce it in one command
 
@@ -237,11 +243,16 @@ live in the flagship. This package exists so the paper can be checked, not so it
 the repository it came from.
 """
 
-THESIS_README = """# VOLLEY: thesis companion
+THESIS_README = """# VOLLEY: the thesis
 
-Final-year thesis submission material, generated from the VOLLEY flagship.
+**A final-year thesis on giving rideshare CubeSats an orbit their host was not going to — and
+the full record of what went wrong on the way there.**
 
 **[Read the manuscript](source/VOLLEY_IEEE_Conference.pdf)**
+
+The submission is here with its analyses, its acceptance tests and its defect register attached.
+The defects are deliberate: an examiner should be able to see what failed, when it was found, and
+what was done about it. Nothing in it has been built or measured.
 
 ## Layout
 

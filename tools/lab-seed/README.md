@@ -1,6 +1,13 @@
 # VOLLEY-lab
 
-**The vault: ideas that never became a complete thing, and why each one stopped.**
+**The vault: ideas that never became a complete thing, and the measurement that stopped each one.**
+
+Most projects delete the work that did not finish, and the reasoning goes with it. This is where
+the VOLLEY programme keeps it instead — an architecture priced and declined, a scaling study
+answering a question nobody has asked yet, a measurement that killed something.
+
+**It is a vault rather than a graveyard, and the difference is that a vault is organised for
+retrieval.**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
@@ -11,23 +18,14 @@
 | **[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | The vault: ideas that never became a complete thing, and why each stopped | ← |
 <!-- PROGRAMME-HEADER-END -->
 
-> ## Nothing here should be cited
->
-> No baseline, no stability promise, no acceptance bands. Numbers on these pages may be
-> wrong, half-finished or abandoned mid-thought. The engineering record is
-> [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY), and where anything here disagrees
+> **Nothing here should be cited.** No baseline, no stability promise, no acceptance bands.
+> Numbers on these pages may be wrong, half-finished or abandoned mid-thought. The engineering
+> record is [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY), and where anything here disagrees
 > with it, **it is right and this is not**.
 
 ## What this repository is for
 
-Every project accumulates work that was real but did not finish: an architecture that was
-priced and declined, a scaling study that answers a question nobody has asked yet, a
-measurement that killed something. Most of it is deleted, and the reasoning is lost with it.
-
-**This is where that work is kept instead.** It is a vault, not a graveyard — the difference
-is that a vault is organised for retrieval.
-
-The main record stays clean because this exists. A research track kept *inside* it is one
+**The main record stays clean because this exists.** A research track kept *inside* it is one
 `git checkout` from becoming an edit to the record; a separate repository is a wall rather
 than a line on the floor.
 
