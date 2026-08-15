@@ -1,4 +1,40 @@
-# VOLLEY: an electromagnetic orbital CubeSat deployer
+# VOLLEY
+
+**An electromagnetic deployer that gives a rideshare CubeSat an orbit its host was not going to.**
+
+<p align="center">
+  <img src="cad/renders/envelope_closed.png" alt="VOLLEY deployer, closed, 1839 mm along the track, on its ESPA interface" width="100%">
+</p>
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](requirements.txt)
+[![Maturity: TRL 2-3](https://img.shields.io/badge/maturity-TRL%202--3-orange.svg)](OPEN_PROBLEMS.md)
+[![Validation: model only](https://img.shields.io/badge/validation-model%20only%2C%20unverified-red.svg)](docs/PROVENANCE.md)
+
+Secondary payloads inherit the orbit of whoever paid for the launch. The spring that ejects them
+gives 1–2 m/s — enough to clear the stage, not enough to change where they end up. Ninety-two
+percent of CubeSats carry no propulsion, so that is where they stay.
+
+VOLLEY replaces the spring with a linear motor and a magazine. Twelve satellites, one at a time,
+each at a velocity commanded for it. **The satellite is never modified** — no armature, no
+plating, no electrical interface.
+
+**This repository is the engineering record, not a brochure.** Every analysis declares what would
+count as failure *before* it runs, every defect is numbered including the ones that damage the
+work's own claims, and nothing here has been built, fired or measured.
+
+| | |
+|---|---|
+| **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
+| **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
+| **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
+| **[The defect register](OPEN_PROBLEMS.md)** | 98 numbered entries, 40 live |
+| **[One page](SUMMARY.md)** | If you only read one file |
+| **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
+
+---
+
+## Status
 
 > ## The design is frozen at Gen5, and the record is closed on it
 >
@@ -36,7 +72,6 @@
 > provider has agreed to lend a stage. **[`docs/B1_ORDER.md`](docs/B1_ORDER.md)** is still the one
 > action that changes the category of evidence rather than its degree.
 
-
 > **Numerical audit correction, 2026-08-03.** I corrected the winding-thickness quadrature
 > and propagated the rated point to **10.54 N per kA/m, 16.029 m/s, 10.07 g, 20.99% net
 > efficiency, and 65.552 N s per shot**. I also corrected A13's internal-momentum physics,
@@ -44,19 +79,6 @@
 > extended A12's stress plane, removed a 0.344 kg brake-fin double count, and corrected the
 > fin thermal mass. Superseded values remain visible in their validation records and
 > change log.
-
-<p align="center">
-  <img src="cad/renders/envelope_closed.png" alt="VOLLEY deployer, closed, 1839 mm along the track, on its ESPA interface" width="100%">
-</p>
-
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](requirements.txt)
-[![Maturity: TRL 2-3](https://img.shields.io/badge/maturity-TRL%202--3-orange.svg)](OPEN_PROBLEMS.md)
-[![Validation: model only](https://img.shields.io/badge/validation-model%20only%2C%20unverified-red.svg)](docs/PROVENANCE.md)
-
-A magazine-fed electromagnetic deployer that ejects unmodified CubeSats from a host
-stage at programmable velocity, aimed at the unserved regime between spring deployers
-(~2 m/s) and propulsive orbital transfer vehicles (hundreds of m/s).
 
 ## Design point
 
