@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **105 numbered entries, of which 42 are live.** Every entry carries a `Status:` line written by
+> **106 numbered entries, of which 42 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -2013,9 +2013,9 @@ project's most-viewed artifact for the whole time they were wrong.
 **Cause.** The renders were produced as illustration and were never checked against the
 requirement they illustrate. Nothing in `tools/` looks at an image, so no check could have caught
 it; `check_artifacts.py` guards numbers against their sources and has no notion of a picture
-being wrong about the thing it depicts. The render brief in `cad/FUSION_RENDER_BRIEF.md` was
-written *after* the defective set existed, which is why it now specifies the departure direction
-explicitly.
+being wrong about the thing it depicts. The render specification was written *after* the
+defective set existed, which is why the departure direction is now stated explicitly wherever
+the renders are described.
 
 **Fixed.** The seven-shot Gen4 set replaces them: `hero_open`, `espa_interface`, `track_stator`,
 `brake`, `sled_detail`, `envelope_closed`, `magazine_feed`. In every one the payload leaves along
@@ -3146,6 +3146,44 @@ the **status suffix after the final colon** rather than the whole heading. One e
 
 **Found by cross-checking the register against the GitHub issue list**, not by any check here. The
 tool cannot detect a misclassification, because a wrong verdict is a well-formed one.
+
+### P71. Every generated Gen5 sled had both rollers outside their channels: MEDIUM, CORRECTED 2026-08-16
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found by building the same machine a second time, in a different CAD kernel, and comparing.**
+
+`cad/build_gen5.py` placed the sled rollers with `Workplane("XZ").circle(r).extrude(rw)` and a
+`sgn*ry - rw/2` offset, as though the extrude were symmetric about the plane. **It is not —
+`Workplane("XZ")` extrudes towards −Y** — so the offset moved the roller instead of centring it.
+
+| | y extent | Its channel |
+|---|---|---|
+| **+y roller** | **54.0 → 70.0** | 70.0 → 86.0 |
+| **−y roller** | **−102.0 → −86.0** | −86.0 → −70.0 |
+
+**Neither roller was in its channel.** One sat entirely inboard, in the stator gap; the other
+entirely outboard. **The sled was asymmetric about y = 0**, which a machine symmetric by
+construction cannot be, and `roller_y_inner` / `roller_y_outer` had no effect on the result.
+
+**Corrected.** `extrude(rw/2, both=True)` translated to `sgn*ry` gives 70.0 → 86.0 and
+−86.0 → −70.0. Gen5 STEP and STL regenerated; `build_gen5.py --check` passes, as it did before —
+**the check verifies extents and station positions, and a part in the wrong place inside an
+unchanged overall envelope passes it.**
+
+**What it does not change.** No number moves. `mass_properties.py` takes the sled at **9.445 kg
+from the Gen3 solids** (P15), not from Gen5, and nothing in `analysis/` reads a Gen5 STEP. This is
+a geometry defect in a published model, not a performance correction.
+
+**What it does change** is what the published Gen5 STEP showed: a sled that could not run in its
+own track. Anyone importing it to check clearances would have found the rollers fouling the stator
+on one side and outside the longeron on the other.
+
+**Why no check here caught it.** Every guard in this repository compares a generated artifact
+against `parameters.json` or against a rebuild of itself. **Both agreed, because both descend from
+the same script.** `parameters.json` had been checked against exactly one model built from it since
+the geometry was written. A second implementation is the only thing that could have found this,
+and it found it on the first run.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

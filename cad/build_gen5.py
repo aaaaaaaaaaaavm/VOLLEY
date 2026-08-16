@@ -193,8 +193,13 @@ def sled(x_aft=None):
     xc = x_aft + L / 2.0
     for dx in (-g["roller_x_offset_from_centre"], g["roller_x_offset_from_centre"]):
         for sgn in (+1, -1):
-            roller = (cq.Workplane("XZ").circle(rd / 2).extrude(rw)
-                      .translate((xc + dx, sgn * ry - rw / 2, 0)))
+            # extrude(rw/2, both=True), not extrude(rw). Workplane("XZ") extrudes towards
+            # -Y, so a one-sided extrude with a -rw/2 offset put the +y roller at y 54..70
+            # -- inboard of its 70..86 channel, in the stator gap -- and the -y roller at
+            # -102..-86, outboard of its own. The sled came out asymmetric about y = 0.
+            # Found by the OpenSCAD cross-check, P71.
+            roller = (cq.Workplane("XZ").circle(rd / 2).extrude(rw / 2, both=True)
+                      .translate((xc + dx, sgn * ry, 0)))
             out = out.union(roller)
     return out
 

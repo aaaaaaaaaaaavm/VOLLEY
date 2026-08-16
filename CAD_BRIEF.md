@@ -1,7 +1,6 @@
 # CAD brief
 
-**A brief written to be read before modelling, by a person or an agent, from a link to this
-repository alone.** It answers the questions a modeller has to answer before the first sketch,
+**A brief written to be read before modelling, from a link to this repository alone.** It answers the questions a modeller has to answer before the first sketch,
 and it resolves — explicitly — every place where two files in this repository disagree.
 
 Everything here is derived from [`cad/parameters.json`](cad/parameters.json). Where this brief
@@ -231,7 +230,7 @@ is **P64**, still open. *If you model the reservoir, model it at 11.25 L and exp
 
 ### The three parts that do not exist
 
-**This is the useful half of this section.** An assistant given the six parts above would produce a
+**This is the useful half of this section.** Someone handed the six parts above would model a
 tube with nothing in it.
 
 1. **The piston, seals and the fill/vent circuit.** A41 allows **1.5 kg** for "piston, seals,

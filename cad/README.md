@@ -31,6 +31,17 @@ Magazine_Cassette, Brake, Interface_ESPA, Enclosure, Assembly), in **three gener
 Full generation history, per-file body counts, and the defect list are in
 [`CHANGELOG_CAD.md`](CHANGELOG_CAD.md).
 
+
+## Two implementations of the same geometry
+
+`build_gen5.py` (CadQuery, B-rep, STEP) and `scad/gen5.scad` (OpenSCAD, CSG, STL) build the same
+eight documents from the same parameter file and read nothing of each other's.
+`tools/compare_scad_cadquery.py` compares them part by part. **It found a real defect on its first
+run** — the sled rollers were outside their channels in every Gen5 STEP ever generated, **P71** —
+which no guard here could have caught, because every guard compares a generated artifact against
+the script that generated it. See [`scad/README.md`](scad/README.md).
+
+
 ## Generations
 
 | Folder | What it is | Status |
