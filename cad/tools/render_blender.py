@@ -56,6 +56,7 @@ VIEWS = [
 PARTS_GEN6 = {
     "Stage_Rail":        ("VOLLEY_Stage_Rail_Gen6.stl",        (0.48, 0.50, 0.54), 1.0, 0.55),
     "Drive_Tube":        ("VOLLEY_Drive_Tube_Gen6.stl",         (0.66, 0.68, 0.72), 1.0, 0.34),
+    "Trim_Stator":       ("VOLLEY_Trim_Stator_Gen6.stl",        (0.72, 0.34, 0.16), 1.0, 0.30),
     "Carriage":          ("VOLLEY_Carriage_Gen6.stl",           (0.72, 0.74, 0.77), 1.0, 0.26),
     "Chamber":           ("VOLLEY_Chamber_Gen6.stl",            (0.55, 0.32, 0.20), 1.0, 0.32),
     "Reservoir":         ("VOLLEY_Reservoir_Gen6.stl",          (0.30, 0.42, 0.52), 1.0, 0.30),
