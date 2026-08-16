@@ -68,6 +68,44 @@ Repository → **About** (gear icon, top right) → set **Description**, **Websi
 **Topics:** `cubesat` `smallsat` `aerospace-engineering` `linear-induction-motor` `space-systems`
 `design-study` `open-science`
 
+## pulsed-linear-motor-design-lab
+
+> **Description**
+>
+> An installable calculator for screening pulsed linear-motor stages: force, stroke, moving mass,
+> source impedance and where the energy goes. Carries VOLLEY's reference calculation and the
+> independent checks that qualify it.
+
+**Topics:** `linear-motor` `electromagnetics` `python` `engineering-tools` `design-study`
+`open-science` `reproducible-research`
+
+## orbital-deployment-trade-study
+
+> **Description**
+>
+> A calculator for the orbital side of deploying a satellite: the impulse it takes, how the fleet
+> drifts apart afterwards, and what the push does to the vehicle that gave it. Not a conjunction
+> or flight-safety tool.
+
+**Topics:** `orbital-mechanics` `cubesat` `space-systems` `python` `engineering-tools`
+`trade-study` `open-science`
+
+## engineering-evidence-toolkit
+
+> **Description**
+>
+> A command-line check that asks whether a repository's results, links and artifacts still agree
+> with the sources they were computed from. Establishes consistency, never validity.
+
+**Topics:** `reproducible-research` `research-software` `python` `cli` `open-science`
+`engineering-tools` `continuous-integration`
+
+## aaaaaaaaaaaavm (profile)
+
+> **Description**
+>
+> GitHub profile repository. Not applicable — profile repositories show no About text.
+
 ---
 
 ## What these are written to avoid
