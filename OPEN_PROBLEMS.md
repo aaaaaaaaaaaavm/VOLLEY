@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **99 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
+> **100 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -2921,6 +2921,30 @@ one, and say that it is.
 
 **And the cheap repair if the reservoir ever needs to shrink:** the fired chamber vents **43 bar of
 a 2 L volume every shot** and A41 models no recovery of it at all.
+
+### P65. `register_status.py --check` never checked the generated result it was written to guard: MEDIUM, NEW 2026-08-16
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found on 2026-08-16 by a working-tree check, not by any tool here.** `analysis/results/register_status.json`
+still read **98 entries, 39 live** after **P64** was added on 2026-08-14. The four checks were run
+repeatedly across that window and every one of them passed.
+
+**The cause is two lines of control flow.** `--check` verified that every entry carried a `Status:`
+line and then returned — *before* the code that builds the JSON. The generated result was written
+only by a bare run, and nothing anywhere compared the committed file against a fresh one. The
+tool's own docstring said `--check` "verifies that every entry has one and that the headline counts
+match"; the second half of that sentence was never true.
+
+**Why it is worth numbering rather than quietly regenerating.** This is the same failure as
+**P63** — a generated artifact whose currency was assumed rather than demonstrated — and the same
+repair: prove it by rebuilding and comparing, never by inspecting a timestamp or trusting a
+docstring. Two guards in this repository had the defect they exist to prevent.
+
+**Corrected.** The payload is now built by one function used by both paths, `--check` rebuilds it
+and compares against the committed file, and it names the fields that differ so the failure says
+what moved. Verified by reverting the file and confirming a non-zero exit. The stale counts are
+propagated to the front page, the register header and the wiki source.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

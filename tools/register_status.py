@@ -14,12 +14,17 @@ THE THREE STATUSES
     CORRECTED  -- the defect was found, fixed and propagated. Retained as the record.
     CLOSED     -- resolved by an analysis or a decision, with the closer named.
 
-Each entry carries a `> **Status:** ...` line directly under its heading. This tool writes them
-and, with --check, verifies that every entry has one and that the headline counts match.
+Each entry carries a `> **Status:** ...` line directly under its heading. This tool writes them,
+and derives analysis/results/register_status.json from them.
+
+--check verifies two things: that every entry has a status line, and that the committed JSON is
+what a fresh run would write. The second half did not exist until 2026-08-16 -- --check returned
+before reaching the JSON at all -- so the committed result went one entry stale and nothing
+reported it. See P65.
 
 USAGE
-    python3 tools/register_status.py            # write status lines, print the tally
-    python3 tools/register_status.py --check    # verify; non-zero exit if the counts drift
+    python3 tools/register_status.py            # write status lines and the JSON, print the tally
+    python3 tools/register_status.py --check    # verify; non-zero exit if either drifts
 """
 import argparse
 import json
@@ -29,6 +34,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REGISTER = os.path.join(ROOT, 'OPEN_PROBLEMS.md')
+RESULT = os.path.join(ROOT, 'analysis', 'results', 'register_status.json')
 MARKER = '> **Status:** '
 
 # The leading (?<!-) on each word matters. `\bRESOLVED\b` matches inside "depth-resolved",
@@ -80,6 +86,16 @@ NOTE = {
 }
 
 
+def payload(rows, tally):
+    """The generated result, built in one place so --check can compare against it."""
+    return dict(total=len(rows), **{k.lower(): v for k, v in tally.items()},
+                p_live=sum(1 for t, s in rows if t.startswith('P') and s == 'LIVE'),
+                e_live=sum(1 for t, s in rows if t.startswith('E') and s == 'LIVE'),
+                p_total=sum(1 for t, _ in rows if t.startswith('P')),
+                e_total=sum(1 for t, _ in rows if t.startswith('E')),
+                by_entry=dict(rows))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--check', action='store_true')
@@ -99,6 +115,18 @@ def main():
     if args.check:
         if missing:
             raise SystemExit('entries with no status line: %s' % ', '.join(missing))
+        fresh = payload(rows, tally)
+        try:
+            with open(RESULT, encoding='utf-8') as f:
+                committed = json.load(f)
+        except FileNotFoundError:
+            raise SystemExit('%s does not exist; run without --check' % RESULT)
+        if committed != fresh:
+            drift = sorted(k for k in set(committed) | set(fresh)
+                           if committed.get(k) != fresh.get(k))
+            raise SystemExit(
+                'register_status.json is stale in %s; run without --check'
+                % ', '.join(drift))
         print('register: %d entries, %d LIVE, %d CORRECTED, %d CLOSED'
               % (len(rows), tally['LIVE'], tally['CORRECTED'], tally['CLOSED']))
         return
@@ -118,15 +146,9 @@ def main():
     with open(REGISTER, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
 
-    p_live = sum(1 for t, s in rows if t.startswith('P') and s == 'LIVE')
-    e_live = sum(1 for t, s in rows if t.startswith('E') and s == 'LIVE')
-    out = dict(total=len(rows), **{k.lower(): v for k, v in tally.items()},
-               p_live=p_live, e_live=e_live,
-               p_total=sum(1 for t, _ in rows if t.startswith('P')),
-               e_total=sum(1 for t, _ in rows if t.startswith('E')),
-               by_entry=dict(rows))
-    with open(os.path.join(ROOT, 'analysis', 'results', 'register_status.json'),
-              'w', encoding='utf-8') as f:
+    out = payload(rows, tally)
+    p_live, e_live = out['p_live'], out['e_live']
+    with open(RESULT, 'w', encoding='utf-8') as f:
         json.dump(out, f, indent=2)
         f.write('\n')
 
