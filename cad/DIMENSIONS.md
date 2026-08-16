@@ -309,3 +309,20 @@ Fusion document: **`Built by cad/build_gen6.py.`**
 | `first_fill_s` | 4.14 | - |
 | `reservoir_volume_conduction_l` | 8.95 | mm |
 
+
+## gen6 trim
+
+Fusion document: **`Built by cad/build_gen6.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.`**
+
+| Parameter | Value | Units |
+|---|---:|---|
+| `section_length_mm` | 39.7 | mm |
+| `section_start_mm` | 2140.3 | mm |
+| `thrust_constant_N_per_kA_m` | 10.5386 | mm |
+| `sheet_current_A_per_m` | 90000.0 | mm |
+| `force_N` | 948.0 | N |
+| `authority_m_s` | 0.323 | mm |
+| `energy_per_correction_J` | 37.7 | mm |
+| `peak_mechanical_W` | 27820.0 | mm |
+| `added_mass_kg` | 0.34 | mm |
+

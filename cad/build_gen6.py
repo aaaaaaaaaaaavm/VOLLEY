@@ -51,6 +51,7 @@ STL_DIR = os.path.join(HERE, "stl")
 P = json.load(open(os.path.join(HERE, "parameters.json")))
 D = P["groups"]["gen6_drive"]
 S = P["groups"]["gen6_store"]
+T = P["groups"]["gen6_trim"]
 MAG = P["groups"]["magazine"]
 PAY = P["groups"]["payload_3u"]
 
@@ -88,6 +89,26 @@ def drive_tube():
     bore, wall, L = D["bore_mm"], D["tube_wall_mm"], D["stroke_mm"]
     return (cq.Workplane("YZ").circle(bore / 2 + wall).circle(bore / 2)
             .extrude(L + 60.0).translate((-30.0, 0, 0)))
+
+
+
+def trim_stator():
+    """ADR-033. A short stator at the muzzle end that corrects rather than throws.
+
+    It is energised only after the gas has finished, and its length is set by the +-3 sigma
+    authority A44 measured -- not by a force target. The magnet set it acts on rides the
+    carriage, which is why P34 and E35 come back with it.
+
+    The pulse store that feeds this is NOT modelled and NOT weighed: 37.7 J at 28 kW is
+    requirement C3 at a fiftieth of Gen5's energy, and ADR-033 falsifier 1 is that it weighs
+    more than the 0.340 kg section it serves.
+    """
+    bore, wall = D["bore_mm"], D["tube_wall_mm"]
+    L, x0 = T["section_length_mm"], T["section_start_mm"]
+    belt_t = 6.0                      # radial depth of the winding, over the tube wall
+    return (cq.Workplane("YZ")
+            .circle(bore / 2 + wall + belt_t).circle(bore / 2 + wall)
+            .extrude(L).translate((x0, 0, 0)))
 
 
 def carriage():
@@ -150,7 +171,8 @@ def magazine_cassette():
             .faces(">Z").shell(-4.0))
 
 
-PARTS = [("Drive_Tube", drive_tube, True), ("Carriage", carriage, True),
+PARTS = [("Drive_Tube", drive_tube, True), ("Trim_Stator", trim_stator, True),
+         ("Carriage", carriage, True),
          ("Chamber", chamber, True), ("Reservoir", reservoir, True),
          ("Stage_Rail", stage_rail, True), ("Magazine_Cassette", magazine_cassette, True)]
 
@@ -160,6 +182,8 @@ def check():
     fails = []
     v_ch = math.pi * 60.0 ** 2 * (S["chamber_volume_l"] * 1e6 / (math.pi * 60.0 ** 2)) / 1e6
     v_res = math.pi * 90.0 ** 2 * (S["reservoir_volume_l"] * 1e6 / (math.pi * 90.0 ** 2)) / 1e6
+    v_trim = math.pi * ((D["bore_mm"] / 2 + D["tube_wall_mm"] + 6.0) ** 2
+                        - (D["bore_mm"] / 2 + D["tube_wall_mm"]) ** 2) * T["section_length_mm"]
     checks = [
         ("chamber volume", v_ch, S["chamber_volume_l"], 1e-6),
         ("reservoir volume", v_res, S["reservoir_volume_l"], 1e-6),

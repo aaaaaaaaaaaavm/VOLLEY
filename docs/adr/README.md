@@ -61,6 +61,7 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | [030](030-apply-the-depth-resolved-thrust-constant.md) | Apply the depth-resolved K_t and the three decisions beside it; **moves the baseline** | Accepted | I |
 | [031](031-four-repositories-not-two-phases.md) | Four repositories by role, replacing the two-phase model | Accepted | — |
 | **[032](032-gen6-stage-integrated-gas-store.md)** | **Gen6 is a stage-integrated, payload-direct, gas-driven deployer; supersedes the Gen6 of ADR-029** | Accepted | — |
+| **[033](033-gen6-trim-stage.md)** | **Gen6 gains a motor that steers rather than throws — adopted with its pulse store unweighed (P77)** | Accepted | I |
 
 Every decision in `DECISION_LOG.md` appears above. ADRs 012-018 record decisions that were
 never written down anywhere before.

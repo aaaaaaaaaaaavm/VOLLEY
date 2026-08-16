@@ -29,7 +29,7 @@ descends from was measured off its solids.
 | **How it was built** | by hand, nine Fusion documents | **generated** from `cad/parameters.json` | generated from the same file |
 | **Committed STEP** | **none — P43** | eight parts | six parts |
 | **Reproducible from a clean clone** | no | **yes, byte-identically** | **yes, byte-identically** |
-| **Drive** | linear synchronous motor | linear synchronous motor | **cold gas, closed adiabatic expansion** |
+| **Drive** | linear synchronous motor | linear synchronous motor | **cold gas for energy, a 39.7 mm stator for control** ([ADR-033](adr/033-gen6-trim-stage.md)) |
 | **Moving mass recovered** | reusable sled | reusable sled | **carriage, not recovered** |
 | **Energy store** | supercapacitor bank | supercapacitor bank | **2 L chamber at 50 bar** |
 | **Arrest** | eddy brake | eddy brake | **none — nothing to stop** |
@@ -38,7 +38,7 @@ descends from was measured off its solids.
 | **Stroke** | 1.3 m accelerating, release at 1.5 m | same | **2.18 m** |
 | **Dry mass** | — | **126.6 kg** | 11.45 kg added, plus ~5.4 kg of store |
 | **Per 3U satellite** | — | **10.547 kg dry** | **1.403 kg added** — and **1.403–3.271** once the stage credit is read hostilely (**P68**) |
-| **Velocity control** | — | designed loop, **0.0274 m/s at 3σ** | **1.113 % at 3σ**, 93.4 % of it seal friction (**P67**) |
+| **Velocity control** | — | designed loop, **0.0274 m/s at 3σ** | **1.113 % open-loop**, 93.4 % of it seal friction (**P67**); **0.0274 m/s with the trim stage**, on a pulse store nobody has weighed |
 
 **Read the last two rows together.** Gen6 is better on velocity and on added mass per satellite,
 and **worse on the thing the product is sold on.** Gen5 commanded velocity through a closed loop

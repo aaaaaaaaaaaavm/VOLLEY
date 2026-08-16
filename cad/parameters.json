@@ -337,6 +337,20 @@
       "first_fill_s": 4.14,
       "gas": "nitrogen",
       "reservoir_volume_conduction_l": 8.95
+    },
+    "gen6_trim": {
+      "_document": "Built by cad/build_gen6.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.",
+      "_source": "A48 bands 2-4 and 6-7. The section length is the +-3 sigma authority of A44's measured dispersion at Gen5's sheet current and A2's depth-resolved Kt. The PULSE STORE THAT FEEDS IT IS NOT SIZED -- 37.7 J at 28 kW, ADR-033 falsifier 1.",
+      "section_length_mm": 39.7,
+      "section_start_mm": 2140.3,
+      "thrust_constant_N_per_kA_m": 10.5386,
+      "sheet_current_A_per_m": 90000.0,
+      "force_N": 948.0,
+      "authority_m_s": 0.323,
+      "energy_per_correction_J": 37.7,
+      "peak_mechanical_W": 27820.0,
+      "added_mass_kg": 0.34,
+      "pulse_store_kg": null
     }
   },
   "documents": {

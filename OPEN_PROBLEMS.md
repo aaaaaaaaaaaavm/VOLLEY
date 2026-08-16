@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **111 numbered entries, of which 44 are live.** Every entry carries a `Status:` line written by
+> **112 numbered entries, of which 45 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3347,6 +3347,41 @@ why it was wrong. Precedent: A40 band 1, where the same class of error was logge
 energy. Whether that store weighs grams or kilograms **is not answered by A48**, because pulse
 hardware scales with current rather than energy. That is the question that decides the idea and it
 needs its own bands.
+
+### P77. The trim stage is adopted with its pulse store unweighed: HIGH, NEW 2026-08-16
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[ADR-033](docs/adr/033-gen6-trim-stage.md) falsifier 1, recorded here so it is a defect and not
+only a caveat inside a decision.**
+
+The trim stage corrects **±0.323 m/s** for **37.7 J**, delivered over **39.7 mm** in **1.4 ms** —
+which is **28 kW**. That is requirement **C3**, *the energy arrives during the shot*, the one A35
+prices at **26.35 kg** and ADR-032 deleted.
+
+**At a fiftieth of Gen5's shot energy. But pulse hardware scales with current, not energy**, and
+the current is set by the 948 N the section develops, which is Gen5's sheet current. **Nothing
+has weighed the store, the switch or the conductors.**
+
+| | |
+|---|---:|
+| Trim section, weighed | **0.340 kg** |
+| Pulse store feeding it | **unweighed** |
+| `cad/parameters.json` → `gen6_trim.pulse_store_kg` | **null**, deliberately |
+
+**Why this is a defect rather than a to-do.** [A39](validation/A39_store_trade.md) chose gas over
+a spring while assuming 50 bar held at the piston throughout — **a regulator it never named** —
+and [A40](validation/A40_blowdown_transient.md) killed that implementation at **14.16 m/s against
+a 30 m/s band**. **Adopting a store before pricing its hardware is a mistake this project has
+already made once**, and ADR-033 makes it knowingly because the claim is being made now.
+
+**What would close it.** Size the pulse chain for 37.7 J at 28 kW — store, switch, conductors —
+and weigh it. **If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it
+corrects** and ADR-033 should be reversed.
+
+**And a cheaper outcome that would close it for free.** **P67** — measure the seal friction. If it
+is small, the dispersion the stage exists to correct is not there, and neither the stage nor its
+store is needed.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

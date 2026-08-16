@@ -343,7 +343,7 @@ meeting it. A criterion that no longer applies has not been passed.
 | **4. Tip-off** | modelled at 85.0 N of cradle preload, mechanism absent | **A38: raising acceleration does not make it worse.** Preload is now **201.674 N per contact**, still releasing inside **≤ 1 N** | **Not demonstrated.** The mechanism still does not exist |
 | **5. Attitude rate at firing** | quantified | unchanged in kind; the indexing mass move is the same problem on a larger vehicle | NEEDS SOURCE: not re-run at Gen6 |
 | **6. Host recoil** | 64.1 N·s per shot | higher, in proportion to the exit velocity | NEEDS SOURCE: no Gen6 recoil figure is computed anywhere |
-| **7. Is the Δv worth anything** | 16.029 m/s | **30.535 m/s** on the selected A41 point | The one row Gen6 improves by doing more, not less |
+| **7. Is the Δv worth anything** | 16.029 m/s | **30.535 m/s** on the selected A41 point | The one row Gen6 improves by doing more, not less. **ADR-033 restores the *commandability* the Δv is sold on** |
 
 **Three rows say NEEDS SOURCE, and they are not bookkeeping.** Envelope, attitude rate and recoil
 were all quantified for Gen5 and none has been recomputed for the architecture now carried as the

@@ -28,7 +28,7 @@ work's own claims, and nothing here has been built, fired or measured.
 | **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
 | **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
 | **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
-| **[The defect register](OPEN_PROBLEMS.md)** | 111 numbered entries, 44 live |
+| **[The defect register](OPEN_PROBLEMS.md)** | 112 numbered entries, 45 live |
 | **[One page](SUMMARY.md)** | If you only read one file |
 | **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
 
@@ -269,19 +269,32 @@ Gen6.** That is confusing enough to state plainly rather than leave a reader to 
 | **How it was built** | nine Fusion documents | script, from [`cad/parameters.json`](cad/parameters.json) | same |
 | **Committed STEP** | **none — P43** | eight parts | six parts |
 | **Rebuildable byte-identically** | no | **yes** | **yes** |
-| **Drive** | linear motor | linear motor | **cold gas** |
+| **Drive** | linear motor | linear motor | **cold gas, with a motor that steers** |
 | **Energy store** | supercapacitor bank | supercapacitor bank | **2 L chamber at 50 bar** |
 | **Arrest** | eddy brake | eddy brake | **none — nothing to stop** |
 | **Structure** | its own track | its own track | **a rail the host stage provides** |
 | **Exit velocity** | *not established* | **16.029 m/s at 10.07 g** | **30.535 m/s at 25 g** (29.009 with friction) |
-| **Dispersion, 3σ** | — | **0.0274 m/s** | **1.113 %** |
-| **Per 3U satellite** | — | 10.547 kg dry | 1.403–3.271 kg added |
+| **Dispersion, 3σ** | — | **0.0274 m/s** | **1.113 % open-loop; 0.0274 m/s with the trim stage** ([ADR-033](docs/adr/033-gen6-trim-stage.md)) |
+| **Per 3U satellite** | — | 10.547 kg dry | **1.431–3.299 kg added**, plus a pulse store nobody has weighed |
 
-**Gen6 is better on velocity and mass, and worse on the thing this is sold on.** Gen5 commanded
-velocity through a loop designed against phase margin; Gen6's shot is **133 ms of open-loop
-expansion** whose spread is **93.4 % a seal friction nobody has measured** (**P67**). And three of
-Gen5's crossed kill criteria are **dissolved by Gen6 rather than passed** — a criterion that no
-longer applies has not been met.
+**Gen6 traded away the thing this is sold on, and [ADR-033](docs/adr/033-gen6-trim-stage.md)
+buys it back.** Gen5 commanded velocity through a designed loop; Gen6's shot is **133 ms of
+open-loop expansion** whose spread is **93.4 % a seal friction nobody has measured** (**P67**).
+**A 39.7 mm stator at the muzzle — 1.822 % of the stroke, 0.340 kg — corrects the velocity the gas
+actually produced**, because a loop reading a *measured* velocity does not care that gas set it.
+**Gas supplies the energy; the motor supplies the control.**
+
+> **It is adopted on a number nobody has weighed, and that is stated rather than buried.** The
+> correction is **37.7 J at 28 kW** — requirement **C3**, *the energy arrives during the shot*,
+> which A35 prices at 26.35 kg and ADR-032 deleted. At a fiftieth of Gen5's energy, but **pulse
+> hardware scales with current, not energy.** That is ADR-033's first falsifier, and **the
+> precedent is A39**, which chose gas while assuming a regulator it never named and was killed by
+> A40 at 14.16 m/s against a 30 m/s band.
+
+**And three of Gen5's crossed kill criteria are dissolved by Gen6 rather than passed** — a
+criterion that no longer applies has not been met. **[A47](validation/A47_gen6_fmea.md) then found
+the reliability gain is incidental**: deleting six shared elements removed one, and **a per-cell
+backup ejector is worth six times the entire architecture change** (**P75**).
 
 <table>
 <tr>
@@ -304,7 +317,7 @@ flowchart TD
 
     A1["<b>2021 · Coilgun</b><br/><i>question: how hard can we throw it?</i><br/>capacitors discharge into coils,<br/>field gradient pulls the payload"]
     A2["<b>mid-2025 · Linear synchronous motor</b><br/><i>question: how precisely can we throw it?</i><br/>current commanded against measured position,<br/>magnets ride a reusable sled, eddy brake recovers it"]
-    A3["<b>2026-08-14 · Cold gas on a stage rail</b><br/><i>question: what does the machine need to exist at all?</i><br/>a pre-charged chamber fires the payload directly,<br/>velocity set by charge pressure, nothing recovered"]
+    A3["<b>2026-08-14 · Cold gas on a stage rail</b><br/><i>question: what does the machine need to exist at all?</i><br/>a pre-charged chamber fires the payload directly,<br/>nothing recovered<br/><b>2026-08-16 · plus a motor that steers</b><br/><i>gas for the energy, a 39.7 mm stator for the control</i>"]
 
     P --> A1
     A1 -->|"a coilgun cannot command a velocity,<br/>and commanding it is the product"| A2
@@ -331,7 +344,7 @@ and threw away the previous answer's central assumption.
 |---|---|---|---|
 | **Coilgun** | throw it fast | capacitor bank discharges into coils; the payload is pulled by a field gradient | **velocity you can command.** A coilgun's exit speed is set by the discharge, not by a loop |
 | **Linear motor** | throw it *accurately* | a synchronous machine drives current against measured position; magnets ride a **reusable sled**, an eddy brake recovers it | **simplicity.** Every subsystem that follows — bank, power electronics, brake, return stroke — exists to serve the sled. A35 prices that at **11.54 kg**, against **26.35 kg** for insisting the energy arrive *during* the shot |
-| **Cold gas** | throw it with *the least machine* | a **2 L chamber at 50 bar** fires the payload along a rail the spent stage already is; **nothing is recovered** | **the control loop.** Velocity is commanded by charge pressure before the shot, not corrected during it — **P67** |
+| **Cold gas + trim** | throw it with *the least machine*, then steer it | a **2 L chamber at 50 bar** fires the payload along a rail the spent stage already is; **nothing is recovered**; a **39.7 mm stator** corrects the result | **the pulse, partly.** The trim stage is 37.7 J at 28 kW — C3 returning at a fiftieth of the energy, on hardware nobody has weighed |
 
 **The third row is the honest cost of the third column.** Gen5 held 0.0274 m/s at 3σ because a
 loop corrected the shot as it happened. Gen6 has 133 ms of open-loop expansion and **1.113 %**,
