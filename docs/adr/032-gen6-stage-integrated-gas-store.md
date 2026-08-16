@@ -118,7 +118,7 @@ will not.
 **Kill criterion 4 is not declared passed.** A38 establishes that raising the acceleration does not
 make tip-off worse. It remains *modelled, not demonstrated*, on a mechanism that does not exist.
 
-**Nothing here is measured.** Forty-one analyses, one hundred register entries, and no hardware.
+**Nothing here is measured.** Forty-two analyses, one hundred and one register entries, and no hardware.
 `docs/PROVENANCE.md` says so and continues to.
 
 ## Alternatives, and why not
@@ -151,6 +151,12 @@ the moat, and BOLLEY is the evidence for that rather than the alternative to it.
    1 mm orifice, against a 10 s window. Not the constraint.** What A42 found instead is that
    A41's reservoir is sized on gas the bottle cannot give back — **P64**, a store correction of
    about 1.3 kg that leaves added mass per satellite at 1.34–1.46 kg.
+   **Amended 2026-08-16 by [A43](../../validation/A43_reservoir_thermal.md), which closed P64 and
+   moved it the other way.** Conduction through stagnant nitrogen gives a **17 460 s** time
+   constant against a **1200 s** cadence, so the bottle does not re-equilibrate: infrared passes
+   straight through a homonuclear diatomic and free fall removes convection. **The design
+   reservoir is 9.55 L and added mass per satellite is 1.403 kg.** Both of A42's bracket
+   endpoints proved unreproducible — **P66**.
 3. **No launch provider will keep a stage alive past passivation** on terms that do not require
    spending its disposal propellant.
 4. **The unread voice-coil deployer (P57)** already claims the programmable-velocity result on a

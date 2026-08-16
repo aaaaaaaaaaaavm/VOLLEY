@@ -11,7 +11,7 @@ has all three.
 > ## The one sentence that governs everything below
 >
 > **Nothing has been built, fired, or measured at any scale.** That is `OPEN_PROBLEMS.md` **E4**,
-> it is still open, and no amount of the analysis below changes it. Forty-one validation runs
+> it is still open, and no amount of the analysis below changes it. Forty-two validation runs
 > exist. **Zero measurements exist.** Every number in this repository is a model output, and the
 > field model has only ever been checked *analytic against analytic* — a closed-form wave model
 > against magpylib, two implementations of the same physics.
@@ -130,7 +130,7 @@ energy store are all deleted rather than improved. Their rows are kept because G
 that was actually analysed, and deleting the record of a superseded design would remove the only
 measured thing this project has.
 
-**Gen6 is younger than Gen5 by every measure**: eight run sheets against forty-one for the
+**Gen6 is younger than Gen5 by every measure**: nine run sheets against forty-two for the
 programme, one CAD generation, no packaging, no thermal model, and three parts that have no
 geometry at all.
 
@@ -148,7 +148,7 @@ geometry at all.
 |---|---|
 | **Design** | **Specified.** A 2 L chamber charged to 50 bar, fired as a closed adiabatic expansion, giving **30.535 m/s at 25 g**. There is no regulator — A41 closed P63 by deleting the component rather than pricing it |
 | **Analysis** | **Four runs, one failed band.** A39 chose gas over a spring; **A40 killed the fixed-orifice implementation** at 14.16 m/s against a 30 m/s band; A41 passed eight of eight; **A42 failed band 3** — the reservoir is sized on gas the bottle cannot give back, and runs out at shot seven of twelve |
-| **Blocked by** | **Computation, and it is the one open number.** The store is **4.67 kg isothermal against 6.01 kg adiabatic**, and a thermal model of the reservoir between shots is the only term separating them. **P64** |
+| **Blocked by** | **Nothing computational — A43 closed it on 2026-08-16.** Conduction through stagnant nitrogen gives a **17 460 s** time constant against a **1200 s** cadence, so the bottle does not re-equilibrate and the design reservoir is **9.55 L** on a **5.38 kg** store. P64 is resolved; **P66** records that both of A42's bracket endpoints were unreproducible. What remains is **metal** |
 
 ### The cradle — the part that does not exist
 
@@ -193,9 +193,9 @@ the claim "everything computable is done" is **not yet true**.
 
 The specific things that still need computing, in the order they matter:
 
-1. **P64's reservoir thermal model.** The only open number in the architecture now carried as the
-   design target, worth about 1.3 kg of store, and it gates the velocity-control work behind it.
-2. **Gen6 velocity dispersion.** The claim the project sells, unmodelled in the current design.
+1. **Gen6 velocity dispersion.** The claim the project sells, unmodelled in the current design —
+   and now the first item, because A43 closed P64 on 2026-08-16 and the reservoir temperature it
+   needed as an input is settled.
 3. **A2 band 4** — a 3-D FEM solve, so K<sub>t</sub> has been checked by a method that solves a
    field equation. Everything downstream rests on it, and P46 should not be applied without it.
 4. **The brake's magnetic sizing**, and P28. *Gen5 only; Gen6 has no brake.*

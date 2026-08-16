@@ -87,4 +87,83 @@ seal, friction and gas-budget predictions.
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Seven of eight bands pass. The one that fails is the one that was checking
+somebody else's arithmetic, and it found it wrong.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | instant relaxation reproduces A42's 7.65 L within 5 % | **8.25 L, 7.8 % off** | **FAIL** |
+| 2 | no relaxation requires strictly more | 9.55 L against 8.25 L | **PASS** |
+| 3 | monotonically non-increasing in `h` | monotone | **PASS** |
+| 4 | every solved point within 6.0 – 15.0 L | 8.25 – 9.55 L | **PASS** |
+| 5 | minimum gas temperature ≥ 150 K | **201.9 K** | **PASS** |
+| 6 | store at the conservative end ≤ 12.55 kg | **5.38 kg** | **PASS** |
+| 7 | added mass per satellite there ≤ 2.0 kg | **1.403 kg** | **PASS** |
+| 8 | orifice 0.5 and 2.0 mm move it by ≤ 2 % | **0.00 %** | **PASS** |
+
+### The sweep
+
+| h (W/m²K) | Reservoir | τ | T_min | Store | Per satellite |
+|---:|---:|---:|---:|---:|---:|
+| **0** — no relaxation | **9.55 L** | ∞ | 201.9 K | 5.38 kg | 1.403 kg |
+| 0.1 | 9.30 L | 56 442 s | 212.9 K | 5.29 kg | 1.395 kg |
+| **0.3** — *conduction only* | **8.95 L** | 18 575 s | 230.6 K | **5.16 kg** | **1.384 kg** |
+| 1.0 | 8.45 L | 5 467 s | 259.6 K | 4.97 kg | 1.369 kg |
+| 3.0 | 8.30 L | 1 811 s | 274.3 K | 4.92 kg | 1.364 kg |
+| 10 – ∞ | **8.25 L** | ≤ 542 s | 276.9 K | 4.90 kg | 1.362 kg |
+
+### The answer: the bottle does not warm back up
+
+**Conduction through stagnant nitrogen gives h = 0.326 W/m²K at this geometry, and τ = 17 460 s
+against a 1200 s cadence — fourteen and a half times longer than the wait between shots.**
+
+**[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md) and [A42](A42_fill_window.md) both
+say the truth sits nearer the isothermal figure. It does not.** It sits at the other end, and the
+reason is that the two paths that would carry heat into the gas are both absent in this
+application: nitrogen is a homonuclear diatomic and does not absorb infrared, so the wall cannot
+radiate to it, and free fall removes buoyancy-driven convection. **Conduction across 80 mm of
+stagnant gas is all that is left.**
+
+**The design number is 9.55 L**, the no-relaxation case, carried for the same reason ADR-032 gave
+for carrying the adiabatic figure before: it is the conservative end and this run says so. The
+physical estimate is **8.95 L**.
+
+### Band 1, and what it caught
+
+**A42's 7.65 L is not reproducible.** Carrying mass and temperature as the state and letting the
+gas fully re-equilibrate gives **8.25 L**.
+
+**A42's 11.25 L is not reproducible either, and it is wrong in the other direction.** A42 carried
+pressure across shots and recomputed mass as `p·V/(R·T₀)` at each shot start. Gas that has cooled
+adiabatically is *denser* than that at the same pressure, so the bookkeeping **discarded mass that
+was really there** and demanded a bigger bottle than the physics does. The true no-relaxation
+figure is **9.55 L**.
+
+> **So the bracket P64 declared was wrong at both ends.** Not 7.65 – 11.25 L but **8.25 – 9.55 L**,
+> a spread of 1.30 L rather than 3.60, and **the answer sits at the top of it rather than the
+> bottom.** The direction of the correction was right; its size and its resolution were not.
+> Recorded as **P66**, because those two numbers are in `cad/parameters.json`, in ADR-032 and in
+> A42's own result table.
+
+### The predictions
+
+All three held, which has not happened before in this project.
+
+1. **τ long against the cadence, answer nearer adiabatic** — 17 460 s against 1200 s, and the
+   design number is the no-relaxation one. *This contradicted ADR-032 and P64 and it was right.*
+2. **Temperature excursion in tens of kelvin, not hundreds** — 98 K at the adiabatic extreme,
+   which is the top of "tens" and only just held; **69 K** at the conduction point.
+3. **Band 8 passes** — 0.00 %. The required reservoir is set by usable gas above the charge
+   pressure, exactly as A42 found for flow area.
+
+## What this run does not do
+
+- **No wall thermal mass.** The vessel is treated as an infinite reservoir at 300 K. Including it
+  would slow recovery further, so this is optimistic in the direction that matters.
+- **No forced circulation.** A fan or a recirculation loop would move the answer toward the
+  isothermal end, and would be the way to buy the 0.60 L back if it were ever worth the hardware.
+- **No gas recovery from the fired chamber**, which still vents 43 bar of a 2 L volume every shot
+  and is modelled nowhere.
+- **k for nitrogen is taken at 300 K and 1 bar.** It rises with pressure, which moves h up; the
+  sweep spans three decades, so the conclusion does not turn on the constant.
+- **Nothing here is measured.**

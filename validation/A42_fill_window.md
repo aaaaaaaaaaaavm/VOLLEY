@@ -118,6 +118,15 @@ bottle to re-equilibrate with its surroundings.
 model-dependent is the size of the correction, not its direction, and **the truth sits nearer the
 isothermal end** at this cadence. Recorded as **P64**.
 
+> **Annotated 2026-08-16 by [A43](A43_reservoir_thermal.md). This run's bands stand as declared and
+> its result is left as the record of what it found — but two numbers in the table above are
+> superseded and neither is reproducible.** Carrying mass and temperature as the state gives
+> **8.25 L isothermal and 9.55 L adiabatic**, not 7.65 and 11.25: the isothermal figure was never
+> computed by any script, and the adiabatic one came from recomputing reservoir mass at T₀ each
+> shot, which discards gas that is really there. **And the sentence in bold above is wrong.**
+> Conduction through stagnant nitrogen gives a 17 460 s time constant against a 1200 s cadence, so
+> the truth sits at the *adiabatic* end. **P66.**
+
 ### The prediction, and this one held
 
 Written in the declaration: *band 3 fails and everything else passes; fill is roughly 4 s at 1 mm;

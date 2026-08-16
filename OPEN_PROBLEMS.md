@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **100 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
+> **101 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -2892,8 +2892,8 @@ ceiling while gas grows linearly with chamber volume**, so 2 L to 4 L buys 1.0 m
 orifice reproduces A39's case. It does not — it reproduces the *unregulated* 200 bar case, which is
 **100 g** on this piston. The band stands as failed; what it exposed is this entry.
 
-### P64. A41's reservoir is sized on gas the bottle cannot give back: HIGH, NEW 2026-08-14
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P64. A41's reservoir is sized on gas the bottle cannot give back: HIGH, RESOLVED 2026-08-16 by A43
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
 
 **A42 band 3 missed.** [A41](validation/A41_precharged_chamber.md) sized the reservoir by dividing
 total charge by storage pressure — **6 L at 200 bar for twelve 100 bar·L charges.** That assumes
@@ -2921,6 +2921,48 @@ one, and say that it is.
 
 **And the cheap repair if the reservoir ever needs to shrink:** the fired chamber vents **43 bar of
 a 2 L volume every shot** and A41 models no recovery of it at all.
+
+> **Closed 2026-08-16 by [A43](validation/A43_reservoir_thermal.md), and the answer is the opposite
+> of the one this entry expected.** A thermal model of the reservoir between shots gives a
+> conduction-only time constant of **17 460 s against a 1200 s cadence** — the bottle does not
+> re-equilibrate, because nitrogen is transparent in the infrared and free fall removes convection.
+> **The design number is 9.55 L**, the no-relaxation case, against the 11.25 L this entry carried.
+> The sentence above reading *"the truth sits nearer the isothermal figure"* is **withdrawn**; it
+> sits at the other end. Added mass per satellite is **1.403 kg** at the conservative end and
+> **1.384 kg** at the physical one, against a 2.0 kg threshold that has not moved.
+
+### P66. Both ends of P64's bracket are unreproducible, and they are in the parameter file: MEDIUM, NEW 2026-08-16
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found by [A43](validation/A43_reservoir_thermal.md) band 1**, which was declared to check that the
+new formulation reproduced A42's isothermal figure before anything else in the run was believed. It
+does not, and neither does the other end.
+
+| | A42 carried | A43 computes | |
+|---|---:|---:|---|
+| Isothermal | **7.65 L** | **8.25 L** | 7.8 % low |
+| Adiabatic | **11.25 L** | **9.55 L** | 17.8 % high |
+
+**The two errors have different causes and only one of them is arithmetic.**
+
+**The isothermal figure was never computed by a script.** `analysis/fill_window.py` contains no
+isothermal path; 7.65 L appears in A42's result table, in `cad/parameters.json` as
+`reservoir_volume_isothermal_l`, and in ADR-032, without a generator. It is the only number in the
+Gen6 store that no file produces.
+
+**The adiabatic figure is a bookkeeping error.** A42 carried *pressure* across shots and recomputed
+mass at each shot start as `p·V/(R·T₀)`. Gas that has cooled adiabatically is denser than that at
+the same pressure, so the model **discarded mass that was really there** and asked for a bigger
+bottle than the physics does.
+
+**Corrected.** `cad/parameters.json` now carries **9.55 L** as the design reservoir with the
+conduction estimate and the isothermal limit beside it, each naming A43 as its source; the Gen6 CAD
+is regenerated against it; and ADR-032 and A42's result table are annotated rather than rewritten,
+because A42's bands stand as declared and its result is the record of what that run found.
+
+**What it does not change.** The *direction* of A42's correction was right — A41's 6 L bottle is
+undersized and runs out at shot seven. Band 3 fails at 8.25 L just as it failed at 11.25.
 
 ### P65. `register_status.py --check` never checked the generated result it was written to guard: MEDIUM, NEW 2026-08-16
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record

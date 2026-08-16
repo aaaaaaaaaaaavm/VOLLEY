@@ -1,0 +1,147 @@
+{
+  "analysis": "A43",
+  "bands_declared_commit": "bc572ad",
+  "note": "ideal gas, constant c_v, lumped reservoir, wall held at the structure temperature, chamber at T0 as A42 assumed. Conduction only: nitrogen is IR-transparent and free fall removes buoyancy convection. No forced circulation, no wall thermal mass, no gas recovery from the fired chamber.",
+  "cv_J_kgK": 742.0000000000002,
+  "cadence_s": 1200.0,
+  "k_n2": 0.026,
+  "conduction_h_W_m2K": 0.3261414005060035,
+  "conduction_tau_s": 17459.566186164728,
+  "sweep": [
+    {
+      "h": 0.0,
+      "v_l": 9.549999999999967,
+      "tau_s": Infinity,
+      "t_min_k": 201.93362682964184,
+      "store_kg": 5.380445242949359,
+      "per_sat_kg": 1.4025371035791132,
+      "last_fill_s": 14.391199999979799
+    },
+    {
+      "h": 0.1,
+      "v_l": 9.299999999999969,
+      "tau_s": 56441.58997912175,
+      "t_min_k": 212.87991454366255,
+      "store_kg": 5.287716309887858,
+      "per_sat_kg": 1.3948096924906548,
+      "last_fill_s": 14.085299999980512
+    },
+    {
+      "h": 0.3,
+      "v_l": 8.94999999999997,
+      "tau_s": 18574.822841746063,
+      "t_min_k": 230.5648029116191,
+      "store_kg": 5.157895803601756,
+      "per_sat_kg": 1.383991316966813,
+      "last_fill_s": 14.164899999980326
+    },
+    {
+      "h": 1.0,
+      "v_l": 8.449999999999973,
+      "tau_s": 5466.682186416861,
+      "t_min_k": 259.64024702882006,
+      "store_kg": 4.9724379374787535,
+      "per_sat_kg": 1.3685364947898961,
+      "last_fill_s": 15.337099999977594
+    },
+    {
+      "h": 3.0,
+      "v_l": 8.299999999999974,
+      "tau_s": 1811.380546853795,
+      "t_min_k": 274.3478852540113,
+      "store_kg": 4.916800577641853,
+      "per_sat_kg": 1.363900048136821,
+      "last_fill_s": 15.007699999978362
+    },
+    {
+      "h": 10.0,
+      "v_l": 8.249999999999975,
+      "tau_s": 542.32077244207,
+      "t_min_k": 276.8368977234804,
+      "store_kg": 4.898254791029553,
+      "per_sat_kg": 1.3623545659191294,
+      "last_fill_s": 15.434699999977367
+    },
+    {
+      "h": 30.0,
+      "v_l": 8.249999999999975,
+      "tau_s": 180.77359081402332,
+      "t_min_k": 276.86015553258324,
+      "store_kg": 4.898254791029553,
+      "per_sat_kg": 1.3623545659191294,
+      "last_fill_s": 15.430299999977377
+    },
+    {
+      "h": 100.0,
+      "v_l": 8.249999999999975,
+      "tau_s": 54.232077244207,
+      "t_min_k": 276.86029500729666,
+      "store_kg": 4.898254791029553,
+      "per_sat_kg": 1.3623545659191294,
+      "last_fill_s": 15.429799999977378
+    },
+    {
+      "h": Infinity,
+      "v_l": 8.249999999999975,
+      "tau_s": 0.0,
+      "t_min_k": 276.86029500729666,
+      "store_kg": 4.898254791029553,
+      "per_sat_kg": 1.3623545659191294,
+      "last_fill_s": 15.429799999977378
+    }
+  ],
+  "orifice_check_l": {
+    "0.5": 9.549999999999967,
+    "2.0": 9.549999999999967
+  },
+  "bands": [
+    {
+      "n": "1",
+      "band": "instant relaxation reproduces A42's 7.65 L within 5 %",
+      "got": "8.25 L, 7.8 % off",
+      "passed": false
+    },
+    {
+      "n": "2",
+      "band": "no relaxation requires strictly more than instant relaxation",
+      "got": "9.55 L against 8.25 L",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "required reservoir monotonically non-increasing in h",
+      "got": "monotone",
+      "passed": true
+    },
+    {
+      "n": "4",
+      "band": "every solved point lies within 6.0 - 15.0 L",
+      "got": "8.25 - 9.55 L",
+      "passed": true
+    },
+    {
+      "n": "5",
+      "band": "minimum gas temperature >= 150 K at the least favourable h",
+      "got": "201.9 K",
+      "passed": true
+    },
+    {
+      "n": "6",
+      "band": "store at the conservative end <= 12.55 kg",
+      "got": "5.38 kg",
+      "passed": true
+    },
+    {
+      "n": "7",
+      "band": "added mass per satellite there <= 2.0 kg",
+      "got": "1.403 kg",
+      "passed": true
+    },
+    {
+      "n": "8",
+      "band": "orifice 0.5 and 2.0 mm move the required reservoir by <= 2 %",
+      "got": "0.00 %",
+      "passed": true
+    }
+  ]
+}
