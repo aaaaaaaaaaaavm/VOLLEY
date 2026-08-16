@@ -118,7 +118,7 @@ will not.
 **Kill criterion 4 is not declared passed.** A38 establishes that raising the acceleration does not
 make tip-off worse. It remains *modelled, not demonstrated*, on a mechanism that does not exist.
 
-**Nothing here is measured.** Forty-six analyses, one hundred and six register entries, and no hardware.
+**Nothing here is measured.** Forty-six analyses, one hundred and seven register entries, and no hardware.
 `docs/PROVENANCE.md` says so and continues to.
 
 ## Alternatives, and why not

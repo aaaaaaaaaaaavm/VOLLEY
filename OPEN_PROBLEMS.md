@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **106 numbered entries, of which 42 are live.** Every entry carries a `Status:` line written by
+> **107 numbered entries, of which 42 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3184,6 +3184,34 @@ against `parameters.json` or against a rebuild of itself. **Both agreed, because
 the same script.** `parameters.json` had been checked against exactly one model built from it since
 the geometry was written. A second implementation is the only thing that could have found this,
 and it found it on the first run.
+
+### P72. The published renders advertised a velocity withdrawn twice: MEDIUM, CORRECTED 2026-08-16
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found by asking why a new render looked unlike the published set.**
+
+`cad/tools/prepare_renders.py` hardcoded **"16.388 m/s"** in three places — the hero caption, the
+arrow label, and the text-width measurement that positions it. It stayed there through
+[ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md), which moved exit velocity
+**16.388 → 16.029**, and through the propagation that corrected every document around it.
+
+**So the most-viewed artifact in this repository advertised a figure the repository had already
+withdrawn twice, on the front page, while every sentence beside it was right.**
+
+**No propagation could have caught it.** `tools/propagate_baseline.py` and its successors walk
+prose; this number was baked into a PNG, and **nothing in `tools/` reads an image.** It is the same
+blind spot as **P43** — a picture being wrong about the thing it depicts — and the same class as the
+GitHub About text, the published wiki and the issue tracker: **a surface that is published from
+here but not readable from here.**
+
+**Corrected.** The value is now read from `analysis/results/motor_results.json` at render time, so
+the annotation cannot diverge from the shot it describes. The set is regenerated from the
+uncropped frames in `cad/renders/source/`, which is why regenerating was possible at all.
+
+**What it does not fix.** These remain **Gen4** frames — geometry no file in `cad/step/` matches,
+with an export gate deliberately closed (**P43**). The velocity on them is now current; the
+machine in them still is not.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

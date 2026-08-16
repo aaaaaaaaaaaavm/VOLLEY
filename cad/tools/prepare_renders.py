@@ -24,9 +24,12 @@ WHAT IT CANNOT FIX, and needs a re-render in Fusion:
 Run:  python3 cad/tools/prepare_renders.py --src <dir> --out cad/renders
 """
 import argparse
+import json
 import os
 
 from PIL import Image, ImageDraw, ImageFont
+
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 PAD = 28                      # px of margin to leave around the cropped content
 TARGET_W = 1600               # publishing box, width
@@ -35,6 +38,16 @@ BG = (247, 248, 250, 255)
 INK = (17, 24, 39, 255)
 ACCENT = (11, 105, 212, 255)
 
+# The velocity drawn on the arrow and named in the hero caption, READ FROM THE RESULT rather
+# than typed here. It was hardcoded as "16.388 m/s" in three places and stayed there through
+# ADR-030, so the most-viewed artifact in this repository advertised a figure the repository
+# had withdrawn twice -- 16.388 -> 16.029 -- while every document around it was correct.
+# No propagation could have caught it: the tools walk prose, and this number is baked into a
+# PNG that nothing reads. P72.
+_SHOT = json.load(open(os.path.join(ROOT, "analysis", "results", "motor_results.json"),
+                       encoding="utf-8"))["shot"]
+V_EXIT = f"{_SHOT['v_exit']:.2f} m/s"
+
 # Per-render annotation.
 #
 # `dir` is which way the payload actually leaves IN THAT FRAME, and it is per-render because the
@@ -42,7 +55,7 @@ ACCENT = (11, 105, 212, 255)
 # fix exists to correct -- the first pass drew every arrow leftward and pointed brake.png's arrow
 # back into its own machine. Check each render before changing a direction here.
 SPEC = {
-    "hero_open":       dict(dir="left",  label="deployment: along the track axis, 16.388 m/s"),
+    "hero_open":       dict(dir="left",  label=f"deployment: along the track axis, {V_EXIT}"),
     "espa_interface":  dict(dir="left",  label="payload departs AWAY from the ESPA flange"),
     "brake":           dict(dir="right", label="sled arrested by the eddy brake; payload departs"),
     "sled_detail":     dict(dir="left",  label="reusable sled; the magnets never leave the machine"),
@@ -136,10 +149,10 @@ def prepare(src, dst, name):
         else:
             tip, tail = ox + int(flat.width * 0.95), ox + int(flat.width * 0.95) - span
             head = [(tip, ay), (tip - 24, ay - 13), (tip - 24, ay + 13)]
-            tx = tail - 16 - d.textlength("16.388 m/s", font=fv)
+            tx = tail - 16 - d.textlength(V_EXIT, font=fv)
         d.line([(tail, ay), (tip, ay)], fill=ACCENT, width=6)
         d.polygon(head, fill=ACCENT)
-        d.text((tx, ay - 17), "16.388 m/s", font=fv, fill=ACCENT)
+        d.text((tx, ay - 17), V_EXIT, font=fv, fill=ACCENT)
 
     out.convert("RGB").save(dst, "PNG", optimize=True)
     return out.size
