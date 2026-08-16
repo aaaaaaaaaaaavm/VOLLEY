@@ -15,7 +15,7 @@ different question and the answers compounded:
 
 | | | |
 |---|---|---|
-| **A35** | Every kilogram attributed to the requirement causing it | **49.23 kg — 58.2 % — survives every requirement deletion in all 64 corners.** The pulse is the largest single driver at 28.1 %, the mover second at 13.6 %, and an unmodified satellite costs **nothing** |
+| **A35** *(shares below are of the 84.53 kg rollup this decision was taken against; A46 moved it to 126.56 kg on 2026-08-16 and every share fell without a kilogram moving — the attributed masses are 26.35 kg for the pulse and 11.54 for the mover. **P73**)* | Every kilogram attributed to the requirement causing it | **49.23 kg — 58.2 % — survives every requirement deletion in all 64 corners.** The pulse is the largest single driver at 28.1 %, the mover second at 13.6 %, and an unmodified satellite costs **nothing** |
 | **A36** | Magazine density, the divisor A35 named | **Band 4 FAIL.** 2 kg is reached at N = 116, which does not package. The containment floor is **0.954 kg/satellite** |
 | **A37** | The stage as the deployer rather than its mounting surface | **29.75 kg deleted, 43.33 kg becomes stage structure, 11.45 kg added.** Added mass per satellite **1.608 kg** on a small kick-stage class |
 | **A38** | Does A34's cradle closure survive 2.4× the moment? | **It improves.** Settling 27.88 → 17.69 ms, residual still zero, and tip-off's ceiling is **30.9 g** against a 25 g cap |
@@ -118,7 +118,7 @@ will not.
 **Kill criterion 4 is not declared passed.** A38 establishes that raising the acceleration does not
 make tip-off worse. It remains *modelled, not demonstrated*, on a mechanism that does not exist.
 
-**Nothing here is measured.** Forty-six analyses, one hundred and seven register entries, and no hardware.
+**Nothing here is measured.** Forty-six analyses, one hundred and eight register entries, and no hardware.
 `docs/PROVENANCE.md` says so and continues to.
 
 ## Alternatives, and why not

@@ -75,6 +75,10 @@ cradle mechanism does not exist, and no provider has agreed to lend a stage.
 
 ## Nine entries stopped on 2026-08-14, and for a reason none of them anticipated
 
+> *A35's percentages quoted below are of the 84.53 kg rollup they were computed at. A46 moved it
+> to 126.56 kg on 2026-08-16; the attributed kilograms are unchanged and the ordering is unchanged.
+> **P73.***
+
 **The vault's one rule is that every entry states why it stopped.** These nine stopped the same
 way, and the reason is worth stating once rather than nine times: **[ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
 deletes the subsystem each of them improves.** Not one was refuted. Each was a correct optimisation

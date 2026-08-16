@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **107 numbered entries, of which 42 are live.** Every entry carries a `Status:` line written by
+> **108 numbered entries, of which 42 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3212,6 +3212,42 @@ uncropped frames in `cad/renders/source/`, which is why regenerating was possibl
 **What it does not fix.** These remain **Gen4** frames — geometry no file in `cad/step/` matches,
 with an export gate deliberately closed (**P43**). The velocity on them is now current; the
 machine in them still is not.
+
+### P73. A35's shares are percentages of a rollup that has since moved: MEDIUM, CORRECTED 2026-08-16
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found while drawing the architecture evolution on the front page, by trying to put two of A35's
+figures in one sentence and noticing they had different denominators.**
+
+[A35](validation/A35_constraint_ledger.md) attributed every kilogram of the ledger to the
+requirement causing it and published the result as **percentages of dry mass** — the pulse at
+**28.1 %**, the mover at **13.6 %**, and **49.23 kg, 58.2 %,** surviving every deletion.
+[A46](validation/A46_enclosure_buildup.md) then moved the rollup from **84.53 to 126.56 kg**.
+
+**Every one of those percentages fell without a single kilogram moving.**
+
+| Requirement | Attributed | Share of the old rollup | Share of the new |
+|---|---:|---:|---:|
+| **C3**, the energy arrives during the shot | **26.35 kg** | 28.1 % | **20.8 %** |
+| **C2**, a reusable mover carries the magnets | **11.54 kg** | 13.6 % | **9.1 %** |
+| C5, the deployer carries its own store | 6.50 kg | — | 5.1 % |
+
+**The argument is unharmed and slightly stronger.** The pulse is still the largest single driver
+and still the reason Gen6 exists; the ratio it beats the mover by went from **2.07× to 2.28×**.
+What is wrong is only the *form* the result was published in.
+
+**Corrected.** Where this is being newly written, the front page quotes **kilograms**, which are what
+A35 measured and which do not move when the denominator does.
+
+**Not rewritten where it is a record.** [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)
+and `docs/VAULT.md` keep the percentages they were decided against, each now annotated with the
+rollup they were computed at. A decision records the numbers it was taken on.
+
+**The general lesson, and it is not specific to A35.** *A share is two numbers pretending to be
+one.* Any figure published as a percentage of a rollup goes stale when the rollup moves, silently,
+without the analysis being re-run and without any check firing — `make_baseline.py` guards the 23
+values it knows, and a derived percentage sitting in prose is not one of them.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

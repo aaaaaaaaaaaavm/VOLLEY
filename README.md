@@ -28,7 +28,7 @@ work's own claims, and nothing here has been built, fired or measured.
 | **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
 | **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
 | **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
-| **[The defect register](OPEN_PROBLEMS.md)** | 107 numbered entries, 42 live |
+| **[The defect register](OPEN_PROBLEMS.md)** | 108 numbered entries, 42 live |
 | **[One page](SUMMARY.md)** | If you only read one file |
 | **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
 
@@ -292,6 +292,86 @@ longer applies has not been met.
 </table>
 
 **[The full comparison, with what each generation fixed and what it cost →](docs/GENERATIONS.md)**
+
+### What each change actually changed
+
+**The three architectures are not three ways to build one machine. They are three different
+readings of what the problem is.**
+
+```mermaid
+flowchart TD
+    P["<b>The problem, unchanged since 2021</b><br/>a rideshare CubeSat inherits an orbit<br/>and a 1-2 m/s spring cannot alter it"]
+
+    A1["<b>2021 · Coilgun</b><br/><i>question: how hard can we throw it?</i><br/>capacitors discharge into coils,<br/>field gradient pulls the payload"]
+    A2["<b>mid-2025 · Linear synchronous motor</b><br/><i>question: how precisely can we throw it?</i><br/>current commanded against measured position,<br/>magnets ride a reusable sled, eddy brake recovers it"]
+    A3["<b>2026-08-14 · Cold gas on a stage rail</b><br/><i>question: what does the machine need to exist at all?</i><br/>a pre-charged chamber fires the payload directly,<br/>velocity set by charge pressure, nothing recovered"]
+
+    P --> A1
+    A1 -->|"a coilgun cannot command a velocity,<br/>and commanding it is the product"| A2
+    A2 -->|"A35 attributed every kilogram to its cause:<br/>the reusable mover costs 11.54 kg,<br/><b>the shot-time pulse costs 26.35 kg</b>"| A3
+
+    V(["<b>VOLLEY-lab</b> · the vault<br/>nothing here was refuted"])
+
+    A1 -.->|"programmable velocity<br/>unreachable"| V
+    A2 -.->|"nine entries stopped at once:<br/>ADR-032 deletes the subsystem<br/>each of them improves"| V
+    A3 -.->|"rail drive rejected before adoption:<br/>measured transverse edge factor <b>0.0253</b>"| V
+
+    classDef live fill:#0b69d4,stroke:#083f80,color:#fff
+    classDef dead fill:#e9ecef,stroke:#adb5bd,color:#495057
+    classDef prob fill:#fff,stroke:#111,color:#111
+    class A3 live
+    class V dead
+    class P prob
+```
+
+**The arc is `how hard` → `how precisely` → `what can be deleted`.** Each step kept the problem
+and threw away the previous answer's central assumption.
+
+| | The approach | How the machine works | What it gave up |
+|---|---|---|---|
+| **Coilgun** | throw it fast | capacitor bank discharges into coils; the payload is pulled by a field gradient | **velocity you can command.** A coilgun's exit speed is set by the discharge, not by a loop |
+| **Linear motor** | throw it *accurately* | a synchronous machine drives current against measured position; magnets ride a **reusable sled**, an eddy brake recovers it | **simplicity.** Every subsystem that follows — bank, power electronics, brake, return stroke — exists to serve the sled. A35 prices that at **11.54 kg**, against **26.35 kg** for insisting the energy arrive *during* the shot |
+| **Cold gas** | throw it with *the least machine* | a **2 L chamber at 50 bar** fires the payload along a rail the spent stage already is; **nothing is recovered** | **the control loop.** Velocity is commanded by charge pressure before the shot, not corrected during it — **P67** |
+
+**The third row is the honest cost of the third column.** Gen5 held 0.0274 m/s at 3σ because a
+loop corrected the shot as it happened. Gen6 has 133 ms of open-loop expansion and **1.113 %**,
+and **93.4 % of that is a seal friction nobody has measured.**
+
+
+<sub><b>Those are kilograms, not percentages, and deliberately.</b> A35's shares were published as
+percentages of a 84.53 kg rollup; <a href="validation/A46_enclosure_buildup.md">A46</a> moved the
+rollup to 126.6 kg on 2026-08-16, so every percentage of dry mass fell without a single kilogram
+moving. <b>The attributed masses are what the run actually measured</b> and they do not move with
+the denominator. The ordering is unchanged and the margin widened: the pulse costs
+<b>2.28×</b> the mover, where at the old rollup it was 2.07×. <b>P73.</b></sub>
+
+### The branches that stopped — and why they are kept
+
+**[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) is the vault**, and its one rule is
+that every entry states why it stopped. **Not one of these was refuted.** Each is a correct
+analysis of a part that no longer exists, and a vault whose entries vanish when the design moves
+is a graveyard.
+
+| Branch | What it was | Why it stopped |
+|---|---|---|
+| **[PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-19_induction_drive_gen6.md)** · induction drive | the Gen6 that *was* adopted, 2026-08-13 | Superseded in a day. **The mover it spent its whole effort making lighter costs 11.54 kg, against 26.35 kg for the pulse it kept** |
+| **[PII-16](docs/GEN6_RAIL_DRIVE.md)** · satellite's own CDS rails as the motor secondary | 116 cm² of conductive rail every customer already owns | **Rejected before adoption.** A30 measured a transverse edge factor of **0.0253** |
+| **PII-1** · momentum-transfer release | the project's self-declared strongest idea | **Deleted by arithmetic it wrote itself.** Δv scales with the mover mass *M*; with no mover, M = 0 |
+| **PII-7** · a bank that can source the shot | four parallel strings, the fix for **P26** | **No bank.** The largest live defect the project carried, answered by 25–131 W of solar |
+| **[PII-11](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-11_deployable_track.md)** · deployable track | fold the 1.8 m track for launch | The stage is already deployed, already long and already straight |
+| **[PII-14](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md)** · cable-driven gondola | +49.7 % exit velocity in the same track | **The headline assumed zero rotating inertia.** Realistically +15 to +30 %, possibly zero |
+| **PII-2, -3, -4, -12, -17, -18** | ribbed chassis, two-layer stator, repackaged envelope, block commutation, departing mover, 0.25 kg shuttle | No sled, no stator, no envelope, no mover — **nine entries stopped on one day, for a reason none of them anticipated** |
+
+**Two got closer rather than stopped.**
+**[PII-8](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-8_free_flyer.md)**, the
+free-flyer, had airgap straightness over a deployed structure as its hardest problem — **Gen6 has
+no airgap.** And
+**[PII-9](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-9_lunar.md)**, the lunar case,
+never depended on this architecture at all.
+
+**[The full vault, with the close condition each entry must meet to come back →](docs/VAULT.md)**
+
+
 
 **Spin it in the browser:** [`cad/stl/EMOCD_Assembly_Gen3.stl`](cad/stl/EMOCD_Assembly_Gen3.stl)
 and [`cad/stl/EMOCD_Sled_Gen3.stl`](cad/stl/EMOCD_Sled_Gen3.stl), GitHub renders STL
