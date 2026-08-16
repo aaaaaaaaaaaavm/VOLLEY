@@ -11,7 +11,7 @@ has all three.
 > ## The one sentence that governs everything below
 >
 > **Nothing has been built, fired, or measured at any scale.** That is `OPEN_PROBLEMS.md` **E4**,
-> it is still open, and no amount of the analysis below changes it. Forty-two validation runs
+> it is still open, and no amount of the analysis below changes it. Forty-three validation runs
 > exist. **Zero measurements exist.** Every number in this repository is a model output, and the
 > field model has only ever been checked *analytic against analytic* — a closed-form wave model
 > against magpylib, two implementations of the same physics.
@@ -130,7 +130,7 @@ energy store are all deleted rather than improved. Their rows are kept because G
 that was actually analysed, and deleting the record of a superseded design would remove the only
 measured thing this project has.
 
-**Gen6 is younger than Gen5 by every measure**: nine run sheets against forty-two for the
+**Gen6 is younger than Gen5 by every measure**: ten run sheets against forty-three for the
 programme, one CAD generation, no packaging, no thermal model, and three parts that have no
 geometry at all.
 
@@ -170,11 +170,11 @@ geometry at all.
 
 **Stated as a list rather than left to be found**, in the order they bear on the claim:
 
-1. **Velocity control.** Gen5 had a designed loop and a **0.0274 m/s** dispersion at 3σ. Gen6 has
-   **A41 band 6 — an open-loop sensitivity of 0.499 % of velocity per 1 % of charge** — and no
-   sensor, no loop, no error budget, and `precharged.py`'s own header records that it models **no
-   temperature effect on charge**. *The product claim is commanded per-satellite velocity, and at
-   Gen6 that claim is unmodelled.*
+1. ~~**Velocity control.**~~ **Modelled 2026-08-16 by [A44](../validation/A44_gen6_dispersion.md),
+   and it failed two bands.** 3σ dispersion is **1.113 %** against a declared 0.5 %, and **93.4 %
+   of the variance is a seal friction nobody has measured** — a fivefold better transducer moves
+   the answer by 0.008 %. Chamber temperature cancels outright, which turns the thermal question
+   into a sequencing requirement. **P67**, and it is now a bench test rather than a computation.
 2. **Recoil**, which scales with the impulse, and the impulse has roughly doubled.
 3. **Envelope and packaging** on the stage.
 4. **Thermal**, including the expansion cooling that P64 turns on.
@@ -193,9 +193,9 @@ the claim "everything computable is done" is **not yet true**.
 
 The specific things that still need computing, in the order they matter:
 
-1. **Gen6 velocity dispersion.** The claim the project sells, unmodelled in the current design —
-   and now the first item, because A43 closed P64 on 2026-08-16 and the reservoir temperature it
-   needed as an input is settled.
+1. **Nothing, on the Gen6 store or its velocity.** A43 closed P64 and A44 modelled the
+   dispersion on 2026-08-16. **What Gen6 needs next is not computation** — it is a measured seal
+   friction (**P67**) and a cradle mechanism that does not exist.
 3. **A2 band 4** — a 3-D FEM solve, so K<sub>t</sub> has been checked by a method that solves a
    field equation. Everything downstream rests on it, and P46 should not be applied without it.
 4. **The brake's magnetic sizing**, and P28. *Gen5 only; Gen6 has no brake.*

@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **101 numbered entries, of which 39 are live.** Every entry carries a `Status:` line written by
+> **102 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -2987,6 +2987,44 @@ docstring. Two guards in this repository had the defect they exist to prevent.
 and compares against the committed file, and it names the fields that differ so the failure says
 what moved. Verified by reverting the file and confirming a non-zero exit. The stale counts are
 propagated to the front page, the register header and the wiki source.
+
+### P67. Gen6's precision rests on a seal friction nobody has measured, and its rated velocity excludes it: HIGH, NEW 2026-08-16
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A44](validation/A44_gen6_dispersion.md) bands 4 and 6 failed, and both failed on the same term.**
+
+| Term | 3σ alone | Share of variance |
+|---|---:|---:|
+| **Seal friction**, ±20 % of A41's allowance | **0.3115 m/s** | **93.4 %** |
+| Payload mass, ±0.5 % | 0.0725 m/s | 5.1 % |
+| Charge pressure, ±0.25 % FS | 0.0399 m/s | 1.5 % |
+
+**Two separate defects, and the second is the one that will be quoted wrongly.**
+
+**The precision claim.** Gen5 commanded velocity through a designed loop at **0.0274 m/s (3σ)**.
+Gen6 has no loop — the shot is a 133 ms open-loop expansion — so its spread is whatever the
+hardware's repeatability is, and **93.4 % of it is a seal friction that has never been measured,
+specified or designed.** A41 band 8 computed an *allowance* of **83.4 N**, meaning the machine
+tolerates that much; no run has ever said what the friction *is*. **A fivefold better pressure
+transducer moves the answer by 0.008 %**, so there is no instrumentation route to the claim.
+Dispersion is also worst where the setpoint is lowest — **2.290 % at 20 m/s** against 1.041 % at
+30 — which is exactly where a customer asking for a small trim would use it.
+
+**The rated velocity.** **30.535 m/s is a zero-friction number.** It is what `cad/parameters.json`
+carries as `exit_velocity_m_s` and what ADR-032 quotes. At A41's own full tolerable friction the
+same charge gives **29.009 m/s**, 5.00 % lower. Both are real — a ceiling and a floor — and
+neither should appear alone. The parameter file now carries both with its source naming this run;
+**the value is not silently changed**, because which of the two is the design point is a decision
+and not a correction.
+
+**What would close it.** A measured or supplier-bounded seal friction, with a shot-to-shot spread,
+for the actual piston seal at 50 bar in vacuum. That is a bench test on a component, not a
+calculation, and it is the second item after `docs/B1_ORDER.md` that changes the category of
+evidence rather than its degree.
+
+**What it does not touch.** Bands 1, 2, 3, 7 and 8 all pass. The architecture is not in question
+and the store is not affected.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

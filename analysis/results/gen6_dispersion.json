@@ -1,0 +1,134 @@
+{
+  "analysis": "A44",
+  "bands_declared_commit": "HEAD~1",
+  "note": "ideal gas, adiabatic closed expansion, Coulomb friction constant over the stroke, no blow-by, no valve dynamics, no residual pressure ahead of the piston. Pressure, mass and friction errors are independent Gaussians at the declared 3 sigma. Nothing measured.",
+  "n_mc": 200000,
+  "seed": 20260816,
+  "v_zero_friction": 30.5354015634284,
+  "sensitivity_pct_per_pct": 0.49875621120890273,
+  "temperature_spread_pct": 0.0,
+  "friction_cost_pct": 5.000000000000012,
+  "friction_N": 83.40371375447981,
+  "mean": 29.008178610688894,
+  "three_sigma": 0.3229615973366567,
+  "three_sigma_pct": 1.1133466932586118,
+  "contributions": {
+    "p_fs": {
+      "three_sigma": 0.0398524518535302,
+      "variance_pct": 1.5288870704254787
+    },
+    "m": {
+      "three_sigma": 0.07252885776835061,
+      "variance_pct": 5.063921821584601
+    },
+    "f": {
+      "three_sigma": 0.31149960337619437,
+      "variance_pct": 93.40719110798992
+    }
+  },
+  "dominant": "f",
+  "across_range": [
+    {
+      "setpoint": 20.0,
+      "p_bar": 26.324774178574664,
+      "mean": 19.998200660885296,
+      "three_sigma": 0.4580224553509251,
+      "pct": 2.2903183297224152
+    },
+    {
+      "setpoint": 22.5,
+      "p_bar": 32.02237044475855,
+      "mean": 22.49849506272771,
+      "three_sigma": 0.4084653312449957,
+      "pct": 1.8155229054483857
+    },
+    {
+      "setpoint": 25.0,
+      "p_bar": 38.3902721540229,
+      "mean": 24.99870158067583,
+      "three_sigma": 0.36932419800414845,
+      "pct": 1.4773735220297946
+    },
+    {
+      "setpoint": 27.5,
+      "p_bar": 45.42847930636771,
+      "mean": 27.498852883783123,
+      "three_sigma": 0.3378588163973397,
+      "pct": 1.2286287643532394
+    },
+    {
+      "setpoint": 30.0,
+      "p_bar": 53.136991901792975,
+      "mean": 29.998967571478406,
+      "three_sigma": 0.3122492978874141,
+      "pct": 1.0408668136442332
+    }
+  ],
+  "charge_mass_g_300K": 112.30907457322552,
+  "charge_mass_g_hot": 80.22076755230394,
+  "hot_saving_pct": 28.571428571428577,
+  "transducer_classes": [
+    {
+      "fs_pct": 0.25,
+      "three_sigma_pct": 1.1093219424543868
+    },
+    {
+      "fs_pct": 0.1,
+      "three_sigma_pct": 1.1017570609175373
+    },
+    {
+      "fs_pct": 0.05,
+      "three_sigma_pct": 1.100596794685666
+    }
+  ],
+  "bands": [
+    {
+      "n": "1",
+      "band": "zero-friction exit velocity reproduces A41's 30.535 m/s within 0.1 %",
+      "got": "30.535 m/s, 0.001 % off",
+      "passed": true
+    },
+    {
+      "n": "2",
+      "band": "open-loop sensitivity reproduces 0.499 % per 1 % within 2 %",
+      "got": "0.499 %",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "velocity varies <= 0.01 % across 250-450 K at fixed fire pressure",
+      "got": "0.000000 %",
+      "passed": true
+    },
+    {
+      "n": "4",
+      "band": "3-sigma exit-velocity dispersion <= 0.5 %",
+      "got": "1.113 %",
+      "passed": false
+    },
+    {
+      "n": "5",
+      "band": "the largest contributor owns >= 50 % of the variance",
+      "got": "f at 93.4 %",
+      "passed": true
+    },
+    {
+      "n": "6",
+      "band": "commanding 20 -> 30 m/s keeps 3-sigma <= 1.5 % at every setpoint",
+      "got": "worst 2.290 %",
+      "passed": false
+    },
+    {
+      "n": "7",
+      "band": "friction at the full 83.4 N allowance costs <= 10 % of exit velocity",
+      "got": "5.00 %",
+      "passed": true
+    },
+    {
+      "n": "8",
+      "band": "charge mass at a hot fire >= 25 % below the 300 K figure",
+      "got": "28.6 %",
+      "passed": true
+    }
+  ]
+}

@@ -67,4 +67,93 @@ accuracy exists is set *before* the valve opens.
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Six of eight bands pass. Both failures have the same cause, and it is not the
+one this run predicted.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | zero-friction velocity reproduces 30.535 m/s within 0.1 % | **30.535 m/s**, 0.001 % off | **PASS** |
+| 2 | sensitivity reproduces 0.499 % per 1 % within 2 % | **0.499 %** | **PASS** |
+| 3 | velocity varies ≤ 0.01 % across 250–450 K | **0.000000 %** | **PASS** |
+| 4 | 3σ dispersion ≤ 0.5 % | **1.113 %** | **FAIL** |
+| 5 | largest contributor owns ≥ 50 % of the variance | **friction, 93.4 %** | **PASS** |
+| 6 | 20 → 30 m/s keeps 3σ ≤ 1.5 % everywhere | **2.290 % at 20 m/s** | **FAIL** |
+| 7 | full 83.4 N allowance costs ≤ 10 % of velocity | **5.00 %** | **PASS** |
+| 8 | hot-fire charge mass ≥ 25 % below the 300 K figure | **28.6 %** | **PASS** |
+
+### The error budget, and the prediction it broke
+
+| Term | 3σ alone | Share of variance |
+|---|---:|---:|
+| **Seal friction**, ±20 % of the allowance | **0.3115 m/s** | **93.4 %** |
+| Payload mass, ±0.5 % | 0.0725 m/s | 5.1 % |
+| Charge pressure, ±0.25 % FS | 0.0399 m/s | 1.5 % |
+
+**Prediction 2 said payload mass would dominate and named ±0.25 % of velocity as its
+contribution. It is 5.1 % of the variance and the prediction was wrong.** Seal friction owns the
+budget by a factor of eighteen.
+
+**And buying a better sensor buys nothing:**
+
+| Transducer class | 3σ dispersion |
+|---|---:|
+| 0.25 % FS | 1.109 % |
+| 0.10 % FS | 1.102 % |
+| 0.05 % FS | **1.101 %** |
+
+**A fivefold improvement in the instrument moves the answer by 0.008 %.** There is no
+instrumentation route to the claim.
+
+### What actually sets Gen6's precision
+
+**A seal friction that has never been measured, specified, or designed.** A41 band 8 computed an
+*allowance* — the machine tolerates up to **83.4 N** — and no run since has put a number on what
+the friction *is* or how much it varies shot to shot. This run evaluated at the allowance ceiling,
+which is the conservative end, and the spread of ±20 % about it is **this run's assumption and
+nobody's measurement**.
+
+**So band 4's failure is conditional, and the condition is the point.** If friction sits near
+A41's ceiling with any meaningful spread, Gen6 cannot command velocity to a precision comparable
+with the Gen5 loop it replaces. If it sits far below, it can. **Nothing in this repository
+distinguishes those two cases**, and the Gen5 machine did not have this problem because a motor
+under closed-loop control corrects a friction it does not have to predict.
+
+**Band 6 fails for the same reason, and shows the shape of it.** Friction is a fixed force, so its
+share of the commanded work grows as the setpoint falls: 1.041 % at 30 m/s, **2.290 % at 20 m/s**.
+Precision is worst exactly where the customer asking for a small trim would use it.
+
+### Band 3, and the one thing that got simpler
+
+**Temperature cancels outright — 0.000000 %.** The adiabatic work integral contains only p₀ and
+V₀, so at a *fixed fire pressure* the chamber's temperature does not appear in the velocity at all.
+
+**That turns the thermal problem into a sequencing requirement**: measure chamber pressure
+immediately before firing, not at the end of the fill. Do that and the fill-to-fire delay, the
+heat of compression A42 excluded, and A43's 300 K chamber assumption all drop out of the velocity
+budget together. **This is the cheapest good news in the Gen6 record and it costs one sensor
+placement.**
+
+### Band 8, and a credit back to A43
+
+A chamber filled from a 300 K source ends near **γ·T₀ = 420 K**, holding **80.22 g** at 50 bar
+against **112.31 g** at 300 K — **28.6 % less gas per shot.** [A43](A43_reservoir_thermal.md)
+sized the reservoir with the chamber at 300 K, so **its 9.55 L is conservative by roughly a
+quarter** if the shot is fired hot. *Not applied.* Firing hot and firing cold are different
+sequencing choices and neither has been decided; the credit is recorded, not spent.
+
+### The rated velocity is a zero-friction number
+
+**30.535 m/s is the frictionless figure**, and it is what `cad/parameters.json` carries and what
+ADR-032 quotes. At A41's own full tolerable friction the same charge gives **29.009 m/s**. Both are
+real — one is the ceiling and one is the floor — and neither should be quoted alone. **P67.**
+
+## What this run does not do
+
+- **No blow-by past the piston, no valve dynamics, no residual pressure ahead of the piston.**
+- **Friction is Coulomb and constant over the stroke.** Real seal friction varies with pressure,
+  velocity and temperature, and a stick-slip breakaway is not modelled at all.
+- **The three error terms are independent Gaussians.** Systematic drift and shot-to-shot
+  correlation are not modelled.
+- **No sensor exists.** Band 3's conclusion is a requirement on a transducer nobody has selected.
+- **Nothing here is measured**, and the term that owns 93 % of the answer is the one that has
+  never been measured at all.
