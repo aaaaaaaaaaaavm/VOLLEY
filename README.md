@@ -152,7 +152,7 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 > coordinate frame, part list and assembly order, which dimensions cannot move and which are
 > free, the tolerances that matter, and **a table resolving every place where two files in this
 > repository disagree**, with the side to build. Then
-> [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both generated from
+> [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both built from
 > [`cad/parameters.json`](cad/parameters.json) so they cannot drift from it.
 
 **[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Generations](docs/GENERATIONS.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
@@ -222,7 +222,7 @@ That is confusing enough to be worth stating plainly rather than leaving a reade
 | | | |
 |---|---|---|
 | **[Gen4](docs/GEN4_STATUS.md)** | the last one modelled by hand | Nine Fusion documents, more detail than any generation since, and **no committed STEP export** — its stations disagree with the analysis model (**P43**) |
-| **Gen5** | **the frozen baseline** | Generated from [`cad/parameters.json`](cad/parameters.json), rebuildable byte-identically, and what every number on this page is computed against |
+| **Gen5** | **the frozen baseline** | Built by script from [`cad/parameters.json`](cad/parameters.json), rebuildable byte-identically, and what every number on this page is computed against |
 | **[Gen6](docs/adr/032-gen6-stage-integrated-gas-store.md)** | **the current design target** | A different machine: **no mover, no stator, no bank, no brake**, and a rail a spent upper stage provides |
 
 **Gen6 is better on velocity and worse on precision.** 30.535 m/s against 16.029, and **1.113 %
@@ -355,7 +355,7 @@ and its class of evidence, and note that the class for *measured* has **zero mem
 <td width="50%"><img src="figures/F13_latency.png" alt="Phase margin against transport delay"><br><sub><b>The stability floor.</b> The old gain crosses into instability at <b>0.35 ms</b> of sensor delay. Its dispersion figure came from a simulation that fed back an undelayed state (<b>P47</b>).</sub></td>
 </tr>
 <tr>
-<td colspan="2"><img src="figures/A29_cfd_report.png" alt="CFD convergence, force history and surface pressure"><br><sub><b>CFD, A29 — the full report, not just the answer.</b> <b>(a)</b> the solve <i>does not converge</i>, which is what a steady solver does on a separated wake, so the force is a windowed mean; <b>(b)</b> that mean, 1.734 &plusmn; 0.144 N; <b>(c)</b> surface pressure — forward faces push, the base sucks, the sides do nothing, with a peak C<sub>p</sub> of <b>0.975</b> where stagnation should approach 1. Meshed by <code>snappyHexMesh</code> from the <b>generated Gen5 CAD</b>, not an idealised box.</sub></td>
+<td colspan="2"><img src="figures/A29_cfd_report.png" alt="CFD convergence, force history and surface pressure"><br><sub><b>CFD, A29 — the full report, not just the answer.</b> <b>(a)</b> the solve <i>does not converge</i>, which is what a steady solver does on a separated wake, so the force is a windowed mean; <b>(b)</b> that mean, 1.734 &plusmn; 0.144 N; <b>(c)</b> surface pressure — forward faces push, the base sucks, the sides do nothing, with a peak C<sub>p</sub> of <b>0.975</b> where stagnation should approach 1. Meshed by <code>snappyHexMesh</code> from the <b>script-built Gen5 CAD</b>, not an idealised box.</sub></td>
 </tr>
 <tr>
 <td width="50%"><img src="figures/F14_airdrag.png" alt="Air drag along the stroke and the resulting velocity deficit"><br><sub><b>What air costs a ground test.</b> The machine flies in vacuum; the full-scale test fires in a room. The deficit is <b>5.1 mm/s</b> — 0.031 % of the design point, but <b>19 % of the dispersion the test exists to resolve</b>. No vacuum chamber needed; an air correction on every measured velocity is.</sub></td>

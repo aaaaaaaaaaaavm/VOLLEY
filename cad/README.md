@@ -37,9 +37,9 @@ Full generation history, per-file body counts, and the defect list are in
 `build_gen5.py` (CadQuery, B-rep, STEP) and `scad/gen5.scad` (OpenSCAD, CSG, STL) build the same
 eight documents from the same parameter file and read nothing of each other's.
 `tools/compare_scad_cadquery.py` compares them part by part. **It found a real defect on its first
-run** — the sled rollers were outside their channels in every Gen5 STEP ever generated, **P71** —
-which no guard here could have caught, because every guard compares a generated artifact against
-the script that generated it. See [`scad/README.md`](scad/README.md).
+run** — the sled rollers were outside their channels in every Gen5 STEP ever built, **P71** —
+which no guard here could have caught, because every guard compares a built artifact against
+the script that built it. See [`scad/README.md`](scad/README.md).
 
 
 ## Generations
@@ -98,7 +98,7 @@ and `OPEN_PROBLEMS.md` P13.
 > **Modelling from this repository?** [`../CAD_BRIEF.md`](../CAD_BRIEF.md) is written to be read
 > first: coordinate frame, part list and assembly order, critical versus soft dimensions, and a
 > table resolving **every conflict between files here** with the side to build. `DIMENSIONS.md`
-> and `BOM.md` below are generated from `parameters.json` and `analysis/mass_properties.py`, so
+> and `BOM.md` below are built from `parameters.json` and `analysis/mass_properties.py`, so
 > they cannot drift from their sources.
 
 ## Contents
@@ -108,15 +108,15 @@ and `OPEN_PROBLEMS.md` P13.
   G3-D*), and the cross-generation comparison
 - `step/gen1/`, `step/gen2/`, `step/gen3/`, STEP exports from Fusion (`.f3d` is not diffable,
   so STEP is what gets committed)
-- `step/gen5/`, **generated** by `build_gen5.py` from `parameters.json` — nothing is drawn, so
+- `step/gen5/`, **built** by `build_gen5.py` from `parameters.json` — nothing is drawn, so
   it cannot drift from the parameters, it regenerates byte-identically from a clean clone, and
   `build_gen5.py --check` reads 23 dimensions back out of the built solids and compares them to
-  the parameter file. See [ADR-026](../docs/adr/026-generated-cad.md).
+  the parameter file. See [ADR-026](../docs/adr/026-cad-built-from-parameters.md).
   **It is a geometry and interface model, not a manufacturing model:** no fillets, no chamfers,
   no fasteners, no harness routing, no tolerancing. Do not send it to a machine shop; do use it
   to check fit, envelope, clearance and station alignment
 - `renders/`, the published PNG set, and `renders/source/`, the uncropped frames it is
-  generated from by `tools/prepare_renders.py`. **These are Gen4 shots and Gen4 has no
+  produced from by `tools/prepare_renders.py`. **These are Gen4 shots and Gen4 has no
   committed STEP export**, so they show geometry no file in `step/` matches, and Gen4's
   stations are not the analysis model's — see `../docs/GEN4_STATUS.md`, ADR-019 and P43.
   No performance number anywhere in this repository is taken from them.
@@ -124,7 +124,7 @@ and `OPEN_PROBLEMS.md` P13.
 - `tools/prepare_renders.py`, which crops the raw frames to content, fits them to a
   publishing box and draws the departure direction on each. The direction is per-render
   because the camera flips between views; P43 is what happens when it is wrong
-- `DIMENSIONS.md` and `BOM.md`, **generated** by `tools/make_cad_package.py` from
+- `DIMENSIONS.md` and `BOM.md`, **built** by `tools/make_cad_package.py` from
   `parameters.json` and `analysis/mass_properties.py`. Both are guarded by
   `tools/check_artifacts.py`, so a dimension changed without a regenerate is caught
 - `tools/make_cad_package.py`, the generator. Edit the sources and re-run it; never edit

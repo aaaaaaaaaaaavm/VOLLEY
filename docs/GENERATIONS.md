@@ -10,7 +10,7 @@ the argument.
 | | | |
 |---|---|---|
 | **Gen4** | *the last one modelled by hand* | The renders on the front page. **Never exported** |
-| **Gen5** | *the frozen baseline* | Script-generated, self-checking, and what every number is computed against |
+| **Gen5** | *the frozen baseline* | Script-built, self-checking, and what every number is computed against |
 | **Gen6** | *the current design target* | A different machine. **No mover, no stator, no bank, no brake** |
 
 **Gen3 is a fourth that will not go away**, because the sled mass every performance figure
@@ -56,7 +56,7 @@ whatever the hardware repeats to.
 </tr>
 <tr>
 <td><a href="../cad/renders/track_stator.png"><img src="../cad/renders/track_stator.png" alt="Gen4 track and stator"></a><br><sub><b>Gen4, track and stator.</b> Side elevation. Gen4 stows the sled at s = 300 mm and releases at s = 1200, against the 1500 mm <code>analysis/</code> assumes.</sub></td>
-<td><a href="../cad/renders/gen5/sled_detail.png"><img src="../cad/renders/gen5/sled_detail.png" alt="Gen5 sled on the stator"></a><br><sub><b>Gen5, sled on the stator.</b> The rollers in this image are in their channels for the first time: until 2026-08-16 both sat outside them in every generated STEP (<b>P71</b>), found by building the machine a second time in a different kernel.</sub></td>
+<td><a href="../cad/renders/gen5/sled_detail.png"><img src="../cad/renders/gen5/sled_detail.png" alt="Gen5 sled on the stator"></a><br><sub><b>Gen5, sled on the stator.</b> The rollers in this image are in their channels for the first time: until 2026-08-16 both sat outside them in every committed STEP (<b>P71</b>), found by building the machine a second time in a different kernel.</sub></td>
 <td><a href="../cad/renders/gen6/store.png"><img src="../cad/renders/gen6/store.png" alt="Gen6 chamber and reservoir"></a><br><sub><b>Gen6, the store.</b> A 2 L chamber charged to 50 bar and fired as a closed adiabatic expansion, fed from a 9.55 L reservoir at 200 bar. <b>There is no regulator</b> — A41 closed P63 by deleting the component rather than pricing it.</sub></td>
 </tr>
 </table>
@@ -94,7 +94,7 @@ hand-maintained documents, no export, and stations that disagree with the analys
 It **cannot drift**, it regenerates byte-identically from a clean clone, and it matches ADR-015:
 derive, never paste. It is the fix P39 pointed at.
 
-**What it cost.** A generated model is a **geometry and interface model, not a manufacturing
+**What it cost.** A script-built model is a **geometry and interface model, not a manufacturing
 model** — no fillets, fasteners, harness routing or tolerancing, and `parameters.json` carries no
 tolerances to give them. **That is why Gen4's renders look more finished than Gen5's**: someone
 drew detail into Fusion that no parameter describes.

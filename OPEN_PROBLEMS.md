@@ -482,7 +482,7 @@ from the source changelog.
 > **Status:** `LIVE` — open engineering; something still has to be done
 
 > **Corrected 2026-08-13 by supersession, not by fixing Gen3.** Gen5 is generated from
-> `cad/parameters.json` by `cad/build_gen5.py` ([ADR-026](docs/adr/026-generated-cad.md)), and
+> `cad/parameters.json` by `cad/build_gen5.py` ([ADR-026](docs/adr/026-cad-built-from-parameters.md)), and
 > `build_gen5.py --check` reads 23 dimensions back out of the generated geometry and compares
 > them to the parameter file. **It passes.** A defect of the form "the CAD disagrees with
 > `parameters.json`" cannot exist in a model that is a function of `parameters.json`.

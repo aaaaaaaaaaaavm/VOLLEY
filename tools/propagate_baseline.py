@@ -16,7 +16,7 @@ a record of what was true at the time is excluded by construction:
     legacy/, paper/archive/           superseded by intent
     docs/adr/0NN-*.md                 decisions record the numbers they were taken against
 
-Anything generated -- BASELINE.md, cad/BOM.md, cad/DIMENSIONS.md, figures, the CV -- is NOT
+Anything machine-written -- BASELINE.md, cad/BOM.md, cad/DIMENSIONS.md, figures, the CV -- is NOT
 touched here. It regenerates from the scripts, which is the point of it being generated.
 
 Usage:  python3 tools/propagate_baseline.py [--check]

@@ -1,5 +1,5 @@
 """
-VOLLEY | Gen6: the CAD, generated from parameters.
+VOLLEY | Gen6: the CAD, built from parameters.
 
 WHY THIS EXISTS
 ---------------

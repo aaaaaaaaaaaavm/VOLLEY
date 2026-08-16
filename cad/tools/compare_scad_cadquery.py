@@ -3,7 +3,7 @@
 WHY THIS EXISTS
 ---------------
 cad/build_gen5.py builds Gen5 with a B-rep kernel; cad/scad/gen5.scad builds it with a CSG
-kernel. Neither reads the other, and both read a parameter file generated from
+kernel. Neither reads the other, and both read a parameter file built from
 cad/parameters.json. Nothing else in this repository has ever checked the geometry a second
 way -- parameters.json has been checked against exactly one model built from it.
 

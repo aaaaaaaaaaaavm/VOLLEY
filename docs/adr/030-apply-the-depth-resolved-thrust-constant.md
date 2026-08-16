@@ -60,7 +60,7 @@ a caveat is auditable; a hole is not. `KILL_CRITERIA.md` already flagged a plaus
 
 ### 4. Gen4 is retired
 
-Gen5 is generated from `cad/parameters.json` and `build_gen5.py --check` reads 23 dimensions back
+Gen5 is built from `cad/parameters.json` and `build_gen5.py --check` reads 23 dimensions back
 out of it. **A geometry that cannot be exported, cannot be checked, and does not match the
 parameters is not a generation this project has.** The renders remain as the only visual record
 and are labelled historical where they appear.

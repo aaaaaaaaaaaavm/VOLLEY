@@ -3,7 +3,7 @@
 `cad/build_gen5.py` builds Gen5 with **CadQuery**, a B-rep kernel, and exports STEP.
 `gen5.scad` builds the same eight documents with **OpenSCAD**, a CSG kernel, and exports STL.
 
-**Neither reads the other.** Both read `parameters.scad`, which is generated from
+**Neither reads the other.** Both read `parameters.scad`, which is built from
 `cad/parameters.json` by `cad/tools/make_scad_params.py` — OpenSCAD has no JSON parser, and a
 second model that *pasted* its dimensions would be a second place for them to be wrong, which is
 the opposite of what a cross-check is for. ADR-015: derive, never paste.
@@ -13,7 +13,7 @@ the opposite of what a cross-check is for. ADR-015: derive, never paste.
 Everywhere else this project checks a result by computing it a second way — the analytic Halbach
 field against magpylib, both against a meshed FEM, orbit-averaged decay against Cowell RK4. **The
 geometry never had that treatment.** `parameters.json` had been checked against exactly one model
-built from it, and every guard in `tools/` compares a generated artifact either against the
+built from it, and every guard in `tools/` compares a built artifact either against the
 parameter file or against a rebuild of itself. Both agree by construction, because both descend
 from the same script.
 

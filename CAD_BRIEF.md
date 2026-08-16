@@ -12,7 +12,7 @@ and that file differ, **`parameters.json` wins and this brief is wrong**; report
 > [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) moved that to **Gen6** on 2026-08-14,
 > which deletes all three. **If you are modelling Gen6, read
 > [that section](#gen6--what-exists-and-the-three-parts-that-do-not) first** — six parts are
-> generated, and the mechanism that pushes the satellite is not one of them.
+> script-built, and the mechanism that pushes the satellite is not one of them.
 
 ---
 
@@ -178,8 +178,8 @@ generation; STL is derived from it.
 | File | What it holds |
 |---|---|
 | [`cad/parameters.json`](cad/parameters.json) | **Single source of truth.** Every dimension, per document, with status and provenance per group |
-| [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) | The same values as flat tables — **generated** from the above, never hand-edited |
-| [`cad/BOM.md`](cad/BOM.md) | Parts, quantities, materials, masses — **generated** from `analysis/mass_properties.py` |
+| [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) | The same values as flat tables — **built** from the above, never hand-edited |
+| [`cad/BOM.md`](cad/BOM.md) | Parts, quantities, materials, masses — **built** from `analysis/mass_properties.py` |
 | [`cad/CHANGELOG_CAD.md`](cad/CHANGELOG_CAD.md) | Generation history, per-file inventories, defect IDs, cross-generation comparison |
 | [`docs/GEN4_STATUS.md`](docs/GEN4_STATUS.md) | Why Gen4 exists, and why its export gate is closed |
 | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) | Every known defect, live and corrected. The CAD-relevant ones are P5, P8, P9, P10, P12, P37, P39, P43 |
@@ -199,7 +199,7 @@ around a sled, a stator and an eddy brake. [ADR-032](docs/adr/032-gen6-stage-int
 moved the design target on 2026-08-14 and **deletes all three.** Gen5 remains the measured baseline
 and the brief above remains correct for it; it is simply no longer the machine being designed.
 
-**Read this section before starting any Gen6 modelling.** Two of the six generated parts are
+**Read this section before starting any Gen6 modelling.** Two of the six script-built parts are
 pressure vessels, and the mechanism that actually pushes the satellite has no geometry at all.
 
 ### The object
@@ -209,7 +209,7 @@ as a **closed adiabatic expansion** against a piston, which drives the payload a
 There is no motor, no bank, no brake and no return stroke — the carriage is not recovered in the
 sense the Gen5 sled was.
 
-### What is generated today
+### What is script-built today
 
 `cad/build_gen6.py` emits six parts into `cad/step/gen6/` from `cad/parameters.json`, groups
 `gen6_drive` and `gen6_store`. **Do not re-enter any of these by hand** — the parameter file is the
@@ -258,7 +258,7 @@ tube with nothing in it.
 ### Where the numbers live
 
 `cad/parameters.json` → `groups.gen6_drive` and `groups.gen6_store`, each carrying a `_source`
-field naming the run it came from. `cad/DIMENSIONS.md` is generated from the same file and lists
+field naming the run it came from. `cad/DIMENSIONS.md` is built from the same file and lists
 both groups. **`cad/BOM.md` does not yet cover Gen6** — its masses come from
 `analysis/mass_properties.py`, which is still Gen5's rollup.
 

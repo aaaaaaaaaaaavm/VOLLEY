@@ -8,7 +8,7 @@ hand-carried dimensions "will silently drift", and ADR-015 says derive, never pa
 CAD implementation that pastes its numbers would be a second place for them to be wrong,
 which is the opposite of what a cross-check is for.
 
-So the parameter file is generated. Every numeric leaf of `groups` and `envelope` becomes a
+So the parameter file is machine-written. Every numeric leaf of `groups` and `envelope` becomes a
 top-level OpenSCAD variable named <group>_<key>. Non-numeric leaves are skipped and listed in
 a comment, so what was dropped is visible rather than silent.
 

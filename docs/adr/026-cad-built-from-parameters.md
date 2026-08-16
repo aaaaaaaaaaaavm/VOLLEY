@@ -1,6 +1,12 @@
-# ADR-026: the CAD is generated from parameters, not drawn
+# ADR-026: the CAD is built from parameters by a script, not drawn
 
-**Status:** Accepted · **Date:** 2026-08-10 · **Phase:** I · **Extends:** ADR-015 · **Supersedes the method of:** ADR-019
+**Status:** Accepted · **Date:** 2026-08-10 · **Renamed:** 2026-08-16 · **Phase:** I · **Extends:** ADR-015 · **Supersedes the method of:** ADR-019
+
+> **Renamed 2026-08-16, wording only.** This file was `026-generated-cad.md` and its title read
+> *"the CAD is generated from parameters, not drawn"*. **The decision is unchanged.** The word
+> *generated* now invites a reading this project cannot afford — it describes a CadQuery script
+> reading a JSON parameter file, deterministically and byte-reproducibly, and nothing else. The
+> term is *script-built* throughout the repository from that date.
 
 ## Context
 
@@ -33,7 +39,7 @@ the *method*. Gen4 remains what `docs/GEN4_STATUS.md` says it is.
 
 ## Why generated is the right answer here, not a compromise
 
-- **A generated model cannot drift.** The failure mode `parameters.json` warns about is
+- **A script-built model cannot drift.** The failure mode `parameters.json` warns about is
   structurally impossible when the geometry has one source.
 - **It regenerates from a clean clone**, so the CAD is reproducible by a reader, which no Fusion
   document in this repository has ever been.

@@ -238,7 +238,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   <h2>CFD: what air costs a ground test</h2>
   <p class="sub">The machine flies in vacuum. The full-scale demonstration fires a mass simulator
   down a 1.5 m track <i>in a room</i>, and nothing said what the air was worth. Steady RANS on
-  the <b>generated Gen5 CAD</b> &mdash; meshed from the STL the repository ships, not an
+  the <b>script-built Gen5 CAD</b> &mdash; meshed from the STL the repository ships, not an
   idealised box.</p>
   <figure style="margin-top:18px"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/A29_cfd_report.png" alt="CFD convergence, force history and surface pressure distribution">
     <figcaption><b>The report, not just the answer.</b> <b>(a)</b> the solve <i>does not converge</i> &mdash; velocity residuals plateau near 5&times;10<sup>&minus;2</sup>, which is what a steady solver does on a massively separated wake &mdash; so the force is a windowed mean rather than a reading. <b>(b)</b> that mean: <b>1.734 &plusmn; 0.144 N</b>; reading one iteration would have given 1.60 or 1.89 with equal confidence. <b>(c)</b> where the drag comes from: forward faces push, the base sucks, the sides do nothing, peak C<sub>p</sub> <b>0.975</b> where stagnation should approach 1.000.</figcaption></figure>

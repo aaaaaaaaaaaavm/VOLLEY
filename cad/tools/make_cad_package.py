@@ -1,6 +1,6 @@
 """Generate cad/DIMENSIONS.md and cad/BOM.md from the sources that already hold the data.
 
-WHY THIS IS GENERATED
+WHY THIS IS MACHINE-WRITTEN
 ---------------------
 A CAD agent reading this repository cross-references everything it finds and, in its own
 words, "conflicts and gaps are where CAD goes wrong". A hand-written dimension table is a

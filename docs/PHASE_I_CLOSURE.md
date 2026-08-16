@@ -374,7 +374,7 @@ D, E and E4 open with named owners.* That state is now reached.**
 
 ### Category B — bookkeeping: CLOSED
 
-**P14** superseded by generated CAD; **P19**'s general claim shown false with both survivors
+**P14** superseded by script-built CAD; **P19**'s general claim shown false with both survivors
 dispositioned; **P20**'s lesson is a standing rule in `validation/README.md` that A2 band 4 was
 then written under; **P35**'s false header struck and the pin given an import-time assertion;
 **P38** and **P39** closed on their own criteria.

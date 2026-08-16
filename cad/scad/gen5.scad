@@ -4,7 +4,7 @@
 // ---------------
 // cad/build_gen5.py builds this machine with CadQuery, a B-rep kernel, and exports STEP.
 // This file builds the same eight documents with OpenSCAD, a CSG kernel, and exports STL.
-// Neither reads the other. Both read cad/scad/parameters.scad, which is generated from
+// Neither reads the other. Both read cad/scad/parameters.scad, which is built from
 // cad/parameters.json, so the only thing they share is the parameter file that is supposed
 // to be the single source of truth.
 //

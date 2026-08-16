@@ -1,5 +1,5 @@
 """
-VOLLEY | Gen5: the CAD, generated from parameters.
+VOLLEY | Gen5: the CAD, built from parameters.
 
 WHY THIS EXISTS
 ---------------
@@ -14,7 +14,7 @@ never been exported, and its stations (release at s = 1200 mm over a 900 mm stro
 match the parameters every published number rests on (release at 1500 over 1.5 m). The
 repository therefore publishes renders of geometry no committed file matches -- P43, P39.
 
-A generated model cannot drift. It regenerates from a clean clone, it is a function of
+A script-built model cannot drift. It regenerates from a clean clone, it is a function of
 parameters.json alone, and it matches ADR-015: derive, never paste.
 
 WHAT THIS IS NOT
@@ -320,7 +320,7 @@ def build(stl=False):
 def check(made):
     """Read the geometry back and compare it to parameters.json.
 
-    A generated model that is never measured is just a script that ran. These assertions are
+    A script-built model that is never measured is just a script that ran. These assertions are
     the difference between "it built" and "it built the thing the parameters describe".
     """
     fails = []
@@ -387,17 +387,17 @@ def check(made):
     if fails:
         print(f"CHECK FAILED on {len(fails)}: {', '.join(fails)}")
     else:
-        print("CHECK PASSED: generated geometry agrees with cad/parameters.json")
+        print("CHECK PASSED: geometry as built agrees with cad/parameters.json")
     return not fails
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true",
-                    help="verify the generated geometry against parameters.json")
+                    help="verify the geometry as built against parameters.json")
     ap.add_argument("--stl", action="store_true", help="also write STL meshes")
     a = ap.parse_args()
-    print("Gen5, generated from cad/parameters.json\n")
+    print("Gen5, built from cad/parameters.json\n")
     made = build(stl=a.stl)
     if a.check:
         print("\nreading the geometry back:")
