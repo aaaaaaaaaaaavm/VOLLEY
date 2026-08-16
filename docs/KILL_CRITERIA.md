@@ -332,7 +332,7 @@ meeting it. A criterion that no longer applies has not been passed.
 
 | | Gen5, the measured baseline | Gen6 | |
 |---|---|---|---|
-| **1. Mass per satellite** | **7.042 kg**, crossed 3.5× | **7.042 kg on dry mass, crossed** — and **1.343–1.455 kg on added mass**, a second numerator argued on its merits in A37 | **Still crossed. P59 stays LIVE** |
+| **1. Mass per satellite** | **7.042 kg**, crossed 3.5× | **7.042 kg on dry mass, crossed** — and **1.403 to 3.108 kg on added mass**, the range A45 found when the stage credit is read hostilely | **Crossed on dry mass always, and on added mass as soon as P10's unmodelled lump is not credited to the stage. P59 and P68 both LIVE** |
 | **2. Envelope** | 1839 mm against ~1270, over by 44 % | **Does not apply as stated** — Gen6 is a rail on an 8 m stage, not a payload in a rideshare port | NEEDS SOURCE: no envelope analysis exists at Gen6 |
 | **3. Bank ESR** | crossed; 65 mΩ ceiling against 116–185 available | **Dissolved.** There is no bank. Charging is **25 to 131 W** over the indexing window, which is solar | **Deleted, not solved.** P26 is moot for Gen6 and stands for Gen5 |
 | **4. Tip-off** | modelled at 85.0 N of cradle preload, mechanism absent | **A38: raising acceleration does not make it worse.** Preload is now **201.674 N per contact**, still releasing inside **≤ 1 N** | **Not demonstrated.** The mechanism still does not exist |

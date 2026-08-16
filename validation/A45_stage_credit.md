@@ -79,4 +79,80 @@ changed.
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Five of eight bands pass. The three that fail are bands 4, 5 and 6, and they say
+ADR-032's first falsifier fires.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | line items reproduce 43.33 kg to 0.01 kg | 43.3299 kg | **PASS** |
+| 2 | full credit reproduces A43's 1.403 kg/sat within 0.5 % | 1.403 kg, 0.02 % off | **PASS** |
+| 3 | every item carries a written reason | 0 unjustified | **PASS** |
+| 4 | hostile reading keeps per satellite ≤ 2.0 kg | **3.108 kg** | **FAIL** |
+| 5 | removing P10's lump alone keeps it ≤ 2.0 kg | **2.069 kg** | **FAIL** |
+| 6 | uniform break-even ≥ 30 %, as ADR-032 states | **16.5 %** | **FAIL** |
+| 7 | monotone in surviving fraction | monotone | **PASS** |
+| 8 | largest contributor identified | the P10 lump, 8.00 kg | **PASS** |
+
+### Where the credit goes
+
+| kg | Survives | Lost | Item |
+|---:|---:|---:|---|
+| 6.83 | 0.50 | 3.41 | Track longerons |
+| 5.50 | 0.60 | 2.20 | Battery + avionics + IMU |
+| 2.50 | 0.50 | 1.25 | Harness |
+| 6.00 | 0.40 | 3.60 | Thermal |
+| 9.00 | 0.90 | 0.90 | ESPA bracket |
+| 5.50 | 0.80 | 1.10 | Panels / closeouts |
+| **8.00** | **0.00** | **8.00** | **Enclosure / radiator / packaged avionics (P10)** |
+| **43.33** | | **20.46** | **47.2 % of the credit** |
+
+### The two findings that do not depend on my judgement
+
+**The surviving fractions above are judgements and the reader may substitute their own.** Two
+results do not move if they do.
+
+**One — the break-even is 16.5 %, not 30 %.** Pure arithmetic from A43's settled store: the credit
+may fail by **7.17 kg** before added mass per satellite reaches 2.0. **ADR-032 states 30 %, which
+is nearly twice the real margin.** The ADR was not wrong when written — it predates A43 settling
+the store at 5.38 kg — but it is wrong now, and it is the number a reviewer would check.
+
+**Two — the largest item in the credit is a mass the repository already admits it never
+itemised.** The 8.00 kg *enclosure, radiator and packaged avionics* line is **P10**, which records
+that these have **no line items** in `mass_properties.py` and that the 84.5 kg dry mass is *a
+floor, not a total*. Crediting it to the stage converts an admitted unknown into a saving.
+
+**That single item is 18.5 % of the credit, against a 16.5 % break-even.** Removing it and nothing
+else gives **2.069 kg per satellite** — **the falsifier fires on one line, with no hostile reading
+required at all.**
+
+### What this means, stated plainly
+
+**ADR-032 falsifier 1 fires. [A37](A37_host_integrated.md) band 5 fails retrospectively under a
+hostile credit, and kill criterion 1 is crossed on *both* numerators rather than one.**
+
+**A37's band is not edited and its result stands as declared.** A37 asked whether the credit closes
+the criterion on the assignment it made, and the answer it recorded is correct for that
+assignment. What A45 adds is that the assignment does not survive being disbelieved.
+
+**Nothing here says Gen6 is wrong.** It says the mass case has **half the margin the decision
+record claims**, and that the biggest single piece of it is an item this project has been carrying
+as unmodelled since long before Gen6 existed. **Recorded as P68.**
+
+### The predictions
+
+**All four held**, which is now twice in a row after A43 and against A44's miss.
+
+1. Break-even near 16 % — **16.5 %**.
+2. P10's lump alone fires the falsifier — **2.069 kg**, and 18.5 % against a 16.5 % break-even.
+3. Band 4 fails and not narrowly — **3.108 kg against 2.0**.
+4. Band 2 passes — 0.02 % off.
+
+## What this run does not do
+
+- **The surviving fractions are not measurements.** They are one reader's judgement, declared in
+  advance and swept; the break-even is published so anyone can substitute their own.
+- **It does not price the stage agreement**, which remains the thing no analysis can close.
+- **It does not re-open A35's ledger.** Every line and every mass is A35's; only the assignment is
+  questioned.
+- **It proposes no fix.** Closing P10 — building the enclosure, radiator and avionics up from line
+  items — is the work that would replace the largest guess with a number, and it is not done here.

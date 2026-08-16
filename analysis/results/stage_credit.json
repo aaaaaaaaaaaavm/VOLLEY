@@ -1,0 +1,197 @@
+{
+  "analysis": "A45",
+  "bands_declared_commit": "HEAD~1",
+  "note": "the surviving fractions are JUDGEMENTS, not measurements. They are declared in the run sheet before this script so their consequence is computed rather than argued, and the break-even is reported so a reader can substitute their own. The 2.0 kg threshold is unmoved.",
+  "credit_total_kg": 43.32992,
+  "added_base_kg": 11.452976,
+  "store_kg": 5.380445242949372,
+  "nominal_per_sat": 1.4027851035791141,
+  "hostile_per_sat": 3.1081984369124473,
+  "credit_lost_kg": 20.464959999999998,
+  "credit_lost_pct": 47.230551083408415,
+  "p10_only_per_sat": 2.069451770245781,
+  "p10_kg": 8.0,
+  "breakeven_fraction": 0.16539561478651768,
+  "adr_claimed_breakeven": 0.3,
+  "largest_loss": "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
+  "items": [
+    {
+      "part": "Track longerons (2x Al box section)",
+      "kg": 6.829919999999998,
+      "survives": 0.5,
+      "reason": "a stage is a stiff cylinder, not a 2.18 m rail aligned to a piston bore; half the structure is genuinely reused and half is rail hardware that has to be added"
+    },
+    {
+      "part": "Battery + avionics + IMU",
+      "kg": 5.5,
+      "survives": 0.6,
+      "reason": "stage power and IMU are real; a deployer sequencer, its safing chain and the cost of keeping avionics alive past passivation are not the stage's"
+    },
+    {
+      "part": "Harness",
+      "kg": 2.5,
+      "survives": 0.5,
+      "reason": "extending a harness costs harness"
+    },
+    {
+      "part": "Thermal (pipes, radiator, MLI)",
+      "kg": 6.0,
+      "survives": 0.4,
+      "reason": "the stage loop is sized for the stage, not for 131 W of charging plus twelve expansions"
+    },
+    {
+      "part": "ESPA bracket + fasteners",
+      "kg": 9.0,
+      "survives": 0.9,
+      "reason": "the strongest credit in the table: a stage genuinely needs no adapter to itself, and 10 % is local mounting"
+    },
+    {
+      "part": "Panels / closeouts",
+      "kg": 5.5,
+      "survives": 0.8,
+      "reason": "stage skin is real; local closeout around the muzzle is not"
+    },
+    {
+      "part": "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
+      "kg": 8.0,
+      "survives": 0.0,
+      "reason": "you cannot credit a mass you never itemised. P10 records this as a parametric lump never built up from line items, and the dry mass as a floor rather than a total; deleting it as stage-provided converts an admitted unknown into a saving"
+    }
+  ],
+  "curve": [
+    {
+      "surviving": 0.0,
+      "per_sat": 5.013611770245781
+    },
+    {
+      "surviving": 0.05,
+      "per_sat": 4.833070436912448
+    },
+    {
+      "surviving": 0.1,
+      "per_sat": 4.6525291035791145
+    },
+    {
+      "surviving": 0.15000000000000002,
+      "per_sat": 4.471987770245781
+    },
+    {
+      "surviving": 0.2,
+      "per_sat": 4.291446436912447
+    },
+    {
+      "surviving": 0.25,
+      "per_sat": 4.110905103579114
+    },
+    {
+      "surviving": 0.3,
+      "per_sat": 3.9303637702457803
+    },
+    {
+      "surviving": 0.35,
+      "per_sat": 3.7498224369124475
+    },
+    {
+      "surviving": 0.39999999999999997,
+      "per_sat": 3.5692811035791148
+    },
+    {
+      "surviving": 0.44999999999999996,
+      "per_sat": 3.388739770245781
+    },
+    {
+      "surviving": 0.49999999999999994,
+      "per_sat": 3.2081984369124474
+    },
+    {
+      "surviving": 0.5499999999999999,
+      "per_sat": 3.0276571035791147
+    },
+    {
+      "surviving": 0.6,
+      "per_sat": 2.847115770245781
+    },
+    {
+      "surviving": 0.65,
+      "per_sat": 2.6665744369124478
+    },
+    {
+      "surviving": 0.7000000000000001,
+      "per_sat": 2.486033103579114
+    },
+    {
+      "surviving": 0.7500000000000001,
+      "per_sat": 2.3054917702457804
+    },
+    {
+      "surviving": 0.8000000000000002,
+      "per_sat": 2.1249504369124472
+    },
+    {
+      "surviving": 0.8500000000000002,
+      "per_sat": 1.9444091035791136
+    },
+    {
+      "surviving": 0.9000000000000002,
+      "per_sat": 1.7638677702457801
+    },
+    {
+      "surviving": 0.9500000000000003,
+      "per_sat": 1.5833264369124465
+    },
+    {
+      "surviving": 1.0000000000000002,
+      "per_sat": 1.4027851035791137
+    }
+  ],
+  "bands": [
+    {
+      "n": "1",
+      "band": "line items reproduce A37's 43.33 kg to 0.01 kg",
+      "got": "43.3299 kg",
+      "passed": true
+    },
+    {
+      "n": "2",
+      "band": "at the full credit, per satellite reproduces A43's 1.403 kg within 0.5 %",
+      "got": "1.403 kg, 0.02 % off",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "every item carries a surviving fraction with a written reason",
+      "got": "0 unjustified",
+      "passed": true
+    },
+    {
+      "n": "4",
+      "band": "hostile reading keeps per satellite <= 2.0 kg",
+      "got": "3.108 kg",
+      "passed": false
+    },
+    {
+      "n": "5",
+      "band": "removing P10's lump alone keeps per satellite <= 2.0 kg",
+      "got": "2.069 kg",
+      "passed": false
+    },
+    {
+      "n": "6",
+      "band": "uniform break-even >= 30 %, as ADR-032 states",
+      "got": "16.5 %",
+      "passed": false
+    },
+    {
+      "n": "7",
+      "band": "per satellite monotone decreasing in surviving fraction",
+      "got": "monotone",
+      "passed": true
+    },
+    {
+      "n": "8",
+      "band": "largest single contributor to credit loss identified",
+      "got": "Enclosure / radiator / packaged avionics at 8.00 kg",
+      "passed": true
+    }
+  ]
+}

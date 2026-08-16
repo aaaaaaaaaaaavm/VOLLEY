@@ -1,11 +1,11 @@
 {
-  "total": 102,
-  "live": 40,
+  "total": 103,
+  "live": 41,
   "corrected": 31,
   "closed": 31,
-  "p_live": 19,
+  "p_live": 20,
   "e_live": 21,
-  "p_total": 67,
+  "p_total": 68,
   "e_total": 35,
   "by_entry": {
     "P1": "CLOSED",
@@ -76,6 +76,7 @@
     "P66": "CORRECTED",
     "P65": "CORRECTED",
     "P67": "LIVE",
+    "P68": "LIVE",
     "E30": "LIVE",
     "E31": "LIVE",
     "E32": "LIVE",

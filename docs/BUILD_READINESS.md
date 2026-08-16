@@ -11,7 +11,7 @@ has all three.
 > ## The one sentence that governs everything below
 >
 > **Nothing has been built, fired, or measured at any scale.** That is `OPEN_PROBLEMS.md` **E4**,
-> it is still open, and no amount of the analysis below changes it. Forty-three validation runs
+> it is still open, and no amount of the analysis below changes it. Forty-four validation runs
 > exist. **Zero measurements exist.** Every number in this repository is a model output, and the
 > field model has only ever been checked *analytic against analytic* — a closed-form wave model
 > against magpylib, two implementations of the same physics.
@@ -130,7 +130,7 @@ energy store are all deleted rather than improved. Their rows are kept because G
 that was actually analysed, and deleting the record of a superseded design would remove the only
 measured thing this project has.
 
-**Gen6 is younger than Gen5 by every measure**: ten run sheets against forty-three for the
+**Gen6 is younger than Gen5 by every measure**: eleven run sheets against forty-four for the
 programme, one CAD generation, no packaging, no thermal model, and three parts that have no
 geometry at all.
 
@@ -163,7 +163,7 @@ geometry at all.
 | | |
 |---|---|
 | **Design** | Not applicable. The vehicle is somebody else's |
-| **Analysis** | **A37's 43.33 kg stage credit is the largest single assumption in Gen6.** ADR-032's first falsifier: if it is optimistic by more than 30 %, added mass per satellite exceeds 2.0 kg and **A37 band 5 fails retrospectively.** Nothing bounds the confidence on it |
+| **Analysis** | **[A45](../validation/A45_stage_credit.md) bounded it on 2026-08-16, and the falsifier fired.** The real break-even is **16.5 %**, not the 30 % ADR-032 states, and the credit's largest item — 8.00 kg of enclosure, radiator and packaged avionics — is **P10**, a mass recorded here as never itemised. That one line is 18.5 % of the credit and fires the falsifier alone. Added mass per satellite is **1.403 – 3.108 kg**. **P68** |
 | **Blocked by** | **A conversation, which is a third category this page did not previously have.** No launch provider has agreed to keep a stage alive past passivation, and doing so on terms that do not spend its disposal propellant is a regulatory discussion this project has not had |
 
 ### What Gen6 has no analysis of at all
@@ -193,8 +193,11 @@ the claim "everything computable is done" is **not yet true**.
 
 The specific things that still need computing, in the order they matter:
 
-1. **Nothing, on the Gen6 store or its velocity.** A43 closed P64 and A44 modelled the
-   dispersion on 2026-08-16. **What Gen6 needs next is not computation** — it is a measured seal
+1. **Close P10.** Build the enclosure, radiator and packaged avionics up from line items instead
+   of carrying a parametric lump. It is the largest single piece of the stage credit, it fires
+   ADR-032's first falsifier on its own (**P68**), and it is bookkeeping rather than research.
+2. **Nothing else, on the Gen6 store or its velocity.** A43 closed P64 and A44 modelled the
+   dispersion on 2026-08-16. **What remains there is not computation** — it is a measured seal
    friction (**P67**) and a cradle mechanism that does not exist.
 3. **A2 band 4** — a 3-D FEM solve, so K<sub>t</sub> has been checked by a method that solves a
    field equation. Everything downstream rests on it, and P46 should not be applied without it.

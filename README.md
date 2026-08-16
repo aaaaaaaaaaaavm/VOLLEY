@@ -28,7 +28,7 @@ work's own claims, and nothing here has been built, fired or measured.
 | **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
 | **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
 | **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
-| **[The defect register](OPEN_PROBLEMS.md)** | 102 numbered entries, 40 live |
+| **[The defect register](OPEN_PROBLEMS.md)** | 103 numbered entries, 41 live |
 | **[One page](SUMMARY.md)** | If you only read one file |
 | **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
 
@@ -95,7 +95,7 @@ work's own claims, and nothing here has been built, fired or measured.
 | Recoil per shot | 64.1 N·s | `analysis/astro.py` |
 | Magazine | 12 × 3U, two transverse cassettes | `cad/parameters.json` |
 
-**TRL 2–3. Nothing has been built, fired, or measured at any scale.** Forty-three validation
+**TRL 2–3. Nothing has been built, fired, or measured at any scale.** Forty-four validation
 run sheets exist, each against an acceptance band declared *before* the run; **three failed
 outright**, several missed individual bands, and **three times a declared band caught a bug in
 the analysis rather than in the design**. Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before

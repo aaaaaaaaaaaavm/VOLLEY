@@ -118,7 +118,7 @@ will not.
 **Kill criterion 4 is not declared passed.** A38 establishes that raising the acceleration does not
 make tip-off worse. It remains *modelled, not demonstrated*, on a mechanism that does not exist.
 
-**Nothing here is measured.** Forty-three analyses, one hundred and two register entries, and no hardware.
+**Nothing here is measured.** Forty-four analyses, one hundred and three register entries, and no hardware.
 `docs/PROVENANCE.md` says so and continues to.
 
 ## Alternatives, and why not
@@ -141,8 +141,15 @@ the moat, and BOLLEY is the evidence for that rather than the alternative to it.
 
 **This decision is wrong if any of these turns out true:**
 
-1. **The 43.33 kg stage credit is optimistic by more than 30 %.** Then added mass per satellite
-   exceeds 2.0 kg and A37 band 5 fails retrospectively.
+1. ~~**The 43.33 kg stage credit is optimistic by more than 30 %.**~~ **This falsifier has fired,
+   2026-08-16, and its threshold was wrong.** [A45](../../validation/A45_stage_credit.md) put the
+   real break-even at **16.5 %** — the 30 % figure predates A43 settling the store at 5.38 kg.
+   **The credit's largest single item, 8.00 kg of enclosure, radiator and packaged avionics, is
+   P10 — a mass this repository records as never itemised — and at 18.5 % of the credit it fires
+   the falsifier on its own.** A hostile reading of all seven items gives **3.108 kg per
+   satellite** against 1.403 at the full credit. **A37 band 5 fails retrospectively and is not
+   edited; kill criterion 1 is crossed on both numerators.** The honest figure to publish is the
+   range, not its lower end. **P68.**
 2. ~~**The blowdown transient needs a regulator that weighs more than the store it feeds.**~~
    **Retired 2026-08-14 by A41.** There is no regulator: a pre-charged chamber removes the
    flow-rate problem by construction. The store is **4.66 kg**, not the 2.98 A39 estimated, and it

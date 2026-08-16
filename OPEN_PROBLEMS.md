@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **102 numbered entries, of which 40 are live.** Every entry carries a `Status:` line written by
+> **103 numbered entries, of which 41 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3025,6 +3025,42 @@ evidence rather than its degree.
 
 **What it does not touch.** Bands 1, 2, 3, 7 and 8 all pass. The architecture is not in question
 and the store is not affected.
+
+### P68. ADR-032's first falsifier fires, and the largest piece of the stage credit is a mass P10 says was never itemised: CRITICAL, NEW 2026-08-16
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A45](validation/A45_stage_credit.md) bands 4, 5 and 6 failed.** ADR-032 records that the design
+is wrong if the 43.33 kg stage credit is optimistic by more than 30 %. **The real break-even is
+16.5 %**, and the credit does not survive being read by someone who does not want to believe it.
+
+| | Added mass per satellite |
+|---|---:|
+| Full credit, as A37 assigned it | **1.403 kg** |
+| **Removing the P10 lump alone** | **2.069 kg** — *crosses* |
+| Hostile reading of all seven items | **3.108 kg** — *crosses by 55 %* |
+
+**Two of the three findings do not depend on anyone's judgement.**
+
+**The break-even is arithmetic.** With A43's store settled at 5.38 kg, the credit may fail by
+**7.17 kg** before added mass per satellite reaches 2.0 — **16.5 %, not 30 %.** ADR-032 was not
+wrong when written; it predates A43. It is wrong now, and it is the number a reviewer checks first.
+
+**The biggest item in the credit is one this repository already calls unmodelled.** The 8.00 kg
+*enclosure, radiator and packaged avionics* line is **P10** — no line items in
+`mass_properties.py`, and the dry mass recorded as *a floor, not a total*. **Crediting it to the
+stage converts an admitted unknown into a saving.** At **18.5 % of the credit against a 16.5 %
+break-even, that one line fires the falsifier on its own**, with no hostile reading required.
+
+**What this does and does not say.** **A37's band 5 is not edited and its result stands as
+declared** — it asked whether the credit closes the criterion on the assignment A37 made, and for
+that assignment its answer is right. What fails is the assignment's robustness. **Kill criterion 1
+is now crossed on both numerators rather than one**, and the threshold has not moved.
+
+**What would close it.** **Close P10**: build the enclosure, radiator and packaged avionics up
+from line items instead of carrying a parametric lump. That replaces the largest guess in the
+credit with a number, and it is computation rather than metal. Until then the honest figure to
+publish is the range **1.403 – 3.108 kg per satellite**, not the lower end alone.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
