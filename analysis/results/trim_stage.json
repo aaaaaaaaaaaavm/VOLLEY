@@ -1,0 +1,107 @@
+{
+  "analysis": "A48",
+  "bands_declared_commit": "HEAD~1",
+  "note": "constant Kt over the trim section, no end effects, no commutation loss, ideal velocity measurement, correction as a constant force. Every one of those flatters the trim stage against a designed one.",
+  "shot_J": 1864.8214972796507,
+  "v_exit": 29.008178610688894,
+  "three_sigma": 0.3229615973366567,
+  "force_per_m_N": 948.474,
+  "sweep": [
+    {
+      "authority": "+-3 sigma",
+      "k": 1.0,
+      "dv": 0.3229615973366567,
+      "energy_J": 37.68271918644905,
+      "pct_of_shot": 2.0207145424599378,
+      "section_m": 0.03972983886374223,
+      "pct_stroke": 1.8224696726487257,
+      "peak_W": 27819.82387766683
+    },
+    {
+      "authority": "+-6 sigma",
+      "k": 2.0,
+      "dv": 0.6459231946733134,
+      "energy_J": 75.78265514631471,
+      "pct_of_shot": 4.063802098853125,
+      "section_m": 0.07989955986807726,
+      "pct_stroke": 3.6651174251411582,
+      "peak_W": 28126.144555739116
+    },
+    {
+      "authority": "+-9 sigma",
+      "k": 3.0,
+      "dv": 0.9688847920099701,
+      "energy_J": 114.29980787959767,
+      "pct_of_shot": 6.129262669179599,
+      "section_m": 0.1205091630130058,
+      "pct_stroke": 5.52794325747733,
+      "peak_W": 28432.465233811403
+    }
+  ],
+  "mass_kg": 0.34008742067363346,
+  "per_sat_before": 1.403,
+  "per_sat_after": 1.4313406183894695,
+  "friction_3x": {
+    "energy_J": 114.29980787959767,
+    "section_m": 0.1205091630130058,
+    "peak_W": 28432.465233811403,
+    "mass_kg": 1.0315584353913296
+  },
+  "reopened": [
+    "P34 -- a payload carrying a magnetometer cannot fly in this magazine. Magnets return to the moving part, so this defect returns with them",
+    "E35 -- the payload's field exposure becomes a design variable again",
+    "the cradle -- the carriage must now hold magnets in alignment as well as the payload",
+    "a velocity sensor before the trim section, which Gen6 does not have",
+    "one more element in the FMEA, shared across all twelve shots (A47)"
+  ],
+  "bands": [
+    {
+      "n": "1",
+      "band": "imported shot energy and dispersion reproduce 1864.8 J and 1.113 %",
+      "got": "1864.8 J, 1.113 %",
+      "passed": true
+    },
+    {
+      "n": "2",
+      "band": "energy to correct +-3 sigma <= 5 % of the shot",
+      "got": "2.021 %",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "trim section <= 15 % of the stroke",
+      "got": "1.822 %",
+      "passed": true
+    },
+    {
+      "n": "4",
+      "band": "added mass <= 2.0 kg and per satellite stays <= 2.0 kg",
+      "got": "0.340 kg, 1.431 kg/sat",
+      "passed": true
+    },
+    {
+      "n": "5",
+      "band": "peak electrical <= 200 W",
+      "got": "27820 W",
+      "passed": false
+    },
+    {
+      "n": "6",
+      "band": "correcting to Gen5 dispersion 0.0274 m/s is reachable in bands 2-5",
+      "got": "reachable",
+      "passed": true
+    },
+    {
+      "n": "7",
+      "band": "holds at 3x the friction spread",
+      "got": "5.53 % stroke, 28432 W, 1.032 kg",
+      "passed": true
+    },
+    {
+      "n": "8",
+      "band": "every defect the stage re-opens is named",
+      "got": "5 named",
+      "passed": true
+    }
+  ]
+}

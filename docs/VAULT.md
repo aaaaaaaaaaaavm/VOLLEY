@@ -434,6 +434,52 @@ stop the numbers forking, which they briefly did.
 
 ---
 
+### PII-20: gas and electromagnetic as mutual fail-safes — **DECLINED 2026-08-16, not run**
+
+**Proposed in review: build both drives, size each for the full duty, and let either deploy the
+manifest if the other fails.**
+
+**It is declined on arithmetic, before any analysis, and the arithmetic is A35's.**
+
+**Mass.** For either drive to deploy alone, each must carry the full duty. A35 prices the
+electromagnetic half at **C2 + C3 = 11.54 + 26.35 = 37.89 kg** — the reusable mover, and the
+requirement that the energy arrive during the shot. **That is precisely what ADR-032 deleted.**
+Re-adding it beside the 5.38 kg gas store puts added mass per satellite at roughly **4.6 kg**
+against an unmoved **2.0 kg** threshold, so it re-crosses the one numerator Gen6 currently passes.
+
+**The redundancy does not buy what it looks like it buys.** Of Gen5's nine manifest-forfeiting
+elements the drive is three. **The sequencer, launch lock, magazine follower, escapement,
+retention gate and cradle stay single-path**, and [A47](../validation/A47_gen6_fmea.md) has since
+measured what that ceiling is worth: **an entire architecture change moved expected delivery from
+6.620 to 6.992 satellites.** Spending 37.89 kg to duplicate three of eight shared elements buys
+less than that.
+
+**And the two drives interfere.** To be motor-driven the carriage must carry magnets — *that is
+the 11.54 kg mover*. To be gas-driven it must seal against a tube. A carriage doing both is
+heavier than either, and **both modes degrade**: gas exit velocity goes as 1/√m and motor
+acceleration as 1/m. **Each backup taxes the primary on every shot it does not fire.**
+
+**Half-sizing is not a fail-safe.** Size each at 50 % and a failure leaves **71 %** of velocity,
+since *v* ∝ √*E*. That is a degraded mode bought at nearly full mass, guaranteeing neither.
+
+> **What the question was actually reaching for, and both are now run.**
+>
+> **The control half** became [A48](../validation/A48_trim_stage.md) — gas for energy, a short
+> motor section for the velocity it actually produced. **2.021 % of the shot, 1.822 % of the
+> stroke, 0.340 kg**, and it gives back the precision Gen6 traded. It fails on peak power against
+> a band that should not have been declared, and its open question is what a **37.7 J at 28 kW**
+> store weighs.
+>
+> **The fail-safe half** became [A47](../validation/A47_gen6_fmea.md) band 8, and the answer is
+> **not a second drive**. A **per-cell backup ejector** — a 1–2 m/s spring guaranteeing clearance —
+> takes expected delivery from **6.992 to 9.261** satellites at *r* = 0.99. **Six times the
+> architecture change**, because it converts the drive from manifest-forfeiting to
+> satellite-forfeiting, which is the only move that touches what **E30** says.
+
+**Entry criterion.** A pulse store sized for 37.7 J at 28 kW, weighed; and a measured seal
+friction (**P67**) showing the correction is needed at all. **If the friction turns out small, the
+trim stage has nothing to correct and this whole branch closes.**
+
 ## Review log
 
 | Boundary | Date | Outcomes |

@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **109 numbered entries, of which 43 are live.** Every entry carries a `Status:` line written by
+> **111 numbered entries, of which 44 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3288,6 +3288,65 @@ Fusion, and no tool here can perform or verify it.
 
 **What it does not affect.** No number moves. This is an archival gap, not a technical error, and
 the exports that do exist have not been shown to be wrong.
+
+### P75. Gen6 improves reliability incidentally, and E30 is not answered by it: HIGH, NEW 2026-08-16
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A47](validation/A47_gen6_fmea.md) scored Gen6 on Gen5's own model, imported unchanged.**
+
+| | Elements | Manifest-forfeiting | Required *r* | Delivered at *r* = 0.99 |
+|---|---:|---:|---:|---:|
+| Gen5 | 13 | **9** | 0.99326 | **6.620** |
+| **Gen6** | 12 | **8** | 0.99252 | **6.992** |
+| Gen6 + per-cell ejector | 8 | **3** | 0.98388 | **9.261** |
+| *a spring dispenser* | 12 | **0** | — | **11.880** |
+
+**ADR-032 deletes six of the nine and the count falls by one.** It adds the reservoir, both
+valves, the piston and seals, and the chamber — **and one Gen5 never had at all: a host stage kept
+alive past passivation, which no launch provider has agreed to and which forfeits the manifest
+exactly as a bank failure did.**
+
+**The failure modes changed discipline. The structure barely moved.**
+
+**The number that matters is the comparison, not either figure.** An entire architecture change is
+worth **+0.37 satellites**. A spring in every cell is worth **+2.27** — **six times more** — because
+deleting subsystems changes the *count* of shared elements and a per-cell mechanism changes the
+*structure*.
+
+**E30 says the architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series
+mechanism. Gen6 is still one twelve-cycle series mechanism.** The criticism stands against it
+essentially undiminished, and **this entry exists so that is written down rather than assumed
+away by an architecture change that did not address it.**
+
+**What would close it.** Design the per-cell ejector — mass, volume, its own failure rate, and
+whether it fits the cell the magazine already uses. **Zero manifest-forfeiting elements is not
+available to any architecture sharing a magazine**, so the target is the ejector's +2.27, not a
+spring's 11.880.
+
+### P76. A48 band 5 compared a charging budget against an instantaneous power: LOW, CORRECTED 2026-08-16
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**My declaration error, recorded as one.** [A48](validation/A48_trim_stage.md) band 5 required the
+trim stage's peak electrical power to stay inside **200 W**, citing A37. **A37's 200 W is a
+*charging* budget** — power drawn from the host across a sixty-second indexing window. **The trim
+stage's figure is instantaneous mechanical power during a 1.4 ms correction.** Different
+quantities; the comparison was never meaningful.
+
+**The band was also unreachable by construction, which I should have seen before declaring it.**
+At 29 m/s, power is force times velocity. 200 W needs **6.9 N**, and delivering 37.7 J at 6.9 N
+takes **5.5 m** — longer than the 2.18 m stroke. **No trim stage of any design could have passed
+it.**
+
+**Corrected.** The band stands as failed and is not edited; what is corrected is the record of
+why it was wrong. Precedent: A40 band 1, where the same class of error was logged the same way.
+
+**What survives is the real finding underneath it.** The trim stage is **pulse power** — 37.7 J at
+**28 kW** — which is requirement **C3**, *the energy arrives during the shot*, at 1/50th of Gen5's
+energy. Whether that store weighs grams or kilograms **is not answered by A48**, because pulse
+hardware scales with current rather than energy. That is the question that decides the idea and it
+needs its own bands.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

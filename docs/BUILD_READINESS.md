@@ -11,7 +11,7 @@ has all three.
 > ## The one sentence that governs everything below
 >
 > **Nothing has been built, fired, or measured at any scale.** That is `OPEN_PROBLEMS.md` **E4**,
-> it is still open, and no amount of the analysis below changes it. Forty-six validation runs
+> it is still open, and no amount of the analysis below changes it. Forty-eight validation runs
 > exist. **Zero measurements exist.** Every number in this repository is a model output, and the
 > field model has only ever been checked *analytic against analytic* — a closed-form wave model
 > against magpylib, two implementations of the same physics.
@@ -193,10 +193,15 @@ the claim "everything computable is done" is **not yet true**.
 
 The specific things that still need computing, in the order they matter:
 
-1. **Close P10.** Build the enclosure, radiator and packaged avionics up from line items instead
+1. **Design the per-cell backup ejector.** [A47](../validation/A47_gen6_fmea.md) priced it at
+   **+2.27 satellites** delivered at *r* = 0.99, against **+0.37** for the entire Gen5 → Gen6
+   architecture change — **six times more**, because it converts the drive from
+   manifest-forfeiting to satellite-forfeiting. It is the only change found that touches what
+   **E30** actually says. **P75.**
+2. **Close P10.** Build the enclosure, radiator and packaged avionics up from line items instead
    of carrying a parametric lump. It is the largest single piece of the stage credit, it fires
    ADR-032's first falsifier on its own (**P68**), and it is bookkeeping rather than research.
-2. **Nothing else, on the Gen6 store or its velocity.** A43 closed P64 and A44 modelled the
+3. **Nothing else, on the Gen6 store or its velocity.** A43 closed P64 and A44 modelled the
    dispersion on 2026-08-16. **What remains there is not computation** — it is a measured seal
    friction (**P67**) and a cradle mechanism that does not exist.
 3. **A2 band 4** — a 3-D FEM solve, so K<sub>t</sub> has been checked by a method that solves a
