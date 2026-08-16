@@ -2840,6 +2840,18 @@ this project quotes the realignment period as the robust quantity.
 **This is P58 and P61's class.** Every check here walks tracked files; the wiki is tracked, so it
 was corrected. **It is published across a repository boundary no check can see.**
 
+> **Still unpublished as of 2026-08-16, and the reason is now precise rather than vague.**
+> `tools/publish_wiki.sh` clones, diffs and dry-runs correctly from any environment — reading
+> `VOLLEY.wiki.git` works — but the push is refused: *the wiki is not in the session's authorized
+> repository set, so no credential is injected for it.* **A wiki cannot be added to that set
+> either, because GitHub does not expose wiki repositories through its API**, which is what this
+> script's own header warned. **There is no automated route; the script has to be run from an
+> ordinary clone with ordinary push credentials.**
+>
+> The live page is now **seventeen days and six corrections behind**: it still says *emocd*, still
+> reports a **×1.62** lifetime multiplier against the current ×1.60, and predates the enclosure
+> buildup entirely. The pending change is **92 insertions and 37 deletions**.
+
 **Corrected.** `tools/publish_wiki.sh` publishes the source and `--dry-run` shows the delta first;
 `wiki/README.md` states that committing `Home.md` changes nothing a reader sees until it is
 published. **The publish itself is not done** — GitHub does not expose wiki content through its
