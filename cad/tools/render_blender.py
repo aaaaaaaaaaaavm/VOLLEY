@@ -1,0 +1,175 @@
+"""Render the Gen5 STL set with Blender. Run headless:
+
+    blender -b -P cad/tools/render_blender.py -- [--samples N] [--quick]
+
+WHY THIS EXISTS
+---------------
+OpenSCAD's preview renderer is flat-shaded, single-colour and unlit, which is fine for a
+geometry check and useless for looking at. This takes the same committed meshes and renders
+them with materials and lighting so the mechanism can actually be read.
+
+IT ADDS NO GEOMETRY. Both Gen5 models are geometry-and-interface models: no fillets, no
+fasteners, no harness routing, no tolerancing, and parameters.json carries no tolerances to
+give them. A renderer cannot show detail the model does not have, and this one does not try.
+"""
+import math
+import os
+import sys
+
+import bpy
+
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+STL = os.path.join(ROOT, "cad", "stl")
+OUT = os.path.join(ROOT, "cad", "renders", "gen5")
+
+argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+SAMPLES = int(argv[argv.index("--samples") + 1]) if "--samples" in argv else 96
+QUICK = "--quick" in argv
+
+# name -> (stl file, base colour RGB, metallic, roughness)
+PARTS = {
+    "Interface_ESPA":    ("VOLLEY_Interface_ESPA_Gen5.stl",    (0.62, 0.64, 0.67), 1.0, 0.42),
+    "Track":             ("VOLLEY_Track_Gen5.stl",             (0.55, 0.57, 0.60), 1.0, 0.48),
+    "Stator":            ("VOLLEY_Stator_Gen5.stl",            (0.72, 0.34, 0.16), 1.0, 0.30),
+    "Sled":              ("VOLLEY_Sled_Gen5.stl",              (0.70, 0.72, 0.75), 1.0, 0.28),
+    "Magazine_Cassette": ("VOLLEY_Magazine_Cassette_Gen5.stl", (0.50, 0.52, 0.56), 1.0, 0.52),
+    "Brake":             ("VOLLEY_Brake_Gen5.stl",             (0.26, 0.27, 0.30), 1.0, 0.35),
+    "Payload_3U":        ("VOLLEY_Payload_3U_Gen5.stl",        (0.16, 0.30, 0.22), 0.2, 0.60),
+    "Enclosure":         ("VOLLEY_Enclosure_Gen5.stl",         (0.74, 0.75, 0.77), 0.6, 0.38),
+}
+
+MECHANISM = ["Interface_ESPA", "Track", "Stator", "Sled", "Magazine_Cassette", "Brake"]
+
+VIEWS = [
+    # name, visible parts, camera location, look-at, lens
+    ("hero_open",   MECHANISM,              (-1500, -2400, 1250), (900, 0, 60),  50),
+    ("three_quarter", MECHANISM,            (2900, -2100, 1100),  (950, 0, 40),  55),
+    ("side",        MECHANISM,              (900, -3600, 260),    (900, 0, 120), 60),
+    ("breech",      MECHANISM,              (-1350, -900, 620),   (250, 0, 60),  50),
+    ("sled_detail", ["Sled", "Track", "Stator"], (-350, -1500, 780), (420, 0, 0), 55),
+    ("closed",      list(PARTS),            (-1700, -2800, 1500), (900, 0, 250), 50),
+]
+
+
+def clear():
+    bpy.ops.object.select_all(action="SELECT")
+    bpy.ops.object.delete()
+    for block in (bpy.data.meshes, bpy.data.materials, bpy.data.lights, bpy.data.cameras):
+        for b in list(block):
+            block.remove(b)
+
+
+def import_stl(path):
+    before = set(bpy.data.objects)
+    if hasattr(bpy.ops.wm, "stl_import"):
+        bpy.ops.wm.stl_import(filepath=path)
+    else:
+        bpy.ops.import_mesh.stl(filepath=path)
+    return list(set(bpy.data.objects) - before)
+
+
+def material(name, rgb, metallic, rough):
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    b = m.node_tree.nodes["Principled BSDF"]
+    b.inputs["Base Color"].default_value = (*rgb, 1.0)
+    b.inputs["Metallic"].default_value = metallic
+    b.inputs["Roughness"].default_value = rough
+    return m
+
+
+def look_at(obj, target):
+    import mathutils
+    d = mathutils.Vector(target) - obj.location
+    obj.rotation_euler = d.to_track_quat("-Z", "Y").to_euler()
+
+
+def build_scene(parts):
+    clear()
+    for name in parts:
+        fn, rgb, met, rough = PARTS[name]
+        p = os.path.join(STL, fn)
+        if not os.path.exists(p):
+            continue
+        mat = material(name, rgb, met, rough)
+        for o in import_stl(p):
+            o.name = name
+            o.data.materials.clear()
+            o.data.materials.append(mat)
+            o.data.use_auto_smooth = False
+            for poly in o.data.polygons:
+                poly.use_smooth = False
+
+    # A floor, kept small enough to read as a plinth rather than a horizon.
+    bpy.ops.mesh.primitive_plane_add(size=9000, location=(900, 0, -300))
+    ground = bpy.context.object
+    ground.data.materials.append(material("Ground", (0.32, 0.33, 0.35), 0.0, 0.9))
+
+    # World: a bright neutral dome, so metal has something to reflect. This is most of
+    # the light in the scene; the suns below only shape it.
+    w = bpy.data.worlds.new("W")
+    bpy.context.scene.world = w
+    w.use_nodes = True
+    w.node_tree.nodes["Background"].inputs[0].default_value = (0.42, 0.45, 0.50, 1)
+    w.node_tree.nodes["Background"].inputs[1].default_value = 1.0
+
+    # SUN lamps, not area lamps. A sun's irradiance does not fall off with distance, which
+    # matters here because the scene is 1800 units across and an inverse-square area light
+    # placed to frame it arrives essentially black.
+    for rot, energy, name in (
+        ((math.radians(52), 0, math.radians(38)), 4.0, "key"),
+        ((math.radians(64), 0, math.radians(-115)), 1.6, "fill"),
+        ((math.radians(28), 0, math.radians(190)), 2.2, "rim"),
+    ):
+        bpy.ops.object.light_add(type="SUN", rotation=rot)
+        L = bpy.context.object
+        L.name = name
+        L.data.energy = energy
+        L.data.angle = math.radians(6)
+
+
+def render(view):
+    name, parts, cam_loc, target, lens = view
+    build_scene(parts)
+    bpy.ops.object.camera_add(location=cam_loc)
+    cam = bpy.context.object
+    cam.data.lens = lens
+    # The machine is ~1800 units long and framed from 2-4000 away. Blender's default
+    # clip_end is 100, which puts the whole scene behind the far plane and renders a
+    # frame of pure world background -- which looks exactly like a lighting failure.
+    cam.data.clip_start = 10.0
+    cam.data.clip_end = 200000.0
+    look_at(cam, target)
+    sc = bpy.context.scene
+    sc.camera = cam
+    sc.render.engine = "CYCLES"
+    sc.cycles.device = "CPU"
+    sc.cycles.samples = 48 if QUICK else SAMPLES
+    sc.cycles.use_denoising = False
+    sc.cycles.max_bounces = 4
+    sc.render.resolution_x = 1000 if QUICK else 1600
+    sc.render.resolution_y = 640 if QUICK else 1000
+    sc.render.film_transparent = False
+    sc.view_settings.look = "AgX - Medium High Contrast"
+    os.makedirs(OUT, exist_ok=True)
+    sc.render.filepath = os.path.join(OUT, name + ".png")
+    bpy.context.view_layer.update()
+    import mathutils
+    from bpy_extras.object_utils import world_to_camera_view
+    meshes = [o for o in bpy.data.objects if o.type == "MESH" and o.name != "Plane"]
+    pts = [o.matrix_world @ mathutils.Vector(c) for o in meshes for c in o.bound_box]
+    if pts:
+        n = [world_to_camera_view(sc, cam, q) for q in pts]
+        print(f"  [{name}] {len(meshes)} meshes, ndc x "
+              f"{min(q.x for q in n):.2f}..{max(q.x for q in n):.2f} y "
+              f"{min(q.y for q in n):.2f}..{max(q.y for q in n):.2f} depth "
+              f"{min(q.z for q in n):.0f}..{max(q.z for q in n):.0f}")
+    else:
+        print(f"  [{name}] NO MESHES IN SCENE")
+    bpy.ops.render.render(write_still=True)
+    print(f"  wrote {name}.png")
+
+
+for v in VIEWS:
+    render(v)
+print("done")
