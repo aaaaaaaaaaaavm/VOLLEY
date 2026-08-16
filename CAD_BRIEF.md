@@ -7,6 +7,14 @@ and it resolves — explicitly — every place where two files in this repositor
 Everything here is derived from [`cad/parameters.json`](cad/parameters.json). Where this brief
 and that file differ, **`parameters.json` wins and this brief is wrong**; report it.
 
+> **Which machine are you modelling?** Everything from here to *"What a good model would add"*
+> describes **Gen5** — nine Fusion documents around a sled, a stator and an eddy brake. That is the
+> measured baseline and the brief for it is correct. **It is not the current design target.**
+> [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) moved that to **Gen6** on 2026-08-14,
+> which deletes all three. **If you are modelling Gen6, read
+> [that section](#gen6--what-exists-and-the-three-parts-that-do-not) first** — six parts are
+> generated, and the mechanism that pushes the satellite is not one of them.
+
 ---
 
 ## Object
@@ -182,6 +190,78 @@ generation; STL is derived from it.
 silently drift across the nine documents. Change `parameters.json`, then regenerate.
 
 ---
+
+---
+
+## Gen6 — what exists, and the three parts that do not
+
+**Added 2026-08-16.** Everything above this line describes **Gen5**: nine Fusion documents built
+around a sled, a stator and an eddy brake. [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)
+moved the design target on 2026-08-14 and **deletes all three.** Gen5 remains the measured baseline
+and the brief above remains correct for it; it is simply no longer the machine being designed.
+
+**Read this section before starting any Gen6 modelling.** Two of the six generated parts are
+pressure vessels, and the mechanism that actually pushes the satellite has no geometry at all.
+
+### The object
+
+A rail on a spent upper stage. A pre-charged chamber is filled over the indexing window and fired
+as a **closed adiabatic expansion** against a piston, which drives the payload along the tube.
+There is no motor, no bank, no brake and no return stroke — the carriage is not recovered in the
+sense the Gen5 sled was.
+
+### What is generated today
+
+`cad/build_gen6.py` emits six parts into `cad/step/gen6/` from `cad/parameters.json`, groups
+`gen6_drive` and `gen6_store`. **Do not re-enter any of these by hand** — the parameter file is the
+source and the build regenerates byte-stably.
+
+| Part | STEP | Governing parameters |
+|---|---|---|
+| Drive tube | `VOLLEY_Drive_Tube_Gen6.step` | bore **15.805 mm**, stroke **2180 mm**, wall **1.0 mm** |
+| Carriage | `VOLLEY_Carriage_Gen6.step` | rides the tube; carries the cradle interface |
+| Chamber | `VOLLEY_Chamber_Gen6.step` | **2.0 L at 50 bar**, nitrogen |
+| Reservoir | `VOLLEY_Reservoir_Gen6.step` | **11.25 L at 200 bar** |
+| Stage rail | `VOLLEY_Stage_Rail_Gen6.step` | the host-provided structure the rest mounts to |
+| Magazine cassette | `VOLLEY_Magazine_Cassette_Gen6.step` | carried across from Gen5's cell geometry |
+
+**The reservoir carries the adiabatic figure deliberately.** 11.25 L is the conservative end of a
+bounded correction; the isothermal case at the twenty-minute cadence is **7.65 L**. Which is right
+is **P64**, still open. *If you model the reservoir, model it at 11.25 L and expect it to shrink.*
+
+### The three parts that do not exist
+
+**This is the useful half of this section.** An assistant given the six parts above would produce a
+tube with nothing in it.
+
+1. **The piston, seals and the fill/vent circuit.** A41 allows **1.5 kg** for "piston, seals,
+   regulator and valving" and designs none of it. There is no regulator by construction — the
+   chamber is pre-charged — but the fill valve, the fire valve and the vent are all undrawn. Fill
+   is **4.14 s through a 1 mm orifice** against a 10 s window, so the orifice is specified and
+   nothing around it is.
+2. **The cradle.** **201.7 N per contact** of preload at a **170.25 mm** lever, which must release
+   inside a **≤ 1 N** residual. No mechanism exists in any file. This is the part that decides
+   whether kill criterion 4 is passed, and it is the part with the least drawn.
+3. **Stage attachment.** The rail is drawn as a rail. How it attaches to a vehicle nobody has
+   agreed to lend is not specified, and cannot be until a vehicle is named.
+
+### What a Gen6 model must not do
+
+- **Do not size the reservoir from a velocity target.** Velocity comes from *charge pressure* in a
+  fixed 2 L chamber. The expansion ratio is the binding variable and it saturates: 2 L → 4 L buys
+  **1.0 m/s** and costs **3.2 kg**.
+- **Do not add a regulator.** A41 closed P63 by deleting it. Re-introducing one re-opens the
+  largest guess in A39.
+- **Do not carry Gen5 stations across.** Release at 1500 mm, brake entry at 1530 mm and the
+  488 mm sled are Gen5 geometry and mean nothing here. The Gen6 stroke is **2180 mm** and there is
+  no brake.
+
+### Where the numbers live
+
+`cad/parameters.json` → `groups.gen6_drive` and `groups.gen6_store`, each carrying a `_source`
+field naming the run it came from. `cad/DIMENSIONS.md` is generated from the same file and lists
+both groups. **`cad/BOM.md` does not yet cover Gen6** — its masses come from
+`analysis/mass_properties.py`, which is still Gen5's rollup.
 
 ## What a good model would add that the current one does not have
 

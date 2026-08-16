@@ -11,7 +11,7 @@ has all three.
 > ## The one sentence that governs everything below
 >
 > **Nothing has been built, fired, or measured at any scale.** That is `OPEN_PROBLEMS.md` **E4**,
-> it is still open, and no amount of the analysis below changes it. Twenty-four validation runs
+> it is still open, and no amount of the analysis below changes it. Forty-one validation runs
 > exist. **Zero measurements exist.** Every number in this repository is a model output, and the
 > field model has only ever been checked *analytic against analytic* — a closed-form wave model
 > against magpylib, two implementations of the same physics.
@@ -116,6 +116,70 @@ here rather than left for a reader to find.
 
 ---
 
+---
+
+## Gen6 — the architecture now carried as the design target
+
+**Added 2026-08-16.** Everything above is **Gen5**, which remains the *measured baseline* and the
+record of what a self-contained deployer costs. [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+moved the design target on 2026-08-14: the payload is accelerated directly by cold gas along a rail
+a spent upper stage provides. **No mover, no stator, no bank, no brake, no return stroke.**
+
+**Six of the nine subsystems above do not exist in Gen6.** Track, stator, sled, brake, drive and
+energy store are all deleted rather than improved. Their rows are kept because Gen5 is the baseline
+that was actually analysed, and deleting the record of a superseded design would remove the only
+measured thing this project has.
+
+**Gen6 is younger than Gen5 by every measure**: eight run sheets against forty-one for the
+programme, one CAD generation, no packaging, no thermal model, and three parts that have no
+geometry at all.
+
+### Stage rail and drive tube — geometry generated, mechanism absent
+
+| | |
+|---|---|
+| **Design** | **Generated, not frozen.** `cad/build_gen6.py` emits six parts from `parameters.json` — drive tube, carriage, chamber, reservoir, stage rail, magazine cassette. Bore 15.805 mm, stroke 2180 mm |
+| **Analysis** | **A37** made the stage the machine and A38 showed tip-off does not bind at 25 g |
+| **Blocked by** | **Design work, not computation.** The **piston, seals, valve and plumbing have no geometry**. The rail is drawn; the thing that pushes is not |
+
+### The gas store — specified, and its size is wrong by about 1.3 kg
+
+| | |
+|---|---|
+| **Design** | **Specified.** A 2 L chamber charged to 50 bar, fired as a closed adiabatic expansion, giving **30.535 m/s at 25 g**. There is no regulator — A41 closed P63 by deleting the component rather than pricing it |
+| **Analysis** | **Four runs, one failed band.** A39 chose gas over a spring; **A40 killed the fixed-orifice implementation** at 14.16 m/s against a 30 m/s band; A41 passed eight of eight; **A42 failed band 3** — the reservoir is sized on gas the bottle cannot give back, and runs out at shot seven of twelve |
+| **Blocked by** | **Computation, and it is the one open number.** The store is **4.67 kg isothermal against 6.01 kg adiabatic**, and a thermal model of the reservoir between shots is the only term separating them. **P64** |
+
+### The cradle — the part that does not exist
+
+| | |
+|---|---|
+| **Design** | **None.** There is no cradle mechanism in any file |
+| **Analysis** | **A38 states the requirement**: **201.674 N per contact** of preload, released inside A34's **≤ 1 N** residual. Passing A38 band 5 is not the same as that being easy |
+| **Blocked by** | **Design work.** This is a mechanism concept before it is an analysis, and **kill criterion 4 stays *modelled, not demonstrated* until it exists** |
+
+### The stage itself — neither computation nor metal
+
+| | |
+|---|---|
+| **Design** | Not applicable. The vehicle is somebody else's |
+| **Analysis** | **A37's 43.33 kg stage credit is the largest single assumption in Gen6.** ADR-032's first falsifier: if it is optimistic by more than 30 %, added mass per satellite exceeds 2.0 kg and **A37 band 5 fails retrospectively.** Nothing bounds the confidence on it |
+| **Blocked by** | **A conversation, which is a third category this page did not previously have.** No launch provider has agreed to keep a stage alive past passivation, and doing so on terms that do not spend its disposal propellant is a regulatory discussion this project has not had |
+
+### What Gen6 has no analysis of at all
+
+**Stated as a list rather than left to be found**, in the order they bear on the claim:
+
+1. **Velocity control.** Gen5 had a designed loop and a **0.0274 m/s** dispersion at 3σ. Gen6 has
+   **A41 band 6 — an open-loop sensitivity of 0.499 % of velocity per 1 % of charge** — and no
+   sensor, no loop, no error budget, and `precharged.py`'s own header records that it models **no
+   temperature effect on charge**. *The product claim is commanded per-satellite velocity, and at
+   Gen6 that claim is unmodelled.*
+2. **Recoil**, which scales with the impulse, and the impulse has roughly doubled.
+3. **Envelope and packaging** on the stage.
+4. **Thermal**, including the expansion cooling that P64 turns on.
+5. **Mass line items for avionics and packaging**, which is P10 carried across unchanged.
+
 ## What this adds up to
 
 **Four subsystems are frozen as designs and analysed against declared bands**: stator, sled,
@@ -129,10 +193,14 @@ the claim "everything computable is done" is **not yet true**.
 
 The specific things that still need computing, in the order they matter:
 
-1. **A2 band 4** — a 3-D FEM solve, so K<sub>t</sub> has been checked by a method that solves a
+1. **P64's reservoir thermal model.** The only open number in the architecture now carried as the
+   design target, worth about 1.3 kg of store, and it gates the velocity-control work behind it.
+2. **Gen6 velocity dispersion.** The claim the project sells, unmodelled in the current design.
+3. **A2 band 4** — a 3-D FEM solve, so K<sub>t</sub> has been checked by a method that solves a
    field equation. Everything downstream rests on it, and P46 should not be applied without it.
-2. **The brake's magnetic sizing**, and P28.
-3. **P10's mass line items**, without which no kg-per-satellite figure is trustworthy.
+4. **The brake's magnetic sizing**, and P28. *Gen5 only; Gen6 has no brake.*
+5. **P10's mass line items**, without which no kg-per-satellite figure is trustworthy — and that
+   applies to both architectures.
 4. **E29's angular momentum budget**, and the interface requirement it would set.
 5. **Track structural FEA.**
 
@@ -151,7 +219,7 @@ And the things that need metal, which no amount of the above replaces:
 
 **This:** the design is specified to the level where a builder knows what to make; the physics has
 been computed against bands declared before the analyses that tested them; **twenty-four
-validation runs exist, two failed outright, several missed individual bands, and every one of
+validation runs exist, three failed outright, several missed individual bands, and every one of
 those is recorded rather than removed**; and the remaining uncertainty has been enumerated rather
 than estimated.
 

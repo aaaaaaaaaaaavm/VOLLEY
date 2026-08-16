@@ -313,11 +313,47 @@ any framing implying otherwise is wrong.
 
 ---
 
+---
+
+## Where Gen6 stands against these seven
+
+**Added 2026-08-16.** [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) moved the design target
+on 2026-08-14 and this file did not follow it, so for two days the document that exists to say what
+would make the project pointless described a machine the project had stopped building. That is the
+failure this file was written to prevent.
+
+**The seven thresholds below are unchanged.** Not one has been revised, and none will be revised
+because a result came back against it. What follows is only where the *other* architecture sits
+against them.
+
+**Read the whole column before the good rows in it.** Gen6 improves four of the seven, and it
+improves three of those **by deleting the subsystem the threshold was about** rather than by
+meeting it. A criterion that no longer applies has not been passed.
+
+| | Gen5, the measured baseline | Gen6 | |
+|---|---|---|---|
+| **1. Mass per satellite** | **7.042 kg**, crossed 3.5× | **7.042 kg on dry mass, crossed** — and **1.343–1.455 kg on added mass**, a second numerator argued on its merits in A37 | **Still crossed. P59 stays LIVE** |
+| **2. Envelope** | 1839 mm against ~1270, over by 44 % | **Does not apply as stated** — Gen6 is a rail on an 8 m stage, not a payload in a rideshare port | NEEDS SOURCE: no envelope analysis exists at Gen6 |
+| **3. Bank ESR** | crossed; 65 mΩ ceiling against 116–185 available | **Dissolved.** There is no bank. Charging is **25 to 131 W** over the indexing window, which is solar | **Deleted, not solved.** P26 is moot for Gen6 and stands for Gen5 |
+| **4. Tip-off** | modelled at 85.0 N of cradle preload, mechanism absent | **A38: raising acceleration does not make it worse.** Preload is now **201.674 N per contact**, still releasing inside **≤ 1 N** | **Not demonstrated.** The mechanism still does not exist |
+| **5. Attitude rate at firing** | quantified | unchanged in kind; the indexing mass move is the same problem on a larger vehicle | NEEDS SOURCE: not re-run at Gen6 |
+| **6. Host recoil** | 64.1 N·s per shot | higher, in proportion to the exit velocity | NEEDS SOURCE: no Gen6 recoil figure is computed anywhere |
+| **7. Is the Δv worth anything** | 16.029 m/s | **30.535 m/s** on the selected A41 point | The one row Gen6 improves by doing more, not less |
+
+**Three rows say NEEDS SOURCE, and they are not bookkeeping.** Envelope, attitude rate and recoil
+were all quantified for Gen5 and none has been recomputed for the architecture now carried as the
+design target. Recoil in particular scales with the impulse and the impulse has roughly doubled.
+
+**Criterion 1 is the one that matters and it has not moved.** Both numerators are reported wherever
+either appears, the 2.0 kg threshold is untouched, and the honest options remain what they were:
+change the payload class, or publish the criterion as crossed. Gen6 does not change that sentence.
+
 ## What this list says, taken together
 
 **The 3U configuration as designed fails three thresholds**: mass per satellite, envelope, and
 bank sizing. Two have identified fixes that make the third worse, since a bigger bank and a
-repackaged envelope both add mass.
+repackaged envelope both add mass. **Gen6 removes two of the three by removing the subsystems
+they were about**, and leaves the first exactly where it was — see the section above.
 
 **The payload ladder is the only change that improves all three at once.** Smaller satellites
 divide the fixed deployer mass across more customers, and the mass argument reverses from an 8x

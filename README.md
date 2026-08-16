@@ -95,8 +95,8 @@ work's own claims, and nothing here has been built, fired or measured.
 | Recoil per shot | 64.1 N·s | `analysis/astro.py` |
 | Magazine | 12 × 3U, two transverse cassettes | `cad/parameters.json` |
 
-**TRL 2–3. Nothing has been built, fired, or measured at any scale.** Twenty-four validation
-run sheets exist, each against an acceptance band declared *before* the run; **two failed
+**TRL 2–3. Nothing has been built, fired, or measured at any scale.** Forty-one validation
+run sheets exist, each against an acceptance band declared *before* the run; **three failed
 outright**, several missed individual bands, and **three times a declared band caught a bug in
 the analysis rather than in the design**. Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before
 citing anything here.
