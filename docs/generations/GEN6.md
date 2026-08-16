@@ -63,6 +63,13 @@ sized on gas the bottle cannot give back; **A43 found the bottle does not warm b
 | **P68** | **ADR-032's first falsifier has fired.** Break-even on the stage credit is **8.4 %, not the 30 % the ADR states**, and **58.6 % of that credit is the enclosure** — a skin belonging to a vehicle nobody has agreed to lend |
 | **P59** | Kill criterion 1 is unreachable by architecture and by manifest size. Gen6 does not change that |
 
+## How this becomes the frozen baseline
+
+**[`../GEN6_CLOSURE.md`](../GEN6_CLOSURE.md)** sets it out in Phase I's own categories: seven
+analyses that are computation, four decisions that are the owner's, and a measurement — **P67** —
+that can delete work rather than add it. **Gen5 earned the label on five properties and Gen6 has
+two.**
+
 ## What does not exist
 
 **The pulse store for the trim stage** — 37.7 J at 28 kW, unsized and unweighed, and ADR-033's
