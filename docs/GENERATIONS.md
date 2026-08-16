@@ -1,6 +1,8 @@
 # Six generations, and what each one was for
 
-**This is the design's history as a sequence of machines, not a changelog.** Each generation
+**This is the design's history as a sequence of machines, not a changelog.** The per-generation
+records — one file each, to a common structure — are in
+[`docs/generations/`](generations/README.md). Each generation
 exists because the one before it failed at something specific, and each is named here with what
 it fixed and what it cost. `cad/CHANGELOG_CAD.md` carries the per-file detail; this page carries
 the argument.

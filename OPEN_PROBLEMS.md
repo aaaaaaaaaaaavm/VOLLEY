@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **108 numbered entries, of which 42 are live.** Every entry carries a `Status:` line written by
+> **109 numbered entries, of which 43 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3248,6 +3248,46 @@ rollup they were computed at. A decision records the numbers it was taken on.
 one.* Any figure published as a percentage of a rollup goes stale when the rollup moves, silently,
 without the analysis being re-run and without any check firing — `make_baseline.py` guards the 23
 values it knows, and a derived percentage sitting in prose is not one of them.
+
+### P74. No Fusion document is committed for any generation built in Fusion: MEDIUM, NEW 2026-08-16
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found by building the generation archive and filling in a "source document" row six times.**
+
+Four generations were built in Fusion — Gen1, Gen2, Gen3 and Gen4 — and **not one `.f3d` is
+committed anywhere in this repository.**
+
+| | Committed | Source |
+|---|---|---|
+| Gen1 | 11 STEP | Fusion hub. **Not here** |
+| Gen2 | 9 STEP | Fusion hub. **Not here** |
+| Gen3 | 10 STEP, 2 STL | Fusion hub. **Not here** |
+| **Gen4** | **nothing at all** | Fusion hub. **Not here** |
+| Gen5 | 8 STEP, 8 STL | `cad/build_gen5.py`, **here** |
+| Gen6 | 6 STEP, 6 STL | `cad/build_gen6.py`, **here** |
+
+**STEP is a result of the model, not the model.** It carries geometry and no parameters, no
+sketches, no constraints and no feature tree, so a STEP export cannot be edited back into the
+design it came from. **For Gen1–Gen3 the repository holds the output and not the source; for Gen4
+it holds neither.**
+
+**This is a single point of failure outside version control.** `cad/parameters.json` opens with a
+warning that Fusion user parameters are document-scoped and *"will silently drift across the nine
+documents"* — and the documents that would let anyone check that are not in the repository. **If
+the Fusion hub is lost, Gen1 through Gen4 are lost with it.**
+
+**Gen5 and Gen6 do not have this problem, and that is the entire argument of
+[ADR-026](docs/adr/026-cad-built-from-parameters.md).** Their source is a script here, and their
+geometry is a function of a parameter file that is also here.
+
+**What would close it.** Export each Fusion document as `.f3d` and commit it, largest first: Gen4,
+because nothing of it exists here at all, then Gen3, because every mass in the project descends
+from its solids. **This cannot be done from inside the repository** — it is a manual export from
+Fusion, and no tool here can perform or verify it.
+
+**What it does not affect.** No number moves. This is an archival gap, not a technical error, and
+the exports that do exist have not been shown to be wrong.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

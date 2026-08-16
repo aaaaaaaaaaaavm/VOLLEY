@@ -28,7 +28,7 @@ work's own claims, and nothing here has been built, fired or measured.
 | **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
 | **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
 | **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
-| **[The defect register](OPEN_PROBLEMS.md)** | 108 numbered entries, 42 live |
+| **[The defect register](OPEN_PROBLEMS.md)** | 109 numbered entries, 43 live |
 | **[One page](SUMMARY.md)** | If you only read one file |
 | **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
 
@@ -155,7 +155,7 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 > [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both built from
 > [`cad/parameters.json`](cad/parameters.json) so they cannot drift from it.
 
-**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Generations](docs/GENERATIONS.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
+**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Generations](docs/GENERATIONS.md)** · **[Generation archive](docs/generations/README.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
@@ -291,7 +291,7 @@ longer applies has not been met.
 </tr>
 </table>
 
-**[The full comparison, with what each generation fixed and what it cost →](docs/GENERATIONS.md)**
+**[The full comparison, with what each generation fixed and what it cost →](docs/GENERATIONS.md)** · **[the per-generation archive, one file each →](docs/generations/README.md)**
 
 ### What each change actually changed
 
