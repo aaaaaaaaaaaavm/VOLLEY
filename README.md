@@ -28,7 +28,7 @@ work's own claims, and nothing here has been built, fired or measured.
 | **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
 | **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
 | **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
-| **[The defect register](OPEN_PROBLEMS.md)** | 98 numbered entries, 40 live |
+| **[The defect register](OPEN_PROBLEMS.md)** | 99 numbered entries, 40 live |
 | **[One page](SUMMARY.md)** | If you only read one file |
 | **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
 
@@ -155,7 +155,7 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 > [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both generated from
 > [`cad/parameters.json`](cad/parameters.json) so they cannot drift from it.
 
-**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[warning Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
+**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
@@ -235,8 +235,8 @@ electrical-to-payload, net of that credit.
 > ### The pulse-power chain does not close on purchasable cells
 >
 > **Found 2026-07-30, and stated here rather than left in the defect log.** The supercapacitor
-> bank is modelled at 12 mÎ©. Commercial cells of this capacitance give **116 to 185 mÎ©**, and
-> the shot stops completing above **65 mÎ©**: a source behind resistance R cannot deliver more
+> bank is modelled at 12 mΩ. Commercial cells of this capacitance give **116 to 185 mΩ**, and
+> the shot stops completing above **65 mΩ**: a source behind resistance R cannot deliver more
 > than V²/4R, and this one is asked for 30 kW.
 >
 > **Exit velocity, stroke time and dispersion are unaffected** and the mechanical design is not
@@ -281,7 +281,7 @@ electrical-to-payload, net of that credit.
 > rather than a preference.
 >
 > **What this costs and does not cost.** Exit velocity is down 19 % and efficiency from
-> 32 % to 20 %, and to 19 % after the ESR correction of 2026-07-30 (P24); regeneration has
+> 32 % to 20 %, and to 19 % after the ESR correction of 2026-07-30 (P24); regeneration
 > then took it to 21.2 % (A11); the corrected quadrature now gives 18.5 %. The lifetime multiplier is down only 10 %, x1.80 to x1.60, because lifetime
 > is a weak function of Î”v, the mission case survives better than the machine spec does.
 > 9.445 kg is the **as-drawn, unpocketed** geometry, and A4 reports a 17x stress margin, so
@@ -352,7 +352,7 @@ where possible. Four analyses were actually run; three could not be.
   enters the same multiplicative slot, so *both* halves of that claim were tested by a sweep
   that could not have detected a problem (**P16**).
 - **CalculiX** cleared the chassis on all three structural bands, which is what settled the
-  sled mass at the CAD-derived **9.445 kg** and moved the headline to 16.03 m/s (**P15**), before the quadrature correction moved it to 16.03 m/s.
+  sled mass at the CAD-derived **9.445 kg** and moved the headline to 16.388 m/s (**P15**), before the quadrature correction moved it to 16.03 m/s.
 - **ngspice** reproduced the then-current shot model to 0.03 % and then, re-run at the then-current operating
   point, found a loss the analytic model had no term for at all: the bank's own series
   resistance, 86 J a shot (**P24**). Corrected, the two methods agree on peak current to
@@ -415,8 +415,8 @@ is a property of the beat geometry, not of any one velocity.
 ## Validation status
 
 Each analysis has its acceptance band declared **before** the run, in
-[`validation/`](validation/). A5 has now been run under GMAT; the rest have not, a cross-check whose target is chosen after seeing the
-answer proves nothing.
+[`validation/`](validation/). A5 has now been run under GMAT; the rest have not. A cross-check whose target is chosen after
+seeing the answer proves nothing.
 
 | Analysis | Tool | Closes | Status |
 |---|---|---|---|
@@ -480,7 +480,7 @@ flown DSOD, is in [`docs/LANDSCAPE.md`](docs/LANDSCAPE.md).
 - `docs/GEN4_STATUS.md`, provisional open-assembly geometry and the export/performance gate
 - `docs/HISTORY.md`, project timeline since 2021, and how the git history was reconstructed
 - `docs/programme/`, the governing dossier, adopted verbatim, plus its amendment record
-- `docs/adr/`, nineteen architecture decision records
+- `docs/adr/`, thirty-three architecture decision records
 - `docs/VAULT.md`, deferred work and the gate it must clear to return
 - `docs/MANUFACTURING.md`, tolerance stack, assembly hazard, make-vs-buy
 - `docs/CROSS_INDUSTRY.md`, which open items are actually solved elsewhere
