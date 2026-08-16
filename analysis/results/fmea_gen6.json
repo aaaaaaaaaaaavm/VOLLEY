@@ -1,0 +1,157 @@
+{
+  "analysis": "A47",
+  "bands_declared_commit": "HEAD~1",
+  "note": "model imported from fmea.py unchanged; only the element list differs. No common-cause failures, elements independent, no wear-out, one reliability shared across elements. Same assumptions as fmea.py, kept for comparability rather than because they are right.",
+  "target_satellites": 7.95,
+  "gen5": {
+    "n_elements": 13,
+    "n_shared": 9,
+    "shared_names": [
+      "Sled chassis and rollers",
+      "Stator winding",
+      "Power converter (SiC bridge)",
+      "Energy store (bank or flywheel)",
+      "Avionics and shot sequencer",
+      "Position sensing / commutation",
+      "Eddy brake",
+      "Sled return",
+      "Launch lock release"
+    ],
+    "required_r": 0.9932625045000115,
+    "expected_at_r99": 6.619761180414527,
+    "expected_at_required": 7.9500000000000215
+  },
+  "gen6": {
+    "n_elements": 12,
+    "n_shared": 8,
+    "shared_names": [
+      "Gas reservoir",
+      "Fill valve",
+      "Fire valve",
+      "Piston and seals",
+      "Chamber",
+      "Avionics and shot sequencer",
+      "Host stage keep-alive",
+      "Launch lock release"
+    ],
+    "required_r": 0.9925152069124964,
+    "expected_at_r99": 6.9922333708074795,
+    "expected_at_required": 7.950000000000004
+  },
+  "gen6_with_backup": {
+    "n_elements": 8,
+    "n_shared": 3,
+    "shared_names": [
+      "Avionics and shot sequencer",
+      "Host stage keep-alive",
+      "Launch lock release"
+    ],
+    "required_r": 0.9838798344083577,
+    "expected_at_r99": 9.261168439286433,
+    "expected_at_required": 7.950000000000011
+  },
+  "gen5_element_fates": {
+    "Sled chassis and rollers": {
+      "fate": "deleted",
+      "why": "no mover"
+    },
+    "Stator winding": {
+      "fate": "deleted",
+      "why": "no stator"
+    },
+    "Power converter (SiC bridge)": {
+      "fate": "deleted",
+      "why": "no pulse to switch"
+    },
+    "Energy store (bank or flywheel)": {
+      "fate": "replaced",
+      "why": "gas reservoir and chamber"
+    },
+    "Avionics and shot sequencer": {
+      "fate": "retained",
+      "why": "still one sequencer for twelve shots"
+    },
+    "Position sensing / commutation": {
+      "fate": "deleted",
+      "why": "nothing to commutate; a pressure transducer replaces it, not a resolver"
+    },
+    "Eddy brake": {
+      "fate": "deleted",
+      "why": "nothing to arrest"
+    },
+    "Sled return": {
+      "fate": "deleted",
+      "why": "the carriage is not recovered"
+    },
+    "Launch lock release": {
+      "fate": "retained",
+      "why": "one-shot, unchanged"
+    },
+    "Cassette follower drive": {
+      "fate": "retained",
+      "why": "magazine unchanged"
+    },
+    "Escapement": {
+      "fate": "retained",
+      "why": "magazine unchanged"
+    },
+    "Retention gate (2 x D9 pins)": {
+      "fate": "retained",
+      "why": "magazine unchanged"
+    },
+    "Individual release event": {
+      "fate": "replaced",
+      "why": "the cradle, which does not exist"
+    }
+  },
+  "bands": [
+    {
+      "n": "1",
+      "band": "the imported model reproduces Gen5's published 0.99326 within 0.0001",
+      "got": "0.99326",
+      "passed": true
+    },
+    {
+      "n": "2",
+      "band": "every Gen5 element accounted for as deleted, retained or replaced",
+      "got": "0 unaccounted",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "Gen6 has fewer manifest-forfeiting shared elements than Gen5",
+      "got": "8 against 9",
+      "passed": true
+    },
+    {
+      "n": "4",
+      "band": "Gen6's required per-element reliability is lower than Gen5's",
+      "got": "0.99252 against 0.99326",
+      "passed": true
+    },
+    {
+      "n": "5",
+      "band": "expected delivery at r = 0.99 is higher for Gen6",
+      "got": "6.992 against 6.620",
+      "passed": true
+    },
+    {
+      "n": "6",
+      "band": "neither architecture reaches a spring's zero shared elements",
+      "got": "Gen5 9, Gen6 8",
+      "passed": true
+    },
+    {
+      "n": "7",
+      "band": "the gas store is counted as manifest-forfeiting",
+      "got": "yes",
+      "passed": true
+    },
+    {
+      "n": "8",
+      "band": "the per-cell backup ejector is evaluated and its effect reported",
+      "got": "9.261 against Gen6's 6.992 at r = 0.99",
+      "passed": true
+    }
+  ]
+}

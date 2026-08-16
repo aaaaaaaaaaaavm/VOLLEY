@@ -66,4 +66,81 @@ wear-out, and reliability is treated as identical across elements — the same a
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Eight of eight bands pass — and the run answers the question it was asked in a
+way that does not favour the architecture change.**
+
+| | Elements | Manifest-forfeiting | Required *r* | Delivered at *r* = 0.99 |
+|---|---:|---:|---:|---:|
+| **Gen5, as published** | 13 | **9** | **0.99326** | **6.620** |
+| **Gen6** | 12 | **8** | **0.99252** | **6.992** |
+| **Gen6 + per-cell ejector** | 8 | **3** | **0.98388** | **9.261** |
+| *a spring dispenser* | 12 | **0** | — | **11.880** |
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces Gen5's published 0.99326 within 0.0001 | **0.99326** | **PASS** |
+| 2 | every Gen5 element accounted for | 0 unaccounted | **PASS** |
+| 3 | Gen6 has fewer shared elements | 8 against 9 | **PASS** |
+| 4 | Gen6's required *r* is lower | 0.99252 against 0.99326 | **PASS** |
+| 5 | expected delivery at *r* = 0.99 is higher | 6.992 against 6.620 | **PASS** |
+| 6 | neither reaches a spring's zero | Gen5 9, Gen6 8 | **PASS** |
+| 7 | the gas store counts as manifest-forfeiting | yes | **PASS** |
+| 8 | the backup ejector is evaluated | 9.261 against 6.992 | **PASS** |
+
+### Deleting six subsystems removed one shared failure
+
+**ADR-032 deletes six of Gen5's nine manifest-forfeiting elements** — sled, stator, converter,
+brake, sled return, and commutation. **The count goes from nine to eight.**
+
+It adds five: **the gas reservoir, the fill valve, the fire valve, the piston and seals, and the
+chamber.** And one Gen5 never had at all —
+
+> **Host stage keep-alive.** The machine now depends on a vehicle somebody else owns staying
+> alive past passivation. **No launch provider has agreed to it**, and it forfeits the manifest
+> exactly as a bank failure did.
+
+**The failure modes changed discipline, from windings and switches to seals and valves. The
+structure barely moved.**
+
+### The result that matters, and it is not the architecture
+
+| Change | Satellites delivered at *r* = 0.99 | Gain |
+|---|---:|---:|
+| Gen5 → Gen6, an entire architecture | 6.620 → **6.992** | **+0.37** |
+| Gen6 → Gen6 with a per-cell ejector | 6.992 → **9.261** | **+2.27** |
+
+**A spring in every cell is worth six times the architecture change.** Deleting subsystems changes
+the *count* of shared elements; putting a mechanism in each cell changes the *structure* — the
+drive stops being manifest-forfeiting and becomes satellite-forfeiting, which is the only move
+that touches what **E30** actually says.
+
+**It does not deliver the Δv.** A 1–2 m/s ejector guarantees clearance, not the orbit change the
+product is sold on. What it converts is *"the drive died and we lost eight satellites"* into
+*"the drive died and eight satellites deployed with no benefit"*.
+
+**And it does not reach a spring's 11.880 either**, because the sequencer, launch lock and
+magazine remain shared. **Zero manifest-forfeiting elements is not available to any architecture
+that shares a magazine.**
+
+### The predictions
+
+**All four held**, and the third by a wider margin than expected.
+
+1. Band 3 passes, count falls by less than the deletion suggests — **nine to eight, on six
+   deletions.**
+2. Bands 4 and 5 pass narrowly — **0.99326 → 0.99252**, and 6.620 → 6.992.
+3. The backup ejector does more than the architecture change — **six times more.**
+4. **So the honest conclusion is the predicted one: Gen6 improves reliability incidentally, and
+   E30 is not answered by it.** Recorded as **P75**.
+
+## What this run does not do
+
+- **No common-cause failures.** A reservoir leak and a valve failure share a gas circuit; a
+  sequencer fault can command a valve wrongly. Independence is assumed and is the weakest
+  assumption here.
+- **One reliability across all elements**, which is `fmea.py`'s assumption, kept for
+  comparability. A COTS valve and a bespoke cradle do not have the same *r*.
+- **No wear-out**, on components cycled twelve times, including a piston seal whose friction has
+  never been measured (**P67**).
+- **The ejector is not designed.** Mass, volume, and its own failure rate are unpriced, and it
+  competes for the cell space the magazine already uses.
