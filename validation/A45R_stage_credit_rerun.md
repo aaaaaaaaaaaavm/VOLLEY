@@ -67,4 +67,73 @@ zero it replaces.
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Four of eight bands pass. Itemising the enclosure did not rescue the credit — it
+halved the margin again.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | credit reproduces A37's re-run 85.36 kg | 85.3599 kg | **PASS** |
+| 2 | full credit gives 1.403 kg/sat within 0.5 % | 1.403 kg, 0.02 % off | **PASS** |
+| 3 | every item carries a written reason | 0 unjustified | **PASS** |
+| 4 | hostile reading keeps ≤ 2.0 kg/sat | **3.271 kg** | **FAIL** |
+| 5 | break-even ≥ 30 %, as ADR-032 states | **8.4 %** | **FAIL** |
+| 6 | break-even no worse than A45's 16.5 % | **8.4 %** | **FAIL** |
+| 7 | monotone in surviving fraction | monotone | **PASS** |
+| 8 | enclosure lines are less than half the credit | **58.6 %** | **FAIL** |
+
+### The break-even has halved twice
+
+| | Credit | Break-even | May fail |
+|---|---:|---:|---:|
+| ADR-032, as written | 43.33 kg | **30 %** | 13.0 kg |
+| A45, 2026-08-16 | 43.33 kg | **16.5 %** | 7.17 kg |
+| **A45-R, after A46** | **85.36 kg** | **8.4 %** | **7.17 kg** |
+
+**The allowance never moved. The credit did.** Added mass per satellite may absorb **7.17 kg**
+before it reaches 2.0, and that is fixed by A43's store and A37's added base. Doubling the credit
+does not buy any more of it — **it just means a smaller fraction of the credit has to fail before
+the falsifier fires.** ADR-032's threshold is now wrong by 3.6 times.
+
+### Band 8 is the one that should worry a reader
+
+**The five enclosure lines are 50.03 kg of an 85.36 kg credit — 58.6 %.** The Gen6 mass case now
+rests, majority-wise, on a single assumption about a skin belonging to a vehicle nobody has agreed
+to lend.
+
+**Crediting the enclosure and nothing else already gives 5.572 kg per satellite**, and the largest
+single loss in the hostile reading is the skins at 4.92 kg — the item this run rated **0.85**, the
+most generous fraction in the table apart from the ESPA bracket.
+
+### What A46 changed about the argument
+
+**A45's sharpest point is gone and the situation got worse anyway.** A45 could say *you cannot
+credit a mass you never itemised*, and rated the lump 0.00. **A46 itemised it**, so this run rates
+the same hardware at 0.50 – 0.85 — **every one of the five fractions is more generous than the zero
+it replaces** — and the hostile figure still lands at **3.271 kg per satellite**, only 5 % better
+than A45's 3.108 on a credit twice the size.
+
+**Being more generous, line by line, on a properly derived mass, produced almost the same answer.**
+That is a stronger result than A45's, because it no longer depends on refusing to credit an
+unmodelled lump.
+
+### The predictions
+
+**All four held**, which is three runs in a row.
+
+1. Break-even near 8 % — **8.4 %**.
+2. Band 4 fails by less than A45's 3.108 — **3.271**. *Wrong: it is slightly worse, not better.*
+3. Band 8 fails, enclosure near 59 % — **58.6 %**.
+4. Band 5 fails again — **8.4 % against 30 %**.
+
+*Correction to the above: prediction 2 said the hostile figure would be lower than A45's. It is
+higher, 3.271 against 3.108. The generosity of the new fractions was outweighed by the size of what
+they apply to.*
+
+## What this re-run does not do
+
+- **A45 is not edited.** Its bands, fractions and result stand as the record of what it found
+  against the ledger it read.
+- **The six original fractions are unchanged**, deliberately, so this run cannot be accused of
+  re-arguing them with hindsight.
+- **The fractions are still judgements.** The break-even is published so a reader can substitute
+  their own, and at 8.4 % there is very little room for anyone's.

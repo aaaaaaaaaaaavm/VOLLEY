@@ -36,6 +36,9 @@ TARGET_KG = 2.0                      # kill criterion 1, unmoved
 N = hi.N_MANIFEST
 V_RES_A43 = 9.55e-3                  # A43's design reservoir
 ADR_CLAIMED_BREAKEVEN = 0.30         # what ADR-032 states
+A45_BREAKEVEN = 0.165                # A45's break-even, for band 6 of the re-run
+ENCLOSURE_PREFIXES = ('Enclosure skins', 'Enclosure frames', 'Radiator',
+                      'Equipment-bay boxes', 'Fasteners and brackets')
 
 # Declared in validation/A45_stage_credit.md before this file existed.
 SURVIVES = {
@@ -53,10 +56,21 @@ SURVIVES = {
         '10 % is local mounting'),
     'Panels / closeouts': (0.80,
         'stage skin is real; local closeout around the muzzle is not'),
-    'Enclosure / radiator': (0.00,
-        'you cannot credit a mass you never itemised. P10 records this as a parametric lump '
-        'never built up from line items, and the dry mass as a floor rather than a total; '
-        'deleting it as stage-provided converts an admitted unknown into a saving'),
+    # A45-R, 2026-08-16. A46 itemised the enclosure at 50.04 kg, which removes A45's reason
+    # for giving it 0.00 -- "you cannot credit a mass you never itemised". These five are
+    # argued on their merits in validation/A45R_stage_credit_rerun.md and every one is more
+    # generous than the zero it replaces. The six fractions above are A45's, verbatim.
+    'Enclosure skins': (0.85,
+        'a stage is already a skinned cylinder; a deployer inside it needs no 6 m2 box of its '
+        'own. The 15 % is local closeout at the muzzle and the aft cutout'),
+    'Enclosure frames': (0.85, 'stage ring frames and stringers, same argument'),
+    'Radiator': (0.70,
+        'the stage thermal loop provides radiating area; a local cold plate for the sequencer '
+        'does not come free'),
+    'Equipment-bay boxes': (0.60,
+        'a stage avionics bay is real; mounting for a deployer sequencer is not'),
+    'Fasteners and brackets': (0.50,
+        'attaching a deployer to a stage costs fasteners the stage does not already have'),
 }
 
 
@@ -118,12 +132,13 @@ def main():
     print(f"\nhostile reading: {hostile:.3f} kg per satellite "
           f"({'PASSES' if hostile <= TARGET_KG else 'CROSSES'} the unmoved {TARGET_KG} kg)")
 
-    # P10's lump alone
-    p10 = next(r for r in items if r['part'].startswith('Enclosure / radiator'))
-    p10_only = (base + p10['kg'] + store) / N
-    print(f"P10's {p10['kg']:.2f} kg lump alone: {p10_only:.3f} kg per satellite "
-          f"({p10['kg']/total*100:.1f} % of the credit)")
+    # The enclosure alone -- A45's "P10 lump", now five derived lines
+    encl_kg = sum(r['kg'] for r in items if r['part'].startswith(ENCLOSURE_PREFIXES))
+    p10_only = (base + encl_kg + store) / N
+    print(f"the enclosure alone: {encl_kg:.2f} kg -> {p10_only:.3f} kg per satellite "
+          f"({encl_kg/total*100:.1f} % of the credit)")
 
+    encl = sum(r['kg'] for r in items if r['part'].startswith(ENCLOSURE_PREFIXES))
     be = breakeven_fraction(store, total)
     print(f"\nuniform break-even: {be*100:.1f} % of the credit may fail "
           f"({be*total:.2f} kg), against ADR-032's stated {ADR_CLAIMED_BREAKEVEN*100:.0f} %")
@@ -142,8 +157,8 @@ def main():
                    for a, b in zip(curve, curve[1:]))
 
     bands = [
-        ('1', "line items reproduce A37's 43.33 kg to 0.01 kg",
-         f"{total:.4f} kg", abs(total - 43.33) <= 0.01),
+        ('1', "line items reproduce A37's re-run 85.36 kg to 0.01 kg",
+         f"{total:.4f} kg", abs(total - 85.36) <= 0.01),
         ('2', "at the full credit, per satellite reproduces A43's 1.403 kg within 0.5 %",
          f"{nominal:.3f} kg, {abs(nominal-1.403)/1.403*100:.2f} % off",
          abs(nominal - 1.403) / 1.403 <= 0.005),
@@ -151,20 +166,20 @@ def main():
          f"{len(unjustified)} unjustified", not unjustified),
         ('4', f'hostile reading keeps per satellite <= {TARGET_KG} kg',
          f"{hostile:.3f} kg", hostile <= TARGET_KG),
-        ('5', f"removing P10's lump alone keeps per satellite <= {TARGET_KG} kg",
-         f"{p10_only:.3f} kg", p10_only <= TARGET_KG),
-        ('6', f"uniform break-even >= {ADR_CLAIMED_BREAKEVEN*100:.0f} %, as ADR-032 states",
+        ('5', f"uniform break-even >= {ADR_CLAIMED_BREAKEVEN*100:.0f} %, as ADR-032 states",
          f"{be*100:.1f} %", be >= ADR_CLAIMED_BREAKEVEN),
+        ('6', f"break-even no worse than A45's {A45_BREAKEVEN*100:.1f} %",
+         f"{be*100:.1f} %", be >= A45_BREAKEVEN),
         ('7', 'per satellite monotone decreasing in surviving fraction',
          'monotone' if monotone else 'NOT monotone', monotone),
-        ('8', 'largest single contributor to credit loss identified',
-         f"{biggest['part'][:40]} at {biggest['kg']*(1-biggest['survives']):.2f} kg", True),
+        ('8', 'the five enclosure lines are less than half the total credit',
+         f"{encl/total*100:.1f} %", encl / total < 0.50),
     ]
     print()
     for n, text, got, ok in bands:
         print(f"  {n}  {'PASS' if ok else 'FAIL'}  {text}: {got}")
 
-    out = dict(analysis='A45', bands_declared_commit='HEAD~1',
+    out = dict(analysis='A45-R', bands_declared_commit='HEAD~1',
                note='the surviving fractions are JUDGEMENTS, not measurements. They are declared '
                     'in the run sheet before this script so their consequence is computed rather '
                     'than argued, and the break-even is reported so a reader can substitute '
@@ -172,7 +187,7 @@ def main():
                credit_total_kg=total, added_base_kg=base, store_kg=store,
                nominal_per_sat=nominal, hostile_per_sat=hostile,
                credit_lost_kg=lost, credit_lost_pct=lost / total * 100,
-               p10_only_per_sat=p10_only, p10_kg=p10['kg'],
+               enclosure_only_per_sat=p10_only, enclosure_kg=encl_kg,
                breakeven_fraction=be, adr_claimed_breakeven=ADR_CLAIMED_BREAKEVEN,
                largest_loss=biggest['part'],
                items=items, curve=curve,

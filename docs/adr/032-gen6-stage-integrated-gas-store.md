@@ -118,7 +118,7 @@ will not.
 **Kill criterion 4 is not declared passed.** A38 establishes that raising the acceleration does not
 make tip-off worse. It remains *modelled, not demonstrated*, on a mechanism that does not exist.
 
-**Nothing here is measured.** Forty-five analyses, one hundred and four register entries, and no hardware.
+**Nothing here is measured.** Forty-six analyses, one hundred and four register entries, and no hardware.
 `docs/PROVENANCE.md` says so and continues to.
 
 ## Alternatives, and why not
@@ -150,6 +150,9 @@ the moat, and BOLLEY is the evidence for that rather than the alternative to it.
    satellite** against 1.403 at the full credit. **A37 band 5 fails retrospectively and is not
    edited; kill criterion 1 is crossed on both numerators.** The honest figure to publish is the
    range, not its lower end. **P68.**
+   **Re-run as A45-R after A46 itemised the enclosure: the break-even halved again to 8.4 %**,
+   because the credit grew to **85.36 kg — 67.4 % of the machine** — while the 7.17 kg allowance
+   did not. **The enclosure alone is 58.6 % of the credit.**
 2. ~~**The blowdown transient needs a regulator that weighs more than the store it feeds.**~~
    **Retired 2026-08-14 by A41.** There is no regulator: a pre-charged chamber removes the
    flow-rate problem by construction. The store is **4.66 kg**, not the 2.98 A39 estimated, and it

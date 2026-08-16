@@ -1,19 +1,19 @@
 {
-  "analysis": "A45",
+  "analysis": "A45-R",
   "bands_declared_commit": "HEAD~1",
   "note": "the surviving fractions are JUDGEMENTS, not measurements. They are declared in the run sheet before this script so their consequence is computed rather than argued, and the break-even is reported so a reader can substitute their own. The 2.0 kg threshold is unmoved.",
-  "credit_total_kg": 43.32992,
+  "credit_total_kg": 85.35992000000002,
   "added_base_kg": 11.452976,
   "store_kg": 5.380445242949372,
   "nominal_per_sat": 1.4027851035791141,
-  "hostile_per_sat": 3.1081984369124473,
-  "credit_lost_kg": 20.464959999999998,
-  "credit_lost_pct": 47.230551083408415,
-  "p10_only_per_sat": 2.069451770245781,
-  "p10_kg": 8.0,
-  "breakeven_fraction": 0.16539561478651768,
+  "hostile_per_sat": 3.2709484369124477,
+  "credit_lost_kg": 22.41796,
+  "credit_lost_pct": 26.262864351325536,
+  "enclosure_only_per_sat": 5.571951770245781,
+  "enclosure_kg": 50.029999999999994,
+  "breakeven_fraction": 0.08395718689814409,
   "adr_claimed_breakeven": 0.3,
-  "largest_loss": "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
+  "largest_loss": "Enclosure skins (2 mm Al, 6.077 m2 net, A46)",
   "items": [
     {
       "part": "Track longerons (2x Al box section)",
@@ -52,103 +52,127 @@
       "reason": "stage skin is real; local closeout around the muzzle is not"
     },
     {
-      "part": "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
-      "kg": 8.0,
-      "survives": 0.0,
-      "reason": "you cannot credit a mass you never itemised. P10 records this as a parametric lump never built up from line items, and the dry mass as a floor rather than a total; deleting it as stage-provided converts an admitted unknown into a saving"
+      "part": "Enclosure skins (2 mm Al, 6.077 m2 net, A46)",
+      "kg": 32.82,
+      "survives": 0.85,
+      "reason": "a stage is already a skinned cylinder; a deployer inside it needs no 6 m2 box of its own. The 15 % is local closeout at the muzzle and the aft cutout"
+    },
+    {
+      "part": "Enclosure frames and ribs (A46, 25 % of skin, declared)",
+      "kg": 8.2,
+      "survives": 0.85,
+      "reason": "stage ring frames and stringers, same argument"
+    },
+    {
+      "part": "Radiator (1600 x 200 x 3 mm Al, A46)",
+      "kg": 2.59,
+      "survives": 0.7,
+      "reason": "the stage thermal loop provides radiating area; a local cold plate for the sequencer does not come free"
+    },
+    {
+      "part": "Equipment-bay boxes (4 bays, 1.5 mm Al, A46)",
+      "kg": 1.87,
+      "survives": 0.6,
+      "reason": "a stage avionics bay is real; mounting for a deployer sequencer is not"
+    },
+    {
+      "part": "Fasteners and brackets (A46, 10 % of structure, declared)",
+      "kg": 4.55,
+      "survives": 0.5,
+      "reason": "attaching a deployer to a stage costs fasteners the stage does not already have"
     }
   ],
   "curve": [
     {
       "surviving": 0.0,
-      "per_sat": 5.013611770245781
+      "per_sat": 8.516111770245784
     },
     {
       "surviving": 0.05,
-      "per_sat": 4.833070436912448
+      "per_sat": 8.160445436912449
     },
     {
       "surviving": 0.1,
-      "per_sat": 4.6525291035791145
+      "per_sat": 7.804779103579118
     },
     {
       "surviving": 0.15000000000000002,
-      "per_sat": 4.471987770245781
+      "per_sat": 7.449112770245783
     },
     {
       "surviving": 0.2,
-      "per_sat": 4.291446436912447
+      "per_sat": 7.093446436912449
     },
     {
       "surviving": 0.25,
-      "per_sat": 4.110905103579114
+      "per_sat": 6.737780103579117
     },
     {
       "surviving": 0.3,
-      "per_sat": 3.9303637702457803
+      "per_sat": 6.382113770245783
     },
     {
       "surviving": 0.35,
-      "per_sat": 3.7498224369124475
+      "per_sat": 6.0264474369124486
     },
     {
       "surviving": 0.39999999999999997,
-      "per_sat": 3.5692811035791148
+      "per_sat": 5.670781103579116
     },
     {
       "surviving": 0.44999999999999996,
-      "per_sat": 3.388739770245781
+      "per_sat": 5.315114770245782
     },
     {
       "surviving": 0.49999999999999994,
-      "per_sat": 3.2081984369124474
+      "per_sat": 4.9594484369124485
     },
     {
       "surviving": 0.5499999999999999,
-      "per_sat": 3.0276571035791147
+      "per_sat": 4.603782103579115
     },
     {
       "surviving": 0.6,
-      "per_sat": 2.847115770245781
+      "per_sat": 4.248115770245781
     },
     {
       "surviving": 0.65,
-      "per_sat": 2.6665744369124478
+      "per_sat": 3.892449436912448
     },
     {
       "surviving": 0.7000000000000001,
-      "per_sat": 2.486033103579114
+      "per_sat": 3.5367831035791144
     },
     {
       "surviving": 0.7500000000000001,
-      "per_sat": 2.3054917702457804
+      "per_sat": 3.18111677024578
     },
     {
       "surviving": 0.8000000000000002,
-      "per_sat": 2.1249504369124472
+      "per_sat": 2.825450436912447
     },
     {
       "surviving": 0.8500000000000002,
-      "per_sat": 1.9444091035791136
+      "per_sat": 2.469784103579113
     },
     {
       "surviving": 0.9000000000000002,
-      "per_sat": 1.7638677702457801
+      "per_sat": 2.114117770245779
     },
     {
       "surviving": 0.9500000000000003,
-      "per_sat": 1.5833264369124465
+      "per_sat": 1.7584514369124455
     },
     {
       "surviving": 1.0000000000000002,
-      "per_sat": 1.4027851035791137
+      "per_sat": 1.4027851035791128
     }
   ],
   "bands": [
     {
       "n": "1",
-      "band": "line items reproduce A37's 43.33 kg to 0.01 kg",
-      "got": "43.3299 kg",
+      "band": "line items reproduce A37's re-run 85.36 kg to 0.01 kg",
+      "got": "85.3599 kg",
       "passed": true
     },
     {
@@ -166,19 +190,19 @@
     {
       "n": "4",
       "band": "hostile reading keeps per satellite <= 2.0 kg",
-      "got": "3.108 kg",
+      "got": "3.271 kg",
       "passed": false
     },
     {
       "n": "5",
-      "band": "removing P10's lump alone keeps per satellite <= 2.0 kg",
-      "got": "2.069 kg",
+      "band": "uniform break-even >= 30 %, as ADR-032 states",
+      "got": "8.4 %",
       "passed": false
     },
     {
       "n": "6",
-      "band": "uniform break-even >= 30 %, as ADR-032 states",
-      "got": "16.5 %",
+      "band": "break-even no worse than A45's 16.5 %",
+      "got": "8.4 %",
       "passed": false
     },
     {
@@ -189,9 +213,9 @@
     },
     {
       "n": "8",
-      "band": "largest single contributor to credit loss identified",
-      "got": "Enclosure / radiator / packaged avionics at 8.00 kg",
-      "passed": true
+      "band": "the five enclosure lines are less than half the total credit",
+      "got": "58.6 %",
+      "passed": false
     }
   ]
 }

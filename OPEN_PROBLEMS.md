@@ -3065,8 +3065,16 @@ declared** — it asked whether the credit closes the criterion on the assignmen
 that assignment its answer is right. What fails is the assignment's robustness. **Kill criterion 1
 is now crossed on both numerators rather than one**, and the threshold has not moved.
 
-**What would close it.** **Close P10**: build the enclosure, radiator and packaged avionics up
-from line items instead of carrying a parametric lump. That replaces the largest guess in the
+> **Re-run 2026-08-16 as [A45-R](validation/A45R_stage_credit_rerun.md), after A46 closed P10.
+> The situation is worse, not better.** Itemising the enclosure removed this entry's sharpest
+> argument — a mass never itemised cannot be credited — so every enclosure fraction was re-argued
+> upward, to 0.50–0.85 from zero. **The hostile figure still lands at 3.271 kg per satellite**, and
+> the break-even **halved again to 8.4 %** because the credit grew to 85.36 kg while the 7.17 kg
+> allowance did not. **The five enclosure lines are 58.6 % of the credit**, so the Gen6 mass case
+> now rests, majority-wise, on one assumption about somebody else's skin. ADR-032's 30 % threshold
+> is wrong by 3.6 times.
+
+**What would close it.** **~~Close P10~~** — done 2026-08-16, and it made this entry worse. That replaces the largest guess in the
 credit with a number, and it is computation rather than metal. Until then the honest figure to
 publish is the range **1.403 – 3.108 kg per satellite**, not the lower end alone.
 
