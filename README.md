@@ -214,23 +214,84 @@ was correct, because no propagation here reads an image (<b>P72</b>).
 <a href="docs/GENERATIONS.md">docs/GENERATIONS.md</a> for what each generation was for, with
 Gen5 and Gen6 rendered beside it.</sub>
 
-## Three generations, and which one is which
+## Five years, three architectures, six CAD generations
 
-**The pictures above are Gen4. The numbers on this page are Gen5. The design target is Gen6.**
-That is confusing enough to be worth stating plainly rather than leaving a reader to infer it.
+```mermaid
+gantt
+    title VOLLEY, 2021 to now
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    todayMarker off
 
-| | | |
-|---|---|---|
-| **[Gen4](docs/GEN4_STATUS.md)** | the last one modelled by hand | Nine Fusion documents, more detail than any generation since, and **no committed STEP export** — its stations disagree with the analysis model (**P43**) |
-| **Gen5** | **the frozen baseline** | Built by script from [`cad/parameters.json`](cad/parameters.json), rebuildable byte-identically, and what every number on this page is computed against |
-| **[Gen6](docs/adr/032-gen6-stage-integrated-gas-store.md)** | **the current design target** | A different machine: **no mover, no stator, no bank, no brake**, and a rail a spent upper stage provides |
+    section Architecture
+    Coilgun                          :done, a1, 2021-03-22, 2025-07-01
+    Linear synchronous motor         :done, a2, 2025-07-01, 2026-08-14
+    Cold gas on a stage rail         :active, a3, 2026-08-14, 2026-08-17
 
-**Gen6 is better on velocity and worse on precision.** 30.535 m/s against 16.029, and **1.113 %
-of 3σ dispersion against 0.0274 m/s** — because Gen5 commanded velocity through a designed loop
-and Gen6's shot is 133 ms of open-loop expansion whose spread is **93.4 % seal friction nobody has
-measured** (**P67**).
+    section Host
+    Dedicated free-flyer             :done, h1, 2021-03-22, 2023-01-01
+    Spent upper stage as a payload   :done, h2, 2023-01-01, 2026-08-14
+    Spent upper stage AS the machine :active, h3, 2026-08-14, 2026-08-17
 
-**[Read the full comparison, with all three rendered side by side →](docs/GENERATIONS.md)**
+    section CAD
+    Gen1  geometric ancestor         :done, c1, 2025-09-15, 2026-02-15
+    Gen2  first structured revision  :done, c2, 2026-02-15, 2026-07-23
+    Gen3  parameter-reconciled       :done, c3, 2026-07-23, 2026-08-03
+    Gen4  hand-modelled never exported :crit, c4, 2026-08-03, 2026-08-10
+    Gen5  script-built and frozen    :done, c5, 2026-08-10, 2026-08-14
+    Gen6  script-built and current   :active, c6, 2026-08-14, 2026-08-17
+
+    section Evidence
+    Nothing measured at any scale    :crit, e1, 2021-03-22, 2026-08-17
+```
+
+<sub><b>Dates carry the precision <a href="docs/HISTORY.md">docs/HISTORY.md</a> records, and not
+more.</b> <b>Documented:</b> the 2021-03-22 concept, the 2026-07-23 Gen3 build, and everything from
+2026-07-29 on, which is in git. <b>Approximate:</b> the mid-2025 motor decision, Gen1 and Gen2,
+whose build history was never reconstructed — <code>cad/CHANGELOG_CAD.md</code> gives Gen1 a range
+of 2021–2025 and is the authority if this disagrees. <b>Inferred:</b> the 2023 host reframe has a
+year and no month in the record; it is drawn at the start of that year and the bar's left edge
+should not be read as a date. Bar <i>lengths</i> are spans between milestones, not durations of
+work.</sub>
+
+**The bottom bar is the one that matters.** Five years, three architectures, six CAD
+generations, forty-six analyses — and **not one measurement**. That is `OPEN_PROBLEMS.md` **E4**,
+it is open, and nothing above it changes that.
+
+### Which generation is which
+
+**The pictures on this page are Gen4. The numbers on this page are Gen5. The design target is
+Gen6.** That is confusing enough to state plainly rather than leave a reader to infer.
+
+| | **[Gen4](docs/GEN4_STATUS.md)** | **Gen5** | **[Gen6](docs/adr/032-gen6-stage-integrated-gas-store.md)** |
+|---|---|---|---|
+| | *last drawn by hand* | ***the frozen baseline*** | ***the current target*** |
+| **How it was built** | nine Fusion documents | script, from [`cad/parameters.json`](cad/parameters.json) | same |
+| **Committed STEP** | **none — P43** | eight parts | six parts |
+| **Rebuildable byte-identically** | no | **yes** | **yes** |
+| **Drive** | linear motor | linear motor | **cold gas** |
+| **Energy store** | supercapacitor bank | supercapacitor bank | **2 L chamber at 50 bar** |
+| **Arrest** | eddy brake | eddy brake | **none — nothing to stop** |
+| **Structure** | its own track | its own track | **a rail the host stage provides** |
+| **Exit velocity** | *not established* | **16.029 m/s at 10.07 g** | **30.535 m/s at 25 g** (29.009 with friction) |
+| **Dispersion, 3σ** | — | **0.0274 m/s** | **1.113 %** |
+| **Per 3U satellite** | — | 10.547 kg dry | 1.403–3.271 kg added |
+
+**Gen6 is better on velocity and mass, and worse on the thing this is sold on.** Gen5 commanded
+velocity through a loop designed against phase margin; Gen6's shot is **133 ms of open-loop
+expansion** whose spread is **93.4 % a seal friction nobody has measured** (**P67**). And three of
+Gen5's crossed kill criteria are **dissolved by Gen6 rather than passed** — a criterion that no
+longer applies has not been met.
+
+<table>
+<tr>
+<td width="33%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Gen4"></a><br><sub><b>Gen4.</b> Hand-modelled, more detail than any generation since, and no committed export.</sub></td>
+<td width="33%"><a href="cad/renders/gen5/hero_open.png"><img src="cad/renders/gen5/hero_open.png" alt="Gen5"></a><br><sub><b>Gen5.</b> Eight parts from the parameter file. Plainer because every feature must trace to a parameter.</sub></td>
+<td width="33%"><a href="cad/renders/gen6/hero_open.png"><img src="cad/renders/gen6/hero_open.png" alt="Gen6"></a><br><sub><b>Gen6.</b> What is left after deletion: a rail, a tube, a chamber. <b>The difference is the architecture, not the renderer.</b></sub></td>
+</tr>
+</table>
+
+**[The full comparison, with what each generation fixed and what it cost →](docs/GENERATIONS.md)**
 
 **Spin it in the browser:** [`cad/stl/EMOCD_Assembly_Gen3.stl`](cad/stl/EMOCD_Assembly_Gen3.stl)
 and [`cad/stl/EMOCD_Sled_Gen3.stl`](cad/stl/EMOCD_Sled_Gen3.stl), GitHub renders STL
