@@ -2,7 +2,7 @@
   "analysis": "A35",
   "bands_declared_commit": "198aaeb",
   "note": "attribution and an upper bound; NOT a sizing model",
-  "dry_kg": 84.53,
+  "dry_kg": 126.56,
   "constraints": {
     "C1": "the satellite is unmodified",
     "C2": "a reusable mover carries the magnets",
@@ -186,15 +186,55 @@
       "note": "scales with enclosed length"
     },
     {
-      "part": "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
-      "kg": 8.0,
+      "part": "Enclosure skins (2 mm Al, 6.077 m2 net, A46)",
+      "kg": 32.82,
       "cg_m": 0.5,
       "full": [],
       "partial": [
-        "C3",
         "C4"
       ],
-      "note": "P10 placeholder; radiator half is C3"
+      "note": "scales with enclosed envelope"
+    },
+    {
+      "part": "Enclosure frames and ribs (A46, 25 % of skin, declared)",
+      "kg": 8.2,
+      "cg_m": 0.5,
+      "full": [],
+      "partial": [
+        "C4"
+      ],
+      "note": "ditto; a declared fraction of skin"
+    },
+    {
+      "part": "Radiator (1600 x 200 x 3 mm Al, A46)",
+      "kg": 2.59,
+      "cg_m": 0.45,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "sized to reject pulse heat; no pulse, no radiator"
+    },
+    {
+      "part": "Equipment-bay boxes (4 bays, 1.5 mm Al, A46)",
+      "kg": 1.87,
+      "cg_m": 0.3,
+      "full": [],
+      "partial": [
+        "C3",
+        "C5"
+      ],
+      "note": "bays for the bank and PPU go with them; sequencer bay survives"
+    },
+    {
+      "part": "Fasteners and brackets (A46, 10 % of structure, declared)",
+      "kg": 4.55,
+      "cg_m": 0.5,
+      "full": [],
+      "partial": [
+        "C4"
+      ],
+      "note": "scales with the structure it joins"
     },
     {
       "part": "Sled CAD reconciliation (P15, CAD-derived 9.445 kg)",
@@ -211,7 +251,7 @@
   "single_requirement_kg": {
     "C1": 0,
     "C2": 11.54,
-    "C3": 23.76,
+    "C3": 26.35,
     "C4": 0,
     "C5": 6.5,
     "C6": 0
@@ -220,7 +260,7 @@
     "Track longerons (2x Al box section)",
     "Supercapacitor cells + busbars",
     "Battery + avionics + IMU",
-    "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)"
+    "Equipment-bay boxes (4 bays, 1.5 mm Al, A46)"
   ],
   "corners": [
     {
@@ -246,7 +286,7 @@
         "C2"
       ],
       "removed_kg": 11.54,
-      "removed_pct": 13.6,
+      "removed_pct": 9.1,
       "flagged_kg": 7.28,
       "sum_of_singles_kg": 11.54,
       "overlap_kg": 0.0
@@ -255,10 +295,10 @@
       "deleted": [
         "C3"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 16.0,
-      "sum_of_singles_kg": 23.76,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 9.87,
+      "sum_of_singles_kg": 26.35,
       "overlap_kg": 0.0
     },
     {
@@ -267,7 +307,7 @@
       ],
       "removed_kg": 0,
       "removed_pct": 0.0,
-      "flagged_kg": 29.33,
+      "flagged_kg": 66.9,
       "sum_of_singles_kg": 0,
       "overlap_kg": 0
     },
@@ -276,8 +316,8 @@
         "C5"
       ],
       "removed_kg": 6.5,
-      "removed_pct": 7.7,
-      "flagged_kg": 5.5,
+      "removed_pct": 5.1,
+      "flagged_kg": 7.37,
       "sum_of_singles_kg": 6.5,
       "overlap_kg": 0.0
     },
@@ -297,7 +337,7 @@
         "C2"
       ],
       "removed_kg": 11.54,
-      "removed_pct": 13.6,
+      "removed_pct": 9.1,
       "flagged_kg": 7.28,
       "sum_of_singles_kg": 11.54,
       "overlap_kg": 0.0
@@ -307,10 +347,10 @@
         "C1",
         "C3"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 16.0,
-      "sum_of_singles_kg": 23.76,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 9.87,
+      "sum_of_singles_kg": 26.35,
       "overlap_kg": 0.0
     },
     {
@@ -320,7 +360,7 @@
       ],
       "removed_kg": 0,
       "removed_pct": 0.0,
-      "flagged_kg": 29.33,
+      "flagged_kg": 66.9,
       "sum_of_singles_kg": 0,
       "overlap_kg": 0
     },
@@ -330,8 +370,8 @@
         "C5"
       ],
       "removed_kg": 6.5,
-      "removed_pct": 7.7,
-      "flagged_kg": 5.5,
+      "removed_pct": 5.1,
+      "flagged_kg": 7.37,
       "sum_of_singles_kg": 6.5,
       "overlap_kg": 0.0
     },
@@ -351,10 +391,10 @@
         "C2",
         "C3"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 23.28,
-      "sum_of_singles_kg": 35.3,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 17.15,
+      "sum_of_singles_kg": 37.89,
       "overlap_kg": 0.0
     },
     {
@@ -363,8 +403,8 @@
         "C4"
       ],
       "removed_kg": 11.54,
-      "removed_pct": 13.6,
-      "flagged_kg": 29.78,
+      "removed_pct": 9.1,
+      "flagged_kg": 67.35,
       "sum_of_singles_kg": 11.54,
       "overlap_kg": 0.0
     },
@@ -374,8 +414,8 @@
         "C5"
       ],
       "removed_kg": 18.04,
-      "removed_pct": 21.3,
-      "flagged_kg": 12.78,
+      "removed_pct": 14.3,
+      "flagged_kg": 14.65,
       "sum_of_singles_kg": 18.04,
       "overlap_kg": 0.0
     },
@@ -385,7 +425,7 @@
         "C6"
       ],
       "removed_kg": 11.54,
-      "removed_pct": 13.6,
+      "removed_pct": 9.1,
       "flagged_kg": 18.73,
       "sum_of_singles_kg": 11.54,
       "overlap_kg": 0.0
@@ -395,10 +435,10 @@
         "C3",
         "C4"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 37.33,
-      "sum_of_singles_kg": 23.76,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 76.77,
+      "sum_of_singles_kg": 26.35,
       "overlap_kg": 0.0
     },
     {
@@ -406,10 +446,10 @@
         "C3",
         "C5"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 16.0,
-      "sum_of_singles_kg": 30.26,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 9.87,
+      "sum_of_singles_kg": 32.85,
       "overlap_kg": 6.5
     },
     {
@@ -417,10 +457,10 @@
         "C3",
         "C6"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 27.45,
-      "sum_of_singles_kg": 23.76,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 21.32,
+      "sum_of_singles_kg": 26.35,
       "overlap_kg": 0.0
     },
     {
@@ -429,8 +469,8 @@
         "C5"
       ],
       "removed_kg": 6.5,
-      "removed_pct": 7.7,
-      "flagged_kg": 34.83,
+      "removed_pct": 5.1,
+      "flagged_kg": 74.27,
       "sum_of_singles_kg": 6.5,
       "overlap_kg": 0.0
     },
@@ -441,7 +481,7 @@
       ],
       "removed_kg": 0,
       "removed_pct": 0.0,
-      "flagged_kg": 40.78,
+      "flagged_kg": 78.35,
       "sum_of_singles_kg": 0,
       "overlap_kg": 0
     },
@@ -451,8 +491,8 @@
         "C6"
       ],
       "removed_kg": 6.5,
-      "removed_pct": 7.7,
-      "flagged_kg": 16.95,
+      "removed_pct": 5.1,
+      "flagged_kg": 18.82,
       "sum_of_singles_kg": 6.5,
       "overlap_kg": 0.0
     },
@@ -462,10 +502,10 @@
         "C2",
         "C3"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 23.28,
-      "sum_of_singles_kg": 35.3,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 17.15,
+      "sum_of_singles_kg": 37.89,
       "overlap_kg": 0.0
     },
     {
@@ -475,8 +515,8 @@
         "C4"
       ],
       "removed_kg": 11.54,
-      "removed_pct": 13.6,
-      "flagged_kg": 29.78,
+      "removed_pct": 9.1,
+      "flagged_kg": 67.35,
       "sum_of_singles_kg": 11.54,
       "overlap_kg": 0.0
     },
@@ -487,8 +527,8 @@
         "C5"
       ],
       "removed_kg": 18.04,
-      "removed_pct": 21.3,
-      "flagged_kg": 12.78,
+      "removed_pct": 14.3,
+      "flagged_kg": 14.65,
       "sum_of_singles_kg": 18.04,
       "overlap_kg": 0.0
     },
@@ -499,7 +539,7 @@
         "C6"
       ],
       "removed_kg": 11.54,
-      "removed_pct": 13.6,
+      "removed_pct": 9.1,
       "flagged_kg": 18.73,
       "sum_of_singles_kg": 11.54,
       "overlap_kg": 0.0
@@ -510,10 +550,10 @@
         "C3",
         "C4"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 37.33,
-      "sum_of_singles_kg": 23.76,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 76.77,
+      "sum_of_singles_kg": 26.35,
       "overlap_kg": 0.0
     },
     {
@@ -522,10 +562,10 @@
         "C3",
         "C5"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 16.0,
-      "sum_of_singles_kg": 30.26,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 9.87,
+      "sum_of_singles_kg": 32.85,
       "overlap_kg": 6.5
     },
     {
@@ -534,10 +574,10 @@
         "C3",
         "C6"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 27.45,
-      "sum_of_singles_kg": 23.76,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 21.32,
+      "sum_of_singles_kg": 26.35,
       "overlap_kg": 0.0
     },
     {
@@ -547,8 +587,8 @@
         "C5"
       ],
       "removed_kg": 6.5,
-      "removed_pct": 7.7,
-      "flagged_kg": 34.83,
+      "removed_pct": 5.1,
+      "flagged_kg": 74.27,
       "sum_of_singles_kg": 6.5,
       "overlap_kg": 0.0
     },
@@ -560,7 +600,7 @@
       ],
       "removed_kg": 0,
       "removed_pct": 0.0,
-      "flagged_kg": 40.78,
+      "flagged_kg": 78.35,
       "sum_of_singles_kg": 0,
       "overlap_kg": 0
     },
@@ -571,8 +611,8 @@
         "C6"
       ],
       "removed_kg": 6.5,
-      "removed_pct": 7.7,
-      "flagged_kg": 16.95,
+      "removed_pct": 5.1,
+      "flagged_kg": 18.82,
       "sum_of_singles_kg": 6.5,
       "overlap_kg": 0.0
     },
@@ -582,10 +622,10 @@
         "C3",
         "C4"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 37.78,
-      "sum_of_singles_kg": 35.3,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 77.22,
+      "sum_of_singles_kg": 37.89,
       "overlap_kg": 0.0
     },
     {
@@ -594,10 +634,10 @@
         "C3",
         "C5"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 23.28,
-      "sum_of_singles_kg": 41.8,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 17.15,
+      "sum_of_singles_kg": 44.39,
       "overlap_kg": 6.5
     },
     {
@@ -606,10 +646,10 @@
         "C3",
         "C6"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 34.73,
-      "sum_of_singles_kg": 35.3,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 28.6,
+      "sum_of_singles_kg": 37.89,
       "overlap_kg": 0.0
     },
     {
@@ -619,8 +659,8 @@
         "C5"
       ],
       "removed_kg": 18.04,
-      "removed_pct": 21.3,
-      "flagged_kg": 35.28,
+      "removed_pct": 14.3,
+      "flagged_kg": 74.72,
       "sum_of_singles_kg": 18.04,
       "overlap_kg": 0.0
     },
@@ -631,8 +671,8 @@
         "C6"
       ],
       "removed_kg": 11.54,
-      "removed_pct": 13.6,
-      "flagged_kg": 41.23,
+      "removed_pct": 9.1,
+      "flagged_kg": 78.8,
       "sum_of_singles_kg": 11.54,
       "overlap_kg": 0.0
     },
@@ -643,8 +683,8 @@
         "C6"
       ],
       "removed_kg": 18.04,
-      "removed_pct": 21.3,
-      "flagged_kg": 24.23,
+      "removed_pct": 14.3,
+      "flagged_kg": 26.1,
       "sum_of_singles_kg": 18.04,
       "overlap_kg": 0.0
     },
@@ -654,10 +694,10 @@
         "C4",
         "C5"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 37.33,
-      "sum_of_singles_kg": 30.26,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 76.77,
+      "sum_of_singles_kg": 32.85,
       "overlap_kg": 6.5
     },
     {
@@ -666,10 +706,10 @@
         "C4",
         "C6"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 48.78,
-      "sum_of_singles_kg": 23.76,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 88.22,
+      "sum_of_singles_kg": 26.35,
       "overlap_kg": 0.0
     },
     {
@@ -678,10 +718,10 @@
         "C5",
         "C6"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 27.45,
-      "sum_of_singles_kg": 30.26,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 21.32,
+      "sum_of_singles_kg": 32.85,
       "overlap_kg": 6.5
     },
     {
@@ -691,8 +731,8 @@
         "C6"
       ],
       "removed_kg": 6.5,
-      "removed_pct": 7.7,
-      "flagged_kg": 46.28,
+      "removed_pct": 5.1,
+      "flagged_kg": 85.72,
       "sum_of_singles_kg": 6.5,
       "overlap_kg": 0.0
     },
@@ -703,10 +743,10 @@
         "C3",
         "C4"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 37.78,
-      "sum_of_singles_kg": 35.3,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 77.22,
+      "sum_of_singles_kg": 37.89,
       "overlap_kg": 0.0
     },
     {
@@ -716,10 +756,10 @@
         "C3",
         "C5"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 23.28,
-      "sum_of_singles_kg": 41.8,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 17.15,
+      "sum_of_singles_kg": 44.39,
       "overlap_kg": 6.5
     },
     {
@@ -729,10 +769,10 @@
         "C3",
         "C6"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 34.73,
-      "sum_of_singles_kg": 35.3,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 28.6,
+      "sum_of_singles_kg": 37.89,
       "overlap_kg": 0.0
     },
     {
@@ -743,8 +783,8 @@
         "C5"
       ],
       "removed_kg": 18.04,
-      "removed_pct": 21.3,
-      "flagged_kg": 35.28,
+      "removed_pct": 14.3,
+      "flagged_kg": 74.72,
       "sum_of_singles_kg": 18.04,
       "overlap_kg": 0.0
     },
@@ -756,8 +796,8 @@
         "C6"
       ],
       "removed_kg": 11.54,
-      "removed_pct": 13.6,
-      "flagged_kg": 41.23,
+      "removed_pct": 9.1,
+      "flagged_kg": 78.8,
       "sum_of_singles_kg": 11.54,
       "overlap_kg": 0.0
     },
@@ -769,8 +809,8 @@
         "C6"
       ],
       "removed_kg": 18.04,
-      "removed_pct": 21.3,
-      "flagged_kg": 24.23,
+      "removed_pct": 14.3,
+      "flagged_kg": 26.1,
       "sum_of_singles_kg": 18.04,
       "overlap_kg": 0.0
     },
@@ -781,10 +821,10 @@
         "C4",
         "C5"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 37.33,
-      "sum_of_singles_kg": 30.26,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 76.77,
+      "sum_of_singles_kg": 32.85,
       "overlap_kg": 6.5
     },
     {
@@ -794,10 +834,10 @@
         "C4",
         "C6"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 48.78,
-      "sum_of_singles_kg": 23.76,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 88.22,
+      "sum_of_singles_kg": 26.35,
       "overlap_kg": 0.0
     },
     {
@@ -807,10 +847,10 @@
         "C5",
         "C6"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 27.45,
-      "sum_of_singles_kg": 30.26,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 21.32,
+      "sum_of_singles_kg": 32.85,
       "overlap_kg": 6.5
     },
     {
@@ -821,8 +861,8 @@
         "C6"
       ],
       "removed_kg": 6.5,
-      "removed_pct": 7.7,
-      "flagged_kg": 46.28,
+      "removed_pct": 5.1,
+      "flagged_kg": 85.72,
       "sum_of_singles_kg": 6.5,
       "overlap_kg": 0.0
     },
@@ -833,10 +873,10 @@
         "C4",
         "C5"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 37.78,
-      "sum_of_singles_kg": 41.8,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 77.22,
+      "sum_of_singles_kg": 44.39,
       "overlap_kg": 6.5
     },
     {
@@ -846,10 +886,10 @@
         "C4",
         "C6"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 49.23,
-      "sum_of_singles_kg": 35.3,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 88.67,
+      "sum_of_singles_kg": 37.89,
       "overlap_kg": 0.0
     },
     {
@@ -859,10 +899,10 @@
         "C5",
         "C6"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 34.73,
-      "sum_of_singles_kg": 41.8,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 28.6,
+      "sum_of_singles_kg": 44.39,
       "overlap_kg": 6.5
     },
     {
@@ -873,8 +913,8 @@
         "C6"
       ],
       "removed_kg": 18.04,
-      "removed_pct": 21.3,
-      "flagged_kg": 46.73,
+      "removed_pct": 14.3,
+      "flagged_kg": 86.17,
       "sum_of_singles_kg": 18.04,
       "overlap_kg": 0.0
     },
@@ -885,10 +925,10 @@
         "C5",
         "C6"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 48.78,
-      "sum_of_singles_kg": 30.26,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 88.22,
+      "sum_of_singles_kg": 32.85,
       "overlap_kg": 6.5
     },
     {
@@ -899,10 +939,10 @@
         "C4",
         "C5"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 37.78,
-      "sum_of_singles_kg": 41.8,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 77.22,
+      "sum_of_singles_kg": 44.39,
       "overlap_kg": 6.5
     },
     {
@@ -913,10 +953,10 @@
         "C4",
         "C6"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 49.23,
-      "sum_of_singles_kg": 35.3,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 88.67,
+      "sum_of_singles_kg": 37.89,
       "overlap_kg": 0.0
     },
     {
@@ -927,10 +967,10 @@
         "C5",
         "C6"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 34.73,
-      "sum_of_singles_kg": 41.8,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 28.6,
+      "sum_of_singles_kg": 44.39,
       "overlap_kg": 6.5
     },
     {
@@ -942,8 +982,8 @@
         "C6"
       ],
       "removed_kg": 18.04,
-      "removed_pct": 21.3,
-      "flagged_kg": 46.73,
+      "removed_pct": 14.3,
+      "flagged_kg": 86.17,
       "sum_of_singles_kg": 18.04,
       "overlap_kg": 0.0
     },
@@ -955,10 +995,10 @@
         "C5",
         "C6"
       ],
-      "removed_kg": 23.76,
-      "removed_pct": 28.1,
-      "flagged_kg": 48.78,
-      "sum_of_singles_kg": 30.26,
+      "removed_kg": 26.35,
+      "removed_pct": 20.8,
+      "flagged_kg": 88.22,
+      "sum_of_singles_kg": 32.85,
       "overlap_kg": 6.5
     },
     {
@@ -969,10 +1009,10 @@
         "C5",
         "C6"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 49.23,
-      "sum_of_singles_kg": 41.8,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 88.67,
+      "sum_of_singles_kg": 44.39,
       "overlap_kg": 6.5
     },
     {
@@ -984,10 +1024,10 @@
         "C5",
         "C6"
       ],
-      "removed_kg": 35.3,
-      "removed_pct": 41.8,
-      "flagged_kg": 49.23,
-      "sum_of_singles_kg": 41.8,
+      "removed_kg": 37.89,
+      "removed_pct": 29.9,
+      "flagged_kg": 88.67,
+      "sum_of_singles_kg": 44.39,
       "overlap_kg": 6.5
     }
   ],
@@ -995,7 +1035,7 @@
     {
       "band": "1",
       "name": "ledger reproduces mass_properties.dry_kg to 0.01 kg",
-      "detail": "84.5316 against 84.5316",
+      "detail": "126.5616 against 126.5616",
       "pass_": true
     },
     {
@@ -1013,8 +1053,8 @@
     {
       "band": "4",
       "name": "C3 alone removes >= 25 %",
-      "detail": "28.1 %",
-      "pass_": true
+      "detail": "20.8 %",
+      "pass_": false
     },
     {
       "band": "5",
@@ -1031,7 +1071,7 @@
     {
       "band": "7",
       "name": "no corner removes > 100 %, no partial counted as full",
-      "detail": "max 41.8 %",
+      "detail": "max 29.9 %",
       "pass_": true
     }
   ]

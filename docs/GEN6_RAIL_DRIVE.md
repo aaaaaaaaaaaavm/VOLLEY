@@ -186,7 +186,7 @@ modes below are where this actually gets decided.
 | **Kill criterion 3** — bank ESR crossed at 116–185 mΩ against a 65 mΩ ceiling | 2782 J per shot | **1182 J**, and peak power falls with it. May close on one string instead of four |
 | **Kill criterion 2** — envelope 44 % over | Brake sits beyond release | Machine ends at the stroke |
 | **P28**, **E24**, **P41** | Arrest section, sled return, cradle | No counterpart |
-| **Kill criterion 1** — 7.042 kg per satellite | | **Improves but does not close.** Roughly −12 kg of sled, brake and bank against maybe +4 kg of stator iron |
+| **Kill criterion 1** — 10.547 kg per satellite | | **Improves but does not close.** Roughly −12 kg of sled, brake and bank against maybe +4 kg of stator iron |
 
 ---
 

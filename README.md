@@ -28,7 +28,7 @@ work's own claims, and nothing here has been built, fired or measured.
 | **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
 | **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
 | **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
-| **[The defect register](OPEN_PROBLEMS.md)** | 103 numbered entries, 41 live |
+| **[The defect register](OPEN_PROBLEMS.md)** | 104 numbered entries, 41 live |
 | **[One page](SUMMARY.md)** | If you only read one file |
 | **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
 
@@ -52,7 +52,7 @@ work's own claims, and nothing here has been built, fired or measured.
 > **The last four deferred decisions were taken together** in
 > [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md), and **every headline number
 > moved the wrong way**: K_t 11.03 → **10.54 N per kA/m**, exit velocity 16.388 → **16.029 m/s**,
-> efficiency 21.0 → **18.8 %**, deployer mass per 3U satellite 6.378 → **7.042 kg**. Nothing
+> efficiency 21.0 → **18.8 %**, deployer mass per 3U satellite 6.378 → **10.547 kg**. Nothing
 > improved. That is what the corrections cost.
 >
 > **The design target moved on 2026-08-14, and Gen5 stays the measured baseline.**
@@ -67,7 +67,7 @@ work's own claims, and nothing here has been built, fired or measured.
 > does not bind; **A39** replaced the spring with gas at **2.98 kg**.
 >
 > **What it does not do.** Kill criterion 1 is **not declared met** — 1.608 kg per satellite on
-> added mass against **7.042 kg on dry mass**, both reported, threshold unmoved. Nothing in Gen6
+> added mass against **10.547 kg on dry mass**, both reported, threshold unmoved. Nothing in Gen6
 > is measured, its fluid system is unsized, its cradle mechanism does not exist, and no launch
 > provider has agreed to lend a stage. **[`docs/B1_ORDER.md`](docs/B1_ORDER.md)** is still the one
 > action that changes the category of evidence rather than its degree.
@@ -88,14 +88,14 @@ work's own claims, and nothing here has been built, fired or measured.
 | Exit velocity, 3U | **16.03 m/s at 10.1 g** | `analysis/motor_model.py` |
 | Acceleration zone / track | 1.3 m / 1.5 m | `cad/parameters.json` |
 | Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint | `analysis/motor_model.py` |
-| **Mass, dry / loaded** | **84.5 kg / 132.5 kg** | `analysis/mass_properties.py` |
-| Deployer mass per 3U satellite | **7.042 kg** | `analysis/payload_family.py` |
+| **Mass, dry / loaded** | **126.6 kg / 174.6 kg** | `analysis/mass_properties.py` |
+| Deployer mass per 3U satellite | **10.547 kg** | `analysis/payload_family.py` |
 | **Energy drawn per shot** | **2.78 kJ gross, 2.74 kJ net of regeneration** | `analysis/motor_model.py` |
 | Delivered to payload | 514 J — **18.5 % electrical-to-payload** | `analysis/motor_model.py` |
 | Recoil per shot | 64.1 N·s | `analysis/astro.py` |
 | Magazine | 12 × 3U, two transverse cassettes | `cad/parameters.json` |
 
-**TRL 2–3. Nothing has been built, fired, or measured at any scale.** Forty-four validation
+**TRL 2–3. Nothing has been built, fired, or measured at any scale.** Forty-five validation
 run sheets exist, each against an acceptance band declared *before* the run; **three failed
 outright**, several missed individual bands, and **three times a declared band caught a bug in
 the analysis rather than in the design**. Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before
@@ -120,7 +120,7 @@ The metrics on which the two differ. Losses are in the same table as the wins.
 | Semi-major axis change | **0 m** — a spring imparts none | **+28.8 km** | `analysis/astro.py`, A21-R |
 | 30° of in-track phase | **468 s of waiting** | 468 s of waiting | **no advantage; see P56** |
 | Orbital life delivered, per satellite | 1.41 yr | **2.11 yr** | 1.495× |
-| Deployer mass per 3U satellite | ~6 kg, canisterised class | 7.042 kg | parity |
+| Deployer mass per 3U satellite | ~6 kg, canisterised class | 10.547 kg | **1.76×, spring wins** |
 | Maturity | **TRL 9** | TRL 2–3 | spring wins |
 | Elements whose single failure forfeits the remaining manifest | **0** | **9 of 13** | spring wins, `docs/FMEA.md` |
 | Reliability needed to match it on delivered life | — | **r ≥ 0.99326** per element per cycle, **unmeasured** | `docs/FMEA.md` |
@@ -254,7 +254,7 @@ electrical-to-payload, net of that credit.
 | Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint to ±0.10 km apogee | `analysis/motor_model.py` |
 | Orbital lifetime multiplier | x1.60 at mean activity, **not invariant, see P16** | `analysis/astro.py` |
 | Semi-major axis change | **+28.8 km**, unreachable by waiting or by drag | `analysis/astro.py`, A21-R |
-| Dry / loaded mass | 84.5 kg / 132.5 kg | `analysis/mass_properties.py` |
+| Dry / loaded mass | 126.6 kg / 174.6 kg | `analysis/mass_properties.py` |
 | Recoil per shot | 64.1 N·s | `analysis/astro.py` |
 | Track first mode | 109 Hz fixed-fixed (target >70) | `analysis/sizing.py` |
 | Energy closure | 100.0 % accounted | `analysis/sizing.py` |

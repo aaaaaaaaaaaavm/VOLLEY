@@ -60,9 +60,9 @@
   "velocity_ratio": 6.4116,
   "days_to_30deg_volley": 1.379324174299751,
   "days_to_30deg_drag": 25.0,
-  "kg_per_3U_volley": 7.042,
+  "kg_per_3U_volley": 10.55,
   "kg_per_3U_dispenser": 6.0,
-  "coldgas_loss_ratio": 8.284705882352942,
+  "coldgas_loss_ratio": 12.411764705882353,
   "rows": [
     {
       "option": "Spring deployer (canisterised class)",
@@ -82,7 +82,7 @@
       "lifetime_multiplier": 1.6019385942146134,
       "designed_differential_m_s": 16.029,
       "days_to_30deg": 1.379324174299751,
-      "deployer_kg_per_3U": 7.042,
+      "deployer_kg_per_3U": 10.55,
       "satellite_carries": "nothing",
       "host_provides": "150-300 W, serial link, firing window",
       "schedulable": true,
@@ -130,12 +130,12 @@
       "passed": true
     },
     "4_mass_parity_vs_dispenser": {
-      "value": 1.1736666666666666,
+      "value": 1.7583333333333335,
       "band": "within +/-25 %",
-      "passed": true
+      "passed": false
     },
     "5_coldgas_loss_at_3U": {
-      "value": 8.284705882352942,
+      "value": 12.411764705882353,
       "band": "VOLLEY loses by >= 5x",
       "passed": true
     },

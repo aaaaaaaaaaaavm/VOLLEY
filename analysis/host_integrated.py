@@ -62,6 +62,16 @@ STAGE_PROVIDES = {
     'Battery + avionics':     'stage power, command and IMU, kept alive past passivation',
     'Thermal':                'stage thermal control loop',
     'Harness':                'stage harness, extended rather than added',
+    # P10's single line became five on 2026-08-16 (A46). The assignment is UNCHANGED IN
+    # INTENT -- A37 already credited "enclosure / radiator / packaged avionics" to stage
+    # thermal control and the avionics bay -- but the prefixes have to name the five lines
+    # or the whole 50.04 kg silently lands in `added`. What does change is the SIZE of what
+    # is being credited away, and A45 is where that is argued.
+    'Enclosure skins':        'stage skin; the stage is already a pressure-grade cylinder',
+    'Enclosure frames':       'stage ring frames and stringers',
+    'Radiator':               'stage thermal control loop and its radiating area',
+    'Equipment-bay boxes':    'stage avionics bay',
+    'Fasteners and brackets': 'stage structure is already joined to itself',
 }
 
 # Deleted outright by Gen6 physics, and therefore neither added NOR stage-provided.

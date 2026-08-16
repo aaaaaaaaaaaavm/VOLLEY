@@ -79,15 +79,22 @@ def build():
     lump('Thermal (pipes, radiator, MLI)', 6.00, 0.70)
     lump('ESPA bracket + fasteners', 9.00, 0.35)
     lump('Panels / closeouts', 5.50, 0.75)
-    # P10, DECIDED 2026-08-13 (ADR-030). Enclosure, radiator and packaged avionics were
-    # ABSENT from this rollup, so 76.5 kg was a floor rather than an estimate and kill
-    # criterion 1 was computed from it anyway. This is an 8.0 kg PLACEHOLDER with no
-    # derivation behind it, entered because a number carrying a caveat is auditable and a
-    # hole is not. KILL_CRITERIA.md already flagged a plausible 20 kg; 8 kg is the lean end
-    # and is deliberately the less flattering choice to leave un-taken.
-    # It is NOT a computed lump and must not be cited as one.
-    lump('Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)',
-         8.00, 0.50)
+    # P10, CLOSED 2026-08-16 by A46. What stood here until today was an 8.0 kg PLACEHOLDER
+    # with no derivation, entered on 2026-08-13 because a number carrying a caveat is
+    # auditable and a hole is not, and chosen as the lean end of a range KILL_CRITERIA.md
+    # had already put at a plausible 20 kg. A46 built the enclosure up from the geometry in
+    # cad/parameters.json -- 6.077 m2 of skin after three apertures -- and the five lines
+    # below replace it. THE PLACEHOLDER WAS LOW BY 6.3x.
+    #
+    # These are the MONOLITHIC 2 mm aluminium skins that cad/parameters.json specifies. A
+    # honeycomb sandwich at 3.0 kg/m2 gives 29.98 kg for the same five lines; adopting one
+    # is a DESIGN DECISION this project has not taken, and it is not taken here.
+    # validation/A46_enclosure_buildup.md.
+    lump('Enclosure skins (2 mm Al, 6.077 m2 net, A46)', 32.82, 0.50)
+    lump('Enclosure frames and ribs (A46, 25 % of skin, declared)', 8.20, 0.50)
+    lump('Radiator (1600 x 200 x 3 mm Al, A46)', 2.59, 0.45)
+    lump('Equipment-bay boxes (4 bays, 1.5 mm Al, A46)', 1.87, 0.30)
+    lump('Fasteners and brackets (A46, 10 % of structure, declared)', 4.55, 0.50)
 
     # The three 'Sled ...' lines above are the parametric estimate, kept visible for
     # the audit trail. Exact OCC solid volumes from cad/step/gen3/EMOCD_Sled_Gen3.step

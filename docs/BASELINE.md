@@ -4,7 +4,7 @@
 > Every value below is read from the scripts at generation time, so this file cannot silently
 > disagree with them. Regenerate after any authorised baseline change.
 >
-> Flagship commit at generation: `20d2919` · Phase **I** · governed by
+> Flagship commit at generation: `12a2bda` · Phase **I** · governed by
 > [`docs/programme/ENGINEERING_PROGRAMME.md`](programme/ENGINEERING_PROGRAMME.md)
 
 This is the engineering baseline the Phase I deliverables (portfolio, IEEE paper, thesis)
@@ -34,7 +34,7 @@ what makes "stable" mean something.
 | Closed-loop dispersion | **0.0274 m/s (3σ)** | `motor_results.closed_loop_3sigma` |
 | Fleet setpoint | **15.8 m/s** | `motor_results.v_fleet_setpoint` |
 | Sled mass | **9.45 kg (computed from CAD solid volumes)** | `mass_properties.sled_kg` |
-| Dry / loaded mass | **84.5 / 132.5 kg** | `mass_properties.dry_kg` |
+| Dry / loaded mass | **126.6 / 174.6 kg** | `mass_properties.dry_kg` |
 | Lifetime multiplier, mean activity | **x1.6** | `astro_results.lifetime.mean` |
 | Recoil per shot | **64.1 N·s** | `astro_results.recoil_Ns_per_shot` |
 | Phase realignment period | **10.3 days** | `astro_results.conjunction.realign_days` |

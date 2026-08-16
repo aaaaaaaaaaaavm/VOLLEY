@@ -93,7 +93,7 @@ than a spring until shown otherwise.
 | **Satellite modification** | **None mechanically** — no armature, no plating, no electrical interface |
 | **Magnetic environment** | **Severe, and currently a real cost.** 61 mT at the near face — **611× a magnetometer's full scale.** A magnetometer cannot be used inside the deployer, and **soft-magnetic parts leave permanently magnetised** |
 | **Acceleration** | **10.07 g**, against the 25 g CubeSat Design Specification cap — 42 % of it |
-| **Deployer mass per satellite** | **7.042 kg at 3U.** A cold-gas module is 0.5–1.2 kg |
+| **Deployer mass per satellite** | **10.547 kg at 3U.** A cold-gas module is 0.5–1.2 kg |
 | **Maturity** | **TRL 2–3. Nothing has been built, fired or measured at any scale** |
 
 **The magnetic environment is the item an operator should press hardest on**, and there is a known

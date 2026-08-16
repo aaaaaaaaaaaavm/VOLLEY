@@ -38,15 +38,15 @@ length sets thrust and sled mass together: a shorter array is a lighter sled *an
 
 | Payload | Envelope, mm | Per load | Deployer kg per satellite | |
 |---|---|---|---|---|
-| ChipSat / femtosat | 35 x 35 x 2.5 | 13322 | **0.006** | **beyond the mechanism** |
-| PocketQube 1P | 50 x 50 x 50 | 326 | **0.259** | **beyond the mechanism** |
-| ThinSat | 114 x 114 x 25.4 | 123 | **0.687** |  |
-| PocketQube 3P | 50 x 50 x 150 | 108 | **0.782** |  |
-| TubeSat | 88 x 88 x 127 | 41 | **2.061** |  |
-| 1U CubeSat | 100 x 100 x 100 | 40 | **2.112** |  |
-| 3U CubeSat | 340 x 100 x 100 | 12 | **7.042** |  |
-| 6U CubeSat | 340 x 200 x 100 | 6 | **14.083** |  |
-| 12U CubeSat | 340 x 200 x 200 | 3 | **28.167** |  |
+| ChipSat / femtosat | 35 x 35 x 2.5 | 13322 | **0.010** | **beyond the mechanism** |
+| PocketQube 1P | 50 x 50 x 50 | 326 | **0.388** | **beyond the mechanism** |
+| ThinSat | 114 x 114 x 25.4 | 123 | **1.029** |  |
+| PocketQube 3P | 50 x 50 x 150 | 108 | **1.172** |  |
+| TubeSat | 88 x 88 x 127 | 41 | **3.088** |  |
+| 1U CubeSat | 100 x 100 x 100 | 40 | **3.165** |  |
+| 3U CubeSat | 340 x 100 x 100 | 12 | **10.550** |  |
+| 6U CubeSat | 340 x 200 x 100 | 6 | **21.100** |  |
+| 12U CubeSat | 340 x 200 x 200 | 3 | **42.200** |  |
 
 ### Shortening the magnet array, which buys nothing
 
@@ -78,7 +78,7 @@ this one.
 The deployer's mass is fixed. The number of customers it carries is not, and
 [`KILL_CRITERIA.md`](KILL_CRITERIA.md) threat 1 is the one that decides whether VOLLEY has a
 reason to exist. Against a cold-gas module at 0.5 to 1.2 kg giving the same 16.5 m/s, the **3U
-configuration loses by about 8x** at 7.042 kg per satellite, and the **PocketQube configuration
+configuration loses by about 8x** at 10.547 kg per satellite, and the **PocketQube configuration
 wins by 2 to 5x** at 0.236 kg. That is the entire commercial argument, and it turns on payload
 class rather than on any machine parameter.
 

@@ -27,18 +27,23 @@ rocket equation is unkind to VOLLEY here.
 |---|---|
 | Propellant for 16.5 m/s on a 4 kg 3U, cold gas at Isp 60 s | **0.111 kg** |
 | A COTS 3U cold-gas module, wet, including tank, valves and drive | **0.5 to 1.2 kg** |
-| VOLLEY's share, 84.5 kg over 12 satellites | **7.04 kg** |
-| **Ratio** | **VOLLEY is about 8x heavier for the same delta-v** |
+| VOLLEY's share, 126.6 kg over 12 satellites | **10.55 kg** |
+| **Ratio** | **VOLLEY is about 12x heavier for the same delta-v** |
 
-The 84.5 kg rollup includes parametric enclosure, thermal and avionics lumps, but none is physically measured and the packaging masses remain provisional. At a plausible 20 kg of
-missing mass the figure becomes 8.08 kg per satellite.
+**The warning this paragraph used to carry has come true, and it was low.** It read: *a plausible
+20 kg of missing mass takes the figure to 8.08 kg per satellite.* On 2026-08-16
+[A46](../validation/A46_enclosure_buildup.md) built the enclosure up from the geometry in
+`parameters.json` and found **50.04 kg where an 8.00 kg placeholder stood** — 42 kg, not 20. The
+rollup is no longer carrying a parametric lump for the enclosure; it carries five derived lines,
+each tracing to a dimension in the parameter file. **Thermal and avionics remain lumps**, and
+nothing in the rollup is physically measured.
 
 > **Kill threshold: above roughly 2 kg per satellite, a rational customer buys a propulsion
 > module instead.** That threshold is an estimate, from canisterised dispensers at about 2 kg/U
 > and cold-gas modules at 0.5 to 1.2 kg. It is not a sourced industry figure and should be
 > refined before it carries any more weight than it already does.
 
-**Status at 3U: crossed.** 7.042 kg against a 2 kg threshold.
+**Status at 3U: crossed.** 10.547 kg against a 2 kg threshold.
 
 > ### Two of the three routes out are now closed by measurement, 2026-08-14 (**P59**)
 >
@@ -62,7 +67,7 @@ Smaller payloads. The deployer mass is fixed; the number of satellites it carrie
 
 | Payload | Volume ratio said | **Designed cell (A24)** | Deployer mass per satellite |
 |---|---:|---:|---|
-| 3U CubeSat | 12 | **12** | 7.042 kg, **fails** |
+| 3U CubeSat | 12 | **12** | 10.547 kg, **fails** |
 | ThinSat | 123 | **NOT ACCOMMODATED** | — |
 | 1U | 40 | **36** | **2.125 kg, now fails** |
 | TubeSat | 41 | **24** | **3.188 kg, now fails** |
@@ -332,7 +337,7 @@ meeting it. A criterion that no longer applies has not been passed.
 
 | | Gen5, the measured baseline | Gen6 | |
 |---|---|---|---|
-| **1. Mass per satellite** | **7.042 kg**, crossed 3.5× | **7.042 kg on dry mass, crossed** — and **1.403 to 3.108 kg on added mass**, the range A45 found when the stage credit is read hostilely | **Crossed on dry mass always, and on added mass as soon as P10's unmodelled lump is not credited to the stage. P59 and P68 both LIVE** |
+| **1. Mass per satellite** | **10.547 kg**, crossed 5.3× | **10.547 kg on dry mass, crossed** — and **1.403 to 3.108 kg on added mass**, the range A45 found when the stage credit is read hostilely | **Crossed on dry mass always, and on added mass as soon as P10's unmodelled lump is not credited to the stage. P59 and P68 both LIVE** |
 | **2. Envelope** | 1839 mm against ~1270, over by 44 % | **Does not apply as stated** — Gen6 is a rail on an 8 m stage, not a payload in a rideshare port | NEEDS SOURCE: no envelope analysis exists at Gen6 |
 | **3. Bank ESR** | crossed; 65 mΩ ceiling against 116–185 available | **Dissolved.** There is no bank. Charging is **25 to 131 W** over the indexing window, which is solar | **Deleted, not solved.** P26 is moot for Gen6 and stands for Gen5 |
 | **4. Tip-off** | modelled at 85.0 N of cradle preload, mechanism absent | **A38: raising acceleration does not make it worse.** Preload is now **201.674 N per contact**, still releasing inside **≤ 1 N** | **Not demonstrated.** The mechanism still does not exist |

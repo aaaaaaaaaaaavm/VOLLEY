@@ -1,7 +1,7 @@
 {
-  "dry_kg": 84.5,
-  "loaded_kg": 132.5,
-  "cg_m": 0.44,
+  "dry_kg": 126.6,
+  "loaded_kg": 174.6,
+  "cg_m": 0.46,
   "sled_kg": 9.45,
   "sled_parametric_kg": 4.86,
   "parts": [
@@ -91,8 +91,28 @@
       0.75
     ],
     [
-      "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
-      8.0,
+      "Enclosure skins (2 mm Al, 6.077 m2 net, A46)",
+      32.82,
+      0.5
+    ],
+    [
+      "Enclosure frames and ribs (A46, 25 % of skin, declared)",
+      8.2,
+      0.5
+    ],
+    [
+      "Radiator (1600 x 200 x 3 mm Al, A46)",
+      2.59,
+      0.45
+    ],
+    [
+      "Equipment-bay boxes (4 bays, 1.5 mm Al, A46)",
+      1.87,
+      0.3
+    ],
+    [
+      "Fasteners and brackets (A46, 10 % of structure, declared)",
+      4.55,
       0.5
     ],
     [

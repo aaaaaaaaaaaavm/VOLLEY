@@ -20,7 +20,7 @@ enough that the not-deciding is itself a decision.
 | # | The decision | Why it is still open | What it blocks | Cost of deciding wrong |
 |---|---|---|---|---|
 | **D1** | **Order B-1** — a gaussmeter and eight magnetised blocks, ₹22,000–52,000, bill of materials written since 2026-07-30 | Never ordered. [ADR-021](adr/021-freeze-the-register.md) made it the top of the roadmap and it stayed there | **E4.** Every number in the repository descends from a field model checked only calculation-against-calculation | Low. The instrument is reusable and the magnets are the sled's own class |
-| **D2** | **Which payload class is the product** | Every CAD file, cassette and cost model is 3U. 3U **fails** kill criterion 1 at 7.042 kg/satellite on dry mass. **Narrowed 2026-08-14:** [A37](../validation/A37_host_integrated.md) band 5 closes the criterion at 3U on **added** mass — 1.608 kg/satellite — if the deployer *is* a spent stage. **Both numerators are reported together and the threshold has not moved**, so the decision is now *which numerator a customer actually pays* rather than which class to serve | The market case, the CAD, the qualification plan, and what B-2 should measure | High. It is the difference between refining a design and starting a different one |
+| **D2** | **Which payload class is the product** | Every CAD file, cassette and cost model is 3U. 3U **fails** kill criterion 1 at 10.547 kg/satellite on dry mass. **Narrowed 2026-08-14:** [A37](../validation/A37_host_integrated.md) band 5 closes the criterion at 3U on **added** mass — 1.608 kg/satellite — if the deployer *is* a spent stage. **Both numerators are reported together and the threshold has not moved**, so the decision is now *which numerator a customer actually pays* rather than which class to serve | The market case, the CAD, the qualification plan, and what B-2 should measure | High. It is the difference between refining a design and starting a different one |
 | **D3** | **Apply or hold the K_t correction (P46)** | A2 computed K_t as **4.42 % high** — 10.5386 → 10.5386 N/kA·m, moving v_exit 16.029 → 16.029 m/s. Computed and **held**, not applied | Whether the published design point is the best known one. Every downstream number descends from it | Medium. Applying it moves ~20 published figures; not applying it means the repository publishes a number it knows is beaten |
 | **D4** | **Submit to IEEE, or publish openly** | The paper is CC BY 4.0 **provisionally**; an IEEE copyright transfer on acceptance would supersede it. The companion export is **held** for this reason, so `VOLLEY-paper` and `VOLLEY-thesis` sit at MIT while the flagship is CC BY | The licence state of two repositories, and the companion export run | Low, but it is currently a *divergence being carried*, not a position |
 | **D5** | **File a US provisional, or let it go** | The design is publicly disclosed, so an Indian filing is foreclosed. **35 USC 102(b)(1) leaves a US provisional possible until roughly August 2027** | Nothing technical. Everything commercial | High and one-way. The date passes whether or not it is decided |
@@ -62,7 +62,7 @@ reader cannot otherwise tell a wrong number from a missing subsystem.
 | **P47** | *(corrected 2026-08-13)* The published velocity-loop gain was **linearly unstable** — 557 Hz crossover, −50.4° phase margin. Now designed at 195 s⁻¹ |
 | **P32** | The working Gen4 geometry **has no corresponding operating point** — it releases at s = 1200 mm where `analysis/` assumes 1500 mm |
 | **P33** | The paper credits a **winding inductance nobody had computed** |
-| **P10** | Enclosure, radiator and packaged avionics are **absent from the mass rollup**. The 84.5 kg is therefore a floor, and kill criterion 1 is computed from it |
+| **P10** | Enclosure, radiator and packaged avionics are **absent from the mass rollup**. The 126.6 kg is therefore a floor, and kill criterion 1 is computed from it |
 | **P35** | The GMAT script generator is **pinned to a superseded operating point** |
 | **P38 / P39 / P20 / P14 / E16** | Records that disagree with their own sources: a paper claim its validation had falsified, companions that were not a function of the commit they claimed, a mis-specified reference plane, untracked CAD defects, reference hygiene |
 
@@ -71,7 +71,7 @@ reader cannot otherwise tell a wrong number from a missing subsystem.
 | Item | The assumption | What rests on it |
 |---|---|---|
 | **E4** | **Nothing has been built, fired or measured at any scale** | Every number in the repository |
-| **E3** | Component masses are **parametric, unchecked against vendor data**, spread perhaps ±15 % | The 84.5 kg, and therefore kill criterion 1 |
+| **E3** | Component masses are **parametric, unchecked against vendor data**, spread perhaps ±15 % | The 126.6 kg, and therefore kill criterion 1 |
 | **E7** | Sensor noise, latency and resolution are **assumed** — no sensor is selected | The 0.0274 m/s dispersion, and now the loop's phase margin |
 | **E5** | Host stage mass, control authority and accommodation envelope are **undisclosed** | Kill criteria 2 and 6, the recoil table, and A15 Case B |
 | **E6** | Absolute orbital lifetimes are uncertain; the multiplier is **not invariant** across solar activity (P16) | The ×1.60 headline |
@@ -84,7 +84,7 @@ reader cannot otherwise tell a wrong number from a missing subsystem.
 These would remain true even if every item above were closed.
 
 1. **The velocity is small.** 16.0 m/s buys ×1.60 of orbital life and **0.12° of plane change**. Plane change is *never* a product feature at 133 m/s per degree — 8.1× the entire shot.
-2. **The mass is fixed and the payload is not.** The deployer costs what it costs whether it carries 12 satellites or 288. Every economic argument is really an argument about how many customers divide 84.5 kg.
+2. **The mass is fixed and the payload is not.** The deployer costs what it costs whether it carries 12 satellites or 288. Every economic argument is really an argument about how many customers divide 126.6 kg.
 3. **It replaces twelve independent one-shot mechanisms with one twelve-cycle mechanism.** That is the architecture's defining trade and it is a *reliability* trade, made in the wrong direction, bought back only by cycle life nobody has measured.
 4. **A spring can reach this velocity.** A ~1.8 kg staged spring delivers comparable Δv. It fails only in that its velocity is **built in rather than commanded**. Commandability is the whole product — not speed.
 5. **The satellite is not, in fact, unmodified.** It is modified magnetically, invisibly, and without the customer knowing (**E35**).
@@ -110,7 +110,7 @@ design point:
 
 | | Threshold | Where it sits | State |
 |---|---|---|---|
-| **1. Mass per satellite** | ~2 kg | **7.042 kg** dry at 3U; **1.608 kg added** under ADR-032 | **Crossed on dry mass. Closes on added mass** (A37 band 5), with both reported together and the threshold unmoved. **P59** stays LIVE |
+| **1. Mass per satellite** | ~2 kg | **10.547 kg** dry at 3U; **1.608 kg added** under ADR-032 | **Crossed on dry mass. Closes on added mass** (A37 band 5), with both reported together and the threshold unmoved. **P59** stays LIVE |
 | **2. Envelope** | fits a rideshare port | 1839 mm vs ~1270 mm | **Dissolved under ADR-032** — nothing is stowed. Stands as crossed for Gen5 |
 | **3. Bank ESR** | 65 mΩ | 116–185 mΩ | **Crossed as designed for Gen5. Ceases to exist under ADR-032** — 25–131 W needs no bank (A39) |
 | 4. Tip-off | 2 °/s | release fine; cradle arrival **355 °/s at 25 g**, residual **zero** | **Not demonstrated**, and A38 shows raising acceleration does **not** worsen it. Ceiling 30.9 g |

@@ -11,7 +11,7 @@ has all three.
 > ## The one sentence that governs everything below
 >
 > **Nothing has been built, fired, or measured at any scale.** That is `OPEN_PROBLEMS.md` **E4**,
-> it is still open, and no amount of the analysis below changes it. Forty-four validation runs
+> it is still open, and no amount of the analysis below changes it. Forty-five validation runs
 > exist. **Zero measurements exist.** Every number in this repository is a model output, and the
 > field model has only ever been checked *analytic against analytic* — a closed-form wave model
 > against magpylib, two implementations of the same physics.
@@ -111,7 +111,7 @@ here rather than left for a reader to find.
 | | |
 |---|---|
 | **Design** | Equipment bays are located and verified clear of the track |
-| **Analysis** | **Missing.** **P10**: the enclosure, radiator and packaged avionics have **no line items** in `mass_properties.py`. The 84.5 kg dry mass is a **floor, not a total** |
+| **Analysis** | **Missing.** **P10**: the enclosure, radiator and packaged avionics have **no line items** in `mass_properties.py`. The 126.6 kg dry mass is a **floor, not a total** |
 | **Blocked by** | **Computation.** Straightforward bookkeeping that has simply not been done, and it makes every kg-per-satellite figure in the project optimistic |
 
 ---
@@ -130,7 +130,7 @@ energy store are all deleted rather than improved. Their rows are kept because G
 that was actually analysed, and deleting the record of a superseded design would remove the only
 measured thing this project has.
 
-**Gen6 is younger than Gen5 by every measure**: eleven run sheets against forty-four for the
+**Gen6 is younger than Gen5 by every measure**: eleven run sheets against forty-five for the
 programme, one CAD generation, no packaging, no thermal model, and three parts that have no
 geometry at all.
 

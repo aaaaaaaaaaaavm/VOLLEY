@@ -40,7 +40,7 @@ upper stage provides.** No mover, no pulse-power chain, no brake, no return stro
 |---|---|---|
 | What moves | 9.445 kg sled + payload | **payload only** |
 | Energy | supercapacitor bank, ~17 kW for 162 ms | **one 1.71 L gas bottle for twelve shots** |
-| Structure | 84.5 kg of deployer | **the spent stage** |
+| Structure | 126.6 kg of deployer | **the spent stage** |
 | Added hardware | — | **11.45 kg containment + ~3 kg store** |
 
 Five runs built it, and none set out to: **A35** attributed every kilogram to the requirement
@@ -98,7 +98,7 @@ flowchart LR
 | TRL | 2-3 |
 | Analysis | 40 Python scripts, reproducible, outputs committed as JSON |
 | Validation | 39 analyses, each with its acceptance bands declared **before** its script existed |
-| Register | 103 numbered entries, 41 live, including the ones that damage the work's own claims |
+| Register | 104 numbered entries, 41 live, including the ones that damage the work's own claims |
 | CAD | script-generated from `cad/parameters.json`, Gen5 current, STEP and STL committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
 | FEA | magnetostatic 2-D (A1) and 3-D (A2), structural (A4), CFD (A29) |
 | Hardware | **none. Nothing here has been built, fired or measured** |
@@ -117,7 +117,7 @@ All figures are script outputs, not measurements.
 | Orbital lifetime multiplier | x1.60 at mean activity, **not invariant, see P16** | `astro.py` |
 | Semi-major axis change | **+28.8 km**; 0 m by release timing at any cadence | `astro.py`, A21-R |
 | 30° of in-track phase | **468 s of waiting** — free, and not a VOLLEY claim (**P56**) | `comparators.py`, A21-R |
-| Dry / loaded mass | 84.5 kg / 132.5 kg | `mass_properties.py` |
+| Dry / loaded mass | 126.6 kg / 174.6 kg | `mass_properties.py` |
 | Recoil per shot | 64.1 N·s | `astro.py` |
 | Track first mode | 109 Hz fixed-fixed (target >70) | `sizing.py` |
 | Energy closure | 100.0 % accounted | `sizing.py` |

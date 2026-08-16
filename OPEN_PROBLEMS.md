@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **103 numbered entries, of which 41 are live.** Every entry carries a `Status:` line written by
+> **104 numbered entries, of which 41 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -371,8 +371,8 @@ thickness explains and is **flagged for re-verification** in `cad/parameters.jso
 > a requirement it had already abandoned twice. **E5 rises in priority accordingly**, and
 > `docs/MARKET.md` needs re-scoping against the lost port population.
 
-### P10. Enclosure, radiator, and packaged avionics absent from the mass rollup: CORRECTED 2026-08-13
-> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+### P10. Enclosure, radiator, and packaged avionics absent from the mass rollup: RESOLVED 2026-08-16 by A46
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
 > **Corrected.** An **8.0 kg placeholder with no derivation** now sits in `mass_properties.py`,
 > named `(P10 PLACEHOLDER, 8.0 kg, no derivation)` so it cannot be cited as computed. Dry mass
 > 76.5 → **84.5 kg**, per 3U satellite 6.378 → **7.042 kg**, and **kill criterion 1 goes from
@@ -383,6 +383,14 @@ radiator, and equipment bays for the supercapacitor bank, PPU, sequencer, and IM
 have line items in `analysis/mass_properties.py`**, so the 72.3 kg dry-mass rollup is
 incomplete. Add line items once masses are estimated (do not alter existing items without
 cause). Source: `cad/parameters.json` (`enclosure.mass_note`).
+
+> **Closed 2026-08-16 by [A46](validation/A46_enclosure_buildup.md).** The placeholder is gone and
+> five derived line items stand in its place, each tracing to a dimension in `cad/parameters.json`:
+> **skins 32.82, frames 8.20, radiator 2.59, bay boxes 1.87, fasteners 4.55 — 50.04 kg.** The
+> placeholder was **low by 6.3×**. Dry mass 84.5 → **126.6 kg**, per 3U satellite 7.042 →
+> **10.547 kg**, kill criterion 1 from crossed 3.5× to **crossed 5.3×**. A honeycomb sandwich
+> gives 29.98 kg for the same five lines; **adopting one is a design decision and is not taken
+> here**, so the rollup carries the monolithic 2 mm skins the parameter file specifies.
 
 ### P11. The corrections may never have reached the submitted paper: RESOLVED 2026-07-29
 > **Status:** `CLOSED` — resolved; see the entry for what closed it
@@ -3061,6 +3069,38 @@ is now crossed on both numerators rather than one**, and the threshold has not m
 from line items instead of carrying a parametric lump. That replaces the largest guess in the
 credit with a number, and it is computation rather than metal. Until then the honest figure to
 publish is the range **1.403 – 3.108 kg per satellite**, not the lower end alone.
+
+### P69. Mass parity with a canisterised dispenser is withdrawn: HIGH, NEW 2026-08-16
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
+
+**[A21](validation/A21_comparators.md) band 4 failed on 2026-08-16.** The band asked for parity
+within 15 %; the ratio is **1.758**.
+
+| | |
+|---|---:|
+| Deployer mass per 3U satellite | **10.547 kg** |
+| Canisterised dispenser class, 3U-equivalent slot | ~6 kg |
+| **Ratio** | **1.758** — was 1.062 |
+
+**Nothing about the comparison changed. The rollup did.** [A46](validation/A46_enclosure_buildup.md)
+replaced P10's 8.00 kg enclosure placeholder with 50.04 kg of derived line items, and parity did
+not survive it.
+
+**The band is not widened.** It was declared before `comparators.py` existed and it stands as
+declared; what changes is that VOLLEY now fails it.
+
+**This costs the project one of its two surviving competitive arguments.** `LANDSCAPE.md` led with
+*"a magazine-fed electromagnetic launcher lands in the same mass class as a canister of springs"*,
+and it no longer does — it is **1.76× heavier per satellite**, and against a cold-gas module on the
+satellite it is about **12×**. **The argument that survives is the commanded differential**: a
+spring's designed differential between satellites is exactly zero, which is categorical rather than
+a ratio, and no mass correction touches it.
+
+**What would close it.** Either a lighter enclosure — the honeycomb sandwich A46 costed at 29.98 kg
+would give **8.87 kg per satellite**, ratio 1.48, still failing — or a smaller payload class, which
+`PAYLOAD_CLASSES.md` and **P59** already identify as the only route that moves this criterion at
+all. **No enclosure change reaches parity.**
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

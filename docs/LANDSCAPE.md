@@ -32,11 +32,16 @@ unmodified CubeSat. Springs cannot, and OTVs solve a different problem at a diff
 > 3U. See [`KILL_CRITERIA.md`](KILL_CRITERIA.md) threat 1 and
 > [`PAYLOAD_CLASSES.md`](PAYLOAD_CLASSES.md), where smaller payloads reverse it.
 
-**Mass per satellite is the surprise, and it is not embarrassing.** VOLLEY's 84.5 kg dry
-carries twelve 3U satellites, **7.042 kg of deployer per satellite**. Canisterised dispensers
-run about **2 kg per U** as a class figure, so a 3U-equivalent slot is around 6 kg. **A21
-computes the ratio at 1.062 — parity inside 7 %.** A magazine-fed electromagnetic launcher lands
-in the same mass class as a canister of springs, per satellite.
+**Mass per satellite used to be the surprise on this page. It is now a loss.** VOLLEY's 126.6 kg
+dry carries twelve 3U satellites, **10.547 kg of deployer per satellite**. Canisterised dispensers
+run about **2 kg per U** as a class figure, so a 3U-equivalent slot is around 6 kg. **A21 computes
+the ratio at 1.758, and its band 4 — parity within 15 % — failed on 2026-08-16.**
+
+> **What this paragraph said until then, and why it changed.** It read *"parity inside 7 %"* and
+> concluded that a magazine-fed electromagnetic launcher lands in the same mass class as a canister
+> of springs. That was true against a rollup carrying an **8.00 kg placeholder** for the enclosure.
+> [A46](../validation/A46_enclosure_buildup.md) derived that line at **50.04 kg**, and parity did
+> not survive it. **The band is not widened and the claim is withdrawn. P69.**
 
 > **And the headline ratio this file used to quote was the weakest one available.** 6.4× is a
 > ratio of *velocities*, and nobody buys velocity. Lifetime extension is **superlinear** in Δv

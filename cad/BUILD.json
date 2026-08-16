@@ -1,7 +1,7 @@
 {
-  "dry_kg": 84.532,
+  "dry_kg": 126.562,
   "generated_from": {
-    "../analysis/mass_properties.py": "9a318948cd02d5a6",
+    "../analysis/mass_properties.py": "73ab668c68e184f6",
     "parameters.json": "647002a4b41db2c8",
     "tools/make_cad_package.py": "4cc9a69abff8c3f8"
   },

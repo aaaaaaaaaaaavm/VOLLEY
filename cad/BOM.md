@@ -34,10 +34,14 @@ re-entered by hand. Quantities and interface dimensions come from
 | 15 | Thermal (pipes, radiator, MLI) | 1 | Al radiator | 6.00 | 0.70 | 0.32 m^2 radiator |
 | 16 | ESPA bracket + fasteners | 1 | Aluminium | 9.00 | 0.35 | ring flange, 24 x M8 holes |
 | 17 | Panels / closeouts | 1 | Aluminium, 2 mm skin | 5.50 | 0.75 | enclosure |
-| 18 | Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation) | 1 | — | 8.00 | 0.50 | — |
-| 19 | Sled CAD reconciliation (P15, CAD-derived 9.445 kg) | 1 | — | 4.59 | 0.15 | see note |
-| | **DRY TOTAL** | | | **84.5** | **0.44** | P10: incomplete |
-| | **LOADED** (12 x 3U at 4 kg) | | | **132.5** | | |
+| 18 | Enclosure skins (2 mm Al, 6.077 m2 net, A46) | 1 | — | 32.82 | 0.50 | — |
+| 19 | Enclosure frames and ribs (A46, 25 % of skin, declared) | 1 | — | 8.20 | 0.50 | — |
+| 20 | Radiator (1600 x 200 x 3 mm Al, A46) | 1 | — | 2.59 | 0.45 | — |
+| 21 | Equipment-bay boxes (4 bays, 1.5 mm Al, A46) | 1 | — | 1.87 | 0.30 | — |
+| 22 | Fasteners and brackets (A46, 10 % of structure, declared) | 1 | — | 4.55 | 0.50 | — |
+| 23 | Sled CAD reconciliation (P15, CAD-derived 9.445 kg) | 1 | — | 4.59 | 0.15 | see note |
+| | **DRY TOTAL** | | | **126.6** | **0.46** | P10: incomplete |
+| | **LOADED** (12 x 3U at 4 kg) | | | **174.6** | | |
 
 **Sled assembly: 9.45 kg**, the CAD-derived value from the Gen3 STEP solids (P15).
 This is the single mass the exit velocity is most sensitive to, and it is the mass of

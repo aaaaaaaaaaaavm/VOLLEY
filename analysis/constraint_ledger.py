@@ -87,7 +87,15 @@ ATTRIBUTION = [
     ('Thermal',                  ('C3',),      (),           'sized on 10 kJ of copper heat per manifest'),
     ('ESPA bracket',             (),           ('C4',),      'scales with what it carries'),
     ('Panels / closeouts',       (),           ('C4',),      'scales with enclosed length'),
-    ('Enclosure / radiator',     (),           ('C3', 'C4'), 'P10 placeholder; radiator half is C3'),
+    # P10's single placeholder line became five derived lines on 2026-08-16 (A46). The
+    # attribution is unchanged in kind -- an enclosure scales with what it encloses (C4) and
+    # the radiator exists to reject pulse heat (C3) -- but it is now applied per line rather
+    # than to one lump, so a deletion sweep can move the radiator without moving the skins.
+    ('Enclosure skins',          (),           ('C4',),      'scales with enclosed envelope'),
+    ('Enclosure frames',         (),           ('C4',),      'ditto; a declared fraction of skin'),
+    ('Radiator',                 ('C3',),      (),           'sized to reject pulse heat; no pulse, no radiator'),
+    ('Equipment-bay boxes',      (),           ('C3', 'C5'), 'bays for the bank and PPU go with them; sequencer bay survives'),
+    ('Fasteners and brackets',   (),           ('C4',),      'scales with the structure it joins'),
 ]
 
 

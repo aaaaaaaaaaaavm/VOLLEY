@@ -78,7 +78,7 @@ is **unmeasured** — cycle-life testing is metal, not computation. See **E30**.
 ### 28. How does the mass compare against a COTS cold-gas module delivering the same Δv? — **ANSWERED, and it is a loss**
 
 **A cold-gas module wins by 7.5× at 3U.** `validation/A21_comparators.md` band 5 **declared this
-loss in advance** rather than discovering it: 7.042 kg of shared deployer per satellite against a
+loss in advance** rather than discovering it: 10.547 kg of shared deployer per satellite against a
 0.5–1.2 kg module.
 
 **What the module costs instead is the thing VOLLEY exists to avoid:** a pressure vessel, a
@@ -271,7 +271,7 @@ answer does not dispose of that.
 | **21** | Power, batteries from Earth, POEM-style array mass | P26 (the bank), A10 (68 mΩ ESR ceiling), A25 (flywheel alternative) | **No array sizing, no battery mass, no recharge energy budget.** `mass_properties.py` carries no line item for any of it (P10) |
 | **23** | If the brake fails, doesn't the sled exit at 16.0 m/s and become debris? | A tapered pole entry as a 200 g arrest limiter, a ring-spring stop as backstop | **No failure case analysed.** Whether the ring spring alone arrests a 9.445 kg sled at 16 m/s is not computed. Adjacent to 22 |
 | **24** | Supercapacitor imbalance, venting, ESR growth over storage and cycling | A10's ESR ceiling; E17 records that the 12 mΩ figure comes from a superseded document with no cell datasheet checked | **No balancing scheme, no venting path, no ageing model.** ESR growth would tighten a ceiling already missed |
-| **27** | Ascent random vibration and separation shock for the loaded 132.5 kg stack | A18's Miles case, GEVS protoflight; A22 resized the gates to **+0.45 at Q = 30** | **Q is unmeasured** (`STRUCTURAL_GAP.md`), and the analysis covers the retention gates, not the whole stack |
+| **27** | Ascent random vibration and separation shock for the loaded 174.6 kg stack | A18's Miles case, GEVS protoflight; A22 resized the gates to **+0.45 at Q = 30** | **Q is unmeasured** (`STRUCTURAL_GAP.md`), and the analysis covers the retention gates, not the whole stack |
 | **29** | No flight heritage — qualification path and honest TRL | `docs/QUALIFICATION_PLAN.md` specifies a campaign; badges read TRL 2–3 | The campaign is **specified, not costed or scheduled**, and no article exists to qualify |
 | **31** | How to verify 16.0 m/s over 1.3 m on the ground in 1 g | `docs/BENCHTOP_TESTS.md`; B-1 measures the **field**, not the shot | **No answer for the full-stroke shot.** A horizontal 1.5 m track on air bearings is the obvious approach and is not specified |
 | **33** | Who pays — rideshare customer or launch provider? | `docs/MARKET.md` frames the customer | **No commercial model, no price, and every cost claim was withdrawn** for lack of a vendor quotation (E3) |

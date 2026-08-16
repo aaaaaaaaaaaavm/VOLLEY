@@ -2,11 +2,11 @@
   "analysis": "A37",
   "bands_declared_commit": "ec9d6a1",
   "note": "the 2.0 kg threshold is UNCHANGED and applied to both numerators; gas stores excluded deliberately; tip-off untouched; stage availability, attitude control through the campaign and debris mitigation NOT priced",
-  "ledger_total_kg": 84.53158800000001,
+  "ledger_total_kg": 126.56158800000001,
   "deleted_kg": 29.748692,
-  "stage_provided_kg": 43.32992,
+  "stage_provided_kg": 85.35992000000002,
   "added_base_kg": 11.452976,
-  "dry_kg_per_satellite": 7.044299000000001,
+  "dry_kg_per_satellite": 10.546799000000002,
   "target_kg": 2.0,
   "a35_c3_released_kg": 23.76,
   "falsifier_kg": 14.256,
@@ -102,16 +102,60 @@
       "provided_by": "stage skin and thrust structure"
     },
     {
-      "part": "Enclosure / radiator / packaged avionics (P10 PLACEHOLDER, 8.0 kg, no derivation)",
-      "kg": 8.0,
+      "part": "Enclosure skins (2 mm Al, 6.077 m2 net, A46)",
+      "kg": 32.82,
       "cg_m": 0.5,
       "full": [],
       "partial": [
-        "C3",
         "C4"
       ],
-      "note": "P10 placeholder; radiator half is C3",
-      "provided_by": "stage thermal control and avionics bay"
+      "note": "scales with enclosed envelope",
+      "provided_by": "stage skin; the stage is already a pressure-grade cylinder"
+    },
+    {
+      "part": "Enclosure frames and ribs (A46, 25 % of skin, declared)",
+      "kg": 8.2,
+      "cg_m": 0.5,
+      "full": [],
+      "partial": [
+        "C4"
+      ],
+      "note": "ditto; a declared fraction of skin",
+      "provided_by": "stage ring frames and stringers"
+    },
+    {
+      "part": "Radiator (1600 x 200 x 3 mm Al, A46)",
+      "kg": 2.59,
+      "cg_m": 0.45,
+      "full": [
+        "C3"
+      ],
+      "partial": [],
+      "note": "sized to reject pulse heat; no pulse, no radiator",
+      "provided_by": "stage thermal control loop and its radiating area"
+    },
+    {
+      "part": "Equipment-bay boxes (4 bays, 1.5 mm Al, A46)",
+      "kg": 1.87,
+      "cg_m": 0.3,
+      "full": [],
+      "partial": [
+        "C3",
+        "C5"
+      ],
+      "note": "bays for the bank and PPU go with them; sequencer bay survives",
+      "provided_by": "stage avionics bay"
+    },
+    {
+      "part": "Fasteners and brackets (A46, 10 % of structure, declared)",
+      "kg": 4.55,
+      "cg_m": 0.5,
+      "full": [],
+      "partial": [
+        "C4"
+      ],
+      "note": "scales with the structure it joins",
+      "provided_by": "stage structure is already joined to itself"
     }
   ],
   "deleted_items": [
@@ -283,7 +327,7 @@
     {
       "band": "1",
       "name": "added + stage + deleted reproduces the A35 ledger to 0.01 kg",
-      "detail": "84.5316 against 84.5316",
+      "detail": "126.5616 against 126.5616",
       "pass_": true
     },
     {
@@ -295,7 +339,7 @@
     {
       "band": "3",
       "name": "both numerators reported, threshold unchanged at 2.0 kg",
-      "detail": "dry 7.044 kg, added 4.442 kg",
+      "detail": "dry 10.547 kg, added 4.442 kg",
       "pass_": true
     },
     {
