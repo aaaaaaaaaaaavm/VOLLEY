@@ -20,9 +20,9 @@ import bpy
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 STL = os.path.join(ROOT, "cad", "stl")
-OUT = os.path.join(ROOT, "cad", "renders", "gen5")
-
 argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+GEN = (argv[argv.index("--gen") + 1] if "--gen" in argv else "gen5")
+OUT = os.path.join(ROOT, "cad", "renders", GEN)
 SAMPLES = int(argv[argv.index("--samples") + 1]) if "--samples" in argv else 96
 QUICK = "--quick" in argv
 
@@ -49,6 +49,36 @@ VIEWS = [
     ("sled_detail", ["Sled", "Track", "Stator"], (-350, -1500, 780), (420, 0, 0), 55),
     ("closed",      list(PARTS),            (-1700, -2800, 1500), (900, 0, 250), 50),
 ]
+
+
+# Gen6: ADR-032. No mover, no stator, no bank, no brake. A rail a spent stage provides,
+# a pre-charged chamber, and a carriage that is not recovered.
+PARTS_GEN6 = {
+    "Stage_Rail":        ("VOLLEY_Stage_Rail_Gen6.stl",        (0.48, 0.50, 0.54), 1.0, 0.55),
+    "Drive_Tube":        ("VOLLEY_Drive_Tube_Gen6.stl",         (0.66, 0.68, 0.72), 1.0, 0.34),
+    "Carriage":          ("VOLLEY_Carriage_Gen6.stl",           (0.72, 0.74, 0.77), 1.0, 0.26),
+    "Chamber":           ("VOLLEY_Chamber_Gen6.stl",            (0.55, 0.32, 0.20), 1.0, 0.32),
+    "Reservoir":         ("VOLLEY_Reservoir_Gen6.stl",          (0.30, 0.42, 0.52), 1.0, 0.30),
+    "Magazine_Cassette": ("VOLLEY_Magazine_Cassette_Gen6.stl",  (0.50, 0.52, 0.56), 1.0, 0.52),
+}
+
+VIEWS_GEN6 = [
+    ("hero_open", list(PARTS_GEN6), (-2200, -3400, 1700), (1100, 0, 100), 50),
+    ("three_quarter", list(PARTS_GEN6), (3600, -2800, 1500), (1100, 0, 60), 55),
+    ("side", list(PARTS_GEN6), (1100, -5200, 320), (1100, 0, 150), 60),
+    ("store", ["Chamber", "Reservoir", "Drive_Tube"], (-900, -1700, 700), (300, 0, 0), 55),
+]
+
+GEN3 = {"Assembly": ("EMOCD_Assembly_Gen3.stl", (0.60, 0.62, 0.66), 1.0, 0.40)}
+VIEWS_GEN3 = [
+    ("hero_open", ["Assembly"], (-1500, -2400, 1250), (900, 0, 60), 50),
+    ("three_quarter", ["Assembly"], (2900, -2100, 1100), (950, 0, 40), 55),
+]
+
+if GEN == "gen6":
+    PARTS, VIEWS, MECHANISM = PARTS_GEN6, VIEWS_GEN6, list(PARTS_GEN6)
+elif GEN == "gen3":
+    PARTS, VIEWS, MECHANISM = GEN3, VIEWS_GEN3, list(GEN3)
 
 
 def clear():

@@ -155,7 +155,7 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 > [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both generated from
 > [`cad/parameters.json`](cad/parameters.json) so they cannot drift from it.
 
-**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
+**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Generations](docs/GENERATIONS.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
@@ -205,7 +205,32 @@ matches — see <a href="docs/GEN4_STATUS.md">docs/GEN4_STATUS.md</a>, ADR-019 a
 <code>analysis/</code> assumes 1500 mm, and Gen4's 340 mm Halbach array leaves the stator edge at
 s = 1051.5 mm, so no performance number on this page is taken from Gen4 and none should be.
 <code>exploded_view.png</code> is retained from Gen3 because Gen4 has no equivalent shot. The
-payload is a plain rectangular 3U proxy, not a modelled satellite.</sub>
+payload is a plain rectangular 3U proxy, not a modelled satellite.
+<b>The velocity annotated on these images is read from
+<code>analysis/results/motor_results.json</code> at render time.</b> It was hard-coded until
+2026-08-16 and said <b>16.388 m/s</b> — a figure withdrawn twice — while every sentence around it
+was correct, because no propagation here reads an image (<b>P72</b>).
+<b>Gen4 is not the current design.</b> See
+<a href="docs/GENERATIONS.md">docs/GENERATIONS.md</a> for what each generation was for, with
+Gen5 and Gen6 rendered beside it.</sub>
+
+## Three generations, and which one is which
+
+**The pictures above are Gen4. The numbers on this page are Gen5. The design target is Gen6.**
+That is confusing enough to be worth stating plainly rather than leaving a reader to infer it.
+
+| | | |
+|---|---|---|
+| **[Gen4](docs/GEN4_STATUS.md)** | the last one modelled by hand | Nine Fusion documents, more detail than any generation since, and **no committed STEP export** — its stations disagree with the analysis model (**P43**) |
+| **Gen5** | **the frozen baseline** | Generated from [`cad/parameters.json`](cad/parameters.json), rebuildable byte-identically, and what every number on this page is computed against |
+| **[Gen6](docs/adr/032-gen6-stage-integrated-gas-store.md)** | **the current design target** | A different machine: **no mover, no stator, no bank, no brake**, and a rail a spent upper stage provides |
+
+**Gen6 is better on velocity and worse on precision.** 30.535 m/s against 16.029, and **1.113 %
+of 3σ dispersion against 0.0274 m/s** — because Gen5 commanded velocity through a designed loop
+and Gen6's shot is 133 ms of open-loop expansion whose spread is **93.4 % seal friction nobody has
+measured** (**P67**).
+
+**[Read the full comparison, with all three rendered side by side →](docs/GENERATIONS.md)**
 
 **Spin it in the browser:** [`cad/stl/EMOCD_Assembly_Gen3.stl`](cad/stl/EMOCD_Assembly_Gen3.stl)
 and [`cad/stl/EMOCD_Sled_Gen3.stl`](cad/stl/EMOCD_Sled_Gen3.stl), GitHub renders STL

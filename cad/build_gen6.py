@@ -152,7 +152,7 @@ def magazine_cassette():
 
 PARTS = [("Drive_Tube", drive_tube, True), ("Carriage", carriage, True),
          ("Chamber", chamber, True), ("Reservoir", reservoir, True),
-         ("Stage_Rail", stage_rail, False), ("Magazine_Cassette", magazine_cassette, False)]
+         ("Stage_Rail", stage_rail, True), ("Magazine_Cassette", magazine_cassette, True)]
 
 
 def check():
