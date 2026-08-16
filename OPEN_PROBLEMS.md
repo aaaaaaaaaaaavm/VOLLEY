@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **104 numbered entries, of which 41 are live.** Every entry carries a `Status:` line written by
+> **105 numbered entries, of which 42 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3091,7 +3091,7 @@ credit with a number, and it is computation rather than metal. Until then the ho
 publish is the range **1.403 – 3.108 kg per satellite**, not the lower end alone.
 
 ### P69. Mass parity with a canisterised dispenser is withdrawn: HIGH, NEW 2026-08-16
-> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> **Status:** `LIVE` — open engineering; something still has to be done
 
 
 **[A21](validation/A21_comparators.md) band 4 failed on 2026-08-16.** The band asked for parity
@@ -3121,6 +3121,31 @@ a ratio, and no mass correction touches it.
 would give **8.87 kg per satellite**, ratio 1.48, still failing — or a smaller payload class, which
 `PAYLOAD_CLASSES.md` and **P59** already identify as the only route that moves this criterion at
 all. **No enclosure change reaches parity.**
+
+### P70. The register classifier read a status keyword out of a title: LOW, CORRECTED 2026-08-16
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
+
+**P69 was classified `CLOSED` on the day it was opened.** Its heading reads *"Mass parity with a
+canisterised dispenser **is withdrawn**: HIGH, NEW 2026-08-16"* — and `CLOSED_RE` matches
+`WITHDRAWN` anywhere in the heading. **The claim was withdrawn. The defect was not.**
+
+**This is the third time the same mistake has been made in this one tool**, and the pattern is now
+clear enough to name: **it keys on a word appearing anywhere rather than on where status actually
+lives.**
+
+| | |
+|---|---|
+| First | `\bRESOLVED\b` matched inside *depth-resolved* |
+| Second | the classifier read back its own written `Status:` line and latched its own verdict |
+| **Third** | a status keyword used as ordinary English in a title |
+
+**Corrected.** An entry is titled `<what is wrong>: <STATUS>, <date>`, so the close scan now reads
+the **status suffix after the final colon** rather than the whole heading. One entry reclassified —
+**P69, CLOSED → LIVE** — and the live count goes 41 → 42. No other entry moved.
+
+**Found by cross-checking the register against the GitHub issue list**, not by any check here. The
+tool cannot detect a misclassification, because a wrong verdict is a well-formed one.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

@@ -67,7 +67,13 @@ def classify(body):
     # then re-justified itself on every later run. A classifier must not read its own output.
     body = '\n'.join(l for l in body.split('\n') if not l.startswith(MARKER))
     head = body.split('\n')[0]
-    if CLOSED_RE.search(head):
+    # Read the status from the STATUS SUFFIX, not from anywhere in the heading. An entry is
+    # titled "<what is wrong>: <STATUS>, <date>", so a status keyword used as an ordinary word
+    # in the title is not a status. P69 -- "Mass parity ... is withdrawn: HIGH, NEW" -- was
+    # classified CLOSED because the claim was withdrawn, not the defect. Same failure as the
+    # RESOLVED/depth-resolved match: keying on a word wherever it appears rather than where
+    # status actually lives. P70.
+    if CLOSED_RE.search(head.rsplit(':', 1)[-1]):
         return 'CLOSED'
     first = '\n'.join(body.split('\n')[1:8])
     if CLOSED_RE.search(first):
