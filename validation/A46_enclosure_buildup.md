@@ -85,4 +85,86 @@ is stated rather than folded into a total.
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Five of eight bands pass. The three failures are bands 3, 4 and 8, and the
+placeholder is low by between 3.7 and 6.3 times.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | envelope is 1839 × 530 × 914 mm within 1 mm | exact | **PASS** |
+| 2 | aperture area > 0 and < 5 % of gross | 3.23 % | **PASS** |
+| 3 | monolithic buildup ≤ 8.0 kg | **50.04 kg** | **FAIL** |
+| 4 | sandwich buildup ≤ 8.0 kg | **29.98 kg** | **FAIL** |
+| 5 | sandwich lighter than monolithic across the sweep | yes | **PASS** |
+| 6 | radiator rejects the campaign-average load | 125 W against 1.89 W | **PASS** |
+| 7 | every line item traces to a parameter or a declared input | 0 undeclared | **PASS** |
+| 8 | A45's P10-only case improves | **2.069 → 3.901 kg/sat** | **FAIL** |
+
+### The buildup
+
+**6.280 m² of gross box area, 3.23 % cut away by the muzzle aperture, the Ø466 aft flange cutout
+and the belly notch, leaving 6.077 m² of skin.**
+
+| Monolithic 2 mm aluminium | kg | | Sandwich at 3.0 kg/m² | kg |
+|---|---:|---|---|---:|
+| Skins | **32.82** | | Skins | **18.23** |
+| Frames and ribs | 8.20 | | Frames and ribs | 4.56 |
+| Radiator | 2.59 | | Radiator | 2.59 |
+| Equipment-bay boxes | 1.87 | | Equipment-bay boxes | 1.87 |
+| Fasteners and brackets | 4.55 | | Fasteners and brackets | 2.73 |
+| **TOTAL** | **50.04** | | **TOTAL** | **29.98** |
+
+**Against a placeholder of 8.00 kg.** The sweep runs 21.62 kg at 2.0 kg/m² to 38.34 kg at 4.0, so
+**no plausible panel technology brings this near the placeholder.** The skins alone are 2.3 times
+it at the lightest sandwich in the sweep.
+
+### Why the placeholder was so far out
+
+**It was never an estimate of anything.** [P10](../OPEN_PROBLEMS.md) records it as *"an 8.0 kg
+placeholder with no derivation"*, entered on 2026-08-13 explicitly so a caveated number would be
+auditable where a hole was not, and chosen as *"the lean end"* of a range whose upper bound
+`KILL_CRITERIA.md` had already put at **a plausible 20 kg**.
+
+**That file's warning was closer than the number chosen instead of it**, and it was still low:
+29.98 kg at a realistic panel, 50.04 kg as the parameter file actually specifies.
+
+### What it costs, stated rather than absorbed
+
+**The parameter file specifies 2 mm monolithic aluminium skins**, so **50.04 kg is what the design
+as recorded weighs.** A honeycomb sandwich would give 29.98 kg, and **adopting one is a design
+decision this project has not taken** — it is not a correction and is not applied here.
+
+| | Before | After, as specified |
+|---|---:|---:|
+| Enclosure line | 8.00 kg placeholder | **50.04 kg**, five line items |
+| Dry mass | 84.5 kg | **126.5 kg** |
+| Dry mass per 3U satellite | 7.042 kg | **10.54 kg** |
+| Kill criterion 1 | crossed 3.5× | **crossed 5.3×** |
+| A45's P10-only added mass | 2.069 kg/sat | **3.901 kg/sat** |
+
+**Band 8 fails and P68 gets worse, exactly as predicted.** A bigger P10 lump is a bigger thing
+being credited to the stage, so ADR-032's first falsifier fires harder rather than softer.
+
+**Nothing here is a new physical problem.** The mass was always there; the repository was carrying
+a number that said otherwise, and said so in writing. **What changes is that the figure is now
+derived, and every kilogram of it points at a line in `parameters.json`.**
+
+### The predictions
+
+**Three of four held cleanly. The first held in direction and missed in magnitude — both cases low
+by about 40 %.**
+
+1. *"Monolithic near 35 kg, sandwich near 22 kg."* **50.04 and 29.98.** Direction right, both
+   numbers low. I under-counted what frames, bay boxes and fasteners add on top of skin.
+2. *"Band 8 fails and P68 gets worse."* **2.069 → 3.901 kg per satellite.** Held.
+3. *"Band 6 passes comfortably."* **125 W against 1.89 W.** Held.
+4. *"Near or above the 20 kg `KILL_CRITERIA.md` flagged."* **Above it in both cases.** Held.
+
+## What this run does not do
+
+- **No doublers, local reinforcement, expansion joints, surface treatment or connectors.** All of
+  those add, so this is a floor for the second time in the same line item.
+- **Three of the five inputs are declared guesses** — the frame fraction, the bay wall thickness
+  and the fastener fraction. They are smaller guesses than the one they replace and each is named.
+- **It does not choose a panel technology.** Both cases are reported and the parameter file's
+  monolithic specification is what the rollup carries.
+- **It does not re-open the rest of A35's ledger**, and it changes no other line.

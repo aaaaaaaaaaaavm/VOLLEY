@@ -1,0 +1,118 @@
+{
+  "analysis": "A46",
+  "bands_declared_commit": "HEAD~1",
+  "note": "flat-plate areas from the enclosure envelope, three apertures subtracted. No doublers, local reinforcement, expansion joints, surface treatment or connectors. Frames, bay walls and fastener fractions are declared inputs, three of the five being guesses. Nothing measured.",
+  "envelope_mm": [
+    1839.0,
+    530.0,
+    914.0
+  ],
+  "area_gross_m2": 6.279872,
+  "area_cut_m2": 0.2025339235707363,
+  "area_net_m2": 6.077338076429264,
+  "placeholder_kg": 8.0,
+  "monolithic": {
+    "case": "monolithic 2 mm aluminium",
+    "items": {
+      "Skins": 32.817625612718025,
+      "Frames and ribs": 8.204406403179506,
+      "Radiator": 2.5920000000000005,
+      "Equipment-bay boxes": 1.87272,
+      "Fasteners and brackets": 4.548675201589753
+    },
+    "total_kg": 50.03542721748728
+  },
+  "sandwich": {
+    "case": "sandwich at 3.0 kg/m2",
+    "items": {
+      "Skins": 18.232014229287792,
+      "Frames and ribs": 4.558003557321948,
+      "Radiator": 2.5920000000000005,
+      "Equipment-bay boxes": 1.87272,
+      "Fasteners and brackets": 2.725473778660974
+    },
+    "total_kg": 29.98021156527071
+  },
+  "sweep": [
+    {
+      "areal": 2.0,
+      "total_kg": 21.62387171018048
+    },
+    {
+      "areal": 2.5,
+      "total_kg": 25.802041637725594
+    },
+    {
+      "areal": 3.0,
+      "total_kg": 29.98021156527071
+    },
+    {
+      "areal": 3.5,
+      "total_kg": 34.158381492815835
+    },
+    {
+      "areal": 4.0,
+      "total_kg": 38.33655142036095
+    }
+  ],
+  "radiator_W": 124.92968525101288,
+  "dissipation_W": 1.89,
+  "a45_p10_only_before": 2.069,
+  "a45_p10_only_after": 3.9010989637725597,
+  "declared": {
+    "sandwich_kg_m2": 3.0,
+    "frame_fraction": 0.25,
+    "bay_wall_m": 0.0015,
+    "fastener_fraction": 0.1
+  },
+  "bands": [
+    {
+      "n": "1",
+      "band": "envelope is 1839 x 530 x 914 mm within 1 mm",
+      "got": "1839 x 530 x 914",
+      "passed": true
+    },
+    {
+      "n": "2",
+      "band": "aperture area > 0 and < 5 % of gross",
+      "got": "3.23 %",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "monolithic buildup <= 8.0 kg",
+      "got": "50.04 kg",
+      "passed": false
+    },
+    {
+      "n": "4",
+      "band": "sandwich buildup <= 8.0 kg",
+      "got": "29.98 kg",
+      "passed": false
+    },
+    {
+      "n": "5",
+      "band": "sandwich lighter than monolithic across the sweep",
+      "got": "yes",
+      "passed": true
+    },
+    {
+      "n": "6",
+      "band": "radiator rejects the campaign-average load",
+      "got": "125 W against 1.89 W",
+      "passed": true
+    },
+    {
+      "n": "7",
+      "band": "every line item traces to a parameter or a declared input",
+      "got": "0 undeclared",
+      "passed": true
+    },
+    {
+      "n": "8",
+      "band": "A45's P10-only case improves, <= 2.069 kg/sat",
+      "got": "3.901 kg",
+      "passed": false
+    }
+  ]
+}
