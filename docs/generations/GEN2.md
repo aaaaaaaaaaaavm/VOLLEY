@@ -14,6 +14,15 @@ authoritative narrative and defect list are in
 
 Retained as the intermediate record showing the move from structural proxies to mechanism-level detail.
 
+
+## What this generation assumed about the host
+
+**It assumed the host was **the same — a mounting surface.** The structured revision changed how the machine was drawn, not what it assumed about the vehicle.**
+
+The self-contained assumption is inherited unexamined, which is the normal thing for a revision to do.
+
+*The through-line across all six is [`../LINEAGE.md`](../LINEAGE.md).*
+
 ---
 
 ## GEN 2: First Structured Revision

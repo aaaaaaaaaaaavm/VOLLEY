@@ -80,3 +80,11 @@ none of it. **And the stage**: no launch provider has agreed to keep one alive p
 **Three of Gen5's crossed kill criteria are dissolved by Gen6 rather than passed.** A criterion
 that no longer applies has not been met, and [`docs/KILL_CRITERIA.md`](../KILL_CRITERIA.md) says
 so in those words.
+
+## What this generation assumed about the host
+
+**It assumed the host was **the host is the machine.** Not a mounting surface, not a platform — the structure, the power, the thermal path and the avionics bay are the stage's, and the rail is the stage.**
+
+**85.36 kg — 67.4 % of the ledger — is credited to the stage, and 29.75 kg is deleted outright.** This is [ADR-002](../adr/002-host-is-a-spent-upper-stage.md)'s 2023 decision followed all the way down: if the stage supplies attitude control, power and mass, it can supply the structure too. **The exposure that creates is [P68](../../OPEN_PROBLEMS.md)**, and it is the largest open defect in the design.
+
+*The through-line across all six is [`../LINEAGE.md`](../LINEAGE.md).*

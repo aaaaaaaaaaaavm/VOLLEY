@@ -47,3 +47,11 @@ documents, no export, and stations that disagree with the analysis are exactly t
 `cad/parameters.json` warns about in its own header. **Gen5 is the answer**, and
 [ADR-026](../adr/026-cad-built-from-parameters.md) is the decision:
 [GEN5.md](GEN5.md).
+
+## What this generation assumed about the host
+
+**It assumed the host was **the same, and for the last time.** Nine Fusion documents of a fully self-contained machine — track, stator, sled, brake, magazine, enclosure.**
+
+Gen4 is the high-water mark of the deployer-as-passenger idea. Everything after it moves the other way.
+
+*The through-line across all six is [`../LINEAGE.md`](../LINEAGE.md).*

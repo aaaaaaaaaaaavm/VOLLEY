@@ -46,9 +46,17 @@ file is wrong and the CAD changelog's range is the authority.
 project has pursued since: rideshare secondaries inherit the primary customer's orbit, and a
 1-2 m/s spring cannot change that. The first architecture was a coilgun.
 
-**2023, host reframed.** From a dedicated free-flyer to a spent upper stage. This is what
-made the concept a payload rather than a mission, and it is why the interface is now specified
-generically against any restartable stage.
+**2023, host reframed — and the direction was set here.** From a dedicated free-flyer to a
+spent upper stage. **The cause is named in [ADR-002](adr/002-host-is-a-spent-upper-stage.md):**
+*"Learning of ISRO's POEM, a spent PSLV fourth stage operated as a stabilised platform, reframed
+the problem."* A free-flyer must carry attitude control, power and recoil management, *"which is
+most of a spacecraft"*; a spent stage already has all three. This is what made the concept a
+payload rather than a mission, and it is why the interface is specified generically against any
+restartable stage.
+
+**Everything after it moved the same way — from a deployer that rides a stage to a deployer that
+*is* one.** That through-line, and what each CAD generation assumed about the vehicle underneath
+it, is [`LINEAGE.md`](LINEAGE.md).
 
 **mid-2025, the pivotal change.** Coilgun to linear synchronous motor. A coilgun cannot
 deliver a programmable exit velocity at the dispersion this application needs; a synchronous

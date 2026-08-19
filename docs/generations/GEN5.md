@@ -51,3 +51,11 @@ parameter describes.
 **Three kill criteria crossed**, and [ADR-032](../adr/032-gen6-stage-integrated-gas-store.md)
 deletes the subsystems two of them were about rather than meeting them. **Gen5 remains the
 measured baseline and the record of what a self-contained deployer costs**: [GEN6.md](GEN6.md).
+
+## What this generation assumed about the host
+
+**It assumed the host was **the same, and frozen that way.** Gen5 is the self-contained machine made reproducible.**
+
+**And it is where the cost of the assumption became measurable.** [A46](../../validation/A46_enclosure_buildup.md) built the enclosure from its own geometry and found **50.04 kg against an 8.00 kg placeholder** — a skin, a radiator and an avionics bay that a spent stage already carries. *The largest single mass in the machine was a duplicate of something the host already had.*
+
+*The through-line across all six is [`../LINEAGE.md`](../LINEAGE.md).*

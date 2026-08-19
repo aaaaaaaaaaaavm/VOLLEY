@@ -95,6 +95,34 @@ whose orbit everyone else inherits, because there is no primary customer.
 This is the configuration where the phrase that started the project applies most literally: the
 launcher delivers the cannon, and the cannon delivers the satellites.
 
+### 3.3 Two operating modes, and they cut across both configurations
+
+**Hosted and dedicated is *where* the machine sits. This is *when* it fires**, and the difference
+matters more to a customer than the configuration does.
+
+| | **Deploy-on-arrival** | **Loiter-and-distribute** |
+|---|---|---|
+| **What happens** | All twelve out shortly after insertion, then disposal | The stage stays up, repositions between altitude shells on residual propellant, and fires at each station |
+| **What the customer buys** | Twelve satellites in one orbit at commanded velocities | Twelve satellites across **several** orbits from one launch |
+| **What it asks of the stage** | Minutes to hours of life past its contracted job | **Weeks to months**, and an owner willing to grant them |
+| **What ends it** | The disposal burn | **Drag** — and see below |
+
+**Loiter-and-distribute is the mode this concept exists for**, and it is the one
+[ADR-002](adr/002-host-is-a-spent-upper-stage.md) pointed at in 2023 when it made the stage the
+host rather than a free-flyer.
+
+> **The boundary on it is measured, not assumed, and it is tighter than it looks.**
+>
+> **Altitude repositioning is cheap. Plane change is not** — **133 m/s per degree**, A15 band 8,
+> against a whole shot of 16 m/s. The concept is altitude shells plus J2 doing the plane work over
+> time, not a vehicle that flies to arbitrary orbits.
+>
+> **And duration is not free of the thing that makes it attractive.** **E28** found the fleet
+> reenters in **29–36 days at 350 km**, with only the 450 km case surviving 90 — and that *the drag
+> which spreads the orbital planes is the same drag that ends the mission.* **They are not two
+> effects to trade against each other. They are one effect.** How much loiter is purchasable, and
+> at what altitude, is **not yet modelled**; E28 is live.
+
 ## 4. What the concept can and cannot do, quantified
 
 **The honest boundary matters more than the pitch**, and this project has already established

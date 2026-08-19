@@ -14,6 +14,15 @@ authoritative narrative and defect list are in
 
 Do not cite Gen1 dimensions without cross-checking `cad/parameters.json`.
 
+
+## What this generation assumed about the host
+
+**It assumed the host was **a mounting surface with a power feed.** Gen1 carries its own track, structure, enclosure and energy store; nothing is expected of the vehicle underneath it beyond a place to bolt to.**
+
+[ADR-002](../adr/002-host-is-a-spent-upper-stage.md) had already chosen a spent upper stage as that host **in 2023**, but as somewhere to stand rather than as part of the machine. Gen1's geometry reflects that: everything is aboard.
+
+*The through-line across all six is [`../LINEAGE.md`](../LINEAGE.md).*
+
 ---
 
 ## GEN 1: OG CAD

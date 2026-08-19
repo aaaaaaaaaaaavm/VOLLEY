@@ -14,6 +14,15 @@ authoritative narrative and defect list are in
 
 **`analysis/mass_properties.py` takes the sled at 9.445 kg from these solids (P15), and that figure sets the headline exit velocity.** Gen3 is the only generation any number is measured off.
 
+
+## What this generation assumed about the host
+
+**It assumed the host was **the same.** Gen3 reconciled the parameter set against the actual geometry and left the host assumption untouched.**
+
+**This is the generation every mass in the project descends from**, so the self-contained assumption is baked into the sled mass, and through it into the exit velocity.
+
+*The through-line across all six is [`../LINEAGE.md`](../LINEAGE.md).*
+
 ---
 
 ## GEN 3: Parameter-Reconciled Revision

@@ -155,7 +155,7 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 > [`cad/DIMENSIONS.md`](cad/DIMENSIONS.md) and [`cad/BOM.md`](cad/BOM.md), both built from
 > [`cad/parameters.json`](cad/parameters.json) so they cannot drift from it.
 
-**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Generations](docs/GENERATIONS.md)** · **[Generation archive](docs/generations/README.md)** · **[Gen6 closure](docs/GEN6_CLOSURE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
+**[Phase I closure](docs/PHASE_I_CLOSURE.md)** · **[Gen6 architecture](docs/adr/032-gen6-stage-integrated-gas-store.md)** · **[State of the project](docs/STATE_OF_THE_PROJECT.md)** · **[Figure index](docs/FIGURE_INDEX.md)** · **[The case](docs/CASE_STUDY.md)** · **[Review responses](docs/REVIEW_RESPONSES.md)** · **[Build readiness](docs/BUILD_READINESS.md)** · **[CAD brief](CAD_BRIEF.md)** · **[Dimensions](cad/DIMENSIONS.md)** · **[BOM](cad/BOM.md)** · **[The concept](docs/CONCEPT.md)** · **[One-page summary](SUMMARY.md)** · **[Frozen baseline](docs/BASELINE.md)** · **[Lineage](docs/LINEAGE.md)** · **[Generations](docs/GENERATIONS.md)** · **[Generation archive](docs/generations/README.md)** · **[Gen6 closure](docs/GEN6_CLOSURE.md)** · **[Gen4 status](docs/GEN4_STATUS.md)** · **[Roadmap](docs/ROADMAP.md)** · **[Open problems](OPEN_PROBLEMS.md)** · **[Validation](docs/VALIDATION_REPORT.md)** · **[Manufacturing](docs/MANUFACTURING.md)** · **[ADRs](docs/adr/)** · **[Literature](docs/LITERATURE.md)** · **[Research position](docs/RESEARCH_POSITION.md)** · **[Velocity ceiling](docs/VELOCITY_CEILING.md)** · **[Kill criteria](docs/KILL_CRITERIA.md)** · **[Structural gap](docs/STRUCTURAL_GAP.md)** · **[Payload classes](docs/PAYLOAD_CLASSES.md)** · **[Payload environment](docs/PAYLOAD_ENVIRONMENT.md)** · **[B-1 order](docs/B1_ORDER.md)** · **[Market](docs/MARKET.md)**
 
 <!-- PROGRAMME-HEADER-START -->
 | Repository | Role | You are here |
@@ -229,9 +229,9 @@ gantt
     Cold gas on a stage rail         :active, a3, 2026-08-14, 2026-08-17
 
     section Host
-    Dedicated free-flyer             :done, h1, 2021-03-22, 2023-01-01
-    Spent upper stage as a payload   :done, h2, 2023-01-01, 2026-08-14
-    Spent upper stage AS the machine :active, h3, 2026-08-14, 2026-08-17
+    Free-flyer  carries everything   :done, h1, 2021-03-22, 2023-01-01
+    POEM reframe  stage as platform  :done, h2, 2023-01-01, 2026-08-14
+    Stage AS the machine             :active, h3, 2026-08-14, 2026-08-17
 
     section CAD
     Gen1  geometric ancestor         :done, c1, 2025-09-15, 2026-02-15
@@ -253,6 +253,12 @@ of 2021–2025 and is the authority if this disagrees. <b>Inferred:</b> the 2023
 year and no month in the record; it is drawn at the start of that year and the bar's left edge
 should not be read as a date. Bar <i>lengths</i> are spans between milestones, not durations of
 work.</sub>
+
+**The Host lane is the one with a direction.** **[ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md),
+2023** — *"Learning of ISRO's POEM, a spent PSLV fourth stage operated as a stabilised platform,
+reframed the problem"* — set it, and every architecture decision since has moved the design from
+*riding* a stage to *being* one. **[`docs/LINEAGE.md`](docs/LINEAGE.md)** is that through-line,
+with what each CAD generation assumed about the vehicle underneath it.
 
 **The bottom bar is the one that matters.** Five years, three architectures, six CAD
 generations, forty-six analyses — and **not one measurement**. That is `OPEN_PROBLEMS.md` **E4**,
