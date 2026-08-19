@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VOLLEY: an electromagnetic orbital CubeSat deployer</title>
-<meta name="description" content="A magazine-fed electromagnetic deployer that ejects unmodified CubeSats at programmable velocity. Design study, TRL 2-3, model outputs only.">
+<meta name="description" content="A magazine-fed deployer with electromagnetically commanded exit velocity, mounted on a spent upper stage. Design study, TRL 2-3, model outputs only.">
 <meta property="og:title" content="VOLLEY: an electromagnetic orbital CubeSat deployer">
-<meta property="og:description" content="Ejecting unmodified CubeSats at 16.5 m/s from a rideshare host. Design study, TRL 2-3, unvalidated.">
+<meta property="og:description" content="Twelve CubeSats off a spent upper stage, each at a velocity commanded for it. Design study, TRL 2-3, nothing built or measured.">
 <meta property="og:image" content="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/envelope_closed.png">
 <style>
 :root{
@@ -69,6 +69,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 </head>
 <body>
 
+
 <header>
   <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/envelope_closed.png" alt="VOLLEY deployer, closed, on its ESPA interface">
 </header>
@@ -76,26 +77,26 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 <div class="wrap">
   <div class="head-copy">
     <h1>VOLLEY: an electromagnetic orbital CubeSat deployer</h1>
-    <p class="tag">A magazine-fed electromagnetic deployer that ejects unmodified CubeSats
-    from a rideshare host at programmable velocity, the unserved regime between spring
+    <p class="tag">A magazine-fed deployer that fires twelve unmodified CubeSats off a spent
+    upper stage, each at a velocity commanded for it &mdash; the unserved regime between spring
     deployers (~2 m/s) and propulsive transfer vehicles (hundreds of m/s).</p>
     <div class="badges">
-      <span class="badge">MIT</span>
+      <span class="badge">CC BY 4.0</span>
       <span class="badge warn">TRL 2-3</span>
-      <span class="badge bad">Model outputs only, unvalidated</span>
-      <span class="badge">No FEA</span>
-      <span class="badge">No hardware</span>
+      <span class="badge bad">Model outputs only, nothing built or measured</span>
+      <span class="badge">119 defects, 51 live</span>
+      <span class="badge">7 kill criteria, 3 crossed</span>
     </div>
     <div class="pills">
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY">Repository</a>
+      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/SUMMARY.md">One page</a>
+      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/CONCEPT.md">The idea</a>
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY-paper/blob/main/paper/VOLLEY_IEEE_Conference.pdf">Paper (PDF)</a>
-      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/cad/stl/EMOCD_Assembly_Gen3.stl">Spin the 3D model</a>
-      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/RESULTS.md">All charts</a>
+      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/cad/stl/VOLLEY_Track_Gen5.stl">Spin the 3D model</a>
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/OPEN_PROBLEMS.md">Open problems</a>
+      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/KILL_CRITERIA.md">What would kill it</a>
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/STATE_OF_THE_PROJECT.md">State of the project</a>
-      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/SKILLS.md">Skills, with evidence</a>
       <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/PRIOR_ART.md">Prior art</a>
-      <a class="pill" href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/ROADMAP.md">Roadmap</a>
     </div>
   </div>
 </div>
@@ -107,11 +108,11 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   <p class="sub">CubeSats flown as rideshare secondaries inherit the primary customer's
   orbit. The spring that ejects them adds 1-2 m/s, enough to drift clear, not enough to
   change an orbit. About <b>92 % of flown CubeSats carry no propulsion</b> to fix that, so they
-  stay where the manifest put them for life.
-  VOLLEY replaces the spring with an ironless double-sided Halbach linear synchronous motor
-  driving a reusable magnetic sled along a 1.5 m track. Twelve 3U CubeSats feed from two
-  transverse cassettes and fire one at a time. <b>The satellite is never modified, the
-  magnets ride the sled, not the payload.</b></p>
+  stay where the manifest put them for life. <b>That is a distribution problem, not a deployment
+  problem</b> &mdash; a constellation is only a constellation once its members are distributed.</p>
+  <p class="sub"><b>VOLLEY replaces the spring with a magazine and a commanded shot.</b> Twelve
+  satellites, one at a time, each leaving at a velocity chosen for it. <b>The satellite is never
+  modified</b> &mdash; no armature, no plating, no electrical interface.</p>
   <div class="note"><b>The machine is half the idea.</b> A launch vehicle's upper stage does its
   job in ten minutes and then becomes debris &mdash; deorbited, or left to decay. POEM has already
   flown the counter-example: a spent PS4 operated as a stabilised platform after its job is done.
@@ -120,59 +121,105 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   own reaction control, fires satellites off at individually commanded velocities at each station,
   and makes a final burn to reenter.
   <br><br>
+  <b>That direction was set in 2023</b>, by ADR-002 &mdash; <em>"learning of ISRO's POEM, a spent
+  PSLV fourth stage operated as a stabilised platform, reframed the problem"</em>. A free-flyer
+  must carry attitude control, power and recoil management, <em>"which is most of a spacecraft"</em>;
+  a spent stage already has all three. Every architecture decision since has moved the design from
+  <em>riding</em> a stage to <em>being</em> one.
+  <br><br>
   <b>With the boundary attached, because a delivery claim is easy to overstate.</b> An altitude
   shell change costs <b>27.8 m/s</b>; along-track distribution is what the deployer itself does;
   nodal separation develops free from differential J<sub>2</sub>, measured at <b>367&deg; over 90
   days</b> in GMAT. <b>Plane change is excluded</b> &mdash; 133 m/s per degree, eight times the
-  whole shot &mdash; and no claim here implies VOLLEY or its host selects an orbit plane. Above
-  roughly 100 m/s of host budget the <em>stage</em> supplies most of the altitude range and the
-  deployer supplies the distribution within it; they are complements, and saying which does which
-  is the difference between a positioning argument and a brochure.</div>
-  <div class="grid g2">
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/hero_open.png" alt="Interior, enclosure open, payload departing along the track axis">
-      <figcaption><b>Interior.</b> Track, stator belts, sled and cassette, enclosure open. The payload leaves <em>along the track axis</em>, out the muzzle.</figcaption></figure>
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/espa_interface.png" alt="ESPA interface, payload departing away from the flange">
-      <figcaption><b>ESPA interface.</b> &Oslash;460 mm ring flange, 24 holes. The payload departs <em>away from</em> the flange, never through it.</figcaption></figure>
+  whole shot &mdash; and no claim here implies VOLLEY or its host selects an orbit plane.</div>
+</section>
+
+<section>
+  <h2>Two machines, and every number belongs to one of them</h2>
+  <p class="sub"><b>Gen5 is the frozen baseline</b> that every headline number is computed
+  against. <b>Gen6 is the current design target</b>, and it is a different machine.</p>
+  <table>
+    <tr><th></th><th>Gen5 &mdash; the frozen baseline</th><th>Gen6 &mdash; the current design target</th></tr>
+    <tr><td>What accelerates the payload</td><td>an ironless double-sided Halbach linear synchronous motor, over <b>1.3 m</b></td><td><b>cold gas, over 8.0 m of the host stage's own length</b></td></tr>
+    <tr><td>What it is mounted on</td><td>its own track and enclosure, on an ESPA port</td><td><b>a rail a spent upper stage already is</b></td></tr>
+    <tr><td>Electromagnetics</td><td>the whole machine</td><td>a <b>39.7 mm</b> stator at the muzzle &mdash; <b>0.496 % of the stroke, 0.340 kg</b></td></tr>
+    <tr><td>What the motor does</td><td>delivers the energy <b>and</b> commands the velocity</td><td><b>commands the velocity only</b></td></tr>
+    <tr><td>Evidence behind it</td><td>every headline number, structural FEA, CFD, a designed control loop, a second CAD implementation</td><td><b>A35&ndash;A53. No FEA, no circuit model, no CFD, no second implementation</b></td></tr>
+  </table>
+  <div class="note"><b>Gas supplies the energy; the motor supplies the control.</b> That division is
+  deliberate. A gas store charges slowly from solar and releases fast &mdash; an excellent energy
+  store and a terrible servo. A linear machine is the reverse.
+  <br><br>
+  <b>The motor is not decoration at half a percent of the stroke.</b> Gen6's shot is a single
+  open-loop expansion dispersing at <b>1.113 % (3&sigma;)</b>, of which <b>93.4 % is a seal
+  friction nobody has measured</b> &mdash; and A44 found no instrumentation route out, because a
+  fivefold better pressure transducer moves it <b>0.008 %</b>. The stator is what recovers the
+  commanded velocity the product is sold on. <b>Take it out and this is a gas gun with a scatter
+  it cannot correct.</b></div>
+  <div class="grid g3">
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/hero_open.png" alt="Gen4, hand-modelled">
+      <figcaption><b>Gen4.</b> Hand-modelled, more detail than any generation since, and <b>no committed export</b>. No number on this page is taken from it.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/gen5/hero_open.png" alt="Gen5, script-built">
+      <figcaption><b>Gen5.</b> Eight parts from the parameter file, rebuilding byte-identically. Plainer because every feature must trace to a parameter.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/gen6/hero_open.png" alt="Gen6, a rail on a stage">
+      <figcaption><b>Gen6.</b> What is left after deletion: a rail, a tube, a chamber &mdash; <b>8.2 m of it</b>, the host stage's whole length. <b>The difference is the architecture, not the renderer.</b></figcaption></figure>
   </div>
 </section>
 
 <section>
+  <h2>Why the store is gas</h2>
+  <p class="sub">A39 ran the trade against a <b>12.55 kg</b> budget for store plus mechanism, at
+  32.7 m/s. <b>Gas won by a factor of four</b>, and the reason is not energy density.</p>
+  <table>
+    <tr><th></th><th>store</th><th>mechanism</th><th>total</th><th>busts the budget at</th></tr>
+    <tr><td>Steel spring</td><td class="num">7.13 kg</td><td class="num">4.28 kg</td><td class="num"><b>11.41 kg</b></td><td class="num"><b>34.3 m/s</b></td></tr>
+    <tr><td><b>Cold gas</b></td><td class="num">0.63 kg</td><td class="num">2.34 kg</td><td class="num"><b>2.98 kg</b></td><td class="num"><b>89.4 m/s</b></td></tr>
+    <tr><td>Keep the motor <em>(control)</em></td><td class="num">23.76 kg</td><td class="num">&mdash;</td><td class="num"><b>23.76 kg</b></td><td class="num"><b>every velocity</b></td></tr>
+  </table>
+  <div class="note"><b>The spring's problem was never storing the energy. It was having to be
+  cocked twelve times.</b> A spring stores 7.13 kg of energy and then needs 4.28 kg of mechanism to
+  re-arm it. Gas separates the store from the actuator, so re-arming is a valve and <b>one bottle
+  runs the whole manifest</b>.
+  <br><br>
+  <b>Every alternative was screened by a run on the record.</b> A supercapacitor bank and the full
+  motor &mdash; <b>the bank cannot source the shot on cells anyone sells</b>: the shot needs
+  &le;&nbsp;68&nbsp;m&#8486; and a real 32&nbsp;&times;&nbsp;190&nbsp;F string is
+  116&ndash;185&nbsp;m&#8486; (<b>P26</b>). A flywheel &mdash; the one live alternative, clearing
+  the ceiling at 35&nbsp;m&#8486; but <b>at mass parity, not a saving</b> (<b>P45</b>). A lead
+  screw &mdash; DN limit exceeded <b>8&times;</b>, whirling <b>36&times;</b>. Rack and pinion
+  &mdash; contact drive at full speed in vacuum.
+  <br><br>
+  <b>And gas has already failed once here.</b> A39 chose it while assuming a regulator it never
+  named, and <b>A40 killed that implementation at 14.16 m/s against a 30 m/s band</b>. A41's
+  pre-charged chamber is the repair: charge slowly, fire as a closed expansion, no flow-rate
+  problem by construction.</div>
+</section>
+
+<section>
   <h2>A shot, end to end</h2>
-  <p class="sub">Feed, retention gate, 1.3 m of acceleration at 10.7 g, coast and trim, release at
-  1500 mm, regenerative braking over the next 240 mm, eddy brake, sled recovered for the next
-  shot. Regeneration returns 296 J of the sled's 1291 J to the bank and the brake absorbs the
-  remaining 952 J, so efficiency is quoted electrical-to-payload net of a 23 % sled-energy
-  credit.</p>
+  <p class="sub"><b>Gen5.</b> Feed, retention gate, 1.3 m of acceleration at 10.07 g, coast and
+  trim, release at 1500 mm, regenerative braking over the next 240 mm, eddy brake, sled recovered
+  for the next shot. Regeneration returns <b>291 J</b> of the sled's <b>1268 J</b> to the bank and
+  the brake absorbs the remaining <b>935 J</b>, so efficiency is quoted electrical-to-payload net
+  of that credit.</p>
+  <p class="sub"><b>Gen6.</b> A 9.55 L bottle at 200 bar charges a 2 L chamber to 22.73 bar during
+  the twenty minutes between shots &mdash; <b>0.26 W average, 36 W peak</b>. The chamber opens as a
+  closed adiabatic expansion and a carriage pushes the satellite down <b>8.0 m</b> of tube. The
+  39.7 mm stator, energised <em>after</em> the gas has finished, corrects the velocity to
+  <b>&plusmn;0.323 m/s</b>. <b>The carriage is not recovered.</b></p>
   <div class="grid g3">
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/track_stator.png" alt="Track and stator, side elevation">
       <figcaption><b>Track and stator.</b> Side elevation, breech to muzzle.</figcaption></figure>
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/sled_detail.png" alt="Reusable sled">
-      <figcaption><b>Sled.</b> Reusable. The magnets ride it and never leave the machine.</figcaption></figure>
+      <figcaption><b>Sled.</b> Reusable, and Gen6 deletes it. The magnets ride it and never leave the machine.</figcaption></figure>
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/brake.png" alt="Eddy brake arresting the sled">
-      <figcaption><b>Braking.</b> The payload has gone; the sled runs on into the eddy brake.</figcaption></figure>
+      <figcaption><b>Braking.</b> The payload has gone; the sled runs on into the eddy brake. Gen6 has nothing to stop.</figcaption></figure>
   </div>
-
-  <div class="grid g2" style="margin-top:22px">
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/magazine_feed.png" alt="Axial view down the bore">
-      <figcaption><b>Down the bore.</b> Axial view along the departure axis, cassette feeding transversely into the breech.</figcaption></figure>
-    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/exploded_view.png" alt="Exploded view">
-      <figcaption><b>Exploded.</b> Nine documents: track, stator, sled, cassettes, brake, ESPA interface, enclosure, payload. Gen3, the one shot Gen4 has no equivalent of.</figcaption></figure>
-  </div>
-
-  <div class="note"><b>About these renders.</b> They come from the Gen4 Fusion model and replace a
-  Gen3 set that was wrong in a way that mattered: two of its frames showed the payload leaving
-  <em>through</em> the ESPA mounting flange, and drew the CubeSat as a wheeled road vehicle from a
-  sample-asset library. That is P43. <b>Gen4 has no committed STEP export</b>, so these show
-  geometry no file in <code>cad/step/</code> matches, and <b>Gen4's stations are not the analysis
-  model's</b> &mdash; it releases at s = 1200 mm where the analysis assumes 1500 mm. No number on
-  this page is taken from Gen4. The payload is a plain rectangular 3U proxy, not a modelled
-  satellite.</div>
-
   <figure style="margin-top:26px">
     <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/shot.gif" alt="Animated shot: position, velocity, commanded force and bank current against time"
          style="max-width:620px;width:100%;display:block;margin:0 auto">
-    <figcaption style="text-align:center"><b>The stroke, drawn as it happens.</b>
-      157.3 ms from breech to release. Position, velocity, commanded force and bank current,
+    <figcaption style="text-align:center"><b>The Gen5 stroke, drawn as it happens.</b>
+      162.3 ms from breech to release. Position, velocity, commanded force and bank current,
       all four from the same integrator that produces the paper's numbers
       (<code>tools/make_animation.py</code> imports <code>motor_model.py</code> rather than
       reimplementing it).</figcaption>
@@ -180,47 +227,90 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 </section>
 
 <section>
-  <h2>Headline results</h2>
-  <p class="sub">Every figure here is a script output, not a measurement. Two of them carry
-  a genuine independent cross-check; everything else is single-sourced.</p>
+  <h2>The numbers</h2>
+  <p class="sub"><b>Every figure here is a script output, not a measurement.</b> Where a generation
+  has no equivalent, the cell says so rather than being left blank.</p>
   <table>
-    <tr><th>Quantity</th><th>Value</th><th>Source</th></tr>
-    <tr><td>Thrust constant</td><td class="num">10.54 N per kA/m, ±1.01 % ripple, <b>FEM-verified to 0.03 %</b></td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Exit velocity, 3U</td><td class="num"><b>16.029 m/s at 10.07 g</b></td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Electrical to payload efficiency</td><td class="num">18.47 % net of regeneration</td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Closed-loop dispersion</td><td class="num">0.0274 m/s (3σ) to ±0.10 km apogee</td><td><code>motor_model.py</code></td></tr>
-    <tr><td>Velocity-loop margins</td><td class="num">31.1 Hz crossover, <b>+82.2° phase / +21.2 dB gain</b>, bandwidth a third of the 109 Hz mode. The gain published until 2026-08-13 was <b>unstable</b> — 557 Hz crossover, −50.4°. P47</td><td><code>control_design.py</code></td></tr>
-    <tr><td>Orbital lifetime multiplier</td><td class="num">x1.60 at mean activity, <b>not invariant, P16</b></td><td><code>astro.py</code></td></tr>
-    <tr><td>Semi-major axis change</td><td class="num"><b>+28.8 km</b>, and <b>0 m</b> by release timing at any cadence &mdash; the claim a clock cannot imitate</td><td><code>comparators.py</code>, A21-R</td></tr>
-    <tr><td>30° of in-track phase</td><td class="num"><b>468 s of waiting</b>, free. <b>Not a VOLLEY advantage</b> &mdash; the published 1.4-days-against-25 comparison used the wrong baseline. P56</td><td><code>comparators.py</code>, A21-R</td></tr>
-    <tr><td><b>Against a spring, on lifetime</b></td><td class="num"><b>7.33x</b> the <i>extension</i> of the fastest published spring (6.4x is the weaker velocity ratio) &mdash; but <b>1.495x</b> on <i>delivered orbital life</i>, which is what a risk-weighted comparison uses. E30</td><td><code>comparators.py</code></td></tr>
-    <tr><td>Deployer mass per 3U satellite</td><td class="num">10.547 kg dry — <b>parity</b> with a canisterised dispenser, and <b>crossing</b> kill criterion 1</td><td><code>payload_family.py</code></td></tr>
-    <tr><td><b>Added mass per 3U satellite, ADR-032</b></td><td class="num"><b>1.608 kg</b> once the spent stage <i>is</i> the deployer &mdash; 29.75 kg deleted, 43.33 kg stage structure, 11.45 kg added. <b>Both numerators are reported together and the 2 kg threshold has not moved</b></td><td><code>host_integrated.py</code>, A37</td></tr>
-    <tr><td>Energy store</td><td class="num"><b>2.98 kg of cold gas</b> &mdash; one 1.71 L bottle for twelve shots, against 11.41 kg of steel spring. A spring must be cocked twelve times; gas does not</td><td><code>store_trade.py</code>, A39</td></tr>
-    <tr><td>Dry / loaded mass</td><td class="num">126.6 kg / 174.6 kg</td><td><code>mass_properties.py</code></td></tr>
-    <tr><td>Recoil per shot</td><td class="num">64.1 N·s</td><td><code>astro.py</code></td></tr>
-    <tr><td>Track first mode</td><td class="num">109 Hz fixed-fixed (target &gt;70)</td><td><code>sizing.py</code></td></tr>
+    <tr><th>Quantity</th><th>Gen5, the baseline</th><th>Gen6 at ADR-034</th></tr>
+    <tr><td><b>Exit velocity, 3U</b></td><td class="num"><b>16.029 m/s at 10.07 g</b></td><td class="num"><b>34.280 m/s</b> zero-friction, <b>29.009</b> at the friction allowance, <b>at 11.36 g</b></td></tr>
+    <tr><td><b>Dispersion, 3&sigma;</b></td><td class="num"><b>0.0274 m/s</b> to &plusmn;0.10 km apogee, through a designed loop</td><td class="num"><b>1.113 % open-loop</b>; 0.0274 m/s with the trim stage</td></tr>
+    <tr><td>Acceleration length</td><td class="num">1.3 m accelerating, 1.5 m track</td><td class="num"><b>8.0 m</b> &mdash; the host stage's whole usable length</td></tr>
+    <tr><td>Thrust constant</td><td class="num">10.54 N per kA/m, &plusmn;1.01 % ripple, <b>FEM-verified to 0.03 %</b></td><td class="num">same machine, trim section only</td></tr>
+    <tr><td>Energy per shot</td><td class="num"><b>2.78 kJ gross, 2.74 kJ net</b> of regeneration</td><td class="num"><b>311.76 J</b></td></tr>
+    <tr><td>Efficiency</td><td class="num"><b>18.5 % electrical-to-payload</b>, 514 J delivered</td><td class="num"><b>no equivalent figure exists</b> &mdash; the energy arrives as a ground-filled bottle, not as electricity</td></tr>
+    <tr><td>Electrical demand</td><td class="num">150&ndash;300 W recharge feed</td><td class="num"><b>0.26 W average, 36 W peak</b></td></tr>
+    <tr><td>Velocity-loop margins</td><td class="num">31.1 Hz crossover, <b>+82.2&deg; phase / +21.2 dB gain</b>. The gain published until 2026-08-13 was <b>unstable</b> &mdash; 557 Hz crossover, &minus;50.4&deg;. <b>P47</b></td><td class="num">&mdash;</td></tr>
+    <tr><td>Orbital lifetime multiplier</td><td class="num">x1.60 at mean activity, <b>not invariant, P16</b></td><td class="num">unchanged in kind</td></tr>
+    <tr><td>Semi-major axis change</td><td class="num"><b>+28.8 km</b>, and <b>0 m</b> by release timing at any cadence &mdash; the claim a clock cannot imitate</td><td class="num">&mdash;</td></tr>
+    <tr><td>30&deg; of in-track phase</td><td class="num"><b>468 s of waiting</b>, free. <b>Not a VOLLEY advantage</b> &mdash; the published comparison used the wrong baseline. <b>P56</b></td><td class="num">unchanged</td></tr>
+    <tr><td><b>Dry / loaded mass</b></td><td class="num"><b>126.6 kg / 174.6 kg</b></td><td class="num"><b>11.45 kg added</b> plus &asymp; 4.10 kg of store (<b>P82</b> &mdash; scaled, not sized)</td></tr>
+    <tr><td><b>Per 3U satellite</b></td><td class="num"><b>10.547 kg dry</b> &mdash; parity with a canisterised dispenser, and <b>crossing kill criterion 1</b></td><td class="num"><b>1.296 kg added</b>, 1.324 with the trim stage &mdash; <b>up to 3.164</b> read hostilely (<b>P68</b>)</td></tr>
+    <tr><td>Recoil per shot</td><td class="num">64.1 N&middot;s</td><td class="num"><b>116.03 N&middot;s &mdash; 1.81&times;</b>, and the thrust line must pass within <b>10.7 mm</b> of the host centre of mass</td></tr>
+    <tr><td>Track first mode</td><td class="num">109 Hz fixed-fixed (target &gt;70)</td><td class="num"><b>not computed &mdash; A59</b></td></tr>
   </table>
-  <p></p>
-  <div class="note"><b>These numbers moved down on 2026-07-29.</b> The headline was
-  20.37 m/s at 16.3 g against a 4.86 kg parametric sled; exact solid volumes from the Gen3
-  CAD give <b>9.445 kg</b> (P15). The consequence of each mass band was declared in
-  <code>validation/A4_sled_structural.md</code> <em>before</em> the structural analysis ran,
-  and the measurement landed in the ≥ 6.80 kg branch, "the headline changes and the paper
-  changes materially". A4 has since run and the drawn plate passes all three bands, so
-  nothing forces a lighter chassis. The scripts moved first, then the paper. Exit velocity is
-  down 19 % and efficiency from 32 % to 19 %, since taken back to 18.47 % by regeneration
-  (A11), but the lifetime multiplier fell only
-  x1.80 to x1.60, lifetime is a weak function of Δv, so the mission case survives better than
-  the machine spec. 9.445 kg is the as-drawn, unpocketed geometry and A4 reports a 17x stress
-  margin, so a rib-stiffened redesign would recover mass; nobody has designed one.</div>
+  <div class="note"><b>One number is deliberately absent: the Gen6 stroke duration.</b> It read
+  <b>133 ms</b> until 2026-08-19, which is the figure for the 2.18 m stroke ADR-034 superseded,
+  and <b>the 8.0 m figure has not been run</b>. <em>A number whose consequences have not been
+  computed is not published here, even when the old one is only a little wrong.</em></div>
   <div class="grid g2" style="margin-top:18px">
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F01_shot.png" alt="Shot simulation">
-      <figcaption><b>The shot.</b> Force, velocity and current through the 157.3 ms stroke.</figcaption></figure>
+      <figcaption><b>The shot.</b> Force, velocity and current through the 162.3 ms stroke.</figcaption></figure>
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F04_life.png" alt="Orbital lifetime">
       <figcaption><b>Lifetime.</b> Boosted vs unboosted decay. The x1.60 ratio is the claim, not the absolute years.</figcaption></figure>
   </div>
 </section>
+
+<section>
+  <h2>What is wrong with it</h2>
+  <p class="sub"><b>This is the reason the repository exists.</b> Everything above is computation;
+  this is what that computation does not cover, and what it got wrong.</p>
+  <table>
+    <tr><th>Defect</th><th>What it says</th></tr>
+    <tr><td><b>E4</b></td><td><b>Nothing has been built, fired or measured at any scale.</b> No analysis on this page changes that</td></tr>
+    <tr><td><b>P67</b></td><td><b>The seal friction has never been measured.</b> It owns 93.4 % of Gen6's dispersion, it is the entire justification for the trim stage, and ADR-034 took its share of shot work from 9.75 % to <b>28.39 %</b>. <b>One bench test now governs five open decisions</b>, and it can <em>delete</em> work rather than add it</td></tr>
+    <tr><td><b>P68</b></td><td><b>ADR-032's first falsifier has fired.</b> The stage credit breaks even at <b>8.4 %</b>, not the 30 % the ADR claimed &mdash; and <b>58.6 % of it is a skin on a vehicle nobody has agreed to lend</b></td></tr>
+    <tr><td><b>P59</b></td><td><b>Kill criterion 1 is crossed at 5.3&times;.</b> A35 attributed every kilogram to its cause and found <b>49.23 kg survives the deletion of every requirement in all 64 corners</b>, so there is no architecture that reaches 2 kg. A36 closed the manifest route. <b>Only a smaller payload class remains</b></td></tr>
+    <tr><td><b>P16</b></td><td><b>The invariance claim in the paper's own abstract is falsified.</b> GMAT gives x2.074 at low solar activity against a &le;5 % band. <code>astro.py</code> scales density uniformly, which preserves a ratio <em>by construction</em></td></tr>
+    <tr><td><b>P84</b></td><td>ADR-034 moved the design point in the parameter file and eleven documents and <b>not in the analysis scripts</b>. Nothing compares the two, so every gate stayed green</td></tr>
+  </table>
+  <div class="note"><b>Corrections, and none of them improved a number.</b> 2026-07-29: the sled was
+  modelled at 4.86 kg parametrically and the CAD gives <b>9.445 kg</b> &mdash; exit velocity 20.37
+  &rarr; 16.388 m/s, efficiency 32 &rarr; 20 %. <b>A4 declared the consequence of each mass band
+  before the structural analysis ran</b>, and the measurement landed in the &ge;&nbsp;6.80&nbsp;kg
+  branch, <em>"the headline changes and the paper changes materially"</em>. 2026-07-30: the bank
+  cannot source the shot on purchasable cells (<b>P26</b>). 2026-08-13: ADR-030 moved
+  K<sub>t</sub> 11.03 &rarr; 10.54, velocity 16.388 &rarr; <b>16.029</b>, efficiency 21.0 &rarr;
+  18.8 %, mass per satellite 6.378 &rarr; <b>10.547 kg</b>. <b>Nothing improved. That is what the
+  corrections cost.</b> 2026-08-16: the enclosure was an 8.00 kg placeholder and A46 built it up
+  from the geometry at <b>50.04 kg</b> &mdash; the earlier warning had guessed 20.</div>
+</section>
+
+<section>
+  <h2>Against a spring dispenser</h2>
+  <p class="sub"><b>Losses are in the same table as the wins.</b> The figures are Gen5's, because
+  Gen5 is what the comparators were computed against.</p>
+  <table>
+    <tr><th></th><th>Spring dispenser</th><th>VOLLEY</th><th></th></tr>
+    <tr><td>Exit velocity</td><td class="num">~2 m/s (NRCSD-E specifies 0.5&ndash;2.5)</td><td class="num"><b>16.03 m/s</b></td><td>6.4&times;</td></tr>
+    <tr><td>Commanded differential between satellites</td><td class="num"><b>zero by design</b></td><td class="num">per shot, continuous</td><td><b>categorical</b></td></tr>
+    <tr><td>Semi-major axis change</td><td class="num"><b>0 m</b></td><td class="num"><b>+28.8 km</b></td><td>A21-R</td></tr>
+    <tr><td>Orbital life delivered, per satellite</td><td class="num">1.41 yr</td><td class="num"><b>2.11 yr</b></td><td>1.495&times;</td></tr>
+    <tr><td>Deployer mass per 3U satellite</td><td class="num"><b>~6 kg</b>, canisterised class</td><td class="num">10.547 kg</td><td><b>1.76&times;, spring wins</b></td></tr>
+    <tr><td>Maturity</td><td class="num"><b>TRL 9</b></td><td class="num">TRL 2&ndash;3</td><td><b>spring wins</b></td></tr>
+    <tr><td>Elements whose single failure forfeits the manifest</td><td class="num"><b>0</b></td><td class="num"><b>9 of 13</b> at Gen5, <b>8 of 12</b> at Gen6</td><td><b>spring wins</b></td></tr>
+    <tr><td>Reliability needed to match it on delivered life</td><td class="num">&mdash;</td><td class="num"><b>r &ge; 0.99326</b> per element per cycle, <b>unmeasured</b></td><td>E30</td></tr>
+  </table>
+  <div class="note"><b>A cold-gas module beats both on mass at 3U by 7.5&times;</b>, and a ~1.8 kg
+  staged spring reaches the same velocity inside the g-cap. <b>What VOLLEY sells is a fleet
+  distributed on a schedule</b>, not a better push.
+  <br><br>
+  <b>The reliability row is the one Gen6 improves least.</b> A47 found that deleting six subsystems
+  removed exactly <em>one</em> shared failure, and added the host stage's keep-alive agreement,
+  which no launch provider has given. <b>A per-cell backup ejector is worth six times the whole
+  architecture change</b> &mdash; and A53 found it cannot clear a sealed tube, missing by
+  <b>40&times;</b> at 2.18 m and <b>148&times;</b> at 8 m (<b>P81</b>).</div>
+</section>
+
 
 <section>
   <h2>Control stability, and a gain that was never designed</h2>
@@ -244,42 +334,6 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
     <figcaption><b>The report, not just the answer.</b> <b>(a)</b> the solve <i>does not converge</i> &mdash; velocity residuals plateau near 5&times;10<sup>&minus;2</sup>, which is what a steady solver does on a massively separated wake &mdash; so the force is a windowed mean rather than a reading. <b>(b)</b> that mean: <b>1.734 &plusmn; 0.144 N</b>; reading one iteration would have given 1.60 or 1.89 with equal confidence. <b>(c)</b> where the drag comes from: forward faces push, the base sucks, the sides do nothing, peak C<sub>p</sub> <b>0.975</b> where stagnation should approach 1.000.</figcaption></figure>
   <figure style="margin-top:14px"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F14_airdrag.png" alt="Air drag along the stroke and the resulting exit-velocity deficit">
     <figcaption><b>5.1 mm/s.</b> That is 0.031 % of the design point and <b>19 % of the 3&sigma; dispersion a ground test exists to resolve</b>. So: no vacuum chamber needed, but every velocity the test measures has to carry the correction. Two of five bands failed and <b>neither failure is in the machine</b> &mdash; <b>P48</b>.</figcaption></figure>
-</section>
-
-<section>
-  <h2>Where the energy goes</h2>
-  <p class="sub">2881 J leaves the capacitor bank per shot, 296 J comes back through the
-  regenerative section, and 514 J of the net 2735 J reaches the payload &mdash; the 18.47 %.
-  Source <code>sizing.py</code> <code>energy_closure</code>; 100.0 % accounted.
-  This chart said "no regeneration credit" and put the sled's whole 1291 J in the brake until
-  2026-07-31. The 2025 decision behind that argued the motor cannot <em>arrest</em> the sled,
-  which it cannot &mdash; the brake still takes 952 J of every shot. It never argued that none
-  of the energy could be recovered, and A11 found 23 % of it available. The 86 J ESR bar has
-  its own history: no script modelled the bank's series resistance until 2026-07-30, so the
-  loss was real in hardware and absent from the accounting until a circuit simulation found
-  it.</p>
-  <div class="chart">
-    <div class="row"><span class="lbl">Sled KE (brake)</span><span class="track"><span class="fill dim" style="width:100%"></span></span><span class="val">952 J</span></div>
-    <div class="row"><span class="lbl">Copper, shot + regen</span><span class="track"><span class="fill dim" style="width:88.6%"></span></span><span class="val">843 J</span></div>
-    <div class="row"><span class="lbl">Payload KE</span><span class="track"><span class="fill" style="width:57.5%"></span></span><span class="val">547 J</span></div>
-    <div class="row"><span class="lbl">Recovered to the bank</span><span class="track"><span class="fill" style="width:31.2%"></span></span><span class="val">297 J</span></div>
-    <div class="row"><span class="lbl">Converter loss</span><span class="track"><span class="fill dim" style="width:11.9%"></span></span><span class="val">113 J</span></div>
-    <div class="row"><span class="lbl">Bank ESR loss</span><span class="track"><span class="fill dim" style="width:9.9%"></span></span><span class="val">94 J</span></div>
-    <div class="row"><span class="lbl">Auxiliary</span><span class="track"><span class="fill dim" style="width:3.7%"></span></span><span class="val">35 J</span></div>
-  </div>
-</section>
-
-<section>
-  <h2>Seeding, against the alternative</h2>
-  <p class="sub">Days to spread a constellation 30° apart. The differential-drag comparator
-  is itself a model output, not a measurement, replacing it with published flown results is
-  an open task.</p>
-  <div class="chart">
-    <div class="row"><span class="lbl">VOLLEY, 10 m/s</span><span class="track"><span class="fill" style="width:5.6%"></span></span><span class="val">1.4 d</span></div>
-    <div class="row"><span class="lbl">VOLLEY, 5 m/s</span><span class="track"><span class="fill" style="width:11.2%"></span></span><span class="val">2.8 d</span></div>
-    <div class="row"><span class="lbl">VOLLEY, 2 m/s</span><span class="track"><span class="fill" style="width:27.6%"></span></span><span class="val">6.9 d</span></div>
-    <div class="row"><span class="lbl">Differential drag</span><span class="track"><span class="fill warn" style="width:100%"></span></span><span class="val">25.0 d</span></div>
-  </div>
 </section>
 
 <section>
@@ -313,55 +367,73 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   to peak, several times the decay across the window, so the comparison is a least-squares
   rate over 31 daily samples rather than a difference of endpoints.</p>
 </section>
+<section>
+  <h2>Where the energy goes</h2>
+  <p class="sub"><b>Gen5.</b> 2782 J leaves the capacitor bank per shot, <b>291 J</b> comes back
+  through the regenerative section, and <b>514 J</b> of the net 2735 J reaches the payload &mdash;
+  the 18.5 %. Source <code>sizing.py</code> <code>energy_closure</code>; <b>100.0 % accounted</b>.
+  This chart said "no regeneration credit" and put the sled's whole energy in the brake until
+  2026-07-31. The 2025 decision behind that argued the motor cannot <em>arrest</em> the sled,
+  which it cannot &mdash; the brake still takes <b>935 J</b> of every shot. It never argued that
+  none of the energy could be recovered, and A11 found 23 % of it available. The ESR bar has its
+  own history: no script modelled the bank's series resistance until 2026-07-30, so the loss was
+  real in hardware and absent from the accounting until a circuit simulation found it.</p>
+  <div class="chart">
+    <div class="row"><span class="lbl">Sled KE (brake)</span><span class="track"><span class="fill dim" style="width:100%"></span></span><span class="val">935 J</span></div>
+    <div class="row"><span class="lbl">Copper, shot + regen</span><span class="track"><span class="fill dim" style="width:90.9%"></span></span><span class="val">850 J</span></div>
+    <div class="row"><span class="lbl">Payload KE</span><span class="track"><span class="fill" style="width:55.0%"></span></span><span class="val">514 J</span></div>
+    <div class="row"><span class="lbl">Recovered to the bank</span><span class="track"><span class="fill" style="width:31.1%"></span></span><span class="val">291 J</span></div>
+    <div class="row"><span class="lbl">Bank ESR loss</span><span class="track"><span class="fill dim" style="width:8.2%"></span></span><span class="val">77 J</span></div>
+  </div>
+  <div class="note"><b>Gen6 has no chart of this kind and the absence is the finding.</b> Its energy
+  arrives as a ground-filled bottle, so there is no electrical-to-payload ratio to draw. What the
+  machine actually draws is <b>311.76 J per shot, 0.26 W averaged over the indexing window, 36 W
+  peak</b> &mdash; A51. <em>The 25&ndash;131 W this project quoted until 2026-08-16 was a
+  spring-winding figure for a machine that has no spring</em> (<b>P80</b>).</div>
+</section>
 
 <section>
   <h2>What has actually been verified</h2>
-  <p class="sub"><b>Nineteen of twenty-one</b> specified cross-checks have run, each against an
-  acceptance band declared <em>in writing before the script existed</em>. <b>Two failed
-  outright</b>, several missed individual bands, one found a published number 37&nbsp;% high,
-  and one returned three rows that could not be evaluated at all. That mix is the point of
-  declaring the band first. <b>Nothing has been validated by hardware</b> &mdash; every row below
-  is one model against another model.</p>
+  <p class="sub"><b>Fifty-three run sheets, A1 through A53</b>, each against an acceptance band
+  declared <em>in writing before the script existed</em>. <b>Three failed outright</b>, several
+  missed individual bands, and <b>three times a declared band caught a bug in the analysis rather
+  than in the design</b> &mdash; which is exactly what declaring the band first is for.
+  <b>Nothing has been validated by hardware</b>; every row is one model against another model.</p>
   <table>
-    <tr><th>Analysis</th><th>Closes</th><th>Status</th></tr>
-    <tr><td>A1 airgap field</td><td>E1 (2-D), E2</td><td><b>run, partial</b> &mdash; K<sub>t</sub> agrees to 0.03&nbsp;% against a meshed PDE solve</td></tr>
-    <tr><td><b>A4 sled chassis</b></td><td><b>P5, P8</b></td><td><b>run, all 3 bands pass</b></td></tr>
-    <tr><td>A5 lifetime &amp; seeding</td><td>E6, <b>P16</b></td><td><b>run, FAIL</b> &mdash; invariance claim in the paper's own abstract falsified</td></tr>
-    <tr><td>A6 conjunction P<sub>c</sub></td><td>P1 &mdash; not closed</td><td><b>corrected</b>, three rows <b>VOID</b></td></tr>
-    <tr><td>A7 / A7-R separation</td><td>E7</td><td>superseded in substance by A23; the multibody run has still never happened</td></tr>
-    <tr><td>A8 pulse-power chain</td><td>E17</td><td><b>re-run</b>, six of six bands</td></tr>
-    <tr><td>A9 decay vs flown CubeSats</td><td>E6, against reality</td><td><b>not run</b> &mdash; blocked by network policy, not difficulty</td></tr>
-    <tr><td>A10 / A11 bank ESR, regeneration</td><td>opened <b>P26</b></td><td>run; hard ESR ceiling 68&nbsp;m&#8486;, 291&nbsp;J recovered</td></tr>
-    <tr><td>A12 inter-array attraction</td><td><b>P17</b></td><td>run &mdash; found the published value <b>37&nbsp;% high</b></td></tr>
-    <tr><td>A13 indexing disturbance</td><td>E24</td><td><b>corrected</b>, two transient rows <b>FAIL</b></td></tr>
-    <tr><td>A14 EMI scoping</td><td>opened <b>P34</b></td><td><b>run, band 4 FAIL at 611x</b> &mdash; the dominant term is the magnets, not the drive</td></tr>
-    <tr><td>A15 POEM campaign</td><td>exercises the ConOps</td><td><b>run in GMAT</b>, all evaluable bands pass; band 8 VOID as a capability claim</td></tr>
-    <tr><td>A16 / A17 Gen4 thrust, ripple chirp</td><td>E27, E23; opened <b>P36</b></td><td>A17 <b>FAIL</b> &mdash; 8.18x amplification at the 109&nbsp;Hz crossing</td></tr>
-    <tr><td>A18 Phase&nbsp;I closeout, five analyses</td><td>E19, E20, E22, E26; opened <b>P37</b></td><td>run &mdash; <b>E10 failed at every Q</b></td></tr>
-    <tr><td>A19 sensitivity ranking</td><td>ranks the assumptions</td><td><b>run, band 1 FAIL</b> &mdash; two different leaders depending on the metric, so both are published</td></tr>
-    <tr><td>A20 reachable envelope</td><td>quantifies the ConOps</td><td><b>run, band 1 FAIL</b> &mdash; my band named a two-burn transfer and its limit was computed for one burn</td></tr>
-    <tr><td>A21 comparators</td><td>replaces the headline ratio</td><td>run, seven of seven</td></tr>
-    <tr><td><b>A22 gate resize</b></td><td><b>P37</b>, E10's analysis half</td><td><b>run</b> &mdash; margin at Q=30 from <b>&minus;0.36 to +0.45</b> for 11&nbsp;g</td></tr>
-    <tr><td><b>A23 tip-off at release</b></td><td>opened <b>P41</b></td><td><b>run</b> &mdash; the release is fine; the payload <b>arrives in its cradle at 36&ndash;231&nbsp;&deg;/s</b></td></tr>
+    <tr><th>Analysis</th><th>What it returned</th></tr>
+    <tr><td><b>A1</b> airgap field</td><td><b>run, partial</b> &mdash; a meshed 2-D magnetostatic FEM gives K<sub>t</sub> = 11.026 against the model's 11.03, <b>ratio 0.9997</b></td></tr>
+    <tr><td><b>A4</b> sled chassis</td><td><b>run, all three structural bands pass</b>; the as-drawn plate needs no lightening</td></tr>
+    <tr><td><b>A5</b> lifetime &amp; seeding</td><td><b>run, FAIL</b> &mdash; the invariance claim in the paper's own abstract falsified (<b>P16</b>)</td></tr>
+    <tr><td><b>A12</b> inter-array attraction</td><td>run &mdash; found the published value <b>37 % high</b>, and that its own explanation of the finding was backwards</td></tr>
+    <tr><td><b>A13</b> indexing disturbance</td><td><b>corrected</b>, two transient rows <b>FAIL</b></td></tr>
+    <tr><td><b>A14</b> EMI scoping</td><td><b>run, band 4 FAIL at 611&times;</b> &mdash; the dominant term is the magnets, not the drive</td></tr>
+    <tr><td><b>A29</b> CFD</td><td>run on the script-built Gen5 CAD; two of five bands failed and <b>neither failure is in the machine</b></td></tr>
+    <tr><td><b>A35</b> constraint ledger</td><td><b>49.23 kg survives every requirement deletion in all 64 corners.</b> There is no architecture that reaches 2 kg</td></tr>
+    <tr><td><b>A40</b> blowdown transient</td><td><b>run, five of eight FAIL</b> &mdash; a fixed orifice cannot hold force over a stroke. <b>14.16 m/s against a 30 m/s band</b></td></tr>
+    <tr><td><b>A44</b> Gen6 dispersion</td><td>run &mdash; <b>1.113 % at 3&sigma;, 93.4 % of it seal friction</b>, and no instrumentation route out</td></tr>
+    <tr><td><b>A47</b> Gen6 FMEA</td><td>eight of eight &mdash; the architecture change buys <b>+0.37 satellites</b>; a per-cell ejector buys <b>+2.27</b></td></tr>
+    <tr><td><b>A49</b> design surface</td><td><b>seven of nine.</b> 14 points of 63 beat Gen6 on velocity, acceleration and gas at once &mdash; all at 8.0 m. Produced ADR-034</td></tr>
+    <tr><td><b>A51</b> Gen6 power</td><td>seven of eight &mdash; traced a figure this project had quoted four times to a spring it does not have (<b>P80</b>)</td></tr>
+    <tr><td><b>A53</b> backup ejector</td><td>seven of eight &mdash; <b>band 7 fails by 40&times;</b>. The highest-value reliability change does not fit the architecture</td></tr>
   </table>
-  <p></p>
   <div class="note"><b>The failures are the reason to trust the rest.</b> The paper once carried
   four numbers its own scripts did not reproduce, all found by rebuilding the analysis from
-  scratch. An independent propagator then falsified a claim in the paper's own abstract, and
-  that is recorded as <b>P16</b> rather than quietly dropped. Twice this month a band failed and
-  the investigation found the bug in <em>my own analysis script</em> rather than in the design
-  &mdash; which is exactly what a band declared beforehand is for. Every defect is numbered and
-  published, including the ones that damage the project's own claims.</div>
+  scratch. An independent propagator then falsified a claim in the paper's own abstract, and that
+  is recorded as <b>P16</b> rather than quietly dropped. <b>Every defect is numbered and published,
+  including the ones that damage the project's own claims</b> &mdash; there are 119 of them, 51
+  live.</div>
 </section>
 
 <section>
   <h2>Reproducing it</h2>
   <p class="sub">Five scripts, two dependencies, roughly twelve minutes end to end.
-  Results land in <code>analysis/results/*.json</code>.</p>
+  Results land in <code>analysis/results/*.json</code>. The CAD rebuilds byte-identically from
+  <code>cad/parameters.json</code> with <code>python3 cad/build_gen5.py</code> and
+  <code>build_gen6.py</code>.</p>
   <table>
     <tr><th>Script</th><th>What it computes</th><th>Runtime</th></tr>
     <tr><td><code>verify_field.py</code></td><td>magpylib cross-check of the airgap field</td><td>~10 s</td></tr>
-    <tr><td><code>mass_properties.py</code></td><td>parametric mass rollup</td><td>instant</td></tr>
+    <tr><td><code>mass_properties.py</code></td><td>mass rollup, built up from the geometry</td><td>instant</td></tr>
     <tr><td><code>motor_model.py</code></td><td>K<sub>t</sub>, shot sim, closed-loop dispersion</td><td>~2 min</td></tr>
     <tr><td><code>sizing.py</code></td><td>mechanical, thermal, electrical margins</td><td>instant</td></tr>
     <tr><td><code>astro.py</code></td><td>lifetime, seeding, conjunction</td><td>~10 min</td></tr>
@@ -372,10 +444,10 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   <div class="wrap" style="padding:0">
     <p><b>Adityavardhan Mishra</b>, Department of Mechanical Engineering, Symbiosis
     Institute of Technology, Symbiosis International (Deemed University), Pune.
-    Project begun April 2021.</p>
+    Project begun 22 March 2021.</p>
     <p>Design study at TRL 2-3 with no experimental validation. Read
     <a href="https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/PROVENANCE.md">PROVENANCE.md</a>
-    before citing anything here. MIT licensed.</p>
+    before citing anything here. Licensed <b>CC BY 4.0</b>.</p>
   </div>
 </footer>
 
