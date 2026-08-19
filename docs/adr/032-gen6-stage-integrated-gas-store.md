@@ -4,6 +4,13 @@
 [ADR-029](029-phase-one-closes-on-gen5.md) and [`../GEN6_ARCHITECTURE.md`](../GEN6_ARCHITECTURE.md) ·
 **Rests on:** A35, A36, A37, A38, A39
 
+> ## Design point moved 2026-08-19 by [ADR-034](034-gen6-long-stroke-design-point.md)
+>
+> **The architecture below is unchanged. Its numbers are not.** The stroke went from 2.18 m to
+> **8.0 m** and the charge pressure from 50 bar to **22.73 bar**, holding exit velocity while peak
+> acceleration and gas per shot each fell **54.5 %**. Read every stroke, pressure, acceleration and
+> store figure in this file as the point ADR-032 adopted, not the current one.
+
 ## Context
 
 **Gen6 has meant something different since 2026-08-13.** ADR-029 set the target as *a linear

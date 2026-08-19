@@ -9,7 +9,7 @@ Gen5 carries forward except the part that survives every architecture: the conta
 
 Every dimension here is a run result, not a choice:
 
-    bore 15.805 mm, stroke 2180 mm     A39, sized on the 25 g payload cap
+    bore 15.805 mm, stroke 8000 mm     A49, the host stage's whole acceleration length
     chamber 2 L at 50 bar              A41, the point where velocity saturates and gas does not
     reservoir 11.25 L at 200 bar       A42, the ADIABATIC figure -- see below
     cradle preload 201.7 N             A38, at 2.4x the Gen5 offset moment
@@ -193,8 +193,12 @@ def check():
          D["commanded_force_N"], 1.0),
         ("acceleration from force", D["commanded_force_N"] / 4.0 / 9.81,
          D["acceleration_g"], 0.05),
-        ("velocity from force and stroke",
-         math.sqrt(2 * D["commanded_force_N"] / 4.0 * D["stroke_mm"] / 1e3), 32.7, 0.6),
+        # The constant-pressure bound, sqrt(2*p0*A*L/m), was written here as a bare 32.7 --
+        # correct at 2.18 m and 50 bar, and silently wrong at any other design point. It is a
+        # derived quantity, so it now reads the parameter it is derived from. ADR-034.
+        ("constant-pressure velocity bound",
+         math.sqrt(2 * D["commanded_force_N"] / 4.0 * D["stroke_mm"] / 1e3),
+         D["exit_velocity_m_s_constant_pressure_bound"], 0.6),
     ]
     for name, got, want, tol in checks:
         ok = abs(got - want) <= tol

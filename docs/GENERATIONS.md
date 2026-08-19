@@ -31,13 +31,13 @@ descends from was measured off its solids.
 | **Reproducible from a clean clone** | no | **yes, byte-identically** | **yes, byte-identically** |
 | **Drive** | linear synchronous motor | linear synchronous motor | **cold gas for energy, a 39.7 mm stator for control** ([ADR-033](adr/033-gen6-trim-stage.md)) |
 | **Moving mass recovered** | reusable sled | reusable sled | **carriage, not recovered** |
-| **Energy store** | supercapacitor bank | supercapacitor bank | **2 L chamber at 50 bar** |
+| **Energy store** | supercapacitor bank | supercapacitor bank | **2 L chamber at 22.73 bar** |
 | **Arrest** | eddy brake | eddy brake | **none — nothing to stop** |
 | **Structure** | its own track and enclosure | its own track and enclosure | **a rail a spent upper stage provides** |
-| **Exit velocity** | *not established* | **16.029 m/s at 10.07 g** | **30.535 m/s at 25 g**, zero-friction; **29.009** at the full tolerable friction (**P67**) |
-| **Stroke** | 1.3 m accelerating, release at 1.5 m | same | **2.18 m** |
-| **Dry mass** | — | **126.6 kg** | 11.45 kg added, plus ~5.4 kg of store |
-| **Per 3U satellite** | — | **10.547 kg dry** | **1.403 kg added** — and **1.403–3.271** once the stage credit is read hostilely (**P68**) |
+| **Exit velocity** | *not established* | **16.029 m/s at 10.07 g** | **34.280 m/s at 11.36 g**, zero-friction; **29.009** at the full tolerable friction (**P67**) |
+| **Stroke** | 1.3 m accelerating, release at 1.5 m | same | **8.00 m** — A37's whole usable acceleration length ([ADR-034](adr/034-gen6-long-stroke-design-point.md)) |
+| **Dry mass** | — | **126.6 kg** | 11.45 kg added, plus ≈ 4.10 kg of store (**P82** — scaled, not sized) |
+| **Per 3U satellite** | — | **10.547 kg dry** | **1.296 kg added** — and **1.296–3.164** once the stage credit is read hostilely (**P68**) |
 | **Velocity control** | — | designed loop, **0.0274 m/s at 3σ** | **1.113 % open-loop**, 93.4 % of it seal friction (**P67**); **0.0274 m/s with the trim stage**, on a pulse store nobody has weighed |
 
 **Read the last two rows together.** Gen6 is better on velocity and on added mass per satellite,
@@ -54,12 +54,12 @@ whatever the hardware repeats to.
 <tr>
 <td width="33%"><a href="../cad/renders/hero_open.png"><img src="../cad/renders/hero_open.png" alt="Gen4, the last hand-modelled generation"></a><br><sub><b>Gen4 — drawn by hand.</b> Fusion, nine documents, more modelled detail than any generation since. <b>No committed STEP export</b>, and its stations disagree with the analysis model (<b>P43</b>). The annotation is drawn on by <code>cad/tools/prepare_renders.py</code>, and its velocity is now read from the result rather than typed (<b>P72</b>).</sub></td>
 <td width="33%"><a href="../cad/renders/gen5/hero_open.png"><img src="../cad/renders/gen5/hero_open.png" alt="Gen5, the frozen generated baseline"></a><br><sub><b>Gen5 — generated.</b> Eight parts from <code>cad/parameters.json</code>, rebuildable byte-identically. Plainer than Gen4 because every feature must trace to a parameter, and no parameter describes a fillet. The copper band is the stator; the sled sits on it.</sub></td>
-<td width="33%"><a href="../cad/renders/gen6/hero_open.png"><img src="../cad/renders/gen6/hero_open.png" alt="Gen6, the current design target"></a><br><sub><b>Gen6 — what is left after deletion.</b> A rail the host stage provides, a drive tube, a pre-charged chamber and its reservoir. <b>No stator, no sled, no bank, no brake.</b> The visual difference is the architecture, not the renderer.</sub></td>
+<td width="33%"><a href="../cad/renders/gen6/hero_open.png"><img src="../cad/renders/gen6/hero_open.png" alt="Gen6, the current design target"></a><br><sub><b>Gen6 — what is left after deletion.</b> A rail the host stage provides, a drive tube, a pre-charged chamber and its reservoir. <b>No stator, no sled, no bank, no brake.</b> Since <a href="adr/034-gen6-long-stroke-design-point.md">ADR-034</a> the rail is <b>8.2 m</b> and the aspect ratio is roughly 42:1 — the render looks like a line because the machine is one. The visual difference is the architecture, not the renderer.</sub></td>
 </tr>
 <tr>
 <td><a href="../cad/renders/track_stator.png"><img src="../cad/renders/track_stator.png" alt="Gen4 track and stator"></a><br><sub><b>Gen4, track and stator.</b> Side elevation. Gen4 stows the sled at s = 300 mm and releases at s = 1200, against the 1500 mm <code>analysis/</code> assumes.</sub></td>
 <td><a href="../cad/renders/gen5/sled_detail.png"><img src="../cad/renders/gen5/sled_detail.png" alt="Gen5 sled on the stator"></a><br><sub><b>Gen5, sled on the stator.</b> The rollers in this image are in their channels for the first time: until 2026-08-16 both sat outside them in every committed STEP (<b>P71</b>), found by building the machine a second time in a different kernel.</sub></td>
-<td><a href="../cad/renders/gen6/store.png"><img src="../cad/renders/gen6/store.png" alt="Gen6 chamber and reservoir"></a><br><sub><b>Gen6, the store.</b> A 2 L chamber charged to 50 bar and fired as a closed adiabatic expansion, fed from a 9.55 L reservoir at 200 bar. <b>There is no regulator</b> — A41 closed P63 by deleting the component rather than pricing it.</sub></td>
+<td><a href="../cad/renders/gen6/store.png"><img src="../cad/renders/gen6/store.png" alt="Gen6 chamber and reservoir"></a><br><sub><b>Gen6, the store.</b> A 2 L chamber charged to 22.73 bar and fired as a closed adiabatic expansion, fed from a 9.55 L reservoir at 200 bar that is still sized for the old 50 bar refills (<b>P82</b>). <b>There is no regulator</b> — A41 closed P63 by deleting the component rather than pricing it.</sub></td>
 </tr>
 </table>
 

@@ -9,6 +9,35 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-19 (forty-sixth pass): the stroke becomes the stage
+
+| ID | Item | Detail |
+|---|---|---|
+| **A49** | **The velocity, acceleration and stroke surface — seven of nine bands** | **14 of 63 points beat the adopted Gen6 on exit velocity, peak acceleration and gas per shot at once.** All fourteen sit at **L = 8.0 m**, A37's whole usable acceleration length. Band 3 confirmed **peak acceleration is independent of stroke** — `a_peak = p₀A/m` contains no *L*, so stroke is an exchange rate between charge pressure and velocity, not a performance knob. |
+| **ADR-034** | **Adopted: 8.0 m of stroke at 22.73 bar** | **Exit velocity held at 29.009 m/s** (34.280 zero-friction), **peak acceleration 25.00 → 11.36 g**, **gas per shot 112.3 → 51.0 g**. Both falls are 54.55 %, from the same charge-pressure change. Added mass per satellite **1.403 → 1.296 kg**. |
+| **P78** | **A49 band 6 failed, and it is the finding rather than the failure** | Friction scales linearly with contact length while shot work saturates, so friction's share **rises** across the sweep: 9.75 % → 12.90 % at fixed pressure, and **28.39 % at the adopted point**. The gap between the two velocity numerators widens from **5.00 % to 15.38 %**. **P67 now governs the design point rather than a correction to it.** |
+| **VEL-01** | **The velocity increase was available and was not taken** | The Pareto front carries **30.97 m/s at 12.5 g** — dominating on all three axes and 6.8 % faster. Taking it would invalidate A15, A20, A44, A50 and A52 at once, none of which has been re-run. **A number moves when its consequences have been run.** The follow-on is named in ADR-034. |
+| **P82** | **The reservoir is still sized for 50 bar refills** | 9.55 L at 200 bar, from A43's thermal argument at the old charge pressure. **The ≈ 4.10 kg store ADR-034 quotes is A49's gas-ratio scaling, not a sized store**, and the reservoir saving is the whole of the mass argument — the tube itself gains 0.829 kg. |
+| **P83** | **The trim stage's authority was sized at a friction share that has tripled** | A48 sized ±0.323 m/s against A44's dispersion at **9.75 %** friction; the adopted point runs at **28.39 %**. Neither A44 nor A48 has been re-run. **HIGH, because a larger authority makes ADR-033's unweighed pulse store — the project's most likely falsifier — more likely.** |
+| **P81** | **And the backup ejector got 3.67× worse** | Clearing the sealed tube cost **181.8 J at 2.18 m** against a 4.5 J ejector. At 8.0 m it is **667.2 J — a 148× shortfall.** A53's masses are the 2.18 m case and are no longer governing. |
+| CAD-G6R | **Gen6 regenerated and re-rendered at the new geometry** | Drive tube, stage rail and trim stator rebuilt; six geometry checks read back against `parameters.json` and pass. The renders were reframed — the assembly is **8.2 m at roughly 42:1**, and the old camera distances put it off both edges. |
+| **CHECK-04** | **A magic number in the geometry check, found by moving the design point** | `build_gen6.py` compared the constant-pressure velocity bound against a bare **32.7** — correct at 2.18 m and 50 bar and silently wrong anywhere else. It now reads the parameter it is derived from. |
+| INDEX-01 | **The run-sheet index was eleven runs out of date** | `validation/README.md` stopped at A42. A43 through A53 are now indexed with their verdicts. |
+| CLOSURE-01 | **`docs/GEN6_CLOSURE.md` rewritten against what actually ran** | Its Category A listed a provisional A49–A55 made before the design surface existed. Five of those runs happened under different numbers and one was not on the list at all. Remaining work renumbered **A54–A60**, with the structural case for an 8 m tube at 1 mm wall promoted to fourth. |
+
+**What authorised it.** A49's bands were declared before `analysis/design_surface.py` existed.
+**No band was edited after a run**, the two that failed are recorded as a declaration error and as
+**P78**, and the design point moved rather than the band. All four checks pass.
+
+> **This file skipped five days, and the gap is stated rather than backfilled.** The pass below is
+> dated 2026-08-14. **A43 through A48, ADR-033 and A50 through A53 all happened between then and
+> this entry and were never logged here.** Each is recorded in its own run sheet, in
+> `OPEN_PROBLEMS.md` and in `validation/README.md`; **this log is the thing that fell behind, and
+> writing the missing passes now — from memory of what the other files already say — would be a
+> reconstruction rather than a record.** It is left as a gap.
+
+---
+
 ## 2026-08-14 (forty-fifth pass): Gen6 exists as geometry
 
 | ID | Item | Detail |

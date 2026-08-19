@@ -6,6 +6,7 @@
 | | |
 |---|---|
 | **Amended** | **2026-08-16 by [ADR-033](../adr/033-gen6-trim-stage.md)** — a 39.7 mm trim stator at the muzzle. **Gas for the energy, a motor for the control** |
+| **Amended** | **2026-08-19 by [ADR-034](../adr/034-gen6-long-stroke-design-point.md)** — the stroke goes to **8.0 m**, the host stage's whole usable acceleration length. **Same velocity, 45.5 % of the acceleration, 45.5 % of the gas — and friction rises from 9.75 % to 28.39 % of shot work** |
 | **Status** | **CURRENT DESIGN TARGET.** Not a baseline — **nothing in it is measured**, and Gen5 remains what every headline number is computed against |
 | **Committed here** | **6 STEP** in `cad/step/gen6/`, **6 STL** in `cad/stl/` |
 | **Source document** | **[`cad/build_gen6.py`](../../cad/build_gen6.py), in this repository** |
@@ -22,11 +23,11 @@ stroke.** 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charg
 
 | Part | Governing parameters |
 |---|---|
-| Drive tube | bore **15.805 mm**, stroke **2180 mm**, wall 1.0 mm |
+| Drive tube | bore **15.805 mm**, stroke **8000 mm**, wall 1.0 mm. **1.140 kg** |
 | Carriage | rides the tube; carries the cradle interface. **Not recovered** |
-| Chamber | **2.0 L at 50 bar**, nitrogen, fired as a closed adiabatic expansion |
-| Reservoir | **9.55 L at 200 bar** — the no-relaxation figure, which A43 showed is the physically right end |
-| **Trim stator** | **39.7 mm at x = 2140.3**, energised after the gas has finished. **0.340 kg.** Corrects ±0.323 m/s — it never throws the payload |
+| Chamber | **2.0 L at 22.73 bar**, nitrogen, fired as a closed adiabatic expansion |
+| Reservoir | **9.55 L at 200 bar** — the no-relaxation figure, which A43 showed is the physically right end. **Still sized for 50 bar refills and now oversized — P82** |
+| **Trim stator** | **39.7 mm at x = 7960.3**, energised after the gas has finished. **0.340 kg.** Corrects ±0.323 m/s — it never throws the payload. **That authority was sized at the old friction share — P83** |
 | Stage rail | the host-provided structure everything mounts to |
 | Magazine cassette | carried across from Gen5's cell geometry |
 
@@ -34,11 +35,15 @@ stroke.** 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charg
 
 | | | |
 |---|---|---|
-| Exit velocity | **30.535 m/s at 25 g** | **zero-friction.** At A41's full tolerable friction, **29.009 m/s** — **P67** |
-| Stroke | 2.18 m | |
-| Dispersion, 3σ | **1.113 % open-loop** | **0.0274 m/s closed**, with the trim stage — ADR-033. 93.4 % of the open-loop variance is seal friction |
-| Added mass per satellite | **1.431 kg** with the trim stage | **1.403–3.271 kg** once the stage credit is read hostilely — **P68** |
-| Store | 5.38 kg | chamber, vessel, gas and A39's 1.5 kg hardware allowance |
+| Exit velocity | **34.280 m/s at 11.36 g** | **zero-friction.** At A41's full tolerable friction scaled over the longer stroke, **29.009 m/s** — **P67** |
+| Stroke | **8.00 m** | A37's whole usable acceleration length for a large upper stage |
+| Charge pressure | **22.73 bar** | 50 bar until ADR-034 |
+| Peak acceleration | **11.36 g** | against a **25 g** payload qualification cap. Gen6 sat exactly on that cap until ADR-034 |
+| Gas per shot | **51.0 g** | 112.3 g until ADR-034. A campaign of twelve costs **612.6 g** against 1347.7 g |
+| Friction work | **28.39 % of shot work** | **9.75 % until ADR-034 — this is what the long stroke costs. P78** |
+| Dispersion, 3σ | **1.113 % open-loop** | **0.0274 m/s closed**, with the trim stage — ADR-033. 93.4 % of the open-loop variance is seal friction. **Not re-run at the new friction share — P83** |
+| Added mass per satellite | **1.324 kg** with the trim stage | **1.296–3.164 kg** once the stage credit is read hostilely — **P68**'s 1.868 kg/satellite of denied credit, which ADR-034 does not touch. *Store scaled by gas ratio, not sized — P82* |
+| Store | **≈ 4.10 kg** | chamber, vessel, gas, A39's 1.5 kg hardware allowance and the 1.140 kg tube. **A49's scaling of A43's 5.38 kg, not a sized store** |
 
 ## The five runs that built it, none of which set out to
 

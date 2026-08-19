@@ -13,7 +13,7 @@
 >
 > | | |
 > |---|---|
-> | Bore / stroke | 15.805 mm / 2180 mm — A39, sized on the 25 g payload cap |
+> | Bore / stroke | 15.805 mm / 8000 mm — A49, the host stage's whole acceleration length |
 > | Chamber | 2 L at 50 bar — A41, where velocity saturates and gas does not |
 > | Reservoir | 11.25 L at 200 bar — A42, **the conservative end of P64** |
 > | Exit velocity | 30.54 m/s at 25 g |

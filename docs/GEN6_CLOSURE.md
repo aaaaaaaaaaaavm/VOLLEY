@@ -18,7 +18,7 @@ that instrument worked once and a different one would not be comparable.
 | Rebuilds byte-identically from a clean clone | **yes** | **yes** |
 | Every headline number computed against it | **yes** | **no** — the numbers are still Gen5's |
 | A second implementation checking the first | **yes** — and it found **P71** | **no** |
-| The analyses behind it | ~24 run sheets, structural FEA, circuit simulation, CFD, a designed control loop | **A35–A48**, no FEA, no circuit model, no CFD |
+| The analyses behind it | ~24 run sheets, structural FEA, circuit simulation, CFD, a designed control loop | **A35–A53**, no FEA, no circuit model, no CFD |
 
 **And one property neither has: anything measured.** **E4** is open, and no amount of what follows
 changes that.
@@ -32,22 +32,37 @@ changes that.
 
 ## Category A — closable by analysis, and nothing else is needed
 
-**Seven runs. All computation. This is the part that can start now.**
+> **Rewritten 2026-08-19.** This section previously listed **A49–A55** against a provisional
+> numbering made before the design surface existed. **Five of those runs have since happened and
+> took different numbers**, and one of them — the design surface — was not on the list at all. What
+> follows is the actual state, not the plan.
+
+**What has run since this file was written:**
+
+| | | What it did |
+|---|---|---|
+| **[A49](../validation/A49_design_surface.md)** | the velocity/acceleration/stroke surface | **7 of 9.** Found 14 dominating points and produced [ADR-034](adr/034-gen6-long-stroke-design-point.md). Band 6 failed and is **P78** |
+| **[A50](../validation/A50_campaign_altitude.md)** | the campaign with altitude free | Satellite life **476.6 d at 450 km**; three 50 km shells for **≈ 55 m/s**. Opened **P79**; **E28** stays open until the decay model meets a variable atmosphere |
+| **[A51](../validation/A51_gen6_power.md)** | power and efficiency end to end | **7 of 8. 311.76 J/shot, 0.26 W average, 36 W peak.** Traced the repeated "25–131 W" to a spring figure — **P80** |
+| **[A52](../validation/A52_gen6_recoil.md)** | recoil and angular impulse | **7 of 7.** 116.03 N·s/shot, **1.81×** Gen5. Answered **E29** and closed a NEEDS SOURCE row: **the thrust line must pass within 10.7 mm of the host centre of mass** |
+| **[A53](../validation/A53_backup_ejector.md)** | the per-cell backup ejector | **7 of 8.** Band 7 failed by **40.4×** at 2.18 m and by **148×** at ADR-034's 8.0 m — **P81**. The highest-value reliability change in the record does not fit the architecture |
+
+**What is still Category A, renumbered to what is actually free:**
 
 | | | Why it matters |
 |---|---|---|
-| **A49** | **Weigh the pulse chain** — 37.7 J at 28 kW: store, switch, conductors | **P77**, and ADR-033's first falsifier. If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it corrects and ADR-033 reverses |
-| **A50** | **Recoil and angular impulse at Gen6** | Two of the four **NEEDS SOURCE** rows in `KILL_CRITERIA.md`. Recoil scales with impulse and the impulse has roughly doubled. **E29** is the same question and is live |
-| **A51** | **Design the per-cell backup ejector** — mass, volume, its own failure rate | **P75**. A47 priced it at **+2.27 satellites** against the architecture change's **+0.37**. It is the highest-value change identified anywhere in the record |
-| **A52** | **Attitude rate and packaging on the stage** | The remaining two **NEEDS SOURCE** rows |
-| **A53** | **A thermal model of the chamber and reservoir across a campaign** | A43 settled the reservoir between shots; nothing models the chamber, the expansion cooling, or twelve cycles of it |
-| **A54** | **A second CAD implementation of Gen6** | Gen5 has one and **it found P71 on its first run** — both rollers outside their channels in every STEP ever built. Gen6 has never been checked by anything but the script that built it |
-| **A55** | **Structural case for the drive tube and stage rail** | The tube is the cylinder *and* the rail, carrying 201.7 N of cradle preload. `build_gen6.py` says in its own docstring that neither is modelled |
+| **A54** | **Weigh the pulse chain** — 37.7 J at 28 kW: store, switch, conductors | **P77**, and ADR-033's first falsifier. If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it corrects and ADR-033 reverses |
+| **A55** | **Re-run A44 and A48 at ADR-034's friction share** | **P83.** The trim authority was sized at a **9.75 %** friction share and the design point now runs at **28.39 %**. This one is new, it is HIGH, and ADR-034 created it |
+| **A56** | **Re-run A43 at 22.73 bar** and size the reservoir | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling |
+| **A57** | **Attitude rate and packaging on the stage** | The two remaining **NEEDS SOURCE** rows in `KILL_CRITERIA.md`. Recoil was the third and A52 closed it |
+| **A58** | **A thermal model of the chamber and reservoir across a campaign** | A43 settled the reservoir between shots; nothing models the chamber, the expansion cooling, or twelve cycles of it |
+| **A59** | **Structural case for the drive tube and stage rail** | **ADR-034 made this urgent.** The tube is the cylinder *and* the rail, it is now **8.0 m** long at **1.0 mm** wall, and `build_gen6.py` says in its own docstring that neither bending nor alignment is modelled. A49's own note says every omission in it flatters a long tube |
+| **A60** | **A second CAD implementation of Gen6** | Gen5 has one and **it found P71 on its first run** — both rollers outside their channels in every STEP ever built. Gen6 has never been checked by anything but the script that built it |
 
 ## Category B — bookkeeping
 
-- **Publish P68's honest range wherever added mass appears** — 1.431 kg is the full-credit figure and **3.299 kg** is the hostile one. Both, everywhere, not the flattering one.
-- **Move the headline numbers to Gen6** once A49–A55 land, or **state explicitly that they remain Gen5's.** Today the front page carries Gen5's numbers under a Gen6 design target, which is honest only because it says so.
+- **Publish P68's honest range wherever added mass appears** — at ADR-034, **1.296 kg** is the full-credit figure and **3.164 kg** is the hostile one. Both, everywhere, not the flattering one.
+- **Move the headline numbers to Gen6** once A54–A60 land, or **state explicitly that they remain Gen5's.** Today the front page carries Gen5's numbers under a Gen6 design target, which is honest only because it says so.
 
 ## Category C — needs a decision from you, and analysis cannot substitute
 
@@ -64,7 +79,7 @@ changes that.
 
 | | |
 |---|---|
-| **P67 — measure the seal friction** | A bench test on a piston seal at 50 bar in vacuum, with a shot-to-shot spread. **It owns 93.4 % of the dispersion, it is ADR-033's whole justification, and it can delete the trim stage rather than validate it.** The single highest-leverage action in the entire Gen6 record |
+| **P67 — measure the seal friction** | A bench test on a piston seal at 22.73 bar in vacuum, with a shot-to-shot spread. **It owns 93.4 % of the dispersion, it is ADR-033's whole justification, and it can delete the trim stage rather than validate it.** The single highest-leverage action in the entire Gen6 record |
 | **The cradle** | 201.7 N per contact releasing inside ≤ 1 N, now holding magnets in alignment too. **It does not exist in any file.** Kill criterion 4 stays *modelled, not demonstrated* until it does |
 | **The piston, seals, valves and plumbing** | A41 allows 1.5 kg and designs none of it |
 | **A stage** | No launch provider has agreed to keep one alive past passivation. **A47 counts this as manifest-forfeiting**, and it is the one shared element the project cannot engineer around |
@@ -85,28 +100,35 @@ Gen6 does not change that and must not be presented as if it did.**
 
 ## The order I would do it in
 
-**1. Measure the seal friction (P67).** It is Category D, it is cheap, and it can *delete* work
-rather than add it — if the friction is small, the trim stage, its pulse store, P77 and ADR-033
-all close together. **Doing analysis before this measurement risks pricing hardware for a problem
-that is not there.**
+**Updated 2026-08-19, after A49–A53 and ADR-034.**
 
-**2. A49, the pulse chain.** If P67 cannot be run first, this is the one that decides whether
+**1. Measure the seal friction (P67).** It is Category D, it is cheap, and it can *delete* work
+rather than add it. **It now governs five open decisions rather than four** — ADR-034's design
+point, ADR-033's trim stage, P77's pulse store, P81's ejector, and P83's authority — because
+ADR-034 took friction from 9.75 % to **28.39 %** of shot work. **The single highest-leverage action
+in the record, and ADR-034 raised its leverage.**
+
+**2. A55, re-run A44 and A48 at the new friction.** **P83**, HIGH, and created by a decision taken
+three days ago. If the authority has to grow, ADR-033's unweighed pulse store grows with it.
+
+**3. A54, the pulse chain.** If P67 cannot be run first, this is the one that decides whether
 ADR-033 stands. It is a day of work and it is a falsifier.
 
-**3. A51, the per-cell ejector.** Highest value per unit effort in the record: **six times the
-reliability gain of the entire architecture change.**
+**4. A59, the structural case.** ADR-034 promoted this from routine to load-bearing: an **8.0 m**
+tube at **1.0 mm** wall, carrying 201.7 N of cradle preload, with no bending model. **A49 flatters
+it by construction and says so.**
 
-**4. Decide D2 and the enclosure panel.** Two decisions, both yours, together worth more than any
+**5. Decide D2 and the enclosure panel.** Two decisions, both yours, together worth more than any
 analysis on this page — one is the only route to kill criterion 1, the other is 20 kg.
 
-**5. A50, A52, A53, A55** — close the four NEEDS SOURCE rows and give Gen6 the structural and
-thermal work Gen5 has.
+**6. A56, A57, A58** — close the reservoir sizing and the two remaining NEEDS SOURCE rows, and give
+Gen6 the thermal work Gen5 has.
 
-**6. A54, the second implementation.** Do it *last*, when the design has stopped moving, because
+**7. A60, the second implementation.** Do it *last*, when the design has stopped moving, because
 its value is catching what the first implementation got wrong and it should check the final
-geometry.
+geometry. **ADR-034 is a reminder that the design has not stopped moving.**
 
-**7. Then freeze — with the exceptions named**, exactly as Phase I did.
+**8. Then freeze — with the exceptions named**, exactly as Phase I did.
 
 ## What this does not buy
 

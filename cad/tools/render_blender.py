@@ -63,11 +63,15 @@ PARTS_GEN6 = {
     "Magazine_Cassette": ("VOLLEY_Magazine_Cassette_Gen6.stl",  (0.50, 0.52, 0.56), 1.0, 0.52),
 }
 
+# ADR-034 took the stroke from 2.18 m to 8.0 m, so the assembly spans x -190..8100 and the
+# framing that suited a 2.18 m machine puts it off both edges. These distances are set from the
+# 8.2 m extent: a 50 mm lens on a 36 mm sensor needs about 11.4 m of standoff to contain it.
+# The aspect ratio is roughly 42:1 and the renders look like it. That is the machine.
 VIEWS_GEN6 = [
-    ("hero_open", list(PARTS_GEN6), (-2200, -3400, 1700), (1100, 0, 100), 50),
-    ("three_quarter", list(PARTS_GEN6), (3600, -2800, 1500), (1100, 0, 60), 55),
-    ("side", list(PARTS_GEN6), (1100, -5200, 320), (1100, 0, 150), 60),
-    ("store", ["Chamber", "Reservoir", "Drive_Tube"], (-900, -1700, 700), (300, 0, 0), 55),
+    ("hero_open", list(PARTS_GEN6), (-3400, -8800, 3300), (3350, 0, -320), 50),
+    ("three_quarter", list(PARTS_GEN6), (12000, -10000, 4000), (4000, 0, 0), 55),
+    ("side", list(PARTS_GEN6), (4000, -16000, 700), (4000, 0, 0), 60),
+    ("store", ["Chamber", "Reservoir", "Drive_Tube"], (-900, -1700, 700), (250, 0, 0), 55),
 ]
 
 GEN3 = {"Assembly": ("EMOCD_Assembly_Gen3.stl", (0.60, 0.62, 0.66), 1.0, 0.40)}
@@ -76,8 +80,11 @@ VIEWS_GEN3 = [
     ("three_quarter", ["Assembly"], (2900, -2100, 1100), (950, 0, 40), 55),
 ]
 
+GROUND_SIZE, GROUND_AT = 9000, (900, 0, -300)
+
 if GEN == "gen6":
     PARTS, VIEWS, MECHANISM = PARTS_GEN6, VIEWS_GEN6, list(PARTS_GEN6)
+    GROUND_SIZE, GROUND_AT = 26000, (4000, 0, -400)
 elif GEN == "gen3":
     PARTS, VIEWS, MECHANISM = GEN3, VIEWS_GEN3, list(GEN3)
 
@@ -131,8 +138,9 @@ def build_scene(parts):
             for poly in o.data.polygons:
                 poly.use_smooth = False
 
-    # A floor, kept small enough to read as a plinth rather than a horizon.
-    bpy.ops.mesh.primitive_plane_add(size=9000, location=(900, 0, -300))
+    # A floor, kept small enough to read as a plinth rather than a horizon. It has to track
+    # the machine's length: at Gen6's 8.2 m the old 9000-unit plinth ended under the midpoint.
+    bpy.ops.mesh.primitive_plane_add(size=GROUND_SIZE, location=GROUND_AT)
     ground = bpy.context.object
     ground.data.materials.append(material("Ground", (0.32, 0.33, 0.35), 0.0, 0.9))
 

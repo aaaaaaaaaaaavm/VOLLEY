@@ -277,21 +277,24 @@ Fusion document: **`EMOCD_Enclosure`**
 
 ## gen6 drive
 
-Fusion document: **`Built by cad/build_gen6.py. ADR-032: the payload is accelerated directly by cold gas along a rail the host stage provides. There is no mover, no stator, no brake and no return stroke.`**
+Fusion document: **`Built by cad/build_gen6.py. ADR-032: the payload is accelerated directly by cold gas along a rail the host stage provides. There is no mover, no stator, no brake and no return stroke. ADR-034: the stroke is the host stage's whole usable acceleration length, and the charge pressure fell to hold the exit velocity while the peak acceleration halved.`**
 
 | Parameter | Value | Units |
 |---|---:|---|
 | `bore_mm` | 15.805 | mm |
 | `piston_area_mm2` | 196.2 | mm |
-| `stroke_mm` | 2180.0 | mm |
+| `stroke_mm` | 8000.0 | mm |
 | `tube_wall_mm` | 1.0 | mm |
-| `acceleration_g` | 25.0 | mm |
-| `commanded_force_N` | 981.0 | N |
-| `exit_velocity_m_s` | 30.54 | mm |
+| `acceleration_g` | 11.362895 | mm |
+| `commanded_force_N` | 445.88 | N |
+| `exit_velocity_m_s` | 29.01 | mm |
 | `cradle_preload_N_per_contact` | 201.7 | mm |
 | `cradle_contact_lever_mm` | 170.25 | mm |
-| `exit_velocity_m_s_zero_friction` | 30.54 | mm |
+| `exit_velocity_m_s_zero_friction` | 34.28 | mm |
 | `exit_velocity_m_s_at_friction_allowance` | 29.01 | mm |
+| `exit_velocity_m_s_constant_pressure_bound` | 42.23 | mm |
+| `tube_mass_kg` | 1.1404 | mm |
+| `friction_work_fraction` | 0.2839 | mm |
 
 
 ## gen6 store
@@ -301,13 +304,14 @@ Fusion document: **`Built by cad/build_gen6.py.`**
 | Parameter | Value | Units |
 |---|---:|---|
 | `chamber_volume_l` | 2.0 | mm |
-| `charge_pressure_bar` | 50.0 | mm |
+| `charge_pressure_bar` | 22.7258 | mm |
 | `reservoir_volume_l` | 9.55 | mm |
 | `reservoir_volume_isothermal_l` | 8.25 | mm |
 | `storage_pressure_bar` | 200.0 | mm |
 | `fill_orifice_mm` | 1.0 | - |
 | `first_fill_s` | 4.14 | - |
 | `reservoir_volume_conduction_l` | 8.95 | mm |
+| `gas_per_shot_kg` | 0.051046 | mm |
 
 
 ## gen6 trim
@@ -317,7 +321,7 @@ Fusion document: **`Built by cad/build_gen6.py. ADR-033: a short stator at the m
 | Parameter | Value | Units |
 |---|---:|---|
 | `section_length_mm` | 39.7 | mm |
-| `section_start_mm` | 2140.3 | mm |
+| `section_start_mm` | 7960.3 | mm |
 | `thrust_constant_N_per_kA_m` | 10.5386 | mm |
 | `sheet_current_A_per_m` | 90000.0 | mm |
 | `force_N` | 948.0 | N |

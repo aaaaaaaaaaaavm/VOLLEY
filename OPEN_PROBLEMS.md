@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **116 numbered entries, of which 48 are live.** Every entry carries a `Status:` line written by
+> **118 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3523,9 +3523,16 @@ manifest-forfeiting, which is the only move that touches **E30**.
 | Spring for a clean 1.5 m/s departure | **4.5 J** |
 | Pushing the payload 2.18 m along a sealed tube at A41's friction allowance | **181.8 J** |
 | **Shortfall** | **40.4×** |
+| **At ADR-034's 8.0 m stroke, 2026-08-19** | **667.2 J — a 148× shortfall** |
 
 **In Gen5 the payload sat in an open cell. In Gen6 it is inside a tube with a piston behind it**,
 and if the drive is dead something must move both the length of the stroke.
+
+> **[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) made this worse by 3.67×, 2026-08-19.**
+> The stroke is now **8.0 m** and the friction work to traverse it is **667.2 J**. The masses below
+> are the 2.18 m case and are no longer the governing ones. **A53 has not been re-run**, and at
+> 8.0 m the "clearing the tube" row cannot plausibly stay under the threshold. *The two unpriced
+> escapes — venting the tube, disengaging the piston — are now the only routes this entry has.*
 
 **Sizing the spring to actually do that costs the mass argument:**
 
@@ -3545,6 +3552,67 @@ tube. Two escapes are unpriced: **venting the tube** and **disengaging the pisto
 measured. At a genuinely small friction the light ejector works and this entry closes. **One bench
 test now governs four open decisions** — this, A49's long-stroke design point, ADR-033's trim
 stage, and **P77**'s pulse store.
+
+### P82. The Gen6 reservoir is still sized for a charge pressure the design no longer uses: MEDIUM, NEW 2026-08-19
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) dropped the charge pressure from 50 bar
+to 22.73 bar and cut gas per shot by 54.55 %. The reservoir did not move.**
+
+`cad/parameters.json` still carries **9.55 L at 200 bar**, which
+[A43](validation/A43_reservoir_thermal.md) sized around a thermal argument at 50 bar refills:
+conduction through stagnant nitrogen gives a **17 460 s** time constant against a **1200 s**
+cadence, so the vessel never warms back up and the no-relaxation figure is the physically right
+one. **That argument has to be re-run at the new refill mass before the volume can move.**
+
+| | |
+|---|---:|
+| Store mass ADR-034 quotes | **≈ 4.10 kg** |
+| What it actually is | **[A49](validation/A49_design_surface.md)'s gas-ratio scaling of A43's 5.38 kg** |
+| Reservoir scaling factor applied | **45.45 %** |
+| Tube mass, which is real and grew | **0.311 → 1.140 kg** |
+
+**Why this matters more than a bookkeeping note.** The reservoir saving is the whole of ADR-034's
+mass argument — the tube itself gains 0.829 kg. **If A43 re-run at 22.73 bar does not recover the
+saving, ADR-034 buys gentleness and pays mass for it**, and the added-mass-per-satellite figures in
+`docs/generations/GEN6.md`, `docs/GENERATIONS.md` and the front page are optimistic by up to
+0.829 kg spread over twelve.
+
+**What would close it:** re-run A43 at 22.73 bar refills, with its bands re-declared before the
+script is touched, and write the sized volume into `parameters.json`. **The current 9.55 L is
+conservative rather than wrong**, which is why this is MEDIUM.
+
+### P83. The trim stage's authority was sized against a friction share that has since tripled: HIGH, NEW 2026-08-19
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[ADR-033](docs/adr/033-gen6-trim-stage.md) exists because Gen6 cannot command velocity
+open-loop.** [A44](validation/A44_gen6_dispersion.md) measured **1.113 % at 3σ** with **93.4 % of
+the variance in seal friction**, and [A48](validation/A48_trim_stage.md) sized a 39.7 mm stator
+carrying **±0.323 m/s** to cover it.
+
+**[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) tripled the term that dominates that
+variance.**
+
+| | Gen6 at ADR-033 | Gen6 at ADR-034 |
+|---|---:|---:|
+| Friction work per shot | 181.8 J | **667.2 J** |
+| **As a fraction of shot work** | **9.75 %** | **28.39 %** |
+| Trim authority | ±0.323 m/s | **unchanged, and unverified** |
+
+**Neither A44 nor A48 has been re-run.** If dispersion scales with the friction share — which is
+what A44's own variance attribution implies — the correction the stage must make grows with it,
+and **0.323 m/s may not cover ±3σ at the adopted design point.**
+
+**This is HIGH because of what it feeds.** A48's section length and mass scale with the authority
+required, and **ADR-033 falsifier 1 is that the pulse store weighs more than the 0.340 kg stage it
+feeds** — a store that has never been weighed at *any* authority. **A larger authority makes the
+project's most likely falsifier more likely.**
+
+**What would close it:** re-run A44 at ADR-034's stroke and friction, re-declare A48's bands
+against the result, and either confirm 39.7 mm or resize it. **P67 governs this too** — the whole
+chain rests on a seal coefficient measured on nothing.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

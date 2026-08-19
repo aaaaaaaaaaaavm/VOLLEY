@@ -217,7 +217,7 @@ source and the build regenerates byte-stably.
 
 | Part | STEP | Governing parameters |
 |---|---|---|
-| Drive tube | `VOLLEY_Drive_Tube_Gen6.step` | bore **15.805 mm**, stroke **2180 mm**, wall **1.0 mm** |
+| Drive tube | `VOLLEY_Drive_Tube_Gen6.step` | bore **15.805 mm**, stroke **8000 mm**, wall **1.0 mm** |
 | Carriage | `VOLLEY_Carriage_Gen6.step` | rides the tube; carries the cradle interface |
 | Chamber | `VOLLEY_Chamber_Gen6.step` | **2.0 L at 50 bar**, nitrogen |
 | Reservoir | `VOLLEY_Reservoir_Gen6.step` | **11.25 L at 200 bar** |
@@ -252,7 +252,7 @@ tube with nothing in it.
 - **Do not add a regulator.** A41 closed P63 by deleting it. Re-introducing one re-opens the
   largest guess in A39.
 - **Do not carry Gen5 stations across.** Release at 1500 mm, brake entry at 1530 mm and the
-  488 mm sled are Gen5 geometry and mean nothing here. The Gen6 stroke is **2180 mm** and there is
+  488 mm sled are Gen5 geometry and mean nothing here. The Gen6 stroke is **8000 mm** and there is
   no brake.
 
 ### Where the numbers live

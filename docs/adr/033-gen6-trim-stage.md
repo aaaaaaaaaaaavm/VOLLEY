@@ -2,6 +2,14 @@
 
 **Status:** Accepted · **Date:** 2026-08-16 · **Phase:** I · **Extends:** [ADR-032](032-gen6-stage-integrated-gas-store.md)
 
+> ## Amended 2026-08-19 by [ADR-034](034-gen6-long-stroke-design-point.md)
+>
+> **The trim section now sits at x = 7960.3 on an 8.0 m stroke, where it is 0.496 % of the stroke
+> rather than 1.822 %.** More importantly, **its 0.323 m/s of authority was sized against A44's
+> dispersion at a 9.75 % friction share, and ADR-034 runs at 28.39 %.** Neither A44 nor A48 has
+> been re-run. **The stage may be under-authority against the dispersion the long stroke creates —
+> P83**, which feeds falsifier 1 below.
+
 ## Context
 
 [ADR-032](032-gen6-stage-integrated-gas-store.md) deleted the motor and bought a **50 % reduction

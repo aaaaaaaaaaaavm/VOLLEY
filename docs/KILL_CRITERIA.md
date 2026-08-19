@@ -337,17 +337,18 @@ meeting it. A criterion that no longer applies has not been passed.
 
 | | Gen5, the measured baseline | Gen6 | |
 |---|---|---|---|
-| **1. Mass per satellite** | **10.547 kg**, crossed 5.3× | **10.547 kg on dry mass, crossed** — and **1.403 to 3.108 kg on added mass**, the range A45 found when the stage credit is read hostilely | **Crossed on dry mass always, and on added mass as soon as P10's unmodelled lump is not credited to the stage. P59 and P68 both LIVE** |
-| **2. Envelope** | 1839 mm against ~1270, over by 44 % | **Does not apply as stated** — Gen6 is a rail on an 8 m stage, not a payload in a rideshare port | NEEDS SOURCE: no envelope analysis exists at Gen6 |
+| **1. Mass per satellite** | **10.547 kg**, crossed 5.3× | **10.547 kg on dry mass, crossed** — and **1.296 to 3.164 kg on added mass** at ADR-034, the range A45 found when the stage credit is read hostilely | **Crossed on dry mass always, and on added mass as soon as P10's unmodelled lump is not credited to the stage. P59 and P68 both LIVE** |
+| **2. Envelope** | 1839 mm against ~1270, over by 44 % | **Does not apply as stated** — Gen6 is a rail on an 8 m stage, not a payload in a rideshare port. **At ADR-034 the rail is 8.2 m against A37's 8.0 m usable acceleration length** | **PARTIAL**: the 200 mm overrun is stated, but no envelope analysis exists at Gen6 |
 | **3. Bank ESR** | crossed; 65 mΩ ceiling against 116–185 available | **Dissolved.** There is no bank. A51 measures the electrical demand at **0.26 W average, 36 W peak** | **Deleted, not solved.** P26 is moot for Gen6 and stands for Gen5 |
 | **4. Tip-off** | modelled at 85.0 N of cradle preload, mechanism absent | **A38: raising acceleration does not make it worse.** Preload is now **201.674 N per contact**, still releasing inside **≤ 1 N** | **Not demonstrated.** The mechanism still does not exist |
 | **5. Attitude rate at firing** | quantified | unchanged in kind; the indexing mass move is the same problem on a larger vehicle | NEEDS SOURCE: not re-run at Gen6 |
-| **6. Host recoil** | 64.1 N·s per shot | higher, in proportion to the exit velocity | NEEDS SOURCE: no Gen6 recoil figure is computed anywhere |
-| **7. Is the Δv worth anything** | 16.029 m/s | **30.535 m/s** on the selected A41 point | The one row Gen6 improves by doing more, not less. **ADR-033 restores the *commandability* the Δv is sold on** |
+| **6. Host recoil** | 64.1 N·s per shot | **116.03 N·s per shot — 1.81×**, 1407.9 N·s over the campaign, **0.653 kg** of propellant to null ([A52](../validation/A52_gen6_recoil.md)) | **Answered.** The interface requirement follows: **the thrust line must pass within 10.7 mm of the host centre of mass**, against Gen5's 19.5 mm |
+| **7. Is the Δv worth anything** | 16.029 m/s | **34.280 m/s** zero-friction, **29.009** at the friction allowance, on ADR-034's design point | The one row Gen6 improves by doing more, not less. **ADR-033 restores the *commandability* the Δv is sold on** |
 
-**Three rows say NEEDS SOURCE, and they are not bookkeeping.** Envelope, attitude rate and recoil
-were all quantified for Gen5 and none has been recomputed for the architecture now carried as the
-design target. Recoil in particular scales with the impulse and the impulse has roughly doubled.
+**Two rows still want a source, and they are not bookkeeping.** Envelope and attitude rate were
+both quantified for Gen5 and neither has been recomputed for the architecture now carried as the
+design target. **Recoil was the third and [A52](../validation/A52_gen6_recoil.md) closed it on
+2026-08-19** — at 1.81× rather than the "roughly doubled" this paragraph guessed at.
 
 **Criterion 1 is the one that matters and it has not moved.** Both numerators are reported wherever
 either appears, the 2.0 kg threshold is untouched, and the honest options remain what they were:

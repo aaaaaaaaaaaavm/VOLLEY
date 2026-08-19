@@ -17,7 +17,7 @@ in the repository — nothing here is asserted and nothing is retro-dated.
 
 ---
 
-## The arc, in five decisions
+## The arc, in six decisions
 
 | When | Decision | What moved |
 |---|---|---|
@@ -26,6 +26,7 @@ in the repository — nothing here is asserted and nothing is retro-dated.
 | **mid-2025** | Coilgun → linear synchronous motor | A coilgun cannot command a velocity, and commanding it is the product |
 | **2026-08-10** | **[ADR-024](adr/024-last-mile-delivery-conops.md) — the last-mile ConOps, written down at last** | The stage stops being *a place to stand* and becomes *part of the product* |
 | **2026-08-14** | **[ADR-032](adr/032-gen6-stage-integrated-gas-store.md) — Gen6** | **The stage stops being the host and becomes the machine.** No mover, no stator, no bank, no brake — a rail the stage already is |
+| **2026-08-19** | **[ADR-034](adr/034-gen6-long-stroke-design-point.md) — the stroke becomes the stage** | **The last thing the machine was still carrying for itself was its own length.** 2.18 m of tube on an 8 m vehicle became **8.0 m**, and the acceleration and the gas each fell **54.5 %** for it. *The stage stopped being a host in 2026-08-14; here it stops being merely a mounting length* |
 
 ## The step that names the gap, in the project's own words
 
@@ -54,6 +55,7 @@ vehicle underneath it. That is what `docs/generations/` now carries.
 | **[Gen4](generations/GEN4.md)** | the same | Nine Fusion documents of a self-contained machine |
 | **[Gen5](generations/GEN5.md)** | the same, and **frozen that way** | 126.6 kg dry, of which the enclosure alone is 50.04 kg — a skin the stage already has |
 | **[Gen6](generations/GEN6.md)** | **the host is the machine** | **85.36 kg — 67.4 % of the ledger — is the stage's, and 29.75 kg is deleted outright.** The rail, the structure, the power, the thermal path and the avionics bay are all things a stage already carries |
+| **Gen6 at [ADR-034](adr/034-gen6-long-stroke-design-point.md)** | **the host is the machine, including its length** | The stroke is **8.0 m** — A37's whole usable acceleration length for a large upper stage. **The one resource the machine had never spent was the one the stage gives away free**, and spending it halved both the acceleration and the gas at unchanged velocity |
 
 **Read the Gen5 row and the Gen6 row together.** Gen5 built an enclosure because the design assumed
 it needed one; A46 later measured that enclosure at **50.04 kg against an 8.00 kg placeholder**.

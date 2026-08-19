@@ -28,7 +28,7 @@ work's own claims, and nothing here has been built, fired or measured.
 | **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
 | **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
 | **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
-| **[The defect register](OPEN_PROBLEMS.md)** | 116 numbered entries, 48 live |
+| **[The defect register](OPEN_PROBLEMS.md)** | 118 numbered entries, 50 live |
 | **[One page](SUMMARY.md)** | If you only read one file |
 | **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
 
@@ -226,12 +226,13 @@ gantt
     section Architecture
     Coilgun                          :done, a1, 2021-03-22, 2025-07-01
     Linear synchronous motor         :done, a2, 2025-07-01, 2026-08-14
-    Cold gas on a stage rail         :active, a3, 2026-08-14, 2026-08-17
+    Cold gas on a stage rail         :done, a3, 2026-08-14, 2026-08-19
+    Stroke  the stage's whole length :active, a4, 2026-08-19, 2026-08-20
 
     section Host
     Free-flyer  carries everything   :done, h1, 2021-03-22, 2023-01-01
     POEM reframe  stage as platform  :done, h2, 2023-01-01, 2026-08-14
-    Stage AS the machine             :active, h3, 2026-08-14, 2026-08-17
+    Stage AS the machine             :active, h3, 2026-08-14, 2026-08-20
 
     section CAD
     Gen1  geometric ancestor         :done, c1, 2025-09-15, 2026-02-15
@@ -239,10 +240,10 @@ gantt
     Gen3  parameter-reconciled       :done, c3, 2026-07-23, 2026-08-03
     Gen4  hand-modelled never exported :crit, c4, 2026-08-03, 2026-08-10
     Gen5  script-built and frozen    :done, c5, 2026-08-10, 2026-08-14
-    Gen6  script-built and current   :active, c6, 2026-08-14, 2026-08-17
+    Gen6  script-built and current   :active, c6, 2026-08-14, 2026-08-20
 
     section Evidence
-    Nothing measured at any scale    :crit, e1, 2021-03-22, 2026-08-17
+    Nothing measured at any scale    :crit, e1, 2021-03-22, 2026-08-20
 ```
 
 <sub><b>Dates carry the precision <a href="docs/HISTORY.md">docs/HISTORY.md</a> records, and not
@@ -276,12 +277,13 @@ Gen6.** That is confusing enough to state plainly rather than leave a reader to 
 | **Committed STEP** | **none — P43** | eight parts | six parts |
 | **Rebuildable byte-identically** | no | **yes** | **yes** |
 | **Drive** | linear motor | linear motor | **cold gas, with a motor that steers** |
-| **Energy store** | supercapacitor bank | supercapacitor bank | **2 L chamber at 50 bar** |
+| **Energy store** | supercapacitor bank | supercapacitor bank | **2 L chamber at 22.73 bar** |
 | **Arrest** | eddy brake | eddy brake | **none — nothing to stop** |
 | **Structure** | its own track | its own track | **a rail the host stage provides** |
-| **Exit velocity** | *not established* | **16.029 m/s at 10.07 g** | **30.535 m/s at 25 g** (29.009 with friction) |
+| **Exit velocity** | *not established* | **16.029 m/s at 10.07 g** | **34.280 m/s at 11.36 g** (29.009 with friction) |
 | **Dispersion, 3σ** | — | **0.0274 m/s** | **1.113 % open-loop; 0.0274 m/s with the trim stage** ([ADR-033](docs/adr/033-gen6-trim-stage.md)) |
-| **Per 3U satellite** | — | 10.547 kg dry | **1.431–3.299 kg added**, plus a pulse store nobody has weighed |
+| **Stroke** | — | 1.3 m | **8.00 m** — the host stage's whole usable length ([ADR-034](docs/adr/034-gen6-long-stroke-design-point.md)) |
+| **Per 3U satellite** | — | 10.547 kg dry | **1.324–3.192 kg added**, plus a pulse store nobody has weighed |
 
 **Gen6 traded away the thing this is sold on, and [ADR-033](docs/adr/033-gen6-trim-stage.md)
 buys it back.** Gen5 commanded velocity through a designed loop; Gen6's shot is **133 ms of
@@ -306,7 +308,7 @@ backup ejector is worth six times the entire architecture change** (**P75**).
 <tr>
 <td width="33%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Gen4"></a><br><sub><b>Gen4.</b> Hand-modelled, more detail than any generation since, and no committed export.</sub></td>
 <td width="33%"><a href="cad/renders/gen5/hero_open.png"><img src="cad/renders/gen5/hero_open.png" alt="Gen5"></a><br><sub><b>Gen5.</b> Eight parts from the parameter file. Plainer because every feature must trace to a parameter.</sub></td>
-<td width="33%"><a href="cad/renders/gen6/hero_open.png"><img src="cad/renders/gen6/hero_open.png" alt="Gen6"></a><br><sub><b>Gen6.</b> What is left after deletion: a rail, a tube, a chamber. <b>The difference is the architecture, not the renderer.</b></sub></td>
+<td width="33%"><a href="cad/renders/gen6/hero_open.png"><img src="cad/renders/gen6/hero_open.png" alt="Gen6"></a><br><sub><b>Gen6.</b> What is left after deletion: a rail, a tube, a chamber — now <b>8.2 m of it</b>, the host stage's whole length (ADR-034). <b>The difference is the architecture, not the renderer.</b></sub></td>
 </tr>
 </table>
 
@@ -338,7 +340,7 @@ flowchart TD
 
     A1["<b>2021 · Coilgun</b><br/><i>question: how hard can we throw it?</i><br/>capacitors discharge into coils,<br/>field gradient pulls the payload"]
     A2["<b>mid-2025 · Linear synchronous motor</b><br/><i>question: how precisely can we throw it?</i><br/>current commanded against measured position,<br/>magnets ride a reusable sled, eddy brake recovers it"]
-    A3["<b>2026-08-14 · Cold gas on a stage rail</b><br/><i>question: what does the machine need to exist at all?</i><br/>a pre-charged chamber fires the payload directly,<br/>nothing recovered<br/><b>2026-08-16 · plus a motor that steers</b><br/><i>gas for the energy, a 39.7 mm stator for the control</i>"]
+    A3["<b>2026-08-14 · Cold gas on a stage rail</b><br/><i>question: what does the machine need to exist at all?</i><br/>a pre-charged chamber fires the payload directly,<br/>nothing recovered<br/><b>2026-08-16 · plus a motor that steers</b><br/><i>gas for the energy, a 39.7 mm stator for the control</i><br/><b>2026-08-19 · the stroke becomes the stage</b><br/><i>8.0 m at 22.73 bar: same velocity, half the g, half the gas</i>"]
 
     P --> A1
     A1 -->|"a coilgun cannot command a velocity,<br/>and commanding it is the product"| A2
@@ -365,7 +367,7 @@ and threw away the previous answer's central assumption.
 |---|---|---|---|
 | **Coilgun** | throw it fast | capacitor bank discharges into coils; the payload is pulled by a field gradient | **velocity you can command.** A coilgun's exit speed is set by the discharge, not by a loop |
 | **Linear motor** | throw it *accurately* | a synchronous machine drives current against measured position; magnets ride a **reusable sled**, an eddy brake recovers it | **simplicity.** Every subsystem that follows — bank, power electronics, brake, return stroke — exists to serve the sled. A35 prices that at **11.54 kg**, against **26.35 kg** for insisting the energy arrive *during* the shot |
-| **Cold gas + trim** | throw it with *the least machine*, then steer it | a **2 L chamber at 50 bar** fires the payload along a rail the spent stage already is; **nothing is recovered**; a **39.7 mm stator** corrects the result | **the pulse, partly.** The trim stage is 37.7 J at 28 kW — C3 returning at a fiftieth of the energy, on hardware nobody has weighed |
+| **Cold gas + trim** | throw it with *the least machine*, then steer it | a **2 L chamber at 22.73 bar** fires the payload along **8.0 m** of rail the spent stage already is; **nothing is recovered**; a **39.7 mm stator** corrects the result | **the pulse, partly.** The trim stage is 37.7 J at 28 kW — C3 returning at a fiftieth of the energy, on hardware nobody has weighed |
 
 **The third row is the honest cost of the third column.** Gen5 held 0.0274 m/s at 3σ because a
 loop corrected the shot as it happened. Gen6 has 133 ms of open-loop expansion and **1.113 %**,

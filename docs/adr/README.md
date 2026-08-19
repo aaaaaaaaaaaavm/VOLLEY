@@ -62,6 +62,7 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | [031](031-four-repositories-not-two-phases.md) | Four repositories by role, replacing the two-phase model | Accepted | — |
 | **[032](032-gen6-stage-integrated-gas-store.md)** | **Gen6 is a stage-integrated, payload-direct, gas-driven deployer; supersedes the Gen6 of ADR-029** | Accepted | — |
 | **[033](033-gen6-trim-stage.md)** | **Gen6 gains a motor that steers rather than throws — adopted with its pulse store unweighed (P77)** | Accepted | I |
+| **[034](034-gen6-long-stroke-design-point.md)** | **Gen6's stroke becomes the host stage's whole 8.0 m — same velocity, half the acceleration, half the gas, and friction at 28.39 % of shot work (P78, P82, P83)** | Accepted | I |
 
 Every decision in `DECISION_LOG.md` appears above. ADRs 012-018 record decisions that were
 never written down anywhere before.
