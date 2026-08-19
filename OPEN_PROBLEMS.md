@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **113 numbered entries, of which 46 are live.** Every entry carries a `Status:` line written by
+> **114 numbered entries, of which 47 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3427,6 +3427,36 @@ the long stroke is free; at 12.90 % of a shot it is a design driver; and if the 
 several times A41's *allowance*, the long-stroke direction inverts. **The same measurement decides
 this, ADR-033's trim stage and P77's pulse store.** One bench test governs three open decisions.
 
+### P79. The decay model is optimistic by about two against the runs that raised E28: HIGH, NEW 2026-08-16
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A50](validation/A50_campaign_altitude.md) band 1 was declared as a calibration against E28's own
+GMAT runs, and it failed.**
+
+| | 350 km satellite lifetime |
+|---|---:|
+| E28's GMAT runs, observed | **29 and 36 days** |
+| `astro.py`, modelled | **70.6 days** |
+
+**Roughly a factor of two, at the altitude where campaign duration actually binds.**
+
+**The cause is a defect this project already carries.** `astro.py` uses a **static** atmosphere.
+**P16** records what that cost once before: a uniform density scaling preserves a lifetime *ratio*
+by construction, so the invariance claim in the paper's abstract was tested by a sweep that could
+not have falsified it. **The same property is now producing durations a real atmosphere does not
+support.**
+
+**What it affects.** Every campaign duration in A50 is an **upper bound**, and the honest reading
+of that run is *"450 km buys months"* rather than any day count. It does **not** affect A50's Δv
+figures, its monotonicity findings, or its central result that spread is nearly
+altitude-independent while life is not.
+
+**What would close it.** Re-run the decay model against a variable-density atmosphere — or against
+GMAT directly, which is what produced the numbers it disagrees with. **The GMAT runs already
+exist**: `validation/gmat/` carries the campaign that stopped early. Until then **E28 stays open**,
+and it stays open *because* a model disagreeing with its own evidence is not a closure.
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 
@@ -3732,7 +3762,7 @@ with its field recomputed at the real payload station, or — if separation prov
 ADR-010 covers mechanical mounting only, and **E29 already asks for that same document for an
 unrelated reason.**
 
-### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: NEW 2026-08-06
+### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: MODELLED 2026-08-16 by A50, STILL OPEN
 > **Status:** `LIVE` — open engineering; something still has to be done
 
 
@@ -3766,6 +3796,26 @@ in a run sheet. The GMAT runs already contain the data for 350 and 450 km.
 > at which each becomes fatal.
 
 ## E: Unsolved engineering
+
+
+> **Modelled 2026-08-16 by [A50](validation/A50_campaign_altitude.md), and it stays open because
+> the model disagrees with the runs that raised this entry.** A50 gives **70.6 days at 350 km**
+> against the **29 and 36** these GMAT runs observed — **optimistic by roughly two**, for the
+> reason **P16** already names: `astro.py` uses a *static* atmosphere and cannot represent the
+> solar-activity variation that actually kills a satellite at that altitude.
+>
+> **What A50 does establish, as upper bounds:** satellite life is **476.6 days at 450 km** and
+> repositioning three 50 km shells costs **≈ 55 m/s**, inside every host budget A20 swept. **Days,
+> weeks and months are all purchasable from 450 km up.**
+>
+> **And it collapses this entry's central trade.** E28 framed altitude as a choice between plane
+> spread and mission life. Across 350 → 450 km the 90-day spread moves **47.1° → 44.6°, about 5 %,
+> while satellite life changes by 6.7×.** At the shell spacing this architecture uses, **spread is
+> nearly altitude-independent and life is not — so there is no trade, and the design rule is
+> simply to go higher.**
+>
+> **This entry closes when the decay model is checked against a variable atmosphere**, not before.
+
 
 ### E1. Three-dimensional field closure: 2-D HALF CLOSED 2026-07-29 by A1
 > **Status:** `CLOSED` — resolved; see the entry for what closed it

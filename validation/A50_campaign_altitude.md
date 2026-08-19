@@ -74,4 +74,86 @@ satellite released into an orbit that decays before the campaign finishes was no
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Seven of nine bands pass. Band 1 — the calibration against E28's own GMAT runs —
+fails, and that failure is the most important thing in this run.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | 350 km satellite life ≤ 60 days, per E28 | **70.6 d** | **FAIL** |
+| 2 | 450 km satellite life > 90 days, per E28 | 476.6 d | **PASS** |
+| 3 | satellite life monotonically increasing | **capped at 700 and 800 km** | **FAIL** |
+| 4 | nodal spread rate decreasing in altitude | 0.523 → 0.412 °/day | **PASS** |
+| 5 | an altitude gives ≥ 9 of 12 alive at 90 days | 350 km | **PASS** |
+| 6 | spread achieved before the fleet dies, maximum identified | reported | **PASS** |
+| 7 | campaign Δv over 3 shells ≤ 200 m/s | **56.6 m/s** | **PASS** |
+| 8 | the one-year campaign altitude is stated | **450 km** | **PASS** |
+| 9 | both lifetimes computed | both | **PASS** |
+
+### The answer to the question asked
+
+| Altitude | Satellite life | Stage life | Alive at 90 days | Repositioning Δv |
+|---:|---:|---:|---:|---:|
+| 350 km | **70.6 d** | 173 d | 11 of 12 | 56.6 m/s |
+| **450 km** | **476.6 d** | 1172 d | **12 of 12** | **55.3 m/s** |
+| 600 km | 5792 d | 14242 d | 12 of 12 | 53.6 m/s |
+
+**Days, weeks and months are all purchasable, and from 450 km upward months are comfortable.**
+Walking three 50 km shells costs **≈ 55 m/s**, well inside the host budgets A20 swept to 400.
+**A one-year campaign needs 450 km**, which is the altitude the project already baselines.
+
+**So orbital mechanics is not the constraint on loiter. The stage keep-alive agreement is** — and
+[A47](A47_gen6_fmea.md) already counts that as a manifest-forfeiting shared element that no launch
+provider has agreed to.
+
+### Band 1 failed, and it invalidates the durations above as anything but upper bounds
+
+**E28's GMAT runs reentered at 29 and 36 days from 350 km. This model says 70.6.** It is optimistic
+by roughly a factor of two at the altitude where the answer matters most.
+
+**The cause is already a known defect.** `astro.py` uses a **static** atmosphere — the same
+property that made **P16**'s invariance claim untestable, where a uniform density scaling preserved
+a ratio *by construction*. A static atmosphere cannot represent the solar-activity variation that
+actually kills a satellite at 350 km.
+
+**Every duration in this run inherits that.** They are upper bounds, and the honest reading of the
+table is *"450 km buys months"* rather than any specific day count. **The band caught it, which is
+what the band was for**, and E28 stays open rather than being closed by a model that disagrees with
+the runs that raised it.
+
+### Band 3 failed on a cap, not on physics
+
+`astro.lifetime` caps at **40 years = 14 610 days**, so 700 km and 800 km both return the cap and
+the sequence stops strictly increasing. **My band said "monotonically increasing" where the data
+can only be non-decreasing.** A declaration imprecision, recorded rather than edited.
+
+**It has one real consequence: the "maximum spread" band 6 identifies at 700 km is a cap
+artefact.** Both 700 and 800 km run for the same capped window, so the lower drift rate at 800 km
+produces less total spread. **That maximum is not a physical optimum and must not be quoted as
+one.**
+
+### The prediction that held, and it collapses the trade
+
+**Prediction 3 said the spread maximum might be absent and the trade might collapse to satellite
+survival.** In the 90-day column the spread barely moves — **47.1° at 350 km against 44.6° at
+450** — a 5 % difference across the altitude band that changes satellite life by **6.7×**.
+
+**E28 framed altitude as a trade between plane spread and mission life. At the shell spacing this
+architecture actually uses, it is not a trade.** Spread is nearly altitude-independent over the
+useful range; life is not. **The design rule is simply: go higher.**
+
+### One quantity in this run is not calibrated, and it is named rather than trusted
+
+**A15 reported 367° of nodal spread in 90 days at 450 km. This run computes 44.6° for the same
+window.** The difference is the fleet geometry: A15's GMAT campaign spread satellites over a much
+wider altitude range than the **three 50 km shells** modelled here. **No band was declared on this
+and none should be read into it** — the two numbers describe different campaigns, and reconciling
+them is not something this run did.
+
+## What this run does not do
+
+- **No solar-activity variation**, which band 1 has just shown is the term that matters.
+- **The stage's ballistic coefficient is a declared guess of 150 kg/m²**, named in the script. No
+  stage mass or area is public — that is **E5**.
+- **Circular orbits, no attitude or drag-area variation, no station-keeping.**
+- **It does not price keeping a stage alive**, which the result above identifies as the actual
+  constraint.

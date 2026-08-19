@@ -1,0 +1,189 @@
+{
+  "analysis": "A50",
+  "bands_declared_commit": "HEAD~1",
+  "note": "static atmosphere via astro.rho, orbit-averaged decay, circular orbits, no solar-activity variation, no attitude or drag-area variation. The STAGE ballistic coefficient is a declared assumption of 150 kg/m2 -- no stage mass or area is public, which is E5.",
+  "bc_sat": 61.0,
+  "bc_stage": 150.0,
+  "dv_shot": 29.009,
+  "shells_per_campaign": 3,
+  "rows": [
+    {
+      "alt_km": 350,
+      "sat_life_d": 70.56555141913256,
+      "stage_life_d": 173.17858775574936,
+      "spread_90d": 47.1110032784204,
+      "alive_90d": 11,
+      "campaign_dv": 56.570064210955934
+    },
+    {
+      "alt_km": 400,
+      "sat_life_d": 189.05258132262443,
+      "stage_life_d": 464.5958386805238,
+      "spread_90d": 45.834067976966246,
+      "alive_90d": 12,
+      "campaign_dv": 55.94981466109493
+    },
+    {
+      "alt_km": 450,
+      "sat_life_d": 476.6366848200295,
+      "stage_life_d": 1171.7842526386405,
+      "spread_90d": 44.602027028310246,
+      "alive_90d": 12,
+      "campaign_dv": 55.34081732474715
+    },
+    {
+      "alt_km": 500,
+      "sat_life_d": 1128.0289394449057,
+      "stage_life_d": 2773.5545925955835,
+      "spread_90d": 43.41295828624945,
+      "alive_90d": 12,
+      "campaign_dv": 54.7427884732424
+    },
+    {
+      "alt_km": 550,
+      "sat_life_d": 2594.159798071458,
+      "stage_life_d": 6378.878818593525,
+      "spread_90d": 42.26503603486819,
+      "alive_90d": 12,
+      "campaign_dv": 54.15545351064884
+    },
+    {
+      "alt_km": 600,
+      "sat_life_d": 5792.01882735769,
+      "stage_life_d": 14242.448557831503,
+      "spread_90d": 41.156525464850645,
+      "alive_90d": 12,
+      "campaign_dv": 53.5785466170355
+    },
+    {
+      "alt_km": 700,
+      "sat_life_d": 14610.0,
+      "stage_life_d": 14610.0,
+      "spread_90d": 39.05122397968485,
+      "alive_90d": 12,
+      "campaign_dv": 52.454995610115475
+    },
+    {
+      "alt_km": 800,
+      "sat_life_d": 14610.0,
+      "stage_life_d": 14610.0,
+      "spread_90d": 37.084805116145894,
+      "alive_90d": 12,
+      "campaign_dv": 51.37017185886634
+    }
+  ],
+  "spread_achieved": [
+    {
+      "alt_km": 350,
+      "window_d": 70.56555141913256,
+      "spread_deg": 36.93793249166997
+    },
+    {
+      "alt_km": 400,
+      "window_d": 189.05258132262443,
+      "spread_deg": 96.27832070624564
+    },
+    {
+      "alt_km": 450,
+      "window_d": 476.6366848200295,
+      "spread_deg": 236.2106922114127
+    },
+    {
+      "alt_km": 500,
+      "window_d": 1128.0289394449057,
+      "spread_deg": 544.123036597821
+    },
+    {
+      "alt_km": 550,
+      "window_d": 2594.159798071458,
+      "spread_deg": 1218.2473038410728
+    },
+    {
+      "alt_km": 600,
+      "window_d": 5792.01882735769,
+      "spread_deg": 2648.659670678235
+    },
+    {
+      "alt_km": 700,
+      "window_d": 14610.0,
+      "spread_deg": 6339.315359368841
+    },
+    {
+      "alt_km": 800,
+      "window_d": 14610.0,
+      "spread_deg": 6020.100030521017
+    }
+  ],
+  "best_spread": {
+    "alt_km": 700,
+    "window_d": 14610.0,
+    "spread_deg": 6339.315359368841
+  },
+  "ninety_day_altitudes": [
+    350,
+    400,
+    450,
+    500,
+    550,
+    600,
+    700,
+    800
+  ],
+  "one_year_altitude_km": 450,
+  "bands": [
+    {
+      "n": "1",
+      "band": "satellite lifetime at 350 km <= 60 days, consistent with E28",
+      "got": "70.6 d",
+      "passed": false
+    },
+    {
+      "n": "2",
+      "band": "satellite lifetime at 450 km > 90 days, consistent with E28",
+      "got": "476.6 d",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "satellite lifetime monotonically increasing in altitude",
+      "got": "70.6 -> 14610.0 d",
+      "passed": false
+    },
+    {
+      "n": "4",
+      "band": "nodal spread rate monotonically decreasing in altitude",
+      "got": "0.523 -> 0.412 deg/day",
+      "passed": true
+    },
+    {
+      "n": "5",
+      "band": "an altitude exists where a 90-day campaign ends with >= 9 of 12 alive",
+      "got": "350 km",
+      "passed": true
+    },
+    {
+      "n": "6",
+      "band": "spread achieved before the fleet dies is reported, and its maximum identified",
+      "got": "max 6339.3 deg at 700 km",
+      "passed": true
+    },
+    {
+      "n": "7",
+      "band": "campaign dv over 3 shells <= 200 m/s",
+      "got": "56.6 m/s",
+      "passed": true
+    },
+    {
+      "n": "8",
+      "band": "the altitude for a one-year campaign is stated",
+      "got": "450 km",
+      "passed": true
+    },
+    {
+      "n": "9",
+      "band": "both the satellites' and the stage's lifetimes are computed",
+      "got": "both",
+      "passed": true
+    }
+  ]
+}

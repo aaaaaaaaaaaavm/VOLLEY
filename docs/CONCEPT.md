@@ -117,11 +117,22 @@ host rather than a free-flyer.
 > against a whole shot of 16 m/s. The concept is altitude shells plus J2 doing the plane work over
 > time, not a vehicle that flies to arbitrary orbits.
 >
-> **And duration is not free of the thing that makes it attractive.** **E28** found the fleet
-> reenters in **29–36 days at 350 km**, with only the 450 km case surviving 90 — and that *the drag
-> which spreads the orbital planes is the same drag that ends the mission.* **They are not two
-> effects to trade against each other. They are one effect.** How much loiter is purchasable, and
-> at what altitude, is **not yet modelled**; E28 is live.
+> **And duration is bought with altitude.** **E28** found the fleet reenters in **29–36 days at
+> 350 km**, with only the 450 km case surviving 90.
+>
+> **[A50](../validation/A50_campaign_altitude.md) modelled it on 2026-08-16.** Satellite life is
+> **476.6 days at 450 km**, and walking three 50 km shells costs **≈ 55 m/s** — inside every host
+> budget A20 swept. **Days, weeks and months are all purchasable from 450 km upward, and orbital
+> mechanics is not the constraint on loiter. The stage keep-alive agreement is.**
+>
+> **And E28's central trade turns out not to be one.** Across 350 → 450 km the 90-day plane spread
+> moves **47.1° → 44.6°, about 5 %, while satellite life changes by 6.7×.** At the shell spacing
+> this architecture uses, spread is nearly altitude-independent and life is not — **so the design
+> rule is simply to go higher.**
+>
+> **Read those durations as upper bounds.** A50's decay model gives **70.6 days at 350 km** against
+> the 29–36 the GMAT runs observed, because `astro.py`'s atmosphere is static — **P79**. E28 stays
+> open until the model is checked against a variable atmosphere.
 
 ## 4. What the concept can and cannot do, quantified
 
