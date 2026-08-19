@@ -77,4 +77,86 @@ script is right and the misses are recorded.**
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Seven of nine bands pass. Band 5 — the one that could have answered the request
+with a no — passes fourteen times over. Bands 1 and 6 fail, and both failures are informative.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces A41's 30.535 m/s and 1864.8 J | **29.009 m/s**, 1864.8 J | **FAIL** |
+| 2 | work from a fixed charge rises with stroke | 1171.9 → 5170.8 J | **PASS** |
+| 3 | peak g independent of stroke | **deviation 0.000000 g** | **PASS** |
+| 4 | gas per shot unchanged across stroke | deviation 0.000 mg | **PASS** |
+| 5 | **a point beats Gen6 on velocity, g and gas at once** | **14 of 63 points** | **PASS** |
+| 6 | friction fraction varies ≤ 2 points | **9.25 % → 12.90 %** | **FAIL** |
+| 7 | tube mass at 8 m ≤ 2.0 kg | 1.140 kg | **PASS** |
+| 8 | added mass per satellite ≤ 2.0 kg | **1.296 kg** | **PASS** |
+| 9 | Pareto front published | 9 points | **PASS** |
+
+### The answer to the question that was asked
+
+**Yes — a better point exists, and there are fourteen of them.** Holding the velocity Gen6 already
+delivers and spending stroke on gentleness instead:
+
+| Stroke | Charge | **Peak g** | Gas per shot | vs Gen6 |
+|---:|---:|---:|---:|---:|
+| 1.30 m | 76.43 bar | 38.22 | 171.7 g | +52.9 % |
+| **2.18 m — Gen6 today** | **50.00 bar** | **25.00** | **112.3 g** | — |
+| 4.00 m | 32.52 bar | 16.26 | 73.0 g | −35.0 % |
+| 6.00 m | 25.84 bar | 12.92 | 58.0 g | −48.3 % |
+| **8.00 m** | **22.73 bar** | **11.36** | **51.0 g** | **−54.5 %** |
+
+**The same exit velocity at 45 % of the acceleration on 45 % of the gas.** Added mass per satellite
+falls **1.403 → 1.296 kg**, because the store shrinks with the charge faster than the tube grows.
+
+**And if velocity is wanted instead of gentleness, the front runs to 52.62 m/s** at 8 m and 60 bar
+— against Gen6's 29.009. **The best single point on velocity-per-g is 8 m at 25 bar: 30.97 m/s at
+12.50 g on 56.2 g of gas, which beats today's design on all three simultaneously.**
+
+### Why stroke is the lever, in two facts the sweep confirms
+
+**Peak acceleration does not depend on stroke at all — deviation 0.000000 g across 1.3 to 8.0 m.**
+a_peak = p₀A/m, and there is no *L* in it. **Lengthening the tube softens nothing.** What it does
+is let the expansion continue after the peak, adding velocity at falling pressure. *To reduce g you
+drop the charge pressure, and stroke is what buys the velocity back.*
+
+**Work from a fixed charge rises with stroke: 1171.9 J at 1.3 m to 5170.8 J at 8.0 m, on
+identical gas.** That is 4.4× the work from the same 2 L at 50 bar, and it is why the gas column
+above falls so fast.
+
+### Band 6 failed, and my prediction was backwards
+
+**I predicted the friction fraction would be roughly invariant**, reasoning that friction work and
+shot work both scale with *L*. **They do not.** Friction work scales *linearly*; shot work
+**saturates** toward the constant-pressure ceiling. So friction grows faster than the shot does:
+
+| | 1.3 m | 2.18 m | 8.0 m |
+|---|---:|---:|---:|
+| Ceiling realised | 91.9 % | 87.2 % | **65.9 %** |
+| **Friction share of the shot** | **9.25 %** | 9.75 % | **12.90 %** |
+
+**This is the real cost of the long-stroke direction, and it is P67 getting worse.** The defect
+that already owns 93.4 % of the dispersion also takes a growing share of the energy as the tube
+lengthens. **A longer machine is more sensitive to a seal nobody has measured, not less.**
+
+### Band 1 failed on a definition, and the definition is P67
+
+**Work matches A41 exactly — 1864.8 J.** Velocity does not: **29.009 against 30.535.**
+
+**A41's figure is zero-friction. This surface includes friction**, so it lands on A44's
+with-friction number instead. *The band asked the surface to reproduce a figure computed without a
+term the surface contains.* **My declaration error**, in the same family as A48 band 5 and A40
+band 1 — and it is the third time this project has recorded that **30.535 m/s is a number with a
+condition attached that keeps getting dropped.**
+
+**The band stands as failed.** The prediction that went with it — 18 bar and 9 g — was computed
+against the zero-friction 30.535 and so is low; the with-friction answer is **22.73 bar and
+11.36 g.** Directionally right, both magnitudes out by about a quarter, for the same reason.
+
+## What this run does not do
+
+- **It does not size a store.** The 4.10 kg at the recommended point is A43's store **scaled by
+  the gas ratio** — an estimate, not a sized design, and it is labelled as one in the JSON.
+- **No bending, no alignment tolerance, no dynamic seal behaviour.** An 8 m tube on a stage has a
+  straightness requirement this run does not state and cannot meet by assumption.
+- **The 8 m stage is A37's largest class** and no launch provider has agreed to any of it.
+- **Friction is Coulomb and constant**, which band 6 has just shown is the term that matters most.

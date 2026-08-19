@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **112 numbered entries, of which 45 are live.** Every entry carries a `Status:` line written by
+> **113 numbered entries, of which 46 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3382,6 +3382,50 @@ corrects** and ADR-033 should be reversed.
 **And a cheaper outcome that would close it for free.** **P67** — measure the seal friction. If it
 is small, the dispersion the stage exists to correct is not there, and neither the stage nor its
 store is needed.
+
+### P78. Stroke buys velocity and gentleness together, and makes the worst defect worse: HIGH, NEW 2026-08-16
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A49](validation/A49_design_surface.md) swept the surface A37 never asked about, and found a
+better design point — with one cost that lands squarely on the defect that already matters most.**
+
+**The win.** Holding Gen6's exit velocity and spending stroke instead of pressure:
+
+| | Gen6 today | **8 m recommended** |
+|---|---:|---:|
+| Stroke | 2.18 m | **8.00 m** |
+| Charge | 50.00 bar | **22.73 bar** |
+| **Peak acceleration** | **25.00 g** | **11.36 g** |
+| Gas per shot | 112.3 g | **51.0 g — 54.5 % less** |
+| Added mass per satellite | 1.403 kg | **1.296 kg** |
+
+**Fourteen of sixty-three surface points beat the current design on velocity, peak acceleration and
+gas simultaneously.** The best on velocity-per-g is 8 m at 25 bar: **30.97 m/s at 12.50 g on 56.2 g
+of gas.**
+
+**The cost, and A49 band 6 failed to catch it because I declared the band on backwards reasoning.**
+
+| | 1.3 m | 2.18 m | 8.0 m |
+|---|---:|---:|---:|
+| Constant-pressure ceiling realised | 91.9 % | 87.2 % | **65.9 %** |
+| **Friction share of the shot** | 9.25 % | 9.75 % | **12.90 %** |
+
+**Friction work scales linearly with stroke. Shot work saturates.** So a longer tube gives friction
+a growing share of the energy — **9.25 % to 12.90 %** — and **P67**, the seal friction that already
+owns 93.4 % of the velocity dispersion, becomes *more* load-bearing as the machine gets longer, not
+less.
+
+**Why this is one entry and not two.** The velocity, the gentleness and the gas saving are all the
+same physics as the rising friction share: a fixed charge expanding down a longer tube extracts
+more work while the pressure falls, and falling pressure is exactly when a constant friction force
+costs proportionally more. **The benefit and the cost cannot be separated, and a design point that
+takes one takes the other.**
+
+**What would close it.** **P67** — measure the seal friction. At 9.25 % it is a rounding error and
+the long stroke is free; at 12.90 % of a shot it is a design driver; and if the real friction is
+several times A41's *allowance*, the long-stroke direction inverts. **The same measurement decides
+this, ADR-033's trim stage and P77's pulse store.** One bench test governs three open decisions.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
