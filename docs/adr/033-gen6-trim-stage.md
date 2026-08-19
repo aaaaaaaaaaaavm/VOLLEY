@@ -2,13 +2,21 @@
 
 **Status:** Accepted · **Date:** 2026-08-16 · **Phase:** I · **Extends:** [ADR-032](032-gen6-stage-integrated-gas-store.md)
 
-> ## Amended 2026-08-19 by [ADR-034](034-gen6-long-stroke-design-point.md)
+> ## Amended 2026-08-19 by [ADR-034](034-gen6-long-stroke-design-point.md), and resized the same day by [A55](../../validation/A55_trim_authority.md)
 >
-> **The trim section now sits at x = 7960.3 on an 8.0 m stroke, where it is 0.496 % of the stroke
-> rather than 1.822 %.** More importantly, **its 0.323 m/s of authority was sized against A44's
-> dispersion at a 9.75 % friction share, and ADR-034 runs at 28.39 %.** Neither A44 nor A48 has
-> been re-run. **The stage may be under-authority against the dispersion the long stroke creates —
-> P83**, which feeds falsifier 1 below.
+> **The section is 144.01 mm at x = 7855.99, not 39.7 mm at x = 7960.3, and it carries 1.1543 m/s
+> rather than 0.323.** A48 sized it against A44's dispersion at a **9.75 %** friction share;
+> ADR-034 runs at **28.39 %**, and A55 re-ran both. **The stage was under-authority by 3.57× —
+> P83, confirmed and closed.** Mass goes **0.340 → 1.2328 kg**, and added mass per satellite to
+> **1.3987 kg** against an unmoved 2.0 kg threshold.
+>
+> **The decision below stands and only its size changed.** Read every section length, energy and
+> mass figure in this file as A48's, not the current one.
+>
+> **Falsifier 1 is not made worse, which is the opposite of what was expected.** It rests on pulse
+> hardware scaling with *current*, and **peak power moves 27 820 → 28 606 W, 2.8 %** — the force
+> per metre is fixed by A2 and A1, so the section gets longer rather than harder to drive. **The
+> store still has not been weighed. P77.**
 
 ## Context
 

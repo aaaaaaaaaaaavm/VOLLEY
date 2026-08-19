@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **120 numbered entries, of which 52 are live.** Every entry carries a `Status:` line written by
+> **120 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3583,8 +3583,8 @@ saving, ADR-034 buys gentleness and pays mass for it**, and the added-mass-per-s
 script is touched, and write the sized volume into `parameters.json`. **The current 9.55 L is
 conservative rather than wrong**, which is why this is MEDIUM.
 
-### P83. The trim stage's authority was sized against a friction share that has since tripled: HIGH, NEW 2026-08-19
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P83. The trim stage's authority was sized against a friction share that has since tripled: HIGH, CORRECTED 2026-08-19
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **[ADR-033](docs/adr/033-gen6-trim-stage.md) exists because Gen6 cannot command velocity
@@ -3610,12 +3610,36 @@ required, and **ADR-033 falsifier 1 is that the pulse store weighs more than the
 feeds** — a store that has never been weighed at *any* authority. **A larger authority makes the
 project's most likely falsifier more likely.**
 
-**What would close it:** re-run A44 at ADR-034's stroke and friction, re-declare A48's bands
-against the result, and either confirm 39.7 mm or resize it. **P67 governs this too** — the whole
-chain rests on a seal coefficient measured on nothing.
+**What closed it:** [A55](validation/A55_trim_authority.md) re-ran A44 at ADR-034's stroke and
+friction, re-declared A48's bands against the result, and **resized the section rather than
+confirming it.** **P67 governs the result** — the whole chain still rests on a seal coefficient
+measured on nothing.
 
-### P84. ADR-034 moved the parameter file and the documents, and left the analysis scripts at the old design point: HIGH, NEW 2026-08-19
-> **Status:** `LIVE` — open engineering; something still has to be done
+> **Corrected.** [A55](validation/A55_trim_authority.md) ran on 2026-08-19 and **the allegation
+> holds, by more than this entry estimated.**
+>
+> | | A48 as built | A55, resized |
+> |---|---:|---:|
+> | 3σ dispersion | 1.113 % | **3.980 %** |
+> | Authority | 0.323 m/s | **1.1543 m/s — 3.57× short** |
+> | Section | 39.7 mm | **144.01 mm** |
+> | Mass | 0.340 kg | **1.2328 kg** |
+>
+> **The section is resized in `cad/parameters.json` and ADR-033 is amended rather than reversed.**
+> Added mass per satellite goes to **1.3987 kg** against an unmoved 2.0 kg threshold, so no
+> kill-criterion numerator moves and ADR-034 stands.
+>
+> **And the falsifier this entry expected to aggravate does not move.** ADR-033's own argument is
+> that pulse hardware scales with *current*, not energy — and **peak power goes 27 820 → 28 606 W,
+> 2.8 %**, because the force per metre is fixed. The section gets longer, not harder to drive.
+> **P77 is not made worse.**
+>
+> **What replaces this entry is band 9's sweep**: the section crosses a kilogram somewhere between
+> a **20 % and a 28 %** friction share, so **P67's bench measurement now sets a section length as
+> well as a dispersion.**
+
+### P84. ADR-034 moved the parameter file and the documents, and left the analysis scripts at the old design point: HIGH, CORRECTED 2026-08-19
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **`analysis/precharged.py` still declares `STROKE = 2.18` and `G_CAP = 25.0`.**
@@ -3639,16 +3663,30 @@ scripts never saw it.
 > the analysis scripts**, so a design point can move in one and not the other and every gate stays
 > green. That is a hole in the verification, not just a stale constant.
 
-**What would close it.** `precharged.py` reads the design point from `cad/parameters.json` rather
+**What closed it.** `precharged.py` reads the design point from `cad/parameters.json` rather
 than declaring it — ADR-015's *derive, never paste*, which
 [`cad/tools/make_scad_params.py`](cad/tools/make_scad_params.py) already cites for the CAD side.
 A41's own declared values stay in the file under their own names so **A41 continues to reproduce**;
 the Gen6 scripts read the current point. **And a check that fails when the two disagree**, which is
-the thing that is actually missing. Scheduled with **A55** and **A56**.
+the thing that was actually missing. **Landed with A55 on 2026-08-19.**
 
 **This is a defect in work done three days ago, and it was found by reading rather than by any
 gate.** It is recorded here rather than quietly fixed, which is the rule the register exists to
 enforce.
+
+> **Corrected 2026-08-19, with A55.** `precharged.py::design_point()` reads the stroke,
+> acceleration and charge pressure from `cad/parameters.json`, and
+> **`check_against_parameters()` is the gate that did not exist** — it also verifies that the force
+> and acceleration the parameter file records actually follow from the pressure it records, so the
+> three cannot drift apart silently.
+>
+> **A41's own point is frozen as `STROKE_A41` and `G_CAP_A41`, and `main()` asserts A41 still
+> reproduces**: 30.54 m/s at 25.00 g on a 4.66 kg store. *A refactor that breaks a dated result is
+> worse than a stale constant, so it fails loudly.*
+>
+> **The consequence was real and is now measured.** A44 and A48 had been answering a superseded
+> question for three days; [A55](validation/A55_trim_authority.md) re-ran them and found the trim
+> stage **under-authority by 3.57×** — see **P83**.
 
 ### P85. Nobody has said what the drive tube is made of, and the two candidates differ by 2.15 kg: MEDIUM, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done

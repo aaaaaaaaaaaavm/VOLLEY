@@ -344,16 +344,16 @@
     },
     "gen6_trim": {
       "_document": "Built by cad/build_gen6.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.",
-      "_source": "A48 bands 2-4 and 6-7. The section length is the +-3 sigma authority of A44's measured dispersion at Gen5's sheet current and A2's depth-resolved Kt. The PULSE STORE THAT FEEDS IT IS NOT SIZED -- 37.7 J at 28 kW, ADR-033 falsifier 1. AUTHORITY NOT RE-RUN AT ADR-034: 0.323 m/s was sized against A44's dispersion at a 9.75 % friction share; the adopted point runs at 28.39 % -- P83.",
-      "section_length_mm": 39.7,
-      "section_start_mm": 7960.3,
+      "_source": "A55 bands 4 and 6, which resized it. A48's 39.7 mm carried 0.323 m/s against A44's dispersion over a 2.18 m stroke; at ADR-034's 8.0 m the same model needs 1.1543 m/s and 144.01 mm -- P83, confirmed and closed. The section is 1.800 % of the stroke, against A48's 1.822 %, so it grew in exact proportion. PEAK POWER IS ESSENTIALLY UNCHANGED at 28.6 kW: the force per metre is fixed by A2's thrust constant and A1's sheet current, so the section gets longer rather than harder to drive. THE PULSE STORE THAT FEEDS IT IS STILL NOT SIZED -- ADR-033 falsifier 1, P77.",
+      "section_length_mm": 144.01,
+      "section_start_mm": 7855.99,
       "thrust_constant_N_per_kA_m": 10.5386,
       "sheet_current_A_per_m": 90000.0,
       "force_N": 948.0,
-      "authority_m_s": 0.323,
-      "energy_per_correction_J": 37.7,
-      "peak_mechanical_W": 27820.0,
-      "added_mass_kg": 0.34,
+      "authority_m_s": 1.1543,
+      "energy_per_correction_J": 136.59,
+      "peak_mechanical_W": 28606.0,
+      "added_mass_kg": 1.2328,
       "pulse_store_kg": null
     }
   },

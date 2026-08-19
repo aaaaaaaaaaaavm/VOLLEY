@@ -1,0 +1,211 @@
+{
+  "analysis": "A55",
+  "bands_declared_commit": "HEAD~1",
+  "a44_point": {
+    "p0_bar": 50.0,
+    "stroke_m": 2.18,
+    "mean": 29.008178610688894,
+    "three_sigma": 0.3229615973366567,
+    "three_sigma_pct": 1.1133466932586118,
+    "work_J": 1864.821497279651,
+    "friction_J": 181.820095984766,
+    "friction_frac": 0.0975,
+    "var_share": {
+      "p_fs": 0.015430880695367431,
+      "m": 0.050286225707364164,
+      "f": 0.9342828935972683
+    }
+  },
+  "adopted_point": {
+    "p0_bar": 22.7258,
+    "stroke_m": 8.0,
+    "mean": 29.00526814841817,
+    "three_sigma": 1.154349320386433,
+    "three_sigma_pct": 3.9797919277273994,
+    "work_J": 2350.232238512899,
+    "friction_J": 667.2297100358385,
+    "friction_frac": 0.28389947984801095,
+    "var_share": {
+      "p_fs": 0.009300305394493127,
+      "m": 0.003941919326952211,
+      "f": 0.9867577752785547
+    }
+  },
+  "trim_a44": {
+    "authority_m_s": 0.3229615973366567,
+    "energy_J": 37.68271918644905,
+    "pct_of_shot": 2.020714542459937,
+    "section_m": 0.03972983886374223,
+    "pct_stroke": 1.8224696726487257,
+    "peak_W": 27819.82387766683,
+    "mass_kg": 0.34008742067363346
+  },
+  "trim_adopted": {
+    "authority_m_s": 1.154349320386433,
+    "energy_J": 136.59389100596445,
+    "pct_of_shot": 5.811931636696198,
+    "section_m": 0.1440143757298191,
+    "pct_stroke": 1.8001796966227386,
+    "peak_W": 28605.61301910698,
+    "mass_kg": 1.2327630562472516
+  },
+  "a48_authority_m_s": 0.323,
+  "a48_section_m": 0.0397,
+  "added_mass_per_satellite_kg": 1.398730254687271,
+  "friction_sweep": [
+    {
+      "share": 0.0975,
+      "friction_N": 28.643455406875958,
+      "mean": 32.56542638801351,
+      "three_sigma": 0.3731090682788486,
+      "three_sigma_pct": 1.1457214280976844,
+      "trim_authority_m_s": 0.3731090682788486,
+      "trim_energy_J": 48.88024434460476,
+      "trim_pct_of_shot": 2.0798048611371938,
+      "trim_section_m": 0.05153567134639933,
+      "trim_pct_stroke": 0.6441958918299916,
+      "trim_peak_W": 31241.344478371444,
+      "trim_mass_kg": 0.4411453467251783
+    },
+    {
+      "share": 0.15,
+      "friction_N": 44.06685447211686,
+      "mean": 31.60355791883874,
+      "three_sigma": 0.5705248683710742,
+      "three_sigma_pct": 1.8052551862554274,
+      "trim_authority_m_s": 0.5705248683710742,
+      "trim_energy_J": 72.77346013767192,
+      "trim_pct_of_shot": 3.0964369795096958,
+      "trim_section_m": 0.07672688986484807,
+      "trim_pct_stroke": 0.959086123310601,
+      "trim_peak_W": 30516.28099751604,
+      "trim_mass_kg": 0.6567821772430995
+    },
+    {
+      "share": 0.2,
+      "friction_N": 58.75580596282248,
+      "mean": 30.659273337861364,
+      "three_sigma": 0.775005919337569,
+      "three_sigma_pct": 2.5278026351019496,
+      "trim_authority_m_s": 0.775005919337569,
+      "trim_energy_J": 96.24574162774093,
+      "trim_pct_of_shot": 4.095158769868635,
+      "trim_section_m": 0.10147430675774025,
+      "trim_pct_stroke": 1.2684288344717531,
+      "trim_peak_W": 29814.596584192503,
+      "trim_mass_kg": 0.8686200658462565
+    },
+    {
+      "share": 0.2839,
+      "friction_N": 83.4038665642265,
+      "mean": 29.005257599310273,
+      "three_sigma": 1.1543518259829315,
+      "three_sigma_pct": 3.9798020135852243,
+      "trim_authority_m_s": 1.1543518259829315,
+      "trim_energy_J": 136.59414456777677,
+      "trim_pct_of_shot": 5.811942425494351,
+      "trim_section_m": 0.14401464306641695,
+      "trim_pct_stroke": 1.800183038330212,
+      "trim_peak_W": 28605.605390045548,
+      "trim_mass_kg": 1.2327653446485292
+    },
+    {
+      "share": 0.35,
+      "friction_N": 102.82266043493934,
+      "mean": 27.631886557721874,
+      "three_sigma": 1.4904950400645456,
+      "three_sigma_pct": 5.394112475639196,
+      "trim_authority_m_s": 1.4904950400645456,
+      "trim_energy_J": 169.18391037655647,
+      "trim_pct_of_shot": 7.198603933865147,
+      "trim_section_m": 0.1783748530550721,
+      "trim_pct_stroke": 2.2296856631884014,
+      "trim_peak_W": 27621.821763578875,
+      "trim_mass_kg": 1.5268887421514175
+    },
+    {
+      "share": 0.45,
+      "friction_N": 132.20056341635058,
+      "mean": 25.411812936756654,
+      "three_sigma": 2.081141270647581,
+      "three_sigma_pct": 8.189660752764851,
+      "trim_authority_m_s": 2.081141270647581,
+      "trim_energy_J": 220.20458863542672,
+      "trim_pct_of_shot": 9.369482088917321,
+      "trim_section_m": 0.23216723772652356,
+      "trim_pct_stroke": 2.9020904715815443,
+      "trim_peak_W": 26076.352248913525,
+      "trim_mass_kg": 1.9873515549390417
+    },
+    {
+      "share": 0.6,
+      "friction_N": 176.26741788846743,
+      "mean": 21.651112063497727,
+      "three_sigma": 3.2602730225314387,
+      "three_sigma_pct": 15.058224321087105,
+      "trim_authority_m_s": 3.2602730225314387,
+      "trim_energy_J": 303.6129066365992,
+      "trim_pct_of_shot": 12.91842149304824,
+      "trim_section_m": 0.32010672578963595,
+      "trim_pct_stroke": 4.001334072370449,
+      "trim_peak_W": 23627.80105808643,
+      "trim_mass_kg": 2.740113572759284
+    }
+  ],
+  "bands": [
+    {
+      "n": "1",
+      "band": "reproduces A44's 1.113 % at 3 sigma within 2 % relative",
+      "value": "1.1133 %",
+      "verdict": "PASS"
+    },
+    {
+      "n": "2",
+      "band": "friction still owns >= 80 % of the variance at the adopted point",
+      "value": "98.68 %",
+      "verdict": "PASS"
+    },
+    {
+      "n": "3",
+      "band": "3 sigma at the adopted point <= 2.0 %",
+      "value": "3.9798 %",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "4",
+      "band": "A48's 0.323 m/s section still covers +-3 sigma",
+      "value": "needs 1.1543 m/s, has 0.323 (3.57x)",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "5",
+      "band": "section <= 15 % of the stroke (A48 band 3)",
+      "value": "1.8002 %",
+      "verdict": "PASS"
+    },
+    {
+      "n": "6",
+      "band": "resized section mass <= 1.0 kg",
+      "value": "1.2328 kg",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "7",
+      "band": "added mass per satellite with the resized section <= 2.0 kg",
+      "value": "1.3987 kg",
+      "verdict": "PASS"
+    },
+    {
+      "n": "8",
+      "band": "correction energy <= 5 % of the shot",
+      "value": "5.8119 %",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "9",
+      "band": "REPORT: authority against friction share",
+      "value": "7 points, 0.3731 to 3.2603 m/s",
+      "verdict": "REPORT"
+    }
+  ]
+}

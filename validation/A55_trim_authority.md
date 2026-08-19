@@ -82,3 +82,130 @@ survives as a decision and what changes is its cost.
 - **It does not model the sensor.** A loop is only as good as what it measures and Gen6 has no
   velocity sensor in any file.
 - **The friction coefficient is still A41's allowance, not a measurement.** **P67. E4 stands.**
+
+---
+
+## Result
+
+**RUN 2026-08-19. Four of nine bands pass. P83 is confirmed and it is worse than predicted, but
+the falsifier it was expected to feed turns out not to move.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces A44's 1.113 % within 2 % | **1.1133 %** | **PASS** |
+| 2 | friction owns ≥ 80 % of the variance | **98.68 %** | **PASS** |
+| **3** | 3σ at the adopted point ≤ 2.0 % | **3.9798 %** | **FAIL, 2.0×** |
+| **4** | A48's 0.323 m/s covers ±3σ | **needs 1.1543 m/s** | **FAIL, 3.57×** |
+| 5 | section ≤ 15 % of the stroke | **1.80 %** | **PASS** |
+| **6** | resized section ≤ 1.0 kg | **1.2328 kg** | **FAIL** |
+| 7 | added mass per satellite ≤ 2.0 kg | **1.3987 kg** | **PASS** |
+| **8** | correction energy ≤ 5 % of the shot | **5.81 %** | **FAIL** |
+| 9 | authority against friction share | 7 points, **0.373 → 3.260 m/s** | **REPORT** |
+
+**Band 1 reproduced A44 to four decimal places** — 1.1133 % against its stored 1.11334669 %, and
+the seal's variance share at **93.4 %** against A44's reported 93.4 %. *The two runs are the same
+model at two points, which is what band 1 exists to establish.*
+
+> ### Band 1 caught a bug in this script before it caught anything about the design
+>
+> **The first run returned 1.2353 % and failed band 1 by 11 %.** The cause was in
+> `trim_authority.py`, not in A44: `gen6_dispersion.py` references the transducer's full scale to
+> **a fixed 50 bar**, and this script had written **200 bar**, the storage pressure. That made the
+> pressure noise four times too large.
+>
+> **The band was not widened. The script was fixed and the run repeated.** This is the fourth time
+> in this project that a band declared beforehand has found a defect in the analysis rather than in
+> the design.
+
+### What ADR-034's stroke did to the open-loop shot
+
+| | A44's point, 2.18 m at 50 bar | **Adopted, 8.0 m at 22.73 bar** | |
+|---|---:|---:|---|
+| Exit velocity | 29.008 m/s | **29.005 m/s** | held, by construction |
+| **3σ dispersion** | 0.3230 m/s, **1.113 %** | **1.1543 m/s, 3.980 %** | **3.57×** |
+| Friction work | 181.8 J | **667.2 J** | 3.67× |
+| Friction share of shot work | 9.75 % | **28.39 %** | 2.91× |
+| **Variance owned by the seal** | 93.4 % | **98.68 %** | **it now owns almost all of it** |
+
+**The dispersion tracks the friction work almost exactly** — 3.57× against 3.67× — which is the
+mechanism stated plainly: a constant Coulomb force acting over a longer stroke removes more work,
+and its ±20 % uncertainty removes a proportionally larger uncertainty with it.
+
+**Every other error term has been squeezed out.** At 98.68 %, the transducer and the payload mass
+together account for 1.3 % of the variance. **There is now effectively one error source in this
+machine, and it is the one that has never been measured.**
+
+### The trim stage, resized
+
+| | A48 as built | **A55, resized** | |
+|---|---:|---:|---|
+| Authority | 0.323 m/s | **1.1543 m/s** | **3.57×** |
+| Section length | 39.7 mm | **144.0 mm** | 3.63× |
+| As a fraction of the stroke | 1.822 % | **1.800 %** | *unchanged* |
+| Correction energy | 37.7 J | **136.6 J** | 3.62× |
+| As a fraction of the shot | 2.02 % | **5.81 %** | **band 8 fails** |
+| **Section mass** | **0.340 kg** | **1.2328 kg** | **3.63×** |
+| Added mass per satellite | 1.431 kg | **1.3987 kg** | *lower, on ADR-034's smaller base* |
+
+**Band 7 is the one that matters and it holds.** The resized section costs 0.103 kg per satellite
+against ADR-034's 1.296 kg base, so **1.3987 kg against an unmoved 2.0 kg threshold.** The design
+does not re-cross the one kill-criterion numerator Gen6 passes.
+
+> ### The falsifier this was expected to feed does not move
+>
+> **ADR-033 falsifier 1 is that the pulse store weighs more than the section it feeds**, and the
+> ADR's own reasoning is that *"pulse hardware scales with current, not energy."*
+>
+> **The current does not change.** Peak power goes from **27 820 W to 28 606 W — 2.8 %** — because
+> the force per metre is fixed by A2's thrust constant and A1's sheet current, and the exit
+> velocity is held. **The section gets longer, not harder to drive.**
+>
+> **So the energy the store must deliver grows 3.6× while the peak current it must switch is
+> essentially unchanged.** By ADR-033's own scaling argument, that is the cheaper of the two ways
+> to grow. **P77 is not made worse by this run**, which is the opposite of what was predicted.
+
+### The prediction, and where it was wrong
+
+**Recorded before the run: 3σ near 3 %, authority near 0.9 m/s, about 2.8× short, band 4 failing
+and band 6 passing.**
+
+**Direction right, magnitude understated, and band 6 went the other way.** 3σ came in at 3.98 %
+rather than 3 %, the authority at 1.154 m/s rather than 0.9, the shortfall at 3.57× rather than
+2.8×, and **band 6 failed** — the resized section is 1.2328 kg, not under the kilogram predicted.
+
+### Band 9 — what P67's measurement decides, read off directly
+
+| Friction share of shot work | Force | 3σ | Authority needed | Section | Section mass |
+|---:|---:|---:|---:|---:|---:|
+| 9.75 % *(A44's share)* | 28.6 N | 1.146 % | 0.373 m/s | 51.5 mm | 0.441 kg |
+| 15 % | 44.1 N | 1.805 % | 0.571 m/s | 76.7 mm | 0.657 kg |
+| 20 % | 58.8 N | 2.528 % | 0.775 m/s | 101.5 mm | 0.869 kg |
+| **28.39 %** *(A41's allowance)* | **83.4 N** | **3.980 %** | **1.154 m/s** | **144.0 mm** | **1.233 kg** |
+| 35 % | 102.8 N | 5.394 % | 1.491 m/s | 178.4 mm | 1.527 kg |
+| 45 % | 132.2 N | 8.190 % | 2.081 m/s | 232.2 mm | 1.987 kg |
+| 60 % | 176.3 N | 15.058 % | 3.260 m/s | 320.1 mm | 2.740 kg |
+
+**Band 6's 1.0 kg limit is crossed somewhere between a 20 % and a 28 % friction share.** A bench
+measurement below about **22 %** keeps the trim stage under a kilogram; above **45 %** the section
+alone exceeds the 2.0 kg per-satellite threshold.
+
+**Note the first row.** Even at A44's own friction share, the 8.0 m stroke needs **0.373 m/s**
+against A48's 0.323 — so **A48's section was marginal at the old stroke and is short at the new
+one for two separate reasons**, only one of which is friction.
+
+## Consequences
+
+- **[ADR-033](../docs/adr/033-gen6-trim-stage.md) is amended, not reversed.** The decision stands;
+  the section is **144.0 mm at x = 7856.0**, not 39.7 mm at x = 7960.3.
+- **[ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md) does not move.** Band 7 holds and
+  no kill-criterion numerator changes. The stroke is not what needs re-selecting.
+- **P83 closes as confirmed.** The stage was under-authority by 3.57×, which is what it alleged.
+- **P77 stands and is not aggravated**, on the peak-current argument above.
+- **P67 now sets a section length as well as a dispersion**, and band 9 is the table to read it against.
+
+## What this run did not settle
+
+- **It does not weigh the pulse store.** That is **A54**, and it remains ADR-033's actual falsifier.
+- **There is still no velocity sensor in any file.** A loop is only as good as what it measures,
+  and the 1.4 ms available to measure in has not moved.
+- **The friction is still A41's allowance, not a measurement.** **P67. E4 stands.**
