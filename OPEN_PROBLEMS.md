@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **118 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
+> **119 numbered entries, of which 51 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3613,6 +3613,42 @@ project's most likely falsifier more likely.**
 **What would close it:** re-run A44 at ADR-034's stroke and friction, re-declare A48's bands
 against the result, and either confirm 39.7 mm or resize it. **P67 governs this too** — the whole
 chain rests on a seal coefficient measured on nothing.
+
+### P84. ADR-034 moved the parameter file and the documents, and left the analysis scripts at the old design point: HIGH, NEW 2026-08-19
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**`analysis/precharged.py` still declares `STROKE = 2.18` and `G_CAP = 25.0`.**
+[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) took the stroke to **8.0 m** and the
+charge pressure to **22.73 bar**, and propagated that into `cad/parameters.json`, the CAD, the
+renders and eleven documents. **It did not propagate into the scripts.**
+
+| Reads the stale constant | Consequence |
+|---|---|
+| `analysis/gen6_dispersion.py` — `w_net = w - friction_N * pc.STROKE` | **A44's dispersion is computed over 2.18 m.** It is the input to ADR-033's whole justification |
+| `analysis/trim_stage.py` — `STROKE = pc.STROKE` | **A48's section length and authority are sized against that dispersion** |
+| `analysis/precharged.py::store_mass` | Uses `P_MAX`, the charge pressure at the **25 g** cap — the point ADR-034 replaced |
+
+**A44 and A48 are currently answering a superseded question**, which is the same finding as
+**P83** arriving by a second route: P83 says the friction *share* tripled, and this says the
+scripts never saw it.
+
+> **Why the checks did not catch it, which is the part worth keeping.** `make_baseline.py --check`
+> compares the scripts against **their own outputs**, and `build_gen6.py --check` compares the CAD
+> against **`parameters.json`**. **Nothing in this repository compares the parameter file against
+> the analysis scripts**, so a design point can move in one and not the other and every gate stays
+> green. That is a hole in the verification, not just a stale constant.
+
+**What would close it.** `precharged.py` reads the design point from `cad/parameters.json` rather
+than declaring it — ADR-015's *derive, never paste*, which
+[`cad/tools/make_scad_params.py`](cad/tools/make_scad_params.py) already cites for the CAD side.
+A41's own declared values stay in the file under their own names so **A41 continues to reproduce**;
+the Gen6 scripts read the current point. **And a check that fails when the two disagree**, which is
+the thing that is actually missing. Scheduled with **A55** and **A56**.
+
+**This is a defect in work done three days ago, and it was found by reading rather than by any
+gate.** It is recorded here rather than quietly fixed, which is the rule the register exists to
+enforce.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

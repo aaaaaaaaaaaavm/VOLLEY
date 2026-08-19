@@ -15,9 +15,15 @@ Secondary payloads inherit the orbit of whoever paid for the launch. The spring 
 gives 1–2 m/s — enough to clear the stage, not enough to change where they end up. Ninety-two
 percent of CubeSats carry no propulsion, so that is where they stay.
 
-VOLLEY replaces the spring with a linear motor and a magazine. Twelve satellites, one at a time,
-each at a velocity commanded for it. **The satellite is never modified** — no armature, no
-plating, no electrical interface.
+VOLLEY replaces the spring with a magazine and a commanded shot. Twelve satellites, one at a
+time, each leaving at a velocity chosen for it. **The satellite is never modified** — no
+armature, no plating, no electrical interface.
+
+**The word carrying the product is *commanded*.** A spring gives every satellite the same push;
+distribution needs a *difference*. **Gen5 delivered that difference with a linear synchronous
+motor. Gen6 delivers the energy with cold gas and commands the velocity electromagnetically** —
+the division of labour is set out below, and it is the honest description of what the machine
+now is.
 
 **This repository is the engineering record, not a brochure.** Every analysis declares what would
 count as failure *before* it runs, every defect is numbered including the ones that damage the
@@ -28,9 +34,160 @@ work's own claims, and nothing here has been built, fired or measured.
 | **[What it is, and why](docs/CONCEPT.md)** | The idea, before the machine |
 | **[Where it stands](docs/STATE_OF_THE_PROJECT.md)** | Open decisions, crossed thresholds, what would settle each |
 | **[What could kill it](docs/KILL_CRITERIA.md)** | Seven thresholds, three of them crossed |
-| **[The defect register](OPEN_PROBLEMS.md)** | 118 numbered entries, 50 live |
+| **[The defect register](OPEN_PROBLEMS.md)** | 119 numbered entries, 51 live |
 | **[One page](SUMMARY.md)** | If you only read one file |
 | **[Repository descriptions](docs/REPO_METADATA.md)** | The About text, which lives outside git and must be applied by hand |
+
+---
+
+## Start here — the whole thing, in five minutes
+
+**This page is long because the record is long.** What follows is the through-line: the problem,
+the four decisions that shaped the answer, how a satellite actually leaves the machine today, and
+what is wrong with it. Every figure below is stated again, with its source, further down.
+
+### The problem, in one sentence
+
+> **A rideshare CubeSat does not choose its orbit. It inherits whoever paid for the launch.**
+
+The spring that ejects a secondary gives **1–2 m/s** — enough to clear the stage, not enough to
+change where the satellite ends up. **About 222 of 4,800+ catalogued nanosatellites carry
+propulsion to fix that, roughly eight percent.** The other ninety-two go where the manifest put
+them and stay there.
+
+**That is a distribution problem, not a deployment problem**, and the distinction is the whole
+project. A constellation is only a constellation once its members are distributed.
+
+### The idea
+
+**A launch vehicle's upper stage does its job in about ten minutes and then becomes debris.** The
+mass, the structure, the attitude control and the residual propellant are all thrown away — and
+POEM is the flown proof that this is a waste rather than a necessity.
+
+> **After the primary payload separates, the spent stage stops being debris and becomes a
+> last-mile delivery vehicle.** It repositions between altitude shells on its own reaction
+> control, and at each station VOLLEY fires satellites off it at individually commanded
+> velocities. When the magazine is empty the stage makes its final burn and reenters.
+
+**The satellites are never modified.** They arrive as they would arrive at a spring and they
+leave at a velocity chosen for each one.
+
+### The decisions that got it here
+
+*Five entries, because the 2021 row is the starting point rather than a decision. The full arc,
+with what each CAD generation assumed, is [`docs/LINEAGE.md`](docs/LINEAGE.md).*
+
+| When | | What moved |
+|---|---|---|
+| **2021** | Concept, built around a coilgun | The problem is named. Presented at ARDE / INSARM |
+| **2023** | **[ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md) — the host is a spent upper stage** | **This set the direction.** A free-flyer must carry attitude control, power and recoil management, *"which is most of a spacecraft"*. A spent stage already has all three — so VOLLEY became a payload rather than a mission |
+| **mid-2025** | Coilgun → linear synchronous motor | Not for accuracy, whatever the record used to say. From the notebooks: *"the acceleration is enormous and the EMI environment is awful. **That defeats the whole point of supporting unmodified CubeSats**"* |
+| **2026-08-14** | **[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) — the stage stops being the host and becomes the machine** | No mover, no stator, no bank, no brake. **29.75 kg deleted, 43.33 kg reassigned to the stage** |
+| **2026-08-19** | **[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) — the stroke becomes the stage** | The last thing the machine carried for itself was its own length. **2.18 m of tube on an 8 m vehicle became 8.0 m** |
+
+**Read them together and one line runs through all of them: every architecture change moved the
+design closer to *being* the stage rather than riding one.** *It is not a claim that anyone
+planned it that way — each step was taken for a reason recorded at the time, and `LINEAGE.md`
+says so in those words.*
+
+### How a satellite leaves, today
+
+**The stage is the machine. Nothing throws the payload but gas.**
+
+| | |
+|---|---|
+| **1. Charge** | A **9.55 L bottle at 200 bar** fills a **2 L chamber to 22.73 bar** of nitrogen — slowly, across the twenty minutes between shots. **0.26 W average, 36 W peak** |
+| **2. Fire** | The chamber opens as a **closed adiabatic expansion** — no regulator, by construction, because [A40](validation/A40_blowdown_transient.md) killed the fixed-orifice version at 14.16 m/s against a 30 m/s band. A carriage carrying the piston face and the cradle pushes the satellite down **8.0 m** of tube |
+| **3. Trim** | A **39.7 mm linear stator at the muzzle**, energised *after* the gas has finished, corrects the velocity the gas actually produced — **±0.323 m/s**. It never throws the payload |
+| **4. Release** | The carriage is **not recovered**. The satellite leaves; nothing comes back |
+| **5. Index** | The magazine advances the next of twelve. Cadence about **1200 s** |
+
+### Is it still an electromagnetic deployer?
+
+**Partly, and the honest accounting is worth having in front of you.**
+
+| | **Gen5** — the frozen baseline | **Gen6** — the current design target |
+|---|---|---|
+| What accelerates the payload | a linear synchronous motor over **1.3 m** | **cold gas over 8.0 m** |
+| Electromagnetics | the whole machine | **39.7 mm of stator — 0.5 % of the stroke, 0.340 kg** |
+| What the motor does | delivers the energy **and** commands the velocity | **commands the velocity only** |
+
+> **The electromagnetics moved from doing the work to doing the job.**
+
+That is the actual division of labour, and it is why [ADR-033](docs/adr/033-gen6-trim-stage.md)
+exists. **A gas store is an excellent energy store and a terrible servo; a linear machine is the
+reverse.** Gen6 uses each for what it is good at.
+
+**But take the stator out and VOLLEY is a gas gun with a 1.113 % scatter it cannot correct** —
+and [A44](validation/A44_gen6_dispersion.md) found there is no instrumentation route out of that,
+because a fivefold better pressure transducer moves the dispersion **0.008 %**. *The
+electromagnetics are load-bearing for the one claim nothing else on the market can make.*
+
+**So the defensible description is a magazine-fed deployer with electromagnetically commanded
+exit velocity** — not a railgun that throws satellites, which Gen6 is not.
+
+### Why gas, and what happens without it
+
+**[A39](validation/A39_store_trade.md) ran the trade. Gas won by a factor of four** — against a
+**12.55 kg** budget for store plus mechanism, at 32.7 m/s:
+
+| | store | mechanism | **total** | busts the budget at |
+|---|---:|---:|---:|---:|
+| Steel spring | 7.13 | 4.28 | **11.41 kg** | **34.3 m/s** |
+| **Cold gas** | 0.63 | 2.34 | **2.98 kg** | **89.4 m/s** |
+| Keep the motor *(control)* | 23.76 | — | **23.76 kg** | **every velocity** |
+
+**And the reason is not energy density.**
+
+> **The spring's problem was never storing the energy. It was having to be cocked twelve times.**
+
+A spring stores 7.13 kg of energy and then needs **4.28 kg of mechanism to re-arm it, twelve
+times.** Gas separates the store from the actuator, so re-arming is a valve and **one bottle runs
+the whole manifest.**
+
+**Every alternative was screened by a run that is on the record**, so the trade cannot be read as
+having considered only two:
+
+| | Why not | |
+|---|---|---|
+| **Supercapacitor bank + full motor** | **The bank cannot source the shot on cells anyone sells.** ESR × C is roughly constant within a cell technology: the shot needs **≤ 68 mΩ**, a real 32 × 190 F string is **116–185 mΩ**. Not an engineering gap — a physics one | **P26**, [A10](validation/A10_bank_esr.md) |
+| **Flywheel** | **The one live alternative.** Clears the electrical ceiling at **35 mΩ against 68 — at mass parity, not a saving.** Coupling it through a cable or drum refers rotating inertia straight onto the moving mass | [A25](validation/A25_flywheel_store.md), **P45** |
+| **Lead screw** | DN limit exceeded **8×**, whirling **36×** | [A27](validation/A27_actuator_trade.md) |
+| **Rack and pinion** | Contact drive at full speed in vacuum | A27, **E21** |
+| **Induction drive on a passive mover** | Was Gen6 for a single day. The mover it worked to lighten costs 11.54 kg against **26.35 kg for the pulse it kept** | `VOLLEY-lab` PII-19 |
+
+**Delete gas and the architecture goes with it, not just a component.** Requirement **C3** —
+*the energy arrives during the shot* — comes back, and [A35](validation/A35_constraint_ledger.md)
+prices it at **26.35 kg**. That deletion is most of the 50 % cut in added mass per satellite.
+**Gas is not a component choice; it is what buys the stage-integrated architecture.**
+
+### Where it stands, without the flattering reading
+
+| | |
+|---|---|
+| **Maturity** | TRL 2–3 |
+| **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
+| **Defect register** | **119 numbered entries, 51 live** |
+| **Validation** | **53 run sheets, A1–A53**, each against a band declared *before* the run. **Three failed outright** |
+| **Kill criteria** | **Seven, three crossed** |
+
+| | **Gen5**, the baseline every headline number is computed against | **Gen6** at ADR-034 |
+|---|---:|---:|
+| Exit velocity | **16.029 m/s at 10.07 g** | **34.280 m/s** zero-friction, **29.009** at the friction allowance, **at 11.36 g** |
+| Dispersion, 3σ | **0.0274 m/s**, through a designed loop | **1.113 % open-loop**; 0.0274 m/s with the trim stage |
+| Per 3U satellite | **10.547 kg** dry | **1.296 kg** added — and **up to 3.164** read hostilely |
+
+**Three defects matter more than the rest**, and each is linked to the run that found it:
+
+| | |
+|---|---|
+| **P67** | **The seal friction has never been measured.** It owns 93.4 % of Gen6's dispersion, it is the entire justification for the trim stage, and ADR-034 took its share of shot work from 9.75 % to **28.39 %**. **One bench test now governs five open decisions** |
+| **P68** | **ADR-032's first falsifier has fired.** The stage credit breaks even at **8.4 %**, not the 30 % the ADR claimed — and **58.6 % of it is a skin on a vehicle nobody has agreed to lend** |
+| **P59** | **Kill criterion 1 is crossed at 5.3×**, and A35 and A36 closed the architecture and manifest routes out of it. Only a smaller payload class remains, and **that decision has been deferred since Phase I** |
+
+> **The gap between "fifty-three analyses" and "nothing measured" is the project's real position.**
+> Everything above is computation. **[`docs/B1_ORDER.md`](docs/B1_ORDER.md) is still the one
+> action that changes the category of the evidence rather than its degree.**
 
 ---
 
@@ -286,9 +443,9 @@ Gen6.** That is confusing enough to state plainly rather than leave a reader to 
 | **Per 3U satellite** | — | 10.547 kg dry | **1.324–3.192 kg added**, plus a pulse store nobody has weighed |
 
 **Gen6 traded away the thing this is sold on, and [ADR-033](docs/adr/033-gen6-trim-stage.md)
-buys it back.** Gen5 commanded velocity through a designed loop; Gen6's shot is **133 ms of
+buys it back.** Gen5 commanded velocity through a designed loop; **Gen6's shot is a single
 open-loop expansion** whose spread is **93.4 % a seal friction nobody has measured** (**P67**).
-**A 39.7 mm stator at the muzzle — 1.822 % of the stroke, 0.340 kg — corrects the velocity the gas
+**A 39.7 mm stator at the muzzle — 0.496 % of the stroke, 0.340 kg — corrects the velocity the gas
 actually produced**, because a loop reading a *measured* velocity does not care that gas set it.
 **Gas supplies the energy; the motor supplies the control.**
 
@@ -370,8 +527,13 @@ and threw away the previous answer's central assumption.
 | **Cold gas + trim** | throw it with *the least machine*, then steer it | a **2 L chamber at 22.73 bar** fires the payload along **8.0 m** of rail the spent stage already is; **nothing is recovered**; a **39.7 mm stator** corrects the result | **the pulse, partly.** The trim stage is 37.7 J at 28 kW — C3 returning at a fiftieth of the energy, on hardware nobody has weighed |
 
 **The third row is the honest cost of the third column.** Gen5 held 0.0274 m/s at 3σ because a
-loop corrected the shot as it happened. Gen6 has 133 ms of open-loop expansion and **1.113 %**,
+loop corrected the shot as it happened. Gen6 has one open-loop expansion and **1.113 %**,
 and **93.4 % of that is a seal friction nobody has measured.**
+
+> **The stroke duration is deliberately not quoted here.** It read **133 ms** until 2026-08-19,
+> which is the figure for the 2.18 m stroke ADR-034 superseded, and **the 8.0 m figure has not
+> been run** — A55 produces it. *A number whose consequences have not been computed is not
+> published in this repository, even when the old one is only a little wrong.*
 
 
 <sub><b>Those are kilograms, not percentages, and deliberately.</b> A35's shares were published as
@@ -416,6 +578,12 @@ geometry ([why](cad/stl/README.md)).
 
 ## How a shot works
 
+**Two machines, two shots.** Gen5 is the frozen baseline and every headline number is computed
+against it; Gen6 is the current design target. **The difference is where the energy comes from,
+not what the customer buys.**
+
+### Gen5 — the motor does the work and the job
+
 ```mermaid
 flowchart LR
     A["Cassette feed<br/>12 x 3U, two cassettes"] --> B["Retention gate<br/>preload into structure"]
@@ -431,6 +599,29 @@ The satellite is never modified: the magnets ride the sled, not the payload. The
 release carrying 1268 J; 240 mm of stator past that point takes **291 J of it back into the
 bank**, and the eddy brake absorbs the remaining 935 J. Efficiency is quoted
 electrical-to-payload, net of that credit.
+
+### Gen6 — gas does the work, the motor does the job
+
+```mermaid
+flowchart LR
+    A["Cassette feed<br/>12 x 3U"] --> B["Charge chamber<br/>2 L to 22.73 bar<br/>0.26 W average"]
+    B --> C["Fire<br/>closed adiabatic expansion<br/>8.0 m, 11.36 g"]
+    C --> D["Trim stator<br/>39.7 mm at the muzzle<br/>+/-0.323 m/s"]
+    D --> E["Release<br/>29.009 m/s"]
+    E --> F["Carriage<br/>NOT recovered"]
+    E -.->|"payload departs"| G["Commanded orbit"]
+```
+
+**Nothing throws the payload but gas, and nothing commands it but the stator.** The carriage does
+not come back — Gen6 has no return stroke and no brake, because there is no reusable sled to
+arrest. **The trim section is energised only after the gas has finished**, which is what lets a
+39.7 mm machine recover a precision a 2180 mm one used to provide.
+
+**There is no Gen6 efficiency figure of the Gen5 kind**, and the reason is not an omission: the
+energy arrives as a ground-filled bottle rather than as electricity.
+[A51](validation/A51_gen6_power.md) measures what the machine actually draws — **311.76 J per
+shot, 0.26 W averaged, 36 W peak**. *The 25–131 W this page quoted until 2026-08-16 was a
+spring-winding figure for a machine with no spring — **P80**.*
 
 ## Headline results (all model outputs, not measurements)
 

@@ -88,7 +88,7 @@ so in those words.
 
 ## What this generation assumed about the host
 
-**It assumed the host was **the host is the machine.** Not a mounting surface, not a platform — the structure, the power, the thermal path and the avionics bay are the stage's, and the rail is the stage.**
+**It assumed the host *is* the machine.** Not a mounting surface, not a platform — the structure, the power, the thermal path and the avionics bay are the stage's, the rail is the stage, and since [ADR-034](../adr/034-gen6-long-stroke-design-point.md) the stroke is the stage's whole length.
 
 **85.36 kg — 67.4 % of the ledger — is credited to the stage, and 29.75 kg is deleted outright.** This is [ADR-002](../adr/002-host-is-a-spent-upper-stage.md)'s 2023 decision followed all the way down: if the stage supplies attitude control, power and mass, it can supply the structure too. **The exposure that creates is [P68](../../OPEN_PROBLEMS.md)**, and it is the largest open defect in the design.
 

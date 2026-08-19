@@ -52,8 +52,8 @@ changes that.
 | | | Why it matters |
 |---|---|---|
 | **A54** | **Weigh the pulse chain** — 37.7 J at 28 kW: store, switch, conductors | **P77**, and ADR-033's first falsifier. If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it corrects and ADR-033 reverses |
-| **A55** | **Re-run A44 and A48 at ADR-034's friction share** | **P83.** The trim authority was sized at a **9.75 %** friction share and the design point now runs at **28.39 %**. This one is new, it is HIGH, and ADR-034 created it |
-| **A56** | **Re-run A43 at 22.73 bar** and size the reservoir | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling |
+| **A55** | **Re-run A44 and A48 at ADR-034's friction share** | **P83 and P84.** The trim authority was sized at a **9.75 %** friction share and the design point now runs at **28.39 %** — and the scripts still read the old stroke, so A44 and A48 are answering a superseded question. Both are new, both HIGH, and ADR-034 created them |
+| **A56** | **Re-run A43 at 22.73 bar** and size the reservoir | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling. Carries **P84**'s repair: `precharged.py` reads the design point rather than declaring it |
 | **A57** | **Attitude rate and packaging on the stage** | The two remaining **NEEDS SOURCE** rows in `KILL_CRITERIA.md`. Recoil was the third and A52 closed it |
 | **A58** | **A thermal model of the chamber and reservoir across a campaign** | A43 settled the reservoir between shots; nothing models the chamber, the expansion cooling, or twelve cycles of it |
 | **A59** | **Structural case for the drive tube and stage rail** | **ADR-034 made this urgent.** The tube is the cylinder *and* the rail, it is now **8.0 m** long at **1.0 mm** wall, and `build_gen6.py` says in its own docstring that neither bending nor alignment is modelled. A49's own note says every omission in it flatters a long tube |
@@ -108,8 +108,8 @@ point, ADR-033's trim stage, P77's pulse store, P81's ejector, and P83's authori
 ADR-034 took friction from 9.75 % to **28.39 %** of shot work. **The single highest-leverage action
 in the record, and ADR-034 raised its leverage.**
 
-**2. A55, re-run A44 and A48 at the new friction.** **P83**, HIGH, and created by a decision taken
-three days ago. If the authority has to grow, ADR-033's unweighed pulse store grows with it.
+**2. A55, re-run A44 and A48 at the new friction.** **P83** and **P84**, both HIGH, both created
+by a decision taken three days ago. If the authority has to grow, ADR-033's unweighed pulse store grows with it.
 
 **3. A54, the pulse chain.** If P67 cannot be run first, this is the one that decides whether
 ADR-033 stands. It is a day of work and it is a falsifier.
