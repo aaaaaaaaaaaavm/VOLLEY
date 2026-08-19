@@ -33,28 +33,84 @@ import math
 import os
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
+PARAMS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                      'cad', 'parameters.json')
 
 GAMMA, R_GAS, T0, RHO_STORE = 1.4, 296.8, 300.0, 235.0
 BORE = 0.015805366135494582
 AREA = math.pi * (BORE / 2.0) ** 2
-STROKE, M_PAY, G, G_CAP = 2.18, 4.0, 9.81, 25.0
+M_PAY, G = 4.0, 9.81
 N_MANIFEST = 12
 P_STORE = 200e5
-P_MAX = M_PAY * G_CAP * G / AREA          # charge pressure at the acceleration cap
+
+# A41's OWN declared point, frozen. main() reproduces A41 against these and must keep doing so.
+STROKE_A41, G_CAP_A41 = 2.18, 25.0
+P_MAX_A41 = M_PAY * G_CAP_A41 * G / AREA
+
+
+def design_point():
+    """The CURRENT design point, read from cad/parameters.json rather than declared here.
+
+    ADR-034 moved the stroke to 8.0 m and the charge pressure to 22.73 bar in the parameter
+    file, the CAD and eleven documents, and this module went on declaring 2.18 m and 25 g --
+    so gen6_dispersion.py and trim_stage.py, which both read STROKE from here, spent three
+    days answering a superseded question. Nothing compared the parameter file against the
+    scripts, so every gate stayed green. That is P84, and ADR-015's rule is derive, never
+    paste.
+    """
+    with open(PARAMS, encoding='utf-8') as f:
+        g = json.load(f)['groups']
+    d, s = g['gen6_drive'], g['gen6_store']
+    return dict(stroke=d['stroke_mm'] / 1e3, g_cap=d['acceleration_g'],
+                p_max=s['charge_pressure_bar'] * 1e5,
+                chamber_m3=s['chamber_volume_l'] / 1e3)
+
+
+_DP = design_point()
+STROKE, G_CAP, P_MAX = _DP['stroke'], _DP['g_cap'], _DP['p_max']
+
+
+def check_against_parameters(tol=1e-3):
+    """FAIL if the design point here and in cad/parameters.json have drifted apart.
+
+    This is the check that did not exist. make_baseline.py compares the scripts against
+    their own outputs and build_gen6.py compares the CAD against the parameter file --
+    nothing compared the parameter file against the analysis. P84.
+    """
+    dp = design_point()
+    fails = []
+    for name, got, want in (('stroke_m', STROKE, dp['stroke']),
+                            ('acceleration_g', G_CAP, dp['g_cap']),
+                            ('charge_pressure_Pa', P_MAX, dp['p_max'])):
+        if abs(got - want) > tol * max(abs(want), 1e-12):
+            fails.append(f'{name}: {got} against {want}')
+    # the force the parameter file records must follow from the pressure it records
+    with open(PARAMS, encoding='utf-8') as f:
+        d = json.load(f)['groups']['gen6_drive']
+    f_derived = dp['p_max'] * AREA
+    if abs(f_derived - d['commanded_force_N']) > 0.5:
+        fails.append(f"commanded_force_N: {f_derived:.3f} derived against {d['commanded_force_N']}")
+    if abs(f_derived / M_PAY / G - dp['g_cap']) > 5e-3:
+        fails.append(f"acceleration_g: {f_derived/M_PAY/G:.6f} derived against {dp['g_cap']}")
+    return fails
 PV_OVER_W = 15000.0                       # vessel figure of merit, A39
 GAS_HARDWARE_KG = 1.5                     # A39's allowance, carried unchanged
 BUDGET_KG = 12.55                         # A37: 2.0 kg/sat x 12, less the 11.45 kg base
 SIGMA_ALLOW, SAFETY, WALL_MIN = 500e6, 2.0, 1.0e-3
 
 
-def work(p0, v0):
-    """Adiabatic work of a closed charge expanding through the swept volume."""
-    r = v0 / (v0 + AREA * STROKE)
+def work(p0, v0, L=None):
+    """Adiabatic work of a closed charge expanding through the swept volume.
+
+    L defaults to the CURRENT stroke. Pass STROKE_A41 to reproduce A41.
+    """
+    L = STROKE if L is None else L
+    r = v0 / (v0 + AREA * L)
     return p0 * v0 / (GAMMA - 1.0) * (1.0 - r ** (GAMMA - 1.0))
 
 
-def shot(p0, v0):
-    w = work(p0, v0)
+def shot(p0, v0, L=None):
+    w = work(p0, v0, L)
     return dict(p0_bar=p0 / 1e5, chamber_l=v0 * 1e3, work_J=w,
                 v_exit=math.sqrt(2.0 * w / M_PAY),
                 a_peak_g=p0 * AREA / M_PAY / G,
@@ -65,27 +121,47 @@ def vessel_kg(p, v):
     return p * v / (PV_OVER_W * G)
 
 
-def chamber_kg(v0):
+def chamber_kg(v0, p0=None):
     """A cylindrical chamber at the charge pressure, hoop-sized with a minimum wall."""
+    p0 = P_MAX if p0 is None else p0
     r = (3.0 * v0 / (4.0 * math.pi)) ** (1.0 / 3.0)       # sphere-equivalent radius
-    wall = max(WALL_MIN, P_MAX * r * SAFETY / SIGMA_ALLOW)
+    wall = max(WALL_MIN, p0 * r * SAFETY / SIGMA_ALLOW)
     return 4.0 * math.pi * r * r * wall * 7800.0
 
 
-def store_mass(v0):
+def store_mass(v0, p0=None, L=None):
     """Chamber + reservoir + gas + A39's hardware allowance, for a full manifest."""
-    s = shot(P_MAX, v0)
+    p0 = P_MAX if p0 is None else p0
+    s = shot(p0, v0, L)
     res_barL = N_MANIFEST * s['charge_barL']
     res_m3 = res_barL / (P_STORE / 1e5) / 1e3
-    return dict(chamber_kg=chamber_kg(v0), reservoir_l=res_m3 * 1e3,
+    return dict(chamber_kg=chamber_kg(v0, p0), reservoir_l=res_m3 * 1e3,
                 vessel_kg=vessel_kg(P_STORE, res_m3), gas_kg=res_m3 * RHO_STORE,
                 hardware_kg=GAS_HARDWARE_KG,
-                total_kg=chamber_kg(v0) + vessel_kg(P_STORE, res_m3)
+                total_kg=chamber_kg(v0, p0) + vessel_kg(P_STORE, res_m3)
                 + res_m3 * RHO_STORE + GAS_HARDWARE_KG, **s)
 
 
 def main():
-    print(f"charge pressure at the {G_CAP:.0f} g cap: {P_MAX/1e5:.1f} bar "
+    fails = check_against_parameters()
+    print("design point against cad/parameters.json: "
+          + ("OK" if not fails else "DRIFTED -- " + "; ".join(fails)))
+    print(f"  current: {STROKE:.2f} m at {P_MAX/1e5:.4f} bar, {G_CAP:.4f} g peak")
+    print(f"  A41's own: {STROKE_A41:.2f} m at {P_MAX_A41/1e5:.1f} bar, {G_CAP_A41:.0f} g")
+    if fails:
+        raise SystemExit(f"{len(fails)} design-point drift(s): {fails}")
+
+    # A41's run sheet must stay reproducible. Its headline was a 2 L chamber at 50 bar giving
+    # 30.54 m/s at 25 g on a 4.66 kg store. If this stops matching, a refactor broke a dated
+    # result, which is worse than a stale constant.
+    a41 = store_mass(2.0e-3, P_MAX_A41, STROKE_A41)
+    a41_ok = (abs(a41['v_exit'] - 30.54) < 0.01 and abs(a41['a_peak_g'] - 25.0) < 0.01
+              and abs(a41['total_kg'] - 4.66) < 0.01)
+    print(f"  A41 reproduction: {a41['v_exit']:.2f} m/s at {a41['a_peak_g']:.2f} g on a "
+          f"{a41['total_kg']:.2f} kg store -- {'OK' if a41_ok else 'BROKEN'}\n")
+    if not a41_ok:
+        raise SystemExit("A41 no longer reproduces from this module")
+    print(f"charge pressure at the {G_CAP:.4f} g cap: {P_MAX/1e5:.4f} bar "
           f"(peak force {P_MAX*AREA:.0f} N)")
     print(f"constant-pressure ceiling, p0*A*L: {P_MAX*AREA*STROKE:.0f} J "
           f"-> {math.sqrt(2*P_MAX*AREA*STROKE/M_PAY):.2f} m/s\n")
