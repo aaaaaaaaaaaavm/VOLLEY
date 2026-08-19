@@ -56,7 +56,7 @@ changes that.
 | **A56** | **Re-run A43 at 22.73 bar** and size the reservoir | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling. Carries **P84**'s repair: `precharged.py` reads the design point rather than declaring it |
 | **A57** | **Attitude rate and packaging on the stage** | The two remaining **NEEDS SOURCE** rows in `KILL_CRITERIA.md`. Recoil was the third and A52 closed it |
 | **A58** | **A thermal model of the chamber and reservoir across a campaign** | A43 settled the reservoir between shots; nothing models the chamber, the expansion cooling, or twelve cycles of it |
-| **A59** | **Structural case for the drive tube and stage rail** | **ADR-034 made this urgent.** The tube is the cylinder *and* the rail, it is now **8.0 m** long at **1.0 mm** wall, and `build_gen6.py` says in its own docstring that neither bending nor alignment is modelled. A49's own note says every omission in it flatters a long tube |
+| ~~**A59**~~ | ~~Structural case for the drive tube and stage rail~~ — **RUN 2026-08-19**, six of nine, opened **P85** | **ADR-034 made this urgent.** The tube is the cylinder *and* the rail, it is now **8.0 m** long at **1.0 mm** wall, and `build_gen6.py` says in its own docstring that neither bending nor alignment is modelled. A49's own note says every omission in it flatters a long tube |
 | **A60** | **A second CAD implementation of Gen6** | Gen5 has one and **it found P71 on its first run** — both rollers outside their channels in every STEP ever built. Gen6 has never been checked by anything but the script that built it |
 
 ## Category B — bookkeeping
@@ -114,9 +114,10 @@ by a decision taken three days ago. If the authority has to grow, ADR-033's unwe
 **3. A54, the pulse chain.** If P67 cannot be run first, this is the one that decides whether
 ADR-033 stands. It is a day of work and it is a falsifier.
 
-**4. A59, the structural case.** ADR-034 promoted this from routine to load-bearing: an **8.0 m**
-tube at **1.0 mm** wall, carrying 201.7 N of cradle preload, with no bending model. **A49 flatters
-it by construction and says so.**
+**4. ~~A59, the structural case.~~ RUN 2026-08-19.** Six of nine. **The tube buckles under its own
+shot reaction by 45×** and needs **seven supports at 1.0 m spacing**, which cost **99.7 g** — the
+mass worry that put this run first was unfounded. **What it found instead is P85**: the tube's
+material is stated nowhere, and it is 1.140 kg in aluminium against 3.294 in steel.
 
 **5. Decide D2 and the enclosure panel.** Two decisions, both yours, together worth more than any
 analysis on this page — one is the only route to kill criterion 1, the other is 20 kg.

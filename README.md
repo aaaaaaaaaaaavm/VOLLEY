@@ -39,7 +39,7 @@ or to qualify.
 | **here for the idea** | [`docs/CONCEPT.md`](docs/CONCEPT.md), and [`docs/LINEAGE.md`](docs/LINEAGE.md) for how it got there |
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 119 numbered entries, 51 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 120 numbered entries, 52 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -191,7 +191,7 @@ no figure, the cell says so rather than being left blank.
 | Recoil per shot | 64.1 N·s | **116.03 N·s — 1.81×**, and the thrust line must pass within **10.7 mm** of the host centre of mass | `astro.py` · [A52](validation/A52_gen6_recoil.md) |
 | Orbital lifetime multiplier | **×1.60** at mean activity, **not invariant — see P16** | unchanged in kind | `astro.py` |
 | Semi-major axis change | **+28.8 km**, unreachable by waiting or by drag | — | `astro.py`, A21-R |
-| Track first mode | 109 Hz fixed-fixed, target > 70 | **not computed — A59** | `sizing.py` |
+| First bending mode | **109 Hz** fixed-fixed, target > 70 | **1.67 Hz unsupported over 8.0 m — the tube needs a support every metre** ([A59](validation/A59_tube_structure.md)) | `sizing.py` · A59 |
 | Energy closure | **100.0 % accounted** | — | `sizing.py` |
 | Magazine | 12 × 3U, two transverse cassettes | 12 × 3U, cassette carried across | `cad/parameters.json` |
 
@@ -200,7 +200,7 @@ no figure, the cell says so rather than being left blank.
 > has not been run** — A55 produces it. *A number whose consequences have not been computed is not
 > published here, even when the old one is only a little wrong.*
 
-**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Fifty-three validation
+**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Fifty-four validation
 run sheets exist, each against an acceptance band declared *before* the run; **three failed
 outright**, several missed individual bands, and **three times a declared band caught a bug in the
 analysis rather than in the design.**
@@ -390,8 +390,8 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **119 numbered entries, 51 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **53 run sheets, A1–A53**, each against a band declared *before* the run. **Three failed outright** |
+| **Defect register** | **120 numbered entries, 52 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Validation** | **54 run sheets, A1–A59**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest

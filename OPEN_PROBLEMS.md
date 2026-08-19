@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **119 numbered entries, of which 51 are live.** Every entry carries a `Status:` line written by
+> **120 numbered entries, of which 52 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3649,6 +3649,45 @@ the thing that is actually missing. Scheduled with **A55** and **A56**.
 **This is a defect in work done three days ago, and it was found by reading rather than by any
 gate.** It is recorded here rather than quietly fixed, which is the rule the register exists to
 enforce.
+
+### P85. Nobody has said what the drive tube is made of, and the two candidates differ by 2.15 kg: MEDIUM, NEW 2026-08-19
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A59](validation/A59_tube_structure.md) band 9 went looking for the tube's material and could
+not find it stated anywhere in this repository.**
+
+| | |
+|---|---|
+| [`analysis/design_surface.py`](analysis/design_surface.py) | `RHO_AL = 2700.0`, and A49's `tube_kg` is computed from it |
+| [`analysis/precharged.py`](analysis/precharged.py) | sizes the chamber — **the same pressure boundary** — at **7800 kg/m³** with a 500 MPa allowable and a safety factor of 2 |
+| `cad/parameters.json` | carries `tube_wall_mm` and now `tube_mass_kg`, and **names no material** |
+| [`cad/build_gen6.py`](cad/build_gen6.py) | says the wall "is set by handling and by carrying A38's 201.7 N cradle preload — neither of which is modelled here" |
+
+**The difference is larger than everything else A59 computed put together.**
+
+| | Aluminium | Steel |
+|---|---:|---:|
+| Tube over 8.0 m | **1.140 kg** | **3.294 kg** |
+| Tube + the 7 supports A59 found necessary | **1.240 kg** | **3.394 kg** |
+| Against A49 band 7's declared 2.0 kg limit | **passes** | **fails by 1.7×** |
+
+**A49 band 7 passed at 1.140 kg. In steel it fails**, and A49 did not know it was choosing.
+
+> **This is not a structural problem and stiffness will not settle it.** A59 found the unsupported
+> first mode is **1.67 Hz in aluminium and 1.68 Hz in steel** — E/ρ is nearly identical for both
+> metals, so the material buys no stiffness per kilogram. **It is purely a mass and compatibility
+> decision, and it has never been taken.**
+
+**What actually decides it.** The tube is a sliding seal bore, so surface hardness, thermal
+expansion against the piston, and galling behaviour matter more than modulus — and **A58's
+expansion cooling takes the bore to roughly −35 °C every shot**, which is a differential-expansion
+question between two materials nobody has named. **ADR-034's mass argument rests on the lighter of
+the two.**
+
+**What would close it:** state the material in `cad/parameters.json` with the reason, and re-run
+A49's band 7 against it. If it is steel, ADR-034's per-satellite figure moves and the design point
+has to be re-selected from A49's published surface.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
