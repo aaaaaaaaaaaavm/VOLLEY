@@ -28,8 +28,28 @@ RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 
 GAMMA, R_GAS, T0, CD = 1.4, 296.8, 300.0, 0.8
 RHO_STORE = 235.0
-P_STORE, P_CHARGE = 200e5, 50e5
-V_CHAMBER = 2.0e-3
+P_STORE = 200e5
+
+# A42's OWN declared point, frozen, so its run sheet stays reproducible.
+P_CHARGE_A42, V_CHAMBER_A42 = 50e5, 2.0e-3
+
+
+def design_point():
+    """Charge pressure and chamber volume, read from cad/parameters.json.
+
+    Second instance of P84. The first repair covered precharged.py and stopped there, while
+    this module -- which feeds A42, A43 and A45 -- went on declaring 50 bar. The hole P84
+    described was never that one constant was stale; it was that nothing compares the
+    parameter file against the analysis. ADR-015: derive, never paste.
+    """
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                        'cad', 'parameters.json')
+    with open(path, encoding='utf-8') as f:
+        s = json.load(f)['groups']['gen6_store']
+    return s['charge_pressure_bar'] * 1e5, s['chamber_volume_l'] / 1e3
+
+
+P_CHARGE, V_CHAMBER = design_point()
 V_RES_A41 = 6.0e-3
 N_MANIFEST = 12
 WINDOW_S = 10.0                       # 4 s index + 6 s return, already in the cadence

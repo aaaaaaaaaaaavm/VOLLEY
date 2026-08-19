@@ -3701,6 +3701,19 @@ enforce.
 > **The consequence was real and is now measured.** A44 and A48 had been answering a superseded
 > question for three days; [A55](validation/A55_trim_authority.md) re-ran them and found the trim
 > stage **under-authority by 3.57×** — see **P83**.
+>
+> ### That correction was partial, and the second instance was found the same day
+>
+> **`analysis/fill_window.py` declared `P_CHARGE = 50e5` and was not touched by the first
+> repair** — which is the same defect in a second file, feeding **A42, A43 and A45**. It was found
+> while starting [A56](validation/A56_reservoir_resized.md) and repaired the same way, with A42's
+> own point frozen as `P_CHARGE_A42` and `V_CHAMBER_A42`.
+>
+> **The lesson is the one this entry already stated and I did not act on fully: the hole was never
+> that one constant was stale. It was that nothing compares the parameter file against the
+> analysis.** *Fixing the instance I had in front of me, and closing the entry on that basis, was
+> the same mistake at one remove.* **`check_against_parameters()` covers `precharged.py` only, and
+> a repository-wide version of it does not exist.***
 
 ### P85. Nobody has said what the drive tube is made of, and the two candidates differ by 2.15 kg: MEDIUM, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done
