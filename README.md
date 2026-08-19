@@ -39,7 +39,7 @@ or to qualify.
 | **here for the idea** | [`docs/CONCEPT.md`](docs/CONCEPT.md), and [`docs/LINEAGE.md`](docs/LINEAGE.md) for how it got there |
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 120 numbered entries, 50 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 121 numbered entries, 50 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -179,7 +179,7 @@ no figure, the cell says so rather than being left blank.
 | | **Gen5**, the baseline | **Gen6** at ADR-034 | Source |
 |---|---|---|---|
 | **Exit velocity, 3U** | **16.029 m/s at 10.07 g** | **34.280 m/s** zero-friction, **29.009** at the friction allowance, **at 11.36 g** | `motor_model.py` · [A49](validation/A49_design_surface.md) |
-| **Dispersion, 3σ** | **0.0274 m/s** at a 15.8 m/s setpoint, to ±0.10 km apogee | **3.980 % open-loop** at ADR-034's stroke; 0.0274 m/s with a trim stage resized to **144 mm** ([A55](validation/A55_trim_authority.md)) | `motor_model.py` · [A44](validation/A44_gen6_dispersion.md) |
+| **Dispersion, 3σ** | **0.0274 m/s** at a 15.8 m/s setpoint, to ±0.10 km apogee | **3.980 % open-loop** at ADR-034's stroke; 0.0274 m/s with a trim stage resized to **144 mm** ([A55](validation/A55_trim_authority.md)) — **whose store [A54](validation/A54_pulse_chain.md) weighs at 23–37 kg, firing ADR-033's own falsifier (P86)** | `motor_model.py` · [A44](validation/A44_gen6_dispersion.md) |
 | Acceleration length | 1.3 m accelerating, 1.5 m track | **8.0 m** — the host stage's whole usable length | `cad/parameters.json` |
 | Thrust constant | 10.54 N per kA/m, ±1.01 % ripple | same machine, trim section only | `motor_model.py`, A2 |
 | — its centre-plane value | 11.03 N per kA/m, **independently computed by a 2-D FEM to 0.03 %** | — | `motor_model.py`, A1 |
@@ -200,7 +200,7 @@ no figure, the cell says so rather than being left blank.
 > has not been run** — A55 produces it. *A number whose consequences have not been computed is not
 > published here, even when the old one is only a little wrong.*
 
-**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Fifty-five validation
+**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Fifty-six validation
 run sheets exist, each against an acceptance band declared *before* the run; **three failed
 outright**, several missed individual bands, and **three times a declared band caught a bug in the
 analysis rather than in the design.**
@@ -390,8 +390,8 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **120 numbered entries, 50 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **55 run sheets, A1–A59**, each against a band declared *before* the run. **Three failed outright** |
+| **Defect register** | **121 numbered entries, 50 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Validation** | **56 run sheets, A1–A59**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest

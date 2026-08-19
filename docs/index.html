@@ -84,7 +84,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
       <span class="badge">CC BY 4.0</span>
       <span class="badge warn">TRL 2-3</span>
       <span class="badge bad">Model outputs only, nothing built or measured</span>
-      <span class="badge">120 defects, 50 live</span>
+      <span class="badge">121 defects, 50 live</span>
       <span class="badge">7 kill criteria, 3 crossed</span>
     </div>
     <div class="pills">
@@ -233,7 +233,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   <table>
     <tr><th>Quantity</th><th>Gen5, the baseline</th><th>Gen6 at ADR-034</th></tr>
     <tr><td><b>Exit velocity, 3U</b></td><td class="num"><b>16.029 m/s at 10.07 g</b></td><td class="num"><b>34.280 m/s</b> zero-friction, <b>29.009</b> at the friction allowance, <b>at 11.36 g</b></td></tr>
-    <tr><td><b>Dispersion, 3&sigma;</b></td><td class="num"><b>0.0274 m/s</b> to &plusmn;0.10 km apogee, through a designed loop</td><td class="num"><b>3.980 % open-loop</b> at ADR-034's stroke; 0.0274 m/s with a trim stage resized to <b>144 mm</b> (A55)</td></tr>
+    <tr><td><b>Dispersion, 3&sigma;</b></td><td class="num"><b>0.0274 m/s</b> to &plusmn;0.10 km apogee, through a designed loop</td><td class="num"><b>3.980 % open-loop</b> at ADR-034's stroke; 0.0274 m/s with a trim stage resized to <b>144 mm</b> (A55) &mdash; <b>whose store A54 weighs at 23&ndash;37 kg against the 1.23 kg section, firing ADR-033's own falsifier (P86)</b></td></tr>
     <tr><td>Acceleration length</td><td class="num">1.3 m accelerating, 1.5 m track</td><td class="num"><b>8.0 m</b> &mdash; the host stage's whole usable length</td></tr>
     <tr><td>Thrust constant</td><td class="num">10.54 N per kA/m, &plusmn;1.01 % ripple, <b>FEM-verified to 0.03 %</b></td><td class="num">same machine, trim section only</td></tr>
     <tr><td>Energy per shot</td><td class="num"><b>2.78 kJ gross, 2.74 kJ net</b> of regeneration</td><td class="num"><b>311.76 J</b></td></tr>
@@ -394,7 +394,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 
 <section>
   <h2>What has actually been verified</h2>
-  <p class="sub"><b>Fifty-five run sheets, A1 through A59</b>, each against an acceptance band
+  <p class="sub"><b>Fifty-six run sheets, A1 through A59</b>, each against an acceptance band
   declared <em>in writing before the script existed</em>. <b>Three failed outright</b>, several
   missed individual bands, and <b>three times a declared band caught a bug in the analysis rather
   than in the design</b> &mdash; which is exactly what declaring the band first is for.
@@ -414,13 +414,14 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
     <tr><td><b>A47</b> Gen6 FMEA</td><td>eight of eight &mdash; the architecture change buys <b>+0.37 satellites</b>; a per-cell ejector buys <b>+2.27</b></td></tr>
     <tr><td><b>A49</b> design surface</td><td><b>seven of nine.</b> 14 points of 63 beat Gen6 on velocity, acceleration and gas at once &mdash; all at 8.0 m. Produced ADR-034</td></tr>
     <tr><td><b>A51</b> Gen6 power</td><td>seven of eight &mdash; traced a figure this project had quoted four times to a spring it does not have (<b>P80</b>)</td></tr>
+    <tr><td><b>A54</b> the pulse chain</td><td>one of eight &mdash; <b>ADR-033's first falsifier fired.</b> The trim stage asks for <b>93.3 % of the peak current</b> of the chain ADR-032 deleted, and its store weighs <b>23&ndash;37 kg against a 1.23 kg section</b></td></tr>
     <tr><td><b>A53</b> backup ejector</td><td>seven of eight &mdash; <b>band 7 fails by 40&times;</b>. The highest-value reliability change does not fit the architecture</td></tr>
   </table>
   <div class="note"><b>The failures are the reason to trust the rest.</b> The paper once carried
   four numbers its own scripts did not reproduce, all found by rebuilding the analysis from
   scratch. An independent propagator then falsified a claim in the paper's own abstract, and that
   is recorded as <b>P16</b> rather than quietly dropped. <b>Every defect is numbered and published,
-  including the ones that damage the project's own claims</b> &mdash; there are 120 of them, 50
+  including the ones that damage the project's own claims</b> &mdash; there are 121 of them, 50
   live.</div>
 </section>
 

@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **120 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
+> **121 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3359,8 +3359,8 @@ energy. Whether that store weighs grams or kilograms **is not answered by A48**,
 hardware scales with current rather than energy. That is the question that decides the idea and it
 needs its own bands.
 
-### P77. The trim stage is adopted with its pulse store unweighed: HIGH, NEW 2026-08-16
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P77. The trim stage is adopted with its pulse store unweighed: HIGH, CORRECTED 2026-08-19
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **[ADR-033](docs/adr/033-gen6-trim-stage.md) falsifier 1, recorded here so it is a defect and not
@@ -3386,13 +3386,27 @@ and [A40](validation/A40_blowdown_transient.md) killed that implementation at **
 a 30 m/s band**. **Adopting a store before pricing its hardware is a mistake this project has
 already made once**, and ADR-033 makes it knowingly because the claim is being made now.
 
-**What would close it.** Size the pulse chain for 37.7 J at 28 kW — store, switch, conductors —
-and weigh it. **If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it
-corrects** and ADR-033 should be reversed.
+**What closed it.** [A54](validation/A54_pulse_chain.md) sized the pulse chain on 2026-08-19 and
+**it exceeds the section it feeds by 19 to 30 times.**
 
-**And a cheaper outcome that would close it for free.** **P67** — measure the seal friction. If it
-is small, the dispersion the stage exists to correct is not there, and neither the stage nor its
-store is needed.
+> **Corrected.** Priced as an EDLC bank from A10's ESR × C bracket, sized so its ESR takes at most
+> 10 % of the delivered energy: **23.44 to 37.36 kg against the 1.2328 kg section**, holding
+> **723× to 1152×** the energy the correction needs. **The store is power-limited, not
+> energy-limited**, exactly as this entry alleged.
+>
+> **The requirement A55 resized it to is 136.59 J at 28 606 W — 93.3 % of the peak power and
+> 93.3 % of the peak current of the whole chain ADR-032 deleted.** The energy fell twenty times
+> and the current fell seven percent.
+>
+> **No sheet current rescues it**: the section/store trade bottoms out at **10.755 kg**, 5.4× the
+> band. **Every figure is a lower bound** — the switch and the conductors are still unpriced.
+
+**This entry closes and [P86](OPEN_PROBLEMS.md) opens in its place**, because what remains is not
+"weigh the store" but "decide what to do now that it is weighed" — and that is the owner's, between
+finding a **23.2 kW/kg** store, shortening the stroke, or withdrawing the stage.
+
+**And the cheaper outcome still stands.** **P67** — measure the seal friction. If it is small, the
+dispersion the stage exists to correct is not there, and neither the stage nor its store is needed.
 
 ### P78. Stroke buys velocity and gentleness together, and makes the worst defect worse: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
@@ -3726,6 +3740,62 @@ the two.**
 **What would close it:** state the material in `cad/parameters.json` with the reason, and re-run
 A49's band 7 against it. If it is steel, ADR-034's per-satellite figure moves and the design point
 has to be re-selected from A49's published surface.
+
+### P86. The trim stage cannot be fed by any store this repository has data for: HIGH, NEW 2026-08-19
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[ADR-033](docs/adr/033-gen6-trim-stage.md)'s first falsifier has fired, and it fired on the
+argument the ADR itself used to name it.**
+
+> *"Pulse hardware scales with current, not energy, and nothing has weighed it. This is the
+> falsifier most likely to fire, and it is being adopted before it is answered."*
+
+**[A54](validation/A54_pulse_chain.md) weighed it. One of eight bands passes.**
+
+| | The chain [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) deleted | The trim stage that replaced it |
+|---|---:|---:|
+| Peak power | 30 674 W | **28 606 W — 93.3 %** |
+| Peak current at 96 V | 319.5 A | **298.0 A — 93.3 %** |
+| Energy per shot | 2782 J | **136.6 J — 4.9 %** |
+
+**The energy fell twenty times and the current fell seven percent.** ADR-032 deleted a pulse chain
+and ADR-033 asked for 93 % of it back.
+
+**Priced as an EDLC bank from [A10](validation/A10_bank_esr.md)'s ESR × C bracket and the 6.50 kg
+string `mass_properties.py` carries**, sized so its ESR takes at most 10 % of the delivered energy:
+
+| | |
+|---|---:|
+| ESR required | **≤ 32.2 mΩ** |
+| Capacitance | **21.4 – 34.2 F**, 3.6 – 5.7 strings |
+| **Store mass** | **23.44 – 37.36 kg**, against the **1.2328 kg** section it feeds |
+| Energy it would hold | **98.7 – 157.3 kJ** for a **136.6 J** correction — **723× to 1152×** |
+
+**And no sheet current rescues it.** Peak power scales with sheet current and section length
+inversely, so the trade has a minimum — **the minimum is 10.755 kg**, 5.4× the 2.0 kg band, with
+added mass per satellite at **2.4313 kg**, which **re-crosses the one kill-criterion numerator Gen6
+passes.**
+
+> **What it proves is narrower than "impossible", and more useful.** Any store that fits inside the
+> section it feeds must deliver **23.20 kW/kg** — against the **4.72 kW/kg** Gen5's own bank
+> achieves. **4.92× on the axis that binds**, and specific energy is not the constraint at all
+> (110.8 J/kg required, against thousands available).
+>
+> **Every mass above is a lower bound**: the switch and the conductors are not priced and no figure
+> for either is in this repository.
+
+**Three routes, and A54 cannot choose between them.** Find a store at 23.2 kW/kg or raise the bus
+voltage above the 96 V `sizing.py` declares — **neither is in the record**. Shorten the stroke, since
+dispersion tracks friction work which tracks stroke — **[A49](validation/A49_design_surface.md)'s
+surface is published and [A55](validation/A55_trim_authority.md) band 9 gives the authority at every
+friction share, so this route needs no new data.** Or withdraw the trim stage and accept **3.980 %
+open-loop** — **which deletes the commanded-velocity claim the product is sold on.**
+
+**What would close it:** the owner's decision between those three, and **[P67](OPEN_PROBLEMS.md)
+first** — the dispersion that sets the authority that sizes the store is **98.7 % a seal
+coefficient measured on nothing**, and a bench measurement below a 20 % friction share moves every
+number here.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

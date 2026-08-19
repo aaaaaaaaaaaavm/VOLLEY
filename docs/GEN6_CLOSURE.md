@@ -51,7 +51,7 @@ changes that.
 
 | | | Why it matters |
 |---|---|---|
-| **A54** | **Weigh the pulse chain** — 37.7 J at 28 kW: store, switch, conductors | **P77**, and ADR-033's first falsifier. If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it corrects and ADR-033 reverses |
+| ~~**A54**~~ | ~~Weigh the pulse chain~~ — **RUN 2026-08-19**, one of eight, **closed P77, opened P86** | **P77**, and ADR-033's first falsifier. If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it corrects and ADR-033 reverses |
 | ~~**A55**~~ | ~~Re-run A44 and A48 at ADR-034's friction share~~ — **RUN 2026-08-19**, four of nine, **closed P83 and P84** | **P83 and P84.** The trim authority was sized at a **9.75 %** friction share and the design point now runs at **28.39 %** — and the scripts still read the old stroke, so A44 and A48 are answering a superseded question. Both are new, both HIGH, and ADR-034 created them |
 | **A56** | **Re-run A43 at 22.73 bar** and size the reservoir | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling. Carries **P84**'s repair: `precharged.py` reads the design point rather than declaring it |
 | **A57** | **Attitude rate and packaging on the stage** | The two remaining **NEEDS SOURCE** rows in `KILL_CRITERIA.md`. Recoil was the third and A52 closed it |
@@ -70,7 +70,8 @@ changes that.
 |---|---|---|
 | **D2 — the payload class** | **P59.** A35 closed the architecture route and A36 closed the manifest route. **Smaller payloads are the only remaining path to kill criterion 1**, and the decision has been deferred since Phase I | The criterion stays crossed at **5.3×** and the front page keeps saying so |
 | **The enclosure panel** | Monolithic 2 mm at 50.04 kg against honeycomb at 29.98. **20 kg for the price of an ADR** | Dry mass stays 126.6 kg and every per-satellite figure stays inflated |
-| **Whether the trim stage survives P67** | If the measured friction is small, ADR-033 is unnecessary and **P77 closes for free** | Mass and complexity spent on a problem that may not exist |
+| **What replaces the trim stage** | **[A54](../validation/A54_pulse_chain.md) fired ADR-033's falsifier.** Three routes: a store at **23.2 kW/kg** (not in the record), a **shorter stroke** off A49's published surface (needs no new data), or **withdrawal** — which deletes the commanded-velocity claim. **P86** | Gen6 has no working correction, and the product's central claim is unsupported |
+| **Whether any of it survives P67** | If the measured friction is small, the dispersion is not there and **the stage, its store and P86 all close together** | Mass and complexity spent on a problem that may not exist |
 | **What "final" means** | Frozen-with-exceptions, as Gen5 was — or a claim that nothing further changes | A claim the evidence does not support |
 
 ## Category D — needs hardware or an external party
@@ -113,8 +114,10 @@ section was 3.57× under-authority and is resized 39.7 → 144.01 mm**, and `pre
 derives the design point with a gate that fails on drift. **P83 and P84 both close.** What it did
 *not* do is aggravate P77 — peak power moved 2.8 %. If the authority has to grow, ADR-033's unweighed pulse store grows with it.
 
-**3. A54, the pulse chain.** If P67 cannot be run first, this is the one that decides whether
-ADR-033 stands. It is a day of work and it is a falsifier.
+**3. ~~A54, the pulse chain.~~ RUN 2026-08-19.** One of eight. **ADR-033's first falsifier fired**:
+the store weighs **23.44–37.36 kg** against the 1.2328 kg section, and the trim stage asks for
+**93.3 % of the peak current** of the chain ADR-032 deleted. **P77 closes, P86 opens**, and what is
+left is a decision rather than an analysis.
 
 **4. ~~A59, the structural case.~~ RUN 2026-08-19.** Six of nine. **The tube buckles under its own
 shot reaction by 45×** and needs **seven supports at 1.0 m spacing**, which cost **99.7 g** — the

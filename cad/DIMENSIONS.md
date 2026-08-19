@@ -320,13 +320,13 @@ Fusion document: **`Built by cad/build_gen6.py. ADR-033: a short stator at the m
 
 | Parameter | Value | Units |
 |---|---:|---|
-| `section_length_mm` | 39.7 | mm |
-| `section_start_mm` | 7960.3 | mm |
+| `section_length_mm` | 144.01 | mm |
+| `section_start_mm` | 7855.99 | mm |
 | `thrust_constant_N_per_kA_m` | 10.5386 | mm |
 | `sheet_current_A_per_m` | 90000.0 | mm |
 | `force_N` | 948.0 | N |
-| `authority_m_s` | 0.323 | mm |
-| `energy_per_correction_J` | 37.7 | mm |
-| `peak_mechanical_W` | 27820.0 | mm |
-| `added_mass_kg` | 0.34 | mm |
+| `authority_m_s` | 1.1543 | mm |
+| `energy_per_correction_J` | 136.59 | mm |
+| `peak_mechanical_W` | 28606.0 | mm |
+| `added_mass_kg` | 1.2328 | mm |
 

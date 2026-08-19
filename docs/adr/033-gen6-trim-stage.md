@@ -2,6 +2,30 @@
 
 **Status:** Accepted · **Date:** 2026-08-16 · **Phase:** I · **Extends:** [ADR-032](032-gen6-stage-integrated-gas-store.md)
 
+> ## Falsifier 1 fired, 2026-08-19 — [A54](../../validation/A54_pulse_chain.md)
+>
+> **This ADR named the pulse store as the falsifier most likely to fire and adopted the decision
+> before answering it. It has been answered.**
+>
+> | | The chain [ADR-032](032-gen6-stage-integrated-gas-store.md) deleted | This trim stage |
+> |---|---:|---:|
+> | Peak power | 30 674 W | **28 606 W — 93.3 %** |
+> | Peak current at 96 V | 319.5 A | **298.0 A — 93.3 %** |
+> | Energy per shot | 2782 J | **136.6 J — 4.9 %** |
+>
+> **The energy fell twenty times and the current fell seven percent** — which is this ADR's own
+> sentence, *"pulse hardware scales with current, not energy"*, measured. **An EDLC store sized to
+> source it weighs 23.44 to 37.36 kg against the 1.2328 kg section it feeds**, and no sheet current
+> rescues the trade: its minimum is **10.755 kg**.
+>
+> **A54 band 5's declared FAIL text says this ADR reverses. It is not reversed here**, because
+> deleting the trim stage deletes the commanded-velocity claim the product is sold on, and choosing
+> the replacement is a design decision rather than an analysis result. **The decision is open and
+> stated as open — P86.** The three routes are a store at **23.2 kW/kg**, a shorter stroke off
+> [A49](../../validation/A49_design_surface.md)'s published surface, or withdrawal.
+>
+> **Read this ADR as adopted, measured, and awaiting that decision.**
+
 > ## Amended 2026-08-19 by [ADR-034](034-gen6-long-stroke-design-point.md), and resized the same day by [A55](../../validation/A55_trim_authority.md)
 >
 > **The section is 144.01 mm at x = 7855.99, not 39.7 mm at x = 7960.3, and it carries 1.1543 m/s
