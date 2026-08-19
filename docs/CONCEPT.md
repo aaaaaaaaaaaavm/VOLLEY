@@ -12,7 +12,7 @@
 >
 > Four constraints dissolve rather than improve: the 44 % envelope overrun (nothing is stowed), the
 > deployable-structure precision that killed PII-8 and PII-11 (no airgap, so millimetres rather
-> than ppm), the supercapacitor bank no supplier sells (25–131 W), and the acceleration length that
+> than ppm), the supercapacitor bank no supplier sells, and the acceleration length that
 > capped velocity at 1.30 m.
 >
 > **What it does not dissolve** is that no launch provider has agreed to any of it. Everything

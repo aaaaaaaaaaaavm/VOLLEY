@@ -1,0 +1,100 @@
+{
+  "analysis": "A51",
+  "bands_declared_commit": "HEAD~1",
+  "note": "component draws are DECLARED figures for representative parts, not from datasheets -- no vendor quotation exists in this project (E3). Isothermal compression is an idealisation and flatters the exergy figure; a real multi-stage compressor is worse.",
+  "shot_J": 1864.8,
+  "campaign_J": 22377.6,
+  "electrical_per_shot_J": 311.76,
+  "peak_electrical_W": 36.0,
+  "compression_exergy_J": 665191.5116223738,
+  "components": [
+    {
+      "name": "Fire valve, solenoid",
+      "watts": 24.0,
+      "seconds": 0.05,
+      "note": "24 W held open for 50 ms"
+    },
+    {
+      "name": "Fill valve, solenoid",
+      "watts": 24.0,
+      "seconds": 4.14,
+      "note": "24 W over A42's 4.14 s fill"
+    },
+    {
+      "name": "Pressure transducer",
+      "watts": 0.5,
+      "seconds": 60.0,
+      "note": "0.5 W, powered through the indexing window"
+    },
+    {
+      "name": "Shot sequencer",
+      "watts": 3.0,
+      "seconds": 60.0,
+      "note": "3 W, powered through the indexing window"
+    },
+    {
+      "name": "Cradle release actuator",
+      "watts": 12.0,
+      "seconds": 0.1,
+      "note": "12 W for 100 ms"
+    }
+  ],
+  "measures": {
+    "electrical_pct_of_shot": 16.718146718146716,
+    "kJ_per_kg_gas": 16.604179199999997,
+    "campaign_pct_of_exergy": 3.364083817819921,
+    "expansion_pct": 18.648
+  },
+  "gen5_electrical_to_payload_pct": 18.5,
+  "traced_25_131_W": "A37 host_integrated.py: charge_W_60s = e / 60.0, where e is the SPRING option's shot energy. It is the power to wind a spring over a sixty-second indexing window. Gen6 has no spring and its reservoir is ground-filled, so the figure does not apply to this architecture at all.",
+  "bands": [
+    {
+      "n": "1",
+      "band": "reproduces A41's 1864.8 J and A43's 5.38 kg",
+      "got": "1864.8 J, 5.38 kg",
+      "passed": true
+    },
+    {
+      "n": "2",
+      "band": "on-orbit electrical computed from a named component list",
+      "got": "5 components",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "on-orbit electrical per shot <= 5 % of shot work",
+      "got": "16.718 %",
+      "passed": false
+    },
+    {
+      "n": "4",
+      "band": "all four efficiency measures reported with denominators named",
+      "got": "4 reported",
+      "passed": true
+    },
+    {
+      "n": "5",
+      "band": "fraction of stored exergy delivered >= 2 %",
+      "got": "3.36 %",
+      "passed": true
+    },
+    {
+      "n": "6",
+      "band": "delivered energy per kg of gas >= 10 kJ/kg",
+      "got": "16.60 kJ/kg",
+      "passed": true
+    },
+    {
+      "n": "7",
+      "band": "the 25-131 W figure is traced and its applicability stated",
+      "got": "traced to A37 charge_W_60s, spring option",
+      "passed": true
+    },
+    {
+      "n": "8",
+      "band": "peak electrical power is reported, not only energy",
+      "got": "36.0 W",
+      "passed": true
+    }
+  ]
+}

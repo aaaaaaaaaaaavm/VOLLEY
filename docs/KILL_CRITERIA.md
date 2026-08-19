@@ -339,7 +339,7 @@ meeting it. A criterion that no longer applies has not been passed.
 |---|---|---|---|
 | **1. Mass per satellite** | **10.547 kg**, crossed 5.3× | **10.547 kg on dry mass, crossed** — and **1.403 to 3.108 kg on added mass**, the range A45 found when the stage credit is read hostilely | **Crossed on dry mass always, and on added mass as soon as P10's unmodelled lump is not credited to the stage. P59 and P68 both LIVE** |
 | **2. Envelope** | 1839 mm against ~1270, over by 44 % | **Does not apply as stated** — Gen6 is a rail on an 8 m stage, not a payload in a rideshare port | NEEDS SOURCE: no envelope analysis exists at Gen6 |
-| **3. Bank ESR** | crossed; 65 mΩ ceiling against 116–185 available | **Dissolved.** There is no bank. Charging is **25 to 131 W** over the indexing window, which is solar | **Deleted, not solved.** P26 is moot for Gen6 and stands for Gen5 |
+| **3. Bank ESR** | crossed; 65 mΩ ceiling against 116–185 available | **Dissolved.** There is no bank. A51 measures the electrical demand at **0.26 W average, 36 W peak** | **Deleted, not solved.** P26 is moot for Gen6 and stands for Gen5 |
 | **4. Tip-off** | modelled at 85.0 N of cradle preload, mechanism absent | **A38: raising acceleration does not make it worse.** Preload is now **201.674 N per contact**, still releasing inside **≤ 1 N** | **Not demonstrated.** The mechanism still does not exist |
 | **5. Attitude rate at firing** | quantified | unchanged in kind; the indexing mass move is the same problem on a larger vehicle | NEEDS SOURCE: not re-run at Gen6 |
 | **6. Host recoil** | 64.1 N·s per shot | higher, in proportion to the exit velocity | NEEDS SOURCE: no Gen6 recoil figure is computed anywhere |

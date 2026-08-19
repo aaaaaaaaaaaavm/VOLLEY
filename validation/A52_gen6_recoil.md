@@ -58,4 +58,46 @@ public — that is **E5**, and it is why the Gen5 recoil table is parametric.
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Seven of seven bands pass, and E29 has the requirement it said was missing.**
+
+| | Per shot | Campaign |
+|---|---:|---:|
+| Gen5 | 64.12 N·s | 769.4 N·s |
+| **Gen6, gas shot** | **116.03 N·s** | **1392.4 N·s** |
+| Gen6, trim stage | 1.29 N·s | 15.5 N·s |
+| **Gen6, total** | **117.32 N·s** | **1407.9 N·s** |
+
+**Gen6 recoils 1.81× harder than Gen5 per shot.** Nulling the campaign costs **0.653 kg** at a
+hydrazine-class I<sub>sp</sub>, against Gen5's 0.357 — still under a kilogram, so
+`KILL_CRITERIA.md`'s judgement that recoil is *"a customer decision rather than an engineering
+one"* survives the architecture change.
+
+### The angular half, which is what E29 actually asked for
+
+| CoM offset | Per shot | Over 12 shots | vs a 15 N·m·s wheel |
+|---:|---:|---:|---|
+| 10 mm | 1.173 N·m·s | 14.08 | within |
+| **25 mm** | 2.933 | 35.20 | **saturates ×2.3** |
+| 100 mm | 11.732 | 140.79 | saturates ×9.4 |
+| 500 mm | 58.662 | 703.94 | saturates ×46.9 |
+
+> ### The interface requirement, stated in the units an integrator needs
+>
+> **The thrust line must pass within 10.7 mm of the host centre of mass** to keep a 15 N·m·s wheel
+> unsaturated across a twelve-shot campaign.
+>
+> **Gen5's equivalent was 19.5 mm.** Gen6 tightens it by 1.8×, in exact proportion to the impulse.
+
+**E29's complaint was that no such requirement existed. It exists now**, and it is demanding: 10.7
+mm of alignment to the centre of mass of a **spent stage whose mass properties are not public** —
+which is **E5**, and which is why this is a sweep rather than a number.
+
+**Momentum management is not optional at Gen6.** Either the alignment requirement is met, or the
+host dumps momentum between shots, and the 1200 s cadence of ADR-020 is enough time to do it.
+
+## What this run does not do
+
+- **All shots along one axis in one direction**, so angular impulse accumulates. Alternating the
+  firing direction would cancel much of it and the magazine does not currently allow that.
+- **Rigid host, no flexibility, no propellant slosh, no attitude control during the shot.**
+- **It does not size a wheel or a thruster**, only states what they must absorb.

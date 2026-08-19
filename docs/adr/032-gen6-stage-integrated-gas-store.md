@@ -104,7 +104,7 @@ launch multiplies the interface problem rather than solving it, and keeping a st
 manoeuvring past passivation is a regulatory conversation this project has not had.
 
 **And the honest reading of the propellant.** The residuals a stage carries are its disposal burn.
-**Gen6 does not spend them** — A39's charge budget is 25–131 W, which is solar — and the
+**Gen6 does not spend them** — A39's charge budget is 25–131 W *(**corrected 2026-08-16**: that figure is A37's `charge_W_60s` for the **spring** option, not this architecture's. [A51](../../validation/A51_gen6_power.md) measures Gen6 at **0.26 W average, 36 W peak**. The decision stands; the number was never Gen6's — **P80**)*, which is solar — and the
 altitude-shell repositioning in [ADR-024](024-last-mile-delivery-conops.md) is therefore an option
 a host may decline without Gen6 failing.
 
@@ -118,7 +118,7 @@ will not.
 **Kill criterion 4 is not declared passed.** A38 establishes that raising the acceleration does not
 make tip-off worse. It remains *modelled, not demonstrated*, on a mechanism that does not exist.
 
-**Nothing here is measured.** Forty-six analyses, one hundred and fourteen register entries, and no hardware.
+**Nothing here is measured.** Forty-six analyses, one hundred and sixteen register entries, and no hardware.
 `docs/PROVENANCE.md` says so and continues to.
 
 ## Alternatives, and why not

@@ -1,0 +1,69 @@
+{
+  "analysis": "A53",
+  "bands_declared_commit": "HEAD~1",
+  "note": "spring energy density from actuator_trade.py upper end, which flatters a real spring. Latch and guide mass is a declared guess of 0.12 kg per cell with no derivation and is the largest assumption here. Friction is A41 band 8's ALLOWANCE over the full remaining stroke -- the pessimistic reading, and P67 has never measured it.",
+  "clearance_J": 4.5,
+  "tube_clearing_J": 181.820095984766,
+  "ratio": 40.40446577439244,
+  "per_cell_clearance_kg": 0.135,
+  "per_cell_tube_kg": 0.7260669866158866,
+  "total_clearance_kg": 1.62,
+  "total_tube_kg": 8.71280383939064,
+  "per_sat_clearance": 1.537748,
+  "per_sat_tube": 2.1288149866158865,
+  "a47_gen6": 6.9922333708074795,
+  "a47_with_ejector": 9.261168439286433,
+  "latch_guide_kg": 0.12,
+  "spring_len_mm": 60.0,
+  "standby": "a spring held compressed from integration to the last shot; A39 recorded the same class of problem against the gas option",
+  "bands": [
+    {
+      "n": "1",
+      "band": "ejector mass per cell at 1.5 m/s <= 0.25 kg",
+      "got": "0.135 kg",
+      "passed": true
+    },
+    {
+      "n": "2",
+      "band": "twelve ejectors <= 3.0 kg and per satellite stays <= 2.0 kg",
+      "got": "1.620 kg, 1.538 kg/sat",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "fits inside the existing 104 mm cell pitch",
+      "got": "60 mm",
+      "passed": true
+    },
+    {
+      "n": "4",
+      "band": "stored energy <= 2 % of the gas shot",
+      "got": "0.241 %",
+      "passed": true
+    },
+    {
+      "n": "5",
+      "band": "A47 re-run confirms >= 9.0 satellites at r = 0.99",
+      "got": "9.261",
+      "passed": true
+    },
+    {
+      "n": "6",
+      "band": "the ejector's own failure rate is included as a shot-scope element",
+      "got": "included",
+      "passed": true
+    },
+    {
+      "n": "7",
+      "band": "firing alone clears the tube at >= 1.0 m/s",
+      "got": "needs 181.8 J, has 4.5 J",
+      "passed": false
+    },
+    {
+      "n": "8",
+      "band": "the standby problem is stated",
+      "got": "stated: held compressed from integration to the last shot",
+      "passed": true
+    }
+  ]
+}

@@ -11,7 +11,7 @@ has all three.
 > ## The one sentence that governs everything below
 >
 > **Nothing has been built, fired, or measured at any scale.** That is `OPEN_PROBLEMS.md` **E4**,
-> it is still open, and no amount of the analysis below changes it. Fifty validation runs
+> it is still open, and no amount of the analysis below changes it. Fifty-three validation runs
 > exist. **Zero measurements exist.** Every number in this repository is a model output, and the
 > field model has only ever been checked *analytic against analytic* — a closed-form wave model
 > against magpylib, two implementations of the same physics.

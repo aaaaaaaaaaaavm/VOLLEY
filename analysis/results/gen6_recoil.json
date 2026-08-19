@@ -1,0 +1,111 @@
+{
+  "analysis": "A52",
+  "bands_declared_commit": "HEAD~1",
+  "note": "rigid host, all shots along one axis in one direction so angular impulse accumulates, no attitude control during the shot, no host flexibility, no propellant slosh. The CoM offset is a sweep, not a number, because no stage's mass properties are public -- E5.",
+  "gen5_per_shot": 64.1167712256599,
+  "gen6_per_shot": 116.032,
+  "trim_per_shot": 1.292,
+  "gen5_campaign": 769.4012547079188,
+  "gen6_campaign": 1407.888,
+  "ratio_gen6_gen5": 1.8096981145794708,
+  "propellant_gen5_kg": 0.35662315168692066,
+  "propellant_gen6_kg": 0.6525664634804862,
+  "wheel_N_m_s": 15.0,
+  "isp_s": 220.0,
+  "offsets": [
+    {
+      "offset_m": 0.0,
+      "per_shot": 0.0,
+      "campaign": 0.0,
+      "wheel_fraction": 0.0
+    },
+    {
+      "offset_m": 0.01,
+      "per_shot": 1.17324,
+      "campaign": 14.078880000000002,
+      "wheel_fraction": 0.9385920000000001
+    },
+    {
+      "offset_m": 0.025,
+      "per_shot": 2.9331,
+      "campaign": 35.1972,
+      "wheel_fraction": 2.34648
+    },
+    {
+      "offset_m": 0.05,
+      "per_shot": 5.8662,
+      "campaign": 70.3944,
+      "wheel_fraction": 4.69296
+    },
+    {
+      "offset_m": 0.1,
+      "per_shot": 11.7324,
+      "campaign": 140.7888,
+      "wheel_fraction": 9.38592
+    },
+    {
+      "offset_m": 0.25,
+      "per_shot": 29.331,
+      "campaign": 351.972,
+      "wheel_fraction": 23.4648
+    },
+    {
+      "offset_m": 0.5,
+      "per_shot": 58.662,
+      "campaign": 703.944,
+      "wheel_fraction": 46.9296
+    },
+    {
+      "offset_m": 1.0,
+      "per_shot": 117.324,
+      "campaign": 1407.888,
+      "wheel_fraction": 93.8592
+    }
+  ],
+  "saturating_offset_mm": 10.654256588592276,
+  "gen5_saturating_offset_mm": 19.495679150788906,
+  "bands": [
+    {
+      "n": "1",
+      "band": "the method reproduces Gen5's 64.1 N.s within 1 %",
+      "got": "64.12 N.s",
+      "passed": true
+    },
+    {
+      "n": "2",
+      "band": "Gen6 per-shot and campaign linear recoil reported",
+      "got": "116.03 N.s, 1392.4 N.s campaign",
+      "passed": true
+    },
+    {
+      "n": "3",
+      "band": "angular impulse computed across an offset sweep",
+      "got": "8 offsets",
+      "passed": true
+    },
+    {
+      "n": "4",
+      "band": "the offset saturating a 15 N.m.s wheel in 12 shots is stated",
+      "got": "10.7 mm",
+      "passed": true
+    },
+    {
+      "n": "5",
+      "band": "propellant to null the campaign <= 1.0 kg",
+      "got": "0.653 kg",
+      "passed": true
+    },
+    {
+      "n": "6",
+      "band": "the result is stated as an alignment requirement in millimetres",
+      "got": "10.7 mm",
+      "passed": true
+    },
+    {
+      "n": "7",
+      "band": "the trim stage's contribution is included",
+      "got": "1.29 N.s per shot, 1.11 % of the gas shot",
+      "passed": true
+    }
+  ]
+}

@@ -18,7 +18,7 @@
 
 **No mover. No stator. No supercapacitor bank. No power electronics. No eddy brake. No return
 stroke.** 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charging is
-**25–131 W**, which is solar.
+**0.26 W average and 36 W peak** ([A51](../../validation/A51_gen6_power.md)). *The 25–131 W this file quoted until 2026-08-16 was A37's spring-winding figure — **P80**.*
 
 | Part | Governing parameters |
 |---|---|

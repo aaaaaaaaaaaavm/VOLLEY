@@ -90,7 +90,7 @@ of a part that no longer exists.
 | **PII-2** | the sled chassis, by ribbing it | No sled |
 | **PII-3** | K<sub>t</sub>, by a two-layer stator | No stator |
 | **PII-4** | the envelope, by repackaging 1839 mm | No envelope — the stage is the structure |
-| **PII-7** | the supercapacitor bank, by four parallel strings | **No bank.** This is P26, the largest live defect this project carried, and A39's answer is 25–131 W |
+| **PII-7** | the supercapacitor bank, by four parallel strings | **No bank.** This is P26, the largest live defect this project carried, and Gen6's answer is an architecture A51 measures at 0.26 W average *(A39's 25–131 W was the spring option's figure — P80)* |
 | **PII-11** | the track, by making it deployable | The stage is already deployed, already long, and already straight |
 | **PII-12** | copper loss, by block commutation | No stator |
 | **PII-17** | the mover, by letting it depart with the satellite | No mover |

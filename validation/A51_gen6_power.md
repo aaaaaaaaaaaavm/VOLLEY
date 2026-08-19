@@ -69,4 +69,81 @@ Four candidates, and the run reports all four rather than choosing one:
 
 ## Result
 
-*Not yet run.*
+**RUN 2026-08-16. Seven of eight bands pass. Band 3 fails, my prediction about it was wrong, and
+the band was measuring the wrong ratio.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces A41 and A43 | 1864.8 J, 5.38 kg | **PASS** |
+| 2 | electrical from a named component list | 5 components | **PASS** |
+| 3 | on-orbit electrical ≤ 5 % of shot work | **16.718 %** | **FAIL** |
+| 4 | all four measures reported | 4 | **PASS** |
+| 5 | ≥ 2 % of stored exergy delivered | **3.36 %** | **PASS** |
+| 6 | ≥ 10 kJ/kg of gas | 16.60 kJ/kg | **PASS** |
+| 7 | the 25–131 W figure traced | traced | **PASS** |
+| 8 | peak electrical reported | 36.0 W | **PASS** |
+
+### Band 7 first, because it is the reason this run exists
+
+**ADR-032 states Gen6's charging as "25 to 131 W, which is solar". The figure is not Gen6's.**
+
+It is `analysis/host_integrated.py`'s `charge_W_60s = e / 60.0`, where *e* is **the spring
+option's** shot energy — the power to wind a spring over a sixty-second indexing window. **Gen6 has
+no spring, and its reservoir is filled on the ground to 200 bar.** Nothing in the architecture
+recompresses gas on orbit.
+
+**What Gen6 actually asks the host for:**
+
+| | |
+|---|---:|
+| Electrical energy per shot | **311.76 J** |
+| **Average power over a 1200 s cadence** | **≈ 0.26 W** |
+| Peak instantaneous | **36.0 W** |
+
+**The real number is about a hundredth of the one being claimed**, and the claim was wrong in the
+*conservative* direction — which is unusual enough to be worth saying. **Recorded as P80.**
+
+### Band 3 failed, and the band compared the wrong two things
+
+**16.718 % against a 5 % band.** But the composition says what is really going on:
+
+| | |
+|---:|---|
+| 1.20 J | fire valve, 24 W for 50 ms |
+| **99.36 J** | fill valve, 24 W across A42's **4.14 s** fill |
+| 30.00 J | pressure transducer, held through the indexing window |
+| **180.00 J** | shot sequencer, held through the indexing window |
+| 1.20 J | cradle release |
+
+**The shot itself costs 2.4 J — 0.13 % of its own mechanical work.** Everything else is
+**housekeeping across a sixty-second window**, and dividing sixty seconds of housekeeping by a
+133 ms shot's energy will always look bad without meaning much.
+
+**My prediction said band 3 would pass by a wide margin, and my error was the same as the band's**
+— I was thinking of the shot and the band was measuring the cycle. **The band stands as failed**,
+and the useful figure is the average power above.
+
+### The four measures, each with its denominator named
+
+| Measure | Value | Denominator |
+|---|---:|---|
+| On-orbit electrical / shot work | 16.718 % | what the **host** is asked for |
+| Delivered per kg of gas | **16.60 kJ/kg** | the mass question |
+| Campaign / compression exergy | **3.36 %** | thermodynamically honest, ground energy included |
+| Shot work / chamber *pV* | 18.65 % | the expansion alone |
+
+**Gen5's 18.5 % electrical-to-payload is not a comparator for any of them**, and the near-coincidence
+with the last row is exactly that — a coincidence of two different quantities.
+
+**Band 5 passed at 3.36 %, and it is the least flattering figure here.** Compressing the
+reservoir's 1.41 kg of nitrogen to 200 bar costs roughly **666 kJ** on the ground against
+**22.4 kJ** delivered to twelve payloads. **Isothermal compression is an idealisation that
+flatters it** — a real multi-stage compressor is worse.
+
+## What this run does not do
+
+- **No datasheet backs any component draw.** All five are declared representative figures, which
+  is **E3** — no vendor quotation exists anywhere in this project.
+- **No thermal path for the compressor**, and no ground-support power budget.
+- **It does not price keeping the sequencer alive between shots across a months-long campaign**,
+  which [A50](A50_campaign_altitude.md) has just made a live question.

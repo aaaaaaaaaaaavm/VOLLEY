@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **114 numbered entries, of which 47 are live.** Every entry carries a `Status:` line written by
+> **116 numbered entries, of which 48 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -2194,6 +2194,17 @@ against a named host inertia and a stated CoM tolerance, with bands declared fir
 interface requirement, in ADR-010's successor or an amendment to it, stating the permissible
 thrust-line-to-CoM offset, which is the number the budget exists to set. Neither exists.
 
+
+> **Answered 2026-08-16 by [A52](validation/A52_gen6_recoil.md), and the requirement now exists.**
+> The angular impulse is **117.32 N·s × the CoM offset** per shot, accumulating across twelve
+> because the magazine fires one way. **The thrust line must pass within 10.7 mm of the host centre
+> of mass** to keep a 15 N·m·s wheel unsaturated over a campaign; Gen5's equivalent was 19.5 mm.
+>
+> **This entry's complaint was that no such requirement existed. It does now** — and it is
+> demanding, because it is 10.7 mm to the centre of mass of a spent stage whose mass properties are
+> not public (**E5**). **Momentum management is not optional at Gen6:** either the alignment is
+> met, or the host dumps momentum between shots, and ADR-020's 1200 s cadence is enough time to.
+
 ### P46. K_t is a centre-plane value and overstates thrust by 4.42 %: CORRECTED 2026-08-13
 > **Status:** `LIVE` — open engineering; something still has to be done
 > **Corrected.** Applied 2026-08-13, three days after being computed and held. `thrust_constant()`
@@ -3456,6 +3467,84 @@ altitude-independent while life is not.
 GMAT directly, which is what produced the numbers it disagrees with. **The GMAT runs already
 exist**: `validation/gmat/` carries the campaign that stopped early. Until then **E28 stays open**,
 and it stays open *because* a model disagreeing with its own evidence is not a closure.
+
+### P80. Gen6's charging power is a spring's, quoted for a machine that has no spring: MEDIUM, CORRECTED 2026-08-16
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) states Gen6's charging as
+"25 to 131 W, which is solar". It is not Gen6's figure.**
+
+It is `analysis/host_integrated.py`'s **`charge_W_60s = e / 60.0`**, where *e* is **the spring
+option's** shot energy — the power needed to wind a spring across a sixty-second indexing window.
+**Gen6 has no spring. Its reservoir is filled on the ground to 200 bar and nothing in the
+architecture recompresses gas on orbit.**
+
+**[A51](validation/A51_gen6_power.md) computed the real figure from a named component list:**
+
+| | |
+|---|---:|
+| Electrical energy per shot | **311.76 J** |
+| **Average power over the 1200 s cadence** | **≈ 0.26 W** |
+| Peak instantaneous | **36.0 W** |
+| The claim it replaces | 25–131 W |
+
+**About a hundredth of what was being claimed, and the error was in the conservative direction** —
+Gen6 asks the host for far less than the record says, which is unusual enough to note.
+
+**How far it spread.** ADR-032 originally, then repeated on 2026-08-16 in
+[ADR-033](docs/adr/033-gen6-trim-stage.md), `docs/GENERATIONS.md`, `docs/LINEAGE.md` and the front
+page — **four times in one day, by me, from a source I did not check.**
+
+**Corrected.** Every live occurrence now carries A51's figures; ADR-032 keeps the number it was
+decided against with an annotation, as decision records do.
+
+**The lesson, and it is not new here.** *A number inherited from an adjacent analysis is not a
+result.* The spring option and the gas option were priced side by side in the same script, and the
+wrong column was carried forward. **No check could catch it: both figures are real outputs of a
+real run, and only their applicability differs.**
+
+### P81. The backup ejector cannot get the payload out of the tube: HIGH, NEW 2026-08-16
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A53](validation/A53_backup_ejector.md) band 7 failed by a factor of forty, and it takes the
+highest-value reliability change in the record with it.**
+
+[A47](validation/A47_gen6_fmea.md) priced a per-cell ejector at **+2.27 satellites** delivered at
+*r* = 0.99, against **+0.37** for the entire Gen5 → Gen6 architecture change — **six times more**,
+because a mechanism in every cell makes the drive satellite-forfeiting instead of
+manifest-forfeiting, which is the only move that touches **E30**.
+
+**A47 priced the effect. A53 designed the thing, and it does not fit the architecture.**
+
+| | |
+|---|---:|
+| Spring for a clean 1.5 m/s departure | **4.5 J** |
+| Pushing the payload 2.18 m along a sealed tube at A41's friction allowance | **181.8 J** |
+| **Shortfall** | **40.4×** |
+
+**In Gen5 the payload sat in an open cell. In Gen6 it is inside a tube with a piston behind it**,
+and if the drive is dead something must move both the length of the stroke.
+
+**Sizing the spring to actually do that costs the mass argument:**
+
+| | × 12 | Added per satellite |
+|---|---:|---:|
+| Clearance only — *cannot clear the tube* | 1.620 kg | 1.538 kg |
+| **Clearing the tube** | **8.713 kg** | **2.129 kg — crosses the 2.0 threshold** |
+
+**So the change is either ineffective or it re-crosses the one kill-criterion numerator Gen6
+currently passes.**
+
+**What survives, and the distinction matters.** Bands 1 through 6 all pass. **The failure is
+architectural, not conceptual** — the ejector works wherever the payload does not traverse a sealed
+tube. Two escapes are unpriced: **venting the tube** and **disengaging the piston**.
+
+**And P67 decides this as well.** The 181.8 J uses A41's friction *allowance*, which has never been
+measured. At a genuinely small friction the light ejector works and this entry closes. **One bench
+test now governs four open decisions** — this, A49's long-stroke design point, ADR-033's trim
+stage, and **P77**'s pulse store.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
