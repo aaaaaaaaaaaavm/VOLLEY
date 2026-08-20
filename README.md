@@ -40,7 +40,7 @@ or to qualify.
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
 | **checking what outside evidence could settle** | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) — which live entries a published source can close, which it can only inform, and **which need hardware and cannot be read away** |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 125 numbered entries, 50 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 127 numbered entries, 51 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -70,11 +70,30 @@ generations; [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) is what Gen6 still o
 store charges slowly from solar and releases fast — an excellent energy store and a terrible
 servo. A linear machine is the reverse. **Gen6 uses each for what it is good at.**
 
-**The motor is not decoration at 0.5 % of the stroke.** Gen6's shot is a single open-loop
+**The motor is not decoration at 1.8 % of the stroke.** Gen6's shot is a single open-loop
 expansion dispersing at **3.980 % (3σ)** at ADR-034's stroke, of which **98.7 % is a seal friction
 nobody has measured** — and [A44](validation/A44_gen6_dispersion.md) found no instrumentation route out,
 because a fivefold better pressure transducer moves it **0.008 %**. **The stator is what recovers
 the commanded velocity the product is sold on.**
+
+> ### The stator is suspended, and the seal may delete it — [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md), 2026-08-20
+>
+> **That 3.980 % is computed at A41's friction *allowance* — a ceiling, not a measurement.**
+> [A61](validation/A61_seal_class.md) asked instead what the loosest seal is that the design can
+> survive, and found the binding requirement is **thermal**: a 2 g seal must stay within 50 K of
+> its own friction heating, which needs **17.8 N — 4.00 % of the piston's pressure force.**
+>
+> **The trim stage stops earning its mass at 22.3 N.** Since **17.8 < 22.3**, *any seal that
+> survives its own heat also makes the stator unnecessary* — dispersion falls to **0.9051 %** and
+> the authority needed to **0.2982 m/s**, below what a 39.7 mm section already gave.
+>
+> **So the stage is suspended rather than built or deleted.** Deleting it on a specification would
+> repeat ADR-033's own error of adopting before its falsifier was answered. **[P67](OPEN_PROBLEMS.md)
+> decides**: at or below 17.8 N the stator goes, above 22.3 N it is needed.
+>
+> **And the honest limit: at 0.9051 % the declared band is still 0.5 %.** *Unnecessary and
+> sufficient are different words. A specified seal makes Gen6 cheaper; it does not make it
+> accurate.*
 
 ### Why the store is gas
 
@@ -154,7 +173,7 @@ electrical-to-payload, net of that credit.
 flowchart LR
     A["Cassette feed<br/>12 x 3U"] --> B["Charge chamber<br/>2 L to 22.73 bar<br/>from a 3.46 L bottle at 200 bar"]
     B --> C["Fire<br/>closed adiabatic expansion<br/>8.0 m, 11.36 g"]
-    C --> D["Trim stator<br/>39.7 mm at the muzzle<br/>+/-0.323 m/s"]
+    C --> D["Trim stator<br/>144 mm at the muzzle<br/>+/-1.1543 m/s<br/>SUSPENDED, ADR-036"]
     D --> E["Release<br/>29.009 m/s"]
     E --> F["Carriage<br/>NOT recovered"]
     E -.->|"payload departs"| G["Commanded orbit"]
@@ -164,6 +183,12 @@ flowchart LR
 not come back — Gen6 has no return stroke and no brake, because there is no reusable sled to
 arrest. **The trim section is energised only after the gas has finished**, which is what lets a
 39.7 mm machine recover a precision a 2180 mm one used to provide.
+
+**The section is 144.01 mm, not the 39.7 mm this page carried until 2026-08-19.**
+[A55](validation/A55_trim_authority.md) re-ran it at ADR-034's stroke and found the stage
+**under-authority by 3.57×** — P83, confirmed and closed. *It grew in exact proportion to the
+stroke, 1.822 % to 1.800 %.* **Whether any of it gets built is [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)'s
+open question.**
 
 **There is no Gen6 efficiency figure of the Gen5 kind**, and the reason is not an omission: the
 energy arrives as a ground-filled bottle rather than as electricity.
@@ -180,7 +205,7 @@ no figure, the cell says so rather than being left blank.
 | | **Gen5**, the baseline | **Gen6** at ADR-034 | Source |
 |---|---|---|---|
 | **Exit velocity, 3U** | **16.029 m/s at 10.07 g** | **34.280 m/s** zero-friction, **29.009** at the friction allowance, **at 11.36 g** | `motor_model.py` · [A49](validation/A49_design_surface.md) |
-| **Dispersion, 3σ** | **0.0274 m/s** at a 15.8 m/s setpoint, to ±0.10 km apogee | **3.980 % open-loop** at ADR-034's stroke; 0.0274 m/s with a trim stage resized to **144 mm** ([A55](validation/A55_trim_authority.md)) — **whose store [A54](validation/A54_pulse_chain.md) weighs at 23–37 kg, firing ADR-033's own falsifier (P86)** | `motor_model.py` · [A44](validation/A44_gen6_dispersion.md) |
+| **Dispersion, 3σ** | **0.0274 m/s** at a 15.8 m/s setpoint, to ±0.10 km apogee | **3.980 % open-loop** at ADR-034's stroke; 0.0274 m/s with a trim stage resized to **144 mm** ([A55](validation/A55_trim_authority.md)) — **whose store is ~70 g, not A54's 23–37 kg** ([A64](validation/A64_pulse_store_technology.md), P86 closed). **The stage itself is suspended — [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)** | `motor_model.py` · [A44](validation/A44_gen6_dispersion.md) |
 | Acceleration length | 1.3 m accelerating, 1.5 m track | **8.0 m** — the host stage's whole usable length | `cad/parameters.json` |
 | Thrust constant | 10.54 N per kA/m, ±1.01 % ripple | same machine, trim section only | `motor_model.py`, A2 |
 | — its centre-plane value | 11.03 N per kA/m, **independently computed by a 2-D FEM to 0.03 %** | — | `motor_model.py`, A1 |
@@ -236,8 +261,18 @@ A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators
 > counted **8 manifest-forfeiting elements against Gen5's 9** — deleting six subsystems removed
 > exactly one shared failure, and added the host stage's keep-alive agreement, which no launch
 > provider has given. **A per-cell backup ejector is worth six times the whole architecture
-> change**, and [A53](validation/A53_backup_ejector.md) found it does not fit a sealed tube
+> change**, and [A53](validation/A53_backup_ejector.md) found a spring does not fit a sealed tube
 > (**P81**). *A spring dispenser still forfeits nothing, and that row does not move.*
+>
+> **A53 closed that as architectural, and it was a store choice — [A65](validation/A65_pyrotechnic_ejector.md),
+> 2026-08-20.** A spring stores **4.5 J** against the **667.2 J** of clearing the 8 m tube, short by
+> **148×**. A solid-propellant gas generator of the automotive restraint class delivers **2331.6 J**
+> at the smallest charge in the published range, *after* cooling to the tube's own 473 K ceiling —
+> **3.49× over.** And the mass argument inverts: A53's tube-clearing spring re-crossed the kill
+> criterion at 2.129 kg/satellite, this is **1.6496**. **Band 4 still misses** A53's inherited
+> 0.25 kg per-cell threshold at 0.4350 kg, and **46.6 % of that is a minimum-gauge steel plenum
+> rather than anything pyrotechnic** (**P91**). *The same mistake A54 made about the pulse store:
+> pricing the only technology this repository happened to have data for.*
 
 ## What stands behind the numbers
 
@@ -250,6 +285,28 @@ single-sourced.**
 **[`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md)** checks every claim where it can.
 **[`docs/FIGURE_INDEX.md`](docs/FIGURE_INDEX.md)** gives each figure's generator, source data and
 class of evidence — and **the class for *measured* has zero members.**
+
+### Until 2026-08-20 every number here came from inside this repository
+
+**[`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) is the survey of what outside sources
+can settle, what they can only inform, and what they cannot touch.** It exists because of one
+result: [A54](validation/A54_pulse_chain.md) priced the trim store at **23–37 kg** and was correct
+in every calculation — it had priced an EDLC, *because that was the only store technology in this
+repository.* Against published pulsed-power capacitor data
+[A64](validation/A64_pulse_store_technology.md) returns **~70 g — 522× lighter, and P86 closed.**
+
+**A second map looks sideways rather than up**, at automotive and motorcycle engineering, where
+several live entries describe components road vehicles build in tens of millions: **fork and damper
+rod seals** against the 17.8 N of P67 and P88, **pyrotechnic gas generators** against P81, **film
+DC-link capacitors** against P86, **variable-reluctance speed sensing** against the velocity sensor
+Gen6 has never had. *Every one of them is lubricated, cyclic and atmospheric, and VOLLEY is dry, in
+vacuum, and fires twelve times ever — which is stated as the limit of each transfer, next to the
+transfer.*
+
+> **The vault was re-read the same way on 2026-08-20**, and the finding was not in the vault:
+> **three parked entries had each stopped partly on "the capacitor bank cannot source this", and
+> ADR-032 deleted the bank.** *One retirement quietly retired a blocker in three separate entries
+> and none of them had been re-read since.* **A stop is not scripture either.**
 
 ### What each independent check actually returned
 
@@ -391,7 +448,7 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **125 numbered entries, 50 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Defect register** | **127 numbered entries, 51 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
 | **Validation** | **65 run sheets, A1–A65**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
@@ -399,7 +456,7 @@ since.
 
 | | |
 |---|---|
-| **P67** | **The seal friction has never been measured.** It owns 93.4 % of Gen6's dispersion, it is the entire justification for the trim stage, and ADR-034 took its share of shot work from 9.75 % to **28.39 %**. **One bench test now governs five open decisions, and it can delete work rather than add it** |
+| **P67** | **The seal friction has never been measured, and it now chooses between two architectures.** It owns **98.7 %** of Gen6's dispersion, and every published dispersion figure descends from A41's *allowance* — **4.68× looser than the specification [A61](validation/A61_seal_class.md) derived.** **≤ 17.8 N and the trim stage is deleted; > 22.3 N and it is needed** ([ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)). *One bench test, and it can delete a subsystem rather than add one* |
 | **P68** | **[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)'s first falsifier has fired.** The stage credit breaks even at **8.4 %**, not the 30 % the ADR claimed — and **58.6 % of it is a skin on a vehicle nobody has agreed to lend** |
 | **P59** | **Kill criterion 1 is crossed at 5.3×.** A35 closed the architecture route out of it and A36 closed the manifest route. **Only a smaller payload class remains**, and that decision has been deferred since Phase I |
 
@@ -426,6 +483,9 @@ were: change the payload class, or publish the criterion as crossed.
 | **2026-08-13** | The last four deferred decisions, taken together in [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md) | **K_t 11.03 → 10.54**, exit velocity 16.388 → **16.029 m/s**, efficiency 21.0 → **18.8 %**, mass per satellite 6.378 → **10.547 kg**. **Nothing improved. That is what the corrections cost** |
 | **2026-08-16** | The enclosure was an **8.00 kg placeholder**; [A46](validation/A46_enclosure_buildup.md) built it up from the geometry | **50.04 kg.** The earlier warning had guessed 20 |
 | **2026-08-19** | ADR-034 moved the design point in `cad/parameters.json` and eleven documents, and **not in the analysis scripts** (**P84**) | A44 and A48 are answering a superseded question. **Nothing in this repository compares the parameter file against the scripts**, so every gate stayed green |
+| **2026-08-20** | **The dispersion figure never propagated.** A55 measured **3.9798 %** at ADR-034's stroke on 19 August; ADR-033, `GENERATIONS.md`, `BUILD_READINESS.md` and `GEN6.md` all still published A44's **1.113 %** | **3.6× low, in four documents, for a day.** *The number was never missing — a stale figure with its replacement sitting one file away is a worse failure than an unknown one, because nothing about it looks unfinished.* And P84's own closing sentence claimed the current figure was unknown; **it was not, and that has been corrected too** |
+| **2026-08-20** | **Two dated scripts had one leg live and one leg frozen** (**P84**, second and third instances) | `gen6_dispersion.py` was computing a shot at **50 bar over 8.0 m** — a point never adopted — returning 1.504 % against A44's published 1.113 %. `trim_stage.py` band 3 reported **0.497 %** where A48 declared **1.822 %**. Both now freeze their own stroke the way `precharged.py` already froze `STROKE_A41`, **a pattern that existed and had not been applied.** *Nothing compares a script against the run sheet it produced* |
+| **2026-08-20** | **`cad/DIMENSIONS.md` labelled every physical quantity "mm"** | 200 bar rendered as **"200.0 mm"**, a 473 K ceiling as "473.0 mm", the 3.1216 kg store as "3.1216 mm". `unit_for()` fell through to millimetres for anything it did not recognise, and every quantity the gas architecture added was unrecognised. **This is the document whose stated purpose is to be read instead of the JSON by whoever is cutting metal** |
 
 **Ways to recover the lost velocity** — pocketing, sheet current, stroke length, a two-layer
 stator, and a momentum-transfer release that buys it all back for 1.6 % of the shot energy — are
@@ -482,6 +542,7 @@ readings of what the problem is** — and one decision, in 2023, that is neither
 | **2021** | **Coilgun** — *how hard can we throw it?* Presented at ARDE / INSARM | a capacitor bank discharges into coils; the payload is pulled by a field gradient | **velocity you can command.** A coilgun's exit speed is set by the discharge, not by a loop |
 | **2023** | **[ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md) — the host is a spent upper stage.** *This set the direction*, and it is not an architecture change | a free-flyer must carry attitude control, power and recoil management, *"which is most of a spacecraft"*; a spent stage already has all three | nothing yet. **It turned VOLLEY from a mission into a payload**, and everything after it moved the same way |
 | **mid-2025** | **Linear synchronous motor** — *how precisely can we throw it?* Not for accuracy, whatever the record used to say: *"the acceleration is enormous and the EMI environment is awful. **That defeats the whole point of supporting unmodified CubeSats**"* | current commanded against measured position; magnets ride a **reusable sled**, an eddy brake recovers it | **simplicity.** Every subsystem that follows — bank, power electronics, brake, return stroke — exists to serve the sled. A35 prices that at **11.54 kg**, against **26.35 kg** for insisting the energy arrive *during* the shot |
+| **2026-08-20** | **[ADR-035](docs/adr/035-drive-tube-material.md) — the tube is hard-anodised aluminium**, then **[ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md) — the seal is specified and the trim stage suspended** | A59 found strength, stiffness and buckling **indifferent between the metals**, so mass alone decided — and that **forecloses steam** (A63: zero of 108 points reach 473 K). Then A61 specified the seal at **17.8 N** and ADR-036 stopped work on the stator rather than building or deleting it | **P67.** Both decisions rest on a friction nobody has measured, and ADR-036 is written to be falsified by the bench test |
 | **2026-08-14** | **[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) — cold gas on a stage rail.** *What does the machine need to exist at all?* Then **[ADR-033](docs/adr/033-gen6-trim-stage.md)**, a motor that steers, and **[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md)**, the stroke becomes the stage | a **2 L chamber at 22.73 bar** fires the payload along **8.0 m** of rail the spent stage already is; **nothing is recovered**; a **39.7 mm stator** corrects the result. **29.75 kg deleted, 43.33 kg reassigned** | **the pulse, partly.** The trim stage is 37.7 J at 28 kW — C3 returning at a fiftieth of the energy, **on hardware nobody has weighed** |
 
 **The arc is `how hard` → `how precisely` → `what can be deleted`.** Each step kept the problem and
