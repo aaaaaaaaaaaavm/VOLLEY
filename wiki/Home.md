@@ -98,7 +98,7 @@ flowchart LR
 | TRL | 2-3 |
 | Analysis | 40 Python scripts, reproducible, outputs committed as JSON |
 | Validation | 39 analyses, each with its acceptance bands declared **before** its script existed |
-| Register | 127 numbered entries, 52 live, including the ones that damage the work's own claims |
+| Register | 127 numbered entries, 53 live, including the ones that damage the work's own claims |
 | CAD | script-built from `cad/parameters.json`, Gen5 current, STEP and STL committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
 | FEA | magnetostatic 2-D (A1) and 3-D (A2), structural (A4), CFD (A29) |
 | Hardware | **none. Nothing here has been built, fired or measured** |

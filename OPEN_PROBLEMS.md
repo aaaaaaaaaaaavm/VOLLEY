@@ -5,13 +5,13 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **127 numbered entries, of which 52 are live.** Every entry carries a `Status:` line written by
+> **127 numbered entries, of which 53 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **52** (31 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **42** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `LIVE` | **53** (32 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **41** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **33** | resolved, with the closer named in the entry |
 >
 > **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
