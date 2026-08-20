@@ -111,6 +111,11 @@ an excellent servo.
    there, and the whole section is mass spent on a problem that did not exist. **P67** is the
    measurement.
 3. **The velocity sensor cannot resolve what the loop must correct** in the 1.4 ms available.
+5. **The stator cannot reach its magnets.** *Added 2026-08-20.* This decision puts the stator
+   outside the tube and the magnets inside it; [ADR-035](035-drive-tube-material.md) then made that
+   tube **aluminium**, and **nothing has computed what a conducting sleeve does to the coupling.**
+   **[P92](../../OPEN_PROBLEMS.md).** *If the attenuation is material, A55's 1.1543 m/s of authority
+   and the 28 606 W above are both optimistic.*
 4. **P34 proves binding** — if a magnetometer-carrying payload is a real customer rather than a
    hypothetical, the magnets cannot come back at any mass.
 
