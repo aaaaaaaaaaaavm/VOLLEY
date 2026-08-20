@@ -80,7 +80,8 @@ changes that.
 
 | | |
 |---|---|
-| **P67 — measure the seal friction** | **It owns 98.7 % of the dispersion, it is ADR-033's whole justification, and it can delete the trim stage rather than validate it.** Still the single highest-leverage action in the record — and [A58](../validation/A58_chamber_thermal.md) showed it is a harder test than described: **at −35.2 °C, on a seal dissipating 667.2 J per stroke at 2419 W, over 8.0 m, twelve times.** A room-temperature coefficient on a short rig does not answer it (**P88**) |
+| **A seal specification** | **[A61](../validation/A61_seal_class.md) produced one: 17.8 N, 4.00 % of the piston pressure force, with the thermal case binding.** `cad/parameters.json` still carries no seal. **P89** — and it is one line of specification that closes **P88** and deletes **P86**'s requirement |
+| **P67 — measure the seal friction** | **It owns 98.7 % of the dispersion, it is ADR-033's whole justification, and it can delete the trim stage rather than validate it.** Still the single highest-leverage action in the record — and [A58](../validation/A58_chamber_thermal.md) showed it is a harder test than described: **at −35.2 °C, on a seal dissipating 667.2 J per stroke at 2419 W, over 8.0 m, twelve times.** A room-temperature coefficient on a short rig does not answer it (**P88**). **And it now has a number to be measured against — 17.8 N (P89) — rather than nothing** |
 | **The cradle** | 201.7 N per contact releasing inside ≤ 1 N, now holding magnets in alignment too. **It does not exist in any file.** Kill criterion 4 stays *modelled, not demonstrated* until it does |
 | **The piston, seals, valves and plumbing** | A41 allows 1.5 kg and designs none of it |
 | **A stage** | No launch provider has agreed to keep one alive past passivation. **A47 counts this as manifest-forfeiting**, and it is the one shared element the project cannot engineer around |

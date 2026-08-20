@@ -85,3 +85,103 @@ authority.
   left uncomputed, or with pressure, velocity or wear across twelve shots.
 - **It does not re-run A44, A48, A54 or A58.** It reports what each would return.
 - **E4 stands.** Nothing here is measured.
+
+---
+
+## Result
+
+**RUN 2026-08-20. Six of nine bands pass. The design has been sized against a seal 4.7× looser
+than it needs, and specifying one closes two open defects — but not the third.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces A55 and A54 at 83.4 N | **3.9798 %**, min **10.54 kg** | **PASS** |
+| 2 | A41's allowance falls in a named class | **18.71 % — elastomer O-ring** | **PASS** |
+| 3 | some friction makes the trim stage unnecessary | **≤ 5.00 % = 22.3 N** | **PASS** |
+| 4 | some friction keeps a 2 g seal within 50 K | **≤ 4.00 % = 17.8 N** | **PASS** |
+| **5** | some friction gives section + store ≤ 2.0 kg | **none in 1–30 %** | **FAIL** |
+| **6** | thermal requirement looser than control | **4.00 % against 5.00 %** | **FAIL** |
+| 7 | the 16.000 mm stock bore shifts it ≤ 5 % | **0.00 %** | **PASS** |
+| **8** | velocity numerators within 25 % | **26.23 %** at the 30 % end | **FAIL** |
+
+### The diagnosis, confirmed
+
+**A41's 83.4 N allowance is 18.71 % of the piston's pressure force, and that sits inside the
+elastomer O-ring range.** Band 2 was a check on the parameterisation and it landed.
+
+> **The project has been sized, since A41, against the worst common seal class — and nobody ever
+> chose it.** A55's dispersion, A54's store, A58's seal heating and A49's band 6 failure all
+> descend from a number declared as an allowance.
+
+### The specification, which is what this run was for
+
+| Requirement | Maximum friction | |
+|---|---:|---|
+| **A 2 g seal stays within 50 K** — [A58](A58_chamber_thermal.md) band 5, **P88** | **4.00 %** | **17.8 N** |
+| The trim stage becomes unnecessary — below A48's ±0.323 m/s | 5.00 % | 22.3 N |
+| Section + store ≤ 2.0 kg — [A54](A54_pulse_chain.md) band 5, **P86** | **not reachable** | — |
+
+> ### **The seal specification is 4.00 % of p₀·A — 17.8 N — and the thermal case sets it**
+>
+> **Band 6 failed and that is the finding.** The seal must be better for **P88** than for the trim
+> stage: **4.00 % against 5.00 %.** *The binding requirement on this component is not the control
+> loop everyone has been discussing; it is that the seal must survive its own friction.*
+>
+> **A41's allowance is 4.7× looser than the specification.**
+
+**The requirement sits inside a filled-PTFE glide ring's handbook range of 2–10 %, but not at its
+loose end.** *This run does not claim any class achieves 4.00 %, and it is not a substitute for
+[P67](../OPEN_PROBLEMS.md) — which now has a number to be measured against.*
+
+### What a specified seal would close, and what it would not
+
+**At 5.00 % — 22.3 N — the whole chain moves:**
+
+| | A41's allowance, 18.71 % | **At 5.00 %** |
+|---|---:|---:|
+| Friction work per shot | 667.2 J | **178.4 J** |
+| Friction share of shot work | 28.39 % | **7.59 %** |
+| **3σ dispersion** | **3.9798 %** | **0.9051 %** |
+| Authority needed | 1.1543 m/s | **0.2982 m/s — below A48's 0.323** |
+| Section | 144.0 mm | **41.6 mm** |
+| 2 g seal rise per shot | 222.4 K | **59.5 K** |
+
+**P88 closes at 4.00 %. The trim stage becomes unnecessary at 5.00 %, which resolves P86 by
+deleting its requirement rather than meeting it.**
+
+**And band 5 says the store itself stays out of reach at any seal** — **4.23 kg even at 1 %
+friction.** *That confirms A54's correction: the store is power-limited, and peak power is set by
+sheet current, which friction does not touch. **Seal choice cannot solve P86; it can only make it
+irrelevant.***
+
+### The stock bore is free
+
+**Band 7 returned 0.00 %.** Moving from the drawn **15.805 mm** to the **16.000 mm** ISO 6432 stock
+bore changes the required friction fraction not at all, because the fraction is *of* the pressure
+force and the acceleration cap fixes that force whatever the area. **The charge pressure moves
+22.73 → 22.18 bar and nothing else does.**
+
+### Band 8 failed, and it bounds this run rather than the design
+
+**The two velocity numerators diverge by 26.23 % at the 30 % friction end.** Beyond roughly 28 %,
+friction is eating so much of the shot that the zero-friction figure stops being a useful reference
+and the sweep's far end should not be quoted. **A41's 18.71 % is inside the valid range; an
+elastomer at the top of its class is not.**
+
+## Consequences
+
+- **P89 opens**: the seal specification is 17.8 N and `parameters.json` carries no seal at all.
+- **P88 becomes closable by specification** rather than by adding a conduction path.
+- **P86 becomes deletable** rather than solvable, if the specification is met.
+- **P85 gains a cheap answer**: a stock 16 mm honed bore settles the bore, and matching the piston
+  material removes A58's 10.79 µm.
+- **Nothing is re-run here.** A44, A48, A54 and A58 all still carry A41's allowance.
+
+## What this run did not settle
+
+- **It measured nothing**, names no product, compound or supplier, and its class ranges are
+  handbook. **P67 still has to be run** — at −35.2 °C, on a seal dissipating its own friction, over
+  8.0 m, twelve times (**P88**).
+- **It does not model friction changing with the seal's own temperature**, with velocity, with
+  pressure, or with wear across twelve shots.
+- **E4 stands.**

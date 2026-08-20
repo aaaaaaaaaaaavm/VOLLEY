@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **123 numbered entries, of which 51 are live.** Every entry carries a `Status:` line written by
+> **124 numbered entries, of which 52 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3942,6 +3942,53 @@ it and does not compute it.**
 and P67 run at temperature, over a representative stroke, with the spread reported. **Until a seal
 exists, the 83.4 N in `gen6_dispersion.py` is an allowance A41 declared rather than a property of
 anything.**
+
+### P89. The seal has a specification now, and `parameters.json` still carries no seal: HIGH, NEW 2026-08-20
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A61](validation/A61_seal_class.md) inverted the question A41 left open.** Rather than asking what
+a seal would give, it asked what the loosest seal is that the design can tolerate — **and the answer
+is a number, in the unit seal data is quoted in.**
+
+> ### **17.8 N — 4.00 % of the piston's pressure force. The thermal case sets it.**
+
+| Requirement | Maximum friction |
+|---|---:|
+| **A 2 g seal stays within 50 K** — A58 band 5, **P88** | **4.00 % = 17.8 N** |
+| The trim stage becomes unnecessary — below A48's ±0.323 m/s | 5.00 % = 22.3 N |
+| Section + store ≤ 2.0 kg — A54 band 5, **P86** | **not reachable at any friction** |
+
+**A61 band 6 failed, and that is the finding: the binding requirement on this component is not the
+control loop, it is that the seal must survive its own friction.**
+
+### What the design has actually been assuming
+
+**A41's 83.4 N allowance is 18.71 % of the pressure force**, which A61 band 2 confirmed sits inside
+the **elastomer O-ring** range. **The project has been sized since A41 against the worst common seal
+class, and nobody ever chose it.** [A55](validation/A55_trim_authority.md)'s dispersion,
+[A54](validation/A54_pulse_chain.md)'s store, [A58](validation/A58_chamber_thermal.md)'s seal
+heating and [A49](validation/A49_design_surface.md)'s band 6 failure all descend from it.
+
+**The specification is 4.7× tighter than the allowance.**
+
+### What meeting it would do
+
+| | A41's allowance | At 5.00 % |
+|---|---:|---:|
+| Friction work per shot | 667.2 J | **178.4 J** |
+| **3σ dispersion** | **3.9798 %** | **0.9051 %** |
+| Authority needed | 1.1543 m/s | **0.2982 m/s** |
+| 2 g seal rise | 222.4 K | **59.5 K** |
+
+**P88 closes at 4.00 %. P86 becomes deletable at 5.00 %** — the trim stage is unnecessary rather
+than affordable. **But A61 band 5 found no friction in 1–30 % makes the store itself affordable:
+4.23 kg even at 1 %.** *Seal choice cannot solve P86; it can only make it irrelevant.*
+
+**What would close this entry:** a seal in `cad/parameters.json` — section, material class, mass and
+a friction figure — and **[P67](OPEN_PROBLEMS.md) measured against the 17.8 N specification rather
+than against nothing.** *A61 measured nothing and names no product; its class ranges are handbook
+and flagged as such.*
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
