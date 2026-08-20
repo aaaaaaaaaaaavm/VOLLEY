@@ -1,0 +1,167 @@
+{
+  "analysis": "A58",
+  "bands_declared_commit": "HEAD~1",
+  "note": "Lumped masses, adiabatic bounds, one conduction path. No FEA, no CFD, no contact model. Handbook c_p and alpha, declared in the run sheet, none measured. NEEDS SOURCE: seal mass and material -- no seal exists in any file, so it is swept. The seal friction changing with the seal temperature is the coupling that would matter most and is NOT computed.",
+  "gas": {
+    "p0_bar": 22.7258,
+    "stroke_m": 8.0,
+    "ratio": 0.5602868668758404,
+    "t_start_K": 300.0,
+    "t_end_K": 237.94984805341332,
+    "drop_K": 62.05015194658668,
+    "p_end_bar": 10.099358764553005,
+    "mass_kg": 0.051046271338724164,
+    "work_J": 2350.232238512899
+  },
+  "friction": {
+    "force_N": 83.40371375447981,
+    "work_J": 667.2297100358385,
+    "campaign_J": 8006.756520430062,
+    "v_exit": 29.008641199451766,
+    "peak_W": 2419.428407005485
+  },
+  "tubes": {
+    "steel": {
+      "tube_kg": 3.294,
+      "cp": 460.0,
+      "campaign_rise_K": 5.2841507090824305,
+      "per_shot_K": 0.4403458924235359
+    },
+    "aluminium": {
+      "tube_kg": 1.1404,
+      "cp": 900.0,
+      "campaign_rise_K": 7.801119022984198,
+      "per_shot_K": 0.6500932519153498
+    }
+  },
+  "chamber": {
+    "q_J": 2350.2322385129,
+    "swing_K": 15.107038789196642,
+    "tau_s": 7.03977195127359,
+    "residual_K": 1.4103040968627048e-73
+  },
+  "clearance_um": {
+    "steel_piston_in_steel_bore": 0.0,
+    "steel_piston_in_aluminium_bore": 10.787979073067618,
+    "aluminium_piston_in_steel_bore": 10.787979073067618,
+    "aluminium_piston_in_aluminium_bore": 0.0
+  },
+  "matched_um": 0.0,
+  "dissimilar_um": 10.787979073067618,
+  "seal_sweep": [
+    {
+      "mass_g": 0.5,
+      "rises_K": [
+        889.639613381118,
+        444.819806690559,
+        88.96396133811179,
+        8.896396133811187,
+        0.8896396133811187
+      ]
+    },
+    {
+      "mass_g": 1.0,
+      "rises_K": [
+        444.819806690559,
+        222.4099033452795,
+        44.48198066905589,
+        4.448198066905594,
+        0.44481980669055937
+      ]
+    },
+    {
+      "mass_g": 2.0,
+      "rises_K": [
+        222.4099033452795,
+        111.20495167263975,
+        22.240990334527947,
+        2.224099033452797,
+        0.22240990334527969
+      ]
+    },
+    {
+      "mass_g": 5.0,
+      "rises_K": [
+        88.9639613381118,
+        44.4819806690559,
+        8.896396133811178,
+        0.8896396133811187,
+        0.08896396133811188
+      ]
+    },
+    {
+      "mass_g": 10.0,
+      "rises_K": [
+        44.4819806690559,
+        22.24099033452795,
+        4.448198066905589,
+        0.44481980669055937,
+        0.04448198066905594
+      ]
+    }
+  ],
+  "heat_out_fracs": [
+    0.0,
+    0.5,
+    0.9,
+    0.99,
+    0.999
+  ],
+  "heat_out_needed_for_50K": {
+    "0.5": 0.9437974666955615,
+    "1.0": 0.8875949333911232,
+    "2.0": 0.7751898667822463,
+    "5.0": 0.4379746669556158,
+    "10.0": -0.12405066608876836
+  },
+  "bands": [
+    {
+      "n": "1",
+      "band": "gas stays >= 50 K above nitrogen condensing at 103 K",
+      "value": "237.9 K, 134.9 K of margin",
+      "verdict": "PASS"
+    },
+    {
+      "n": "2",
+      "band": "tube campaign rise <= 15 K in either material",
+      "value": "steel 5.28 K, aluminium 7.80 K",
+      "verdict": "PASS"
+    },
+    {
+      "n": "3",
+      "band": "chamber wall swing per shot <= 20 K",
+      "value": "15.11 K",
+      "verdict": "PASS"
+    },
+    {
+      "n": "4",
+      "band": "chamber recovers to within 5 K across the cadence",
+      "value": "0.0000 K left, tau 7 s",
+      "verdict": "PASS"
+    },
+    {
+      "n": "5",
+      "band": "seal rise per shot <= 50 K across the whole swept mass range",
+      "value": "44.5 to 889.6 K adiabatic",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "6",
+      "band": "differential clearance <= 5 um for the specified pairing",
+      "value": "matched 0.00 um, dissimilar 10.79 um -- AND THE REPOSITORY SPECIFIES NEITHER (P85)",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "7",
+      "band": "friction heating and expansion cooling do not cancel",
+      "value": "friction 8007 J in, gas absorbs 28203 J out over the campaign -- net COOLING",
+      "verdict": "PASS"
+    },
+    {
+      "n": "8",
+      "band": "REPORT: seal rise against mass and heat-out fraction",
+      "value": "5x5; for a 50 K rise a 2 g seal must shed 77.52 % of its friction heat during the stroke",
+      "verdict": "REPORT"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **122 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
+> **123 numbered entries, of which 51 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3765,10 +3765,23 @@ not find it stated anywhere in this repository.**
 > decision, and it has never been taken.**
 
 **What actually decides it.** The tube is a sliding seal bore, so surface hardness, thermal
-expansion against the piston, and galling behaviour matter more than modulus — and **A58's
-expansion cooling takes the bore to roughly −35 °C every shot**, which is a differential-expansion
-question between two materials nobody has named. **ADR-034's mass argument rests on the lighter of
-the two.**
+expansion against the piston, and galling behaviour matter more than modulus.
+
+> ### And [A58](validation/A58_chamber_thermal.md) measured the thermal half on 2026-08-19
+>
+> **The expansion takes the bore to −35.2 °C every shot, a 62.1 K swing.** Across it:
+>
+> | | Clearance change |
+> |---|---:|
+> | **Matched** piston and bore materials | **0.00 µm** |
+> | **Dissimilar** — steel in aluminium, or the reverse | **10.79 µm** |
+>
+> **On a 15.805 mm bore that is a real fraction of any sensible seal clearance, and the repository
+> specifies neither part.** A58 band 6 failed on it.
+>
+> **This is the cheap half of the decision.** Nothing about the mass argument forces the piston and
+> the tube to differ, and **matching them removes 10.79 µm for free.** The mass question — 1.140 kg
+> against 3.294 — is the one that still needs deciding.
 
 **What would close it:** state the material in `cad/parameters.json` with the reason, and re-run
 A49's band 7 against it. If it is steel, ADR-034's per-satellite figure moves and the design point
@@ -3879,6 +3892,56 @@ It was present at A43's point and would have been found by anyone who looked pas
 **What would close it:** size the orifice against the *last* fill rather than the first, and check
 what the larger hole does to the pressure-setting resolution [A44](validation/A44_gen6_dispersion.md)
 depends on. **Neither the cadence nor the store needs to change.**
+
+### P88. The seal cannot absorb its own friction, and P67 is a harder measurement than it has been described as: HIGH, NEW 2026-08-19
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A58](validation/A58_chamber_thermal.md) band 5 failed across the whole swept range.**
+
+**667.2 J arrives in the seal in about five milliseconds**, at **2419 W** where it is moving
+fastest. Adiabatic rise per shot:
+
+| Seal mass | 0.5 g | 1 g | 2 g | 5 g | 10 g |
+|---|---:|---:|---:|---:|---:|
+| **Rise per shot** | **889.6 K** | **444.8 K** | **222.4 K** | **89.0 K** | **44.5 K** |
+
+**Only the 10 g end clears 50 K, and only if nothing else is true.** The requirement that follows
+is band 8's, and it is the useful part:
+
+> **For a 2 g seal to stay within 50 K, 77.52 % of its friction heat must leave it during the
+> stroke.**
+
+**That is a design requirement on a component that exists in no file.** No seal is drawn, no
+material is named, and its friction coefficient — the thing generating the heat — has never been
+measured. [A39](validation/A39_store_trade.md) states it designs *"no cylinder, valve, seal or
+latch"*; [A40](validation/A40_blowdown_transient.md) the same.
+
+### What this does to P67
+
+**[P67](OPEN_PROBLEMS.md) has been described throughout as a bench measurement of a friction
+coefficient. It is a harder measurement than that.**
+
+| | |
+|---|---|
+| **Temperature** | the gas is at **237.9 K, −35.2 °C**, every shot ([A58](validation/A58_chamber_thermal.md) band 1) |
+| **Self-heating** | the seal dissipates **667.2 J per stroke at 2419 W peak** |
+| **Stroke** | **8.0 m**, not a short rig |
+| **Repeats** | **twelve**, and the shot-to-shot spread is the quantity wanted |
+
+**A room-temperature coefficient on a short rig would not answer the question the design asks.**
+
+### And the coupling nobody has modelled
+
+**Friction heats the seal; a hotter seal has different friction; that changes the shot.**
+[A55](validation/A55_trim_authority.md) found the seal owns **98.7 %** of the dispersion, so a
+thermal-friction loop feeds straight into the one number this architecture is sold on. **A58 names
+it and does not compute it.**
+
+**What would close it:** a seal specification — material, section, mass and a conduction path out —
+and P67 run at temperature, over a representative stroke, with the spread reported. **Until a seal
+exists, the 83.4 N in `gen6_dispersion.py` is an allowance A41 declared rather than a property of
+anything.**
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

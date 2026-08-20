@@ -55,7 +55,7 @@ changes that.
 | ~~**A55**~~ | ~~Re-run A44 and A48 at ADR-034's friction share~~ — **RUN 2026-08-19**, four of nine, **closed P83 and P84** | **P83 and P84.** The trim authority was sized at a **9.75 %** friction share and the design point now runs at **28.39 %** — and the scripts still read the old stroke, so A44 and A48 are answering a superseded question. Both are new, both HIGH, and ADR-034 created them |
 | ~~**A56**~~ | ~~Re-run A43 at 22.73 bar~~ — **RUN 2026-08-19**, eight of nine, **closed P82**, opened **P87** | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling. Carries **P84**'s repair: `precharged.py` reads the design point rather than declaring it |
 | **A57** | **Attitude rate and packaging on the stage** | The two remaining **NEEDS SOURCE** rows in `KILL_CRITERIA.md`. Recoil was the third and A52 closed it |
-| **A58** | **A thermal model of the chamber and reservoir across a campaign** | A43 settled the reservoir between shots; nothing models the chamber, the expansion cooling, or twelve cycles of it |
+| ~~**A58**~~ | ~~A thermal model of the chamber and reservoir across a campaign~~ — **RUN 2026-08-19**, six of eight, **opened P88** | A43 settled the reservoir between shots; nothing models the chamber, the expansion cooling, or twelve cycles of it |
 | ~~**A59**~~ | ~~Structural case for the drive tube and stage rail~~ — **RUN 2026-08-19**, six of nine, opened **P85** | **ADR-034 made this urgent.** The tube is the cylinder *and* the rail, it is now **8.0 m** long at **1.0 mm** wall, and `build_gen6.py` says in its own docstring that neither bending nor alignment is modelled. A49's own note says every omission in it flatters a long tube |
 | **A60** | **A second CAD implementation of Gen6** | Gen5 has one and **it found P71 on its first run** — both rollers outside their channels in every STEP ever built. Gen6 has never been checked by anything but the script that built it |
 
@@ -80,7 +80,7 @@ changes that.
 
 | | |
 |---|---|
-| **P67 — measure the seal friction** | A bench test on a piston seal at 22.73 bar in vacuum, with a shot-to-shot spread. **It owns 93.4 % of the dispersion, it is ADR-033's whole justification, and it can delete the trim stage rather than validate it.** The single highest-leverage action in the entire Gen6 record |
+| **P67 — measure the seal friction** | **It owns 98.7 % of the dispersion, it is ADR-033's whole justification, and it can delete the trim stage rather than validate it.** Still the single highest-leverage action in the record — and [A58](../validation/A58_chamber_thermal.md) showed it is a harder test than described: **at −35.2 °C, on a seal dissipating 667.2 J per stroke at 2419 W, over 8.0 m, twelve times.** A room-temperature coefficient on a short rig does not answer it (**P88**) |
 | **The cradle** | 201.7 N per contact releasing inside ≤ 1 N, now holding magnets in alignment too. **It does not exist in any file.** Kill criterion 4 stays *modelled, not demonstrated* until it does |
 | **The piston, seals, valves and plumbing** | A41 allows 1.5 kg and designs none of it |
 | **A stage** | No launch provider has agreed to keep one alive past passivation. **A47 counts this as manifest-forfeiting**, and it is the one shared element the project cannot engineer around |
@@ -127,9 +127,10 @@ material is stated nowhere, and it is 1.140 kg in aluminium against 3.294 in ste
 **5. Decide D2 and the enclosure panel.** Two decisions, both yours, together worth more than any
 analysis on this page — one is the only route to kill criterion 1, the other is 20 kg.
 
-**6. ~~A56~~, A57, A58** — **A56 ran 2026-08-19**: the store is **3.1216 kg**, 24 % below the
-figure ADR-034 quoted, and **P82 closes.** A57 and A58 still owe the two NEEDS SOURCE rows and the
-thermal work Gen5 has.
+**6. ~~A56~~, A57, ~~A58~~** — **A56 and A58 both ran 2026-08-19.** The store is **3.1216 kg**,
+24 % below the figure ADR-034 quoted (**P82 closes**), and the bulk thermal case is comfortable
+while **the seal cannot absorb its own friction** (**P88**). **A57 still owes the two NEEDS SOURCE
+rows.**
 
 **7. A60, the second implementation.** Do it *last*, when the design has stopped moving, because
 its value is catching what the first implementation got wrong and it should check the final

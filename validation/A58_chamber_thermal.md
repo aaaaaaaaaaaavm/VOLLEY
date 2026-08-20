@@ -90,3 +90,106 @@ thermal decision as well as a mass one.
   feeds straight back into the dispersion. **Named here and not computed.**
 - **It does not settle P85.** It reports what each material choice costs thermally.
 - **E4 stands.** Nothing here is measured.
+
+---
+
+## Result
+
+**RUN 2026-08-19. Six of eight bands pass. The two that fail both land on components the
+repository has never specified, and band 7 passed on a test that was declared wrong.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | gas ≥ 50 K above condensation | **237.9 K, 134.9 K of margin** | **PASS** |
+| 2 | tube campaign rise ≤ 15 K | steel **5.28 K**, aluminium **7.80 K** | **PASS** |
+| 3 | chamber swing ≤ 20 K | **15.11 K** | **PASS** |
+| 4 | chamber recovers across the cadence | **τ = 7 s**, nothing left after 1200 | **PASS** |
+| **5** | seal rise ≤ 50 K per shot | **44.5 to 889.6 K** adiabatic | **FAIL** |
+| **6** | differential clearance ≤ 5 µm | **10.79 µm** dissimilar, 0 matched | **FAIL** |
+| 7 | heating and cooling do not cancel | 8007 J in against ≤ 28 203 J out | **PASS, but see below** |
+| 8 | seal rise against mass and heat-out | **a 2 g seal must shed 77.52 %** | **REPORT** |
+
+### The bulk thermal case is unremarkable, and that is worth knowing
+
+**The tube warms 5–8 K over a whole campaign** and **the chamber recovers with a 7 s time
+constant** against a 1200 s cadence, so **shots are thermally independent — the twelfth is the
+same as the first.** The gas ends **135 K above** where nitrogen would condense.
+
+**None of the components anyone would have worried about is in trouble.** The problem is somewhere
+else entirely.
+
+### The seal cannot absorb its own friction, and it is the component that does not exist
+
+**667.2 J arrives in the seal in about five milliseconds, at 2419 W where it is moving fastest.**
+
+| Seal mass | Adiabatic rise per shot |
+|---:|---:|
+| 0.5 g | **889.6 K** |
+| 1 g | **444.8 K** |
+| 2 g | **222.4 K** |
+| 5 g | **89.0 K** |
+| 10 g | **44.5 K** |
+
+**Only the 10 g end clears the band, and only if nothing else is true.** Band 8 states the
+requirement that follows, and it is the useful output of this run:
+
+> **For a 2 g seal to stay within 50 K, 77.52 % of its friction heat must leave it during the
+> stroke.**
+>
+> **That is a design requirement on a component that exists in no file**, has no material, and
+> whose friction coefficient — the thing that generates the heat — has never been measured.
+
+**And the coupling that matters most is named and not computed.** Friction heats the seal; a hotter
+seal has different friction; that changes the shot. **[A55](A55_trim_authority.md) found the seal
+owns 98.7 % of the dispersion**, so a thermal-friction loop feeds straight into the one number this
+architecture is sold on. *Nothing in this repository models it.*
+
+> **P67 is a harder measurement than it has been described as.** It is not a room-temperature
+> friction coefficient. It is a friction coefficient **at −35 °C, on a component dissipating
+> 2.4 kW into itself, over 8 m, twelve times.** Recorded as **P88**.
+
+### P85 is a thermal decision as well as a mass one
+
+| | Clearance change across the 62.1 K swing |
+|---|---:|
+| Matched materials | **0.00 µm** |
+| **Dissimilar** — steel piston in aluminium bore, or the reverse | **10.79 µm** |
+
+**On a 15.805 mm bore that is a real fraction of any sensible seal clearance**, and **the
+repository specifies neither the piston nor the tube.** [P85](../OPEN_PROBLEMS.md) recorded the
+material as a 2.15 kg mass question; **it is also a 10.79 µm clearance question, and matching the
+two materials makes it disappear entirely.**
+
+**That is a free result.** Nothing about the mass argument forces the piston and tube to differ,
+and matching them removes a term nobody had counted.
+
+### Band 7 was the wrong test, declared before the run and left standing
+
+**It passed, and it should not be read as settling anything.**
+
+The band asked whether friction heating and expansion cooling cancel, and compared **8007 J of
+campaign friction — which definitely enters the structure — against ≤ 28 203 J the gas could
+absorb**, which is an *upper bound* reached only if the residual gas fully equilibrates with the
+walls before it is vented. **The two are not the same kind of quantity.**
+
+> **The sign of the net thermal load is not determined by this run.** If venting is fast the
+> machine runs **warm** at 8007 J; if the residual sits, it runs **cold**. **Which one depends on
+> vent timing, which is not modelled anywhere.**
+>
+> **The band is not widened and the verdict is not changed.** It is recorded as a badly-formed
+> band, the fifth time in this project that writing one down in advance has exposed a defect in the
+> analysis rather than in the design.
+
+## Consequences
+
+- **P88 opens**: the seal cannot absorb its own friction, and P67's measurement is harder than
+  stated.
+- **P85 gains a second axis** — matching the piston and tube materials removes 10.79 µm for free.
+- **Nothing here moves a design point.** Bands 1–4 say the bulk thermal case is comfortable.
+
+## What this run did not settle
+
+- **It does not design a seal, name a material, or claim any of this is buildable.**
+- **It does not model the thermal-friction coupling**, which is the term that would matter most.
+- **It does not model vent timing**, which is what band 7 turned out to need.
+- **E4 stands.** Nothing here is measured.
