@@ -130,8 +130,8 @@ chamber, A42 found its reservoir sized on gas the bottle cannot give back, and *
 bottle does not warm back up** — 17 460 s against a 1200 s cadence.
 
 **And the mass case is thinner than the decision record claimed.** ADR-032's first falsifier fires:
-the break-even on the stage credit is **8.4 %, not 30 %**, and **58.6 % of that credit is the
-enclosure** — a skin belonging to a vehicle nobody has agreed to lend. **P68.**
+the break-even on the stage credit is **11.0 %, not 30 %** at A56's sized store ([A45-R2](../validation/A45R2_stage_credit_resized_store.md);
+it was 8.4 % at A43's), and **58.6 % of that credit is the enclosure** — a skin belonging to a vehicle nobody has agreed to lend. **P68.**
 
 ---
 

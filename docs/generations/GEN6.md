@@ -65,7 +65,7 @@ sized on gas the bottle cannot give back; **A43 found the bottle does not warm b
 | | |
 |---|---|
 | **P67** | Precision rests on a **seal friction nobody has measured**, and no transducer buys it back |
-| **P68** | **ADR-032's first falsifier has fired.** Break-even on the stage credit is **8.4 %, not the 30 % the ADR states**, and **58.6 % of that credit is the enclosure** — a skin belonging to a vehicle nobody has agreed to lend |
+| **P68** | **ADR-032's first falsifier has fired.** Break-even on the stage credit is **11.0 %, not the 30 % the ADR states**, at A56's sized store ([A45-R2](../../validation/A45R2_stage_credit_resized_store.md); it was 8.4 % at A43's), and **58.6 % of that credit is the enclosure** — a skin belonging to a vehicle nobody has agreed to lend |
 | **P59** | Kill criterion 1 is unreachable by architecture and by manifest size. Gen6 does not change that |
 
 ## How this becomes the frozen baseline
