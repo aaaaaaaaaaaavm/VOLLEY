@@ -5,12 +5,12 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **126 numbered entries, of which 51 are live.** Every entry carries a `Status:` line written by
+> **127 numbered entries, of which 52 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **51** (30 P, 21 E) | open engineering; something still has to be done |
+> | `LIVE` | **52** (31 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **42** | found, fixed and propagated — **retained as the published record, not as debt** |
 > | `CLOSED` | **33** | resolved, with the closer named in the entry |
 >
@@ -4159,6 +4159,58 @@ that function builds in steel at 7800 kg/m³.
 
 **What would close it:** a run declaring its bands first that brings the cell under a threshold it
 argues for, with the vessel material and the housing allowance both derived rather than assumed.
+
+### P92. The trim stator has to reach its magnets through a conducting tube, and nothing has computed what that costs: HIGH, NEW 2026-08-20
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[ADR-033](docs/adr/033-gen6-trim-stage.md) puts the stator outside the tube and the magnets
+inside it.** `cad/build_gen6.py` draws the section as an annulus running from `bore/2 + wall` to
+`bore/2 + wall + 6.0`, and the ADR's own words are *"a magnet set carried by the carriage"*. **The
+travelling field therefore crosses the drive tube on its way to the thing it acts on.**
+
+**[ADR-035](docs/adr/035-drive-tube-material.md) made that tube aluminium on 2026-08-20**, four days
+after ADR-033 was adopted. **A conducting sleeve between a travelling-field stator and its secondary
+is a shorted turn**, and **no file in this repository computes the attenuation, the induced loss, or
+the heating.**
+
+| | |
+|---|---|
+| `gen6_drive.tube_wall_mm` | **1.0 mm** |
+| `gen6_drive.tube_material` | **aluminium 6061-T6, hard anodised** |
+| `stator.pole_pitch` | **24 mm** |
+| Carriage speed through the section | **34.28 m/s**, `exit_velocity_m_s_zero_friction` |
+| Aluminium conductivity already in the repository | **3.5 × 10⁷ S/m**, `analysis/phase1_closeout.py` |
+
+**Every input exists and the calculation has never been done.** The governing comparison is the wall
+thickness against the skin depth at the excitation frequency the pole pitch and the carriage speed
+set between them.
+
+### Why this was not caught
+
+**Three runs examined this tube in 2026 and none of them looked at it electromagnetically.**
+[A59](validation/A59_tube_structure.md) took it structurally and found the metals barely
+distinguishable. [A58](validation/A58_chamber_thermal.md) took it thermally. [A61](validation/A61_seal_class.md)
+took it tribologically. **ADR-035 then chose on mass alone** — and mass was the right tie-breaker
+among the questions that had been asked.
+
+> **The defect is in the sequencing, not in any one decision.** ADR-033 chose where the stator sits;
+> ADR-035 chose what stands between it and its magnets; **and no document owns the interaction.**
+> *ADR-033's cost table lists what the magnets bring back — P34, E35, the cradle, a velocity sensor,
+> one more shared element — and the tube is not on it, because when that table was written the tube
+> had no stated material.*
+
+**What would close it:** a run with its bands declared first, comparing the 1.0 mm wall against the
+skin depth at the section's own excitation frequency, and reporting the thrust attenuation, the
+induced loss and the resulting wall temperature against **ADR-035's 473 K ceiling**. If the
+attenuation is material, [A55](validation/A55_trim_authority.md)'s **1.1543 m/s** of authority and
+[ADR-033](docs/adr/033-gen6-trim-stage.md)'s **28 606 W** are both optimistic, and the section grows
+again — which is **P83**'s failure mode a second time.
+
+**A cheaper answer may exist and is not this entry's to choose:** a non-conducting liner, a slotted
+or non-conducting section of tube local to the stator, or the passive-secondary route
+[`docs/VAULT.md`](docs/VAULT.md) records under **PII-19**, which removes the magnets from the moving
+part rather than reaching them through metal.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

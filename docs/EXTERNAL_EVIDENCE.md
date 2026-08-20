@@ -97,6 +97,100 @@ demonstrated at **1.25 mN and 185 s**.
 
 ---
 
+## The vault, checked the same way
+
+**Added 2026-08-20.** [`VAULT.md`](VAULT.md) holds twenty-one parked entries. **The question asked
+of each was not "is it good" but "did it stop on a number that came from inside this repository."**
+That is the only kind of stop an outside source can move, and it is the lesson
+[A64](../validation/A64_pulse_store_technology.md) taught at the cost of A54.
+
+**Most of the vault fails that test immediately, and it is worth saying why in one line.** Nine
+entries stopped on 2026-08-14 because [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) deleted
+the subsystem they improve — **no mover, no stator, no bank, no track.** *No literature resurrects an
+optimisation of a part that no longer exists.* **PII-9** describes a different programme and
+**PII-8** a different vehicle; a source cannot supply a host. **Those are stops by type, and they
+stay shut.**
+
+**Three entries survive the filter. One of them has a live route back into Gen6.**
+
+### PII-19 — the passive secondary, and it is aimed at the wrong generation's problem
+
+**PII-19 stopped by attribution, not refutation**: [A35](../validation/A35_constraint_ledger.md)
+measured the mover it optimises at **11 % of dry mass**, so it was *"a careful, banded, correct
+optimisation of the wrong term."* **That verdict was about Gen5's whole drive. Gen6 no longer has
+one — but it has a 144.01 mm motor at the muzzle, and that motor has PII-19's exact problem.**
+
+**[ADR-033](adr/033-gen6-trim-stage.md) brought magnets back to the moving part and listed the
+cost itself:** *"**P34** — a payload carrying a magnetometer cannot fly in this magazine. **This
+defect returns because the magnets do**"*, plus **E35**, plus a cradle that must now hold magnets in
+alignment.
+
+> **PII-19's whole proposition is a passive plate instead of magnets on the moving body.** Applied
+> to a trim stage rather than a drive, it would **not** return P34, **not** return E35, and **not**
+> ask the cradle to align a magnet set. *The entry was priced against a 9.445 kg sled where its gain
+> was 11 %. Against a stage whose stated cost is a returning defect rather than a mass, the same
+> idea is answering a different and better question.*
+
+**And PII-19 carries the measurement that may kill its own comeback.** **A30** measured the
+transverse edge factor at **0.0253** against the **0.55** it had been sized on — *a factor of 22* —
+because the Russell–Norsworthy factor collapses for a secondary narrower than the pole pitch.
+**`stator.pole_pitch` is 24 mm and any secondary that fits a 15.805 mm bore is narrower than that.**
+
+**That is the run, and it is not written yet.** It is also why this belongs in a sourcing map rather
+than in a decision: **the deciding number is already in the vault, measured, and it points the
+unwelcome way.**
+
+**A second PII-19 result transfers whether or not the plate does.** **A32 band 4** found segment
+ripple *"intrinsic to a segmented long stator with a short secondary"*, and PII-19's own closing line
+says it *"will be rediscovered by anyone who proposes one."* **A55's stage is a short stator crossed
+in 1.4 ms by a short secondary, and neither A48 nor A55 models the entry transient A32 measured.**
+
+### PII-14's flywheel — closed by external evidence, in the losing direction
+
+**PII-14 split its flywheel out as an independent candidate against P26**, saying so in the file:
+*"an energy store does not care what load it feeds… it is a Phase I candidate against P26 in its own
+right."* **[P45](../OPEN_PROBLEMS.md) then found it at mass parity, owned by one unsourced number**,
+and [A25](../validation/A25_flywheel_store.md) band 4 failed on it.
+
+> **The external check settles it and the answer is no.** The question a flywheel was competing for
+> is now Gen6's pulse store, and **A64 answered it at ~70 g on published pulsed-power capacitor
+> data.** *A rotating machine, its bearings, its containment and its 7.15 N·m·s of stored angular
+> momentum are not going to beat seventy grams of film capacitor* — and the angular momentum is a
+> disturbance in a machine whose shot already dumps **3.28 N·m·s**.
+>
+> **This is the useful shape of a vault result: the entry is retired by a number, not left ajar.**
+
+### PII-11's straightness arithmetic, which inverts on the way across
+
+**PII-11 §5 argued the straightness requirement had been overstated** — *"a 3.3 m deployed track is
+a looser straightness requirement than the machine already meets"* — because an ironless Halbach
+airgap tolerates error at **1 mm** of clearance and costs thrust rather than running away.
+
+**Gen6's 8.0 m tube is not an airgap. It is a bore with a sliding seal in it**, and a seal's job is
+to *maintain* contact, so the same argument runs backwards: **the tolerance that made a deployed
+track plausible does not exist here.** [A59](../validation/A59_tube_structure.md) already found the
+tube needs **seven supports**, and **P67**, **P88** and **P89** all rest on a friction that bore
+straightness and roundness directly set.
+
+| What is needed | Why it is gettable |
+|---|---|
+| **Straightness and roundness tolerances for long honed and skived tube** in the bore class Gen6 uses | It is a **stock manufacturing specification**, published per metre of length, for exactly the sliding-seal duty A61 specified. **A61 already found a 16.000 mm ISO 6432 stock bore costs 0.00 %** on the seal specification — the sourcing route into this design is open and has been used once |
+
+**This does not reopen PII-11.** It takes one paragraph of its arithmetic, notes that the sign flips,
+and points at three live entries that inherit the consequence.
+
+### What the vault check found that was not in the vault
+
+**[P92](../OPEN_PROBLEMS.md).** Reading PII-19 against ADR-033 to see whether a passive secondary
+fits meant reading how the present stator reaches its magnets — **and it reaches them through the
+tube.** ADR-035 made that tube aluminium four days after ADR-033 placed the stator outside it, and
+**nothing owns the interaction.**
+
+> **That is the strongest argument for keeping a vault at all**, and it is not the one the vault was
+> built on. **The entry did not come back. Reading it found a defect in what replaced it.**
+
+---
+
 ## Cannot be closed by it
 
 **These need hardware, and no amount of reading substitutes.**

@@ -418,7 +418,7 @@ stop the numbers forking, which they briefly did.
 | **PII-10** | **Magazine indexing disturbance** (E24). Designing an indexing sequence that minimises attitude disturbance. The *bookkeeping* half is an error correction and belongs upstream in Phase I; only the optimisation belongs in the lab |
 | **PII-11** | **[A deployable track, and the side-rail layout](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-11_deployable_track.md).** A telescoping track long enough to accelerate *and* regeneratively arrest the sled reaches **48 % electrical-to-payload efficiency against 18.5 %**, deletes the eddy brake, closes P28, and stows at 1150 mm — **inside** the ESPA Grande envelope this design misses by 44 %. The only option in the programme that improves velocity and envelope together. The side-rail half loses on thrust in every variant priced and is there because it drives the tip-off moment to zero |
 
-| **PII-14** | **[A cable-driven gondola on a deployed truss](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md).** Propulsion moved off the vehicle onto a cable, energy from a flywheel, a permanently-locked deployed truss, and a tensioned wire as the running surface. A 2 kg gondola carries no magnets, no chassis resisting 2.69 kN, and no brake fin, so it reaches **24.5 m/s in the existing 1.30 m track** — **if the drivetrain has no rotating inertia.** It does. `m_eff = I/r²` adds directly to the moving mass, a 34 kW machine at a 100 mm drum is **1–5 kg** of it before the drum or any gearbox, and at **7.4 kg the entire gain is gone**. **Assessed and declined for Phase I on 2026-08-10** — +15 to +30 % velocity, uncertain, against deleting the LSM and the 24 validations behind it. **Entry criterion: a computed drivetrain inertia budget showing m_eff ≤ 2 kg, and a Phase I baseline that has been measured rather than modelled** |
+| **PII-14** | **[A cable-driven gondola on a deployed truss](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md).** Propulsion moved off the vehicle onto a cable, energy from a flywheel, a permanently-locked deployed truss, and a tensioned wire as the running surface. A 2 kg gondola carries no magnets, no chassis resisting 2.69 kN, and no brake fin, so it reaches **24.5 m/s in the existing 1.30 m track** — **if the drivetrain has no rotating inertia.** It does. `m_eff = I/r²` adds directly to the moving mass, a 34 kW machine at a 100 mm drum is **1–5 kg** of it before the drum or any gearbox, and at **7.4 kg the entire gain is gone**. **Assessed and declined for Phase I on 2026-08-10** — +15 to +30 % velocity, uncertain, against deleting the LSM and the 24 validations behind it. **Entry criterion: a computed drivetrain inertia budget showing m_eff ≤ 2 kg, and a Phase I baseline that has been measured rather than modelled**. **The flywheel it split out is closed, 2026-08-20**: that half was a Phase I candidate against **P26**, the question is now Gen6's pulse store, and **[A64](../validation/A64_pulse_store_technology.md) answered it at ~70 g on published capacitor data.** *A rotating machine with bearings, containment and 7.15 N·m·s of stored angular momentum does not beat that — and the momentum is a disturbance in a machine whose shot already dumps 3.28 N·m·s* |
 
 | **PII-15** | **SUPERSEDED IF PII-18 IS PROMOTED, 2026-08-13** — its only claimed benefit is shortening the machine, and spending the qualification margin Gen5 leaves idle does the same for free: **850 mm at 16.1 g against 1300 mm at 10.1 g**, with no cable over a sheave. See [`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md). **An LSM tug reeved to a separate payload carriage.** Distinct from PII-14: the linear motor **stays**, only the coupling changes. A reeving ratio *n* moves the carriage *n* times the tug's distance, and divides the tug's 9.445 kg by *n²* — so **2:1 halves the acceleration zone, 1.30 m to 0.65 m, for 4 % of exit velocity**. That is the only lever found that shortens the machine without lengthening anything else, against **P9**'s 44 % envelope overrun. **And it separates the payload from the magnets longitudinally at the same time, which is E35's fix.** Costs, none analysed: a cable and pulleys in vacuum (**E21**, and A27 screened out a rack for exactly this), a second guided body, and a single tension load path that becomes another manifest-forfeiting element in `docs/FMEA.md`. **Entry criterion: E35 shows separation is required, and a vacuum cable/sheave life case exists** |
 
@@ -464,6 +464,43 @@ metals and **only mass discriminated.**
 
 **Steam is foreclosed by a decision taken on its own merits rather than by a judgement about steam**
 — and ADR-035 falsifier 4 says so.
+
+### PII-22: the pyrotechnic drive, which is A65's result read past its own scope — **OPENED 2026-08-20**
+
+**[A65](../validation/A65_pyrotechnic_ejector.md) was scoped to a backup ejector and produced a
+number that does not stay inside that scope.**
+
+| | |
+|---|---:|
+| Gas drive, rated exit velocity | **29.01 m/s** |
+| **Pyrotechnic charge, smallest in the published class, firing alone** | **28.85 m/s** |
+
+**A device sized to rescue a dead drive reproduces the drive.** *If a per-cell gas generator can
+deliver the shot, the reservoir, the fill valve, the fire valve, the chamber and the 3.1216 kg store
+all stop being necessary — **five of the seven shared elements [A47](../validation/A47_gen6_fmea.md)
+counts**, in an architecture whose shared elements are the whole of what **E30** is about.*
+
+**A65 refused to chase it and said so in the run sheet.** The sizing there is deliberately a
+*backup* sizing carried **on top of** a store that stays, and its mass table keeps the store in.
+**Reading a result past the question it was asked is how A62 went wrong**, and that is recorded as
+P90.
+
+**What it would have to beat, and none of it is priced here:**
+
+- **The gas store charges slowly from solar and is refillable in principle. A generant is not.**
+  Twelve charges is twelve charges, and the campaign is over.
+- **Commanded velocity.** A44 measured charge pressure commanding exit velocity at **0.499 % per
+  1 %**. **A solid charge has no equivalent knob** — the same objection that stopped PII-21's
+  electrolysis branch, and it attacks the claim the product is sold on.
+- **[P91](../OPEN_PROBLEMS.md)'s 185 g**, which A65 left open on the backup version and which gets
+  worse, not better, if the device has to do the whole job.
+- **Everything A65 named and did not pay for**: range safety, ordnance handling, shelf life, hazard
+  classification for twelve units in one magazine, and **a charge that cannot be proof-tested before
+  flight.**
+
+> **Entry criterion: [P67](../OPEN_PROBLEMS.md) measured, and a commanded-velocity mechanism for a
+> solid charge that A44's sensitivity model can be run against.** *Without the second, this is a
+> deployer that cannot command what it deploys at, and Gen6's central claim is exactly that it can.*
 
 ### PII-20: gas and electromagnetic as mutual fail-safes — **DECLINED 2026-08-16, not run**
 
