@@ -5,14 +5,14 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **125 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
+> **126 numbered entries, of which 51 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | **40** (19 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | **29** | found, fixed and propagated — **retained as the published record, not as debt** |
-> | `CLOSED` | **30** | resolved, with the closer named in the entry |
+> | `LIVE` | **51** (30 P, 21 E) | open engineering; something still has to be done |
+> | `CORRECTED` | **42** | found, fixed and propagated — **retained as the published record, not as debt** |
+> | `CLOSED` | **33** | resolved, with the closer named in the entry |
 >
 > **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
 > inside *depth-resolved*, and the tool read its own `Status:` line back in on the next run, so a
@@ -3558,6 +3558,30 @@ and if the drive is dead something must move both the length of the stroke.
 **So the change is either ineffective or it re-crosses the one kill-criterion numerator Gen6
 currently passes.**
 
+> ### The energy verdict is withdrawn, 2026-08-20 — [A65](validation/A65_pyrotechnic_ejector.md)
+>
+> **A53 closed this as architectural. It was a store choice.** *The same mistake A54 made about the
+> pulse store, and [A64](validation/A64_pulse_store_technology.md) corrected the same way — by
+> changing technology class rather than design.*
+>
+> **A solid-propellant gas generator of the automotive restraint class delivers 2331.6 J** at the
+> smallest charge in the published range, **after** being cooled to the tube's own 473 K material
+> ceiling. **Against 667.2 J needed: 3.49×, where the spring was short by 148×.**
+>
+> **And the mass argument inverts.** A53's tube-clearing spring re-crossed the kill criterion at
+> **2.129 kg per satellite**. The pyrotechnic version is **1.6496 kg** — *under it, with 0.35 kg to
+> spare* — and A47's re-run still returns **9.261 satellites**.
+>
+> **What remains open is 185 g, not an architecture.** A65 band 4 missed A53's inherited 0.25 kg
+> per-cell threshold at **0.4350 kg**, and **46.6 % of that is a minimum-gauge steel plenum**, not
+> the pyrotechnic parts. **That miss is [P91](#p91-a65-band-4-misses-a53s-per-cell-mass-threshold-and-the-mass-is-in-the-pressure-vessel-medium-new-2026-08-20).**
+>
+> **Unpriced and named, not counted as a pass:** range safety, ordnance handling, shelf life,
+> hazard classification for twelve initiators in one magazine, and the fact that **a fired
+> generator cannot be proof-tested before flight where a spring could have been.**
+>
+> **This entry remains open** on P91's mass and on every unpriced cost above.
+
 **What survives, and the distinction matters.** Bands 1 through 6 all pass. **The failure is
 architectural, not conceptual** — the ejector works wherever the payload does not traverse a sealed
 tube. Two escapes are unpriced: **venting the tube** and **disengaging the piston**.
@@ -4099,6 +4123,42 @@ declared first.
 > independent of the fluid — hardness and galling at a sliding bore, and A59 found the material
 > barely moves the beam mode — steam stops paying for the tube and becomes **+0.341 kg**. *That is
 > less than the absorber hardware A63 charges nothing for.*
+
+### P91. A65 band 4 misses A53's per-cell mass threshold, and the mass is in the pressure vessel: MEDIUM, NEW 2026-08-20
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A65](validation/A65_pyrotechnic_ejector.md) band 4 failed at 0.4350 kg against 0.25 kg.** Nine of
+its ten bands passed, including the one that governs — **1.6496 kg per satellite against the 2.0 kg
+kill criterion** — so this is a numbered band miss, not a dead architecture.
+
+| Per cell, smallest charge in the class | | |
+|---|---:|---:|
+| Solid generant | 0.0200 kg | 4.6 % |
+| **Plenum pressure vessel** | **0.2025 kg** | **46.6 %** |
+| Heat sink to the 473 K tube ceiling | 0.0926 kg | 21.3 % |
+| Housing, initiator, gas path — **declared guess, no derivation** | 0.1200 kg | 27.6 % |
+| **Total** | **0.4350 kg** | |
+
+**The pyrotechnic parts are not what fails the band.** The generant is 20 g and the sink is 92.6 g.
+**The vessel is 202.5 g and it is minimum-gauge limited, not pressure limited**: at 0.3933 L the
+hoop wall the pressure needs is **0.909 mm** against `precharged.chamber_kg`'s **1.0 mm** floor, and
+that function builds in steel at 7800 kg/m³.
+
+**Three routes exist and none has been run:**
+
+1. **The vessel material.** The same shell in the aluminium [ADR-035](docs/adr/035-drive-tube-material.md)
+   chose for the tube is **70.1 g**, taking the cell to **0.3031 kg** — *still over, so this alone
+   does not close it.*
+2. **The housing guess.** 0.1200 kg is carried from A53 unchanged with **no derivation**, so that
+   the two runs compare. It is the largest unexamined term left.
+3. **The threshold itself.** 0.25 kg is A53's band 1, **set for a spring**. It is a proxy for the
+   2.0 kg per-satellite kill criterion, which A65 passes. *A band is never widened after a result
+   is known — but a new run may declare its own threshold, argued from the criterion rather than
+   inherited from a different device.*
+
+**What would close it:** a run declaring its bands first that brings the cell under a threshold it
+argues for, with the vessel material and the housing allowance both derived rather than assumed.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

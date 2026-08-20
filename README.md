@@ -392,7 +392,7 @@ since.
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
 | **Defect register** | **125 numbered entries, 50 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **64 run sheets, A1–A64**, each against a band declared *before* the run. **Three failed outright** |
+| **Validation** | **65 run sheets, A1–A65**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest

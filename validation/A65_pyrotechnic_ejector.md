@@ -101,3 +101,139 @@ defect P81 names: *can a per-cell device clear the tube when the drive is dead.*
 
 **It is not evidence that the device works.** It is evidence about **energy, mass and temperature**.
 Nothing here has been built, and **E4** still says what it has always said.
+
+---
+
+## Result
+
+**RUN 2026-08-20. Nine of ten bands pass. Band 4 fails at 0.4350 kg against A53's 0.25 kg
+threshold — and the band that governs the design, band 5, passes with 0.35 kg per satellite to
+spare.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces 667.2 J and 4.5 J within 1 % | 667.23 J, 4.50 J, **148.3×** | **PASS** |
+| 2 | bottom of the class exceeds 667.2 J | **2331.6 J — 3.49×** | **PASS** |
+| 3 | plenum ≤ the existing 2.0 L chamber | **0.3933 L** | **PASS** |
+| 4 | **per-cell mass ≤ 0.25 kg** | **0.4350 kg** | **FAIL** |
+| 5 | added mass per satellite ≤ 2.0 kg | 5.2204 kg total, **1.6496 kg/sat** | **PASS** |
+| 6 | gas entering the tube ≤ 473 K | 473 K on a **92.6 g** sink | **PASS** |
+| 7 | firing alone, ≥ 1.0 m/s after friction | **28.85 m/s** | **PASS** |
+| 8 | A47 re-run ≥ 9.0 satellites at *r* = 0.99 | **9.261** | **PASS** |
+| 9 | unpriced costs named, not counted | 6 named | **PASS** |
+| 10 | REPORT: the published class | 15 points; **the top of the class is usable** | REPORT |
+
+### The energy objection is gone, and it is not close
+
+| | |
+|---:|---|
+| **4.5 J** | what A53's spring stored |
+| **667.2 J** | what clearing the 8.0 m tube costs |
+| **2331.6 J** | what the **smallest** charge in the published class delivers, **after** being cooled to the tube's own material ceiling |
+
+**A53 failed by 148×. This clears by 3.49× on the worst case of the class.** The reason is stated in
+one line and it is not subtle: **the tube's swept volume is 1.5696 L, and a unit of this class is
+built to fill 60 L.** The engineering problem was never finding enough energy — it is metering it
+down, and the plenum volume does that arithmetically, because `a_peak = p₀A/m` has no `L` in it.
+
+### Band 4 fails, and prediction 2 named the right band for the wrong reason
+
+**I predicted the heat sink would be what breaks the mass budget. It is not.**
+
+| Per cell, bottom of class | |
+|---|---:|
+| Solid generant | 0.0200 kg |
+| **Plenum vessel** | **0.2025 kg** |
+| Heat sink | 0.0926 kg |
+| Housing, initiator, gas path — **declared guess, carried from A53 unchanged** | 0.1200 kg |
+| **Total** | **0.4350 kg** |
+
+**The sink is 92.6 g. The pressure vessel is 202.5 g — 46.6 % of the cell.**
+
+> **And it is minimum-gauge limited, not pressure limited.** At 0.3933 L the sphere-equivalent
+> radius is 45.45 mm and the hoop wall the pressure actually needs is **0.909 mm**, against
+> `precharged.chamber_kg`'s **1.0 mm** minimum. **The vessel is as light as that function will
+> ever make it at this size**, and the function builds it in steel at 7800 kg/m³.
+
+**This is recorded as an observation and not as a band**, because the band failed and a band is
+never widened after a result is known: *the same shell in the aluminium ADR-035 chose for the tube
+would be **70.1 g**, and the cell would come to **0.3031 kg** — still above A53's threshold.* **Band
+4 fails either way.** What the observation establishes is **where** the mass is, so that the next
+run knows what to attack.
+
+### The threshold that failed is not the threshold that governs
+
+**Band 4's 0.25 kg is A53's own band 1, inherited unchanged so the two runs compare.** A53 set it
+for a spring, and it is a proxy. **Band 5 is the real constraint** — it is the kill-criterion
+numerator, the one thing Gen6 currently passes and A53's tube-clearing variant re-crossed at
+**2.129 kg per satellite**.
+
+| | Per satellite |
+|---|---:|
+| A53, spring sized only for clearance — *and it could not clear the tube* | 1.538 kg |
+| **A53, spring sized to clear the tube** | **2.129 kg — over the threshold** |
+| **A65, pyrotechnic, bottom of the class** | **1.6496 kg — under it, with 0.35 kg to spare** |
+
+**So P81 does not stay closed as architectural.** It moves from *"no per-cell device can clear this
+tube"* to *"a per-cell device clears it, and owes 185 g of mass reduction against an inherited
+threshold it does not have to meet."*
+
+### The whole published class is usable, which prediction 4 got wrong
+
+**I expected the plenum to be tight at the top of the class. It is comfortable everywhere** —
+0.3933 L to 0.7079 L across 0.5–0.9 mol and 1000–1400 K, against the 2.0 L chamber the design
+already carries.
+
+**The reason is the cooling stage.** The plenum is sized by `V₀ = nRT·A/(m·g·25)` at the **sink
+outlet** temperature, not the flame temperature, so **the same 473 K ceiling that makes the sink
+necessary also shrinks the vessel by a factor of two to three.** My estimate used the uncooled
+temperature and was wrong by that factor.
+
+**Peak pressure is 50.00 bar and peak acceleration 25.00 g at every point in the class**, by
+construction — the cap is what sizes the plenum, so it is met identically everywhere and the charge
+only moves how long the push lasts.
+
+### What this run refuses to do
+
+**Exit velocity firing alone, at the smallest charge in the class, is 28.85 m/s. The gas drive's
+own rated exit velocity is 29.01 m/s.**
+
+> **That is not a result about a backup ejector.** It says a per-cell pyrotechnic charge reproduces
+> the entire Gen6 shot, which would delete the reservoir, the fill valve, the fire valve, the
+> chamber and the store — **five of the seven shared elements A47 counts**, and the store's
+> 3.1216 kg with them.
+>
+> **A65 is not that run and does not claim it.** It is scoped to the defect P81 names, the sizing
+> here is deliberately a *backup* sizing carried on top of a store that stays, and **the mass table
+> above keeps the store in.** The larger question is recorded as **P91** and belongs to whatever
+> comes after Gen6.
+
+### What was not paid for
+
+**Named, and none of it counted as a pass:**
+
+- **Range safety.** Twelve initiators on a launch vehicle is a licensing question and **no file in
+  this repository has ever priced one.**
+- **Ordnance handling.** Integration, transport and storage all change category.
+- **Shelf life.** A generant has one, and the standby interval runs from integration to the last
+  shot — *the same problem [A39](A39_store_trade.md) recorded against gas and A53 against a held
+  spring.* **The pyrotechnic version does not fix the standby problem; it changes which specialist
+  owns it.**
+- **Hazard classification** for twelve units in one magazine, including sympathetic initiation.
+- **A fired generator cannot be tested before flight.** A spring could have been proof-loaded.
+  This is a genuine loss against A53's design and it is the one place the spring was better.
+- **The zonal cooling model assumes the sink reaches equilibrium with the whole charge inside a
+  ~30 ms discharge, and nothing here establishes that it does.** If it does not, the gas arrives
+  hotter than 473 K and band 6's verdict is provisional.
+
+### Provenance
+
+**Model output.** The gas generator is named as a **technology class** — solid-propellant
+automotive restraint inflators — with published ranges declared at the point of use, as
+[A39](A39_store_trade.md) declared its gas model and [A64](A64_pulse_store_technology.md) its
+capacitors. **No product, supplier or organisation is named.** The expansion is
+`precharged.work()`, unmodified. The housing allowance is a **declared guess with no derivation**,
+carried from A53 at 0.12 kg so the two runs are directly comparable, and it is the largest
+assumption in the run after the cooling model.
+
+**Nothing has been built or fired. E4 says what it has always said.**
