@@ -1,0 +1,209 @@
+{
+  "analysis": "A56",
+  "bands_declared_commit": "HEAD~1",
+  "note": "A43's model imported unchanged: conduction-only, lumped reservoir, wall at the structure temperature, ideal gas. Store uses A39's PV/W = 15000 m, which A39's own run sheet says underestimates real 1.7 L / 200 bar vessels 4-6x -- the absolute store mass is soft, the ratio between two pressures is firmer.",
+  "search_floor_l": 0.5,
+  "a43_floor_binding": true,
+  "a43_point": {
+    "p_charge_bar": 50.0,
+    "reservoir_l": 9.549999999999779,
+    "vessel_kg": 1.2979952429493413,
+    "gas_kg": 2.244249999999948,
+    "chamber_kg": 0.3382,
+    "hardware_kg": 1.5,
+    "store_kg": 5.380445242949289,
+    "per_satellite_kg": 1.4975704369124407,
+    "conduction_tau_s": 17459.566186164495,
+    "tau_over_cadence": 14.549638488470412,
+    "t_min_K": 201.93362682964033,
+    "last_fill_s": 14.391199999979799,
+    "shots": 12,
+    "failed": null
+  },
+  "adopted_point": {
+    "p_charge_bar": 22.7258,
+    "reservoir_l": 3.460000000000008,
+    "vessel_kg": 0.470268433571187,
+    "gas_kg": 0.8131000000000018,
+    "chamber_kg": 0.3382,
+    "hardware_kg": 1.5,
+    "store_kg": 3.1215684335711886,
+    "per_satellite_kg": 1.3093307027975989,
+    "conduction_tau_s": 8873.233976532363,
+    "tau_over_cadence": 7.394361647110302,
+    "t_min_K": 161.2507282744396,
+    "last_fill_s": 11.5159999999865,
+    "shots": 12,
+    "failed": null
+  },
+  "pressure_sweep": [
+    {
+      "p_charge_bar": 15.0,
+      "reservoir_l": 2.140000000000004,
+      "vessel_kg": 0.2908596670064566,
+      "gas_kg": 0.502900000000001,
+      "chamber_kg": 0.3382,
+      "hardware_kg": 1.5,
+      "store_kg": 2.6319596670064573,
+      "per_satellite_kg": 1.268529972250538,
+      "conduction_tau_s": 6441.302816212206,
+      "tau_over_cadence": 5.367752346843505,
+      "t_min_K": 143.72256832392873,
+      "last_fill_s": 9.6276999999909,
+      "shots": 12,
+      "failed": null
+    },
+    {
+      "p_charge_bar": 20.0,
+      "reservoir_l": 2.9800000000000066,
+      "vessel_kg": 0.40502888209310317,
+      "gas_kg": 0.7003000000000015,
+      "chamber_kg": 0.3382,
+      "hardware_kg": 1.5,
+      "store_kg": 2.943528882093105,
+      "per_satellite_kg": 1.2944940735077586,
+      "conduction_tau_s": 8032.3392655919615,
+      "tau_over_cadence": 6.693616054659968,
+      "t_min_K": 155.88130836544732,
+      "last_fill_s": 10.639199999988543,
+      "shots": 12,
+      "failed": null
+    },
+    {
+      "p_charge_bar": 22.7258,
+      "reservoir_l": 3.460000000000008,
+      "vessel_kg": 0.470268433571187,
+      "gas_kg": 0.8131000000000018,
+      "chamber_kg": 0.3382,
+      "hardware_kg": 1.5,
+      "store_kg": 3.1215684335711886,
+      "per_satellite_kg": 1.3093307027975989,
+      "conduction_tau_s": 8873.233976532363,
+      "tau_over_cadence": 7.394361647110302,
+      "t_min_K": 161.2507282744396,
+      "last_fill_s": 11.5159999999865,
+      "shots": 12,
+      "failed": null
+    },
+    {
+      "p_charge_bar": 25.0,
+      "reservoir_l": 3.8800000000000088,
+      "vessel_kg": 0.5273530411145102,
+      "gas_kg": 0.911800000000002,
+      "chamber_kg": 0.3382,
+      "hardware_kg": 1.5,
+      "store_kg": 3.2773530411145124,
+      "per_satellite_kg": 1.3223127534262094,
+      "conduction_tau_s": 9577.504205659267,
+      "tau_over_cadence": 7.981253504716055,
+      "t_min_K": 165.71956377751002,
+      "last_fill_s": 11.8161999999858,
+      "shots": 12,
+      "failed": null
+    },
+    {
+      "p_charge_bar": 30.0,
+      "reservoir_l": 4.85999999999997,
+      "vessel_kg": 0.6605504587155923,
+      "gas_kg": 1.142099999999993,
+      "chamber_kg": 0.3382,
+      "hardware_kg": 1.5,
+      "store_kg": 3.640850458715585,
+      "per_satellite_kg": 1.3526042048929654,
+      "conduction_tau_s": 11128.98047498178,
+      "tau_over_cadence": 9.27415039581815,
+      "t_min_K": 174.8269750223812,
+      "last_fill_s": 12.126199999985078,
+      "shots": 12,
+      "failed": null
+    },
+    {
+      "p_charge_bar": 40.0,
+      "reservoir_l": 7.029999999999882,
+      "vessel_kg": 0.9554875976894165,
+      "gas_kg": 1.6520499999999723,
+      "chamber_kg": 0.3382,
+      "hardware_kg": 1.5,
+      "store_kg": 4.445737597689389,
+      "per_satellite_kg": 1.4196781331407824,
+      "conduction_tau_s": 14234.255302731337,
+      "tau_over_cadence": 11.861879418942781,
+      "t_min_K": 189.52095063377354,
+      "last_fill_s": 13.462899999981962,
+      "shots": 12,
+      "failed": null
+    },
+    {
+      "p_charge_bar": 50.0,
+      "reservoir_l": 9.549999999999779,
+      "vessel_kg": 1.2979952429493413,
+      "gas_kg": 2.244249999999948,
+      "chamber_kg": 0.3382,
+      "hardware_kg": 1.5,
+      "store_kg": 5.380445242949289,
+      "per_satellite_kg": 1.4975704369124407,
+      "conduction_tau_s": 17459.566186164495,
+      "tau_over_cadence": 14.549638488470412,
+      "t_min_K": 201.93362682964033,
+      "last_fill_s": 14.391199999979799,
+      "shots": 12,
+      "failed": null
+    }
+  ],
+  "bands": [
+    {
+      "n": "1",
+      "band": "reproduces A43's 9.55 L at 50 bar within 2 %",
+      "value": "9.550 L",
+      "verdict": "PASS"
+    },
+    {
+      "n": "2",
+      "band": "the search floor is below the resolved answer at both pressures",
+      "value": "floor 0.50 L against 3.460 and 9.550 L",
+      "verdict": "PASS"
+    },
+    {
+      "n": "3",
+      "band": "required reservoir at 22.7258 bar <= 6.0 L",
+      "value": "3.460 L",
+      "verdict": "PASS"
+    },
+    {
+      "n": "4",
+      "band": "conduction tau still exceeds the 1200 s cadence by >= 5x",
+      "value": "7.39x",
+      "verdict": "PASS"
+    },
+    {
+      "n": "5",
+      "band": "sized store <= the 4.10 kg ADR-034 quotes",
+      "value": "3.1216 kg",
+      "verdict": "PASS"
+    },
+    {
+      "n": "6",
+      "band": "added mass per satellite <= 2.0 kg",
+      "value": "1.3093 kg",
+      "verdict": "PASS"
+    },
+    {
+      "n": "7",
+      "band": "twelve charges complete, last fill inside the 10 s window",
+      "value": "12 shots, last fill 11.516 s",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "8",
+      "band": "minimum reservoir temperature above the 150 K floor",
+      "value": "161.3 K",
+      "verdict": "PASS"
+    },
+    {
+      "n": "9",
+      "band": "REPORT: reservoir and store against charge pressure",
+      "value": "7 points, 2.14 to 9.55 L",
+      "verdict": "REPORT"
+    }
+  ]
+}

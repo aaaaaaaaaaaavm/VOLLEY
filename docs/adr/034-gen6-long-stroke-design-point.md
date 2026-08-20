@@ -42,7 +42,7 @@ spend the stroke on.
 | Constant-pressure work ceiling | 2138.6 J | 3567.0 J | +66.8 % |
 | Fraction of that ceiling realised | 87.2 % | 65.9 % | **worse** |
 | Tube mass | 0.311 kg | 1.140 kg | +0.829 kg |
-| Store, scaled from A43 | 5.38 kg | **≈ 4.10 kg** | an estimate, see falsifier 2 |
+| Store | 5.38 kg | **3.1216 kg** | **sized** by A56, not scaled — 24 % below this ADR's own estimate |
 | Added mass per satellite | 1.403 kg | **1.296 kg** | 1.324 kg with ADR-033's trim stage |
 
 **Velocity is held rather than taken, and that is the substantive choice in this ADR.**
@@ -93,7 +93,7 @@ Three further consequences, each recorded as a defect rather than absorbed here:
 
 | | |
 |---|---|
-| **P82** | The reservoir is still **9.55 L**, sized by [A43](../../validation/A43_reservoir_thermal.md) for 50 bar refills. At 22.73 bar it is oversized and A43 has not been re-run. **The ≈ 4.10 kg store above is A49's gas-ratio scaling, not a sized store** |
+| ~~**P82**~~ | ~~The reservoir is still 9.55 L, sized for 50 bar refills~~ — **CLOSED 2026-08-19 by [A56](../../validation/A56_reservoir_resized.md).** Sized at 22.73 bar it is **3.460 L and 3.1216 kg**, **24 % below** the scaled estimate. *The saving is larger than this ADR claimed* |
 | **P83** | ADR-033's trim stage carries **0.323 m/s** of authority, sized against A44's dispersion at a **9.75 %** friction share. At **28.39 %** neither A44 nor A48 has been re-run, and the stage may be under-authority against the dispersion this ADR creates |
 | **The rail** | 8.0 m of stroke plus end hardware makes the rail **8.2 m** against A37's **8.0 m** usable acceleration length. **The point consumes the entire class and overruns it by 200 mm.** There is no smaller stage this design point fits |
 
@@ -105,10 +105,11 @@ Three further consequences, each recorded as a defect rather than absorbed here:
    5.00 % of exit velocity; at 8.0 m it costs 15.38 %, and the sensitivity to the unmeasured
    coefficient roughly triples with it. **P67** is the measurement, and it now governs the design
    point itself rather than a correction to it.
-2. **A resized reservoir does not come in near the scaled estimate.** The reservoir scaling at
-   **45.45 %** is the whole of the mass argument: the tube itself grows **0.311 → 1.140 kg**. If
-   A43 re-run at 22.73 bar does not recover the reservoir saving, the change buys gentleness and
-   pays 0.829 kg of tube for it. **P82.**
+2. ~~**A resized reservoir does not come in near the scaled estimate.**~~ **ANSWERED 2026-08-19 by
+   [A56](../../validation/A56_reservoir_resized.md), and it does not fire.** A sized store is
+   **3.1216 kg on a 3.460 L reservoir**, which is **24 % below** the ≈ 4.10 kg quoted above — the
+   bottle falls **63.8 %** where the gas falls 54.55 %, because a lower target pressure lets it be
+   drawn further down. **The mass argument is stronger than this ADR claimed. P82 closed.**
 3. **The trim stage cannot cover the wider dispersion.** ADR-033 exists because Gen6 cannot command
    velocity open-loop. If the correction authority has to grow with friction, the pulse store
    ADR-033 never weighed grows with it. **P83, feeding ADR-033 falsifier 1.**

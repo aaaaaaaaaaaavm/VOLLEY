@@ -36,7 +36,7 @@ descends from was measured off its solids.
 | **Structure** | its own track and enclosure | its own track and enclosure | **a rail a spent upper stage provides** |
 | **Exit velocity** | *not established* | **16.029 m/s at 10.07 g** | **34.280 m/s at 11.36 g**, zero-friction; **29.009** at the full tolerable friction (**P67**) |
 | **Stroke** | 1.3 m accelerating, release at 1.5 m | same | **8.00 m** — A37's whole usable acceleration length ([ADR-034](adr/034-gen6-long-stroke-design-point.md)) |
-| **Dry mass** | — | **126.6 kg** | 11.45 kg added, plus ≈ 4.10 kg of store (**P82** — scaled, not sized) |
+| **Dry mass** | — | **126.6 kg** | 11.45 kg added, plus **3.1216 kg** of store (A56, sized at the adopted charge pressure) |
 | **Per 3U satellite** | — | **10.547 kg dry** | **1.296 kg added** — and **1.296–3.164** once the stage credit is read hostilely (**P68**) |
 | **Velocity control** | — | designed loop, **0.0274 m/s at 3σ** | **1.113 % open-loop**, 93.4 % of it seal friction (**P67**); **0.0274 m/s with the trim stage**, on a pulse store nobody has weighed |
 
@@ -59,7 +59,7 @@ whatever the hardware repeats to.
 <tr>
 <td><a href="../cad/renders/track_stator.png"><img src="../cad/renders/track_stator.png" alt="Gen4 track and stator"></a><br><sub><b>Gen4, track and stator.</b> Side elevation. Gen4 stows the sled at s = 300 mm and releases at s = 1200, against the 1500 mm <code>analysis/</code> assumes.</sub></td>
 <td><a href="../cad/renders/gen5/sled_detail.png"><img src="../cad/renders/gen5/sled_detail.png" alt="Gen5 sled on the stator"></a><br><sub><b>Gen5, sled on the stator.</b> The rollers in this image are in their channels for the first time: until 2026-08-16 both sat outside them in every committed STEP (<b>P71</b>), found by building the machine a second time in a different kernel.</sub></td>
-<td><a href="../cad/renders/gen6/store.png"><img src="../cad/renders/gen6/store.png" alt="Gen6 chamber and reservoir"></a><br><sub><b>Gen6, the store.</b> A 2 L chamber charged to 22.73 bar and fired as a closed adiabatic expansion, fed from a 9.55 L reservoir at 200 bar that is still sized for the old 50 bar refills (<b>P82</b>). <b>There is no regulator</b> — A41 closed P63 by deleting the component rather than pricing it.</sub></td>
+<td><a href="../cad/renders/gen6/store.png"><img src="../cad/renders/gen6/store.png" alt="Gen6 chamber and reservoir"></a><br><sub><b>Gen6, the store.</b> A 2 L chamber charged to 22.73 bar and fired as a closed adiabatic expansion, fed from a <b>3.46 L</b> reservoir at 200 bar, sized by A56 at that pressure rather than scaled. <b>There is no regulator</b> — A41 closed P63 by deleting the component rather than pricing it.</sub></td>
 </tr>
 </table>
 

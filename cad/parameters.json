@@ -330,17 +330,16 @@
     },
     "gen6_store": {
       "_document": "Built by cad/build_gen6.py.",
-      "_source": "A41 bands 2-6, A42 bands 1-6, A43 bands 2-8. The reservoir carries the NO-RELAXATION figure, which A43 shows is the physically right end rather than merely the conservative one: conduction through stagnant nitrogen gives a 17460 s time constant against a 1200 s cadence. The conduction estimate is 8.95 L and the isothermal limit 8.25 L. A42's 7.65 and 11.25 L are superseded -- P66. ADR-034 dropped the charge pressure to 22.7258 bar, which cuts gas per shot by 54.55 %. THE RESERVOIR IS STILL SIZED FOR 50 bar REFILLS -- A43 has not been re-run and 9.55 L is now oversized. The store mass quoted in ADR-034 is A49's gas-ratio scaling, not a sized store -- P82.",
+      "_source": "A41 bands 2-6, A42 bands 1-6, A43 bands 2-8, and A56, which SIZED it at ADR-034's charge pressure rather than scaling it. 3.46 L against A43's 9.55 at 50 bar -- the bottle falls 63.8 % where the gas falls 54.55 %, because a lower target pressure lets it be drawn further down. A43's finding survives: conduction gives 8873 s against the 1200 s cadence, 7.39x, so the no-relaxation figure is still the physically right end. Store 3.1216 kg, which is 24 % BELOW the 4.10 kg ADR-034 quoted from A49's scaling -- falsifier 2 does not fire, P82 closed. The last fill takes 11.516 s against a 10 s window and that fails at A43's point too -- P87.",
       "chamber_volume_l": 2.0,
       "charge_pressure_bar": 22.7258,
-      "reservoir_volume_l": 9.55,
-      "reservoir_volume_isothermal_l": 8.25,
+      "reservoir_volume_l": 3.46,
       "storage_pressure_bar": 200.0,
       "fill_orifice_mm": 1.0,
       "first_fill_s": 4.14,
       "gas": "nitrogen",
-      "reservoir_volume_conduction_l": 8.95,
-      "gas_per_shot_kg": 0.051046
+      "gas_per_shot_kg": 0.051046,
+      "store_mass_kg": 3.1216
     },
     "gen6_trim": {
       "_document": "Built by cad/build_gen6.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.",

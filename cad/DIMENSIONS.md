@@ -305,13 +305,12 @@ Fusion document: **`Built by cad/build_gen6.py.`**
 |---|---:|---|
 | `chamber_volume_l` | 2.0 | mm |
 | `charge_pressure_bar` | 22.7258 | mm |
-| `reservoir_volume_l` | 9.55 | mm |
-| `reservoir_volume_isothermal_l` | 8.25 | mm |
+| `reservoir_volume_l` | 3.46 | mm |
 | `storage_pressure_bar` | 200.0 | mm |
 | `fill_orifice_mm` | 1.0 | - |
 | `first_fill_s` | 4.14 | - |
-| `reservoir_volume_conduction_l` | 8.95 | mm |
 | `gas_per_shot_kg` | 0.051046 | mm |
+| `store_mass_kg` | 3.1216 | mm |
 
 
 ## gen6 trim

@@ -39,7 +39,7 @@ or to qualify.
 | **here for the idea** | [`docs/CONCEPT.md`](docs/CONCEPT.md), and [`docs/LINEAGE.md`](docs/LINEAGE.md) for how it got there |
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 121 numbered entries, 50 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 122 numbered entries, 50 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -151,7 +151,7 @@ electrical-to-payload, net of that credit.
 
 ```mermaid
 flowchart LR
-    A["Cassette feed<br/>12 x 3U"] --> B["Charge chamber<br/>2 L to 22.73 bar<br/>from a 9.55 L bottle at 200 bar"]
+    A["Cassette feed<br/>12 x 3U"] --> B["Charge chamber<br/>2 L to 22.73 bar<br/>from a 3.46 L bottle at 200 bar"]
     B --> C["Fire<br/>closed adiabatic expansion<br/>8.0 m, 11.36 g"]
     C --> D["Trim stator<br/>39.7 mm at the muzzle<br/>+/-0.323 m/s"]
     D --> E["Release<br/>29.009 m/s"]
@@ -186,7 +186,7 @@ no figure, the cell says so rather than being left blank.
 | Energy per shot | **2.78 kJ gross, 2.74 kJ net** of regeneration | **311.76 J** | `motor_model.py` · [A51](validation/A51_gen6_power.md) |
 | Efficiency | **18.5 % electrical-to-payload**, 514 J delivered | **no equivalent figure exists** — the energy arrives as a ground-filled bottle, not as electricity | `motor_model.py` · A51 |
 | Electrical demand | 150–300 W recharge feed | **0.26 W average, 36 W peak** | A51 |
-| **Mass, dry / loaded** | **126.6 kg / 174.6 kg** | **11.45 kg added** plus ≈ 4.10 kg of store (**P82** — scaled, not sized) | `mass_properties.py` |
+| **Mass, dry / loaded** | **126.6 kg / 174.6 kg** | **11.45 kg added** plus **3.1216 kg** of store ([A56](validation/A56_reservoir_resized.md), sized) | `mass_properties.py` |
 | **Per 3U satellite** | **10.547 kg** dry | **1.296 kg** added, **1.324** with the trim stage — **up to 3.164** read hostilely (**P68**) | `payload_family.py` · [A45](validation/A45_stage_credit.md) |
 | Recoil per shot | 64.1 N·s | **116.03 N·s — 1.81×**, and the thrust line must pass within **10.7 mm** of the host centre of mass | `astro.py` · [A52](validation/A52_gen6_recoil.md) |
 | Orbital lifetime multiplier | **×1.60** at mean activity, **not invariant — see P16** | unchanged in kind | `astro.py` |
@@ -200,7 +200,7 @@ no figure, the cell says so rather than being left blank.
 > has not been run** — A55 produces it. *A number whose consequences have not been computed is not
 > published here, even when the old one is only a little wrong.*
 
-**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Fifty-six validation
+**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Fifty-seven validation
 run sheets exist, each against an acceptance band declared *before* the run; **three failed
 outright**, several missed individual bands, and **three times a declared band caught a bug in the
 analysis rather than in the design.**
@@ -390,8 +390,8 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **121 numbered entries, 50 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **56 run sheets, A1–A59**, each against a band declared *before* the run. **Three failed outright** |
+| **Defect register** | **122 numbered entries, 50 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Validation** | **57 run sheets, A1–A59**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest

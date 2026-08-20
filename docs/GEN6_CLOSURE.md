@@ -53,7 +53,7 @@ changes that.
 |---|---|---|
 | ~~**A54**~~ | ~~Weigh the pulse chain~~ — **RUN 2026-08-19**, one of eight, **closed P77, opened P86** | **P77**, and ADR-033's first falsifier. If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it corrects and ADR-033 reverses |
 | ~~**A55**~~ | ~~Re-run A44 and A48 at ADR-034's friction share~~ — **RUN 2026-08-19**, four of nine, **closed P83 and P84** | **P83 and P84.** The trim authority was sized at a **9.75 %** friction share and the design point now runs at **28.39 %** — and the scripts still read the old stroke, so A44 and A48 are answering a superseded question. Both are new, both HIGH, and ADR-034 created them |
-| **A56** | **Re-run A43 at 22.73 bar** and size the reservoir | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling. Carries **P84**'s repair: `precharged.py` reads the design point rather than declaring it |
+| ~~**A56**~~ | ~~Re-run A43 at 22.73 bar~~ — **RUN 2026-08-19**, eight of nine, **closed P82**, opened **P87** | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling. Carries **P84**'s repair: `precharged.py` reads the design point rather than declaring it |
 | **A57** | **Attitude rate and packaging on the stage** | The two remaining **NEEDS SOURCE** rows in `KILL_CRITERIA.md`. Recoil was the third and A52 closed it |
 | **A58** | **A thermal model of the chamber and reservoir across a campaign** | A43 settled the reservoir between shots; nothing models the chamber, the expansion cooling, or twelve cycles of it |
 | ~~**A59**~~ | ~~Structural case for the drive tube and stage rail~~ — **RUN 2026-08-19**, six of nine, opened **P85** | **ADR-034 made this urgent.** The tube is the cylinder *and* the rail, it is now **8.0 m** long at **1.0 mm** wall, and `build_gen6.py` says in its own docstring that neither bending nor alignment is modelled. A49's own note says every omission in it flatters a long tube |
@@ -127,8 +127,9 @@ material is stated nowhere, and it is 1.140 kg in aluminium against 3.294 in ste
 **5. Decide D2 and the enclosure panel.** Two decisions, both yours, together worth more than any
 analysis on this page — one is the only route to kill criterion 1, the other is 20 kg.
 
-**6. A56, A57, A58** — close the reservoir sizing and the two remaining NEEDS SOURCE rows, and give
-Gen6 the thermal work Gen5 has.
+**6. ~~A56~~, A57, A58** — **A56 ran 2026-08-19**: the store is **3.1216 kg**, 24 % below the
+figure ADR-034 quoted, and **P82 closes.** A57 and A58 still owe the two NEEDS SOURCE rows and the
+thermal work Gen5 has.
 
 **7. A60, the second implementation.** Do it *last*, when the design has stopped moving, because
 its value is catching what the first implementation got wrong and it should check the final

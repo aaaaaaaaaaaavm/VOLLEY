@@ -26,7 +26,7 @@ stroke.** 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charg
 | Drive tube | bore **15.805 mm**, stroke **8000 mm**, wall 1.0 mm. **1.140 kg** |
 | Carriage | rides the tube; carries the cradle interface. **Not recovered** |
 | Chamber | **2.0 L at 22.73 bar**, nitrogen, fired as a closed adiabatic expansion |
-| Reservoir | **9.55 L at 200 bar** — the no-relaxation figure, which A43 showed is the physically right end. **Still sized for 50 bar refills and now oversized — P82** |
+| Reservoir | **3.46 L at 200 bar** — **sized by [A56](../../validation/A56_reservoir_resized.md)** at ADR-034's charge pressure, against A43's 9.55 at 50 bar. A43's no-relaxation finding survives at **7.39× the cadence** |
 | **Trim stator** | **39.7 mm at x = 7960.3**, energised after the gas has finished. **0.340 kg.** Corrects ±0.323 m/s — it never throws the payload. **That authority was sized at the old friction share — P83** |
 | Stage rail | the host-provided structure everything mounts to |
 | Magazine cassette | carried across from Gen5's cell geometry |
@@ -43,7 +43,7 @@ stroke.** 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charg
 | Friction work | **28.39 % of shot work** | **9.75 % until ADR-034 — this is what the long stroke costs. P78** |
 | Dispersion, 3σ | **1.113 % open-loop** | **0.0274 m/s closed**, with the trim stage — ADR-033. 93.4 % of the open-loop variance is seal friction. **Not re-run at the new friction share — P83** |
 | Added mass per satellite | **1.324 kg** with the trim stage | **1.296–3.164 kg** once the stage credit is read hostilely — **P68**'s 1.868 kg/satellite of denied credit, which ADR-034 does not touch. *Store scaled by gas ratio, not sized — P82* |
-| Store | **≈ 4.10 kg** | chamber, vessel, gas, A39's 1.5 kg hardware allowance and the 1.140 kg tube. **A49's scaling of A43's 5.38 kg, not a sized store** |
+| Store | **3.1216 kg** | chamber, vessel, gas and A39's 1.5 kg hardware allowance, **sized by [A56](../../validation/A56_reservoir_resized.md)** at 22.73 bar — 24 % below A49's scaled estimate. The 1.140 kg tube is separate, and its material is undeclared (**P85**) |
 
 ## The five runs that built it, none of which set out to
 

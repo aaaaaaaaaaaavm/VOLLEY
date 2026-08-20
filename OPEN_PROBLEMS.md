@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **121 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
+> **122 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3567,8 +3567,8 @@ measured. At a genuinely small friction the light ejector works and this entry c
 test now governs four open decisions** — this, A49's long-stroke design point, ADR-033's trim
 stage, and **P77**'s pulse store.
 
-### P82. The Gen6 reservoir is still sized for a charge pressure the design no longer uses: MEDIUM, NEW 2026-08-19
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P82. The Gen6 reservoir is still sized for a charge pressure the design no longer uses: MEDIUM, CORRECTED 2026-08-19
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) dropped the charge pressure from 50 bar
@@ -3593,9 +3593,29 @@ saving, ADR-034 buys gentleness and pays mass for it**, and the added-mass-per-s
 `docs/generations/GEN6.md`, `docs/GENERATIONS.md` and the front page are optimistic by up to
 0.829 kg spread over twelve.
 
-**What would close it:** re-run A43 at 22.73 bar refills, with its bands re-declared before the
-script is touched, and write the sized volume into `parameters.json`. **The current 9.55 L is
-conservative rather than wrong**, which is why this is MEDIUM.
+**What closed it:** [A56](validation/A56_reservoir_resized.md) re-ran A43 at 22.73 bar with its
+bands declared first, and wrote the sized volume into `parameters.json`.
+
+> **Corrected.** **3.460 L, and a store of 3.1216 kg.** Band 1 reproduced A43's 9.550 L and its
+> 17 460 s time constant exactly, so the two are the same model at two pressures.
+>
+> **The reservoir falls further than the gas does** — 63.8 % against 54.55 % — because a lower
+> target pressure lets the bottle be drawn further down before it can no longer fill the chamber.
+> **A favourable nonlinearity nobody had claimed.**
+>
+> **So ADR-034's ≈ 4.10 kg was pessimistic, not optimistic.** A sized store comes in **24 % below**
+> the scaled estimate, and **falsifier 2 does not fire.** *This entry alleged the mass argument
+> might not be there; it is there, with 0.98 kg to spare.*
+>
+> **And A43's central finding survives the resizing.** Conduction gives **8873 s against the 1200 s
+> cadence — 7.39×** where it was 14.55×. A smaller bottle relaxes faster and the margin halves,
+> **but the no-relaxation figure remains the physically right end** and is not pressure-dependent
+> above 20 bar.
+>
+> **One new boundary.** Minimum reservoir temperature falls 201.9 → **161.3 K** against A43's
+> declared 150 K floor, and at 15 bar it fails at 143.7 K. **The floor sits between 15 and 20 bar**,
+> which constrains how far a future design point can lower the charge pressure — relevant to
+> **P86**.
 
 ### P83. The trim stage's authority was sized against a friction share that has since tripled: HIGH, CORRECTED 2026-08-19
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
@@ -3809,6 +3829,41 @@ open-loop** — **which deletes the commanded-velocity claim the product is sold
 first** — the dispersion that sets the authority that sizes the store is **98.7 % a seal
 coefficient measured on nothing**, and a bench measurement below a 20 % friction share moves every
 number here.
+
+### P87. The last fill of the campaign does not fit the window, and never did: MEDIUM, NEW 2026-08-19
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A42](validation/A42_fill_window.md) established that filling is *not* the constraint** — 4.14 s
+through a 1 mm orifice, against the 10 s of index-plus-return already inside the cadence.
+
+**That is the *first* fill, from a full bottle. Nothing had looked at the last one.**
+
+[A56](validation/A56_reservoir_resized.md) computed the whole twelve-shot sequence and band 7
+failed:
+
+| | Last fill |
+|---|---:|
+| At A43's 50 bar sizing, 9.55 L | **14.391 s** |
+| At ADR-034's 22.73 bar, 3.46 L | **11.516 s** |
+| Window | **10 s** |
+
+**By shot twelve the bottle is depleted, the pressure ratio across the orifice has collapsed, and
+the same hole takes roughly three times as long.** *The resizing improves it — a smaller bottle at
+the same storage pressure holds its ratio better — but does not fix it.*
+
+**This is a defect in the fill design rather than in the store sizing, and it is not ADR-034's.**
+It was present at A43's point and would have been found by anyone who looked past the first shot.
+
+> **The escape is arithmetic rather than architectural.** [A43](validation/A43_reservoir_thermal.md)
+> band 8 measured that the orifice moves the required reservoir by **0.00 %** across 0.5 to 2.0 mm.
+> **A larger orifice buys fill time for no mass at all.** What it costs instead is fill-rate
+> controllability, which is what commands the charge pressure and therefore the exit velocity —
+> and that trade has not been run.
+
+**What would close it:** size the orifice against the *last* fill rather than the first, and check
+what the larger hole does to the pressure-setting resolution [A44](validation/A44_gen6_dispersion.md)
+depends on. **Neither the cadence nor the store needs to change.**
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
