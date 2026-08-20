@@ -404,6 +404,23 @@ the topology that wins when the payload can carry something is the one where the
 the *cheap passive half*. Taken to its conclusion, that is **PII-16**, where the payload carries
 nothing at all because the passive half is already bolted to it.
 
+> ### The vault re-read 2026-08-20, and one blocker turned out to be doing three jobs
+>
+> **[`EXTERNAL_EVIDENCE.md`](EXTERNAL_EVIDENCE.md) has the full map.** The finding worth carrying
+> here: **PII-8, PII-9 and PII-14 each stopped partly on *"the capacitor bank cannot source
+> this"*.** [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) deleted the bank and
+> [A64](../validation/A64_pulse_store_technology.md) re-priced what replaced it — **so one
+> retirement quietly retired a blocker in three entries, and none had been re-read since.**
+>
+> | | |
+> |---|---|
+> | **PII-8** | **The only live route back in the vault.** Airgap and bank blockers both gone. What remains is a standards question the entry cites against itself — the CubeSat quasi-static case near **14 g** against tables computed at **25 g** — and **the thermodynamic velocity ceiling of a gas expansion, which nothing in this programme computes.** [`VELOCITY_CEILING.md`](VELOCITY_CEILING.md) treats the ceiling as payload-limited because for a motor that is the only ceiling there is |
+> | **PII-9** | **Structurally shut, and it reached ADR-033's principle first.** *"Centrifuge for bulk velocity, linear motor for precision"*, written **2026-07-31** — sixteen days before ADR-033 adopted *"gas supplies the energy, the motor supplies the control"* with a different bulk store. **Two unrelated stores, same conclusion** |
+> | **PII-21** | **Reopens on a catalogue lookup.** A59 left the tube on two numbers — density and service temperature — so screening alloy classes against T_sat(p₀) is a cheap run, not the open materials question the entry called it |
+>
+> **A stop is not scripture.** An entry can be wrong about why it stopped, and the commonest way
+> is that the thing blocking it stopped existing.
+
 ### PII-8 to PII-11: recorded in the lab, not here
 
 Four items live in [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) rather than this
