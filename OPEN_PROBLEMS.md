@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **124 numbered entries, of which 52 are live.** Every entry carries a `Status:` line written by
+> **125 numbered entries, of which 52 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -4000,8 +4000,8 @@ friction figure **and the temperature range it is specified at** — and **[P67]
 measured against the 17.8 N specification rather than against nothing.** *A61 measured nothing and
 names no product; its class ranges are handbook and flagged as such.*
 
-### P90. A62 screened steam at nitrogen's design point, not at steam's: HIGH, NEW 2026-08-20
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P90. A62 screened steam at nitrogen's design point, not at steam's: HIGH, CORRECTED 2026-08-20
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **[A62](validation/A62_steam_working_fluid.md)'s conclusion does not hold, and the defect is in how
@@ -4042,10 +4042,25 @@ A62 survives its own correction.*
 **And the heating.** Bands 5, 6 and 9 are about the sun, not the design point: **α/ε ≥ 7.6, a 23 cm
 absorber, and it survives eclipse.** Those hold at any chamber.
 
-**What would close it:** [A63](validation/A63_steam_design_point.md), the steam design surface,
-with its bands declared before the script — the run A62 should have been. **A62's run sheet is
-annotated, not rewritten**, and its verdict stands as the record of what was found at the wrong
-point.
+**What closed it:** [A63](validation/A63_steam_design_point.md) swept 108 points with its bands
+declared first.
+
+> **Corrected.** **A62's seal failure was an artefact and is withdrawn** — 43 points sit inside
+> filled PTFE's limit, so **A61's specification survives steam.**
+>
+> **A62's aluminium failure was not** — **zero of 108 points reach 473 K**, because the floor is
+> T_sat(p₀) and every charge pressure that makes 2350 J sits above it. **The tube is steel at every
+> steam design point.**
+>
+> **And that settles the verdict A62 reached for the wrong reason.** The steel penalty is
+> **2.154 kg — larger than everything steam removes** — so the best point is **−1.813 kg** and
+> **none of the 43 is a saving.** *The correction made it worse than A62 found, because a chamber
+> chosen for steam is larger and chamber mass rises with it.*
+>
+> **One conditional survives, and it is not a mass argument.** If **P85** chooses steel for reasons
+> independent of the fluid — hardness and galling at a sliding bore, and A59 found the material
+> barely moves the beam mode — steam stops paying for the tube and becomes **+0.341 kg**. *That is
+> less than the absorber hardware A63 charges nothing for.*
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

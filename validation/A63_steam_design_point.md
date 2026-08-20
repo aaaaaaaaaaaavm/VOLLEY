@@ -101,3 +101,96 @@ it at the wrong point.**
   trim authority, the pulse store and the seal specification all still carry nitrogen's numbers.
 - **It names no product, compound or supplier.**
 - **E4 stands.** Nothing here is measured.
+
+---
+
+## Result
+
+**RUN 2026-08-20. Eight of ten bands pass. A62's verdict survives its own correction — and by a
+wider margin than A62 found — but the reason has moved, and there is a conditional under it.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces A62 at 2.0 L | **550 K, 2397 J** | **PASS** |
+| 2 | nitrogen baseline reproduces | **2350 J, 34.28 m/s** | **PASS** |
+| 3 | a point ≤ 533 K delivering ≥ 2350 J | **43 points** | **PASS** |
+| **4** | a point ≤ 473 K | **0 points** | **FAIL** |
+| 5 | selected point within the 25 g cap | **10.00 g** | **PASS** |
+| **6** | net mass is a saving | **−1.813 kg** | **FAIL** |
+| 7 | campaign water ≤ 612 g | **296 g** | **PASS** |
+| 8 | selected shot ≥ 34.28 m/s | **34.33 m/s** | **PASS** |
+| 9 | solar closes | **α/ε 6.4, 0.0711 m², survives eclipse** | **PASS** |
+| 10 | the surface | **108 points, 43 inside PTFE, 0 a saving** | **REPORT** |
+
+### What P90's correction actually bought
+
+**Band 3 passed with 43 points, so [A61](A61_seal_class.md)'s seal specification does survive
+steam.** *That was A62's band 7 failure and it is corrected.*
+
+**Band 4 failed with zero points, so A62's band 4 survives its own correction.** **No steam design
+point in 108 reaches aluminium's 473 K**, because the floor is T_sat(p₀) and the charge pressures
+that make 2350 J all sit above it. **The tube is steel at every steam design point.**
+
+### And that is the whole result
+
+| Selected: **20.00 bar, 3 L → 526 K, 2357 J, 34.33 m/s, 10.00 g** | |
+|---|---:|
+| Removes — COPV 0.470, gas 0.813, old chamber 0.338 | **−1.622 kg** |
+| Adds — water 0.296, tank 0.20, **chamber 0.785**, **steel tube 2.154** | **+3.434 kg** |
+| **Net** | **−1.813 kg** |
+
+> **The steel tube penalty alone is 2.154 kg — larger than everything steam removes.**
+>
+> **A62 found −1.285 kg at the wrong point. The correction made it worse, not better**, because a
+> chamber chosen for steam is *larger*, and chamber mass rises with it: **0.338 → 0.785 kg.**
+
+**Zero of the 43 PTFE-feasible points are a net saving.** *It is not close and it is not a corner
+case.*
+
+### The conditional, which is the useful part
+
+**The 2.154 kg is charged to steam because the temperature forces it. But [P85](../OPEN_PROBLEMS.md)
+has not been decided, and there are reasons to choose steel that have nothing to do with the
+fluid** — surface hardness and galling resistance at a sliding seal bore, and
+[A59](A59_tube_structure.md) found the material barely moves the beam mode (1.67 Hz aluminium
+against 1.68 steel).
+
+**If the tube is steel anyway, steam stops paying for it:**
+
+| At 20.00 bar, 3 L | |
+|---|---:|
+| Removes | −1.622 kg |
+| Adds — water, tank, chamber only | +1.281 kg |
+| **Net** | **+0.341 kg** |
+
+| bar | L | T_dry | v | a | Net, tube penalty removed |
+|---:|---:|---:|---:|---:|---:|
+| **20.00** | **3** | **526 K** | **34.33 m/s** | **10.00 g** | **+0.341 kg** |
+| 22.73 | 3 | 533 K | 36.60 m/s | 11.36 g | +0.304 kg |
+| 20.00 | 4 | 517 K | 35.42 m/s | 10.00 g | +0.069 kg |
+
+> **So steam is a marginal saving *conditional on a decision that has not been taken*, and a
+> 1.8 kg cost if that decision goes the other way.** **It is not a mass argument either way** — the
+> best case is **+0.341 kg**, which is **less than the absorber, coating, insulation, plumbing and
+> sun-pointing this run charges nothing for.**
+
+### What steam is actually good at, stated separately from the mass
+
+**The mass is a wash. These are not:**
+
+- **The 200 bar COPV disappears** — a pressure-vessel qualification, a burst-safety case and a
+  launch-provider conversation, worth more in programme terms than the kilogram either way.
+- **The shot is slightly better** — 34.33 m/s at **10.00 g** against nitrogen's 34.28 at 11.36,
+  because γ = 1.33 lets the pressure fall more slowly. **A gentler shot at the same velocity.**
+- **Campaign propellant halves** — **296 g against 612 g.**
+- **The heating closes comfortably** — 57.3 W, **α/ε 6.4** inside the selective-coating class with
+  no concentrator, a **27 cm square** absorber, and it survives eclipse.
+
+## What this run did not settle
+
+- **It did not re-run A44, A48, A54, A55, A58 or A61 at a steam design point.** Dispersion, the
+  trim authority, the pulse store and the seal specification **all still carry nitrogen's numbers**,
+  and a 526 K seal is not a −35 °C seal.
+- **It charged nothing for the absorber, coating, insulation, plumbing or sun-pointing.**
+- **No steam tables.** Ideal gas, wet region avoided by construction.
+- **E4 stands.**
