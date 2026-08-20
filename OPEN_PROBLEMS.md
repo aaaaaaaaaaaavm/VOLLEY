@@ -3097,6 +3097,33 @@ wrong when written; it predates A43. It is wrong now, and it is the number a rev
 stage converts an admitted unknown into a saving.** At **18.5 % of the credit against a 16.5 %
 break-even, that one line fires the falsifier on its own**, with no hostile reading required.
 
+> ### Re-run at A56's store, 2026-08-20 — [A45-R2](validation/A45R2_stage_credit_resized_store.md). **Still CRITICAL.**
+>
+> **Every number above descends from A43's 5.38 kg store.** [A56](validation/A56_reservoir_resized.md)
+> sized the store at ADR-034's charge pressure rather than scaling it and got **3.1216 kg — 42 %
+> lighter** — and nothing that depends on it had been re-run.
+>
+> | Store | Source | kg/satellite | Hostile | Break-even |
+> |---:|---|---:|---:|---:|
+> | 5.3800 | A43, from a 9.55 L reservoir | 1.4027 | 3.2709 | **8.4 %** |
+> | 4.1000 | ADR-034, gas-ratio scaled | 1.2961 | 3.1642 | 9.9 % |
+> | **3.1216** | **A56, sized** | **1.2145** | **3.0827** | **11.0 %** |
+>
+> **A45-R found that the allowance never moves and only the credit does. This is the exception** —
+> and it is the only lever the design has. **Sizing the store bought 2.6 points of break-even.**
+> *ADR-032 declared 30 %.* **The falsifier fires by less and it still fires.**
+>
+> **A 42 % lighter store moved the hostile reading by 5.7 %.** *The store is not what is wrong with
+> the mass case.* The enclosure is still **58.6 %** of the credit, crediting it alone still gives
+> **5.384 kg per satellite**, and the largest single loss is still the skins at 4.92 kg.
+>
+> **Two figures in this entry are superseded**: **1.403 → 1.2145** and **3.108 → 3.0827**. **And the
+> 16.5 % quoted below is against the 43.33 kg credit [A46](validation/A46_enclosure_buildup.md)
+> replaced** — on A45-R's 85.36 kg credit the same allowance reads 8.4 %, and at A56's store 11.0 %.
+> *A break-even percentage means nothing without the credit it is a fraction of.*
+>
+> **This entry does not close.** *A CRITICAL entry improving is not a CRITICAL entry resolved.*
+
 **What this does and does not say.** **A37's band 5 is not edited and its result stands as
 declared** — it asked whether the credit closes the criterion on the assignment A37 made, and for
 that assignment its answer is right. What fails is the assignment's robustness. **Kill criterion 1

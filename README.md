@@ -213,7 +213,7 @@ no figure, the cell says so rather than being left blank.
 | Efficiency | **18.5 % electrical-to-payload**, 514 J delivered | **no equivalent figure exists** — the energy arrives as a ground-filled bottle, not as electricity | `motor_model.py` · A51 |
 | Electrical demand | 150–300 W recharge feed | **0.26 W average, 36 W peak** | A51 |
 | **Mass, dry / loaded** | **126.6 kg / 174.6 kg** | **11.45 kg added** plus **3.1216 kg** of store ([A56](validation/A56_reservoir_resized.md), sized) | `mass_properties.py` |
-| **Per 3U satellite** | **10.547 kg** dry | **1.296 kg** added, **1.324** with the trim stage — **up to 3.164** read hostilely (**P68**) | `payload_family.py` · [A45](validation/A45_stage_credit.md) |
+| **Per 3U satellite** | **10.547 kg** dry | **1.2145 kg** added ([A45-R2](validation/A45R2_stage_credit_resized_store.md), at A56's sized store; **1.3173** if the suspended trim stage is built) — **up to 3.0827** read hostilely (**P68**) | `payload_family.py` · [A45](validation/A45_stage_credit.md) |
 | Recoil per shot | 64.1 N·s | **116.03 N·s — 1.81×**, and the thrust line must pass within **10.7 mm** of the host centre of mass | `astro.py` · [A52](validation/A52_gen6_recoil.md) |
 | Orbital lifetime multiplier | **×1.60** at mean activity, **not invariant — see P16** | unchanged in kind | `astro.py` |
 | Semi-major axis change | **+28.8 km**, unreachable by waiting or by drag | — | `astro.py`, A21-R |
@@ -466,7 +466,7 @@ since.
 [A35](validation/A35_constraint_ledger.md) attributed every kilogram to the requirement causing it
 and found **49.23 kg — 58.2 % — survives the deletion of every requirement in all 64 corners**, so
 **there is no architecture that reaches 2 kg.**
-Gen5 is **10.547 kg**; Gen6 is **1.296 kg added** but **10.547 kg on dry mass**, and both
+Gen5 is **10.547 kg**; Gen6 is **1.2145 kg added** but **10.547 kg on dry mass**, and both
 numerators are reported wherever either appears. **The threshold has never been moved** — a
 threshold revised after a result is known is not a threshold. The honest options remain what they
 were: change the payload class, or publish the criterion as crossed.

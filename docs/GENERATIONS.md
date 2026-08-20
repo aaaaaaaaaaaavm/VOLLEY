@@ -37,7 +37,7 @@ descends from was measured off its solids.
 | **Exit velocity** | *not established* | **16.029 m/s at 10.07 g** | **34.280 m/s at 11.36 g**, zero-friction; **29.009** at the full tolerable friction (**P67**) |
 | **Stroke** | 1.3 m accelerating, release at 1.5 m | same | **8.00 m** — A37's whole usable acceleration length ([ADR-034](adr/034-gen6-long-stroke-design-point.md)) |
 | **Dry mass** | — | **126.6 kg** | 11.45 kg added, plus **3.1216 kg** of store (A56, sized at the adopted charge pressure) |
-| **Per 3U satellite** | — | **10.547 kg dry** | **1.296 kg added** — and **1.296–3.164** once the stage credit is read hostilely (**P68**) |
+| **Per 3U satellite** | — | **10.547 kg dry** | **1.2145 kg added** ([A45-R2](../validation/A45R2_stage_credit_resized_store.md), at A56's sized store) — and **1.2145–3.0827** once the stage credit is read hostilely (**P68**). *The 1.296 published until 2026-08-20 was ADR-034's scaled store, not a sized one* |
 | **Velocity control** | — | designed loop, **0.0274 m/s at 3σ** | **3.9798 % open-loop** at ADR-034's stroke (A55, reproduced by A61), **98.68 % of it seal friction** (**P67**) — *A44's 1.113 % was the 2.18 m machine*; **0.0274 m/s with the trim stage**, on a **~70 g** store (A64) |
 
 **Read the last two rows together.** Gen6 is better on velocity and on added mass per satellite,

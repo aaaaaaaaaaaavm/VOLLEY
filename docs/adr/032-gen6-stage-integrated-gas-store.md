@@ -160,6 +160,14 @@ the moat, and BOLLEY is the evidence for that rather than the alternative to it.
    **Re-run as A45-R after A46 itemised the enclosure: the break-even halved again to 8.4 %**,
    because the credit grew to **85.36 kg — 67.4 % of the machine** — while the 7.17 kg allowance
    did not. **The enclosure alone is 58.6 % of the credit.**
+   **Re-run again as [A45-R2](../../validation/A45R2_stage_credit_resized_store.md) at A56's sized
+   store, 2026-08-20 — and this is the first time the allowance itself moves.** A45-R's finding
+   was that *"the allowance never moved, the credit did"*; sizing the store rather than scaling it
+   takes it from **7.17 kg to 9.43 kg**, and the break-even from **8.4 % to 11.0 %**. Full credit
+   **1.4027 → 1.2145 kg/satellite**, hostile **3.2709 → 3.0827**. **Against the 30 % this falsifier
+   declared, it still fires — by a third less.** *A 42 % lighter store moved the hostile reading
+   5.7 %, which says the store is not what is wrong with the mass case: the enclosure is still
+   58.6 % of the credit and crediting it alone still gives 5.384 kg per satellite.*
 2. ~~**The blowdown transient needs a regulator that weighs more than the store it feeds.**~~
    **Retired 2026-08-14 by A41.** There is no regulator: a pre-charged chamber removes the
    flow-rate problem by construction. The store is **4.66 kg**, not the 2.98 A39 estimated, and it

@@ -61,7 +61,7 @@ changes that.
 
 ## Category B — bookkeeping
 
-- **Publish P68's honest range wherever added mass appears** — at ADR-034, **1.296 kg** is the full-credit figure and **3.164 kg** is the hostile one. Both, everywhere, not the flattering one.
+- **Publish P68's honest range wherever added mass appears.** *Done 2026-08-20, and the figures moved:* at **A56's sized store** the full-credit figure is **1.2145 kg** and the hostile one **3.0827 kg** ([A45-R2](../validation/A45R2_stage_credit_resized_store.md)). The 1.296 / 3.164 pair was ADR-034's **scaled** store. **Both ends, everywhere, not the flattering one** — and any page quoting **1.3173** must say it includes a trim stage [ADR-036](adr/036-seal-specification-and-the-trim-stage.md) suspended.
 - **Move the headline numbers to Gen6** once A54–A60 land, or **state explicitly that they remain Gen5's.** Today the front page carries Gen5's numbers under a Gen6 design target, which is honest only because it says so.
 
 ## Category C — needs a decision from you, and analysis cannot substitute

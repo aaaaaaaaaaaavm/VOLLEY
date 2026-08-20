@@ -10,7 +10,7 @@ went looking and found `analysis/design_surface.py` computing it at **2700 kg/mÂ
 `cad/parameters.json` naming neither. **A49 band 7 passed at 1.140 kg without knowing it was
 choosing.**
 
-**It is a 2.15 kg decision on a machine whose added-mass numerator is 1.296 kg per satellite.**
+**It is a 2.15 kg decision on a machine whose added-mass numerator is 1.2145 kg per satellite.**
 
 ## What the evidence actually says
 

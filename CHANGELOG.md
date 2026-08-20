@@ -9,6 +9,18 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-20 (forty-ninth pass): the stage credit at the store that was actually sized
+
+| ID | Item | Detail |
+|---|---|---|
+| **A45-R2** | **The stage credit re-run at A56's store — four of eight, all five predictions held** | A45 and A45-R both read the store as A43's **5.38 kg**. A56 sized it at ADR-034's charge pressure and got **3.1216** — 42 % lighter — and nothing depending on it had been re-run. **The allowance moves for the first time**: A45-R's finding was *"the allowance never moved, the credit did"*, and sizing the store takes it **7.17 → 9.43 kg**, break-even **8.4 % → 11.0 %**. |
+| **P68** | **Still CRITICAL** | Full credit **1.4027 → 1.2145 kg/satellite**, hostile **3.2709 → 3.0827**. **ADR-032's falsifier fires by a third less and still fires**, at 11.0 % against a declared 30 %. *A CRITICAL entry improving is not a CRITICAL entry resolved.* The 16.5 % the entry quotes is against the 43.33 kg credit A46 replaced — **a break-even percentage means nothing without the credit it is a fraction of.** |
+| **MASS-01** | **The project was publishing three figures for one quantity** | **1.403** (A45/A45-R/P68, at 5.38 kg), **1.296** (README, index.html, GENERATIONS, at ADR-034's scaled 4.10 kg) and **1.324** (GEN6.md, same store *plus* the trim stage). **None was wrong for its own scope and no page said which scope it was using** — the front page's hostile 3.164 is the 4.10 row while P68's 3.108 is A45's at 5.38. A45-R2 band 8 reconciles all five readings and names **1.2145 kg/satellite** canonical: A56's sized store, **without** the trim stage, because ADR-036 suspended it. Any page quoting **1.3173** must say it includes a section that may not be built. |
+| **A45 / A45-R** | **Frozen against drift** | `stage_credit.py` gains **`STORE_KG_A43 = 5.38`** and reads the live store from `cad/parameters.json`; `main()` raises if the A43 helper stops reproducing. **Band 1 re-evaluates the whole model at the frozen store** and must return 85.36 / 1.403 / 3.271. *A44 and A48 drifted silently because nothing did this.* |
+| **Propagation** | Six documents | `README.md` (twice), `docs/index.html`, `docs/GENERATIONS.md`, `docs/generations/GEN6.md`, `docs/KILL_CRITERIA.md`, `docs/GEN6_CLOSURE.md`, and a dated block on **ADR-032**'s falsifier 1. ADR-034's own table keeps 1.296 — it is that decision's record of what it decided. |
+
+---
+
 ## 2026-08-20 (forty-eighth pass): the seal is specified, and the trim stage stops
 
 | ID | Item | Detail |
