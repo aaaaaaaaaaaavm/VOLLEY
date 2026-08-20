@@ -9,6 +9,19 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-20 (fiftieth pass): Gen5 closes, and the paper does not
+
+| ID | Item | Detail |
+|---|---|---|
+| **P93** | **CRITICAL. The paper's system mass is 50 % low, in its own abstract** | `mass_properties.py` and `BASELINE.md` give **126.6 kg dry**; `paper.tex` says **84.5 kg** in the abstract and conclusion and **76.5 kg** in the payload-family table caption. **The arithmetic names the cause**: A46 itemised the enclosure on 2026-08-16, an 8.00 kg placeholder becoming **50.04 kg**, and **84.5 − 8.00 + 50.04 = 126.54**; **84.5 − 8.00 = 76.5** is the caption. Both figures are pre-A46 and the paper was built three days after it landed. **It is a re-run, not a patch** — the caption states per-satellite mass *uses* 76.5 kg, so every row of that table moves by 65 %. **Nothing compares the paper against `BASELINE.md`**: P84's shape, one deliverable further out. |
+| **A7** | **Superseded, and the closure document said otherwise** | A7 was specified and **correctly never run** — Chrono unavailable, and the release mechanism it would simulate is undefined. A7-R gave the budget (**1.465 mN·m·s**), **A23** modelled three rigid-body stages with mechanism properties as swept axes (**ideal release 0 °/s**, skew tolerance 50.6 µs, cradle reaction 85.0 N against 200 N), **A34** closed the impact **five of five** (settles in 27.25 ms of a 146.4 ms stroke, **exactly zero residual rate**). **`PHASE_I_CLOSURE.md` listed A7 as unrun Category A work until today**, ten days after A23 answered it — *a stale gap inside the closure document itself.* |
+| **GEN5_CLOSURE** | **New: `docs/GEN5_CLOSURE.md`** | The whole Phase I case on one page — what Gen5 is, every headline number against its source, what was cross-checked and by what tool, **what failed**, the seven kill criteria with three crossed and unmoved, the permanent caveats (E4, A9 re-tested at 403 today, T-1…T-8, B-1…B-4), and the handoff to hardware. **It states that all four specified benchtop tests validate subsystems ADR-032 deleted**, so the benchtop programme is Gen5's closure rather than Gen6's start. |
+| **P16** | **README's description was stale, not the paper** | `paper.tex` withdrew the invariance claim in the abstract, §V-B, the sensitivity and limitations sections, **and the built PDF carries it**. The README said the opposite. *The source was fixed and the summary was not.* What remains open is the replacement claim, which needs **A9** — still 403 at CONNECT, re-tested. |
+| **Paper / thesis** | **Gen6 added as future work; both PDFs rebuilt from source** | A bounded section: the architecture change, what it deletes, that nothing in it is measured, that its trim stage is suspended, and that it is reported in the repository rather than the paper *for the same reason the 3-D field correction is computed and deliberately not applied.* **Both PDFs now demonstrably rebuild** — the check that would have caught the stale P16 description. |
+| **CFD** | **Flow-field visualisation not produced, and why** | The converged fine free-stream case is committed and reconstructed at t = 1800. `postProcess` aborts in this OpenFOAM 1912 build with an IOstream error — **the same class of failure A29 already documented for `wallShearStress`**. Not forced, and recorded rather than worked around. |
+
+---
+
 ## 2026-08-20 (forty-ninth pass): the stage credit at the store that was actually sized
 
 | ID | Item | Detail |

@@ -30,6 +30,15 @@ or to qualify.
 > **This repository is the engineering record, not a brochure.** Every analysis declares what
 > would count as failure *before* it runs, every defect is numbered including the ones that damage
 > the work's own claims, and **nothing here has been built, fired or measured.**
+>
+> **What that discipline has actually produced, which is the part worth judging:** **65 run
+> sheets**, each against a band written down before its script existed. **Three failed outright** —
+> including one that falsified a claim in this project's own abstract. **Three times a declared
+> band caught a bug in the analysis rather than in the design**, which is the direction nobody
+> plans for. **Every correction is dated and none of them improved a number.**
+>
+> **Phase I closes on Gen5** — [`docs/GEN5_CLOSURE.md`](docs/GEN5_CLOSURE.md) is the whole case on
+> one page, including the one defect that is still blocking it.
 
 ### Where to go from here
 
@@ -41,7 +50,7 @@ or to qualify.
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
 | **checking what outside evidence could settle** | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) — which live entries a published source can close, which it can only inform, and **which need hardware and cannot be read away** |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 127 numbered entries, 51 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 128 numbered entries, 52 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
