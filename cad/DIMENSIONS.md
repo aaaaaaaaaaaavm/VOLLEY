@@ -295,6 +295,10 @@ Fusion document: **`Built by cad/build_gen6.py. ADR-032: the payload is accelera
 | `exit_velocity_m_s_constant_pressure_bound` | 42.23 | mm |
 | `tube_mass_kg` | 1.1404 | mm |
 | `friction_work_fraction` | 0.2839 | mm |
+| `tube_material_density_kg_m3` | 2700.0 | mm |
+| `tube_temperature_ceiling_K` | 473.0 | mm |
+| `tube_material` | aluminium 6061-T6, hard anodised | — |
+| `piston_material` | aluminium 6061-T6, matched to the tube | — |
 
 
 ## gen6 store
