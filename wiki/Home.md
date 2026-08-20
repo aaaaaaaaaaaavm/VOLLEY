@@ -96,10 +96,10 @@ flowchart LR
 | | |
 |---|---|
 | TRL | 2-3 |
-| Analysis | 40 Python scripts, reproducible, outputs committed as JSON |
-| Validation | 39 analyses, each with its acceptance bands declared **before** its script existed |
-| Register | 127 numbered entries, 53 live, including the ones that damage the work's own claims |
-| CAD | script-built from `cad/parameters.json`, Gen5 current, STEP and STL committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
+| Analysis | 68 Python scripts, reproducible, outputs committed as JSON |
+| Validation | 65 run sheets, A1–A65, each with its acceptance bands declared **before** its script existed |
+| Register | 127 numbered entries, 51 live, including the ones that damage the work's own claims |
+| CAD | script-built from `cad/parameters.json`, **Gen6 current**, STEP and STL committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
 | FEA | magnetostatic 2-D (A1) and 3-D (A2), structural (A4), CFD (A29) |
 | Hardware | **none. Nothing here has been built, fired or measured** |
 | Independent review | none |
@@ -175,6 +175,21 @@ Full set, including the GMAT cross-check, in
 
 These were argued out and should not be silently reopened; reasoning is in
 [`docs/DECISION_LOG.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/DECISION_LOG.md).
+
+> **Most of this list is Gen5's, and ADR-032 deleted the subsystems it locks.** On 2026-08-14 the
+> design target became **the payload accelerated directly by cold gas along a rail a spent upper
+> stage provides** — no mover, no stator, no capacitor bank, no brake, no return stroke. *The
+> decisions below were correct for the machine they were made for, and that machine is now Gen5.*
+>
+> **What survives into Gen6:** the payload g-limit argument, the magazine and its cassettes, the
+> retention gate, and the product framing — orbit change rather than phase spacing.
+>
+> **What Gen6 added and has not settled:** a trim stator at the muzzle
+> ([ADR-033](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/adr/033-gen6-trim-stage.md)),
+> **suspended on 2026-08-20** by
+> [ADR-036](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/adr/036-seal-specification-and-the-trim-stage.md)
+> because a seal meeting its own thermal requirement makes it unnecessary — **17.8 N, and P67 has
+> never measured it.**
 
 - **Linear synchronous motor, not a coilgun.** The payload's own g-limit caps exit
   velocity near 26-35 m/s whatever the launcher, which erases the coilgun's only
