@@ -3697,7 +3697,7 @@ measured on nothing.
 > well as a dispersion.**
 
 ### P84. ADR-034 moved the parameter file and the documents, and left the analysis scripts at the old design point: HIGH, CORRECTED 2026-08-19
-> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+> **Status:** `LIVE` — open engineering; something still has to be done
 
 
 **`analysis/precharged.py` still declares `STROKE = 2.18` and `G_CAP = 25.0`.**
@@ -3731,6 +3731,37 @@ the thing that was actually missing. **Landed with A55 on 2026-08-19.**
 **This is a defect in work done three days ago, and it was found by reading rather than by any
 gate.** It is recorded here rather than quietly fixed, which is the rule the register exists to
 enforce.
+
+> ### A third live instance, found 2026-08-20
+>
+> **This entry named A44 and A48 as "answering a superseded question" and repaired neither
+> script.** `gen6_dispersion.py` — A44's — now has **one leg in each design point**:
+>
+> | | |
+> |---|---|
+> | `P_NOMINAL = 50e5` | **hard-coded**, A41's charge pressure |
+> | `pc.STROKE` | **live**, and P84's own fix made it 8.0 m on 2026-08-19 |
+>
+> **So it computes a shot at 50 bar over 8.0 m, which is not a design point this project has ever
+> adopted.** Re-run today it returns **1.504 % and 96.3 %** against A44's published **1.113 % and
+> 93.4 %** — *and 1.504 is not the corrected number either, because the pressure is still A41's.*
+>
+> **Nothing surfaced it because the stored artefact was never regenerated.**
+> `analysis/results/gen6_dispersion.json` still holds 1.113 %, last written **2026-08-16** with the
+> script; `precharged.py` changed underneath it on **2026-08-19**. **`trim_stage.py` band 1 asserts
+> against that stored file**, so it passes today and **fails the moment anyone runs
+> `gen6_dispersion.py`.**
+>
+> **This is the hole this entry already identified, one level down.** P84 found that nothing
+> compares the parameter file against the scripts and fixed that. **Nothing compares a script
+> against the run sheet it produced**, so a dated result can stop reproducing and every gate stays
+> green.
+>
+> **What would close it:** A44's script frozen at its own point the way `precharged.py` freezes
+> `STROKE_A41` — the pattern already exists in this repository and was not applied here — and a
+> re-run of the dispersion at the **current** point, which is a banded run and not a repair.
+> **Until that run exists, 1.113 % is A44's number for A44's machine, and Gen6's dispersion at
+> ADR-034's design point is not known.**
 
 > **Corrected 2026-08-19, with A55.** `precharged.py::design_point()` reads the stroke,
 > acceleration and charge pressure from `cad/parameters.json`, and
