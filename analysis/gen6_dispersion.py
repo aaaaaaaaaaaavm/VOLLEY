@@ -33,7 +33,16 @@ import precharged as pc
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 
+# A44's OWN design point, frozen here. precharged.py derives STROKE and P_MAX live from
+# cad/parameters.json (P84), so importing pc.STROKE would silently re-run A44 at whatever design
+# point is current -- which is exactly what happened: ADR-034 moved the stroke to 8.0 m on
+# 2026-08-19 and this script began computing a shot at 50 bar over 8.0 m, a point the project has
+# never adopted. The published result stops reproducing and nothing says so.
+#
+# Same pattern as precharged.STROKE_A41: a dated run keeps its own numbers.
+STROKE_A44 = 2.18                  # m, the stroke A44 ran at
 P_NOMINAL = 50e5
+V_CHAMBER_A44 = 2.0e-3             # m^3, A41's chamber, as A44 used it
 SIGMA_P_FS = 0.0025 / 3.0          # 0.25 % of full scale, read as 3 sigma
 SIGMA_M_REL = 0.005 / 3.0          # 0.5 % of payload mass, read as 3 sigma
 FRICTION_N = 83.40371375447981     # A41 band 8's allowance, carried unchanged
@@ -46,8 +55,8 @@ SETPOINTS = (20.0, 22.5, 25.0, 27.5, 30.0)
 
 def v_exit(p0, m_pay, friction_N):
     """A41's work integral, less the work friction takes out of the stroke."""
-    w = pc.work(p0, pc.V_CHAMBER if hasattr(pc, 'V_CHAMBER') else 2.0e-3)
-    w_net = w - friction_N * pc.STROKE
+    w = pc.work(p0, V_CHAMBER_A44, STROKE_A44)
+    w_net = w - friction_N * STROKE_A44
     if w_net <= 0.0:
         return 0.0
     return math.sqrt(2.0 * w_net / m_pay)

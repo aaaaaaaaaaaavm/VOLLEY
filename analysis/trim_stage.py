@@ -29,7 +29,11 @@ RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 
 KT = 10.5386                 # N per kA/m, A2's depth-resolved value
 SHEET_A_PER_M = 90e3         # the sheet current Gen5's stator runs at, A1
-STROKE = pc.STROKE
+# A48's OWN stroke, frozen. pc.STROKE is derived live from cad/parameters.json (P84), so this
+# denominator followed ADR-034 to 8.0 m and band 3 began reporting 0.497 % where A48 declared
+# 1.822 %. The section length never moved; only the machine it was a fraction of did.
+STROKE_A48 = 2.18
+STROKE = STROKE_A48
 TARGET_SIGMA = 0.0274        # A28: the dispersion Gen5 achieved, and Gen6 gave up
 MAX_SECTION_FRAC = 0.15      # band 3
 POWER_CAP_W = 200.0          # band 5, A37
