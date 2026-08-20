@@ -35,6 +35,7 @@ or to qualify.
 
 | If you are… | Read |
 |---|---|
+| **checking whether Gen5 closes** | [`docs/GEN5_CLOSURE.md`](docs/GEN5_CLOSURE.md) — the whole Phase I case, what failed, and what is deliberately left open |
 | **here for one page** | **[`SUMMARY.md`](SUMMARY.md)** — the whole thing, with its caveats attached |
 | **here for the idea** | [`docs/CONCEPT.md`](docs/CONCEPT.md), and [`docs/LINEAGE.md`](docs/LINEAGE.md) for how it got there |
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
@@ -514,8 +515,13 @@ documented in `OPEN_PROBLEMS.md` P1, P4 for the audit trail.
   half of the same sentence is the identical construction, since `scale` and `1/BC` occupy the
   same slot in the drag term. Neither half of that claim was ever tested by a method capable
   of falsifying it. **`paper/paper.tex` still asserts it in five places, including the
-  abstract**, because there is no TeX engine here and editing the source without rebuilding
-  the PDF would split the two.
+  abstract**, **Corrected 2026-08-20: the paper has withdrawn it.** `paper.tex` says
+  *"not claimed invariant"* in the abstract and *"no invariance is claimed"* in §V-B, the
+  sensitivity and limitations sections both record why the original claim was wrong, and **the
+  built PDF carries the withdrawal.** *This bullet said the opposite until today — the source was
+  fixed and this summary was not, which is the failure mode the project keeps finding in itself.*
+  **What remains open is the replacement claim, which needs A9** — blocked, `celestrak.org` still
+  returns 403 at CONNECT under this environment's network policy, re-tested 2026-08-20.
 - **P11, which build was actually submitted is unresolved.** Until that is answered, it is
   not known whether the version of record carries P1, P4 *and* the falsified abstract claim.
 
