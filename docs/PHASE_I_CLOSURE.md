@@ -71,7 +71,7 @@ the discipline `validation/README.md` exists to enforce. Ordered by value.
 
 | # | Item | Closes | Tool | Expected |
 |---|---|---|---|---|
-| A-1 | **Tip-off at release (A7)** | E7, KILL_CRITERIA §4 | numpy 6-DOF rigid body | Payload CoM sits 70 mm off the thrust line. Band is 2 °/s per P30. **Likely FAIL** |
+| ~~A-1~~ | ~~**Tip-off at release (A7)**~~ | E7, KILL_CRITERIA §4 | ~~numpy 6-DOF rigid body~~ | **DONE, and not by A7 — corrected 2026-08-20.** [A23](../validation/A23_tipoff_release.md) modelled it on 2026-08-10 as three rigid-body stages with the mechanism properties as *swept axes*, and [A34](../validation/A34_cradle_restitution.md) answered the impact A23 opened on 2026-08-13, **five of five**. **The prediction here was wrong**: the ideal release is **0 °/s**, skew tolerance **50.6 µs**, cradle reaction **85.0 N against a 200 N band**. *This row asked for a 6-DOF model of a release mechanism that does not exist, which is exactly what [A7-R](../validation/A7_separation_chrono.md) refused to build* |
 | A-2 | **Gen4 finite-stator force** | **P32**, E27 | magpylib | Opens the Gen4 export gate. HIGH |
 | A-3 | **Ripple vs track modes** | E23 | numpy | 6th harmonic sweeps 0→2048 Hz; track first mode is 109 Hz, so it **crosses** |
 | A-4 | **A8 rerun at the corrected point** | A8's self-declared staleness | ngspice | Deck exists at `validation/spice/` |
@@ -177,7 +177,7 @@ repository is a model output. Phase I ends with that still true.
 | | Status |
 |---|---|
 | A1 field, A4 structural, A5 astro, A6 conjunction, A8 pulse, A10 ESR, A11 regen, A12 attraction, A13 attitude, **A14 EMI** | **RUN** — 10 of 12 |
-| **A7** separation and tip-off | **specified, never run.** Runnable here as A-1 |
+| **A7** separation and tip-off | **specified, correctly never run — SUPERSEDED, corrected 2026-08-20.** A7-R gave the angular-impulse budget (**1.465 mN·m·s**), [A23](../validation/A23_tipoff_release.md) modelled the three stages, [A34](../validation/A34_cradle_restitution.md) closed the cradle impact. **The question is answered; the tool named in the spec never was, and did not need to be** |
 | **A9** decay against flown objects | **specified, blocked.** Not runnable here |
 | A2, A3 | never specified. A1 closed only the 2-D half of E1 |
 | **A15** POEM campaign | new; script generated here, **GMAT run is external** |

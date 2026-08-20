@@ -60,6 +60,26 @@ is what makes it worth falsifying.**
 > off the thrust line (`cad/parameters.json`). A result between 2 and 5 °/s is now a *miss*, where
 > yesterday it was a pass. That is the correct posture and it should be expected to hurt.
 
+> ## SUPERSEDED 2026-08-20. A7's question is answered; A7 is not the run that answered it.
+>
+> **This sheet stays unrun and that was the right call.** A7-R's argument below — *"a multibody
+> model of an undefined mechanism produces a number with no provenance"* — held, and the work went
+> where the argument pointed instead of where the tool did.
+>
+> | | |
+> |---|---|
+> | **A7-R**, 2026-08-05 | The angular-impulse budget: **1.465 mN·m·s** for a 2 °/s release, and the force-versus-duration tolerance that follows |
+> | **[A23](A23_tipoff_release.md)**, 2026-08-10 | Three rigid-body stages — clearance take-up, constrained stroke, release — with **mechanism properties as swept axes** rather than invented. **Ideal release 0 °/s**, skew tolerance **50.6 µs**, cradle reaction **85.0 N** against a 200 N band |
+> | **[A34](A34_cradle_restitution.md)**, 2026-08-13 | The impact A23 opened. **Five of five.** The rattle settles in **27.25 ms of a 146.4 ms powered stroke** and the residual rate at force removal is **exactly zero for every clearance** — *A23's 36–231 °/s arrival never becomes a release rate* |
+>
+> **`docs/PHASE_I_CLOSURE.md` listed A7 as "specified, never run" and as runnable Category A work
+> until 2026-08-20**, ten days after A23 answered it. **The closure document had a stale gap in
+> itself**, which is a worse defect than the gap it described, because a closure is read as the
+> statement of what remains.
+>
+> **The 2 °/s band set here under P30 is not re-declared and was not moved.** A23 and A34 both ran
+> against it.
+
 ## A7-R, 2026-08-05: the tolerance the release mechanism has to hold
 
 > **A7 itself remains UNRUN.** This is a reduced analysis and it does not produce a tip-off rate.
