@@ -18,6 +18,12 @@
 > source it weighs 23.44 to 37.36 kg against the 1.2328 kg section it feeds**, and no sheet current
 > rescues the trade: its minimum is **10.755 kg**.
 >
+> **ANSWERED 2026-08-20 by [A64](../../validation/A64_pulse_store_technology.md), and falsifier 1 does not
+> fire.** Priced against pulsed-power capacitor technology rather than the EDLC that was the only store data
+> in the repository, **the store is ~70 g — 6 % of the 1.2328 kg section it feeds**, at **400 kW/kg**
+> against the 23.20 A54 said was required. **P86 closed.** *A cheaper answer may still exist: A61 found a
+> specified seal could delete this stage rather than feed it.*
+>
 > **A54 band 5's declared FAIL text says this ADR reverses. It is not reversed here**, because
 > deleting the trim stage deletes the commanded-velocity claim the product is sold on, and choosing
 > the replacement is a design decision rather than an analysis result. **The decision is open and

@@ -1,0 +1,182 @@
+{
+  "analysis": "A64",
+  "bands_declared_commit": "HEAD~1",
+  "note": "Specific energy 2000-2680 J/kg is a published pulsed-power TECHNOLOGY CLASS range, not a product. ESR x C for film is SWEPT conservatively; typical metallised polypropylene is nearer 1e-7 s. The switch and the conductors are still unpriced, so every mass here is a LOWER BOUND. Derating, voltage reversal and life are not modelled. No product, series or supplier is named.",
+  "requirement": {
+    "energy_J": 136.59389100596445,
+    "peak_W": 28605.61301910698,
+    "section_m": 0.1440143757298191,
+    "authority_m_s": 1.154349320386433,
+    "mass_kg": 1.2327630562472516,
+    "v_exit": 29.00526814841817
+  },
+  "edlc": [
+    {
+      "esr_c_s": 0.69,
+      "spec_e_J_kg": 4211.003076923077,
+      "e_power_J": 98689.36491591907,
+      "e_binding_J": 98689.36491591907,
+      "limited_by": "power",
+      "mass_kg": 23.436070483242215,
+      "specific_power_W_kg": 1220.580602006689,
+      "over_delivered": 722.50204009204
+    },
+    {
+      "esr_c_s": 1.1,
+      "spec_e_J_kg": 4211.003076923077,
+      "e_power_J": 157330.87160508838,
+      "e_binding_J": 157330.87160508838,
+      "limited_by": "power",
+      "mass_kg": 37.36185149502382,
+      "specific_power_W_kg": 765.6369230769232,
+      "over_delivered": 1151.8148465235422
+    }
+  ],
+  "film": [
+    {
+      "esr_c_s": 1e-06,
+      "spec_e_J_kg": 2000.0,
+      "e_power_J": 0.1430280650955349,
+      "e_binding_J": 136.59389100596445,
+      "limited_by": "energy",
+      "mass_kg": 0.06829694550298222,
+      "specific_power_W_kg": 418841.7623721971,
+      "over_delivered": 1.0
+    },
+    {
+      "esr_c_s": 1e-06,
+      "spec_e_J_kg": 2680.0,
+      "e_power_J": 0.1430280650955349,
+      "e_binding_J": 136.59389100596445,
+      "limited_by": "energy",
+      "mass_kg": 0.05096786977834494,
+      "specific_power_W_kg": 561247.9615787441,
+      "over_delivered": 1.0
+    },
+    {
+      "esr_c_s": 1e-05,
+      "spec_e_J_kg": 2000.0,
+      "e_power_J": 1.430280650955349,
+      "e_binding_J": 136.59389100596445,
+      "limited_by": "energy",
+      "mass_kg": 0.06829694550298222,
+      "specific_power_W_kg": 418841.7623721971,
+      "over_delivered": 1.0
+    },
+    {
+      "esr_c_s": 1e-05,
+      "spec_e_J_kg": 2680.0,
+      "e_power_J": 1.430280650955349,
+      "e_binding_J": 136.59389100596445,
+      "limited_by": "energy",
+      "mass_kg": 0.05096786977834494,
+      "specific_power_W_kg": 561247.9615787441,
+      "over_delivered": 1.0
+    },
+    {
+      "esr_c_s": 0.0001,
+      "spec_e_J_kg": 2000.0,
+      "e_power_J": 14.30280650955349,
+      "e_binding_J": 136.59389100596445,
+      "limited_by": "energy",
+      "mass_kg": 0.06829694550298222,
+      "specific_power_W_kg": 418841.7623721971,
+      "over_delivered": 1.0
+    },
+    {
+      "esr_c_s": 0.0001,
+      "spec_e_J_kg": 2680.0,
+      "e_power_J": 14.30280650955349,
+      "e_binding_J": 136.59389100596445,
+      "limited_by": "energy",
+      "mass_kg": 0.05096786977834494,
+      "specific_power_W_kg": 561247.9615787441,
+      "over_delivered": 1.0
+    },
+    {
+      "esr_c_s": 0.001,
+      "spec_e_J_kg": 2000.0,
+      "e_power_J": 143.02806509553488,
+      "e_binding_J": 143.02806509553488,
+      "limited_by": "power",
+      "mass_kg": 0.07151403254776745,
+      "specific_power_W_kg": 400000.0,
+      "over_delivered": 1.0471044059304928
+    },
+    {
+      "esr_c_s": 0.001,
+      "spec_e_J_kg": 2680.0,
+      "e_power_J": 143.02806509553488,
+      "e_binding_J": 143.02806509553488,
+      "limited_by": "power",
+      "mass_kg": 0.0533686810057966,
+      "specific_power_W_kg": 536000.0,
+      "over_delivered": 1.0471044059304928
+    }
+  ],
+  "worst": {
+    "esr_c_s": 0.001,
+    "spec_e_J_kg": 2000.0,
+    "e_power_J": 143.02806509553488,
+    "e_binding_J": 143.02806509553488,
+    "limited_by": "power",
+    "mass_kg": 0.07151403254776745,
+    "specific_power_W_kg": 400000.0,
+    "over_delivered": 1.0471044059304928
+  },
+  "typical": {
+    "esr_c_s": 1e-06,
+    "spec_e_J_kg": 2000.0,
+    "e_power_J": 0.1430280650955349,
+    "e_binding_J": 136.59389100596445,
+    "limited_by": "energy",
+    "mass_kg": 0.06829694550298222,
+    "specific_power_W_kg": 418841.7623721971,
+    "over_delivered": 1.0
+  },
+  "added_mass_per_satellite_kg": 1.4046928360456472,
+  "bands": [
+    {
+      "n": "1",
+      "band": "reproduces A54's EDLC 23.44-37.36 kg within 1 %",
+      "value": "23.44-37.36 kg",
+      "verdict": "PASS"
+    },
+    {
+      "n": "2",
+      "band": "at the worst ESRxC the power-driven energy is <= 10x the delivered",
+      "value": "143.03 J against 136.59 J delivered",
+      "verdict": "PASS"
+    },
+    {
+      "n": "3",
+      "band": "store at the worst corner <= the 1.2328 kg section",
+      "value": "0.0715 kg",
+      "verdict": "PASS"
+    },
+    {
+      "n": "4",
+      "band": "store at the typical corner <= 0.25 kg",
+      "value": "0.0683 kg",
+      "verdict": "PASS"
+    },
+    {
+      "n": "5",
+      "band": "added mass per satellite <= 2.0 kg",
+      "value": "1.4047 kg",
+      "verdict": "PASS"
+    },
+    {
+      "n": "6",
+      "band": "specific power exceeds A54's required 23.20 kW/kg",
+      "value": "400.0 kW/kg at the worst corner",
+      "verdict": "PASS"
+    },
+    {
+      "n": "7",
+      "band": "REPORT: store against ESRxC and specific energy",
+      "value": "8 points, 0.0510 to 0.0715 kg",
+      "verdict": "REPORT"
+    }
+  ]
+}

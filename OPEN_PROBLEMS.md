@@ -5,7 +5,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 
 > ## How to read the counts
 >
-> **125 numbered entries, of which 52 are live.** Every entry carries a `Status:` line written by
+> **125 numbered entries, of which 50 are live.** Every entry carries a `Status:` line written by
 > `tools/register_status.py`, which derives the headline counts from the entries themselves.
 >
 > | Status | Count | Meaning |
@@ -3804,8 +3804,8 @@ expansion against the piston, and galling behaviour matter more than modulus.
 > found **none of 108 steam design points reaches it**. ADR-035 falsifier 4 names that, and it is
 > the first decision in this project that closes a door rather than opening one.
 
-### P86. The trim stage cannot be fed by any store this repository has data for: HIGH, NEW 2026-08-19
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P86. The trim stage cannot be fed by any store this repository has data for: HIGH, CORRECTED 2026-08-20
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **[ADR-033](docs/adr/033-gen6-trim-stage.md)'s first falsifier has fired, and it fired on the
@@ -3870,10 +3870,31 @@ the record.** **Sheet current** bottoms the trade at **10.755 kg**. **P67** take
 open-loop** — **which deletes the commanded-velocity claim the product is sold on**, and is the one
 route that survives unchanged.
 
-**What would close it:** the owner's decision, and two cheap inputs first. **One pulse-capacitor
-datasheet** — it either meets 36.3 ms or it does not, and that decides whether this is a sourcing
-problem or a design one. **And [P67](OPEN_PROBLEMS.md)** — the dispersion that sets the authority
-that sizes the store is **98.7 % a seal coefficient measured on nothing.**
+**What closed it:** the source this entry's own title named as missing.
+
+> **Corrected.** **[A64](validation/A64_pulse_store_technology.md), six of six**, priced the store
+> against published pulsed-power capacitor technology — **2000 to 2680 J/kg**, metallised
+> polypropylene with extended-foil electrodes.
+>
+> | | EDLC | **Pulsed-power capacitor** |
+> |---|---:|---:|
+> | Energy needed to *source the current* | 98.7 – 157.3 kJ | **0.14 – 143 J** |
+> | Binds on | **power, by 723×** | **energy** |
+> | **Store mass** | **23.44 – 37.36 kg** | **0.051 – 0.072 kg** |
+> | Specific power | 4.72 kW/kg | **400 – 561 kW/kg** |
+>
+> **522× lighter, and 17× the specific power A54 said was required. The store is about 70 grams.**
+>
+> **ADR-033's falsifier 1 does not fire**: the store weighs **6 %** of the section it feeds.
+> Added mass per satellite is **1.4047 kg** against an unmoved 2.0 kg threshold.
+>
+> **A54 was correct in every calculation and wrong in its scope.** It priced an EDLC because A10's
+> bracket and the 6.50 kg string were **the only store data in this repository**, and it flagged the
+> alternative as NEEDS SOURCE rather than guessing. **The defect was not in the analysis. It was
+> that the repository had one technology in it.**
+
+**[A61](validation/A61_seal_class.md)'s route is still cheaper** — a specified seal may *delete* the
+trim stage rather than feed it — **but it is no longer the only one.**
 
 ### P87. The last fill of the campaign does not fit the window, and never did: MEDIUM, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done

@@ -86,3 +86,73 @@ A54 failed was that it priced the only technology this repository happened to ha
 - **It does not re-open the trim stage's necessity.** [A61](A61_seal_class.md) found a specified
   seal may delete it entirely, and **that remains the cheaper answer.**
 - **E4 stands.** Nothing here is measured.
+
+---
+
+## Result
+
+**RUN 2026-08-20. Six of six bands pass, and the prediction held exactly. [P86](../OPEN_PROBLEMS.md)
+closes on a sourcing answer.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | reproduces A54's EDLC 23.44–37.36 kg | **23.44–37.36 kg** | **PASS** |
+| 2 | power-driven energy ≤ 10× the delivered | **143.03 J against 136.59** | **PASS** |
+| 3 | store ≤ the 1.2328 kg section | **0.0715 kg** | **PASS** |
+| 4 | typical corner ≤ 0.25 kg | **0.0683 kg** | **PASS** |
+| 5 | added mass per satellite ≤ 2.0 kg | **1.4047 kg** | **PASS** |
+| 6 | specific power ≥ 23.20 kW/kg | **400.0 kW/kg** | **PASS** |
+
+### The constraint flips, exactly as A54's own algebra said it would
+
+| | EDLC | **Pulsed-power capacitor** |
+|---|---:|---:|
+| ESR × C | 0.69 – 1.10 s | **10⁻⁶ – 10⁻³ s**, swept conservatively |
+| Energy the store must hold to *source the current* | **98.7 – 157.3 kJ** | **0.14 – 143 J** |
+| Binds on | **power, by 723×** | **energy**, at every corner but the worst |
+| **Store mass** | **23.44 – 37.36 kg** | **0.051 – 0.072 kg** |
+| Specific power achieved | 4.72 kW/kg | **400 – 561 kW/kg** |
+
+> **522× lighter at the worst corner**, and **17× the specific power A54 said was required.**
+>
+> **The store is 51 to 72 grams** — against the **1.2328 kg** section it feeds, and against **23 to
+> 37 kg** on the only technology this repository happened to have data for.
+
+**Band 2 is the one that shows the mechanism.** At an EDLC's ESR × C the bank must hold **723×** the
+energy it delivers, purely to source the current. **At a film capacitor's it holds 1.00×** — the
+power term collapses below the energy term and stops mattering at all.
+
+**Band 6 checks that band 3 did not pass for the wrong reason.** It did not: the store sources
+**400 kW/kg** against A54's required 23.20.
+
+### Why A54 failed, stated plainly
+
+**A54 was correct in every calculation and wrong in its scope.** It priced the store as an EDLC
+bank because **A10's ESR × C bracket and `mass_properties.py`'s 6.50 kg string were the only store
+data in the repository** — and it said so, flagging the alternative as **NEEDS SOURCE** rather than
+guessing.
+
+> **The defect was not in the analysis. It was that the repository had one technology in it.**
+>
+> *A54's own correction block had already derived the form that makes this a two-term question —
+> ESR × C and specific energy — and named both as unsourced. This run sources them.*
+
+## Consequences
+
+- **P86 closes.** The trim store is **~70 g**, not 23–37 kg.
+- **[ADR-033](../docs/adr/033-gen6-trim-stage.md)'s falsifier 1 is answered and does not fire.** The
+  store weighs **6 %** of the 1.2328 kg section it feeds, not more than it.
+- **Added mass per satellite is 1.4047 kg** against an unmoved 2.0 kg threshold. **The design does
+  not re-cross the numerator it passes.**
+- **[A61](A61_seal_class.md)'s route is still cheaper.** A specified seal may **delete** the trim
+  stage rather than feed it, and that remains the better answer — but **it is no longer the only
+  one.**
+
+## What this run did not do
+
+- **It names no product, series or supplier**, only a technology class and a published range.
+- **The switch and the conductors are still unpriced** — A54 named both and they remain so, so
+  **every mass here is a lower bound.**
+- **Derating, voltage reversal and life are not modelled.** Twelve shots is a trivial duty for a
+  pulse capacitor, and that is an argument rather than a calculation.
+- **E4 stands.** Nothing here is measured.

@@ -39,7 +39,8 @@ or to qualify.
 | **here for the idea** | [`docs/CONCEPT.md`](docs/CONCEPT.md), and [`docs/LINEAGE.md`](docs/LINEAGE.md) for how it got there |
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 125 numbered entries, 52 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **checking what outside evidence could settle** | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) — which live entries a published source can close, which it can only inform, and **which need hardware and cannot be read away** |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 125 numbered entries, 50 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -200,7 +201,7 @@ no figure, the cell says so rather than being left blank.
 > has not been run** — A55 produces it. *A number whose consequences have not been computed is not
 > published here, even when the old one is only a little wrong.*
 
-**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Sixty-two validation
+**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Sixty-four validation
 run sheets exist, each against an acceptance band declared *before* the run; **three failed
 outright**, several missed individual bands, and **three times a declared band caught a bug in the
 analysis rather than in the design.**
@@ -390,8 +391,8 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **125 numbered entries, 52 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **62 run sheets, A1–A63**, each against a band declared *before* the run. **Three failed outright** |
+| **Defect register** | **125 numbered entries, 50 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Validation** | **64 run sheets, A1–A64**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest
