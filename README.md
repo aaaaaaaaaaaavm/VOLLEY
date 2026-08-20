@@ -449,7 +449,7 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **127 numbered entries, 51 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Defect register** | **128 numbered entries, 52 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
 | **Validation** | **65 run sheets, A1–A65**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 

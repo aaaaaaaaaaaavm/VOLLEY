@@ -4323,6 +4323,57 @@ part rather than reaching them through metal.
 > above **22.3 N**, the stage is needed, and **A66 becomes the next run with nothing else in front
 > of it.**
 
+### P93. The paper's system mass is 50 % low, in the abstract, and A46 never propagated into it: CRITICAL, NEW 2026-08-20
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found while closing Gen5, which is the only reason it was found at all.**
+
+| Source | Dry mass | Loaded |
+|---|---:|---:|
+| `analysis/results/mass_properties.json`, and [`BASELINE.md`](docs/BASELINE.md) | **126.6 kg** | **174.6 kg** |
+| `paper.tex` **abstract** and **conclusion** | **84.5 kg** | 132.5 kg |
+| `paper.tex` **Table \ref{tab:family} caption** | **76.5 kg** | — |
+
+**Three figures for one quantity, two of them in the published deliverable.**
+
+### The arithmetic identifies the cause exactly
+
+**[A46](validation/A46_enclosure_buildup.md) itemised the enclosure on 2026-08-16.** It had been an
+**8.00 kg placeholder**; built up from the geometry it is **50.04 kg**.
+
+> **84.5 − 8.00 + 50.04 = 126.54.** The repository says **126.6**.
+>
+> **And 84.5 − 8.00 = 76.5**, which is the table caption — *the same total with the placeholder
+> removed and nothing put back.*
+
+**So both paper figures are pre-A46, and neither is a different scope or a rounding.** The paper
+was last built **2026-08-19**, three days after A46 landed. **The correction propagated to
+`BASELINE.md`, to the README and to the register, and stopped at the paper.**
+
+### Why this is worse than a stale number
+
+**The 76.5 kg figure is not decorative — it is an input.** The Table caption reads *"Deployer mass
+per satellite uses the 76.5 kg dry mass and a packing model calibrated so the 3U case returns the
+twelve the magazine is laid out for."* **Every per-satellite mass in the payload-family table
+descends from it**, and at 126.6 kg they all move by **65 %**.
+
+**This is therefore a re-run, not a find-and-replace**, and it is recorded as such rather than
+patched. *Editing the abstract alone would leave the table inconsistent with its own caption and
+the caption inconsistent with the repository — three numbers instead of two.*
+
+### What would close it
+
+**Re-run `payload_family.py` at the 126.6 kg dry mass**, propagate into the abstract, the
+conclusion, the Table caption and every per-satellite figure that descends from it, then rebuild
+both PDFs. **`docs/GEN5_CLOSURE.md` states this as the one item blocking the paper**, and Phase I
+does not close on the paper until it lands.
+
+> **The register's own first sentence says P-items are errors in the currently published paper and
+> should be fixed first.** This one sat through four passes that touched the paper's companions
+> because **nothing compares the paper against `BASELINE.md`** — the same shape of gap as P84, one
+> deliverable further out.
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 

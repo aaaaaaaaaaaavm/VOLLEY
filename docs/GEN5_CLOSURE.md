@@ -140,6 +140,34 @@ purchase."* **It has not been ordered.**
 > start.** B-1 changes **E4** from true to false — *a change of category, not of degree* — and it
 > measures the field model that every Gen5 number in the table above descends from.
 
+## The one thing blocking closure
+
+**Found while writing this page, which is the argument for writing it.**
+
+**The paper's system mass is 50 % low, in its own abstract.** `mass_properties.py` and
+[`BASELINE.md`](BASELINE.md) give **126.6 kg dry**; `paper.tex` says **84.5 kg** in the abstract and
+conclusion, and **76.5 kg** in the payload-family table caption.
+
+**The arithmetic names the cause exactly.** [A46](../validation/A46_enclosure_buildup.md) itemised
+the enclosure on 2026-08-16 — an **8.00 kg placeholder** became **50.04 kg**:
+
+> **84.5 − 8.00 + 50.04 = 126.54**, against the repository's 126.6. And **84.5 − 8.00 = 76.5**,
+> the table caption. **Both paper figures are pre-A46**, and the paper was last built three days
+> after it landed.
+
+**It is a re-run rather than a correction.** The caption states that per-satellite deployer mass
+*uses* the 76.5 kg figure, so every row of the payload-family table descends from it and moves by
+**65 %** at the true mass. **Patching the abstract alone would leave three inconsistent numbers
+instead of two.**
+
+**Recorded as [P93](../OPEN_PROBLEMS.md), CRITICAL. Phase I does not close on the paper until it
+lands.** *Everything else on this page is closed, caveated or deliberately open — this is the one
+item that is simply wrong.*
+
+> **Nothing in this repository compares the paper against `BASELINE.md`.** Four passes touched the
+> paper's companions and none of them would have caught this. It is **P84's shape, one deliverable
+> further out**, and the gate that would catch it does not exist yet.
+
 ## Gen6, and why it is not in the paper
 
 **On 2026-08-14 the design target changed.** [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
@@ -168,6 +196,6 @@ ADRs 032 through 036, and the register — **and it is future work.**
 
 ---
 
-**Register at closure: 127 numbered entries, 51 live, 42 corrected and retained, 34 closed.
+**Register at closure: 128 numbered entries, 52 live, 42 corrected and retained, 34 closed.
 65 run sheets, A1–A65, each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.**
