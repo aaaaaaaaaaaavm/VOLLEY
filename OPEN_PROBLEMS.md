@@ -3985,10 +3985,20 @@ heating and [A49](validation/A49_design_surface.md)'s band 6 failure all descend
 than affordable. **But A61 band 5 found no friction in 1–30 % makes the store itself affordable:
 4.23 kg even at 1 %.** *Seal choice cannot solve P86; it can only make it irrelevant.*
 
-**What would close this entry:** a seal in `cad/parameters.json` — section, material class, mass and
-a friction figure — and **[P67](OPEN_PROBLEMS.md) measured against the 17.8 N specification rather
-than against nothing.** *A61 measured nothing and names no product; its class ranges are handbook
-and flagged as such.*
+> ### The specification is fluid-dependent and A61 did not say so
+>
+> **[A62](validation/A62_steam_working_fluid.md), 2026-08-20**, found the seal specification only
+> holds for the fluid it was computed against. **A61 assumed the seal runs at −35 °C, which is what
+> cold nitrogen gives.** A steam working fluid needs **550 K** to keep its expansion dry, and at
+> that temperature **filled PTFE is past its 533 K limit** — so the 17.8 N figure would not survive
+> a change of working fluid.
+>
+> **The specification is therefore conditional on the gas, and that condition belongs in it.**
+
+**What would close this entry:** a seal in `cad/parameters.json` — section, material class, mass, a
+friction figure **and the temperature range it is specified at** — and **[P67](OPEN_PROBLEMS.md)
+measured against the 17.8 N specification rather than against nothing.** *A61 measured nothing and
+names no product; its class ranges are handbook and flagged as such.*
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

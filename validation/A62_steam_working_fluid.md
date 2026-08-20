@@ -90,3 +90,101 @@ limit, so **the specification produced yesterday would not survive this fluid.**
 - **It does not model the thermal-friction coupling** at steam temperature, which A58 named and
   left uncomputed and which would be worse hot than cold.
 - **E4 stands.** Nothing here is measured.
+
+---
+
+## Result
+
+**RUN 2026-08-20. Seven of ten bands pass. The fluid is better than nitrogen on every axis it was
+proposed for, the solar heating works comfortably, and the machine that has to contain it is worse
+by more than the fluid saves.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | nitrogen baseline reproduces | **2350 J, 51.0 g** | **PASS** |
+| 2 | steam ≥ 100 % of nitrogen's work | **101.98 %** | **PASS** |
+| 3 | steam charge ≤ 60 % of nitrogen's mass | **35.1 %** | **PASS** |
+| **4** | dry charge temperature ≤ 473 K | **550 K** | **FAIL** |
+| 5 | reachable passively with α/ε ≤ 20 | **needs 7.6** | **PASS** |
+| 6 | absorber ≤ 0.25 m² | **0.0515 m²** | **PASS** |
+| **7** | within filled PTFE's 533 K limit | **550 K** | **FAIL** |
+| **8** | net mass is a saving | **−1.285 kg** | **FAIL** |
+| 9 | survives 35 min of eclipse | **69.9 kJ lost against 248.8 available** | **PASS** |
+| 10 | equilibrium against α/ε | 8 points, **331 → 775 K** | **REPORT** |
+
+### Heating water by being in space works, and that was the part in doubt
+
+| | |
+|---|---:|
+| Energy per charge | **49.8 kJ** |
+| **Average power over the cadence** | **41.5 W** |
+| **α/ε required** | **7.6** — inside the selective-absorber coating class, **no concentrator** |
+| **Absorber area at a 62 % sunlit duty cycle** | **0.0515 m² — a 23 cm square** |
+| Eclipse | loses **69.9 kJ** against **248.8 kJ** held above freezing — **survives** |
+
+**None of the objections raised against water before this run survive it.** It does not need a
+concentrator, it does not need the stage to track the sun, the collector is not a deployable
+structure, and **it does not freeze in eclipse** — the low emissivity that makes the selective
+coating work also makes it a poor radiator, which is exactly the property needed.
+
+**The fluid is better too.** **101.98 % of nitrogen's shot work on 35.1 % of the charge mass**, and
+the store saving is real: **+0.869 kg** with the 200 bar vessel and its gas replaced by 215 g of
+water and a tank.
+
+### And then the dryness requirement sets the temperature, and the temperature costs more
+
+**Steam condenses below 454 K at the 10.52 bar the stroke ends at, so the charge must start at
+550 K — 277 °C — to stay dry.**
+
+| Material | Limit | |
+|---|---:|---|
+| Aluminium 6061-T6 | 473 K | **exceeded** |
+| **Filled PTFE** | **533 K** | **exceeded** |
+| Steel | 700 K | OK |
+
+> ### The cascade, and it is the whole result
+>
+> | | |
+> |---|---:|
+> | Store saving — vessel and gas out, water and tank in | **+0.869 kg** |
+> | **Tube forced from aluminium to steel by the temperature** | **−2.154 kg** |
+> | **Net** | **−1.285 kg** |
+>
+> **And that is before any absorber, coating, insulation, plumbing or pointing mass is counted,
+> none of which this run charges for.**
+
+**The second failure is worse than the mass.** [A61](A61_seal_class.md) specified the seal at
+**17.8 N** one day earlier, on filled PTFE, **on the assumption it runs at −35 °C**. At 550 K that
+class is past its limit. **The specification does not survive this fluid**, and the seal returns to
+being the unspecified component that four analyses already rest on.
+
+**There is no cheaper variant.** Accepting *saturated* steam at 492 K keeps the seal inside PTFE's
+range but **still exceeds aluminium's 473 K**, so the tube is steel either way — and it puts the
+expansion into the wet region, which attacks **dispersion**, the thing this architecture can least
+afford.
+
+### The prediction held, including the part that mattered
+
+**Recorded before the run: bands 2, 3, 5, 6 and 9 pass; band 4 fails and cascades to steel; band 7
+fails and breaks A61's specification.** **All of it.** *The prediction was made from the material
+limits alone and the run put numbers on it.*
+
+## What this settles
+
+**Steam is not adopted, and the reason is not the one it was likely to be.** It is not the heating,
+which works; not the eclipse, which it survives; not the fluid, which is better. **It is that
+staying dry costs 550 K, and 550 K costs a steel tube and the seal specification.**
+
+> **A39's trade is no longer missing a heated working fluid. It has one, and it is screened by this
+> run.**
+
+## What this run did not do
+
+- **No steam tables.** Ideal gas throughout, and the wet case is bounded rather than computed —
+  which is why band 4 asked what superheat avoids it entirely.
+- **It charged nothing for the absorber, the coating, the insulation, the plumbing or sun-pointing.**
+  Every figure flatters steam and it still fails band 8.
+- **It did not model the thermal–friction coupling at temperature**, which A58 named and left
+  uncomputed and which would be worse hot than cold.
+- **It names no product, compound or supplier**, only material and coating classes.
+- **E4 stands.** Nothing here is measured.

@@ -1,0 +1,146 @@
+{
+  "analysis": "A62",
+  "bands_declared_commit": "HEAD~1",
+  "note": "Ideal gas throughout -- NO STEAM TABLES are in this repository -- and the wet case is bounded rather than computed, which is why band 4 asks what superheat avoids it. Enthalpy to raise a charge, material limits and the tank allowance are handbook or declared guesses: NEEDS SOURCE. No absorber, coating, insulation, plumbing or sun-pointing mass is counted, so every figure here FLATTERS steam. No product, compound or supplier is named.",
+  "nitrogen": {
+    "gamma": 1.4,
+    "t_charge_K": 300.0,
+    "ratio": 0.5602868668758404,
+    "work_J": 2350.232238512899,
+    "density_kg_m3": 25.51208403496111,
+    "charge_kg": 0.05102416806992222,
+    "v_exit": 34.27996673359602,
+    "p_end_bar": 10.099358764553005,
+    "t_end_K": 237.94984805341332
+  },
+  "steam": {
+    "gamma": 1.33,
+    "t_charge_K": 550.0239841734002,
+    "ratio": 0.5602868668758404,
+    "work_J": 2396.659440935119,
+    "density_kg_m3": 8.945405613008308,
+    "charge_kg": 0.017890811226016618,
+    "v_exit": 34.616899347971064,
+    "p_end_bar": 10.517319544182572,
+    "t_end_K": 454.3149975689074
+  },
+  "t_sat_at_end_K": 454.3149975689075,
+  "t_dry_K": 550.0239841734002,
+  "energy_per_charge_J": 49843.800075682295,
+  "mean_power_W": 41.53650006306858,
+  "alpha_over_eps_needed": 7.625730270979389,
+  "emissivity": 0.12457823267305118,
+  "absorber_m2": 0.05151137276110602,
+  "duty_cycle": 0.6236559139784946,
+  "eclipse_loss_J": 69931.71088204562,
+  "eclipse_available_J": 248824.22125481485,
+  "water_campaign_kg": 0.21468973471219943,
+  "tube_forced_kg": 3.294,
+  "store_saving_kg": 0.8687102652878007,
+  "tube_penalty_kg": 2.1536,
+  "net_kg": -1.2848897347121992,
+  "ae_sweep": [
+    {
+      "alpha_over_eps": 1.0,
+      "T_K": 330.9872523428456,
+      "dry": false
+    },
+    {
+      "alpha_over_eps": 2.0,
+      "T_K": 393.61239546131304,
+      "dry": false
+    },
+    {
+      "alpha_over_eps": 5.0,
+      "T_K": 494.94138439063477,
+      "dry": false
+    },
+    {
+      "alpha_over_eps": 7.5,
+      "T_K": 547.7426814165624,
+      "dry": false
+    },
+    {
+      "alpha_over_eps": 10.0,
+      "T_K": 588.5878158266396,
+      "dry": true
+    },
+    {
+      "alpha_over_eps": 15.0,
+      "T_K": 651.3794939312447,
+      "dry": true
+    },
+    {
+      "alpha_over_eps": 20.0,
+      "T_K": 699.9528183849509,
+      "dry": true
+    },
+    {
+      "alpha_over_eps": 30.0,
+      "T_K": 774.6251287499081,
+      "dry": true
+    }
+  ],
+  "bands": [
+    {
+      "n": "1",
+      "band": "nitrogen baseline reproduces 2350 J and 51.0 g within 1 %",
+      "value": "2350 J, 51.0 g",
+      "verdict": "PASS"
+    },
+    {
+      "n": "2",
+      "band": "steam delivers >= 100 % of nitrogen shot work",
+      "value": "101.98 %",
+      "verdict": "PASS"
+    },
+    {
+      "n": "3",
+      "band": "steam charge mass <= 60 % of nitrogen",
+      "value": "35.1 %",
+      "verdict": "PASS"
+    },
+    {
+      "n": "4",
+      "band": "charge temperature to stay dry <= 473 K",
+      "value": "550 K",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "5",
+      "band": "reachable passively with alpha/eps <= 20",
+      "value": "needs 7.6",
+      "verdict": "PASS"
+    },
+    {
+      "n": "6",
+      "band": "absorber area <= 0.25 m2",
+      "value": "0.0515 m2",
+      "verdict": "PASS"
+    },
+    {
+      "n": "7",
+      "band": "within filled PTFE's 533 K limit, so A61's 17.8 N spec survives",
+      "value": "550 K against 533 K",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "8",
+      "band": "net mass is a saving once the tube material is counted",
+      "value": "-1.285 kg",
+      "verdict": "FAIL"
+    },
+    {
+      "n": "9",
+      "band": "the store survives 35 min of eclipse without freezing",
+      "value": "loses 69.9 kJ against 248.8 kJ available",
+      "verdict": "PASS"
+    },
+    {
+      "n": "10",
+      "band": "REPORT: equilibrium temperature against alpha/eps",
+      "value": "8 points, 331 to 775 K",
+      "verdict": "REPORT"
+    }
+  ]
+}

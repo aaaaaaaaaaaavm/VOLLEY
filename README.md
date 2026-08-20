@@ -200,7 +200,7 @@ no figure, the cell says so rather than being left blank.
 > has not been run** — A55 produces it. *A number whose consequences have not been computed is not
 > published here, even when the old one is only a little wrong.*
 
-**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Fifty-nine validation
+**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Sixty validation
 run sheets exist, each against an acceptance band declared *before* the run; **three failed
 outright**, several missed individual bands, and **three times a declared band caught a bug in the
 analysis rather than in the design.**
@@ -391,7 +391,7 @@ since.
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
 | **Defect register** | **124 numbered entries, 52 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **59 run sheets, A1–A61**, each against a band declared *before* the run. **Three failed outright** |
+| **Validation** | **60 run sheets, A1–A62**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest
