@@ -3735,8 +3735,8 @@ enforce.
 > the same mistake at one remove.* **`check_against_parameters()` covers `precharged.py` only, and
 > a repository-wide version of it does not exist.***
 
-### P85. Nobody has said what the drive tube is made of, and the two candidates differ by 2.15 kg: MEDIUM, NEW 2026-08-19
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P85. Nobody has said what the drive tube is made of, and the two candidates differ by 2.15 kg: MEDIUM, CORRECTED 2026-08-20
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **[A59](validation/A59_tube_structure.md) band 9 went looking for the tube's material and could
@@ -3783,9 +3783,26 @@ expansion against the piston, and galling behaviour matter more than modulus.
 > the tube to differ, and **matching them removes 10.79 µm for free.** The mass question — 1.140 kg
 > against 3.294 — is the one that still needs deciding.
 
-**What would close it:** state the material in `cad/parameters.json` with the reason, and re-run
-A49's band 7 against it. If it is steel, ADR-034's per-satellite figure moves and the design point
-has to be re-selected from A49's published surface.
+**What closed it:** [ADR-035](docs/adr/035-drive-tube-material.md), 2026-08-20.
+
+> **Corrected. The tube is hard-anodised aluminium and the piston is the same alloy.**
+>
+> **Only mass discriminated.** A59 found strength (13.9× margin), stiffness (1.67 against 1.68 Hz)
+> and buckling (both fail unsupported, both fine at 1.0 m) **indifferent between the metals**, and
+> A58 found it is **matching** the piston and bore that removes the 10.79 µm differential, not which
+> metal is chosen. **So the decision fell to 2.154 kg — 0.18 kg per satellite against the project's
+> tightest threshold.**
+>
+> **The functional requirement nobody had stated is that the tube is a sliding seal bore**, which
+> makes it a surface question rather than a strength one — and **hard anodising is what makes
+> aluminium available.** *The duty is far lighter than it looks: the carriage is not recovered, so
+> **every seal makes exactly one 8.0 m pass** and the tube sees **96 m across an entire campaign.***
+>
+> **A49 band 7's 1.140 kg stands, and it now stands on a stated choice.**
+>
+> **What it costs is steam.** The 473 K ceiling forecloses it — [A63](validation/A63_steam_design_point.md)
+> found **none of 108 steam design points reaches it**. ADR-035 falsifier 4 names that, and it is
+> the first decision in this project that closes a door rather than opening one.
 
 ### P86. The trim stage cannot be fed by any store this repository has data for: HIGH, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done

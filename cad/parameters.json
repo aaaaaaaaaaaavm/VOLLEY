@@ -312,7 +312,7 @@
     },
     "gen6_drive": {
       "_document": "Built by cad/build_gen6.py. ADR-032: the payload is accelerated directly by cold gas along a rail the host stage provides. There is no mover, no stator, no brake and no return stroke. ADR-034: the stroke is the host stage's whole usable acceleration length, and the charge pressure fell to hold the exit velocity while the peak acceleration halved.",
-      "_source": "A49 (stroke and charge pressure), A41 (chamber), A42 (reservoir and fill), A38 (tip-off ceiling and cradle preload), A37 (stage class and the 25 g payload cap). BOTH velocity numerators are carried. exit_velocity_m_s_zero_friction is the gas work alone; exit_velocity_m_s_at_friction_allowance subtracts A41's full tolerable seal friction scaled over the longer stroke. The gap between them widened from 5.00 % to 15.38 % at ADR-034 -- friction scales with contact length while shot work saturates. P67, P78.",
+      "_source": "A49 (stroke and charge pressure), A41 (chamber), A42 (reservoir and fill), A38 (tip-off ceiling and cradle preload), A37 (stage class and the 25 g payload cap). BOTH velocity numerators are carried. exit_velocity_m_s_zero_friction is the gas work alone; exit_velocity_m_s_at_friction_allowance subtracts A41's full tolerable seal friction scaled over the longer stroke. The gap between them widened from 5.00 % to 15.38 % at ADR-034 -- friction scales with contact length while shot work saturates. P67, P78. ADR-035 states the material, which was named nowhere until 2026-08-20 -- A49 computed the tube at 2700 kg/m3 and precharged.py sizes the chamber at 7800, and A49 band 7 passed at 1.140 kg without knowing it was choosing. Aluminium on mass: A59 found strength, stiffness and buckling all indifferent between the metals, and A58 found it is MATCHING the piston and bore that removes the 10.79 um differential, not which metal. A61 band 7 found a 16.000 mm ISO 6432 stock bore costs 0.00 % on the SEAL specification, but it moves the charge pressure and every number derived from it, so it is left as a separate decision rather than bundled here. The 473 K ceiling FORECLOSES steam -- A63 found none of 108 steam design points reaches it.",
       "bore_mm": 15.805,
       "piston_area_mm2": 196.2,
       "stroke_mm": 8000.0,
@@ -326,7 +326,11 @@
       "exit_velocity_m_s_at_friction_allowance": 29.01,
       "exit_velocity_m_s_constant_pressure_bound": 42.23,
       "tube_mass_kg": 1.1404,
-      "friction_work_fraction": 0.2839
+      "friction_work_fraction": 0.2839,
+      "tube_material": "aluminium 6061-T6, hard anodised",
+      "piston_material": "aluminium 6061-T6, matched to the tube",
+      "tube_material_density_kg_m3": 2700.0,
+      "tube_temperature_ceiling_K": 473.0
     },
     "gen6_store": {
       "_document": "Built by cad/build_gen6.py.",

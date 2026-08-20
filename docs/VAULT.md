@@ -434,6 +434,37 @@ stop the numbers forking, which they briefly did.
 
 ---
 
+### PII-21: water as the working fluid, in three forms — **STOPPED 2026-08-20**
+
+**Pressurised water, solar steam, and electrolysis to H₂/O₂**, each replacing the cold nitrogen
+ADR-032 adopted. **Three branches, stopped three unrelated ways**, and the full entry is
+[`VOLLEY-lab` PII-21](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-21_water_working_fluids.md).
+
+| | |
+|---|---|
+| **Pressurised liquid water** | **2 L compressed by 22.73 bar stores 2.35 J against the 2350 the shot needs — short by 1001×.** Bulk modulus 2.2 GPa. *Not an engineering shortfall; the wrong physics for a gun* |
+| **Electrolysis to H₂/O₂** | Excellent energy case — **~8.5 g of water per campaign** — stopped on architecture. A **~3000 K chamber beside eleven stowed unmodified satellites**, two pressure vessels back, an igniter as a new manifest-forfeiting element, and **ignition timing and mixture ratio replacing a charge pressure A44 measured commanding at 0.499 % per 1 %** |
+| **Steam** | **Run twice.** [A62](../validation/A62_steam_working_fluid.md) screened it at *nitrogen's* design point and was wrong to — **P90** — and [A63](../validation/A63_steam_design_point.md) swept 108 points |
+
+**What A63 found is worth keeping.** **The heating works**: 57.3 W, α/ε 6.4 inside the
+selective-coating class, **no concentrator and no sun-tracking**, a 27 cm absorber that **survives
+eclipse**. **The fluid is better**: 101.98 % of the work on 35.1 % of the charge mass. **The shot is
+gentler**: 34.33 m/s at **10.00 g** against 11.36. **And the seal specification survives** — 43 of
+108 points sit inside filled PTFE's limit.
+
+> **Then the bore temperature settles it.** The floor on the charge temperature is **T_sat(p₀)**, and
+> every charge pressure that makes 2350 J puts it above **aluminium's 473 K. Zero of 108 points
+> reach it.** The steel tube that forces costs **2.154 kg — larger than everything water removes** —
+> and **none of the 43 feasible points is a saving.**
+
+**A63 left one conditional: if the tube were steel for reasons independent of the fluid, steam
+becomes +0.341 kg.** [ADR-035](adr/035-drive-tube-material.md) decided that on 2026-08-20 and **it
+went to aluminium**, because A59 found strength, stiffness and buckling all indifferent between the
+metals and **only mass discriminated.**
+
+**Steam is foreclosed by a decision taken on its own merits rather than by a judgement about steam**
+— and ADR-035 falsifier 4 says so.
+
 ### PII-20: gas and electromagnetic as mutual fail-safes — **DECLINED 2026-08-16, not run**
 
 **Proposed in review: build both drives, size each for the full duty, and let either deploy the
