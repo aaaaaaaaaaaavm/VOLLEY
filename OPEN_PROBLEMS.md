@@ -4000,6 +4000,53 @@ friction figure **and the temperature range it is specified at** — and **[P67]
 measured against the 17.8 N specification rather than against nothing.** *A61 measured nothing and
 names no product; its class ranges are handbook and flagged as such.*
 
+### P90. A62 screened steam at nitrogen's design point, not at steam's: HIGH, NEW 2026-08-20
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**[A62](validation/A62_steam_working_fluid.md)'s conclusion does not hold, and the defect is in how
+the run was set up rather than in anything it computed.**
+
+**Every figure in A62 was computed at a 2.0 L chamber** — the volume [A41](validation/A41_precharged_chamber.md)
+sized for **cold nitrogen**, carried into `cad/parameters.json` and then into a run about a
+different fluid. **The chamber was never re-optimised for steam, and it is the variable steam is
+most sensitive to.**
+
+| Chamber | Expansion ratio | **Temperature to stay dry** | Work |
+|---:|---:|---:|---:|
+| 2.0 L — **A62's, and A41's** | 0.5603 | **550 K** | 2397 J |
+| 4.0 L | 0.7182 | **523 K** | 2851 J |
+| 8.0 L | 0.8360 | **508 K** | 3163 J |
+| 20.0 L | 0.9272 | **498 K** | 3392 J |
+
+**A larger chamber lowers the dry temperature and raises the work at the same time.** The floor is
+**T_sat(p₀) itself — 492 K at 22.73 bar** — approached from above.
+
+### What that does to A62's verdict
+
+**A62 band 7 failed because 550 K exceeds filled PTFE's 533 K limit, and that failure was the
+reason [A61](validation/A61_seal_class.md)'s seal specification was said not to survive steam.**
+
+**At 4.0 L the charge is 523 K — inside PTFE's limit — and the shot delivers 2851 J and 37.75 m/s
+against nitrogen's 2350 J and 34.28.** *More work, more velocity, and the seal specification holds.*
+
+**Band 8's net −1.285 kg is equally suspect**: it charged a steel tube against a store saving
+computed at the wrong chamber, and did not count the chamber growth a larger volume costs.
+
+### What still stands
+
+**Band 4's aluminium limit.** Every point found so far sits above **473 K** — the best is 478 K at
+16 bar and 32 L — so **the tube is steel regardless**, and P85 keeps its heavy answer. *That part of
+A62 survives its own correction.*
+
+**And the heating.** Bands 5, 6 and 9 are about the sun, not the design point: **α/ε ≥ 7.6, a 23 cm
+absorber, and it survives eclipse.** Those hold at any chamber.
+
+**What would close it:** [A63](validation/A63_steam_design_point.md), the steam design surface,
+with its bands declared before the script — the run A62 should have been. **A62's run sheet is
+annotated, not rewritten**, and its verdict stands as the record of what was found at the wrong
+point.
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 

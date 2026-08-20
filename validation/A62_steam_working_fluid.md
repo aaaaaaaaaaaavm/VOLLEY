@@ -188,3 +188,34 @@ staying dry costs 550 K, and 550 K costs a steel tube and the seal specification
   uncomputed and which would be worse hot than cold.
 - **It names no product, compound or supplier**, only material and coating classes.
 - **E4 stands.** Nothing here is measured.
+
+---
+
+## Correction, 2026-08-20 — this run screened steam at nitrogen's design point
+
+**The verdict above does not hold. The defect is in how the run was set up, not in what it
+computed**, and it is recorded as **P90**.
+
+**Every figure here was computed at a 2.0 L chamber** — the volume A41 sized for **cold nitrogen**.
+**It was never re-optimised for steam, and it is the variable steam is most sensitive to.**
+
+| Chamber | **Temperature to stay dry** | Work |
+|---:|---:|---:|
+| **2.0 L — this run's** | **550 K** | 2397 J |
+| 4.0 L | **523 K** | **2851 J** |
+| 8.0 L | **508 K** | **3163 J** |
+
+**A larger chamber lowers the dry temperature *and* raises the work.** At **4.0 L the charge is
+523 K — inside filled PTFE's 533 K limit — delivering 2851 J and 37.75 m/s against nitrogen's 2350 J
+and 34.28.**
+
+**So band 7 fails only at 2 L, and [A61](A61_seal_class.md)'s seal specification does survive steam
+at a chamber chosen for it.** Band 8's net figure is equally suspect: it charged a steel tube
+against a store saving computed at the wrong volume and did not count the chamber growth.
+
+**What survives.** **Band 4's aluminium limit** — every point found sits above 473 K, so the tube is
+steel regardless. And **bands 5, 6 and 9**, which are about the sun rather than the design point:
+**α/ε ≥ 7.6, a 23 cm absorber, survives eclipse.** Those hold at any chamber.
+
+**[A63](A63_steam_design_point.md) is the run this should have been.** *This sheet is annotated
+rather than rewritten, and its verdict stands as the record of what was found at the wrong point.*
