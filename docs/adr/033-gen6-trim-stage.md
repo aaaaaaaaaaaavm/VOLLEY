@@ -1,6 +1,6 @@
 # ADR-033: Gen6 gains a motor that steers, and it is adopted on a number nobody has weighed
 
-**Status:** Accepted · **Date:** 2026-08-16 · **Phase:** I · **Extends:** [ADR-032](032-gen6-stage-integrated-gas-store.md)
+**Status:** Accepted, **suspended 2026-08-20 by [ADR-036](036-seal-specification-and-the-trim-stage.md)** · **Date:** 2026-08-16 · **Phase:** I · **Extends:** [ADR-032](032-gen6-stage-integrated-gas-store.md)
 
 > ## Falsifier 1 fired, 2026-08-19 — [A54](../../validation/A54_pulse_chain.md)
 >
@@ -59,6 +59,20 @@
 > hardware scaling with *current*, and **peak power moves 27 820 → 28 606 W, 2.8 %** — the force
 > per metre is fixed by A2 and A1, so the section gets longer rather than harder to drive. **The
 > store still has not been weighed. P77.**
+
+> ## Suspended 2026-08-20 — [ADR-036](036-seal-specification-and-the-trim-stage.md)
+>
+> **[A61](../../validation/A61_seal_class.md) band 3 found that a seal meeting its own thermal
+> requirement makes this stage unnecessary** — the dispersion it exists to correct falls to
+> **0.9051 %** and the authority needed to **0.2982 m/s**, below the ±0.323 A48 sized for.
+>
+> **The stage is not deleted.** Deleting it on a specification would repeat what this ADR itself
+> did in the other direction — *adopting before the falsifier was answered.* **Work on it stops
+> until [P67](../../OPEN_PROBLEMS.md) measures the friction**, and the section stays in
+> `parameters.json` at A55's 144.01 mm as the worst-case sizing.
+>
+> **Read everything below as the worst-case architecture**, sized against A41's 83.4 N ceiling —
+> which is **4.68× looser** than the seal specification ADR-036 adopted.
 
 ## Context
 

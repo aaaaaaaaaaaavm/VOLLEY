@@ -64,6 +64,7 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | **[033](033-gen6-trim-stage.md)** | **Gen6 gains a motor that steers rather than throws — adopted with its pulse store unweighed (P77)** | Accepted | I |
 | **[034](034-gen6-long-stroke-design-point.md)** | **Gen6's stroke becomes the host stage's whole 8.0 m — same velocity, half the acceleration, half the gas, and friction at 28.39 % of shot work (P78, P82, P83)** | Accepted | I |
 | **[035](035-drive-tube-material.md)** | **The drive tube is hard-anodised aluminium and the piston matches it — closes P85, and forecloses steam** | Accepted | I |
+| **[036](036-seal-specification-and-the-trim-stage.md)** | **The seal is specified at 17.8 N and the trim stage is suspended rather than built — closes P89, amends ADR-033, defers A66** | Accepted | I |
 
 Every decision in `DECISION_LOG.md` appears above. ADRs 012-018 record decisions that were
 never written down anywhere before.

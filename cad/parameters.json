@@ -345,6 +345,20 @@
       "gas_per_shot_kg": 0.051046,
       "store_mass_kg": 3.1216
     },
+    "gen6_seal": {
+      "_document": "Built by cad/build_gen6.py. ADR-036: the seal is SPECIFIED, not allowed. A41 declared a tolerable friction and every figure downstream descended from that ceiling; A61 asked instead what the loosest seal is that the design can survive, and the THERMAL case sets it -- the seal must survive its own friction heating before it must satisfy any control requirement.",
+      "_source": "A61 bands 1-7, with the thermal limit from A58 band 5 (a 2 g seal within 50 K) and the dispersion consequence from A55. friction_max_N is the SPECIFICATION. friction_allowance_N is A41's ceiling, RETAINED because P67 has measured neither and the ceiling is the only honest worst-case number. The two differ by 4.68x and every published Gen6 dispersion figure descends from the ceiling, not from this specification. P67 is the measurement that decides which one the machine has.",
+      "friction_max_N": 17.8,
+      "friction_max_fraction_of_p0A": 0.04,
+      "friction_allowance_N": 83.40371375447981,
+      "allowance_fraction_of_p0A": 0.1871,
+      "binding_requirement": "thermal: a 2 g seal stays within 50 K per shot (A58 band 5, P88)",
+      "trim_stage_unnecessary_below_fraction": 0.05,
+      "seal_mass_kg": 0.002,
+      "seal_temperature_rise_limit_K": 50.0,
+      "candidate_class": "filled PTFE glide ring; A61 places 4.00 % inside a 2-10 % handbook range but NOT at its loose end, and does not claim any class achieves it",
+      "measured": "NO -- P67. Nothing in this project has measured this seal or any seal."
+    },
     "gen6_trim": {
       "_document": "Built by cad/build_gen6.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.",
       "_source": "A55 bands 4 and 6, which resized it. A48's 39.7 mm carried 0.323 m/s against A44's dispersion over a 2.18 m stroke; at ADR-034's 8.0 m the same model needs 1.1543 m/s and 144.01 mm -- P83, confirmed and closed. The section is 1.800 % of the stroke, against A48's 1.822 %, so it grew in exact proportion. PEAK POWER IS ESSENTIALLY UNCHANGED at 28.6 kW: the force per metre is fixed by A2's thrust constant and A1's sheet current, so the section gets longer rather than harder to drive. THE PULSE STORE THAT FEEDS IT IS STILL NOT SIZED -- ADR-033 falsifier 1, P77.",

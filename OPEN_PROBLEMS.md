@@ -12,7 +12,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > |---|---:|---|
 > | `LIVE` | **53** (32 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **41** | found, fixed and propagated — **retained as the published record, not as debt** |
-> | `CLOSED` | **33** | resolved, with the closer named in the entry |
+> | `CLOSED` | **34** | resolved, with the closer named in the entry |
 >
 > **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
 > inside *depth-resolved*, and the tool read its own `Status:` line back in on the next run, so a
@@ -3057,6 +3057,20 @@ evidence rather than its degree.
 **What it does not touch.** Bands 1, 2, 3, 7 and 8 all pass. The architecture is not in question
 and the store is not affected.
 
+> ### This entry now decides an architecture, 2026-08-20 — [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)
+>
+> **It has a threshold to be measured against, in the unit seal data is quoted in.**
+>
+> | Measured friction | Consequence |
+> |---|---|
+> | **≤ 17.8 N** (4.00 %) | **P88** closes, and the trim stage is unnecessary. ADR-033 is amended out |
+> | **17.8 – 22.3 N** | The stage is still unnecessary, but the seal does not survive its own heat — **P88 stays open** |
+> | **> 22.3 N** (5.00 %) | **The trim stage is needed.** ADR-036 falsifier 1 fires, ADR-033 stands, and **P92** becomes the next run |
+>
+> **Every published Gen6 dispersion figure descends from A41's 83.4 N ceiling, which is 4.68× the
+> specification.** *This is no longer one measurement among several. It is the measurement that
+> chooses between two architectures*, and ADR-036 suspended a subsystem rather than guess which.
+
 ### P68. ADR-032's first falsifier fires, and the largest piece of the stage credit is a mass P10 says was never itemised: CRITICAL, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
 
@@ -3697,7 +3711,7 @@ measured on nothing.
 > well as a dispersion.**
 
 ### P84. ADR-034 moved the parameter file and the documents, and left the analysis scripts at the old design point: HIGH, CORRECTED 2026-08-19
-> **Status:** `LIVE` — open engineering; something still has to be done
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 **`analysis/precharged.py` still declares `STROKE = 2.18` and `G_CAP = 25.0`.**
@@ -4048,8 +4062,8 @@ and P67 run at temperature, over a representative stroke, with the spread report
 exists, the 83.4 N in `gen6_dispersion.py` is an allowance A41 declared rather than a property of
 anything.**
 
-### P89. The seal has a specification now, and `parameters.json` still carries no seal: HIGH, NEW 2026-08-20
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P89. The seal has a specification now, and `parameters.json` still carries no seal: HIGH, CLOSED 2026-08-20
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
 
 
 **[A61](validation/A61_seal_class.md) inverted the question A41 left open.** Rather than asking what
@@ -4089,6 +4103,21 @@ heating and [A49](validation/A49_design_surface.md)'s band 6 failure all descend
 **P88 closes at 4.00 %. P86 becomes deletable at 5.00 %** — the trim stage is unnecessary rather
 than affordable. **But A61 band 5 found no friction in 1–30 % makes the store itself affordable:
 4.23 kg even at 1 %.** *Seal choice cannot solve P86; it can only make it irrelevant.*
+
+> ### Closed 2026-08-20 by [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)
+>
+> **`cad/parameters.json` now carries a `gen6_seal` group.** It holds **both** numbers and says
+> which is which: **`friction_max_N` 17.8 as the specification**, and **`friction_allowance_N`
+> 83.40371375447981 as A41's retained ceiling** — *4.68× apart, with every published Gen6
+> dispersion figure descending from the ceiling rather than from the specification.*
+>
+> **The allowance was not deleted and that is deliberate.** [P67](#p67-gen6s-precision-rests-on-a-seal-friction-nobody-has-measured-and-its-rated-velocity-excludes-it-high-new-2026-08-16)
+> has measured neither, so the ceiling remains the only honest number for a worst-case argument.
+> **`measured` is recorded in the group as `NO`.**
+>
+> **What this entry asked for is done: the specification is a design parameter rather than a
+> finding in a run sheet.** *What it does not do is make the number true* — and ADR-036 turns that
+> into a decision by suspending the trim stage rather than building or deleting it.
 
 > ### The specification is fluid-dependent and A61 did not say so
 >
@@ -4254,6 +4283,18 @@ again — which is **P83**'s failure mode a second time.
 or non-conducting section of tube local to the stator, or the passive-secondary route
 [`docs/VAULT.md`](docs/VAULT.md) records under **PII-19**, which removes the magnets from the moving
 part rather than reaching them through metal.
+
+> ### Deferred, not dropped, 2026-08-20 — [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)
+>
+> **A66 is not being written yet, and the reason is not that this entry got smaller.**
+> [A61](validation/A61_seal_class.md) band 3 showed that a seal meeting its own **thermal**
+> requirement makes the trim stage unnecessary, so **ADR-036 suspends the stage** rather than
+> building or deleting it. *Computing how well a stator couples through a conducting tube is only
+> worth doing for a stator that is going to exist.*
+>
+> **This entry stays LIVE precisely so that it is not forgotten.** If **P67** measures friction
+> above **22.3 N**, the stage is needed, and **A66 becomes the next run with nothing else in front
+> of it.**
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
