@@ -9,6 +9,21 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-20 (forty-eighth pass): the seal is specified, and the trim stage stops
+
+| ID | Item | Detail |
+|---|---|---|
+| **ADR-036** | **The seal is specified at 17.8 N and the trim stage is suspended** | **No new analysis.** [A61](validation/A61_seal_class.md) band 3 had already run it: a seal meeting its own **thermal** requirement — 4.00 %, set by A58 band 5 — is tighter than the **5.00 %** at which the trim stage stops earning its mass, so **one strictly implies the other**. The stage is **not deleted**: deleting on a specification would repeat ADR-033's own error of adopting before the falsifier was answered. Work stops until **P67**. |
+| **P89** | **Closed** | `cad/parameters.json` gains a `gen6_seal` group carrying **both** numbers and saying which is which — `friction_max_N` **17.8** as the specification, `friction_allowance_N` **83.40371375447981** as A41's retained ceiling, **4.68× apart** — plus `measured: NO`. |
+| **P84** | **Two dated scripts frozen at their own design points** | `gen6_dispersion.py` gains **`STROKE_A44 = 2.18`** and `trim_stage.py` **`STROKE_A48 = 2.18`**, the pattern `precharged.py` already used for `STROKE_A41` and that had not been applied here. A44 was computing a shot at **50 bar over 8.0 m** — a point never adopted — and returning **1.504 %** against its published **1.113 %**. A48 band 3 was reporting **0.497 %** where A48 declared **1.822 %**. Both reproduce exactly again. |
+| **P84** | **Its own closing sentence corrected** | It claimed Gen6's dispersion at ADR-034's point *"is not known"*. **It was known**: A55 computed **3.9798 %** on 2026-08-19 and A61 reproduced it. *The defect was never a missing number — it was that the number never propagated.* |
+| **DISP-01** | **3.9798 % propagated into four documents** | `ADR-033`, `docs/GENERATIONS.md`, `docs/BUILD_READINESS.md` and `docs/generations/GEN6.md` all carried A44's **1.113 %** as Gen6's figure — **3.6× low**. Every surviving instance is now explicitly attributed to A44's 2.18 m machine. Friction's variance share rises with it, **93.4 % → 98.68 %**. |
+| **P92** | **Deferred, not dropped** | A66 is not written: computing how well a stator couples through a conducting tube is only worth doing for a stator that will exist. **Stays LIVE.** If P67 measures above **22.3 N**, it becomes the next run with nothing in front of it. |
+| **P67** | **Now decides an architecture** | It has a threshold in the unit seal data is quoted in: **≤ 17.8 N** closes P88 and retires the stage; **> 22.3 N** fires ADR-036 falsifier 1 and ADR-033 stands. |
+| **CAD-07** | **`unit_for()` asserted "mm" for every physical quantity Gen6 added** | Not numbered — a `tools/` defect under ADR-021. `cad/DIMENSIONS.md` rendered **200 bar as "200.0 mm"**, a 473 K ceiling as "473.0 mm", a 3.1216 kg store as "3.1216 mm", and `first_fill_s` as dimensionless because "fill" appears in the name. The suffix table now covers kg, bar, K, J, W, A, Hz, L, s, m/s, m², m³, kg/m³ and N/kA·m, with a containment pass for qualified names like `exit_velocity_m_s_zero_friction`. **Geometry keys are unchanged.** *This is the document whose stated purpose is to be read instead of the JSON by whoever is cutting metal.* |
+
+---
+
 ## 2026-08-19 (forty-sixth pass): the stroke becomes the stage
 
 | ID | Item | Detail |

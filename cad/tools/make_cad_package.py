@@ -41,16 +41,37 @@ def is_dim(k, v):
         isinstance(v, list) and all(isinstance(x, (int, float)) for x in v))
 
 
+# Longest suffix first: "_m_s" must be tested before "_s", "_m2" before "_m". The fallback is
+# millimetres because most of this file is geometry -- but a fallback that ASSERTS a unit is
+# worse than one that admits it does not know, and this table exists so that the assertion is
+# only made where it is true. Every physical quantity Gen6 added -- pressures in bar, masses in
+# kg, a temperature ceiling in K -- read as "mm" until 2026-08-20, in the document whose whole
+# purpose is to be read instead of the JSON by whoever is cutting metal.
+_UNIT_SUFFIXES = (
+    ("_per_kA_m", "N/kA.m"), ("_A_per_m", "A/m"), ("_kg_m3", "kg/m^3"),
+    ("_N_per_contact", "N"), ("_preload_N", "N"), ("_m_s", "m/s"), ("_m2", "m^2"),
+    ("_m3", "m^3"), ("_kg", "kg"), ("_bar", "bar"), ("_K", "K"), ("_J", "J"),
+    ("_W", "W"), ("_N", "N"), ("_A", "A"), ("_Hz", "Hz"), ("_deg", "deg"),
+    ("_g_cap", "g"), ("_g", "g"), ("_l", "L"), ("_s", "s"), ("_mm", "mm"), ("_m", "m"),
+)
+
+_DIMENSIONLESS = ("_count", "_per_side", "_per_phase", "_per_cassette", "_in_assembly",
+                  "count", "_factor", "_total", "_sat", "satellites_per_cassette",
+                  "_fraction", "_ratio", "_p0A", "_index")
+
+
 def unit_for(k):
-    if k.endswith(("_N", "_preload_N")):
-        return "N"
-    if k.endswith("_m2"):
-        return "m^2"
-    if k.endswith(("_count", "_per_side", "_per_phase", "_per_cassette", "_in_assembly",
-                   "count", "_factor", "_total", "_sat", "satellites_per_cassette")):
+    if k.endswith(_DIMENSIONLESS):
         return "-"
-    if k.endswith(("_g_cap",)):
-        return "g"
+    for suffix, unit in _UNIT_SUFFIXES:
+        if k.endswith(suffix):
+            return unit
+    # A qualified name carries its unit in the middle rather than at the end --
+    # exit_velocity_m_s_zero_friction is m/s, not millimetres. Suffix matching cannot see it.
+    for token, unit in (("_m_s_", "m/s"), ("_kg_", "kg"), ("_bar_", "bar"), ("_N_", "N"),
+                        ("_K_", "K"), ("_J_", "J"), ("_W_", "W"), ("_s_", "s")):
+        if token in k:
+            return unit
     if isinstance(k, str) and ("fill" in k or "factor" in k):
         return "-"
     return "mm"

@@ -285,18 +285,18 @@ Fusion document: **`Built by cad/build_gen6.py. ADR-032: the payload is accelera
 | `piston_area_mm2` | 196.2 | mm |
 | `stroke_mm` | 8000.0 | mm |
 | `tube_wall_mm` | 1.0 | mm |
-| `acceleration_g` | 11.362895 | mm |
+| `acceleration_g` | 11.362895 | g |
 | `commanded_force_N` | 445.88 | N |
-| `exit_velocity_m_s` | 29.01 | mm |
-| `cradle_preload_N_per_contact` | 201.7 | mm |
+| `exit_velocity_m_s` | 29.01 | m/s |
+| `cradle_preload_N_per_contact` | 201.7 | N |
 | `cradle_contact_lever_mm` | 170.25 | mm |
-| `exit_velocity_m_s_zero_friction` | 34.28 | mm |
-| `exit_velocity_m_s_at_friction_allowance` | 29.01 | mm |
-| `exit_velocity_m_s_constant_pressure_bound` | 42.23 | mm |
-| `tube_mass_kg` | 1.1404 | mm |
-| `friction_work_fraction` | 0.2839 | mm |
-| `tube_material_density_kg_m3` | 2700.0 | mm |
-| `tube_temperature_ceiling_K` | 473.0 | mm |
+| `exit_velocity_m_s_zero_friction` | 34.28 | m/s |
+| `exit_velocity_m_s_at_friction_allowance` | 29.01 | m/s |
+| `exit_velocity_m_s_constant_pressure_bound` | 42.23 | m/s |
+| `tube_mass_kg` | 1.1404 | kg |
+| `friction_work_fraction` | 0.2839 | - |
+| `tube_material_density_kg_m3` | 2700.0 | kg/m^3 |
+| `tube_temperature_ceiling_K` | 473.0 | K |
 | `tube_material` | aluminium 6061-T6, hard anodised | — |
 | `piston_material` | aluminium 6061-T6, matched to the tube | — |
 
@@ -307,14 +307,29 @@ Fusion document: **`Built by cad/build_gen6.py.`**
 
 | Parameter | Value | Units |
 |---|---:|---|
-| `chamber_volume_l` | 2.0 | mm |
-| `charge_pressure_bar` | 22.7258 | mm |
-| `reservoir_volume_l` | 3.46 | mm |
-| `storage_pressure_bar` | 200.0 | mm |
-| `fill_orifice_mm` | 1.0 | - |
-| `first_fill_s` | 4.14 | - |
-| `gas_per_shot_kg` | 0.051046 | mm |
-| `store_mass_kg` | 3.1216 | mm |
+| `chamber_volume_l` | 2.0 | L |
+| `charge_pressure_bar` | 22.7258 | bar |
+| `reservoir_volume_l` | 3.46 | L |
+| `storage_pressure_bar` | 200.0 | bar |
+| `fill_orifice_mm` | 1.0 | mm |
+| `first_fill_s` | 4.14 | s |
+| `gas_per_shot_kg` | 0.051046 | kg |
+| `store_mass_kg` | 3.1216 | kg |
+
+
+## gen6 seal
+
+Fusion document: **`Built by cad/build_gen6.py. ADR-036: the seal is SPECIFIED, not allowed. A41 declared a tolerable friction and every figure downstream descended from that ceiling; A61 asked instead what the loosest seal is that the design can survive, and the THERMAL case sets it -- the seal must survive its own friction heating before it must satisfy any control requirement.`**
+
+| Parameter | Value | Units |
+|---|---:|---|
+| `friction_max_N` | 17.8 | N |
+| `friction_max_fraction_of_p0A` | 0.04 | - |
+| `friction_allowance_N` | 83.40371375447981 | N |
+| `allowance_fraction_of_p0A` | 0.1871 | - |
+| `trim_stage_unnecessary_below_fraction` | 0.05 | - |
+| `seal_mass_kg` | 0.002 | kg |
+| `seal_temperature_rise_limit_K` | 50.0 | K |
 
 
 ## gen6 trim
@@ -325,11 +340,11 @@ Fusion document: **`Built by cad/build_gen6.py. ADR-033: a short stator at the m
 |---|---:|---|
 | `section_length_mm` | 144.01 | mm |
 | `section_start_mm` | 7855.99 | mm |
-| `thrust_constant_N_per_kA_m` | 10.5386 | mm |
-| `sheet_current_A_per_m` | 90000.0 | mm |
+| `thrust_constant_N_per_kA_m` | 10.5386 | N/kA.m |
+| `sheet_current_A_per_m` | 90000.0 | A/m |
 | `force_N` | 948.0 | N |
-| `authority_m_s` | 1.1543 | mm |
-| `energy_per_correction_J` | 136.59 | mm |
-| `peak_mechanical_W` | 28606.0 | mm |
-| `added_mass_kg` | 1.2328 | mm |
+| `authority_m_s` | 1.1543 | m/s |
+| `energy_per_correction_J` | 136.59 | J |
+| `peak_mechanical_W` | 28606.0 | W |
+| `added_mass_kg` | 1.2328 | kg |
 
