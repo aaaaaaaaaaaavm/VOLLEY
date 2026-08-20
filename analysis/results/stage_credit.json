@@ -4,14 +4,14 @@
   "note": "the surviving fractions are JUDGEMENTS, not measurements. They are declared in the run sheet before this script so their consequence is computed rather than argued, and the break-even is reported so a reader can substitute their own. The 2.0 kg threshold is unmoved.",
   "credit_total_kg": 85.35992000000002,
   "added_base_kg": 11.452976,
-  "store_kg": 5.380445242949372,
-  "nominal_per_sat": 1.4027851035791141,
-  "hostile_per_sat": 3.2709484369124477,
+  "store_kg": 3.1216,
+  "nominal_per_sat": 1.214548,
+  "hostile_per_sat": 3.0827113333333336,
   "credit_lost_kg": 22.41796,
   "credit_lost_pct": 26.262864351325536,
-  "enclosure_only_per_sat": 5.571951770245781,
+  "enclosure_only_per_sat": 5.383714666666666,
   "enclosure_kg": 50.029999999999994,
-  "breakeven_fraction": 0.08395718689814409,
+  "breakeven_fraction": 0.11041978483578707,
   "adr_claimed_breakeven": 0.3,
   "largest_loss": "Enclosure skins (2 mm Al, 6.077 m2 net, A46)",
   "items": [
@@ -85,101 +85,119 @@
   "curve": [
     {
       "surviving": 0.0,
-      "per_sat": 8.516111770245784
+      "per_sat": 8.327874666666668
     },
     {
       "surviving": 0.05,
-      "per_sat": 8.160445436912449
+      "per_sat": 7.9722083333333345
     },
     {
       "surviving": 0.1,
-      "per_sat": 7.804779103579118
+      "per_sat": 7.616542000000003
     },
     {
       "surviving": 0.15000000000000002,
-      "per_sat": 7.449112770245783
+      "per_sat": 7.260875666666668
     },
     {
       "surviving": 0.2,
-      "per_sat": 7.093446436912449
+      "per_sat": 6.905209333333334
     },
     {
       "surviving": 0.25,
-      "per_sat": 6.737780103579117
+      "per_sat": 6.549543000000003
     },
     {
       "surviving": 0.3,
-      "per_sat": 6.382113770245783
+      "per_sat": 6.193876666666668
     },
     {
       "surviving": 0.35,
-      "per_sat": 6.0264474369124486
+      "per_sat": 5.8382103333333335
     },
     {
       "surviving": 0.39999999999999997,
-      "per_sat": 5.670781103579116
+      "per_sat": 5.482544000000001
     },
     {
       "surviving": 0.44999999999999996,
-      "per_sat": 5.315114770245782
+      "per_sat": 5.126877666666668
     },
     {
       "surviving": 0.49999999999999994,
-      "per_sat": 4.9594484369124485
+      "per_sat": 4.771211333333334
     },
     {
       "surviving": 0.5499999999999999,
-      "per_sat": 4.603782103579115
+      "per_sat": 4.415545000000001
     },
     {
       "surviving": 0.6,
-      "per_sat": 4.248115770245781
+      "per_sat": 4.059878666666667
     },
     {
       "surviving": 0.65,
-      "per_sat": 3.892449436912448
+      "per_sat": 3.704212333333334
     },
     {
       "surviving": 0.7000000000000001,
-      "per_sat": 3.5367831035791144
+      "per_sat": 3.3485460000000002
     },
     {
       "surviving": 0.7500000000000001,
-      "per_sat": 3.18111677024578
+      "per_sat": 2.9928796666666657
     },
     {
       "surviving": 0.8000000000000002,
-      "per_sat": 2.825450436912447
+      "per_sat": 2.6372133333333325
     },
     {
       "surviving": 0.8500000000000002,
-      "per_sat": 2.469784103579113
+      "per_sat": 2.281546999999999
     },
     {
       "surviving": 0.9000000000000002,
-      "per_sat": 2.114117770245779
+      "per_sat": 1.925880666666665
     },
     {
       "surviving": 0.9500000000000003,
-      "per_sat": 1.7584514369124455
+      "per_sat": 1.5702143333333314
     },
     {
       "surviving": 1.0000000000000002,
-      "per_sat": 1.4027851035791128
+      "per_sat": 1.2145479999999982
     }
   ],
   "bands": [
     {
       "n": "1",
+      "band": "A45-R reproduces at the frozen 5.38 kg store: 85.36 credit, 1.403 full, 3.271 hostile",
+      "got": "85.3599, 1.403, 3.271",
+      "passed": true
+    },
+    {
+      "n": "1b",
       "band": "line items reproduce A37's re-run 85.36 kg to 0.01 kg",
       "got": "85.3599 kg",
       "passed": true
     },
     {
       "n": "2",
-      "band": "at the full credit, per satellite reproduces A43's 1.403 kg within 0.5 %",
-      "got": "1.403 kg, 0.02 % off",
+      "band": "the credit total is stated explicitly and is A45-R's 85.36 kg",
+      "got": "85.3599 kg, break-even quoted against it",
       "passed": true
+    },
+    {
+      "n": "3r2",
+      "band": "full credit at the resized store, reported against A45's 1.403",
+      "got": "1.2145 kg/sat, -13.43 % against A45",
+      "passed": false
+    },
+    {
+      "n": "4r2",
+      "band": "removing the enclosure lines alone keeps per satellite <= 2.0 kg",
+      "got": "5.384 kg",
+      "passed": false
     },
     {
       "n": "3",
@@ -190,19 +208,19 @@
     {
       "n": "4",
       "band": "hostile reading keeps per satellite <= 2.0 kg",
-      "got": "3.271 kg",
+      "got": "3.083 kg",
       "passed": false
     },
     {
       "n": "5",
       "band": "uniform break-even >= 30 %, as ADR-032 states",
-      "got": "8.4 %",
+      "got": "11.0 %",
       "passed": false
     },
     {
       "n": "6",
       "band": "break-even no worse than A45's 16.5 %",
-      "got": "8.4 %",
+      "got": "11.0 %",
       "passed": false
     },
     {
@@ -215,6 +233,18 @@
       "n": "8",
       "band": "the five enclosure lines are less than half the total credit",
       "got": "58.6 %",
+      "passed": false
+    },
+    {
+      "n": "8r2",
+      "band": "the three published added-mass figures are reconciled, one named canonical",
+      "got": "5 rows, canonical 1.2145 kg/sat at A56's store",
+      "passed": true
+    },
+    {
+      "n": "9",
+      "band": "REPORT: break-even and per-satellite mass across every store this project has used",
+      "got": "5.38 / 4.1 / 3.1216 kg",
       "passed": false
     }
   ]

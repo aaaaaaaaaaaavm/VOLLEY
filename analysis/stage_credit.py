@@ -35,8 +35,28 @@ RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 TARGET_KG = 2.0                      # kill criterion 1, unmoved
 N = hi.N_MANIFEST
 V_RES_A43 = 9.55e-3                  # A43's design reservoir
+STORE_KG_A43 = 5.38                  # A43's store, FROZEN. A45 and A45-R both ran at this and
+                                     # their published results must keep reproducing.
+PARAMS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                      'cad', 'parameters.json')
+
+
+def store_kg_current():
+    """A56's sized store, read live from the parameter file.
+
+    A45 and A45-R computed the store from A43's 9.55 L reservoir and got 5.38 kg. A56 sized it at
+    ADR-034's charge pressure instead of scaling it and got 3.1216 kg -- 42 % lighter -- and the
+    break-even is (2.0*N - added_base - store)/credit, so the store is the only term in it that
+    this project ever moves. Reading it live is what stops A45-R2 from becoming stale the way its
+    two predecessors did.
+    """
+    with open(PARAMS, encoding='utf-8') as f:
+        return json.load(f)['groups']['gen6_store']['store_mass_kg']
 ADR_CLAIMED_BREAKEVEN = 0.30         # what ADR-032 states
 A45_BREAKEVEN = 0.165                # A45's break-even, for band 6 of the re-run
+TRIM_KG = 1.2328                     # A55's resized trim section, SUSPENDED by ADR-036 -- carried
+                                     # here only so the published figures that include it can be
+                                     # told apart from the ones that do not
 ENCLOSURE_PREFIXES = ('Enclosure skins', 'Enclosure frames', 'Radiator',
                       'Equipment-bay boxes', 'Fasteners and brackets')
 
@@ -111,11 +131,18 @@ def main():
     items = credit_items()
     total = sum(r['kg'] for r in items)
     base = _added_base()
-    store = fw.store_kg(V_RES_A43)
+    store_a43 = fw.store_kg(V_RES_A43)
+    store = store_kg_current()
+
+    # A45 and A45-R are dated results and must not drift. Their store is frozen above; if the
+    # helper that computes it ever stops returning 5.38 kg, both run sheets have quietly stopped
+    # reproducing and this is where it surfaces.
+    if abs(store_a43 - STORE_KG_A43) > 0.01:
+        raise SystemExit(f"A43 store no longer reproduces: {store_a43:.4f} against {STORE_KG_A43}")
     unjustified = [r['part'] for r in items if r['survives'] is None]
 
     print(f"A37 stage credit {total:.2f} kg, added base {base:.2f} kg, "
-          f"store {store:.2f} kg (A43)\n")
+          f"store {store:.4f} kg (A56)  [A43's was {store_a43:.2f}]\n")
 
     nominal = (base + store) / N
     print(f"at the full credit: {nominal:.3f} kg per satellite\n")
@@ -156,12 +183,44 @@ def main():
     monotone = all(a['per_sat'] >= b['per_sat'] - 1e-12
                    for a, b in zip(curve, curve[1:]))
 
+    # A45-R2 band 1: the whole model re-evaluated at the FROZEN store, which must still return
+    # A45-R's published result. This is what stops a re-run from silently replacing its
+    # predecessor instead of superseding it.
+    nom_a43 = (base + store_a43) / N
+    hostile_a43 = (base + lost + store_a43) / N
+    be_a43 = breakeven_fraction(store_a43, total)
+    r2_repro = (abs(total - 85.3599) <= 0.01
+                and abs(nom_a43 - 1.403) / 1.403 <= 0.005
+                and abs(hostile_a43 - 3.271) / 3.271 <= 0.005)
+    print(f"\nA45-R at the frozen {STORE_KG_A43} kg store: credit {total:.4f}, "
+          f"full {nom_a43:.3f}, hostile {hostile_a43:.3f}, break-even {be_a43*100:.1f} %")
+
+    # band 8: the three figures this project publishes for one quantity, each with its store
+    STORE_ADR034 = 4.10                       # ADR-034's gas-ratio scaling, never a sized store
+    reconcile = [
+        ('A45 / A45-R / P68', STORE_KG_A43, False, (base + STORE_KG_A43) / N),
+        ('README, index.html, GENERATIONS', STORE_ADR034, False, (base + STORE_ADR034) / N),
+        ('generations/GEN6, with the trim stage', STORE_ADR034, True,
+         (base + STORE_ADR034 + TRIM_KG) / N),
+        ('A45-R2, CANONICAL', store, False, (base + store) / N),
+        ('A45-R2, with the suspended trim stage', store, True, (base + store + TRIM_KG) / N),
+    ]
+    print("\nband 8, one quantity and the stores it has been published against:")
+    print(f"  {'source':40s} {'store kg':>9s} {'trim':>5s} {'kg/sat':>8s}")
+    for label, st, trim, per in reconcile:
+        print(f"  {label:40s} {st:9.4f} {'yes' if trim else 'no':>5s} {per:8.4f}")
+
     bands = [
-        ('1', "line items reproduce A37's re-run 85.36 kg to 0.01 kg",
+        ('1', "A45-R reproduces at the frozen 5.38 kg store: 85.36 credit, 1.403 full, 3.271 hostile",
+         f"{total:.4f}, {nom_a43:.3f}, {hostile_a43:.3f}", r2_repro),
+        ('1b', "line items reproduce A37's re-run 85.36 kg to 0.01 kg",
          f"{total:.4f} kg", abs(total - 85.36) <= 0.01),
-        ('2', "at the full credit, per satellite reproduces A43's 1.403 kg within 0.5 %",
-         f"{nominal:.3f} kg, {abs(nominal-1.403)/1.403*100:.2f} % off",
-         abs(nominal - 1.403) / 1.403 <= 0.005),
+        ('2', f"the credit total is stated explicitly and is A45-R's 85.36 kg",
+         f"{total:.4f} kg, break-even quoted against it", abs(total - 85.3599) <= 0.01),
+        ('3r2', "full credit at the resized store, reported against A45's 1.403",
+         f"{nominal:.4f} kg/sat, {(nominal-1.403)/1.403*100:+.2f} % against A45", None),
+        ('4r2', f'removing the enclosure lines alone keeps per satellite <= {TARGET_KG} kg',
+         f"{p10_only:.3f} kg", p10_only <= TARGET_KG),
         ('3', 'every item carries a surviving fraction with a written reason',
          f"{len(unjustified)} unjustified", not unjustified),
         ('4', f'hostile reading keeps per satellite <= {TARGET_KG} kg',
@@ -174,10 +233,24 @@ def main():
          'monotone' if monotone else 'NOT monotone', monotone),
         ('8', 'the five enclosure lines are less than half the total credit',
          f"{encl/total*100:.1f} %", encl / total < 0.50),
+        ('8r2', 'the three published added-mass figures are reconciled, one named canonical',
+         f"{len(reconcile)} rows, canonical {(base+store)/N:.4f} kg/sat at A56's store",
+         len(reconcile) >= 4),
+        ('9', 'REPORT: break-even and per-satellite mass across every store this project has used',
+         f"{STORE_KG_A43} / {STORE_ADR034} / {store:.4f} kg", None),
     ]
     print()
     for n, text, got, ok in bands:
-        print(f"  {n}  {'PASS' if ok else 'FAIL'}  {text}: {got}")
+        mark = 'REPORT' if ok is None else ('PASS' if ok else 'FAIL')
+        print(f"  {n:>3s}  {mark:6s} {text}: {got}")
+
+    print("\nband 9, against every store mass this project has used:")
+    print(f"  {'store kg':>9s} {'source':32s} {'kg/sat':>8s} {'hostile':>8s} {'break-even':>11s}")
+    for st, why in ((STORE_KG_A43, "A43, from a 9.55 L reservoir"),
+                    (STORE_ADR034, "ADR-034, gas-ratio scaled"),
+                    (store, "A56, sized at 22.7258 bar")):
+        print(f"  {st:9.4f} {why:32s} {(base+st)/N:8.4f} {(base+lost+st)/N:8.4f} "
+              f"{breakeven_fraction(st, total)*100:10.1f} %")
 
     out = dict(analysis='A45-R', bands_declared_commit='HEAD~1',
                note='the surviving fractions are JUDGEMENTS, not measurements. They are declared '
