@@ -3818,17 +3818,32 @@ passes.**
 > **Every mass above is a lower bound**: the switch and the conductors are not priced and no figure
 > for either is in this repository.
 
-**Three routes, and A54 cannot choose between them.** Find a store at 23.2 kW/kg or raise the bus
-voltage above the 96 V `sizing.py` declares — **neither is in the record**. Shorten the stroke, since
-dispersion tracks friction work which tracks stroke — **[A49](validation/A49_design_surface.md)'s
-surface is published and [A55](validation/A55_trim_authority.md) band 9 gives the authority at every
-friction share, so this route needs no new data.** Or withdraw the trim stage and accept **3.980 %
-open-loop** — **which deletes the commanded-velocity claim the product is sold on.**
+> ### Two of the three routes first named here do not exist, checked 2026-08-19
+>
+> **Raising the bus voltage does nothing.** The store reduces to
+> **m ≥ ½·(ESR×C)·P/(f · specific energy)** — **V cancels exactly.** A 300 V bank needs a tenth the
+> capacitance at ten times the voltage: same stored energy, same cells, same mass.
+>
+> **Shortening the stroke does nothing either.** Peak power is force-per-metre × exit velocity,
+> force per metre is set by sheet current and the velocity is held — **stroke appears nowhere.** At
+> A48's own 2.18 m point the store would have been **22.8–36.3 kg.**
+>
+> **So ADR-033 was never affordable at any stroke, and this entry is not a consequence of ADR-034.**
+> *Both escapes were checked after the run rather than before, which is the wrong order.*
 
-**What would close it:** the owner's decision between those three, and **[P67](OPEN_PROBLEMS.md)
-first** — the dispersion that sets the authority that sizes the store is **98.7 % a seal
-coefficient measured on nothing**, and a bench measurement below a 20 % friction share moves every
-number here.
+**What the levers actually are.** **ESR × C** — the store technology — needs **≤ 36.3 ms** against
+an EDLC's **690–1100 ms**, **19–30× better**, and it is the only lever with that range; a film or
+pulse capacitor flips the binding constraint from power to energy and **no figure for either is in
+the record.** **Sheet current** bottoms the trade at **10.755 kg**. **P67** takes that to
+**6.68 kg** at a 9.75 % friction share, since the total scales as √energy. **The loss budget** gives
+7.81–12.45 kg at 30 %, and 41 J of heat per shot. **Or withdraw the trim stage and accept 3.980 %
+open-loop** — **which deletes the commanded-velocity claim the product is sold on**, and is the one
+route that survives unchanged.
+
+**What would close it:** the owner's decision, and two cheap inputs first. **One pulse-capacitor
+datasheet** — it either meets 36.3 ms or it does not, and that decides whether this is a sourcing
+problem or a design one. **And [P67](OPEN_PROBLEMS.md)** — the dispersion that sets the authority
+that sizes the store is **98.7 % a seal coefficient measured on nothing.**
 
 ### P87. The last fill of the campaign does not fit the window, and never did: MEDIUM, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done

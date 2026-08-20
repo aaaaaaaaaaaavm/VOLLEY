@@ -21,8 +21,12 @@
 > **A54 band 5's declared FAIL text says this ADR reverses. It is not reversed here**, because
 > deleting the trim stage deletes the commanded-velocity claim the product is sold on, and choosing
 > the replacement is a design decision rather than an analysis result. **The decision is open and
-> stated as open — P86.** The three routes are a store at **23.2 kW/kg**, a shorter stroke off
-> [A49](../../validation/A49_design_surface.md)'s published surface, or withdrawal.
+> stated as open — P86.**
+>
+> **And the store was never affordable at any stroke.** Peak power is force-per-metre × exit
+> velocity, so the stroke does not enter it: at A48's own 2.18 m point the store would have been
+> **22.8–36.3 kg**. *This ADR's falsifier would have fired the day it was adopted.* The surviving
+> lever is the store technology — **ESR × C ≤ 36.3 ms against an EDLC's 690–1100** — or withdrawal.
 >
 > **Read this ADR as adopted, measured, and awaiting that decision.**
 

@@ -224,3 +224,60 @@ below a 20 % friction share moves every number on this page.*
 - **It assumed a 10 % ESR loss budget**, declared before the run. A looser budget scales the
   capacitance, and therefore the mass, in proportion.
 - **E4 stands.** Nothing here is measured.
+
+---
+
+## Correction, 2026-08-19 — two of the three routes above do not exist
+
+**The result is unchanged. The escapes named for it were wrong**, and both were checked after the
+run rather than before, which is the wrong order and is why this block exists.
+
+### The bus voltage cancels exactly
+
+The section above offers a higher bus as an escape, on the reasoning that current falls as 1/V and
+the ESR budget rises as V². **Both are true and the conclusion does not follow.** Deriving the
+store rather than scaling it:
+
+```
+loss / E  =  I²Rt / E  =  P·R / V²        →   R ≤ f·V² / P
+EDLC:        R = (ESR×C)/C                 →   C ≥ (ESR×C)·P / (f·V²)
+stored E  =  ½CV²                          →   E_min ≥ ½·(ESR×C)·P / f
+```
+
+**V cancels.** A 300 V bank needs a tenth the capacitance at ten times the voltage — **the same
+stored energy, the same cells, the same mass.** The closed form reproduces this run's
+**23.44–37.36 kg** exactly, which is the check that it is the same model.
+
+**The store mass is set by four terms and voltage is not one of them:**
+
+> **m ≥ ½ · (ESR×C) · P / (f · specific energy)**
+
+### Stroke does not enter either
+
+**Peak power is force-per-metre × exit velocity.** Force per metre is fixed by A2's thrust constant
+and A1's sheet current; the exit velocity is held by construction. **The stroke appears nowhere.**
+
+| | Energy | Peak power | Store |
+|---|---:|---:|---:|
+| [A48](A48_trim_stage.md)'s point, **2.18 m** | 37.7 J | 27 820 W | **22.8 – 36.3 kg** |
+| This run's point, **8.0 m** | 136.6 J | 28 606 W | **23.4 – 37.4 kg** |
+
+> **ADR-033 was never affordable, at any stroke. The falsifier would have fired the day it was
+> adopted.** *This run's finding is not a consequence of ADR-034 and the section above frames it as
+> one.*
+
+### What the levers actually are
+
+| Lever | Best available | |
+|---|---:|---|
+| Sheet current, swept above | **10.755 kg** | 5.4× over |
+| **P67** — total scales as √energy | **6.68 kg** at a 9.75 % friction share | 3.3× over |
+| Loss budget, m ∝ 1/f | 7.81–12.45 kg at 30 % | and 41 J of heat per shot |
+| **ESR × C — the technology** | needs **≤ 36.3 ms** against an EDLC's **690–1100 ms** | **19–30×. The only lever with the range** |
+
+**And the technology lever changes the shape of the problem rather than the size of it.** A film or
+pulse capacitor's ESR × C is orders of magnitude lower, so **the binding constraint flips from
+power to energy** — and then the question is specific energy, which is not in the record.
+*NEEDS SOURCE: specific energy and ESR × C of a film or pulse capacitor bank at a 4.77 ms discharge.*
+
+**The one route that survives unchanged is withdrawal**, and accepting **3.980 % open-loop.**
