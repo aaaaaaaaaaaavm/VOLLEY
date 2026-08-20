@@ -171,7 +171,9 @@ geometry at all.
 **Stated as a list rather than left to be found**, in the order they bear on the claim:
 
 1. ~~**Velocity control.**~~ **Modelled 2026-08-16 by [A44](../validation/A44_gen6_dispersion.md),
-   and it failed two bands.** 3σ dispersion is **1.113 %** against a declared 0.5 %, and **93.4 %
+   and it failed two bands.** 3σ dispersion is **3.9798 %** against a declared 0.5 % — *A44 measured 1.113 % at 2.18 m and
+   [A55](../validation/A55_trim_authority.md) re-ran it at ADR-034's 8.0 m, where it is **8× the
+   declared band** rather than 2×* — and **98.68 %
    of the variance is a seal friction nobody has measured** — a fivefold better transducer moves
    the answer by 0.008 %. Chamber temperature cancels outright, which turns the thermal question
    into a sequencing requirement. **P67**, and it is now a bench test rather than a computation.

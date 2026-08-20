@@ -41,7 +41,7 @@ stroke.** 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charg
 | Peak acceleration | **11.36 g** | against a **25 g** payload qualification cap. Gen6 sat exactly on that cap until ADR-034 |
 | Gas per shot | **51.0 g** | 112.3 g until ADR-034. A campaign of twelve costs **612.6 g** against 1347.7 g |
 | Friction work | **28.39 % of shot work** | **9.75 % until ADR-034 — this is what the long stroke costs. P78** |
-| Dispersion, 3σ | **1.113 % open-loop** | **0.0274 m/s closed**, with the trim stage — ADR-033. 93.4 % of the open-loop variance is seal friction. **Not re-run at the new friction share — P83** |
+| Dispersion, 3σ | **3.9798 % open-loop** | **0.0274 m/s closed**, with the trim stage — ADR-033. **98.68 %** of the open-loop variance is seal friction. *A44's 1.113 % was the 2.18 m machine; [A55](../../validation/A55_trim_authority.md) re-ran it at ADR-034's stroke and [A61](../../validation/A61_seal_class.md) reproduced it — **P83 confirmed and closed*** |
 | Added mass per satellite | **1.324 kg** with the trim stage | **1.296–3.164 kg** once the stage credit is read hostilely — **P68**'s 1.868 kg/satellite of denied credit, which ADR-034 does not touch. *Store scaled by gas ratio, not sized — P82* |
 | Store | **3.1216 kg** | chamber, vessel, gas and A39's 1.5 kg hardware allowance, **sized by [A56](../../validation/A56_reservoir_resized.md)** at 22.73 bar — 24 % below A49's scaled estimate. The 1.140 kg tube is separate, and its material is undeclared (**P85**) |
 

@@ -3757,11 +3757,23 @@ enforce.
 > against the run sheet it produced**, so a dated result can stop reproducing and every gate stays
 > green.
 >
-> **What would close it:** A44's script frozen at its own point the way `precharged.py` freezes
-> `STROKE_A41` — the pattern already exists in this repository and was not applied here — and a
-> re-run of the dispersion at the **current** point, which is a banded run and not a repair.
-> **Until that run exists, 1.113 % is A44's number for A44's machine, and Gen6's dispersion at
-> ADR-034's design point is not known.**
+> **What closed the scripts, 2026-08-20.** `gen6_dispersion.py` now freezes **`STROKE_A44 = 2.18`**
+> and `trim_stage.py` **`STROKE_A48 = 2.18`**, the way `precharged.py` freezes `STROKE_A41` — *the
+> pattern already existed in this repository and had not been applied here.* Both reproduce their
+> run sheets again: **1.1133466932586118 %** and **93.4 %**, and A48 band 3 is back to **1.822 %**
+> from the 0.497 % the live stroke had silently made it.
+>
+> ### The last sentence of this block was wrong when it was written, and is corrected here
+>
+> It said Gen6's dispersion at ADR-034's design point *"is not known"*. **It was known, and had been
+> for a day.** [A55](validation/A55_trim_authority.md) computed **3.9798 %** on 2026-08-19 with its
+> bands declared first, and [A61](validation/A61_seal_class.md) reproduced it independently on
+> 2026-08-20. **No further run is needed and none should be written.**
+>
+> **The defect was never a missing number. It was that the number never propagated** — four
+> documents still carried A44's 1.113 % as Gen6's, which is what this entry's correction now fixes
+> everywhere. *A stale figure with a correct replacement sitting one file away is a worse failure
+> than an unknown one, because nothing about it looks unfinished.*
 
 > **Corrected 2026-08-19, with A55.** `precharged.py::design_point()` reads the stroke,
 > acceleration and charge pressure from `cad/parameters.json`, and

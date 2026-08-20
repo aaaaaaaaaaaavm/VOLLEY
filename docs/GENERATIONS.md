@@ -38,7 +38,7 @@ descends from was measured off its solids.
 | **Stroke** | 1.3 m accelerating, release at 1.5 m | same | **8.00 m** — A37's whole usable acceleration length ([ADR-034](adr/034-gen6-long-stroke-design-point.md)) |
 | **Dry mass** | — | **126.6 kg** | 11.45 kg added, plus **3.1216 kg** of store (A56, sized at the adopted charge pressure) |
 | **Per 3U satellite** | — | **10.547 kg dry** | **1.296 kg added** — and **1.296–3.164** once the stage credit is read hostilely (**P68**) |
-| **Velocity control** | — | designed loop, **0.0274 m/s at 3σ** | **1.113 % open-loop**, 93.4 % of it seal friction (**P67**); **0.0274 m/s with the trim stage**, on a pulse store nobody has weighed |
+| **Velocity control** | — | designed loop, **0.0274 m/s at 3σ** | **3.9798 % open-loop** at ADR-034's stroke (A55, reproduced by A61), **98.68 % of it seal friction** (**P67**) — *A44's 1.113 % was the 2.18 m machine*; **0.0274 m/s with the trim stage**, on a **~70 g** store (A64) |
 
 **Read the last two rows together.** Gen6 is better on velocity and on added mass per satellite,
 and **worse on the thing the product is sold on.** Gen5 commanded velocity through a closed loop

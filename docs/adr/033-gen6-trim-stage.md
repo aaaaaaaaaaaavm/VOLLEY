@@ -38,6 +38,14 @@
 
 > ## Amended 2026-08-19 by [ADR-034](034-gen6-long-stroke-design-point.md), and resized the same day by [A55](../../validation/A55_trim_authority.md)
 >
+> **The dispersion this stage exists to correct is 3.9798 %, not the 1.113 % quoted below.**
+> *Added to this banner 2026-08-20: dispersion was not on its list of amended quantities, so the
+> 1.113 % in the Context section stayed uncorrected for a day after A55 superseded it.* **1.113 %
+> is [A44](../../validation/A44_gen6_dispersion.md)'s figure for A44's 2.18 m machine.** At
+> ADR-034's adopted point [A55](../../validation/A55_trim_authority.md) measures **3.9798 %**, and
+> [A61](../../validation/A61_seal_class.md) reproduces it. **Friction's share rises with it, 93.4 %
+> to 98.68 %** — the long stroke concentrates the variance in the one term nobody has measured.
+>
 > **The section is 144.01 mm at x = 7855.99, not 39.7 mm at x = 7960.3, and it carries 1.1543 m/s
 > rather than 0.323.** A48 sized it against A44's dispersion at a **9.75 %** friction share;
 > ADR-034 runs at **28.39 %**, and A55 re-ran both. **The stage was under-authority by 3.57× —
