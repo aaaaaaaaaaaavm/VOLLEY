@@ -62,9 +62,11 @@ Removing 99.9 % of the payload buys **19 % more velocity**. Pairing a light sled
 payload recovers most of that and no more: a 150 mm sled with a PocketQube gives about 11.8 g and
 17.3 m/s. A great deal of algebra for 0.8 m/s.
 
-> **The velocity ceiling is a payload qualification property, not a mass property.** It stays at
+> **The velocity ceiling is set by the acceleration limit, not by mass.** It stays at
 > 25.3 m/s over the 1.30 m zone for every class here, and reaching it needs the same levers
 > regardless of what is being launched. See [`VELOCITY_CEILING.md`](VELOCITY_CEILING.md).
+> *This line used to call the ceiling "a payload qualification property". The 25 g it is computed
+> at is a limit this design chose, not one any standard sets — **P98**.*
 
 **The sled mass scaling is crude**: it assumes chassis mass scales with array length plus a fixed
 end-structure overhead, which describes the current chassis rather than a redesign. A genuinely
@@ -131,11 +133,15 @@ the retention gate all engage the CDS rail interface. PocketQubes, ThinSats and 
 different interfaces, so a smaller class needs its own cassette, cradle and gate. **That is real
 mechanical design, not a parameter change.**
 
-**4. Qualification loads for the small classes are not established here.** The 25 g cap comes
-from the CubeSat Design Specification and GEVS. PocketQube, ThinSat and TubeSat standards are less
-mature and their qualification environments have not been checked against any published document
-for this file. **Until they are, assume the same limits**: smaller structures often survive more,
-but "often" is not a number.
+**4. Qualification loads are not established for any class here, small or otherwise.** The 25 g
+ceiling is a requirement **this design set on itself**; it does not come from the CubeSat Design
+Specification, which publishes no universal quasi-static level and defers test levels to the launch
+provider, and it does not come from GEVS, which specifies a random-vibration spectrum whose
+`g_rms` is not a quasi-static equivalent (**P98**). PocketQube, ThinSat and TubeSat standards are
+less mature still and have not been checked against any published document for this file. **The
+accelerations in the table above — to 14.0 g at PocketQube 1P — are what the machine delivers, not
+what any payload is qualified to accept.** Compatibility is a payload-specific structural question
+and needs an integration review nobody has done.
 
 ---
 

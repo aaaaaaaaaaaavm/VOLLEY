@@ -5,7 +5,7 @@ modified inputs, the repo's own field model and shot integrator, no new physics.
 has been adopted and no baseline value has changed.
 
 > **Read [`VELOCITY_CEILING.md`](VELOCITY_CEILING.md) first.** Every lever below moves the design
-> toward a ceiling of **25.3 m/s** set by the payload's 25 g cap over the 1.30 m zone. Only stroke
+> toward a ceiling of **25.3 m/s** set by this design's chosen 25 g acceleration limit over the 1.30 m zone (**P98**). Only stroke
 > length moves the ceiling itself, and only the momentum-transfer release gets round it.
 
 ## The problem

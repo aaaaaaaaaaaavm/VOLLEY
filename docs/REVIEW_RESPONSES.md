@@ -123,7 +123,8 @@ lethal is not.
 **Plus a qualification gap that is paperwork, not physics.** NRCSD-E reportedly requires CubeSats
 to withstand **0.5–2.5 m/s** at ejection *(second-hand, not read in the primary document)*.
 VOLLEY is 6.4× that ceiling. **Physically irrelevant** — a satellite is damaged by acceleration,
-not velocity, and 10.07 g sits well inside the 25 g CDS cap. **Programmatically real**: a customer
+not velocity, and 10.07 g sits well inside this design's chosen 25 g ceiling — *which is a requirement
+this project set, not a CDS limit; the CDS publishes none (**P98**)*. **Programmatically real**: a customer
 qualified "per NRCSD-E" has no qualification basis for 16.0 m/s even though nothing about their
 hardware is threatened.
 

@@ -17,8 +17,9 @@ has been measured, tested, or reviewed by a third party.
 ## What it is
 
 CubeSats flown as rideshare secondaries inherit the primary customer's orbit. The spring
-that ejects them adds 1-2 m/s, enough to drift clear of the stage, not enough to change
-an orbit. A satellite with no propulsion of its own stays there for life.
+that ejects them adds 1-2 m/s: enough for separation, and a real but very small change in
+orbital energy — far too little for commanded orbit shaping. A satellite with no propulsion
+of its own stays essentially where it was dropped, for life.
 
 VOLLEY replaces the spring with an ironless double-sided Halbach linear synchronous motor
 driving a reusable magnetic sled along a 1.5 m track. Twelve 3U CubeSats feed from two
@@ -100,7 +101,7 @@ flowchart LR
 | TRL | 2-3 |
 | Analysis | 68 Python scripts, reproducible, outputs committed as JSON |
 | Validation | 65 run sheets, A1–A65, each with its acceptance bands declared **before** its script existed |
-| Register | 132 numbered entries, 53 live, including the ones that damage the work's own claims |
+| Register | 133 numbered entries, 53 live, including the ones that damage the work's own claims |
 | CAD | script-built from `cad/parameters.json`, **Gen6 current**, STEP and STL committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
 | FEA | magnetostatic 2-D (A1) and 3-D (A2), structural (A4), CFD (A29) |
 | Hardware | **none. Nothing here has been built, fired or measured** |
@@ -124,8 +125,9 @@ All figures are script outputs, not measurements.
 | Track first mode | 109 Hz fixed-fixed (target >70) | `sizing.py` |
 | Energy closure | 100.0 % accounted | `sizing.py` |
 
-Payload family (`motor_model.py`): 1U 18.5 m/s at 13.4 g · 3U 16.0 m/s at 10.1 g ·
-6U 14.5 m/s at 8.3 g · 12U 13.1 m/s at 6.7 g. The 6U and 12U cases are force-limited
+Payload family (`payload_family.json`): 1U 17.9 m/s at 12.6 g · 3U 16.0 m/s at 10.1 g ·
+6U 14.1 m/s at 7.8 g · 12U 12.7 m/s at 6.3 g. **Those are the accelerations the machine
+delivers, not levels any payload is qualified to accept (P98).** The 6U and 12U cases are force-limited
 consequences of the 3U design, not designed variants (see E9).
 
 > **These numbers moved down on 2026-07-29.** The headline was 20.37 m/s at 16.3 g against

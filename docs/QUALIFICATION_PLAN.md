@@ -23,7 +23,7 @@ Two directions, and they are easy to conflate:
 |---|---|---|
 | Sees | Launch loads from the vehicle | |
 | Inflicts | | Ejection loads and stray field on the CubeSats it carries |
-| Governing | Vehicle user guide, GEVS protoflight | CubeSat Design Specification, 25 g cap, magnetic keep-out |
+| Governing | Vehicle user guide, GEVS protoflight | CubeSat Design Specification interface, **this design's chosen 25 g acceleration ceiling** (not a CDS figure — **P98**), magnetic keep-out |
 
 The second column is the unusual one. A spring deployer imparts 1-2 m/s and is magnetically
 inert; VOLLEY carries a Halbach array centimetres from satellites it has not built, and fires

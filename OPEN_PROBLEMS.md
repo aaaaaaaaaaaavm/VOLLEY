@@ -4620,6 +4620,74 @@ reproduces the committed 47.0 J exactly, which is what makes the other two trust
 > not wrong and its bands are not widened. It simply answers a question about a machine that
 > stopped existing on 2026-08-13, and for eight days nothing in the repository said so.
 
+### P98. The acceleration ceiling was presented as a CubeSat qualification limit, and it is a number this project chose: HIGH, CORRECTED 2026-08-21
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Raised in review of the printed manuscript, 2026-08-21, and it is the strongest technical
+criticism the front-page claim has received.**
+
+The claim, in the abstract and on every summary page, was that VOLLEY ejects a satellite *"within
+standard qualification loads"* and *"inside its existing qualification envelope"*. The derivation
+behind it, in `docs/VELOCITY_CEILING.md` and §III-B of the manuscript, was:
+
+> *NASA GEVS protoflight random vibration integrates to **14.1 g rms**, whose **3σ envelope of
+> roughly 42 g** bounds the launch load, and a **25 g** design cap preserves margin against it.*
+
+**That is a unit error dressed as a margin argument.**
+
+| | |
+|---|---|
+| `g_rms` is | the root-mean-square of a **stationary random process** over a broadband spectrum |
+| 3 × `g_rms` is | a **peak-response estimate for that process**, used for fatigue and Miles'-equation load derivation |
+| It is **not** | a quasi-static limit load, and a structure qualified to a random-vibration spectrum is **not** thereby qualified to a sustained 162 ms acceleration of similar nominal magnitude |
+
+**The second error compounds the first.** `docs/PRIOR_ART.md`, ADR-003 and the manuscript's related-work
+section all stated that *"a standard CubeSat qualifies to roughly **14 g quasi-static**"*. **There is no
+such published figure.** It is 14.1 g rms with its units changed. The CubeSat Design Specification Rev. 14
+publishes a mechanical interface, not a load level, and **defers test levels to the launch provider** —
+so they vary by vehicle and by mission, and this repository holds no launch-vehicle user guide and no
+payload-specific load case to substitute.
+
+### What is actually true
+
+| | |
+|---|---|
+| **10.07 g for 162 ms** | the rated model result. **Unchanged** |
+| **25 g** | a ceiling **this project chose**. Everything downstream is sized against it consistently — the retention chain, the cradle preload, the abort logic, the payload-family table, A27, A38, A63, A65 — and that consistency is real |
+| **Payload compatibility** | **not established, and not establishable from anything in this repository.** It depends on the satellite's own qualified load environment and on an integration review |
+| **Mechanical qualification against this machine** | **none. No payload has been tested against it** |
+
+**The 25 g figure survives as a requirement. What does not survive is calling it a capability.**
+
+### Corrected. Propagated 2026-08-21
+
+`docs/VELOCITY_CEILING.md` — the canonical page, which loses its two derived rows and gains the
+correction in full · `docs/PRIOR_ART.md` · `docs/ICD_COMPLIANCE.md` · `docs/GEN5_CLOSURE.md` ·
+`docs/PAYLOAD_CLASSES.md` · `docs/QUALIFICATION_PLAN.md` · `docs/REVIEW_RESPONSES.md` ·
+`docs/DESIGN_OPTIONS_exit_velocity.md` · `SUMMARY.md` · both manuscripts, in the abstract, the
+related-work section, the requirements list, the parameter table, the topology trade, the
+competitive claim, the conclusion and a new first limitation · and the printed brochure.
+
+**ADR-003 keeps its text**, because its comparison block is a dated decision record; the figure it
+quotes is annotated where it is defined rather than edited where it is cited.
+
+### What the correction costs, and what it does not
+
+**It does not weaken the comparison with an armature-based launcher.** Feng's design imposes two to
+three orders of magnitude more acceleration than this one, and that ratio needs no CubeSat standard
+to state — only the two accelerations, both of which are known.
+
+**It does weaken the headline.** *"Inside its existing qualification envelope"* was doing real work
+in the abstract, and there is no honest replacement for it. What replaces it is narrower and duller:
+**a deployment acceleration of 10.07 g, and an open question about whether any given satellite
+accepts it.**
+
+> **The lesson is the same one P16 taught and it is worth stating twice.** Both were claims this
+> project made *about its own defensibility* — the invariant lifetime ratio, and the qualification
+> envelope — and both were the strongest-sounding sentence in the abstract. *A claim that a result
+> is safe is still a claim, and it needs a source like any other.*
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 

@@ -61,7 +61,9 @@ published figures:
 | Energy per shot | **6.91 MJ** | 2.88 kJ | **2400x** |
 | Payload interface | Aluminium **armature coils** on the payload | Magnets on a reusable sled | |
 
-A standard CubeSat qualifies to roughly 14 g quasi-static. Feng's design imposes ~100x that. This is
+Feng's design imposes accelerations two to three orders of magnitude above this one. *This line used to
+read "a standard CubeSat qualifies to roughly 14 g quasi-static"; that figure was 14.1 g rms with its
+units changed and it is withdrawn — **P98**.* This is
 not a flaw in their work, a 20 kg purpose-built body tolerating 10³ g is a coherent design for
 debris removal and rapid response, which is what they target. But it is not a *rideshare secondary
 CubeSat*, and the 6.91 MJ per shot is why their paper has to size a solar array for recharge while

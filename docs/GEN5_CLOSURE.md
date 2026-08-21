@@ -20,7 +20,8 @@ two transverse cassettes. A contactless eddy-current brake arrests the sled; the
 
 **The claim is not electromagnetic launch.** That has been studied at twenty times the velocity.
 **The claim is programmable velocity, a satellite that is never modified, and an acceleration
-inside its existing qualification envelope — all three at once.**
+at 10.07 g rather than the thousands an armature-based launcher imposes — all three at once. *Payload
+structural compatibility is a separate, payload-specific question and is not established here:* **P98**.**
 
 ## Every headline number, and what it rests on
 
@@ -31,7 +32,7 @@ inside its existing qualification envelope — all three at once.**
 | | | |
 |---|---:|---|
 | Thrust constant | **10.54 N per kA/m**, ±1.01 % ripple | `motor_model.py`, **FEM-verified to 0.03 %** |
-| Exit velocity, 3U | **16.029 m/s** | at **10.07 g**, inside the 25 g cap |
+| Exit velocity, 3U | **16.029 m/s** | at **10.07 g**, against this design's chosen 25 g ceiling (**P98**) |
 | Pulse duration | **162.3 ms** | |
 | Energy drawn per shot | **2782 J gross**, 2735 net | 47 J recovered, **3.9 % of sled KE** |
 | Electrical-to-payload efficiency | **18.8 %** | net of regeneration |
@@ -190,6 +191,6 @@ ADRs 032 through 036, and the register — **and it is future work.**
 
 ---
 
-**Register at closure: 132 numbered entries, 53 live, 44 corrected and retained, 35 closed.
+**Register at closure: 133 numbered entries, 53 live, 45 corrected and retained, 35 closed.
 65 run sheets, A1–A65, each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.**

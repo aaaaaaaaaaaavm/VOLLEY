@@ -103,7 +103,7 @@ mechanism failed band 6 at femtosat scale (P44).
 
 | Quantity | Value | Bears on |
 |---|---|---|
-| CubeSat dispenser quasi-static, axial | **10 g** | The structural case, which currently uses GEVS and the 25 g CDS cap |
+| CubeSat dispenser quasi-static, axial | **10 g** | The structural case. It used to say "GEVS and the 25 g CDS cap"; **the CDS publishes no such cap and GEVS is a random-vibration standard** — 25 g is this design's chosen ceiling (**P98**) |
 | CubeSat dispenser quasi-static, lateral (RSS) | **17 g** | Same. **Lateral is the larger number and the repository's structural work is axial-dominated** |
 | Launch vehicle rate before separation, roll | ± 2.0 °/s | The tip-off budget, which A23 assesses against a 2 °/s band |
 | Launch vehicle rate before separation, pitch/yaw | ± 1.0 °/s | Same |
@@ -125,7 +125,7 @@ If it holds, **customer satellites are qualified to a velocity range whose ceili
 VOLLEY deploys at 16.029 m/s — 6.4× that ceiling.**
 
 **Physically this is a non-issue and the repository can show why:** a satellite is not damaged by
-velocity, it is damaged by acceleration, and VOLLEY's **10.07 g against the 25 g CDS cap** is well
+velocity, it is damaged by acceleration, and VOLLEY's **10.07 g against this design's own 25 g ceiling** is well
 inside qualification. Velocity is a consequence of acceleration and stroke, and the stroke is the
 deployer's problem, not the satellite's.
 
