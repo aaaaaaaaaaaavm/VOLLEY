@@ -347,6 +347,15 @@ the number every headline in this project descends from, to **0.07 %**.
 
 > **Superseded figure, annotated 2026-08-10.** The ±1.26 % ripple above is a **pre-quadrature record** and is left intact as the historical value. The current figure is **±1.01 %** (1.0138 % unrounded), derived from `analysis/motor_model.py` via `analysis/results/motor_results.json`. The change came from the 2026-08-03 quadrature correction to the winding-thickness integral, which also moved K<sub>t</sub> from 11.22 to 10.5386 N per kA/m. Nothing in this file is edited.
 
+> **The agreement figure moved with it, annotated 2026-08-21.** The **0.07 %** above is the
+> pre-quadrature agreement and is left intact. It was partly spurious: the reference implementation
+> and the FEM post-processor used the **same** invalid winding-thickness rule — nine
+> endpoint-inclusive samples times thickness over nine, which is neither midpoint nor trapezoidal —
+> so agreeing to 0.07 % did not test that rule. Nine-point Gauss–Legendre in both gives FEM
+> **11.026** against reference **11.03 N per kA/m**, ratio **0.9997**. **The current agreement is
+> 0.03 %**, and it is a weaker-looking number resting on a stronger check.
+> Source: `validation/results/A1_femm.json`, `Kt_N_per_kA` and `Kt_reference`.
+
 
 ### Both misses have identified causes, and neither is a model error
 

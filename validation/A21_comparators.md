@@ -1,5 +1,41 @@
 # A21: VOLLEY against the alternatives, on identical axes
 
+> ## Forward note, 2026-08-21: the comparison table below is pre-A46 and pre-ADR-030
+>
+> **Nothing below is edited, no band is re-declared and the verdict stands.** Two rows of the
+> comparison table carry inputs that later runs replaced, and both replacements moved against
+> VOLLEY. Anything quoting A21 must quote the right-hand column.
+>
+> | Row | As run, 2026-08-10 | Current | Moved by |
+> |---|---:|---:|---|
+> | Δv | 16.388 m/s | **16.029 m/s** | [ADR-030](../docs/adr/030-apply-the-depth-resolved-thrust-constant.md), the depth-resolved thrust constant |
+> | Lifetime extension | +61.8 % | **+60.2 %** | the same |
+> | Ratio against the fastest published spring | 7.52× | **7.33×** | the same |
+> | **Deployer mass per 3U satellite** | **6.375 kg** | **10.547 kg** | [A46](A46_enclosure_buildup.md), which replaced P10's 8.00 kg enclosure placeholder with 50.04 kg of derived line items |
+> | **Band 4, mass parity** | **pass at 1.062** | **FAIL at 1.758** | the same. **[P69](../OPEN_PROBLEMS.md)** |
+> | Cold-gas loss at 3U | 7.5× | **12.4×** | the same |
+>
+> Current values from `analysis/results/comparators.json`, regenerated against the present rollup.
+>
+> **Band 4 was declared before `comparators.py` existed and it is not widened. VOLLEY now fails
+> it.** The sentence below it — *"a magazine-fed electromagnetic launcher lands in the same
+> kilograms-per-satellite class as a canister of springs"* — **is withdrawn**. It is 1.758× heavier
+> per satellite than a canisterised dispenser, and `docs/KILL_CRITERIA.md` threat 1 is crossed at
+> **5.3× on dry mass**. P69 records that no enclosure change reaches parity: the honeycomb sandwich
+> A46 costed would give 8.87 kg per satellite, ratio 1.48, still failing.
+>
+> **The "30° of phase" row is superseded by [A21-R](A21R_release_timing.md).** A21 never declared
+> release timing as a comparator. Satellites released 1200 s apart from the same host reach 30° of
+> in-track phase in **468 s**, at zero Δv, and hold it with zero relative rate; the commanded
+> differential reaches 30° in 1.38 days and then **drifts through it at 21.75 °/day**, which a
+> propulsion-less satellite cannot null. **Phase spacing is not a VOLLEY advantage.** What survives
+> R5 and R6 is orbit change: timed release moves semi-major axis by **0.0 m** and lifetime by
+> **×1.0000**, a commanded shot by **28 801 m** and **×1.602**. **A clock cannot change an orbit.**
+>
+> **What is left of the competitive case, stated exactly:** a commanded per-satellite change in
+> orbital energy, on a satellite that carries nothing, inside its qualification envelope. The mass
+> argument is gone and the phase argument is gone.
+
 > ## Forward note, 2026-08-10: what this ratio does and does not govern
 >
 > **Nothing below is edited. Band 1 was declared before the run and it passed at 7.52×**, and a

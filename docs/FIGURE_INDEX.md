@@ -33,7 +33,7 @@ the number it illustrates, which is the defect the generator was written to remo
 | **D01** | System block diagram: power, control, mechanism, host-interface chains | `legacy/make_diagrams.py` | — | §III architecture | **S** |
 | **D02** | Plan-view layout against an ESPA-Grande envelope | `legacy/make_diagrams.py` | `cad/parameters.json` | §III, and kill criterion 2 — **the figure shows the envelope being exceeded** | **S** |
 | **F01** | Shot profile: velocity, bank voltage, current | `f01_shot()` | `motor_model.shot(trace=True)` | 16.029 m/s, 162.3 ms, 320 A peak | **M** |
-| **F02** | Winding-resolved thrust over one wavelength | `f02_ripple()` | `motor_model.thrust_constant(profile=True)` | K_t = 10.54 N/kA·m, ±1.01 % ripple | **X** — agrees with a 2-D FEM solve to 0.07 % and a 3-D one to 0.059 % |
+| **F02** | Winding-resolved thrust over one wavelength | `f02_ripple()` | `motor_model.thrust_constant(profile=True)` | K_t = 10.54 N/kA·m, ±1.01 % ripple | **X** — agrees with a 2-D FEM solve to 0.03 % and a 3-D one to 0.059 % |
 | **F03** | Closed-loop exit-velocity dispersion, 800 runs | `f03_mc()` | `motor_model.closed_loop_mc()` | 0.0274 m/s (3σ) | **M** |
 | **A29-W** | Mid-plane slice of kinematic pressure and speed around the Gen5 sled and 3U payload | `validation/cfd/fields.py` | `validation/cfd/free_fine/{constant/polyMesh, 1800/{p,U}}`, 581 779 cells | stagnation at the nose, separation at the shoulders, wake past x = 2.2 m. **Pressure only — viscous drag is bounded by a flat-plate correlation, not solved** | **M** |
 | **A02-F** | Halbach airgap field: $B_y$ in the x–y plane, and the profile through the array's 90 mm depth | `analysis/make_field_map.py` | `field_3d.halbach_pair()`, the same builder the thrust integral uses | centre-plane 0.5041 T, depth mean 0.4759 T, **ratio 0.9440** — the assumption A2 corrected | **M** |
@@ -87,7 +87,7 @@ Seven images under `cad/renders/`, produced in Fusion from the **Gen4** assembly
 | Artefact | What it is | Where | Class |
 |---|---|---|:-:|
 | `analysis/results/*.json` | Every computed value, 33 files. `docs/BASELINE.md` is generated from them and `make_baseline.py --check` verifies 23 of them against the scripts on every commit | `analysis/results/` | **M** |
-| 2-D magnetostatic FEM | FEMM/`skfem` solve of the array, agreeing with the analytic model to **0.07 %** | `validation/A1_field_femm.md` | **X** |
+| 2-D magnetostatic FEM | FEMM/`skfem` solve of the array, agreeing with the analytic model to **0.03 %** — the figure after the 2026-08-03 quadrature correction, which found both implementations sharing an invalid winding-thickness rule; the pre-correction agreement was 0.07 % and did not test that rule | `validation/A1_field_femm.md` | **X** |
 | **3-D magnetostatic FEM** | `getdp` reduced-scalar-potential solve, **274,105 DoF on a 315,370-node tetrahedral mesh**, agreeing with magpylib to **0.059 %** | `validation/fem3d/` | **X** |
 | Structural FEM | CalculiX solve of the sled chassis | `validation/A4_sled_structural.md` | **M** |
 | Independent propagator | GMAT R2022a against `astro.py` — and it **falsified** a claim in the paper's own abstract (**P16**) | `validation/gmat/` | **X** |

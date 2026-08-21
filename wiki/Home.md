@@ -44,7 +44,9 @@ upper stage provides.** No mover, no pulse-power chain, no brake, no return stro
 | Added hardware | — | **11.45 kg containment + ~3 kg store** |
 
 Five runs built it, and none set out to: **A35** attributed every kilogram to the requirement
-causing it and found **49.23 kg survives every requirement deletion in all 64 corners**; **A36**
+causing it and found **88.67 kg survives every requirement deletion in all 64 corners** — 70.06 %
+of dry mass, 7.39 kg per satellite against a 2.0 kg criterion (**P95**: A35's own run sheet still
+prints the pre-A46 49.23 kg); **A36**
 closed the manifest route; **A37** made the stage the machine; **A38** showed tip-off does not
 bind; **A39** replaced the spring with gas.
 
@@ -98,7 +100,7 @@ flowchart LR
 | TRL | 2-3 |
 | Analysis | 68 Python scripts, reproducible, outputs committed as JSON |
 | Validation | 65 run sheets, A1–A65, each with its acceptance bands declared **before** its script existed |
-| Register | 130 numbered entries, 53 live, including the ones that damage the work's own claims |
+| Register | 131 numbered entries, 53 live, including the ones that damage the work's own claims |
 | CAD | script-built from `cad/parameters.json`, **Gen6 current**, STEP and STL committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
 | FEA | magnetostatic 2-D (A1) and 3-D (A2), structural (A4), CFD (A29) |
 | Hardware | **none. Nothing here has been built, fired or measured** |
@@ -137,7 +139,7 @@ consequences of the 3U design, not designed variants (see E9).
 
 Three results have independent cross-checks: the Halbach airgap field (analytic wave model
 vs magpylib to three digits, and again vs a meshed magnetostatic FEM agreeing on the thrust
-constant to 0.07 %), orbital decay (orbit-averaged Gauss vs Cowell RK4, 99.4 %), and the
+constant to 0.03 %), orbital decay (orbit-averaged Gauss vs Cowell RK4, 99.4 %), and the
 pulse chain (analytic vs ngspice, agreeing on peak current to 0.01 % once the bank's series
 resistance was modelled, which is a correction ngspice itself forced: P24). Everything else
 is single-sourced and correspondingly weaker.

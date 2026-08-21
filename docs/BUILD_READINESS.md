@@ -49,7 +49,7 @@ settles. **"Computation"** means the work is specified and simply has not been d
 | | |
 |---|---|
 | **Design** | **Frozen.** 162 conductors, three-phase belt, 48 mm wavelength, 90 mm active depth |
-| **Analysis** | **Substantially complete, with a live correction.** A1 agreed with a 2-D meshed FEM to 0.07 %. **A2 then found K<sub>t</sub> is a centre-plane value overstating thrust by 4.42 %** — P46, computed and held, not applied |
+| **Analysis** | **Substantially complete, with a live correction.** A1 agreed with a 2-D meshed FEM to 0.03 %. **A2 then found K<sub>t</sub> is a centre-plane value overstating thrust by 4.42 %** — P46, computed and held, not applied |
 | **Blocked by** | **Both.** A2 band 4 (an independent 3-D FEM solve) is *computation* and was not run. The 4.42 % correction then needs a change-control decision. **And B-1 is the measurement that would settle whether either number is right at all** |
 
 **This is the subsystem the whole machine rests on**, and it is the one where the gap between

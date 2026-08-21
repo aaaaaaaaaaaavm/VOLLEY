@@ -4477,8 +4477,15 @@ deletions closes kill criterion 1 — and the irreducible remainder is **1.8× l
 
 ### Where the stale pair is quoted
 
-**`README.md`, `docs/GEN5_CLOSURE.md`, `docs/KILL_CRITERIA.md`, `P59`, and both manuscripts** carry
+**`README.md`, `docs/GEN5_CLOSURE.md`, `docs/KILL_CRITERIA.md` and `P59`** carry
 *"49.23 kg — 58.2 % — survives the deletion of every requirement in all 64 corners."*
+
+> **Corrected 2026-08-21: the manuscripts do not.** This entry named them and it was wrong.
+> Neither `VOLLEY-paper/paper/paper.tex` nor `VOLLEY-thesis/source/paper.tex` cites A35 at all —
+> no ledger figure, no corner count, no per-satellite survivor mass. **The stale pair was never
+> propagated into the manuscripts, so there is nothing there to correct**, and the four repository
+> locations above are the whole of it. Checked by grep for `49.23`, `58.2`, `64 corners` and
+> `ledger` across both `.tex` files, all returning nothing.
 
 **What would close it:** propagate **88.67 kg / 70.06 % / 7.39 kg per satellite** everywhere, and
 **withdraw the twenty-four-satellite escape** rather than restating it at a number that no longer
@@ -4488,6 +4495,64 @@ gets a dated block, as A45-R2 and P84 did.
 > **This is the sixth place A46 had to be chased to**, after `BASELINE.md`, the register, the
 > paper's abstract, its conclusion, its family table and `mass_properties.py`'s own docstring.
 > *A46 landed on 2026-08-16 and the project is still finding what it moved.*
+
+### P96. The manuscript argued mass-per-satellite from pre-A46 numbers against its own post-A46 table, and still priced phase against drag: HIGH, CORRECTED 2026-08-21
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found while preparing a printed carry copy of the manuscript, which is the first time anyone
+had read Section V straight through since [A46](validation/A46_enclosure_buildup.md) landed.**
+
+**Three defects, all of them the same propagation failing in a different place.**
+
+**1. The table was regenerated and the prose was not.** Table~\ref{tab:family} was rebuilt at the
+current operating point on 2026-08-20 and gives **10.550 kg of deployer per 3U satellite**. The
+paragraph immediately below it still argued from **7.04 kg**, the pre-A46 figure, and drew three
+conclusions from it: *"by a factor of thirty"*, *"loses to a cold-gas module by roughly a factor
+of eight"*, and *"at PocketQube it spends 0.24 kg and wins by two to five"*. **A reader comparing
+the paragraph to the table directly above it would have caught this.**
+
+| | As printed | Current |
+|---|---:|---:|
+| Deployer mass per 3U satellite | 7.04 kg | **10.550 kg** |
+| Spread across the class column | ×30 | **×27** 3U against PocketQube 1P, **×109** across the full column |
+| Loss to a cold-gas module | ×8 | **×9 to ×21**, and **×12.4** at the 0.85 kg mid-class figure |
+| PocketQube 1P per satellite | 0.24 kg | **0.388 kg**, winning by 1.3 to 3.1 rather than 2 to 5 |
+
+**2. Section V-C still priced in-track phase against differential drag.** The abstract and the
+conclusion both carry [P56](#p56)'s correction — that release timing delivers 30° of phase for
+468 s of waiting at zero Δv — and **the body section making the claim did not**. It compared
+commanded splits at 1.4 days against drag at 25 days and stopped there. *The correction was
+propagated to the two places a reader looks first and not to the place the claim actually lives.*
+`F05_dragvs.png`'s caption now states what the figure omits; the figure is not redrawn, because
+the drag comparison it makes is still correct.
+
+**3. The limitations section said the depth-resolved thrust constant was "computed and
+deliberately not applied here"** — [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md)
+applied it on 2026-08-13, and every figure in the paper, including the abstract's, is quoted after
+it. **The paper contradicted itself on the provenance of its own headline.** The replacement text
+states the adoption date, the reason it was held for three days, and the limit of the
+three-dimensional check: A2 band 4 tests the field model at midgap to 0.059 %, **not** the depth
+average, and no three-dimensional check of the integrated thrust constant exists.
+
+### What else the same read found
+
+**`tab:tier` carried 125 kg loaded** — pre-A46. Now 126.6 dry, 174.6 loaded.
+**The array-length sweep in V-A carried 4.95 N per kA/m and 13.3 m/s** for a 150 mm array, against
+`docs/PAYLOAD_CLASSES.md`'s current **4.65** and **12.9 m/s** — the same ADR-030 propagation.
+**Four overfull lines ran into the page margin**, three of them predating this pass; all four are
+now zero.
+
+**And the comparison the paper had never stated at all is now stated**: VOLLEY is **1.758× heavier
+per 3U satellite** than a canisterised dispenser, A21 band 4 fails, and kill criterion 1 is crossed
+at **5.3×** on dry mass. [P69](#p69) recorded that on 2026-08-16 and the manuscript did not carry
+it. *A paper that omits its own failed comparator band is a brochure.*
+
+> **A46 landed on 2026-08-16. This is the seventh place it had to be chased to**, after
+> `BASELINE.md`, the register, the paper's abstract, its conclusion, its family table and
+> `mass_properties.py`'s docstring — and P95 found the eighth in A35 the day before this one.
+> *The lesson is not that the propagation was careless. It is that a rollup change touches prose
+> that no gate reads, and there is no gate that reads prose.*
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
