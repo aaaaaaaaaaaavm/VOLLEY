@@ -35,6 +35,7 @@ the number it illustrates, which is the defect the generator was written to remo
 | **F01** | Shot profile: velocity, bank voltage, current | `f01_shot()` | `motor_model.shot(trace=True)` | 16.029 m/s, 162.3 ms, 320 A peak | **M** |
 | **F02** | Winding-resolved thrust over one wavelength | `f02_ripple()` | `motor_model.thrust_constant(profile=True)` | K_t = 10.54 N/kA·m, ±1.01 % ripple | **X** — agrees with a 2-D FEM solve to 0.07 % and a 3-D one to 0.059 % |
 | **F03** | Closed-loop exit-velocity dispersion, 800 runs | `f03_mc()` | `motor_model.closed_loop_mc()` | 0.0274 m/s (3σ) | **M** |
+| **A29-W** | Mid-plane slice of kinematic pressure and speed around the Gen5 sled and 3U payload | `validation/cfd/fields.py` | `validation/cfd/free_fine/{constant/polyMesh, 1800/{p,U}}`, 581 779 cells | stagnation at the nose, separation at the shoulders, wake past x = 2.2 m. **Pressure only — viscous drag is bounded by a flat-plate correlation, not solved** | **M** |
 | **F04** | Orbital lifetime vs deployment altitude | `f04_life()` | `astro.lifetime()` | ×1.60 multiplier | **M** |
 | **F05** | Constellation seeding vs differential drag | `f05_dragvs()` | `astro` | 30° in 1.4 days vs 25. **Caption must name release timing at 468 s as the free baseline (P56)** | **M** |
 | **F06** | Satellite–stage range over 30 days | `f06_conj()` | `astro.conjunction(trace=True)` | Deployment safety, §V-D | **M** |
