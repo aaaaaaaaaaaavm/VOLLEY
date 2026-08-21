@@ -140,33 +140,27 @@ purchase."* **It has not been ordered.**
 > start.** B-1 changes **E4** from true to false — *a change of category, not of degree* — and it
 > measures the field model that every Gen5 number in the table above descends from.
 
-## The one thing blocking closure
+## Phase I is closed
 
-**Found while writing this page, which is the argument for writing it.**
+**The last item was found while writing this page, which is the argument for writing it.**
 
-**The paper's system mass is 50 % low, in its own abstract.** `mass_properties.py` and
-[`BASELINE.md`](BASELINE.md) give **126.6 kg dry**; `paper.tex` says **84.5 kg** in the abstract and
-conclusion, and **76.5 kg** in the payload-family table caption.
+**The paper's system mass was 50 % low, in its own abstract** — 84.5 kg against the repository's
+126.6. [A46](../validation/A46_enclosure_buildup.md) itemised the enclosure on 2026-08-16, an
+**8.00 kg placeholder becoming 50.04 kg**, and the arithmetic names the cause exactly:
+**84.5 − 8.00 + 50.04 = 126.54.**
 
-**The arithmetic names the cause exactly.** [A46](../validation/A46_enclosure_buildup.md) itemised
-the enclosure on 2026-08-16 — an **8.00 kg placeholder** became **50.04 kg**:
+**Fixing it exposed more than the entry described.** The payload-family table was stale in **every
+column, not just mass** — its velocities sat at the **pre-ADR-030** operating point, so the 3U row
+read **16.4 m/s at 10.5 g** against the paper's own rated point of **16.0 at 10.1** stated two
+paragraphs earlier. **The table contradicted its own paper.** And it was internally inconsistent:
+seven rows 76.5-based, the 3U row alone 84.5-based.
 
-> **84.5 − 8.00 + 50.04 = 126.54**, against the repository's 126.6. And **84.5 − 8.00 = 76.5**,
-> the table caption. **Both paper figures are pre-A46**, and the paper was last built three days
-> after it landed.
+**All of it is regenerated from `payload_family.json` and both PDFs are rebuilt and verified.**
+[P93](../OPEN_PROBLEMS.md) is closed.
 
-**It is a re-run rather than a correction.** The caption states that per-satellite deployer mass
-*uses* the 76.5 kg figure, so every row of the payload-family table descends from it and moves by
-**65 %** at the true mass. **Patching the abstract alone would leave three inconsistent numbers
-instead of two.**
-
-**Recorded as [P93](../OPEN_PROBLEMS.md), CRITICAL. Phase I does not close on the paper until it
-lands.** *Everything else on this page is closed, caveated or deliberately open — this is the one
-item that is simply wrong.*
-
-> **Nothing in this repository compares the paper against `BASELINE.md`.** Four passes touched the
-> paper's companions and none of them would have caught this. It is **P84's shape, one deliverable
-> further out**, and the gate that would catch it does not exist yet.
+> **The audit that opened P93 checked thirteen headline scalars and passed eleven. It could not see
+> the table** — the prose carries 16.0 and the table carried 16.4. *The right number in the wrong
+> place hides the wrong number in the right one.*
 
 ## Gen6, and why it is not in the paper
 
@@ -196,6 +190,6 @@ ADRs 032 through 036, and the register — **and it is future work.**
 
 ---
 
-**Register at closure: 128 numbered entries, 52 live, 42 corrected and retained, 34 closed.
+**Register at closure: 128 numbered entries, 51 live, 42 corrected and retained, 35 closed.
 65 run sheets, A1–A65, each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.**

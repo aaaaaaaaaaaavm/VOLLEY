@@ -9,6 +9,19 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-20 (fifty-first pass): Gen5 closes
+
+| ID | Item | Detail |
+|---|---|---|
+| **P93** | **CLOSED — and the entry was wrong about its own cost** | It called for a re-run. `payload_family.py` **already read `dry_kg` live** and `payload_family.json` already carried **126.6** with all nine rows. *The analysis was current the whole time; only the manuscript was stale.* |
+| **P93** | **Fixing it exposed two things the audit had missed** | **A third stale mass** in the mechanical section (84.5 / 132.5 / CoG 0.44 m → **126.6 / 174.6 / 0.46**), and **the family table stale in every column** — its velocities were at the **pre-ADR-030** point, so the 3U row read **16.4 m/s at 10.5 g** against the paper's own rated **16.0 at 10.1** two paragraphs earlier. **The table contradicted its own paper**, and seven rows were 76.5-based while the 3U row alone was 84.5-based. |
+| **Family table** | **Regenerated from `payload_family.json`** | All eight rows, all five columns. 3U is **10.550 kg/satellite**. The *"factor of thirty across the family"* claim — invariant in dry mass, therefore always checkable — is **109×**. |
+| **A29** | **The flow field, at last** | `validation/cfd/fields.py` parses the committed case in **pure Python** — `postProcess` aborts in this OpenFOAM 1912 build with an IOstream error, the same class of failure A29 recorded for `wallShearStress`. 721 781 points, 1 884 060 faces, **581 779 cells**. The mid-plane slice shows stagnation at the nose, separation at the shoulders and a wake unrecovered by x = 2.2 m — **A29's "classic bluff-body split", visible for the first time.** |
+| **Figures** | **`A29_cfd_report.png` was an orphan in both manuscripts** | Present in `figures/` since it was generated and referenced by neither `paper.tex`. **The paper had never once shown its CFD work.** Rescued, and the new wake figure placed beside it. **Unreferenced-figure count in both repos is now zero.** |
+| **Captions** | **Both CFD captions state the bound** | The pressure term is integrated from the solved field; **the viscous term is not solved** and is bounded by a flat-plate correlation. *A picture of a result must not imply more than the result claims.* |
+
+---
+
 ## 2026-08-20 (fiftieth pass): Gen5 closes, and the paper does not
 
 | ID | Item | Detail |

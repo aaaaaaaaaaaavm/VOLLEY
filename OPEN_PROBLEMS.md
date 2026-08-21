@@ -12,7 +12,7 @@ fixed first. **E-items are genuinely unsolved engineering.**
 > |---|---:|---|
 > | `LIVE` | **53** (32 P, 21 E) | open engineering; something still has to be done |
 > | `CORRECTED` | **41** | found, fixed and propagated — **retained as the published record, not as debt** |
-> | `CLOSED` | **34** | resolved, with the closer named in the entry |
+> | `CLOSED` | **35** | resolved, with the closer named in the entry |
 >
 > **Four of those moves are a classifier repair, not new engineering.** `\bRESOLVED\b` matched
 > inside *depth-resolved*, and the tool read its own `Status:` line back in on the next run, so a
@@ -4323,8 +4323,8 @@ part rather than reaching them through metal.
 > above **22.3 N**, the stage is needed, and **A66 becomes the next run with nothing else in front
 > of it.**
 
-### P93. The paper's system mass is 50 % low, in the abstract, and A46 never propagated into it: CRITICAL, NEW 2026-08-20
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P93. The paper's system mass is 50 % low, in the abstract, and A46 never propagated into it: CRITICAL, CLOSED 2026-08-20
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
 
 
 **Found while closing Gen5, which is the only reason it was found at all.**
@@ -4364,10 +4364,30 @@ the caption inconsistent with the repository — three numbers instead of two.*
 
 ### What would close it
 
-**Re-run `payload_family.py` at the 126.6 kg dry mass**, propagate into the abstract, the
-conclusion, the Table caption and every per-satellite figure that descends from it, then rebuild
-both PDFs. **`docs/GEN5_CLOSURE.md` states this as the one item blocking the paper**, and Phase I
-does not close on the paper until it lands.
+**What closed it, 2026-08-20.** *And it was not a re-run — this entry was wrong about its own
+cost.* `payload_family.py` **already reads `dry_kg` live**; its docstring records this exact failure
+mode — *"It was pasted, at 76.5 kg, and it stayed at 76.5 when mass_properties moved to 84.5"* — and
+`payload_family.json` already carried **`deployer_dry_kg: 126.6`** with all nine class rows. **The
+analysis was current the whole time. Only the manuscript was stale.**
+
+**And it was worse than this entry described.** Fixing it exposed two things the mass audit had not:
+
+| | |
+|---|---|
+| **A third stale mass** | The mechanical section also read **84.5 kg** (loaded 132.5, CoG 0.44 m). Now **126.6 / 174.6 / 0.46 m** |
+| **The family table was stale in *every* column, not just mass** | Its velocities and accelerations were at the **pre-ADR-030** operating point — the 3U row read **16.4 m/s at 10.5 g** against the paper's own rated point of **16.0 at 10.1**, stated two paragraphs earlier. **The table contradicted its own paper** |
+| **And it was internally inconsistent** | Seven rows were 76.5-based; the 3U row alone was 84.5-based. *One row had been updated and the others had not* |
+
+**All eight rows are now regenerated from `payload_family.json`.** 3U reads **10.550 kg/satellite**,
+and the *"varies by a factor of thirty across the family"* claim — which is invariant in dry mass and
+was therefore always checkable — is corrected to **109×**.
+
+**Both PDFs rebuilt and verified**: `126.6` present, `84.5` and `76.5` absent from both.
+
+> **The audit that opened this entry checked thirteen headline scalars in prose and passed eleven.
+> It could not see the table**, because the prose carries 16.0 and the table carried 16.4 — *the
+> right number in the wrong place hides the wrong number in the right one.* **`check_paper.py`
+> must read tables, not just prose.**
 
 > **The register's own first sentence says P-items are errors in the currently published paper and
 > should be fixed first.** This one sat through four passes that touched the paper's companions
