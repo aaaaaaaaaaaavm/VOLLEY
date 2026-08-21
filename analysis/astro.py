@@ -1,23 +1,37 @@
 """
 VOLLEY | Astrodynamics: lifetime multiplier, constellation seeding, conjunction, UQ.
 
-Reproduces (paper Secs. IV-C, V-B, V-C) at the rated velocity of 16.388 m/s:
-    lifetime multiplier         x1.80 at 450 km, BC 61 kg/m^2
-    invariance                  x1.81 across BC 40-90 and 0.5-2.5x density
+Reproduces (paper Secs. IV-C, V-B, V-C) at the rated velocity of 16.029 m/s:
+    lifetime multiplier         x1.60 at 450 km, BC 61 kg/m^2, MEAN ACTIVITY ONLY
     Cowell vs orbit-averaged    99.4 % agreement on 30-day decay
     drift seeding 2/5/10 m/s    30 deg in 6.9 / 2.8 / 1.4 days
-    differential drag (3:1)     30 deg in 25.0 days  <- the comparison baseline
-    conjunction (screening)     4.6 km min / 12.3 km median at 20.37 m/s -- fragile
-    phase realignment           8.1 days (the robust quantity; see OPEN_PROBLEMS P1)
+    release timing              30 deg in 468 s at zero dv  <- the free baseline (A21-R)
+    differential drag (3:1)     30 deg in 25.0 days
+    conjunction (screening)     42.2 km min / 46.6 km median -- fragile
+    phase realignment           10.3 days (the robust quantity; see OPEN_PROBLEMS P1)
+
+INVARIANCE IS WITHDRAWN (P16). This module once reported the lifetime RATIO as
+invariant across BC 40-90 and a 0.5-2.5x density range, and offered that as the
+result the analysis could defend. GMAT R2022a falsified it: the sweep applies solar
+activity as a uniform multiplicative scale on density, and BC enters the drag term
+in the same slot, so both sweeps divide the two lifetimes being compared by the same
+factor and their ratio cannot move. The flatness was an artefact of how the sweep was
+posed. The multiplier is quoted at a STATED ACTIVITY LEVEL and is not claimed invariant.
+
+PHASE SPACING IS NOT A CLAIM OF THIS PROJECT (P56, A21-R). Release timing reaches
+30 deg of in-track phase in 468 s at zero dv and holds it at zero relative rate; a
+commanded split reaches it in 1.4 days and then drifts through it at 21.75 deg/day.
+What only dv can do is change the orbit: timed release moves semi-major axis by 0 m,
+a commanded shot by 28.8 km. Compare against the clock, not against drag.
 
 MODEL LIMITATION: static exponential atmosphere (Vallado-class table, mean solar
-activity). Absolute lifetimes carry severalfold uncertainty across the solar cycle;
-the RATIO is what survives that uncertainty and is what the paper claims.
+activity). Absolute lifetimes carry severalfold uncertainty across the solar cycle,
+and after P16 the ratio carries the same uncertainty as everything else derived from it.
 
 Conjunction results are SCREENING LEVEL. They do not replace per-shot COLA products.
 
-Provenance: model output, not independently re-derived.
-No result here has been checked against GMAT, STK, or any external propagator.
+Provenance: model output. The lifetime multiplier and the 30-day decay have been run
+against GMAT R2022a (A15); nothing here has been measured.
 """
 import numpy as np
 import math
