@@ -32,15 +32,13 @@ import motor_model as mm
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 
 
-def kt_depth_resolved(depth=None, nz=9, nx=240, ny=9, n_wave=7):
-    """motor_model.thrust_constant, with By averaged over z instead of sampled at z = 0.
+def halbach_pair(depth, n_wave=7):
+    """The opposed Halbach arrays as magpylib Cuboids, at the requested block depth.
 
-    Deliberately a copy of the original integral with ONE change, so the comparison isolates
-    the depth assumption and nothing else. Same winding, same currents, same x and y
-    quadrature, same phase search. Setting nz = 1 reproduces the original exactly.
+    Extracted from kt_depth_resolved so that anything wanting the FIELD -- a map, a section,
+    a sanity check -- builds the same geometry the thrust integral does, rather than a second
+    copy of it that can drift.
     """
-    DEPTH = mm.DEPTH if depth is None else depth
-    # Rebuild the field at the requested depth. Everything else follows motor_model.
     LAM, NBLK, TH, GAP, BR, W = mm.LAM, mm.NBLK, mm.TH, mm.GAP, mm.BR, mm.W
     import magpylib as magpy
 
@@ -51,11 +49,23 @@ def kt_depth_resolved(depth=None, nz=9, nx=240, ny=9, n_wave=7):
             ang = (90 + step * i * 90) % 360
             pol = [BR * np.cos(np.radians(ang)), BR * np.sin(np.radians(ang)), 0]
             y_c = y_face + (TH / 2 if y_face > 0 else -TH / 2)
-            mags.append(magpy.magnet.Cuboid(polarization=pol, dimension=(W, TH, DEPTH),
+            mags.append(magpy.magnet.Cuboid(polarization=pol, dimension=(W, TH, depth),
                                             position=(x, y_c, 0)))
         return magpy.Collection(mags)
 
-    field = magpy.Collection([arr(+GAP / 2, -1), arr(-GAP / 2, +1)])
+    return magpy.Collection([arr(+GAP / 2, -1), arr(-GAP / 2, +1)])
+
+
+def kt_depth_resolved(depth=None, nz=9, nx=240, ny=9, n_wave=7):
+    """motor_model.thrust_constant, with By averaged over z instead of sampled at z = 0.
+
+    Deliberately a copy of the original integral with ONE change, so the comparison isolates
+    the depth assumption and nothing else. Same winding, same currents, same x and y
+    quadrature, same phase search. Setting nz = 1 reproduces the original exactly.
+    """
+    DEPTH = mm.DEPTH if depth is None else depth
+    LAM = mm.LAM
+    field = halbach_pair(DEPTH, n_wave)
 
     xs = np.linspace(0, LAM, nx, endpoint=False)
     y_nodes, y_weights = np.polynomial.legendre.leggauss(ny)

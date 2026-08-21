@@ -48,6 +48,16 @@ VIEWS = [
     ("breech",      MECHANISM,              (-1350, -900, 620),   (250, 0, 60),  50),
     ("sled_detail", ["Sled", "Track", "Stator"], (-350, -1500, 780), (420, 0, 0), 55),
     ("closed",      list(PARTS),            (-1700, -2800, 1500), (900, 0, 250), 50),
+    # Exploded. Offsets are presentation only -- they displace the STLs the other views
+    # import at their assembled positions, and nothing downstream reads them.
+    # The drive stack taken apart, in the order it assembles: track, stator, sled, payload.
+    # The ESPA ring, cassette and brake are left out deliberately -- they sit beside the
+    # stack rather than in it, and including them reads as scattered parts, not an explode.
+    ("exploded", [("Track", (0, 0, 0)),
+                  ("Stator", (0, 0, 300)),
+                  ("Sled", (0, 0, 620)),
+                  ("Payload_3U", (0, 0, 900))],
+     (-1350, -2500, 1500), (830, 0, 430), 52),
 ]
 
 
@@ -123,8 +133,15 @@ def look_at(obj, target):
 
 
 def build_scene(parts):
+    """Import each named part.
+
+    A parts entry is either a name, or a (name, (dx, dy, dz)) pair that displaces the part
+    from its assembled position. A bare name means zero offset, so every view written before
+    exploded views existed behaves exactly as it did.
+    """
     clear()
-    for name in parts:
+    for entry in parts:
+        name, offset = entry if isinstance(entry, tuple) else (entry, (0.0, 0.0, 0.0))
         fn, rgb, met, rough = PARTS[name]
         p = os.path.join(STL, fn)
         if not os.path.exists(p):
@@ -132,6 +149,9 @@ def build_scene(parts):
         mat = material(name, rgb, met, rough)
         for o in import_stl(p):
             o.name = name
+            o.location = (o.location[0] + offset[0],
+                          o.location[1] + offset[1],
+                          o.location[2] + offset[2])
             o.data.materials.clear()
             o.data.materials.append(mat)
             o.data.use_auto_smooth = False

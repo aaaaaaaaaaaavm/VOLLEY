@@ -383,6 +383,14 @@ and its class of evidence, and note that the class for *measured* has **zero mem
 
 <table>
 <tr>
+<td width="50%"><img src="figures/A29_wake.png" alt="OpenFOAM mid-plane slice: pressure and speed around the sled"><br><sub><b>The flow, A29.</b> Mid-plane slice of the converged fine mesh &mdash; stagnation on the forward face, separation at the shoulders, and a wake that has not recovered by <b>x = 2.2 m</b>. <b>581 779 cells</b>, <code>simpleFoam</code> k-&omega; SST. The pressure term is integrated from the solved field; <b>the viscous term is not solved</b> and is bounded by a flat-plate correlation, because <code>wallShearStress</code> aborts in this OpenFOAM build. Parsed out of the case in pure Python (<code>validation/cfd/fields.py</code>).</sub></td>
+<td width="50%"><img src="figures/A02_field_map.png" alt="Halbach airgap field and its depth profile"><br><sub><b>The field, A2/A3.</b> The physics every Gen5 number descends from. Left, <b>B<sub>y</sub></b> across the 12 mm gap with the 10 mm winding marked; right, the profile through the array's <b>90 mm depth</b>. Sampling the centre plane and multiplying gives <b>0.5041 T</b>; the depth mean is <b>0.4759 T</b>. <b>That assumption cost K<sub>t</sub> 4.42 %</b> and moved every dependent number with it.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="cad/renders/gen5/exploded.png" alt="Exploded view of the Gen5 drive stack"><br><sub><b>The drive stack, exploded.</b> Track, stator winding, sled, payload &mdash; in the order it assembles. Rendered in Blender from the same STLs <code>cad/build_gen5.py</code> writes from <code>parameters.json</code>, so the geometry is the geometry, not an illustration of it.</sub></td>
+<td width="50%"><img src="figures/A35_ledger.png" alt="Constraint ledger: single-requirement mass and the 64-corner floor"><br><sub><b>The mass that will not go away, A35.</b> Every kilogram attributed to the requirement causing it, then every requirement deleted in all <b>64 corners</b>. <b>88.67 kg &mdash; 70.06 % &mdash; survives all of them</b>, which is <b>7.39 kg per satellite against a 2.0 kg criterion</b>. Three of the six requirements carry no mass on their own. <i>A35's run sheet still reads 49.23 kg at the pre-A46 dry mass &mdash; <b>P95</b>.</i></sub></td>
+</tr>
+<tr>
 <td width="50%"><img src="figures/F01_shot.png" alt="Shot simulation: force, velocity, current"><br><sub><b>The shot.</b> Force, velocity and current through the 162.3 ms stroke (<code>motor_model.py</code>).</sub></td>
 <td width="50%"><img src="figures/F04_life.png" alt="Orbital lifetime with and without the boost"><br><sub><b>Lifetime.</b> Boosted vs unboosted decay; the x1.60 multiplier at mean activity is the model result, not the absolute years (<code>astro.py</code>).</sub></td>
 </tr>
@@ -474,7 +482,7 @@ since.
 
 **Above roughly 2 kg per satellite, a rational customer buys a propulsion module instead.**
 [A35](validation/A35_constraint_ledger.md) attributed every kilogram to the requirement causing it
-and found **49.23 kg — 58.2 % — survives the deletion of every requirement in all 64 corners**, so
+and found **88.67 kg — 70.06 % — survives the deletion of every requirement in all 64 corners** ([P95](OPEN_PROBLEMS.md): A35's run sheet still says 49.23 kg at the pre-A46 dry mass), so
 **there is no architecture that reaches 2 kg.**
 Gen5 is **10.547 kg**; Gen6 is **1.2145 kg added** but **10.547 kg on dry mass**, and both
 numerators are reported wherever either appears. **The threshold has never been moved** — a

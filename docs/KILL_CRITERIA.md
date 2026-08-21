@@ -49,7 +49,7 @@ nothing in the rollup is physically measured.
 >
 > | Route | |
 > |---|---|
-> | **Architecture** | **Closed by [A35](../validation/A35_constraint_ledger.md).** Every kilogram was attributed to the requirement causing it and **49.23 kg — 58.2 % — survives every deletion of every requirement in all 64 corners.** The deletable fraction caps at **41.8 %**. There is no architecture that reaches 2 kg |
+> | **Architecture** | **Closed by [A35](../validation/A35_constraint_ledger.md).** Every kilogram was attributed to the requirement causing it and **88.67 kg — 70.06 % — survives every deletion of every requirement in all 64 corners.** The deletable fraction caps at **29.90 %**, the best corner deleting C2 and C3. *[P95](../OPEN_PROBLEMS.md): A35's run sheet still reads 49.23 kg / 58.2 % / 41.8 % at the pre-A46 dry mass, and its twenty-four-satellite escape route does not survive the correction.* There is no architecture that reaches 2 kg |
 > | **Manifest size** | **Closed by [A36](../validation/A36_magazine_density.md) band 4.** The N → ∞ limit is a healthy **0.954 kg/satellite**, but 2.0 kg is first reached at **N = 116** — and no factorisation of 116 packages inside the 1500 mm track length. The largest manifest that fits is **N = 126**, at **1.941 kg/satellite**, on a **244.6 kg** machine running a **42-hour** campaign |
 > | **Smaller payloads** | **Open**, and now the only one |
 >

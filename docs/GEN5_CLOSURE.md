@@ -82,7 +82,7 @@ seven with their evidence.
 
 **Criterion 1 is the one that matters: above roughly 2 kg per satellite a rational customer buys a
 propulsion module instead.** Gen5 is **10.547 kg**. [A35](../validation/A35_constraint_ledger.md)
-attributed every kilogram to the requirement causing it and found **49.23 kg — 58.2 % — survives
+attributed every kilogram to the requirement causing it and found **88.67 kg — 70.06 % — survives
 the deletion of every requirement in all 64 corners**, so **there is no architecture that reaches
 2 kg.** A36 closed the manifest route. **Only a smaller payload class remains, and that decision is
 deferred rather than taken.**

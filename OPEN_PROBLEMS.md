@@ -2711,7 +2711,7 @@ Two runs have now closed two of the three routes to this criterion by measuremen
 
 | Route | |
 |---|---|
-| **Architecture** | **Closed by [A35](validation/A35_constraint_ledger.md).** 49.23 kg — 58.2 % of dry mass — survives every deletion of every requirement in all 64 corners. The deletable fraction caps at 41.8 % |
+| **Architecture** | **Closed by [A35](validation/A35_constraint_ledger.md).** **88.67 kg — 70.06 %** of dry mass survives every deletion of every requirement in all 64 corners; the deletable fraction caps at **29.90 %**. *A35's run sheet still reads 49.23 / 58.2 / 41.8 at the pre-A46 dry mass — [P95](#p95-a35s-headline-survives-everything-figure-is-pre-a46-and-correcting-it-reverses-a35s-own-escape-route-critical-new-2026-08-20)* |
 | **Manifest size** | **Closed by [A36](validation/A36_magazine_density.md) band 4.** The N → ∞ limit is a healthy 0.954 kg/satellite, but 2.0 kg is first reached at **N = 116**, and no factorisation of 116 packages inside the 1500 mm track length. The largest manifest that fits is **N = 126**, at **1.941 kg/satellite** on a **244.6 kg** machine running a **42-hour** campaign |
 | **Smaller payloads** | **Open.** `docs/PAYLOAD_CLASSES.md` already puts PocketQube at 0.266 kg/satellite |
 
@@ -3274,7 +3274,7 @@ figures in one sentence and noticing they had different denominators.**
 
 [A35](validation/A35_constraint_ledger.md) attributed every kilogram of the ledger to the
 requirement causing it and published the result as **percentages of dry mass** — the pulse at
-**28.1 %**, the mover at **13.6 %**, and **49.23 kg, 58.2 %,** surviving every deletion.
+**28.1 %**, the mover at **13.6 %**, and **88.67 kg, 70.06 %,** surviving every deletion (**P95**; A35 published 49.23 kg at the pre-A46 dry mass).
 [A46](validation/A46_enclosure_buildup.md) then moved the rollup from **84.53 to 126.56 kg**.
 
 **Every one of those percentages fell without a single kilogram moving.**
@@ -4437,6 +4437,57 @@ guessing a store.
 > inputs — which drive the **50.04 kg** that is **58.6 % of the stage credit** — are every one of
 > them declared, and its band 7 says so: *"Every line item traces to a parameter or a declared
 > input — zero undeclared."* **The discipline works. This slipped through it.**
+
+### P95. A35's headline survives-everything figure is pre-A46, and correcting it reverses A35's own escape route: CRITICAL, NEW 2026-08-20
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found while drawing the A35 ledger for the front page. The figure would not agree with the text,
+and the figure was right.**
+
+`analysis/results/constraint_ledger.json` was **regenerated on 2026-08-16** in the commit *"Apply
+A46: the enclosure is 50 kg, and mass parity does not survive it."* `validation/A35_constraint_ledger.md`
+**was last touched on 2026-08-14.** *The script ran at the new dry mass and the run sheet was never
+re-read.*
+
+| | A35 as published | At the ledger's own current output |
+|---|---:|---:|
+| Dry mass | 84.59 kg (implied) | **126.56 kg** |
+| Survives every deletion in all 64 corners | **49.23 kg — 58.2 %** | **88.67 kg — 70.06 %** |
+| Best corner, deleting C2 and C3 | — | removes 37.89 kg, **29.90 %** |
+| **Per satellite at twelve** | **4.10 kg** | **7.39 kg** |
+| **Per satellite at twenty-four** | **2.05 kg** | **3.69 kg** |
+
+**49.23 / 0.582 = 84.59 kg**, which is the pre-A46 dry mass. **The arithmetic identifies the cause
+exactly, the same way it did for [P93](#p93-the-papers-system-mass-is-50--low-in-the-abstract-and-a46-never-propagated-into-it-critical-closed-2026-08-20).**
+
+### The part that is not just a stale number
+
+**A35's section 4 offers the only escape route the whole ledger found:**
+
+> *"At twenty-four satellites the same 49.23 kg is **2.05 kg each, and the criterion closes** — even
+> allowing the containment lines to grow with the manifest, it lands near 2.5 kg. **Magazine density
+> is the only lever in this run that reaches the criterion.**"*
+
+**At the current ledger it is 3.69 kg each. The criterion does not close at twenty-four.** *A35's
+one route out of kill criterion 1 was an artefact of a dry mass that A46 superseded two days later.*
+
+**A35's harder finding is unchanged and is now harder still**: no combination of requirement
+deletions closes kill criterion 1 — and the irreducible remainder is **1.8× larger** than published.
+
+### Where the stale pair is quoted
+
+**`README.md`, `docs/GEN5_CLOSURE.md`, `docs/KILL_CRITERIA.md`, `P59`, and both manuscripts** carry
+*"49.23 kg — 58.2 % — survives the deletion of every requirement in all 64 corners."*
+
+**What would close it:** propagate **88.67 kg / 70.06 % / 7.39 kg per satellite** everywhere, and
+**withdraw the twenty-four-satellite escape** rather than restating it at a number that no longer
+closes anything. **A35's bands are not re-declared and its verdict is not edited** — the run sheet
+gets a dated block, as A45-R2 and P84 did.
+
+> **This is the sixth place A46 had to be chased to**, after `BASELINE.md`, the register, the
+> paper's abstract, its conclusion, its family table and `mass_properties.py`'s own docstring.
+> *A46 landed on 2026-08-16 and the project is still finding what it moved.*
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

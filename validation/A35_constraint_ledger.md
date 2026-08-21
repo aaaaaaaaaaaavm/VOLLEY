@@ -126,6 +126,29 @@ sibling result: deleting C1 and C2 together is worth 13.6 % here, and BOLLEY's p
 to 15.91 kg because it kept **C3**, which this run finds is the requirement that was costing the
 mass all along.
 
+> ### Superseded by A46, 2026-08-20 — [P95](../OPEN_PROBLEMS.md). The verdict hardens; one escape route closes.
+>
+> **Every figure in sections 3 and 4 below is at a dry mass of 84.59 kg.**
+> [A46](A46_enclosure_buildup.md) itemised the enclosure on **2026-08-16** and the ledger's own
+> JSON was regenerated in that commit — **this run sheet was not.**
+>
+> | | Published below | The ledger's current output |
+> |---|---:|---:|
+> | Dry mass | 84.59 kg | **126.56 kg** |
+> | Survives every deletion, 64 corners | **49.23 kg, 58.2 %** | **88.67 kg, 70.06 %** |
+> | Per satellite at twelve | 4.10 kg | **7.39 kg** |
+> | Per satellite at twenty-four | **2.05 kg — "the criterion closes"** | **3.69 kg — it does not** |
+>
+> **Section 3's finding is unchanged and is now harder**: no combination of requirement deletions
+> closes kill criterion 1, and the irreducible remainder is **1.8× larger** than published.
+>
+> **Section 4's escape route is withdrawn.** *"Magazine density is the only lever in this run that
+> reaches the criterion"* was true at 49.23 kg and is not true at 88.67. **The ledger now finds no
+> lever that reaches the criterion at any manifest size it examines.**
+>
+> **No band is re-declared and no verdict is edited.** Bands 1–7 ran against the current dry mass
+> and band 1 passes at **126.5616 against 126.5616**; it is the prose below that is stale.
+
 **3. The lattice saturates at 41.8 %, and this is the important number.**
 **49.23 kg — 58.2 % of dry mass — survives every deletion of every requirement, in every
 combination.** Structure, containment, brackets, closeouts, harness and avionics are `partial`

@@ -113,7 +113,7 @@ it, so both agreed. See [`../cad/scad/README.md`](../cad/scad/README.md).
 
 | | |
 |---|---|
-| **A35** | attributed every kilogram to the requirement causing it, and found **49.23 kg survives every requirement deletion in all 64 corners** |
+| **A35** | attributed every kilogram to the requirement causing it, and found **88.67 kg survives every requirement deletion in all 64 corners** |
 | **A36** | closed the manifest route — 2.0 kg/satellite first reached at **N = 116**, which does not package |
 | **A37** | made the stage the machine |
 | **A38** | showed tip-off does not bind at 25 g |
