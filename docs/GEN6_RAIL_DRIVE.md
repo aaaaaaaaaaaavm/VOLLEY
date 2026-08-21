@@ -74,7 +74,7 @@ rather than being solved:
 | Today | Gen6 |
 |---|---|
 | A **9.445 kg sled** carries the magnets. It is 70 % of the moving mass, so 70 % of the shot energy accelerates hardware that is not the payload | The moving mass is **the 4 kg satellite** |
-| That sled must then be **stopped**: an eddy brake absorbing 935 J and putting **18.5 kN** through a structure holding eleven stowed satellites, eleven times (**E34**) | **Nothing to arrest.** No brake |
+| That sled must then be **stopped**: an eddy brake absorbing 1162 J and putting **18.5 kN** through a structure holding eleven stowed satellites, eleven times (**E34**) | **Nothing to arrest.** No brake |
 | The brake sits beyond the release point, and the enclosure must span it — which is *why* the envelope is **1839 mm** against ESPA-Grande's 1270 (**kill criterion 2**) | The machine ends where the stroke ends |
 | The sled must be **returned** down 1.5 m of track between shots — the dominant term in the attitude budget (**E24**, **kill criterion 5**) | Nothing returns |
 | The payload rides in a cradle with its centre of mass **70 mm off the thrust line**, crossing its clearance at 688 rad/s² and arriving at **36–231 °/s** (**P41**, **kill criterion 4**) | Thrust is applied to **four rails symmetric about the satellite's own axis**. There is no cradle and no clearance to cross |

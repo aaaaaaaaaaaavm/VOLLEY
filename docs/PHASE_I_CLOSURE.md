@@ -1,3 +1,10 @@
+> **This is a dated record of the Phase I closure and its figures are contemporaneous, annotated
+> 2026-08-21.** Several have since moved and are not edited here. The largest:
+> per-satellite mass **6.375 → 10.55 kg** ([A46](../validation/A46_enclosure_buildup.md), **P69**),
+> the regeneration credit **291.4 → 47.0 J** after ADR-030 shortened the section from 240 mm to
+> 39 mm (**P97**), and the constraint-ledger floor **49.23 → 88.67 kg** (**P95**).
+> `docs/BASELINE.md` is the current figure for anything quoted below.
+
 # Closing Phase I: every open item, and what each one actually needs
 
 **Written 2026-08-05, updated 2026-08-10.** [`../OPEN_PROBLEMS.md`](../OPEN_PROBLEMS.md) carries

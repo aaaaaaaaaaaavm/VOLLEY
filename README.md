@@ -452,7 +452,7 @@ xychart-beta
 ```
 
 A ±2.5 % velocity change moves the conjunction minimum from 4.6 km to 63.4 km. That is why
-the paper's safety claim rests on the realignment period, now 9.9 days at the current
+the paper's safety claim rests on the realignment period, now 10.3 days at the current
 operating point, instead of a single distance (P1). The sweep above was computed at the
 superseded 20.37 m/s point and is kept as the evidence for P1; the fragility it demonstrates
 is a property of the beat geometry, not of any one velocity.
