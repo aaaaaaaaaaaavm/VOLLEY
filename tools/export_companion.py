@@ -32,7 +32,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # in PROGRAMME.md is the source, and this is checked by tools/check_links.py.
 HEADER_ROWS = [
     ("VOLLEY", "Main: the authoritative engineering record. Improved continuously", ""),
-    ("VOLLEY-paper", "The concept at its most reliable, as a conference contribution. **Frozen when published**", "paper"),
+    ("VOLLEY-paper", "The concept at its most reliable, as an IEEE-formatted manuscript. **Frozen when published**", "paper"),
     ("VOLLEY-thesis", "The same concept as a full submission. **Frozen when presented**", "thesis"),
     ("VOLLEY-lab", "The vault: ideas that never became a complete thing, and why each stopped", "lab"),
 ]
@@ -165,15 +165,22 @@ THESIS_MANIFEST = [
     ("CITATION.cff", "CITATION.cff"),
 ]
 
-PAPER_README = """# VOLLEY: the conference paper
+PAPER_README = """# VOLLEY: the manuscript
 
-**The manuscript, and everything needed to check it.**
+**An IEEE-formatted technical manuscript, and everything needed to check it.**
 
 Rideshare CubeSats inherit the orbit of whoever paid for the launch. This paper describes a
 deployer that gives each of twelve satellites an orbit chosen for it, without modifying any of
 them — and reports, in the same voice, the three thresholds the design currently fails.
 
-**[Read the paper](paper/VOLLEY_IEEE_Conference.pdf)** (15 pages)
+**[Read the paper](paper/VOLLEY_IEEE_Conference.pdf)** — **18 pages, current build.**
+Print-ready copies: **[A4](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_A4_Print.pdf)** ·
+**[US Letter](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_Letter.pdf)**. Both come from one source
+and are content-identical; only the page geometry differs.
+
+> **It is IEEE-*formatted*, using the IEEEtran class. It is not claimed to be submission-compliant
+> for any venue** — page and abstract limits are set by the conference or journal, and **no venue
+> has been selected and nothing has been submitted.**
 
 Every number in it comes from a script in this repository, and every analysis behind it declared
 what would count as failure **before** it ran. Nothing has been built, fired or measured.
@@ -224,7 +231,8 @@ field.
 ## The manuscript describes Gen5, and the design target has moved
 
 **This is deliberate and worth stating plainly.** Everything reproduced here is **Gen5** — the
-measured baseline, and the record of what a self-contained deployer costs. On 2026-08-14 five
+analysed baseline -- a frozen computational one, with no hardware behind it -- and the record of
+what a self-contained deployer costs. On 2026-08-14 five
 analyses in the main repository replaced the design target: **Gen6 is the payload accelerated
 directly, by cold gas, along a rail a spent upper stage provides** (ADR-032). No mover, no
 pulse-power chain, no brake, no return stroke.
@@ -292,7 +300,8 @@ enters it has to be stable, effective and reliable against the problem statement
 ## The manuscript describes Gen5, and the design target has moved
 
 **This is deliberate and worth stating plainly.** Everything reproduced here is **Gen5** — the
-measured baseline, and the record of what a self-contained deployer costs. On 2026-08-14 five
+analysed baseline -- a frozen computational one, with no hardware behind it -- and the record of
+what a self-contained deployer costs. On 2026-08-14 five
 analyses in the main repository replaced the design target: **Gen6 is the payload accelerated
 directly, by cold gas, along a rail a spent upper stage provides** (ADR-032). No mover, no
 pulse-power chain, no brake, no return stroke.
