@@ -1,5 +1,8 @@
 # What VOLLEY actually is: a last-mile delivery vehicle, not a bigger spring
 
+> **Nothing in this project has been built, fired, measured, qualified or flown**, and no result
+> here has been reviewed by a third party. Every number is a script output.
+
 > ## Extended 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
 >
 > **This file already had the idea and stopped one step short of it.** §2 argues that a spent

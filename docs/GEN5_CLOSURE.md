@@ -4,6 +4,9 @@
 headline number rests on, what failed, and what is deliberately left open. **It is written to be
 checked, not to persuade.**
 
+> **Nothing in this project has been built, fired, measured, qualified or flown**, and no result
+> here has been reviewed by a third party. Every number is a script output.
+
 <p align="center">
   <img src="../cad/renders/gen5/hero_open.png" alt="VOLLEY Gen5, open" width="100%">
 </p>
