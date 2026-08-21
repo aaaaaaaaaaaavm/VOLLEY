@@ -12,7 +12,8 @@ happened since, and all three change the answer:
      is allowed to have. At the rated point the ceiling is 65 mohm; a single commercial
      string is 116-185 (P26). Any lever that raises current makes that worse, and the old
      table could not show it because no script modelled ESR.
-  3. **Regeneration returns about a quarter of the sled's energy** (A11), so efficiency is
+  3. **Regeneration returns 3.9 % of the sled's energy** over the 39 mm section ADR-030 left
+     (A11's quarter was integrated over a 240 mm section that no longer exists; P97), so efficiency is
      now quoted net of recovery and the levers that add sled mass are penalised slightly
      less than they were.
 

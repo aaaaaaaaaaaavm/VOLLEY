@@ -4554,6 +4554,72 @@ it. *A paper that omits its own failed comparator band is a brochure.*
 > *The lesson is not that the propagation was careless. It is that a rollup change touches prose
 > that no gate reads, and there is no gate that reads prose.*
 
+### P97. ADR-030 shortened the regenerative section from 240 mm to 39 mm and the recovery figure never moved with it: HIGH, CORRECTED 2026-08-21
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found while checking the manuscript's energy chain against `motor_results.json` for a printed
+copy. The paper and the front page both reported a recovery that the current design cannot
+produce.**
+
+[ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md) took four decisions on
+2026-08-13. The one everything chased was the depth-resolved thrust constant. **The second one was
+that the regenerative section shortens from 240 mm to 39 mm**, because 240 mm of regenerative
+stator plus a 300 mm eddy fin were oversubscribed in a 339 mm airgap ([P28](#p28)). *Only the
+first was propagated.*
+
+| | As published | At the 39 mm section |
+|---|---:|---:|
+| Regenerative section | 240 mm | **39 mm** |
+| Energy recovered | 291 J | **47.0 J** |
+| **As a fraction of the sled's energy** | **23 %** | **3.9 %** |
+| Sled kinetic energy at release | 1268 J | **1213 J** |
+| **To the eddy brake** | **935 J** | **1162 J** |
+| Braking pulse | 15.8 ms | **2.46 ms** |
+| Copper burnt braking | 15 J | **0.39 J** |
+| Speed reaching the brake | 14.1 m/s | **15.68 m/s** |
+| Peak current during recovery | 219 A | **212 A** |
+| Brake-fin adiabatic rise per shot | 7.1 K | **9.0 K** |
+| Twelve-shot no-cooling bound | 85 K | **108 K** |
+| Campaign thermal total | 24.3 kJ | **26.6 kJ** |
+| Bulk rise over a campaign | 1.8 K | **2.0 K** |
+
+**Everything in the right-hand column was already committed.** `motor_results.json`'s `regen`
+block and `sizing.json`'s `energy_closure` and `thermal` blocks have carried these values since
+the ADR; `make_baseline.py --check` passed throughout, because none of the twenty-three values it
+guards is a recovery figure. **The gate was green and the prose was wrong.**
+
+### The shape of the error is worth naming
+
+**The brake got 24 % more energy and nobody noticed**, because the number that moved was the one
+nothing quotes. Every document quoted the *recovery*, which is the flattering half. The fin
+transient going 7.1 K to 9.0 K, and the twelve-shot bound 85 K to 108 K, are the consequences,
+and they sat unstated in a section titled *Thermal Analysis*.
+
+**And the efficiency was quoted at the wrong figure in the other direction.** `SUMMARY.md`, the
+wiki and `README.md` all published **18.5 %**, which is `shot.eff_pct` — the *gross* figure, before
+any recovery credit — while describing it as net of regeneration. `BASELINE.md` has published the
+correct **18.8 %** (`eff_net_pct`) the whole time. *Three front-door documents disagreed with the
+gate-checked baseline and with themselves.*
+
+### What was corrected
+
+`SUMMARY.md`, `wiki/Home.md`, `README.md` — including its energy pie, which was drawn with the
+pre-ADR-030 closure — `validation/README.md`'s A11 row, `analysis/velocity_levers.py`'s docstring,
+and both manuscripts. **`docs/RESULTS.md` and `docs/PROJECT_NOTES.md` carried a 2026-08-03 audit
+banner that had itself gone stale**; each gets a superseding banner rather than an edit.
+
+**[A11](validation/A11_regen_braking.md) is not touched.** Its eight bands were declared before
+`regen_brake()` was written, they passed, and 291.4 J was the right answer for the section it
+integrated over. *A decision taken ten days later removed that section.* The 500 mm and 1 m
+comparison points in the manuscript were recomputed from `motor_model.regen_brake` at the current
+operating point — 540 J and 727 J against the 570 J and 783 J published — and the 39 mm case
+reproduces the committed 47.0 J exactly, which is what makes the other two trustworthy.
+
+> **This is what a validation run looks like when an architectural decision outruns it.** A11 is
+> not wrong and its bands are not widened. It simply answers a question about a machine that
+> stopped existing on 2026-08-13, and for eight days nothing in the repository said so.
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 

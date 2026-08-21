@@ -100,7 +100,7 @@ flowchart LR
 | TRL | 2-3 |
 | Analysis | 68 Python scripts, reproducible, outputs committed as JSON |
 | Validation | 65 run sheets, A1–A65, each with its acceptance bands declared **before** its script existed |
-| Register | 131 numbered entries, 53 live, including the ones that damage the work's own claims |
+| Register | 132 numbered entries, 53 live, including the ones that damage the work's own claims |
 | CAD | script-built from `cad/parameters.json`, **Gen6 current**, STEP and STL committed ([`cad/`](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/cad)) |
 | FEA | magnetostatic 2-D (A1) and 3-D (A2), structural (A4), CFD (A29) |
 | Hardware | **none. Nothing here has been built, fired or measured** |
@@ -114,7 +114,7 @@ All figures are script outputs, not measurements.
 |---|---|---|
 | Thrust constant | 10.54 N per kA/m, ±1.01 % ripple | `motor_model.py` |
 | Exit velocity, 3U | **16.03 m/s at 10.1 g** | `motor_model.py` |
-| Electrical to payload efficiency | 18.5 % (2.74 kJ net of regeneration, 514 J delivered) | `motor_model.py` |
+| Electrical to payload efficiency | **18.8 %** (2.74 kJ net of regeneration, 514 J delivered) | `motor_model.py` |
 | Closed-loop dispersion | 0.0274 m/s (3σ) at a 15.8 m/s setpoint to ±0.10 km apogee | `motor_model.py` |
 | Orbital lifetime multiplier | x1.60 at mean activity, **not invariant, see P16** | `astro.py` |
 | Semi-major axis change | **+28.8 km**; 0 m by release timing at any cadence | `astro.py`, A21-R |
@@ -202,9 +202,11 @@ These were argued out and should not be silently reopened; reasoning is in
 - **Ironless double-sided Halbach stator**, reusable sled carrying the magnets.
 - **Eddy-current brake for arrest.** Motor regeneration alone cannot stop the sled,
   braking force is bounded by the same thrust constant as acceleration.
-- **Most of the sled's kinetic energy is dissipated; 23 % of it is recovered.** 240 mm of
-  stator downstream of release returns 291 J of the sled's 1268 J to the bank, and the brake
-  takes the other 935 J. The 18.5 % figure is electrical-to-payload net of that. This page
+- **Almost all of the sled's kinetic energy is dissipated; 3.9 % of it is recovered.** The
+  **39 mm** of stator downstream of release returns 47 J of the sled's 1213 J to the bank, and
+  the brake takes the other 1162 J. The 18.8 % figure is electrical-to-payload net of that.
+  ADR-030 shortened the regenerative section from 240 mm because it and the eddy fin were
+  oversubscribed in the same airgap; the recovery figure fell with it (**P97**). This page
   said "not recovered" until 2026-07-31, which was wider than the decision it rested on.
 - **No CMGs or thrusters in attached mode**; the host stage absorbs recoil.
 - **Two transverse cassettes of six**, alternating feed to keep the centre of mass

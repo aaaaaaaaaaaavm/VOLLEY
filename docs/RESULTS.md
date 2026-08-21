@@ -1,3 +1,11 @@
+> **Superseded by ADR-030, 2026-08-13; annotated 2026-08-21.** The audit note below is retained
+> as history and is no longer the operating point. **Current: 10.54 N per kA/m, 16.029 m/s,
+> 10.07 g, 47.0 J recovered over a 39 mm regenerative section, 1162 J to the brake, 18.8 % net
+> efficiency, and a 9.0 K per-shot brake-fin transient.** ADR-030 both depth-resolved the thrust
+> constant and shortened the regenerative stator from 240 mm to 39 mm, because 240 mm of regen
+> plus a 300 mm eddy fin were oversubscribed in a 339 mm section (**P28**). Every recovery figure
+> below predates that. **P97.**
+
 > **Numerical audit correction, 2026-08-03.** The current operating point is 11.03 N per
 > kA/m, 16.388 m/s, 10.53 g, 291.4 J recovered, 934.7 J to the brake, and 20.99% net
 > efficiency. A13's former residual-rate/cadence conclusion is superseded, A6's 3.7e-8

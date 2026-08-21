@@ -50,7 +50,7 @@ or to qualify.
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
 | **checking what outside evidence could settle** | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) — which live entries a published source can close, which it can only inform, and **which need hardware and cannot be read away** |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 131 numbered entries, 53 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 132 numbered entries, 53 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -173,9 +173,11 @@ flowchart LR
 ```
 
 The satellite is never modified: the magnets ride the sled, not the payload. The sled leaves
-release carrying 1268 J; 240 mm of stator past that point takes **291 J of it back into the
-bank**, and the eddy brake absorbs the remaining 935 J. Efficiency is quoted
-electrical-to-payload, net of that credit.
+release carrying 1213 J; the **39 mm** of stator past that point takes **47 J of it back into
+the bank**, and the eddy brake absorbs the remaining **1162 J**. Efficiency is quoted
+electrical-to-payload, net of that credit. *A11 measured 291 J against a 240 mm regenerative
+section; ADR-030 removed it, because it and the 300 mm eddy fin were oversubscribed in a 339 mm
+airgap. Recovery is 3.9 % of the sled's energy, not 23 % —* **[P97](OPEN_PROBLEMS.md)**.
 
 ### Gen6 — gas does the work, the motor does the job
 
@@ -220,7 +222,7 @@ no figure, the cell says so rather than being left blank.
 | Thrust constant | 10.54 N per kA/m, ±1.01 % ripple | same machine, trim section only | `motor_model.py`, A2 |
 | — its centre-plane value | 11.03 N per kA/m, **independently computed by a 2-D FEM to 0.03 %** | — | `motor_model.py`, A1 |
 | Energy per shot | **2.78 kJ gross, 2.74 kJ net** of regeneration | **311.76 J** | `motor_model.py` · [A51](validation/A51_gen6_power.md) |
-| Efficiency | **18.5 % electrical-to-payload**, 514 J delivered | **no equivalent figure exists** — the energy arrives as a ground-filled bottle, not as electricity | `motor_model.py` · A51 |
+| Efficiency | **18.8 % electrical-to-payload** net of regeneration, 514 J delivered | **no equivalent figure exists** — the energy arrives as a ground-filled bottle, not as electricity | `motor_model.py` · A51 |
 | Electrical demand | 150–300 W recharge feed | **0.26 W average, 36 W peak** | A51 |
 | **Mass, dry / loaded** | **126.6 kg / 174.6 kg** | **11.45 kg added** plus **3.1216 kg** of store ([A56](validation/A56_reservoir_resized.md), sized) | `mass_properties.py` |
 | **Per 3U satellite** | **10.547 kg** dry | **1.2145 kg** added ([A45-R2](validation/A45R2_stage_credit_resized_store.md), at A56's sized store; **1.3173** if the suspended trim stage is built) — **up to 3.0827** read hostilely (**P68**) | `payload_family.py` · [A45](validation/A45_stage_credit.md) |
@@ -417,16 +419,16 @@ Two that carry the argument:
 ```mermaid
 pie showData
     title Energy per shot (J) - sizing.py energy_closure
-    "Sled KE to the eddy brake" : 935
-    "Payload KE, the useful output" : 537
-    "Copper loss, shot + regen" : 850
-    "Converter loss" : 111
-    "Bank ESR loss" : 91
-    "Auxiliary" : 35
+    "Sled KE to the eddy brake" : 1162
+    "Payload KE, the useful output" : 514
+    "Copper loss, shot + regen" : 855
+    "Converter loss" : 93
+    "Bank ESR loss" : 78
+    "Auxiliary" : 33
 ```
 
-514 J reaches the payload out of a **net 2735 J**: 2782 J leaves the bank and 291 J returns.
-That is the 18.5 %. Efficiency fell with the heavier sled twice over, because more of the same
+514 J reaches the payload out of a **net 2735 J**: 2782 J leaves the bank and 47 J returns.
+That is the **18.8 %**. Efficiency fell with the heavier sled twice over, because more of the same
 mechanical work goes into a mass that is then braked away and the longer 162 ms pulse accrues
 more copper loss at unchanged current density. Regeneration is the first thing that has moved
 it the other way.
@@ -466,7 +468,7 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **131 numbered entries, 53 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Defect register** | **132 numbered entries, 53 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
 | **Validation** | **65 run sheets, A1–A65**, each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
