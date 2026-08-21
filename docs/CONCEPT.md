@@ -31,10 +31,12 @@ right order for an engineer and the wrong order for anyone asking why the thing 
 
 **A rideshare CubeSat does not choose its orbit. It inherits whoever paid for the launch.**
 
-The spring that ejects it delivers 1–2 m/s, which exists to create clearance from the stage, not
-to change an orbit. Satellites carrying propulsion can correct for this. **About 222 of the 4,800+
-catalogued nanosatellites do — roughly eight percent.** The other ninety-two percent go where the
-manifest put them and stay there.
+The spring that ejects it delivers 1–2 m/s, sized to create clearance from the stage. **That does
+change the orbit** — no impulse leaves one untouched, and at 2.5 m/s it extends orbital lifetime by
+8.2 % — but by a margin small enough that the satellite stays, for mission purposes, where the
+primary left it, and by **the same margin for every satellite the deployer carries.** Satellites
+carrying propulsion can correct for this. **About 222 of the 4,800+ catalogued nanosatellites do.**
+The rest go where the manifest put them and stay there.
 
 That is not a deployment problem. It is a **distribution** problem, and a constellation is only a
 constellation once its members are distributed.
@@ -111,7 +113,7 @@ matters more to a customer than the configuration does.
 [ADR-002](adr/002-host-is-a-spent-upper-stage.md) pointed at in 2023 when it made the stage the
 host rather than a free-flyer.
 
-> **The boundary on it is measured, not assumed, and it is tighter than it looks.**
+> **The boundary on it is computed rather than assumed, and it is tighter than it looks.**
 >
 > **Altitude repositioning is cheap. Plane change is not** — **133 m/s per degree**, A15 band 8,
 > against a whole shot of 16 m/s. The concept is altitude shells plus J2 doing the plane work over
@@ -143,7 +145,7 @@ both halves of it.
 |---|---|---|
 | **Altitude shell change**, 50 km | **27.8 m/s**, two-burn Hohmann at LEO | **Yes**, but it is a real propellant bill — see A20 |
 | **Phase / along-track spacing** | free; it is what differential velocity produces | **Yes** — this is VOLLEY's own job |
-| **RAAN separation** | free, over time, from differential J2 | **Yes** — A15 measured **367°** of nodal spread in 90 days |
+| **RAAN separation** | free, over time, from differential J2 | **Yes** — A15 computed **367°** of nodal spread in 90 days, in GMAT |
 | **Inclination change**, 1° | **133 m/s** — A15 band 8 | **No.** 8.1× VOLLEY's entire shot, and beyond a spent stage's RCS |
 
 **Plane change is not on the menu and this project says so everywhere.** One shot spent entirely
@@ -185,15 +187,26 @@ Because a spring gives every satellite the same push, and **distribution require
 | Designed differential between satellites | **zero** — any spread is manufacturing scatter | up to the full range, resolvable to 0.0274 m/s (3σ) |
 | Orbital lifetime extension | +6.5 % at 2 m/s, +8.2 % at 2.5 m/s | **+60.2 %** |
 | 30° of in-track phase | **468 s of waiting — free** | 468 s of waiting, identically. **No advantage (P56)** | 1.4 days at 10 m/s of commanded differential |
-| Deployer mass per 3U satellite | ~6 kg, canisterised class | **10.547 kg** |
+| Deployer mass per 3U satellite | ~6 kg, canisterised class | **10.547 kg — VOLLEY loses, by 1.758×** |
 
 **The lifetime figure is the one to read, not the velocity ratio.** VOLLEY is 6.4× a spring on
 raw Δv but **7.3–9.2× on what that Δv actually buys**, because lifetime extension is superlinear
 in this regime. And the differential row has no ratio at all: it is a capability springs do not
 have, at any price.
 
-**Mass is at parity.** That is the part that surprises people — a magazine-fed electromagnetic
-launcher lands in the same kilograms-per-satellite class as a canister of springs.
+> ### Mass parity is withdrawn — [P69](../OPEN_PROBLEMS.md)
+>
+> This section used to read *"**Mass is at parity.** That is the part that surprises people — a
+> magazine-fed electromagnetic launcher lands in the same kilograms-per-satellite class as a
+> canister of springs."* **It does not.** [A21](../validation/A21_comparators.md) band 4 asked for
+> parity within 15 % and the measured ratio is **1.758**: 10.547 kg per 3U satellite against a
+> dispenser's ~6.0 kg. It failed on a change to *this* work rather than to the comparator —
+> [A46](../validation/A46_enclosure_buildup.md) replaced an 8.00 kg packaging placeholder with
+> 50.04 kg of derived line items — and **no enclosure change reaches parity**: the lightest
+> alternative structure costed would give 8.87 kg per satellite, ratio 1.48, still failing.
+>
+> **What survives the loss is the differential row**, which is categorical rather than a ratio and
+> which no mass correction touches.
 
 > **Where it loses, because a page that only argues one way is a brochure.** A spring is TRL 9
 > with thousands of deployments; VOLLEY is TRL 2–3 with **nothing built or measured (E4)**. A
@@ -209,7 +222,7 @@ economics turn on it.
 
 | Class | What the customer is buying |
 |---|---|
-| **3U / 6U** | Per-satellite commanded velocity. Low count, high value each. Mass per satellite is at parity with a dispenser and loses to a propulsion module |
+| **3U / 6U** | Per-satellite commanded velocity. Low count, high value each. **Mass per satellite loses to a dispenser by 1.758× and to a propulsion module by 12.4×** |
 | **1U / PocketQube** | Distribution at volume. Deployer mass per satellite falls by up to 30×, which is where the commercial argument actually closes |
 | **ChipSat / femtosat** | **A designed dispersion across a swarm.** Individual velocity control stops being meaningful; what matters is the *shape* of the velocity distribution across hundreds of units — and no other deployer can produce one, because every alternative gives every unit the same push |
 

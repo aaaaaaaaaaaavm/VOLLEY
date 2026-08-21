@@ -13,15 +13,19 @@ checked, not to persuade.**
 ## What Gen5 is
 
 **A magazine-fed electromagnetic deployer that ejects unmodified 3U CubeSats at a commanded
-velocity, inside the acceleration envelope they are already qualified for.** An ironless
+velocity, at a deployment acceleration of 10.07 g.** *That last clause is a property of the
+machine, not a statement about any satellite: 25 g is a ceiling this design sets on itself, no
+published standard fixes a universal quasi-static qualification level for CubeSats, and payload
+structural compatibility is vehicle- and mission-specific and has not been established
+([P98](../OPEN_PROBLEMS.md)).* An ironless
 double-sided Halbach linear synchronous motor drives a reusable 9.45 kg permanent-magnet sled
 along a 1.5 m track — 1.3 m of acceleration and 0.2 m of coast-trim. Twelve satellites feed from
 two transverse cassettes. A contactless eddy-current brake arrests the sled; the satellite departs.
 
 **The claim is not electromagnetic launch.** That has been studied at twenty times the velocity.
-**The claim is programmable velocity, a satellite that is never modified, and an acceleration
-at 10.07 g rather than the thousands an armature-based launcher imposes — all three at once. *Payload
-structural compatibility is a separate, payload-specific question and is not established here:* **P98**.**
+**The claim is programmable velocity, a satellite that is never modified mechanically and
+electrically, and an acceleration at 10.07 g rather than the thousands an armature-based launcher
+imposes — all three at once.** *No payload has been mechanically qualified against this machine.*
 
 ## Every headline number, and what it rests on
 
@@ -31,7 +35,7 @@ structural compatibility is a separate, payload-specific question and is not est
 
 | | | |
 |---|---:|---|
-| Thrust constant | **10.54 N per kA/m**, ±1.01 % ripple | `motor_model.py`, **FEM-verified to 0.03 %** |
+| Thrust constant | **10.54 N per kA/m**, ±1.01 % ripple | `motor_model.py`. A 2-D meshed FEM agrees with the **centre-plane** constant to **0.03 %** and a 3-D solve with the **field** to 0.059 %; **neither tests the depth average** that took K<sub>t</sub> from 11.03 to 10.54 ([ADR-030](adr/030-apply-the-depth-resolved-thrust-constant.md)) |
 | Exit velocity, 3U | **16.029 m/s** | at **10.07 g**, against this design's chosen 25 g ceiling (**P98**) |
 | Pulse duration | **162.3 ms** | |
 | Energy drawn per shot | **2782 J gross**, 2735 net | 47 J recovered, **3.9 % of sled KE** |
@@ -50,7 +54,7 @@ the register says so.**
 
 | | |
 |---|---|
-| **Halbach field** | Analytic against **magpylib** to three digits, then against a **meshed magnetostatic FEM** — a PDE solve rather than another superposition — agreeing on the corrected thrust constant to **0.03 %** |
+| **Halbach field** | Analytic against **magpylib** to three digits, then against a **meshed magnetostatic FEM** — a PDE solve rather than another superposition — agreeing to **0.03 %** on the centre-plane constant, and a 3-D scalar-potential solve agreeing to **0.059 %** on the midgap field. *Both check the field model; the depth-resolved integral itself has no independent 3-D check* |
 | **Orbital decay** | Orbit-averaged against an independent **Cowell RK4** propagation to **99.4 %** |
 | **Shot circuit** | **ngspice** reproduced the analytic model to 0.03 %, then found a loss the analytic model had no term for — the bank's own series resistance, **86 J a shot** (**P24**) |
 | **Structure** | **CalculiX** cleared the chassis on all three bands, which settled the sled at the CAD-derived 9.445 kg and moved the headline to 16.0 m/s |
@@ -192,5 +196,6 @@ ADRs 032 through 036, and the register — **and it is future work.**
 ---
 
 **Register at closure: 133 numbered entries, 53 live, 45 corrected and retained, 35 closed.
-65 run sheets, A1–A65, each against a band declared in writing before its script existed.
+64 run sheets covering 61 analyses across A1–A65 — A3, A26, A57 and A60 were numbered and never
+written — each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.**

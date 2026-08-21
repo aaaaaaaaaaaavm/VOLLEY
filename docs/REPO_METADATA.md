@@ -13,6 +13,23 @@ Same class as **P62**, where the published wiki drifted from its own source.
 
 Repository → **About** (gear icon, top right) → set **Description**, **Website** and **Topics**.
 
+> ## ⚠ NOT APPLIED AS OF 2026-08-22. The live text still differs on five repositories.
+>
+> Checked against the GitHub API on 2026-08-22. **What is live now, and why it is wrong:**
+>
+> | Repository | Live description says | Problem |
+> |---|---|---|
+> | **BOLLEY** | *"…move a few hundred grams of passive interface hardware onto the CubeSat and **remove kilograms of active actuation, power electronics**…"* | **Materially wrong.** BOLLEY *keeps* the windings, the switching, the sensing and the stored energy on the launcher. What it removes is the **sled, the brake and the return stroke**. The description describes a mechanically-mediated transfer that is not the architecture |
+> | **BOLLEY** | no topics, no licence | see the entry below |
+> | **VOLLEY-paper** | *"…Generated from the flagship; **do not edit here**"* | **Contradicts [ADR-028](adr/028-no-latex-in-the-flagship.md)**: the manuscript is **authored** here. Only the reproducibility payload is generated |
+> | **VOLLEY-paper** | licence shows **MIT** | corrected in the repository 2026-08-22; GitHub will re-read it on the next push. See that repository's `LICENSING.md` |
+> | **VOLLEY-lab** | *"VOLLEY Phase II: research and redesign, where the frozen baseline does not apply"* | The README has been the **vault** framing since 2026-08-16. The description never followed |
+> | **VOLLEY** | *"…magazine-fed electromagnetic launcher that mounts to a spent stage…"* | Not wrong, but it predates the current front page and reads as a specification |
+> | **aaaaaaaaaaaavm** (profile) | no description | it is the target of a printed QR code |
+>
+> **This is the one class of public surface no gate in this repository can reach**, because GitHub
+> keeps it outside the git tree. `tools/check_public.py` checks everything that *is* in the tree.
+
 ---
 
 ## VOLLEY
@@ -32,11 +49,16 @@ Repository → **About** (gear icon, top right) → set **Description**, **Websi
 
 > **Description**
 >
-> Conference manuscript for VOLLEY, with every script, figure and acceptance test behind its
-> numbers. Written so a reviewer can rerun the work rather than take it on trust.
+> IEEE-formatted technical manuscript for VOLLEY, with every script, figure and acceptance test
+> behind its numbers. Written so a reviewer can rerun the work rather than take it on trust.
+> Unsubmitted; no venue selected.
 
 **Topics:** `cubesat` `aerospace-engineering` `reproducible-research` `open-science` `manuscript`
 `space-systems`
+
+*The manuscript and its class file are **authored** here; the analysis, validation and figures are
+generated from the flagship. The live description currently says the whole repository is generated
+and must not be edited, which is the opposite of ADR-028.*
 
 ## VOLLEY-thesis
 
@@ -53,7 +75,7 @@ Repository → **About** (gear icon, top right) → set **Description**, **Websi
 > **Description**
 >
 > The vault. Ideas from the VOLLEY programme that never became a complete thing, each kept with
-> the measurement or the arithmetic that stopped it. Nothing here should be cited.
+> the computed result or the arithmetic that stopped it. Nothing here should be cited.
 
 **Topics:** `cubesat` `aerospace-engineering` `research-notes` `design-exploration` `space-systems`
 
@@ -67,6 +89,13 @@ Repository → **About** (gear icon, top right) → set **Description**, **Websi
 
 **Topics:** `cubesat` `smallsat` `aerospace-engineering` `linear-induction-motor` `space-systems`
 `design-study` `open-science`
+
+**Licence: none is currently declared, and that is a decision to take rather than a gap to paper
+over.** Every other public repository in the programme carries CC BY 4.0 (the toolkit, Apache 2.0).
+BOLLEY carries no `LICENSE` file, so GitHub shows no licence and the default is "all rights
+reserved". **If it is meant to match the programme, copy the flagship's `LICENSE` and `NOTICE`
+across; if the absence is deliberate, say so in its README so a reader is not left guessing.**
+*No licence has been invented for it here.*
 
 ## pulsed-linear-motor-design-lab
 

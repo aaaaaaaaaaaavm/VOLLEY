@@ -5,171 +5,139 @@ Technology, Symbiosis International (Deemed University), Pune
 · [adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com)
 · [full repository](https://github.com/aaaaaaaaaaaavm/VOLLEY)
 
----
-
-## Where the design is going, in one paragraph
-
-**Everything below describes Gen5, which is the measured baseline and the record of what a
-self-contained deployer costs.** On 2026-08-14 five analyses replaced the design target
-([ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)): **Gen6 is the payload accelerated
-directly, by gas, along a rail the spent stage provides.** No mover, no pulse-power chain, no
-brake, no return stroke. **29.75 kg is deleted, 43.33 kg becomes stage structure, 11.45 kg of
-containment and ~3 kg of gas store remain** — added mass per satellite **1.608 kg** against an
-unchanged 2 kg threshold, while **dry mass per satellite still crosses at 10.547 kg** and both are
-reported together. Nothing in it is measured, the fluid system is unsized, and no launch provider
-has agreed to lend a stage.
+> **Nothing in this project has been built, fired, measured, qualified or flown**, and no result
+> here has been reviewed by a third party. Every number below is a script output. Where two solvers
+> agree, that is a consistency check between models, **not experimental validation**.
+> [`docs/PROVENANCE.md`](docs/PROVENANCE.md) says what stands behind each claim.
 
 ---
 
-## The idea
+## 1 · What VOLLEY asks
 
-Rideshare CubeSats inherit the orbit of whoever paid for the launch. Spring deployers release
-them at **1-2 m/s**, which is far too little to change that orbit; orbital transfer vehicles
-can change it, but they cost hundreds of m/s of propulsion and a spacecraft to carry it.
-Between those sits an unserved regime.
+A CubeSat flown as a rideshare secondary inherits the primary customer's orbit. The spring that
+ejects it adds 1–2 m/s. **That is a real change in orbital energy** — at 2.5 m/s it extends orbital
+lifetime by 8.2 % — but it is sized for separation, it is two orders of magnitude short of what
+commanded orbit shaping needs, and **it is the same value for every satellite in the manifest.**
+Of more than 4,800 nanosatellites and CubeSats catalogued as of January 2026, on the order of 222
+carry a propulsion system; the rest stay where they were dropped.
 
-**VOLLEY is a magazine-fed linear synchronous motor** that mounts on a rideshare upper stage
-and ejects **unmodified** 3U CubeSats, no armature, no plating, no electrical interface on
-the customer satellite, at a **velocity programmable per satellite**. Twelve satellites feed
-from two transverse cassettes onto a reusable permanent-magnet sled running a 1.5 m ironless
-double-sided Halbach track, arrested by a contactless eddy brake and powered from a
-supercapacitor bank.
+**The question:** what does it cost to give each of them a *commanded* departure velocity, without
+putting anything on the satellite?
 
-One shot buys a propulsion-less satellite **1.60x its orbital lifetime**, or seeds 30° of
-a **28.8 km rise in semi-major axis** and **+60.2 % of orbital life**, which no amount of waiting and no spring at any preload can reach (A21-R bands R5, R6). Phase spacing is *not* the claim: 30° of in-track separation costs **468 seconds of waiting** between releases and no velocity at all (**P56**).
+## 2 · Gen5, the analysed baseline
 
-> **The comparison that matters, computed rather than quoted** ([A21](validation/A21_comparators.md)).
-> Against the fastest published spring VOLLEY is 6.4× on *velocity* — but **7.33× on orbital
-> lifetime extension**, because lifetime is superlinear in Δv (+60.2 % against +8.2 %); against a
-> typical 2 m/s spring it is **9.45×**. **But read that ratio with E30 attached:** 7.33× is a
-> ratio of *gains*, and on **delivered orbital life** the ratio is **1.495×** — which is the
-> number a risk-weighted comparison uses, because a satellite that is never released delivers
-> nothing. Deployer mass per 3U satellite is **1.758× a
-> canisterised dispenser**, 10.547 kg against ~6 kg — **A21 band 4 failed on 2026-08-16 and the
-> parity claim is withdrawn** (P69). And a spring's **designed
-> differential between satellites is exactly zero**, so a spring-deployed fleet phases only by
-> drag — 25 days, unschedulable — against VOLLEY's **1.38 days**.
->
-> **Where it loses, on the same footing:** a cold-gas module beats VOLLEY on mass at 3U by
-> **8.3×**; a spring beats it on maturity by TRL 9 against TRL 2–3. **No cost comparison is
-> made against anything** — there is no vendor quotation on any line of `analysis/cost.py`.
-
-## The numbers, with their caveats attached
+**Gen5 is a frozen computational baseline, not a measured one.** An ironless double-sided Halbach
+linear synchronous motor drives a reusable permanent-magnet sled along a 1.5 m track; twelve 3U
+satellites feed from two transverse cassettes; a contactless eddy-current brake arrests the sled.
+Every figure is single-sourced to a committed JSON result and re-checked against its script on
+every commit ([`docs/BASELINE.md`](docs/BASELINE.md), gate-checked by `tools/make_baseline.py`).
 
 | | | |
 |---|---|---|
-| Exit velocity, 3U | **16.0 m/s at 10.1 g** | **6.4x the fastest published spring** (NRCSD-E specifies 0.5-2.5 m/s; the widely quoted "8x" is against 2 m/s and is the softer comparison). The ceiling is this design's chosen acceleration limit, not the machine's thrust: 25.3 m/s at the 25 g ceiling, see [`VELOCITY_CEILING.md`](docs/VELOCITY_CEILING.md). *No standard fixes a CubeSat g-limit for this load case (**P98**).* From a sled mass computed from CAD solid volumes (9.445 kg), not estimated, the earlier 4.86 kg parametric estimate gave 20.4 m/s |
-| Velocity dispersion | **0.0274 m/s (3σ)** | Closed-loop, at a 15.8 m/s setpoint. Rests on *assumed* sensor noise (E7), the differentiator, and the least validated part |
-| Thrust constant | **10.54 N per kA/m** | Winding-resolved, and **independently computed by a meshed magnetostatic FEM to 0.03 %**, a PDE solve, not another superposition |
-| Energy per shot | **2.78 kJ gross, 2.74 kJ net**, 18.8 % electrical-to-payload net of regeneration | Under one watt-hour. 47 J of the sled's 1213 J comes back through the **39 mm** regenerative section ADR-030 left after P28; the brake takes the other **1162 J**. [A11](validation/A11_regen_braking.md) measured 291.4 J against the 240 mm section that decision removed — **P97** |
-| System mass | **126.6 kg dry**, 174.6 kg loaded | **10.55 kg of deployer per 3U satellite**, the same class as canisterized dispensers at ~2 kg/U |
-| Under ADR-032 | **11.45 kg added**, the rest deleted or supplied by the stage | **1.608 kg per 3U satellite added** — the 2 kg threshold is unchanged and dry mass still crosses it |
-| Recurring hardware | ~₹1.35 M per unit, ₹112 k per satellite | **Every price assumed, no quotations.** Useful part: avionics + energy storage are ~42 % of cost and the magnet set only ~5 %, which holds even at 2x price errors |
-| Envelope | 1839 mm closed | **Exceeds the ESPA-Grande class by ~44 %.** Open packaging problem (P9) |
+| Thrust constant | **10.54 N per kA/m**, ±1.01 % ripple | 2-D FEM agrees to **0.03 %**, 3-D to **0.059 %** |
+| Exit velocity, 3U | **16.029 m/s** | at **10.07 g** for 162.3 ms |
+| Pulse | 162.3 ms, 320 A peak | 2782 J gross, 2735 J net |
+| Regeneration | **47 J** over a **39 mm** section | the brake takes the other **1162 J** |
+| Electrical to payload | **18.8 %** net of regeneration | 514 J delivered |
+| Dispersion, closed loop | **0.0274 m/s (3σ)** | ±0.10 km of apogee placement |
+| Semi-major axis change | **+28.8 km** | orbital lifetime **×1.60** at mean activity |
+| Mass, dry / loaded | **126.6 / 174.6 kg** | **10.55 kg per 3U satellite** |
+| Track first mode | 109.0 Hz | recoil 64.1 N·s per shot |
+| Recurring hardware | **₹1,345,055** | **every price assumed. No vendor has quoted any line item** |
 
-> **Open as of 2026-07-30:** the supercapacitor bank is modelled at an ESR no commercial cell
-> of that capacitance achieves, and the shot does not close at a realistic value (**P26**). The
-> velocity and dispersion figures are unaffected, the bank sizing is. Not quietly re-sized.
+**The 25 g acceleration ceiling this machine is designed to is a requirement it sets on itself.**
+It is not a CubeSat qualification limit: no published standard fixes a universal quasi-static level,
+the CubeSat Design Specification defers test levels to the launch provider, and GEVS specifies a
+random-vibration spectrum whose g<sub>rms</sub> is not a quasi-static equivalent
+([P98](OPEN_PROBLEMS.md)). **Whether any given satellite tolerates 10.07 g is payload-specific and
+has not been established.**
 
-**Maturity: TRL 2-3. Nothing has been built, fired, or measured.** **Twenty-four run sheets**
-exist, each against an acceptance band declared *before* the run — and the results are mixed on
-purpose:
+## 3 · What Gen5 demonstrated
+
+**A commanded, per-satellite change in orbital energy, on a satellite that is never modified
+mechanically or electrically, from a stage that was going to be discarded.** A spring's designed
+differential between satellites is exactly zero — that is categorical, not a ratio, and no mass
+correction touches it. One maximum-velocity shot gives **+60.2 % of orbital life against a 2.5 m/s
+spring's +8.2 %**, because lifetime extension is superlinear in Δv.
+
+**And it demonstrated a method.** **64 run sheets** covering 61 analyses across A1–A65 — A3, A26,
+A57 and A60 were numbered and never written — each with its acceptance bands **committed before
+the script that produces the number existed**, which is checkable: the band commit touches no
+script. **No band has ever been widened after a result was known.**
+
+## 4 · What Gen5 lost
+
+**Two competitive arguments were made for this machine and both are withdrawn by its own analyses.**
+
+| Claim | Status |
+|---|---|
+| **Mass parity with a canisterised dispenser** | **WITHDRAWN.** [A21](validation/A21_comparators.md) band 4 asked for parity within 15 %; the ratio is **1.758** — 10.55 kg per 3U satellite against a dispenser's ~6.0 kg. It failed on a change to *this* work, not to the comparator: [A46](validation/A46_enclosure_buildup.md) replaced an 8.00 kg packaging placeholder with 50.04 kg of derived line items. **[P69](OPEN_PROBLEMS.md)** |
+| **Constellation phase spacing** | **WITHDRAWN.** Satellites released 1200 s apart reach 30° of in-track phase in **468 seconds at zero Δv**, and hold it at zero relative rate; a commanded split reaches 30° in 1.4 days and then drifts through it at 21.75 °/day, which a propulsion-less satellite cannot null. **A spring and a clock reach it. [P56](OPEN_PROBLEMS.md)** |
+| **Lifetime-ratio invariance** | **WITHDRAWN.** Offered as the result the analysis could defend; GMAT R2022a falsified it. **[P16](OPEN_PROBLEMS.md)** |
+| Against a cold-gas module on the satellite | **Loses by 12.4× on mass**, declared as a loss *before* the run so it could not be framed away afterwards |
+| Against a spring on maturity | **Loses outright.** TRL 9 and thousands deployed, against TRL 2–3 and nothing measured |
+
+**Kill criterion 1 — mass per satellite — is crossed at 5.3× on dry mass**, against a 2 kg estimate
+([`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md): seven thresholds, three crossed).
+
+## 5 · What the analyses changed
+
+Four results moved the design rather than confirming it.
+
+1. **Exact CAD mass took the headline from 20.37 to 16.029 m/s.** A parametric 4.86 kg sled became
+   9.445 kg when solid volumes were computed ([P15](OPEN_PROBLEMS.md)); resolving the field through
+   the array's 90 mm depth rather than sampling the centre plane then took another 4.42 %
+   ([ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md)). **Both consequences were
+   declared in writing before the analyses ran.**
+2. **An independent propagator falsified a claim in this project's own abstract.** GMAT disagreed
+   at low solar activity by 18 % against a 5 % band. The cause was the sweep, not the arithmetic.
+3. **ngspice found a term no script carried.** Energy closure failed at 97.0 % against a declared
+   98–102 %; the missing **86.6 J a shot** was the capacitor bank's own series resistance.
+4. **Every kilogram was attributed to the requirement causing it, then every requirement deleted.**
+   Across all **64 corners**, **88.67 kg survives** — 70.06 % of dry mass, **7.39 kg per satellite
+   against a 2 kg criterion** ([A35](validation/A35_constraint_ledger.md)).
+
+## 6 · Why the architecture moved
+
+**Result 4 is why.** No combination of requirement deletions closes kill criterion 1, so Gen5
+cannot be optimised into its own mass target. On 2026-08-14
+[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) changed the target: **delete the
+subsystems rather than shrink them.**
+
+## 7 · Current design direction — Gen6
+
+**The payload accelerated directly, by cold gas, along a rail a spent upper stage already
+provides.** No mover, no stator carrying the shot, no pulse-power chain, no brake, no return
+stroke. 29.75 kg is deleted and 43.33 kg becomes stage structure; 11.45 kg of containment and a
+sized gas store remain. A short trim stator that would correct the velocity the gas produces is
+**sized at 144.01 mm and suspended** by
+[ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md): at the specified 17.8 N seal it
+may not be needed at all, and **[P67](OPEN_PROBLEMS.md) decides**.
+
+> **Gen6 has not inherited Gen5's evidence, and nothing on this page transfers to it.** No FEA, no
+> circuit model, no CFD, no second CAD implementation. Its release mechanism does not exist, and
+> **no launch provider has been approached about lending a stage.**
+
+## 8 · Evidence boundary
 
 | | |
 |---|---|
-| **A5 FAILED** | an independent propagator falsified an invariance claim that was in the paper's own abstract (P16) |
-| **A12** | found the inter-array force feeding the structural FEA **37 % high** — and that the explanation first written for it was backwards |
-| **A6** | returned three rows **void**: the quantity they tested does not exist at these separations |
-| **A13 FAILED / corrected** | transient return rate still misses rows 3 and 4, but the ideal residual rate is zero; the former 18.1 s cadence floor is superseded, while attitude restoration and structural settling remain open (E25) |
-| A1, A4, A10, A11, A12 | passed, partially or fully, with every miss logged; the ngspice A8 run now predates the corrected operating point |
+| **Measured** | **nothing.** [`docs/FIGURE_INDEX.md`](docs/FIGURE_INDEX.md)'s `measured` evidence class has **zero members** |
+| Cross-checked by an independently implemented method | the airgap field (2-D FEM to 0.03 %, 3-D to 0.059 %), the pulse chain (ngspice), the astrodynamics (GMAT R2022a) |
+| Model output, single-sourced | everything else |
+| Assumed | every price. [A21](validation/A21_comparators.md) band 7 required the comparison script to emit `NOT COMPUTED`, and it does. **No cost claim is made in either direction** |
+| Independent review | none |
+| Defect register | **133 numbered entries, 53 live** — including every one that damages the claims above |
+| Affiliation | **none claimed.** No institution, agency or company endorses, approves or is integrating this work. POEM and Vikram-1 appear in the manuscript as **worked host examples only** |
 
-**A9 (decay against flown CubeSats) is outstanding**, and it is the only analysis anywhere in this
-project that compares the model against something that actually happened — blocked by network
-policy rather than by difficulty. **A7** is superseded in substance by **A23**, which modelled the
-release rather than bounding it, though the multibody run A7 specifies has still never happened.
+## 9 · Where to read next
 
 | | |
 |---|---|
-| **A22** | resized the retention gates from D6 to **D9** after A18 found the sizing case was wrong; margin at Q = 30 goes **−0.36 → +0.45** for **11 g**, and no longer depends on the unmeasured damping |
-| **A23** | found the release itself is comfortable — 12.2 ms of coast at zero force — but that the payload **arrives in its cradle at 36–231 °/s**, 18–115× the tip-off band, which nothing had modelled (**P41**) |
-| **A20** | priced the delivery envelope: **27.8 m/s per 50 km shell**, and above ~100 m/s of host budget the *stage* supplies most of the altitude range, not VOLLEY |
-| **A21** | replaced the headline: **7.33×** a spring on lifetime extension, not 6.4× on velocity — and **withdrew any cost claim**, since no line of `cost.py` carries a quotation |
-
-## Where it sits against what flies
-
-| | Î”v | Programmable | Satellite mods | Status |
-|---|---|---|---|---|
-| Spring deployers, P-POD, ISIPOD, **Dhruva DSOD** | 1-2 m/s | no | none | flown, thousands deployed |
-| **VOLLEY** | 16.0 m/s | **yes** | **none** | design study |
-| Transfer vehicles, ION, Vigoride | 100s m/s | yes | mounting | flown, commercial |
-
-Dhruva Space's DSOD is the closest comparator and it already flies, space-qualified on
-PSLV-C53 and C55, non-pyrotechnic release, and instrumented to *measure* ejection velocity on
-orbit. What it cannot do is exceed 2 m/s or vary velocity per satellite. That gap is the
-entire argument for this machine, and it is narrower than "electromagnetic beats springs".
-
-## Host integration, worked against real vehicles
-
-The interface asks four things of any host: mass and control authority, a 150-300 W recharge
-feed, a serial command link, and an authorized firing window.
-
-- **ISRO's POEM** is the flown precedent, a spent PS4 operated as a three-axis-stabilized
-  hosted platform, retired by controlled reentry. Its zero-debris closeout is the regulatory
-  template.
-- **Skyroot's Vikram-1** carries a restartable Orbit Adjustment Module stage-tested through
-  more than a thousand pulses. A loaded VOLLEY is **34 %** of the published 350 kg LEO
-  capacity, falling to **22 %** and **13 %** on the announced 550 kg and 900 kg variants, so
-  early flights are dedicated demonstrations and later ones ordinary manifest items.
-
-> **Campaign mission life, added 2026-08-06.** A GMAT propagation of the full twelve-satellite
-> campaign reaches 90 days at 450 km but only **29 to 36 days at 350 km**, where the satellites
-> reenter. POEM missions have operated near 350 km, so a campaign hosted there is a **month-long**
-> product. Logged as **E28**; nothing in this project previously modelled campaign duration.
-
-Recoil is the satellite's momentum only, **64.1 N·s** per shot, nulled by a few grams of cold
-gas.
-
-## How far along it actually is
-
-**Four subsystems are frozen as designs and analysed against bands declared before the
-analyses ran** — stator, sled, magazine, host interface. **Three are frozen but under-analysed**
-— track, avionics, payload cell. **The brake is genuinely provisional**: its pole plates were
-lightened on structural reasoning alone and no magnetic sizing has been done. **The energy store
-is a known negative result with a candidate fix** — the supercapacitor bank cannot source the
-shot on purchasable parts (P26), and a flywheel clears the ceiling at mass parity (A25).
-
-**Most of what remains is computation, not metal**, and that cuts both ways: the design is
-further along than a TRL label suggests, and *"everything computable is done"* is **not yet
-true**. [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md) says which is which, subsystem by
-subsystem, and names the least finished one rather than leaving it to be found.
-
-**Nothing has been built, fired, or measured at any scale.** Twenty-four validation runs exist;
-**zero measurements** do. The field model has only ever been checked *analytic against
-analytic*. The order that changes that costs **₹22,000**, has had a bill of materials since
-2026-07-30, and has not been placed —
-[`docs/B1_ORDER.md`](docs/B1_ORDER.md).
-
-## What makes this repository worth opening
-
-Every defect found in this work is published, numbered, and tracked, including the ones that
-damage its own claims. Acceptance bands are declared in writing **before** each analysis runs,
-so a failure cannot be rationalised afterwards. Four errors were found in the paper by
-rebuilding its analysis from scratch. An independent propagator (GMAT) then **falsified a
-claim in the paper's own abstract**, and that is recorded as P16 rather than quietly dropped.
-The scripts are authoritative over the paper, never the reverse.
-
-**Three times a declared band has caught a bug in the analysis rather than a problem in the
-design** (A19, A20, A2) — most recently a 57 % normalisation error that would otherwise have
-been reported as a plausible-looking result. That is what declaring bands first is for, and it
-is the strongest evidence here that the numbers were not fitted to the conclusion.
-
-**[`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md)**: subsystem by subsystem, what is settled and whether the rest needs computation or metal
-**[`docs/PROGRAMME.md`](docs/PROGRAMME.md)**: the four repositories of this programme
-**[`docs/BASELINE.md`](docs/BASELINE.md)**: what is frozen, and what may move it
-**[`docs/GEN4_STATUS.md`](docs/GEN4_STATUS.md)**: what exists in the provisional open assembly, and what is not yet calculated
-**[`docs/ROADMAP.md`](docs/ROADMAP.md)**: what happens next, and when
-**[`docs/HISTORY.md`](docs/HISTORY.md)**: the project since 2021, and how this git history was built
-**[`docs/QUALIFICATION_PLAN.md`](docs/QUALIFICATION_PLAN.md)**: the test campaign, specified
-**[`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md)**: every known defect
-**[`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md)**: every claim, independently checked where possible
-**[`docs/PROVENANCE.md`](docs/PROVENANCE.md)**: read this before citing anything
+| The whole Phase I case on one page | [`docs/GEN5_CLOSURE.md`](docs/GEN5_CLOSURE.md) |
+| Why the system exists, and what service it offers | [`docs/CONCEPT.md`](docs/CONCEPT.md) |
+| Current programme disposition | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) |
+| What is broken | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) · [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
+| The manuscript | [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) — an IEEE-formatted technical manuscript, 18 pages |
+| Ideas that were tried and stopped, with the reason each stopped | [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) |
+| The opposite premise — a satellite that *does* carry passive hardware | [BOLLEY](https://github.com/aaaaaaaaaaaavm/BOLLEY) |

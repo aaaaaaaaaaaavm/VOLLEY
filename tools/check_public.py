@@ -1,0 +1,184 @@
+"""Gate the public surfaces against the results files, so prose cannot go stale silently.
+
+WHY THIS EXISTS
+---------------
+Every rollup change since 2026-08-13 has been chased across the public pages by hand and missed
+some. A46 took five days and eight places (P93, P95, P96). ADR-030's shortened regenerative
+section took eight days and seven (P97). The withdrawn acceleration-ceiling basis took nine
+(P98). The register count has been wrong on the front page three times.
+
+`make_baseline.py --check` guards BASELINE.md and `register_status.py --check` guards the register,
+because both are generated. **Nothing guarded prose**, and prose is where a reader starts.
+
+WHAT IT CHECKS
+--------------
+1. **Withdrawn claims** -- a blocklist of strings that must not appear on a public surface as a
+   current claim. Historical passages are exempted by an explicit marker, not by deleting them.
+2. **Live values** -- a small set of numbers each page quotes, verified against
+   `tools/public_facts.py`, which reads them from `analysis/results/*.json`.
+3. **Key links** -- the documents the public pages send readers to must exist.
+4. **The profile template and the published profile must not fork.** They did once, and the
+   source was the staler of the two.
+
+HOW HISTORY IS ALLOWED TO STAY
+------------------------------
+A line is exempt if it, or the line above it, contains one of HISTORY_MARKERS -- `superseded`,
+`withdrawn`, `until 2026-`, `historical`, `was `, `used to`, `predated`, `P9x`, and so on. That is
+deliberately generous: **the point is to catch prose nobody revisited, not to force history out of
+a repository that publishes its own corrections.** A false negative here is cheaper than a rule
+that makes the honest pages harder to write.
+
+    python3 tools/check_public.py
+"""
+import os
+import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from public_facts import facts  # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Public surfaces, relative to the repository root. Anything a reader reaches in 90 seconds.
+SURFACES = [
+    'README.md',
+    'SUMMARY.md',
+    'docs/CONCEPT.md',
+    'docs/GEN5_CLOSURE.md',
+    'docs/SKILLS.md',
+    'docs/STATE_OF_THE_PROJECT.md',
+    'docs/index.html',
+    'tools/profile-readme/README.md',
+]
+
+# Withdrawn claims. Each is (pattern, why it is forbidden).
+BLOCKED = [
+    (r'measured baseline', 'Gen5 is an analysed baseline. Nothing has been measured (E4)'),
+    (r'inside its (?:own )?qualification envelope', 'withdrawn by P98'),
+    (r'existing qualification envelope', 'withdrawn by P98'),
+    (r'standard qualification loads', 'withdrawn by P98'),
+    (r'(?:standard )?CubeSat qualifies to', 'withdrawn by P98 -- no such published level'),
+    (r'14\s*g quasi-static', 'withdrawn by P98 -- this was 14.1 g_rms with its units changed'),
+    (r'25\s*[-–]\s*30\s*g', 'withdrawn by P98 -- 25 g is a chosen ceiling, not a range from a standard'),
+    (r'25 g CDS cap', 'withdrawn by P98 -- the CDS publishes no such cap'),
+    (r'[Mm]ass is at parity', 'withdrawn by P69 -- the ratio is 1.758'),
+    (r'not enough to change an orbit', 'a spring impulse does change orbital energy'),
+    (r'not enough to change where they end up', 'same: it changes the orbit, by a small amount'),
+    (r'only \$?\\?[Dd]elta ?v\$? changes an orbit', 'drag, J2 and SRP change orbits too'),
+    (r'schedulab', 'withdrawn by P56 -- release timing gives phase at zero dv'),
+    # values that moved and must not be quoted as current
+    (r'\b6\.375\b', 'pre-A46 mass per satellite; now 10.55 kg'),
+    (r'\b16\.388\b', 'pre-ADR-030 exit velocity; now 16.029 m/s'),
+    (r'\b1\.062\b', 'pre-A46 dispenser ratio; now 1.758'),
+    (r'\b84\.5\b|\b132\.5\b|\b76\.5\b|\b124\.5\b', 'pre-A46 system mass; now 126.6 / 174.6 kg'),
+    (r'39\.7\s*mm', 'pre-A55 trim section; A55 resized it to 144.01 mm and ADR-036 suspended it'),
+    (r'\b7\.5\s*[x×]', 'pre-A46 cold-gas loss ratio; now 12.4x'),
+    (r'65 run sheets', 'there are 64 files covering 61 analyses; A3, A26, A57 and A60 were never written'),
+    (r'130 (?:defect|numbered|register)', 'the register count is generated -- read it from public_facts'),
+]
+
+# Explicit exemptions. Each names a file, the blocked pattern, and why that occurrence is
+# history rather than a current claim. **This list is the allow mechanism the discipline needs**:
+# a passage that explains a correction has to be able to quote the number it corrected, and making
+# history disappear to satisfy a linter would be the opposite of what this repository is for.
+# Adding a line here is a claim that a human read it. Keep the reasons specific.
+ALLOW = [
+    ('README.md', r'39\.7\s*mm',
+     'dated 2026-08-14 timeline rows recording what ADR-032 decided at the time; the current '
+     'state is stated at the Gen6 table and again at the A55 resize'),
+    ('docs/GEN5_CLOSURE.md', r'\b16\.388\b',
+     'the narrative of the ADR-030 correction, which has to name the value it replaced'),
+    ('docs/GEN5_CLOSURE.md', r'\b84\.5\b|\b132\.5\b|\b76\.5\b|\b124\.5\b',
+     'the P93 account of the paper mass defect, which is arithmetic on the superseded figures'),
+    ('docs/index.html', r'\b16\.388\b',
+     'the site\'s account of the same two corrections, in a section headed by their dates'),
+]
+
+HISTORY_MARKERS = (
+    'superseded', 'withdrawn', 'historical', 'used to', 'predated', 'predates', 'until 2026-',
+    'this page carried', 'this file carried', 'as published', 'was published', 'no longer',
+    'corrected', 'amendment', 'amended', 'retracted', 'pre-a46', 'pre-adr', 'earlier version',
+    'build history', 'at the time', 'formerly', 'once read', 'p69', 'p95', 'p96', 'p97', 'p98',
+    'p56', 'p16', 'p15', 'adr-030', 'a46', 'history', 'moved to', 'now ',
+)
+
+# Live values a public surface may quote, and how they must be written.
+def live_expectations(v):
+    return [
+        ('register_total', str(v['register_total']), 'numbered entries'),
+        ('v_exit', f"{v['v_exit']:.3f}", 'exit velocity'),
+        ('dry_kg', f"{v['dry_kg']}", 'dry mass'),
+        ('kg_per_3U', f"{v['kg_per_3U']}", 'mass per 3U satellite'),
+        ('eff_net_pct', f"{v['eff_net_pct']:.1f}", 'net efficiency'),
+    ]
+
+KEY_LINKS = [
+    'SUMMARY.md', 'docs/CONCEPT.md', 'docs/GEN5_CLOSURE.md', 'docs/SKILLS.md',
+    'docs/BASELINE.md', 'docs/STATE_OF_THE_PROJECT.md', 'docs/KILL_CRITERIA.md',
+    'OPEN_PROBLEMS.md', 'docs/PROVENANCE.md', 'docs/FIGURE_INDEX.md',
+]
+
+
+def exempt(lines, i, rel=None, pat=None):
+    """True if this occurrence is history: marked inline, or on the explicit ALLOW list."""
+    window = ' '.join(lines[max(0, i - 1):i + 1]).lower()
+    if any(m in window for m in HISTORY_MARKERS):
+        return True
+    return any(rel == f and pat == p for f, p, _why in ALLOW)
+
+
+def main():
+    v, _ = facts()
+    problems = []
+
+    for rel in SURFACES:
+        path = os.path.join(ROOT, rel)
+        if not os.path.exists(path):
+            problems.append(f'{rel}: MISSING -- it is listed as a public surface')
+            continue
+        lines = open(path, encoding='utf-8').read().split('\n')
+        for i, line in enumerate(lines):
+            for pat, why in BLOCKED:
+                if re.search(pat, line) and not exempt(lines, i, rel, pat):
+                    problems.append(f'{rel}:{i + 1}: "{pat}" -- {why}\n      {line.strip()[:110]}')
+
+    # the register count, wherever a surface states one
+    for rel in SURFACES:
+        path = os.path.join(ROOT, rel)
+        if not os.path.exists(path):
+            continue
+        text = open(path, encoding='utf-8').read()
+        for m in re.finditer(r'(\d{2,4}) (?:numbered entries|register entries)', text):
+            if int(m.group(1)) != v['register_total']:
+                problems.append(f"{rel}: says {m.group(1)} register entries, "
+                                f"current is {v['register_total']} (analysis/results/register_status.json)")
+        # only where it sits beside a register total, so a mermaid class name is not a count
+        for m in re.finditer(r'(?:numbered entries|register entries)[^.\n]{0,20}?(\d{1,3}) live', text):
+            if int(m.group(1)) != v['register_live']:
+                problems.append(f"{rel}: says {m.group(1)} live, current is {v['register_live']}")
+
+    for rel in KEY_LINKS:
+        if not os.path.exists(os.path.join(ROOT, rel)):
+            problems.append(f'key document missing: {rel}')
+
+    # the profile template forked from its own output once (see profile-readme/HOW_TO_USE.md)
+    tmpl = os.path.join(ROOT, 'tools', 'profile-readme', 'README.md')
+    pub = os.path.join(os.path.dirname(ROOT), 'aaaaaaaaaaaavm', 'README.md')
+    if os.path.exists(tmpl) and os.path.exists(pub):
+        if open(tmpl, encoding='utf-8').read() != open(pub, encoding='utf-8').read():
+            problems.append('tools/profile-readme/README.md and aaaaaaaaaaaavm/README.md have '
+                            'forked. They did once before; diff them and re-sync')
+
+    if problems:
+        print(f'public surfaces: {len(problems)} problem(s)\n')
+        for p in problems:
+            print('  ' + p)
+        return 1
+    print(f'public surfaces: {len(SURFACES)} checked against {len(BLOCKED)} withdrawn claims, '
+          f'{len(ALLOW)} historical passages explicitly allowed, '
+          f'counts match ({v["register_total"]} entries, {v["register_live"]} live), key links resolve')
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

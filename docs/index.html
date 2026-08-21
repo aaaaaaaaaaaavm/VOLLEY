@@ -84,7 +84,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
       <span class="badge">CC BY 4.0</span>
       <span class="badge warn">TRL 2-3</span>
       <span class="badge bad">Model outputs only, nothing built or measured</span>
-      <span class="badge">130 defects, 53 live</span>
+      <span class="badge">133 register entries, 53 live</span>
       <span class="badge">7 kill criteria, 3 crossed</span>
     </div>
     <div class="pills">
@@ -106,9 +106,12 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
 <section>
   <h2>The idea</h2>
   <p class="sub">CubeSats flown as rideshare secondaries inherit the primary customer's
-  orbit. The spring that ejects them adds 1-2 m/s, enough to drift clear, not enough to
-  change an orbit. About <b>92 % of flown CubeSats carry no propulsion</b> to fix that, so they
-  stay where the manifest put them for life. <b>That is a distribution problem, not a deployment
+  orbit. The spring that ejects them adds 1-2 m/s. That <i>is</i> a change in orbital energy
+  &mdash; at 2.5 m/s it extends orbital lifetime by 8.2&nbsp;% &mdash; but it is sized for
+  separation, two orders of magnitude short of commanded orbit shaping, and <b>the same value for
+  every satellite in the manifest</b>. Of more than <b>4,800 catalogued nanosatellites and
+  CubeSats</b>, on the order of <b>222 carry a propulsion system</b>, so the rest stay where the
+  manifest put them. <b>That is a distribution problem, not a deployment
   problem</b> &mdash; a constellation is only a constellation once its members are distributed.</p>
   <p class="sub"><b>VOLLEY replaces the spring with a magazine and a commanded shot.</b> Twelve
   satellites, one at a time, each leaving at a velocity chosen for it. <b>The satellite is never
@@ -129,7 +132,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   <br><br>
   <b>With the boundary attached, because a delivery claim is easy to overstate.</b> An altitude
   shell change costs <b>27.8 m/s</b>; along-track distribution is what the deployer itself does;
-  nodal separation develops free from differential J<sub>2</sub>, measured at <b>367&deg; over 90
+  nodal separation develops free from differential J<sub>2</sub>, computed at <b>367&deg; over 90
   days</b> in GMAT. <b>Plane change is excluded</b> &mdash; 133 m/s per degree, eight times the
   whole shot &mdash; and no claim here implies VOLLEY or its host selects an orbit plane.</div>
 </section>
@@ -254,7 +257,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
     <tr><td>Semi-major axis change</td><td class="num"><b>+28.8 km</b>, and <b>0 m</b> by release timing at any cadence &mdash; the claim a clock cannot imitate</td><td class="num">&mdash;</td></tr>
     <tr><td>30&deg; of in-track phase</td><td class="num"><b>468 s of waiting</b>, free. <b>Not a VOLLEY advantage</b> &mdash; the published comparison used the wrong baseline. <b>P56</b></td><td class="num">unchanged</td></tr>
     <tr><td><b>Dry / loaded mass</b></td><td class="num"><b>126.6 kg / 174.6 kg</b></td><td class="num"><b>11.45 kg added</b> plus <b>3.1216 kg</b> of store (A56, sized &mdash; 24 % below the scaled estimate)</td></tr>
-    <tr><td><b>Per 3U satellite</b></td><td class="num"><b>10.547 kg dry</b> &mdash; parity with a canisterised dispenser, and <b>crossing kill criterion 1</b></td><td class="num"><b>1.2145 kg added</b> (A45-R2, at A56's sized store); 1.3173 with the trim stage, which <b>ADR-036 suspended</b> &mdash; <b>up to 3.0827</b> read hostilely (<b>P68</b>)</td></tr>
+    <tr><td><b>Per 3U satellite</b></td><td class="num"><b>10.547 kg dry</b> &mdash; <b>1.758&times; a canisterised dispenser, and crossing kill criterion 1</b>. Mass parity is withdrawn (<b>P69</b>)</td><td class="num"><b>1.2145 kg added</b> (A45-R2, at A56's sized store); 1.3173 with the trim stage, which <b>ADR-036 suspended</b> &mdash; <b>up to 3.0827</b> read hostilely (<b>P68</b>)</td></tr>
     <tr><td>Recoil per shot</td><td class="num">64.1 N&middot;s</td><td class="num"><b>116.03 N&middot;s &mdash; 1.81&times;</b>, and the thrust line must pass within <b>10.7 mm</b> of the host centre of mass</td></tr>
     <tr><td>First bending mode</td><td class="num">109 Hz fixed-fixed (target &gt;70)</td><td class="num"><b>1.67 Hz unsupported over 8.0 m</b> &mdash; the tube <b>buckles under its own shot reaction by 45&times;</b> and needs a support every metre (A59)</td></tr>
   </table>
@@ -360,7 +363,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   the 120 km floor at three solar-activity levels. The x1.80 lifetime multiplier of the day
   reproduces at mean and high activity. At low activity it does not, and the
   <em>invariance</em> the paper nominated as its defensible result is falsified. <b>These
-  runs were propagated at 20.37 m/s</b>, before the measured sled mass moved the rated point
+  runs were propagated at 20.37 m/s</b>, before the CAD-derived sled mass moved the rated point
   to 16.029 m/s, the falsification survives, since a uniform density scale cannot move a
   ratio at any Δv, but the absolute numbers are historical (P19).</p>
   <div class="chart">
@@ -430,7 +433,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
     <tr><td><b>A65</b> the per-cell ejector, re-asked</td><td>nine of ten &mdash; A53 failed by <b>148&times;</b> because a spring stores 4.5 J and clearing the 8 m tube costs <b>667.2 J</b>. A gas generator of the automotive restraint class delivers <b>2331.6 J</b> at the smallest published charge, <em>after</em> cooling to the tube's 473 K ceiling. <b>Band 4 misses</b> A53's inherited 0.25 kg per-cell threshold at 0.4350 kg &mdash; <b>46.6 % of it a minimum-gauge steel plenum, not the pyrotechnic parts</b> (<b>P91</b>)</td></tr>
     <tr><td><b>A35</b> constraint ledger</td><td><b>88.67 kg survives every requirement deletion in all 64 corners.</b> There is no architecture that reaches 2 kg</td></tr>
     <tr><td><b>A40</b> blowdown transient</td><td><b>run, five of eight FAIL</b> &mdash; a fixed orifice cannot hold force over a stroke. <b>14.16 m/s against a 30 m/s band</b></td></tr>
-    <tr><td><b>A44</b> / <b>A55</b> dispersion and trim authority</td><td>A44 at 2.18 m: <b>1.113 % at 3&sigma;, 93.4 % of it seal friction</b>, and no instrumentation route out. A55 re-ran it at ADR-034's 8.0 m: <b>3.980 %, 98.7 % seal</b>, and the trim section <b>3.57&times; under-authority</b> &mdash; resized 39.7 &rarr; 144 mm</td></tr>
+    <tr><td><b>A44</b> / <b>A55</b> dispersion and trim authority</td><td>A44 at 2.18 m: <b>1.113 % at 3&sigma;, 93.4 % of it seal friction</b>, and no instrumentation route out. A55 re-ran it at ADR-034's 8.0 m: <b>3.980 %, 98.7 % seal</b>, and the trim section <b>3.57&times; under-authority</b> &mdash; resized 39.7 &rarr; 144 mm. <b>ADR-036 then suspended the stage</b>: at the specified 17.8&nbsp;N seal it may not be needed at all (<b>P67</b>)</td></tr>
     <tr><td><b>A47</b> Gen6 FMEA</td><td>eight of eight &mdash; the architecture change buys <b>+0.37 satellites</b>; a per-cell ejector buys <b>+2.27</b></td></tr>
     <tr><td><b>A49</b> design surface</td><td><b>seven of nine.</b> 14 points of 63 beat Gen6 on velocity, acceleration and gas at once &mdash; all at 8.0 m. Produced ADR-034</td></tr>
     <tr><td><b>A51</b> Gen6 power</td><td>seven of eight &mdash; traced a figure this project had quoted four times to a spring it does not have (<b>P80</b>)</td></tr>

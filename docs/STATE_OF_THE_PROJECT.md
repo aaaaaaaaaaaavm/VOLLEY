@@ -27,7 +27,7 @@ enough that the not-deciding is itself a decision.
 | **D6** | **Accept the envelope as not-evaluable, or chase E5** | [ADR-023](adr/023-target-host-class.md) re-scoped the host to a POEM-class stage, which converted a **clean 44 % fail against ESPA-Grande into an unmeasurable unknown** — no accommodation envelope for that class is public | Kill criterion 2, and whether the machine can be shown to fit anything | Medium. One data exchange with one launch provider settles it |
 | **D7** | **Buy the bank that can source the shot, or accept P26** | The 65 mΩ ESR ceiling is **crossed as designed** (116–185 mΩ). PII-7 prices four parallel strings: closes it with ~2× margin at **4× the cells, mass and cost** | Kill criterion 3 — and the fix lands on kill criterion 1, which is already failing | Medium. The fix is known; what is unknown is whether the mass is affordable |
 | **D8** | **Keep Gen4, or declare Gen5 the only generation** | Gen4 exists only inside Fusion, has never been exported, and its stations do not match the parameters every published number rests on (**P32**, **P39**). Gen5 is generated and does match | Which geometry the renders and the build package describe | Low, and overdue |
-| **D9** | **Fix the wiki, or retire it** | It still serves superseded numbers, and it is not reachable through any API this project can automate | Nothing internal. It is the most public surface with the worst numbers | Low effort, disproportionate reputational cost |
+| **D9** | ~~Fix the wiki, or retire it~~ **DECIDED 2026-08-22: retired.** [`wiki/Home.md`](../wiki/Home.md) is now a deprecation stub pointing at the repository, and `wiki/README.md` forbids restoring content there. **The stub still has to be published** — GitHub does not expose wiki repositories through its API, so it needs a machine with ordinary push credentials | Nothing internal. It was the most public surface with the worst numbers | Done, except the publish step |
 | **D10** | **Fund it, or scope it to what one person can build** (E15) | No sponsorship. The full-scale 1.5 m track is a laboratory-budget item; the qualification campaign is not | Everything past TRL 4 | High. It decides whether Phase II is a build or a paper |
 
 **The pattern worth naming:** D1, D8 and D9 are cheap, unblocked and have been open longest.
@@ -88,7 +88,7 @@ These would remain true even if every item above were closed.
 3. **It replaces twelve independent one-shot mechanisms with one twelve-cycle mechanism.** That is the architecture's defining trade and it is a *reliability* trade, made in the wrong direction, bought back only by cycle life nobody has measured.
 4. **A spring can reach this velocity.** A ~1.8 kg staged spring delivers comparable Δv. It fails only in that its velocity is **built in rather than commanded**. Commandability is the whole product — not speed.
 5. **The satellite is not, in fact, unmodified.** It is modified magnetically, invisibly, and without the customer knowing (**E35**).
-6. **There is no customer.** No operator has been asked whether schedulable fleet distribution is worth 6.4 kg per satellite. No analysis substitutes for asking.
+6. **There is no customer.** No operator has been asked whether a commanded per-satellite orbit change is worth **10.55 kg of deployer per satellite** — 1.758× a dispenser. *This line used to say "schedulable fleet distribution" at 6.4 kg: the schedulability framing was withdrawn by **P56** and the mass by **P69**, and the question it asks is unchanged and still unasked.* No analysis substitutes for asking.
 
 ---
 

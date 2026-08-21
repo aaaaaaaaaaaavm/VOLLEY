@@ -12,15 +12,21 @@
 [![Validation: model only](https://img.shields.io/badge/validation-model%20only%2C%20unverified-red.svg)](docs/PROVENANCE.md)
 
 **Secondary payloads inherit the orbit of whoever paid for the launch.** The spring that ejects
-them gives 1–2 m/s — enough to clear the stage, not enough to change where they end up. About
-ninety-two percent of CubeSats carry no propulsion, so that is where they stay. **That is a
-distribution problem, not a deployment problem.**
+them gives 1–2 m/s. That *is* a change in orbital energy — at 2.5 m/s it extends orbital lifetime
+by 8.2 % — but it is sized for separation, it is two orders of magnitude short of commanded orbit
+shaping, and it is **the same value for every satellite in the manifest**. Of more than 4,800
+nanosatellites and CubeSats catalogued as of January 2026, on the order of 222 carry a propulsion
+system, so the rest stay where they were dropped. **That is a distribution problem, not a
+deployment problem.**
 
 **VOLLEY replaces the spring with a magazine and a commanded shot.** Twelve satellites, one at a
 time, each leaving at a velocity chosen for it — mounted on a spent upper stage that was going to
 be debris anyway, and that repositions between altitude shells on its own reaction control
-between deployments. **The satellite is never modified**: no armature, no plating, no electrical
-interface.
+between deployments. **The satellite is never modified — mechanically and electrically**: no
+armature, no plating, no harness, no separation system. *That claim is not established
+magnetically*: the array is a permanent magnet, so the payload envelope sits at **611× a
+representative magnetometer full scale** at its near face, continuously rather than only during a
+shot ([P34](OPEN_PROBLEMS.md), [`docs/ICD_COMPLIANCE.md`](docs/ICD_COMPLIANCE.md)).
 
 **The differentiator is one word.** A spring gives every satellite the same push; distribution
 needs a *difference*. **Commanded per-satellite velocity is the one thing no spring, canister or
@@ -31,8 +37,9 @@ or to qualify.
 > would count as failure *before* it runs, every defect is numbered including the ones that damage
 > the work's own claims, and **nothing here has been built, fired or measured.**
 >
-> **What that discipline has actually produced, which is the part worth judging:** **65 run
-> sheets**, each against a band written down before its script existed. **Three failed outright** —
+> **What that discipline has actually produced, which is the part worth judging:** **64 run
+> sheets** covering 61 analyses A1–A65 — A3, A26, A57 and A60 were numbered and never written —
+> each against a band written down before its script existed. **Three failed outright** —
 > including one that falsified a claim in this project's own abstract. **Three times a declared
 > band caught a bug in the analysis rather than in the design**, which is the direction nobody
 > plans for. **Every correction is dated and none of them improved a number.**
@@ -64,7 +71,7 @@ or to qualify.
 |---|---|---|
 | What accelerates the payload | an ironless double-sided Halbach linear synchronous motor, over **1.3 m** | **cold gas, over 8.0 m of the host stage's own length** |
 | What it is mounted on | its own track and enclosure, on an ESPA port | **a rail a spent upper stage already is** |
-| Electromagnetics | the whole machine | a **39.7 mm** stator at the muzzle — **0.496 % of the stroke, 0.340 kg** |
+| Electromagnetics | the whole machine | a short trim stator at the muzzle, **sized at 144.01 mm and suspended** by [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md) — at the specified seal it may not be needed at all ([P67](OPEN_PROBLEMS.md)) |
 | What the motor does | delivers the energy **and** commands the velocity | **commands the velocity only** |
 | Evidence behind it | every headline number, structural FEA, CFD, a designed control loop, a second CAD implementation | **A35–A53. No FEA, no circuit model, no CFD, and no second implementation** |
 
@@ -95,7 +102,8 @@ the commanded velocity the product is sold on.**
 >
 > **The trim stage stops earning its mass at 22.3 N.** Since **17.8 < 22.3**, *any seal that
 > survives its own heat also makes the stator unnecessary* — dispersion falls to **0.9051 %** and
-> the authority needed to **0.2982 m/s**, below what a 39.7 mm section already gave.
+> the authority needed to **0.2982 m/s**, below what even [A48](validation/A48_trim_stage.md)'s
+> superseded 39.7 mm section gave.
 >
 > **So the stage is suspended rather than built or deleted.** Deleting it on a specification would
 > repeat ADR-033's own error of adopting before its falsifier was answered. **[P67](OPEN_PROBLEMS.md)
@@ -191,10 +199,11 @@ flowchart LR
     E -.->|"payload departs"| G["Commanded orbit"]
 ```
 
-**Nothing throws the payload but gas, and nothing commands it but the stator.** The carriage does
-not come back — Gen6 has no return stroke and no brake, because there is no reusable sled to
-arrest. **The trim section is energised only after the gas has finished**, which is what lets a
-39.7 mm machine recover a precision a 2180 mm one used to provide.
+**Nothing throws the payload but gas, and if anything commands it, it is the trim stator.** The
+carriage does not come back — Gen6 has no return stroke and no brake, because there is no reusable
+sled to arrest. **The trim section is energised only after the gas has finished**, which is what
+lets a section three orders of magnitude shorter than a full stator recover a precision the full
+stator used to provide.
 
 **The section is 144.01 mm, not the 39.7 mm this page carried until 2026-08-19.**
 [A55](validation/A55_trim_authority.md) re-ran it at ADR-034's stroke and found the stage
@@ -263,7 +272,7 @@ seeding rather than orbit inheritance, at a velocity programmable per satellite.
 | Elements whose single failure forfeits the remaining manifest | **0** | **9 of 13** | spring wins, `docs/FMEA.md` |
 | Reliability needed to match it on delivered life | — | **r ≥ 0.99326** per element per cycle, **unmeasured** | `docs/FMEA.md` |
 
-A cold-gas module beats both on mass at 3U by 7.5× (`validation/A21_comparators.md`), and a
+A cold-gas module beats both on mass at 3U by **12.4×** (`validation/A21_comparators.md`; the 7.5× this page carried until 2026-08-16 was pre-[A46](validation/A46_enclosure_buildup.md) — **P69**), and a
 ~1.8 kg staged spring reaches the same velocity inside the g-cap
 (`validation/A27_actuator_trade.md`). **What VOLLEY sells is a fleet distributed on a schedule**
 — see [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md).
@@ -469,7 +478,7 @@ since.
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
 | **Defect register** | **133 numbered entries, 53 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **65 run sheets, A1–A65**, each against a band declared *before* the run. **Three failed outright** |
+| **Validation** | **64 run sheets**, 61 analyses across A1–A65 (A3, A26, A57 and A60 were numbered and never written), each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest

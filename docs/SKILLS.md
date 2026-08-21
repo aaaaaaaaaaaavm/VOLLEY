@@ -59,7 +59,7 @@ the rest.
 |---|---|---|
 | Python numerical work | Six scripts in [`analysis/`](../analysis/), numpy/scipy, reproducible from a clean checkout, JSON outputs | **Strong.** Reproduced `v_exit = 16.029` from a clean copy |
 | Refusing to duplicate a source of truth | [`paper/make_figures.py`](../tools/make_figures.py) imports the analysis rather than reimplementing it; [`tools/export_companion.py`](../tools/export_companion.py) generates the companion repos so they cannot drift; `_check_operating_point()` in `sizing.py` exits with a diagnostic if two modules disagree | **Strong.** Each guard exists because that exact divergence had already happened |
-| Regression guarding | [`tools/make_baseline.py`](../tools/make_baseline.py) `--check` compares 20 frozen values against live script output; [`check_links.py`](../tools/check_links.py) every link and the shared repo table; [`check_artifacts.py`](../tools/check_artifacts.py) every built artifact against its source, by commit time rather than mtime so it survives a clone | **Strong.** Each was verified against a real failure rather than assumed to work: the baseline check against injected drift, the artifact check against the commit where a stale PDF actually shipped |
+| Regression guarding | [`tools/make_baseline.py`](../tools/make_baseline.py) `--check` compares 20 frozen values against live script output; [`check_links.py`](../tools/check_links.py) every link; **[`check_public.py`](../tools/check_public.py) the public prose** — it reads the current numbers from `analysis/results/*.json` through [`public_facts.py`](../tools/public_facts.py) and fails the README, `SUMMARY`, `CONCEPT`, `GEN5_CLOSURE`, this page and the site homepage on any of 21 withdrawn claims, with an explicit allowlist so a passage that *explains* a correction can still quote the number it corrected | **Strong.** The three most expensive defects of the last fortnight — **P96**, **P97**, **P98** — were all stale prose that every existing gate passed |
 | Applied AI systems | **Outside this repository.** RAG retrieval pipeline, vector store and role-based dashboards shipped for a telecom CRM at Avisys | Moderate, no artefact here |
 
 ## Engineering process: the part that is actually unusual
@@ -125,9 +125,16 @@ directions, and the thing that decides it is the payload:
 s_min = v² / (2·n·g)          the same equation sizes both machines
 
 silo    50 m/s, 15 m rail  ->  8.5 g   against a 10–15 g propellant grain
-VOLLEY   16.5 m/s, 1.5 m    -> 10.7 g   against a  ~14 g CubeSat
-Feng    321.6 m/s, 3.9 m   -> 1352 g   against a  ~14 g CubeSat
+VOLLEY  16.0 m/s, 1.5 m    -> 10.07 g  against a 25 g self-imposed ceiling
+Feng   321.6 m/s, 3.9 m    -> 1352 g   two to three orders above either
 ```
+
+> **Corrected 2026-08-22 — [P98](../OPEN_PROBLEMS.md).** The two right-hand entries used to read
+> *"against a ~14 g CubeSat"*. **That figure does not exist in any standard**: it was GEVS
+> random-vibration 14.1 g<sub>rms</sub> with its units changed. The CubeSat Design Specification
+> publishes a mechanical interface and defers test levels to the launch provider. VOLLEY's 25 g is
+> a ceiling this project chose. **The silo row is unaffected** — a propellant grain's g-limit is a
+> material property with a real source, and it is the row that carries the comparison's weight.
 
 Two designs sized by what the payload tolerates, and a published third that was not. Getting the
 same trade right twice, in regimes that demand opposite answers, is a better signal than getting it
