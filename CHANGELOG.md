@@ -9,6 +9,19 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-20 (fifty-third pass): the visuals reach the front pages, and A35 turns out to be stale
+
+| ID | Item | Detail |
+|---|---|---|
+| **P95** | **CRITICAL. A35's headline figure is pre-A46, and correcting it reverses A35's own escape route** | **Found while drawing the ledger for the front page: the figure would not agree with the text, and the figure was right.** `constraint_ledger.json` was regenerated on 2026-08-16 in the *"Apply A46"* commit; the run sheet was last touched on the 14th. **49.23 kg / 58.2 % → 88.67 kg / 70.06 %**, and per satellite **4.10 → 7.39 kg**. *A35's one route out of kill criterion 1 — "at twenty-four satellites the same 49.23 kg is 2.05 kg each, and the criterion closes" — is **3.69 kg each** and does not close.* **Propagated to seven documents; A35 annotated with a dated block, no band re-declared.** |
+| **A2/A3** | **The field map, drawn for the first time** | `analysis/make_field_map.py`, from `field_3d.halbach_pair()` — **extracted from `kt_depth_resolved` so the picture and the thrust integral build the same geometry.** Kt verified unchanged at **10.5386**. Centre-plane **0.5041 T** against a depth mean of **0.4759 T**, the assumption A2 corrected. |
+| **A35** | **The ledger, drawn** | `analysis/make_ledger_figure.py`. Three of the six requirements carry no mass on their own; no corner of the 64 reaches the criterion. |
+| **Blender** | **An exploded view, and the renderer learned to do them** | `build_scene()` now accepts `(name, (dx,dy,dz))` as well as a bare name, so **every view written before exploded views existed behaves identically**. Two framings were discarded before one read as a stack rather than scattered parts. |
+| **Front pages** | **Four pages had no images at all** | `VOLLEY-lab` contained **no image file of any kind**; the paper and thesis each had **17 figures in their own directory and referenced none**. All four now lead with something, by `raw.githubusercontent.com` URL where the repo holds no binaries — **one copy of each render in the programme.** Every raw URL verified against a file already pushed. |
+| **VOLLEY** | **README Results and the Pages site** | Both gain the flow field, the field map, the exploded stack and the ledger. **Captions carry the caveats**: the CFD pressure term is solved, **the viscous term is bounded and not**. |
+
+---
+
 ## 2026-08-20 (fifty-second pass): a provenance audit of every constant
 
 | ID | Item | Detail |

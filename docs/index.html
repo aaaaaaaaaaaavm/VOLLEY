@@ -84,7 +84,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
       <span class="badge">CC BY 4.0</span>
       <span class="badge warn">TRL 2-3</span>
       <span class="badge bad">Model outputs only, nothing built or measured</span>
-      <span class="badge">129 defects, 52 live</span>
+      <span class="badge">130 defects, 53 live</span>
       <span class="badge">7 kill criteria, 3 crossed</span>
     </div>
     <div class="pills">
@@ -263,6 +263,14 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   and <b>the 8.0 m figure has not been run</b>. <em>A number whose consequences have not been
   computed is not published here, even when the old one is only a little wrong.</em></div>
   <div class="grid g2" style="margin-top:18px">
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/A29_wake.png" alt="OpenFOAM mid-plane pressure and speed around the sled">
+      <figcaption><b>The flow, A29.</b> Mid-plane slice of the converged fine mesh &mdash; stagnation on the forward face, separation at the shoulders, a wake unrecovered by <b>x&nbsp;=&nbsp;2.2&nbsp;m</b>. <b>581&nbsp;779 cells</b>, <code>simpleFoam</code> k-&omega; SST. The pressure term is integrated from the solved field; <b>the viscous term is not solved</b> and is bounded by a flat-plate correlation.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/A02_field_map.png" alt="Halbach airgap field and its depth profile">
+      <figcaption><b>The field, A2/A3.</b> Left, B<sub>y</sub> across the 12&nbsp;mm gap; right, the profile through the array's <b>90&nbsp;mm depth</b>. Centre-plane <b>0.5041&nbsp;T</b>, depth mean <b>0.4759&nbsp;T</b> &mdash; the assumption that cost K<sub>t</sub> <b>4.42&nbsp;%</b>.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/gen5/exploded.png" alt="Gen5 drive stack exploded">
+      <figcaption><b>The drive stack, exploded.</b> Track, stator winding, sled, payload. Rendered in Blender from the same STLs the CAD script writes from <code>parameters.json</code>.</figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/A35_ledger.png" alt="Constraint ledger and the 64-corner floor">
+      <figcaption><b>The mass that will not go away, A35.</b> Every requirement deleted in all <b>64 corners</b>; <b>88.67&nbsp;kg &mdash; 70.06&nbsp;% &mdash; survives all of them</b>, which is <b>7.39&nbsp;kg per satellite against a 2.0&nbsp;kg criterion</b>. <i>A35's run sheet still reads 49.23&nbsp;kg at the pre-A46 dry mass &mdash; P95.</i></figcaption></figure>
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F01_shot.png" alt="Shot simulation">
       <figcaption><b>The shot.</b> Force, velocity and current through the 162.3 ms stroke.</figcaption></figure>
     <figure><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/F04_life.png" alt="Orbital lifetime">
@@ -434,7 +442,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
   four numbers its own scripts did not reproduce, all found by rebuilding the analysis from
   scratch. An independent propagator then falsified a claim in the paper's own abstract, and that
   is recorded as <b>P16</b> rather than quietly dropped. <b>Every defect is numbered and published,
-  including the ones that damage the project's own claims</b> &mdash; there are 129 of them, 52
+  including the ones that damage the project's own claims</b> &mdash; there are 130 of them, 53
   live.</div>
 </section>
 
