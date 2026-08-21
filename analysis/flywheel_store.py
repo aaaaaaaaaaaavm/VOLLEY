@@ -43,9 +43,12 @@ OVERSIZE = 2.0               # store 2x the shot, so band 3's droop stays bounde
 
 # Machine and converter, engineering estimates. Every one of these is an assumption.
 MG_KG_PER_KW = 0.30          # kg/kW for a high-speed PM machine, rotor+stator+housing
-BEARING_KG = 0.8
+BEARING_KG = 0.8            # DECLARED ASSUMPTION, kg per rotor: bearings, housing and
+                            # touchdown. No derivation. P45 records that A25's band-4 failure
+                            # is owned by one unsourced number, and this is a candidate for it
 CONTAINMENT_FRACTION = 1.0   # containment mass as a fraction of rotor mass. Not optional.
-CONVERTER_KG_PER_KW = 0.10
+CONVERTER_KG_PER_KW = 0.10  # DECLARED ASSUMPTION, kg/kW for the motor-generator drive.
+                            # No vendor figure exists anywhere in this project -- E3
 R_WINDING = 0.020            # ohm, phase resistance referred to the DC node
 R_CONVERTER = 0.015          # ohm, switch + bus contribution
 

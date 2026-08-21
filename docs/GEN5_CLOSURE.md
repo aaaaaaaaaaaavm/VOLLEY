@@ -190,6 +190,6 @@ ADRs 032 through 036, and the register — **and it is future work.**
 
 ---
 
-**Register at closure: 128 numbered entries, 51 live, 42 corrected and retained, 35 closed.
+**Register at closure: 129 numbered entries, 52 live, 42 corrected and retained, 35 closed.
 65 run sheets, A1–A65, each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.**

@@ -92,7 +92,7 @@ second question is real and this analysis does not touch it.
 | 2 | Sled-return impulse | comparable to indexing, opposite sense | **below 20 %** of the shot impulse |
 | 3 | Peak attitude rate from one index cycle, 500 kg host | **below 0.05 °/s** | below 0.05 °/s |
 | 4 | Same at the light end, 200 kg host | below 0.2 °/s | below 0.2 °/s |
-| 5 | Settling to below 0.01 °/s with a 0.1 N·m RCS authority | **fast against the 10–20 s inter-shot interval** | **under 2 s at 500 kg** |
+| 5 | Settling to below 0.01 °/s with a 0.1 N·m RCS authority — **see the note below: that authority is a declared assumption, [P94](../OPEN_PROBLEMS.md)** | **fast against the 10–20 s inter-shot interval** | **under 2 s at 500 kg** |
 | 6 | Net momentum over a full 12-shot campaign, indexing only | **near zero**: the followers return and the CoM comes back | below 5 % of one index impulse |
 | 7 | Whether the indexing term changes the campaign propellant bill | **no** | the 0.98 kN·s campaign figure moves by less than 2 % |
 
@@ -125,6 +125,26 @@ campaign momentum, and the assumed host inertia model stated explicitly.
 | **Sled returned** | **9.445 kg** | **1500 mm** | **6 s** | **4.723 N·s** | **7.14 %** |
 
 ### Attitude rate, host inertia swept
+
+> ### Two corrections, 2026-08-20
+>
+> **Band 5's authority is an assumption, and E5 says the figure does not exist.** The
+> **0.1 N·m** was a bare literal in `attitude_budget.py` with no units, comment or source.
+> [`EXTERNAL_EVIDENCE.md`](../docs/EXTERNAL_EVIDENCE.md) records **E5** as *"no host propellant or
+> control authority figure exists"* — so this band passed on a quantity the register declares
+> absent. **The verdict is not changed and not re-declared; it is annotated. [P94](../OPEN_PROBLEMS.md).**
+>
+> **And the deployer inertia was 40 % low.** `M_DEPLOYER` was the literal **124.5 kg**, which was
+> `mass_properties`' **loaded** figure *before* [A46](A46_enclosure_buildup.md) itemised the
+> enclosure. `deployer_inertia()` is added to the host's, so the rotating body is the installed
+> deployer with its satellites aboard — **loaded, now 174.6 kg.** It is read live from
+> `mass_properties.json` so it cannot go stale again.
+>
+> **The rates below improved and no verdict moved.** At the 500 kg reference host: total inertia
+> **329.7 → 345.0 kg·m²**, return peak **0.13625 → 0.13021 °/s**, worst offset **0.42074 → 0.40209 °**.
+> At 200 kg the inertia rises 15 % and the return peak falls **0.44323 → 0.38512 °/s**, because the
+> deployer is a larger fraction of a smaller host. **Rows 3 and 4 still FAIL.** *A correction that
+> improves numbers is reported the same way as one that damages them.*
 
 | Host | Inertia | From indexing | **From sled return** | Total | Settling at 0.1 N·m |
 |---|---|---|---|---|---|

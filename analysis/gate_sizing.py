@@ -28,14 +28,15 @@ G = 9.80665
 TAU_ULT = 537e6 * 0.6           # A-286 shear ~0.6 x tensile. Class assumption, not a datasheet.
 RHO_A286 = 8030.0               # kg/m^3
 DESIGN_FACTOR = 1.4             # same factor sizing.py already applies
-Q_DESIGN = 30.0
+Q_DESIGN = 30.0             # DECLARED ASSUMPTION: amplification at resonance for a bolted
+                            # metallic structure. Swept in the bands rather than trusted
 Q_RANGE = (10.0, 15.0, 20.0, 30.0)
 
 # Allowed design space, bounded in the run sheet.
 PIN_DIAS = (0.006, 0.007, 0.008, 0.009, 0.010)
 PIN_COUNTS = (2, 3, 4)
 RESTRAINTS = (1, 2)             # gates per cassette; 2 splits the stack mass
-MOS_TARGET = 0.20
+MOS_TARGET = 0.20           # DECLARED: margin of safety target, a design choice not a source
 MASS_BUDGET_KG = 0.40           # per cassette, band 3
 
 STACK_KG = 24.0                 # six 3U per cassette

@@ -4394,6 +4394,50 @@ was therefore always checkable — is corrected to **109×**.
 > because **nothing compares the paper against `BASELINE.md`** — the same shape of gap as P84, one
 > deliverable further out.
 
+### P94. A13 band 5 passes on a host control authority that E5 says does not exist: HIGH, NEW 2026-08-20
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found by a provenance audit of every module-level constant in the analysis scripts, 2026-08-20.**
+
+`analysis/attitude_budget.py` carried, with no units, no comment and no source:
+
+```python
+RCS_TORQUE = 0.1
+```
+
+**It is a host reaction-control torque in N·m, and [A13](validation/A13_indexing_disturbance.md)
+band 5 passes on it:** *"Settling to below 0.01 °/s with a 0.1 N·m RCS authority — under 2 s at
+500 kg."* **The run sheet states the value twice and justifies it nowhere.**
+
+> **And [`EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) records E5 as:
+> *"no host propellant or control authority figure exists."***
+
+**So this project simultaneously records that it has no host control-authority figure, and uses one
+to pass a validation band.** *That is not a stale number or a rounding choice. It is a claim resting
+on a quantity the register elsewhere declares absent.*
+
+### What has been done, and what has not
+
+**The constant is now labelled a declared assumption in the script**, pointing at this entry and at
+E5. **A13 band 5's verdict is not changed and not re-declared** — it is annotated with what it rests
+on. *Whether 0.1 N·m is a reasonable authority for a spent stage is a separate question from whether
+it was ever declared, and only the second was answerable here.*
+
+**No source was invented.** An assumption that cannot be sourced is labelled as an assumption.
+
+**What would close it:** a published host control-authority figure — the same data exchange **E5**
+already names as the one that converts this analysis from parametric to specific — or a re-run of
+A13 band 5 as a *required* authority rather than an assumed one, in the shape
+[A54](validation/A54_pulse_chain.md) used when it stated a required specific power instead of
+guessing a store.
+
+> **The audit that found it was looking for undocumented constants and this was the only genuine
+> contradiction in 126.** [A46](validation/A46_enclosure_buildup.md)'s seven assumed enclosure
+> inputs — which drive the **50.04 kg** that is **58.6 % of the stage credit** — are every one of
+> them declared, and its band 7 says so: *"Every line item traces to a parameter or a declared
+> input — zero undeclared."* **The discipline works. This slipped through it.**
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 

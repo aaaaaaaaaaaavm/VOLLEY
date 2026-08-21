@@ -26,7 +26,8 @@ import motor_model as mm
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 CAD_ARRAY_LEN = 0.340
 B_EARTH = 45e-6
-MAG_FULL_SCALE = 100e-6
+MAG_FULL_SCALE = 100e-6     # DECLARED ASSUMPTION, T: full scale of a representative CubeSat
+                            # magnetometer. No datasheet is cited anywhere in this project -- E3
 PAYLOAD_NEAR, PAYLOAD_FAR = 0.020, 0.120        # CAD z of the payload envelope
 
 

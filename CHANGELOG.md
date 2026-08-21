@@ -9,6 +9,19 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-20 (fifty-second pass): a provenance audit of every constant
+
+| ID | Item | Detail |
+|---|---|---|
+| **P94** | **A13 band 5 passes on a host control authority E5 says does not exist** | `RCS_TORQUE = 0.1` sat in `attitude_budget.py` with **no units, no comment and no source**, and A13 band 5 passes on it: *"settling below 0.01 °/s with a 0.1 N·m RCS authority."* **`EXTERNAL_EVIDENCE.md` records E5 as "no host propellant or control authority figure exists."** *The project recorded that it had no such figure and used one to pass a band.* **Labelled a declared assumption in script and run sheet, cross-linked to E5, verdict annotated rather than re-declared. No source was invented.** |
+| **A13** | **The deployer inertia was 40 % low, and correcting it improved the result** | `M_DEPLOYER` was the literal **124.5 kg** — `mass_properties`' **loaded** figure *before* A46. `deployer_inertia()` is added to the host's, so the rotating body is the loaded deployer: **174.6 kg**, now read live from the results file. At 500 kg host: inertia **329.7 → 345.0 kg·m²**, return peak **0.13625 → 0.13021 °/s**, offset **0.42074 → 0.40209 °**. At 200 kg the return peak falls **0.44323 → 0.38512**. **Rows 3 and 4 still FAIL** — *a correction that improves numbers is reported like one that damages them.* Propagated to both manuscripts and both PDFs rebuilt. |
+| **P93** | **A fifth instance, inside the script that computes the right answer** | `mass_properties.py`'s docstring still read **76.5 / 124.5 / 0.44**. Its own JSON says **126.6 / 174.6 / 0.46**. Six lines below sits the line *"A docstring is the first thing anyone reads about a script, so it is worth as much as the code under it."* Corrected, with the A46 history recorded in the style the docstring already used. |
+| **Audit** | **126 scalar constants scanned; 14 labelled** | Every module-level scalar in all 68 analysis scripts, excluding universal constants and sweep ranges. **The declaration discipline held**: A46's seven assumed enclosure inputs — driving the 50.04 kg that is 58.6 % of the stage credit — are all declared, and its band 7 says *"zero undeclared."* **`RCS_TORQUE` was the only genuine contradiction in 126.** `BEARING_KG`, `CONVERTER_KG_PER_KW`, `Q_DESIGN`, `MOS_TARGET`, `M_DIST`, `ECC`, `M_STOWED`, `SIGMA`, `TAU`, `MAG_FULL_SCALE`, `SEAL_CP` and `ASSUMED_ARM` now name themselves as declared assumptions beside the code. **The remaining 112 are design choices and named cross-run imports, not unsourced claims.** |
+| **Satellites** | **Clean** | `pulsed-linear-motor-design-lab`, `orbital-deployment-trade-study` and `engineering-evidence-toolkit` carry no superseded VOLLEY figures outside their `reference/` copies. The only hits are unit-test fixtures passing `16.388` as a function argument — **inputs under test, not claims.** |
+| **Scope** | **This audited code, not prose** | A full trace of every asserted number in `docs/` back to a results file is a larger job. **P93 is the proof it is needed**, and `tools/check_paper.py` is the right shape for it. |
+
+---
+
 ## 2026-08-20 (fifty-first pass): Gen5 closes
 
 | ID | Item | Detail |

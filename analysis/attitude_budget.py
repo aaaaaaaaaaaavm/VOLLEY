@@ -15,10 +15,35 @@ import numpy as np
 import motor_model as mm
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
-M_SAT, M_SLED, M_DEPLOYER = 4.0, 9.445, 124.5
-SLED_TRAVEL, CASSETTE_PITCH, ASSUMED_ARM = 1.50, 0.104, 0.166
+M_SAT, M_SLED = 4.0, 9.445
+
+
+def _loaded_kg():
+    """The deployer's LOADED mass, because deployer_inertia() is added to the host's.
+
+    The rotating body is the installed deployer with its twelve satellites aboard; only the
+    one being indexed, and the sled, move within it. So this is loaded mass, not dry.
+
+    It was the literal 124.5, which was mass_properties' loaded figure BEFORE A46 itemised
+    the enclosure on 2026-08-16 -- 8.00 kg of placeholder became 50.04 kg. Read live so it
+    cannot go stale again; 124.5 -> 174.6 raises the deployer inertia by 40 %.
+    """
+    here = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(here, 'results', 'mass_properties.json'), encoding='utf-8') as fh:
+        return json.load(fh)['loaded_kg']
+
+
+M_DEPLOYER = _loaded_kg()
+SLED_TRAVEL, CASSETTE_PITCH = 1.50, 0.104
+# DECLARED ASSUMPTION, no derivation: the lever arm from the host centre of mass to the
+# deployer's. Named ASSUMED_ARM since A13 was written and never sourced.
+ASSUMED_ARM = 0.166
 T_INDEX, T_RETURN, N_SHOTS = 4.0, 6.0, 12
 V_EXIT = mm.operating_point()['v_exit']    # never a literal; see mm.operating_point
+# DECLARED ASSUMPTION, N.m, and it is the one this script should be challenged on: a host
+# reaction-control authority. E5 records that NO host control-authority figure exists in this
+# project, and band 5 of A13 passes on this number. See P94 -- it is declared here rather than
+# sourced, because there is nothing to source it from.
 RCS_TORQUE = 0.1
 HOST_MASSES = (200.0, 500.0, 1000.0, 2000.0, 5000.0)
 

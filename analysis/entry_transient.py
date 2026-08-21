@@ -38,8 +38,9 @@ RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 MU0 = 4e-7 * math.pi
 
 PLATE_W, PLATE_LEN, PLATE_T = 0.090, 0.3405, 0.003
-SIGMA = 2.5e7
-TAU = 0.048
+SIGMA = 2.5e7               # DECLARED, S/m: aluminium plate conductivity. Lower than pure
+                            # 6061 to allow for temper and temperature; not a measurement
+TAU = 0.048                 # m, pole pitch -- stator.pole_pitch x 2, the electrical period
 GAP_MECH = 0.002
 G_EFF = 2 * GAP_MECH + PLATE_T
 SIGMA_S = SIGMA * PLATE_T

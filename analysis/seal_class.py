@@ -40,7 +40,8 @@ RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 V_CHAMBER = 2.0e-3
 A48_AUTHORITY = 0.323            # m/s, the section as first built
 SEAL_MASS_KG = 2.0e-3            # A58's mid-sweep point
-SEAL_CP = 1500.0
+SEAL_CP = 1500.0            # DECLARED, J/kg.K: filled PTFE specific heat, handbook range.
+                            # Same value as chamber_thermal.py, which A58 declared first
 SEAL_DT_LIMIT_K = 50.0           # A58 band 5
 TOTAL_LIMIT_KG = 2.0             # A54 band 5
 BORES_MM = (15.805366135494582, 16.000)

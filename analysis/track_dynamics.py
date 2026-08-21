@@ -35,7 +35,8 @@ import sizing
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 
 L = 1.5
-M_DIST = 20.0
+M_DIST = 20.0               # DECLARED ASSUMPTION, kg: track distributed mass per metre-ish
+                            # lump for the beam mode. Not traced to mass_properties
 E_AL = 69e9
 I_SEC = 2 * ((0.045 * 0.065 ** 3 - 0.037 * 0.057 ** 3) / 12)
 EI = E_AL * I_SEC
@@ -45,9 +46,9 @@ LAM = mm.LAM
 GAP_MM = 12.0
 A17_AMPLIFICATION = 8.18
 RIPPLE_PCT = 0.99
-ECC = 0.0575
+ECC = 0.0575                # DECLARED, m: thrust-line eccentricity from the section centroid
 TARGET_HZ = 70.0
-M_STOWED = 48.0
+M_STOWED = 48.0             # DECLARED, kg: twelve 3U at 4.0 kg, stowed on the track at launch
 BRAKE_STATION = 1.480
 LAM2_FF, LAM2_PP = 22.37, 9.87
 BETA_L_FF = 4.730040744862704

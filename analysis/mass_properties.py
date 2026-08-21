@@ -7,13 +7,18 @@ than from top-down estimates. Supersedes the earlier ~105 kg hand estimate
 iron-core figure first assumed.
 
 Reproduces (paper Sec. V-D):
-    dry mass        76.5 kg
-    loaded (12x3U)  124.5 kg
-    CG              0.44 m from breech
+    dry mass        126.6 kg
+    loaded (12x3U)  174.6 kg
+    CG              0.46 m from breech
     sled assembly   9.45 kg   <- CAD solid-volume result (P15); feeds motor_model.py
 
 The first three moved when the D6 -> D9 gate resize and the sled CAD reconciliation
 landed; this header had kept the pre-reconciliation 72.3 / 120.3 / 0.46 until 2026-08-10.
+They moved again at A46 on 2026-08-16, when the enclosure stopped being an 8.00 kg
+placeholder and was built up from the geometry at 50.04 kg: 76.5 / 124.5 / 0.44 ->
+126.6 / 174.6 / 0.46. This header kept the pre-A46 figures until 2026-08-20 -- the fifth
+place that correction had to be chased to, and the only one inside the script that
+computes the right answer. P93.
 A docstring is the first thing anyone reads about a script, so it is worth as much as the
 code under it.
 
