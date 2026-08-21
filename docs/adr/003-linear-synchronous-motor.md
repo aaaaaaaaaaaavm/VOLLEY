@@ -2,6 +2,16 @@
 
 **Status:** Accepted · **Date:** mid-2025 · **Phase:** Load-bearing
 
+> ## ⚠ **AMENDMENT — 2026-08-22 — [P98](../../OPEN_PROBLEMS.md).** One statement in this record is withdrawn.
+>
+> **This ADR contains the line *"A standard CubeSat qualifies to ~14 g quasi-static"*. It is not
+> supported and must not be quoted.** The cited 14.1 g value is GEVS random-vibration
+> g<sub>rms</sub>, not a universal CubeSat quasi-static limit. **25 g is retained only as VOLLEY's
+> internal design ceiling**, and payload structural compatibility remains vehicle- and
+> mission-specific. The full amendment is [at the end of the coilgun comparison](#-amendment--2026-08-22--p98-the-qualification-basis-in-the-block-above-is-withdrawn);
+> **the decision this ADR records does not depend on the withdrawn figure.** The original text is
+> left exactly as written, for provenance.
+
 ## Context
 The concept was built around a coilgun from 2021. The requirement that broke it is not
 velocity but **velocity accuracy**: the value proposition is a programmable per-satellite
@@ -73,6 +83,29 @@ Ironless double-sided Halbach linear synchronous motor driving a reusable sled.
   > A standard CubeSat qualifies to ~14 g quasi-static. Feng's design is ~100x that, and needs 2470x
   > the energy per shot. Neither is a secondary payload on an upper stage, and neither is a defect in
   > their work, they are solving a different problem. It is why this one is not a coilgun.
+
+> # ⚠ AMENDMENT — 2026-08-22 — [P98](../../OPEN_PROBLEMS.md): the qualification basis in the block above is withdrawn
+>
+> ## The line *"A standard CubeSat qualifies to ~14 g quasi-static"* is not supported and must not be quoted.
+>
+> **The cited 14.1 g value is GEVS random-vibration g<sub>rms</sub>, not a universal CubeSat
+> quasi-static limit.** A root-mean-square level over a broadband random spectrum is not a
+> quasi-static limit load, and a 3σ multiple of it is a peak-response estimate for that spectrum
+> rather than a structural capability. **No replacement figure exists**: the CubeSat Design
+> Specification publishes a mechanical interface and defers test levels to the launch provider, so
+> they vary by vehicle and by mission.
+>
+> **25 g is retained only as VOLLEY's internal design ceiling.** It is a requirement this project
+> set on itself, not a capability of any payload, and it is never evidence that a satellite is
+> qualified for it. **Payload structural compatibility remains vehicle- and mission-specific and
+> has not been demonstrated for any payload.**
+>
+> **The original text above is left exactly as written on the decision date, for provenance.**
+> The decision it records — an LSM rather than a coilgun — does not depend on the withdrawn figure:
+> it rests on the payload interface (armature on the customer satellite versus magnets on a reusable
+> sled) and on an acceleration ratio between two computed numbers, which needs no external standard
+> to state. See [`docs/VELOCITY_CEILING.md`](../VELOCITY_CEILING.md) for the current statement.
+
 - **Maglev-style rail.** The 2021 framing left this open. Converged with the LSM choice.
 
 ## Consequences
