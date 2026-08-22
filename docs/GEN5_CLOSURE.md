@@ -198,7 +198,7 @@ ADRs 032 through 036, and the register — **and it is future work.**
 
 ---
 
-**Register at closure: 146 numbered entries, 56 live, 51 corrected and retained, 36 closed.
+**Register at closure: 147 numbered entries, 56 live, 51 corrected and retained, 36 closed.
 69 run sheets covering 66 analyses across A1–A70 — A3, A26 and A60 were numbered and never
 written — each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.**
