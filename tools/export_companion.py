@@ -409,6 +409,43 @@ def build(kind, manifest, readme, out_root, commit):
     return dest
 
 
+def manifest_sources():
+    """Every flagship path either companion is generated from, deduped and sorted.
+
+    This is what `tools/check_companions.py` asks git about: if any commit has touched one of
+    these since the recorded export, the published payloads are stale.
+    """
+    return sorted({src for src, _ in PAPER_MANIFEST + THESIS_MANIFEST})
+
+
+def write_export_record(commit, dirty):
+    """Record which flagship commit the companions were last generated from.
+
+    P105. The companions already carry the flagship commit in their README banner, and that
+    banner is the right thing -- but it lives in the OTHER repository, so no gate in this one
+    could ever read it. An engineering correction could therefore land here, pass every gate,
+    and leave the published reproducibility payloads quoting a superseded run sheet. This file
+    is the flagship-side half, and `check_companions.py` is what reads it.
+
+    It lives in tools/ rather than analysis/results/ on purpose: `analysis` is itself a manifest
+    source, so a record written there would be a payload file whose own commit made the payload
+    look stale. The gate would have tripped on the act of recording that it had not.
+    """
+    path = os.path.join(ROOT, "tools", "companion_export.json")
+    import json as _json
+    with open(path, "w", encoding="utf-8") as fh:
+        _json.dump(dict(
+            flagship_commit=commit,
+            flagship_tree_was_dirty=dirty,
+            note=("The commit the companions were last generated from. tools/check_companions.py "
+                  "fails when any manifest source has been committed since. Regenerate with "
+                  "tools/export_companion.py and push both companions."),
+            manifest_sources=manifest_sources(),
+        ), fh, indent=2)
+        fh.write("\n")
+    print(f"  export record -> {path} (flagship {commit})")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", required=True, help="directory to write the companions into")
@@ -441,6 +478,7 @@ def main():
             print(f"    {p}")
         if len(set(SKIPPED)) > 20:
             print(f"    ... and {len(set(SKIPPED)) - 20} more")
+    write_export_record(commit, bool(dirty))
     print("done. These are output -- do not edit them; edit the flagship and re-run.")
 
 
