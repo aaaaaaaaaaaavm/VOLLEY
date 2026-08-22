@@ -129,11 +129,23 @@ still a closure at 2.4× the moment.**
 > it. It is conservative by 2.2× and **nothing reads it as a driver**, so it is left as it stands
 > and recorded as a decision rather than corrected into a lower retention requirement.
 >
-> **The model is constant-acceleration.** `point()` returns **42.23 m/s**, which is exactly
+> **The model is constant-acceleration, and the conservatism that buys is narrower than it first
+> reads.** `point()` returns **42.23 m/s**, which is exactly
 > `gen6_drive.exit_velocity_m_s_constant_pressure_bound`; the delivered figure is **29.01 m/s** and
-> the shot is a blowdown. The direction is safe — a lower exit velocity over the same 8 m means a
-> longer powered stroke, so band 3's margin is understated — but **this run's Gen6 answer is a
-> bound, not a profile.**
+> the shot is a blowdown.
+>
+> **What is conservative:** the *time available*. A lower delivered exit velocity over the same
+> 8.0 m means a longer powered stroke than 378.9 ms, so **band 3's comparison of settling time
+> against time available is understated in that one respect.**
+>
+> **What is not established:** that the contact trajectory or the angular response is conservative
+> under the real pressure–time history. Under blowdown the acceleration is time-varying, so the
+> angular forcing from any force-line eccentricity is time-varying with it, and **contact timing,
+> arrival rate and rebound timing all move.** A closed form driven by a constant acceleration
+> cannot bound a trajectory whose forcing changes shape. **This run's Gen6 answer is a bound on one
+> scalar comparison, not a bound on the motion.** That is [P103](../OPEN_PROBLEMS.md)'s to settle,
+> and it is why P103 step 2 requires the design point to be read live rather than a constant
+> acceleration to be assumed.
 >
 > **And the larger gap is not in this run at all.** A38 models the payload crossing its cradle
 > clearance at the start of the stroke. **Nothing in this repository models the other eight

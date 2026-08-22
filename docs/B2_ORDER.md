@@ -49,6 +49,32 @@ would be the expensive mistake.*
   unit-to-unit spread is the cheaper half of it.
 - Estimated **₹1,500 – ₹4,000** for three.
 
+> ### CORRECTED 2026-08-22, before anything is bought: **double-acting only**, and the rig measures more than the seal
+>
+> **This section said "spring-return or double-acting". Spring-return is now excluded**, and the
+> reason is arithmetic. A return spring on a 16 mm-bore cylinder develops a force of the same
+> order as **the whole of the 17.8352 N threshold**, varying with position, and a quasi-static
+> pull cannot separate it from friction without characterising it first. *It is a second unknown
+> introduced into a measurement whose entire purpose is to resolve a decision window under 4.5 N
+> wide.* **Double-acting, no spring, both ports open to ambient unless band 7 pressurises one.**
+>
+> **And the deeper point, which the first version of this order did not state.** VOLLEY's Gen6
+> interface is **a free piston in a bore**. [ADR-035](adr/035-drive-tube-material.md) records that
+> the carriage is not recovered and that **every seal makes exactly one 8.0 m pass** — so the
+> machine has **one dynamic seal and nothing else in the force path**: no rod, no rod seal, no
+> wiper, no rod bearing.
+>
+> **A stock cylinder has all four.** A load cell on the rod measures piston seal **plus** rod seal
+> **plus** wiper **plus** rod bearing, and on a 16 mm bore those three parasitic terms are
+> plausibly of the same order as the **gap between** the two thresholds this order exists to
+> resolve — **17.8352 N** and **22.294 N**. **Sensor resolution does not touch this.** A gauge good
+> to ±1 N measures the wrong quantity to ±1 N.
+>
+> **The fix is bands 13 and 14 below, not a caveat.** The stock cylinder is retained because
+> [A61](../validation/A61_seal_class.md) band 7 already showed the bore substitution is free and
+> because a bespoke free-piston fixture is not a ₹8,000 item — **but what it delivers is the
+> *difference* between two configurations of the same hardware, not a load-cell reading.**
+
 ### 1.2 The instrument — the binding requirement is sample rate, not accuracy
 
 **A load cell or force gauge reading to at least 50 N, logging at ≥ 500 Hz.**
@@ -109,6 +135,29 @@ seals are not oiled**), and a dial indicator for stroke position. **₹2,500 –
 > pulled; band 12 is a thermometer. **If any of them cannot be done, say which and why in the run
 > sheet** — an undone band is a recorded gap, not a silent one.
 
+> ## BANDS 13 AND 14, DECLARED 2026-08-22, BEFORE PURCHASE AND BEFORE ANY DATA. BANDS 1–12 ARE NOT EDITED.
+>
+> **These two exist because bands 1–8 assumed the load cell measures the seal.** It does not — see
+> the correction in §1.1. **They are prerequisites on bands 3 and 4**, in the same way band 8 is:
+> *bands 3 and 4 may not be quoted anywhere until 13 and 14 are answered.*
+>
+> | # | Question | Band | What a miss means |
+> |---|---|---|---|
+> | **13** | **Is the non-target force measured on the same hardware?** Pull each unit **twice**: complete, and again with **the piston seal removed** and everything else — rod, rod seal, wiper, bearing, alignment, speed — unchanged | **both configurations, ≥ 3 units, ≥ 10 pulls each; report the difference and its spread** | **The rig measured a pneumatic cylinder and the run sheet claimed a Gen6 seal.** A tare taken on different hardware, or estimated from a catalogue, does not satisfy this |
+> | **14** | **Does the result classify?** Take the piston-seal friction as the band-13 difference, with its combined 3σ spread. **That interval must lie wholly below 17.8352 N, wholly above 22.294 N, or wholly between them** | **it must not straddle either boundary** | **P67 is not answered.** Band 8's third outcome applies, it is written down as not answered, and the vacuum test is what is needed |
+>
+> **Band 14 declares no new tolerance.** Both numbers are [A61](../validation/A61_seal_class.md)'s,
+> already in `analysis/results/seal_class.json` as the 4.00 % thermal specification and the 5.00 %
+> trim-unnecessary fraction, and they are the two boundaries [ADR-036](adr/036-seal-specification-and-the-trim-stage.md)
+> already decides on. **The band is a requirement on the measurement's uncertainty, expressed
+> against thresholds that were declared before it.**
+>
+> **What band 13 still does not remove.** The rod remains in the fixture, so any side load it
+> imposes acts on the piston seal in both configurations and is not subtracted — it is inside the
+> difference. **Report the alignment method.** And the difference is a *piston seal in a rod
+> cylinder*, which is nearer to the machine than the total was and is still not a free piston at
+> 22.73 bar and 17 m/s in vacuum. **Band 8 governs that, and it always did.**
+
 ### Band 8 is the one that decides whether the rest is worth anything
 
 **An air-side, low-speed, possibly unpressurised bench pull is a *different* measurement from a
@@ -136,7 +185,8 @@ The honest outcomes are:
 ## 3. What to do with the result
 
 **Write it as `validation/B2_seal_friction.md`** with these bands copied in unchanged, the raw
-pulls committed as CSV, and the verdict against each. **Then, and only then**, resolve ADR-036.
+pulls committed as CSV — **both configurations of band 13, not only the complete one** — and the
+verdict against each. **Then, and only then**, resolve ADR-036.
 
 **It changes the category of evidence, not its degree.** `docs/FIGURE_INDEX.md`'s `measured`
 evidence class has **zero members**, and it has been the honest description of this project since

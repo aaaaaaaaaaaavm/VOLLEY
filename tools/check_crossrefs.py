@@ -93,6 +93,31 @@ REFS = [
      "parameters", "gen6_drive.exit_velocity_m_s_zero_friction",
      "stage_attitude", "inputs.v_exit_zero_friction_m_s", 1.0, 0.5,
      "the same propagation as the stroke, one field along"),
+    ("Gen6 charge pressure, adopted point",
+     "parameters", "gen6_store.charge_pressure_bar",
+     "trim_authority", "adopted_point.p0_bar", 1.0, 0.5,
+     "A55 carries BOTH points deliberately -- a44_point at 50 bar and adopted_point at the "
+     "design point. The adopted one must track the parameter file or the published 3.9798 % "
+     "dispersion is quoted at a pressure the machine does not use"),
+    ("Gen6 stroke, adopted point",
+     "parameters", "gen6_drive.stroke_mm",
+     "trim_authority", "adopted_point.stroke_m", 1000.0, 0.5,
+     "the other half of A55's adopted point, and the half ADR-034 moved"),
+    ("piston pressure force",
+     "parameters", "gen6_drive.commanded_force_N", "seal_class", "pressure_force_N", 1.0, 0.5,
+     "A61 specifies the seal as a FRACTION of this force -- 4.00 % is 17.8352 N only while the "
+     "force is 445.88. If the design point moves and this does not, both B-2 thresholds move "
+     "silently underneath ADR-036"),
+    ("seal specification",
+     "seal_class", "specification.seal_thermal.friction_N",
+     "parameters", "gen6_seal.friction_max_N", 1.0, 0.5,
+     "P89 put the specification into the parameter file. B-2 bands 3, 4 and 14 are quoted "
+     "against the parameter file's copy and A61 owns the original"),
+    ("seal friction allowance",
+     "parameters", "gen6_seal.friction_allowance_N",
+     "gen6_dispersion", "friction_N", 1.0, 0.5,
+     "A41's ceiling is what A44's dispersion is driven by, and 93.4 % of that dispersion's "
+     "variance is this one term"),
     ("Gen6 design-point acceleration",
      "parameters", "gen6_drive.acceleration_g", "tipoff_gen6", "design_point.a_g", 1.0, 0.5,
      "P102. A38 is the only run that takes tip-off to Gen6 and it held 25 g as a module constant "
@@ -126,6 +151,21 @@ NOT_REFS = [
      "measures which side. Making them agree would delete the decision"),
     ("gen6_drive.exit_velocity_m_s_zero_friction (34.28) vs _at_friction_allowance (29.01)",
      "A ceiling and a floor. P67 says both are real and neither should appear alone"),
+    ("gen6_drive.cradle_preload_N_per_contact (201.7) vs tipoff_gen6.gen6.preload_N (91.66)",
+     "P102 owns this one explicitly. 201.7 N is A38's requirement at the 25 g qualification cap "
+     "and is RETAINED as the conservative retention figure; 91.66 N is what the ADR-034 design "
+     "point needs. Making them agree would lower a retention requirement by re-run rather than "
+     "by decision"),
+    ("gen6_dispersion.v_zero_friction (30.5354) vs gen6_drive.exit_velocity_m_s_zero_friction "
+     "(34.28)",
+     "A44 records ITS OWN operating point, which is the convention every run sheet here follows. "
+     "A55 is the run that carries both -- a44_point and adopted_point side by side -- and the "
+     "adopted one IS checked above. Forcing A44's file to the current point would rewrite a run "
+     "as though today's design point was the one analysed"),
+    ("tipoff_gen6.gen6.v_exit (42.23) vs gen6_drive.exit_velocity_m_s (29.01)",
+     "A38's model is constant-acceleration, so it returns the constant-pressure bound and not "
+     "the delivered blowdown figure. P102 records that; P103 owns replacing the model. Pinning "
+     "them together would freeze the assumption P103 exists to remove"),
 ]
 
 
