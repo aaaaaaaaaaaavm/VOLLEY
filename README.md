@@ -91,6 +91,11 @@ keeps those two columns apart, because collapsing them produces a false history.
 > only two.**
 >
 > **Gen5 remains the frozen, fully analysed baseline** and is what the manuscript reports.
+> **[`docs/GEN6_FUSION_BUILD_PACKAGE.md`](docs/GEN6_FUSION_BUILD_PACKAGE.md)** is the handoff for
+> building the authoritative Fusion assembly — assembly tree, datums, every CAD-driving parameter
+> with its status, and an explicit list of what must stay parametric until P108 lands.
+> **[`docs/HUMAN_ACTIONS.md`](docs/HUMAN_ACTIONS.md)** is the other side of the boundary: work no
+> further computation can do.
 > **[`docs/COMPUTATIONAL_CLOSURE.md`](docs/COMPUTATIONAL_CLOSURE.md)** counts what is left before
 > hardware: **17 questions that are still calculations**, and ten that are not.
 
