@@ -13,7 +13,7 @@ import guided_contact as g                                         # noqa: E402
 import tube_centreline as tc                                       # noqa: E402
 
 LAW = "HC"
-DT_SWEEP = (0.0, 0.5, 1.0, 2.0)
+DT_SWEEP = (0.0, 0.5, 1.0, 2.0, 5.0)
 LAND_SWEEP = (40.0, 80.0, 120.0, 200.0, 400.0)
 
 
@@ -37,7 +37,7 @@ def main():
     c_rad_um = g.NOMINAL["clearance_um"] / 2.0
     jam = []
     for dT in DT_SWEEP:
-        x, y, _off, kappa = tc.orbital_centreline(dT_K=dT)
+        x, y, _th, _off, kappa = tc.orbital_centreline(dT_K=dT)
         row = dict(dT_K=dT, peak_mm=float(np.abs(y).max() * 1e3), curvature_per_m=kappa)
         for Ls in LAND_SWEEP:
             s = sagitta(x, y, Ls / 1e3) * 1e6

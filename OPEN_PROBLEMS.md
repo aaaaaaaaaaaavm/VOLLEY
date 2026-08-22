@@ -5373,7 +5373,7 @@ is recorded here rather than claimed closed.*
 
 ### P108. Gen6's exit angular rate misses the tip-off band by 7.4x, and the input that decides it is bore straightness: CRITICAL, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — couple A59's deformed tube centreline into A67 and re-run, then sweep the straightness a real bore can hold
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — retest the guided-contact solver on A69's CORRECTED continuous centreline, then price the land-separation trade against its 400 mm admissibility ceiling
 
 
 **[A67](validation/A67_guided_contact.md) ran on 2026-08-22 — six of nine — and band 5 is the
@@ -5456,9 +5456,23 @@ at a 65.8 % model-form spread.**
 > **What does not survive:** quoting 14.845, or 7.4×, as settled. *A67's band 5 verdict stands as
 > recorded; what is corrected is the use made of its number.*
 
-### P109. At a one-kelvin gradient the Gen6 bore does not admit its own piston: CRITICAL, NEW 2026-08-22
-> **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — choose bore, clearance, land separation, support pitch and thermal control against the admissibility constraint, which no parameter has ever been chosen against
+### P109. ~~At a one-kelvin gradient the Gen6 bore does not admit its own piston~~ **WITHDRAWN**: was CRITICAL, CORRECTED 2026-08-22
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+
+> ## WITHDRAWN the same day it was opened — [P110](#p110).
+>
+> **This entry rested on a centreline that kinked a continuous tube at every support.** On the
+> corrected continuous solve the sagitta at 1 K over 120 mm is **2.39 µm, not 37.3** — agreeing
+> with the closed form κL²/8 to 0.2 % — against **25 µm** of radial clearance. **The piston clears
+> at every gradient tested to 5 K.**
+>
+> **What survives, and it is an order of magnitude weaker:** **400 mm lands are inadmissible at
+> 1 K** and 200 mm at 5 K. A67 band 8's "longer lands reduce tip-off" therefore has a ceiling —
+> at 400 mm, not at 120. *That is the only part of this entry that stands, and it is a trade limit
+> rather than a design failure.*
+>
+> **The text below is the original entry and is wrong.** It is kept because a withdrawal needs
+> something to withdraw.
 
 
 **[A70](validation/A70_guided_contact_derived.md) asked the question that comes before tip-off:
@@ -5526,6 +5540,73 @@ redesign belongs in a run of its own with its bands declared first.
 > **This does not say Gen6 fails.** It says **this configuration** does not admit its own piston at
 > a gradient nobody has computed, and that **five design variables have been carried this far
 > without anyone knowing there was a constraint on them.**
+
+### P110. A69's thermal centreline kinked a continuous tube at every support, and two bands were hardcoded PASS: CRITICAL, CORRECTED 2026-08-22
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found by an independent audit of [A69](validation/A69_tube_centreline.md) and
+[A70](validation/A70_guided_contact_derived.md), hours after both were published.**
+
+### The physics defect
+
+`orbital_centreline()` built the thermal bow as **an independent parabola in each support span,
+reset to zero at every support**. A uniform across-diameter gradient imposes a uniform curvature
+on the **whole continuous member**. Imposing it span-by-span put a slope discontinuity of
+**κ × span** at each of seven supports — **it kinked a continuous aluminium tube seven times**.
+The supports are transverse constraints; they are not cuts.
+
+**What it cost, at a 1 K gradient over the nominal 120 mm land separation:**
+
+| | Sagitta |
+|---|---:|
+| As published | **37.3 µm** |
+| **Corrected, continuous solve** | **2.39 µm** |
+| **Independent closed form, κL²/8** | **2.386 µm** |
+| Radial clearance | 25.0 µm |
+
+**15.6× too large, and the corrected value agrees with the closed form to 0.2 %.**
+
+> ### [P109](#p109) does not survive it
+>
+> P109 claimed the bore does not admit its own piston at 1 K. **On the corrected model the piston
+> clears at every gradient tested to 5 K, with a factor of 2 in hand.** *That entry is withdrawn
+> as stated and what remains of it is an order of magnitude weaker.*
+
+### The verification defect, and it is the more general one
+
+**Two bands were `= True`.**
+
+- **A69 band 4** — *"a continuous centreline is returned and exported"* — was `b4 = True`. **The one
+  band that would have caught the kink was the one that was not computed.**
+- **A70 band 6** — energy closure — was `b6 = True` with the dynamics disabled, so **no energy
+  balance was evaluated at all**. A70's recorded verdict is corrected to **1 PASS, 5 NOT
+  EVALUABLE**.
+
+**A69 band 7 was not hardcoded but was not a centreline either**: it added two scalar peaks. It now
+takes the peak of solved combined centrelines, and **on that basis it fails** — 5.30 mm at 5 K,
+outside the bracket A67 swept.
+
+### Corrected. Propagated 2026-08-22
+
+The gradient enters as an **eigenstrain on the continuous beam**, `f_th = ∫Bᵀ EI κ dx =
+EI κ [0, −1, 0, +1]`, solved **together** with the support offsets. **Band 1 gains a second
+limiting case** — a simply supported span under uniform imposed curvature against `κL²/8`, which
+returns **0.0000 %**. **Band 4 is four computed conditions**: finite displacement, finite slope,
+slope jump below 1 % of the peak slope, and peak curvature within 5× the imposed. It returns
+**0.7454 %** and a curvature ratio of **1.00**.
+
+**A third conclusion is withdrawn.** A69 ranked thermal bow above manufacturing straightness —
+**with manufacturing straightness absent from the ranking.** It is now a declared superposable
+input, and the honest statement is that **the ranking cannot decide between them.**
+
+### What this says about the gate set
+
+**Every repository gate passed while the physics was wrong**, and they would have passed on any
+value of that sagitta. **The gates check that the record is consistent. They do not check that a
+model is right**, and the verification language is corrected to say so.
+[`tools/check_bands.py`](tools/check_bands.py) is the narrow thing that can be automated: it finds
+band verdicts that are assigned rather than computed.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

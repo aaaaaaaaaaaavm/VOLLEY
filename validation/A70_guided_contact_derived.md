@@ -119,3 +119,49 @@ inside a validation run.
 smoothed centreline representation with continuous curvature, an implicit or stiff integrator, or
 a compliant piston that does not need to be rigid. **All three are computation and none is
 hardware** — this run is recorded as not having answered them.
+
+---
+
+> ## CORRECTION 2026-08-22, later the same day — **P110**. The interference result was an artefact.
+>
+> **The admissibility map above is superseded.** It consumed [A69](A69_tube_centreline.md)'s
+> centreline, and that centreline had a slope discontinuity at every support.
+>
+> **Re-run on the corrected continuous solve**, three-point sagitta in µm against **25.0 µm** of
+> radial clearance:
+>
+> | Gradient | 40 mm | 80 mm | **120 mm — nominal** | 200 mm | 400 mm |
+> |---|---:|---:|---:|---:|---:|
+> | **0 K** | 0.0 | 0.2 | **0.4** | 1.2 | 4.4 |
+> | **0.5 K** | 0.1 | 0.5 | **1.2** | 3.3 | 13.3 |
+> | **1.0 K** | 0.3 | 1.1 | **2.4** | 6.6 | **26.5** ✗ |
+> | **2.0 K** | 0.5 | 2.1 | **4.8** | 13.3 | **53.0** ✗ |
+> | **5.0 K** | 1.3 | 5.3 | **11.9** | **33.1** ✗ | **132.5** ✗ |
+>
+> ### The design point passes, and the original conclusion is withdrawn
+>
+> **At the nominal 120 mm land separation the piston clears at every gradient tested, including
+> 5 K, with a factor of 2 in hand.** The claim that it did not was **15.6× of artificial kink**.
+> **[P109](../OPEN_PROBLEMS.md) is withdrawn as stated.**
+>
+> ### What survives, and it is much weaker than what was claimed
+>
+> **Long land separations do have a ceiling.** 400 mm is inadmissible at **1 K** and 200 mm at
+> **5 K**. [A67](A67_guided_contact.md) band 8 found longer lands reduce exit angular rate;
+> **that trade still has a limit, at 400 mm rather than at 120.** *A real constraint, an order of
+> magnitude further away than the withdrawn one, and it is the only part of P109 that stands.*
+>
+> ### The recorded verdict is also corrected — **band 6 was not tested**
+>
+> **Band 6 was recorded PASS on `b6 = True` with the dynamics disabled.** No kinetic, friction or
+> contact energy was evaluated, so **no energy balance was computed and it is not a PASS.**
+>
+> **The corrected verdict for this run is: 1 PASS, 5 NOT EVALUABLE.** Band 1 — the coupling
+> reproducing the zero-shape case to 0.0000 % — is the only band this run actually evaluated.
+>
+> ### The solver blocker has not been retested
+>
+> **The dynamics were disabled on the kinked geometry and are still disabled.** Whether the
+> penalty solver converges on the *corrected*, continuous centreline **is not known**, and it is
+> the next executable step rather than a conclusion. *It is entirely possible the blocker was
+> caused by the bad geometry.*

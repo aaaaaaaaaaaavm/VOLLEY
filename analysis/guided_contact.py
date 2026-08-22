@@ -100,7 +100,7 @@ def bore_from_a69(dT_K=2.0, seed=20260822):
     """Load A69's orbital centreline and normalise it to unit peak. Returns its peak, in metres."""
     global _A69
     import tube_centreline as tc
-    x, y, _off, _k = tc.orbital_centreline(dT_K=dT_K, seed=seed)
+    x, y, _th, _off, _k = tc.orbital_centreline(dT_K=dT_K, seed=seed)
     pk = float(np.abs(y).max())
     yn = y / pk
     dy = np.gradient(yn, x)

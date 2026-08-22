@@ -66,8 +66,21 @@ A_SEC = math.pi * (OD ** 2 - BORE ** 2) / 4.0
 MASS_PER_M = RHO * A_SEC
 
 
-def beam(n_el, loads_per_m, support_x, support_y=None):
-    """Hermite beam on rigid transverse supports. Returns nodal (w, theta) and the node x."""
+def beam(n_el, loads_per_m, support_x, support_y=None, kappa_th=0.0):
+    """Hermite beam on rigid transverse supports, with an optional imposed thermal curvature.
+
+    A uniform across-diameter temperature gradient imposes a uniform curvature on the WHOLE
+    continuous member, not an independent bow in each span. In a displacement formulation that
+    enters as an eigenstrain: the element load vector for a constant imposed curvature k is
+
+        f_th = integral( B^T EI k ) dx  =  EI k [0, -1, 0, +1]
+
+    -- equal and opposite end moments. The supports then constrain w only, so displacement AND
+    rotation come out continuous and the curvature is finite everywhere. The earlier
+    construction imposed a parabola per span and reset it at every support, which put a slope
+    discontinuity of k*span at each one and kinked a continuous aluminium tube seven times.
+    That is P110.
+    """
     x = np.linspace(0.0, L, n_el + 1)
     le = L / n_el
     ndof = 2 * (n_el + 1)
@@ -83,6 +96,8 @@ def beam(n_el, loads_per_m, support_x, support_y=None):
         K[np.ix_(d, d)] += ke
         w = loads_per_m
         F[d] += w * le * np.array([0.5, le / 12.0, 0.5, -le / 12.0])
+        if kappa_th:
+            F[d] += E_MOD * I_SEC * kappa_th * np.array([0.0, -1.0, 0.0, 1.0])
     # rigid supports by penalty, with an optional prescribed offset
     pen = E_MOD * I_SEC / le ** 3 * 1e8
     sy = support_y if support_y is not None else [0.0] * len(support_x)
@@ -183,23 +198,54 @@ def centreline(name="orbit"):
     return x, w, th
 
 
-def orbital_centreline(dT_K=2.0, n_el=800, seed=20260822):
-    """The shape that actually fires: 0 g, so support placement plus thermal bow.
+def verify_imposed_curvature(n_el=400):
+    """Limiting case: a SIMPLY SUPPORTED single span under uniform imposed curvature k.
 
-    Self-weight contributes exactly nothing at 0 g -- that is A69 band 5 and it is the finding.
-    What is left is where the supports actually are, and how much the tube bows under an
-    across-diameter gradient. Returned as x, y(x) in metres, for the contact model to interpolate.
+    Closed form: w(x) = k x (span - x) / 2, so midspan = k span^2 / 8. This is the check the
+    audit asked for, and it is independent of anything about VOLLEY.
     """
-    (x, w, th), off = case_support_tolerance(n_el, seed)
+    span, kappa = 1.0, 1.0e-3
+    n = n_el
+    le = span / n
+    ndof = 2 * (n + 1)
+    K = np.zeros((ndof, ndof)); F = np.zeros(ndof)
+    ke = (E_MOD * I_SEC / le ** 3) * np.array([
+        [12, 6 * le, -12, 6 * le], [6 * le, 4 * le ** 2, -6 * le, 2 * le ** 2],
+        [-12, -6 * le, 12, -6 * le], [6 * le, 2 * le ** 2, -6 * le, 4 * le ** 2]])
+    for e in range(n):
+        d = [2 * e, 2 * e + 1, 2 * e + 2, 2 * e + 3]
+        K[np.ix_(d, d)] += ke
+        F[d] += E_MOD * I_SEC * kappa * np.array([0.0, -1.0, 0.0, 1.0])
+    pen = E_MOD * I_SEC / le ** 3 * 1e8
+    K[0, 0] += pen; K[ndof - 2, ndof - 2] += pen
+    u = np.linalg.solve(K, F)
+    got = abs(u[0::2]).max()
+    want = kappa * span ** 2 / 8.0
+    return got, want, abs(got - want) / want
+
+
+def sagitta_over(x, y, land_sep_m, n=4000):
+    """Three-point mismatch a two-land rigid piston sees. Differentiation-free."""
+    a = land_sep_m / 2.0
+    xi = np.linspace(a, L - a, n)
+    return float(np.abs(np.interp(xi, x, y)
+                        - 0.5 * (np.interp(xi - a, x, y) + np.interp(xi + a, x, y))).max())
+
+
+def orbital_centreline(dT_K=2.0, n_el=800, seed=20260822, straightness_mm=0.0):
+    """The shape that actually fires, as ONE compatible structural solution.
+
+    0 g, so self-weight contributes nothing. The remaining terms are solved TOGETHER in a single
+    beam solve -- support offsets as prescribed displacements and the thermal gradient as an
+    imposed curvature on the continuous member -- rather than added as scalar peaks. Optional
+    manufacturing straightness is superposed as a declared shape, and is DECLARED, not computed.
+    """
+    rng = np.random.default_rng(seed)
+    off = rng.uniform(-SUPPORT_TOL_MM, SUPPORT_TOL_MM, len(SUPPORTS)) / 1e3
     kappa = ALPHA * dT_K / OD
-    # Thermal bow between supports: constant curvature, pinned at each support, so a parabolic
-    # arc per span with alternating sign is wrong -- the gradient is one-sided, so every span
-    # bows the same way and the supports hold the ends.
-    y_t = np.zeros_like(x)
-    edges = [0.0] + list(SUPPORTS) + [L]
-    for a, b in zip(edges[:-1], edges[1:]):
-        m = (x >= a) & (x <= b)
-        span = b - a
-        xi = (x[m] - a) / span
-        y_t[m] = kappa * span ** 2 / 2.0 * xi * (1.0 - xi)
-    return x, w + y_t, off, kappa
+    x, w, th = beam(n_el, 0.0, SUPPORTS, support_y=off, kappa_th=kappa)
+    if straightness_mm:
+        # A declared manufacturing bow: a single half-wave over the length, the shape a honed or
+        # gun-drilled tube is specified against. Amplitude declared, not derived.
+        w = w + (straightness_mm / 1e3) * np.sin(math.pi * x / L)
+    return x, w, th, off, kappa

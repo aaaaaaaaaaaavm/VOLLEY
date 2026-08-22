@@ -55,6 +55,10 @@ SURFACES = [
     # hand-corrected in both repositories and then overwritten by the next run.
     '../VOLLEY-paper/README.md',
     '../VOLLEY-thesis/README.md',
+    # The vault's front page is AUTHORED, not generated, so nothing regenerates its copy of the
+    # programme header. It carried "a conference contribution" for two weeks after the paper
+    # repository stopped calling itself that. Checked here for exactly that reason.
+    '../VOLLEY-lab/README.md',
     # The CAD surfaces. Added 2026-08-22 after P107: build_gen6.py's header, cad/README.md and
     # CAD_BRIEF.md all described the pre-ADR-034 design point while the geometry they describe
     # read the current one from parameters.json. The STEP files were right and the prose was not,

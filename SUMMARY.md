@@ -146,7 +146,7 @@ may not be needed at all, and **[P67](OPEN_PROBLEMS.md) decides**.
 | Model output, single-sourced | everything else |
 | Assumed | every price. [A21](validation/A21_comparators.md) band 7 required the comparison script to emit `NOT COMPUTED`, and it does. **No cost claim is made in either direction** |
 | Independent review | none |
-| Defect register | **144 numbered entries, 57 live** — including every one that damages the claims above |
+| Defect register | **145 numbered entries, 56 live** — including every one that damages the claims above |
 | Affiliation | **none claimed.** No institution, agency or company endorses, approves or is integrating this work. POEM and Vikram-1 appear in the manuscript as **worked host examples only** |
 
 ## 9 · Where to read next

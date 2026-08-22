@@ -99,3 +99,69 @@ at 2 K.
 **Pressure is not bending.** Hoop stress at the charge is **17.96 MPa** — reproducing A59 band 1
 independently — and the bore grows **3.440 µm diametrally, 6.9 % of the nominal clearance.**
 *It opens the clearance slightly rather than distorting the line.*
+
+---
+
+> ## CORRECTION 2026-08-22, later the same day — **P110**. The thermal construction was nonphysical.
+>
+> **The results above are superseded.** They are kept because the correction has to have something
+> to correct.
+>
+> **What was wrong.** `orbital_centreline()` built the thermal bow as an **independent parabola in
+> each support span, reset to zero at every support**. A uniform across-diameter gradient imposes a
+> uniform curvature on the **whole continuous member**; imposing it span-by-span put a slope
+> discontinuity of **κ × span** at each of the seven supports. **That kinks a continuous aluminium
+> tube seven times**, and the supports are transverse constraints, not cuts.
+>
+> **What it is now.** The gradient enters as an **eigenstrain on the continuous beam** — element
+> load `f_th = ∫Bᵀ EI κ dx = EI κ [0, −1, 0, +1]`, equal and opposite end moments — solved
+> **together with the support offsets in one compatible solve**. Displacement and rotation come out
+> continuous and the curvature is finite everywhere.
+>
+> ### The limiting case the correction is checked against
+>
+> **A simply supported span under uniform imposed curvature has `w_mid = κL²/8` exactly.** The
+> solver returns **1.250000e−04 m against 1.250000e−04 m — 0.0000 %.** *That test did not exist
+> before and is now band 1's second half.*
+>
+> ### What the error was worth
+>
+> **Three-point sagitta over the piston's own length, at a 1 K gradient:**
+>
+> | | 40 mm | 120 mm | 200 mm | 400 mm |
+> |---|---:|---:|---:|---:|
+> | **As first computed** — kinked | 12.8 | **37.3** | 60.4 | 109.5 µm |
+> | **Corrected** — continuous | **0.27** | **2.39** | **6.63** | **26.5** µm |
+> | Smooth-arc reference, κL²/8 | — | **2.386** | — | — |
+>
+> **The corrected 120 mm figure agrees with the independent closed form to 0.2 %.** The original was
+> **15.6× too large**, and every micrometre of the excess was the artificial kink.
+>
+> ### Corrected bands, re-run 2026-08-22
+>
+> **Seven of eight. Band 7 now FAILS and band 4 is now a real test.**
+>
+> | # | Band | Result | |
+> |---|---|---|---|
+> | 1 | simple span **and** imposed curvature, both to 0.5 % | 0.0000 % and **0.0000 %** | **PASS** |
+> | 2 | mesh converged | 0.27122 → 0.27122 mm | **PASS** |
+> | 3 | free–free mode against A59's 1.67 Hz | 1.6729 Hz | **PASS** |
+> | 4 | **continuity, actually tested** — slope jump < 1 % of peak slope, curvature within 5× the imposed | **0.7454 %**, ratio **1.00** | **PASS** |
+> | 5 | 0 g support sag ≤ 0.1 mm | 0.000000 mm | **PASS** |
+> | 6 | pressure bore growth reported | 3.440 µm, 6.9 % | **PASS** |
+> | 7 | **solved combined centrelines peak inside 2.0 mm** | **0.0768 to 5.3023 mm** | **FAIL** |
+> | 8 | contributions ranked | thermal bow dominates | **PASS** |
+>
+> **Band 4 was `b4 = True` and is now four computed conditions** — P110. **Band 7 was the sum of
+> two scalar peaks and is now the peak of solved centrelines**, and on that basis it fails: at 5 K
+> the member bows to **5.30 mm**, outside the 0.1–2.0 mm bracket [A67](A67_guided_contact.md) swept.
+> *A67's Monte Carlo was extrapolating at the hot end.*
+>
+> ### And one conclusion is withdrawn
+>
+> **"Not primarily manufacturing; thermal control and support alignment dominate" is withdrawn.**
+> **Manufacturing straightness was never in the ranking**, so the ranking could not place it.
+> `orbital_centreline()` now accepts a declared `straightness_mm` and superposes it, but **what an
+> 8 m bore can actually hold is not established here** and is [`MANUFACTURING.md`](../docs/MANUFACTURING.md)'s.
+> *The honest statement is that the ranking excludes manufacturing straightness and therefore
+> cannot decide between it and thermal bow.*

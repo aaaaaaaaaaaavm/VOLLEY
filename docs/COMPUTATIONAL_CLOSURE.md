@@ -14,9 +14,9 @@ counts against it, and is checked by
 
 ---
 
-## Remaining COMPUTATION items: 18
+## Remaining COMPUTATION items: 17
 
-**It is not zero and this file will not pretend otherwise.** The eighteen are named below, each
+**It is not zero and this file will not pretend otherwise.** The seventeen are named below, each
 with what would close it. **Every one of them is executable now** — no hardware, no launch
 provider, no flight.
 
@@ -54,18 +54,17 @@ a different place**, so its sixteen live computation items are counted separatel
 
 | Scope | COMPUTATION | HARDWARE | HOST_DATA | FLIGHT_OPS | DECISION |
 |---|---:|---:|---:|---:|---:|
-| **GEN6** | **18** | 4 | 5 | 1 | 0 |
+| **GEN6** | **17** | 4 | 5 | 1 | 0 |
 | PROGRAMME | 2 | 0 | 0 | 1 | 6 |
 | GEN5 | 16 | 0 | 0 | 0 | 4 |
 
 ---
 
-## The eighteen, and what closes each
+## The seventeen, and what closes each
 
 | Entry | What is left to compute |
 |---|---|
-| **[P109](../OPEN_PROBLEMS.md)** | **CRITICAL, and it needs no solver.** [A70](../validation/A70_guided_contact_derived.md): at a **1 K across-diameter gradient the bore is 37.3 µm out of line over the piston's own length, against 25 µm of radial clearance** — the piston does not pass. Five design variables have been carried this far with nobody knowing there was a constraint on them. What closes it: choose bore, clearance, land separation, support pitch and thermal control against it |
-| **[P108](../OPEN_PROBLEMS.md)** | **CRITICAL.** [A67](../validation/A67_guided_contact.md) ran and **Gen6 misses the tip-off band by 7.4×** — 14.845 °/s against 2.0. **Bore straightness is the dominant input**, at S_T = 0.894 against seal friction's 0.141. **[A69](../validation/A69_tube_centreline.md) has now computed the centreline** — at 0 g the tube's own weight contributes exactly zero and thermal bow dominates — and **[A68](../validation/A68_contact_law.md) measured the model-form spread at 65.8 %**, so the number is restated as 9–15 °/s. What is left: a contact solver that converges on a piecewise centreline ([A70](../validation/A70_guided_contact_derived.md) bands 2–5, NOT EVALUABLE) |
+| **[P108](../OPEN_PROBLEMS.md)** | **CRITICAL.** [A67](../validation/A67_guided_contact.md) ran and **Gen6 misses the tip-off band by 7.4×** — 14.845 °/s against 2.0. **Bore straightness is the dominant input**, at S_T = 0.894 against seal friction's 0.141. **[A69](../validation/A69_tube_centreline.md) has now computed the centreline** — at 0 g the tube's own weight contributes exactly zero and thermal bow dominates — and **[A68](../validation/A68_contact_law.md) measured the model-form spread at 65.8 %**, and **[P110](../OPEN_PROBLEMS.md) then corrected A69's centreline itself**. What is left: **retest the solver on the corrected continuous shape** — the blocker may have been the bad geometry — then price the land-separation trade against its 400 mm admissibility ceiling. **The magnitude of the tip-off problem is unresolved and is not being quoted as a range** |
 | **[P103](../OPEN_PROBLEMS.md)** | **A67 has run**, six of nine, and the first-order half of this entry is answered. What is left is the second-order set the run sheet declared out of scope: bore roundness, stick-slip, payload inertia variation, tube compliance, and a contact law that passes its own restitution check — **A67 band 3 failed at 13.7 % against a 5 % band** |
 | **[P92](../OPEN_PROBLEMS.md)** | **A66**: the trim stator's field through a 1.0 mm aluminium tube — attenuation, induced loss, wall temperature against ADR-035's 473 K |
 | **[P75](../OPEN_PROBLEMS.md)** | A Gen6 reliability architecture, the way [A47](../validation/A47_gen6_fmea.md) did Gen5 |
@@ -127,6 +126,18 @@ failure records, which is operational history and not a model.
 4. **the count above disagrees with the register** — the number in *"Remaining COMPUTATION
    items"* is parsed and compared;
 5. `--closed` is passed while any GEN6 entry is still `COMPUTATION`.
+
+> ### Gates are necessary and are not sufficient
+>
+> **[P110](../OPEN_PROBLEMS.md) is the proof.** Every gate in this repository passed while A69's
+> thermal model kinked a continuous tube at every support and A70 published an interference result
+> that was 15.6× artefact. **These gates check that the record is internally consistent. They do
+> not check physics, literature attribution, boundary conditions, model suitability or numerical
+> correctness**, and no count in this file should be read as if they did.
+>
+> **The narrow part that can be automated is automated**: `tools/check_bands.py` refuses a band
+> verdict that is assigned rather than computed. *That would have caught P110. It would not have
+> caught a wrong equation that was computed.*
 
 **Point 4 is the one that matters.** A closure document that drifts from the register is worse
 than no closure document, because it is the same claim made twice with only one of them true.

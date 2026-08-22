@@ -70,20 +70,29 @@ keeps those two columns apart, because collapsing them produces a false history.
 > **[A67](validation/A67_guided_contact.md)** modelled the payload's travel through the 8 m bore
 > for the first time and missed the **2.0 °/s** tip-off band. **[A68](validation/A68_contact_law.md)**
 > then measured how much of that was the contact law — **65.8 %** — so the honest figure is
-> **9 to 15 °/s**, not a single number ([P108](OPEN_PROBLEMS.md)).
+> **unresolved in magnitude**, not a single number ([P108](OPEN_PROBLEMS.md)).
 > **[A69](validation/A69_tube_centreline.md)** computed the tube's actual shape and found that at
 > 0 g its own weight contributes **exactly nothing**: the centreline is set by **thermal bow and
 > support placement**, not by structure or stiffness.
 >
-> **[A70](validation/A70_guided_contact_derived.md) found the harder one, and it needs no solver at
-> all.** At a **one-kelvin gradient across the tube's diameter, the bore is 37.3 µm out of line
-> over the piston's own length, against 25 µm of radial clearance — the piston does not pass**
-> ([P109](OPEN_PROBLEMS.md)). *Five design variables have been carried this far with nobody
-> knowing there was a constraint on them.*
+> **[A70](validation/A70_guided_contact_derived.md) reported a geometric interference at 1 K, and
+> an audit the same day found it was an artefact** — A69's thermal construction had kinked a
+> continuous tube at every support. **On the corrected continuous solve the piston clears at every
+> gradient tested to 5 K, with a factor of 2 in hand**, and the corrected figure agrees with the
+> closed form κL²/8 to 0.2 %. **[P109](OPEN_PROBLEMS.md) is withdrawn; [P110](OPEN_PROBLEMS.md)
+> records why.** *What survives is a ceiling on long land separations — 400 mm is inadmissible at
+> 1 K — which is a trade limit, not a design failure.*
+>
+> **The audit found something more general and it is worth more than the result it deleted.** The
+> one band that would have caught the kink was implemented as `b4 = True` — a verdict assigned
+> rather than computed. **Every gate in this repository passed while the physics was wrong.**
+> [`tools/check_bands.py`](tools/check_bands.py) now refuses a band verdict that is a literal
+> unless it is declared report-only with a reason; **101 scripts scanned, and A69 and A70 were the
+> only two.**
 >
 > **Gen5 remains the frozen, fully analysed baseline** and is what the manuscript reports.
 > **[`docs/COMPUTATIONAL_CLOSURE.md`](docs/COMPUTATIONAL_CLOSURE.md)** counts what is left before
-> hardware: **18 questions that are still calculations**, and ten that are not.
+> hardware: **17 questions that are still calculations**, and ten that are not.
 
 > **This repository is the engineering record, not a brochure.** Every analysis declares what
 > would count as failure *before* it runs, every defect is numbered including the ones that damage
@@ -109,7 +118,7 @@ keeps those two columns apart, because collapsing them produces a false history.
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
 | **checking what outside evidence could settle** | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) — which live entries a published source can close, which it can only inform, and **which need hardware and cannot be read away** |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 144 numbered entries, 57 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 145 numbered entries, 56 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -529,7 +538,7 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **144 numbered entries, 57 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Defect register** | **145 numbered entries, 56 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
 | **Validation** | **69 run sheets**, 66 analyses across A1–A70 (A3, A26, A60 and A66 were numbered and never written), each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
