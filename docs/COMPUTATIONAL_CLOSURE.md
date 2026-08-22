@@ -129,3 +129,15 @@ failure records, which is operational history and not a model.
 
 **Point 4 is the one that matters.** A closure document that drifts from the register is worse
 than no closure document, because it is the same claim made twice with only one of them true.
+
+### Replayed against the defects it exists to catch, 2026-08-22
+
+**A gate is a claim until it has been made to fail on purpose.**
+
+| Injected | Caught |
+|---|---|
+| **P92 relabelled `COMPUTATION` → `HARDWARE`**, its next step still saying *compute* | **Yes**, by name: *"a calculation relabelled as hardware is how a closure count gets faked"* — **and separately by the count**, which fell to 16 against a document saying 17 |
+| **P67's classification line deleted** | **Yes** — *"LIVE with no Scope/Next step line"* |
+| **The export commit set back to `28bfaba`** ([`check_companions.py`](../tools/check_companions.py)) | **Yes**, naming the four commits that made the payloads stale |
+| **`cell_manifest.deployer_dry_kg` restored to 84.5** ([`check_crossrefs.py`](../tools/check_crossrefs.py)) | **Yes** — 33.25 % apart against a 0.5 % tolerance |
+| **Gen6's design point restored to 25 g / 2.18 m** in `tipoff_gen6.json` | **Yes**, both halves |
