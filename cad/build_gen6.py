@@ -7,12 +7,20 @@ ADR-032. The payload is accelerated directly by cold gas along a rail the host s
 provides. There is no mover, no stator, no brake and no return stroke -- so almost nothing in
 Gen5 carries forward except the part that survives every architecture: the containment.
 
-Every dimension here is a run result, not a choice:
+Every dimension here is a run result, not a choice. All of them are READ from
+parameters.json at import; the figures below are what that file currently holds:
 
-    bore 15.805 mm, stroke 8000 mm     A49, the host stage's whole acceleration length
-    chamber 2 L at 50 bar              A41, the point where velocity saturates and gas does not
-    reservoir 11.25 L at 200 bar       A42, the ADIABATIC figure -- see below
-    cradle preload 201.7 N             A38, at 2.4x the Gen5 offset moment
+    bore 15.805 mm, stroke 8000 mm     A49/ADR-034, the host stage's whole acceleration length
+    chamber 2 L at 22.7258 bar         A41 sized it; ADR-034 set the charge pressure
+    reservoir 3.46 L at 200 bar        A56, SIZED at ADR-034's charge pressure
+    cradle preload 201.7 N             A38 at the 25 g qualification cap, RETAINED as the
+                                       conservative figure -- the design point needs 91.7 N
+
+    HEADER CORRECTED 2026-08-22, P107. It read "chamber 2 L at 50 bar" and "reservoir 11.25 L,
+    A42, the ADIABATIC figure" -- the pre-ADR-034 charge pressure and a reservoir volume two
+    corrections old (A42's 7.65/11.25 L bracket, then A43's 9.55 L, then A56's sized 3.46 L).
+    The GEOMETRY was never wrong: reservoir() has always read S["reservoir_volume_l"] and the
+    force check has always read S["charge_pressure_bar"]. Only the prose was stale.
 
 WHAT THIS IS NOT
 ----------------
@@ -22,12 +30,13 @@ the simplest solid carrying the right interfaces at the right stations.
 
 THREE THINGS IT DRAWS THAT ARE NOT SETTLED
 ------------------------------------------
-1. **The reservoir carries 11.25 L, the conservative end of P64.** A42 modelled the bottle as
-   adiabatic; at ADR-020's twenty-minute cadence it re-equilibrates and the isothermal figure
-   is 7.65 L. Both are in parameters.json. Drawing the larger one is deliberate.
-2. **The cradle is a placeholder.** A34 says the mechanism does not exist and A38 raised its
-   preload to 201.7 N per contact, which must still release inside a 1 N residual. What is
-   drawn is the envelope it has to live in, not a design.
+1. **The reservoir is sized, and that is newer than it looks.** A56 sized it at ADR-034's
+   charge pressure rather than scaling it -- 3.46 L against A43's 9.55 -- and P82 closed on it.
+   *P64's 7.65/11.25 L bracket is superseded and this file no longer draws either end.*
+2. **The cradle is a placeholder.** A34 says the mechanism does not exist and A38's preload is
+   201.7 N per contact, which must still release inside a 1 N residual. What is drawn is the
+   envelope it has to live in, not a design. **P102: 201.7 N is A38's figure at the 25 g
+   qualification cap and is retained deliberately; the ADR-034 design point needs 91.7 N.**
 3. **The stage rail is drawn as a straight extrusion of unknown provenance.** No launch
    provider has agreed to anything, and A37's 43.33 kg stage credit is the least-examined
    number in the architecture.
@@ -81,10 +90,10 @@ def export(shape, name, stl=False):
 def drive_tube():
     """The bore the payload is pushed along. It is the rail and the cylinder at once.
 
-    That dual role is the reason the wall is not sized on pressure alone: hoop stress at
-    50 bar on this bore needs 0.16 mm and the minimum practical wall is 1.0 mm, so the
-    section is set by handling and by carrying A38's 201.7 N cradle preload -- neither of
-    which is modelled here.
+    That dual role is the reason the wall is not sized on pressure alone. A59 band 1 puts
+    hoop stress at the design charge at 17.96 MPa against a 250 MPa allowable -- 13.9x margin
+    -- so the 1.0 mm section is set by handling and by carrying A38's 201.7 N cradle preload,
+    neither of which is modelled here. *P107: this said "50 bar", which ADR-034 replaced.*
     """
     bore, wall, L = D["bore_mm"], D["tube_wall_mm"], D["stroke_mm"]
     return (cq.Workplane("YZ").circle(bore / 2 + wall).circle(bore / 2)
@@ -141,7 +150,7 @@ def chamber():
 
 
 def reservoir():
-    """The bottle. Carries A42's ADIABATIC 11.25 L, the conservative end of P64."""
+    """The bottle. Volume is read live; A56 sized it at 3.46 L (P82, P107)."""
     v_mm3 = S["reservoir_volume_l"] * 1e6
     r = 90.0
     length = v_mm3 / (math.pi * r * r)

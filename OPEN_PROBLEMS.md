@@ -5247,6 +5247,59 @@ lines that `THESIS_MANIFEST` carries today — and the export does the rest.
 **Until then the two statements disagree in public**, and the flagship's own licence is not in
 question: it is CC BY 4.0 and always has been.
 
+### P107. The Gen6 CAD described the pre-ADR-034 design point for three days, and called Gen5 a measured baseline: HIGH, CORRECTED 2026-08-22
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**`cad/build_gen6.py`'s header, `cad/README.md` and `CAD_BRIEF.md` all described a machine the
+parameter file had already replaced.**
+
+| Described | `cad/parameters.json` |
+|---|---|
+| chamber **2 L at 50 bar** | 2 L at **22.7258 bar** — [ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) |
+| reservoir **11.25 L**, *"A42, the ADIABATIC figure"* | **3.46 L** — [A56](validation/A56_reservoir_resized.md), **sized** rather than scaled |
+| exit velocity **30.54 m/s at 25 g** | **29.01 m/s** at the friction allowance, **11.36 g** peak |
+| hoop stress *"at 50 bar … needs 0.16 mm"* | A59 band 1: **17.96 MPa against 250 allowable**, 13.9× |
+
+**The reservoir figure was two corrections old, not one.** A42 gave a bracket — 7.65 L isothermal
+against 11.25 adiabatic. [A43](validation/A43_reservoir_thermal.md) superseded both at **9.55 L**.
+A56 superseded that at **3.46 L** and **P82** closed. `CAD_BRIEF.md` was still instructing a reader
+to *"model the reservoir at 11.25 L and expect it to shrink."*
+
+### The geometry was never wrong
+
+**`build_gen6.py` reads every one of those numbers from `parameters.json` at import**, and
+`--check` verifies the built solids against it: chamber 2.0000 L, reservoir 3.4600 L, force
+445.8802 N, acceleration 11.3629 g, all OK. **The STEP files describe the current machine. The
+prose around them described the old one**, and nothing could see the difference because **none of
+these three files was a checked surface.**
+
+> **This is P84, P101 and P102 in a fourth place.** A value moved and a restatement of it did not.
+> The restatement here was a docstring, which is the one kind that a reader trusts most and a gate
+> reads least.
+
+### And the gate found a second thing on its first run
+
+**`CAD_BRIEF.md` called Gen5 "the measured baseline", twice.** That phrase is the first entry in
+`check_public.py`'s withdrawn list — *nothing in this project has been built, fired or measured,*
+**E4** — and it had been sitting in a document that `THESIS_MANIFEST` exports to a public
+repository. **It was never caught because the file was not on the list.**
+
+### Corrected. Propagated 2026-08-22
+
+All three files are corrected in place with dated notes naming what they replaced; nothing is
+deleted. **`check_public.py` now checks thirteen surfaces instead of ten** — `cad/README.md`,
+`CAD_BRIEF.md` and `cad/build_gen6.py` are added — **against twenty-seven withdrawn claims instead
+of twenty-two**, the five new ones being ADR-034's superseded design point: the 11.25 L, 7.65 L and
+9.55 L reservoirs, a 50 bar charge, and the 30.54 m/s zero-friction velocity. **Fifteen historical
+passages are explicitly allowed**, each naming the file, the pattern and why that occurrence is a
+correction quoting what it corrected.
+
+**What this does not fix.** The gate is a pattern list, so it catches values it has been told
+about. **The general case — every live document that restates a parameter — is still not
+mechanically guarded**, and `check_crossrefs.py` only covers results files. *That gap is real and
+is recorded here rather than claimed closed.*
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 

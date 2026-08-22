@@ -14,14 +14,19 @@
 > | | |
 > |---|---|
 > | Bore / stroke | 15.805 mm / 8000 mm — A49, the host stage's whole acceleration length |
-> | Chamber | 2 L at 50 bar — A41, where velocity saturates and gas does not |
-> | Reservoir | 11.25 L at 200 bar — A42, **the conservative end of P64** |
-> | Exit velocity | 30.54 m/s at 25 g |
+> | Chamber | 2 L at 22.7258 bar — A41 sized it, ADR-034 set the charge |
+> | Reservoir | 3.46 L at 200 bar — A56, **sized rather than scaled** |
+> | Exit velocity | 29.01 m/s at the friction allowance, 11.36 g peak |
+>
+> **Corrected 2026-08-22 — [P107](../OPEN_PROBLEMS.md).** These three rows read 50 bar, 11.25 L
+> and 30.54 m/s at 25 g — the pre-ADR-034 design point. **The geometry never moved with them**:
+> `build_gen6.py` reads every one of these from `parameters.json`.
 >
 > **Three things it draws that are not settled**, and they are in the script's own header rather
-> than only here: the reservoir carries the adiabatic figure when the isothermal one at this
-> cadence is 7.65 L; **the cradle is an envelope, not a design**, because A34 says the mechanism
-> does not exist and A38 raised its preload to 201.7 N; and the stage rail is a straight extrusion
+> than only here: **the cradle is an envelope, not a design**, because A34 says the mechanism
+> does not exist and A38's preload is 201.7 N at the 25 g cap against 91.7 at the design point
+> (**P102**); the reservoir is sized but the bottle itself is not designed; and the stage rail is
+> a straight extrusion
 > of unknown provenance, because **no launch provider has agreed to anything.**
 
 

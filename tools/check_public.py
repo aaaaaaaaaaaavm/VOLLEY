@@ -55,6 +55,13 @@ SURFACES = [
     # hand-corrected in both repositories and then overwritten by the next run.
     '../VOLLEY-paper/README.md',
     '../VOLLEY-thesis/README.md',
+    # The CAD surfaces. Added 2026-08-22 after P107: build_gen6.py's header, cad/README.md and
+    # CAD_BRIEF.md all described the pre-ADR-034 design point while the geometry they describe
+    # read the current one from parameters.json. The STEP files were right and the prose was not,
+    # which no gate here could see because none of these files was a checked surface.
+    'cad/README.md',
+    'CAD_BRIEF.md',
+    'cad/build_gen6.py',
 ]
 
 # Withdrawn claims. Each is (pattern, why it is forbidden).
@@ -82,6 +89,13 @@ BLOCKED = [
     (r'130 (?:defect|numbered|register)', 'the register count is generated -- read it from public_facts'),
     (r'\((?:1[0-7]) pages\)', 'the manuscript is 18 pages; a landing page must not state an older count'),
     (r'the conference paper', 'it is an IEEE-formatted manuscript; no venue has been selected'),
+    # Gen6 design-point values ADR-034 replaced. P107.
+    (r'\b11\.25\s*L\b', 'pre-A56 reservoir; A56 SIZED it at 3.46 L and P82 closed'),
+    (r'\b7\.65\s*L\b', 'the other end of the same superseded P64 bracket'),
+    (r'\b9\.55\s*L\b', 'A43 reservoir, superseded by A56 at 3.46 L'),
+    (r'(?:chamber|charge|reservoir)[^.\n]{0,40}\b50\s*bar\b',
+     'pre-ADR-034 charge pressure; the design point is 22.7258 bar'),
+    (r'\b30\.54\b', 'pre-ADR-034 zero-friction exit velocity; now 34.28 m/s'),
 ]
 
 # Explicit exemptions. Each names a file, the blocked pattern, and why that occurrence is
@@ -99,6 +113,24 @@ ALLOW = [
      'the P93 account of the paper mass defect, which is arithmetic on the superseded figures'),
     ('docs/index.html', r'\b16\.388\b',
      'the site\'s account of the same two corrections, in a section headed by their dates'),
+    ('cad/build_gen6.py', r'\b11\.25\s*L\b',
+     'the dated P107 correction block in the header, which names the figure it replaced'),
+    ('cad/build_gen6.py', r'\b7\.65\s*L\b',
+     'the same block: the superseded P64 bracket is named as superseded'),
+    ('cad/build_gen6.py', r'\b9\.55\s*L\b',
+     'the same block: A43 is named as the correction between A42 and A56'),
+    ('cad/build_gen6.py', r'(?:chamber|charge|reservoir)[^.\n]{0,40}\b50\s*bar\b',
+     'the same block, quoting the header line ADR-034 superseded'),
+    ('CAD_BRIEF.md', r'\b11\.25\s*L\b',
+     'the dated P107 correction paragraph, which has to name what it corrected'),
+    ('CAD_BRIEF.md', r'\b7\.65\s*L\b', 'the same paragraph, naming the superseded bracket'),
+    ('CAD_BRIEF.md', r'\b9\.55\s*L\b', 'the same paragraph, naming A43'),
+    ('CAD_BRIEF.md', r'(?:chamber|charge|reservoir)[^.\n]{0,40}\b50\s*bar\b',
+     'the same paragraph, quoting the table row it corrected'),
+    ('cad/README.md', r'\b11\.25\s*L\b', 'the dated P107 note naming the superseded rows'),
+    ('cad/README.md', r'\b30\.54\b', 'the same note, naming the superseded exit velocity'),
+    ('cad/README.md', r'(?:chamber|charge|reservoir)[^.\n]{0,40}\b50\s*bar\b',
+     'the same note'),
 ]
 
 HISTORY_MARKERS = (

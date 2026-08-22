@@ -8,7 +8,7 @@ and that file differ, **`parameters.json` wins and this brief is wrong**; report
 
 > **Which machine are you modelling?** Everything from here to *"What a good model would add"*
 > describes **Gen5** — nine Fusion documents around a sled, a stator and an eddy brake. That is the
-> measured baseline and the brief for it is correct. **It is not the current design target.**
+> **analysed** baseline and the brief for it is correct. **It is not the current design target.**
 > [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) moved that to **Gen6** on 2026-08-14,
 > which deletes all three. **If you are modelling Gen6, read
 > [that section](#gen6--what-exists-and-the-three-parts-that-do-not) first** — six parts are
@@ -196,8 +196,10 @@ silently drift across the nine documents. Change `parameters.json`, then regener
 
 **Added 2026-08-16.** Everything above this line describes **Gen5**: nine Fusion documents built
 around a sled, a stator and an eddy brake. [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)
-moved the design target on 2026-08-14 and **deletes all three.** Gen5 remains the measured baseline
-and the brief above remains correct for it; it is simply no longer the machine being designed.
+moved the design target on 2026-08-14 and **deletes all three.** Gen5 remains the **analysed**
+baseline and the brief above remains correct for it; it is simply no longer the machine being
+designed. *Both sentences said "measured baseline" until 2026-08-22 — **P107**. Nothing in this
+project has been measured (**E4**), and this file was not a checked surface until then.*
 
 **Read this section before starting any Gen6 modelling.** Two of the six script-built parts are
 pressure vessels, and the mechanism that actually pushes the satellite has no geometry at all.
@@ -219,14 +221,21 @@ source and the build regenerates byte-stably.
 |---|---|---|
 | Drive tube | `VOLLEY_Drive_Tube_Gen6.step` | bore **15.805 mm**, stroke **8000 mm**, wall **1.0 mm** |
 | Carriage | `VOLLEY_Carriage_Gen6.step` | rides the tube; carries the cradle interface |
-| Chamber | `VOLLEY_Chamber_Gen6.step` | **2.0 L at 50 bar**, nitrogen |
-| Reservoir | `VOLLEY_Reservoir_Gen6.step` | **11.25 L at 200 bar** |
+| Chamber | `VOLLEY_Chamber_Gen6.step` | **2.0 L at 22.7258 bar**, nitrogen |
+| Reservoir | `VOLLEY_Reservoir_Gen6.step` | **3.46 L at 200 bar** |
 | Stage rail | `VOLLEY_Stage_Rail_Gen6.step` | the host-provided structure the rest mounts to |
 | Magazine cassette | `VOLLEY_Magazine_Cassette_Gen6.step` | carried across from Gen5's cell geometry |
 
-**The reservoir carries the adiabatic figure deliberately.** 11.25 L is the conservative end of a
-bounded correction; the isothermal case at the twenty-minute cadence is **7.65 L**. Which is right
-is **P64**, still open. *If you model the reservoir, model it at 11.25 L and expect it to shrink.*
+**The reservoir is sized, not bracketed.** [A56](validation/A56_reservoir_resized.md) sized it at
+[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md)'s charge pressure rather than scaling it,
+and got **3.46 L** — the bottle falls 63.8 % where the gas falls 54.55 %, because a lower target
+pressure lets it be drawn further down. **P82 closed on it.**
+
+> **Corrected 2026-08-22 — [P107](OPEN_PROBLEMS.md).** This table read **2.0 L at 50 bar** and
+> **11.25 L**, and the paragraph above told a reader to *"model the reservoir at 11.25 L and expect
+> it to shrink."* It had already shrunk, twice: A42's 7.65/11.25 L bracket, then A43's 9.55 L, then
+> A56's sized 3.46. **The STEP files were never wrong** — `cad/build_gen6.py` reads both figures
+> from `cad/parameters.json` and always has. *The prose was the stale copy.*
 
 ### The three parts that do not exist
 
