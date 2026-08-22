@@ -191,6 +191,82 @@ tube.** ADR-035 made that tube aluminium four days after ADR-033 placed the stat
 
 ---
 
+## Guided separation and contact dynamics — the cluster this file was missing
+
+**Added 2026-08-22**, after a sweep of the outside separation literature was reconciled against
+the record. **It found the largest single gap in the Gen6 evidence, and it is not a number — it is a whole class of
+model this repository does not have.**
+
+### What the record has, and where it stops
+
+| Run | What it models |
+|---|---|
+| [A23](../validation/A23_tipoff_release.md) | Tip-off rates against deployer classes. A comparison, not a mechanism |
+| [A34](../validation/A34_cradle_restitution.md) | The payload rattling across its **cradle clearance**, Gen5 |
+| [A38](../validation/A38_tipoff_at_gen6.md) | The same closed forms at the Gen6 point — corrected to ADR-034's stroke on 2026-08-22, **P102** |
+
+**All three model the release interface. None models the guide.** Gen6 accelerates a payload along
+**8.0 m** of bore and this repository has no contact state along it: no straightness, no roundness,
+no local clearance, no force-line eccentricity, no payload centre-of-mass offset, and no lateral or
+angular state carried through the stroke. **The chain that is modelled is chamber pressure → axial
+force → exit velocity.** The chain that decides whether the product works is **contact state →
+lateral impulse and torque → release pose and rate**, and it is absent.
+
+### The nearest published neighbour, and it is closer than the electromagnetic literature
+
+**"Design and Analysis of a High-Precision Separation Mechanism for On-Orbit Launch of
+Micro-Spacecraft"**, *Aerospace Science and Technology*, 2026 — publisher record
+`S1270963826018869`. **Located and checked 2026-08-22 from its abstract and indexing only.**
+
+What is verifiable without the full text:
+
+- Launch-dynamics models of **several separation-mechanism configurations in ADAMS**, to find which
+  configuration produces large launch disturbance and why.
+- **Parametric optimisation of guide-rail length and fit clearance**, reported as an **82.76 %
+  improvement in launch attitude accuracy**.
+- A 3U-form-factor device in **7075 aluminium**, with **hard-anodised guide-rail surfaces coated
+  with PTFE to reduce friction**.
+- Post-launch **angular velocity** treated as the quantity that decides mission success.
+
+> **Two of those land directly on Gen6.** The tribological pair is the one
+> [ADR-035](adr/035-drive-tube-material.md) and [A61](../validation/A61_seal_class.md) chose —
+> **hard-anodised aluminium against PTFE** — and the output quantity is the one
+> [`KILL_CRITERIA.md`](KILL_CRITERIA.md) threat 4 is written in. *This is a guided ejection of a
+> CubeSat-class body along an anodised aluminium rail, analysed for release attitude. It is the
+> same physical problem.*
+
+**It has not been read in full. ScienceDirect is blocked from this environment**, the same
+limitation [P57](../OPEN_PROBLEMS.md) records for IEEE Xplore, and this entry is a **lead, not
+evidence.** Nothing in this repository may cite a figure from it until it has been retrieved.
+
+### What it can move, and what it cannot
+
+| | |
+|---|---|
+| **[P67](../OPEN_PROBLEMS.md)'s framing** | **Friction is not separable from the geometry that produces it.** B-2 measures a force; the force is a property of a bore, a finish, a clearance and a seat. *The measurement stays first — this changes what it is a calibration point for, not whether to take it* |
+| **[P78](../OPEN_PROBLEMS.md)** | Stroke buys gentleness, and the same stroke is more guided length for tolerance and friction to vary over. **P78 already says stroke makes the worst defect worse; this says which defect** |
+| **[P102](../OPEN_PROBLEMS.md)** | Names the gap in the same words and does not close it |
+| **What it cannot do** | **Supply VOLLEY's clearance.** An optimum belongs to the mechanism it was optimised for — its masses, its rail length, its fit, its release. **Importing one would be the mistake this file exists to prevent**, and it is the same rule already applied to the vault's straightness arithmetic |
+
+### The citations were checked, and that is why this section is short
+
+**The sweep that prompted it started from three headline references. Checking them from this
+environment gave one confirmation, one correction and two that could not be confirmed at all.**
+
+| Named as | What the check found |
+|---|---|
+| A 2024 modular CubeSat separation mechanism, *Acta Astronautica* **225**, pp. 758–767, with a stated mechanism mass, a full environmental campaign and an in-orbit deployment | **The paper is real and the page range is wrong** — it is **pp. 615–624**. Its abstract describes a surrogate-model size optimisation reducing the mechanism's **mass proportion to 18 %** at **0.123 mm** maximum deformation. **The mass figure, the test campaign and the flight are not visible in it** and could not be confirmed |
+| Two 2026 micro-spacecraft separation papers, carried as the strongest new evidence | **Could not be confirmed from the sources reachable here.** One pairs a publisher series identifier with an unrelated publisher's URL. *Not "they do not exist" — not found* |
+| — | **The paper that did confirm, twice, was named by neither**, and it is the one above |
+
+**This is recorded because the rule is the rule.** [P22](../OPEN_PROBLEMS.md) and
+[P57](../OPEN_PROBLEMS.md) are both entries about a source that was cited or relied on before it was
+read. **A reading list is a source like any other**, and the engineering in this one survived the
+check while three of its four references did not. *The engineering is used here. The citations are
+not.*
+
+---
+
 ## Cannot be closed by it
 
 **These need hardware, and no amount of reading substitutes.**

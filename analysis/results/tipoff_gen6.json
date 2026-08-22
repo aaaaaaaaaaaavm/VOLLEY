@@ -13,24 +13,29 @@
     "preload_N": 81.21458848792282
   },
   "gen6": {
-    "a_g": 25.0,
-    "stroke_m": 2.18,
-    "v_exit": 32.7,
-    "F_payload_N": 981.0,
-    "moment_Nm": 68.67,
-    "alpha_rad_s2": 1635.0,
-    "t_powered_s": 0.13333333333333333,
-    "preload_N": 201.67400881057267
+    "a_g": 11.362895,
+    "stroke_m": 8.0,
+    "v_exit": 42.23174160746866,
+    "F_payload_N": 445.8799998,
+    "moment_Nm": 31.211599986000003,
+    "alpha_rad_s2": 743.133333,
+    "t_powered_s": 0.3788619505374698,
+    "preload_N": 91.66402345374449
   },
   "e_aluminium": 0.7,
   "gen5_settle_ms": 27.876758924371433,
   "gen5_e_crit": 0.9262734333328188,
-  "gen6_worst_arrival_deg_s": 355.11412431328995,
-  "gen6_settle_ms": 17.690264965228742,
+  "gen6_worst_arrival_deg_s": 239.41008383169776,
+  "gen6_settle_ms": 26.239759209196418,
   "gen6_residual_deg_s": 0.0,
-  "gen6_e_crit": 0.9461977161521322,
+  "gen6_e_crit": 0.9711730502153033,
   "tipoff_ceiling_g": 30.9,
   "qualification_cap_g": 25.0,
+  "design_point": {
+    "a_g": 11.362895,
+    "stroke_m": 8.0,
+    "source": "cad/parameters.json gen6_drive, ADR-034"
+  },
   "bands": [
     {
       "band": "1",
@@ -47,19 +52,19 @@
     {
       "band": "3",
       "name": "settling completes inside the powered stroke at e = 0.7",
-      "detail": "17.69 ms of 133.3 ms",
+      "detail": "26.24 ms of 378.9 ms",
       "pass_": true
     },
     {
       "band": "4",
       "name": "critical restitution >= 0.80, A34 threshold unrelaxed",
-      "detail": "0.9462",
+      "detail": "0.9712",
       "pass_": true
     },
     {
       "band": "5",
       "name": "preload <= 250 N per contact",
-      "detail": "201.7 N against A34's 85",
+      "detail": "91.7 N against A34's 85",
       "pass_": true
     },
     {

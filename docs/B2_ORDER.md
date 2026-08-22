@@ -90,6 +90,25 @@ seals are not oiled**), and a dial indicator for stroke position. **₹2,500 –
 | **7** | **Ambient against the design's 22.73 bar** side load | **report; state whether the rig pressurised** | Friction rises with the pressure that loads the seal against the bore. An unpressurised pull is a **lower bound**, and must be reported as one |
 | **8** | **Does this measurement discriminate, or only bound?** | **state the answer explicitly, before quoting bands 3 and 4** | **The band that constrains the author.** See below |
 
+> ## BANDS ADDED 2026-08-22, BEFORE THE CYLINDER IS ORDERED. THE EIGHT ABOVE ARE NOT EDITED.
+>
+> **Added after a sweep of the guided-separation literature** — see
+> [`EXTERNAL_EVIDENCE.md`](EXTERNAL_EVIDENCE.md). Its usable finding is that **a seal force is a
+> property of a geometry, a finish and a duty cycle, not a scalar**, and four of those properties
+> cost nothing extra to record on a rig that is already being built. **Nothing above is changed,
+> widened or re-thresholded**; these are additions, and no data exists for any band on this page.
+>
+> | # | Question | Band | Why it is worth the extra half hour |
+> |---|---|---|---|
+> | **9** | **Direction dependence** — pull each unit both ways | **report both, with the spread** | The piston travels one way and returns never. A seal with a lip is not symmetric, and **if it is, that is a result too** |
+> | **10** | **Conditioning** — first pull against the tenth against the last | **report the trend over ≥ 30 pulls per unit** | The machine fires **twelve times ever**. If breakaway falls after the first few pulls, the design point is the *unconditioned* seal and every figure taken from a bedded-in one is optimistic |
+> | **11** | **The force–time trace, not the peak** | **commit the trace; report whether stick-slip appears** | [A44](../validation/A44_gen6_dispersion.md) models friction as a **constant allowance**. Stick-slip inside a stroke is a different disturbance from a constant offset and would land on dispersion in a way the current model cannot represent |
+> | **12** | **State the temperature the pulls were made at** | **report it, and the gap to A58's case** | **Band 8 enumerates air-side, low-speed and unpressurised, and does not name temperature.** [A58](../validation/A58_chamber_thermal.md) puts the gas at **238 K, −35.2 °C** every shot. *That omission is recorded here rather than repaired above* |
+>
+> **None of these changes what the order buys.** Bands 9–11 are how the same three cylinders are
+> pulled; band 12 is a thermometer. **If any of them cannot be done, say which and why in the run
+> sheet** — an undone band is a recorded gap, not a silent one.
+
 ### Band 8 is the one that decides whether the rest is worth anything
 
 **An air-side, low-speed, possibly unpressurised bench pull is a *different* measurement from a

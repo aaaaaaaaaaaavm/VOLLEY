@@ -2,7 +2,7 @@
 
 WHY THIS EXISTS
 ---------------
-Six register entries in ten days were the same defect wearing different clothes:
+Seven register entries in ten days were the same defect wearing different clothes:
 
     P83   the trim authority was sized at a friction share the design point had left behind
     P84   ADR-034 moved parameters.json and the documents, and left the scripts at the old point
@@ -10,6 +10,7 @@ Six register entries in ten days were the same defect wearing different clothes:
     P97   ADR-030 shortened the regenerative section and the recovery figure never moved with it
     P100  A57 used a lever arm 15.6x the interface requirement A52 had published six days earlier
     P101  the payload ladder D2 turns on divided a dry mass three corrections out of date
+    P102  the only Gen6 tip-off run stayed at a stroke ADR-034 had already replaced
 
 **Every one of them is two files disagreeing about a shared quantity**, and every existing gate
 passed while they were true. `make_baseline.py --check` guards the twenty-three values BASELINE.md
@@ -92,6 +93,14 @@ REFS = [
      "parameters", "gen6_drive.exit_velocity_m_s_zero_friction",
      "stage_attitude", "inputs.v_exit_zero_friction_m_s", 1.0, 0.5,
      "the same propagation as the stroke, one field along"),
+    ("Gen6 design-point acceleration",
+     "parameters", "gen6_drive.acceleration_g", "tipoff_gen6", "design_point.a_g", 1.0, 0.5,
+     "P102. A38 is the only run that takes tip-off to Gen6 and it held 25 g as a module constant "
+     "while ADR-034 moved the design point. Every cradle figure it publishes scales with this"),
+    ("Gen6 design-point stroke, tip-off",
+     "parameters", "gen6_drive.stroke_mm", "tipoff_gen6", "design_point.stroke_m", 1000.0, 0.5,
+     "P102, the other half. 2.18 m was A37's window and the stroke is now the stage's whole "
+     "usable length; the powered time every settling band is measured against descends from it"),
     ("Gen5 dry mass, designed cell",
      "mass_properties", "dry_kg", "cell_manifest", "deployer_dry_kg", 1.0, 0.5,
      "P101. The designed-cell ladder is this number over the manifest count, and it is the table "

@@ -4926,6 +4926,93 @@ PocketQube against a cold-gas module was derived from the stale figure; it is **
 re-derived**, with a NEEDS SOURCE line in its place, because re-computing it here would put a
 number in a document that no results file holds.
 
+### P102. The only Gen6 tip-off run was left at A37's window when ADR-034 moved the stroke, and its run sheet predicted exactly this: HIGH, CORRECTED 2026-08-22
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found while reconciling a sweep of the outside separation literature against the record.** Its
+strongest claim is that a long guided interface makes contact and geometry matter more than the
+energy path, and that tip-off is the term to watch. **Checking whether this project had answered
+that at 8 m found that it had answered it at 2.18 m.**
+
+[A38](validation/A38_tipoff_at_gen6.md) is the only run that takes tip-off to Gen6.
+`analysis/tipoff_gen6.py` held its operating point as two module constants:
+
+| | A38, hardcoded | `gen6_drive`, since [ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) |
+|---|---:|---:|
+| Acceleration | **25.0 g** | **11.362895 g** |
+| Acceleration length | **2.18 m** | **8.0 m** |
+
+**2.18 m was the long end of [A37](validation/A37_host_integrated.md)'s feasible window**, and
+ADR-034 replaced that window with the host stage's whole usable length on 2026-08-19. **The script
+was never re-run and nothing pointed at it.**
+
+> ### The run sheet wrote the warning and then became the example
+>
+> A38's own opening, and `tipoff_gen6.py`'s docstring, both say:
+>
+> > *"This is the P19 and P53 pattern, which this project has now recorded twice: an analysis that
+> > closed at one operating point, left standing while the point moved underneath it. **The
+> > difference here is that the point has not moved yet.** Checking before adopting is the whole
+> > discipline."*
+>
+> **The point moved three days later.** The run that was written to demonstrate checking before
+> adopting is the run that was not re-checked after.
+
+### Corrected. Re-run 2026-08-22, and no band verdict moves
+
+`tipoff_gen6.py` now reads `acceleration_g` and `stroke_mm` from `cad/parameters.json` at import,
+the same repair [P84](#p84) applied to `precharged.py`. **`G_CAP` stays at 25.0** — it is the
+payload qualification cap and **band 6's declared threshold**, not the design point, and lowering
+it to the design point would have widened a band.
+
+| | A37 window | **Design point** | |
+|---|---:|---:|---|
+| Powered stroke | 133.3 ms | **378.9 ms** | band 3 gains margin |
+| Worst cradle arrival | 355.1 °/s | **239.4 °/s** | improves |
+| Settling at e = 0.7 | 17.69 ms | **26.24 ms** | still inside the stroke |
+| Residual at release | 0.0000 °/s | **0.0000 °/s** | unchanged |
+| Critical restitution | 0.9462 | **0.9712** | improves |
+| **Preload per contact** | **201.7 N** | **91.7 N** | **the one that propagated** |
+| Tip-off ceiling | 30.9 g | **30.9 g** | preload-limited, so the stroke does not enter it |
+
+**Every published figure moved and every verdict stayed.** Band 1 fails as it already did
+([P61](#p61)); bands 2–6 pass, four of them with more margin. **The correction rescues nothing and
+damages nothing — it corrects the record**, which is the outcome an entry like this should
+usually have.
+
+**[P61](#p61) named the missing tool and this is the same class again.** It asked for *"a
+regression band comparing a run sheet's recorded figures against its script's current output"* and
+recorded it as not built. `tools/check_crossrefs.py` now does the results-file half of that, and
+**the pair that would have caught this is declared in it** — the design point in
+`cad/parameters.json` against the point `tipoff_gen6.json` says it ran at. Restoring 25 g and
+2.18 m makes the gate exit 1.
+
+### Two things it leaves open, and neither is bookkeeping
+
+**1. `cad/parameters.json` carries 201.7 N and the design point needs 91.7.**
+`gen6_drive.cradle_preload_N_per_contact` is A38's figure at 25 g, and `cad/build_gen6.py` says in
+its own docstring that the tube wall is set partly by *"carrying A38's 201.7 N cradle preload"*.
+**The parameter is not being changed here.** It is conservative by 2.2×, no script reads it as a
+driver, and lowering a retention requirement on the strength of a re-run is a design decision
+rather than a correction. **It is recorded as one.**
+
+**2. The model is constant-acceleration, and at 8 m that is the constant-pressure bound.**
+`point()` takes `v = sqrt(2 a L)` and returns **42.23 m/s**, which is exactly
+`gen6_drive.exit_velocity_m_s_constant_pressure_bound`. **The delivered figure is 29.01 m/s** and
+the shot is a blowdown, not a constant push. The direction is safe — a lower exit velocity over
+the same 8 m means a *longer* powered stroke, so band 3's margin is understated rather than
+overstated — but **A38's Gen6 answer is a bound, not a profile**, and it should be quoted as one.
+
+### What this does not touch, and it is the larger gap
+
+**A38 models the payload rattling across its cradle clearance at the start of the stroke. Nothing
+in this repository models the other 8 metres.** There is no contact state along the bore, no
+straightness or roundness input, no force-line eccentricity, no payload centre-of-mass offset, and
+no lateral or angular state carried through the stroke — and `docs/EXTERNAL_EVIDENCE.md` records
+that the nearest published work makes exactly those the dominant terms. **P67 measures a force;
+what that force is a property of has never been modelled.**
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 

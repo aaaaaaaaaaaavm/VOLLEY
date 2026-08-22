@@ -33,16 +33,33 @@ import os
 import cradle_restitution as cr
 import motor_model as mm
 
-RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
+HERE = os.path.dirname(os.path.abspath(__file__))
+RESULTS = os.path.join(HERE, 'results')
+
+
+def _design_point():
+    """The Gen6 operating point, read live from the parameter file.
+
+    P102. This run was written at A37's window -- 25 g over 2.18 m -- and ADR-034 moved the
+    design point to the host stage's whole usable length. Reading it here rather than restating
+    it is the P84 repair applied to the same class of defect.
+    """
+    path = os.path.join(os.path.dirname(HERE), 'cad', 'parameters.json')
+    with open(path, encoding='utf-8') as fh:
+        d = json.load(fh)['groups']['gen6_drive']
+    return d['acceleration_g'], d['stroke_mm'] / 1e3
+
 
 G = 9.81
-G_CAP = 25.0                 # payload qualification cap, the A37 design point
+# The payload qualification cap, and band 6's declared threshold. NOT the design point --
+# ADR-034 runs at gen6_drive.acceleration_g, well under this. The band is not re-declared.
+G_CAP = 25.0
 M_SAT = 4.0
 A34_SETTLE_MS = 27.25        # A34's published result at Gen5, for the band 1 regression
 A34_E_CRIT = 0.9261
 A34_PRELOAD_N = 85.0
 PRELOAD_LIMIT_N = 250.0
-STROKE_WINDOW_M = 2.18       # the long end of A37's feasible window; the shortest stroke time
+DESIGN_G, DESIGN_STROKE_M = _design_point()
 
 
 def point(a_g, stroke_m):
@@ -92,11 +109,11 @@ def main():
     _, settle5, _ = worst(g5, cr.E_ALUMINIUM)
     ecrit5 = critical_e(g5)
 
-    g6 = point(G_CAP, STROKE_WINDOW_M)
+    g6 = point(DESIGN_G, DESIGN_STROKE_M)
     arrive6, settle6, resid6 = worst(g6, cr.E_ALUMINIUM)
     ecrit6 = critical_e(g6)
 
-    print("                              Gen5 (A34)      Gen6 (A37 window)")
+    print("                              Gen5 (A34)      Gen6 (design point)")
     for label, k, fmt in (('acceleration, g', 'a_g', '%.2f'),
                           ('payload force, N', 'F_payload_N', '%.0f'),
                           ('offset moment, N.m', 'moment_Nm', '%.2f'),
@@ -118,7 +135,7 @@ def main():
     ceiling = None
     for tenth in range(10, 1001):
         g = tenth / 10.0
-        p = point(g, STROKE_WINDOW_M)
+        p = point(g, DESIGN_STROKE_M)
         _, s, r = worst(p, cr.E_ALUMINIUM)
         if not (r < cr.TIPOFF_BAND and s <= p['t_powered_s']
                 and critical_e(p) >= 0.80 and p['preload_N'] <= PRELOAD_LIMIT_N):
@@ -161,6 +178,8 @@ def main():
                gen6_worst_arrival_deg_s=arrive6, gen6_settle_ms=settle6 * 1e3,
                gen6_residual_deg_s=resid6, gen6_e_crit=ecrit6,
                tipoff_ceiling_g=ceiling, qualification_cap_g=G_CAP,
+               design_point=dict(a_g=DESIGN_G, stroke_m=DESIGN_STROKE_M,
+                                 source='cad/parameters.json gen6_drive, ADR-034'),
                bands=[dict(band=n, name=nm, detail=d, pass_=ok)
                       for n, nm, d, ok in bands])
     os.makedirs(RESULTS, exist_ok=True)

@@ -84,6 +84,64 @@ still a closure at 2.4× the moment.**
 
 ## Results
 
+> ## CORRECTION 2026-08-22 — the run is unchanged, its operating point is not. **P102**
+>
+> **Nothing below is edited.** The bands are not re-declared, the verdicts recorded on 2026-08-14
+> stand as run, and this block is the whole of the change.
+>
+> **This run took the Gen6 point to be 25 g over 2.18 m** — the acceleration cap and the long end
+> of [A37](A37_host_integrated.md)'s feasible window — and `analysis/tipoff_gen6.py` held both as
+> module constants. **[ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md) replaced that
+> window with the host stage's whole usable length on 2026-08-19**, three days later, and this run
+> was never pointed at again.
+>
+> *The opening of this page says the P19/P53 pattern is an analysis left standing while its point
+> moves underneath it, and that **"the difference here is that the point has not moved yet."**
+> It moved.*
+>
+> The script now reads `acceleration_g` and `stroke_mm` from `cad/parameters.json` at import — the
+> repair [P84](../OPEN_PROBLEMS.md) applied to `precharged.py`. **`G_CAP` stays at 25.0**: it is
+> the payload qualification cap and **band 6's declared threshold**, and lowering it to the design
+> point would have widened a band.
+>
+> | | Recorded, A37 window | **Re-run, design point** |
+> |---|---:|---:|
+> | Acceleration | 25.0 g | **11.362895 g** |
+> | Acceleration length | 2.18 m | **8.0 m** |
+> | Payload force | 981.0 N | **445.88 N** |
+> | Offset moment | 68.67 N·m | **31.21 N·m** |
+> | Powered stroke | 133.3 ms | **378.9 ms** |
+> | Worst cradle arrival | 355.1 °/s | **239.4 °/s** |
+> | Settling at e = 0.7 | 17.69 ms | **26.24 ms** |
+> | Residual at release | 0.0000 °/s | **0.0000 °/s** |
+> | Critical restitution | 0.9462 | **0.9712** |
+> | Preload per contact | **201.7 N** | **91.7 N** |
+> | Tip-off ceiling | 30.9 g | **30.9 g** |
+>
+> **No band verdict moves.** Band 1 fails as it already did (**P61**); bands 2–6 pass, four with
+> more margin. The ceiling does not move because it is set by the 250 N preload limit, which
+> depends on acceleration and not on stroke.
+>
+> **Two things this correction does not repair.**
+>
+> **`cad/parameters.json` still carries 201.7 N.** `gen6_drive.cradle_preload_N_per_contact` is
+> this run's figure at 25 g, and `cad/build_gen6.py` says the tube wall is set partly by carrying
+> it. It is conservative by 2.2× and **nothing reads it as a driver**, so it is left as it stands
+> and recorded as a decision rather than corrected into a lower retention requirement.
+>
+> **The model is constant-acceleration.** `point()` returns **42.23 m/s**, which is exactly
+> `gen6_drive.exit_velocity_m_s_constant_pressure_bound`; the delivered figure is **29.01 m/s** and
+> the shot is a blowdown. The direction is safe — a lower exit velocity over the same 8 m means a
+> longer powered stroke, so band 3's margin is understated — but **this run's Gen6 answer is a
+> bound, not a profile.**
+>
+> **And the larger gap is not in this run at all.** A38 models the payload crossing its cradle
+> clearance at the start of the stroke. **Nothing in this repository models the other eight
+> metres** — no contact state along the bore, no straightness or roundness, no force-line
+> eccentricity, no payload centre-of-mass offset, no lateral or angular state carried through.
+> See [`docs/EXTERNAL_EVIDENCE.md`](../docs/EXTERNAL_EVIDENCE.md).
+
+
 **RUN 2026-08-14. Five of six bands pass. Band 1, the regression check, fails — and that is the
 find.**
 
