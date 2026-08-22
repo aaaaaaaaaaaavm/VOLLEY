@@ -79,7 +79,7 @@ differential between satellites is exactly zero — that is categorical, not a r
 correction touches it. One maximum-velocity shot gives **+60.2 % of orbital life against a 2.5 m/s
 spring's +8.2 %**, because lifetime extension is superlinear in Δv.
 
-**And it demonstrated a method.** **69 run sheets** covering 66 analyses across A1–A70 — A3, A26 and
+**And it demonstrated a method.** **70 run sheets** covering 67 analyses across A1–A71 — A3, A26 and
 A60 were numbered and never written — each with its acceptance bands **committed before
 the script that produces the number existed**, which is checkable: the band commit touches no
 script. **No band has ever been widened after a result was known.**

@@ -99,7 +99,7 @@ keeps those two columns apart, because collapsing them produces a false history.
 > the work's own claims, and **nothing here has been built, fired or measured.**
 >
 > **What that discipline has actually produced, which is the part worth judging:** **66 run
-> sheets** covering 66 analyses A1–A70 — A3, A26, A60 and A66 were numbered and never written —
+> sheets** covering 67 analyses A1–A71 — A3, A26, A60 and A66 were numbered and never written —
 > each against a band written down before its script existed. **Three failed outright** —
 > including one that falsified a claim in this project's own abstract. **Three times a declared
 > band caught a bug in the analysis rather than in the design**, which is the direction nobody
@@ -539,7 +539,7 @@ since.
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
 | **Defect register** | **147 numbered entries, 56 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **69 run sheets**, 66 analyses across A1–A70 (A3, A26, A60 and A66 were numbered and never written), each against a band declared *before* the run. **Three failed outright** |
+| **Validation** | **70 run sheets**, 67 analyses across A1–A71 (A3, A26, A60 and A66 were numbered and never written), each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest
