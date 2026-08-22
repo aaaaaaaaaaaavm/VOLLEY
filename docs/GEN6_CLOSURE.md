@@ -140,6 +140,19 @@ architecture's own arm, it is about a seventh — **P100**. **P99** is what it o
 its value is catching what the first implementation got wrong and it should check the final
 geometry. **ADR-034 is a reminder that the design has not stopped moving.**
 
+> **Amended 2026-08-22: A60 was carrying a load it cannot lift.** It was the planned answer to
+> "how do we stop getting these wrong", and it is the wrong shape for the defects actually
+> occurring. **P83, P84, P96, P97 and P100 — five entries in ten days — are all two files
+> disagreeing about a shared quantity.** A second CAD implementation catches *geometry* errors, of
+> the kind A60 found in Gen5 as P71; it catches none of those five.
+>
+> **`tools/check_crossrefs.py` is the right shape**, and it exists now: nine declared pairs, each
+> with the reason they must agree, and two pairs recorded as deliberately excluded because they
+> are meant to differ. **Replayed against all seven historical defects, it catches all seven.**
+>
+> **A60 keeps its place and loses its overload.** It is still worth doing, still last, and it is
+> now expected to find geometry rather than to prevent propagation failures it never could.
+
 **8. Then freeze — with the exceptions named**, exactly as Phase I did.
 
 ## What this does not buy

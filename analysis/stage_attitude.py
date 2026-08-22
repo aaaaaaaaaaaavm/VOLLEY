@@ -205,8 +205,14 @@ def run():
              "across E5's range because no candidate stage publishes one. Nothing measured.",
         inputs=dict(payload_kg=m_sat, stroke_m=stroke, rail_as_drawn_m=rail_as_drawn,
                     usable_m=usable, v_exit_zero_friction_m_s=v_free,
-                    lever_arm_m=ab.ASSUMED_ARM, lever_arm_note="DECLARED, inherited from A13, "
-                    "never sourced", stage_radius_m=0.9, shots=N_SHOTS),
+                    lever_arm_m=arm,
+                    lever_arm_source="A52 band 4, saturating_offset_mm, read live from "
+                                     "gen6_recoil.json -- the published alignment requirement",
+                    lever_arm_inherited_m=arm_inherited,
+                    lever_arm_inherited_note="A13's Gen5 arm. Used by the first run of this "
+                                             "script and 15.6x the requirement above. P100",
+                    stage_radius_m=0.9, shots=N_SHOTS),
+        momentum_sweep=momentum_sweep,
         rows=rows, bands=bands,
         findings=dict(
             wheel_observation=dict(

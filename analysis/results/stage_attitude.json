@@ -8,11 +8,27 @@
     "rail_as_drawn_m": 8.2,
     "usable_m": 8.0,
     "v_exit_zero_friction_m_s": 34.28,
-    "lever_arm_m": 0.166,
-    "lever_arm_note": "DECLARED, inherited from A13, never sourced",
+    "lever_arm_m": 0.010654256588592275,
+    "lever_arm_source": "A52 band 4, saturating_offset_mm, read live from gen6_recoil.json -- the published alignment requirement",
+    "lever_arm_inherited_m": 0.166,
+    "lever_arm_inherited_note": "A13's Gen5 arm. Used by the first run of this script and 15.6x the requirement above. P100",
     "stage_radius_m": 0.9,
     "shots": 12
   },
+  "momentum_sweep": [
+    {
+      "arm_mm": 10.6543,
+      "per_shot_Nms": 1.4609,
+      "campaign_Nms": 17.5309,
+      "source": "A52 band 4, the published alignment requirement"
+    },
+    {
+      "arm_mm": 166.0,
+      "per_shot_Nms": 22.7619,
+      "campaign_Nms": 273.143,
+      "source": "A13's Gen5 arm, inherited by the first run of this script and not applicable to a Gen6 geometry (P100)"
+    }
+  ],
   "rows": [
     {
       "host_kg": 300.0,
@@ -136,6 +152,6 @@
   },
   "software": {
     "python": "3.11.15",
-    "source_sha256": "0d118c857d16d77169211721f08fce849975c82a00414676ae20c87e4f527e12"
+    "source_sha256": "d6835c3247f15f26abc5941918c6d1e89b105c4a3a71c5ecd01d2db271b72c37"
   }
 }
