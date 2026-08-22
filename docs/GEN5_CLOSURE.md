@@ -190,7 +190,7 @@ ADRs 032 through 036, and the register — **and it is future work.**
 | | |
 |---|---|
 | [**VOLLEY-lab**](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | **The vault.** Ideas that never became a complete thing, each with the number that stopped it — and where Gen6's own future work is parked |
-| [**VOLLEY-paper**](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | Gen5 as a conference contribution. **Frozen when published** |
+| [**VOLLEY-paper**](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | Gen5 as an IEEE-formatted manuscript. **Frozen when published** |
 | [**VOLLEY-thesis**](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | The same work as a full submission, with its defect register attached |
 | [**engineering-evidence-toolkit**](https://github.com/aaaaaaaaaaaavm/engineering-evidence-toolkit) | The consistency checks, extracted. Its own badge reads **"scope: consistency, not validation"** — *that distinction is this project's thesis in miniature* |
 | [**pulsed-linear-motor-design-lab**](https://github.com/aaaaaaaaaaaavm/pulsed-linear-motor-design-lab) | The drive-side analysis as a standalone reference |

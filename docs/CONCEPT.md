@@ -9,9 +9,15 @@
 > stage is a waste rather than a necessity, and then treats it as a *host* — something VOLLEY is
 > mounted on.
 >
-> **ADR-032 takes the step: the stage is not the host, it is the machine.** Its structure is the
-> rail, its skin and avionics are the enclosure, and the deployer is what gets added —
+> **ADR-032 takes the step: the stage is not merely the host, it is the machine.** Its structure is
+> the rail, its skin and avionics are the enclosure, and the deployer is what gets added —
 > **11.45 kg of containment and about 3 kg of gas store.**
+>
+> **Read that as an integration change and not a mission change.** The stage has been the
+> *orbital delivery platform* since [ADR-002](adr/002-host-is-a-spent-upper-stage.md) in 2023 —
+> that is what makes this a last-mile programme and not a dispenser programme. **What ADR-032
+> changes is how much of the deployment hardware the stage supplies**, and
+> [`LINEAGE.md`](LINEAGE.md) keeps the two columns apart on purpose.
 >
 > Four constraints dissolve rather than improve: the 44 % envelope overrun (nothing is stowed), the
 > deployable-structure precision that killed PII-8 and PII-11 (no airgap, so millimetres rather

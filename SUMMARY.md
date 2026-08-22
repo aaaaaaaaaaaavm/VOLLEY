@@ -10,6 +10,25 @@ Technology, Symbiosis International (Deemed University), Pune
 > agree, that is a consistency check between models, **not experimental validation**.
 > [`docs/PROVENANCE.md`](docs/PROVENANCE.md) says what stands behind each claim.
 
+## The mission
+
+**VOLLEY is a last-mile orbital delivery programme for rideshare spacecraft.** A secondary payload
+inherits the orbit its primary was going to; VOLLEY exists to change that without putting
+propulsion on the satellite.
+
+**After the primary spacecraft separates**, the launch vehicle's final stage can — where host
+capability and mission rules permit — continue as a **temporary controlled orbital delivery
+platform**. **The host performs the coarse orbital repositioning. VOLLEY produces the fine,
+individually commanded release condition for each secondary satellite.** The stage then passivates
+and re-enters.
+
+**The mission has been that since [ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md) in 2023.**
+What has changed across the generations is **how much of the deployment machinery VOLLEY carries
+itself**: Gen5 is the self-contained electromagnetic implementation, **Gen6 turns the stage's own
+structure and length into part of the machine.** *Same mission, different integration —
+[`docs/LINEAGE.md`](docs/LINEAGE.md) keeps the two apart.*
+
+
 ---
 
 ## 1 · What VOLLEY asks

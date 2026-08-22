@@ -33,7 +33,7 @@ needs a *difference*. **Commanded per-satellite velocity is the one thing no spr
 dispenser can offer at any price** — and it is what every number on this page exists to support
 or to qualify.
 
-## The mission, in five lines
+## The mission, and it is older than the machine
 
 **VOLLEY flies as a secondary system on the launch vehicle's final stage.** The vehicle flies its
 primary mission and the primary spacecraft separates first. **Only then does VOLLEY's mission
@@ -42,6 +42,14 @@ navigated, attitude-controlled and commandable, and **becomes a temporary orbita
 vehicle**. It may deploy the manifest immediately, or reposition between deployments over hours to
 days. **The stage does the coarse orbital placement. VOLLEY does the fine per-satellite release
 velocity.** Then the stage passivates and re-enters.
+
+**That mission was chosen in 2023, not in 2026.** [ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md)
+rejected a dedicated free-flyer — *"it must carry its own attitude control, power and recoil
+management, which is most of a spacecraft"* — and put VOLLEY on a spent upper stage.
+**What changed across six generations is not the mission but how much of the machine VOLLEY builds
+for itself**: Gen5 carries its own track, drive, store and brake aboard the platform; **Gen6 makes
+the stage's own structure and length part of the machine.** [`docs/LINEAGE.md`](docs/LINEAGE.md)
+keeps those two columns apart, because collapsing them produces a false history.
 
 > **Three things that are not the same and get collapsed:** the **host stage's propulsion
 > reserve**, which belongs to the launch provider and cannot be assumed; the **host's attitude,

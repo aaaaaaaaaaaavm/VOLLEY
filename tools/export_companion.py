@@ -177,6 +177,26 @@ Rideshare CubeSats inherit the orbit of whoever paid for the launch. This paper 
 deployer that gives each of twelve satellites an orbit chosen for it, without modifying any of
 them — and reports, in the same voice, the three thresholds the design currently fails.
 
+## What the manuscript's machine is for
+
+**VOLLEY is a last-mile orbital delivery programme.** After the primary spacecraft separates, the
+launch vehicle's final stage can — where host capability and mission rules permit — continue as a
+**temporary controlled orbital delivery platform**. **The host performs the coarse orbital
+repositioning; VOLLEY produces the fine, individually commanded release condition for each
+secondary satellite.**
+
+**The machine reported here is Gen5**: the *self-contained* electromagnetic implementation of that
+mission — its own track, drive, sled, energy store, brake and magazine, operating aboard the
+platform. **Host repositioning is treated parametrically throughout, because no launch provider
+has supplied stage propulsion or control-authority data.**
+
+> **The programme has since moved to Gen6**, which keeps the same mission and changes the
+> integration: the stage's own structure and 8 m of length become part of the machine, and cold
+> gas replaces the electromagnetic drive. **The manuscript has not moved with it, deliberately.**
+> Gen5 is the fully analysed configuration and Gen6 has not yet reached the same standard — the
+> [computational-closure target](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/COMPUTATIONAL_CLOSURE.md)
+> is what it has to clear first. *A paper does not follow a design target; it follows evidence.*
+
 **[Read the paper](paper/VOLLEY_IEEE_Conference.pdf)** — **18 pages, current build.**
 Print-ready copies: **[A4](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_A4_Print.pdf)** ·
 **[US Letter](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_Letter.pdf)**. Both come from one source
@@ -265,6 +285,34 @@ the full record of what went wrong on the way there.**
 The submission is here with its analyses, its acceptance tests and its defect register attached.
 The defects are deliberate: an examiner should be able to see what failed, when it was found, and
 what was done about it. Nothing in it has been built or measured.
+
+## The design evolution this thesis is about
+
+**One mission, held constant. One architecture, changed repeatedly.** That is the shape of the
+work, and it is worth stating before the chapters.
+
+**The mission — last-mile orbital distribution.** After the primary spacecraft separates, the
+launch vehicle's final stage can continue, where host capability allows, as a temporary controlled
+orbital delivery platform. **The host does the coarse orbital repositioning. VOLLEY produces each
+secondary satellite's individually commanded release condition.** That was decided in **2023**, by
+the second architectural decision the project ever took.
+
+**The architecture, in four steps:**
+
+| | |
+|---|---|
+| **Free-flyer** | VOLLEY is its own spacecraft, carrying attitude control, power and recoil mass. **Rejected in 2023** — *"which is most of a spacecraft"* |
+| **Hosted deployer** | The spent upper stage supplies all three. VOLLEY becomes a payload rather than a mission |
+| **Self-contained electromagnetic system aboard the platform — Gen5** | Its own track, linear synchronous drive, sled, supercapacitor bank, eddy brake and magazine. **This is the machine the manuscript reports** |
+| **Stage-integrated system — Gen6** | The stage's own structure and 8 m of length become part of the machine; cold gas replaces the drive. **Same mission, far less duplicated hardware** |
+
+> **The interesting claim is not that the objective changed. It is that it did not.** What the
+> generations record is a steadily better answer to *how much of this does VOLLEY need to build
+> for itself* — and the honest cost of each answer, including the one that made Gen5's enclosure
+> **50.04 kg** of skin the stage already had.
+>
+> **Host capability stays parametric in every generation.** No launch provider has supplied stage
+> propulsion, restart or control-authority data, and the thesis says so wherever it matters.
 
 ## Layout
 
