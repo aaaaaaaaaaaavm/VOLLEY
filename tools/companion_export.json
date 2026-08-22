@@ -1,0 +1,32 @@
+{
+  "flagship_commit": "daa94e6",
+  "flagship_tree_was_dirty": false,
+  "note": "The commit the companions were last generated from. tools/check_companions.py fails when any manifest source has been committed since. Regenerate with tools/export_companion.py and push both companions.",
+  "manifest_sources": [
+    "CAD_BRIEF.md",
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "LICENSE",
+    "LICENSE-MIT-superseded",
+    "LICENSING.md",
+    "NOTICE",
+    "OPEN_PROBLEMS.md",
+    "analysis",
+    "cad",
+    "docs/BASELINE.md",
+    "docs/DECISION_LOG.md",
+    "docs/GEN4_STATUS.md",
+    "docs/HISTORY.md",
+    "docs/LITERATURE.md",
+    "docs/PRIOR_ART.md",
+    "docs/PROVENANCE.md",
+    "docs/RELATED_WORK.md",
+    "docs/VALIDATION_REPORT.md",
+    "docs/adr",
+    "figures",
+    "requirements.txt",
+    "tools/make_animation.py",
+    "tools/make_figures.py",
+    "validation"
+  ]
+}
