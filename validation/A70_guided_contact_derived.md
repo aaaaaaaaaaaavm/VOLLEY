@@ -165,3 +165,20 @@ hardware** — this run is recorded as not having answered them.
 > penalty solver converges on the *corrected*, continuous centreline **is not known**, and it is
 > the next executable step rather than a conclusion. *It is entirely possible the blocker was
 > caused by the bad geometry.*
+>
+> ### The solver retested on the corrected geometry, 2026-08-22
+>
+> **It completes.** On the kinked centreline the runs stalled; on the corrected continuous one at
+> a 1 K gradient they run to the end of the stroke with no stall and no divergence flag. **So the
+> "piecewise-centreline blocker" was substantially induced by the bad input geometry**, which is
+> what P110 predicted.
+>
+> **It does not converge.** Exit angular rate is **44.17 °/s at h = 4.94×10⁻⁶** and **17.14 °/s at
+> h = 1.23×10⁻⁶**, and the peak contact force stays at **1.6 MN**, which is a penalty excursion and
+> not a force. *A step small enough to converge costs about twenty minutes per case and has not
+> been run.*
+>
+> **What that supports and does not support.** It supports **the exit angular rate at the real
+> centreline being in the tens of degrees per second at a 1 K gradient — far above the 2.0 °/s
+> band.** It does not support any particular value, and **no number from this retest is quoted
+> anywhere.** Bands 2–5 stay **NOT EVALUABLE**.

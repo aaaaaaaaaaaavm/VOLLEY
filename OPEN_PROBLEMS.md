@@ -5373,7 +5373,7 @@ is recorded here rather than claimed closed.*
 
 ### P108. Gen6's exit angular rate misses the tip-off band by 7.4x, and the input that decides it is bore straightness: CRITICAL, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — retest the guided-contact solver on A69's CORRECTED continuous centreline, then price the land-separation trade against its 400 mm admissibility ceiling
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — the solver now COMPLETES on the corrected centreline and does not CONVERGE; get a converged exit state (implicit integrator, smooth contact regularisation, or a compliant piston), then price the land-separation trade against its 400 mm admissibility ceiling
 
 
 **[A67](validation/A67_guided_contact.md) ran on 2026-08-22 — six of nine — and band 5 is the
@@ -5449,7 +5449,14 @@ at a 65.8 % model-form spread.**
 > with the spread between two credible contact laws accounting for most of the range, and bore
 > straightness as the dominant sensitivity.**
 >
-> **What survives every objection:** *both* laws miss the band, by **4.5×** at the friendlier one;
+> **Retested on A69's corrected centreline, 2026-08-22.** The solver now completes where it
+> stalled — [P110](#p110) — and **does not converge**: 44.17 °/s at one step and 17.14 at a quarter
+> of it, with peak forces still at penalty-excursion levels. **The magnitude remains unresolved and
+> no value from that retest is quoted.** What it does show is that the exit rate on the real
+> centreline is in the **tens** of °/s at a 1 K gradient, against a **2.0 °/s** band.
+>
+> **What survives every objection:** *all three* sourced laws miss the band, by **4.5×** at the
+> friendliest;
 > A67 band 9's ranking is a variance attribution and is not a contact-law property; and
 > [P109](#p109)'s admissibility constraint — the harder finding — needs no contact model at all.
 >
