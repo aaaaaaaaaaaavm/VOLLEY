@@ -122,22 +122,26 @@ PAPER_MANIFEST = [
     ("docs/PRIOR_ART.md", "PRIOR_ART.md"),
     ("docs/LITERATURE.md", "LITERATURE.md"),
     ("docs/BASELINE.md", "BASELINE.md"),
-    # LICENCE HELD, 2026-08-10. The flagship is CC BY 4.0; this companion deliberately is
-    # not, and ships the superseded MIT text as its LICENSE instead. Relicensing the IEEE
-    # manuscript sets terms that an IEEE copyright transfer on acceptance would supersede,
-    # and this repository cannot license rights it has transferred.
+    # LICENCE HOLD RELEASED 2026-08-22. D4 is decided: CC BY 4.0, the same as the flagship.
     #
-    # The mapping below is the mechanism: source LICENSE-MIT-superseded, destination LICENSE.
-    # It means a plain `export_companion.py` run CANNOT relicense this companion by accident.
+    # The hold was placed 2026-08-10 in anticipation of an IEEE copyright transfer on
+    # acceptance. P106 is what ended it: the hold shipped the MIT text as LICENSE while this
+    # companion's own NOTICE and LICENSING.md said CC BY 4.0 and pointed at that same file.
+    # A public repository was making two incompatible statements about its own licence, and
+    # every export re-asserted the contradiction.
     #
-    # TO RELEASE THE HOLD once the manuscript's status is settled, replace the line below with
-    #     ("LICENSE", "LICENSE"),
-    #     ("NOTICE", "NOTICE"),
-    #     ("LICENSING.md", "LICENSING.md"),
-    #     ("LICENSE-MIT-superseded", "LICENSE-MIT-superseded"),
-    #     ("CITATION.cff", "CITATION.cff"),
-    # which is what THESIS_MANIFEST already carries.
-    ("LICENSE-MIT-superseded", "LICENSE"),
+    # It is decided rather than deferred because there is nothing left to defer to: NO VENUE
+    # HAS BEEN SELECTED, so there is no transfer to anticipate, and a licence cannot be held
+    # open against a hypothetical. If a venue is selected and requires a transfer, that is a
+    # decision taken then, on the accepted version, and recorded then.
+    #
+    # LICENSE-MIT-superseded is still shipped, under its own name, because the repository was
+    # MIT for a period and deleting that would erase the history rather than supersede it.
+    ("LICENSE", "LICENSE"),
+    ("NOTICE", "NOTICE"),
+    ("LICENSING.md", "LICENSING.md"),
+    ("LICENSE-MIT-superseded", "LICENSE-MIT-superseded"),
+    ("CITATION.cff", "CITATION.cff"),
 ]
 
 THESIS_MANIFEST = [

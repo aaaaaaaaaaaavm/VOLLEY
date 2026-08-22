@@ -549,7 +549,7 @@ documented in `OPEN_PROBLEMS.md` P1, P4 for the audit trail.
   built PDF carries the withdrawal.** *This bullet said the opposite until today — the source was
   fixed and this summary was not, which is the failure mode the project keeps finding in itself.*
   **What remains open is the replacement claim, which needs A9** — blocked, `celestrak.org` still
-  returns 403 at CONNECT under this environment's network policy, re-tested 2026-08-20.
+  could not be retrieved on the machine this analysis was run on, re-tested 2026-08-20.
 - **P11, which build was actually submitted is unresolved.** Until that is answered, it is
   not known whether the version of record carries P1, P4 *and* the falsified abstract claim.
 

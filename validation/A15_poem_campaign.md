@@ -25,7 +25,7 @@ deployment story this project tells survives an independent propagator.
 > syntax, because nothing here could. I wrote a caveat about not calling it a run and then let
 > "cross-checked" carry more weight than it had earned.
 >
-> **GMAT R2022a is now installed in this environment** (`/opt/gmat/GMAT/R2022a`), the field is
+> **GMAT R2022a is now installed** (`/opt/gmat/GMAT/R2022a`), the field is
 > removed, and a one-day propagation of R1 returns **"Mission run completed."** with twelve
 > report files whose epoch state matches the prediction: SMA 6857.586 km against a predicted
 > 6857.59, inclination 51.6°, and RAAN regressing 4.84 °/day against a predicted 4.875.

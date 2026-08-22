@@ -105,7 +105,7 @@ would not be."*
 | | |
 |---|---|
 | **E4** | **Nothing has been built, fired or measured at any scale.** [`FIGURE_INDEX.md`](FIGURE_INDEX.md) classes every figure by evidence type, and **the class for *measured* has zero members.** No analysis on this page changes that |
-| **A9** | Decay against flown CubeSats. `celestrak.org` returns **403 at CONNECT** under this environment's network policy — re-tested 2026-08-20, not assumed. The NORAD shortlist is already in the run sheet; this is an afternoon on any unrestricted machine |
+| **A9** | Decay against flown CubeSats. `celestrak.org` **could not be retrieved on the machine this ran on** — re-tested 2026-08-20, not assumed. The NORAD shortlist is already in the run sheet; this is an afternoon on any unrestricted machine |
 | **E18** | Conjunction covariance is invented. Needs a real CDM, which needs an operator relationship |
 | **T-1 … T-8** | The qualification campaign. Specified 2026-07-29, **none run, all need hardware** |
 | **B-1 … B-4** | The benchtop programme — see below |

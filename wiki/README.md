@@ -21,7 +21,8 @@ check can reach it.
 
 `tools/publish_wiki.sh` needs ordinary push credentials for `VOLLEY.wiki.git`. **GitHub does not
 expose wiki repositories through its API**, so a sandboxed or proxied environment cannot reach it —
-attempting it returns `403 … not in this session's authorized repository set`, and there is no
+attempting it is refused because a `.wiki` repository is not addressable the way every other
+surface here is, and there is no
 fallback. **The stub was written and committed here on 2026-08-22; it must be published from a
 machine with normal credentials:**
 

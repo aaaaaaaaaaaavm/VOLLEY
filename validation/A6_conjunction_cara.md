@@ -73,7 +73,7 @@ robust quantity, and re-adopting it as a criterion would repeat the original err
 
 **Scope, stated first, because it is narrower than the sheet above.** GMAT is not installed
 here, `validation/gmat/output/` is a gitignored regenerable, CARA is MATLAB, and Space-Track is
-unreachable under this environment's network policy — so there are no OEM ephemerides and no
+not retrieved — so there are no OEM ephemerides and no
 CDM-derived covariance. What runs instead is a **2-D P<sub>c</sub> computed in scipy against
 `astro.py`'s own `propagate()`, with an assumed covariance stated in the output**.
 

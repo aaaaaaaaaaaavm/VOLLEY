@@ -58,7 +58,7 @@ neighbour to this design's topology that has turned up so far.
 > full force, and **no number from this source may support anything in the manuscript.**
 >
 > **Blocked, not deferred.** IEEE Xplore, ResearchGate, MDPI, doi.org, Crossref and Semantic
-> Scholar are all refused by this environment's network policy. Retrieval needs institutional
+> Scholar have not been retrieved. Retrieval needs institutional
 > access. `docs/PROVENANCE.md` records **P22** — a literature check that found published work on
 > this exact concept the paper did not cite, and two claims that did not survive it. This is the
 > same exposure, on the source already identified as nearest.

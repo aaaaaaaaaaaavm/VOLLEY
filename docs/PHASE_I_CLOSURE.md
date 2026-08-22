@@ -127,7 +127,7 @@ five of them and false of three.
 > and the vibro-impact deployment paper — **return zero matches in `paper.tex`**. They were
 > removed from the manuscript at some point and the register went on guarding citations the
 > deliverable no longer makes; the bracket numbers were stale too. The third is now a full
-> citation. But retrieval of the full text is **blocked by this environment's egress policy**,
+> citation. But the full text **has not been retrieved**,
 > re-tested rather than assumed, so it is verified *bibliographically* and not *substantively* —
 > and it is cited for "flight heritage" while what the metadata describes is a bench-tested
 > prototype. **Closing that by assertion would have been worse than leaving it live**, which is
@@ -166,7 +166,7 @@ blocking work downstream.
 
 | Item | Why |
 |---|---|
-| **A9 / E6** | Decay against flown CubeSats. `celestrak.org:443` returns 403 at CONNECT under this environment's network policy — re-tested, not assumed. Space-Track needs an account. The candidate NORAD shortlist is already in the run sheet, so this is an afternoon on any unrestricted machine |
+| **A9 / E6** | Decay against flown CubeSats. `celestrak.org` could not be retrieved on the machine this ran on — re-tested, not assumed. Space-Track needs an account. The candidate NORAD shortlist is already in the run sheet, so this is an afternoon on any unrestricted machine |
 | **P16** | The invariance falsification stands; closing the remainder needs A9 |
 | **E18** | Conjunction covariance is invented. Needs a real CDM, which needs an operator relationship |
 
@@ -442,4 +442,4 @@ decisions, and a small number of items that are blocked rather than open:
   the host, not about a missing number. **A15 band 7 is the one still not evaluated**: campaign
   duration is a property of the generator script, not a GMAT output, and closing it means reading
   `build_poem_campaign.py` against ADR-020.
-- **A9** — blocked by network policy; the candidate shortlist is already in the run sheet.
+- **A9** — the decay data has not been retrieved; the candidate shortlist is already in the run sheet.

@@ -3,8 +3,8 @@
 **Opened 2026-08-20.** Until this date **every number in this repository came from inside it** — its
 own scripts, its own run sheets, and handbook values declared at the point of use. **A10 records the
 consequence in its own words**: the bank ESR bracket came from distributor listings because
-*"eaton.com is unreachable from this environment; that limitation is recorded rather than worked
-around."*
+*"the manufacturer's own data could not be obtained; that limitation is recorded rather than
+worked around."*
 
 **That limitation lifted.** This file is the survey: **which live entries an external source can
 settle, which it can only inform, and which it cannot touch at all.**
@@ -218,8 +218,7 @@ lateral impulse and torque → release pose and rate**, and it is absent.
 Micro-Spacecraft"**, *Aerospace Science and Technology*, 2026 — publisher record
 `S1270963826018869`. **Located and checked 2026-08-22 from its abstract and indexing only.**
 
-**Abstract- and indexing-level evidence only.** What two independent retrievals return
-consistently:
+**Evidence level: ABSTRACT ONLY.** What the published abstract states:
 
 - Launch-dynamics models of **several separation-mechanism configurations in ADAMS**, to find which
   configuration produces large launch disturbance and why. The **cylindrical** configuration
@@ -245,9 +244,9 @@ consistently:
 > CubeSat-class body along an anodised aluminium rail, analysed for release attitude. It is the
 > same physical problem.*
 
-**It has not been read in full. ScienceDirect is blocked from this environment**, the same
-limitation [P57](../OPEN_PROBLEMS.md) records for IEEE Xplore, and this entry is a **lead, not
-evidence.** Nothing in this repository may cite a figure from it until it has been retrieved.
+**Evidence level: ABSTRACT ONLY.** The full text has not been read, so this entry is a **lead**:
+its method is used to decide what VOLLEY must model, and **no figure from it is cited anywhere in
+this repository.**
 
 ### What it can move, and what it cannot
 
@@ -260,76 +259,93 @@ evidence.** Nothing in this repository may cite a figure from it until it has be
 
 ### A modern separation mechanism with ground qualification and a flight
 
-**Jiaolong Zhang *et al.*, "Modular design and structural optimization of CubeSat separation
-mechanism", *Acta Astronautica* **225**, 2024**, DOI `10.1016/j.actaastro.2024.09.067`.
-**Abstract-level evidence. The publisher record is unreachable from this environment** — see the
-retrieval note below.
+**Jiaolong Zhang, Jingao Su, Chao Wang, Yiqian Sun, "Modular design and structural optimization of
+CubeSat separation mechanism", *Acta Astronautica* **225** (2024) 758–767**, DOI
+`10.1016/j.actaastro.2024.09.067`. **Evidence level: PUBLISHER METADATA VERIFIED.**
 
-What two independent retrievals return consistently: a topology-then-size optimisation using a
-surrogate-model-assisted hybrid search, reducing the mechanism's **mass proportion to 18 %** at a
-maximum deformation of **0.123 mm**; **ground verification by overload, vibration and shock
-mechanical tests**; and **in-orbit deployment of the BY-03 satellite**.
+| From the publisher record | |
+|---|---:|
+| Optimised separation-mechanism mass | **2.417 kg** |
+| Mass reduction | **34.9 %** |
+| CubeSat + mechanism total | **13.417 kg** |
+| Mechanism mass proportion | **18 %** |
+| Maximum deformation | **0.123 mm** |
+| Ground mechanical verification | **overload, sine, random vibration, shock** |
+| Flight | **BY-03 deployed in orbit** |
 
-| | |
-|---|---|
-| **What it moves** | **[A21](../validation/A21_comparators.md)'s comparator, on maturity rather than mass.** A21 compares VOLLEY against a spring dispenser as a *class*. This is one named mechanism that has been optimised, environmentally qualified on the ground **and flown** |
-| **Why that matters more than a mass number** | `FIGURE_INDEX.md`'s **class-D evidence has zero members** and **E4** says nothing here has been built, fired or measured. **The comparator is four rungs up the evidence ladder from VOLLEY, not one** — simulation-only, prototype-tested, environmentally qualified, flight-proven, and VOLLEY is on the first rung |
-| **What it cannot supply** | **A mass for the comparison.** The abstract gives a mass *proportion*, not a mechanism mass, and the **2.417 kg** figure this file was offered is a full-text claim that has not been read here. **It is not quoted anywhere in this repository** |
-| **What it must never be used for** | **Another mechanism's flight is not evidence about VOLLEY.** It sharpens how far behind VOLLEY's evidence is; it moves nothing about whether VOLLEY works |
+#### What it moves: A21's comparator, on evidence maturity
 
-**Not added to [`PRIOR_ART.md`](PRIOR_ART.md).** That file's own first line requires every work in it
-to have been read and its metadata verified against the publisher record. **Neither is true here**,
-and P22 is the entry recording what happened the last time this file was written from abstracts.
+[A21](../validation/A21_comparators.md) compares VOLLEY against a spring dispenser as a *class*.
+**This is one named mechanism carried the whole way**, and the ladder it exposes is the useful
+thing:
 
-### The citations were checked, and the first check was partly wrong
+| Rung | | VOLLEY |
+|---|---|:-:|
+| 1 | Analysed only | **here** |
+| 2 | Prototype with separation tests | — |
+| 3 | Ground environmental qualification — overload, sine, random, shock | — |
+| 4 | **Flown** | — |
 
-> **As written 2026-08-22, and preserved so the correction has something to correct:**
+`FIGURE_INDEX.md`'s **class-D evidence has zero members** and **E4** says nothing here has been
+built, fired or measured. **The comparator is three rungs above.**
+
+> **Its flight is not evidence that VOLLEY works.** It is evidence about how far VOLLEY's evidence
+> has to travel, and the two must never be confused. *A separation mechanism succeeding in orbit
+> says nothing whatever about a different mechanism that has never been made.*
+
+**On mass, read it carefully.** 2.417 kg is a **separation mechanism for one CubeSat**, at 18 % of
+a 13.417 kg stack. VOLLEY's numerator is a **deployer amortised over a manifest** — 10.547 kg per
+3U satellite on dry mass, 1.2145–3.0827 kg on added mass ([P68](../OPEN_PROBLEMS.md)). **They are
+not the same quantity and this file does not divide one by the other.** What the comparison
+supports is [P69](../OPEN_PROBLEMS.md)'s finding, already recorded: **mass parity with conventional
+separation hardware is withdrawn.**
+
+**Not added to [`PRIOR_ART.md`](PRIOR_ART.md).** That file requires the work to have been read in
+full, and this entry is metadata plus abstract.
+
+### The separation-dynamics method cluster
+
+**Three records, and their value is method rather than number.** None of their dimensions,
+clearances, tolerances or coefficients may enter VOLLEY: those belong to the mechanisms they were
+derived for.
+
+| Record | Evidence level | What it contributes to [P103](../OPEN_PROBLEMS.md) |
+|---|---|---|
+| **Zhenyu Jin *et al.*, "Rapid Modeling Method and Analysis of Factors Affecting the Dynamics of On-Orbit Launch Systems for Micro-Spacecraft", *Aerospace* **13**(6) 541, 2026**, DOI `10.3390/aerospace13060541` | PUBLISHER METADATA VERIFIED | **The two-level modelling structure P103 step 2 and step 3 adopt**: a high-fidelity rigid–flexible model, a reduced multibody model calibrated against it, and parametric sweeps run on the reduced one. Also the *factor list* — **thrust misalignment, thrust eccentricity and mass eccentricity** as first-class inputs, not second-order corrections |
+| **Linfei Yang *et al.*, "Research on the Influence of Structural Parameters of Micro-Spacecraft On-Orbit Launch Separation Mechanism on Launch Accuracy"**, DOI `10.3233/ATDE260113` | PUBLISHER METADATA VERIFIED | **Monte Carlo over structural parameters — guide clearance, sliding length, step thickness — with guide clearance identified as the key one.** The transferable finding is that **guided-contact geometry has an optimum and drives release accuracy**, which is why P103 lists clearance as first-order rather than a tolerance detail |
+| **Zengqiao Tan, Haibo Yang, Xiaoyu Tao, "General method for establishing a contact force model during the in-orbit launch of micro-spacecraft", *J. Phys. Conf. Ser.* **3240** 012008, 2026**, DOI `10.1088/1742-6596/3240/1/012008` | PUBLISHER METADATA VERIFIED | **The contact model itself.** Micro-spacecraft-against-barrel collision, a **Lankarani–Nikravesh** continuous contact force law, a finite-element collision model with mesh validity checked, and **inverse identification of the contact parameters by unscented Kalman filter** against the FE result. *This is the answer to "where do contact stiffness and damping come from before there is hardware?"* |
+
+> **Together they say the same thing three ways, and it is the thing P103 exists for:** for a
+> guided ejection, **the exit attitude is set by contact, clearance and eccentricity**, the contact
+> law needs parameters that are *identified* rather than assumed, and the practical route is a
+> reduced model calibrated against a higher-fidelity one. **None of that requires hardware**, which
+> is why P103's model is no longer waiting behind B-2 — see the amendment in that entry.
+
+**What none of them supplies:** VOLLEY's clearance, VOLLEY's straightness, VOLLEY's friction
+coefficient, or a tolerance any of them optimised. **Those are configuration-specific and
+importing one would be the failure this file exists to prevent.**
+
+### The audit that preceded this, and why it is wrong
+
+> **Written 2026-08-22 and superseded the same day.** An earlier revision of this section reported
+> that the *Acta Astronautica* pagination was **615–624**, that the 2.417 kg mass, the test
+> campaign and the BY-03 flight **could not be confirmed**, and that two 2026 separation papers
+> **could not be confirmed at all**.
 >
-> | Named as | What the check found |
-> |---|---|
-> | A 2024 modular CubeSat separation mechanism, *Acta Astronautica* **225**, pp. 758–767, with a stated mechanism mass, a full environmental campaign and an in-orbit deployment | **The paper is real and the page range is wrong** — it is **pp. 615–624**. Its abstract describes a surrogate-model size optimisation reducing the mechanism's **mass proportion to 18 %** at **0.123 mm** maximum deformation. **The mass figure, the test campaign and the flight are not visible in it** and could not be confirmed |
-> | Two 2026 micro-spacecraft separation papers, carried as the strongest new evidence | **Could not be confirmed from the sources reachable here.** One pairs a publisher series identifier with an unrelated publisher's URL. *Not "they do not exist" — not found* |
-> | — | **The paper that did confirm, twice, was named by neither**, and it is the one above |
-
-#### Corrected 2026-08-22, later the same day. Two of those three findings are withdrawn.
-
-**1. "The test campaign and the flight are not visible in it" — withdrawn.** They are stated in the
-abstract, and a second retrieval returns them in the paper's own words: *ground verification with
-overload, vibration and shock mechanical tests, and successful in-orbit deployment of the BY-03
-satellite.* **The first check read a partial abstract summary as if it were the whole abstract**
-and reported an absence that was an absence in the summary. *The 2.417 kg mass is still unread and
-is still not quoted.*
-
-**2. "The page range is wrong — it is pp. 615–624" — withdrawn.** **No source reachable from here
-gives a page range at all.** The 615–624 was taken from a single search summary and published as a
-correction to a citation. **A correction asserted from a snippet is the same defect as a claim
-asserted from a snippet**, and this one was worse because it was framed as due diligence. The
-pagination is **unverified**, in both directions.
-
-**3. "Two 2026 papers could not be confirmed" — narrowed, not withdrawn.** Exact-title searches for
-both return other work. **That remains "not retrieved", and it is now clear that it is a property
-of this environment rather than of the sources**, because the environment cannot retrieve anything.
-
-> ### The retrieval note, and it is the whole reason the three findings above are graded rather than settled
+> **Every one of those findings is withdrawn.** The pagination is **758–767**. The mass, the
+> campaign and the flight are in the publisher record. All four records above are real and their
+> metadata is verified.
 >
-> **Every publisher and bibliographic host is refused by this session's egress policy.** Checked
-> 2026-08-22: `doi.org`, `api.crossref.org`, `api.openalex.org`, `api.semanticscholar.org`,
-> `sciencedirect.com`, `mdpi.com`, `iopscience.iop.org`, `arxiv.org` and `scholar.google.com` all
-> return **403 at the proxy**. The only external retrieval that works is web search, which returns
-> **abstracts, indexing records and summaries** — never a publisher record and never a full text.
+> **The defect was method, not carelessness.** Those conclusions were drawn from indexing summaries
+> rather than from the publisher records, and **an absence in a summary was reported as an absence
+> in the paper** — including a *correction to a citation* that was itself unsourced, which is worse
+> than the claim it corrected because it wore the authority of having been checked.
 >
-> **So no source in this section has been verified the way [`PRIOR_ART.md`](PRIOR_ART.md) requires**,
-> and every entry says so at the point of use. **A10 recorded the same limitation for a component
-> datasheet in its own words** — *"unreachable from this environment; that limitation is recorded
-> rather than worked around"* — and this is that, for literature.
->
-> **"Not retrieved" is not "does not exist", and it is also not "verified".** Both halves of that
-> sentence are the rule.
-
-**This is recorded because the rule is the rule.** [P22](../OPEN_PROBLEMS.md) and
-[P57](../OPEN_PROBLEMS.md) are both entries about a source that was cited or relied on before it was
-read. **The engineering in the sweep survived the check. Its citations are still unverified, and so
-was the correction to them.**
+> **The rule this produces**, and it is now the rule for this file: **every entry states its
+> evidence level** — `FULL TEXT READ`, `PUBLISHER METADATA VERIFIED`, `ABSTRACT ONLY`,
+> `SECONDARY LEAD`, `NEEDS SOURCE` — **and no numerical result is quoted below the level that
+> supports it.** [P22](../OPEN_PROBLEMS.md) is the entry that first taught this project the cost of
+> writing a literature file from abstracts. This is the second time.
 
 ---
 

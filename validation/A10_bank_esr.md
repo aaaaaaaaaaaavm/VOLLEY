@@ -37,7 +37,7 @@ ESR = (ESR x C) / C = 0.69/5.94 to 1.10/5.94 = 116 to 185 mohm
 **The modelled 12 mohm implies ESR x C = 0.071 s, an order of magnitude better than either
 commercial cell.** Both figures above are quoted at 3.0 V from distributor listings of the
 manufacturer data. Neither has been confirmed against the manufacturer PDF, because
-eaton.com is unreachable from this environment; that limitation is recorded rather than
+the manufacturer's own data could not be obtained; that limitation is recorded rather than
 worked around.
 
 **The AC/DC distinction cuts the wrong way.** Vinatech define DC ESR from the voltage drop

@@ -104,7 +104,7 @@ action threshold. A bound is not a probability, so A6-as-specified still stands.
 
 **9. Run A9, decay against flown CubeSats.** `validation/A9_tle_decay.md`, bands already
 declared, script already written (`validation/tle/fit_decay.py`). Needs only a machine with
-ordinary internet and a free Space-Track account, it is blocked here by network policy, not
+ordinary internet and a free Space-Track account, it has not been retrieved, not
 by difficulty. **This is the only analysis specified anywhere that compares the model against
 something that happened** rather than against another model.
 

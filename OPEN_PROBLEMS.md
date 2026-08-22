@@ -480,6 +480,7 @@ from the source changelog.
 
 ### P14. Gen3 CAD defects not previously tracked: CORRECTED 2026-08-13
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `DECISION` — keep Gen4 or declare Gen5 the only generation -- D8
 
 > **Corrected 2026-08-13 by supersession, not by fixing Gen3.** Gen5 is generated from
 > `cad/parameters.json` by `cad/build_gen5.py` ([ADR-026](docs/adr/026-cad-built-from-parameters.md)), and
@@ -781,6 +782,7 @@ move `plate_stress_MPa`, ~~the retention-gate sizing,~~ and the A4 load together
 
 ### P18. Four physical effects are absent from the model, not merely unvalidated: MEDIUM, NEW 2026-07-29
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — model the four effects, or bound them and say so
 
 Distinct from the E-items, which record analyses not yet run. These are terms that no script
 contains, found by reading `sizing.py` and `motor_model.py` rather than the prose. Each is
@@ -1385,6 +1387,7 @@ Both numbers then follow from one stated fact instead of two unstated ones.
 
 ### P30. An acceptance band was set at the easier of two available comparators: MEDIUM, NEW 2026-07-31
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `DECISION` — the band stands as declared; what changes is what is claimed from it
 
 **A defect in how a band was chosen, not in a number.** This repository has no other entry of that
 kind, which is the reason to write it down.
@@ -1459,6 +1462,7 @@ change and belongs declared and dated, not quietly applied to an existing failur
 
 ### P32. The working Gen4 geometry has no corresponding operating point: CORRECTED 2026-08-13
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `DECISION` — D8
 > **Corrected by retirement.** Gen4 exists only inside Fusion, has never been exported, and
 > releases at s = 1200 mm over a 900 mm stroke where `analysis/` assumes 1500 mm over 1.3 m.
 > Gen5 is generated from `cad/parameters.json` and `build_gen5.py --check` reads **23 dimensions**
@@ -1488,6 +1492,7 @@ then the Gen4 export gate stays closed and the Phase I baseline remains the only
 
 ### P33. The paper credits a winding inductance nobody had computed: MEDIUM, NEW 2026-08-05
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — compute the winding inductance
 
 
 `paper/paper.tex` says the drive switches at 20-40 kHz, "high enough that the current ripple is
@@ -1541,6 +1546,7 @@ segmentation decision in **P29** both move it: energising less stator cuts L and
 
 ### P34. A payload carrying a magnetometer cannot fly in this magazine: HIGH, NEW 2026-08-05
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — a magnetically screened cell, or a declared exclusion
 
 
 > **EXTENT BOUNDED 2026-08-05.** `analysis/far_field_sensitivity.py` profiles the field outward
@@ -1665,6 +1671,7 @@ and delete the claim that it tracks `astro.py`. The second is honest and costs n
 
 ### P36. The track has no dynamic design case, and A17 says it needs one: CORRECTED 2026-08-13
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — a dynamic design case for the track
 
 > **A33 ran 2026-08-13 and closed two of the three missing pieces, both as negative results.**
 > Bands declared at `7baa062` before the script existed; **six of six pass.**
@@ -1716,6 +1723,7 @@ matters without establishing that it breaks anything.
 
 ### P37. The retention gates were sized against a quasi-static load, not the launch environment: HIGH, NEW 2026-08-06
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — size the gates against the launch environment
 
 
 **Found by A18 band 9, against a band declared before the run.** `sizing.py` sizes the retention
@@ -1788,6 +1796,7 @@ only. **Carried as the open half of this entry.**
 
 ### P39. The companion repositories were not a function of the commit they claim: CORRECTED 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `COMPUTATION` — the companion provenance gate exists; the entry predates it
 
 
 **Corrected 2026-08-10 in `tools/export_companion.py`.** Found while regenerating the companions
@@ -1986,7 +1995,8 @@ being right was never evidence that the wiki was, and `check_artifacts.py` canno
 artifact it would guard is not in this repository at all.
 
 **This is not closed.** The corrected page cannot be pushed from the working environment — a
-wiki is not addressable as a repository through the GitHub API, so the credential proxy refuses
+wiki is not addressable as a repository through the GitHub API, so the tooling that publishes
+the rest of this project cannot reach it, and it refuses
 it. **Until `wiki/Home.md` is copied into the live wiki by hand, the wiki still publishes
 superseded numbers.** That is the one part of P42 that remains outstanding, and it is recorded
 here rather than left to be rediscovered.
@@ -2046,6 +2056,7 @@ appears.
 
 ### P44. At femtosat scale the separation hardware outweighs the satellites it separates: MEDIUM, NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `FLIGHT_OPS` — femtosat deployer masses actually flown
 
 
 **A24 band 6 miss, 2026-08-10.** Declared ≤ 0.5 % of exit velocity, measured **0.508 %**.
@@ -2088,6 +2099,7 @@ PocketQube 1P and above, and is not qualified for ChipSat/femtosat.**
 
 ### P45. The flywheel buys the impedance and pays it back in mass: LOW, NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — flywheel specific energy from flown units
 
 
 **A25 band 4 miss, 2026-08-10.** Declared ≤ the 3-string bank it replaces (19.5 kg), measured
@@ -2131,6 +2143,7 @@ a single-rotor store of 17.5 N·m·s — five times the shot disturbance it sits
 
 ### E29. Nothing computes the shot's angular impulse about the host, and a reaction wheel saturates in about four shots: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — the shot's angular impulse about the host
 
 
 **Found 2026-08-10 while pricing momentum management, not by any check.**
@@ -2207,6 +2220,7 @@ thrust-line-to-CoM offset, which is the number the budget exists to set. Neither
 
 ### P46. K_t is a centre-plane value and overstates thrust by 4.42 %: CORRECTED 2026-08-13
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `DECISION` — apply the K_t correction or hold it -- D3
 > **Corrected.** Applied 2026-08-13, three days after being computed and held. `thrust_constant()`
 > now Gauss-Legendre averages `B_y` over z ∈ [−45, +45] mm before the Lorentz sum, which is a
 > change to the physics rather than a pasted factor (ADR-015). **K_t 11.0258 → 10.5386, ratio
@@ -2480,6 +2494,7 @@ well-formed, falsifiable, and still not be the question.**
 
 ### P52. The segmented stator puts a 30 % force ripple through the track's first mode: HIGH, NEW 2026-08-13
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — segment handover through the track mode
 
 
 **Found by A32 band 4, 2026-08-13.** This one is in the machine.
@@ -2553,6 +2568,7 @@ is the stronger fix, but only for the values that were de-forked.
 
 ### P54. A24 band 1 fails against a reference literal that has since been corrected: MEDIUM, NEW 2026-08-14
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — the band is against a superseded literal; the run is A24
 
 A24 band 1 requires the fixed-cell model to return deployer mass per satellite within ±1 % of
 `payload_family.py`'s figure, and encodes that figure as the literal **6.375 kg**. That literal
@@ -2573,6 +2589,7 @@ band quoted beside it, and committed **before** the re-run. Every other band in 
 
 ### P55. `velocity_levers.py` prices every lever at the superseded centre-plane K<sub>t</sub>: MEDIUM, NEW 2026-08-14
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — re-price the levers at the depth-resolved K_t
 
 `analysis/velocity_levers.py` drives `motor_model.shot()` with a per-row K<sub>t</sub>, and every
 row carries a value derived **before** [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md): the
@@ -2591,6 +2608,7 @@ one solve per distinct geometry, four in total.
 
 ### P56. The phase-spacing claim is compared against the wrong baseline: **CORRECTED 2026-08-14 by A21-R**
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `COMPUTATION` — state the free baseline wherever the phase claim appears
 
 > **Corrected.** A21-R ran on 2026-08-14, six of six bands pass, and the claim has been restated
 > as orbit change in `README.md`, `SUMMARY.md`, `wiki/Home.md`, `docs/index.html`, `CONCEPT.md`,
@@ -2649,6 +2667,7 @@ edited** — it passed as declared. A re-declared A21-R adds the row.
 
 ### P57. A voice-coil CubeSat deployer making this project's core claim has been on the reading list unread since 2026-07-30: HIGH, NEW 2026-08-14
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — read the voice-coil deployer in full and record it in PRIOR_ART under that file's five fields
 
 [`RELATED_WORK.md`](docs/RELATED_WORK.md) already flags it: *"the nearest published neighbour to
 this design's topology that has turned up so far. It has not been read."* A search on 2026-08-14
@@ -2670,7 +2689,7 @@ separation velocity is unsupported until it is read.
 **What would close it.** Retrieve and read it in full; record thrust, stroke, actuator mass,
 velocity range, payload range and whether hardware was tested, in `PRIOR_ART.md` under the same
 five fields as the other five; then state explicitly what this project claims that it does not.
-IEEE Xplore is blocked from this environment, so this needs institutional access.
+The full text is behind a subscription, so this needs institutional access.
 
 ### P58. The thesis manuscript was a stale fork of the conference manuscript: CORRECTED 2026-08-14
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
@@ -2703,6 +2722,7 @@ until it exists this defect is one edit away from recurring.
 
 ### P59. Kill criterion 1 is unreachable by architecture and unreachable by manifest size: CRITICAL, NEW 2026-08-14
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `DECISION` — D2: which payload class is the product
 
 **A36 band 4 missed.** The band required kilograms per satellite to reach the ~2 kg threshold at a
 manifest of **N ≤ 30**. It first reaches it at **N = 116**.
@@ -2866,7 +2886,8 @@ was corrected. **It is published across a repository boundary no check can see.*
 **Corrected.** `tools/publish_wiki.sh` publishes the source and `--dry-run` shows the delta first;
 `wiki/README.md` states that committing `Home.md` changes nothing a reader sees until it is
 published. **The publish itself is not done** — GitHub does not expose wiki content through its
-API and this environment's git proxy will not credential a `.wiki` repository, so it needs an
+API, and the publishing route used for every other surface here cannot credential a `.wiki`
+repository, so it needs an
 ordinary checkout.
 
 **And the honest disposition of the surface itself.** The wiki is **the least trustworthy thing
@@ -3021,6 +3042,7 @@ propagated to the front page, the register header and the wiki source.
 
 ### P67. Gen6's precision rests on a seal friction nobody has measured, and its rated velocity excludes it: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HARDWARE` — measure the seal friction -- B-2
 
 
 **[A44](validation/A44_gen6_dispersion.md) bands 4 and 6 failed, and both failed on the same term.**
@@ -3089,6 +3111,7 @@ and the store is not affected.
 
 ### P68. ADR-032's first falsifier fires, and the largest piece of the stage credit is a mass P10 says was never itemised: CRITICAL, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — a real stage interface: what a provider will actually credit
 
 
 **[A45](validation/A45_stage_credit.md) bands 4, 5 and 6 failed.** ADR-032 records that the design
@@ -3160,6 +3183,7 @@ publish is the range **1.403 – 3.108 kg per satellite**, not the lower end alo
 
 ### P69. Mass parity with a canisterised dispenser is withdrawn: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `DECISION` — the comparison stands; what changes is what is claimed
 
 
 **[A21](validation/A21_comparators.md) band 4 failed on 2026-08-16.** The band asked for parity
@@ -3319,6 +3343,7 @@ values it knows, and a derived percentage sitting in prose is not one of them.
 
 ### P74. No Fusion document is committed for any generation built in Fusion: MEDIUM, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `DECISION` — export the Fusion documents, or declare Gen5 the only geometry -- D8
 
 
 **Found by building the generation archive and filling in a "source document" row six times.**
@@ -3359,6 +3384,7 @@ the exports that do exist have not been shown to be wrong.
 
 ### P75. Gen6 improves reliability incidentally, and E30 is not answered by it: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a Gen6 reliability architecture, the way A47 did Gen5
 
 
 **[A47](validation/A47_gen6_fmea.md) scored Gen6 on Gen5's own model, imported unchanged.**
@@ -3467,6 +3493,7 @@ dispersion the stage exists to correct is not there, and neither the stage nor i
 
 ### P78. Stroke buys velocity and gentleness together, and makes the worst defect worse: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HARDWARE` — it resolves with P67; the friction share is what is unmeasured
 
 
 **[A49](validation/A49_design_surface.md) swept the surface A37 never asked about, and found a
@@ -3511,6 +3538,7 @@ this, ADR-033's trim stage and P77's pulse store.** One bench test governs three
 
 ### P79. The decay model is optimistic by about two against the runs that raised E28: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a variable-atmosphere decay model and an independent propagator check
 
 
 **[A50](validation/A50_campaign_altitude.md) band 1 was declared as a calibration against E28's own
@@ -3577,6 +3605,7 @@ real run, and only their applicability differs.**
 
 ### P81. The backup ejector cannot get the payload out of the tube: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — an ejector concept that clears the tube on the energy available
 
 
 **[A53](validation/A53_backup_ejector.md) band 7 failed by a factor of forty, and it takes the
@@ -4022,6 +4051,7 @@ trim stage rather than feed it — **but it is no longer the only one.**
 
 ### P87. The last fill of the campaign does not fit the window, and never did: MEDIUM, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — re-plan the campaign fill schedule against the window
 
 
 **[A42](validation/A42_fill_window.md) established that filling is *not* the constraint** — 4.14 s
@@ -4057,6 +4087,7 @@ depends on. **Neither the cadence nor the store needs to change.**
 
 ### P88. The seal cannot absorb its own friction, and P67 is a harder measurement than it has been described as: HIGH, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HARDWARE` — the seal's own conduction path, measured
 
 
 **[A58](validation/A58_chamber_thermal.md) band 5 failed across the whole swept range.**
@@ -4241,6 +4272,7 @@ declared first.
 
 ### P91. A65 band 4 misses A53's per-cell mass threshold, and the mass is in the pressure vessel: MEDIUM, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a pressure vessel design that meets A53's per-cell mass
 
 
 **[A65](validation/A65_pyrotechnic_ejector.md) band 4 failed at 0.4350 kg against 0.25 kg.** Nine of
@@ -4277,6 +4309,7 @@ argues for, with the vessel material and the housing allowance both derived rath
 
 ### P92. The trim stator has to reach its magnets through a conducting tube, and nothing has computed what that costs: HIGH, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A66: the tube attenuation, induced loss and wall temperature
 
 
 **[ADR-033](docs/adr/033-gen6-trim-stage.md) puts the stator outside the tube and the magnets
@@ -4412,6 +4445,7 @@ was therefore always checkable — is corrected to **109×**.
 
 ### P94. A13 band 5 passes on a host control authority that E5 says does not exist: HIGH, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — a published control authority for a real stage
 
 
 **Found by a provenance audit of every module-level constant in the analysis scripts, 2026-08-20.**
@@ -4456,6 +4490,7 @@ guessing a store.
 
 ### P95. A35's headline survives-everything figure is pre-A46, and correcting it reverses A35's own escape route: CRITICAL, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — A35's run sheet against the post-A46 rollup
 
 
 **Found while drawing the A35 ledger for the front page. The figure would not agree with the text,
@@ -4706,6 +4741,7 @@ accepts it.**
 
 ### P99. One shot's angular momentum exceeds the only wheel this project has ever named: HIGH, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — a real host wheel, or a host that does not need one
 
 
 **Found by [A57](validation/A57_stage_attitude_packaging.md), and recorded outside its bands on
@@ -5023,6 +5059,7 @@ what that force is a property of has never been modelled.**
 
 ### P103. Gen6 has no model of the payload's guided contact state through the 8 m bore, so its exit angular and lateral state is not established: HIGH, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A67: the 6-DOF guided-contact model, running now
 
 
 **[P102](#p102) found this while correcting something smaller and did not own it.** That entry is a
@@ -5082,10 +5119,28 @@ mechanism, and importing them is the failure this project has recorded twice.
 
 ### What would close it
 
-**Ordered. Step 1 is not optional and steps 2 and 3 cannot substitute for it.**
+> ### AMENDED 2026-08-22: the model does not wait for B-2
+>
+> **As first written this entry put the measurement first and said step 1 was not optional.** That
+> was wrong about the order and it would have stalled the whole model behind a purchase.
+> **A measurement calibrates a contact model; it is not a precondition for having one.**
+>
+> [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) records three separation-dynamics
+> records that make the point independently: the contact parameters are **identified** — in one
+> case by unscented Kalman filter against a finite-element collision solve — rather than measured
+> first and inserted. **So the model is built now, on bounded friction, and B-2 replaces the bound
+> with a distribution when it lands.**
+>
+> **What changes:** step 1 moves from a precondition to a calibration input, and the model may
+> report *bounded* exit state before B-2 and *calibrated* exit state after it. **What does not
+> change:** the model's own acceptance bands are declared before its script exists, and a bounded
+> result is published as bounded.
+
+**Ordered. B-2 calibrates step 2; it no longer gates it.**
 
 1. **[P67](#p67) is measured** — B-2 — giving a friction force with its spread, its direction
-   dependence and its force–time character rather than a scalar allowance.
+   dependence and its force–time character rather than a scalar allowance. **Until it lands, the
+   model runs on a declared bracket and says so.**
 2. **A reduced multibody contact model propagates the payload across the full 8.0 m**, carrying
    lateral and angular state, driven by the design point read live from `cad/parameters.json` and
    **not** by a constant acceleration. *Its acceptance bands are declared before its script exists,
@@ -5208,8 +5263,8 @@ look stale, and the gate would have tripped on the act of recording that it had 
 six: it asks git about this repository and reads files that happen to be present. It never reaches
 the network, because none of the others do either.
 
-### P106. VOLLEY-paper's LICENSE is the MIT text while its own NOTICE and LICENSING.md say the payload is CC BY 4.0 and point at that file: MEDIUM, NEW 2026-08-22
-> **Status:** `LIVE` — open engineering; something still has to be done
+### P106. VOLLEY-paper's LICENSE was the MIT text while its own NOTICE and LICENSING.md said the payload is CC BY 4.0 and pointed at that file: MEDIUM, RESOLVED 2026-08-22
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
 
 
 **Found while checking, before running the export, that nothing authored would be overwritten.**
@@ -5246,6 +5301,22 @@ lines that `THESIS_MANIFEST` carries today — and the export does the rest.
 
 **Until then the two statements disagree in public**, and the flagship's own licence is not in
 question: it is CC BY 4.0 and always has been.
+
+> ### RESOLVED 2026-08-22. D4 is decided: CC BY 4.0.
+>
+> **The hold had nothing left to hold against.** It was placed against an IEEE copyright transfer
+> *on acceptance*, and **no venue has been selected** — so the position being protected was
+> hypothetical while the contradiction it produced was public and permanent.
+>
+> `PAPER_MANIFEST` now carries the five lines its own comment already documented as the release:
+> `LICENSE`, `NOTICE`, `LICENSING.md`, `LICENSE-MIT-superseded` and `CITATION.cff`, which is what
+> `THESIS_MANIFEST` has carried since 2026-08-10. **`LICENSE-MIT-superseded` is still shipped under
+> its own name** — the repository was MIT for a period, and dropping the file would erase that
+> rather than supersede it.
+>
+> **This is a decision, not a correction**, and it is recorded as one in
+> [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) at D4. *If a venue is selected and
+> requires a transfer, that is a decision taken then, on the accepted version, and recorded then.*
 
 ### P107. The Gen6 CAD described the pre-ADR-034 design point for three days, and called Gen5 a measured baseline: HIGH, CORRECTED 2026-08-22
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
@@ -5302,6 +5373,7 @@ is recorded here rather than claimed closed.*
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `FLIGHT_OPS` — published dispenser deployment counts and failure records
 
 
 **Raised in review, 2026-08-10, and it is the strongest structural criticism this design has
@@ -5383,6 +5455,7 @@ credited in a reliability model because no reliability model exists.**
 
 ### E31. The two ConOps have different launch-interface compliance positions, and nothing distinguishes them: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — the launch-interface position of an actual provider
 
 
 **Found by the ICD survey, 2026-08-10.** See [`docs/ICD_COMPLIANCE.md`](docs/ICD_COMPLIANCE.md).
@@ -5433,6 +5506,7 @@ this interface at this revision.
 
 ### E32. Nothing inhibits the drive during the ascent pressure transit, and a fault there would break down: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — design the ascent inhibit and its fault logic
 
 
 **Found answering review item 26, 2026-08-10.** `analysis/paschen_multipaction.py`.
@@ -5471,6 +5545,7 @@ gas constant, which no depressurisation model changes.
 
 ### E33. Magnet tolerance leaves a residual dipole that saturates the host's wheel in days, with the machine idle: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — magnet tolerance and the residual dipole
 
 
 **Review item 11, computed 2026-08-10.** `analysis/residual_dipole.py`.
@@ -5525,6 +5600,7 @@ fallback. Neither is specified anywhere.
 
 ### E34. The brake dumps 18.5 kN into a structure holding eleven stowed satellites, eleven times: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — a shock response spectrum at the cassette interface
 
 
 **Review item 12, 2026-08-10.**
@@ -5559,6 +5635,7 @@ records that the regen stator and the eddy fin do not both fit the arrest sectio
 
 ### E35. The payload's field exposure is a design variable nobody varied, and fixing it would make the product claim true: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — vary the payload field exposure as a design variable
 
 
 **Review items 16 and 14, computed 2026-08-10.** `analysis/mover_separation.py`.
@@ -5607,6 +5684,7 @@ unrelated reason.**
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: MODELLED 2026-08-16 by A50, STILL OPEN
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — campaign mission life at a real deployment altitude
 
 
 **Found by A15, and only because two GMAT runs stopped early.** R2 (350 km, 55.2 deg) and R3
@@ -5716,6 +5794,7 @@ the cheapest of them and needs no CAD, no mesh, and no licence.
 
 ### E3. Masses are parametric and unchecked against vendor data
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — select components from public vendor data instead of parametric masses
 
 CAD now exists (`cad/`, nine documents), so the "no CAD" half of this item is closed,
 but the mass problem is not. `mass_properties.py` still uses primitive solids with
@@ -5728,6 +5807,7 @@ radiator, and avionics are still missing from the rollup entirely (P10).
 
 ### E4. No hardware at any level
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HARDWARE` — build something
 
 > **A protocol now exists, 2026-07-29.** `docs/BENCHTOP_TESTS.md` specifies four sub-scale
 > experiments, cheapest first, each closing a named claim with its acceptance band declared
@@ -5754,12 +5834,14 @@ tip-off claims are all model outputs.
 
 ### E5. Host stage properties unavailable
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — host stage propellant, authority and restart constraints
 
 Recoil budgets are parametric across 300-900 kg host classes because no candidate
 stage publishes its mass and control authority. Cannot be closed from public data.
 
 ### E6. Absolute orbital lifetimes are uncertain
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — uncertainty range from a variable atmosphere, not a single multiplier
 
 Static exponential atmosphere at mean solar activity. Absolute lifetimes swing
 severalfold across the solar cycle. The x1.80 ratio was believed invariant and defensible;
@@ -5773,6 +5855,7 @@ agreeing is weaker than a model reproducing a flown decay, and the flight data i
 
 ### E7. Velocity dispersion rests on assumed sensor noise
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — select a sensor from public data and use its stated noise
 
 The 0.027 m/s (3σ) result is a closed-loop simulation using an assumed 8 mm/s sensor
 sigma and assumed tolerance distributions. No sensor has been selected or characterised.
@@ -5814,6 +5897,7 @@ transient, and it passes.
 
 ### E9. 6U/12U variants are force-limited, not designed
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `DECISION` — design 6U/12U or withdraw them
 
 The payload family table is arithmetic from the same thrust constant. No mechanism,
 cassette, or structural design exists for larger classes.
@@ -5835,6 +5919,7 @@ is drawn or described, not analysed.
 
 ### E11. No contamination or outgassing analysis
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — public material screening -- ASTM E595 class data for the Gen6 BOM
 
 > **ADR-004 gains external support 2026-07-29:** coreless construction lowers outgassing and
 > vacuum-rated ironless linear motors are catalogue products, so this architecture converges
@@ -5922,6 +6007,7 @@ above, which is the part with any value in it.
 
 ### E14. Patent / disclosure: the disclosure has now happened
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `DECISION` — file or let it go -- D5
 
 Concept and results are public (LinkedIn, and this repository, which is now a **public**
 repo carrying the scripts and therefore the operating point). No provisional application
@@ -5934,11 +6020,13 @@ item out explicitly so it stops reading as pending.
 
 ### E15. Sponsorship not secured
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `PROGRAMME` · **Next step:** `DECISION` — fund it or scope it -- D10
 
 The build is the declared next step and is unfunded.
 
 ### E16. Reference hygiene
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a reference audit against publisher records
 
 Three references in `paper/paper.tex` were flagged verify-before-submission and have
 not been fully verified: eddy-damper heritage [15], Yudintsev separation dynamics [17],
@@ -5971,10 +6059,9 @@ currently a model output rather than a measurement.
 > ### The standard of evidence, stated exactly, because "verified" is doing work here
 >
 > **The citation was verified to exist and to have those bibliographic details, from four
-> independent indexes that agree. It was NOT read.** Full-text retrieval is blocked by this
-> environment's egress policy — `doi.org`, `www.mdpi.com` and `arxiv.org` all refuse at the
-> proxy, re-tested rather than assumed. So this is **bibliographic verification, not
-> substantive**, and the difference matters for what the reference is being asked to support.
+> independent indexes that agree. It was NOT read.** The full text has not been retrieved —
+> re-tested rather than assumed. So this is **bibliographic verification, not substantive**, and
+> the difference matters for what the reference is being asked to support.
 >
 > **And it is being asked to support something a bench paper cannot.** `paper.tex` cites it for
 > *"flight heritage in the damper class"*. What the retrievable metadata describes is a
@@ -5997,7 +6084,7 @@ currently a model output rather than a measurement.
 > flown result it attributes it to.
 
 **What would close it:** full-text retrieval of `\bibitem{eddy}` and the two Foster papers on a
-machine without this egress restriction, and a decision on the flight-heritage claim once the
+machine with unrestricted access to the publisher, and a decision on the flight-heritage claim once the
 vendor documentation is actually in hand. `docs/RELATED_WORK.md`'s wider list remains
 **unretrieved and is not claimed otherwise**. **This is narrowed, not closed** — from three
 unverified references to one substantively unverified claim and a reading list.
@@ -6063,6 +6150,7 @@ attacks three headline-adjacent numbers at once.
 
 ### E18. Conjunction covariance is invented: NEW 2026-07-27
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a conjunction covariance from a defensible public source
 
 Any probability-of-collision result (A6) inherits whatever covariance it is given, and no
 covariance exists for a satellite that has never flown. Space-Track **Conjunction Data
@@ -6222,6 +6310,7 @@ Cheap to close, and it belongs with A4's dynamic leg rather than with A1.
 
 ### E24. Attitude disturbance from magazine indexing is not modelled: NEW 2026-07-30
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — attitude disturbance from magazine indexing
 
 Found by reading a competitor's problem statement rather than by examining this design, which is
 worth stating plainly: Xu et al. (*Aerospace* 11(5) 394, 2024) build a **cost model for attitude
@@ -6284,6 +6373,7 @@ claimed to be negligible until that is done.
 
 ### E25. A13 now leaves attitude restoration and structural settling open: CORRECTED 2026-08-03
 > **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — attitude restoration and structural settling
 
 
 The corrected rigid-body budget does not leave a residual angular rate after an internal mass
