@@ -158,6 +158,8 @@ component, not a number.*
 > | **HC — actual** | **12.390 °/s** | 277.1 N | 36 |
 > | **MOD** | 8.954 °/s | 298.3 N | 25 |
 >
-> **Band 6's 65.8 % spread is unchanged**, because the extremes are unchanged. **What changes is
-> that the spread is now across three sourced formulations rather than two, one of them
-> misnamed.** *The band still fails and the failure still means the magnitude is unresolved.*
+> **Band 6's spread is unchanged**, because the extremes are unchanged. **Two of the three are
+> sourced — LN and HC, both to their original papers. `MOD` is not**: its primary sources have not
+> been read, and it is carried as an **explicitly unsourced, form-defined sensitivity candidate**
+> rather than as a third citation. *The band still fails and the failure still means the magnitude
+> is unresolved.*

@@ -178,7 +178,9 @@ hardware** — this run is recorded as not having answered them.
 > not a force. *A step small enough to converge costs about twenty minutes per case and has not
 > been run.*
 >
-> **What that supports and does not support.** It supports **the exit angular rate at the real
-> centreline being in the tens of degrees per second at a 1 K gradient — far above the 2.0 °/s
-> band.** It does not support any particular value, and **no number from this retest is quoted
-> anywhere.** Bands 2–5 stay **NOT EVALUABLE**.
+> **What that supports.** **Nothing about the physical exit state.** A result that moves from
+> 44.17 to 17.14 °/s as the step is quartered is **not converged**, and an unconverged sequence
+> bounds nothing — not the value, not its order of magnitude, not which side of a band it falls on.
+> *The earlier version of this paragraph inferred "tens of degrees per second" from it. That
+> inference is withdrawn.* **What the retest establishes is exactly one thing: the runs complete.**
+> Bands 2–5 stay **NOT EVALUABLE**.

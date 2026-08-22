@@ -5455,8 +5455,8 @@ at a 65.8 % model-form spread.**
 > no value from that retest is quoted.** What it does show is that the exit rate on the real
 > centreline is in the **tens** of °/s at a 1 K gradient, against a **2.0 °/s** band.
 >
-> **What survives every objection:** *all three* sourced laws miss the band, by **4.5×** at the
-> friendliest;
+> **What survives every objection:** *all three* candidate formulations miss the band at A67's
+> assumed centreline, by **4.5×** at the friendliest;
 > A67 band 9's ranking is a variance attribution and is not a contact-law property; and
 > [P109](#p109)'s admissibility constraint — the harder finding — needs no contact model at all.
 >
@@ -5612,8 +5612,14 @@ input, and the honest statement is that **the ranking cannot decide between them
 **Every repository gate passed while the physics was wrong**, and they would have passed on any
 value of that sagitta. **The gates check that the record is consistent. They do not check that a
 model is right**, and the verification language is corrected to say so.
-[`tools/check_bands.py`](tools/check_bands.py) is the narrow thing that can be automated: it finds
-band verdicts that are assigned rather than computed.
+**Two narrow things can be automated and both now are.**
+[`tools/check_bands.py`](tools/check_bands.py) finds band verdicts that are assigned rather than
+computed. [`tools/check_results_fresh.py`](tools/check_results_fresh.py) re-runs the cheap
+deterministic analyses and requires byte-identical output — **because the first version of this
+correction fixed A70's markdown and left the superseded numbers in
+`analysis/results/guided_contact_derived.json`, which the companion export then shipped to a
+public repository.** *A correction that does not reach the generator and the result file is not a
+correction.*
 
 ### P111. A68 attached Hunt–Crossley's name to a relation they did not write, and reasoned from the attribution: HIGH, CORRECTED 2026-08-22
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record

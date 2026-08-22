@@ -39,6 +39,8 @@ jobs:
         run: python3 tools/check_companions.py
       - name: band integrity
         run: python3 tools/check_bands.py
+      - name: results freshness
+        run: python3 tools/check_results_fresh.py
       - name: computational closure
         run: python3 tools/check_computational_closure.py
 

@@ -7,7 +7,8 @@
     0.0,
     0.5,
     1.0,
-    2.0
+    2.0,
+    5.0
   ],
   "land_sweep": [
     40.0,
@@ -36,47 +37,62 @@
       },
       {
         "dT_K": 0.5,
-        "peak_mm": 0.12821123244598115,
+        "peak_mm": 0.5994616223296321,
         "curvature_per_m": 0.0006627351867452962,
-        "sag_40mm_um": 6.405795661316916,
+        "sag_40mm_um": 0.13254703746780555,
         "admissible_40mm": true,
-        "sag_80mm_um": 12.653208555697054,
+        "sag_80mm_um": 0.5301881498237884,
         "admissible_80mm": true,
-        "sag_120mm_um": 18.729416940536954,
+        "sag_120mm_um": 1.1929233370137926,
         "admissible_120mm": true,
-        "sag_200mm_um": 30.700499069904726,
-        "admissible_200mm": false,
-        "sag_400mm_um": 56.526677622439585,
-        "admissible_400mm": false
+        "sag_200mm_um": 3.313675935511136,
+        "admissible_200mm": true,
+        "sag_400mm_um": 13.254703738600304,
+        "admissible_400mm": true
       },
       {
         "dT_K": 1.0,
-        "peak_mm": 0.20918919113080342,
+        "peak_mm": 1.121946313849446,
         "curvature_per_m": 0.0013254703734905924,
-        "sag_40mm_um": 12.82602413882348,
+        "sag_40mm_um": 0.2650940749043861,
         "admissible_40mm": true,
-        "sag_80mm_um": 25.14902332657594,
-        "admissible_80mm": false,
-        "sag_120mm_um": 37.331903181411136,
-        "admissible_120mm": false,
-        "sag_200mm_um": 60.449006120846214,
-        "admissible_200mm": false,
-        "sag_400mm_um": 109.46262994806663,
+        "sag_80mm_um": 1.0603762993551675,
+        "admissible_80mm": true,
+        "sag_120mm_um": 2.3858466731829915,
+        "admissible_120mm": true,
+        "sag_200mm_um": 6.627351868912848,
+        "admissible_200mm": true,
+        "sag_400mm_um": 26.50940746999988,
         "admissible_400mm": false
       },
       {
         "dT_K": 2.0,
-        "peak_mm": 0.3739313525907536,
+        "peak_mm": 2.16718529223306,
         "curvature_per_m": 0.002650940746981185,
-        "sag_40mm_um": 25.666481093836605,
-        "admissible_40mm": false,
-        "sag_80mm_um": 50.18313882373114,
-        "admissible_80mm": false,
-        "sag_120mm_um": 74.66045014544784,
-        "admissible_120mm": false,
-        "sag_200mm_um": 119.94602022272917,
+        "sag_40mm_um": 0.5301881494249646,
+        "admissible_40mm": true,
+        "sag_80mm_um": 2.1207525975862342,
+        "admissible_80mm": true,
+        "sag_120mm_um": 4.771693344565991,
+        "admissible_120mm": true,
+        "sag_200mm_um": 13.25470373489293,
+        "admissible_200mm": true,
+        "sag_400mm_um": 53.01881493945592,
+        "admissible_400mm": false
+      },
+      {
+        "dT_K": 5.0,
+        "peak_mm": 5.302305996214672,
+        "curvature_per_m": 0.006627351867452963,
+        "sag_40mm_um": 1.3254703742681186,
+        "admissible_40mm": true,
+        "sag_80mm_um": 5.301881496632722,
+        "admissible_80mm": true,
+        "sag_120mm_um": 11.929233366640615,
+        "admissible_120mm": true,
+        "sag_200mm_um": 33.13675934957152,
         "admissible_200mm": false,
-        "sag_400mm_um": 215.33453459932068,
+        "sag_400mm_um": 132.54703737515743,
         "admissible_400mm": false
       }
     ]
@@ -119,8 +135,8 @@
     {
       "band": "6",
       "name": "energy closes to 0.5 %",
-      "detail": "gas work 2350.2 J",
-      "pass_": true
+      "detail": "NOT EVALUABLE -- dynamics disabled, no energy balance computed",
+      "pass_": null
     }
   ]
 }

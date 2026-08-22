@@ -105,8 +105,15 @@ def main():
     a67 = 14.8454
     ref = best["rate_deg_s"] if best else float("nan")
     b5 = None if ref != ref else bool(abs(ref - a67) / a67 <= 0.5)
+    # Band 6 is an ENERGY BALANCE. With the dynamics disabled nothing computes kinetic,
+    # friction or contact energy, so there is nothing to close and the band is NOT EVALUABLE.
+    # P110: this was `b6 = True`, which recorded a PASS on a balance nothing had evaluated.
     W = g.gas_work()
-    b6 = True
+    if runs:
+        res = [r.get("energy_residual_pct") for r in runs if r.get("energy_residual_pct") is not None]
+        b6 = bool(res) and max(abs(v) for v in res) <= 0.5
+    else:
+        b6 = None
 
     bands = [
         ("1", "coupling exact when the shape is scaled to zero, 0.5 %",
@@ -122,7 +129,9 @@ def main():
           else "NOT EVALUABLE"), b4),
         ("5", "A67 -> A70 change in exit angular rate <= 50 %",
          (f"{ref:.3f} against A67's {a67:.3f}" if ref == ref else "NOT EVALUABLE"), b5),
-        ("6", "energy closes to 0.5 %", f"gas work {W:.1f} J", b6),
+        ("6", "energy closes to 0.5 %",
+         (f"gas work {W:.1f} J" if b6 is not None
+          else "NOT EVALUABLE -- dynamics disabled, no energy balance computed"), b6),
     ]
     out["bands"] = [dict(band=n, name=nm, detail=d,
                          pass_=(None if ok is None else bool(ok))) for n, nm, d, ok in bands]

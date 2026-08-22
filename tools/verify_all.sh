@@ -26,6 +26,7 @@ run "public surfaces"    python3 tools/check_public.py
 run "cross-references"   python3 tools/check_crossrefs.py
 run "companion payloads" python3 tools/check_companions.py
 run "band integrity"      python3 tools/check_bands.py
+run "results freshness"   python3 tools/check_results_fresh.py
 run "computational closure" python3 tools/check_computational_closure.py
 run "artifacts"          python3 tools/check_artifacts.py
 

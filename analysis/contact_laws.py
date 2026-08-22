@@ -11,13 +11,17 @@ not, and a formulation whose damping is IDENTIFIED rather than derived recovers 
 
 Three laws, all of the form F = K d^n (1 + chi * ddot / ddot_minus):
 
-    LN   chi = 3(1 - e^2)/4          Lankarani-Nikravesh. What A67 used
-    HC   chi = 3(1 - e)/(2 e)        Hunt-Crossley's own coefficient, no e -> 1 assumption
+    LN   chi = 3(1 - e^2)/4     Lankarani-Nikravesh (1990), J. Mech. Des. 112(3). What A67 used
+    HC   chi = 3(1 - e)/2       Hunt & Crossley (1975), J. Appl. Mech. 42(2), to first order in
+                                (1 - e). THERE IS NO e IN THE DENOMINATOR -- P111
+    MOD  chi = 3(1 - e)/(2 e)   A relation of the later corrected (1 - e)/e family. NAMED FOR ITS
+                                FORM, not for an author: its primary sources have NOT been read,
+                                so it is carried as an explicitly unsourced sensitivity candidate
     ID   chi found by root-finding   so the free-impact restitution IS the declared e
 
-ID is the route the separation-dynamics literature uses -- contact parameters identified against a
-reference rather than assumed. Here the reference is the definition of restitution itself, which
-makes the identification exact and cheap; against hardware it would be a measured coefficient.
+ID IS NOT VERIFICATION. It root-finds against the same fixed-step solver, so it can only show the
+solver agrees with itself -- that is parameter identification. The verification is impact_ivp(),
+an independent adaptive implicit Radau solve of the same problem. P111.
 
 Bands declared in validation/A68_contact_law.md before this file existed.
 

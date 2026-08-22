@@ -38,11 +38,6 @@ ALLOW = [
     ("analysis/run_a69.py", "b8",
      "report-only by declaration: A69 band 8 asks that the contributions be reported separately "
      "and ranked, and the ranking is computed from the cases. No threshold exists to compute"),
-    ("analysis/run_a70.py", "b6",
-     "A70 band 6 is recorded as NOT EVALUABLE in the run sheet, not as a pass: the dynamics are "
-     "disabled, so no energy balance is computed. P110 corrected the recorded verdict"),
-    ("analysis/run_a70.py", "b4",
-     "set to None when there are no admissible runs, which is the NOT EVALUABLE state"),
 ]
 
 
