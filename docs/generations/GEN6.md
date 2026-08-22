@@ -27,7 +27,7 @@ stroke.** 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charg
 | Carriage | rides the tube; carries the cradle interface. **Not recovered** |
 | Chamber | **2.0 L at 22.73 bar**, nitrogen, fired as a closed adiabatic expansion |
 | Reservoir | **3.46 L at 200 bar** — **sized by [A56](../../validation/A56_reservoir_resized.md)** at ADR-034's charge pressure, against A43's 9.55 at 50 bar. A43's no-relaxation finding survives at **7.39× the cadence** |
-| **Trim stator** | **39.7 mm at x = 7960.3**, energised after the gas has finished. **0.340 kg.** Corrects ±0.323 m/s — it never throws the payload. **That authority was sized at the old friction share — P83** |
+| **Trim stator** | **SUSPENDED**, not deleted — [ADR-036](../adr/036-seal-specification-and-the-trim-stage.md), 2026-08-20. [A55](../../validation/A55_trim_authority.md) resized it **39.7 → 144.01 mm** at ADR-034's friction share (**P83**, closed), and A61 then found that **any seal surviving its own heat also makes the stage unnecessary**. Whether it returns is [P67](../../OPEN_PROBLEMS.md)'s to decide, and **its topology reopens if it does** — the 39.7 mm figure on this row until 2026-08-22 was two corrections old (**P107**) |
 | Stage rail | the host-provided structure everything mounts to |
 | Magazine cassette | carried across from Gen5's cell geometry |
 

@@ -15,6 +15,22 @@ took.**
 that *is* one.** This file is that through-line, and every step in it is a dated record elsewhere
 in the repository — nothing here is asserted and nothing is retro-dated.
 
+> ## The distinction this file is written around, and it is the one that gets collapsed
+>
+> **Two different things changed at different rates, and reading them as one produces a false
+> history.**
+>
+> | | |
+> |---|---|
+> | **Mission architecture** — *what the stage is FOR* | **Settled in 2023 by [ADR-002](adr/002-host-is-a-spent-upper-stage.md) and essentially unchanged since.** A post-primary upper stage is the orbital delivery platform; VOLLEY produces each satellite's individual release condition aboard it |
+> | **Mechanism integration** — *how much of the machine the stage IS* | **Changed enormously.** Free-flyer → hosted deployer → self-contained electromagnetic system aboard the platform → a system whose structure and length are the stage's |
+>
+> **[ADR-024](adr/024-last-mile-delivery-conops.md) did not invent the last-mile mission in 2026.**
+> It says so in its own first sentence: *"the concept this project was started to pursue is not
+> written down anywhere in it."* **It documented a mission the project already had and had failed
+> to state.** *Mission intent can predate its documentation. Mechanical integration genuinely
+> evolved. Those are different claims and this file keeps them apart.*
+
 ---
 
 ## The arc, in six decisions
@@ -24,8 +40,8 @@ in the repository — nothing here is asserted and nothing is retro-dated.
 | **2021** | Concept, built around a coilgun | The problem is named: a rideshare secondary inherits an orbit and a 1–2 m/s spring cannot alter it |
 | **2023** | **[ADR-002](adr/002-host-is-a-spent-upper-stage.md) — the host is a spent upper stage, not a free-flyer** | **POEM reframes it.** A free-flyer must carry attitude control, power and recoil management, *"which is most of a spacecraft"*. A spent stage already has all three |
 | **mid-2025** | Coilgun → linear synchronous motor | A coilgun cannot command a velocity, and commanding it is the product |
-| **2026-08-10** | **[ADR-024](adr/024-last-mile-delivery-conops.md) — the last-mile ConOps, written down at last** | The stage stops being *a place to stand* and becomes *part of the product* |
-| **2026-08-14** | **[ADR-032](adr/032-gen6-stage-integrated-gas-store.md) — Gen6** | **The stage stops being the host and becomes the machine.** No mover, no stator, no bank, no brake — a rail the stage already is |
+| **2026-08-10** | **[ADR-024](adr/024-last-mile-delivery-conops.md) — the last-mile ConOps, written down at last** | **Nothing about the mission moves here. What moves is the record.** The ConOps ADR-002 chose in 2023 is finally stated, seven documents and five generations after it was decided |
+| **2026-08-14** | **[ADR-032](adr/032-gen6-stage-integrated-gas-store.md) — Gen6** | **The stage was already the delivery platform; here it also becomes the machine.** No mover, no stator, no bank, no brake — a rail the stage already is. *This is an integration change, not a mission change* |
 | **2026-08-19** | **[ADR-034](adr/034-gen6-long-stroke-design-point.md) — the stroke becomes the stage** | **The last thing the machine was still carrying for itself was its own length.** 2.18 m of tube on an 8 m vehicle became **8.0 m**, and the acceleration and the gas each fell **54.5 %** for it. *The stage stopped being a host in 2026-08-14; here it stops being merely a mounting length* |
 
 ## The step that names the gap, in the project's own words
@@ -47,15 +63,27 @@ vehicle underneath it. That is what `docs/generations/` now carries.
 
 ## What each generation assumed about the host
 
-**The through-line at per-generation resolution. This is the row that changes.**
+**Two columns, because the answer is different in each and reading one for the other is the
+mistake this file exists to prevent.** The left column barely moves after 2023. The right column
+is the whole engineering history.
 
-| | What it assumed the host was | Consequence |
+| | **Mission role of the host** | **Mechanical integration with the host** |
 |---|---|---|
-| **[Gen1](generations/GEN1.md)–[Gen3](generations/GEN3.md)** | **a mounting surface with a power feed** | The machine carries its own track, structure, enclosure and energy store. Everything is aboard |
-| **[Gen4](generations/GEN4.md)** | the same | Nine Fusion documents of a self-contained machine |
-| **[Gen5](generations/GEN5.md)** | the same, and **frozen that way** | 126.6 kg dry, of which the enclosure alone is 50.04 kg — a skin the stage already has |
-| **[Gen6](generations/GEN6.md)** | **the host is the machine** | **85.36 kg — 67.4 % of the ledger — is the stage's, and 29.75 kg is deleted outright.** The rail, the structure, the power, the thermal path and the avionics bay are all things a stage already carries |
-| **Gen6 at [ADR-034](adr/034-gen6-long-stroke-design-point.md)** | **the host is the machine, including its length** | The stroke is **8.0 m** — A37's whole usable acceleration length for a large upper stage. **The one resource the machine had never spent was the one the stage gives away free**, and spending it halved both the acceleration and the gas at unchanged velocity |
+| **Earliest concept, 2021** | **none — VOLLEY *was* the spacecraft.** A dedicated free-flyer, carrying its own attitude control, power and recoil mass | **Total, with itself.** The free-flyer is an alternate *implementation* of the same delivery mission, not a different mission |
+| **[ADR-002](adr/002-host-is-a-spent-upper-stage.md), 2023** | **ACTIVE POST-PRIMARY ORBITAL DELIVERY PLATFORM** — attitude control, navigation, power, recoil mass, and where the vehicle allows it, post-primary manoeuvre capability | **Low.** VOLLEY becomes a hosted payload. *"This is what turns the concept from a mission into a payload"* |
+| **[Gen1](generations/GEN1.md)–[Gen4](generations/GEN4.md)** | **unchanged — active delivery platform** | **Low / self-contained.** The *mechanism* model is host-agnostic: it carries its own track, structure, enclosure and energy store, and treats host repositioning parametrically. **That is a statement about the model, not about the mission** |
+| **[Gen5](generations/GEN5.md)** | **unchanged — active delivery platform**, and this is the machine the manuscript reports | **Low / self-contained, and frozen that way.** 126.6 kg dry, of which the enclosure alone is **50.04 kg** — a skin the stage already has. **Its weakness is duplication, not its concept of operations** |
+| **[Gen6](generations/GEN6.md)** | **unchanged — active delivery platform** | **HIGH.** **85.36 kg — 67.4 % of the ledger — is the stage's**, and 29.75 kg is deleted outright. The rail, the structure, the power, the thermal path and the avionics bay are things a stage already carries |
+| **Gen6 at [ADR-034](adr/034-gen6-long-stroke-design-point.md)** | **unchanged — active delivery platform** | **HIGH, including length.** The stroke is **8.0 m** — A37's whole usable acceleration length. **The one resource the machine had never spent was the one the stage gives away free**, and spending it halved both the acceleration and the gas at unchanged velocity |
+
+> **Read the left column downwards.** It says *"active delivery platform"* six times. **The mission
+> did not change; the amount of it VOLLEY built for itself did.**
+>
+> **What may not be claimed in either column.** No launch provider has agreed to anything —
+> **[E5](../OPEN_PROBLEMS.md)** — so *"where the vehicle allows it"* is doing real work. **Host
+> propulsion, restart authority and post-primary reserve remain parametric in every generation**,
+> including this one. [`MISSION_ARCHITECTURE.md`](MISSION_ARCHITECTURE.md) carries that as host
+> classes rather than as one assumed vehicle.
 
 **Read the Gen5 row and the Gen6 row together.** Gen5 built an enclosure because the design assumed
 it needed one; A46 later measured that enclosure at **50.04 kg against an 8.00 kg placeholder**.

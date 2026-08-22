@@ -120,7 +120,7 @@ here rather than left for a reader to find.
 
 ## Gen6 — the architecture now carried as the design target
 
-**Added 2026-08-16.** Everything above is **Gen5**, which remains the *measured baseline* and the
+**Added 2026-08-16.** Everything above is **Gen5**, which remains the *frozen computational baseline* and the
 record of what a self-contained deployer costs. [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
 moved the design target on 2026-08-14: the payload is accelerated directly by cold gas along a rail
 a spent upper stage provides. **No mover, no stator, no bank, no brake, no return stroke.**
@@ -148,7 +148,7 @@ geometry at all.
 |---|---|
 | **Design** | **Specified.** A 2 L chamber charged to **22.73 bar** ([ADR-034](adr/034-gen6-long-stroke-design-point.md)), fired as a closed adiabatic expansion over **8.0 m**, giving **34.280 m/s at 11.36 g** zero-friction and **29.009 m/s** at the friction allowance. There is no regulator — A41 closed P63 by deleting the component rather than pricing it |
 | **Analysis** | **Four runs, one failed band.** A39 chose gas over a spring; **A40 killed the fixed-orifice implementation** at 14.16 m/s against a 30 m/s band; A41 passed eight of eight; **A42 failed band 3** — the reservoir is sized on gas the bottle cannot give back, and runs out at shot seven of twelve |
-| **Blocked by** | **Nothing computational — A43 closed it on 2026-08-16.** Conduction through stagnant nitrogen gives a **17 460 s** time constant against a **1200 s** cadence, so the bottle does not re-equilibrate and the design reservoir is **9.55 L** on a **5.38 kg** store. P64 is resolved; **P66** records that both of A42's bracket endpoints were unreproducible. What remains is **metal** |
+| **Blocked by** | **Nothing computational — A43 closed it on 2026-08-16.** Conduction through stagnant nitrogen gives a **17 460 s** time constant against a **1200 s** cadence, so the bottle does not re-equilibrate. **A56 then SIZED the reservoir at ADR-034's charge pressure rather than scaling it: 3.46 L on a 3.1216 kg store** (**P82**, closed) — A43's 9.55 L was at 50 bar and is superseded. P64 is resolved; **P66** records that both of A42's bracket endpoints were unreproducible. What remains is **metal**. *This row read 9.55 L / 5.38 kg until 2026-08-22 — **P107*** |
 
 ### The cradle — the part that does not exist
 

@@ -22,14 +22,22 @@ descends from was measured off its solids.
 
 ## The three, side by side
 
+> **The first two rows are the ones that get read wrongly.** The **mission** has been an active
+> post-primary delivery platform since [ADR-002](adr/002-host-is-a-spent-upper-stage.md) in 2023 —
+> it is the same in all three columns. **What changed is how much of the machine VOLLEY builds for
+> itself**, and that is the second row. *A generation that models its mechanism host-agnostically
+> is making a statement about the model, not about the mission.*
+
 | | **Gen4** | **Gen5** | **Gen6** |
 |---|---|---|---|
+| **Mission role of the host** | **active post-primary orbital delivery platform** | **active post-primary orbital delivery platform** | **active post-primary orbital delivery platform** |
+| **Degree of host integration** | **low** — self-contained mechanism | **low** — self-contained mechanism, frozen | **HIGH** — the stage's structure and length are part of the machine |
 | **Status** | provisional, superseded | **frozen baseline** | **current design target** |
 | **Adopted** | 2026-08-03 | 2026-08 | 2026-08-14, [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) |
 | **How it was built** | by hand, nine Fusion documents | **generated** from `cad/parameters.json` | generated from the same file |
 | **Committed STEP** | **none — P43** | eight parts | six parts |
 | **Reproducible from a clean clone** | no | **yes, byte-identically** | **yes, byte-identically** |
-| **Drive** | linear synchronous motor | linear synchronous motor | **cold gas for energy, a 39.7 mm stator for control** ([ADR-033](adr/033-gen6-trim-stage.md)) |
+| **Drive** | linear synchronous motor | linear synchronous motor | **cold gas for energy**; the trim stator for control is **suspended, not deleted** ([ADR-036](adr/036-seal-specification-and-the-trim-stage.md)) and its return is [P67](../OPEN_PROBLEMS.md)'s to decide |
 | **Moving mass recovered** | reusable sled | reusable sled | **carriage, not recovered** |
 | **Energy store** | supercapacitor bank | supercapacitor bank | **2 L chamber at 22.73 bar** |
 | **Arrest** | eddy brake | eddy brake | **none — nothing to stop** |

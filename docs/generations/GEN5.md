@@ -5,7 +5,7 @@
 
 | | |
 |---|---|
-| **Status** | **FROZEN BASELINE.** Superseded as the *design target* by Gen6 on 2026-08-14 ([ADR-032](../adr/032-gen6-stage-integrated-gas-store.md)); **not superseded as the measured baseline** |
+| **Status** | **FROZEN BASELINE.** Superseded as the *design target* by Gen6 on 2026-08-14 ([ADR-032](../adr/032-gen6-stage-integrated-gas-store.md)); **not superseded as the frozen computational baseline** |
 | **Committed here** | **8 STEP** in `cad/step/gen5/`, **8 STL** in `cad/stl/` |
 | **Source document** | **[`cad/build_gen5.py`](../../cad/build_gen5.py), in this repository** |
 | **Rebuildable from this repository** | **Yes, byte-identically**, from a clean clone |
@@ -50,11 +50,36 @@ parameter describes.
 
 **Three kill criteria crossed**, and [ADR-032](../adr/032-gen6-stage-integrated-gas-store.md)
 deletes the subsystems two of them were about rather than meeting them. **Gen5 remains the
-measured baseline and the record of what a self-contained deployer costs**: [GEN6.md](GEN6.md).
+frozen computational baseline and the record of what a self-contained deployer costs**: [GEN6.md](GEN6.md).
 
 ## What this generation assumed about the host
 
-**It assumed the host was **the same, and frozen that way.** Gen5 is the self-contained machine made reproducible.**
+**Mission role of the host: an ACTIVE POST-PRIMARY ORBITAL DELIVERY PLATFORM.**
+**Mechanical integration: LOW — a self-contained deployment machine carried aboard it.**
+
+**Those are two answers and Gen5 needs both**, because a single sentence about "the host" has been
+read as a passive-host assumption and that is not what Gen5 is.
+
+**Gen5's concept of operations, in the order it happens:**
+
+1. the launch vehicle completes its primary ascent;
+2. **the primary spacecraft separates** — the primary customer is served first;
+3. the post-primary phase begins, and **the stage remains controlled where host capability allows
+   it**;
+4. the stage may coast or reposition between deployment events — **parametrically, because
+   [E5](../../OPEN_PROBLEMS.md) means no host propulsion figure exists**;
+5. **Gen5 produces each satellite's commanded local separation state** using its own track,
+   linear synchronous drive, sled, supercapacitor bank, eddy brake and magazine;
+6. the host provides the orbital platform and the coarse mission-level positioning;
+7. the stage proceeds to disposal, passivation and re-entry.
+
+> **So Gen5 is not an electromagnetic dispenser bolted to a passive ring.** It is **a
+> self-contained electromagnetic last-mile deployment mechanism operating aboard a post-primary
+> upper-stage delivery platform** — the same mission Gen6 flies, implemented with far more of the
+> machinery carried by VOLLEY itself.
+>
+> **That duplication is the weakness Gen6 attacks**, and it is a weakness of the *integration*,
+> not of the concept of operations.
 
 **And it is where the cost of the assumption became measurable.** [A46](../../validation/A46_enclosure_buildup.md) built the enclosure from its own geometry and found **50.04 kg against an 8.00 kg placeholder** — a skin, a radiator and an avionics bay that a spent stage already carries. *The largest single mass in the machine was a duplicate of something the host already had.*
 

@@ -131,7 +131,7 @@ make tip-off worse. It remains *modelled, not demonstrated*, on a mechanism that
 ## Alternatives, and why not
 
 **Gen5 as it stands.** Kill criterion 1 crossed 3.5×, a bank that cannot be bought, an envelope
-44 % over. It remains the **measured baseline** and the record of what a self-contained deployer
+44 % over. It remains the **frozen computational baseline** and the record of what a self-contained deployer
 costs.
 
 **The induction-drive Gen6 of ADR-029.** Superseded, not refuted: A30 killed its rail-drive variant

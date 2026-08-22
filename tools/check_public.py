@@ -62,6 +62,16 @@ SURFACES = [
     'cad/README.md',
     'CAD_BRIEF.md',
     'cad/build_gen6.py',
+    # The generation pages and the lineage. Added 2026-08-22: "measured baseline" survived in
+    # four of them for six days because none was a checked surface, and the phrase is the first
+    # entry in the blocked list -- nothing here has been measured (E4).
+    'docs/LINEAGE.md',
+    'docs/GENERATIONS.md',
+    'docs/generations/GEN5.md',
+    'docs/generations/GEN6.md',
+    'docs/BUILD_READINESS.md',
+    'docs/MISSION_ARCHITECTURE.md',
+    'docs/COMPUTATIONAL_CLOSURE.md',
 ]
 
 # Withdrawn claims. Each is (pattern, why it is forbidden).
@@ -131,6 +141,13 @@ ALLOW = [
     ('cad/README.md', r'\b30\.54\b', 'the same note, naming the superseded exit velocity'),
     ('cad/README.md', r'(?:chamber|charge|reservoir)[^.\n]{0,40}\b50\s*bar\b',
      'the same note'),
+    ('docs/COMPUTATIONAL_CLOSURE.md', r'\b84\.5\b|\b132\.5\b|\b76\.5\b|\b124\.5\b',
+     'the gate-replay table, which names the superseded value that was injected to make the '
+     'cross-reference gate fire'),
+    ('docs/generations/GEN6.md', r'39\.7\s*mm',
+     'the dated P107 correction naming the trim section A55 resized and ADR-036 suspended'),
+    ('docs/BUILD_READINESS.md', r'\b9\.55\s*L\b',
+     'the dated P107 correction naming A43\'s reservoir that A56 superseded'),
 ]
 
 HISTORY_MARKERS = (
