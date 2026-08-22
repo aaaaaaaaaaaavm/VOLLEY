@@ -56,3 +56,46 @@ tolerance*, not a computed one; what a real 8 m bore can hold is
 [`MANUFACTURING.md`](../docs/MANUFACTURING.md)'s to establish. It does not model the supports'
 own stiffness beyond a declared value, and it does not couple to the carriage: **that is
 [A70](A70_guided_contact_derived.md).**
+
+---
+
+## Results
+
+**RUN 2026-08-22. Eight of eight.**
+
+`analysis/tube_centreline.py` and `analysis/run_a69.py`. Results in
+`analysis/results/tube_centreline.json`.
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | simple span reproduces 5wL⁴/384EI to 0.5 % | **0.0000 %** | **PASS** |
+| 2 | mesh converged between N and 2N | 0.27122 → 0.27122 mm | **PASS** |
+| 3 | free–free first mode reproduces A59's 1.67 Hz to 5 % | **1.6729 Hz** | **PASS** |
+| 4 | a continuous centreline is returned and exported | 801 nodes, position and slope | **PASS** |
+| 5 | 0 g support sag ≤ 0.1 mm | **0.000000 mm** | **PASS** |
+| 6 | pressure bore growth reported against the clearance | **3.440 µm, 6.9 %** | **PASS** |
+| 7 | combined worst case inside A67's 0.1–2.0 mm bracket | **0.2425 to 0.9052 mm** | **PASS** |
+| 8 | contributions reported separately and ranked | ascent dominates | **PASS** |
+
+### The finding: in orbit, structure contributes nothing and temperature contributes everything
+
+| Contribution | Peak deviation | |
+|---|---:|---|
+| Ascent lateral, 6 g declared | **1.6273 mm** | *not during a shot* |
+| **Thermal bow, 5 K across the diameter** | **0.8284 mm** | **the largest in-flight term** |
+| Self-weight, 1 g bench | 0.2712 mm | *not during a shot* |
+| **Support placement, ±0.05 mm declared** | **0.0768 mm** | the other in-flight term |
+| **Self-weight, 0 g** | **0.0000 mm** | **exactly zero** |
+
+**The case that fires is 0 g, and the tube's own weight then contributes nothing at all.** What is
+left is **where the supports actually are** and **how much the tube bows under a temperature
+gradient across its diameter** — and the second is larger than the first by an order of magnitude
+at 2 K.
+
+> **This re-points the problem.** A67 band 9 made bore straightness the dominant input and the
+> obvious reading was *manufacturing*. **It is not primarily manufacturing and it is not stiffness:
+> it is thermal control and support alignment.** A stiffer tube buys nothing at 0 g.
+
+**Pressure is not bending.** Hoop stress at the charge is **17.96 MPa** — reproducing A59 band 1
+independently — and the bore grows **3.440 µm diametrally, 6.9 % of the nominal clearance.**
+*It opens the clearance slightly rather than distorting the line.*

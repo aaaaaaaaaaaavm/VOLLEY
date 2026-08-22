@@ -90,10 +90,39 @@ def contact_stiffness(clearance_m):
     return F_CMD / (0.05 * clearance_m) ** 1.5
 
 
+# A70: the centreline may come from A69's structural solve instead of the declared sinusoid.
+# _A69 holds (x, y_normalised, dy/dx_normalised); `amp` then scales a real shape rather than
+# setting the amplitude of an assumed one. None of A67's results used this path.
+_A69 = None
+
+
+def bore_from_a69(dT_K=2.0, seed=20260822):
+    """Load A69's orbital centreline and normalise it to unit peak. Returns its peak, in metres."""
+    global _A69
+    import tube_centreline as tc
+    x, y, _off, _k = tc.orbital_centreline(dT_K=dT_K, seed=seed)
+    pk = float(np.abs(y).max())
+    yn = y / pk
+    dy = np.gradient(yn, x)
+    _A69 = (x, yn, dy)
+    return pk
+
+
 def bore_shape(x, amp, phase):
-    """Centreline offset and slope at x, for one lateral axis."""
-    k = 2.0 * math.pi / (2.0 * SUPPORT_PITCH)
-    return amp * np.sin(k * x + phase), amp * k * np.cos(k * x + phase)
+    """Centreline offset and slope at x, for one lateral axis.
+
+    Without A69 loaded this is the sinusoid A67 declared: amplitude `amp`, wavelength twice the
+    support pitch. With A69 loaded it is A69's own shape, scaled to `amp`; `phase` then selects
+    the second lateral axis by shifting a quarter of the tube's length, because a real bore has
+    no reason to be identically shaped in y and z.
+    """
+    if _A69 is None:
+        k = 2.0 * math.pi / (2.0 * SUPPORT_PITCH)
+        return amp * np.sin(k * x + phase), amp * k * np.cos(k * x + phase)
+    xs, yn, dy = _A69
+    shift = 0.0 if phase == 0.0 else 0.25 * xs[-1]
+    xq = np.mod(x + shift, xs[-1])
+    return amp * np.interp(xq, xs, yn), amp * np.interp(xq, xs, dy)
 
 
 def rhs(st, prm, onset):
@@ -135,7 +164,12 @@ def rhs(st, prm, onset):
         ddot = (dy * vyl + dz * vzl) / r
         # d = r - c, so ddot > 0 IS compression. onset[i] holds the approach rate captured
         # when the gap closed, and is positive by construction.
-        damp = 1.0 + (3.0 * (1.0 - e * e) / 4.0) * ddot / onset[i]
+        #
+        # A68 replaced the literal Lankarani-Nikravesh coefficient here with chi, carried in the
+        # parameter tuple, because A67 band 3 showed LN does not return the restitution it is
+        # given below e -> 1. `e` in this array is now the DAMPING COEFFICIENT chi, not the
+        # restitution; pack() converts one to the other by whichever law is selected.
+        damp = 1.0 + e * ddot / onset[i]
         N = np.where(hit, K * np.maximum(d, 0.0) ** 1.5 * np.maximum(damp, 0.0), 0.0)
         peak_N = np.maximum(peak_N, N)
         ny, nz = -dy / r, -dz / r
@@ -257,19 +291,38 @@ def integrate(prm, h=None, t_max=1.2):
     return exit_st, peak, impulse, hits, e_fric, e_cont, live, diverged, h
 
 
-def pack(clearance_um, land_sep_mm, straightness_mm, ecc_mm, cg_off_mm, friction_N, e):
-    """Ten parameter arrays in the order rhs() unpacks them."""
+CHI = {"LN": lambda e: 3.0 * (1.0 - e * e) / 4.0,
+       "HC": lambda e: 3.0 * (1.0 - e) / (2.0 * e)}
+
+
+def _chi(law, e):
+    """Damping coefficient from restitution. `law` is a name, a callable, or a number."""
+    if isinstance(law, str):
+        return CHI[law](e)
+    if callable(law):
+        return np.atleast_1d(law(e))
+    return np.full_like(e, float(law))
+LAW = "HC"      # A68: HC returns restitution to -0.4 % at the nominal e where LN returns +13.7 %
+
+
+def pack(clearance_um, land_sep_mm, straightness_mm, ecc_mm, cg_off_mm, friction_N, e, law=None):
+    """Ten parameter arrays in the order rhs() unpacks them.
+
+    The last element is the DAMPING COEFFICIENT, converted from the restitution by the selected
+    law. A68 is the run that chose it.
+    """
     a = np.atleast_1d
     c = a(clearance_um) / 2.0 / 1e6                       # radial, from diametral
     return (c, a(land_sep_mm) / 2.0 / 1e3, a(straightness_mm) / 1e3,
             a(ecc_mm) / 1e3, np.zeros_like(a(ecc_mm)),
             a(cg_off_mm) / 1e3, np.zeros_like(a(cg_off_mm)),
-            a(friction_N), contact_stiffness(c), a(e))
+            a(friction_N), contact_stiffness(c),
+            _chi(law if law is not None else LAW, a(e)))
 
 
-def run(**kw):
+def run(law=None, **kw):
     q = dict(NOMINAL); q.update(kw)
-    prm = pack(**q)
+    prm = pack(law=law, **q)
     ex, peak, imp, hits, ef, ec, stalled, diverged, h = integrate(prm)
     rate = np.degrees(np.hypot(ex[7], ex[9]))
     return dict(v_exit=ex[1], v_lat=np.hypot(ex[3], ex[5]), rate_deg_s=rate,

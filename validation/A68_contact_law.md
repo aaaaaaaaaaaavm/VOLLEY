@@ -52,3 +52,54 @@ formulations are implemented and the third is identified rather than derived.
 **It does not change A67's recorded verdict**, re-declare A67's bands, or model VOLLEY's bore.
 It does not calibrate against hardware — **E4**. It does not choose the design's restitution: 0.7
 remains `cradle_restitution.E_ALUMINIUM`, the published top of the aluminium range.
+
+---
+
+## Results
+
+**RUN 2026-08-22. Six of seven. Band 6 fails and it is the result.**
+
+`analysis/contact_laws.py` and `analysis/run_a68.py`. Results in `analysis/results/contact_laws.json`.
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | ID recovers restitution to 0.5 % | **worst 0.000 %** | **PASS** |
+| 2 | HC beats LN at every e below 0.7 | LN worst **236.1 %**, HC worst **17.2 %** | **PASS** |
+| 3 | all three agree within 2 % as e → 0.9 | LN 0.9132, HC 0.8999, ID 0.9000 | **PASS** |
+| 4 | restitution converges, 0.5 % between h and h/2 | 0.700000 → 0.700000 | **PASS** |
+| 5 | peak force converges, 1 % between h and h/2 | 41 283.53 → 41 283.53 N | **PASS** |
+| 6 | **model-form spread on the VOLLEY case ≤ 25 %** | **65.8 %** — 8.954 to 14.845 °/s | **FAIL** |
+| 7 | energy closes to 0.5 % under each law | worst **+0.3221 %** | **PASS** |
+
+### A67's diagnosis was right, and band 2 is how it was tested
+
+**The restitution error vanishes as e → 1**, which is the signature of Lankarani–Nikravesh's own
+derivation and not of an implementation error:
+
+| Declared e | **LN** | **HC** | **ID** |
+|---:|---:|---:|---:|
+| 0.9 | +1.5 % | −0.0 % | 0.00 % |
+| 0.7 — the nominal aluminium figure | **+13.7 %** | **−0.4 %** | 0.00 % |
+| 0.3 | **+128.1 %** | −9.8 % | 0.00 % |
+| 0.2 | **+236.1 %** | −17.2 % | 0.00 % |
+
+**HC is the formulation this project should have been using**, and identification recovers the
+coefficient exactly at every restitution and impact velocity tested. *ID's χ at the nominal
+restitution is **0.6348**, against LN's 0.3825 and HC's 0.6429 — LN under-damps by 40 %.*
+
+### Band 6 fails, and it is what A67's headline needed
+
+**The same VOLLEY case, the same geometry, the same everything except the damping term:**
+
+| Law | Exit angular rate | Peak contact | Contacts |
+|---|---:|---:|---:|
+| **LN — what A67 used** | **14.845 °/s** | 225.8 N | 39 |
+| **HC** | **8.954 °/s** | 298.3 N | 25 |
+
+**65.8 % spread.** **So A67's 14.845 °/s is substantially model form, and the band declared to
+catch that caught it.** *The correct statement of A67's result is a range with a model-form
+component, not a number.*
+
+> **What does not move.** **Both laws put the exit angular rate far above the 2.0 °/s band** — 4.5×
+> at the friendlier one. **The finding survives the model-form uncertainty; the precision of the
+> figure does not**, and [P108](../OPEN_PROBLEMS.md) is restated accordingly rather than withdrawn.

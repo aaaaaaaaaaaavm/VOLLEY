@@ -1,0 +1,126 @@
+{
+  "analysis": "A70",
+  "bands_declared_commit": "a70-bands",
+  "note": "A67's model with two inputs replaced: A68's contact law and A69's computed centreline. A67's bands are not re-declared and its verdict stands. Nothing measured -- E4.",
+  "law": "HC",
+  "dT_sweep": [
+    0.0,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "land_sweep": [
+    40.0,
+    80.0,
+    120.0,
+    200.0,
+    400.0
+  ],
+  "admissibility": {
+    "radial_clearance_um": 25.0,
+    "rows": [
+      {
+        "dT_K": 0.0,
+        "peak_mm": 0.07678710419596249,
+        "curvature_per_m": 0.0,
+        "sag_40mm_um": 0.049357345325146795,
+        "admissible_40mm": true,
+        "sag_80mm_um": 0.19512245518873406,
+        "admissible_80mm": true,
+        "sag_120mm_um": 0.4339832798083248,
+        "admissible_120mm": true,
+        "sag_200mm_um": 1.1768434663411715,
+        "admissible_200mm": true,
+        "sag_400mm_um": 4.421163392078934,
+        "admissible_400mm": true
+      },
+      {
+        "dT_K": 0.5,
+        "peak_mm": 0.12821123244598115,
+        "curvature_per_m": 0.0006627351867452962,
+        "sag_40mm_um": 6.405795661316916,
+        "admissible_40mm": true,
+        "sag_80mm_um": 12.653208555697054,
+        "admissible_80mm": true,
+        "sag_120mm_um": 18.729416940536954,
+        "admissible_120mm": true,
+        "sag_200mm_um": 30.700499069904726,
+        "admissible_200mm": false,
+        "sag_400mm_um": 56.526677622439585,
+        "admissible_400mm": false
+      },
+      {
+        "dT_K": 1.0,
+        "peak_mm": 0.20918919113080342,
+        "curvature_per_m": 0.0013254703734905924,
+        "sag_40mm_um": 12.82602413882348,
+        "admissible_40mm": true,
+        "sag_80mm_um": 25.14902332657594,
+        "admissible_80mm": false,
+        "sag_120mm_um": 37.331903181411136,
+        "admissible_120mm": false,
+        "sag_200mm_um": 60.449006120846214,
+        "admissible_200mm": false,
+        "sag_400mm_um": 109.46262994806663,
+        "admissible_400mm": false
+      },
+      {
+        "dT_K": 2.0,
+        "peak_mm": 0.3739313525907536,
+        "curvature_per_m": 0.002650940746981185,
+        "sag_40mm_um": 25.666481093836605,
+        "admissible_40mm": false,
+        "sag_80mm_um": 50.18313882373114,
+        "admissible_80mm": false,
+        "sag_120mm_um": 74.66045014544784,
+        "admissible_120mm": false,
+        "sag_200mm_um": 119.94602022272917,
+        "admissible_200mm": false,
+        "sag_400mm_um": 215.33453459932068,
+        "admissible_400mm": false
+      }
+    ]
+  },
+  "runs": [],
+  "admissible_runs": 0,
+  "best_admissible": null,
+  "nominal": null,
+  "bands": [
+    {
+      "band": "1",
+      "name": "coupling exact when the shape is scaled to zero, 0.5 %",
+      "detail": "0.0000 %",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "exit angular rate at the orbital centreline <= 2.0 deg/s",
+      "detail": "NOT EVALUABLE -- the solver does not converge on the derived centreline",
+      "pass_": null
+    },
+    {
+      "band": "3",
+      "name": "3-sigma over A69's orbital range <= 2.0 deg/s",
+      "detail": "NOT EVALUABLE",
+      "pass_": null
+    },
+    {
+      "band": "4",
+      "name": "peak contact normal force <= 445.88 N",
+      "detail": "NOT EVALUABLE",
+      "pass_": null
+    },
+    {
+      "band": "5",
+      "name": "A67 -> A70 change in exit angular rate <= 50 %",
+      "detail": "NOT EVALUABLE",
+      "pass_": null
+    },
+    {
+      "band": "6",
+      "name": "energy closes to 0.5 %",
+      "detail": "gas work 2350.2 J",
+      "pass_": true
+    }
+  ]
+}

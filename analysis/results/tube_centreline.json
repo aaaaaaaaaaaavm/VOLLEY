@@ -1,0 +1,242 @@
+{
+  "analysis": "A69",
+  "bands_declared_commit": "a69-bands",
+  "note": "Euler-Bernoulli Hermite beam on seven rigid supports at 1.0 m. Contributions solved separately and ranked. Manufacturing straightness is a DECLARED tolerance, not computed here. Nothing measured -- E4.",
+  "section": {
+    "I_m4": 1.870296865903444e-09,
+    "A_m2": 5.2794464543576515e-05,
+    "mass_per_m": 0.1425450542676566,
+    "mass_kg": 1.1403604341412528,
+    "E_Pa": 68900000000.0,
+    "OD_m": 0.017805,
+    "bore_m": 0.015805
+  },
+  "declared": {
+    "support_pitch_m": 1.0,
+    "supports": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "support_tol_mm": 0.05,
+    "ascent_lateral_g": 6.0,
+    "thermal_dT_K": [
+      1.0,
+      2.0,
+      5.0
+    ]
+  },
+  "simple_span": {
+    "got_m": 0.0001412960997645943,
+    "closed_form_m": 0.00014129609941727035,
+    "err_pct": 2.4581283598607543e-07
+  },
+  "mesh_convergence": [
+    {
+      "n_el": 200,
+      "peak_mm": 0.2712246933094655
+    },
+    {
+      "n_el": 400,
+      "peak_mm": 0.2712246933204501
+    },
+    {
+      "n_el": 800,
+      "peak_mm": 0.2712246933312218
+    },
+    {
+      "n_el": 1600,
+      "peak_mm": 0.2712247066101303
+    }
+  ],
+  "free_free_f1_Hz": 1.6728569850682136,
+  "pressure": {
+    "hoop_MPa": 17.95906345,
+    "bore_growth_um": 3.4398969983418537,
+    "pct_of_nominal_clearance": 6.879793996683707
+  },
+  "cases": {
+    "bench_1g": {
+      "peak_mm": 0.2712246933312218,
+      "peak_slope": 0.000317315164088389,
+      "rms_mm": 0.07415714552650444
+    },
+    "orbit_0g": {
+      "peak_mm": 0.0,
+      "peak_slope": 0.0,
+      "rms_mm": 0.0
+    },
+    "ascent_lateral": {
+      "peak_mm": 1.627348160033267,
+      "peak_slope": 0.0019038909845762702,
+      "rms_mm": 0.44494287316817377
+    },
+    "support_placement": {
+      "peak_mm": 0.07678710419596249,
+      "peak_slope": 7.513677249320124e-05,
+      "rms_mm": 0.03275262253549955,
+      "offsets_mm": [
+        0.006509611341112664,
+        -0.030300809262114915,
+        0.025400685379397867,
+        -0.025399732504498562,
+        -0.024284517318786406,
+        -0.03946982131684715,
+        -0.042340211522280416
+      ]
+    },
+    "thermal_bow": {
+      "peak_mm": 0.8284189834316203,
+      "sweep": [
+        {
+          "dT_K": 1.0,
+          "curvature_per_m": 0.0013254703734905924,
+          "sagitta_per_span_mm": 0.16568379668632405
+        },
+        {
+          "dT_K": 2.0,
+          "curvature_per_m": 0.002650940746981185,
+          "sagitta_per_span_mm": 0.3313675933726481
+        },
+        {
+          "dT_K": 5.0,
+          "curvature_per_m": 0.006627351867452963,
+          "sagitta_per_span_mm": 0.8284189834316203
+        }
+      ]
+    }
+  },
+  "exported_centreline": {
+    "n_points": 801,
+    "x_m": [
+      0.0,
+      0.4,
+      0.8,
+      1.2,
+      1.6,
+      2.0,
+      2.4,
+      2.8000000000000003,
+      3.2,
+      3.6,
+      4.0,
+      4.4,
+      4.8,
+      5.2,
+      5.6000000000000005,
+      6.0,
+      6.4,
+      6.8,
+      7.2,
+      7.6000000000000005,
+      8.0
+    ],
+    "w_mm": [
+      0.07678710419596249,
+      0.04867610705408065,
+      0.020565109912134266,
+      -0.007282828737149035,
+      -0.028449046738708645,
+      -0.03030080926210839,
+      -0.006910675069636682,
+      0.01980906802217763,
+      0.02215002599162995,
+      -0.0012485437806137622,
+      -0.025399732504492154,
+      -0.03100041675463238,
+      -0.026064814927341445,
+      -0.024980432803447833,
+      -0.03164567025724638,
+      -0.03946982131684567,
+      -0.042973113603848215,
+      -0.042943701580795066,
+      -0.04168765612629996,
+      -0.04038254532665516,
+      -0.039077434526745856
+    ]
+  },
+  "orbital_centreline_mm": {
+    "low": 0.24247090088228654,
+    "high": 0.9052060876275828,
+    "a67_bracket_mm": [
+      0.1,
+      2.0
+    ]
+  },
+  "ranked": [
+    {
+      "case": "ascent_lateral",
+      "peak_mm": 1.627348160033267
+    },
+    {
+      "case": "thermal_bow",
+      "peak_mm": 0.8284189834316203
+    },
+    {
+      "case": "bench_1g",
+      "peak_mm": 0.2712246933312218
+    },
+    {
+      "case": "support_placement",
+      "peak_mm": 0.07678710419596249
+    },
+    {
+      "case": "orbit_0g",
+      "peak_mm": 0.0
+    }
+  ],
+  "bands": [
+    {
+      "band": "1",
+      "name": "simple span reproduces 5wL^4/384EI to 0.5 %",
+      "detail": "0.0000 %",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "mesh converged, 0.5 % between N and 2N",
+      "detail": "0.27122 -> 0.27122 mm",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "free-free first mode reproduces A59's 1.67 Hz to 5 %",
+      "detail": "1.6729 Hz",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "a continuous centreline is returned and exported",
+      "detail": "801 nodes, position and slope",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "0 g support sag <= 0.1 mm",
+      "detail": "0.000000 mm",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "pressure-induced bore growth reported against the clearance",
+      "detail": "3.440 um, 6.9 %",
+      "pass_": true
+    },
+    {
+      "band": "7",
+      "name": "combined worst case inside A67's swept 0.1-2.0 mm",
+      "detail": "0.2425 to 0.9052 mm",
+      "pass_": true
+    },
+    {
+      "band": "8",
+      "name": "contributions reported separately and ranked",
+      "detail": "ascent_lateral dominates",
+      "pass_": true
+    }
+  ]
+}
