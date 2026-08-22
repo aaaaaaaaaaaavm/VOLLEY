@@ -5373,7 +5373,7 @@ is recorded here rather than claimed closed.*
 
 ### P108. Gen6's exit angular rate misses the tip-off band by 7.4x, and the input that decides it is bore straightness: CRITICAL, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — the solver now COMPLETES on the corrected centreline and does not CONVERGE; get a converged exit state (implicit integrator, smooth contact regularisation, or a compliant piston), then price the land-separation trade against its 400 mm admissibility ceiling
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A71 posed the convergence problem properly and did not solve it: raise the penalty stiffness until peak penetration is under 10 % of the clearance and re-converge in tolerance, or replace the penalty with a stabilised constraint formulation, or make the piston compliant so the contact stiffness is physical
 
 
 **[A67](validation/A67_guided_contact.md) ran on 2026-08-22 — six of nine — and band 5 is the
