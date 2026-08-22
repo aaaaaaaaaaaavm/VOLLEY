@@ -64,22 +64,33 @@ keeps those two columns apart, because collapsing them produces a false history.
 
 > ### Where the current architecture actually stands, 2026-08-22
 >
-> **Gen6 — the stage-integrated gas architecture — is the design target, and it does not yet meet
-> its own tip-off requirement.** [A67](validation/A67_guided_contact.md) modelled the payload's
-> guided travel through the 8 m bore for the first time and returned **14.845 °/s at the nominal
-> point against a 2.0 °/s band** ([P108](OPEN_PROBLEMS.md)). **The input that decides it is bore
-> straightness**, not the seal friction the programme has been organised around.
+> **Gen6 — the stage-integrated gas architecture — is the design target, and four runs this week
+> found two problems with its guided interface.**
+>
+> **[A67](validation/A67_guided_contact.md)** modelled the payload's travel through the 8 m bore
+> for the first time and missed the **2.0 °/s** tip-off band. **[A68](validation/A68_contact_law.md)**
+> then measured how much of that was the contact law — **65.8 %** — so the honest figure is
+> **9 to 15 °/s**, not a single number ([P108](OPEN_PROBLEMS.md)).
+> **[A69](validation/A69_tube_centreline.md)** computed the tube's actual shape and found that at
+> 0 g its own weight contributes **exactly nothing**: the centreline is set by **thermal bow and
+> support placement**, not by structure or stiffness.
+>
+> **[A70](validation/A70_guided_contact_derived.md) found the harder one, and it needs no solver at
+> all.** At a **one-kelvin gradient across the tube's diameter, the bore is 37.3 µm out of line
+> over the piston's own length, against 25 µm of radial clearance — the piston does not pass**
+> ([P109](OPEN_PROBLEMS.md)). *Five design variables have been carried this far with nobody
+> knowing there was a constraint on them.*
 >
 > **Gen5 remains the frozen, fully analysed baseline** and is what the manuscript reports.
 > **[`docs/COMPUTATIONAL_CLOSURE.md`](docs/COMPUTATIONAL_CLOSURE.md)** counts what is left before
-> hardware: **17 questions that are still calculations**, and ten that are not.
+> hardware: **18 questions that are still calculations**, and ten that are not.
 
 > **This repository is the engineering record, not a brochure.** Every analysis declares what
 > would count as failure *before* it runs, every defect is numbered including the ones that damage
 > the work's own claims, and **nothing here has been built, fired or measured.**
 >
 > **What that discipline has actually produced, which is the part worth judging:** **66 run
-> sheets** covering 63 analyses A1–A67 — A3, A26, A60 and A66 were numbered and never written —
+> sheets** covering 66 analyses A1–A70 — A3, A26, A60 and A66 were numbered and never written —
 > each against a band written down before its script existed. **Three failed outright** —
 > including one that falsified a claim in this project's own abstract. **Three times a declared
 > band caught a bug in the analysis rather than in the design**, which is the direction nobody
@@ -98,7 +109,7 @@ keeps those two columns apart, because collapsing them produces a false history.
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
 | **checking what outside evidence could settle** | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) — which live entries a published source can close, which it can only inform, and **which need hardware and cannot be read away** |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 143 numbered entries, 56 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 144 numbered entries, 57 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -518,8 +529,8 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **143 numbered entries, 56 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **66 run sheets**, 63 analyses across A1–A67 (A3, A26, A60 and A66 were numbered and never written), each against a band declared *before* the run. **Three failed outright** |
+| **Defect register** | **144 numbered entries, 57 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Validation** | **69 run sheets**, 66 analyses across A1–A70 (A3, A26, A60 and A66 were numbered and never written), each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest

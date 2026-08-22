@@ -5437,11 +5437,95 @@ A38 and before A67, and **a band that moves when a model fails it is not a band.
 
 ### What conditions this entry
 
-**A67 band 3 failed**: the Lankarani–Nikravesh contact law returns too little dissipation, by
-**13.7 % at the nominal restitution** and more as restitution falls. **Under-dissipation overstates
-residual motion, so 14.845 °/s is conservative** — but it means the figure is good to about two
-significant figures and no more. *A 13.7 % error cannot account for a 7.4× miss, and the run sheet
-says so.*
+**A67 band 3 failed and [A68](validation/A68_contact_law.md) measured what that cost.** LN
+under-damps by 40 % at the nominal restitution — χ = 0.3825 against an identified 0.6348 — and
+**the same VOLLEY case gives 14.845 °/s under LN and 8.954 under Hunt–Crossley. A68 band 6 fails
+at a 65.8 % model-form spread.**
+
+> ### The number is restated, 2026-08-22. The finding is not withdrawn.
+>
+> **14.845 °/s is not a physical prediction.** The honest statement is: **the first full-bore
+> contact model puts Gen6's exit angular rate between roughly 9 and 15 °/s against a 2.0 °/s band,
+> with the spread between two credible contact laws accounting for most of the range, and bore
+> straightness as the dominant sensitivity.**
+>
+> **What survives every objection:** *both* laws miss the band, by **4.5×** at the friendlier one;
+> A67 band 9's ranking is a variance attribution and is not a contact-law property; and
+> [P109](#p109)'s admissibility constraint — the harder finding — needs no contact model at all.
+>
+> **What does not survive:** quoting 14.845, or 7.4×, as settled. *A67's band 5 verdict stands as
+> recorded; what is corrected is the use made of its number.*
+
+### P109. At a one-kelvin gradient the Gen6 bore does not admit its own piston: CRITICAL, NEW 2026-08-22
+> **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — choose bore, clearance, land separation, support pitch and thermal control against the admissibility constraint, which no parameter has ever been chosen against
+
+
+**[A70](validation/A70_guided_contact_derived.md) asked the question that comes before tip-off:
+can the piston physically pass through the bore it is in?**
+
+**Three-point sagitta of [A69](validation/A69_tube_centreline.md)'s computed centreline over the
+piston's own length, against a nominal radial clearance of 25.0 µm:**
+
+| Across-diameter gradient | 40 mm lands | 80 mm | **120 mm — nominal** | 200 mm | 400 mm |
+|---|---:|---:|---:|---:|---:|
+| **0 K** | 0.0 | 0.2 | **0.4** | 1.2 | 4.4 µm |
+| **0.5 K** | 6.4 | 12.7 | **18.7** | **30.7** ✗ | **56.5** ✗ |
+| **1.0 K** | 12.8 | **25.1** ✗ | **37.3** ✗ | **60.4** ✗ | **109.5** ✗ |
+| **2.0 K** | **25.7** ✗ | ✗ | ✗ | ✗ | ✗ |
+
+**At the design point — 120 mm lands, 50 µm diametral clearance — a one-kelvin gradient across the
+tube's 17.8 mm diameter puts the bore 37.3 µm out of line over the piston's length. That is 1.5×
+the radial clearance.** At 2 K nothing passes at any land separation tested.
+
+### Why this is harder to argue with than a tip-off number
+
+**It needs no solver.** No contact law, no integrator, no friction, no restitution, no
+eccentricity. **It is the geometry of a rigid body in a curved tube**, computed from A69's beam
+solve and `gen6_drive.bore_mm`, with a three-point construction that does not differentiate
+anything. *[P108](#p108) depends on a contact model whose own model-form spread is **65.8 %**
+([A68](validation/A68_contact_law.md) band 6). This does not.*
+
+### And the trade runs the wrong way
+
+**[A67](validation/A67_guided_contact.md) band 8 found longer lands reduce exit angular rate** —
+10.219 °/s at 200 mm against 14.845 at 120. **Longer lands jam sooner**: 200 mm is inadmissible at
+half a kelvin and 400 mm is inadmissible there too. **Angular constraint and geometric
+admissibility pull in opposite directions**, and nothing in this repository had priced that
+because nothing had computed the centreline.
+
+### Where the gradient comes from, and it is not a wild number
+
+**A69**: the bow is `κ = α ΔT / D` at `α = 23.6e-6 /K` and `D = 17.805 mm`, so **one kelvin across
+the diameter is a curvature of 1.33e-3 /m** — enough to move the line 0.166 mm over a single 1.0 m
+support span. **A thin-walled aluminium tube 8 m long in orbit, with the sun on one side, is not a
+place where a one-kelvin gradient is unusual.** [A58](validation/A58_chamber_thermal.md) puts the
+gas at **238 K** every shot, so there is also an internal gradient the tube sees from the inside.
+
+**What has never been computed is the tube's actual gradient**, and that is
+[E-thermal work](docs/COMPUTATIONAL_CLOSURE.md) rather than a bracket.
+
+### What would close it
+
+**A design, and it is design rather than repair.** Every one of these is a free variable that has
+never been chosen against this constraint:
+
+1. **The gradient itself** — a thermal model of the tube in orbit, then coatings, wrapping or a
+   heater. *This is the lever with the most authority and the least mass.*
+2. **Clearance** — 50 µm diametral is a declared assumption with no source. A larger clearance
+   admits more curvature and costs tip-off.
+3. **Land separation** — the piston has no length in any file; the trade against A67 band 8 is now
+   two-sided and has an optimum.
+4. **Support pitch** — sagitta goes as the span squared. Halving 1.0 m quarters it.
+5. **A piston that is not rigid** — two lands on a compliant or articulated carrier, which is what
+   long-stroke pneumatic practice actually does.
+
+**Nothing is being changed here.** A70 explicitly changed no parameter to make a band pass, and the
+redesign belongs in a run of its own with its bands declared first.
+
+> **This does not say Gen6 fails.** It says **this configuration** does not admit its own piston at
+> a gradient nobody has computed, and that **five design variables have been carried this far
+> without anyone knowing there was a constraint on them.**
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
