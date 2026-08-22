@@ -218,15 +218,25 @@ lateral impulse and torque → release pose and rate**, and it is absent.
 Micro-Spacecraft"**, *Aerospace Science and Technology*, 2026 — publisher record
 `S1270963826018869`. **Located and checked 2026-08-22 from its abstract and indexing only.**
 
-What is verifiable without the full text:
+**Abstract- and indexing-level evidence only.** What two independent retrievals return
+consistently:
 
 - Launch-dynamics models of **several separation-mechanism configurations in ADAMS**, to find which
-  configuration produces large launch disturbance and why.
-- **Parametric optimisation of guide-rail length and fit clearance**, reported as an **82.76 %
-  improvement in launch attitude accuracy**.
+  configuration produces large launch disturbance and why. The **cylindrical** configuration
+  performs best, and a **continuous-contact straight guide rail beats a gradient rail** at
+  suppressing launch disturbance.
+- Contact force and moment formulas derived analytically, then **parametric optimisation of
+  guide-rail length and fit clearance**, reported as an **82.76 % improvement in launch attitude
+  accuracy** at a **270 mm rail and 0.2 mm fit clearance**.
 - A 3U-form-factor device in **7075 aluminium**, with **hard-anodised guide-rail surfaces coated
   with PTFE to reduce friction**.
 - Post-launch **angular velocity** treated as the quantity that decides mission success.
+
+> **The 270 mm and the 0.2 mm are that mechanism's answers and are not to be imported.** They are
+> quoted here so that the *shape* of the result is on the record — **fit clearance has an optimum,
+> not a minimum** — and because a number left unstated tends to get remembered as a
+> recommendation. VOLLEY's bore is 15.805 mm over 8.0 m and shares nothing with a 270 mm rail but
+> the physics.
 
 > **Two of those land directly on Gen6.** The tribological pair is the one
 > [ADR-035](adr/035-drive-tube-material.md) and [A61](../validation/A61_seal_class.md) chose —
@@ -248,22 +258,78 @@ evidence.** Nothing in this repository may cite a figure from it until it has be
 | **[P102](../OPEN_PROBLEMS.md)** | Names the gap in the same words and does not close it |
 | **What it cannot do** | **Supply VOLLEY's clearance.** An optimum belongs to the mechanism it was optimised for — its masses, its rail length, its fit, its release. **Importing one would be the mistake this file exists to prevent**, and it is the same rule already applied to the vault's straightness arithmetic |
 
-### The citations were checked, and that is why this section is short
+### A modern separation mechanism with ground qualification and a flight
 
-**The sweep that prompted it started from three headline references. Checking them from this
-environment gave one confirmation, one correction and two that could not be confirmed at all.**
+**Jiaolong Zhang *et al.*, "Modular design and structural optimization of CubeSat separation
+mechanism", *Acta Astronautica* **225**, 2024**, DOI `10.1016/j.actaastro.2024.09.067`.
+**Abstract-level evidence. The publisher record is unreachable from this environment** — see the
+retrieval note below.
 
-| Named as | What the check found |
+What two independent retrievals return consistently: a topology-then-size optimisation using a
+surrogate-model-assisted hybrid search, reducing the mechanism's **mass proportion to 18 %** at a
+maximum deformation of **0.123 mm**; **ground verification by overload, vibration and shock
+mechanical tests**; and **in-orbit deployment of the BY-03 satellite**.
+
+| | |
 |---|---|
-| A 2024 modular CubeSat separation mechanism, *Acta Astronautica* **225**, pp. 758–767, with a stated mechanism mass, a full environmental campaign and an in-orbit deployment | **The paper is real and the page range is wrong** — it is **pp. 615–624**. Its abstract describes a surrogate-model size optimisation reducing the mechanism's **mass proportion to 18 %** at **0.123 mm** maximum deformation. **The mass figure, the test campaign and the flight are not visible in it** and could not be confirmed |
-| Two 2026 micro-spacecraft separation papers, carried as the strongest new evidence | **Could not be confirmed from the sources reachable here.** One pairs a publisher series identifier with an unrelated publisher's URL. *Not "they do not exist" — not found* |
-| — | **The paper that did confirm, twice, was named by neither**, and it is the one above |
+| **What it moves** | **[A21](../validation/A21_comparators.md)'s comparator, on maturity rather than mass.** A21 compares VOLLEY against a spring dispenser as a *class*. This is one named mechanism that has been optimised, environmentally qualified on the ground **and flown** |
+| **Why that matters more than a mass number** | `FIGURE_INDEX.md`'s **class-D evidence has zero members** and **E4** says nothing here has been built, fired or measured. **The comparator is four rungs up the evidence ladder from VOLLEY, not one** — simulation-only, prototype-tested, environmentally qualified, flight-proven, and VOLLEY is on the first rung |
+| **What it cannot supply** | **A mass for the comparison.** The abstract gives a mass *proportion*, not a mechanism mass, and the **2.417 kg** figure this file was offered is a full-text claim that has not been read here. **It is not quoted anywhere in this repository** |
+| **What it must never be used for** | **Another mechanism's flight is not evidence about VOLLEY.** It sharpens how far behind VOLLEY's evidence is; it moves nothing about whether VOLLEY works |
+
+**Not added to [`PRIOR_ART.md`](PRIOR_ART.md).** That file's own first line requires every work in it
+to have been read and its metadata verified against the publisher record. **Neither is true here**,
+and P22 is the entry recording what happened the last time this file was written from abstracts.
+
+### The citations were checked, and the first check was partly wrong
+
+> **As written 2026-08-22, and preserved so the correction has something to correct:**
+>
+> | Named as | What the check found |
+> |---|---|
+> | A 2024 modular CubeSat separation mechanism, *Acta Astronautica* **225**, pp. 758–767, with a stated mechanism mass, a full environmental campaign and an in-orbit deployment | **The paper is real and the page range is wrong** — it is **pp. 615–624**. Its abstract describes a surrogate-model size optimisation reducing the mechanism's **mass proportion to 18 %** at **0.123 mm** maximum deformation. **The mass figure, the test campaign and the flight are not visible in it** and could not be confirmed |
+> | Two 2026 micro-spacecraft separation papers, carried as the strongest new evidence | **Could not be confirmed from the sources reachable here.** One pairs a publisher series identifier with an unrelated publisher's URL. *Not "they do not exist" — not found* |
+> | — | **The paper that did confirm, twice, was named by neither**, and it is the one above |
+
+#### Corrected 2026-08-22, later the same day. Two of those three findings are withdrawn.
+
+**1. "The test campaign and the flight are not visible in it" — withdrawn.** They are stated in the
+abstract, and a second retrieval returns them in the paper's own words: *ground verification with
+overload, vibration and shock mechanical tests, and successful in-orbit deployment of the BY-03
+satellite.* **The first check read a partial abstract summary as if it were the whole abstract**
+and reported an absence that was an absence in the summary. *The 2.417 kg mass is still unread and
+is still not quoted.*
+
+**2. "The page range is wrong — it is pp. 615–624" — withdrawn.** **No source reachable from here
+gives a page range at all.** The 615–624 was taken from a single search summary and published as a
+correction to a citation. **A correction asserted from a snippet is the same defect as a claim
+asserted from a snippet**, and this one was worse because it was framed as due diligence. The
+pagination is **unverified**, in both directions.
+
+**3. "Two 2026 papers could not be confirmed" — narrowed, not withdrawn.** Exact-title searches for
+both return other work. **That remains "not retrieved", and it is now clear that it is a property
+of this environment rather than of the sources**, because the environment cannot retrieve anything.
+
+> ### The retrieval note, and it is the whole reason the three findings above are graded rather than settled
+>
+> **Every publisher and bibliographic host is refused by this session's egress policy.** Checked
+> 2026-08-22: `doi.org`, `api.crossref.org`, `api.openalex.org`, `api.semanticscholar.org`,
+> `sciencedirect.com`, `mdpi.com`, `iopscience.iop.org`, `arxiv.org` and `scholar.google.com` all
+> return **403 at the proxy**. The only external retrieval that works is web search, which returns
+> **abstracts, indexing records and summaries** — never a publisher record and never a full text.
+>
+> **So no source in this section has been verified the way [`PRIOR_ART.md`](PRIOR_ART.md) requires**,
+> and every entry says so at the point of use. **A10 recorded the same limitation for a component
+> datasheet in its own words** — *"unreachable from this environment; that limitation is recorded
+> rather than worked around"* — and this is that, for literature.
+>
+> **"Not retrieved" is not "does not exist", and it is also not "verified".** Both halves of that
+> sentence are the rule.
 
 **This is recorded because the rule is the rule.** [P22](../OPEN_PROBLEMS.md) and
 [P57](../OPEN_PROBLEMS.md) are both entries about a source that was cited or relied on before it was
-read. **A reading list is a source like any other**, and the engineering in this one survived the
-check while three of its four references did not. *The engineering is used here. The citations are
-not.*
+read. **The engineering in the sweep survived the check. Its citations are still unverified, and so
+was the correction to them.**
 
 ---
 
