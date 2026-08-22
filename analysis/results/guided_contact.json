@@ -1,0 +1,311 @@
+{
+  "analysis": "A67",
+  "bands_declared_commit": "246b7ee",
+  "note": "6-DOF rigid body, two lands, Lankarani-Nikravesh contact, sinusoidal bore centreline at twice A59's support pitch. Six inputs have no source in this repository and are declared brackets, not measurements. Nothing is measured -- E4.",
+  "convergence": [
+    {
+      "h": 4e-05,
+      "rate": 8.7862
+    },
+    {
+      "h": 2e-05,
+      "rate": 9.5505
+    },
+    {
+      "h": 1e-05,
+      "rate": 15.0981
+    },
+    {
+      "h": 5e-06,
+      "rate": 14.88
+    },
+    {
+      "h": 2.5e-06,
+      "rate": 14.8772
+    },
+    {
+      "h": 1.25e-06,
+      "rate": 14.8786
+    },
+    {
+      "h": 6.25e-07,
+      "rate": 14.8756
+    }
+  ],
+  "nominal_inputs": {
+    "clearance_um": 50.0,
+    "land_sep_mm": 120.0,
+    "straightness_mm": 0.5,
+    "ecc_mm": 0.1,
+    "cg_off_mm": 1.0,
+    "friction_N": 17.8,
+    "e": 0.7
+  },
+  "brackets": {
+    "clearance_um": [
+      20.0,
+      200.0
+    ],
+    "land_sep_mm": [
+      40.0,
+      400.0
+    ],
+    "straightness_mm": [
+      0.1,
+      2.0
+    ],
+    "ecc_mm": [
+      0.0,
+      0.5
+    ],
+    "cg_off_mm": [
+      0.0,
+      5.0
+    ],
+    "friction_N": [
+      17.8,
+      83.40371375447981
+    ],
+    "e": [
+      0.3,
+      0.7
+    ]
+  },
+  "nominal": {
+    "v_exit": 33.061067550492005,
+    "v_lat": 0.057952515793128906,
+    "rate_deg_s": 14.845423943048969,
+    "peak_N": 225.83878896536808,
+    "impulse_Ns": 4.268665344193078,
+    "hits": 39,
+    "step_s": 4.9387558783895025e-06,
+    "gas_work_J": 2350.232238512899,
+    "ke_J": 2186.068375156391,
+    "energy_residual_pct": 0.29640677592779857
+  },
+  "restitution_check": [
+    {
+      "e": 0.3,
+      "v0": 0.05,
+      "restitution": 0.6842246100298973,
+      "err_pct": 128.0748700099658
+    },
+    {
+      "e": 0.3,
+      "v0": 0.5,
+      "restitution": 0.6842246262331304,
+      "err_pct": 128.07487541104348
+    },
+    {
+      "e": 0.3,
+      "v0": 2.0,
+      "restitution": 0.6842246271065798,
+      "err_pct": 128.07487570219328
+    },
+    {
+      "e": 0.5,
+      "v0": 0.05,
+      "restitution": 0.7252411224151902,
+      "err_pct": 45.04822448303805
+    },
+    {
+      "e": 0.5,
+      "v0": 0.5,
+      "restitution": 0.725241135422691,
+      "err_pct": 45.0482270845382
+    },
+    {
+      "e": 0.5,
+      "v0": 2.0,
+      "restitution": 0.7252411329623932,
+      "err_pct": 45.04822659247865
+    },
+    {
+      "e": 0.7,
+      "v0": 0.05,
+      "restitution": 0.7959725975841608,
+      "err_pct": 13.710371083451555
+    },
+    {
+      "e": 0.7,
+      "v0": 0.5,
+      "restitution": 0.7959726262610607,
+      "err_pct": 13.710375180151534
+    },
+    {
+      "e": 0.7,
+      "v0": 2.0,
+      "restitution": 0.7959726319777808,
+      "err_pct": 13.710375996825835
+    }
+  ],
+  "land_sweep": [
+    {
+      "land_sep_mm": 40.0,
+      "rate_deg_s": 13.941721258473324,
+      "peak_N": 452.66893247973553,
+      "v_exit": 32.787562990924414,
+      "diverged": false
+    },
+    {
+      "land_sep_mm": 80.0,
+      "rate_deg_s": 11.285271491600241,
+      "peak_N": 316.6544226989216,
+      "v_exit": 33.03188196288369,
+      "diverged": false
+    },
+    {
+      "land_sep_mm": 120.0,
+      "rate_deg_s": 14.845423943048969,
+      "peak_N": 225.83878896536808,
+      "v_exit": 33.061067550492005,
+      "diverged": false
+    },
+    {
+      "land_sep_mm": 200.0,
+      "rate_deg_s": 10.219387513150622,
+      "peak_N": 29.52497009754422,
+      "v_exit": 33.07767970900505,
+      "diverged": false
+    },
+    {
+      "land_sep_mm": 300.0,
+      "rate_deg_s": 7.524782353696164,
+      "peak_N": 52883.72736680031,
+      "v_exit": 32.00087189842769,
+      "diverged": false
+    },
+    {
+      "land_sep_mm": 400.0,
+      "rate_deg_s": 8.495825751048685,
+      "peak_N": 197434.71943427782,
+      "v_exit": 32.97813556880811,
+      "diverged": false
+    }
+  ],
+  "monte_carlo": {
+    "n": 288,
+    "n_good": 271,
+    "n_diverged": 13,
+    "n_stalled": 4,
+    "step_s": 3.386008748909144e-06,
+    "rate_mean": 19.824589926426782,
+    "rate_median": 19.389563925167483,
+    "rate_p997": 57.07692709216977,
+    "rate_max": 58.716432956437345,
+    "rate_3sigma": 52.32790543173154,
+    "v_exit_mean": 30.453666886711343,
+    "v_exit_3sigma": 6.095756902940872,
+    "v_lat_p997": 0.18619415559771674,
+    "peak_N_max": 995904.6850696851,
+    "impulse_p997": 553.8202249994342,
+    "hits_median": 30.0,
+    "sobol": [
+      {
+        "name": "clearance_um",
+        "S1": -0.05636710971034589,
+        "S1_conf": 0.10500383989130155,
+        "ST": 0.09867863516746561,
+        "ST_conf": 0.07069508076729039
+      },
+      {
+        "name": "land_sep_mm",
+        "S1": 0.3944795472478174,
+        "S1_conf": 0.47439589958813205,
+        "ST": 0.25699022623000417,
+        "ST_conf": 0.14953951579415395
+      },
+      {
+        "name": "straightness_mm",
+        "S1": 0.5876565786160477,
+        "S1_conf": 0.3258060970806782,
+        "ST": 0.8940239550316057,
+        "ST_conf": 0.45442356395636957
+      },
+      {
+        "name": "ecc_mm",
+        "S1": -0.06619156976345289,
+        "S1_conf": 0.12659461782728246,
+        "ST": 0.10757776931820656,
+        "ST_conf": 0.0720912432705221
+      },
+      {
+        "name": "cg_off_mm",
+        "S1": -0.021546401272426095,
+        "S1_conf": 0.22035287286217448,
+        "ST": 0.1751031076964761,
+        "ST_conf": 0.16171555626701226
+      },
+      {
+        "name": "friction_N",
+        "S1": -0.06930867826525709,
+        "S1_conf": 0.14906543757117877,
+        "ST": 0.1413715929899451,
+        "ST_conf": 0.2096134139126972
+      },
+      {
+        "name": "e",
+        "S1": 0.0824657376421058,
+        "S1_conf": 0.13617312762018233,
+        "ST": 0.0856689987336319,
+        "ST_conf": 0.0736478691182591
+      }
+    ]
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "axial regression against the 1-DOF model, 1 %",
+      "detail": "29.0088 against 29.0100 m/s",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "symmetry: zero forcing gives zero lateral and angular state",
+      "detail": "worst 0.00e+00 of scale",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "contact law returns the declared restitution, 5 %",
+      "detail": "worst 128.07 %",
+      "pass_": false
+    },
+    {
+      "band": "4",
+      "name": "energy closes to 0.5 %",
+      "detail": "+0.2964 %",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "nominal exit angular rate <= 2.0 deg/s",
+      "detail": "14.845 deg/s",
+      "pass_": false
+    },
+    {
+      "band": "6",
+      "name": "peak contact normal force <= 445.88 N",
+      "detail": "225.8 N",
+      "pass_": true
+    },
+    {
+      "band": "7",
+      "name": "Monte Carlo 3-sigma exit angular rate <= 2.0 deg/s",
+      "detail": "52.328 deg/s (p99.7 57.077)",
+      "pass_": false
+    },
+    {
+      "band": "8",
+      "name": "land separation moves the answer by more than 5 %",
+      "detail": "97.3 % over 40-400 mm",
+      "pass_": true
+    },
+    {
+      "band": "9",
+      "name": "sensitivity reported and the dominant input named",
+      "detail": "straightness_mm",
+      "pass_": true
+    }
+  ]
+}

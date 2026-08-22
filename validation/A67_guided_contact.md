@@ -84,3 +84,135 @@ derived, and **coupling it to the tube's own deflection is separate work that P1
 not model the cradle release, which is [A34](A34_cradle_restitution.md)'s and stands. It does not
 model the seal as anything but a friction force and a radial preload. It does not model stick-slip;
 B-2 band 11 is what would justify adding it.
+
+---
+
+## Results
+
+**RUN 2026-08-22. Six of nine. Bands 3, 5 and 7 fail, and band 5 is the result.**
+
+`analysis/guided_contact.py` and `analysis/run_a67.py`, bands committed at `246b7ee` before either
+existed. Results in `analysis/results/guided_contact.json`.
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | axial regression against the 1-DOF model, 1 % | **29.0088 against 29.0100 m/s** | **PASS** |
+| 2 | symmetry: zero forcing gives zero lateral and angular state | 0.00e+00 | **PASS** |
+| 3 | contact law returns the declared restitution, 5 % | **worst 128.1 %** | **FAIL** |
+| 4 | energy closes to 0.5 % | **+0.2964 %** | **PASS** |
+| 5 | **nominal exit angular rate ≤ 2.0 °/s** | **14.845 °/s** | **FAIL** |
+| 6 | peak contact normal force ≤ 445.88 N | **225.8 N** | **PASS** |
+| 7 | **Monte Carlo 3σ exit angular rate ≤ 2.0 °/s** | **52.33 °/s**, p99.7 **57.08** | **FAIL** |
+| 8 | land separation moves the answer by more than 5 % | **97.3 %** over 40–400 mm | **PASS** |
+| 9 | sensitivity reported and the dominant input named | **bore straightness** | **PASS** |
+
+### Band 5 is the finding: Gen6 does not meet tip-off, and it is not close
+
+**14.845 °/s at the nominal point, against the 2.0 °/s band** [A38](A38_tipoff_at_gen6.md) band 2
+was declared against and [A23](A23_tipoff_release.md) quotes as the tighter flown deployer figure.
+**That is 7.4× over.** Under the declared tolerance brackets the 3σ figure is **52.3 °/s — 26×
+over**, and the whole Monte Carlo distribution sits above the band: **the median sample is
+19.4 °/s** and **the best sample in 271 is not inside 2.0 °/s.**
+
+> **A38 answered the cradle and this answers the bore, and they do not agree about the machine.**
+> A38's residual rate at force removal is **exactly zero** for every clearance — and it is right,
+> because the rattle settles against a stop while the force still holds the payload. **Then the
+> payload spends 0.42 s traversing eight metres of a bore that is not straight**, and picks up an
+> angular rate the cradle model cannot see. *Kill criterion 4 has been answered against the wrong
+> 27 milliseconds.*
+
+### Band 9: bore straightness dominates, and it is not a tolerance detail
+
+**Sobol total-order indices**, 288 samples, `calc_second_order=False`:
+
+| Input | S_T | S_1 |
+|---|---:|---:|
+| **bore straightness** | **0.894 ± 0.454** | 0.588 |
+| land separation | 0.257 ± 0.150 | 0.394 |
+| payload CG offset | 0.175 ± 0.162 | −0.022 |
+| seal friction | 0.141 ± 0.210 | −0.069 |
+| force-line eccentricity | 0.108 ± 0.072 | −0.066 |
+| clearance | 0.099 ± 0.071 | −0.056 |
+| restitution | 0.086 ± 0.074 | 0.082 |
+
+**The confidence intervals are wide and several first-order indices are negative**, which is what
+288 samples buys and is reported rather than hidden — *a negative S₁ is an estimator artefact and
+says the sample is too small for the first-order split.* **The total-order ranking is robust
+enough to act on: straightness is first and land separation is second, and every quantity the seal
+contributes is below both.**
+
+> **This reverses the intuition the programme has been running on.** [P67](../OPEN_PROBLEMS.md)
+> owns 93.4 % of the *velocity* dispersion and is the highest-leverage measurement in the record —
+> and it is **fourth** here. **The thing that decides whether the payload leaves straight is the
+> straightness of eight metres of tube**, which is a manufacturing problem
+> ([`MANUFACTURING.md`](../docs/MANUFACTURING.md) does not yet contain it) and not a seal problem.
+
+### Band 8 passes, and the sweep is the design output the record did not have
+
+**The piston has no length in this repository.** A41 allows 1.5 kg for piston, seals, valves and
+plumbing and designs none of it, so land separation was swept rather than assumed:
+
+| Land separation | Exit angular rate | Peak contact |
+|---:|---:|---:|
+| 40 mm | 13.942 °/s | 452.7 N |
+| 80 mm | **11.285 °/s** | 316.7 N |
+| 120 mm — nominal | 14.845 °/s | 225.8 N |
+| 200 mm | **10.219 °/s** | 29.5 N |
+| 300 mm | 7.525 °/s | *52.9 kN — numerically suspect* |
+| 400 mm | 8.496 °/s | *197 kN — numerically suspect* |
+
+**Longer lands are better and none of them is good enough.** Over the four points that are
+numerically clean the spread is **45 %**, so band 8 passes on those alone and does not depend on
+the two suspect ones. *No land separation in the swept range brings 14.8 °/s to 2.0.*
+
+### Band 3 fails, and it conditions bands 5 and 7 without overturning them
+
+**The contact law returns too little dissipation, and the error grows as restitution falls:**
+
+| Declared e | Returned | Error |
+|---:|---:|---:|
+| 0.7 — the nominal aluminium figure | 0.796 | **+13.7 %** |
+| 0.5 | 0.725 | +45.0 % |
+| 0.3 | 0.684 | **+128.1 %** |
+
+**The result is velocity-independent across 0.05–2.0 m/s**, which is what the Lankarani–Nikravesh
+form is designed to be, so this is not a rate-dependent implementation error. **It is the known
+domain limit of the law itself**: LN's damping–restitution relation is derived assuming most of
+the impact energy is stored elastically, which holds as e → 1 and degrades as e falls.
+**The band was declared at 5 % across 0.3–0.7 and it fails. It is not being moved**, and the run
+is recorded as failing it.
+
+**What it does and does not do to the headline.** Under-dissipation means residual motion is
+**overstated**, so 14.845 °/s is **conservative** rather than optimistic. **A 13.7 % error at the
+nominal restitution cannot account for a 7.4× miss**, and band 9 puts restitution last with
+S_T = 0.086. *The conclusion survives the verification failure; the precision of the number does
+not.* **Nothing downstream may quote 14.845 °/s to more than two significant figures until the
+contact law is replaced or the band is met.**
+
+### What is not trustworthy in this run, stated plainly
+
+**Peak contact force in the tails.** The Monte Carlo maximum is **995.9 kN**, and the 300 and
+400 mm land-sweep points return 52.9 kN and 197 kN. Those are penalty-contact numerical
+excursions, not forces. **The divergence guard catches a sample that leaves the bore and does not
+catch one whose contact force spikes while it stays inside** — 13 of 288 samples diverged and 4
+stalled, and they are excluded from the statistics, but the peak-force tail is still contaminated.
+**Band 6 is evaluated where it was declared, at the nominal point, and it passes at 225.8 N.**
+*Peak contact force under tolerance is an open question this run does not answer.*
+
+**The step size, and why it is in the results file.** The answer is **wrong by 40 % at h = 2×10⁻⁵**
+— the step a first attempt reaches for — and converged below 5×10⁻⁶:
+
+| h (s) | 4e-5 | 2e-5 | 1e-5 | 5e-6 | 2.5e-6 | 1.25e-6 | 6.25e-7 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| rate °/s | 8.786 | 9.551 | 15.098 | **14.880** | **14.877** | **14.879** | **14.876** |
+
+**Everything above runs at 110 steps per contact period**, which puts the nominal case at 5×10⁻⁶.
+
+### What this run does not answer
+
+**It does not calibrate against hardware.** **E4** — nothing is measured, and the six declared
+brackets are engineering assumptions with no source in this repository. **It does not consume a
+deformed bore centreline from a structural solve**: the straightness bracket is declared, and
+**band 9 has just made that the most important input in the model**, so coupling it to A59's own
+tube deflection is now the highest-value remaining work rather than a refinement.
+**It does not model stick-slip**, and B-2 band 11 is what would justify adding it.

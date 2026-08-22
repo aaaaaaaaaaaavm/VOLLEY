@@ -14,9 +14,9 @@ counts against it, and is checked by
 
 ---
 
-## Remaining COMPUTATION items: 16
+## Remaining COMPUTATION items: 17
 
-**It is not zero and this file will not pretend otherwise.** The sixteen are named below, each
+**It is not zero and this file will not pretend otherwise.** The seventeen are named below, each
 with what would close it. **Every one of them is executable now** — no hardware, no launch
 provider, no flight.
 
@@ -54,17 +54,18 @@ a different place**, so its sixteen live computation items are counted separatel
 
 | Scope | COMPUTATION | HARDWARE | HOST_DATA | FLIGHT_OPS | DECISION |
 |---|---:|---:|---:|---:|---:|
-| **GEN6** | **16** | 4 | 5 | 1 | 0 |
+| **GEN6** | **17** | 4 | 5 | 1 | 0 |
 | PROGRAMME | 2 | 0 | 0 | 1 | 6 |
 | GEN5 | 16 | 0 | 0 | 0 | 4 |
 
 ---
 
-## The sixteen, and what closes each
+## The seventeen, and what closes each
 
 | Entry | What is left to compute |
 |---|---|
-| **[P103](../OPEN_PROBLEMS.md)** | **A67**, the 6-DOF guided-contact model through the 8 m bore. *Bands declared `246b7ee`; the run is the largest single item on this list* |
+| **[P108](../OPEN_PROBLEMS.md)** | **CRITICAL.** [A67](../validation/A67_guided_contact.md) ran and **Gen6 misses the tip-off band by 7.4×** — 14.845 °/s against 2.0. **Bore straightness is the dominant input**, at S_T = 0.894 against seal friction's 0.141. What closes it: couple [A59](../validation/A59_tube_structure.md)'s deformed tube centreline into A67 instead of a declared bracket, then sweep the straightness a real bore can hold |
+| **[P103](../OPEN_PROBLEMS.md)** | **A67 has run**, six of nine, and the first-order half of this entry is answered. What is left is the second-order set the run sheet declared out of scope: bore roundness, stick-slip, payload inertia variation, tube compliance, and a contact law that passes its own restitution check — **A67 band 3 failed at 13.7 % against a 5 % band** |
 | **[P92](../OPEN_PROBLEMS.md)** | **A66**: the trim stator's field through a 1.0 mm aluminium tube — attenuation, induced loss, wall temperature against ADR-035's 473 K |
 | **[P75](../OPEN_PROBLEMS.md)** | A Gen6 reliability architecture, the way [A47](../validation/A47_gen6_fmea.md) did Gen5 |
 | **[P79](../OPEN_PROBLEMS.md)** / **[E6](../OPEN_PROBLEMS.md)** | A variable-atmosphere decay model and an independent propagator check. **The headline should become an uncertainty range, not a single multiplier** |

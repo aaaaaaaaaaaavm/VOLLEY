@@ -33,11 +33,44 @@ needs a *difference*. **Commanded per-satellite velocity is the one thing no spr
 dispenser can offer at any price** — and it is what every number on this page exists to support
 or to qualify.
 
+## The mission, in five lines
+
+**VOLLEY flies as a secondary system on the launch vehicle's final stage.** The vehicle flies its
+primary mission and the primary spacecraft separates first. **Only then does VOLLEY's mission
+begin**: where the vehicle and its mission rules permit it, the spent stage stays powered,
+navigated, attitude-controlled and commandable, and **becomes a temporary orbital delivery
+vehicle**. It may deploy the manifest immediately, or reposition between deployments over hours to
+days. **The stage does the coarse orbital placement. VOLLEY does the fine per-satellite release
+velocity.** Then the stage passivates and re-enters.
+
+> **Three things that are not the same and get collapsed:** the **host stage's propulsion
+> reserve**, which belongs to the launch provider and cannot be assumed; the **host's attitude,
+> navigation and power**, which is what keeps it usable past passivation; and **VOLLEY's own
+> 2 litres of nitrogen**, which produces a payload's separation condition and could not raise an
+> orbit if it tried. **Full concept, host classes and the price of a plane change:**
+> [`docs/MISSION_ARCHITECTURE.md`](docs/MISSION_ARCHITECTURE.md).
+>
+> **One degree of inclination costs ~133 m/s at 500 km; ten kilometres of altitude costs 5.5.**
+> *The stage delivers altitude, phase and orbital energy. It does not deliver planes, and this
+> repository will not imply that it does.*
+
+> ### Where the current architecture actually stands, 2026-08-22
+>
+> **Gen6 — the stage-integrated gas architecture — is the design target, and it does not yet meet
+> its own tip-off requirement.** [A67](validation/A67_guided_contact.md) modelled the payload's
+> guided travel through the 8 m bore for the first time and returned **14.845 °/s at the nominal
+> point against a 2.0 °/s band** ([P108](OPEN_PROBLEMS.md)). **The input that decides it is bore
+> straightness**, not the seal friction the programme has been organised around.
+>
+> **Gen5 remains the frozen, fully analysed baseline** and is what the manuscript reports.
+> **[`docs/COMPUTATIONAL_CLOSURE.md`](docs/COMPUTATIONAL_CLOSURE.md)** counts what is left before
+> hardware: **17 questions that are still calculations**, and ten that are not.
+
 > **This repository is the engineering record, not a brochure.** Every analysis declares what
 > would count as failure *before* it runs, every defect is numbered including the ones that damage
 > the work's own claims, and **nothing here has been built, fired or measured.**
 >
-> **What that discipline has actually produced, which is the part worth judging:** **65 run
+> **What that discipline has actually produced, which is the part worth judging:** **66 run
 > sheets** covering 63 analyses A1–A67 — A3, A26, A60 and A66 were numbered and never written —
 > each against a band written down before its script existed. **Three failed outright** —
 > including one that falsified a claim in this project's own abstract. **Three times a declared
@@ -57,7 +90,7 @@ or to qualify.
 | **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
 | **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
 | **checking what outside evidence could settle** | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) — which live entries a published source can close, which it can only inform, and **which need hardware and cannot be read away** |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 142 numbered entries, 55 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
+| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 143 numbered entries, 56 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
 | **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
 
@@ -477,7 +510,7 @@ since.
 |---|---|
 | **Maturity** | TRL 2–3 |
 | **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **142 numbered entries, 55 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| **Defect register** | **143 numbered entries, 56 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
 | **Validation** | **66 run sheets**, 63 analyses across A1–A67 (A3, A26, A60 and A66 were numbered and never written), each against a band declared *before* the run. **Three failed outright** |
 | **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 

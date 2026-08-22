@@ -5059,7 +5059,7 @@ what that force is a property of has never been modelled.**
 
 ### P103. Gen6 has no model of the payload's guided contact state through the 8 m bore, so its exit angular and lateral state is not established: HIGH, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A67: the 6-DOF guided-contact model, running now
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A67 has run; what is left is roundness, stick-slip, inertia variation, tube compliance and a contact law that passes its own restitution check
 
 
 **[P102](#p102) found this while correcting something smaller and did not own it.** That entry is a
@@ -5370,6 +5370,78 @@ correction quoting what it corrected.
 about. **The general case — every live document that restates a parameter — is still not
 mechanically guarded**, and `check_crossrefs.py` only covers results files. *That gap is real and
 is recorded here rather than claimed closed.*
+
+### P108. Gen6's exit angular rate misses the tip-off band by 7.4x, and the input that decides it is bore straightness: CRITICAL, NEW 2026-08-22
+> **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — couple A59's deformed tube centreline into A67 and re-run, then sweep the straightness a real bore can hold
+
+
+**[A67](validation/A67_guided_contact.md) ran on 2026-08-22 — six of nine — and band 5 is the
+finding.**
+
+| | |
+|---|---:|
+| Exit angular rate at the nominal point | **14.845 °/s** |
+| The band, from [A38](validation/A38_tipoff_at_gen6.md) band 2 and [A23](validation/A23_tipoff_release.md) | **2.0 °/s** |
+| **Miss** | **7.4×** |
+| 3σ under the declared tolerance brackets | **52.33 °/s — 26×** |
+| Median of 271 good Monte Carlo samples | **19.39 °/s** |
+| Samples inside the band | **none** |
+
+### Why the record said the opposite until today
+
+**A38 answers the cradle and A67 answers the bore, and both are right about what they model.**
+A38's residual angular rate at force removal is **exactly zero** for every clearance A23 tabulated
+— the rattle settles in 26 ms against a stop while the gas is still holding the payload.
+**Then the payload spends 0.42 s crossing eight metres of a bore that is not straight**, and
+acquires an angular rate the cradle model has no way to see.
+
+> **Kill criterion 4's Gen6 answer has been quoted against the wrong 27 milliseconds.**
+> [`KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) threat 4 already said *"not demonstrated"* and
+> *"nothing models the 8 m of guided travel after the cradle"* — [P103](#p103). **This is what was
+> behind that sentence.**
+
+### The input that decides it is not the one the programme has been chasing
+
+**Sobol total-order indices over 288 samples**: bore straightness **0.894**, land separation
+**0.257**, payload CG offset 0.175, **seal friction 0.141**, force-line eccentricity 0.108,
+clearance 0.099, restitution 0.086.
+
+**[P67](#p67) owns 93.4 % of the *velocity* dispersion and is fourth here.** The quantity that
+decides whether the satellite leaves straight is **the straightness of eight metres of tube** — a
+manufacturing property that appears in no document in this repository. *`docs/MANUFACTURING.md` is
+a Gen5 document and does not contain a bore.*
+
+### What has been ruled out already
+
+**Land separation does not rescue it.** A67 band 8 swept 40–400 mm: the best clean point is
+**10.219 °/s at 200 mm** and the worst is 14.845. **No piston geometry in the swept range reaches
+2.0 °/s**, and longer lands trade angular rate against a peak contact force the model cannot yet
+resolve in the tails.
+
+### What would close it, in order
+
+1. **Couple the tube's own deflection in.** [A59](validation/A59_tube_structure.md) requires seven
+   supports at 1.0 m and models no resulting shape; A67 declares a straightness bracket instead.
+   **Band 9 has just made that the most important input in the model**, so a declared bracket is no
+   longer good enough. *This is computation and it is the next run.*
+2. **Then sweep the straightness a real 8 m bore can actually hold**, against published
+   manufacturing capability rather than a bracket — honing, skiving, segmenting, support pitch.
+3. **Then decide.** If no achievable straightness reaches 2.0 °/s, the honest outcomes are a
+   shorter stroke, an actively guided carriage, a different release concept, **or a declared
+   payload tip-off environment that is not 2.0 °/s** — and the last of those is a product decision
+   that must be taken as one, not by widening a band.
+
+**The 2.0 °/s band is not being moved.** It is the flown deployer figure, it was declared before
+A38 and before A67, and **a band that moves when a model fails it is not a band.**
+
+### What conditions this entry
+
+**A67 band 3 failed**: the Lankarani–Nikravesh contact law returns too little dissipation, by
+**13.7 % at the nominal restitution** and more as restitution falls. **Under-dissipation overstates
+residual motion, so 14.845 °/s is conservative** — but it means the figure is good to about two
+significant figures and no more. *A 13.7 % error cannot account for a 7.4× miss, and the run sheet
+says so.*
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
