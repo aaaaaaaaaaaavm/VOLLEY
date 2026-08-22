@@ -18,41 +18,41 @@
       "host_kg": 300.0,
       "inertia_kgm2": 1741.75,
       "stroke_duration_ms": 466.74,
-      "peak_body_rate_deg_s": 0.748765,
+      "peak_body_rate_deg_s": 0.048057,
       "residual_body_rate_deg_s": 0.0,
-      "offset_per_shot_deg": 0.1747,
-      "offset_campaign_deg": 2.0969,
-      "angular_momentum_Ns_m": 22.7619
+      "offset_per_shot_deg": 0.011215,
+      "offset_campaign_deg": 0.134583,
+      "angular_momentum_Ns_m": 1.4609
     },
     {
       "host_kg": 500.0,
       "inertia_kgm2": 2902.92,
       "stroke_duration_ms": 466.74,
-      "peak_body_rate_deg_s": 0.449259,
+      "peak_body_rate_deg_s": 0.028834,
       "residual_body_rate_deg_s": 0.0,
-      "offset_per_shot_deg": 0.1048,
-      "offset_campaign_deg": 1.2581,
-      "angular_momentum_Ns_m": 22.7619
+      "offset_per_shot_deg": 0.006729,
+      "offset_campaign_deg": 0.08075,
+      "angular_momentum_Ns_m": 1.4609
     },
     {
       "host_kg": 700.0,
       "inertia_kgm2": 4064.08,
       "stroke_duration_ms": 466.74,
-      "peak_body_rate_deg_s": 0.320899,
+      "peak_body_rate_deg_s": 0.020596,
       "residual_body_rate_deg_s": 0.0,
-      "offset_per_shot_deg": 0.0749,
-      "offset_campaign_deg": 0.8987,
-      "angular_momentum_Ns_m": 22.7619
+      "offset_per_shot_deg": 0.004807,
+      "offset_campaign_deg": 0.057679,
+      "angular_momentum_Ns_m": 1.4609
     },
     {
       "host_kg": 900.0,
       "inertia_kgm2": 5225.25,
       "stroke_duration_ms": 466.74,
-      "peak_body_rate_deg_s": 0.249588,
+      "peak_body_rate_deg_s": 0.016019,
       "residual_body_rate_deg_s": 0.0,
-      "offset_per_shot_deg": 0.0582,
-      "offset_campaign_deg": 0.699,
-      "angular_momentum_Ns_m": 22.7619
+      "offset_per_shot_deg": 0.003738,
+      "offset_campaign_deg": 0.044861,
+      "angular_momentum_Ns_m": 1.4609
     }
   ],
   "bands": [
@@ -67,21 +67,21 @@
       "band": 2,
       "question": "attitude offset per shot, lightest host",
       "limit": "<= 2.0 deg",
-      "value": 0.1747,
+      "value": 0.011215,
       "verdict": "PASS"
     },
     {
       "band": 3,
       "question": "campaign offset, twelve shots, lightest host",
       "limit": "<= 15 deg",
-      "value": 2.0969,
+      "value": 0.134583,
       "verdict": "PASS"
     },
     {
       "band": 4,
       "question": "Gen6 against Gen5 offset per shot, same host",
       "limit": "REPORT, no pass/fail",
-      "value": 2.3273,
+      "value": 0.1494,
       "gen5_offset_deg": 0.0751,
       "verdict": "REPORT"
     },
@@ -89,8 +89,8 @@
       "band": 5,
       "question": "momentum the host must absorb",
       "limit": "REPORT in N.m.s; NO comparison against any control authority (E5, P94)",
-      "per_shot_Nms": 22.7619,
-      "campaign_Nms": 273.143,
+      "per_shot_Nms": 1.4609,
+      "campaign_Nms": 17.5309,
       "authority_comparison": "NOT COMPUTED -- no host control authority exists in this project (E5). A13 band 5 passed against an invented one (P94) and this band exists so that cannot recur. The band forbids a margin, so A52's declared wheel is NOT reported in this band; see findings.wheel_observation, which is outside the bands",
       "verdict": "REPORT"
     },
@@ -123,19 +123,19 @@
     "wheel_observation": {
       "outside_bands": true,
       "why": "Band 5 forbids any comparison against an assumed control authority, and it is not widened here. This is recorded as a finding instead, because suppressing it would be the opposite failure to P94's.",
-      "momentum_per_shot_Nms": 22.7619,
+      "momentum_per_shot_Nms": 1.4609,
       "a52_declared_wheel_Nms": 15.0,
       "a52_wheel_status": "DECLARED ASSUMPTION in A52, not a host property. E5 stands.",
       "observation": "The per-shot angular momentum exceeds the wheel A52 declared. On that assumed wheel the campaign cannot be flown without desaturating between shots, which no ConOps in this repository describes.",
       "what_it_is_not": "This is NOT a finding about any real stage. It is a finding about A52's assumed wheel, and it would change entirely on a real one."
     },
     "band4_direction": {
-      "gen6_over_gen5": 2.3273,
+      "gen6_over_gen5": 0.1494,
       "why": "Gen6 moves 2.4x less mass 5.3x further on a longer, more slender body. The displacement wins: the offset per shot is larger, not smaller."
     }
   },
   "software": {
     "python": "3.11.15",
-    "source_sha256": "3e41e1d3a6d2c871e5e2bcd3eac78fd72bbd8dae58c44fb2c9cbc9c03de2fa55"
+    "source_sha256": "0d118c857d16d77169211721f08fce849975c82a00414676ae20c87e4f527e12"
   }
 }

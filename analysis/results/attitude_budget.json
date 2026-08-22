@@ -7,7 +7,7 @@
     "python_license": "PSF License",
     "numpy": "2.4.6",
     "numpy_license": "BSD-3-Clause",
-    "source_sha256": "f77851fe5914410ab558a00c0f293f188aad8380f9f39bc1bf677e5e42dc2862"
+    "source_sha256": "d86f2e055df50005abaf890c2701803a79f7f48caa31f80c869a60c504c41b52"
   },
   "solver_settings": {
     "time_samples": 20001,

@@ -1,5 +1,54 @@
 # A57: attitude rate and packaging on the stage, the two rows Gen6 never recomputed
 
+> # Correction, 2026-08-22: the run used a lever arm 15.6× its own interface requirement
+>
+> **Nothing below is edited. No band is re-declared and the verdict is not changed** — the same
+> rule that left A1's sheet untouched and put its correction at the top.
+>
+> **The first run imported `attitude_budget.ASSUMED_ARM = 0.166 m`.** That is A13's arm from a
+> **Gen5** host centre of mass to the *deployer's*, and it does not describe a Gen6 geometry. For a
+> payload traversing the drive tube, the arm that matters is the perpendicular distance from the
+> host centre of mass to the **line of travel** — and [A52](A52_gen6_recoil.md) band 4 already
+> published a requirement on exactly that: **the thrust line must pass within 10.65 mm of the host
+> centre of mass.**
+>
+> **166 mm is 15.6× that requirement.** A design meeting its own published interface has the
+> smaller arm. The script now reads A52's figure live and sweeps both ends.
+>
+> | | First run, A13's inherited arm | **Corrected, A52's requirement** |
+> |---|---:|---:|
+> | Lever arm | 166.0 mm | **10.65 mm** |
+> | Offset per shot, 300 kg host | 0.1747° | **0.0112°** |
+> | Campaign offset, uncorrected | 2.0969° | **0.1346°** |
+> | Peak body rate | 0.7488 °/s | **0.0481 °/s** |
+> | Momentum per shot | 22.7619 N·m·s | **1.4609 N·m·s** |
+> | Momentum over the campaign | 273.14 N·m·s | **17.53 N·m·s** |
+> | **Band 4, Gen6 ÷ Gen5** | **2.33×** | **0.149×** |
+>
+> **Every band's verdict is unchanged.** Bands 1, 2, 3, 7 and 8 pass with more margin; band 6 still
+> fails at 200 mm, which is geometry and does not depend on the arm; bands 4 and 5 report.
+>
+> ### Band 4's direction reverses, and that is the finding
+>
+> The first run said Gen6's per-shot attitude offset is **2.33× Gen5's**. At each architecture's own
+> arm it is **0.149× — about a seventh.** *The conclusion "deleting the mover increased the attitude
+> cost" is withdrawn.*
+>
+> **What the reversal actually shows is that the lever arm dominates and the architecture barely
+> matters.** Gen5's 166 mm is an unsourced assumption; Gen6's 10.65 mm is a requirement this project
+> derived. **Band 4 is therefore comparing an assumption against a requirement, not one machine
+> against another**, and it should be read as a statement about alignment rather than about
+> architecture.
+>
+> ### What survives, and it is the part that mattered
+>
+> **[P99](../OPEN_PROBLEMS.md) survives the correction.** At A52's own requirement the campaign is
+> **17.53 N·m·s against the 15 N·m·s wheel A52 declared — it still saturates**, by 1.17× rather than
+> by 18×. The margin is now thin instead of hopeless, which makes it a design question rather than
+> a dismissal.
+>
+> **[P100](../OPEN_PROBLEMS.md)** records the arm defect itself.
+
 **Closes, if the bands hold:** the two remaining `NEEDS SOURCE` rows in
 [`docs/KILL_CRITERIA.md`](../docs/KILL_CRITERIA.md) — **row 2, envelope** and **row 5, attitude
 rate at firing**. Both were quantified for Gen5 and neither has been recomputed for the

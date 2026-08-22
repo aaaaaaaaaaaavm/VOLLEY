@@ -46,6 +46,23 @@ RESULTS = os.path.join(HERE, "results")
 HOST_MASSES = (300.0, 500.0, 700.0, 900.0)
 N_SHOTS = 12
 WHEEL_N_M_S = 15.0          # A52's wheel, reused so the two attitude runs are comparable
+
+
+def _a52_saturating_offset_m():
+    """A52's interface requirement: the thrust line must pass this close to the host CoM.
+
+    The first run of this script used attitude_budget.ASSUMED_ARM = 0.166 m -- A13's arm from a
+    GEN5 host centre of mass to the DEPLOYER's, inherited without asking whether it describes a
+    Gen6 geometry. It does not. For a payload traversing the drive tube, the arm that matters is
+    the perpendicular distance from the host CoM to the line of travel, and A52 already published
+    a requirement on exactly that: 10.65 mm.
+
+    166 mm is 15.6x A52's requirement. A design meeting its own stated interface has the smaller
+    arm, so the first run was conservative by that factor in every attitude figure. Read live
+    from A52 rather than restated. P100.
+    """
+    with open(os.path.join(RESULTS, "gen6_recoil.json"), encoding="utf-8") as fh:
+        return json.load(fh)["saturating_offset_mm"] / 1000.0
 G = 9.80665
 
 
@@ -78,26 +95,32 @@ def run():
     # duration of the stroke at constant acceleration: v = a t, s = v t / 2
     t_stroke = 2.0 * stroke / v_free
 
+    # The arm is swept rather than assumed. Its two ends are the only two the repository has:
+    # A52's published alignment requirement, and the arm A13 inherited from Gen5.
+    arm_required = _a52_saturating_offset_m()
+    arm_inherited = ab.ASSUMED_ARM
+    arm = arm_required          # the design meeting its own interface requirement
+
     rows = []
     for host in HOST_MASSES:
         inertia = _stage_inertia(host, rail_as_drawn)
-        shot = ab.move(m_sat, stroke, t_stroke, inertia)
+        shot = ab.move(m_sat, stroke, t_stroke, inertia, arm=arm)
         rows.append(dict(
             host_kg=host,
             inertia_kgm2=round(inertia, 2),
             stroke_duration_ms=round(t_stroke * 1000.0, 2),
             peak_body_rate_deg_s=round(shot["peak_body_rate_deg_s"], 6),
             residual_body_rate_deg_s=shot["residual_body_rate_deg_s"],
-            offset_per_shot_deg=round(abs(shot["attitude_offset_deg"]), 4),
-            offset_campaign_deg=round(abs(shot["attitude_offset_deg"]) * N_SHOTS, 4),
-            angular_momentum_Ns_m=round(m_sat * ab.ASSUMED_ARM * v_free, 4),
+            offset_per_shot_deg=round(abs(shot["attitude_offset_deg"]), 6),
+            offset_campaign_deg=round(abs(shot["attitude_offset_deg"]) * N_SHOTS, 6),
+            angular_momentum_Ns_m=round(m_sat * arm * v_free, 4),
         ))
 
     light = rows[0]
 
     # --- Gen5 comparison at the same host mass, using A13's own geometry (band 4) ---
     gen5_inertia = _stage_inertia(HOST_MASSES[0], rail_as_drawn) + ab.deployer_inertia()
-    gen5 = ab.move(ab.M_SLED, ab.SLED_TRAVEL, ab.T_RETURN, gen5_inertia)
+    gen5 = ab.move(ab.M_SLED, ab.SLED_TRAVEL, ab.T_RETURN, gen5_inertia, arm=arm_inherited)
     gen5_offset = abs(gen5["attitude_offset_deg"])
 
     # --- packaging (bands 6, 7, 8) ---
@@ -120,8 +143,14 @@ def run():
     a_fitted_g = a_g * (stroke / stroke_fitted)
 
     # --- band 5: momentum only. No authority, no margin. ---
-    momentum_per_shot = m_sat * ab.ASSUMED_ARM * v_free
+    momentum_per_shot = m_sat * arm * v_free
     momentum_campaign = momentum_per_shot * N_SHOTS
+    momentum_sweep = [
+        dict(arm_mm=round(a * 1000.0, 4), per_shot_Nms=round(m_sat * a * v_free, 4),
+             campaign_Nms=round(m_sat * a * v_free * N_SHOTS, 4), source=src)
+        for a, src in ((arm_required, "A52 band 4, the published alignment requirement"),
+                       (arm_inherited, "A13's Gen5 arm, inherited by the first run of this "
+                                       "script and not applicable to a Gen6 geometry (P100)"))]
 
     bands = [
         dict(band=1, question="host rate returns to zero", limit="<= 1e-9 deg/s",

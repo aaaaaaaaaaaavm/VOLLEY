@@ -54,7 +54,7 @@ changes that.
 | ~~**A54**~~ | ~~Weigh the pulse chain~~ — **RUN 2026-08-19**, one of eight, **closed P77, opened P86** | **P77**, and ADR-033's first falsifier. If it exceeds the 0.340 kg section it feeds, the trim stage costs more than it corrects and ADR-033 reverses |
 | ~~**A55**~~ | ~~Re-run A44 and A48 at ADR-034's friction share~~ — **RUN 2026-08-19**, four of nine, **closed P83 and P84** | **P83 and P84.** The trim authority was sized at a **9.75 %** friction share and the design point now runs at **28.39 %** — and the scripts still read the old stroke, so A44 and A48 are answering a superseded question. Both are new, both HIGH, and ADR-034 created them |
 | ~~**A56**~~ | ~~Re-run A43 at 22.73 bar~~ — **RUN 2026-08-19**, eight of nine, **closed P82**, opened **P87** | **P82.** The store saving is the whole of ADR-034's mass argument and it is currently a gas-ratio scaling. Carries **P84**'s repair: `precharged.py` reads the design point rather than declaring it |
-| ~~**A57**~~ | ~~Attitude rate and packaging on the stage~~ — **RUN 2026-08-22**, seven of eight, **band 6 fails as declared**, opened **P99** | **Both rows close.** Attitude rate is *answered*: 0.1747° per shot at 300 kg, 2.10° over an uncorrected campaign, and **2.33× Gen5's** because 2.4× less mass moves 5.3× further. Envelope closes as a **measured 200 mm miss** costing **1.2579 %** of exit velocity if the stroke absorbs it |
+| ~~**A57**~~ | ~~Attitude rate and packaging on the stage~~ — **RUN 2026-08-22**, seven of eight, **band 6 fails as declared**, opened **P99** and **P100** | **Both rows close.** Attitude rate is *answered*: **0.0112° per shot** at 300 kg, 0.135° over an uncorrected campaign, at A52's 10.65 mm alignment requirement. Envelope closes as a **measured 200 mm miss** costing **1.2579 %** of exit velocity if the stroke absorbs it. *The run first used a lever arm 15.6× that requirement — **P100** — and no band verdict moved when it was corrected* |
 | ~~**A58**~~ | ~~A thermal model of the chamber and reservoir across a campaign~~ — **RUN 2026-08-19**, six of eight, **opened P88** | A43 settled the reservoir between shots; nothing models the chamber, the expansion cooling, or twelve cycles of it |
 | ~~**A59**~~ | ~~Structural case for the drive tube and stage rail~~ — **RUN 2026-08-19**, six of nine, opened **P85** | **ADR-034 made this urgent.** The tube is the cylinder *and* the rail, it is now **8.0 m** long at **1.0 mm** wall, and `build_gen6.py` says in its own docstring that neither bending nor alignment is modelled. A49's own note says every omission in it flatters a long tube |
 | **A60** | **A second CAD implementation of Gen6** | Gen5 has one and **it found P71 on its first run** — both rollers outside their channels in every STEP ever built. Gen6 has never been checked by anything but the script that built it |
@@ -131,9 +131,10 @@ analysis on this page — one is the only route to kill criterion 1, the other i
 
 **6. ~~A56, A57, A58~~ — all three have run.** A56 and A58 on 2026-08-19, **A57 on 2026-08-22.** The store is **3.1216 kg**,
 24 % below the figure ADR-034 quoted (**P82 closes**), and the bulk thermal case is comfortable
-while **the seal cannot absorb its own friction** (**P88**). **A57 closed both NEEDS SOURCE rows** — and found that
-deleting the mover *increased* the per-shot attitude offset, which is the opposite of the
-intuition the architecture change was argued on. **P99** is what it opened.
+while **the seal cannot absorb its own friction** (**P88**). **A57 closed both NEEDS SOURCE rows**, and its most useful
+output was not either of them: **the lever arm dominates the attitude result and the architecture
+barely enters it.** The run first said Gen6 was 2.33× worse than Gen5 per shot and, at each
+architecture's own arm, it is about a seventh — **P100**. **P99** is what it opened.
 
 **7. A60, the second implementation.** Do it *last*, when the design has stopped moving, because
 its value is catching what the first implementation got wrong and it should check the final

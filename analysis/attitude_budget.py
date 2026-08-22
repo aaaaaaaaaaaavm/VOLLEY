@@ -59,15 +59,23 @@ def deployer_inertia():
     return M_DEPLOYER * (length**2 + width**2) / 12.0
 
 
-def move(mass, distance, duration, inertia, n=20001):
-    """Internal move, checked analytically and by numerical time integration."""
+def move(mass, distance, duration, inertia, n=20001, arm=None):
+    """Internal move, checked analytically and by numerical time integration.
+
+    `arm` defaults to ASSUMED_ARM so A13's own results are unchanged. It is a parameter because
+    A57 needed a DIFFERENT arm and the first version of that run silently reused this one --
+    A13's arm is from a Gen5 host CoM to the deployer's, and a Gen6 payload traverses a tube
+    whose offset from the stage CoM A52 already published a requirement on. P100.
+    """
+    if arm is None:
+        arm = ASSUMED_ARM
     time = np.linspace(0.0, duration, n)
     accel = 4.0 * distance / duration**2
     velocity = np.where(time <= duration / 2, accel * time,
                         accel * (duration - time))
-    body_rate = -mass * ASSUMED_ARM * velocity / inertia
+    body_rate = -mass * arm * velocity / inertia
     angle_numeric = float(np.trapezoid(body_rate, time))
-    angle_exact = -mass * ASSUMED_ARM * distance / inertia
+    angle_exact = -mass * arm * distance / inertia
     return dict(
         peak_linear_momentum_Ns=mass * 2.0 * distance / duration,
         peak_body_rate_deg_s=math.degrees(float(np.max(np.abs(body_rate)))),

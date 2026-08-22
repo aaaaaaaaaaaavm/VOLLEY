@@ -4697,11 +4697,17 @@ purpose.**
 
 | | |
 |---|---:|
-| Angular momentum the host absorbs per shot | **22.76 N·m·s** |
-| Over a twelve-shot campaign | **273.14 N·m·s** |
+| Angular momentum the host absorbs per shot | **1.46 N·m·s** |
+| Over a twelve-shot campaign | **17.53 N·m·s** |
 | The wheel [A52](validation/A52_gen6_recoil.md) declared | **15 N·m·s** |
 
-**One shot saturates it.** On A52's wheel the campaign cannot be flown without desaturating between
+> **Corrected 2026-08-22, hours after this entry opened.** It first read 22.76 and 273.14 N·m·s.
+> A57 had used a lever arm **15.6× its own interface requirement** — see **P100** — and the figures
+> above are at A52's published 10.65 mm. **The entry survives the correction**: the campaign still
+> exceeds the wheel, by **1.17×** rather than by 18×. *That change is the difference between a
+> dismissal and a design question, and it is why the arm was worth chasing.*
+
+**The campaign saturates it, and by a margin thin enough that a real wheel might close it.** On A52's wheel the campaign cannot be flown without desaturating between
 shots, and **no concept of operations in this repository describes desaturation.**
 [`docs/CONCEPT.md`](docs/CONCEPT.md) §3.3 has the stage repositioning between altitude shells on its
 own reaction control and firing at each station; it does not have it dumping momentum twelve times.
@@ -4730,12 +4736,86 @@ through a lever arm the design chose.
 
 **What would close it.** Either **E5** — a host that publishes a momentum-storage figure — or a
 ConOps that states how momentum is dumped between shots and what it costs. *The second is
-writable today and the first is not*, which makes it the cheaper half.
+writable today and the first is not*, which makes it the cheaper half. **At 1.17× a wheel one size
+up also closes it**, which was not true at the figure this entry opened with.
 
-> **The lever arm is the soft spot in the number.** `ASSUMED_ARM = 0.166 m` is inherited from A13,
-> is labelled a declared assumption in `attitude_budget.py`, and **has never been sourced.** The
-> momentum scales linearly with it. A57 uses it rather than inventing a second one, but a factor of
-> two either way is entirely possible and nothing in this repository would catch it.
+> **The lever arm was the soft spot, and it gave way within hours.** This entry originally warned
+> that `ASSUMED_ARM = 0.166 m` was inherited, unsourced, and that *"a factor of two either way is
+> entirely possible and nothing in this repository would catch it."* **It was a factor of 15.6, and
+> what caught it was reading A52 — a run in this same repository that had already published the
+> right number.** **P100.**
+
+### P100. A57 used a lever arm 15.6 times the interface requirement this project had already published: HIGH, CORRECTED 2026-08-22
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found by reading [A52](validation/A52_gen6_recoil.md) after
+[A57](validation/A57_stage_attitude_packaging.md) had already run and been recorded.**
+
+[A57](validation/A57_stage_attitude_packaging.md) imported `attitude_budget.ASSUMED_ARM = 0.166 m`
+for the perpendicular distance from the host centre of mass to the payload's line of travel.
+
+**That is A13's arm, and A13 is a Gen5 run.** It measures from a Gen5 host centre of mass to *the
+deployer's* — a sensible quantity for a 9.445 kg sled moving inside a 1.839 m box bolted to a
+satellite bus. **A Gen6 payload traverses an 8 m tube that is the stage**, and the arm that matters
+is how far that tube's axis sits from the stage's own centre of mass.
+
+**A52 band 4 had already published a requirement on precisely that**, on 2026-08-16, six days
+earlier: *the thrust line must pass within **10.65 mm** of the host centre of mass*, derived as the
+offset at which a 15 N·m·s wheel saturates within twelve shots.
+
+| | |
+|---|---:|
+| Arm A57 used | **166.0 mm** |
+| Arm A52 requires | **10.65 mm** |
+| **Ratio** | **15.6×** |
+
+**A design meeting its own published interface has the smaller arm.** A57 was conservative by 15.6×
+in every attitude figure it reported.
+
+### What it changed
+
+| | First run | Corrected |
+|---|---:|---:|
+| Offset per shot, 300 kg | 0.1747° | **0.0112°** |
+| Campaign offset | 2.0969° | **0.1346°** |
+| Momentum per shot | 22.76 N·m·s | **1.46 N·m·s** |
+| Campaign momentum | 273.14 N·m·s | **17.53 N·m·s** |
+| **Band 4, Gen6 ÷ Gen5** | **2.33×** | **0.149×** |
+
+**No band verdict moves.** Five pass with more margin, band 6 still fails at 200 mm because
+geometry does not depend on the arm, and two report.
+
+**But band 4 reverses.** A57 concluded that *"deleting the mover increased the attitude cost"*, and
+**that conclusion is withdrawn** — at each architecture's own arm, Gen6's offset is about a seventh
+of Gen5's. *What the reversal actually demonstrates is that the lever arm dominates the result and
+the architecture barely enters it*, which is a more useful finding than either number.
+
+### Why it was not caught
+
+**The two runs are six days apart and both are mine.** A52 derived an alignment requirement and
+A57 modelled an alignment-driven disturbance, and **nothing connected them** — A57 imported the
+arm from the file it imported the *model* from, which is the natural thing to do and was the wrong
+thing to do.
+
+> **The entry that warned about it was written by the run that got it wrong.**
+> [P99](#p99) — opened by A57, hours before this — says the arm *"has never been sourced"* and that
+> *"a factor of two either way is entirely possible and nothing in this repository would catch it."*
+> **It was a factor of 15.6, and what caught it was a run already in the repository.** The warning
+> was right about the risk and wrong about the size, and it looked in the wrong place for the fix.
+
+### Corrected. Propagated 2026-08-22
+
+`attitude_budget.move()` takes an optional `arm`, defaulting to `ASSUMED_ARM` so **A13's own results
+are byte-identical** — verified: only the source hash moved. `stage_attitude.py` reads A52's
+`saturating_offset_mm` live rather than restating it, and **sweeps both ends** so the sensitivity is
+in the results file rather than in a comment. A57 gets a dated correction block; its bands are not
+re-declared and its verdict is not edited. P99's figures are corrected in place and **it survives**:
+the campaign still exceeds A52's wheel, at 1.17× instead of 18×.
+
+**The Gen5 arm is still unsourced.** `ASSUMED_ARM` remains a declared assumption with no derivation
+behind it, and A13's numbers still rest on it. This entry corrects where Gen6 got its arm; it does
+not give Gen5 one.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
