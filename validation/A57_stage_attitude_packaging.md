@@ -19,9 +19,76 @@ architecture now carried as the design target. **Recoil was the third and
 
 ---
 
+## Result, 2026-08-22: seven of eight, and band 6 fails exactly as declared
+
+`analysis/stage_attitude.py`, bands committed at `974d0d6` before it existed. Results in
+`analysis/results/stage_attitude.json`.
+
+| # | Question | Result | |
+|---|---|---|---|
+| 1 | host rate returns to zero | **0.0 °/s** | **PASS** |
+| 2 | offset per shot, lightest host | **0.1747°** at 300 kg | **PASS**, band was ≤ 2.0° |
+| 3 | campaign offset, twelve shots | **2.0969°** at 300 kg | **PASS**, band was ≤ 15° |
+| 4 | Gen6 against Gen5, same host | **2.33×** | **REPORT**, as declared |
+| 5 | momentum the host must absorb | **22.7619 N·m·s** per shot, **273.14** over the campaign | **REPORT**, and no authority comparison is emitted |
+| 6 | rail as drawn fits A37's usable length | **200.0 mm over** | **FAIL**, as declared |
+| 7 | velocity cost of fitting the stroke | **1.2579 %** | **PASS**, band was ≤ 2 % |
+| 8 | acceleration at the fitted stroke | **11.6543 g** | **PASS**, band was ≤ 25 g |
+
+### Both `NEEDS SOURCE` rows close, and they close differently
+
+**Row 5, attitude rate, is answered.** A shot moves the stage by **0.1747°** at the lightest host
+in E5's range and **0.0582°** at the heaviest; twelve shots reach **2.10°** uncorrected. Peak body
+rate during the stroke is **0.7488 °/s** and it returns to zero when the payload leaves. *The
+architecture change did not make this worse in kind, and the numbers are small.*
+
+**Row 2, envelope, closes as a measured miss.** It has read *"does not apply as stated"* since
+ADR-032, and it does apply: **the rail is 200 mm longer than the stage class can accelerate over.**
+What band 7 adds is the price, which nothing had computed — **if the end hardware cannot live
+outside the usable length, the stroke gives up 200 mm and 1.2579 % of exit velocity.** That is a
+real cost and a small one, and it is now a number rather than a caveat.
+
+### Band 4: Gen6's offset is 2.33× Gen5's, which is the opposite of the intuition
+
+Gen6 moves **2.4× less mass 5.3× further** on a longer, more slender body. Those pull in opposite
+directions and the displacement wins. **Deleting the mover did not delete the attitude cost; it
+increased it per shot.** The absolute numbers stay small, so this changes no decision — but the
+sign is worth recording, because "Gen6 moves less mass" has been used loosely in this repository
+and it does not imply a smaller disturbance.
+
+### Band 5 reported a number and refused a margin, which is what it was for
+
+**22.76 N·m·s per shot.** The band forbids comparing that against any assumed control authority,
+and the script does not: `authority_comparison` returns `NOT COMPUTED`, and the script **parses its
+own source** and asserts that it makes no attribute access to a control-authority constant. A
+string search would have tripped on the docstring that forbids it; the AST check cannot.
+
+> **The finding that comparison would have produced is recorded outside the bands, not suppressed.**
+> `findings.wheel_observation` states that the per-shot momentum **exceeds the 15 N·m·s wheel A52
+> declared**, so on that assumed wheel the campaign cannot be flown without desaturating between
+> shots — and that **no ConOps in this repository describes one.** It is flagged `outside_bands`
+> and labelled as a finding about *A52's assumed wheel*, not about any real stage.
+>
+> **Suppressing it would have been the opposite failure to [P94](../OPEN_PROBLEMS.md)'s**, and
+> widening band 5 to admit it would have been P94's failure exactly. It goes in the findings block
+> and opens **[P99](../OPEN_PROBLEMS.md)**.
+
+### The script had a defect and the bands caught it
+
+**Bands 7 and 8 passed on the first run at a 0.0 % velocity loss and an unchanged acceleration.**
+The function had cut the stroke to `usable`, which is what the stroke already was — the overrun is
+**end hardware**, not stroke, and ADR-034 says so in the sentence the band was written from. *A
+band that passes by identity has not been tested.* Corrected before the run was recorded; the
+bands are unchanged and the corrected figures are 1.2579 % and 11.6543 g.
+
+**This is the fourth time a declared band has caught a bug in the analysis rather than in the
+design.**
+
+---
+
 ## Why this run exists
 
-**Gen6 deleted the mover and kept the problem.** [A13](A13_attitude_budget.md) computed Gen5's
+**Gen6 deleted the mover and kept the problem.** [A13](A13_indexing_disturbance.md) computed Gen5's
 host attitude response to an internal mass translation: a 9.445 kg sled over 1.50 m, plus a
 0.104 m cassette index, on a 200–500 kg host. **Gen6 has no sled.** What translates internally is
 **the payload itself — 4 kg over 8.0 m** — on a vehicle an order of magnitude heavier.

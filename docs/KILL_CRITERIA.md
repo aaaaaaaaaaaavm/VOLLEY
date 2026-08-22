@@ -335,20 +335,24 @@ against them.
 improves three of those **by deleting the subsystem the threshold was about** rather than by
 meeting it. A criterion that no longer applies has not been passed.
 
-| | Gen5, the measured baseline | Gen6 | |
+| | Gen5, the analysed baseline | Gen6 | |
 |---|---|---|---|
 | **1. Mass per satellite** | **10.547 kg**, crossed 5.3× | **10.547 kg on dry mass, crossed** — and **1.2145 to 3.0827 kg on added mass** at A56's sized store, the range [A45-R2](../validation/A45R2_stage_credit_resized_store.md) found when the stage credit is read hostilely. *The 1.296–3.164 published until 2026-08-20 was ADR-034's scaled store* | **Crossed on dry mass always, and on added mass as soon as P10's unmodelled lump is not credited to the stage. P59 and P68 both LIVE** |
-| **2. Envelope** | 1839 mm against ~1270, over by 44 % | **Does not apply as stated** — Gen6 is a rail on an 8 m stage, not a payload in a rideshare port. **At ADR-034 the rail is 8.2 m against A37's 8.0 m usable acceleration length** | **PARTIAL**: the 200 mm overrun is stated, but no envelope analysis exists at Gen6 |
+| **2. Envelope** | 1839 mm against ~1270, over by 44 % | **Crossed, by 200 mm.** Gen6 is a rail on an 8 m stage rather than a payload in a rideshare port, so the *rideshare* envelope does not apply — but **the rail is 8.2 m against A37's 8.0 m usable acceleration length**, and [A57](../validation/A57_stage_attitude_packaging.md) band 6 fails on it as declared | **Answered, and it is a miss.** The overrun is **end hardware, not stroke**. A57 band 7 prices the contingency ADR-034 named: if that hardware cannot live outside the usable length, the stroke gives up 200 mm — **1.2579 % of exit velocity, at 11.6543 g.** Small, and now a number |
 | **3. Bank ESR** | crossed; 65 mΩ ceiling against 116–185 available | **Dissolved.** There is no bank. A51 measures the electrical demand at **0.26 W average, 36 W peak** | **Deleted, not solved.** P26 is moot for Gen6 and stands for Gen5 |
 | **4. Tip-off** | modelled at 85.0 N of cradle preload, mechanism absent | **A38: raising acceleration does not make it worse.** Preload is now **201.674 N per contact**, still releasing inside **≤ 1 N** | **Not demonstrated.** The mechanism still does not exist |
-| **5. Attitude rate at firing** | quantified | unchanged in kind; the indexing mass move is the same problem on a larger vehicle | NEEDS SOURCE: not re-run at Gen6 |
+| **5. Attitude rate at firing** | quantified | **[A57](../validation/A57_stage_attitude_packaging.md), 2026-08-22: 0.1747° per shot at 300 kg, 0.0582° at 900 kg, 2.10° over an uncorrected campaign.** Peak body rate 0.7488 °/s, returning to zero when the payload leaves. **2.33× Gen5's offset per shot** — deleting the mover increased it, because 2.4× less mass moves 5.3× further | **Answered.** Small and bounded. The momentum the host must absorb is **22.76 N·m·s per shot**, reported without a margin because **E5** has no authority to compare it against — see **P99** |
 | **6. Host recoil** | 64.1 N·s per shot | **116.03 N·s per shot — 1.81×**, 1407.9 N·s over the campaign, **0.653 kg** of propellant to null ([A52](../validation/A52_gen6_recoil.md)) | **Answered.** The interface requirement follows: **the thrust line must pass within 10.7 mm of the host centre of mass**, against Gen5's 19.5 mm |
 | **7. Is the Δv worth anything** | 16.029 m/s | **34.280 m/s** zero-friction, **29.009** at the friction allowance, on ADR-034's design point | The one row Gen6 improves by doing more, not less. **ADR-033 restores the *commandability* the Δv is sold on** |
 
-**Two rows still want a source, and they are not bookkeeping.** Envelope and attitude rate were
-both quantified for Gen5 and neither has been recomputed for the architecture now carried as the
-design target. **Recoil was the third and [A52](../validation/A52_gen6_recoil.md) closed it on
-2026-08-19** — at 1.81× rather than the "roughly doubled" this paragraph guessed at.
+> **All three rows now have a source, as of 2026-08-22.** Recoil closed first —
+> [A52](../validation/A52_gen6_recoil.md), 2026-08-19, at 1.81× rather than the "roughly doubled"
+> this paragraph used to guess at. **Envelope and attitude rate closed together in
+> [A57](../validation/A57_stage_attitude_packaging.md)**, and they closed differently: attitude
+> rate is *answered* and small, while envelope is a **measured 200 mm miss** rather than a row that
+> does not apply. **A57 also priced the miss**, which nothing had: if the end hardware cannot live
+> outside the usable acceleration length, the stroke gives up 200 mm and **1.2579 % of exit
+> velocity**, at 11.6543 g — still inside this design's own 25 g ceiling.
 
 **Criterion 1 is the one that matters and it has not moved.** Both numerators are reported wherever
 either appears, the 2.0 kg threshold is untouched, and the honest options remain what they were:

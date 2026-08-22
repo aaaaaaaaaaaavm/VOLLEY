@@ -1,0 +1,141 @@
+{
+  "analysis": "A57",
+  "bands_declared_in": "validation/A57_stage_attitude_packaging.md",
+  "note": "rigid-body, ideal. No flexibility, slosh or control system. Host mass parametric across E5's range because no candidate stage publishes one. Nothing measured.",
+  "inputs": {
+    "payload_kg": 4.0,
+    "stroke_m": 8.0,
+    "rail_as_drawn_m": 8.2,
+    "usable_m": 8.0,
+    "v_exit_zero_friction_m_s": 34.28,
+    "lever_arm_m": 0.166,
+    "lever_arm_note": "DECLARED, inherited from A13, never sourced",
+    "stage_radius_m": 0.9,
+    "shots": 12
+  },
+  "rows": [
+    {
+      "host_kg": 300.0,
+      "inertia_kgm2": 1741.75,
+      "stroke_duration_ms": 466.74,
+      "peak_body_rate_deg_s": 0.748765,
+      "residual_body_rate_deg_s": 0.0,
+      "offset_per_shot_deg": 0.1747,
+      "offset_campaign_deg": 2.0969,
+      "angular_momentum_Ns_m": 22.7619
+    },
+    {
+      "host_kg": 500.0,
+      "inertia_kgm2": 2902.92,
+      "stroke_duration_ms": 466.74,
+      "peak_body_rate_deg_s": 0.449259,
+      "residual_body_rate_deg_s": 0.0,
+      "offset_per_shot_deg": 0.1048,
+      "offset_campaign_deg": 1.2581,
+      "angular_momentum_Ns_m": 22.7619
+    },
+    {
+      "host_kg": 700.0,
+      "inertia_kgm2": 4064.08,
+      "stroke_duration_ms": 466.74,
+      "peak_body_rate_deg_s": 0.320899,
+      "residual_body_rate_deg_s": 0.0,
+      "offset_per_shot_deg": 0.0749,
+      "offset_campaign_deg": 0.8987,
+      "angular_momentum_Ns_m": 22.7619
+    },
+    {
+      "host_kg": 900.0,
+      "inertia_kgm2": 5225.25,
+      "stroke_duration_ms": 466.74,
+      "peak_body_rate_deg_s": 0.249588,
+      "residual_body_rate_deg_s": 0.0,
+      "offset_per_shot_deg": 0.0582,
+      "offset_campaign_deg": 0.699,
+      "angular_momentum_Ns_m": 22.7619
+    }
+  ],
+  "bands": [
+    {
+      "band": 1,
+      "question": "host rate returns to zero",
+      "limit": "<= 1e-9 deg/s",
+      "value": 0.0,
+      "verdict": "PASS"
+    },
+    {
+      "band": 2,
+      "question": "attitude offset per shot, lightest host",
+      "limit": "<= 2.0 deg",
+      "value": 0.1747,
+      "verdict": "PASS"
+    },
+    {
+      "band": 3,
+      "question": "campaign offset, twelve shots, lightest host",
+      "limit": "<= 15 deg",
+      "value": 2.0969,
+      "verdict": "PASS"
+    },
+    {
+      "band": 4,
+      "question": "Gen6 against Gen5 offset per shot, same host",
+      "limit": "REPORT, no pass/fail",
+      "value": 2.3273,
+      "gen5_offset_deg": 0.0751,
+      "verdict": "REPORT"
+    },
+    {
+      "band": 5,
+      "question": "momentum the host must absorb",
+      "limit": "REPORT in N.m.s; NO comparison against any control authority (E5, P94)",
+      "per_shot_Nms": 22.7619,
+      "campaign_Nms": 273.143,
+      "authority_comparison": "NOT COMPUTED -- no host control authority exists in this project (E5). A13 band 5 passed against an invented one (P94) and this band exists so that cannot recur. The band forbids a margin, so A52's declared wheel is NOT reported in this band; see findings.wheel_observation, which is outside the bands",
+      "verdict": "REPORT"
+    },
+    {
+      "band": 6,
+      "question": "rail as drawn fits A37's usable acceleration length",
+      "limit": "overrun <= 0 mm",
+      "value": 200.0,
+      "verdict": "FAIL"
+    },
+    {
+      "band": 7,
+      "question": "exit-velocity cost of cutting the stroke to fit",
+      "limit": "<= 2 % of zero-friction v_exit",
+      "value": 1.2579,
+      "v_fitted_m_s": 33.8488,
+      "stroke_fitted_m": 7.8,
+      "end_hardware_m": 0.2,
+      "verdict": "PASS"
+    },
+    {
+      "band": 8,
+      "question": "payload acceleration at the fitted stroke",
+      "limit": "<= 25 g (this design's own ceiling, P98)",
+      "value": 11.6543,
+      "verdict": "PASS"
+    }
+  ],
+  "findings": {
+    "wheel_observation": {
+      "outside_bands": true,
+      "why": "Band 5 forbids any comparison against an assumed control authority, and it is not widened here. This is recorded as a finding instead, because suppressing it would be the opposite failure to P94's.",
+      "momentum_per_shot_Nms": 22.7619,
+      "a52_declared_wheel_Nms": 15.0,
+      "a52_wheel_status": "DECLARED ASSUMPTION in A52, not a host property. E5 stands.",
+      "observation": "The per-shot angular momentum exceeds the wheel A52 declared. On that assumed wheel the campaign cannot be flown without desaturating between shots, which no ConOps in this repository describes.",
+      "what_it_is_not": "This is NOT a finding about any real stage. It is a finding about A52's assumed wheel, and it would change entirely on a real one."
+    },
+    "band4_direction": {
+      "gen6_over_gen5": 2.3273,
+      "why": "Gen6 moves 2.4x less mass 5.3x further on a longer, more slender body. The displacement wins: the offset per shot is larger, not smaller."
+    }
+  },
+  "software": {
+    "python": "3.11.15",
+    "source_sha256": "3e41e1d3a6d2c871e5e2bcd3eac78fd72bbd8dae58c44fb2c9cbc9c03de2fa55"
+  }
+}

@@ -79,7 +79,6 @@ BLOCKED = [
     (r'\b84\.5\b|\b132\.5\b|\b76\.5\b|\b124\.5\b', 'pre-A46 system mass; now 126.6 / 174.6 kg'),
     (r'39\.7\s*mm', 'pre-A55 trim section; A55 resized it to 144.01 mm and ADR-036 suspended it'),
     (r'\b7\.5\s*[x×]', 'pre-A46 cold-gas loss ratio; now 12.4x'),
-    (r'65 run sheets', 'there are 64 files covering 61 analyses; A3, A26, A57 and A60 were never written'),
     (r'130 (?:defect|numbered|register)', 'the register count is generated -- read it from public_facts'),
     (r'\((?:1[0-7]) pages\)', 'the manuscript is 18 pages; a landing page must not state an older count'),
     (r'the conference paper', 'it is an IEEE-formatted manuscript; no venue has been selected'),
@@ -163,6 +162,14 @@ def main():
                 problems.append(f"{rel}: says {m.group(1)} register entries, "
                                 f"current is {v['register_total']} (analysis/results/register_status.json)")
         # only where it sits beside a register total, so a mermaid class name is not a count
+        for m in re.finditer(r'(\d{2,3}) run sheets', text):
+            if int(m.group(1)) != v['run_sheet_files']:
+                problems.append(f"{rel}: says {m.group(1)} run sheets, current is "
+                                f"{v['run_sheet_files']} files (counted in validation/)")
+        for m in re.finditer(r'(\d{2,3}) analyses', text):
+            if int(m.group(1)) != v['run_sheet_distinct']:
+                problems.append(f"{rel}: says {m.group(1)} analyses, current is "
+                                f"{v['run_sheet_distinct']} distinct A-numbers")
         for m in re.finditer(r'(?:numbered entries|register entries)[^.\n]{0,20}?(\d{1,3}) live', text):
             if int(m.group(1)) != v['register_live']:
                 problems.append(f"{rel}: says {m.group(1)} live, current is {v['register_live']}")

@@ -4688,6 +4688,55 @@ accepts it.**
 > envelope — and both were the strongest-sounding sentence in the abstract. *A claim that a result
 > is safe is still a claim, and it needs a source like any other.*
 
+### P99. One shot's angular momentum exceeds the only wheel this project has ever named: HIGH, NEW 2026-08-22
+> **Status:** `LIVE` — open engineering; something still has to be done
+
+
+**Found by [A57](validation/A57_stage_attitude_packaging.md), and recorded outside its bands on
+purpose.**
+
+| | |
+|---|---:|
+| Angular momentum the host absorbs per shot | **22.76 N·m·s** |
+| Over a twelve-shot campaign | **273.14 N·m·s** |
+| The wheel [A52](validation/A52_gen6_recoil.md) declared | **15 N·m·s** |
+
+**One shot saturates it.** On A52's wheel the campaign cannot be flown without desaturating between
+shots, and **no concept of operations in this repository describes desaturation.**
+[`docs/CONCEPT.md`](docs/CONCEPT.md) §3.3 has the stage repositioning between altitude shells on its
+own reaction control and firing at each station; it does not have it dumping momentum twelve times.
+
+### Why this is a finding and not a band
+
+**A57 band 5 forbids exactly this comparison.** It was written that way because
+[P94](#p94-a13-band-5-passes-on-a-host-control-authority-that-e5-says-does-not-exist) is open:
+A13 band 5 *passed* by dividing a correct result by a host control authority of 0.1 N·m that
+**[E5](#e5-host-stage-properties-unavailable)** records does not exist.
+
+**So A57 had two ways to fail and took neither.** Widening band 5 to admit the comparison would
+have repeated P94. Suppressing the number because the band forbade it would have been the opposite
+failure — *hiding a real consequence behind a procedural rule.* It is reported in
+`findings.wheel_observation`, flagged `outside_bands`, and it opens this entry.
+
+### What this entry is not
+
+**It is not a finding about any real stage.** A52's 15 N·m·s wheel is a **declared assumption**,
+chosen so two attitude runs could be compared, and it is not a property of any candidate vehicle.
+**E5 stands: no candidate stage publishes its mass or its control authority.** On a real stage this
+number could be comfortable or hopeless and nothing here can tell which.
+
+**What is real is the momentum**, which is a property of this machine: 4 kg leaving at 34.28 m/s
+through a lever arm the design chose.
+
+**What would close it.** Either **E5** — a host that publishes a momentum-storage figure — or a
+ConOps that states how momentum is dumped between shots and what it costs. *The second is
+writable today and the first is not*, which makes it the cheaper half.
+
+> **The lever arm is the soft spot in the number.** `ASSUMED_ARM = 0.166 m` is inherited from A13,
+> is labelled a declared assumption in `attitude_budget.py`, and **has never been sourced.** The
+> momentum scales linearly with it. A57 uses it rather than inventing a second one, but a factor of
+> two either way is entirely possible and nothing in this repository would catch it.
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 
