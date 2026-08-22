@@ -1,0 +1,76 @@
+# The gates, on every push. Nothing here reaches the network and nothing here is optional:
+# each of these caught a real defect in this repository before it was written down as a gate.
+name: gates
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  core:
+    name: offline gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # check_companions asks git what has changed since the export
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: links
+        run: python3 tools/check_links.py
+      - name: register
+        run: python3 tools/register_status.py --check
+      - name: baseline
+        run: python3 tools/make_baseline.py --check
+      - name: public surfaces
+        run: python3 tools/check_public.py
+      - name: cross-references
+        run: python3 tools/check_crossrefs.py
+      - name: companion payloads
+        run: python3 tools/check_companions.py
+      - name: computational closure
+        run: python3 tools/check_computational_closure.py
+
+      - name: nothing generated drifted
+        run: |
+          python3 analysis/payload_family.py > /dev/null
+          python3 analysis/cell_manifest.py > /dev/null
+          python3 tools/register_status.py > /dev/null
+          git diff --exit-code
+
+  solvers:
+    name: solver-backed validation
+    runs-on: ubuntu-latest
+    # The heavy half. gmsh, CalculiX, ngspice and CadQuery are not needed to check that the
+    # record is consistent, only to reproduce the runs behind it, so they are separated rather
+    # than paid for on every push.
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: system solvers
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq calculix-ccx ngspice
+      - name: python solvers
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install gmsh scikit-fem cadquery CoolProp SALib
+      - name: CAD against parameters
+        run: |
+          python3 cad/build_gen5.py --check
+          python3 cad/build_gen6.py --check
+      - name: artifacts
+        run: python3 tools/check_artifacts.py

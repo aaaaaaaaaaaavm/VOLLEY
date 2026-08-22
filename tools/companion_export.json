@@ -1,6 +1,6 @@
 {
-  "flagship_commit": "daa94e6",
-  "flagship_tree_was_dirty": false,
+  "flagship_commit": "3228b7a",
+  "flagship_tree_was_dirty": true,
   "note": "The commit the companions were last generated from. tools/check_companions.py fails when any manifest source has been committed since. Regenerate with tools/export_companion.py and push both companions.",
   "manifest_sources": [
     "CAD_BRIEF.md",
