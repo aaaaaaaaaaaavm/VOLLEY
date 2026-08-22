@@ -103,3 +103,61 @@ component, not a number.*
 > **What does not move.** **Both laws put the exit angular rate far above the 2.0 °/s band** — 4.5×
 > at the friendlier one. **The finding survives the model-form uncertainty; the precision of the
 > figure does not**, and [P108](../OPEN_PROBLEMS.md) is restated accordingly rather than withdrawn.
+
+---
+
+> ## CORRECTION 2026-08-22, later the same day — **P111**. The damping relation was misattributed.
+>
+> **The results above are kept and one of their labels is wrong.**
+>
+> **What this run called *"Hunt–Crossley's own coefficient"* — `χ = 3(1−e)/(2e)` — is not
+> Hunt–Crossley's.** Hunt & Crossley (1975), *Coefficient of restitution interpreted as damping in
+> vibroimpact*, J. Appl. Mech. **42**(2), give the hysteresis damping factor to first order in
+> (1−e) as **λ = 3k(1−e)/(2v⁻)**, i.e. **χ = 3(1−e)/2 — with no `e` in the denominator.**
+> Relations carrying `e` in the denominator belong to the **later corrected family**, and the
+> constant used here is 3/2.
+>
+> **The primary sources for that later family have not been read** — publisher records were not
+> retrievable — so the implementation is now named **`MOD`, for its form, and not for an author.**
+> *A68 as first published attached an author's name to a formula that author did not write, and
+> then reasoned from the attribution.*
+>
+> ### And the reasoning that rested on it was wrong
+>
+> A68 claimed HC *"does not assume e → 1"*. **It does.** Both are first-order-in-(1−e) relations
+> and both degrade the same way:
+>
+> | Declared e | **LN** | **HC — actual** | **MOD** | **ID** |
+> |---:|---:|---:|---:|---:|
+> | 0.9 | +1.5 % | **+1.0 %** | −0.0 % | 0.000 % |
+> | 0.7 | +13.7 % | **+9.7 %** | −0.4 % | 0.000 % |
+> | 0.5 | +45.0 % | **+32.6 %** | −2.5 % | 0.000 % |
+> | 0.3 | +128.1 % | **+93.8 %** | −9.8 % | 0.000 % |
+> | 0.2 | +236.1 % | **+173.4 %** | −17.2 % | 0.000 % |
+>
+> **Band 2 as declared still passes** — HC's error is below LN's at every e under 0.7 — **but it
+> passes for a different reason than the run sheet gave.** The formulation that actually holds at
+> low restitution is the `(1−e)/e` family, and calling it Hunt–Crossley concealed that.
+>
+> ### The identification is not validation, and now there is something that is
+>
+> **`ID` root-finds χ using the same fixed-step RK4 solver until that solver returns the requested
+> e. That cannot validate the solver** — it is parameter identification, and A68 presented it as
+> if it were verification.
+>
+> **An independent integrator has been added.** `impact_ivp()` solves the same impact with
+> **scipy's adaptive implicit Radau**, at `rtol = 1e-11`, with an event-terminated separation —
+> a different code path, order, step control and stiffness treatment. **At every identified χ it
+> agrees with the RK4 result to 0.000 %.** *That is the verification; the identification is not.*
+>
+> ### The VOLLEY model-form spread, with all three correctly named
+>
+> | Law | Exit angular rate | Peak contact | Contacts |
+> |---|---:|---:|---:|
+> | **LN** | 14.845 °/s | 225.8 N | 39 |
+> | **HC — actual** | **12.390 °/s** | 277.1 N | 36 |
+> | **MOD** | 8.954 °/s | 298.3 N | 25 |
+>
+> **Band 6's 65.8 % spread is unchanged**, because the extremes are unchanged. **What changes is
+> that the spread is now across three sourced formulations rather than two, one of them
+> misnamed.** *The band still fails and the failure still means the magnitude is unresolved.*

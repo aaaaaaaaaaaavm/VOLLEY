@@ -5608,6 +5608,49 @@ model is right**, and the verification language is corrected to say so.
 [`tools/check_bands.py`](tools/check_bands.py) is the narrow thing that can be automated: it finds
 band verdicts that are assigned rather than computed.
 
+### P111. A68 attached Hunt–Crossley's name to a relation they did not write, and reasoned from the attribution: HIGH, CORRECTED 2026-08-22
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**[A68](validation/A68_contact_law.md) implemented `χ = 3(1−e)/(2e)` and called it *"Hunt–Crossley's
+own coefficient"*, adding that it *"does not assume e → 1"*. Both statements are wrong.**
+
+**Hunt & Crossley (1975)**, *Coefficient of restitution interpreted as damping in vibroimpact*,
+J. Appl. Mech. **42**(2), give the damping factor to first order in (1−e) as
+**λ = 3k(1−e)/(2v⁻)** — **χ = 3(1−e)/2, with no `e` in the denominator.** It is a first-order
+relation and it degrades exactly as Lankarani–Nikravesh does: **+9.7 % at e = 0.7 and +173 % at
+0.2**, against LN's +13.7 % and +236 %.
+
+**The relation A68 implemented belongs to the later corrected family**, whose members carry `e` in
+the denominator. **Its primary sources have not been read** — publisher records were not
+retrievable — so it is renamed **`MOD`, for its form, not for an author**, and the run sheet says
+what is and is not known about where it comes from.
+
+> **The defect is not the formula, which works: it returns −0.4 % at the nominal restitution.**
+> **The defect is that a name was attached to it and then used as an argument.** *"HC does not
+> assume e → 1"* was reasoning from a label, and the label was wrong. **[P22](#p22) is the entry
+> about citing what has not been read; this is citing what has not been checked.**
+
+### And the second claim was also not what it was presented as
+
+**A68's `ID` root-finds the damping coefficient using the same fixed-step RK4 solver until that
+solver returns the requested restitution.** That is **parameter identification**. A68 reported it
+under *"restitution recovery"* alongside the two derived relations, where it reads as verification
+of the impact model. **It cannot be: the solver is being asked to agree with itself.**
+
+**Corrected. Propagated.** Something genuinely independent is added. `impact_ivp()` solves the same impact
+with **scipy's adaptive implicit Radau integrator** at `rtol = 1e-11` with event-terminated
+separation — a different code path, order, step control and stiffness treatment. **It agrees with
+the RK4 result to 0.000 % at every identified coefficient.** *That is the verification. The
+identification is a fitting step and is now labelled as one.*
+
+### What survives
+
+**Band 6 still fails at 65.8 %** and the three correctly-named formulations give **14.845, 12.390
+and 8.954 °/s** on the same VOLLEY case. **The conclusion — that the magnitude of Gen6's tip-off
+problem is model-form-limited and unresolved — is unchanged.** What changes is that it now rests
+on three formulations that are named for what they are.
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 > **Scope:** `GEN6` · **Next step:** `FLIGHT_OPS` — published dispenser deployment counts and failure records

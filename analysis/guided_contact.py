@@ -291,8 +291,13 @@ def integrate(prm, h=None, t_max=1.2):
     return exit_st, peak, impulse, hits, e_fric, e_cont, live, diverged, h
 
 
+# P111: "HC" here named the wrong relation. Hunt-Crossley's own first-order coefficient is
+# 3(1-e)/2, with no e in the denominator; the relation with e in the denominator belongs to the
+# later corrected family and is named MOD for its form, because its primary source has not been
+# read. Both are carried so the model-form comparison is between correctly named laws.
 CHI = {"LN": lambda e: 3.0 * (1.0 - e * e) / 4.0,
-       "HC": lambda e: 3.0 * (1.0 - e) / (2.0 * e)}
+       "HC": lambda e: 3.0 * (1.0 - e) / 2.0,
+       "MOD": lambda e: 3.0 * (1.0 - e) / (2.0 * e)}
 
 
 def _chi(law, e):
@@ -302,7 +307,7 @@ def _chi(law, e):
     if callable(law):
         return np.atleast_1d(law(e))
     return np.full_like(e, float(law))
-LAW = "HC"      # A68: HC returns restitution to -0.4 % at the nominal e where LN returns +13.7 %
+LAW = "MOD"     # A68/P111: the (1-e)/e family returns -0.4 % at the nominal e; LN +13.7 %, HC +9.7 %
 
 
 def pack(clearance_um, land_sep_mm, straightness_mm, ecc_mm, cg_off_mm, friction_N, e, law=None):

@@ -39,6 +39,27 @@ def chi_ln(e):
 
 
 def chi_hc(e):
+    """Hunt-Crossley's OWN first-order relation.
+
+    Hunt & Crossley (1975), 'Coefficient of restitution interpreted as damping in vibroimpact',
+    J. Appl. Mech. 42(2), give the hysteresis damping factor to first order in (1 - e) as
+    lambda = 3k(1 - e)/(2 v_minus), i.e. chi = 3(1 - e)/2. THERE IS NO e IN THE DENOMINATOR.
+    """
+    return 3.0 * (1.0 - e) / 2.0
+
+
+def chi_mod(e):
+    """A modified hysteresis-damping relation of the chi = a(1 - e)/e family.
+
+    A68 as first published called this 'Hunt-Crossley's own coefficient'. IT IS NOT -- see
+    chi_hc above. Relations with e in the denominator belong to the later corrected family
+    (Gonthier and others use (1 - e^2)/e; Flores and others use 8(1 - e)/(5e)); the specific
+    constant used here is 3/2. P111.
+
+    The primary sources for the later family have NOT been read: publisher records were not
+    retrievable, so this function is named for its FORM and not for an author. Its behaviour is
+    measured in the run sheet like any other candidate.
+    """
     return 3.0 * (1.0 - e) / (2.0 * e)
 
 
@@ -97,4 +118,28 @@ def chi_identified(e, K, m, v0, h=2.0e-8):
     return brentq(f, lo, hi, xtol=1e-6, rtol=1e-10)
 
 
-LAWS = {"LN": chi_ln, "HC": chi_hc}
+LAWS = {"LN": chi_ln, "HC": chi_hc, "MOD": chi_mod}
+
+
+def impact_ivp(chi, K, m, v0, n=N_EXP):
+    """The same impact through an INDEPENDENT integrator: scipy's adaptive Radau.
+
+    This is what the fixed-step RK4 result is checked against. It is not the same code path,
+    not the same order, not the same step control and not the same stiffness treatment. The
+    identification routine root-finds against the RK4 solver, so it can never validate it --
+    that is parameter identification, not verification, and the run sheet says so.
+    """
+    from scipy.integrate import solve_ivp
+
+    def f(_t, y):
+        d, dd = y
+        if d <= 0.0:
+            return [dd, 0.0]
+        return [dd, -K * d ** n * max(1.0 + chi * dd / v0, 0.0) / m]
+
+    def sep(_t, y):
+        return y[0]
+    sep.terminal, sep.direction = True, -1
+    sol = solve_ivp(f, (0.0, 1.0), [1e-15, v0], method="Radau", events=sep,
+                    rtol=1e-11, atol=1e-16, max_step=1e-5)
+    return abs(sol.y[1][-1]) / v0
