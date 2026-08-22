@@ -67,12 +67,23 @@ Smaller payloads. The deployer mass is fixed; the number of satellites it carrie
 
 | Payload | Volume ratio said | **Designed cell (A24)** | Deployer mass per satellite |
 |---|---:|---:|---|
-| 3U CubeSat | 12 | **12** | 10.547 kg, **fails** |
+| 3U CubeSat | 12 | **12** | 10.550 kg, **fails by 5.3×** |
 | ThinSat | 123 | **NOT ACCOMMODATED** | — |
-| 1U | 40 | **36** | **2.125 kg, now fails** |
-| TubeSat | 41 | **24** | **3.188 kg, now fails** |
-| PocketQube 3P | 108 | **96** | 0.797 kg, passes |
-| **PocketQube 1P** | 326 | **288** | **0.266 kg, passes by 2 to 4x** |
+| 1U | 40 | **36** | **3.517 kg, fails** |
+| TubeSat | 41 | **24** | **5.275 kg, fails** |
+| PocketQube 3P | 108 | **96** | **1.319 kg, passes** |
+| **PocketQube 1P** | 326 | **288** | **0.440 kg, passes** |
+
+> **Corrected 2026-08-22 — [P101](../OPEN_PROBLEMS.md).** Four of these six rows divided a dry mass
+> of **76.5 kg** while the 3U row beside them had already been updated to the **126.6 kg**
+> [A46](../validation/A46_enclosure_buildup.md) produced — one table, two rollups. The cell counts
+> are geometry and did not move. **The answer did not change and the margins did**: 1U was over the
+> threshold before this correction and is further over now, and the two rungs that close the
+> criterion are still the two PocketQube classes.
+>
+> **[`D2_DECISION.md`](D2_DECISION.md) prices what those two rungs cost**, and the cost is the
+> product's central claim: **24 satellites share one commanded velocity at 1P and 8 at 3P**, where
+> at 3U a cell holds one satellite and velocity is per customer.
 
 > **Corrected again on 2026-08-10, and this time the correction moves the answer.** The counts
 > above were volumetric until **A24** built the ladder as an actual design — a fixed cell of

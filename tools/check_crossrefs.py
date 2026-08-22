@@ -2,13 +2,14 @@
 
 WHY THIS EXISTS
 ---------------
-Five register entries in ten days were the same defect wearing different clothes:
+Six register entries in ten days were the same defect wearing different clothes:
 
     P83   the trim authority was sized at a friction share the design point had left behind
     P84   ADR-034 moved parameters.json and the documents, and left the scripts at the old point
     P96   the manuscript argued from a number its own table had already replaced
     P97   ADR-030 shortened the regenerative section and the recovery figure never moved with it
     P100  A57 used a lever arm 15.6x the interface requirement A52 had published six days earlier
+    P101  the payload ladder D2 turns on divided a dry mass three corrections out of date
 
 **Every one of them is two files disagreeing about a shared quantity**, and every existing gate
 passed while they were true. `make_baseline.py --check` guards the twenty-three values BASELINE.md
@@ -91,6 +92,16 @@ REFS = [
      "parameters", "gen6_drive.exit_velocity_m_s_zero_friction",
      "stage_attitude", "inputs.v_exit_zero_friction_m_s", 1.0, 0.5,
      "the same propagation as the stroke, one field along"),
+    ("Gen5 dry mass, designed cell",
+     "mass_properties", "dry_kg", "cell_manifest", "deployer_dry_kg", 1.0, 0.5,
+     "P101. The designed-cell ladder is this number over the manifest count, and it is the table "
+     "decision D2 turns on. It sat at 84.5 kg for six days after A46 published 126.6, and the "
+     "document quoting it sat at 76.5"),
+    ("mass per 3U satellite, volumetric against designed",
+     "payload_family", "classes.tag=3U CubeSat.kg_per_satellite",
+     "cell_manifest", "classes.tag=3U CubeSat.kg_per_satellite", 1.0, 0.5,
+     "P101. At 3U a designed cell holds exactly one satellite, so the two ladders MUST return the "
+     "same rung. When they do not, one of them was not re-run"),
     ("thrust-line lever arm",
      "gen6_recoil", "saturating_offset_mm", "stage_attitude", "inputs.lever_arm_m", 1000.0, 1.0,
      "P100. A52 published an alignment REQUIREMENT and A57 modelled the disturbance it causes; "

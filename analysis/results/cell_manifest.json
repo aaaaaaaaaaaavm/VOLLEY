@@ -6,7 +6,7 @@
   ],
   "cells_total": 12,
   "divider_mm": 1.5,
-  "deployer_dry_kg": 84.5,
+  "deployer_dry_kg": 126.6,
   "sep_target_m": 10.0,
   "sep_time_s": 120.0,
   "classes": [
@@ -28,7 +28,7 @@
         2.5
       ],
       "n_per_load": 8640,
-      "kg_per_satellite": 0.01,
+      "kg_per_satellite": 0.015,
       "volumetric_n": 13322,
       "sep": 0.08333333333333333,
       "shim": {
@@ -57,7 +57,7 @@
         50
       ],
       "n_per_load": 288,
-      "kg_per_satellite": 0.293,
+      "kg_per_satellite": 0.44,
       "volumetric_n": 326,
       "sep": 0.08333333333333333,
       "shim": {
@@ -105,7 +105,7 @@
         50
       ],
       "n_per_load": 96,
-      "kg_per_satellite": 0.88,
+      "kg_per_satellite": 1.319,
       "volumetric_n": 108,
       "sep": 0.08333333333333333,
       "shim": {
@@ -134,7 +134,7 @@
         88
       ],
       "n_per_load": 24,
-      "kg_per_satellite": 3.521,
+      "kg_per_satellite": 5.275,
       "volumetric_n": 41,
       "sep": 0.08333333333333333,
       "shim": {
@@ -163,7 +163,7 @@
         100
       ],
       "n_per_load": 36,
-      "kg_per_satellite": 2.347,
+      "kg_per_satellite": 3.517,
       "volumetric_n": 40,
       "sep": 0.08333333333333333,
       "shim": {
@@ -192,7 +192,7 @@
         100
       ],
       "n_per_load": 12,
-      "kg_per_satellite": 7.042,
+      "kg_per_satellite": 10.55,
       "volumetric_n": 12,
       "sep": null,
       "shim": null,
@@ -241,7 +241,7 @@
     {
       "band": "1",
       "name": "cell model reproduces the 3U machine",
-      "detail": "12 per load, 7.042 kg/sat (against 12 and 6.375)",
+      "detail": "12 per load, 10.55 kg/sat (against 12 and 6.375)",
       "pass_": false
     },
     {
@@ -253,7 +253,7 @@
     {
       "band": "3",
       "name": "a designed class closes kill criterion 1 (<= 2.0 kg/sat)",
-      "detail": "PocketQube 1P 0.293, PocketQube 3P 0.88",
+      "detail": "PocketQube 1P 0.44, PocketQube 3P 1.319",
       "pass_": true
     },
     {

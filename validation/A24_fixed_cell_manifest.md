@@ -12,6 +12,50 @@ manifest** closes [`KILL_CRITERIA.md`](../docs/KILL_CRITERIA.md) **threat 1**.
 
 ## Result, 2026-08-10: five of six. Band 6 failed on one class, and the reason is worth more than the pass
 
+> ## CORRECTION 2026-08-22 — the run is unchanged, its divisor is not. **P101**
+>
+> **Nothing below is edited.** The bands are not re-declared, the verdicts recorded on 2026-08-10
+> stand as run, and this block is the whole of the change.
+>
+> **Every `kg per satellite` figure on this page is `deployer_dry_kg / n_per_load`, and the
+> numerator has moved twice since the run.** A24 divided **76.5 kg**. The committed results file
+> was last written against **84.5 kg**. [A46](A46_enclosure_buildup.md) replaced P10's 8.00 kg
+> enclosure placeholder with 50.04 kg of derived line items on 2026-08-16, and the rollup has read
+> **126.6 kg** ever since. **The counts, the arrangements and the three refusals are geometry and
+> do not move at all.**
+>
+> `analysis/cell_manifest.py` was re-run on 2026-08-22 with no edit to the script, which reads the
+> rollup live and always did:
+>
+> | Class | Per load | This page, 76.5 kg | Results file, 84.5 kg | **Re-run, 126.6 kg** |
+> |---|---:|---:|---:|---:|
+> | ChipSat / femtosat | 8640 | 0.009 | 0.010 | **0.015** |
+> | PocketQube 1P | 288 | 0.266 | 0.293 | **0.440** |
+> | PocketQube 3P | 96 | 0.797 | 0.880 | **1.319** |
+> | TubeSat | 24 | 3.188 | 3.521 | **5.275** |
+> | 1U CubeSat | 36 | 2.125 | 2.347 | **3.517** |
+> | **3U CubeSat** | **12** | **6.375** | 7.042 | **10.550** |
+>
+> **Band 1 now fails, and it is not being edited.** It compares the cell model against a reference
+> of **6.375 kg/satellite hardcoded in the script** at line 182. The cell model still reproduces
+> the machine exactly — twelve per load, and 10.55 kg is the rollup over twelve — so **what band 1
+> detects at the current inputs is its own frozen reference.** That is recorded rather than
+> repaired: a band that has to be rewritten to keep passing is a band that was measuring the wrong
+> thing, and saying so is worth more than a green row.
+>
+> **Band 3 still passes and its margin is thinner than it reads here.** It asks whether *some*
+> designed class closes the 2.0 kg threshold. **Two rungs do — PocketQube 1P and 3P.** **1U does
+> not**, at 3.517 kg, and this page's own text below calls 1U *"the rung this repository had been
+> leaning on"*. TubeSat does not either. Bands 2, 4 and 5 are geometric and pass unchanged; band 6
+> fails as it did, for the reason [P44](../OPEN_PROBLEMS.md) records.
+>
+> **One thing on this page has no committed record at all.** The 6U row is produced by the script's
+> `multi_cell()` path, which prints and does not write — the results file records 6U as *not
+> accommodated*, with zero per load. The classes that consume **whole cells** are therefore
+> published here and stored nowhere. [`docs/D2_DECISION.md`](../docs/D2_DECISION.md) does not rest
+> on that row.
+
+
 `analysis/cell_manifest.py`, bands committed at `5fdc978` before it existed. Results in
 `analysis/results/cell_manifest.json`.
 

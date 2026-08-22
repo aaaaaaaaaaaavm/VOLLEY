@@ -81,8 +81,14 @@ The deployer's mass is fixed. The number of customers it carries is not, and
 [`KILL_CRITERIA.md`](KILL_CRITERIA.md) threat 1 is the one that decides whether VOLLEY has a
 reason to exist. Against a cold-gas module at 0.5 to 1.2 kg giving the same 16.5 m/s, the **3U
 configuration loses by about 8x** at 10.547 kg per satellite, and the **PocketQube configuration
-wins by 2 to 5x** at 0.236 kg. That is the entire commercial argument, and it turns on payload
-class rather than on any machine parameter.
+wins**, at **0.388 kg** volumetric and **0.440 kg** on A24's designed cell. That is the entire
+commercial argument, and it turns on payload class rather than on any machine parameter.
+
+> **Corrected 2026-08-22 — [P101](../OPEN_PROBLEMS.md).** This sentence read *"wins by 2 to 5x at
+> 0.236 kg"*, a figure computed against a **76.5 kg** rollup. The current values are above.
+> **The multiplier is deliberately not restated**: it was a ratio against a cold-gas module quoted
+> as a range, and re-deriving it here would put a number in a document that no results file holds.
+> **NEEDS SOURCE: the PocketQube-against-cold-gas multiplier at the current rollup.**
 
 ### How the packing counts are computed, because they used to be wrong
 
@@ -94,9 +100,11 @@ So the model is calibrated instead of asserted: packing efficiency is set so the
 returns the twelve the machine is actually laid out for**, and the same 56.2 % is applied to every
 other class. This file previously carried a raw volumetric bound with a note that "realistic
 packing is likely 40 to 60 %", and then quoted the unadjusted numbers anyway. **PocketQube 1P was
-published here as 546 per load and 0.14 kg per satellite; calibrated, it is 326 and 0.236 kg.**
-The conclusion survives — it still beats the cold-gas comparator — but the margin is 2 to 5x
-rather than 6x, and the old figure should not be quoted.
+published here as 546 per load and 0.14 kg per satellite; calibrated, it is 326 and, at the
+rollup of the day, 0.236 kg.** The conclusion survives — it still beats the cold-gas comparator —
+and the old figure should not be quoted. *Both mass figures in this paragraph are the 2026-07-31
+record of a packing correction, not current: the count of 326 stands, and the per-satellite figure
+is now **0.388 kg** in the table above (**P101**).*
 
 ### Superseded by A24: the ladder is now a design
 
@@ -110,11 +118,20 @@ rather than 6x, and the old figure should not be quoted.
 > |---|---:|---:|
 > | ThinSat | 123 per load | **NOT ACCOMMODATED** — 114 mm exceeds the 100 mm cell section in two axes |
 > | 12U | 3 per load | **NOT ACCOMMODATED** — needs 200 mm in both section axes; the cassette is 166 mm wide |
-> | 1U | 40 per load, 1.913 kg | **36 per load, 2.125 kg** — over the 2 kg threshold |
-> | TubeSat | 41 per load, 1.866 kg | **24 per load, 3.188 kg** — over the threshold |
+> | 1U | 40 per load, 3.165 kg | **36 per load, 3.517 kg** — over the 2 kg threshold |
+> | TubeSat | 41 per load, 3.088 kg | **24 per load, 5.275 kg** — over the threshold |
 >
-> Threat 1 still closes, on the PocketQube classes at 0.266 and 0.797 kg. **It no longer closes
+> Threat 1 still closes, on the PocketQube classes at **0.440 and 1.319 kg**. **It no longer closes
 > on 1U**, which is the rung this repository had been leaning on.
+>
+> > **Corrected 2026-08-22 — [P101](../OPEN_PROBLEMS.md).** Every figure in this box divided a dry
+> > mass of **76.5 kg**, and the rollup has read **126.6 kg** since
+> > [A46](../validation/A46_enclosure_buildup.md) on 2026-08-16. `cell_manifest.py` reads the
+> > rollup live and had simply never been re-run, so its committed results file was stale at
+> > 84.5 kg and this box was stale at 76.5. **Both columns are re-quoted above at the current
+> > rollup.** The counts, the arrangements and the two refusals are geometry and did not move.
+> > *1U was over the threshold at 2.125 kg and it is further over at 3.517.* The conclusion did
+> > not change; the margin did.
 
 ### Four things that must be read with those numbers
 

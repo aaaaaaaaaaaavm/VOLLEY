@@ -3054,6 +3054,22 @@ for the actual piston seal at 50 bar in vacuum. That is a bench test on a compon
 calculation, and it is the second item after `docs/B1_ORDER.md` that changes the category of
 evidence rather than its degree.
 
+> **It has an order now, 2026-08-22: [`docs/B2_ORDER.md`](docs/B2_ORDER.md).** Written the same way
+> B-1 was and for the same reason — *a procedure invites more analysis, a purchase order invites a
+> purchase.* A stock ISO 6432 16 mm cylinder, which [A61](validation/A61_seal_class.md) band 7
+> already showed costs **0.00 %** against the drawn bore; a logging load cell, where the binding
+> requirement is sample rate rather than accuracy because breakaway is a transient; three units,
+> because the spread is half the question. **₹8,000–26,000, all of it estimated and none of it
+> quoted.**
+>
+> **Its bands are declared in the order file, before the cylinder is bought**, and **band 8 is the
+> one that constrains the author**: it requires an explicit answer to *"does this discriminate, or
+> only bound?"* **before** the thresholds are quoted anywhere. An air-side, low-speed, possibly
+> unpressurised pull is a *different* measurement from a PTFE seal at 22.73 bar and 17 m/s in
+> vacuum — **not a cheaper version of the right one** — and the order says so. *Landing between
+> 17.8 and 22.3 N is declared in advance as a real outcome that answers nothing*, so it cannot be
+> argued into an answer afterwards.
+
 **What it does not touch.** Bands 1, 2, 3, 7 and 8 all pass. The architecture is not in question
 and the store is not affected.
 
@@ -4816,6 +4832,99 @@ the campaign still exceeds A52's wheel, at 1.17× instead of 18×.
 **The Gen5 arm is still unsourced.** `ASSUMED_ARM` remains a declared assumption with no derivation
 behind it, and A13's numbers still rest on it. This entry corrects where Gen6 got its arm; it does
 not give Gen5 one.
+
+### P101. The payload ladder D2 turns on was three rollup generations stale, and the rung the project was leaning on does not close: HIGH, CORRECTED 2026-08-22
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+**Found while writing [`docs/D2_DECISION.md`](docs/D2_DECISION.md)**, which needed the one table
+the decision actually turns on and could not quote it.
+
+**D2 asks which payload class is the product.** The answer is a ladder of deployer kilograms per
+satellite against a ~2 kg threshold, and there are two of them:
+[`payload_family.py`](analysis/payload_family.py)'s *volumetric* ladder and
+[A24](validation/A24_fixed_cell_manifest.md)'s *designed-cell* ladder, which
+[`docs/PAYLOAD_CLASSES.md`](docs/PAYLOAD_CLASSES.md) says in its own words supersedes it: *"Read
+A24 and ADR-025 before quoting anything above."*
+
+**The superseding table was the stale one.** Three vintages of the same ladder were in the
+repository at once, and they disagreed about every rung:
+
+| Where | Dry mass it divides | 1U | PocketQube 3P |
+|---|---:|---:|---:|
+| `PAYLOAD_CLASSES.md`, the A24 blockquote | **76.5 kg** | 2.125 | 0.797 |
+| `analysis/results/cell_manifest.json`, committed | **84.5 kg** | 2.347 | 0.880 |
+| **`mass_properties.py`, the rollup since A46** | **126.6 kg** | — | — |
+
+**The script was never wrong.** `cell_manifest.py` line 47 reads
+`DEPLOYER_DRY_KG = pf.DEPLOYER_DRY_KG`, and `payload_family.py` reads `dry_kg` out of the rollup
+at import. Nothing in either file hardcodes a mass. **Only the committed results file and a
+hand-typed blockquote were stale**, and re-running the script is the entire repair — the same
+shape as the commit that last touched this file, whose message was *"the baseline change reached
+the documents and stopped at the scripts."* This time it reached the scripts and stopped at their
+outputs.
+
+### Re-run 2026-08-22, at the rollup A46 produced
+
+| Class | Per load, designed cell | Was, at 84.5 kg | **Now, at 126.6 kg** | Against 2.0 kg |
+|---|---:|---:|---:|:--|
+| ChipSat / femtosat | 8640 | 0.010 | **0.015** | closes |
+| **PocketQube 1P** | 288 | 0.293 | **0.440** | **closes** |
+| **PocketQube 3P** | 96 | 0.880 | **1.319** | **closes** |
+| 1U CubeSat | 36 | 2.347 | **3.517** | **crosses** |
+| TubeSat | 24 | 3.521 | **5.275** | crosses |
+| 3U CubeSat | 12 | 7.042 | **10.550** | crosses, 5.3× |
+| ThinSat, 6U, 12U | — | — | — | not accommodated |
+
+**Two band verdicts move, and the bands are not edited.**
+
+**Band 1 fails.** It tests that the cell model reproduces the machine that exists, against a
+reference of **6.375 kg/satellite written into the script** at a rollup two corrections old. The
+cell model reproduces the machine exactly — 12 per load, and 10.55 kg/satellite is the rollup
+divided by twelve. **What band 1 is now detecting is its own hardcoded reference**, not a defect in
+the cell model. It is recorded as failing because that is what it does at the current inputs; it is
+not re-declared, and A24's original verdict stands as run.
+
+**Band 3 still passes, on two rungs instead of four.** It asks whether *some* designed class closes
+kill criterion 1, and PocketQube 1P and 3P both do. **1U does not**, and 1U is the rung this
+repository had been leaning on — `PAYLOAD_CLASSES.md` already recorded A24 taking it from 1.913 to
+2.125 and over the threshold, and at the current rollup it is **3.517 kg**, over by 76 %.
+
+Band 6 fails as it did at A24, for the reason [P44](#p44) records. Bands 2, 4 and 5 pass unchanged.
+
+### What it changes for D2
+
+**It does not change the shape of the answer and it removes the ambiguity from it.** The only
+designed classes that close kill criterion 1 on dry mass are the two PocketQube rungs and ChipSat,
+which [`payload_family.py`](analysis/payload_family.py) marks *beyond the mechanism*. Every ladder
+figure quoted in a decision document must now come from the re-run file.
+
+### Why it was not caught
+
+**[`tools/check_crossrefs.py`](tools/check_crossrefs.py) was written the same day and this pair was
+not one of the nine it declared.** It fails when two committed results files disagree about the
+same quantity, which is exactly this: `cell_manifest.json` published a `deployer_dry_kg` of 84.5
+while `mass_properties.json` published 126.6, in the same repository, for four commits' worth of
+work. **It is declared now**, and the gate reproduces the failure when the old value is restored.
+
+### Corrected. Propagated 2026-08-22
+
+`cell_manifest.py` was re-run with **no edit to the script** — it read the rollup live and always
+did — and the four documents that quoted the ladder were re-quoted from the re-run file:
+[`docs/PAYLOAD_CLASSES.md`](docs/PAYLOAD_CLASSES.md) in two places,
+[`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md)'s route table, which had one row at 126.6 kg and
+four at 76.5, and [A24](validation/A24_fixed_cell_manifest.md), which gets a dated correction block
+with its bands not re-declared and its 2026-08-10 verdict not edited.
+[`docs/D2_DECISION.md`](docs/D2_DECISION.md) is written against the re-run file only.
+**Two cross-references are declared in `tools/check_crossrefs.py`** — the rollup against
+`cell_manifest.deployer_dry_kg`, and the 3U rung of the two ladders against each other, which must
+agree because at 3U a designed cell holds exactly one satellite. **Restoring 84.5 kg reproduces the
+failure and the gate exits 1.**
+
+**One thing is corrected and one is not.** The multiplier `PAYLOAD_CLASSES.md` quoted for
+PocketQube against a cold-gas module was derived from the stale figure; it is **removed rather than
+re-derived**, with a NEEDS SOURCE line in its place, because re-computing it here would put a
+number in a document that no results file holds.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

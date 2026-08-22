@@ -68,8 +68,8 @@ changes that.
 
 | | | Cost of not deciding |
 |---|---|---|
-| **D2 — the payload class** | **P59.** A35 closed the architecture route and A36 closed the manifest route. **Smaller payloads are the only remaining path to kill criterion 1**, and the decision has been deferred since Phase I | The criterion stays crossed at **5.3×** and the front page keeps saying so |
-| **The enclosure panel** | Monolithic 2 mm at 50.04 kg against honeycomb at 29.98. **20 kg for the price of an ADR** | Dry mass stays 126.6 kg and every per-satellite figure stays inflated |
+| **D2 — the payload class** | **P59.** A35 closed the architecture route and A36 closed the manifest route. **Smaller payloads are the only remaining path to kill criterion 1**, and the decision has been deferred since Phase I. **Both cases are written out as of 2026-08-22 — [`D2_DECISION.md`](D2_DECISION.md)** — and the ladder they rest on had to be re-run to write them ([P101](../OPEN_PROBLEMS.md)). **Only the two PocketQube rungs close the criterion, and they close it by giving up the per-satellite differential**: 24 satellites share one commanded velocity at 1P against one at 3U | The criterion stays crossed at **5.3×** and the front page keeps saying so |
+| **The enclosure panel** | Monolithic 2 mm at 50.04 kg against honeycomb at 29.98. **20 kg for the price of an ADR** — *and [`D2_DECISION.md`](D2_DECISION.md) prices it: it closes no criterion at any payload class. What it buys is that **58.6 % of the Gen6 stage credit** stops resting on one assumption about somebody else's skin* | Dry mass stays 126.6 kg and every per-satellite figure stays inflated |
 | ~~**What replaces the trim stage**~~ | **ANSWERED 2026-08-20.** [A64](../validation/A64_pulse_store_technology.md) priced the store at **~70 g** against A54's 23–37 kg — **P86 closed, ADR-033 falsifier 1 does not fire.** *A61's route, a specified seal that deletes the stage, is still cheaper* |
 | ~~superseded~~ | **[A54](../validation/A54_pulse_chain.md) fired ADR-033's falsifier**, and it was never a consequence of the stroke — the store is sized by power, which the stroke does not enter. Two routes: a store technology at **ESR × C ≤ 36.3 ms** against an EDLC's 690–1100 (**one datasheet decides it**), or **withdrawal** — which deletes the commanded-velocity claim. **P86** | Gen6 has no working correction, and the product's central claim is unsupported |
 | **Whether any of it survives P67** | If the measured friction is small, the dispersion is not there and **the stage, its store and P86 all close together** | Mass and complexity spent on a problem that may not exist |
@@ -106,7 +106,8 @@ Gen6 does not change that and must not be presented as if it did.**
 **Updated 2026-08-19, after A49–A53 and ADR-034.**
 
 **1. Measure the seal friction (P67).** It is Category D, it is cheap, and it can *delete* work
-rather than add it. **It now governs five open decisions rather than four** — ADR-034's design
+rather than add it. **It has an order as of 2026-08-22 — [`B2_ORDER.md`](B2_ORDER.md) — with its
+bands declared before the cylinder is bought.** **It now governs five open decisions rather than four** — ADR-034's design
 point, ADR-033's trim stage, P77's pulse store, P81's ejector, and P83's authority — because
 ADR-034 took friction from 9.75 % to **28.39 %** of shot work. **The single highest-leverage action
 in the record, and ADR-034 raised its leverage.**
@@ -128,6 +129,13 @@ material is stated nowhere, and it is 1.140 kg in aluminium against 3.294 in ste
 
 **5. Decide D2 and the enclosure panel.** Two decisions, both yours, together worth more than any
 analysis on this page — one is the only route to kill criterion 1, the other is 20 kg.
+**Both business cases are now written side by side, 2026-08-22 —
+[`D2_DECISION.md`](D2_DECISION.md).** It does not decide either, and it removes the arithmetic
+from both: **D2 is a choice between closing kill criterion 1 and keeping the commanded
+per-satellite velocity**, and the enclosure panel changes no verdict on either numerator at any
+payload class. **Writing it found that the payload ladder the decision turns on had never been
+re-run after A46** — three vintages of one table, disagreeing about every rung
+([P101](../OPEN_PROBLEMS.md)).
 
 **6. ~~A56, A57, A58~~ — all three have run.** A56 and A58 on 2026-08-19, **A57 on 2026-08-22.** The store is **3.1216 kg**,
 24 % below the figure ADR-034 quoted (**P82 closes**), and the bulk thermal case is comfortable
