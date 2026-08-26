@@ -565,68 +565,66 @@ remain what they were: change the payload class, or publish the criterion as cro
 
 ### Corrections, dated
 
-**Every one of these moved a published number, and none of them improved it.**
+Every one of these moved a published number, and none of them improved it.
 
 | When | What was found | What it cost |
 |---|---|---|
-| **2026-07-29** | The sled was modelled at **4.86 kg** parametrically; exact solid volumes from the Gen3 CAD give **9.445 kg** (**P15**) | **Exit velocity 20.37 m/s at 16.3 g → 16.388**, efficiency 32 → 20 %, lifetime multiplier ×1.80 → ×1.60. **[A4](validation/A4_sled_structural.md) fixed the consequence of each outcome *before* the structural analysis ran**: ≤ 5.35 kg and the parametric model stood, 5.35–6.80 kg and neither estimate was right, **≥ 6.80 kg and the headline changes**. The CAD landed in the third branch, and the scripts moved before the paper did |
-| **2026-07-30** | **The pulse-power chain does not close on purchasable cells** (**P26**) | The bank is modelled at 12 mΩ; commercial cells of this capacitance give **116–185 mΩ** and the shot stops completing above **65 mΩ**. A source behind resistance *R* cannot deliver more than V²/4R, and this one is asked for 30 kW. **Exit velocity, stroke time and dispersion are unaffected** — what is affected is that the rated point assumes a bank nobody can buy, and it is **not** silently fixed here |
-| **2026-08-03** | A winding-thickness quadrature error, A13's internal-momentum physics, A6's covariance claim, A12's stress plane, a 0.344 kg brake-fin double count | **K_t → 10.54 N per kA/m**, and every dependent number with it |
-| **2026-08-13** | The last four deferred decisions, taken together in [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md) | **K_t 11.03 → 10.54**, exit velocity 16.388 → **16.029 m/s**, efficiency 21.0 → **18.8 %**, mass per satellite 6.378 → **10.547 kg**. **Nothing improved. That is what the corrections cost** |
-| **2026-08-16** | The enclosure was an **8.00 kg placeholder**; [A46](validation/A46_enclosure_buildup.md) built it up from the geometry | **50.04 kg.** The earlier warning had guessed 20 |
-| **2026-08-19** | ADR-034 moved the design point in `cad/parameters.json` and eleven documents, and **not in the analysis scripts** (**P84**) | A44 and A48 are answering a superseded question. **Nothing in this repository compares the parameter file against the scripts**, so every gate stayed green |
-| **2026-08-20** | **The dispersion figure never propagated.** A55 measured **3.9798 %** at ADR-034's stroke on 19 August; ADR-033, `GENERATIONS.md`, `BUILD_READINESS.md` and `GEN6.md` all still published A44's **1.113 %** | **3.6× low, in four documents, for a day.** *The number was never missing — a stale figure with its replacement sitting one file away is a worse failure than an unknown one, because nothing about it looks unfinished.* And P84's own closing sentence claimed the current figure was unknown; **it was not, and that has been corrected too** |
-| **2026-08-20** | **Two dated scripts had one leg live and one leg frozen** (**P84**, second and third instances) | `gen6_dispersion.py` was computing a shot at **50 bar over 8.0 m** — a point never adopted — returning 1.504 % against A44's published 1.113 %. `trim_stage.py` band 3 reported **0.497 %** where A48 declared **1.822 %**. Both now freeze their own stroke the way `precharged.py` already froze `STROKE_A41`, **a pattern that existed and had not been applied.** *Nothing compares a script against the run sheet it produced* |
-| **2026-08-20** | **Three different figures were being published for one quantity.** Added mass per satellite appeared as **1.403**, **1.296** and **1.324 kg** across the front page, the site, `GENERATIONS.md` and `GEN6.md` — from three different stores: A43's 5.38 kg, ADR-034's gas-ratio-scaled 4.10, and the same 4.10 *plus* the trim stage | **None was wrong for its own scope and no page said which scope it was using.** The tell: the front page's hostile figure of **3.164** was the 4.10 kg row while P68's **3.108** was A45's at 5.38 — *two different stores, two different runs, both published as "Gen6".* [A45-R2](validation/A45R2_stage_credit_resized_store.md) band 8 reconciled all five readings and named **1.2145 kg/satellite** canonical: A56's sized store, **without** the trim stage, because [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md) suspended it. **Any page quoting 1.3173 must say it includes a section that may not be built** |
-| **2026-08-20** | **`cad/DIMENSIONS.md` labelled every physical quantity "mm"** | 200 bar rendered as **"200.0 mm"**, a 473 K ceiling as "473.0 mm", the 3.1216 kg store as "3.1216 mm". `unit_for()` fell through to millimetres for anything it did not recognise, and every quantity the gas architecture added was unrecognised. **This is the document whose stated purpose is to be read instead of the JSON by whoever is cutting metal** |
+| 2026-07-29 | The sled was modelled at 4.86 kg parametrically; exact solid volumes from the Gen3 CAD give 9.445 kg (P15) | Exit velocity went from 20.37 m/s at 16.3 g to 16.388, efficiency 32 to 20 %, lifetime multiplier 1.80x to 1.60x. [A4](validation/A4_sled_structural.md) fixed the consequence of each outcome before the structural analysis ran: at 5.35 kg or below the parametric model stood, between 5.35 and 6.80 kg neither estimate was right, and at 6.80 kg or above the headline changes. The CAD landed in the third branch, and the scripts moved before the paper did |
+| 2026-07-30 | The pulse-power chain does not close on purchasable cells (P26) | The bank is modelled at 12 milliohm; commercial cells of this capacitance give 116 to 185 milliohm and the shot stops completing above 65 milliohm. A source behind resistance R cannot deliver more than V-squared over 4R, and this one is asked for 30 kW. Exit velocity, stroke time and dispersion are unaffected. What is affected is that the rated point assumes a bank nobody can buy, and that is not silently fixed here |
+| 2026-08-03 | A winding-thickness quadrature error, A13's internal-momentum physics, A6's covariance claim, A12's stress plane, a 0.344 kg brake-fin double count | K_t fell to 10.54 N per kA/m, and every dependent number with it |
+| 2026-08-13 | The last four deferred decisions, taken together in [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md) | K_t 11.03 to 10.54, exit velocity 16.388 to 16.029 m/s, efficiency 21.0 to 18.8 %, mass per satellite 6.378 to 10.547 kg. Nothing improved, and that is what the corrections cost |
+| 2026-08-16 | The enclosure was an 8.00 kg placeholder; [A46](validation/A46_enclosure_buildup.md) built it up from the geometry | 50.04 kg. The earlier warning had guessed 20 |
+| 2026-08-19 | ADR-034 moved the design point in `cad/parameters.json` and eleven documents, and not in the analysis scripts (P84) | A44 and A48 are answering a superseded question. Nothing in this repository compares the parameter file against the scripts, so every gate stayed green |
+| 2026-08-20 | The dispersion figure never propagated. A55 measured 3.9798 % at ADR-034's stroke on 19 August, while ADR-033, `GENERATIONS.md`, `BUILD_READINESS.md` and `GEN6.md` all still published A44's 1.113 % | A factor of 3.6 low, in four documents, for a day. The number was never missing, and a stale figure with its replacement sitting one file away is a worse failure than an unknown one, because nothing about it looks unfinished. P84's own closing sentence claimed the current figure was unknown; it was not, and that has been corrected too |
+| 2026-08-20 | Two dated scripts had one leg live and one leg frozen (P84, second and third instances) | `gen6_dispersion.py` was computing a shot at 50 bar over 8.0 m, a point never adopted, returning 1.504 % against A44's published 1.113 %. `trim_stage.py` band 3 reported 0.497 % where A48 declared 1.822 %. Both now freeze their own stroke the way `precharged.py` already froze `STROKE_A41`, which is a pattern that existed and had not been applied. Nothing compares a script against the run sheet it produced |
+| 2026-08-20 | Three different figures were being published for one quantity. Added mass per satellite appeared as 1.403, 1.296 and 1.324 kg across the front page, the site, `GENERATIONS.md` and `GEN6.md`, from three different stores: A43's 5.38 kg, ADR-034's gas-ratio-scaled 4.10, and the same 4.10 plus the trim stage | None was wrong for its own scope and no page said which scope it was using. The tell was that the front page's hostile figure of 3.164 was the 4.10 kg row while P68's 3.108 was A45's at 5.38: two different stores, two different runs, both published as Gen6. [A45-R2](validation/A45R2_stage_credit_resized_store.md) band 8 reconciled all five readings and named 1.2145 kg per satellite canonical, at A56's sized store and without the trim stage, because [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md) suspended it. Any page quoting 1.3173 must say it includes a section that may not be built |
+| 2026-08-20 | `cad/DIMENSIONS.md` labelled every physical quantity "mm" | 200 bar rendered as "200.0 mm", a 473 K ceiling as "473.0 mm", the 3.1216 kg store as "3.1216 mm". `unit_for()` fell through to millimetres for anything it did not recognise, and every quantity the gas architecture added was unrecognised. This is the document whose stated purpose is to be read instead of the JSON by whoever is cutting metal |
 
-**Ways to recover the lost velocity** — pocketing, sheet current, stroke length, a two-layer
-stator, and a momentum-transfer release that buys it all back for 1.6 % of the shot energy — are
+Ways to recover the lost velocity, which are pocketing, sheet current, stroke length, a two-layer
+stator, and a momentum-transfer release that buys it all back for 1.6 % of the shot energy, are
 costed in [`docs/DESIGN_OPTIONS_exit_velocity.md`](docs/DESIGN_OPTIONS_exit_velocity.md).
 
 
 ### Defects that sit in the paper rather than in the design
 
 The published paper previously contained four numbers its own scripts did not reproduce
-(conjunction minimum, peak current, far-field stray values, brake fin temperature rise),
-all found by reconstructing the analysis from scratch. **All four were corrected in
-`paper/paper.tex` on 2026-07-23 to match the scripts**, and the conjunction claim was
-additionally reframed because that minimum is not a robust quantity. Note that
-`paper/archive/EMOCD_submission_uncorrected.pdf` still carries the uncorrected values,
-whether that build is the one that was submitted is open (`OPEN_PROBLEMS.md` P11). Full record with
-cause, before/after, and references is in `CHANGELOG.md`; the original defects remain
-documented in `OPEN_PROBLEMS.md` P1, P4 for the audit trail.
+(conjunction minimum, peak current, far-field stray values, brake fin temperature rise), all found
+by reconstructing the analysis from scratch. All four were corrected in `paper/paper.tex` on
+2026-07-23 to match the scripts, and the conjunction claim was additionally reframed because that
+minimum is not a robust quantity. Note that `paper/archive/EMOCD_submission_uncorrected.pdf` still
+carries the uncorrected values, and whether that build is the one that was submitted is open
+(`OPEN_PROBLEMS.md` P11). The full record with cause, before and after, and references is in
+`CHANGELOG.md`; the original defects remain documented in `OPEN_PROBLEMS.md` P1 and P4 for the
+audit trail.
 
-**Two issues are live rather than historical, and both sit in the paper:**
+Two issues are live rather than historical, and both sit in the paper:
 
-- **P16, the invariance claim in the abstract is falsified.** GMAT reproduces the x1.80
-  lifetime multiplier at mean and high solar activity but gives x2.074 at low, an 18.5 %
-  spread against a ≤5 % band. The reason is that `astro.py` varies solar activity by scaling
-  density uniformly, which preserves a ratio *by construction*, and the ballistic-coefficient
-  half of the same sentence is the identical construction, since `scale` and `1/BC` occupy the
-  same slot in the drag term. Neither half of that claim was ever tested by a method capable
-  of falsifying it. **`paper/paper.tex` still asserts it in five places, including the
-  abstract**, **Corrected 2026-08-20: the paper has withdrawn it.** `paper.tex` says
-  *"not claimed invariant"* in the abstract and *"no invariance is claimed"* in §V-B, the
-  sensitivity and limitations sections both record why the original claim was wrong, and **the
-  built PDF carries the withdrawal.** *This bullet said the opposite until today — the source was
-  fixed and this summary was not, which is the failure mode the project keeps finding in itself.*
-  **What remains open is the replacement claim, which needs A9** — blocked, `celestrak.org` still
-  could not be retrieved on the machine this analysis was run on, re-tested 2026-08-20.
-- **P11, which build was actually submitted is unresolved.** Until that is answered, it is
-  not known whether the version of record carries P1, P4 *and* the falsified abstract claim.
+- P16, the invariance claim in the abstract, is falsified. GMAT reproduces the 1.80x lifetime
+  multiplier at mean and high solar activity but gives 2.074x at low, an 18.5 % spread against a
+  band of 5 % or less. The reason is that `astro.py` varies solar activity by scaling density
+  uniformly, which preserves a ratio by construction, and the ballistic-coefficient half of the
+  same sentence is the identical construction, since `scale` and `1/BC` occupy the same slot in
+  the drag term. Neither half of that claim was ever tested by a method capable of falsifying it.
+  Corrected 2026-08-20: the paper has withdrawn it. `paper.tex` says "not claimed invariant" in
+  the abstract and "no invariance is claimed" in section V-B, the sensitivity and limitations
+  sections both record why the original claim was wrong, and the built PDF carries the
+  withdrawal. This bullet said the opposite until today, because the source was fixed and this
+  summary was not, which is the failure mode the project keeps finding in itself. What remains
+  open is the replacement claim, which needs A9. That is blocked: `celestrak.org` still could not
+  be retrieved on the machine this analysis was run on, re-tested 2026-08-20.
+- P11, which build was actually submitted, is unresolved. Until that is answered, it is not known
+  whether the version of record carries P1, P4 and the falsified abstract claim.
 
-Newest entries: **P26** (the supercapacitor bank cannot source the shot on purchasable
-cells), **P28** (the regeneration stator and the eddy fin do not both fit the arrest section)
-and **P29** (the paper says the winding is segmented; the model charges copper for all
-1.3 m). Most recently closed: **P17**, the inter-array attraction feeding the A4 FEA, 37 %
-high — resolved by A12, which also found that P17's *explanation* of its own finding was
-backwards.
+Newest entries: P26 (the supercapacitor bank cannot source the shot on purchasable cells), P28
+(the regeneration stator and the eddy fin do not both fit the arrest section) and P29 (the paper
+says the winding is segmented while the model charges copper for all 1.3 m). Most recently closed
+is P17, the inter-array attraction feeding the A4 FEA, 37 % high, resolved by A12, which also
+found that P17's explanation of its own finding was backwards.
 
 
-> **The gap between "fifty-three analyses" and "nothing measured" is the project's real position.**
-> **[`docs/B1_ORDER.md`](docs/B1_ORDER.md) is the one action that changes the category of the
-> evidence rather than its degree.**
+> The gap between fifty-three analyses and nothing measured is the project's real position.
+> [`docs/B1_ORDER.md`](docs/B1_ORDER.md) is the one action that changes the category of the
+> evidence rather than its degree.
 
 ## How it got here
 
