@@ -11,20 +11,37 @@ check_crossrefs.py compares two results files to each other. check_companions.py
 payload to the flagship. Nothing compared a results file to the script that claims to produce it.
 This does.
 
-WHY THE COMPARISON IS NUMERICAL AND NOT BYTE-FOR-BYTE
------------------------------------------------------
+WHY THE COMPARISON IS NUMERICAL, AND WHY THE TOLERANCE IS PER FILE
+------------------------------------------------------------------
 It was byte-for-byte until 2026-08-26, and that was wrong in a way nothing local could
 show. The comparison passed on the machine the results were committed from and failed on
-a GitHub runner, on `run_a69.py` and `run_a70.py`: both solve eigenvalue and linear
-systems through numpy, and the last bits of a float depend on the BLAS the interpreter
-was built against. Byte identity of floating-point JSON across two machines was never an
-achievable property, and the gate had only ever been run on one.
+a GitHub runner, on `run_a69.py` and `run_a70.py`. Byte identity of floating-point JSON
+across two machines was never an achievable property, and the gate had only ever run on
+one machine.
 
-So values are compared numerically, at RTOL below, and everything non-numeric is still
-compared exactly. That is not a weakening. The defect this gate exists to catch is a
-committed result that no longer matches its generator, and P110's was a factor of 15.6;
-a tolerance of 1e-9 catches that and every defect of its kind, while tolerating the 1e-16
-that separates one BLAS from another.
+Measuring the actual disagreement turned up two different phenomena, and one global
+tolerance would have hidden the second:
+
+  A69, the tube centreline          3e-9 relative
+  A70, the admissibility sagittas   1.3e-4 relative
+
+A69 is ordinary. It solves a linear system through numpy and the last bits depend on the
+BLAS the interpreter was built against.
+
+A70 is not ordinary, and it is worth writing down. Its admissibility figures are a
+three-point sagitta of A69's solved centreline: a difference of nearly equal ordinates.
+At the 40 mm land the ordinates are about 1.627 mm and the sagitta is 0.049 um, so the
+subtraction amplifies relative error by about 33,000. A69's 3e-9 becomes 1e-4 by
+cancellation alone, which is what is observed. The sagitta is conditioned badly by
+construction, not computed badly.
+
+Nothing physical moves: 0.43398 um against 0.43404 um, on a 25 um radial clearance, and
+A70's conclusions are factors of two. But the reproducibility claim has to match the
+arithmetic, so each file carries its own tolerance with the reason beside it.
+
+This is not a widened band. It is a measurement of what the computation can reproduce,
+and the gate still catches staleness by three orders of magnitude: P110's defect, the one
+this gate exists for, was a factor of 15.6.
 
 WHAT IS AND IS NOT CHECKED
 --------------------------
@@ -37,6 +54,7 @@ implicit.
 """
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -55,10 +73,18 @@ FRESH = [
     ("analysis/host_reference.py", "host_reference.json"),
 ]
 
-# Relative tolerance for numeric leaves. Tight enough that any real staleness fails, loose
-# enough that two BLAS implementations agree. See the module docstring.
-RTOL = 1e-9
+# Relative tolerance for numeric leaves, per file, each with the reason it is what it is.
+# A tolerance without a reason beside it is a widened band. See the module docstring.
+RTOL_DEFAULT = 1e-9
 ATOL = 1e-12
+RTOL = {
+    "tube_centreline.json":
+        (1e-8, "a linear solve through numpy; the last bits follow the BLAS. Measured 3e-9"),
+    "guided_contact_derived.json":
+        (1e-3, "a three-point sagitta of that centreline, which cancels 1.6 mm ordinates "
+               "down to a 0.05 um difference and amplifies relative error about 33,000x. "
+               "Measured 1.3e-4"),
+}
 
 # Excluded, by name and with the reason. An exclusion that is not written down is a gap.
 EXCLUDED = [
@@ -71,30 +97,56 @@ EXCLUDED = [
 ]
 
 
-def differing(a, b, path=""):
-    """Paths at which two parsed JSON values disagree beyond RTOL/ATOL."""
+_NUM = re.compile(r'[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?')
+
+
+def _close(a, b, rtol):
+    if a == b:
+        return True
+    return abs(a - b) <= max(ATOL, rtol * max(abs(a), abs(b)))
+
+
+def _strings_agree(a, b, rtol):
+    """True if two strings differ only in embedded numbers, within tolerance.
+
+    Run sheets embed computed values in prose, so a band's `detail` line moves when the
+    number in it moves. Comparing those exactly would reimpose byte identity through the
+    back door, and ignoring them would stop checking the text.
+    """
+    if _NUM.sub("#", a) != _NUM.sub("#", b):
+        return False
+    for x, y in zip(_NUM.findall(a), _NUM.findall(b)):
+        try:
+            if not _close(float(x), float(y), rtol):
+                return False
+        except ValueError:
+            return False
+    return True
+
+
+def differing(a, b, path="", rtol=RTOL_DEFAULT):
+    """Paths at which two parsed JSON values disagree beyond the file's tolerance."""
     if isinstance(a, dict) and isinstance(b, dict):
         out = []
         for k in sorted(set(a) | set(b)):
             if k not in a or k not in b:
                 out.append(path + "/" + str(k))
             else:
-                out += differing(a[k], b[k], path + "/" + str(k))
+                out += differing(a[k], b[k], path + "/" + str(k), rtol)
         return out
     if isinstance(a, list) and isinstance(b, list):
         if len(a) != len(b):
             return [path + f" (length {len(a)} against {len(b)})"]
         out = []
         for i, (x, y) in enumerate(zip(a, b)):
-            out += differing(x, y, path + f"[{i}]")
+            out += differing(x, y, path + f"[{i}]", rtol)
         return out
     if isinstance(a, bool) or isinstance(b, bool):
         return [] if a is b else [path]
     if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        if a == b:
-            return []
-        scale = max(abs(a), abs(b))
-        return [] if abs(a - b) <= max(ATOL, RTOL * scale) else [path + f" ({a} against {b})"]
+        return [] if _close(a, b, rtol) else [path + f" ({a} against {b})"]
+    if isinstance(a, str) and isinstance(b, str):
+        return [] if a == b or _strings_agree(a, b, rtol) else [path]
     return [] if a == b else [path]
 
 
@@ -121,13 +173,14 @@ def main():
             with open(backup, encoding="utf-8") as fh:
                 old = fh.read()
             if new != old:
+                rtol = RTOL.get(name, (RTOL_DEFAULT, ""))[0]
                 try:
-                    moved = differing(json.loads(old), json.loads(new))
+                    moved = differing(json.loads(old), json.loads(new), rtol=rtol)
                 except Exception:
                     moved = ["<unparseable>"]
                 if moved:
                     problems.append(f"{name}: committed result differs from what {script} "
-                                    f"produces now, beyond {RTOL:g} relative. Moved: "
+                                    f"produces now, beyond {rtol:g} relative. Moved: "
                                     f"{', '.join(moved[:6])}")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
@@ -138,7 +191,8 @@ def main():
             print(f"  {p}")
         print("\n  fix: re-run the script and commit its output, or find why it moved")
         return 1
-    print(f"results freshness: {len(FRESH)} results reproduce to {RTOL:g} relative; "
+    print(f"results freshness: {len(FRESH)} results reproduce, {len(RTOL)} at a declared "
+          f"per-file tolerance and the rest at {RTOL_DEFAULT:g}; "
           f"{len(EXCLUDED)} runs excluded by name with reasons")
     return 0
 
