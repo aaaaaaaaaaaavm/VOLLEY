@@ -165,3 +165,34 @@ independently, and the bore grows 3.440 µm diametrally, 6.9 % of the nominal cl
 > 8 m bore can actually hold is not established here and is [`MANUFACTURING.md`](../docs/MANUFACTURING.md)'s.
 > *The honest statement is that the ranking excludes manufacturing straightness and therefore
 > cannot decide between it and thermal bow.*
+
+---
+
+> ## CORRECTION 2026-08-26, P115. The supports were held by a penalty, and the solve could not carry it.
+>
+> `beam()` imposed each rigid support as a diagonal penalty of 1e8 times the element stiffness,
+> and a prescribed support offset entered as `pen x offset` on the right-hand side. The constraint
+> came out satisfied to 1e-17 m and the assembled 1602-DOF system came out at a condition number
+> of 8.6e15, against a double-precision epsilon of 2.2e-16. The supports are now imposed by
+> eliminating the constrained rows, which leaves cond 4.1e9.
+>
+> **Only the cases with a prescribed offset moved.** Those are the only ones that put the penalty
+> into the right-hand side as well as the diagonal. Self-weight at 1 g, at 0 g and under ascent
+> lateral load reproduce to 1e-11 either way, which is why nothing had looked wrong on the machine
+> the results were committed from.
+>
+> ### What moves
+>
+> | | Was | Is |
+> |---|---:|---:|
+> | Band 7 range, low end | 0.0768 mm | **0.0769 mm** |
+> | Support placement, +/-0.05 mm declared | 0.0768 mm | **0.0769 mm** |
+> | Thermal bow at 5 K | 5.3023 mm | 5.3023 mm |
+> | Every band verdict | | unchanged |
+>
+> Seven of eight still, with band 7 still failing at 5.3023 mm against A67's 2.0 mm bracket. The
+> 8.5e-4 difference in the support-placement peak is the penalty solve's error, not this one's.
+>
+> Found because the gates workflow ran on a second machine for the first time and the freshness
+> comparison disagreed. [P115](../OPEN_PROBLEMS.md#p115) carries the full account, including the
+> first diagnosis of that disagreement, which was wrong and is withdrawn there.

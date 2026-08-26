@@ -66,6 +66,25 @@ A_SEC = math.pi * (OD ** 2 - BORE ** 2) / 4.0
 MASS_PER_M = RHO * A_SEC
 
 
+def _solve_constrained(K, F, fixed):
+    """Solve K u = F with u[j] prescribed at the support nodes, by eliminating those rows.
+
+    A large diagonal penalty holds the same constraint and is easier to write, but it multiplies
+    the condition number by the penalty ratio. At 1e8 the assembled 1602-DOF system came out at
+    cond 8.6e15 against a double-precision epsilon of 2.2e-16, which leaves nothing along the
+    worst direction. Eliminating the constrained rows and columns instead leaves cond 4.1e9, and
+    the residual difference between the two answers is the penalty solve's error, not this one's.
+    """
+    ndof = K.shape[0]
+    idx = np.array(sorted(fixed), dtype=int)
+    val = np.array([fixed[i] for i in idx], dtype=float)
+    u = np.zeros(ndof)
+    u[idx] = val
+    free = np.setdiff1d(np.arange(ndof), idx)
+    u[free] = np.linalg.solve(K[np.ix_(free, free)], F[free] - K[np.ix_(free, idx)] @ val)
+    return u
+
+
 def beam(n_el, loads_per_m, support_x, support_y=None, kappa_th=0.0):
     """Hermite beam on rigid transverse supports, with an optional imposed thermal curvature.
 
@@ -98,14 +117,10 @@ def beam(n_el, loads_per_m, support_x, support_y=None, kappa_th=0.0):
         F[d] += w * le * np.array([0.5, le / 12.0, 0.5, -le / 12.0])
         if kappa_th:
             F[d] += E_MOD * I_SEC * kappa_th * np.array([0.0, -1.0, 0.0, 1.0])
-    # rigid supports by penalty, with an optional prescribed offset
-    pen = E_MOD * I_SEC / le ** 3 * 1e8
+    # rigid supports as exact prescribed displacements, with an optional offset
     sy = support_y if support_y is not None else [0.0] * len(support_x)
-    for sx, off in zip(support_x, sy):
-        j = 2 * int(round(sx / le))
-        K[j, j] += pen
-        F[j] += pen * off
-    u = np.linalg.solve(K, F)
+    fixed = {2 * int(round(sx / le)): float(off) for sx, off in zip(support_x, sy)}
+    u = _solve_constrained(K, F, fixed)
     return x, u[0::2], u[1::2]
 
 
@@ -123,9 +138,7 @@ def verify_simple_span(n_el=200):
         d = [2 * e, 2 * e + 1, 2 * e + 2, 2 * e + 3]
         K[np.ix_(d, d)] += ke
         F[d] += w * le * np.array([0.5, le / 12.0, 0.5, -le / 12.0])
-    pen = E_MOD * I_SEC / le ** 3 * 1e8
-    K[0, 0] += pen; K[ndof - 2, ndof - 2] += pen
-    u = np.linalg.solve(K, F)
+    u = _solve_constrained(K, F, {0: 0.0, ndof - 2: 0.0})
     got = abs(u[0::2]).max()
     want = 5.0 * w * span ** 4 / (384.0 * E_MOD * I_SEC)
     return got, want, abs(got - want) / want
@@ -216,9 +229,7 @@ def verify_imposed_curvature(n_el=400):
         d = [2 * e, 2 * e + 1, 2 * e + 2, 2 * e + 3]
         K[np.ix_(d, d)] += ke
         F[d] += E_MOD * I_SEC * kappa * np.array([0.0, -1.0, 0.0, 1.0])
-    pen = E_MOD * I_SEC / le ** 3 * 1e8
-    K[0, 0] += pen; K[ndof - 2, ndof - 2] += pen
-    u = np.linalg.solve(K, F)
+    u = _solve_constrained(K, F, {0: 0.0, ndof - 2: 0.0})
     got = abs(u[0::2]).max()
     want = kappa * span ** 2 / 8.0
     return got, want, abs(got - want) / want

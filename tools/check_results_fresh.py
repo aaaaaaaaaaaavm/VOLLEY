@@ -19,29 +19,34 @@ a GitHub runner, on `run_a69.py` and `run_a70.py`. Byte identity of floating-poi
 across two machines was never an achievable property, and the gate had only ever run on
 one machine.
 
-Measuring the actual disagreement turned up two different phenomena, and one global
-tolerance would have hidden the second:
+The first diagnosis of that failure was wrong and is withdrawn. It read the disagreement
+as ordinary last-bit BLAS sensitivity in A69 -- measured at 3e-9 locally -- amplified into
+A70 by the cancellation in a three-point sagitta. The amplification is a real property of a
+sagitta, but it was not what happened: when the runner reported field by field, the fields
+that moved were A69's own, by 8.5e-4, and A70's sagittas moved LESS than their input, not
+33,000 times more.
 
-  A69, the tube centreline          3e-9 relative
-  A70, the admissibility sagittas   1.3e-4 relative
+What was actually happening is P115. `beam()` held its rigid supports with a diagonal
+penalty of 1e8 times the element stiffness, which put the assembled 1602-DOF system at a
+condition number of 8.6e15 against a double-precision epsilon of 2.2e-16. Nothing survives
+that along the worst direction. Only the cases with a PRESCRIBED support offset moved,
+because only those put the penalty into the right-hand side as well, and those are exactly
+the fields the runner named. The supports are now imposed by eliminating the constrained
+rows, cond 4.1e9, and the two answers differ by 8.5e-4 -- which was the penalty solve's
+error, not this one's.
 
-A69 is ordinary. It solves a linear system through numpy and the last bits depend on the
-BLAS the interpreter was built against.
+Perturbing every entry of the matrix and the right-hand side by one ulp and re-solving,
+which is roughly what a different summation order does, moves the reported quantities by:
 
-A70 is not ordinary, and it is worth writing down. Its admissibility figures are a
-three-point sagitta of A69's solved centreline: a difference of nearly equal ordinates.
-At the 40 mm land the ordinates are about 1.627 mm and the sagitta is 0.049 um, so the
-subtraction amplifies relative error by about 33,000. A69's 3e-9 becomes 1e-4 by
-cancellation alone, which is what is observed. The sagitta is conditioned badly by
-construction, not computed badly.
+  penalty supports, as committed before 2026-08-26      4.3e-3
+  eliminated supports, as now                           4.4e-8
 
-Nothing physical moves: 0.43398 um against 0.43404 um, on a 25 um radial clearance, and
-A70's conclusions are factors of two. But the reproducibility claim has to match the
-arithmetic, so each file carries its own tolerance with the reason beside it.
+The observed cross-machine disagreement, 8.5e-4, sits inside the first and far outside the
+second. Both files therefore carry 1e-7, measured rather than fitted, and the rest of the
+set stays at 1e-9.
 
-This is not a widened band. It is a measurement of what the computation can reproduce,
-and the gate still catches staleness by three orders of magnitude: P110's defect, the one
-this gate exists for, was a factor of 15.6.
+This is not a widened band. The gate still catches staleness by seven orders of magnitude:
+P110's defect, the one this gate exists for, was a factor of 15.6.
 
 WHAT IS AND IS NOT CHECKED
 --------------------------
@@ -79,11 +84,10 @@ RTOL_DEFAULT = 1e-9
 ATOL = 1e-12
 RTOL = {
     "tube_centreline.json":
-        (1e-8, "a linear solve through numpy; the last bits follow the BLAS. Measured 3e-9"),
+        (1e-7, "a constrained linear solve at cond 4.1e9; a one-ulp perturbation of the "
+               "system moves the reported peaks by 4.4e-8"),
     "guided_contact_derived.json":
-        (1e-3, "a three-point sagitta of that centreline, which cancels 1.6 mm ordinates "
-               "down to a 0.05 um difference and amplifies relative error about 33,000x. "
-               "Measured 1.3e-4"),
+        (1e-7, "the same centreline, read as three-point sagittas; same perturbation, 4.7e-8"),
 }
 
 # Excluded, by name and with the reason. An exclusion that is not written down is a gap.

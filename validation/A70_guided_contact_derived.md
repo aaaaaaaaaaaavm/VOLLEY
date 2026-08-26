@@ -184,3 +184,22 @@ hardware, this run is recorded as not having answered them.
 > *The earlier version of this paragraph inferred "tens of degrees per second" from it. That
 > inference is withdrawn.* What the retest establishes is exactly one thing: the runs complete.
 > Bands 2–5 stay **NOT EVALUABLE**.
+
+---
+
+> ## NOTE 2026-08-26, P115. The centreline underneath this run sheet was re-solved.
+>
+> A69's beam solve held its supports by a penalty at cond 8.6e15 and now eliminates the
+> constrained rows at cond 4.1e9. `guided_contact_derived.json` is regenerated on the corrected
+> centreline.
+>
+> **Nothing printed here moves.** The admissibility sagittas are dominated by the imposed thermal
+> curvature, which never passed through the penalty; the support-offset term they also carry is
+> small. The 0 K row moves by 5e-5 relative, below every digit shown, and the 2.39 um figure at
+> 120 mm and 1 K that [P110](../OPEN_PROBLEMS.md#p110) established moves by 5e-11. One pass and
+> five not evaluable, as before.
+>
+> [P115](../OPEN_PROBLEMS.md#p115) also withdraws an explanation that named this run sheet: that
+> the three-point sagitta amplified A69's last-bit noise about 33,000x across machines. The
+> amplification is a real property of a sagitta and it was not what happened here. These sagittas
+> moved by less than their input, not more.

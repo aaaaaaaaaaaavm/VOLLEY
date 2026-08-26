@@ -5851,6 +5851,83 @@ same dv buys as a complete circular transfer, which is the distinction that was 
 Nothing here touches [P108](#p108), [P113](#p113) or the Gen6 design point. The corrected model
 makes the host case harder rather than easier, and no Gen6 requirement moves.
 
+### P115. Rigid supports held by a penalty put A69's beam solve at cond 8.6e15, and only the machine it ran on could not see it: MEDIUM, CORRECTED 2026-08-26
+
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+Found when the gates workflow ran on a GitHub runner for the first time, 2026-08-26. Numbered
+under [ADR-021](docs/adr/021-freeze-the-register.md) rule 2: a defect that made a published
+figure wrong. It is a small figure, and the entry exists because of how nearly it was closed
+with a tolerance instead.
+
+`tube_centreline.beam()` imposed its seven rigid supports as a diagonal penalty of 1e8 times the
+element stiffness, and a prescribed support offset entered as `pen * offset` on the right-hand
+side. That is the standard trick and it satisfies the constraint to the last bit -- the support
+residual is 1e-17 m. What it also does is put the assembled 1602-DOF system at a condition
+number of **8.6e15**, against a double-precision epsilon of 2.2e-16. There is nothing left along
+the worst direction, and the interior of the solution is corrupted even though the constraint it
+was imposing is met exactly.
+
+Eliminating the constrained rows and columns instead leaves the system at cond **4.1e9**.
+
+| At 800 elements, 0 g, the declared +/-0.05 mm support offsets | |
+|---|---:|
+| Penalty supports, peak deviation | 0.0768 mm |
+| Eliminated supports, peak deviation | 0.0769 mm |
+| Difference | 8.5e-4 relative |
+
+That difference is the penalty solve's error. Only the cases with a prescribed OFFSET moved:
+those are the only ones that put the penalty into the right-hand side as well as the diagonal.
+Self-weight at 1 g, at 0 g and under ascent lateral load all reproduce to 1e-11 either way,
+which is why nothing had ever looked wrong.
+
+### How it surfaced, and the diagnosis that was wrong first
+
+Perturbing every entry of the matrix and the right-hand side by one ulp and re-solving, which is
+roughly what a different BLAS summation order does:
+
+| Formulation | Spread in the reported peaks |
+|---|---:|
+| Penalty supports | 4.3e-3 |
+| Eliminated supports | 4.4e-8 |
+
+The cross-machine disagreement the runner reported, 8.5e-4, sits inside the first and five
+orders outside the second.
+
+> **The first diagnosis of that runner failure was wrong, and is withdrawn.** It attributed the
+> disagreement to ordinary last-bit BLAS sensitivity in A69, measured locally at 3e-9, amplified
+> into A70 by the cancellation in a three-point sagitta -- 1.627 mm ordinates differenced down to
+> a 0.049 um sagitta, about 33,000x. The amplification is a real property of a sagitta. It was
+> not what happened. The fields the runner named were A69's own, and A70's sagittas moved by 5e-5
+> against an input that moved by 8.5e-4, which is less than their input, not more. The local 3e-9
+> was a same-machine re-run and could not see the conditioning at all.
+>
+> *A tolerance of 1e-3 was set on that reasoning. It would have passed the gate and left the
+> defect in place.*
+
+### What moves
+
+Both run sheets keep every band verdict. A69 stays seven of eight with band 7 failing, A70 stays
+one pass and five not evaluable.
+
+| Published figure | Was | Is |
+|---|---:|---:|
+| A69 band 7 range, low end | 0.0768 mm | 0.0769 mm |
+| A69 contributions table, support placement | 0.0768 mm | 0.0769 mm |
+| A70 admissibility, every printed sagitta | | unchanged |
+
+A70's printed map is unchanged to the digit: its sagittas are dominated by the imposed thermal
+curvature, which was never solved through the penalty, and the offset term it does carry is
+small. The 2.39 um figure at 120 mm and 1 K that [P110](#p110) established moves by 5e-11.
+
+### Corrected. Propagated 2026-08-26.
+
+`_solve_constrained()` eliminates the prescribed rows, and the three sites that held supports by
+penalty -- `beam()`, `verify_simple_span()` and `verify_imposed_curvature()` -- all use it. Both
+results files are regenerated. `check_results_fresh.py` carries 1e-7 for each of them with the
+measured one-ulp spread as the reason, replacing the 1e-3 the withdrawn diagnosis justified.
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 > **Scope:** `GEN6` · **Next step:** `FLIGHT_OPS` — published dispenser deployment counts and failure records

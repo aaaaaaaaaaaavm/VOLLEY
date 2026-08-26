@@ -9,6 +9,21 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-26 (fifty-sixth pass): the penalty supports in A69, and a wrong diagnosis withdrawn
+
+The fifty-fifth pass ended by setting a per-file reproducibility tolerance on two results files
+and explaining the wider of the two as cancellation in a sagitta. That explanation was wrong.
+Running the gate a second time on a runner, with the disagreement reported field by field,
+named A69's own fields rather than A70's, and at 8.5e-4 rather than 1.3e-4.
+
+| ID | Item | Detail |
+|---|---|---|
+| P115 | MEDIUM. `tube_centreline.beam()` held its rigid supports with a 1e8 diagonal penalty, at cond 8.6e15 | Numbered under [ADR-021](docs/adr/021-freeze-the-register.md) rule 2. The penalty satisfies the constraint to 1e-17 m and destroys the interior of the solution: against a double-precision epsilon of 2.2e-16 there is nothing left along the worst direction. Only the cases with a prescribed support OFFSET moved, because only those put the penalty into the right-hand side as well as the diagonal, which is exactly the set of fields the runner named. The supports are now imposed by eliminating the constrained rows, cond 4.1e9. A69's support-placement peak goes 0.0768 to 0.0769 mm; every band verdict in A69 and A70 is unchanged and A70's printed sagitta map does not move at all |
+| Diagnosis | The cancellation explanation is withdrawn | It attributed the cross-machine disagreement to A69 reproducing at 3e-9 and a three-point sagitta amplifying that by about 33,000. The amplification is a real property of a sagitta; it was not what happened. A70's sagittas moved by 5e-5 against an input that moved by 8.5e-4, which is less than their input rather than 33,000 times more, and the local 3e-9 was a same-machine re-run that could not see conditioning at all |
+| Tolerance | 1e-3 on `guided_contact_derived.json` is withdrawn with it | It was set on the withdrawn reasoning and it would have passed the gate with the defect still in place. Both files now carry 1e-7, measured by perturbing every entry of the matrix and the right-hand side by one ulp and re-solving: the penalty formulation spreads by 4.3e-3 and the eliminated one by 4.4e-8. The observed 8.5e-4 sits inside the first and five orders outside the second |
+
+---
+
 ## 2026-08-26 (fifty-fifth pass): the host-reference study is audited, and its orbital model was wrong
 
 An independent review of `docs/HOST_REFERENCE_CASES.md`, on the day it was published, found six
