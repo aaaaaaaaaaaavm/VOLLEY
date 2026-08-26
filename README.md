@@ -199,37 +199,37 @@ having considered only two:
 
 | | Why not | |
 |---|---|---|
-| **Supercapacitor bank + full motor** | **The bank cannot source the shot on cells anyone sells.** ESR × C is roughly constant within a cell technology: the shot needs **≤ 68 mΩ**, a real 32 × 190 F string is **116–185 mΩ**. Not an engineering gap — a physics one | **P26**, [A10](validation/A10_bank_esr.md) |
-| **Flywheel** | **The one live alternative.** Clears the electrical ceiling at **35 mΩ against 68 — at mass parity, not a saving.** Coupling it through a cable or drum refers rotating inertia straight onto the moving mass | [A25](validation/A25_flywheel_store.md), **P45** |
-| **Lead screw** | DN limit exceeded **8×**, whirling **36×** | [A27](validation/A27_actuator_trade.md) |
-| **Rack and pinion** | Contact drive at full speed in vacuum | A27, **E21** |
-| **Induction drive on a passive mover** | Was Gen6 for a single day. The mover it worked to lighten costs 11.54 kg against **26.35 kg for the pulse it kept** | `VOLLEY-lab` PII-19 |
+| Supercapacitor bank plus full motor | The bank cannot source the shot on cells anyone sells. ESR x C is roughly constant within a cell technology: the shot needs 68 milliohm or less, and a real 32 x 190 F string is 116 to 185 milliohm. That is a physics limit rather than an engineering gap | P26, [A10](validation/A10_bank_esr.md) |
+| Flywheel | The one live alternative. It clears the electrical ceiling at 35 milliohm against 68, but at mass parity rather than a saving. Coupling it through a cable or drum refers rotating inertia straight onto the moving mass | [A25](validation/A25_flywheel_store.md), P45 |
+| Lead screw | DN limit exceeded 8x, whirling 36x | [A27](validation/A27_actuator_trade.md) |
+| Rack and pinion | Contact drive at full speed in vacuum | A27, E21 |
+| Induction drive on a passive mover | Was Gen6 for a single day. The mover it worked to lighten costs 11.54 kg against 26.35 kg for the pulse it kept | `VOLLEY-lab` PII-19 |
 
-**Delete gas and the architecture goes with it, not just a component.** Requirement **C3** — *the
-energy arrives during the shot* — comes back, and [A35](validation/A35_constraint_ledger.md)
-prices it at **26.35 kg**. That deletion is most of the 50 % cut in added mass per satellite.
-**Gas is not a component choice; it is what buys the stage-integrated architecture.**
+Deleting gas takes the architecture with it rather than one component. Requirement C3, that the
+energy arrives during the shot, comes back, and [A35](validation/A35_constraint_ledger.md) prices
+it at 26.35 kg. That deletion is most of the 50 % cut in added mass per satellite. Gas is what
+buys the stage-integrated architecture.
 
-**And gas has already failed once here.** [A39](validation/A39_store_trade.md) chose it while
+Gas has also already failed once here. [A39](validation/A39_store_trade.md) chose it while
 assuming a regulator it never named, and [A40](validation/A40_blowdown_transient.md) killed that
-implementation at **14.16 m/s against a 30 m/s band** — a fixed orifice cannot hold force over a
-stroke, because the cylinder volume grows faster than the orifice can fill it. **A41's pre-charged
-chamber is the repair**: charge slowly, fire as a closed expansion, and there is no flow-rate
-problem by construction.
+implementation at 14.16 m/s against a 30 m/s band, because a fixed orifice cannot hold force over
+a stroke: the cylinder volume grows faster than the orifice can fill it. A41's pre-charged chamber
+is the repair. Charge slowly, fire as a closed expansion, and the flow-rate problem disappears by
+construction.
 
-**Nor is it free.** A spring holds its energy indefinitely and a gas store leaks; the seal
-that has to hold from launch to the last shot is the same one that owns the dispersion, and
-**nobody has measured it** (**P67**). A39's own run sheet records that its reservoir vessel is
-underestimated **4–6×** against real hardware and that its 1.5 kg allowance for piston, seals and
-plumbing is the largest guess in the run.
+It is not free either. A spring holds its energy indefinitely and a gas store leaks; the seal that
+has to hold from launch to the last shot is the same one that owns the dispersion, and nobody has
+measured it (P67). A39's own run sheet records that its reservoir vessel is underestimated 4 to 6x
+against real hardware, and that its 1.5 kg allowance for piston, seals and plumbing is the largest
+guess in the run.
 
 ## How a shot works
 
-**Two machines, two shots.** Gen5 is the frozen baseline and every headline number is computed
-against it; Gen6 is the current design target. **The difference is where the energy comes from,
-not what the customer buys.**
+Two machines, two shots. Gen5 is the frozen baseline and every headline number is computed against
+it; Gen6 is the current design target. What changes is where the energy comes from, not what the
+customer buys.
 
-### Gen5 — the motor does the work and the job
+### Gen5, where the motor does the work and the job
 
 ```mermaid
 flowchart LR
@@ -243,13 +243,13 @@ flowchart LR
 ```
 
 The satellite is never modified: the magnets ride the sled, not the payload. The sled leaves
-release carrying 1213 J; the **39 mm** of stator past that point takes **47 J of it back into
-the bank**, and the eddy brake absorbs the remaining **1162 J**. Efficiency is quoted
-electrical-to-payload, net of that credit. *A11 measured 291 J against a 240 mm regenerative
-section; ADR-030 removed it, because it and the 300 mm eddy fin were oversubscribed in a 339 mm
-airgap. Recovery is 3.9 % of the sled's energy, not 23 % —* **[P97](OPEN_PROBLEMS.md)**.
+release carrying 1213 J; the 39 mm of stator past that point takes 47 J of it back into the bank,
+and the eddy brake absorbs the remaining 1162 J. Efficiency is quoted electrical-to-payload, net
+of that credit. A11 measured 291 J against a 240 mm regenerative section, and ADR-030 removed it
+because it and the 300 mm eddy fin were oversubscribed in a 339 mm airgap. Recovery is 3.9 % of
+the sled's energy rather than 23 % ([P97](OPEN_PROBLEMS.md)).
 
-### Gen6 — gas does the work, the motor does the job
+### Gen6, where gas does the work and the motor does the job
 
 ```mermaid
 flowchart LR
@@ -261,58 +261,57 @@ flowchart LR
     E -.->|"payload departs"| G["Commanded orbit"]
 ```
 
-**Nothing throws the payload but gas, and if anything commands it, it is the trim stator.** The
-carriage does not come back — Gen6 has no return stroke and no brake, because there is no reusable
-sled to arrest. **The trim section is energised only after the gas has finished**, which is what
-lets a section three orders of magnitude shorter than a full stator recover a precision the full
-stator used to provide.
+Gas is the only thing that throws the payload, and the trim stator is the only thing that commands
+it. The carriage does not come back: Gen6 has no return stroke and no brake, because there is no
+reusable sled to arrest. The trim section is energised only after the gas has finished, which is
+what lets a section three orders of magnitude shorter than a full stator recover a precision the
+full stator used to provide.
 
-**The section is 144.01 mm, not the 39.7 mm this page carried until 2026-08-19.**
+The section is 144.01 mm, not the 39.7 mm this page carried until 2026-08-19.
 [A55](validation/A55_trim_authority.md) re-ran it at ADR-034's stroke and found the stage
-**under-authority by 3.57×** — P83, confirmed and closed. *It grew in exact proportion to the
-stroke, 1.822 % to 1.800 %.* **Whether any of it gets built is [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)'s
-open question.**
+under-authority by 3.57x, which is P83, confirmed and closed. It grew in almost exact proportion
+to the stroke, 1.822 % to 1.800 %. Whether any of it gets built is
+[ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)'s open question.
 
-**There is no Gen6 efficiency figure of the Gen5 kind**, and the reason is not an omission: the
-energy arrives as a ground-filled bottle rather than as electricity.
-[A51](validation/A51_gen6_power.md) measures what the machine actually draws — **311.76 J per
-shot, 0.26 W averaged, 36 W peak**. *The 25–131 W this page quoted until 2026-08-16 was a
-spring-winding figure for a machine with no spring — **P80**.*
+There is no Gen6 efficiency figure of the Gen5 kind, because the energy arrives as a ground-filled
+bottle rather than as electricity. [A51](validation/A51_gen6_power.md) measures what the machine
+actually draws: 311.76 J per shot, 0.26 W averaged, 36 W peak. The 25 to 131 W this page quoted
+until 2026-08-16 was a spring-winding figure for a machine with no spring (P80).
 
 
 ## The numbers
 
-**All model outputs. Nothing on this page has been measured at any scale.** Where a generation has
-no figure, the cell says so rather than being left blank.
+These are all model outputs. Nothing on this page has been measured at any scale. Where a
+generation has no figure, the cell says so rather than being left blank.
 
-| | **Gen5**, the baseline | **Gen6** at ADR-034 | Source |
+| | Gen5, the baseline | Gen6 at ADR-034 | Source |
 |---|---|---|---|
-| **Exit velocity, 3U** | **16.029 m/s at 10.07 g** | **34.280 m/s** zero-friction, **29.009** at the friction allowance, **at 11.36 g** | `motor_model.py` · [A49](validation/A49_design_surface.md) |
-| **Dispersion, 3σ** | **0.0274 m/s** at a 15.8 m/s setpoint, to ±0.10 km apogee | **3.980 % open-loop** at ADR-034's stroke; 0.0274 m/s with a trim stage resized to **144 mm** ([A55](validation/A55_trim_authority.md)) — **whose store is ~70 g, not A54's 23–37 kg** ([A64](validation/A64_pulse_store_technology.md), P86 closed). **The stage itself is suspended — [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)** | `motor_model.py` · [A44](validation/A44_gen6_dispersion.md) |
-| Acceleration length | 1.3 m accelerating, 1.5 m track | **8.0 m** — the host stage's whole usable length | `cad/parameters.json` |
-| Thrust constant | 10.54 N per kA/m, ±1.01 % ripple | same machine, trim section only | `motor_model.py`, A2 |
-| — its centre-plane value | 11.03 N per kA/m, **independently computed by a 2-D FEM to 0.03 %** | — | `motor_model.py`, A1 |
-| Energy per shot | **2.78 kJ gross, 2.74 kJ net** of regeneration | **311.76 J** | `motor_model.py` · [A51](validation/A51_gen6_power.md) |
-| Efficiency | **18.8 % electrical-to-payload** net of regeneration, 514 J delivered | **no equivalent figure exists** — the energy arrives as a ground-filled bottle, not as electricity | `motor_model.py` · A51 |
-| Electrical demand | 150–300 W recharge feed | **0.26 W average, 36 W peak** | A51 |
-| **Mass, dry / loaded** | **126.6 kg / 174.6 kg** | **11.45 kg added** plus **3.1216 kg** of store ([A56](validation/A56_reservoir_resized.md), sized) | `mass_properties.py` |
-| **Per 3U satellite** | **10.547 kg** dry | **1.2145 kg** added ([A45-R2](validation/A45R2_stage_credit_resized_store.md), at A56's sized store; **1.3173** if the suspended trim stage is built) — **up to 3.0827** read hostilely (**P68**) | `payload_family.py` · [A45](validation/A45_stage_credit.md) |
-| Recoil per shot | 64.1 N·s | **116.03 N·s — 1.81×**, and the thrust line must pass within **10.7 mm** of the host centre of mass | `astro.py` · [A52](validation/A52_gen6_recoil.md) |
-| Orbital lifetime multiplier | **×1.60** at mean activity, **not invariant — see P16** | unchanged in kind | `astro.py` |
-| Semi-major axis change | **+28.8 km**, unreachable by waiting or by drag | — | `astro.py`, A21-R |
-| First bending mode | **109 Hz** fixed-fixed, target > 70 | **1.67 Hz unsupported over 8.0 m — the tube needs a support every metre** ([A59](validation/A59_tube_structure.md)) | `sizing.py` · A59 |
-| Energy closure | **100.0 % accounted** | — | `sizing.py` |
-| Magazine | 12 × 3U, two transverse cassettes | 12 × 3U, cassette carried across | `cad/parameters.json` |
+| Exit velocity, 3U | 16.029 m/s at 10.07 g | 34.280 m/s zero-friction, 29.009 at the friction allowance, at 11.36 g | `motor_model.py`, [A49](validation/A49_design_surface.md) |
+| Dispersion, 3-sigma | 0.0274 m/s at a 15.8 m/s setpoint, to +/-0.10 km apogee | 3.980 % open-loop at ADR-034's stroke; 0.0274 m/s with a trim stage resized to 144 mm ([A55](validation/A55_trim_authority.md)), whose store is about 70 g rather than A54's 23 to 37 kg ([A64](validation/A64_pulse_store_technology.md), P86 closed). The stage itself is suspended by [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md) | `motor_model.py`, [A44](validation/A44_gen6_dispersion.md) |
+| Acceleration length | 1.3 m accelerating, 1.5 m track | 8.0 m, the host stage's whole usable length | `cad/parameters.json` |
+| Thrust constant | 10.54 N per kA/m, +/-1.01 % ripple | same machine, trim section only | `motor_model.py`, A2 |
+| its centre-plane value | 11.03 N per kA/m, independently computed by a 2-D FEM to 0.03 % | | `motor_model.py`, A1 |
+| Energy per shot | 2.78 kJ gross, 2.74 kJ net of regeneration | 311.76 J | `motor_model.py`, [A51](validation/A51_gen6_power.md) |
+| Efficiency | 18.8 % electrical-to-payload net of regeneration, 514 J delivered | no equivalent figure exists, because the energy arrives as a ground-filled bottle rather than as electricity | `motor_model.py`, A51 |
+| Electrical demand | 150 to 300 W recharge feed | 0.26 W average, 36 W peak | A51 |
+| Mass, dry / loaded | 126.6 kg / 174.6 kg | 11.45 kg added, plus 3.1216 kg of store ([A56](validation/A56_reservoir_resized.md), sized) | `mass_properties.py` |
+| Per 3U satellite | 10.547 kg dry | 1.2145 kg added ([A45-R2](validation/A45R2_stage_credit_resized_store.md), at A56's sized store, or 1.3173 if the suspended trim stage is built), and up to 3.0827 read hostilely (P68) | `payload_family.py`, [A45](validation/A45_stage_credit.md) |
+| Recoil per shot | 64.1 N.s | 116.03 N.s, a factor of 1.81, and the thrust line must pass within 10.7 mm of the host centre of mass | `astro.py`, [A52](validation/A52_gen6_recoil.md) |
+| Orbital lifetime multiplier | 1.60x at mean activity, and not invariant (P16) | unchanged in kind | `astro.py` |
+| Semi-major axis change | +28.8 km, unreachable by waiting or by drag | | `astro.py`, A21-R |
+| First bending mode | 109 Hz fixed-fixed, target above 70 | 1.67 Hz unsupported over 8.0 m, so the tube needs a support every metre ([A59](validation/A59_tube_structure.md)) | `sizing.py`, A59 |
+| Energy closure | 100.0 % accounted | | `sizing.py` |
+| Magazine | 12 x 3U, two transverse cassettes | 12 x 3U, cassette carried across | `cad/parameters.json` |
 
-> **One number is deliberately absent: the Gen6 stroke duration.** It read **133 ms** until
-> 2026-08-19, which is the figure for the 2.18 m stroke ADR-034 superseded, and **the 8.0 m figure
-> has not been run** — A55 produces it. *A number whose consequences have not been computed is not
-> published here, even when the old one is only a little wrong.*
+> One number is deliberately absent, the Gen6 stroke duration. It read 133 ms until 2026-08-19,
+> which is the figure for the 2.18 m stroke ADR-034 superseded, and the 8.0 m figure has not been
+> run; A55 produces it. A number whose consequences have not been computed does not get published
+> here, even when the old one is only a little wrong.
 
-**Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it.** Sixty-four validation
-run sheets exist, each against an acceptance band declared *before* the run; **three failed
-outright**, several missed individual bands, and **three times a declared band caught a bug in the
-analysis rather than in the design.**
+Read [`docs/PROVENANCE.md`](docs/PROVENANCE.md) before citing any of it. Sixty-four validation run
+sheets exist, each against an acceptance band declared before the run. Three failed outright,
+several missed individual bands, and on three occasions a declared band caught a bug in the
+analysis rather than in the design.
 
 ## Against a spring dispenser
 
