@@ -2,36 +2,36 @@
 
 > ## Gen6 is here too, and it is a different machine
 >
-> **[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md).** The payload is accelerated
-> directly by cold gas along a rail the host stage provides — **no mover, no stator, no brake, no
-> return stroke.** `cad/build_gen6.py` generates it from the same `parameters.json`, and it is
+> [ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md). The payload is accelerated
+> directly by cold gas along a rail the host stage provides, no mover, no stator, no brake, no
+> return stroke. `cad/build_gen6.py` generates it from the same `parameters.json`, and it is
 > byte-stable across rebuilds like Gen5.
 >
-> **Six parts, and only one of them is inherited:** the magazine cassette. A36 and A37 agree from
+> Six parts, and only one of them is inherited: the magazine cassette. A36 and A37 agree from
 > opposite directions that the containment is the only subsystem surviving every architecture
 > deletion.
 >
 > | | |
 > |---|---|
-> | Bore / stroke | 15.805 mm / 8000 mm — A49, the host stage's whole acceleration length |
-> | Chamber | 2 L at 22.7258 bar — A41 sized it, ADR-034 set the charge |
-> | Reservoir | 3.46 L at 200 bar — A56, **sized rather than scaled** |
+> | Bore / stroke | 15.805 mm / 8000 mm, A49, the host stage's whole acceleration length |
+> | Chamber | 2 L at 22.7258 bar, A41 sized it, ADR-034 set the charge |
+> | Reservoir | 3.46 L at 200 bar, A56, sized rather than scaled |
 > | Exit velocity | 29.01 m/s at the friction allowance, 11.36 g peak |
 >
-> **Corrected 2026-08-22 — [P107](../OPEN_PROBLEMS.md).** These three rows read 50 bar, 11.25 L
-> and 30.54 m/s at 25 g — the pre-ADR-034 design point. **The geometry never moved with them**:
+> Corrected 2026-08-22, [P107](../OPEN_PROBLEMS.md). These three rows read 50 bar, 11.25 L
+> and 30.54 m/s at 25 g, the pre-ADR-034 design point. The geometry never moved with them:
 > `build_gen6.py` reads every one of these from `parameters.json`.
 >
-> **Three things it draws that are not settled**, and they are in the script's own header rather
-> than only here: **the cradle is an envelope, not a design**, because A34 says the mechanism
+> Three things it draws that are not settled, and they are in the script's own header rather
+> than only here: the cradle is an envelope, not a design, because A34 says the mechanism
 > does not exist and A38's preload is 201.7 N at the 25 g cap against 91.7 at the design point
-> (**P102**); the reservoir is sized but the bottle itself is not designed; and the stage rail is
+> (P102); the reservoir is sized but the bottle itself is not designed; and the stage rail is
 > a straight extrusion
-> of unknown provenance, because **no launch provider has agreed to anything.**
+> of unknown provenance, because no launch provider has agreed to anything.
 
 
 Fusion 360 CAD for VOLLEY, across nine documents (Track, Stator, Sled, Payload_3U,
-Magazine_Cassette, Brake, Interface_ESPA, Enclosure, Assembly), in **three generations**.
+Magazine_Cassette, Brake, Interface_ESPA, Enclosure, Assembly), in three generations.
 
 Full generation history, per-file body counts, and the defect list are in
 [`CHANGELOG_CAD.md`](CHANGELOG_CAD.md).
@@ -41,8 +41,8 @@ Full generation history, per-file body counts, and the defect list are in
 
 `build_gen5.py` (CadQuery, B-rep, STEP) and `scad/gen5.scad` (OpenSCAD, CSG, STL) build the same
 eight documents from the same parameter file and read nothing of each other's.
-`tools/compare_scad_cadquery.py` compares them part by part. **It found a real defect on its first
-run** — the sled rollers were outside their channels in every Gen5 STEP ever built, **P71** —
+`tools/compare_scad_cadquery.py` compares them part by part. It found a real defect on its first
+run, the sled rollers were outside their channels in every Gen5 STEP ever built, P71,
 which no guard here could have caught, because every guard compares a built artifact against
 the script that built it. See [`scad/README.md`](scad/README.md).
 
@@ -51,7 +51,7 @@ the script that built it. See [`scad/README.md`](scad/README.md).
 
 | Folder | What it is | Status |
 |---|---|---|
-| `step/gen3/` | Parameter-reconciled revision, plus `EMOCD_Gen3.step`, a monolithic single-file model (395 solids) holding all nine sub-systems. The renders in `renders/` came from it | **CURRENT.** Open problems P5, P12 are indexed against it |
+| `step/gen3/` | Parameter-reconciled revision, plus `EMOCD_Gen3.step`, a monolithic single-file model (395 solids) holding all nine sub-systems. The renders in `renders/` came from it | CURRENT. Open problems P5, P12 are indexed against it |
 | `step/gen2/` | First structured revision. Mechanism-level detail arrives: single-layer stator, sled Halbach arrays and rollers, magazine escapement and D6 pins, brake ring spring | SUPERSEDED, carries a 360 mm sled chassis where the spec says 488 mm |
 | `step/gen1/` | The original CAD, 2021-2025. Structural envelope rather than mechanism model; the geometry `parameters.json` was reverse-engineered from. Includes the pre-split single-file `EMOCD_Deployer_Assembly_Gen1.step` and a second sled revision, `Sled_Gen1b` | SUPERSEDED, heritage only |
 
@@ -59,50 +59,50 @@ Use Gen3 unless you specifically need a heritage comparison.
 
 ## What is authoritative here
 
-- **`parameters.json` is the geometry source of truth.** Every dimension lives here, not
+- `parameters.json` is the geometry source of truth. Every dimension lives here, not
   in Fusion (Fusion user parameters are document-scoped and drift silently across the nine
   documents). Change a value here, then regenerate the affected document from script. If
   the CAD and `parameters.json` disagree, `parameters.json` wins and the CAD is wrong.
-- CAD is authoritative for **geometry, fit, and interference only.**
-- `analysis/*.py` remains authoritative for **mass and performance.** Fusion-computed
+- CAD is authoritative for geometry, fit, and interference only.
+- `analysis/*.py` remains authoritative for mass and performance. Fusion-computed
   masses are proxies (solid-copper stator, solid-aluminium CubeSats, steel standing in for
-  NdFeB) and are deliberately excluded from `parameters.json`. **Never quote a
-  Fusion-computed mass.**
+  NdFeB) and are deliberately excluded from `parameters.json`. Never quote a
+  Fusion-computed mass.
 
 ## Status (2026-07-28)
 
-First-pass CAD, **no structural or magnetic FEA behind any of it.** Several values are
+First-pass CAD, no structural or magnetic FEA behind any of it. Several values are
 flagged `PROVISIONAL_PENDING_FEA` in `parameters.json`. Open: the sled chassis mass (P5),
 the resulting exit velocity (P8), the ESPA envelope overrun (P9), the incomplete mass
 rollup (P10), and the CAD-side geometry defects P14, see `../OPEN_PROBLEMS.md`.
 
-**What changed on 2026-07-28.** The previously committed `step/*.step` set was a
+What changed on 2026-07-28. The previously committed `step/*.step` set was a
 mixed-generation snapshot matching no single generation, and two of its files were stubs:
-the stator export contained **one solid** rather than 162 conductors, and the ESPA
-interface contained **one solid** rather than a flange ring, hub plate, and four gussets.
+the stator export contained one solid rather than 162 conductors, and the ESPA
+interface contained one solid rather than a flange ring, hub plate, and four gussets.
 It was replaced wholesale by the three audited generations. See `CHANGELOG.md` (CAD2 block)
 and `OPEN_PROBLEMS.md` P13.
 
 ## Before using any file
 
-1. **Gen3 unless you need heritage.** Gen1 and Gen2 carry known dimensional and mechanism
+1. Gen3 unless you need heritage. Gen1 and Gen2 carry known dimensional and mechanism
    defects, listed per file in `CHANGELOG_CAD.md`.
-2. **Cross-check every dimension against `parameters.json`** before quoting it.
-3. **No Fusion masses.** Mass authority is `analysis/mass_properties.py`, and even that is
+2. Cross-check every dimension against `parameters.json` before quoting it.
+3. No Fusion masses. Mass authority is `analysis/mass_properties.py`, and even that is
    incomplete (P10).
-4. **The sled mass conflict is resolved (2026-07-29).** The scripts now carry the CAD-derived 9.445 kg and the headline is 16.39 m/s. Historical note follows: 20.37 m/s assumed a 4.86 kg sled; the Gen3
+4. The sled mass conflict is resolved (2026-07-29). The scripts now carry the CAD-derived 9.445 kg and the headline is 16.39 m/s. Historical note follows: 20.37 m/s assumed a 4.86 kg sled; the Gen3
    geometry implies ~7.50 kg and a provisional 17.88 m/s. Quote neither without the
    conflict (P5, P8). `validation/A4_sled_structural.md` is the analysis that settles it.
-5. **The ESPA envelope claim is not supported.** 1839 mm installed against a ~1270 mm class
+5. The ESPA envelope claim is not supported. 1839 mm installed against a ~1270 mm class
    limit, ~44 % over (P9), and the paper still asserts compatibility (P12).
-6. **The stator layer count is an open design decision.** Gen1 built two layers, Gen2 and
+6. The stator layer count is an open design decision. Gen1 built two layers, Gen2 and
    Gen3 one, and `parameters.json` flags it open. The electromagnetic consequence, roughly
    x2 force for the same current against x2 copper mass and winding complexity, has never
    been computed (P14).
 
-> **Modelling from this repository?** [`../CAD_BRIEF.md`](../CAD_BRIEF.md) is written to be read
+> Modelling from this repository? [`../CAD_BRIEF.md`](../CAD_BRIEF.md) is written to be read
 > first: coordinate frame, part list and assembly order, critical versus soft dimensions, and a
-> table resolving **every conflict between files here** with the side to build. `DIMENSIONS.md`
+> table resolving every conflict between files here with the side to build. `DIMENSIONS.md`
 > and `BOM.md` below are built from `parameters.json` and `analysis/mass_properties.py`, so
 > they cannot drift from their sources.
 
@@ -113,23 +113,23 @@ and `OPEN_PROBLEMS.md` P13.
   G3-D*), and the cross-generation comparison
 - `step/gen1/`, `step/gen2/`, `step/gen3/`, STEP exports from Fusion (`.f3d` is not diffable,
   so STEP is what gets committed)
-- `step/gen5/`, **built** by `build_gen5.py` from `parameters.json` — nothing is drawn, so
+- `step/gen5/`, built by `build_gen5.py` from `parameters.json`, nothing is drawn, so
   it cannot drift from the parameters, it regenerates byte-identically from a clean clone, and
   `build_gen5.py --check` reads 23 dimensions back out of the built solids and compares them to
   the parameter file. See [ADR-026](../docs/adr/026-cad-built-from-parameters.md).
-  **It is a geometry and interface model, not a manufacturing model:** no fillets, no chamfers,
+  It is a geometry and interface model, not a manufacturing model: no fillets, no chamfers,
   no fasteners, no harness routing, no tolerancing. Do not send it to a machine shop; do use it
-  to check fit, envelope, clearance and station alignment
+ to check fit, envelope, clearance and station alignment
 - `renders/`, the published PNG set, and `renders/source/`, the uncropped frames it is
-  produced from by `tools/prepare_renders.py`. **These are Gen4 shots and Gen4 has no
-  committed STEP export**, so they show geometry no file in `step/` matches, and Gen4's
-  stations are not the analysis model's — see `../docs/GEN4_STATUS.md`, ADR-019 and P43.
+  produced from by `tools/prepare_renders.py`. These are Gen4 shots and Gen4 has no
+  committed STEP export, so they show geometry no file in `step/` matches, and Gen4's
+  stations are not the analysis model's, see `../docs/GEN4_STATUS.md`, ADR-019 and P43.
   No performance number anywhere in this repository is taken from them.
   `exploded_view.png` alone is retained from the Gen3 monolithic model
 - `tools/prepare_renders.py`, which crops the raw frames to content, fits them to a
   publishing box and draws the departure direction on each. The direction is per-render
   because the camera flips between views; P43 is what happens when it is wrong
-- `DIMENSIONS.md` and `BOM.md`, **built** by `tools/make_cad_package.py` from
+- `DIMENSIONS.md` and `BOM.md`, built by `tools/make_cad_package.py` from
   `parameters.json` and `analysis/mass_properties.py`. Both are guarded by
   `tools/check_artifacts.py`, so a dimension changed without a regenerate is caught
 - `tools/make_cad_package.py`, the generator. Edit the sources and re-run it; never edit
