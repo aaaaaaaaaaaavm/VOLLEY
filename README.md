@@ -421,17 +421,17 @@ possible. Four analyses were actually run; three could not be.
 
 ### External tools, and which have actually run
 
-Each analysis has its acceptance band declared **before** the run, in [`validation/`](validation/).
-**A cross-check whose target is chosen after seeing the answer proves nothing.**
+Each analysis has its acceptance band declared before the run, in [`validation/`](validation/).
+A cross-check whose target is chosen after seeing the answer proves nothing.
 
 | Analysis | Tool | Closes | Status |
 |---|---|---|---|
 | A1 airgap field | FEMM | E1 (2-D half), E2 | specified |
-| **A4 sled chassis** | CalculiX ccx 2.21 | **P5, P8** | **run**: as-drawn plate passes; mass unchanged |
-| A5 lifetime & seeding | GMAT R2022a | E6 | **run**: see [`docs/RESULTS.md`](docs/RESULTS.md) |
+| A4 sled chassis | CalculiX ccx 2.21 | P5, P8 | run: as-drawn plate passes, mass unchanged |
+| A5 lifetime and seeding | GMAT R2022a | E6 | run: see [`docs/RESULTS.md`](docs/RESULTS.md) |
 | A6 conjunction Pc | NASA CARA | P1 | specified |
 | A7 separation & tip-off | Project Chrono | E7 | specified |
-| A8 pulse-power chain | ngspice 42 | E17 | **run**: bands met, 2 findings |
+| A8 pulse-power chain | ngspice 42 | E17 | run: bands met, 2 findings |
 
 ### Reproducing
 
@@ -444,7 +444,7 @@ python3 verify_field.py && python3 mass_properties.py && python3 motor_model.py 
 
 Results land in `analysis/results/*.json`.
 
-The analysis layer needs nothing but `requirements.txt`. The **validation** layer needs
+The analysis layer needs nothing but `requirements.txt`. The validation layer needs
 external solvers, gmsh and scikit-fem for the magnetostatic FEM, GetDP, CalculiX,
 ngspice, and a LaTeX install for the manuscript. `tools/env-setup.sh` installs all of
 them on a Debian/Ubuntu machine and verifies each one before exiting.
@@ -452,37 +452,37 @@ them on a Debian/Ubuntu machine and verifies each one before exiting.
 
 ## Results
 
-**Every image below is a script output.** Nothing here has been measured — see
-**[`docs/FIGURE_INDEX.md`](docs/FIGURE_INDEX.md)** for each figure's generator, its source data
-and its class of evidence, and note that the class for *measured* has **zero members**.
+Every image below is a script output. Nothing here has been measured; see
+[`docs/FIGURE_INDEX.md`](docs/FIGURE_INDEX.md) for each figure's generator, its source data and
+its class of evidence, and note that the class for *measured* has zero members.
 
 <table>
 <tr>
-<td width="50%"><img src="figures/A29_wake.png" alt="OpenFOAM mid-plane slice: pressure and speed around the sled"><br><sub><b>The flow, A29.</b> Mid-plane slice of the converged fine mesh &mdash; stagnation on the forward face, separation at the shoulders, and a wake that has not recovered by <b>x = 2.2 m</b>. <b>581 779 cells</b>, <code>simpleFoam</code> k-&omega; SST. The pressure term is integrated from the solved field; <b>the viscous term is not solved</b> and is bounded by a flat-plate correlation, because <code>wallShearStress</code> aborts in this OpenFOAM build. Parsed out of the case in pure Python (<code>validation/cfd/fields.py</code>).</sub></td>
-<td width="50%"><img src="figures/A02_field_map.png" alt="Halbach airgap field and its depth profile"><br><sub><b>The field, A2/A3.</b> The physics every Gen5 number descends from. Left, <b>B<sub>y</sub></b> across the 12 mm gap with the 10 mm winding marked; right, the profile through the array's <b>90 mm depth</b>. Sampling the centre plane and multiplying gives <b>0.5041 T</b>; the depth mean is <b>0.4759 T</b>. <b>That assumption cost K<sub>t</sub> 4.42 %</b> and moved every dependent number with it.</sub></td>
+<td width="50%"><img src="figures/A29_wake.png" alt="OpenFOAM mid-plane slice: pressure and speed around the sled"><br><sub>The flow, A29. Mid-plane slice of the converged fine mesh, showing stagnation on the forward face, separation at the shoulders, and a wake that has not recovered by x = 2.2 m. 581 779 cells, <code>simpleFoam</code> k-omega SST. The pressure term is integrated from the solved field; the viscous term is not solved and is bounded by a flat-plate correlation, because <code>wallShearStress</code> aborts in this OpenFOAM build. Parsed out of the case in pure Python (<code>validation/cfd/fields.py</code>).</sub></td>
+<td width="50%"><img src="figures/A02_field_map.png" alt="Halbach airgap field and its depth profile"><br><sub>The field, A2 and A3. The physics every Gen5 number descends from. Left, B<sub>y</sub> across the 12 mm gap with the 10 mm winding marked; right, the profile through the array's 90 mm depth. Sampling the centre plane and multiplying gives 0.5041 T; the depth mean is 0.4759 T. That assumption cost K<sub>t</sub> 4.42 % and moved every dependent number with it.</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="cad/renders/gen5/exploded.png" alt="Exploded view of the Gen5 drive stack"><br><sub><b>The drive stack, exploded.</b> Track, stator winding, sled, payload &mdash; in the order it assembles. Rendered in Blender from the same STLs <code>cad/build_gen5.py</code> writes from <code>parameters.json</code>, so the geometry is the geometry, not an illustration of it.</sub></td>
-<td width="50%"><img src="figures/A35_ledger.png" alt="Constraint ledger: single-requirement mass and the 64-corner floor"><br><sub><b>The mass that will not go away, A35.</b> Every kilogram attributed to the requirement causing it, then every requirement deleted in all <b>64 corners</b>. <b>88.67 kg &mdash; 70.06 % &mdash; survives all of them</b>, which is <b>7.39 kg per satellite against a 2.0 kg criterion</b>. Three of the six requirements carry no mass on their own. <i>A35's run sheet still reads 49.23 kg at the pre-A46 dry mass &mdash; <b>P95</b>.</i></sub></td>
+<td width="50%"><img src="cad/renders/gen5/exploded.png" alt="Exploded view of the Gen5 drive stack"><br><sub>The drive stack, exploded: track, stator winding, sled and payload, in the order it assembles. Rendered in Blender from the same STLs <code>cad/build_gen5.py</code> writes from <code>parameters.json</code>, so the geometry is the geometry rather than an illustration of it.</sub></td>
+<td width="50%"><img src="figures/A35_ledger.png" alt="Constraint ledger: single-requirement mass and the 64-corner floor"><br><sub>The mass that will not go away, A35. Every kilogram attributed to the requirement causing it, then every requirement deleted in all 64 corners. 88.67 kg, or 70.06 %, survives all of them, which is 7.39 kg per satellite against a 2.0 kg criterion. Three of the six requirements carry no mass on their own. A35's run sheet still reads 49.23 kg at the pre-A46 dry mass (P95).</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="figures/F01_shot.png" alt="Shot simulation: force, velocity, current"><br><sub><b>The shot.</b> Force, velocity and current through the 162.3 ms stroke (<code>motor_model.py</code>).</sub></td>
-<td width="50%"><img src="figures/F04_life.png" alt="Orbital lifetime with and without the boost"><br><sub><b>Lifetime.</b> Boosted vs unboosted decay; the x1.60 multiplier at mean activity is the model result, not the absolute years (<code>astro.py</code>).</sub></td>
+<td width="50%"><img src="figures/F01_shot.png" alt="Shot simulation: force, velocity, current"><br><sub>The shot. Force, velocity and current through the 162.3 ms stroke (<code>motor_model.py</code>).</sub></td>
+<td width="50%"><img src="figures/F04_life.png" alt="Orbital lifetime with and without the boost"><br><sub>Lifetime. Boosted against unboosted decay; the 1.60x multiplier at mean activity is the model result, not the absolute years (<code>astro.py</code>).</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="figures/F12_bode.png" alt="Open-loop velocity-loop response at both gains"><br><sub><b>The velocity loop, A28.</b> The gain published until 2026-08-13 put the crossover at <b>557 Hz</b> — above both track modes — with <b>-50.4&deg;</b> of phase margin. The designed gain is 195 s<sup>-1</sup>: +82.2&deg;, +21.2 dB, and the dispersion does not move (<code>control_design.py</code>).</sub></td>
-<td width="50%"><img src="figures/F13_latency.png" alt="Phase margin against transport delay"><br><sub><b>The stability floor.</b> The old gain crosses into instability at <b>0.35 ms</b> of sensor delay. Its dispersion figure came from a simulation that fed back an undelayed state (<b>P47</b>).</sub></td>
+<td width="50%"><img src="figures/F12_bode.png" alt="Open-loop velocity-loop response at both gains"><br><sub>The velocity loop, A28. The gain published until 2026-08-13 put the crossover at 557 Hz, above both track modes, with -50.4 deg of phase margin. The designed gain is 195 s<sup>-1</sup>, giving +82.2 deg and +21.2 dB, and the dispersion does not move (<code>control_design.py</code>).</sub></td>
+<td width="50%"><img src="figures/F13_latency.png" alt="Phase margin against transport delay"><br><sub>The stability floor. The old gain crosses into instability at 0.35 ms of sensor delay. Its dispersion figure came from a simulation that fed back an undelayed state (P47).</sub></td>
 </tr>
 <tr>
-<td colspan="2"><img src="figures/A29_cfd_report.png" alt="CFD convergence, force history and surface pressure"><br><sub><b>CFD, A29 — the full report, not just the answer.</b> <b>(a)</b> the solve <i>does not converge</i>, which is what a steady solver does on a separated wake, so the force is a windowed mean; <b>(b)</b> that mean, 1.734 &plusmn; 0.144 N; <b>(c)</b> surface pressure — forward faces push, the base sucks, the sides do nothing, with a peak C<sub>p</sub> of <b>0.975</b> where stagnation should approach 1. Meshed by <code>snappyHexMesh</code> from the <b>script-built Gen5 CAD</b>, not an idealised box.</sub></td>
+<td colspan="2"><img src="figures/A29_cfd_report.png" alt="CFD convergence, force history and surface pressure"><br><sub>CFD, A29: the full report rather than just the answer. (a) the solve does not converge, which is what a steady solver does on a separated wake, so the force is a windowed mean; (b) that mean, 1.734 +/- 0.144 N; (c) surface pressure, where forward faces push, the base sucks and the sides do nothing, with a peak C<sub>p</sub> of 0.975 where stagnation should approach 1. Meshed by <code>snappyHexMesh</code> from the script-built Gen5 CAD rather than an idealised box.</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="figures/F14_airdrag.png" alt="Air drag along the stroke and the resulting velocity deficit"><br><sub><b>What air costs a ground test.</b> The machine flies in vacuum; the full-scale test fires in a room. The deficit is <b>5.1 mm/s</b> — 0.031 % of the design point, but <b>19 % of the dispersion the test exists to resolve</b>. No vacuum chamber needed; an air correction on every measured velocity is.</sub></td>
-<td width="50%"><img src="figures/F03_mc.png" alt="Closed-loop exit-velocity dispersion"><br><sub><b>Dispersion.</b> 800 Monte Carlo runs, 0.0274 m/s (3&sigma;) about a 15.8 m/s setpoint. The gain behind it is now <i>designed against margins</i> rather than asserted (<b>ADR-027</b>).</sub></td>
+<td width="50%"><img src="figures/F14_airdrag.png" alt="Air drag along the stroke and the resulting velocity deficit"><br><sub>What air costs a ground test. The machine flies in vacuum and the full-scale test fires in a room. The deficit is 5.1 mm/s, which is 0.031 % of the design point but 19 % of the dispersion the test exists to resolve. No vacuum chamber is needed; an air correction on every measured velocity is.</sub></td>
+<td width="50%"><img src="figures/F03_mc.png" alt="Closed-loop exit-velocity dispersion"><br><sub>Dispersion. 800 Monte Carlo runs, 0.0274 m/s (3-sigma) about a 15.8 m/s setpoint. The gain behind it is now designed against margins rather than asserted (ADR-027).</sub></td>
 </tr>
 </table>
 
-**[Every figure &rarr;](figures/)** &middot; **[what stands behind each one &rarr;](docs/FIGURE_INDEX.md)**
+[Every figure](figures/), and [what stands behind each one](docs/FIGURE_INDEX.md).
 
 ### Charts
 
