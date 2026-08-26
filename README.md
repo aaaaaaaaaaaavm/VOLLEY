@@ -630,24 +630,24 @@ found that P17's explanation of its own finding was backwards.
 
 ### The decisions that actually moved it
 
-**The three architectures are not three ways to build one machine. They are three different
-readings of what the problem is** — and one decision, in 2023, that is neither.
+The three architectures are not three ways to build one machine. They are three different readings
+of what the problem is, plus one decision in 2023 that is neither.
 
 | When | The decision | How the machine works | What it gave up |
 |---|---|---|---|
-| **2021** | **Coilgun** — *how hard can we throw it?* Presented at ARDE / INSARM | a capacitor bank discharges into coils; the payload is pulled by a field gradient | **velocity you can command.** A coilgun's exit speed is set by the discharge, not by a loop |
-| **2023** | **[ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md) — the host is a spent upper stage.** *This set the direction*, and it is not an architecture change | a free-flyer must carry attitude control, power and recoil management, *"which is most of a spacecraft"*; a spent stage already has all three | nothing yet. **It turned VOLLEY from a mission into a payload**, and everything after it moved the same way |
-| **mid-2025** | **Linear synchronous motor** — *how precisely can we throw it?* Not for accuracy, whatever the record used to say: *"the acceleration is enormous and the EMI environment is awful. **That defeats the whole point of supporting unmodified CubeSats**"* | current commanded against measured position; magnets ride a **reusable sled**, an eddy brake recovers it | **simplicity.** Every subsystem that follows — bank, power electronics, brake, return stroke — exists to serve the sled. A35 prices that at **11.54 kg**, against **26.35 kg** for insisting the energy arrive *during* the shot |
-| **2026-08-20** | **[ADR-035](docs/adr/035-drive-tube-material.md) — the tube is hard-anodised aluminium**, then **[ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md) — the seal is specified and the trim stage suspended** | A59 found strength, stiffness and buckling **indifferent between the metals**, so mass alone decided — and that **forecloses steam** (A63: zero of 108 points reach 473 K). Then A61 specified the seal at **17.8 N** and ADR-036 stopped work on the stator rather than building or deleting it | **P67.** Both decisions rest on a friction nobody has measured, and ADR-036 is written to be falsified by the bench test |
-| **2026-08-14** | **[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) — cold gas on a stage rail.** *What does the machine need to exist at all?* Then **[ADR-033](docs/adr/033-gen6-trim-stage.md)**, a motor that steers, and **[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md)**, the stroke becomes the stage | a **2 L chamber at 22.73 bar** fires the payload along **8.0 m** of rail the spent stage already is; **nothing is recovered**; a **39.7 mm stator** corrects the result. **29.75 kg deleted, 43.33 kg reassigned** | **the pulse, partly.** The trim stage is 37.7 J at 28 kW — C3 returning at a fiftieth of the energy, **on hardware nobody has weighed** |
+| 2021 | Coilgun. How hard can we throw it? Presented at ARDE / INSARM | a capacitor bank discharges into coils; the payload is pulled by a field gradient | velocity you can command. A coilgun's exit speed is set by the discharge rather than by a loop |
+| 2023 | [ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md), the host is a spent upper stage. This set the direction and is not an architecture change | a free-flyer must carry attitude control, power and recoil management, "which is most of a spacecraft"; a spent stage already has all three | nothing yet. It turned VOLLEY from a mission into a payload, and everything after it moved the same way |
+| mid-2025 | Linear synchronous motor. How precisely can we throw it? Not for accuracy, whatever the record used to say: "the acceleration is enormous and the EMI environment is awful. That defeats the whole point of supporting unmodified CubeSats" | current commanded against measured position; magnets ride a reusable sled and an eddy brake recovers it | simplicity. Every subsystem that follows, meaning bank, power electronics, brake and return stroke, exists to serve the sled. A35 prices that at 11.54 kg, against 26.35 kg for insisting the energy arrive during the shot |
+| 2026-08-20 | [ADR-035](docs/adr/035-drive-tube-material.md), the tube is hard-anodised aluminium, then [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md), the seal is specified and the trim stage suspended | A59 found strength, stiffness and buckling indifferent between the metals, so mass alone decided, and that forecloses steam (A63: zero of 108 points reach 473 K). Then A61 specified the seal at 17.8 N and ADR-036 stopped work on the stator rather than building or deleting it | P67. Both decisions rest on a friction nobody has measured, and ADR-036 is written to be falsified by the bench test |
+| 2026-08-14 | [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md), cold gas on a stage rail. What does the machine need to exist at all? Then [ADR-033](docs/adr/033-gen6-trim-stage.md), a motor that steers, and [ADR-034](docs/adr/034-gen6-long-stroke-design-point.md), the stroke becomes the stage | a 2 L chamber at 22.73 bar fires the payload along 8.0 m of rail the spent stage already is, nothing is recovered, and a 39.7 mm stator corrects the result. 29.75 kg deleted, 43.33 kg reassigned | the pulse, partly. The trim stage is 37.7 J at 28 kW, which is C3 returning at a fiftieth of the energy, on hardware nobody has weighed |
 
-**The arc is `how hard` → `how precisely` → `what can be deleted`.** Each step kept the problem and
-threw away the previous answer's central assumption.
+The arc runs from how hard, to how precisely, to what can be deleted. Each step kept the problem
+and threw away the previous answer's central assumption.
 
-**Read them together and one line runs through all of them: every architecture change moved the
-design closer to *being* the stage rather than riding one.** *It is not a claim that anyone
-planned it that way — each step was taken for a reason recorded at the time, and `LINEAGE.md`
-says so in those words.*
+Read together, one line runs through all of them: every architecture change moved the design
+closer to being the stage rather than riding one. That is not a claim that anyone planned it that
+way. Each step was taken for a reason recorded at the time, and `LINEAGE.md` says so in those
+words.
 
 ### The timeline
 
@@ -681,52 +681,54 @@ gantt
     Nothing measured at any scale    :crit, e1, 2021-03-22, 2026-08-20
 ```
 
-<sub><b>Dates carry the precision <a href="docs/HISTORY.md">docs/HISTORY.md</a> records, and not
-more.</b> <b>Documented:</b> the 2021-03-22 concept, the 2026-07-23 Gen3 build, and everything from
-2026-07-29 on, which is in git. <b>Approximate:</b> the mid-2025 motor decision, Gen1 and Gen2,
-whose build history was never reconstructed — <code>cad/CHANGELOG_CAD.md</code> gives Gen1 a range
-of 2021–2025 and is the authority if this disagrees. <b>Inferred:</b> the 2023 host reframe has a
-year and no month in the record; it is drawn at the start of that year and the bar's left edge
-should not be read as a date. Bar <i>lengths</i> are spans between milestones, not durations of
+<sub>Dates carry the precision <a href="docs/HISTORY.md">docs/HISTORY.md</a> records, and not
+more. Documented: the 2021-03-22 concept, the 2026-07-23 Gen3 build, and everything from
+2026-07-29 on, which is in git. Approximate: the mid-2025 motor decision, Gen1 and Gen2, whose
+build history was never reconstructed, and <code>cad/CHANGELOG_CAD.md</code> gives Gen1 a range of
+2021 to 2025 and is the authority if this disagrees. Inferred: the 2023 host reframe has a year
+and no month in the record, so it is drawn at the start of that year and the bar's left edge
+should not be read as a date. Bar lengths are spans between milestones rather than durations of
 work.</sub>
 
-**The Host lane is the one with a direction.** **[ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md),
-2023** — *"Learning of ISRO's POEM, a spent PSLV fourth stage operated as a stabilised platform,
-reframed the problem"* — set it, and every architecture decision since has moved the design from
-*riding* a stage to *being* one. **[`docs/LINEAGE.md`](docs/LINEAGE.md)** is that through-line,
-with what each CAD generation assumed about the vehicle underneath it.
+The Host lane is the one with a direction.
+[ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md), 2023, set it: "Learning of ISRO's POEM, a
+spent PSLV fourth stage operated as a stabilised platform, reframed the problem". Every
+architecture decision since has moved the design from riding a stage to being one.
+[`docs/LINEAGE.md`](docs/LINEAGE.md) is that through-line, with what each CAD generation assumed
+about the vehicle underneath it.
 
-**The bottom bar is the one that matters.** Five years, three architectures, six CAD
-generations, fifty-three analyses — and **not one measurement**. That is `OPEN_PROBLEMS.md` **E4**,
-it is open, and nothing above it changes that.
+The bottom bar is the one that matters. Five years, three architectures, six CAD generations,
+fifty-three analyses, and not one measurement. That is `OPEN_PROBLEMS.md` E4, it is open, and
+nothing above it changes that.
 
 ### Which generation is which
 
-**Gen4 was the last one drawn by hand and it has no committed export. Gen5 is the frozen baseline
-every headline number is computed against. Gen6 is the design target.** The renders below get
-plainer in that order, and the reason is not the renderer.
+Gen4 was the last one drawn by hand and it has no committed export. Gen5 is the frozen baseline
+every headline number is computed against. Gen6 is the design target. The renders below get
+plainer in that order, and the renderer is not the reason.
 
-**The full comparison — drive, store, arrest, structure, and what each generation fixed —
-is [`docs/GENERATIONS.md`](docs/GENERATIONS.md).** What the three look like:
+The full comparison, covering drive, store, arrest, structure, and what each generation fixed, is
+in [`docs/GENERATIONS.md`](docs/GENERATIONS.md). What the three look like:
 
 <table>
 <tr>
-<td width="33%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Gen4"></a><br><sub><b>Gen4.</b> Hand-modelled, more detail than any generation since, and no committed export.</sub></td>
-<td width="33%"><a href="cad/renders/gen5/hero_open.png"><img src="cad/renders/gen5/hero_open.png" alt="Gen5"></a><br><sub><b>Gen5.</b> Eight parts from the parameter file. Plainer because every feature must trace to a parameter.</sub></td>
-<td width="33%"><a href="cad/renders/gen6/hero_open.png"><img src="cad/renders/gen6/hero_open.png" alt="Gen6"></a><br><sub><b>Gen6.</b> What is left after deletion: a rail, a tube, a chamber — now <b>8.2 m of it</b>, the host stage's whole length (ADR-034). <b>The difference is the architecture, not the renderer.</b></sub></td>
+<td width="33%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Gen4"></a><br><sub>Gen4. Hand-modelled, more detail than any generation since, and no committed export.</sub></td>
+<td width="33%"><a href="cad/renders/gen5/hero_open.png"><img src="cad/renders/gen5/hero_open.png" alt="Gen5"></a><br><sub>Gen5. Eight parts from the parameter file. Plainer because every feature must trace to a parameter.</sub></td>
+<td width="33%"><a href="cad/renders/gen6/hero_open.png"><img src="cad/renders/gen6/hero_open.png" alt="Gen6"></a><br><sub>Gen6. What is left after deletion: a rail, a tube, a chamber, now 8.2 m of it, the host stage's whole length (ADR-034). <b>The difference is the architecture, not the renderer.</b></sub></td>
 </tr>
 </table>
 
-**[The full comparison, with what each generation fixed and what it cost →](docs/GENERATIONS.md)** · **[the per-generation archive, one file each →](docs/generations/README.md)**
+[The full comparison, with what each generation fixed and what it cost](docs/GENERATIONS.md), and
+[the per-generation archive, one file each](docs/generations/README.md).
 
-> **Getting Gen6 to frozen.** Gen5 earned that label on five properties; **Gen6 has two** — it is
+> Getting Gen6 to frozen. Gen5 earned that label on five properties, and Gen6 has two: it is
 > script-built and it rebuilds byte-identically. It does not carry the headline numbers, has no
-> second implementation checking it, and has A35–A53 behind it against Gen5's structural FEA,
-> circuit simulation, CFD and designed control loop. **[`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md)
-> is what closing that costs** — seven analyses that are computation, four decisions that are the
-> owner's, and one measurement (**P67**) that can *delete* work rather than add it. *Phase I froze
-> Gen5 **with three kill criteria crossed and stated as such**, and that is the honest target here
-> too.*
+> second implementation checking it, and has A35 to A53 behind it against Gen5's structural FEA,
+> circuit simulation, CFD and designed control loop.
+> [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) is what closing that costs: seven analyses that
+> are computation, four decisions that are the owner's, and one measurement (P67) that can delete
+> work rather than add it. Phase I froze Gen5 with three kill criteria crossed and stated as such,
+> and that is the honest target here too.
 
 ### The same arc, as a diagram
 
