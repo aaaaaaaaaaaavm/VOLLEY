@@ -80,9 +80,9 @@ def unit_for(k):
 def dimensions_md(p):
     L = [STAMP, "# Dimensions\n",
          "Every dimension VOLLEY's geometry depends on, one table per sub-assembly, derived",
-         "directly from [`parameters.json`](parameters.json) — the single source of truth.",
-         "**Units are millimetres unless the table says otherwise.** Angles are degrees.\n",
-         f"**Coordinate frame.** {p['_PROVENANCE']['coordinate_frame']}\n",
+         "directly from [`parameters.json`](parameters.json), the single source of truth.",
+         "Units are millimetres unless the table says otherwise. Angles are degrees.\n",
+         f"Coordinate frame. {p['_PROVENANCE']['coordinate_frame']}\n",
          "\n## Installed envelope\n",
          "| Quantity | Value | Units |", "|---|---:|---|"]
     e = p["envelope"]
@@ -90,8 +90,8 @@ def dimensions_md(p):
     L.append(f"| Extremes, minimum (x, y, z) | {', '.join(str(v) for v in e['extremes_min_mm'])} | mm |")
     L.append(f"| Extremes, maximum (x, y, z) | {', '.join(str(v) for v in e['extremes_max_mm'])} | mm |")
     L.append("")
-    L.append(f"> **Open conflict, P9.** {e['espa_grande_conflict']}")
-    L.append("> **Do not resolve this by shrinking the machine.** The geometry is supposed to state")
+    L.append(f"> Open conflict, P9. {e['espa_grande_conflict']}")
+    L.append("> Do not resolve this by shrinking the machine. The geometry is supposed to state")
     L.append("> the problem rather than hide it; P9 is open and stays open until it is repackaged or")
     L.append("> the host class is re-scoped.\n")
 
@@ -99,7 +99,7 @@ def dimensions_md(p):
         doc = g.get("_document", "").split("(")[0].strip()
         L.append(f"\n## {gname.replace('_', ' ')}\n")
         if doc:
-            L.append(f"Fusion document: **`{doc}`**\n")
+            L.append(f"Fusion document: `{doc}`\n")
         if "topology" in g:
             L.append(f"Topology: {g['topology']}\n")
         L.append("| Parameter | Value | Units |")
@@ -111,16 +111,16 @@ def dimensions_md(p):
             L.append(f"| `{k}` | {val} | {unit_for(k)} |")
         mats = {k: v for k, v in g.items() if k.endswith("_material")}
         for k, v in mats.items():
-            L.append(f"| `{k}` | {v} | — |")
+            L.append(f"| `{k}` | {v} | |")
         notes = [(k, v) for k, v in g.items()
                  if k.endswith(("_note", "_decision")) or k in ("modelled_as",)]
         if notes:
             L.append("")
             for k, v in notes:
-                L.append(f"- **`{k}`** — {v}")
+                L.append(f"- `{k}`: {v}")
         st = g.get("status", "")
         if st:
-            L.append(f"\n**Status:** `{st}`")
+            L.append(f"\nStatus: `{st}`")
         L.append("")
     return "\n".join(L) + "\n"
 
@@ -139,41 +139,41 @@ DERIVED = {
     "Fixed brake hardware + ring spring (moving Cu fin is in sled)": ("Steel", "ring-spring stop"),
     "Cassette shells (2x Al sheet eq.)": ("Aluminium sheet", "see shell_construction_decision"),
     "Followers, gates, escapements (2x)": ("Al + A-286 pins", "2 gate pins D9 per cassette"),
-    "Supercapacitor cells + busbars": ("—", "96 V, 6 F bank"),
-    "PPU (SiC bridge, filters)": ("—", "SiC inverter"),
-    "Battery + avionics + IMU": ("—", "sequencer, IMU"),
-    "Harness": ("—", "—"),
+    "Supercapacitor cells + busbars": ("", "96 V, 6 F bank"),
+    "PPU (SiC bridge, filters)": ("", "SiC inverter"),
+    "Battery + avionics + IMU": ("", "sequencer, IMU"),
+    "Harness": ("", ""),
     "Thermal (pipes, radiator, MLI)": ("Al radiator", "0.32 m^2 radiator"),
     "ESPA bracket + fasteners": ("Aluminium", "ring flange, 24 x M8 holes"),
     "Panels / closeouts": ("Aluminium, 2 mm skin", "enclosure"),
-    "Sled CAD reconciliation (P15, CAD-derived 9.445 kg)": ("—", "see note"),
+    "Sled CAD reconciliation (P15, CAD-derived 9.445 kg)": ("", "see note"),
 }
 
 
 def bom_md(p):
     m_tot, cg, sled = mass_properties.build()
     L = [STAMP, "# Bill of materials\n",
-         "**Masses are imported from [`analysis/mass_properties.py`](../analysis/mass_properties.py)**,",
+         "Masses are imported from [`analysis/mass_properties.py`](../analysis/mass_properties.py),",
          "which builds the rollup from primitive solids and material densities. Nothing here is",
          "re-entered by hand. Quantities and interface dimensions come from",
          "[`parameters.json`](parameters.json).\n",
-         "> **No line item has a vendor quotation.** `analysis/cost.py` carries assumed prices and",
-         "> says so in its own header; **no cost claim in this repository is supported**, and none",
+         "> No line item has a vendor quotation. `analysis/cost.py` carries assumed prices and",
+         "> says so in its own header; no cost claim in this repository is supported, and none",
          "> should be made from this table. It is a mass and materials list, not a purchase order.\n",
-         "> **This rollup is incomplete.** The enclosure, radiator and packaged avionics have no",
-         "> line items — open problem **P10**. Dry mass below is therefore a floor, not a total.\n",
+         "> This rollup is incomplete. The enclosure, radiator and packaged avionics have no",
+         "> line items, which is open problem P10. Dry mass below is therefore a floor rather than a total.\n",
          "| # | Item | Qty | Material | Mass, kg | CG x, m | Notes |",
          "|---:|---|---:|---|---:|---:|---|"]
     for i, (name, m, cgx) in enumerate(mass_properties.parts, 1):
-        mat, note = DERIVED.get(name, ("—", "—"))
+        mat, note = DERIVED.get(name, ("", ""))
         qty = "2" if "2x" in name else "1"
         L.append(f"| {i} | {name} | {qty} | {mat} | {m:.2f} | {cgx:.2f} | {note} |")
-    L.append(f"| | **DRY TOTAL** | | | **{m_tot:.1f}** | **{cg:.2f}** | P10: incomplete |")
-    L.append(f"| | **LOADED** (12 x 3U at 4 kg) | | | **{m_tot + 48:.1f}** | | |")
+    L.append(f"| | DRY TOTAL | | | {m_tot:.1f} | {cg:.2f} | P10: incomplete |")
+    L.append(f"| | LOADED (12 x 3U at 4 kg) | | | {m_tot + 48:.1f} | | |")
     L.append("")
-    L.append(f"**Sled assembly: {sled:.2f} kg**, the CAD-derived value from the Gen3 STEP solids (P15).")
+    L.append(f"Sled assembly: {sled:.2f} kg, the CAD-derived value from the Gen3 STEP solids (P15).")
     L.append("This is the single mass the exit velocity is most sensitive to, and it is the mass of")
-    L.append("**unpocketed, as-drawn plates**. Lightening the sled in CAD changes the operating point:")
+    L.append("unpocketed, as-drawn plates. Lightening the sled in CAD changes the operating point:")
     L.append("re-run `mass_properties.py` and then `motor_model.py` before quoting any number after")
     L.append("such a change. See P5, P8, P15.\n")
 

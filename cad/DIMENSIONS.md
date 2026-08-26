@@ -4,10 +4,10 @@
 # Dimensions
 
 Every dimension VOLLEY's geometry depends on, one table per sub-assembly, derived
-directly from [`parameters.json`](parameters.json) — the single source of truth.
-**Units are millimetres unless the table says otherwise.** Angles are degrees.
+directly from [`parameters.json`](parameters.json), the single source of truth.
+Units are millimetres unless the table says otherwise. Angles are degrees.
 
-**Coordinate frame.** x = firing axis, positive toward the muzzle. Origin x=0 at the ESPA flange aft mating face. y = lateral (P = +y port, S = -y starboard). z = vertical, z=0 at the stator mid-plane.
+Coordinate frame. x = firing axis, positive toward the muzzle. Origin x=0 at the ESPA flange aft mating face. y = lateral (P = +y port, S = -y starboard). z = vertical, z=0 at the stator mid-plane.
 
 
 ## Installed envelope
@@ -18,15 +18,15 @@ directly from [`parameters.json`](parameters.json) — the single source of trut
 | Extremes, minimum (x, y, z) | -32, -265, -230 | mm |
 | Extremes, maximum (x, y, z) | 1807, 265, 710 | mm |
 
-> **Open conflict, P9.** Longest dimension exceeds ESPA Grande's ~1270 mm class limit by ~44%. Open problem P9 — host claim must be re-scoped or the machine repackaged.
-> **Do not resolve this by shrinking the machine.** The geometry is supposed to state
+> Open conflict, P9. Longest dimension exceeds ESPA Grande's ~1270 mm class limit by ~44%. Open problem P9 — host claim must be re-scoped or the machine repackaged.
+> Do not resolve this by shrinking the machine. The geometry is supposed to state
 > the problem rather than hide it; P9 is open and stays open until it is repackaged or
 > the host class is re-scoped.
 
 
 ## track
 
-Fusion document: **`EMOCD_Track`**
+Fusion document: `EMOCD_Track`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -52,12 +52,12 @@ Fusion document: **`EMOCD_Track`**
 | `acceleration_zone_end` | 1300 | mm |
 | `release_point` | 1500 | mm |
 
-**Status:** `authoritative`
+Status: `authoritative`
 
 
 ## stator
 
-Fusion document: **`EMOCD_Stator`**
+Fusion document: `EMOCD_Stator`
 
 Topology: ironless, single-layer, three-phase
 
@@ -79,15 +79,15 @@ Topology: ironless, single-layer, three-phase
 | `winding_fill_factor_for_mass` | 0.6 | - |
 | `end_turns_modelled` | False | mm |
 
-- **`end_turns_note`** — Omitted — correct for field and force computation, WRONG for packaging. Real racetrack ends wrap beyond the 90 mm active depth and are not in the envelope.
-- **`layer_count_decision`** — OPEN — single vs two-layer is an unmade electromagnetic design decision. Single layer as drawn.
+- `end_turns_note`: Omitted — correct for field and force computation, WRONG for packaging. Real racetrack ends wrap beyond the 90 mm active depth and are not in the envelope.
+- `layer_count_decision`: OPEN — single vs two-layer is an unmade electromagnetic design decision. Single layer as drawn.
 
-**Status:** `authoritative_for_field_geometry`
+Status: `authoritative_for_field_geometry`
 
 
 ## sled
 
-Fusion document: **`EMOCD_Sled`**
+Fusion document: `EMOCD_Sled`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -117,14 +117,14 @@ Fusion document: **`EMOCD_Sled`**
 | `payload_com_offset_above_thrust_line` | 70 | mm |
 | `gap_shim_tolerance` | 0.05 | mm |
 
-- **`provisional_note`** — The 6 mm chassis is a first-pass stiffness-driven design (0.0115 mm deflection under 3.7 kN inter-array attraction -- superseded, A12 gives 2.69 kN, so the deflection is conservative -- against a +/-0.05 mm gap budget) with NO structural FEA behind it. Sled mass from this geometry contradicts the 4.86 kg assumed by mass_properties.py and drives exit velocity. Open problems P5/P8. ANSYS analysis A4 must close this before any number downstream is locked.
+- `provisional_note`: The 6 mm chassis is a first-pass stiffness-driven design (0.0115 mm deflection under 3.7 kN inter-array attraction -- superseded, A12 gives 2.69 kN, so the deflection is conservative -- against a +/-0.05 mm gap budget) with NO structural FEA behind it. Sled mass from this geometry contradicts the 4.86 kg assumed by mass_properties.py and drives exit velocity. Open problems P5/P8. ANSYS analysis A4 must close this before any number downstream is locked.
 
-**Status:** `PROVISIONAL_PENDING_FEA`
+Status: `PROVISIONAL_PENDING_FEA`
 
 
 ## magazine
 
-Fusion document: **`EMOCD_Magazine_Cassette`**
+Fusion document: `EMOCD_Magazine_Cassette`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -150,18 +150,18 @@ Fusion document: **`EMOCD_Magazine_Cassette`**
 | `septum_z_min` | 26 | mm |
 | `septum_z_max` | 646 | mm |
 | `shell_panel_thickness` | 4.0 | mm |
-| `gate_pin_material` | A-286 | — |
-| `septum_material` | silicon steel | — |
+| `gate_pin_material` | A-286 | |
+| `septum_material` | silicon steel | |
 
-- **`shell_construction_decision`** — OPEN — drawn as closed 4 mm panels (upper bound, and the mounting surface the silicon-steel septa need). mass_properties.py assumes a 6% fill open frame (lower bound). The ~4.8 kg difference is a real design decision, not an error.
-- **`gate_pin_diameter_note`** — 6 -> 9 mm, 2026-08-10 by validation/A22_gate_resize.md. D6 was sized against a quasi-static 25 g case; the governing case is random vibration through the 109 Hz mode, where D6 gives a negative margin at Q = 30. D9 gives +0.45 there and stays positive across Q = 10..30 for 11 g. See P37.
+- `shell_construction_decision`: OPEN — drawn as closed 4 mm panels (upper bound, and the mounting surface the silicon-steel septa need). mass_properties.py assumes a 6% fill open frame (lower bound). The ~4.8 kg difference is a real design decision, not an error.
+- `gate_pin_diameter_note`: 6 -> 9 mm, 2026-08-10 by validation/A22_gate_resize.md. D6 was sized against a quasi-static 25 g case; the governing case is random vibration through the 109 Hz mode, where D6 gives a negative margin at Q = 30. D9 gives +0.45 there and stays positive across Q = 10..30 for 11 g. See P37.
 
-**Status:** `authoritative_geometry_open_decision`
+Status: `authoritative_geometry_open_decision`
 
 
 ## payload cell
 
-Fusion document: **`EMOCD_Payload_Cell`**
+Fusion document: `EMOCD_Payload_Cell`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -173,14 +173,14 @@ Fusion document: **`EMOCD_Payload_Cell`**
 | `cells_total` | 12 | - |
 | `insert_divider_thickness` | 1.5 | mm |
 
-- **`provisional_note`** — No insert exists in CAD for any class. These parameters define the cell A24 analysed and ADR-025 adopted; the insert's retention, thermal path, ground handling, and the CDS-rail-to-class interface it must present are all undesigned. The cradle, escapement and retention gate are unchanged by this group — a fixed cell changes what is inside a slot and nothing about the machine around it.
+- `provisional_note`: No insert exists in CAD for any class. These parameters define the cell A24 analysed and ADR-025 adopted; the insert's retention, thermal path, ground handling, and the CDS-rail-to-class interface it must present are all undesigned. The cradle, escapement and retention gate are unchanged by this group — a fixed cell changes what is inside a slot and nothing about the machine around it.
 
-**Status:** `PARAMETRIC_ONLY_NOT_DRAWN`
+Status: `PARAMETRIC_ONLY_NOT_DRAWN`
 
 
 ## brake
 
-Fusion document: **`EMOCD_Brake`**
+Fusion document: `EMOCD_Brake`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -193,14 +193,14 @@ Fusion document: **`EMOCD_Brake`**
 | `ring_spring_stop` | True | mm |
 | `arrest_g_cap` | 200 | g |
 
-- **`provisional_note`** — Poles were lightened from solid blocks to 15 mm plates on structural reasoning alone. Magnetic sizing against the required pole area has NOT been done — pending the eddy-brake field check.
+- `provisional_note`: Poles were lightened from solid blocks to 15 mm plates on structural reasoning alone. Magnetic sizing against the required pole area has NOT been done — pending the eddy-brake field check.
 
-**Status:** `PROVISIONAL`
+Status: `PROVISIONAL`
 
 
 ## interface espa
 
-Fusion document: **`EMOCD_Interface_ESPA`**
+Fusion document: `EMOCD_Interface_ESPA`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -219,12 +219,12 @@ Fusion document: **`EMOCD_Interface_ESPA`**
 | `x_max` | 0 | mm |
 | `flange_protrudes_through_aft_skin` | True | mm |
 
-**Status:** `authoritative`
+Status: `authoritative`
 
 
 ## payload 3u
 
-Fusion document: **`EMOCD_Payload_3U`**
+Fusion document: `EMOCD_Payload_3U`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -235,14 +235,14 @@ Fusion document: **`EMOCD_Payload_3U`**
 | `corner_rail_count` | 4 | - |
 | `instances_in_assembly` | 12 | - |
 
-- **`modelled_as`** — solid aluminium proxy — real 3U flight mass is 4 kg, NOT the Fusion-computed value
+- `modelled_as`: solid aluminium proxy — real 3U flight mass is 4 kg, NOT the Fusion-computed value
 
-**Status:** `authoritative`
+Status: `authoritative`
 
 
 ## enclosure
 
-Fusion document: **`EMOCD_Enclosure`**
+Fusion document: `EMOCD_Enclosure`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -268,16 +268,16 @@ Fusion document: **`EMOCD_Enclosure`**
 | `radiator_z` | 707 | mm |
 | `radiator_area_m2` | 0.32 | m^2 |
 | `bays_verified_clear_of_track` | True | mm |
-| `skin_material` | aluminium | — |
+| `skin_material` | aluminium | |
 
-- **`mass_note`** — The enclosure, radiator, and packaged avionics have NO line items in mass_properties.py. The dry-mass rollup is incomplete until they are added. Open problem P10.
+- `mass_note`: The enclosure, radiator, and packaged avionics have NO line items in mass_properties.py. The dry-mass rollup is incomplete until they are added. Open problem P10.
 
-**Status:** `authoritative_geometry`
+Status: `authoritative_geometry`
 
 
 ## gen6 drive
 
-Fusion document: **`Built by cad/build_gen6.py. ADR-032: the payload is accelerated directly by cold gas along a rail the host stage provides. There is no mover, no stator, no brake and no return stroke. ADR-034: the stroke is the host stage's whole usable acceleration length, and the charge pressure fell to hold the exit velocity while the peak acceleration halved.`**
+Fusion document: `Built by cad/build_gen6.py. ADR-032: the payload is accelerated directly by cold gas along a rail the host stage provides. There is no mover, no stator, no brake and no return stroke. ADR-034: the stroke is the host stage's whole usable acceleration length, and the charge pressure fell to hold the exit velocity while the peak acceleration halved.`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -297,13 +297,13 @@ Fusion document: **`Built by cad/build_gen6.py. ADR-032: the payload is accelera
 | `friction_work_fraction` | 0.2839 | - |
 | `tube_material_density_kg_m3` | 2700.0 | kg/m^3 |
 | `tube_temperature_ceiling_K` | 473.0 | K |
-| `tube_material` | aluminium 6061-T6, hard anodised | — |
-| `piston_material` | aluminium 6061-T6, matched to the tube | — |
+| `tube_material` | aluminium 6061-T6, hard anodised | |
+| `piston_material` | aluminium 6061-T6, matched to the tube | |
 
 
 ## gen6 store
 
-Fusion document: **`Built by cad/build_gen6.py.`**
+Fusion document: `Built by cad/build_gen6.py.`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -319,7 +319,7 @@ Fusion document: **`Built by cad/build_gen6.py.`**
 
 ## gen6 seal
 
-Fusion document: **`Built by cad/build_gen6.py. ADR-036: the seal is SPECIFIED, not allowed. A41 declared a tolerable friction and every figure downstream descended from that ceiling; A61 asked instead what the loosest seal is that the design can survive, and the THERMAL case sets it -- the seal must survive its own friction heating before it must satisfy any control requirement.`**
+Fusion document: `Built by cad/build_gen6.py. ADR-036: the seal is SPECIFIED, not allowed. A41 declared a tolerable friction and every figure downstream descended from that ceiling; A61 asked instead what the loosest seal is that the design can survive, and the THERMAL case sets it -- the seal must survive its own friction heating before it must satisfy any control requirement.`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -334,7 +334,7 @@ Fusion document: **`Built by cad/build_gen6.py. ADR-036: the seal is SPECIFIED, 
 
 ## gen6 trim
 
-Fusion document: **`Built by cad/build_gen6.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.`**
+Fusion document: `Built by cad/build_gen6.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.`
 
 | Parameter | Value | Units |
 |---|---:|---|

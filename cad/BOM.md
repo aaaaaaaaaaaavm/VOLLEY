@@ -3,17 +3,17 @@
 
 # Bill of materials
 
-**Masses are imported from [`analysis/mass_properties.py`](../analysis/mass_properties.py)**,
+Masses are imported from [`analysis/mass_properties.py`](../analysis/mass_properties.py),
 which builds the rollup from primitive solids and material densities. Nothing here is
 re-entered by hand. Quantities and interface dimensions come from
 [`parameters.json`](parameters.json).
 
-> **No line item has a vendor quotation.** `analysis/cost.py` carries assumed prices and
-> says so in its own header; **no cost claim in this repository is supported**, and none
+> No line item has a vendor quotation. `analysis/cost.py` carries assumed prices and
+> says so in its own header; no cost claim in this repository is supported, and none
 > should be made from this table. It is a mass and materials list, not a purchase order.
 
-> **This rollup is incomplete.** The enclosure, radiator and packaged avionics have no
-> line items — open problem **P10**. Dry mass below is therefore a floor, not a total.
+> This rollup is incomplete. The enclosure, radiator and packaged avionics have no
+> line items, which is open problem P10. Dry mass below is therefore a floor rather than a total.
 
 | # | Item | Qty | Material | Mass, kg | CG x, m | Notes |
 |---:|---|---:|---|---:|---:|---|
@@ -27,25 +27,25 @@ re-entered by hand. Quantities and interface dimensions come from
 | 8 | Fixed brake hardware + ring spring (moving Cu fin is in sled) | 1 | Steel | 0.86 | 1.40 | ring-spring stop |
 | 9 | Cassette shells (2x Al sheet eq.) | 2 | Aluminium sheet | 8.85 | 0.35 | see shell_construction_decision |
 | 10 | Followers, gates, escapements (2x) | 2 | Al + A-286 pins | 2.60 | 0.30 | 2 gate pins D9 per cassette |
-| 11 | Supercapacitor cells + busbars | 1 | — | 6.50 | 0.10 | 96 V, 6 F bank |
-| 12 | PPU (SiC bridge, filters) | 1 | — | 4.00 | 0.10 | SiC inverter |
-| 13 | Battery + avionics + IMU | 1 | — | 5.50 | 0.12 | sequencer, IMU |
-| 14 | Harness | 1 | — | 2.50 | 0.60 | — |
+| 11 | Supercapacitor cells + busbars | 1 |  | 6.50 | 0.10 | 96 V, 6 F bank |
+| 12 | PPU (SiC bridge, filters) | 1 |  | 4.00 | 0.10 | SiC inverter |
+| 13 | Battery + avionics + IMU | 1 |  | 5.50 | 0.12 | sequencer, IMU |
+| 14 | Harness | 1 |  | 2.50 | 0.60 |  |
 | 15 | Thermal (pipes, radiator, MLI) | 1 | Al radiator | 6.00 | 0.70 | 0.32 m^2 radiator |
 | 16 | ESPA bracket + fasteners | 1 | Aluminium | 9.00 | 0.35 | ring flange, 24 x M8 holes |
 | 17 | Panels / closeouts | 1 | Aluminium, 2 mm skin | 5.50 | 0.75 | enclosure |
-| 18 | Enclosure skins (2 mm Al, 6.077 m2 net, A46) | 1 | — | 32.82 | 0.50 | — |
-| 19 | Enclosure frames and ribs (A46, 25 % of skin, declared) | 1 | — | 8.20 | 0.50 | — |
-| 20 | Radiator (1600 x 200 x 3 mm Al, A46) | 1 | — | 2.59 | 0.45 | — |
-| 21 | Equipment-bay boxes (4 bays, 1.5 mm Al, A46) | 1 | — | 1.87 | 0.30 | — |
-| 22 | Fasteners and brackets (A46, 10 % of structure, declared) | 1 | — | 4.55 | 0.50 | — |
-| 23 | Sled CAD reconciliation (P15, CAD-derived 9.445 kg) | 1 | — | 4.59 | 0.15 | see note |
-| | **DRY TOTAL** | | | **126.6** | **0.46** | P10: incomplete |
-| | **LOADED** (12 x 3U at 4 kg) | | | **174.6** | | |
+| 18 | Enclosure skins (2 mm Al, 6.077 m2 net, A46) | 1 |  | 32.82 | 0.50 |  |
+| 19 | Enclosure frames and ribs (A46, 25 % of skin, declared) | 1 |  | 8.20 | 0.50 |  |
+| 20 | Radiator (1600 x 200 x 3 mm Al, A46) | 1 |  | 2.59 | 0.45 |  |
+| 21 | Equipment-bay boxes (4 bays, 1.5 mm Al, A46) | 1 |  | 1.87 | 0.30 |  |
+| 22 | Fasteners and brackets (A46, 10 % of structure, declared) | 1 |  | 4.55 | 0.50 |  |
+| 23 | Sled CAD reconciliation (P15, CAD-derived 9.445 kg) | 1 |  | 4.59 | 0.15 | see note |
+| | DRY TOTAL | | | 126.6 | 0.46 | P10: incomplete |
+| | LOADED (12 x 3U at 4 kg) | | | 174.6 | | |
 
-**Sled assembly: 9.45 kg**, the CAD-derived value from the Gen3 STEP solids (P15).
+Sled assembly: 9.45 kg, the CAD-derived value from the Gen3 STEP solids (P15).
 This is the single mass the exit velocity is most sensitive to, and it is the mass of
-**unpocketed, as-drawn plates**. Lightening the sled in CAD changes the operating point:
+unpocketed, as-drawn plates. Lightening the sled in CAD changes the operating point:
 re-run `mass_properties.py` and then `motor_model.py` before quoting any number after
 such a change. See P5, P8, P15.
 

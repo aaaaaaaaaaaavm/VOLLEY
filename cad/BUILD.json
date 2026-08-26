@@ -3,7 +3,7 @@
   "generated_from": {
     "../analysis/mass_properties.py": "b8547e763806b0c7",
     "parameters.json": "a2e7d2416e4e8c2d",
-    "tools/make_cad_package.py": "9b9e767c3b1f8575"
+    "tools/make_cad_package.py": "8bd35678a0627357"
   },
   "sled_kg": 9.445
 }
