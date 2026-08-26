@@ -486,8 +486,8 @@ its class of evidence, and note that the class for *measured* has zero members.
 
 ### Charts
 
-Full set in **[`docs/RESULTS.md`](docs/RESULTS.md)**: all drawn by GitHub from text, no image files.
-Two that carry the argument:
+Full set in [`docs/RESULTS.md`](docs/RESULTS.md), all drawn by GitHub from text with no image
+files. Two of them carry the argument:
 
 ```mermaid
 pie showData
@@ -500,14 +500,14 @@ pie showData
     "Auxiliary" : 33
 ```
 
-514 J reaches the payload out of a **net 2735 J**: 2782 J leaves the bank and 47 J returns.
-That is the **18.8 %**. Efficiency fell with the heavier sled twice over, because more of the same
+514 J reaches the payload out of a net 2735 J: 2782 J leaves the bank and 47 J returns. That is
+the 18.8 %. Efficiency fell with the heavier sled twice over, because more of the same
 mechanical work goes into a mass that is then braked away and the longer 162 ms pulse accrues
 more copper loss at unchanged current density. Regeneration is the first thing that has moved
 it the other way.
 
-**This page said "no regeneration credit" until 2026-07-31**, on the strength of a 2025
-decision that argued the motor cannot *arrest* the sled. It cannot, and the brake stays. It was
+This page said "no regeneration credit" until 2026-07-31, on the strength of a 2025 decision that
+argued the motor cannot arrest the sled. It cannot, and the brake stays. It was
 never shown that no energy could be recovered, and
 [`validation/A11_regen_braking.md`](validation/A11_regen_braking.md) found 23.0 % of the sled's
 energy available inside the existing envelope at the existing current rating.
@@ -533,36 +533,35 @@ is a property of the beat geometry, not of any one velocity.
 
 ## What is wrong with it
 
-**This section is the reason the repository exists.** Everything above is computation; what
-follows is what that computation does not cover, what it got wrong, and what has been corrected
-since.
+This section is the reason the repository exists. Everything above is computation; what follows is
+what that computation does not cover, what it got wrong, and what has been corrected since.
 
 | | |
 |---|---|
-| **Maturity** | TRL 2–3 |
-| **Built, fired or measured** | **Nothing, at any scale. E4 is open and no analysis on this page changes it** |
-| **Defect register** | **147 numbered entries, 56 live** — [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| **Validation** | **70 run sheets**, 67 analyses across A1–A71 (A3, A26, A60 and A66 were numbered and never written), each against a band declared *before* the run. **Three failed outright** |
-| **Kill criteria** | **Seven, three crossed** — [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
+| Maturity | TRL 2 to 3 |
+| Built, fired or measured | Nothing, at any scale. E4 is open and no analysis on this page changes it |
+| Defect register | 147 numbered entries, 56 live, in [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| Validation | 70 run sheets, 67 analyses across A1 to A71 (A3, A26, A60 and A66 were numbered and never written), each against a band declared before the run. Three failed outright |
+| Kill criteria | Seven, three crossed, in [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest
 
 | | |
 |---|---|
-| **P67** | **The seal friction has never been measured, and it now chooses between two architectures.** It owns **98.7 %** of Gen6's dispersion, and every published dispersion figure descends from A41's *allowance* — **4.68× looser than the specification [A61](validation/A61_seal_class.md) derived.** **≤ 17.8 N and the trim stage is deleted; > 22.3 N and it is needed** ([ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)). *One bench test, and it can delete a subsystem rather than add one* |
-| **P68** | **[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)'s first falsifier has fired.** The stage credit breaks even at **11.0 %** at A56's sized store, not the 30 % the ADR claimed — and **58.6 % of it is a skin on a vehicle nobody has agreed to lend.** *[A45-R2](validation/A45R2_stage_credit_resized_store.md) is the only run that has ever moved the allowance, and a **42 % lighter store moved the hostile reading 5.7 %** — so the store is not what is wrong with the mass case* |
-| **P59** | **Kill criterion 1 is crossed at 5.3×.** A35 closed the architecture route out of it and A36 closed the manifest route. **Only a smaller payload class remains**, and that decision has been deferred since Phase I |
+| P67 | The seal friction has never been measured, and it now chooses between two architectures. It owns 98.7 % of Gen6's dispersion, and every published dispersion figure descends from A41's allowance, which is 4.68x looser than the specification [A61](validation/A61_seal_class.md) derived. At 17.8 N or below the trim stage is deleted; above 22.3 N it is needed ([ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)). One bench test can delete a subsystem here rather than add one |
+| P68 | [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)'s first falsifier has fired. The stage credit breaks even at 11.0 % at A56's sized store rather than the 30 % the ADR claimed, and 58.6 % of it is a skin on a vehicle nobody has agreed to lend. [A45-R2](validation/A45R2_stage_credit_resized_store.md) is the only run that has ever moved the allowance, and a 42 % lighter store moved the hostile reading by 5.7 %, so the store is not what is wrong with the mass case |
+| P59 | Kill criterion 1 is crossed at 5.3x. A35 closed the architecture route out of it and A36 closed the manifest route. Only a smaller payload class remains, and that decision has been deferred since Phase I |
 
 ### The kill criterion this design does not meet
 
-**Above roughly 2 kg per satellite, a rational customer buys a propulsion module instead.**
+Above roughly 2 kg per satellite, a rational customer buys a propulsion module instead.
 [A35](validation/A35_constraint_ledger.md) attributed every kilogram to the requirement causing it
-and found **88.67 kg — 70.06 % — survives the deletion of every requirement in all 64 corners** ([P95](OPEN_PROBLEMS.md): A35's run sheet still says 49.23 kg at the pre-A46 dry mass), so
-**there is no architecture that reaches 2 kg.**
-Gen5 is **10.547 kg**; Gen6 is **1.2145 kg added** but **10.547 kg on dry mass**, and both
-numerators are reported wherever either appears. **The threshold has never been moved** — a
-threshold revised after a result is known is not a threshold. The honest options remain what they
-were: change the payload class, or publish the criterion as crossed.
+and found that 88.67 kg, or 70.06 %, survives the deletion of every requirement in all 64 corners
+([P95](OPEN_PROBLEMS.md): A35's run sheet still says 49.23 kg at the pre-A46 dry mass), so there
+is no architecture that reaches 2 kg. Gen5 is 10.547 kg; Gen6 is 1.2145 kg added but 10.547 kg on
+dry mass, and both numerators are reported wherever either appears. The threshold has never been
+moved, because a threshold revised after a result is known is not a threshold. The honest options
+remain what they were: change the payload class, or publish the criterion as crossed.
 
 ### Corrections, dated
 
