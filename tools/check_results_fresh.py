@@ -48,6 +48,17 @@ set stays at 1e-9.
 This is not a widened band. The gate still catches staleness by seven orders of magnitude:
 P110's defect, the one this gate exists for, was a factor of 15.6.
 
+Three leaves in that file still could not hold 1e-7, and they are named individually rather
+than by loosening the file. The free-free first mode comes out of a generalised eigenproblem
+and moves by 2.0e-6 under the same perturbation; band 3 tests it against A59's 1.67 Hz at 5 %.
+The two `err_pct` fields are the solver's residuals against closed forms, 3.4e-7 and 2.3e-6
+PERCENT, which is a difference of two numbers agreeing to fifteen digits: there are no
+significant figures in them to reproduce, so they carry an absolute tolerance instead, five
+orders below the 0.5 % band that tests them.
+
+Nine injected faults were used on this arrangement, including one that returns the SECOND
+elastic mode in place of the first.
+
 WHAT IS AND IS NOT CHECKED
 --------------------------
 Only analyses that are cheap AND deterministic. A run with a Monte Carlo, a long integration or a
@@ -90,6 +101,23 @@ RTOL = {
         (1e-7, "the same centreline, read as three-point sagittas; same perturbation, 4.7e-8"),
 }
 
+# Three leaves inside tube_centreline.json cannot hold the file's tolerance, each for a reason
+# that is about the quantity rather than about the gate. Named individually so the rest of the
+# file stays at 1e-7.
+FIELD = {
+    "tube_centreline.json:/free_free_f1_Hz":
+        ("rel", 1e-5, "a generalised eigenproblem through scipy at cond(M) 2.0e6, with the two "
+                      "rigid-body modes six orders below the first elastic one; a one-ulp "
+                      "perturbation moves it by 2.0e-6"),
+    "tube_centreline.json:/simple_span/err_pct":
+        ("abs", 1e-5, "the solver's residual against a closed form, in percent, and it is 3.4e-7 "
+                      "-- a difference of two numbers that agree to fifteen digits, so it has no "
+                      "significant figures to reproduce. Band 1 tests it at 0.5 %"),
+    "tube_centreline.json:/imposed_curvature_check/err_pct":
+        ("abs", 1e-5, "the same residual for the imposed-curvature case, 2.3e-6 percent, and the "
+                      "same reason. Band 1 tests it at 0.5 %"),
+}
+
 # Excluded, by name and with the reason. An exclusion that is not written down is a gap.
 EXCLUDED = [
     ("analysis/run_a67.py", "guided_contact.json",
@@ -128,7 +156,7 @@ def _strings_agree(a, b, rtol):
     return True
 
 
-def differing(a, b, path="", rtol=RTOL_DEFAULT):
+def differing(a, b, path="", rtol=RTOL_DEFAULT, name=""):
     """Paths at which two parsed JSON values disagree beyond the file's tolerance."""
     if isinstance(a, dict) and isinstance(b, dict):
         out = []
@@ -136,19 +164,21 @@ def differing(a, b, path="", rtol=RTOL_DEFAULT):
             if k not in a or k not in b:
                 out.append(path + "/" + str(k))
             else:
-                out += differing(a[k], b[k], path + "/" + str(k), rtol)
+                out += differing(a[k], b[k], path + "/" + str(k), rtol, name)
         return out
     if isinstance(a, list) and isinstance(b, list):
         if len(a) != len(b):
             return [path + f" (length {len(a)} against {len(b)})"]
         out = []
         for i, (x, y) in enumerate(zip(a, b)):
-            out += differing(x, y, path + f"[{i}]", rtol)
+            out += differing(x, y, path + f"[{i}]", rtol, name)
         return out
     if isinstance(a, bool) or isinstance(b, bool):
         return [] if a is b else [path]
     if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        return [] if _close(a, b, rtol) else [path + f" ({a} against {b})"]
+        kind, tol, _why = FIELD.get(f"{name}:{path}", ("rel", rtol, ""))
+        ok = abs(a - b) <= tol if kind == "abs" else _close(a, b, tol)
+        return [] if ok else [path + f" ({a} against {b})"]
     if isinstance(a, str) and isinstance(b, str):
         return [] if a == b or _strings_agree(a, b, rtol) else [path]
     return [] if a == b else [path]
@@ -179,7 +209,7 @@ def main():
             if new != old:
                 rtol = RTOL.get(name, (RTOL_DEFAULT, ""))[0]
                 try:
-                    moved = differing(json.loads(old), json.loads(new), rtol=rtol)
+                    moved = differing(json.loads(old), json.loads(new), rtol=rtol, name=name)
                 except Exception:
                     moved = ["<unparseable>"]
                 if moved:
@@ -196,8 +226,8 @@ def main():
         print("\n  fix: re-run the script and commit its output, or find why it moved")
         return 1
     print(f"results freshness: {len(FRESH)} results reproduce, {len(RTOL)} at a declared "
-          f"per-file tolerance and the rest at {RTOL_DEFAULT:g}; "
-          f"{len(EXCLUDED)} runs excluded by name with reasons")
+          f"per-file tolerance and {len(FIELD)} fields at their own, the rest at "
+          f"{RTOL_DEFAULT:g}; {len(EXCLUDED)} runs excluded by name with reasons")
     return 0
 
 

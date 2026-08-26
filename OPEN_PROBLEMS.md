@@ -5921,12 +5921,31 @@ A70's printed map is unchanged to the digit: its sagittas are dominated by the i
 curvature, which was never solved through the penalty, and the offset term it does carry is
 small. The 2.39 um figure at 120 mm and 1 K that [P110](#p110) established moves by 5e-11.
 
+### A second fragility in the same run sheet, which changed no published number
+
+`free_free_first_mode()` found the two rigid-body modes of the free-free beam by sign: it kept
+the eigenvalues above zero and dropped the first two. A free-free beam's rigid modes are zero,
+discretisation puts them at 1.1e-4 and 4.5e-4 against 110.5 for the first elastic mode, and a
+numerically-zero eigenvalue that lands a hair below zero on some other LAPACK is discarded --
+the slice moves by one and the function returns the **second** elastic mode, 2.76x the answer,
+with band 3 decided by the sign of a quantity that carries no information. Under the same
+one-ulp perturbation the sign-filtered result moved by **1.76 relative**; selecting by magnitude
+instead, across a six-order gap, moves by 2.0e-6.
+
+It is written here rather than given a number of its own because it made nothing wrong: this
+machine and the runner both happened to pick the right mode, and 1.6729 Hz is what both report.
+[ADR-021](docs/adr/021-freeze-the-register.md) does not admit a latent defect to the register.
+
 ### Corrected. Propagated 2026-08-26.
 
 `_solve_constrained()` eliminates the prescribed rows, and the three sites that held supports by
 penalty -- `beam()`, `verify_simple_span()` and `verify_imposed_curvature()` -- all use it. Both
 results files are regenerated. `check_results_fresh.py` carries 1e-7 for each of them with the
-measured one-ulp spread as the reason, replacing the 1e-3 the withdrawn diagnosis justified.
+measured one-ulp spread as the reason, replacing the 1e-3 the withdrawn diagnosis justified, and
+three leaves inside A69's file carry their own tolerance rather than loosening the file: the
+free-free mode at 1e-5 relative, and the two residual percentages at 1e-5 absolute, those two
+being differences of numbers that agree to fifteen digits and so having no significant figures
+to reproduce.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done

@@ -188,10 +188,14 @@ def free_free_first_mode(n_el=400):
         M[np.ix_(d, d)] += me
     from scipy.linalg import eigh
     w2 = eigh(K, M, eigvals_only=True)
-    # A free-free beam has two rigid-body modes at zero. Discretisation puts them at small but
-    # non-zero eigenvalues, so filtering on 1e-6 returns numerical dust rather than the first
-    # elastic mode. Drop the two rigid modes explicitly.
-    w2 = np.sort(w2[w2 > 0.0])[2:]
+    # A free-free beam has two rigid-body modes at zero. Discretisation puts them at 1.1e-4 and
+    # 4.5e-4 here, against 110.5 for the first elastic mode, so they are separated by six orders
+    # and are found by MAGNITUDE. Filtering on the sign instead was fragile: a numerically-zero
+    # eigenvalue that lands a hair below zero on some other LAPACK is discarded, the slice moves
+    # by one, and the function silently returns the SECOND elastic mode -- 2.76x the answer, and
+    # a band verdict decided by a sign that carries no information. A one-ulp perturbation of K
+    # and M moved the sign-filtered result by 1.76 relative, and this by 2.0e-6.
+    w2 = np.sort(np.abs(w2))[2:]
     return math.sqrt(w2[0]) / (2.0 * math.pi)
 
 
