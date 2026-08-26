@@ -104,7 +104,7 @@ integration column apart, because collapsing them produces a false history.
 > as failure before it runs, every defect is numbered including the ones that damage the work's
 > own claims, and nothing here has been built, fired or measured.
 >
-> What that has produced, which is the part worth judging: 66 run sheets covering 67 analyses A1
+> What that has produced, which is the part worth judging: 70 run sheets covering 67 analyses A1
 > to A71 (A3, A26, A60 and A66 were numbered and never written), each against a band written down
 > before its script existed. Three failed outright, one of them falsifying a claim in this
 > project's own abstract. On three further occasions a declared band caught a bug in the analysis
@@ -333,9 +333,9 @@ sit in the same table as the wins.
 | Elements whose single failure forfeits the remaining manifest | 0 | 9 of 13 | spring wins, `docs/FMEA.md` |
 | Reliability needed to match it on delivered life | | at least 0.99326 per element per cycle, unmeasured | `docs/FMEA.md` |
 
-A cold-gas module beats both on mass at 3U by 12.4x (`validation/A21_comparators.md`; the 7.5x
-this page carried until 2026-08-16 was pre-[A46](validation/A46_enclosure_buildup.md), which is
-P69), and a 1.8 kg staged spring reaches the same velocity inside the g-cap
+A cold-gas module beats both on mass at 3U by 12.4x (`validation/A21_comparators.md`;
+the 7.5x this page carried until 2026-08-16 was pre-[A46](validation/A46_enclosure_buildup.md),
+which is P69), and a 1.8 kg staged spring reaches the same velocity inside the g-cap
 (`validation/A27_actuator_trade.md`). What VOLLEY sells is a fleet distributed on a schedule, and
 [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) works one.
 
