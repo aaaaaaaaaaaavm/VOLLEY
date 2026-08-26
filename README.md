@@ -732,9 +732,9 @@ in [`docs/GENERATIONS.md`](docs/GENERATIONS.md). What the three look like:
 
 ### The same arc, as a diagram
 
-**Solid arrows are the line the design actually took. Broken arrows go to the vault** —
+Solid arrows are the line the design actually took. Broken arrows go to the vault,
 [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab), where every branch that stopped
-records why, and **not one of them was refuted.**
+records why, and not one of them was refuted.
 
 ```mermaid
 flowchart TD
@@ -763,38 +763,37 @@ flowchart TD
 ```
 
 
-<sub><b>Those are kilograms, not percentages, and deliberately.</b> A35's shares were published as
-percentages of a 84.53 kg rollup; <a href="validation/A46_enclosure_buildup.md">A46</a> moved the
-rollup to 126.6 kg on 2026-08-16, so every percentage of dry mass fell without a single kilogram
-moving. <b>The attributed masses are what the run actually measured</b> and they do not move with
-the denominator. The ordering is unchanged and the margin widened: the pulse costs
-<b>2.28×</b> the mover, where at the old rollup it was 2.07×. <b>P73.</b></sub>
+<sub>Those are kilograms rather than percentages, and deliberately so. A35's shares were
+published as percentages of an 84.53 kg rollup, and <a href="validation/A46_enclosure_buildup.md">A46</a>
+moved the rollup to 126.6 kg on 2026-08-16, so every percentage of dry mass fell without a single
+kilogram moving. The attributed masses are what the run actually measured and they do not move
+with the denominator. The ordering is unchanged and the margin widened: the pulse costs 2.28x the
+mover, where at the old rollup it was 2.07x. P73.</sub>
 
-### The branches that stopped — and why they are kept
+### The branches that stopped, and why they are kept
 
-**[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) is the vault**, and its one rule is
-that every entry states why it stopped. **Not one of these was refuted.** Each is a correct
-analysis of a part that no longer exists, and a vault whose entries vanish when the design moves
-is a graveyard.
+[VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) is the vault, and its one rule is that
+every entry states why it stopped. Not one of these was refuted. Each is a correct analysis of a
+part that no longer exists, and a vault whose entries vanish when the design moves is a
+graveyard.
 
 | Branch | What it was | Why it stopped |
 |---|---|---|
-| **[PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-19_induction_drive_gen6.md)** · induction drive | the Gen6 that *was* adopted, 2026-08-13 | Superseded in a day. **The mover it spent its whole effort making lighter costs 11.54 kg, against 26.35 kg for the pulse it kept** |
-| **[PII-16](docs/GEN6_RAIL_DRIVE.md)** · satellite's own CDS rails as the motor secondary | 116 cm² of conductive rail every customer already owns | **Rejected before adoption.** A30 measured a transverse edge factor of **0.0253** |
-| **PII-1** · momentum-transfer release | the project's self-declared strongest idea | **Deleted by arithmetic it wrote itself.** Δv scales with the mover mass *M*; with no mover, M = 0 |
-| **PII-7** · a bank that can source the shot | four parallel strings, the fix for **P26** | **No bank.** The largest live defect the project carried, answered by an architecture whose electrical demand A51 measures at **0.26 W average** |
-| **[PII-11](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-11_deployable_track.md)** · deployable track | fold the 1.8 m track for launch | The stage is already deployed, already long and already straight |
-| **[PII-14](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md)** · cable-driven gondola | +49.7 % exit velocity in the same track | **The headline assumed zero rotating inertia.** Realistically +15 to +30 %, possibly zero |
-| **PII-2, -3, -4, -12, -17, -18** | ribbed chassis, two-layer stator, repackaged envelope, block commutation, departing mover, 0.25 kg shuttle | No sled, no stator, no envelope, no mover — **nine entries stopped on one day, for a reason none of them anticipated** |
+| [PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-19_induction_drive_gen6.md), induction drive | the Gen6 that was adopted, 2026-08-13 | Superseded in a day. The mover it spent its whole effort making lighter costs 11.54 kg, against 26.35 kg for the pulse it kept |
+| [PII-16](docs/GEN6_RAIL_DRIVE.md), the satellite's own CDS rails as the motor secondary | 116 cm2 of conductive rail every customer already owns | Rejected before adoption. A30 measured a transverse edge factor of 0.0253 |
+| PII-1, momentum-transfer release | the project's self-declared strongest idea | Deleted by arithmetic it wrote itself. Delta-v scales with the mover mass M, and with no mover, M = 0 |
+| PII-7, a bank that can source the shot | four parallel strings, the fix for P26 | No bank. The largest live defect the project carried, answered by an architecture whose electrical demand A51 measures at 0.26 W average |
+| [PII-11](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-11_deployable_track.md), deployable track | fold the 1.8 m track for launch | The stage is already deployed, already long and already straight |
+| [PII-14](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md), cable-driven gondola | +49.7 % exit velocity in the same track | The headline assumed zero rotating inertia. Realistically +15 to +30 %, possibly zero |
+| PII-2, -3, -4, -12, -17, -18 | ribbed chassis, two-layer stator, repackaged envelope, block commutation, departing mover, 0.25 kg shuttle | No sled, no stator, no envelope, no mover. Nine entries stopped on one day, for a reason none of them anticipated |
 
-**Two got closer rather than stopped.**
-**[PII-8](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-8_free_flyer.md)**, the
-free-flyer, had airgap straightness over a deployed structure as its hardest problem — **Gen6 has
-no airgap.** And
-**[PII-9](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-9_lunar.md)**, the lunar case,
-never depended on this architecture at all.
+Two got closer rather than stopped.
+[PII-8](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-8_free_flyer.md), the
+free-flyer, had airgap straightness over a deployed structure as its hardest problem, and Gen6 has
+no airgap. [PII-9](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-9_lunar.md), the
+lunar case, never depended on this architecture at all.
 
-**[The full vault, with the close condition each entry must meet to come back →](docs/VAULT.md)**
+[The full vault, with the close condition each entry must meet to come back](docs/VAULT.md).
 
 
 
