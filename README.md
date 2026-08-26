@@ -194,7 +194,7 @@ Energy density is not what decides it. The spring can store the energy; what cos
 having to be cocked twelve times. Gas separates the store from the actuator, so re-arming is a
 valve and one bottle runs the whole manifest.
 
-**Every alternative was screened by a run that is on the record**, so the trade cannot be read as
+Every alternative was screened by a run that is on the record, so the trade cannot be read as
 having considered only two:
 
 | | Why not | |
@@ -740,15 +740,15 @@ records why, and not one of them was refuted.
 flowchart TD
     P["<b>The problem, unchanged since 2021</b><br/>a rideshare CubeSat inherits an orbit<br/>and a 1-2 m/s spring cannot alter it"]
 
-    A1["<b>2021 · Coilgun</b><br/><i>question: how hard can we throw it?</i><br/>capacitors discharge into coils,<br/>field gradient pulls the payload"]
-    A2["<b>mid-2025 · Linear synchronous motor</b><br/><i>question: how precisely can we throw it?</i><br/>current commanded against measured position,<br/>magnets ride a reusable sled, eddy brake recovers it"]
-    A3["<b>2026-08-14 · Cold gas on a stage rail</b><br/><i>question: what does the machine need to exist at all?</i><br/>a pre-charged chamber fires the payload directly,<br/>nothing recovered<br/><b>2026-08-16 · plus a motor that steers</b><br/><i>gas for the energy, a 39.7 mm stator for the control</i><br/><b>2026-08-19 · the stroke becomes the stage</b><br/><i>8.0 m at 22.73 bar: same velocity, half the g, half the gas</i>"]
+    A1["<b>2021, Coilgun</b><br/><i>question: how hard can we throw it?</i><br/>capacitors discharge into coils,<br/>field gradient pulls the payload"]
+    A2["<b>mid-2025, Linear synchronous motor</b><br/><i>question: how precisely can we throw it?</i><br/>current commanded against measured position,<br/>magnets ride a reusable sled, eddy brake recovers it"]
+    A3["<b>2026-08-14, Cold gas on a stage rail</b><br/><i>question: what does the machine need to exist at all?</i><br/>a pre-charged chamber fires the payload directly,<br/>nothing recovered<br/><b>2026-08-16, plus a motor that steers</b><br/><i>gas for the energy, a 39.7 mm stator for the control</i><br/><b>2026-08-19, the stroke becomes the stage</b><br/><i>8.0 m at 22.73 bar: same velocity, half the g, half the gas</i>"]
 
     P --> A1
     A1 -->|"a coilgun cannot command a velocity,<br/>and commanding it is the product"| A2
     A2 -->|"A35 attributed every kilogram to its cause:<br/>the reusable mover costs 11.54 kg,<br/><b>the shot-time pulse costs 26.35 kg</b>"| A3
 
-    V(["<b>VOLLEY-lab</b> · the vault<br/>nothing here was refuted"])
+    V(["<b>VOLLEY-lab</b>, the vault<br/>nothing here was refuted"])
 
     A1 -.->|"programmable velocity<br/>unreachable"| V
     A2 -.->|"nine entries stopped at once:<br/>ADR-032 deletes the subsystem<br/>each of them improves"| V
@@ -797,7 +797,7 @@ lunar case, never depended on this architecture at all.
 
 
 
-**Spin it in the browser:** [`cad/stl/EMOCD_Assembly_Gen3.stl`](cad/stl/EMOCD_Assembly_Gen3.stl)
+Spin it in the browser: [`cad/stl/EMOCD_Assembly_Gen3.stl`](cad/stl/EMOCD_Assembly_Gen3.stl)
 and [`cad/stl/EMOCD_Sled_Gen3.stl`](cad/stl/EMOCD_Sled_Gen3.stl), GitHub renders STL
 natively, so click either and drag. They are derived meshes; `cad/step/gen3/` is the master
 geometry ([why](cad/stl/README.md)).
@@ -806,20 +806,20 @@ geometry ([why](cad/stl/README.md)).
 
 <table>
 <tr>
-<td width="50%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Interior, enclosure open, payload departing along the track axis"></a><br><sub><b>Interior.</b> Track, stator belts, sled and cassette, enclosure open. The payload leaves along the track axis at 16.029 m/s.</sub></td>
-<td width="50%"><a href="cad/renders/espa_interface.png"><img src="cad/renders/espa_interface.png" alt="ESPA mounting interface with the payload departing away from the flange"></a><br><sub><b>Aft mounting.</b> Ø460 mm ring flange, Ø400 mm bolt circle, 24 holes. The payload departs <b>away from</b> the flange, out the muzzle.</sub></td>
+<td width="50%"><a href="cad/renders/hero_open.png"><img src="cad/renders/hero_open.png" alt="Interior, enclosure open, payload departing along the track axis"></a><br><sub>Interior. Track, stator belts, sled and cassette, enclosure open. The payload leaves along the track axis at 16.029 m/s.</sub></td>
+<td width="50%"><a href="cad/renders/espa_interface.png"><img src="cad/renders/espa_interface.png" alt="ESPA mounting interface with the payload departing away from the flange"></a><br><sub>Aft mounting. Ø460 mm ring flange, Ø400 mm bolt circle, 24 holes. The payload departs <b>away from</b> the flange, out the muzzle.</sub></td>
 </tr>
 <tr>
-<td width="50%"><a href="cad/renders/track_stator.png"><img src="cad/renders/track_stator.png" alt="Track and stator, side elevation"></a><br><sub><b>Track and stator.</b> Side elevation. Gen4 stows the sled at s = 300 mm and releases at s = 1200 mm.</sub></td>
-<td width="50%"><a href="cad/renders/brake.png"><img src="cad/renders/brake.png" alt="Eddy brake arresting the sled after release"></a><br><sub><b>Brake.</b> The sled is arrested by the eddy brake after the payload has gone. Gen4 brake-fin entry at s = 1222 mm.</sub></td>
+<td width="50%"><a href="cad/renders/track_stator.png"><img src="cad/renders/track_stator.png" alt="Track and stator, side elevation"></a><br><sub>Track and stator. Side elevation. Gen4 stows the sled at s = 300 mm and releases at s = 1200 mm.</sub></td>
+<td width="50%"><a href="cad/renders/brake.png"><img src="cad/renders/brake.png" alt="Eddy brake arresting the sled after release"></a><br><sub>Brake. The sled is arrested by the eddy brake after the payload has gone. Gen4 brake-fin entry at s = 1222 mm.</sub></td>
 </tr>
 <tr>
-<td width="50%"><a href="cad/renders/sled_detail.png"><img src="cad/renders/sled_detail.png" alt="Reusable sled"></a><br><sub><b>Sled.</b> Reusable, 488 mm. The magnets ride the sled and never leave the machine.</sub></td>
-<td width="50%"><a href="cad/renders/magazine_feed.png"><img src="cad/renders/magazine_feed.png" alt="Axial view down the bore"></a><br><sub><b>Down the bore.</b> Axial view along the departure axis, cassette feeding transversely into the breech.</sub></td>
+<td width="50%"><a href="cad/renders/sled_detail.png"><img src="cad/renders/sled_detail.png" alt="Reusable sled"></a><br><sub>Sled. Reusable, 488 mm. The magnets ride the sled and never leave the machine.</sub></td>
+<td width="50%"><a href="cad/renders/magazine_feed.png"><img src="cad/renders/magazine_feed.png" alt="Axial view down the bore"></a><br><sub>Down the bore. Axial view along the departure axis, cassette feeding transversely into the breech.</sub></td>
 </tr>
 </table>
 
-<sub><b>These are the Gen4 Fusion model, and Gen4 has no committed STEP export.</b> No performance number on this page is taken from them: Gen4's stations differ from the analysis model's, and its release point is 1200 mm where <code>analysis/</code> assumes 1500. The payload is a plain rectangular 3U proxy. The velocity annotated on each image is read from <code>analysis/results/motor_results.json</code> at render time — it was hard-coded until 2026-08-16 and said <b>16.388 m/s</b>, a figure withdrawn twice (<b>P72</b>). Full account: <a href="docs/GEN4_STATUS.md">docs/GEN4_STATUS.md</a>, ADR-019 and <b>P43</b>. <b>Gen5 and Gen6 are rendered in <a href="docs/GENERATIONS.md">docs/GENERATIONS.md</a>.</b></sub>
+<sub>These are the Gen4 Fusion model, and Gen4 has no committed STEP export. No performance number on this page is taken from them: Gen4's stations differ from the analysis model's, and its release point is 1200 mm where <code>analysis/</code> assumes 1500. The payload is a plain rectangular 3U proxy. The velocity annotated on each image is read from <code>analysis/results/motor_results.json</code> at render time — it was hard-coded until 2026-08-16 and said <b>16.388 m/s</b>, a figure withdrawn twice (<b>P72</b>). Full account: <a href="docs/GEN4_STATUS.md">docs/GEN4_STATUS.md</a>, ADR-019 and <b>P43</b>. <b>Gen5 and Gen6 are rendered in <a href="docs/GENERATIONS.md">docs/GENERATIONS.md</a>.</b></sub>
 
 ## Host integration, worked against real vehicles
 
@@ -827,16 +827,16 @@ The interface asks four things of any host: mass and control authority, a 150-30
 feed, a serial command link, and an authorized firing window. Two Indian candidates are
 worked as examples in the paper because both exist today.
 
-**ISRO's POEM** is the flown precedent, a spent PS4 stage operated as a three-axis-stabilized
+ISRO's POEM is the flown precedent, a spent PS4 stage operated as a three-axis-stabilized
 hosted platform with solar power, NavIC navigation and helium attitude thrusters, retired by
 controlled reentry. It supplies everything the attached variant borrows, and its zero-debris
 closeout is the regulatory template.
 
-**Skyroot Aerospace's Vikram-1** carries a restartable liquid Orbit Adjustment Module, one
+Skyroot Aerospace's Vikram-1 carries a restartable liquid Orbit Adjustment Module, one
 Raman-2 engine, four Raman Mini thrusters, eight cold-gas thrusters, stage-tested through more
 than a thousand pulses, whose stated multi-orbit deployment role is functionally the PS4's.
-Against the vehicle's published 350 kg LEO capacity, a loaded VOLLEY is **34 %**, falling to
-**22 %** and **13 %** on the announced 550 kg and 900 kg family members. Early flights are
+Against the vehicle's published 350 kg LEO capacity, a loaded VOLLEY is 34 %, falling to
+22 % and 13 % on the announced 550 kg and 900 kg family members. Early flights are
 therefore dedicated demonstrations and later ones ordinary manifest items.
 
 One integration quantity cannot be closed from public data: the OAM's mass and control
@@ -844,7 +844,7 @@ authority are undisclosed, which is why the recoil budget is parametric. Obtaini
 thruster impulse budget and coast duration is the single data exchange that converts this
 analysis from parametric to specific, for any candidate vehicle, Indian or otherwise.
 
-Recoil is the satellite's momentum only, **64.1 N·s** per shot, nulled by a few grams of cold
+Recoil is the satellite's momentum only, 64.1 N.s per shot, nulled by a few grams of cold
 gas. Comparison against fielded deployers and transfer vehicles, including Dhruva Space's
 flown DSOD, is in [`docs/LANDSCAPE.md`](docs/LANDSCAPE.md).
 
@@ -854,15 +854,15 @@ flown DSOD, is in [`docs/LANDSCAPE.md`](docs/LANDSCAPE.md).
 - `analysis/`, current scripts; these reproduce the numbers above
 - `analysis/femm/`, FEMM magnetostatics package: `emocd_cross_section.dxf` + `FEMM_RUN_SHEET.md` (analysis A1, not yet run)
 - `cad/`, the CAD: `parameters.json` is the geometry source of truth, and
-  **`build_gen5.py` and `build_gen6.py` generate every current part from it** — `step/gen5/` and
-  `step/gen6/` rebuild byte-identically from a clean clone. `step/gen1|gen2|gen3/` are the earlier
-  Fusion exports, kept for history. Also `scad/` (**a second, independent OpenSCAD implementation
-  of Gen5 — it found P71 on its first run**), `stl/` (browser-viewable meshes),
+  `build_gen5.py` and `build_gen6.py` generate every current part from it, with `step/gen5/` and
+  `step/gen6/` rebuilding byte-identically from a clean clone. `step/gen1|gen2|gen3/` are the
+  earlier Fusion exports, kept for history. Also `scad/` (a second, independent OpenSCAD
+  implementation of Gen5, which found P71 on its first run), `stl/` (browser-viewable meshes),
   `renders/` with `gen5/` and `gen6/` subdirectories, `tools/`, and `CHANGELOG_CAD.md`
-- `legacy/`, superseded scripts, kept for history, **do not cite**
+- `legacy/`, superseded scripts, kept for history, do not cite
 - `figures/`, every result figure, regenerated from `analysis/` by `tools/make_figures.py`
-- **No LaTeX lives here.** The IEEE manuscript, its `.cls`, the built PDF and the CV are
-  authored in **[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** (ADR-028)
+- No LaTeX lives here. The IEEE manuscript, its `.cls`, the built PDF and the CV are authored in
+  [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) (ADR-028)
 - `validation/`, independent cross-check plan (FEMM, CalculiX, Orekit, CARA, Chrono),
   each with an acceptance band declared before the run; nothing run yet
 - `docs/`, computation notes, FEMM run sheet, related work and comparator sources
@@ -889,36 +889,37 @@ flown DSOD, is in [`docs/LANDSCAPE.md`](docs/LANDSCAPE.md).
 
 ## Licence
 
-**The whole of this repository is CC BY 4.0** — a single licence at the root, no directory
-split. Full text in [`LICENSE`](LICENSE), attribution form in [`NOTICE`](NOTICE), scope and
+The whole of this repository is CC BY 4.0, a single licence at the root with no directory split.
+Full text in [`LICENSE`](LICENSE), attribution form in [`NOTICE`](NOTICE), scope and
 reasoning in [`LICENSING.md`](LICENSING.md).
 
-**This is not retroactive.** Snapshots taken before this change — clones, forks, archives, and
-every commit reachable before it — **remain available under the MIT licence** they carried at
-the time; that text is kept at [`LICENSE-MIT-superseded`](LICENSE-MIT-superseded).
+This is not retroactive. Snapshots taken before this change, meaning clones, forks, archives and
+every commit reachable before it, remain available under the MIT licence they carried at the time,
+and that text is kept at [`LICENSE-MIT-superseded`](LICENSE-MIT-superseded).
 
-The IEEE manuscript, which now lives in [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper), is a separate case: **an IEEE copyright transfer on acceptance
-would supersede this licence for the accepted version.** See [`LICENSING.md`](LICENSING.md).
+The IEEE manuscript, which now lives in [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper),
+is a separate case: an IEEE copyright transfer on acceptance would supersede this licence for the
+accepted version. See [`LICENSING.md`](LICENSING.md).
 
 ### Across the programme
 
 | Repository | Licence | Why |
 |---|---|---|
-| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | **CC BY 4.0** | The engineering record. One licence, no directory split — `analysis/` is the design expressed executably, not tooling around it |
+| [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) | CC BY 4.0 | The engineering record. One licence, no directory split, because `analysis/` is the design expressed executably rather than tooling around it |
 | [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | CC BY 4.0 | Generated companion; documents |
 | [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | CC BY 4.0 | Phase II research track; documents |
-| [pulsed-linear-motor-design-lab](https://github.com/aaaaaaaaaaaavm/pulsed-linear-motor-design-lab) | CC BY 4.0 | Carries `reference/volley/motor_model.py` — **the invention.** A patent-granting licence was considered and rejected |
+| [pulsed-linear-motor-design-lab](https://github.com/aaaaaaaaaaaavm/pulsed-linear-motor-design-lab) | CC BY 4.0 | Carries `reference/volley/motor_model.py`, which is the invention. A patent-granting licence was considered and rejected |
 | [orbital-deployment-trade-study](https://github.com/aaaaaaaaaaaavm/orbital-deployment-trade-study) | CC BY 4.0 | Same: carries `motor_model.py` and `astro.py` |
-| [engineering-evidence-toolkit](https://github.com/aaaaaaaaaaaavm/engineering-evidence-toolkit) | **Apache-2.0** | The only repository containing no part of the deployer design. Its code is `src/engtrace/`; its `reference/volley/` copies are repository tooling. **Apache §3 grants patent rights**, so it is used only where nothing is disclosed |
-| **[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | **MIT — held** | Relicensing it would set terms for a manuscript whose rights may transfer to IEEE on acceptance. **The hold is enforced by the export manifest**, not by discipline: that companion's `LICENSE` is sourced from `LICENSE-MIT-superseded`, so a routine regeneration cannot relicense it by accident |
+| [engineering-evidence-toolkit](https://github.com/aaaaaaaaaaaavm/engineering-evidence-toolkit) | Apache-2.0 | The only repository containing no part of the deployer design. Its code is `src/engtrace/`, and its `reference/volley/` copies are repository tooling. Apache section 3 grants patent rights, so it is used only where nothing is disclosed |
+| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | MIT, held | Relicensing it would set terms for a manuscript whose rights may transfer to IEEE on acceptance. The hold is enforced by the export manifest rather than by discipline: that companion's `LICENSE` is sourced from `LICENSE-MIT-superseded`, so a routine regeneration cannot relicense it by accident |
 
-**CC BY 4.0 does not license patent rights** (§2(b)(2)), and that is deliberate across six of the
+CC BY 4.0 does not license patent rights (section 2(b)(2)), and that is deliberate across six of the
 seven. Apache-2.0 does, which is why it appears exactly once.
 
 ## Using this work
 
 This work is intended to be built, not only read. I am available to work on it with anyone who
-is building it. Contact: **Adityavardhanmishra@icloud.com**.
+is building it. Contact: Adityavardhanmishra@icloud.com.
 Attribution is required under CC BY 4.0, including an indication of what was changed.
 
 ## Author
