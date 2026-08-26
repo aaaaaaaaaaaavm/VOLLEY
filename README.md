@@ -315,106 +315,109 @@ analysis rather than in the design.
 
 ## Against a spring dispenser
 
-**This is the one axis where a spring does not compete at any price**: deterministic orbit
-seeding rather than orbit inheritance, at a velocity programmable per satellite.
+Deterministic orbit seeding at a velocity programmable per satellite, rather than orbit
+inheritance, is the one axis where a spring does not compete at any price.
 
-**The figures below are Gen5's**, because Gen5 is what the comparators were computed against.
-**Losses are in the same table as the wins.**
+The figures below are Gen5's, because Gen5 is what the comparators were computed against. Losses
+sit in the same table as the wins.
 
 | | Spring dispenser | VOLLEY | |
 |---|---|---|---|
-| Exit velocity | ~2 m/s (NRCSD-E specifies 0.5–2.5) | **16.03 m/s** | 6.4× |
-| Commanded differential between satellites | **zero by design** | per shot, continuous | categorical |
-| Semi-major axis change | **0 m** — a spring imparts none | **+28.8 km** | `analysis/astro.py`, A21-R |
-| 30° of in-track phase | **468 s of waiting** | 468 s of waiting | **no advantage; see P56** |
-| Orbital life delivered, per satellite | 1.41 yr | **2.11 yr** | 1.495× |
-| Deployer mass per 3U satellite | ~6 kg, canisterised class | 10.547 kg | **1.76×, spring wins** |
-| Maturity | **TRL 9** | TRL 2–3 | spring wins |
-| Elements whose single failure forfeits the remaining manifest | **0** | **9 of 13** | spring wins, `docs/FMEA.md` |
-| Reliability needed to match it on delivered life | — | **r ≥ 0.99326** per element per cycle, **unmeasured** | `docs/FMEA.md` |
+| Exit velocity | about 2 m/s (NRCSD-E specifies 0.5 to 2.5) | 16.03 m/s | 6.4x |
+| Commanded differential between satellites | zero by design | per shot, continuous | categorical |
+| Semi-major axis change | 0 m, a spring imparts none | +28.8 km | `analysis/astro.py`, A21-R |
+| 30 degrees of in-track phase | 468 s of waiting | 468 s of waiting | no advantage, see P56 |
+| Orbital life delivered, per satellite | 1.41 yr | 2.11 yr | 1.495x |
+| Deployer mass per 3U satellite | about 6 kg, canisterised class | 10.547 kg | 1.76x, spring wins |
+| Maturity | TRL 9 | TRL 2 to 3 | spring wins |
+| Elements whose single failure forfeits the remaining manifest | 0 | 9 of 13 | spring wins, `docs/FMEA.md` |
+| Reliability needed to match it on delivered life | | at least 0.99326 per element per cycle, unmeasured | `docs/FMEA.md` |
 
-A cold-gas module beats both on mass at 3U by **12.4×** (`validation/A21_comparators.md`; the 7.5× this page carried until 2026-08-16 was pre-[A46](validation/A46_enclosure_buildup.md) — **P69**), and a
-~1.8 kg staged spring reaches the same velocity inside the g-cap
-(`validation/A27_actuator_trade.md`). **What VOLLEY sells is a fleet distributed on a schedule**
-— see [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md).
+A cold-gas module beats both on mass at 3U by 12.4x (`validation/A21_comparators.md`; the 7.5x
+this page carried until 2026-08-16 was pre-[A46](validation/A46_enclosure_buildup.md), which is
+P69), and a 1.8 kg staged spring reaches the same velocity inside the g-cap
+(`validation/A27_actuator_trade.md`). What VOLLEY sells is a fleet distributed on a schedule, and
+[`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) works one.
 
 
-> **The reliability row is the one Gen6 improves least.** [A47](validation/A47_gen6_fmea.md)
-> counted **8 manifest-forfeiting elements against Gen5's 9** — deleting six subsystems removed
-> exactly one shared failure, and added the host stage's keep-alive agreement, which no launch
-> provider has given. **A per-cell backup ejector is worth six times the whole architecture
-> change**, and [A53](validation/A53_backup_ejector.md) found a spring does not fit a sealed tube
-> (**P81**). *A spring dispenser still forfeits nothing, and that row does not move.*
+> The reliability row is the one Gen6 improves least. [A47](validation/A47_gen6_fmea.md) counted 8
+> manifest-forfeiting elements against Gen5's 9, so deleting six subsystems removed exactly one
+> shared failure and added the host stage's keep-alive agreement, which no launch provider has
+> given. A per-cell backup ejector is worth six times the whole architecture change, and
+> [A53](validation/A53_backup_ejector.md) found that a spring does not fit a sealed tube (P81). A
+> spring dispenser still forfeits nothing, and that row does not move.
 >
-> **A53 closed that as architectural, and it was a store choice — [A65](validation/A65_pyrotechnic_ejector.md),
-> 2026-08-20.** A spring stores **4.5 J** against the **667.2 J** of clearing the 8 m tube, short by
-> **148×**. A solid-propellant gas generator of the automotive restraint class delivers **2331.6 J**
-> at the smallest charge in the published range, *after* cooling to the tube's own 473 K ceiling —
-> **3.49× over.** And the mass argument inverts: A53's tube-clearing spring re-crossed the kill
-> criterion at 2.129 kg/satellite, this is **1.6496**. **Band 4 still misses** A53's inherited
-> 0.25 kg per-cell threshold at 0.4350 kg, and **46.6 % of that is a minimum-gauge steel plenum
-> rather than anything pyrotechnic** (**P91**). *The same mistake A54 made about the pulse store:
-> pricing the only technology this repository happened to have data for.*
+> A53 closed that as architectural, when it was a store choice
+> ([A65](validation/A65_pyrotechnic_ejector.md), 2026-08-20). A spring stores 4.5 J against the
+> 667.2 J of clearing the 8 m tube, short by a factor of 148. A solid-propellant gas generator of
+> the automotive restraint class delivers 2331.6 J at the smallest charge in the published range,
+> after cooling to the tube's own 473 K ceiling, which is 3.49x over. The mass argument inverts
+> too: A53's tube-clearing spring re-crossed the kill criterion at 2.129 kg per satellite, and
+> this is 1.6496. Band 4 still misses A53's inherited 0.25 kg per-cell threshold at 0.4350 kg, and
+> 46.6 % of that is a minimum-gauge steel plenum rather than anything pyrotechnic (P91). It is the
+> same mistake A54 made about the pulse store, pricing the only technology this repository
+> happened to have data for.
 
 ## What stands behind the numbers
 
-**Three results have independent cross-checks.** The Halbach field model — analytic against
-magpylib, agreeing to three digits, and again against a meshed magnetostatic FEM, a PDE solve
-rather than another superposition, agreeing on the corrected thrust constant to **0.03 %** — and
-orbital decay, orbit-averaged against Cowell RK4 at **99.4 %**. **Everything else is
-single-sourced.**
+Three results have independent cross-checks. The Halbach field model runs analytic against
+magpylib, agreeing to three digits, and again against a meshed magnetostatic FEM, which is a PDE
+solve rather than another superposition, agreeing on the corrected thrust constant to 0.03 %.
+Orbital decay is checked orbit-averaged against Cowell RK4 at 99.4 %. Everything else is
+single-sourced.
 
-**[`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md)** checks every claim where it can.
-**[`docs/FIGURE_INDEX.md`](docs/FIGURE_INDEX.md)** gives each figure's generator, source data and
-class of evidence — and **the class for *measured* has zero members.**
+[`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md) checks every claim where it can.
+[`docs/FIGURE_INDEX.md`](docs/FIGURE_INDEX.md) gives each figure's generator, source data and
+class of evidence, and the class for *measured* has zero members.
 
 ### Until 2026-08-20 every number here came from inside this repository
 
-**[`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) is the survey of what outside sources
-can settle, what they can only inform, and what they cannot touch.** It exists because of one
-result: [A54](validation/A54_pulse_chain.md) priced the trim store at **23–37 kg** and was correct
-in every calculation — it had priced an EDLC, *because that was the only store technology in this
-repository.* Against published pulsed-power capacitor data
-[A64](validation/A64_pulse_store_technology.md) returns **~70 g — 522× lighter, and P86 closed.**
+[`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) is the survey of what outside sources can
+settle, what they can only inform, and what they cannot touch. It exists because of one result.
+[A54](validation/A54_pulse_chain.md) priced the trim store at 23 to 37 kg and was correct in every
+calculation, but it had priced an EDLC, because that was the only store technology in this
+repository. Against published pulsed-power capacitor data,
+[A64](validation/A64_pulse_store_technology.md) returns about 70 g, which is 522 times lighter,
+and P86 is closed.
 
-**A second map looks sideways rather than up**, at automotive and motorcycle engineering, where
-several live entries describe components road vehicles build in tens of millions: **fork and damper
-rod seals** against the 17.8 N of P67 and P88, **pyrotechnic gas generators** against P81, **film
-DC-link capacitors** against P86, **variable-reluctance speed sensing** against the velocity sensor
-Gen6 has never had. *Every one of them is lubricated, cyclic and atmospheric, and VOLLEY is dry, in
-vacuum, and fires twelve times ever — which is stated as the limit of each transfer, next to the
-transfer.*
+A second map looks sideways rather than up, at automotive and motorcycle engineering, where
+several live entries describe components road vehicles build in tens of millions: fork and damper
+rod seals against the 17.8 N of P67 and P88, pyrotechnic gas generators against P81, film DC-link
+capacitors against P86, and variable-reluctance speed sensing against the velocity sensor Gen6 has
+never had. Every one of them is lubricated, cyclic and atmospheric, while VOLLEY is dry, in
+vacuum, and fires twelve times ever. That limit is stated next to each transfer.
 
-> **The vault was re-read the same way on 2026-08-20**, and the finding was not in the vault:
-> **three parked entries had each stopped partly on "the capacitor bank cannot source this", and
-> ADR-032 deleted the bank.** *One retirement quietly retired a blocker in three separate entries
-> and none of them had been re-read since.* **A stop is not scripture either.**
+> The vault was re-read the same way on 2026-08-20, and the finding was not in the vault. Three
+> parked entries had each stopped partly on the capacitor bank not being able to source the shot,
+> and ADR-032 deleted the bank. One retirement had retired a blocker in three separate entries,
+> and none of them had been re-read since. A stop is not scripture either.
 
 ### What each independent check actually returned
 
-**[`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md)**: every claim, independently checked
-where possible. Four analyses were actually run; three could not be.
+[`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md) checks every claim independently where
+possible. Four analyses were actually run; three could not be.
 
-- **Reproducibility holds exactly**: 173 values re-computed from clean, 173 identical.
-- **GMAT falsified the invariance claim.** It reproduced the old x1.80 multiplier at mean
-  and high solar activity but gave 2.074 at low, an 18.5 % spread against a ≤5 % band.
-  `astro.py` varies solar activity by scaling density uniformly, and ballistic coefficient
-  enters the same multiplicative slot, so *both* halves of that claim were tested by a sweep
-  that could not have detected a problem (**P16**).
-- **CalculiX** cleared the chassis on all three structural bands, which is what settled the
-  sled mass at the CAD-derived **9.445 kg** and moved the headline to 16.388 m/s (**P15**), before the quadrature correction moved it to 16.03 m/s.
-- **ngspice** reproduced the then-current shot model to 0.03 % and then, re-run at the then-current operating
-  point, found a loss the analytic model had no term for at all: the bank's own series
-  resistance, 86 J a shot (**P24**). Corrected, the two methods agree on peak current to
-  0.01 %. It also found the quoted bank sag is state-of-charge, not the terminal voltage the
-  drive sees.
-- **A1 and A10--A13 have been propagated to the corrected point. A5 and the ngspice A8 run predate it** (**P19**) and needs
-  re-running. A4 survives, its load being magnetostatic and velocity-independent.
-- **A1 has run (2026-07-29).** A meshed 2-D magnetostatic FEM gives K<sub>t</sub> = 11.026 N
-  per kA/m against the model's 11.03, **ratio 0.9997**, ripple 0.97 % against 0.99 %. The
-  number every headline descends from is no longer checked only analytic-against-analytic.
-  Two of seven bands missed, both with identified causes and neither a model error (P20, P21).
-- **Not run:** A6, A7, A9.
+- Reproducibility holds exactly: 173 values re-computed from clean, 173 identical.
+- GMAT falsified the invariance claim. It reproduced the old 1.80x multiplier at mean and high
+  solar activity but gave 2.074 at low, an 18.5 % spread against a band of 5 % or less.
+  `astro.py` varies solar activity by scaling density uniformly, and ballistic coefficient enters
+  the same multiplicative slot, so both halves of that claim were tested by a sweep that could not
+  have detected a problem (P16).
+- CalculiX cleared the chassis on all three structural bands, which is what settled the sled mass
+  at the CAD-derived 9.445 kg and moved the headline to 16.388 m/s (P15), before the quadrature
+  correction moved it to 16.03 m/s.
+- ngspice reproduced the then-current shot model to 0.03 % and then, re-run at the then-current
+  operating point, found a loss the analytic model had no term for at all: the bank's own series
+  resistance, 86 J a shot (P24). Corrected, the two methods agree on peak current to 0.01 %. It
+  also found the quoted bank sag is state-of-charge rather than the terminal voltage the drive
+  sees.
+- A1 and A10 to A13 have been propagated to the corrected point. A5 and the ngspice A8 run predate
+  it (P19) and need re-running. A4 survives, its load being magnetostatic and velocity-independent.
+- A1 has run (2026-07-29). A meshed 2-D magnetostatic FEM gives K<sub>t</sub> = 11.026 N per kA/m
+  against the model's 11.03, a ratio of 0.9997, with ripple 0.97 % against 0.99 %. The number
+  every headline descends from is no longer checked only analytic against analytic. Two of seven
+  bands missed, both with identified causes and neither a model error (P20, P21).
+- Not run: A6, A7, A9.
 
 ### External tools, and which have actually run
 
