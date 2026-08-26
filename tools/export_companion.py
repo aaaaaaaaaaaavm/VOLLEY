@@ -171,43 +171,43 @@ THESIS_MANIFEST = [
 
 PAPER_README = """# VOLLEY: the manuscript
 
-**An IEEE-formatted technical manuscript, and everything needed to check it.**
+An IEEE-formatted technical manuscript, and everything needed to check it.
 
 Rideshare CubeSats inherit the orbit of whoever paid for the launch. This paper describes a
 deployer that gives each of twelve satellites an orbit chosen for it, without modifying any of
-them — and reports, in the same voice, the three thresholds the design currently fails.
+them, and reports, in the same voice, the three thresholds the design currently fails.
 
 ## What the manuscript's machine is for
 
-**VOLLEY is a last-mile orbital delivery programme.** After the primary spacecraft separates, the
-launch vehicle's final stage can — where host capability and mission rules permit — continue as a
-**temporary controlled orbital delivery platform**. **The host performs the coarse orbital
+VOLLEY is a last-mile orbital delivery programme. After the primary spacecraft separates, the
+launch vehicle's final stage can, where host capability and mission rules permit, continue as a
+temporary controlled orbital delivery platform. The host performs the coarse orbital
 repositioning; VOLLEY produces the fine, individually commanded release condition for each
-secondary satellite.**
+secondary satellite.
 
-**The machine reported here is Gen5**: the *self-contained* electromagnetic implementation of that
-mission — its own track, drive, sled, energy store, brake and magazine, operating aboard the
-platform. **Host repositioning is treated parametrically throughout, because no launch provider
-has supplied stage propulsion or control-authority data.**
+The machine reported here is Gen5: the *self-contained* electromagnetic implementation of that
+mission, its own track, drive, sled, energy store, brake and magazine, operating aboard the
+platform. Host repositioning is treated parametrically throughout, because no launch provider
+has supplied stage propulsion or control-authority data.
 
-> **The programme has since moved to Gen6**, which keeps the same mission and changes the
+> The programme has since moved to Gen6, which keeps the same mission and changes the
 > integration: the stage's own structure and 8 m of length become part of the machine, and cold
-> gas replaces the electromagnetic drive. **The manuscript has not moved with it, deliberately.**
-> Gen5 is the fully analysed configuration and Gen6 has not yet reached the same standard — the
+> gas replaces the electromagnetic drive. The manuscript has not moved with it, deliberately.
+> Gen5 is the fully analysed configuration and Gen6 has not yet reached the same standard, the
 > [computational-closure target](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/COMPUTATIONAL_CLOSURE.md)
 > is what it has to clear first. *A paper does not follow a design target; it follows evidence.*
 
-**[Read the paper](paper/VOLLEY_IEEE_Conference.pdf)** — **18 pages, current build.**
-Print-ready copies: **[A4](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_A4_Print.pdf)** ·
-**[US Letter](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_Letter.pdf)**. Both come from one source
+[Read the paper](paper/VOLLEY_IEEE_Conference.pdf), 18 pages, current build.
+Print-ready copies: [A4](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_A4_Print.pdf) ·
+[US Letter](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_Letter.pdf). Both come from one source
 and are content-identical; only the page geometry differs.
 
-> **It is IEEE-*formatted*, using the IEEEtran class. It is not claimed to be submission-compliant
-> for any venue** — page and abstract limits are set by the conference or journal, and **no venue
-> has been selected and nothing has been submitted.**
+> It is IEEE-*formatted*, using the IEEEtran class. It is not claimed to be submission-compliant
+> for any venue, page and abstract limits are set by the conference or journal, and no venue
+> has been selected and nothing has been submitted.
 
 Every number in it comes from a script in this repository, and every analysis behind it declared
-what would count as failure **before** it ran. Nothing has been built, fired or measured.
+what would count as failure before it ran. Nothing has been built, fired or measured.
 
 ## Reproduce it in one command
 
@@ -244,7 +244,7 @@ reimplementing it, so a figure cannot quietly disagree with the number it plots.
 
 ## Before citing
 
-**Read [`PROVENANCE.md`](PROVENANCE.md).** This is a design study at TRL 2-3. Nothing has been
+Read [`PROVENANCE.md`](PROVENANCE.md). This is a design study at TRL 2-3. Nothing has been
 built, fired or measured, and the paper says so.
 
 [`PRIOR_ART.md`](PRIOR_ART.md) records the published work nearest to this one, including two
@@ -254,19 +254,19 @@ field.
 
 ## The manuscript describes Gen5, and the design target has moved
 
-**This is deliberate and worth stating plainly.** Everything reproduced here is **Gen5** — the
+This is deliberate and worth stating plainly. Everything reproduced here is Gen5, the
 analysed baseline -- a frozen computational one, with no hardware behind it -- and the record of
 what a self-contained deployer costs. On 2026-08-14 five
-analyses in the main repository replaced the design target: **Gen6 is the payload accelerated
-directly, by cold gas, along a rail a spent upper stage provides** (ADR-032). No mover, no
+analyses in the main repository replaced the design target: Gen6 is the payload accelerated
+directly, by cold gas, along a rail a spent upper stage provides (ADR-032). No mover, no
 pulse-power chain, no brake, no return stroke.
 
-**Nothing in Gen6 is measured**, its fluid system is unsized, its cradle mechanism does not exist,
-and no launch provider has agreed to lend a stage — which is exactly why the manuscript still
+Nothing in Gen6 is measured, its fluid system is unsized, its cradle mechanism does not exist,
+and no launch provider has agreed to lend a stage, which is exactly why the manuscript still
 carries Gen5. A paper reports what has been analysed to a declared standard, not what looks best
 this week.
 
-**The main repository carries both**, and the failures at the same standard as the results.
+The main repository carries both, and the failures at the same standard as the results.
 
 ## What is deliberately absent
 
@@ -277,10 +277,10 @@ the repository it came from.
 
 THESIS_README = """# VOLLEY: the thesis
 
-**A final-year thesis on giving rideshare CubeSats an orbit their host was not going to — and
-the full record of what went wrong on the way there.**
+A final-year thesis on giving rideshare CubeSats an orbit their host was not going to, and
+the full record of what went wrong on the way there.
 
-**[Read the manuscript](source/VOLLEY_IEEE_Conference.pdf)**
+[Read the manuscript](source/VOLLEY_IEEE_Conference.pdf)
 
 The submission is here with its analyses, its acceptance tests and its defect register attached.
 The defects are deliberate: an examiner should be able to see what failed, when it was found, and
@@ -288,30 +288,30 @@ what was done about it. Nothing in it has been built or measured.
 
 ## The design evolution this thesis is about
 
-**One mission, held constant. One architecture, changed repeatedly.** That is the shape of the
+One mission, held constant. One architecture, changed repeatedly. That is the shape of the
 work, and it is worth stating before the chapters.
 
-**The mission — last-mile orbital distribution.** After the primary spacecraft separates, the
+The mission is last-mile orbital distribution. After the primary spacecraft separates, the
 launch vehicle's final stage can continue, where host capability allows, as a temporary controlled
-orbital delivery platform. **The host does the coarse orbital repositioning. VOLLEY produces each
-secondary satellite's individually commanded release condition.** That was decided in **2023**, by
+orbital delivery platform. The host does the coarse orbital repositioning. VOLLEY produces each
+secondary satellite's individually commanded release condition. That was decided in 2023, by
 the second architectural decision the project ever took.
 
-**The architecture, in four steps:**
+The architecture, in four steps:
 
 | | |
 |---|---|
-| **Free-flyer** | VOLLEY is its own spacecraft, carrying attitude control, power and recoil mass. **Rejected in 2023** — *"which is most of a spacecraft"* |
-| **Hosted deployer** | The spent upper stage supplies all three. VOLLEY becomes a payload rather than a mission |
-| **Self-contained electromagnetic system aboard the platform — Gen5** | Its own track, linear synchronous drive, sled, supercapacitor bank, eddy brake and magazine. **This is the machine the manuscript reports** |
-| **Stage-integrated system — Gen6** | The stage's own structure and 8 m of length become part of the machine; cold gas replaces the drive. **Same mission, far less duplicated hardware** |
+| Free-flyer | VOLLEY is its own spacecraft, carrying attitude control, power and recoil mass. Rejected in 2023, *"which is most of a spacecraft"* |
+| Hosted deployer | The spent upper stage supplies all three. VOLLEY becomes a payload rather than a mission |
+| Self-contained electromagnetic system aboard the platform, Gen5 | Its own track, linear synchronous drive, sled, supercapacitor bank, eddy brake and magazine. This is the machine the manuscript reports |
+| Stage-integrated system, Gen6 | The stage's own structure and 8 m of length become part of the machine; cold gas replaces the drive. Same mission, far less duplicated hardware |
 
-> **The interesting claim is not that the objective changed. It is that it did not.** What the
-> generations record is a steadily better answer to *how much of this does VOLLEY need to build
-> for itself* — and the honest cost of each answer, including the one that made Gen5's enclosure
-> **50.04 kg** of skin the stage already had.
+> What is worth noticing is that the objective never changed. What the generations record is a
+> steadily better answer to how much of this VOLLEY needs to build for itself, and the honest cost
+> of each answer, including the one that made Gen5's enclosure 50.04 kg of skin the stage already
+> had.
 >
-> **Host capability stays parametric in every generation.** No launch provider has supplied stage
+> Host capability stays parametric in every generation. No launch provider has supplied stage
 > propulsion, restart or control-authority data, and the thesis says so wherever it matters.
 
 ## Layout
@@ -331,7 +331,7 @@ the second architectural decision the project ever took.
 3. `appendix/adr/`, the decision records. Each states the alternatives considered and the
    consequences accepted. ADR-003 carries its own amendment showing an argument it got wrong.
 4. `appendix/OPEN_PROBLEMS.md`, every known defect, including the ones that damage the work's own
-   claims — and the ones found by checking this work against itself rather than by anyone asking.
+   claims, and the ones found by checking this work against itself rather than by anyone asking.
 5. `appendix/PRIOR_ART.md`, the nearest published work, and the two claims retracted after reading
    it.
 
@@ -340,10 +340,10 @@ several of them record the alternative that was rejected and why.
 
 ## What is authored here
 
-`source/` holds the manuscript, which is written in this repository — the main record is an
+`source/` holds the manuscript, which is written in this repository, the main record is an
 engineering record and carries no manuscript source. `university/` holds submission forms,
 formatting mandates and viva material, which are university-specific and do not belong upstream.
-**Neither is ever touched by the export. Everything else is regenerated and will be overwritten.**
+Neither is ever touched by the export. Everything else is regenerated and will be overwritten.
 
 This repository may be improved until the thesis is presented, and freezes at that moment. What
 enters it has to be stable, effective and reliable against the problem statement.
@@ -351,19 +351,19 @@ enters it has to be stable, effective and reliable against the problem statement
 
 ## The manuscript describes Gen5, and the design target has moved
 
-**This is deliberate and worth stating plainly.** Everything reproduced here is **Gen5** — the
+This is deliberate and worth stating plainly. Everything reproduced here is Gen5, the
 analysed baseline -- a frozen computational one, with no hardware behind it -- and the record of
 what a self-contained deployer costs. On 2026-08-14 five
-analyses in the main repository replaced the design target: **Gen6 is the payload accelerated
-directly, by cold gas, along a rail a spent upper stage provides** (ADR-032). No mover, no
+analyses in the main repository replaced the design target: Gen6 is the payload accelerated
+directly, by cold gas, along a rail a spent upper stage provides (ADR-032). No mover, no
 pulse-power chain, no brake, no return stroke.
 
-**Nothing in Gen6 is measured**, its fluid system is unsized, its cradle mechanism does not exist,
-and no launch provider has agreed to lend a stage — which is exactly why the manuscript still
+Nothing in Gen6 is measured, its fluid system is unsized, its cradle mechanism does not exist,
+and no launch provider has agreed to lend a stage, which is exactly why the manuscript still
 carries Gen5. A paper reports what has been analysed to a declared standard, not what looks best
 this week.
 
-**The main repository carries both**, and the failures at the same standard as the results.
+The main repository carries both, and the failures at the same standard as the results.
 
 ## Before citing
 
