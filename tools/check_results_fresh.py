@@ -61,6 +61,10 @@ elastic mode in place of the first.
 
 WHAT IS AND IS NOT CHECKED
 --------------------------
+The committed file is restored after every comparison, pass or fail. A checker that leaves
+its own output behind is a generator, and CI's later `git diff --exit-code` then fails on a
+file this gate wrote.
+
 Only analyses that are cheap AND deterministic. A run with a Monte Carlo, a long integration or a
 solver sweep is excluded by name with the reason, because re-running it on every commit would cost
 more than it protects -- but an excluded run is listed, so the exclusion is visible rather than
@@ -206,6 +210,12 @@ def main():
                 new = fh.read()
             with open(backup, encoding="utf-8") as fh:
                 old = fh.read()
+            # Put the committed file back whatever the verdict. This gate re-runs a script to
+            # look at its output, and a checker that leaves its own output in the working tree
+            # is a generator. On one machine the two are byte-identical and nothing shows; on
+            # another the difference is real and the next step to run `git diff --exit-code`
+            # fails on a file this gate wrote, not on anything that drifted.
+            shutil.copy(backup, live)
             if new != old:
                 rtol = RTOL.get(name, (RTOL_DEFAULT, ""))[0]
                 try:
