@@ -33,12 +33,12 @@ This is the decision that reshaped everything downstream.
 
 The reasoning runs through the payload, not the launcher. Exit velocity is bounded by
 `v = sqrt(2 a L)`, and the payload's own qualification limit caps `a` at 25-30 g. Over
-any stroke that fits a secondary-payload envelope, that ceiling is 26-35 m/s **whatever
-the launcher is**. So the coilgun's single genuine advantage, a velocity ceiling in the
+any stroke that fits a secondary-payload envelope, that ceiling is 26-35 m/s whatever
+the launcher is. So the coilgun's single genuine advantage, a velocity ceiling in the
 km/s range, is unreachable by the satellite it would be launching, while every one of
 its costs remains:
 
-- ~~1-2 % single-stage efficiency (Sandia-lineage literature)~~ **Struck 2026-07-30.**
+- ~~1-2 % single-stage efficiency (Sandia-lineage literature)~~ Struck 2026-07-30.
   True of the single-stage reluctance machines cited, but not of coilguns generally:
   Feng et al. report 14.9-19.9 % for a multi-stage on-orbit CubeSat launcher, which is
   this design's own range. The argument was never load-bearing and is withdrawn rather
@@ -49,14 +49,14 @@ its costs remains:
 
 A linear synchronous motor concedes nothing inside the reachable envelope (maglev
 traction exceeds 150 m/s) and inverts every cost: high drive efficiency, continuous
-servo control instead of fire-and-commit timing, and (decisively) a **reusable sled**
+servo control instead of fire-and-commit timing, and (decisively) a reusable sled
 that carries the magnets so the customer satellite carries nothing.
 
-Verified outcome: **20.99 %** electrical-to-payload efficiency, net of regeneration, at the
-2026-08-03 operating point. **This line used to read "32 % against the coilgun's 1-2 %" and both
-halves were dead.** The 1-2 % comparator was struck four lines above on 2026-07-30 and never
+Verified outcome: 20.99 % electrical-to-payload efficiency, net of regeneration, at the
+2026-08-03 operating point. This line used to read "32 % against the coilgun's 1-2 %" and both
+halves were dead. The 1-2 % comparator was struck four lines above on 2026-07-30 and never
 removed from here; the 32 % predates the sled-mass adoption and the quadrature correction. The
-efficiency comparison is **not** a reason this decision was made and is not restated as one:
+efficiency comparison is not a reason this decision was made and is not restated as one:
 Feng et al. report 14.9-19.9 % for a multi-stage coilgun, which is this design's own range.
 
 The reasons that were load-bearing, and the ones my 2021-2025 notebooks actually give, are
@@ -87,12 +87,12 @@ sled deceleration near 200 g and protect the sintered magnet bonds, rather than 
 up for force.
 
 Knock-on correction: the sled's kinetic energy is dissipated in the brake by design and
-is **not** recovered. Crediting it as regeneration was double-counting; efficiency was
+is not recovered. Crediting it as regeneration was double-counting; efficiency was
 restated 40 % to 32 %.
 
-> **Amended 2026-07-31 by A11. The paragraph above stays as written because it is what was
+> Amended 2026-07-31 by A11. The paragraph above stays as written because it is what was
 > decided and the arrest half of it is still right. The knock-on was drawn wider than the
-> argument supported.**
+> argument supported.
 >
 > "Motor braking cannot *arrest* the sled" and "none of the sled's energy can be recovered"
 > are different claims, and only the first was ever argued. Nobody asked the second question
@@ -101,11 +101,11 @@ restated 40 % to 32 %.
 >
 > [`../validation/A11_regen_braking.md`](../validation/A11_regen_braking.md) asked it. Braking
 > at the same sheet-current rating over 240 mm of added stator downstream of release returns
-> **296.6 J, 23.0 % of the sled's 1291 J**, and lifts efficiency from 19.0 to **21.2 %**.
+> 296.6 J, 23.0 % of the sled's 1291 J, and lifts efficiency from 19.0 to 21.2 %.
 > Copper during the braking pulse is 15 J, because it is 15.6 ms over 240 mm of winding rather
 > than 157 ms over 1300 mm.
 >
-> **The eddy brake stays.** It still absorbs 952 J of every shot. This supplements the decision
+> The eddy brake stays. It still absorbs 952 J of every shot. This supplements the decision
 > above; it does not reverse it. Adopted into the Phase I baseline under
 > [`programme/ADOPTION.md`](programme/ADOPTION.md) Amendment 3, and it opened P28: the regen
 > stator and the fin do not both fit the arrest section as currently sized.
@@ -148,15 +148,15 @@ the claim's scope did.
 
 ## 2026-07: Publish publicly
 Concept and results released via LinkedIn and this repository. Detailed operating point
-was deliberately withheld from the public post but **is** disclosed by publishing these
+was deliberately withheld from the public post but is disclosed by publishing these
 scripts. See `OPEN_PROBLEMS.md` E14, this is irreversible and was not preceded by a
 provisional filing.
 
 ### 2026-08-03 correction to the regeneration addendum
 
 The decision to recover energy before the eddy brake remains accepted. At the corrected
-operating point the same model returns **291.4 J**, 23.0% of the sled's 1268.3 J, leaving
-**934.7 J** to the brake and giving **20.99%** net electrical-to-payload efficiency.
+operating point the same model returns 291.4 J, 23.0% of the sled's 1268.3 J, leaving
+934.7 J to the brake and giving 20.99% net electrical-to-payload efficiency.
 
 ## 2026-08: Gen4 is an open mechanism before it is a new operating point
 

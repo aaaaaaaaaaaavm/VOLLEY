@@ -1,6 +1,6 @@
 # ADR-001: Electromagnetic deployment instead of a spring
 
-**Status:** Accepted · **Date:** 2021-03-22 · **Phase:** Concept
+Status: Accepted, Date: 2021-03-22, Phase: Concept
 
 ## Context
 Rideshare CubeSat secondaries inherit the primary customer's orbit. The spring that ejects
@@ -9,16 +9,16 @@ satellite with no propulsion is stuck where the primary paid to go. The observat
 watching a Rocket Lab Photon deploy CubeSats on 22 March 2021.
 
 ## Decision
-Pursue an electromagnetic deployer delivering a **programmable** ejection velocity an order of
+Pursue an electromagnetic deployer delivering a programmable ejection velocity an order of
 magnitude above a spring.
 
 ## Alternatives
-- **Spring, accept the limitation.** Flight-proven, needs no power, and is what everyone uses.
+- Spring, accept the limitation. Flight-proven, needs no power, and is what everyone uses.
   Rejected because it forecloses the entire capability being sought.
-- **Give the satellite propulsion.** Solves the problem at the customer's expense, mass,
+- Give the satellite propulsion. Solves the problem at the customer's expense, mass,
   cost, and a propulsion system on a 3U. Rejected: it moves the burden to the party least able
-  to carry it.
-- **Orbital transfer vehicle.** Works, and flies commercially. Rejected as a different product
+ to carry it.
+- Orbital transfer vehicle. Works, and flies commercially. Rejected as a different product
   at a different price point; it does not serve the customer who cannot afford one.
 
 ## Consequences

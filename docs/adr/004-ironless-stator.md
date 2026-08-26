@@ -1,6 +1,6 @@
 # ADR-004: Ironless stator
 
-**Status:** Accepted · **Date:** 2025 · **Phase:** I
+Status: Accepted, Date: 2025, Phase: I
 
 ## Context
 A conventional iron-cored linear motor gives more force per amp but adds cogging, attraction
@@ -10,9 +10,9 @@ between stator and magnets, and mass.
 Ironless: the winding sits in the airgap between two opposed Halbach arrays with no back-iron.
 
 ## Alternatives
-- **Iron-core stator.** Rejected: heavy, and the cogging force conflicts directly with a
+- Iron-core stator. Rejected: heavy, and the cogging force conflicts directly with a
   dispersion claim measured in centimetres per second.
-- **Single-sided array with back-iron.** Rejected: halves the useful field for the same magnet
+- Single-sided array with back-iron. Rejected: halves the useful field for the same magnet
   mass.
 
 ## Consequences

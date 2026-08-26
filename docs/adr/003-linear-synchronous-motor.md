@@ -1,124 +1,124 @@
 # ADR-003: Linear synchronous motor, not a coilgun
 
-**Status:** Accepted · **Date:** mid-2025 · **Phase:** Load-bearing
+Status: Accepted, Date: mid-2025, Phase: Load-bearing
 
-> ## ⚠ **AMENDMENT — 2026-08-22 — [P98](../../OPEN_PROBLEMS.md).** One statement in this record is withdrawn.
+> ## ⚠ AMENDMENT, 2026-08-22, [P98](../../OPEN_PROBLEMS.md). One statement in this record is withdrawn.
 >
-> **This ADR contains the line *"A standard CubeSat qualifies to ~14 g quasi-static"*. It is not
-> supported and must not be quoted.** The cited 14.1 g value is GEVS random-vibration
-> g<sub>rms</sub>, not a universal CubeSat quasi-static limit. **25 g is retained only as VOLLEY's
-> internal design ceiling**, and payload structural compatibility remains vehicle- and
+> This ADR contains the line *"A standard CubeSat qualifies to ~14 g quasi-static"*. It is not
+> supported and must not be quoted. The cited 14.1 g value is GEVS random-vibration
+> g<sub>rms</sub>, not a universal CubeSat quasi-static limit. 25 g is retained only as VOLLEY's
+> internal design ceiling, and payload structural compatibility remains vehicle- and
 > mission-specific. The full amendment is [at the end of the coilgun comparison](#-amendment--2026-08-22--p98-the-qualification-basis-in-the-block-above-is-withdrawn);
-> **the decision this ADR records does not depend on the withdrawn figure.** The original text is
+> the decision this ADR records does not depend on the withdrawn figure. The original text is
 > left exactly as written, for provenance.
 
 ## Context
 The concept was built around a coilgun from 2021. The requirement that broke it is not
-velocity but **velocity accuracy**: the value proposition is a programmable per-satellite
+velocity but velocity accuracy: the value proposition is a programmable per-satellite
 ejection velocity with dispersion small against its astrodynamic effect.
 
-> **Amended 2026-08-05.** That is a true reason and it is not the one that actually stopped the
+> Amended 2026-08-05. That is a true reason and it is not the one that actually stopped the
 > coilgun. The 2021-2025 notebooks give two, both about the payload rather than the launcher:
 > the acceleration is enormous, and the electromagnetic environment is severe, and either defeats
-> the point of carrying an **unmodified** CubeSat.
+> the point of carrying an unmodified CubeSat.
 > [`../HISTORY.md`](../HISTORY.md#why-the-coilgun-was-actually-dropped) records the chain in the
 > notebook's own words. The acceleration half is the table below. The EMI half has never been
-> calculated in this project; **E12** carries the gap.
+> calculated in this project; E12 carries the gap.
 
 ## Decision
 Ironless double-sided Halbach linear synchronous motor driving a reusable sled.
 
 ## Alternatives
-- **Coilgun (induction or reluctance).** Rejected. ~~It needs a conductive armature, either bolted
-  to the customer satellite, breaking the no-modification requirement (ADR-006), or separated as a
-  sabot with its own release event;~~ **struck 2026-08-05, see below**; it offers no abort; and
-  **no published coilgun demonstrates velocity dispersion at the level this application needs.**
+- Coilgun (induction or reluctance). Rejected. ~~It needs a conductive armature, either bolted
+ to the customer satellite, breaking the no-modification requirement (ADR-006), or separated as a
+  sabot with its own release event;~~ struck 2026-08-05, see below; it offers no abort; and
+  no published coilgun demonstrates velocity dispersion at the level this application needs.
   Its one advantage (very high velocity) is erased by the payload's own g-limit, which caps
   useful exit velocity near 26-35 m/s regardless of launcher.
 
-  > **Amended 2026-08-05. The armature clause was wrong, and my own other paper is what shows
-  > it.** It presented a false choice: armature bolted to the customer, or a sabot with its own
+  > Amended 2026-08-05. The armature clause was wrong, and my own other paper is what shows
+  > it. It presented a false choice: armature bolted to the customer, or a sabot with its own
   > release event. There is a third option, and I adopted it myself in *Electromagnetic Launch
-  > System for Vertical Silo-Based Missile Deployment* — an **inductive cradle**, a reusable
+  > System for Vertical Silo-Based Missile Deployment*, an inductive cradle, a reusable
   > element the payload couples to and never carries, selected there over a conducting sabot
   > because it avoids rail ablation and suits repeated cycling. That is architecturally the same
   > move as this project's reusable sled.
   >
-  > So "a coilgun must touch the payload" is false, and a reader who finds both papers — and
-  > [`../SKILLS.md`](../SKILLS.md) points at both — can reasonably ask why VOLLEY rejected
+  > So "a coilgun must touch the payload" is false, and a reader who finds both papers, and
+  > [`../SKILLS.md`](../SKILLS.md) points at both, can reasonably ask why VOLLEY rejected
   > coilguns for needing something the sibling paper shows they do not need.
   >
-  > **The decision is unaffected, because this was never the load-bearing argument.** What
+  > The decision is unaffected, because this was never the load-bearing argument. What
   > separates the two machines is control and acceleration, not where the conductor sits:
   > sequential coil triggering is fire-and-commit, a synchronous machine commands current against
   > a measured position, and Feng et al. run 1352 g mean against this design's 10.53 g. Those are
   > the reasons, and they are stated above and in the table below. The armature clause is struck
   > rather than rewritten because it was doing rhetorical work it could not support.
 
-  > **Amended 2026-07-30, after reading the papers.** Two statements here were weaker than they
+  > Amended 2026-07-30, after reading the papers. Two statements here were weaker than they
   > read, and one of them was simply wrong. See [`../PRIOR_ART.md`](../PRIOR_ART.md).
   >
-  > **"Efficiency is 1-2 % in the literature" was wrong, and it was unsourced.** Feng et al. (IJAE
-  > 2025) report **14.9-19.9 %** for a three-stage induction coilgun at 20 kg, the same order as
+  > "Efficiency is 1-2 % in the literature" was wrong, and it was unsourced. Feng et al. (IJAE
+  > 2025) report 14.9-19.9 % for a three-stage induction coilgun at 20 kg, the same order as
   > this design's own 20 % electrical-to-payload figure. Einat & Orbach (Sci. Rep. 2023) measure a
-  > multi-stage reluctance launcher but at a **2.5 g** projectile, five orders of magnitude below a
-  > CubeSat, so it cannot settle the question at this scale either way. **The efficiency argument is
-  > withdrawn entirely**, it was never load-bearing, and it was wrong.
+  > multi-stage reluctance launcher but at a 2.5 g projectile, five orders of magnitude below a
+  > CubeSat, so it cannot settle the question at this scale either way. The efficiency argument is
+  > withdrawn entirely, it was never load-bearing, and it was wrong.
   >
-  > **"Cannot command velocity closed-loop" overstated.** Feng varies exit velocity 230 to 321.56
+  > "Cannot command velocity closed-loop" overstated. Feng varies exit velocity 230 to 321.56
   > m/s by charging voltage, 10 to 16 kV, approximately linearly, and uses armature position/velocity
   > feedback for stage trigger timing. That is genuine velocity *selection*. What no published
-  > coilgun reports is a **dispersion figure**: Feng quotes none, so the supportable claim is about
+  > coilgun reports is a dispersion figure: Feng quotes none, so the supportable claim is about
   > absent evidence, and it is written that way above.
   >
-  > **The decision stands, on the two reasons that were always load-bearing.** Both are now numbers
+  > The decision stands, on the two reasons that were always load-bearing. Both are now numbers
   > rather than assertions:
   >
   > | | Feng et al. 2025 | This design |
   > |---|---|---|
-  > | Payload interface | Aluminium **armature coils** on the payload | Magnets on a reusable sled; satellite untouched |
-  > | Acceleration | 3.9 m barrel to **1352 g** mean; >600 kN peak on 20 kg to **~3060 g** | 9.2 g mean, 10.53 g peak |
-  > | Energy per shot | **6.91 MJ** | 2.85 kJ gross, 2.56 kJ net |
+  > | Payload interface | Aluminium armature coils on the payload | Magnets on a reusable sled; satellite untouched |
+  > | Acceleration | 3.9 m barrel to 1352 g mean; >600 kN peak on 20 kg to ~3060 g | 9.2 g mean, 10.53 g peak |
+  > | Energy per shot | 6.91 MJ | 2.85 kJ gross, 2.56 kJ net |
   >
   > A standard CubeSat qualifies to ~14 g quasi-static. Feng's design is ~100x that, and needs 2470x
   > the energy per shot. Neither is a secondary payload on an upper stage, and neither is a defect in
   > their work, they are solving a different problem. It is why this one is not a coilgun.
 
-> # ⚠ AMENDMENT — 2026-08-22 — [P98](../../OPEN_PROBLEMS.md): the qualification basis in the block above is withdrawn
+> # ⚠ AMENDMENT, 2026-08-22, [P98](../../OPEN_PROBLEMS.md): the qualification basis in the block above is withdrawn
 >
 > ## The line *"A standard CubeSat qualifies to ~14 g quasi-static"* is not supported and must not be quoted.
 >
-> **The cited 14.1 g value is GEVS random-vibration g<sub>rms</sub>, not a universal CubeSat
-> quasi-static limit.** A root-mean-square level over a broadband random spectrum is not a
+> The cited 14.1 g value is GEVS random-vibration g<sub>rms</sub>, not a universal CubeSat
+> quasi-static limit. A root-mean-square level over a broadband random spectrum is not a
 > quasi-static limit load, and a 3σ multiple of it is a peak-response estimate for that spectrum
-> rather than a structural capability. **No replacement figure exists**: the CubeSat Design
+> rather than a structural capability. No replacement figure exists: the CubeSat Design
 > Specification publishes a mechanical interface and defers test levels to the launch provider, so
 > they vary by vehicle and by mission.
 >
-> **25 g is retained only as VOLLEY's internal design ceiling.** It is a requirement this project
+> 25 g is retained only as VOLLEY's internal design ceiling. It is a requirement this project
 > set on itself, not a capability of any payload, and it is never evidence that a satellite is
-> qualified for it. **Payload structural compatibility remains vehicle- and mission-specific and
-> has not been demonstrated for any payload.**
+> qualified for it. Payload structural compatibility remains vehicle- and mission-specific and
+> has not been demonstrated for any payload.
 >
-> **The original text above is left exactly as written on the decision date, for provenance.**
-> The decision it records — an LSM rather than a coilgun — does not depend on the withdrawn figure:
+> The original text above is left exactly as written on the decision date, for provenance.
+> The decision it records, an LSM rather than a coilgun, does not depend on the withdrawn figure:
 > it rests on the payload interface (armature on the customer satellite versus magnets on a reusable
 > sled) and on an acceleration ratio between two computed numbers, which needs no external standard
 > to state. See [`docs/VELOCITY_CEILING.md`](../VELOCITY_CEILING.md) for the current statement.
 
-- **Maglev-style rail.** The 2021 framing left this open. Converged with the LSM choice.
+- Maglev-style rail. The 2021 framing left this open. Converged with the LSM choice.
 
 ## Consequences
-**Everything downstream follows from this decision**, Halbach array, reusable sled, eddy
+Everything downstream follows from this decision, Halbach array, reusable sled, eddy
 brake, supercapacitor bank, and the servo that makes the dispersion claim possible. It also
 sets the ceiling: a synchronous machine's thrust is bounded by the same constant in both
 directions, which is why arrest needs a separate mechanism (ADR-005).
 
 ## Validation
-K<sub>t</sub> = 11.03 N per kA/m from `analysis/motor_model.py`. **A1 has since run** (2026-07-29,
-rerun after the 2026-08-03 quadrature correction) and a meshed 2-D FEM agrees to **0.03 %**, so
+K<sub>t</sub> = 11.03 N per kA/m from `analysis/motor_model.py`. A1 has since run (2026-07-29,
+rerun after the 2026-08-03 quadrature correction) and a meshed 2-D FEM agrees to 0.03 %, so
 this is no longer analytic-against-analytic and no longer the weakest link; A1's verdict remains
-**PARTIAL** on two field rows. Nothing has been measured, which is now the weakest link (**E4**).
+PARTIAL on two field rows. Nothing has been measured, which is now the weakest link (E4).
 The dispersion claim rests on E7's assumed sensor noise and needs A7. The drive that has to
 deliver this K<sub>t</sub> is quantified in `analysis/drive_electrical.py`; its winding inductance
-was unexamined until 2026-08-05 (**P33**).
+was unexamined until 2026-08-05 (P33).

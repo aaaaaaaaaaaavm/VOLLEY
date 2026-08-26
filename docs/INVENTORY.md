@@ -2,7 +2,7 @@
 
 Complete index of the work. Read alongside `PROVENANCE.md`.
 
-**Baseline:** nothing in this list has been validated by hardware, FEA, or third-party
+Baseline: nothing in this list has been validated by hardware, FEA, or third-party
 review. Every entry is a model output or a design decision, and several superseded
 entries are kept only so the record of what changed stays legible.
 
@@ -43,12 +43,12 @@ entries are kept only so the record of what changed stays legible.
 | A29 | Closed-loop servo Monte Carlo (3σ = 0.0274 m/s) | `analysis/motor_model.py` |
 | A30 | Solid mass properties (126.6 kg dry, sled 9.445 kg CAD-derived) | `analysis/mass_properties.py`, parametric 4.86 kg superseded 2026-07-29 |
 | A31 | Cowell RK4 cross-validation (99.4 %) | `analysis/astro.py` |
-| A32 | Solar-activity UQ, x1.60 multiplier | `analysis/astro.py`, **invariance falsified by GMAT, see P16**; BC half is the same tautology |
+| A32 | Solar-activity UQ, x1.60 multiplier | `analysis/astro.py`, invariance falsified by GMAT, see P16; BC half is the same tautology |
 | A33 | Refined conjunction at final velocity | `analysis/astro.py`, see P1 |
 | A34 | Strategy-doc verification (recoil, propellant, capacitor, trim tables) | verification only |
 | A35 | Mechanical/thermal/electrical sizing anchors | `analysis/sizing.py` |
-| A36 | Retention-gate resize (margin 0.5 to two D6 pins, 1.2; **D6 to D9 in 2026-08-10, A22**) | `analysis/sizing.py` |
-| A37 | **Recurring hardware cost, parametric BOM**: all prices assumed, no quotations | `analysis/cost.py`, corrects the paper's claim that magnets dominate |
+| A36 | Retention-gate resize (margin 0.5 to two D6 pins, 1.2; D6 to D9 in 2026-08-10, A22) | `analysis/sizing.py` |
+| A37 | Recurring hardware cost, parametric BOM: all prices assumed, no quotations | `analysis/cost.py`, corrects the paper's claim that magnets dominate |
 
 ## B. Design decisions and when they changed
 
@@ -59,7 +59,7 @@ Reasoning is recorded in `docs/DECISION_LOG.md`.
 | B1 | Core concept: EM launcher on a rideshare placing sats in own orbits |
 | B2 | Original dual option: maglev rail *or* coilgun |
 | B3 | Reluctance to induction coilgun |
-| B4 | **Coilgun to linear synchronous motor** (mid-2025) |
+| B4 | Coilgun to linear synchronous motor (mid-2025) |
 | B5 | Ironless vs iron-core stator |
 | B6 | Reusable sled vs armature on customer satellite |
 | B7 | Dual transverse cassettes vs revolver / 2-DOF / tandem |
@@ -89,8 +89,8 @@ Reasoning is recorded in `docs/DECISION_LOG.md`.
 | C3 | Figure set v1 (11 figures) | superseded, `legacy/make_figs.py` |
 | C4 | Figure set v2 at final numbers | `paper/figures/` |
 | C5 | Concept illustration | `legacy/concept.py` |
-| C6 | **CAD assembly** | `cad/`, 9 Fusion 360 documents in 3 generations; Gen3 current, plus a monolithic `EMOCD_Gen3.step` |
-| C7 | **FEMM / FEA field maps** | does not exist, run sheet only |
+| C6 | CAD assembly | `cad/`, 9 Fusion 360 documents in 3 generations; Gen3 current, plus a monolithic `EMOCD_Gen3.step` |
+| C7 | FEMM / FEA field maps | does not exist, run sheet only |
 | C8 | CAD generation history and defect audit | `cad/CHANGELOG_CAD.md` |
 
 ## D. Documents
@@ -101,7 +101,7 @@ Reasoning is recorded in `docs/DECISION_LOG.md`.
 | D2 | Verification report, consolidated docx | not in repo |
 | D3 | Verification of strategy document | not in repo |
 | D4 | Launch-ecosystem research report | not in repo |
-| D5 | Computation results C1, C10 | `docs/`, **superseded**, old operating point |
+| D5 | Computation results C1, C10 | `docs/`, superseded, old operating point |
 | D6 | PBL-2 skeleton (19 pp, Annexure format) | not in repo |
 | D7 | Figure pack | `paper/figures/` |
 | D8 | FEMM run sheet | `analysis/femm/FEMM_RUN_SHEET.md` (current); `docs/FEMM_Run_Sheet.md` superseded; band in `validation/A1_field_femm.md` |
@@ -111,9 +111,9 @@ Reasoning is recorded in `docs/DECISION_LOG.md`.
 | D12 | Reproducibility package | this repo |
 | D13 | Analysis scripts | `analysis/` + `legacy/` |
 | D14 | LinkedIn announcement post | not in repo |
-| D15 | **Qualification and environmental test plan** | `docs/QUALIFICATION_PLAN.md`, specified, none run |
-| D16 | **Benchtop test protocol** (4 sub-scale experiments, bands declared) | `docs/BENCHTOP_TESTS.md`, specified, none run |
-| D17 | **Project history and milestone tags** | `HISTORY.md`, records that the git history below 2026-07-23 was reconstructed |
+| D15 | Qualification and environmental test plan | `docs/QUALIFICATION_PLAN.md`, specified, none run |
+| D16 | Benchtop test protocol (4 sub-scale experiments, bands declared) | `docs/BENCHTOP_TESTS.md`, specified, none run |
+| D17 | Project history and milestone tags | `HISTORY.md`, records that the git history below 2026-07-23 was reconstructed |
 
 ## E. Open problems
 
@@ -128,7 +128,7 @@ patent position now that disclosure has happened.
 ## F. External sources
 
 30 sources cited across the work; 21 were fetched and read directly ("verified"), the
-remainder cited without retrieval and **should be re-checked before publication**. Full
+remainder cited without retrieval and should be re-checked before publication. Full
 list with verification status is in the paper bibliography and `PROVENANCE.md`. Three
 references (eddy-damper heritage, Yudintsev, vibro-impact deployment) remain explicitly
 unverified, see `OPEN_PROBLEMS.md` E16.

@@ -112,7 +112,7 @@ Four results moved the design rather than confirming it.
    low solar activity by 18 % against a 5 % band. The cause was the sweep rather than the
    arithmetic.
 3. ngspice found a term no script carried. Energy closure failed at 97.0 % against a declared 98
-   to 102 %, and the missing 86.6 J a shot was the capacitor bank's own series resistance.
+ to 102 %, and the missing 86.6 J a shot was the capacitor bank's own series resistance.
 4. Every kilogram was attributed to the requirement causing it, then every requirement deleted.
    Across all 64 corners, 88.67 kg survives, which is 70.06 % of dry mass and 7.39 kg per
    satellite against a 2 kg criterion ([A35](validation/A35_constraint_ledger.md)).

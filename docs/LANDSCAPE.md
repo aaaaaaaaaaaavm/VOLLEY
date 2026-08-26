@@ -3,96 +3,96 @@
 An honest comparison of this design study against fielded CubeSat deployers and the
 last-mile transfer vehicles at the other end of the market.
 
-> **Source status.** VOLLEY's own figures come from `analysis/results/*.json` and are model
+> Source status. VOLLEY's own figures come from `analysis/results/*.json` and are model
 > outputs. Competitor figures were collected from vendor and agency material on 2026-07-28
-> and are **recorded as leads, not verified**: the same E16 rule that applies to
+> and are recorded as leads, not verified: the same E16 rule that applies to
 > `RELATED_WORK.md`. Fetch and read the primary document before any of these numbers enters
 > `paper/paper.tex`. Where a figure could not be pinned down, this file says so rather than
 > estimating.
 
 ## The three families
 
-| | **Spring deployers** | **VOLLEY** | **Orbital transfer vehicles** |
+| | Spring deployers | VOLLEY | Orbital transfer vehicles |
 |---|---|---|---|
-| Examples | P-POD, ISIPOD, NRCSD, CSD, EXOpod, **Dhruva DSOD** | this design study | D-Orbit ION, Momentus Vigoride |
-| Δv imparted | **1-2 m/s** | **16.5 m/s** (model) | hundreds of m/s upward, propulsive |
+| Examples | P-POD, ISIPOD, NRCSD, CSD, EXOpod, Dhruva DSOD | this design study | D-Orbit ION, Momentus Vigoride |
+| Δv imparted | 1-2 m/s | 16.5 m/s (model) | hundreds of m/s upward, propulsive |
 | Mechanism | compressed spring | linear synchronous motor, reusable sled | chemical or electric propulsion |
-| Programmable per satellite | no | **yes**: the distinguishing claim | yes, by manoeuvre |
-| Satellite modification | none (CDS rails) | **none**: magnets ride the sled | mounting to the carrier |
+| Programmable per satellite | no | yes: the distinguishing claim | yes, by manoeuvre |
+| Satellite modification | none (CDS rails) | none: magnets ride the sled | mounting to the carrier |
 | Power required | none | ~2.6 kJ per shot, supercapacitor bank | full propulsion system |
-| Maturity | **flight-proven, thousands deployed** | **TRL 2-3, nothing built** | flown, commercially operating |
+| Maturity | flight-proven, thousands deployed | TRL 2-3, nothing built | flown, commercially operating |
 
 The gap VOLLEY targets is real: nothing fielded delivers a *programmable* 10-30 m/s to an
 unmodified CubeSat. Springs cannot, and OTVs solve a different problem at a different price.
 
 ## Against the incumbents, honestly
 
-> **This comparison is against dispensers, and that is the wrong benchmark.** A customer wanting
+> This comparison is against dispensers, and that is the wrong benchmark. A customer wanting
 > 16.5 m/s can fit a 0.5 to 1.2 kg cold-gas module instead, which VOLLEY loses to by about 8x at
 > 3U. See [`KILL_CRITERIA.md`](KILL_CRITERIA.md) threat 1 and
 > [`PAYLOAD_CLASSES.md`](PAYLOAD_CLASSES.md), where smaller payloads reverse it.
 
-**Mass per satellite used to be the surprise on this page. It is now a loss.** VOLLEY's 126.6 kg
-dry carries twelve 3U satellites, **10.547 kg of deployer per satellite**. Canisterised dispensers
-run about **2 kg per U** as a class figure, so a 3U-equivalent slot is around 6 kg. **A21 computes
-the ratio at 1.758, and its band 4 — parity within 15 % — failed on 2026-08-16.**
+Mass per satellite used to be the surprise on this page. It is now a loss. VOLLEY's 126.6 kg
+dry carries twelve 3U satellites, 10.547 kg of deployer per satellite. Canisterised dispensers
+run about 2 kg per U as a class figure, so a 3U-equivalent slot is around 6 kg. A21 computes
+the ratio at 1.758, and its band 4, parity within 15 %, failed on 2026-08-16.
 
-> **What this paragraph said until then, and why it changed.** It read *"parity inside 7 %"* and
+> What this paragraph said until then, and why it changed. It read *"parity inside 7 %"* and
 > concluded that a magazine-fed electromagnetic launcher lands in the same mass class as a canister
-> of springs. That was true against a rollup carrying an **8.00 kg placeholder** for the enclosure.
-> [A46](../validation/A46_enclosure_buildup.md) derived that line at **50.04 kg**, and parity did
-> not survive it. **The band is not widened and the claim is withdrawn. P69.**
+> of springs. That was true against a rollup carrying an 8.00 kg placeholder for the enclosure.
+> [A46](../validation/A46_enclosure_buildup.md) derived that line at 50.04 kg, and parity did
+> not survive it. The band is not widened and the claim is withdrawn. P69.
 
-> **And the headline ratio this file used to quote was the weakest one available.** 6.4× is a
-> ratio of *velocities*, and nobody buys velocity. Lifetime extension is **superlinear** in Δv
-> here: a 2.5 m/s spring buys **+8.2 %** of orbital life, VOLLEY buys **+60.2 %** — a ratio of
-> **7.33×**, or **9.45×** against a typical 2 m/s spring. See
+> And the headline ratio this file used to quote was the weakest one available. 6.4x is a
+> ratio of *velocities*, and nobody buys velocity. Lifetime extension is superlinear in Δv
+> here: a 2.5 m/s spring buys +8.2 % of orbital life, VOLLEY buys +60.2 %, a ratio of
+> 7.33x, or 9.45x against a typical 2 m/s spring. See
 > [`../validation/A21_comparators.md`](../validation/A21_comparators.md).
 >
-> **And the correction that ratio needs, from E30.** 7.33× is a ratio of *gains*. On **delivered
-> orbital life** — total years, 2.111 against 1.412 at 450 km — it is **1.495×**. That is the
+> And the correction that ratio needs, from E30. 7.33x is a ratio of *gains*. On delivered
+> orbital life, total years, 2.111 against 1.412 at 450 km, it is 1.495x. That is the
 > figure any *risk-weighted* comparison must use, because a satellite the deployer never releases
 > delivers nothing, and `docs/FMEA.md` shows this architecture forfeits satellites in ways a
-> spring does not. **Quoting 7.33× alone flatters in exactly the comparison a reviewer will
-> make.**
+> spring does not. Quoting 7.33x alone flatters in exactly the comparison a reviewer will
+> make.
 >
-> **The advantage with no ratio at all is the designed differential.** A spring gives every
-> satellite the same nominal push, so its commandable spread is **exactly zero** and a
-> spring-deployed fleet can only phase by drag — **25 days, and unschedulable**, against VOLLEY's
-> **1.38 days**. That is 18.1×, and it is a capability springs do not have at any price.
+> The advantage with no ratio at all is the designed differential. A spring gives every
+> satellite the same nominal push, so its commandable spread is exactly zero and a
+> spring-deployed fleet can only phase by drag, 25 days, and unschedulable, against VOLLEY's
+> 1.38 days. That is 18.1x, and it is a capability springs do not have at any price.
 
-Two caveats that cut against VOLLEY: the 76.9 kg **excludes** the enclosure, radiator and
+Two caveats that cut against VOLLEY: the 76.9 kg excludes the enclosure, radiator and
 avionics (P10, open), and springs need no power, no capacitor bank, no thermal system and no
 sequencer.
 
-**The closest comparator is Indian, and it flies.** Dhruva Space's DSOD family (1U / 3U /
+The closest comparator is Indian, and it flies. Dhruva Space's DSOD family (1U / 3U /
 6U / 12U / 16U) was space-qualified on ISRO's PSLV-C55 on 22 April 2023, having flown
-earlier on PSLV-C53. It uses a **non-pyrotechnic hold-down and release mechanism** and
-carries **onboard telemetry for deployment confirmation and ejection-velocity measurement**.
-Published ejection velocity is **< 2 m/s** across the whole family.
+earlier on PSLV-C53. It uses a non-pyrotechnic hold-down and release mechanism and
+carries onboard telemetry for deployment confirmation and ejection-velocity measurement.
+Published ejection velocity is < 2 m/s across the whole family.
 
-**A sourced upper bound on the whole spring class, added 2026-07-31.** The NanoRacks NRCSD-E
+A sourced upper bound on the whole spring class, added 2026-07-31. The NanoRacks NRCSD-E
 interface document specifies that a CubeSat *"shall be capable of withstanding a deployment
-velocity of **0.5 to 2.5 m/s** at ejection"*. That is the widest published figure in the flown
+velocity of 0.5 to 2.5 m/s at ejection"*. That is the widest published figure in the flown
 spring family, and it is the number the "eight times a spring" comparison should be made against
-rather than the 2 m/s used elsewhere here: **16.5 / 2.5 = 6.4x, not 8x.** The comparison is
+rather than the 2 m/s used elsewhere here: 16.5 / 2.5 = 6.4x, not 8x. The comparison is
 weaker than the one this project has been making, and the honest version is still an order of
 magnitude in the regime that matters.
 
 Three things follow, and none of them are comfortable:
 
-- **It is the exact product VOLLEY argues against**, built by the Indian company whose
+- It is the exact product VOLLEY argues against, built by the Indian company whose
   business this design study is closest to. Any reader from that part of the industry will
   know it. Omitting it would read as either not having looked or having looked and avoided
   it.
-- **They measure their ejection velocity on orbit.** VOLLEY's entire differentiator is
+- They measure their ejection velocity on orbit. VOLLEY's entire differentiator is
   velocity *accuracy*, and the incumbent already flies the instrumentation that would
   settle such a claim. This project's 0.0274 m/s (3σ) is a model output; theirs is telemetry.
-- **Non-pyrotechnic release is not a differentiator.** It is already the fielded standard,
+- Non-pyrotechnic release is not a differentiator. It is already the fielded standard,
   so VOLLEY's contactless release has to compete on velocity and programmability alone.
 
-What VOLLEY still has against it is the thing the DSOD cannot do: **> 2 m/s, programmable per
-satellite**. That is the whole argument, and it is narrower than "electromagnetic beats
+What VOLLEY still has against it is the thing the DSOD cannot do: > 2 m/s, programmable per
+satellite. That is the whole argument, and it is narrower than "electromagnetic beats
 springs".
 
 *Sources: Dhruva Space product pages and the PSLV-C55 qualification announcement, retrieved
@@ -100,24 +100,24 @@ springs".
 403 to automated retrieval, so no mass-per-satellite comparison against DSOD is made here.
 Marked unverified under the E16 rule.*
 
-**Tip-off is where the incumbents are strong and VOLLEY is unproven.** The NRCSD-E interface
+Tip-off is where the incumbents are strong and VOLLEY is unproven. The NRCSD-E interface
 document is cited here and in `validation/A7_separation_chrono.md` as targeting
-**< 5 °/s per axis**, backed by flight heritage plus microgravity and drop-tower test
-campaigns. **That number is now in doubt**: search snippets of the sibling NRCSD ICD
+< 5 °/s per axis, backed by flight heritage plus microgravity and drop-tower test
+campaigns. That number is now in doubt: search snippets of the sibling NRCSD ICD
 (NR-SRD-029) give "less than two (2) deg/sec/axis" verbatim, and the NRCSD-E document itself
 403s to automated retrieval so the "-E" variant could not be confirmed either way. If the
 real target is 2 °/s, the bar VOLLEY has to clear is 2.5x harder than the pre-declared A7
-band assumes. **This must be checked by hand in a browser before A7 runs**, see
+band assumes. This must be checked by hand in a browser before A7 runs, see
 `OPEN_PROBLEMS.md` E16. VOLLEY's tip-off is a model output with no
 multibody model behind it, A7 is specified and unrun. Claiming a gentler release than a
 spring is not yet supported by anything.
 
-**Deployment velocity accuracy is VOLLEY's genuine differentiator**, and it is also the least
+Deployment velocity accuracy is VOLLEY's genuine differentiator, and it is also the least
 validated part. The 0.0274 m/s (3σ) dispersion rests on assumed sensor noise (E7), and the
 servo headroom argument behind it is stated against a bank sag figure that A8 has just shown
 is the wrong quantity. The claim may well hold; it has not been earned yet.
 
-**Interface non-modification is a real advantage over the CSD family**, which uses a tab
+Interface non-modification is a real advantage over the CSD family, which uses a tab
 interface rather than the CDS rails, and over any concept that bolts an armature to the
 customer satellite, a trade this project already made and documented (B6).
 
@@ -128,22 +128,22 @@ propulsion, carrying satellites to a destination. VOLLEY imparts one impulse alo
 velocity vector and cannot change plane meaningfully (`astro.py` puts the plane-change
 ceiling at 0.15°).
 
-> **Corrected 2026-08-14 (P56, A21-R).** The paragraph below named differential drag as the
-> comparison that matters. **It is not the binding one.** Satellites released at different times
+> Corrected 2026-08-14 (P56, A21-R). The paragraph below named differential drag as the
+> comparison that matters. It is not the binding one. Satellites released at different times
 > from the same host arrive at different true anomalies *in the same orbit*, for no velocity at
-> all: at 450 km, **30° costs 468 seconds of waiting**, and ADR-020's adopted 1200 s cadence
-> already gives **76.9° per shot**. Release timing beats commanded differential by 255× and beats
-> drag by four orders. **A spring and a clock do phase spacing, and do it better** — timing sets
+> all: at 450 km, 30° costs 468 seconds of waiting, and ADR-020's adopted 1200 s cadence
+> already gives 76.9° per shot. Release timing beats commanded differential by 255x and beats
+> drag by four orders. A spring and a clock do phase spacing, and do it better, timing sets
 > an offset that holds, while a differential sets a 21.75 °/day drift a propulsion-less satellite
 > cannot null.
 >
-> **What survives is orbit change**, which no clock can imitate: **+28.8 km of semi-major axis and
-> ×1.602 of orbital life**, against ×1.0000 for release timing at any cadence (bands R5, R6).
+> What survives is orbit change, which no clock can imitate: +28.8 km of semi-major axis and
+> x1.602 of orbital life, against x1.0000 for release timing at any cadence (bands R5, R6).
 
-Where VOLLEY competes is **placing a propulsion-less satellite into a different orbit from the one
-its host is in**: no propulsion on the satellites, no propulsion on the deployer, one shot each.
-Against differential drag — free, flown by Planet Labs on a 12-satellite constellation, and the
-right baseline for *phasing* — VOLLEY offers nothing on phase and everything on orbit. Drag
+Where VOLLEY competes is placing a propulsion-less satellite into a different orbit from the one
+its host is in: no propulsion on the satellites, no propulsion on the deployer, one shot each.
+Against differential drag, free, flown by Planet Labs on a 12-satellite constellation, and the
+right baseline for *phasing*, VOLLEY offers nothing on phase and everything on orbit. Drag
 changes when a satellite decays; it cannot raise an apogee.
 
 ## Prior art VOLLEY must distinguish itself from
@@ -159,14 +159,14 @@ than a physics one.
 
 | | Status |
 |---|---|
-| Concept occupies a genuinely unserved regime | **yes** |
-| Mass per satellite competitive with fielded dispensers | **yes**, with P10 outstanding |
-| Programmable velocity, no satellite modification | **yes**, and unique |
-| Delivers the velocity it advertises | **yes, since 2026-07-29**: it now advertises the 16.03 m/s the CAD geometry gives |
-| Gentler tip-off than a spring | **unproven**: A7 not run |
-| Dispersion better than a spring | **unproven**: rests on assumed sensor noise (E7) |
-| Anything built or measured | **no** |
-| Closest fielded competitor identified and compared | **yes**: Dhruva DSOD, flown on PSLV-C53/C55 |
+| Concept occupies a genuinely unserved regime | yes |
+| Mass per satellite competitive with fielded dispensers | yes, with P10 outstanding |
+| Programmable velocity, no satellite modification | yes, and unique |
+| Delivers the velocity it advertises | yes, since 2026-07-29: it now advertises the 16.03 m/s the CAD geometry gives |
+| Gentler tip-off than a spring | unproven: A7 not run |
+| Dispersion better than a spring | unproven: rests on assumed sensor noise (E7) |
+| Anything built or measured | no |
+| Closest fielded competitor identified and compared | yes: Dhruva DSOD, flown on PSLV-C53/C55 |
 
 Against a P-POD, VOLLEY is a hundred times more complex and delivers ten times the velocity,
 programmably. Against an OTV it is far cheaper and far less capable. Both of those are

@@ -1,6 +1,6 @@
 # VOLLEY
 
-**An electromagnetic deployer that gives a rideshare CubeSat an orbit its host was not going to.**
+An electromagnetic deployer that gives a rideshare CubeSat an orbit its host was not going to.
 
 <p align="center">
   <img src="cad/renders/envelope_closed.png" alt="VOLLEY deployer, closed, 1839 mm along the track, on its ESPA interface" width="100%">
@@ -819,7 +819,7 @@ geometry ([why](cad/stl/README.md)).
 </tr>
 </table>
 
-<sub>These are the Gen4 Fusion model, and Gen4 has no committed STEP export. No performance number on this page is taken from them: Gen4's stations differ from the analysis model's, and its release point is 1200 mm where <code>analysis/</code> assumes 1500. The payload is a plain rectangular 3U proxy. The velocity annotated on each image is read from <code>analysis/results/motor_results.json</code> at render time — it was hard-coded until 2026-08-16 and said <b>16.388 m/s</b>, a figure withdrawn twice (<b>P72</b>). Full account: <a href="docs/GEN4_STATUS.md">docs/GEN4_STATUS.md</a>, ADR-019 and <b>P43</b>. <b>Gen5 and Gen6 are rendered in <a href="docs/GENERATIONS.md">docs/GENERATIONS.md</a>.</b></sub>
+<sub>These are the Gen4 Fusion model, and Gen4 has no committed STEP export. No performance number on this page is taken from them: Gen4's stations differ from the analysis model's, and its release point is 1200 mm where <code>analysis/</code> assumes 1500. The payload is a plain rectangular 3U proxy. The velocity annotated on each image is read from <code>analysis/results/motor_results.json</code> at render time, it was hard-coded until 2026-08-16 and said <b>16.388 m/s</b>, a figure withdrawn twice (<b>P72</b>). Full account: <a href="docs/GEN4_STATUS.md">docs/GEN4_STATUS.md</a>, ADR-019 and <b>P43</b>. <b>Gen5 and Gen6 are rendered in <a href="docs/GENERATIONS.md">docs/GENERATIONS.md</a>.</b></sub>
 
 ## Host integration, worked against real vehicles
 
@@ -924,7 +924,7 @@ Attribution is required under CC BY 4.0, including an indication of what was cha
 
 ## Author
 
-**Adityavardhan Mishra**: Department of Mechanical Engineering, Symbiosis Institute of
+Adityavardhan Mishra: Department of Mechanical Engineering, Symbiosis Institute of
 Technology, Symbiosis International (Deemed University), Pune. Project begun April 2021.
 
  [adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com)

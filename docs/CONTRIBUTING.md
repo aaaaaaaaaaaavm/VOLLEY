@@ -1,27 +1,27 @@
 # Contributing
 
-VOLLEY is a **design study**, not a software product. It exists to be reproduced,
+VOLLEY is a design study, not a software product. It exists to be reproduced,
 scrutinised, and (eventually) replaced by measured data. Contributions are welcome on
-those terms. The one thing this repository cares about above all is **provenance**: no
+those terms. The one thing this repository cares about above all is provenance: no
 generated number may ever pass as a measured one.
 
 ## Ground rules (non-negotiable)
 
 These mirror `docs/PROJECT_NOTES.md` and `PROVENANCE.md`. Read both before contributing.
 
-1. **The scripts in `analysis/` are the source of truth, not the paper.** If a script and
+1. The scripts in `analysis/` are the source of truth, not the paper. If a script and
    `paper/paper.tex` disagree, the paper is wrong, fix the paper to match the script,
    never the reverse. This principle has already caught four paper errors (see
    `CHANGELOG.md`, P2-01, P2-04).
-2. **Do not reconstruct numbers from general knowledge.** If a value's origin cannot be
+2. Do not reconstruct numbers from general knowledge. If a value's origin cannot be
    traced to a script in `analysis/`, say "not traceable" rather than filling the gap
    plausibly. Several numbers here were wrong for exactly that reason and were only caught
    by re-running the analysis.
-3. **Mark verification status on everything you add.** State whether a value is a model
+3. Mark verification status on everything you add. State whether a value is a model
    output, hand-checked, cross-validated against a second method, or measured. Nothing in
    this repository has been validated by hardware, FEA, or third-party review; keep that
    distinction visible.
-4. **Log substantive changes** in `CHANGELOG.md` with a cause, a before/after, and a
+4. Log substantive changes in `CHANGELOG.md` with a cause, a before/after, and a
    source-of-truth reference, in the existing format.
 
 ## Reproducing the analysis
@@ -45,12 +45,12 @@ verifies the lot on Debian/Ubuntu.
 ## Reporting a discrepancy
 
 If a script output does not match a value in the README or the paper, please open an issue
-using the **Reproduction discrepancy** template. Include the script, the value it prints,
+using the Reproduction discrepancy template. Include the script, the value it prints,
 the value in the document, and your environment (Python, numpy, magpylib versions).
 
 ## Scope
 
-By design this repository has **no CI, no test suite, and no build tooling**, it is a
+By design this repository has no CI, no test suite, and no build tooling, it is a
 research artifact, and the `analysis/` scripts are self-checking where a genuine
 cross-check exists (field model vs magpylib; orbit-averaged decay vs Cowell RK4). Please
 do not add software-product scaffolding without discussing it first.

@@ -1,6 +1,6 @@
 # ADR-019: Keep the Gen4 open assembly separate from the frozen Phase I baseline
 
-**Status:** Accepted · **Date:** 2026-08-03 · **Phase:** Gen4 transition
+Status: Accepted, Date: 2026-08-03, Phase: Gen4 transition
 
 ## Context
 
@@ -24,12 +24,12 @@ motor calculation has been run and its affected evidence has been classified.
 
 ## Alternatives
 
-- **Keep the 1500 mm release station.** Rejected: the brake fin is already inside the
+- Keep the 1500 mm release station. Rejected: the brake fin is already inside the
   brake envelope at release.
-- **Extend the track and enclosure to retain the 1.30 m stroke.** Rejected for this
+- Extend the track and enclosure to retain the 1.30 m stroke. Rejected for this
   revision: it enlarges the existing packaging problem and turns a CAD correction into
   a host-envelope decision.
-- **Use a 900 mm constant-thrust calculation.** Rejected: the finite stator edge is
+- Use a 900 mm constant-thrust calculation. Rejected: the finite stator edge is
   encountered before release, so constant thrust is not the stated geometry.
 
 ## Consequences

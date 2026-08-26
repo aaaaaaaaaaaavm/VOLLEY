@@ -5,7 +5,7 @@ claim. This file records that. It is deliberately unflattering.
 
 ## Summary
 
-**Every calculation, script, figure, and document in this repository is a model output.**
+Every calculation, script, figure, and document in this repository is a model output.
 Nothing here has been measured. No value has been re-derived by hand or checked against a
 second method unless this file says so explicitly.
 
@@ -29,11 +29,11 @@ All of the following:
 
 Only two results have independent corroboration, and both are internal:
 
-1. **Halbach field model.** The analytic decaying-wave model agrees with magpylib's
+1. Halbach field model. The analytic decaying-wave model agrees with magpylib's
    cuboid superposition to three digits (0.351 T single-array) and within ~1 % on the
    double-sided peak. Caveat: both methods assume ironless geometry, so this validates
    the wave model but is not confirmation by a different physical method.
-2. **Orbital decay.** Orbit-averaged Gauss integration agrees with an independent
+2. Orbital decay. Orbit-averaged Gauss integration agrees with an independent
    Cowell RK4 propagation to 99.4 % on 30-day semi-major-axis decay.
 
 Everything else is single-sourced.
@@ -51,23 +51,23 @@ Recorded because they calibrate how much to trust the rest:
    dissipates that energy in the brake. Double-counting; efficiency corrected 40 % to 32 %.
 4. Two sign errors in the Halbach array convention, caught by empirically probing a
    single array rather than asserting the convention.
-5. A retention gate pin was sized at margin 0.5 (inadequate); resized to two D6 pins, and then to two **D9** pins in 2026-08-10 after A18 showed the quasi-static sizing case was the wrong one (P37, A22),
+5. A retention gate pin was sized at margin 0.5 (inadequate); resized to two D6 pins, and then to two D9 pins in 2026-08-10 after A18 showed the quasi-static sizing case was the wrong one (P37, A22),
    margin 1.2.
-6. **Found while building this repo:** the paper's conjunction minimum (45.3 km) and
+6. Found while building this repo: the paper's conjunction minimum (45.3 km) and
    peak current (323 A) both belong to a superseded operating point. See
    `OPEN_PROBLEMS.md` P1 and P2.
-7. **The ±1.26 % force ripple** is a pre-quadrature record. The current figure is **±1.01 %**
+7. The ±1.26 % force ripple is a pre-quadrature record. The current figure is ±1.01 %
    (1.0138 % unrounded) from `analysis/motor_model.py`; the 2026-08-03 quadrature correction to
    the winding-thickness integral moved it, and moved K<sub>t</sub> from 11.22 to 10.5386 N per
-   kA/m with it. Three occurrences survive in dated records and are **annotated in place rather
-   than edited**: `docs/CROSS_INDUSTRY.md`, `validation/A1_field_femm.md` and
+   kA/m with it. Three occurrences survive in dated records and are annotated in place rather
+   than edited: `docs/CROSS_INDUSTRY.md`, `validation/A1_field_femm.md` and
    `docs/VALIDATION_REPORT.md`.
 
 ## Source material
 
 Three earlier working documents, a feasibility PDF, a consolidated report, and a
 strategy document, were checked against the analysis rather than trusted. They were
-**sources of claims to check, not sources of truth**, and several of their numbers were
+sources of claims to check, not sources of truth, and several of their numbers were
 found to be wrong or unattributable. They are not included in this repository.
 
 ## How to cite this work honestly

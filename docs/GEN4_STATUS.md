@@ -1,6 +1,6 @@
 # Gen4 open-assembly status
 
-**Recorded 2026-08-03.** This is a CAD configuration record, not a new operating
+Recorded 2026-08-03. This is a CAD configuration record, not a new operating
 point. `EMOCD_Gen4_Open v7` exists in Fusion 360 but has not yet been exported into
 this repository. The committed STEP, STL, renders, analyses, paper, and frozen
 baseline remain the Phase I / Gen3 record unless a file says otherwise.
