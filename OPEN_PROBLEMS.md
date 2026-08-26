@@ -3214,6 +3214,13 @@ would give **8.87 kg per satellite**, ratio 1.48, still failing, or a smaller pa
 `PAYLOAD_CLASSES.md` and **P59** already identify as the only route that moves this criterion at
 all. **No enclosure change reaches parity.**
 
+**Corrected 2026-08-26: the site page had never been propagated.** `docs/index.html` still read
+*"a cold-gas module beats both on mass at 3U by 7.5x"*, which is the pre-A46 ratio. Every markdown
+surface had been corrected to 12.4x on 2026-08-16 and the HTML page had not, because it wrote the
+figure as `7.5&times;` and `check_public.py` scans for the literal characters. The page now reads
+12.4x. **The gate was not wrong about the number; it could not see it**, which is the same class of
+failure as P84: a check that passes because the text it should have matched is spelled differently.
+
 ### P70. The register classifier read a status keyword out of a title: LOW, CORRECTED 2026-08-16
 > **Status:** `CLOSED`, resolved; see the entry for what closed it
 

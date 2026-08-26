@@ -30,6 +30,7 @@ that makes the honest pages harder to write.
 
     python3 tools/check_public.py
 """
+import html
 import os
 import re
 import sys
@@ -198,7 +199,11 @@ def main():
                 continue        # sibling repository not checked out beside this one
             problems.append(f'{rel}: MISSING -- it is listed as a public surface')
             continue
-        lines = open(path, encoding='utf-8').read().split('\n')
+        raw = open(path, encoding='utf-8').read()
+        # P69, 2026-08-26: an HTML surface wrote `7.5&times;` and every pattern here scans for
+        # the character. The entity spelling hid a stale claim on the site page for ten days,
+        # so the text is normalised before it is matched.
+        lines = html.unescape(raw).split('\n')
         for i, line in enumerate(lines):
             for pat, why in BLOCKED:
                 if re.search(pat, line) and not exempt(lines, i, rel, pat):
