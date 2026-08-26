@@ -125,7 +125,7 @@ unanswered, and each of them belongs to the stage rather than to the engine.
 | Electrical power and communications | keeping VOLLEY commandable for the length of the campaign |
 | Structural interface and VOLLEY mounting | [E31](../OPEN_PROBLEMS.md) |
 | Collision avoidance during the campaign | [E18](../OPEN_PROBLEMS.md) |
-| Disposal reserve and passivation | section 14, and [`MISSION_ARCHITECTURE.md`](MISSION_ARCHITECTURE.md) section 7 |
+| Disposal reserve and passivation | section 15, and [`MISSION_ARCHITECTURE.md`](MISSION_ARCHITECTURE.md) section 7 |
 
 So the question this file asks is not whether a given engine can fly VOLLEY. It is:
 
@@ -389,7 +389,7 @@ orbit for navigation, attitude and safe separation.
 Case B at one orbit per leg already exceeds the 4 h campaign reference in the assumption ledger.
 That is a tension between two VOLLEY assumptions rather than a finding about any engine, and it
 is exactly the kind of thing a declared ledger is supposed to expose. What resolves it is a
-stage cryogenic coast limit, which is section 12 and which nobody has published.
+stage cryogenic coast limit, which is section 13 and which nobody has published.
 
 ### Plane change stays priced and stays excluded
 
@@ -460,7 +460,7 @@ one. What can be said parametrically:
 | 12 h | case C with margin | active or passive thermal control and a vent policy, both stage design |
 
 None of the three can be chosen from public data. What would settle it is a stage-level cryogenic
-design limit, and it is a provider datum in section 16.
+design limit, and it is a provider datum in section 17.
 
 > A campaign lasting several days must not be claimed for an ANYA-class reference stage from the
 > present public evidence, and this file does not claim it. The multi-day distributed campaign in
