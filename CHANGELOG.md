@@ -9,6 +9,29 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-26 (fifty-fifth pass): the host-reference study is audited, and its orbital model was wrong
+
+An independent review of `docs/HOST_REFERENCE_CASES.md`, on the day it was published, found six
+defects. One is numbered under [ADR-021](docs/adr/021-freeze-the-register.md) rule 2 as a model
+error that made a published document wrong. The other five are claim withdrawals, a missing
+sweep, a weak gate and an infrastructure fault, none of which that ADR permits into the register.
+
+| ID | Item | Detail |
+|---|---|---|
+| P114 | HIGH. The model conflated a manoeuvre with the impulses that perform it, in two places | Numbered. It published a total two-impulse Hohmann budget as an "equivalent altitude step" and read it in prose as one burn, and it counted repositioning legs as ignitions. Corrected by vis-viva, a bisected Hohmann inverse, and an explicit ignition schema. The second surface reverses a published conclusion: Case B needs 7 post-primary ignitions against an assumed budget of 4, not 3 |
+| Pacing | The one-orbit-per-leg case was called "the real pace" | Withdrawn. One orbital period per leg is an illustrative scheduling case, not a lower bound: a Hohmann transfer reaches the opposite apsis in about half an orbit. Three pacing cases are now shown, the 47 minute transfer arc is separated out as the only physical duration, and the conclusion that "time is the binding constraint" is replaced by a statement conditioned on the scenario |
+| Batching | A fixed-dv-per-reposition table was presented as evidence that batching wins | Withdrawn. The rows do not deliver the same mission, which the code's own docstring conceded while the prose drew the conclusion anyway. Renamed reposition-count scaling, bounded to what it shows, and a fair equal-mission batching trade is left explicitly open under P113 |
+| Thrust | A 15 to 30 kN sensitivity was declared in the ledger and never swept | Swept. At 15, 20 and 30 kN the 2 s floor on the reference stage is 30.2, 40.3 and 60.6 m/s, so the coarse-actuator conclusion survives the whole declared range. The ledger gains a "Swept?" column, so an unswept sensitivity is now visible rather than implicit |
+| Gate | `--check-doc` checked presence, not agreement | It asked whether each formatted number appeared anywhere in the document, so a correct value beside a wrong label passed. Sixteen tables are now generated between markers and compared as exact text. Nine faults were injected to demonstrate it fails on each, including the two the old gate could not see |
+| CI | The `gates` workflow had never once run | Every run since 2026-08-22 ended in `startup_failure` with zero jobs. The cause is not the file: this repository's Actions settings do not permit third-party actions, so any workflow referencing `actions/checkout` is refused before dispatch. Demonstrated by running five workflows on one branch, four with `actions/checkout@v4` and one with no action at all; only the last started. `gates.yml` now fetches with git and uses the runner's own Python, and the reason is written into the file so nobody reinstates a `uses:` line |
+| Sources | The evidence table cited "company material" rather than documents | Eight sources now carry title and URL, the taxonomy separates company-issued text relayed by a wire from trade reporting, and every row records how it was retrieved. No row is COMPANY_PRIMARY: the hosts return a policy denial to the network this study runs on, so nothing was read on the company's own property, and the table says so |
+| Evidence | "Semi-cryogenic" was used to establish the propellant pair | It cannot. Semi-cryogenic is an architecture family. The propellant row is now owned by the turbopump design publication, which names LOX and kerosene, and the semi-cryogenic row is context only |
+| Heading | The section title and diagram implied established engine restart | Retitled to name the stage as assumed, and the diagram step reads MAIN-ENGINE RESTART, ASSUMED. Whole-engine restart is not publicly established for this case and the file must not be quotable as saying it is |
+| README | The front page said the host repositions "on its own reaction control" | Too specific, and it contradicted the Class A/B/C architecture. A host may use main propulsion, auxiliary propulsion, reaction control, some combination, or none. Now reads "whatever planned post-primary propulsion authority the host makes available" |
+| P113 | Re-audited, scope confirmed | Stays `PROGRAMME` and `COMPUTATION`. The corrected model widened what closing it requires, because it shows ignition count, shell choice and release velocity to be coupled. It is not moved to `GEN6`, not closed by this study, and not used to lower any Gen6 requirement |
+
+---
+
 ## 2026-08-20 (fifty-third pass): the visuals reach the front pages, and A35 turns out to be stale
 
 | ID | Item | Detail |

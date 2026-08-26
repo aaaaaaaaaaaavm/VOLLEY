@@ -1,5 +1,20 @@
-# The gates, on every push. Nothing here reaches the network and nothing here is optional:
-# each of these caught a real defect in this repository before it was written down as a gate.
+# The gates, on every push. Nothing here reaches the network for evidence and nothing here is
+# optional: each of these caught a real defect in this repository before it was written down.
+#
+# WHY THERE IS NO `uses:` ANYWHERE IN THIS FILE
+# ---------------------------------------------
+# Every run of this workflow between 2026-08-22 and 2026-08-26 ended in `startup_failure` with
+# zero jobs, and the reason is not in the file. This repository's Actions settings do not permit
+# third-party actions, so any workflow referencing `actions/checkout` is refused before a job is
+# dispatched. Demonstrated on 2026-08-26 by running five workflows on one branch: four that use
+# `actions/checkout@v4`, including one byte-identical in shape to the workflow that succeeds in a
+# sibling repository, all failed at startup; a workflow referencing no action at all succeeded in
+# eight seconds.
+#
+# So the repository is fetched with git and Python is used as the runner ships it. If the owner
+# later allows `actions/*` under Settings, Actions, General, Actions permissions, this can go back
+# to `actions/checkout@v4` with `fetch-depth: 0`. Until then, do not reintroduce a `uses:` line:
+# it will silently take CI back to red.
 name: gates
 
 on:
@@ -12,18 +27,20 @@ jobs:
     name: offline gates
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0          # check_companions asks git what has changed since the export
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      - name: fetch the repository
+        # Full history, not a shallow clone: check_companions asks git what has changed since
+        # the recorded export commit.
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git fetch -q --prune origin +refs/heads/*:refs/remotes/origin/*
+          git checkout -q --detach "${{ github.sha }}"
+          git log --oneline -1
 
       - name: install
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python3 -m pip install --upgrade -q pip
+          python3 -m pip install -q -r requirements.txt
 
       - name: links
         run: python3 tools/check_links.py
@@ -43,11 +60,16 @@ jobs:
         run: python3 tools/check_results_fresh.py
       - name: computational closure
         run: python3 tools/check_computational_closure.py
+      - name: host-reference blocks
+        run: python3 analysis/host_reference.py --check-doc
+      - name: host-reference self-test
+        run: python3 analysis/host_reference.py --self-test
 
       - name: nothing generated drifted
         run: |
           python3 analysis/payload_family.py > /dev/null
           python3 analysis/cell_manifest.py > /dev/null
+          python3 analysis/host_reference.py > /dev/null
           python3 tools/register_status.py > /dev/null
           git diff --exit-code
 
@@ -59,24 +81,24 @@ jobs:
     # than paid for on every push.
     if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      - name: fetch the repository
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git fetch -q --prune origin +refs/heads/*:refs/remotes/origin/*
+          git checkout -q --detach "${{ github.sha }}"
       - name: system solvers
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq calculix-ccx ngspice
       - name: python solvers
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install gmsh scikit-fem cadquery CoolProp SALib
+          python3 -m pip install --upgrade -q pip
+          python3 -m pip install -q -r requirements.txt
+          python3 -m pip install -q gmsh scikit-fem cadquery CoolProp SALib
       - name: CAD against parameters
         run: |
           python3 cad/build_gen5.py --check
           python3 cad/build_gen6.py --check
       - name: artifacts
         run: python3 tools/check_artifacts.py
-      - name: host-reference figures
-        run: python3 analysis/host_reference.py --check-doc

@@ -89,13 +89,16 @@ expensive.
 Derived here. Arithmetic shown, circular orbit, impulsive burn, `MU` and `RE` from
 `analysis/astro.py`. Plane change: Δv = 2 v sin(Δi/2). Coplanar raise: two-impulse Hohmann.
 
-| Altitude | Circular v | 1° plane change | 0.1° plane change | 10 km altitude raise |
+| Altitude | Circular v | 1° plane change | 0.1° plane change | 10 km altitude raise, two-impulse total |
 |---:|---:|---:|---:|---:|
 | 350 km | 7697.0 m/s | 134.3 m/s | 13.4 m/s | 5.71 m/s |
 | 500 km | 7612.6 m/s | 132.9 m/s | 13.3 m/s | 5.53 m/s |
 | 700 km | 7504.3 m/s | 131.0 m/s | 13.1 m/s | 5.30 m/s |
 
-> One degree of inclination costs about twenty-four times a ten-kilometre altitude change.
+> One degree of inclination costs about twenty-four times a ten-kilometre altitude change. The
+> raise figure is the TOTAL of both Hohmann impulses, and at 500 km that total is two burns of
+> about 2.76 m/s rather than one of 5.53. Quoting it as a single burn overstates the burn the
+> engine has to command by about a factor of two, which is [P114](../OPEN_PROBLEMS.md).
 > So the distributed mode delivers altitude, phase and orbital energy. It does not deliver
 > planes, and any description of VOLLEY that implies otherwise is describing a different vehicle
 > with a different propellant budget. *A tenth of a degree is affordable on a modest reserve; a

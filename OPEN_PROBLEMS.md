@@ -5765,6 +5765,92 @@ host manoeuvre and release velocity, across the three host classes, producing th
 envelope each class requires. It needs no host data, because the host's contribution is the sweep
 variable. What it cannot produce is which class a real host is, and that stays [E5](#e5).
 
+**Re-audited 2026-08-26, scope confirmed and the entry widened.** The corrected host-reference
+model ([P114](#p114)) found that a real answer is a larger optimisation than this entry first
+described. It has to range over host manoeuvre, release velocity, deployment timing, target orbit
+states, host class, the split between main engine and reaction control, propellant, campaign
+duration and disposal, all at once, because the corrected model shows those variables coupled:
+the number of post-primary ignitions a campaign needs depends on how the shells are chosen, which
+depends on how much of the differential VOLLEY supplies.
+
+The scope stays `PROGRAMME` and the class stays `COMPUTATION`. The deliverable is still a
+requirement envelope owned by the mission-architecture file rather than a defect in the Gen6
+mechanism, and the reference-host exercise reveals this entry without resolving any part of it.
+Nothing in that exercise lowers a Gen6 requirement, and the warning above stands unchanged.
+
+### P114. The host-reference model conflated a manoeuvre with an impulse, in two places at once: HIGH, CORRECTED 2026-08-26
+
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+Found by independent review of [`docs/HOST_REFERENCE_CASES.md`](docs/HOST_REFERENCE_CASES.md) on
+the day it was published. Numbered under [ADR-021](docs/adr/021-freeze-the-register.md) rule 2: a
+model error that made a published document wrong. The four other defects the same review found
+are claim withdrawals, a missing sweep and a weak gate, and they are logged in
+[`CHANGELOG.md`](CHANGELOG.md) without numbers, as that ADR requires.
+
+One root cause. The model did not distinguish a manoeuvre from the impulses that perform it, and
+that single confusion surfaced twice, in the orbital reading and in the ignition count.
+
+### First surface: an altitude change that was read as a single burn
+
+`host_reference.py` computed `dv_floor / hohmann_total(10 km) * 10 km` and published it as an
+"equivalent altitude step". The prose then read that figure as what one burn does.
+
+| At 500 km, for the 40.3 m/s floor of a 1000 kg stage | |
+|---|---:|
+| What one prograde impulse of 40.3 m/s actually does | apogee rises 147.5 km, perigee unchanged |
+| What 40.3 m/s buys as a complete two-impulse circular raise | 73.4 km |
+| What the file published, and called an altitude step | 73 km, read as a single burn |
+
+The published figure was the second quantity described as the first, and the two differ by about
+a factor of two. A second, smaller error rode along: the Hohmann figure was obtained by scaling
+the 10 km case linearly, which is 0.7 % low over a 73 km raise.
+
+The same confusion made a prose statement wrong in the other direction. The file said a 10 km
+shell change *"needs a burn of roughly a quarter of a second"*. A 10 km raise at 500 km is
+5.528 m/s in total and that total is two impulses of 2.764 and 2.763 m/s, each a 0.138 s burn at
+the reference stage. The published figure was the burn for the whole budget spent at once, about
+double either impulse the engine would actually command.
+
+### Second surface: repositioning legs counted as ignitions
+
+`mission_cases()` exposed `restarts = len(steps)`, the number of repositioning legs. Every leg is
+a circular-to-circular transfer, which is two ignitions. The prose separately counted the
+disposal burn, so the field and the text disagreed by one, and both were low against the physics
+by about a factor of two.
+
+| Case B, three shell changes | As published | Corrected |
+|---|---:|---:|
+| Post-primary ignitions required | 3, and 4 in the prose | 7 |
+| Assumed ignition budget | 4 | 4 |
+| Inside the budget | yes | no, over by 3 |
+
+Case C moves from 5 to 11 against the same budget of 4.
+
+**This reverses a published conclusion.** The file concluded that propellant was not the binding
+constraint and that campaign duration was. On the corrected count the binding constraint is the
+number of post-primary main-engine ignitions the stage must be qualified for, and it binds before
+either.
+
+### Corrected. Propagated 2026-08-26.
+
+`single_impulse_apogee()` solves the vis-viva relation, `hohmann_impulses()` returns both
+impulses, `hohmann_raise_for_dv()` inverts the Hohmann relation by bisection rather than by
+linear scaling, and `restart_accounting()` carries legs, impulses per leg, reposition ignitions,
+disposal ignitions and the post-primary total as separate fields. Twenty-five self-test
+identities now include one asserting that a single impulse always raises apogee by more than the
+same dv buys as a complete circular transfer, which is the distinction that was lost.
+
+> The gate that should have caught it could not. `--check-doc` asked only whether each formatted
+> number appeared somewhere in the document, so a correct number beside a wrong label passed. It
+> now regenerates each table from the results and compares the exact text, and nine injected
+> faults were used to demonstrate that it fails on each. *A gate that checks presence is not
+> checking agreement, and this entry is what that distinction cost.*
+
+Nothing here touches [P108](#p108), [P113](#p113) or the Gen6 design point. The corrected model
+makes the host case harder rather than easier, and no Gen6 requirement moves.
+
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
 > **Scope:** `GEN6` · **Next step:** `FLIGHT_OPS` — published dispenser deployment counts and failure records

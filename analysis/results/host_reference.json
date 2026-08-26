@@ -12,23 +12,28 @@
     "coast_min": 10.0,
     "restarts_planned": 4,
     "restart_contingency": 1,
+    "ascent_starts": 1,
     "campaign_h": 4.0,
     "disposal_fraction": 0.2,
-    "usable_prop_kg": 150.0
+    "usable_prop_kg": 150.0,
+    "ref_alt_km": 500.0
   },
   "provenance": {
     "thrust_N": "PUBLIC_CLASS_FIGURE, thrust condition not stated by the source",
-    "propellant": "PUBLIC, LOX/kerosene",
+    "propellant": "PUBLIC, LOX/kerosene, from the turbopump design publication",
     "isp_s": "VOLLEY_ASSUMPTION, no public figure exists",
     "stage_mass_kg": "VOLLEY_ASSUMPTION, no public figure exists",
     "min_burn_s": "VOLLEY_ASSUMPTION, no public figure exists",
     "coast_min": "VOLLEY_ASSUMPTION, no public figure exists",
-    "restarts_planned": "VOLLEY_ASSUMPTION, no public figure exists",
-    "campaign_h": "VOLLEY_ASSUMPTION, no public figure exists",
-    "disposal_fraction": "VOLLEY_ASSUMPTION",
-    "usable_prop_kg": "VOLLEY_ASSUMPTION"
+    "restarts_planned": "VOLLEY_ASSUMPTION, no public engine restart rating exists",
+    "ascent_starts": "ILLUSTRATIVE, defined by this reference case, not a vehicle fact",
+    "campaign_h": "VOLLEY_ASSUMPTION, no public cryogenic coast limit exists",
+    "disposal_fraction": "VOLLEY_ASSUMPTION, a reserve policy and not a disposal guarantee",
+    "usable_prop_kg": "VOLLEY_ASSUMPTION",
+    "ref_alt_km": "VOLLEY_ASSUMPTION, chosen to match MISSION_ARCHITECTURE.md section 5"
   },
   "mass_flow_kg_s": 6.798108086519522,
+  "orbit_period_min_ref": 94.61630047543098,
   "burn_grid": [
     {
       "isp_s": 285.0,
@@ -511,102 +516,195 @@
       "propellant_fraction": 0.03136375686951898
     }
   ],
+  "thrust_sweep": [
+    {
+      "thrust_N": 15000.0,
+      "mass_flow_kg_s": 5.0985810648896415,
+      "dv_floor_ref_ms": 30.154005270950066,
+      "apogee_rise_at_floor_km": 110.06841904448159,
+      "hohmann_raise_at_floor_km": 54.81512985265394,
+      "burns": [
+        {
+          "dv_ms": 2.5,
+          "burn_s": 0.16659587309479149
+        },
+        {
+          "dv_ms": 5.0,
+          "burn_s": 0.3330502392278072
+        },
+        {
+          "dv_ms": 10.0,
+          "burn_s": 0.6655349312919443
+        },
+        {
+          "dv_ms": 20.0,
+          "burn_s": 1.328811513684051
+        }
+      ]
+    },
+    {
+      "thrust_N": 20000.0,
+      "mass_flow_kg_s": 6.798108086519522,
+      "dv_floor_ref_ms": 40.274414494798485,
+      "apogee_rise_at_floor_km": 147.50471387047878,
+      "hohmann_raise_at_floor_km": 73.35956997439686,
+      "burns": [
+        {
+          "dv_ms": 2.5,
+          "burn_s": 0.1249469048210936
+        },
+        {
+          "dv_ms": 5.0,
+          "burn_s": 0.2497876794208554
+        },
+        {
+          "dv_ms": 10.0,
+          "burn_s": 0.4991511984689582
+        },
+        {
+          "dv_ms": 20.0,
+          "burn_s": 0.9966086352630382
+        }
+      ]
+    },
+    {
+      "thrust_N": 30000.0,
+      "mass_flow_kg_s": 10.197162129779283,
+      "dv_floor_ref_ms": 60.62027764759248,
+      "apogee_rise_at_floor_km": 223.53284823531098,
+      "hohmann_raise_at_floor_km": 110.86744606711017,
+      "burns": [
+        {
+          "dv_ms": 2.5,
+          "burn_s": 0.08329793654739574
+        },
+        {
+          "dv_ms": 5.0,
+          "burn_s": 0.1665251196139036
+        },
+        {
+          "dv_ms": 10.0,
+          "burn_s": 0.33276746564597215
+        },
+        {
+          "dv_ms": 20.0,
+          "burn_s": 0.6644057568420255
+        }
+      ]
+    }
+  ],
   "minimum_impulse": [
     {
       "stage_mass_kg": 500.0,
       "burn_s": 0.5,
       "dv_ms": 20.068290755461817,
-      "propellant_kg": 3.399054043259761
+      "propellant_kg": 3.399054043259761,
+      "apogee_rise_km": 73.00937723550386
     },
     {
       "stage_mass_kg": 500.0,
       "burn_s": 1.0,
       "dv_ms": 40.274414494798485,
-      "propellant_kg": 6.798108086519522
+      "propellant_kg": 6.798108086519522,
+      "apogee_rise_km": 147.50471387047878
     },
     {
       "stage_mass_kg": 500.0,
       "burn_s": 2.0,
       "dv_ms": 81.10782647205303,
-      "propellant_kg": 13.596216173039045
+      "propellant_kg": 13.596216173039045,
+      "apogee_rise_km": 301.1426258425694
     },
     {
       "stage_mass_kg": 500.0,
       "burn_s": 5.0,
       "dv_ms": 207.12281742421885,
-      "propellant_kg": 33.99054043259761
+      "propellant_kg": 33.99054043259761,
+      "apogee_rise_km": 803.0331209049187
     },
     {
       "stage_mass_kg": 1000.0,
       "burn_s": 0.5,
       "dv_ms": 10.017033880556543,
-      "propellant_kg": 3.399054043259761
+      "propellant_kg": 3.399054043259761,
+      "apogee_rise_km": 36.32179552603699
     },
     {
       "stage_mass_kg": 1000.0,
       "burn_s": 1.0,
       "dv_ms": 20.068290755461817,
-      "propellant_kg": 6.798108086519522
+      "propellant_kg": 6.798108086519522,
+      "apogee_rise_km": 73.00937723550386
     },
     {
       "stage_mass_kg": 1000.0,
       "burn_s": 2.0,
       "dv_ms": 40.274414494798485,
-      "propellant_kg": 13.596216173039045
+      "propellant_kg": 13.596216173039045,
+      "apogee_rise_km": 147.50471387047878
     },
     {
       "stage_mass_kg": 1000.0,
       "burn_s": 5.0,
       "dv_ms": 101.73904817224376,
-      "propellant_kg": 33.99054043259761
+      "propellant_kg": 33.99054043259761,
+      "apogee_rise_km": 380.38500845691937
     },
     {
       "stage_mass_kg": 2000.0,
       "burn_s": 0.5,
       "dv_ms": 5.004253637685368,
-      "propellant_kg": 3.399054043259761
+      "propellant_kg": 3.399054043259761,
+      "apogee_rise_km": 18.115524545408785
     },
     {
       "stage_mass_kg": 2000.0,
       "burn_s": 1.0,
       "dv_ms": 10.017033880556543,
-      "propellant_kg": 6.798108086519522
+      "propellant_kg": 6.798108086519522,
+      "apogee_rise_km": 36.32179552603699
     },
     {
       "stage_mass_kg": 2000.0,
       "burn_s": 2.0,
       "dv_ms": 20.068290755461817,
-      "propellant_kg": 13.596216173039045
+      "propellant_kg": 13.596216173039045,
+      "apogee_rise_km": 73.00937723550386
     },
     {
       "stage_mass_kg": 2000.0,
       "burn_s": 5.0,
       "dv_ms": 50.429757949762546,
-      "propellant_kg": 33.99054043259761
+      "propellant_kg": 33.99054043259761,
+      "apogee_rise_km": 185.32417677976562
     },
     {
       "stage_mass_kg": 3000.0,
       "burn_s": 0.5,
       "dv_ms": 3.335223124270035,
-      "propellant_kg": 3.399054043259761
+      "propellant_kg": 3.399054043259761,
+      "apogee_rise_km": 12.066967703320087
     },
     {
       "stage_mass_kg": 3000.0,
       "burn_s": 1.0,
       "dv_ms": 6.674231550456592,
-      "propellant_kg": 6.798108086519522
+      "propellant_kg": 6.798108086519522,
+      "apogee_rise_km": 24.17416426587105
     },
     {
       "stage_mass_kg": 3000.0,
       "burn_s": 2.0,
       "dv_ms": 13.363638745925488,
-      "propellant_kg": 13.596216173039045
+      "propellant_kg": 13.596216173039045,
+      "apogee_rise_km": 48.51006874124519
     },
     {
       "stage_mass_kg": 3000.0,
       "burn_s": 5.0,
       "dv_ms": 33.52360826719115,
-      "propellant_kg": 33.99054043259761
+      "propellant_kg": 33.99054043259761,
+      "apogee_rise_km": 122.50497742665186
     }
   ],
   "granularity": [
@@ -614,37 +712,214 @@
       "stage_mass_kg": 500.0,
       "min_burn_s": 2.0,
       "dv_floor_ms": 81.10782647205303,
-      "altitude_step_km": 146.72475931089284,
+      "apogee_rise_at_floor_km": 301.1426258425694,
+      "hohmann_raise_at_floor_km": 148.94535261993434,
       "exceeds_fine_manoeuvre": true,
-      "overshoot_factor": 16.221565294410606,
-      "min_burn_for_fine_s": 0.1248938397104277
+      "overshoot_vs_fine_total": 16.221565294410606,
+      "overshoot_vs_fine_first_impulse": 32.437802509392675,
+      "burn_for_fine_total_s": 0.1248938397104277,
+      "burn_for_fine_first_s": 0.06248370964315709,
+      "burn_for_fine_second_s": 0.06246319517649935
     },
     {
       "stage_mass_kg": 1000.0,
       "min_burn_s": 2.0,
       "dv_floor_ms": 40.274414494798485,
-      "altitude_step_km": 72.85676401614049,
+      "apogee_rise_at_floor_km": 147.50471387047878,
+      "hohmann_raise_at_floor_km": 73.35956997439686,
       "exceeds_fine_manoeuvre": true,
-      "overshoot_factor": 8.054882898959697,
-      "min_burn_for_fine_s": 0.2497876794208554
+      "overshoot_vs_fine_total": 8.054882898959697,
+      "overshoot_vs_fine_first_impulse": 16.107120118843774,
+      "burn_for_fine_total_s": 0.2497876794208554,
+      "burn_for_fine_first_s": 0.12496741928631418,
+      "burn_for_fine_second_s": 0.1249263903529987
     },
     {
       "stage_mass_kg": 2000.0,
       "min_burn_s": 2.0,
       "dv_floor_ms": 20.068290755461817,
-      "altitude_step_km": 36.30371147833347,
+      "apogee_rise_at_floor_km": 73.00937723550386,
+      "hohmann_raise_at_floor_km": 36.408136907826645,
       "exceeds_fine_manoeuvre": true,
-      "overshoot_factor": 4.013658151092363,
-      "min_burn_for_fine_s": 0.4995753588417108
+      "overshoot_vs_fine_total": 4.013658151092363,
+      "overshoot_vs_fine_first_impulse": 8.025997989861601,
+      "burn_for_fine_total_s": 0.4995753588417108,
+      "burn_for_fine_first_s": 0.24993483857262835,
+      "burn_for_fine_second_s": 0.2498527807059974
     },
     {
       "stage_mass_kg": 3000.0,
       "min_burn_s": 2.0,
       "dv_floor_ms": 13.363638745925488,
-      "altitude_step_km": 24.174938027580545,
+      "apogee_rise_at_floor_km": 48.51006874124519,
+      "hohmann_raise_at_floor_km": 24.21236191900214,
       "exceeds_fine_manoeuvre": true,
-      "overshoot_factor": 2.6727277491850976,
-      "min_burn_for_fine_s": 0.7493630382625661
+      "overshoot_vs_fine_total": 2.6727277491850976,
+      "overshoot_vs_fine_first_impulse": 5.344577623425327,
+      "burn_for_fine_total_s": 0.7493630382625661,
+      "burn_for_fine_first_s": 0.37490225785894254,
+      "burn_for_fine_second_s": 0.3747791710589961
+    }
+  ],
+  "fine_manoeuvres": [
+    {
+      "raise_km": 5.0,
+      "dv_total_ms": 2.7654508760388126,
+      "dv_first_ms": 1.3828510373577956,
+      "dv_second_ms": 1.382599838681017,
+      "burn_first_s": 0.0691263045815095,
+      "burn_second_s": 0.06911375054939378,
+      "transfer_min": 47.333945257913236
+    },
+    {
+      "raise_km": 10.0,
+      "dv_total_ms": 5.5278895568126245,
+      "dv_first_ms": 2.7644467198570055,
+      "dv_second_ms": 2.763442836955619,
+      "burn_first_s": 0.13815741599320597,
+      "burn_second_s": 0.13810726898237663,
+      "transfer_min": 47.35974496469812
+    },
+    {
+      "raise_km": 25.0,
+      "dv_total_ms": 13.797181553699374,
+      "dv_first_ms": 6.901719388502897,
+      "dv_second_ms": 6.895462165196477,
+      "burn_first_s": 0.3446815117029169,
+      "burn_second_s": 0.3443693832963847,
+      "transfer_min": 47.437172196066086
+    },
+    {
+      "raise_km": 50.0,
+      "dv_total_ms": 27.51954783083056,
+      "dv_first_ms": 13.772231886399823,
+      "dv_second_ms": 13.747315944430738,
+      "burn_first_s": 0.687002322841317,
+      "burn_second_s": 0.6857623387582991,
+      "transfer_min": 47.56631123406987
+    }
+  ],
+  "thrust_and_burn_requirement": [
+    {
+      "fine_dv_total_ms": 2.5,
+      "first_impulse_ms": 1.2501026426589306,
+      "min_burn_s": 0.5,
+      "required_thrust_N": 2499.674171126859,
+      "fraction_of_class_thrust": 0.12498370855634296
+    },
+    {
+      "fine_dv_total_ms": 2.5,
+      "first_impulse_ms": 1.2501026426589306,
+      "min_burn_s": 1.0,
+      "required_thrust_N": 1249.8370855634296,
+      "fraction_of_class_thrust": 0.06249185427817148
+    },
+    {
+      "fine_dv_total_ms": 2.5,
+      "first_impulse_ms": 1.2501026426589306,
+      "min_burn_s": 2.0,
+      "required_thrust_N": 624.9185427817148,
+      "fraction_of_class_thrust": 0.03124592713908574
+    },
+    {
+      "fine_dv_total_ms": 2.5,
+      "first_impulse_ms": 1.2501026426589306,
+      "min_burn_s": 5.0,
+      "required_thrust_N": 249.96741711268592,
+      "fraction_of_class_thrust": 0.012498370855634296
+    },
+    {
+      "fine_dv_total_ms": 5.0,
+      "first_impulse_ms": 2.5004106381302336,
+      "min_burn_s": 0.5,
+      "required_thrust_N": 4998.696771452567,
+      "fraction_of_class_thrust": 0.24993483857262835
+    },
+    {
+      "fine_dv_total_ms": 5.0,
+      "first_impulse_ms": 2.5004106381302336,
+      "min_burn_s": 1.0,
+      "required_thrust_N": 2499.3483857262836,
+      "fraction_of_class_thrust": 0.12496741928631418
+    },
+    {
+      "fine_dv_total_ms": 5.0,
+      "first_impulse_ms": 2.5004106381302336,
+      "min_burn_s": 2.0,
+      "required_thrust_N": 1249.6741928631418,
+      "fraction_of_class_thrust": 0.06248370964315709
+    },
+    {
+      "fine_dv_total_ms": 5.0,
+      "first_impulse_ms": 2.5004106381302336,
+      "min_burn_s": 5.0,
+      "required_thrust_N": 499.86967714525673,
+      "fraction_of_class_thrust": 0.024993483857262837
+    },
+    {
+      "fine_dv_total_ms": 10.0,
+      "first_impulse_ms": 5.001643093226448,
+      "min_burn_s": 0.5,
+      "required_thrust_N": 9994.787782151616,
+      "fraction_of_class_thrust": 0.4997393891075808
+    },
+    {
+      "fine_dv_total_ms": 10.0,
+      "first_impulse_ms": 5.001643093226448,
+      "min_burn_s": 1.0,
+      "required_thrust_N": 4997.393891075808,
+      "fraction_of_class_thrust": 0.2498696945537904
+    },
+    {
+      "fine_dv_total_ms": 10.0,
+      "first_impulse_ms": 5.001643093226448,
+      "min_burn_s": 2.0,
+      "required_thrust_N": 2498.696945537904,
+      "fraction_of_class_thrust": 0.1249348472768952
+    },
+    {
+      "fine_dv_total_ms": 10.0,
+      "first_impulse_ms": 5.001643093226448,
+      "min_burn_s": 5.0,
+      "required_thrust_N": 999.4787782151616,
+      "fraction_of_class_thrust": 0.04997393891075808
+    }
+  ],
+  "throttle_sensitivity": [
+    {
+      "throttle_fraction": 1.0,
+      "thrust_N": 20000.0,
+      "dv_floor_ms": 40.274414494798485,
+      "apogee_rise_km": 147.50471387047878,
+      "hohmann_raise_km": 73.35956997439686
+    },
+    {
+      "throttle_fraction": 0.75,
+      "thrust_N": 15000.0,
+      "dv_floor_ms": 30.154005270950066,
+      "apogee_rise_km": 110.06841904448159,
+      "hohmann_raise_km": 54.81512985265394
+    },
+    {
+      "throttle_fraction": 0.5,
+      "thrust_N": 10000.0,
+      "dv_floor_ms": 20.068290755461817,
+      "apogee_rise_km": 73.00937723550386,
+      "hohmann_raise_km": 36.408136907826645
+    },
+    {
+      "throttle_fraction": 0.25,
+      "thrust_N": 5000.0,
+      "dv_floor_ms": 10.017033880556543,
+      "apogee_rise_km": 36.32179552603699,
+      "hohmann_raise_km": 18.13696140154684
+    },
+    {
+      "throttle_fraction": 0.1,
+      "thrust_N": 2000.0,
+      "dv_floor_ms": 4.002721710512084,
+      "apogee_rise_km": 14.485182140599937,
+      "hohmann_raise_km": 7.2387803992801345
     }
   ],
   "disposal_budget": [
@@ -653,146 +928,274 @@
       "reserve_kg": 15.0,
       "customer_kg": 135.0,
       "customer_dv_ms": 426.6650962429982,
-      "reserve_dv_ms": 51.46478174480813
+      "reserve_dv_ms": 51.46478174480813,
+      "mass_at_disposal_kg": 865.0
     },
     {
       "reserve_fraction": 0.2,
       "reserve_kg": 30.0,
       "customer_kg": 120.0,
       "customer_dv_ms": 376.0851398152241,
-      "reserve_dv_ms": 102.04473817258275
+      "reserve_dv_ms": 102.04473817258275,
+      "mass_at_disposal_kg": 880.0
     },
     {
       "reserve_fraction": 0.3,
       "reserve_kg": 45.0,
       "customer_kg": 105.0,
       "customer_dv_ms": 326.36009694301896,
-      "reserve_dv_ms": 151.7697810447872
+      "reserve_dv_ms": 151.7697810447872,
+      "mass_at_disposal_kg": 895.0
     }
   ],
   "mission_cases": [
     {
-      "case": "A, rapid deployment, no post-primary restart",
-      "restarts": 0,
+      "case": "A, rapid deployment, no post-primary main-engine burn",
       "batches": 1,
       "total_dv_ms": 0,
       "propellant_kg": 0.0,
       "budget_kg": 120.0,
       "within_budget": true,
       "margin_kg": 120.0,
-      "coast_floor_h": 0.0,
-      "one_orbit_pacing_h": 0.0,
+      "restart_accounting": {
+        "reposition_legs": 0,
+        "impulses_per_leg": 2,
+        "reposition_ignitions": 0,
+        "disposal_ignitions": 0,
+        "post_primary_ignitions_required": 0,
+        "contingency_ignitions_reserved": 1,
+        "ascent_starts_assumed": 1,
+        "ascent_starts_are_illustrative": true,
+        "total_engine_starts_nominal": 1,
+        "igniter_cycles_nominal": 1,
+        "full_engine_cycles_nominal": 1,
+        "assumed_restart_budget": 4,
+        "within_assumed_restart_budget": true,
+        "shortfall_against_budget": 0
+      },
+      "pacing": {
+        "legs": 0,
+        "orbit_period_min": 94.61630047543098,
+        "hohmann_transfer_min": 0.0,
+        "transfer_only_h": 0.0,
+        "coast_floor_h": 0.0,
+        "half_orbit_per_leg_h": 0.0,
+        "one_orbit_per_leg_h": 0.0,
+        "two_orbits_per_leg_h": 0.0
+      },
       "legs": []
     },
     {
       "case": "B, moderate distributed delivery",
-      "restarts": 3,
       "batches": 3,
       "total_dv_ms": 60.0,
       "propellant_kg": 20.187766612991624,
       "budget_kg": 120.0,
       "within_budget": true,
       "margin_kg": 99.81223338700838,
-      "coast_floor_h": 0.5,
-      "one_orbit_pacing_h": 4.730815023771549,
+      "restart_accounting": {
+        "reposition_legs": 3,
+        "impulses_per_leg": 2,
+        "reposition_ignitions": 6,
+        "disposal_ignitions": 1,
+        "post_primary_ignitions_required": 7,
+        "contingency_ignitions_reserved": 1,
+        "ascent_starts_assumed": 1,
+        "ascent_starts_are_illustrative": true,
+        "total_engine_starts_nominal": 8,
+        "igniter_cycles_nominal": 8,
+        "full_engine_cycles_nominal": 8,
+        "assumed_restart_budget": 4,
+        "within_assumed_restart_budget": false,
+        "shortfall_against_budget": 3
+      },
+      "pacing": {
+        "legs": 3,
+        "orbit_period_min": 94.61630047543098,
+        "hohmann_transfer_min": 47.495444625350174,
+        "transfer_only_h": 2.374772231267509,
+        "coast_floor_h": 0.5,
+        "half_orbit_per_leg_h": 2.3654075118857745,
+        "one_orbit_per_leg_h": 4.730815023771549,
+        "two_orbits_per_leg_h": 9.461630047543098
+      },
       "legs": [
         {
-          "dv_ms": 20.0,
+          "dv_total_ms": 20.0,
           "propellant_kg": 6.775053222476846,
-          "burn_s": 0.9966086352630382,
+          "burn_if_single_s": 0.9966086352630382,
+          "circular_raise_km": 36.2837528120554,
+          "dv_first_ms": 10.006576710301488,
+          "dv_second_ms": 9.993423289695784,
+          "burn_first_s": 0.49947891778551146,
+          "burn_second_s": 0.4988234784196662,
           "mass_before_kg": 1000.0
         },
         {
-          "dv_ms": 20.0,
+          "dv_total_ms": 20.0,
           "propellant_kg": 6.729151876309452,
-          "burn_s": 0.9898565587171513,
+          "burn_if_single_s": 0.9898565587171513,
+          "circular_raise_km": 36.2837528120554,
+          "dv_first_ms": 10.006576710301488,
+          "dv_second_ms": 9.993423289695784,
+          "burn_first_s": 0.4960949215340095,
+          "burn_second_s": 0.4954439228047519,
           "mass_before_kg": 993.2249467775232
         },
         {
-          "dv_ms": 20.0,
+          "dv_total_ms": 20.0,
           "propellant_kg": 6.6835615142053255,
-          "burn_s": 0.9831502278492248,
+          "burn_if_single_s": 0.9831502278492248,
+          "circular_raise_km": 36.2837528120554,
+          "dv_first_ms": 10.006576710301488,
+          "dv_second_ms": 9.993423289695784,
+          "burn_first_s": 0.49273385203721615,
+          "burn_second_s": 0.49208726385899704,
           "mass_before_kg": 986.4957949012138
         }
       ]
     },
     {
       "case": "C, upper-bound sensitivity",
-      "restarts": 5,
       "batches": 5,
       "total_dv_ms": 200.0,
       "propellant_kg": 65.72185085574138,
       "budget_kg": 120.0,
       "within_budget": true,
       "margin_kg": 54.27814914425862,
-      "coast_floor_h": 0.8333333333333334,
-      "one_orbit_pacing_h": 7.884691706285915,
+      "restart_accounting": {
+        "reposition_legs": 5,
+        "impulses_per_leg": 2,
+        "reposition_ignitions": 10,
+        "disposal_ignitions": 1,
+        "post_primary_ignitions_required": 11,
+        "contingency_ignitions_reserved": 1,
+        "ascent_starts_assumed": 1,
+        "ascent_starts_are_illustrative": true,
+        "total_engine_starts_nominal": 12,
+        "igniter_cycles_nominal": 12,
+        "full_engine_cycles_nominal": 12,
+        "assumed_restart_budget": 4,
+        "within_assumed_restart_budget": false,
+        "shortfall_against_budget": 7
+      },
+      "pacing": {
+        "legs": 5,
+        "orbit_period_min": 94.61630047543098,
+        "hohmann_transfer_min": 47.68447639952954,
+        "transfer_only_h": 3.9737063666274612,
+        "coast_floor_h": 0.8333333333333334,
+        "half_orbit_per_leg_h": 3.9423458531429576,
+        "one_orbit_per_leg_h": 7.884691706285915,
+        "two_orbits_per_leg_h": 15.76938341257183
+      },
       "legs": [
         {
-          "dv_ms": 40.0,
+          "dv_total_ms": 40.0,
           "propellant_kg": 13.50420509878636,
-          "burn_s": 1.9864651939801985,
+          "burn_if_single_s": 1.9864651939801985,
+          "circular_raise_km": 72.8557549255737,
+          "dv_first_ms": 20.026341729703745,
+          "dv_second_ms": 19.973658270295346,
+          "burn_first_s": 0.9979167925607597,
+          "burn_second_s": 0.9953004662523889,
           "mass_before_kg": 1000.0
         },
         {
-          "dv_ms": 40.0,
+          "dv_total_ms": 40.0,
           "propellant_kg": 13.321841543436273,
-          "burn_s": 1.9596395605790897,
+          "burn_if_single_s": 1.9596395605790897,
+          "circular_raise_km": 72.8557549255737,
+          "dv_first_ms": 20.026341729703745,
+          "dv_second_ms": 19.973658270295346,
+          "burn_first_s": 0.9844407195224962,
+          "burn_second_s": 0.981859724621199,
           "mass_before_kg": 986.4957949012137
         },
         {
-          "dv_ms": 40.0,
+          "dv_total_ms": 40.0,
           "propellant_kg": 13.141940662940177,
-          "burn_s": 1.933176186033334,
+          "burn_if_single_s": 1.933176186033334,
+          "circular_raise_km": 72.8557549255737,
+          "dv_first_ms": 20.026341729703745,
+          "dv_second_ms": 19.973658270295346,
+          "burn_first_s": 0.9711466301384677,
+          "burn_second_s": 0.9686004895216764,
           "mass_before_kg": 973.1739533577775
         },
         {
-          "dv_ms": 40.0,
+          "dv_total_ms": 40.0,
           "propellant_kg": 12.964469200831752,
-          "burn_s": 1.9070701783250503,
+          "burn_if_single_s": 1.9070701783250503,
+          "circular_raise_km": 72.8557549255737,
+          "dv_first_ms": 20.026341729703745,
+          "dv_second_ms": 19.973658270295346,
+          "burn_first_s": 0.9580320668640825,
+          "burn_second_s": 0.9555203098523909,
           "mass_before_kg": 960.0320126948372
         },
         {
-          "dv_ms": 40.0,
+          "dv_total_ms": 40.0,
           "propellant_kg": 12.789394349746821,
-          "burn_s": 1.8813167114991698,
+          "burn_if_single_s": 1.8813167114991698,
+          "circular_raise_km": 72.8557549255737,
+          "dv_first_ms": 20.026341729703745,
+          "dv_second_ms": 19.973658270295346,
+          "burn_first_s": 0.9450946053419357,
+          "burn_second_s": 0.9426167676120882,
           "mass_before_kg": 947.0675434940055
         }
       ]
     }
   ],
-  "batch_trade": [
+  "reposition_scaling": [
     {
       "batches": 12,
       "satellites_per_batch": 1.0,
-      "restarts": 11,
+      "reposition_legs": 11,
       "total_dv_ms": 220.0,
       "propellant_kg": 72.05163504079061,
-      "coast_time_h": 1.8333333333333333
+      "circular_raise_per_leg_km": 36.2837528120554,
+      "cumulative_raise_km": 399.12128093260935,
+      "coast_floor_h": 1.8333333333333333,
+      "one_orbit_per_leg_h": 17.34632175382901,
+      "equal_mission": false
     },
     {
       "batches": 4,
       "satellites_per_batch": 3.0,
-      "restarts": 3,
+      "reposition_legs": 3,
       "total_dv_ms": 60.0,
       "propellant_kg": 20.187766612991624,
-      "coast_time_h": 0.5
+      "circular_raise_per_leg_km": 36.2837528120554,
+      "cumulative_raise_km": 108.85125843616619,
+      "coast_floor_h": 0.5,
+      "one_orbit_per_leg_h": 4.730815023771549,
+      "equal_mission": false
     },
     {
       "batches": 3,
       "satellites_per_batch": 4.0,
-      "restarts": 2,
+      "reposition_legs": 2,
       "total_dv_ms": 40.0,
       "propellant_kg": 13.504205098786297,
-      "coast_time_h": 0.3333333333333333
+      "circular_raise_per_leg_km": 36.2837528120554,
+      "cumulative_raise_km": 72.5675056241108,
+      "coast_floor_h": 0.3333333333333333,
+      "one_orbit_per_leg_h": 3.153876682514366,
+      "equal_mission": false
     },
     {
       "batches": 2,
       "satellites_per_batch": 6.0,
-      "restarts": 1,
+      "reposition_legs": 1,
       "total_dv_ms": 20.0,
       "propellant_kg": 6.775053222476846,
-      "coast_time_h": 0.16666666666666666
+      "circular_raise_per_leg_km": 36.2837528120554,
+      "cumulative_raise_km": 36.2837528120554,
+      "coast_floor_h": 0.16666666666666666,
+      "one_orbit_per_leg_h": 1.576938341257183,
+      "equal_mission": false
     }
   ],
   "plane_change": [
@@ -801,7 +1204,9 @@
       "v_circ_ms": 7696.999791897062,
       "plane_1deg_ms": 134.336283829933,
       "plane_0p1deg_ms": 13.433797184321794,
-      "raise_10km_ms": 5.713639104588765,
+      "raise_10km_total_ms": 5.713639104588765,
+      "raise_10km_first_ms": 2.8573499180511135,
+      "raise_10km_second_ms": 2.8562891865376514,
       "ratio_1deg_to_10km": 23.51151015506811
     },
     {
@@ -809,7 +1214,9 @@
       "v_circ_ms": 7612.608173223869,
       "plane_1deg_ms": 132.8633909176993,
       "plane_0p1deg_ms": 13.28650604232309,
-      "raise_10km_ms": 5.5278895568126245,
+      "raise_10km_total_ms": 5.5278895568126245,
+      "raise_10km_first_ms": 2.7644467198570055,
+      "raise_10km_second_ms": 2.763442836955619,
       "ratio_1deg_to_10km": 24.03510228491399
     },
     {
@@ -817,10 +1224,11 @@
       "v_circ_ms": 7504.286490416995,
       "plane_1deg_ms": 130.9728448971837,
       "plane_0p1deg_ms": 13.097449064690856,
-      "raise_10km_ms": 5.295421209190863,
+      "raise_10km_total_ms": 5.295421209190863,
+      "raise_10km_first_ms": 2.6481778606967055,
+      "raise_10km_second_ms": 2.6472433484941575,
       "ratio_1deg_to_10km": 24.73322512472927
     }
   ],
-  "orbit_period_min_500km": 94.61630047543098,
   "self_test_failures": []
 }
