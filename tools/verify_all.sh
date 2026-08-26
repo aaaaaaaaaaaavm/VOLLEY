@@ -29,7 +29,8 @@ run "band integrity"      python3 tools/check_bands.py
 run "results freshness"   python3 tools/check_results_fresh.py
 run "computational closure" python3 tools/check_computational_closure.py
 run "artifacts"          python3 tools/check_artifacts.py
-run "host-reference figures" python3 analysis/host_reference.py --check-doc
+run "host-reference blocks" python3 analysis/host_reference.py --check-doc
+run "host-reference self-test" python3 analysis/host_reference.py --self-test
 
 if [ "${1:-}" = "--full" ]; then
     echo
@@ -38,6 +39,7 @@ if [ "${1:-}" = "--full" ]; then
     run "Gen6 CAD"       python3 cad/build_gen6.py --check
     run "payload family" python3 analysis/payload_family.py
     run "cell manifest"  python3 analysis/cell_manifest.py
+    run "host reference" python3 analysis/host_reference.py
     run "register file"  python3 tools/register_status.py
 fi
 
