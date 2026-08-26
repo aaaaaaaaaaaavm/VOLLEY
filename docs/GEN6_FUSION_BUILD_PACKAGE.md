@@ -319,7 +319,7 @@ STEP 10  STOP. Everything after this is P108-dependent or vendor selection.
 
 ## START HERE IN FUSION
 
-Checklist for the Fusion assistant.
+Build order at the workstation, in this sequence.
 
 1. Import as reference only: `VOLLEY_Stage_Rail_Gen6.step`, `VOLLEY_Chamber_Gen6.step`,
    `VOLLEY_Reservoir_Gen6.step`. Mark all three reference / excluded from mass.
