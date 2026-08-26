@@ -182,9 +182,9 @@ def doc_tables(res):
             "|---|---|---|---|---|"]
     for r in res['classes']:
         b = r['box_mm']
-        flag = "**beyond the mechanism**" if r['mechanism_limited'] else ""
+        flag = "beyond the mechanism" if r['mechanism_limited'] else ""
         out.append(f"| {r['tag']} | {b[0]:g} x {b[1]:g} x {b[2]:g} | {r['n_per_load']} | "
-                   f"**{r['kg_per_satellite']:.3f}** | {flag} |")
+                   f"{r['kg_per_satellite']:.3f} | {flag} |")
     out += ["", "### Shortening the magnet array, which buys nothing\n",
             "| Array length | K<sub>t</sub> | Sled mass | Force | Acceleration, 3U | Exit velocity |",
             "|---|---|---|---|---|---|"]

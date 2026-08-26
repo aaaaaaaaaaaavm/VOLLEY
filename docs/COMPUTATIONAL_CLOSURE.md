@@ -55,7 +55,7 @@ a different place, so its sixteen live computation items are counted separately 
 | Scope | COMPUTATION | HARDWARE | HOST_DATA | FLIGHT_OPS | DECISION |
 |---|---:|---:|---:|---:|---:|
 | GEN6 | 17 | 4 | 5 | 1 | 0 |
-| PROGRAMME | 2 | 0 | 0 | 1 | 6 |
+| PROGRAMME | 3 | 0 | 0 | 1 | 6 |
 | GEN5 | 16 | 0 | 0 | 0 | 4 |
 
 ---

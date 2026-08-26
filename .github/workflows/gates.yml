@@ -78,3 +78,5 @@ jobs:
           python3 cad/build_gen6.py --check
       - name: artifacts
         run: python3 tools/check_artifacts.py
+      - name: host-reference figures
+        run: python3 analysis/host_reference.py --check-doc

@@ -1,0 +1,826 @@
+{
+  "constants": {
+    "g0": 9.80665,
+    "mu": 398600441800000.0,
+    "re": 6378137.0
+  },
+  "reference_point": {
+    "thrust_N": 20000.0,
+    "isp_s": 300.0,
+    "stage_mass_kg": 1000.0,
+    "min_burn_s": 2.0,
+    "coast_min": 10.0,
+    "restarts_planned": 4,
+    "restart_contingency": 1,
+    "campaign_h": 4.0,
+    "disposal_fraction": 0.2,
+    "usable_prop_kg": 150.0
+  },
+  "provenance": {
+    "thrust_N": "PUBLIC_CLASS_FIGURE, thrust condition not stated by the source",
+    "propellant": "PUBLIC, LOX/kerosene",
+    "isp_s": "VOLLEY_ASSUMPTION, no public figure exists",
+    "stage_mass_kg": "VOLLEY_ASSUMPTION, no public figure exists",
+    "min_burn_s": "VOLLEY_ASSUMPTION, no public figure exists",
+    "coast_min": "VOLLEY_ASSUMPTION, no public figure exists",
+    "restarts_planned": "VOLLEY_ASSUMPTION, no public figure exists",
+    "campaign_h": "VOLLEY_ASSUMPTION, no public figure exists",
+    "disposal_fraction": "VOLLEY_ASSUMPTION",
+    "usable_prop_kg": "VOLLEY_ASSUMPTION"
+  },
+  "mass_flow_kg_s": 6.798108086519522,
+  "burn_grid": [
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 0.8936882744184915,
+      "burn_s": 0.12488825565764691,
+      "propellant_fraction": 0.001787376548836983
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 1.785779191373238,
+      "burn_s": 0.24955328897589518,
+      "propellant_fraction": 0.003571558382746476
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 3.5651803681058247,
+      "burn_s": 0.49821528381061103,
+      "propellant_fraction": 0.0071303607362116495
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 7.104939714097425,
+      "burn_s": 0.9928781129233625,
+      "propellant_fraction": 0.01420987942819485
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 17.57349777689826,
+      "burn_s": 2.455804273126925,
+      "propellant_fraction": 0.03514699555379652
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 1.787376548836983,
+      "burn_s": 0.24977651131529383,
+      "propellant_fraction": 0.001787376548836983
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 3.571558382746476,
+      "burn_s": 0.49910657795179036,
+      "propellant_fraction": 0.003571558382746476
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 7.1303607362116495,
+      "burn_s": 0.9964305676212221,
+      "propellant_fraction": 0.0071303607362116495
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 14.20987942819485,
+      "burn_s": 1.985756225846725,
+      "propellant_fraction": 0.01420987942819485
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 35.14699555379652,
+      "burn_s": 4.91160854625385,
+      "propellant_fraction": 0.03514699555379652
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 3.574753097673966,
+      "burn_s": 0.49955302263058765,
+      "propellant_fraction": 0.001787376548836983
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 7.143116765492952,
+      "burn_s": 0.9982131559035807,
+      "propellant_fraction": 0.003571558382746476
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 14.260721472423299,
+      "burn_s": 1.9928611352424441,
+      "propellant_fraction": 0.0071303607362116495
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 28.4197588563897,
+      "burn_s": 3.97151245169345,
+      "propellant_fraction": 0.01420987942819485
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 70.29399110759304,
+      "burn_s": 9.8232170925077,
+      "propellant_fraction": 0.03514699555379652
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 5.362129646510949,
+      "burn_s": 0.7493295339458815,
+      "propellant_fraction": 0.001787376548836983
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 10.714675148239428,
+      "burn_s": 1.497319733855371,
+      "propellant_fraction": 0.003571558382746476
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 21.39108220863495,
+      "burn_s": 2.989291702863666,
+      "propellant_fraction": 0.0071303607362116495
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 42.629638284584544,
+      "burn_s": 5.957268677540174,
+      "propellant_fraction": 0.014209879428194848
+    },
+    {
+      "isp_s": 285.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 105.44098666138957,
+      "burn_s": 14.734825638761553,
+      "propellant_fraction": 0.03514699555379652
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 0.8490418216919315,
+      "burn_s": 0.1248938397104277,
+      "propellant_fraction": 0.001698083643383863
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 1.6966418993538679,
+      "burn_s": 0.2495755992344791,
+      "propellant_fraction": 0.0033932837987077358
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 3.387526611238423,
+      "burn_s": 0.4983043176315191,
+      "propellant_fraction": 0.006775053222476846
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 6.75210254939318,
+      "burn_s": 0.9932325969900992,
+      "propellant_fraction": 0.01350420509878636
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 16.709675985474902,
+      "burn_s": 2.4579891600443617,
+      "propellant_fraction": 0.03341935197094981
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 1.698083643383863,
+      "burn_s": 0.2497876794208554,
+      "propellant_fraction": 0.001698083643383863
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 3.3932837987077358,
+      "burn_s": 0.4991511984689582,
+      "propellant_fraction": 0.0033932837987077358
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 6.775053222476846,
+      "burn_s": 0.9966086352630382,
+      "propellant_fraction": 0.006775053222476846
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 13.50420509878636,
+      "burn_s": 1.9864651939801985,
+      "propellant_fraction": 0.01350420509878636
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 33.419351970949805,
+      "burn_s": 4.9159783200887235,
+      "propellant_fraction": 0.03341935197094981
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 3.396167286767726,
+      "burn_s": 0.4995753588417108,
+      "propellant_fraction": 0.001698083643383863
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 6.7865675974154716,
+      "burn_s": 0.9983023969379164,
+      "propellant_fraction": 0.0033932837987077358
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 13.550106444953691,
+      "burn_s": 1.9932172705260764,
+      "propellant_fraction": 0.006775053222476846
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 27.00841019757272,
+      "burn_s": 3.972930387960397,
+      "propellant_fraction": 0.01350420509878636
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 66.83870394189961,
+      "burn_s": 9.831956640177447,
+      "propellant_fraction": 0.03341935197094981
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 5.094250930151589,
+      "burn_s": 0.7493630382625661,
+      "propellant_fraction": 0.001698083643383863
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 10.179851396123208,
+      "burn_s": 1.4974535954068748,
+      "propellant_fraction": 0.003393283798707736
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 20.325159667430537,
+      "burn_s": 2.989825905789115,
+      "propellant_fraction": 0.006775053222476846
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 40.51261529635908,
+      "burn_s": 5.959395581940596,
+      "propellant_fraction": 0.01350420509878636
+    },
+    {
+      "isp_s": 300.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 100.25805591284941,
+      "burn_s": 14.74793496026617,
+      "propellant_fraction": 0.03341935197094981
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 0.7960189718555499,
+      "burn_s": 0.12490047120555564,
+      "propellant_fraction": 0.0015920379437110999
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 1.5907706513039743,
+      "burn_s": 0.24960209612176187,
+      "propellant_fraction": 0.0031815413026079487
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 3.1764802000778802,
+      "burn_s": 0.4984100728654998,
+      "propellant_fraction": 0.0063529604001557605
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 6.332780347232781,
+      "burn_s": 0.9936537662750455,
+      "propellant_fraction": 0.012665560694465562
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 500.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 15.681878434759488,
+      "burn_s": 2.460587090435746,
+      "propellant_fraction": 0.03136375686951898
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 1.5920379437110999,
+      "burn_s": 0.24980094241111128,
+      "propellant_fraction": 0.0015920379437110999
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 3.1815413026079487,
+      "burn_s": 0.49920419224352375,
+      "propellant_fraction": 0.0031815413026079487
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 6.3529604001557605,
+      "burn_s": 0.9968201457309996,
+      "propellant_fraction": 0.0063529604001557605
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 12.665560694465562,
+      "burn_s": 1.987307532550091,
+      "propellant_fraction": 0.012665560694465562
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 1000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 31.363756869518976,
+      "burn_s": 4.921174180871492,
+      "propellant_fraction": 0.03136375686951898
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 3.1840758874221997,
+      "burn_s": 0.49960188482222256,
+      "propellant_fraction": 0.0015920379437110999
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 6.363082605215897,
+      "burn_s": 0.9984083844870475,
+      "propellant_fraction": 0.0031815413026079487
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 12.705920800311521,
+      "burn_s": 1.9936402914619993,
+      "propellant_fraction": 0.0063529604001557605
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 25.331121388931123,
+      "burn_s": 3.974615065100182,
+      "propellant_fraction": 0.012665560694465562
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 2000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 62.72751373903795,
+      "burn_s": 9.842348361742983,
+      "propellant_fraction": 0.03136375686951898
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 5.0,
+      "propellant_kg": 4.7761138311333,
+      "burn_s": 0.7494028272333338,
+      "propellant_fraction": 0.0015920379437110999
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 10.0,
+      "propellant_kg": 9.544623907823846,
+      "burn_s": 1.4976125767305712,
+      "propellant_fraction": 0.0031815413026079487
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 20.0,
+      "propellant_kg": 19.058881200467283,
+      "burn_s": 2.9904604371929993,
+      "propellant_fraction": 0.006352960400155761
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 40.0,
+      "propellant_kg": 37.996682083396685,
+      "burn_s": 5.961922597650273,
+      "propellant_fraction": 0.012665560694465562
+    },
+    {
+      "isp_s": 320.0,
+      "stage_mass_kg": 3000.0,
+      "dv_ms": 100.0,
+      "propellant_kg": 94.09127060855693,
+      "burn_s": 14.763522542614474,
+      "propellant_fraction": 0.03136375686951898
+    }
+  ],
+  "minimum_impulse": [
+    {
+      "stage_mass_kg": 500.0,
+      "burn_s": 0.5,
+      "dv_ms": 20.068290755461817,
+      "propellant_kg": 3.399054043259761
+    },
+    {
+      "stage_mass_kg": 500.0,
+      "burn_s": 1.0,
+      "dv_ms": 40.274414494798485,
+      "propellant_kg": 6.798108086519522
+    },
+    {
+      "stage_mass_kg": 500.0,
+      "burn_s": 2.0,
+      "dv_ms": 81.10782647205303,
+      "propellant_kg": 13.596216173039045
+    },
+    {
+      "stage_mass_kg": 500.0,
+      "burn_s": 5.0,
+      "dv_ms": 207.12281742421885,
+      "propellant_kg": 33.99054043259761
+    },
+    {
+      "stage_mass_kg": 1000.0,
+      "burn_s": 0.5,
+      "dv_ms": 10.017033880556543,
+      "propellant_kg": 3.399054043259761
+    },
+    {
+      "stage_mass_kg": 1000.0,
+      "burn_s": 1.0,
+      "dv_ms": 20.068290755461817,
+      "propellant_kg": 6.798108086519522
+    },
+    {
+      "stage_mass_kg": 1000.0,
+      "burn_s": 2.0,
+      "dv_ms": 40.274414494798485,
+      "propellant_kg": 13.596216173039045
+    },
+    {
+      "stage_mass_kg": 1000.0,
+      "burn_s": 5.0,
+      "dv_ms": 101.73904817224376,
+      "propellant_kg": 33.99054043259761
+    },
+    {
+      "stage_mass_kg": 2000.0,
+      "burn_s": 0.5,
+      "dv_ms": 5.004253637685368,
+      "propellant_kg": 3.399054043259761
+    },
+    {
+      "stage_mass_kg": 2000.0,
+      "burn_s": 1.0,
+      "dv_ms": 10.017033880556543,
+      "propellant_kg": 6.798108086519522
+    },
+    {
+      "stage_mass_kg": 2000.0,
+      "burn_s": 2.0,
+      "dv_ms": 20.068290755461817,
+      "propellant_kg": 13.596216173039045
+    },
+    {
+      "stage_mass_kg": 2000.0,
+      "burn_s": 5.0,
+      "dv_ms": 50.429757949762546,
+      "propellant_kg": 33.99054043259761
+    },
+    {
+      "stage_mass_kg": 3000.0,
+      "burn_s": 0.5,
+      "dv_ms": 3.335223124270035,
+      "propellant_kg": 3.399054043259761
+    },
+    {
+      "stage_mass_kg": 3000.0,
+      "burn_s": 1.0,
+      "dv_ms": 6.674231550456592,
+      "propellant_kg": 6.798108086519522
+    },
+    {
+      "stage_mass_kg": 3000.0,
+      "burn_s": 2.0,
+      "dv_ms": 13.363638745925488,
+      "propellant_kg": 13.596216173039045
+    },
+    {
+      "stage_mass_kg": 3000.0,
+      "burn_s": 5.0,
+      "dv_ms": 33.52360826719115,
+      "propellant_kg": 33.99054043259761
+    }
+  ],
+  "granularity": [
+    {
+      "stage_mass_kg": 500.0,
+      "min_burn_s": 2.0,
+      "dv_floor_ms": 81.10782647205303,
+      "altitude_step_km": 146.72475931089284,
+      "exceeds_fine_manoeuvre": true,
+      "overshoot_factor": 16.221565294410606,
+      "min_burn_for_fine_s": 0.1248938397104277
+    },
+    {
+      "stage_mass_kg": 1000.0,
+      "min_burn_s": 2.0,
+      "dv_floor_ms": 40.274414494798485,
+      "altitude_step_km": 72.85676401614049,
+      "exceeds_fine_manoeuvre": true,
+      "overshoot_factor": 8.054882898959697,
+      "min_burn_for_fine_s": 0.2497876794208554
+    },
+    {
+      "stage_mass_kg": 2000.0,
+      "min_burn_s": 2.0,
+      "dv_floor_ms": 20.068290755461817,
+      "altitude_step_km": 36.30371147833347,
+      "exceeds_fine_manoeuvre": true,
+      "overshoot_factor": 4.013658151092363,
+      "min_burn_for_fine_s": 0.4995753588417108
+    },
+    {
+      "stage_mass_kg": 3000.0,
+      "min_burn_s": 2.0,
+      "dv_floor_ms": 13.363638745925488,
+      "altitude_step_km": 24.174938027580545,
+      "exceeds_fine_manoeuvre": true,
+      "overshoot_factor": 2.6727277491850976,
+      "min_burn_for_fine_s": 0.7493630382625661
+    }
+  ],
+  "disposal_budget": [
+    {
+      "reserve_fraction": 0.1,
+      "reserve_kg": 15.0,
+      "customer_kg": 135.0,
+      "customer_dv_ms": 426.6650962429982,
+      "reserve_dv_ms": 51.46478174480813
+    },
+    {
+      "reserve_fraction": 0.2,
+      "reserve_kg": 30.0,
+      "customer_kg": 120.0,
+      "customer_dv_ms": 376.0851398152241,
+      "reserve_dv_ms": 102.04473817258275
+    },
+    {
+      "reserve_fraction": 0.3,
+      "reserve_kg": 45.0,
+      "customer_kg": 105.0,
+      "customer_dv_ms": 326.36009694301896,
+      "reserve_dv_ms": 151.7697810447872
+    }
+  ],
+  "mission_cases": [
+    {
+      "case": "A, rapid deployment, no post-primary restart",
+      "restarts": 0,
+      "batches": 1,
+      "total_dv_ms": 0,
+      "propellant_kg": 0.0,
+      "budget_kg": 120.0,
+      "within_budget": true,
+      "margin_kg": 120.0,
+      "coast_floor_h": 0.0,
+      "one_orbit_pacing_h": 0.0,
+      "legs": []
+    },
+    {
+      "case": "B, moderate distributed delivery",
+      "restarts": 3,
+      "batches": 3,
+      "total_dv_ms": 60.0,
+      "propellant_kg": 20.187766612991624,
+      "budget_kg": 120.0,
+      "within_budget": true,
+      "margin_kg": 99.81223338700838,
+      "coast_floor_h": 0.5,
+      "one_orbit_pacing_h": 4.730815023771549,
+      "legs": [
+        {
+          "dv_ms": 20.0,
+          "propellant_kg": 6.775053222476846,
+          "burn_s": 0.9966086352630382,
+          "mass_before_kg": 1000.0
+        },
+        {
+          "dv_ms": 20.0,
+          "propellant_kg": 6.729151876309452,
+          "burn_s": 0.9898565587171513,
+          "mass_before_kg": 993.2249467775232
+        },
+        {
+          "dv_ms": 20.0,
+          "propellant_kg": 6.6835615142053255,
+          "burn_s": 0.9831502278492248,
+          "mass_before_kg": 986.4957949012138
+        }
+      ]
+    },
+    {
+      "case": "C, upper-bound sensitivity",
+      "restarts": 5,
+      "batches": 5,
+      "total_dv_ms": 200.0,
+      "propellant_kg": 65.72185085574138,
+      "budget_kg": 120.0,
+      "within_budget": true,
+      "margin_kg": 54.27814914425862,
+      "coast_floor_h": 0.8333333333333334,
+      "one_orbit_pacing_h": 7.884691706285915,
+      "legs": [
+        {
+          "dv_ms": 40.0,
+          "propellant_kg": 13.50420509878636,
+          "burn_s": 1.9864651939801985,
+          "mass_before_kg": 1000.0
+        },
+        {
+          "dv_ms": 40.0,
+          "propellant_kg": 13.321841543436273,
+          "burn_s": 1.9596395605790897,
+          "mass_before_kg": 986.4957949012137
+        },
+        {
+          "dv_ms": 40.0,
+          "propellant_kg": 13.141940662940177,
+          "burn_s": 1.933176186033334,
+          "mass_before_kg": 973.1739533577775
+        },
+        {
+          "dv_ms": 40.0,
+          "propellant_kg": 12.964469200831752,
+          "burn_s": 1.9070701783250503,
+          "mass_before_kg": 960.0320126948372
+        },
+        {
+          "dv_ms": 40.0,
+          "propellant_kg": 12.789394349746821,
+          "burn_s": 1.8813167114991698,
+          "mass_before_kg": 947.0675434940055
+        }
+      ]
+    }
+  ],
+  "batch_trade": [
+    {
+      "batches": 12,
+      "satellites_per_batch": 1.0,
+      "restarts": 11,
+      "total_dv_ms": 220.0,
+      "propellant_kg": 72.05163504079061,
+      "coast_time_h": 1.8333333333333333
+    },
+    {
+      "batches": 4,
+      "satellites_per_batch": 3.0,
+      "restarts": 3,
+      "total_dv_ms": 60.0,
+      "propellant_kg": 20.187766612991624,
+      "coast_time_h": 0.5
+    },
+    {
+      "batches": 3,
+      "satellites_per_batch": 4.0,
+      "restarts": 2,
+      "total_dv_ms": 40.0,
+      "propellant_kg": 13.504205098786297,
+      "coast_time_h": 0.3333333333333333
+    },
+    {
+      "batches": 2,
+      "satellites_per_batch": 6.0,
+      "restarts": 1,
+      "total_dv_ms": 20.0,
+      "propellant_kg": 6.775053222476846,
+      "coast_time_h": 0.16666666666666666
+    }
+  ],
+  "plane_change": [
+    {
+      "alt_km": 350.0,
+      "v_circ_ms": 7696.999791897062,
+      "plane_1deg_ms": 134.336283829933,
+      "plane_0p1deg_ms": 13.433797184321794,
+      "raise_10km_ms": 5.713639104588765,
+      "ratio_1deg_to_10km": 23.51151015506811
+    },
+    {
+      "alt_km": 500.0,
+      "v_circ_ms": 7612.608173223869,
+      "plane_1deg_ms": 132.8633909176993,
+      "plane_0p1deg_ms": 13.28650604232309,
+      "raise_10km_ms": 5.5278895568126245,
+      "ratio_1deg_to_10km": 24.03510228491399
+    },
+    {
+      "alt_km": 700.0,
+      "v_circ_ms": 7504.286490416995,
+      "plane_1deg_ms": 130.9728448971837,
+      "plane_0p1deg_ms": 13.097449064690856,
+      "raise_10km_ms": 5.295421209190863,
+      "ratio_1deg_to_10km": 24.73322512472927
+    }
+  ],
+  "orbit_period_min_500km": 94.61630047543098,
+  "self_test_failures": []
+}

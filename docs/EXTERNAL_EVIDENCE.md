@@ -349,6 +349,45 @@ importing one would be the failure this file exists to prevent.
 
 ---
 
+### Host architectures, and why public company information cannot close E5
+
+Added 2026-08-26. [`HOST_REFERENCE_CASES.md`](HOST_REFERENCE_CASES.md) is a method for mapping a
+real, publicly documented propulsion architecture against the three host classes in
+[`MISSION_ARCHITECTURE.md`](MISSION_ARCHITECTURE.md), and its first worked case is a restartable
+semi-cryogenic engine platform whose thrust class, propellant family and ignition-system test
+campaign are all public.
+
+It belongs in this section rather than in the one above, and the reason is the whole point of the
+entry. Public company information about an engine is real evidence about an engine. E5 is not
+about an engine.
+
+| Public information can establish | Public information cannot establish |
+|---|---|
+| The engine class and its feed architecture | The stage's actual post-primary propellant reserve |
+| A nominal thrust figure, sometimes without its condition | Host control authority ([P94](../OPEN_PROBLEMS.md)) |
+| The propellant family | Engine or stage restart qualification, as opposed to a subsystem test |
+| A modularity or customization claim | The cryogenic coast limit that sets campaign duration |
+| That an ignition technology exists and has been fired | The flight interface ([E31](../OPEN_PROBLEMS.md)) and what a provider will credit ([P68](../OPEN_PROBLEMS.md)) |
+
+So no `HOST_DATA` entry moves, [E5](../OPEN_PROBLEMS.md) stays open, and the Gen6 computation
+count is unchanged at seventeen. What the study produced instead is a list of the specific
+provider numbers that would replace each of its assumptions, which is the form E5 would actually
+be closed in if anyone ever supplied them.
+
+> The sharpest thing the exercise found is a distinction, not a number. A resonance igniter that
+> restarts repeatedly is a subsystem result. Whole-engine restart additionally needs turbomachinery,
+> thermal cycles, valve life, propellant conditioning, chill-down and inlet conditions, and stage
+> restart needs tank state, ullage, settling and command authority on top of that. Reading the
+> subsystem claim as a stage capability would be the same class of error as
+> [A54](../validation/A54_pulse_chain.md)'s, which was correct in every calculation and wrong in
+> its scope.
+
+One entry opened, [P113](../OPEN_PROBLEMS.md): how the orbital work divides between host and
+deployer has never been computed, and it sets VOLLEY's release-velocity requirement. That is a
+`PROGRAMME` computation and it is deliberately not allowed to touch [P108](../OPEN_PROBLEMS.md).
+
+---
+
 ## Cannot be closed by it
 
 These need hardware, and no amount of reading substitutes.

@@ -138,6 +138,11 @@ Class C is not a failure case. It is where the majority of hosts probably sit, a
 still works there, it delivers commanded per-satellite velocity from wherever the primary went,
 which is a smaller product and a real one.
 
+[`HOST_REFERENCE_CASES.md`](HOST_REFERENCE_CASES.md) is the method for mapping a real, publicly
+documented propulsion architecture against these three classes, and the reference cases worked
+under it. It uses public sources and declared assumptions only, and it closes nothing here: E5
+stays open, and a reference case is a study rather than a compatibility finding.
+
 ---
 
 ## 7. The mission has to end

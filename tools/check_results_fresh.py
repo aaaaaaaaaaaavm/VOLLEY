@@ -37,6 +37,7 @@ FRESH = [
     ("analysis/cell_manifest.py", "cell_manifest.json"),
     ("analysis/payload_family.py", "payload_family.json"),
     ("analysis/mass_properties.py", "mass_properties.json"),
+    ("analysis/host_reference.py", "host_reference.json"),
 ]
 
 # Excluded, by name and with the reason. An exclusion that is not written down is a gap.
