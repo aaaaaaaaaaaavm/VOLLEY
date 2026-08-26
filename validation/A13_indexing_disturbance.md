@@ -14,10 +14,10 @@ sequential moves. At the assumed 166 mm lever arm:
 | 500 kg | 0.0060 deg/s | **0.1362 deg/s** | 0 | 0.421 deg |
 
 Rows 3 and 4 remain **FAIL** on their declared transient-rate bands. Row 5 is **PASS only in
-the ideal rigid-body model**; structural ringing is not modelled. Row 7 is **VOID**, because
+the ideal rigid-body model; structural ringing is not modelled. Row 7 is VOID, because
 there is no attitude controller, thruster geometry, or propellant model from which to compute
 a propellant change. The earlier 8.2 s rate-null time, 18.1 s cadence floor, 6.9 s optimum,
-and counter-mass recommendation are **superseded**. Attitude restoration and cadence require
+and counter-mass recommendation are superseded. Attitude restoration and cadence require
 a controller and a resolved ConOps schedule.
 
 The shot impulse is 65.552 N s and the twelve-shot campaign impulse is 786.624 N s. The
@@ -29,8 +29,8 @@ current result.
 ---
 # A13: what indexing and sled return do to the host's attitude
 
-**Closes:** `OPEN_PROBLEMS.md` **E24**, and `docs/KILL_CRITERIA.md` §5.
-**Does not close:** E7. The dispersion claim's *sensor* assumption is a different gap.
+Closes: `OPEN_PROBLEMS.md` E24, and `docs/KILL_CRITERIA.md` §5.
+Does not close: E7. The dispersion claim's *sensor* assumption is a different gap.
 
 ## Why this exists
 
@@ -40,30 +40,30 @@ current result.
 res['recoil_Ns_per_shot'] = round(4.0 * DV, 1)
 ```
 
-Payload mass times exit velocity. **That is the entire host-interaction budget in this
-repository**, and it accounts for the shot alone.
+Payload mass times exit velocity. That is the entire host-interaction budget in this
+repository, and it accounts for the shot alone.
 
 Between every pair of shots, two other masses move:
 
-- a **cassette follower advances a satellite** across the structure, transversely, so the
+- a cassette follower advances a satellite across the structure, transversely, so the
   system centre of mass shifts and the host sees a torque that is not the shot recoil;
-- the **sled returns to the breech**, 9.445 kg travelling 1.5 m back along the track.
+- the sled returns to the breech, 9.445 kg travelling 1.5 m back along the track.
 
 Neither appears in any budget here. E24 found this by reading a competitor's problem statement
 (Xu et al., *Aerospace* 11(5) 394, 2024) rather than by examining this design, which is worth
 restating because it says something about how the gap survived.
 
-**This is the same class of defect as the bank ESR (P24): a budget published as if complete that
-omits a term the hardware will have.** That makes it a Phase I error correction rather than an
+This is the same class of defect as the bank ESR (P24): a budget published as if complete that
+omits a term the hardware will have. That makes it a Phase I error correction rather than an
 improvement.
 
 ## The thing this analysis is forbidden from concluding
 
-E24 ends: *"Explicitly **not** claimed to be negligible until that is done."* It also says why —
-**P16 was "probably fine" until an independent propagator was pointed at it.**
+E24 ends: *"Explicitly not claimed to be negligible until that is done."* It also says why,
+P16 was "probably fine" until an independent propagator was pointed at it.
 
 So the bands below must be capable of failing, and the deliverable is a number with a band it
-could have missed, **not a paragraph concluding that the disturbance is small**. If the numbers
+could have missed, not a paragraph concluding that the disturbance is small. If the numbers
 come back small, that is a result; if the write-up *begins* from smallness, it is not an analysis.
 
 ## What is modelled, and what is assumed
@@ -76,12 +76,12 @@ come back small, that is a result; if the write-up *begins* from smallness, it i
 | **Host** | **swept, not chosen.** 200 to 5000 kg with inertia scaled to a representative bus |
 | Damping | none. Momentum exchange is treated as ideal and rigid |
 
-**The host inertia is the weakest input, so it is swept rather than picked** — the posture A6
+The host inertia is the weakest input, so it is swept rather than picked, the posture A6
 took with the covariance it could not obtain. Results are reported as a function of it, and a
 conclusion that holds only at the heavy end must say so.
 
-**Rigid-body only.** Structural modes are not modelled, so "settling time" here means the time to
-null a rigid-body rate with reaction control, **not** the time for structure to stop ringing. That
+Rigid-body only. Structural modes are not modelled, so "settling time" here means the time to
+null a rigid-body rate with reaction control, not the time for structure to stop ringing. That
 second question is real and this analysis does not touch it.
 
 ## Acceptance bands, declared 2026-07-31 before `analysis/attitude_budget.py` existed
@@ -96,13 +96,13 @@ second question is real and this analysis does not touch it.
 | 6 | Net momentum over a full 12-shot campaign, indexing only | **near zero**: the followers return and the CoM comes back | below 5 % of one index impulse |
 | 7 | Whether the indexing term changes the campaign propellant bill | **no** | the 0.98 kN·s campaign figure moves by less than 2 % |
 
-**Falsification.** Row 3 or 4 missing means the deterministic-placement claim needs a settling
+Falsification. Row 3 or 4 missing means the deterministic-placement claim needs a settling
 requirement written into the ConOps before the next shot, and the 0.027 m/s dispersion figure
-inherits an error the velocity servo cannot see — it measures position along the track, not the
+inherits an error the velocity servo cannot see, it measures position along the track, not the
 track's orientation. Row 6 missing would mean the indexing sequence has a secular momentum bias,
 which is a design defect in the feed order and is exactly what Xu et al. optimise against.
 
-**Row 5 is the one that matters operationally**, because it is the only one that interacts with
+Row 5 is the one that matters operationally, because it is the only one that interacts with
 the cadence. A disturbance that damps in 2 s is bookkeeping; one that damps in 200 s changes the
 campaign.
 
@@ -129,20 +129,20 @@ campaign momentum, and the assumed host inertia model stated explicitly.
 > ### Two corrections, 2026-08-20
 >
 > **Band 5's authority is an assumption, and E5 says the figure does not exist.** The
-> **0.1 N·m** was a bare literal in `attitude_budget.py` with no units, comment or source.
-> [`EXTERNAL_EVIDENCE.md`](../docs/EXTERNAL_EVIDENCE.md) records **E5** as *"no host propellant or
+> 0.1 N·m was a bare literal in `attitude_budget.py` with no units, comment or source.
+> [`EXTERNAL_EVIDENCE.md`](../docs/EXTERNAL_EVIDENCE.md) records E5 as *"no host propellant or
 > control authority figure exists"* — so this band passed on a quantity the register declares
-> absent. **The verdict is not changed and not re-declared; it is annotated. [P94](../OPEN_PROBLEMS.md).**
+> absent. The verdict is not changed and not re-declared; it is annotated. [P94](../OPEN_PROBLEMS.md).
 >
-> **And the deployer inertia was 40 % low.** `M_DEPLOYER` was the literal **124.5 kg**, which was
-> `mass_properties`' **loaded** figure *before* [A46](A46_enclosure_buildup.md) itemised the
+> And the deployer inertia was 40 % low. `M_DEPLOYER` was the literal 124.5 kg, which was
+> `mass_properties`' loaded figure *before* [A46](A46_enclosure_buildup.md) itemised the
 > enclosure. `deployer_inertia()` is added to the host's, so the rotating body is the installed
-> deployer with its satellites aboard — **loaded, now 174.6 kg.** It is read live from
+> deployer with its satellites aboard, loaded, now 174.6 kg. It is read live from
 > `mass_properties.json` so it cannot go stale again.
 >
-> **The rates below improved and no verdict moved.** At the 500 kg reference host: total inertia
-> **329.7 → 345.0 kg·m²**, return peak **0.13625 → 0.13021 °/s**, worst offset **0.42074 → 0.40209 °**.
-> At 200 kg the inertia rises 15 % and the return peak falls **0.44323 → 0.38512 °/s**, because the
+> The rates below improved and no verdict moved. At the 500 kg reference host: total inertia
+> 329.7 to 345.0 kg·m², return peak 0.13625 to 0.13021 °/s, worst offset 0.42074 to 0.40209 °.
+> At 200 kg the inertia rises 15 % and the return peak falls 0.44323 to 0.38512 °/s, because the
 > deployer is a larger fraction of a smaller host. **Rows 3 and 4 still FAIL.** *A correction that
 > improves numbers is reported the same way as one that damages them.*
 
@@ -166,37 +166,37 @@ campaign momentum, and the assumed host inertia model stated explicitly.
 | 6 | campaign secular momentum near zero | 0, by construction | **pass** |
 | 7 | campaign propellant bill unchanged | unchanged | **pass** |
 
-**Four of seven, and the three that failed are the three that mattered.**
+Four of seven, and the three that failed are the three that mattered.
 
 ### E24 was worried about the wrong mass
 
 E24 is titled *"Attitude disturbance from magazine indexing"* and its argument is about
-satellites moving inside the deployer. **Indexing is negligible: 0.31 % of the shot impulse, and
-0.007 °/s at a 500 kg host.** E24's own instinct that "the indexed mass is a few kg against a
+satellites moving inside the deployer. Indexing is negligible: 0.31 % of the shot impulse, and
+0.007 °/s at a 500 kg host. E24's own instinct that "the indexed mass is a few kg against a
 124.9 kg loaded system" was right.
 
-**It is the sled return that does the damage, and nothing in E24 or anywhere else in this
-repository mentions it.** 9.445 kg travelling 1.5 m is **23x the indexing momentum** — a heavier
-mass over fourteen times the distance — and it is the largest unbudgeted term in the host
+It is the sled return that does the damage, and nothing in E24 or anywhere else in this
+repository mentions it. 9.445 kg travelling 1.5 m is 23x the indexing momentum, a heavier
+mass over fourteen times the distance, and it is the largest unbudgeted term in the host
 interaction by a wide margin.
 
 That is the finding. The gap was found by reading a competitor's problem statement, the
-competitor's problem was the indexing, and **this design's problem is somewhere that paper never
-had to look** — because a machine that does not reuse its sled does not return one.
+competitor's problem was the indexing, and this design's problem is somewhere that paper never
+had to look, because a machine that does not reuse its sled does not return one.
 
 ### What this costs the deterministic-placement claim
 
-At a 500 kg host, one index cycle leaves **0.16 °/s** and nulling it takes **8.2 s against a
-10–20 s inter-shot interval**. That is most of the cadence spent settling, and the settling time
-is independent of host mass — the momentum to remove is fixed and so is the assumed authority.
+At a 500 kg host, one index cycle leaves 0.16 °/s and nulling it takes 8.2 s against a
+10-20 s inter-shot interval. That is most of the cadence spent settling, and the settling time
+is independent of host mass, the momentum to remove is fixed and so is the assumed authority.
 
-**The velocity servo cannot see any of it.** It measures position along the track, not the
+The velocity servo cannot see any of it. It measures position along the track, not the
 track's orientation, so a residual attitude rate at trigger becomes a pointing error that the
 0.027 m/s dispersion figure does not include and cannot detect.
 
 ### What would pass, which is not the same as passing
 
-The sled return duration is a **free variable nobody has specified**. Peak momentum goes as
+The sled return duration is a free variable nobody has specified. Peak momentum goes as
 `1/T`, so:
 
 | Return duration | Peak momentum | Rate at 500 kg | Settling | Band 3 | Band 5 |
@@ -210,46 +210,46 @@ The sled return duration is a **free variable nobody has specified**. Peak momen
 
 **Nothing inside the cadence passes.** The inter-shot interval is 10–20 s, and the bands are only
 met at a 30 s return, which does not fit. **The bands failed and this table does not un-fail
-them**; it says what the design would have to become.
+them; it says what the design would have to become.
 
 Three routes, none costed here:
 
-1. **Slow the return and lengthen the cadence.** A 30 s return inside a 40 s interval. Costs
+1. Slow the return and lengthen the cadence. A 30 s return inside a 40 s interval. Costs
    campaign duration, which nothing currently constrains.
-2. **More control authority.** Settling scales as `1/torque`; 0.4 N·m brings 8.2 s to 2.0 s. That
+2. More control authority. Settling scales as `1/torque`; 0.4 N·m brings 8.2 s to 2.0 s. That
    is a *host* requirement, not a deployer one, and it belongs in the four-item interface spec,
    which currently does not ask for it.
-3. **Return the sled against a counter-mass.** A reaction mass moving opposite cancels the
+3. Return the sled against a counter-mass. A reaction mass moving opposite cancels the
    momentum at source. It is the only route that fixes the disturbance rather than absorbing it,
    and it costs deployer mass on a design already failing kill criterion 1.
 
 ### The honest limits of this
 
-**Rigid-body only.** "Settling" is reaction control nulling a rate. It is **not** structure
+Rigid-body only. "Settling" is reaction control nulling a rate. It is not structure
 ringing down, so E24's concern about "structural motion that has not damped out" is only half
 answered.
 
-**The motion profiles are assumed, and they are the optimistic end.** Both are the slowest
+The motion profiles are assumed, and they are the optimistic end. Both are the slowest
 constant-acceleration moves that plausibly fit the interval. A faster mechanism makes every number
 here worse.
 
-**The host inertia is a uniform cylinder scaled from mass.** It is swept rather than chosen for
-exactly that reason, and **the failure holds across the whole sweep below 1000 kg**.
+The host inertia is a uniform cylinder scaled from mass. It is swept rather than chosen for
+exactly that reason, and the failure holds across the whole sweep below 1000 kg.
 
 ---
 
 ## How it gets fixed, costed 2026-07-31
 
 The three routes named above were uncosted. They are costed here, and doing so found that
-**the question is not mechanical at all.**
+the question is not mechanical at all.
 
 ### First: the disturbance does not set the rate, it sets the cadence
 
-Peak attitude rate during an index cycle is not what threatens anything. **Nothing is fired
-during an index cycle.** What matters is the residual rate *at trigger*, which is settling time
+Peak attitude rate during an index cycle is not what threatens anything. Nothing is fired
+during an index cycle. What matters is the residual rate *at trigger*, which is settling time
 against the interval — band 5, not bands 3 and 4.
 
-So the cost of this failure is measured in **seconds of cadence**, and that can be computed:
+So the cost of this failure is measured in seconds of cadence, and that can be computed:
 
 | Sled return | Settling | Index + return + settle | Recharge, 300 W | Recharge, 150 W | Binds |
 |---|---|---|---|---|---|
@@ -260,31 +260,31 @@ So the cost of this failure is measured in **seconds of cadence**, and that can 
 | 20.0 s | 2.70 s | 26.7 s | 8.6 s | 17.2 s | attitude |
 | 30.0 s | 1.91 s | 35.9 s | 8.6 s | 17.2 s | attitude |
 
-**The return duration has an optimum rather than being monotone**, because settling falls as
-`1/T` while the return itself grows as `T`. The minimum is **18.1 s at a 6.9 s return**, and the
-6 s originally assumed sits almost exactly on it — by luck, not design.
+The return duration has an optimum rather than being monotone, because settling falls as
+`1/T` while the return itself grows as `T`. The minimum is 18.1 s at a 6.9 s return, and the
+6 s originally assumed sits almost exactly on it, by luck, not design.
 
 ### The finding that came out of costing it
 
-`paper/paper.tex` §III-C said: *"Cadence is set by supercapacitor recharge, 10–20 s at a
-150–300 W allocation."*
+`paper/paper.tex` §III-C said: *"Cadence is set by supercapacitor recharge, 10-20 s at a
+150-300 W allocation."*
 
-**That is wrong at 300 W and marginal at 150.** Recharge is 8.6 s and 17.2 s respectively;
-the mechanical chain is 18.1 s at best. **Attitude settling binds at both allocations**, and the
+That is wrong at 300 W and marginal at 150. Recharge is 8.6 s and 17.2 s respectively;
+the mechanical chain is 18.1 s at best. Attitude settling binds at both allocations, and the
 paper attributed the cadence to the wrong subsystem. Corrected 2026-07-31.
 
-The 10–20 s *range* survives — 18.1 s sits inside it. Only the stated cause was wrong, which is
+The 10-20 s *range* survives, 18.1 s sits inside it. Only the stated cause was wrong, which is
 the more insidious kind of error: the number looked right, so nobody checked what produced it.
 
 ### And a second cadence nobody reconciled
 
-`analysis/astro.py` models the deployment at **`spacing_s = 1200.0`** — twenty minutes — and the
+`analysis/astro.py` models the deployment at `spacing_s = 1200.0`, twenty minutes, and the
 conjunction geometry, the realignment period and the safety case are all computed at that
-spacing. The thermal case is argued at 10–20 s.
+spacing. The thermal case is argued at 10-20 s.
 
-**At 1200 s the 8.2 s settling is 0.7 % of the interval and this entire failure is irrelevant. At
-the 18.1 s floor it is 45 % of it.** The same result is dominant or negligible depending on a
-number that appears nowhere. Logged as **P31**.
+At 1200 s the 8.2 s settling is 0.7 % of the interval and this entire failure is irrelevant. At
+the 18.1 s floor it is 45 % of it. The same result is dominant or negligible depending on a
+number that appears nowhere. Logged as P31.
 
 ### The three routes, costed
 
@@ -294,9 +294,9 @@ number that appears nowhere. Logged as **P31**.
 | **2. Raise host control authority** | 0.2 N·m → **13.9 s** floor; 0.5 N·m → **10.2 s**; 1.0 N·m → **8.4 s**, at which recharge binds again | A **fifth item on a four-item interface spec**, and it asks the host to size RCS for a disturbance the deployer creates. It narrows the host set, which is the opposite of the generic-interface positioning the paper is built on |
 | **3. Counter-mass** | removes the momentum at source; floor drops to index + return, about 11 s at a 6.9 s return | **~9.4 kg** — matching 4.723 N·s over the same 1.5 m in the same time needs the sled's own mass. A lighter counter-mass needs *more* travel than the track has: 4.7 kg would need 3 m. On a design failing kill criterion 1 at 6.41 kg/satellite, this takes it to **7.2 kg** |
 
-**Route 3 is the only one that fixes the physics and it is the worst deal available.** Route 2
-buys real cadence and spends the generic-host claim. **Route 1 costs nothing and requires
-answering a question the project should answer anyway.**
+Route 3 is the only one that fixes the physics and it is the worst deal available. Route 2
+buys real cadence and spends the generic-host claim. Route 1 costs nothing and requires
+answering a question the project should answer anyway.
 
 ### What is not fixed by any of them
 
@@ -306,5 +306,5 @@ do is give time to null the rate before the next trigger. That is a legitimate a
 *operational* question and it is not an answer to the *declared band*, which asked about the rate
 itself. **The bands failed and they stay failed.**
 
-**And the rigid-body limit still stands.** None of this touches structural ringing, which is the
+And the rigid-body limit still stands. None of this touches structural ringing, which is the
 other half of what E24 was worried about and remains unmodelled.

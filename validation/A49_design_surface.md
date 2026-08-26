@@ -1,4 +1,4 @@
-# A49 — the velocity, acceleration and stroke surface
+# A49, the velocity, acceleration and stroke surface
 
 **Bands declared 2026-08-16, before `analysis/design_surface.py` existed.**
 Verify with `git show --stat <this commit> -- analysis/design_surface.py`, which must return nothing.
@@ -7,45 +7,45 @@ Verify with `git show --stat <this commit> -- analysis/design_surface.py`, which
 
 ## Why this run exists
 
-**Asked directly: make Gen6 best on velocity, on acceleration, and on power — best overall.**
+Asked directly: make Gen6 best on velocity, on acceleration, and on power, best overall.
 
-**Best at everything is not available and this repository says so elsewhere.** What is available
-is a design point that dominates the current one on several axes at once, **and the record contains
-a lever nobody has pulled.**
+Best at everything is not available and this repository says so elsewhere. What is available
+is a design point that dominates the current one on several axes at once, and the record contains
+a lever nobody has pulled.
 
-**[A37](A37_host_integrated.md) swept stage length at a fixed 25 g and let velocity rise** —
-27.1 m/s at 1.5 m, 38.4 at 3.0, 62.6 at 8.0. **The inverse was never asked.** Nothing in this
+[A37](A37_host_integrated.md) swept stage length at a fixed 25 g and let velocity rise,
+27.1 m/s at 1.5 m, 38.4 at 3.0, 62.6 at 8.0. The inverse was never asked. Nothing in this
 repository has swept the surface the design point actually sits on.
 
-**And a spent upper stage is 8 m long.** A37's own stage classes say so. **Stroke is the one
-variable this architecture can spend freely**, because the rail is a vehicle that already exists.
+And a spent upper stage is 8 m long. A37's own stage classes say so. Stroke is the one
+variable this architecture can spend freely, because the rail is a vehicle that already exists.
 
 ## The two things that make this non-obvious
 
-**Peak acceleration is not set by stroke.** For a closed expansion, peak force is at the instant of
-release: **a_peak = p₀·A/m**, which contains no *L*. **Lengthening the tube does not soften the
-shot at all** — it lets the expansion continue at ever-falling pressure, adding velocity after the
+Peak acceleration is not set by stroke. For a closed expansion, peak force is at the instant of
+release: a_peak = p₀·A/m, which contains no *L*. Lengthening the tube does not soften the
+shot at all, it lets the expansion continue at ever-falling pressure, adding velocity after the
 peak has already happened. *To reduce g you must reduce charge pressure, and then you need stroke
-to buy the velocity back.* **That is the actual trade, and it is two-dimensional.**
+to buy the velocity back.* That is the actual trade, and it is two-dimensional.
 
-**Work from a fixed charge rises with stroke.** The chamber is fixed, so the gas per shot is fixed,
-but the expansion extracts more of it: the constant-pressure ceiling **p₀·A·L** grows linearly.
-**More stroke means more work from the same gas** — an efficiency term, not just a performance one.
+Work from a fixed charge rises with stroke. The chamber is fixed, so the gas per shot is fixed,
+but the expansion extracts more of it: the constant-pressure ceiling p₀·A·L grows linearly.
+More stroke means more work from the same gas, an efficiency term, not just a performance one.
 
 ## Method
 
-**The gas model is imported from `precharged.py`, not restated.** What is added is a sweep over
+The gas model is imported from `precharged.py`, not restated. What is added is a sweep over
 stroke and charge pressure, and the mass and loss terms that grow with either.
 
-Reported at every point: exit velocity, **peak** g, gas per shot, chamber and reservoir mass, tube
-mass, **friction work as a fraction of shot work** (P67 scaled over a longer stroke), and the
-**fraction of the constant-pressure ceiling realised**.
+Reported at every point: exit velocity, peak g, gas per shot, chamber and reservoir mass, tube
+mass, friction work as a fraction of shot work (P67 scaled over a longer stroke), and the
+fraction of the constant-pressure ceiling realised.
 
 ---
 
 ## Acceptance bands
 
-**Declared before the script. Not to be edited after the run.**
+Declared before the script. Not to be edited after the run.
 
 | # | Band | FAIL if |
 |---|---|---|
@@ -61,18 +61,18 @@ mass, **friction work as a fraction of shot work** (P67 scaled over a longer str
 
 ## Predictions, with the arithmetic behind them
 
-**These are back-of-envelope and were written before the script. If the script disagrees, the
-script is right and the misses are recorded.**
+These are back-of-envelope and were written before the script. If the script disagrees, the
+script is right and the misses are recorded.
 
 1. **Band 3 passes exactly, not approximately.** a_peak = p₀A/m has no *L* in it.
 2. **Band 5 passes, and comfortably.** Solving the closed-expansion work for 30.535 m/s at
-   **L = 8 m** gives roughly **18 bar**, hence a_peak near **9 g** against 25, and gas per shot
-   near **0.040 kg** against 0.1123 — **about 64 % less gas for the same velocity at a third of
-   the acceleration.**
+   L = 8 m gives roughly 18 bar, hence a_peak near 9 g against 25, and gas per shot
+   near 0.040 kg against 0.1123, about 64 % less gas for the same velocity at a third of
+   the acceleration.
 3. **Band 6 passes**, because friction work and shot work both scale with *L*, so the ratio is
    roughly invariant.
 4. **Band 2 passes**, and the effect is large: the same 2 L / 50 bar charge yields about
-   **1172 J at 1.3 m and 5171 J at 8.0 m.**
+   1172 J at 1.3 m and 5171 J at 8.0 m.
 5. **Band 7 passes with room** — a 1 mm aluminium wall on a 15.8 mm bore is order **1 kg** at 8 m.
 
 ## Result
@@ -94,7 +94,7 @@ with a no — passes fourteen times over. Bands 1 and 6 fail, and both failures 
 
 ### The answer to the question that was asked
 
-**Yes — a better point exists, and there are fourteen of them.** Holding the velocity Gen6 already
+Yes, a better point exists, and there are fourteen of them. Holding the velocity Gen6 already
 delivers and spending stroke on gentleness instead:
 
 | Stroke | Charge | **Peak g** | Gas per shot | vs Gen6 |
@@ -105,58 +105,58 @@ delivers and spending stroke on gentleness instead:
 | 6.00 m | 25.84 bar | 12.92 | 58.0 g | −48.3 % |
 | **8.00 m** | **22.73 bar** | **11.36** | **51.0 g** | **−54.5 %** |
 
-**The same exit velocity at 45 % of the acceleration on 45 % of the gas.** Added mass per satellite
-falls **1.403 → 1.296 kg**, because the store shrinks with the charge faster than the tube grows.
+The same exit velocity at 45 % of the acceleration on 45 % of the gas. Added mass per satellite
+falls 1.403 to 1.296 kg, because the store shrinks with the charge faster than the tube grows.
 
-**And if velocity is wanted instead of gentleness, the front runs to 52.62 m/s** at 8 m and 60 bar
-— against Gen6's 29.009. **The best single point on velocity-per-g is 8 m at 25 bar: 30.97 m/s at
-12.50 g on 56.2 g of gas, which beats today's design on all three simultaneously.**
+And if velocity is wanted instead of gentleness, the front runs to 52.62 m/s at 8 m and 60 bar
+against Gen6's 29.009. The best single point on velocity-per-g is 8 m at 25 bar: 30.97 m/s at
+12.50 g on 56.2 g of gas, which beats today's design on all three simultaneously.
 
 ### Why stroke is the lever, in two facts the sweep confirms
 
-**Peak acceleration does not depend on stroke at all — deviation 0.000000 g across 1.3 to 8.0 m.**
-a_peak = p₀A/m, and there is no *L* in it. **Lengthening the tube softens nothing.** What it does
+Peak acceleration does not depend on stroke at all, deviation 0.000000 g across 1.3 to 8.0 m.
+a_peak = p₀A/m, and there is no *L* in it. Lengthening the tube softens nothing. What it does
 is let the expansion continue after the peak, adding velocity at falling pressure. *To reduce g you
 drop the charge pressure, and stroke is what buys the velocity back.*
 
-**Work from a fixed charge rises with stroke: 1171.9 J at 1.3 m to 5170.8 J at 8.0 m, on
-identical gas.** That is 4.4× the work from the same 2 L at 50 bar, and it is why the gas column
+Work from a fixed charge rises with stroke: 1171.9 J at 1.3 m to 5170.8 J at 8.0 m, on
+identical gas. That is 4.4x the work from the same 2 L at 50 bar, and it is why the gas column
 above falls so fast.
 
 ### Band 6 failed, and my prediction was backwards
 
-**I predicted the friction fraction would be roughly invariant**, reasoning that friction work and
-shot work both scale with *L*. **They do not.** Friction work scales *linearly*; shot work
-**saturates** toward the constant-pressure ceiling. So friction grows faster than the shot does:
+I predicted the friction fraction would be roughly invariant, reasoning that friction work and
+shot work both scale with *L*. They do not. Friction work scales *linearly*; shot work
+saturates toward the constant-pressure ceiling. So friction grows faster than the shot does:
 
 | | 1.3 m | 2.18 m | 8.0 m |
 |---|---:|---:|---:|
 | Ceiling realised | 91.9 % | 87.2 % | **65.9 %** |
 | **Friction share of the shot** | **9.25 %** | 9.75 % | **12.90 %** |
 
-**This is the real cost of the long-stroke direction, and it is P67 getting worse.** The defect
+This is the real cost of the long-stroke direction, and it is P67 getting worse. The defect
 that already owns 93.4 % of the dispersion also takes a growing share of the energy as the tube
-lengthens. **A longer machine is more sensitive to a seal nobody has measured, not less.**
+lengthens. A longer machine is more sensitive to a seal nobody has measured, not less.
 
 ### Band 1 failed on a definition, and the definition is P67
 
-**Work matches A41 exactly — 1864.8 J.** Velocity does not: **29.009 against 30.535.**
+Work matches A41 exactly, 1864.8 J. Velocity does not: 29.009 against 30.535.
 
-**A41's figure is zero-friction. This surface includes friction**, so it lands on A44's
+A41's figure is zero-friction. This surface includes friction, so it lands on A44's
 with-friction number instead. *The band asked the surface to reproduce a figure computed without a
 term the surface contains.* **My declaration error**, in the same family as A48 band 5 and A40
 band 1 — and it is the third time this project has recorded that **30.535 m/s is a number with a
-condition attached that keeps getting dropped.**
+condition attached that keeps getting dropped.
 
 **The band stands as failed.** The prediction that went with it — 18 bar and 9 g — was computed
-against the zero-friction 30.535 and so is low; the with-friction answer is **22.73 bar and
-11.36 g.** Directionally right, both magnitudes out by about a quarter, for the same reason.
+against the zero-friction 30.535 and so is low; the with-friction answer is 22.73 bar and
+11.36 g. Directionally right, both magnitudes out by about a quarter, for the same reason.
 
 ## What this run does not do
 
-- **It does not size a store.** The 4.10 kg at the recommended point is A43's store **scaled by
-  the gas ratio** — an estimate, not a sized design, and it is labelled as one in the JSON.
-- **No bending, no alignment tolerance, no dynamic seal behaviour.** An 8 m tube on a stage has a
+- It does not size a store. The 4.10 kg at the recommended point is A43's store scaled by
+  the gas ratio, an estimate, not a sized design, and it is labelled as one in the JSON.
+- No bending, no alignment tolerance, no dynamic seal behaviour. An 8 m tube on a stage has a
   straightness requirement this run does not state and cannot meet by assumption.
-- **The 8 m stage is A37's largest class** and no launch provider has agreed to any of it.
+- The 8 m stage is A37's largest class and no launch provider has agreed to any of it.
 - **Friction is Coulomb and constant**, which band 6 has just shown is the term that matters most.

@@ -8,31 +8,31 @@
 >
 > | Row | As run, 2026-08-10 | Current | Moved by |
 > |---|---:|---:|---|
-> | Δv | 16.388 m/s | **16.029 m/s** | [ADR-030](../docs/adr/030-apply-the-depth-resolved-thrust-constant.md), the depth-resolved thrust constant |
-> | Lifetime extension | +61.8 % | **+60.2 %** | the same |
-> | Ratio against the fastest published spring | 7.52× | **7.33×** | the same |
-> | **Deployer mass per 3U satellite** | **6.375 kg** | **10.547 kg** | [A46](A46_enclosure_buildup.md), which replaced P10's 8.00 kg enclosure placeholder with 50.04 kg of derived line items |
+> | Δv | 16.388 m/s | 16.029 m/s | [ADR-030](../docs/adr/030-apply-the-depth-resolved-thrust-constant.md), the depth-resolved thrust constant |
+> | Lifetime extension | +61.8 % | +60.2 % | the same |
+> | Ratio against the fastest published spring | 7.52x | 7.33x | the same |
+> | Deployer mass per 3U satellite | 6.375 kg | 10.547 kg | [A46](A46_enclosure_buildup.md), which replaced P10's 8.00 kg enclosure placeholder with 50.04 kg of derived line items |
 > | **Band 4, mass parity** | **pass at 1.062** | **FAIL at 1.758** | the same. **[P69](../OPEN_PROBLEMS.md)** |
-> | Cold-gas loss at 3U | 7.5× | **12.4×** | the same |
+> | Cold-gas loss at 3U | 7.5x | 12.4x | the same |
 >
 > Current values from `analysis/results/comparators.json`, regenerated against the present rollup.
 >
 > **Band 4 was declared before `comparators.py` existed and it is not widened. VOLLEY now fails
-> it.** The sentence below it — *"a magazine-fed electromagnetic launcher lands in the same
-> kilograms-per-satellite class as a canister of springs"* — **is withdrawn**. It is 1.758× heavier
+> it. The sentence below it, *"a magazine-fed electromagnetic launcher lands in the same
+> kilograms-per-satellite class as a canister of springs"*, is withdrawn. It is 1.758x heavier
 > per satellite than a canisterised dispenser, and `docs/KILL_CRITERIA.md` threat 1 is crossed at
-> **5.3× on dry mass**. P69 records that no enclosure change reaches parity: the honeycomb sandwich
+> 5.3x on dry mass. P69 records that no enclosure change reaches parity: the honeycomb sandwich
 > A46 costed would give 8.87 kg per satellite, ratio 1.48, still failing.
 >
-> **The "30° of phase" row is superseded by [A21-R](A21R_release_timing.md).** A21 never declared
+> The "30° of phase" row is superseded by [A21-R](A21R_release_timing.md). A21 never declared
 > release timing as a comparator. Satellites released 1200 s apart from the same host reach 30° of
-> in-track phase in **468 s**, at zero Δv, and hold it with zero relative rate; the commanded
-> differential reaches 30° in 1.38 days and then **drifts through it at 21.75 °/day**, which a
-> propulsion-less satellite cannot null. **Phase spacing is not a VOLLEY advantage.** What survives
-> R5 and R6 is orbit change: timed release moves semi-major axis by **0.0 m** and lifetime by
-> **×1.0000**, a commanded shot by **28 801 m** and **×1.602**. **A clock cannot change an orbit.**
+> in-track phase in 468 s, at zero Δv, and hold it with zero relative rate; the commanded
+> differential reaches 30° in 1.38 days and then drifts through it at 21.75 °/day, which a
+> propulsion-less satellite cannot null. Phase spacing is not a VOLLEY advantage. What survives
+> R5 and R6 is orbit change: timed release moves semi-major axis by 0.0 m and lifetime by
+> x1.0000, a commanded shot by 28 801 m and x1.602. A clock cannot change an orbit.
 >
-> **What is left of the competitive case, stated exactly:** a commanded per-satellite change in
+> What is left of the competitive case, stated exactly: a commanded per-satellite change in
 > orbital energy, on a satellite that carries nothing, inside its qualification envelope. The mass
 > argument is gone and the phase argument is gone.
 
@@ -42,15 +42,15 @@
 > band is never rewritten after its run — the same rule that left A1's sheet untouched and put
 > its correction elsewhere.
 >
-> **But 7.52× is a ratio of _gains_** (+61.8 % against +8.2 %). On **delivered orbital life** —
-> total years, 2.111 against 1.412 at 450 km — the ratio is **1.495×**.
+> But 7.52x is a ratio of _gains_ (+61.8 % against +8.2 %). On delivered orbital life,
+> total years, 2.111 against 1.412 at 450 km, the ratio is 1.495x.
 >
-> **Use 1.495× for any risk-weighted comparison**, because a satellite the deployer never
+> Use 1.495x for any risk-weighted comparison, because a satellite the deployer never
 > releases delivers nothing, and `docs/FMEA.md` shows this architecture forfeits satellites in
-> ways a spring does not. **E30** records the correction and the reason it matters: 7.52× flatters
+> ways a spring does not. E30 records the correction and the reason it matters: 7.52x flatters
 > in exactly the comparison a reviewer will make.
 
-**Closes:** nothing. **Establishes** the competitive position on computed numbers rather than on
+Closes: nothing. Establishes the competitive position on computed numbers rather than on
 assertion, and removes a claim the repository cannot support.
 
 > ## BANDS DECLARED 2026-08-10, BEFORE `analysis/comparators.py` EXISTS.
@@ -79,7 +79,7 @@ assertion, and removes a claim the repository cannot support.
 | **Lifetime extension, vs a typical spring** | **9.45×** |
 
 **Band 1 passes at 7.52×**, so the headline moves. Lifetime extension is superlinear in Δv in
-this regime, and quoting the velocity ratio has been **understating the machine by about 15 %**
+this regime, and quoting the velocity ratio has been understating the machine by about 15 %
 against the hardest comparator and by 44 % against the ordinary one.
 
 ### The full comparison, on identical axes
@@ -98,71 +98,71 @@ against the hardest comparator and by 44 % against the ordinary one.
 
 ### Band 3: the advantage with no ratio
 
-**A spring's designed differential is exactly zero**, and that is not a small number — it is a
+A spring's designed differential is exactly zero, and that is not a small number, it is a
 category. Every satellite gets the same nominal push; any spread is manufacturing scatter that
 cannot be commanded, predicted per unit, or ordered.
 
-Distribution needs a *difference*. So a spring-deployed fleet has one route to 30° of phase —
-differential drag, at **25 days, unschedulable** — against VOLLEY's **1.38 days**, a factor of
+Distribution needs a *difference*. So a spring-deployed fleet has one route to 30° of phase,
+differential drag, at 25 days, unschedulable, against VOLLEY's 1.38 days, a factor of
 **18.1×**. Band 6 passes.
 
 ### Band 4: mass parity, now computed rather than asserted
 
-**6.375 kg per 3U satellite against a canisterised-class 6.0 kg — a ratio of 1.062, inside 7 %.**
-`LANDSCAPE.md` already claimed parity; it is now measured. **A magazine-fed electromagnetic
-launcher lands in the same kilograms-per-satellite class as a canister of springs**, while
-delivering 7.5× the lifetime extension and a differential capability springs do not have.
+6.375 kg per 3U satellite against a canisterised-class 6.0 kg, a ratio of 1.062, inside 7 %.
+`LANDSCAPE.md` already claimed parity; it is now measured. A magazine-fed electromagnetic
+launcher lands in the same kilograms-per-satellite class as a canister of springs, while
+delivering 7.5x the lifetime extension and a differential capability springs do not have.
 
 ### Band 5: the loss, declared in advance and confirmed
 
-**At 3U a cold-gas module beats VOLLEY on mass by 7.5×** — 6.375 kg of shared deployer against
+At 3U a cold-gas module beats VOLLEY on mass by 7.5x, 6.375 kg of shared deployer against
 ~0.85 kg carried by the satellite. This band was written to expect a loss of ≥ 5× *before the
 run*, precisely so the result could not be framed away afterwards. It is consistent with
 `KILL_CRITERIA.md` threat 1, which is crossed on this comparison.
 
-**What the cold-gas module costs instead is the thing VOLLEY exists to avoid:** a pressure
+What the cold-gas module costs instead is the thing VOLLEY exists to avoid: a pressure
 vessel, a qualification campaign, range-safety review, and an attitude control system able to
 point it. For the ~92 % of flown CubeSats with no propulsion, that trade was already declined.
 
 ### Band 7: the cost comparison returns NOT COMPUTED, deliberately
 
-**There is no vendor quotation for any line of `analysis/cost.py`, and no price for any
+There is no vendor quotation for any line of `analysis/cost.py`, and no price for any
 alternative anywhere in this repository.** The band required the script to *emit* `NOT COMPUTED`
 rather than simply not ask, so the gap is recorded in the output.
 
-**Any claim that VOLLEY is cheaper than a transfer vehicle, a dispenser, or a propulsion module
-is unsupported in both directions and is withdrawn.** Closing it needs **E3** — quotations — not
+Any claim that VOLLEY is cheaper than a transfer vehicle, a dispenser, or a propulsion module
+is unsupported in both directions and is withdrawn. Closing it needs E3, quotations, not
 another analysis.
 
 ### What this sheet does not establish
 
-It compares a **model** of VOLLEY against **published class figures** for things that have flown.
+It compares a model of VOLLEY against published class figures for things that have flown.
 That is a weaker class of comparison than the table's symmetry suggests, and E4 stands: nothing
 about VOLLEY here is measured. The 25-day differential-drag baseline is `astro.py`'s own model
-output, **not** the flown 12-satellite result that `RELATED_WORK.md` records exists — that
-substitution is not made because the source has not been retrieved (**E16**).
+output, not the flown 12-satellite result that `RELATED_WORK.md` records exists, that
+substitution is not made because the source has not been retrieved (E16).
 
 ## Why this exists
 
-The repository compares VOLLEY to alternatives in three places — `SUMMARY.md`, `LANDSCAPE.md`
-and `MARKET.md` — and each uses **different axes and a different headline number**. None of them
+The repository compares VOLLEY to alternatives in three places, `SUMMARY.md`, `LANDSCAPE.md`
+and `MARKET.md`, and each uses different axes and a different headline number. None of them
 computes the comparison; they quote it.
 
 Two specific defects motivated this sheet:
 
-1. **The headline ratio is the weakest one available.** Every document leads with *"6.6× the
-   fastest published spring"*, which is a ratio of **velocities**. Nobody buys velocity. What a
+1. The headline ratio is the weakest one available. Every document leads with *"6.6x the
+   fastest published spring"*, which is a ratio of velocities. Nobody buys velocity. What a
    customer gets is orbital lifetime and phase separation, and lifetime extension is
-   **superlinear** in Δv in this regime — so the velocity ratio *understates* the machine.
-2. **One claim is unsupported in both directions.** Superiority over orbital transfer vehicles on
-   cost and efficiency has been asserted informally. **There is no OTV price anywhere in this
-   repository, and `analysis/cost.py` carries no vendor quotation on any line item.** Comparing
+   superlinear in Δv in this regime, so the velocity ratio *understates* the machine.
+2. One claim is unsupported in both directions. Superiority over orbital transfer vehicles on
+   cost and efficiency has been asserted informally. There is no OTV price anywhere in this
+   repository, and `analysis/cost.py` carries no vendor quotation on any line item. Comparing
    21 % electrical-to-payload efficiency against a propellant mass fraction is a category error.
    This sheet is where that claim is withdrawn rather than quietly softened.
 
 ## What is compared, and on what axes
 
-Four options for the same job — distributing a dozen propulsion-less CubeSats:
+Four options for the same job, distributing a dozen propulsion-less CubeSats:
 
 | Option | What it is |
 |---|---|
@@ -173,15 +173,15 @@ Four options for the same job — distributing a dozen propulsion-less CubeSats:
 
 Axes, applied identically to all four:
 
-- Δv delivered, and **orbital lifetime multiplier** at that Δv
-- **Designed differential** between satellites — the quantity distribution actually needs
+- Δv delivered, and orbital lifetime multiplier at that Δv
+- Designed differential between satellites, the quantity distribution actually needs
 - Time to 30° of phase separation
-- Deployer or module mass **per satellite**
-- What the **satellite** must carry, and what the **host** must provide
+- Deployer or module mass per satellite
+- What the satellite must carry, and what the host must provide
 - Schedulability, and maturity
 
-**Losses are computed and reported on the same footing as wins.** At 3U the cold-gas module beats
-VOLLEY on mass by roughly 8×, and the spring beats it on maturity by TRL 9 against 2–3. A sheet
+Losses are computed and reported on the same footing as wins. At 3U the cold-gas module beats
+VOLLEY on mass by roughly 8x, and the spring beats it on maturity by TRL 9 against 2-3. A sheet
 that omitted those would be a brochure.
 
 ## Acceptance bands
@@ -205,8 +205,8 @@ to avoid, `KILL_CRITERIA.md` threat 1 is crossed on it, and declaring the expect
 before the run is what stops the result being framed away afterwards.
 
 **Band 7 makes an absence checkable.** "Cheaper than an OTV" is the claim this sheet exists to
-remove. Requiring the script to return `NOT COMPUTED` — rather than simply not asking — means the
-gap is recorded in the output, and closing it needs **E3** (vendor quotations) rather than
+remove. Requiring the script to return `NOT COMPUTED`, rather than simply not asking, means the
+gap is recorded in the output, and closing it needs E3 (vendor quotations) rather than
 another analysis.
 
 ### Band 1 is the one that changes the front door
@@ -236,12 +236,12 @@ number is known.
 Lifetime multipliers from `analysis/astro.py` by import. Deployer mass per satellite from
 `analysis/payload_family.py`. The operating point from `motor_results.json`.
 
-**Comparator figures are class figures, not quotations, and none names a manufacturer.** Spring
+Comparator figures are class figures, not quotations, and none names a manufacturer. Spring
 velocities are from published deployer interface documents; the ~2 kg/U dispenser figure and the
-0.5–1.2 kg cold-gas range are published class ranges already used in `KILL_CRITERIA.md`. The
-25-day differential-drag baseline is a **model output** of `astro.py`, not the flown result —
+0.5-1.2 kg cold-gas range are published class ranges already used in `KILL_CRITERIA.md`. The
+25-day differential-drag baseline is a model output of `astro.py`, not the flown result,
 `RELATED_WORK.md` records that a flown 12-satellite result exists and should replace it, and that
-substitution is **not** made here because the source has not been retrieved (**E16**).
+substitution is not made here because the source has not been retrieved (E16).
 
 Nothing in this sheet is measured. It compares a model of VOLLEY against published figures for
 things that have flown, which is a weaker class of comparison than it looks and is labelled as one.

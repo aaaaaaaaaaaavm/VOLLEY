@@ -1,6 +1,6 @@
 # A22: resize the retention gates against the case that actually governs them
 
-**Closes:** **P37**, and the analysis half of **E10**. Both are currently *predicted failures*.
+Closes: P37, and the analysis half of E10. Both are currently *predicted failures*.
 
 > ## BANDS DECLARED 2026-08-10, BEFORE `analysis/gate_sizing.py` EXISTS.
 >
@@ -35,14 +35,14 @@ Because `phase1_closeout.e10`'s own relation is imported rather than reimplement
 | Added mass | — | **+11 g per cassette** |
 | Governing mode | — | pin shear, not bearing |
 
-**The entire fix is three millimetres of pin diameter and eleven grams.** Capacity goes as d², so
-6 → 9 mm is 2.25× the shear area, and it converts a negative margin at Q = 30 into +0.45.
+The entire fix is three millimetres of pin diameter and eleven grams. Capacity goes as d², so
+6 to 9 mm is 2.25x the shear area, and it converts a negative margin at Q = 30 into +0.45.
 
-**No intermediate restraint is needed.** The second lever — splitting the stack across two gates —
+No intermediate restraint is needed. The second lever, splitting the stack across two gates,
 was in the allowed space and is not required, which is the better answer: it leaves the magazine
 architecture alone.
 
-**26 of 30 candidates in the space pass.** The four that fail are all at two pins:
+26 of 30 candidates in the space pass. The four that fail are all at two pins:
 
 | Candidate | Capacity | MoS at Q = 30 |
 |---|---:|---:|
@@ -51,10 +51,10 @@ architecture alone.
 | 2 × D8 | 32.4 kN | +0.143 — below the 0.20 target |
 | **2 × D9** | **41.0 kN** | **+0.447** |
 
-**D8 misses the target by 0.06 and is worth naming**, because it is the more standard size and a
+D8 misses the target by 0.06 and is worth naming, because it is the more standard size and a
 reader will ask. If a 0.15 margin at Q = 30 were acceptable it would do; the band said 0.20 and
 the band was declared first. **3 × D8 also passes at +0.71** and is the alternative if D9 stock is
-awkward — the selection rule picked minimum change, not minimum risk.
+awkward, the selection rule picked minimum change, not minimum risk.
 
 ### Band 3, 4, 5, 6
 
@@ -62,26 +62,26 @@ awkward — the selection rule picked minimum change, not minimum risk.
   nothing, which is the outcome the budget was set to force.
 - **Band 4 PASS.** Quasi-static MoS goes 1.21 → 3.98. Nothing regresses.
 - **Band 5 PASS.** MoS stays positive across the whole sweep, **+0.45 at Q = 30 to +1.51 at
-  Q = 10**. **The design no longer depends on where Q lands**, which is the point of the exercise
-  — A19 found Q was the only assumed input moving a margin through zero, and it no longer does.
+  Q = 10. The design no longer depends on where Q lands, which is the point of the exercise
+A19 found Q was the only assumed input moving a margin through zero, and it no longer does.
 - **Band 6 REPORT: pin shear governs**, 41.0 kN against a bearing capacity of 52.2 kN on a 4 mm
   frame. Resizing pins for shear was the right fix rather than the wrong one.
 
 > ### A definitional discrepancy, found while doing this and worth recording
 >
 > **A18 and `sizing.py` report margins of safety against different things.** A18 band 9 quotes
-> MoS at Q = 30 as **−0.10**, computed as capacity/load − 1. `sizing.py::retention_gate` applies a
-> **1.4 design factor** and reports capacity/(1.4·load) − 1, which gives **−0.36** for the same
+> MoS at Q = 30 as −0.10, computed as capacity/load − 1. `sizing.py::retention_gate` applies a
+> 1.4 design factor and reports capacity/(1.4·load) − 1, which gives −0.36 for the same
 > hardware and the same load.
 >
-> **Both are correct and they are not the same quantity.** This sheet uses the factored form,
+> Both are correct and they are not the same quantity. This sheet uses the factored form,
 > because it is how the gate was originally sized and because dropping a design factor while
 > resizing would be a silent relaxation. The unfactored figure is the more optimistic one, and
-> **P37's −0.10 is therefore the kinder of the two readings of the same failure.**
+> P37's −0.10 is therefore the kinder of the two readings of the same failure.
 
 ## The defect being fixed
 
-`sizing.py::retention_gate()` sizes the gate against a **quasi-static 25 g ascent load**:
+`sizing.py::retention_gate()` sizes the gate against a quasi-static 25 g ascent load:
 
     F = 24 kg x 25 g = 5.89 kN, two D6 A-286 pins, capacity 18.2 kN, MoS 1.2
 
@@ -94,12 +94,12 @@ spectrum (0.16 g²/Hz) through the track's 109 Hz fixed-fixed mode gives a 3σ l
 | 20 | 16.5 kN | 2.80× | **0.10** |
 | 30 | 20.2 kN | 3.43× | **−0.10** |
 
-**The pins are not necessarily undersized. The load case was.** 5.89 kN is quasi-static;
+The pins are not necessarily undersized. The load case was. 5.89 kN is quasi-static;
 random vibration through a lightly damped mode is a different problem, and the claimed MoS 1.2
 collapses to 0.10 at Q = 20 and goes negative at Q = 30.
 
-**Q is unmeasured** — `docs/STRUCTURAL_GAP.md` records four separate findings turning on it — so
-**this analysis sizes against Q = 30**, the conservative end of the range A18 swept. Sizing
+Q is unmeasured, `docs/STRUCTURAL_GAP.md` records four separate findings turning on it, so
+this analysis sizes against Q = 30, the conservative end of the range A18 swept. Sizing
 against a Q the project has never measured, at the *optimistic* end, would be the same error in a
 new place.
 
@@ -111,11 +111,11 @@ new place.
 | **Pin count** | capacity ∝ n | more holes in the same frame |
 | **Driven mass per gate** | load ∝ m — intermediate restraint splits the stack | a septum-level tie, and the septa already exist (1 mm silicon steel, `groups.magazine`) |
 
-**Mode tuning is deliberately not a lever.** Miles gives load ∝ √(f<sub>n</sub>·Q), so *raising*
+Mode tuning is deliberately not a lever. Miles gives load ∝ √(f<sub>n</sub>·Q), so *raising*
 the mode raises the load, and lowering it runs into the > 70 Hz launch requirement
 `sizing.py::track_first_mode` already enforces. The √ dependence makes it weak in both directions.
 
-**Mass is a constraint, not a free variable.** Kill criterion 1 is crossed by a factor of three,
+Mass is a constraint, not a free variable. Kill criterion 1 is crossed by a factor of three,
 so a fix that solves a structural problem by adding kilograms trades a live threat for a
 predicted one. Band 3 bounds it.
 
@@ -134,18 +134,18 @@ Declared before the script exists. Each is capable of failing.
 
 ### Band 2 is the one that decides whether this is a resize or a redesign
 
-The allowed space is bounded deliberately: **pin diameter ≤ 10 mm, pin count ≤ 4, and up to one
-intermediate restraint per cassette.** Beyond that the gate stops being a gate.
+The allowed space is bounded deliberately: pin diameter <= 10 mm, pin count <= 4, and up to one
+intermediate restraint per cassette. Beyond that the gate stops being a gate.
 
-**If nothing in that space reaches MoS 0.2 at Q = 30, the answer is not a bigger pin.** It is that
+If nothing in that space reaches MoS 0.2 at Q = 30, the answer is not a bigger pin. It is that
 a single one-shot gate carrying a six-satellite stack through random vibration is the wrong
 architecture, and that would be a new HIGH defect rather than a closure.
 
 ### Band 5 exists because of what A19 found
 
-A19 ranked structural Q as the only assumed input that moves a margin of safety **through zero**,
-while returning exactly zero on every headline number. **The whole point of this resize is to stop
-that being true.** A design that passes at Q = 10 and fails at Q = 30 has not removed the
+A19 ranked structural Q as the only assumed input that moves a margin of safety through zero,
+while returning exactly zero on every headline number. The whole point of this resize is to stop
+that being true. A design that passes at Q = 10 and fails at Q = 30 has not removed the
 dependency, it has renamed it.
 
 ## What happens at each outcome, fixed now
@@ -163,11 +163,11 @@ dependency, it has renamed it.
 
 ## Provenance
 
-Loads from `analysis/phase1_closeout.py::e10` by import — the same function A18 ran — rather than
+Loads from `analysis/phase1_closeout.py::e10` by import, the same function A18 ran, rather than
 reimplemented. Geometry and materials from `cad/parameters.json` `groups.magazine`. A-286 shear
-allowable is taken as 0.6 × tensile, the same class assumption `sizing.py` already uses, and it is
+allowable is taken as 0.6 x tensile, the same class assumption `sizing.py` already uses, and it is
 an assumption rather than a datasheet value.
 
-**Nothing here is measured**, and the GEVS spectrum is a specification envelope rather than a
-measured environment for any specific vehicle. **T-1 remains the test that settles this**, and
+Nothing here is measured, and the GEVS spectrum is a specification envelope rather than a
+measured environment for any specific vehicle. T-1 remains the test that settles this, and
 `docs/QUALIFICATION_PLAN.md` already calls it the single most likely qualification failure.

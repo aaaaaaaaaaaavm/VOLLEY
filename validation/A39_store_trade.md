@@ -1,4 +1,4 @@
-# A39 — the energy store at metre-scale strokes
+# A39, the energy store at metre-scale strokes
 
 **Bands declared 2026-08-14, before `analysis/store_trade.py` existed.**
 Verify with `git show --stat <this commit> -- analysis/store_trade.py`, which must return nothing.
@@ -8,13 +8,13 @@ Verify with `git show --stat <this commit> -- analysis/store_trade.py`, which mu
 ## Why this run exists
 
 **P60.** [A37](A37_host_integrated.md) bands 4 and 8 failed. Once the stage supplies the structure
-and the pulse chain is deleted, **the energy store becomes the binding constraint** — 26.16 kg of
+and the pulse chain is deleted, the energy store becomes the binding constraint, 26.16 kg of
 spring steel at an 8 m stroke, **78.5 % of everything added.** Band 4 was the falsification test
 [A35](A35_constraint_ledger.md) declared and left open, and it says the mass *relocated* rather
 than left.
 
-[A38](A38_tipoff_at_gen6.md) has since established that **tip-off does not bind** — its ceiling is
-**30.9 g** against a 25 g qualification cap — so the acceleration is free and the store is the only
+[A38](A38_tipoff_at_gen6.md) has since established that tip-off does not bind, its ceiling is
+30.9 g against a 25 g qualification cap, so the acceleration is free and the store is the only
 thing left setting the design point.
 
 ## The budget, and where each number comes from
@@ -30,12 +30,12 @@ thing left setting the design point.
 
 ## What is traded, and what is excluded
 
-**Steel spring**, at the 300 J/kg `analysis/actuator_trade.py` already declares as the upper end
-for spring steel. **Cold gas**, which A37 deliberately excluded and which this run exists partly to
-size. **Keeping the linear synchronous motor**, as the control.
+Steel spring, at the 300 J/kg `analysis/actuator_trade.py` already declares as the upper end
+for spring steel. Cold gas, which A37 deliberately excluded and which this run exists partly to
+size. Keeping the linear synchronous motor, as the control.
 
-Three options are **screened out by runs already on the record and are carried in the table with
-their reason**, so the trade cannot be read as having considered only two:
+Three options are screened out by runs already on the record and are carried in the table with
+their reason, so the trade cannot be read as having considered only two:
 
 | | Screened by |
 |---|---|
@@ -45,8 +45,8 @@ their reason**, so the trade cannot be read as having considered only two:
 
 ## The gas model, declared before the script
 
-**This is where this run can be wrong, so every assumption is stated here rather than in the
-code.** None is measured and none is vendor-sourced.
+This is where this run can be wrong, so every assumption is stated here rather than in the
+code. None is measured and none is vendor-sourced.
 
 | | Value | Note |
 |---|---|---|
@@ -58,18 +58,18 @@ code.** None is measured and none is vendor-sourced.
 | Gas density at storage | **235 kg/m³** | Nitrogen-class at 200 bar |
 | Piston, seals, regulator, valving | **1.5 kg** fixed allowance | **The largest guess in this run** |
 
-**The reservoir is sized for the whole manifest**, not per shot. If one bottle runs twelve shots,
-the wind mechanism the spring needs is replaced by a valve — and **that, not the store mass alone,
-is what the trade is really about.**
+The reservoir is sized for the whole manifest, not per shot. If one bottle runs twelve shots,
+the wind mechanism the spring needs is replaced by a valve, and that, not the store mass alone,
+is what the trade is really about.
 
-**Mechanism, for the spring:** `max(2.0 kg, 0.60 × store)`, unchanged from A37 so the two runs
+Mechanism, for the spring: `max(2.0 kg, 0.60 × store)`, unchanged from A37 so the two runs
 compare. It remains a declared assumption with no derivation.
 
 ---
 
 ## Acceptance bands
 
-**Declared before the script. Not to be edited after the run.**
+Declared before the script. Not to be edited after the run.
 
 | # | Band | FAIL if |
 |---|---|---|
@@ -93,23 +93,23 @@ worth nothing. Band 6 makes the control's failure an explicit result rather than
 
 ### Band 7 is where gas is most likely to lose
 
-A spring holds its energy indefinitely and a gas store leaks. **If gas wins on mass and loses on
-standby, that is the finding**, and it belongs in the table rather than in a footnote.
+A spring holds its energy indefinitely and a gas store leaks. If gas wins on mass and loses on
+standby, that is the finding, and it belongs in the table rather than in a footnote.
 
 ## What this run does not do
 
 It does not design a cylinder, a valve, a seal or a latch; does not model blowdown transients,
-temperature effects on stored pressure, or the release-residual requirement A34 puts at ≤ 1 N; and
-does not price qualification of a pressure vessel. **It compares stores on mass and standby at a
+temperature effects on stored pressure, or the release-residual requirement A34 puts at <= 1 N; and
+does not price qualification of a pressure vessel. It compares stores on mass and standby at a
 declared operating point, and every assumption above makes gas look better than a detailed design
-will.**
+will.
 
 ---
 
 ## Results
 
 **RUN 2026-08-14. Seven of seven bands pass. Gas wins by a factor of four, and A35's falsifier
-settles.**
+settles.
 
 | # | Band | Result | |
 |---|---|---|---|
@@ -129,31 +129,31 @@ settles.**
 | **Cold gas** | 0.63 | 2.34 | **2.98 kg** | **89.4 m/s** |
 | Keep the LSM *(control)* | 23.76 | — | **23.76 kg** | fails at every velocity |
 
-**Gas detail:** 15.8 mm bore, 1.00 mm wall, **0.84 kg of cylinder**, and a **1.71 litre** reservoir
-— 0.233 kg of vessel plus 0.402 kg of gas — **for all twelve shots.**
+Gas detail: 15.8 mm bore, 1.00 mm wall, 0.84 kg of cylinder, and a 1.71 litre reservoir
+0.233 kg of vessel plus 0.402 kg of gas, for all twelve shots.
 
 ### The reason gas wins is not energy density
 
-It is that **one bottle runs the manifest.** A spring stores 7.13 kg of energy and then needs
-**4.28 kg of mechanism to re-arm it twelve times.** Gas separates the store from the actuator, so
+It is that one bottle runs the manifest. A spring stores 7.13 kg of energy and then needs
+4.28 kg of mechanism to re-arm it twelve times. Gas separates the store from the actuator, so
 re-arming is a valve.
 
-> **The spring's problem was never storing the energy. It was having to be cocked twelve times.**
+> The spring's problem was never storing the energy. It was having to be cocked twelve times.
 
 ### A35's falsification test settles, and it passes
 
-A35 predicted that deleting the pulse would remove more than 40 % of dry mass, measured **28.1 %**,
-and declared: *the falsifier is that its replacement weighs more than 60 % of what came out* —
-**14.26 kg of the 23.76 kg released.**
+A35 predicted that deleting the pulse would remove more than 40 % of dry mass, measured 28.1 %,
+and declared: *the falsifier is that its replacement weighs more than 60 % of what came out*,
+14.26 kg of the 23.76 kg released.
 
-**The replacement weighs 2.98 kg.** The mass did not relocate. **A35's result means what it
+The replacement weighs 2.98 kg. The mass did not relocate. A35's result means what it
 appeared to mean**, and A37 bands 4 and 8 failed against a store that was the wrong store.
 
 ### And the binding constraint moves again, to stroke length
 
-Gas fits the budget out to **89.4 m/s**, which at the 25 g cap needs **18.8 m of stroke.** No stage
-class in A37 offers that. **Mass has stopped being the constraint on velocity and stage length has
-become it** — which is a much better problem, and the one your reframe was aimed at.
+Gas fits the budget out to 89.4 m/s, which at the 25 g cap needs 18.8 m of stroke. No stage
+class in A37 offers that. Mass has stopped being the constraint on velocity and stage length has
+become it, which is a much better problem, and the one your reframe was aimed at.
 
 ### Where this is most likely wrong, and by how much
 
@@ -165,18 +165,18 @@ The run sheet declared that every assumption favours gas. Checking that honestly
 | **Hardware allowance** | 1.5 kg, the run's largest guess | could be 3–4 kg | Over half the total |
 | **Cylinder wall** | 1.0 mm minimum, hoop needs 0.16 | must also serve as rail and take A38's **202 N** preload | Not modelled |
 
-**Corrected for all three, gas lands near 6 kg** — still inside the 12.55 kg budget, still beating
+Corrected for all three, gas lands near 6 kg, still inside the 12.55 kg budget, still beating
 the spring by ~2×, and still passing every band. **The conclusion survives the assumptions being
-wrong by factors of several**, which is the only reason it is worth reporting at this level of
+wrong by factors of several, which is the only reason it is worth reporting at this level of
 detail.
 
-**What is not survivable by arithmetic** is the blowdown transient: filling a 0.43 litre swept
-volume in a **133 ms** stroke means roughly **3 L/s** at working pressure through a regulator, and
-nothing here models it. **That, and the seal, are where gas will actually be decided.**
+What is not survivable by arithmetic is the blowdown transient: filling a 0.43 litre swept
+volume in a 133 ms stroke means roughly 3 L/s at working pressure through a regulator, and
+nothing here models it. That, and the seal, are where gas will actually be decided.
 
 ### What this does not answer
 
 No cylinder, valve, seal or latch is designed. No blowdown transient, no temperature effect on
-stored pressure, no pressure-vessel qualification, and no check against A34's ≤ 1 N release
-residual. **Gas removes a mass problem and introduces a fluid-system problem**, and this run has
+stored pressure, no pressure-vessel qualification, and no check against A34's <= 1 N release
+residual. Gas removes a mass problem and introduces a fluid-system problem, and this run has
 sized the first and not the second.

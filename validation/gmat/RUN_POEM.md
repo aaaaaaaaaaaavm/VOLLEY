@@ -1,8 +1,8 @@
 # Running the A15 POEM campaign in GMAT
 
-**GMAT R2022a is installed in the development environment as of 2026-08-06** at
+GMAT R2022a is installed in the development environment as of 2026-08-06 at
 `/opt/gmat/GMAT/R2022a`, so the scripts are now validated by execution rather than by
-inspection. The first delivery did **not** run: `ReportFile` has no `ReportStepSize` field and
+inspection. The first delivery did not run: `ReportFile` has no `ReportStepSize` field and
 all three scripts were rejected at parse time. That is fixed.
 
 ## 1. Regenerate, if anything upstream changed
@@ -29,18 +29,18 @@ GMAT -m -r a15_poem_r3.script      # 350 km /  9.6  -- POEM-3-like, UNVERIFIED
 `-m` is minimise-the-GUI, `-r` runs and exits. On Windows the binary is `GMAT.exe` in
 `GMAT/bin`. Each case propagates one host plus twelve satellites for 90 days.
 
-**Expect a few minutes per case.** RungeKutta89 at 1e-11 accuracy with a 20×20 field, drag and
+Expect a few minutes per case. RungeKutta89 at 1e-11 accuracy with a 20x20 field, drag and
 SRP over 90 days for thirteen objects is not instant.
 
 ## 3. What a good run produces
 
-Twelve report files per case, `sat01.txt` … `sat12.txt`, each with hourly rows of
+Twelve report files per case, `sat01.txt` ... `sat12.txt`, each with hourly rows of
 
 ```
 UTCGregorian   SMA   ECC   INC   RAAN   Altitude
 ```
 
-Sanity checks before you send them back — these are the ones that catch a broken run:
+Sanity checks before you send them back, these are the ones that catch a broken run:
 
 | Check | Expected |
 |---|---|
@@ -63,7 +63,7 @@ python3 validation/gmat/parse_reports.py --analysis A15
 
 which applies A15's eight declared bands and writes the verdicts into
 `validation/results/A15_poem_campaign.json`. **The bands are in the run sheet and were committed
-at `e067da8`, before the template existed.** Do not edit them to match what comes back — a missed
+at `e067da8`, before the template existed. Do not edit them to match what comes back, a missed
 band is a numbered defect, which is the whole point of the directory.
 
 ## 5. If a band fails
@@ -75,13 +75,13 @@ ADR-020's cadence.
 
 ## Known caveats you are running with
 
-- **R2 and R3's orbital elements are unverified.** They are written from recollection of published
+- R2 and R3's orbital elements are unverified. They are written from recollection of published
   PSLV mission profiles and are marked as such in the script header and the results JSON. Confirm
   or cite them before any of R2/R3 is published. R1 is the traceable case.
-- **Satellites are staggered analytically, not fired in sequence.** Each is placed on its
+- Satellites are staggered analytically, not fired in sequence. Each is placed on its
   post-burn orbit with mean anomaly rewound by `n·t_k`, the same device
   `emocd_fleet.script.tmpl` uses. This ignores J2 during a 4 h rewind against a 90 day
   propagation.
-- **Case B is not generated yet.** The host-assisted plane change needs a POEM Δv budget, and
+- Case B is not generated yet. The host-assisted plane change needs a POEM Δv budget, and
   paper §VII records that POEM's mass and control authority are undisclosed (E5). Band 8 is
   declared VOID-able for that reason.

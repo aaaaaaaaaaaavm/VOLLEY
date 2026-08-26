@@ -1,4 +1,4 @@
-# A61 — what the design requires of a seal, which it has never said
+# A61, what the design requires of a seal, which it has never said
 
 **Bands declared 2026-08-20, before `analysis/seal_class.py` existed.**
 Verify with `git show --stat <this commit> -- analysis/seal_class.py`, which must return nothing.
@@ -7,13 +7,13 @@ Verify with `git show --stat <this commit> -- analysis/seal_class.py`, which mus
 
 ## Why this run exists
 
-**No seal exists in this repository.** [A39](A39_store_trade.md) states it designs *"no cylinder,
-valve, seal or latch"*; [A40](A40_blowdown_transient.md) that it does not model one; **A41 declared
-an 83.4 N friction *allowance* and every number since has been computed against it.**
+No seal exists in this repository. [A39](A39_store_trade.md) states it designs *"no cylinder,
+valve, seal or latch"*; [A40](A40_blowdown_transient.md) that it does not model one; A41 declared
+an 83.4 N friction *allowance* and every number since has been computed against it.
 
-**That allowance is 18.7 % of the piston's pressure force.** Expressed that way it is recognisably
-an *elastomer* figure — **so the project has been implicitly assuming the worst common seal class
-without ever choosing it**, and four analyses now rest on that choice:
+That allowance is 18.7 % of the piston's pressure force. Expressed that way it is recognisably
+an *elastomer* figure, so the project has been implicitly assuming the worst common seal class
+without ever choosing it, and four analyses now rest on that choice:
 
 | | |
 |---|---|
@@ -24,17 +24,17 @@ without ever choosing it**, and four analyses now rest on that choice:
 
 ## What this run is, and what it deliberately is not
 
-**It is not a comparison of seal products, and it does not claim any class achieves any number.**
+It is not a comparison of seal products, and it does not claim any class achieves any number.
 Friction fractions for component classes are handbook ranges, no better sourced than A39's gas
-model, and **they do not replace [P67](../OPEN_PROBLEMS.md).**
+model, and they do not replace [P67](../OPEN_PROBLEMS.md).
 
-**It inverts the question instead.** Rather than asking *what would this seal give*, it asks:
+It inverts the question instead. Rather than asking *what would this seal give*, it asks:
 
-> **What is the loosest seal the design can tolerate, for each downstream requirement to be met?**
+> What is the loosest seal the design can tolerate, for each downstream requirement to be met?
 
-**That produces a specification** — a maximum friction, in a unit a supplier quotes — where the
-repository currently has an allowance nobody chose. **The mapping is computed from models already
-in the record; only the input is assumed.**
+That produces a specification, a maximum friction, in a unit a supplier quotes, where the
+repository currently has an allowance nobody chose. The mapping is computed from models already
+in the record; only the input is assumed.
 
 ## Declared before the run
 
@@ -49,7 +49,7 @@ in the record; only the input is assumed.**
 ## The prediction, recorded before the run
 
 **I expect band 3 to pass and band 5 to fail** — that a good seal makes the trim stage
-*unnecessary* rather than affordable, which resolves **P86** by deleting its requirement, while the
+*unnecessary* rather than affordable, which resolves P86 by deleting its requirement, while the
 store itself stays out of reach because it is sized by peak power and friction does not touch it.
 
 **I expect band 6 to find the thermal case binds first** — that the seal must be better for P88
@@ -60,7 +60,7 @@ authority.
 
 ## Acceptance bands
 
-**Declared before the script. Not to be edited after the run.**
+Declared before the script. Not to be edited after the run.
 
 | # | Band | FAIL if |
 |---|---|---|
@@ -76,22 +76,22 @@ authority.
 
 ## What this run will not do
 
-- **It does not select a product, a compound or a supplier**, and names no organisation.
-- **It does not measure anything.** The class ranges are handbook and the output is a requirement,
-  not a validation. **P67 still has to be run**, and [A58](A58_chamber_thermal.md)/**P88** showed it
-  is a harder test than previously described — at **−35.2 °C**, on a seal dissipating **667.2 J per
-  stroke**, over **8.0 m**.
-- **It does not model the seal's friction changing with its own temperature**, which A58 named and
+- It does not select a product, a compound or a supplier, and names no organisation.
+- It does not measure anything. The class ranges are handbook and the output is a requirement,
+  not a validation. P67 still has to be run, and [A58](A58_chamber_thermal.md)/P88 showed it
+  is a harder test than previously described, at −35.2 °C, on a seal dissipating 667.2 J per
+  stroke, over 8.0 m.
+- It does not model the seal's friction changing with its own temperature, which A58 named and
   left uncomputed, or with pressure, velocity or wear across twelve shots.
-- **It does not re-run A44, A48, A54 or A58.** It reports what each would return.
-- **E4 stands.** Nothing here is measured.
+- It does not re-run A44, A48, A54 or A58. It reports what each would return.
+- E4 stands. Nothing here is measured.
 
 ---
 
 ## Result
 
 **RUN 2026-08-20. Six of nine bands pass. The design has been sized against a seal 4.7× looser
-than it needs, and specifying one closes two open defects — but not the third.**
+than it needs, and specifying one closes two open defects, but not the third.
 
 | # | Band | Result | |
 |---|---|---|---|
@@ -106,10 +106,10 @@ than it needs, and specifying one closes two open defects — but not the third.
 
 ### The diagnosis, confirmed
 
-**A41's 83.4 N allowance is 18.71 % of the piston's pressure force, and that sits inside the
+A41's 83.4 N allowance is 18.71 % of the piston's pressure force, and that sits inside the
 elastomer O-ring range.** Band 2 was a check on the parameterisation and it landed.
 
-> **The project has been sized, since A41, against the worst common seal class — and nobody ever
+> The project has been sized, since A41, against the worst common seal class, and nobody ever
 > chose it.** A55's dispersion, A54's store, A58's seal heating and A49's band 6 failure all
 > descend from a number declared as an allowance.
 
@@ -121,21 +121,21 @@ elastomer O-ring range.** Band 2 was a check on the parameterisation and it land
 | The trim stage becomes unnecessary — below A48's ±0.323 m/s | 5.00 % | 22.3 N |
 | Section + store ≤ 2.0 kg — [A54](A54_pulse_chain.md) band 5, **P86** | **not reachable** | — |
 
-> ### **The seal specification is 4.00 % of p₀·A — 17.8 N — and the thermal case sets it**
+> ### The seal specification is 4.00 % of p₀·A, 17.8 N, and the thermal case sets it
 >
 > **Band 6 failed and that is the finding.** The seal must be better for **P88** than for the trim
-> stage: **4.00 % against 5.00 %.** *The binding requirement on this component is not the control
+> stage: 4.00 % against 5.00 %. *The binding requirement on this component is not the control
 > loop everyone has been discussing; it is that the seal must survive its own friction.*
 >
-> **A41's allowance is 4.7× looser than the specification.**
+> A41's allowance is 4.7x looser than the specification.
 
-**The requirement sits inside a filled-PTFE glide ring's handbook range of 2–10 %, but not at its
-loose end.** *This run does not claim any class achieves 4.00 %, and it is not a substitute for
-[P67](../OPEN_PROBLEMS.md) — which now has a number to be measured against.*
+The requirement sits inside a filled-PTFE glide ring's handbook range of 2-10 %, but not at its
+loose end. *This run does not claim any class achieves 4.00 %, and it is not a substitute for
+[P67](../OPEN_PROBLEMS.md), which now has a number to be measured against.*
 
 ### What a specified seal would close, and what it would not
 
-**At 5.00 % — 22.3 N — the whole chain moves:**
+At 5.00 %, 22.3 N, the whole chain moves:
 
 | | A41's allowance, 18.71 % | **At 5.00 %** |
 |---|---:|---:|
@@ -146,42 +146,42 @@ loose end.** *This run does not claim any class achieves 4.00 %, and it is not a
 | Section | 144.0 mm | **41.6 mm** |
 | 2 g seal rise per shot | 222.4 K | **59.5 K** |
 
-**P88 closes at 4.00 %. The trim stage becomes unnecessary at 5.00 %, which resolves P86 by
-deleting its requirement rather than meeting it.**
+P88 closes at 4.00 %. The trim stage becomes unnecessary at 5.00 %, which resolves P86 by
+deleting its requirement rather than meeting it.
 
 **And band 5 says the store itself stays out of reach at any seal** — **4.23 kg even at 1 %
-friction.** *That confirms A54's correction: the store is power-limited, and peak power is set by
-sheet current, which friction does not touch. **Seal choice cannot solve P86; it can only make it
-irrelevant.***
+friction. *That confirms A54's correction: the store is power-limited, and peak power is set by
+sheet current, which friction does not touch. Seal choice cannot solve P86; it can only make it
+irrelevant.*
 
 ### The stock bore is free
 
 **Band 7 returned 0.00 %.** Moving from the drawn **15.805 mm** to the **16.000 mm** ISO 6432 stock
 bore changes the required friction fraction not at all, because the fraction is *of* the pressure
-force and the acceleration cap fixes that force whatever the area. **The charge pressure moves
-22.73 → 22.18 bar and nothing else does.**
+force and the acceleration cap fixes that force whatever the area. The charge pressure moves
+22.73 to 22.18 bar and nothing else does.
 
 ### Band 8 failed, and it bounds this run rather than the design
 
-**The two velocity numerators diverge by 26.23 % at the 30 % friction end.** Beyond roughly 28 %,
+The two velocity numerators diverge by 26.23 % at the 30 % friction end. Beyond roughly 28 %,
 friction is eating so much of the shot that the zero-friction figure stops being a useful reference
-and the sweep's far end should not be quoted. **A41's 18.71 % is inside the valid range; an
-elastomer at the top of its class is not.**
+and the sweep's far end should not be quoted. A41's 18.71 % is inside the valid range; an
+elastomer at the top of its class is not.
 
 ## Consequences
 
-- **P89 opens**: the seal specification is 17.8 N and `parameters.json` carries no seal at all.
-- **P88 becomes closable by specification** rather than by adding a conduction path.
-- **P86 becomes deletable** rather than solvable, if the specification is met.
-- **P85 gains a cheap answer**: a stock 16 mm honed bore settles the bore, and matching the piston
+- P89 opens: the seal specification is 17.8 N and `parameters.json` carries no seal at all.
+- P88 becomes closable by specification rather than by adding a conduction path.
+- P86 becomes deletable rather than solvable, if the specification is met.
+- P85 gains a cheap answer: a stock 16 mm honed bore settles the bore, and matching the piston
   material removes A58's 10.79 µm.
-- **Nothing is re-run here.** A44, A48, A54 and A58 all still carry A41's allowance.
+- Nothing is re-run here. A44, A48, A54 and A58 all still carry A41's allowance.
 
 ## What this run did not settle
 
-- **It measured nothing**, names no product, compound or supplier, and its class ranges are
-  handbook. **P67 still has to be run** — at −35.2 °C, on a seal dissipating its own friction, over
-  8.0 m, twelve times (**P88**).
-- **It does not model friction changing with the seal's own temperature**, with velocity, with
+- It measured nothing, names no product, compound or supplier, and its class ranges are
+  handbook. P67 still has to be run, at −35.2 °C, on a seal dissipating its own friction, over
+  8.0 m, twelve times (P88).
+- It does not model friction changing with the seal's own temperature, with velocity, with
   pressure, or with wear across twelve shots.
-- **E4 stands.**
+- E4 stands.

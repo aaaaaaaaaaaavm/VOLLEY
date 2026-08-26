@@ -4,7 +4,7 @@ Generates GMAT mission scripts from the values already committed in `analysis/`,
 them headless, and parses the output into `validation/results/A5_astro.json` against the
 bands declared in `../A5_astro_orekit.md`.
 
-**Nothing here has been run.** These are inputs and a parser; there is no result yet.
+Nothing here has been run. These are inputs and a parser; there is no result yet.
 
 ## Why GMAT
 
@@ -14,13 +14,13 @@ brings independently implemented force models, MSISE-class atmosphere, spherical
 gravity, RK89, and is the external propagator `astro.py`'s own docstring says it has never
 been checked against.
 
-It closes **E6** and feeds **A6**. It does nothing for P5/P8 or E4: it validates the
+It closes E6 and feeds A6. It does nothing for P5/P8 or E4: it validates the
 consequences of a Δv, never the Δv itself.
 
 ## Install and invocation
 
 GMAT is a NASA open-source release (Apache-2.0). Download the binary for your platform;
-do **not** vendor it into this repository, commit inputs and outputs only.
+do not vendor it into this repository, commit inputs and outputs only.
 
 ```bash
 python3 build_scripts.py            # fills the templates; works with no GMAT installed
@@ -28,8 +28,8 @@ python3 build_scripts.py            # fills the templates; works with no GMAT in
 python3 parse_reports.py            # -> ../results/A5_astro.json
 ```
 
-**Verify the headless flags against the User Guide shipped with your GMAT build before
-relying on them.** The console executable and its run/exit switches have changed across
+Verify the headless flags against the User Guide shipped with your GMAT build before
+relying on them. The console executable and its run/exit switches have changed across
 releases, and the wrong flag silently opens the GUI instead of running the mission. Record
 the exact command that worked in `../results/A5_astro.json` (`invocation` field).
 
@@ -49,12 +49,12 @@ Placeholders are `@@NAME@@`, not `{NAME}`, GMAT's `Propagate` syntax uses braces
 
 ## Rules
 
-1. **GMAT output never edits `analysis/*.py`.** A disagreement opens a P-item; the scripts
+1. GMAT output never edits `analysis/*.py`. A disagreement opens a P-item; the scripts
    stay authoritative until the cause is understood. This is ground rule 3 in
    `docs/PROJECT_NOTES.md`.
 2. **The bands are already declared** in `../A5_astro_orekit.md`. Do not restate or widen
    them here after seeing output.
-3. **Absolute lifetimes will differ** from `astro.py`'s 2.61 / 1.30 / 0.52 yr, possibly by a
+3. Absolute lifetimes will differ from `astro.py`'s 2.61 / 1.30 / 0.52 yr, possibly by a
    factor of two, because an exponential table is not MSIS. That is expected and is not a
    failure. E6 defends the x1.80 ratio, not the years.
 
@@ -63,14 +63,14 @@ Placeholders are `@@NAME@@`, not `{NAME}`, GMAT's `Propagate` syntax uses braces
 `astro.py` scales *density* by 0.5 / 1.0 / 2.5 for low / mean / high activity. GMAT takes
 *solar flux* (F10.7, F10.7A, Kp) instead, and the relationship between the two is neither
 linear nor one-to-one. The filled scripts use F10.7 = 70 / 150 / 250 as the conventional
-low / mean / high proxies, which is **not** equivalent to the density scaling.
+low / mean / high proxies, which is not equivalent to the density scaling.
 
 This matters for the absolute lifetimes and not for the claim: the invariance band is on
 the *spread of the multiplier* across activity levels, which should hold under either
 parameterisation. If it does not, that is a real finding about the x1.80 and belongs in a
 P-item.
 
-> **Outcome (2026-07-28): it did not hold, and the P-item is `OPEN_PROBLEMS.md` P16.**
+> Outcome (2026-07-28): it did not hold, and the P-item is `OPEN_PROBLEMS.md` P16.
 > Spread 18.48 % against the ≤5 % band. The paragraph above is left exactly as written
 > before the run, it is the record of what was expected, and the fact that the failure mode
 > it names in advance is the one that occurred is the reason the run sheet was written first.

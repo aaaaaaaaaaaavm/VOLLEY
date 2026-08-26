@@ -1,6 +1,6 @@
 # A20: what a last-mile delivery vehicle can actually reach, against a host Δv budget
 
-**Closes:** nothing. **Quantifies** the ConOps adopted in **ADR-024**, and advances **PII-6**
+Closes: nothing. Quantifies the ConOps adopted in ADR-024, and advances PII-6
 (reachable-domain analysis), deferred since 2026-07-31.
 
 > ## BANDS DECLARED 2026-08-10, BEFORE `analysis/reachable_envelope.py` EXISTS.
@@ -33,40 +33,40 @@
 
 ### Band 1 failed because the band was wrong, not the physics
 
-**27.82 m/s is correct and was hand-checked.** A 450 → 500 km transfer is two burns of **13.92
+27.82 m/s is correct and was hand-checked. A 450 to 500 km transfer is two burns of 13.92
 and 13.90 m/s**. The band was declared at **10–20 m/s** while the row it sits in names a
-*two-burn Hohmann* — **the limit was computed for one burn and the quantity named two.**
+*two-burn Hohmann*, the limit was computed for one burn and the quantity named two.
 
 That is the **A15 band 2 error repeating**: a band whose named quantity and whose limit describe
 different things. The consequence is the same and it is not negotiable — **the band is not
-widened.** It failed as declared, and it is recorded as a failure.
+widened. It failed as declared, and it is recorded as a failure.
 
-**It also propagated into two documents committed the same day.** `docs/CONCEPT.md` §4 and
-**ADR-024** both state altitude repositioning at *"~14 m/s per Hohmann leg"*. That is the
-per-burn figure, so **both understate the cost of a shell change by a factor of two.** Logged as
-**P40** and corrected.
+It also propagated into two documents committed the same day. `docs/CONCEPT.md` §4 and
+ADR-024 both state altitude repositioning at *"~14 m/s per Hohmann leg"*. That is the
+per-burn figure, so both understate the cost of a shell change by a factor of two. Logged as
+P40 and corrected.
 
 ### Band 3 failed on the first run, and the failure was a bug in this script
 
 The first run returned **210.9 km** against the 250 km band. Investigating the failure — rather
 than assuming the band was pessimistic — found the cause in the analysis, not the design.
 
-`astro.boosted_elements` returns `e = 1 - r0/a`, which is **negative for a retrograde burn**
-(a < r0). The two apsides `a(1+e)` and `a(1-e)` then arrive **swapped**, so binning them by
+`astro.boosted_elements` returns `e = 1 - r0/a`, which is negative for a retrograde burn
+(a < r0). The two apsides `a(1+e)` and `a(1-e)` then arrive swapped, so binning them by
 formula put retrograde perigees into the apogee list and lost ~57 km of extent. Fixed by taking
-the min and max of the pair instead of trusting the sign; the corrected figure is **269.1 km**.
+the min and max of the pair instead of trusting the sign; the corrected figure is 269.1 km.
 
 **This is what a declared band is for.** A band chosen after seeing 210.9 km would have been set
 at 200, the run would have passed, and the bug would have shipped.
 
-> **The corrected script now reproduces an independent result exactly.** At zero host budget the
+> The corrected script now reproduces an independent result exactly. At zero host budget the
 > altitude extent is **117.2 km** — the same figure GMAT returned for **A15 band 2**, computed
 > there by propagating twelve satellites for 90 days. Two different codes, one number.
 > Band 4's 3.000° at 400 m/s likewise matches **A15 band 8**'s 133 m/s per degree.
 
 ### Band 6, the uncomfortable one, and it reports what was feared
 
-**Above about 100 m/s of host budget, the stage does most of the delivering.**
+Above about 100 m/s of host budget, the stage does most of the delivering.
 
 | Host Δv | Host share of altitude extent |
 |---:|---:|
@@ -79,35 +79,35 @@ The band declared in advance that if this happened it had to be said plainly: *"
 most of the work, VOLLEY is a release mechanism on a transfer vehicle, and that should be said
 plainly rather than discovered by a reviewer."*
 
-**So: at a host budget of 100 m/s or more, the majority of the delivery envelope is bought with
-the stage's propellant, not with VOLLEY's shot.** VOLLEY still supplies the whole of the
-along-track distribution and the whole of the RAAN spread — neither of which the stage produces —
+So: at a host budget of 100 m/s or more, the majority of the delivery envelope is bought with
+the stage's propellant, not with VOLLEY's shot. VOLLEY still supplies the whole of the
+along-track distribution and the whole of the RAAN spread, neither of which the stage produces,
 but the altitude extent that makes the "multi-orbit delivery" claim is mostly the host's.
 
-**The honest framing that survives**, and it is narrower than ADR-024 as written:
+The honest framing that survives, and it is narrower than ADR-024 as written:
 
-- **At zero host budget** VOLLEY alone still delivers **117.2 km of altitude extent and 13.2° of
-  RAAN spread** over 90 days. The dedicated configuration works with no repositioning at all.
-- **The host buys altitude range; VOLLEY buys distribution within it.** They are complements, and
+- At zero host budget VOLLEY alone still delivers 117.2 km of altitude extent and 13.2° of
+  RAAN spread over 90 days. The dedicated configuration works with no repositioning at all.
+- The host buys altitude range; VOLLEY buys distribution within it. They are complements, and
   the product claim should say which does which rather than merging them.
-- **Repositioning is not free and is not cheap.** 27.8 m/s per 50 km shell is a real propellant
-  bill against a budget nobody has disclosed (**E5**).
+- Repositioning is not free and is not cheap. 27.8 m/s per 50 km shell is a real propellant
+  bill against a budget nobody has disclosed (E5).
 
 ### What this does not establish
 
 The manoeuvre sequence, the attitude profile during repositioning, finite-burn losses, propellant
-margin, and the thermal case of a stage loitering through a multi-week campaign. **None of it is
-modelled.** A20 computes what a Δv budget reaches, not whether a stage can spend it that way.
+margin, and the thermal case of a stage loitering through a multi-week campaign. None of it is
+modelled. A20 computes what a Δv budget reaches, not whether a stage can spend it that way.
 
 ## The question
 
 `docs/CONCEPT.md` claims that a spent stage carrying VOLLEY can reposition between altitude
-shells on its own reaction-control system and deliver satellites to each. **That claim has a
-budget in it that nobody has stated**, because POEM-class propellant and control authority are
-undisclosed (**E5**).
+shells on its own reaction-control system and deliver satellites to each. That claim has a
+budget in it that nobody has stated, because POEM-class propellant and control authority are
+undisclosed (E5).
 
-So the analysis is parametric in the one number that is missing: **given a host Δv budget, what
-set of orbits can twelve satellites be placed into?**
+So the analysis is parametric in the one number that is missing: given a host Δv budget, what
+set of orbits can twelve satellites be placed into?
 
 ## What is being combined
 
@@ -119,18 +119,18 @@ Three mechanisms, and they are not interchangeable:
 | **VOLLEY's shot** | host electrical power, 2.56 kJ net | along-track velocity difference, per satellite |
 | **Differential J2** | nobody — it is free | RAAN separation, over the campaign |
 
-**Plane change is excluded** and the sheet does not report it as reachable at any budget. A15
+Plane change is excluded and the sheet does not report it as reachable at any budget. A15
 band 8 established 133 m/s per degree; a stage with 200 m/s of RCS could buy 1.5° of inclination
-and would have nothing left to reposition with. That trade is computed and reported **so the
-exclusion is demonstrated rather than asserted**.
+and would have nothing left to reposition with. That trade is computed and reported so the
+exclusion is demonstrated rather than asserted.
 
 ## Method
 
-- Host Δv budget swept over **{0, 25, 50, 100, 200, 400} m/s**.
-- Repositioning by **two-burn Hohmann transfer** between circular shells; cost per shell change
+- Host Δv budget swept over {0, 25, 50, 100, 200, 400} m/s.
+- Repositioning by two-burn Hohmann transfer between circular shells; cost per shell change
   computed, not assumed.
 - At each shell, twelve shots at commanded velocities across VOLLEY's range, using
-  `astro.boosted_elements` — imported, not restated.
+  `astro.boosted_elements`, imported, not restated.
 - RAAN spread from differential nodal regression over a stated campaign duration, using
   `astro.py`'s own J2 rate.
 - Orbital constants and the atmosphere model come from `analysis/astro.py` by import. The
@@ -151,11 +151,11 @@ Declared before the script exists. Each is capable of failing.
 
 ### Band 6 is the uncomfortable one and it is declared deliberately
 
-**If a 100 m/s host budget dominates the reachable envelope, then the product is the stage and
-VOLLEY is its dispenser.** That would not invalidate the machine, but it would change what the
+If a 100 m/s host budget dominates the reachable envelope, then the product is the stage and
+VOLLEY is its dispenser. That would not invalidate the machine, but it would change what the
 project is selling, and it is exactly the kind of result that is easy to leave uncomputed.
 
-It is declared as **report** rather than pass/fail because there is no defensible threshold — the
+It is declared as report rather than pass/fail because there is no defensible threshold, the
 honest output is the ratio itself.
 
 ### Band 2 and band 3 are the ones that carry ADR-024
@@ -180,11 +180,11 @@ If either fails, the hosted configuration is not a delivery vehicle in any meani
 
 ## Provenance
 
-**This analysis is parametric in the host Δv budget and cannot be otherwise**, because no
+This analysis is parametric in the host Δv budget and cannot be otherwise, because no
 POEM-class accommodation figure is public. Every number it produces is conditional on a budget
 that E5 would supply. That conditionality is the result, not a caveat on it.
 
 Nothing here is measured. The repositioning manoeuvres are two-burn impulsive transfers with no
 attitude profile, no finite-burn losses, no thermal case for a loitering stage, and no propellant
-margin. **A stage that must hold attitude and thermal control for a multi-week campaign is a
-problem this project has not modelled at all**, and it is named here rather than left out.
+margin. A stage that must hold attitude and thermal control for a multi-week campaign is a
+problem this project has not modelled at all, and it is named here rather than left out.

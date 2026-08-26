@@ -1,7 +1,7 @@
 # A23: tip-off at release, modelled rather than bounded
 
-**Closes:** nothing outright. **Converts** `docs/KILL_CRITERIA.md` §4 from *unmodelled* to a
-quantified requirement on a mechanism that does not yet exist, and advances **E7**.
+Closes: nothing outright. Converts `docs/KILL_CRITERIA.md` §4 from *unmodelled* to a
+quantified requirement on a mechanism that does not yet exist, and advances E7.
 
 > ## BANDS DECLARED 2026-08-10, BEFORE `analysis/tipoff_release.py` EXISTS.
 >
@@ -9,8 +9,8 @@ quantified requirement on a mechanism that does not yet exist, and advances **E7
 > and the script is absent at this commit.
 >
 > **The 2 °/s band is not being re-declared.** It was fixed on 2026-07-31 under **P30**, against
-> the flown internal NRCSD figure rather than the provisional external one, and **it is carried
-> here unchanged.** Nothing in this sheet may move it.
+> the flown internal NRCSD figure rather than the provisional external one, and it is carried
+> here unchanged. Nothing in this sheet may move it.
 
 ## Result, 2026-08-10: the release is comfortable, and the risk is somewhere else entirely
 
@@ -28,9 +28,9 @@ quantified requirement on a mechanism that does not yet exist, and advances **E7
 
 ### The reframing: release happens during coast, at zero force
 
-**A7-R's 50.7 µs is a worst case that does not occur.** The acceleration zone ends at
-**1300 mm** and release is at **1500 mm**, so the payload coasts **200 mm — 12.20 ms — with the
-commanded force already at zero** before it separates.
+A7-R's 50.7 µs is a worst case that does not occur. The acceleration zone ends at
+1300 mm and release is at 1500 mm, so the payload coasts 200 mm, 12.20 ms, with the
+commanded force already at zero before it separates.
 
 So the residual at release is latch drag and friction, not 413 N. Reading the release grid at
 that residual:
@@ -42,15 +42,15 @@ that residual:
 | 1 % | 0.02 | 0.04 | 0.10 |
 | **~0.24 %, a 1 N residual** | **0.00** | **0.01** | **0.02** |
 
-**At a 1 N residual the mechanism has a quarter of a millisecond of slack and still lands two
+At a 1 N residual the mechanism has a quarter of a millisecond of slack and still lands two
 orders of magnitude inside the band.** The release-timing requirement, which A7-R made look like
 the hard part, is comfortable.
 
 ### Band 3 is the finding, and it is a new one
 
-**The cradle holds the payload with clearance, and under a 28.92 N·m moment the payload does not
+The cradle holds the payload with clearance, and under a 28.92 N·m moment the payload does not
 sit still in that clearance. It accelerates across it at 688 rad/s² and arrives at the far side
-hard.**
+hard.
 
 | Cradle clearance | Rotation available | Time to cross | **Arrival rate** | vs the 2 °/s band |
 |---:|---:|---:|---:|---:|
@@ -61,85 +61,85 @@ hard.**
 | 1.00 mm | 5.87 mrad | 4.13 ms | **163.0 °/s** | **82×** |
 | 2.00 mm | 11.75 mrad | 5.84 ms | **230.6 °/s** | **115×** |
 
-**There is no clearance in this table that is benign.** Even 50 µm — a fit tighter than the sled's
-own 0.05 mm gap-shim tolerance — puts the payload into its cradle at eighteen times the tip-off
+There is no clearance in this table that is benign. Even 50 µm, a fit tighter than the sled's
+own 0.05 mm gap-shim tolerance, puts the payload into its cradle at eighteen times the tip-off
 band.
 
-**What happens next is not modelled and that is the honest state.** The payload impacts, rebounds
-by some restitution, crosses the gap again, and rattles until the energy is gone. **Whether it has
+What happens next is not modelled and that is the honest state. The payload impacts, rebounds
+by some restitution, crosses the gap again, and rattles until the energy is gone. Whether it has
 settled into steady contact by the time release comes 158 ms later depends on a restitution and
-damping model this project does not have.** If it is still moving at release, the tip-off is set
+damping model this project does not have. If it is still moving at release, the tip-off is set
 by the rattle and not by the mechanism — and the rattle is 18 to 115 times the band.
 
-**This is a load case as well as a rate problem.** The payload arrives with
+This is a load case as well as a rate problem. The payload arrives with
 ½·I·ω² of rotational energy into its own CDS corner rails, twelve times per campaign, and nothing
 in this repository has sized for it.
 
 ### The fix this points at: preload the cradle, do not tighten it
 
-**Tightening the clearance does not work.** Arrival rate goes as √(clearance), so going from
-0.5 mm to 0.05 mm — a factor of ten — only reduces the arrival rate by √10, from 115 to 36 °/s.
+Tightening the clearance does not work. Arrival rate goes as √(clearance), so going from
+0.5 mm to 0.05 mm, a factor of ten, only reduces the arrival rate by √10, from 115 to 36 °/s.
 **It is still 18× the band.**
 
-**Preloading the cradle removes the mechanism instead of shrinking it.** If the payload is held
+Preloading the cradle removes the mechanism instead of shrinking it. If the payload is held
 against its seat with a preload exceeding the 85 N couple reaction (band 4), there is no gap to
 accelerate across and no impact. The reaction force is modest and the preload is achievable.
 
 **Band 5 prices the alternative.** Making the release insensitive by geometry instead would need
-the CoM offset to come down from **70 mm to 3.545 mm** — a 20× reduction, which means aligning
+the CoM offset to come down from 70 mm to 3.545 mm, a 20x reduction, which means aligning
 the payload CoM with the thrust line rather than trimming it. That is a cradle redesign, and
 against a preload it is the expensive option.
 
-Logged as **P41**.
+Logged as P41.
 
 ### What this still does not establish
 
-**A7 remains unrun as specified.** No contact mechanics, no restitution, no structural compliance,
+A7 remains unrun as specified. No contact mechanics, no restitution, no structural compliance,
 no friction model, no multibody solver. The rattle question above is precisely what a multibody
-run would answer and this cannot. **The release mechanism is still undefined**, and this sheet's
-output is a specification for it — ≤ ~1 N residual at release, ≤ ~250 µs of skew, and a preloaded
-cradle — rather than an analysis of one.
+run would answer and this cannot. The release mechanism is still undefined, and this sheet's
+output is a specification for it, <= ~1 N residual at release, <= ~250 µs of skew, and a preloaded
+cradle, rather than an analysis of one.
 
 ## What A7-R established, and what it left out
 
 A7 was specified against Project Chrono, which is unavailable, and the release mechanism it would
-simulate **is undefined in this repository**. A7-R therefore computed the *tolerance* the
+simulate is undefined in this repository. A7-R therefore computed the *tolerance* the
 mechanism must hold rather than inventing one:
 
-> The payload CoM sits **70 mm** off the thrust line, so the 413.2 N push produces a **28.92 N·m**
-> moment about it. The angular-impulse budget to stay inside 2 °/s is **I·ω = 1.465 mN·m·s** on a
-> transverse inertia of 0.042 kg·m². **The full push may act unbalanced for only 50.7 µs.**
+> The payload CoM sits 70 mm off the thrust line, so the 413.2 N push produces a 28.92 N·m
+> moment about it. The angular-impulse budget to stay inside 2 °/s is I·ω = 1.465 mN·m·s on a
+> transverse inertia of 0.042 kg·m². The full push may act unbalanced for only 50.7 µs.
 
-That is a correct and useful bound. **What it does not model is the stroke.**
+That is a correct and useful bound. What it does not model is the stroke.
 
 ## The thing nobody has modelled: the payload has to take up its clearance first
 
-The cradle holds the payload **with clearance**. Under a 28.92 N·m moment the payload does not sit
-still in that clearance — **it accelerates across it and arrives at the far side with a rate.**
+The cradle holds the payload with clearance. Under a 28.92 N·m moment the payload does not sit
+still in that clearance, it accelerates across it and arrives at the far side with a rate.
 
     alpha = M / I = 28.92 / 0.042 = 688 rad/s^2
 
-Crossing a clearance angle θ takes √(2θ/α), and the payload arrives at ω = αt. **For any plausible
-cradle clearance that arrival rate is far above 2 °/s**, which means the release rate is not the
-only question — there is an impact into the cradle at the start of every shot, and it is a load
+Crossing a clearance angle θ takes √(2θ/α), and the payload arrives at ω = αt. For any plausible
+cradle clearance that arrival rate is far above 2 °/s, which means the release rate is not the
+only question, there is an impact into the cradle at the start of every shot, and it is a load
 case on the payload's own rails that appears nowhere in this project.
 
-**This is the half A7-R could not see**, because it treated release as the only event.
+This is the half A7-R could not see, because it treated release as the only event.
 
 ## Method
 
 Three stages, all rigid-body, all numpy:
 
-1. **Clearance take-up.** Angular acceleration under the offset moment, time and arrival rate at
+1. Clearance take-up. Angular acceleration under the offset moment, time and arrival rate at
    contact, swept over cradle clearance.
-2. **Constrained stroke.** With the payload pressed into contact, the moment is reacted as a
+2. Constrained stroke. With the payload pressed into contact, the moment is reacted as a
    couple over the payload length; report the reaction force the cradle carries for 158.6 ms.
-3. **Release.** Parametric in the mechanism, because the mechanism is undefined: sweep the
-   **time skew** between the two constraint points releasing, and the **residual force** at
+3. Release. Parametric in the mechanism, because the mechanism is undefined: sweep the
+   time skew between the two constraint points releasing, and the residual force at
    release, and report the tip-off rate for each. The 2 °/s contour is the requirement the
    mechanism must meet.
 
-**Nothing is invented.** Where a mechanism property is needed, it is a swept axis and the output
+Nothing is invented. Where a mechanism property is needed, it is a swept axis and the output
 is a requirement on it.
 
 ## Acceptance bands
@@ -157,8 +157,8 @@ Declared before the script exists. Each is capable of failing.
 
 ### Band 2 is the one that separates a mechanism problem from a geometry problem
 
-**If an ideal release still tips the payload past 2 °/s, no mechanism can save it.** The fix would
-have to be the 70 mm offset itself — a cradle that aligns the payload CoM with the thrust line, or
+If an ideal release still tips the payload past 2 °/s, no mechanism can save it. The fix would
+have to be the 70 mm offset itself, a cradle that aligns the payload CoM with the thrust line, or
 a push that is applied through the CoM rather than along the axis.
 
 **Band 5 exists to price that fix in advance**, so the answer is available whichever way band 2
@@ -166,10 +166,10 @@ lands.
 
 ### Band 6 is written to be able to fail loudly
 
-A release skew tolerance of tens of microseconds is **already demanding** for a mechanical
+A release skew tolerance of tens of microseconds is already demanding for a mechanical
 release. If the swept space shows the requirement is tighter than any achievable one-shot
-mechanism, that is not a caveat — it is a statement that **kill criterion 4 cannot be met by this
-release concept**, and `KILL_CRITERIA.md` §4 would move from *unmodelled* to *crossed*.
+mechanism, that is not a caveat, it is a statement that kill criterion 4 cannot be met by this
+release concept, and `KILL_CRITERIA.md` §4 would move from *unmodelled* to *crossed*.
 
 ## What happens at each outcome, fixed now
 
@@ -185,10 +185,10 @@ release concept**, and `KILL_CRITERIA.md` §4 would move from *unmodelled* to *c
 
 ## What this cannot establish
 
-**A7 remains unrun as specified.** This is a rigid-body model with no contact mechanics, no
+A7 remains unrun as specified. This is a rigid-body model with no contact mechanics, no
 structural compliance, no friction model at the rails, and no multibody solver behind it. It
 computes what a mechanism must achieve; it does not verify that any mechanism achieves it, and it
 cannot substitute for the Chrono run A7 asks for or for T-5 on hardware.
 
-**The release mechanism is still undefined.** That is the honest state, and this sheet's output is
+The release mechanism is still undefined. That is the honest state, and this sheet's output is
 a specification for it rather than an analysis of it.

@@ -1,4 +1,4 @@
-# A59 — the drive tube as a beam, a column and a pressure vessel
+# A59, the drive tube as a beam, a column and a pressure vessel
 
 **Bands declared 2026-08-19, before `analysis/tube_structure.py` existed.**
 Verify with `git show --stat <this commit> -- analysis/tube_structure.py`, which must return nothing.
@@ -7,21 +7,21 @@ Verify with `git show --stat <this commit> -- analysis/tube_structure.py`, which
 
 ## Why this run exists
 
-**[ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md) took the stroke from 2.18 m to
-8.0 m and nothing structural was checked.** [A49](A49_design_surface.md) costed the tube as
+[ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md) took the stroke from 2.18 m to
+8.0 m and nothing structural was checked. [A49](A49_design_surface.md) costed the tube as
 *"a plain cylinder at one wall thickness, no bending, no alignment tolerance, no dynamic seal
-behaviour"* — its own words — and added that **every omission flatters a long tube.**
+behaviour"*, its own words, and added that every omission flatters a long tube.
 
-**`cad/build_gen6.py` says the same thing in its docstring**: 22.73 bar on this bore needs
+`cad/build_gen6.py` says the same thing in its docstring: 22.73 bar on this bore needs
 0.16 mm of wall and the minimum practical wall is 1.0 mm, *"so the section is set by handling and
-by carrying A38's 201.7 N cradle preload — neither of which is modelled here."*
+by carrying A38's 201.7 N cradle preload, neither of which is modelled here."*
 
-**So the tube is drawn at a wall thickness chosen by two criteria that were never computed**, and
-it is now **8.0 m long at 17.805 mm outside diameter — an aspect ratio of 449:1.**
+So the tube is drawn at a wall thickness chosen by two criteria that were never computed, and
+it is now 8.0 m long at 17.805 mm outside diameter, an aspect ratio of 449:1.
 
 ## What is actually being asked
 
-**The drive tube is three things at once**, and the repository has only ever checked the first:
+The drive tube is three things at once, and the repository has only ever checked the first:
 
 | | |
 |---|---|
@@ -29,18 +29,18 @@ it is now **8.0 m long at 17.805 mm outside diameter — an aspect ratio of 449:
 | **A beam** | it spans the stage, it sags under handling and ascent load, and it has a bending mode that must clear the launch band |
 | **A column** | the shot's axial reaction, **p₀·A**, runs back through it to whatever holds it |
 
-**And a fourth thing that is not structural but is decided by the same variable:** the piston has
+And a fourth thing that is not structural but is decided by the same variable: the piston has
 to slide through it. Any residual bow is side load on the seal, which is **P67**, which A49 band 6
 already showed is the term this design point is most exposed to.
 
-**The design variable is support spacing**, and this run asks what spacing each criterion demands.
+The design variable is support spacing, and this run asks what spacing each criterion demands.
 
 ## Declared before the run
 
-**The material is not stated anywhere in the repository, and that is itself a finding.**
-[A49](A49_design_surface.md) computes `tube_kg` at **2700 kg/m³**, aluminium.
-[`analysis/precharged.py`](../analysis/precharged.py) sizes the chamber at **7800 kg/m³** with a
-**500 MPa** allowable and a safety factor of 2 — steel. **Nothing says which the tube is.** Both
+The material is not stated anywhere in the repository, and that is itself a finding.
+[A49](A49_design_surface.md) computes `tube_kg` at 2700 kg/m³, aluminium.
+[`analysis/precharged.py`](../analysis/precharged.py) sizes the chamber at 7800 kg/m³ with a
+500 MPa allowable and a safety factor of 2, steel. Nothing says which the tube is. Both
 are computed here and the difference is reported rather than resolved by preference.
 
 | | Value | Where it comes from |
@@ -54,7 +54,7 @@ are computed here and the difference is reported rather than resolved by prefere
 | Ascent case | **25 g** quasi-static | `sizing.py::retention_gate`, g_ascent |
 | **Support model, declared here so it cannot be tuned afterwards** | a split ring clamp of 3 mm wall, 12 mm wide, plus a 40 × 12 × 3 mm standoff bracket to the rail, plus two fasteners at 2 g — all aluminium | an estimate, and stated as one |
 
-**Mode constants and the beam formulae are the ones `sizing.py::track_first_mode` already uses**,
+Mode constants and the beam formulae are the ones `sizing.py::track_first_mode` already uses,
 not restated: λ² = 9.87 pinned-pinned and 22.37 fixed-fixed.
 
 ## The prediction, recorded before the run
@@ -72,7 +72,7 @@ else. That is worth recording either way.
 
 ## Acceptance bands
 
-**Declared before the script. Not to be edited after the run.**
+Declared before the script. Not to be edited after the run.
 
 | # | Band | FAIL if |
 |---|---|---|
@@ -88,25 +88,25 @@ else. That is worth recording either way.
 
 ## What this run will not do
 
-- **No FEA.** Euler–Bernoulli beam, Euler column, thin-wall hoop. No shear deformation, no local
+- No FEA. Euler, Bernoulli beam, Euler column, thin-wall hoop. No shear deformation, no local
   crushing at the clamps, no stress concentration, no weld or joint.
-- **It does not model the seal.** The link to **P67** is named and left there; side load from a
+- It does not model the seal. The link to P67 is named and left there; side load from a
   residual bow is not computed.
-- **It does not design a support.** The clamp model above is a mass estimate declared in advance,
+- It does not design a support. The clamp model above is a mass estimate declared in advance,
   not a bracket anyone has drawn.
-- **It does not settle the material.** It reports both and records that the repository does not say.
-- **Random vibration is not covered** — only a 25 g quasi-static case. The 109 Hz mode work in
+- It does not settle the material. It reports both and records that the repository does not say.
+- Random vibration is not covered, only a 25 g quasi-static case. The 109 Hz mode work in
   [A33](A33_track_dynamics.md) and the Q-sweep in A22 are the precedent for what a real dynamic
   case would need, and neither exists for this tube.
 
-**Provenance: model output. E4 stands — nothing here is measured.**
+Provenance: model output. E4 stands, nothing here is measured.
 
 ---
 
 ## Result
 
 **RUN 2026-08-19. Six of nine bands pass. The three that fail all say the same thing, and the
-prediction above was half wrong in a way that matters.**
+prediction above was half wrong in a way that matters.
 
 | # | Band | Result | |
 |---|---|---|---|
@@ -122,17 +122,17 @@ prediction above was half wrong in a way that matters.**
 
 ### The tube is not a pressure vessel, and it is barely a beam. It is a column.
 
-**Hoop stress is a non-issue at 13.9× margin**, which confirms `build_gen6.py`'s own docstring:
+Hoop stress is a non-issue at 13.9x margin, which confirms `build_gen6.py`'s own docstring:
 0.16 mm of wall would hold the gas and the section is set by something else entirely.
 
-**That something else is buckling.** The shot's axial reaction is **445.86 N**, and the Euler load
-of the unsupported 8.0 m tube is **19.9 N**.
+That something else is buckling. The shot's axial reaction is 445.86 N, and the Euler load
+of the unsupported 8.0 m tube is 19.9 N.
 
-> **The drive tube buckles under the reaction of its own shot by a factor of 45.**
+> The drive tube buckles under the reaction of its own shot by a factor of 45.
 >
-> **Intermediate support is not good practice here. It is what makes the machine work at all.**
+> Intermediate support is not good practice here. It is what makes the machine work at all.
 
-Steel is no escape — 57.7 N against the same 891.7 N. **The failure is geometric**, not a material
+Steel is no escape, 57.7 N against the same 891.7 N. The failure is geometric, not a material
 shortfall: an 8.0 m column of 1870 mm⁴ second moment cannot carry 446 N at any modulus a metal
 offers.
 
@@ -145,8 +145,8 @@ offers.
 | 1 g sag ≤ 10 % of bore | 2.5 m |
 | Bending at 25 g | 4.0 m |
 
-**Two independent criteria land on the same number**, which is the useful result: **seven
-intermediate supports on the 8 m span**, and the rail interface is a piece of structure rather
+Two independent criteria land on the same number, which is the useful result: seven
+intermediate supports on the 8 m span, and the rail interface is a piece of structure rather
 than a set of brackets. **Band 4 fails and it should** — it asked whether three would do.
 
 ### The prediction was wrong where it mattered, and it is recorded as wrong
@@ -155,8 +155,8 @@ than a set of brackets. **Band 4 fails and it should** — it asked whether thre
 that the supports would cost more than half a kilogram and send the design point back onto A49's
 surface.
 
-**They cost 99.7 g.** Seven clamps at 14.2 g each. **ADR-034's mass argument survives the supports
-comfortably, and the worry that shaped the plan for this run was unfounded.**
+They cost 99.7 g. Seven clamps at 14.2 g each. ADR-034's mass argument survives the supports
+comfortably, and the worry that shaped the plan for this run was unfounded.
 
 ### The real mass risk is band 9, and it is not structural at all
 
@@ -167,34 +167,34 @@ comfortably, and the worry that shaped the plan for this run was unfounded.**
 | Against A49 band 7's 2.0 kg limit | **passes** | **fails by 1.7×** |
 | Unsupported first mode | 1.67 Hz | 1.68 Hz |
 
-**The mode barely moves between them** — E/ρ is nearly the same for both metals, so stiffness per
-unit mass is not a lever. **The mass moves by 2.15 kg**, which is larger than every other term this
+The mode barely moves between them, E/ρ is nearly the same for both metals, so stiffness per
+unit mass is not a lever. The mass moves by 2.15 kg, which is larger than every other term this
 run computes put together.
 
-> **And the repository does not say which metal the tube is.**
-> [A49](A49_design_surface.md) computes `tube_kg` at **2700 kg/m³**.
+> And the repository does not say which metal the tube is.
+> [A49](A49_design_surface.md) computes `tube_kg` at 2700 kg/m³.
 > [`analysis/precharged.py`](../analysis/precharged.py) sizes the chamber, which is the same
-> pressure boundary, at **7800 kg/m³** with a 500 MPa allowable.
-> **ADR-034's mass argument rests on the lighter of two numbers nobody has chosen between.**
-> Recorded as **P85**.
+> pressure boundary, at 7800 kg/m³ with a 500 MPa allowable.
+> ADR-034's mass argument rests on the lighter of two numbers nobody has chosen between.
+> Recorded as P85.
 
 ### What this means for ADR-034
 
-**The design point survives this run, and it survives it for a different reason than expected.**
+The design point survives this run, and it survives it for a different reason than expected.
 The supports are nearly free; the exposure is a material assumption. **No band was widened and the
 design point does not move** — bands 2, 3 and 4 report that the tube as drawn needs support, which
 is a change to the mounting rather than to the stroke.
 
-**A49's own note said every omission in it flatters a long tube. On the structure, that turns out
-to be true only for the material.**
+A49's own note said every omission in it flatters a long tube. On the structure, that turns out
+to be true only for the material.
 
 ## What this run did not settle
 
-- **No FEA, no random vibration, no local crushing at the clamps.** [A33](A33_track_dynamics.md)
-  showed that a moving mass depresses a beam's first mode as it passes, and **that effect is not
-  computed here at all** — the carriage traverses all seven spans on every shot.
-- **The support is a mass estimate, not a bracket.** Nothing has been drawn, and the 25 g reaction
-  each one carries — about **101 N** at 1.0 m spacing — has not been taken into a joint.
-- **The link to P67 is named and left there.** A residual bow puts side load on the seal, and the
+- No FEA, no random vibration, no local crushing at the clamps. [A33](A33_track_dynamics.md)
+  showed that a moving mass depresses a beam's first mode as it passes, and that effect is not
+  computed here at all, the carriage traverses all seven spans on every shot.
+- The support is a mass estimate, not a bracket. Nothing has been drawn, and the 25 g reaction
+  each one carries, about 101 N at 1.0 m spacing, has not been taken into a joint.
+- The link to P67 is named and left there. A residual bow puts side load on the seal, and the
   seal coefficient is the term this design point is most exposed to.
-- **E4 stands.** Nothing here is measured.
+- E4 stands. Nothing here is measured.

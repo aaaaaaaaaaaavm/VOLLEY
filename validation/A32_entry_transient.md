@@ -3,16 +3,16 @@
 **The last band with a plausible chance of killing the plate drive.**
 
 [A31](A31_plate_drive_normal_force.md) settled the steady state: the plate centres itself, the
-restoring force is 0.1 % of thrust, and thrust is blind to alignment. **A31 explicitly does not
-model the transient**, and its own limitations section names entry as "where a destabilising
+restoring force is 0.1 % of thrust, and thrust is blind to alignment. A31 explicitly does not
+model the transient, and its own limitations section names entry as "where a destabilising
 transverse impulse would do its damage".
 
 Two transients exist in this architecture and neither has been looked at:
 
-1. **Establishment.** The satellite starts at rest and the stator is switched on. Eddy currents
+1. Establishment. The satellite starts at rest and the stator is switched on. Eddy currents
    in the plate take time to build, so thrust is not available at t = 0 and the machine is
    pushing against a secondary that is not yet responding.
-2. **Segment handover.** [ADR-022](../docs/adr/022-stator-segmented-not-block-commutated.md)
+2. Segment handover. [ADR-022](../docs/adr/022-stator-segmented-not-block-commutated.md)
    segments the stator, and a 340 mm plate crossing a segment boundary sees the travelling field
    truncated under part of its own length.
 
@@ -35,10 +35,10 @@ Two transients exist in this architecture and neither has been looked at:
 
 ### Band 1 — two different models now agree
 
-**A time-domain thin-sheet solve and A31's frequency-domain layered solve agree to 9.0 %** —
+A time-domain thin-sheet solve and A31's frequency-domain layered solve agree to 9.0 %,
 610.6 N against 670.9 N at the same operating point. Different physics implementation, different
 domain, different discretisation, same answer to within the band. **The plate drive's thrust
-figure is no longer single-sourced**, which is more than can be said for most numbers in this
+figure is no longer single-sourced, which is more than can be said for most numbers in this
 repository.
 
 ### Band 2 — the entry transient is a non-event
@@ -50,9 +50,9 @@ repository.
 | **Distance travelled while establishing** | **0.679 mm** |
 | Against the acceleration zone | **0.05 %** of it |
 
-The satellite starts at rest, so it barely moves while the eddy currents establish. **The concern
-that motivated this sheet — that entry is where a destabilising impulse does its damage — does
-not survive contact with the time constant.** 3.2 ms is short against a 142 ms stroke, and at
+The satellite starts at rest, so it barely moves while the eddy currents establish. The concern
+that motivated this sheet, that entry is where a destabilising impulse does its damage, does
+not survive contact with the time constant. 3.2 ms is short against a 142 ms stroke, and at
 rest it is short against nothing at all.
 
 ### Band 3 fails, and the band is what is wrong
@@ -60,9 +60,9 @@ rest it is short against nothing at all.
 **The transverse force peaks at 2.73× its steady-state value during establishment.** The band
 required it not to exceed steady state.
 
-**It never changes sign.** It is restoring throughout, and the overshoot is *toward* centre, not
+It never changes sign. It is restoring throughout, and the overshoot is *toward* centre, not
 away from it. And the absolute numbers are these: steady-state transverse force at 0.5 mm offset
-is **0.824 N** against **611 N** of thrust, so a 2.73× transient peak is about **2.25 N** — a
+is 0.824 N against 611 N of thrust, so a 2.73x transient peak is about 2.25 N, a
 force that would move a 4.2 kg plate 0.4 mm in a tenth of a second, on a transient lasting six
 milliseconds.
 
@@ -73,7 +73,7 @@ destabilising force that happened to be smaller than its own steady state.
 
 **The band is left exactly as declared and is not re-run.** Recorded here so the next sheet does
 not repeat it: **a stability band must be on the excursion or on the absolute force, never on the
-ratio to the steady state it is transiently overshooting.** Logged as **P51**. Same class as A2
+ratio to the steady state it is transiently overshooting. Logged as P51. Same class as A2
 band 3, which passed while measuring numerical cancellation on a symmetry axis — a band can be
 well-formed, falsifiable, and still not be the question.
 
@@ -81,7 +81,7 @@ well-formed, falsifiable, and still not be the question.
 
 **Thrust ripple across a segment boundary is 30.1 % peak-to-peak against a 20 % band.**
 
-**And it is not the joint gap.** Sweeping the unenergised gap at the joint, separately from the
+And it is not the joint gap. Sweeping the unenergised gap at the joint, separately from the
 band, which stands as declared:
 
 | Unenergised gap at the joint | Thrust | Ripple |
@@ -91,20 +91,20 @@ band, which stands as declared:
 | 2 mm | 613.8 N | 29.5 % |
 | **0 mm** | 613.3 N | **25.0 %** |
 
-**Closing the gap entirely leaves 25 %.** The ripple is not a gap effect, it is the **longitudinal
-truncation of the travelling field** at the edge of an energised section — the classic end effect
+Closing the gap entirely leaves 25 %. The ripple is not a gap effect, it is the longitudinal
+truncation of the travelling field at the edge of an energised section, the classic end effect
 of a segmented long stator with a short secondary, and it is intrinsic to the topology rather
 than to the joint design.
 
 **The consequence is the one the band was written to catch.** With four segments over 1.30 m, the
-segment-crossing frequency sweeps **0 → 61.5 Hz** across the stroke, and the track's first two
-modes are at **48 Hz and 109 Hz**. A 30 % force disturbance sweeping through 48 Hz is **A17's
-force-ripple chirp problem in a new place**, and **P36** already records that the track has no
+segment-crossing frequency sweeps 0 to 61.5 Hz across the stroke, and the track's first two
+modes are at 48 Hz and 109 Hz. A 30 % force disturbance sweeping through 48 Hz is A17's
+force-ripple chirp problem in a new place, and P36 already records that the track has no
 dynamic design case. This does not get to be assumed clear.
 
-**The direction, not the fix.** Energising *overlapping* segments so the field under the plate is
+The direction, not the fix. Energising *overlapping* segments so the field under the plate is
 never truncated is the obvious candidate and it is not computed here. Longer segments lower the
-crossing frequency but do not remove the truncation. Logged as **P52**.
+crossing frequency but do not remove the truncation. Logged as P52.
 
 ### Three new solvers in a row, three first runs wrong, three caught by their own bands
 
@@ -118,17 +118,17 @@ Stated once, plainly, because it is the most useful thing in this sheet.
 
 **Every one of those would have been published as a result.** Each was caught by a band declared
 before the script existed, and in every case the band that caught it was the *verification* band
-— the one that exists only to check the solver against something already known, and that adds no
+the one that exists only to check the solver against something already known, and that adds no
 new physics. **That is the cheapest band to write and the one most often left out.**
 
 ---
 
 ## What is being computed
 
-A **time-domain** solve of the thin-sheet secondary, which is a different model from A31's
+A time-domain solve of the thin-sheet secondary, which is a different model from A31's
 frequency-domain layered solve on purpose. The sheet's induced current is carried as a stream
 function ψ; including the sheet's own reaction field gives each spatial mode a magnetic diffusion
-time τ_k, and it is that time constant — absent from every steady-state result so far — that the
+time τ_k, and it is that time constant, absent from every steady-state result so far, that the
 transient turns on.
 
 The imposed field is windowed in x, so a segment boundary is a step in the window and the plate
@@ -139,55 +139,55 @@ straddling two segments falls out of the same solve.
 ### Band 1 — the transient solver reproduces the steady state
 
 **Band: at constant velocity with the stator fully energised, thrust from this solver agrees with
-A31's layered solve to within 15 %.**
+A31's layered solve to within 15 %.
 
-Two different models — a time-domain thin sheet against a frequency-domain layered solve — so the
+Two different models, a time-domain thin sheet against a frequency-domain layered solve, so the
 band is loose. **It is not loose about the sign or the order of magnitude.** A30 band 2 caught a
 solver returning identically zero and A31 band 5 caught one returning 705 % of physics, both on
 their first run; this band exists because that has now happened twice in one day.
 
 ### Band 2 — the machine is not waiting for its own secondary
 
-**Quantity:** distance travelled from switch-on before thrust first reaches 90 % of its
+Quantity: distance travelled from switch-on before thrust first reaches 90 % of its
 steady-state value.
 
 **Band: ≤ 65 mm**, which is 5 % of the 1.30 m acceleration zone.
 
 **This band may fail.** If establishment costs a material fraction of the stroke, the exit
-velocity falls and the profile the **A28** velocity loop tracks is wrong at exactly the point
+velocity falls and the profile the A28 velocity loop tracks is wrong at exactly the point
 where it has least authority.
 
 ### Band 3 — nothing transient pushes the plate at the wall
 
-**Quantity:** peak transverse force on the plate at 0.5 mm offset at any instant during
+Quantity: peak transverse force on the plate at 0.5 mm offset at any instant during
 establishment, against its own steady-state value at the same offset.
 
 **Band: the transient peak does not exceed the steady-state value, and does not change sign.**
 
 A31 found the transverse force restoring and negligible in steady state. The concern this band
-tests is whether the *approach* to that state overshoots or reverses — because a plate driven
+tests is whether the *approach* to that state overshoots or reverses, because a plate driven
 across 2 mm of clearance during the first milliseconds does not care what the steady state would
 have been.
 
 ### Band 4 — the plate crosses a segment boundary without a step
 
-**Quantity:** peak-to-peak thrust ripple as the plate traverses one segment boundary, as a
+Quantity: peak-to-peak thrust ripple as the plate traverses one segment boundary, as a
 fraction of mean thrust.
 
 **Band: ≤ 20 %.**
 
 A 340 mm plate on a segmented 1.30 m stator spans a boundary for a substantial part of the
 stroke. Above 20 % this becomes a force disturbance at a frequency set by the segment pitch and
-the velocity, sweeping upward through the stroke — which is the **A17** force-ripple chirp
+the velocity, sweeping upward through the stroke, which is the A17 force-ripple chirp
 problem in a new place, and it would have to be shown clear of the track modes rather than
 assumed clear.
 
 ## What this cannot settle
 
-- **The sheet model is not the layered model.** It carries the secondary's own reaction field but
+- The sheet model is not the layered model. It carries the secondary's own reaction field but
   treats the stators as an imposed windowed field rather than solving the gap. Band 1 is what
   bounds the disagreement.
-- **Rigid plate, rigid track.** A transverse impulse is applied to a body assumed not to bend.
-- **No mechanical model of retention.** How the satellite is held before the stator takes over is
+- Rigid plate, rigid track. A transverse impulse is applied to a body assumed not to bend.
+- No mechanical model of retention. How the satellite is held before the stator takes over is
   undefined in this architecture and is not modelled here.
-- **Nothing is measured.** **E4** stands.
+- Nothing is measured. E4 stands.

@@ -1,4 +1,4 @@
-# A48 — a motor that steers rather than throws
+# A48, a motor that steers rather than throws
 
 **Bands declared 2026-08-16, before `analysis/trim_stage.py` existed.**
 Verify with `git show --stat <this commit> -- analysis/trim_stage.py`, which must return nothing.
@@ -7,29 +7,29 @@ Verify with `git show --stat <this commit> -- analysis/trim_stage.py`, which mus
 
 ## Why this run exists
 
-**Asked in review: can Gen6 be gas *and* electromagnetic, each a fail-safe for the other?**
+Asked in review: can Gen6 be gas *and* electromagnetic, each a fail-safe for the other?
 
-**The mutual-redundancy form does not survive arithmetic and is recorded as
-[PII-20](../docs/VAULT.md) rather than run.** For either drive to deploy alone, each must be
-sized for the full duty; A35 prices the electromagnetic half at **C2 + C3 = 11.54 + 26.35 kg**,
+The mutual-redundancy form does not survive arithmetic and is recorded as
+[PII-20](../docs/VAULT.md) rather than run. For either drive to deploy alone, each must be
+sized for the full duty; A35 prices the electromagnetic half at C2 + C3 = 11.54 + 26.35 kg,
 which is exactly what ADR-032 deleted. And [A47](A47_gen6_fmea.md) has since shown the payoff
-would be small anyway — an entire architecture change moved expected delivery by **0.37
-satellites**.
+would be small anyway, an entire architecture change moved expected delivery by 0.37
+satellites.
 
-**But the question contains a better idea than the one it asks.** Gen6's largest live defect is
-not energy, it is control: **[P67](../OPEN_PROBLEMS.md)** — velocity is committed before the shot,
-3σ dispersion is **1.113 %**, and **93.4 % of that variance is a seal friction nobody has
-measured.** A fivefold better transducer moves it **0.008 %**. There is no instrumentation route.
+But the question contains a better idea than the one it asks. Gen6's largest live defect is
+not energy, it is control: [P67](../OPEN_PROBLEMS.md), velocity is committed before the shot,
+3σ dispersion is 1.113 %, and 93.4 % of that variance is a seal friction nobody has
+measured. A fivefold better transducer moves it 0.008 %. There is no instrumentation route.
 
-**Gas is an excellent energy store and cannot servo. A linear motor is a mediocre energy store and
-an excellent servo.** This run asks what it costs to use each for what it is good at: **gas
-delivers the energy, a short motor section corrects the velocity it actually produced.**
+Gas is an excellent energy store and cannot servo. A linear motor is a mediocre energy store and
+an excellent servo. This run asks what it costs to use each for what it is good at: gas
+delivers the energy, a short motor section corrects the velocity it actually produced.
 
 ## The machine being priced
 
 A stator section at the muzzle end of the 2.18 m stroke, acting on a magnet set carried by the
 carriage, energised only after the gas has finished. It measures exit velocity and adds or removes
-the difference from the setpoint. **It never throws the payload — it only corrects it.**
+the difference from the setpoint. It never throws the payload, it only corrects it.
 
 ## Declared inputs
 
@@ -44,7 +44,7 @@ the difference from the setpoint. **It never throws the payload — it only corr
 
 ## Acceptance bands
 
-**Declared before the script. Not to be edited after the run.**
+Declared before the script. Not to be edited after the run.
 
 | # | Band | FAIL if |
 |---|---|---|
@@ -85,9 +85,9 @@ the difference from the setpoint. **It never throws the payload — it only corr
 
 ### The idea works on every axis except the one I mis-declared
 
-**Correcting the full ±3σ costs 37.7 J — 2.021 % of the shot — over 39.7 mm, 1.822 % of the
-stroke, for 0.340 kg.** Added mass per satellite goes **1.403 → 1.431 kg**, still inside the
-threshold. At **3× the friction spread** it is 5.53 % of the stroke and 1.032 kg, so the answer
+Correcting the full ±3σ costs 37.7 J, 2.021 % of the shot, over 39.7 mm, 1.822 % of the
+stroke, for 0.340 kg. Added mass per satellite goes 1.403 to 1.431 kg, still inside the
+threshold. At 3x the friction spread it is 5.53 % of the stroke and 1.032 kg, so the answer
 does not depend on the number nobody has measured.
 
 **Band 6 is the point of the run: Gen6 can be given back the precision it traded**, because a loop
@@ -95,15 +95,15 @@ correcting a *measured* velocity does not care that the gas produced it open-loo
 
 ### Band 5, and the error is mine
 
-**A37's 200 W is a *charging* budget** — the power drawn from the host over the sixty-second
-indexing window. **I declared it against an *instantaneous mechanical* power.** Those are
+A37's 200 W is a *charging* budget, the power drawn from the host over the sixty-second
+indexing window. I declared it against an *instantaneous mechanical* power. Those are
 different quantities and the comparison was never meaningful.
 
 **The physics is unarguable and does not depend on the band.** At 29 m/s, power is force times
-velocity. Correcting 0.323 m/s takes 37.7 J; deliver it over 39.7 mm and it lasts **1.4 ms**, so
+velocity. Correcting 0.323 m/s takes 37.7 J; deliver it over 39.7 mm and it lasts 1.4 ms, so
 it is **28 kW while it happens.** Stretching the section to the full 15 % band 3 allows still
-leaves **3.3 kW**. Reaching 200 W at 29 m/s needs a **6.9 N** force and therefore a **5.5 m**
-section — **longer than the stroke.** *200 W was unreachable by construction, and I should have
+leaves 3.3 kW. Reaching 200 W at 29 m/s needs a 6.9 N force and therefore a 5.5 m
+section, longer than the stroke. *200 W was unreachable by construction, and I should have
 seen that before declaring it.*
 
 **Recorded as a declaration error, and the band stands as failed.** The precedent is A40 band 1,
@@ -111,23 +111,23 @@ where the same thing happened and was recorded the same way.
 
 ### What band 5 was groping at, and it is real
 
-**The trim stage is pulse power.** 37.7 J at 28 kW is exactly the shape of requirement **C3** —
-*the energy arrives during the shot* — which A35 prices at **26.35 kg** and which ADR-032 deleted.
+The trim stage is pulse power. 37.7 J at 28 kW is exactly the shape of requirement C3,
+*the energy arrives during the shot*, which A35 prices at 26.35 kg and which ADR-032 deleted.
 
-**But at 1/50th of the energy.** Gen5's shot is 2782 J; this is 37.7. Whether that store is
-grams or kilograms is **not answered here**, because pulse hardware scales with *current*, not
-with energy, and no run has sized it. **That is the question that decides the idea**, and it needs
+But at 1/50th of the energy. Gen5's shot is 2782 J; this is 37.7. Whether that store is
+grams or kilograms is not answered here, because pulse hardware scales with *current*, not
+with energy, and no run has sized it. That is the question that decides the idea, and it needs
 its own bands.
 
 ### What it re-opens, named rather than counted
 
-- **P34** — a payload carrying a magnetometer cannot fly in this magazine. **Magnets return to
-  the moving part, so this defect returns with them.**
-- **E35** — the payload's field exposure becomes a design variable again.
-- **The cradle** — the carriage must hold magnets in alignment as well as the payload, and it
+- P34, a payload carrying a magnetometer cannot fly in this magazine. Magnets return to
+  the moving part, so this defect returns with them.
+- E35, the payload's field exposure becomes a design variable again.
+- The cradle, the carriage must hold magnets in alignment as well as the payload, and it
   already does not exist.
-- **A velocity sensor** before the trim section, which Gen6 has no equivalent of.
-- **One more shared element** in the FMEA — and [A47](A47_gen6_fmea.md) has just shown that
+- A velocity sensor before the trim section, which Gen6 has no equivalent of.
+- One more shared element in the FMEA, and [A47](A47_gen6_fmea.md) has just shown that
   shared elements are what cost delivered satellites.
 
 ### The predictions
@@ -139,9 +139,9 @@ anyway.
 
 ## What this run does not do
 
-- **No pulse-store sizing**, which is the open question above.
-- **Constant K<sub>t</sub> over the section, no end effects, no commutation loss**, and an ideal
+- No pulse-store sizing, which is the open question above.
+- Constant K<sub>t</sub> over the section, no end effects, no commutation loss, and an ideal
   velocity measurement. Every one flatters the trim stage.
-- **The correction is a constant force**, not a designed control law. A28 exists for Gen5 and
+- The correction is a constant force, not a designed control law. A28 exists for Gen5 and
   there is no equivalent here.
-- **Nothing is measured**, including the friction the stage exists to correct.
+- Nothing is measured, including the friction the stage exists to correct.

@@ -1,16 +1,16 @@
 # Operating-point correction, 2026-08-03
 
 After correcting the shared thrust quadrature, I reran the same regenerative-braking model.
-It returns **291.4 J**, 23.0% of the sled's 1268.3 J, and leaves **934.7 J** for the eddy
+It returns 291.4 J, 23.0% of the sled's 1268.3 J, and leaves 934.7 J for the eddy
 brake. Net electrical-to-payload efficiency is **20.99%**. The eight predeclared bands remain
 satisfied. The 2026-07-31 numbers below are retained as the superseded run record.
 
 ---
 # A11: how much of the sled's energy the motor can take back
 
-**Closes:** nothing. **Opens:** whether the 2025 arrest decision was read wider than it argued.
+Closes: nothing. Opens: whether the 2025 arrest decision was read wider than it argued.
 
-The sled leaves the release point with **1291 J**, which is **44.8 % of the 2881 J shot**, and
+The sled leaves the release point with 1291 J, which is 44.8 % of the 2881 J shot, and
 every joule of it is currently dissipated in the eddy-current brake. That is the single largest
 loss in the machine, larger than copper (828 J) and larger than the payload itself (547 J).
 
@@ -24,10 +24,10 @@ not touch it.
 What followed it is not the same statement. `DECISION_LOG.md`, `RESULTS.md`, `SUMMARY.md`,
 `README.md` and `motor_model.py`'s own docstring all now carry a flat "no regeneration credit",
 and the docstring goes further: the sled's kinetic energy "is dissipated in the arrest brake by
-design and is **NOT** recovered". **Cannot stop the sled** and **cannot recover any of its
-energy** are different claims, and only the first one was ever argued.
+design and is NOT recovered". Cannot stop the sled and cannot recover any of its
+energy are different claims, and only the first one was ever argued.
 
-The reason nobody caught it is worth recording: the 2021 draft credited **55 %** of sled kinetic
+The reason nobody caught it is worth recording: the 2021 draft credited 55 % of sled kinetic
 energy as regeneration, that was a double-count, and correcting it dropped the headline
 efficiency from 40 % to 32 %. After an error that size in that direction, the safe position was
 to credit nothing. Safe is not the same as right, and this run asks the question the retraction
@@ -54,8 +54,8 @@ energy returned to the bank Erec = (W - Qcu)*CONV_EFF - P_AUX*t
 k = RHO_CU * vol_cu / (Kt * WIND_THICK * FILL)^2
 ```
 
-**`vol_cu` is the copper of the energised section, and that is the one modelling choice in this
-run that changes the answer.** The regenerative section is *added stator downstream of the
+`vol_cu` is the copper of the energised section, and that is the one modelling choice in this
+run that changes the answer. The regenerative section is *added stator downstream of the
 release point*; it is not the acceleration winding, which the sled has already left. So its
 copper volume is `s * DEPTH * WIND_THICK * FILL`, giving `k = 4.86e-4 W/N²` at `s = 0.240 m`,
 where the accelerating winding's own 1.30 m gives `2.63e-3`. The pessimistic reading, that
@@ -64,22 +64,22 @@ carried as a declared sensitivity below rather than argued away.
 
 ### Two constraints, and they are what make the answer small
 
-1. **`K <= K_RATED`.** The winding has one sheet-current rating and it does not care about the
+1. `K <= K_RATED`. The winding has one sheet-current rating and it does not care about the
    sign of the force. So `F <= 0.9*Kt*K_RATED = 1413.7 N`, the same force that accelerated the
    sled. This is the 2025 argument, stated as an inequality.
-2. **`s = 0.240 m`.** The closed envelope is 1839 mm and release is at 1500 mm, leaving 339 mm
+2. `s = 0.240 m`. The closed envelope is 1839 mm and release is at 1500 mm, leaving 339 mm
    of arrest section. Allowing roughly 100 mm for the eddy fin and the ring-spring stack leaves
-   about 240 mm for winding **without growing P9's 44 % envelope overrun**.
+   about 240 mm for winding without growing P9's 44 % envelope overrun.
 
 Constraint 2 is a packaging assumption, not a layout anybody has drawn, and it is stated as one.
 The distance sweep below exists so a reader can see exactly how much rides on it.
 
 ### What that gives
 
-At the rating, over 240 mm: `W = 339 J`, `t = 15.6 ms`, `Qcu = 15 J`, and about **305 J returns
-to the bank, 23.6 % of the sled's energy**. The sled still arrives at the brake with 952 J.
+At the rating, over 240 mm: `W = 339 J`, `t = 15.6 ms`, `Qcu = 15 J`, and about 305 J returns
+to the bank, 23.6 % of the sled's energy. The sled still arrives at the brake with 952 J.
 
-**Copper is not the limit here and that is the surprise.** The braking pulse is 15.6 ms against
+Copper is not the limit here and that is the surprise. The braking pulse is 15.6 ms against
 the shot's 157 ms, and it energises 240 mm of stator against 1300 mm, so the loss is 15 J
 against the shot's 828. Within the rating, recovery therefore *rises monotonically with force*:
 there is no interior optimum to find, the answer is "brake as hard as the winding allows". The
@@ -104,21 +104,21 @@ would stop the sled inside 240 mm) and over regen section length (0.10 to 1.00 m
 | 7 | Optimum braking force within the rating | **at the rating, no interior optimum** | recovery increases monotonically to `K_RATED` |
 | 8 | Peak bank current during regen | **~244 A** | below the shot's 346.8 A, so the drive is not re-rated |
 
-**Falsification.** Row 7 landing on an interior optimum would mean copper dominates over 240 mm
+Falsification. Row 7 landing on an interior optimum would mean copper dominates over 240 mm
 and this is worth a fraction of the claim. Row 5 coming back below 300 J would mean the motor
 *can* very nearly arrest the sled, which would make the 2025 decision wrong rather than narrow,
 and R5 would have to be reopened rather than supplemented. Row 6 moving at all is a model
 defect, not a result: it would mean regen is coupled to the acceleration integration somewhere
 it should not be.
 
-**What this run cannot settle.** Whether 240 mm of stator can be packaged into the arrest section
+What this run cannot settle. Whether 240 mm of stator can be packaged into the arrest section
 alongside a working eddy brake. The energy side of that repartition looks easy, the fin's duty
 falls 26 % so a shorter fin still holds its transient rise, but the eddy coefficient would have
 to roughly triple to arrest the sled in the remaining length, and no fin has been designed to
-that. **A11 answers the electromagnetic question only**; the mechanical one is recorded as an
+that. A11 answers the electromagnetic question only; the mechanical one is recorded as an
 open item, not assumed away.
 
-**What it also cannot settle** is whether recovery is worth its mass. The regen section is added
+What it also cannot settle is whether recovery is worth its mass. The regen section is added
 stator and added converter, against a mass rollup that already excludes the enclosure, radiator
 and avionics (P10). 305 J per shot is 3.7 kJ over a twelve-shot campaign, and that is an energy
 argument, not a mass one.
@@ -146,11 +146,11 @@ ESR the discharge uses, in the other direction.
 | *3.00* | *4240* | *1018.3* | *173.9* | *43.5* | *754.3* | *58.4* | *593* | *7.61* |
 | *3.81* | *5385* | *1291.9* | *409.2* | *51.2* | *812.6* | *62.9* | *714* | *0.00* |
 
-**Rows below the rule are the design. Rows above it are italicised because they are not
-available**: they need sheet current beyond `K_RATED`, which is the 2025 argument restated. They
+Rows below the rule are the design. Rows above it are italicised because they are not
+available: they need sheet current beyond `K_RATED`, which is the 2025 argument restated. They
 are reported because the shape matters. Recovery is still climbing at 3.81x rated, where the sled
-stops dead inside 240 mm, so **the thing standing between this machine and full regenerative
-arrest is the winding rating, not the physics of copper loss**. That is a Phase II question with
+stops dead inside 240 mm, so the thing standing between this machine and full regenerative
+arrest is the winding rating, not the physics of copper loss. That is a Phase II question with
 a converter current limit in front of it (714 A against the shot's 347 A), and it is not asked
 here.
 
@@ -184,9 +184,9 @@ PII-8 reached from the acceleration side, arrived at independently from the brak
 | 7 | no interior optimum below the rating | monotone to 3.81x, let alone to 1.0x | **pass** |
 | 8 | peak current below the shot's 346.8 A | **225.3 A** | **pass** |
 
-**Eight of eight.** The prediction that mattered most was row 7, and it held for a reason worth
+Eight of eight. The prediction that mattered most was row 7, and it held for a reason worth
 stating plainly: the braking pulse is 15.6 ms against the shot's 157 ms and energises 240 mm of
-stator against 1300 mm, so copper during regeneration is **15 J against the shot's 828**. The
+stator against 1300 mm, so copper during regeneration is 15 J against the shot's 828. The
 intuition that regenerative braking is defeated by resistive loss is an intuition about long
 duty cycles, and this is not one.
 
@@ -207,10 +207,10 @@ rather than dumped in one.
 
 ### The defect this opens
 
-**240 mm of regen stator and a 300 mm eddy fin do not both fit a 339 mm arrest section.** The
+240 mm of regen stator and a 300 mm eddy fin do not both fit a 339 mm arrest section. The
 thermal side of a repartition is easy, the fin's duty falls 26 % and its transient rise with it,
 but no layout has been drawn and the eddy coefficient would have to rise sharply to arrest the
-sled in what is left. Logged as **P28** rather than resolved here by shortening the fin in a
+sled in what is left. Logged as P28 rather than resolved here by shortening the fin in a
 script, which would be exactly the "hand-edit to match" this repository's validation conventions
 forbid.
 
@@ -218,6 +218,6 @@ forbid.
 
 It does not reverse the 2025 arrest decision. The eddy brake still absorbs 952 J of every shot,
 73.7 % of what it absorbed before, and the ring spring still catches the residual. R5 was right
-about arrest and is now supplemented rather than contradicted: **the motor cannot stop the sled,
-and it can take back about a quarter of the sled's energy on the way past.** Both statements are
+about arrest and is now supplemented rather than contradicted: the motor cannot stop the sled,
+and it can take back about a quarter of the sled's energy on the way past. Both statements are
 true and only the first one was ever in the record.

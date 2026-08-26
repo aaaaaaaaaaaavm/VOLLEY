@@ -1,7 +1,7 @@
 # A14: what the deployer's electromagnetic environment does to the payload and to comms
 
-**Advances:** `OPEN_PROBLEMS.md` **E12**, open since the first defect sweep and the oldest
-unquantified item in the project. **Does not close it** — E12 closes on T-6, a measurement.
+Advances: `OPEN_PROBLEMS.md` E12, open since the first defect sweep and the oldest
+unquantified item in the project. Does not close it, E12 closes on T-6, a measurement.
 
 > ## RUN 2026-08-05. Verdict **six of eight PASS, one FAIL, one VOID as declared**
 >
@@ -9,8 +9,8 @@ unquantified item in the project. **Does not close it** — E12 closes on T-6, a
 > is the evidence. No band was widened.
 >
 > **Band 4 FAILS, and it fails by 611×.** The static Halbach field at the payload's nearest face
-> is **61.1 mT** — 1357× Earth's field and 611× a magnetometer's full scale. The switching
-> transient, which is what everyone including me assumed was the problem, is **not** the dominant
+> is 61.1 mT, 1357x Earth's field and 611x a magnetometer's full scale. The switching
+> transient, which is what everyone including me assumed was the problem, is not the dominant
 > term. Results below.
 
 ## Result, 2026-08-05
@@ -36,7 +36,7 @@ unquantified item in the project. **Does not close it** — E12 closes on T-6, a
 
 ### What this actually found
 
-**The dominant term is the permanent magnets, not the drive.** That is the opposite of what the
+The dominant term is the permanent magnets, not the drive. That is the opposite of what the
 question is usually asked about, and it is the finding worth carrying: the payload's nearest face
 sits 6 mm behind a Halbach array and sees 61 mT, while the entire switching transient produces
 36 mV in an unshielded loop at the same place. A customer worried about the *inverter* is worried
@@ -44,22 +44,22 @@ about the wrong thing.
 
 **Band 2 passes narrowly and that matters.** 36 mV against a 50 mV threshold is 1.4× of margin, on
 an upper-bound calculation with no shielding and no payload structure. At 40 kHz the ripple halves
-and so does the EMF, to about 18 mV. **This corroborates P33 independently**: the 20 kHz end of
+and so does the EMF, to about 18 mV. This corroborates P33 independently: the 20 kHz end of
 the declared switching range is defensible on loss but marginal on coupling, and the design should
 sit at the top of the range.
 
-**Comms is not a live concern.** The SiC knee is 6.4–15.9 MHz, putting UHF 56–72 dB below it, GPS
+Comms is not a live concern. The SiC knee is 6.4-15.9 MHz, putting UHF 56-72 dB below it, GPS
 L1 80–96 dB and S-band 86–102 dB, and the 1.839 m structure has a radiation efficiency of
-**1.5e-8 to 6.0e-8** at its own drive frequency — it cannot radiate at the fundamental. The
-credible coupling path to a launch vehicle's communications is **conducted, through a shared power
-bus**, not radiated, which is a specification problem rather than a physics one.
+1.5e-8 to 6.0e-8 at its own drive frequency, it cannot radiate at the fundamental. The
+credible coupling path to a launch vehicle's communications is conducted, through a shared power
+bus, not radiated, which is a specification problem rather than a physics one.
 
 ### The two far stations are in a regime this model gets wrong, and P3 says so
 
 The decay sweep behind the array is exponential to about 40 mm and then flattens into an
 edge-effect tail: 61.1 mT at 6 mm, 7.8 at 16 mm, 2.2 at 26 mm, then 0.62, 0.46, 0.34 mT at 42, 56
-and 106 mm. **P3 already records that this model's 20 mm and 50 mm stray values do not reproduce
-the paper's**, attributing it to sensitivity to modelled array length, with edge effects
+and 106 mm. P3 already records that this model's 20 mm and 50 mm stray values do not reproduce
+the paper's, attributing it to sensitivity to modelled array length, with edge effects
 dominating the far field. That is exactly the regime the CoM and far-face rows sit in.
 
 **So band 4's failure is solid and bands 5's numbers are not.** The nearest-face value is in the
@@ -69,30 +69,30 @@ reason band 5 is VOID rather than a soft pass.
 
 ### Band 8: the 2021 judgement was right, and it was still not justified
 
-Per Feng et al.'s stage parameters, a coilgun stage discharges **392 kA** at a 217 Hz equivalent
-rate, giving **355.6 mV** in the same loop at the same 0.3 m standoff against VOLLEY's 0.534 mV —
+Per Feng et al.'s stage parameters, a coilgun stage discharges 392 kA at a 217 Hz equivalent
+rate, giving 355.6 mV in the same loop at the same 0.3 m standoff against VOLLEY's 0.534 mV,
 a ratio of **666×**. The band asked for > 100×, so the electromagnetic half of the 2025
 architecture decision holds.
 
-**It holds by a margin nobody had computed.** `docs/HISTORY.md` records that the judgement was an
+It holds by a margin nobody had computed. `docs/HISTORY.md` records that the judgement was an
 instinct about pulsed megaampere discharges next to unshielded electronics. The instinct was
-correct. It was still an instinct, and 666× is the first number this project has ever put behind
+correct. It was still an instinct, and 666x is the first number this project has ever put behind
 it. Both halves of that sentence belong in the record.
 
 Both sides of the ratio use the same crude infinite-wire model so the comparison is symmetric.
-VOLLEY's three-phase fields largely cancel at distance, so that model **overstates** VOLLEY and
-the true ratio is larger than 666×. The absolute VOLLEY figures in the table above use the
+VOLLEY's three-phase fields largely cancel at distance, so that model overstates VOLLEY and
+the true ratio is larger than 666x. The absolute VOLLEY figures in the table above use the
 harmonic-decay model, not the wire model.
 
 ### Consequences, taken from the rule fixed before the run
 
 Outcome 1 was the declared case: bands 1–3 pass and band 4 fails, so the dominant term is static
-and E12 splits. The AC half is scoped and hands off to T-6 for confirmation. **The static half
-becomes a new numbered defect**, because a 3U payload cannot fly a magnetometer in this magazine
+and E12 splits. The AC half is scoped and hands off to T-6 for confirmation. The static half
+becomes a new numbered defect, because a 3U payload cannot fly a magnetometer in this magazine
 without a keep-out or a shield, and that is a payload compatibility constraint belonging in the
 interface specification rather than an appendix.
 
-**This analysis does not close E12.** E12 closes on T-6, which is a measurement, and nothing here
+This analysis does not close E12. E12 closes on T-6, which is a measurement, and nothing here
 is measured.
 
 ---
@@ -101,7 +101,7 @@ is measured.
 
 Two separate facts put it here on the same day.
 
-**The 2025 decision to drop the coilgun rested partly on this and never computed it.** My
+The 2025 decision to drop the coilgun rested partly on this and never computed it. My
 2021–2025 notebooks give two reasons for abandoning the coilgun: the acceleration is enormous and
 "the EMI environment is awful", and either defeats the point of carrying an *unmodified* CubeSat
 ([`../docs/HISTORY.md`](../docs/HISTORY.md#why-the-coilgun-was-actually-dropped)). The
@@ -109,39 +109,39 @@ acceleration half is now a number in ADR-003. The electromagnetic half has no wo
 anywhere. An architecture was rejected on grounds that were never calculated, and the successor
 has never had its own calculated either.
 
-**The same gap exists in my other electromagnetic launch paper**, whose abstract lists
+The same gap exists in my other electromagnetic launch paper, whose abstract lists
 "electromagnetic coupling" among challenges "identified and analyzed" while its body never
 returns to the subject ([`../docs/SKILLS.md`](../docs/SKILLS.md)). Two studies, no EMI
 calculation in either.
 
-**And the question has now been asked from outside the project**, by a systems engineer wanting
+And the question has now been asked from outside the project, by a systems engineer wanting
 to know what the emissions do to the payload and to the launch vehicle's communications. That is
 exactly the pair E12 covers and has never answered.
 
-**P33 is what makes it computable today.** Until 2026-08-05 this repository had no phase current
-and no winding inductance — `motor_model.shot()` integrates in sheet current and its `I_peak` is
+P33 is what makes it computable today. Until 2026-08-05 this repository had no phase current
+and no winding inductance, `motor_model.shot()` integrates in sheet current and its `I_peak` is
 the DC-link draw. `analysis/drive_electrical.py` now supplies both, so the `dI/dt` that drives
 inductive coupling is a derived quantity rather than a guess.
 
 ## What this is, and what it is not
 
-**It is a scoping calculation from quantities already in `analysis/results/`.** No new apparatus,
-no new constants, no measurement. Its purpose is to establish **which term dominates** — the
-switching transient or the static Halbach field — so that T-6 measures the right thing, and to
+It is a scoping calculation from quantities already in `analysis/results/`. No new apparatus,
+no new constants, no measurement. Its purpose is to establish which term dominates, the
+switching transient or the static Halbach field, so that T-6 measures the right thing, and to
 put a number against a nine-year-old judgement.
 
-**It is not an EMC qualification.** MIL-STD-461 RE102/CE102 limits are absolute field strengths
+It is not an EMC qualification. MIL-STD-461 RE102/CE102 limits are absolute field strengths
 at a specified distance with a specified antenna; reproducing them needs a radiating model this
 project does not have. Bands 6 and 7 below are therefore **relative** margins, which is what a
 scoping pass can honestly assert. T-6 in [`../docs/QUALIFICATION_PLAN.md`](../docs/QUALIFICATION_PLAN.md)
 remains the measurement and nothing here substitutes for it.
 
-**It is model-to-model at best, and mostly model-to-comparator.** E4 stands: nothing measured.
+It is model-to-model at best, and mostly model-to-comparator. E4 stands: nothing measured.
 
 ## The geometry, read from CAD rather than assumed
 
 `cad/parameters.json` `sled` and `payload_3u` fix where the payload actually sits. The Halbach
-array's back face is at **z = 14 mm** from the thrust line (`halbach_array_z_outer`). The payload
+array's back face is at z = 14 mm from the thrust line (`halbach_array_z_outer`). The payload
 is 100 mm tall with its centre of mass 70 mm above the thrust line
 (`payload_com_offset_above_thrust_line`), so it spans z = 20 to 120 mm.
 
@@ -151,7 +151,7 @@ is 100 mm tall with its centre of mass 70 mm above the thrust line
 | Payload centre of mass | **56 mm** |
 | Payload far face | **106 mm** |
 
-**The nearest face is 6 mm from the back of a Halbach array**, inside the 10 mm station at which
+The nearest face is 6 mm from the back of a Halbach array, inside the 10 mm station at which
 `verify_field.py` already reports 22.7 mT. That is the number this analysis exists to take
 seriously.
 
@@ -184,7 +184,7 @@ it is and how firm it is.
 | Comms bands | UHF 400 MHz, GPS L1 1575.42 MHz, S-band 2200 MHz | standard allocations |
 | Coilgun comparator | Feng et al. per-stage discharge | ADR-003, `docs/PRIOR_ART.md` |
 
-**One comparator is deliberately absent.** A threshold for permanently magnetising a payload's
+One comparator is deliberately absent. A threshold for permanently magnetising a payload's
 soft-magnetic parts would need a materials list this project does not have. Rather than invent
 one, band 5 reports the field and is **declared VOID-able** on that ground.
 
@@ -209,8 +209,8 @@ Declared before the script exists. Each is capable of failing.
 
 **Band 4 is expected to be the hard one** and is written to fail rather than to be survived: 22.7 mT
 at 10 mm against a 100 µT comparator is a factor of 227 before the 6 mm station is even
-evaluated. If it fails, the honest consequence is not a footnote — it is that **the magnetic
-keep-out is a payload compatibility constraint**, and it belongs in the interface specification
+evaluated. If it fails, the honest consequence is not a footnote, it is that the magnetic
+keep-out is a payload compatibility constraint, and it belongs in the interface specification
 and on the front page, not in an appendix.
 
 **Band 8 is the one with a verdict attached to a past decision.** If the ratio is large, the 2021
@@ -222,7 +222,7 @@ reasoning was wrong and that must be recorded as plainly as P17 and P22 were.
 
 1. **Bands 1–3 pass, band 4 fails.** The dominant term is the static field, not the switching
    transient. E12 splits: the AC half is scoped and closes to T-6 for confirmation; the static
-   half becomes a **new numbered P-item** about payload compatibility, and T-6's priority rises.
+   half becomes a new numbered P-item about payload compatibility, and T-6's priority rises.
 2. **Bands 1–3 fail.** The switching design is implicated. `paper.tex`'s claim that EMI "is
    contained by keeping the high-`di/dt` loop area small, filtering the bank input, and enclosing
    the converter in a shielded housing" becomes a defect, because it would be asserting mitigation
@@ -233,5 +233,5 @@ reasoning was wrong and that must be recorded as plainly as P17 and P22 were.
    was dropped for a reason that does not hold.
 
 **No band here may be widened after the run.** A missed band produces a numbered defect, not a
-revised target — the rule in [`README.md`](README.md) that makes this directory tests rather than
+revised target, the rule in [`README.md`](README.md) that makes this directory tests rather than
 exercises.

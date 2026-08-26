@@ -1,6 +1,6 @@
 # A19: which assumed inputs actually move the answer, and which only look like they do
 
-**Closes:** nothing. **Ranks** the assumptions behind P29, P28, `docs/STRUCTURAL_GAP.md` and the
+Closes: nothing. Ranks the assumptions behind P29, P28, `docs/STRUCTURAL_GAP.md` and the
 A18 sweep set, so that the measurement programme can be ordered by leverage rather than by
 whichever number is most argued about.
 
@@ -11,15 +11,15 @@ whichever number is most argued about.
 > form: **the bands are about rank stability, not about a pass/fail value.** A sensitivity
 > ranking has no correct answer to be checked against. What it can be checked against is whether
 > the ranking it produces is a property of the physics or an artefact of how the sweeps were
-> drawn — and that is falsifiable.
+> drawn, and that is falsifiable.
 
 ---
 
 ## Result, 2026-08-10: **band 1 FAILS**, and the failure is the most useful thing here
 
 `analysis/sensitivity_ranking.py`, bands committed at `03628da` before it existed. Results in
-`analysis/results/sensitivity_ranking.json`. The harness reproduces the operating point exactly —
-**v_exit 16.388 m/s, net efficiency 20.99 %, 6.375 kg per satellite** — which is the first check
+`analysis/results/sensitivity_ranking.json`. The harness reproduces the operating point exactly,
+v_exit 16.388 m/s, net efficiency 20.99 %, 6.375 kg per satellite, which is the first check
 that the sweep is driving the real pipeline and not a copy of it.
 
 ### Swing, over the full declared range
@@ -58,38 +58,38 @@ that the sweep is driving the real pipeline and not a copy of it.
 
 ### Band 1 failed exactly where it was written to
 
-**Net efficiency has two different leaders depending on the metric.** Swing says **bank ESR**, at
-23.24 % against magnet remanence's 5.50 %. Elasticity says **magnet remanence**, at 0.4869 against
-bank ESR's −0.0376 — a factor of thirteen the other way.
+Net efficiency has two different leaders depending on the metric. Swing says bank ESR, at
+23.24 % against magnet remanence's 5.50 %. Elasticity says magnet remanence, at 0.4869 against
+bank ESR's −0.0376, a factor of thirteen the other way.
 
-Both are correct and they are measuring different things. **Bank ESR wins on swing because its
-declared range is enormous** — 6 to 65 mΩ, a factor of eleven, because the nominal has no source
-at all (E17) and the upper bound is A10's hard ceiling. **Magnet remanence wins on elasticity
-because efficiency genuinely responds to it**, and its range is narrow only because a magnet grade
+Both are correct and they are measuring different things. Bank ESR wins on swing because its
+declared range is enormous, 6 to 65 mΩ, a factor of eleven, because the nominal has no source
+at all (E17) and the upper bound is A10's hard ceiling. Magnet remanence wins on elasticity
+because efficiency genuinely responds to it, and its range is narrow only because a magnet grade
 is a thing you can look up once someone specifies one.
 
 The rule fixed in advance was: *publish both rankings side by side and state that the metric
 choice changes the answer; do not pick the more convenient one.* Both tables are above.
 
-**The engineering reading is the useful one.** Bank ESR is the top measurement priority for
-efficiency **because nobody knows what it is**, not because efficiency is especially sensitive to
+The engineering reading is the useful one. Bank ESR is the top measurement priority for
+efficiency because nobody knows what it is, not because efficiency is especially sensitive to
 it. Magnet remanence is what efficiency actually responds to. Those are different reasons to
 measure something and the ranking is worth more for keeping them apart than it would be for
 collapsing them into one number.
 
-### The result that was not expected: **`v_exit` does not respond to the bank at all**
+### The result that was not expected: `v_exit` does not respond to the bank at all
 
-Bank ESR was declared as having a path to `v_exit` — it is not in the no-path set — and its swing
-is **exactly zero across the whole range to the ceiling**.
+Bank ESR was declared as having a path to `v_exit`, it is not in the no-path set, and its swing
+is exactly zero across the whole range to the ceiling.
 
-**This is real and the mechanism is clear.** `shot()` commands a sheet current, so the force is
+This is real and the mechanism is clear. `shot()` commands a sheet current, so the force is
 `F_cmd = 0.9·K_t·K_RATED` and the acceleration is fixed; ESR changes how much energy the bank
 gives up and how far it sags, not how hard the machine pushes. Exit velocity is
-`sqrt(2·a·s)` and stays there **until the bank cannot source the demand at all**, at which point
-`shot()` raises `BankLimitError` rather than degrading — which is **P27**'s fix doing its job.
+`sqrt(2·a·s)` and stays there until the bank cannot source the demand at all, at which point
+`shot()` raises `BankLimitError` rather than degrading, which is P27's fix doing its job.
 
-So the bank's effect on exit velocity is not small. It is **nil, and then total.** A cliff, not a
-slope. That is a more useful thing to know about **P26** than a sensitivity coefficient would have
+So the bank's effect on exit velocity is not small. It is nil, and then total. A cliff, not a
+slope. That is a more useful thing to know about P26 than a sensitivity coefficient would have
 been, and no amount of ranking would have shown it if the guard had still been silently
 substituting a plausible current.
 
@@ -101,7 +101,7 @@ substituting a plausible current.
 | Net efficiency | bank ESR | nominal unsourced (E17); ceiling from A10 | **yes** |
 | kg / satellite | packing efficiency | calibrated to the 3U layout | no |
 
-**Two of the three leaders lead on ranges nobody sourced.** For `v_exit` the effect is direct:
+Two of the three leaders lead on ranges nobody sourced. For `v_exit` the effect is direct:
 the 5.66 % swing is a statement about a ±0.075 T interval that exists because no one has written
 down which magnet this machine uses. Specifying the grade would collapse that range and could
 move the leader. **This is reported, as the band required, and it qualifies the ranking rather
@@ -110,10 +110,10 @@ ranking stands, with its top two entries flagged as resting on intervals of my o
 
 ### Two limitations, both found on the first run
 
-**1. One-at-a-time sensitivity cannot see interactions, and there is a concrete one here.** Fin
-emissivity returns **exactly zero on every output including its own binding quantity**, because
+1. One-at-a-time sensitivity cannot see interactions, and there is a concrete one here. Fin
+emissivity returns exactly zero on every output including its own binding quantity, because
 at the nominal contact conductance of 500 W/m²K the joint sinks the heat and radiation is
-irrelevant. That is true at the nominal point and false as a general statement — at the bottom of
+irrelevant. That is true at the nominal point and false as a general statement, at the bottom of
 the conductance range the emissivity does matter:
 
 | Contact conductance | Fin residual at ε = 0.05 | at ε = 0.90 |
@@ -122,20 +122,20 @@ the conductance range the emissivity does matter:
 | 500 W/m²K | 0.0004 K | 0.0002 K |
 | 5000 W/m²K | 0.0000 K | 0.0000 K |
 
-**A19 sweeps one input at a time and reports zero for emissivity. A18 swept the two as a grid and
-would have caught it.** The ranking above is a ranking *at the nominal point*, and where two
+A19 sweeps one input at a time and reports zero for emissivity. A18 swept the two as a grid and
+would have caught it. The ranking above is a ranking *at the nominal point*, and where two
 uncertain inputs gate each other it will understate the one that is currently masked. Recorded
 here rather than left for a reader to find.
 
 **2. Band 5 is only meaningfully tested on one output.** Rank stability under halved ranges is a
 real test where the entries are non-zero: on net efficiency, bank ESR leads magnet remanence
-**23.24 % to 5.50 %** at full range and **9.92 % to 2.76 %** at half, so the ordering is a
+23.24 % to 5.50 % at full range and 9.92 % to 2.76 % at half, so the ordering is a
 property of the physics and not of the interval width. On `v_exit` and kg per satellite only one
-input is non-zero, so the second and third places are **ties among structural zeros broken by
+input is non-zero, so the second and third places are ties among structural zeros broken by
 list order**, and band 5 passing on those positions means nothing. The band passed; on two of
 three outputs it passed vacuously, and saying so is the point.
 
-### The binding outputs — what the seven "zero" inputs actually govern
+### The binding outputs, what the seven "zero" inputs actually govern
 
 Reporting a sensitivity of zero and stopping would be true and useless. Each input that has no
 path to the ranked three drives something, and in two cases it drives a kill criterion.
@@ -149,45 +149,45 @@ path to the ranked three drives something, and in two cases it drives a kill cri
 | Fin emissivity | fin residual after 12 shots | 0.000 K → 0.000 K — masked, see limitation 1 |
 | Magnet resistivity | magnet eddy rise per shot | 0.003 K → 0.002 K |
 
-**This column is where the measurement priority actually lives.** Structural Q moves a margin of
+This column is where the measurement priority actually lives. Structural Q moves a margin of
 safety through zero and brake pole field moves a stopping distance across the length of the
-section it has to stop in — both are pass/fail transitions inside their declared ranges, while
-the three ranked outputs move by single-digit percentages. **The headline numbers are not what is
-at risk from these assumptions. The design's viability is**, and a ranking that only looked at
+section it has to stop in, both are pass/fail transitions inside their declared ranges, while
+the three ranked outputs move by single-digit percentages. The headline numbers are not what is
+at risk from these assumptions. The design's viability is, and a ranking that only looked at
 `v_exit`, efficiency and kg per satellite would have reported six harmless zeros and missed both.
 
 ### What this says to do first
 
-1. **Measure structural Q.** It is the only input on the list that moves a margin of safety
+1. Measure structural Q. It is the only input on the list that moves a margin of safety
    through zero, and `docs/STRUCTURAL_GAP.md` already records four findings queueing behind it.
-2. **Specify the magnet grade.** It is a look-up, not a measurement, and it collapses the
+2. Specify the magnet grade. It is a look-up, not a measurement, and it collapses the
    interval behind the leader on `v_exit`.
-3. **Source the bank ESR.** Its efficiency swing is the largest number in the whole analysis and
+3. Source the bank ESR. Its efficiency swing is the largest number in the whole analysis and
    it exists because the value has no provenance; and its effect on `v_exit` is a cliff, so the
    thing to establish is which side of it the hardware sits on.
-4. **B-4 for the brake pole field**, which decides whether the brake fits the section at all.
+4. B-4 for the brake pole field, which decides whether the brake fits the section at all.
 
-**None of this is new precision.** Every input is exactly as unmeasured after this analysis as
+None of this is new precision. Every input is exactly as unmeasured after this analysis as
 before it. What has changed is the order to attack them in.
 
 ---
 
 ## What this is, and the thing it must not be mistaken for
 
-**It ranks assumptions. It does not make any of them less assumed.**
+It ranks assumptions. It does not make any of them less assumed.
 
-This project has a Monte Carlo, and it measures **dispersion** — how much `v_exit` scatters given
+This project has a Monte Carlo, and it measures dispersion, how much `v_exit` scatters given
 sensor noise, from `closed_loop_mc()`. Nothing anywhere ranks the *assumed inputs* by how much
 they move the answer. Those are different questions: dispersion asks how precisely the machine
 repeats, sensitivity asks which of the numbers nobody has measured would change the result if it
 turned out to be wrong.
 
-**The output is a measurement priority list.** It says what to measure first. It does not
+The output is a measurement priority list. It says what to measure first. It does not
 narrow a single interval, it does not convert an assumption into a result, and it must not be
-read as new precision. Every input here is unmeasured **before** this analysis and unmeasured
+read as new precision. Every input here is unmeasured before this analysis and unmeasured
 **after** it — E4 is unaffected, and so is every band that any of these inputs feeds.
 
-**The honest failure mode of this analysis is that it reads as more than it is.** A ranked table
+The honest failure mode of this analysis is that it reads as more than it is. A ranked table
 with percentages in it looks like knowledge. It is a statement about a model's derivatives with
 respect to quantities whose ranges are themselves assumed, which is why band 5 and band 6 below
 exist and why band 6 is allowed to void the whole thing.
@@ -196,7 +196,7 @@ exist and why band 6 is allowed to void the whole thing.
 
 ## The inputs, their ranges, and where each range comes from
 
-**Nine, not eight.** Magnet remanence `BR` is added to the eight this analysis was scoped
+Nine, not eight. Magnet remanence `BR` is added to the eight this analysis was scoped
 around, because it is the one input with a direct path to `v_exit` through K<sub>t</sub>, and a
 ranking of what moves exit velocity that omits the magnets would be answering a different
 question. It is declared here, before the run, rather than added afterwards.
@@ -213,7 +213,7 @@ question. It is declared here, before the run, rather than added afterwards.
 | 8 | **Packing efficiency** | 0.562 | 0.40 – 0.60 | Calibrated so the 3U case returns the twelve the machine is laid out for; the 40–60 % band is the original hedge it replaced |
 | 9 | **Magnet resistivity** | 1.4 µΩ·m | 1.2 – 1.6 | Sintered NdFeB class range. Grade unstated, as in #1 |
 
-**Six of these nine ranges have no source better than "assumed" or "a previous sweep of mine".**
+Six of these nine ranges have no source better than "assumed" or "a previous sweep of mine".
 That is recorded here, in advance, because it is the fact band 6 tests.
 
 ## The outputs
@@ -224,8 +224,8 @@ That is recorded here, in advance, because it is the fact band 6 tests.
 | **Net efficiency** | `motor_results.eff_net_pct` | 20.99 %, net of regeneration |
 | **kg per satellite** | `payload_family.kg_per_satellite` | 6.375 kg — the quantity kill criterion 1 is crossed on |
 
-**A fourth column is reported and not ranked: the binding output.** Several of these inputs have
-**no path at all** to any of the three above, and drive a kill criterion or a numbered defect
+A fourth column is reported and not ranked: the binding output. Several of these inputs have
+no path at all to any of the three above, and drive a kill criterion or a numbered defect
 instead. Reporting a sensitivity of zero and stopping would be true and useless, so each input
 also names the quantity it actually governs.
 
@@ -233,13 +233,13 @@ also names the quantity it actually governs.
 
 For each input *i* and output *y*, with the input at its nominal *x₀* and range [lo, hi]:
 
-- **Swing** = (y<sub>max</sub> − y<sub>min</sub>) / y(x₀) over {lo, x₀, hi} — a **global**
+- Swing = (y<sub>max</sub> − y<sub>min</sub>) / y(x₀) over {lo, x₀, hi}, a global
   measure, and the primary ranking key.
-- **Elasticity** = (∂y/y) / (∂x/x) at x₀, by central difference at ±5 % — a **local** measure,
+- Elasticity = (∂y/y) / (∂x/x) at x₀, by central difference at ±5 %, a local measure,
   independent of how wide the range was drawn.
 
 Ranking by a global measure alone confounds "this input matters" with "I drew a wide range for
-this input". Ranking by a local measure alone misses saturation and thresholds. **Reporting both
+this input". Ranking by a local measure alone misses saturation and thresholds. Reporting both
 is the point**, and band 1 and band 2 are the check that they agree.
 
 ---
@@ -266,8 +266,8 @@ publication is "this cannot be ranked".
 
 **Band 3** is a self-check, and it is written because this analysis is unusually easy to get
 silently wrong. Sweeping an input the model does not read produces a clean, plausible zero;
-sweeping one through the wrong module produces a clean, plausible **non**-zero. The declared-zero
-entries are known in advance from the module structure — brake pole field, structural Q, fin
+sweeping one through the wrong module produces a clean, plausible non-zero. The declared-zero
+entries are known in advance from the module structure, brake pole field, structural Q, fin
 emissivity, contact conductance and magnet resistivity have no path to `v_exit`, and none of the
 electromagnetic or thermal inputs has a path to kg per satellite, which depends only on deployer
 dry mass and packing. If any of those returns non-zero, the script is wrong.
@@ -296,11 +296,11 @@ limitation, not a revised target.
 
 ## Provenance
 
-Inputs are read from the modules that own them — `motor_model` for `BR`, `R_ESR`;
+Inputs are read from the modules that own them, `motor_model` for `BR`, `R_ESR`;
 `phase1_closeout` for the brake, thermal and structural sweeps; `astro` for the ballistic
-coefficient; `payload_family` for packing — by import and monkey-patch of the module constant,
+coefficient; `payload_family` for packing, by import and monkey-patch of the module constant,
 never by restating the value in the sweep script. Where a range comes from a previous run sheet
 it is cited to that sheet rather than re-derived.
 
-**Nothing here is measured.** This is a sensitivity analysis of a model against assumptions, and
+Nothing here is measured. This is a sensitivity analysis of a model against assumptions, and
 its own inputs are the assumptions. E4 stands.

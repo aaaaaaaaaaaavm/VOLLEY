@@ -2,7 +2,7 @@
 
 The original M2 plane stopped at the 340 x 90 mm magnet footprint and omitted fringe stress.
 Extending the mid-gap plane to 600 x 220 mm and refining from 100 x 37 to 800 x 293 points
-converges to **2680.0 N**, not 2627.6 N. A separate 1 mm-grid extent sweep from 340 x 90 mm
+converges to 2680.0 N, not 2627.6 N. A separate 1 mm-grid extent sweep from 340 x 90 mm
 to 1000 x 400 mm converges to 2679.961 N; the largest two planes differ by less than 0.0001%.
 The 600 x 220 mm result is 0.25% below the 2686.6 N volume-force calculation. All five declared bands still pass and the adopted conservative value remains
 2686.6 N.
@@ -17,34 +17,34 @@ The original footprint-plane result remains below as the superseded run record.
 ---
 # A12: the inter-array attraction, and whether `sizing.py` adopts a corrected value
 
-**Closes:** `OPEN_PROBLEMS.md` **P17**, which is HIGH and has been open since 2026-07-29.
-**Does not close:** anything about A4's structural conclusions. Those survive either way, and
+Closes: `OPEN_PROBLEMS.md` P17, which is HIGH and has been open since 2026-07-29.
+Does not close: anything about A4's structural conclusions. Those survive either way, and
 this sheet says why before it runs.
 
 ## Why this sheet exists at all
 
 P17 found that `analysis/sizing.py::inter_array_attraction()` computes the force between the two
-opposed Halbach faces from a flat-plate Maxwell-stress formula — a uniform pressure
-`B_face^2/(2*mu0)` at a mean face field of 0.55 T over the 340 x 90 mm footprint — giving
-**3672 N**, and that this number was the applied load in the CalculiX A4 run without ever having
-been checked. `magpylib.getFT()` gave **2686.6 N** converged, so the analytic form is **36.7 %
-high**.
+opposed Halbach faces from a flat-plate Maxwell-stress formula, a uniform pressure
+`B_face^2/(2*mu0)` at a mean face field of 0.55 T over the 340 x 90 mm footprint, giving
+3672 N, and that this number was the applied load in the CalculiX A4 run without ever having
+been checked. `magpylib.getFT()` gave 2686.6 N converged, so the analytic form is 36.7 %
+high.
 
-**P17 closes with its own procedural failure recorded**, and that is what this sheet fixes:
+P17 closes with its own procedural failure recorded, and that is what this sheet fixes:
 
 > *"This was computed before an acceptance band was declared for it, which inverts this project's
 > own rule. It is therefore logged as a discrepancy, not as a validated result. Proper closure
 > needs a run sheet with a band declared in advance, and a decision about whether `sizing.py`
-> adopts a corrected formula. **Do not edit `sizing.py` on the strength of this entry.**"*
+> adopts a corrected formula. Do not edit `sizing.py` on the strength of this entry."*
 
-**So this is not a blind test and it must not pretend to be.** The magpylib number is already
+So this is not a blind test and it must not pretend to be. The magpylib number is already
 known. What is declared in advance here, and what actually matters, is two things a
 knowing-the-answer run still cannot fake:
 
-1. **An independent second method**, chosen because it can disagree. If two numerical methods
+1. An independent second method, chosen because it can disagree. If two numerical methods
    built on different mathematics both land near 2687 N, that is evidence; one method agreeing
    with itself at finer mesh is not.
-2. **The adoption rule** — what happens to `sizing.py` at each possible outcome, written down
+2. The adoption rule, what happens to `sizing.py` at each possible outcome, written down
    before the outcome is known. This is the same device `validation/A4_sled_structural.md` used
    for the sled mass, where the decision rule was fixed before the CAD result that triggered it.
 
@@ -55,11 +55,11 @@ knowing-the-answer run still cannot fake:
 | **M1, force on sources** | `magpylib.getFT()`. Meshes each magnet block and integrates the field gradient over the block volume in three dimensions. Driven by `analysis/motor_model.py::build_field()` so it cannot disagree with the repo about the magnets themselves |
 | **M2, Maxwell stress on a surface** | Integrate the Maxwell stress tensor numerically over a plane in the airgap midway between the arrays: `F_y = (1/2mu0) * ∫ (B_y^2 - B_x^2 - B_z^2) dA`, sampled on a grid from the same `build_field()`. Different mathematics: a surface integral of a field the solver never differentiates, against a volume integral of a gradient |
 
-**M2 is what the analytic formula is a one-point approximation of.** The analytic form evaluates
+M2 is what the analytic formula is a one-point approximation of. The analytic form evaluates
 `B^2/(2mu0)` once, at a mean `B`, and multiplies by the area. M2 evaluates the full tensor at
-every point and integrates. If the Jensen argument in P17 is the whole story — that
-`mean(B^2) >= mean(B)^2` and a Halbach face field is strongly non-uniform — then **M2 should land
-near M1 and well below the analytic value**, and the gap is explained rather than merely observed.
+every point and integrates. If the Jensen argument in P17 is the whole story, that
+`mean(B^2) >= mean(B)^2` and a Halbach face field is strongly non-uniform, then M2 should land
+near M1 and well below the analytic value, and the gap is explained rather than merely observed.
 
 ## Acceptance bands, declared 2026-07-31 before M2 was written
 
@@ -71,8 +71,8 @@ near M1 and well below the analytic value**, and the gap is explained rather tha
 | 4 | Direction of the error | analytic is **high**, never low | any result showing the analytic form *underestimates* falsifies the Jensen argument and this entry |
 | 5 | Grid convergence of M2 | stable | halving the sample spacing moves M2 by less than 1 % |
 
-**Falsification.** Row 2 missing means one of the two methods is wrong and neither number may be
-adopted — the correct outcome would then be that P17 stays open with a second discrepancy in it,
+Falsification. Row 2 missing means one of the two methods is wrong and neither number may be
+adopted, the correct outcome would then be that P17 stays open with a second discrepancy in it,
 not that the closer-looking number wins. Row 4 failing would mean the mechanism P17 claims to
 understand is not the mechanism, and the whole entry would need withdrawing.
 
@@ -83,15 +83,15 @@ order and no other:
 
 1. `inter_array_attraction()` returns the numerically integrated force, with the analytic form
    kept in the file as the superseded method and a comment saying what replaced it and why.
-2. Plate stress and margin follow from it — they are computed from the force, so they move with it.
-3. `validation/results/A4_sled_structural.json` gains a note that its applied load was **37 %
-   heavy**, so its results are conservative. **A4 is not re-run and its verdict does not change.**
+2. Plate stress and margin follow from it, they are computed from the force, so they move with it.
+3. `validation/results/A4_sled_structural.json` gains a note that its applied load was 37 %
+   heavy, so its results are conservative. A4 is not re-run and its verdict does not change.
 4. `docs/BASELINE.md` regenerated; `make_baseline.py --check` clean afterwards.
 
 **If any band fails**, nothing in `analysis/` moves and P17 stays open. That is the whole point of
 writing the rule down first.
 
-**What is not in scope.** The retention gate is sized from a 24 kg ascent stack at 25 g
+What is not in scope. The retention gate is sized from a 24 kg ascent stack at 25 g
 (`retention_gate()`), not from the array attraction, so it does not move with this. P17 lists it
 as affected; that is wrong and is corrected here.
 
@@ -133,20 +133,20 @@ committed in `fff034e`, and `check_inter_array_force.py` (M1) was re-run unchang
 | 4 | analytic is high, never low | high by 40.2 % against M2 | **pass** |
 | 5 | M2 grid convergence under 1 % | **0.02 %** | **pass** |
 
-**Five of five.** Two methods that share only the block model of the magnets — one integrating a
+Five of five. Two methods that share only the block model of the magnets, one integrating a
 field gradient over magnet volumes, one integrating a stress tensor over a plane the field is
-never differentiated on — land 2.2 % apart and 27 % below the analytic formula. **That is the
-evidence P17 was missing.**
+never differentiated on, land 2.2 % apart and 27 % below the analytic formula. That is the
+evidence P17 was missing.
 
 ### And the mechanism P17 gave is backwards
 
-P17 explains the overestimate by Jensen's inequality: *"Maxwell stress needs the mean of `B**2`;
-the analytic form uses the square of the mean `B`; and `mean(B**2) >= mean(B)**2` for any
+P17 explains the overestimate by Jensen's inequality: *"Maxwell stress needs the mean of `B2`;
+the analytic form uses the square of the mean `B`; and `mean(B2) >= mean(B)2` for any
 non-uniform field... so the analytic form must overestimate."*
 
-**The inequality is right and the conclusion drawn from it is the wrong way round.** If
+The inequality is right and the conclusion drawn from it is the wrong way round. If
 `mean(B²) ≥ mean(B)²`, then a one-point form evaluated at the *true* mean field
-**under**estimates the true force. Jensen cannot be the reason the analytic value is high.
+underestimates the true force. Jensen cannot be the reason the analytic value is high.
 
 Decomposing M2's own field statistics on the stress plane:
 
@@ -156,21 +156,21 @@ Decomposing M2's own field statistics on the stress plane:
 | Same one-point form at the **actual** mean, `\|B_y\| = 0.4127 T` | 2073 N | **x1.776 overestimate from the assumed field** |
 | Full integral, `mean(B_y²) = 0.2158 T²` | **2628 N** | **x1.267 *under*estimate corrected by Jensen** |
 
-Net **x1.402**, against the observed 3683/2628 = **x1.402**. The two effects act in opposite
+Net x1.402, against the observed 3683/2628 = x1.402. The two effects act in opposite
 directions and the decomposition closes exactly.
 
-**So the real cause is the input, not the formula.** `B_face = 0.55 T` is not the mean normal
-field on the plane where the stress acts — that is 0.4127 T. The flat-plate form is a legitimate
+So the real cause is the input, not the formula. `B_face = 0.55 T` is not the mean normal
+field on the plane where the stress acts, that is 0.4127 T. The flat-plate form is a legitimate
 approximation whose Jensen error is only 27 % and in the *safe* direction; it was fed a field
 0.33x too high, and that swamps it.
 
-**P17 is corrected in place rather than rewritten.** It found a real 37 % error and its number
+P17 is corrected in place rather than rewritten. It found a real 37 % error and its number
 was right; its explanation was not, and a wrong mechanism attached to a right number is exactly
 the kind of thing that survives review and then misleads the next person.
 
 ### Adopted, per the rule declared before the run
 
-`analysis/sizing.py::inter_array_attraction()` takes **2686.6 N** (M1, the more direct
+`analysis/sizing.py::inter_array_attraction()` takes 2686.6 N (M1, the more direct
 computation of force on a body, and the more conservative of the two). Propagated once:
 
 | | Before | After |
@@ -180,19 +180,19 @@ computation of force on a body, and the more conservative of the two). Propagate
 | Ti side-plate stress | 33 MPa | **24 MPa** |
 | Margin against 880 MPa yield | 20.2 | **28.1** |
 
-**A4 is not re-run and its verdict does not change.** It was loaded at 3672 N, **37 % heavier
-than the field model supports**, so its 0.0194 mm airgap closure and 33.7 MPa are conservative and
+A4 is not re-run and its verdict does not change. It was loaded at 3672 N, 37 % heavier
+than the field model supports, so its 0.0194 mm airgap closure and 33.7 MPa are conservative and
 all three of its declared bands still pass. `validation/results/A4_sled_structural.json` records
 the overload rather than being regenerated, because re-running a passing analysis at a lighter
 load proves nothing that is not already known.
 
-**The retention gate does not move.** P17 listed it as affected; it is sized from a 24 kg ascent
+The retention gate does not move. P17 listed it as affected; it is sized from a 24 kg ascent
 stack at 25 g and has no dependence on the array attraction.
 
 ## What this cannot settle
 
-**Whether either numerical method is right.** Both are computed from the same analytic block model
-of the magnets — ideal uniform magnetisation, sharp corners, no manufacturing tolerance, no
-demagnetisation. They agree with each other about a shared idealisation. **A measurement would
-settle it and none exists**, which is E4 again and is the same sentence that applies to every
+Whether either numerical method is right. Both are computed from the same analytic block model
+of the magnets, ideal uniform magnetisation, sharp corners, no manufacturing tolerance, no
+demagnetisation. They agree with each other about a shared idealisation. A measurement would
+settle it and none exists, which is E4 again and is the same sentence that applies to every
 number in this repository.

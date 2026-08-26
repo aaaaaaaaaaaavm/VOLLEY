@@ -1,6 +1,6 @@
 # A15: a twelve-satellite deployment campaign from POEM, propagated in GMAT
 
-**Closes:** nothing on its own. **Exercises** the ConOps adopted in ADR-020 and tests whether the
+Closes: nothing on its own. Exercises the ConOps adopted in ADR-020 and tests whether the
 deployment story this project tells survives an independent propagator.
 
 > ## BANDS DECLARED 2026-08-05. GMAT INSTALLED AND SCRIPTS EXECUTING 2026-08-06.
@@ -10,35 +10,35 @@ deployment story this project tells survives an independent propagator.
 >
 > ### The scripts did not run on first delivery, and I said they were cross-checked
 >
-> **They were rejected by GMAT's interpreter.** `ReportFile` has no `ReportStepSize` field —
-> that belongs to `EphemerisFile` — and every one of the three scripts died on it at parse time:
+> They were rejected by GMAT's interpreter. `ReportFile` has no `ReportStepSize` field,
+> that belongs to `EphemerisFile`, and every one of the three scripts died on it at parse time:
 >
 > ```
-> **** ERROR **** Interpreter Exception: The field name "ReportStepSize" on object
+>  ERROR  Interpreter Exception: The field name "ReportStepSize" on object
 > "repsat01" is not permitted in line:
 >    " 260: GMAT repsat01.ReportStepSize = 3600;"
 > ```
 >
-> **My "generated and cross-checked" label was true and misleading.** The cross-check verified
-> the *physics* against `astro.py` — semi-major axis to 0.0000 %, which it did correctly — and
+> My "generated and cross-checked" label was true and misleading. The cross-check verified
+> the *physics* against `astro.py`, semi-major axis to 0.0000 %, which it did correctly, and
 > verified that no `@@PLACEHOLDER@@` survived. It never verified that GMAT would accept the
 > syntax, because nothing here could. I wrote a caveat about not calling it a run and then let
 > "cross-checked" carry more weight than it had earned.
 >
-> **GMAT R2022a is now installed** (`/opt/gmat/GMAT/R2022a`), the field is
-> removed, and a one-day propagation of R1 returns **"Mission run completed."** with twelve
+> GMAT R2022a is now installed (`/opt/gmat/GMAT/R2022a`), the field is
+> removed, and a one-day propagation of R1 returns "Mission run completed." with twelve
 > report files whose epoch state matches the prediction: SMA 6857.586 km against a predicted
 > 6857.59, inclination 51.6°, and RAAN regressing 4.84 °/day against a predicted 4.875.
 >
-> The integrator was loosened from 1e-11 to **1e-9** with `MinStep` 30 s, because at 1e-11 the
+> The integrator was loosened from 1e-11 to 1e-9 with `MinStep` 30 s, because at 1e-11 the
 > report step was ~35 s and a 90-day run would emit 222 000 rows per satellite. The question
-> A15 asks is secular J2 drift, which does not need that resolution. **That is a change to the
-> analysis and it is recorded here rather than made quietly.**
+> A15 asks is secular J2 drift, which does not need that resolution. That is a change to the
+> analysis and it is recorded here rather than made quietly.
 
 ## Result, all three cases, 2026-08-06
 
 GMAT R2022a, twelve satellites per case. Bands at `e067da8`. **R1 ran the full 90 days; R2 and
-R3 stopped early at 36 and 29 days because their satellites reentered — see the correction below.**
+R3 stopped early at 36 and 29 days because their satellites reentered, see the correction below.
 
 | | R1 450/51.6 | R2 350/55.2 | R3 350/9.6 | Band |
 |---|---:|---:|---:|---|
@@ -56,18 +56,18 @@ is still open. Both are set out below.
 
 > ### Correction, 2026-08-06: two of those columns were never 90-day values
 >
-> **R2 and R3 did not reach 90 days. Their satellites reentered.** R2's propagation stops at
-> **36 days** with all twelve between 182 and 190 km altitude; R3's at **29 days**, between 103
+> R2 and R3 did not reach 90 days. Their satellites reentered. R2's propagation stops at
+> 36 days with all twelve between 182 and 190 km altitude; R3's at 29 days, between 103
 > and 115 km. GMAT halted because the objects were entering the atmosphere, and I read the final
 > row as an endpoint without checking its epoch.
 >
-> So the R2 and R3 columns are **36-day and 29-day figures**, and the row labelled "RAAN spread
+> So the R2 and R3 columns are 36-day and 29-day figures, and the row labelled "RAAN spread
 > at 90 d" was wrong for both. Only R1 ran the declared 90 days.
 >
-> **This is a result, not only a bookkeeping error.** At 350 km a twelve-satellite campaign has a
-> mission life of about **one month**, and the plane spread develops *faster* there — 365° in 29
-> to 36 days against R1's 367° in 90 — because the same drag that separates the nodes is what
-> pulls the satellites down. **The deployment story at 350 km is a month long**, and that belongs
+> This is a result, not only a bookkeeping error. At 350 km a twelve-satellite campaign has a
+> mission life of about one month, and the plane spread develops *faster* there, 365° in 29
+> to 36 days against R1's 367° in 90, because the same drag that separates the nodes is what
+> pulls the satellites down. The deployment story at 350 km is a month long, and that belongs
 > in any claim made about a POEM-class host.
 
 **R3 exercises band 3 hardest**, reaching 0.7315° against a 0.75° limit — the low-inclination
@@ -76,7 +76,7 @@ case gives the largest RAAN change per cross-track shot, as predicted, and very 
 ### Band 6 is now evaluated, and the coarse number was wrong by 5.7x
 
 `validation/conjunction/close_approach.py` splines each satellite's Cartesian track and refines
-**every interior local minimum** with Brent minimisation — 182 411 of them for R1 alone — rather
+every interior local minimum with Brent minimisation, 182 411 of them for R1 alone, rather
 than reading a minimum off a 2.9-samples-per-orbit series.
 
 | | Sampled | **Refined** | Tightened by |
@@ -88,13 +88,13 @@ than reading a minimum off a 2.9-samples-per-orbit series.
 **Band 6 PASSES on all three**, worst case **396 m between sat11 and sat12 at 450 km**, about
 four times the 100 m band.
 
-**The figure I first reported was 2.275 km — 5.7× too large.** That is what a 2.9-sample-per-orbit
+The figure I first reported was 2.275 km, 5.7x too large. That is what a 2.9-sample-per-orbit
 series does, and it is why the row was recorded as unevaluated rather than passed. The refinement
 is monotone-checked: it can only return separations equal to or smaller than the sampled minimum,
 and the script asserts on any violation.
 
 **This does not close P1.** Band 6 tests *distance*, which is robust; A6's collision probability
-is still VOID on three rows. And 396 m is a **modelled** separation between two objects whose
+is still VOID on three rows. And 396 m is a modelled separation between two objects whose
 positions carry no covariance.
 
 **This matters because of band 4.** 367° of nodal spread means the planes wrap and pairs
@@ -116,8 +116,8 @@ GMAT R2022a, 90 days, twelve satellites, 60 474 rows each. Bands committed at `e
 Band 6 has since been evaluated — see above, and **band 8 has now been evaluated in closed form**
 — see below. **Band 7 was evaluated 2026-08-13 by reading the generator**, which is the only way
 it could ever have been: band 7 asks whether the campaign spans exactly 12 × 1200 s, which is a
-property of `build_poem_campaign.py`'s shot scheduling rather than anything GMAT reports. **No
-propagator run will ever produce it.**
+property of `build_poem_campaign.py`'s shot scheduling rather than anything GMAT reports. No
+propagator run will ever produce it.
 
 ### Band 7, evaluated 2026-08-13: PASS
 
@@ -129,11 +129,11 @@ propagator run will ever produce it.**
 | Emitted shot times | 0 … 13200 s | twelve, spacing **min 1200.0, max 1200.0 s** |
 | `astro.conjunction`'s own default `spacing_s` | **1200.0 s** | the two agree, which is the point |
 
-**The spacing is uniform across the whole campaign**, not merely correct on average, and the
-generator's cadence is the same number `astro.py` uses for the conjunction geometry — so the
+The spacing is uniform across the whole campaign, not merely correct on average, and the
+generator's cadence is the same number `astro.py` uses for the conjunction geometry, so the
 deployment-safety case and the GMAT campaign are scheduled against one value rather than two.
 That agreement is what band 7 was really protecting, because **P31 was exactly the failure of the
-repository carrying two inter-shot intervals at once**, and ADR-020 closed it at 1200 s.
+repository carrying two inter-shot intervals at once, and ADR-020 closed it at 1200 s.
 
 **A15 now has every band evaluated.** Band 8 is closed form and VOID as a capability claim on
 **E5**; band 7 is a generator property and passes.
@@ -145,8 +145,8 @@ pointed at the wrong obstacle. An impulsive plane change at a circular orbit is 
 
     Δv = 2·v·sin(Δi/2)
 
-and no integrator adds anything to it. **What is missing from Case B is not the number. It is the
-host.** POEM's mass and control authority are undisclosed (**E5**), so there is nothing to spend
+and no integrator adds anything to it. What is missing from Case B is not the number. It is the
+host. POEM's mass and control authority are undisclosed (E5), so there is nothing to spend
 the Δv from. Those are different kinds of missing and only the second one is real.
 
 `validation/gmat/case_b_plane_change.py` computes it, importing `MU` and `RE` from `astro.py`
@@ -159,14 +159,14 @@ rather than restating them. Results in `validation/results/A15_caseB_plane_chang
 | R3 | 350 km | 7.697 km/s | 134.3 m/s | 0.1220° |
 
 **The closed form reproduces band 1's GMAT result exactly.** Band 1 measured a maximum
-inclination change of **0.1229°** in the propagator; spending the entire shot on plane change is
-computed here as **0.1229°**. Two independent routes to the same ceiling, and it is the same
-figure [`../docs/KILL_CRITERIA.md`](../docs/KILL_CRITERIA.md) §7 already carries as **"plane
-change 0.12°, effectively nil"**.
+inclination change of 0.1229° in the propagator; spending the entire shot on plane change is
+computed here as 0.1229°. Two independent routes to the same ceiling, and it is the same
+figure [`../docs/KILL_CRITERIA.md`](../docs/KILL_CRITERIA.md) §7 already carries as "plane
+change 0.12°, effectively nil".
 
 ### The exchange rate, R1, against what the machine actually has
 
-Propellant is given as a **fraction of host wet mass**. With POEM's mass undisclosed there is no
+Propellant is given as a fraction of host wet mass. With POEM's mass undisclosed there is no
 kilogram figure to state, and inventing one is precisely what E5 exists to prevent. The Isp
 values are the textbook class ranges.
 
@@ -180,21 +180,21 @@ values are the textbook class ranges.
 | 0.50° | 66.68 m/s | 4.07 | 10.71 % | 3.04 % | 2.24 % |
 | **1.00°** | **133.35 m/s** | **8.14** | 20.28 % | 5.99 % | 4.43 % |
 
-**One degree costs the host 133 m/s — eight times the entire VOLLEY shot.** The row that matters
+One degree costs the host 133 m/s, eight times the entire VOLLEY shot. The row that matters
 is the 0.123° one: the point at which the host would have to spend exactly what the deployer
 spends, and it buys a tenth of a degree.
 
-### Verdict: **VOID as a capability claim**
+### Verdict: VOID as a capability claim
 
 **This is the disposition band 8 declared in advance**, not a judgement formed after seeing the
 number. The band as committed reads *"**report**; VOID as a capability claim — POEM's authority
 is undisclosed (E5)"*. The report is now made; the void stands for the reason it always named.
 
-What the number does establish is the **shape of the trade**, and it is unfavourable in a way
+What the number does establish is the shape of the trade, and it is unfavourable in a way
 worth stating plainly: any plane change worth having costs the host one to two orders of
-magnitude more Δv than VOLLEY's entire shot. **Case B is not a capability this deployer adds to
-a host. It is a capability the host would have to already possess**, at a scale that makes the
-deployer's contribution to plane change irrelevant. A15's own framing — that plane separation
+magnitude more Δv than VOLLEY's entire shot. Case B is not a capability this deployer adds to
+a host. It is a capability the host would have to already possess, at a scale that makes the
+deployer's contribution to plane change irrelevant. A15's own framing, that plane separation
 comes from differential J2 and not from the impulse — is the argument that survives, and band 8
 is the reason it has to be the argument.
 
@@ -202,24 +202,24 @@ This does **not** change bands 1–6, and it does not move `v_exit`.
 
 ### Band 4 passed, and my prediction of it was badly wrong
 
-**367° against 13.2°.** The analytic prediction assumed nodal regression at a *fixed* semi-major
+367° against 13.2°. The analytic prediction assumed nodal regression at a *fixed* semi-major
 axis, so the differential was frozen at the 0.147 °/day the initial 59 km spread produces. GMAT
-propagates with drag, and drag makes the spread **grow**: the satellites left with lower perigees
+propagates with drag, and drag makes the spread grow: the satellites left with lower perigees
 decay faster, the semi-major axes diverge, and the RAAN rate difference widens with them. The
-final SMA range is **6770 to 6848 km, a 78 km spread against the 59 km it started with.**
+final SMA range is 6770 to 6848 km, a 78 km spread against the 59 km it started with.
 
-So the mechanism is not differential J2 at fixed altitude. It is **drag-amplified differential
-J2**, and it is roughly 28 times stronger over 90 days than the frozen-altitude estimate.
+So the mechanism is not differential J2 at fixed altitude. It is drag-amplified differential
+J2, and it is roughly 28 times stronger over 90 days than the frozen-altitude estimate.
 
 **This is a pass that should be read carefully.** The band asked for ≥ 5° and got 367°, but a
 number that far from prediction means the model behind the prediction was incomplete, not that
 the design is 28 times better than thought. Two consequences follow and neither is comfortable:
 
-- **367° is more than a full revolution of relative nodal position.** The planes do not simply
-  spread — they wrap, so pairs of satellites re-align in RAAN at some point during the campaign.
+- 367° is more than a full revolution of relative nodal position. The planes do not simply
+  spread, they wrap, so pairs of satellites re-align in RAAN at some point during the campaign.
   A15 band 6 was the one written to catch whether that matters, and it now has: the closest
-  approach anywhere in the campaign is **396 m**.
-- **The spread is a decay artefact as much as a design feature.** Satellites separating in plane
+  approach anywhere in the campaign is 396 m.
+- The spread is a decay artefact as much as a design feature. Satellites separating in plane
   because they are falling at different rates is not the same product claim as satellites placed
   in different planes, and `SUMMARY.md` and the paper should not conflate them.
 
@@ -231,13 +231,13 @@ spread.
 VOLLEY's pitch is "twelve satellites, twelve different orbits". This analysis asks an independent
 propagator what "different" actually means at 16.388 m/s.
 
-**It is not inclination.** A cross-track impulse of 16.388 m/s against a 7.64 km/s orbital
-velocity gives `Δi = 2·asin(Δv/2v)` = **0.123°**. That is the ceiling, it is reached only by
-spending the entire shot on plane change and getting no altitude for it, and **any claim of
+It is not inclination. A cross-track impulse of 16.388 m/s against a 7.64 km/s orbital
+velocity gives `Δi = 2·asin(Δv/2v)` = 0.123°. That is the ceiling, it is reached only by
+spending the entire shot on plane change and getting no altitude for it, and any claim of
 meaningful inclination spread from this deployer is false.** Band 1 exists to make that
 falsifiable rather than merely stated.
 
-**What does separate the planes is J2.** Satellites left at different semi-major axes regress
+What does separate the planes is J2. Satellites left at different semi-major axes regress
 their nodes at different rates, because `Ω̇ ∝ a^-3.5·cos i`. A prograde-boosted and a
 retrograde-boosted satellite differ by ~59 km of apogee, and that difference compounds:
 
@@ -247,19 +247,19 @@ retrograde-boosted satellite differ by ~59 km of apogee, and that difference com
 | 350 km, 55.2° | −4.717 °/day | 0.141 °/day | **12.7°** |
 | 350 km, 9.6° | −8.149 °/day | 0.244 °/day | **22.0°** |
 
-**Two orders of magnitude more plane separation than the impulse itself can buy**, for free, from
+Two orders of magnitude more plane separation than the impulse itself can buy, for free, from
 a perturbation the deployer does not control. That is the honest version of the claim, and it is
 a better one than the version that overstates the Δv.
 
 ## Configuration
 
-**Host:** POEM, the PSLV fourth stage operated as a stabilised platform — the flown precedent
+Host: POEM, the PSLV fourth stage operated as a stabilised platform, the flown precedent
 ADR-002 and paper §VII already build on. Twelve 3U satellites, one magazine.
 
-**Cadence: 1200 s**, adopted as the ConOps in **ADR-020**, closing P31. Twelve shots span 4.0 h
+Cadence: 1200 s, adopted as the ConOps in ADR-020, closing P31. Twelve shots span 4.0 h
 and about 2.6 orbits, so the shots distribute around the ground track rather than clustering.
 
-**Three reference orbits, run parametrically**, because the result should not be hostage to one
+Three reference orbits, run parametrically, because the result should not be hostage to one
 assumed host orbit:
 
 | Case | Altitude | Inclination | Provenance |
@@ -268,18 +268,18 @@ assumed host orbit:
 | R2 | 350 km | 55.2° | POEM-4-like. **UNVERIFIED — to be confirmed or cited before this is published** |
 | R3 | 350 km | 9.6° | POEM-3-like. **UNVERIFIED — same caveat** |
 
-R2 and R3 are written from recollection of published PSLV mission profiles and are **flagged as
-unverified inputs in the generated script and in the results JSON**. R1 is the only one traceable
+R2 and R3 are written from recollection of published PSLV mission profiles and are flagged as
+unverified inputs in the generated script and in the results JSON. R1 is the only one traceable
 to something already in this repository, and it is the one the bands are set against.
 
 ### Two cases
 
-**Case A, VOLLEY only.** Twelve shots at 16.388 m/s, Δv directions mixed across prograde,
+Case A, VOLLEY only. Twelve shots at 16.388 m/s, Δv directions mixed across prograde,
 retrograde, cross-track and combinations, applied at whatever true anomaly the host has reached.
 This is what the deployer can do unaided and it is the case that matters.
 
-**Case B, POEM-assisted.** A host plane-change manoeuvre between shots. Paper §VII already records
-that POEM's mass and control authority are **undisclosed**, so this case is parametric in the host
+Case B, POEM-assisted. A host plane-change manoeuvre between shots. Paper §VII already records
+that POEM's mass and control authority are undisclosed, so this case is parametric in the host
 Δv budget and reports the propellant each degree of plane change costs. It is an illustration of
 where the capability would have to come from, not a claim that it exists.
 
@@ -306,25 +306,25 @@ Declared before the template exists. Each is capable of failing.
 The physical ceiling is per satellite: 0.123° of inclination and 0.74° of RAAN for one shot
 spending its entire Δv on plane change. A campaign firing one satellite cross-track and another
 anti-cross-track doubles the *spread* to 0.246° and 1.46° without either satellite exceeding the
-ceiling. **The limits are unchanged — 0.13° and 0.75° — and only the named quantity is corrected**,
+ceiling. The limits are unchanged, 0.13° and 0.75°, and only the named quantity is corrected,
 which is the narrowest possible fix and the one least able to hide a moved goalpost.
 
 **Band 2 was mis-specified differently.** As first declared it read *"apogee spread across the
-twelve ≥ 100 km"*, which does not measure what it was for. A prograde impulse at a circular orbit
+twelve >= 100 km"*, which does not measure what it was for. A prograde impulse at a circular orbit
 raises apogee by 58.9 km and leaves
 perigee alone; a retrograde impulse lowers perigee by 58.6 km and leaves *apogee* alone. So the
 apogee spread alone is only ~59 km and the band would have failed for a reason that has nothing
-to do with the machine. The quantity that carries the claim is the **altitude extent**, highest
+to do with the machine. The quantity that carries the claim is the altitude extent, highest
 apogee to lowest perigee, which is ~117 km.
 
 **A15 has not run.** Correcting a band before any result exists, with the correction dated and
-the original stated, is the same act `validation/A7_separation_chrono.md` performed under **P30**
-— the rule working rather than being bent. Had this been found after a run, the failure would
+the original stated, is the same act `validation/A7_separation_chrono.md` performed under P30
+the rule working rather than being bent. Had this been found after a run, the failure would
 have stood and the mis-specification would have become a numbered defect.
 
 **Band 4 is the one to watch.** It is the only band here whose failure would damage the product
-argument rather than the model. If differential J2 does not separate the planes — because drag
-equalises the orbits faster than the nodes drift apart, which is plausible at 350 km — then twelve
+argument rather than the model. If differential J2 does not separate the planes, because drag
+equalises the orbits faster than the nodes drift apart, which is plausible at 350 km, then twelve
 satellites from one host end up in twelve orbits that are distinguishable in phase and altitude
 but not in plane, and the deployment story has to be told without the word "planes" in it.
 
@@ -350,6 +350,6 @@ probability, which A6 showed is not.
 
 Orbital quantities come from `analysis/astro.py` by import, not by reimplementation, the same rule
 `build_scripts.py` already follows so the orbit definition cannot fork. The operating point is
-`motor_results.json`. **R2 and R3's orbital elements are the only inputs in this sheet not
+`motor_results.json`. R2 and R3's orbital elements are the only inputs in this sheet not
 traceable to this repository or to `astro.py`, and they are marked unverified everywhere they
-appear.**
+appear.

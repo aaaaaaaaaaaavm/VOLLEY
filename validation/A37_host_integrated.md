@@ -1,4 +1,4 @@
-# A37 — the stage as the deployer, and the falsification test A35 is owed
+# A37, the stage as the deployer, and the falsification test A35 is owed
 
 **Bands declared 2026-08-14, before `analysis/host_integrated.py` existed.**
 Verify with `git show --stat <this commit> -- analysis/host_integrated.py`, which must return
@@ -11,36 +11,36 @@ nothing.
 Two runs have closed two of the three routes to kill criterion 1.
 [A35](A35_constraint_ledger.md): 49.23 kg survives every requirement deletion in all 64 corners.
 [A36](A36_magazine_density.md) band 4: the divisor reaches 2 kg only at N ≈ 116, which does not
-package. **P59** records that only a payload-class change remains.
+package. P59 records that only a payload-class change remains.
 
-**A third possibility was never analysed: that the deployer is not carried by a stage but *is* one.**
+A third possibility was never analysed: that the deployer is not carried by a stage but *is* one.
 [ADR-023](../docs/adr/023-target-host-class.md) already re-scoped the host to a restartable upper
 stage and dropped envelope compliance; [ADR-024](../docs/adr/024-last-mile-delivery-conops.md)
-wrote the last-mile concept. Neither took the last step: **after the primary separates, the spent
-stage stops being the mounting surface and becomes the machine** — its structure the track, its
+wrote the last-mile concept. Neither took the last step: after the primary separates, the spent
+stage stops being the mounting surface and becomes the machine, its structure the track, its
 array the supply, its residual propellant the repositioning budget.
 
-This run also **settles the falsification test declared in A35** and left open. That test was:
+This run also settles the falsification test declared in A35 and left open. That test was:
 *deleting "the energy arrives during the shot" removes more than 40 % of dry mass; the falsifier is
 that its replacement weighs more than 60 % of what came out.* A35 measured the removal at
 **23.76 kg**. Band 4 below measures the replacement.
 
 ## The honesty problem this run must not fall into
 
-The tempting move is that a stage is sunk cost, so the criterion should count only added hardware —
+The tempting move is that a stage is sunk cost, so the criterion should count only added hardware,
 which takes 7.042 kg/satellite to something near 1.2 and closes a criterion two runs have failed.
 
-**That is structurally identical to the metric substitution this project has already flagged and
-declined**, where *Δv per kilogram per satellite* flatters the design by 5.4× and was recorded in
+That is structurally identical to the metric substitution this project has already flagged and
+declined, where *Δv per kilogram per satellite* flatters the design by 5.4x and was recorded in
 `CHANGELOG.md` as exactly the sort of number a project reaches for once the plain one stops being
 kind.
 
 **So three rules bind this run, and bands 1–3 enforce them mechanically:**
 
-1. **The threshold does not move.** ~2 kg stands, from what canisterised dispensers achieve.
-2. **Both numerators are always reported together.** Added mass per satellite may never appear
+1. The threshold does not move. ~2 kg stands, from what canisterised dispensers achieve.
+2. Both numerators are always reported together. Added mass per satellite may never appear
    without dry mass per satellite beside it.
-3. **Nothing is credited to the stage without naming the subsystem that provides it.** A stage kept
+3. Nothing is credited to the stage without naming the subsystem that provides it. A stage kept
    alive, powered, pointed and manoeuvring through a campaign [A36](A36_magazine_density.md) puts
    at up to 42 hours is not a passivated stage, and the difference is hardware that exists whether
    or not this rollup counts it.
@@ -48,7 +48,7 @@ kind.
 ## Stage classes, by dimension only
 
 No vendor, programme or organisation is named. Classes are defined by usable acceleration length,
-and **the usable fraction is an assumption with no derivation** — tankage, engine and avionics bays
+and the usable fraction is an assumption with no derivation, tankage, engine and avionics bays
 are not available to a track.
 
 | Class | Usable acceleration length |
@@ -59,10 +59,10 @@ are not available to a track.
 
 ## Stores traded
 
-**Steel spring** at 300 J/kg usable, the figure `analysis/actuator_trade.py` already declares as
-the upper end for spring steel, and **the existing linear synchronous motor as the control.**
+Steel spring at 300 J/kg usable, the figure `analysis/actuator_trade.py` already declares as
+the upper end for spring steel, and the existing linear synchronous motor as the control.
 
-**Gas is deliberately excluded and recorded as an entry criterion for a later run.** Sizing a
+Gas is deliberately excluded and recorded as an entry criterion for a later run. Sizing a
 pressure vessel needs a mass-fraction figure this project does not hold, and a store invented to
 win a trade is worse than a store left out of it.
 
@@ -70,7 +70,7 @@ win a trade is worse than a store left out of it.
 
 ## Acceptance bands
 
-**Declared before the script. Not to be edited after the run.**
+Declared before the script. Not to be edited after the run.
 
 | # | Band | FAIL if |
 |---|---|---|
@@ -86,9 +86,9 @@ win a trade is worse than a store left out of it.
 ### Band 4 is the one that decides whether A35 meant anything
 
 It is the only band here that can invalidate an earlier result. The store scales as **v²** —
-514 J is 1.7 kg of spring steel, 2943 J at 3 m of stroke is **9.8 kg** — so the falsifier tightens
-exactly as the velocity goal is pursued. **A comfortable pass at 16 m/s and a failure at 38 m/s is
-a real possibility and would be the most useful outcome this run can produce.**
+514 J is 1.7 kg of spring steel, 2943 J at 3 m of stroke is 9.8 kg, so the falsifier tightens
+exactly as the velocity goal is pursued. A comfortable pass at 16 m/s and a failure at 38 m/s is
+a real possibility and would be the most useful outcome this run can produce.
 
 ### Band 5 is the headline and band 8 is the warning
 
@@ -100,8 +100,8 @@ next run is a store trade rather than a deployer design.
 
 It does not design a stage interface, model the attitude control a live stage needs through a
 42-hour campaign, price the debris-mitigation case for keeping a stage manoeuvring, or address
-**availability** — a different stage every launch multiplies the interface problem rather than
-solving it. **Tip-off is untouched**: [A23](A23_tipoff_release.md)'s 36–231 °/s cradle arrival
+availability, a different stage every launch multiplies the interface problem rather than
+solving it. Tip-off is untouched: [A23](A23_tipoff_release.md)'s 36-231 °/s cradle arrival
 survives every architecture on this page and gets worse with acceleration.
 
 ---
@@ -129,9 +129,9 @@ survives every architecture on this page and gets worse with acceleration.
 | **Provided by a live stage**, each item naming its subsystem | **43.33 kg** |
 | **Added — what the machine still costs** | **11.45 kg** |
 
-The entire added base is **cassette shells (8.85 kg) and followers, gates and escapements
-(2.60 kg)**. Nothing else survives as a cost. **A36's containment floor and this run's added base
-are the same 11.45 kg**, arrived at from opposite directions.
+The entire added base is cassette shells (8.85 kg) and followers, gates and escapements
+(2.60 kg). Nothing else survives as a cost. A36's containment floor and this run's added base
+are the same 11.45 kg, arrived at from opposite directions.
 
 ### Band 5 passes, and it is the largest result this project has produced
 
@@ -141,26 +141,26 @@ are the same 11.45 kg**, arrived at from opposite directions.
 | medium restartable upper stage | 3.0 m | 38.4 m/s | 15.70 kg | 2.262 kg | 49 W |
 | large upper stage | 8.0 m | 62.6 m/s | 41.86 kg | 4.442 kg | 131 W |
 
-**On the small class, added mass per satellite is 1.608 kg against an unchanged 2.0 kg threshold.
-Kill criterion 1 closes at 3U, without changing payload class** — the route P59 recorded as the
+On the small class, added mass per satellite is 1.608 kg against an unchanged 2.0 kg threshold.
+Kill criterion 1 closes at 3U, without changing payload class, the route P59 recorded as the
 only one left is no longer the only one.
 
 **Both numerators, as band 3 requires:** dry mass per satellite remains **7.044 kg and crosses**.
 Nothing about that has changed and it is not being withdrawn. What has changed is that a second,
-differently-argued numerator exists, and **both are reported wherever either is.**
+differently-argued numerator exists, and both are reported wherever either is.
 
 ### Bands 4 and 8 fail because the store scales as v², and that is now the binding constraint
 
 The run sheet predicted this shape: *"A comfortable pass at 16 m/s and a failure at 38 m/s is a real
 possibility and would be the most useful outcome this run can produce."*
 
-**Stage length is free. The spring that exploits it is not.** Store mass goes as v², so the 8 m
-class needs **26.16 kg of spring steel** and the store becomes 78.5 % of everything added.
+Stage length is free. The spring that exploits it is not. Store mass goes as v², so the 8 m
+class needs 26.16 kg of spring steel and the store becomes 78.5 % of everything added.
 
 **And the selection rule was badly designed.** No declared class satisfied every band, so the
 script fell back to maximum velocity — the worst case for bands 4 and 8. At the *small* class the
 falsifier passes comfortably at 7.85 kg. **The bands are evaluated as declared and the failure
-stands**, but its proximate cause is a fallback rule, not the physics, and that is recorded rather
+stands, but its proximate cause is a fallback rule, not the physics, and that is recorded rather
 than glossed.
 
 ### The window the three declared classes bracket without containing
@@ -168,31 +168,31 @@ than glossed.
 *Derived after the run from its own outputs. Not a band, and not to be read as one.*
 
 Every declared band is satisfied for **L between 1.83 m and 2.18 m — 30.0 to 32.7 m/s** — at
-about **1.83 kg/satellite**, a **10.5 kg** store and **33 W**. The three classes declared were
-1.5 m, 3.0 m and 8.0 m. **None lies inside the window.** 1.5 m misses only on velocity; 3.0 m
+about 1.83 kg/satellite, a 10.5 kg store and 33 W. The three classes declared were
+1.5 m, 3.0 m and 8.0 m. None lies inside the window. 1.5 m misses only on velocity; 3.0 m
 misses on mass, falsifier and store fraction.
 
-**No stage class was added after the run**, and none will be. The window is reported so the next
+No stage class was added after the run, and none will be. The window is reported so the next
 run can declare its classes against it rather than around it.
 
 ### What this means
 
-1. **The stage does not solve the mass problem — it deletes it.** 43.33 kg becomes someone else's
+1. The stage does not solve the mass problem, it deletes it. 43.33 kg becomes someone else's
    structure and 29.75 kg stops existing. What remains is containment, which no architecture can
    remove.
-2. **The binding constraint has moved from mass to energy storage.** Every previous run was about
+2. The binding constraint has moved from mass to energy storage. Every previous run was about
    where the kilograms live. This one says the next question is a store trade, at metre-scale
    strokes, and **band 8's failure is the warning the run sheet declared in advance**: this is
    becoming a spring-design problem wearing a deployer's clothes.
-3. **Velocity and kill criterion 1 are now in direct tension**, priced for the first time. 27 m/s
+3. Velocity and kill criterion 1 are now in direct tension, priced for the first time. 27 m/s
    closes the criterion; 38 m/s does not. Where to sit on that curve is a product decision.
 
 ### What is still not priced, and every omission flatters this run
 
-Stage **availability** — a different stage each launch multiplies the interface problem rather than
+Stage availability, a different stage each launch multiplies the interface problem rather than
 solving it. Attitude control and power through a campaign A36 puts at up to 42 hours, against a
 vehicle designed to be passivated. The debris-mitigation case for keeping a stage manoeuvring.
-Gas stores, excluded deliberately. The mechanism model is **60 % of store mass floored at 2 kg**,
+Gas stores, excluded deliberately. The mechanism model is 60 % of store mass floored at 2 kg,
 a declared assumption with no derivation and the largest guess in this run.
-**Tip-off is untouched:** A23's 36–231 °/s survives every architecture here and worsens with
+Tip-off is untouched: A23's 36-231 °/s survives every architecture here and worsens with
 acceleration.

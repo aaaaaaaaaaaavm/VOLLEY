@@ -1,4 +1,4 @@
-# A45 — the 43.33 kg stage credit, read hostilely
+# A45, the 43.33 kg stage credit, read hostilely
 
 **Bands declared 2026-08-16, before `analysis/stage_credit.py` existed.**
 Verify with `git show --stat <this commit> -- analysis/stage_credit.py`, which must return nothing.
@@ -7,16 +7,16 @@ Verify with `git show --stat <this commit> -- analysis/stage_credit.py`, which m
 
 ## Why this run exists
 
-**[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md)'s first falsifier**, and the only
+[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md)'s first falsifier, and the only
 one of the four that nothing has ever bounded:
 
-> **The 43.33 kg stage credit is optimistic by more than 30 %.** Then added mass per satellite
+> The 43.33 kg stage credit is optimistic by more than 30 %. Then added mass per satellite
 > exceeds 2.0 kg and A37 band 5 fails retrospectively.
 
-**[A37](A37_host_integrated.md) assigned every line of A35's ledger to added, deleted or
-stage-provided, and required each stage-provided item to name the subsystem providing it.** That is
+[A37](A37_host_integrated.md) assigned every line of A35's ledger to added, deleted or
+stage-provided, and required each stage-provided item to name the subsystem providing it. That is
 a good discipline and it is not the same as testing whether the naming survives someone who does
-not want to believe it. **This run is that reader.**
+not want to believe it. This run is that reader.
 
 ## The credit, line by line
 
@@ -33,7 +33,7 @@ not want to believe it. **This run is that reader.**
 
 ## The hostile fractions, declared as inputs with their reasons
 
-**These are judgements, not measurements**, and they are written down before the script so the
+These are judgements, not measurements, and they are written down before the script so the
 consequence is computed rather than argued. The script sweeps around them.
 
 | Item | Survives | Because |
@@ -50,7 +50,7 @@ consequence is computed rather than argued. The script sweeps around them.
 
 ## Acceptance bands
 
-**Declared before the script. Not to be edited after the run.**
+Declared before the script. Not to be edited after the run.
 
 | # | Band | FAIL if |
 |---|---|---|
@@ -66,21 +66,21 @@ consequence is computed rather than argued. The script sweeps around them.
 ## Predictions, recorded before the run
 
 1. **Band 6 fails.** ADR-032's 30 % was written when the store was a different mass; A43 has since
-   settled it at 5.38 kg, and the break-even moves with it. I expect the true figure near **16 %**,
+   settled it at 5.38 kg, and the break-even moves with it. I expect the true figure near 16 %,
    about half what the decision record claims.
 2. **Band 5 fails**, because 8.00 kg is 18.5 % of the credit and that is already past a ~16 %
    break-even. *One line item, admitted by P10 to be unmodelled, would fire the falsifier alone.*
 3. **Band 4 fails**, and not narrowly.
 4. **Band 2 passes**, since it is arithmetic already done.
 
-If 1–3 all fail, **the honest reading is that Gen6's mass case rests on a credit with far less
-margin than ADR-032 records**, and the ADR needs its falsifier restated rather than the design
+If 1-3 all fail, the honest reading is that Gen6's mass case rests on a credit with far less
+margin than ADR-032 records, and the ADR needs its falsifier restated rather than the design
 changed.
 
 ## Result
 
 **RUN 2026-08-16. Five of eight bands pass. The three that fail are bands 4, 5 and 6, and they say
-ADR-032's first falsifier fires.**
+ADR-032's first falsifier fires.
 
 | # | Band | Result | |
 |---|---|---|---|
@@ -108,51 +108,51 @@ ADR-032's first falsifier fires.**
 
 ### The two findings that do not depend on my judgement
 
-**The surviving fractions above are judgements and the reader may substitute their own.** Two
+The surviving fractions above are judgements and the reader may substitute their own. Two
 results do not move if they do.
 
-**One — the break-even is 16.5 %, not 30 %.** Pure arithmetic from A43's settled store: the credit
-may fail by **7.17 kg** before added mass per satellite reaches 2.0. **ADR-032 states 30 %, which
-is nearly twice the real margin.** The ADR was not wrong when written — it predates A43 settling
-the store at 5.38 kg — but it is wrong now, and it is the number a reviewer would check.
+One, the break-even is 16.5 %, not 30 %. Pure arithmetic from A43's settled store: the credit
+may fail by 7.17 kg before added mass per satellite reaches 2.0. ADR-032 states 30 %, which
+is nearly twice the real margin. The ADR was not wrong when written, it predates A43 settling
+the store at 5.38 kg, but it is wrong now, and it is the number a reviewer would check.
 
-**Two — the largest item in the credit is a mass the repository already admits it never
-itemised.** The 8.00 kg *enclosure, radiator and packaged avionics* line is **P10**, which records
-that these have **no line items** in `mass_properties.py` and that the 84.5 kg dry mass is *a
+Two, the largest item in the credit is a mass the repository already admits it never
+itemised. The 8.00 kg *enclosure, radiator and packaged avionics* line is P10, which records
+that these have no line items in `mass_properties.py` and that the 84.5 kg dry mass is *a
 floor, not a total*. Crediting it to the stage converts an admitted unknown into a saving.
 
-**That single item is 18.5 % of the credit, against a 16.5 % break-even.** Removing it and nothing
-else gives **2.069 kg per satellite** — **the falsifier fires on one line, with no hostile reading
-required at all.**
+That single item is 18.5 % of the credit, against a 16.5 % break-even. Removing it and nothing
+else gives 2.069 kg per satellite, the falsifier fires on one line, with no hostile reading
+required at all.
 
 ### What this means, stated plainly
 
 **ADR-032 falsifier 1 fires. [A37](A37_host_integrated.md) band 5 fails retrospectively under a
-hostile credit, and kill criterion 1 is crossed on *both* numerators rather than one.**
+hostile credit, and kill criterion 1 is crossed on *both* numerators rather than one.
 
 **A37's band is not edited and its result stands as declared.** A37 asked whether the credit closes
 the criterion on the assignment it made, and the answer it recorded is correct for that
 assignment. What A45 adds is that the assignment does not survive being disbelieved.
 
-**Nothing here says Gen6 is wrong.** It says the mass case has **half the margin the decision
-record claims**, and that the biggest single piece of it is an item this project has been carrying
-as unmodelled since long before Gen6 existed. **Recorded as P68.**
+Nothing here says Gen6 is wrong. It says the mass case has half the margin the decision
+record claims, and that the biggest single piece of it is an item this project has been carrying
+as unmodelled since long before Gen6 existed. Recorded as P68.
 
 ### The predictions
 
-**All four held**, which is now twice in a row after A43 and against A44's miss.
+All four held, which is now twice in a row after A43 and against A44's miss.
 
-1. Break-even near 16 % — **16.5 %**.
-2. P10's lump alone fires the falsifier — **2.069 kg**, and 18.5 % against a 16.5 % break-even.
+1. Break-even near 16 %, 16.5 %.
+2. P10's lump alone fires the falsifier, 2.069 kg, and 18.5 % against a 16.5 % break-even.
 3. Band 4 fails and not narrowly — **3.108 kg against 2.0**.
 4. Band 2 passes — 0.02 % off.
 
 ## What this run does not do
 
-- **The surviving fractions are not measurements.** They are one reader's judgement, declared in
+- The surviving fractions are not measurements. They are one reader's judgement, declared in
   advance and swept; the break-even is published so anyone can substitute their own.
-- **It does not price the stage agreement**, which remains the thing no analysis can close.
-- **It does not re-open A35's ledger.** Every line and every mass is A35's; only the assignment is
+- It does not price the stage agreement, which remains the thing no analysis can close.
+- It does not re-open A35's ledger. Every line and every mass is A35's; only the assignment is
   questioned.
-- **It proposes no fix.** Closing P10 — building the enclosure, radiator and avionics up from line
-  items — is the work that would replace the largest guess with a number, and it is not done here.
+- It proposes no fix. Closing P10, building the enclosure, radiator and avionics up from line
+  items, is the work that would replace the largest guess with a number, and it is not done here.
