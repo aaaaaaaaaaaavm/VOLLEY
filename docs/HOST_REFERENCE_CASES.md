@@ -932,6 +932,18 @@ were injected and the gate was required to catch each one.
 | A mission-case leg changed from 20 to 25 m/s | yes, the mission-case block |
 | Impulses per reposition leg changed from 2 to 1, the restart-count field | yes, the mission-case block |
 
+**What the gate does not cover, stated as plainly.** The markers hold the tables, and the tables
+are 12 per cent of this file. Everything else is prose, and prose that restates a generated number
+is not compared against anything. Three further faults were injected to establish where the edge
+is: a figure altered in a sentence, a unit changed in a sentence, and a verdict word changed in a
+sentence. The gate passes all three, because none of them is inside a block.
+
+That is the surface [P114](../OPEN_PROBLEMS.md#p114) lived on. The number in the table was a
+correct total and the sentence beside it read that total as one burn, and no gate can catch a
+sentence that is wrong about what a correct number means. Sentences here are the author's
+responsibility, and the file is written so that a number appearing in prose also appears in a
+generated block, where it can be checked.
+
 `--self-test` checks twenty-five identities, including that the rocket equation and the burn-time
 inverse agree, that mass flow reproduces thrust from the definition of specific impulse, that a
 zero impulse raises apogee by nothing, that the single-burn apogee conserves angular momentum
