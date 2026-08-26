@@ -82,7 +82,7 @@ comfortable; the start of the stroke is now shown to be transient rather than pe
 ### Band 5 reproduces A23's preload from a different direction
 
 A23 asserted a cradle preload of > 85 N per contact. Computed here independently from the
-same moment and geometry, two contacts a half-length either side reacting 28.92 N·m as a couple
+same moment and geometry, two contacts a half-length either side reacting 28.92 N·m as a couple,
 the answer is 85.0 N. The requirement stands, and it now has a derivation behind it
 rather than only an assertion.
 

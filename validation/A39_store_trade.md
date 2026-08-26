@@ -129,7 +129,7 @@ settles.
 | **Cold gas** | 0.63 | 2.34 | **2.98 kg** | **89.4 m/s** |
 | Keep the LSM *(control)* | 23.76 | — | **23.76 kg** | fails at every velocity |
 
-Gas detail: 15.8 mm bore, 1.00 mm wall, 0.84 kg of cylinder, and a 1.71 litre reservoir
+Gas detail: 15.8 mm bore, 1.00 mm wall, 0.84 kg of cylinder, and a 1.71 litre reservoir,
 0.233 kg of vessel plus 0.402 kg of gas, for all twelve shots.
 
 ### The reason gas wins is not energy density

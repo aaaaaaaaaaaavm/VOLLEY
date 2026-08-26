@@ -106,7 +106,7 @@ in the conservative direction and had not been noticed at all. Neither error tou
 analysis, which is the paper's substance; both are in the number a reader quotes.
 
 The abstract claims an analysis the paper does not contain. It states that "key engineering
-challenges, g-load tolerance, electromagnetic coupling, and pulsed power thermal management
+challenges, g-load tolerance, electromagnetic coupling, and pulsed power thermal management,
 are identified and analyzed." Section IX lists six challenges and electromagnetic coupling is
 not among them, nor does it appear anywhere in the body.
 

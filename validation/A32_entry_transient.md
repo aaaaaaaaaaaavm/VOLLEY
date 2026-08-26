@@ -117,7 +117,7 @@ Stated once, plainly, because it is the most useful thing in this sheet.
 | **A32** `entry_transient.py` | **+304 %** against A31 | band 1 | thrust computed as K × B_imposed instead of K × B_total |
 
 **Every one of those would have been published as a result.** Each was caught by a band declared
-before the script existed, and in every case the band that caught it was the *verification* band
+before the script existed, and in every case the band that caught it was the *verification* band,
 the one that exists only to check the solver against something already known, and that adds no
 new physics. **That is the cheapest band to write and the one most often left out.**
 

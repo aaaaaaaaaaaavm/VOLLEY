@@ -479,7 +479,7 @@ becomes +0.341 kg. [ADR-035](adr/035-drive-tube-material.md) decided that on 202
 went to aluminium, because A59 found strength, stiffness and buckling all indifferent between the
 metals and only mass discriminated.
 
-Steam is foreclosed by a decision taken on its own merits rather than by a judgement about steam
+Steam is foreclosed by a decision taken on its own merits rather than by a judgement about steam,
 and ADR-035 falsifier 4 says so.
 
 ### PII-22: the pyrotechnic drive, which is A65's result read past its own scope, OPENED 2026-08-20

@@ -108,7 +108,7 @@ delivers and spending stroke on gentleness instead:
 The same exit velocity at 45 % of the acceleration on 45 % of the gas. Added mass per satellite
 falls 1.403 to 1.296 kg, because the store shrinks with the charge faster than the tube grows.
 
-And if velocity is wanted instead of gentleness, the front runs to 52.62 m/s at 8 m and 60 bar
+And if velocity is wanted instead of gentleness, the front runs to 52.62 m/s at 8 m and 60 bar,
 against Gen6's 29.009. The best single point on velocity-per-g is 8 m at 25 bar: 30.97 m/s at
 12.50 g on 56.2 g of gas, which beats today's design on all three simultaneously.
 

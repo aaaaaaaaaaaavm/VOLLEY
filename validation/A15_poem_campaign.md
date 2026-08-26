@@ -318,7 +318,7 @@ to do with the machine. The quantity that carries the claim is the altitude exte
 apogee to lowest perigee, which is ~117 km.
 
 **A15 has not run.** Correcting a band before any result exists, with the correction dated and
-the original stated, is the same act `validation/A7_separation_chrono.md` performed under P30
+the original stated, is the same act `validation/A7_separation_chrono.md` performed under P30,
 the rule working rather than being bent. Had this been found after a run, the failure would
 have stood and the mis-specification would have become a numbered defect.
 

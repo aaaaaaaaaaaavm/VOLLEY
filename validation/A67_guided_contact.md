@@ -199,7 +199,7 @@ stalled, and they are excluded from the statistics, but the peak-force tail is s
 **Band 6 is evaluated where it was declared, at the nominal point, and it passes at 225.8 N.**
 *Peak contact force under tolerance is an open question this run does not answer.*
 
-The step size, and why it is in the results file. The answer is wrong by 40 % at h = 2x10⁻⁵
+The step size, and why it is in the results file. The answer is wrong by 40 % at h = 2x10⁻⁵,
 the step a first attempt reaches for, and converged below 5x10⁻⁶:
 
 | h (s) | 4e-5 | 2e-5 | 1e-5 | 5e-6 | 2.5e-6 | 1.25e-6 | 6.25e-7 |

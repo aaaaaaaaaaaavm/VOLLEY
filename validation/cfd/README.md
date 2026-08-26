@@ -58,7 +58,7 @@ spread across that window is quoted with the mean. Reading a single iteration wo
 sample of the oscillation as though it were an answer.
 
 Viscous drag is bounded, not solved. `wallShearStress` aborts in this build for the same
-reason `forceCoeffs` does. Rather than reconstruct a wall shear stress from cell-centre gradients
+reason `forceCoeffs` does. Rather than reconstruct a wall shear stress from cell-centre gradients,
 a second, weaker solve dressed as a first, the viscous term is a turbulent flat-plate
 correlation over the wetted area, and it is labelled as a bound everywhere it is quoted. For a
 massively separated bluff body it is a small fraction of the total, and the pressure term, which

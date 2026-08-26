@@ -376,7 +376,7 @@ relevant threshold of ~10⁶ Hz·m (1 GHz·mm), a ratio of 2.5 x 10⁴. At 40 kH
 is 12.5 µs and an electron crosses 1 mm in nanoseconds, so electrons are collected, not
 resonantly multiplied.
 
-The one case that is not ruled out is a fault. An *unclamped* interruption of winding current
+The one case that is not ruled out is a fault. An *unclamped* interruption of winding current,
 19.70 µH at 373.2 A, 1.37 J stored per phase:
 
 | Interrupted in | dI/dt | Induced | vs air's 327 V |
@@ -452,7 +452,7 @@ ascent. Nothing in `cad/BOM.md` currently carries an outgassing spec at all.
 
 ### 25, radiation and single-event effects in the SiC drive
 
-Nothing exists, and the converter is one of the manifest-forfeiting elements in `docs/FMEA.md`
+Nothing exists, and the converter is one of the manifest-forfeiting elements in `docs/FMEA.md`,
 so an unqualified part here is not a degraded shot, it is the end of the campaign.
 
 SiC is not a neutral choice in this respect. SiC MOSFETs are known to be susceptible to

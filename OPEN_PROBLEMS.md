@@ -5398,7 +5398,7 @@ finding.
 ### Why the record said the opposite until today
 
 A38 answers the cradle and A67 answers the bore, and both are right about what they model.
-A38's residual angular rate at force removal is exactly zero for every clearance A23 tabulated
+A38's residual angular rate at force removal is exactly zero for every clearance A23 tabulated,
 the rattle settles in 26 ms against a stop while the gas is still holding the payload.
 Then the payload spends 0.42 s crossing eight metres of a bore that is not straight, and
 acquires an angular rate the cradle model has no way to see.

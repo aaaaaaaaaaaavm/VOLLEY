@@ -111,7 +111,7 @@ model. Geometry and magnetisation are imported from `motor_model`, never re-ente
 solvers cannot be describing different machines. What the two share is the geometry and the
 remanence; what they do not share is a single line of solution mathematics.
 
-A run completing is not a run being right. The first solve of this problem converged cleanly
+A run completing is not a run being right. The first solve of this problem converged cleanly,
 residual 150.2 to 4 x 10⁻¹³, no warning at any stage, and returned exactly zero field at
 every sampled point. `gmsh.model.getBoundary()` on the air volume returns the six outer box
 faces *and* all twenty-four magnet, air interfaces; tagging them all as the outer boundary pinned
