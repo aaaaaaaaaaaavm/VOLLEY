@@ -11,192 +11,188 @@
 [![Maturity: TRL 2-3](https://img.shields.io/badge/maturity-TRL%202--3-orange.svg)](OPEN_PROBLEMS.md)
 [![Validation: model only](https://img.shields.io/badge/validation-model%20only%2C%20unverified-red.svg)](docs/PROVENANCE.md)
 
-**Secondary payloads inherit the orbit of whoever paid for the launch.** The spring that ejects
-them gives 1–2 m/s. That *is* a change in orbital energy — at 2.5 m/s it extends orbital lifetime
-by 8.2 % — but it is sized for separation, it is two orders of magnitude short of commanded orbit
-shaping, and it is **the same value for every satellite in the manifest**. Of more than 4,800
-nanosatellites and CubeSats catalogued as of January 2026, on the order of 222 carry a propulsion
-system, so the rest stay where they were dropped. **That is a distribution problem, not a
-deployment problem.**
+Secondary payloads inherit the orbit of whoever paid for the launch. The spring that ejects them
+gives 1 to 2 m/s. That is a real change in orbital energy (at 2.5 m/s it extends orbital lifetime
+by 8.2 %), but it is sized for separation rather than for orbit shaping, it falls two orders of
+magnitude short of the latter, and every satellite in the manifest gets the same value. Of more
+than 4,800 nanosatellites and CubeSats catalogued as of January 2026, on the order of 222 carry a
+propulsion system. The rest stay where they were dropped.
 
-**VOLLEY replaces the spring with a magazine and a commanded shot.** Twelve satellites, one at a
-time, each leaving at a velocity chosen for it — mounted on a spent upper stage that was going to
-be debris anyway, and that repositions between altitude shells on its own reaction control
-between deployments. **The satellite is never modified — mechanically and electrically**: no
-armature, no plating, no harness, no separation system. *That claim is not established
-magnetically*: the array is a permanent magnet, so the payload envelope sits at **611× a
-representative magnetometer full scale** at its near face, continuously rather than only during a
-shot ([P34](OPEN_PROBLEMS.md), [`docs/ICD_COMPLIANCE.md`](docs/ICD_COMPLIANCE.md)).
+VOLLEY replaces the spring with a magazine and a commanded shot: twelve satellites, one at a time,
+each leaving at a velocity chosen for it, from a spent upper stage that was going to be debris
+anyway and that can reposition between altitude shells on its own reaction control between
+deployments. The satellite is never modified mechanically or electrically. No armature, no
+plating, no harness, no separation system.
 
-**The differentiator is one word.** A spring gives every satellite the same push; distribution
-needs a *difference*. **Commanded per-satellite velocity is the one thing no spring, canister or
-dispenser can offer at any price** — and it is what every number on this page exists to support
-or to qualify.
+That claim does not extend to magnetics, and this page will not pretend otherwise. The array is a
+permanent magnet, so the payload envelope sits at 611x a representative magnetometer full
+scale at its near face, continuously rather than only during a shot
+([P34](OPEN_PROBLEMS.md), [`docs/ICD_COMPLIANCE.md`](docs/ICD_COMPLIANCE.md)).
 
-## The mission, and it is older than the machine
+What a spring cannot do at any price is give two satellites different velocities. Every number on
+this page exists to support that one capability or to qualify it.
 
-**VOLLEY flies as a secondary system on the launch vehicle's final stage.** The vehicle flies its
-primary mission and the primary spacecraft separates first. **Only then does VOLLEY's mission
-begin**: where the vehicle and its mission rules permit it, the spent stage stays powered,
-navigated, attitude-controlled and commandable, and **becomes a temporary orbital delivery
-vehicle**. It may deploy the manifest immediately, or reposition between deployments over hours to
-days. **The stage does the coarse orbital placement. VOLLEY does the fine per-satellite release
-velocity.** Then the stage passivates and re-enters.
+## The mission
 
-**That mission was chosen in 2023, not in 2026.** [ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md)
-rejected a dedicated free-flyer — *"it must carry its own attitude control, power and recoil
-management, which is most of a spacecraft"* — and put VOLLEY on a spent upper stage.
-**What changed across six generations is not the mission but how much of the machine VOLLEY builds
-for itself**: Gen5 carries its own track, drive, store and brake aboard the platform; **Gen6 makes
-the stage's own structure and length part of the machine.** [`docs/LINEAGE.md`](docs/LINEAGE.md)
-keeps those two columns apart, because collapsing them produces a false history.
+VOLLEY flies as a secondary system on the launch vehicle's final stage. The vehicle flies its
+primary mission and the primary spacecraft separates first. Only after that does VOLLEY's mission
+begin: where the vehicle and its mission rules permit it, the spent stage stays powered,
+navigated, attitude-controlled and commandable, and becomes a temporary orbital delivery vehicle.
+It can deploy the manifest immediately, or reposition between deployments over hours to days. The
+stage does the coarse orbital placement; VOLLEY does the fine per-satellite release velocity. The
+stage then passivates and re-enters.
 
-> **Three things that are not the same and get collapsed:** the **host stage's propulsion
-> reserve**, which belongs to the launch provider and cannot be assumed; the **host's attitude,
-> navigation and power**, which is what keeps it usable past passivation; and **VOLLEY's own
-> 2 litres of nitrogen**, which produces a payload's separation condition and could not raise an
-> orbit if it tried. **Full concept, host classes and the price of a plane change:**
+That mission was chosen in 2023, not in 2026.
+[ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md) rejected a dedicated free-flyer, on the
+grounds that *"it must carry its own attitude control, power and recoil management, which is most
+of a spacecraft"*, and put VOLLEY on a spent upper stage instead. What has changed across six
+generations is how much of the machine VOLLEY builds for itself: Gen5 carries its own track,
+drive, store and brake aboard the platform, while Gen6 makes the stage's own structure and length
+part of the machine. [`docs/LINEAGE.md`](docs/LINEAGE.md) keeps the mission column and the
+integration column apart, because collapsing them produces a false history.
+
+> Three resources get collapsed into one in casual descriptions of this, and they are not the
+> same thing. The host stage's propulsion reserve belongs to the launch provider and cannot be
+> assumed. The host's attitude, navigation and power is what keeps the stage usable past
+> passivation. VOLLEY's own 2 litres of nitrogen produces a payload's separation condition and
+> could not raise an orbit if it tried. For the full concept, the host classes and the price of a
+> plane change, see
 > [`docs/MISSION_ARCHITECTURE.md`](docs/MISSION_ARCHITECTURE.md).
 >
-> **One degree of inclination costs ~133 m/s at 500 km; ten kilometres of altitude costs 5.5.**
-> *The stage delivers altitude, phase and orbital energy. It does not deliver planes, and this
-> repository will not imply that it does.*
+> One degree of inclination costs about 133 m/s at 500 km, against 5.5 m/s for ten
+> kilometres of altitude. The stage delivers altitude, phase and orbital energy. It does not
+> deliver planes, and this repository will not imply that it does.
 
-> ### Where the current architecture actually stands, 2026-08-22
+> ### Where the current architecture stands, 2026-08-22
 >
-> **Gen6 — the stage-integrated gas architecture — is the design target, and four runs this week
-> found two problems with its guided interface.**
+> Gen6, the stage-integrated gas architecture, is the design target, and four runs this week found
+> two problems with its guided interface.
 >
-> **[A67](validation/A67_guided_contact.md)** modelled the payload's travel through the 8 m bore
-> for the first time and missed the **2.0 °/s** tip-off band. **[A68](validation/A68_contact_law.md)**
-> then measured how much of that was the contact law — **65.8 %** — so the honest figure is
-> **unresolved in magnitude**, not a single number ([P108](OPEN_PROBLEMS.md)).
-> **[A69](validation/A69_tube_centreline.md)** computed the tube's actual shape and found that at
-> 0 g its own weight contributes **exactly nothing**: the centreline is set by **thermal bow and
-> support placement**, not by structure or stiffness.
+> [A67](validation/A67_guided_contact.md) modelled the payload's travel through the 8 m bore for
+> the first time and missed the 2.0 deg/s tip-off band.
+> [A68](validation/A68_contact_law.md) then measured how much of that was the contact law rather
+> than the machine, and got 65.8 %, so the magnitude is unresolved
+> ([P108](OPEN_PROBLEMS.md)). [A69](validation/A69_tube_centreline.md) computed the tube's actual
+> shape and found that at 0 g its own weight contributes nothing at all: the centreline is set by
+> thermal bow and support placement rather than by structure or stiffness.
 >
-> **[A70](validation/A70_guided_contact_derived.md) reported a geometric interference at 1 K, and
-> an audit the same day found it was an artefact** — A69's thermal construction had kinked a
-> continuous tube at every support. **On the corrected continuous solve the piston clears at every
-> gradient tested to 5 K, with a factor of 2 in hand**, and the corrected figure agrees with the
-> closed form κL²/8 to 0.2 %. **[P109](OPEN_PROBLEMS.md) is withdrawn; [P110](OPEN_PROBLEMS.md)
-> records why.** *What survives is a ceiling on long land separations — 400 mm is inadmissible at
-> 1 K — which is a trade limit, not a design failure.*
+> [A70](validation/A70_guided_contact_derived.md) reported a geometric interference at a 1 K
+> gradient, and a review the same day found it was an artefact of A69's thermal construction,
+> which had kinked a continuous tube at every support. On the corrected continuous solve the
+> piston clears at every gradient tested up to 5 K with a factor of two in hand, and the corrected
+> figure agrees with the closed form kappa*L^2/8 to 0.2 %. [P109](OPEN_PROBLEMS.md) is withdrawn
+> and [P110](OPEN_PROBLEMS.md) records why. What survives is a ceiling on long land separations:
+> 400 mm is inadmissible at 1 K, which is a limit on a trade rather than a design failure.
 >
-> **The audit found something more general and it is worth more than the result it deleted.** The
-> one band that would have caught the kink was implemented as `b4 = True` — a verdict assigned
-> rather than computed. **Every gate in this repository passed while the physics was wrong.**
+> The review turned up something more general, and it is worth more than the result it deleted.
+> The one band that would have caught the kink was implemented as `b4 = True`, a verdict assigned
+> rather than computed, so every gate in this repository passed while the physics was wrong.
 > [`tools/check_bands.py`](tools/check_bands.py) now refuses a band verdict that is a literal
-> unless it is declared report-only with a reason; **101 scripts scanned, and A69 and A70 were the
-> only two.**
+> unless it is declared report-only with a reason. It scanned 104 scripts, and A69 and A70 were
+> the only two.
 >
-> **Gen5 remains the frozen, fully analysed baseline** and is what the manuscript reports.
-> **[`docs/GEN6_FUSION_BUILD_PACKAGE.md`](docs/GEN6_FUSION_BUILD_PACKAGE.md)** is the handoff for
-> building the authoritative Fusion assembly — assembly tree, datums, every CAD-driving parameter
-> with its status, and an explicit list of what must stay parametric until P108 lands.
-> **[`docs/HUMAN_ACTIONS.md`](docs/HUMAN_ACTIONS.md)** is the other side of the boundary: work no
-> further computation can do.
-> **[`docs/COMPUTATIONAL_CLOSURE.md`](docs/COMPUTATIONAL_CLOSURE.md)** counts what is left before
-> hardware: **17 questions that are still calculations**, and ten that are not.
+> Gen5 remains the frozen, fully analysed baseline and is what the manuscript reports.
+> [`docs/GEN6_FUSION_BUILD_PACKAGE.md`](docs/GEN6_FUSION_BUILD_PACKAGE.md) is the handoff for
+> building the authoritative Fusion assembly: assembly tree, datums, every CAD-driving parameter
+> with its status, and a list of what must stay parametric until P108 lands.
+> [`docs/HUMAN_ACTIONS.md`](docs/HUMAN_ACTIONS.md) is the other side of that boundary, the work no
+> further computation can do. [`docs/COMPUTATIONAL_CLOSURE.md`](docs/COMPUTATIONAL_CLOSURE.md)
+> counts what is left before hardware: 17 questions that are still calculations, and ten that
+> are not.
 
-> **This repository is the engineering record, not a brochure.** Every analysis declares what
-> would count as failure *before* it runs, every defect is numbered including the ones that damage
-> the work's own claims, and **nothing here has been built, fired or measured.**
+> This is an engineering record rather than a brochure. Every analysis declares what would count
+> as failure before it runs, every defect is numbered including the ones that damage the work's
+> own claims, and nothing here has been built, fired or measured.
 >
-> **What that discipline has actually produced, which is the part worth judging:** **66 run
-> sheets** covering 67 analyses A1–A71 — A3, A26, A60 and A66 were numbered and never written —
-> each against a band written down before its script existed. **Three failed outright** —
-> including one that falsified a claim in this project's own abstract. **Three times a declared
-> band caught a bug in the analysis rather than in the design**, which is the direction nobody
-> plans for. **Every correction is dated and none of them improved a number.**
+> What that has produced, which is the part worth judging: 66 run sheets covering 67 analyses A1
+> to A71 (A3, A26, A60 and A66 were numbered and never written), each against a band written down
+> before its script existed. Three failed outright, one of them falsifying a claim in this
+> project's own abstract. On three further occasions a declared band caught a bug in the analysis
+> rather than in the design. Every correction is dated, and none of them improved a number.
 >
-> **Phase I closes on Gen5** — [`docs/GEN5_CLOSURE.md`](docs/GEN5_CLOSURE.md) is the whole case on
-> one page, including the one defect that is still blocking it.
+> Phase I closes on Gen5. [`docs/GEN5_CLOSURE.md`](docs/GEN5_CLOSURE.md) is the whole case on one
+> page, including the one defect still blocking it.
 
 ### Where to go from here
 
-| If you are… | Read |
+| If you are | Read |
 |---|---|
-| **checking whether Gen5 closes** | [`docs/GEN5_CLOSURE.md`](docs/GEN5_CLOSURE.md) — the whole Phase I case, what failed, and what is deliberately left open |
-| **here for one page** | **[`SUMMARY.md`](SUMMARY.md)** — the whole thing, with its caveats attached |
-| **here for the idea** | [`docs/CONCEPT.md`](docs/CONCEPT.md), and [`docs/LINEAGE.md`](docs/LINEAGE.md) for how it got there |
-| **deciding whether to use it** | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md) — a worked twelve-satellite mission, **+60.2 % of orbital life against a spring's +8.2 %**, with the losses in the same voice as the wins |
-| **reviewing it** | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md) — thirty-five reviewer questions answered or conceded, **fourteen with no answer in this repository at all**. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
-| **checking what outside evidence could settle** | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md) — which live entries a published source can close, which it can only inform, and **which need hardware and cannot be read away** |
-| **looking for what is broken** | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) — 147 numbered entries, 56 live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) — seven thresholds, three crossed |
-| **deciding what to do next** | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
-| **building on it** | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and **[Reproducing](#what-stands-behind-the-numbers)** below |
+| checking whether Gen5 closes | [`docs/GEN5_CLOSURE.md`](docs/GEN5_CLOSURE.md), the whole Phase I case, what failed, and what is deliberately left open |
+| here for one page | [`SUMMARY.md`](SUMMARY.md), the whole thing with its caveats attached |
+| here for the idea | [`docs/CONCEPT.md`](docs/CONCEPT.md), and [`docs/LINEAGE.md`](docs/LINEAGE.md) for how it got there |
+| deciding whether to use it | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md), a worked twelve-satellite mission at +60.2 % of orbital life against a spring's +8.2 %, with the losses written in the same voice as the wins |
+| reviewing it | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md), thirty-five reviewer questions answered or conceded, fourteen of which have no answer in this repository at all. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
+| checking what outside evidence could settle | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md), which live entries a published source can close, which it can only inform, and which need hardware and cannot be read away |
+| looking for what is broken | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md), 147 numbered entries of which 56 are live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md), seven thresholds of which three are crossed |
+| deciding what to do next | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
+| building on it | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and [Reproducing](#what-stands-behind-the-numbers) below |
 
 ---
 
 ## What it is
 
-**Two machines share this repository, and every number belongs to one of them.**
+Two machines share this repository, and every number belongs to one of them.
 
-| | **Gen5** — the frozen baseline | **Gen6** — the current design target |
+| | Gen5, the frozen baseline | Gen6, the current design target |
 |---|---|---|
-| What accelerates the payload | an ironless double-sided Halbach linear synchronous motor, over **1.3 m** | **cold gas, over 8.0 m of the host stage's own length** |
-| What it is mounted on | its own track and enclosure, on an ESPA port | **a rail a spent upper stage already is** |
-| Electromagnetics | the whole machine | a short trim stator at the muzzle, **sized at 144.01 mm and suspended** by [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md) — at the specified seal it may not be needed at all ([P67](OPEN_PROBLEMS.md)) |
-| What the motor does | delivers the energy **and** commands the velocity | **commands the velocity only** |
-| Evidence behind it | every headline number, structural FEA, CFD, a designed control loop, a second CAD implementation | **A35–A53. No FEA, no circuit model, no CFD, and no second implementation** |
+| What accelerates the payload | an ironless double-sided Halbach linear synchronous motor, over 1.3 m | cold gas, over 8.0 m of the host stage's own length |
+| What it is mounted on | its own track and enclosure, on an ESPA port | a rail a spent upper stage already is |
+| Electromagnetics | the whole machine | a short trim stator at the muzzle, sized at 144.01 mm and suspended by [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md). At the specified seal it may not be needed at all ([P67](OPEN_PROBLEMS.md)) |
+| What the motor does | delivers the energy and commands the velocity | commands the velocity only |
+| Evidence behind it | every headline number, structural FEA, CFD, a designed control loop, a second CAD implementation | A35 to A53. No FEA, no circuit model, no CFD, and no second implementation |
 
-**Gen5 is what every headline number is still computed against. Gen6 is where the design is
-going.** [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) made the stage the machine
-rather than the host; [ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) took the stroke to
-the stage's whole 8.0 m. **[`docs/GENERATIONS.md`](docs/GENERATIONS.md) compares all six
-generations; [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) is what Gen6 still owes.**
+Gen5 is what every headline number is still computed against; Gen6 is where the design is going.
+[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) made the stage the machine rather than
+the host, and [ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) took the stroke to the
+stage's whole 8.0 m. [`docs/GENERATIONS.md`](docs/GENERATIONS.md) compares all six generations,
+and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) lists what Gen6 still owes.
 
 ### Gas supplies the energy; the motor supplies the control
 
-**That division is [ADR-033](docs/adr/033-gen6-trim-stage.md)'s, and it is deliberate.** A gas
-store charges slowly from solar and releases fast — an excellent energy store and a terrible
-servo. A linear machine is the reverse. **Gen6 uses each for what it is good at.**
+That division is [ADR-033](docs/adr/033-gen6-trim-stage.md)'s, and it is deliberate. A gas store
+charges slowly from solar and releases fast, which makes it a good energy store and a poor servo.
+A linear machine is the reverse. Gen6 uses each for what it is good at.
 
-**The motor is not decoration at 1.8 % of the stroke.** Gen6's shot is a single open-loop
-expansion dispersing at **3.980 % (3σ)** at ADR-034's stroke, of which **98.7 % is a seal friction
-nobody has measured** — and [A44](validation/A44_gen6_dispersion.md) found no instrumentation route out,
-because a fivefold better pressure transducer moves it **0.008 %**. **The stator is what recovers
-the commanded velocity the product is sold on.**
+At 1.8 % of the stroke the motor still does real work. Gen6's shot is a single open-loop expansion
+dispersing at 3.980 % (3-sigma) at ADR-034's stroke, of which 98.7 % is a seal friction nobody has
+measured, and [A44](validation/A44_gen6_dispersion.md) found no instrumentation route out: a
+fivefold better pressure transducer moves it 0.008 %. The stator is what recovers the commanded
+velocity the whole idea rests on.
 
-> ### The stator is suspended, and the seal may delete it — [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md), 2026-08-20
+> ### The stator is suspended, and the seal may delete it: [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md), 2026-08-20
 >
-> **That 3.980 % is computed at A41's friction *allowance* — a ceiling, not a measurement.**
-> [A61](validation/A61_seal_class.md) asked instead what the loosest seal is that the design can
-> survive, and found the binding requirement is **thermal**: a 2 g seal must stay within 50 K of
-> its own friction heating, which needs **17.8 N — 4.00 % of the piston's pressure force.**
+> That 3.980 % is computed at A41's friction *allowance*, which is a ceiling and not a
+> measurement. [A61](validation/A61_seal_class.md) asked instead what the loosest seal is that the
+> design can survive, and found the binding requirement is thermal: a 2 g seal must stay within
+> 50 K of its own friction heating, which needs 17.8 N, or 4.00 % of the piston's pressure force.
 >
-> **The trim stage stops earning its mass at 22.3 N.** Since **17.8 < 22.3**, *any seal that
-> survives its own heat also makes the stator unnecessary* — dispersion falls to **0.9051 %** and
-> the authority needed to **0.2982 m/s**, below what even [A48](validation/A48_trim_stage.md)'s
-> superseded 39.7 mm section gave.
+> The trim stage stops earning its mass at 22.3 N. Since 17.8 < 22.3, any seal that survives its
+> own heat also makes the stator unnecessary, with dispersion falling to 0.9051 % and the
+> authority needed to 0.2982 m/s, below what even [A48](validation/A48_trim_stage.md)'s superseded
+> 39.7 mm section gave.
 >
-> **So the stage is suspended rather than built or deleted.** Deleting it on a specification would
-> repeat ADR-033's own error of adopting before its falsifier was answered. **[P67](OPEN_PROBLEMS.md)
-> decides**: at or below 17.8 N the stator goes, above 22.3 N it is needed.
+> So the stage is suspended rather than built or deleted. Deleting it on a specification would
+> repeat ADR-033's own error of adopting before its falsifier was answered.
+> [P67](OPEN_PROBLEMS.md) decides it: at or below 17.8 N the stator goes, above 22.3 N it is
+> needed.
 >
-> **And the honest limit: at 0.9051 % the declared band is still 0.5 %.** *Unnecessary and
-> sufficient are different words. A specified seal makes Gen6 cheaper; it does not make it
-> accurate.*
+> The honest limit is that 0.9051 % is still short of the declared 0.5 % band. A specified seal
+> makes Gen6 cheaper without making it accurate.
 
 ### Why the store is gas
 
-**[A39](validation/A39_store_trade.md) ran the trade. Gas won by a factor of four** — against a
-**12.55 kg** budget for store plus mechanism, at 32.7 m/s:
+[A39](validation/A39_store_trade.md) ran the trade and gas won by a factor of four, against a
+12.55 kg budget for store plus mechanism, at 32.7 m/s:
 
-| | store | mechanism | **total** | busts the budget at |
+| | store | mechanism | total | busts the budget at |
 |---|---:|---:|---:|---:|
-| Steel spring | 7.13 | 4.28 | **11.41 kg** | **34.3 m/s** |
-| **Cold gas** | 0.63 | 2.34 | **2.98 kg** | **89.4 m/s** |
-| Keep the motor *(control)* | 23.76 | — | **23.76 kg** | **every velocity** |
+| Steel spring | 7.13 | 4.28 | 11.41 kg | 34.3 m/s |
+| Cold gas | 0.63 | 2.34 | 2.98 kg | 89.4 m/s |
+| Keep the motor *(control)* | 23.76 | | 23.76 kg | every velocity |
 
-**And the reason is not energy density.**
-
-> **The spring's problem was never storing the energy. It was having to be cocked twelve times.**
-
-A spring stores 7.13 kg of energy and then needs **4.28 kg of mechanism to re-arm it, twelve
-times.** Gas separates the store from the actuator, so re-arming is a valve and **one bottle runs
-the whole manifest.**
+Energy density is not what decides it. The spring can store the energy; what costs it 4.28 kg is
+having to be cocked twelve times. Gas separates the store from the actuator, so re-arming is a
+valve and one bottle runs the whole manifest.
 
 **Every alternative was screened by a run that is on the record**, so the trade cannot be read as
 having considered only two:
