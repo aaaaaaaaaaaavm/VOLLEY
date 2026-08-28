@@ -65,11 +65,19 @@ jobs:
       - name: host-reference self-test
         run: python3 analysis/host_reference.py --self-test
 
+      # host_reference.py is deliberately NOT re-run here. check_results_fresh.py above
+      # already regenerates analysis/results/host_reference.json and compares it
+      # numerically, with a declared tolerance and a reason. Re-running it a second time
+      # and demanding byte identity asserts a property this repository has already
+      # established two machines cannot share: the transfer-arc sums differ in the last
+      # bit because pow and division are not required to be correctly rounded, and the
+      # same 1-ulp disagreement that failed run 45 is what P115 and the freshness gate
+      # exist to handle properly. The generators below emit integers and formatted text,
+      # where byte identity IS achievable, so they stay.
       - name: nothing generated drifted
         run: |
           python3 analysis/payload_family.py > /dev/null
           python3 analysis/cell_manifest.py > /dev/null
-          python3 analysis/host_reference.py > /dev/null
           python3 tools/register_status.py > /dev/null
           git diff --exit-code
 

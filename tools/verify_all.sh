@@ -39,8 +39,11 @@ if [ "${1:-}" = "--full" ]; then
     run "Gen6 CAD"       python3 cad/build_gen6.py --check
     run "payload family" python3 analysis/payload_family.py
     run "cell manifest"  python3 analysis/cell_manifest.py
-    run "host reference" python3 analysis/host_reference.py
     run "register file"  python3 tools/register_status.py
+    # host_reference.py is not re-run here. The results-freshness gate above already
+    # regenerates its JSON and compares it numerically with a declared tolerance.
+    # Re-running it and then requiring a clean tree would demand byte identity of
+    # floating-point output, which is not a property two machines can share.
 fi
 
 echo
