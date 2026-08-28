@@ -32,6 +32,12 @@ scale at its near face, continuously rather than only during a shot
 What a spring cannot do at any price is give two satellites different velocities. Every number on
 this page exists to support that one capability or to qualify it.
 
+<p align="center"><img src="figures/V00_system_overview.svg" alt="VOLLEY mission chain and evidence boundary between the Gen5 baseline and Gen6 design target" width="100%"></p>
+
+<p align="center"><sub>Generated from the committed operating point and validation register by
+<code>tools/make_repo_overview.py</code>. Gen5 and Gen6 are shown side by side because they share a
+mission, not an evidence base. Nothing in either architecture has been built, fired or measured.</sub></p>
+
 ## The mission
 
 VOLLEY flies as a secondary system on the launch vehicle's final stage. The vehicle flies its

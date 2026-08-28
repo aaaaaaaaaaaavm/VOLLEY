@@ -23,6 +23,7 @@ run "links"              python3 tools/check_links.py
 run "register"           python3 tools/register_status.py --check
 run "baseline"           python3 tools/make_baseline.py --check
 run "public surfaces"    python3 tools/check_public.py
+run "README overview"    python3 tools/make_repo_overview.py --check
 run "cross-references"   python3 tools/check_crossrefs.py
 run "companion payloads" python3 tools/check_companions.py
 run "band integrity"      python3 tools/check_bands.py

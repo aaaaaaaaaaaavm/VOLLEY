@@ -173,6 +173,12 @@ PAPER_README = """# VOLLEY: the manuscript
 
 An IEEE-formatted technical manuscript, and everything needed to check it.
 
+<p align="center"><img src="paper/figures/V00_system_overview.svg" alt="VOLLEY mission chain and the evidence boundary between Gen5 and Gen6" width="100%"></p>
+
+<p align="center"><sub>The manuscript reports Gen5. The current design target is Gen6. They share
+the mission, not the evidence base; this generated overview keeps that distinction visible before
+the paper is opened.</sub></p>
+
 Rideshare CubeSats inherit the orbit of whoever paid for the launch. This paper describes a
 deployer that gives each of twelve satellites an orbit chosen for it, without modifying any of
 them, and reports, in the same voice, the three thresholds the design currently fails.
@@ -279,6 +285,12 @@ THESIS_README = """# VOLLEY: the thesis
 
 A final-year thesis on giving rideshare CubeSats an orbit their host was not going to, and
 the full record of what went wrong on the way there.
+
+<p align="center"><img src="source/figures/V00_system_overview.svg" alt="VOLLEY mission chain and the evidence boundary between Gen5 and Gen6" width="100%"></p>
+
+<p align="center"><sub>The thesis preserves the analysed Gen5 baseline while the engineering
+record develops Gen6. This generated overview shows both without letting the newer target inherit
+evidence it does not have.</sub></p>
 
 [Read the manuscript](source/VOLLEY_IEEE_Conference.pdf)
 

@@ -30,6 +30,7 @@ the number it illustrates, which is the defect the generator was written to remo
 
 | Fig | Shows | Drawn by | From | Supports | Class |
 |---|---|---|---|---|:-:|
+| V00 | Flagship overview: mission chain, Gen5 frozen baseline, Gen6 design target and their separate evidence boundaries | `tools/make_repo_overview.py` | `motor_results.json`, `sizing.json`, the validation run-sheet register | README orientation only; every number remains sourced elsewhere | M |
 | D01 | System block diagram: power, control, mechanism, host-interface chains | `legacy/make_diagrams.py` |, | §III architecture | S |
 | D02 | Plan-view layout against an ESPA-Grande envelope | `legacy/make_diagrams.py` | `cad/parameters.json` | §III, and kill criterion 2, the figure shows the envelope being exceeded | S |
 | F01 | Shot profile: velocity, bank voltage, current | `f01_shot()` | `motor_model.shot(trace=True)` | 16.029 m/s, 162.3 ms, 320 A peak | M |
