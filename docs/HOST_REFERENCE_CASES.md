@@ -217,7 +217,16 @@ not be opened, and the claim comes from a search-result summary of it.
 | S8 | Indian Defence News, August 2026 | Thrustworks Dynetics Validates India's First Resonance Ignition System With KeroLOX Hot-Fire Tests | https://www.indiandefensenews.in/2026/08/thrustworks-dynetics-validates-indias.html |
 
 None of S1 to S8 could be opened directly. Each host returns a 403 policy denial to the network
-this study was run on, re-tested 2026-08-26.
+this study was run on, re-tested 2026-08-27. The denial is at the network's own proxy, before the
+publisher is reached, so it says nothing about whether the pages are public.
+
+Two rows were re-attempted specifically on that date and both remain blocked. **S2 is cited by
+article title against the vendor's programme landing page**, because the article-level URL could
+not be confirmed from here and inventing one would be worse than the imprecision; a reader with
+network access should replace the URL rather than the title. **S1 was re-attempted for a
+company-owned ignition post** that would carry the hot-fire count, the propellant pair, the
+5.08 bar gauge figure and the restart wording at first hand. It was not retrievable, so no row is
+promoted to `COMPANY_PRIMARY` and every claim keeps its `SEARCH_SUMMARY` retrieval mark.
 
 ### Claims
 
@@ -510,15 +519,16 @@ that a reader who knows any of those can read the answer off them directly.
 Disposal reserve is ring-fenced first. Customer manoeuvres spend what is left. At the assumed
 150 kg usable and 20 % reserve, that leaves 120 kg for customers.
 
-Each reposition leg is a circular-to-circular shell change, so each leg is two ignitions. The
-ignition column counts ignitions, not legs, and the two differ by about a factor of two.
+Each reposition leg is a circular-to-circular shell change, so each leg is two impulses of about
+half the leg's total dv. Every one of those impulses is now checked against the minimum stable
+burn this study declared in section 8, and the check is what changed the section.
 
 <!-- HOST_REFERENCE:MISSION_CASES:BEGIN -->
-| Case | Reposition legs | Reposition ignitions | Post-primary ignitions required | Total dv, m/s | Propellant, kg | Margin on the customer budget, kg | Inside the assumed 4-ignition budget |
+| Case | Reposition legs | Main-engine reposition ignitions | Auxiliary reposition impulses | Total dv, m/s | Propellant, kg | Net circular rise, km | Commandable by the baseline main engine? |
 |---|---:|---:|---:|---:|---:|---:|---|
-| A, rapid deployment, no post-primary main-engine burn | 0 | 0 | 0 | 0 | 0.0 | 120.0 | yes |
-| B, moderate distributed delivery | 3 | 6 | 7 | 60 | 20.2 | 99.8 | NO, over by 3 |
-| C, upper-bound sensitivity | 5 | 10 | 11 | 200 | 65.7 | 54.3 | NO, over by 7 |
+| A, rapid deployment, no post-primary main-engine burn | 0 | 0 | 0 | 0 | 0.0 | 0.0 | not applicable, no post-primary burn |
+| B, moderate distributed delivery | 3 | 0 | 6 | 60 | 20.2 | 109.7 | NO, 6 of 6 below the burn floor |
+| C, upper-bound sensitivity | 5 | 0 | 10 | 200 | 65.7 | 376.2 | NO, 10 of 10 below the burn floor |
 <!-- HOST_REFERENCE:MISSION_CASES:END -->
 
 **Case A is the one that matters most to the architecture.** It uses no post-primary main-engine
@@ -527,27 +537,130 @@ restartable host to exist, and every capability discussed in this file is an ext
 product that already functions without it. That is easy to lose sight of in a document about
 engines.
 
-**Case B and Case C both exceed the assumed ignition budget.** Case B needs 7 post-primary
-ignitions against an assumed budget of 4, and Case C needs 11. This is the sharpest finding in
-the study and the first revision did not have it, because it counted repositioning legs as
-ignitions and so understated both cases by about half.
+### Case B and Case C are not baseline main-engine campaigns
 
-> On the declared assumptions, the binding constraint on a distributed campaign is the number of
-> post-primary main-engine ignitions the stage can be qualified for. It binds before propellant
-> does and before any of the pacing scenarios in section 12 do. That makes qualified restart count
-> the single most valuable provider datum in section 19, and it is a datum that belongs to the
-> engine team rather than to the stage team.
+> Under the baseline 20 kN, 1000 kg, 2 s, no-throttle assumptions, the reference main engine
+> cannot command the individual Hohmann impulses used in Case B or Case C. The minimum-burn
+> constraint therefore binds before restart count.
 
-Three ways the ignition count could come down, none of which this file can choose: reposition with
-a single apogee-raising burn and accept an elliptical stage orbit, which changes what the customer
-is sold; use reaction control for the circularisation impulse, which is section 10's split applied
-again; or perform fewer, larger shell changes, which is section 13.
+Section 10 establishes that a 2 s burn on a 1000 kg stage at 20 kN is a 40.3 m/s command. A 20 m/s
+leg is two impulses of about 10 m/s, and a 40 m/s leg is two of about 20 m/s. Every impulse in
+both cases is below the floor, and none of them is close to it.
+
+<!-- HOST_REFERENCE:EXECUTABILITY:BEGIN -->
+| Case | Leg | Impulse | dv, m/s | Burn, s | Floor, s | Reaches the floor? | Assigned to |
+|---|---:|---|---:|---:|---:|---|---|
+| B | 1 | first | 10.007 | 0.499 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| B | 1 | second | 9.993 | 0.497 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| B | 2 | first | 10.007 | 0.496 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| B | 2 | second | 9.993 | 0.494 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| B | 3 | first | 10.007 | 0.493 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| B | 3 | second | 9.993 | 0.490 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 1 | first | 20.026 | 0.998 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 1 | second | 19.974 | 0.989 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 2 | first | 20.026 | 0.984 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 2 | second | 19.974 | 0.975 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 3 | first | 20.027 | 0.971 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 3 | second | 19.973 | 0.962 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 4 | first | 20.027 | 0.958 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 4 | second | 19.973 | 0.949 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 5 | first | 20.027 | 0.945 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+| C | 5 | second | 19.973 | 0.936 | 2.0 | no | AUXILIARY_PROPULSION_REQUIRED |
+<!-- HOST_REFERENCE:EXECUTABILITY:END -->
+
+The burns shorten along each campaign. That is not an error: the stage lightens as it spends
+propellant, so the same dv takes less time, and the manoeuvre the engine can least afford to be
+asked for is the last one rather than the first.
+
+**A previous revision of this file counted these as main-engine ignitions.** It reported 7
+post-primary ignitions for Case B and 11 for Case C, called the excess over the assumed budget of
+4 the sharpest finding in the study, and named restart count the single most valuable provider
+datum. That was wrong in a specific way: it charged the engine's restart budget for sixteen
+manoeuvres the same document's assumptions say the engine cannot perform. Counting an ignition for
+an impulse below the burn floor credits the engine with a capability and hides a shortfall in the
+same stroke. [P116](../OPEN_PROBLEMS.md#p116) carries the correction.
+
+### Three branches, because the cases are still worth pricing
+
+<!-- HOST_REFERENCE:BRANCHES:BEGIN -->
+| Branch | What it commands | dv, m/s | Post-primary main-engine ignitions | Auxiliary impulses | Propellant, kg | Executable under the declared floor? |
+|---|---|---|---:|---:|---:|---|
+| Branch 1, main engine only | 4 step(s) of 150.4 to 182.3 km | 81.9 to 89.5 | 9 | 0 | 109.9 | yes, by construction |
+| Branch 2, B, main engine plus auxiliary | 3 leg(s) as specified | 60 to auxiliary | 1 | 6 | - | main engine yes, auxiliary not established |
+| Branch 2, C, main engine plus auxiliary | 5 leg(s) as specified | 200 to auxiliary | 1 | 10 | - | main engine yes, auxiliary not established |
+| Branch 3, B, hypothetical throttle | 24.5 % of baseline thrust | 9.99 deepest impulse | - | - | - | only if the engine throttles, which no source states |
+| Branch 3, C, hypothetical throttle | 46.8 % of baseline thrust | 19.97 deepest impulse | - | - | - | only if the engine throttles, which no source states |
+<!-- HOST_REFERENCE:BRANCHES:END -->
+
+**Branch 1, main engine only.** Solve for the smallest shell change whose *each* impulse reaches
+the 2 s floor. The second impulse binds, being slightly the smaller and firing at a lower mass.
+From 500 km on a 1000 kg stage that step is 150.4 km, a total of 81.9 m/s split 41.07 and
+40.84 m/s, a 48.1 minute transfer arc and 27.5 kg of propellant. Four such steps fit inside the
+120 kg customer allocation, ending at 1163.3 km.
+
+<!-- HOST_REFERENCE:PROPAGATED_CAMPAIGN:BEGIN -->
+| Leg | Start, km | Raise, km | End, km | dv 1, m/s | dv 2, m/s | Burn 1, s | Burn 2, s | Transfer, min | Propellant, kg |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | 500.0 | 150.4 | 650.4 | 41.07 | 40.84 | 2.039 | 2.000 | 48.1 | 27.46 |
+| 2 | 650.4 | 160.0 | 810.5 | 42.26 | 42.02 | 2.040 | 2.000 | 49.7 | 27.47 |
+| 3 | 810.5 | 170.6 | 981.0 | 43.53 | 43.27 | 2.042 | 2.000 | 51.4 | 27.48 |
+| 4 | 981.0 | 182.3 | 1163.3 | 44.87 | 44.60 | 2.043 | 2.000 | 53.3 | 27.49 |
+<!-- HOST_REFERENCE:PROPAGATED_CAMPAIGN:END -->
+
+The steps grow, 150.4 km to 182.3 km. Both inputs move in the same direction: the stage climbs, so
+a given dv buys more altitude, and the stage lightens, so holding a burn to 2 s takes more dv. The
+minimum manoeuvre a main engine can command is not a fixed quantity over a campaign, and it gets
+coarser as the campaign proceeds.
+
+**Branch 1 does not rescue the ignition budget.** Four legs is eight main-engine reposition
+ignitions plus one disposal, nine against an assumed 4. Inside a 4-ignition budget the main engine
+can perform one shell change and one disposal burn, and nothing else.
+
+**Branch 2, main engine plus auxiliary propulsion.** Keep the Case B and Case C shells and assign
+each impulse to whatever can actually produce it. Every reposition impulse in both cases falls to
+auxiliary propulsion; the main engine performs the disposal burn and nothing else, because at
+102.0 m/s from 880 kg that burn is 4.41 s and does clear the floor. Case B then demands 60 m/s
+across six auxiliary impulses and Case C 200 m/s across ten.
+
+> No auxiliary capability is assumed anywhere in this branch. It states a demand, not a solution.
+> Whether a host has an auxiliary or reaction-control system with that dv authority and that
+> impulse size is a provider datum, and [P94](../OPEN_PROBLEMS.md#p94) already records that the
+> host RCS authority another run sheet leans on is not established either.
+
+This is the same three-way split section 10 arrives at from the fine end, reached independently
+from the campaign end: main engine coarse, auxiliary propulsion fine, VOLLEY for the final release.
+Two separate arguments landing on the same architecture is worth more than either alone.
+
+**Branch 3, hypothetical throttle.** A sensitivity and nothing else. To stretch Case B's deepest
+impulse to 2 s the engine would have to hold 4.90 kN, 24.5 % of the 20 kN baseline; Case C needs
+9.36 kN, 46.8 %. Both sit inside the purely hypothetical 10 to 100 % sweep in section 10.
+
+> **No public source states that the reference engine throttles at all.** This branch must not be
+> read as saying it does, and a 24.5 % throttle setting is a deep one for a pump-fed engine even
+> where the capability exists.
+
+### The constraint hierarchy, corrected
+
+1. **The minimum commandable impulse binds first.** On the baseline assumptions it rules out both
+   distributed cases outright, before propellant, before duration, before restart count.
+2. If that is solved, by auxiliary propulsion, by throttle, or by accepting shell steps of 150 km
+   and upward, then the next engine-level constraint appears.
+3. **Once the minimum-impulse problem is satisfied, restart qualification becomes the next
+   dominant engine-level constraint for distributed operation.** Branch 1 shows it immediately:
+   the smallest admissible main-engine campaign that spends the customer allocation needs nine
+   post-primary ignitions against an assumed budget of four.
+
+Restart count is not universally binding, and the earlier revision of this file was wrong to say
+it was. It is what binds *next*, on this reference point, once the manoeuvres are commandable at
+all.
 
 ### Propellant is not the constraint here, on these assumptions
 
-Case B spends 20.2 kg of a 120 kg customer allocation, and even Case C spends 65.7 kg. That is a
-statement about the assumed 150 kg usable propellant and nothing else. A stage with a tenth of
-that assumption would invert it, and no public figure exists for what a real stage would carry.
+Case B spends 20.2 kg of a 120 kg customer allocation, and even Case C spends 65.7 kg. Branch 1
+spends 109.9 kg of the same allocation, which is the first case in this file where propellant
+comes close to mattering. That is a statement about the assumed 150 kg usable propellant and
+nothing else. A stage with a tenth of that assumption would invert it, and no public figure exists
+for what a real stage would carry.
 
 ---
 
@@ -558,11 +671,16 @@ impulse to the second is half the transfer-ellipse period, and at these altitude
 47 minutes. Everything else is a scheduling assumption.
 
 <!-- HOST_REFERENCE:PACING:BEGIN -->
-| Case | Legs | Transfer arc per leg, min | Transfer arcs only, h | Assumed coast floor, h | Half-orbit per leg, h | One orbit per leg, h | Two orbits per leg, h |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| B | 3 | 47.5 | 2.37 | 0.50 | 2.4 | 4.7 | 9.5 |
-| C | 5 | 47.7 | 3.97 | 0.83 | 3.9 | 7.9 | 15.8 |
+| Case | Legs | First leg arc, min | Summed arcs, min | Transfer arcs only, h | Assumed coast floor, h | Half-orbit per leg, h | One orbit per leg, h | Two orbits per leg, h |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| B | 3 | 47.5 | 143.6 | 2.39 | 0.50 | 2.4 | 4.7 | 9.5 |
+| C | 5 | 47.7 | 246.2 | 4.10 | 0.83 | 3.9 | 7.9 | 15.8 |
 <!-- HOST_REFERENCE:PACING:END -->
+
+The transfer column is the **sum of each leg's own arc**, not the first leg's arc multiplied by
+the leg count. A campaign that climbs takes longer arcs as it goes, because the transfer ellipse
+grows with the orbit, and the multiplication understated Case C by 3.3 % and an eleven-leg
+campaign by 4.1 %. Small here, and wrong for a reason that does not stay small.
 
 The first revision called one orbit per leg "the real pace" and concluded from it that time was
 the binding constraint. That was too strong, and it is withdrawn. One orbital period per leg is an
@@ -575,6 +693,11 @@ case, campaign duration reaches 4.7 h for Case B and 7.9 h for Case C, so it pas
 campaign reference before propellant becomes limiting. Under the half-orbit case it does not.
 That is a tension between two VOLLEY assumptions, exposed by declaring both, and it is not a
 finding about any engine.
+
+It is also downstream of section 11. Neither Case B nor Case C is commandable by the baseline main
+engine in the first place, so these durations price a schedule that would have to be flown by
+auxiliary propulsion or by a throttled engine. The arcs themselves are two-body results and do not
+care which system produces the impulses.
 
 The real pacing problem belongs to a mission planner this repository does not have, and it depends
 on manoeuvre geometry, target state, navigation, attitude settling, safe separation, plume
@@ -590,13 +713,24 @@ with more repositions also buys more total orbital separation, and the rows do n
 same mission.
 
 <!-- HOST_REFERENCE:REPOSITION_SCALING:BEGIN -->
-| Deployment states | Satellites per state | Reposition legs | Total dv, m/s | Cumulative circular raise, km | Propellant, kg | One orbit per leg, h |
-|---:|---:|---:|---:|---:|---:|---:|
-| 12 | 1 | 11 | 220 | 399 | 72.1 | 17.3 |
-| 4 | 3 | 3 | 60 | 109 | 20.2 | 4.7 |
-| 3 | 4 | 2 | 40 | 73 | 13.5 | 3.2 |
-| 2 | 6 | 1 | 20 | 36 | 6.8 | 1.6 |
+| Deployment states | Satellites per state | Reposition legs | Total host dv, m/s | Initial altitude, km | Final circular altitude, km | Net circular rise, km | Propellant, kg | Total transfer arc, h | Illustrative one orbit per leg, h |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 12 | 1 | 11 | 220 | 500 | 915.5 | 415.5 | 72.1 | 9.06 | 17.3 |
+| 4 | 3 | 3 | 60 | 500 | 609.7 | 109.7 | 20.2 | 2.39 | 4.7 |
+| 3 | 4 | 2 | 40 | 500 | 572.9 | 72.9 | 13.5 | 1.59 | 3.2 |
+| 2 | 6 | 1 | 20 | 500 | 536.3 | 36.3 | 6.8 | 0.79 | 1.6 |
 <!-- HOST_REFERENCE:REPOSITION_SCALING:END -->
+
+**The altitude column is a propagated orbital state, not a multiplication.** An earlier revision
+computed one 20 m/s raise from 500 km and multiplied it by the leg count, and published 399 km for
+eleven legs. Repeating an identical total dv does not repeat an identical altitude increment: the
+same 20 m/s buys 36.3 km from 500 km and more from every orbit above it, so the campaign ends
+higher than the multiplication says. Propagated leg by leg, eleven legs reach 915.5 km, a net rise
+of 415.5 km. The old figure was 3.9 % low.
+
+Every leg here is a 20 m/s total, so every impulse is about 10 m/s and none of them reaches the
+2 s burn floor either. These rows scale a demand; they do not say the baseline main engine can
+meet it, and the two right-hand columns count which system would have to.
 
 The first revision presented this table as evidence that batching "wins". It is not, and that
 claim is withdrawn. Comparing a campaign that reaches 220 m/s of cumulative separation against one
@@ -654,27 +788,44 @@ restart and not a start. Several different counts are involved and they are rout
 | Count | Case B | Established by public evidence? |
 |---|---:|---|
 | Reposition legs | 3 | no |
-| Ignitions per leg, circular to circular | 2 | two-body result, not a provider figure |
-| Reposition ignitions | 6 | no |
-| Disposal ignition | 1 | no |
-| Post-primary ignitions required | 7 | no |
-| Assumed post-primary ignition budget | 4 | no, and this case needs more than it |
-| Contingency ignitions reserved | 1 | no |
+| Impulses per leg, circular to circular | 2 | two-body result, not a provider figure |
+| Main-engine reposition ignitions | 0 | no. Every reposition impulse here is below the assumed burn floor |
+| Auxiliary reposition impulses required | 6 | no, and no host RCS authority is established either, P94 |
+| Auxiliary dv demand, m/s | 60 | no |
+| Disposal ignition, main engine | 1 | no |
+| Post-primary main-engine ignitions required | 1 | no |
+| Assumed post-primary ignition budget | 4 | no. VOLLEY_ASSUMPTION, not a provider figure |
+| Contingency main-engine ignitions reserved | 1 | no |
+| Total manoeuvre impulses, all propulsion | 7 | no |
 | Ascent starts, illustrative for this case | 1 | no, and the ascent profile is a vehicle property |
-| Total engine starts, illustrative | 8 | no |
-| Igniter cycles, at least | 8 | three, on the ground, for the subsystem alone |
-| Full-engine thermal cycles | 8 | no |
+| Total main-engine starts, illustrative | 2 | no |
+| Igniter cycles, at least | 2 | three, on the ground, for the subsystem alone |
+| Full-engine thermal cycles | 2 | no |
 <!-- HOST_REFERENCE:RESTART_ACCOUNTING:END -->
 
-Two things that table is careful about. The disposal burn is an ignition and is counted as one, so
-a campaign planned around three shell changes needs seven post-primary ignitions rather than
-three, and a mission that budgets ignitions by counting deployment legs will be short at exactly
-the moment it cannot afford to be. And the ascent start is illustrative for this reference case
-rather than a vehicle fact: a different ascent profile changes the total-start row and none of the
-post-primary rows.
+Three things that table is careful about.
+
+**It counts main-engine ignitions, not manoeuvres.** Case B needs seven propulsive impulses after
+primary separation. Exactly one of them, the disposal burn, is something the baseline main engine
+can perform; the other six are below its declared minimum burn and are charged to auxiliary
+propulsion instead. An earlier revision put all seven in the main-engine row, which both
+overstated the engine's restart requirement and concealed that it could not command six of them.
+Both counts are now kept, because both are real requirements on some system.
+
+**The disposal burn is an ignition and is counted as one.** A campaign that budgets ignitions by
+counting deployment legs will be short at exactly the moment it cannot afford to be. That was true
+before this correction and it stays true.
+
+**The ascent start is illustrative** for this reference case rather than a vehicle fact. A
+different ascent profile changes the total-start row and none of the post-primary rows.
 
 The igniter row is the only one with any public evidence behind it, and it is a ground count on a
 subsystem. Igniter cycles are not engine restart life.
+
+> The assumed budget of 4 is a **VOLLEY_ASSUMPTION** and appears in that row marked as one. No
+> public engine restart count exists for this case. A branch that lands inside it is *inside the
+> declared reference budget of 4*, which is a statement about this study's own placeholder and
+> not a statement about any real engine.
 
 ---
 
@@ -777,15 +928,22 @@ any engine:
    stage is 30.2, 40.3 and 60.6 m/s. A 10 km shell change needs two impulses of 2.76 m/s, each a
    0.138 s burn. Fine stage corrections belong to reaction control, and the three-way split in
    section 10 is the cleaner architecture.
-2. **Post-primary ignition count binds before propellant or time.** Counting each shell change as
-   the two-impulse transfer it is, Case B needs 7 post-primary ignitions and Case C needs 11,
-   against an assumed budget of 4. Qualified restart count is the most valuable single provider
-   datum in this study.
+2. **The minimum commandable impulse binds first, and restart count binds next.** Every
+   individual impulse in Case B and Case C, 0.49 s and 0.94 s at the reference point, is below the
+   declared 2 s floor, so the baseline main engine cannot command either campaign at all. The
+   smallest shell change it can command is 150.4 km, and four of those exhaust the customer
+   propellant allocation while needing nine post-primary ignitions against an assumed budget of
+   four. Minimum burn and minimum thrust are therefore the most valuable provider data in this
+   study; qualified restart count is the third.
 3. **The softest assumption matters least.** Specific impulse across 285 to 320 s moves propellant
    by about six per cent and burn duration not at all, so the main conclusion does not rest on the
    number a reviewer is most likely to be able to correct.
 4. **Propellant has margin and campaign duration is scenario-dependent.** Both are statements
    about the assumed 150 kg usable propellant and the assumed pacing, not about any vehicle.
+5. **The campaign arithmetic has to be propagated, not multiplied.** Repeating an identical total
+   dv does not repeat an identical altitude increment, because the same dv buys more altitude from
+   a higher orbit and the transfer arc lengthens with it. Over eleven legs the multiplication
+   understated the altitude reached by 3.9 % and the transfer time by 4.1 %.
 
 ### What is not concluded
 
@@ -802,7 +960,10 @@ establish.
 [P113](../OPEN_PROBLEMS.md) is opened: how the orbital work divides between host and deployer has
 never been computed, and it sets VOLLEY's release-velocity requirement.
 
-> The reference-host exercise reveals P113 and does not resolve it. A real answer needs
+> The reference-host exercise reveals P113 and does not resolve it. The executability correction
+> makes P113 **more** important rather than less: if the host's main engine cannot perform fine
+> shell changes, the division of orbital work between host, auxiliary propulsion and deployer is a
+> harder question than the file first made it look, not an easier one. A real answer needs
 > mission-level optimisation across host manoeuvre, release velocity, deployment timing, target
 > orbit states, host class, the reaction-control and main-engine split, propellant, campaign
 > duration and disposal. That belongs in a future mission planner.
@@ -824,26 +985,35 @@ Gen6's design point is unchanged at 29.009 m/s. The Fusion package in
 The practical reason the document exists. A reviewer who knows the real numbers should be able to
 correct rows rather than reconstruct the study, and the Owner column says which team can answer.
 
-| Model quantity | Assumed baseline | Sensitivity | Why it matters | Replacing datum | Owner | Consequence if materially different |
-|---|---|---|---|---|---|---|
-| Vacuum specific impulse | 300 s | 285 to 320 s | propellant budget for the whole campaign | design-point or certified vacuum Isp | engine | small. Propellant moves about 6 %, burn duration does not move |
-| Thrust condition | 20 kN, condition unstated | 15 to 30 kN | which figure the model should use | vacuum thrust at the design mixture ratio | engine | moderate. Changes the dv floor proportionally, not the conclusion |
-| Minimum stable useful burn | 2 s | 0.5 to 5 s | the whole of section 10 | demonstrated or qualified minimum burn duration | engine, controls and transient | large. At full thrust the first impulse of a 5 m/s shell change is a 0.125 s burn, so a minimum burn at or below that would let the main engine command the fine end directly |
-| Throttle range and minimum power level | none credited | 100 to 10 %, hypothetical | whether the main engine can reach small manoeuvres at all | qualified throttle envelope, with the Isp penalty at each setting | engine, controls | large. Deep throttling plus a short minimum burn removes the need for the three-way split |
-| Engine restart life | 4 assumed, 1 contingency | 2 to 8 | the binding constraint in section 11 | demonstrated or qualified restart count, and what limits it | engine, cycle and qualification | largest. Below 7 the moderate campaign does not close as modelled |
-| Restart dwell and coast requirement | 10 min | 2 to 30 min | campaign sequencing | restart thermal and propellant-conditioning envelope | engine plus stage feed and thermal | moderate |
-| Maximum coast duration | 4 h reference | 1 to 12 h | whether a multi-orbit campaign closes at all | stage cryogenic design limit and boil-off rate | stage, tank and thermal | large |
-| Post-primary stage mass | 1000 kg | 500 to 3000 kg | every table in sections 9 and 10 | actual stage dry and wet mass at primary separation | stage | large. Heavier stages narrow the overshoot without closing it |
-| Usable post-primary propellant | 150 kg | not swept | the customer allocation | reserved or characterised residual a provider will commit | stage and mission | large. This is the number that decides whether propellant is a constraint |
-| Settling and ullage requirement | unknown | | whether a restart can be commanded in free fall | ullage requirement and settling method | stage, propellant management | unknown until supplied |
-| Reaction-control authority and minimum impulse bit | unknown | | section 10's three-way split, and [P94](../OPEN_PROBLEMS.md) | RCS thrust, authority and minimum impulse bit | stage | large. This is what actually performs the fine manoeuvres |
-| Disposal reserve policy | 20 % assumed | 10 to 30 % | mission closure | provider mission policy and reserve rule | provider and mission | moderate |
-| Plume exclusion geometry | unknown | | safe restart after a deployment | plume and contamination constraint, with its half-angle | engine and integration | unknown until supplied |
-| Host structural interface | unknown | | whether VOLLEY mounts at all, [E31](../OPEN_PROBLEMS.md) | interface control data | vehicle and integration | unknown until supplied |
-| Post-primary command authority | assumed available | | whether the stage takes commands after passivation would normally begin | operations policy, telemetry and command availability | vehicle avionics and operations | binary. Without it, only Case A survives |
+**Engine-level rows first, in the order that decides whether the mission can be flown at all.**
+The first two determine whether the main engine can command the required impulses. Restart life
+matters after that.
 
-Five of those rows are engine-level and the rest are stage, vehicle or mission-level. An engine
-engineer can close the first five and should not be expected to close the others.
+| # | Model quantity | Assumed baseline | Sensitivity | Why it matters | Replacing datum | Owner | Consequence if materially different |
+|---:|---|---|---|---|---|---|---|
+| 1 | Minimum stable useful burn | 2 s | 0.5 to 5 s | decides whether any mission case can be commanded | demonstrated or qualified minimum burn duration | engine, controls and transient | largest. At 2 s no impulse in Case B or Case C is commandable. The first impulse of a 5 m/s shell change is a 0.125 s burn, so a floor at or below that would let the main engine command the fine end directly |
+| 2 | Minimum thrust and throttle envelope | none credited | 100 to 10 %, hypothetical | the other way to reach a short impulse | qualified throttle envelope, with the Isp penalty at each setting | engine, controls | largest. Case B needs 24.5 % of baseline thrust and Case C 46.8 % to reach the 2 s floor. Deep throttling plus a short minimum burn removes the need for the three-way split |
+| 3 | Full-engine restart qualification count | 4 assumed, 1 contingency | 2 to 8 | what binds once the impulses are commandable | demonstrated or qualified whole-engine restart count, and what limits it | engine, cycle and qualification | large. The smallest admissible main-engine campaign needs 9; a budget of 4 permits one shell change and one disposal burn |
+| 4 | Vacuum thrust | 20 kN, condition unstated | 15 to 30 kN | which figure the model should use, and the burn floor with it | vacuum thrust at the design mixture ratio | engine | moderate. Changes the dv floor proportionally, not the conclusion. More thrust makes the floor coarser, not finer |
+| 5 | Vacuum specific impulse | 300 s | 285 to 320 s | propellant budget for the whole campaign | design-point or certified vacuum Isp | engine | small. Propellant moves about 6 %, burn duration does not move |
+| 6 | Restart dwell and conditioning requirement | 10 min | 2 to 30 min | campaign sequencing | restart thermal and propellant-conditioning envelope | engine plus stage feed and thermal | moderate |
+| 7 | Maximum coast duration | 4 h reference | 1 to 12 h | whether a multi-orbit campaign closes at all | stage cryogenic design limit and boil-off rate | stage, tank and thermal | large |
+| 8 | Auxiliary or reaction-control authority and minimum impulse bit | unknown | | who performs every fine manoeuvre in branch 2, and [P94](../OPEN_PROBLEMS.md#p94) | auxiliary thrust, dv authority and minimum impulse bit | stage | large. On the baseline assumptions this system, not the main engine, flies Cases B and C |
+| 9 | Post-primary stage mass | 1000 kg | 500 to 3000 kg | every table in sections 9 and 10 | actual stage dry and wet mass at primary separation | stage | large. Heavier stages narrow the overshoot without closing it |
+| 10 | Usable post-primary propellant | 150 kg | not swept | the customer allocation | reserved or characterised residual a provider will commit | stage and mission | large. This is the number that decides whether propellant is a constraint |
+| 11 | Settling and ullage requirement | unknown | | whether a restart can be commanded in free fall | ullage requirement and settling method | stage, propellant management | unknown until supplied |
+| 12 | Disposal reserve policy | 20 % assumed | 10 to 30 % | mission closure | provider mission policy and reserve rule | provider and mission | moderate |
+| 13 | Plume exclusion geometry | unknown | | safe restart after a deployment | plume and contamination constraint, with its half-angle | engine and integration | unknown until supplied |
+| 14 | Host structural interface | unknown | | whether VOLLEY mounts at all, [E31](../OPEN_PROBLEMS.md) | interface control data | vehicle and integration | unknown until supplied |
+| 15 | Post-primary command authority | assumed available | | whether the stage takes commands after passivation would normally begin | operations policy, telemetry and command availability | vehicle avionics and operations | binary. Without it, only Case A survives |
+
+Rows 1 to 6 are engine-level and the rest are stage, vehicle or mission-level. An engine engineer
+can close the first six and should not be expected to close the others.
+
+An earlier revision put restart count at the top of this list and called it the single most
+valuable datum in the study. That ranking followed from an ignition count that charged the engine
+for manoeuvres it could not perform. With the executability check in place, minimum burn and
+minimum thrust rank above it: they decide whether there is a campaign to count ignitions for.
 
 None of these is closed by this file, and [E5](../OPEN_PROBLEMS.md) stays open. Public company
 information can establish an engine class, a nominal thrust, a propellant family, a modularity
@@ -889,7 +1059,8 @@ informative outputs for the one case run so far, and the two the first revision 
 ## 21. Corrections
 
 The first revision of this file was published and reviewed on 2026-08-26. Six defects were found.
-All are corrected above. The full record is in [`../CHANGELOG.md`](../CHANGELOG.md).
+A second review the next day found three more. All are corrected above. The full record is in
+[`../CHANGELOG.md`](../CHANGELOG.md).
 
 | | What was wrong | What it is now |
 |---|---|---|
@@ -901,6 +1072,26 @@ All are corrected above. The full record is in [`../CHANGELOG.md`](../CHANGELOG.
 | 6 | Repositioning legs were counted as ignitions, understating the post-primary ignition requirement by about half, and a generic `restarts` field was ambiguous between legs and ignitions | An explicit schema counts legs, impulses per leg, reposition ignitions, disposal ignitions and the post-primary total, and both Case B and Case C are now shown to exceed the assumed ignition budget |
 
 Defect 1 is the one that changed a published number. Defect 6 changed a published conclusion.
+
+### Second review, 2026-08-27
+
+The corrected file was reviewed again and three more defects were found. The first reversed the
+headline conclusion for the second time.
+
+| | What was wrong | What it is now |
+|---|---|---|
+| 7 | Case B and Case C counted every Hohmann impulse as a main-engine ignition, while the same file's declared 2 s minimum burn made all sixteen of them impossible for the assumed engine. Restart count was then named the binding constraint and the most valuable provider datum | Every impulse is checked against the floor and assigned to `MAIN_ENGINE` or `AUXILIARY_PROPULSION_REQUIRED`. Neither case is commandable by the baseline engine. Three branches price what can be flown instead, and the constraint hierarchy puts minimum impulse first and restart count second. [P116](../OPEN_PROBLEMS.md#p116) |
+| 8 | Sequential campaign altitude was the first leg's raise times the leg count, published as "cumulative raise": 399 km over eleven legs | Each leg is solved from the orbit the previous one reached. Eleven legs reach 915.5 km, a net rise of 415.5 km. The column is the propagated final state and says so |
+| 9 | Campaign duration was the first leg's transfer arc times the leg count | The arcs are summed. Case C moves from 3.97 to 4.10 h and an eleven-leg campaign from 8.71 to 9.06 h |
+
+Defect 7 is a numbered register entry. Defects 8 and 9 are approximation errors in the same family,
+both in the conservative direction, and are recorded in the changelog rather than the register.
+
+**What the two reviews have in common** is worth stating, because it is the same mistake three
+times. Each defect was a quantity computed correctly and then used to answer a question it does not
+answer: a two-impulse total read as one burn, a leg count read as an ignition count, an ignition
+count read without asking whether the engine could produce it, and a single leg's result read as a
+campaign. The arithmetic was never wrong. The mapping from arithmetic to claim was.
 
 ---
 
@@ -944,7 +1135,7 @@ sentence that is wrong about what a correct number means. Sentences here are the
 responsibility, and the file is written so that a number appearing in prose also appears in a
 generated block, where it can be checked.
 
-`--self-test` checks twenty-five identities, including that the rocket equation and the burn-time
+`--self-test` checks thirty-five identities, including that the rocket equation and the burn-time
 inverse agree, that mass flow reproduces thrust from the definition of specific impulse, that a
 zero impulse raises apogee by nothing, that the single-burn apogee conserves angular momentum
 against a direct vis-viva reconstruction, that apogee rise is monotonic in dv, that the two
@@ -952,6 +1143,22 @@ Hohmann impulses sum to the total, that the Hohmann inversion round-trips, that 
 always raises apogee by more than the same dv buys as a complete circular transfer, that customer
 and reserve dv compose, that ignition accounting closes for every case, and that the plane-change
 re-derivation reproduces [`MISSION_ARCHITECTURE.md`](MISSION_ARCHITECTURE.md) section 5.
+
+Ten of those identities exist because of the second review and guard the corrections it forced.
+An impulse marked main-engine executable must reach the declared burn floor, and an impulse below
+the floor must be assigned away from the main engine, which forbids [P116](../OPEN_PROBLEMS.md#p116)
+in both directions. Leg *n* must end where leg *n+1* starts, and a campaign's net rise must be its
+propagated final altitude minus its initial one and never below the naive multiple, which is the
+identity the old scaling table violated. Campaign duration must equal the sum of the legs' arcs.
+Main-engine and auxiliary counts must each equal the impulses actually assigned to them, and the
+two must add up to twice the leg count. Lowering the burn floor must not make a case less
+executable and a floor of zero must admit everything; raising thrust at a fixed floor must not
+make a case more executable, because the same dv is then delivered in less time. Branch 1's every
+published step must reach the floor, and its binding impulse must reach it exactly.
+
+The identity count in that first sentence is counted from the source at run time rather than
+written down. It was hardcoded at twenty-five and stayed at twenty-five while identities were
+added, which is the same staleness the results-freshness gate exists to catch, one level up.
 
 Sources are references. Calculations run from committed assumptions, and no gate in this
 repository reaches the public internet.

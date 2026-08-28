@@ -54,9 +54,11 @@ computed below, side by side, and neither is allowed to stand in for the other.
 Provenance: model output, closed-form arithmetic plus one bisection. Nothing here is
 measured and no launch provider has supplied any figure in it (E5).
 """
+import inspect
 import json
 import math
 import os
+import re
 import sys
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
@@ -432,76 +434,210 @@ def disposal_budget(usable_kg=USABLE_PROP_KG, m0=STAGE_MASS_KG):
     return rows
 
 
-def restart_accounting(reposition_legs, needs_disposal_burn, impulses_per_leg=2):
-    """Explicit restart schema. The generic count this replaced was ambiguous twice.
+MAIN_ENGINE = 'MAIN_ENGINE'
+AUXILIARY = 'AUXILIARY_PROPULSION_REQUIRED'
 
-    An earlier revision exposed a single field `restarts` equal to the number of
-    repositioning LEGS, while the prose counted the disposal burn as well. The two
-    disagreed by one, and the ambiguity reached a published summary.
 
-    Correcting the orbital model then exposed a second and larger error in the same
-    field. A shell change from one circular orbit to another is a two-impulse Hohmann
-    transfer, so one reposition leg is TWO ignitions, not one. Counting legs as
-    ignitions understated what the engine would have to be qualified for by a factor of
-    about two.
+def assign_impulse(dv, m0, thrust_N=THRUST_N, min_burn_s=MIN_BURN_S):
+    """One impulse, and whether the baseline main engine can command it.
 
-    Definitions:
-        reposition_legs                 orbit changes the campaign performs
-        impulses_per_leg                2 for a circular-to-circular Hohmann transfer
-        reposition_ignitions            legs times impulses per leg
-        disposal_ignitions              the controlled-disposal burn, 0 or 1, single
-        post_primary_ignitions_required the load-bearing quantity: what the engine must
-                                        be qualified for after primary separation
-        contingency_ignitions_reserved  held back, not planned to be used
-        ascent_starts_assumed           ILLUSTRATIVE. This reference case defines one
-        total_engine_starts_nominal     ascent plus post-primary. Illustrative, because
-                                        the ascent profile is a vehicle property
-        igniter_cycles_nominal          at least one per start, more if a start retries
-        full_engine_cycles_nominal      one thermal cycle per start
+    The study declares a minimum stable useful burn and then has to honour it. A burn
+    shorter than that floor is not a small burn, it is a burn the assumed engine does
+    not have. Counting an ignition for it credits the engine with a manoeuvre it
+    cannot perform, which is the defect P116 records.
+
+    No throttle is credited here. `thrust_for` says what thrust WOULD be needed to
+    stretch this impulse to the floor, and the throttle branch reads that separately.
     """
-    rep = reposition_legs * impulses_per_leg
-    disposal = 1 if needs_disposal_burn else 0
-    post = rep + disposal
+    burn = burn_time_for(dv, m0, thrust_N)
+    ok = burn >= min_burn_s
+    # A floor of zero admits everything, and the thrust that would stretch a burn to
+    # zero seconds is unbounded. Report it as absent rather than divide by it.
+    need = thrust_for(dv, m0, min_burn_s) if min_burn_s > 0.0 else None
     return {
-        'reposition_legs': reposition_legs,
-        'impulses_per_leg': impulses_per_leg,
-        'reposition_ignitions': rep,
-        'disposal_ignitions': disposal,
-        'post_primary_ignitions_required': post,
-        'contingency_ignitions_reserved': RESTART_CONTINGENCY,
+        'dv_ms': dv,
+        'mass_before_kg': m0,
+        'burn_s': burn,
+        'minimum_burn_s': min_burn_s,
+        'executable_by_baseline_main_engine': ok,
+        'assigned_to': MAIN_ENGINE if ok else AUXILIARY,
+        'thrust_for_min_burn_N': need,
+        'throttle_fraction_of_baseline': (need / thrust_N) if need is not None else None,
+    }
+
+
+def propagate_campaign(steps, start_alt_km=REF_ALT_KM, m0=STAGE_MASS_KG,
+                       thrust_N=THRUST_N, min_burn_s=MIN_BURN_S):
+    """A sequential campaign: every leg starts from the orbit the last one reached.
+
+    The earlier revision solved every leg from REF_ALT_KM and multiplied one leg's
+    altitude increment by the leg count. A Hohmann transfer of fixed TOTAL dv buys a
+    larger altitude increment from a higher orbit, so repeating an identical dv does
+    not repeat an identical raise, and the multiplication understates the campaign.
+    Over eleven 20 m/s legs it understates it by 3.94 per cent.
+
+    Mass propagates as well, which matters for executability rather than for the
+    orbit: a lighter stage needs MORE dv to hold a burn to the minimum duration, so
+    the smallest manoeuvre the engine can command grows as the campaign proceeds.
+    """
+    alt = start_alt_km
+    m = m0
+    legs = []
+    for i, dv_total in enumerate(steps, 1):
+        raise_km = hohmann_raise_for_dv(alt, dv_total)
+        dv1, dv2, _ = hohmann_impulses(alt, raise_km)
+        first = assign_impulse(dv1, m, thrust_N, min_burn_s)
+        m_mid = m - propellant_for(dv1, m)
+        second = assign_impulse(dv2, m_mid, thrust_N, min_burn_s)
+        mp = propellant_for(dv1 + dv2, m)
+        legs.append({
+            'leg': i,
+            'dv_total_ms': dv_total,
+            'start_alt_km': alt,
+            'end_alt_km': alt + raise_km,
+            'raise_km': raise_km,
+            'dv_first_ms': dv1,
+            'dv_second_ms': dv2,
+            'burn_first_s': first['burn_s'],
+            'burn_second_s': second['burn_s'],
+            'minimum_burn_s': min_burn_s,
+            'first_assigned_to': first['assigned_to'],
+            'second_assigned_to': second['assigned_to'],
+            'executable_by_baseline_main_engine':
+                first['executable_by_baseline_main_engine']
+                and second['executable_by_baseline_main_engine'],
+            'transfer_min': hohmann_transfer_min(alt, raise_km),
+            'propellant_kg': mp,
+            'mass_before_kg': m,
+            'mass_after_kg': m - mp,
+        })
+        alt += raise_km
+        m -= mp
+    return legs
+
+
+def campaign_executability(legs, thrust_N=THRUST_N, min_burn_s=MIN_BURN_S):
+    """Roll the per-impulse verdicts up to the case, without softening them."""
+    impulses = []
+    for lg in legs:
+        impulses.append((lg['dv_first_ms'], lg['burn_first_s'],
+                         lg['first_assigned_to'], lg['mass_before_kg']))
+        impulses.append((lg['dv_second_ms'], lg['burn_second_s'],
+                         lg['second_assigned_to'],
+                         lg['mass_before_kg'] - propellant_for(lg['dv_first_ms'],
+                                                              lg['mass_before_kg'])))
+    if not impulses:
+        return {
+            'all_main_engine_impulses_executable': True,
+            'non_executable_impulse_count': 0,
+            'total_manoeuvre_impulses': 0,
+            'shortest_required_burn_s': None,
+            'minimum_thrust_required_for_shortest_impulse_N': None,
+            'throttle_fraction_required': None,
+        }
+    shortest = min(impulses, key=lambda r: r[1])
+    need_N = (thrust_for(shortest[0], shortest[3], min_burn_s)
+              if min_burn_s > 0.0 else None)
+    bad = sum(1 for r in impulses if r[2] != MAIN_ENGINE)
+    return {
+        'all_main_engine_impulses_executable': bad == 0,
+        'non_executable_impulse_count': bad,
+        'total_manoeuvre_impulses': len(impulses),
+        'shortest_required_burn_s': shortest[1],
+        'minimum_thrust_required_for_shortest_impulse_N': need_N,
+        'throttle_fraction_required': (need_N / thrust_N) if need_N is not None else None,
+    }
+
+
+def restart_accounting(legs, needs_disposal_burn, disposal_executable=True):
+    """Ignition schema, split by which propulsion system actually performs each impulse.
+
+    Two earlier revisions of this field were wrong in the same direction. The first
+    exposed the number of repositioning LEGS while the prose counted the disposal burn
+    too. The second counted every leg as one ignition when a circular-to-circular
+    transfer is two.
+
+    This revision fixes a third error of the same family, and it runs the other way.
+    Impulses were counted as main-engine ignitions without asking whether the assumed
+    engine could produce them. An impulse below the declared minimum burn is not a
+    short main-engine ignition; it is not a main-engine ignition at all, and charging
+    it to the engine's restart budget overstates what the engine is asked to do while
+    hiding that it cannot do it. Counts are therefore split, and both halves are kept.
+    """
+    me = 0
+    aux = 0
+    aux_dv = 0.0
+    for lg in legs:
+        for key, dvk in (('first_assigned_to', 'dv_first_ms'),
+                         ('second_assigned_to', 'dv_second_ms')):
+            if lg[key] == MAIN_ENGINE:
+                me += 1
+            else:
+                aux += 1
+                aux_dv += lg[dvk]
+    disposal = 1 if (needs_disposal_burn and disposal_executable) else 0
+    disposal_aux = 1 if (needs_disposal_burn and not disposal_executable) else 0
+    post = me + disposal
+    return {
+        'reposition_legs': len(legs),
+        'impulses_per_leg': 2,
+        'main_engine_reposition_ignitions': me,
+        'auxiliary_reposition_impulses': aux,
+        'auxiliary_reposition_dv_ms': aux_dv,
+        'disposal_main_engine_ignitions': disposal,
+        'disposal_auxiliary_impulses': disposal_aux,
+        'post_primary_main_engine_ignitions_required': post,
+        'contingency_main_engine_ignitions_reserved': RESTART_CONTINGENCY,
+        'total_manoeuvre_impulses': 2 * len(legs) + (1 if needs_disposal_burn else 0),
+        'total_propulsion_events': me + aux + disposal + disposal_aux,
         'ascent_starts_assumed': ASCENT_STARTS,
         'ascent_starts_are_illustrative': True,
-        'total_engine_starts_nominal': ASCENT_STARTS + post,
+        'total_main_engine_starts_nominal': ASCENT_STARTS + post,
         'igniter_cycles_nominal': ASCENT_STARTS + post,
         'full_engine_cycles_nominal': ASCENT_STARTS + post,
         'assumed_restart_budget': RESTARTS_PLANNED,
+        'restart_budget_is_a_volley_assumption': True,
         'within_assumed_restart_budget': post <= RESTARTS_PLANNED,
         'shortfall_against_budget': max(0, post - RESTARTS_PLANNED),
     }
 
 
-def pacing(n_legs, leg_raise_km):
+def pacing(legs):
     """Three declared pacing scenarios plus the one duration that is physical.
 
-    `transfer_min` is the Hohmann half-period, burn one to burn two. That part is a
-    two-body result. Everything else in this function is a scheduling assumption:
-    navigation, attitude settling, safe separation, plume constraints, collision
-    avoidance and host command rules all set the real pace, and none of them is
-    computable from public data. The one-orbit case is illustrative and is not a
-    lower bound.
+    `transfer_only_h` is now the SUM of each leg's own transfer arc, not one leg's arc
+    multiplied by the leg count. The arc lengthens as the campaign climbs, so the
+    multiplication understated an eleven-leg campaign by 4.1 per cent.
+
+    Everything else here is a scheduling assumption. Navigation, attitude settling,
+    safe separation, plume constraints, collision avoidance and host command rules all
+    set the real pace, and none of them is computable from public data. The one-orbit
+    case is illustrative and is not a lower bound.
     """
+    n = len(legs)
     period = orbit_period_min(REF_ALT_KM)
-    transfer = hohmann_transfer_min(REF_ALT_KM, leg_raise_km) if leg_raise_km else 0.0
+    transfers = [lg['transfer_min'] for lg in legs]
     return {
-        'legs': n_legs,
+        'legs': n,
         'orbit_period_min': period,
-        'hohmann_transfer_min': transfer,
-        'transfer_only_h': n_legs * transfer / 60.0,
-        'coast_floor_h': n_legs * COAST_MIN / 60.0,
-        'half_orbit_per_leg_h': n_legs * 0.5 * period / 60.0,
-        'one_orbit_per_leg_h': n_legs * period / 60.0,
-        'two_orbits_per_leg_h': n_legs * 2.0 * period / 60.0,
+        'first_leg_transfer_min': transfers[0] if transfers else 0.0,
+        'summed_transfer_min': sum(transfers),
+        'transfer_only_h': sum(transfers) / 60.0,
+        'coast_floor_h': n * COAST_MIN / 60.0,
+        'half_orbit_per_leg_h': n * 0.5 * period / 60.0,
+        'one_orbit_per_leg_h': n * period / 60.0,
+        'two_orbits_per_leg_h': n * 2.0 * period / 60.0,
     }
+
+
+def disposal_impulse(usable_kg=USABLE_PROP_KG, m0=STAGE_MASS_KG,
+                     fraction=DISPOSAL_FRACTION, thrust_N=THRUST_N):
+    """The controlled-disposal burn, at the mass state it actually happens at."""
+    reserve = usable_kg * fraction
+    customer = usable_kg - reserve
+    m_at = m0 - customer
+    dv = ISP_S * G0 * math.log(m_at / (m0 - usable_kg))
+    return assign_impulse(dv, m_at, thrust_N)
 
 
 def mission_cases():
@@ -510,35 +646,22 @@ def mission_cases():
     Case A is the one that matters most to the architecture: it establishes that
     VOLLEY does not need a restartable host to exist at all.
 
-    Each leg's dv is a TOTAL two-impulse budget for one shell change, so each leg is
-    TWO ignitions of the sizes the leg records, not one. `restart_accounting` counts
-    ignitions rather than legs for exactly that reason, and the two numbers differ by
-    about a factor of two.
+    Cases B and C are NOT presented as executable baseline main-engine campaigns, and
+    the earlier revision was wrong to present them as such. Each leg is a two-impulse
+    transfer of about half its total dv per impulse, and at the reference point those
+    impulses run 0.49 s and 0.94 s against a declared 2 s floor. The minimum-burn
+    constraint binds before restart count does. See the branch tables for what can be
+    commanded instead.
     """
     usable = USABLE_PROP_KG
     reserve = usable * DISPOSAL_FRACTION
     budget = usable - reserve
+    disp = disposal_impulse()
 
     def campaign(name, steps, batches, needs_disposal):
-        m = STAGE_MASS_KG
-        spent = 0.0
-        legs = []
-        for dv in steps:
-            mp = propellant_for(dv, m, ISP_S)
-            raise_km = hohmann_raise_for_dv(REF_ALT_KM, dv)
-            dv1, dv2, _ = hohmann_impulses(REF_ALT_KM, raise_km)
-            legs.append({
-                'dv_total_ms': dv, 'propellant_kg': mp,
-                'burn_if_single_s': mp / mass_flow(),
-                'circular_raise_km': raise_km,
-                'dv_first_ms': dv1, 'dv_second_ms': dv2,
-                'burn_first_s': burn_time_for(dv1, m),
-                'burn_second_s': burn_time_for(dv2, m),
-                'mass_before_kg': m,
-            })
-            m -= mp
-            spent += mp
-        leg_raise = legs[0]['circular_raise_km'] if legs else 0.0
+        legs = propagate_campaign(steps, REF_ALT_KM, STAGE_MASS_KG)
+        spent = sum(lg['propellant_kg'] for lg in legs)
+        ex = campaign_executability(legs)
         return {
             'case': name,
             'batches': batches,
@@ -547,8 +670,16 @@ def mission_cases():
             'budget_kg': budget,
             'within_budget': spent <= budget,
             'margin_kg': budget - spent,
-            'restart_accounting': restart_accounting(len(steps), needs_disposal),
-            'pacing': pacing(len(steps), leg_raise),
+            'start_alt_km': REF_ALT_KM,
+            'final_alt_km': legs[-1]['end_alt_km'] if legs else REF_ALT_KM,
+            'net_circular_rise_km': (legs[-1]['end_alt_km'] - REF_ALT_KM) if legs else 0.0,
+            'executability': ex,
+            'disposal_burn_s': disp['burn_s'] if needs_disposal else None,
+            'disposal_executable': disp['executable_by_baseline_main_engine']
+                                   if needs_disposal else None,
+            'restart_accounting': restart_accounting(
+                legs, needs_disposal, disp['executable_by_baseline_main_engine']),
+            'pacing': pacing(legs),
             'legs': legs,
         }
 
@@ -559,39 +690,197 @@ def mission_cases():
     ]
 
 
+def min_shell_step(alt_km, m0, thrust_N=THRUST_N, min_burn_s=MIN_BURN_S):
+    """Smallest circular shell change whose BOTH impulses reach the minimum burn.
+
+    The second impulse binds. It is slightly the smaller of the two and it fires at a
+    lower mass, and burn duration falls with mass at fixed dv, so sizing on the first
+    impulse alone would publish a step the engine could start and not finish.
+
+    Solved by bisection on the raise. Monotone: a larger raise costs more dv per
+    impulse, which lengthens both burns.
+    """
+    def burns(rk):
+        dv1, dv2, _ = hohmann_impulses(alt_km, rk)
+        m1 = m0 - propellant_for(dv1, m0)
+        return burn_time_for(dv1, m0, thrust_N), burn_time_for(dv2, m1, thrust_N), dv1, dv2
+    lo, hi = 1e-9, 4000.0
+    for _ in range(300):
+        mid = 0.5 * (lo + hi)
+        b1, b2, _, _ = burns(mid)
+        if min(b1, b2) < min_burn_s:
+            lo = mid
+        else:
+            hi = mid
+    # Return the admissible side, not the midpoint. The midpoint can sit a fraction of
+    # a float below the floor, and a step that fails its own criterion is not a step.
+    rk = hi
+    b1, b2, dv1, dv2 = burns(rk)
+    return {
+        'start_alt_km': alt_km,
+        'mass_kg': m0,
+        'raise_km': rk,
+        'end_alt_km': alt_km + rk,
+        'dv_total_ms': dv1 + dv2,
+        'dv_first_ms': dv1,
+        'dv_second_ms': dv2,
+        'burn_first_s': b1,
+        'burn_second_s': b2,
+        'transfer_min': hohmann_transfer_min(alt_km, rk),
+        'propellant_kg': propellant_for(dv1 + dv2, m0),
+    }
+
+
+def branch_main_engine_only():
+    """BRANCH 1. What the baseline engine CAN command, under its own 2 s floor.
+
+    Repeats the minimum admissible shell step until the customer propellant allocation
+    is exhausted. The step is re-solved at every leg because both inputs move: the
+    stage climbs, and it lightens, and a lighter stage needs more dv to hold a burn to
+    the floor. The steps therefore grow, 150 km to 182 km over four legs.
+    """
+    budget = USABLE_PROP_KG * (1.0 - DISPOSAL_FRACTION)
+    alt, m, spent = REF_ALT_KM, STAGE_MASS_KG, 0.0
+    legs = []
+    while len(legs) < 20:
+        step = min_shell_step(alt, m)
+        if spent + step['propellant_kg'] > budget:
+            break
+        spent += step['propellant_kg']
+        step['leg'] = len(legs) + 1
+        step['cumulative_propellant_kg'] = spent
+        step['mass_after_kg'] = m - step['propellant_kg']
+        legs.append(step)
+        alt = step['end_alt_km']
+        m -= step['propellant_kg']
+    disp = disposal_impulse()
+    me = 2 * len(legs)
+    post = me + (1 if disp['executable_by_baseline_main_engine'] else 0)
+    return {
+        'legs': legs,
+        'steps_within_customer_budget': len(legs),
+        'customer_budget_kg': budget,
+        'propellant_used_kg': spent,
+        'propellant_margin_kg': budget - spent,
+        'final_alt_km': alt,
+        'net_circular_rise_km': alt - REF_ALT_KM,
+        'summed_transfer_min': sum(l['transfer_min'] for l in legs),
+        'main_engine_reposition_ignitions': me,
+        'post_primary_main_engine_ignitions_required': post,
+        'assumed_restart_budget': RESTARTS_PLANNED,
+        'within_assumed_restart_budget': post <= RESTARTS_PLANNED,
+        'legs_within_restart_budget': max(0, (RESTARTS_PLANNED - 1) // 2),
+    }
+
+
+def branch_main_plus_auxiliary():
+    """BRANCH 2. Keep the Case B and C shells; assign each impulse to what can do it.
+
+    No auxiliary capability is assumed. The branch states the demand an auxiliary
+    system would have to meet, and names the provider datum that would settle whether
+    a host has it. [P94](../OPEN_PROBLEMS.md#p94) already records that the host RCS
+    authority A13 band 5 leans on is not established.
+    """
+    disp = disposal_impulse()
+    rows = []
+    for name, steps in (('B, moderate distributed delivery', [20.0] * 3),
+                        ('C, upper-bound sensitivity', [40.0] * 5)):
+        legs = propagate_campaign(steps, REF_ALT_KM, STAGE_MASS_KG)
+        ra = restart_accounting(legs, True, disp['executable_by_baseline_main_engine'])
+        rows.append({
+            'case': name,
+            'reposition_legs': len(legs),
+            'main_engine_reposition_ignitions': ra['main_engine_reposition_ignitions'],
+            'auxiliary_reposition_impulses': ra['auxiliary_reposition_impulses'],
+            'auxiliary_dv_demand_ms': ra['auxiliary_reposition_dv_ms'],
+            'disposal_main_engine_ignitions': ra['disposal_main_engine_ignitions'],
+            'post_primary_main_engine_ignitions_required':
+                ra['post_primary_main_engine_ignitions_required'],
+            'within_assumed_restart_budget': ra['within_assumed_restart_budget'],
+            'largest_auxiliary_impulse_ms': max(
+                [lg['dv_first_ms'] for lg in legs] + [lg['dv_second_ms'] for lg in legs]),
+            'provider_datum_required': 'host auxiliary or RCS dv authority and impulse '
+                                       'size, P94. Not assumed here',
+        })
+    return rows
+
+
+def branch_throttle():
+    """BRANCH 3. Hypothetical throttle depth that would make B and C commandable.
+
+    A sensitivity, and nothing else. No public source states that the reference engine
+    throttles at all, and this branch must never be read as saying it does. It answers
+    one question: if it did, how deep would it have to go to stretch these impulses to
+    the declared 2 s floor.
+    """
+    rows = []
+    for name, steps in (('B, moderate distributed delivery', [20.0] * 3),
+                        ('C, upper-bound sensitivity', [40.0] * 5)):
+        legs = propagate_campaign(steps, REF_ALT_KM, STAGE_MASS_KG)
+        worst = None
+        for lg in legs:
+            for dv, m in ((lg['dv_first_ms'], lg['mass_before_kg']),
+                          (lg['dv_second_ms'],
+                           lg['mass_before_kg'] - propellant_for(lg['dv_first_ms'],
+                                                                 lg['mass_before_kg']))):
+                need = thrust_for(dv, m, MIN_BURN_S)
+                if worst is None or need < worst[0]:
+                    worst = (need, dv, m)
+        need, dv, m = worst
+        rows.append({
+            'case': name,
+            'representative_impulse_ms': dv,
+            'mass_at_impulse_kg': m,
+            'required_thrust_N': need,
+            'fraction_of_baseline_thrust': need / THRUST_N,
+            'required_throttle_depth_pct': 100.0 * need / THRUST_N,
+            'inside_hypothetical_sweep': (need / THRUST_N) >= min(THROTTLES),
+            'sweep_floor_pct': 100.0 * min(THROTTLES),
+        })
+    return rows
+
+
 def reposition_scaling(n_sats=12):
-    """Fixed-dv-per-reposition scaling. NOT an equal-mission batching comparison.
+    """Fixed-dv-per-reposition scaling, with the orbit propagated. NOT equal-mission.
 
     Each row holds 20 m/s per reposition fixed, so a row with more repositions also
     buys more total orbital separation. The rows therefore do NOT deliver the same
-    mission and cannot be read as one grouping being more efficient than another.
+    mission and cannot be read as one grouping being more efficient than another. A
+    fair batching trade would hold the delivered orbital-state distribution constant
+    and vary only the grouping, which needs a mission planner this repository does not
+    have. That is P113.
 
-    What the table does show is how restart count, propellant and campaign duration
-    scale with the number of distinct deployment states. A fair batching trade would
-    hold the delivered orbital-state distribution constant and vary only the grouping,
-    which needs a mission planner this repository does not have. That is P113.
+    The column that used to say "cumulative raise" was the first leg's raise times the
+    leg count. It is now the propagated final circular altitude minus the initial one,
+    which is a different and larger number: 415.5 km against 399.1 km over eleven legs.
+    A multiplication is not a campaign.
     """
     dv_per_reposition = 20.0
     rows = []
     for n_batches in [n_sats, 4, 3, 2]:
-        m = STAGE_MASS_KG
-        spent = 0.0
         burns = n_batches - 1          # no reposition is needed before the first batch
-        for _ in range(burns):
-            mp = propellant_for(dv_per_reposition, m, ISP_S)
-            m -= mp
-            spent += mp
-        raise_km = hohmann_raise_for_dv(REF_ALT_KM, dv_per_reposition)
+        legs = propagate_campaign([dv_per_reposition] * burns, REF_ALT_KM, STAGE_MASS_KG)
+        spent = sum(lg['propellant_kg'] for lg in legs)
+        final = legs[-1]['end_alt_km'] if legs else REF_ALT_KM
         rows.append({
             'batches': n_batches,
             'satellites_per_batch': n_sats / n_batches,
             'reposition_legs': burns,
             'total_dv_ms': burns * dv_per_reposition,
+            'initial_alt_km': REF_ALT_KM,
+            'final_alt_km': final,
+            'net_circular_rise_km': final - REF_ALT_KM,
             'propellant_kg': spent,
-            'circular_raise_per_leg_km': raise_km,
-            'cumulative_raise_km': burns * raise_km,
+            'summed_transfer_min': sum(lg['transfer_min'] for lg in legs),
+            'transfer_only_h': sum(lg['transfer_min'] for lg in legs) / 60.0,
             'coast_floor_h': burns * COAST_MIN / 60.0,
             'one_orbit_per_leg_h': burns * orbit_period_min(REF_ALT_KM) / 60.0,
+            'main_engine_impulses': sum(
+                (1 if lg['first_assigned_to'] == MAIN_ENGINE else 0)
+                + (1 if lg['second_assigned_to'] == MAIN_ENGINE else 0) for lg in legs),
+            'auxiliary_impulses': sum(
+                (1 if lg['first_assigned_to'] != MAIN_ENGINE else 0)
+                + (1 if lg['second_assigned_to'] != MAIN_ENGINE else 0) for lg in legs),
             'equal_mission': False,
         })
     return rows
@@ -623,6 +912,16 @@ def plane_change_check():
 # --------------------------------------------------------------------------------
 # Self-checks. These are arithmetic identities, not acceptance bands.
 # --------------------------------------------------------------------------------
+def identity_count():
+    """How many numbered identities self_test() actually contains.
+
+    Counted from the source rather than written down. The number was hardcoded at 25
+    and stayed at 25 while identities were added, which is the same staleness the
+    results-freshness gate exists to catch, one level up.
+    """
+    return len(re.findall(r'^    # \d+\.', inspect.getsource(self_test), re.M))
+
+
 def self_test():
     """Every check here is a property the closed forms must satisfy identically."""
     fails = []
@@ -750,16 +1049,18 @@ def self_test():
         if not near(r['customer_dv_ms'] + r['reserve_dv_ms'], whole, 1e-9):
             fails.append('customer and reserve dv do not compose')
 
-    # 19. Restart accounting: post-primary = repositions + disposal, every case.
+    # 19. Restart accounting closes, and it closes on MAIN-ENGINE ignitions only.
     for c in mission_cases():
         a = c['restart_accounting']
-        if a['post_primary_ignitions_required'] != (a['reposition_ignitions']
-                                                    + a['disposal_ignitions']):
+        if a['post_primary_main_engine_ignitions_required'] != (
+                a['main_engine_reposition_ignitions'] + a['disposal_main_engine_ignitions']):
             fails.append(f"ignition accounting does not close for {c['case']}")
-        if a['reposition_ignitions'] != (a['reposition_legs'] * a['impulses_per_leg']):
-            fails.append(f"reposition ignitions do not match legs for {c['case']}")
-        if a['total_engine_starts_nominal'] != (a['ascent_starts_assumed']
-                                                + a['post_primary_ignitions_required']):
+        if (a['main_engine_reposition_ignitions'] + a['auxiliary_reposition_impulses']
+                != a['reposition_legs'] * a['impulses_per_leg']):
+            fails.append(f"assigned impulses do not match legs for {c['case']}")
+        if a['total_main_engine_starts_nominal'] != (
+                a['ascent_starts_assumed']
+                + a['post_primary_main_engine_ignitions_required']):
             fails.append(f"total start count does not close for {c['case']}")
         if len(c['legs']) != a['reposition_legs']:
             fails.append(f"leg count disagrees with the accounting for {c['case']}")
@@ -769,7 +1070,8 @@ def self_test():
         fails.append('case A is not propellant-free')
 
     # 21. Case A needs no post-primary main-engine ignition at all.
-    if mission_cases()[0]['restart_accounting']['post_primary_ignitions_required'] != 0:
+    if mission_cases()[0]['restart_accounting'][
+            'post_primary_main_engine_ignitions_required'] != 0:
         fails.append('case A requires a post-primary restart')
 
     # 22. Every mission leg's two impulses reproduce the leg's total dv budget.
@@ -795,6 +1097,119 @@ def self_test():
              if r['fine_dv_total_ms'] == dv]
         if s != sorted(s, reverse=True):
             fails.append(f'required thrust is not monotonic in burn time at {dv} m/s')
+
+    # 26. (A) An impulse marked main-engine executable must actually reach the floor.
+    for c in mission_cases():
+        for leg in c['legs']:
+            for side, burn in (('first', leg['burn_first_s']),
+                               ('second', leg['burn_second_s'])):
+                if leg[side + '_assigned_to'] == MAIN_ENGINE and burn < MIN_BURN_S:
+                    fails.append(f"{c['case']} leg {leg['leg']} {side} impulse is "
+                                 f"assigned to the main engine below the burn floor")
+
+    # 27. (B) An impulse below the floor must be assigned AWAY from the main engine.
+    #     The two halves together forbid both directions of the P116 error.
+    for c in mission_cases():
+        for leg in c['legs']:
+            for side, burn in (('first', leg['burn_first_s']),
+                               ('second', leg['burn_second_s'])):
+                if burn < MIN_BURN_S and leg[side + '_assigned_to'] == MAIN_ENGINE:
+                    fails.append(f"{c['case']} leg {leg['leg']} {side} impulse is below "
+                                 f"the floor and still charged to the main engine")
+
+    # 28. (C) Sequential propagation: leg n ends where leg n+1 starts.
+    for c in mission_cases():
+        for a, b in zip(c['legs'], c['legs'][1:]):
+            if not near(a['end_alt_km'], b['start_alt_km'], 1e-12):
+                fails.append(f"{c['case']} does not propagate between legs")
+    for row in reposition_scaling():
+        pass
+
+    # 29. (D) Net rise is the propagated final altitude minus the initial one, not a
+    #     multiple of the first leg. This is the identity the old table violated.
+    for c in mission_cases():
+        if c['legs']:
+            if not near(c['final_alt_km'] - c['start_alt_km'],
+                        c['net_circular_rise_km'], 1e-9):
+                fails.append(f"{c['case']} net rise does not close")
+            naive = len(c['legs']) * c['legs'][0]['raise_km']
+            if c['net_circular_rise_km'] < naive - 1e-9:
+                fails.append(f"{c['case']} propagated rise is below the naive multiple, "
+                             f"which inverts the known sign of the approximation")
+    for r in reposition_scaling():
+        if not near(r['final_alt_km'] - r['initial_alt_km'],
+                    r['net_circular_rise_km'], 1e-9):
+            fails.append('reposition scaling net rise does not close')
+
+    # 30. (E) Pacing: the campaign transfer duration is the SUM of the legs' arcs.
+    for c in mission_cases():
+        if not near(c['pacing']['transfer_only_h'] * 60.0,
+                    sum(l['transfer_min'] for l in c['legs']), 1e-9):
+            fails.append(f"{c['case']} transfer time is not the sum of its legs")
+        if len(c['legs']) > 1:
+            naive = len(c['legs']) * c['legs'][0]['transfer_min']
+            if c['pacing']['summed_transfer_min'] < naive - 1e-9:
+                fails.append(f"{c['case']} summed transfer is below the naive multiple")
+
+    # 31. (F) Main-engine ignition count equals impulses actually assigned to it, plus
+    #     the disposal burn when the main engine performs it.
+    for c in mission_cases():
+        a = c['restart_accounting']
+        assigned = sum((1 if l['first_assigned_to'] == MAIN_ENGINE else 0)
+                       + (1 if l['second_assigned_to'] == MAIN_ENGINE else 0)
+                       for l in c['legs'])
+        if a['main_engine_reposition_ignitions'] != assigned:
+            fails.append(f"{c['case']} main-engine count is not the assigned count")
+        if a['post_primary_main_engine_ignitions_required'] != (
+                assigned + a['disposal_main_engine_ignitions']):
+            fails.append(f"{c['case']} post-primary count is not assigned plus disposal")
+
+    # 32. (G) Auxiliary impulse count equals impulses assigned to auxiliary propulsion.
+    for c in mission_cases():
+        a = c['restart_accounting']
+        aux = sum((1 if l['first_assigned_to'] != MAIN_ENGINE else 0)
+                  + (1 if l['second_assigned_to'] != MAIN_ENGINE else 0)
+                  for l in c['legs'])
+        if a['auxiliary_reposition_impulses'] != aux:
+            fails.append(f"{c['case']} auxiliary count is not the assigned count")
+        if a['total_propulsion_events'] != (a['main_engine_reposition_ignitions'] + aux
+                                            + a['disposal_main_engine_ignitions']
+                                            + a['disposal_auxiliary_impulses']):
+            fails.append(f"{c['case']} propulsion events do not close")
+
+    # 33. (H) Relaxing the burn floor must not make a case LESS executable, and a
+    #     floor of zero must make every impulse commandable.
+    legs_b = propagate_campaign([20.0] * 3, REF_ALT_KM, STAGE_MASS_KG)
+    strict = campaign_executability(legs_b)['non_executable_impulse_count']
+    loose = campaign_executability(
+        propagate_campaign([20.0] * 3, REF_ALT_KM, STAGE_MASS_KG, min_burn_s=0.0),
+        min_burn_s=0.0)['non_executable_impulse_count']
+    if loose > strict:
+        fails.append('lowering the burn floor made a case less executable')
+    if loose != 0:
+        fails.append('a zero burn floor still rejects an impulse')
+
+    # 34. (I) More thrust at a fixed floor makes a case LESS executable, because the
+    #     same dv is delivered in less time. Less thrust makes it more executable.
+    fewer = campaign_executability(
+        propagate_campaign([20.0] * 3, REF_ALT_KM, STAGE_MASS_KG, thrust_N=2.0e3),
+        thrust_N=2.0e3)['non_executable_impulse_count']
+    more = campaign_executability(
+        propagate_campaign([20.0] * 3, REF_ALT_KM, STAGE_MASS_KG, thrust_N=40.0e3),
+        thrust_N=40.0e3)['non_executable_impulse_count']
+    if not (fewer <= strict <= more):
+        fails.append('executability is not monotonic in thrust')
+
+    # 35. Branch 1 is admissible by construction: every impulse it publishes reaches
+    #     the floor, and the binding one reaches it exactly.
+    b1 = branch_main_engine_only()
+    for leg in b1['legs']:
+        if leg['burn_first_s'] < MIN_BURN_S or leg['burn_second_s'] < MIN_BURN_S:
+            fails.append('branch 1 published a step below the burn floor')
+        if not near(min(leg['burn_first_s'], leg['burn_second_s']), MIN_BURN_S, 1e-6):
+            fails.append('branch 1 step is not the minimum admissible one')
+    if b1['propellant_used_kg'] > b1['customer_budget_kg']:
+        fails.append('branch 1 overspends the customer allocation')
 
     return fails
 
@@ -979,22 +1394,108 @@ def blk_mission_cases(res):
     rows = []
     for c in res['mission_cases']:
         a = c['restart_accounting']
+        e = c['executability']
+        if not e['total_manoeuvre_impulses']:
+            verdict = 'not applicable, no post-primary burn'
+        elif e['all_main_engine_impulses_executable']:
+            verdict = 'yes'
+        else:
+            verdict = (f"NO, {e['non_executable_impulse_count']} of "
+                       f"{e['total_manoeuvre_impulses']} below the burn floor")
         rows.append([
             c['case'],
             f"{a['reposition_legs']}",
-            f"{a['reposition_ignitions']}",
-            f"{a['post_primary_ignitions_required']}",
+            f"{a['main_engine_reposition_ignitions']}",
+            f"{a['auxiliary_reposition_impulses']}",
             f"{c['total_dv_ms']:.0f}",
             f"{c['propellant_kg']:.1f}",
-            f"{c['margin_kg']:.1f}",
-            'yes' if a['within_assumed_restart_budget']
-            else f"NO, over by {a['shortfall_against_budget']}",
+            f"{c['net_circular_rise_km']:.1f}",
+            verdict,
         ])
-    return _tbl(['Case', 'Reposition legs', 'Reposition ignitions',
-                 'Post-primary ignitions required', 'Total dv, m/s', 'Propellant, kg',
-                 'Margin on the customer budget, kg',
-                 'Inside the assumed 4-ignition budget'],
+    return _tbl(['Case', 'Reposition legs', 'Main-engine reposition ignitions',
+                 'Auxiliary reposition impulses', 'Total dv, m/s', 'Propellant, kg',
+                 'Net circular rise, km',
+                 'Commandable by the baseline main engine?'],
                 ['---', '---:', '---:', '---:', '---:', '---:', '---:', '---'], rows)
+
+
+def blk_executability(res):
+    rows = []
+    for c in res['mission_cases']:
+        for leg in c['legs']:
+            for side in ('first', 'second'):
+                rows.append([
+                    c['case'].split(',')[0],
+                    f"{leg['leg']}",
+                    side,
+                    f"{leg['dv_' + side + '_ms']:.3f}",
+                    f"{leg['burn_' + side + '_s']:.3f}",
+                    f"{leg['minimum_burn_s']:.1f}",
+                    'yes' if leg[side + '_assigned_to'] == MAIN_ENGINE else 'no',
+                    leg[side + '_assigned_to'],
+                ])
+    return _tbl(['Case', 'Leg', 'Impulse', 'dv, m/s', 'Burn, s', 'Floor, s',
+                 'Reaches the floor?', 'Assigned to'],
+                ['---', '---:', '---', '---:', '---:', '---:', '---', '---'], rows)
+
+
+def blk_branches(res):
+    b1 = res['branch_main_engine_only']
+    rows = [[
+        'Branch 1, main engine only',
+        f"{b1['steps_within_customer_budget']} step(s) of "
+        f"{b1['legs'][0]['raise_km']:.1f} to {b1['legs'][-1]['raise_km']:.1f} km",
+        f"{b1['legs'][0]['dv_total_ms']:.1f} to {b1['legs'][-1]['dv_total_ms']:.1f}",
+        f"{b1['post_primary_main_engine_ignitions_required']}",
+        '0',
+        f"{b1['propellant_used_kg']:.1f}",
+        'yes, by construction',
+    ]]
+    for r in res['branch_main_plus_auxiliary']:
+        rows.append([
+            f"Branch 2, {r['case'].split(',')[0]}, main engine plus auxiliary",
+            f"{r['reposition_legs']} leg(s) as specified",
+            f"{r['auxiliary_dv_demand_ms']:.0f} to auxiliary",
+            f"{r['post_primary_main_engine_ignitions_required']}",
+            f"{r['auxiliary_reposition_impulses']}",
+            '-',
+            'main engine yes, auxiliary not established',
+        ])
+    for r in res['branch_throttle']:
+        rows.append([
+            f"Branch 3, {r['case'].split(',')[0]}, hypothetical throttle",
+            f"{r['required_throttle_depth_pct']:.1f} % of baseline thrust",
+            f"{r['representative_impulse_ms']:.2f} deepest impulse",
+            '-',
+            '-',
+            '-',
+            'only if the engine throttles, which no source states',
+        ])
+    return _tbl(['Branch', 'What it commands', 'dv, m/s',
+                 'Post-primary main-engine ignitions', 'Auxiliary impulses',
+                 'Propellant, kg', 'Executable under the declared floor?'],
+                ['---', '---', '---', '---:', '---:', '---:', '---'], rows)
+
+
+def blk_propagated(res):
+    rows = []
+    b1 = res['branch_main_engine_only']
+    for leg in b1['legs']:
+        rows.append([
+            f"{leg['leg']}",
+            f"{leg['start_alt_km']:.1f}",
+            f"{leg['raise_km']:.1f}",
+            f"{leg['end_alt_km']:.1f}",
+            f"{leg['dv_first_ms']:.2f}",
+            f"{leg['dv_second_ms']:.2f}",
+            f"{leg['burn_first_s']:.3f}",
+            f"{leg['burn_second_s']:.3f}",
+            f"{leg['transfer_min']:.1f}",
+            f"{leg['propellant_kg']:.2f}",
+        ])
+    return _tbl(['Leg', 'Start, km', 'Raise, km', 'End, km', 'dv 1, m/s', 'dv 2, m/s',
+                 'Burn 1, s', 'Burn 2, s', 'Transfer, min', 'Propellant, kg'],
+                ['---:'] * 10, rows)
 
 
 def blk_restarts(res):
@@ -1002,19 +1503,29 @@ def blk_restarts(res):
     a = c['restart_accounting']
     rows = [
         ['Reposition legs', f"{a['reposition_legs']}", 'no'],
-        ['Ignitions per leg, circular to circular',
+        ['Impulses per leg, circular to circular',
          f"{a['impulses_per_leg']}", 'two-body result, not a provider figure'],
-        ['Reposition ignitions', f"{a['reposition_ignitions']}", 'no'],
-        ['Disposal ignition', f"{a['disposal_ignitions']}", 'no'],
-        ['Post-primary ignitions required',
-         f"{a['post_primary_ignitions_required']}", 'no'],
+        ['Main-engine reposition ignitions',
+         f"{a['main_engine_reposition_ignitions']}",
+         'no. Every reposition impulse here is below the assumed burn floor'],
+        ['Auxiliary reposition impulses required',
+         f"{a['auxiliary_reposition_impulses']}", 'no, and no host RCS authority is '
+         'established either, P94'],
+        ['Auxiliary dv demand, m/s',
+         f"{a['auxiliary_reposition_dv_ms']:.0f}", 'no'],
+        ['Disposal ignition, main engine', f"{a['disposal_main_engine_ignitions']}", 'no'],
+        ['Post-primary main-engine ignitions required',
+         f"{a['post_primary_main_engine_ignitions_required']}", 'no'],
         ['Assumed post-primary ignition budget', f"{a['assumed_restart_budget']}",
-         'no, and this case needs more than it'],
-        ['Contingency ignitions reserved',
-         f"{a['contingency_ignitions_reserved']}", 'no'],
+         'no. VOLLEY_ASSUMPTION, not a provider figure'],
+        ['Contingency main-engine ignitions reserved',
+         f"{a['contingency_main_engine_ignitions_reserved']}", 'no'],
+        ['Total manoeuvre impulses, all propulsion',
+         f"{a['total_manoeuvre_impulses']}", 'no'],
         ['Ascent starts, illustrative for this case', f"{a['ascent_starts_assumed']}",
          'no, and the ascent profile is a vehicle property'],
-        ['Total engine starts, illustrative', f"{a['total_engine_starts_nominal']}", 'no'],
+        ['Total main-engine starts, illustrative',
+         f"{a['total_main_engine_starts_nominal']}", 'no'],
         ['Igniter cycles, at least', f"{a['igniter_cycles_nominal']}",
          'three, on the ground, for the subsystem alone'],
         ['Full-engine thermal cycles', f"{a['full_engine_cycles_nominal']}", 'no'],
@@ -1032,17 +1543,19 @@ def blk_pacing(res):
         rows.append([
             c['case'].split(',')[0],
             f"{p['legs']}",
-            f"{p['hohmann_transfer_min']:.1f}",
+            f"{p['first_leg_transfer_min']:.1f}",
+            f"{p['summed_transfer_min']:.1f}",
             f"{p['transfer_only_h']:.2f}",
             f"{p['coast_floor_h']:.2f}",
             f"{p['half_orbit_per_leg_h']:.1f}",
             f"{p['one_orbit_per_leg_h']:.1f}",
             f"{p['two_orbits_per_leg_h']:.1f}",
         ])
-    return _tbl(['Case', 'Legs', 'Transfer arc per leg, min', 'Transfer arcs only, h',
-                 'Assumed coast floor, h', 'Half-orbit per leg, h',
-                 'One orbit per leg, h', 'Two orbits per leg, h'],
-                ['---'] + ['---:'] * 7, rows)
+    return _tbl(['Case', 'Legs', 'First leg arc, min', 'Summed arcs, min',
+                 'Transfer arcs only, h', 'Assumed coast floor, h',
+                 'Half-orbit per leg, h', 'One orbit per leg, h',
+                 'Two orbits per leg, h'],
+                ['---'] + ['---:'] * 8, rows)
 
 
 def blk_scaling(res):
@@ -1053,14 +1566,19 @@ def blk_scaling(res):
             f"{r['satellites_per_batch']:.0f}",
             f"{r['reposition_legs']}",
             f"{r['total_dv_ms']:.0f}",
-            f"{r['cumulative_raise_km']:.0f}",
+            f"{r['initial_alt_km']:.0f}",
+            f"{r['final_alt_km']:.1f}",
+            f"{r['net_circular_rise_km']:.1f}",
             f"{r['propellant_kg']:.1f}",
+            f"{r['transfer_only_h']:.2f}",
             f"{r['one_orbit_per_leg_h']:.1f}",
         ])
     return _tbl(['Deployment states', 'Satellites per state', 'Reposition legs',
-                 'Total dv, m/s', 'Cumulative circular raise, km', 'Propellant, kg',
-                 'One orbit per leg, h'],
-                ['---:'] * 7, rows)
+                 'Total host dv, m/s', 'Initial altitude, km',
+                 'Final circular altitude, km', 'Net circular rise, km',
+                 'Propellant, kg', 'Total transfer arc, h',
+                 'Illustrative one orbit per leg, h'],
+                ['---:'] * 10, rows)
 
 
 def blk_disposal(res):
@@ -1111,6 +1629,9 @@ BLOCKS = [
     ('THRUST_REQUIREMENT', blk_thrust_requirement),
     ('THROTTLE', blk_throttle),
     ('MISSION_CASES', blk_mission_cases),
+    ('EXECUTABILITY', blk_executability),
+    ('BRANCHES', blk_branches),
+    ('PROPAGATED_CAMPAIGN', blk_propagated),
     ('RESTART_ACCOUNTING', blk_restarts),
     ('PACING', blk_pacing),
     ('REPOSITION_SCALING', blk_scaling),
@@ -1215,6 +1736,10 @@ def build():
         'throttle_sensitivity': throttle_sensitivity(),
         'disposal_budget': disposal_budget(),
         'mission_cases': mission_cases(),
+        'disposal_impulse': disposal_impulse(),
+        'branch_main_engine_only': branch_main_engine_only(),
+        'branch_main_plus_auxiliary': branch_main_plus_auxiliary(),
+        'branch_throttle': branch_throttle(),
         'reposition_scaling': reposition_scaling(),
         'plane_change': plane_change_check(),
         'self_test_failures': self_test(),
@@ -1257,7 +1782,7 @@ def _main():
             for f in fails:
                 print(f'  {f}')
             return 1
-        print('self-test: 25 identities hold')
+        print(f'self-test: {identity_count()} identities hold')
         return 0
 
     r = res['reference_point']
@@ -1289,13 +1814,37 @@ def _main():
               f"burns {f['burn_first_s']:.3f} s and {f['burn_second_s']:.3f} s  "
               f"transfer {f['transfer_min']:.1f} min")
 
-    print("\nmission cases")
+    print("\nmission cases, with every impulse checked against the burn floor")
     for c in res['mission_cases']:
         a = c['restart_accounting']
+        e = c['executability']
         print(f"  {c['case']:52s} {a['reposition_legs']} leg(s), "
-              f"{a['post_primary_ignitions_required']} post-primary ignition(s), "
-              f"{c['propellant_kg']:6.1f} kg, budget "
-              f"{'ok' if a['within_assumed_restart_budget'] else 'EXCEEDED'}")
+              f"main-engine ignitions {a['post_primary_main_engine_ignitions_required']}, "
+              f"auxiliary impulses {a['auxiliary_reposition_impulses']}, "
+              f"{c['propellant_kg']:6.1f} kg")
+        if e['total_manoeuvre_impulses']:
+            print(f"    {'commandable' if e['all_main_engine_impulses_executable'] else 'NOT COMMANDABLE'}"
+                  f" by the baseline engine: {e['non_executable_impulse_count']} of "
+                  f"{e['total_manoeuvre_impulses']} impulses below the "
+                  f"{res['reference_point']['min_burn_s']:.0f} s floor, shortest "
+                  f"{e['shortest_required_burn_s']:.3f} s")
+
+    b1 = res['branch_main_engine_only']
+    print(f"\nbranch 1, main engine only: {b1['steps_within_customer_budget']} step(s) of "
+          f"{b1['legs'][0]['raise_km']:.1f} km rising to {b1['legs'][-1]['raise_km']:.1f} km, "
+          f"final {b1['final_alt_km']:.1f} km, {b1['propellant_used_kg']:.1f} kg, "
+          f"{b1['post_primary_main_engine_ignitions_required']} post-primary ignitions "
+          f"against an assumed budget of {b1['assumed_restart_budget']}")
+    print("branch 2, main engine plus auxiliary")
+    for r in res['branch_main_plus_auxiliary']:
+        print(f"  {r['case']:38s} main-engine {r['post_primary_main_engine_ignitions_required']}, "
+              f"auxiliary {r['auxiliary_reposition_impulses']} impulses, "
+              f"{r['auxiliary_dv_demand_ms']:.0f} m/s auxiliary dv")
+    print("branch 3, hypothetical throttle, NOT a claim about any engine")
+    for r in res['branch_throttle']:
+        print(f"  {r['case']:38s} {r['representative_impulse_ms']:6.2f} m/s needs "
+              f"{r['required_thrust_N']/1e3:5.2f} kN, "
+              f"{r['required_throttle_depth_pct']:.1f} % of baseline")
 
     print(f"\nself-test: {'PASS' if not fails else 'FAIL'}")
     for f in fails:

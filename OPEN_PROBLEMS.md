@@ -5833,12 +5833,20 @@ constraint and that campaign duration was. On the corrected count the binding co
 number of post-primary main-engine ignitions the stage must be qualified for, and it binds before
 either.
 
+> **Superseded in part, 2026-08-27, by [P116](#p116).** The ignition arithmetic above is right and
+> stands: a shell change is two impulses and the disposal burn is a third ignition. The conclusion
+> drawn from it does not. Those seven impulses are each about 10 m/s, which at the reference point
+> is a 0.5 s burn against this study's own 2 s floor, so they are not main-engine ignitions at all
+> and the engine's restart budget was never the first thing to fail. Minimum commandable impulse
+> binds before restart count. This entry is retained as the published record of the ignition
+> correction and is not the current statement of what binds.
+
 ### Corrected. Propagated 2026-08-26.
 
 `single_impulse_apogee()` solves the vis-viva relation, `hohmann_impulses()` returns both
 impulses, `hohmann_raise_for_dv()` inverts the Hohmann relation by bisection rather than by
 linear scaling, and `restart_accounting()` carries legs, impulses per leg, reposition ignitions,
-disposal ignitions and the post-primary total as separate fields. Twenty-five self-test
+disposal ignitions and the post-primary total as separate fields. The self-test
 identities now include one asserting that a single impulse always raises apogee by more than the
 same dv buys as a complete circular transfer, which is the distinction that was lost.
 
@@ -5946,6 +5954,74 @@ three leaves inside A69's file carry their own tolerance rather than loosening t
 free-free mode at 1e-5 relative, and the two residual percentages at 1e-5 absolute, those two
 being differences of numbers that agree to fifteen digits and so having no significant figures
 to reproduce.
+
+### P116. The mission cases counted main-engine ignitions for impulses the assumed engine cannot command: HIGH, CORRECTED 2026-08-27
+
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+
+Found by independent review of [`docs/HOST_REFERENCE_CASES.md`](docs/HOST_REFERENCE_CASES.md), one
+day after [P114](#p114) corrected the ignition count in the same section. Numbered under
+[ADR-021](docs/adr/021-freeze-the-register.md) rule 2: a model error that made a published document
+wrong, and this one reversed the study's headline conclusion for the second time.
+
+The study declares its own reference point in section 8: 20 kN, a 1000 kg stage, a 2 s minimum
+stable useful burn, no throttle credited. Section 10 then computes correctly that on those numbers
+the smallest manoeuvre a single burn can command is **40.27 m/s**. Section 11 went on to model
+three 20 m/s legs and five 40 m/s legs, and counted every impulse in them as a main-engine
+ignition.
+
+| At the reference point | Case B | Case C |
+|---|---:|---:|
+| Total dv per leg | 20 m/s | 40 m/s |
+| First impulse | 10.01 m/s | 20.03 m/s |
+| Second impulse | 9.99 m/s | 19.97 m/s |
+| Burn per impulse, first leg | 0.500 and 0.497 s | 0.998 and 0.989 s |
+| Declared minimum stable burn | 2.0 s | 2.0 s |
+| Impulses reaching the floor | **0 of 6** | **0 of 10** |
+
+Not one of the sixteen impulses reaches the floor, and none is close. The file published
+7 post-primary ignitions for Case B and 11 for Case C, called the excess over the assumed budget of
+4 the sharpest finding in the study, and ranked qualified restart count as the single most valuable
+provider datum in section 19. All three followed from charging the engine for manoeuvres its own
+declared envelope forbids.
+
+**The error runs in the opposite direction to P114 and is worse for it.** P114 understated what the
+engine was asked to do. This one credited the engine with a capability it does not have, and the
+overstatement hid the real shortfall: the constraint that actually fails first is the minimum
+commandable impulse, and it fails outright rather than by a margin.
+
+### Corrected. Propagated 2026-08-27.
+
+`assign_impulse()` returns a burn duration, a verdict against the declared floor, and an explicit
+assignment to `MAIN_ENGINE` or `AUXILIARY_PROPULSION_REQUIRED`. `restart_accounting()` no longer
+counts impulses; it counts what each propulsion system is assigned, and keeps
+`main_engine_reposition_ignitions` and `auxiliary_reposition_impulses` as separate fields with the
+auxiliary dv demand beside them. Two self-test identities now forbid the error in both directions:
+an impulse marked main-engine executable must reach the floor, and an impulse below the floor must
+be assigned away from the main engine.
+
+Three branches replace the single infeasible reading. Branch 1 solves for the smallest shell change
+whose *each* impulse reaches the floor, 150.4 km and 81.9 m/s from 500 km, growing to 182.3 km by
+the fourth leg as the stage lightens. Branch 2 assigns the Case B and C impulses to auxiliary
+propulsion and states the demand, 60 and 200 m/s, without assuming any host has it. Branch 3 gives
+the throttle depth that would be required, 24.5 and 46.8 per cent, marked as a sensitivity and not
+as a claim about any engine.
+
+### The constraint hierarchy, corrected
+
+Minimum commandable impulse binds first. If it is solved, by auxiliary propulsion, by throttle or
+by 150 km shell steps, restart qualification becomes the next dominant engine-level constraint:
+branch 1 needs nine post-primary ignitions against the assumed budget of four. Restart count is not
+universally binding, and the file no longer says it is.
+
+### What this does not do
+
+It does not touch [P108](#p108) and does not lower the Gen6 design point, which stays at
+29.009 m/s. It makes [P113](#p113) **more** important and does not close it: if a host main engine
+cannot perform fine shell changes, dividing orbital work between host, auxiliary propulsion and
+deployer is a harder problem than the file first made it look. The assumed 4-ignition budget stays
+a `VOLLEY_ASSUMPTION` and is marked as one wherever it appears.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
