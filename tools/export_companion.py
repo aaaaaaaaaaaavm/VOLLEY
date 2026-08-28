@@ -179,6 +179,15 @@ An IEEE-formatted technical manuscript, and everything needed to check it.
 the mission, not the evidence base; this generated overview keeps that distinction visible before
 the paper is opened.</sub></p>
 
+<p align="center">
+  <img src="paper/figures/A02_field_map.png" alt="Depth-resolved Halbach airgap field" width="32%">
+  <img src="paper/figures/F01_shot.png" alt="Gen5 force, velocity and current through the modelled shot" width="32%">
+  <img src="paper/figures/A35_ledger.png" alt="Requirement-attributed mass and the 64-corner mass floor" width="32%">
+</p>
+
+<p align="center"><sub>Field assumption → modelled shot → architecture verdict. The manuscript's
+visual spine is generated from the same analysis files as its tables.</sub></p>
+
 Rideshare CubeSats inherit the orbit of whoever paid for the launch. This paper describes a
 deployer that gives each of twelve satellites an orbit chosen for it, without modifying any of
 them, and reports, in the same voice, the three thresholds the design currently fails.
@@ -291,6 +300,15 @@ the full record of what went wrong on the way there.
 <p align="center"><sub>The thesis preserves the analysed Gen5 baseline while the engineering
 record develops Gen6. This generated overview shows both without letting the newer target inherit
 evidence it does not have.</sub></p>
+
+<p align="center">
+  <img src="cad/renders/gen5/exploded.png" alt="Exploded Gen5 electromagnetic drive stack" width="32%">
+  <img src="source/figures/A29_cfd_report.png" alt="Gen5 CFD convergence, force history and surface pressure" width="32%">
+  <img src="cad/renders/gen6/hero_open.png" alt="Gen6 stage-integrated gas architecture target" width="32%">
+</p>
+
+<p align="center"><sub>The thesis keeps the analysed Gen5 machine, its numerical evidence, and
+the less mature Gen6 direction visually separate.</sub></p>
 
 [Read the manuscript](source/VOLLEY_IEEE_Conference.pdf)
 
