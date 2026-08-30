@@ -12,12 +12,9 @@ SALib==1.5.2
 # Real-gas properties, for checking the closed-expansion model's ideal-gas assumption.
 CoolProp==8.0.0
 
-# The test harness. tests/ holds properties that must hold for ANY input and a regression for
-# every defect this repository has shipped. It is a hard dependency rather than an optional one
-# because verify_all.sh and CI both run it, and because the alternative -- verifying a fix once
-# by hand and throwing the check away -- is what let P114 and P116 be the same mistake twice.
-pytest==9.1.1
-hypothesis==6.167.0
+# The test harness and the independent-check tooling live in requirements-dev.txt. Nothing there
+# produces a number that appears in the repository, so it is separated from the four packages
+# above, which do. verify_all.sh and CI install both.
 
 # --- optional, and separated on purpose ---------------------------------------------------
 # CAD generation only (cad/build_gen5.py, cad/build_gen6.py). NOT required by anything in

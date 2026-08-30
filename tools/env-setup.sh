@@ -25,6 +25,9 @@ echo "==> apt index"
 $SUDO apt-get update -qq
 
 echo "==> solvers"
+# calculix-ccx and ngspice were absent from a container that had everything else, so A4 and the
+# circuit runs could be reproduced only on a GitHub runner. That is the wrong way round for a
+# repository whose argument is reproducibility, and this line is why they are named first.
 $SUDO apt-get install -y --no-install-recommends \
     getdp \
     calculix-ccx \
@@ -63,7 +66,8 @@ done
 python3 - <<'PY' || fail=1
 import importlib, sys
 bad = []
-for m in ("numpy", "scipy", "matplotlib", "magpylib", "skfem", "gmsh"):
+for m in ("numpy", "scipy", "matplotlib", "magpylib", "skfem", "gmsh",
+          "pytest", "hypothesis", "astropy", "mpmath", "jsonschema"):
     try:
         mod = importlib.import_module(m)
         print(f"    {m:<10} {getattr(mod, '__version__', 'ok')}")
@@ -71,6 +75,10 @@ for m in ("numpy", "scipy", "matplotlib", "magpylib", "skfem", "gmsh"):
         print(f"    {m:<10} MISSING"); bad.append(m)
 sys.exit(1 if bad else 0)
 PY
+
+echo "==> verification tooling"
+python3 -m pip install --quiet --break-system-packages -r "$(dirname "$0")/../requirements-dev.txt" \
+    || python3 -m pip install --quiet -r "$(dirname "$0")/../requirements-dev.txt"
 
 if [ "$fail" -ne 0 ]; then
     echo

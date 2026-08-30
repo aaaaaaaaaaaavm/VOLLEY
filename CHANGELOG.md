@@ -9,6 +9,23 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-30 (sixtieth pass): the solver chain runs here again, and A4 reproduces
+
+`tools/env-setup.sh` has named `calculix-ccx` and `ngspice` since it was written. Neither was in
+this container, so the structural and circuit runs could be reproduced only on a GitHub runner.
+For a repository whose argument is reproducibility that is the wrong way round, and it went
+unnoticed because no gate re-runs them.
+
+| ID | Item | Detail |
+|---|---|---|
+| Toolchain | CalculiX, ngspice, gfortran and qpdf installed, and each shown to work rather than merely to exist | ngspice reproduces the RC step at one time constant as 6.321204e-01 against an analytic 1 - 1/e = 0.632121. CalculiX solved both A4 decks |
+| A4 | The structural run reproduces its published numbers on this machine | `validation/fea/build_deck.py` rebuilt both decks from `EMOCD_Sled_Gen3.step`, 3672 N over 340 x 90 mm, and CalculiX returned a peak airgap closure of 0.01945 mm pinned and 0.01600 mm clamped. The run sheet publishes 0.0194 and 0.0160. The bracket is reproduced, not asserted |
+| Deps | `requirements-dev.txt` added, and the test harness moved into it | Nothing in that file produces a number that appears in the repository; it tests, cross-checks and lints the code that does. `requirements.txt` keeps the four packages the published numbers depend on. Versions are read from the environment rather than chosen, because a pin invented from memory is a made-up number like any other, and the first draft of this file had five of them wrong |
+| Deps | Independent-check tooling, installed for a stated purpose | astropy, skyfield and sgp4 to cross-check the hand-rolled orbital model rather than replace it. mpmath and sympy to re-derive a suspect figure by another route. scikit-fem and meshio for a structural path independent of CalculiX. jsonschema for the results contract, so a renamed field fails a gate instead of a downstream read. pypdf and pdfplumber for the numbers inside a generated PDF. Pint is deliberately absent: the recent defects were same-unit semantic errors and a dimensional checker would not have caught one of them |
+| CI | The workflow installs both requirement files | Otherwise the test gate added last pass would pass locally and be absent on the runner |
+
+---
+
 ## 2026-08-30 (fifty-ninth pass): the verification that was thrown away every time is kept
 
 Eighty-one analysis files, seventeen thousand lines, and exactly one of them carried a

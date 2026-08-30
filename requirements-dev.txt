@@ -1,0 +1,35 @@
+# Verification and independent-check tooling. Separate from requirements.txt because nothing
+# here produces a number that appears in the repository: these test, cross-check and lint the
+# code that does. CI installs both files.
+#
+# Versions are those the gates were last run with, read from the environment rather than
+# chosen, so a disagreement is a finding rather than a version difference.
+
+# The test gate. tests/ holds properties that must hold for any input and a regression for
+# every defect this repository has shipped.
+pytest==9.1.1
+hypothesis==6.167.0
+pytest-xdist==3.8.0
+coverage==7.16.0
+
+# Static checking. A renamed field should fail before it becomes a runtime KeyError, which is
+# how the P116 schema change actually surfaced.
+mypy==2.3.1
+ruff==0.16.5
+
+# Independent implementations, used to CHECK the hand-rolled models rather than replace them.
+# Two wrappers around one function are not two implementations.
+astropy==8.0.1
+skyfield==1.55
+sgp4==2.27
+mpmath==1.3.0
+sympy==1.14.0
+
+# Meshing and FE, for an independent structural path alongside CalculiX.
+scikit-fem==12.0.2
+meshio==5.3.5
+
+# Contracts and artifacts: results-file shape, and the numbers inside a generated PDF.
+jsonschema==4.26.0
+pypdf==6.16.2
+pdfplumber==0.11.10

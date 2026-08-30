@@ -40,7 +40,7 @@ jobs:
       - name: install
         run: |
           python3 -m pip install --upgrade -q pip
-          python3 -m pip install -q -r requirements.txt
+          python3 -m pip install -q -r requirements.txt -r requirements-dev.txt
 
       - name: links
         run: python3 tools/check_links.py
