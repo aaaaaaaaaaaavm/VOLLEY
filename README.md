@@ -801,6 +801,8 @@ no airgap. [PII-9](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-9_
 lunar case, never depended on this architecture at all.
 
 [The full vault, with the close condition each entry must meet to come back](docs/VAULT.md).
+[What I allow to cross from BOLLEY into VOLLEY](docs/BOLLEY_TRANSFER.md) keeps that transfer from
+quietly surrendering the unmodified-payload requirement.
 
 
 

@@ -10,6 +10,13 @@ It lives in [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab), a reposi
 baseline and no stability promise. It is separate because a soft boundary inside the flagship is
 one `git checkout` from becoming an edit to the record.
 
+The vault now serves BOLLEY as well. I preserve every historical `PII-*` identifier and use
+`VLAB-V###`, `VLAB-B###` and `VLAB-X###` for new VOLLEY-origin, BOLLEY-origin and cross-program
+branches. This file remains authoritative for historical PII numbering. The lab's
+[`TRANSFER_LEDGER.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/TRANSFER_LEDGER.md)
+controls new cross-program routing, and [`BOLLEY_TRANSFER.md`](BOLLEY_TRANSFER.md) states what I
+will and will not allow into VOLLEY.
+
 ---
 
 ## The one rule
