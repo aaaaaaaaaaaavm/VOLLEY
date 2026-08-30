@@ -41,6 +41,12 @@ def _git(*args):
     return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True).stdout
 
 
+def _git_ok(*args):
+    """True when git exits zero. For questions answered by status rather than stdout."""
+    return subprocess.run(["git", *args], cwd=ROOT,
+                          capture_output=True, text=True).returncode == 0
+
+
 def main():
     if not os.path.exists(RECORD):
         print("companions: NO EXPORT RECORD. Run tools/export_companion.py -- the payloads "
@@ -50,9 +56,20 @@ def main():
         rec = json.load(fh)
     commit, sources = rec["flagship_commit"], rec["manifest_sources"]
 
+    # Two questions, and the first one alone is not enough. `cat-file -t` says the object
+    # exists in THIS clone, which stays true for a commit that has been amended or rebased
+    # away: the object lingers here and was never fetched anywhere else. That is how an
+    # unreachable export commit passed locally and failed on a fresh CI clone twice, once
+    # as 59b3661 and once immediately after an amend. Reachability from HEAD is the
+    # property that actually travels.
     if _git("cat-file", "-t", commit).strip() != "commit":
         print(f"companions: the recorded export commit {commit} is not in this repository's "
               f"history. Re-export.")
+        return 1
+    if not _git_ok("merge-base", "--is-ancestor", commit, "HEAD"):
+        print(f"companions: the recorded export commit {commit} exists as an object but is "
+              f"not an ancestor of HEAD, so it was amended or rebased away and no fresh "
+              f"clone will have it. Re-export.")
         return 1
 
     problems = []

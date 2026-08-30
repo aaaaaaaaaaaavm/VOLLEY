@@ -26,6 +26,7 @@ P114 and P116 came to be the same mistake twice.
 | Mutation | The suite is checked against the real source, not trusted | Halving the apogee rise, inverting the burn-floor comparison, disabling sequential propagation and perturbing burn duration by one per cent each turn it red, and it returns green when the source is restored. A test suite that has never been shown to fail is a claim, which is the same standard the document gate was held to |
 | Identity count | Now recomputed independently in a test | It printed "25 identities hold" while the function held more. The count is read from the source at run time and a test recomputes it a second way and requires agreement |
 | Deps | `pytest` and `hypothesis` are hard dependencies, not optional | `verify_all.sh` skips them with a stated reason rather than silently if they are absent, because a gate that disappears when a package is missing is worse than no gate |
+| Gate | The companion gate accepted an export commit that no fresh clone would have | It asked `git cat-file -t`, which says the object exists in THIS clone. That stays true for a commit amended or rebased away: the object lingers locally and was never fetched anywhere else. The gate now also requires the recorded commit to be an ancestor of HEAD, which is the property that travels. It was found by causing it, amending a commit after running the exporter, and it is the same shape as the `59b3661` record that was failing on `origin/main` at the start of this session |
 
 ---
 
