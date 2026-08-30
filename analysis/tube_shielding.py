@@ -57,9 +57,23 @@ STROKE_M = 8.0                                     # ADR-034
 PER_SAT_BASE_KG = 1.296                            # A49, the figure trim_authority.py adds to
 N_MANIFEST = 12
 
+# --- the air-gap surface, which is an ANNULUS and not the flat Gen5 array ------------------
+# cad/build_gen6.py draws the trim winding from bore/2 + wall outward and the magnets ride
+# inside the bore, so the surface the force acts across is the cylinder at the wall's mid
+# thickness. The first version of this file used SECTION_M * stator.active_width_y instead.
+# 90 mm is the DEPTH of the flat Gen5 array and has no meaning around a 15.805 mm bore; it is
+# 1.7047x the real area, and it is preserved as it ran in af526a0.
+GAP_RADIUS_M = BORE_M / 2.0 + WALL_M / 2.0
+GAP_AREA_M2 = 2.0 * math.pi * GAP_RADIUS_M * SECTION_M
+FLAT_AREA_M2 = SECTION_M * ACTIVE_W_M
+BR_T = 1.32                                        # magnet remanence, motor_model.BR
+K_SHEET = G['gen6_trim']['sheet_current_A_per_m']
+
 # aluminium 6061-T6 thermal, handbook at room temperature. E4: nothing here is measured.
 RHO_AL = G['gen6_drive']['tube_material_density_kg_m3']
 CP_AL = 896.0                                      # J/(kg K)
+K_AL = 167.0                                       # W/(m K), 6061-T6 handbook. E4: not measured
+CADENCE_S = 1200.0                                 # ADR-020
 T_START_K = 293.15
 
 
@@ -174,17 +188,60 @@ def band1R_verification():
     return out
 
 
-def airgap_flux_density():
-    """Back out the working flux density from the force the section is specified to make.
+def airgap_flux_density(area_m2=GAP_AREA_M2):
+    """The working flux density the section's specified force implies, over a stated area.
 
-    F = B * K * L * W with K the stator sheet current. Every term but B is in parameters.json,
-    so B follows from the design rather than from an assumption about the magnets.
+    F = B * K * A with K the stator sheet current. Every term but B is in parameters.json, so B
+    follows from the design rather than from an assumption about the magnets -- provided A is the
+    area the force actually acts across.
     """
-    k_sheet = G['gen6_trim']['sheet_current_A_per_m']
-    return FORCE_N / (k_sheet * SECTION_M * ACTIVE_W_M), k_sheet
+    return FORCE_N / (K_SHEET * area_m2), K_SHEET
 
 
-def induced_loss_W(t_conductive, sigma=SIGMA_AL, d=WALL_M, v=V_SYNC):
+def force_spec_consistency():
+    """Whether 948.0 N at 90 kA/m is available over the annulus the section is drawn as.
+
+    It is not. Over the real air-gap surface the specified force needs a working flux density
+    above the remanence of the magnet material this repository models, which no magnet reaches in
+    a gap. The flat-array figure is carried alongside so the size of the substitution is visible.
+
+    The cause is upstream of this run. `analysis/trim_stage.py` sets the section's force from
+    Gen5's lumped thrust constant, `KT * SHEET_A_PER_M / 1e3`, and A2 defines that constant over
+    `motor_model.SLED_ACTIVE_LEN`, 0.34 m of flat array 0.09 m deep. A55 applied it to 0.14401 m
+    of annulus around a 15.805 mm bore without rescaling for either length or area. A66 does not
+    fix that: it reports it, and the loss below is therefore given as a function of the field
+    rather than at a single value resting on it.
+    """
+    b_annulus, _ = airgap_flux_density(GAP_AREA_M2)
+    b_flat, _ = airgap_flux_density(FLAT_AREA_M2)
+    return {'gap_area_m2': GAP_AREA_M2, 'flat_area_m2': FLAT_AREA_M2,
+            'area_ratio_flat_over_annulus': FLAT_AREA_M2 / GAP_AREA_M2,
+            'b_required_annulus_T': b_annulus, 'b_required_flat_T': b_flat,
+            'remanence_T': BR_T, 'b_over_remanence': b_annulus / BR_T,
+            'admissible': b_annulus <= BR_T,
+            'kt_defined_over_m': 0.34, 'kt_applied_over_m': SECTION_M,
+            'length_ratio': 0.34 / SECTION_M}
+
+
+def drag_over_thrust(b_net, sigma=SIGMA_AL, d=WALL_M, v=V_SYNC):
+    """Wall drag divided by the thrust the same field makes on the stator, at that field.
+
+    Both scale with the same area and the same transmission, so the ratio is
+
+        drag / thrust = sigma d v B_net / (2 K)
+
+    which carries no area, no section length and no thrust constant. It survives everything A55
+    got wrong upstream, which is why it is the figure this run leads with.
+    """
+    return 0.5 * sigma * d * v * b_net / K_SHEET
+
+
+def breakeven_b_net(sigma=SIGMA_AL, d=WALL_M, v=V_SYNC):
+    """The air-gap field above which the wall takes more force than the stator makes."""
+    return 2.0 * K_SHEET / (sigma * d * v)
+
+
+def induced_loss_W(b_gap, t_conductive, sigma=SIGMA_AL, d=WALL_M, v=V_SYNC, area=GAP_AREA_M2):
     """Ohmic dissipation in the wall under the stator, from the field that is actually there.
 
     The wall carries an induced sheet current K = sigma * d * v * B_net, where B_net is the field
@@ -203,16 +260,16 @@ def induced_loss_W(t_conductive, sigma=SIGMA_AL, d=WALL_M, v=V_SYNC):
     separate: it is this same algebra collected differently, it agrees to 1e-14, and agreement
     between the two says nothing except that neither was mistyped.
     """
-    b_gap, _ = airgap_flux_density()
     b_net = b_gap * abs(t_conductive)
     k_induced = sigma * d * v * b_net
     p_area = k_induced ** 2 / (2.0 * sigma * d)
-    area = SECTION_M * ACTIVE_W_M
     shear_Pa = p_area / v
     maxwell_Pa = b_gap * b_gap / (2.0 * MU0)
-    return {'wall_loss_W': p_area * area, 'b_gap_T': b_gap, 'b_net_T': b_net,
+    return {'b_gap_T': b_gap, 'b_net_T': b_net, 'wall_loss_W': p_area * area,
             'induced_sheet_current_A_m': k_induced, 'loss_per_area_W_m2': p_area,
             'drag_force_N': shear_Pa * area, 'shear_Pa': shear_Pa,
+            'thrust_at_this_field_N': K_SHEET * b_net * area,
+            'drag_over_thrust': drag_over_thrust(b_net, sigma, d, v),
             'maxwell_bound_Pa': maxwell_Pa, 'shear_over_maxwell': shear_Pa / maxwell_Pa,
             'within_maxwell_bound': shear_Pa <= maxwell_Pa}
 
@@ -230,12 +287,23 @@ def wall_temperature(p_loss_W):
     ring_vol = math.pi * (BORE_M + WALL_M) * WALL_M * SECTION_M
     mass_kg = ring_vol * RHO_AL
     d_t_per_shot = e_per_shot_J / (mass_kg * CP_AL)
+    # REPORTED, NOT BANDED, AND NOT APPLIED. Stacking twelve adiabatic shots assumes the heat
+    # stays where it was made for four hours. It does not: the section is welded into eight
+    # metres of the same metal, and ADR-020 puts 1200 s between shots. The axial diffusion length
+    # over that gap says how far the heat gets, and A43 made the same kind of comparison for the
+    # reservoir. This run does NOT resolve the accumulation, and the campaign figure below is
+    # therefore an upper bound with a named mitigation rather than a prediction.
+    alpha = K_AL / (RHO_AL * CP_AL)
+    diff_len = math.sqrt(alpha * CADENCE_S)
     return {'dwell_s': dwell_s, 'energy_per_shot_J': e_per_shot_J,
             'heated_ring_mass_kg': mass_kg, 'rise_per_shot_K': d_t_per_shot,
             'rise_campaign_K': d_t_per_shot * SHOTS,
             'peak_K': T_START_K + d_t_per_shot * SHOTS,
             'ceiling_K': T_CEILING_K,
-            'within_ceiling': T_START_K + d_t_per_shot * SHOTS <= T_CEILING_K}
+            'within_ceiling': T_START_K + d_t_per_shot * SHOTS <= T_CEILING_K,
+            'diffusivity_m2_s': alpha, 'cadence_s': CADENCE_S,
+            'axial_diffusion_length_m': diff_len,
+            'diffusion_length_over_section': diff_len / SECTION_M}
 
 
 def build():
@@ -255,9 +323,24 @@ def build():
     mass_needed = SECTION_MASS_KG * growth
     per_sat = PER_SAT_BASE_KG + mass_needed / N_MANIFEST
 
-    loss = induced_loss_W(t_slab_c)
+    spec = force_spec_consistency()
+    b_break = breakeven_b_net()
+
+    # The parameters do not fix an admissible field, so the loss is reported over a ladder of
+    # fields chosen before the results were looked at: a neutral 0.2 to 1.0 T in steps, plus the
+    # remanence, which is the hard upper bound, plus the field the parameters imply, carried with
+    # its own admissible flag rather than dropped.
+    ladder = [0.2, 0.4, 0.6, 0.8, 1.0, BR_T, spec['b_required_annulus_T']]
+    sweep = []
+    for b in ladder:
+        e = induced_loss_W(b, t_slab_c)
+        e['thermal'] = wall_temperature(e['wall_loss_W'])
+        e['field_available'] = b <= BR_T
+        sweep.append(e)
+
+    loss = sweep[-1]                       # the parameters' own point, inadmissible and flagged
     p_loss = loss['wall_loss_W']
-    thermal = wall_temperature(p_loss)
+    thermal = loss['thermal']
 
     b1 = band1R_verification()
     bands = [
@@ -308,11 +391,13 @@ def build():
                       'pct_of_stroke': pct_stroke,
                       'section_mass_needed_kg': mass_needed,
                       'per_satellite_kg': per_sat},
+        'force_spec': spec,
+        'breakeven_b_net_T': b_break,
+        'loss_sweep': sweep,
         'loss': dict(loss,
                      against_peak_mechanical_W=G['gen6_trim']['peak_mechanical_W'],
                      loss_over_mechanical=p_loss / G['gen6_trim']['peak_mechanical_W'],
-                     thrust_for_comparison_N=FORCE_N,
-                     drag_over_thrust=loss['drag_force_N'] / FORCE_N),
+                     nominal_force_for_comparison_N=FORCE_N),
         'thermal': thermal,
         'verification': b1,
         'bands': bands,
@@ -333,15 +418,26 @@ def main():
           f"section must grow {a['growth_factor']:.3f}x to {a['section_needed_mm']:.2f} mm "
           f"({a['pct_of_stroke']:.3f} % of stroke)")
     print(f"  per-satellite mass {a['per_satellite_kg']:.4f} kg")
-    l, th = r['loss'], r['thermal']
-    print(f"  wall loss {l['wall_loss_W']/1e3:.2f} kW against {l['against_peak_mechanical_W']/1e3:.1f} kW mechanical"
-          f" ({l['loss_over_mechanical']*100:.1f} %)")
-    print(f"  wall drag {l['drag_force_N']:.1f} N against {l['thrust_for_comparison_N']:.1f} N of "
-          f"thrust ({l['drag_over_thrust']:.2f}x); shear {l['shear_Pa']/1e3:.2f} kPa is "
-          f"{l['shear_over_maxwell']:.4f} of the Maxwell bound "
-          f"{'OK' if l['within_maxwell_bound'] else 'IMPOSSIBLE'}")
-    print(f"  wall {th['rise_per_shot_K']:.2f} K per shot, {th['rise_campaign_K']:.1f} K over "
-          f"{SHOTS}, peak {th['peak_K']:.1f} K against {th['ceiling_K']:.0f} K ceiling")
+    sp = r['force_spec']
+    print(f"  air-gap surface: annulus {sp['gap_area_m2']*1e4:.2f} cm2, not the flat "
+          f"{sp['flat_area_m2']*1e4:.2f} cm2 ({sp['area_ratio_flat_over_annulus']:.4f}x)")
+    print(f"  948.0 N at 90 kA/m over that annulus needs {sp['b_required_annulus_T']:.4f} T "
+          f"against a {sp['remanence_T']:.2f} T remanence -- "
+          f"{'available' if sp['admissible'] else 'NOT AVAILABLE'}")
+    print(f"  drag exceeds thrust above B_net = {r['breakeven_b_net_T']:.4f} T, whatever the "
+          f"area or the thrust constant")
+    print("\n  field       drag/thrust    wall loss     K per shot   peak over 12   ceiling")
+    for e in r['loss_sweep']:
+        th = e['thermal']
+        print(f"  {e['b_gap_T']:5.3f} T{'' if e['field_available'] else '*'}  "
+              f"{e['drag_over_thrust']:9.2f}    {e['wall_loss_W']/1e3:8.2f} kW  "
+              f"{th['rise_per_shot_K']:9.2f}   {th['peak_K']:9.1f} K   "
+              f"{'ok' if th['within_ceiling'] else 'OVER'}")
+    print("  * above the remanence of the magnet material; not an operating point")
+    th = r['thermal']
+    print(f"\n  REPORT only: axial diffusion length over the 1200 s cadence is "
+          f"{th['axial_diffusion_length_m']*1e3:.1f} mm, {th['diffusion_length_over_section']:.2f}x "
+          f"the section, so every campaign stack above is an upper bound this run does not resolve")
     print("\nbands:")
     for b in r['bands']:
         v = 'REPORT' if b['pass_'] is None else ('PASS' if b['pass_'] else 'FAIL')
