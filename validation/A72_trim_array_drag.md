@@ -77,3 +77,46 @@ carriage, and this run uses the repository's own shot so the comparison is like 
 carriage mass lowers every exit velocity below, including the baseline.
 
 It measures nothing. E4 stands, and 3.5e7 S/m is a handbook value at room temperature.
+
+---
+
+## Correction, 2026-08-30, bands 3 and 4 are withdrawn as defective, before the script exists
+
+**No result has been produced. Nothing has been run.** Both defects are visible from the inputs
+alone, and both are the failure [ADR-037](../docs/adr/037-a66-band-one-was-unsatisfiable.md)
+describes: a band that cannot discriminate is not a gate, whichever way it is stuck.
+
+**Band 4 could never fail.** The eddy drag is proportional to velocity at small `Rm` and vanishes
+with it, and the gas force never falls below the seal friction: the charge starts at 22.7258 bar,
+445.88 N, and is still at 10.0994 bar, **198.15 N**, at the muzzle, against 83.4 N of friction.
+A carriage carrying any array therefore always reaches the muzzle, however slowly. `L_clear` is
+unbounded and `L_force ≤ L_clear` is true for every input.
+
+**Band 3 fails at zero array length, so it measures nothing.** ADR-034's adopted 29.01 m/s is
+`sqrt(2(W − 83.4 × 8.0)/4.0)` = 29.0089, which is the zero-friction 34.28 m/s with the *entire*
+tolerable friction allowance already subtracted — 28.3887 % of shot work. There is no margin left
+between the adopted velocity and the loss budget, so `L_energy` is 0 and the band fails before
+any magnet exists. That is a true and useful sentence about the design point, and it is written
+into the result below as one. It is not a threshold.
+
+**The declared rows above are not edited.** They stay as frozen, and the two below replace them.
+
+> ### BANDS 3R AND 4R, DECLARED 2026-08-30, BEFORE `analysis/array_drag.py` EXISTS.
+>
+> Verify with `git show --stat <this commit> -- analysis/array_drag.py`, which must return
+> nothing.
+
+Both thresholds are taken from quantities the repository already accepts, so that neither is a
+number chosen by me:
+
+| | |
+|---|---|
+| **L_parity** | the array length at which the eddy drag takes **the same energy the seal friction takes**, 28.3887 % of shot work. ADR-034 and A49 band 6 already accept a loss of that size, so it is the repository's own yardstick for *what a tolerable parasitic loss looks like* |
+| **L_stall** | the array length at which the carriage stops accelerating before the muzzle — `dv/dx = 0` somewhere in the stroke. Beyond it the machine is a gas spring against a brake rather than an accelerator, and that is a change of kind, not of degree |
+
+| # | Band | FAIL if |
+|---|---|---|
+| **3R** | **Some field admits an array both long enough to make the section's force and short enough that the drag costs no more than the friction already does**, `L_force ≤ L_parity` | The eddy drag is not a second friction term to be budgeted. It is a larger loss than the one ADR-034 spent a design point accommodating |
+| **4R** | **Some field admits an array long enough to make the force at which the carriage is still accelerating at the muzzle**, `L_force ≤ L_stall` | ADR-033's carriage-borne secondary and ADR-035's aluminium wall are mutually exclusive, not merely expensive together |
+
+Bands 1, 2, 5 and 6 are untouched, and band 5 now tests the stability of 3R and 4R.
