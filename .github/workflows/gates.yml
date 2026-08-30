@@ -65,6 +65,9 @@ jobs:
       - name: host-reference self-test
         run: python3 analysis/host_reference.py --self-test
 
+      - name: properties and regressions
+        run: python3 -m pytest
+
       # host_reference.py is deliberately NOT re-run here. check_results_fresh.py above
       # already regenerates analysis/results/host_reference.json and compares it
       # numerically, with a declared tolerance and a reason. Re-running it a second time

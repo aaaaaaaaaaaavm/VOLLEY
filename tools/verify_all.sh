@@ -32,6 +32,16 @@ run "computational closure" python3 tools/check_computational_closure.py
 run "artifacts"          python3 tools/check_artifacts.py
 run "host-reference blocks" python3 analysis/host_reference.py --check-doc
 run "host-reference self-test" python3 analysis/host_reference.py --self-test
+# Properties and regressions. The self-test above checks the reference point; this checks
+# rules that must hold for any input, and reintroduces every defect the repository has
+# shipped to confirm a gate still catches it. Skipped with a stated reason rather than
+# silently if pytest is absent, because a gate that vanishes when a package is missing is
+# worse than no gate.
+if python3 -c "import pytest, hypothesis" 2>/dev/null; then
+    run "properties and regressions" python3 -m pytest
+else
+    printf '%-34sSKIP  pytest or hypothesis not installed: pip install -r requirements.txt\n' "properties and regressions"
+fi
 
 if [ "${1:-}" = "--full" ]; then
     echo
