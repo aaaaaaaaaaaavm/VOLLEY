@@ -1,5 +1,5 @@
 {
-  "flagship_commit": "86bf7bf",
+  "flagship_commit": "7784854",
   "flagship_tree_was_dirty": false,
   "note": "The commit the companions were last generated from. tools/check_companions.py fails when any manifest source has been committed since. Regenerate with tools/export_companion.py and push both companions.",
   "manifest_sources": [
