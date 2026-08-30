@@ -1,0 +1,130 @@
+{
+  "analysis": "A66",
+  "bands_declared_commit": "a66-bands",
+  "note": "Tube shielding of the Gen6 trim stator. The wall is stationary so it sees full slip. Two independent methods. Nothing measured, E4.",
+  "inputs": {
+    "sigma_S_m": 35000000.0,
+    "wall_m": 0.001,
+    "bore_m": 0.015805,
+    "v_sync_m_s": 34.28,
+    "wavelength_m": 0.048,
+    "section_m": 0.14401,
+    "force_N": 948.0,
+    "authority_m_s": 1.1543,
+    "section_mass_kg": 1.2328
+  },
+  "excitation_hz": 714.1666666666666,
+  "skin_depth_m": 0.003183364153238279,
+  "wall_in_skin_depths": 0.3141330843292777,
+  "reynolds_sheet": 0.7538565731554068,
+  "transmission": {
+    "sheet_abs": 0.7985193889390189,
+    "slab_conductive_abs": 0.8105756753039667,
+    "slab_total_abs": 0.7111227162349574,
+    "geometric_only": 0.8773057690983457,
+    "sheet_slab_rel_diff": 0.014873733239560516
+  },
+  "authority": {
+    "sized_m_s": 1.1543,
+    "delivered_m_s": 0.9356475020033688,
+    "shortfall_m_s": 0.21865249799663133,
+    "growth_factor": 1.2336911043191605,
+    "section_needed_mm": 177.6638559330023,
+    "pct_of_stroke": 2.2207981991625285,
+    "section_mass_needed_kg": 1.520894393404661,
+    "per_satellite_kg": 1.4227411994503885
+  },
+  "loss": {
+    "b_gap_T": 0.8127007640930285,
+    "b_net_T": 0.6587554706747563,
+    "induced_sheet_current_A_m": 790374.8137155726,
+    "wall_loss_W": 231330.71512263833,
+    "against_peak_mechanical_W": 28606.0,
+    "loss_over_mechanical": 8.086790013376156
+  },
+  "thermal": {
+    "dwell_s": 0.004200991831971995,
+    "energy_per_shot_J": 971.8184447144441,
+    "heated_ring_mass_kg": 0.02052791326508521,
+    "rise_per_shot_K": 52.83629104908981,
+    "rise_campaign_K": 634.0354925890776,
+    "peak_K": 927.1854925890776,
+    "ceiling_K": 473.0,
+    "within_ceiling": false
+  },
+  "verification": {
+    "zero_sigma_conductive_transmission": 1.0000000000000002,
+    "zero_sigma_is_unity": true,
+    "zero_sigma_total_equals_geometric": true,
+    "decades": [
+      {
+        "sigma_scale": 0.001,
+        "sigma_S_m": 35000.0,
+        "sheet": 0.9999997158502547,
+        "slab": 0.9999997391054489,
+        "rel_diff": 2.325520028191023e-08
+      },
+      {
+        "sigma_scale": 0.01,
+        "sigma_S_m": 350000.0,
+        "sheet": 0.9999715862244153,
+        "slab": 0.9999739115546326,
+        "rel_diff": 2.3253908831006744e-06
+      },
+      {
+        "sigma_scale": 0.1,
+        "sigma_S_m": 3500000.0,
+        "sheet": 0.9971705554348378,
+        "slab": 0.9974012090384687,
+        "rel_diff": 0.00023125458595875037
+      },
+      {
+        "sigma_scale": 1.0,
+        "sigma_S_m": 35000000.0,
+        "sheet": 0.7985193889390189,
+        "slab": 0.8105756753039667,
+        "rel_diff": 0.014873733239560516
+      }
+    ],
+    "worst_rel_diff": 0.014873733239560516,
+    "pass_": false
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "model verification: zero-sigma unity, sheet against slab to 0.5 %",
+      "detail": "zero-sigma 1.000000, worst sheet-slab 1.4874 % over 3 decades",
+      "pass_": false
+    },
+    {
+      "band": "2",
+      "name": "REPORT: skin depth against the wall",
+      "detail": "f 714.2 Hz, delta 3.183 mm, wall 1.0 mm = 0.314 delta",
+      "pass_": null
+    },
+    {
+      "band": "3",
+      "name": "the section as drawn still delivers 1.1543 m/s through the wall",
+      "detail": "delivers 0.9356 m/s, 81.06 % of sized",
+      "pass_": false
+    },
+    {
+      "band": "4",
+      "name": "compensated section stays within 15 % of the 8.0 m stroke",
+      "detail": "177.66 mm = 2.2208 % of stroke",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "added mass per satellite with the compensated section <= 2.0 kg",
+      "detail": "1.4227 kg (section 1.5209 kg)",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "independent implementation agrees on transmission within 10 %",
+      "detail": "sheet 0.798519, slab 0.810576, 1.4874 %",
+      "pass_": true
+    }
+  ]
+}
