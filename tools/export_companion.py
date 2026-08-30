@@ -117,6 +117,9 @@ PAPER_MANIFEST = [
     ("tools/make_animation.py", "paper/make_animation.py"),
     ("analysis", "analysis"),
     ("requirements.txt", "requirements.txt"),
+    # requirements-dev.txt goes with it because requirements.txt NAMES it. Shipping one without
+    # the other put a dangling reference on a public front page for the length of one export.
+    ("requirements-dev.txt", "requirements-dev.txt"),
     ("validation", "validation"),
     ("docs/PROVENANCE.md", "PROVENANCE.md"),
     ("docs/PRIOR_ART.md", "PRIOR_ART.md"),
