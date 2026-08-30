@@ -55,3 +55,50 @@ It does not measure anything. E4 stands. Conductivity is a handbook value at roo
 the wall gets hot, which the run reports rather than resolves.
 
 It does not size the pulse store. That is P77 and A54, still open, and it is ADR-033's falsifier.
+
+---
+
+## Correction, 2026-08-30, band 1 is withdrawn as defective and band 1R replaces it
+
+The first run is `af526a0`. It failed band 1 at 1.4874 % against 0.5 %, and it failed band 3 at
+0.9356 m/s against 1.1543.
+
+Band 3's failure is the answer to P92 and it stands. Band 1's is not a failure of the model.
+Holding the sheet conductance at 35 000 S and shrinking the wall, the slab converges on the sheet
+at first order across three decades — 1.487 % at 1.0 mm, 0.7665 at 0.5, 0.1571 at 0.1, 0.001581 at
+0.001 — so both routes are implemented correctly and the 1.4874 % is the thin-sheet truncation
+error at the wall this machine has, where `kd` = 0.131. A 0.5 % tolerance sits underneath a number
+the geometry fixes at 1.49 %, so no correct implementation could have passed it, and the only code
+that could have was code whose two routes shared an error, which is what band 6 exists to catch.
+[ADR-037](../docs/adr/037-a66-band-one-was-unsatisfiable.md) is the full argument.
+
+**The declared row above is not edited.** It stays in the words it was frozen in, and `af526a0`
+stays as it ran.
+
+> ### BAND 1R, DECLARED 2026-08-30, BEFORE `analysis/tube_shielding.py` IS TOUCHED AGAIN.
+>
+> Verify with `git log --oneline <this commit>..HEAD -- analysis/tube_shielding.py`, which must be
+> empty at this commit.
+
+| # | Band | FAIL if |
+|---|---|---|
+| **1R** | **Model verification, by limits and by order rather than by agreement.** (a) At zero conductivity the slab's conductive transmission is 1.000 and its total transmission equals `exp(-kd)`, both to 1e-12. (b) With the sheet conductance `σd` held at the design value, the slab agrees with the sheet to **0.01 %** by `d` = 1e-3 mm. (c) The convergence order observed over that sequence is **first order to within 0.05** | Either route is wrong. A wrong implementation breaks the limit or breaks the order, and cannot fake both |
+
+Band 1R is harder than the band it replaces, and unlike that band it can be met. Bands 2 through 6
+are untouched.
+
+### Two things this correction does not cover
+
+**A defect in the loss model, found in reviewing `af526a0` and not in any band.** The wall loss and
+every thermal figure in that run are computed from peak-amplitude phasors without the factor of one
+half a time average carries, so 231.33 kW and 927.2 K are both exactly twice what the model says.
+The tell is that the implied shear, 0.52 MPa, is three times the Maxwell bound `B²/2μ₀` for the
+field driving it. The corrected figures follow the same closed-form induction-drag curve
+`F/A = (B²/2μ₀)·2Rm/(1+Rm²)` computed independently, which is the check that was missing. That is a
+coding defect, not a band, and correcting it does not move a declared target.
+
+**No band was declared for the wall temperature, and none is being declared now.** The 473 K
+ceiling is in the input table and nothing gates against it, which is a gap in the declaration of
+2026-08-30 that I am not going to close after the fact. The thermal result is reported without a
+gate, and the reader should treat it as a report and not as a passed test. A successor run may
+declare a thermal band; A66 may not.
