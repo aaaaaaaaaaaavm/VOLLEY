@@ -1,0 +1,192 @@
+{
+  "analysis": "A72",
+  "bands_declared_commit": "3f70082, with 3R and 4R at 0abbe1b, both before this file",
+  "note": "How long a carriage magnet array the shot can afford against the eddy drag of a stationary aluminium tube. Closes the closable half of P118. E4: nothing here is measured.",
+  "inputs": {
+    "sigma_S_m": 35000000.0,
+    "wall_m": 0.001,
+    "gap_radius_m": 0.0084025,
+    "circumference_m": 0.052794464543576475,
+    "stroke_m": 8.0,
+    "mass_kg": 4.0,
+    "p0_Pa": 2272580.0,
+    "chamber_m3": 0.002,
+    "friction_N": 83.4,
+    "friction_share": 0.28388683852884616,
+    "v_adopted_m_s": 29.01,
+    "force_N": 948.0,
+    "k_sheet_A_m": 90000.0,
+    "remanence_T": 1.32
+  },
+  "verification": {
+    "reference_v_exit": 34.27996673359602,
+    "zero_sigma_v_exit": 34.27996673359612,
+    "zero_sigma_rel": 2.9018692981671646e-15,
+    "zero_length_v_exit": 34.27996673359612,
+    "zero_length_rel": 2.9018692981671646e-15,
+    "a66_shear_Pa": 734208.4347574137,
+    "this_file_shear_Pa": 734208.4347574136,
+    "shear_rel_diff": 1.5855895453639e-16,
+    "step_halving_rel": 5.546740389783283e-07,
+    "steps": 2000,
+    "pass_": true
+  },
+  "ladder": [
+    {
+      "b_gap_T": 0.2,
+      "L_force_m": 0.9975793318861238,
+      "L_parity_m": 0.1472910782797185,
+      "L_stall_m": 0.17855907485027614,
+      "force_over_parity": 6.772842887276814,
+      "force_over_stall": 5.586830760198582,
+      "v_exit_at_L_force": 3.2991176096052093,
+      "drag_J_at_L_force": 1661.2638845089036,
+      "drag_share_at_L_force": 0.7068509474451181,
+      "still_accelerating_at_L_force": false,
+      "parity_ok": false,
+      "stall_ok": false
+    },
+    {
+      "b_gap_T": 0.4,
+      "L_force_m": 0.4987896659430619,
+      "L_parity_m": 0.03682273660919676,
+      "L_stall_m": 0.04463972809229176,
+      "force_over_parity": 13.545697899554956,
+      "force_over_stall": 11.173671687959748,
+      "v_exit_at_L_force": 1.5763396896120225,
+      "drag_J_at_L_force": 1678.062544878826,
+      "drag_share_at_L_force": 0.7139986071932253,
+      "still_accelerating_at_L_force": false,
+      "parity_ok": false,
+      "stall_ok": false
+    },
+    {
+      "b_gap_T": 0.6,
+      "L_force_m": 0.33252644396204123,
+      "L_parity_m": 0.016365679252528804,
+      "L_stall_m": 0.019839870365409108,
+      "force_over_parity": 20.318523834607088,
+      "force_over_stall": 16.760514954865954,
+      "v_exit_at_L_force": 1.0433297882542525,
+      "drag_J_at_L_force": 1680.8551644188033,
+      "drag_share_at_L_force": 0.7151868385068014,
+      "still_accelerating_at_L_force": false,
+      "parity_ok": false,
+      "stall_ok": false
+    },
+    {
+      "b_gap_T": 0.8,
+      "L_force_m": 0.24939483297153095,
+      "L_parity_m": 0.00920570937048451,
+      "L_stall_m": 0.011159918214106468,
+      "force_over_parity": 27.091321584748762,
+      "force_over_stall": 22.34737102788876,
+      "v_exit_at_L_force": 0.7805715236569589,
+      "drag_J_at_L_force": 1681.8136547058305,
+      "drag_share_at_L_force": 0.7155946664104956,
+      "still_accelerating_at_L_force": false,
+      "parity_ok": false,
+      "stall_ok": false
+    },
+    {
+      "b_gap_T": 1.0,
+      "L_force_m": 0.19951586637722474,
+      "L_parity_m": 0.005891625507985179,
+      "L_stall_m": 0.00714238054209366,
+      "force_over_parity": 33.864315732018625,
+      "force_over_stall": 27.934085169696132,
+      "v_exit_at_L_force": 0.6237520353051358,
+      "drag_J_at_L_force": 1682.2541053098228,
+      "drag_share_at_L_force": 0.7157820736789241,
+      "still_accelerating_at_L_force": false,
+      "parity_ok": false,
+      "stall_ok": false
+    },
+    {
+      "b_gap_T": 1.32,
+      "L_force_m": 0.15114838361910965,
+      "L_parity_m": 0.0033813214983127986,
+      "L_stall_m": 0.004099109653926533,
+      "force_over_parity": 44.700979689310586,
+      "force_over_stall": 36.8734667720647,
+      "v_exit_at_L_force": 0.47213722780819495,
+      "drag_J_at_L_force": 1682.5864113891462,
+      "drag_share_at_L_force": 0.7159234665480534,
+      "still_accelerating_at_L_force": false,
+      "parity_ok": false,
+      "stall_ok": false
+    }
+  ],
+  "stability": [
+    {
+      "sigma_S_m": 17500000.0,
+      "wall_m": 0.0005,
+      "parity_ok": false,
+      "stall_ok": false
+    },
+    {
+      "sigma_S_m": 17500000.0,
+      "wall_m": 0.001,
+      "parity_ok": false,
+      "stall_ok": false
+    },
+    {
+      "sigma_S_m": 35000000.0,
+      "wall_m": 0.0005,
+      "parity_ok": false,
+      "stall_ok": false
+    },
+    {
+      "sigma_S_m": 35000000.0,
+      "wall_m": 0.001,
+      "parity_ok": false,
+      "stall_ok": false
+    }
+  ],
+  "required_conductance": {
+    "b_gap_T": 0.6,
+    "required_sigma_d_S": 1446.3271986422496,
+    "aluminium_sigma_d_S": 35000.0,
+    "fraction_of_aluminium": 0.04132363424692142,
+    "required_sigma_S_m_at_this_wall": 1446327.1986422497,
+    "note": "below this sheet conductance the eddy drag costs less than the seal friction for an array long enough to make the force"
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "model verification: limits against precharged, shear against A66",
+      "detail": "zero-sigma 2.90e-15, zero-length 2.90e-15 against 1e-6; shear 1.59e-16 against 1e-9; step halving moves v_exit 5.55e-07",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "REPORT: the three lengths at each field on A66 ladder",
+      "detail": "0.20 T L_force 997.6 mm, L_parity 147.29 mm, L_stall 178.56 mm; 0.40 T L_force 498.8 mm, L_parity 36.82 mm, L_stall 44.64 mm; 0.60 T L_force 332.5 mm, L_parity 16.37 mm, L_stall 19.84 mm; 0.80 T L_force 249.4 mm, L_parity 9.21 mm, L_stall 11.16 mm; 1.00 T L_force 199.5 mm, L_parity 5.89 mm, L_stall 7.14 mm; 1.32 T L_force 151.1 mm, L_parity 3.38 mm, L_stall 4.10 mm",
+      "pass_": null
+    },
+    {
+      "band": "3R",
+      "name": "some field admits an array both making the force and costing no more than the friction already does",
+      "detail": "best ratio L_force/L_parity 6.8x at 0.20 T",
+      "pass_": false
+    },
+    {
+      "band": "4R",
+      "name": "some field admits an array making the force at which the carriage is still accelerating at the muzzle",
+      "detail": "best ratio L_force/L_stall 5.6x at 0.20 T; the carriage is decelerating at the muzzle at every field on the ladder",
+      "pass_": false
+    },
+    {
+      "band": "5",
+      "name": "the verdicts of 3R and 4R hold over sigma 1.75e7 to 3.5e7 and wall 0.5 to 1.0 mm",
+      "detail": "4 of 4 corners agree",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "REPORT: the wall conductance at which 3R would pass at 0.6 T",
+      "detail": "1446.3 S against aluminium's 35000 S, 4.132 %",
+      "pass_": null
+    }
+  ]
+}
