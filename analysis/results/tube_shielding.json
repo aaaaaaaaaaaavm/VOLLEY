@@ -1,6 +1,6 @@
 {
   "analysis": "A66",
-  "bands_declared_commit": "a66-bands",
+  "bands_declared_commit": "e05551b, band 1R at 10d23b1 under ADR-037",
   "note": "Tube shielding of the Gen6 trim stator. The wall is stationary so it sees full slip. Two independent methods. Nothing measured, E4.",
   "inputs": {
     "sigma_S_m": 35000000.0,
@@ -35,20 +35,28 @@
     "per_satellite_kg": 1.4227411994503885
   },
   "loss": {
+    "wall_loss_W": 115665.35756131916,
     "b_gap_T": 0.8127007640930285,
     "b_net_T": 0.6587554706747563,
     "induced_sheet_current_A_m": 790374.8137155726,
-    "wall_loss_W": 231330.71512263833,
+    "loss_per_area_W_m2": 8924176.373656087,
+    "drag_force_N": 3374.135284752601,
+    "shear_Pa": 260331.8662093374,
+    "maxwell_bound_Pa": 262797.6494671743,
+    "shear_over_maxwell": 0.9906171791763118,
+    "within_maxwell_bound": true,
     "against_peak_mechanical_W": 28606.0,
-    "loss_over_mechanical": 8.086790013376156
+    "loss_over_mechanical": 4.043395006688078,
+    "thrust_for_comparison_N": 948.0,
+    "drag_over_thrust": 3.559214435393039
   },
   "thermal": {
     "dwell_s": 0.004200991831971995,
-    "energy_per_shot_J": 971.8184447144441,
+    "energy_per_shot_J": 485.90922235722206,
     "heated_ring_mass_kg": 0.02052791326508521,
-    "rise_per_shot_K": 52.83629104908981,
-    "rise_campaign_K": 634.0354925890776,
-    "peak_K": 927.1854925890776,
+    "rise_per_shot_K": 26.418145524544904,
+    "rise_campaign_K": 317.0177462945388,
+    "peak_K": 610.1677462945388,
     "ceiling_K": 473.0,
     "within_ceiling": false
   },
@@ -56,45 +64,83 @@
     "zero_sigma_conductive_transmission": 1.0000000000000002,
     "zero_sigma_is_unity": true,
     "zero_sigma_total_equals_geometric": true,
-    "decades": [
+    "convergence": [
       {
-        "sigma_scale": 0.001,
-        "sigma_S_m": 35000.0,
-        "sheet": 0.9999997158502547,
-        "slab": 0.9999997391054489,
-        "rel_diff": 2.325520028191023e-08
-      },
-      {
-        "sigma_scale": 0.01,
-        "sigma_S_m": 350000.0,
-        "sheet": 0.9999715862244153,
-        "slab": 0.9999739115546326,
-        "rel_diff": 2.3253908831006744e-06
-      },
-      {
-        "sigma_scale": 0.1,
-        "sigma_S_m": 3500000.0,
-        "sheet": 0.9971705554348378,
-        "slab": 0.9974012090384687,
-        "rel_diff": 0.00023125458595875037
-      },
-      {
-        "sigma_scale": 1.0,
+        "wall_mm": 1.0,
         "sigma_S_m": 35000000.0,
+        "kd": 0.1308996938995747,
         "sheet": 0.7985193889390189,
         "slab": 0.8105756753039667,
         "rel_diff": 0.014873733239560516
+      },
+      {
+        "wall_mm": 0.5,
+        "sigma_S_m": 70000000.0,
+        "kd": 0.06544984694978735,
+        "sheet": 0.7985193889390189,
+        "slab": 0.8046873558500205,
+        "rel_diff": 0.007665047631432191
+      },
+      {
+        "wall_mm": 0.25,
+        "sigma_S_m": 140000000.0,
+        "kd": 0.032724923474893676,
+        "sheet": 0.7985193889390189,
+        "slab": 0.8016392598551946,
+        "rel_diff": 0.0038918639248522813
+      },
+      {
+        "wall_mm": 0.1,
+        "sigma_S_m": 350000000.0,
+        "kd": 0.013089969389957472,
+        "sheet": 0.7985193889390189,
+        "slab": 0.7997760720866561,
+        "rel_diff": 0.0015712937552114085
+      },
+      {
+        "wall_mm": 0.05,
+        "sigma_S_m": 700000000.0,
+        "kd": 0.006544984694978736,
+        "sheet": 0.7985193889390189,
+        "slab": 0.799149196565377,
+        "rel_diff": 0.0007880976782119443
+      },
+      {
+        "wall_mm": 0.01,
+        "sigma_S_m": 3499999999.9999995,
+        "kd": 0.0013089969389957472,
+        "sheet": 0.7985193889390189,
+        "slab": 0.7986455857751904,
+        "rel_diff": 0.0001580135649895982
+      },
+      {
+        "wall_mm": 0.001,
+        "sigma_S_m": 35000000000.0,
+        "kd": 0.0001308996938995747,
+        "sheet": 0.7985193889390189,
+        "slab": 0.7985320139262474,
+        "rel_diff": 1.5810245561055017e-05
       }
     ],
-    "worst_rel_diff": 0.014873733239560516,
-    "pass_": false
+    "finest_rel_diff": 1.5810245561055017e-05,
+    "pairwise_orders": [
+      0.9564001406645816,
+      0.9778334883694391,
+      0.9898483543000216,
+      0.995506563341465,
+      0.9984486777504981,
+      0.9997557560852712
+    ],
+    "worst_order_deviation": 0.043599859335418434,
+    "loglog_slope": 0.9928542972373798,
+    "pass_": true
   },
   "bands": [
     {
-      "band": "1",
-      "name": "model verification: zero-sigma unity, sheet against slab to 0.5 %",
-      "detail": "zero-sigma 1.000000, worst sheet-slab 1.4874 % over 3 decades",
-      "pass_": false
+      "band": "1R",
+      "name": "model verification: zero-sigma limits, and first-order convergence of the slab onto the sheet at fixed sigma*d",
+      "detail": "zero-sigma 1.000000, finest gap 0.001581 % at 1e-3 mm, worst pairwise order deviation 0.0436, log-log slope 0.99285",
+      "pass_": true
     },
     {
       "band": "2",

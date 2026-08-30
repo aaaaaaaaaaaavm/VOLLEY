@@ -91,6 +91,7 @@ FRESH = [
     ("analysis/payload_family.py", "payload_family.json"),
     ("analysis/mass_properties.py", "mass_properties.json"),
     ("analysis/host_reference.py", "host_reference.json"),
+    ("analysis/tube_shielding.py", "tube_shielding.json"),
 ]
 
 # Relative tolerance for numeric leaves, per file, each with the reason it is what it is.

@@ -17,6 +17,10 @@ Two independent methods, because one is not a result.
 They share no expression. The slab route solves a two-interface boundary-value problem; the
 sheet route solves a one-unknown self-consistency. Agreement between them is band 6.
 
+The LOSS has only one route, and this file does not pretend otherwise. Its check is the Maxwell
+stress bound, which is a separate statement about what a field can do rather than the same
+algebra collected differently.
+
 Units are SI throughout.
 """
 import cmath
@@ -115,28 +119,58 @@ def transmission_slab(sigma=SIGMA_AL, d=WALL_M, v=V_SYNC, wavelength_m=WAVELENGT
     return t_total / geometric, t_total, geometric
 
 
-def band1_verification():
-    """Zero conductivity, and the sheet against the slab over two decades of conductance."""
+def band1R_verification():
+    """Band 1R. Limits and convergence order, not the size of a cross-method disagreement.
+
+    Band 1 as declared asked the sheet and the slab to agree to 0.5 % over decades of
+    conductance. They cannot: they are approximations of different order in the wall thickness
+    and their gap at this geometry is 1.4874 %, which the geometry fixes and no correct code can
+    reduce. ADR-037 withdraws that band and freezes this one. The run that failed it is af526a0
+    and it is not re-run.
+
+    What a correct pair of implementations must do instead is converge. Hold the sheet
+    conductance sigma*d at the design value and shrink d: the slab has to walk onto the sheet,
+    and it has to do it at first order, because first order in d is what the thin-sheet
+    truncation is. A wrong implementation of either route breaks the limit or breaks the order.
+    """
     out = {}
     t0 = transmission_slab(sigma=0.0)
     out['zero_sigma_conductive_transmission'] = abs(t0[0])
     out['zero_sigma_is_unity'] = abs(abs(t0[0]) - 1.0) < 1e-12
     out['zero_sigma_total_equals_geometric'] = abs(abs(t0[1]) - t0[2]) < 1e-12
 
-    decades = []
-    worst = 0.0
-    for scale in (1e-3, 1e-2, 1e-1, 1.0):
-        s = SIGMA_AL * scale
-        sheet = abs(transmission_sheet(sigma=s))
-        slab = abs(transmission_slab(sigma=s)[0])
-        rel = abs(sheet - slab) / slab
-        worst = max(worst, rel)
-        decades.append({'sigma_scale': scale, 'sigma_S_m': s, 'sheet': sheet,
-                        'slab': slab, 'rel_diff': rel})
-    out['decades'] = decades
-    out['worst_rel_diff'] = worst
+    sheet_conductance = SIGMA_AL * WALL_M
+    walls_mm = [1.0, 0.5, 0.25, 0.1, 0.05, 0.01, 0.001]
+    seq = []
+    for d_mm in walls_mm:
+        d = d_mm / 1e3
+        sigma = sheet_conductance / d
+        sheet = abs(transmission_sheet(sigma=sigma, d=d))
+        slab = abs(transmission_slab(sigma=sigma, d=d)[0])
+        seq.append({'wall_mm': d_mm, 'sigma_S_m': sigma, 'kd': k_wave() * d,
+                    'sheet': sheet, 'slab': slab, 'rel_diff': abs(sheet - slab) / slab})
+    out['convergence'] = seq
+    out['finest_rel_diff'] = seq[-1]['rel_diff']
+
+    orders = []
+    for a, b in zip(seq, seq[1:]):
+        orders.append(math.log(a['rel_diff'] / b['rel_diff'])
+                      / math.log(a['wall_mm'] / b['wall_mm']))
+    out['pairwise_orders'] = orders
+    out['worst_order_deviation'] = max(abs(o - 1.0) for o in orders)
+
+    # Reported beside the pairwise test rather than instead of it. The pairwise reading is the
+    # strict one -- every step has to be first order, not the sequence on average -- so it is
+    # the one the band is judged on.
+    x = [math.log(e['wall_mm']) for e in seq]
+    y = [math.log(e['rel_diff']) for e in seq]
+    mx, my = sum(x) / len(x), sum(y) / len(y)
+    out['loglog_slope'] = (sum((a - mx) * (b - my) for a, b in zip(x, y))
+                           / sum((a - mx) ** 2 for a in x))
+
     out['pass_'] = (out['zero_sigma_is_unity'] and out['zero_sigma_total_equals_geometric']
-                    and worst <= 0.005)
+                    and out['finest_rel_diff'] <= 1e-4
+                    and out['worst_order_deviation'] <= 0.05)
     return out
 
 
@@ -153,17 +187,34 @@ def airgap_flux_density():
 def induced_loss_W(t_conductive, sigma=SIGMA_AL, d=WALL_M, v=V_SYNC):
     """Ohmic dissipation in the wall under the stator, from the field that is actually there.
 
-    The wall carries an induced sheet current K = sigma * d * v * B_net, where B_net is the
-    field after the wall's own reaction has reduced it. Using the unshielded field here is the
-    common way to get a number several times too large, so B_net carries the transmission
-    factor. Power is |K|^2 / (sigma d) per unit area over the stator footprint.
+    The wall carries an induced sheet current K = sigma * d * v * B_net, where B_net is the field
+    after the wall's own reaction has reduced it. Using the unshielded field here is the common
+    way to get a number several times too large, so B_net carries the transmission factor.
+
+    The time-averaged dissipation of a phasor written in PEAK amplitude is |K|^2 / (2 sigma d),
+    not |K|^2 / (sigma d). The first version of this file dropped the one half and reported
+    231.33 kW and 927.2 K, both exactly twice this model's answer, in af526a0. It is preserved
+    there. The guard that would have caught it immediately is the Maxwell bound below, and it is
+    now computed on every run: the tangential stress a normal field B can exert cannot exceed
+    B^2 / 2mu, and the faulted version sat three times over it.
+
+    That bound is a genuinely separate statement -- it comes from the stress tensor, not from
+    this expression rearranged. The induction-drag curve F/A = (B^2/2mu) * 2Rm/(1+Rm^2) is NOT
+    separate: it is this same algebra collected differently, it agrees to 1e-14, and agreement
+    between the two says nothing except that neither was mistyped.
     """
     b_gap, _ = airgap_flux_density()
     b_net = b_gap * abs(t_conductive)
     k_induced = sigma * d * v * b_net
-    p_area = k_induced ** 2 / (sigma * d)
+    p_area = k_induced ** 2 / (2.0 * sigma * d)
     area = SECTION_M * ACTIVE_W_M
-    return p_area * area, b_gap, b_net, k_induced
+    shear_Pa = p_area / v
+    maxwell_Pa = b_gap * b_gap / (2.0 * MU0)
+    return {'wall_loss_W': p_area * area, 'b_gap_T': b_gap, 'b_net_T': b_net,
+            'induced_sheet_current_A_m': k_induced, 'loss_per_area_W_m2': p_area,
+            'drag_force_N': shear_Pa * area, 'shear_Pa': shear_Pa,
+            'maxwell_bound_Pa': maxwell_Pa, 'shear_over_maxwell': shear_Pa / maxwell_Pa,
+            'within_maxwell_bound': shear_Pa <= maxwell_Pa}
 
 
 def wall_temperature(p_loss_W):
@@ -204,14 +255,18 @@ def build():
     mass_needed = SECTION_MASS_KG * growth
     per_sat = PER_SAT_BASE_KG + mass_needed / N_MANIFEST
 
-    p_loss, b_gap, b_net, k_ind = induced_loss_W(t_slab_c)
+    loss = induced_loss_W(t_slab_c)
+    p_loss = loss['wall_loss_W']
     thermal = wall_temperature(p_loss)
 
-    b1 = band1_verification()
+    b1 = band1R_verification()
     bands = [
-        {'band': '1', 'name': 'model verification: zero-sigma unity, sheet against slab to 0.5 %',
+        {'band': '1R', 'name': 'model verification: zero-sigma limits, and first-order '
+                               'convergence of the slab onto the sheet at fixed sigma*d',
          'detail': f"zero-sigma {b1['zero_sigma_conductive_transmission']:.6f}, "
-                   f"worst sheet-slab {b1['worst_rel_diff']*100:.4f} % over 3 decades",
+                   f"finest gap {b1['finest_rel_diff']*100:.6f} % at 1e-3 mm, worst pairwise "
+                   f"order deviation {b1['worst_order_deviation']:.4f}, "
+                   f"log-log slope {b1['loglog_slope']:.5f}",
          'pass_': b1['pass_']},
         {'band': '2', 'name': 'REPORT: skin depth against the wall',
          'detail': f"f {f:.1f} Hz, delta {delta*1e3:.3f} mm, wall {WALL_M*1e3:.1f} mm "
@@ -234,7 +289,7 @@ def build():
 
     return {
         'analysis': 'A66',
-        'bands_declared_commit': 'a66-bands',
+        'bands_declared_commit': 'e05551b, band 1R at 10d23b1 under ADR-037',
         'note': ('Tube shielding of the Gen6 trim stator. The wall is stationary so it sees '
                  'full slip. Two independent methods. Nothing measured, E4.'),
         'inputs': {'sigma_S_m': SIGMA_AL, 'wall_m': WALL_M, 'bore_m': BORE_M,
@@ -253,10 +308,11 @@ def build():
                       'pct_of_stroke': pct_stroke,
                       'section_mass_needed_kg': mass_needed,
                       'per_satellite_kg': per_sat},
-        'loss': {'b_gap_T': b_gap, 'b_net_T': b_net, 'induced_sheet_current_A_m': k_ind,
-                 'wall_loss_W': p_loss,
-                 'against_peak_mechanical_W': G['gen6_trim']['peak_mechanical_W'],
-                 'loss_over_mechanical': p_loss / G['gen6_trim']['peak_mechanical_W']},
+        'loss': dict(loss,
+                     against_peak_mechanical_W=G['gen6_trim']['peak_mechanical_W'],
+                     loss_over_mechanical=p_loss / G['gen6_trim']['peak_mechanical_W'],
+                     thrust_for_comparison_N=FORCE_N,
+                     drag_over_thrust=loss['drag_force_N'] / FORCE_N),
         'thermal': thermal,
         'verification': b1,
         'bands': bands,
@@ -280,6 +336,10 @@ def main():
     l, th = r['loss'], r['thermal']
     print(f"  wall loss {l['wall_loss_W']/1e3:.2f} kW against {l['against_peak_mechanical_W']/1e3:.1f} kW mechanical"
           f" ({l['loss_over_mechanical']*100:.1f} %)")
+    print(f"  wall drag {l['drag_force_N']:.1f} N against {l['thrust_for_comparison_N']:.1f} N of "
+          f"thrust ({l['drag_over_thrust']:.2f}x); shear {l['shear_Pa']/1e3:.2f} kPa is "
+          f"{l['shear_over_maxwell']:.4f} of the Maxwell bound "
+          f"{'OK' if l['within_maxwell_bound'] else 'IMPOSSIBLE'}")
     print(f"  wall {th['rise_per_shot_K']:.2f} K per shot, {th['rise_campaign_K']:.1f} K over "
           f"{SHOTS}, peak {th['peak_K']:.1f} K against {th['ceiling_K']:.0f} K ceiling")
     print("\nbands:")
