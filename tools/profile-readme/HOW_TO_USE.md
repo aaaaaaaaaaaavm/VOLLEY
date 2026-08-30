@@ -56,3 +56,19 @@ current:
 ```bash
 diff tools/profile-readme/README.md ../aaaaaaaaaaaavm/README.md
 ```
+
+## It forked a second time, on 2026-08-30, and in the other direction
+
+The first fork was the source being edited without re-copying. This one was the reverse: five
+commits landed on the profile repository — the GatewayCX section, the portfolio map, and a table
+of six focused repositories — and none of them came back here. The copy became the newer
+document, which is exactly what the rule above exists to prevent, and `check_public.py` had been
+naming the fork since it appeared.
+
+Resolved by bringing the profile repository's version back into this file, because it was the one
+with the newer content. That is the right answer for this instance and the wrong habit in
+general: **the fix is not to decide which side is newer, it is not to edit the copy.**
+
+Before publishing, every image URL on the page was fetched. All nineteen return real content.
+A stale local clone of a sibling repository will make them look missing when they are not, and
+the disk is not the evidence — the URL is.
