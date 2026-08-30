@@ -4316,7 +4316,7 @@ argues for, with the vessel material and the housing allowance both derived rath
 
 ### P92. The trim stator has to reach its magnets through a conducting tube, and nothing has computed what that costs: HIGH, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A66: the tube attenuation, induced loss and wall temperature
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A66 priced the cost; the three candidate fixes have not been traded
 
 
 [ADR-033](docs/adr/033-gen6-trim-stage.md) puts the stator outside the tube and the magnets
@@ -4348,6 +4348,30 @@ Three runs examined this tube in 2026 and none of them looked at it electromagne
 distinguishable. [A58](validation/A58_chamber_thermal.md) took it thermally. [A61](validation/A61_seal_class.md)
 took it tribologically. ADR-035 then chose on mass alone, and mass was the right tie-breaker
 among the questions that had been asked.
+
+### Answered 2026-08-30 by A66, and it is not closed
+
+[A66](validation/A66_tube_shielding.md) ran. Band 3 fails: the section as drawn delivers **0.9356
+of the 1.1543 m/s** it was sized for, **81.06 %**, so the cost is real. Buying it back is cheap —
+177.66 mm of section, 2.2208 % of the stroke, 1.4227 kg per satellite — and bands 4 and 5 pass
+with room.
+
+**The comparison this entry named is not the one that governs.** The wall is 0.314 skin depths at
+714.2 Hz and it still removes a fifth of the field, because the parameter that decides is the
+sheet magnetic Reynolds number `μ₀σdv/2` = 0.7539 and not `d/δ`. The tube never moves, so it takes
+the full synchronous speed as slip. That framing is corrected in the run sheet.
+
+P92 stays LIVE and stays `COMPUTATION`. A quantified cost is not a fix, and the three candidates
+this run refused to choose between — a non-conducting liner, a slotted or non-conducting section
+local to the stator, and the passive secondary `docs/VAULT.md` holds under PII-19 — are a trade
+study, not a programme decision. Relabelling it `DECISION` would take one off the closure count
+for no work, which is the single failure
+[`docs/COMPUTATIONAL_CLOSURE.md`](docs/COMPUTATIONAL_CLOSURE.md)'s gate exists to catch. It stays
+where it was, and because the same run opened two larger
+questions: [P117](#p117), the thrust constant the section's force rests on, and [P118](#p118), the
+drag the carriage magnets make against the wall over the whole stroke rather than under the
+stator. **The fix for P92 should not be chosen before P118 is computed** — a liner that solves a
+19 % attenuation is not the same liner that solves a brake.
 
 > The defect is in the sequencing, not in any one decision. ADR-033 chose where the stator sits;
 > ADR-035 chose what stands between it and its magnets; and no document owns the interaction.
@@ -6362,6 +6386,109 @@ what a reader assumes when the analysis is quoted at 90 days.
 What would close it: a stated campaign mission life per host altitude, computed rather than
 assumed, with the customer-facing consequence written where the host is described rather than only
 in a run sheet. The GMAT runs already contain the data for 350 and 450 km.
+
+### P117. A55 gave the Gen6 trim section the whole of Gen5's thrust constant, and the force it specifies needs a field above the magnets' own remanence: HIGH, NEW 2026-08-30
+
+> **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a thrust constant derived for the annular geometry, and A55 re-run on it
+
+Found by [A66](validation/A66_tube_shielding.md), which needed the section's working flux density
+and therefore needed the area its force acts across.
+
+`analysis/trim_stage.py` sets the section's force in one line:
+
+```
+force_per_m = KT * SHEET_A_PER_M / 1e3     # 10.5386 x 90 = 948.5 N
+```
+
+`KT` is A2's depth-resolved thrust constant. [A2](validation/A2_field_3d.md) derives it from
+`motor_model.thrust_constant()`, which integrates the Lorentz force over one wavelength and then
+scales by `SLED_ACTIVE_LEN / LAM`. **`SLED_ACTIVE_LEN` is 0.34 m**, and `DEPTH` is 0.09 m: it is
+the total thrust constant of Gen5's flat array, 340 mm long and 90 mm deep.
+
+[A55](validation/A55_trim_authority.md) applied that constant, unchanged, to a Gen6 trim section
+that is **0.14401 m** long and is an annulus around a **15.805 mm** bore. Neither the length nor
+the area was rescaled.
+
+| | Gen5, where `KT` is defined | Gen6 trim, where it is used |
+|---|---|---|
+| Length along travel | 0.34 m | **0.14401 m**, 2.361× shorter |
+| Air-gap surface | flat, 0.09 m deep | **annulus**, 76.03 cm² |
+| Force claimed at 90 kA/m | 948.5 N | **948.0 N**, the same number |
+
+### The check that fails
+
+`F = B K A` with the real annular surface, 76.03 cm², puts the required working flux density at
+**1.3854 T**. `motor_model.BR` is **1.32 T**. The specified force needs a field 5 % above the
+remanence of its own magnet material, in an air gap, before any leakage or clearance.
+
+The section length itself is circular on the same constant: A55 solves 136.59 J of correction
+energy against a fixed 948 N to get 144.01 mm. If force instead scales with the length that makes
+it, the same energy needs a longer section, and how much longer depends on the constant that has
+not been derived.
+
+### What this does not say
+
+**It does not say the trim stage is undersized or oversized.** The annular thrust constant has not
+been computed and the direction is not known from here. It says the number in
+`cad/parameters.json` was carried across a change of both length and geometry without being
+recomputed, and that the geometry it landed in cannot support it.
+
+**It is not A66's to fix**, and A66 does not fix it. A66 reports the loss as a function of the
+air-gap field for exactly this reason, so that its own result does not rest on this one.
+
+What would close it: `motor_model.thrust_constant()`, or `field_3d`, re-run on the annular magnet
+and winding geometry `cad/build_gen6.py` draws, giving a thrust constant per metre of section for
+that geometry; then A55 re-run with the section length and the force solved together rather than
+the force held fixed. ADR-033's falsifier 1, the unweighed pulse store ([P77](#p77)), moves with
+it.
+
+### P118. The trim magnets brake against the aluminium tube for the whole stroke, not only under the stator, and the array's length is not in the parameters: CRITICAL, NEW 2026-08-30
+
+> **Status:** `LIVE` — open engineering; something still has to be done
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — the magnet array geometry stated, then the drag integrated over the stroke
+
+[A66](validation/A66_tube_shielding.md) was asked what the tube costs the stator. It answered
+that, band 3, 19 % of authority. Then the loss model gave an answer to a question nobody asked.
+
+The wall's drag and the stator's thrust are made by the same field over the same area, so their
+ratio carries no area, no section length and no thrust constant:
+
+> **drag / thrust = σ d v B_net / 2K = 1 at B_net = 0.1500 T**
+
+At 3.5 × 10⁷ S/m, a 1.0 mm wall and 34.28 m/s, **any air-gap field above 0.15 T puts more force
+into the tube than the stator makes.** A permanent-magnet array working below 0.15 T is not a
+machine. At 0.2 T the ratio is 1.08; at 0.6 T, 3.24; at the 1.32 T remanence, 7.13.
+
+### Why it is worse than a trim-stage problem
+
+The magnets ride the carriage. [ADR-033](docs/adr/033-gen6-trim-stage.md) puts them inside the
+tube and the stator outside it, and the carriage travels the whole **8.0 m** of
+[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md)'s stroke. **The magnets face the
+aluminium wall for all of it, energised stator or not.** Eddy-current braking does not require the
+stator: it requires a magnet and a conductor in relative motion, and that condition holds from the
+first millimetre of travel.
+
+The drag is therefore a loss on the gas-driven shot, not a load on the trim supply, and it is
+absent from every energy account in the repository. `gen6_drive.exit_velocity_m_s` is 29.01 m/s
+against 34.28 zero-friction, and that 28.39 % friction allowance
+([ADR-034](docs/adr/034-gen6-long-stroke-design-point.md), A49 band 6) is seal and bearing
+friction. It does not contain this.
+
+### Why A66 could not close it
+
+**The magnet array's own length is not in `cad/parameters.json`.** `gen6_trim` carries the
+stator section's length, 144.01 mm, and `cad/build_gen6.py` draws the winding from it. The magnet
+set is named in ADR-033 and in the `trim_stator()` docstring and is not dimensioned anywhere. The
+drag over the stroke is proportional to that length and cannot be integrated without it.
+
+What would close it: the magnet array stated as geometry in `cad/parameters.json` and drawn in
+`build_gen6.py`, then the drag integrated over the velocity profile the shot actually follows,
+against the shot's own kinetic energy. If the answer is what the ratio above suggests, the
+question is not how much authority the tube costs the trim stage but whether a conducting tube and
+a carriage-borne magnet array can coexist at all — which is a decision about
+[ADR-035](docs/adr/035-drive-tube-material.md) and ADR-033 together, and is exactly the sequencing
+defect [P92](#p92) named.
 
 > Not all of these weigh the same. Three of the entries below are threats to whether the
 > machine has a reason to exist rather than engineering work, and they are hard to see in a

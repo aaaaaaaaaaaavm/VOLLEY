@@ -9,6 +9,27 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-30 (sixty-first pass): A66 runs, and it answers a bigger question than it was asked
+
+P92 asked what the aluminium drive tube costs the trim stator. The answer to that is 19 % of
+authority, and 34 mm more section buys it back. Then the same model said something the bands
+were not written to catch.
+
+| ID | Item | Detail |
+|---|---|---|
+| A66 | The run, preserved with its faults before any of them were corrected | `af526a0` is the run as it executed against the bands frozen in `e05551b`. It failed band 1 at 1.4874 % against 0.5 % and band 3 at 0.9356 m/s against 1.1543, and its loss model was wrong by a factor of two. Nothing about it was cleaned up |
+| ADR-037 | Band 1 could not have been passed by any correct implementation, so it is withdrawn rather than widened | Holding the sheet conductance fixed and shrinking the wall, the slab converges on the sheet at exactly first order across three decades — 1.487 % at 1.0 mm, 0.001581 % at 0.001 mm. Both routes are therefore right, and 1.4874 % is the thin-sheet truncation error at `kd` = 0.131. A 0.5 % tolerance sat underneath a number the geometry fixes. The declared row is not edited |
+| A66 | Band 1R, frozen in its own commit before the script was touched again | Limits and convergence order rather than the size of a cross-method gap: zero-σ transmission exactly unity and exactly `exp(-kd)`, agreement within 0.01 % at a 1e-3 mm wall, and every pairwise convergence order first order to within 0.05. It passes at 0.0436. It is a harder gate than the one it replaces |
+| A66 | A factor of two in the loss model, found in review and not by a band | Peak-amplitude phasors dissipate `\|K\|²/(2σd)`, not `\|K\|²/(σd)`. The tell is that the faulted version implied a shear three times the Maxwell bound `B²/2μ₀`, which nothing can do. That bound is now computed on every run; the corrected result sits at 0.9906 of it, which is where a sheet at `Rm` = 0.754 belongs |
+| A66 | The air-gap surface is an annulus, and I had used the flat Gen5 array's depth | 90 mm is `stator.active_width_y`, the depth of the Gen5 flat array. The Gen6 trim section is an annulus around a 15.805 mm bore and `cad/build_gen6.py` has always drawn it as one. 76.03 cm², not 129.61 |
+| **P117** | **NEW, HIGH. The section's force needs a field above its own magnets' remanence** | `trim_stage.py` sets it from Gen5's lumped thrust constant, which A2 defines over `SLED_ACTIVE_LEN` = 0.34 m of flat array 0.09 m deep. A55 applied it to 0.14401 m of annulus, unrescaled for length or area. Over the real surface, 948.0 N at 90 kA/m needs **1.3854 T** against `motor_model.BR` = **1.32 T** |
+| **P118** | **NEW, CRITICAL. The wall takes more force than the stator makes, and it does it for the whole stroke** | `drag / thrust = σdvB_net/2K` carries no area, no section length and no thrust constant, and it reaches one at **B_net = 0.1500 T**. Every field a permanent-magnet array produces is above it: 1.08 at 0.2 T, 3.24 at 0.6 T, 7.13 at the remanence. And the magnets ride the carriage, so they face the wall for all 8.0 m and not only the 144 mm under the stator. The magnet array's length is not in `cad/parameters.json`, so that integral cannot be closed yet |
+| P92 | Answered, not closed, and it stays `COMPUTATION` | The comparison P92 named — the wall against the skin depth — is not the one that governs. The wall is 0.314 skin depths and removes a fifth of the field, because `Rm` = 0.7539 decides it and the tube never moves. Relabelling the entry `DECISION` would have taken one off the closure count for no work, which is the one failure that gate exists to catch |
+| A66 | The wall temperature is reported without a gate, and the gap is stated rather than filled | I declared no band against the 473 K ceiling. The ceiling is crossed near 0.8 T, every campaign stack assumes the heat stays where it was made for four hours, and the axial diffusion length over ADR-020's 1200 s cadence is 287.8 mm — twice the section. The per-shot column is the part I would defend |
+| Counts | Register 153 entries, 59 live. 71 run sheets, 68 analyses. GEN6 remaining COMPUTATION 17 → 19 | A66 is written, so it comes off the "numbered and never written" list in `README.md` |
+
+---
+
 ## 2026-08-30 (sixtieth pass): the solver chain runs here again, and A4 reproduces
 
 `tools/env-setup.sh` has named `calculix-ccx` and `ngspice` since it was written. Neither was in

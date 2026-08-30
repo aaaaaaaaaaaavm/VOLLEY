@@ -102,3 +102,126 @@ ceiling is in the input table and nothing gates against it, which is a gap in th
 2026-08-30 that I am not going to close after the fact. The thermal result is reported without a
 gate, and the reader should treat it as a report and not as a passed test. A successor run may
 declare a thermal band; A66 may not.
+
+---
+
+## Result
+
+**RUN 2026-08-30. Bands 1R, 4, 5 and 6 pass, band 2 reports, band 3 fails. And the run turned up
+something an order of magnitude larger than the band it was written around.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1R | zero-σ limits, first-order convergence at fixed `σd` | zero-σ 1.000000; 0.001581 % at a 1e-3 mm wall; worst pairwise order deviation **0.0436** against 0.05 | **PASS** |
+| 2 | skin depth against the wall | 714.2 Hz, δ **3.183 mm**, wall = **0.314 δ** | **REPORT** |
+| **3** | the section as drawn still delivers 1.1543 m/s | **0.9356 m/s, 81.06 %** | **FAIL** |
+| 4 | compensated section within 15 % of stroke | 177.66 mm, **2.2208 %** | **PASS** |
+| 5 | per-satellite mass ≤ 2.0 kg | **1.4227 kg** | **PASS** |
+| 6 | second implementation within 10 % | sheet 0.798519, slab 0.810576, **1.4874 %** | **PASS** |
+
+### The skin depth is not the governing comparison, and P92 said it was
+
+P92 named the wall against the skin depth as the comparison that decides this. It is 0.314 skin
+depths at 714.2 Hz — a third of one — and on that reading the wall is nearly transparent. It
+removes **19 %** of the field.
+
+The parameter that governs is the sheet magnetic Reynolds number, `Rm = μ₀σdv/2`, and it is
+**0.7539**. Skin depth asks how fast the field alternates. `Rm` asks how fast the field moves
+*past the conductor*, and the tube never moves, so it takes the whole synchronous 34.28 m/s as
+slip on every shot. A wall can be thin against its skin depth and shield hard, and this one does.
+
+> **P92's own framing is corrected by the run it asked for.** The comparison it named is band 2,
+> it is reported, and it is not the answer.
+
+### The section loses a fifth of its authority, and buying it back is cheap
+
+0.9356 m/s against the 1.1543 m/s A55 sized it for. Band 3 fails, which is P92 being real.
+
+Restoring it costs a factor of 1.2337 in length: **177.66 mm**, still only 2.2208 % of the 8.0 m
+stroke against A55 band 5's 15 %, and **1.4227 kg** per satellite against A55 band 7's 2.0 kg.
+Bands 4 and 5 pass with room. On the evidence of the bands alone, the tube is a nuisance that
+another 34 mm of stator absorbs.
+
+### The wall takes more force than the stator makes, and no band asked
+
+The wall's eddy currents produce a drag, and the ratio of that drag to the thrust the same field
+makes on the stator carries no area, no section length and no thrust constant:
+
+> **drag / thrust = σ d v B_net / 2K**
+
+Everything the section's geometry and its force specification could get wrong divides out. What is
+left is the wall, the speed, and the stator's sheet current. Setting the ratio to one:
+
+> **Above an air-gap field of 0.1500 T, the tube takes more force than the stator makes.**
+
+| Air-gap field | drag / thrust | wall loss | per shot | peak over 12 | 473 K ceiling |
+|---|---:|---:|---:|---:|---|
+| **0.200 T** | **1.08** | 4.11 kW | 0.94 K | 304.4 K | within |
+| **0.400 T** | **2.16** | 16.44 kW | 3.75 K | 338.2 K | within |
+| **0.600 T** | **3.24** | 36.98 kW | 8.45 K | 394.5 K | within |
+| **0.800 T** | **4.32** | 65.75 kW | 15.02 K | 473.3 K | **over** |
+| **1.000 T** | **5.40** | 102.73 kW | 23.46 K | 574.7 K | **over** |
+| **1.320 T** | **7.13** | 178.99 kW | 40.88 K | 783.7 K | **over** |
+| 1.385 T\* | 7.49 | 197.18 kW | 45.04 K | 833.6 K | **over** |
+
+\* the field the current parameters imply, and it is above the remanence of the magnet material.
+Carried so it is visible, not because it is an operating point.
+
+**There is no row in that table where the machine works.** 0.2 T is a weak magnet at a wide gap
+and the drag already exceeds the thrust; at anything a Halbach array actually delivers, it exceeds
+it three to seven times over. The ladder was chosen as a neutral 0.2-to-remanence sweep, not
+fitted to the answer, and the answer does not depend on which row is right.
+
+The reaction is on the carriage, not on the supply. The stator's own contribution to the air-gap
+field is `μ₀K/2` = **0.0566 T** against the magnets' several tenths of a tesla, so the wall is
+braking against the magnet array it is supposed to be pushing. It is an eddy-current brake with a
+stator bolted to the outside of it.
+
+### The force specification does not survive its own geometry either
+
+Backing the working flux density out of the specified force needs the area the force acts across,
+and I first used `SECTION × stator.active_width_y`. **90 mm is the depth of the flat Gen5 array.**
+The Gen6 trim section is an annulus around a 15.805 mm bore and `cad/build_gen6.py` has always
+drawn it as one. The real air-gap surface is **76.03 cm²** against the 129.61 cm² I used, 1.7047×.
+
+Corrected, **948.0 N at 90 kA/m across that annulus needs 1.3854 T**, against the **1.32 T**
+remanence `motor_model.py` gives the magnet material. The specified force is not available from
+the specified current over the specified geometry, by 5 %, before any gap or leakage.
+
+The cause is upstream and it is not A66's to fix. `analysis/trim_stage.py` sets the section's
+force as `KT * SHEET_A_PER_M / 1e3`, and A2 defines that thrust constant over
+`motor_model.SLED_ACTIVE_LEN` — **0.34 m of flat array, 0.09 m deep**. A55 applied it to 0.14401 m
+of annulus around a 15.805 mm bore, unrescaled for length or for area. That is
+[P117](../OPEN_PROBLEMS.md#p117).
+
+### The wall temperature, reported without a gate
+
+**I declared no band for it.** The 473 K ceiling sits in this run sheet's own input table and
+nothing in the six bands tests against it. That is a gap in the declaration of 2026-08-30, it is
+recorded in the correction block above, and it is not being closed after the fact.
+
+What the run reports: the ceiling is crossed somewhere near 0.8 T, and every stack in the table
+assumes the heat stays where it was made for the whole campaign. It does not. ADR-020 puts 1200 s
+between shots and the section is welded into eight metres of the same metal; the axial diffusion
+length over that gap is **287.8 mm**, twice the section. Every campaign column above is an upper
+bound with a named and unmodelled mitigation, in the same way A43 compared 8873 s of conduction
+against the same 1200 s cadence for the reservoir. **A66 does not resolve the accumulation**, and
+the per-shot column is the part of it I would defend.
+
+### What this run does not resolve
+
+**The brake is not confined to the 144 mm the stator occupies.** The magnets ride the carriage and
+face the aluminium wall for the whole 8.0 m stroke, energised stator or not, so the drag acts over
+the stroke and not over the section. The magnet array's own length is not in `cad/parameters.json`
+— only the stator section's is — so that integral cannot be closed here. It is
+[P118](../OPEN_PROBLEMS.md#p118) and it is the larger of the two.
+
+The split of the drag reaction between the carriage and the stator mounting is modelled as
+overwhelmingly carriage-side on the field ratio above, and not computed.
+
+Conductivity is a handbook room-temperature value and the wall gets hot, which raises resistivity
+and lowers `Rm`. E4 stands: nothing here is measured.
+
+It does not choose the fix. A non-conducting liner, a slotted or non-conducting section local to
+the stator, and the passive secondary `docs/VAULT.md` records under PII-19 are all live, and none
+is this run's to pick.

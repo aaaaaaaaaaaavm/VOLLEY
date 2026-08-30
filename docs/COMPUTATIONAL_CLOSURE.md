@@ -14,9 +14,9 @@ counts against it, and is checked by
 
 ---
 
-## Remaining COMPUTATION items: 17
+## Remaining COMPUTATION items: 19
 
-It is not zero and this file will not pretend otherwise. The seventeen are named below, each
+It is not zero and this file will not pretend otherwise. The nineteen are named below, each
 with what would close it. Every one of them is executable now, no hardware, no launch
 provider, no flight.
 
@@ -54,19 +54,21 @@ a different place, so its sixteen live computation items are counted separately 
 
 | Scope | COMPUTATION | HARDWARE | HOST_DATA | FLIGHT_OPS | DECISION |
 |---|---:|---:|---:|---:|---:|
-| GEN6 | 17 | 4 | 5 | 1 | 0 |
+| GEN6 | 19 | 4 | 5 | 1 | 0 |
 | PROGRAMME | 3 | 0 | 0 | 1 | 6 |
 | GEN5 | 16 | 0 | 0 | 0 | 4 |
 
 ---
 
-## The seventeen, and what closes each
+## The nineteen, and what closes each
 
 | Entry | What is left to compute |
 |---|---|
 | [P108](../OPEN_PROBLEMS.md) | CRITICAL. [A67](../validation/A67_guided_contact.md) ran and Gen6 misses the tip-off band by 7.4x, 14.845 °/s against 2.0. Bore straightness is the dominant input, at S_T = 0.894 against seal friction's 0.141. [A69](../validation/A69_tube_centreline.md) has now computed the centreline, at 0 g the tube's own weight contributes exactly zero and thermal bow dominates, and [A68](../validation/A68_contact_law.md) measured the model-form spread at 65.8 %, and [P110](../OPEN_PROBLEMS.md) then corrected A69's centreline itself. What is left: retest the solver on the corrected continuous shape, the blocker may have been the bad geometry, then price the land-separation trade against its 400 mm admissibility ceiling. The magnitude of the tip-off problem is unresolved and is not being quoted as a range |
 | [P103](../OPEN_PROBLEMS.md) | A67 has run, six of nine, and the first-order half of this entry is answered. What is left is the second-order set the run sheet declared out of scope: bore roundness, stick-slip, payload inertia variation, tube compliance, and a contact law that passes its own restitution check, A67 band 3 failed at 13.7 % against a 5 % band |
-| [P92](../OPEN_PROBLEMS.md) | A66: the trim stator's field through a 1.0 mm aluminium tube, attenuation, induced loss, wall temperature against ADR-035's 473 K |
+| [P118](../OPEN_PROBLEMS.md) | CRITICAL. [A66](../validation/A66_tube_shielding.md) found that the wall's drag exceeds the stator's thrust above an air-gap field of 0.1500 T, a ratio that carries no area and no thrust constant, and that the carriage magnets face the wall for the whole 8.0 m stroke rather than only under the 144 mm stator. What is left: the magnet array dimensioned in `cad/parameters.json`, then the drag integrated over the shot's own velocity profile against the shot's own energy |
+| [P117](../OPEN_PROBLEMS.md) | The Gen6 trim section's force is Gen5's lumped thrust constant, defined over 0.34 m of flat array 0.09 m deep, applied unrescaled to 0.14401 m of annulus. Over the real air-gap surface it needs 1.3854 T against a 1.32 T remanence. What is left: a thrust constant derived for the annular geometry, then A55 re-run with length and force solved together |
+| [P92](../OPEN_PROBLEMS.md) | A66 has run: 19 % of authority lost, 0.9356 m/s of 1.1543, and the governing parameter is the sheet magnetic Reynolds number and not the skin depth this entry named. What is left is the trade it refused to make — a non-conducting liner, a slotted or non-conducting section local to the stator, or the passive secondary under PII-19 — and it should not be made before P118 is computed |
 | [P75](../OPEN_PROBLEMS.md) | A Gen6 reliability architecture, the way [A47](../validation/A47_gen6_fmea.md) did Gen5 |
 | [P79](../OPEN_PROBLEMS.md) / [E6](../OPEN_PROBLEMS.md) | A variable-atmosphere decay model and an independent propagator check. The headline should become an uncertainty range, not a single multiplier |
 | [P81](../OPEN_PROBLEMS.md) | A backup ejector concept that clears the tube on the energy actually available |

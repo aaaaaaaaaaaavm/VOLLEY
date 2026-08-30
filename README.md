@@ -110,8 +110,8 @@ integration column apart, because collapsing them produces a false history.
 > as failure before it runs, every defect is numbered including the ones that damage the work's
 > own claims, and nothing here has been built, fired or measured.
 >
-> What that has produced, which is the part worth judging: 70 run sheets covering 67 analyses A1
-> to A71 (A3, A26, A60 and A66 were numbered and never written), each against a band written down
+> What that has produced, which is the part worth judging: 71 run sheets covering 68 analyses A1
+> to A71 (A3, A26 and A60 were numbered and never written), each against a band written down
 > before its script existed. Three failed outright, one of them falsifying a claim in this
 > project's own abstract. On three further occasions a declared band caught a bug in the analysis
 > rather than in the design. Every correction is dated, and none of them improved a number.
@@ -129,7 +129,7 @@ integration column apart, because collapsing them produces a false history.
 | deciding whether to use it | [`docs/CASE_STUDY.md`](docs/CASE_STUDY.md), a worked twelve-satellite mission at +60.2 % of orbital life against a spring's +8.2 %, with the losses written in the same voice as the wins |
 | reviewing it | [`docs/REVIEW_RESPONSES.md`](docs/REVIEW_RESPONSES.md), thirty-five reviewer questions answered or conceded, fourteen of which have no answer in this repository at all. Then [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for what stands behind each claim |
 | checking what outside evidence could settle | [`docs/EXTERNAL_EVIDENCE.md`](docs/EXTERNAL_EVIDENCE.md), which live entries a published source can close, which it can only inform, and which need hardware and cannot be read away |
-| looking for what is broken | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md), 151 numbered entries of which 57 are live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md), seven thresholds of which three are crossed |
+| looking for what is broken | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md), 153 numbered entries of which 59 are live. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md), seven thresholds of which three are crossed |
 | evaluating a host architecture | [`docs/HOST_REFERENCE_CASES.md`](docs/HOST_REFERENCE_CASES.md), public-data reference cases mapped against the Class A/B/C host requirements |
 | deciding what to do next | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) and [`docs/GEN6_CLOSURE.md`](docs/GEN6_CLOSURE.md) |
 | building on it | [`docs/BUILD_READINESS.md`](docs/BUILD_READINESS.md), [`cad/`](cad/), and [Reproducing](#what-stands-behind-the-numbers) below |
@@ -547,8 +547,8 @@ what that computation does not cover, what it got wrong, and what has been corre
 |---|---|
 | Maturity | TRL 2 to 3 |
 | Built, fired or measured | Nothing, at any scale. E4 is open and no analysis on this page changes it |
-| Defect register | 151 numbered entries, 57 live, in [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| Validation | 70 run sheets, 67 analyses across A1 to A71 (A3, A26, A60 and A66 were numbered and never written), each against a band declared before the run. Three failed outright |
+| Defect register | 153 numbered entries, 59 live, in [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| Validation | 71 run sheets, 68 analyses across A1 to A71 (A3, A26 and A60 were numbered and never written), each against a band declared before the run. Three failed outright |
 | Kill criteria | Seven, three crossed, in [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest

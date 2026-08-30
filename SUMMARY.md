@@ -79,7 +79,7 @@ differential between satellites is exactly zero, which is categorical rather tha
 mass correction touches it. One maximum-velocity shot gives +60.2 % of orbital life against a
 2.5 m/s spring's +8.2 %, because lifetime extension is superlinear in delta-v.
 
-It also demonstrated a method. 70 run sheets cover 67 analyses across A1 to A71 (A3, A26 and A60
+It also demonstrated a method. 71 run sheets cover 68 analyses across A1 to A71 (A3, A26 and A60
 were numbered and never written), each with its acceptance bands committed before the script that
 produces the number existed. That is checkable, because the band commit touches no script. No band
 has ever been widened after a result was known.
@@ -147,7 +147,7 @@ may not be needed at all, and [P67](OPEN_PROBLEMS.md) decides.
 | Model output, single-sourced | everything else |
 | Assumed | every price. [A21](validation/A21_comparators.md) band 7 required the comparison script to emit `NOT COMPUTED`, and it does. No cost claim is made in either direction |
 | Independent review | none |
-| Defect register | 151 numbered entries, 57 live, including every one that damages the claims above |
+| Defect register | 153 numbered entries, 59 live, including every one that damages the claims above |
 | Affiliation | none claimed. No institution, agency or company endorses, approves or is integrating this work. POEM and Vikram-1 appear in the manuscript as worked host examples only |
 
 ## 9. Where to read next
