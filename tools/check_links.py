@@ -26,10 +26,16 @@ SKIP_DIRS = {".git", "legacy", "paper/archive", "node_modules", "__pycache__"}
 
 # Only rendered files are checked. Scripts and LaTeX are excluded on purpose: the link-shaped
 # strings inside make_baseline.py, export_companion.py and seed_issues.sh are templates for
-# files written elsewhere, and seed_issues.sh interpolates a $B shell variable into every one
-# of them. Checking those texts here reports the generator's own directory, which is never
-# where the link will live. The generated output is checked instead, which is the thing a
-# reader actually clicks.
+# files written elsewhere. Checking those texts here reports the generator's own directory,
+# which is never where the link will live. The generated output is checked instead, which is
+# the thing a reader actually clicks.
+#
+# ONE EXCEPTION, and it is the reason this comment changed. seed_issues.sh writes $B/<path>,
+# where $B is the flagship base URL, so those are absolute flagship paths and they DO resolve
+# against this checkout. Blanket-excluding the file treated them as if they were relative
+# template links, which they are not, and a dead one survived there for weeks: the VAULT-01
+# rename moved docs/PHASE_II.md to docs/VAULT.md across twenty-one files and missed this one,
+# where no gate could see it. `$B/` paths are checked below.
 EXTS = (".md", ".html")
 
 REL = re.compile(r"\]\(([^)\s#]+\.(?:md|py|sh|json|tex|png|gif|stl|step|dxf|cir|csv))(?:#[^)]*)?\)")
@@ -87,6 +93,27 @@ def check_links():
     return bad
 
 
+DOLLAR_B = re.compile(r"\$B/([A-Za-z0-9_./-]+)")
+SEED_SCRIPT = os.path.join("tools", "seed_issues.sh")
+
+
+def check_seed_paths():
+    """Resolve the $B/<path> targets seed_issues.sh writes into GitHub issues.
+
+    $B is the flagship base URL, so every one of these is an absolute path into this
+    repository and is resolvable here. They are checked separately from the markdown
+    sweep because the file is a shell script, not a rendered page, and because a broken
+    one is published into an issue body where nobody reruns a link checker.
+    """
+    path = os.path.join(ROOT, SEED_SCRIPT)
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as fh:
+        text = fh.read()
+    return sorted({t for t in DOLLAR_B.findall(text)
+                   if not os.path.exists(os.path.join(ROOT, t))})
+
+
 def check_header_block():
     """The repository table must be byte-identical everywhere it appears.
 
@@ -125,6 +152,15 @@ def main():
             print(f"  {rel}  ->  {target}  ({kind})")
     else:
         print("links: all resolve")
+
+    seed_bad = check_seed_paths()
+    if seed_bad:
+        failed = True
+        print(f"{len(seed_bad)} dead path(s) in {SEED_SCRIPT}, which is published into issues:")
+        for t in seed_bad:
+            print(f"  $B/{t}")
+    else:
+        print(f"seed paths: all $B targets in {SEED_SCRIPT} resolve")
 
     forked = check_header_block()
     if forked:

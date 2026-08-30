@@ -99,7 +99,7 @@ This issue stays open only for the sourcing of the 12 mohm. See the ESR issue."
 file "P9, envelope exceeds ESPA Grande by 44 percent" "defect,phase-II" \
 "1839 mm closed against the roughly 1270 mm class, because the brake sits beyond the 1500 mm release point and the enclosure spans it.
 
-The *statement* is Phase I and the paper now makes it honestly. The *fix* is Phase II and needs an owner decision on target host class. See [docs/PHASE_II.md]($B/docs/PHASE_II.md) PII-4."
+The *statement* is Phase I and the paper now makes it honestly. The *fix* is Phase II and needs an owner decision on target host class. See [docs/VAULT.md]($B/docs/VAULT.md) PII-4."
 
 file "P14, G3-D5: Halbach arrays never re-centred" "defect,phase-I,blocking" \
 "The chassis grew from 360 to 488 mm and \`sled.halbach_array_x_start = 230 mm\` was inherited from the shorter one. **Array position relative to the winding is what K_t depends on**, so this may invalidate K_t independently of A1.

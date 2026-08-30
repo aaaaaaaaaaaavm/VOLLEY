@@ -9,6 +9,19 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-30 (fifty-eighth pass): branch cleanup, and a dead link the gate was built not to see
+
+Trimming the repository's branches turned up one real defect and one blind spot behind it.
+
+| ID | Item | Detail |
+|---|---|---|
+| Link | `tools/seed_issues.sh` pointed at `docs/PHASE_II.md`, gone since VAULT-01 | That rename moved the file to `docs/VAULT.md` and retargeted twenty-one files. This one was missed, and the text is issue-seeding copy, so the dead link would have been published into a GitHub issue body where nobody re-runs a link checker. Repointed to `docs/VAULT.md`; PII-4 is still there and still the envelope-repackaging entry the issue means |
+| Gate | `check_links.py` excluded the file it was in, so no gate could ever have caught it | The exclusion was written for relative link-shaped strings inside generators, which resolve in the file they are written into rather than in the generator's own directory. It swept up `seed_issues.sh` with them. But `$B` is the flagship base URL, so `$B/<path>` is an ABSOLUTE flagship path and does resolve against this checkout. Those paths are now checked, the comment says why they are different, and two injected faults confirm it fails on a renamed target and on a path that never existed. Four other `$B` targets in that file resolve |
+| Branches | `ci-diagnostic` removed from GitHub | It sat at `ef1878f`, a strict ancestor of `main`, so it carried nothing to merge. It existed to prove that this repository's Actions settings refuse any workflow referencing a third-party action, which the fifty-fifth pass recorded and fixed |
+| Branches | Two local-only refs dropped | `pre-public-sync-2026-08-22`, fully contained in `main`, and `pr16`, the pre-rewrite history rooted 2026-07-29 with no common ancestor with `main` at all. Four files existed only there and all four were checked before the ref was dropped: `docs/PHASE_II.md` is `docs/VAULT.md` now, `tools/export_portfolio_repos.py` is superseded by `tools/export_companion.py` which covers all three companions rather than the old three portfolio copies, and the two CAD briefs describe a Fusion-assistant and AutoCAD workflow for a hand-built Gen3-era model. The published Gen5 renders come from Blender on the STLs `build_gen5.py` writes, which is a different pipeline, and no 2D drawing set was ever produced from the AutoCAD brief. Nothing was carried across |
+
+---
+
 ## 2026-08-27 (fifty-seventh pass): the mission cases could not be flown by the engine that was billed for them
 
 A second independent review of the host-reference study, one day after the first. Three defects.
