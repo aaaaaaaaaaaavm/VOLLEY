@@ -1,0 +1,213 @@
+{
+  "analysis": "A74",
+  "bands_declared_commit": "c4611a5, before this file existed",
+  "note": "The tube conductance requirement, inverted from A66 and A72 rather than screened against a material table. No new material data. E4: nothing measured.",
+  "inputs": {
+    "sigma_d_aluminium_S": 35000.0,
+    "wall_m": 0.001,
+    "k_wave_per_m": 130.89969389957471,
+    "bore_radius_m": 0.0079025,
+    "wall_pressure_floor_m": 0.00016,
+    "steel_penalty_kg": 2.154,
+    "per_satellite_now_kg": 1.6049947845550874
+  },
+  "verification": {
+    "breakeven_now_T": 0.15002500416736123,
+    "breakeven_published_T": 0.15002500416736123,
+    "breakeven_rel": 0.0,
+    "ratio_now": 6.772842887276814,
+    "ratio_published": 6.772842887276814,
+    "ratio_rel": 0.0,
+    "at_field_T": 0.2,
+    "pass_": true
+  },
+  "requirement": [
+    {
+      "b_gap_T": 0.2,
+      "parity": {
+        "sigma_d_S": 4350.65209205728,
+        "fraction_of_aluminium": 0.12430434548735086,
+        "sigma_S_m_at_1mm": 4350652.09205728,
+        "aluminium_wall_that_would_give_it_m": 0.00012430434548735085
+      },
+      "stall": {
+        "sigma_d_S": 5089.377136352472,
+        "fraction_of_aluminium": 0.14541077532435634,
+        "sigma_S_m_at_1mm": 5089377.136352472,
+        "aluminium_wall_that_would_give_it_m": 0.00014541077532435634
+      }
+    },
+    {
+      "b_gap_T": 0.4,
+      "parity": {
+        "sigma_d_S": 2170.3989350879565,
+        "fraction_of_aluminium": 0.06201139814537018,
+        "sigma_S_m_at_1mm": 2170398.9350879565,
+        "aluminium_wall_that_would_give_it_m": 6.201139814537019e-05
+      },
+      "stall": {
+        "sigma_d_S": 2534.9068348789588,
+        "fraction_of_aluminium": 0.07242590956797025,
+        "sigma_S_m_at_1mm": 2534906.8348789588,
+        "aluminium_wall_that_would_give_it_m": 7.242590956797026e-05
+      }
+    },
+    {
+      "b_gap_T": 0.6,
+      "parity": {
+        "sigma_d_S": 1446.3271995270625,
+        "fraction_of_aluminium": 0.04132363427220179,
+        "sigma_S_m_at_1mm": 1446327.1995270625,
+        "aluminium_wall_that_would_give_it_m": 4.132363427220179e-05
+      },
+      "stall": {
+        "sigma_d_S": 1688.7403822271153,
+        "fraction_of_aluminium": 0.04824972520648901,
+        "sigma_S_m_at_1mm": 1688740.3822271153,
+        "aluminium_wall_that_would_give_it_m": 4.824972520648901e-05
+      }
+    },
+    {
+      "b_gap_T": 0.8,
+      "parity": {
+        "sigma_d_S": 1084.5867760786787,
+        "fraction_of_aluminium": 0.03098819360224796,
+        "sigma_S_m_at_1mm": 1084586.7760786787,
+        "aluminium_wall_that_would_give_it_m": 3.0988193602247964e-05
+      },
+      "stall": {
+        "sigma_d_S": 1266.2416232796386,
+        "fraction_of_aluminium": 0.03617833209370396,
+        "sigma_S_m_at_1mm": 1266241.6232796386,
+        "aluminium_wall_that_would_give_it_m": 3.617833209370396e-05
+      }
+    },
+    {
+      "b_gap_T": 1.0,
+      "parity": {
+        "sigma_d_S": 867.6106854239479,
+        "fraction_of_aluminium": 0.024788876726398512,
+        "sigma_S_m_at_1mm": 867610.6854239479,
+        "aluminium_wall_that_would_give_it_m": 2.478887672639851e-05
+      },
+      "stall": {
+        "sigma_d_S": 1012.8772475058213,
+        "fraction_of_aluminium": 0.02893934992873775,
+        "sigma_S_m_at_1mm": 1012877.2475058213,
+        "aluminium_wall_that_would_give_it_m": 2.8939349928737752e-05
+      }
+    },
+    {
+      "b_gap_T": 1.32,
+      "parity": {
+        "sigma_d_S": 657.2471500160173,
+        "fraction_of_aluminium": 0.018778490000457636,
+        "sigma_S_m_at_1mm": 657247.1500160173,
+        "aluminium_wall_that_would_give_it_m": 1.8778490000457638e-05
+      },
+      "stall": {
+        "sigma_d_S": 767.2646999591962,
+        "fraction_of_aluminium": 0.021921848570262747,
+        "sigma_S_m_at_1mm": 767264.6999591962,
+        "aluminium_wall_that_would_give_it_m": 2.192184857026275e-05
+      }
+    }
+  ],
+  "liner": {
+    "per_field": [
+      {
+        "field_T": 0.2,
+        "ratio": 1.0805874391441102,
+        "liner_m": 0.0005920931981351188,
+        "fits_bore": true,
+        "bore_radius_m": 0.0079025,
+        "magnet_radius_left_m": 0.007210406801864881
+      },
+      {
+        "field_T": 0.4,
+        "ratio": 2.1611748782882203,
+        "liner_m": 0.005887347601798757,
+        "fits_bore": true,
+        "bore_radius_m": 0.0079025,
+        "magnet_radius_left_m": 0.0019151523982012426
+      },
+      {
+        "field_T": 0.6,
+        "ratio": 3.2417623174323307,
+        "liner_m": 0.008984872859720555,
+        "fits_bore": false,
+        "bore_radius_m": 0.0079025,
+        "magnet_radius_left_m": -0.0011823728597205553
+      },
+      {
+        "field_T": 0.8,
+        "ratio": 4.322349756576441,
+        "liner_m": 0.011182602005462396,
+        "fits_bore": false,
+        "bore_radius_m": 0.0079025,
+        "magnet_radius_left_m": -0.0033801020054623964
+      },
+      {
+        "field_T": 1.0,
+        "ratio": 5.402937195720551,
+        "liner_m": 0.012887293167577748,
+        "fits_bore": false,
+        "bore_radius_m": 0.0079025,
+        "magnet_radius_left_m": -0.005084793167577748
+      },
+      {
+        "field_T": 1.32,
+        "ratio": 7.1318770983511275,
+        "liner_m": 0.015008243403040303,
+        "fits_bore": false,
+        "bore_radius_m": 0.0079025,
+        "magnet_radius_left_m": -0.007205743403040304
+      }
+    ],
+    "fits_at_every_field": false,
+    "fits_at_some_field": true
+  },
+  "thinning": {
+    "sigma_d_needed_S": 657.2471500160173,
+    "wall_needed_m": 1.8778490000457638e-05,
+    "pressure_floor_m": 0.00016,
+    "factor_below_floor": 8.52038688926004
+  },
+  "steel": {
+    "penalty_kg": 2.154,
+    "per_satellite_kg": 1.7844947845550874,
+    "within_2kg": true
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "verification: the imported model reproduces A72 committed result",
+      "detail": "break-even 0.0e+00, worst ratio 0.0e+00, both against 1e-9",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "REPORT: the largest sheet conductance at which A72 3R and 4R pass",
+      "detail": "0.20 T parity 4350.7 S, stall 5089.4 S; 0.40 T parity 2170.4 S, stall 2534.9 S; 0.60 T parity 1446.3 S, stall 1688.7 S; 0.80 T parity 1084.6 S, stall 1266.2 S; 1.00 T parity 867.6 S, stall 1012.9 S; 1.32 T parity 657.2 S, stall 767.3 S",
+      "pass_": null
+    },
+    {
+      "band": "3",
+      "name": "a non-conducting liner brings the drag-to-thrust ratio to one within the bore",
+      "detail": "needs 0.59 to 15.01 mm across the ladder against a 7.9025 mm bore radius; fits at 2 of 6 fields",
+      "pass_": false
+    },
+    {
+      "band": "4",
+      "name": "thinning the aluminium wall alone meets the requirement at a thickness A59 admits",
+      "detail": "needs 18.8 um against a 160 um pressure floor and a 1000 um wall as drawn",
+      "pass_": false
+    },
+    {
+      "band": "5",
+      "name": "REPORT: the mass of the one lower-conductivity metal already priced",
+      "detail": "steel is +2.154 kg on a shared tube, +0.1795 kg per satellite, taking A73's 1.6050 kg to 1.7845 kg against a 2.0 kg ceiling",
+      "pass_": null
+    }
+  ]
+}

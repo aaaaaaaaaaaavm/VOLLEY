@@ -20,6 +20,19 @@ WHAT IT CHECKS
 3. If the companion working copies are on disk, their README banner commit must equal the
    recorded one. Absent copies are not a pass or a failure -- they are reported as unchecked.
 
+HOW TO NOT MAKE CI RED WITH IT, WHICH IS A PROCEDURE AND NOT A GATE PROBLEM
+---------------------------------------------------------------------------
+The record can only name a commit that already exists, so `Record the companion export at
+<sha>` is always the commit AFTER the one it describes. That is fine and the gate handles it.
+What is not fine is pushing the intermediate commits first: on 2026-08-30 and 08-31 four CI runs
+failed here in a row, each on a push made before the export, and each went green on the next
+push. The gate was right every time and the noise was mine.
+
+**Push once per unit of work, with the export record as the last commit in it.** Run the export,
+commit the record, then push the flagship and both companions together. A gate that is red half
+the time for a reason nobody acts on stops being read, and this one exists because four numbered
+defects got past everything else.
+
 It is deliberately offline. It asks git about this repository and reads files if they happen to
 be there; it never reaches the network, because the rest of the gate set does not either.
 
