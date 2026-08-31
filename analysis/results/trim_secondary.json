@@ -1,0 +1,154 @@
+{
+  "analysis": "A73",
+  "bands_declared_commit": "79eff67, before this file existed",
+  "note": "The Gen6 trim secondary derived for the single-sided annulus cad/build_gen6.py draws, by motor_model own Lorentz integral. Closes P117. E4: nothing measured.",
+  "inputs": {
+    "bore_m": 0.015805,
+    "wall_m": 0.001,
+    "piston_radius_m": 0.0078024999999999995,
+    "piston_length_m": 0.012,
+    "winding_inner_radius_m": 0.0089025,
+    "winding_thickness_m": 0.006,
+    "section_m": 0.14401,
+    "specified_force_N": 948.0,
+    "sheet_current_A_m": 90000.0,
+    "gen5_kt_N_per_kA_m": 10.538611491665296,
+    "magnet_density_kg_m3": 7500.0,
+    "remanence_T": 1.32,
+    "nx": 120,
+    "ny": 5,
+    "n_theta": 2,
+    "n_sectors": 36,
+    "n_wavelengths": 5
+  },
+  "verification": {
+    "kt_flat_N_per_kA_m": 10.538611491665296,
+    "kt_motor_model_N_per_kA_m": 10.538611491665296,
+    "identity_rel": 0.0,
+    "ripple_flat_pct": 1.0138171332676809,
+    "sector_peaks_T": {
+      "18": 0.4995611176716185,
+      "36": 0.5039035059066626,
+      "72": 0.5044267312879994
+    },
+    "sector_convergence_rel": 0.001037267354965244,
+    "large_radius_annular_T": 0.30206338575489955,
+    "flat_single_sided_T": 0.30346768718243844,
+    "large_radius_rel": 0.00462751550445848,
+    "pass_": true
+  },
+  "depth_sweep": [
+    {
+      "depth_mm": 1.5,
+      "kt_N_per_kA_m": 0.20412558246259632,
+      "ripple_pct": 2.562734411415878,
+      "force_at_90kA_m_N": 18.37130242163367,
+      "force_ratio_to_spec": 0.01937901099328446,
+      "peak_Br_at_wall_T": 0.31282283775322006,
+      "array_mass_at_section_kg": 0.07179069141228477,
+      "per_satellite_at_section_kg": 1.4705240247456182
+    },
+    {
+      "depth_mm": 3.0,
+      "kt_N_per_kA_m": 0.3729391184075732,
+      "ripple_pct": 1.7667723745882749,
+      "force_at_90kA_m_N": 33.56452065668159,
+      "force_ratio_to_spec": 0.03540561250704809,
+      "peak_Br_at_wall_T": 0.4283004438517661,
+      "array_mass_at_section_kg": 0.12831218224060253,
+      "per_satellite_at_section_kg": 1.527045515573936
+    },
+    {
+      "depth_mm": 4.5,
+      "kt_N_per_kA_m": 0.5039734971405124,
+      "ripple_pct": 1.3836106862139148,
+      "force_at_90kA_m_N": 45.35761474264612,
+      "force_ratio_to_spec": 0.04784558517156764,
+      "peak_Br_at_wall_T": 0.49008451020165283,
+      "array_mass_at_section_kg": 0.16956447248495332,
+      "per_satellite_at_section_kg": 1.5682978058182866
+    },
+    {
+      "depth_mm": 6.0,
+      "kt_N_per_kA_m": 0.5927298351277981,
+      "ripple_pct": 1.198241369513509,
+      "force_at_90kA_m_N": 53.34568516150183,
+      "force_ratio_to_spec": 0.05627181979061374,
+      "peak_Br_at_wall_T": 0.523901175216297,
+      "array_mass_at_section_kg": 0.19554756214533714,
+      "per_satellite_at_section_kg": 1.5942808954786705
+    },
+    {
+      "depth_mm": 7.5,
+      "kt_N_per_kA_m": 0.6323292793817478,
+      "ripple_pct": 1.1304199742194538,
+      "force_at_90kA_m_N": 56.909635144357296,
+      "force_ratio_to_spec": 0.06003126070079883,
+      "peak_Br_at_wall_T": 0.5372606004574083,
+      "array_mass_at_section_kg": 0.20626145122175396,
+      "per_satellite_at_section_kg": 1.6049947845550874
+    }
+  ],
+  "best": {
+    "depth_mm": 7.5,
+    "kt_N_per_kA_m": 0.6323292793817478,
+    "ripple_pct": 1.1304199742194538,
+    "force_at_90kA_m_N": 56.909635144357296,
+    "force_ratio_to_spec": 0.06003126070079883,
+    "peak_Br_at_wall_T": 0.5372606004574083,
+    "array_mass_at_section_kg": 0.20626145122175396,
+    "per_satellite_at_section_kg": 1.6049947845550874
+  },
+  "to_reach_specified_force": {
+    "shortfall_factor": 16.65798766053056,
+    "array_length_m": 2.3989168029930057,
+    "array_mass_kg": 3.4359007092951033,
+    "per_satellite_kg": 6.443231308286943,
+    "piston_length_m": 0.012,
+    "lengths_of_piston": 199.90973358275048
+  },
+  "curvature_report": {
+    "annular_T": 0.5372606004574083,
+    "flat_T": 0.4298220896052647,
+    "standoff_m": 0.0006000000000000007,
+    "ratio": 1.2499604218824858
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "verification: the integral against motor_model, the sectors against themselves, the curvature against the flat limit",
+      "detail": "identity 0.0e+00 against 1e-6; sectors 0.1037 % against 1 %; large-radius limit 0.463 % against 5 %",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "REPORT: thrust constant and force against magnet depth",
+      "detail": "1.5 mm 0.2041 N per kA/m, 18.37 N; 3.0 mm 0.3729 N per kA/m, 33.56 N; 4.5 mm 0.5040 N per kA/m, 45.36 N; 6.0 mm 0.5927 N per kA/m, 53.35 N; 7.5 mm 0.6323 N per kA/m, 56.91 N",
+      "pass_": null
+    },
+    {
+      "band": "3",
+      "name": "the section as drawn reaches its specified 948.0 N",
+      "detail": "best 56.91 N at 7.5 mm depth, 6.00 % of specified, short by 16.7x",
+      "pass_": false
+    },
+    {
+      "band": "4",
+      "name": "the array that reaches 948.0 N fits the carriage as drawn, 7.8025 mm radius and 12.0 mm long",
+      "detail": "needs 2398.9 mm of array against a 12.0 mm piston, 199.9x",
+      "pass_": false
+    },
+    {
+      "band": "5",
+      "name": "per-satellite added mass <= 2.0 kg with the array counted once per carriage",
+      "detail": "as drawn 1.6050 kg; at the length 948.0 N needs 6.44 kg",
+      "pass_": false
+    },
+    {
+      "band": "6",
+      "name": "REPORT: the annular field against a flat array of the same depth and standoff",
+      "detail": "annulus 0.537261 T, flat 0.429822 T, ratio 1.2500",
+      "pass_": null
+    }
+  ]
+}

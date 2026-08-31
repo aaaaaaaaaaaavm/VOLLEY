@@ -131,6 +131,9 @@ EXCLUDED = [
      "45 impact integrations at 2e-8 s plus a root-find per restitution; tens of minutes"),
     ("analysis/motor_model.py", "motor_results.json",
      "guarded by make_baseline.py --check, which compares 23 values against live script output"),
+    ("analysis/trim_secondary.py", "trim_secondary.json",
+     "a magpylib field solve over 720 CylinderSegment sources at five magnet depths, plus a "
+     "large-radius limit case and a sector-convergence sweep; about ten minutes"),
     ("analysis/array_drag.py", "array_drag.json",
      "a root-find over a 2000-step integration, twice per field, over six fields and four "
      "sensitivity corners, plus a second root-find over the conductance; 44 s"),

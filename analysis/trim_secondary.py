@@ -102,7 +102,7 @@ def lorentz_kt(sample, lo, hi, depth_of, active_len, wind_thick, nx=240, ny=9,
     fs = np.array([thrust(s, phi_best, K_NORM) for s in range(0, nx, mean_stride)])
     f_mean = fs.mean()
     ripple = (fs.max() - fs.min()) / 2.0 / f_mean * 100.0
-    return f_mean * (active_len / LAM) / K_NORM, ripple
+    return float(f_mean * (active_len / LAM) / K_NORM), float(ripple)
 
 
 # --- the two fields ------------------------------------------------------------------------
@@ -240,7 +240,7 @@ def band1_verification():
                                       WIND_THICK_GEN5 / 2.0, lambda y: DEPTH_GEN5,
                                       ACTIVE_GEN5, WIND_THICK_GEN5)
     kt_mm, ripple_mm = mm.thrust_constant()
-    identity = abs(kt_flat - kt_mm) / kt_mm
+    identity = float(abs(kt_flat - kt_mm) / kt_mm)
 
     h_probe, r_o = 5.0e-3, PISTON_R_M
     r_probe = BORE_M / 2.0 + WALL_M / 2.0
@@ -258,7 +258,7 @@ def band1_verification():
            'sector_convergence_rel': converged,
            'large_radius_annular_T': curved, 'flat_single_sided_T': flat,
            'large_radius_rel': limit}
-    out['pass_'] = identity <= 1e-6 and converged <= 0.01 and limit <= 0.05
+    out['pass_'] = bool(identity <= 1e-6 and converged <= 0.01 and limit <= 0.05)
     return out
 
 
@@ -287,7 +287,11 @@ def build():
     fits_radius = PISTON_R_M >= PISTON_R_M                       # by construction, stated anyway
     fits_length = len_needed <= PISTON_L_M
 
-    flat_closed = peak_flat(best['depth_mm'] / 1e3, WALL_M / 2.0)
+    # The SAME standoff the annular field is probed at -- the wall's mid-thickness less the
+    # magnet's outer radius, 0.6 mm, not WALL_M/2. Comparing at two different standoffs would put
+    # an exp(-k dz) of 1.3 % into a ratio this band exists to report honestly.
+    standoff = (BORE_M / 2.0 + WALL_M / 2.0) - PISTON_R_M
+    flat_closed = peak_flat(best['depth_mm'] / 1e3, standoff)
     curvature_ratio = best['peak_Br_at_wall_T'] / flat_closed
 
     bands = [
@@ -305,7 +309,7 @@ def build():
          'detail': f"best {best['force_at_90kA_m_N']:.2f} N at {best['depth_mm']:.1f} mm depth, "
                    f"{best['force_ratio_to_spec']*100:.2f} % of specified, short by "
                    f"{shortfall:.1f}x",
-         'pass_': best['force_at_90kA_m_N'] >= FORCE_N},
+         'pass_': bool(best['force_at_90kA_m_N'] >= FORCE_N)},
         {'band': '4', 'name': 'the array that reaches 948.0 N fits the carriage as drawn, '
                               '7.8025 mm radius and 12.0 mm long',
          'detail': f"needs {len_needed*1e3:.1f} mm of array against a 12.0 mm piston, "
@@ -315,7 +319,7 @@ def build():
                               'per carriage',
          'detail': f"as drawn {best['per_satellite_at_section_kg']:.4f} kg; at the length 948.0 N "
                    f"needs {per_sat_needed:.2f} kg",
-         'pass_': per_sat_needed <= 2.0},
+         'pass_': bool(per_sat_needed <= 2.0)},
         {'band': '6', 'name': 'REPORT: the annular field against a flat array of the same depth '
                               'and standoff',
          'detail': f"annulus {best['peak_Br_at_wall_T']:.6f} T, flat {flat_closed:.6f} T, "
@@ -346,7 +350,7 @@ def build():
                                      'piston_length_m': PISTON_L_M,
                                      'lengths_of_piston': len_needed / PISTON_L_M},
         'curvature_report': {'annular_T': best['peak_Br_at_wall_T'], 'flat_T': flat_closed,
-                             'ratio': curvature_ratio},
+                             'standoff_m': standoff, 'ratio': curvature_ratio},
         'bands': bands,
     }
 
