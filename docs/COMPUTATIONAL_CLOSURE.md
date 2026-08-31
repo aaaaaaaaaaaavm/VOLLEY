@@ -14,9 +14,9 @@ counts against it, and is checked by
 
 ---
 
-## Remaining COMPUTATION items: 19
+## Remaining COMPUTATION items: 18
 
-It is not zero and this file will not pretend otherwise. The nineteen are named below, each
+It is not zero and this file will not pretend otherwise. The eighteen are named below, each
 with what would close it. Every one of them is executable now, no hardware, no launch
 provider, no flight.
 
@@ -54,13 +54,13 @@ a different place, so its sixteen live computation items are counted separately 
 
 | Scope | COMPUTATION | HARDWARE | HOST_DATA | FLIGHT_OPS | DECISION |
 |---|---:|---:|---:|---:|---:|
-| GEN6 | 19 | 4 | 5 | 1 | 0 |
+| GEN6 | 18 | 4 | 5 | 1 | 1 |
 | PROGRAMME | 3 | 0 | 0 | 1 | 6 |
 | GEN5 | 16 | 0 | 0 | 0 | 4 |
 
 ---
 
-## The nineteen, and what closes each
+## The eighteen, and what closes each
 
 | Entry | What is left to compute |
 |---|---|
@@ -68,7 +68,6 @@ a different place, so its sixteen live computation items are counted separately 
 | [P103](../OPEN_PROBLEMS.md) | A67 has run, six of nine, and the first-order half of this entry is answered. What is left is the second-order set the run sheet declared out of scope: bore roundness, stick-slip, payload inertia variation, tube compliance, and a contact law that passes its own restitution check, A67 band 3 failed at 13.7 % against a 5 % band |
 | [P118](../OPEN_PROBLEMS.md) | CRITICAL. [A66](../validation/A66_tube_shielding.md) found the wall's drag exceeding the stator's thrust above 0.1500 T, and [A72](../validation/A72_trim_array_drag.md) has now integrated it over the stroke by making the array length the variable: bands 3R and 4R fail at every field by 6.8x to 44.7x, the drag takes 71 % of the shot work, and the carriage decelerates into the muzzle at 0.47 to 3.30 m/s against an adopted 29.01. Band 5 holds the verdict over halved conductivity and halved wall. What is left is the fix, which is P92's trade rather than a second copy of it |
 | [P117](../OPEN_PROBLEMS.md) | [A73](../validation/A73_trim_secondary.md) has derived the constant for the annulus `build_gen6.py` draws, through `motor_model`'s own Lorentz integral and verified against it to a relative difference of exactly zero. The section makes **56.91 N against the 948.0 N recorded**, 6.00 %, short by 16.7x, and reaching the specified force needs 2399 mm of array against a 12.0 mm drawn piston. What is left: A55 re-run with the section length and the force solved together, which waits on P92's trade rather than re-sizing a stage A72 has falsified |
-| [P92](../OPEN_PROBLEMS.md) | A66 has run: 19 % of authority lost, 0.9356 m/s of 1.1543, and the governing parameter is the sheet magnetic Reynolds number and not the skin depth this entry named. A72 has since put a number in the trade — the wall's sheet conductance would have to fall to 1446.3 S, 4.132 % of aluminium's 35 000. What is left is the trade itself: a non-conducting liner, a slotted or non-conducting section local to the stator, or the passive secondary under PII-19 |
 | [P75](../OPEN_PROBLEMS.md) | A Gen6 reliability architecture, the way [A47](../validation/A47_gen6_fmea.md) did Gen5 |
 | [P79](../OPEN_PROBLEMS.md) / [E6](../OPEN_PROBLEMS.md) | A variable-atmosphere decay model and an independent propagator check. The headline should become an uncertainty range, not a single multiplier |
 | [P81](../OPEN_PROBLEMS.md) | A backup ejector concept that clears the tube on the energy actually available |
@@ -88,6 +87,16 @@ a different place, so its sixteen live computation items are counted separately 
 ## What is genuinely blocked
 
 These cannot be closed by any analysis, and saying so is the point of the exercise.
+
+### A programme decision, 1
+
+| | |
+|---|---|
+| [P92](../OPEN_PROBLEMS.md) | **Moved from `COMPUTATION` to `DECISION` on 2026-08-31, and the move is earned rather than taken.** [A66](../validation/A66_tube_shielding.md) priced the attenuation, [A72](../validation/A72_trim_array_drag.md) integrated the drag, [A73](../validation/A73_trim_secondary.md) derived the thrust constant and [A74](../validation/A74_tube_conductance_requirement.md) stated the requirement — the tube may carry 1.878 % to 12.430 % of its present sheet conductance — and every local fix is eliminated by calculation. What is left is which of two adopted decisions yields, ADR-033's carriage-borne secondary or ADR-035's aluminium wall, and no analysis settles that. The *search* for a material against A74's number is [E11](../OPEN_PROBLEMS.md), which is still `COMPUTATION` and still counted |
+
+> This is the one entry that has ever moved out of `COMPUTATION` without being closed, and the
+> gate above exists to catch exactly that move being made cheaply. Four run sheets, two of them
+> with failing bands, are the reason it is not.
 
 ### Hardware or measurement, 4
 

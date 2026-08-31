@@ -9,6 +9,26 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-31 (sixty-fourth pass): A74 states the tube as a requirement, and P92 becomes a decision
+
+Four runs in two days have taken P92 from *nobody has computed what the tube costs* to *here is
+the number the tube has to meet, and here is why no local fix meets it*.
+
+| ID | Item | Detail |
+|---|---|---|
+| A74 | The requirement, and no material named | **The drive tube may carry 657.2 S at the remanence to 4350.7 S at a 0.20 T air-gap field — 1.878 % to 12.430 % of the 1.0 mm aluminium wall's 35 000 S.** At 0.60 T it is 1446.3 S, A72 band 6's number to the digit, which is two inversions of the same model meeting from opposite ends. No new material data enters the run and E11 owns the search against it |
+| A74 | Band 1 is an identity, not a cross-check, and says so | The file imports `tube_shielding` and `array_drag` rather than re-deriving them, so agreement would prove nothing about the physics. What it checks is that the import is live: the break-even field and the worst force-over-parity ratio reproduce the committed values at exactly 0.0. A stale import is the failure mode this run actually has |
+| A74 | **Band 3 fails and P92's third candidate goes** | A liner needs **0.59 mm at 0.20 T and 15.01 mm at the remanence** against a 7.9025 mm bore radius, fitting at two of six fields. It buys one power of `exp(-kt)` and not two, because it moves the magnets away from the winding as well as from the wall — 12.3 % per millimetre on the ratio, not 23 % |
+| A74 | **Band 4 fails and the wall is not a free variable** | Thinning the aluminium alone needs **18.8 µm** against the 0.16 mm A59 says the gas alone requires — 8.5× below the pressure floor and 53× below the 1.0 mm as drawn |
+| A74 | Band 5 supplies the number ADR-035 did not have | Steel is **+2.154 kg** on a shared tube, **+0.1795 kg per satellite**, taking A73's 1.6050 kg to 1.7845 kg against a 2.0 kg ceiling. ADR-035 chose aluminium on mass alone and was right on the questions asked of it. **The mass it saved is affordable to give back** |
+| A74 | A band whose wording admitted two readings, recorded as such | Band 3 did not say whether the liner had to work at *some* field or at *every* field. The implementation takes the strict reading and the run sheet prints both counts, because the loose reading would pass in the corner where the secondary makes 18.37 N against a 948.0 N specification, and a band that passes where the machine makes nothing tests nothing |
+| **P92** | **Moved from `COMPUTATION` to `DECISION`, and the move is argued rather than taken** | On 2026-08-30 this entry stayed `COMPUTATION` and said explicitly that relabelling it would take one off the closure count for no work. The work has since been done: four run sheets, two with failing bands, and every local fix eliminated by calculation. What is left is which of ADR-033 and ADR-035 yields, and no analysis settles that. GEN6 remaining COMPUTATION 19 → 18, DECISION 0 → 1, and `docs/COMPUTATIONAL_CLOSURE.md` carries the reasoning beside the count |
+| Index | The gate added yesterday caught its first real omission within the hour | `check_links.py` failed on A74's run sheet having no row in `validation/README.md`, before the commit was made |
+| Gate | A74 excluded from the freshness gate by name | Twelve nested root-finds over A72's own root-find over the shot integration |
+| Procedure | `check_companions.py` gains the thing that keeps reddening CI | The export record can only name a commit that already exists, so it is always the commit after. Four CI runs failed on that gate in two days, each of them right, each on a push made before the export. Push once per unit of work with the export record last |
+
+---
+
 ## 2026-08-30 (sixty-third pass): A73 derives the constant A55 borrowed, and the trim force is 6 % of what the parameter file says
 
 A66 bounded it and stopped, because bounding a number is not deriving it. A73 derives it.

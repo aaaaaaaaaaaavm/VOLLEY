@@ -4316,7 +4316,7 @@ argues for, with the vessel material and the housing allowance both derived rath
 
 ### P92. The trim stator has to reach its magnets through a conducting tube, and nothing has computed what that costs: HIGH, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A66 priced the cost; the three candidate fixes have not been traded
+> **Scope:** `GEN6` · **Next step:** `DECISION` — A74 has stated the requirement and eliminated every local fix; which of ADR-033 and ADR-035 yields is a programme choice
 
 
 [ADR-033](docs/adr/033-gen6-trim-stage.md) puts the stator outside the tube and the magnets
@@ -4372,6 +4372,40 @@ questions: [P117](#p117), the thrust constant the section's force rests on, and 
 drag the carriage magnets make against the wall over the whole stroke rather than under the
 stator. **The fix for P92 should not be chosen before P118 is computed** — a liner that solves a
 19 % attenuation is not the same liner that solves a brake.
+
+### Stated as a requirement 2026-08-31 by A74, and the third candidate goes with the other two
+
+[A74](validation/A74_tube_conductance_requirement.md) inverted A66's and A72's own models instead
+of screening a material table, so that no new handbook number enters a conclusion.
+
+> **The drive tube may carry between 1.878 % and 12.430 % of the sheet conductance it has now** —
+> 657.2 S at the remanence to 4350.7 S at a 0.20 T air-gap field, against the 1.0 mm aluminium
+> wall's 35 000 S. At 0.60 T the figure is 1446.3 S, which is A72 band 6's number to the digit.
+
+Neither remaining local fix reaches it. **The liner needs 15.01 mm inside a 7.9025 mm bore
+radius** — it buys one power of `exp(-kt)` and not two, because it moves the magnets away from the
+winding as well as from the wall — and it fits at two of six fields. **Thinning the aluminium
+needs an 18.8 µm wall** against the 0.16 mm A59 says the gas alone requires, 8.5× below it and 53×
+below the 1.0 mm as drawn.
+
+And A74 band 5 supplies the number ADR-035 did not have. Steel costs **+2.154 kg** on a tube
+shared across the manifest — **+0.1795 kg per satellite**, taking A73's 1.6050 kg to 1.7845 kg
+against a 2.0 kg ceiling. **The mass ADR-035 saved is affordable to give back.** It was never a
+large number; it was the only number in the room.
+
+### This entry moves to `DECISION`, and here is why that is not a dodge
+
+On 2026-08-30 this entry stayed `COMPUTATION` and said so explicitly: relabelling it would have
+taken one off the closure count for no work. The work has since been done. A66 priced the
+attenuation, A72 integrated the drag, A73 derived the constant and A74 stated the requirement,
+and every local fix is eliminated by calculation rather than by preference. **What is left is
+which of two adopted decisions yields** — ADR-033's carriage-borne secondary or ADR-035's
+aluminium wall — and no analysis settles that. `docs/COMPUTATIONAL_CLOSURE.md` records the move
+with the four runs that earned it.
+
+Two candidates survive on the analysis and neither is chosen here: a tube of a lower-conductivity
+material, against A74's number, with [E11](#e11) owning the search; or the passive secondary
+`docs/VAULT.md` holds under PII-19, which takes the magnets off the carriage instead.
 
 ### Two of the three candidate fixes die on A72's own finding, 2026-08-30
 

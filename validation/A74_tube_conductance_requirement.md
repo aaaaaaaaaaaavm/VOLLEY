@@ -68,3 +68,122 @@ It does not revisit A72's verdict. If the requirement is met, A72's bands are re
 new conductance by A72, not here.
 
 It measures nothing. E4 stands.
+
+---
+
+## Result
+
+**RUN 2026-08-31. Band 1 passes by identity, bands 3 and 4 both fail, and the requirement is a
+number the tube's present material misses by between eight and fifty-three times.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | the imported model reproduces A66's and A72's committed values | **0.0e+00** on both, against 1e-9 | **PASS** |
+| 2 | the largest `σd` at which A72's 3R and 4R pass | below | **REPORT** |
+| **3** | a liner brings the drag-to-thrust ratio to one within the bore | **0.59 to 15.01 mm; fits at 2 of 6 fields** | **FAIL** |
+| **4** | thinning the aluminium wall alone meets it | **18.8 µm against a 160 µm floor, 8.5× below** | **FAIL** |
+| 5 | the mass of the one lower-conductivity metal already priced | steel **+2.154 kg**, per satellite **1.7845 kg** | **REPORT** |
+
+### Band 1, and why it is an identity and not a cross-check
+
+This file imports `tube_shielding` and `array_drag` and calls their functions. It does not
+re-derive the drag ratio or the length comparisons, so agreement between it and them would prove
+nothing about the physics — it would be two names for one expression, which
+[A66](A66_tube_shielding.md) band 1R exists to forbid. What band 1 does check is that the import
+is **live**: that calling those functions now reproduces the values `tube_shielding.json` and
+`array_drag.json` published, to a relative difference of **exactly zero**. A stale import is the
+failure mode this run actually has, and that is the one it tests.
+
+### Band 2, the requirement
+
+| Air-gap field | band 3R needs | band 4R needs | as a fraction of aluminium | as an aluminium wall |
+|---|---:|---:|---:|---:|
+| 0.20 T | **4350.7 S** | 5089.4 S | 12.430 % | 124.3 µm |
+| 0.40 T | **2170.4 S** | 2534.9 S | 6.201 % | 62.0 µm |
+| 0.60 T | **1446.3 S** | 1688.7 S | 4.132 % | 41.3 µm |
+| 0.80 T | **1084.6 S** | 1266.2 S | 3.099 % | 31.0 µm |
+| 1.00 T | **867.6 S** | 1012.9 S | 2.479 % | 24.8 µm |
+| 1.32 T | **657.2 S** | 767.3 S | 1.878 % | 18.8 µm |
+
+The 0.60 T row is **1446.3 S**, which is A72 band 6's number to the digit — the two runs invert
+the same model from opposite ends and land on the same value, which is what makes the rest of the
+table worth reading.
+
+> **The drive tube may carry between 1.9 % and 12.4 % of the sheet conductance it has now**,
+> depending on the field the secondary works at. That is the requirement, and it is stated without
+> naming a single material.
+
+### Band 3: the liner buys one power of the exponential, not two
+
+A liner lines the bore, so the magnets shrink to fit and their surface moves `t` further from the
+**winding outside the tube** as well as from the wall. The drag falls as `B²` and the thrust as
+`B`, so the *ratio* falls as `exp(-kt)` and not `exp(-2kt)`. At `k` = 130.9 m⁻¹ that is 12.3 % per
+millimetre on the ratio rather than 23 %.
+
+| Air-gap field | drag / thrust | liner for ratio = 1 | inside a 7.9025 mm bore radius |
+|---|---:|---:|---|
+| 0.20 T | 1.08 | **0.59 mm** | yes |
+| 0.40 T | 2.16 | **5.89 mm** | yes |
+| 0.60 T | 3.24 | 8.98 mm | **no** |
+| 1.32 T | 7.13 | **15.01 mm** | **no** |
+
+**The band's wording admitted two readings** — a liner that works at *some* field, or at *every*
+field — and the implementation takes the strict one, so the verdict above is the all-fields
+reading. Both counts are on the record: it fits at **two of six**. The any-field reading would
+pass, and it would pass in the corner where the secondary makes 18.37 N
+([A73](A73_trim_secondary.md) band 2) against a 948.0 N specification. A band that passes where
+the machine makes nothing tests nothing, which is
+[ADR-037](../docs/adr/037-a66-band-one-was-unsatisfiable.md)'s point, and the wording should have
+said so.
+
+**P92's third original candidate is gone with it.** All three of the fixes that run-sheet named —
+a local non-conducting section, a slotted section, a liner — are now eliminated by the same fact:
+the brake is not local, and an insulator does not stop a field.
+
+### Band 4: the wall is not a free variable here
+
+`σd` falls with `d`, so the obvious move is to thin the tube. At the remanence the requirement is
+**18.8 µm**. [A59](A59_tube_structure.md) puts the wall the gas alone needs at **0.16 mm**, and
+`cad/build_gen6.py` sets the 1.0 mm as drawn by handling and by A38's 201.7 N cradle preload.
+
+**18.8 µm is 8.5× below the pressure floor and 53× below the wall as drawn.** No thickness of this
+metal works, so the material has to change.
+
+### Band 5, and the one number ADR-035 did not have
+
+[ADR-035](../docs/adr/035-drive-tube-material.md) chose aluminium on mass alone, and it was right
+on the questions asked of it — [A59](A59_tube_structure.md) found strength, stiffness and buckling
+all indifferent between the metals. The mass argument was **2.154 kg**.
+
+The tube is shared across the manifest, so that is **+0.1795 kg per satellite**, taking A73's
+1.6050 kg to **1.7845 kg** against A55 band 7's 2.0 kg ceiling. **The mass ADR-035 saved is
+affordable to give back.** It was never a large number; it was the only number in the room.
+
+### Where this leaves P92
+
+| | |
+|---|---|
+| A local non-conducting or slotted section | **eliminated by A72** — the brake acts over the whole stroke |
+| A non-conducting liner | **eliminated here** — 15.01 mm inside a 7.9025 mm bore radius |
+| A tube of a lower-conductivity material | **survives**, and now has a requirement: 657 to 4351 S, 1.9 % to 12.4 % of aluminium's |
+| The passive secondary under PII-19 | **survives**, and takes the magnets off the carriage instead |
+| Give up ADR-033's carriage-borne secondary | **survives**, and is the fourth route none of the three named |
+
+### What this run does not do
+
+**It names no material and does not choose one.** The requirement is stated so that
+[E11](../OPEN_PROBLEMS.md)'s public material screening and [E3](../OPEN_PROBLEMS.md)'s component
+selection can be run against it, and neither is closed here. A72's own run sheet already records
+the one observation this repository can make without new data, and it stays there rather than
+being repeated as though this run produced it.
+
+It does not price a non-metallic tube. That part is a pressure boundary, a sliding seal bore and a
+structural column at once, and A59, A58 and A61 would all have to be re-run against it.
+
+It does not re-run A72 at the new conductance. If a material is chosen, A72's bands are re-run
+there, in A72, against whatever it is.
+
+Two runs died on wrong imports before the one above, neither producing a value.
+
+It measures nothing. E4 stands, and 3.5 × 10⁷ S/m is a handbook figure at room temperature for a
+wall this repository has shown gets hot.
