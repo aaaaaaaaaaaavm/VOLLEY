@@ -3545,7 +3545,7 @@ this, ADR-033's trim stage and P77's pulse store. One bench test governs three o
 
 ### P79. The decay model is optimistic by about two against the runs that raised E28: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a variable-atmosphere decay model and an independent propagator check
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A75 has shown the level explains it to within 1.2428x; the residual, and the independent propagator check, are what is left
 
 
 [A50](validation/A50_campaign_altitude.md) band 1 was declared as a calibration against E28's own
@@ -3569,8 +3569,41 @@ of that run is *"450 km buys months"* rather than any day count. It does not aff
 figures, its monotonicity findings, or its central result that spread is nearly
 altitude-independent while life is not.
 
-What would close it. Re-run the decay model against a variable-density atmosphere, or against
-GMAT directly, which is what produced the numbers it disagrees with. The GMAT runs already
+### Calibrated 2026-08-31 by A75, and the model's shape was never the problem
+
+[A75](validation/A75_decay_density_calibration.md) asked the cheaper question first. `astro.rho`
+already carries a piecewise-exponential table with eleven base altitudes and their own scale
+heights; what it takes for activity is one multiplier, and A50 ran it at 1.0 without saying so.
+
+| GMAT case | inclination | reentered | the uniform density scale it implies |
+|---|---:|---:|---:|
+| R2 | 55.2° | 36 d | **1.9667** |
+| R3 | 9.6° | 29 d | **2.4443** |
+
+**The two agree to 1.2428×**, so one scalar reproduces both, and the factor of two this entry
+records is a level and not a form. The calibration also survives evidence it was not fitted to:
+at the calibrated band a 450 km satellite lives **195.1 to 242.5 days** against the 90 it
+survived, and A50's altitude monotonicity holds at both ends.
+
+Re-quoted across the band, which is the *"uncertainty range, not a single multiplier"* this entry
+asked for: 350 km is **29.0 to 36.0 d**, 400 km is **77.5 to 96.3 d**, 450 km is **195.1 to
+242.5 d**. The 400 km row straddles the 90-day campaign this project quotes.
+
+**What stays open is the 1.2428× residual.** Two cases at the same altitude needing different
+scales is something a scalar cannot carry by construction, inclination is the obvious candidate,
+and that is the part a variable-density atmosphere would explain. This entry stays LIVE and stays
+`COMPUTATION` for it — the question has shrunk from 2.4× to 1.24×, not disappeared.
+
+**A50 band 1 stays failed.** It asked for ≤ 60 days at 350 km and got 70.6. A calibration
+performed after a band fails does not reach back and change the verdict.
+
+**And [P16](#p16) is not rescued.** A uniform density scaling preserves a lifetime ratio by
+construction, which is exactly why P16 withdrew the invariance claim. A75 calibrates absolute
+lifetimes at one altitude and says nothing about ratios; A5's GMAT falsification stands.
+
+What would still close it. The residual, which needs a variable-density atmosphere rather than a
+scalar, and the independent propagator check [A9](validation/A9_tle_decay.md) specifies and this
+environment still cannot run. The GMAT runs already
 exist: `validation/gmat/` carries the campaign that stopped early. Until then E28 stays open,
 and it stays open *because* a model disagreeing with its own evidence is not a closure.
 

@@ -71,3 +71,99 @@ calibration performed after a band fails does not retroactively pass it.
 It does not touch Gen5's baseline, which contains no lifetime figure derived from this model
 beyond the ×1.60 ratio [P16](../OPEN_PROBLEMS.md) already withdrew and re-quoted at a stated
 activity level.
+
+---
+
+## Result
+
+**RUN 2026-08-31. All six bands pass, and the answer is that `astro.py`'s altitude shape was never
+the problem.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | the imported model reproduces A50's published figures | **70.5656 d against 70.6**, 4.9e-4; 450 km 476.6 d | **PASS** |
+| 2 | the scale each GMAT case implies | **1.9667** and **2.4443**; 450 km permits up to 5.3093 | **REPORT** |
+| 3 | one uniform scale explains both 350 km cases, within 2× | **1.2428×** | **PASS** |
+| 4 | the calibrated scale does not break the 450 km evidence | **195.1 to 242.5 d** against the 90 it survived | **PASS** |
+| 5 | A50's altitude monotonicity survives at both ends | monotone at 1.9667 and at 2.4443 | **PASS** |
+| 6 | A50's durations re-quoted across the band | below | **REPORT** |
+
+### The disagreement is a level, and it is a factor of about two
+
+| GMAT case | inclination | reentered | uniform density scale it implies |
+|---|---:|---:|---:|
+| R2 | 55.2° | 36 d | **1.9667** |
+| R3 | 9.6° | 29 d | **2.4443** |
+
+> `astro.py`'s piecewise-exponential table already carries eleven base altitudes and their own
+> scale heights. **Its shape in altitude was never in question.** What A50 published was that
+> table at mean activity, ×1.0, and it did not say so.
+
+The two scales agree to **1.2428×**, against a band that asked for a factor of two. A single
+uniform multiplier reproduces two independent GMAT reentries at the same altitude, which is what
+band 3 was written to test and is the reason a variable-density atmosphere is not required to
+explain the discrepancy P79 records.
+
+### The calibration is checked against evidence it was not fitted to
+
+The 450 km case was never a fitting point — it is a one-sided fact, that the run went the full
+90 days. At the calibrated band a 450 km satellite lives **195.1 to 242.5 days**, comfortably
+clearing it, and on its own that case would have permitted any scale up to **5.3093**. A scale
+fitted at one altitude that falsified the evidence at another would be a curve through one point;
+this one is not.
+
+### Re-quoted, which is what P79 asked for
+
+| Altitude | at scale 1.0, as A50 published it | across the calibrated band |
+|---|---:|---:|
+| 300 km | 23.9 d | **9.8 to 12.2 d** |
+| 350 km | 70.6 d | **29.0 to 36.0 d** |
+| 400 km | 189.1 d | **77.5 to 96.3 d** |
+| 450 km | 476.6 d | **195.1 to 242.5 d** |
+| 500 km | 1128.0 d | **461.6 to 573.7 d** |
+| 600 km | 5792.0 d | **2369.7 to 2945.1 d** |
+
+**"450 km buys months" is 6.4 to 8.0 months.** And the 400 km row is the one worth reading twice:
+**77.5 to 96.3 days straddles the 90-day campaign this project has quoted**, so a 90-day campaign
+needs 400 km at the mild end of the band and more than 400 km at the harsh end. That is a design
+statement the single number could not make.
+
+### The 1.2428× residual is not noise, and it is not explained away
+
+Two cases at the *same altitude* need *different* scales. A scalar multiplier cannot carry that by
+construction, so the residual is real and it is what a variable-density atmosphere would account
+for. Inclination is the obvious candidate — 55.2° and 9.6° sample very different mean densities
+along their ground tracks — and this run does not attempt it. **The half of P79 that asks for a
+variable-density model stays open**, and it is now a 1.24× question rather than a 2.4× one.
+
+### What this does not do, stated because each is a way to over-read the result
+
+**It does not retroactively pass A50 band 1.** That band asked for ≤ 60 days at 350 km and got
+70.6, and it failed. At the calibrated scale the model gives 29.0 to 36.0, which would have
+passed — and a calibration performed after a band fails does not reach back and change the
+verdict. A50 band 1 stays failed on the page.
+
+**It does not rescue [P16](../OPEN_PROBLEMS.md).** P16 withdrew a lifetime-invariance claim
+because a uniform density scaling preserves a lifetime *ratio* by construction, so the sweep that
+tested it could not have falsified it. Nothing here changes that: this run calibrates absolute
+lifetimes at one altitude, and it says nothing about whether a real atmosphere preserves ratios.
+A5's GMAT falsification stands, and the ×1.60 stays quoted at a stated activity level.
+
+**It is not a measurement.** GMAT is a second model. [A9](A9_tle_decay.md) remains the only run
+specified anywhere in `validation/` that would compare against a flown object, and CelesTrak was
+re-tested from this environment on 2026-08-31: the egress proxy still refuses the connection under
+organisation policy, exactly as A9 recorded when it was written. **[E4](../OPEN_PROBLEMS.md)
+stands, and it stands for the same reason it did in July.**
+
+**It does not close [E28](../OPEN_PROBLEMS.md).** E28 asks for a campaign mission life at a real
+deployment altitude, written where the host is described rather than in a run sheet. This supplies
+the number.
+
+### One thing measured on the way
+
+`astro.lifetime` advances in chunks of `int(min(50/|da|, 5000))` revolutions, and `int()` of a
+float is a step function — the class of hazard that made the freshness gate compare numerically
+rather than byte-for-byte. Rather than argue about it, the density scale was perturbed by one, two
+and four ulp and the ballistic coefficient by one, and the 350 km lifetime moved by **exactly zero
+in all four cases**: the chunked advance quantises the answer. This run is therefore *in* the
+freshness gate at its default tolerance rather than excluded from it.

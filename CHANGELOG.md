@@ -9,6 +9,24 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-31 (sixty-fifth pass): A75 asks the cheap question first, and the decay model turns out to be the right shape at the wrong level
+
+P79 asked for a variable-density atmosphere. Before writing one, A75 tested whether the model's
+*level* explains the disagreement, and it does.
+
+| ID | Item | Detail |
+|---|---|---|
+| A75 | **E28's two GMAT reentries invert to uniform density scales of 1.9667 and 2.4443** | They agree to **1.2428×** against a band that asked for a factor of two, so one scalar reproduces both. `astro.rho` already carries eleven base altitudes with their own scale heights; its shape in altitude was never in question. **What A50 published was that table at mean activity, ×1.0, and it did not say so** |
+| A75 | Checked against evidence it was not fitted to | The 450 km case was a one-sided fact, not a fitting point. At the calibrated band a 450 km satellite lives **195.1 to 242.5 days** against the 90 it survived, and on its own that case would have permitted any scale up to 5.3093. A50's altitude monotonicity holds at both ends of the band |
+| A75 | The headline becomes a range, which is what P79 asked for | 350 km **29.0 to 36.0 d**, 400 km **77.5 to 96.3 d**, 450 km **195.1 to 242.5 d**, 500 km 461.6 to 573.7. *"450 km buys months"* is 6.4 to 8.0 months. **The 400 km row straddles the 90-day campaign this project quotes**, which the single number could not say |
+| A75 | The residual is kept rather than explained away | Two cases at the *same altitude* need *different* scales, which a scalar cannot carry by construction. Inclination is the obvious candidate. P79 stays LIVE and stays `COMPUTATION` for it: the question has shrunk from 2.4× to 1.24×, not disappeared |
+| A75 | Three ways of over-reading it, closed off in the run sheet | **A50 band 1 stays failed** — it asked for ≤ 60 d and got 70.6, and a calibration after a band fails does not reach back. **P16 is not rescued** — a uniform scaling preserves a lifetime ratio by construction, which is precisely why P16 withdrew the invariance claim. **It is not a measurement** — GMAT is a second model |
+| A9 | Re-tested today, and still not runnable | CelesTrak is still refused by this environment's egress proxy under organisation policy, exactly as A9 recorded when it was written. The repository still has no comparison against a flown object. E4 stands, for the same reason it did in July |
+| Gate | A75 is **in** the freshness gate, and the reason is measured | `astro.lifetime` advances in `int()`-quantised chunks, the hazard that made that gate numeric in the first place. Perturbing the density scale by one, two and four ulp and the ballistic coefficient by one moved the 350 km lifetime by **exactly zero** in all four cases, so it is gated at the default tolerance rather than excluded |
+| Counts | 75 run sheets, 72 analyses | Register unchanged at 153 entries, 59 live |
+
+---
+
 ## 2026-08-31 (sixty-fourth pass): A74 states the tube as a requirement, and P92 becomes a decision
 
 Four runs in two days have taken P92 from *nobody has computed what the tube costs* to *here is
