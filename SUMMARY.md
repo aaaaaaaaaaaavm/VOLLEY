@@ -79,7 +79,7 @@ differential between satellites is exactly zero, which is categorical rather tha
 mass correction touches it. One maximum-velocity shot gives +60.2 % of orbital life against a
 2.5 m/s spring's +8.2 %, because lifetime extension is superlinear in delta-v.
 
-It also demonstrated a method. 72 run sheets cover 69 analyses across A1 to A71 (A3, A26 and A60
+It also demonstrated a method. 73 run sheets cover 70 analyses across A1 to A71 (A3, A26 and A60
 were numbered and never written), each with its acceptance bands committed before the script that
 produces the number existed. That is checkable, because the band commit touches no script. No band
 has ever been widened after a result was known.

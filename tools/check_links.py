@@ -141,6 +141,42 @@ def check_header_block():
     return None
 
 
+def check_validation_index():
+    """Every run sheet in validation/ must have exactly one row in validation/README.md.
+
+    WHY THIS EXISTS
+    ---------------
+    On 2026-08-30 that index was nineteen rows short and its opening sentence still described
+    "nineteen of the twenty-one below" while the directory held 73 files. Every run from A66
+    onward was absent, including A72, whose finding is that two adopted ADRs exclude each other.
+    A reader taking that page as the index of the validation work would not have found it.
+
+    check_public.py counts run sheets and compares the count against the prose that quotes it.
+    That is why the gap survived: the number of files was checked, and whether they were listed
+    was not. Counting a set is not the same as indexing it.
+
+    The row key is the file's leading A-number with hyphens removed, so `A45-R2` in the table
+    matches `A45R2_stage_credit_resized_store.md` on disk.
+    """
+    vdir = os.path.join(ROOT, "validation")
+    index = os.path.join(vdir, "README.md")
+    if not os.path.isdir(vdir) or not os.path.exists(index):
+        return None
+    files = sorted(f.split("_")[0] for f in os.listdir(vdir)
+                   if re.match(r"A\d", f) and f.endswith(".md"))
+    with open(index, encoding="utf-8") as fh:
+        keys = re.findall(r"^\| (A[0-9][0-9A-Za-z-]*) \|", fh.read(), re.M)
+    norm = [k.replace("-", "") for k in keys]
+    problems = []
+    for f in files:
+        if norm.count(f) != 1:
+            problems.append(f"validation/{f}_*.md has {norm.count(f)} rows in the index")
+    for k in sorted(set(norm)):
+        if k not in files:
+            problems.append(f"the index lists {k}, which is not a file in validation/")
+    return problems or None
+
+
 def main():
     failed = False
 
@@ -161,6 +197,16 @@ def main():
             print(f"  $B/{t}")
     else:
         print(f"seed paths: all $B targets in {SEED_SCRIPT} resolve")
+
+    index_bad = check_validation_index()
+    if index_bad:
+        failed = True
+        print(f"\nvalidation/README.md does not index validation/ one-to-one, "
+              f"{len(index_bad)} problem(s):")
+        for t in index_bad:
+            print(f"  {t}")
+    else:
+        print("validation index: one row per run sheet")
 
     forked = check_header_block()
     if forked:
