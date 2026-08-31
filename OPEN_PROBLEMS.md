@@ -6413,7 +6413,7 @@ in a run sheet. The GMAT runs already contain the data for 350 and 450 km.
 ### P117. A55 gave the Gen6 trim section the whole of Gen5's thrust constant, and the force it specifies needs a field above the magnets' own remanence: HIGH, NEW 2026-08-30
 
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a thrust constant derived for the annular geometry, and A55 re-run on it
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A73 has derived the constant; A55's re-run waits on [P92](#p92)'s trade
 
 Found by [A66](validation/A66_tube_shielding.md), which needed the section's working flux density
 and therefore needed the area its force acts across.
@@ -6460,8 +6460,44 @@ recomputed, and that the geometry it landed in cannot support it.
 **It is not A66's to fix**, and A66 does not fix it. A66 reports the loss as a function of the
 air-gap field for exactly this reason, so that its own result does not rest on this one.
 
-What would close it: `motor_model.thrust_constant()`, or `field_3d`, re-run on the annular magnet
-and winding geometry `cad/build_gen6.py` draws, giving a thrust constant per metre of section for
+### Derived 2026-08-30 by A73, and the shortfall is 16.7x
+
+[A73](validation/A73_trim_secondary.md) built the annular Halbach `cad/build_gen6.py` implies out
+of magpylib cylinder segments and pushed it through the same Lorentz integral
+`motor_model.thrust_constant()` uses. Band 1 required that integral, handed Gen5's own flat field
+and Gen5's geometry, to return Gen5's own constant: it returns **10.538611491665296** against
+**10.538611491665296**, a relative difference of exactly zero, so nothing about the transfer is a
+change of convention.
+
+| Magnet depth | K<sub>t</sub>, N per kA/m | force at 90 kA/m | of the specified 948.0 N |
+|---|---:|---:|---:|
+| 3.0 mm | 0.3729 | 33.56 N | 3.54 % |
+| 6.0 mm | 0.5927 | 53.35 N | 5.63 % |
+| **7.5 mm**, the deepest the bore admits | **0.6323** | **56.91 N** | **6.00 %** |
+
+**The constant is 16.67x smaller than the one A55 used.** About **4.02x** of that is the
+interaction surface, 306.0 cm² of flat array against 76.03 cm² of annulus. The other **4.14x** is
+chiefly that Gen5's winding lies between two arrays while Gen6's lies entirely outside one, so its
+outer copper sits where the field has fallen to 45.6 % across the 6 mm belt.
+
+Two further failures came with it. Reaching 948.0 N needs **2398.9 mm** of magnet array against
+the **12.0 mm** piston the CAD draws, 200 lengths of the part it would live on. And the array is
+on the carriage, which [ADR-035](docs/adr/035-drive-tube-material.md) records is not recovered —
+*"each of the twelve satellites has its own"* — so it is added **undivided**, unlike the shared
+stator section `trim_authority.py` divides by twelve. As drawn that is 1.6050 kg per satellite; at
+the length 948.0 N needs, 6.44 kg against a 2.0 kg ceiling.
+
+### Why `cad/parameters.json` is not being edited yet
+
+Correcting `force_N` moves the section length, the peak power, the correction energy, the CAD and
+A55's own bands. That is a re-run of A55, not an edit, and [A72](validation/A72_trim_array_drag.md)
+found on the same day that the carriage-borne secondary and the aluminium wall exclude each other.
+Re-sizing a trim stage on an architecture whose fix is undecided is work thrown away. **The wrong
+number stays visible with this entry attached to it rather than being quietly replaced**, and the
+order is [P92](#p92)'s trade first, then A55.
+
+What would still close it: A55 re-run with the section length and the force solved together on
+A73's constant, once P92's trade has settled which architecture that constant belongs to, giving a thrust constant per metre of section for
 that geometry; then A55 re-run with the section length and the force solved together rather than
 the force held fixed. ADR-033's falsifier 1, the unweighed pulse store ([P77](#p77)), moves with
 it.

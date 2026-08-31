@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-30 (sixty-third pass): A73 derives the constant A55 borrowed, and the trim force is 6 % of what the parameter file says
+
+A66 bounded it and stopped, because bounding a number is not deriving it. A73 derives it.
+
+| ID | Item | Detail |
+|---|---|---|
+| A73 | The verification that makes the rest usable | The Lorentz integral `motor_model.thrust_constant()` performs is generalised to take the field and the cross-section as arguments, and handed Gen5's own flat field it returns Gen5's own constant — **10.538611491665296 against 10.538611491665296, a relative difference of exactly zero**. No phase convention, no factor of two in a time average and no normalisation is re-decided between the machine the constant was measured on and the machine it was applied to |
+| A73 | The curved geometry checked against a limit, not against a second approximation | At a bore radius of twenty wavelengths the annular model reproduces a flat single-sided array to **0.463 %**, and doubling the angular sectors moves the peak field by **0.1037 %** |
+| **P117** | **The section as drawn makes 56.91 N against the 948.0 N in `cad/parameters.json`** | **6.00 %, short by 16.7x.** About 4.02x is the interaction surface — 306.0 cm² of flat array against 76.03 cm² of annulus — and 4.14x is chiefly that Gen5's winding lies between two arrays while Gen6's lies entirely outside one, with its outer copper where the field has fallen to 45.6 % across the 6 mm belt |
+| P117 | Two failures that came with it | Reaching 948.0 N needs **2398.9 mm** of magnet array against the **12.0 mm** piston `build_gen6.py` draws, 200 lengths of the part it would live on. And the array is on the carriage, which ADR-035 records is not recovered — *"each of the twelve satellites has its own"* — so it is added **undivided**, unlike the shared stator section `trim_authority.py` divides by twelve: 1.6050 kg per satellite as drawn, 6.44 kg at the length 948.0 N needs, against a 2.0 kg ceiling |
+| A73 | Band 6, the one thing on the design's side | A convex array at this radius concentrates its own field **1.25x** over a flat array of the same depth and standoff. Reported, not banded: the difference is physical and ADR-037 forbids a tolerance on a gap of that kind. The standoff is matched exactly, because the first version of this file compared 0.6 mm against 0.5 mm and put an `exp(-k dz)` of 1.3 % inside a number whose whole purpose is to be honest about a 25 % effect |
+| P117 | `cad/parameters.json` is **not** edited, and the reason is written down | Correcting `force_N` moves the section length, the peak power, the correction energy, the CAD and A55's own bands — a re-run of A55, not an edit — and A72 found the same day that the architecture it would re-size is falsified. The wrong number stays visible with P117 attached rather than quietly replaced. P92's trade first, then A55 |
+| Index | `validation/README.md` was nineteen rows short and said so nowhere | It opened by describing *"nineteen of the twenty-one below"* while the directory held 73 files, and every run from A66 onward was missing. Every file now has exactly one row, and `check_links.py` gates it: a deleted row, a phantom entry and a duplicated row are each caught, demonstrated by injection. `check_public.py` counted run sheets and never checked whether they were listed |
+| Gate | A73 excluded from the freshness gate by name, with the reason | Ten minutes of magpylib over 720 cylinder-segment sources |
+| Runs | Two runs of A73 discarded before the one recorded | One died serialising a numpy boolean; one compared band 6 at mismatched standoffs. Neither produced a number that is used, and both are named rather than left out |
+| Counts | 73 run sheets, 70 analyses. Register unchanged at 153 entries, 59 live | A73 answers an entry that was already numbered |
+
+---
+
 ## 2026-08-30 (sixty-second pass): A72 integrates the drag A66 found, and two adopted decisions turn out to exclude each other
 
 A66 could not integrate the brake it discovered, because the magnet array is dimensioned nowhere
