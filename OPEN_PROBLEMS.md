@@ -6446,7 +6446,7 @@ it.
 ### P118. The trim magnets brake against the aluminium tube for the whole stroke, not only under the stator, and the array's length is not in the parameters: CRITICAL, NEW 2026-08-30
 
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — the magnet array geometry stated, then the drag integrated over the stroke
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A72 has integrated it; what remains is the same fix trade [P92](#p92) owns, now with numbers in it
 
 [A66](validation/A66_tube_shielding.md) was asked what the tube costs the stator. It answered
 that, band 3, 19 % of authority. Then the loss model gave an answer to a question nobody asked.
@@ -6482,9 +6482,39 @@ stator section's length, 144.01 mm, and `cad/build_gen6.py` draws the winding fr
 set is named in ADR-033 and in the `trim_stator()` docstring and is not dimensioned anywhere. The
 drag over the stroke is proportional to that length and cannot be integrated without it.
 
-What would close it: the magnet array stated as geometry in `cad/parameters.json` and drawn in
-`build_gen6.py`, then the drag integrated over the velocity profile the shot actually follows,
-against the shot's own kinetic energy. If the answer is what the ratio above suggests, the
+### Integrated 2026-08-30 by A72, and the answer is worse than this entry guessed
+
+[A72](validation/A72_trim_array_drag.md) made the array length the variable instead of waiting for
+someone to choose it, and compared three lengths at each field: the array that makes the section's
+948.0 N, the array whose drag costs what the seal friction already costs, and the array that stops
+the carriage accelerating before the muzzle.
+
+| Air-gap field | makes the force | costs what friction costs | stalls the carriage | exit velocity at the first |
+|---|---:|---:|---:|---:|
+| 0.20 T | 997.6 mm | **147.29 mm** | **178.56 mm** | **3.2991 m/s** |
+| 0.60 T | 332.5 mm | **16.37 mm** | **19.84 mm** | **1.0433 m/s** |
+| 1.32 T | 151.1 mm | **3.38 mm** | **4.10 mm** | **0.4721 m/s** |
+
+**Bands 3R and 4R both fail at every field, by 6.8× to 44.7×.** At the length the force needs, the
+eddy drag takes **71 % of the shot work** — beside a friction allowance already spending 28.39 % —
+and the carriage is decelerating when it reaches the muzzle. Band 5 passes: halving the
+conductivity, halving the wall, and doing both leave all four verdicts unchanged, so this is not
+resting on a handbook number.
+
+There is no favourable end of the ladder, because a weaker magnet needs a longer array and the
+drag scales with the array. **The trade the field ladder looks like it offers does not exist.**
+
+What A72 leaves open is the fix, and that is [P92](#p92)'s trade rather than a second copy of it.
+A72 band 6 puts a number in it: the wall's sheet conductance would have to fall to **1446.3 S**,
+4.132 % of the 1.0 mm aluminium wall's 35 000, for the drag to cost no more than the friction at
+0.6 T.
+
+Nothing here touches Gen5, which has no tube and no conducting member between its winding and its
+array.
+
+What would still close the fix: the trade [P92](#p92) owns, and the magnet array stated as
+geometry in `cad/parameters.json` and drawn in `build_gen6.py` once the architecture that carries
+it is settled. If the answer is what the ratio above suggests, the
 question is not how much authority the tube costs the trim stage but whether a conducting tube and
 a carriage-borne magnet array can coexist at all — which is a decision about
 [ADR-035](docs/adr/035-drive-tube-material.md) and ADR-033 together, and is exactly the sequencing

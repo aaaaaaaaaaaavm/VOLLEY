@@ -9,6 +9,25 @@ list these changes close) and `docs/DECISION_LOG.md` (why design choices were ma
 
 ---
 
+## 2026-08-30 (sixty-second pass): A72 integrates the drag A66 found, and two adopted decisions turn out to exclude each other
+
+A66 could not integrate the brake it discovered, because the magnet array is dimensioned nowhere
+in this repository. A72 makes the length the variable instead of waiting for one.
+
+| ID | Item | Detail |
+|---|---|---|
+| A72 | Bands declared before the script, then two of them withdrawn before the script, then the script | `3f70082` froze six bands. `0abbe1b` withdrew bands 3 and 4 as unable to discriminate and froze 3R and 4R in their place, **with no result in existence**: band 4 could never fail, because the drag vanishes with velocity while the gas force never falls below the seal friction — 445.88 N at the breech, 198.15 N at the muzzle, against 83.4 N — so any carriage always reaches the muzzle. Band 3 failed at zero array length, because 29.01 m/s already has the whole 28.3887 % friction allowance subtracted from it. ADR-037's rule applied one run later and this time *before* the script |
+| A72 | Three lengths at each field, and no favourable end of the ladder | The array that makes the section's 948.0 N is **6.8× to 44.7×** longer than the array whose drag costs what the seal friction costs, and **5.6× to 36.9×** longer than the array that stops the carriage accelerating. At the length the force needs, the eddy drag takes **71 % of shot work** and the carriage leaves an 8.0 m tube at **0.47 to 3.30 m/s** against an adopted 29.01, decelerating. A weaker magnet needs a longer array and the drag scales with the array, so the ratio gets worse as the field falls |
+| A72 | Band 5 is the one that makes it hard to dismiss | Halving the conductivity, halving the wall, and doing both leave all four verdicts unchanged. The finding is not sitting on a handbook conductivity or on a wall thickness chosen for handling |
+| A72 | Band 6 puts a number in P92's fix trade | The wall's sheet conductance would have to fall to **1446.3 S**, 4.132 % of the 1.0 mm aluminium wall's 35 000, or 1.4463e6 S/m at that thickness. That lands within a few per cent of austenitic stainless, which is a boundary and not a solution: A63 already priced steel at +2.154 kg, and three per cent against a handbook value at room temperature is not a margin |
+| A72 | Two coding defects, found before the result was believed, neither a band | The shear check was wired to the reduced field rather than the incident one, double-counting the transmission by `1/(1+Rm²)`, 36.2 % at this point — band 1 caught it. And neither the drag energy nor the worst acceleration is monotone in array length, because the drag goes as `v·L` while `v` falls roughly as `1/L`; a plain bisection returned its own upper bound as an answer for three of six fields, and the shortest crossing is now found by scanning first |
+| P118 | Integrated, and the fix handed to P92 rather than duplicated | The entry stays LIVE and stays `COMPUTATION`. What is left is the trade P92 owns, now with A72's number in it |
+| Gen5 | Untouched, and the run sheet says so | The Phase I machine is a flat ironless stator with no tube and no conducting member between the winding and the array. Nothing in A72 reaches `docs/BASELINE.md` |
+| Gate | A72 excluded from the freshness gate by name, with the reason | 44 s of root-finding over an integration, which is the A67 and A68 case. An exclusion that is not written down is a gap |
+| Counts | 72 run sheets, 69 analyses | Register unchanged at 153 entries, 59 live: nothing here is a new defect, it is the answer to two that were already numbered |
+
+---
+
 ## 2026-08-30 (sixty-first pass): A66 runs, and it answers a bigger question than it was asked
 
 P92 asked what the aluminium drive tube costs the trim stator. The answer to that is 19 % of

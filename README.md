@@ -110,7 +110,7 @@ integration column apart, because collapsing them produces a false history.
 > as failure before it runs, every defect is numbered including the ones that damage the work's
 > own claims, and nothing here has been built, fired or measured.
 >
-> What that has produced, which is the part worth judging: 71 run sheets covering 68 analyses A1
+> What that has produced, which is the part worth judging: 72 run sheets covering 69 analyses A1
 > to A71 (A3, A26 and A60 were numbered and never written), each against a band written down
 > before its script existed. Three failed outright, one of them falsifying a claim in this
 > project's own abstract. On three further occasions a declared band caught a bug in the analysis
@@ -548,7 +548,7 @@ what that computation does not cover, what it got wrong, and what has been corre
 | Maturity | TRL 2 to 3 |
 | Built, fired or measured | Nothing, at any scale. E4 is open and no analysis on this page changes it |
 | Defect register | 153 numbered entries, 59 live, in [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| Validation | 71 run sheets, 68 analyses across A1 to A71 (A3, A26 and A60 were numbered and never written), each against a band declared before the run. Three failed outright |
+| Validation | 72 run sheets, 69 analyses across A1 to A71 (A3, A26 and A60 were numbered and never written), each against a band declared before the run. Three failed outright |
 | Kill criteria | Seven, three crossed, in [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest

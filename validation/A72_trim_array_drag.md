@@ -120,3 +120,110 @@ number chosen by me:
 | **4R** | **Some field admits an array long enough to make the force at which the carriage is still accelerating at the muzzle**, `L_force ≤ L_stall` | ADR-033's carriage-borne secondary and ADR-035's aluminium wall are mutually exclusive, not merely expensive together |
 
 Bands 1, 2, 5 and 6 are untouched, and band 5 now tests the stability of 3R and 4R.
+
+---
+
+## Result
+
+**RUN 2026-08-30. Bands 1 and 5 pass, 2 and 6 report, and bands 3R and 4R fail at every field on
+the ladder by between one and one and a half orders of magnitude.**
+
+| # | Band | Result | |
+|---|---|---|---|
+| 1 | limits against `precharged`, shear against A66 | zero-σ and zero-length **2.9e-15** against 1e-6; shear **1.6e-16** against 1e-9 | **PASS** |
+| 2 | the three lengths at each field | below | **REPORT** |
+| **3R** | `L_force ≤ L_parity` at some field | best **6.8×** over, at 0.20 T | **FAIL** |
+| **4R** | `L_force ≤ L_stall` at some field | best **5.6×** over, at 0.20 T | **FAIL** |
+| 5 | verdicts hold over σ 1.75e7–3.5e7 and wall 0.5–1.0 mm | **4 of 4 corners agree** | **PASS** |
+| 6 | the conductance at which 3R would pass at 0.6 T | **1446.3 S**, 4.132 % of aluminium's 35 000 | **REPORT** |
+
+### Band 2, and it is the whole answer
+
+| Air-gap field | `L_force` | `L_parity` | `L_stall` | force/parity | force/stall | exit velocity at `L_force` |
+|---|---:|---:|---:|---:|---:|---:|
+| **0.20 T** | 997.6 mm | **147.29 mm** | **178.56 mm** | **6.8×** | 5.6× | **3.2991 m/s** |
+| **0.40 T** | 498.8 mm | **36.82 mm** | **44.64 mm** | **13.5×** | 11.2× | **1.5763 m/s** |
+| **0.60 T** | 332.5 mm | **16.37 mm** | **19.84 mm** | **20.3×** | 16.8× | **1.0433 m/s** |
+| **0.80 T** | 249.4 mm | **9.21 mm** | **11.16 mm** | **27.1×** | 22.3× | **0.7806 m/s** |
+| **1.00 T** | 199.5 mm | **5.89 mm** | **7.14 mm** | **33.9×** | 27.9× | **0.6238 m/s** |
+| **1.32 T** | 151.1 mm | **3.38 mm** | **4.10 mm** | **44.7×** | 36.9× | **0.4721 m/s** |
+
+Read the last column first. **At the array length the section's own force specification requires,
+the carriage leaves an 8.0 m tube at between 0.47 and 3.30 m/s** against ADR-034's adopted 29.01,
+and at every field it is *decelerating* when it gets there. The eddy drag takes **71 % of the shot
+work** at every one of those points — 70.69 % at 0.2 T and 71.59 % at the remanence, which is
+nearly field-independent because the array shortens as the field rises and the two effects
+cancel. Beside a seal friction the design already spends 28.39 % on, that is the whole shot.
+
+There is no favourable end of the ladder. A weaker magnet needs a longer array, and the drag
+scales with the array, so the ratio gets *worse* as the field falls, not better — 6.8× at 0.2 T
+against 44.7× at the remanence. **The trade the ladder looks like it offers does not exist.**
+
+### The two decisions are not expensive together, they are exclusive
+
+[ADR-033](../docs/adr/033-gen6-trim-stage.md) put the trim stator outside the tube and its magnets
+on the carriage. [ADR-035](../docs/adr/035-drive-tube-material.md) made that tube aluminium, four
+days later, on mass. Each is defensible on the questions asked of it. Together they put a
+permanent-magnet array and a stationary 35 000 S conducting sheet in relative motion at 34.28 m/s
+for eight metres, which is an eddy-current brake, and the brake is stronger than the gas gun.
+
+> The magnets do not need the stator to be energised. They brake from the first millimetre of
+> travel, on every shot, whatever the trim stage is doing.
+
+That is what [P92](../OPEN_PROBLEMS.md#p92) meant by a defect in the sequencing rather than in
+either decision.
+
+**None of this touches Gen5.** The Phase I machine is a flat ironless stator with no tube, no
+sleeve and no conducting member between the winding and the array, and nothing in this run applies
+to it or to any number in [`docs/BASELINE.md`](../docs/BASELINE.md).
+
+### Band 5 is the band that makes this hard to dismiss
+
+Halving the conductivity, which a hot wall does, and halving the wall, which the mass argument
+would like, **both leave the verdict unchanged, and so does doing both**. Four corners, four
+identical answers. The finding is not sitting on a handbook conductivity or on a 1.0 mm wall
+chosen for handling; it sits on the architecture.
+
+### Band 6, which is the useful half for P92's trade
+
+Band 3R would pass at 0.6 T only if the wall's sheet conductance fell to **1446.3 S**, **4.132 %**
+of the 1.0 mm aluminium wall's 35 000 — at that thickness, **1.4463 × 10⁶ S/m**.
+
+That figure lands within a few per cent of austenitic stainless steel, whose room-temperature
+conductivity is conventionally quoted near 1.4 × 10⁶ S/m. **This is a boundary, not a solution.**
+A three per cent margin against a handbook conductivity is not a margin, the number is quoted at
+room temperature for a wall that heats, and [A63](A63_steam_design_point.md) already priced steel
+at **+2.154 kg** — larger than everything the fluid trade was trying to save. A non-conducting
+liner or a non-conducting section is the other direction and this run does not choose between
+them. It is [P92](../OPEN_PROBLEMS.md#p92)'s trade and it now has a number in it.
+
+### What was wrong on the way here, and is fixed
+
+Two coding defects, both caught before the result was believed, neither a band.
+
+**The shear check was wired to the reduced field rather than the incident one.** The induction
+curve `τ = (B²/2μ₀)·2Rm/(1+Rm²)` already carries the transmission inside it, so passing `B_net`
+double-counts it by `1/(1+Rm²)` — **36.2 %** at `Rm` = 0.7539. Band 1 caught it, which is what
+band 1 is for.
+
+**Neither the drag energy nor the worst acceleration is monotone in the array length.** The drag
+force goes as `v·L` and `v` falls roughly as `1/L`, so both turn round once the array is long
+enough to have throttled the shot that drives them. A plain bisection from zero to 4 m saw the
+same sign at both ends and returned its own upper bound as an answer for three of the six fields.
+The shortest crossing — which is the one that means anything — is now found by scanning before
+bisecting.
+
+### What this run still does not resolve
+
+It does not choose between ADR-033 and ADR-035, and it does not fix
+[P117](../OPEN_PROBLEMS.md#p117). If P117 lowers the 948.0 N this run took at face value,
+`L_force` grows and every ratio above gets worse.
+
+It counts only the magnets' field. The stator's own contribution, `μ₀K/2` = 0.0566 T, is left out,
+so every drag figure here is a lower bound.
+
+It accelerates `precharged.py`'s 4.0 kg of payload and no carriage, because that is the shot this
+repository publishes. A real carriage mass lowers every velocity in the table, the baseline
+included.
+
+It measures nothing. E4 stands.
