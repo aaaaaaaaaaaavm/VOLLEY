@@ -1,0 +1,177 @@
+{
+  "analysis": "A75",
+  "bands_declared_commit": "fb681fd, before this file existed",
+  "note": "Whether astro.py decay disagreement with E28 GMAT runs is a level or a form problem. GMAT is a second model: this is a calibration, not a validation. A9 re-tested 2026-08-31 and CelesTrak is still refused. E4 stands.",
+  "inputs": {
+    "bc_sat": 61.0,
+    "gmat_350": [
+      {
+        "case": "R2",
+        "inclination_deg": 55.2,
+        "reentry_days": 36.0
+      },
+      {
+        "case": "R3",
+        "inclination_deg": 9.6,
+        "reentry_days": 29.0
+      }
+    ],
+    "gmat_450_survived_days": 90.0,
+    "a50_published_350_days": 70.6,
+    "search_interval": [
+      0.05,
+      200.0
+    ]
+  },
+  "verification": {
+    "life_350_scale1_days": 70.56555141913256,
+    "a50_published_350_days": 70.6,
+    "rel_350": 0.000487940238915489,
+    "life_450_scale1_days": 476.6366848200295,
+    "a50_band2_threshold_days": 90.0,
+    "a50_band2_holds_at_scale1": true,
+    "pass_": true
+  },
+  "cases": [
+    {
+      "case": "R2",
+      "inclination_deg": 55.2,
+      "reentry_days": 36.0,
+      "scale": 1.966734887959933,
+      "life_at_scale_days": 36.004232328746404
+    },
+    {
+      "case": "R3",
+      "inclination_deg": 9.6,
+      "reentry_days": 29.0,
+      "scale": 2.4442830255857873,
+      "life_at_scale_days": 29.016545439699023
+    }
+  ],
+  "calibrated_band": {
+    "scale_lo": 1.966734887959933,
+    "scale_hi": 2.4442830255857873,
+    "spread": 1.2428126640501143,
+    "scale_450_permits_up_to": 5.309308084254873,
+    "life_450_at_scale_lo_days": 242.4581705388792,
+    "life_450_at_scale_hi_days": 195.11012614902285
+  },
+  "monotonicity": {
+    "lo": {
+      "scale": 1.966734887959933,
+      "alt_km": [
+        300.0,
+        350.0,
+        400.0,
+        450.0,
+        500.0,
+        600.0
+      ],
+      "life_days": [
+        12.217143059464755,
+        36.004232328746404,
+        96.27074254392855,
+        242.4581705388792,
+        573.6781482844286,
+        2945.1018347219647
+      ],
+      "monotone": true
+    },
+    "hi": {
+      "scale": 2.4442830255857873,
+      "alt_km": [
+        300.0,
+        350.0,
+        400.0,
+        450.0,
+        500.0,
+        600.0
+      ],
+      "life_days": [
+        9.848699971971797,
+        29.016545439699023,
+        77.51150689231541,
+        195.11012614902285,
+        461.5922013286799,
+        2369.729844574654
+      ],
+      "monotone": true
+    }
+  },
+  "requoted": [
+    {
+      "alt_km": 300.0,
+      "life_days_at_scale_lo": 12.217143059464755,
+      "life_days_at_scale_hi": 9.848699971971797,
+      "life_days_at_scale_1": 23.874212853336076
+    },
+    {
+      "alt_km": 350.0,
+      "life_days_at_scale_lo": 36.004232328746404,
+      "life_days_at_scale_hi": 29.016545439699023,
+      "life_days_at_scale_1": 70.56555141913256
+    },
+    {
+      "alt_km": 400.0,
+      "life_days_at_scale_lo": 96.27074254392855,
+      "life_days_at_scale_hi": 77.51150689231541,
+      "life_days_at_scale_1": 189.05258132262443
+    },
+    {
+      "alt_km": 450.0,
+      "life_days_at_scale_lo": 242.4581705388792,
+      "life_days_at_scale_hi": 195.11012614902285,
+      "life_days_at_scale_1": 476.6366848200295
+    },
+    {
+      "alt_km": 500.0,
+      "life_days_at_scale_lo": 573.6781482844286,
+      "life_days_at_scale_hi": 461.5922013286799,
+      "life_days_at_scale_1": 1128.0289394449057
+    },
+    {
+      "alt_km": 600.0,
+      "life_days_at_scale_lo": 2945.1018347219647,
+      "life_days_at_scale_hi": 2369.729844574654,
+      "life_days_at_scale_1": 5792.01882735769
+    }
+  ],
+  "bands": [
+    {
+      "band": "1",
+      "name": "verification: the imported model reproduces A50 published figures",
+      "detail": "350 km 70.5656 d against A50's 70.6 d, 4.88e-04; 450 km 476.6 d clears 90",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "REPORT: the scale that reproduces each GMAT case",
+      "detail": "R2 at 55.2 deg, 36 d, needs scale 1.9667; R3 at 9.6 deg, 29 d, needs scale 2.4443; the 450 km case permits up to 5.3093",
+      "pass_": null
+    },
+    {
+      "band": "3",
+      "name": "one uniform scale explains both 350 km cases, within a factor of 2",
+      "detail": "1.9667 to 2.4443, spread 1.2428x",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "the calibrated scale does not break the 450 km evidence",
+      "detail": "450 km gives 195.1 d at the harsher end of the band and 242.5 d at the milder, against the 90 d it survived",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "A50's altitude monotonicity survives at both ends of the band",
+      "detail": "monotone at scale 1.9667: True; at 2.4443: True",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "REPORT: A50 durations re-quoted across the calibrated band",
+      "detail": "300 km 9.8 to 12.2 d; 350 km 29.0 to 36.0 d; 400 km 77.5 to 96.3 d; 450 km 195.1 to 242.5 d; 500 km 461.6 to 573.7 d; 600 km 2369.7 to 2945.1 d",
+      "pass_": null
+    }
+  ]
+}
