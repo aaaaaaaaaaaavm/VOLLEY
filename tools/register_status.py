@@ -17,10 +17,10 @@ THE THREE STATUSES
 Each entry carries a `> **Status:** ...` line directly under its heading. This tool writes them,
 and derives analysis/results/register_status.json from them.
 
---check verifies two things: that every entry has a status line, and that the committed JSON is
-what a fresh run would write. The second half did not exist until 2026-08-16 -- --check returned
-before reaching the JSON at all -- so the committed result went one entry stale and nothing
-reported it. See P65.
+--check compares each written status with its classification, then checks the headline block
+and committed JSON against the same counts. The JSON check did not exist until 2026-08-16,
+so the committed result went one entry stale and nothing reported it. See P65. The headline
+and status-agreement checks were added on 2026-09-06.
 
 USAGE
     python3 tools/register_status.py            # write status lines and the JSON, print the tally
@@ -36,6 +36,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REGISTER = os.path.join(ROOT, 'OPEN_PROBLEMS.md')
 RESULT = os.path.join(ROOT, 'analysis', 'results', 'register_status.json')
 MARKER = '> **Status:** '
+COUNTS_BEGIN = '> <!-- REGISTER_COUNTS:BEGIN -->'
+COUNTS_END = '> <!-- REGISTER_COUNTS:END -->'
 
 # The leading (?<!-) on each word matters. `\bRESOLVED\b` matches inside "depth-resolved",
 # so an entry whose first lines cite ADR-030 by filename was classified CLOSED on the strength
@@ -102,6 +104,24 @@ def payload(rows, tally):
                 by_entry=dict(rows))
 
 
+def render_counts(text, counts):
+    """Replace only the current count block; retain the dated history and entries."""
+    if text.count(COUNTS_BEGIN) != 1 or text.count(COUNTS_END) != 1:
+        raise ValueError('register count markers must each occur exactly once')
+    before, tail = text.split(COUNTS_BEGIN)
+    _old, after = tail.split(COUNTS_END)
+    block = (
+        f"> {counts['total']} numbered entries, of which {counts['live']} are live. Every entry carries a\n"
+        "> `Status:` line written by `tools/register_status.py`. This block and the result JSON\n"
+        "> are generated from the same classifications.\n>\n"
+        "> | Status | Count | Meaning |\n> |---|---:|---|\n"
+        f"> | `LIVE` | {counts['live']} ({counts['p_live']} P, {counts['e_live']} E) | open engineering; something still has to be done |\n"
+        f"> | `CORRECTED` | {counts['corrected']} | found, fixed and propagated, retained as the published record |\n"
+        f"> | `CLOSED` | {counts['closed']} | resolved, with the closer named in the entry |\n"
+    )
+    return before + COUNTS_BEGIN + '\n' + block + COUNTS_END + after
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--check', action='store_true')
@@ -115,13 +135,21 @@ def main():
         st = classify(body)
         tally[st] += 1
         rows.append((tag, st))
-        if MARKER not in body:
+        statuses = re.findall(r'^> \*\*Status:\*\* `([^`]+)`', body, re.M)
+        if statuses != [st]:
             missing.append(tag)
+
+    fresh = payload(rows, tally)
+    try:
+        with_counts = render_counts(text, fresh)
+    except ValueError as error:
+        raise SystemExit(str(error)) from error
 
     if args.check:
         if missing:
-            raise SystemExit('entries with no status line: %s' % ', '.join(missing))
-        fresh = payload(rows, tally)
+            raise SystemExit('entries with missing, duplicate or stale status lines: %s' % ', '.join(missing))
+        if with_counts != text:
+            raise SystemExit('register headline counts are stale; run without --check')
         try:
             with open(RESULT, encoding='utf-8') as f:
                 committed = json.load(f)
@@ -137,8 +165,8 @@ def main():
               % (len(rows), tally['LIVE'], tally['CORRECTED'], tally['CLOSED']))
         return
 
-    lines = text.split('\n')
-    for tag, i, _, body in sorted(entries(text), key=lambda e: -e[1]):
+    lines = with_counts.split('\n')
+    for tag, i, _, body in sorted(entries(with_counts), key=lambda e: -e[1]):
         st = classify(body)
         line = f'{MARKER}`{st}` — {NOTE[st]}'
         if MARKER in body:

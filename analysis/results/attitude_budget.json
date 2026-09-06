@@ -3,11 +3,11 @@
   "supersedes": "A13 result run 2026-07-31",
   "method": "angular-momentum conservation with numerical time integration",
   "software": {
-    "python": "3.11.15",
+    "python": "3.12.13",
     "python_license": "PSF License",
     "numpy": "2.4.6",
     "numpy_license": "BSD-3-Clause",
-    "source_sha256": "d86f2e055df50005abaf890c2701803a79f7f48caa31f80c869a60c504c41b52"
+    "source_sha256": "e700700ecf469acfcab950fdf0ba4d442cd566139ba8f1460e7194803dc54331"
   },
   "solver_settings": {
     "time_samples": 20001,
@@ -19,7 +19,7 @@
     "arm_m": 0.166,
     "arm_status": "assumed; cassette width is not a measured CoM lever arm",
     "sequence": "index and return are sequential; peak rates are not added",
-    "deployer_inertia": "124.5 kg box at the 1.839 x 0.530 m envelope",
+    "deployer_inertia": "174.6 kg box at the 1.839 x 0.530 m envelope",
     "rigid_body": "no structural modes, damping, flexible coupling, or controller"
   },
   "shot_impulse_Ns": 64.116,
@@ -30,6 +30,7 @@
       "combined_inertia_kgm2": 116.63045660388113,
       "index": {
         "peak_linear_momentum_Ns": 0.208,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.016962196090398177,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.033924392180796355,
@@ -39,6 +40,7 @@
       },
       "sled_return": {
         "peak_linear_momentum_Ns": 4.7225,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.3851152453697373,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -1.1553457361092123,
@@ -55,6 +57,7 @@
       "combined_inertia_kgm2": 344.9607122166667,
       "index": {
         "peak_linear_momentum_Ns": 0.208,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.005734881118244993,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.011469762236489985,
@@ -64,6 +67,7 @@
       },
       "sled_return": {
         "peak_linear_momentum_Ns": 4.7225,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.13020661577361523,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.3906198473208458,
@@ -80,6 +84,7 @@
       "combined_inertia_kgm2": 979.2779925314497,
       "index": {
         "peak_linear_momentum_Ns": 0.208,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.0020201706666701925,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.004040341333340385,
@@ -89,6 +94,7 @@
       },
       "sled_return": {
         "peak_linear_momentum_Ns": 4.7225,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.045866615256490294,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.13759984576947093,
@@ -105,6 +111,7 @@
       "combined_inertia_kgm2": 2993.1098286380375,
       "index": {
         "peak_linear_momentum_Ns": 0.208,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.0006609542543675724,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.0013219085087351448,
@@ -114,6 +121,7 @@
       },
       "sled_return": {
         "peak_linear_momentum_Ns": 4.7225,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.015006521472359903,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.04501956441707972,
@@ -130,6 +138,7 @@
       "combined_inertia_kgm2": 13591.261476920605,
       "index": {
         "peak_linear_momentum_Ns": 0.208,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.00014555739939129886,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.0002911147987825977,
@@ -139,6 +148,7 @@
       },
       "sled_return": {
         "peak_linear_momentum_Ns": 4.7225,
+        "net_internal_momentum_change_Ns": 0.0,
         "peak_body_rate_deg_s": 0.0033047827818529258,
         "residual_body_rate_deg_s": 0.0,
         "attitude_offset_deg": -0.00991434834555878,
@@ -188,5 +198,5 @@
       "verdict": "VOID; NO RCS PROPELLANT MODEL EXISTS"
     }
   ],
-  "verdict": "FAIL rows 3 and 4; row 7 VOID; cadence conclusion superseded"
+  "verdict": "row 1: PASS; row 2: PASS; row 3: FAIL; row 4: FAIL; row 5: PASS IN THE IDEAL RIGID-BODY MODEL; row 6: PASS BY THE CLOSED INTERNAL CYCLE; row 7: VOID; NO RCS PROPELLANT MODEL EXISTS; cadence conclusion superseded"
 }

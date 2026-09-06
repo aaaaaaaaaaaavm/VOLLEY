@@ -1,3 +1,20 @@
+# Verdict correction, 2026-09-06
+
+Rows 3 and 4 still fail. The verdicts previously were assigned strings and did not depend on
+their reported quantities. The script now applies the original bands to those quantities.
+`python3 analysis/attitude_budget.py --check` checks the stored verdicts, source identity and
+loaded-mass description without changing the result file. This is a consistency check; it does
+not independently validate the host inertia or the motion calculation.
+
+Row 5's zero time follows from checking the stopped rigid-body endpoint against its original
+rate threshold. If the endpoint misses that threshold, the script reports no settling time
+without a controller. Row 6 uses the summed endpoint momentum change over the declared index
+cycles. Neither result establishes structural settling, attitude restoration or a return of
+the centre of mass. Row 7 remains void. The previous corrections and original bands follow
+unchanged below; the current quantities are in `analysis/results/attitude_budget.json`.
+
+---
+
 # Correction, 2026-08-03
 
 I found that the 2026-07-31 result below violates angular-momentum conservation in its own

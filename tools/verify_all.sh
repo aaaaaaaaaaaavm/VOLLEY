@@ -30,6 +30,7 @@ run "companion payloads" python3 tools/check_companions.py
 run "A24-R reference"   python3 analysis/manifest_reference.py --check
 run "A2-R levers"      python3 analysis/levers_depth.py --check
 run "band integrity"      python3 tools/check_bands.py
+run "A13 band consistency" python3 analysis/attitude_budget.py --check
 run "results freshness"   python3 tools/check_results_fresh.py
 run "computational closure" python3 tools/check_computational_closure.py
 run "artifacts"          python3 tools/check_artifacts.py

@@ -1,5 +1,26 @@
 # Change log / audit record
 
+## 2026-09-06: register headline gate
+
+The register's opening table still carried superseded totals while its result JSON and other
+public pages carried the current counts. The table is now generated from the same classifications
+as the JSON. The check also rejects an entry whose written status disagrees with its classification.
+No entry or disposition changed. The dated classifier history is retained.
+
+## 2026-09-06: A13 verdict consistency
+
+A13 assigned its acceptance verdicts as strings, so a changed result could retain the old
+verdict. Verdicts now follow the recorded peak momentum, transient rate and endpoint momentum.
+The stopped rigid-body endpoint meets row 5 immediately; a nonzero endpoint is unevaluated
+without a controller. Row 7 remains void. The current run still fails rows 3 and 4. No acceptance
+band has changed, and no engineering item is closed by this bookkeeping correction.
+
+The result's inertia description still named the superseded loaded mass while the calculation
+read the current mass. It now reads the same source. The offline gate checks band consistency,
+source identity and that mass description. Fault injections and properties exercise the original
+strict boundaries, changed inputs and unavailable settling evidence. These checks do not
+establish the host inertia, flexible-body behaviour or control authority.
+
 ## 2026-09-06: BSX evidence and closure audit
 
 The full local gate found a stale README overview that CI did not check. Regenerated it and added the overview and register-derived BSX review to CI. Contributor and provenance pages still denied the existing test suite and finite-element evidence and named the superseded licence; corrected the current guidance.

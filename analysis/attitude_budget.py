@@ -10,6 +10,7 @@ import json
 import math
 import os
 import platform
+import sys
 import numpy as np
 
 import motor_model as mm
@@ -42,8 +43,8 @@ T_INDEX, T_RETURN, N_SHOTS = 4.0, 6.0, 12
 V_EXIT = mm.operating_point()['v_exit']    # never a literal; see mm.operating_point
 # DECLARED ASSUMPTION, N.m, and it is the one this script should be challenged on: a host
 # reaction-control authority. E5 records that NO host control-authority figure exists in this
-# project, and band 5 of A13 passes on this number. See P94 -- it is declared here rather than
-# sourced, because there is nothing to source it from.
+# project. The ideal endpoint has zero rate, so it needs no control torque to meet band 5.
+# The post-move attitude slew still assumes this authority. P94 remains open.
 RCS_TORQUE = 0.1
 HOST_MASSES = (200.0, 500.0, 1000.0, 2000.0, 5000.0)
 
@@ -78,6 +79,7 @@ def move(mass, distance, duration, inertia, n=20001, arm=None):
     angle_exact = -mass * arm * distance / inertia
     return dict(
         peak_linear_momentum_Ns=mass * 2.0 * distance / duration,
+        net_internal_momentum_change_Ns=mass * float(velocity[-1] - velocity[0]),
         peak_body_rate_deg_s=math.degrees(float(np.max(np.abs(body_rate)))),
         residual_body_rate_deg_s=math.degrees(abs(float(body_rate[-1]))),
         attitude_offset_deg=math.degrees(angle_exact),
@@ -105,23 +107,95 @@ def sweep():
     return rows
 
 
+def evaluate_bands(rows, shot_impulse):
+    """Apply A13's original bands to the reported rigid-body quantities.
+
+    Peak internal momentum answers rows 1 and 2. It is not residual host momentum.
+    Row 5 only evaluates rate at the stopped endpoint; a nonzero residual cannot be
+    assigned a settling time without an attitude controller. Row 6 sums the internal
+    momentum change, which establishes neither attitude restoration nor CoM return.
+    """
+    if not math.isfinite(shot_impulse) or shot_impulse <= 0:
+        raise ValueError("shot impulse must be positive and finite")
+    row200 = next(r for r in rows if r["host_kg"] == 200.0)
+    row500 = next(r for r in rows if r["host_kg"] == 500.0)
+    index_pct = 100 * row500["index"]["peak_linear_momentum_Ns"] / shot_impulse
+    return_pct = 100 * row500["sled_return"]["peak_linear_momentum_Ns"] / shot_impulse
+    rate500 = row500["sequential_peak_rate_deg_s"]
+    rate200 = row200["sequential_peak_rate_deg_s"]
+    endpoint_rate = row500["residual_rate_deg_s"]
+    stopped = math.isfinite(endpoint_rate) and abs(endpoint_rate) < 0.01
+    net_index = abs(N_SHOTS * row500["index"]["net_internal_momentum_change_Ns"])
+    index_limit = 0.05 * row500["index"]["peak_linear_momentum_Ns"]
+
+    def below(value, limit):
+        return math.isfinite(value) and 0 <= value < limit
+
+    return [
+        dict(row=1, result_pct=index_pct, verdict="PASS" if below(index_pct, 10) else "FAIL"),
+        dict(row=2, result_pct=return_pct, verdict="PASS" if below(return_pct, 20) else "FAIL"),
+        dict(row=3, result_deg_s=rate500, verdict="PASS" if below(rate500, 0.05) else "FAIL"),
+        dict(row=4, result_deg_s=rate200, verdict="PASS" if below(rate200, 0.2) else "FAIL"),
+        dict(row=5, result_s=0.0 if stopped else None,
+             verdict=("PASS IN THE IDEAL RIGID-BODY MODEL" if stopped else
+                      "VOID; NONZERO ENDPOINT RATE REQUIRES A CONTROLLER")),
+        dict(row=6, result_Ns=net_index,
+             verdict=("PASS BY THE CLOSED INTERNAL CYCLE" if below(net_index, index_limit)
+                      else "FAIL")),
+        dict(row=7, result_pct=None, verdict="VOID; NO RCS PROPELLANT MODEL EXISTS")]
+
+
+def source_hash():
+    """Hash canonical LF bytes, independent of checkout line endings."""
+    with open(__file__, "rb") as source:
+        return hashlib.sha256(source.read().replace(b"\r\n", b"\n")).hexdigest()
+
+
+def inertia_description():
+    return f"{M_DEPLOYER} kg box at the 1.839 x 0.530 m envelope"
+
+
+def verdict_summary(bands):
+    return "; ".join(f"row {b['row']}: {b['verdict']}" for b in bands) + "; cadence conclusion superseded"
+
+
+def check_result(result):
+    """Check verdicts against their recorded inputs and the declared provenance.
+
+    This is an exact consistency check, with no numerical acceptance tolerance.
+    It does not independently validate the host inertia or the motion calculation.
+    """
+    problems = []
+    try:
+        expected = evaluate_bands(result["host_sweep"], result["shot_impulse_Ns"])
+        if result["bands"] != expected:
+            problems.append("band verdicts or values disagree with the recorded inputs")
+        if result["verdict"] != verdict_summary(expected):
+            problems.append("summary verdict disagrees with the recorded inputs")
+        if result["software"]["source_sha256"] != source_hash():
+            problems.append("result was not produced by the current analysis source")
+        if result["assumptions"]["deployer_inertia"] != inertia_description():
+            problems.append("inertia description does not use the current loaded mass")
+    except (KeyError, TypeError, ValueError, StopIteration):
+        problems.append("result is missing or has invalid band inputs")
+    return problems
+
+
 def main():
+    path = os.path.join(RESULTS, "attitude_budget.json")
+    if "--check" in sys.argv:
+        with open(path, encoding="utf-8") as source:
+            problems = check_result(json.load(source))
+        for problem in problems:
+            print(f"A13: {problem}")
+        if not problems:
+            print("A13: verdicts agree with recorded inputs; source and loaded mass agree")
+        return int(bool(problems))
+
     rows = sweep()
     shot_impulse = M_SAT * V_EXIT
     campaign_impulse = N_SHOTS * shot_impulse
-    row200 = next(r for r in rows if r["host_kg"] == 200.0)
-    row500 = next(r for r in rows if r["host_kg"] == 500.0)
-    bands = [
-        dict(row=1, result_pct=100 * M_SAT * 2 * CASSETTE_PITCH / T_INDEX / shot_impulse,
-             verdict="PASS"),
-        dict(row=2, result_pct=100 * M_SLED * 2 * SLED_TRAVEL / T_RETURN / shot_impulse,
-             verdict="PASS"),
-        dict(row=3, result_deg_s=row500["sequential_peak_rate_deg_s"], verdict="FAIL"),
-        dict(row=4, result_deg_s=row200["sequential_peak_rate_deg_s"], verdict="FAIL"),
-        dict(row=5, result_s=0.0, verdict="PASS IN THE IDEAL RIGID-BODY MODEL"),
-        dict(row=6, result_Ns=0.0, verdict="PASS BY THE CLOSED INTERNAL CYCLE"),
-        dict(row=7, result_pct=None, verdict="VOID; NO RCS PROPELLANT MODEL EXISTS")]
-
+    bands = evaluate_bands(rows, shot_impulse)
     print("A13 corrected rigid-body momentum budget\n")
     print(f"{'host kg':>8} {'I total':>10} {'index peak':>12} {'return peak':>12} "
           f"{'residual':>11} {'offset worst':>13}")
@@ -132,19 +206,18 @@ def main():
               f"{row['residual_rate_deg_s']:11.5f} "
               f"{row['worst_case_attitude_offset_deg']:13.5f}")
     print(f"\nshot impulse {shot_impulse:.3f} N.s; twelve shots {campaign_impulse:.3f} N.s")
-    print("Rows 3 and 4 remain FAIL. Row 5 passes only in the ideal rigid-body model;")
-    print("structural ringing and the attitude-restoration schedule remain open.")
+    for band in bands:
+        print(f"Row {band['row']}: {band['verdict']}")
+    print("Structural ringing and the attitude-restoration schedule remain open.")
 
     # Hash canonical LF bytes so Git checkout line endings cannot change the provenance record.
-    with open(__file__, "rb") as source:
-        source_hash = hashlib.sha256(source.read().replace(b"\r\n", b"\n")).hexdigest()
     result = dict(
         analysis="A13 corrected",
         supersedes="A13 result run 2026-07-31",
         method="angular-momentum conservation with numerical time integration",
         software=dict(python=platform.python_version(), python_license="PSF License",
                       numpy=np.__version__, numpy_license="BSD-3-Clause",
-                      source_sha256=source_hash),
+                      source_sha256=source_hash()),
         solver_settings=dict(time_samples=20001, integration="numpy.trapezoid",
                              analytic_cross_check="closed-form triangular profile"),
         assumptions=dict(
@@ -152,17 +225,18 @@ def main():
             arm_m=ASSUMED_ARM,
             arm_status="assumed; cassette width is not a measured CoM lever arm",
             sequence="index and return are sequential; peak rates are not added",
-            deployer_inertia="124.5 kg box at the 1.839 x 0.530 m envelope",
+            deployer_inertia=inertia_description(),
             rigid_body="no structural modes, damping, flexible coupling, or controller"),
         shot_impulse_Ns=shot_impulse, campaign_impulse_Ns=campaign_impulse,
         host_sweep=rows, bands=bands,
-        verdict="FAIL rows 3 and 4; row 7 VOID; cadence conclusion superseded")
+        verdict=verdict_summary(bands))
     os.makedirs(RESULTS, exist_ok=True)
-    with open(os.path.join(RESULTS, "attitude_budget.json"), "w") as output:
+    with open(path, "w") as output:
         json.dump(result, output, indent=2)
         output.write("\n")
     print("\n-> results/attitude_budget.json")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

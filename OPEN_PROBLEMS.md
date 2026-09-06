@@ -5,14 +5,17 @@ fixed first. E-items are genuinely unsolved engineering.
 
 > ## How to read the counts
 >
-> 127 numbered entries, of which 53 are live. Every entry carries a `Status:` line written by
-> `tools/register_status.py`, which derives the headline counts from the entries themselves.
+> <!-- REGISTER_COUNTS:BEGIN -->
+> 153 numbered entries, of which 53 are live. Every entry carries a
+> `Status:` line written by `tools/register_status.py`. This block and the result JSON
+> are generated from the same classifications.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | 53 (32 P, 21 E) | open engineering; something still has to be done |
-> | `CORRECTED` | 41 | found, fixed and propagated, retained as the published record, not as debt |
-> | `CLOSED` | 35 | resolved, with the closer named in the entry |
+> | `LIVE` | 53 (33 P, 20 E) | open engineering; something still has to be done |
+> | `CORRECTED` | 57 | found, fixed and propagated, retained as the published record |
+> | `CLOSED` | 43 | resolved, with the closer named in the entry |
+> <!-- REGISTER_COUNTS:END -->
 >
 > Four of those moves are a classifier repair, not new engineering. `\bRESOLVED\b` matched
 > inside *depth-resolved*, and the tool read its own `Status:` line back in on the next run, so a
@@ -26,6 +29,10 @@ fixed first. E-items are genuinely unsolved engineering.
 > because the table is still hand-copied from the tool's output and a promise the checks do not
 > enforce is worth less than none. Run `python3 tools/register_status.py` and compare before
 > quoting these numbers anywhere.
+>
+> Update 2026-09-06. The current count block above is now generated and checked alongside the
+> result JSON. The earlier failure and classifier history remain below it. No entry changed
+> disposition in this repair.
 >
 > This distinction did not exist until 2026-08-06 and its absence was itself a defect: a
 > reader could not separate live engineering debt from published history, so "37 defects" counted
