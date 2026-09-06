@@ -40,6 +40,8 @@ extract one reusable part of its engineering method.</sub></p>
 
 <p align="center"><sub>External aerodynamics in OpenFOAM, <b>581&nbsp;779 cells</b> &middot; the Halbach airgap field resolved through the array's 90&nbsp;mm depth &middot; every kilogram attributed to the requirement that causes it. <b>All three are model output. Nothing in the project has been built, fired or measured</b> &mdash; and the repository leads with that rather than hiding it.</sub></p>
 
+[Current BSX evidence review and Gen6 handoff](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/BSX_REVIEW.md). Gen5 is frozen with exceptions; Gen6 is an open design study.
+
 ### The thing I'd actually like you to look at
 
 The idea is not really the motor. A launch vehicle's upper stage does its job in ten minutes and
@@ -74,9 +76,9 @@ replacing the other.
 ### What it proved, and what it lost
 
 It proved one thing: a commanded, per-satellite change in orbital energy, on a satellite that
-is never modified mechanically or electrically. A spring gives every satellite the same push, and
-its designed differential is exactly zero, that is categorical, and no amount of mass correction
-touches it.
+is intended to remain mechanically and electrically unmodified. Different spring energies and
+payload masses can also produce different velocities. The distinction I am studying is a reusable
+drive that commands the release condition for each satellite, with its mass and interface costs stated.
 
 It lost two arguments to its own analyses, and both are on the front page. Mass parity with a
 canister of springs is withdrawn: an acceptance band written before the comparison script

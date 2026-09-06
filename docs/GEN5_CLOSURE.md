@@ -91,7 +91,7 @@ seven with their evidence.
 Criterion 1 is the one that matters: above roughly 2 kg per satellite a rational customer buys a
 propulsion module instead. Gen5 is 10.547 kg. [A35](../validation/A35_constraint_ledger.md)
 attributed every kilogram to the requirement causing it and found 88.67 kg, 70.06 %, survives
-the deletion of every requirement in all 64 corners, so there is no architecture that reaches
+the deletion of every requirement in all 64 corners, so none of the evaluated deletion combinations reaches
 2 kg. A36 closed the manifest route. Only a smaller payload class remains, and that decision is
 deferred rather than taken.
 
@@ -205,7 +205,7 @@ ADRs 032 through 036, and the register, and it is future work.
 
 ---
 
-Register reconciled 2026-09-06: 153 numbered entries, 55 live, 57 corrected and retained, 41 closed.
-75 run sheets covering 72 analyses across A1, A71, A3, A26 and A60 were numbered and never
+Register reconciled 2026-09-06: 153 numbered entries, 53 live, 57 corrected and retained, 43 closed.
+77 run sheets covering 72 analyses across A1, A71, A3, A26 and A60 were numbered and never
 written, each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.

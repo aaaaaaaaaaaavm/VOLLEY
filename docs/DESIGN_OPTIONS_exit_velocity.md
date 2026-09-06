@@ -1,3 +1,5 @@
+> Updated 2026-09-06 by [A2-R](../validation/A2R_depth_resolved_levers.md): the current generated table uses separately integrated depth-resolved constants for all four magnetic geometries. The earlier discussion below is retained as design history; it must not supply a competing current operating point.
+
 # Design options: recovering exit velocity
 
 Status: exploration, not a result. Every row below drives `analysis/motor_model.py` with
@@ -28,16 +30,16 @@ wherever the magnetic geometry changes.
 
 | Lever | Sled | K<sub>t</sub> | K | Stroke | Exit velocity | J | Peak A | Efficiency | Bank ESR ceiling |
 |---|---|---|---|---|---|---|---|---|---|
-| Superseded 4.86 kg assumption | 4.86 kg | 11.03 | 140 | 1.30 m | 20.20 m/s | 21.0 | 405 | 30.8 % | 58 mohm |
-| As drawn (the baseline) | 9.45 kg | 11.03 | 140 | 1.30 m | 16.39 m/s | 21.0 | 339 | 19.2 % | 68 mohm |
-| Pocket 40 % of the titanium | 7.50 kg | 11.03 | 140 | 1.30 m | 17.72 m/s | 21.0 | 362 | 22.9 % | 64 mohm |
-| Pocket 60 % (aggressive) | 6.53 kg | 11.03 | 140 | 1.30 m | 18.52 m/s | 21.0 | 376 | 25.3 % | 62 mohm |
-| Magnets 8 to 6 mm | 8.53 kg | 9.14 | 140 | 1.30 m | 15.46 m/s | 21.0 | 275 | 19.0 % | 84 mohm |
-| Magnets 8 to 5 mm | 8.07 kg | 8.02 | 140 | 1.30 m | 14.75 m/s | 21.0 | 238 | 18.4 % | 97 mohm |
-| Raise sheet current to 213 kA/m | 9.45 kg | 11.03 | 213 | 1.30 m | 20.22 m/s | 31.9 | 730 | 17.3 % | 32 mohm |
-| Lengthen the stroke to 1.97 m | 9.45 kg | 11.03 | 140 | 1.97 m | 20.18 m/s | 21.0 | 459 | 17.6 % | 48 mohm |
-| Two-layer stator (G3-D4) | 9.45 kg | 7.33 | 280 | 1.30 m | 18.90 m/s | 21.0 | 583 | 17.2 % | 39 mohm |
-| Two-layer + 40 % pocketing | 7.50 kg | 7.33 | 280 | 1.30 m | 20.43 m/s | 21.0 | 622 | 20.6 % | 37 mohm |
+| Superseded 4.86 kg assumption | 4.86 kg | 10.54 | 140 | 1.30 m | **19.74 m/s** | 21.0 | 381 | 30.3 % | 61 mohm |
+| As drawn (the baseline) | 9.45 kg | 10.54 | 140 | 1.30 m | **16.03 m/s** | 21.0 | 320 | 18.8 % | 72 mohm |
+| Pocket 40 % of the titanium | 7.50 kg | 10.54 | 140 | 1.30 m | **17.33 m/s** | 21.0 | 341 | 22.5 % | 68 mohm |
+| Pocket 60 % (aggressive) | 6.53 kg | 10.54 | 140 | 1.30 m | **18.11 m/s** | 21.0 | 354 | 24.9 % | 66 mohm |
+| Magnets 8 to 6 mm | 8.53 kg | 8.87 | 140 | 1.30 m | **15.22 m/s** | 21.0 | 265 | 18.7 % | 87 mohm |
+| Magnets 8 to 5 mm | 8.07 kg | 7.85 | 140 | 1.30 m | **14.59 m/s** | 21.0 | 232 | 18.2 % | 99 mohm |
+| Raise sheet current to 213 kA/m | 9.45 kg | 10.54 | 213 | 1.30 m | **19.76 m/s** | 31.9 | 686 | 17.0 % | 34 mohm |
+| Lengthen the stroke to 1.97 m | 9.45 kg | 10.54 | 140 | 1.97 m | **19.72 m/s** | 21.0 | 433 | 17.2 % | 51 mohm |
+| Two-layer stator (G3-D4) | 9.45 kg | 6.63 | 280 | 1.30 m | **17.97 m/s** | 21.0 | 512 | 16.3 % | 45 mohm |
+| Two-layer + 40 % pocketing | 7.50 kg | 6.63 | 280 | 1.30 m | **19.43 m/s** | 21.0 | 545 | 19.6 % | 42 mohm |
 
 <!-- LEVER-TABLE-END -->
 

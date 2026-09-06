@@ -29,7 +29,7 @@ Gen6 already exists as a stage-integrated cold-gas design study. It is not a bla
 | Scope | Computation | Hardware | Host data | Flight/operations | Decision |
 |---|---:|---:|---:|---:|---:|
 | GEN6 | 18 | 4 | 5 | 1 | 1 |
-| GEN5 | 13 | 0 | 0 | 0 | 3 |
+| GEN5 | 11 | 0 | 0 | 0 | 3 |
 | PROGRAMME | 3 | 0 | 0 | 1 | 6 |
 
 ## GEN6 live items
@@ -79,8 +79,6 @@ Gen6 already exists as a stage-integrated cold-gas design study. It is not a bla
 | [P36](../OPEN_PROBLEMS.md) | COMPUTATION | a dynamic design case for the track |
 | [P45](../OPEN_PROBLEMS.md) | COMPUTATION | flywheel specific energy from flown units |
 | [P52](../OPEN_PROBLEMS.md) | COMPUTATION | segment handover through the track mode |
-| [P54](../OPEN_PROBLEMS.md) | COMPUTATION | the band is against a superseded literal; the run is A24 |
-| [P55](../OPEN_PROBLEMS.md) | COMPUTATION | re-price the levers at the depth-resolved K_t |
 | [E33](../OPEN_PROBLEMS.md) | COMPUTATION | magnet tolerance and the residual dipole |
 | [E34](../OPEN_PROBLEMS.md) | COMPUTATION | a shock response spectrum at the cassette interface |
 | [E35](../OPEN_PROBLEMS.md) | COMPUTATION | vary the payload field exposure as a design variable |
@@ -104,4 +102,4 @@ Gen6 already exists as a stage-integrated cold-gas design study. It is not a bla
 
 ## Reproduce
 
-Run `python tools/make_bsx_review.py --check` and `bash tools/verify_all.sh` from a clean committed checkout. The scripts report skipped or unavailable checks. See [CONTRIBUTING.md](CONTRIBUTING.md) for dependencies and companion publication order.
+Run `python tools/make_bsx_review.py --check` and `bash tools/verify_all.sh` from a clean committed checkout. The scripts report skipped or unavailable checks. See [CONTRIBUTING.md](CONTRIBUTING.md) for dependencies and companion publication order. [BSX_PORTFOLIO_AUDIT.md](BSX_PORTFOLIO_AUDIT.md) records the repositories and checks covered by this review.

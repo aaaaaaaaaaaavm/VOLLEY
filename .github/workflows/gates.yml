@@ -34,6 +34,7 @@ jobs:
           git init -q .
           git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
           git fetch -q --prune origin +refs/heads/*:refs/remotes/origin/*
+          git fetch -q origin "${{ github.sha }}"
           git checkout -q --detach "${{ github.sha }}"
           git log --oneline -1
 
@@ -58,6 +59,10 @@ jobs:
         run: python3 tools/check_crossrefs.py
       - name: companion payloads
         run: python3 tools/check_companions.py
+      - name: current-reference and depth-resolved reruns
+        run: |
+          python3 analysis/manifest_reference.py --check
+          python3 analysis/levers_depth.py --check
       - name: band integrity
         run: python3 tools/check_bands.py
       - name: results freshness
@@ -101,6 +106,7 @@ jobs:
           git init -q .
           git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
           git fetch -q --prune origin +refs/heads/*:refs/remotes/origin/*
+          git fetch -q origin "${{ github.sha }}"
           git checkout -q --detach "${{ github.sha }}"
       - name: system solvers
         run: |

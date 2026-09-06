@@ -1,4 +1,52 @@
 {
+  "run": "A2-R",
+  "declaration_commit": "e0a3cf611824efe19d045cab4fc73dcdfaa7abca",
+  "evidence": "Lorentz-integral quadrature and modelled lever trade; no measured or independent 3-D thrust validation",
+  "geometries": {
+    "baseline": {
+      "magnet_thickness_m": 0.008,
+      "gap_m": 0.012,
+      "winding_thickness_m": 0.01,
+      "kt_9": 0.010538611491665297,
+      "kt_15": 0.01053882506550435,
+      "depth_relative_difference": 2.0265431651567134e-05,
+      "pass": true
+    },
+    "magnet_6mm": {
+      "magnet_thickness_m": 0.006,
+      "gap_m": 0.012,
+      "winding_thickness_m": 0.01,
+      "kt_9": 0.008869065865530816,
+      "kt_15": 0.008869331648755027,
+      "depth_relative_difference": 2.996654480136307e-05,
+      "pass": true
+    },
+    "magnet_5mm": {
+      "magnet_thickness_m": 0.005,
+      "gap_m": 0.012,
+      "winding_thickness_m": 0.01,
+      "kt_9": 0.007848058684427383,
+      "kt_15": 0.007848333068809403,
+      "depth_relative_difference": 3.496084832477209e-05,
+      "pass": true
+    },
+    "two_layer": {
+      "magnet_thickness_m": 0.008,
+      "gap_m": 0.022,
+      "winding_thickness_m": 0.02,
+      "kt_9": 0.006627476341929945,
+      "kt_15": 0.006627575044342549,
+      "depth_relative_difference": 1.4892688795509201e-05,
+      "pass": true
+    }
+  },
+  "baseline_relative_difference": 0.00013173703365298994,
+  "checks": {
+    "geometry_convergence": true,
+    "baseline_reference": true,
+    "all_original_rows": true
+  },
+  "pass": true,
   "levers": [
     {
       "lever": "Superseded 4.86 kg assumption",
@@ -150,9 +198,5 @@
       "esr_ceiling_mohm": 42.0,
       "note": "the only row that met the old target"
     }
-  ],
-  "string_esr_mohm": [
-    116,
-    185
   ]
 }

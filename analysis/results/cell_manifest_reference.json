@@ -1,0 +1,55 @@
+{
+  "run": "A24-R",
+  "evidence": "model consistency only",
+  "declaration_commit": "e0a3cf611824efe19d045cab4fc73dcdfaa7abca",
+  "source_sha256": {
+    "cell_manifest.json": "775ad5e9a2fe1bc79f0271240e26f809be27723bda9d0cf69da9b5987b4d7739",
+    "payload_family.json": "4032e58888c90d5faaf6acce411ca1e463d54d0326607f5b23f90cc2dc6d542c"
+  },
+  "fixed_cell_kg_per_satellite": 10.55,
+  "reference_kg_per_satellite": 10.55,
+  "relative_difference": 0.0,
+  "checks": {
+    "count": true,
+    "mass_reference": true
+  },
+  "pass": true,
+  "original_a24_bands": [
+    {
+      "band": "1",
+      "name": "cell model reproduces the 3U machine",
+      "detail": "12 per load, 10.55 kg/sat (against 12 and 6.375)",
+      "pass_": false
+    },
+    {
+      "band": "2",
+      "name": "designed cell never beats the volume ratio",
+      "detail": "all classes at or below",
+      "pass_": true
+    },
+    {
+      "band": "3",
+      "name": "a designed class closes kill criterion 1 (<= 2.0 kg/sat)",
+      "detail": "PocketQube 1P 0.44, PocketQube 3P 1.319",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "whole cells only, refusals printed as refusals",
+      "detail": "3 refused (ThinSat, 6U CubeSat, 12U CubeSat), 0 fractional",
+      "pass_": true
+    },
+    {
+      "band": "5",
+      "name": "intra-cell differential <= 1 % of v_exit (0.160 m/s)",
+      "detail": "5 classes share cells, required 0.0833 m/s",
+      "pass_": true
+    },
+    {
+      "band": "6",
+      "name": "mechanism shifts cell mean by <= 0.5 % (0.080 m/s)",
+      "detail": "worst 8.32e-02 m/s",
+      "pass_": false
+    }
+  ]
+}

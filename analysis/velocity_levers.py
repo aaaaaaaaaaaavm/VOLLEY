@@ -111,9 +111,20 @@ def esr_ceiling(sled, Kt, K_lim, accel, wind, lo=0.001, hi=ESR_CEILING_MAX, tol=
     return lo
 
 
-def levers():
+def levers(kt_by_geometry=None):
+    # The literals in LEVERS are retained as the pre-P55 record. Current execution
+    # uses separately derived constants for each geometry, never a common scale factor.
+    if kt_by_geometry is None:
+        with open(os.path.join(RESULTS, "velocity_levers_depth.json")) as handle:
+            depth = json.load(handle)
+        if not depth["pass"]:
+            raise ValueError("A2-R depth constants did not meet their declared checks")
+        kt_by_geometry = {name: row["kt_9"] for name, row in depth["geometries"].items()}
     rows = []
-    for label, sled, Kt, K_lim, accel, wind, note in LEVERS:
+    geometry_keys = ("baseline", "baseline", "baseline", "baseline", "magnet_6mm",
+                     "magnet_5mm", "baseline", "baseline", "two_layer", "two_layer")
+    for (label, sled, old_Kt, K_lim, accel, wind, note), geometry in zip(LEVERS, geometry_keys):
+        Kt = kt_by_geometry[geometry]
         with _patched(sled, accel, mm.R_ESR, wind):
             s = mm.shot(Kt, K_lim=K_lim)
             rg = mm.regen_brake(Kt, s['v_exit'], mm.V0 * (1 - s['sag_pct'] / 100),

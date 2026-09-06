@@ -27,6 +27,8 @@ run "BSX review"        python3 tools/make_bsx_review.py --check
 run "README overview"    python3 tools/make_repo_overview.py --check
 run "cross-references"   python3 tools/check_crossrefs.py
 run "companion payloads" python3 tools/check_companions.py
+run "A24-R reference"   python3 analysis/manifest_reference.py --check
+run "A2-R levers"      python3 analysis/levers_depth.py --check
 run "band integrity"      python3 tools/check_bands.py
 run "results freshness"   python3 tools/check_results_fresh.py
 run "computational closure" python3 tools/check_computational_closure.py

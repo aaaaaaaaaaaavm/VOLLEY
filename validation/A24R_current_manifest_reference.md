@@ -11,3 +11,7 @@ Does the fixed-cell 3U calculation agree with the current independent payload-fa
 3. Both generators must reproduce their committed inputs to this comparison. Preserve A24 bands 2-6 and report their existing verdicts separately; they are not re-declared or overwritten by A24-R.
 
 A pass closes P54's stale-reference comparison only. It does not close the mass kill criterion, select D2, or erase A24 band 6. Results belong in a new `analysis/results/cell_manifest_reference.json`.
+
+## Result, 2026-09-06
+
+Declared at commit `e0a3cf611824efe19d045cab4fc73dcdfaa7abca`. Both generators reproduced before this comparison. Count: 12 in both. Fixed-cell mass: 10.55 kg/satellite; current reference: 10.55 kg/satellite; relative difference: 0.000000000%. Both current-reference checks pass. Original A24 bands 1 and 6 remain failed. The new result is [cell_manifest_reference.json](../analysis/results/cell_manifest_reference.json).

@@ -84,7 +84,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
       <span class="badge">CC BY 4.0</span>
       <span class="badge warn">TRL 2-3</span>
       <span class="badge bad">Model outputs only, nothing built or measured</span>
-      <span class="badge">153 register entries, 55 live</span>
+      <span class="badge">153 register entries, 53 live</span>
       <span class="badge">7 kill criteria, 3 crossed</span>
     </div>
     <div class="pills">
@@ -288,7 +288,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
     <tr><td>E4</td><td>Nothing has been built, fired or measured at any scale. No analysis on this page changes that</td></tr>
     <tr><td>P67</td><td>The seal friction has never been measured, and it now chooses between two architectures. It owns 98.7 % of Gen6's dispersion, and every published dispersion figure descends from A41's <em>allowance</em>, 4.68x looser than the specification A61 derived. At or below 17.8 N the trim stage is deleted; above 22.3 N it is needed (ADR-036). <em>One bench test, and it can delete a subsystem rather than add one</em></td></tr>
     <tr><td>P68</td><td>ADR-032's first falsifier has fired. The stage credit breaks even at 11.0 % at A56's sized store, not the 30 % the ADR claimed, and 58.6 % of it is a skin on a vehicle nobody has agreed to lend. <em>A45-R2 is the only run that has ever moved the allowance, and a 42 % lighter store moved the hostile reading 5.7 %, so the store is not what is wrong with the mass case</em></td></tr>
-    <tr><td>P59</td><td>Kill criterion 1 is crossed at 5.3x. A35 attributed every kilogram to its cause and found 88.67 kg survives the deletion of every requirement in all 64 corners, so there is no architecture that reaches 2 kg. A36 closed the manifest route. Only a smaller payload class remains</td></tr>
+    <tr><td>P59</td><td>Kill criterion 1 is crossed at 5.3x. A35 attributed every kilogram to its cause and found 88.67 kg survives the deletion of every requirement in all 64 corners, so none of the evaluated deletion combinations reaches 2 kg. A36 closed the manifest route. Only a smaller payload class remains</td></tr>
     <tr><td>P16</td><td>The invariance claim in the paper's own abstract is falsified. GMAT gives x2.074 at low solar activity against a &le;5 % band. <code>astro.py</code> scales density uniformly, which preserves a ratio <em>by construction</em></td></tr>
     <tr><td>P84</td><td>ADR-034 moved the design point in the parameter file and eleven documents and not in the analysis scripts. Nothing compares the two, so every gate stayed green</td></tr>
   </table>
@@ -428,7 +428,7 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);
     <tr><td>A29 CFD</td><td>run on the script-built Gen5 CAD; two of five bands failed and neither failure is in the machine</td></tr>
     <tr><td>A61 the seal, specified rather than allowed</td><td>seven of eight, the specification is 17.8 N, 4.00 % of the piston's pressure force, and the <em>thermal</em> case sets it. Band 6 failed and that is the finding: the seal must be better to survive its own friction heating (4.00 %) than to make the trim stage unnecessary (5.00 %). A41's allowance is 4.68x looser, and the project had been sized against it since A41 without anyone choosing it. Drives ADR-036</td></tr>
     <tr><td>A65 the per-cell ejector, re-asked</td><td>nine of ten, A53 failed by 148x because a spring stores 4.5 J and clearing the 8 m tube costs 667.2 J. A gas generator of the automotive restraint class delivers 2331.6 J at the smallest published charge, <em>after</em> cooling to the tube's 473 K ceiling. Band 4 misses A53's inherited 0.25 kg per-cell threshold at 0.4350 kg, 46.6 % of it a minimum-gauge steel plenum, not the pyrotechnic parts (P91)</td></tr>
-    <tr><td>A35 constraint ledger</td><td>88.67 kg survives every requirement deletion in all 64 corners. There is no architecture that reaches 2 kg</td></tr>
+    <tr><td>A35 constraint ledger</td><td>88.67 kg survives every requirement deletion in all 64 corners. None of the evaluated deletion combinations reaches 2 kg</td></tr>
     <tr><td>A40 blowdown transient</td><td>run, five of eight FAIL, a fixed orifice cannot hold force over a stroke. 14.16 m/s against a 30 m/s band</td></tr>
     <tr><td>A44 / A55 dispersion and trim authority</td><td>A44 at 2.18 m: 1.113 % at 3&sigma;, 93.4 % of it seal friction, and no instrumentation route out. A55 re-ran it at ADR-034's 8.0 m: 3.980 %, 98.7 % seal, and the trim section 3.57x under-authority, resized 39.7 to 144 mm. ADR-036 then suspended the stage: at the specified 17.8&nbsp;N seal it may not be needed at all (P67)</td></tr>
     <tr><td>A47 Gen6 FMEA</td><td>eight of eight, the architecture change buys +0.37 satellites; a per-cell ejector buys +2.27</td></tr>

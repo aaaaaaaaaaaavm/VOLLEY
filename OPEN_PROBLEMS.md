@@ -2569,9 +2569,9 @@ What this does not fix. `tools/propagate_baseline.py` still walks `.md` and `.ht
 repair here removes the *literals it could not see*, rather than teaching it to see them, which
 is the stronger fix, but only for the values that were de-forked.
 
-### P54. A24 band 1 fails against a reference literal that has since been corrected: MEDIUM, NEW 2026-08-14
-> **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — the band is against a superseded literal; the run is A24
+### P54. A24 band 1 fails against a reference literal that has since been corrected: CLOSED 2026-09-06 by a separately declared rerun
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> A24-R uses the unchanged 1 percent tolerance against the current payload-family 3U reference. The new comparison passes; A24 original bands 1 and 6 remain failed and are preserved in its result. This closes the stale-reference comparison only.
 
 A24 band 1 requires the fixed-cell model to return deployer mass per satellite within ±1 % of
 `payload_family.py`'s figure, and encodes that figure as the literal 6.375 kg. That literal
@@ -2590,9 +2590,10 @@ What would close it. A re-declared A24-R band 1 stating the tolerance against
 `payload_family.py`'s *current* output rather than a snapshot of it, dated, with the original
 band quoted beside it, and committed before the re-run. Every other band in A24 is unaffected.
 
-### P55. `velocity_levers.py` prices every lever at the superseded centre-plane K<sub>t</sub>: MEDIUM, NEW 2026-08-14
-> **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN5` · **Next step:** `COMPUTATION` — re-price the levers at the depth-resolved K_t
+
+### P55. `velocity_levers.py` prices every lever at the superseded centre-plane K<sub>t</sub>: CLOSED 2026-09-06 by a separately declared rerun
+> **Status:** `CLOSED` — resolved; see the entry for what closed it
+> A2-R derived all four magnetic geometries through 9-point depth quadrature and checked each against 15 points. Every depth difference is below 0.004 percent, against the declared 0.5 percent band. All ten levers were rerun and the current table regenerated. The original result remains in analysis/results/history/velocity_levers_pre_depth.json.
 
 `analysis/velocity_levers.py` drives `motor_model.shot()` with a per-row K<sub>t</sub>, and every
 row carries a value derived before [ADR-030](docs/adr/030-apply-the-depth-resolved-thrust-constant.md): the
@@ -2608,6 +2609,7 @@ them would produce four numbers that look derived and are assumed.
 What would close it. Re-derive K<sub>t</sub> for each distinct magnetic geometry in the table
 with `thrust_constant(nz=9)`, the same way the as-drawn value was re-derived, and re-run. It is
 one solve per distinct geometry, four in total.
+
 
 ### P56. The phase-spacing claim is compared against the wrong baseline: CORRECTED 2026-08-14 by A21-R
 > **Status:** `LIVE` — open engineering; something still has to be done

@@ -47,7 +47,7 @@ def facts():
         'register_corrected': reg['corrected'],
         'register_closed': reg['closed'],
         # --- Gen5 operating point ---
-        'kt': motor['Kt_N_per_kA'] * 1000.0,
+        'kt': motor['Kt_N_per_kA'],
         'ripple_pct': motor['ripple_pct'],
         'v_exit': motor['shot']['v_exit'],
         'a_g': motor['shot']['a_g'],

@@ -4,7 +4,9 @@
 
 The full local gate found a stale README overview that CI did not check. Regenerated it and added the overview and register-derived BSX review to CI. Contributor and provenance pages still denied the existing test suite and finite-element evidence and named the superseded licence; corrected the current guidance.
 
-Reconciled P37, P46, E29 and P95 against their already-published closing evidence. These are disposition repairs, not new experiments or changed thresholds. Gen5 retains 13 computation items and three decisions. Gen6 retains 18 computation items. Replaced the stale state page with a current handoff and narrowed an unsupported absolute comparison with spring deployers. Historical results and manuscript content are preserved.
+A24-R closes P54 against the current mass reference while preserving A24 failures. A2-R closes P55 by re-deriving four depth-resolved constants and recomputing all ten lever rows, preserving the previous results as history. Both were separately declared before implementation at e0a3cf611824efe19d045cab4fc73dcdfaa7abca.
+
+Reconciled P37, P46, E29 and P95 against their already-published closing evidence. These are disposition repairs, not new experiments or changed thresholds. Gen5 retains 11 computation items and three decisions. Gen6 retains 18 computation items. Replaced the stale state page with a current handoff and narrowed an unsupported absolute comparison with spring deployers. Historical results and manuscript content are preserved.
 
 
 Every change made to this repository after the initial export is recorded here, so that

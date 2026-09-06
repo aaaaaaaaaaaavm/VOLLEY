@@ -113,7 +113,7 @@ integration column apart, because collapsing them produces a false history.
 > as failure before it runs, every defect is numbered including the ones that damage the work's
 > own claims, and nothing here has been built, fired or measured.
 >
-> What that has produced, which is the part worth judging: 75 run sheets covering 72 analyses A1
+> What that has produced, which is the part worth judging: 77 run sheets covering 72 analyses A1
 > to A71 (A3, A26 and A60 were numbered and never written), each against a band written down
 > before its script existed. Three failed outright, one of them falsifying a claim in this
 > project's own abstract. On three further occasions a declared band caught a bug in the analysis
@@ -550,8 +550,8 @@ what that computation does not cover, what it got wrong, and what has been corre
 |---|---|
 | Maturity | TRL 2 to 3 |
 | Built, fired or measured | Nothing, at any scale. E4 is open and no analysis on this page changes it |
-| Defect register | 153 numbered entries, 55 live, in [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
-| Validation | 75 run sheets, 72 analyses across A1 to A71 (A3, A26 and A60 were numbered and never written), each against a band declared before the run. Three failed outright |
+| Defect register | 153 numbered entries, 53 live, in [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| Validation | 77 run sheets, 72 analyses across A1 to A75 (A3, A26 and A60 were numbered and never written), each against a band declared before the run. Three failed outright |
 | Kill criteria | Seven, three crossed, in [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 
 ### The three defects that matter more than the rest
@@ -568,7 +568,7 @@ Above roughly 2 kg per satellite, a rational customer buys a propulsion module i
 [A35](validation/A35_constraint_ledger.md) attributed every kilogram to the requirement causing it
 and found that 88.67 kg, or 70.06 %, survives the deletion of every requirement in all 64 corners
 ([P95](OPEN_PROBLEMS.md): A35's run sheet still says 49.23 kg at the pre-A46 dry mass), so there
-is no architecture that reaches 2 kg. Gen5 is 10.547 kg; Gen6 is 1.2145 kg added but 10.547 kg on
+is no evaluated deletion combination that reaches 2 kg. Gen5 is 10.547 kg; Gen6 is 1.2145 kg added but 10.547 kg on
 dry mass, and both numerators are reported wherever either appears. The threshold has never been
 moved, because a threshold revised after a result is known is not a threshold. The honest options
 remain what they were: change the payload class, or publish the criterion as crossed.

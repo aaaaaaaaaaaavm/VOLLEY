@@ -15,7 +15,7 @@ def render():
         text += ["", "## "+scope+" live items", "", "| Entry | Next step class | Action that would move it |", "|---|---|---|"]
         for tag,s,cls,action in rows:
             if s==scope: text.append(f"| [{tag}](../OPEN_PROBLEMS.md) | {cls} | {action.replace('|','/')} |")
-    text += ["", "## Reproduce", "", "Run `python tools/make_bsx_review.py --check` and `bash tools/verify_all.sh` from a clean committed checkout. The scripts report skipped or unavailable checks. See [CONTRIBUTING.md](CONTRIBUTING.md) for dependencies and companion publication order.", ""]
+    text += ["", "## Reproduce", "", "Run `python tools/make_bsx_review.py --check` and `bash tools/verify_all.sh` from a clean committed checkout. The scripts report skipped or unavailable checks. See [CONTRIBUTING.md](CONTRIBUTING.md) for dependencies and companion publication order. [BSX_PORTFOLIO_AUDIT.md](BSX_PORTFOLIO_AUDIT.md) records the repositories and checks covered by this review.", ""]
     return "\n".join(text)
 def main():
     p=argparse.ArgumentParser();p.add_argument("--check",action="store_true");a=p.parse_args();text=render()
