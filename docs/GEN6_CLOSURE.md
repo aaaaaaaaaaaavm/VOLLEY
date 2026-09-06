@@ -1,3 +1,5 @@
+> Reading guide updated 2026-09-06: this is the historical Gen6 planning sequence. For current dispositions use [BSX_REVIEW.md](BSX_REVIEW.md) and [COMPUTATIONAL_CLOSURE.md](COMPUTATIONAL_CLOSURE.md). Later A67-A75 evidence and the P92 architecture decision supersede the unrun-work statements below.
+
 # What stands between Gen6 and being the frozen baseline
 
 Asked directly: make Gen6 the final and most stable version. This is what that costs.

@@ -195,3 +195,6 @@ repository is MIT, commit input decks and result JSON, never vendored solver cod
 Orekit (Apache-2.0), Project Chrono (BSD-3) and pyleecan (Apache-2.0) are permissive.
 NASA's CARA tools are MATLAB under a NASA open-source agreement; parts run under Octave,
 and the licence should be read before anything is redistributed.
+
+| A24R | Current-reference manifest agreement | Python | P54 | DECLARED 2026-09-06; [run sheet](A24R_current_manifest_reference.md) |
+| A2R | Depth-resolved velocity levers | magpylib/Lorentz integral | P55 | DECLARED 2026-09-06; [run sheet](A2R_depth_resolved_levers.md) |

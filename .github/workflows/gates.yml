@@ -50,6 +50,10 @@ jobs:
         run: python3 tools/make_baseline.py --check
       - name: public surfaces
         run: python3 tools/check_public.py
+      - name: README overview
+        run: python3 tools/make_repo_overview.py --check
+      - name: BSX review
+        run: python3 tools/make_bsx_review.py --check
       - name: cross-references
         run: python3 tools/check_crossrefs.py
       - name: companion payloads

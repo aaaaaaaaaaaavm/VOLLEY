@@ -41,7 +41,7 @@ under its status:
 
 Scope is `GEN6`, `GEN5` or `PROGRAMME`, and closure is counted over `GEN6` only. Gen5 is a
 frozen baseline; reclassifying its history to shrink the number would be the same dishonesty in
-a different place, so its sixteen live computation items are counted separately and left alone.
+a different place, so its thirteen live computation items are counted separately and left alone.
 
 > The gate reads the words, because it cannot read intent. An entry classified `HARDWARE`
 > whose next step says *model*, *simulate*, *compute*, *design the* or *select from public data*
@@ -56,7 +56,7 @@ a different place, so its sixteen live computation items are counted separately 
 |---|---:|---:|---:|---:|---:|
 | GEN6 | 18 | 4 | 5 | 1 | 1 |
 | PROGRAMME | 3 | 0 | 0 | 1 | 6 |
-| GEN5 | 16 | 0 | 0 | 0 | 4 |
+| GEN5 | 13 | 0 | 0 | 0 | 3 |
 
 ---
 

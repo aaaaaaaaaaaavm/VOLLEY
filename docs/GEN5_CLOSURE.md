@@ -1,6 +1,6 @@
-# Gen5, closed
+# Gen5, frozen with declared exceptions
 
-Phase I closes here. This page is the whole Gen5 case in one place: what it is, what every
+Phase I baseline closure is recorded here. This page is the whole Gen5 case in one place: what it is, what every
 headline number rests on, what failed, and what is deliberately left open. It is written to be
 checked, not to persuade.
 
@@ -95,6 +95,13 @@ the deletion of every requirement in all 64 corners, so there is no architecture
 2 kg. A36 closed the manifest route. Only a smaller payload class remains, and that decision is
 deferred rather than taken.
 
+## What the closure does not mean
+
+The Phase I freeze does not mean all computer work is complete. The live Gen5 work is listed
+in [BSX_REVIEW.md](BSX_REVIEW.md), generated from the register with an explicit next action.
+Failed kill criteria, unrun qualification and remaining calculations stay visible. Gen6
+preparation does not retire a Gen5 problem merely by changing architecture.
+
 ## What is deliberately left open
 
 These are permanent caveats, not debt. `PHASE_I_CLOSURE.md` §9 declared this end state before
@@ -148,7 +155,7 @@ purchase."* It has not been ordered.
 > start. B-1 changes E4 from true to false, *a change of category, not of degree*, and it
 > measures the field model that every Gen5 number in the table above descends from.
 
-## Phase I is closed
+## Phase I baseline closure
 
 The last item was found while writing this page, which is the argument for writing it.
 
@@ -198,7 +205,7 @@ ADRs 032 through 036, and the register, and it is future work.
 
 ---
 
-Register at closure: 153 numbered entries, 59 live, 57 corrected and retained, 37 closed.
+Register reconciled 2026-09-06: 153 numbered entries, 55 live, 57 corrected and retained, 41 closed.
 75 run sheets covering 72 analyses across A1, A71, A3, A26 and A60 were numbered and never
 written, each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.

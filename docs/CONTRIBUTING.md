@@ -1,62 +1,35 @@
 # Contributing
 
-VOLLEY is a design study, not a software product. It exists to be reproduced,
-scrutinised, and (eventually) replaced by measured data. Contributions are welcome on
-those terms. The one thing this repository cares about above all is provenance: no
-generated number may ever pass as a measured one.
+VOLLEY is an evidence-first design study by Adityavardhan Mishra. I welcome reproducible discrepancies and independent checks.
 
-## Ground rules (non-negotiable)
+## Working rules
 
-These mirror `docs/PROJECT_NOTES.md` and `PROVENANCE.md`. Read both before contributing.
+1. Read [PROVENANCE.md](PROVENANCE.md), [BASELINE.md](BASELINE.md), [OPEN_PROBLEMS.md](../OPEN_PROBLEMS.md) and the applicable run sheet before changing a claim.
+2. Declare and commit acceptance criteria before implementing or executing a new analysis. Keep failed bands, original results and withdrawn interpretations visible. A revised question needs a separately dated run.
+3. Treat controlled inputs and executable analysis as the source of computed numbers. Check the equation, units, assumptions and model scope independently; agreement between files alone does not establish correctness.
+4. Label assumptions, external data, computed results, independent numerical checks and measurements accurately. No hardware measurement exists in this programme.
+5. Record substantive corrections in [CHANGELOG.md](../CHANGELOG.md), including the cause and source of truth. Do not silently change the operating point or relax a threshold.
+6. The flagship holds engineering evidence. Manuscripts are authored in VOLLEY-paper and VOLLEY-thesis. Fix exported evidence here and regenerate the companions; preserve their authored manuscript directories.
 
-1. The scripts in `analysis/` are the source of truth, not the paper. If a script and
-   `paper/paper.tex` disagree, the paper is wrong, fix the paper to match the script,
-   never the reverse. This principle has already caught four paper errors (see
-   `CHANGELOG.md`, P2-01, P2-04).
-2. Do not reconstruct numbers from general knowledge. If a value's origin cannot be
-   traced to a script in `analysis/`, say "not traceable" rather than filling the gap
-   plausibly. Several numbers here were wrong for exactly that reason and were only caught
-   by re-running the analysis.
-3. Mark verification status on everything you add. State whether a value is a model
-   output, hand-checked, cross-validated against a second method, or measured. Nothing in
-   this repository has been validated by hardware, FEA, or third-party review; keep that
-   distinction visible.
-4. Log substantive changes in `CHANGELOG.md` with a cause, a before/after, and a
-   source-of-truth reference, in the existing format.
+## Reproduce and verify
 
-## Reproducing the analysis
+Use Python 3.12 or newer for the pinned environment:
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cd analysis
-python3 verify_field.py && python3 mass_properties.py && python3 motor_model.py && python3 sizing.py && python3 astro.py
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt -r requirements-dev.txt
+bash tools/verify_all.sh
 ```
 
-Results are written to `analysis/results/*.json`. `astro.py` and `motor_model.py` are the
-slow ones. Dependency note: `mass_properties.py` produces the sled mass that
-`motor_model.py` hard-codes as `M_SLED`, if you change the mass model, update that
-constant and re-run the motor model, then the paper.
+The gate requires a clean committed checkout. `--full` additionally regenerates CAD and selected results; CAD requires the optional dependency documented in [requirements.txt](../requirements.txt). External solver reproduction has separate requirements in [tools/env-setup.sh](../tools/env-setup.sh).
 
-To run anything under `validation/` you also need the external solvers (gmsh,
-scikit-fem, GetDP, CalculiX, ngspice) and LaTeX. `tools/env-setup.sh` installs and
-verifies the lot on Debian/Ubuntu.
+The repository has CI and a property/regression test suite. CI passing establishes only the checks it executes. The single local verification command also checks the README overview and artifact currency. A skipped test is not a pass.
 
-## Reporting a discrepancy
+## Coherent publication
 
-If a script output does not match a value in the README or the paper, please open an issue
-using the Reproduction discrepancy template. Include the script, the value it prints,
-the value in the document, and your environment (Python, numpy, magpylib versions).
+Commit the flagship changes, run `python tools/export_companion.py --out ..`, commit generated changes in both companions, then commit the flagship export record. Run the gates before publishing the coherent batch. Do not push an intermediate flagship commit with stale companion payloads.
 
-## Scope
+## Licence and citation
 
-By design this repository has no CI, no test suite, and no build tooling, it is a
-research artifact, and the `analysis/` scripts are self-checking where a genuine
-cross-check exists (field model vs magpylib; orbit-averaged decay vs Cowell RK4). Please
-do not add software-product scaffolding without discussing it first.
-
-## Citation and licence
-
-Cite via `CITATION.cff`. The work is MIT-licensed (`LICENSE`). Any publication or
-presentation that uses it must state that it is a design study at TRL 2-3 with no
-experimental validation (`PROVENANCE.md`).
+The current licence is [CC BY 4.0](../LICENSE); [LICENSING.md](../LICENSING.md) explains scope and history. Use [CITATION.cff](../CITATION.cff). Describe the work as a computational design study with no experimental validation.

@@ -1,3 +1,9 @@
+> Current reading guide, 2026-09-06: this file retains early project notes and historical
+> operating points. Use [CONTRIBUTING.md](CONTRIBUTING.md) for working rules,
+> [BASELINE.md](BASELINE.md) for Gen5 numbers, [PROVENANCE.md](PROVENANCE.md) for evidence
+> and [STATE_OF_THE_PROJECT.md](STATE_OF_THE_PROJECT.md) for the active handoff.
+> References below to no FEA, Gen3 as current, old licences and early work queues are historical.
+
 > Superseded by ADR-030, 2026-08-13; annotated 2026-08-21. The audit note below is retained
 > as history and is no longer the operating point. Current: 10.54 N per kA/m, 16.029 m/s,
 > 10.07 g, 47.0 J recovered over a 39 mm regenerative section, 1162 J to the brake, 18.8 % net

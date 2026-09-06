@@ -23,6 +23,7 @@ run "links"              python3 tools/check_links.py
 run "register"           python3 tools/register_status.py --check
 run "baseline"           python3 tools/make_baseline.py --check
 run "public surfaces"    python3 tools/check_public.py
+run "BSX review"        python3 tools/make_bsx_review.py --check
 run "README overview"    python3 tools/make_repo_overview.py --check
 run "cross-references"   python3 tools/check_crossrefs.py
 run "companion payloads" python3 tools/check_companions.py
@@ -40,7 +41,7 @@ run "host-reference self-test" python3 analysis/host_reference.py --self-test
 if python3 -c "import pytest, hypothesis" 2>/dev/null; then
     run "properties and regressions" python3 -m pytest
 else
-    printf '%-34sSKIP  pytest or hypothesis not installed: pip install -r requirements.txt\n' "properties and regressions"
+    printf '%-34sSKIP  pytest or hypothesis not installed: pip install -r requirements.txt -r requirements-dev.txt\n' "properties and regressions"
 fi
 
 if [ "${1:-}" = "--full" ]; then

@@ -1,5 +1,12 @@
 # Change log / audit record
 
+## 2026-09-06: BSX evidence and closure audit
+
+The full local gate found a stale README overview that CI did not check. Regenerated it and added the overview and register-derived BSX review to CI. Contributor and provenance pages still denied the existing test suite and finite-element evidence and named the superseded licence; corrected the current guidance.
+
+Reconciled P37, P46, E29 and P95 against their already-published closing evidence. These are disposition repairs, not new experiments or changed thresholds. Gen5 retains 13 computation items and three decisions. Gen6 retains 18 computation items. Replaced the stale state page with a current handoff and narrowed an unsupported absolute comparison with spring deployers. Historical results and manuscript content are preserved.
+
+
 Every change made to this repository after the initial export is recorded here, so that
 each edit can be traced to a cause and a source of truth. This file is deliberately
 exhaustive: it exists to be audited later.

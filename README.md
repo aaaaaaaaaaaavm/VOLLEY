@@ -1,5 +1,7 @@
 # VOLLEY
 
+[BSX review and Gen6 handoff](docs/BSX_REVIEW.md): current evidence, remaining work and review questions.
+
 An electromagnetic deployer that gives a rideshare CubeSat an orbit its host was not going to.
 
 <p align="center">
@@ -7,14 +9,14 @@ An electromagnetic deployer that gives a rideshare CubeSat an orbit its host was
 </p>
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](requirements.txt)
+[![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](requirements.txt)
 [![Maturity: TRL 2-3](https://img.shields.io/badge/maturity-TRL%202--3-orange.svg)](OPEN_PROBLEMS.md)
 [![Validation: model only](https://img.shields.io/badge/validation-model%20only%2C%20unverified-red.svg)](docs/PROVENANCE.md)
 
 Secondary payloads inherit the orbit of whoever paid for the launch. The spring that ejects them
 gives 1 to 2 m/s. That is a real change in orbital energy (at 2.5 m/s it extends orbital lifetime
 by 8.2 %), but it is sized for separation rather than for orbit shaping, it falls two orders of
-magnitude short of the latter, and every satellite in the manifest gets the same value. Of more
+magnitude short of the latter, and its delivered velocity depends on the release mechanism and payload mass. Of more
 than 4,800 nanosatellites and CubeSats catalogued as of January 2026, on the order of 222 carry a
 propulsion system. The rest stay where they were dropped.
 
@@ -29,8 +31,9 @@ permanent magnet, so the payload envelope sits at 611x a representative magnetom
 scale at its near face, continuously rather than only during a shot
 ([P34](OPEN_PROBLEMS.md), [`docs/ICD_COMPLIANCE.md`](docs/ICD_COMPLIANCE.md)).
 
-What a spring cannot do at any price is give two satellites different velocities. Every number on
-this page exists to support that one capability or to qualify it.
+The design objective is to command a different release velocity for each satellite through one
+reusable drive. Different spring energies or payload masses can also produce different velocities;
+that alone is not a unique capability. The trade is commandability, range, mass and complexity.
 
 <p align="center"><img src="figures/V00_system_overview.svg" alt="VOLLEY mission chain and evidence boundary between the Gen5 baseline and Gen6 design target" width="100%"></p>
 
@@ -547,7 +550,7 @@ what that computation does not cover, what it got wrong, and what has been corre
 |---|---|
 | Maturity | TRL 2 to 3 |
 | Built, fired or measured | Nothing, at any scale. E4 is open and no analysis on this page changes it |
-| Defect register | 153 numbered entries, 59 live, in [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
+| Defect register | 153 numbered entries, 55 live, in [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md) |
 | Validation | 75 run sheets, 72 analyses across A1 to A71 (A3, A26 and A60 were numbered and never written), each against a band declared before the run. Three failed outright |
 | Kill criteria | Seven, three crossed, in [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 

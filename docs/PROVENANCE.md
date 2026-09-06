@@ -9,8 +9,10 @@ Every calculation, script, figure, and document in this repository is a model ou
 Nothing here has been measured. No value has been re-derived by hand or checked against a
 second method unless this file says so explicitly.
 
-There is no hardware, no finite-element analysis, and no third-party review anywhere in
-this project. The CAD is first-pass geometry with no structural analysis behind it.
+There is no hardware measurement or third-party review in this project. Finite-element
+structural and magnetic analyses, circuit simulation, CFD and orbit-propagation checks
+do exist. They are numerical evidence, not experimental validation. The run-specific
+limits below and in the validation register govern what each establishes.
 
 ## What is model output and unverified
 
@@ -27,16 +29,19 @@ All of the following:
 
 ## Where a genuine cross-check exists
 
-Only two results have independent corroboration, and both are internal:
+The independent numerical paths include:
 
-1. Halbach field model. The analytic decaying-wave model agrees with magpylib's
-   cuboid superposition to three digits (0.351 T single-array) and within ~1 % on the
-   double-sided peak. Caveat: both methods assume ironless geometry, so this validates
-   the wave model but is not confirmation by a different physical method.
-2. Orbital decay. Orbit-averaged Gauss integration agrees with an independent
-   Cowell RK4 propagation to 99.4 % on 30-day semi-major-axis decay.
+| Claim | Evidence and limit |
+|---|---|
+| Halbach field | Analytic superposition versus magpylib, 2-D FEM in A1 and the A2 3-D field check. Centre-plane/midgap agreement does not independently validate the complete depth-averaged thrust integral. |
+| Orbital decay | Orbit-averaged integration versus Cowell RK4 and GMAT in A5/A15. The solar-activity invariance claim failed; absolute life remains atmosphere-dependent. |
+| Pulse circuit | ngspice in A8, including the bank-ESR loss the earlier analytic budget omitted. Component and switching assumptions remain unmeasured. |
+| Sled structure | CalculiX A4 under the declared material, mesh and boundary conditions. It does not establish the launch qualification of a payload. |
+| Aerodynamics | OpenFOAM A29 with a mesh-convergence study. This does not validate vacuum release contact or tip-off. |
 
-Everything else is single-sourced.
+See [GEN5_CLOSURE.md](GEN5_CLOSURE.md) for the frozen baseline evidence and
+[COMPUTATIONAL_CLOSURE.md](COMPUTATIONAL_CLOSURE.md) for remaining work. A successful
+repository consistency gate is not another independent physical check.
 
 ## Errors made and corrected during the work
 
