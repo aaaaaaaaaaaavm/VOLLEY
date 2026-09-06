@@ -1,5 +1,6 @@
 """Build my BSX review from the live register; do not turn a freeze into completion."""
 import argparse
+import re
 from pathlib import Path
 import check_computational_closure as closure
 ROOT=Path(__file__).resolve().parents[1]
@@ -14,7 +15,10 @@ def render():
     for scope in closure.SCOPES:
         text += ["", "## "+scope+" live items", "", "| Entry | Next step class | Action that would move it |", "|---|---|---|"]
         for tag,s,cls,action in rows:
-            if s==scope: text.append(f"| [{tag}](../OPEN_PROBLEMS.md) | {cls} | {action.replace('|','/')} |")
+            if s==scope:
+                # Register-local fragments do not resolve from this generated document.
+                action = re.sub(r"\[([^]]+)\]\(#[^)]+\)", r"\1", action)
+                text.append(f"| [{tag}](../OPEN_PROBLEMS.md) | {cls} | {action.replace('|','/')} |")
     text += ["", "## Reproduce", "", "Run `python tools/make_bsx_review.py --check` and `bash tools/verify_all.sh` from a clean committed checkout. The scripts report skipped or unavailable checks. See [CONTRIBUTING.md](CONTRIBUTING.md) for dependencies and companion publication order. [BSX_PORTFOLIO_AUDIT.md](BSX_PORTFOLIO_AUDIT.md) records the repositories and checks covered by this review.", ""]
     return "\n".join(text)
 def main():

@@ -55,8 +55,8 @@ Gen6 already exists as a stage-integrated cold-gas design study. It is not a bla
 | [E31](../OPEN_PROBLEMS.md) | HOST_DATA | the launch-interface position of an actual provider |
 | [E32](../OPEN_PROBLEMS.md) | COMPUTATION | design the ascent inhibit and its fault logic |
 | [E28](../OPEN_PROBLEMS.md) | COMPUTATION | campaign mission life at a real deployment altitude |
-| [P117](../OPEN_PROBLEMS.md) | COMPUTATION | A73 has derived the constant; A55's re-run waits on [P92](#p92)'s trade |
-| [P118](../OPEN_PROBLEMS.md) | COMPUTATION | A72 has integrated it; what remains is the same fix trade [P92](#p92) owns, now with numbers in it |
+| [P117](../OPEN_PROBLEMS.md) | COMPUTATION | A73 has derived the constant; A55's re-run waits on P92's trade |
+| [P118](../OPEN_PROBLEMS.md) | COMPUTATION | A72 has integrated it; what remains is the same fix trade P92 owns, now with numbers in it |
 | [E3](../OPEN_PROBLEMS.md) | COMPUTATION | select components from public vendor data instead of parametric masses |
 | [E4](../OPEN_PROBLEMS.md) | HARDWARE | build something |
 | [E5](../OPEN_PROBLEMS.md) | HOST_DATA | host stage propellant, authority and restart constraints |
