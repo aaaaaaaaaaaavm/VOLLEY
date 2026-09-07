@@ -19,6 +19,7 @@ run() {
 }
 
 echo "== gates =="
+run "authorship"         python3 tools/check_authorship.py
 run "links"              python3 tools/check_links.py
 run "register"           python3 tools/register_status.py --check
 run "baseline"           python3 tools/make_baseline.py --check

@@ -21,6 +21,23 @@ source identity and that mass description. Fault injections and properties exerc
 strict boundaries, changed inputs and unavailable settling evidence. These checks do not
 establish the host inertia, flexible-body behaviour or control authority.
 
+## 2026-09-07: the single-author claim is now enforced rather than asserted
+
+This repository states on its front page, in `CITATION.cff` and on every companion that the work
+is mine. Nothing checked it, and on 2026-08-31 a sibling repository was found carrying one commit
+written under a different identity. VOLLEY escaped only because its clone happened to hold a local
+`user.name` override, which is luck rather than a control.
+
+| ID | Item | Detail |
+|---|---|---|
+| Gate | `tools/check_authorship.py` | Every commit reachable from HEAD must carry an author **and** a committer from a two-entry allowed set spelled out in the file rather than read from `git config` -- the configuration is exactly what failed, so reading it back would test nothing. Both fields are checked, because an identity can be laundered through the committer, which a casual `git log` does not show |
+| Gate | Wired into CI and `verify_all.sh`, ahead of the link check | CI fetches full history for `check_companions`, so the gate sees every commit rather than a shallow tail |
+| Verification | It passes here and it catches the case it was written for | 409 commits, every author and committer clean. Run against the sibling repository's pre-repair history it names the offending commit and the identity, which is the injected-fault standard the rest of the gate set is held to |
+| Cause | The container default, not the repository | A fresh clone in that working environment inherits a machine identity as `user.name`, and only a per-repository override prevents it. The gate's failure message says to check `git config user.email` before committing, because the next occurrence will look identical |
+
+A provenance claim nobody checks is not provenance, in the same way a band nobody computes is not
+a verdict. `check_bands.py` exists for the second reason; this exists for the first.
+
 ## 2026-09-06: BSX evidence and closure audit
 
 The full local gate found a stale README overview that CI did not check. Regenerated it and added the overview and register-derived BSX review to CI. Contributor and provenance pages still denied the existing test suite and finite-element evidence and named the superseded licence; corrected the current guidance.

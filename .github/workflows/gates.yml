@@ -43,6 +43,8 @@ jobs:
           python3 -m pip install --upgrade -q pip
           python3 -m pip install -q -r requirements.txt -r requirements-dev.txt
 
+      - name: authorship
+        run: python3 tools/check_authorship.py
       - name: links
         run: python3 tools/check_links.py
       - name: register
