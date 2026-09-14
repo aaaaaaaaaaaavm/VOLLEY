@@ -2,8 +2,8 @@
 import math
 import random
 
-import pytest
 import departure_trade as trade
+import pytest
 
 
 def independent_coverage(d, budget, mass, payload, lo, hi):

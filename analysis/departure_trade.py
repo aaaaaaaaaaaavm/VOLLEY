@@ -10,7 +10,7 @@ import json
 import math
 from pathlib import Path
 
-from host_reference import MU, RE, G0
+from host_reference import G0, MU, RE
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = {
