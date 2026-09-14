@@ -7,6 +7,10 @@ history or treating a newer generation as a more mature machine. This programme 
 work I want a prospective builder to be able to inspect before committing to a prototype.
 It is a work programme, not a claim that these deliverables are complete.
 
+[Programme execution](PROGRAMME_EXECUTION.md) consolidates the backlog and reopens mechanism
+selection. Compact independent release cells are a candidate, not a selected replacement.
+[Sequential campaign allocation](CAMPAIGN_ALLOCATION.md) is partial package 1/9 evidence.
+
 ## The endpoint
 
 I want a reviewer to be able to identify the configuration, reproduce the controlling analyses,

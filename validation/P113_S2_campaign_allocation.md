@@ -74,3 +74,18 @@ The campaign is an energy-target resource screen. Finite burns, achievable minim
 impulse, attitude recovery, thermal/electrical stores, release dispersions, safe
 clearance, J2/drag, complete target-state constraints, installed hardware and reliability
 remain separate work before a mechanism decision. No existing acceptance band changes.
+
+
+## Implementation review addendum, 2026-09-14
+
+The criteria above were committed before implementation and remain unchanged.
+The initial implementation's byte-only JSON freshness check repeated the portability
+risk already documented in `tools/check_results_fresh.py`. Before publication, the
+checker was changed to require exact input/source metadata, schema and discrete
+values, and numeric case agreement at rtol=1e-12, atol=1e-9. At this study's position,
+velocity and mass scales this is tighter than the frozen propagation/event verification
+limits; it is a reproducibility tolerance, not a relaxed physical acceptance band.
+The Markdown and SVG must exactly regenerate from the accepted stored JSON. Tests
+inject a sub-tolerance perturbation and a 0.01 kg corruption, and refuse NaN/schema drift.
+Same-environment regeneration must still be byte deterministic. The SVG is an added
+presentation of existing cases; no additional physical conclusion is introduced.

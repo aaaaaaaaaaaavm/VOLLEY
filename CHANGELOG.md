@@ -1,5 +1,19 @@
 # Change log / audit record
 
+## 2026-09-14: sequential campaign allocation and architecture decision gates
+
+P113-S2 declares criteria before implementation, then compares 180 prescribed
+orbital-energy campaigns with propagated host state, changing manifest mass, burn
+propellant and recoil. Fixed and adjustable spring controls remain in the comparison.
+Independent Kepler propagation, event conservation, failure controls and stale-output
+injection verify the bounded calculation. Complete mission feasibility is not claimed.
+Implementation review replaced byte-only numerical freshness with documented tolerances
+below the verification limits, retaining exact source metadata and presentation checks.
+
+The execution record consolidates the open work and admits compact independent release
+cells as a candidate alongside the magazine and gas guide. No Gen6 configuration,
+operating envelope or provider interface is selected. P113 and E5 remain open.
+
 ## 2026-09-14: begin the host/deployer allocation trade without selecting a machine
 
 P113-S1 declares and commits its criteria before the departure analysis exists.

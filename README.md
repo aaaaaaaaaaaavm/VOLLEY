@@ -69,6 +69,8 @@ These are numerical results from the committed analysis, not measurements. The
    and release timing. More velocity must earn its mass and integration cost.
    [The departure-state screen](docs/DEPARTURE_TRADE.md) begins that comparison;
    [host compatibility](docs/HOST_COMPATIBILITY.md) separates public evidence from missing interfaces.
+   [Sequential allocation](docs/CAMPAIGN_ALLOCATION.md) adds host propagation and propellant accounting;
+   [programme execution](docs/PROGRAMME_EXECUTION.md) records the architecture decision gates.
 2. **A credible exit-state envelope.** Resolve P103/P108: corrected guide shape, contact-law
    verification, penetration/convergence, friction, inertia and tolerance effects.
 3. **One coherent Gen6 configuration.** A72–A74 do not support treating the present magnetic

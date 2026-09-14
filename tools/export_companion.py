@@ -102,6 +102,10 @@ def banner(commit, kind):
 > moment.** What enters it has to be stable, effective and reliable against the problem
 > statement -- not merely newer.
 
+Live programme studies at this export: [sequential campaign allocation](https://github.com/{OWNER}/{FLAGSHIP}/blob/{commit}/docs/CAMPAIGN_ALLOCATION.md)
+and [architecture decision gates](https://github.com/{OWNER}/{FLAGSHIP}/blob/{commit}/docs/PROGRAMME_EXECUTION.md).
+These extend the engineering record; the authored manuscript remains Gen5.
+
 {header_table(kind)}
 """
 

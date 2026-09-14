@@ -5848,6 +5848,11 @@ non-convergence is a genuine numerical-method problem rather than a masked geome
 
 ### P113. How the orbital work divides between host and deployer has never been computed, and it sets VOLLEY's release-velocity requirement: MEDIUM, NEW 2026-08-26
 
+**Further partial work, 2026-09-14:** [P113-S2](validation/P113_S2_campaign_allocation.md)
+and [the generated campaign screen](docs/CAMPAIGN_ALLOCATION.md) add sequential host
+propagation, burn mass loss and recoil for prescribed energy targets. P113 remains open.
+Complete mission states, timing optimization, uncertainty and installed burdens are not solved.
+
 **Partial work, 2026-09-14:** [P113-S1](validation/P113_S1_departure_trade.md) and
 [its generated review](docs/DEPARTURE_TRADE.md) compute a single-event tangential
 allocation with finite host recoil. The predeclared screen distinguishes spring
