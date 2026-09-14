@@ -1,5 +1,21 @@
 # Change log / audit record
 
+## 2026-09-14: the authorship gate passed over a truncated history and did not say so
+
+The gate added on 2026-09-07 reported `authorship: 52 commits, every author and committer is the
+repository's own` in a working container whose clone was shallow. The repository had 412. It
+passed, and it passed for the wrong reason: the sentence it prints is a claim about EVERY commit,
+and on a truncated history it cannot make that claim about the ones it cannot see.
+
+`tools/check_authorship.py` now detects a shallow clone and REFUSES rather than passing, naming
+the number of commits it can reach and `git fetch --unshallow` as the fix. Both paths are
+demonstrated: it refuses at 52 and passes at 412 on the same clone, before and after unshallowing.
+CI is unaffected, because the workflow already fetches full history for `check_companions`.
+
+A gate that quietly checks a subset is worse than one that refuses, because it reads as a clean
+result. This is the same defect class as `check_artifacts.py`'s own note that *a false positive in
+a check is a defect in the check* -- a false NEGATIVE is the more dangerous half.
+
 ## 2026-09-14: isolate artifact rebuilds (P119)
 
 I reproduced an artifact-check defect: a CAD rebuild changed the working reference and a later
