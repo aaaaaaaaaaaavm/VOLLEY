@@ -37,6 +37,7 @@ run "computational closure" python3 tools/check_computational_closure.py
 run "artifacts"          python3 tools/check_artifacts.py
 run "host-reference blocks" python3 analysis/host_reference.py --check-doc
 run "host-reference self-test" python3 analysis/host_reference.py --self-test
+run "departure trade freshness" python3 analysis/departure_trade.py --check
 # Properties and regressions. The self-test above checks the reference point; this checks
 # rules that must hold for any input, and reintroduces every defect the repository has
 # shipped to confirm a gate still catches it. Skipped with a stated reason rather than

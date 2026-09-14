@@ -5848,6 +5848,14 @@ non-convergence is a genuine numerical-method problem rather than a masked geome
 
 ### P113. How the orbital work divides between host and deployer has never been computed, and it sets VOLLEY's release-velocity requirement: MEDIUM, NEW 2026-08-26
 
+**Partial work, 2026-09-14:** [P113-S1](validation/P113_S1_departure_trade.md) and
+[its generated review](docs/DEPARTURE_TRADE.md) compute a single-event tangential
+allocation with finite host recoil. The predeclared screen distinguishes spring
+coverage from conditional extra reach. It does not solve the campaign or establish
+an operating envelope. P113 remains LIVE; [host compatibility](docs/HOST_COMPATIBILITY.md)
+defines the missing provider inputs and next comparisons. The historical problem
+statement below is retained; its single-event allocation gap is now partially addressed.
+
 > **Status:** `LIVE` — open engineering; something still has to be done
 > **Scope:** `PROGRAMME` · **Next step:** `COMPUTATION` — the required release-velocity envelope as a function of how much orbital energy the host supplies
 

@@ -1,5 +1,19 @@
 # Change log / audit record
 
+## 2026-09-14: begin the host/deployer allocation trade without selecting a machine
+
+P113-S1 declares and commits its criteria before the departure analysis exists.
+The new single-event model includes finite host recoil and compares assumed release
+intervals against a signed host impulse budget. Independent state reconstruction,
+interval intersection and injected stale-output tests check the bounded calculation.
+The speed intervals are deliberately optimistic screens, not validated operating
+envelopes. No new hardware capability or full-mission resource advantage is claimed.
+
+`docs/HOST_COMPATIBILITY.md` separates public Skyroot/Agnikul descriptions from
+unavailable interfaces, adds a packaging gate and records common-path failure
+questions. No company or individual endorses this study. P113 and E5 remain open;
+Gen5/Gen6 operating points, BOLLEY's design and existing acceptance bands are unchanged.
+
 ## 2026-09-14: what a clean environment needs, recorded because two gates lied without it
 
 `PROTOTYPE_READINESS.md` package 0 asks for environment limitations to be recorded separately,
