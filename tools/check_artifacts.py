@@ -25,8 +25,12 @@ USAGE
 Exits non-zero if any artifact is older than its source.
 """
 import os
+import hashlib
+import shutil
 import subprocess
 import sys
+import tempfile
+from pathlib import Path
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -42,8 +46,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # looks stale by time is then REBUILT and compared: if nothing changes, it was current and the
 # timestamp was lying. Artifacts with no regenerator fall back to the time comparison.
 REGENERATORS = {
-    "cad/step/gen5/VOLLEY_Track_Gen5.step": ["python3", "cad/build_gen5.py"],
-    "cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step": ["python3", "cad/build_gen6.py"],
+    "cad/step/gen5/VOLLEY_Track_Gen5.step": [sys.executable, "cad/build_gen5.py"],
+    "cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step": [sys.executable, "cad/build_gen6.py"],
 }
 
 PAIRS = [
@@ -108,17 +112,37 @@ def _regenerates_identically(artifact):
     cmd = REGENERATORS.get(artifact)
     if not cmd:
         return False
-    path = os.path.join(ROOT, artifact)
     try:
-        with open(path, "rb") as fh:
-            before = fh.read()
-        r = subprocess.run(cmd, cwd=ROOT, capture_output=True, timeout=900)
-        if r.returncode != 0:
-            return False
-        with open(path, "rb") as fh:
-            return fh.read() == before
+        # Compare against an untouched snapshot, not a previous regeneration. Builders can
+        # write an entire package even when PAIRS names just one member of it.
+        with tempfile.TemporaryDirectory(prefix="volley-artifact-check-") as tmp:
+            isolated = Path(tmp) / "source"
+            shutil.copytree(ROOT, isolated, ignore=shutil.ignore_patterns(
+                ".git", ".venv", "venv", "__pycache__", ".pytest_cache", ".hypothesis"))
+            before = _file_hashes(isolated)
+            r = subprocess.run(cmd, cwd=isolated, capture_output=True, timeout=900)
+            if r.returncode != 0:
+                print(f"REBUILD FAILED {artifact}: {r.stderr.decode(errors='replace')[-600:]}")
+                return False
+            after = _file_hashes(isolated)
+            changed = sorted(path for path in before.keys() | after.keys()
+                             if before.get(path) != after.get(path))
+            if changed:
+                print(f"REBUILD DIFFERS {artifact}: {len(changed)} package file(s)")
+                for path in changed[:8]:
+                    print(f"               {path}")
+                return False
+            return True
     except Exception:
         return False
+
+
+def _file_hashes(root):
+    """Content manifest, excluding interpreter caches which are not build evidence."""
+    return {str(path.relative_to(root)): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in Path(root).rglob("*")
+            if path.is_file() and "__pycache__" not in path.parts
+            and path.suffix != ".pyc"}
 
 
 def main():
@@ -128,6 +152,7 @@ def main():
         print("note: working tree is dirty, so this compares committed state only.\n")
 
     stale, missing, proven, ok = [], [], [], 0
+    rebuilt = {}
     for artifact, sources in PAIRS:
         if not os.path.exists(os.path.join(ROOT, artifact)):
             missing.append(artifact)
@@ -142,7 +167,9 @@ def main():
                 continue
             if a_time < s_time:
                 behind = (s_time - a_time) / 3600.0
-                if _regenerates_identically(artifact):
+                if artifact not in rebuilt:
+                    rebuilt[artifact] = _regenerates_identically(artifact)
+                if rebuilt[artifact]:
                     proven.append((artifact, src))
                 else:
                     stale.append((artifact, src, behind))

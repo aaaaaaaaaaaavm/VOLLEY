@@ -6,14 +6,14 @@ fixed first. E-items are genuinely unsolved engineering.
 > ## How to read the counts
 >
 > <!-- REGISTER_COUNTS:BEGIN -->
-> 153 numbered entries, of which 53 are live. Every entry carries a
+> 154 numbered entries, of which 53 are live. Every entry carries a
 > `Status:` line written by `tools/register_status.py`. This block and the result JSON
 > are generated from the same classifications.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
 > | `LIVE` | 53 (33 P, 20 E) | open engineering; something still has to be done |
-> | `CORRECTED` | 57 | found, fixed and propagated, retained as the published record |
+> | `CORRECTED` | 58 | found, fixed and propagated, retained as the published record |
 > | `CLOSED` | 43 | resolved, with the closer named in the entry |
 > <!-- REGISTER_COUNTS:END -->
 >
@@ -6663,6 +6663,28 @@ defect [P92](#p92) named.
 > machine has a reason to exist rather than engineering work, and they are hard to see in a
 > numbered list. [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) separates them, with the value
 > at which each becomes fatal.
+
+
+### P119. Artifact verification rewrote the files it was checking: HIGH, CORRECTED 2026-09-14
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
+
+The artifact checker invoked full CAD builders inside the working checkout. With a different
+CAD/runtime output, its first comparison detected changed bytes but left the new files in place.
+A second source comparison could then report that the same artifact rebuilt identically,
+because the first check had replaced the reference. It also compared only one STEP member while
+the builder rewrote a package. The full verification command caught a dirty tree, but the
+artifact check's individual CURRENT statements were not trustworthy.
+
+This has been corrected in tools/check_artifacts.py. Rebuilds run in a temporary copy; the
+complete copied file manifest is compared before and after; results are cached per artifact
+for the duration of the check. A failed or differing build cannot modify the published files.
+Four regression cases cover changed output, changes to a non-sentinel part, a builder that
+fails after deleting output, and a genuinely identical rebuild. The original generated CAD
+was restored after the audit; no geometry correction is inferred from a runtime byte mismatch.
+
+This correction does not establish geometric equivalence across CAD kernels. A differing or
+unavailable runtime still prevents a byte-reproduction claim and must be reported separately.
+
 
 ## E: Unsolved engineering
 

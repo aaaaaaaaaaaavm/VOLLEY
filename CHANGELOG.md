@@ -1,5 +1,25 @@
 # Change log / audit record
 
+## 2026-09-14: isolate artifact rebuilds (P119)
+
+I reproduced an artifact-check defect: a CAD rebuild changed the working reference and a later
+comparison could report agreement with that replacement. Rebuilds now run in temporary copies,
+compare the complete file set and reuse one verdict per artifact. Four injected regressions pass.
+Runtime-dependent CAD differences remain failures to reproduce, not automatic geometry changes.
+
+## 2026-09-14: current review routes and prototype completion programme
+
+I replaced the long README with a configuration-specific review route and current Gen5/Gen6
+images. The previous front page remains accessible at its exact revision. I replaced the stale
+BUILD_READINESS snapshot, which still described answered items such as A52's angular-impulse
+calculation as absent. No physical result, acceptance band or register disposition changes.
+
+PROTOTYPE_READINESS.md defines the intended completion programme for VOLLEY and BOLLEY:
+mission requirements, model credibility, coupled dynamics/electrics, tolerances, installed
+budgets, controls, manufacturing and experiment design. The packages are planned, not claimed
+complete. The current audit also found the companion payloads stale after 67939b7; they must be
+regenerated before this batch is published.
+
 ## 2026-09-06: register headline gate
 
 The register's opening table still carried superseded totals while its result JSON and other
