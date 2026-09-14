@@ -44,7 +44,20 @@ jobs:
           python3 -m pip install -q -r requirements.txt -r requirements-dev.txt
 
       - name: authorship
-        run: python3 tools/check_authorship.py
+        # A PR's github.sha is a temporary GitHub-committed merge, not authored history.
+        # Audit both actual histories, then restore the merge tree for integration gates.
+        env:
+          AUDIT_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          AUDIT_BASE: ${{ github.event.pull_request.base.sha || github.sha }}
+          TEST_COMMIT: ${{ github.sha }}
+        run: |
+          git checkout -q --detach "$AUDIT_HEAD"
+          python3 tools/check_authorship.py
+          if [ "$AUDIT_BASE" != "$AUDIT_HEAD" ]; then
+            git checkout -q --detach "$AUDIT_BASE"
+            python3 tools/check_authorship.py
+          fi
+          git checkout -q --detach "$TEST_COMMIT"
       - name: links
         run: python3 tools/check_links.py
       - name: register
