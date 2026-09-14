@@ -50,6 +50,26 @@ pip install --quiet --upgrade \
     scikit-fem \
     gmsh
 
+# The Debian-owned `packaging` aborts the WHOLE requirements install with "Cannot uninstall
+# packaging 24.0, RECORD file not found", leaving every other dependency missing for the sake of
+# one conflict. Measured on a reset container, 2026-09-14.
+echo "==> python, past the distribution-owned packaging"
+python3 -m pip install --quiet --break-system-packages --ignore-installed packaging \
+    -r "$(dirname "$0")/../requirements.txt" \
+    -r "$(dirname "$0")/../requirements-dev.txt" || true
+
+# Optional in requirements.txt, but check_artifacts.py cannot do its rebuild-and-compare without
+# it and falls back to a commit-time comparison that reports current artifacts as stale.
+echo "==> CAD, so the artifacts gate can rebuild rather than guess"
+python3 -m pip install --quiet --break-system-packages cadquery==2.8.0 \
+    || echo "    (skipped -- the artifacts gate will fall back to commit times and may false-positive)"
+
+# check_authorship.py asserts something about EVERY commit and refuses a truncated history.
+if [ "$(git -C "$(dirname "$0")/.." rev-parse --is-shallow-repository 2>/dev/null)" = "true" ]; then
+    echo "==> unshallowing, so the authorship gate can make its claim"
+    git -C "$(dirname "$0")/.." fetch --unshallow || true
+fi
+
 echo "==> optional: history tooling"
 pip install --quiet git-filter-repo || echo "    (skipped -- only needed to rewrite git history)"
 

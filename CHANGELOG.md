@@ -1,5 +1,26 @@
 # Change log / audit record
 
+## 2026-09-14: what a clean environment needs, recorded because two gates lied without it
+
+`PROTOTYPE_READINESS.md` package 0 asks for environment limitations to be recorded separately,
+and package 12 asks for the release evidence to be rerun from a clean environment. Nothing
+covered that. `docs/REPRODUCTION_ENVIRONMENT.md` now does, from a container reset on 2026-09-14
+rather than from reading the scripts.
+
+Three measured degradation modes, and only the first is harmless:
+
+| Missing | Effect |
+|---|---|
+| `numpy` and the rest of `requirements.txt` | **Loud failure** across four gates. Nobody reads a traceback as a pass |
+| `cadquery==2.8.0` | **False positive.** Four STEP files reported STALE that are current -- without it the artifacts gate cannot rebuild-and-compare and falls back to the commit-time comparison its own docstring calls unreliable |
+| Full git history | **False clean.** The authorship gate printed a clean line over 52 of 412 commits |
+
+`tools/env-setup.sh` now installs past the distribution-owned `packaging` -- which otherwise
+aborts the entire requirements install over one conflict -- adds cadquery with a stated reason,
+and unshallows the clone when it finds one. The identity section records that neither the global
+nor the per-repository git identity survives a container restart, and that the only durable
+control is the gate committed to the repository.
+
 ## 2026-09-14: the authorship gate passed over a truncated history and did not say so
 
 The gate added on 2026-09-07 reported `authorship: 52 commits, every author and committer is the
