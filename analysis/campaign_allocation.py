@@ -282,6 +282,10 @@ def numerical_match(actual, expected, path=()):
         atol = 1e-9
         if path and path[-1] == 'position_error_m':
             atol = 1e-5
+        if path and path[-1] in ('velocity_error_m_s', 'first_burn_magnitude_m_s',
+                                'second_burn_magnitude_m_s', 'total_host_delta_v_m_s',
+                                'delta_v_m_s', 'host_correction_m_s'):
+            atol = 1e-7
         if len(path) >= 2:
             field, index = path[-2:]
             if field in ('host_state', 'payload_state', 'initial_state', 'arrival_state', 'terminal_state'):

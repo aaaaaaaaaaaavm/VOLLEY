@@ -119,3 +119,9 @@ remain exact. The positional floor is 100 times tighter than S3's 0.001 m root c
 the velocity floor is 500 times tighter than its 5e-5 m/s independent-propagation check.
 No physical acceptance band, target, search seed or speed interval changes.
 See `docs/MISSION_FRESHNESS_20260915.md` in the flagship for the incident record.
+
+Completion, 2026-09-15: run 34928809087 showed the vector policy omitted scalar
+velocity-error norms and burn magnitudes. They now receive the same 1e-7 m/s
+freshness floor. Conservation residuals and discrete verdicts remain strict;
+no physical acceptance criterion changes. The observed failing pairs are retained
+in regression tests and the incident record.

@@ -1,5 +1,16 @@
 # Change log / audit record
 
+## 2026-09-15: finish the mission-study publication
+
+- CI run 34928809087 exposed an incomplete freshness repair: scalar velocity-error
+  norms and burn magnitudes still used a stricter unit-inappropriate floor than
+  velocity vectors. Apply the already documented 1e-7 m/s floor to those quantities;
+  retain physical acceptance, conservation checks, fuel tolerances and exact verdicts.
+- Preserve the observed failures in regression tests and the incident record.
+- Regenerate the mission evidence and companion snapshots after the repair, then
+  verify the coherent batch before updating the main branches. Gen5 numbers,
+  Gen6 configuration and the 53 live problem dispositions remain unchanged.
+
 ## 2026-09-15: terminal-state timing benchmark with shared comparator controls
 
 P113-S3 declares criteria before implementation and compares three terminal circular

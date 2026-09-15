@@ -35,3 +35,21 @@ verification independently checks the fresh calculation against frozen criteria.
 when another runner disagrees. A remaining difference must be investigated; the
 comparison does not round away decisions or substitute a successful check for a
 physical validation experiment.
+
+## Completion of the scalar policy, 2026-09-15
+
+Run 34928809087 still failed: twelve leaves remained outside the scalar tolerance.
+The S2 calculation matched; S3's velocity-error norms differed by 2.73e-9 m/s and
+one second-burn magnitude differed by 1.21e-9 m/s. The preceding change covered
+velocity vectors but omitted norms and scalar burn magnitudes with the same units.
+
+Apply the existing 1e-7 m/s reproduction floor to terminal velocity-error norms,
+first/second burn magnitudes, total host delta-v, selected delta-v and signed host
+corrections. Conservation residuals, fuel, metadata and acceptance decisions keep
+their previous strict comparisons. The 0.01 m/s terminal band and 5e-5 m/s
+independent propagation band do not change. Regression tests retain the actual
+failing values and reject a 1e-6 m/s corruption as well as changed fuel or verdicts.
+
+The prior commit also changed exported analysis after the recorded companion
+snapshot. Regenerate both companion payloads from the committed repair before
+landing the batch; their old cf8d88b provenance is not current evidence.

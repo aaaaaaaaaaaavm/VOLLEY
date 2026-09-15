@@ -187,3 +187,20 @@ def test_cartesian_freshness_uses_units_without_relaxing_decisions():
     assert not c.numerical_match({'accepted': True}, {'accepted': False})
     assert not c.numerical_match({'payload_state': [1., 1., 0., 1.]},
                                  {'payload_state': [1., 1., .001, 1.]})
+
+
+def test_scalar_velocity_freshness_retains_physical_and_discrete_checks():
+    # GitHub run 34928809087: the vector policy omitted norms with the same units.
+    observed = [('second_burn_magnitude_m_s', .514326376982996, .5143263781868894),
+                ('velocity_error_m_s', 8.46841394399364e-8, 8.74078291464722e-8)]
+    for field, stored, runner in observed:
+        assert c.numerical_match({field: stored}, {field: runner})
+        assert not c.numerical_match({field: stored}, {field: stored+1e-6})
+    for field in ['first_burn_magnitude_m_s', 'total_host_delta_v_m_s',
+                  'delta_v_m_s', 'host_correction_m_s']:
+        assert c.numerical_match({field: 0.}, {field: 1e-8})
+        assert not c.numerical_match({field: 0.}, {field: 1e-6})
+    # Do not extend the velocity budget to conservation residuals or propellant.
+    for field in ['relative_velocity_residual_m_s', 'momentum_residual_kg_m_s', 'fuel_kg']:
+        assert not c.numerical_match({field: 0.}, {field: 1e-8})
+    assert not c.numerical_match({'accepted': False}, {'accepted': True})
