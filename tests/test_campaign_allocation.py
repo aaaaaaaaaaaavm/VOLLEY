@@ -170,3 +170,20 @@ def test_portable_numeric_freshness_does_not_accept_material_drift(tmp_path):
     assert not c.numerical_match(True, 1)
     assert not c.numerical_match(float('nan'), 0.)
     assert not c.numerical_match({'a': 1.}, {'b': 1.})
+
+
+def test_cartesian_freshness_uses_units_without_relaxing_decisions():
+    # The same micrometre perturbation is accepted on either side of an axis crossing.
+    for x in [0., 1., 500000.]:
+        a = {'host_state': [x, 6000000., 0., 7600.]}
+        b = {'host_state': [x+1e-6, 6000000., 1e-8, 7600.]}
+        assert c.numerical_match(a, b)
+        b['host_state'][0] += .01
+        assert not c.numerical_match(a, b)
+    assert c.numerical_match({'position_error_m': .0001134847994889407},
+                             {'position_error_m': .00011390616641796057})
+    assert not c.numerical_match({'position_error_m': 0.}, {'position_error_m': .01})
+    assert not c.numerical_match({'fuel_kg': 1.}, {'fuel_kg': 1.000001})
+    assert not c.numerical_match({'accepted': True}, {'accepted': False})
+    assert not c.numerical_match({'payload_state': [1., 1., 0., 1.]},
+                                 {'payload_state': [1., 1., .001, 1.]})

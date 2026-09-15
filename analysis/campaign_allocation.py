@@ -8,10 +8,9 @@ import math
 from pathlib import Path
 
 import numpy as np
+from host_reference import G0, MU, RE
 from scipy.integrate import solve_ivp
 from scipy.optimize import brentq
-
-from host_reference import G0, MU, RE
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = dict(altitude_km=450, dry_mass_kg=300, fuel_kg=10, reserve_kg=2,
@@ -265,18 +264,31 @@ def outputs(data):
             'figures/campaign_allocation.svg': figure(data)}
 
 
-def numerical_match(actual, expected):
-    """Exact schema/discrete values; numerical portability below verification limits."""
+def numerical_match(actual, expected, path=()):
+    """Exact discrete evidence; field-specific SI tolerances below verification limits.
+
+    Cartesian component reproducibility must not collapse near an axis crossing.
+    See docs/MISSION_FRESHNESS_20260915.md for the observed runner disagreement.
+    """
     if type(actual) is not type(expected):
         return False
     if isinstance(expected, dict):
         return actual.keys() == expected.keys() and all(
-            numerical_match(actual[k], value) for k, value in expected.items())
+            numerical_match(actual[k], value, path+(k,)) for k, value in expected.items())
     if isinstance(expected, list):
         return len(actual) == len(expected) and all(
-            numerical_match(a, b) for a, b in zip(actual, expected))
+            numerical_match(a, b, path+(i,)) for i, (a, b) in enumerate(zip(actual, expected)))
     if isinstance(expected, float):
-        return math.isfinite(actual) and math.isclose(actual, expected, rel_tol=1e-12, abs_tol=1e-9)
+        atol = 1e-9
+        if path and path[-1] == 'position_error_m':
+            atol = 1e-5
+        if len(path) >= 2:
+            field, index = path[-2:]
+            if field in ('host_state', 'payload_state', 'initial_state', 'arrival_state', 'terminal_state'):
+                atol = 1e-5 if index < 2 else 1e-7
+            elif field in ('initial_correction_m_s', 'second_correction_m_s', 'relative_velocity_m_s'):
+                atol = 1e-7
+        return math.isfinite(actual) and math.isclose(actual, expected, rel_tol=1e-12, abs_tol=atol)
     return actual == expected
 
 

@@ -1,7 +1,6 @@
 """Report exact paths when committed mission evidence differs on another runner."""
 import importlib
 import json
-import math
 import sys
 from pathlib import Path
 
@@ -9,21 +8,22 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'analysis'))
 
 
-def differences(a, b, path='root'):
+def differences(a, b, path=()):
+    from campaign_allocation import numerical_match
     if type(a) is not type(b):
         yield path, a, b
     elif isinstance(a, dict):
         if a.keys() != b.keys():
-            yield path+'.keys', list(a), list(b)
+            yield path+('keys',), list(a), list(b)
         for k in a.keys() & b.keys():
-            yield from differences(a[k], b[k], path+'.'+k)
+            yield from differences(a[k], b[k], path+(k,))
     elif isinstance(a, list):
         if len(a) != len(b):
-            yield path+'.length', len(a), len(b)
+            yield path+('length',), len(a), len(b)
         for i, (x, y) in enumerate(zip(a, b)):
-            yield from differences(x, y, f'{path}[{i}]')
+            yield from differences(x, y, path+(i,))
     elif isinstance(a, float):
-        if not math.isfinite(a) or not math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9):
+        if not numerical_match(a, b, path):
             yield path, a, b
     elif a != b:
         yield path, a, b

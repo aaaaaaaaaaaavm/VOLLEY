@@ -89,3 +89,16 @@ The Markdown and SVG must exactly regenerate from the accepted stored JSON. Test
 inject a sub-tolerance perturbation and a 0.01 kg corruption, and refuse NaN/schema drift.
 Same-environment regeneration must still be byte deterministic. The SVG is an added
 presentation of existing cases; no additional physical conclusion is introduced.
+
+
+## Cross-runner freshness addendum, 2026-09-15
+
+GitHub run 34928298955 exposed sub-micrometre coordinate and position-residual
+changes that exceeded the generic scalar freshness comparison. Reproduction now uses
+an absolute 1e-5 m floor for Cartesian position components and position-error norms,
+and 1e-7 m/s for Cartesian velocity and correction-vector components. Other scalar
+comparisons retain rtol=1e-12, atol=1e-9; structure, decisions and input/source metadata
+remain exact. The positional floor is 100 times tighter than S3's 0.001 m root check;
+the velocity floor is 500 times tighter than its 5e-5 m/s independent-propagation check.
+No physical acceptance band, target, search seed or speed interval changes.
+See `docs/MISSION_FRESHNESS_20260915.md` in the flagship for the incident record.

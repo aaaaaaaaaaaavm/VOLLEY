@@ -106,3 +106,16 @@ not permission to accept a failed solver or to declare missing branches infeasib
 All selected release times in the initial reference results lay at the latest permitted
 time, 3000 s. Report that boundary condition prominently: these searches do not bracket
 an interior optimum, and equal coarse/fine values do not establish timing convergence.
+
+
+## Cross-runner freshness addendum, 2026-09-15
+
+GitHub run 34928298955 exposed sub-micrometre coordinate and position-residual
+changes that exceeded the generic scalar freshness comparison. Reproduction now uses
+an absolute 1e-5 m floor for Cartesian position components and position-error norms,
+and 1e-7 m/s for Cartesian velocity and correction-vector components. Other scalar
+comparisons retain rtol=1e-12, atol=1e-9; structure, decisions and input/source metadata
+remain exact. The positional floor is 100 times tighter than S3's 0.001 m root check;
+the velocity floor is 500 times tighter than its 5e-5 m/s independent-propagation check.
+No physical acceptance band, target, search seed or speed interval changes.
+See `docs/MISSION_FRESHNESS_20260915.md` in the flagship for the incident record.
