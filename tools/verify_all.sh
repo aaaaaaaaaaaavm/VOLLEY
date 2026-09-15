@@ -42,6 +42,7 @@ run "departure trade freshness" python3 analysis/departure_trade.py --check
 run "campaign allocation freshness" python3 analysis/campaign_allocation.py --check
 run "terminal timing freshness" python3 analysis/terminal_timing.py --check
 run "manifest timing freshness" python3 analysis/manifest_timing.py --check
+run "architecture trade freshness" python3 analysis/gen6_architecture_trade.py --check
 # Properties and regressions. The self-test above checks the reference point; this checks
 # rules that must hold for any input, and reintroduces every defect the repository has
 # shipped to confirm a gate still catches it. Skipped with a stated reason rather than
