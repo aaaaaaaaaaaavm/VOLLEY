@@ -1,5 +1,7 @@
 # The mission VOLLEY actually flies
 
+> **Historical architecture narrative.** The sections below preserve the earlier concept and its assumptions. For the current mission, reopened Gen6 selection and evidence boundaries, read [the front page](../README.md) and [project continuity](CONTINUITY.md). In particular, conventional release speeds can differ, host structure is not free installed hardware, and no primary-mission isolation or provider accommodation has been demonstrated.
+
 Written 2026-08-22. The one-line description, *an electromagnetic CubeSat deployer*, has been
 wrong since [ADR-032](adr/032-gen6-stage-integrated-gas-store.md), and the shorter it gets the
 more wrong it is. This file is the operational concept, and it is the thing every other

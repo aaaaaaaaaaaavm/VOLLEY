@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="510" viewBox="0 0 1120 510" role="img" aria-labelledby="title desc">
+<title id="title">VOLLEY: allocating spacecraft departure control</title><desc id="desc">A controlled host supplies orbital state and services. A deployment system supplies relative impulse and release timing. A separated spacecraft inherits the resulting initial state. Retention, host recovery and disposal resources span the campaign.</desc>
+<rect width="1120" height="510" rx="16" fill="#0c1823"/>
+<text x="40" y="51" fill="#71d5c2" font-family="Arial, sans-serif" font-size="17" font-weight="700">VOLLEY / DEPARTURE CONTROL</text>
+<text x="40" y="93" fill="#ffffff" font-family="Arial, sans-serif" font-size="32" font-weight="700">One mission. Three responsibilities.</text>
+<rect x="40" y="135" width="316" height="214" rx="10" fill="#152a3a" stroke="#355365"/>
+<text x="60" y="170" fill="#71d5c2" font-family="Arial, sans-serif" font-size="16" font-weight="700">ORBITAL HOST</text>
+<text x="60" y="206" fill="#fff" font-family="Arial, sans-serif" font-size="19" font-weight="700">Coarse placement</text>
+<text x="60" y="248" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Position + velocity</text>
+<text x="60" y="277" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Attitude + navigation</text>
+<text x="60" y="306" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Power + command authority</text>
+<rect x="402" y="135" width="316" height="214" rx="10" fill="#152a3a" stroke="#355365"/>
+<text x="422" y="170" fill="#71d5c2" font-family="Arial, sans-serif" font-size="16" font-weight="700">DEPLOYMENT SYSTEM</text>
+<text x="422" y="206" fill="#fff" font-family="Arial, sans-serif" font-size="19" font-weight="700">Relative release condition</text>
+<text x="422" y="248" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Impulse + release timing</text>
+<text x="422" y="277" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Retention + guidance</text>
+<text x="422" y="306" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Reaction loads to the host</text>
+<rect x="764" y="135" width="316" height="214" rx="10" fill="#152a3a" stroke="#355365"/>
+<text x="784" y="170" fill="#71d5c2" font-family="Arial, sans-serif" font-size="16" font-weight="700">SPACECRAFT</text>
+<text x="784" y="206" fill="#fff" font-family="Arial, sans-serif" font-size="19" font-weight="700">Initial orbital state</text>
+<text x="784" y="248" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Independent trajectory</text>
+<text x="784" y="277" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Declared payload interface</text>
+<text x="784" y="306" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="17" font-weight="400">Onboard mission capability</text>
+<path d="M362 238h32m-9-7 9 7-9 7" fill="none" stroke="#71d5c2" stroke-width="2"/>
+<path d="M724 238h32m-9-7 9 7-9 7" fill="none" stroke="#71d5c2" stroke-width="2"/>
+<path d="M60 376H1060" stroke="#355365"/>
+<text x="40" y="418" fill="#71d5c2" font-family="Arial, sans-serif" font-size="16" font-weight="700">CAMPAIGN ACCOUNTING</text>
+<text x="40" y="452" fill="#c6d5e0" font-family="Arial, sans-serif" font-size="20" font-weight="400">Safe retention · host recovery · remaining payloads · resource and disposal reserves</text>
+<text x="40" y="485" fill="#9eafb9" font-family="Arial, sans-serif" font-size="15" font-weight="400">Functional concept only. Host services and controllable release authority are not established capabilities.</text>
+</svg>

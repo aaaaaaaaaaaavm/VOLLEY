@@ -1,5 +1,7 @@
 # Programme execution and architecture decision record
 
+[Resume work and coordinate changes](CONTINUITY.md) · [Mission and redesign](workstreams/MISSION_AND_REDESIGN.md) · [Engineering closure](workstreams/ENGINEERING_CLOSURE.md)
+
 Adityavardhan Mishra · 2026-09-14
 
 ## Working on now / next / blocked

@@ -1,5 +1,7 @@
 # What VOLLEY actually is: a last-mile delivery vehicle, not a bigger spring
 
+> **Historical architecture narrative.** The sections below preserve the earlier concept and its assumptions. For the current mission, reopened Gen6 selection and evidence boundaries, read [the front page](../README.md) and [project continuity](CONTINUITY.md). In particular, conventional release speeds can differ, host structure is not free installed hardware, and no primary-mission isolation or provider accommodation has been demonstrated.
+
 > Nothing in this project has been built, fired, measured, qualified or flown, and no result
 > here has been reviewed by a third party. Every number is a script output.
 

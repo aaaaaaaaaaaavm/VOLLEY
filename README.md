@@ -1,102 +1,96 @@
 # VOLLEY
 
-**Programmable CubeSat deployment from a controlled upper stage.**
+**Programmable spacecraft departure from a controlled orbital host.**
 
-I am developing a deployer that gives each secondary payload a chosen release velocity after the
-primary mission. The host supplies coarse orbital placement where its capability and mission
-rules permit; VOLLEY supplies the individual separation condition. Keeping the payload
-mechanically and electrically unmodified is the design objective. Compatibility is not yet demonstrated.
+I started VOLLEY with a question: how much of a satellite's initial orbital distribution can be handled by the system that releases it, before the satellite has to carry propulsion of its own?
 
-**Computational design study. Nothing has been built, fired, measured, qualified or flown.**
+I am developing an approach to satellite deployment in which a host supplies coarse orbital placement and a release mechanism supplies an individual departure condition. The intended service is controlled separation velocity, direction and timing across one payload or a manifest. Keeping the spacecraft mechanically and electrically unmodified is VOLLEY's design objective; the interfaces still have to earn that claim.
 
-[Start with the evidence](docs/GEN5_CLOSURE.md) · [Current work](docs/STATE_OF_THE_PROJECT.md) ·
-[Now / next / blocked](docs/PROGRAMME_EXECUTION.md#working-on-now--next--blocked) ·
-[Prototype programme](docs/PROTOTYPE_READINESS.md) · [CAD](cad/README.md) ·
-[IEEE-formatted manuscript](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)
+**Computational engineering programme. Nothing has been built, fired, measured, qualified or flown.**
 
-![Mission and evidence boundary](figures/V00_system_overview.svg)
+[Current work](docs/PROGRAMME_EXECUTION.md#working-on-now--next--blocked) · [Engineering evidence](docs/GEN5_CLOSURE.md) · [CAD](cad/README.md) · [Open problems](OPEN_PROBLEMS.md) · [Workstreams](docs/CONTINUITY.md)
 
-This overview is generated from committed inputs by `tools/make_repo_overview.py`.
-Gen5 and Gen6 share a mission; they do not share a completed evidence base.
+![Allocation of responsibility between host, deployment system and spacecraft](docs/assets/departure_roles.svg)
 
-## Two configurations, different maturity
+*Functional allocation, not a selected vehicle layout. Host services require a mission-specific agreement; departure control remains a design objective.*
 
-| | Gen5: frozen electromagnetic baseline | Gen6: active gas-driven investigation |
+## The job I want it to do
+
+A secondary spacecraft starts from the position and velocity its launch service delivers. Its separation mechanism adds another initial condition. I want to find the missions where controlling that condition more deliberately is worth the hardware, energy and operational burden.
+
+That could mean distributing a batch more quickly, reaching different orbital-energy targets, reducing repeated host manoeuvres, or providing repeatable low-tip-off separation. It could also mean discovering that an ordinary dispenser and a better release sequence already do the job.
+
+The comparison therefore includes conventional springs, release timing, host manoeuvres, cooperative spacecraft interfaces and payload propulsion where it serves the same mission. Programmability has to produce a useful difference against a competent baseline.
+
+My longer-term interest is inexpensive, repeatable spacecraft that can be produced and replenished in batches: individual satellites, temporary groups and larger constellations. VOLLEY asks what initial mobility can be shared outside those spacecraft. A three-to-six-year operating life is a mission hypothesis to model, including disposal uncertainty; it is not a timer built into a separation impulse.
+
+## Where the orbital work happens
+
+The proposed sequence starts with the primary mission and a retained, controlled host. Subject to the mission rules, the host establishes the departure geometry, the deployment system releases a payload, and the host recovers its attitude and prepares the next event. Resource and disposal reserves belong in the campaign from the beginning.
+
+The host supplies navigation, attitude authority and any orbital manoeuvres. VOLLEY supplies the relative release impulse and its mechanical interface. After separation, the spacecraft follows the resulting trajectory and whatever capabilities it carries itself. VOLLEY cannot provide continuing stationkeeping, collision avoidance or formation maintenance once contact ends.
+
+Release changes velocity at the release position. It cannot, by itself, place a propulsion-less satellite into an arbitrary different circular orbit. Direction, timing, host state and acceptable terminal-state error matter alongside speed. An orbit plot showing a higher apogee is only one part of that problem.
+
+An active upper stage is a possible host, and its manoeuvring capability is also an alternative to extra deployer speed. The [host compatibility study](docs/HOST_COMPATIBILITY.md) separates public information, assumptions and missing interfaces for Skyroot and Agnikul. Neither launcher is established as compatible. An 8 m vehicle structure is not automatically an available 8 m deployment path.
+
+## How the machine has changed
+
+The project began in April 2021. Its [lineage](docs/LINEAGE.md) records how the mechanism changed as calculations exposed the cost of earlier choices.
+
+| Configuration | What I investigated | What the evidence now means |
 |---|---|---|
-| Drive | Ironless double-sided Halbach linear synchronous motor and reusable sled | Closed gas expansion along an approximately 8 m stage-integrated guide |
-| Purpose in this record | Reproducible comparison case and manuscript baseline | Investigate removal of the full pulse chain, sled, brake and return stroke |
-| Release velocity | **16.029 m/s**, model output at the frozen point | **29.009 m/s**, a design-point calculation, not established integrated performance |
-| Evidence | Field, structural, circuit, orbit and other numerical studies with run-specific limitations | Gas/campaign studies and geometry; unresolved guide-contact and release-state prediction |
-| Principal limits | Failed mass comparison, pulse-store feasibility and payload magnetic environment | Contact-model credibility, velocity accuracy, conducting-tube/trim interaction and actual host interfaces |
-| Design status | Frozen with explicit exceptions | Not frozen; trim stage suspended |
+| **Gen5: frozen electromagnetic baseline** | Ironless double-sided Halbach linear synchronous motor, reusable magnet sled, shared magazine, pulse supply, brake and return | A reproducible comparison case and the manuscript baseline. The mass comparison failed; substantial physical uncertainties remain. |
+| **Existing Gen6: gas-driven investigation** | Direct gas expansion along an approximately 8 m stage-integrated guide, with a proposed trim function | A candidate with unresolved contact/release dynamics and host accommodation. Electromagnetic trim is suspended. |
+| **Next Gen6 selection: open** | Compact controllable release, independent retained bays, banks and the shared magazine under common mission requirements | No mechanism has won. The existing gas guide remains in the comparison with its results and failures intact. |
 
 <table>
 <tr>
 <td width="50%"><img src="cad/renders/gen5/hero_open.png" alt="Gen5 electromagnetic assembly with enclosure open"></td>
-<td width="50%"><img src="cad/renders/gen6/hero_open.png" alt="Gen6 stage-integrated gas architecture study"></td>
+<td width="50%"><img src="cad/renders/gen6/hero_open.png" alt="Existing gas-driven Gen6 architecture study"></td>
 </tr>
-<tr><td><b>Gen5 geometry.</b> The analysed electromagnetic comparison case.</td><td><b>Gen6 geometry.</b> An architecture study, not a released manufacturing assembly.</td></tr>
+<tr><td><b>Gen5 geometry.</b> Frozen electromagnetic comparison.</td><td><b>Existing Gen6 geometry.</b> Investigated gas architecture; not the selected redesign or a manufacturing release.</td></tr>
 </table>
 
-The [baseline](docs/BASELINE.md) owns Gen5 numbers. The [live register](OPEN_PROBLEMS.md) owns
-limitations. Historical renders and earlier generations are indexed in [GENERATIONS.md](docs/GENERATIONS.md).
+The [generation index](docs/GENERATIONS.md) preserves earlier configurations. [BOLLEY](https://github.com/aaaaaaaaaaaavm/BOLLEY) investigates a separate bargain: accepting a cooperative passive spacecraft interface in exchange for different deployment machinery. Its interface mass, magnetic environment and qualification burden remain in its accounting.
 
-## What the work has established
+## What the evidence says
 
-- The frozen Gen5 model produces a commanded release condition. Its net electrical-to-payload
-  efficiency is **18.8%** and its modelled dry mass is **126.6 kg**. Those figures include assumptions
-  and do not establish a purchasable, qualified system.
-- Independent numerical paths exist for selected field, structure, circuit and orbit questions.
-  Their scope is listed in [PROVENANCE.md](docs/PROVENANCE.md). Agreement is a cross-check, not an experiment.
-- The mass comparison and original constellation-phasing argument failed. A spring and release
-  timing remain legitimate controls in the mission trade. [The exceptions](docs/GEN5_CLOSURE.md)
-  are part of the result.
-- A nominally consistent model can still be physically wrong. The guide/contact work found
-  geometry and contact-law problems that require further analysis before a tip-off prediction
-  can support a build decision.
+At the frozen Gen5 model point, the release velocity is **16.029 m/s**, net electrical-to-payload efficiency is **18.8%**, and dry system mass is **126.6 kg**. These are calculated outputs of one configuration, not product specifications. The [baseline](docs/BASELINE.md) owns the complete ledger and assumptions.
 
-<p align="center">
-<img src="figures/A02_field_map.png" width="32%" alt="Computed depth-resolved magnetic field">
-<img src="figures/F01_shot.png" width="32%" alt="Modelled Gen5 shot histories">
-<img src="figures/A35_ledger.png" width="32%" alt="Mass attributed to requirements">
-</p>
+The failures matter just as much. Gen5 loses its 3U dispenser mass comparison. The original claim of a unique constellation-phasing advantage did not survive comparison with release timing. Guide/contact studies exposed model-form and geometry defects, so nominal numerical consistency cannot establish a credible exit-state envelope.
 
-These are numerical results from the committed analysis, not measurements. The
-[figure index](docs/FIGURE_INDEX.md) and run sheets provide the source and limits.
+The mission work has progressed through three bounded studies:
 
-## What controls the next build decision
+| Study | What it adds | What remains outside its result |
+|---|---|---|
+| [Departure-state trade](docs/DEPARTURE_TRADE.md), 210 cases | Finite host recoil and assumed release authority | Complete campaign and installed-system benefit |
+| [Sequential campaign](docs/CAMPAIGN_ALLOCATION.md), 180 cases | Host propagation, remaining manifest mass and propellant allocation | Full position/velocity targets and useful constellation performance |
+| [Terminal-state timing](docs/TERMINAL_TIMING.md), 300 cases | Identical terminal position/velocity targets and release-time search for one payload | Multi-payload optimization and a demonstrated interior timing optimum |
 
-1. **Useful release velocity.** Resolve P113 against host-provided orbital energy, spring release
-   and release timing. More velocity must earn its mass and integration cost.
-   [The departure-state screen](docs/DEPARTURE_TRADE.md) begins that comparison;
-   [host compatibility](docs/HOST_COMPATIBILITY.md) separates public evidence from missing interfaces.
-   [Sequential allocation](docs/CAMPAIGN_ALLOCATION.md) adds host propagation and propellant accounting;
-   [programme execution](docs/PROGRAMME_EXECUTION.md) records the architecture decision gates.
-   [Terminal-state timing](docs/TERMINAL_TIMING.md) compares identical position/velocity targets
-   and release-time searches for one payload; it does not establish a manifest optimum.
-2. **A credible exit-state envelope.** Resolve P103/P108: corrected guide shape, contact-law
-   verification, penetration/convergence, friction, inertia and tolerance effects.
-3. **One coherent Gen6 configuration.** A72–A74 do not support treating the present magnetic
-   secondary and conducting tube as a solved combination. Resolve P92 before promoting a trim design.
-4. **A complete prototype package.** Selected parts, load paths, clearances, full mass and energy
-   budgets, fault response, drawings, assembly instructions and an instrumented test plan.
+In one common-energy campaign, the 11.8, 16.029 and 29.009 m/s screens all avoid host corrections. That case gives no reason to choose the highest speed. The assumed speed intervals are not measured operating envelopes; the true minimum controllable release velocity is still unknown.
 
-[PROTOTYPE_READINESS.md](docs/PROTOTYPE_READINESS.md) defines the work packages and their exit
-products for VOLLEY and BOLLEY. [COMPUTATIONAL_CLOSURE.md](docs/COMPUTATIONAL_CLOSURE.md)
-counts the active Gen6 analysis backlog. Neither document declares the work complete.
+[PROVENANCE](docs/PROVENANCE.md), the [run sheets](validation/README.md) and [figure index](docs/FIGURE_INDEX.md) identify sources and limits. Cross-solver agreement is an independent numerical check, not an experiment.
 
-## Review routes
+## What I am designing next
 
-| What you want to inspect | Start here |
-|---|---|
-| The concept and current state | [CONCEPT](docs/CONCEPT.md), [STATE_OF_THE_PROJECT](docs/STATE_OF_THE_PROJECT.md) |
-| The frozen result and its failures | [BASELINE](docs/BASELINE.md), [GEN5_CLOSURE](docs/GEN5_CLOSURE.md) |
-| Source and limits of a claim | [PROVENANCE](docs/PROVENANCE.md), [validation](validation/README.md), [OPEN_PROBLEMS](OPEN_PROBLEMS.md) |
-| Mechanical design and remaining build work | [CAD](cad/README.md), [BUILD_READINESS](docs/BUILD_READINESS.md), [Gen6 handoff](docs/GEN6_FUSION_BUILD_PACKAGE.md) |
-| Host requirements and mission value | [MISSION_ARCHITECTURE](docs/MISSION_ARCHITECTURE.md), [HOST_REFERENCE_CASES](docs/HOST_REFERENCE_CASES.md), [CASE_STUDY](docs/CASE_STUDY.md) |
-| Experiments and qualification planning | [BENCHTOP_TESTS](docs/BENCHTOP_TESTS.md), [QUALIFICATION_PLAN](docs/QUALIFICATION_PLAN.md) |
-| Decisions and earlier configurations | [LINEAGE](docs/LINEAGE.md), [DECISION_LOG](docs/DECISION_LOG.md), [GENERATIONS](docs/GENERATIONS.md) |
-| A short account of my engineering work | [SUMMARY](SUMMARY.md), [SKILLS](docs/SKILLS.md) |
+My leading candidate is a compact release cell with its own retention and exit path, sharing services across the manifest where that makes sense. Independent bays may sacrifice some shared-machine mass efficiency while reducing the number of payloads exposed to one blocked path. Shared power and control can still create common failures; independence has to be demonstrated through the architecture.
+
+I will compare controlled stored-energy pushers, short-stroke electromechanical pushers and gas-driven mechanisms under the same requirements. Payload arrangement and energy source are separate decisions. Captive-pusher arrest, pressure containment, peak electrical power, thermal recovery, tolerances and fault response must all be charged to the candidate that needs them.
+
+The priority is the complete mission comparison, then installed mass, envelope, campaign resources and failure exposure. A selected design must show where it helps and where conventional deployment is sufficient. P92 and P113 remain open until their decision requirements are met.
+
+Scaling will be an architecture family. Very small spacecraft are sensitive to adapter overhead; larger spacecraft bring stronger interfaces, distributed force application and larger host reaction demands. I will start from the existing 4 kg/3U reference, then compare adjacent sizes and 2-, 4- and 12-payload arrangements. Enlarging CAD does not establish scaling.
+
+A programmable ground separation-test system is also worth investigating: a controlled push profile, an instrumented surrogate, and measured velocity, tip-off and repeatability. It could resolve useful release physics before a flight product exists, provided gravity and test-support effects are accounted for.
+
+## From analysis to a justified test article
+
+The next useful endpoint is a specific release cell that another engineering team can inspect and build: requirements, load paths, selected parts, tolerances, complete mass and energy budgets, controls, drawings, assembly and inspection instructions, and a calibrated test plan with acceptance criteria declared beforehand.
+
+Small discriminating experiments belong early when friction or contact behaviour decides which architecture survives. A complete simulation record cannot substitute for those measurements.
+
+The [prototype programme](docs/PROTOTYPE_READINESS.md) defines the thirteen work packages. [Programme execution](docs/PROGRAMME_EXECUTION.md) shows what is now, next and externally blocked. [Mission and redesign](docs/workstreams/MISSION_AND_REDESIGN.md) and [engineering closure](docs/workstreams/ENGINEERING_CLOSURE.md) separate the next architecture work from the inherited backlog; [continuity](docs/CONTINUITY.md) records how their evidence meets.
 
 ## Reproduce
 
