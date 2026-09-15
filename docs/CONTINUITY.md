@@ -4,7 +4,7 @@ Updated 2026-09-15. This is the starting point when resuming work. Fetch current
 
 | Workstream | Owns | First deliverable |
 |---|---|---|
-| [Mission and redesign](workstreams/MISSION_AND_REDESIGN.md) | Front-page presentation, complete mission comparison, Gen6 selection and selected release-cell integration | Complete multi-payload terminal-state requirements and release timing |
+| [Mission and redesign](workstreams/MISSION_AND_REDESIGN.md) | Front-page presentation, complete mission comparison, Gen6 selection and selected release-cell integration | Turn S1–S4 into architecture requirements, then run the P92 arrangement/mechanism trade |
 | [Engineering closure](workstreams/ENGINEERING_CLOSURE.md) | Frozen-baseline corrections, reusable engineering evidence, BOLLEY and prototype-readiness inputs | Reconcile later results against open entries, then execute bounded closure tasks |
 
 ## Current authority
@@ -15,9 +15,11 @@ Read [BASELINE](BASELINE.md) for Gen5 values, [OPEN_PROBLEMS](../OPEN_PROBLEMS.m
 
 ## Completed work that must not be restarted by mistake
 
-PR #33 and the paper/thesis companion PRs #2 are merged. The departure screen has 210 cases; the sequential energy-target campaign has 180; the single-payload terminal-state timing screen has 300. These are three different scopes. Neither energy targets alone nor a single-payload timing search establish a complete manifest or useful constellation. [TERMINAL_TIMING](TERMINAL_TIMING.md) records the latest study limits.
+PR #33 and the paper/thesis companion PRs #2 are merged. The departure screen has 210 cases; the sequential energy-target campaign has 180; the single-payload terminal-state timing screen has 300. [P113-S4](MANIFEST_TIMING.md) is also merged: 100 two-payload schedule/order/authority cases using one evolving host, with 44 accepted tested campaigns. The S4 JSON, report, SVG, tests and normal freshness gate are published, and paper/thesis companion snapshots were synchronized to the S4 source commit.
 
-The 51 live VOLLEY entries and BOLLEY's 48-entry register have not been closed by writing this handoff. Existing trim/contact failures remain. A numerical pass does not mean hardware acceptance or an architecture win.
+These are four different scopes. S4 is not full-manifest closure: clearing/settling intervals, release/navigation error, installed burden and the complete manifest remain outside the bounded screen. P113/E5 remain open. On the fine grid, BOLLEY, Gen5 and existing Gen6 authority screens share the same best tested 2.777987 kg ideal host-fuel result and 4.569852 m/s first release; that is a tested campaign result, not a universal optimum or hardware ranking.
+
+Existing trim/contact failures remain. A numerical pass does not mean hardware acceptance or an architecture win. Use the live VOLLEY and BOLLEY registers for current counts rather than dated handoff numbers.
 
 ## Shared files and integration
 
@@ -35,4 +37,6 @@ Provider data, customer acceptance, funding/disclosure decisions, manufacture, m
 
 ## Presentation update record
 
-2026-09-15: replaced the front-page configuration summary with a mission-led brochure, retained frozen results and failure boundaries, and marked earlier concept narratives as historical. Added workstream ownership and a complete routing of live VOLLEY items. No analysis, register status, baseline, CAD or companion evidence changed.
+2026-09-15: rebuilt the repository front page as a visual technical brochure and replaced the old single-page website with a visual project site, browser mission sandbox, interactive Gen5 CAD viewer, evolution/evidence/current-work pages and a documentation portal. Earlier concept narratives remain historical and no clean-sheet Gen6 mechanism is rendered before selection.
+
+2026-09-15: integrated P113-S4, synchronized its bounded result into the public visual surfaces and companion snapshots, and advanced the redesign stream to architecture requirements and P92 selection. No hardware evidence changed.
