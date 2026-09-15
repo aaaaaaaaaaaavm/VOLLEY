@@ -50,7 +50,9 @@ At the frozen Gen5 model point the calculated release velocity is **16.029 m/s**
 
 ![Energy and stroke scaling with release velocity](docs/assets/scaling.svg)
 
-The mission studies are already showing why this matters. In one common-energy campaign the **11.8, 16.029 and 29.009 m/s** release-authority screens all avoid host corrections. That case gives no reason to choose the highest speed. Timing, direction, terminal-state error, host manoeuvres, installed burden and controllability matter alongside raw velocity.
+The mission studies are already showing why this matters. In one common-energy campaign the **11.8, 16.029 and 29.009 m/s** release-authority screens all avoid host corrections. S4 sharpens the point: on its fine grid, the best tested BOLLEY, Gen5 and existing Gen6 campaigns all use the same **4.569852 m/s** first release and the same **2.777987 kg** ideal host-fuel result. Extra release authority above that does not improve this tested campaign.
+
+That is not a universal optimum. It is a reason to stop treating maximum release speed as the product score. Timing, direction, terminal-state error, host manoeuvres, installed burden and controllability matter alongside raw velocity.
 
 ---
 
@@ -63,7 +65,9 @@ The mission studies are already showing why this matters. In one common-energy c
 | [S1 · Departure-state trade](docs/DEPARTURE_TRADE.md) | 210 | Finite host recoil and assumed release authority | Complete campaign and installed-system benefit |
 | [S2 · Sequential campaign](docs/CAMPAIGN_ALLOCATION.md) | 180 | Host propagation, remaining manifest mass and propellant allocation | Full position/velocity targets and useful constellation performance |
 | [S3 · Terminal-state timing](docs/TERMINAL_TIMING.md) | 300 | Identical terminal position/velocity target and release-time search for one payload | Coupled multi-payload optimization |
-| **S4 · Manifest timing** | **in closure** | Coupled two-payload terminal-state campaign | Not promoted to completed evidence until generated artifacts, freshness checks and companion snapshots are coherent |
+| [S4 · Two-payload manifest timing](docs/MANIFEST_TIMING.md) | 100 | Shared-host continuity, two target orders, coupled release timing and full terminal-state acceptance | Clearing/settling intervals, release/navigation error, installed burden and complete-manifest closure |
+
+S4 accepts **44 of 100** tested schedule/order/authority cases. Failed searches remain in the JSON; missing roots are not treated as proofs of infeasibility. P113/E5 therefore remain open.
 
 The browser [mission sandbox](https://aaaaaaaaaaaavm.github.io/VOLLEY/#sim) is deliberately **not** part of this evidence chain. It is a simple two-body visualisation for intuition. The validated studies above remain authoritative.
 
@@ -111,7 +115,7 @@ A programmable ground separation-test system is an adjacent application worth ke
 
 ## What happens next
 
-**1. Finish the coupled manifest mission comparison.** Close S4 as reproducible evidence rather than a passing script on a branch.
+**1. Turn the mission evidence into architecture requirements.** Add clearing/settling time, release/navigation uncertainty and installed burden where S4 says they can change the ranking.
 
 **2. Select the architecture.** Compare arrangement and mechanism under the same mission requirements and record why the losing architectures lost.
 
