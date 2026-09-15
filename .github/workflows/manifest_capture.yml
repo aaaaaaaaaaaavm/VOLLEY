@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - mission-manifest-completion-20260915
-  workflow_dispatch:
+    paths:
+      - .github/workflows/manifest_capture.yml
+
+permissions:
+  contents: write
 
 jobs:
   generate:
@@ -24,13 +28,21 @@ jobs:
         run: |
           python3 analysis/manifest_timing.py
           python3 -m pytest tests/test_manifest_timing.py -q
-      - name: capture generated evidence
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: manifest-timing
-          path: |
-            analysis/results/manifest_timing.json
-            docs/MANIFEST_TIMING.md
-            figures/manifest_timing.svg
-          if-no-files-found: error
-          retention-days: 1
+      - name: publish generated evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          for path in analysis/results/manifest_timing.json docs/MANIFEST_TIMING.md figures/manifest_timing.svg; do
+            content=$(base64 -w0 "$path")
+            jq -n --arg message "Publish P113-S4 generated evidence" --arg content "$content" --arg branch "$BRANCH" \
+              --arg name "Adityavardhan Mishra" --arg email "adityavardhanmishr@gmail.com" \
+              '{message:$message,content:$content,branch:$branch,author:{name:$name,email:$email},committer:{name:$name,email:$email}}' > /tmp/payload.json
+            curl -fsSL -X PUT \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/$REPO/contents/$path" \
+              --data-binary @/tmp/payload.json >/dev/null
+          done
