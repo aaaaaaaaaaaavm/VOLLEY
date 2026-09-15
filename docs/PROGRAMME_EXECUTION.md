@@ -108,7 +108,7 @@ Gen5's remaining investigations stay in its own record. Complete them when a liv
 claim or reused component needs the result, not as an arbitrary prerequisite to a
 different mechanism. Reference/prior-art audits and register reconciliation remain work.
 
-The dated VOLLEY register still has 52 live entries, including 18 Gen6 computation
+The dated VOLLEY register still has 51 live entries, including 18 Gen6 computation
 items. These overlap the stages and packages above; they must not be added together.
 Use the [live register](../OPEN_PROBLEMS.md) and
 [computational closure view](COMPUTATIONAL_CLOSURE.md) for authoritative dispositions.

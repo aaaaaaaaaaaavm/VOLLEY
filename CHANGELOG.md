@@ -1,5 +1,30 @@
 # Change log / audit record
 
+## 2026-09-15: P56's free-baseline restatement audited surface by surface
+
+P56 was corrected on 2026-08-14 by A21-R, and its note listed eleven public surfaces plus both
+manuscripts as restated. The list was taken on trust. Checking it found twelve of the thirteen
+already naming release timing at 468 s as the free baseline for in-track phase, and one that did
+not.
+
+`docs/RESULTS.md` still headed its seeding section "the actual value proposition" and priced 30°
+against differential drag alone, 1.4 days against 25. The two banners at the top of that file
+retire its operating-point numbers and say nothing about phase, so nothing marked the passage.
+It now carries a dated correction naming the 0.0641 °/s in-track rate, 468 s to 30° at 450 km,
+ADR-020's 1200 s cadence at 76.9° per shot, the 21.75 °/day drift a commanded split leaves
+behind, and the +28.8 km and x1.602 that only Δv buys against x1.0000 for timing at any cadence.
+The chart stays: its drag arithmetic is right, and only the comparison it implies is incomplete.
+
+The other half of the criterion was the companion row in `analysis/comparators.py`. A21-R's R1
+through R6 are present, added below A21's seven originals rather than replacing any of them, and
+R2 is the row itself, time to 30° by timing over time by commanded differential, banded at
+≤ 0.01. Band 3 is unedited and still reads as it passed.
+
+With both halves met P56 classifies CORRECTED. The live register count moves from 52 to 51,
+propagated to `SUMMARY.md`, `docs/CONTINUITY.md`, `docs/PROGRAMME_EXECUTION.md`,
+`docs/GEN5_CLOSURE.md`, `docs/index.html`, the regenerated BSX review and the closure routing
+table. No band was edited and no number moved.
+
 ## 2026-09-15: P39's provenance question answered against its own guess
 
 P39 closed with a paragraph that guessed at its own end state: that `validation/fea/plate*.inp`

@@ -6,14 +6,14 @@ fixed first. E-items are genuinely unsolved engineering.
 > ## How to read the counts
 >
 > <!-- REGISTER_COUNTS:BEGIN -->
-> 154 numbered entries, of which 52 are live. Every entry carries a
+> 154 numbered entries, of which 51 are live. Every entry carries a
 > `Status:` line written by `tools/register_status.py`. This block and the result JSON
 > are generated from the same classifications.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | 52 (32 P, 20 E) | open engineering; something still has to be done |
-> | `CORRECTED` | 59 | found, fixed and propagated, retained as the published record |
+> | `LIVE` | 51 (31 P, 20 E) | open engineering; something still has to be done |
+> | `CORRECTED` | 60 | found, fixed and propagated, retained as the published record |
 > | `CLOSED` | 43 | resolved, with the closer named in the entry |
 > <!-- REGISTER_COUNTS:END -->
 >
@@ -2650,8 +2650,7 @@ one solve per distinct geometry, four in total.
 
 
 ### P56. The phase-spacing claim is compared against the wrong baseline: CORRECTED 2026-08-14 by A21-R
-> **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `PROGRAMME` · **Next step:** `COMPUTATION` — state the free baseline wherever the phase claim appears
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 > Corrected. A21-R ran on 2026-08-14, six of six bands pass, and the claim has been restated
 > as orbit change in `README.md`, `SUMMARY.md`, `wiki/Home.md`, `docs/index.html`, `CONCEPT.md`,
@@ -2701,12 +2700,38 @@ apogee (450 to 507.6 km), +60.2 % of orbital life against a spring's +8.2 %, and
 a chosen altitude shell are things only Δv buys. The differentiator is orbit change, not phase
 change, and the repository has been leading with the weaker of the two.
 
-What would close it. Restate the claim wherever it appears, front door, `SUMMARY.md`,
+The criterion, as declared on 2026-08-14. Restate the claim wherever it appears, front door,
+`SUMMARY.md`,
 `CONCEPT.md`, `LANDSCAPE.md`, `MARKET.md`, `REVIEW_RESPONSES.md` and the manuscript, as orbit
 change rather than phase spacing, with timed release named as the correct free baseline for phase.
 `analysis/comparators.py` band 3 asserts *"a spring's designed differential is zero"*, which is
 true and no longer sufficient; it needs a companion row for release timing. The band is not
 edited, it passed as declared. A re-declared A21-R adds the row.
+
+**Reconciled 2026-09-15.** Both halves of that criterion are met, audited surface by surface
+rather than taken from the 2026-08-14 note.
+
+`analysis/comparators.py` carries A21's seven original bands untouched and A21-R's six added
+below them, R1 through R6, under a comment naming the run sheet they were declared in. R2 is the
+companion row the criterion asked for: time to 30° by release timing over time by commanded
+differential, banded at ≤ 0.01. Band 3 is unedited and still reads as it passed.
+
+Of the eleven public surfaces plus both manuscripts, twelve already named release timing as the
+free baseline. `docs/RESULTS.md` did not. Its "Seeding: the actual value proposition" section
+still priced 30° against differential drag alone, under the two operating-point banners at the
+top of that file, neither of which says anything about phase. It now carries a dated correction
+block of its own, and the chart is retained rather than removed, because the drag arithmetic it
+draws is still right and only the comparison it implies is incomplete. `wiki/Home.md` mentions
+the claim once, as one of the things the retired wiki page got wrong, which is the correct
+account of it.
+
+In the manuscripts the drag paragraph is followed by three that do the work: the 0.0641 °/s
+in-track rate and 468 s at 450 km, the 1200 s cadence at 76.9° per shot, the 21.75 °/day drift a
+propulsion-less satellite cannot null, and the 28.8 km and x1.60 that only Δv buys against
+x1.0000 for timing at any cadence. Figure F05's caption names what the figure omits, which is
+what `docs/FIGURE_INDEX.md` requires of it.
+
+Propagated to `docs/RESULTS.md`. Nothing else changed, and no band was edited.
 
 ### P57. A voice-coil CubeSat deployer making this project's core claim has been on the reading list unread since 2026-07-30: HIGH, NEW 2026-08-14
 > **Status:** `LIVE` — open engineering; something still has to be done

@@ -35,7 +35,6 @@ Every live item is included below. Closure prepares evidence for programme decis
 | P44 | Closure prepares; external evidence required | At femtosat scale the separation hardware outweighs the satellites it separates: MEDIUM, NEW 2026-08-10 | `FLIGHT_OPS` — femtosat deployer masses actually flown |
 | P45 | Closure | The flywheel buys the impedance and pays it back in mass: LOW, NEW 2026-08-10 | `COMPUTATION` — flywheel specific energy from flown units |
 | P52 | Closure | The segmented stator puts a 30 % force ripple through the track's first mode: HIGH, NEW 2026-08-13 | `COMPUTATION` — segment handover through the track mode |
-| P56 | Closure | The phase-spacing claim is compared against the wrong baseline: CORRECTED 2026-08-14 by A21-R | `COMPUTATION` — state the free baseline wherever the phase claim appears |
 | P57 | Closure | A voice-coil CubeSat deployer making this project's core claim has been on the reading list unread since 2026-07-30: HIGH, NEW 2026-08-14 | `COMPUTATION` — read the voice-coil deployer in full and record it in PRIOR_ART under that file's five fields |
 | P59 | Redesign prepares; user decides | Kill criterion 1 is unreachable by architecture and unreachable by manifest size: CRITICAL, NEW 2026-08-14 | `DECISION` — D2: which payload class is the product |
 | P67 | Closure prepares; external evidence required | Gen6's precision rests on a seal friction nobody has measured, and its rated velocity excludes it: HIGH, NEW 2026-08-16 | `HARDWARE` — measure the seal friction -- B-2 |
@@ -79,9 +78,11 @@ Every live item is included below. Closure prepares evidence for programme decis
 | E25 | Closure | A13 now leaves attitude restoration and structural settling open: CORRECTED 2026-08-03 | `COMPUTATION` — attitude restoration and structural settling |
 
 
-Reconciled 2026-09-15: P39 was routed here, answered, and is no longer live, so it has been
-removed from the table above. Its provenance question is settled in the register entry itself
-and in [A4](../../validation/A4_sled_structural.md#reproduction-record-2026-09-15). The routing
-now carries 52 entries, matching the register's live count.
+Reconciled 2026-09-15: P39 and P56 were routed here, answered, and are no longer live, so
+both have been removed from the table above. P39's provenance question is settled in the register
+entry itself and in
+[A4](../../validation/A4_sled_structural.md#reproduction-record-2026-09-15); P56's free-baseline
+restatement is complete across every public surface and both manuscripts, audited in the entry.
+The routing now carries 51 entries, matching the register's live count.
 
 [Programme sequence](../PROGRAMME_EXECUTION.md) · [Prototype packages](../PROTOTYPE_READINESS.md) · [Redesign stream](MISSION_AND_REDESIGN.md)

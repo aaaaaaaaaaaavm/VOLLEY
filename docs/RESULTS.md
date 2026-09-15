@@ -136,6 +136,18 @@ shortening the stroke. Source:
 
 ## Seeding: the actual value proposition
 
+> Corrected 2026-09-15 (P56, A21-R). This section names differential drag as the baseline
+> for phase, and that is the wrong comparison. Satellites released at different times from
+> the same host arrive at different true anomalies in the same orbit at zero delta-v: at
+> 450 km, 30° costs 468 seconds of waiting, and ADR-020's adopted 1200 s cadence already
+> gives 76.9° per shot. Release timing beats commanded differential by 255x and drag by four
+> orders, and the offset it sets holds, where a commanded differential leaves a 21.75 °/day
+> drift a propulsion-less satellite cannot null. The chart below is retained because the
+> drag comparison it draws is still arithmetically right, not because the value proposition
+> its heading claims is the real one. What survives is orbit change, which no clock imitates:
+> +28.8 km of semi-major axis and x1.602 of orbital life, against x1.0000 for release timing
+> at any cadence. See [A21-R](../validation/A21R_release_timing.md).
+
 Time to spread a constellation 30° apart, by ejection velocity, against the
 differential-drag baseline.
 
