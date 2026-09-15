@@ -41,7 +41,7 @@ Gen6 already exists as a stage-integrated cold-gas design study. It is not a bla
 | [P68](../OPEN_PROBLEMS.md) | HOST_DATA | a real stage interface: what a provider will actually credit |
 | [P75](../OPEN_PROBLEMS.md) | COMPUTATION | a Gen6 reliability architecture, the way A47 did Gen5 |
 | [P78](../OPEN_PROBLEMS.md) | HARDWARE | it resolves with P67; the friction share is what is unmeasured |
-| [P79](../OPEN_PROBLEMS.md) | COMPUTATION | A75 has shown the level explains it to within 1.2428x; the residual, and the independent propagator check, are what is left |
+| [P79](../OPEN_PROBLEMS.md) | COMPUTATION | A76 has falsified inclination as the residual's cause; the reference orbits' own provenance is the next thing to check |
 | [P81](../OPEN_PROBLEMS.md) | COMPUTATION | an ejector concept that clears the tube on the energy available |
 | [P87](../OPEN_PROBLEMS.md) | COMPUTATION | re-plan the campaign fill schedule against the window |
 | [P88](../OPEN_PROBLEMS.md) | HARDWARE | the seal's own conduction path, measured |

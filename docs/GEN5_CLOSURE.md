@@ -206,6 +206,6 @@ ADRs 032 through 036, and the register, and it is future work.
 ---
 
 Register reconciled 2026-09-15: 154 numbered entries, 51 live, 60 corrected and retained, 43 closed.
-77 run sheets covering 72 analyses across A1, A71, A3, A26 and A60 were numbered and never
+78 run sheets covering 73 analyses across A1, A76, A3, A26 and A60 were numbered and never
 written, each against a band declared in writing before its script existed.
 Nothing has been validated by hardware.
