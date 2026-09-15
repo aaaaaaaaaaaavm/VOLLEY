@@ -1,5 +1,37 @@
 # Change log / audit record
 
+## 2026-09-15: the reading backlog is blocked by the network, not only by paywalls
+
+P57 and E16 both need a publisher. This environment cannot reach one. `ieeexplore.ieee.org`,
+`www.mdpi.com`, `arxiv.org`, `doi.org` and `api.crossref.org` all refuse with `EGRESS_BLOCKED` or a
+403 from the proxy tunnel, while `pypi.org` returns 200 and git pushes succeed. Recorded as the
+fourth measured limitation in `docs/REPRODUCTION_ENVIRONMENT.md`, whose previous version said "a
+fourth will exist".
+
+It is a different kind of limitation from the first three. Those made a gate fail, lie, or pass on
+an eighth of the evidence. This one leaves every gate correct, because every gate here is offline
+by design, and blocks work the gates were never pointed at.
+
+**E16 narrows, on access rather than on references.** Its close condition charged all three
+remaining items to publisher access. Two of them are not behind a publisher, and E16's own recorded
+metadata says so: `\bibitem{eddy}` is *Actuators* under a `10.3390` DOI, which is MDPI and fully
+open access, and `foster2` is arXiv:1509.03270, a free preprint. Exactly one reference genuinely
+needs a subscription, `foster` in the AIAA *Journal of Spacecraft and Rockets* under
+doi:10.2514/1.A33927. The reading list is the same length; the remedy for two thirds of it is any
+ordinary machine.
+
+**P57 gains a locatable citation and nothing else.** The entry named a paper by author, volume and
+first page, with no title. It is *"A High Thrust Density Voice Coil Actuator With a New Structure
+of Double Magnetic Circuits for CubeSat Deployers"*, IEEE Xplore document 9652065, agreeing across
+two independent indexes and consistent with the volume and page the 2026-08-14 search recorded. A
+DOI and an end page were offered by a generated search summary; neither is recorded, because a
+summary is not one of the independent indexes E16 requires and nothing reachable from here can
+check it.
+
+No `PRIOR_ART.md` entry was written. That file records that it was first written from abstracts and
+that three of its conclusions were wrong, and the paper in question is the one this project calls
+its nearest published neighbour. Both entries stay LIVE; the register count is unchanged at 51.
+
 ## 2026-09-15: P56's free-baseline restatement audited surface by surface
 
 P56 was corrected on 2026-08-14 by A21-R, and its note listed eleven public surfaces plus both

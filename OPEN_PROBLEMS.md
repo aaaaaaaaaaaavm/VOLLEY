@@ -2759,6 +2759,29 @@ velocity range, payload range and whether hardware was tested, in `PRIOR_ART.md`
 five fields as the other five; then state explicitly what this project claims that it does not.
 The full text is behind a subscription, so this needs institutional access.
 
+**Retrieval attempted 2026-09-15, and it failed for a second reason.** The working environment's
+network policy blocks every publisher domain, so the attempt did not reach a paywall to be turned
+away by one. `ieeexplore.ieee.org` returned `EGRESS_BLOCKED`, and so did `doi.org`,
+`api.crossref.org`, `arxiv.org` and `www.mdpi.com`. Package registries and GitHub resolve; nothing
+bibliographic does. Recorded in
+[`REPRODUCTION_ENVIRONMENT.md`](docs/REPRODUCTION_ENVIRONMENT.md) as the fourth measured
+limitation. So this entry needs a machine with open egress *and* a subscription, and the first of
+those is the cheaper thing to arrange.
+
+What the attempt did produce is a locatable citation, which is worth having because the entry did
+not carry one. The title is *"A High Thrust Density Voice Coil Actuator With a New Structure of
+Double Magnetic Circuits for CubeSat Deployers"*, and the record is IEEE Xplore document 9652065.
+Title and document number agree across two independent indexes. Volume 69 and first page 13305
+match what the 2026-08-14 search recorded. A DOI and an end page were offered by a search summary
+and are not recorded here, because a generated summary is not one of the independent indexes
+E16 requires and nothing reachable from this environment can check it.
+
+**No `PRIOR_ART.md` entry is written from this.** That file's own header records that it was first
+written from abstracts on 2026-07-29 and that three of its conclusions were wrong. Adding a sixth
+work on abstract-level evidence would reproduce the exact failure the file exists to document, and
+it would do so on the one paper this project has already named as its nearest neighbour. The five
+fields stay empty until someone reads it.
+
 ### P58. The thesis manuscript was a stale fork of the conference manuscript: CORRECTED 2026-08-14
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
@@ -7132,6 +7155,23 @@ machine with unrestricted access to the publisher, and a decision on the flight-
 vendor documentation is actually in hand. `docs/RELATED_WORK.md`'s wider list remains
 unretrieved and is not claimed otherwise. This is narrowed, not closed, from three
 unverified references to one substantively unverified claim and a reading list.
+
+> **Narrowed again 2026-09-15, on the access question rather than on the references.** That
+> sentence charges all three to publisher access. Two of them are not behind a publisher at all,
+> and this entry's own recorded metadata says so. `\bibitem{eddy}` is *Actuators* under a
+> `10.3390` DOI, which is MDPI, and every MDPI journal is fully open access. `foster2` is
+> arXiv:1509.03270, a free preprint. Neither needs a subscription or an institution; both need
+> only a machine that can reach the internet.
+>
+> This one cannot. A retrieval attempt on 2026-09-15 got `EGRESS_BLOCKED` from `www.mdpi.com`,
+> `arxiv.org`, `doi.org` and `api.crossref.org` alike, recorded with the rest in
+> [`REPRODUCTION_ENVIRONMENT.md`](docs/REPRODUCTION_ENVIRONMENT.md). So the reading list did not
+> get shorter today, but the remedy split in two: two of the three items are reachable from any
+> ordinary unrestricted machine, and exactly one, `foster` in the AIAA *Journal of Spacecraft and
+> Rockets* under doi:10.2514/1.A33927, is the reference that genuinely needs a subscription.
+>
+> Nothing in `paper.tex` is touched. The flight-heritage sentence stays exactly as the paragraph
+> above leaves it, for the reason that paragraph gives.
 
 ### E17. The pulse-power chain: PARTIALLY CLOSED 2026-07-28 by A8, with two findings
 > **Status:** `CLOSED` — resolved; see the entry for what closed it
