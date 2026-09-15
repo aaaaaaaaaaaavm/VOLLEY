@@ -1,5 +1,18 @@
 # Change log / audit record
 
+## 2026-09-15: terminal-state timing benchmark with shared comparator controls
+
+P113-S3 declares criteria before implementation and compares three terminal circular
+states over twenty release times and five assumed speed screens. Every alternative
+receives the same initial and pre-release host-burn choices. Full Cartesian arrival
+bands replace the energy-only criterion for this bounded single-payload benchmark.
+
+The first independent test run rejected the circular no-transfer control. The root
+unknown was changed from a near-zero correction to absolute orbital velocity, retaining
+the same physical seeds, required solver success and frozen boundary residual. The
+initial failed test is published with the run sheet. A best result on the latest-time
+boundary does not establish an interior or global optimum. P113 and E5 remain open.
+
 ## 2026-09-14: sequential campaign allocation and architecture decision gates
 
 P113-S2 declares criteria before implementation, then compares 180 prescribed

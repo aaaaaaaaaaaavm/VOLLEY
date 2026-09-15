@@ -1,0 +1,17 @@
+.F....                                                                   [100%]
+=================================== FAILURES ===================================
+____________________________ test_known_boundaries _____________________________
+
+    def test_known_boundaries():
+        y = t.initial()
+        for kick in [[0., 0.], [10., 5.]]:
+            start = np.r_[y[:2], y[2:]+kick]
+            desired = independent(start, 900)[:2]
+            solution = t.shoot(desired, 900)
+>           assert solution['arcs']
+E           assert []
+
+tests/test_terminal_timing.py:74: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_terminal_timing.py::test_known_boundaries - assert []
+1 failed, 5 passed in 19.19s

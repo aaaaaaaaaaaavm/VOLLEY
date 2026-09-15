@@ -5848,6 +5848,11 @@ non-convergence is a genuine numerical-method problem rather than a masked geome
 
 ### P113. How the orbital work divides between host and deployer has never been computed, and it sets VOLLEY's release-velocity requirement: MEDIUM, NEW 2026-08-26
 
+**Further partial work, 2026-09-15:** [P113-S3](validation/P113_S3_terminal_timing.md)
+and [terminal-state timing](docs/TERMINAL_TIMING.md) add a single-payload position/velocity
+benchmark at a fixed epoch with a common release-time search. P113 remains open;
+manifest scheduling, installed burdens, uncertainty and provider authority remain unresolved.
+
 **Further partial work, 2026-09-14:** [P113-S2](validation/P113_S2_campaign_allocation.md)
 and [the generated campaign screen](docs/CAMPAIGN_ALLOCATION.md) add sequential host
 propagation, burn mass loss and recoil for prescribed energy targets. P113 remains open.

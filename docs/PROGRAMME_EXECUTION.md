@@ -61,7 +61,12 @@ mass, rocket-equation propellant use and assumed correction-count limits. It doe
 solve full campaigns or adopt flight requirements. In particular, zero host propellant
 in a screen does not mean zero deployment energy or zero attitude-control expenditure.
 
-The next mission study must optimize or enumerate permitted release timing and host
+[P113-S3](TERMINAL_TIMING.md) now supplies a single-payload terminal-state benchmark
+with identical timing grids and host controls for every comparator. It requires both
+Cartesian position and velocity at a common epoch and includes circular destinations.
+It remains a bounded seed/grid search; it does not close the multi-payload problem.
+
+The next manifest study must optimize or enumerate permitted release timing and host
 manoeuvres for *both* conventional and programmable release. The current greedy
 per-shot policy is insufficient to establish a commercial advantage. Requirements
 and search bounds must be committed before that implementation.

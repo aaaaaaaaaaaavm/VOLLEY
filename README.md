@@ -71,6 +71,8 @@ These are numerical results from the committed analysis, not measurements. The
    [host compatibility](docs/HOST_COMPATIBILITY.md) separates public evidence from missing interfaces.
    [Sequential allocation](docs/CAMPAIGN_ALLOCATION.md) adds host propagation and propellant accounting;
    [programme execution](docs/PROGRAMME_EXECUTION.md) records the architecture decision gates.
+   [Terminal-state timing](docs/TERMINAL_TIMING.md) compares identical position/velocity targets
+   and release-time searches for one payload; it does not establish a manifest optimum.
 2. **A credible exit-state envelope.** Resolve P103/P108: corrected guide shape, contact-law
    verification, penetration/convergence, friction, inertia and tolerance effects.
 3. **One coherent Gen6 configuration.** A72–A74 do not support treating the present magnetic

@@ -87,3 +87,22 @@ Sources reviewed for formulation/API, not validation of this implementation:
 - SciPy root API, success and termination status:
   https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root.html
   Execution uses the repository's pinned SciPy version, not the online latest release.
+
+
+## Implementation review, 2026-09-15
+
+The first six-test run failed the known circular boundary control (five tests passed).
+The root search used the near-zero initial velocity correction as its unknown. Its
+relative-step termination returned unsuccessful searches for a boundary whose physical
+position residual was already small. The failed test is retained in
+`P113_S3_initial_check.txt`. No reference target or acceptance band was changed.
+
+The corrected implementation searches in absolute orbital velocity coordinates with
+exactly the same physical seeds, then subtracts the initial circular velocity when
+reporting the correction. The root termination tolerance is 1e-11. Both solver success
+and the original 0.001 m boundary residual remain required. This is a conditioning fix,
+not permission to accept a failed solver or to declare missing branches infeasible.
+
+All selected release times in the initial reference results lay at the latest permitted
+time, 3000 s. Report that boundary condition prominently: these searches do not bracket
+an interior optimum, and equal coarse/fine values do not establish timing convergence.
