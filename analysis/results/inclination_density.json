@@ -1,0 +1,137 @@
+{
+  "analysis": "A76",
+  "bands_declared_commit": "94122ba, before this file existed",
+  "note": "Whether inclination through a variable-density atmosphere explains the 1.2428x residual A75 left in P79. GMAT ran MSISE90; this runs NRLMSISE-00, so a match is a structural explanation and not a second derivation of the two lifetimes. Altitude is held at 350 km: this is not a decay simulation.",
+  "inputs": {
+    "alt_km": 350.0,
+    "f107": 150.0,
+    "f107a": 150.0,
+    "ap": 15.0,
+    "epoch": "2027-01-01T00:00:00",
+    "cases": [
+      {
+        "case": "R2",
+        "inc_deg": 55.2,
+        "reentry_days": 36.0
+      },
+      {
+        "case": "R3",
+        "inc_deg": 9.6,
+        "reentry_days": 29.0
+      }
+    ],
+    "a75_residual": 1.2428,
+    "primary_window_days": 29.0,
+    "sensitivity_window_days": 36.0,
+    "samples_per_rev": 24,
+    "revs_sampled_per_day": 2,
+    "atmosphere": "NRLMSISE-00 via pymsis version=0"
+  },
+  "primary": {
+    "regressing_node": {
+      "mean_density_kg_m3": {
+        "R2": 9.963720439598609e-12,
+        "R3": 1.010011605040308e-11
+      },
+      "ratio_low_over_high_inclination": 1.0136892249869232
+    },
+    "frozen_node": {
+      "mean_density_kg_m3": {
+        "R2": 9.964880050213057e-12,
+        "R3": 1.0096798983704736e-11
+      },
+      "ratio_low_over_high_inclination": 1.0132383864960681
+    }
+  },
+  "sensitivity_36_day_window": {
+    "mean_density_kg_m3": {
+      "R2": 9.961426395598672e-12,
+      "R3": 1.0107416596592361e-11
+    },
+    "ratio": 1.0146555518452853
+  },
+  "quarterly_epochs": [
+    {
+      "epoch": "2027-01-01T00:00:00",
+      "mean_density_kg_m3": {
+        "R2": 9.963720439598609e-12,
+        "R3": 1.010011605040308e-11
+      },
+      "ratio": 1.0136892249869232
+    },
+    {
+      "epoch": "2027-04-01T00:00:00",
+      "mean_density_kg_m3": {
+        "R2": 1.1618246878188946e-11,
+        "R3": 1.2090609560238932e-11
+      },
+      "ratio": 1.040656967182954
+    },
+    {
+      "epoch": "2027-07-01T00:00:00",
+      "mean_density_kg_m3": {
+        "R2": 8.071135167955193e-12,
+        "R3": 8.338323590710378e-12
+      },
+      "ratio": 1.033104193796184
+    },
+    {
+      "epoch": "2027-10-01T00:00:00",
+      "mean_density_kg_m3": {
+        "R2": 1.2331519644365935e-11,
+        "R3": 1.2666563209959411e-11
+      },
+      "ratio": 1.027169689969764
+    }
+  ],
+  "nodal_rate_guard": {
+    "deg_per_day_at_89": -0.1442402151217329,
+    "deg_per_day_at_91": 0.14424021512173188,
+    "abs_deg_per_day_at_90": 5.060715219758821e-16,
+    "sun_synchronous_inclination_deg": 96.84932891503365,
+    "sun_synchronous_rate_deg_per_day": 0.9856473320990837
+  },
+  "band_window": {
+    "lo": 1.1148094007497424,
+    "hi": 1.3854851232517797
+  },
+  "bands": [
+    {
+      "band": "1",
+      "name": "verification by identity: NRLMSISE-00 reproduces its own species sum",
+      "detail": "worst relative error over every sample point 2.579e-07, limit 1e-6",
+      "pass_": true
+    },
+    {
+      "band": "2",
+      "name": "REPORT: time-averaged density at each inclination, regressing and frozen node",
+      "detail": "regressing_node: 9.6 deg 1.010012e-11, 55.2 deg 9.963720e-12, ratio 1.0137; frozen_node: 9.6 deg 1.009680e-11, 55.2 deg 9.964880e-12, ratio 1.0132",
+      "pass_": null
+    },
+    {
+      "band": "3",
+      "name": "direction: 9.6 deg is denser than 55.2 deg, at the window and all four quarters",
+      "detail": "primary ratio 1.0137; quarters 2027-01 1.0137, 2027-04 1.0407, 2027-07 1.0331, 2027-10 1.0272",
+      "pass_": true
+    },
+    {
+      "band": "4",
+      "name": "magnitude: the ratio lands inside A75's half-to-one-and-a-half log window",
+      "detail": "ratio 1.0137 against [1.1148, 1.3855] around A75's 1.2428",
+      "pass_": false
+    },
+    {
+      "band": "5",
+      "name": "REPORT: attribution between latitude structure and local-time sampling",
+      "detail": "frozen node 1.0132 is latitude structure alone; releasing the node gives 1.0137; local-time sampling therefore contributes 1.0004x",
+      "pass_": null
+    },
+    {
+      "band": "6",
+      "name": "guard on the nodal rate that band 5 rests on",
+      "detail": "89 deg -0.144240 deg/day, 91 deg +0.144240, 90 deg |5.061e-16|, sun-synchronous at 96.8493 deg",
+      "pass_": true
+    }
+  ],
+  "all_evaluable_bands_pass": false
+}
