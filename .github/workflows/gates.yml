@@ -76,8 +76,6 @@ jobs:
         run: python3 tools/make_bsx_review.py --check
       - name: cross-references
         run: python3 tools/check_crossrefs.py
-      - name: companion payloads
-        run: python3 tools/check_companions.py
       - name: current-reference and depth-resolved reruns
         run: |
           python3 analysis/manifest_reference.py --check
@@ -121,6 +119,12 @@ jobs:
           python3 analysis/cell_manifest.py > /dev/null
           python3 tools/register_status.py > /dev/null
           git diff --exit-code
+
+      # Keep publication synchronization last. A new manifest source is expected to make this
+      # one red until the paper/thesis payloads are refreshed, but it must not hide failures in
+      # the local engineering gates above.
+      - name: companion payloads
+        run: python3 tools/check_companions.py
 
   solvers:
     name: solver-backed validation
