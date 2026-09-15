@@ -5,6 +5,7 @@ on:
     branches: [gen6-architecture-trade]
     paths: [.github/workflows/architecture_trade_check.yml]
 
+# Re-run after the S4 screen-identifier correction.
 jobs:
   trade:
     runs-on: ubuntu-latest
