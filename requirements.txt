@@ -5,6 +5,7 @@ numpy==2.4.6
 scipy==1.17.1
 matplotlib==3.11.1
 magpylib==5.2.3
+pymsis==0.13.0
 
 # A67's global sensitivity analysis. Sobol indices over the guided-contact model.
 SALib==1.5.2

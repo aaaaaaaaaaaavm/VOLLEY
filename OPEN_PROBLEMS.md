@@ -3636,7 +3636,7 @@ this, ADR-033's trim stage and P77's pulse store. One bench test governs three o
 
 ### P79. The decay model is optimistic by about two against the runs that raised E28: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A75 has shown the level explains it to within 1.2428x; the residual, and the independent propagator check, are what is left
+> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A76 has falsified inclination as the residual's cause; the reference orbits' own provenance is the next thing to check
 
 
 [A50](validation/A50_campaign_altitude.md) band 1 was declared as a calibration against E28's own
@@ -3692,8 +3692,40 @@ performed after a band fails does not reach back and change the verdict.
 construction, which is exactly why P16 withdrew the invariance claim. A75 calibrates absolute
 lifetimes at one altitude and says nothing about ratios; A5's GMAT falsification stands.
 
-What would still close it. The residual, which needs a variable-density atmosphere rather than a
-scalar, and the independent propagator check [A9](validation/A9_tle_decay.md) specifies and this
+### The candidate this entry named is falsified, 2026-09-15 by A76
+
+[A76](validation/A76_inclination_density_residual.md) took the sentence above at its word.
+`build_poem_campaign.py` sets R2 and R3 at the same altitude, eccentricity, epoch, atmosphere,
+F10.7 and Kp, and differs in `INC_DEG` alone, so a variable-density atmosphere has to explain the
+residual through inclination or not at all. There are two routes and A76 separated them: the
+thermosphere's latitude structure, and the J2 nodal rate going as cos i and sweeping the two
+orbits through the diurnal bulge at different speeds.
+
+| | |
+|---|---:|
+| What inclination delivers, NRLMSISE-00, 350 km, the run's own F10.7 and ap | **1.0138×** |
+| What A75's residual needs | **1.2428×** |
+| Of it, in log terms | **6.3 %**, short by a factor of **15.9** |
+| Of that 1.0138, from the J2 nodal rate | **1.0002×** |
+
+The **direction is right** and holds at all four quarters of the year, so the mechanism exists.
+Its **size is not within a factor of fifteen** of the job. The reason is in A76's diagnostic: at
+fixed UT the model's latitude contrast is 1.109× to 1.345×, easily enough, but the gradient
+reverses sign with local solar time, and an orbit that samples every local time averages it away.
+
+**So the residual has no named cause now, and that is the result.** This entry said inclination
+through a variable atmosphere would explain it. It does not. What is left standing is a flag
+`build_poem_campaign.py` already carries beside both cases, *"POEM-4-like — UNVERIFIED"* and
+*"POEM-3-like — UNVERIFIED"*: two reference orbits not traceable to this repository, now carrying
+a 1.2428× disagreement with no physics attached to it. Their provenance is the cheaper thing to
+check next, and it is a different kind of question from the one this entry has been asking.
+
+**Nothing upstream moves.** A75's scales, its band and its re-quoted durations stand; A76 tested
+the residual's cause, not its size. A50 band 1 stays failed. E28 stays open.
+
+What would still close it. A cause for the residual, which is no longer the variable-density
+atmosphere this entry assumed, and the independent propagator check
+[A9](validation/A9_tle_decay.md) specifies and this
 environment still cannot run. The GMAT runs already
 exist: `validation/gmat/` carries the campaign that stopped early. Until then E28 stays open,
 and it stays open *because* a model disagreeing with its own evidence is not a closure.

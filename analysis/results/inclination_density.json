@@ -24,64 +24,64 @@
     "primary_window_days": 29.0,
     "sensitivity_window_days": 36.0,
     "samples_per_rev": 24,
-    "revs_sampled_per_day": 2,
+    "revolutions_sampled": "every revolution in the window, contiguously",
     "atmosphere": "NRLMSISE-00 via pymsis version=0"
   },
   "primary": {
     "regressing_node": {
       "mean_density_kg_m3": {
-        "R2": 9.963720439598609e-12,
-        "R3": 1.010011605040308e-11
+        "R2": 9.962054081105252e-12,
+        "R3": 1.0099846241957681e-11
       },
-      "ratio_low_over_high_inclination": 1.0136892249869232
+      "ratio_low_over_high_inclination": 1.0138317017485154
     },
     "frozen_node": {
       "mean_density_kg_m3": {
-        "R2": 9.964880050213057e-12,
-        "R3": 1.0096798983704736e-11
+        "R2": 9.961217604704852e-12,
+        "R3": 1.0096918118961531e-11
       },
-      "ratio_low_over_high_inclination": 1.0132383864960681
+      "ratio_low_over_high_inclination": 1.0136228842338095
     }
   },
   "sensitivity_36_day_window": {
     "mean_density_kg_m3": {
-      "R2": 9.961426395598672e-12,
-      "R3": 1.0107416596592361e-11
+      "R2": 9.957098364089163e-12,
+      "R3": 1.010729788811096e-11
     },
-    "ratio": 1.0146555518452853
+    "ratio": 1.0150846680960288
   },
   "quarterly_epochs": [
     {
       "epoch": "2027-01-01T00:00:00",
       "mean_density_kg_m3": {
-        "R2": 9.963720439598609e-12,
-        "R3": 1.010011605040308e-11
+        "R2": 9.962054081105252e-12,
+        "R3": 1.0099846241957681e-11
       },
-      "ratio": 1.0136892249869232
+      "ratio": 1.0138317017485154
     },
     {
       "epoch": "2027-04-01T00:00:00",
       "mean_density_kg_m3": {
-        "R2": 1.1618246878188946e-11,
-        "R3": 1.2090609560238932e-11
+        "R2": 1.1618231700861634e-11,
+        "R3": 1.209208878806775e-11
       },
-      "ratio": 1.040656967182954
+      "ratio": 1.040785646164293
     },
     {
       "epoch": "2027-07-01T00:00:00",
       "mean_density_kg_m3": {
-        "R2": 8.071135167955193e-12,
-        "R3": 8.338323590710378e-12
+        "R2": 8.071915987885688e-12,
+        "R3": 8.339544491587648e-12
       },
-      "ratio": 1.033104193796184
+      "ratio": 1.0331555115419457
     },
     {
       "epoch": "2027-10-01T00:00:00",
       "mean_density_kg_m3": {
-        "R2": 1.2331519644365935e-11,
-        "R3": 1.2666563209959411e-11
+        "R2": 1.2329539910777582e-11,
+        "R3": 1.2666309549522292e-11
       },
-      "ratio": 1.027169689969764
+      "ratio": 1.027314047497452
     }
   ],
   "nodal_rate_guard": {
@@ -95,35 +95,140 @@
     "lo": 1.1148094007497424,
     "hi": 1.3854851232517797
   },
+  "post_hoc_diagnostic_not_a_band": {
+    "note": "Point-wise latitude contrast at fixed UT. The gradient reverses sign with local solar time, which is why orbit-averaging removes most of it and why band 4 can fail at 1.0138 while these rows span tens of percent.",
+    "rows": [
+      {
+        "ut_hour": 0,
+        "latitude_deg": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          55.0,
+          60.0
+        ],
+        "density_kg_m3": [
+          8.157777404982358e-12,
+          7.620010525344334e-12,
+          7.357455790446554e-12,
+          7.4199145091991e-12,
+          7.658072093130741e-12,
+          7.86716091577544e-12,
+          7.913340989429418e-12,
+          7.914962088517719e-12
+        ],
+        "max_over_min": 1.1087769518880424,
+        "sign_of_gradient_20_to_60_deg": 1
+      },
+      {
+        "ut_hour": 6,
+        "latitude_deg": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          55.0,
+          60.0
+        ],
+        "density_kg_m3": [
+          8.269485790579623e-12,
+          8.325016891130854e-12,
+          8.012424057568523e-12,
+          7.398380519330061e-12,
+          6.802340808687024e-12,
+          6.526023645092582e-12,
+          6.547893737635091e-12,
+          6.6728419664818794e-12
+        ],
+        "max_over_min": 1.2756645307883727,
+        "sign_of_gradient_20_to_60_deg": -1
+      },
+      {
+        "ut_hour": 12,
+        "latitude_deg": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          55.0,
+          60.0
+        ],
+        "density_kg_m3": [
+          1.2944655763957869e-11,
+          1.2173900776346613e-11,
+          1.1803380321750989e-11,
+          1.1704879253338074e-11,
+          1.1458381986295674e-11,
+          1.0862766415542513e-11,
+          1.0481434296882863e-11,
+          1.008172278299524e-11
+        ],
+        "max_over_min": 1.283972595020319,
+        "sign_of_gradient_20_to_60_deg": -1
+      },
+      {
+        "ut_hour": 18,
+        "latitude_deg": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          55.0,
+          60.0
+        ],
+        "density_kg_m3": [
+          1.1562631928307976e-11,
+          1.1647615164034342e-11,
+          1.1366137198098869e-11,
+          1.075755977353321e-11,
+          9.96929622187892e-12,
+          9.215524177097478e-12,
+          8.907563922577744e-12,
+          8.658547837048225e-12
+        ],
+        "max_over_min": 1.3452157778925105,
+        "sign_of_gradient_20_to_60_deg": -1
+      }
+    ]
+  },
   "bands": [
     {
       "band": "1",
       "name": "verification by identity: NRLMSISE-00 reproduces its own species sum",
-      "detail": "worst relative error over every sample point 2.579e-07, limit 1e-6",
+      "detail": "worst relative error over every sample point 2.860e-07, limit 1e-6",
       "pass_": true
     },
     {
       "band": "2",
       "name": "REPORT: time-averaged density at each inclination, regressing and frozen node",
-      "detail": "regressing_node: 9.6 deg 1.010012e-11, 55.2 deg 9.963720e-12, ratio 1.0137; frozen_node: 9.6 deg 1.009680e-11, 55.2 deg 9.964880e-12, ratio 1.0132",
+      "detail": "regressing_node: 9.6 deg 1.009985e-11, 55.2 deg 9.962054e-12, ratio 1.0138; frozen_node: 9.6 deg 1.009692e-11, 55.2 deg 9.961218e-12, ratio 1.0136",
       "pass_": null
     },
     {
       "band": "3",
       "name": "direction: 9.6 deg is denser than 55.2 deg, at the window and all four quarters",
-      "detail": "primary ratio 1.0137; quarters 2027-01 1.0137, 2027-04 1.0407, 2027-07 1.0331, 2027-10 1.0272",
+      "detail": "primary ratio 1.0138; quarters 2027-01 1.0138, 2027-04 1.0408, 2027-07 1.0332, 2027-10 1.0273",
       "pass_": true
     },
     {
       "band": "4",
       "name": "magnitude: the ratio lands inside A75's half-to-one-and-a-half log window",
-      "detail": "ratio 1.0137 against [1.1148, 1.3855] around A75's 1.2428",
+      "detail": "ratio 1.0138 against [1.1148, 1.3855] around A75's 1.2428",
       "pass_": false
     },
     {
       "band": "5",
       "name": "REPORT: attribution between latitude structure and local-time sampling",
-      "detail": "frozen node 1.0132 is latitude structure alone; releasing the node gives 1.0137; local-time sampling therefore contributes 1.0004x",
+      "detail": "frozen node 1.0136 is latitude structure alone; releasing the node gives 1.0138; local-time sampling therefore contributes 1.0002x",
       "pass_": null
     },
     {

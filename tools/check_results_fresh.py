@@ -93,6 +93,7 @@ FRESH = [
     ("analysis/host_reference.py", "host_reference.json"),
     ("analysis/tube_shielding.py", "tube_shielding.json"),
     ("analysis/decay_calibration.py", "decay_calibration.json"),
+    ("analysis/inclination_density.py", "inclination_density.json"),
 ]
 
 # Relative tolerance for numeric leaves, per file, each with the reason it is what it is.
@@ -105,6 +106,11 @@ RTOL = {
                "system moves the reported peaks by 4.4e-8"),
     "guided_contact_derived.json":
         (1e-7, "the same centreline, read as three-point sagittas; same perturbation, 4.7e-8"),
+    "inclination_density.json":
+        (1e-6, "every density in it comes out of pymsis as float32, whose resolution is about "
+               "1.2e-7. Two runs on this machine are byte-identical, but the same Fortran built "
+               "by a different compiler cannot be held below the storage precision of what it "
+               "returns. The bands this file reports are decided at the third decimal place"),
 }
 
 # Three leaves inside tube_centreline.json cannot hold the file's tolerance, each for a reason

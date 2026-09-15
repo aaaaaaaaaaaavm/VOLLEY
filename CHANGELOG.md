@@ -1,5 +1,54 @@
 # Change log / audit record
 
+## 2026-09-15: A76 falsifies the cause P79 named for its own residual
+
+A75 left a 1.2428x residual between E28's two GMAT reentries, and P79 recorded the candidate in
+writing: "inclination is the obvious candidate, and that is the part a variable-density atmosphere
+would explain." A76 tested that sentence and it is wrong.
+
+The premise checks out. `build_poem_campaign.py` sets R2 and R3 at the same altitude,
+eccentricity, epoch, atmosphere, F10.7 and Kp, differing in `INC_DEG` alone, so inclination is the
+only route a variable atmosphere has. There are two of them and A76 separated them.
+
+| | |
+|---|---:|
+| Inclination delivers, NRLMSISE-00 at 350 km and the run's own indices | 1.0138x |
+| A75's residual needs | 1.2428x |
+| In log terms | 6.3 %, short by 15.9x |
+| Of that 1.0138, from the J2 nodal rate | 1.0002x |
+
+Bands 1, 3 and 6 pass; band 4, the one the run exists to ask, fails. The direction is right and
+holds at all four quarters, so the mechanism is real and its size is not within a factor of fifteen
+of the job.
+
+**Why it is small, which the point-wise numbers do not suggest.** At fixed UT the model's latitude
+contrast is 1.109x to 1.345x, ample. It does not survive because the gradient reverses sign with
+local solar time, rising towards the pole on the night side and falling on the day side, so an
+orbit sampling every local time averages it away. Recorded as a labelled post-hoc diagnostic that
+no band depends on.
+
+**The run's own first execution was faulted and is preserved at `f65eab3`.** It sampled two
+revolutions per day, which put its step at exactly 43 200 s against a diurnal cycle and pinned the
+grid to a fixed pair of local solar times, so band 5 read local-time sampling at 1.0004x, which is
+what a blind grid reports rather than what the atmosphere does. The grid now walks every
+revolution contiguously, 452 over 29 days at 24 points each. Correcting it moved band 4's answer
+by 0.0001. The defect was real and it was not what made the band fail.
+
+Bands were frozen at `94122ba` before `analysis/inclination_density.py` existed, and
+`git show --stat 94122ba -- analysis/inclination_density.py` returns nothing. Bands 1 and 6 check
+tooling and were deliberately run first; bands 3 and 4 were not evaluated in any form before the
+declaration was committed.
+
+**P79's residual now has no named cause.** What is left standing is a flag the GMAT build script
+already carries beside both cases, "POEM-4-like -- UNVERIFIED" and "POEM-3-like -- UNVERIFIED":
+two reference orbits not traceable to this repository, now carrying a 1.2428x disagreement with no
+physics attached. That provenance is the next thing to check and it is a different kind of
+question. P79's next step is re-pointed at it.
+
+A75 is untouched, A50 band 1 stays failed, E28 stays open. `pymsis==0.13.0` is pinned in
+requirements.txt and the run is in the freshness gate at a declared 1e-6, because pymsis returns
+float32 and the same Fortran under another compiler cannot be held below that.
+
 ## 2026-09-15: the reading backlog is blocked by the network, not only by paywalls
 
 P57 and E16 both need a publisher. This environment cannot reach one. `ieeexplore.ieee.org`,

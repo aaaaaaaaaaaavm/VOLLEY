@@ -29,8 +29,22 @@ REPRODUCIBILITY
 pymsis returns float32. The band 1 identity is therefore quoted at 1e-6 and observed near 2e-7,
 which is the storage limit and not a tolerance chosen to pass. Every mean below is a plain
 arithmetic mean over a fixed, deterministic sample grid, so there is no integrator state and no
-step-size path dependence. This run is EXCLUDED FROM THE FRESHNESS GATE by name because it
-depends on an optional third-party model binary that is not in requirements.txt.
+step-size path dependence. The whole run takes about one second and two runs on this machine
+are byte-identical, so it is IN the freshness gate rather than excluded from it, at a declared
+per-file tolerance of 1e-6: pymsis returns float32, and the same Fortran built by another
+compiler cannot be held below the storage precision of what it returns. pymsis is pinned in
+requirements.txt; if it is absent this run fails loudly, which is the harmless failure mode
+docs/REPRODUCTION_ENVIRONMENT.md distinguishes from the dangerous one.
+
+THE SAMPLING DEFECT THIS FILE ALREADY HAD ONCE
+----------------------------------------------
+The first run sampled two revolutions per day, which set the step to exactly 12 h against a
+diurnal density cycle and pinned the grid to a fixed pair of local solar times. Band 5 duly
+reported local-time sampling contributing 1.0004x, which is what a blind grid reports, not what
+the atmosphere does. The grid now walks every revolution in the window contiguously, so local
+solar time advances by the orbit's own regression against the Sun and nothing is commensurate
+with 24 h by construction. The faulted run is preserved at f65eab3 and is quoted in the run
+sheet beside the corrected one.
 """
 import json
 import math
@@ -55,7 +69,10 @@ A75_RESIDUAL = 1.2428           # A75, the thing this run attacks
 PRIMARY_WINDOW_D = 29.0         # the shorter observed lifetime; both fleets survived it
 SENSITIVITY_WINDOW_D = 36.0
 SAMPLES_PER_REV = 24
-REVS_PER_DAY_SAMPLE = 2         # sample two revolutions per day, evenly spaced in time
+# Every revolution in the window is sampled, contiguously. The first run of this analysis took
+# two revolutions per day instead, which put the sampling step at exactly 12 h against a diurnal
+# density cycle and locked the grid onto a fixed pair of local solar times. That grid could not
+# see the local-time mechanism band 5 is asked to report. Preserved at f65eab3.
 
 # NRLMSISE-00's own total-mass-density identity: integer masses and 1.66e-24 g.
 SPECIES_MASS = {'HE': 4, 'O': 16, 'N2': 28, 'O2': 32, 'AR': 40, 'H': 1, 'N': 14,
@@ -87,11 +104,10 @@ def sample_points(inc_deg, window_days, freeze_node, epoch=EPOCH):
     rate = 0.0 if freeze_node else nodal_rate_rad_s(a, inc_deg)
     t0 = np.datetime64(epoch)
 
-    n_rev = int(round(window_days * REVS_PER_DAY_SAMPLE))
-    step_s = window_days * 86400.0 / n_rev
+    n_rev = int(math.floor(window_days * 86400.0 / period_s))
     times, lats, lons = [], [], []
     for k in range(n_rev):
-        t_rev = k * step_s
+        t_rev = k * period_s
         for j in range(SAMPLES_PER_REV):
             t = t_rev + j * period_s / SAMPLES_PER_REV
             raan = rate * t
@@ -120,6 +136,37 @@ def densities(inc_deg, window_days, freeze_node, epoch=EPOCH):
     ident *= AMU_KG_CM3_TO_KG_M3
     worst = float(np.max(np.abs(ident - rho) / rho))
     return float(np.mean(rho)), worst
+
+
+def latitude_contrast_diagnostic():
+    """POST-HOC DIAGNOSTIC, NOT A BAND, added after the bands were evaluated.
+
+    Band 4 failed at 1.0138 while the model's point-wise latitude gradient is far larger than
+    that, which invites the suspicion that the averaging is broken. It is not. The gradient
+    reverses sign with local solar time -- density rises towards the pole on the night side and
+    falls towards it on the day side -- so an orbit that samples every local time averages most
+    of the contrast away. This reports the contrast at fixed UT so the reader can see both facts
+    at once. It is labelled a diagnostic because it was written after the run, and no band
+    depends on it.
+    """
+    import numpy as np
+    import pymsis
+    V = pymsis.Variable
+    lats = [0.0, 10.0, 20.0, 30.0, 40.0, 50.0, 55.0, 60.0]
+    rows = []
+    for hour in (0, 6, 12, 18):
+        t = np.datetime64('2027-01-01T%02d:00' % hour)
+        vals = []
+        for lat in lats:
+            o = pymsis.calculate(t, 0.0, lat, ALT_KM, F107, F107A, [[AP] * 7], version=0)[0]
+            vals.append(float(o[V.MASS_DENSITY]))
+        rows.append({'ut_hour': hour, 'latitude_deg': lats, 'density_kg_m3': vals,
+                     'max_over_min': max(vals) / min(vals),
+                     'sign_of_gradient_20_to_60_deg': 1 if vals[-1] > vals[2] else -1})
+    return {'note': ('Point-wise latitude contrast at fixed UT. The gradient reverses sign with '
+                     'local solar time, which is why orbit-averaging removes most of it and why '
+                     'band 4 can fail at 1.0138 while these rows span tens of percent.'),
+            'rows': rows}
 
 
 def sso_inclination(a_m):
@@ -222,7 +269,7 @@ def run():
                    'primary_window_days': PRIMARY_WINDOW_D,
                    'sensitivity_window_days': SENSITIVITY_WINDOW_D,
                    'samples_per_rev': SAMPLES_PER_REV,
-                   'revs_sampled_per_day': REVS_PER_DAY_SAMPLE,
+                   'revolutions_sampled': 'every revolution in the window, contiguously',
                    'atmosphere': 'NRLMSISE-00 via pymsis version=0'},
         'primary': primary,
         'sensitivity_36_day_window': {'mean_density_kg_m3': sensitivity,
@@ -233,6 +280,7 @@ def run():
                              'sun_synchronous_inclination_deg': i_sso,
                              'sun_synchronous_rate_deg_per_day': SSO_RATE_DEG_PER_DAY},
         'band_window': {'lo': lo_band, 'hi': hi_band},
+        'post_hoc_diagnostic_not_a_band': latitude_contrast_diagnostic(),
         'bands': bands,
         'all_evaluable_bands_pass': all(b['pass_'] for b in bands if b['pass_'] is not None),
     }

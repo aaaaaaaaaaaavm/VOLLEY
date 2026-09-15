@@ -84,3 +84,67 @@ work, and A50's failed band 1 stays failed either way.
 at whatever level the atmosphere is eventually quoted at.
 
 **It is not hardware evidence, and there is still no measurement anywhere in this chain.**
+
+---
+
+## My execution, 2026-09-15
+
+`pymsis` 0.13.0, NRLMSISE-00 through `version=0`. The run takes about one second and two runs on
+this machine produce a byte-identical result, so it went into the freshness gate rather than
+being excluded from it, at a declared 1e-6 because pymsis returns float32.
+
+**Four of six bands resolve, and band 4, the one this run exists to ask, fails.**
+
+| # | Band | Result | |
+|---|---|---:|---|
+| 1 | NRLMSISE-00 reproduces its own species sum | 2.860e-07 against 1e-6 | **PASS** |
+| 2 | REPORT, the two averaged densities | 1.009985e-11 and 9.962054e-12 kg/m³ | REPORT |
+| 3 | Direction, 9.6° denser than 55.2° | 1.0138, and 1.0408 / 1.0332 / 1.0273 at the other quarters | **PASS** |
+| 4 | Magnitude inside [1.1148, 1.3855] | **1.0138** | **FAIL** |
+| 5 | REPORT, attribution | latitude 1.0136, local time 1.0002× on top | REPORT |
+| 6 | Nodal-rate guard | −0.144240 / +0.144240 °/day either side of 90°, 5.06e-16 at 90°, sun-synchronous at 96.8493° | **PASS** |
+
+**The candidate P79 names is the right sign and the wrong size.** Inclination through a
+variable-density atmosphere moves density the way the evidence needs, and band 3 holds at all four
+quarters, so the direction is not an artefact of one epoch. But it delivers **1.0138×** where
+A75's residual is **1.2428×**. In log terms that is **6.3 %** of it, short by a factor of **15.9**.
+
+**Almost all of the little there is comes from latitude, not from local time.** Freezing the node
+changes the ratio from 1.0138 to 1.0136, so the J2 nodal rate going as cos i contributes 1.0002×.
+The second of the two routes this run was built to separate carries essentially nothing.
+
+### Why the answer is this small, which is not what the point-wise numbers suggest
+
+A post-hoc diagnostic is in the result file under `post_hoc_diagnostic_not_a_band`, added after the
+bands were evaluated and depended on by none of them. At fixed UT the model's density varies
+across latitude by **1.109× to 1.345×** — the right order to explain a 1.2428× residual. It does
+not, because **the gradient reverses sign with local solar time**: towards the pole density rises
+on the night side and falls on the day side. An orbit sampling every local time averages most of
+the contrast away, and what survives is the 1.4 % that does not cancel.
+
+So the failure is not the averaging being broken. The averaging is the mechanism.
+
+### The sampling defect this run had first, preserved at `f65eab3`
+
+The first execution sampled two revolutions per day, which put its step at exactly 43 200 s
+against a diurnal cycle and pinned the grid to a fixed pair of local solar times. Band 5 reported
+local-time sampling at 1.0004×, which is what a blind grid reports rather than what the atmosphere
+does. The grid now walks every revolution contiguously — 452 revolutions over 29 days at 24 points
+each — and nothing in it is commensurate with 24 h.
+
+**The correction changed the answer by 0.0001.** 1.0137 became 1.0138, and band 4 fails either
+way. The defect was real and had to be fixed before band 5 could be quoted; it was not what made
+band 4 fail.
+
+### What this leaves
+
+P79's residual now has **no named cause**. The entry's sentence — *"inclination is the obvious
+candidate, and that is the part a variable-density atmosphere would explain"* — is falsified as an
+explanation of the size, and A76 is the reason to stop looking there. What is left is the
+provenance flag `build_poem_campaign.py` already carries beside both cases: *"POEM-4-like —
+UNVERIFIED"* and *"POEM-3-like — UNVERIFIED"*. Two GMAT runs whose reference orbits are not
+traceable to this repository are a thinner foundation for a 1.2428× residual than they looked
+while the residual had a physical candidate attached to it.
+
+**A75 is untouched.** Its scales, its band and its re-quoted durations all stand; this run tests
+the cause of the residual, not its size. **A50 band 1 stays failed.** **E28 stays open.**
