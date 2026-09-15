@@ -1,0 +1,32 @@
+name: architecture-trade-check
+
+on:
+  push:
+    branches: [gen6-architecture-trade]
+    paths: [.github/workflows/architecture_trade_check.yml]
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch repository
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git fetch -q origin "${{ github.sha }}"
+          git checkout -q --detach "${{ github.sha }}"
+      - name: run architecture trade
+        run: |
+          python3 analysis/gen6_architecture_trade.py
+          python3 analysis/gen6_architecture_trade.py --check
+      - name: print generated outputs
+        run: |
+          echo TRADE_JSON_BEGIN
+          cat analysis/results/gen6_architecture_trade.json
+          echo TRADE_JSON_END
+          echo TRADE_REPORT_BEGIN
+          cat docs/GEN6_ARCHITECTURE_TRADE.md
+          echo TRADE_REPORT_END
+          echo TRADE_SVG_BEGIN
+          cat figures/gen6_architecture_trade.svg
+          echo TRADE_SVG_END
