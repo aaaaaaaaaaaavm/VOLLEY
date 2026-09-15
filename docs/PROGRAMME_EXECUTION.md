@@ -2,26 +2,28 @@
 
 [Resume work and coordinate changes](CONTINUITY.md) · [Mission and redesign](workstreams/MISSION_AND_REDESIGN.md) · [Engineering closure](workstreams/ENGINEERING_CLOSURE.md)
 
-Adityavardhan Mishra · 2026-09-14
+Adityavardhan Mishra · 2026-09-15
 
 ## Working on now / next / blocked
 
-**Last reviewed: 2026-09-15, against main at `6eb6094`.** This is the current
+**Last reviewed: 2026-09-15, after P113-S4 integration.** This is the current
 execution summary, not a declaration that every listed task is underway.
 
 | State | Work | Next reviewable result |
 |---|---|---|
-| Current focus | Extend the mission comparison to coupled multi-payload terminal states | A verified campaign using one evolving host, with both position and velocity required for every payload |
-| Draft only | Two-payload timing/order study | Recover and review the unpublished draft; preserve criteria-first history, complete tests and publish results before counting it as evidence |
-| Next | Operational constraints and uncertainty | Clearing/settling time, attitude recovery and release/navigation errors included in the comparison |
+| Current focus | Turn S1–S4 mission evidence into architecture requirements | Clearing/settling time, release/navigation uncertainty and installed burden carried into the comparison where they can change the ranking |
+| Completed bounded study | P113-S4 two-payload timing/order screen | 100 generated cases with one evolving host, both target orders and position/velocity acceptance for both payloads; 44 tested campaigns accepted |
 | Next | Installed burden and failure topology | Like-for-like mass, volume, energy, consumables and failure consequences for independent bays, banks and the shared magazine |
 | Decision pending | Gen6 mechanism and retention selection | One mission-backed candidate, with dated rejection reasons for the alternatives |
 | Requires external evidence | Provider accommodation and physical model validation | Actual host interfaces and discriminating measurements; numerical checks cannot substitute for either |
 | Later | One release cell, scaling and reviewed build package | A named test article with drawings, BOM, assembly, inspection and instrumented acceptance procedure |
 
-The two-payload draft is **not on main, not verified and not a completed study**.
-No calculation is claimed to be running continuously. The immediate task is to finish
-that bounded comparison, not to launch another generation or assume the 8 m guide wins.
+P113-S4 is now on main with generated JSON, report, SVG, independent tests and a
+normal freshness gate. It is **not** full-manifest closure: P113/E5 remain open because
+clearing/settling intervals, release/navigation error, installed burden and the complete
+manifest can still change the architecture ranking. The immediate task is to turn the
+bounded mission result into physical architecture requirements, not to assume the 8 m
+guide wins.
 
 ### Completed foundation
 
@@ -31,26 +33,31 @@ that bounded comparison, not to launch another generation or assume the 8 m guid
   propagation, changing manifest mass, propellant and correction-count limits.
 - [P113-S3 terminal-state timing](TERMINAL_TIMING.md): 300 single-payload cases requiring
   position and velocity at a common epoch, with identical timing grids for comparators.
+- [P113-S4 two-payload manifest timing](MANIFEST_TIMING.md): 100 schedule/order/authority
+  cases using one evolving host state. Forty-four tested campaigns are accepted. On the
+  fine grid the BOLLEY, Gen5 and existing Gen6 authority screens all reach the same best
+  tested 2.777987 kg ideal host-fuel result with a 4.569852 m/s first release; additional
+  release authority above that does not improve this tested campaign.
 - The mechanism shortlist, decision gates and [host accommodation questions](HOST_COMPATIBILITY.md)
   are documented. They are not a selected design or confirmed provider compatibility.
-- [VOLLEY PR 33](https://github.com/aaaaaaaaaaaavm/VOLLEY/pull/33),
-  [paper PR 2](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper/pull/2) and
-  [thesis PR 2](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/pull/2) are merged.
-  The publication repair passed 96 local tests, seven CAD/artifact checks and PR CI;
-  companion evidence matches the repaired source at `edaa1fe`.
+- [VOLLEY PR 34](https://github.com/aaaaaaaaaaaavm/VOLLEY/pull/34) is merged. The S4
+  criteria preceded implementation; generated artifacts, independent checks and the
+  normal repository freshness path are committed. Paper and thesis companion snapshots
+  have been synchronized to the S4 source commit.
 
-Those are dated verification results for a bounded batch, not prototype readiness.
+Those are dated verification results for bounded batches, not prototype readiness.
 All S3 selected release times lie at the latest permitted time; the search does not
-establish an interior timing optimum. No operating interval, including the assumed
-0.5 m/s minimum, is experimentally demonstrated. P92, P113 and E5 remain open.
+establish an interior timing optimum. S4 is a bounded enumeration, not a global optimum,
+and missing roots are not proofs of infeasibility. No operating interval, including the
+assumed 0.5 m/s minimum, is experimentally demonstrated. P92, P113 and E5 remain open.
 
 ### Eight-stage delivery checklist
 
 | Stage | Status at this review | Remaining exit product |
 |---|---|---|
 | 1. Consolidate the record | Publication complete; reconciliation partial | Reconcile historical register wording with current evidence; distinguish active blockers from retained legacy limitations |
-| 2. Define reference missions | Illustrative targets only | Individual, initial-distribution and replenishment specifications with windows, tolerances, uncertainty, host limits and disposal assumptions |
-| 3. Compare complete campaigns | Partial | Joint timing/order and full-state delivery for all payloads; host evolution, settling and complete resource accounting |
+| 2. Define reference missions | Illustrative targets with S1–S4 bounded screens | Individual, initial-distribution and replenishment specifications with windows, tolerances, uncertainty, host limits and disposal assumptions |
+| 3. Compare complete campaigns | Two-payload terminal-state screen complete; full manifest open | Clearing/settling, uncertainty, installed burden and full-manifest delivery under one evolving host |
 | 4. Select architecture | Shortlist only | Installed mass, packaging, energy, uncertainty, failure and prior-art comparison; dated mechanism and retention decision |
 | 5. Resolve decisive uncertainties | Problems identified; no measurements | Small friction/contact/actuator/electrical experiments with predictions and acceptance criteria frozen first |
 | 6. Engineer one release cell | New compact cell not engineered | Coupled retention, release, actuator arrest, structures, tolerances, thermal behaviour, controls and faults |
@@ -60,9 +67,9 @@ establish an interior timing optimum. No operating interval, including the assum
 ### What still controls the decision
 
 1. **Mission value.** Compare springs plus timing and host manoeuvres against programmable
-   release using the same target states and permitted controls. Charge installation,
-   mechanism energy, consumables, clearing and attitude recovery. Retain failed and
-   partial campaigns; two independently initialized deliveries are not a shared-host campaign.
+   release using the same target states and permitted controls. S4 now supplies a shared-host
+   two-payload screen; charge installation, mechanism energy, consumables, clearing and
+   attitude recovery before using it to rank hardware. Retain failed and partial campaigns.
 2. **Mechanism and arrangement.** Compare stored-energy, electromechanical and gas pushers
    with the existing long guide and cooperative BOLLEY interface. Compare bays, banks
    and the magazine separately. The compact independent-bay candidate is a preference
@@ -89,11 +96,11 @@ establish an interior timing optimum. No operating interval, including the assum
 ### Prototype packages and BOLLEY
 
 The [13-package prototype programme](PROTOTYPE_READINESS.md) remains the detailed
-build-readiness framework. Evidence maintenance advanced; mission requirements and
-host campaigns advanced partially. None of the packages is closed by the mission
-batch alone. Configuration, release physics, structures/tolerances, thermal/materials,
-accounting, controls/faults, manufacturing, experiments and independent review still
-need their own exit evidence. Hardware and facility checks cannot be completed in software.
+build-readiness framework. Evidence maintenance and mission comparison advanced; none
+of the packages is closed by S4 alone. Configuration, release physics, structures/tolerances,
+thermal/materials, accounting, controls/faults, manufacturing, experiments and independent
+review still need their own exit evidence. Hardware and facility checks cannot be completed
+in software.
 
 BOLLEY's [current review](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md)
 still requires supplier RMS/peak/package-current interpretation; fresh field/current
@@ -108,10 +115,9 @@ Gen5's remaining investigations stay in its own record. Complete them when a liv
 claim or reused component needs the result, not as an arbitrary prerequisite to a
 different mechanism. Reference/prior-art audits and register reconciliation remain work.
 
-The dated VOLLEY register still has 51 live entries, including 18 Gen6 computation
-items. These overlap the stages and packages above; they must not be added together.
 Use the [live register](../OPEN_PROBLEMS.md) and
 [computational closure view](COMPUTATIONAL_CLOSURE.md) for authoritative dispositions.
+Dated counts in older reviews are observations, not generated counters.
 
 ### Keeping this section current
 
@@ -124,10 +130,12 @@ close an engineering item, and a green test suite does not select a mechanism.
 ## Decision in force
 
 Retain VOLLEY's purpose: provider-hosted control of satellite departure conditions.
-Reopen mechanism selection after a common mission comparison. The current gas-driven
-Gen6 remains an investigated candidate, not the assumed winner. Its 8 m guide, contact
-results and suspended trim remain in the record. Gen5 remains the frozen comparison.
-BOLLEY Fluxrelay remains a separate cooperative-payload candidate.
+Reopen mechanism selection after a common mission comparison. S4 strengthens the case
+for selecting authority from mission need rather than maximizing release speed, but it
+does not select a mechanism. The current gas-driven Gen6 remains an investigated candidate,
+not the assumed winner. Its 8 m guide, contact results and suspended trim remain in the
+record. Gen5 remains the frozen comparison. BOLLEY Fluxrelay remains a separate
+cooperative-payload candidate.
 
 The preferred *candidate to investigate*, not a selected design, is a compact controlled
 release cell with independent payload retention and shared services. Compare it with
@@ -146,7 +154,7 @@ These are overlapping views, not additive task counts.
 
 | Work stream | Register examples | Prototype packages | Next reviewable exit |
 |---|---|---|---|
-| Mission and host allocation | P113, E5, E28, P56 | 1, 9 | Complete target states, timing windows, host budgets and a defensible baseline |
+| Mission and host allocation | P113, E5, E28, P56 | 1, 9 | Clearing/settling, uncertainty, installed burden and full-manifest target-state closure |
 | Gen6 configuration | P92, P117, P118 | 2 | Dated comparison of compact cells, banks, magazine and gas guide |
 | Contact/release credibility | P103, P108, P67, P78, P88 | 3, 11 | Numerically credible model followed by discriminating contact/friction evidence |
 | Common-path failure and backups | P75, P81, P91, E32 | 8, 11 | Retention states, fault tree, path independence and recovery evidence |
@@ -158,37 +166,40 @@ These are overlapping views, not additive task counts.
 | Build and external review | Configuration-dependent | 10–12 | Named test article, drawings, instrumentation, criteria and independent disposition |
 
 Identifiers in the BOLLEY rows refer to that repository; all other identifiers refer
-to VOLLEY. No row closes the entries it groups.
-
-The audit preceding this batch found 53 live VOLLEY entries: 29 Gen6, 14 Gen5 and
-10 programme. BOLLEY's inspected main register had 48 entries (34 open, eight modelled,
-five closed, one deferred). These are dated observations, not generated counters.
-Use the live registers for current counts. Historical headings and later evidence need
-scope-aware reconciliation; a superseded branch is not an experimentally closed branch.
+to VOLLEY. No row closes the entries it groups. Use the live registers for current counts.
+Historical headings and later evidence need scope-aware reconciliation; a superseded
+branch is not an experimentally closed branch.
 
 ## Mission cases and measurable outputs
 
-| Reference mission | Complete requirements still needed | What S2 actually supplies |
+| Reference mission | Complete requirements still needed | What the current mission studies supply |
 |---|---|---|
-| Single propulsion-less payload | Full target orbit, delivery window, dispersion, permitted interface and disposal policy | One prescribed semi-major axis at one event |
-| Initial distribution of a group | Relative states/coverage at specified epochs, acceptable drift, collision constraints | Equal or distributed target energies at scheduled releases |
-| Replenishment batch | Existing constellation states, phasing tolerances, operational exclusions and launch insertion uncertainty | Not yet represented; do not relabel an energy ladder as replenishment |
+| Single propulsion-less payload | Full target orbit, delivery window, dispersion, permitted interface and disposal policy | S1 allocation plus S3 full terminal-state timing for one payload |
+| Initial distribution of a group | Relative states/coverage at specified epochs, acceptable drift, collision constraints | S2 sequential resource accounting plus S4 two-payload shared-host terminal-state coupling |
+| Replenishment batch | Existing constellation states, phasing tolerances, operational exclusions and launch insertion uncertainty | Not yet represented; do not relabel an energy ladder or two-payload target pair as replenishment |
 
 [P113-S1](DEPARTURE_TRADE.md) is the single-position allocation screen.
 [P113-S2](CAMPAIGN_ALLOCATION.md) adds sequential two-body host propagation, changing
 mass, rocket-equation propellant use and assumed correction-count limits. It does not
-solve full campaigns or adopt flight requirements. In particular, zero host propellant
-in a screen does not mean zero deployment energy or zero attitude-control expenditure.
+adopt flight requirements. In particular, zero host propellant in a screen does not
+mean zero deployment energy or zero attitude-control expenditure.
 
-[P113-S3](TERMINAL_TIMING.md) now supplies a single-payload terminal-state benchmark
-with identical timing grids and host controls for every comparator. It requires both
-Cartesian position and velocity at a common epoch and includes circular destinations.
-It remains a bounded seed/grid search; it does not close the multi-payload problem.
+[P113-S3](TERMINAL_TIMING.md) supplies a single-payload terminal-state benchmark with
+identical timing grids and host controls for every comparator. It requires both Cartesian
+position and velocity at a common epoch and includes circular destinations. It remains
+a bounded seed/grid search.
 
-The next manifest study must optimize or enumerate permitted release timing and host
-manoeuvres for *both* conventional and programmable release. The current greedy
-per-shot policy is insufficient to establish a commercial advantage. Requirements
-and search bounds must be committed before that implementation.
+[P113-S4](MANIFEST_TIMING.md) adds a second payload without resetting the host. It enumerates
+both target orders, ten release-time pairs and five release-authority screens, preserving
+retained host state, mass, fuel and recoil between deliveries. Forty-four of 100 tested
+campaigns are accepted. On the fine grid, BOLLEY, Gen5 and existing Gen6 authority screens
+share the same best tested fuel result and first-release speed. This is a bounded comparison,
+not a global optimum or hardware ranking.
+
+The next mission-to-architecture step is therefore not another arbitrary velocity sweep.
+It is to add clearing/settling time, release/navigation error and installed-system burden
+where they can change the ordering, then carry those requirements into P92 architecture
+selection. Full-manifest closure remains open.
 
 ## Architecture shortlist and rejection gates
 
@@ -218,24 +229,3 @@ A programmable ground separation-test rig is a credible adjacent application. It
 characterize support friction and gravity effects rather than present terrestrial motion
 as orbital validation. A flight payload-transfer mechanism is a second possible study,
 but needs its own customer, interfaces and requirements. Neither is an active product.
-
-## Ordered deliverables and stop rules
-
-1. Consolidate review branches and evidence links; preserve criteria-before-code history.
-2. Freeze complete mission requirements and permitted conventional/programmable controls.
-3. Run campaign timing, resource and uncertainty comparisons; preserve no-benefit regions.
-4. Obtain accommodation inputs through the [host interface questions](HOST_COMPATIBILITY.md).
-   Provider direction or personal interest does not confirm any interface.
-5. Select mechanism and retention arrangement only after those gates; record rejection reasons.
-6. Run the smallest decisive friction/contact/electrical experiments as soon as an uncertain
-   property controls selection. Hardware need not wait for every unrelated analysis.
-7. Finish one release cell's coupled design and fault response before scaling the manifest.
-8. Produce the configuration-controlled build/test package and independent review record.
-
-Stop refinement when parameter uncertainty controls the conclusion and another calculation
-will not change the next experiment. If conventional release satisfies the full mission
-with lower justified burden, record that result. Do not raise the velocity requirement
-to rescue a favoured mechanism.
-
-The endpoint of this phase is a defensible architecture and reviewable test article.
-Flight readiness still requires measured evidence and mission-specific acceptance.
