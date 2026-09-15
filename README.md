@@ -10,6 +10,7 @@ mechanically and electrically unmodified is the design objective. Compatibility 
 **Computational design study. Nothing has been built, fired, measured, qualified or flown.**
 
 [Start with the evidence](docs/GEN5_CLOSURE.md) · [Current work](docs/STATE_OF_THE_PROJECT.md) ·
+[Now / next / blocked](docs/PROGRAMME_EXECUTION.md#working-on-now--next--blocked) ·
 [Prototype programme](docs/PROTOTYPE_READINESS.md) · [CAD](cad/README.md) ·
 [IEEE-formatted manuscript](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)
 
