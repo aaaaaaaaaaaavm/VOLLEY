@@ -36,3 +36,28 @@ def test_identical_build_passes_without_touching_source(tmp_path, monkeypatch):
     before = (tmp_path / "main.step").stat().st_mtime_ns
     assert A._regenerates_identically("main.step")
     assert (tmp_path / "main.step").stat().st_mtime_ns == before
+
+
+def test_failed_rebuild_is_unknown_and_retains_diagnostic(tmp_path, monkeypatch, capsys):
+    import sys
+    (tmp_path / "main.step").write_text("original")
+    (tmp_path / "fail.py").write_text("print('native dependency unavailable')\nraise SystemExit(7)\n")
+    monkeypatch.setattr(A, "ROOT", str(tmp_path))
+    monkeypatch.setattr(A, "REGENERATORS", {"main.step": [sys.executable, "fail.py"]})
+    assert A._regenerates_identically("main.step") is None
+    output = capsys.readouterr().out
+    assert "return code 7" in output
+    assert "native dependency unavailable" in output
+    assert (tmp_path / "main.step").read_text() == "original"
+
+
+def test_unavailable_rebuild_fails_without_claiming_staleness(tmp_path, monkeypatch, capsys):
+    (tmp_path / "main.step").write_text("original")
+    monkeypatch.setattr(A, "ROOT", str(tmp_path))
+    monkeypatch.setattr(A, "PAIRS", [("main.step", ["input.json"])])
+    monkeypatch.setattr(A, "last_commit_time", lambda p: 1 if p == "main.step" else 2)
+    monkeypatch.setattr(A, "_regenerates_identically", lambda p: None)
+    assert A.main() == 1
+    output = capsys.readouterr().out
+    assert "UNVERIFIED" in output
+    assert "STALE" not in output

@@ -106,8 +106,9 @@ def last_commit_time(path):
 def _regenerates_identically(artifact):
     """Rebuild `artifact` and report whether it came back unchanged.
 
-    Returns False when there is no regenerator, when the build fails, or when the file
-    genuinely moved -- all three mean the time comparison should stand.
+    Returns True for an identical rebuild, False for a demonstrated difference (or
+    no configured regenerator), and None when a configured rebuild cannot run.
+    An unavailable native runtime is not evidence that the artifact differs.
     """
     cmd = REGENERATORS.get(artifact)
     if not cmd:
@@ -122,8 +123,9 @@ def _regenerates_identically(artifact):
             before = _file_hashes(isolated)
             r = subprocess.run(cmd, cwd=isolated, capture_output=True, timeout=900)
             if r.returncode != 0:
-                print(f"REBUILD FAILED {artifact}: {r.stderr.decode(errors='replace')[-600:]}")
-                return False
+                detail = (r.stdout + r.stderr).decode(errors="replace")[-600:]
+                print(f"REBUILD FAILED {artifact}: return code {r.returncode}; {detail}")
+                return None
             after = _file_hashes(isolated)
             changed = sorted(path for path in before.keys() | after.keys()
                              if before.get(path) != after.get(path))
@@ -133,8 +135,9 @@ def _regenerates_identically(artifact):
                     print(f"               {path}")
                 return False
             return True
-    except Exception:
-        return False
+    except Exception as exc:
+        print(f"REBUILD UNAVAILABLE {artifact}: {type(exc).__name__}: {exc}")
+        return None
 
 
 def _file_hashes(root):
@@ -152,6 +155,7 @@ def main():
         print("note: working tree is dirty, so this compares committed state only.\n")
 
     stale, missing, proven, ok = [], [], [], 0
+    unverified = set()
     rebuilt = {}
     for artifact, sources in PAIRS:
         if not os.path.exists(os.path.join(ROOT, artifact)):
@@ -169,8 +173,10 @@ def main():
                 behind = (s_time - a_time) / 3600.0
                 if artifact not in rebuilt:
                     rebuilt[artifact] = _regenerates_identically(artifact)
-                if rebuilt[artifact]:
+                if rebuilt[artifact] is True:
                     proven.append((artifact, src))
+                elif rebuilt[artifact] is None:
+                    unverified.add(artifact)
                 else:
                     stale.append((artifact, src, behind))
         ok += 1
@@ -186,10 +192,13 @@ def main():
     for m in missing:
         print(f"MISSING  {m}")
 
-    if not stale and not missing:
+    for artifact in sorted(unverified):
+        print(f"UNVERIFIED  {artifact}: configured rebuild did not complete")
+
+    if not stale and not missing and not unverified:
         print(f"artifacts: {ok} checked, all newer than their sources")
         return 0
-    print(f"\n{len(stale)} stale, {len(missing)} missing, of {len(PAIRS)} checked")
+    print(f"\n{len(stale)} stale, {len(missing)} missing, {len(unverified)} unverified, of {len(PAIRS)} checked")
     return 1
 
 
