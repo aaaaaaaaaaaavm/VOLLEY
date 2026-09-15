@@ -65,8 +65,10 @@ def test_case_count_transfer_propagation_and_conservation(data):
                     -transfer['magnitude_m_s']/(m.INPUTS['isp_s']*m.single.G0))
                 assert transfer['mass_after_kg'] == pytest.approx(expected_mass, abs=1e-9)
             final_sep = last['separation']
+            # Initial mass is 300 kg dry + 10 kg fuel + two 4 kg payloads.
+            # After both payloads depart, retained mass is dry + remaining fuel.
             assert final_sep['retained_mass_kg'] == pytest.approx(
-                318-candidate['total_fuel_kg'], abs=1e-9)
+                310-candidate['total_fuel_kg'], abs=1e-9)
             assert last['fuel_remaining_kg'] >= m.INPUTS['reserve_kg']-1e-9
             assert candidate['total_fuel_kg'] <= 8+1e-9
 
