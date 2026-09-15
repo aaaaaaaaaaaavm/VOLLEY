@@ -12,7 +12,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import math
 from pathlib import Path
 
 import departure_trade
@@ -21,7 +20,6 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULT = ROOT / "analysis" / "results" / "gen6_architecture_trade.json"
 REPORT = ROOT / "docs" / "GEN6_ARCHITECTURE_TRADE.md"
 FIGURE = ROOT / "figures" / "gen6_architecture_trade.svg"
-CRITERIA = ROOT / "validation" / "P92_architecture_trade.md"
 G0 = 9.80665
 PAYLOAD_KG = 4.0
 MANIFEST = 12
@@ -37,7 +35,7 @@ def load(path: Path):
 
 
 def s4_common_speed(data):
-    wanted = {"bolley_reference", "gen5_reference", "gen6_reference"}
+    wanted = {"bolley_screen", "gen5_screen", "gen6_screen"}
     chosen = {}
     for sel in data["selections"]:
         if (sel["screen"] in wanted and sel["grid"] == "fine" and
@@ -184,7 +182,7 @@ def build():
     arrangements = arrangement_cases()
     mechanisms = mechanism_cases(mass)
     combinations = []
-    for aname, arrangement in arrangements.items():
+    for aname in arrangements:
         for mname, mechanism in mechanisms.items():
             allowed = aname in mechanism["arrangements_allowed"]
             combinations.append({
