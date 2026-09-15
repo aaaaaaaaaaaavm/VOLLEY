@@ -8,7 +8,7 @@ The project investigates provider-hosted control of individual payload departure
 
 > **Computational engineering programme. Nothing has been built, fired, measured, qualified or flown.**
 
-[Interactive project site](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Current work](docs/PROGRAMME_EXECUTION.md) · [Evidence](docs/evidence.html) · [CAD](cad/README.md) · [Open problems](OPEN_PROBLEMS.md) · [Continuity](docs/CONTINUITY.md)
+[Interactive project site](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Documentation portal](https://aaaaaaaaaaaavm.github.io/VOLLEY/docs.html) · [Current work](docs/PROGRAMME_EXECUTION.md) · [Evidence](https://aaaaaaaaaaaavm.github.io/VOLLEY/evidence.html) · [CAD](cad/README.md) · [Open problems](OPEN_PROBLEMS.md)
 
 <table><tr><td width="48%"><img src="cad/renders/gen5/hero_open.png" alt="Gen5 electromagnetic VOLLEY CAD"></td><td width="52%"><img src="docs/assets/hero_departure.svg" alt="VOLLEY programmable departure concept"></td></tr><tr><td><b>A machine that actually existed in the engineering record.</b> Gen5 is the frozen electromagnetic comparator, not the next design.</td><td><b>The idea that survives the machines.</b> Same host, individually controlled departure conditions, then the spacecraft is on its own.</td></tr></table>
 
@@ -40,7 +40,7 @@ The project began in **2021** around a coilgun and a dedicated free-flyer. In **
 
 No clean-sheet mechanism has won. The next design will not get a hero render before the mission comparison and architecture decision earn one. The existing gas guide remains a comparator with its results and failures intact.
 
-[Full generation record](docs/GENERATIONS.md) · [Decision lineage](docs/LINEAGE.md) · [Machine evolution page](docs/evolution.html)
+[Full generation record](docs/GENERATIONS.md) · [Decision lineage](docs/LINEAGE.md) · [Visual machine evolution](https://aaaaaaaaaaaavm.github.io/VOLLEY/evolution.html)
 
 ---
 
@@ -65,9 +65,9 @@ The mission studies are already showing why this matters. In one common-energy c
 | [S3 · Terminal-state timing](docs/TERMINAL_TIMING.md) | 300 | Identical terminal position/velocity target and release-time search for one payload | Coupled multi-payload optimization |
 | **S4 · Manifest timing** | **in closure** | Coupled two-payload terminal-state campaign | Not promoted to completed evidence until generated artifacts, freshness checks and companion snapshots are coherent |
 
-The browser [mission sandbox](docs/index.html#sim) is deliberately **not** part of this evidence chain. It is a simple two-body visualisation for intuition. The validated studies above remain authoritative.
+The browser [mission sandbox](https://aaaaaaaaaaaavm.github.io/VOLLEY/#sim) is deliberately **not** part of this evidence chain. It is a simple two-body visualisation for intuition. The validated studies above remain authoritative.
 
-[Provenance](docs/PROVENANCE.md) · [Run sheets](validation/README.md) · [Figure index](docs/FIGURE_INDEX.md) · [Evidence portal](docs/evidence.html)
+[Provenance](docs/PROVENANCE.md) · [Run sheets](validation/README.md) · [Figure index](docs/FIGURE_INDEX.md) · [Visual evidence portal](https://aaaaaaaaaaaavm.github.io/VOLLEY/evidence.html)
 
 ---
 
@@ -119,16 +119,16 @@ A programmable ground separation-test system is an adjacent application worth ke
 
 **4. Scale and make it buildable.** Drawings, BOM, budgets, assembly/inspection, instrumentation, calibration, uncertainty and frozen acceptance criteria before the test.
 
-[Programme execution](docs/PROGRAMME_EXECUTION.md) · [Mission and redesign](docs/workstreams/MISSION_AND_REDESIGN.md) · [Engineering closure](docs/workstreams/ENGINEERING_CLOSURE.md) · [Current-work portal](docs/work.html)
+[Programme execution](docs/PROGRAMME_EXECUTION.md) · [Mission and redesign](docs/workstreams/MISSION_AND_REDESIGN.md) · [Engineering closure](docs/workstreams/ENGINEERING_CLOSURE.md) · [Visual current-work portal](https://aaaaaaaaaaaavm.github.io/VOLLEY/work.html)
 
 ---
 
 ## Explore the project visually
 
-| | | | |
-|---|---|---|---|
-| [**Concept**](docs/concept.html) | [**Evolution**](docs/evolution.html) | [**Evidence**](docs/evidence.html) | [**Current work**](docs/work.html) |
-| Mission boundary, host/release/spacecraft roles | Five years of machine changes and failures | Studies, run sheets, provenance and visual outputs | S4 → architecture selection → release cell → test article |
+| | | | | |
+|---|---|---|---|---|
+| [**Concept**](https://aaaaaaaaaaaavm.github.io/VOLLEY/concept.html) | [**Evolution**](https://aaaaaaaaaaaavm.github.io/VOLLEY/evolution.html) | [**Mission sandbox**](https://aaaaaaaaaaaavm.github.io/VOLLEY/#sim) | [**Evidence**](https://aaaaaaaaaaaavm.github.io/VOLLEY/evidence.html) | [**Documentation**](https://aaaaaaaaaaaavm.github.io/VOLLEY/docs.html) |
+| Mission boundary and real host context | Five years of machine changes and failures | Interactive release velocity, timing and propagation | Studies, run sheets, provenance and visual outputs | Mission, CAD, validation, build readiness and programme map |
 
 The [interactive project site](https://aaaaaaaaaaaavm.github.io/VOLLEY/) is the visual front door. The repository remains the engineering record.
 
