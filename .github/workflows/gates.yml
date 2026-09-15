@@ -58,6 +58,8 @@ jobs:
             python3 tools/check_authorship.py
           fi
           git checkout -q --detach "$TEST_COMMIT"
+      - name: mission freshness diagnostics
+        run: python3 tools/diagnose_mission_freshness.py
       - name: links
         run: python3 tools/check_links.py
       - name: register
