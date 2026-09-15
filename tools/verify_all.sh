@@ -24,6 +24,7 @@ run "links"              python3 tools/check_links.py
 run "register"           python3 tools/register_status.py --check
 run "baseline"           python3 tools/make_baseline.py --check
 run "public surfaces"    python3 tools/check_public.py
+run "routing"            python3 tools/check_routing.py
 run "BSX review"        python3 tools/make_bsx_review.py --check
 run "README overview"    python3 tools/make_repo_overview.py --check
 run "cross-references"   python3 tools/check_crossrefs.py

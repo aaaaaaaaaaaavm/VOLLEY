@@ -27,20 +27,20 @@ Every live item is included below. Closure prepares evidence for programme decis
 |---|---|---|---|
 | P14 | Closure prepares; user decides | Gen3 CAD defects not previously tracked: CORRECTED 2026-08-13 | `DECISION` — keep Gen4 or declare Gen5 the only generation -- D8 |
 | P18 | Closure | Four physical effects are absent from the model, not merely unvalidated: MEDIUM, NEW 2026-07-29 | `COMPUTATION` — model the four effects, or bound them and say so |
-| P30 | Closure prepares; user decides | Redesignn acceptance band was set at the easier of two available comparators: MEDIUM, NEW 2026-07-31 | `DECISION` — the band stands as declared; what changes is what is claimed from it |
+| P30 | Closure prepares; user decides | An acceptance band was set at the easier of two available comparators: MEDIUM, NEW 2026-07-31 | `DECISION` — the band stands as declared; what changes is what is claimed from it |
 | P32 | Closure prepares; user decides | The working Gen4 geometry has no corresponding operating point: CORRECTED 2026-08-13 | `DECISION` — D8 |
 | P33 | Closure | The paper credits a winding inductance nobody had computed: MEDIUM, NEW 2026-08-05 | `COMPUTATION` — compute the winding inductance |
-| P34 | Closure | Redesign payload carrying a magnetometer cannot fly in this magazine: HIGH, NEW 2026-08-05 | `COMPUTATION` — a magnetically screened cell, or a declared exclusion |
+| P34 | Closure | A payload carrying a magnetometer cannot fly in this magazine: HIGH, NEW 2026-08-05 | `COMPUTATION` — a magnetically screened cell, or a declared exclusion |
 | P36 | Closure | The track has no dynamic design case, and A17 says it needs one: CORRECTED 2026-08-13 | `COMPUTATION` — a dynamic design case for the track |
 | P39 | Closure | The companion repositories were not a function of the commit they claim: CORRECTED 2026-08-10 | `COMPUTATION` — the companion provenance gate exists; the entry predates it |
-| P44 | Closure prepares; external evidence required | Redesignt femtosat scale the separation hardware outweighs the satellites it separates: MEDIUM, NEW 2026-08-10 | `FLIGHT_OPS` — femtosat deployer masses actually flown |
+| P44 | Closure prepares; external evidence required | At femtosat scale the separation hardware outweighs the satellites it separates: MEDIUM, NEW 2026-08-10 | `FLIGHT_OPS` — femtosat deployer masses actually flown |
 | P45 | Closure | The flywheel buys the impedance and pays it back in mass: LOW, NEW 2026-08-10 | `COMPUTATION` — flywheel specific energy from flown units |
 | P52 | Closure | The segmented stator puts a 30 % force ripple through the track's first mode: HIGH, NEW 2026-08-13 | `COMPUTATION` — segment handover through the track mode |
 | P56 | Closure | The phase-spacing claim is compared against the wrong baseline: CORRECTED 2026-08-14 by A21-R | `COMPUTATION` — state the free baseline wherever the phase claim appears |
-| P57 | Closure | Redesign voice-coil CubeSat deployer making this project's core claim has been on the reading list unread since 2026-07-30: HIGH, NEW 2026-08-14 | `COMPUTATION` — read the voice-coil deployer in full and record it in PRIOR_ART under that file's five fields |
+| P57 | Closure | A voice-coil CubeSat deployer making this project's core claim has been on the reading list unread since 2026-07-30: HIGH, NEW 2026-08-14 | `COMPUTATION` — read the voice-coil deployer in full and record it in PRIOR_ART under that file's five fields |
 | P59 | Redesign prepares; user decides | Kill criterion 1 is unreachable by architecture and unreachable by manifest size: CRITICAL, NEW 2026-08-14 | `DECISION` — D2: which payload class is the product |
 | P67 | Closure prepares; external evidence required | Gen6's precision rests on a seal friction nobody has measured, and its rated velocity excludes it: HIGH, NEW 2026-08-16 | `HARDWARE` — measure the seal friction -- B-2 |
-| P68 | Closure prepares; external evidence required | RedesignDR-032's first falsifier fires, and the largest piece of the stage credit is a mass P10 says was never itemised: CRITICAL, NEW 2026-08-16 | `HOST_DATA` — a real stage interface: what a provider will actually credit |
+| P68 | Closure prepares; external evidence required | ADR-032's first falsifier fires, and the largest piece of the stage credit is a mass P10 says was never itemised: CRITICAL, NEW 2026-08-16 | `HOST_DATA` — a real stage interface: what a provider will actually credit |
 | P69 | Redesign prepares; user decides | Mass parity with a canisterised dispenser is withdrawn: HIGH, NEW 2026-08-16 | `DECISION` — the comparison stands; what changes is what is claimed |
 | P74 | Closure prepares; user decides | No Fusion document is committed for any generation built in Fusion: MEDIUM, NEW 2026-08-16 | `DECISION` — export the Fusion documents, or declare Gen5 the only geometry -- D8 |
 | P75 | Redesign | Gen6 improves reliability incidentally, and E30 is not answered by it: HIGH, NEW 2026-08-16 | `COMPUTATION` — a Gen6 reliability architecture, the way A47 did Gen5 |
@@ -49,9 +49,9 @@ Every live item is included below. Closure prepares evidence for programme decis
 | P81 | Closure | The backup ejector cannot get the payload out of the tube: HIGH, NEW 2026-08-16 | `COMPUTATION` — an ejector concept that clears the tube on the energy available |
 | P87 | Closure | The last fill of the campaign does not fit the window, and never did: MEDIUM, NEW 2026-08-19 | `COMPUTATION` — re-plan the campaign fill schedule against the window |
 | P88 | Closure prepares; external evidence required | The seal cannot absorb its own friction, and P67 is a harder measurement than it has been described as: HIGH, NEW 2026-08-19 | `HARDWARE` — the seal's own conduction path, measured |
-| P91 | Closure | Redesign65 band 4 misses A53's per-cell mass threshold, and the mass is in the pressure vessel: MEDIUM, NEW 2026-08-20 | `COMPUTATION` — a pressure vessel design that meets A53's per-cell mass |
+| P91 | Closure | A65 band 4 misses A53's per-cell mass threshold, and the mass is in the pressure vessel: MEDIUM, NEW 2026-08-20 | `COMPUTATION` — a pressure vessel design that meets A53's per-cell mass |
 | P92 | Redesign prepares; user decides | The trim stator has to reach its magnets through a conducting tube, and nothing has computed what that costs: HIGH, NEW 2026-08-20 | `DECISION` — A74 has stated the requirement and eliminated every local fix; which of ADR-033 and ADR-035 yields is a programme choice |
-| P94 | Closure prepares; external evidence required | Redesign13 band 5 passes on a host control authority that E5 says does not exist: HIGH, NEW 2026-08-20 | `HOST_DATA` — a published control authority for a real stage |
+| P94 | Closure prepares; external evidence required | A13 band 5 passes on a host control authority that E5 says does not exist: HIGH, NEW 2026-08-20 | `HOST_DATA` — a published control authority for a real stage |
 | P99 | Closure prepares; external evidence required | One shot's angular momentum exceeds the only wheel this project has ever named: HIGH, NEW 2026-08-22 | `HOST_DATA` — a real host wheel, or a host that does not need one |
 | P103 | Closure | Gen6 has no model of the payload's guided contact state through the 8 m bore, so its exit angular and lateral state is not established: HIGH, NEW 2026-08-22 | `COMPUTATION` — A67 has run; what is left is roundness, stick-slip, inertia variation, tube compliance and a contact law that passes its own restitution check |
 | P108 | Closure | Gen6's exit angular rate misses the tip-off band by 7.4x, and the input that decides it is bore straightness: CRITICAL, NEW 2026-08-22 | `COMPUTATION` — A71 posed the convergence problem properly and did not solve it: raise the penalty stiffness until peak penetration is under 10 % of the clearance and re-converge in tolerance, or replace the penalty with a stabilised constraint formulation, or make the piston compliant so the contact stiffness is physical |
@@ -63,12 +63,12 @@ Every live item is included below. Closure prepares evidence for programme decis
 | E34 | Closure | The brake dumps 18.5 kN into a structure holding eleven stowed satellites, eleven times: NEW 2026-08-10 | `COMPUTATION` — a shock response spectrum at the cassette interface |
 | E35 | Closure | The payload's field exposure is a design variable nobody varied, and fixing it would make the product claim true: NEW 2026-08-10 | `COMPUTATION` — vary the payload field exposure as a design variable |
 | E28 | Closure | Campaign mission life at a real POEM altitude is about a month, and is not modelled: MODELLED 2026-08-16 by A50, STILL OPEN | `COMPUTATION` — campaign mission life at a real deployment altitude |
-| P117 | Closure, after redesign/P92 | Redesign55 gave the Gen6 trim section the whole of Gen5's thrust constant, and the force it specifies needs a field above the magnets' own remanence: HIGH, NEW 2026-08-30 | `COMPUTATION` — A73 has derived the constant; A55's re-run waits on [P92](#p92)'s trade |
+| P117 | Closure, after redesign/P92 | A55 gave the Gen6 trim section the whole of Gen5's thrust constant, and the force it specifies needs a field above the magnets' own remanence: HIGH, NEW 2026-08-30 | `COMPUTATION` — A73 has derived the constant; A55's re-run waits on [P92](#p92)'s trade |
 | P118 | Closure, after redesign/P92 | The trim magnets brake against the aluminium tube for the whole stroke, not only under the stator, and the array's length is not in the parameters: CRITICAL, NEW 2026-08-30 | `COMPUTATION` — A72 has integrated it; what remains is the same fix trade [P92](#p92) owns, now with numbers in it |
 | E3 | Closure | Masses are parametric and unchecked against vendor data | `COMPUTATION` — select components from public vendor data instead of parametric masses |
 | E4 | Closure prepares; external evidence required | No hardware at any level | `HARDWARE` — build something |
 | E5 | Closure prepares; external evidence required | Host stage properties unavailable | `HOST_DATA` — host stage propellant, authority and restart constraints |
-| E6 | Closure | Redesignbsolute orbital lifetimes are uncertain | `COMPUTATION` — uncertainty range from a variable atmosphere, not a single multiplier |
+| E6 | Closure | Absolute orbital lifetimes are uncertain | `COMPUTATION` — uncertainty range from a variable atmosphere, not a single multiplier |
 | E7 | Closure | Velocity dispersion rests on assumed sensor noise | `COMPUTATION` — select a sensor from public data and use its stated noise |
 | E9 | Redesign prepares; user decides | 6U/12U variants are force-limited, not designed | `DECISION` — design 6U/12U or withdraw them |
 | E11 | Closure | No contamination or outgassing analysis | `COMPUTATION` — public material screening -- ASTM E595 class data for the Gen6 BOM |
@@ -76,8 +76,8 @@ Every live item is included below. Closure prepares evidence for programme decis
 | E15 | Closure prepares; user decides | Sponsorship not secured | `DECISION` — fund it or scope it -- D10 |
 | E16 | Closure | Reference hygiene | `COMPUTATION` — a reference audit against publisher records |
 | E18 | Closure | Conjunction covariance is invented: NEW 2026-07-27 | `COMPUTATION` — a conjunction covariance from a defensible public source |
-| E24 | Closure | Redesignttitude disturbance from magazine indexing is not modelled: NEW 2026-07-30 | `COMPUTATION` — attitude disturbance from magazine indexing |
-| E25 | Closure | Redesign13 now leaves attitude restoration and structural settling open: CORRECTED 2026-08-03 | `COMPUTATION` — attitude restoration and structural settling |
+| E24 | Closure | Attitude disturbance from magazine indexing is not modelled: NEW 2026-07-30 | `COMPUTATION` — attitude disturbance from magazine indexing |
+| E25 | Closure | A13 now leaves attitude restoration and structural settling open: CORRECTED 2026-08-03 | `COMPUTATION` — attitude restoration and structural settling |
 
 
 [Programme sequence](../PROGRAMME_EXECUTION.md) · [Prototype packages](../PROTOTYPE_READINESS.md) · [Redesign stream](MISSION_AND_REDESIGN.md)

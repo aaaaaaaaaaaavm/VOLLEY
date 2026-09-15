@@ -1,5 +1,32 @@
 # Change log / audit record
 
+## 2026-09-15: the public routing table misquoted eleven register titles
+
+`docs/workstreams/ENGINEERING_CLOSURE.md` routes every live entry and quotes each native title
+verbatim. Filling its owner column had been done by substitution, and the substitution reached
+inside the quotes it was not supposed to touch:
+
+| Register | Published |
+|---|---|
+| `An acceptance band was set ...` | `Redesignn acceptance band was set ...` |
+| `At femtosat scale ...` | `Redesignt femtosat scale ...` |
+| `ADR-032's first falsifier fires ...` | `RedesignDR-032's first falsifier fires ...` |
+| `A65 band 4 misses A53's per-cell mass threshold ...` | `Redesign65 band 4 misses ...` |
+
+Eleven titles across P30, P34, P44, P57, P68, P91, P94, P117, E6, E24 and E25, all restored from
+`OPEN_PROBLEMS.md` rather than from any secondary copy. No status, next step, owner or count
+changed; the routing still carries 53 entries.
+
+`tools/check_routing.py` now requires every routed ID to exist in the register, its quoted title
+to match that entry's heading exactly, and no ID to be routed twice. It does not check the owner
+column, which is a human assignment the register has no opinion about. Wired into CI and
+`verify_all.sh`, and demonstrated against a mangled title and a phantom ID.
+
+**The gate found four of the eleven that a manual search had missed.** A pattern looking for the
+substitution before a letter does not see it before a digit, which is exactly how `A65`, `A13`
+and `A55` survived the first pass. That is the argument for comparing against the source rather
+than searching for the symptom.
+
 ## 2026-09-15: finish the mission-study publication
 
 - CI run 34928809087 exposed an incomplete freshness repair: scalar velocity-error
