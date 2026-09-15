@@ -30,7 +30,7 @@ Gen6 already exists as a stage-integrated cold-gas design study. It is not a bla
 |---|---:|---:|---:|---:|---:|
 | GEN6 | 18 | 4 | 5 | 1 | 1 |
 | GEN5 | 11 | 0 | 0 | 0 | 3 |
-| PROGRAMME | 3 | 0 | 0 | 1 | 6 |
+| PROGRAMME | 2 | 0 | 0 | 1 | 6 |
 
 ## GEN6 live items
 
@@ -89,7 +89,6 @@ Gen6 already exists as a stage-integrated cold-gas design study. It is not a bla
 
 | Entry | Next step class | Action that would move it |
 |---|---|---|
-| [P39](../OPEN_PROBLEMS.md) | COMPUTATION | the companion provenance gate exists; the entry predates it |
 | [P44](../OPEN_PROBLEMS.md) | FLIGHT_OPS | femtosat deployer masses actually flown |
 | [P56](../OPEN_PROBLEMS.md) | COMPUTATION | state the free baseline wherever the phase claim appears |
 | [P59](../OPEN_PROBLEMS.md) | DECISION | D2: which payload class is the product |

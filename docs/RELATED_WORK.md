@@ -349,8 +349,9 @@ CalculiX and Code_Aster (both GPL) for A4; Elmer (LGPL) and GetDP if the
 > `docs/DESIGN_OPTIONS_exit_velocity.md` makes separation dynamics load-bearing rather than
 > a nice-to-have.
 
-Licence note: keep all of these external. This repository is MIT; commit input decks and
-results, never vendored solver source.
+Licence note: keep all of these external. This repository is MIT, so no solver source is
+vendored here. Commit results, and commit whichever of the deck or its generator the result is
+actually a function of; `validation/README.md` states the rule and P39 records why.
 
 ## Deployment dynamics literature
 

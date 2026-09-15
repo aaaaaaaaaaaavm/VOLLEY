@@ -6,14 +6,14 @@ fixed first. E-items are genuinely unsolved engineering.
 > ## How to read the counts
 >
 > <!-- REGISTER_COUNTS:BEGIN -->
-> 154 numbered entries, of which 53 are live. Every entry carries a
+> 154 numbered entries, of which 52 are live. Every entry carries a
 > `Status:` line written by `tools/register_status.py`. This block and the result JSON
 > are generated from the same classifications.
 >
 > | Status | Count | Meaning |
 > |---|---:|---|
-> | `LIVE` | 53 (33 P, 20 E) | open engineering; something still has to be done |
-> | `CORRECTED` | 58 | found, fixed and propagated, retained as the published record |
+> | `LIVE` | 52 (32 P, 20 E) | open engineering; something still has to be done |
+> | `CORRECTED` | 59 | found, fixed and propagated, retained as the published record |
 > | `CLOSED` | 43 | resolved, with the closer named in the entry |
 > <!-- REGISTER_COUNTS:END -->
 >
@@ -1803,8 +1803,7 @@ baseline change to *"state which validations it invalidates"*. That rule exists 
 only. Carried as the open half of this entry.
 
 ### P39. The companion repositories were not a function of the commit they claim: CORRECTED 2026-08-10
-> **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `PROGRAMME` · **Next step:** `COMPUTATION` — the companion provenance gate exists; the entry predates it
+> **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
 Corrected 2026-08-10 in `tools/export_companion.py`. Found while regenerating the companions
@@ -1853,6 +1852,38 @@ it does, commit the decks, `build_deck.py` regenerates them and needs only `gmsh
 export republishes them with real provenance. If it does not, `validation/README.md`'s convention
 about committing input decks should say so. Either answer closes this; the current state
 answers it by accident, which is what made the leak possible.
+
+**Reconciled 2026-09-15.** The second answer is the one taken, and it is now stated rather
+than left to `.gitignore` to imply. `validation/fea/plate*.inp` does not belong in the
+flagship, and the two convention texts that said the opposite have been narrowed to match.
+`validation/README.md` and `docs/RELATED_WORK.md` now say that where a deck is built by a
+tracked generator from tracked inputs, the generator is what the repository commits, and that
+a deck is committed only where no such generator exists. Result JSON under
+`validation/results/` is committed either way, because that is what an acceptance band is read
+against.
+
+A measurement decided the wording. `build_deck.py` reads
+`cad/step/gen3/EMOCD_Sled_Gen3.step`, `cad/parameters.json` and
+`analysis/results/sizing.json`, all tracked, and nothing else. Run twice in the same
+environment it produced byte-identical decks, sha256 prefix `a3a4f94c` at 2 252 204 bytes
+pinned and `5eccc7a8` at 2 252 205 bytes clamped, with both full hashes in the run sheet. Solving both with CalculiX 2.21-1 returned 0.01945 mm
+and 0.01600 mm peak out-of-plane displacement, against the 0.0194 and 0.0160 mm this entry's
+run sheet published. The deck is therefore a function of committed inputs, and committing
+4.5 MB of it would add no provenance the generator does not already carry, which is the rule
+ADR-015 already states as derive, never paste. The full record, with commands and tool
+versions, is in
+[A4](validation/A4_sled_structural.md#reproduction-record-2026-09-15).
+
+One thing the measurement does not establish is stability across releases. gmsh does not
+guarantee the same mesh from one version to the next, so those hashes are a property of gmsh
+4.15.2 and not of the geometry. That is why the run sheet records the mesher and solver
+versions beside the hashes. A later run that reproduces 0.01945 and 0.01600 with different
+hashes is consistent with this entry; one that reproduces neither displacement is the
+discrepancy worth chasing, and the hashes are what localises it to the mesher.
+
+The companions lose nothing they were entitled to. The twelve paths were never a published
+copy of anything, they were collected off a dirty working tree, which is the defect this entry
+records. Propagated to `validation/README.md`, `docs/RELATED_WORK.md` and the A4 run sheet.
 
 ### P40. The repositioning cost was stated at half its real value, in the ADR that adopted the ConOps: MEDIUM, NEW 2026-08-10
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record

@@ -191,10 +191,20 @@ may never be touched after one.
 ## Licensing
 
 Keep these tools external. CalculiX and Code_Aster are GPL, Elmer is LGPL, and this
-repository is MIT, commit input decks and result JSON, never vendored solver code.
+repository is MIT, so no solver code is vendored here.
 Orekit (Apache-2.0), Project Chrono (BSD-3) and pyleecan (Apache-2.0) are permissive.
 NASA's CARA tools are MATLAB under a NASA open-source agreement; parts run under Octave,
 and the licence should be read before anything is redistributed.
+
+What the repository commits from a solver run is the shortest thing the result is a function
+of. Where a deck is built by a tracked generator from tracked inputs, commit the generator and
+record the mesher and solver versions beside the deck hash in the run sheet; the deck is
+derived and `.gitignore` excludes it. Where a deck was written by hand, or produced by a step
+that is not reproducible from this repository, the deck is the input and it is committed.
+Result JSON under `validation/results/` is committed either way, because that is the quantity
+an acceptance band is read against. See [P39](../OPEN_PROBLEMS.md#p39) for the case that
+settled this and [A4](A4_sled_structural.md#reproduction-record-2026-09-15) for the
+reproduction record it rests on.
 
 | A24R | Current-reference manifest agreement | Python | P54 | RUN 2026-09-06: current-reference checks pass; original failures retained; [run sheet](A24R_current_manifest_reference.md) |
 | A2R | Depth-resolved velocity levers | magpylib/Lorentz integral | P55 | RUN 2026-09-06: four geometries converged and ten rows recomputed; [run sheet](A2R_depth_resolved_levers.md) |

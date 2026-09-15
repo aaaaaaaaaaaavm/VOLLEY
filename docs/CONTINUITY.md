@@ -17,7 +17,7 @@ Read [BASELINE](BASELINE.md) for Gen5 values, [OPEN_PROBLEMS](../OPEN_PROBLEMS.m
 
 PR #33 and the paper/thesis companion PRs #2 are merged. The departure screen has 210 cases; the sequential energy-target campaign has 180; the single-payload terminal-state timing screen has 300. These are three different scopes. Neither energy targets alone nor a single-payload timing search establish a complete manifest or useful constellation. [TERMINAL_TIMING](TERMINAL_TIMING.md) records the latest study limits.
 
-The 53 live VOLLEY entries and BOLLEY's 48-entry register have not been closed by writing this handoff. Existing trim/contact failures remain. A numerical pass does not mean hardware acceptance or an architecture win.
+The 52 live VOLLEY entries and BOLLEY's 48-entry register have not been closed by writing this handoff. Existing trim/contact failures remain. A numerical pass does not mean hardware acceptance or an architecture win.
 
 ## Shared files and integration
 

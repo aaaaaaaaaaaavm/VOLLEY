@@ -32,7 +32,6 @@ Every live item is included below. Closure prepares evidence for programme decis
 | P33 | Closure | The paper credits a winding inductance nobody had computed: MEDIUM, NEW 2026-08-05 | `COMPUTATION` — compute the winding inductance |
 | P34 | Closure | A payload carrying a magnetometer cannot fly in this magazine: HIGH, NEW 2026-08-05 | `COMPUTATION` — a magnetically screened cell, or a declared exclusion |
 | P36 | Closure | The track has no dynamic design case, and A17 says it needs one: CORRECTED 2026-08-13 | `COMPUTATION` — a dynamic design case for the track |
-| P39 | Closure | The companion repositories were not a function of the commit they claim: CORRECTED 2026-08-10 | `COMPUTATION` — the companion provenance gate exists; the entry predates it |
 | P44 | Closure prepares; external evidence required | At femtosat scale the separation hardware outweighs the satellites it separates: MEDIUM, NEW 2026-08-10 | `FLIGHT_OPS` — femtosat deployer masses actually flown |
 | P45 | Closure | The flywheel buys the impedance and pays it back in mass: LOW, NEW 2026-08-10 | `COMPUTATION` — flywheel specific energy from flown units |
 | P52 | Closure | The segmented stator puts a 30 % force ripple through the track's first mode: HIGH, NEW 2026-08-13 | `COMPUTATION` — segment handover through the track mode |
@@ -79,5 +78,10 @@ Every live item is included below. Closure prepares evidence for programme decis
 | E24 | Closure | Attitude disturbance from magazine indexing is not modelled: NEW 2026-07-30 | `COMPUTATION` — attitude disturbance from magazine indexing |
 | E25 | Closure | A13 now leaves attitude restoration and structural settling open: CORRECTED 2026-08-03 | `COMPUTATION` — attitude restoration and structural settling |
 
+
+Reconciled 2026-09-15: P39 was routed here, answered, and is no longer live, so it has been
+removed from the table above. Its provenance question is settled in the register entry itself
+and in [A4](../../validation/A4_sled_structural.md#reproduction-record-2026-09-15). The routing
+now carries 52 entries, matching the register's live count.
 
 [Programme sequence](../PROGRAMME_EXECUTION.md) · [Prototype packages](../PROTOTYPE_READINESS.md) · [Redesign stream](MISSION_AND_REDESIGN.md)

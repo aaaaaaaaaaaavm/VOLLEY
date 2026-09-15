@@ -81,3 +81,42 @@ above. Report the mass at the constraint, not the mass of a chassis that does no
 `validation/results/A4_sled_structural.json`, chassis mass at the stiffness constraint,
 peak deflection per load case, von Mises peak, first mode, plus `solver`, `version`,
 `element_type`, `element_count`, `contact_treatment`.
+
+---
+
+## Reproduction record, 2026-09-15
+
+[P39](../OPEN_PROBLEMS.md#p39) left one question open: whether the CalculiX input decks belong in
+the flagship. Answering it required establishing that the committed generator is the deck's
+provenance, so that was measured rather than assumed. This is also the first run sheet to carry
+the reproduction fields [`docs/PROTOTYPE_READINESS.md`](../docs/PROTOTYPE_READINESS.md) requires
+of a controlling simulation.
+
+| Field | Value |
+|---|---|
+| Source revision | `10bf06e` |
+| Generator | `validation/fea/build_deck.py`, tracked; reads `cad/step/gen3/EMOCD_Sled_Gen3.step`, `cad/parameters.json` and `analysis/results/sizing.json` |
+| Mesher | gmsh API 4.15.2 |
+| Solver | CalculiX `ccx` 2.21-1 |
+| Commands | `python3 validation/fea/build_deck.py` · `ccx plate_pinned` · `ccx plate_clamped` |
+| Mesh | 29 312 nodes reported per case; 4054 loaded nodes, 2425 web nodes |
+| `plate_pinned.inp` | sha256 `a3a4f94cdbf4cbee4cb463779f2751140a5779cd70bbea0d7ceae553b53bc8d9`, 2 252 204 bytes |
+| `plate_clamped.inp` | sha256 `5eccc7a81d1f548284ed0403b5539ebb5f3f077175d175ed9b7f03074208274d`, 2 252 205 bytes |
+
+**Determinism.** The generator was run twice in the same environment and both decks hashed
+identically. The hashes above are therefore a property of this gmsh version, not of the run.
+
+**Reproduced result.** Peak out-of-plane displacement, extracted from the `.dat` files:
+
+| Case | Reproduced | Published in this run sheet |
+|---|---:|---:|
+| pinned | **0.01945 mm** | 0.0194 mm |
+| clamped | **0.01600 mm** | 0.0160 mm |
+
+Both bracket values reproduce. The band and the verdict are unchanged; nothing here re-opens A4.
+
+**What is not pinned.** gmsh's mesh is not guaranteed stable across versions, so a future run on a
+different gmsh may produce different deck hashes. That is why the version is recorded beside the
+hash: a mismatch is then a visible discrepancy to investigate rather than a silent difference. The
+displacement result is the quantity A4 is accountable for, and it is a bracket, not a single
+number, precisely because the support condition is uncertain.
