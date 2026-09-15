@@ -20,11 +20,17 @@ jobs:
         run: |
           python3 -m pip install --upgrade -q pip
           python3 -m pip install -q -r requirements.txt -r requirements-dev.txt
-      - name: generate and capture
+      - name: generate and verify
         run: |
           python3 analysis/manifest_timing.py
           python3 -m pytest tests/test_manifest_timing.py -q
-          tar -czf /tmp/manifest_outputs.tgz analysis/results/manifest_timing.json docs/MANIFEST_TIMING.md figures/manifest_timing.svg
-          echo MANIFEST_OUTPUT_BEGIN
-          base64 -w 76 /tmp/manifest_outputs.tgz
-          echo MANIFEST_OUTPUT_END
+      - name: capture generated evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: manifest-timing
+          path: |
+            analysis/results/manifest_timing.json
+            docs/MANIFEST_TIMING.md
+            figures/manifest_timing.svg
+          if-no-files-found: error
+          retention-days: 1
