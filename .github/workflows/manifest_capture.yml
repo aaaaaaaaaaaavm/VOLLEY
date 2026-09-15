@@ -1,0 +1,30 @@
+name: manifest-capture
+
+on:
+  push:
+    branches:
+      - mission-manifest-completion-20260915
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch repository
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git fetch -q origin "${{ github.sha }}"
+          git checkout -q --detach "${{ github.sha }}"
+      - name: install
+        run: |
+          python3 -m pip install --upgrade -q pip
+          python3 -m pip install -q -r requirements.txt -r requirements-dev.txt
+      - name: generate and capture
+        run: |
+          python3 analysis/manifest_timing.py
+          python3 -m pytest tests/test_manifest_timing.py -q
+          tar -czf /tmp/manifest_outputs.tgz analysis/results/manifest_timing.json docs/MANIFEST_TIMING.md figures/manifest_timing.svg
+          echo MANIFEST_OUTPUT_BEGIN
+          base64 -w 76 /tmp/manifest_outputs.tgz
+          echo MANIFEST_OUTPUT_END
