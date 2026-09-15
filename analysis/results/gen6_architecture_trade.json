@@ -1,0 +1,372 @@
+{
+  "arrangements": {
+    "independent_banks": {
+      "installed_mass_kg": null,
+      "safe_retention_after_fault": "UNKNOWN_UNTIL_RETENTION_DESIGN",
+      "sensitivity": [
+        {
+          "bank_count": 6,
+          "bank_size": 2,
+          "blocked_path_potentially_deliverable": 10,
+          "blocked_path_stranded": 2
+        },
+        {
+          "bank_count": 4,
+          "bank_size": 3,
+          "blocked_path_potentially_deliverable": 9,
+          "blocked_path_stranded": 3
+        },
+        {
+          "bank_count": 3,
+          "bank_size": 4,
+          "blocked_path_potentially_deliverable": 8,
+          "blocked_path_stranded": 4
+        },
+        {
+          "bank_count": 2,
+          "bank_size": 6,
+          "blocked_path_potentially_deliverable": 6,
+          "blocked_path_stranded": 6
+        }
+      ],
+      "shared_command_power_loss_potentially_deliverable": 0
+    },
+    "independent_bays": {
+      "blocked_path_potentially_deliverable": 11,
+      "blocked_path_stranded": 1,
+      "installed_mass_kg": null,
+      "paths": 12,
+      "safe_retention_after_fault": "UNKNOWN_UNTIL_RETENTION_DESIGN",
+      "shared_command_power_loss_potentially_deliverable": 0
+    },
+    "shared_magazine": {
+      "blocked_path_potentially_deliverable": 0,
+      "blocked_path_stranded": 12,
+      "installed_mass_kg": null,
+      "paths": 1,
+      "safe_retention_after_fault": "UNKNOWN_UNTIL_RETENTION_DESIGN",
+      "shared_command_power_loss_potentially_deliverable": 0
+    }
+  },
+  "combined_architectures": [
+    {
+      "arrangement": "independent_bays",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "conventional_selected_spring",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "independent_bays",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "programmable_stored_energy_pusher",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "independent_bays",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "short_stroke_electromechanical_pusher",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "independent_bays",
+      "configuration_valid": false,
+      "hard_blocker": "NOT_THE_EXISTING_CONFIGURATION",
+      "installed_mass_kg": null,
+      "mechanism": "existing_gen6_gas_guide",
+      "selection_state": "REJECT_EXISTING_CONFIGURATION_MISMATCH"
+    },
+    {
+      "arrangement": "independent_bays",
+      "configuration_valid": false,
+      "hard_blocker": "NOT_THE_EXISTING_CONFIGURATION",
+      "installed_mass_kg": null,
+      "mechanism": "gen5_electromagnetic",
+      "selection_state": "REJECT_EXISTING_CONFIGURATION_MISMATCH"
+    },
+    {
+      "arrangement": "independent_bays",
+      "configuration_valid": true,
+      "hard_blocker": "selected winding hot switching/protection, tolerances and complete installed mass remain open",
+      "installed_mass_kg": null,
+      "mechanism": "bolley_cooperative_interface",
+      "selection_state": "REJECT_KNOWN_BLOCKER"
+    },
+    {
+      "arrangement": "independent_banks",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "conventional_selected_spring",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "independent_banks",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "programmable_stored_energy_pusher",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "independent_banks",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "short_stroke_electromechanical_pusher",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "independent_banks",
+      "configuration_valid": false,
+      "hard_blocker": "NOT_THE_EXISTING_CONFIGURATION",
+      "installed_mass_kg": null,
+      "mechanism": "existing_gen6_gas_guide",
+      "selection_state": "REJECT_EXISTING_CONFIGURATION_MISMATCH"
+    },
+    {
+      "arrangement": "independent_banks",
+      "configuration_valid": false,
+      "hard_blocker": "NOT_THE_EXISTING_CONFIGURATION",
+      "installed_mass_kg": null,
+      "mechanism": "gen5_electromagnetic",
+      "selection_state": "REJECT_EXISTING_CONFIGURATION_MISMATCH"
+    },
+    {
+      "arrangement": "independent_banks",
+      "configuration_valid": true,
+      "hard_blocker": "selected winding hot switching/protection, tolerances and complete installed mass remain open",
+      "installed_mass_kg": null,
+      "mechanism": "bolley_cooperative_interface",
+      "selection_state": "REJECT_KNOWN_BLOCKER"
+    },
+    {
+      "arrangement": "shared_magazine",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "conventional_selected_spring",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "shared_magazine",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "programmable_stored_energy_pusher",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "shared_magazine",
+      "configuration_valid": true,
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "mechanism": "short_stroke_electromechanical_pusher",
+      "selection_state": "UNDERDETERMINED_INSTALLED_BURDEN"
+    },
+    {
+      "arrangement": "shared_magazine",
+      "configuration_valid": true,
+      "hard_blocker": "contact/release credibility and complete installed pressure-system burden unresolved",
+      "installed_mass_kg": null,
+      "mechanism": "existing_gen6_gas_guide",
+      "selection_state": "REJECT_KNOWN_BLOCKER"
+    },
+    {
+      "arrangement": "shared_magazine",
+      "configuration_valid": true,
+      "hard_blocker": "3U dispenser mass comparison fails",
+      "installed_mass_kg": 126.6,
+      "mechanism": "gen5_electromagnetic",
+      "selection_state": "REJECT_KNOWN_BLOCKER"
+    },
+    {
+      "arrangement": "shared_magazine",
+      "configuration_valid": true,
+      "hard_blocker": "selected winding hot switching/protection, tolerances and complete installed mass remain open",
+      "installed_mass_kg": null,
+      "mechanism": "bolley_cooperative_interface",
+      "selection_state": "REJECT_KNOWN_BLOCKER"
+    }
+  ],
+  "decisive_next_evidence": [
+    "Size one adjustable stored-energy release cell at 4.569852 m/s and at the next mission-earned authority point; include retention, pusher, arrest/reset and installed mass.",
+    "Size one compact electromechanical release cell to the same force/stroke duty; include current, power electronics, thermal recovery and moving-part arrest.",
+    "Give independent bay, 2/3/4/6-payload bank and shared-magazine arrangements actual support/retention mass and envelope instead of topology alone.",
+    "For the existing gas guide, correct P103/P108 contact/release physics and close the installed vessel/valve/support/consumable mass before it can compete on burden.",
+    "For BOLLEY, close the selected A9f/A5h electrical path and complete packaged interface mass before treating its 11.8 m/s mission screen as installed capability."
+  ],
+  "duty_screens": {
+    "bolley_reference": {
+      "ideal_stroke_at_10g_m": 0.7099264274752337,
+      "ideal_stroke_at_25g_m": 0.2839705709900935,
+      "mean_force_at_10g_N": 392.26599999999996,
+      "mean_force_at_25g_N": 980.665,
+      "payload_impulse_N_s": 47.2,
+      "payload_kinetic_energy_J": 278.48,
+      "payload_mass_kg": 4.0,
+      "speed_m_s": 11.8
+    },
+    "gen5_reference": {
+      "ideal_stroke_at_10g_m": 1.3099725237466413,
+      "ideal_stroke_at_25g_m": 0.5239890094986565,
+      "mean_force_at_10g_N": 392.26599999999996,
+      "mean_force_at_25g_N": 980.665,
+      "payload_impulse_N_s": 64.116,
+      "payload_kinetic_energy_J": 513.857682,
+      "payload_mass_kg": 4.0,
+      "speed_m_s": 16.029
+    },
+    "gen6_reference": {
+      "ideal_stroke_at_10g_m": 4.290568547873128,
+      "ideal_stroke_at_25g_m": 1.716227419149251,
+      "mean_force_at_10g_N": 392.26599999999996,
+      "mean_force_at_25g_N": 980.665,
+      "payload_impulse_N_s": 116.036,
+      "payload_kinetic_energy_J": 1683.0441620000001,
+      "payload_mass_kg": 4.0,
+      "speed_m_s": 29.009
+    },
+    "s4_best_tested_first_release": {
+      "ideal_stroke_at_10g_m": 0.10647646137824279,
+      "ideal_stroke_at_25g_m": 0.04259058455129711,
+      "mean_force_at_10g_N": 392.26599999999996,
+      "mean_force_at_25g_N": 980.665,
+      "payload_impulse_N_s": 18.27940821777287,
+      "payload_kinetic_energy_J": 41.767095598997784,
+      "payload_mass_kg": 4.0,
+      "speed_m_s": 4.569852054443217
+    }
+  },
+  "interpretation": [
+    "4.569852 m/s needs only about 41.8 J of payload kinetic energy and about 0.106 m ideal stroke at 10 g for the 4 kg reference payload.",
+    "The repository therefore does not justify beginning the clean-sheet design with an 8 m guide or a 29 m/s requirement.",
+    "No clean-sheet candidate has a source-backed complete installed burden, so P92 cannot be selected honestly yet.",
+    "Fault topology favors smaller independent paths after a mechanical blockage, but shared command/power remains common-mode until explicitly separated."
+  ],
+  "manifest_payloads": 12,
+  "mechanisms": {
+    "bolley_cooperative_interface": {
+      "arrangements_allowed": [
+        "independent_bays",
+        "independent_banks",
+        "shared_magazine"
+      ],
+      "control_authority": "mission screen only; selected A9f/A5h drive still needs full installed closure",
+      "evidence": [
+        "docs/BOLLEY_TRANSFER.md",
+        "https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md"
+      ],
+      "hard_blocker": "selected winding hot switching/protection, tolerances and complete installed mass remain open",
+      "installed_mass_kg": null,
+      "next_evidence": "fresh A9f/A5h field/circuit/hot-loss/protection run plus packaged mass and payload-interface burden",
+      "payload_modification": true,
+      "role": "cooperative-payload comparator"
+    },
+    "conventional_selected_spring": {
+      "arrangements_allowed": [
+        "independent_bays",
+        "independent_banks",
+        "shared_magazine"
+      ],
+      "control_authority": "release timing plus selected/discrete spring condition; not assumed continuously variable",
+      "evidence": [
+        "analysis/actuator_trade.py",
+        "analysis/departure_trade.py"
+      ],
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "next_evidence": "source-backed current dispenser/spring mass and repeatability for the selected duty",
+      "payload_modification": false,
+      "role": "competent baseline"
+    },
+    "existing_gen6_gas_guide": {
+      "arrangements_allowed": [
+        "shared_magazine"
+      ],
+      "control_authority": "29.009 m/s is a design-point result, not a validated control envelope",
+      "evidence": [
+        "docs/generations/GEN6.md",
+        "validation/A67_guided_contact.md",
+        "validation/A72_trim_array_drag.md",
+        "validation/A74_tube_conductance_requirement.md"
+      ],
+      "hard_blocker": "contact/release credibility and complete installed pressure-system burden unresolved",
+      "installed_mass_kg": null,
+      "next_evidence": "correct P103/P108 contact model and close vessel/valve/support/consumable mass for the exact gas configuration",
+      "payload_modification": false,
+      "role": "existing comparator"
+    },
+    "gen5_electromagnetic": {
+      "arrangements_allowed": [
+        "shared_magazine"
+      ],
+      "control_authority": "frozen model point 16.029 m/s; modelled dispersion is not measured precision",
+      "evidence": [
+        "analysis/results/mass_properties.json",
+        "analysis/results/motor_results.json",
+        "docs/BASELINE.md"
+      ],
+      "hard_blocker": "3U dispenser mass comparison fails",
+      "installed_mass_kg": 126.6,
+      "loaded_mass_kg": 174.6,
+      "next_evidence": "none for selection as new Gen6; retained as frozen comparator",
+      "payload_modification": false,
+      "role": "frozen comparator"
+    },
+    "programmable_stored_energy_pusher": {
+      "arrangements_allowed": [
+        "independent_bays",
+        "independent_banks",
+        "shared_magazine"
+      ],
+      "control_authority": "conceptually adjustable; demonstrated range UNKNOWN",
+      "evidence": [
+        "analysis/architecture_synthesis.py"
+      ],
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "next_evidence": "retention + adjustable store + pusher/arrest sizing at the S4 low-speed duty, with mass and reset burden",
+      "payload_modification": false,
+      "role": "clean-sheet candidate"
+    },
+    "short_stroke_electromechanical_pusher": {
+      "arrangements_allowed": [
+        "independent_bays",
+        "independent_banks",
+        "shared_magazine"
+      ],
+      "control_authority": "potentially continuous; no selected actuator or demonstrated envelope",
+      "evidence": [
+        "analysis/actuator_trade.py"
+      ],
+      "hard_blocker": null,
+      "installed_mass_kg": null,
+      "next_evidence": "force/stroke/current/thermal sizing for a compact direct pusher rather than the frozen Gen5 track",
+      "payload_modification": false,
+      "role": "clean-sheet candidate"
+    }
+  },
+  "p92_disposition": "OPEN",
+  "payload_mass_kg": 4.0,
+  "s4_common_first_release_m_s": 4.569852054443217,
+  "s4_screen_values_m_s": {
+    "bolley_screen": 4.569852054443217,
+    "gen5_screen": 4.569852054443217,
+    "gen6_screen": 4.569852054443217
+  },
+  "source_sha256": {
+    "analysis/departure_trade.py": "f3a715e883e9b3414cc07836b720bb8c1b87f94c4a8f3288d454d89c3c650044",
+    "analysis/gen6_architecture_trade.py": "0d8cdc18fede6ade1ed216892132fa0c1ab290aa4e4d3c71b3dba74d4a5c0216",
+    "analysis/results/manifest_timing.json": "f84018cdec6109638d64e0485d5f4d74d932bb8939a4e0ac7002e3f62ece4797",
+    "analysis/results/mass_properties.json": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
+    "validation/P92_architecture_trade.md": "e279d304c28a9f1670ed1913ae346f8ca3073bb42657283a27c830eb3d9584bc"
+  },
+  "status": "UNDERDETERMINED_FROM_CURRENT_EVIDENCE",
+  "study": "P92-clean-sheet-architecture-trade"
+}
