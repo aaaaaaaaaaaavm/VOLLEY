@@ -1,37 +1,359 @@
 {
   "duty": [
-    {"acceleration_g": 5.0,"acceleration_mps2": 49.033249999999995,"acceleration_time_s": 0.09319904350619224,"average_payload_power_W": 448.1493911579999,"constant_force_N": 196.13299999999998,"ideal_payload_energy_J": 41.767094603808,"ideal_stroke_m": 0.2129529176824298,"speed_mps": 4.569852,"terminal_constant_force_power_W": 896.2987823159999},
-    {"acceleration_g": 10.0,"acceleration_mps2": 98.06649999999999,"acceleration_time_s": 0.04659952175309612,"average_payload_power_W": 896.2987823159998,"constant_force_N": 392.26599999999996,"ideal_payload_energy_J": 41.767094603808,"ideal_stroke_m": 0.1064764588412149,"speed_mps": 4.569852,"terminal_constant_force_power_W": 1792.5975646319998},
-    {"acceleration_g": 25.0,"acceleration_mps2": 245.16625,"acceleration_time_s": 0.018639808701238447,"average_payload_power_W": 2240.74695579,"constant_force_N": 980.665,"ideal_payload_energy_J": 41.767094603808,"ideal_stroke_m": 0.042590583536485954,"speed_mps": 4.569852,"terminal_constant_force_power_W": 4481.49391158},
-    {"acceleration_g": 5.0,"acceleration_mps2": 49.033249999999995,"acceleration_time_s": 0.24065302626279111,"average_payload_power_W": 1157.1846999999998,"constant_force_N": 196.13299999999998,"ideal_payload_energy_J": 278.48,"ideal_stroke_m": 1.4198528549504674,"speed_mps": 11.8,"terminal_constant_force_power_W": 2314.3694},
-    {"acceleration_g": 10.0,"acceleration_mps2": 98.06649999999999,"acceleration_time_s": 0.12032651313139556,"average_payload_power_W": 2314.3693999999996,"constant_force_N": 392.26599999999996,"ideal_payload_energy_J": 278.48,"ideal_stroke_m": 0.7099264274752337,"speed_mps": 11.8,"terminal_constant_force_power_W": 4628.7388},
-    {"acceleration_g": 25.0,"acceleration_mps2": 245.16625,"acceleration_time_s": 0.04813060525255822,"average_payload_power_W": 5785.9235,"constant_force_N": 980.665,"ideal_payload_energy_J": 278.48,"ideal_stroke_m": 0.2839705709900935,"speed_mps": 11.8,"terminal_constant_force_power_W": 11571.847},
-    {"acceleration_g": 5.0,"acceleration_mps2": 49.033249999999995,"acceleration_time_s": 0.32690062355646426,"average_payload_power_W": 1571.9079284999998,"constant_force_N": 196.13299999999998,"ideal_payload_energy_J": 513.857682,"ideal_stroke_m": 2.6199450474932826,"speed_mps": 16.029,"terminal_constant_force_power_W": 3143.8158569999996},
-    {"acceleration_g": 10.0,"acceleration_mps2": 98.06649999999999,"acceleration_time_s": 0.16345031177823213,"average_payload_power_W": 3143.8158569999996,"constant_force_N": 392.26599999999996,"ideal_payload_energy_J": 513.857682,"ideal_stroke_m": 1.3099725237466413,"speed_mps": 16.029,"terminal_constant_force_power_W": 6287.631713999999},
-    {"acceleration_g": 25.0,"acceleration_mps2": 245.16625,"acceleration_time_s": 0.06538012471129286,"average_payload_power_W": 7859.539642499998,"constant_force_N": 980.665,"ideal_payload_energy_J": 513.857682,"ideal_stroke_m": 0.5239890094986565,"speed_mps": 16.029,"terminal_constant_force_power_W": 15719.079285},
-    {"acceleration_g": 5.0,"acceleration_mps2": 49.033249999999995,"acceleration_time_s": 0.5916189524455344,"average_payload_power_W": 2844.8110985000003,"constant_force_N": 196.13299999999998,"ideal_payload_energy_J": 1683.0441620000001,"ideal_stroke_m": 8.581137095746255,"speed_mps": 29.009,"terminal_constant_force_power_W": 5689.622197},
-    {"acceleration_g": 10.0,"acceleration_mps2": 98.06649999999999,"acceleration_time_s": 0.2958094762227672,"average_payload_power_W": 5689.622197000001,"constant_force_N": 392.26599999999996,"ideal_payload_energy_J": 1683.0441620000001,"ideal_stroke_m": 4.290568547873128,"speed_mps": 29.009,"terminal_constant_force_power_W": 11379.244394},
-    {"acceleration_g": 25.0,"acceleration_mps2": 245.16625,"acceleration_time_s": 0.11832379048910689,"average_payload_power_W": 14224.0554925,"constant_force_N": 980.665,"ideal_payload_energy_J": 1683.0441620000001,"ideal_stroke_m": 1.716227419149251,"speed_mps": 29.009,"terminal_constant_force_power_W": 28448.110985}
+    {
+      "acceleration_g": 5.0,
+      "acceleration_mps2": 49.033249999999995,
+      "acceleration_time_s": 0.09319904350619224,
+      "average_payload_power_W": 448.1493911579999,
+      "constant_force_N": 196.13299999999998,
+      "ideal_payload_energy_J": 41.767094603808,
+      "ideal_stroke_m": 0.2129529176824298,
+      "speed_mps": 4.569852,
+      "terminal_constant_force_power_W": 896.2987823159999
+    },
+    {
+      "acceleration_g": 10.0,
+      "acceleration_mps2": 98.06649999999999,
+      "acceleration_time_s": 0.04659952175309612,
+      "average_payload_power_W": 896.2987823159998,
+      "constant_force_N": 392.26599999999996,
+      "ideal_payload_energy_J": 41.767094603808,
+      "ideal_stroke_m": 0.1064764588412149,
+      "speed_mps": 4.569852,
+      "terminal_constant_force_power_W": 1792.5975646319998
+    },
+    {
+      "acceleration_g": 25.0,
+      "acceleration_mps2": 245.16625,
+      "acceleration_time_s": 0.018639808701238447,
+      "average_payload_power_W": 2240.74695579,
+      "constant_force_N": 980.665,
+      "ideal_payload_energy_J": 41.767094603808,
+      "ideal_stroke_m": 0.042590583536485954,
+      "speed_mps": 4.569852,
+      "terminal_constant_force_power_W": 4481.49391158
+    },
+    {
+      "acceleration_g": 5.0,
+      "acceleration_mps2": 49.033249999999995,
+      "acceleration_time_s": 0.24065302626279111,
+      "average_payload_power_W": 1157.1846999999998,
+      "constant_force_N": 196.13299999999998,
+      "ideal_payload_energy_J": 278.48,
+      "ideal_stroke_m": 1.4198528549504674,
+      "speed_mps": 11.8,
+      "terminal_constant_force_power_W": 2314.3694
+    },
+    {
+      "acceleration_g": 10.0,
+      "acceleration_mps2": 98.06649999999999,
+      "acceleration_time_s": 0.12032651313139556,
+      "average_payload_power_W": 2314.3693999999996,
+      "constant_force_N": 392.26599999999996,
+      "ideal_payload_energy_J": 278.48,
+      "ideal_stroke_m": 0.7099264274752337,
+      "speed_mps": 11.8,
+      "terminal_constant_force_power_W": 4628.7388
+    },
+    {
+      "acceleration_g": 25.0,
+      "acceleration_mps2": 245.16625,
+      "acceleration_time_s": 0.04813060525255822,
+      "average_payload_power_W": 5785.9235,
+      "constant_force_N": 980.665,
+      "ideal_payload_energy_J": 278.48,
+      "ideal_stroke_m": 0.2839705709900935,
+      "speed_mps": 11.8,
+      "terminal_constant_force_power_W": 11571.847
+    },
+    {
+      "acceleration_g": 5.0,
+      "acceleration_mps2": 49.033249999999995,
+      "acceleration_time_s": 0.32690062355646426,
+      "average_payload_power_W": 1571.9079284999998,
+      "constant_force_N": 196.13299999999998,
+      "ideal_payload_energy_J": 513.857682,
+      "ideal_stroke_m": 2.6199450474932826,
+      "speed_mps": 16.029,
+      "terminal_constant_force_power_W": 3143.8158569999996
+    },
+    {
+      "acceleration_g": 10.0,
+      "acceleration_mps2": 98.06649999999999,
+      "acceleration_time_s": 0.16345031177823213,
+      "average_payload_power_W": 3143.8158569999996,
+      "constant_force_N": 392.26599999999996,
+      "ideal_payload_energy_J": 513.857682,
+      "ideal_stroke_m": 1.3099725237466413,
+      "speed_mps": 16.029,
+      "terminal_constant_force_power_W": 6287.631713999999
+    },
+    {
+      "acceleration_g": 25.0,
+      "acceleration_mps2": 245.16625,
+      "acceleration_time_s": 0.06538012471129286,
+      "average_payload_power_W": 7859.539642499998,
+      "constant_force_N": 980.665,
+      "ideal_payload_energy_J": 513.857682,
+      "ideal_stroke_m": 0.5239890094986565,
+      "speed_mps": 16.029,
+      "terminal_constant_force_power_W": 15719.079285
+    },
+    {
+      "acceleration_g": 5.0,
+      "acceleration_mps2": 49.033249999999995,
+      "acceleration_time_s": 0.5916189524455344,
+      "average_payload_power_W": 2844.8110985000003,
+      "constant_force_N": 196.13299999999998,
+      "ideal_payload_energy_J": 1683.0441620000001,
+      "ideal_stroke_m": 8.581137095746255,
+      "speed_mps": 29.009,
+      "terminal_constant_force_power_W": 5689.622197
+    },
+    {
+      "acceleration_g": 10.0,
+      "acceleration_mps2": 98.06649999999999,
+      "acceleration_time_s": 0.2958094762227672,
+      "average_payload_power_W": 5689.622197000001,
+      "constant_force_N": 392.26599999999996,
+      "ideal_payload_energy_J": 1683.0441620000001,
+      "ideal_stroke_m": 4.290568547873128,
+      "speed_mps": 29.009,
+      "terminal_constant_force_power_W": 11379.244394
+    },
+    {
+      "acceleration_g": 25.0,
+      "acceleration_mps2": 245.16625,
+      "acceleration_time_s": 0.11832379048910689,
+      "average_payload_power_W": 14224.0554925,
+      "constant_force_N": 980.665,
+      "ideal_payload_energy_J": 1683.0441620000001,
+      "ideal_stroke_m": 1.716227419149251,
+      "speed_mps": 29.009,
+      "terminal_constant_force_power_W": 28448.110985
+    }
   ],
-  "falsifiers": ["measured release repeatability cannot meet the mission-derived terminal-state error budget","latch/pusher shock or tip-off exceeds the payload/interface limit once that limit is declared","friction/tolerance sensitivity consumes the useful preload-control range","catcher loads or required stroke make the installed cell non-compact","installed mass per successfully delivered payload loses to a bank/shared-path alternative after common-mode reliability is charged","required recharge energy/power or thermal rejection is incompatible with the named host"],
-  "inputs": {"acceleration_screens_g": [5.0,10.0,25.0],"compact_stroke_screen_m": 0.25,"payload_kg": 4.0,"s4_study_speed_mps": 4.569852,"speed_screens_mps": [4.569852,11.8,16.029,29.009],"stored_energy_efficiency_sensitivity": [0.6,0.7,0.8]},
-  "open_evidence": ["mission-derived release/navigation uncertainty budget","clearing and attitude-settling interval","installed mass and envelope for all candidates","accumulator force-displacement law and cycle life","latch repeatability and release shock","pusher friction, guidance, separation contact and tip-off","catcher dynamics and retained post-release state","host power/thermal/interface limits","provider accommodation"],
+  "falsifiers": [
+    "measured release repeatability cannot meet the mission-derived terminal-state error budget",
+    "latch/pusher shock or tip-off exceeds the payload/interface limit once that limit is declared",
+    "friction/tolerance sensitivity consumes the useful preload-control range",
+    "catcher loads or required stroke make the installed cell non-compact",
+    "installed mass per successfully delivered payload loses to a bank/shared-path alternative after common-mode reliability is charged",
+    "required recharge energy/power or thermal rejection is incompatible with the named host"
+  ],
+  "inputs": {
+    "acceleration_screens_g": [
+      5.0,
+      10.0,
+      25.0
+    ],
+    "compact_stroke_screen_m": 0.25,
+    "payload_kg": 4.0,
+    "s4_study_speed_mps": 4.569852,
+    "speed_screens_mps": [
+      4.569852,
+      11.8,
+      16.029,
+      29.009
+    ],
+    "stored_energy_efficiency_sensitivity": [
+      0.6,
+      0.7,
+      0.8
+    ]
+  },
+  "open_evidence": [
+    "mission-derived release/navigation uncertainty budget",
+    "clearing and attitude-settling interval",
+    "installed mass and envelope for all candidates",
+    "accumulator force-displacement law and cycle life",
+    "latch repeatability and release shock",
+    "pusher friction, guidance, separation contact and tip-off",
+    "catcher dynamics and retained post-release state",
+    "host power/thermal/interface limits",
+    "provider accommodation"
+  ],
   "payload_arrangements": [
-    {"blocked_path":"one cell; unrelated cells remain mechanically retained and available","disposition":"REFERENCE","name":"independent retained cells","reason":"best mechanical fault isolation without requiring a shared payload path","shared_common_modes":"power, command and host services remain shared unless banked"},
-    {"blocked_path":"can strand the affected bank downstream of the blockage","disposition":"BACKUP","name":"small banks with shared local path","reason":"may reduce installed burden, but trades away cell-level mechanical isolation","shared_common_modes":"bank path plus power and command"},
-    {"blocked_path":"can strand all downstream payloads","disposition":"COMPARATOR","name":"shared magazine/path","reason":"mass efficiency is unproven and a single path recreates manifest coupling","shared_common_modes":"path, indexing, power and command"}
+    {
+      "blocked_path": "one cell; unrelated cells remain mechanically retained and available",
+      "disposition": "REFERENCE",
+      "name": "independent retained cells",
+      "reason": "best mechanical fault isolation without requiring a shared payload path",
+      "shared_common_modes": "power, command and host services remain shared unless banked"
+    },
+    {
+      "blocked_path": "can strand the affected bank downstream of the blockage",
+      "disposition": "BACKUP",
+      "name": "small banks with shared local path",
+      "reason": "may reduce installed burden, but trades away cell-level mechanical isolation",
+      "shared_common_modes": "bank path plus power and command"
+    },
+    {
+      "blocked_path": "can strand all downstream payloads",
+      "disposition": "COMPARATOR",
+      "name": "shared magazine/path",
+      "reason": "mass efficiency is unproven and a single path recreates manifest coupling",
+      "shared_common_modes": "path, indexing, power and command"
+    }
   ],
-  "reference": {"arrangement":"independent retained cells","functional_chain":["independent launch retention","slow preload actuator","mechanical energy accumulator","preload/position measurement","independent release latch","short guided pusher","payload clears cell","local pusher catcher/retainer","post-release state sensing"],"not_selected_yet":["spring form","latch geometry","guide bearing","catcher","motor/gearbox","cell structure"],"release_concept":"motor-charged mechanical accumulator","shared_services":["low-rate power","command/data","host navigation/time","launch/deployment inhibit"]},
+  "reference": {
+    "arrangement": "independent retained cells",
+    "functional_chain": [
+      "independent launch retention",
+      "slow preload actuator",
+      "mechanical energy accumulator",
+      "preload/position measurement",
+      "independent release latch",
+      "short guided pusher",
+      "payload clears cell",
+      "local pusher catcher/retainer",
+      "post-release state sensing"
+    ],
+    "not_selected_yet": [
+      "spring form",
+      "latch geometry",
+      "guide bearing",
+      "catcher",
+      "motor/gearbox",
+      "cell structure"
+    ],
+    "release_concept": "motor-charged mechanical accumulator",
+    "shared_services": [
+      "low-rate power",
+      "command/data",
+      "host navigation/time",
+      "launch/deployment inhibit"
+    ]
+  },
   "release_concepts": [
-    {"disposition":"REFERENCE","eight_metre_dependency":false,"energy_control":"pre-release accumulator preload/position","independent_cell_compatible":true,"installed_mass_state":"UNKNOWN","known_failure_evidence":"repeatability, latch shock, friction and catcher dynamics are unmeasured","name":"motor-charged mechanical accumulator","payload_modification":false,"peak_power":"release power comes from locally stored mechanical energy; recharge can be slow","pusher_catch_concept":"required local catcher/retainer after payload clears","reason":"passes concept-level hard screens while avoiding the long guide, gas seal/store and full release-power bus demand"},
-    {"disposition":"BACKUP","eight_metre_dependency":false,"energy_control":"commanded force/position/current trajectory","independent_cell_compatible":true,"installed_mass_state":"UNKNOWN","known_failure_evidence":"electrical storage and actuator thermal duty are unresolved","name":"direct short-stroke electromechanical pusher","payload_modification":false,"peak_power":"S4 point at 10 g reaches about 1.79 kW ideal terminal payload power","pusher_catch_concept":"required local brake/catcher","reason":"passes geometry screens but adds a high short-duration power path unless energy is stored locally"},
-    {"disposition":"BACKUP","eight_metre_dependency":false,"energy_control":"charge pressure/mass and valve timing","independent_cell_compatible":true,"installed_mass_state":"UNKNOWN","known_failure_evidence":"existing Gen6 exposes seal, contact and gas-system uncertainties; compact geometry is not analysed","name":"compact gas pusher","payload_modification":false,"peak_power":"stored pneumatic energy supplies the release pulse","pusher_catch_concept":"required local catcher and pressure-safe end state","reason":"can be compact but imports unresolved fluid/seal/contact hardware"},
-    {"disposition":"HISTORICAL_COMPARATOR","eight_metre_dependency":true,"energy_control":"gas charge/pressure","independent_cell_compatible":false,"installed_mass_state":"PARTIAL","known_failure_evidence":"published guide/contact work exposed geometry/contact/tip-off sensitivity","name":"existing long gas guide","payload_modification":false,"peak_power":"stored pneumatic energy","pusher_catch_concept":"historical guide/piston architecture","reason":"fails the clean-sheet no-eight-metre-dependency screen"},
-    {"disposition":"HISTORICAL_COMPARATOR","eight_metre_dependency":false,"energy_control":"electrical pulse/current waveform","independent_cell_compatible":false,"installed_mass_state":"MODELLED","known_failure_evidence":"frozen 126.6 kg dry baseline plus EMI, arrest and shared-manifest liabilities remain recorded","name":"frozen Gen5 electromagnetic LSM","payload_modification":false,"peak_power":"high pulse-power electromagnetic system","pusher_catch_concept":"reusable mover brake/return architecture","reason":"evidence baseline, but clean-sheet selection removes demonstrated shared/mass/EM liabilities"},
-    {"disposition":"COOPERATIVE_PATH","eight_metre_dependency":false,"energy_control":"cooperative electromagnetic payload/interface interaction","independent_cell_compatible":true,"installed_mass_state":"UNKNOWN","known_failure_evidence":"hot switching, protection, tolerance and installed mass remain open","name":"BOLLEY cooperative interface","payload_modification":true,"peak_power":"architecture-specific","pusher_catch_concept":"architecture-specific","reason":"charged alternative that intentionally relaxes the unmodified-payload boundary"}
+    {
+      "disposition": "REFERENCE",
+      "eight_metre_dependency": false,
+      "energy_control": "pre-release accumulator preload/position",
+      "independent_cell_compatible": true,
+      "installed_mass_state": "UNKNOWN",
+      "known_failure_evidence": "repeatability, latch shock, friction and catcher dynamics are unmeasured",
+      "name": "motor-charged mechanical accumulator",
+      "payload_modification": false,
+      "peak_power": "release power comes from locally stored mechanical energy; recharge can be slow",
+      "pusher_catch_concept": "required local catcher/retainer after payload clears",
+      "reason": "passes concept-level hard screens while avoiding the long guide, gas seal/store and full release-power bus demand"
+    },
+    {
+      "disposition": "BACKUP",
+      "eight_metre_dependency": false,
+      "energy_control": "commanded force/position/current trajectory",
+      "independent_cell_compatible": true,
+      "installed_mass_state": "UNKNOWN",
+      "known_failure_evidence": "electrical storage and actuator thermal duty are unresolved",
+      "name": "direct short-stroke electromechanical pusher",
+      "payload_modification": false,
+      "peak_power": "S4 point at 10 g reaches about 1.79 kW ideal terminal payload power",
+      "pusher_catch_concept": "required local brake/catcher",
+      "reason": "passes geometry screens but adds a high short-duration power path unless energy is stored locally"
+    },
+    {
+      "disposition": "BACKUP",
+      "eight_metre_dependency": false,
+      "energy_control": "charge pressure/mass and valve timing",
+      "independent_cell_compatible": true,
+      "installed_mass_state": "UNKNOWN",
+      "known_failure_evidence": "existing Gen6 exposes seal, contact and gas-system uncertainties; compact geometry is not analysed",
+      "name": "compact gas pusher",
+      "payload_modification": false,
+      "peak_power": "stored pneumatic energy supplies the release pulse",
+      "pusher_catch_concept": "required local catcher and pressure-safe end state",
+      "reason": "can be compact but imports unresolved fluid/seal/contact hardware"
+    },
+    {
+      "disposition": "HISTORICAL_COMPARATOR",
+      "eight_metre_dependency": true,
+      "energy_control": "gas charge/pressure",
+      "independent_cell_compatible": false,
+      "installed_mass_state": "PARTIAL",
+      "known_failure_evidence": "published guide/contact work exposed geometry/contact/tip-off sensitivity",
+      "name": "existing long gas guide",
+      "payload_modification": false,
+      "peak_power": "stored pneumatic energy",
+      "pusher_catch_concept": "historical guide/piston architecture",
+      "reason": "fails the clean-sheet no-eight-metre-dependency screen"
+    },
+    {
+      "disposition": "HISTORICAL_COMPARATOR",
+      "eight_metre_dependency": false,
+      "energy_control": "electrical pulse/current waveform",
+      "independent_cell_compatible": false,
+      "installed_mass_state": "MODELLED",
+      "known_failure_evidence": "frozen 126.6 kg dry baseline plus EMI, arrest and shared-manifest liabilities remain recorded",
+      "name": "frozen Gen5 electromagnetic LSM",
+      "payload_modification": false,
+      "peak_power": "high pulse-power electromagnetic system",
+      "pusher_catch_concept": "reusable mover brake/return architecture",
+      "reason": "evidence baseline, but clean-sheet selection removes demonstrated shared/mass/EM liabilities"
+    },
+    {
+      "disposition": "COOPERATIVE_PATH",
+      "eight_metre_dependency": false,
+      "energy_control": "cooperative electromagnetic payload/interface interaction",
+      "independent_cell_compatible": true,
+      "installed_mass_state": "UNKNOWN",
+      "known_failure_evidence": "hot switching, protection, tolerance and installed mass remain open",
+      "name": "BOLLEY cooperative interface",
+      "payload_modification": true,
+      "peak_power": "architecture-specific",
+      "pusher_catch_concept": "architecture-specific",
+      "reason": "charged alternative that intentionally relaxes the unmodified-payload boundary"
+    }
   ],
-  "s4_point": {"duty":[{"acceleration_g":5.0,"acceleration_mps2":49.033249999999995,"acceleration_time_s":0.09319904350619224,"average_payload_power_W":448.1493911579999,"constant_force_N":196.13299999999998,"ideal_payload_energy_J":41.767094603808,"ideal_stroke_m":0.2129529176824298,"speed_mps":4.569852,"terminal_constant_force_power_W":896.2987823159999},{"acceleration_g":10.0,"acceleration_mps2":98.06649999999999,"acceleration_time_s":0.04659952175309612,"average_payload_power_W":896.2987823159998,"constant_force_N":392.26599999999996,"ideal_payload_energy_J":41.767094603808,"ideal_stroke_m":0.1064764588412149,"speed_mps":4.569852,"terminal_constant_force_power_W":1792.5975646319998},{"acceleration_g":25.0,"acceleration_mps2":245.16625,"acceleration_time_s":0.018639808701238447,"average_payload_power_W":2240.74695579,"constant_force_N":980.665,"ideal_payload_energy_J":41.767094603808,"ideal_stroke_m":0.042590583536485954,"speed_mps":4.569852,"terminal_constant_force_power_W":4481.49391158}],"interpretation":"bounded mission-study point, not product minimum or optimum","stored_input_energy_J":{"60pct":69.61182433968,"70pct":59.667278005440004,"80pct":52.20886825475999}},
-  "source_revisions": {"criteria_declared_commit":"9cbb9390fdc3d418580a83c95889dfd6c91dea0c","criteria_path":"validation/P92_reference_architecture.md","s4_merge_commit":"2ae459cadcf56f752e0f0b97bf962b25efb342a2","s4_report_path":"docs/MANIFEST_TIMING.md"},
+  "s4_point": {
+    "duty": [
+      {
+        "acceleration_g": 5.0,
+        "acceleration_mps2": 49.033249999999995,
+        "acceleration_time_s": 0.09319904350619224,
+        "average_payload_power_W": 448.1493911579999,
+        "constant_force_N": 196.13299999999998,
+        "ideal_payload_energy_J": 41.767094603808,
+        "ideal_stroke_m": 0.2129529176824298,
+        "speed_mps": 4.569852,
+        "terminal_constant_force_power_W": 896.2987823159999
+      },
+      {
+        "acceleration_g": 10.0,
+        "acceleration_mps2": 98.06649999999999,
+        "acceleration_time_s": 0.04659952175309612,
+        "average_payload_power_W": 896.2987823159998,
+        "constant_force_N": 392.26599999999996,
+        "ideal_payload_energy_J": 41.767094603808,
+        "ideal_stroke_m": 0.1064764588412149,
+        "speed_mps": 4.569852,
+        "terminal_constant_force_power_W": 1792.5975646319998
+      },
+      {
+        "acceleration_g": 25.0,
+        "acceleration_mps2": 245.16625,
+        "acceleration_time_s": 0.018639808701238447,
+        "average_payload_power_W": 2240.74695579,
+        "constant_force_N": 980.665,
+        "ideal_payload_energy_J": 41.767094603808,
+        "ideal_stroke_m": 0.042590583536485954,
+        "speed_mps": 4.569852,
+        "terminal_constant_force_power_W": 4481.49391158
+      }
+    ],
+    "interpretation": "bounded mission-study point, not product minimum or optimum",
+    "stored_input_energy_J": {
+      "60pct": 69.61182433968,
+      "70pct": 59.667278005440004,
+      "80pct": 52.20886825475999
+    }
+  },
+  "source_revisions": {
+    "criteria_declared_commit": "9cbb9390fdc3d418580a83c95889dfd6c91dea0c",
+    "criteria_path": "validation/P92_reference_architecture.md",
+    "s4_merge_commit": "2ae459cadcf56f752e0f0b97bf962b25efb342a2",
+    "s4_report_path": "docs/MANIFEST_TIMING.md"
+  },
   "status": "REFERENCE_SELECTED_P92_OPEN",
   "study": "P92 clean-sheet Gen6 reference-architecture screen"
 }
