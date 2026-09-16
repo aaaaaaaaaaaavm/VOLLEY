@@ -214,12 +214,11 @@ mission, its own track, drive, sled, energy store, brake and magazine, operating
 platform. Host repositioning is treated parametrically throughout, because no launch provider
 has supplied stage propulsion or control-authority data.
 
-> The programme has since moved to Gen6, which keeps the same mission and changes the
-> integration: the stage's own structure and 8 m of length become part of the machine, and cold
-> gas replaces the electromagnetic drive. The manuscript has not moved with it, deliberately.
-> Gen5 is the fully analysed configuration and Gen6 has not yet reached the same standard, the
-> [computational-closure target](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/COMPUTATIONAL_CLOSURE.md)
-> is what it has to clear first. *A paper does not follow a design target; it follows evidence.*
+> The programme has since moved beyond Gen5, but the manuscript has not moved with it,
+> deliberately. The current calculation reference is a clean-sheet compact architecture with
+> independent retained cells, a motor-charged mechanical accumulator, latch, short guided pusher
+> and local catcher. The earlier 8 m cold-gas machine remains a historical comparator. Neither
+> direction inherits Gen5's evidence. *A paper does not follow a design target; it follows evidence.*
 
 [Read the paper](paper/VOLLEY_IEEE_Conference.pdf), 18 pages, current build.
 Print-ready copies: [A4](print/Adityavardhan_Mishra_VOLLEY_IEEE_2026_A4_Print.pdf) ·
@@ -280,15 +279,16 @@ field.
 
 This is deliberate and worth stating plainly. Everything reproduced here is Gen5, the
 analysed baseline -- a frozen computational one, with no hardware behind it -- and the record of
-what a self-contained deployer costs. On 2026-08-14 five
-analyses in the main repository replaced the design target: Gen6 is the payload accelerated
-directly, by cold gas, along a rail a spent upper stage provides (ADR-032). No mover, no
-pulse-power chain, no brake, no return stroke.
+what a self-contained deployer costs. The main repository first moved the design target to an approximately 8 m stage-integrated
+cold-gas machine in August 2026, then reopened the mechanism after mission work showed that the
+highest available release speed did not improve the best tested two-payload campaign. The current
+calculation reference is now a compact independent stored-energy release cell. The gas machine
+remains in the record as a historical comparator with its failures intact.
 
-Nothing in Gen6 is measured, its fluid system is unsized, its cradle mechanism does not exist,
-and no launch provider has agreed to lend a stage, which is exactly why the manuscript still
-carries Gen5. A paper reports what has been analysed to a declared standard, not what looks best
-this week.
+Nothing in the current reference is measured, its detailed accumulator, latch, guide, catcher and
+structure are unselected, and no launch provider has supplied an accommodation. That is exactly
+why the manuscript still carries Gen5. A paper reports what has been analysed to a declared
+standard, not what looks best this week.
 
 The main repository carries both, and the failures at the same standard as the results.
 
@@ -313,7 +313,7 @@ evidence it does not have.</sub></p>
 <p align="center">
   <img src="cad/renders/gen5/exploded.png" alt="Exploded Gen5 electromagnetic drive stack" width="32%">
   <img src="source/figures/A29_cfd_report.png" alt="Gen5 CFD convergence, force history and surface pressure" width="32%">
-  <img src="cad/renders/gen6/hero_open.png" alt="Gen6 stage-integrated gas architecture target" width="32%">
+  <img src="cad/renders/gen6/hero_open.png" alt="Historical stage-integrated gas Gen6 study" width="32%">
 </p>
 
 <p align="center"><sub>The thesis keeps the analysed Gen5 machine, its numerical evidence, and
@@ -343,7 +343,8 @@ The architecture, in four steps:
 | Free-flyer | VOLLEY is its own spacecraft, carrying attitude control, power and recoil mass. Rejected in 2023, *"which is most of a spacecraft"* |
 | Hosted deployer | The spent upper stage supplies all three. VOLLEY becomes a payload rather than a mission |
 | Self-contained electromagnetic system aboard the platform, Gen5 | Its own track, linear synchronous drive, sled, supercapacitor bank, eddy brake and magazine. This is the machine the manuscript reports |
-| Stage-integrated system, Gen6 | The stage's own structure and 8 m of length become part of the machine; cold gas replaces the drive. Same mission, far less duplicated hardware |
+| Historical stage-integrated gas Gen6 | The stage's own structure and about 8 m of length become part of the machine; retained as a comparator after guide/contact and trim/tube problems were exposed |
+| Clean-sheet Gen6 reference | Independent retained cells use slowly charged mechanical storage, an independent latch, short guided pusher and local catcher; selected for the next calculations, not as flight hardware |
 
 > What is worth noticing is that the objective never changed. What the generations record is a
 > steadily better answer to how much of this VOLLEY needs to build for itself, and the honest cost
@@ -392,15 +393,16 @@ enters it has to be stable, effective and reliable against the problem statement
 
 This is deliberate and worth stating plainly. Everything reproduced here is Gen5, the
 analysed baseline -- a frozen computational one, with no hardware behind it -- and the record of
-what a self-contained deployer costs. On 2026-08-14 five
-analyses in the main repository replaced the design target: Gen6 is the payload accelerated
-directly, by cold gas, along a rail a spent upper stage provides (ADR-032). No mover, no
-pulse-power chain, no brake, no return stroke.
+what a self-contained deployer costs. The main repository first moved the design target to an approximately 8 m stage-integrated
+cold-gas machine in August 2026, then reopened the mechanism after mission work showed that the
+highest available release speed did not improve the best tested two-payload campaign. The current
+calculation reference is now a compact independent stored-energy release cell. The gas machine
+remains in the record as a historical comparator with its failures intact.
 
-Nothing in Gen6 is measured, its fluid system is unsized, its cradle mechanism does not exist,
-and no launch provider has agreed to lend a stage, which is exactly why the manuscript still
-carries Gen5. A paper reports what has been analysed to a declared standard, not what looks best
-this week.
+Nothing in the current reference is measured, its detailed accumulator, latch, guide, catcher and
+structure are unselected, and no launch provider has supplied an accommodation. That is exactly
+why the manuscript still carries Gen5. A paper reports what has been analysed to a declared
+standard, not what looks best this week.
 
 The main repository carries both, and the failures at the same standard as the results.
 

@@ -9,9 +9,10 @@ Mechanical engineer. Powertrain, ECUs, CubeSat deployment. Asking spacecraft inc
 BTech Mechanical Engineering, Symbiosis Institute of Technology, Pune, 2023-2027
 
 In 2021 I got stuck on a dumb question: why do we still deploy CubeSats with springs. I never
-really got unstuck. That question is now VOLLEY: an electromagnetic deployer that ejects
-unmodified 3U CubeSats at a programmable velocity from a spent rideshare upper stage. I've
-presented it at DRDO ARDE and the India Science Festival.
+really got unstuck. That question is now VOLLEY: a spacecraft-deployment programme investigating
+provider-hosted control of individual payload departure conditions. Gen5 is the frozen
+electromagnetic machine; the current clean-sheet reference is a compact independent stored-energy
+release cell. I've presented the project at DRDO ARDE and the India Science Festival.
 
 Before that there was rocketry, where our payload took 2nd globally at the SDL Payload
 Challenge, IREC 2025 in Texas. Alongside it there are engines, I run Poona Motor Club, tune Royal
@@ -55,23 +56,23 @@ narrower and I think better: a clock changes phase, and a commanded deployment i
 orbital energy. Drag and J₂ change orbits too, the point is not that nothing else can, it is
 that nothing else in a deployment interface can do it *per satellite, on command*.
 
-[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY), a magazine-fed ironless double-sided
-Halbach linear synchronous motor that ejects unmodified CubeSats at 16.029 m/s and 10.07 g,
-drawing 2.78 kJ gross and 2.74 kJ net per shot. TRL 2-3. Nothing built, fired or measured.
+[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) now treats the mechanism as the thing to
+prove, not the premise. Gen5 is the frozen magazine-fed ironless double-sided Halbach LSM:
+16.029 m/s, 10.07 g, 126.6 kg dry, modelled only. Its mass criterion failed and stays failed.
+Nothing in the programme has been built, fired or measured.
 
-The design target has since moved, and the reason is the best result in the project. I
-attributed every kilogram of the deployer to the requirement that causes it, then deleted every
-requirement in all 64 combinations to find the lightest machine any relaxation could reach.
-88.67 kg survives all of them, 70 % of dry mass, against a 2 kg-per-satellite criterion. There
-is no version of Gen5 that meets its own mass target. So the target changed from shrinking
-subsystems to deleting them: the payload accelerated directly, by cold gas, along a rail the spent
-stage already provides. The architecture that was the target the day before is kept in full,
-with the analysis that retired it at the top of it.
+The project then tried an approximately 8 m stage-integrated cold-gas architecture. That work
+exposed useful pressure, guide/contact and trim/tube evidence, but it is no longer the assumed
+answer either. S4's bounded two-payload mission screen found that BOLLEY, Gen5 and the gas-Gen6
+authority screens all reached the same best tested fuel result with a 4.569852 m/s first release.
+Higher available release speed bought nothing in that tested campaign.
 
-Gen5 keeps every headline number, because Gen5 is what has the structural FEA, the CFD, the
-designed control loop and the second CAD implementation behind it. The current direction has none
-of those and does not inherit them. Both are published side by side rather than one quietly
-replacing the other.
+So the current clean-sheet reference is deliberately smaller: independent retained cells, a
+motor-charged mechanical accumulator, independent latch, short guided pusher and local catcher.
+At the S4 study point a 4 kg payload carries 41.77 J of ideal kinetic energy and a 10 g
+constant-acceleration screen is 106.5 mm. Those are study numbers, not a product requirement.
+The next job is to try to kill that reference on uncertainty, installed burden, latch/pusher
+behaviour, tip-off and catcher loads before detailed CAD.
 
 ### What it proved, and what it lost
 
