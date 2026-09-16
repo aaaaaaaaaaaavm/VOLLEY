@@ -36,11 +36,13 @@ The project began in **2021** around a coilgun and a dedicated free-flyer. In **
 
 <table><tr><td width="33%"><img src="cad/renders/hero_open.png" alt="Gen4"></td><td width="33%"><img src="cad/renders/gen5/hero_open.png" alt="Gen5"></td><td width="33%"><img src="cad/renders/gen6/hero_open.png" alt="Existing Gen6"></td></tr><tr><td><b>Gen4.</b> Last hand-modelled generation. Detailed, but no committed STEP export and known geometry/analysis disagreement.</td><td><b>Gen5.</b> Frozen electromagnetic baseline. Reproducible generated CAD and the manuscript comparator. The mass comparison failed.</td><td><b>Existing Gen6.</b> Stage-integrated gas-guide investigation. Contact/release physics and accommodation remain unresolved; trim is suspended.</td></tr></table>
 
-### The current redesign is intentionally not pictured.
+### The clean-sheet redesign now has a reference, but not detailed CAD.
 
-No clean-sheet mechanism has won. The next design will not get a hero render before the mission comparison and architecture decision earn one. The existing gas guide remains a comparator with its results and failures intact.
+The mission evidence no longer supports treating maximum release velocity as the design objective. The reference carried forward is an **independent retained cell with a motor-charged mechanical accumulator, independent latch, short guided pusher and local catcher**. It is pictured functionally because spring form, latch geometry, guide, catcher, motor and structure have not earned detailed geometry yet.
 
-[Full generation record](docs/GENERATIONS.md) · [Decision lineage](docs/LINEAGE.md) · [Visual machine evolution](https://aaaaaaaaaaaavm.github.io/VOLLEY/evolution.html)
+![Clean-sheet Gen6 reference-cell functional architecture](figures/gen6_reference_cell.svg)
+
+[P92 reference-architecture screen](docs/GEN6_REFERENCE_ARCHITECTURE.md) · [Full generation record](docs/GENERATIONS.md) · [Decision lineage](docs/LINEAGE.md) · [Visual machine evolution](https://aaaaaaaaaaaavm.github.io/VOLLEY/evolution.html)
 
 ---
 
@@ -53,6 +55,8 @@ At the frozen Gen5 model point the calculated release velocity is **16.029 m/s**
 The mission studies are already showing why this matters. In one common-energy campaign the **11.8, 16.029 and 29.009 m/s** release-authority screens all avoid host corrections. S4 sharpens the point: on its fine grid, the best tested BOLLEY, Gen5 and existing Gen6 campaigns all use the same **4.569852 m/s** first release and the same **2.777987 kg** ideal host-fuel result. Extra release authority above that does not improve this tested campaign.
 
 That is not a universal optimum. It is a reason to stop treating maximum release speed as the product score. Timing, direction, terminal-state error, host manoeuvres, installed burden and controllability matter alongside raw velocity.
+
+For a **4 kg** payload, the S4 study point is only **41.77 J** of ideal payload energy. At a **10 g** constant-acceleration screen it corresponds to **106.5 mm** of ideal stroke and **46.6 ms** of acceleration. By contrast, even at the project's 25 g study ceiling, **16.029 m/s** needs about **0.524 m** of ideal stroke and **29.009 m/s** needs about **1.716 m**. Every extra metre and joule now needs a mission reason.
 
 ---
 
@@ -91,17 +95,17 @@ The point is not to collect red boxes. The point is that a failed calculation mu
 
 ## The architecture question now
 
-Before choosing a mechanism, the redesign separates two decisions that earlier generations tended to collapse:
+The redesign separates two decisions that earlier generations tended to collapse: payload arrangement and release mechanism.
 
-**Payload arrangement:** independent retained bays, banks, or a shared magazine.
+**Payload arrangement:** independent retained cells are the current reference; small banks and the shared magazine remain charged alternatives.
 
-**How the release is produced:** controlled stored-energy pusher, short-stroke electromechanical pusher, gas-driven mechanism, or another architecture that survives the requirements.
+**How the release is produced:** a motor-charged mechanical accumulator is the current reference; direct short-stroke electromechanical and compact gas pushers remain backups. The existing 8 m gas guide and Gen5 LSM remain historical comparators, while BOLLEY remains the cooperative-interface path.
 
 ![Shared path and independent-bay failure exposure](docs/assets/fault_isolation.svg)
 
-Independent paths can reduce how many payloads one blocked path strands, but shared power and control can still be common-mode failures. A shared magazine may win mass and packaging. Neither gets the answer for free.
+The reason for the independent-cell reference is fault topology, not aesthetics. A blocked pusher should not mechanically strand unrelated payloads. Shared power, command and host services are still common-mode risks and are shown as such. The reason for storing release energy mechanically is equally narrow: it lets a small actuator charge slowly before release instead of asking the host electrical bus to source the full short-duration mechanical pulse.
 
-The comparison charges installed mass, envelope, energy, consumables, thermal recovery, clearing time, host reaction, controllability, retention, arrest, tolerances and fault exposure to the candidate that needs them.
+This does **not** close P92. Installed mass, release repeatability, latch shock, pusher friction, tip-off, catcher loads, cycle life, host power/thermal limits and provider accommodation still have to decide whether the reference survives.
 
 ---
 
@@ -115,13 +119,13 @@ A programmable ground separation-test system is an adjacent application worth ke
 
 ## What happens next
 
-**1. Turn the mission evidence into architecture requirements.** Add clearing/settling time, release/navigation uncertainty and installed burden where S4 says they can change the ranking.
+**1. Try to kill the reference early.** Freeze coupon bands for accumulator force-displacement, preload repeatability, latch shock, pusher friction, exit velocity/tip-off and catcher load before detailed CAD.
 
-**2. Select the architecture.** Compare arrangement and mechanism under the same mission requirements and record why the losing architectures lost.
+**2. Charge the installed burden.** Compare independent cells, banks and the shared path using real structure, actuators, controls, energy, envelope and failure consequences per successfully delivered payload.
 
-**3. Engineer one release cell.** Retention, actuator, arrest, structure, tolerances, sensors, controls, thermal behaviour, faults and interfaces.
+**3. Put the missing mission physics back in.** Add release/navigation uncertainty, clearing/settling time, host attitude recovery and complete-manifest effects to the mission comparison.
 
-**4. Scale and make it buildable.** Drawings, BOM, budgets, assembly/inspection, instrumentation, calibration, uncertainty and frozen acceptance criteria before the test.
+**4. Close P92 or change the machine.** Only then freeze the release cell, scale 2/4/12-cell arrangements and produce the drawings, BOM, assembly/inspection and instrumentation package for a named test article.
 
 [Programme execution](docs/PROGRAMME_EXECUTION.md) · [Mission and redesign](docs/workstreams/MISSION_AND_REDESIGN.md) · [Engineering closure](docs/workstreams/ENGINEERING_CLOSURE.md) · [Visual current-work portal](https://aaaaaaaaaaaavm.github.io/VOLLEY/work.html)
 
