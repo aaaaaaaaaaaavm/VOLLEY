@@ -50,12 +50,14 @@ The perturbation magnitudes above are derivative steps. They are not tolerances 
 For each payload, perturbation family and sign, propagate the perturbed payload state to the same 3600 s terminal epoch using the existing two-body propagator. Record:
 
 - terminal Cartesian position and velocity error relative to the same target;
-- signed and norm changes from the nominal terminal error;
-- central finite-difference sensitivity of terminal position-error norm and velocity-error norm to the perturbation variable;
+- signed component changes and vector-norm changes from the nominal terminal error;
+- the **central finite-difference terminal-state sensitivity vector**, `(y_plus - y_minus)/(2h)`, separately for position and velocity, and the norm of each vector per unit perturbation;
 - radial/tangential terminal error components;
 - for mechanism-relative terms, momentum residual after the perturbed separation reconstruction.
 
-Also report a **one-at-a-time study allowance** for each scalar perturbation: the smaller of the value implied by the 10 m position band and the value implied by the 0.01 m/s velocity band under the local linear sensitivity. Label this `LOCAL_LINEAR_ALLOWANCE`, never `requirement`, `accuracy`, `capability` or `validated tolerance`.
+The allowance calculation uses the norm of the central **vector** sensitivity, not the derivative of an error norm. This avoids the undefined cusp that an error norm has at a nearly exact nominal solution.
+
+Also report a **one-at-a-time study allowance** for each scalar perturbation: the smaller of the value implied by the remaining 10 m position margin and the value implied by the remaining 0.01 m/s velocity margin under the local vector sensitivity. Label this `LOCAL_LINEAR_ALLOWANCE`, never `requirement`, `accuracy`, `capability` or `validated tolerance`.
 
 If the nominal event already consumes a material fraction of either terminal band, compute the allowance from the remaining margin rather than the full band. A zero or negative remaining margin yields no local allowance.
 
@@ -70,8 +72,8 @@ Passing a marker means only that the timestamp gap exists. It does **not** estab
 The run fails its own evidence checks if any of the following occurs:
 
 1. **Nominal reproduction:** propagating the unperturbed stored payload state does not reproduce the stored terminal state within 1e-6 m position and 1e-9 m/s velocity.
-2. **Central-difference symmetry:** for each scalar perturbation, the magnitudes of the positive and negative first-order terminal changes differ by more than 5 percent after removing the nominal offset. If the response is too close to numerical zero for this ratio to be meaningful, report it as `NUMERICALLY_SMALL` rather than fail by division noise.
-3. **Step-size convergence:** halving every derivative step changes each reported non-small central sensitivity by more than 2 percent.
+2. **Central-difference symmetry:** for each scalar perturbation, the magnitudes of the positive and negative terminal-state changes from nominal differ by more than 5 percent. If the response is too close to numerical zero for this ratio to be meaningful, report it as `NUMERICALLY_SMALL` rather than fail by division noise.
+3. **Step-size convergence:** halving every derivative step changes each reported non-small central vector-sensitivity norm by more than 2 percent.
 4. **Momentum conservation:** every mechanism-relative perturbed separation has linear-momentum residual greater than 1e-9 kg m/s.
 5. **Basis integrity:** radial and tangential basis vectors are unit length and orthogonal to 1e-12.
 6. **Freshness:** source hashes for the S4 result, this run sheet and the implementation do not match the generated payload.
