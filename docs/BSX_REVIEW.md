@@ -74,7 +74,7 @@ The generated live-item table below still reproduces each register entry's recor
 |---|---|---|
 | [P14](../OPEN_PROBLEMS.md) | DECISION | keep Gen4 or declare Gen5 the only generation -- D8 |
 | [P18](../OPEN_PROBLEMS.md) | COMPUTATION | model the four effects, or bound them and say so |
-| [P30](../OPEN_PROBLEMS.md) | DECISION | the band stands as declared; what changes is what is claimed |
+| [P30](../OPEN_PROBLEMS.md) | DECISION | the band stands as declared; what changes is what is claimed from it |
 | [P32](../OPEN_PROBLEMS.md) | DECISION | D8 |
 | [P33](../OPEN_PROBLEMS.md) | COMPUTATION | compute the winding inductance |
 | [P34](../OPEN_PROBLEMS.md) | COMPUTATION | a magnetically screened cell, or a declared exclusion |
