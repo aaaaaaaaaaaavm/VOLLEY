@@ -281,7 +281,7 @@ field.
 
 ## The manuscript describes Gen5, and the design target has moved
 
-This is deliberate and worth stating plainly. Everything reproduced here is Gen5, the
+This is deliberate and worth stating plainly. The authored manuscript describes Gen5, the
 analysed baseline -- a frozen computational one, with no hardware behind it -- and the record of
 what a self-contained deployer costs. The main repository first moved the design target to an approximately 8 m stage-integrated
 cold-gas machine in August 2026, then reopened the mechanism after mission work showed that the
@@ -395,7 +395,7 @@ enters it has to be stable, effective and reliable against the problem statement
 
 ## The manuscript describes Gen5, and the design target has moved
 
-This is deliberate and worth stating plainly. Everything reproduced here is Gen5, the
+This is deliberate and worth stating plainly. The authored manuscript describes Gen5, the
 analysed baseline -- a frozen computational one, with no hardware behind it -- and the record of
 what a self-contained deployer costs. The main repository first moved the design target to an approximately 8 m stage-integrated
 cold-gas machine in August 2026, then reopened the mechanism after mission work showed that the
