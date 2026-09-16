@@ -24,15 +24,15 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
 
-          def replace_once(path, old, new):
+          def replace_n(path, old, new, expected=1):
               p = Path(path)
               text = p.read_text(encoding='utf-8')
               count = text.count(old)
-              if count != 1:
-                  raise SystemExit(f'{path}: expected one match, found {count}')
+              if count != expected:
+                  raise SystemExit(f'{path}: expected {expected} match(es), found {count}')
               p.write_text(text.replace(old, new), encoding='utf-8')
 
-          replace_once('tools/export_companion.py', '''> The programme has since moved to Gen6, which keeps the same mission and changes the
+          replace_n('tools/export_companion.py', '''> The programme has since moved to Gen6, which keeps the same mission and changes the
 > integration: the stage's own structure and 8 m of length become part of the machine, and cold
 > gas replaces the electromagnetic drive. The manuscript has not moved with it, deliberately.
 > Gen5 is the fully analysed configuration and Gen6 has not yet reached the same standard, the
@@ -43,7 +43,7 @@ jobs:
 > and local catcher. The earlier 8 m cold-gas machine remains a historical comparator. Neither
 > direction inherits Gen5's evidence. *A paper does not follow a design target; it follows evidence.*''')
 
-          replace_once('tools/export_companion.py', '''On 2026-08-14 five
+          replace_n('tools/export_companion.py', '''On 2026-08-14 five
 analyses in the main repository replaced the design target: Gen6 is the payload accelerated
 directly, by cold gas, along a rail a spent upper stage provides (ADR-032). No mover, no
 pulse-power chain, no brake, no return stroke.
@@ -60,33 +60,14 @@ remains in the record as a historical comparator with its failures intact.
 Nothing in the current reference is measured, its detailed accumulator, latch, guide, catcher and
 structure are unselected, and no launch provider has supplied an accommodation. That is exactly
 why the manuscript still carries Gen5. A paper reports what has been analysed to a declared
-standard, not what looks best this week.''')
+standard, not what looks best this week.''', expected=2)
 
-          replace_once('tools/export_companion.py', '''<img src="cad/renders/gen6/hero_open.png" alt="Gen6 stage-integrated gas architecture target" width="32%">''', '''<img src="cad/renders/gen6/hero_open.png" alt="Historical stage-integrated gas Gen6 study" width="32%">''')
+          replace_n('tools/export_companion.py', '''<img src="cad/renders/gen6/hero_open.png" alt="Gen6 stage-integrated gas architecture target" width="32%">''', '''<img src="cad/renders/gen6/hero_open.png" alt="Historical stage-integrated gas Gen6 study" width="32%">''')
 
-          replace_once('tools/export_companion.py', '''| Stage-integrated system, Gen6 | The stage's own structure and 8 m of length become part of the machine; cold gas replaces the drive. Same mission, far less duplicated hardware |''', '''| Historical stage-integrated gas Gen6 | The stage's own structure and about 8 m of length become part of the machine; retained as a comparator after guide/contact and trim/tube problems were exposed |
+          replace_n('tools/export_companion.py', '''| Stage-integrated system, Gen6 | The stage's own structure and 8 m of length become part of the machine; cold gas replaces the drive. Same mission, far less duplicated hardware |''', '''| Historical stage-integrated gas Gen6 | The stage's own structure and about 8 m of length become part of the machine; retained as a comparator after guide/contact and trim/tube problems were exposed |
 | Clean-sheet Gen6 reference | Independent retained cells use slowly charged mechanical storage, an independent latch, short guided pusher and local catcher; selected for the next calculations, not as flight hardware |''')
 
-          replace_once('tools/export_companion.py', '''On 2026-08-14 five
-analyses in the main repository replaced the design target: Gen6 is the payload accelerated
-directly, by cold gas, along a rail a spent upper stage provides (ADR-032). No mover, no
-pulse-power chain, no brake, no return stroke.
-
-Nothing in Gen6 is measured, its fluid system is unsized, its cradle mechanism does not exist,
-and no launch provider has agreed to lend a stage, which is exactly why the manuscript still
-carries Gen5. A paper reports what has been analysed to a declared standard, not what looks best
-this week.''', '''The main repository first moved the design target to an approximately 8 m stage-integrated
-cold-gas machine in August 2026, then reopened the mechanism after mission work showed that the
-highest available release speed did not improve the best tested two-payload campaign. The current
-calculation reference is now a compact independent stored-energy release cell. The gas machine
-remains in the record as a historical comparator with its failures intact.
-
-Nothing in the current reference is measured, its detailed accumulator, latch, guide, catcher and
-structure are unselected, and no launch provider has supplied an accommodation. That is exactly
-why the manuscript still carries Gen5. A paper reports what has been analysed to a declared
-standard, not what looks best this week.''')
-
-          replace_once('tools/profile-readme/README.md', '''In 2021 I got stuck on a dumb question: why do we still deploy CubeSats with springs. I never
+          replace_n('tools/profile-readme/README.md', '''In 2021 I got stuck on a dumb question: why do we still deploy CubeSats with springs. I never
 really got unstuck. That question is now VOLLEY: an electromagnetic deployer that ejects
 unmodified 3U CubeSats at a programmable velocity from a spent rideshare upper stage. I've
 presented it at DRDO ARDE and the India Science Festival.''', '''In 2021 I got stuck on a dumb question: why do we still deploy CubeSats with springs. I never
@@ -95,7 +76,7 @@ provider-hosted control of individual payload departure conditions. Gen5 is the 
 electromagnetic machine; the current clean-sheet reference is a compact independent stored-energy
 release cell. I've presented the project at DRDO ARDE and the India Science Festival.''')
 
-          replace_once('tools/profile-readme/README.md', '''[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY), a magazine-fed ironless double-sided
+          replace_n('tools/profile-readme/README.md', '''[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY), a magazine-fed ironless double-sided
 Halbach linear synchronous motor that ejects unmodified CubeSats at 16.029 m/s and 10.07 g,
 drawing 2.78 kJ gross and 2.74 kJ net per shot. TRL 2-3. Nothing built, fired or measured.
 
