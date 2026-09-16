@@ -62,6 +62,16 @@ For a **4 kg** payload, the S4 study point is only **41.77 J** of ideal payload 
 
 ## What the evidence actually says
 
+**Latest review, 16 September:** [combined release errors](docs/COMBINED_RELEASE_ERRORS.md)
+now cover 512 conditional event corners. The [reference-cell mechanics screen](docs/REFERENCE_CELL_MECHANICS.md)
+retains all 144 spring/pusher cases, including the 96 that fail its acceleration/contact assumptions.
+The [verification matrix](docs/REFERENCE_VERIFICATION_MATRIX.md) connects each result to the closure it still needs.
+Neither study closes the full campaign or P92.
+
+[Review and restart record](docs/REVIEW_20260916.md) ·
+[Installed burden and failure consequences](docs/INSTALLED_BURDEN_AND_FAILURES.md) ·
+[BOLLEY website](https://aaaaaaaaaaaavm.github.io/VOLLEY/bolley.html)
+
 ![Evidence maturity from mission studies to hardware](docs/assets/evidence_map.svg)
 
 | Study | Cases | What it adds | What remains outside the result |

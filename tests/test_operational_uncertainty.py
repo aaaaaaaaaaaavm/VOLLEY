@@ -100,10 +100,34 @@ def test_schedule_headroom_is_only_timestamp_arithmetic():
 
 def test_generated_outputs_are_fresh():
     data = ou.build()
-    expected = ou.serialized(data)
-    paths = (ou.OUTPUT_JSON, ou.OUTPUT_DOC, ou.OUTPUT_SVG)
-    for path, text in zip(paths, expected):
-        assert path.exists(), f"missing generated output {path.relative_to(ROOT)}"
-        assert path.read_text(encoding="utf-8") == text
+    assert ou.check_outputs(data) == []
     stored = json.loads(ou.OUTPUT_JSON.read_text(encoding="utf-8"))
     assert stored["source_sha256"] == data["source_sha256"]
+
+
+@pytest.mark.parametrize("field,delta,accepted", [
+    ("position_error_m", 5e-7, True), ("position_error_m", 0.01, False),
+    ("velocity_error_m_s", 3e-9, True), ("velocity_error_m_s", 1e-6, False),
+    ("retained_mass_kg", 1e-7, False), ("step", 1e-10, False),
+])
+def test_freshness_units_and_corruption(field, delta, accepted):
+    assert ou.numerical_match({field: 1.0+delta}, {field: 1.0}) is accepted
+
+
+def test_freshness_rejects_verdict_schema_and_nonfinite_changes():
+    assert not ou.numerical_match({"passed": False}, {"passed": True})
+    assert not ou.numerical_match({"passed": True, "extra": 1}, {"passed": True})
+    assert not ou.numerical_match({"position_error_m": math.nan}, {"position_error_m": 0.0})
+
+
+def test_freshness_requires_source_hashes_and_exact_presentations(tmp_path):
+    data = ou.build()
+    for path, content in zip((ou.OUTPUT_JSON, ou.OUTPUT_DOC, ou.OUTPUT_SVG), ou.serialized(data)):
+        out = tmp_path/path.relative_to(ROOT)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(content)
+    changed = copy.deepcopy(data)
+    changed["source_sha256"]["wrong-source"] = "0"*64
+    assert ou.check_outputs(changed, tmp_path)
+    (tmp_path/ou.OUTPUT_DOC.relative_to(ROOT)).write_text("stale report")
+    assert "docs/OPERATIONAL_UNCERTAINTY.md" in ou.check_outputs(data, tmp_path)

@@ -1,5 +1,27 @@
 # Change log / audit record
 
+## 2026-09-16: combined errors, reference-cell mechanics and review surfaces
+
+I declared P113-S6 and P92-S2 in f0026a7 before implementing or executing them. S6 retains
+512 conditional release-error corners. The illustrative base box passes both events, while
+doubling its widths fails 20 of 64 first-event corners. Each event starts at its nominal host
+state; this is not robust campaign closure. P92-S2 retains 144 linear-spring/pusher cases;
+48 meet the analytical 10 g/contact screen. A zero-end-preload spring requires twice the
+constant-force ideal stroke in the frictionless limiting case.
+
+S5 freshness now compares computed event data with declared numerical reproduction floors,
+retains exact sources/verdicts and regenerates presentations from the stored payload. Its
+physical verification bands are unchanged. The local gate now includes S5 as CI already did.
+The optional CAD runtime is pinned to the documented CadQuery 2.8.0 generation; a local
+2.7.0 kernel produced different package bytes and is not used to certify artifact identity.
+
+I recovered the useful PR36 fault-topology/burden accounting without restoring its superseded
+architecture disposition. The new verification matrix records model credibility limits and
+missing mission, cell and host questions. P92, P113 and E5 remain open.
+
+Public updates repair the deployed website's out-of-root figure and document paths, add the
+new studies and BOLLEY's visual review page, and synchronize the profile with the current reference.
+
 ## 2026-09-15: A76 falsifies the cause P79 named for its own residual
 
 A75 left a 1.2428x residual between E28's two GMAT reentries, and P79 recorded the candidate in

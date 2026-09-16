@@ -1,5 +1,9 @@
 # What only a human can do
 
+> Historical gas-guide handoff, written 2026-08-22. Its dated counts and hardware priorities do
+> not define the current release-cell queue. Use [CONTINUITY](CONTINUITY.md) and the
+> [current verification matrix](REFERENCE_VERIFICATION_MATRIX.md) for present work.
+
 Written 2026-08-22. Everything here is blocked on something that is not another analysis.
 If an item's honest next step is *model it*, *simulate it*, *compute it* or *select it from public
 data*, it belongs in [`COMPUTATIONAL_CLOSURE.md`](COMPUTATIONAL_CLOSURE.md) instead, that file

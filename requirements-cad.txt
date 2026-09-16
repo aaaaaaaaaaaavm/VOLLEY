@@ -1,0 +1,2 @@
+# Native CAD runtime for the committed Open CASCADE 7.9 artifacts.
+cadquery==2.8.0

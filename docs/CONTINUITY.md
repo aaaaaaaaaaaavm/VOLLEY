@@ -2,6 +2,11 @@
 
 Updated 2026-09-16. This is the starting point when resuming work. Fetch current `main`, inspect the latest evidence and read the current workstream before editing. The programme has two coordinated workstreams.
 
+**Latest execution record:** [16 September review and restart](REVIEW_20260916.md).
+P113-S6 and P92-S2 have now run: 512 conditional error corners and 144 reference-cell
+mechanical cases. They extend, but do not close, the mission/reference decision.
+The previous two-workstream ownership split no longer implies separate active contributors.
+
 | Workstream | Owns | First deliverable |
 |---|---|---|
 | [Mission and redesign](workstreams/MISSION_AND_REDESIGN.md) | Mission requirements, Gen6 reference falsification, configuration decision and selected release-cell integration | Add the uncertainty/settling terms omitted by S4, then quantify installed burden and failure topology |

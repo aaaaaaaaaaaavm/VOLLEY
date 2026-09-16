@@ -1,0 +1,5847 @@
+{
+  "case_count": 144,
+  "cases": [
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 85.62254597794545,
+        "0.7": 61.15896141281818,
+        "0.9": 47.568081098858585
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 42.811272988972725,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1070.281824724318,
+      "peak_net_acceleration_g": 26.619115344560697,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 13378.522809053977,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1027.4705517353455,
+        "0.7": 733.9075369538182,
+        "0.9": 570.816973186303
+      },
+      "twelve_shot_initial_stored_energy_j": 513.7352758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 85.94254597794544,
+        "0.7": 61.38753284138961,
+        "0.9": 47.745858876636355
+      },
+      "end_net_acceleration_g": -0.04974225429160627,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 42.97127298897272,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1074.281824724318,
+      "peak_net_acceleration_g": 26.668857598852306,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.97127298897272,
+      "stiffness_n_m": 13428.522809053975,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1031.3105517353454,
+        "0.7": 736.6503940966753,
+        "0.9": 572.9503065196363
+      },
+      "twelve_shot_initial_stored_energy_j": 515.6552758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 86.42254597794545,
+        "0.7": 61.73038998424675,
+        "0.9": 48.01252554330303
+      },
+      "end_net_acceleration_g": -0.12435563572901566,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 43.21127298897272,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1080.281824724318,
+      "peak_net_acceleration_g": 26.743470980289715,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.21127298897272,
+      "stiffness_n_m": 13503.522809053975,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1037.0705517353454,
+        "0.7": 740.7646798109611,
+        "0.9": 576.1503065196363
+      },
+      "twelve_shot_initial_stored_energy_j": 518.5352758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 91.33071570980849,
+        "0.7": 65.23622550700607,
+        "0.9": 50.73928650544916
+      },
+      "end_net_acceleration_g": 5.32382306891214,
+      "end_spring_force_n": 214.05636494486365,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 45.665357854904244,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 856.2254597794545,
+      "peak_net_acceleration_g": 21.29529227564856,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 8027.113685432385,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1095.9685885177018,
+        "0.7": 782.8347060840728,
+        "0.9": 608.87143806539
+      },
+      "twelve_shot_initial_stored_energy_j": 547.9842942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 91.67204904314181,
+        "0.7": 65.48003503081559,
+        "0.9": 50.92891613507878
+      },
+      "end_net_acceleration_g": 5.293977716337176,
+      "end_spring_force_n": 214.85636494486363,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 45.836024521570906,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 859.4254597794544,
+      "peak_net_acceleration_g": 21.32513762822352,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.97127298897272,
+      "stiffness_n_m": 8057.113685432384,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1100.0645885177018,
+        "0.7": 785.7604203697871,
+        "0.9": 611.1469936209454
+      },
+      "twelve_shot_initial_stored_energy_j": 550.0322942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 92.18404904314183,
+        "0.7": 65.84574931652988,
+        "0.9": 51.21336057952323
+      },
+      "end_net_acceleration_g": 5.249209687474731,
+      "end_spring_force_n": 216.05636494486365,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 46.09202452157091,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 864.2254597794545,
+      "peak_net_acceleration_g": 21.36990565708597,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.21127298897272,
+      "stiffness_n_m": 8102.113685432385,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1106.2085885177019,
+        "0.7": 790.1489917983586,
+        "0.9": 614.5603269542788
+      },
+      "twelve_shot_initial_stored_energy_j": 553.1042942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 114.1633946372606,
+        "0.7": 81.54528188375757,
+        "0.9": 63.42410813181144
+      },
+      "end_net_acceleration_g": 8.873038448186898,
+      "end_spring_force_n": 356.76060824143934,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 57.0816973186303,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 713.5212164828787,
+      "peak_net_acceleration_g": 17.746076896373797,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 4459.507603017992,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1369.9607356471272,
+        "0.7": 978.5433826050909,
+        "0.9": 761.0892975817374
+      },
+      "twelve_shot_initial_stored_energy_j": 684.9803678235636,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 114.59006130392724,
+        "0.7": 81.85004378851947,
+        "0.9": 63.66114516884846
+      },
+      "end_net_acceleration_g": 8.856457696756362,
+      "end_spring_force_n": 358.0939415747726,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 57.29503065196362,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 716.1878831495452,
+      "peak_net_acceleration_g": 17.76265764780433,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.97127298897272,
+      "stiffness_n_m": 4476.174269684658,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1375.0807356471269,
+        "0.7": 982.2005254622335,
+        "0.9": 763.9337420261816
+      },
+      "twelve_shot_initial_stored_energy_j": 687.5403678235634,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 115.23006130392727,
+        "0.7": 82.30718664566234,
+        "0.9": 64.01670072440403
+      },
+      "end_net_acceleration_g": 8.831586569610561,
+      "end_spring_force_n": 360.0939415747727,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 57.615030651963636,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 720.1878831495454,
+      "peak_net_acceleration_g": 17.78752877495014,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.21127298897272,
+      "stiffness_n_m": 4501.174269684659,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1382.7607356471271,
+        "0.7": 987.686239747948,
+        "0.9": 768.2004086928484
+      },
+      "twelve_shot_initial_stored_energy_j": 691.3803678235636,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 195.70867652101816,
+        "0.7": 139.79191180072726,
+        "0.9": 108.72704251167676
+      },
+      "end_net_acceleration_g": 11.408192290526012,
+      "end_spring_force_n": 458.69221059613625,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 97.85433826050908,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 611.5896141281818,
+      "peak_net_acceleration_g": 15.210923054034685,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 1911.2175441505678,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2348.504118252218,
+        "0.7": 1677.5029416087273,
+        "0.9": 1304.724510140121
+      },
+      "twelve_shot_initial_stored_energy_j": 1174.252059126109,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 196.44010509244671,
+        "0.7": 140.31436078031908,
+        "0.9": 109.13339171802595
+      },
+      "end_net_acceleration_g": 11.401086254198638,
+      "end_spring_force_n": 460.4064963104219,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 98.22005254622336,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 613.8753284138959,
+      "peak_net_acceleration_g": 15.218029090362053,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.97127298897272,
+      "stiffness_n_m": 1918.3604012934247,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2357.2812611093605,
+        "0.7": 1683.772329363829,
+        "0.9": 1309.6007006163113
+      },
+      "twelve_shot_initial_stored_energy_j": 1178.6406305546802,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 197.53724794958956,
+        "0.7": 141.09803424970684,
+        "0.9": 109.74291552754975
+      },
+      "end_net_acceleration_g": 11.390427199707581,
+      "end_spring_force_n": 462.9779248818505,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 98.76862397479478,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 617.3038998424673,
+      "peak_net_acceleration_g": 15.22868814485311,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.21127298897272,
+      "stiffness_n_m": 1929.0746870077105,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2370.446975395075,
+        "0.7": 1693.176410996482,
+        "0.9": 1316.914986330597
+      },
+      "twelve_shot_initial_stored_energy_j": 1185.2234876975374,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 85.62254597794545,
+        "0.7": 61.15896141281818,
+        "0.9": 47.568081098858585
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 42.811272988972725,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 713.5212164828788,
+      "peak_net_acceleration_g": 17.7460768963738,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 5946.010137357323,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1027.4705517353455,
+        "0.7": 733.9075369538182,
+        "0.9": 570.816973186303
+      },
+      "twelve_shot_initial_stored_energy_j": 513.7352758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 86.10254597794545,
+        "0.7": 61.50181855567533,
+        "0.9": 47.83474776552525
+      },
+      "end_net_acceleration_g": -0.04974225429160627,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 43.05127298897273,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 717.5212164828788,
+      "peak_net_acceleration_g": 17.795819150665405,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.05127298897273,
+      "stiffness_n_m": 5979.343470690656,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1033.2305517353454,
+        "0.7": 738.0218226681039,
+        "0.9": 574.0169731863031
+      },
+      "twelve_shot_initial_stored_energy_j": 516.6152758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 86.82254597794545,
+        "0.7": 62.01610426996104,
+        "0.9": 48.23474776552525
+      },
+      "end_net_acceleration_g": -0.12435563572901566,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 43.411272988972726,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 723.5212164828788,
+      "peak_net_acceleration_g": 17.870432532102814,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.411272988972726,
+      "stiffness_n_m": 6029.343470690656,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1041.8705517353455,
+        "0.7": 744.1932512395326,
+        "0.9": 578.816973186303
+      },
+      "twelve_shot_initial_stored_energy_j": 520.9352758676728,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 91.33071570980849,
+        "0.7": 65.23622550700607,
+        "0.9": 50.73928650544916
+      },
+      "end_net_acceleration_g": 3.5492153792747607,
+      "end_spring_force_n": 142.70424329657578,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 45.665357854904244,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 570.816973186303,
+      "peak_net_acceleration_g": 14.19686151709904,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 3567.6060824143938,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1095.9685885177018,
+        "0.7": 782.8347060840728,
+        "0.9": 608.87143806539
+      },
+      "twelve_shot_initial_stored_energy_j": 547.9842942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 91.84271570980849,
+        "0.7": 65.60193979272036,
+        "0.9": 51.023730949893604
+      },
+      "end_net_acceleration_g": 3.5193700266997965,
+      "end_spring_force_n": 143.50424329657577,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 45.921357854904244,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 574.0169731863031,
+      "peak_net_acceleration_g": 14.226706869674004,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.05127298897273,
+      "stiffness_n_m": 3587.6060824143938,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1102.1125885177019,
+        "0.7": 787.2232775126442,
+        "0.9": 612.2847713987233
+      },
+      "twelve_shot_initial_stored_energy_j": 551.0562942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 92.61071570980849,
+        "0.7": 66.15051122129178,
+        "0.9": 51.45039761656027
+      },
+      "end_net_acceleration_g": 3.4746019978373512,
+      "end_spring_force_n": 144.70424329657578,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 46.305357854904244,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 578.816973186303,
+      "peak_net_acceleration_g": 14.271474898536448,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.411272988972726,
+      "stiffness_n_m": 3617.6060824143938,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1111.328588517702,
+        "0.7": 793.8061346555014,
+        "0.9": 617.4047713987233
+      },
+      "twelve_shot_initial_stored_energy_j": 555.664294258851,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 114.16339463726058,
+        "0.7": 81.54528188375757,
+        "0.9": 63.42410813181143
+      },
+      "end_net_acceleration_g": 5.915358965457933,
+      "end_spring_force_n": 237.8404054942929,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 57.08169731863029,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 475.6808109885858,
+      "peak_net_acceleration_g": 11.830717930915865,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 1982.0033791191074,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1369.960735647127,
+        "0.7": 978.5433826050908,
+        "0.9": 761.0892975817372
+      },
+      "twelve_shot_initial_stored_energy_j": 684.9803678235635,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 114.8033946372606,
+        "0.7": 82.00242474090044,
+        "0.9": 63.779663687367
+      },
+      "end_net_acceleration_g": 5.898778214027398,
+      "end_spring_force_n": 239.17373882762624,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 57.4016973186303,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 478.3474776552525,
+      "peak_net_acceleration_g": 11.8472986823464,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.05127298897273,
+      "stiffness_n_m": 1993.1144902302187,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1377.6407356471273,
+        "0.7": 984.0290968908052,
+        "0.9": 765.355964248404
+      },
+      "twelve_shot_initial_stored_energy_j": 688.8203678235636,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 115.7633946372606,
+        "0.7": 82.68813902661472,
+        "0.9": 64.31299702070034
+      },
+      "end_net_acceleration_g": 5.873907086881594,
+      "end_spring_force_n": 241.17373882762624,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 57.8816973186303,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 482.3474776552525,
+      "peak_net_acceleration_g": 11.872169809492204,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.411272988972726,
+      "stiffness_n_m": 2009.7811568968855,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1389.1607356471272,
+        "0.7": 992.2576683193766,
+        "0.9": 771.755964248404
+      },
+      "twelve_shot_initial_stored_energy_j": 694.5803678235636,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 195.70867652101816,
+        "0.7": 139.79191180072726,
+        "0.9": 108.72704251167676
+      },
+      "end_net_acceleration_g": 7.605461527017343,
+      "end_spring_force_n": 305.7948070640909,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 97.85433826050908,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 407.72640941878785,
+      "peak_net_acceleration_g": 10.140615369356457,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 849.4300196224747,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2348.504118252218,
+        "0.7": 1677.5029416087273,
+        "0.9": 1304.724510140121
+      },
+      "twelve_shot_initial_stored_energy_j": 1174.252059126109,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 196.80581937816103,
+        "0.7": 140.57558527011503,
+        "0.9": 109.33656632120056
+      },
+      "end_net_acceleration_g": 7.59835549068997,
+      "end_spring_force_n": 307.5090927783766,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 98.40290968908052,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 410.01212370450213,
+      "peak_net_acceleration_g": 10.147721405683829,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.05127298897273,
+      "stiffness_n_m": 854.1919243843795,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2361.6698325379325,
+        "0.7": 1686.9070232413806,
+        "0.9": 1312.038795854407
+      },
+      "twelve_shot_initial_stored_energy_j": 1180.8349162689663,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 198.4515336638753,
+        "0.7": 141.75109547419666,
+        "0.9": 110.25085203548628
+      },
+      "end_net_acceleration_g": 7.587696436198911,
+      "end_spring_force_n": 310.08052134980517,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 99.22576683193765,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 413.4406951330736,
+      "peak_net_acceleration_g": 10.158380460174888,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.411272988972726,
+      "stiffness_n_m": 861.3347815272366,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2381.4184039665033,
+        "0.7": 1701.0131456903596,
+        "0.9": 1323.010224425835
+      },
+      "twelve_shot_initial_stored_energy_j": 1190.7092019832517,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 85.62254597794545,
+        "0.7": 61.15896141281818,
+        "0.9": 47.568081098858585
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 42.811272988972725,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 535.140912362159,
+      "peak_net_acceleration_g": 13.309557672280349,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 3344.630702263494,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1027.4705517353455,
+        "0.7": 733.9075369538182,
+        "0.9": 570.816973186303
+      },
+      "twelve_shot_initial_stored_energy_j": 513.7352758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 86.26254597794545,
+        "0.7": 61.61610426996104,
+        "0.9": 47.92363665441414
+      },
+      "end_net_acceleration_g": -0.04974225429160627,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 43.131272988972725,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 539.140912362159,
+      "peak_net_acceleration_g": 13.359299926571955,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.131272988972725,
+      "stiffness_n_m": 3369.630702263494,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1035.1505517353453,
+        "0.7": 739.3932512395324,
+        "0.9": 575.0836398529696
+      },
+      "twelve_shot_initial_stored_energy_j": 517.5752758676726,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 87.22254597794544,
+        "0.7": 62.30181855567532,
+        "0.9": 48.45696998774747
+      },
+      "end_net_acceleration_g": -0.12435563572901566,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 43.61127298897272,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 545.140912362159,
+      "peak_net_acceleration_g": 13.433913308009364,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.61127298897272,
+      "stiffness_n_m": 3407.1307022634937,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1046.6705517353453,
+        "0.7": 747.6218226681038,
+        "0.9": 581.4836398529695
+      },
+      "twelve_shot_initial_stored_energy_j": 523.3352758676726,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 91.33071570980849,
+        "0.7": 65.23622550700607,
+        "0.9": 50.73928650544916
+      },
+      "end_net_acceleration_g": 2.66191153445607,
+      "end_spring_force_n": 107.02818247243182,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 45.665357854904244,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 428.11272988972723,
+      "peak_net_acceleration_g": 10.64764613782428,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 2006.7784213580962,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1095.9685885177018,
+        "0.7": 782.8347060840728,
+        "0.9": 608.87143806539
+      },
+      "twelve_shot_initial_stored_energy_j": 547.9842942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 92.01338237647515,
+        "0.7": 65.72384455462512,
+        "0.9": 51.118545764708415
+      },
+      "end_net_acceleration_g": 2.632066181881106,
+      "end_spring_force_n": 107.82818247243182,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 46.006691188237575,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 431.3127298897272,
+      "peak_net_acceleration_g": 10.677491490399243,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.131272988972725,
+      "stiffness_n_m": 2021.7784213580962,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1104.1605885177019,
+        "0.7": 788.6861346555014,
+        "0.9": 613.422549176501
+      },
+      "twelve_shot_initial_stored_energy_j": 552.0802942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 93.03738237647515,
+        "0.7": 66.45527312605368,
+        "0.9": 51.68743465359731
+      },
+      "end_net_acceleration_g": 2.5872981530186605,
+      "end_spring_force_n": 109.02818247243181,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 46.518691188237575,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 436.1127298897272,
+      "peak_net_acceleration_g": 10.722259519261687,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.61127298897272,
+      "stiffness_n_m": 2044.278421358096,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1116.4485885177019,
+        "0.7": 797.4632775126443,
+        "0.9": 620.2492158431677
+      },
+      "twelve_shot_initial_stored_energy_j": 558.2242942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 114.1633946372606,
+        "0.7": 81.54528188375757,
+        "0.9": 63.42410813181144
+      },
+      "end_net_acceleration_g": 4.436519224093449,
+      "end_spring_force_n": 178.38030412071967,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 57.0816973186303,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 356.76060824143934,
+      "peak_net_acceleration_g": 8.873038448186898,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 1114.876900754498,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1369.9607356471272,
+        "0.7": 978.5433826050909,
+        "0.9": 761.0892975817374
+      },
+      "twelve_shot_initial_stored_energy_j": 684.9803678235636,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 115.01672797059392,
+        "0.7": 82.15480569328138,
+        "0.9": 63.89818220588551
+      },
+      "end_net_acceleration_g": 4.419938472662913,
+      "end_spring_force_n": 179.71363745405299,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 57.50836398529696,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 359.42727490810597,
+      "peak_net_acceleration_g": 8.889619199617433,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.131272988972725,
+      "stiffness_n_m": 1123.2102340878312,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1380.200735647127,
+        "0.7": 985.8576683193764,
+        "0.9": 766.7781864706261
+      },
+      "twelve_shot_initial_stored_energy_j": 690.1003678235635,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 116.29672797059392,
+        "0.7": 83.06909140756709,
+        "0.9": 64.60929331699663
+      },
+      "end_net_acceleration_g": 4.39506734551711,
+      "end_spring_force_n": 181.71363745405299,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 58.14836398529696,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 363.42727490810597,
+      "peak_net_acceleration_g": 8.914490326763236,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.61127298897272,
+      "stiffness_n_m": 1135.7102340878312,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1395.560735647127,
+        "0.7": 996.8290968908051,
+        "0.9": 775.3115198039595
+      },
+      "twelve_shot_initial_stored_energy_j": 697.7803678235636,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 195.70867652101816,
+        "0.7": 139.79191180072726,
+        "0.9": 108.72704251167676
+      },
+      "end_net_acceleration_g": 5.704096145263006,
+      "end_spring_force_n": 229.34610529806812,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 97.85433826050908,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 305.7948070640909,
+      "peak_net_acceleration_g": 7.605461527017343,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 477.80438603764196,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2348.504118252218,
+        "0.7": 1677.5029416087273,
+        "0.9": 1304.724510140121
+      },
+      "twelve_shot_initial_stored_energy_j": 1174.252059126109,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 197.1715336638753,
+        "0.7": 140.83680975991092,
+        "0.9": 109.53974092437517
+      },
+      "end_net_acceleration_g": 5.696990108935633,
+      "end_spring_force_n": 231.06039101235385,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 98.58576683193765,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 308.0805213498051,
+      "peak_net_acceleration_g": 7.612567563344713,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.131272988972725,
+      "stiffness_n_m": 481.3758146090705,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2366.0584039665036,
+        "0.7": 1690.0417171189313,
+        "0.9": 1314.476891092502
+      },
+      "twelve_shot_initial_stored_energy_j": 1183.0292019832518,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 199.365819378161,
+        "0.7": 142.40415669868645,
+        "0.9": 110.75878854342278
+      },
+      "end_net_acceleration_g": 5.686331054444575,
+      "end_spring_force_n": 233.6318195837824,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 99.6829096890805,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 311.50909277837656,
+      "peak_net_acceleration_g": 7.623226617835772,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.61127298897272,
+      "stiffness_n_m": 486.73295746621335,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2392.3898325379323,
+        "0.7": 1708.8498803842374,
+        "0.9": 1329.1054625210734
+      },
+      "twelve_shot_initial_stored_energy_j": 1196.1949162689662,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 85.62254597794545,
+        "0.7": 61.15896141281818,
+        "0.9": 47.568081098858585
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": true,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 42.811272988972725,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 356.7606082414394,
+      "peak_net_acceleration_g": 8.8730384481869,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 1486.5025343393309,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1027.4705517353455,
+        "0.7": 733.9075369538182,
+        "0.9": 570.816973186303
+      },
+      "twelve_shot_initial_stored_energy_j": 513.7352758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 86.58254597794544,
+        "0.7": 61.84467569853246,
+        "0.9": 48.10141443219191
+      },
+      "end_net_acceleration_g": -0.04974225429160627,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 43.29127298897272,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 360.76060824143934,
+      "peak_net_acceleration_g": 8.922780702478505,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.29127298897272,
+      "stiffness_n_m": 1503.1692010059974,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1038.9905517353454,
+        "0.7": 742.1361083823897,
+        "0.9": 577.216973186303
+      },
+      "twelve_shot_initial_stored_energy_j": 519.4952758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 88.02254597794546,
+        "0.7": 62.8732471271039,
+        "0.9": 48.90141443219192
+      },
+      "end_net_acceleration_g": -0.12435563572901566,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 44.01127298897273,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 366.7606082414394,
+      "peak_net_acceleration_g": 8.997394083915916,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.01127298897273,
+      "stiffness_n_m": 1528.1692010059976,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1056.2705517353454,
+        "0.7": 754.4789655252467,
+        "0.9": 586.816973186303
+      },
+      "twelve_shot_initial_stored_energy_j": 528.1352758676727,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 91.33071570980849,
+        "0.7": 65.23622550700607,
+        "0.9": 50.73928650544916
+      },
+      "end_net_acceleration_g": 1.7746076896373804,
+      "end_spring_force_n": 71.35212164828789,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 45.665357854904244,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 285.4084865931515,
+      "peak_net_acceleration_g": 7.09843075854952,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 891.9015206035984,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1095.9685885177018,
+        "0.7": 782.8347060840728,
+        "0.9": 608.87143806539
+      },
+      "twelve_shot_initial_stored_energy_j": 547.9842942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 92.35471570980847,
+        "0.7": 65.96765407843463,
+        "0.9": 51.308175394338036
+      },
+      "end_net_acceleration_g": 1.7447623370624161,
+      "end_spring_force_n": 72.15212164828787,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 46.17735785490424,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 288.6084865931515,
+      "peak_net_acceleration_g": 7.1282761111244834,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.29127298897272,
+      "stiffness_n_m": 901.9015206035983,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1108.2565885177016,
+        "0.7": 791.6118489412155,
+        "0.9": 615.6981047320564
+      },
+      "twelve_shot_initial_stored_energy_j": 554.1282942588508,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 93.89071570980849,
+        "0.7": 67.06479693557749,
+        "0.9": 52.16150872767138
+      },
+      "end_net_acceleration_g": 1.6999943081999709,
+      "end_spring_force_n": 73.35212164828789,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 46.945357854904245,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 293.4084865931515,
+      "peak_net_acceleration_g": 7.17304413998693,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.01127298897273,
+      "stiffness_n_m": 916.9015206035984,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1126.6885885177019,
+        "0.7": 804.7775632269299,
+        "0.9": 625.9381047320566
+      },
+      "twelve_shot_initial_stored_energy_j": 563.3442942588509,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 114.16339463726058,
+        "0.7": 81.54528188375757,
+        "0.9": 63.42410813181143
+      },
+      "end_net_acceleration_g": 2.9576794827289663,
+      "end_spring_force_n": 118.92020274714645,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 57.08169731863029,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 237.8404054942929,
+      "peak_net_acceleration_g": 5.915358965457933,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 495.50084477977686,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1369.960735647127,
+        "0.7": 978.5433826050908,
+        "0.9": 761.0892975817372
+      },
+      "twelve_shot_initial_stored_energy_j": 684.9803678235635,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 115.44339463726058,
+        "0.7": 82.45956759804328,
+        "0.9": 64.13521924292255
+      },
+      "end_net_acceleration_g": 2.941098731298431,
+      "end_spring_force_n": 120.25353608047978,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 57.72169731863029,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 240.50707216095955,
+      "peak_net_acceleration_g": 5.9319397168884676,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.29127298897272,
+      "stiffness_n_m": 501.0564003353324,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1385.320735647127,
+        "0.7": 989.5148111765194,
+        "0.9": 769.6226309150705
+      },
+      "twelve_shot_initial_stored_energy_j": 692.6603678235635,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 117.3633946372606,
+        "0.7": 83.83099616947186,
+        "0.9": 65.20188590958922
+      },
+      "end_net_acceleration_g": 2.916227604152628,
+      "end_spring_force_n": 122.25353608047979,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 58.6816973186303,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 244.50707216095958,
+      "peak_net_acceleration_g": 5.956810844034272,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.01127298897273,
+      "stiffness_n_m": 509.3897336686658,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1408.360735647127,
+        "0.7": 1005.9719540336622,
+        "0.9": 782.4226309150706
+      },
+      "twelve_shot_initial_stored_energy_j": 704.1803678235635,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 195.70867652101816,
+        "0.7": 139.79191180072726,
+        "0.9": 108.72704251167676
+      },
+      "end_net_acceleration_g": 3.8027307635086713,
+      "end_spring_force_n": 152.89740353204544,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 97.85433826050908,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 203.86320470939393,
+      "peak_net_acceleration_g": 5.0703076846782285,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 42.811272988972725,
+      "stiffness_n_m": 212.35750490561867,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2348.504118252218,
+        "0.7": 1677.5029416087273,
+        "0.9": 1304.724510140121
+      },
+      "twelve_shot_initial_stored_energy_j": 1174.252059126109,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 197.90296223530387,
+        "0.7": 141.35925873950276,
+        "0.9": 109.94609013072437
+      },
+      "end_net_acceleration_g": 3.7956247271812984,
+      "end_spring_force_n": 154.61168924633114,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 98.95148111765194,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 206.1489189951082,
+      "peak_net_acceleration_g": 5.0774137210056,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 43.29127298897272,
+      "stiffness_n_m": 214.73845728657105,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2374.8355468236464,
+        "0.7": 1696.3111048740332,
+        "0.9": 1319.3530815686925
+      },
+      "twelve_shot_initial_stored_energy_j": 1187.4177734118232,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 208.83547799498893,
+        "0.01": 104.41773899749447,
+        "0.02": 52.208869498747234
+      },
+      "catcher_energy_j": 1.0441773899749447,
+      "charging_energy_j": {
+        "0.5": 201.19439080673246,
+        "0.7": 143.71027914766606,
+        "0.9": 111.77466155929581
+      },
+      "end_net_acceleration_g": 3.78496567269024,
+      "end_spring_force_n": 157.18311781775972,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 100.59719540336623,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 209.57749042367965,
+      "peak_net_acceleration_g": 5.088072775496659,
+      "pusher_kg": 0.1,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.01127298897273,
+      "stiffness_n_m": 218.30988585799963,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2414.3326896807894,
+        "0.7": 1724.5233497719926,
+        "0.9": 1341.2959387115495
+      },
+      "twelve_shot_initial_stored_energy_j": 1207.1663448403947,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 88.7550781478703,
+        "0.7": 63.396484391335925,
+        "0.9": 49.308376748816826
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 44.37753907393515,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1109.4384768483787,
+      "peak_net_acceleration_g": 26.6191153445607,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 13867.980960604733,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1065.0609377744436,
+        "0.7": 760.7578126960311,
+        "0.9": 591.700520985802
+      },
+      "twelve_shot_initial_stored_energy_j": 532.5304688872218,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 89.07507814787029,
+        "0.7": 63.62505581990735,
+        "0.9": 49.4861545265946
+      },
+      "end_net_acceleration_g": -0.047986645316608394,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 44.53753907393514,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1113.4384768483785,
+      "peak_net_acceleration_g": 26.667101989877306,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.53753907393514,
+      "stiffness_n_m": 13917.980960604731,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1068.9009377744435,
+        "0.7": 763.5006698388883,
+        "0.9": 593.8338543191353
+      },
+      "twelve_shot_initial_stored_energy_j": 534.4504688872217,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 89.55507814787029,
+        "0.7": 63.967912962764494,
+        "0.9": 49.75282119326127
+      },
+      "end_net_acceleration_g": -0.11996661329152099,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 44.777539073935145,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1119.4384768483787,
+      "peak_net_acceleration_g": 26.73908195785222,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.777539073935145,
+      "stiffness_n_m": 13992.980960604733,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1074.6609377744435,
+        "0.7": 767.614955553174,
+        "0.9": 597.0338543191352
+      },
+      "twelve_shot_initial_stored_energy_j": 537.3304688872217,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 94.67208335772831,
+        "0.7": 67.62291668409165,
+        "0.9": 52.59560186540462
+      },
+      "end_net_acceleration_g": 5.32382306891214,
+      "end_spring_force_n": 221.88769536967573,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 47.336041678864156,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 887.5507814787028,
+      "peak_net_acceleration_g": 21.295292275648556,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 8320.788576362838,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1136.0650002927398,
+        "0.7": 811.4750002090999,
+        "0.9": 631.1472223848555
+      },
+      "twelve_shot_initial_stored_energy_j": 568.0325001463699,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 95.01341669106165,
+        "0.7": 67.86672620790118,
+        "0.9": 52.785231495034246
+      },
+      "end_net_acceleration_g": 5.295031081722175,
+      "end_spring_force_n": 222.68769536967574,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 47.506708345530825,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 890.7507814787028,
+      "peak_net_acceleration_g": 21.32408426283852,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.53753907393514,
+      "stiffness_n_m": 8350.788576362838,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1140.1610002927398,
+        "0.7": 814.4007144948142,
+        "0.9": 633.422777940411
+      },
+      "twelve_shot_initial_stored_energy_j": 570.0805001463699,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 95.52541669106165,
+        "0.7": 68.23244049361547,
+        "0.9": 53.06967593947869
+      },
+      "end_net_acceleration_g": 5.2518431009372275,
+      "end_spring_force_n": 223.88769536967573,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 47.762708345530825,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 895.5507814787028,
+      "peak_net_acceleration_g": 21.367272243623468,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.777539073935145,
+      "stiffness_n_m": 8395.788576362838,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1146.3050002927398,
+        "0.7": 818.7892859233856,
+        "0.9": 636.8361112737443
+      },
+      "twelve_shot_initial_stored_energy_j": 573.1525001463699,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 118.34010419716039,
+        "0.7": 84.52864585511456,
+        "0.9": 65.74450233175577
+      },
+      "end_net_acceleration_g": 8.873038448186898,
+      "end_spring_force_n": 369.8128256161262,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 59.17005209858019,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 739.6256512322524,
+      "peak_net_acceleration_g": 17.746076896373797,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 4622.660320201578,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1420.0812503659247,
+        "0.7": 1014.3437502613748,
+        "0.9": 788.9340279810692
+      },
+      "twelve_shot_initial_stored_energy_j": 710.0406251829623,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 118.76677086382705,
+        "0.7": 84.83340775987647,
+        "0.9": 65.98153936879281
+      },
+      "end_net_acceleration_g": 8.857042899748029,
+      "end_spring_force_n": 371.1461589494595,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 59.383385431913524,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 742.292317898919,
+      "peak_net_acceleration_g": 17.762072444812667,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.53753907393514,
+      "stiffness_n_m": 4639.326986868244,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1425.2012503659246,
+        "0.7": 1018.0008931185176,
+        "0.9": 791.7784724255137
+      },
+      "twelve_shot_initial_stored_energy_j": 712.6006251829623,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 119.40677086382705,
+        "0.7": 85.29055061701932,
+        "0.9": 66.33709492434836
+      },
+      "end_net_acceleration_g": 8.833049577089724,
+      "end_spring_force_n": 373.1461589494595,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 59.703385431913524,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 746.292317898919,
+      "peak_net_acceleration_g": 17.786065767470973,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.777539073935145,
+      "stiffness_n_m": 4664.326986868244,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1432.8812503659246,
+        "0.7": 1023.4866074042319,
+        "0.9": 796.0451390921803
+      },
+      "twelve_shot_initial_stored_energy_j": 716.4406251829623,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 202.86875005227495,
+        "0.7": 144.90625003733925,
+        "0.9": 112.70486114015274
+      },
+      "end_net_acceleration_g": 11.408192290526012,
+      "end_spring_force_n": 475.47363293501934,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 101.43437502613747,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 633.9648439133591,
+      "peak_net_acceleration_g": 15.210923054034682,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 1981.1401372292473,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2434.4250006272996,
+        "0.7": 1738.8750004480712,
+        "0.9": 1352.458333681833
+      },
+      "twelve_shot_initial_stored_energy_j": 1217.2125003136498,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 203.60017862370347,
+        "0.7": 145.42869901693106,
+        "0.9": 113.11121034650192
+      },
+      "end_net_acceleration_g": 11.40133705548078,
+      "end_spring_force_n": 477.187918649305,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 101.80008931185174,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 636.2505581990733,
+      "peak_net_acceleration_g": 15.217778289079911,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 44.53753907393514,
+      "stiffness_n_m": 1988.2829943721042,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2443.202143484442,
+        "0.7": 1745.1443882031729,
+        "0.9": 1357.3345241580232
+      },
+      "twelve_shot_initial_stored_energy_j": 1221.601071742221,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 204.69732148084637,
+        "0.7": 146.21237248631886,
+        "0.9": 113.72073415602576
+      },
+      "end_net_acceleration_g": 11.391054202912937,
+      "end_spring_force_n": 479.7593472207336,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 102.34866074042318,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 639.6791296276449,
+      "peak_net_acceleration_g": 15.228061141647759,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.777539073935145,
+      "stiffness_n_m": 1998.9972800863902,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2456.3678577701567,
+        "0.7": 1754.5484698358264,
+        "0.9": 1364.6488098723091
+      },
+      "twelve_shot_initial_stored_energy_j": 1228.1839288850783,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 88.7550781478703,
+        "0.7": 63.396484391335925,
+        "0.9": 49.308376748816826
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 44.37753907393515,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 739.6256512322524,
+      "peak_net_acceleration_g": 17.746076896373797,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 6163.547093602104,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1065.0609377744436,
+        "0.7": 760.7578126960311,
+        "0.9": 591.700520985802
+      },
+      "twelve_shot_initial_stored_energy_j": 532.5304688872218,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 89.2350781478703,
+        "0.7": 63.73934153419307,
+        "0.9": 49.5750434154835
+      },
+      "end_net_acceleration_g": -0.047986645316608394,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 44.61753907393515,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 743.6256512322525,
+      "peak_net_acceleration_g": 17.79406354169041,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.61753907393515,
+      "stiffness_n_m": 6196.880426935438,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1070.8209377744436,
+        "0.7": 764.8720984103169,
+        "0.9": 594.900520985802
+      },
+      "twelve_shot_initial_stored_energy_j": 535.4104688872218,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 89.9550781478703,
+        "0.7": 64.2536272484788,
+        "0.9": 49.9750434154835
+      },
+      "end_net_acceleration_g": -0.11996661329152099,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 44.97753907393515,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 749.6256512322525,
+      "peak_net_acceleration_g": 17.86604350966532,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.97753907393515,
+      "stiffness_n_m": 6246.880426935438,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1079.4609377744437,
+        "0.7": 771.0435269817456,
+        "0.9": 599.700520985802
+      },
+      "twelve_shot_initial_stored_energy_j": 539.7304688872218,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 94.67208335772831,
+        "0.7": 67.62291668409165,
+        "0.9": 52.59560186540462
+      },
+      "end_net_acceleration_g": 3.5492153792747607,
+      "end_spring_force_n": 147.92513024645052,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 47.336041678864156,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 591.700520985802,
+      "peak_net_acceleration_g": 14.196861517099041,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 3698.128256161262,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1136.0650002927398,
+        "0.7": 811.4750002090999,
+        "0.9": 631.1472223848555
+      },
+      "twelve_shot_initial_stored_energy_j": 568.0325001463699,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 95.18408335772833,
+        "0.7": 67.98863096980595,
+        "0.9": 52.88004630984907
+      },
+      "end_net_acceleration_g": 3.520423392084796,
+      "end_spring_force_n": 148.72513024645053,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 47.59204167886416,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 594.900520985802,
+      "peak_net_acceleration_g": 14.225653504289006,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.61753907393515,
+      "stiffness_n_m": 3718.1282561612625,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1142.2090002927398,
+        "0.7": 815.8635716376714,
+        "0.9": 634.5605557181888
+      },
+      "twelve_shot_initial_stored_energy_j": 571.1045001463699,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 95.95208335772833,
+        "0.7": 68.53720239837737,
+        "0.9": 53.30671297651573
+      },
+      "end_net_acceleration_g": 3.4772354112998483,
+      "end_spring_force_n": 149.92513024645052,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 47.97604167886416,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 599.700520985802,
+      "peak_net_acceleration_g": 14.268841485073953,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.97753907393515,
+      "stiffness_n_m": 3748.1282561612625,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1151.42500029274,
+        "0.7": 822.4464287805285,
+        "0.9": 639.6805557181889
+      },
+      "twelve_shot_initial_stored_energy_j": 575.71250014637,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 118.34010419716037,
+        "0.7": 84.52864585511456,
+        "0.9": 65.74450233175575
+      },
+      "end_net_acceleration_g": 5.915358965457933,
+      "end_spring_force_n": 246.54188374408412,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 59.170052098580186,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 493.08376748816823,
+      "peak_net_acceleration_g": 11.830717930915865,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 2054.5156978673676,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1420.0812503659245,
+        "0.7": 1014.3437502613747,
+        "0.9": 788.9340279810691
+      },
+      "twelve_shot_initial_stored_energy_j": 710.0406251829622,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 118.98010419716039,
+        "0.7": 84.98578871225743,
+        "0.9": 66.10005788731132
+      },
+      "end_net_acceleration_g": 5.899363417019063,
+      "end_spring_force_n": 247.87521707741746,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 59.49005209858019,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 495.7504341548349,
+      "peak_net_acceleration_g": 11.846713479354735,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.61753907393515,
+      "stiffness_n_m": 2065.626808978479,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1427.7612503659248,
+        "0.7": 1019.8294645470892,
+        "0.9": 793.200694647736
+      },
+      "twelve_shot_initial_stored_energy_j": 713.8806251829624,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 119.94010419716038,
+        "0.7": 85.6715029979717,
+        "0.9": 66.63339122064465
+      },
+      "end_net_acceleration_g": 5.875370094360759,
+      "end_spring_force_n": 249.87521707741746,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 59.97005209858019,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 499.7504341548349,
+      "peak_net_acceleration_g": 11.87070680201304,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.97753907393515,
+      "stiffness_n_m": 2082.2934756451455,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1439.2812503659245,
+        "0.7": 1028.0580359756605,
+        "0.9": 799.6006946477358
+      },
+      "twelve_shot_initial_stored_energy_j": 719.6406251829623,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 202.86875005227495,
+        "0.7": 144.90625003733925,
+        "0.9": 112.70486114015274
+      },
+      "end_net_acceleration_g": 7.605461527017341,
+      "end_spring_force_n": 316.98242195667956,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 101.43437502613747,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 422.64322927557276,
+      "peak_net_acceleration_g": 10.140615369356455,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 880.5067276574433,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2434.4250006272996,
+        "0.7": 1738.8750004480712,
+        "0.9": 1352.458333681833
+      },
+      "twelve_shot_initial_stored_energy_j": 1217.2125003136498,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 203.96589290941782,
+        "0.7": 145.689923506727,
+        "0.9": 113.31438494967657
+      },
+      "end_net_acceleration_g": 7.598606291972113,
+      "end_spring_force_n": 318.69670767096534,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 101.98294645470891,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 424.9289435612871,
+      "peak_net_acceleration_g": 10.147470604401686,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.61753907393515,
+      "stiffness_n_m": 885.2686324193481,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2447.590714913014,
+        "0.7": 1748.2790820807243,
+        "0.9": 1359.772619396119
+      },
+      "twelve_shot_initial_stored_energy_j": 1223.795357456507,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 205.6116071951321,
+        "0.7": 146.86543371080865,
+        "0.9": 114.22867066396228
+      },
+      "end_net_acceleration_g": 7.5883234394042685,
+      "end_spring_force_n": 321.2681362423939,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 102.80580359756605,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 428.35751498985854,
+      "peak_net_acceleration_g": 10.157753456969532,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.97753907393515,
+      "stiffness_n_m": 892.4114895622054,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2467.339286341585,
+        "0.7": 1762.3852045297037,
+        "0.9": 1370.7440479675472
+      },
+      "twelve_shot_initial_stored_energy_j": 1233.6696431707926,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 88.7550781478703,
+        "0.7": 63.396484391335925,
+        "0.9": 49.308376748816826
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 44.37753907393515,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 554.7192384241894,
+      "peak_net_acceleration_g": 13.30955767228035,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 3466.995240151183,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1065.0609377744436,
+        "0.7": 760.7578126960311,
+        "0.9": 591.700520985802
+      },
+      "twelve_shot_initial_stored_energy_j": 532.5304688872218,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 89.3950781478703,
+        "0.7": 63.85362724847879,
+        "0.9": 49.66393230437238
+      },
+      "end_net_acceleration_g": -0.047986645316608394,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 44.69753907393515,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 558.7192384241894,
+      "peak_net_acceleration_g": 13.35754431759696,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.69753907393515,
+      "stiffness_n_m": 3491.995240151183,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1072.7409377744434,
+        "0.7": 766.2435269817454,
+        "0.9": 595.9671876524685
+      },
+      "twelve_shot_initial_stored_energy_j": 536.3704688872217,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 90.35507814787029,
+        "0.7": 64.53934153419307,
+        "0.9": 50.19726563770571
+      },
+      "end_net_acceleration_g": -0.11996661329152099,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 45.177539073935144,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 564.7192384241893,
+      "peak_net_acceleration_g": 13.429524285571869,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 45.177539073935144,
+      "stiffness_n_m": 3529.4952401511828,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1084.2609377744434,
+        "0.7": 774.4720984103168,
+        "0.9": 602.3671876524685
+      },
+      "twelve_shot_initial_stored_energy_j": 542.1304688872217,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 94.67208335772831,
+        "0.7": 67.62291668409165,
+        "0.9": 52.59560186540462
+      },
+      "end_net_acceleration_g": 2.66191153445607,
+      "end_spring_force_n": 110.94384768483786,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 47.336041678864156,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 443.7753907393514,
+      "peak_net_acceleration_g": 10.647646137824278,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 2080.1971440907096,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1136.0650002927398,
+        "0.7": 811.4750002090999,
+        "0.9": 631.1472223848555
+      },
+      "twelve_shot_initial_stored_energy_j": 568.0325001463699,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 95.35475002439497,
+        "0.7": 68.1105357317107,
+        "0.9": 52.974861124663875
+      },
+      "end_net_acceleration_g": 2.6331195472661046,
+      "end_spring_force_n": 111.74384768483786,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 47.67737501219749,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 446.9753907393514,
+      "peak_net_acceleration_g": 10.676438125014243,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.69753907393515,
+      "stiffness_n_m": 2095.1971440907096,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1144.2570002927396,
+        "0.7": 817.3264287805283,
+        "0.9": 635.6983334959664
+      },
+      "twelve_shot_initial_stored_energy_j": 572.1285001463698,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 96.37875002439498,
+        "0.7": 68.84196430313928,
+        "0.9": 53.54375001355276
+      },
+      "end_net_acceleration_g": 2.589931566481157,
+      "end_spring_force_n": 112.94384768483786,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 48.18937501219749,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 451.7753907393514,
+      "peak_net_acceleration_g": 10.719626105799192,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 45.177539073935144,
+      "stiffness_n_m": 2117.6971440907096,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1156.5450002927396,
+        "0.7": 826.1035716376712,
+        "0.9": 642.5250001626331
+      },
+      "twelve_shot_initial_stored_energy_j": 578.2725001463698,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 118.34010419716039,
+        "0.7": 84.52864585511456,
+        "0.9": 65.74450233175577
+      },
+      "end_net_acceleration_g": 4.436519224093449,
+      "end_spring_force_n": 184.9064128080631,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 59.17005209858019,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 369.8128256161262,
+      "peak_net_acceleration_g": 8.873038448186898,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 1155.6650800503944,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1420.0812503659247,
+        "0.7": 1014.3437502613748,
+        "0.9": 788.9340279810692
+      },
+      "twelve_shot_initial_stored_energy_j": 710.0406251829623,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 119.19343753049372,
+        "0.7": 85.13816966463838,
+        "0.9": 66.21857640582985
+      },
+      "end_net_acceleration_g": 4.4205236756545805,
+      "end_spring_force_n": 186.23974614139644,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 59.59671876524686,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 372.4794922827929,
+      "peak_net_acceleration_g": 8.88903399662577,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.69753907393515,
+      "stiffness_n_m": 1163.9984133837277,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1430.3212503659247,
+        "0.7": 1021.6580359756606,
+        "0.9": 794.6229168699581
+      },
+      "twelve_shot_initial_stored_energy_j": 715.1606251829623,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 120.47343753049371,
+        "0.7": 86.05245537892408,
+        "0.9": 66.92968751694094
+      },
+      "end_net_acceleration_g": 4.396530352996276,
+      "end_spring_force_n": 188.23974614139644,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 60.236718765246856,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 376.4794922827929,
+      "peak_net_acceleration_g": 8.913027319284073,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 45.177539073935144,
+      "stiffness_n_m": 1176.4984133837277,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1445.6812503659246,
+        "0.7": 1032.6294645470891,
+        "0.9": 803.1562502032914
+      },
+      "twelve_shot_initial_stored_energy_j": 722.8406251829623,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 202.86875005227495,
+        "0.7": 144.90625003733925,
+        "0.9": 112.70486114015274
+      },
+      "end_net_acceleration_g": 5.704096145263006,
+      "end_spring_force_n": 237.73681646750967,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 101.43437502613747,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 316.98242195667956,
+      "peak_net_acceleration_g": 7.605461527017341,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 495.28503430731183,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2434.4250006272996,
+        "0.7": 1738.8750004480712,
+        "0.9": 1352.458333681833
+      },
+      "twelve_shot_initial_stored_energy_j": 1217.2125003136498,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 204.33160719513208,
+        "0.7": 145.95114799652293,
+        "0.9": 113.51755955285115
+      },
+      "end_net_acceleration_g": 5.697240910217776,
+      "end_spring_force_n": 239.45110218179536,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 102.16580359756604,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 319.26813624239384,
+      "peak_net_acceleration_g": 7.612316762062571,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 44.69753907393515,
+      "stiffness_n_m": 498.8564628787404,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2451.979286341585,
+        "0.7": 1751.4137759582752,
+        "0.9": 1362.210714634214
+      },
+      "twelve_shot_initial_stored_energy_j": 1225.9896431707925,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 206.52589290941776,
+        "0.7": 147.5184949352984,
+        "0.9": 114.73660717189875
+      },
+      "end_net_acceleration_g": 5.686958057649932,
+      "end_spring_force_n": 242.02253075322395,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 103.26294645470888,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 322.6967076709653,
+      "peak_net_acceleration_g": 7.622599614630416,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 45.177539073935144,
+      "stiffness_n_m": 504.2136057358832,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2478.3107149130133,
+        "0.7": 1770.221939223581,
+        "0.9": 1376.839286062785
+      },
+      "twelve_shot_initial_stored_energy_j": 1239.1553574565066,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 88.7550781478703,
+        "0.7": 63.396484391335925,
+        "0.9": 49.308376748816826
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": true,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 44.37753907393515,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 369.8128256161262,
+      "peak_net_acceleration_g": 8.873038448186898,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 1540.886773400526,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1065.0609377744436,
+        "0.7": 760.7578126960311,
+        "0.9": 591.700520985802
+      },
+      "twelve_shot_initial_stored_energy_j": 532.5304688872218,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 89.71507814787029,
+        "0.7": 64.08219867705021,
+        "0.9": 49.84171008215016
+      },
+      "end_net_acceleration_g": -0.047986645316608394,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 44.85753907393514,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 373.8128256161262,
+      "peak_net_acceleration_g": 8.921025093503507,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.85753907393514,
+      "stiffness_n_m": 1557.5534400671925,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1076.5809377744436,
+        "0.7": 768.9863841246026,
+        "0.9": 598.100520985802
+      },
+      "twelve_shot_initial_stored_energy_j": 538.2904688872218,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 91.1550781478703,
+        "0.7": 65.11077010562164,
+        "0.9": 50.64171008215016
+      },
+      "end_net_acceleration_g": -0.11996661329152099,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 45.57753907393515,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 379.81282561612625,
+      "peak_net_acceleration_g": 8.99300506147842,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 45.57753907393515,
+      "stiffness_n_m": 1582.5534400671927,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1093.8609377744435,
+        "0.7": 781.3292412674597,
+        "0.9": 607.700520985802
+      },
+      "twelve_shot_initial_stored_energy_j": 546.9304688872218,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 94.67208335772831,
+        "0.7": 67.62291668409165,
+        "0.9": 52.59560186540462
+      },
+      "end_net_acceleration_g": 1.7746076896373804,
+      "end_spring_force_n": 73.96256512322526,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 47.336041678864156,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 295.850260492901,
+      "peak_net_acceleration_g": 7.0984307585495205,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 924.5320640403155,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1136.0650002927398,
+        "0.7": 811.4750002090999,
+        "0.9": 631.1472223848555
+      },
+      "twelve_shot_initial_stored_energy_j": 568.0325001463699,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 95.69608335772831,
+        "0.7": 68.35434525552023,
+        "0.9": 53.1644907542935
+      },
+      "end_net_acceleration_g": 1.7458157024474152,
+      "end_spring_force_n": 74.76256512322526,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 47.848041678864156,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 299.050260492901,
+      "peak_net_acceleration_g": 7.127222745739485,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.85753907393514,
+      "stiffness_n_m": 934.5320640403155,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1148.3530002927398,
+        "0.7": 820.2521430662428,
+        "0.9": 637.9738890515221
+      },
+      "twelve_shot_initial_stored_energy_j": 574.1765001463699,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 97.23208335772833,
+        "0.7": 69.4514881126631,
+        "0.9": 54.01782408762685
+      },
+      "end_net_acceleration_g": 1.7026277216624677,
+      "end_spring_force_n": 75.96256512322526,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 48.616041678864164,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 303.850260492901,
+      "peak_net_acceleration_g": 7.170410726524433,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 45.57753907393515,
+      "stiffness_n_m": 949.5320640403156,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1166.7850002927398,
+        "0.7": 833.4178573519571,
+        "0.9": 648.2138890515221
+      },
+      "twelve_shot_initial_stored_energy_j": 583.3925001463699,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 118.34010419716037,
+        "0.7": 84.52864585511456,
+        "0.9": 65.74450233175575
+      },
+      "end_net_acceleration_g": 2.9576794827289663,
+      "end_spring_force_n": 123.27094187204206,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 59.170052098580186,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 246.54188374408412,
+      "peak_net_acceleration_g": 5.915358965457933,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 513.6289244668419,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1420.0812503659245,
+        "0.7": 1014.3437502613747,
+        "0.9": 788.9340279810691
+      },
+      "twelve_shot_initial_stored_energy_j": 710.0406251829622,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 119.62010419716037,
+        "0.7": 85.44293156940027,
+        "0.9": 66.45561344286688
+      },
+      "end_net_acceleration_g": 2.9416839342900967,
+      "end_spring_force_n": 124.60427520537539,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 59.81005209858019,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 249.20855041075077,
+      "peak_net_acceleration_g": 5.931354513896801,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.85753907393514,
+      "stiffness_n_m": 519.1844800223975,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1435.4412503659246,
+        "0.7": 1025.3151788328034,
+        "0.9": 797.4673613144025
+      },
+      "twelve_shot_initial_stored_energy_j": 717.7206251829623,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 121.54010419716037,
+        "0.7": 86.81436014082884,
+        "0.9": 67.52228010953354
+      },
+      "end_net_acceleration_g": 2.9176906116317927,
+      "end_spring_force_n": 126.60427520537539,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 60.77005209858019,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 253.20855041075077,
+      "peak_net_acceleration_g": 5.955347836555106,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 45.57753907393515,
+      "stiffness_n_m": 527.5178133557308,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1458.4812503659246,
+        "0.7": 1041.7723216899462,
+        "0.9": 810.2673613144025
+      },
+      "twelve_shot_initial_stored_energy_j": 729.2406251829623,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 202.86875005227495,
+        "0.7": 144.90625003733925,
+        "0.9": 112.70486114015274
+      },
+      "end_net_acceleration_g": 3.8027307635086705,
+      "end_spring_force_n": 158.49121097833978,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 101.43437502613747,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 211.32161463778638,
+      "peak_net_acceleration_g": 5.070307684678228,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 44.37753907393515,
+      "stiffness_n_m": 220.12668191436083,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2434.4250006272996,
+        "0.7": 1738.8750004480712,
+        "0.9": 1352.458333681833
+      },
+      "twelve_shot_initial_stored_energy_j": 1217.2125003136498,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 205.06303576656066,
+        "0.7": 146.47359697611478,
+        "0.9": 113.92390875920036
+      },
+      "end_net_acceleration_g": 3.795875528463441,
+      "end_spring_force_n": 160.2054966926255,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 102.53151788328033,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 213.60732892350066,
+      "peak_net_acceleration_g": 5.077162919723458,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 44.85753907393514,
+      "stiffness_n_m": 222.5076342953132,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2460.756429198728,
+        "0.7": 1757.683163713377,
+        "0.9": 1367.0869051104044
+      },
+      "twelve_shot_initial_stored_energy_j": 1230.378214599364,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 522.0886949874723,
+        "0.01": 261.04434749373615,
+        "0.02": 130.52217374686808
+      },
+      "catcher_energy_j": 2.6104434749373615,
+      "charging_energy_j": {
+        "0.5": 208.35446433798927,
+        "0.7": 148.82461738427807,
+        "0.9": 115.75248018777181
+      },
+      "end_net_acceleration_g": 3.7855926758955976,
+      "end_spring_force_n": 162.7769252640541,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 104.17723216899464,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 217.03590035207213,
+      "peak_net_acceleration_g": 5.087445772291303,
+      "pusher_kg": 0.25,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 45.57753907393515,
+      "stiffness_n_m": 226.07906286674182,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2500.2535720558712,
+        "0.7": 1785.8954086113367,
+        "0.9": 1389.0297622532619
+      },
+      "twelve_shot_initial_stored_energy_j": 1250.1267860279356,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 93.97596509774502,
+        "0.7": 67.12568935553216,
+        "0.9": 52.208869498747234
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 46.98798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1174.6995637218129,
+      "peak_net_acceleration_g": 26.6191153445607,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 14683.74454652266,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1127.7115811729402,
+        "0.7": 805.5082722663859,
+        "0.9": 626.5064339849667
+      },
+      "twelve_shot_initial_stored_energy_j": 563.8557905864701,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 94.29596509774501,
+        "0.7": 67.35426078410359,
+        "0.9": 52.386647276525004
+      },
+      "end_net_acceleration_g": -0.045320720576796814,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 47.147982548872506,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1178.6995637218126,
+      "peak_net_acceleration_g": 26.66443606513749,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.147982548872506,
+      "stiffness_n_m": 14733.744546522657,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1131.5515811729401,
+        "0.7": 808.251129409243,
+        "0.9": 628.6397673183001
+      },
+      "twelve_shot_initial_stored_energy_j": 565.7757905864701,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 94.77596509774501,
+        "0.7": 67.69711792696073,
+        "0.9": 52.65331394319168
+      },
+      "end_net_acceleration_g": -0.11330180144199202,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.08,
+      "initial_stored_energy_j": 47.38798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 1184.6995637218126,
+      "peak_net_acceleration_g": 26.73241714600269,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.38798254887251,
+      "stiffness_n_m": 14808.744546522657,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1137.3115811729401,
+        "0.7": 812.3654151235287,
+        "0.9": 631.8397673183
+      },
+      "twelve_shot_initial_stored_energy_j": 568.6557905864701,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 100.24102943759469,
+        "0.7": 71.60073531256764,
+        "0.9": 55.68946079866372
+      },
+      "end_net_acceleration_g": 5.32382306891214,
+      "end_spring_force_n": 234.93991274436257,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 50.120514718797345,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 939.7596509774502,
+      "peak_net_acceleration_g": 21.295292275648556,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 8810.246727913594,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1202.8923532511362,
+        "0.7": 859.2088237508117,
+        "0.9": 668.2735295839645
+      },
+      "twelve_shot_initial_stored_energy_j": 601.4461766255681,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 100.58236277092803,
+        "0.7": 71.84454483637717,
+        "0.9": 55.879090428293345
+      },
+      "end_net_acceleration_g": 5.296630636566062,
+      "end_spring_force_n": 235.73991274436256,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 50.291181385464014,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 942.9596509774501,
+      "peak_net_acceleration_g": 21.322484707994633,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.147982548872506,
+      "stiffness_n_m": 8840.246727913594,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1206.9883532511362,
+        "0.7": 862.1345380365259,
+        "0.9": 670.5490851395201
+      },
+      "twelve_shot_initial_stored_energy_j": 603.4941766255681,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 101.09436277092803,
+        "0.7": 72.21025912209146,
+        "0.9": 56.16353487273779
+      },
+      "end_net_acceleration_g": 5.255841988046945,
+      "end_spring_force_n": 236.93991274436257,
+      "feasible": false,
+      "final_compression_m": 0.026666666666666672,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.10666666666666667,
+      "initial_stored_energy_j": 50.547181385464015,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 947.7596509774502,
+      "peak_net_acceleration_g": 21.36327335651375,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.38798254887251,
+      "stiffness_n_m": 8885.246727913594,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1213.1323532511365,
+        "0.7": 866.5231094650975,
+        "0.9": 673.9624184728535
+      },
+      "twelve_shot_initial_stored_energy_j": 606.5661766255682,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 125.30128679699335,
+        "0.7": 89.50091914070954,
+        "0.9": 69.61182599832964
+      },
+      "end_net_acceleration_g": 8.873038448186898,
+      "end_spring_force_n": 391.56652124060423,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 62.650643398496676,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 783.1330424812085,
+      "peak_net_acceleration_g": 17.746076896373797,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 4894.5815155075525,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1503.6154415639203,
+        "0.7": 1074.0110296885146,
+        "0.9": 835.3419119799557
+      },
+      "twelve_shot_initial_stored_energy_j": 751.8077207819601,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 125.72795346366,
+        "0.7": 89.80568104547143,
+        "0.9": 69.84886303536666
+      },
+      "end_net_acceleration_g": 8.857931541327964,
+      "end_spring_force_n": 392.8998545739375,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 62.86397673183,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 785.799709147875,
+      "peak_net_acceleration_g": 17.761183803232726,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.147982548872506,
+      "stiffness_n_m": 4911.2481821742185,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1508.73544156392,
+        "0.7": 1077.6681725456572,
+        "0.9": 838.1863564244
+      },
+      "twelve_shot_initial_stored_energy_j": 754.36772078196,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 126.36795346366003,
+        "0.7": 90.26282390261431,
+        "0.9": 70.20441859092223
+      },
+      "end_net_acceleration_g": 8.835271181039568,
+      "end_spring_force_n": 394.89985457393755,
+      "feasible": false,
+      "final_compression_m": 0.08,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 63.183976731830015,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 789.7997091478751,
+      "peak_net_acceleration_g": 17.783844163521128,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.38798254887251,
+      "stiffness_n_m": 4936.248182174219,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1516.4154415639205,
+        "0.7": 1083.153886831372,
+        "0.9": 842.4530230910669
+      },
+      "twelve_shot_initial_stored_energy_j": 758.2077207819602,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 214.80220593770287,
+        "0.7": 153.43014709835919,
+        "0.9": 119.33455885427936
+      },
+      "end_net_acceleration_g": 11.40819229052601,
+      "end_spring_force_n": 503.44267016649104,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 107.40110296885143,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 671.2568935553214,
+      "peak_net_acceleration_g": 15.210923054034682,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 2097.6777923603795,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2577.6264712524344,
+        "0.7": 1841.1617651803103,
+        "0.9": 1432.0147062513524
+      },
+      "twelve_shot_initial_stored_energy_j": 1288.8132356262172,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 215.53363450913142,
+        "0.7": 153.95259607795103,
+        "0.9": 119.74090806062856
+      },
+      "end_net_acceleration_g": 11.40171790187218,
+      "end_spring_force_n": 505.1569558807767,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 107.76681725456571,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 673.5426078410356,
+      "peak_net_acceleration_g": 15.217397442688508,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.147982548872506,
+      "stiffness_n_m": 2104.8206495032364,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2586.403614109577,
+        "0.7": 1847.4311529354125,
+        "0.9": 1436.890896727543
+      },
+      "twelve_shot_initial_stored_energy_j": 1293.2018070547886,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 216.6307773662743,
+        "0.7": 154.7362695473388,
+        "0.9": 120.35043187015238
+      },
+      "end_net_acceleration_g": 11.39200631889144,
+      "end_spring_force_n": 507.7283844522053,
+      "feasible": false,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 108.31538868313714,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 676.9711792696071,
+      "peak_net_acceleration_g": 15.22710902566925,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.38798254887251,
+      "stiffness_n_m": 2115.534935217522,
+      "stroke_m": 0.08,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2599.5693283952914,
+        "0.7": 1856.8352345680655,
+        "0.9": 1444.2051824418286
+      },
+      "twelve_shot_initial_stored_energy_j": 1299.7846641976457,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 93.97596509774502,
+        "0.7": 67.12568935553216,
+        "0.9": 52.208869498747234
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 46.98798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 783.1330424812085,
+      "peak_net_acceleration_g": 17.746076896373797,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 6526.108687343404,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1127.7115811729402,
+        "0.7": 805.5082722663859,
+        "0.9": 626.5064339849667
+      },
+      "twelve_shot_initial_stored_energy_j": 563.8557905864701,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 94.45596509774502,
+        "0.7": 67.4685464983893,
+        "0.9": 52.4755361654139
+      },
+      "end_net_acceleration_g": -0.045320720576796814,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 47.22798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 787.1330424812086,
+      "peak_net_acceleration_g": 17.791397616950597,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.22798254887251,
+      "stiffness_n_m": 6559.442020676738,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1133.4715811729402,
+        "0.7": 809.6225579806717,
+        "0.9": 629.7064339849668
+      },
+      "twelve_shot_initial_stored_energy_j": 566.7357905864701,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 95.17596509774502,
+        "0.7": 67.98283221267502,
+        "0.9": 52.8755361654139
+      },
+      "end_net_acceleration_g": -0.11330180144199202,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.12,
+      "initial_stored_energy_j": 47.58798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 793.1330424812086,
+      "peak_net_acceleration_g": 17.859378697815792,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.58798254887251,
+      "stiffness_n_m": 6609.442020676738,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1142.1115811729403,
+        "0.7": 815.7939865521003,
+        "0.9": 634.5064339849669
+      },
+      "twelve_shot_initial_stored_energy_j": 571.0557905864702,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 100.24102943759469,
+        "0.7": 71.60073531256764,
+        "0.9": 55.68946079866372
+      },
+      "end_net_acceleration_g": 3.54921537927476,
+      "end_spring_force_n": 156.62660849624172,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 50.120514718797345,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 626.5064339849667,
+      "peak_net_acceleration_g": 14.196861517099038,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 3915.6652124060424,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1202.8923532511362,
+        "0.7": 859.2088237508117,
+        "0.9": 668.2735295839645
+      },
+      "twelve_shot_initial_stored_energy_j": 601.4461766255681,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 100.75302943759469,
+        "0.7": 71.96644959828193,
+        "0.9": 55.97390524310816
+      },
+      "end_net_acceleration_g": 3.5220229469286823,
+      "end_spring_force_n": 157.42660849624173,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 50.376514718797345,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 629.7064339849668,
+      "peak_net_acceleration_g": 14.224053949445116,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.22798254887251,
+      "stiffness_n_m": 3935.6652124060424,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1209.0363532511362,
+        "0.7": 863.597395179383,
+        "0.9": 671.6868629172978
+      },
+      "twelve_shot_initial_stored_energy_j": 604.5181766255681,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 101.52102943759469,
+        "0.7": 72.51502102685336,
+        "0.9": 56.400571909774825
+      },
+      "end_net_acceleration_g": 3.4812342984095648,
+      "end_spring_force_n": 158.62660849624172,
+      "feasible": false,
+      "final_compression_m": 0.04000000000000001,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 50.760514718797346,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 634.5064339849667,
+      "peak_net_acceleration_g": 14.264842597964233,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.58798254887251,
+      "stiffness_n_m": 3965.6652124060424,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1218.2523532511364,
+        "0.7": 870.1802523222403,
+        "0.9": 676.806862917298
+      },
+      "twelve_shot_initial_stored_energy_j": 609.1261766255682,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 125.30128679699335,
+        "0.7": 89.50091914070954,
+        "0.9": 69.61182599832964
+      },
+      "end_net_acceleration_g": 5.915358965457933,
+      "end_spring_force_n": 261.04434749373615,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 62.650643398496676,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 522.0886949874723,
+      "peak_net_acceleration_g": 11.830717930915865,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 2175.3695624478014,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1503.6154415639203,
+        "0.7": 1074.0110296885146,
+        "0.9": 835.3419119799557
+      },
+      "twelve_shot_initial_stored_energy_j": 751.8077207819601,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 125.94128679699334,
+        "0.7": 89.9580619978524,
+        "0.9": 69.96738155388519
+      },
+      "end_net_acceleration_g": 5.9002520585989995,
+      "end_spring_force_n": 262.37768082706947,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 62.97064339849667,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 524.7553616541389,
+      "peak_net_acceleration_g": 11.845824837774796,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 47.22798254887251,
+      "stiffness_n_m": 2186.4806735589123,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1511.2954415639201,
+        "0.7": 1079.4967439742288,
+        "0.9": 839.6085786466223
+      },
+      "twelve_shot_initial_stored_energy_j": 755.6477207819601,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 126.90128679699336,
+        "0.7": 90.6437762835667,
+        "0.9": 70.50071488721854
+      },
+      "end_net_acceleration_g": 5.877591698310603,
+      "end_spring_force_n": 264.3776808270695,
+      "feasible": false,
+      "final_compression_m": 0.12,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 63.45064339849668,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 528.755361654139,
+      "peak_net_acceleration_g": 11.868485198063198,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.58798254887251,
+      "stiffness_n_m": 2203.1473402255792,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1522.8154415639203,
+        "0.7": 1087.7253154028003,
+        "0.9": 846.0085786466224
+      },
+      "twelve_shot_initial_stored_energy_j": 761.4077207819602,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 214.8022059377029,
+        "0.7": 153.4301470983592,
+        "0.9": 119.33455885427938
+      },
+      "end_net_acceleration_g": 7.605461527017342,
+      "end_spring_force_n": 335.62844677766077,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 107.40110296885145,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 447.5045957035477,
+      "peak_net_acceleration_g": 10.140615369356455,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 932.3012410490577,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2577.626471252435,
+        "0.7": 1841.1617651803108,
+        "0.9": 1432.0147062513527
+      },
+      "twelve_shot_initial_stored_energy_j": 1288.8132356262174,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 215.89934879484576,
+        "0.7": 154.21382056774698,
+        "0.9": 119.9440826638032
+      },
+      "end_net_acceleration_g": 7.598987138363514,
+      "end_spring_force_n": 337.3427324919465,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 107.94967439742288,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 449.79030998926197,
+      "peak_net_acceleration_g": 10.147089758010283,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.22798254887251,
+      "stiffness_n_m": 937.0631458109625,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2590.792185538149,
+        "0.7": 1850.5658468129639,
+        "0.9": 1439.3289919656384
+      },
+      "twelve_shot_initial_stored_energy_j": 1295.3960927690746,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 217.54506308056003,
+        "0.7": 155.3893307718286,
+        "0.9": 120.8583683780889
+      },
+      "end_net_acceleration_g": 7.5892755553827715,
+      "end_spring_force_n": 339.91416106337505,
+      "feasible": false,
+      "final_compression_m": 0.36,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 108.77253154028001,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 453.2188814178334,
+      "peak_net_acceleration_g": 10.156801340991025,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.58798254887251,
+      "stiffness_n_m": 944.2060029538196,
+      "stroke_m": 0.12,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2610.5407569667204,
+        "0.7": 1864.6719692619433,
+        "0.9": 1450.3004205370669
+      },
+      "twelve_shot_initial_stored_energy_j": 1305.2703784833602,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 93.97596509774502,
+        "0.7": 67.12568935553216,
+        "0.9": 52.208869498747234
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 46.98798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 587.3497818609064,
+      "peak_net_acceleration_g": 13.30955767228035,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 3670.936136630665,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1127.7115811729402,
+        "0.7": 805.5082722663859,
+        "0.9": 626.5064339849667
+      },
+      "twelve_shot_initial_stored_energy_j": 563.8557905864701,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 94.61596509774502,
+        "0.7": 67.58283221267502,
+        "0.9": 52.56442505430279
+      },
+      "end_net_acceleration_g": -0.045320720576796814,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 47.30798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 591.3497818609064,
+      "peak_net_acceleration_g": 13.354878392857147,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.30798254887251,
+      "stiffness_n_m": 3695.936136630665,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1135.3915811729403,
+        "0.7": 810.9939865521003,
+        "0.9": 630.7731006516335
+      },
+      "twelve_shot_initial_stored_energy_j": 567.6957905864701,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 95.57596509774501,
+        "0.7": 68.2685464983893,
+        "0.9": 53.09775838763612
+      },
+      "end_net_acceleration_g": -0.11330180144199202,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.16,
+      "initial_stored_energy_j": 47.787982548872506,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 597.3497818609063,
+      "peak_net_acceleration_g": 13.42285947372234,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING",
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.787982548872506,
+      "stiffness_n_m": 3733.4361366306644,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1146.9115811729403,
+        "0.7": 819.2225579806717,
+        "0.9": 637.1731006516335
+      },
+      "twelve_shot_initial_stored_energy_j": 573.4557905864701,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 100.24102943759469,
+        "0.7": 71.60073531256764,
+        "0.9": 55.68946079866372
+      },
+      "end_net_acceleration_g": 2.66191153445607,
+      "end_spring_force_n": 117.46995637218129,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 50.120514718797345,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 469.8798254887251,
+      "peak_net_acceleration_g": 10.647646137824278,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 2202.5616819783986,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1202.8923532511362,
+        "0.7": 859.2088237508117,
+        "0.9": 668.2735295839645
+      },
+      "twelve_shot_initial_stored_energy_j": 601.4461766255681,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 100.92369610426137,
+        "0.7": 72.0883543601867,
+        "0.9": 56.06872005792298
+      },
+      "end_net_acceleration_g": 2.634719102109992,
+      "end_spring_force_n": 118.26995637218128,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 50.461848052130684,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 473.0798254887251,
+      "peak_net_acceleration_g": 10.674838570170357,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.30798254887251,
+      "stiffness_n_m": 2217.5616819783986,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1211.0843532511365,
+        "0.7": 865.0602523222403,
+        "0.9": 672.8246406950758
+      },
+      "twelve_shot_initial_stored_energy_j": 605.5421766255682,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 101.94769610426137,
+        "0.7": 72.81978293161526,
+        "0.9": 56.637608946811866
+      },
+      "end_net_acceleration_g": 2.593930453590875,
+      "end_spring_force_n": 119.46995637218129,
+      "feasible": false,
+      "final_compression_m": 0.053333333333333344,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.21333333333333335,
+      "initial_stored_energy_j": 50.973848052130684,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 477.8798254887251,
+      "peak_net_acceleration_g": 10.715627218689473,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "PEAK_ACCELERATION_ABOVE_STUDY_CEILING"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.787982548872506,
+      "stiffness_n_m": 2240.0616819783986,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1223.3723532511365,
+        "0.7": 873.8373951793833,
+        "0.9": 679.6513073617425
+      },
+      "twelve_shot_initial_stored_energy_j": 611.6861766255682,
+      "verification_passed": true,
+      "work_residual_j": 7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 125.30128679699335,
+        "0.7": 89.50091914070954,
+        "0.9": 69.61182599832964
+      },
+      "end_net_acceleration_g": 4.436519224093449,
+      "end_spring_force_n": 195.78326062030212,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 62.650643398496676,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 391.56652124060423,
+      "peak_net_acceleration_g": 8.873038448186898,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 1223.6453788768881,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1503.6154415639203,
+        "0.7": 1074.0110296885146,
+        "0.9": 835.3419119799557
+      },
+      "twelve_shot_initial_stored_energy_j": 751.8077207819601,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 126.15462013032668,
+        "0.7": 90.11044295023335,
+        "0.9": 70.0859000724037
+      },
+      "end_net_acceleration_g": 4.421412317234517,
+      "end_spring_force_n": 197.11659395363543,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 63.07731006516334,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 394.23318790727086,
+      "peak_net_acceleration_g": 8.88814535504583,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.30798254887251,
+      "stiffness_n_m": 1231.9787122102214,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1513.85544156392,
+        "0.7": 1081.3253154028,
+        "0.9": 841.0308008688445
+      },
+      "twelve_shot_initial_stored_energy_j": 756.92772078196,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 127.43462013032668,
+        "0.7": 91.02472866451906,
+        "0.9": 70.79701118351483
+      },
+      "end_net_acceleration_g": 4.398751956946119,
+      "end_spring_force_n": 199.11659395363543,
+      "feasible": true,
+      "final_compression_m": 0.16,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 63.71731006516334,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 398.23318790727086,
+      "peak_net_acceleration_g": 8.910805715334229,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.787982548872506,
+      "stiffness_n_m": 1244.4787122102214,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1529.2154415639202,
+        "0.7": 1092.2967439742288,
+        "0.9": 849.5641342021779
+      },
+      "twelve_shot_initial_stored_energy_j": 764.6077207819601,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 214.80220593770287,
+        "0.7": 153.43014709835919,
+        "0.9": 119.33455885427936
+      },
+      "end_net_acceleration_g": 5.704096145263005,
+      "end_spring_force_n": 251.72133508324552,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 107.40110296885143,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 335.6284467776607,
+      "peak_net_acceleration_g": 7.605461527017341,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 524.4194480900949,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2577.6264712524344,
+        "0.7": 1841.1617651803103,
+        "0.9": 1432.0147062513524
+      },
+      "twelve_shot_initial_stored_energy_j": 1288.8132356262172,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 216.26506308056,
+        "0.7": 154.47504505754287,
+        "0.9": 120.14725726697777
+      },
+      "end_net_acceleration_g": 5.697621756609177,
+      "end_spring_force_n": 253.43562079753124,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 108.13253154028,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 337.914161063375,
+      "peak_net_acceleration_g": 7.611935915671168,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": -8.881784197001252e-16,
+      "spring_work_j": 47.30798254887251,
+      "stiffness_n_m": 527.9908766615234,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2595.18075696672,
+        "0.7": 1853.7005406905143,
+        "0.9": 1441.7670872037331
+      },
+      "twelve_shot_initial_stored_energy_j": 1297.59037848336,
+      "verification_passed": true,
+      "work_residual_j": -1.4210854715202004e-14
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 218.45934879484574,
+        "0.7": 156.0423919963184,
+        "0.9": 121.3663048860254
+      },
+      "end_net_acceleration_g": 5.687910173628436,
+      "end_spring_force_n": 256.0070493689598,
+      "feasible": true,
+      "final_compression_m": 0.48,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.64,
+      "initial_stored_energy_j": 109.22967439742287,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 341.34273249194644,
+      "peak_net_acceleration_g": 7.621647498651911,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.787982548872506,
+      "stiffness_n_m": 533.3480195186663,
+      "stroke_m": 0.16,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2621.512185538149,
+        "0.7": 1872.508703955821,
+        "0.9": 1456.395658632305
+      },
+      "twelve_shot_initial_stored_energy_j": 1310.7560927690745,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 93.97596509774502,
+        "0.7": 67.12568935553216,
+        "0.9": 52.208869498747234
+      },
+      "end_net_acceleration_g": 0.0,
+      "end_spring_force_n": 0.0,
+      "feasible": true,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 46.98798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 391.56652124060423,
+      "peak_net_acceleration_g": 8.873038448186898,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 1631.527171835851,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1127.7115811729402,
+        "0.7": 805.5082722663859,
+        "0.9": 626.5064339849667
+      },
+      "twelve_shot_initial_stored_energy_j": 563.8557905864701,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 94.93596509774501,
+        "0.7": 67.81140364124644,
+        "0.9": 52.74220283208056
+      },
+      "end_net_acceleration_g": -0.045320720576796814,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 47.467982548872506,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 395.5665212406042,
+      "peak_net_acceleration_g": 8.918359168763695,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.467982548872506,
+      "stiffness_n_m": 1648.1938385025176,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1139.2315811729402,
+        "0.7": 813.7368436949573,
+        "0.9": 632.9064339849667
+      },
+      "twelve_shot_initial_stored_energy_j": 569.6157905864701,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 96.37596509774502,
+        "0.7": 68.83997506981788,
+        "0.9": 53.54220283208057
+      },
+      "end_net_acceleration_g": -0.11330180144199202,
+      "end_spring_force_n": 0.0,
+      "feasible": false,
+      "final_compression_m": 0.0,
+      "force_ratio": 0.0,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.24,
+      "initial_stored_energy_j": 48.18798254887251,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 401.56652124060423,
+      "peak_net_acceleration_g": 8.98634024962889,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [
+        "CONTACT_ASSUMPTION_FAILS_AT_EXIT"
+      ],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 48.18798254887251,
+      "stiffness_n_m": 1673.1938385025178,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1156.5115811729402,
+        "0.7": 826.0797008378145,
+        "0.9": 642.5064339849667
+      },
+      "twelve_shot_initial_stored_energy_j": 578.2557905864701,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 100.24102943759469,
+        "0.7": 71.60073531256764,
+        "0.9": 55.68946079866372
+      },
+      "end_net_acceleration_g": 1.77460768963738,
+      "end_spring_force_n": 78.31330424812086,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 50.120514718797345,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 313.2532169924834,
+      "peak_net_acceleration_g": 7.098430758549519,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 978.9163031015106,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1202.8923532511362,
+        "0.7": 859.2088237508117,
+        "0.9": 668.2735295839645
+      },
+      "twelve_shot_initial_stored_energy_j": 601.4461766255681,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 101.26502943759468,
+        "0.7": 72.3321638839962,
+        "0.9": 56.258349687552595
+      },
+      "end_net_acceleration_g": 1.7474152572913018,
+      "end_spring_force_n": 79.11330424812085,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 50.63251471879734,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 316.45321699248336,
+      "peak_net_acceleration_g": 7.125623190895596,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.467982548872506,
+      "stiffness_n_m": 988.9163031015105,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1215.1803532511362,
+        "0.7": 867.9859666079545,
+        "0.9": 675.1001962506313
+      },
+      "twelve_shot_initial_stored_energy_j": 607.5901766255681,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 102.80102943759469,
+        "0.7": 73.42930674113907,
+        "0.9": 57.11168302088594
+      },
+      "end_net_acceleration_g": 1.7066266087721849,
+      "end_spring_force_n": 80.31330424812086,
+      "feasible": true,
+      "final_compression_m": 0.08000000000000002,
+      "force_ratio": 0.25,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.32,
+      "initial_stored_energy_j": 51.400514718797346,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 321.2532169924834,
+      "peak_net_acceleration_g": 7.166411839414714,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 48.18798254887251,
+      "stiffness_n_m": 1003.9163031015106,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1233.6123532511363,
+        "0.7": 881.1516808936688,
+        "0.9": 685.3401962506313
+      },
+      "twelve_shot_initial_stored_energy_j": 616.8061766255681,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 125.30128679699335,
+        "0.7": 89.50091914070954,
+        "0.9": 69.61182599832964
+      },
+      "end_net_acceleration_g": 2.9576794827289663,
+      "end_spring_force_n": 130.52217374686808,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 62.650643398496676,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 261.04434749373615,
+      "peak_net_acceleration_g": 5.915358965457933,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 543.8423906119503,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1503.6154415639203,
+        "0.7": 1074.0110296885146,
+        "0.9": 835.3419119799557
+      },
+      "twelve_shot_initial_stored_energy_j": 751.8077207819601,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 126.58128679699333,
+        "0.7": 90.41520485499524,
+        "0.9": 70.32293710944073
+      },
+      "end_net_acceleration_g": 2.9425725758700336,
+      "end_spring_force_n": 131.8555070802014,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 63.29064339849666,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 263.7110141604028,
+      "peak_net_acceleration_g": 5.930465872316864,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.467982548872506,
+      "stiffness_n_m": 549.3979461675058,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1518.97544156392,
+        "0.7": 1084.9824582599429,
+        "0.9": 843.8752453132888
+      },
+      "twelve_shot_initial_stored_energy_j": 759.48772078196,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 128.50128679699336,
+        "0.7": 91.78663342642383,
+        "0.9": 71.38960377610742
+      },
+      "end_net_acceleration_g": 2.9199122155816357,
+      "end_spring_force_n": 133.85550708020142,
+      "feasible": true,
+      "final_compression_m": 0.24,
+      "force_ratio": 0.5,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.48,
+      "initial_stored_energy_j": 64.25064339849668,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 267.71101416040284,
+      "peak_net_acceleration_g": 5.953126232605264,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 48.18798254887251,
+      "stiffness_n_m": 557.7312795008393,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 1542.0154415639204,
+        "0.7": 1101.439601117086,
+        "0.9": 856.6752453132891
+      },
+      "twelve_shot_initial_stored_energy_j": 771.0077207819602,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 214.8022059377029,
+        "0.7": 153.4301470983592,
+        "0.9": 119.33455885427938
+      },
+      "end_net_acceleration_g": 3.802730763508671,
+      "end_spring_force_n": 167.81422338883038,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 0.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 107.40110296885145,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 223.75229785177385,
+      "peak_net_acceleration_g": 5.070307684678228,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 46.98798254887251,
+      "stiffness_n_m": 233.07531026226442,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2577.626471252435,
+        "0.7": 1841.1617651803108,
+        "0.9": 1432.0147062513527
+      },
+      "twelve_shot_initial_stored_energy_j": 1288.8132356262174,
+      "verification_passed": true,
+      "work_residual_j": 0.0
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 216.9964916519886,
+        "0.7": 154.99749403713471,
+        "0.9": 120.553606473327
+      },
+      "end_net_acceleration_g": 3.7962563748548424,
+      "end_spring_force_n": 169.52850910311608,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 2.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 108.4982458259943,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 226.03801213748812,
+      "peak_net_acceleration_g": 5.076782073332056,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 47.467982548872506,
+      "stiffness_n_m": 235.4562626432168,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2603.957899823863,
+        "0.7": 1859.9699284456167,
+        "0.9": 1446.6432776799238
+      },
+      "twelve_shot_initial_stored_energy_j": 1301.9789499119315,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    },
+    {
+      "catcher_average_force_n": {
+        "0.005": 1044.1773899749446,
+        "0.01": 522.0886949874723,
+        "0.02": 261.04434749373615
+      },
+      "catcher_energy_j": 5.220886949874723,
+      "charging_energy_j": {
+        "0.5": 220.2879202234172,
+        "0.7": 157.348514445298,
+        "0.9": 122.38217790189843
+      },
+      "end_net_acceleration_g": 3.7865447918741006,
+      "end_spring_force_n": 172.09993767454466,
+      "feasible": true,
+      "final_compression_m": 0.72,
+      "force_ratio": 0.75,
+      "friction_n": 5.0,
+      "initial_compression_m": 0.96,
+      "initial_stored_energy_j": 110.1439601117086,
+      "payload_kg": 4.0,
+      "peak_latch_force_n": 229.46658356605957,
+      "peak_net_acceleration_g": 5.086493656312799,
+      "pusher_kg": 0.5,
+      "rejection_reasons": [],
+      "speed_m_s": 4.569852054443217,
+      "speed_residual_m_s": 0.0,
+      "spring_work_j": 48.18798254887251,
+      "stiffness_n_m": 239.0276912146454,
+      "stroke_m": 0.24,
+      "twelve_shot_charging_energy_j": {
+        "0.5": 2643.4550426810065,
+        "0.7": 1888.182173343576,
+        "0.9": 1468.5861348227813
+      },
+      "twelve_shot_initial_stored_energy_j": 1321.7275213405032,
+      "verification_passed": true,
+      "work_residual_j": -7.105427357601002e-15
+    }
+  ],
+  "constant_acceleration_ideal_stroke_m": 0.10647646137824279,
+  "evidence": "ANALYTICAL_SIZING_SCREEN",
+  "feasible_count": 48,
+  "open_items": [
+    "P92"
+  ],
+  "payload_kg": 4.0,
+  "source_sha256": {
+    "analysis/reference_cell_mechanics.py": "62c70ece8e9b117d56c66a69036af4fe8f3d105673b7727aa84c411f8170e9c3",
+    "analysis/results/manifest_timing.json": "f84018cdec6109638d64e0485d5f4d74d932bb8939a4e0ac7002e3f62ece4797",
+    "validation/P92_S2_reference_cell_mechanics.md": "b5aedb4141e259827f33a072b7627a0fe722b6a45ff08d4e2d574e0255e2838b"
+  },
+  "speed_m_s": 4.569852054443217,
+  "study": "P92-S2",
+  "verification_passed": true,
+  "zero_preload_minimum_stroke_m": 0.21295292275648559
+}

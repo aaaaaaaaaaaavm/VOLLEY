@@ -40,6 +40,16 @@ def main():
         for path, before, after in delta[:30]:
             print(path, 'stored=', before, 'fresh=', after, flush=True)
         failed |= bool(delta)
+    module = importlib.import_module('operational_uncertainty')
+    stored = json.loads((ROOT/'analysis/results/operational_uncertainty.json').read_text())
+    fresh = module.build()
+    delta = list(differences(stored, fresh))
+    print('operational_uncertainty primitive-policy diagnostic leaves:', len(delta), flush=True)
+    for path, before, after in delta[:30]:
+        print(path, 'stored=', before, 'fresh=', after, flush=True)
+    stale = module.check_outputs(fresh)
+    print('operational_uncertainty S5 freshness:', stale or 'PASS', flush=True)
+    failed |= bool(stale) or not fresh['verification_passed']
     return int(failed)
 
 

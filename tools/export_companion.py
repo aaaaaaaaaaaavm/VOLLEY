@@ -108,6 +108,10 @@ and [architecture decision gates](https://github.com/{OWNER}/{FLAGSHIP}/blob/{co
 extends the single-payload benchmark. These studies extend the engineering record;
 the authored manuscript remains Gen5.
 
+The latest [review and restart record](https://github.com/{OWNER}/{FLAGSHIP}/blob/{commit}/docs/REVIEW_20260916.md)
+adds combined conditional release-error corners, reference-cell mechanics and the verification matrix.
+These bounded calculations do not close the full campaign or select flight hardware.
+
 {header_table(kind)}
 """
 

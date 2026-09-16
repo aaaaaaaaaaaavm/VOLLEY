@@ -340,13 +340,65 @@ def serialized(data: dict) -> tuple[str, str, str]:
     return json.dumps(data, indent=2, sort_keys=True) + "\n", report(data), svg(data)
 
 
+def numerical_match(actual, expected, path=(), step=1.0):
+    """Reproducibility of computed leaves, separate from frozen physical bands.
+
+    Position/velocity floors follow the S2/S3 policy. Central differences divide
+    that coordinate noise by the declared step; comparisons retain exact schema,
+    input steps and verdicts. Reports still reproduce the stored payload exactly.
+    """
+    if type(actual) is not type(expected):
+        return False
+    if isinstance(expected, dict):
+        step = expected.get("step", step)
+        return actual.keys() == expected.keys() and all(
+            numerical_match(actual[k], v, path+(k,), step) for k, v in expected.items())
+    if isinstance(expected, list):
+        return len(actual) == len(expected) and all(
+            numerical_match(a, b, path+(i,), step) for i, (a, b) in enumerate(zip(actual, expected)))
+    if not isinstance(expected, float):
+        return actual == expected
+    field = path[-2] if isinstance(path[-1], int) else path[-1]
+    atol, rtol = 1e-9, 1e-12
+    if field in ("payload_state", "host_state", "terminal_state", "target_terminal_state", "terminal_error_vector"):
+        atol = 1e-5 if path[-1] < 2 else 1e-7
+    elif field in ("position_error_m", "position_margin_m", "reproduction_position_m"):
+        atol = 1e-5
+    elif field in ("velocity_error_m_s", "velocity_margin_m_s", "reproduction_velocity_m_s"):
+        atol = 1e-7
+    elif "sensitivity" in field:
+        atol = 2*(1e-5 if "position" in field else 1e-7)/step
+    elif field == "relative_difference":
+        atol = 1e-5
+    elif "allowance" in field:
+        atol, rtol = 1e-10, 1e-5
+    elif field in ("step", "amount", "retained_mass_kg", "mass_after_second_kg", "release_time_s"):
+        return actual == expected
+    return math.isfinite(actual) and math.isfinite(expected) and math.isclose(actual, expected, rel_tol=rtol, abs_tol=atol)
+
+
+def check_outputs(data, root=ROOT):
+    result_path = root / OUTPUT_JSON.relative_to(ROOT)
+    try:
+        stored = json.loads(result_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return [str(OUTPUT_JSON.relative_to(ROOT))]
+    metadata = lambda d: {k: v for k, v in d.items() if k != "events"}
+    if (not isinstance(stored, dict) or metadata(stored) != metadata(data)
+            or not numerical_match(stored.get("events"), data["events"])):
+        return [str(OUTPUT_JSON.relative_to(ROOT))]
+    return [str(p.relative_to(ROOT)) for p, content in zip(
+        (OUTPUT_DOC, OUTPUT_SVG), serialized(stored)[1:])
+        if not (root/p.relative_to(ROOT)).exists()
+        or (root/p.relative_to(ROOT)).read_text(encoding="utf-8") != content]
+
+
 def write_or_check(check: bool) -> None:
     data = build()
     payloads = serialized(data)
     paths = (OUTPUT_JSON, OUTPUT_DOC, OUTPUT_SVG)
     if check:
-        stale = [str(path.relative_to(ROOT)) for path, text in zip(paths, payloads)
-                 if not path.exists() or path.read_text(encoding="utf-8") != text]
+        stale = check_outputs(data)
         if stale:
             raise SystemExit("stale P113-S5 outputs: " + ", ".join(stale))
         if not data["verification_passed"]:

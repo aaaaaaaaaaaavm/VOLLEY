@@ -21,6 +21,7 @@ run() {
 echo "== gates =="
 run "authorship"         python3 tools/check_authorship.py
 run "links"              python3 tools/check_links.py
+run "website routes"     python3 tools/check_site.py
 run "register"           python3 tools/register_status.py --check
 run "baseline"           python3 tools/make_baseline.py --check
 run "public surfaces"    python3 tools/check_public.py
@@ -42,6 +43,9 @@ run "departure trade freshness" python3 analysis/departure_trade.py --check
 run "campaign allocation freshness" python3 analysis/campaign_allocation.py --check
 run "terminal timing freshness" python3 analysis/terminal_timing.py --check
 run "manifest timing freshness" python3 analysis/manifest_timing.py --check
+run "operational uncertainty freshness" python3 analysis/operational_uncertainty.py --check
+run "combined release errors" python3 analysis/combined_release_errors.py --check
+run "reference cell mechanics" python3 analysis/reference_cell_mechanics.py --check
 run "Gen6 reference freshness" python3 analysis/reference_architecture.py --check
 # Properties and regressions. The self-test above checks the reference point; this checks
 # rules that must hold for any input, and reintroduces every defect the repository has

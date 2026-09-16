@@ -1,272 +1,74 @@
-## Adityavardhan Mishra
+# Adityavardhan Mishra
 
-Mechanical engineer. Powertrain, ECUs, CubeSat deployment. Asking spacecraft inconvenient questions.
+Mechanical engineering student · Spacecraft deployment, engines and systems software
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/gen5/hero_open.png" alt="VOLLEY, an electromagnetic CubeSat deployer" width="100%">
-</p>
+BTech, Symbiosis Institute of Technology, Pune · 2023–2027
 
-BTech Mechanical Engineering, Symbiosis Institute of Technology, Pune, 2023-2027
+I like problems that survive the first calculation. My main project is **VOLLEY**, an investigation into controlled spacecraft departure from a retained orbital host. It began with a mechanism. The work since has been about finding out whether the mission earns that mechanism.
 
-In 2021 I got stuck on a dumb question: why do we still deploy CubeSats with springs. I never
-really got unstuck. That question is now VOLLEY: a spacecraft-deployment programme investigating
-provider-hosted control of individual payload departure conditions. Gen5 is the frozen
-electromagnetic machine; the current clean-sheet reference is a compact independent stored-energy
-release cell. I've presented the project at DRDO ARDE and the India Science Festival.
+[Explore VOLLEY](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Explore BOLLEY](https://aaaaaaaaaaaavm.github.io/VOLLEY/bolley.html) · [Engineering record](https://github.com/aaaaaaaaaaaavm/VOLLEY) · [Contact](mailto:adityavardhanmishr@gmail.com)
 
-Before that there was rocketry, where our payload took 2nd globally at the SDL Payload
-Challenge, IREC 2025 in Texas. Alongside it there are engines, I run Poona Motor Club, tune Royal
-Enfield, KTM and Honda platforms, and when Powertronic's map files turned out to be an obfuscated
-binary I reverse-engineered the format and built a dual-map editor so I could stop guessing. This
-year I'm on powertrain for our Formula Student team.
+<p align="center"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/gen5/hero_open.png" alt="Frozen Gen5 electromagnetic comparison model, not the current release-cell reference" width="100%"></p>
 
-Aerospace, telecom software, engines. I have a hunch they all come from the same place. Haven't
-proven it yet.
+*The image is nominal CAD of the frozen Gen5 comparator. VOLLEY and BOLLEY are computational design studies. Nothing in either project has been built, measured, qualified or flown.*
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/aaaaaaaaaaaavm/main/assets/portfolio-map.svg" alt="AVM engineering portfolio with VOLLEY as the flagship" width="100%">
-</p>
+## Start with the question, then inspect the evidence
 
-<p align="center"><sub>The map is generated in the profile repository. Its proportions are the
-point: VOLLEY is the flagship; the other repositories either test a neighbouring premise or
-extract one reusable part of its engineering method.</sub></p>
-
----
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/A29_wake.png" alt="OpenFOAM solution around the sled" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/A02_field_map.png" alt="Halbach airgap field and its depth profile" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/figures/A35_ledger.png" alt="Constraint ledger and the 64-corner floor" width="32%">
-</p>
-
-<p align="center"><sub>External aerodynamics in OpenFOAM, <b>581&nbsp;779 cells</b> &middot; the Halbach airgap field resolved through the array's 90&nbsp;mm depth &middot; every kilogram attributed to the requirement that causes it. <b>All three are model output. Nothing in the project has been built, fired or measured</b> &mdash; and the repository leads with that rather than hiding it.</sub></p>
-
-[Current BSX evidence review and Gen6 handoff](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/BSX_REVIEW.md). Gen5 is frozen with exceptions; Gen6 is an open design study.
-
-### The thing I'd actually like you to look at
-
-The idea is not really the motor. A launch vehicle's upper stage does its job in ten minutes and
-then becomes debris; POEM has already flown the counter-example. VOLLEY turns that spent stage
-into a last-mile delivery vehicle, it repositions between altitude shells on its own reaction
-control and fires satellites off at individually commanded velocities at each one. Altitude is
-in; plane change is not, at 133 m/s per degree, and phase is not either, which I found by
-checking rather than by being told: satellites released minutes apart from the same host separate
-in true anomaly for no velocity at all, so 30° costs 468 seconds of waiting. What survives is
-narrower and I think better: a clock changes phase, and a commanded deployment impulse changes
-orbital energy. Drag and J₂ change orbits too, the point is not that nothing else can, it is
-that nothing else in a deployment interface can do it *per satellite, on command*.
-
-[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) now treats the mechanism as the thing to
-prove, not the premise. Gen5 is the frozen magazine-fed ironless double-sided Halbach LSM:
-16.029 m/s, 10.07 g, 126.6 kg dry, modelled only. Its mass criterion failed and stays failed.
-Nothing in the programme has been built, fired or measured.
-
-The project then tried an approximately 8 m stage-integrated cold-gas architecture. That work
-exposed useful pressure, guide/contact and trim/tube evidence, but it is no longer the assumed
-answer either. S4's bounded two-payload mission screen found that BOLLEY, Gen5 and the gas-Gen6
-authority screens all reached the same best tested fuel result with a 4.569852 m/s first release.
-Higher available release speed bought nothing in that tested campaign.
-
-So the current clean-sheet reference is deliberately smaller: independent retained cells, a
-motor-charged mechanical accumulator, independent latch, short guided pusher and local catcher.
-At the S4 study point a 4 kg payload carries 41.77 J of ideal kinetic energy and a 10 g
-constant-acceleration screen is 106.5 mm. Those are study numbers, not a product requirement.
-The next job is to try to kill that reference on uncertainty, installed burden, latch/pusher
-behaviour, tip-off and catcher loads before detailed CAD.
-
-### What it proved, and what it lost
-
-It proved one thing: a commanded, per-satellite change in orbital energy, on a satellite that
-is intended to remain mechanically and electrically unmodified. Different spring energies and
-payload masses can also produce different velocities. The distinction I am studying is a reusable
-drive that commands the release condition for each satellite, with its mass and interface costs stated.
-
-It lost two arguments to its own analyses, and both are on the front page. Mass parity with a
-canister of springs is withdrawn: an acceptance band written before the comparison script
-existed asked for parity within 15 %, and VOLLEY is 1.758x heavier per satellite. So is the
-constellation-phasing claim, 30° of in-track phase costs 468 seconds of waiting at no velocity
-cost, so a spring and a clock reach it and this machine is not needed for it.
-
-Open it for the defect record, not the numbers. Every error I've found in my own work is
-published and numbered, including the ones that damage the claims. An independent propagator
-falsified a claim in my paper's own abstract; that's logged as P16 rather than quietly dropped.
-The pulse-power chain does not close on a commercially realistic single supercapacitor string.
-A covariance claim, an internal-momentum conclusion and the brake-fin thermal model have all
-been superseded in public.
-
-Acceptance bands are written down *before* each analysis runs, so a failure cannot be
-rationalised afterwards. That is not a formality. Twice this month a band failed, I went looking
-for the design flaw, and found the bug in my own analysis script instead, once a sign
-convention that had quietly cost 57 km of a delivery envelope, once a limit I had computed for
-one burn of a two-burn manoeuvre. A band chosen after seeing the answer would have passed both
-and shipped both.
-
-The most recent one is the flavour of the whole thing: modelling the release properly showed the
-release was never the problem, the payload arrives in its cradle at 18 to 115 times the
-tip-off limit at the *start* of the stroke, which nothing had looked at.
-
-### The sibling study that tests the opposite premise
-
-VOLLEY refuses to touch the satellite, and that refusal is expensive, most of the energy goes into
-launcher hardware, and most of the mechanism exists to stop and return it. [BOLLEY](https://github.com/aaaaaaaaaaaavm/BOLLEY)
-asks what happens if I stop refusing: the spacecraft accepts a few hundred grams of *passive*
-interface, no power, no electronics, nothing to command, and the launcher deletes the sled, the
-brake and the return stroke. Same evidence standard, opposite answer to the same question, and it
-records the branches that failed as carefully as the one that worked.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/BOLLEY/main/cad/renders/gen3/01_gen3_hero.png" alt="BOLLEY Gen3 Fluxrelay retained assembly" width="49%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/BOLLEY/main/figures/architecture-roadmap.svg" alt="BOLLEY Gen3 to Gen4, Gen5 and Gen6 architecture roadmap" width="49%">
-</p>
-
-<p align="center"><sub>Exact nominal Gen3 CAD on the left; the generated architecture roadmap on
-the right. Both are model or nominal-CAD output, not hardware evidence.</sub></p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/BOLLEY/main/figures/gate-scorecard.svg" alt="BOLLEY A10 to A12 promotion-gate scorecard" width="49%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/BOLLEY/main/figures/fluxpiston-envelope.svg" alt="BOLLEY Fluxpiston clearance and gas-mass envelope" width="49%">
-</p>
-
-That habit is the actual portfolio:
-[skills, with the file that proves each one](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/SKILLS.md)
-
-| | |
-|---|---|
-| [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) | The authoritative engineering record. Start at [`docs/CONCEPT.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/CONCEPT.md) |
-| [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | The manuscript, IEEE-formatted, 18 pages, written and unsubmitted, and the reproducibility package |
-| [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | Final-year submission |
-| [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | The vault: ideas that never became a complete thing, and why each stopped. Not citable |
-| [BOLLEY](https://github.com/aaaaaaaaaaaavm/BOLLEY) | The sibling study. Same standard, opposite premise: the satellite carries passive hardware so the launcher can delete its own |
-
-<p align="center"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY-lab/main/figures/reopening-ledger.svg" alt="VOLLEY-lab reopening ledger for six rejected architecture branches" width="100%"></p>
-
-<p align="center"><sub>The lab is the programme's memory: rejected architectures remain attached
-to the constraint that stopped them, and are re-opened only when that constraint moves.</sub></p>
-
----
-
-### Three smaller tools that survived the extraction
-
-I pulled out the parts that still make sense without the spacecraft around them. Each repository
-keeps its VOLLEY source commit and file hashes, and each keeps the failed or void evidence beside
-the useful result.
-
-| Repository | What it does | Boundary |
+| Project | What I am investigating | Useful starting point |
 |---|---|---|
-| [Pulsed Linear Motor Design Lab](https://github.com/aaaaaaaaaaaavm/pulsed-linear-motor-design-lab) | Screens force, stroke, moving mass, source impedance and energy | Constant-force model; no hardware validation |
-| [Engineering Evidence Toolkit](https://github.com/aaaaaaaaaaaavm/engineering-evidence-toolkit) | Checks finite results, local links, source presence and artifact hashes | Consistency is not physics validation |
-| [Orbital Deployment Trade Study](https://github.com/aaaaaaaaaaaavm/orbital-deployment-trade-study) | Screens tangential impulses, phase drift, recoil and internal-mass disturbance | Two-body and rigid-body only; not conjunction assessment |
+| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Can provider-hosted control of release velocity, direction and timing earn its installed mass and operating burden? | [Mission and current reference](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/GEN6_REFERENCE_ARCHITECTURE.md) |
+| **[BOLLEY](https://github.com/aaaaaaaaaaaavm/BOLLEY)** | Does a passive spacecraft interface justify its mass by letting the launcher remove the moving sled and return mechanism? | [Selected winding and drive](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md) |
+| **[GatewayCX](https://github.com/aaaaaaaaaaaavm/GatewayCX)** | How should ordinary network applications survive long delays and interrupted Earth–Moon links? | [Architecture and executable software evidence](https://github.com/aaaaaaaaaaaavm/GatewayCX#readme) |
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/pulsed-linear-motor-design-lab/main/figures/design-screen.svg" alt="Pulsed linear motor design screen" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/orbital-deployment-trade-study/main/figures/deployment-trade.svg" alt="Orbital deployment trade screen" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/engineering-evidence-toolkit/main/figures/evidence-chain.svg" alt="Engineering evidence consistency chain" width="32%">
-</p>
+## VOLLEY: the mechanism has changed because the results changed
 
-<p align="center"><sub>Each overview is generated by Python from its repository's committed
-cases or configuration. They are deliberately small tools, not miniature copies of VOLLEY.</sub></p>
+The frozen electromagnetic Gen5 model gives 16.029 m/s at 10.07 g, with a 126.6 kg dry mass. Its mass comparison failed. I retain that design, its nominal CAD, structural and field studies, and the calculations that rejected its original mass claim.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/pulsed-linear-motor-design-lab/main/figures/source-window.svg" alt="Pulsed motor source-impedance window" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/orbital-deployment-trade-study/main/figures/orbit-envelope.svg" alt="Orbital deployment impulse envelope" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/engineering-evidence-toolkit/main/figures/failure-matrix.svg" alt="Engineering evidence failure-surface matrix" width="32%">
-</p>
+The current reference is an **independent retained release cell with a motor-charged mechanical accumulator, independent latch, short guided pusher and local catcher**. The earlier long gas guide remains a comparator. Neither inherits Gen5's evidence.
 
-### Six focused repositories from the same engineering method
+The mission work compares release authority with host manoeuvres and competent spring/timing alternatives. The two-payload study retained 100 tested campaign cases, 44 of which met its terminal-state bands. Higher available ejection speed did not automatically reduce fuel: three authority screens tied at the same best tested point. That is a bounded result, not an optimum or a provider-approved mission.
 
-These are narrow libraries, not six new flagship projects. Each has executable Python, tests,
-a generated visual, and a provenance file that names the parent work and the claim boundary.
+What I want a reviewer to inspect:
 
-| Repository | Extracted capability | Parent work |
-|---|---|---|
-| [constraint-floor](https://github.com/aaaaaaaaaaaavm/constraint-floor) | Additive lower bounds from requirement-attributed items | VOLLEY |
-| [parametric-cad-evidence-pipeline](https://github.com/aaaaaaaaaaaavm/parametric-cad-evidence-pipeline) | Parameter, source, artifact, and SHA-256 build manifests | VOLLEY · BOLLEY · Engineering Evidence Toolkit |
-| [spacecraft-separation-dynamics](https://github.com/aaaaaaaaaaaavm/spacecraft-separation-dynamics) | Impulse, recoil, tip-off, and internal-mass screens | VOLLEY · Orbital Deployment Trade Study |
-| [gatewaycx-bearer-sdk](https://github.com/aaaaaaaaaaaavm/gatewaycx-bearer-sdk) | Vendor-neutral bearer contract and conformance harness | GatewayCX |
-| [disruption-network-lab](https://github.com/aaaaaaaaaaaavm/disruption-network-lab) | Scheduled-contact earliest-delivery experiments | GatewayCX |
-| [scientific-run-registry](https://github.com/aaaaaaaaaaaavm/scientific-run-registry) | Content-addressed computational runs and lineage | Cross-project evidence method |
+- [The campaign calculation](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/MANIFEST_TIMING.md): one evolving host, explicit payload order and terminal position/velocity.
+- [The open-problem register](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/OPEN_PROBLEMS.md): corrections and failed claims remain visible.
+- [The evidence boundary](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/PROVENANCE.md): model output, cross-checks, nominal CAD and missing measurement are kept distinct.
+- [The reproduction route](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/CONTRIBUTING.md): acceptance criteria before execution, source hashes and executable checks.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/constraint-floor/main/figures/constraint-floor.svg" alt="Requirement-attributed architecture floor" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/parametric-cad-evidence-pipeline/main/figures/evidence-chain.svg" alt="Parametric CAD evidence chain" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/spacecraft-separation-dynamics/main/figures/phase-drift.svg" alt="Separation impulse and orbital phase drift" width="32%">
-</p>
+The host supplies navigation, attitude control and permitted manoeuvres. The deployer supplies a release condition. It does not provide continuing stationkeeping or collision avoidance after the spacecraft leaves.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/gatewaycx-bearer-sdk/main/figures/bearer-contract.svg" alt="GatewayCX bearer contract" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/disruption-network-lab/main/figures/contact-timeline.svg" alt="Disruption contact timeline" width="32%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/scientific-run-registry/main/figures/run-lineage.svg" alt="Scientific run lineage" width="32%">
-</p>
+## BOLLEY: test the neighbouring premise
 
-<p align="center"><sub>Every chart is generated by Python in its own repository. The visuals
-show the model boundary; they do not imply hardware or operational validation.</sub></p>
+<p align="center"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/BOLLEY/main/cad/renders/gen3/01_gen3_hero.png" alt="BOLLEY Gen3 nominal Fluxrelay assembly" width="100%"></p>
 
-### The other system I am building
+BOLLEY gives the payload a modelled 0.37136 kg passive magnetic/copper interface while retaining the powered windings and electronics on the launcher. The current 4 kg reference duty is 11.8 m/s over 0.90 m at at most 8 g nominal.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/GatewayCX/main/figures/architecture-overview.svg" alt="GatewayCX Earth-Moon Internet architecture" width="100%">
-</p>
+The electrical partition moved from four turns at 380 A to twelve turns at 126.667 A. The first twelve-turn fit failed its copper-volume check; the failure is preserved. The later detailed winding passes its nominal CAD bands, while field distribution, hot switching, manufacturing tolerances and installed mass still need closure.
 
-The question this time is less mechanical: if the Moon gets crews, landers and data centres, why
-should its network become a pile of mission-specific links. [GatewayCX](https://github.com/aaaaaaaaaaaavm/GatewayCX)
-is an exploratory cislunar telecommunications architecture study I initiated at Avisys in April
-2026. The end state is ordinary Internet semantics across Earth and the Moon, with the same names,
-identities and applications, while accepting the 2.565-second geometric round trip rather than
-pretending bandwidth can remove it.
+[Current BOLLEY evidence](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md) · [What remains unresolved](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/OPEN_PROBLEMS.md)
 
-The architecture treats Earth and the Moon as autonomous Internet regions joined by optical and
-RF bearers. Native IP stays where continuity permits; durable delivery takes over when it does not;
-lunar compute keeps local work local. The hardware seam is deliberately vendor-neutral. A terminal
-supplier implements the bearer adapter; it does not get to define the application network above it.
+## Smaller tools extracted from the work
 
-What exists today is software evidence: deterministic studies, a machine-readable bearer profile,
-an executable RF/optical adapter surface, a payload-blind SQLite traffic ledger and a local
-process-boundary binding. The restart test preserves 7,995,392 accepted bytes and partial progress
-across separate processes. None of that is a lunar link. No terminal has been connected, no vendor
-is a partner or dependency, and the repository says so on the front page.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/GatewayCX/main/figures/s016-bearer-window.svg" alt="GatewayCX optical and RF adapter capacity comparison" width="49%">
-  <img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/GatewayCX/main/figures/s017-durable-restart.svg" alt="GatewayCX durable traffic ledger across process restart" width="49%">
-</p>
-
-<p align="center"><sub>Both are generated from committed test results. Assumed bearer capacity on
-the left; a clean software restart on the right. Neither is hardware evidence.</sub></p>
-
----
-
-### Other work that is worth showing, but is not the flagship
-
-| Work | What I actually did |
+| Repository | Reusable capability |
 |---|---|
-| IREC 2025 SDL payload | Helped Team THRUST's payload-deployment work; the payload placed 2nd globally in the SDL Payload Challenge in Texas |
-| Motorcycle engine and ECU work | Combustion airflow, camshaft and exhaust work, ECU calibration, and a dual-map editor built after I reverse-engineered Powertronic's obfuscated map format |
-| Formula Student powertrain | Powertrain work for my university team, where calculations have to survive packaging, manufacture, scrutineering and an actual car |
-| Poona Motor Club | I run the club and use it to turn hands-on motorcycle work into technical public explanations rather than build-list theatre |
+| [Pulsed Linear Motor Design Lab](https://github.com/aaaaaaaaaaaavm/pulsed-linear-motor-design-lab) | Force, stroke, moving-mass and source-impedance screens |
+| [Orbital Deployment Trade Study](https://github.com/aaaaaaaaaaaavm/orbital-deployment-trade-study) | Two-body release, recoil and phase-drift comparisons |
+| [Engineering Evidence Toolkit](https://github.com/aaaaaaaaaaaavm/engineering-evidence-toolkit) | Source, result, link and artifact consistency checks |
+| [constraint-floor](https://github.com/aaaaaaaaaaaavm/constraint-floor) | Requirement-attributed mass lower bounds |
+| [parametric-cad-evidence-pipeline](https://github.com/aaaaaaaaaaaavm/parametric-cad-evidence-pipeline) | Parameter-to-artifact provenance and build manifests |
+| [spacecraft-separation-dynamics](https://github.com/aaaaaaaaaaaavm/spacecraft-separation-dynamics) | Impulse, recoil, tip-off and internal-mass screens |
+| [gatewaycx-bearer-sdk](https://github.com/aaaaaaaaaaaavm/gatewaycx-bearer-sdk) | Bearer adapters and conformance checks |
+| [disruption-network-lab](https://github.com/aaaaaaaaaaaavm/disruption-network-lab) | Scheduled-contact delivery experiments |
+| [scientific-run-registry](https://github.com/aaaaaaaaaaaavm/scientific-run-registry) | Content-addressed computational runs and lineage |
 
----
+These are narrow tools with explicit assumptions. Software tests and model agreement do not establish hardware performance.
 
-### What I actually do
+## Beyond the repositories
 
-Simulation: scikit-fem, gmsh, GetDP, CalculiX, ngspice, GMAT, magpylib. I wrote a 2-D
-magnetostatic FEM from the weak form to check my own thrust constant; it agrees to 0.03% at
-the corrected operating point, the first time that number rested on a PDE solve instead of
-another superposition model.
+I contributed to Team THRUST's payload-deployment work for the payload that placed second in the SDL Payload Challenge at IREC 2025. I work on Formula Student powertrain, motorcycle engines and ECU calibration, and run Poona Motor Club. Reverse-engineering Powertronic's map format led me to build a dual-map editor.
 
-CAD/CAE: Fusion 360, SolidWorks, AutoCAD, ANSYS. Three CAD generations of the deployer, all
-in the repository as STEP.
+My engineering work uses Python for numerics and traceability, parametric CAD, field and structural solvers, and independent checks of equations and units. [The skills evidence map](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/SKILLS.md) points to the actual files.
 
-Engines: combustion airflow, head porting, camshaft profiling, ECU calibration. 46 to ~60 bhp
-on an RE Super Meteor 650, dyno-validated across the band.
+[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) holds the authored Gen5 manuscript and generated evidence snapshot. [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) holds the thesis work. [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) preserves exploratory and rejected branches.
 
-Code: Python for numerics, traceability tools and engineering automation; MATLAB and C where
-the problem needs them. At work I own systems architecture and product design for a telecom CRM
-platform, which is not what I was hired to do.
-
-<sub>Hindi and English native, Marathi, Maithili, Russian, French elementary. Friends call me AVM,
-pronounced how it's spelled, *Aevium*. Recognised by the ISRO Chairman for aerospace STEM
-outreach; member, Space Generation Advisory Council. <b>Both are personal, and neither implies
-that any organisation endorses, approves or is involved in the engineering work above.</b></sub>
-
-[adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com) ·
-[LinkedIn](https://www.linkedin.com/in/adityavardhanmishra/), Pune, India
+[adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com) · [LinkedIn](https://www.linkedin.com/in/adityavardhanmishra/) · Pune, India
