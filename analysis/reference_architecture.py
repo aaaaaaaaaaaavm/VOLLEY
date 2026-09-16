@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 'Generate the clean-sheet Gen6 reference-architecture screen.'
 from __future__ import annotations
-import argparse, hashlib, json, math, re
+import argparse, json, math, re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,9 +15,6 @@ OUTPUTS = (
     ROOT / 'docs/GEN6_REFERENCE_ARCHITECTURE.md',
     ROOT / 'figures/gen6_reference_cell.svg',
 )
-
-def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def s4_speed():
     text = (ROOT / 'docs/MANIFEST_TIMING.md').read_text(encoding='utf-8')
@@ -64,7 +61,7 @@ def build():
         'status':'REFERENCE_SELECTED_P92_OPEN',
         'source_revisions':{
             'criteria_path':'validation/P92_reference_architecture.md',
-            'criteria_declared_commit':'9cbb9390fdc3d418580a83c95889dfd6c91dea0c',
+            'criteria_declared_commit':'0546e227e790111f2036d66adeb144f35c852fb8',
             's4_report_path':'docs/MANIFEST_TIMING.md',
             's4_merge_commit':'2ae459cadcf56f752e0f0b97bf962b25efb342a2',
         },
