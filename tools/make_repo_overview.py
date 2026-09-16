@@ -44,20 +44,23 @@ def render() -> str:
     shot = load("motor_results.json")["shot"]
     energy = load("sizing.json")["energy_closure"]
     run_sheets, analyses = validation_counts()
+    ref = load("reference_architecture.json")
+    s4 = ref["inputs"]["s4_study_speed_mps"]
+    s4_10g = next(r for r in ref["duty"] if r["speed_mps"] == s4 and r["acceleration_g"] == 10.0)
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">',
         f'<rect width="1600" height="900" fill="{BG}"/>',
         '<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#3f718c"/></marker></defs>',
         txt(72, 78, "VOLLEY · THE FLAGSHIP ENGINEERING RECORD", 24, CYAN, 700),
         txt(72, 124, "Command the release condition. Keep the spacecraft unmodified.", 35, INK, 650),
-        txt(72, 162, "One mission, two architectures, and the evidence boundary between them.", 19, MUTED),
+        txt(72, 162, "One mission, changing machines, and an evidence boundary that stays visible.", 19, MUTED),
     ]
 
     stages = [
-        ("HOST", "spent final stage", VIOLET),
-        ("MAGAZINE", "12 × 3U", CYAN),
-        ("COMMAND", "velocity per satellite", AMBER),
-        ("RELEASE", "orbital energy changes", GREEN),
+        ("HOST", "controlled orbital state", VIOLET),
+        ("CELLS", "independent retention", CYAN),
+        ("COMMAND", "departure condition", AMBER),
+        ("RELEASE", "spacecraft is on its own", GREEN),
     ]
     for i, (title, subtitle, colour) in enumerate(stages):
         x, y = 72 + i * 382, 218
@@ -76,12 +79,12 @@ def render() -> str:
             ],
         ),
         (
-            816, "GEN6 · CURRENT DESIGN TARGET", AMBER,
+            816, "GEN6 · CLEAN-SHEET REFERENCE", AMBER,
             [
-                "stage-integrated cold gas · 8.0 m host-stage rail",
-                "payload accelerated directly; duplicated machinery deleted",
-                "trim stator suspended pending the seal result",
-                "does not inherit Gen5 evidence; contact and provider interfaces remain open",
+                "independent retained cells · short guided pusher",
+                "motor-charged mechanical accumulator · local catcher",
+                f"S4 point: {s4:.6f} m/s · {s4_10g['ideal_payload_energy_J']:.2f} J · {s4_10g['ideal_stroke_m'] * 1000:.1f} mm at 10 g",
+                "P92 open · installed mass, release dynamics and provider interfaces remain open",
             ],
         ),
     ]
