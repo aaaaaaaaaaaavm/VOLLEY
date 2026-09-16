@@ -23,3 +23,16 @@ The local programme verification command now includes S5, as CI already did.
 
 A green CI run is still required to establish that this repair resolves the observed
 failure. It does not validate the model or close P113, E5 or P92.
+
+## Runner verification and S6 follow-up
+
+Run 35152740947 passes the repaired S5 check. Its diagnostics report 174 leaves outside
+the generic primitive comparison policy, while all S5-specific reproduction and physical
+verification checks pass. The same run stops at S6 freshness: its computed terminal-error
+vector had inherited the generic scalar floor instead of the position/velocity floors.
+
+S6 now uses S5's SI-aware comparison for computed state/error data, with exact study
+metadata, source hashes, input half-widths, corner coordinates and discrete outcomes.
+A regression accepts a 0.5 micrometre position reproduction difference and rejects a
+1 micrometre/second velocity corruption, changed source, changed corner input or verdict.
+The 10 m / 0.01 m/s mission bands and all nonlinear/linear verification bands are unchanged.

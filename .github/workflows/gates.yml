@@ -60,6 +60,10 @@ jobs:
           git checkout -q --detach "$TEST_COMMIT"
       - name: mission freshness diagnostics
         run: python3 tools/diagnose_mission_freshness.py
+      - name: combined release errors and reference-cell mechanics
+        run: |
+          python3 analysis/combined_release_errors.py --check
+          python3 analysis/reference_cell_mechanics.py --check
       - name: links
         run: python3 tools/check_links.py
       - name: deployed website routes
@@ -104,10 +108,6 @@ jobs:
         run: python3 analysis/manifest_timing.py --check
       - name: operational uncertainty freshness
         run: python3 analysis/operational_uncertainty.py --check
-      - name: combined release errors and reference-cell mechanics
-        run: |
-          python3 analysis/combined_release_errors.py --check
-          python3 analysis/reference_cell_mechanics.py --check
       - name: Gen6 reference freshness
         run: python3 analysis/reference_architecture.py --check
 

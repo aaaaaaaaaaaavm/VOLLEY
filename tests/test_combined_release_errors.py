@@ -26,3 +26,21 @@ def test_corrupt_mass_fails_before_propagation():
 def test_nonfinite_error_rejected():
     e=event();n=cr.ou.nominal_record(e)
     with pytest.raises(ValueError):cr.combined(e,n,[float("nan")]*6)
+
+def test_freshness_distinguishes_state_roundoff_from_changed_inputs():
+    original={"half_widths":list(cr.WIDTHS),"source_sha256":{"source":"original"},
+        "cases":[{"event_index":0,"scale":1,"signs":[1]*6,"error_coordinates":list(cr.WIDTHS),
+            "terminal_error_vector":[1.0,2.0,0.001,0.002],"mission_bands_passed":True}],"summaries":[]}
+    rounded=copy.deepcopy(original)
+    rounded["cases"][0]["terminal_error_vector"][0]+=5e-7
+    assert cr.numerical_match(rounded,original)
+    rounded["cases"][0]["terminal_error_vector"][2]+=1e-6
+    assert not cr.numerical_match(rounded,original)
+    changed=copy.deepcopy(original);changed["half_widths"][0]+=1e-10
+    assert not cr.numerical_match(changed,original)
+    changed=copy.deepcopy(original);changed["cases"][0]["error_coordinates"][0]+=1e-10
+    assert not cr.numerical_match(changed,original)
+    changed=copy.deepcopy(original);changed["source_sha256"]["source"]="changed"
+    assert not cr.numerical_match(changed,original)
+    changed=copy.deepcopy(original);changed["cases"][0]["mission_bands_passed"]=False
+    assert not cr.numerical_match(changed,original)

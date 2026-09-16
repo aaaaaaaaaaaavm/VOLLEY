@@ -98,11 +98,23 @@ def report(d):
         "Reproduce: `python analysis/combined_release_errors.py --check`.", ""]
     return "\n".join(lines)
 
+def numerical_match(actual, expected):
+    """Exact study/corner inputs; S5 SI-aware floors for computed state errors."""
+    if not isinstance(actual,dict) or actual.keys()!=expected.keys():return False
+    metadata=lambda d:{k:v for k,v in d.items() if k not in ("cases","summaries")}
+    if json.dumps(metadata(actual),sort_keys=True)!=json.dumps(metadata(expected),sort_keys=True):return False
+    if len(actual["cases"])!=len(expected["cases"]):return False
+    inputs=("event_index","scale","signs","error_coordinates")
+    for a,b in zip(actual["cases"],expected["cases"]):
+        if any(a.get(k)!=b.get(k) for k in inputs):return False
+        if not ou.numerical_match(a,b):return False
+    return ou.numerical_match(actual["summaries"],expected["summaries"])
+
 def main():
     p=argparse.ArgumentParser();p.add_argument("--check",action="store_true");a=p.parse_args();d=build()
     if a.check:
         stored=json.loads(RESULT.read_text())
-        if not campaign.numerical_match(stored,d) or DOC.read_text()!=report(stored):raise SystemExit("P113-S6 outputs stale")
+        if not numerical_match(stored,d) or DOC.read_text()!=report(stored):raise SystemExit("P113-S6 outputs stale")
     else:
         RESULT.write_text(json.dumps(d,sort_keys=True,indent=2)+"\n");DOC.write_text(report(d))
     if not d["verification_passed"]:raise SystemExit("P113-S6 verification failed; retain evidence")
