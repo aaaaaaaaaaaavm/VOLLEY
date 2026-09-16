@@ -1,5 +1,8 @@
 # VOLLEY: one page
 
+Updated 2026-09-16. [Current review and remaining work](docs/REVIEW_20260916.md) ·
+[Project website](https://aaaaaaaaaaaavm.github.io/VOLLEY/)
+
 Adityavardhan Mishra, Dept. of Mechanical Engineering, Symbiosis Institute of
 Technology, Symbiosis International (Deemed University), Pune.
 [adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com),
@@ -19,28 +22,28 @@ propulsion on the satellite.
 After the primary spacecraft separates, the launch vehicle's final stage can, where host
 capability and mission rules permit, continue as a temporary controlled orbital delivery platform.
 The host performs the coarse orbital repositioning and VOLLEY produces the fine, individually
-commanded release condition for each secondary satellite. The stage then passivates and re-enters.
+commanded release condition for each secondary satellite. The mission must also account for
+passivation, disposal and contingency reserves; no provider mission is approved here.
 
 The mission has been that since [ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md) in 2023.
 What has changed across the generations is how much of the deployment machinery VOLLEY carries
-itself. Gen5 is the self-contained electromagnetic implementation; Gen6 turns the stage's own
-structure and length into part of the machine. The mission is the same and the integration
-differs, and [`docs/LINEAGE.md`](docs/LINEAGE.md) keeps the two apart.
+itself. Gen5 is the frozen self-contained electromagnetic implementation. The earlier gas-Gen6
+study used a long stage-integrated guide; the current calculation reference is an independent
+motor-charged retained release cell. Host support and services must be charged to installed burden.
+[`docs/LINEAGE.md`](docs/LINEAGE.md) keeps the configurations apart.
 
 
 ---
 
 ## 1. What VOLLEY asks
 
-A CubeSat flown as a rideshare secondary inherits the primary customer's orbit. The spring that
-ejects it adds 1 to 2 m/s. That is a real change in orbital energy, and at 2.5 m/s it extends
-orbital lifetime by 8.2 %, but it is sized for separation, it is two orders of magnitude short of
-what commanded orbit shaping needs, and it is the same value for every satellite in the manifest.
-Of more than 4,800 nanosatellites and CubeSats catalogued as of January 2026, on the order of 222
-carry a propulsion system; the rest stay where they were dropped.
+A rideshare spacecraft begins from the host's orbital state plus its relative release condition.
+Conventional springs already change orbital energy. Different springs, preload, payload mass and
+release timing can produce different departure conditions, so they belong in a competent baseline.
 
-The question is what it costs to give each of them a commanded departure velocity without putting
-anything on the satellite.
+I ask whether individually controlled release velocity, direction and timing earn their installed
+mass, energy and operating burden for a declared mission. Keeping the spacecraft mechanically and
+electrically unmodified is the objective; the actual interfaces still need to establish it.
 
 ## 2. Gen5, the analysed baseline
 
@@ -71,18 +74,16 @@ random-vibration spectrum whose g<sub>rms</sub> is not a quasi-static equivalent
 ([P98](OPEN_PROBLEMS.md)). Whether any given satellite tolerates 10.07 g is payload-specific and
 has not been established.
 
-## 3. What Gen5 demonstrated
+## 3. What Gen5 modelled
 
-A commanded, per-satellite change in orbital energy, on a satellite that is never modified
-mechanically or electrically, from a stage that was going to be discarded. A spring's designed
-differential between satellites is exactly zero, which is categorical rather than a ratio, and no
-mass correction touches it. One maximum-velocity shot gives +60.2 % of orbital life against a
-2.5 m/s spring's +8.2 %, because lifetime extension is superlinear in delta-v.
+The frozen model computes a commanded release and its orbital consequences under declared host,
+payload and environmental assumptions. Its lifetime comparisons belong to those cases; they do
+not establish a universal advantage over a selected spring, host manoeuvres or payload propulsion.
+No hardware demonstration or payload/provider compatibility follows from the numerical result.
 
-It also demonstrated a method. 78 run sheets cover 73 analyses across A1 to A76 (A3, A26 and A60
-were numbered and never written), each with its acceptance bands committed before the script that
-produces the number existed. That is checkable, because the band commit touches no script. No band
-has ever been widened after a result was known.
+The historical A-series has 78 run sheets covering 73 analyses across A1 to A76 (A3, A26 and A60
+were numbered and never written). Later mission/reference studies extend that record. The working
+rule is to commit acceptance criteria before execution and retain failures with their configuration.
 
 ## 4. What Gen5 lost
 
@@ -124,19 +125,22 @@ be optimised into its own mass target. On 2026-08-14
 [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) changed the target, to deleting the
 subsystems rather than shrinking them.
 
-## 7. Current design direction, Gen6
+## 7. Current calculation reference, Gen6
 
-The payload is accelerated directly, by cold gas, along a rail a spent upper stage already
-provides. There is no mover, no stator carrying the shot, no pulse-power chain, no brake and no
-return stroke. 29.75 kg is deleted and 43.33 kg becomes stage structure, while 11.45 kg of
-containment and a sized gas store remain. A short trim stator that would correct the velocity the
-gas produces is sized at 144.01 mm and suspended by
-[ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md): at the specified 17.8 N seal it
-may not be needed at all, and [P67](OPEN_PROBLEMS.md) decides.
+I carry forward independent retained cells with a motor-charged mechanical accumulator,
+independent latch, short guided pusher and local catcher. The historical gas guide remains a
+comparator with its contact/exit-state failures; its trim work does not define the current queue.
 
-> Gen6 has not inherited Gen5's evidence, and nothing on this page transfers to it. There is no
-> FEA, no circuit model, no CFD and no second CAD implementation. Its release mechanism does not
-> exist, and no launch provider has been approached about lending a stage.
+[S4](docs/MANIFEST_TIMING.md) retained 100 two-payload campaign cases, 44 accepted. The best tested
+fine-grid BOLLEY, Gen5 and historical gas authority screens tie at 2.777987 kg ideal host fuel and
+a 4.569852 m/s first release. That is a bounded sampled result, not a requirement or global optimum.
+[S6](docs/COMBINED_RELEASE_ERRORS.md) adds 512 conditional combined-error corners; it still omits
+host-error propagation through subsequent manoeuvres. [P92-S2](docs/REFERENCE_CELL_MECHANICS.md)
+finds 48 of 144 linear-spring/pusher cases inside its analytical acceleration/contact screen.
+
+P92, P113 and E5 remain open. Actual components, installed burden, finite-host cell dynamics,
+repeatability, shock/tip-off, catcher behaviour and provider accommodation remain unclosed.
+The current reference inherits no hardware evidence from Gen5.
 
 ## 8. Evidence boundary
 
@@ -155,7 +159,7 @@ may not be needed at all, and [P67](OPEN_PROBLEMS.md) decides.
 | | |
 |---|---|
 | The whole Phase I case on one page | [`docs/GEN5_CLOSURE.md`](docs/GEN5_CLOSURE.md) |
-| Why the system exists, and what service it offers | [`docs/CONCEPT.md`](docs/CONCEPT.md) |
+| Current mission and evidence route | [`README.md`](README.md), [`docs/REFERENCE_VERIFICATION_MATRIX.md`](docs/REFERENCE_VERIFICATION_MATRIX.md) |
 | Current programme disposition | [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) |
 | What is broken | [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md), [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) |
 | The manuscript | [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper), an IEEE-formatted technical manuscript, 18 pages |

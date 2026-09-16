@@ -8,6 +8,13 @@ VOLLEY investigates provider-hosted control of spacecraft departure conditions. 
 
 P113-S1 through S4 now provide bounded mission screens. S4 couples two payload deliveries through one evolving host state and found that, in its best tested fine-grid campaign, the BOLLEY, Gen5 and historical gas-Gen6 authority screens all used the same 4.569852 m/s first release. That is not a product requirement or global optimum. It is evidence that additional release authority did not improve that tested campaign. Clearing/settling, release/navigation uncertainty, host attitude recovery, installed burden, replenishment and complete-manifest effects remain open.
 
+[S5](OPERATIONAL_UNCERTAINTY.md) adds local sensitivities. [S6](COMBINED_RELEASE_ERRORS.md)
+now combines six errors in 512 conditional event corners. Its illustrative base box passes both
+events, while doubling the widths fails 20 of 64 first-event corners. Each event still begins at
+its nominal host state. [P92-S2](REFERENCE_CELL_MECHANICS.md) adds the 144-case mechanical screen,
+with 48 feasible analytical cases and no selected hardware. The [review and restart record](REVIEW_20260916.md)
+lists completed work, exact remaining tasks and reproduction commands.
+
 ## Gen5
 
 The [frozen baseline](BASELINE.md) is a modelled electromagnetic deployer, with no hardware validation. [GEN5_CLOSURE.md](GEN5_CLOSURE.md) records the Phase I freeze and its failed kill criteria. It does not mean all computer work is complete.
