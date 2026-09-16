@@ -1,0 +1,36 @@
+name: operational uncertainty capture
+
+on:
+  push:
+    paths:
+      - analysis/operational_uncertainty.py
+      - validation/P113_S5_operational_uncertainty.md
+      - tests/test_operational_uncertainty.py
+      - .github/workflows/operational_uncertainty_capture.yml
+  workflow_dispatch:
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git fetch -q origin "${{ github.sha }}"
+          git checkout -q --detach "${{ github.sha }}"
+      - name: install
+        run: |
+          python3 -m pip install --upgrade -q pip
+          python3 -m pip install -q -r requirements.txt -r requirements-dev.txt
+      - name: generate
+        run: python3 analysis/operational_uncertainty.py
+      - name: focused checks
+        run: python3 -m pytest tests/test_operational_uncertainty.py -q
+      - name: capture generated evidence
+        run: |
+          tar -czf /tmp/p113_s5_outputs.tgz analysis/results/operational_uncertainty.json docs/OPERATIONAL_UNCERTAINTY.md figures/operational_uncertainty.svg
+          echo P113_S5_BASE64_BEGIN
+          base64 -w 0 /tmp/p113_s5_outputs.tgz
+          echo
+          echo P113_S5_BASE64_END
