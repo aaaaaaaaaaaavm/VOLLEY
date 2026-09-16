@@ -1,0 +1,31 @@
+name: regenerate BSX review
+
+on:
+  push:
+    paths:
+      - .github/workflows/bsx_regen.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git fetch -q origin main
+          git checkout -q -B main origin/main
+      - name: regenerate
+        run: python3 tools/make_bsx_review.py
+      - name: publish
+        run: |
+          git config user.name "Adityavardhan Mishra"
+          git config user.email "adityavardhanmishr@gmail.com"
+          git add docs/BSX_REVIEW.md
+          git diff --cached --check
+          git commit -m "Regenerate BSX review from live register"
+          git push origin HEAD:main
