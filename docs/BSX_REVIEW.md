@@ -1,28 +1,30 @@
 # BSX review and Gen6 handoff
 
-Reviewed 2026-09-06. I use this as the entry point for engineering conversations. The tables below are generated from the live register, not hand-maintained closure counts.
+Reviewed 2026-09-16. I use this as an engineering-conversation entry point. The live-item tables are generated from the register; configuration-specific history is retained rather than rewritten as current hardware.
 
 ## What I can defend
 
 VOLLEY Gen5 is a frozen computational baseline with declared failures. Nothing has been built, fired, measured, qualified or flown. The [baseline](BASELINE.md) supplies the operating numbers and [Gen5 closure](GEN5_CLOSURE.md) names their evidence. A passing software gate establishes internal consistency, not flight readiness.
 
-The mission remains post-primary upper-stage deployment: provider-authorised stage manoeuvres do the coarse placement; the dispenser sets each satellite's release condition. Host propulsion reserve, restart capability, attitude control and disposal authority require provider data.
+The programme remains provider-hosted control of spacecraft departure conditions: provider-authorised host manoeuvres can supply coarse orbital placement and the deployment system supplies the relative release condition. Host propulsion reserve, restart capability, attitude control, navigation uncertainty, interface limits and disposal authority require provider data.
 
-## Gen6 preparation
+## Current Gen6 preparation
 
-Gen6 already exists as a stage-integrated cold-gas design study. It is not a blank next generation and does not inherit Gen5 validation. Before a new architecture freeze:
+The clean-sheet reference carried forward for the next calculations is **independent retained cells with a motor-charged mechanical accumulator, independent latch, short guided pusher and local catcher**. It is not selected flight hardware. P92/P113 remain open.
 
-1. Resolve P92's secondary/tube architecture decision using A72-A74, then freeze revised requirements before implementing its successor. Do not advertise the suspended trim stage as available.
-2. Resolve the guided-contact model and tolerance questions P103/P108 against the corrected continuous tube. Keep P109's withdrawn jam result withdrawn; do not cite the original tip-off magnitude as established.
-3. Complete the reliability, backup-ejection, fill-window, pressure-vessel, sensing, materials and inhibit work named below. Retain failed bands and distinguish a calculation from component selection and measurement.
-4. Close the independent CAD check against the chosen geometry, then regenerate dependent evidence and both companions as one coherent batch.
-5. Freeze only with the remaining exceptions named, and use the closure gate to test any assertion that computation is finished.
+1. Turn S1-S4 into architecture-driving uncertainty and clearing/settling requirements before assigning release-cell tolerances.
+2. Quantify installed burden and failure topology for independent cells, small banks and the shared magazine/path using one system boundary.
+3. Try to falsify the reference before detailed CAD: accumulator force-displacement, preload sensitivity, latch shock, pusher friction/guidance, tip-off, catcher load and cycle life.
+4. Carry the surviving reference into a dated P92 configuration decision, then engineer one real cell and scale 2/4/12-cell arrangements.
+5. Keep the approximately 8 m gas guide, A72-A74 trim/tube conflict, P103/P108 contact work and pressure-system studies as historical gas-Gen6 evidence. Do not transfer their geometry or failure magnitudes to the compact reference without a new validation path.
 
-## Questions for BSX
+The generated live-item table below still reproduces each register entry's recorded next-step wording. P92's legacy row therefore describes the historical gas trim/tube decision that produced A72-A74; the current programme-level P92 path is the clean-sheet reference and its explicit falsifiers in [GEN6_REFERENCE_ARCHITECTURE.md](GEN6_REFERENCE_ARCHITECTURE.md). The register status remains LIVE until its native closure condition is legitimately dispositioned.
 
-- Launch provider: available post-primary propulsion and restart windows, interface loads/envelope, stage mass properties, attitude authority, power, command access, and disposal/passivation constraints.
-- Mechanisms or test team: review the guide/contact geometry, seal-friction measurement at temperature, tip-off measurement and retention/release load paths.
-- Payload team: actual magnetic sensitivity, allowed release rate/acceleration, contamination limits and mechanical interfaces. Unmodified is a design objective; compatibility is not demonstrated.
+## Questions for BSX / host review
+
+- Launch provider: retained post-primary body, usable envelope/mounts/keep-outs, remaining propulsion and restart windows, stage mass properties, attitude authority, navigation uncertainty, power/energy, thermal limits, command access, and disposal/passivation constraints.
+- Mechanisms or test team: review independent retention, accumulator/latch/pusher/catcher load paths, release repeatability, shock/tip-off measurement and the smallest useful coupon before a flight-like cell is drawn.
+- Payload team: actual retention, acceleration, shock, tip-off, contamination and magnetic limits. Unmodified is a design objective; compatibility is not demonstrated.
 
 ## Remaining work by scope
 
@@ -72,7 +74,7 @@ Gen6 already exists as a stage-integrated cold-gas design study. It is not a bla
 |---|---|---|
 | [P14](../OPEN_PROBLEMS.md) | DECISION | keep Gen4 or declare Gen5 the only generation -- D8 |
 | [P18](../OPEN_PROBLEMS.md) | COMPUTATION | model the four effects, or bound them and say so |
-| [P30](../OPEN_PROBLEMS.md) | DECISION | the band stands as declared; what changes is what is claimed from it |
+| [P30](../OPEN_PROBLEMS.md) | DECISION | the band stands as declared; what changes is what is claimed |
 | [P32](../OPEN_PROBLEMS.md) | DECISION | D8 |
 | [P33](../OPEN_PROBLEMS.md) | COMPUTATION | compute the winding inductance |
 | [P34](../OPEN_PROBLEMS.md) | COMPUTATION | a magnetically screened cell, or a declared exclusion |
