@@ -100,6 +100,8 @@ jobs:
         run: python3 analysis/terminal_timing.py --check
       - name: manifest timing freshness
         run: python3 analysis/manifest_timing.py --check
+      - name: operational uncertainty freshness
+        run: python3 analysis/operational_uncertainty.py --check
       - name: Gen6 reference freshness
         run: python3 analysis/reference_architecture.py --check
 
