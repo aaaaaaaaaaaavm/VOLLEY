@@ -1,0 +1,1389 @@
+{
+  "events": [
+    {
+      "event_index": 0,
+      "nominal": {
+        "host_state": [
+          1538765.5802003467,
+          6652492.418632259,
+          -7445.388491676498,
+          1726.1381687693822
+        ],
+        "mass_after_second_kg": 317.3356104803461,
+        "payload_state": [
+          1538765.5802003467,
+          6652492.418632259,
+          -7443.889828005313,
+          1721.821045305759
+        ],
+        "position_error_m": 6.372253642320968e-05,
+        "radial_basis": [
+          0.2253565767939845,
+          0.9742763536572655
+        ],
+        "relative_velocity_m_s": [
+          1.4986636711860115,
+          -4.317123463623221
+        ],
+        "release_time_s": 1200.0,
+        "reproduction_position_m": 2.869017757614956e-08,
+        "reproduction_velocity_m_s": 3.5876078842768076e-11,
+        "retained_mass_kg": 313.3356104803461,
+        "tangential_basis": [
+          -0.9742763536572655,
+          0.2253565767939845
+        ],
+        "target": "phase_5km",
+        "target_terminal_state": [
+          -4311467.266960678,
+          -5294780.911113852,
+          5924.661508123972,
+          -4824.3703731878795
+        ],
+        "terminal_error_vector": [
+          -6.145425140857697e-05,
+          1.6850419342517853e-05,
+          -6.90897650201805e-08,
+          -3.843888407573104e-08
+        ],
+        "terminal_state": [
+          -4311467.267022132,
+          -5294780.911097001,
+          5924.661508054883,
+          -4824.370373226318
+        ],
+        "velocity_error_m_s": 7.90629081145593e-08
+      },
+      "sensitivities": [
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "radial",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 2.166976571455919e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 3.5935305117120017e-09,
+            "status": "CHECKED"
+          },
+          "family": "common_position",
+          "half_step_position_sensitivity_norm_per_unit": 7.738686739094356,
+          "half_step_velocity_sensitivity_norm_per_unit": 0.008782715735962916,
+          "local_linear_allowance": 1.1385909863938617,
+          "maximum_momentum_residual_kg_m_s": null,
+          "minus": {
+            "amount": -1.0,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              1538765.35484377,
+              6652491.444355905,
+              -7443.889828005313,
+              1721.821045305759
+            ],
+            "position_error_m": 7.738625022399438,
+            "terminal_error_vector": [
+              7.393943409435451,
+              -2.2838384564965963,
+              0.007027704621577868,
+              0.005267462584015448
+            ],
+            "terminal_state": [
+              -4311459.873017268,
+              -5294783.194952308,
+              5924.668535828594,
+              -4824.3651057252955
+            ],
+            "velocity_error_m_s": 0.008782641648282687
+          },
+          "momentum_passed": true,
+          "name": "common_position_radial_m",
+          "plus": {
+            "amount": 1.0,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              1538765.8055569234,
+              6652493.392908612,
+              -7443.889828005313,
+              1721.821045305759
+            ],
+            "position_error_m": 7.738748422250336,
+            "terminal_error_vector": [
+              -7.394060640595853,
+              2.283877051435411,
+              -0.007027842082607094,
+              -0.005267526140414702
+            ],
+            "terminal_state": [
+              -4311474.661021318,
+              -5294778.6272368,
+              5924.65448028189,
+              -4824.37564071402
+            ],
+            "velocity_error_m_s": 0.00878278976054963
+          },
+          "position_allowance": 1.29220068420853,
+          "position_margin_m": 9.999936277463577,
+          "position_sensitivity_norm_per_unit": 7.738686722324803,
+          "position_sensitivity_vector_per_unit": [
+            -7.394002025015652,
+            2.2838577539660037
+          ],
+          "step": 1.0,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 5.143137052334903e-07,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 9.751551414243282e-07,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 1.1385909863938617,
+          "velocity_margin_m_s": 0.009999920937091886,
+          "velocity_sensitivity_norm_per_unit": 0.008782715704401959,
+          "velocity_sensitivity_vector_per_unit": [
+            -0.007027773352092481,
+            -0.005267494362215075
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "tangential",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 6.4692891180381616e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 1.1549765734145187e-08,
+            "status": "CHECKED"
+          },
+          "family": "common_position",
+          "half_step_position_sensitivity_norm_per_unit": 2.830051511304174,
+          "half_step_velocity_sensitivity_norm_per_unit": 0.002179987626290389,
+          "local_linear_allowance": 3.5334820946590404,
+          "maximum_momentum_residual_kg_m_s": null,
+          "minus": {
+            "amount": -1.0,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              1538766.5544767003,
+              6652492.193275682,
+              -7443.889828005313,
+              1721.821045305759
+            ],
+            "position_error_m": 2.829989464481145,
+            "terminal_error_vector": [
+              2.445824577473104,
+              -1.4236511178314686,
+              0.001722953802527627,
+              0.0013354524298847537
+            ],
+            "terminal_state": [
+              -4311464.8211361,
+              -5294782.33476497,
+              5924.663231077775,
+              -4824.36903773545
+            ],
+            "velocity_error_m_s": 0.002179908942623407
+          },
+          "momentum_passed": true,
+          "name": "common_position_tangential_m",
+          "plus": {
+            "amount": 1.0,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              1538764.605923993,
+              6652492.643988836,
+              -7443.889828005313,
+              1721.821045305759
+            ],
+            "position_error_m": 2.830113521602901,
+            "terminal_error_vector": [
+              -2.4459480764344335,
+              1.4236855525523424,
+              -0.001723093550936028,
+              -0.0013355289256651304
+            ],
+            "terminal_state": [
+              -4311469.712908754,
+              -5294779.487428299,
+              5924.6597850304215,
+              -4824.371708716805
+            ],
+            "velocity_error_m_s": 0.002180066259673221
+          },
+          "position_allowance": 3.5334820946590404,
+          "position_margin_m": 9.999936277463577,
+          "position_sensitivity_norm_per_unit": 2.8300514929957528,
+          "position_sensitivity_vector_per_unit": [
+            -2.4458863269537687,
+            1.4236683351919055
+          ],
+          "step": 1.0,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 3.1076780507407176e-07,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 4.61471654361661e-07,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 4.587145785595654,
+          "velocity_margin_m_s": 0.009999920937091886,
+          "velocity_sensitivity_norm_per_unit": 0.0021799876011120425,
+          "velocity_sensitivity_vector_per_unit": [
+            -0.0017230236767318274,
+            -0.001335490677774942
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "radial",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 2.2002724590095416e-10,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 1.9002595502166197e-09,
+            "status": "CHECKED"
+          },
+          "family": "common_velocity",
+          "half_step_position_sensitivity_norm_per_unit": 3414.8041119301656,
+          "half_step_velocity_sensitivity_norm_per_unit": 2.9310644906488115,
+          "local_linear_allowance": 0.0029284070042927077,
+          "maximum_momentum_residual_kg_m_s": null,
+          "minus": {
+            "amount": -0.001,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7443.89005336189,
+              1721.8200710294054
+            ],
+            "position_error_m": 3.414742890960649,
+            "terminal_error_vector": [
+              2.8787855245172977,
+              -1.8365900237113237,
+              0.0021711969729949487,
+              0.001968905597095727
+            ],
+            "terminal_state": [
+              -4311464.388175153,
+              -5294782.747703875,
+              5924.663679320945,
+              -4824.368404282282
+            ],
+            "velocity_error_m_s": 0.002930987128224433
+          },
+          "momentum_passed": true,
+          "name": "common_velocity_radial_m_s",
+          "plus": {
+            "amount": 0.001,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7443.8896026487355,
+              1721.8220195821127
+            ],
+            "position_error_m": 3.4148653314961166,
+            "terminal_error_vector": [
+              -2.8789085391908884,
+              1.8366248542442918,
+              -0.0021713369314966258,
+              -0.001968981604477449
+            ],
+            "terminal_state": [
+              -4311470.145869217,
+              -5294779.074488997,
+              5924.659336787041,
+              -4824.372342169484
+            ],
+            "velocity_error_m_s": 0.002931141864334064
+          },
+          "position_allowance": 0.0029284070042927077,
+          "position_margin_m": 9.999936277463577,
+          "position_sensitivity_norm_per_unit": 3414.8041111788157,
+          "position_sensitivity_vector_per_unit": [
+            -2878.847031854093,
+            1836.6074389778078
+          ],
+          "step": 0.001,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 2.0414005159420367e-07,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 2.5012751446757496e-07,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 0.003411702796029537,
+          "velocity_margin_m_s": 0.009999920937091886,
+          "velocity_sensitivity_norm_per_unit": 2.9310644962185948,
+          "velocity_sensitivity_vector_per_unit": [
+            -2.1712669522457873,
+            -1.968943600786588
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "tangential",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 4.951655840150266e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 8.682833159200377e-09,
+            "status": "CHECKED"
+          },
+          "family": "common_velocity",
+          "half_step_position_sensitivity_norm_per_unit": 6569.086580570528,
+          "half_step_velocity_sensitivity_norm_per_unit": 7.700995018228898,
+          "local_linear_allowance": 0.0012985232202583684,
+          "maximum_momentum_residual_kg_m_s": null,
+          "minus": {
+            "amount": -0.001,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7443.888853728959,
+              1721.8208199491824
+            ],
+            "position_error_m": 6.569024531268836,
+            "terminal_error_vector": [
+              6.504027156159282,
+              -0.9217993514612317,
+              0.0066986194033233915,
+              0.003799033071118174
+            ],
+            "terminal_state": [
+              -4311460.7629335215,
+              -5294781.832913203,
+              5924.668206743376,
+              -4824.366574154808
+            ],
+            "velocity_error_m_s": 0.007700919048141606
+          },
+          "momentum_passed": true,
+          "name": "common_velocity_tangential_m_s",
+          "plus": {
+            "amount": 0.001,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7443.890802281667,
+              1721.8212706623358
+            ],
+            "position_error_m": 6.569148694942054,
+            "terminal_error_vector": [
+              -6.504147388041019,
+              0.9218358481302857,
+              -0.0066987559948756825,
+              -0.0037991004919604165
+            ],
+            "terminal_state": [
+              -4311473.771108066,
+              -5294779.989278004,
+              5924.654809367978,
+              -4824.3741722883715
+            ],
+            "velocity_error_m_s": 0.00770107112205158
+          },
+          "position_allowance": 0.0015222719483594987,
+          "position_margin_m": 9.999936277463577,
+          "position_sensitivity_norm_per_unit": 6569.086613098384,
+          "position_sensitivity_vector_per_unit": [
+            -6504.087272100151,
+            921.8175997957587
+          ],
+          "step": 0.001,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 3.4370179680017243e-07,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 7.851713414352828e-07,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 0.0012985232202583684,
+          "velocity_margin_m_s": 0.009999920937091886,
+          "velocity_sensitivity_norm_per_unit": 7.700995085095354,
+          "velocity_sensitivity_vector_per_unit": [
+            -6.698687699099537,
+            -3.7990667815392953
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "release",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 6.625173264440032e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 1.6707333176514316e-08,
+            "status": "CHECKED"
+          },
+          "family": "release_speed",
+          "half_step_position_sensitivity_norm_per_unit": 6165.529810271848,
+          "half_step_velocity_sensitivity_norm_per_unit": 6.4610856393594425,
+          "local_linear_allowance": 0.0015477152491374926,
+          "maximum_momentum_residual_kg_m_s": 1.1641532182693481e-10,
+          "minus": {
+            "amount": -0.001,
+            "host_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7445.388487542758,
+              1726.138156861528
+            ],
+            "momentum_residual_kg_m_s": 1.1641532182693481e-10,
+            "payload_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7443.890151817346,
+              1721.8219780944532
+            ],
+            "position_error_m": 6.1655931074762975,
+            "terminal_error_vector": [
+              -5.825410546734929,
+              2.0196857005357742,
+              -0.005336309738595446,
+              -0.00364286002877634
+            ],
+            "terminal_state": [
+              -4311473.092371224,
+              -5294778.891428151,
+              5924.656171814234,
+              -4824.374016047908
+            ],
+            "velocity_error_m_s": 0.006461163271074718
+          },
+          "momentum_passed": true,
+          "name": "release_speed_m_s",
+          "plus": {
+            "amount": 0.001,
+            "host_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7445.388495810239,
+              1726.1381806772363
+            ],
+            "momentum_residual_kg_m_s": 0.0,
+            "payload_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7443.889504193279,
+              1721.8201125170644
+            ],
+            "position_error_m": 6.165466594763771,
+            "terminal_error_vector": [
+              5.825289414264262,
+              -2.019648873247206,
+              0.005336169969268667,
+              0.0036427897721296176
+            ],
+            "terminal_state": [
+              -4311461.441671263,
+              -5294782.930762725,
+              5924.666844293942,
+              -4824.366730398107
+            ],
+            "velocity_error_m_s": 0.006461008223555896
+          },
+          "position_allowance": 0.0016219102849121337,
+          "position_margin_m": 9.999936277463577,
+          "position_sensitivity_norm_per_unit": 6165.5298511195515,
+          "position_sensitivity_vector_per_unit": [
+            5825.349980499595,
+            -2019.6672868914902
+          ],
+          "step": 0.001,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 1.0605686641553663e-07,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 3.745552942660365e-07,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 0.0015477152491374926,
+          "velocity_margin_m_s": 0.009999920937091886,
+          "velocity_sensitivity_norm_per_unit": 6.461085747306955,
+          "velocity_sensitivity_vector_per_unit": [
+            5.336239853932057,
+            3.642824900452979
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "release",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 7.623228370855151e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 7.971135696022313e-09,
+            "status": "CHECKED"
+          },
+          "family": "release_direction",
+          "half_step_position_sensitivity_norm_per_unit": 17949.042593444286,
+          "half_step_velocity_sensitivity_norm_per_unit": 22.596502480744622,
+          "local_linear_allowance": 0.00044254286809757145,
+          "maximum_momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "minus": {
+            "amount": -0.00017453292519943296,
+            "host_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7445.38848217863,
+              1726.138172065582
+            ],
+            "momentum_residual_kg_m_s": 4.656612873077393e-10,
+            "payload_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7443.890572010452,
+              1721.820787101559
+            ],
+            "position_error_m": 3.1331571798498343,
+            "terminal_error_vector": [
+              -3.129301725886762,
+              -0.15538539830595255,
+              -0.0035556829679990187,
+              -0.0017073562121368013
+            ],
+            "terminal_state": [
+              -4311470.396262404,
+              -5294781.06649925,
+              5924.657952441004,
+              -4824.372080544092
+            ],
+            "velocity_error_m_s": 0.00394435629780582
+          },
+          "momentum_passed": true,
+          "name": "release_direction_rad",
+          "plus": {
+            "amount": 0.00017453292519943296,
+            "host_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7445.388501173792,
+              1726.1381654715246
+            ],
+            "momentum_residual_kg_m_s": 4.656612873077393e-10,
+            "payload_state": [
+              1538765.5802003467,
+              6652492.418632259,
+              -7443.88908404525,
+              1721.8213036398079
+            ],
+            "position_error_m": 3.1322405995292297,
+            "terminal_error_vector": [
+              3.1283683385699987,
+              0.15570071153342724,
+              0.003554802789039968,
+              0.0017067743656298262
+            ],
+            "terminal_state": [
+              -4311464.138592339,
+              -5294780.75541314,
+              5924.6650629267615,
+              -4824.368666413514
+            ],
+            "velocity_error_m_s": 0.0039433109951077195
+          },
+          "position_allowance": 0.0005571292341435389,
+          "position_margin_m": 9.999936277463577,
+          "position_sensitivity_norm_per_unit": 17949.042456614636,
+          "position_sensitivity_vector_per_unit": [
+            17926.90421393651,
+            891.1960579469807
+          ],
+          "step": 0.00017453292519943296,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 0.00025390110829801927,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 0.00022499991512656744,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 0.00044254286809757145,
+          "velocity_margin_m_s": 0.009999920937091886,
+          "velocity_sensitivity_norm_per_unit": 22.596502300624834,
+          "velocity_sensitivity_vector_per_unit": [
+            20.3700412083109,
+            9.780763640629452
+          ],
+          "verification_passed": true
+        }
+      ],
+      "verification_passed": true
+    },
+    {
+      "event_index": 1,
+      "nominal": {
+        "host_state": [
+          -6665113.081230565,
+          -1483146.1509838481,
+          1649.742912116979,
+          -7463.702493426707
+        ],
+        "mass_after_second_kg": 311.22201267078964,
+        "payload_state": [
+          -6665113.081230565,
+          -1483146.1509838481,
+          1659.5849873999175,
+          -7458.011876709207
+        ],
+        "position_error_m": 2.225556596568333e-06,
+        "radial_basis": [
+          -0.9761246854347775,
+          -0.21721095387861258
+        ],
+        "relative_velocity_m_s": [
+          9.84207528293852,
+          5.690616717500386
+        ],
+        "release_time_s": 3000.0,
+        "reproduction_position_m": 2.7939677238464355e-09,
+        "reproduction_velocity_m_s": 8.580155856231252e-12,
+        "retained_mass_kg": 307.22201267078964,
+        "tangential_basis": [
+          0.21721095387861258,
+          -0.9761246854347775
+        ],
+        "target": "phase_25km",
+        "target_terminal_state": [
+          -4295940.081136704,
+          -5307386.711937633,
+          5938.766927058867,
+          -4806.99603386674
+        ],
+        "terminal_error_vector": [
+          -1.9120052456855774e-06,
+          -1.1390075087547302e-06,
+          -7.152266334742308e-09,
+          -4.973117029294372e-09
+        ],
+        "terminal_state": [
+          -4295940.081138616,
+          -5307386.711938772,
+          5938.766927051714,
+          -4806.996033871713
+        ],
+        "velocity_error_m_s": 8.711303387561808e-09
+      },
+      "sensitivities": [
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "radial",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 1.0270523140406526e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 6.415665902131738e-10,
+            "status": "CHECKED"
+          },
+          "family": "common_position",
+          "half_step_position_sensitivity_norm_per_unit": 1.4401654584595949,
+          "half_step_velocity_sensitivity_norm_per_unit": 0.0015764890678420056,
+          "local_linear_allowance": 6.343203696280337,
+          "maximum_momentum_residual_kg_m_s": null,
+          "minus": {
+            "amount": -1.0,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              -6665112.10510588,
+              -1483145.9337728943,
+              1659.5849873999175,
+              -7458.011876709207
+            ],
+            "position_error_m": 1.4401633858256626,
+            "terminal_error_vector": [
+              1.3642073795199394,
+              0.46152876783162355,
+              0.0011687716405504034,
+              0.0010579530562608852
+            ],
+            "terminal_state": [
+              -4295938.716929325,
+              -5307386.2504088655,
+              5938.768095830507,
+              -4806.994975913683
+            ],
+            "velocity_error_m_s": 0.0015764808330603417
+          },
+          "momentum_passed": true,
+          "name": "common_position_radial_m",
+          "plus": {
+            "amount": 1.0,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              -6665114.05735525,
+              -1483146.368194802,
+              1659.5849873999175,
+              -7458.011876709207
+            ],
+            "position_error_m": 1.4401675281354025,
+            "terminal_error_vector": [
+              -1.364211030304432,
+              -0.4615309024229646,
+              -0.001168785447589471,
+              -0.0010579623476587585
+            ],
+            "terminal_state": [
+              -4295941.445347735,
+              -5307387.173468536,
+              5938.765758273419,
+              -4806.997091829087
+            ],
+            "velocity_error_m_s": 0.0015764973046474109
+          },
+          "position_allowance": 6.943645069372759,
+          "position_margin_m": 9.999997774443404,
+          "position_sensitivity_norm_per_unit": 1.4401654569804696,
+          "position_sensitivity_vector_per_unit": [
+            -1.3642092049121857,
+            -0.46152983512729406
+          ],
+          "step": 1.0,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 1.4585324093213157e-07,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 5.127104931311962e-07,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 6.343203696280337,
+          "velocity_margin_m_s": 0.009999991288696613,
+          "velocity_sensitivity_norm_per_unit": 0.0015764890688534283,
+          "velocity_sensitivity_vector_per_unit": [
+            -0.0011687785440699372,
+            -0.0010579577019598219
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "tangential",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 2.115341895742531e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 2.03992625481959e-09,
+            "status": "CHECKED"
+          },
+          "family": "common_position",
+          "half_step_position_sensitivity_norm_per_unit": 0.8409773634399272,
+          "half_step_velocity_sensitivity_norm_per_unit": 0.0007372163100768102,
+          "local_linear_allowance": 11.890923858750378,
+          "maximum_momentum_residual_kg_m_s": null,
+          "minus": {
+            "amount": -1.0,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              -6665113.298441519,
+              -1483145.1748591627,
+              1659.5849873999175,
+              -7458.011876709207
+            ],
+            "position_error_m": 0.840976307398771,
+            "terminal_error_vector": [
+              -0.04851591866463423,
+              0.8395756995305419,
+              0.0006938253818589146,
+              -0.00024917220889619784
+            ],
+            "terminal_state": [
+              -4295940.129652623,
+              -5307385.872361934,
+              5938.767620884249,
+              -4806.996283038949
+            ],
+            "velocity_error_m_s": 0.000737211265647697
+          },
+          "momentum_passed": true,
+          "name": "common_position_tangential_m",
+          "plus": {
+            "amount": 1.0,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              -6665112.864019611,
+              -1483147.1271085336,
+              1659.5849873999175,
+              -7458.011876709207
+            ],
+            "position_error_m": 0.8409784159279302,
+            "terminal_error_vector": [
+              0.04851204715669155,
+              -0.839578035287559,
+              -0.0006938397527846973,
+              0.00024916205074987374
+            ],
+            "terminal_state": [
+              -4295940.032624657,
+              -5307387.551515669,
+              5938.766233219114,
+              -4806.995784704689
+            ],
+            "velocity_error_m_s": 0.0007372213575841469
+          },
+          "position_allowance": 11.890923858750378,
+          "position_margin_m": 9.999997774443404,
+          "position_sensitivity_norm_per_unit": 0.8409773616609726,
+          "position_sensitivity_vector_per_unit": [
+            0.04851398291066289,
+            -0.8395768674090505
+          ],
+          "step": 1.0,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 6.528811190001957e-08,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 1.2393775180704758e-08,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 13.564527983998989,
+          "velocity_margin_m_s": 0.009999991288696613,
+          "velocity_sensitivity_norm_per_unit": 0.0007372163115806771,
+          "velocity_sensitivity_vector_per_unit": [
+            -0.000693832567321806,
+            0.0002491671298230358
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "radial",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 2.551560770261655e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 2.836396246135374e-09,
+            "status": "CHECKED"
+          },
+          "family": "common_velocity",
+          "half_step_position_sensitivity_norm_per_unit": 677.8946134341352,
+          "half_step_velocity_sensitivity_norm_per_unit": 1.3667984548389602,
+          "local_linear_allowance": 0.0073163612979345784,
+          "maximum_momentum_residual_kg_m_s": null,
+          "minus": {
+            "amount": -0.001,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1659.585963524603,
+              -7458.011659498254
+            ],
+            "position_error_m": 0.6778924662672707,
+            "terminal_error_vector": [
+              0.6512869466096163,
+              0.18805187847465277,
+              0.001249213186383713,
+              0.0005545999611058505
+            ],
+            "terminal_state": [
+              -4295939.429849758,
+              -5307386.523885755,
+              5938.768176272053,
+              -4806.995479266779
+            ],
+            "velocity_error_m_s": 0.0013667899260287077
+          },
+          "momentum_passed": true,
+          "name": "common_velocity_radial_m_s",
+          "plus": {
+            "amount": 0.001,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1659.5840112752321,
+              -7458.012093920161
+            ],
+            "position_error_m": 0.6778967571420832,
+            "terminal_error_vector": [
+              -0.6512907585129142,
+              -0.1880541443824768,
+              -0.0012492274599935627,
+              -0.0005546098291233648
+            ],
+            "terminal_state": [
+              -4295940.732427463,
+              -5307386.899991778,
+              5938.765677831407,
+              -4806.996588476569
+            ],
+            "velocity_error_m_s": 0.0013668069758975539
+          },
+          "position_allowance": 0.014751552235088845,
+          "position_margin_m": 9.999997774443404,
+          "position_sensitivity_norm_per_unit": 677.8946117044459,
+          "position_sensitivity_vector_per_unit": [
+            -651.2888525612652,
+            -188.0530114285648
+          ],
+          "step": 0.001,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 2.2113525996632237e-08,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 4.3898625942658386e-08,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 0.0073163612979345784,
+          "velocity_margin_m_s": 0.009999991288696613,
+          "velocity_sensitivity_norm_per_unit": 1.3667984509621782,
+          "velocity_sensitivity_vector_per_unit": [
+            -1.2492203231886378,
+            -0.5546048951146076
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "tangential",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 3.5897419247194205e-10,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 5.437984390729094e-09,
+            "status": "CHECKED"
+          },
+          "family": "common_velocity",
+          "half_step_position_sensitivity_norm_per_unit": 574.4755541631381,
+          "half_step_velocity_sensitivity_norm_per_unit": 0.9556052846191307,
+          "local_linear_allowance": 0.010464562622277712,
+          "maximum_momentum_residual_kg_m_s": null,
+          "minus": {
+            "amount": -0.001,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1659.5847701889636,
+              -7458.010900584522
+            ],
+            "position_error_m": 0.5744747075480111,
+            "terminal_error_vector": [
+              -0.08529108669608831,
+              0.5681079300120473,
+              4.455393627722515e-05,
+              0.0009545607626932906
+            ],
+            "terminal_state": [
+              -4295940.166427791,
+              -5307386.143829703,
+              5938.766971612803,
+              -4806.995079305977
+            ],
+            "velocity_error_m_s": 0.0009555999701294426
+          },
+          "momentum_passed": true,
+          "name": "common_velocity_tangential_m_s",
+          "plus": {
+            "amount": 0.001,
+            "host_state": null,
+            "momentum_residual_kg_m_s": null,
+            "payload_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1659.5852046108714,
+              -7458.012852833893
+            ],
+            "position_error_m": 0.5744764011981371,
+            "terminal_error_vector": [
+              0.08528725244104862,
+              -0.5681102182716131,
+              -4.4568237171915825e-05,
+              -0.0009545707252982538
+            ],
+            "terminal_state": [
+              -4295939.995849452,
+              -5307387.280047852,
+              5938.7668824906295,
+              -4806.996988437465
+            ],
+            "velocity_error_m_s": 0.0009556105887656575
+          },
+          "position_allowance": 0.017407177204295604,
+          "position_margin_m": 9.999997774443404,
+          "position_sensitivity_norm_per_unit": 574.47555436936,
+          "position_sensitivity_vector_per_unit": [
+            85.28916956856847,
+            -568.1090741418302
+          ],
+          "step": 0.001,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 1.4987695932922753e-08,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 1.6935289680908715e-08,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 0.010464562622277712,
+          "velocity_margin_m_s": 0.009999991288696613,
+          "velocity_sensitivity_norm_per_unit": 0.9556052794225641,
+          "velocity_sensitivity_vector_per_unit": [
+            -0.04456108672457049,
+            -0.9545657439957722
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "release",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 3.846579325771746e-08,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 1.6938220761211208e-08,
+            "status": "CHECKED"
+          },
+          "family": "release_speed",
+          "half_step_position_sensitivity_norm_per_unit": 681.9501713890834,
+          "half_step_velocity_sensitivity_norm_per_unit": 1.436394946351322,
+          "local_linear_allowance": 0.00696186761411288,
+          "maximum_momentum_residual_kg_m_s": 5.820766091346741e-11,
+          "minus": {
+            "amount": -0.001,
+            "host_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1649.7429232435622,
+              -7463.702486993397
+            ],
+            "momentum_residual_kg_m_s": 5.820766091346741e-11,
+            "payload_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1659.5841328170902,
+              -7458.012370822814
+            ],
+            "position_error_m": 0.6819523615870595,
+            "terminal_error_vector": [
+              -0.5878898566588759,
+              -0.34560749400407076,
+              -0.0011893768078152789,
+              -0.0008053806986936252
+            ],
+            "terminal_state": [
+              -4295940.669026561,
+              -5307387.057545127,
+              5938.765737682059,
+              -4806.996839247438
+            ],
+            "velocity_error_m_s": 0.0014364035856252568
+          },
+          "momentum_passed": true,
+          "name": "release_speed_m_s",
+          "plus": {
+            "amount": 0.001,
+            "host_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1649.7429009903958,
+              -7463.702499860016
+            ],
+            "momentum_residual_kg_m_s": 5.820766091346741e-11,
+            "payload_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1659.5858419827448,
+              -7458.011382595599
+            ],
+            "position_error_m": 0.6819479287275989,
+            "terminal_error_vector": [
+              0.5878860466182232,
+              0.3456052280962467,
+              0.0011893625633092597,
+              0.0008053708315856056
+            ],
+            "terminal_state": [
+              -4295939.493250658,
+              -5307386.366332405,
+              5938.76811642143,
+              -4806.995228495908
+            ],
+            "velocity_error_m_s": 0.0014363862584174435
+          },
+          "position_allowance": 0.014663825274406765,
+          "position_margin_m": 9.999997774443404,
+          "position_sensitivity_norm_per_unit": 681.9501451573291,
+          "position_sensitivity_vector_per_unit": [
+            587.8879516385496,
+            345.60636105015874
+          ],
+          "step": 0.001,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 2.6657053598419254e-08,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 6.548956915650139e-08,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 0.00696186761411288,
+          "velocity_margin_m_s": 0.009999991288696613,
+          "velocity_sensitivity_norm_per_unit": 1.4363949220213472,
+          "velocity_sensitivity_vector_per_unit": [
+            1.1893696855622693,
+            0.8053757651396154
+          ],
+          "verification_passed": true
+        },
+        {
+          "allowance_label": "LOCAL_LINEAR_ALLOWANCE",
+          "axis": "release",
+          "convergence_position": {
+            "passed": true,
+            "relative_difference": 2.585988877577148e-09,
+            "status": "CHECKED"
+          },
+          "convergence_velocity": {
+            "passed": true,
+            "relative_difference": 4.8591458605877076e-09,
+            "status": "CHECKED"
+          },
+          "family": "release_direction",
+          "half_step_position_sensitivity_norm_per_unit": 6271.846166818552,
+          "half_step_velocity_sensitivity_norm_per_unit": 9.145025760360026,
+          "local_linear_allowance": 0.0010934896849207284,
+          "maximum_momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "minus": {
+            "amount": -0.00017453292519943296,
+            "host_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1649.7428993537421,
+              -7463.702471347898
+            ],
+            "momentum_residual_kg_m_s": 5.820766091346741e-11,
+            "payload_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1659.585967686754,
+              -7458.013572483251
+            ],
+            "position_error_m": 1.094645201265527,
+            "terminal_error_vector": [
+              0.5426471950486302,
+              -0.9506745701655746,
+              0.0006519610933537479,
+              -0.0014569319846486906
+            ],
+            "terminal_state": [
+              -4295939.538489509,
+              -5307387.6626122035,
+              5938.76757901996,
+              -4806.997490798724
+            ],
+            "velocity_error_m_s": 0.00159615289842151
+          },
+          "momentum_passed": true,
+          "name": "release_direction_rad",
+          "plus": {
+            "amount": 0.00017453292519943296,
+            "host_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1649.7429248840692,
+              -7463.702515503288
+            ],
+            "momentum_residual_kg_m_s": 0.0,
+            "payload_state": [
+              -6665113.081230565,
+              -1483146.1509838481,
+              1659.5840068171276,
+              -7458.0101811062805
+            ],
+            "position_error_m": 1.094642122086737,
+            "terminal_error_vector": [
+              -0.5428546229377389,
+              0.9505525939166546,
+              -0.0006523873389596702,
+              0.0014566430181730539
+            ],
+            "terminal_state": [
+              -4295940.623991327,
+              -5307385.761385039,
+              5938.766274671528,
+              -4806.9945772237215
+            ],
+            "velocity_error_m_s": 0.0015960633203063038
+          },
+          "position_allowance": 0.001594426510842799,
+          "position_margin_m": 9.999997774443404,
+          "position_sensitivity_norm_per_unit": 6271.846150599627,
+          "position_sensitivity_vector_per_unit": [
+            -3109.733641219851,
+            5446.614619876909
+          ],
+          "step": 0.00017453292519943296,
+          "symmetry_position": {
+            "passed": true,
+            "relative_difference": 2.737814808982798e-06,
+            "status": "CHECKED"
+          },
+          "symmetry_velocity": {
+            "passed": true,
+            "relative_difference": 5.409571012931243e-05,
+            "status": "CHECKED"
+          },
+          "velocity_allowance": 0.0010934896849207284,
+          "velocity_margin_m_s": 0.009999991288696613,
+          "velocity_sensitivity_norm_per_unit": 9.145025715923012,
+          "velocity_sensitivity_vector_per_unit": [
+            -3.7366830093032086,
+            8.346777547825143
+          ],
+          "verification_passed": true
+        }
+      ],
+      "verification_passed": true
+    }
+  ],
+  "interpretation": "local deterministic sensitivity only; allowances are not hardware requirements or probability statements",
+  "nominal_order": [
+    "phase_5km",
+    "phase_25km"
+  ],
+  "nominal_release_times_s": [
+    1200,
+    3000
+  ],
+  "nominal_selection": {
+    "candidate_index": 1,
+    "case_index": 32,
+    "fuel_kg": 2.7779873292103616,
+    "grid": "fine",
+    "order": "either",
+    "policy": "enumerated",
+    "screen": "bolley_screen",
+    "status": "BEST_TESTED"
+  },
+  "open_items": [
+    "P113",
+    "E5",
+    "P92"
+  ],
+  "perturbation_steps": {
+    "common_position_radial_m": 1.0,
+    "common_position_tangential_m": 1.0,
+    "common_velocity_radial_m_s": 0.001,
+    "common_velocity_tangential_m_s": 0.001,
+    "release_direction_rad": 0.00017453292519943296,
+    "release_speed_m_s": 0.001
+  },
+  "schedule_headroom": {
+    "between_release_marker_pass": {
+      "120": true,
+      "30": true,
+      "300": true,
+      "60": true
+    },
+    "interpretation": "timestamp headroom only; no slew, settling, thermal recovery or provider capability is modelled",
+    "intervals": {
+      "between_releases_s": 1800.0,
+      "first_release_to_terminal_s": 2400.0,
+      "second_release_to_terminal_s": 600.0
+    },
+    "label": "SCHEDULE_HEADROOM_ONLY",
+    "markers_s": [
+      30,
+      60,
+      120,
+      300
+    ]
+  },
+  "source_sha256": {
+    "analysis/operational_uncertainty.py": "2af32e0086b79dd97fdec3f58705edcd65cf3c0dbdd3d68b4ce3de62071ea15d",
+    "analysis/results/manifest_timing.json": "f84018cdec6109638d64e0485d5f4d74d932bb8939a4e0ac7002e3f62ece4797",
+    "validation/P113_S5_operational_uncertainty.md": "c5a5e76c090cc621d2048bc3ab08d8ce58765e54592ff6f3cf06e57fe3b73cc6"
+  },
+  "status": "LOCAL_DETERMINISTIC_SENSITIVITY",
+  "study": "P113-S5",
+  "terminal_bands": {
+    "position_m": 10,
+    "velocity_m_s": 0.01
+  },
+  "verification_passed": true
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#111827}.title{font-size:28px;font-weight:700}.label{font-size:12px}.axis{stroke:#94a3b8;stroke-width:1}.p{fill:#475569}.v{fill:#cbd5e1}</style>
+<text x="50" y="45" class="title">P113-S5 local terminal-state sensitivity</text>
+<text x="50" y="70" class="label">Bar lengths are normalized separately for position and velocity; no probability distribution is implied.</text>
+<line x1="330" y1="90" x2="330" y2="540" class="axis"/>
+<text x="50" y="112.6" class="label">E1 common_position_radial_m</text>
+<rect x="330" y="92.0" width="0.2" height="13.1" class="p"/>
+<rect x="330" y="107.8" width="0.2" height="13.1" class="v"/>
+<text x="50" y="150.1" class="label">E1 common_position_tangential_m</text>
+<rect x="330" y="129.5" width="0.1" height="13.1" class="p"/>
+<rect x="330" y="145.2" width="0.0" height="13.1" class="v"/>
+<text x="50" y="187.6" class="label">E1 common_velocity_radial_m_s</text>
+<rect x="330" y="167.0" width="75.3" height="13.1" class="p"/>
+<rect x="330" y="182.8" width="51.3" height="13.1" class="v"/>
+<text x="50" y="225.1" class="label">E1 common_velocity_tangential_m_s</text>
+<rect x="330" y="204.5" width="144.8" height="13.1" class="p"/>
+<rect x="330" y="220.2" width="134.8" height="13.1" class="v"/>
+<text x="50" y="262.6" class="label">E1 release_speed_m_s</text>
+<rect x="330" y="242.0" width="135.9" height="13.1" class="p"/>
+<rect x="330" y="257.8" width="113.1" height="13.1" class="v"/>
+<text x="50" y="300.1" class="label">E1 release_direction_rad</text>
+<rect x="330" y="279.5" width="395.6" height="13.1" class="p"/>
+<rect x="330" y="295.2" width="395.6" height="13.1" class="v"/>
+<text x="50" y="337.6" class="label">E2 common_position_radial_m</text>
+<rect x="330" y="317.0" width="0.0" height="13.1" class="p"/>
+<rect x="330" y="332.8" width="0.0" height="13.1" class="v"/>
+<text x="50" y="375.1" class="label">E2 common_position_tangential_m</text>
+<rect x="330" y="354.5" width="0.0" height="13.1" class="p"/>
+<rect x="330" y="370.2" width="0.0" height="13.1" class="v"/>
+<text x="50" y="412.6" class="label">E2 common_velocity_radial_m_s</text>
+<rect x="330" y="392.0" width="14.9" height="13.1" class="p"/>
+<rect x="330" y="407.8" width="23.9" height="13.1" class="v"/>
+<text x="50" y="450.1" class="label">E2 common_velocity_tangential_m_s</text>
+<rect x="330" y="429.5" width="12.7" height="13.1" class="p"/>
+<rect x="330" y="445.2" width="16.7" height="13.1" class="v"/>
+<text x="50" y="487.6" class="label">E2 release_speed_m_s</text>
+<rect x="330" y="467.0" width="15.0" height="13.1" class="p"/>
+<rect x="330" y="482.8" width="25.1" height="13.1" class="v"/>
+<text x="50" y="525.1" class="label">E2 release_direction_rad</text>
+<rect x="330" y="504.5" width="138.2" height="13.1" class="p"/>
+<rect x="330" y="520.2" width="160.1" height="13.1" class="v"/>
+<text x="330" y="575" class="label">dark: position sensitivity, max=17949 m/unit</text>
+<text x="760" y="575" class="label">light: velocity sensitivity, max=22.5965 (m/s)/unit</text>
+</svg>
