@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540">
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#111827}.t{font-size:30px;font-weight:700}.s{font-size:16px}.h{font-size:18px;font-weight:700}.box{fill:#f8fafc;stroke:#334155;stroke-width:2}.cell{fill:#eef2ff;stroke:#4338ca;stroke-width:2}.payload{fill:#f0fdf4;stroke:#15803d;stroke-width:2}.arrow{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#a)}.dash{stroke:#64748b;stroke-width:2;stroke-dasharray:8 7;fill:none}</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+<text x="60" y="55" class="t">Gen6 reference cell: stored energy, independent release</text><text x="60" y="86" class="s">Functional allocation only. Component geometry is intentionally not selected.</text>
+<rect x="60" y="130" width="220" height="95" rx="12" class="box"/><text x="85" y="165" class="h">Shared host services</text><text x="85" y="194" class="s">power · command · nav/time</text>
+<rect x="355" y="120" width="520" height="280" rx="18" class="cell"/><text x="385" y="155" class="h">Independent retained release cell</text>
+<rect x="395" y="190" width="135" height="70" rx="9" class="box"/><text x="414" y="218" class="s">slow preload</text><text x="425" y="241" class="s">actuator</text>
+<rect x="570" y="190" width="135" height="70" rx="9" class="box"/><text x="586" y="218" class="s">mechanical</text><text x="585" y="241" class="s">accumulator</text>
+<rect x="745" y="190" width="95" height="70" rx="9" class="box"/><text x="770" y="218" class="s">latch</text><text x="760" y="241" class="s">+ inhibit</text>
+<rect x="470" y="305" width="140" height="62" rx="9" class="box"/><text x="489" y="333" class="s">guided pusher</text><text x="500" y="355" class="s">+ sensing</text>
+<rect x="665" y="305" width="140" height="62" rx="9" class="box"/><text x="684" y="333" class="s">local catcher</text><text x="690" y="355" class="s">+ retainer</text>
+<rect x="945" y="210" width="190" height="110" rx="12" class="payload"/><text x="982" y="250" class="h">4 kg payload</text><text x="976" y="279" class="s">passive interface</text><text x="975" y="303" class="s">no onboard actuator</text>
+<path d="M280 177 L395 215" class="arrow"/><path d="M530 225 L570 225" class="arrow"/><path d="M705 225 L745 225" class="arrow"/><path d="M792 260 L590 305" class="arrow"/><path d="M610 336 L665 336" class="arrow"/><path d="M805 336 L945 280" class="arrow"/><path d="M875 260 L945 260" class="dash"/>
+<text x="60" y="455" class="h">S4 study point</text><text x="60" y="484" class="s">4.569852 m/s · 41.77 J ideal payload energy · 106.5 mm ideal stroke at 10 g</text><text x="60" y="513" class="s">Peak release power comes from stored mechanical energy; host electrical power can recharge between releases.</text>
+</svg>
