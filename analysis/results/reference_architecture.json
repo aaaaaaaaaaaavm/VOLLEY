@@ -349,7 +349,7 @@
     }
   },
   "source_revisions": {
-    "criteria_declared_commit": "9cbb9390fdc3d418580a83c95889dfd6c91dea0c",
+    "criteria_declared_commit": "0546e227e790111f2036d66adeb144f35c852fb8",
     "criteria_path": "validation/P92_reference_architecture.md",
     "s4_merge_commit": "2ae459cadcf56f752e0f0b97bf962b25efb342a2",
     "s4_report_path": "docs/MANIFEST_TIMING.md"
