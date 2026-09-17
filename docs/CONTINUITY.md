@@ -1,8 +1,9 @@
 # Project continuity and work ownership
 
-Updated 2026-09-16. This is the starting point when resuming work. Fetch current `main`, inspect the latest evidence and read the current workstream before editing. The programme has two coordinated workstreams.
+Updated 2026-09-17. This is the starting point when resuming work. Fetch current `main`, inspect the latest evidence and read the current workstream before editing. The programme has two coordinated workstreams.
 
-**Latest execution record:** [16 September review and restart](REVIEW_20260916.md).
+**Latest restart and next-batch scope:** [17 September checkpoint](RESTART_20260917.md).
+**Latest executed engineering batch:** [16 September review](REVIEW_20260916.md).
 P113-S6 and P92-S2 have now run: 512 conditional error corners and 144 reference-cell
 mechanical cases. They extend, but do not close, the mission/reference decision.
 The previous two-workstream ownership split no longer implies separate active contributors.
