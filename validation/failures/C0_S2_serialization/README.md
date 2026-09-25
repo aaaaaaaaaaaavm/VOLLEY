@@ -1,0 +1,1 @@
+The first run reached JSON serialization and failed with TypeError for a NumPy boolean. No numerical acceptance outcome was issued. Explicit conversion of check values to Python bool fixes serialization; all cases and bands remain unchanged. The original source is retained.

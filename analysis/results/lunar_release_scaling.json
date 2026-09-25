@@ -1,0 +1,5218 @@
+{
+  "capture_scenarios": [
+    {
+      "assumed_arrival_vinf_m_s": 800.0,
+      "capture_dv_m_s": 811.219063352401,
+      "fractions": [
+        {
+          "assumed_isp_s": 220.0,
+          "capture_only": 0.3134017962894376,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.8517060941593184
+        },
+        {
+          "assumed_isp_s": 320.0,
+          "capture_only": 0.22779416183000642,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.730755232795625
+        }
+      ],
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0,
+      "subsequent_circularization_dv_m_s": 0.0
+    },
+    {
+      "assumed_arrival_vinf_m_s": 1000.0,
+      "capture_dv_m_s": 883.7704858350398,
+      "fractions": [
+        {
+          "assumed_isp_s": 220.0,
+          "capture_only": 0.336106897822373,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.8566100222072391
+        },
+        {
+          "assumed_isp_s": 320.0,
+          "capture_only": 0.24544225271740236,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.736908587105713
+        }
+      ],
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0,
+      "subsequent_circularization_dv_m_s": 0.0
+    },
+    {
+      "assumed_arrival_vinf_m_s": 800.0,
+      "capture_dv_m_s": 657.7488792915149,
+      "fractions": [
+        {
+          "assumed_isp_s": 220.0,
+          "capture_only": 0.2627818644127791,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.8407730224285579
+        },
+        {
+          "assumed_isp_s": 320.0,
+          "capture_only": 0.1890907449884797,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.717260524594239
+        }
+      ],
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0,
+      "subsequent_circularization_dv_m_s": 153.47018406088614
+    },
+    {
+      "assumed_arrival_vinf_m_s": 1000.0,
+      "capture_dv_m_s": 730.3003017741537,
+      "fractions": [
+        {
+          "assumed_isp_s": 220.0,
+          "capture_only": 0.28716091540645955,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.8460384959952001
+        },
+        {
+          "assumed_isp_s": 320.0,
+          "capture_only": 0.20762336870936304,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.7237222886897301
+        }
+      ],
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0,
+      "subsequent_circularization_dv_m_s": 153.47018406088614
+    },
+    {
+      "assumed_arrival_vinf_m_s": 800.0,
+      "capture_dv_m_s": 296.6233291760923,
+      "fractions": [
+        {
+          "assumed_isp_s": 220.0,
+          "capture_only": 0.12845440630858898,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.8117605034381671
+        },
+        {
+          "assumed_isp_s": 320.0,
+          "capture_only": 0.09019262763339471,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.682777749059513
+        }
+      ],
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0,
+      "subsequent_circularization_dv_m_s": 514.5957341763087
+    },
+    {
+      "assumed_arrival_vinf_m_s": 1000.0,
+      "capture_dv_m_s": 369.1747516587311,
+      "fractions": [
+        {
+          "assumed_isp_s": 220.0,
+          "capture_only": 0.15727552918424367,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.8179853913840534
+        },
+        {
+          "assumed_isp_s": 320.0,
+          "capture_only": 0.11098548156415464,
+          "earth_departure_plus_capture_plus_assumed_200_m_s": 0.6900275869128103
+        }
+      ],
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0,
+      "subsequent_circularization_dv_m_s": 514.5957341763087
+    }
+  ],
+  "earth_departure_dv_m_s": 3106.4266302860533,
+  "evidence": "IDEAL_TWO_BODY_REQUIREMENTS_SCREEN_NOT_LIFETIME_OR_HARDWARE",
+  "inputs": {
+    "earth_mu_m3_s2": 398600435507000.0,
+    "earth_radius_m": 6378137.0,
+    "lunar_mu_m3_s2": 4902800118000.0,
+    "lunar_radius_m": 1737400.0,
+    "reference_distance_m": 384400000.0
+  },
+  "release_cases": [
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001723443.8334866,
+        "apoapsis_altitude_km": 100.7910229729365,
+        "bound": true,
+        "eccentricity": 0.00021520973579280955,
+        "energy_j_kg": -1333880.7520632306,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7069.7418214107975,
+        "semimajor_m": 1837795.5114864684
+      },
+      "host_impulse_m_s": 0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2993326797.668653,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 0.005372717979643782,
+        "energy_j_kg": -1341335.985725639,
+        "periapsis_altitude_km": 80.36184623025125,
+        "period_s": 7010.882661813781,
+        "semimajor_m": 1827580.9231151256
+      },
+      "payload_impulse_m_s": -4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001541834.3656087,
+        "apoapsis_altitude_km": 100.34613956546225,
+        "bound": true,
+        "eccentricity": 9.418389155624318e-05,
+        "energy_j_kg": -1334042.2208570165,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7068.45830715228,
+        "semimajor_m": 1837573.0697827311
+      },
+      "host_impulse_m_s": 0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2997867034.3656087,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 0.0023531558834043453,
+        "energy_j_kg": -1337307.382971271,
+        "periapsis_altitude_km": 91.37292361521745,
+        "period_s": 7042.586653746399,
+        "semimajor_m": 1833086.4618076088
+      },
+      "payload_impulse_m_s": -1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001435830.519455,
+        "apoapsis_altitude_km": 100.08652725055907,
+        "bound": true,
+        "eccentricity": 2.3545557098936243e-05,
+        "energy_j_kg": -1334136.4642538037,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7067.709346561308,
+        "semimajor_m": 1837443.2636252793
+      },
+      "host_impulse_m_s": 0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3000517130.519455,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 0.0005885488396319971,
+        "energy_j_kg": -1334953.1009362133,
+        "periapsis_altitude_km": 97.83847288839355,
+        "period_s": 7061.224997495725,
+        "semimajor_m": 1836319.236444197
+      },
+      "payload_impulse_m_s": -0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001365161.288686,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 2.3545279905667904e-05,
+        "energy_j_kg": -1334199.2913358824,
+        "periapsis_altitude_km": 99.913477842591,
+        "period_s": 7067.2101276695785,
+        "semimajor_m": 1837356.7389212952
+      },
+      "host_impulse_m_s": -0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3002283861.288686,
+        "apoapsis_altitude_km": 102.16471033252404,
+        "bound": true,
+        "eccentricity": 0.0005887220854856601,
+        "energy_j_kg": -1333382.4238842418,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7073.705478783706,
+        "semimajor_m": 1838482.355166262
+      },
+      "payload_impulse_m_s": 0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001259157.4425316,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 9.417945646272852e-05,
+        "energy_j_kg": -1334293.5291853321,
+        "periapsis_altitude_km": 99.6539419249522,
+        "period_s": 7066.461431550762,
+        "semimajor_m": 1837226.9709624762
+      },
+      "host_impulse_m_s": -0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3004933957.4425316,
+        "apoapsis_altitude_km": 108.67800830331328,
+        "bound": true,
+        "eccentricity": 0.0023559278170661724,
+        "energy_j_kg": -1331024.6747633852,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7092.509119451527,
+        "semimajor_m": 1841739.0041516568
+      },
+      "payload_impulse_m_s": 1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001077547.9746537,
+        "apoapsis_altitude_km": 99.99999999999953,
+        "bound": true,
+        "eccentricity": 0.00021518658066954632,
+        "energy_j_kg": -1334454.9730034557,
+        "periapsis_altitude_km": 99.20940247933287,
+        "period_s": 7065.179108019876,
+        "semimajor_m": 1837004.7012396662
+      },
+      "host_impulse_m_s": -0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3009474194.1394877,
+        "apoapsis_altitude_km": 119.90407258125813,
+        "bound": true,
+        "eccentricity": 0.005387189931926661,
+        "energy_j_kg": -1326980.4622200015,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7124.957364204112,
+        "semimajor_m": 1847352.036290629
+      },
+      "payload_impulse_m_s": 4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001510978.0904493,
+        "apoapsis_altitude_km": 100.2705652276124,
+        "bound": true,
+        "eccentricity": 7.362177754410837e-05,
+        "energy_j_kg": -1334069.6541690347,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7068.240278553019,
+        "semimajor_m": 1837535.2826138064
+      },
+      "host_impulse_m_s": 0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2993114331.925616,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 0.005513909863408828,
+        "energy_j_kg": -1341524.3594015897,
+        "periapsis_altitude_km": 79.84859705341421,
+        "period_s": 7009.406036323752,
+        "semimajor_m": 1827324.298526707
+      },
+      "payload_impulse_m_s": -4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001448848.5356493,
+        "apoapsis_altitude_km": 100.11840699524711,
+        "bound": true,
+        "eccentricity": 3.222030590444014e-05,
+        "energy_j_kg": -1334124.8906825976,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7067.801315628852,
+        "semimajor_m": 1837459.2034976236
+      },
+      "host_impulse_m_s": 0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2997774048.5356493,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 0.0024150436056085134,
+        "energy_j_kg": -1337389.9515822772,
+        "periapsis_altitude_km": 91.14657915550796,
+        "period_s": 7041.934464433278,
+        "semimajor_m": 1832973.2895777542
+      },
+      "payload_impulse_m_s": -1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001412584.061965,
+        "apoapsis_altitude_km": 100.02960085464431,
+        "bound": true,
+        "eccentricity": 8.055027813425042e-06,
+        "energy_j_kg": -1334157.1312203892,
+        "periapsis_altitude_km": 100.00000000000047,
+        "period_s": 7067.54512203654,
+        "semimajor_m": 1837414.800427322
+      },
+      "host_impulse_m_s": 0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3000493884.061965,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0006040346274518438,
+        "energy_j_kg": -1334973.761576888,
+        "periapsis_altitude_km": 97.78163352120947,
+        "period_s": 7061.061074197607,
+        "semimajor_m": 1836290.8167606045
+      },
+      "payload_impulse_m_s": -0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001388407.746176,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 8.054995372042129e-06,
+        "energy_j_kg": -1334178.6246958368,
+        "periapsis_altitude_km": 99.9703997414366,
+        "period_s": 7067.374336626388,
+        "semimajor_m": 1837385.1998707182
+      },
+      "host_impulse_m_s": -0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3002307107.746176,
+        "apoapsis_altitude_km": 102.22171944218827,
+        "bound": true,
+        "eccentricity": 0.0006042171114848394,
+        "energy_j_kg": -1333361.7509182852,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7073.869989696743,
+        "semimajor_m": 1838510.8597210941
+      },
+      "payload_impulse_m_s": 0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001352143.272491,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 3.221978683909388e-05,
+        "energy_j_kg": -1334210.86458439,
+        "periapsis_altitude_km": 99.88160254206461,
+        "period_s": 7067.118173986844,
+        "semimajor_m": 1837340.8012710323
+      },
+      "host_impulse_m_s": -0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3005026943.272491,
+        "apoapsis_altitude_km": 108.9070686847216,
+        "bound": true,
+        "eccentricity": 0.002417963350137331,
+        "energy_j_kg": -1330941.9089478683,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7093.1707107914735,
+        "semimajor_m": 1841853.534342361
+      },
+      "payload_impulse_m_s": 1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001290013.717691,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 7.361906756120362e-05,
+        "energy_j_kg": -1334266.098174901,
+        "periapsis_altitude_km": 99.72948456561984,
+        "period_s": 7066.679350420678,
+        "semimajor_m": 1837264.7422828102
+      },
+      "host_impulse_m_s": -0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3009686659.882525,
+        "apoapsis_altitude_km": 120.43150226619072,
+        "bound": true,
+        "eccentricity": 0.005529153519518548,
+        "energy_j_kg": -1326791.0589615938,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7126.483081035833,
+        "semimajor_m": 1847615.7511330952
+      },
+      "payload_impulse_m_s": 4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001433948.677635,
+        "apoapsis_altitude_km": 100.08191887618881,
+        "bound": true,
+        "eccentricity": 2.2291566912135963e-05,
+        "energy_j_kg": -1334138.13728723,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7067.696052011876,
+        "semimajor_m": 1837440.9594380944
+      },
+      "host_impulse_m_s": 0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2993037302.512801,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 0.005565096477315956,
+        "energy_j_kg": -1341592.650937647,
+        "periapsis_altitude_km": 79.6625632627036,
+        "period_s": 7008.87083995132,
+        "semimajor_m": 1827231.2816313521
+      },
+      "payload_impulse_m_s": -4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001415136.5415206,
+        "apoapsis_altitude_km": 100.03585131053487,
+        "bound": true,
+        "eccentricity": 9.75589440876945e-06,
+        "energy_j_kg": -1334154.8619788128,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7067.5631536472365,
+        "semimajor_m": 1837417.9256552674
+      },
+      "host_impulse_m_s": 0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2997740336.5415206,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.002437480512826218,
+        "energy_j_kg": -1337419.8861831685,
+        "periapsis_altitude_km": 91.06452665362065,
+        "period_s": 7041.698043186292,
+        "semimajor_m": 1832932.2633268102
+      },
+      "payload_impulse_m_s": -1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001404156.0634327,
+        "apoapsis_altitude_km": 100.00896274565788,
+        "bound": true,
+        "eccentricity": 2.4389691406501157e-06,
+        "energy_j_kg": -1334164.6239854712,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.485584352805,
+        "semimajor_m": 1837404.4813728288
+      },
+      "host_impulse_m_s": 0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3000485456.0634327,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 0.0006096489671074679,
+        "energy_j_kg": -1334981.2520485122,
+        "periapsis_altitude_km": 97.7610269632726,
+        "period_s": 7061.001645718734,
+        "semimajor_m": 1836280.5134816365
+      },
+      "payload_impulse_m_s": -0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001396835.7447076,
+        "apoapsis_altitude_km": 99.99999999999953,
+        "bound": true,
+        "eccentricity": 2.4389661665846774e-06,
+        "energy_j_kg": -1334171.1319700691,
+        "periapsis_altitude_km": 99.99103730899049,
+        "period_s": 7067.43387243579,
+        "semimajor_m": 1837395.518654495
+      },
+      "host_impulse_m_s": -0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3002315535.7447076,
+        "apoapsis_altitude_km": 102.24238862920879,
+        "bound": true,
+        "eccentricity": 0.0006098348597076697,
+        "energy_j_kg": -1333354.2558990598,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7073.929634985131,
+        "semimajor_m": 1838521.1943146044
+      },
+      "payload_impulse_m_s": 0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001385855.2666197,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 9.755846820613812e-06,
+        "energy_j_kg": -1334180.8939172043,
+        "periapsis_altitude_km": 99.96414956385503,
+        "period_s": 7067.356305979145,
+        "semimajor_m": 1837382.0747819277
+      },
+      "host_impulse_m_s": -0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3005060655.2666197,
+        "apoapsis_altitude_km": 108.99012326801709,
+        "bound": true,
+        "eccentricity": 0.0024404547944336663,
+        "energy_j_kg": -1330911.9015853587,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7093.410601062582,
+        "semimajor_m": 1841895.0616340088
+      },
+      "payload_impulse_m_s": 1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001367043.1305056,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 2.2291318458322884e-05,
+        "energy_j_kg": -1334197.618340799,
+        "periapsis_altitude_km": 99.91808568890788,
+        "period_s": 7067.223420390995,
+        "semimajor_m": 1837359.0428444536
+      },
+      "host_impulse_m_s": -0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3009763689.295339,
+        "apoapsis_altitude_km": 120.62276818811823,
+        "bound": true,
+        "eccentricity": 0.005580624865346495,
+        "energy_j_kg": -1326722.3875453535,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7127.036390480825,
+        "semimajor_m": 1847711.3840940592
+      },
+      "payload_impulse_m_s": 4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001723443.8334866,
+        "apoapsis_altitude_km": 100.7910229729365,
+        "bound": true,
+        "eccentricity": 0.00021520973579280955,
+        "energy_j_kg": -1333880.7520632306,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7069.7418214107975,
+        "semimajor_m": 1837795.5114864684
+      },
+      "host_impulse_m_s": 0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2993326797.668653,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 0.005372717979643782,
+        "energy_j_kg": -1341335.985725639,
+        "periapsis_altitude_km": 80.36184623025125,
+        "period_s": 7010.882661813781,
+        "semimajor_m": 1827580.9231151256
+      },
+      "payload_impulse_m_s": -4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001541834.3656087,
+        "apoapsis_altitude_km": 100.34613956546225,
+        "bound": true,
+        "eccentricity": 9.418389155624318e-05,
+        "energy_j_kg": -1334042.2208570165,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7068.45830715228,
+        "semimajor_m": 1837573.0697827311
+      },
+      "host_impulse_m_s": 0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2997867034.3656087,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 0.0023531558834043453,
+        "energy_j_kg": -1337307.382971271,
+        "periapsis_altitude_km": 91.37292361521745,
+        "period_s": 7042.586653746399,
+        "semimajor_m": 1833086.4618076088
+      },
+      "payload_impulse_m_s": -1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001435830.519455,
+        "apoapsis_altitude_km": 100.08652725055907,
+        "bound": true,
+        "eccentricity": 2.3545557098936243e-05,
+        "energy_j_kg": -1334136.4642538037,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7067.709346561308,
+        "semimajor_m": 1837443.2636252793
+      },
+      "host_impulse_m_s": 0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3000517130.519455,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 0.0005885488396319971,
+        "energy_j_kg": -1334953.1009362133,
+        "periapsis_altitude_km": 97.83847288839355,
+        "period_s": 7061.224997495725,
+        "semimajor_m": 1836319.236444197
+      },
+      "payload_impulse_m_s": -0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001365161.288686,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 2.3545279905667904e-05,
+        "energy_j_kg": -1334199.2913358824,
+        "periapsis_altitude_km": 99.913477842591,
+        "period_s": 7067.2101276695785,
+        "semimajor_m": 1837356.7389212952
+      },
+      "host_impulse_m_s": -0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3002283861.288686,
+        "apoapsis_altitude_km": 102.16471033252404,
+        "bound": true,
+        "eccentricity": 0.0005887220854856601,
+        "energy_j_kg": -1333382.4238842418,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7073.705478783706,
+        "semimajor_m": 1838482.355166262
+      },
+      "payload_impulse_m_s": 0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001259157.4425316,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 9.417945646272852e-05,
+        "energy_j_kg": -1334293.5291853321,
+        "periapsis_altitude_km": 99.6539419249522,
+        "period_s": 7066.461431550762,
+        "semimajor_m": 1837226.9709624762
+      },
+      "host_impulse_m_s": -0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3004933957.4425316,
+        "apoapsis_altitude_km": 108.67800830331328,
+        "bound": true,
+        "eccentricity": 0.0023559278170661724,
+        "energy_j_kg": -1331024.6747633852,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7092.509119451527,
+        "semimajor_m": 1841739.0041516568
+      },
+      "payload_impulse_m_s": 1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001077547.9746537,
+        "apoapsis_altitude_km": 99.99999999999953,
+        "bound": true,
+        "eccentricity": 0.00021518658066954632,
+        "energy_j_kg": -1334454.9730034557,
+        "periapsis_altitude_km": 99.20940247933287,
+        "period_s": 7065.179108019876,
+        "semimajor_m": 1837004.7012396662
+      },
+      "host_impulse_m_s": -0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3009474194.1394877,
+        "apoapsis_altitude_km": 119.90407258125813,
+        "bound": true,
+        "eccentricity": 0.005387189931926661,
+        "energy_j_kg": -1326980.4622200015,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7124.957364204112,
+        "semimajor_m": 1847352.036290629
+      },
+      "payload_impulse_m_s": 4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001510978.0904493,
+        "apoapsis_altitude_km": 100.2705652276124,
+        "bound": true,
+        "eccentricity": 7.362177754410837e-05,
+        "energy_j_kg": -1334069.6541690347,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7068.240278553019,
+        "semimajor_m": 1837535.2826138064
+      },
+      "host_impulse_m_s": 0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2993114331.925616,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 0.005513909863408828,
+        "energy_j_kg": -1341524.3594015897,
+        "periapsis_altitude_km": 79.84859705341421,
+        "period_s": 7009.406036323752,
+        "semimajor_m": 1827324.298526707
+      },
+      "payload_impulse_m_s": -4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001448848.5356493,
+        "apoapsis_altitude_km": 100.11840699524711,
+        "bound": true,
+        "eccentricity": 3.222030590444014e-05,
+        "energy_j_kg": -1334124.8906825976,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7067.801315628852,
+        "semimajor_m": 1837459.2034976236
+      },
+      "host_impulse_m_s": 0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2997774048.5356493,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 0.0024150436056085134,
+        "energy_j_kg": -1337389.9515822772,
+        "periapsis_altitude_km": 91.14657915550796,
+        "period_s": 7041.934464433278,
+        "semimajor_m": 1832973.2895777542
+      },
+      "payload_impulse_m_s": -1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001412584.061965,
+        "apoapsis_altitude_km": 100.02960085464431,
+        "bound": true,
+        "eccentricity": 8.055027813425042e-06,
+        "energy_j_kg": -1334157.1312203892,
+        "periapsis_altitude_km": 100.00000000000047,
+        "period_s": 7067.54512203654,
+        "semimajor_m": 1837414.800427322
+      },
+      "host_impulse_m_s": 0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3000493884.061965,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0006040346274518438,
+        "energy_j_kg": -1334973.761576888,
+        "periapsis_altitude_km": 97.78163352120947,
+        "period_s": 7061.061074197607,
+        "semimajor_m": 1836290.8167606045
+      },
+      "payload_impulse_m_s": -0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001388407.746176,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 8.054995372042129e-06,
+        "energy_j_kg": -1334178.6246958368,
+        "periapsis_altitude_km": 99.9703997414366,
+        "period_s": 7067.374336626388,
+        "semimajor_m": 1837385.1998707182
+      },
+      "host_impulse_m_s": -0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3002307107.746176,
+        "apoapsis_altitude_km": 102.22171944218827,
+        "bound": true,
+        "eccentricity": 0.0006042171114848394,
+        "energy_j_kg": -1333361.7509182852,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7073.869989696743,
+        "semimajor_m": 1838510.8597210941
+      },
+      "payload_impulse_m_s": 0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001352143.272491,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 3.221978683909388e-05,
+        "energy_j_kg": -1334210.86458439,
+        "periapsis_altitude_km": 99.88160254206461,
+        "period_s": 7067.118173986844,
+        "semimajor_m": 1837340.8012710323
+      },
+      "host_impulse_m_s": -0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3005026943.272491,
+        "apoapsis_altitude_km": 108.9070686847216,
+        "bound": true,
+        "eccentricity": 0.002417963350137331,
+        "energy_j_kg": -1330941.9089478683,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7093.1707107914735,
+        "semimajor_m": 1841853.534342361
+      },
+      "payload_impulse_m_s": 1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001290013.717691,
+        "apoapsis_altitude_km": 100.0,
+        "bound": true,
+        "eccentricity": 7.361906756120362e-05,
+        "energy_j_kg": -1334266.098174901,
+        "periapsis_altitude_km": 99.72948456561984,
+        "period_s": 7066.679350420678,
+        "semimajor_m": 1837264.7422828102
+      },
+      "host_impulse_m_s": -0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3009686659.882525,
+        "apoapsis_altitude_km": 120.43150226619072,
+        "bound": true,
+        "eccentricity": 0.005529153519518548,
+        "energy_j_kg": -1326791.0589615938,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7126.483081035833,
+        "semimajor_m": 1847615.7511330952
+      },
+      "payload_impulse_m_s": 4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001433948.677635,
+        "apoapsis_altitude_km": 100.08191887618881,
+        "bound": true,
+        "eccentricity": 2.2291566912135963e-05,
+        "energy_j_kg": -1334138.13728723,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7067.696052011876,
+        "semimajor_m": 1837440.9594380944
+      },
+      "host_impulse_m_s": 0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2993037302.512801,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 0.005565096477315956,
+        "energy_j_kg": -1341592.650937647,
+        "periapsis_altitude_km": 79.6625632627036,
+        "period_s": 7008.87083995132,
+        "semimajor_m": 1827231.2816313521
+      },
+      "payload_impulse_m_s": -4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001415136.5415206,
+        "apoapsis_altitude_km": 100.03585131053487,
+        "bound": true,
+        "eccentricity": 9.75589440876945e-06,
+        "energy_j_kg": -1334154.8619788128,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7067.5631536472365,
+        "semimajor_m": 1837417.9256552674
+      },
+      "host_impulse_m_s": 0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 2997740336.5415206,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.002437480512826218,
+        "energy_j_kg": -1337419.8861831685,
+        "periapsis_altitude_km": 91.06452665362065,
+        "period_s": 7041.698043186292,
+        "semimajor_m": 1832932.2633268102
+      },
+      "payload_impulse_m_s": -1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001404156.0634327,
+        "apoapsis_altitude_km": 100.00896274565788,
+        "bound": true,
+        "eccentricity": 2.4389691406501157e-06,
+        "energy_j_kg": -1334164.6239854712,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.485584352805,
+        "semimajor_m": 1837404.4813728288
+      },
+      "host_impulse_m_s": 0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3000485456.0634327,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 0.0006096489671074679,
+        "energy_j_kg": -1334981.2520485122,
+        "periapsis_altitude_km": 97.7610269632726,
+        "period_s": 7061.001645718734,
+        "semimajor_m": 1836280.5134816365
+      },
+      "payload_impulse_m_s": -0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001400495.9040704,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 0.0,
+        "energy_j_kg": -1334167.8779797542,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7067.4597282997065,
+        "semimajor_m": 1837399.9999999998
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001396835.7447076,
+        "apoapsis_altitude_km": 99.99999999999953,
+        "bound": true,
+        "eccentricity": 2.4389661665846774e-06,
+        "energy_j_kg": -1334171.1319700691,
+        "periapsis_altitude_km": 99.99103730899049,
+        "period_s": 7067.43387243579,
+        "semimajor_m": 1837395.518654495
+      },
+      "host_impulse_m_s": -0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3002315535.7447076,
+        "apoapsis_altitude_km": 102.24238862920879,
+        "bound": true,
+        "eccentricity": 0.0006098348597076697,
+        "energy_j_kg": -1333354.2558990598,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 7073.929634985131,
+        "semimajor_m": 1838521.1943146044
+      },
+      "payload_impulse_m_s": 0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001385855.2666197,
+        "apoapsis_altitude_km": 100.00000000000023,
+        "bound": true,
+        "eccentricity": 9.755846820613812e-06,
+        "energy_j_kg": -1334180.8939172043,
+        "periapsis_altitude_km": 99.96414956385503,
+        "period_s": 7067.356305979145,
+        "semimajor_m": 1837382.0747819277
+      },
+      "host_impulse_m_s": -0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3005060655.2666197,
+        "apoapsis_altitude_km": 108.99012326801709,
+        "bound": true,
+        "eccentricity": 0.0024404547944336663,
+        "energy_j_kg": -1330911.9015853587,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 7093.410601062582,
+        "semimajor_m": 1841895.0616340088
+      },
+      "payload_impulse_m_s": 1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3001367043.1305056,
+        "apoapsis_altitude_km": 99.99999999999977,
+        "bound": true,
+        "eccentricity": 2.2291318458322884e-05,
+        "energy_j_kg": -1334197.618340799,
+        "periapsis_altitude_km": 99.91808568890788,
+        "period_s": 7067.223420390995,
+        "semimajor_m": 1837359.0428444536
+      },
+      "host_impulse_m_s": -0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3009763689.295339,
+        "apoapsis_altitude_km": 120.62276818811823,
+        "bound": true,
+        "eccentricity": 0.005580624865346495,
+        "energy_j_kg": -1326722.3875453535,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 7127.036390480825,
+        "semimajor_m": 1847711.3840940592
+      },
+      "payload_impulse_m_s": 4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 100.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283709560.026959,
+        "apoapsis_altitude_km": 1001.341206973088,
+        "bound": true,
+        "eccentricity": 0.19696533961837348,
+        "energy_j_kg": -1071383.048785547,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9821.140105129447,
+        "semimajor_m": 2288070.603486544
+      },
+      "host_impulse_m_s": 0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3275312913.8621254,
+        "apoapsis_altitude_km": 966.7657138045109,
+        "bound": true,
+        "eccentricity": 0.1908517388991855,
+        "energy_j_kg": -1079539.618483882,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9710.04370686046,
+        "semimajor_m": 2270782.856902255
+      },
+      "payload_impulse_m_s": -4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283527950.559081,
+        "apoapsis_altitude_km": 1000.5868674897431,
+        "bound": true,
+        "eccentricity": 0.19683294409240726,
+        "energy_j_kg": -1071559.6866434794,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9818.71180317064,
+        "semimajor_m": 2287693.4337448715
+      },
+      "host_impulse_m_s": 0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3279853150.559081,
+        "apoapsis_altitude_km": 985.3852420215942,
+        "bound": true,
+        "eccentricity": 0.1941555430386619,
+        "energy_j_kg": -1075131.7891258558,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9769.81877956935,
+        "semimajor_m": 2280092.621010797
+      },
+      "payload_impulse_m_s": -1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283421946.712927,
+        "apoapsis_altitude_km": 1000.1467003897028,
+        "bound": true,
+        "eccentricity": 0.19675566937490796,
+        "energy_j_kg": -1071662.7840893469,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9817.294949226005,
+        "semimajor_m": 2287473.3501948514
+      },
+      "host_impulse_m_s": 0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3282503246.712927,
+        "apoapsis_altitude_km": 996.3360577213895,
+        "bound": true,
+        "eccentricity": 0.1960860596584808,
+        "energy_j_kg": -1072556.155863787,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 9805.031720503643,
+        "semimajor_m": 2285568.0288606947
+      },
+      "payload_impulse_m_s": -0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 999.9999999999991,
+        "bound": true,
+        "eccentricity": 0.19672991169012843,
+        "energy_j_kg": -1071697.149164991,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9816.822750462688,
+        "semimajor_m": 2287399.9999999995
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 999.9999999999991,
+        "bound": true,
+        "eccentricity": 0.19672991169012843,
+        "energy_j_kg": -1071697.149164991,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9816.822750462688,
+        "semimajor_m": 2287399.9999999995
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283351277.4821577,
+        "apoapsis_altitude_km": 999.8533105967697,
+        "bound": true,
+        "eccentricity": 0.1967041542825423,
+        "energy_j_kg": -1071731.5138708125,
+        "periapsis_altitude_km": 99.9999999999993,
+        "period_s": 9816.350594632702,
+        "semimajor_m": 2287326.655298385
+      },
+      "host_impulse_m_s": -0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3284269977.4821577,
+        "apoapsis_altitude_km": 1003.6708088301812,
+        "bound": true,
+        "eccentricity": 0.19737393696762973,
+        "energy_j_kg": -1070837.9113271416,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9828.640613781277,
+        "semimajor_m": 2289235.4044150906
+      },
+      "payload_impulse_m_s": 0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283245273.636004,
+        "apoapsis_altitude_km": 999.4133082938315,
+        "bound": true,
+        "eccentricity": 0.19662688372294346,
+        "energy_j_kg": -1071834.6057693427,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9814.934384688013,
+        "semimajor_m": 2287106.654146916
+      },
+      "host_impulse_m_s": -0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3286920073.636004,
+        "apoapsis_altitude_km": 1014.7246241925186,
+        "bound": true,
+        "eccentricity": 0.19930705227525713,
+        "energy_j_kg": -1068258.810979274,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9864.256062143533,
+        "semimajor_m": 2294762.3120962596
+      },
+      "payload_impulse_m_s": 1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283063664.168126,
+        "apoapsis_altitude_km": 998.6597107731718,
+        "bound": true,
+        "eccentricity": 0.19649450691700698,
+        "energy_j_kg": -1072011.2186516128,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 9812.508982197316,
+        "semimajor_m": 2286729.855386586
+      },
+      "host_impulse_m_s": -0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3291460310.3329597,
+        "apoapsis_altitude_km": 1033.8079179299712,
+        "bound": true,
+        "eccentricity": 0.2026225564333548,
+        "energy_j_kg": -1063835.3718322322,
+        "periapsis_altitude_km": 99.99999999999953,
+        "period_s": 9925.84349915331,
+        "semimajor_m": 2304303.9589649853
+      },
+      "payload_impulse_m_s": 4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283497094.2839217,
+        "apoapsis_altitude_km": 1000.4587306397785,
+        "bound": true,
+        "eccentricity": 0.19681045021772214,
+        "energy_j_kg": -1071589.6972485357,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 9818.29933641248,
+        "semimajor_m": 2287629.365319889
+      },
+      "host_impulse_m_s": 0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3275100448.1190877,
+        "apoapsis_altitude_km": 965.8987433298672,
+        "bound": true,
+        "eccentricity": 0.19069724557301737,
+        "energy_j_kg": -1079745.738517017,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9707.263414788962,
+        "semimajor_m": 2270349.371664934
+      },
+      "payload_impulse_m_s": -4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283434964.7291217,
+        "apoapsis_altitude_km": 1000.200750671384,
+        "bound": true,
+        "eccentricity": 0.1967651591181223,
+        "energy_j_kg": -1071650.12317878,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9817.468928015058,
+        "semimajor_m": 2287500.375335692
+      },
+      "host_impulse_m_s": 0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3279760164.7291217,
+        "apoapsis_altitude_km": 985.0021157939611,
+        "bound": true,
+        "eccentricity": 0.19408783392782447,
+        "energy_j_kg": -1075222.1244465816,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 9768.58758116571,
+        "semimajor_m": 2279901.0578969806
+      },
+      "payload_impulse_m_s": -1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283398700.255437,
+        "apoapsis_altitude_km": 1000.0501857390041,
+        "bound": true,
+        "eccentricity": 0.19673872349846433,
+        "energy_j_kg": -1071685.3927333623,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9816.984287313113,
+        "semimajor_m": 2287425.092869502
+      },
+      "host_impulse_m_s": 0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3282480000.255437,
+        "apoapsis_altitude_km": 996.2397307426129,
+        "bound": true,
+        "eccentricity": 0.19606911852350262,
+        "energy_j_kg": -1072578.7581818916,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9804.721791824624,
+        "semimajor_m": 2285519.8653713064
+      },
+      "payload_impulse_m_s": -0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 999.9999999999991,
+        "bound": true,
+        "eccentricity": 0.19672991169012843,
+        "energy_j_kg": -1071697.149164991,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9816.822750462688,
+        "semimajor_m": 2287399.9999999995
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 999.9999999999991,
+        "bound": true,
+        "eccentricity": 0.19672991169012843,
+        "energy_j_kg": -1071697.149164991,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9816.822750462688,
+        "semimajor_m": 2287399.9999999995
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283374523.9396477,
+        "apoapsis_altitude_km": 999.9498155468074,
+        "bound": true,
+        "eccentricity": 0.19672109991423414,
+        "energy_j_kg": -1071708.9055533372,
+        "periapsis_altitude_km": 99.99999999999953,
+        "period_s": 9816.66121863701,
+        "semimajor_m": 2287374.9077734035
+      },
+      "host_impulse_m_s": -0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3284293223.9396477,
+        "apoapsis_altitude_km": 1003.7675019619633,
+        "bound": true,
+        "eccentricity": 0.19739088734078725,
+        "energy_j_kg": -1070815.2966837552,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9828.951973326679,
+        "semimajor_m": 2289283.7509809816
+      },
+      "payload_impulse_m_s": 0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283338259.4659634,
+        "apoapsis_altitude_km": 999.7992699016235,
+        "bound": true,
+        "eccentricity": 0.19669466478120023,
+        "energy_j_kg": -1071744.174458681,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9816.176653306251,
+        "semimajor_m": 2287299.634950812
+      },
+      "host_impulse_m_s": -0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3287013059.4659634,
+        "apoapsis_altitude_km": 1015.1136090203258,
+        "bound": true,
+        "eccentricity": 0.19937490919696166,
+        "energy_j_kg": -1068168.2784540376,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9865.510155179618,
+        "semimajor_m": 2294956.8045101627
+      },
+      "payload_impulse_m_s": 1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283276129.9111633,
+        "apoapsis_altitude_km": 999.5413767695702,
+        "bound": true,
+        "eccentricity": 0.19664937587251785,
+        "energy_j_kg": -1071804.5974658737,
+        "periapsis_altitude_km": 100.00000000000047,
+        "period_s": 9815.346584250954,
+        "semimajor_m": 2287170.6883847853
+      },
+      "host_impulse_m_s": -0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3291672776.075997,
+        "apoapsis_altitude_km": 1034.7054790689792,
+        "bound": true,
+        "eccentricity": 0.2027778214633491,
+        "energy_j_kg": -1063628.22221664,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9928.743339620607,
+        "semimajor_m": 2304752.73953449
+      },
+      "payload_impulse_m_s": 4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283420064.8711076,
+        "apoapsis_altitude_km": 1000.1388871812434,
+        "bound": true,
+        "eccentricity": 0.19675429757179685,
+        "energy_j_kg": -1071664.6143049928,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9817.269799903765,
+        "semimajor_m": 2287469.4435906215
+      },
+      "host_impulse_m_s": 0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3275023418.7062736,
+        "apoapsis_altitude_km": 965.5845189947574,
+        "bound": true,
+        "eccentricity": 0.19064123652381726,
+        "energy_j_kg": -1079820.4639913365,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9706.255792682789,
+        "semimajor_m": 2270192.2594973785
+      },
+      "payload_impulse_m_s": -4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283401252.734993,
+        "apoapsis_altitude_km": 1000.0607828921429,
+        "bound": true,
+        "eccentricity": 0.1967405841633374,
+        "energy_j_kg": -1071682.910294057,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9817.018397330448,
+        "semimajor_m": 2287430.391446071
+      },
+      "host_impulse_m_s": 0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3279726452.734993,
+        "apoapsis_altitude_km": 984.8632320393408,
+        "bound": true,
+        "eccentricity": 0.1940632864773173,
+        "energy_j_kg": -1075254.8748665345,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 9768.14128292005,
+        "semimajor_m": 2279831.6160196704
+      },
+      "payload_impulse_m_s": -1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283390272.256905,
+        "apoapsis_altitude_km": 1000.0151955462043,
+        "bound": true,
+        "eccentricity": 0.1967325798039692,
+        "energy_j_kg": -1071693.58945321,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 9816.871661488602,
+        "semimajor_m": 2287407.597773102
+      },
+      "host_impulse_m_s": 0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3282471572.256905,
+        "apoapsis_altitude_km": 996.2048085868782,
+        "bound": true,
+        "eccentricity": 0.19606297654802485,
+        "energy_j_kg": -1072586.9526082813,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9804.609431818739,
+        "semimajor_m": 2285502.4042934394
+      },
+      "payload_impulse_m_s": -0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 999.9999999999991,
+        "bound": true,
+        "eccentricity": 0.19672991169012843,
+        "energy_j_kg": -1071697.149164991,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9816.822750462688,
+        "semimajor_m": 2287399.9999999995
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 999.9999999999991,
+        "bound": true,
+        "eccentricity": 0.19672991169012843,
+        "energy_j_kg": -1071697.149164991,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9816.822750462688,
+        "semimajor_m": 2287399.9999999995
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283382951.93818,
+        "apoapsis_altitude_km": 999.9848045716789,
+        "bound": true,
+        "eccentricity": 0.19672724357926197,
+        "energy_j_kg": -1071700.708872804,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9816.773839897449,
+        "semimajor_m": 2287392.4022858394
+      },
+      "host_impulse_m_s": -0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3284301651.93818,
+        "apoapsis_altitude_km": 1003.8025592154544,
+        "bound": true,
+        "eccentricity": 0.19739703272483244,
+        "energy_j_kg": -1070807.0977097643,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9829.064861272633,
+        "semimajor_m": 2289301.279607727
+      },
+      "payload_impulse_m_s": 0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283371971.460092,
+        "apoapsis_altitude_km": 999.9392189940116,
+        "bound": true,
+        "eccentricity": 0.19671923926450807,
+        "energy_j_kg": -1071711.3879724338,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9816.627110965714,
+        "semimajor_m": 2287369.6094970056
+      },
+      "host_impulse_m_s": -0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3287046771.460092,
+        "apoapsis_altitude_km": 1015.2546543971472,
+        "bound": true,
+        "eccentricity": 0.19939951118454746,
+        "energy_j_kg": -1068135.4552724664,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 9865.964900760602,
+        "semimajor_m": 2295027.3271985734
+      },
+      "payload_impulse_m_s": 1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283353159.3239775,
+        "apoapsis_altitude_km": 999.8611226661625,
+        "bound": true,
+        "eccentricity": 0.19670552605691438,
+        "energy_j_kg": -1071729.6836935093,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9816.375739503655,
+        "semimajor_m": 2287330.561333081
+      },
+      "host_impulse_m_s": -0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3291749805.4888115,
+        "apoapsis_altitude_km": 1035.030990355249,
+        "bound": true,
+        "eccentricity": 0.20283411524447081,
+        "energy_j_kg": -1063553.1168621378,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 9929.795071228345,
+        "semimajor_m": 2304915.4951776243
+      },
+      "payload_impulse_m_s": 4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283867747.213459,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19649447809093235,
+        "energy_j_kg": -1071486.3133576699,
+        "periapsis_altitude_km": 100.9001810282662,
+        "period_s": 9819.720369689485,
+        "semimajor_m": 2287850.090514133
+      },
+      "host_impulse_m_s": 0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3271358234.1996264,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.20260454013660256,
+        "energy_j_kg": -1076958.0041808048,
+        "periapsis_altitude_km": 77.65246236815582,
+        "period_s": 9744.979058412631,
+        "semimajor_m": 2276226.231184078
+      },
+      "payload_impulse_m_s": -4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283597181.328312,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19662687820164515,
+        "energy_j_kg": -1071604.880479469,
+        "periapsis_altitude_km": 100.39390524456743,
+        "period_s": 9818.090668580426,
+        "semimajor_m": 2287596.9526222837
+      },
+      "host_impulse_m_s": 0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3278122381.328312,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19930360146375248,
+        "energy_j_kg": -1074001.9432261107,
+        "periapsis_altitude_km": 90.18253929863567,
+        "period_s": 9785.239550922728,
+        "semimajor_m": 2282491.269649318
+      },
+      "payload_impulse_m_s": -1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283439254.405235,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.1967041539374612,
+        "energy_j_kg": -1071674.082548344,
+        "periapsis_altitude_km": 100.09846758408518,
+        "period_s": 9817.139696784194,
+        "semimajor_m": 2287449.233792043
+      },
+      "host_impulse_m_s": 0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3282070554.405235,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.197373721291911,
+        "energy_j_kg": -1072273.6943888506,
+        "periapsis_altitude_km": 97.54019976064237,
+        "period_s": 9808.90628086783,
+        "semimajor_m": 2286170.0998803214
+      },
+      "payload_impulse_m_s": -0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19672991169012866,
+        "energy_j_kg": -1071697.1491649908,
+        "periapsis_altitude_km": 99.9999999999993,
+        "period_s": 9816.82275046269,
+        "semimajor_m": 2287400.0
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19672991169012866,
+        "energy_j_kg": -1071697.1491649908,
+        "periapsis_altitude_km": 99.9999999999993,
+        "period_s": 9816.82275046269,
+        "semimajor_m": 2287400.0
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283333969.78985,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.196755669029827,
+        "energy_j_kg": -1071720.2154118149,
+        "periapsis_altitude_km": 99.90153823315654,
+        "period_s": 9816.505826276301,
+        "semimajor_m": 2287350.7691165786
+      },
+      "host_impulse_m_s": -0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3284702669.78985,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19608584398276196,
+        "energy_j_kg": -1071120.3728020776,
+        "periapsis_altitude_km": 102.46343601714167,
+        "period_s": 9824.7530545109,
+        "semimajor_m": 2288631.7180085713
+      },
+      "payload_impulse_m_s": 0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283176042.866773,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19683293857110906,
+        "energy_j_kg": -1071789.4119333527,
+        "periapsis_altitude_km": 99.60618783130055,
+        "period_s": 9815.555186506752,
+        "semimajor_m": 2287203.0939156506
+      },
+      "host_impulse_m_s": -0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3288650842.866773,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19415209222715724,
+        "energy_j_kg": -1069388.656879019,
+        "periapsis_altitude_km": 109.87563356122095,
+        "period_s": 9848.627303296516,
+        "semimajor_m": 2292337.8167806105
+      },
+      "payload_impulse_m_s": 1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3282905476.981626,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19696531079229884,
+        "energy_j_kg": -1071907.9540794895,
+        "periapsis_altitude_km": 99.10030491034361,
+        "period_s": 9813.926980274706,
+        "semimajor_m": 2286950.152455172
+      },
+      "host_impulse_m_s": -0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3295414989.9954586,
+        "apoapsis_altitude_km": 1000.0000000000009,
+        "bound": true,
+        "eccentricity": 0.19083372260243336,
+        "energy_j_kg": -1066416.9861353086,
+        "periapsis_altitude_km": 122.65126131920377,
+        "period_s": 9889.822150998429,
+        "semimajor_m": 2298725.6306596026
+      },
+      "payload_impulse_m_s": 4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283551210.952987,
+        "apoapsis_altitude_km": 1000.0000000000009,
+        "bound": true,
+        "eccentricity": 0.1966493724988294,
+        "energy_j_kg": -1071625.0246021564,
+        "periapsis_altitude_km": 100.30790196428657,
+        "period_s": 9817.813833089,
+        "semimajor_m": 2287553.950982144
+      },
+      "host_impulse_m_s": 0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3271041697.9391546,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.20275884446379244,
+        "energy_j_kg": -1077096.1869954383,
+        "periapsis_altitude_km": 77.06841917653544,
+        "period_s": 9743.103814407916,
+        "semimajor_m": 2275934.209588268
+      },
+      "payload_impulse_m_s": -4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283458648.939648,
+        "apoapsis_altitude_km": 999.9999999999995,
+        "bound": true,
+        "eccentricity": 0.1966946641350097,
+        "energy_j_kg": -1071665.5842279345,
+        "periapsis_altitude_km": 100.13474658155582,
+        "period_s": 9817.256472061774,
+        "semimajor_m": 2287467.3732907777
+      },
+      "host_impulse_m_s": 0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3277983848.939648,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19937127437404012,
+        "energy_j_kg": -1074062.545760001,
+        "periapsis_altitude_km": 89.92496630147751,
+        "period_s": 9784.411384143028,
+        "semimajor_m": 2282362.4831507388
+      },
+      "payload_impulse_m_s": -1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283404621.3080688,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19672109987384734,
+        "energy_j_kg": -1071689.2579956506,
+        "periapsis_altitude_km": 100.03368562410073,
+        "period_s": 9816.931176976343,
+        "semimajor_m": 2287416.84281205
+      },
+      "host_impulse_m_s": 0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3282035921.3080688,
+        "apoapsis_altitude_km": 999.9999999999995,
+        "bound": true,
+        "eccentricity": 0.1973906601643548,
+        "energy_j_kg": -1072288.8635102464,
+        "periapsis_altitude_km": 97.47551720549166,
+        "period_s": 9808.69813924344,
+        "semimajor_m": 2286137.7586027454
+      },
+      "payload_impulse_m_s": -0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19672991169012866,
+        "energy_j_kg": -1071697.1491649908,
+        "periapsis_altitude_km": 99.9999999999993,
+        "period_s": 9816.82275046269,
+        "semimajor_m": 2287400.0
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19672991169012866,
+        "energy_j_kg": -1071697.1491649908,
+        "periapsis_altitude_km": 99.9999999999993,
+        "period_s": 9816.82275046269,
+        "semimajor_m": 2287400.0
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283368602.8870163,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19673872345807764,
+        "energy_j_kg": -1071705.0402910484,
+        "periapsis_altitude_km": 99.96631505672588,
+        "period_s": 9816.714326539644,
+        "semimajor_m": 2287383.157528363
+      },
+      "host_impulse_m_s": -0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3284737302.8870163,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19606889134707028,
+        "energy_j_kg": -1071105.1913554003,
+        "periapsis_altitude_km": 102.52831244696677,
+        "period_s": 9824.961933845529,
+        "semimajor_m": 2288664.1562234834
+      },
+      "payload_impulse_m_s": 0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283314575.255437,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19676515847193177,
+        "energy_j_kg": -1071728.7134095263,
+        "periapsis_altitude_km": 99.86526431167242,
+        "period_s": 9816.389070313291,
+        "semimajor_m": 2287332.6321558366
+      },
+      "host_impulse_m_s": -0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3288789375.255437,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19408419910490304,
+        "energy_j_kg": -1069327.8571406174,
+        "periapsis_altitude_km": 110.136308598642,
+        "period_s": 9849.467273663582,
+        "semimajor_m": 2292468.1542993216
+      },
+      "payload_impulse_m_s": 1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283222013.2420974,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.1968104468440336,
+        "energy_j_kg": -1071769.2701122523,
+        "periapsis_altitude_km": 99.6921549080254,
+        "period_s": 9815.831884240497,
+        "semimajor_m": 2287246.0774540133
+      },
+      "host_impulse_m_s": -0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3295731526.25593,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19067826857346082,
+        "energy_j_kg": -1066277.7737382185,
+        "periapsis_altitude_km": 123.25150098128547,
+        "period_s": 9891.759025449988,
+        "semimajor_m": 2299025.750490643
+      },
+      "payload_impulse_m_s": 4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283436450.7948084,
+        "apoapsis_altitude_km": 1000.0000000000009,
+        "bound": true,
+        "eccentricity": 0.19670552574761113,
+        "energy_j_kg": -1071675.311033579,
+        "periapsis_altitude_km": 100.09322327625985,
+        "period_s": 9817.122816380794,
+        "semimajor_m": 2287446.6116381306
+      },
+      "host_impulse_m_s": 0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3270926937.780976,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.20281478377893136,
+        "energy_j_kg": -1077146.281844723,
+        "periapsis_altitude_km": 76.85672540172935,
+        "period_s": 9742.42413841977,
+        "semimajor_m": 2275828.3627008647
+      },
+      "payload_impulse_m_s": -4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283408424.049734,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.1967192392052648,
+        "energy_j_kg": -1071687.591727267,
+        "periapsis_altitude_km": 100.0407986118677,
+        "period_s": 9816.954072149147,
+        "semimajor_m": 2287420.399305934
+      },
+      "host_impulse_m_s": 0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3277933624.049734,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.19939580846780125,
+        "energy_j_kg": -1074084.5165640097,
+        "periapsis_altitude_km": 89.83159313014731,
+        "period_s": 9784.111169938913,
+        "semimajor_m": 2282315.7965650735
+      },
+      "payload_impulse_m_s": -1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283392065.0855904,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19672724357555937,
+        "energy_j_kg": -1071694.7598115122,
+        "periapsis_altitude_km": 100.010199559337,
+        "period_s": 9816.855580528036,
+        "semimajor_m": 2287405.0997796687
+      },
+      "host_impulse_m_s": 0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3282023365.0855904,
+        "apoapsis_altitude_km": 1000.0000000000009,
+        "bound": true,
+        "eccentricity": 0.197396801305036,
+        "energy_j_kg": -1072294.36303265,
+        "periapsis_altitude_km": 97.45206717860489,
+        "period_s": 9808.622679899636,
+        "semimajor_m": 2286126.033589303
+      },
+      "payload_impulse_m_s": -0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19672991169012866,
+        "energy_j_kg": -1071697.1491649908,
+        "periapsis_altitude_km": 99.9999999999993,
+        "period_s": 9816.82275046269,
+        "semimajor_m": 2287400.0
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283386612.0975423,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.19672991169012866,
+        "energy_j_kg": -1071697.1491649908,
+        "periapsis_altitude_km": 99.9999999999993,
+        "period_s": 9816.82275046269,
+        "semimajor_m": 2287400.0
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283381159.1094947,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.1967325798002667,
+        "energy_j_kg": -1071699.5385145012,
+        "periapsis_altitude_km": 99.98980050308141,
+        "period_s": 9816.789920634857,
+        "semimajor_m": 2287394.900251541
+      },
+      "host_impulse_m_s": -0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3284749859.1094947,
+        "apoapsis_altitude_km": 1000.0,
+        "bound": true,
+        "eccentricity": 0.1960627451282284,
+        "energy_j_kg": -1071099.6872853953,
+        "periapsis_altitude_km": 102.55183400688017,
+        "period_s": 9825.037665378824,
+        "semimajor_m": 2288675.91700344
+      },
+      "payload_impulse_m_s": 0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283364800.145351,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.196740584104094,
+        "energy_j_kg": -1071706.7065392234,
+        "periapsis_altitude_km": 99.95920238683489,
+        "period_s": 9816.691432576392,
+        "semimajor_m": 2287379.601193418
+      },
+      "host_impulse_m_s": -0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3288839600.145351,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.1940595837605712,
+        "energy_j_kg": -1069305.8135749907,
+        "periapsis_altitude_km": 110.23082631577296,
+        "period_s": 9849.771842984776,
+        "semimajor_m": 2292515.413157887
+      },
+      "payload_impulse_m_s": 1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3283336773.4002767,
+        "apoapsis_altitude_km": 999.9999999999995,
+        "bound": true,
+        "eccentricity": 0.19675429726249338,
+        "energy_j_kg": -1071718.9869649229,
+        "periapsis_altitude_km": 99.90678193785483,
+        "period_s": 9816.522704384754,
+        "semimajor_m": 2287353.390968927
+      },
+      "host_impulse_m_s": -0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3295846286.414109,
+        "apoapsis_altitude_km": 1000.0000000000005,
+        "bound": true,
+        "eccentricity": 0.1906219050582778,
+        "energy_j_kg": -1066227.2990087508,
+        "periapsis_altitude_km": 123.46917070875084,
+        "period_s": 9892.461441018637,
+        "semimajor_m": 2299134.5853543757
+      },
+      "payload_impulse_m_s": 4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 1000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947241645.8090367,
+        "apoapsis_altitude_km": 10014.206201709636,
+        "bound": true,
+        "eccentricity": 0.7295755152766308,
+        "energy_j_kg": -360791.6609371463,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 50256.74143072593,
+        "semimajor_m": 6794503.100854817
+      },
+      "host_impulse_m_s": 0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3938844999.6442027,
+        "apoapsis_altitude_km": 9654.61091381917,
+        "bound": true,
+        "eccentricity": 0.7222249710180684,
+        "energy_j_kg": -370598.5209725881,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 48275.139798101955,
+        "semimajor_m": 6614705.456909586
+      },
+      "payload_impulse_m_s": -4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947060036.341158,
+        "apoapsis_altitude_km": 10006.213557573119,
+        "bound": true,
+        "eccentricity": 0.7294163661333775,
+        "energy_j_kg": -361003.9926118823,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50212.408698811676,
+        "semimajor_m": 6790506.7787865605
+      },
+      "host_impulse_m_s": 0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3943385236.341158,
+        "apoapsis_altitude_km": 9846.558648554319,
+        "bound": true,
+        "eccentricity": 0.7261976155896981,
+        "energy_j_kg": -365298.3461944894,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 49329.58975086795,
+        "semimajor_m": 6710679.32427716
+      },
+      "payload_impulse_m_s": -1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946954032.4950047,
+        "apoapsis_altitude_km": 10001.552835449853,
+        "bound": true,
+        "eccentricity": 0.7293234755652078,
+        "energy_j_kg": -361127.9242241015,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 50186.56313098418,
+        "semimajor_m": 6788176.417724927
+      },
+      "host_impulse_m_s": 0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946035332.4950047,
+        "apoapsis_altitude_km": 9961.298722962601,
+        "bound": true,
+        "eccentricity": 0.728518528476297,
+        "energy_j_kg": -362201.8587735994,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 49963.52267070195,
+        "semimajor_m": 6768049.361481302
+      },
+      "payload_impulse_m_s": -0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.87962,
+        "apoapsis_altitude_km": 10000.000000000005,
+        "bound": true,
+        "eccentricity": 0.7292925125968708,
+        "energy_j_kg": -361169.2340218639,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50177.95302264059,
+        "semimajor_m": 6787400.000000003
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.87962,
+        "apoapsis_altitude_km": 10000.000000000005,
+        "bound": true,
+        "eccentricity": 0.7292925125968708,
+        "energy_j_kg": -361169.2340218639,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50177.95302264059,
+        "semimajor_m": 6787400.000000003
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946883363.264235,
+        "apoapsis_altitude_km": 9998.447533626693,
+        "bound": true,
+        "eccentricity": 0.7292615499057271,
+        "energy_j_kg": -361210.54344980326,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50169.345453009795,
+        "semimajor_m": 6786623.766813347
+      },
+      "host_impulse_m_s": -0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947802063.264235,
+        "apoapsis_altitude_km": 10038.931951887356,
+        "bound": true,
+        "eccentricity": 0.7300666699632985,
+        "energy_j_kg": -360136.37813107483,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 50393.970088231436,
+        "semimajor_m": 6806865.975943678
+      },
+      "payload_impulse_m_s": 0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946777359.4180818,
+        "apoapsis_altitude_km": 9993.79234765239,
+        "bound": true,
+        "eccentricity": 0.729168663495458,
+        "energy_j_kg": -361334.4695146857,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50143.5379658837,
+        "semimajor_m": 6784296.173826195
+      },
+      "host_impulse_m_s": -0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3950452159.4180818,
+        "apoapsis_altitude_km": 10157.132636536558,
+        "bound": true,
+        "eccentricity": 0.7323901815377059,
+        "energy_j_kg": -357036.4236243861,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 51051.70809435502,
+        "semimajor_m": 6865966.31826828
+      },
+      "payload_impulse_m_s": 1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946595749.950203,
+        "apoapsis_altitude_km": 9985.82462883445,
+        "bound": true,
+        "eccentricity": 0.7290095330722346,
+        "energy_j_kg": -361546.7762137591,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50099.376684188275,
+        "semimajor_m": 6780312.314417226
+      },
+      "host_impulse_m_s": -0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3954992396.115037,
+        "apoapsis_altitude_km": 10364.672335604575,
+        "bound": true,
+        "eccentricity": 0.7363745261279562,
+        "energy_j_kg": -351720.63905727165,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 52213.43704447747,
+        "semimajor_m": 6969736.167802287
+      },
+      "payload_impulse_m_s": 4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947029180.065999,
+        "apoapsis_altitude_km": 10004.85654181767,
+        "bound": true,
+        "eccentricity": 0.729389326697351,
+        "energy_j_kg": -361040.0677588675,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50204.88304610996,
+        "semimajor_m": 6789828.270908834
+      },
+      "host_impulse_m_s": 0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3938632533.901165,
+        "apoapsis_altitude_km": 9645.768209377915,
+        "bound": true,
+        "eccentricity": 0.7220391785132725,
+        "energy_j_kg": -370846.39936445653,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 48226.746322254316,
+        "semimajor_m": 6610284.104688957
+      },
+      "payload_impulse_m_s": -4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946967050.511199,
+        "apoapsis_altitude_km": 10002.125025782896,
+        "bound": true,
+        "eccentricity": 0.729334883044469,
+        "energy_j_kg": -361112.70473170234,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50189.735916325124,
+        "semimajor_m": 6788462.512891449
+      },
+      "host_impulse_m_s": 0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3943292250.511199,
+        "apoapsis_altitude_km": 9842.569381562764,
+        "bound": true,
+        "eccentricity": 0.7261162083642372,
+        "energy_j_kg": -365406.9570997348,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 49307.597832742955,
+        "semimajor_m": 6708684.690781382
+      },
+      "payload_impulse_m_s": -1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946930786.0375147,
+        "apoapsis_altitude_km": 10000.531191639693,
+        "bound": true,
+        "eccentricity": 0.7293031051601078,
+        "energy_j_kg": -361155.10176424775,
+        "periapsis_altitude_km": 100.00000000000047,
+        "period_s": 50180.898300275156,
+        "semimajor_m": 6787665.595819847
+      },
+      "host_impulse_m_s": 0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946012086.0375147,
+        "apoapsis_altitude_km": 9960.283364700677,
+        "bound": true,
+        "eccentricity": 0.7284981628126628,
+        "energy_j_kg": -362229.0299878344,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 49957.901044572456,
+        "semimajor_m": 6767541.682350338
+      },
+      "payload_impulse_m_s": -0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.87962,
+        "apoapsis_altitude_km": 10000.000000000005,
+        "bound": true,
+        "eccentricity": 0.7292925125968708,
+        "energy_j_kg": -361169.2340218639,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50177.95302264059,
+        "semimajor_m": 6787400.000000003
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.87962,
+        "apoapsis_altitude_km": 10000.000000000005,
+        "bound": true,
+        "eccentricity": 0.7292925125968708,
+        "energy_j_kg": -361169.2340218639,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50177.95302264059,
+        "semimajor_m": 6787400.000000003
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946906609.7217255,
+        "apoapsis_altitude_km": 9999.468851555568,
+        "bound": true,
+        "eccentricity": 0.7292819200660756,
+        "energy_j_kg": -361183.3662361973,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50175.008042126865,
+        "semimajor_m": 6787134.425777784
+      },
+      "host_impulse_m_s": -0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947825309.7217255,
+        "apoapsis_altitude_km": 10039.959610792052,
+        "bound": true,
+        "eccentricity": 0.7300870448651122,
+        "energy_j_kg": -360109.1945915581,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50399.676325463144,
+        "semimajor_m": 6807379.805396025
+      },
+      "payload_impulse_m_s": 0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946870345.2480407,
+        "apoapsis_altitude_km": 9997.87566534103,
+        "bound": true,
+        "eccentricity": 0.7292501426683382,
+        "energy_j_kg": -361225.76261950424,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50166.17488288912,
+        "semimajor_m": 6786337.8326705145
+      },
+      "host_impulse_m_s": -0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3950545145.2480407,
+        "apoapsis_altitude_km": 10161.318767193121,
+        "bound": true,
+        "eccentricity": 0.7324717365740339,
+        "energy_j_kg": -356927.61551463,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 51075.054269900975,
+        "semimajor_m": 6868059.383596561
+      },
+      "payload_impulse_m_s": 1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946808215.6932406,
+        "apoapsis_altitude_km": 9995.147066462501,
+        "bound": true,
+        "eccentricity": 0.7291957012063739,
+        "energy_j_kg": -361298.39666928723,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50151.047818921514,
+        "semimajor_m": 6784973.533231251
+      },
+      "host_impulse_m_s": -0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3955204861.8580747,
+        "apoapsis_altitude_km": 10374.544099150184,
+        "bound": true,
+        "eccentricity": 0.7365610903365791,
+        "energy_j_kg": -351471.7310829465,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 52268.912238021796,
+        "semimajor_m": 6974672.049575091
+      },
+      "payload_impulse_m_s": 4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946952150.6531854,
+        "apoapsis_altitude_km": 10001.470125633725,
+        "bound": true,
+        "eccentricity": 0.7293218265404495,
+        "energy_j_kg": -361130.1242999644,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50186.10451203803,
+        "semimajor_m": 6788135.062816862
+      },
+      "host_impulse_m_s": 0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3938555504.488351,
+        "apoapsis_altitude_km": 9642.565325395368,
+        "bound": true,
+        "eccentricity": 0.7219718219530957,
+        "energy_j_kg": -370936.26432341523,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 48209.221888151296,
+        "semimajor_m": 6608682.662697685
+      },
+      "payload_impulse_m_s": -4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946933338.5170703,
+        "apoapsis_altitude_km": 10000.643361135362,
+        "bound": true,
+        "eccentricity": 0.7293053418409559,
+        "energy_j_kg": -361152.1176565066,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50181.52024948609,
+        "semimajor_m": 6787721.680567682
+      },
+      "host_impulse_m_s": 0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3943258538.5170703,
+        "apoapsis_altitude_km": 9841.123682515852,
+        "bound": true,
+        "eccentricity": 0.7260866946650018,
+        "energy_j_kg": -365446.3333292152,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 49299.628830964444,
+        "semimajor_m": 6707961.841257926
+      },
+      "payload_impulse_m_s": -1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946922358.038982,
+        "apoapsis_altitude_km": 10000.16083434318,
+        "bound": true,
+        "eccentricity": 0.7292957199034302,
+        "energy_j_kg": -361164.95493647736,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50178.84478848839,
+        "semimajor_m": 6787480.41717159
+      },
+      "host_impulse_m_s": 0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946003658.038982,
+        "apoapsis_altitude_km": 9959.915285865296,
+        "bound": true,
+        "eccentricity": 0.7284907792750024,
+        "energy_j_kg": -362238.8808666067,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 49955.86319369381,
+        "semimajor_m": 6767357.642932648
+      },
+      "payload_impulse_m_s": -0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.87962,
+        "apoapsis_altitude_km": 10000.000000000005,
+        "bound": true,
+        "eccentricity": 0.7292925125968708,
+        "energy_j_kg": -361169.2340218639,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50177.95302264059,
+        "semimajor_m": 6787400.000000003
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.87962,
+        "apoapsis_altitude_km": 10000.000000000005,
+        "bound": true,
+        "eccentricity": 0.7292925125968708,
+        "energy_j_kg": -361169.2340218639,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50177.95302264059,
+        "semimajor_m": 6787400.000000003
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946915037.7202578,
+        "apoapsis_altitude_km": 9999.839169617024,
+        "bound": true,
+        "eccentricity": 0.7292893052932856,
+        "energy_j_kg": -361173.5131032821,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50177.061284033174,
+        "semimajor_m": 6787319.584808512
+      },
+      "host_impulse_m_s": -0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947833737.7202578,
+        "apoapsis_altitude_km": 10040.332228140494,
+        "bound": true,
+        "eccentricity": 0.7300944318113398,
+        "energy_j_kg": -360099.33916518465,
+        "periapsis_altitude_km": 100.0,
+        "period_s": 50401.745394927326,
+        "semimajor_m": 6807566.114070247
+      },
+      "payload_impulse_m_s": 0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946904057.2421694,
+        "apoapsis_altitude_km": 9999.356702227653,
+        "bound": true,
+        "eccentricity": 0.7292796834003743,
+        "energy_j_kg": -361186.3503237297,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 50174.3862316409,
+        "semimajor_m": 6787078.351113826
+      },
+      "host_impulse_m_s": -0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3950578857.2421694,
+        "apoapsis_altitude_km": 10162.837102845022,
+        "bound": true,
+        "eccentricity": 0.7325013048103477,
+        "energy_j_kg": -356888.16652353154,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 51083.522952367275,
+        "semimajor_m": 6868818.551422511
+      },
+      "payload_impulse_m_s": 1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946885245.106055,
+        "apoapsis_altitude_km": 9998.530205177298,
+        "bound": true,
+        "eccentricity": 0.7292631989017466,
+        "energy_j_kg": -361208.34341228334,
+        "periapsis_altitude_km": 100.00000000000023,
+        "period_s": 50169.80380874447,
+        "semimajor_m": 6786665.102588649
+      },
+      "host_impulse_m_s": -0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3955281891.270889,
+        "apoapsis_altitude_km": 10378.126690617431,
+        "bound": true,
+        "eccentricity": 0.736628731628677,
+        "energy_j_kg": -351381.48624380445,
+        "periapsis_altitude_km": 99.99999999999977,
+        "period_s": 52289.04976353443,
+        "semimajor_m": 6976463.345308715
+      },
+      "payload_impulse_m_s": 4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "periapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3948981704.860534,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7290094475366486,
+        "energy_j_kg": -361110.1148212464,
+        "periapsis_altitude_km": 102.22240056870505,
+        "period_s": 50190.275864458235,
+        "semimajor_m": 6788511.2002843525
+      },
+      "host_impulse_m_s": 0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3895343523.3567123,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7363210663865137,
+        "energy_j_kg": -362637.1738700941,
+        "periapsis_altitude_km": 45.04978725956008,
+        "period_s": 49873.584233331094,
+        "semimajor_m": 6759924.89362978
+      },
+      "payload_impulse_m_s": -4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947821574.8026953,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7291686471121137,
+        "energy_j_kg": -361143.36425030977,
+        "periapsis_altitude_km": 100.97240323278285,
+        "period_s": 50183.344712852246,
+        "semimajor_m": 6787886.201616392
+      },
+      "host_impulse_m_s": 0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3924346774.8026953,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7323799419477746,
+        "energy_j_kg": -361814.0552337989,
+        "periapsis_altitude_km": 75.8071339099391,
+        "period_s": 50043.8728742238,
+        "semimajor_m": 6775303.566954969
+      },
+      "payload_impulse_m_s": -1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947144417.1103873,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7292615488817686,
+        "energy_j_kg": -361162.7671337092,
+        "periapsis_altitude_km": 100.24306689756666,
+        "period_s": 50179.3007390671,
+        "semimajor_m": 6787521.533448784
+      },
+      "host_impulse_m_s": 0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3941275717.1103873,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7300660299889281,
+        "energy_j_kg": -361330.7860334277,
+        "periapsis_altitude_km": 93.93066870761686,
+        "period_s": 50144.304728335876,
+        "semimajor_m": 6784365.334353808
+      },
+      "payload_impulse_m_s": -0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.8796177,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.729292512596871,
+        "energy_j_kg": -361169.2340218641,
+        "periapsis_altitude_km": 99.99999999999791,
+        "period_s": 50177.95302264055,
+        "semimajor_m": 6787399.999999999
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.8796177,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.729292512596871,
+        "energy_j_kg": -361169.2340218641,
+        "periapsis_altitude_km": 99.99999999999791,
+        "period_s": 50177.95302264055,
+        "semimajor_m": 6787399.999999999
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946692978.6488485,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7293234745412487,
+        "energy_j_kg": -361175.70054019644,
+        "periapsis_altitude_km": 99.75695570624596,
+        "period_s": 50176.60544360804,
+        "semimajor_m": 6787278.477853123
+      },
+      "host_impulse_m_s": -0.019230769230769232,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3952561678.6488485,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7285178885019263,
+        "energy_j_kg": -361007.4508712472,
+        "periapsis_altitude_km": 106.0834586867739,
+        "period_s": 50211.687188287426,
+        "semimajor_m": 6790441.729343387
+      },
+      "payload_impulse_m_s": 0.4807692307692308,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946015820.9565406,
+        "apoapsis_altitude_km": 9999.999999999998,
+        "bound": true,
+        "eccentricity": 0.7294163497500341,
+        "energy_j_kg": -361195.09787625866,
+        "periapsis_altitude_km": 99.02795842828345,
+        "period_s": 50172.56353073342,
+        "semimajor_m": 6786913.979214141
+      },
+      "host_impulse_m_s": -0.07692307692307693,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3969490620.9565406,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7261873759997675,
+        "energy_j_kg": -360520.7145850772,
+        "periapsis_altitude_km": 124.41890658245748,
+        "period_s": 50313.40712967036,
+        "semimajor_m": 6799609.453291229
+      },
+      "payload_impulse_m_s": 1.9230769230769231,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3944855690.8987017,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7295754297410442,
+        "energy_j_kg": -361228.32232965954,
+        "periapsis_altitude_km": 97.77948762298166,
+        "period_s": 50165.64165792358,
+        "semimajor_m": 6786289.743811491
+      },
+      "host_impulse_m_s": -0.17576354055550836,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3998493872.4025235,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7221715112766258,
+        "energy_j_kg": -359681.98615976615,
+        "periapsis_altitude_km": 156.1303958921039,
+        "period_s": 50489.49549740985,
+        "semimajor_m": 6815465.197946053
+      },
+      "payload_impulse_m_s": 4.394088513887709,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 100.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947624463.4257207,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7291956911956301,
+        "energy_j_kg": -361149.0125086913,
+        "periapsis_altitude_km": 100.76008236907656,
+        "period_s": 50182.16743956904,
+        "semimajor_m": 6787780.041184539
+      },
+      "host_impulse_m_s": 0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3893986281.9218993,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7365047799025523,
+        "energy_j_kg": -362675.5431276857,
+        "periapsis_altitude_km": 43.619454806994185,
+        "period_s": 49865.66987920723,
+        "semimajor_m": 6759209.727403497
+      },
+      "payload_impulse_m_s": -4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947227576.8269863,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7292501407508972,
+        "energy_j_kg": -361160.384502744,
+        "periapsis_altitude_km": 100.33262355813407,
+        "period_s": 50179.79730080837,
+        "semimajor_m": 6787566.311779067
+      },
+      "host_impulse_m_s": 0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3923752776.8269863,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7324609509671884,
+        "energy_j_kg": -361830.9742716582,
+        "periapsis_altitude_km": 75.17351420510956,
+        "period_s": 50040.362875043946,
+        "semimajor_m": 6774986.757102556
+      },
+      "payload_impulse_m_s": -1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946995917.6164603,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7292819199462353,
+        "energy_j_kg": -361167.0217070079,
+        "periapsis_altitude_km": 100.08315192114539,
+        "period_s": 50178.414068061014,
+        "semimajor_m": 6787441.575960573
+      },
+      "host_impulse_m_s": 0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3941127217.6164603,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7300863707646842,
+        "energy_j_kg": -361335.0342808154,
+        "periapsis_altitude_km": 93.77113996241032,
+        "period_s": 50143.42040451496,
+        "semimajor_m": 6784285.569981205
+      },
+      "payload_impulse_m_s": -0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.8796177,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.729292512596871,
+        "energy_j_kg": -361169.2340218641,
+        "periapsis_altitude_km": 99.99999999999791,
+        "period_s": 50177.95302264055,
+        "semimajor_m": 6787399.999999999
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.8796177,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.729292512596871,
+        "energy_j_kg": -361169.2340218641,
+        "periapsis_altitude_km": 99.99999999999791,
+        "period_s": 50177.95302264055,
+        "semimajor_m": 6787399.999999999
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946841478.1427755,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7293031050402681,
+        "energy_j_kg": -361171.44629343774,
+        "periapsis_altitude_km": 99.91685072431132,
+        "period_s": 50177.49199330013,
+        "semimajor_m": 6787358.425362156
+      },
+      "host_impulse_m_s": -0.006578947368421052,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3952710178.1427755,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7284974887122351,
+        "energy_j_kg": -361003.1902985776,
+        "periapsis_altitude_km": 106.24374076307868,
+        "period_s": 50212.57609112436,
+        "semimajor_m": 6790521.87038154
+      },
+      "payload_impulse_m_s": 0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946609818.9322495,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7293348811270279,
+        "energy_j_kg": -361178.0828484634,
+        "periapsis_altitude_km": 99.66741876923037,
+        "period_s": 50176.10900175352,
+        "semimajor_m": 6787233.7093846155
+      },
+      "host_impulse_m_s": -0.02631578947368421,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3970084618.9322495,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7261054227573915,
+        "energy_j_kg": -360503.59834270703,
+        "periapsis_altitude_km": 125.06457982377941,
+        "period_s": 50316.99039498309,
+        "semimajor_m": 6799932.2899118895
+      },
+      "payload_impulse_m_s": 1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946212932.333515,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7293893166866074,
+        "energy_j_kg": -361189.45191946416,
+        "periapsis_altitude_km": 99.24013861732651,
+        "period_s": 50173.73994894603,
+        "semimajor_m": 6787020.069308664
+      },
+      "host_impulse_m_s": -0.060129632295305484,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3999851113.8373365,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7219828680792464,
+        "energy_j_kg": -359642.5873197176,
+        "periapsis_altitude_km": 157.62366411259816,
+        "period_s": 50497.79240984321,
+        "semimajor_m": 6816211.832056299
+      },
+      "payload_impulse_m_s": 4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 300.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947132395.813896,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.729263197983951,
+        "energy_j_kg": -361163.1115548917,
+        "periapsis_altitude_km": 100.2301211336283,
+        "period_s": 50179.22895926973,
+        "semimajor_m": 6787515.060566815
+      },
+      "host_impulse_m_s": 0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3893494214.3100743,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7365713693880533,
+        "energy_j_kg": -362689.4505917481,
+        "periapsis_altitude_km": 43.10108590367623,
+        "period_s": 49862.80172976516,
+        "semimajor_m": 6758950.542951839
+      },
+      "payload_impulse_m_s": -4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3947012222.9792194,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7292796832245814,
+        "energy_j_kg": -361166.5545592925,
+        "periapsis_altitude_km": 100.10071023481153,
+        "period_s": 50178.511422337506,
+        "semimajor_m": 6787450.355117407
+      },
+      "host_impulse_m_s": 0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3923537422.9792194,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7324903177422166,
+        "energy_j_kg": -361837.1076328828,
+        "periapsis_altitude_km": 74.9438338312828,
+        "period_s": 50039.0905581053,
+        "semimajor_m": 6774871.916915642
+      },
+      "payload_impulse_m_s": -1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946942079.1545186,
+        "apoapsis_altitude_km": 9999.999999999998,
+        "bound": true,
+        "eccentricity": 0.7292893052822982,
+        "energy_j_kg": -361168.5641621735,
+        "periapsis_altitude_km": 100.02517719488824,
+        "period_s": 50178.09262035339,
+        "semimajor_m": 6787412.588597444
+      },
+      "host_impulse_m_s": 0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3941073379.1545186,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7300937451195812,
+        "energy_j_kg": -361336.57444252324,
+        "periapsis_altitude_km": 93.71330525876279,
+        "period_s": 50143.09980773964,
+        "semimajor_m": 6784256.652629381
+      },
+      "payload_impulse_m_s": -0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": -0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.8796177,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.729292512596871,
+        "energy_j_kg": -361169.2340218641,
+        "periapsis_altitude_km": 99.99999999999791,
+        "period_s": 50177.95302264055,
+        "semimajor_m": 6787399.999999999
+      },
+      "host_impulse_m_s": -0.0,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946918697.8796177,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.729292512596871,
+        "energy_j_kg": -361169.2340218641,
+        "periapsis_altitude_km": 99.99999999999791,
+        "period_s": 50177.95302264055,
+        "semimajor_m": 6787399.999999999
+      },
+      "payload_impulse_m_s": 0.0,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946895316.6047173,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7292957198924437,
+        "energy_j_kg": -361169.9038775865,
+        "periapsis_altitude_km": 99.97482304764655,
+        "period_s": 50177.813426401946,
+        "semimajor_m": 6787387.411523824
+      },
+      "host_impulse_m_s": -0.00199203187250996,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3952764016.6047173,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7284900925832447,
+        "energy_j_kg": -361001.6455892686,
+        "periapsis_altitude_km": 106.3018534197614,
+        "period_s": 50212.89837739773,
+        "semimajor_m": 6790550.926709881
+      },
+      "payload_impulse_m_s": 0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946825172.7800164,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7293053416651627,
+        "energy_j_kg": -361171.9134209446,
+        "periapsis_altitude_km": 99.89929364580358,
+        "period_s": 50177.39464653139,
+        "semimajor_m": 6787349.646822902
+      },
+      "host_impulse_m_s": -0.00796812749003984,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3970299972.7800164,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7260757075968705,
+        "energy_j_kg": -360497.3922198643,
+        "periapsis_altitude_km": 125.29870753745688,
+        "period_s": 50318.28974460747,
+        "semimajor_m": 6800049.353768729
+      },
+      "payload_impulse_m_s": 1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    },
+    {
+      "host": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 3946704999.945339,
+        "apoapsis_altitude_km": 10000.000000000002,
+        "bound": true,
+        "eccentricity": 0.7293218256226535,
+        "energy_j_kg": -361175.3561573568,
+        "periapsis_altitude_km": 99.76989912664052,
+        "period_s": 50176.67720916052,
+        "semimajor_m": 6787284.949563321
+      },
+      "host_impulse_m_s": -0.01820658189021202,
+      "payload": {
+        "above_reference_surface": true,
+        "angular_momentum_m2_s": 4000343181.4491615,
+        "apoapsis_altitude_km": 10000.0,
+        "bound": true,
+        "eccentricity": 0.7219144597124723,
+        "energy_j_kg": -359628.2999754722,
+        "periapsis_altitude_km": 158.16525422050034,
+        "period_s": 50500.80171073615,
+        "semimajor_m": 6816482.62711025
+      },
+      "payload_impulse_m_s": 4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "release_at": "apoapsis",
+      "retained_host_kg": 1000.0,
+      "staging_apoapsis_km": 10000.0,
+      "staging_periapsis_km": 100.0
+    }
+  ],
+  "scaling_cases": [
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 29.41995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 98.06649999999999,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 0.125,
+      "host_impulse_m_s": -0.0016611295681063123,
+      "ideal_relative_energy_j": 0.12458471760797342,
+      "payload_impulse_m_s": 0.4983388704318937,
+      "payload_kg": 1.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 0.4983388704318937
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 29.41995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 98.06649999999999,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 2.0,
+      "host_impulse_m_s": -0.006644518272425249,
+      "ideal_relative_energy_j": 1.9933554817275747,
+      "payload_impulse_m_s": 1.9933554817275747,
+      "payload_kg": 1.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 1.9933554817275747
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 29.41995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 98.06649999999999,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 10.441773899749446,
+      "host_impulse_m_s": -0.01518223273901401,
+      "ideal_relative_energy_j": 10.407083621012736,
+      "payload_impulse_m_s": 4.554669821704203,
+      "payload_kg": 1.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 4.554669821704203
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 29.41995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 98.06649999999999,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 0.125,
+      "host_impulse_m_s": -0.0004995004995004995,
+      "ideal_relative_energy_j": 0.12487512487512488,
+      "payload_impulse_m_s": 0.4995004995004995,
+      "payload_kg": 1.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 0.4995004995004995
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 29.41995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 98.06649999999999,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 2.0,
+      "host_impulse_m_s": -0.001998001998001998,
+      "ideal_relative_energy_j": 1.998001998001998,
+      "payload_impulse_m_s": 1.998001998001998,
+      "payload_kg": 1.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 1.998001998001998
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 29.41995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 98.06649999999999,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 10.441773899749446,
+      "host_impulse_m_s": -0.004565286767675541,
+      "ideal_relative_energy_j": 10.431342557192254,
+      "payload_impulse_m_s": 4.565286767675541,
+      "payload_kg": 1.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 4.565286767675541
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 117.6798,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 392.26599999999996,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 0.5,
+      "host_impulse_m_s": -0.006578947368421052,
+      "ideal_relative_energy_j": 0.4934210526315789,
+      "payload_impulse_m_s": 0.4934210526315789,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 1.9736842105263157
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 117.6798,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 392.26599999999996,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 8.0,
+      "host_impulse_m_s": -0.02631578947368421,
+      "ideal_relative_energy_j": 7.894736842105263,
+      "payload_impulse_m_s": 1.9736842105263157,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 7.894736842105263
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 117.6798,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 392.26599999999996,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 41.767095598997784,
+      "host_impulse_m_s": -0.060129632295305484,
+      "ideal_relative_energy_j": 41.217528551642545,
+      "payload_impulse_m_s": 4.509722422147911,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 18.038889688591645
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 117.6798,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 392.26599999999996,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 0.5,
+      "host_impulse_m_s": -0.00199203187250996,
+      "ideal_relative_energy_j": 0.49800796812749004,
+      "payload_impulse_m_s": 0.49800796812749004,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 1.9920318725099602
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 117.6798,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 392.26599999999996,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 8.0,
+      "host_impulse_m_s": -0.00796812749003984,
+      "ideal_relative_energy_j": 7.968127490039841,
+      "payload_impulse_m_s": 1.9920318725099602,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 7.968127490039841
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 117.6798,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 392.26599999999996,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 41.767095598997784,
+      "host_impulse_m_s": -0.01820658189021202,
+      "ideal_relative_energy_j": 41.60069282768704,
+      "payload_impulse_m_s": 4.551645472553005,
+      "payload_kg": 4.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 18.20658189021202
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 353.0394,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 1176.798,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 1.5,
+      "host_impulse_m_s": -0.019230769230769232,
+      "ideal_relative_energy_j": 1.4423076923076923,
+      "payload_impulse_m_s": 0.4807692307692308,
+      "payload_kg": 12.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 5.769230769230769
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 353.0394,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 1176.798,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 24.0,
+      "host_impulse_m_s": -0.07692307692307693,
+      "ideal_relative_energy_j": 23.076923076923077,
+      "payload_impulse_m_s": 1.9230769230769231,
+      "payload_kg": 12.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 23.076923076923077
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 353.0394,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 1176.798,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 125.30128679699335,
+      "host_impulse_m_s": -0.17576354055550836,
+      "ideal_relative_energy_j": 120.48200653557053,
+      "payload_impulse_m_s": 4.394088513887709,
+      "payload_kg": 12.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 52.72906216665251
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 353.0394,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 1176.798,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 1.5,
+      "host_impulse_m_s": -0.005928853754940711,
+      "ideal_relative_energy_j": 1.482213438735178,
+      "payload_impulse_m_s": 0.49407114624505927,
+      "payload_kg": 12.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 5.928853754940711
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 353.0394,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 1176.798,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 24.0,
+      "host_impulse_m_s": -0.023715415019762844,
+      "ideal_relative_energy_j": 23.715415019762847,
+      "payload_impulse_m_s": 1.976284584980237,
+      "payload_kg": 12.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 23.715415019762844
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 353.0394,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 1176.798,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 125.30128679699335,
+      "host_impulse_m_s": -0.05418796902501838,
+      "ideal_relative_energy_j": 123.81550078754285,
+      "payload_impulse_m_s": 4.515664085418199,
+      "payload_kg": 12.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 54.18796902501839
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 735.49875,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 2451.6625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 3.125,
+      "host_impulse_m_s": -0.038461538461538464,
+      "ideal_relative_energy_j": 2.8846153846153846,
+      "payload_impulse_m_s": 0.46153846153846156,
+      "payload_kg": 25.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 11.538461538461538
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 735.49875,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 2451.6625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 50.0,
+      "host_impulse_m_s": -0.15384615384615385,
+      "ideal_relative_energy_j": 46.15384615384615,
+      "payload_impulse_m_s": 1.8461538461538463,
+      "payload_kg": 25.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 46.15384615384615
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 735.49875,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 2451.6625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 261.04434749373615,
+      "host_impulse_m_s": -0.3515270811110167,
+      "ideal_relative_energy_j": 240.96401307114107,
+      "payload_impulse_m_s": 4.218324973332201,
+      "payload_kg": 25.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 105.45812433330501
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 735.49875,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 2451.6625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 3.125,
+      "host_impulse_m_s": -0.012195121951219513,
+      "ideal_relative_energy_j": 3.048780487804878,
+      "payload_impulse_m_s": 0.4878048780487805,
+      "payload_kg": 25.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 12.195121951219512
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 735.49875,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 2451.6625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 50.0,
+      "host_impulse_m_s": -0.04878048780487805,
+      "ideal_relative_energy_j": 48.78048780487805,
+      "payload_impulse_m_s": 1.951219512195122,
+      "payload_kg": 25.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 48.78048780487805
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 735.49875,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 2451.6625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 261.04434749373615,
+      "host_impulse_m_s": -0.11145980620593213,
+      "ideal_relative_energy_j": 254.67741218901088,
+      "payload_impulse_m_s": 4.458392248237285,
+      "payload_kg": 25.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 111.45980620593213
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 1470.9975,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 4903.325,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 6.25,
+      "host_impulse_m_s": -0.07142857142857142,
+      "ideal_relative_energy_j": 5.357142857142857,
+      "payload_impulse_m_s": 0.42857142857142855,
+      "payload_kg": 50.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 21.428571428571427
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 1470.9975,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 4903.325,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 100.0,
+      "host_impulse_m_s": -0.2857142857142857,
+      "ideal_relative_energy_j": 85.71428571428571,
+      "payload_impulse_m_s": 1.7142857142857142,
+      "payload_kg": 50.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 85.71428571428571
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 1470.9975,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 4903.325,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 522.0886949874723,
+      "host_impulse_m_s": -0.6528360077776024,
+      "ideal_relative_energy_j": 447.50459570354764,
+      "payload_impulse_m_s": 3.9170160466656143,
+      "payload_kg": 50.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 195.8508023332807
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 1470.9975,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 4903.325,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 6.25,
+      "host_impulse_m_s": -0.023809523809523808,
+      "ideal_relative_energy_j": 5.9523809523809526,
+      "payload_impulse_m_s": 0.47619047619047616,
+      "payload_kg": 50.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 23.809523809523807
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 1470.9975,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 4903.325,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 100.0,
+      "host_impulse_m_s": -0.09523809523809523,
+      "ideal_relative_energy_j": 95.23809523809524,
+      "payload_impulse_m_s": 1.9047619047619047,
+      "payload_kg": 50.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 95.23809523809523
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 1470.9975,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 4903.325,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 522.0886949874723,
+      "host_impulse_m_s": -0.21761200259253413,
+      "ideal_relative_energy_j": 497.2273285594974,
+      "payload_impulse_m_s": 4.352240051850683,
+      "payload_kg": 50.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 217.61200259253414
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 2941.995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 9806.65,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 12.5,
+      "host_impulse_m_s": -0.125,
+      "ideal_relative_energy_j": 9.375,
+      "payload_impulse_m_s": 0.375,
+      "payload_kg": 100.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 37.5
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 2941.995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 9806.65,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 200.0,
+      "host_impulse_m_s": -0.5,
+      "ideal_relative_energy_j": 150.0,
+      "payload_impulse_m_s": 1.5,
+      "payload_kg": 100.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 150.0
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 2941.995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 9806.65,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 1044.1773899749446,
+      "host_impulse_m_s": -1.1424630136108043,
+      "ideal_relative_energy_j": 783.1330424812085,
+      "payload_impulse_m_s": 3.427389040832413,
+      "payload_kg": 100.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 342.73890408324127
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 2941.995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 9806.65,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 12.5,
+      "host_impulse_m_s": -0.045454545454545456,
+      "ideal_relative_energy_j": 11.363636363636363,
+      "payload_impulse_m_s": 0.45454545454545453,
+      "payload_kg": 100.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 45.45454545454545
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 2941.995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 9806.65,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 200.0,
+      "host_impulse_m_s": -0.18181818181818182,
+      "ideal_relative_energy_j": 181.8181818181818,
+      "payload_impulse_m_s": 1.8181818181818181,
+      "payload_kg": 100.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 181.8181818181818
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 2941.995,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 9806.65,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 1044.1773899749446,
+      "host_impulse_m_s": -0.4154410958584743,
+      "ideal_relative_energy_j": 949.2521727044951,
+      "payload_impulse_m_s": 4.154410958584743,
+      "payload_kg": 100.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 415.4410958584743
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 7354.987499999999,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 24516.625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 31.25,
+      "host_impulse_m_s": -0.22727272727272727,
+      "ideal_relative_energy_j": 17.045454545454547,
+      "payload_impulse_m_s": 0.2727272727272727,
+      "payload_kg": 250.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 68.18181818181817
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 7354.987499999999,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 24516.625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 500.0,
+      "host_impulse_m_s": -0.9090909090909091,
+      "ideal_relative_energy_j": 272.72727272727275,
+      "payload_impulse_m_s": 1.0909090909090908,
+      "payload_kg": 250.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 272.7272727272727
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 7354.987499999999,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 24516.625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 2610.4434749373613,
+      "host_impulse_m_s": -2.0772054792923713,
+      "ideal_relative_energy_j": 1423.8782590567428,
+      "payload_impulse_m_s": 2.4926465751508453,
+      "payload_kg": 250.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 300.0,
+      "separation_momentum_kg_m_s": 623.1616437877113
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.004248817554074701,
+          "peak_payload_force_n": 7354.987499999999,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.008497635108149403
+        },
+        {
+          "constant_force_stroke_m": 0.0012746452662224105,
+          "peak_payload_force_n": 24516.625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.002549290532444821
+        }
+      ],
+      "fixed_frame_payload_energy_j": 31.25,
+      "host_impulse_m_s": -0.1,
+      "ideal_relative_energy_j": 25.0,
+      "payload_impulse_m_s": 0.4,
+      "payload_kg": 250.0,
+      "relative_speed_m_s": 0.5,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 100.0
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.06798108086519522,
+          "peak_payload_force_n": 7354.987499999999,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.13596216173039044
+        },
+        {
+          "constant_force_stroke_m": 0.020394324259558567,
+          "peak_payload_force_n": 24516.625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.040788648519117135
+        }
+      ],
+      "fixed_frame_payload_energy_j": 500.0,
+      "host_impulse_m_s": -0.4,
+      "ideal_relative_energy_j": 400.0,
+      "payload_impulse_m_s": 1.6,
+      "payload_kg": 250.0,
+      "relative_speed_m_s": 2.0,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 400.0
+    },
+    {
+      "fixed_frame_bounds": [
+        {
+          "constant_force_stroke_m": 0.35492153792747594,
+          "peak_payload_force_n": 7354.987499999999,
+          "study_acceleration_g": 3.0,
+          "zero_preload_linear_spring_stroke_m": 0.7098430758549519
+        },
+        {
+          "constant_force_stroke_m": 0.10647646137824279,
+          "peak_payload_force_n": 24516.625,
+          "study_acceleration_g": 10.0,
+          "zero_preload_linear_spring_stroke_m": 0.21295292275648559
+        }
+      ],
+      "fixed_frame_payload_energy_j": 2610.4434749373613,
+      "host_impulse_m_s": -0.9139704108886435,
+      "ideal_relative_energy_j": 2088.3547799498892,
+      "payload_impulse_m_s": 3.655881643554574,
+      "payload_kg": 250.0,
+      "relative_speed_m_s": 4.569852054443217,
+      "retained_host_kg": 1000.0,
+      "separation_momentum_kg_m_s": 913.9704108886435
+    }
+  ],
+  "source_sha256": {
+    "analysis/lunar_release_scaling.py": "5ed2ef32a47e8b930e7b119b76d9b849797902b2f6e797ae4c865804adbd32ba",
+    "validation/C0_S1_lunar_release_scaling.md": "232fa12a70b9b42ff35cb6e6d165e61a7c569fb0b4b14dc4ceacbccc537ea944"
+  },
+  "study": "C0-S1",
+  "verification": {
+    "checks": {
+      "apsidal_reconstruction": true,
+      "capture_energy_sign": true,
+      "case_counts": true,
+      "independent_propagation": true,
+      "invalid_mass_rejected": true,
+      "kinetic_energy": true,
+      "momentum": true,
+      "relative_speed": true,
+      "rocket_equation_limits": true,
+      "tighter_propagation": true,
+      "work_identity": true,
+      "zero_release": true
+    },
+    "independent": [
+      {
+        "position_error_m": 1.0306935997066559e-05,
+        "relative_speed_m_s": -4.569852054443217,
+        "tightened_position_change_m": 1.0129703609063237e-05,
+        "tightened_velocity_change_m_s": 6.667023451577817e-09,
+        "velocity_error_m_s": 6.7825638063196534e-09
+      },
+      {
+        "position_error_m": 1.0697425508877073e-05,
+        "relative_speed_m_s": 0,
+        "tightened_position_change_m": 1.0514195831956255e-05,
+        "tightened_velocity_change_m_s": 6.786476527722931e-09,
+        "velocity_error_m_s": 6.9034868137219035e-09
+      },
+      {
+        "position_error_m": 1.1939493086440333e-05,
+        "relative_speed_m_s": 4.569852054443217,
+        "tightened_position_change_m": 1.1746716619378153e-05,
+        "tightened_velocity_change_m_s": 7.3660774447107874e-09,
+        "velocity_error_m_s": 7.486870393824234e-09
+      }
+    ],
+    "max_energy_residual_j": 6.706116209009849e-07,
+    "max_momentum_residual": 0.0,
+    "passed": true
+  }
+}

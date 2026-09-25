@@ -1,0 +1,1138 @@
+{
+  "units": "mm",
+  "departure_axis": "+X",
+  "model_scope": "Packaging envelopes only; not mass, interference, structural or manufacturability closure",
+  "source_sha256": "b7f597ea58fab1b9b4e5846d33bf121926925d792b4c5882daa90504ef856117",
+  "checks": [
+    {
+      "model": "mechanical_cell",
+      "valid": true,
+      "step_bbox_residual_mm": 0.0,
+      "pass_checks": true
+    },
+    {
+      "model": "four_cell_bank",
+      "valid": true,
+      "step_bbox_residual_mm": 0.0,
+      "pass_checks": true
+    },
+    {
+      "model": "lunar_carrier",
+      "valid": true,
+      "step_bbox_residual_mm": 0.0,
+      "pass_checks": true
+    },
+    {
+      "model": "large_payload_pallet",
+      "valid": true,
+      "step_bbox_residual_mm": 0.0,
+      "pass_checks": true
+    }
+  ],
+  "components": [
+    {
+      "model": "mechanical_cell",
+      "component": "cell_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "mechanical_cell",
+      "component": "cell_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_0_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_0_1_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_0_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "cell_1_1_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "four_cell_bank",
+      "component": "bank_interface",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_0_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_0_1_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_0_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_mounting_deck",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_frame_-70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_guide_-70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_frame_70",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_guide_70",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_rear_spring_seat",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_pusher_charged",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_payload_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_spring_envelope_-35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_spring_envelope_35",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_charger_motor_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_charger_screw_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_withdrawn_coupling",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_latch_envelope",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_catcher_envelope_-62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_catcher_envelope_62",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "cell_1_1_sensor_harness_zone",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "bank_interface",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "carrier_bus_placeholder",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "tank_envelope",
+      "role": "keepout",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "solar_wing_-690",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_-690_0",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_-690_1",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_-690_2",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_-690_3",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_-690_4",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_-690_5",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "solar_wing_690",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_690_0",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_690_1",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_690_2",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_690_3",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_690_4",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "panel_grid_690_5",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "engine_envelope",
+      "role": "keepout",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "radiator_envelope",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "lunar_carrier",
+      "component": "antenna_envelope",
+      "role": "services",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "payload_berth_proxy",
+      "role": "payload",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "pallet",
+      "role": "structure",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "push_point_-290_-290",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "ascent_restraint_-290_-290",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "push_point_-290_290",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "ascent_restraint_-290_290",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "push_point_290_-290",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "ascent_restraint_290_-290",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "push_point_290_290",
+      "role": "release",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    },
+    {
+      "model": "large_payload_pallet",
+      "component": "ascent_restraint_290_290",
+      "role": "charger",
+      "status": "concept envelope; component selection and manufacturing dimensions unverified"
+    }
+  ]
+}

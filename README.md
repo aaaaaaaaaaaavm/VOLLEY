@@ -10,6 +10,23 @@ The project investigates provider-hosted control of individual payload departure
 
 [Interactive project site](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Documentation portal](https://aaaaaaaaaaaavm.github.io/VOLLEY/docs.html) · [Current work](docs/PROGRAMME_EXECUTION.md) · [Evidence](https://aaaaaaaaaaaavm.github.io/VOLLEY/evidence.html) · [CAD](cad/README.md) · [Open problems](OPEN_PROBLEMS.md)
 
+## Current mechanical CAD and lunar mission visuals
+
+**Concept geometry, not manufacturing-ready parts.** The current direction is a motor-charged mechanical release cell. Lunar carrier and larger-payload layouts are future concepts; no lunar lifetime or flight readiness is established.
+
+[**Explore the 3D models and lunar orbits**](https://aaaaaaaaaaaavm.github.io/VOLLEY/lunar.html) · [**CAD downloads and model guide**](cad/lunar_concept/README.md) · [Engineering review](docs/LUNAR_VISUAL_REVIEW.md)
+
+![Lunar carrier concept with four independent release cells](docs/assets/lunar/lunar_carrier.png)
+
+<table><tr><td width="50%"><img src="docs/assets/lunar/exploded_cell.png" alt="Exploded current mechanical cell concept"></td><td width="50%"><img src="docs/assets/lunar/release_authority.png" alt="Lunar release authority and resulting orbit changes"></td></tr><tr><td>MC-L2 mechanical cell: 80 mm working-stroke target. Component envelopes await detailed CAD.</td><td>C0-S2 two-body release screen. Orbital lifetime, uncertainty and disposal remain open.</td></tr></table>
+
+| Concept assembly | STEP | STL |
+|---|---|---|
+| Mechanical cell | [STEP](cad/lunar_concept/mechanical_cell.step) | [STL](cad/lunar_concept/mechanical_cell.stl) |
+| Four-cell bank | [STEP](cad/lunar_concept/four_cell_bank.step) | [STL](cad/lunar_concept/four_cell_bank.stl) |
+| Lunar carrier | [STEP](cad/lunar_concept/lunar_carrier.step) | [STL](cad/lunar_concept/lunar_carrier.stl) |
+| Larger-payload pallet | [STEP](cad/lunar_concept/large_payload_pallet.step) | [STL](cad/lunar_concept/large_payload_pallet.stl) |
+
 <table><tr><td width="48%"><img src="cad/renders/gen5/hero_open.png" alt="Gen5 electromagnetic VOLLEY CAD"></td><td width="52%"><img src="docs/assets/hero_departure.svg" alt="VOLLEY programmable departure concept"></td></tr><tr><td><b>A machine that actually existed in the engineering record.</b> Gen5 is the frozen electromagnetic comparator, not the next design.</td><td><b>The idea that survives the machines.</b> Same host, individually controlled departure conditions, then the spacecraft is on its own.</td></tr></table>
 
 ---
@@ -183,3 +200,4 @@ Project begun April 2021 · adityavardhanmishr@gmail.com
 I welcome independent reproduction, design review and prototype collaboration. Please identify the configuration and run when reporting a discrepancy.
 
 [CC BY 4.0](LICENSE). See [NOTICE](NOTICE), [LICENSING.md](LICENSING.md) and [CITATION.cff](CITATION.cff) for attribution and scope. Historical snapshots retain the terms under which they were released.
+

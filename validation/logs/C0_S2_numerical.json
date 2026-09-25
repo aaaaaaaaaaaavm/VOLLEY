@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "case_count": true,
+    "budget_count": true,
+    "momentum": true,
+    "zero": true,
+    "capture_identity": true,
+    "rocket_identity": true,
+    "half_period": true,
+    "tolerance": true,
+    "energy": true,
+    "finite": true
+  },
+  "transfer": {
+    "departure_kms": 3.1064266302860526,
+    "arrival_vinf_kms": 0.830117066827425,
+    "transfer_apogee_speed_kms": 0.18818633576791777,
+    "moon_speed_kms": 1.0183034025953428,
+    "time_days": 4.979864876109071,
+    "required_moon_initial_phase_deg": 114.6948021439024,
+    "model": "Ideal coplanar tangential patched conics; no finite SOI or epoch targeting"
+  },
+  "residuals": {
+    "momentum_kgms": 0.0,
+    "zero_m": 3.637978807091713e-09,
+    "capture_kms": 0.0,
+    "rocket_relative": 3.9303135420168356e-16,
+    "half_period_m": 5.004754209342943e-05,
+    "tolerance_m": 4.880238659829337e-05,
+    "energy_relative": 6.663344475827051e-11
+  }
+}

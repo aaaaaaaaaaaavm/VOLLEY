@@ -1,0 +1,9 @@
+{
+  "logic_checks": "PASS",
+  "models": 5,
+  "orbit_cases": 42,
+  "finite_vertex_buffer_checks": true,
+  "draw_calls": 21,
+  "real_browser_rendering": "NOT_EXECUTED: local browser absent; browser download timed out",
+  "limits": "Stubbed graphics and DOM verify data/control paths only. WebGL compilation, raster output, mobile layout and pointer behavior need actual browser verification."
+}

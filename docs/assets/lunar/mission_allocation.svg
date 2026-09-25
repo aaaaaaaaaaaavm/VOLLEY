@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="432pt" viewBox="0 0 864 432" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-17T19:35:50.528073</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 432 
+L 864 432 
+L 864 0 
+L 0 0 
+z
+" style="fill: #101e2b"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 108 209.52 
+L 280.98 209.52 
+L 280.98 138.24 
+L 108 138.24 
+L 108 209.52 
+z
+" clip-path="url(#pc4c6fdaf18)" style="fill: none; stroke: #6facdf; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 347.94 209.52 
+L 520.92 209.52 
+L 520.92 138.24 
+L 347.94 138.24 
+L 347.94 209.52 
+z
+" clip-path="url(#pc4c6fdaf18)" style="fill: none; stroke: #33d6b2; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 587.88 209.52 
+L 760.86 209.52 
+L 760.86 138.24 
+L 587.88 138.24 
+L 587.88 209.52 
+z
+" clip-path="url(#pc4c6fdaf18)" style="fill: none; stroke: #f1ae52; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 347.94 352.08 
+L 520.92 352.08 
+L 520.92 276.048 
+L 347.94 276.048 
+L 347.94 352.08 
+z
+" clip-path="url(#pc4c6fdaf18)" style="fill: none; stroke: #33d6b2; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 282.978501 173.88 
+Q 314.458104 173.88 344.819674 173.88 
+" clip-path="url(#pc4c6fdaf18)" style="fill: none; stroke: #e5eef3; stroke-linecap: round"/>
+    <path d="M 338.419674 170.68 
+L 344.819674 173.88 
+L 338.419674 177.08 
+z
+" clip-path="url(#pc4c6fdaf18)" style="fill: #e5eef3; stroke: #e5eef3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 522.918501 173.88 
+Q 554.398104 173.88 584.759674 173.88 
+" clip-path="url(#pc4c6fdaf18)" style="fill: none; stroke: #e5eef3; stroke-linecap: round"/>
+    <path d="M 578.359674 170.68 
+L 584.759674 173.88 
+L 578.359674 177.08 
+z
+" clip-path="url(#pc4c6fdaf18)" style="fill: #e5eef3; stroke: #e5eef3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 434.43 274.04615 
+Q 434.43 242.78145 434.43 212.634784 
+" clip-path="url(#pc4c6fdaf18)" style="fill: none; stroke: #e5eef3; stroke-linecap: round"/>
+    <path d="M 431.23 219.034784 
+L 434.43 212.634784 
+L 437.63 219.034784 
+z
+" clip-path="url(#pc4c6fdaf18)" style="fill: #e5eef3; stroke: #e5eef3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 196.14073 210.644626 
+Q 271.214614 261.791737 345.36452 312.30935 
+" clip-path="url(#pc4c6fdaf18)" style="fill: none; stroke: #e5eef3; stroke-linecap: round"/>
+    <path d="M 341.877091 306.061324 
+L 345.36452 312.30935 
+L 338.273641 311.350478 
+z
+" clip-path="url(#pc4c6fdaf18)" style="fill: #e5eef3; stroke: #e5eef3; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6facdf" x="116.37" y="157.248" transform="rotate(-0 116.37 157.248)">CARRIER</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e5eef3" transform="translate(116.37 180.544469)">Transfer · capture · navigation</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e5eef3" transform="translate(116.37 191.742281)">Attitude · power · disposal</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #33d6b2" x="356.31" y="157.248" transform="rotate(-0 356.31 157.248)">VOLLEY BANK</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e5eef3" transform="translate(356.31 180.544469)">Retain · charge · sense</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e5eef3" transform="translate(356.31 191.742281)">Isolate · release · catch</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1ae52" x="596.25" y="157.248" transform="rotate(-0 596.25 157.248)">PAYLOAD FLEET</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e5eef3" transform="translate(596.25 180.544469)">No onboard thrusters</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e5eef3" transform="translate(596.25 191.742281)">Mission · tracking · end of life</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #33d6b2" x="356.31" y="295.056" transform="rotate(-0 356.31 295.056)">RELEASE AUTHORIZATION</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e5eef3" transform="translate(356.31 323.104469)">Orbit and clearance estimate</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #e5eef3" transform="translate(356.31 334.302281)">Cell state + pointing + reserve</text>
+   </g>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #e5eef3" x="34.56" y="23.836875" transform="rotate(-0 34.56 23.836875)">Shared transport. Independent release. Finite-life payloads.</text>
+  </g>
+  <g id="text_10">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b7c7d1" x="34.56" y="421.2" transform="rotate(-0 34.56 421.2)">Architecture allocation, not flight wiring. Payload attitude control must respect the strict no-thruster customer definition.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc4c6fdaf18">
+   <rect x="108" y="90.72" width="669.6" height="285.12"/>
+  </clipPath>
+ </defs>
+</svg>
