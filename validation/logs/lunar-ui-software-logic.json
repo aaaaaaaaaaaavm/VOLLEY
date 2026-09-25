@@ -1,11 +1,11 @@
 {
-  "software_renderer": false,
-  "software_fills": 43,
+  "software_renderer": true,
+  "software_fills": 31547,
   "logic_checks": "PASS",
   "models": 5,
   "orbit_cases": 42,
   "finite_vertex_buffer_checks": true,
-  "draw_calls": 21,
+  "draw_calls": 0,
   "real_browser_rendering": "NOT_EXECUTED_BY_THIS_CHECK",
   "limits": "Stubbed graphics and DOM verify data/control paths only. WebGL compilation, raster output, mobile layout and pointer behavior need actual browser verification."
 }
