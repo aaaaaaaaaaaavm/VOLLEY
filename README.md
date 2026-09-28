@@ -1,29 +1,58 @@
 # VOLLEY
 
-VOLLEY investigates a host-mounted system that releases multiple ordinary CubeSats sequentially, using one reusable launch path and a loading mechanism. The intended benefit is a commanded relative departure speed for each spacecraft. Avoiding a propulsion unit or special powered interface on each payload remains an objective subject to payload and provider review.
+**A research programme for sequential CubeSat deployment with a commanded departure condition.** VOLLEY asks whether one host-mounted, reloadable launcher could release ordinary CubeSats one after another, choosing the relative speed for each shot without giving every spacecraft its own propulsion unit.
 
-**Gen6 is in development. No mechanism, speed range or flight configuration has been selected or validated.** The earlier independent mechanical-cell bank and the gas-guide layout are unselected studies. Neither establishes the shared reload path, low spent mass or broad shot-to-shot speed control sought for VOLLEY.
+![Illustration of one host releasing spacecraft on different departure paths](docs/assets/hero_departure.svg)
 
-The [September 2026 engineering record correction](docs/REPAIR_NOTICE_2026-09-28.md) explains why the former selection was withdrawn and which questions remain open.
+*Mission illustration, not a flight configuration or demonstrated trajectory.*
 
-Nothing in this project has been built, fired, measured, qualified or flown. The calculations and CAD are studies under stated inputs, not product specifications.
+> **Current status — September 2026:** Gen6 is in development. No drive mechanism, speed envelope, flight design or payload interface has been selected or validated. Nothing here has been built, fired, measured, qualified or flown. The [engineering record correction](docs/REPAIR_NOTICE_2026-09-28.md) explains the withdrawal of an earlier architecture claim.
 
-## Design question
+| The goal | The record today |
+| --- | --- |
+| One reusable launch path, sequentially fed from a shared store | A design objective; loading and jam recovery remain unproved |
+| A commanded speed for each CubeSat | A design objective; the physical lower and upper limits are open |
+| A useful mission benefit without burdening each payload | Under study; full-manifest benefit and complete installed mass are not established |
+| An ordinary CubeSat and a compatible host | Intended interfaces; payload loads, provider acceptance and host integration require evidence |
 
-The launcher would accept a CubeSat, retain it safely, command its departure condition, release it, and repeat with the next CubeSat. The loading, jam recovery, retention, pusher arrest, payload contact and host interfaces have not been demonstrated. The physical lower and upper speed limits are open. The requested 1–2, 30–40 and approximately 100 m/s examples are points for investigation; none is an established common-hardware capability.
+## The system we are trying to make
 
-For a 4 kg payload, the ideal kinetic energy is 2 J at 1 m/s, 1,800 J at 30 m/s, 3,200 J at 40 m/s and 20,000 J at 100 m/s. At a hypothetical constant 10 g, 100 m/s needs about 51 m of acceleration distance. Real peak contact load, drive loss, feeder mass and host packaging make the problem harder. No universal CubeSat acceleration rating authorizes any of these points.
+A host would present a CubeSat to one launch path, command its release condition, arrest and reset the mechanism, then feed the next spacecraft. The shared path is the point of the architecture. A bank of separate single-use launch cells does not satisfy it merely by being mounted together.
 
-## What the record establishes
+![Conceptual sequence from host preparation to repeated release](docs/assets/mission_sequence.svg)
 
-- [Gen5](docs/GEN5_CLOSURE.md) is a frozen electromagnetic *model* with a magazine concept, not a physical performance baseline. Its calculated 16.029 m/s and 126.6 kg are specific to that old configuration. The mass is not a complete installed-system comparison.
-- [S4](docs/MANIFEST_TIMING.md) is a two-payload ideal mission screen. Its best sampled point near 4.57 m/s cannot set the product's maximum speed or choose its mechanism.
-- [S12](docs/MANIFEST_FINITE_BURN.md) tested six twelve-payload screens; none delivered the full manifest, and the best tested case delivered 5/12. These bounded failures do not prove every possible mission infeasible, but they block a completed-manifest benefit claim.
-- A short motor-charged spring cell is a low-speed comparator. Its electric motor charges a spring; the spring supplies the release force. It is not an electromagnetic payload drive or a reusable shared launcher.
-- The historical gas guide, BOLLEY's cooperative electromagnetic interface, and ordinary spring dispensers remain separate comparators. Each requires a matched full-system and mission trade.
+*Conceptual operating sequence. Retention, feeder reliability, recoil recovery and multi-shot speed control still need design and test.*
 
-The [provenance](docs/PROVENANCE.md), [open problems](OPEN_PROBLEMS.md), [validation register](validation/README.md) and [programme status](docs/NEXT_GENERATION_STATUS.md) describe the evidence and unresolved conditions. Older reports and scripts remain available as configuration-specific historical calculations; their former selection language is withdrawn.
+The requested examples of roughly 1–2, 30–40 and 100 m/s are **investigation points, not demonstrated settings**. For a 4 kg payload, ideal kinetic energy rises from 2 J at 1 m/s to 1,800 J at 30 m/s, 3,200 J at 40 m/s and 20,000 J at 100 m/s. At a hypothetical constant 10 g, reaching 100 m/s would take about 51 m of acceleration distance. Actual contact loads, efficiency, feeder mass and packaging must be evaluated before setting a credible range. No universal CubeSat acceleration rating authorizes these release conditions.
 
-## Next decision
+![Energy and acceleration-distance scaling laws for deployment speed](docs/assets/scaling.svg)
 
-Compare a shared electromagnetic guide and feeder, other shared drives, small banks, the historical gas and spring studies, and a conventional dispenser under the **same** payload, host, manifest, failure assumptions and complete installed-system accounting. Require a named payload load case and host interface before claiming a velocity envelope or flight compatibility. A physical, calibrated multi-shot demonstration is needed before any performance or reliability claim.
+## Engineering work you can inspect
+
+### Electromagnetic modelling and CAD
+
+![Rendered open CAD model of the historical Gen5 electromagnetic concept](cad/renders/gen5/hero_open.png)
+
+*Gen5 CAD rendering: a frozen, modelled electromagnetic configuration with a magazine concept. This is not selected Gen6 hardware or a built article.* [Explore the CAD record](cad/README.md) · [Read the Gen5 closure](docs/GEN5_CLOSURE.md)
+
+Gen5's calculated 16.029 m/s and 126.6 kg belong to that configuration. The mass is not a complete installed-system comparison. Other CAD and reports in this repository document historical studies; their former selection language has been withdrawn.
+
+### Mission analysis
+
+![Graph from the bounded two-payload mission timing screen](figures/manifest_timing.svg)
+
+*P113-S4 is a two-payload ideal-model screen. Its best sampled point, near 4.57 m/s, is not VOLLEY's maximum speed or evidence for a selected mechanism.* [Read the assumptions and result](docs/MANIFEST_TIMING.md)
+
+The later [finite-burn twelve-payload study](docs/MANIFEST_FINITE_BURN.md) found no complete delivery among six tested screens; the best delivered 5 of 12. That blocks a completed-manifest claim for those cases without proving that every mission is infeasible.
+
+### Evidence boundary
+
+![Diagram separating completed model studies from open architecture and hardware work](docs/assets/evidence_map.svg)
+
+*Calculations, numerical agreement and CAD provide study evidence. They are not measurements or qualification.* See the [provenance](docs/PROVENANCE.md), [validation register](validation/README.md) and [open problems](OPEN_PROBLEMS.md).
+
+## What comes next
+
+Compare a shared electromagnetic guide and feeder, other shared drives, small banks, the historical gas and spring studies, and conventional dispensers under the **same** payload, host, manifest, failure assumptions and complete installed-system accounting. Select a drive only after its load case, control range, interfaces and mission value survive that comparison. Then demonstrate calibrated, repeated releases before claiming performance or reliability.
+
+The earlier independent mechanical-cell bank is retained as a bounded study in [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab). [BOLLEY](https://github.com/aaaaaaaaaaaavm/BOLLEY) investigates a separate cooperative electromagnetic interface. Neither is the selected Gen6 mechanism.
