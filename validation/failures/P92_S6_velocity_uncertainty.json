@@ -1,0 +1,21 @@
+{
+  "study": "P92-S6",
+  "source_sha256": {
+    "analysis/mission_cartridges.py": "d053e206f837e71067ddda0555e71529fd07ec6312db7a53992b1f776f4bc2ad",
+    "analysis/results/mission_cartridges.json": "2396b0781ab4d095960ede9c75e4e8ed3f2fb3c207127160af5d27f0ab2fc2f9",
+    "analysis/test_article_requirements.py": "447a47228569b3caa9484dbdd390e3bbf48b81e606250897aed6a2078952fcad",
+    "validation/P92_S6_test_article.md": "43728d46a5e5b4cee655cc871d74aa63d2d03bc764a86d58c61176ddb7ad17d9"
+  },
+  "failure": {
+    "actual_tests_completed": 0,
+    "expanded_velocity_uncertainty_at_range_m_s": 0.013994284547628723,
+    "finite_host_nominal_speed_m_s": 2.0,
+    "fixed_base_speed_m_s": 1.9876370840169784,
+    "model_error_limit_m_s": 0.1,
+    "required_spacing_standard_uncertainty_m": 5.783117190965825e-05,
+    "sample_std_limit_m_s": 0.03,
+    "shot_count": 20,
+    "uncertainty_target_pass": false,
+    "velocity_range_m_s": 6.0
+  }
+}

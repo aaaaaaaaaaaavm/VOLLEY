@@ -1,5 +1,7 @@
 # Mission and redesign
 
+**17 September update:** [S7](../COUPLED_RELEASE_CAMPAIGN.md) now propagates retained-host errors through the second manoeuvre and release for 2,508 histories. Replanning assumes exact state knowledge; 120 s is a coast assumption, not demonstrated recovery. Noisy navigation, finite controls/clearance, full manifest, resources/disposal and early lunar requirements screening remain. N1 is partial.
+
 ## Current position
 
 S1–S4 provide four bounded mission-study layers. P113-S4 is merged with 100 two-payload schedule/order/authority cases; 44 tested campaigns are accepted. The clean-sheet P92 screen carries that result into mechanism physics instead of inheriting a historical speed target.

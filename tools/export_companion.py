@@ -112,6 +112,10 @@ The latest [review and restart record](https://github.com/{OWNER}/{FLAGSHIP}/blo
 adds combined conditional release-error corners, reference-cell mechanics and the verification matrix.
 These bounded calculations do not close the full campaign or select flight hardware.
 
+The [S7 coupled campaign](https://github.com/{OWNER}/{FLAGSHIP}/blob/{commit}/docs/COUPLED_RELEASE_CAMPAIGN.md)
+adds 2,508 histories carrying first-release host errors into the second delivery.
+Exact navigation and ideal impulses remain study assumptions; N1 is partial.
+
 {header_table(kind)}
 """
 
@@ -157,7 +161,24 @@ PAPER_MANIFEST = [
     ("CITATION.cff", "CITATION.cff"),
 ]
 
+CURRENT_REVIEW_MANIFEST = [
+    (".gitattributes", ".gitattributes"),
+    ("docs/MANIFEST_FINITE_BURN.md", "docs/MANIFEST_FINITE_BURN.md"),
+    ("docs/LUNAR_GRAVITY_VALIDATION.md", "docs/LUNAR_GRAVITY_VALIDATION.md"),
+    ("docs/CONTINUATION_20260926.md", "docs/CONTINUATION_20260926.md"),
+    ("docs/MC_L2_CHECKPOINT.md", "docs/MC_L2_CHECKPOINT.md"),
+    ("docs/MC_L2_COMPONENT_REQUIREMENTS.md", "docs/MC_L2_COMPONENT_REQUIREMENTS.md"),
+    ("docs/MC_L2_BENCH_PROCEDURE.md", "docs/MC_L2_BENCH_PROCEDURE.md"),
+    ("docs/MC_L2_COMPONENT_LEDGER.csv", "docs/MC_L2_COMPONENT_LEDGER.csv"),
+    ("docs/INSTALLED_TRADE.md", "docs/INSTALLED_TRADE.md"),
+    ("docs/INSTALLED_ACCOUNTING.csv", "docs/INSTALLED_ACCOUNTING.csv"),
+]
+PAPER_MANIFEST += CURRENT_REVIEW_MANIFEST
+
 THESIS_MANIFEST = [
+    ("requirements.txt", "requirements.txt"),
+    ("requirements-dev.txt", "requirements-dev.txt"),
+    ("requirements-cad.txt", "requirements-cad.txt"),
     ("figures", "source/figures"),
     ("analysis", "analysis"),
     ("validation", "validation"),
@@ -181,6 +202,7 @@ THESIS_MANIFEST = [
     ("LICENSE-MIT-superseded", "LICENSE-MIT-superseded"),
     ("CITATION.cff", "CITATION.cff"),
 ]
+THESIS_MANIFEST += CURRENT_REVIEW_MANIFEST
 
 PAPER_README = """# VOLLEY: the manuscript
 
@@ -494,7 +516,7 @@ def build(kind, manifest, readme, out_root, commit):
         f.write(banner(commit, kind) + "\n---\n\n" + readme)
     with open(os.path.join(dest, ".gitignore"), "w") as f:
         f.write("__pycache__/\n*.pyc\n*.aux\n*.log\n*.out\npaper.pdf\n")
-    if kind == "thesis":
+    if kind == "thesis" and not os.path.exists(os.path.join(dest, "university", "README.md")):
         os.makedirs(os.path.join(dest, "university"), exist_ok=True)
         with open(os.path.join(dest, "university", "README.md"), "w") as f:
             f.write("# University-specific material\n\n"

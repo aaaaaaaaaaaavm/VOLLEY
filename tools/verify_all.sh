@@ -45,6 +45,9 @@ run "terminal timing freshness" python3 analysis/terminal_timing.py --check
 run "manifest timing freshness" python3 analysis/manifest_timing.py --check
 run "operational uncertainty freshness" python3 analysis/operational_uncertainty.py --check
 run "combined release errors" python3 analysis/combined_release_errors.py --check
+run "coupled release campaign" python3 analysis/coupled_release_campaign.py --check
+run "lunar release and size screen" python3 analysis/lunar_release_scaling.py --check
+run "local continuation" python3 tools/check_continuation_local.py
 run "reference cell mechanics" python3 analysis/reference_cell_mechanics.py --check
 run "Gen6 reference freshness" python3 analysis/reference_architecture.py --check
 # Properties and regressions. The self-test above checks the reference point; this checks

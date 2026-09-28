@@ -1,5 +1,7 @@
 # Gen6 Fusion build package
 
+> **Current configuration, 17 September 2026:** use the [mechanical-cell Fusion handoff](CURRENT_CELL_FUSION_HANDOFF.md). The geometry and older build instructions below describe historical configurations; they are not the current cell design. Historical “current” labels are scoped to their dated generation.
+
 Written 2026-08-22, for the person building the authoritative Fusion assembly.
 Everything here traces to `cad/parameters.json`, `cad/build_gen6.py` or a numbered run.
 Nothing in this file is a new engineering dimension. Where a dimension does not exist, it says

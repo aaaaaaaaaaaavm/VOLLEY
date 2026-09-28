@@ -1,5 +1,7 @@
 # CAD
 
+> **Current configuration, 17 September 2026:** use the [mechanical-cell Fusion handoff](../docs/CURRENT_CELL_FUSION_HANDOFF.md). The geometry and older build instructions below describe historical configurations; they are not the current cell design. Historical “current” labels are scoped to their dated generation.
+
 > ## Gen6 is here too, and it is a different machine
 >
 > [ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md). The payload is accelerated

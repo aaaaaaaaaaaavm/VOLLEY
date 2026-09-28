@@ -1,0 +1,42 @@
+== gates ==
+authorship                        PASS  authorship: 583 commits, every author and committer is the repository's own
+links                             PASS  cross-link block: consistent
+website routes                    PASS  site: 93 local assets/routes stay within the published docs root
+register                          PASS  register: 154 entries, 51 LIVE, 60 CORRECTED, 43 CLOSED
+baseline                          PASS  baseline holds: 23 values match the scripts
+public surfaces                   PASS  public surfaces: 21 checked against 27 withdrawn claims, 18 historical passages explicitly allowed, counts match (154 entries, 51 live), key links resolve
+routing                           PASS  routing: 51 routed entries, every quoted title matches the register
+BSX review                        PASS  BSX review agrees with the live register
+README overview                   PASS  overview current
+cross-references                  PASS  cross-references: 18 pairs agree; 5 pairs deliberately excluded and documented
+companion payloads                FAIL
+      companions: 1 problem(s)
+      
+        1 commit(s) have touched a manifest source since 78847ee, so the published payloads are stale:
+            476c368 Declare evolving manifest finite-burn screen and unchanged acceptance bands
+      
+        fix: python3 tools/export_companion.py --out .. && push both companions
+A24-R reference                   PASS  A24-R current reference reproduced; historical A24 bands retained
+A2-R levers                       PASS  }
+band integrity                    PASS  bands: 142 scripts scanned, no uncomputed band verdicts; 2 declared report-only or not-evaluable
+A13 band consistency              PASS  A13: verdicts agree with recorded inputs; source and loaded mass agree
+results freshness                 PASS  results freshness: 9 results reproduce, 3 at a declared per-file tolerance and 3 fields at their own, the rest at 1e-09; 6 runs excluded by name with reasons
+computational closure             PASS    GEN6 remaining COMPUTATION: 18
+artifacts                         PASS  artifacts: 7 checked, all newer than their sources
+host-reference blocks             PASS  host reference: 19 generated blocks reproduce exactly in docs/HOST_REFERENCE_CASES.md
+host-reference self-test          PASS  self-test: 35 identities hold
+departure trade freshness         PASS  departure trade: current; P113/E5 remain open
+campaign allocation freshness     PASS  campaign allocation: current; P113/E5 open
+terminal timing freshness         PASS  terminal timing: current; P113/E5 open
+manifest timing freshness         PASS  manifest timing: current; P113/E5 open
+operational uncertainty freshness PASS  P113-S5 outputs are fresh and declared numerical checks pass
+combined release errors           PASS  P113-S6: 512 conditional corners; verification PASS; campaign closure remains open
+coupled release campaign          PASS  P113-S7: 2508 coupled histories; verification PASS; N1/P113/E5/P92 remain open
+lunar release and size screen     PASS  C0-S1: 126 release / 42 scaling cases; verification PASS; lifetime and hardware remain open
+local continuation                PASS  PASS: focused local continuation checks; full programme remains open
+reference cell mechanics          PASS  P92-S2: 48/144 feasible analytical cases; verification PASS; P92 open
+Gen6 reference freshness          PASS  reference architecture freshness: PASS
+properties and regressions        PASS  168 passed in 47.29s
+
+working tree clean after verification
+VERIFY: FAILURES ABOVE

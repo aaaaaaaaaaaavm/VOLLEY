@@ -1,0 +1,14 @@
+{
+  "spacing_m": 0.2,
+  "range_m_s": 6.0,
+  "spacing_standard_uncertainty_m": 0.0001,
+  "interval_standard_uncertainty_s": 1e-05,
+  "expanded_uncertainty_m_s": 0.006997142273814361,
+  "limit_m_s": 0.01,
+  "calculated_budget_pass": true,
+  "physical_calibration_done": false,
+  "source_sha256": {
+    "analysis/instrument_r1.py": "f26d45c5318ef1ff55830fcb11c813d5da128b4e636ea05c5d5808c519098eba",
+    "validation/P92_S6R1_instrument.md": "20742c72bc1541424db65dc66452fb24d45a1e8399ea4cb01ef1e714f58184c6"
+  }
+}

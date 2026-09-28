@@ -1,0 +1,3499 @@
+{
+  "cases": [
+    {
+      "attempts": [
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 9631.867483095637,
+            "velocity_error_m_s": 8.127550682665948
+          },
+          "final_slew_s": 103.6729260292494,
+          "first_burn_s": 449.99999999999994,
+          "first_to_second_available_s": 166.32707397075075,
+          "first_to_second_required_s": 154.09686972411416,
+          "fuel_remaining_kg": 9.58284336741815,
+          "fuel_used_kg": 0.4171566325818503,
+          "integrated_delta_v_m_s": [
+            1.4335972140255522,
+            1.434550448265618
+          ],
+          "minimum_endpoint_perigee_m": 6825999.988475846,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 21,
+          "parameters": [
+            3.2333837395541463,
+            -2.054118546173027,
+            449.99999999999994,
+            449.99999999999994
+          ],
+          "payload_release_state": [
+            1541760.8490729602,
+            6650297.159616387,
+            -7444.716089549945,
+            1723.2687067654228
+          ],
+          "residual": [
+            299.5268872615881,
+            -219.52590158721432,
+            -82.62615446319614,
+            144.76614596637774,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 449.99999999999994,
+          "second_burn_start_s": 616.3270739707507,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4303179.363016662,
+            -5299688.407362112,
+            5930.585619158272,
+            -4818.8060234008335
+          ]
+        },
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 9632.053851054241,
+            "velocity_error_m_s": 8.127742925844654
+          },
+          "final_slew_s": 103.67251329156481,
+          "first_burn_s": 449.99999999999994,
+          "first_to_second_available_s": 166.32748670843517,
+          "first_to_second_required_s": 154.09633510731175,
+          "fuel_remaining_kg": 9.58284336741815,
+          "fuel_used_kg": 0.4171566325818503,
+          "integrated_delta_v_m_s": [
+            1.4335972140265096,
+            1.4345504482651392
+          ],
+          "minimum_endpoint_perigee_m": 6825999.955278375,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 18,
+          "parameters": [
+            3.2333920067816373,
+            -2.0541149443572557,
+            449.99999999999994,
+            449.99999999999994
+          ],
+          "payload_release_state": [
+            1541760.8490995916,
+            6650297.146836008,
+            -7444.716092307355,
+            1723.2686857543704
+          ],
+          "residual": [
+            299.5268899247283,
+            -219.5271796251647,
+            -82.62643020425458,
+            144.76404486113097,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 449.99999999999994,
+          "second_burn_start_s": 616.3274867084351,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4303179.189687897,
+            -5299688.480421567,
+            5930.585771077322,
+            -4818.80590434277
+          ]
+        },
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 9632.229365143116,
+            "velocity_error_m_s": 8.127919372772924
+          },
+          "final_slew_s": 103.67255009753644,
+          "first_burn_s": 449.99999999999994,
+          "first_to_second_available_s": 166.32744990246357,
+          "first_to_second_required_s": 154.0951830512597,
+          "fuel_remaining_kg": 9.582843367418207,
+          "fuel_used_kg": 0.4171566325817935,
+          "integrated_delta_v_m_s": [
+            1.4335972140260311,
+            1.4345504482651392
+          ],
+          "minimum_endpoint_perigee_m": 6825999.921488184,
+          "momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "nfev": 17,
+          "parameters": [
+            3.23340173917458,
+            -2.0541152655499504,
+            449.99999999999994,
+            449.99999999999994
+          ],
+          "payload_release_state": [
+            1541760.8467008325,
+            6650297.132061837,
+            -7444.716101083326,
+            1723.2686633030803
+          ],
+          "residual": [
+            299.52665004881567,
+            -219.52865704223512,
+            -82.62730780134007,
+            144.7617997321231,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 449.99999999999994,
+          "second_burn_start_s": 616.3274499024635,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4303179.030709896,
+            -5299688.556414193,
+            5930.585906090011,
+            -4818.805790358027
+          ]
+        }
+      ],
+      "axis": [
+        0.3279457744646441,
+        -0.9446965486391832
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 1.1675808485625225,
+        "initial_delta_v_m_s": [
+          -3.819577383156538,
+          2.402336835602
+        ],
+        "second_delta_v_m_s": [
+          1.1560205591167234,
+          -3.330089049435963
+        ]
+      },
+      "release_time_s": 1200,
+      "replay": {
+        "accepted": false,
+        "reason": "IMPULSE_EQUIVALENT_BURN_EXCEEDS_DURATION_OR_IMPULSE_BOUND",
+        "unclipped_parameters": [
+          2.5801553711322525,
+          -1.2366680565792771,
+          1415.3656703138188,
+          1103.6468099684266
+        ]
+      },
+      "selected": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 9632.229365143116,
+          "velocity_error_m_s": 8.127919372772924
+        },
+        "final_slew_s": 103.67255009753644,
+        "first_burn_s": 449.99999999999994,
+        "first_to_second_available_s": 166.32744990246357,
+        "first_to_second_required_s": 154.0951830512597,
+        "fuel_remaining_kg": 9.582843367418207,
+        "fuel_used_kg": 0.4171566325817935,
+        "integrated_delta_v_m_s": [
+          1.4335972140260311,
+          1.4345504482651392
+        ],
+        "minimum_endpoint_perigee_m": 6825999.921488184,
+        "momentum_residual_kg_m_s": 4.656612873077393e-10,
+        "nfev": 17,
+        "parameters": [
+          3.23340173917458,
+          -2.0541152655499504,
+          449.99999999999994,
+          449.99999999999994
+        ],
+        "payload_release_state": [
+          1541760.8467008325,
+          6650297.132061837,
+          -7444.716101083326,
+          1723.2686633030803
+        ],
+        "residual": [
+          299.52665004881567,
+          -219.52865704223512,
+          -82.62730780134007,
+          144.7617997321231,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 449.99999999999994,
+        "second_burn_start_s": 616.3274499024635,
+        "seed_offset_rad": -0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4303179.030709896,
+          -5299688.556414193,
+          5930.585906090011,
+          -4818.805790358027
+        ]
+      },
+      "speed_m_s": 1.0,
+      "thrust_N": 1.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.0002015776986611403,
+        "velocity_m_s": 2.1751351850802074e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.000129486454444646,
+            "velocity_error_m_s": 1.5779830129816912e-07
+          },
+          "final_slew_s": 3.3089697467509955,
+          "first_burn_s": 163.90252792362244,
+          "first_to_second_available_s": 870.1917850236651,
+          "first_to_second_required_s": 322.90656041852867,
+          "fuel_remaining_kg": 8.625704147743875,
+          "fuel_used_kg": 1.3742958522561253,
+          "integrated_delta_v_m_s": [
+            5.226150429009327,
+            4.23722519233526
+          ],
+          "minimum_endpoint_perigee_m": 6827026.305449215,
+          "momentum_residual_kg_m_s": 4.799926683327254e-10,
+          "nfev": 8,
+          "parameters": [
+            2.5800805357077894,
+            -1.234279294074001,
+            163.90252792362244,
+            132.59671730596145
+          ],
+          "payload_release_state": [
+            1538765.580200361,
+            6652492.4186323555,
+            -7443.889828005241,
+            1721.8210453058539
+          ],
+          "residual": [
+            1.6763806343078614e-09,
+            9.59262251853943e-09,
+            7.185008144006133e-09,
+            9.481482265982777e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 132.59671730596145,
+          "second_burn_start_s": 1034.0943129472876,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267085587,
+            -5294780.911079727,
+            5924.661507985469,
+            -4824.370373263491
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012906318672681322,
+            "velocity_error_m_s": 1.57349482230163e-07
+          },
+          "final_slew_s": 3.3089697498231185,
+          "first_burn_s": 163.90252791543912,
+          "first_to_second_available_s": 870.1917850307195,
+          "first_to_second_required_s": 322.9065604217396,
+          "fuel_remaining_kg": 8.625704147790884,
+          "fuel_used_kg": 1.3742958522091158,
+          "integrated_delta_v_m_s": [
+            5.226150428748397,
+            4.237225192272149
+          ],
+          "minimum_endpoint_perigee_m": 6827026.305449843,
+          "momentum_residual_kg_m_s": 1.1641532182693481e-10,
+          "nfev": 7,
+          "parameters": [
+            2.580080535684204,
+            -1.2342792940695655,
+            163.90252791543912,
+            132.59671730401823
+          ],
+          "payload_release_state": [
+            1538765.5802005562,
+            6652492.418632351,
+            -7443.889828005105,
+            1721.8210453059778
+          ],
+          "residual": [
+            2.1187588572502136e-08,
+            9.12696123123169e-09,
+            2.0736479200422764e-08,
+            2.1873347577638924e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 132.59671730401823,
+          "second_burn_start_s": 1034.0943129461587,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.26708515,
+            -5294780.911079735,
+            5924.661507985902,
+            -4824.370373263348
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012863205783420276,
+            "velocity_error_m_s": 1.569656703833383e-07
+          },
+          "final_slew_s": 3.308969750256962,
+          "first_burn_s": 163.90252791653947,
+          "first_to_second_available_s": 870.1917850292178,
+          "first_to_second_required_s": 322.906560421144,
+          "fuel_remaining_kg": 8.625704147785882,
+          "fuel_used_kg": 1.374295852214118,
+          "integrated_delta_v_m_s": [
+            5.226150428783283,
+            4.23722519227167
+          ],
+          "minimum_endpoint_perigee_m": 6827026.3054490825,
+          "momentum_residual_kg_m_s": 4.799926683327254e-10,
+          "nfev": 8,
+          "parameters": [
+            2.580080535690028,
+            -1.234279294068939,
+            163.90252791653947,
+            132.59671730398577
+          ],
+          "payload_release_state": [
+            1538765.5802003164,
+            6652492.418632251,
+            -7443.889828005335,
+            1721.821045305733
+          ],
+          "residual": [
+            -2.7939677238464355e-09,
+            -8.381903171539307e-10,
+            -2.2737367544323206e-09,
+            -2.6147972675971687e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 132.59671730398577,
+          "second_burn_start_s": 1034.0943129457573,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267084818,
+            -5294780.911080157,
+            5924.661507986097,
+            -4824.370373262903
+          ]
+        }
+      ],
+      "axis": [
+        0.3279457744646441,
+        -0.9446965486391832
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 1.1675808485625225,
+        "initial_delta_v_m_s": [
+          -3.819577383156538,
+          2.402336835602
+        ],
+        "second_delta_v_m_s": [
+          1.1560205591167234,
+          -3.330089049435963
+        ]
+      },
+      "release_time_s": 1200,
+      "replay": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 753.2176914654742,
+          "velocity_error_m_s": 0.8352862793735525
+        },
+        "final_slew_s": 0.0,
+        "first_burn_s": 141.53656703138188,
+        "first_to_second_available_s": 918.0987519717754,
+        "first_to_second_required_s": 322.62425289094625,
+        "fuel_remaining_kg": 8.832419151437534,
+        "fuel_used_kg": 1.1675808485624657,
+        "integrated_delta_v_m_s": [
+          4.512249290277408,
+          3.5250356892195067
+        ],
+        "minimum_endpoint_perigee_m": 6827149.0335322665,
+        "momentum_residual_kg_m_s": 0.0,
+        "parameters": [
+          2.5801553711322525,
+          -1.2366680565792771,
+          141.53656703138188,
+          110.36468099684267
+        ],
+        "payload_release_state": [
+          1539341.7633822202,
+          6652377.402195303,
+          -7443.73604451039,
+          1722.4751008773392
+        ],
+        "residual": [
+          57.6183181875851,
+          -11.501643695682287,
+          15.378349492311827,
+          65.4055571580102,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 110.36468099684267,
+        "second_burn_start_s": 1059.6353190031573,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "terminal_state": [
+          -4312081.177728463,
+          -5294344.504812415,
+          5924.105425371192,
+          -4824.99365092739
+        ]
+      },
+      "selected": {
+        "accepted": true,
+        "errors": {
+          "accepted": true,
+          "position_error_m": 0.00012863205783420276,
+          "velocity_error_m_s": 1.569656703833383e-07
+        },
+        "final_slew_s": 3.308969750256962,
+        "first_burn_s": 163.90252791653947,
+        "first_to_second_available_s": 870.1917850292178,
+        "first_to_second_required_s": 322.906560421144,
+        "fuel_remaining_kg": 8.625704147785882,
+        "fuel_used_kg": 1.374295852214118,
+        "integrated_delta_v_m_s": [
+          5.226150428783283,
+          4.23722519227167
+        ],
+        "minimum_endpoint_perigee_m": 6827026.3054490825,
+        "momentum_residual_kg_m_s": 4.799926683327254e-10,
+        "nfev": 8,
+        "parameters": [
+          2.580080535690028,
+          -1.234279294068939,
+          163.90252791653947,
+          132.59671730398577
+        ],
+        "payload_release_state": [
+          1538765.5802003164,
+          6652492.418632251,
+          -7443.889828005335,
+          1721.821045305733
+        ],
+        "residual": [
+          -2.7939677238464355e-09,
+          -8.381903171539307e-10,
+          -2.2737367544323206e-09,
+          -2.6147972675971687e-09,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 132.59671730398577,
+        "second_burn_start_s": 1034.0943129457573,
+        "seed_offset_rad": -0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4311467.267084818,
+          -5294780.911080157,
+          5924.661507986097,
+          -4824.370373262903
+        ]
+      },
+      "speed_m_s": 1.0,
+      "thrust_N": 10.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.00020222754869054355,
+        "velocity_m_s": 2.1766400202860985e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012868443597563992,
+            "velocity_error_m_s": 1.5701683595645072e-07
+          },
+          "final_slew_s": 10.06839357938798,
+          "first_burn_s": 14.705215129969416,
+          "first_to_second_available_s": 1133.6403094267544,
+          "first_to_second_required_s": 321.7828193308003,
+          "fuel_remaining_kg": 8.781379008870204,
+          "fuel_used_kg": 1.2186209911297965,
+          "integrated_delta_v_m_s": [
+            4.688279782460293,
+            3.7010345789712265
+          ],
+          "minimum_endpoint_perigee_m": 6826965.36108844,
+          "momentum_residual_kg_m_s": 1.1641532182693481e-10,
+          "nfev": 11,
+          "parameters": [
+            2.5653822047142616,
+            -1.2587841160279305,
+            14.705215129969416,
+            11.586081863888305
+          ],
+          "payload_release_state": [
+            1538765.5801999853,
+            6652492.418632126,
+            -7443.8898280056,
+            1721.8210453055779
+          ],
+          "residual": [
+            -3.5902485251426694e-08,
+            -1.3317912817001343e-08,
+            -2.8740032576024532e-08,
+            -1.8121681932825595e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 11.586081863888305,
+          "second_burn_start_s": 1148.3455245567238,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267084931,
+            -5294780.911080373,
+            5924.661507985924,
+            -4824.370373262692
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012871934687362112,
+            "velocity_error_m_s": 1.5705521869778952e-07
+          },
+          "final_slew_s": 10.068393583456707,
+          "first_burn_s": 14.705215129664372,
+          "first_to_second_available_s": 1133.6403094226264,
+          "first_to_second_required_s": 321.78281933110594,
+          "fuel_remaining_kg": 8.781379008867475,
+          "fuel_used_kg": 1.218620991132525,
+          "integrated_delta_v_m_s": [
+            4.688279782362779,
+            3.701034579087437
+          ],
+          "minimum_endpoint_perigee_m": 6826965.361089375,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 7,
+          "parameters": [
+            2.5653822046937194,
+            -1.258784116045805,
+            14.705215129664372,
+            11.586081864252478
+          ],
+          "payload_release_state": [
+            1538765.5802003355,
+            6652492.418632259,
+            -7443.88982800532,
+            1721.8210453057573
+          ],
+          "residual": [
+            -8.847564458847045e-10,
+            -9.313225746154786e-11,
+            -7.275957614183426e-10,
+            -1.8189894035458565e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 11.586081864252478,
+          "second_burn_start_s": 1148.3455245522907,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267084896,
+            -5294780.911080109,
+            5924.661507986029,
+            -4824.3703732629665
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.000128716318108231,
+            "velocity_error_m_s": 1.570457136228157e-07
+          },
+          "final_slew_s": 10.068393586256143,
+          "first_burn_s": 14.705215129496189,
+          "first_to_second_available_s": 1133.6403094197346,
+          "first_to_second_required_s": 321.78281933104296,
+          "fuel_remaining_kg": 8.781379008863155,
+          "fuel_used_kg": 1.218620991136845,
+          "integrated_delta_v_m_s": [
+            4.68827978230924,
+            3.701034579171127
+          ],
+          "minimum_endpoint_perigee_m": 6826965.3610903025,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 6,
+          "parameters": [
+            2.5653822046819705,
+            -1.2587841160581035,
+            14.705215129496189,
+            11.58608186451302
+          ],
+          "payload_release_state": [
+            1538765.5802003262,
+            6652492.418632261,
+            -7443.889828005321,
+            1721.8210453057534
+          ],
+          "residual": [
+            -1.816079020500183e-09,
+            1.8626451492309571e-10,
+            -8.185452315956354e-10,
+            -5.684341886080801e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 11.58608186451302,
+          "second_burn_start_s": 1148.3455245492307,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267084891,
+            -5294780.911080103,
+            5924.661507986036,
+            -4824.370373262958
+          ]
+        }
+      ],
+      "axis": [
+        0.3279457744646441,
+        -0.9446965486391832
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 1.1675808485625225,
+        "initial_delta_v_m_s": [
+          -3.819577383156538,
+          2.402336835602
+        ],
+        "second_delta_v_m_s": [
+          1.1560205591167234,
+          -3.330089049435963
+        ]
+      },
+      "release_time_s": 1200,
+      "replay": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 674.1671140356692,
+          "velocity_error_m_s": 0.7178907775236507
+        },
+        "final_slew_s": 0.0,
+        "first_burn_s": 14.153656703138187,
+        "first_to_second_available_s": 1144.8098751971775,
+        "first_to_second_required_s": 322.62425289094625,
+        "fuel_remaining_kg": 8.832419151437477,
+        "fuel_used_kg": 1.1675808485625225,
+        "integrated_delta_v_m_s": [
+          4.512249290277408,
+          3.5250356892199854
+        ],
+        "minimum_endpoint_perigee_m": 6826968.037696866,
+        "momentum_residual_kg_m_s": 4.656612873077393e-10,
+        "parameters": [
+          2.5801553711322525,
+          -1.2366680565792771,
+          14.153656703138187,
+          11.036468099684265
+        ],
+        "payload_release_state": [
+          1538858.871597391,
+          6652393.781926473,
+          -7443.870695087175,
+          1721.890736289984
+        ],
+        "residual": [
+          9.329139704676345,
+          -9.863670578692108,
+          1.9132918137984234,
+          6.969098422496245,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 11.036468099684265,
+        "second_burn_start_s": 1158.9635319003157,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "terminal_state": [
+          -4310824.25518888,
+          -5294983.487417935,
+          5925.246901558494,
+          -4823.954823316898
+        ]
+      },
+      "selected": {
+        "accepted": true,
+        "errors": {
+          "accepted": true,
+          "position_error_m": 0.00012871934687362112,
+          "velocity_error_m_s": 1.5705521869778952e-07
+        },
+        "final_slew_s": 10.068393583456707,
+        "first_burn_s": 14.705215129664372,
+        "first_to_second_available_s": 1133.6403094226264,
+        "first_to_second_required_s": 321.78281933110594,
+        "fuel_remaining_kg": 8.781379008867475,
+        "fuel_used_kg": 1.218620991132525,
+        "integrated_delta_v_m_s": [
+          4.688279782362779,
+          3.701034579087437
+        ],
+        "minimum_endpoint_perigee_m": 6826965.361089375,
+        "momentum_residual_kg_m_s": 0.0,
+        "nfev": 7,
+        "parameters": [
+          2.5653822046937194,
+          -1.258784116045805,
+          14.705215129664372,
+          11.586081864252478
+        ],
+        "payload_release_state": [
+          1538765.5802003355,
+          6652492.418632259,
+          -7443.88982800532,
+          1721.8210453057573
+        ],
+        "residual": [
+          -8.847564458847045e-10,
+          -9.313225746154786e-11,
+          -7.275957614183426e-10,
+          -1.8189894035458565e-10,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 11.586081864252478,
+        "second_burn_start_s": 1148.3455245522907,
+        "seed_offset_rad": 0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4311467.267084896,
+          -5294780.911080109,
+          5924.661507986029,
+          -4824.3703732629665
+        ]
+      },
+      "speed_m_s": 1.0,
+      "thrust_N": 100.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.00023973325353900587,
+        "velocity_m_s": 2.492234610544963e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7903.81399618878,
+            "velocity_error_m_s": 6.161008450346975
+          },
+          "final_slew_s": 167.06085874719446,
+          "first_burn_s": 449.99999999999994,
+          "first_to_second_available_s": 102.93914125280554,
+          "first_to_second_required_s": 100.57818378486388,
+          "fuel_remaining_kg": 9.58284336741815,
+          "fuel_used_kg": 0.4171566325818503,
+          "integrated_delta_v_m_s": [
+            1.4335972140260311,
+            1.434550448265618
+          ],
+          "minimum_endpoint_perigee_m": 6826770.80561396,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 18,
+          "parameters": [
+            3.147258314064112,
+            -2.607282612153417,
+            449.99999999999994,
+            449.99999999999994
+          ],
+          "payload_release_state": [
+            1541509.3556077112,
+            6650560.715937895,
+            -7444.818706548416,
+            1723.023569254269
+          ],
+          "residual": [
+            274.377540736692,
+            -193.17026943648233,
+            -92.88785431035649,
+            120.25239485099064,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 449.99999999999994,
+          "second_burn_start_s": 552.9391412528055,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4304940.7130296435,
+            -5299238.979021775,
+            5928.925350217955,
+            -4819.923163307199
+          ]
+        },
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7903.822851573491,
+            "velocity_error_m_s": 6.1610174041287955
+          },
+          "final_slew_s": 167.06085405935053,
+          "first_burn_s": 449.99999999999994,
+          "first_to_second_available_s": 102.93914594064955,
+          "first_to_second_required_s": 100.57813609543331,
+          "fuel_remaining_kg": 9.58284336741815,
+          "fuel_used_kg": 0.4171566325818503,
+          "integrated_delta_v_m_s": [
+            1.4335972140255522,
+            1.434550448265618
+          ],
+          "minimum_endpoint_perigee_m": 6826770.804547882,
+          "momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "nfev": 12,
+          "parameters": [
+            3.147258771142058,
+            -2.6072825712442613,
+            449.99999999999994,
+            449.99999999999994
+          ],
+          "payload_release_state": [
+            1541509.3554574316,
+            6650560.715206034,
+            -7444.818706982838,
+            1723.0235680857502
+          ],
+          "residual": [
+            274.37752570873124,
+            -193.1703426226042,
+            -92.88789775255282,
+            120.25227799911136,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 449.99999999999994,
+          "second_burn_start_s": 552.9391459406495,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4304940.704935831,
+            -5299238.982872458,
+            5928.92535710915,
+            -4819.92315751
+          ]
+        },
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7903.7727926900425,
+            "velocity_error_m_s": 6.160959643733335
+          },
+          "final_slew_s": 167.06210563231087,
+          "first_burn_s": 449.99999999999994,
+          "first_to_second_available_s": 102.93789436768913,
+          "first_to_second_required_s": 100.57636553878451,
+          "fuel_remaining_kg": 9.582843367418093,
+          "fuel_used_kg": 0.41715663258190716,
+          "integrated_delta_v_m_s": [
+            1.4335972140265096,
+            1.434550448265618
+          ],
+          "minimum_endpoint_perigee_m": 6826770.802625418,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 16,
+          "parameters": [
+            3.147263300129123,
+            -2.6072934932787546,
+            449.99999999999994,
+            449.99999999999994
+          ],
+          "payload_release_state": [
+            1541509.3490998144,
+            6650560.7126577385,
+            -7444.818717687774,
+            1723.0235702273915
+          ],
+          "residual": [
+            274.3768899470102,
+            -193.17059745211154,
+            -92.88896824609765,
+            120.25249216324028,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 449.99999999999994,
+          "second_burn_start_s": 552.9378943676891,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4304940.759764057,
+            -5299238.974389639,
+            5928.925302595487,
+            -4819.923185263315
+          ]
+        }
+      ],
+      "axis": [
+        0.3279457744646441,
+        -0.9446965486391832
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 1.0244002937410528,
+        "initial_delta_v_m_s": [
+          -3.819577383156538,
+          2.402336835602
+        ],
+        "second_delta_v_m_s": [
+          0.8322641933724026,
+          -2.397460715322151
+        ]
+      },
+      "release_time_s": 1200,
+      "replay": {
+        "accepted": false,
+        "reason": "IMPULSE_EQUIVALENT_BURN_EXCEEDS_DURATION_OR_IMPULSE_BOUND",
+        "unclipped_parameters": [
+          2.5801553711322525,
+          -1.2366680565792771,
+          1415.3656703138188,
+          794.740060621634
+        ]
+      },
+      "selected": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 7903.7727926900425,
+          "velocity_error_m_s": 6.160959643733335
+        },
+        "final_slew_s": 167.06210563231087,
+        "first_burn_s": 449.99999999999994,
+        "first_to_second_available_s": 102.93789436768913,
+        "first_to_second_required_s": 100.57636553878451,
+        "fuel_remaining_kg": 9.582843367418093,
+        "fuel_used_kg": 0.41715663258190716,
+        "integrated_delta_v_m_s": [
+          1.4335972140265096,
+          1.434550448265618
+        ],
+        "minimum_endpoint_perigee_m": 6826770.802625418,
+        "momentum_residual_kg_m_s": 0.0,
+        "nfev": 16,
+        "parameters": [
+          3.147263300129123,
+          -2.6072934932787546,
+          449.99999999999994,
+          449.99999999999994
+        ],
+        "payload_release_state": [
+          1541509.3490998144,
+          6650560.7126577385,
+          -7444.818717687774,
+          1723.0235702273915
+        ],
+        "residual": [
+          274.3768899470102,
+          -193.17059745211154,
+          -92.88896824609765,
+          120.25249216324028,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 449.99999999999994,
+        "second_burn_start_s": 552.9378943676891,
+        "seed_offset_rad": -0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4304940.759764057,
+          -5299238.974389639,
+          5928.925302595487,
+          -4819.923185263315
+        ]
+      },
+      "speed_m_s": 2.0,
+      "thrust_N": 1.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.00020290851643618767,
+        "velocity_m_s": 2.1850876557165156e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012918625250927601,
+            "velocity_error_m_s": 1.5742627467127097e-07
+          },
+          "final_slew_s": 10.600221121449207,
+          "first_burn_s": 159.62716584569847,
+          "first_to_second_available_s": 902.3578910126635,
+          "first_to_second_required_s": 323.7957241024789,
+          "fuel_remaining_kg": 8.808591906948607,
+          "fuel_used_kg": 1.1914080930513933,
+          "integrated_delta_v_m_s": [
+            5.089666494761696,
+            3.1119504178824537
+          ],
+          "minimum_endpoint_perigee_m": 6827009.6935284035,
+          "momentum_residual_kg_m_s": 1.1641532182693481e-10,
+          "nfev": 6,
+          "parameters": [
+            2.5944465283341875,
+            -1.2121538845105557,
+            159.62716584569847,
+            97.41472202018878
+          ],
+          "payload_release_state": [
+            1538765.5802005115,
+            6652492.418632339,
+            -7443.88982800512,
+            1721.8210453060017
+          ],
+          "residual": [
+            1.671724021434784e-08,
+            7.916241884231567e-09,
+            1.928128767758608e-08,
+            2.426077116979286e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 97.41472202018878,
+          "second_burn_start_s": 1061.985056858362,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267085259,
+            -5294780.911079667,
+            5924.661507985833,
+            -4824.370373263381
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012845057779392027,
+            "velocity_error_m_s": 1.5677154355151345e-07
+          },
+          "final_slew_s": 10.600221122338544,
+          "first_burn_s": 159.62716584550208,
+          "first_to_second_available_s": 902.357891012469,
+          "first_to_second_required_s": 323.79572410264785,
+          "fuel_remaining_kg": 8.80859190695179,
+          "fuel_used_kg": 1.19140809304821,
+          "integrated_delta_v_m_s": [
+            5.089666494755961,
+            3.1119504178666677
+          ],
+          "minimum_endpoint_perigee_m": 6827009.693529083,
+          "momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "nfev": 6,
+          "parameters": [
+            2.5944465283368268,
+            -1.2121538845064423,
+            159.62716584550208,
+            97.41472201969023
+          ],
+          "payload_release_state": [
+            1538765.5802003203,
+            6652492.418632232,
+            -7443.88982800534,
+            1721.8210453057259
+          ],
+          "residual": [
+            -2.3981556296348573e-09,
+            -2.7939677238464355e-09,
+            -2.7284841053187847e-09,
+            -3.319655661471188e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 97.41472201969023,
+          "second_burn_start_s": 1061.9850568579711,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267084647,
+            -5294780.911080219,
+            5924.66150798625,
+            -4824.370373262779
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012889245964183588,
+            "velocity_error_m_s": 1.571882838702856e-07
+          },
+          "final_slew_s": 10.600221121782186,
+          "first_burn_s": 159.62716584431305,
+          "first_to_second_available_s": 902.3578910136945,
+          "first_to_second_required_s": 323.7957241035548,
+          "fuel_remaining_kg": 8.808591906954916,
+          "fuel_used_kg": 1.1914080930450837,
+          "integrated_delta_v_m_s": [
+            5.089666494717249,
+            3.1119504178834108
+          ],
+          "minimum_endpoint_perigee_m": 6827009.693527626,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 6,
+          "parameters": [
+            2.594446528326339,
+            -1.2121538845090156,
+            159.62716584431305,
+            97.41472202021032
+          ],
+          "payload_release_state": [
+            1538765.5802004696,
+            6652492.418632312,
+            -7443.88982800519,
+            1721.821045305887
+          ],
+          "residual": [
+            1.2526288628578185e-08,
+            5.215406417846679e-09,
+            1.2278178473934531e-08,
+            1.2801137927453965e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 97.41472202021032,
+          "second_burn_start_s": 1061.9850568580075,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267085014,
+            -5294780.9110798845,
+            5924.661507985989,
+            -4824.370373263171
+          ]
+        }
+      ],
+      "axis": [
+        0.3279457744646441,
+        -0.9446965486391832
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 1.0244002937410528,
+        "initial_delta_v_m_s": [
+          -3.819577383156538,
+          2.402336835602
+        ],
+        "second_delta_v_m_s": [
+          0.8322641933724026,
+          -2.397460715322151
+        ]
+      },
+      "release_time_s": 1200,
+      "replay": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 1744.4767220486613,
+          "velocity_error_m_s": 1.889358460110696
+        },
+        "final_slew_s": 0.0,
+        "first_burn_s": 141.53656703138188,
+        "first_to_second_available_s": 948.9894269064547,
+        "first_to_second_required_s": 322.62425289094625,
+        "fuel_remaining_kg": 8.97559970625889,
+        "fuel_used_kg": 1.0244002937411096,
+        "integrated_delta_v_m_s": [
+          4.512249290277408,
+          2.5378103887180945
+        ],
+        "minimum_endpoint_perigee_m": 6827149.033533888,
+        "momentum_residual_kg_m_s": 4.656612873077393e-10,
+        "parameters": [
+          2.5801553711322525,
+          -1.2366680565792771,
+          141.53656703138188,
+          79.4740060621634
+        ],
+        "payload_release_state": [
+          1539301.76372034,
+          6652494.401752277,
+          -7443.726430252712,
+          1722.488930172048
+        ],
+        "residual": [
+          53.618351999577136,
+          0.1983120017684996,
+          16.33977526007584,
+          66.78848662888868,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 79.4740060621634,
+        "second_burn_start_s": 1090.5259939378366,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "terminal_state": [
+          -4313021.454705255,
+          -5293988.636232024,
+          5923.262956817433,
+          -4825.640699773357
+        ]
+      },
+      "selected": {
+        "accepted": true,
+        "errors": {
+          "accepted": true,
+          "position_error_m": 0.00012845057779392027,
+          "velocity_error_m_s": 1.5677154355151345e-07
+        },
+        "final_slew_s": 10.600221122338544,
+        "first_burn_s": 159.62716584550208,
+        "first_to_second_available_s": 902.357891012469,
+        "first_to_second_required_s": 323.79572410264785,
+        "fuel_remaining_kg": 8.80859190695179,
+        "fuel_used_kg": 1.19140809304821,
+        "integrated_delta_v_m_s": [
+          5.089666494755961,
+          3.1119504178666677
+        ],
+        "minimum_endpoint_perigee_m": 6827009.693529083,
+        "momentum_residual_kg_m_s": 4.656612873077393e-10,
+        "nfev": 6,
+        "parameters": [
+          2.5944465283368268,
+          -1.2121538845064423,
+          159.62716584550208,
+          97.41472201969023
+        ],
+        "payload_release_state": [
+          1538765.5802003203,
+          6652492.418632232,
+          -7443.88982800534,
+          1721.8210453057259
+        ],
+        "residual": [
+          -2.3981556296348573e-09,
+          -2.7939677238464355e-09,
+          -2.7284841053187847e-09,
+          -3.319655661471188e-09,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 97.41472201969023,
+        "second_burn_start_s": 1061.9850568579711,
+        "seed_offset_rad": 0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4311467.267084647,
+          -5294780.911080219,
+          5924.66150798625,
+          -4824.370373262779
+        ]
+      },
+      "speed_m_s": 2.0,
+      "thrust_N": 10.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.0002141515655380572,
+        "velocity_m_s": 2.2763712840337914e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012861268558405622,
+            "velocity_error_m_s": 1.569419990631995e-07
+          },
+          "final_slew_s": 9.311951961115167,
+          "first_burn_s": 14.55845545984244,
+          "first_to_second_available_s": 1137.7789728575801,
+          "first_to_second_required_s": 321.4704925930285,
+          "fuel_remaining_kg": 8.938147482422437,
+          "fuel_used_kg": 1.061852517577563,
+          "integrated_delta_v_m_s": [
+            4.641439866303159,
+            2.666808061965429
+          ],
+          "minimum_endpoint_perigee_m": 6826960.286005278,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 7,
+          "parameters": [
+            2.5713061073308614,
+            -1.2555857783693956,
+            14.55845545984244,
+            8.350619721462081
+          ],
+          "payload_release_state": [
+            1538765.5802005262,
+            6652492.418632327,
+            -7443.889828005173,
+            1721.82104530584
+          ],
+          "residual": [
+            1.8184073269367217e-08,
+            6.7055225372314455e-09,
+            1.4006218407303095e-08,
+            8.094502845779061e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 8.350619721462081,
+          "second_burn_start_s": 1152.3374283174226,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267084759,
+            -5294780.911080012,
+            5924.661507986194,
+            -4824.370373263032
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.0001322487618372322,
+            "velocity_error_m_s": 1.6073713349051892e-07
+          },
+          "final_slew_s": 9.311951978926256,
+          "first_burn_s": 14.558455461319609,
+          "first_to_second_available_s": 1137.7789728374273,
+          "first_to_second_required_s": 321.47049258941513,
+          "fuel_remaining_kg": 8.938147482313866,
+          "fuel_used_kg": 1.061852517686134,
+          "integrated_delta_v_m_s": [
+            4.641439866774012,
+            2.666808062242936
+          ],
+          "minimum_endpoint_perigee_m": 6826960.286006065,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 7,
+          "parameters": [
+            2.571306107290026,
+            -1.2555857784417639,
+            14.558455461319609,
+            8.35061972232661
+          ],
+          "payload_release_state": [
+            1538765.580200084,
+            6652492.418632593,
+            -7443.8898280053945,
+            1721.821045305791
+          ],
+          "residual": [
+            -2.6030465960502624e-08,
+            3.334134817123413e-08,
+            -8.185452315956354e-09,
+            3.183231456205249e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 8.35061972232661,
+          "second_burn_start_s": 1152.337428298747,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267088232,
+            -5294780.911078927,
+            5924.661507983025,
+            -4824.3703732651475
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 0.00012873664705100545,
+            "velocity_error_m_s": 1.5706311719531924e-07
+          },
+          "final_slew_s": 9.311951961033467,
+          "first_burn_s": 14.55845545984986,
+          "first_to_second_available_s": 1137.7789728576413,
+          "first_to_second_required_s": 321.4704925931548,
+          "fuel_remaining_kg": 8.938147482421527,
+          "fuel_used_kg": 1.0618525175784725,
+          "integrated_delta_v_m_s": [
+            4.641439866305071,
+            2.6668080619697347
+          ],
+          "minimum_endpoint_perigee_m": 6826960.28600529,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 6,
+          "parameters": [
+            2.5713061073300914,
+            -1.2555857783690636,
+            14.55845545984986,
+            8.350619721475375
+          ],
+          "payload_release_state": [
+            1538765.5802003446,
+            6652492.418632267,
+            -7443.889828005307,
+            1721.8210453057657
+          ],
+          "residual": [
+            2.3283064365386964e-11,
+            7.450580596923829e-10,
+            5.456968210637569e-10,
+            6.59383658785373e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 8.350619721475375,
+          "second_burn_start_s": 1152.3374283174912,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267084908,
+            -5294780.911080088,
+            5924.66150798603,
+            -4824.370373262985
+          ]
+        }
+      ],
+      "axis": [
+        0.3279457744646441,
+        -0.9446965486391832
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 1.0244002937410528,
+        "initial_delta_v_m_s": [
+          -3.819577383156538,
+          2.402336835602
+        ],
+        "second_delta_v_m_s": [
+          0.8322641933724026,
+          -2.397460715322151
+        ]
+      },
+      "release_time_s": 1200,
+      "replay": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 359.87615415455303,
+          "velocity_error_m_s": 0.3824587121273707
+        },
+        "final_slew_s": 0.0,
+        "first_burn_s": 14.153656703138187,
+        "first_to_second_available_s": 1147.8989426906453,
+        "first_to_second_required_s": 322.62425289094625,
+        "fuel_remaining_kg": 8.97559970625889,
+        "fuel_used_kg": 1.0244002937411096,
+        "integrated_delta_v_m_s": [
+          4.512249290277408,
+          2.5378103887180945
+        ],
+        "minimum_endpoint_perigee_m": 6826968.037696867,
+        "momentum_residual_kg_m_s": 1.1641532182693481e-10,
+        "parameters": [
+          2.5801553711322525,
+          -1.2366680565792771,
+          14.153656703138187,
+          7.94740060621634
+        ],
+        "payload_release_state": [
+          1538846.099986344,
+          6652430.625879505,
+          -7443.869797708511,
+          1721.8921804656193
+        ],
+        "residual": [
+          8.05197859997861,
+          -6.179275275487453,
+          2.0030296801451186,
+          7.113515986020502,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 7.94740060621634,
+        "second_burn_start_s": 1162.0525993937836,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "terminal_state": [
+          -4311120.209348217,
+          -5294876.104915971,
+          5924.979295796662,
+          -4824.157568907921
+        ]
+      },
+      "selected": {
+        "accepted": true,
+        "errors": {
+          "accepted": true,
+          "position_error_m": 0.00012873664705100545,
+          "velocity_error_m_s": 1.5706311719531924e-07
+        },
+        "final_slew_s": 9.311951961033467,
+        "first_burn_s": 14.55845545984986,
+        "first_to_second_available_s": 1137.7789728576413,
+        "first_to_second_required_s": 321.4704925931548,
+        "fuel_remaining_kg": 8.938147482421527,
+        "fuel_used_kg": 1.0618525175784725,
+        "integrated_delta_v_m_s": [
+          4.641439866305071,
+          2.6668080619697347
+        ],
+        "minimum_endpoint_perigee_m": 6826960.28600529,
+        "momentum_residual_kg_m_s": 0.0,
+        "nfev": 6,
+        "parameters": [
+          2.5713061073300914,
+          -1.2555857783690636,
+          14.55845545984986,
+          8.350619721475375
+        ],
+        "payload_release_state": [
+          1538765.5802003446,
+          6652492.418632267,
+          -7443.889828005307,
+          1721.8210453057657
+        ],
+        "residual": [
+          2.3283064365386964e-11,
+          7.450580596923829e-10,
+          5.456968210637569e-10,
+          6.59383658785373e-10,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 8.350619721475375,
+        "second_burn_start_s": 1152.3374283174912,
+        "seed_offset_rad": -0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4311467.267084908,
+          -5294780.911080088,
+          5924.66150798603,
+          -4824.370373262985
+        ]
+      },
+      "speed_m_s": 2.0,
+      "thrust_N": 100.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.00023977040129185355,
+        "velocity_m_s": 2.4924550076170313e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7099.023573549496,
+            "velocity_error_m_s": 6.950518585905376
+          },
+          "final_slew_s": 0.03746865246056339,
+          "first_burn_s": 449.9999999999914,
+          "first_to_second_available_s": 1006.1003717359754,
+          "first_to_second_required_s": 278.8398581027661,
+          "fuel_remaining_kg": 9.645944259710802,
+          "fuel_used_kg": 0.35405574028919773,
+          "integrated_delta_v_m_s": [
+            1.4335972140260311,
+            1.0004573596410085
+          ],
+          "minimum_endpoint_perigee_m": 6826416.894134197,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 40,
+          "parameters": [
+            3.3781112917907326,
+            -0.8208030609441913,
+            449.9999999999914,
+            313.8621596115726
+          ],
+          "payload_release_state": [
+            -2931097.3296462977,
+            6165447.074777966,
+            -6900.358852618601,
+            -3282.343754272293
+          ],
+          "residual": [
+            238.5882847646717,
+            -43.73818742344156,
+            -96.51067530539876,
+            11.407836625494383,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 313.8621596115726,
+          "second_burn_start_s": 1456.1003717359667,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4304668.40707671,
+            -5296823.370409893,
+            5930.5640445652425,
+            -4820.7002543652125
+          ]
+        },
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7583.376926854028,
+            "velocity_error_m_s": 7.532506063128537
+          },
+          "final_slew_s": 0.353945104534104,
+          "first_burn_s": 449.99999999974364,
+          "first_to_second_available_s": 960.7451032646669,
+          "first_to_second_required_s": 280.9636143605257,
+          "fuel_remaining_kg": 9.625068447694957,
+          "fuel_used_kg": 0.3749315523050427,
+          "integrated_delta_v_m_s": [
+            1.4335972140250735,
+            1.1440596977810764
+          ],
+          "minimum_endpoint_perigee_m": 6826278.994696821,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 23,
+          "parameters": [
+            3.359605659701794,
+            -0.8207754234292606,
+            449.99999999974364,
+            358.90095163105525
+          ],
+          "payload_release_state": [
+            -2931055.4073182647,
+            6165470.888824835,
+            -6900.263657018055,
+            -3282.3755364209565
+          ],
+          "residual": [
+            242.7805175679736,
+            -41.35678273653612,
+            -86.99111525074841,
+            8.22962175916473,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 358.90095163105525,
+          "second_burn_start_s": 1410.7451032644105,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4304176.664230721,
+            -5296867.707090628,
+            5931.08641838417,
+            -4820.4385573555355
+          ]
+        },
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7205.853717665977,
+            "velocity_error_m_s": 7.078848836912466
+          },
+          "final_slew_s": 0.37693163614321235,
+          "first_burn_s": 449.9999999995047,
+          "first_to_second_available_s": 995.865327990934,
+          "first_to_second_required_s": 279.2940019927264,
+          "fuel_remaining_kg": 9.641357585102014,
+          "fuel_used_kg": 0.3586424148979859,
+          "integrated_delta_v_m_s": [
+            1.4335972140250735,
+            1.0320077536403902
+          ],
+          "minimum_endpoint_perigee_m": 6826389.209439102,
+          "momentum_residual_kg_m_s": 1.1641532182693481e-10,
+          "nfev": 25,
+          "parameters": [
+            3.3741794414883786,
+            -0.8207717581677342,
+            449.9999999995047,
+            323.757740373418
+          ],
+          "payload_release_state": [
+            -2931088.406094638,
+            6165452.042549294,
+            -6900.337872402956,
+            -3282.351166434297
+          ],
+          "residual": [
+            239.48063993062823,
+            -43.241410290636125,
+            -94.41265374089198,
+            10.666620425126894,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 323.757740373418,
+          "second_burn_start_s": 1445.8653279904388,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4304559.941219095,
+            -5296833.514071092,
+            5930.679117691781,
+            -4820.642307208679
+          ]
+        }
+      ],
+      "axis": [
+        0.6816340568113626,
+        -0.7316932503412098
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 0.6726360044229409,
+        "initial_delta_v_m_s": [
+          -2.676575268302369,
+          0.8453702509505092
+        ],
+        "second_delta_v_m_s": [
+          1.2403486917444249,
+          -1.3314398785536399
+        ]
+      },
+      "release_time_s": 1800,
+      "replay": {
+        "accepted": false,
+        "reason": "IMPULSE_EQUIVALENT_BURN_EXCEEDS_DURATION_OR_IMPULSE_BOUND",
+        "unclipped_parameters": [
+          2.8356675942749625,
+          -0.8208027546607423,
+          880.794540135482,
+          570.3927518748492
+        ]
+      },
+      "selected": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 7205.853717665977,
+          "velocity_error_m_s": 7.078848836912466
+        },
+        "final_slew_s": 0.37693163614321235,
+        "first_burn_s": 449.9999999995047,
+        "first_to_second_available_s": 995.865327990934,
+        "first_to_second_required_s": 279.2940019927264,
+        "fuel_remaining_kg": 9.641357585102014,
+        "fuel_used_kg": 0.3586424148979859,
+        "integrated_delta_v_m_s": [
+          1.4335972140250735,
+          1.0320077536403902
+        ],
+        "minimum_endpoint_perigee_m": 6826389.209439102,
+        "momentum_residual_kg_m_s": 1.1641532182693481e-10,
+        "nfev": 25,
+        "parameters": [
+          3.3741794414883786,
+          -0.8207717581677342,
+          449.9999999995047,
+          323.757740373418
+        ],
+        "payload_release_state": [
+          -2931088.406094638,
+          6165452.042549294,
+          -6900.337872402956,
+          -3282.351166434297
+        ],
+        "residual": [
+          239.48063993062823,
+          -43.241410290636125,
+          -94.41265374089198,
+          10.666620425126894,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 323.757740373418,
+        "second_burn_start_s": 1445.8653279904388,
+        "seed_offset_rad": -0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4304559.941219095,
+          -5296833.514071092,
+          5930.679117691781,
+          -4820.642307208679
+        ]
+      },
+      "speed_m_s": 1.0,
+      "thrust_N": 1.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.0002137983047918814,
+        "velocity_m_s": 2.2729329508388703e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.392586237217738e-05,
+            "velocity_error_m_s": 9.851079123394236e-08
+          },
+          "final_slew_s": 11.493080669622646,
+          "first_burn_s": 94.53487954180542,
+          "first_to_second_available_s": 1600.496422865299,
+          "first_to_second_required_s": 335.72435136804893,
+          "fuel_remaining_kg": 9.26760970424482,
+          "fuel_used_kg": 0.7323902957551809,
+          "integrated_delta_v_m_s": [
+            3.01276754923134,
+            2.025291672187714
+          ],
+          "minimum_endpoint_perigee_m": 6826826.181401592,
+          "momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "nfev": 7,
+          "parameters": [
+            2.8528829829935387,
+            -0.8496205193375221,
+            94.53487954180542,
+            63.4756169232727
+          ],
+          "payload_release_state": [
+            -2933483.212493925,
+            6165884.456652222,
+            -6899.3937458655455,
+            -3282.457832638521
+          ],
+          "residual": [
+            1.955777406692505e-09,
+            2.1420419216156004e-09,
+            1.8189894035458565e-10,
+            2.7284841053187847e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 63.4756169232727,
+          "second_burn_start_s": 1695.0313024071045,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024449,
+            -5294780.91110941,
+            5924.661508035137,
+            -4824.370373230454
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.387003954251362e-05,
+            "velocity_error_m_s": 9.84428529196284e-08
+          },
+          "final_slew_s": 11.493080670080102,
+          "first_burn_s": 94.53487954197817,
+          "first_to_second_available_s": 1600.4964228646966,
+          "first_to_second_required_s": 335.72435136766666,
+          "fuel_remaining_kg": 9.267609704244194,
+          "fuel_used_kg": 0.7323902957558062,
+          "integrated_delta_v_m_s": [
+            3.012767549236602,
+            2.025291672186757
+          ],
+          "minimum_endpoint_perigee_m": 6826826.181401585,
+          "momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "nfev": 6,
+          "parameters": [
+            2.8528829829945805,
+            -0.8496205193398162,
+            94.53487954197817,
+            63.47561692324513
+          ],
+          "payload_release_state": [
+            -2933483.212493945,
+            6165884.456652195,
+            -6899.393745865547,
+            -3282.457832638551
+          ],
+          "residual": [
+            -4.656612873077393e-11,
+            -5.587935447692871e-10,
+            0.0,
+            -2.7284841053187847e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 63.47561692324513,
+          "second_burn_start_s": 1695.0313024066747,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024395,
+            -5294780.911109438,
+            5924.661508035188,
+            -4824.370373230403
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.392923247248723e-05,
+            "velocity_error_m_s": 9.850229862682775e-08
+          },
+          "final_slew_s": 11.493080669112699,
+          "first_burn_s": 94.53487954203648,
+          "first_to_second_available_s": 1600.496422865727,
+          "first_to_second_required_s": 335.72435136844973,
+          "fuel_remaining_kg": 9.267609704244478,
+          "fuel_used_kg": 0.732390295755522,
+          "integrated_delta_v_m_s": [
+            3.012767549238516,
+            2.02529167218245
+          ],
+          "minimum_endpoint_perigee_m": 6826826.181401597,
+          "momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "nfev": 6,
+          "parameters": [
+            2.852882982992599,
+            -0.8496205193349649,
+            94.53487954203648,
+            63.47561692312382
+          ],
+          "payload_release_state": [
+            -2933483.212493937,
+            6165884.456652216,
+            -6899.3937458655455,
+            -3282.4578326385194
+          ],
+          "residual": [
+            7.450580596923829e-10,
+            1.4901161193847657e-09,
+            1.8189894035458565e-10,
+            2.864908310584724e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 63.47561692312382,
+          "second_burn_start_s": 1695.0313024077634,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024452,
+            -5294780.911109402,
+            5924.661508035143,
+            -4824.3703732304475
+          ]
+        }
+      ],
+      "axis": [
+        0.6816340568113626,
+        -0.7316932503412098
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 0.6726360044229409,
+        "initial_delta_v_m_s": [
+          -2.676575268302369,
+          0.8453702509505092
+        ],
+        "second_delta_v_m_s": [
+          1.2403486917444249,
+          -1.3314398785536399
+        ]
+      },
+      "release_time_s": 1800,
+      "replay": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 972.0662062342058,
+          "velocity_error_m_s": 0.9374384143504929
+        },
+        "final_slew_s": 0.0,
+        "first_burn_s": 88.0794540135482,
+        "first_to_second_available_s": 1624.8812707989669,
+        "first_to_second_required_s": 340.9993621825134,
+        "fuel_remaining_kg": 9.327363995577116,
+        "fuel_used_kg": 0.6726360044228841,
+        "integrated_delta_v_m_s": [
+          2.8069032808551433,
+          1.819669482987193
+        ],
+        "minimum_endpoint_perigee_m": 6826951.892882622,
+        "momentum_residual_kg_m_s": 1.1641532182693481e-10,
+        "parameters": [
+          2.8356675942749625,
+          -0.8208027546607423,
+          88.0794540135482,
+          57.03927518748492
+        ],
+        "payload_release_state": [
+          -2933148.21923788,
+          6166199.0643662065,
+          -6899.519115157245,
+          -3281.8710911985536
+        ],
+        "residual": [
+          33.49932560645975,
+          31.460771400574593,
+          -12.536929169800715,
+          58.67414399945119,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 57.03927518748492,
+        "second_burn_start_s": 1712.960724812515,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "terminal_state": [
+          -4312258.486135937,
+          -5294216.212144485,
+          5924.030794575309,
+          -4825.063908479146
+        ]
+      },
+      "selected": {
+        "accepted": true,
+        "errors": {
+          "accepted": true,
+          "position_error_m": 6.387003954251362e-05,
+          "velocity_error_m_s": 9.84428529196284e-08
+        },
+        "final_slew_s": 11.493080670080102,
+        "first_burn_s": 94.53487954197817,
+        "first_to_second_available_s": 1600.4964228646966,
+        "first_to_second_required_s": 335.72435136766666,
+        "fuel_remaining_kg": 9.267609704244194,
+        "fuel_used_kg": 0.7323902957558062,
+        "integrated_delta_v_m_s": [
+          3.012767549236602,
+          2.025291672186757
+        ],
+        "minimum_endpoint_perigee_m": 6826826.181401585,
+        "momentum_residual_kg_m_s": 4.656612873077393e-10,
+        "nfev": 6,
+        "parameters": [
+          2.8528829829945805,
+          -0.8496205193398162,
+          94.53487954197817,
+          63.47561692324513
+        ],
+        "payload_release_state": [
+          -2933483.212493945,
+          6165884.456652195,
+          -6899.393745865547,
+          -3282.457832638551
+        ],
+        "residual": [
+          -4.656612873077393e-11,
+          -5.587935447692871e-10,
+          0.0,
+          -2.7284841053187847e-10,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 63.47561692324513,
+        "second_burn_start_s": 1695.0313024066747,
+        "seed_offset_rad": 0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4311467.267024395,
+          -5294780.911109438,
+          5924.661508035188,
+          -4824.370373230403
+        ]
+      },
+      "speed_m_s": 1.0,
+      "thrust_N": 10.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.0002330590138207411,
+        "velocity_m_s": 2.4416495139942474e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.215061663720907e-05,
+            "velocity_error_m_s": 9.672820304816768e-08
+          },
+          "final_slew_s": 12.045759030015057,
+          "first_burn_s": 9.03138471471255,
+          "first_to_second_available_s": 1742.9959765536007,
+          "first_to_second_required_s": 338.1992865747733,
+          "fuel_remaining_kg": 9.306673420754635,
+          "fuel_used_kg": 0.6933265792453653,
+          "integrated_delta_v_m_s": [
+            2.87815611402071,
+            1.890889439294204
+          ],
+          "minimum_endpoint_perigee_m": 6826821.251013402,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 7,
+          "parameters": [
+            2.8284468865324253,
+            -0.8524587317332024,
+            9.03138471471255,
+            5.9268797016717265
+          ],
+          "payload_release_state": [
+            -2933483.2124942476,
+            6165884.4566518525,
+            -6899.393745865334,
+            -3282.457832639487
+          ],
+          "residual": [
+            -3.031454980373382e-08,
+            -3.4831464290618895e-08,
+            2.1373125491663814e-08,
+            -9.390532795805484e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 5.9268797016717265,
+          "second_burn_start_s": 1752.0273612683134,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.2670227345,
+            -5294780.911110438,
+            5924.661508036535,
+            -4824.370373229245
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.361520832250541e-05,
+            "velocity_error_m_s": 9.820358247435261e-08
+          },
+          "final_slew_s": 12.045758999848768,
+          "first_burn_s": 9.031384713854226,
+          "first_to_second_available_s": 1742.9959765868523,
+          "first_to_second_required_s": 338.1992865957821,
+          "fuel_remaining_kg": 9.30667342089771,
+          "fuel_used_kg": 0.6933265791022905,
+          "integrated_delta_v_m_s": [
+            2.878156113747057,
+            1.8908894385829547
+          ],
+          "minimum_endpoint_perigee_m": 6826821.2510169195,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 7,
+          "parameters": [
+            2.8284468865076415,
+            -0.8524587315746498,
+            9.031384713854226,
+            5.926879699444742
+          ],
+          "payload_release_state": [
+            -2933483.2124940036,
+            6165884.456652126,
+            -6899.393745865521,
+            -3282.4578326387123
+          ],
+          "residual": [
+            -5.913898348808288e-09,
+            -7.450580596923828e-09,
+            2.637534635141492e-09,
+            -1.6416379367001355e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 5.926879699444742,
+          "second_burn_start_s": 1752.0273613007066,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024152,
+            -5294780.91110962,
+            5924.661508035365,
+            -4824.370373230219
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.363312786860513e-05,
+            "velocity_error_m_s": 9.821206712145084e-08
+          },
+          "final_slew_s": 12.045759009528092,
+          "first_burn_s": 9.031384714186142,
+          "first_to_second_available_s": 1742.9959765760975,
+          "first_to_second_required_s": 338.1992865889571,
+          "fuel_remaining_kg": 9.306673420847858,
+          "fuel_used_kg": 0.6933265791521421,
+          "integrated_delta_v_m_s": [
+            2.8781561138527865,
+            1.8908894388198783
+          ],
+          "minimum_endpoint_perigee_m": 6826821.251015154,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 6,
+          "parameters": [
+            2.828446886516327,
+            -0.8524587316255239,
+            9.031384714186142,
+            5.92687970018829
+          ],
+          "payload_release_state": [
+            -2933483.2124939873,
+            6165884.45665215,
+            -6899.3937458655155,
+            -3282.457832638679
+          ],
+          "residual": [
+            -4.284083843231201e-09,
+            -5.122274160385132e-09,
+            3.183231456205249e-09,
+            -1.3096723705530167e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 5.92687970018829,
+          "second_burn_start_s": 1752.0273612902836,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024167,
+            -5294780.911109574,
+            5924.661508035369,
+            -4824.3703732302465
+          ]
+        }
+      ],
+      "axis": [
+        0.6816340568113626,
+        -0.7316932503412098
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 0.6726360044229409,
+        "initial_delta_v_m_s": [
+          -2.676575268302369,
+          0.8453702509505092
+        ],
+        "second_delta_v_m_s": [
+          1.2403486917444249,
+          -1.3314398785536399
+        ]
+      },
+      "release_time_s": 1800,
+      "replay": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 176.83263870447178,
+          "velocity_error_m_s": 0.21614777702705404
+        },
+        "final_slew_s": 0.0,
+        "first_burn_s": 8.80794540135482,
+        "first_to_second_available_s": 1755.4881270798967,
+        "first_to_second_required_s": 340.9993621825134,
+        "fuel_remaining_kg": 9.327363995577116,
+        "fuel_used_kg": 0.6726360044228841,
+        "integrated_delta_v_m_s": [
+          2.8069032808551433,
+          1.819669482987193
+        ],
+        "minimum_endpoint_perigee_m": 6826833.112959488,
+        "momentum_residual_kg_m_s": 4.799926683327254e-10,
+        "parameters": [
+          2.8356675942749625,
+          -0.8208027546607423,
+          8.80794540135482,
+          5.7039275187484915
+        ],
+        "payload_release_state": [
+          -2933414.6359370286,
+          6165881.786721339,
+          -6899.406033497728,
+          -3282.3980773738685
+        ],
+        "residual": [
+          6.857655691588297,
+          -0.26699308613315226,
+          -1.2287632180232322,
+          5.975526467955206,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 5.7039275187484915,
+        "second_burn_start_s": 1764.2960724812515,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "terminal_state": [
+          -4311290.942664945,
+          -5294767.512425655,
+          5924.853391265047,
+          -4824.2708708176315
+        ]
+      },
+      "selected": {
+        "accepted": true,
+        "errors": {
+          "accepted": true,
+          "position_error_m": 6.363312786860513e-05,
+          "velocity_error_m_s": 9.821206712145084e-08
+        },
+        "final_slew_s": 12.045759009528092,
+        "first_burn_s": 9.031384714186142,
+        "first_to_second_available_s": 1742.9959765760975,
+        "first_to_second_required_s": 338.1992865889571,
+        "fuel_remaining_kg": 9.306673420847858,
+        "fuel_used_kg": 0.6933265791521421,
+        "integrated_delta_v_m_s": [
+          2.8781561138527865,
+          1.8908894388198783
+        ],
+        "minimum_endpoint_perigee_m": 6826821.251015154,
+        "momentum_residual_kg_m_s": 0.0,
+        "nfev": 6,
+        "parameters": [
+          2.828446886516327,
+          -0.8524587316255239,
+          9.031384714186142,
+          5.92687970018829
+        ],
+        "payload_release_state": [
+          -2933483.2124939873,
+          6165884.45665215,
+          -6899.3937458655155,
+          -3282.457832638679
+        ],
+        "residual": [
+          -4.284083843231201e-09,
+          -5.122274160385132e-09,
+          3.183231456205249e-09,
+          -1.3096723705530167e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 5.92687970018829,
+        "second_burn_start_s": 1752.0273612902836,
+        "seed_offset_rad": -0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4311467.267024167,
+          -5294780.911109574,
+          5924.661508035369,
+          -4824.3703732302465
+        ]
+      },
+      "speed_m_s": 1.0,
+      "thrust_N": 100.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.00024260364674876363,
+        "velocity_m_s": 2.5220438657171894e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7626.073105410952,
+            "velocity_error_m_s": 7.60941544307192
+          },
+          "final_slew_s": 0.31874121238853054,
+          "first_burn_s": 449.99999999955594,
+          "first_to_second_available_s": 1137.8802484977296,
+          "first_to_second_required_s": 283.5507314893115,
+          "fuel_remaining_kg": 9.707155575650631,
+          "fuel_used_kg": 0.29284442434936864,
+          "integrated_delta_v_m_s": [
+            1.4335972140250735,
+            0.5794467683968595
+          ],
+          "minimum_endpoint_perigee_m": 6826947.438336008,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 24,
+          "parameters": [
+            3.337023637254498,
+            -0.8207805898605296,
+            449.99999999955594,
+            181.80101029032616
+          ],
+          "payload_release_state": [
+            -2931162.98915677,
+            6165682.2065361105,
+            -6899.988495145125,
+            -3282.504759473086
+          ],
+          "residual": [
+            232.02233371743932,
+            -20.225011609029025,
+            -59.4749279577627,
+            -4.692683453777136,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 181.80101029032616,
+          "second_burn_start_s": 1587.8802484972855,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4304110.942982602,
+            -5296791.256491805,
+            5931.239074734604,
+            -4820.544301982588
+          ]
+        },
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7811.464667982527,
+            "velocity_error_m_s": 7.829731546859531
+          },
+          "final_slew_s": 0.30071533461198574,
+          "first_burn_s": 449.99999999993605,
+          "first_to_second_available_s": 1119.4171715273687,
+          "first_to_second_required_s": 284.1457494693754,
+          "fuel_remaining_kg": 9.698589448283428,
+          "fuel_used_kg": 0.3014105517165717,
+          "integrated_delta_v_m_s": [
+            1.4335972140260311,
+            0.638359530976451
+          ],
+          "minimum_endpoint_perigee_m": 6826942.060803775,
+          "momentum_residual_kg_m_s": 4.656612873077393e-10,
+          "nfev": 25,
+          "parameters": [
+            3.331828689726748,
+            -0.8207830259579392,
+            449.99999999993605,
+            200.28211313808316
+          ],
+          "payload_release_state": [
+            -2931152.0321465125,
+            6165691.168270374,
+            -6899.949125513922,
+            -3282.5237182903825
+          ],
+          "residual": [
+            233.11803474319169,
+            -19.328838182706384,
+            -55.537964837458276,
+            -6.588565183437822,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 200.28211313808316,
+          "second_burn_start_s": 1569.4171715273048,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4303924.440463751,
+            -5296811.858847397,
+            5931.436092286903,
+            -4820.444853411434
+          ]
+        },
+        {
+          "accepted": false,
+          "errors": {
+            "accepted": false,
+            "position_error_m": 7613.976472571865,
+            "velocity_error_m_s": 7.594973184434474
+          },
+          "final_slew_s": 0.009786902793176861,
+          "first_burn_s": 449.9999999787463,
+          "first_to_second_available_s": 1139.3544888468346,
+          "first_to_second_required_s": 283.50789030890775,
+          "fuel_remaining_kg": 9.707695694317636,
+          "fuel_used_kg": 0.29230430568236443,
+          "integrated_delta_v_m_s": [
+            1.4335972139585296,
+            0.5757322053241939
+          ],
+          "minimum_endpoint_perigee_m": 6826947.743300451,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 29,
+          "parameters": [
+            3.337375311384318,
+            -0.820802775557453,
+            449.9999999787463,
+            180.63572427162597
+          ],
+          "payload_release_state": [
+            -2931163.7856691885,
+            6165681.661199588,
+            -6899.990987068955,
+            -3282.503665786112
+          ],
+          "residual": [
+            231.94268247559665,
+            -20.27954526124522,
+            -59.724120340797526,
+            -4.583314756382606,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 180.63572427162597,
+          "second_burn_start_s": 1589.3544888255808,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4304123.135963846,
+            -5296789.984936849,
+            5931.22616903676,
+            -4820.550838560154
+          ]
+        }
+      ],
+      "axis": [
+        0.6816340568113626,
+        -0.7316932503412098
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 0.5292259858177317,
+        "initial_delta_v_m_s": [
+          -2.676575268302369,
+          0.8453702509505092
+        ],
+        "second_delta_v_m_s": [
+          0.5674085500179789,
+          -0.6090790242732003
+        ]
+      },
+      "release_time_s": 1800,
+      "replay": {
+        "accepted": false,
+        "reason": "IMPULSE_EQUIVALENT_BURN_EXCEEDS_DURATION_OR_IMPULSE_BOUND",
+        "unclipped_parameters": [
+          2.8356675942749625,
+          -0.8208027546607423,
+          880.794540135482,
+          260.99094290479877
+        ]
+      },
+      "selected": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 7613.976472571865,
+          "velocity_error_m_s": 7.594973184434474
+        },
+        "final_slew_s": 0.009786902793176861,
+        "first_burn_s": 449.9999999787463,
+        "first_to_second_available_s": 1139.3544888468346,
+        "first_to_second_required_s": 283.50789030890775,
+        "fuel_remaining_kg": 9.707695694317636,
+        "fuel_used_kg": 0.29230430568236443,
+        "integrated_delta_v_m_s": [
+          1.4335972139585296,
+          0.5757322053241939
+        ],
+        "minimum_endpoint_perigee_m": 6826947.743300451,
+        "momentum_residual_kg_m_s": 0.0,
+        "nfev": 29,
+        "parameters": [
+          3.337375311384318,
+          -0.820802775557453,
+          449.9999999787463,
+          180.63572427162597
+        ],
+        "payload_release_state": [
+          -2931163.7856691885,
+          6165681.661199588,
+          -6899.990987068955,
+          -3282.503665786112
+        ],
+        "residual": [
+          231.94268247559665,
+          -20.27954526124522,
+          -59.724120340797526,
+          -4.583314756382606,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 180.63572427162597,
+        "second_burn_start_s": 1589.3544888255808,
+        "seed_offset_rad": -0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4304123.135963846,
+          -5296789.984936849,
+          5931.22616903676,
+          -4820.550838560154
+        ]
+      },
+      "speed_m_s": 2.0,
+      "thrust_N": 1.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.00021677471516354347,
+        "velocity_m_s": 2.294440350574351e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.391002791815226e-05,
+            "velocity_error_m_s": 9.848387928896629e-08
+          },
+          "final_slew_s": 7.51531072723933,
+          "first_burn_s": 92.25061538939488,
+          "first_to_second_available_s": 1639.9723338254603,
+          "first_to_second_required_s": 339.16785648248356,
+          "fuel_remaining_kg": 9.43214620391035,
+          "fuel_used_kg": 0.5678537960896506,
+          "integrated_delta_v_m_s": [
+            2.939919854959536,
+            0.9652797634754274
+          ],
+          "minimum_endpoint_perigee_m": 6826822.909933671,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 8,
+          "parameters": [
+            2.863972498325209,
+            -0.8084807529777774,
+            92.25061538939488,
+            30.261740057905655
+          ],
+          "payload_release_state": [
+            -2933483.212493947,
+            6165884.456652204,
+            -6899.393745865543,
+            -3282.4578326385445
+          ],
+          "residual": [
+            -2.3283064365386963e-10,
+            2.7939677238464354e-10,
+            4.547473508864641e-10,
+            3.637978807091713e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 30.261740057905655,
+          "second_burn_start_s": 1732.2229492148551,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024434,
+            -5294780.911109424,
+            5924.661508035152,
+            -4824.370373230424
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.3823487773502e-05,
+            "velocity_error_m_s": 9.839946152846143e-08
+          },
+          "final_slew_s": 7.51531072799349,
+          "first_burn_s": 92.25061538952518,
+          "first_to_second_available_s": 1639.9723338247027,
+          "first_to_second_required_s": 339.16785648274185,
+          "fuel_remaining_kg": 9.432146203910293,
+          "fuel_used_kg": 0.5678537960897074,
+          "integrated_delta_v_m_s": [
+            2.939919854963841,
+            0.9652797634715967
+          ],
+          "minimum_endpoint_perigee_m": 6826822.909930235,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 6,
+          "parameters": [
+            2.8639724983254276,
+            -0.8084807529753044,
+            92.25061538952518,
+            30.261740057778706
+          ],
+          "payload_release_state": [
+            -2933483.2124939654,
+            6165884.456652173,
+            -6899.393745865543,
+            -3282.4578326385886
+          ],
+          "residual": [
+            -2.0954757928848267e-09,
+            -2.7939677238464355e-09,
+            4.547473508864641e-10,
+            -4.047251422889531e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 30.261740057778706,
+          "second_burn_start_s": 1732.2229492142278,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024351,
+            -5294780.91110948,
+            5924.661508035213,
+            -4824.370373230356
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.395763206648458e-05,
+            "velocity_error_m_s": 9.85566543615571e-08
+          },
+          "final_slew_s": 7.5153107264797185,
+          "first_burn_s": 92.25061538938024,
+          "first_to_second_available_s": 1639.9723338263361,
+          "first_to_second_required_s": 339.1678564823853,
+          "fuel_remaining_kg": 9.432146203910861,
+          "fuel_used_kg": 0.567853796089139,
+          "integrated_delta_v_m_s": [
+            2.939919854959057,
+            0.9652797634725544
+          ],
+          "minimum_endpoint_perigee_m": 6826822.909930247,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 7,
+          "parameters": [
+            2.863972498323576,
+            -0.8084807529802683,
+            92.25061538938024,
+            30.26174005780375
+          ],
+          "payload_release_state": [
+            -2933483.2124939575,
+            6165884.4566522,
+            -6899.393745865548,
+            -3282.457832638554
+          ],
+          "residual": [
+            -1.3038516044616698e-09,
+            -9.313225746154786e-11,
+            -9.094947017729282e-11,
+            -5.911715561524034e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 30.26174005780375,
+          "second_burn_start_s": 1732.2229492157164,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024483,
+            -5294780.911109434,
+            5924.6615080350875,
+            -4824.3703732304575
+          ]
+        }
+      ],
+      "axis": [
+        0.6816340568113626,
+        -0.7316932503412098
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 0.5292259858177317,
+        "initial_delta_v_m_s": [
+          -2.676575268302369,
+          0.8453702509505092
+        ],
+        "second_delta_v_m_s": [
+          0.5674085500179789,
+          -0.6090790242732003
+        ]
+      },
+      "release_time_s": 1800,
+      "replay": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 1331.379905796074,
+          "velocity_error_m_s": 1.380001598918271
+        },
+        "final_slew_s": 0.0,
+        "first_burn_s": 88.0794540135482,
+        "first_to_second_available_s": 1655.821451695972,
+        "first_to_second_required_s": 340.9993621825134,
+        "fuel_remaining_kg": 9.470774014182325,
+        "fuel_used_kg": 0.5292259858176749,
+        "integrated_delta_v_m_s": [
+          2.8069032808551433,
+          0.8324240028035018
+        ],
+        "minimum_endpoint_perigee_m": 6826951.89288439,
+        "momentum_residual_kg_m_s": 4.799926683327254e-10,
+        "parameters": [
+          2.8356675942749625,
+          -0.8208027546607423,
+          88.0794540135482,
+          26.099094290479876
+        ],
+        "payload_release_state": [
+          -2933196.4062321805,
+          6166250.901610294,
+          -6899.520613455847,
+          -3281.8651088241754
+        ],
+        "residual": [
+          28.680626176390795,
+          36.644495809357615,
+          -12.686759029929817,
+          59.27238143726754,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 26.099094290479876,
+        "second_burn_start_s": 1743.9009057095202,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "terminal_state": [
+          -4312637.511789389,
+          -5294146.0099448245,
+          5923.655345049717,
+          -4825.31485202884
+        ]
+      },
+      "selected": {
+        "accepted": true,
+        "errors": {
+          "accepted": true,
+          "position_error_m": 6.391002791815226e-05,
+          "velocity_error_m_s": 9.848387928896629e-08
+        },
+        "final_slew_s": 7.51531072723933,
+        "first_burn_s": 92.25061538939488,
+        "first_to_second_available_s": 1639.9723338254603,
+        "first_to_second_required_s": 339.16785648248356,
+        "fuel_remaining_kg": 9.43214620391035,
+        "fuel_used_kg": 0.5678537960896506,
+        "integrated_delta_v_m_s": [
+          2.939919854959536,
+          0.9652797634754274
+        ],
+        "minimum_endpoint_perigee_m": 6826822.909933671,
+        "momentum_residual_kg_m_s": 0.0,
+        "nfev": 8,
+        "parameters": [
+          2.863972498325209,
+          -0.8084807529777774,
+          92.25061538939488,
+          30.261740057905655
+        ],
+        "payload_release_state": [
+          -2933483.212493947,
+          6165884.456652204,
+          -6899.393745865543,
+          -3282.4578326385445
+        ],
+        "residual": [
+          -2.3283064365386963e-10,
+          2.7939677238464354e-10,
+          4.547473508864641e-10,
+          3.637978807091713e-10,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 30.261740057905655,
+        "second_burn_start_s": 1732.2229492148551,
+        "seed_offset_rad": 0,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4311467.267024434,
+          -5294780.911109424,
+          5924.661508035152,
+          -4824.370373230424
+        ]
+      },
+      "speed_m_s": 2.0,
+      "thrust_N": 10.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.00023308261111523742,
+        "velocity_m_s": 2.441558722402227e-07
+      }
+    },
+    {
+      "attempts": [
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.491408225093212e-05,
+            "velocity_error_m_s": 9.958880573320832e-08
+          },
+          "final_slew_s": 11.107137786271366,
+          "first_burn_s": 8.921082540219459,
+          "first_to_second_available_s": 1747.2493049494663,
+          "first_to_second_required_s": 338.0607861755912,
+          "fuel_remaining_kg": 9.460312540040661,
+          "fuel_used_kg": 0.5396874599593389,
+          "integrated_delta_v_m_s": [
+            2.842981425944811,
+            0.8683481682463965
+          ],
+          "minimum_endpoint_perigee_m": 6826820.189213934,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 7,
+          "parameters": [
+            2.834396673978599,
+            -0.8477175882775553,
+            8.921082540219459,
+            2.7224747240430602
+          ],
+          "payload_release_state": [
+            -2933483.2124940306,
+            6165884.456652296,
+            -6899.393745865601,
+            -3282.457832638388
+          ],
+          "residual": [
+            -8.614733815193176e-09,
+            9.49949026107788e-09,
+            -5.366018740460277e-09,
+            1.6007106751203537e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 2.7224747240430602,
+          "second_burn_start_s": 1756.1703874896857,
+          "seed_offset_rad": 0,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267025421,
+            -5294780.911109151,
+            5924.661508034219,
+            -4824.370373231033
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.769107126191748e-05,
+            "velocity_error_m_s": 1.0228636530421475e-07
+          },
+          "final_slew_s": 11.107137775671312,
+          "first_burn_s": 8.921082540017936,
+          "first_to_second_available_s": 1747.2493049603904,
+          "first_to_second_required_s": 338.0607861808135,
+          "fuel_remaining_kg": 9.460312540055668,
+          "fuel_used_kg": 0.5396874599443322,
+          "integrated_delta_v_m_s": [
+            2.8429814258807027,
+            0.8683481682071299
+          ],
+          "minimum_endpoint_perigee_m": 6826820.189212378,
+          "momentum_residual_kg_m_s": 4.799926683327254e-10,
+          "nfev": 7,
+          "parameters": [
+            2.834396673984398,
+            -0.8477175882261831,
+            8.921082540017936,
+            2.7224747239201337
+          ],
+          "payload_release_state": [
+            -2933483.21249354,
+            6165884.456652797,
+            -6899.39374586597,
+            -3282.457832636824
+          ],
+          "residual": [
+            4.0465965867042544e-08,
+            5.960464477539063e-08,
+            -4.229150363244116e-08,
+            1.7239472072105855e-07,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 2.7224747239201337,
+          "second_burn_start_s": 1756.1703875004084,
+          "seed_offset_rad": 0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267028071,
+            -5294780.911107509,
+            5924.661508032091,
+            -4824.370373232827
+          ]
+        },
+        {
+          "accepted": true,
+          "errors": {
+            "accepted": true,
+            "position_error_m": 6.392710057783707e-05,
+            "velocity_error_m_s": 9.85149945416015e-08
+          },
+          "final_slew_s": 11.107137732878913,
+          "first_burn_s": 8.92108253948138,
+          "first_to_second_available_s": 1747.249305004832,
+          "first_to_second_required_s": 338.06078620473755,
+          "fuel_remaining_kg": 9.460312540132122,
+          "fuel_used_kg": 0.5396874598678778,
+          "integrated_delta_v_m_s": [
+            2.8429814257094277,
+            0.8683481678522946
+          ],
+          "minimum_endpoint_perigee_m": 6826820.189214135,
+          "momentum_residual_kg_m_s": 0.0,
+          "nfev": 6,
+          "parameters": [
+            2.8343966739830107,
+            -0.8477175880187939,
+            8.92108253948138,
+            2.7224747228077297
+          ],
+          "payload_release_state": [
+            -2933483.212493947,
+            6165884.456652213,
+            -6899.393745865543,
+            -3282.457832638552
+          ],
+          "residual": [
+            -2.3283064365386963e-10,
+            1.2107193470001221e-09,
+            4.547473508864641e-10,
+            -4.092726157978177e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "second_burn_s": 2.7224747228077297,
+          "second_burn_start_s": 1756.1703875443134,
+          "seed_offset_rad": -0.05,
+          "service_pass": true,
+          "settle_s": 30.0,
+          "solver_success": true,
+          "terminal_state": [
+            -4311467.267024452,
+            -5294780.911109433,
+            5924.661508035129,
+            -4824.370373230448
+          ]
+        }
+      ],
+      "axis": [
+        0.6816340568113626,
+        -0.7316932503412098
+      ],
+      "impulsive_reference": {
+        "fuel_kg": 0.5292259858177317,
+        "initial_delta_v_m_s": [
+          -2.676575268302369,
+          0.8453702509505092
+        ],
+        "second_delta_v_m_s": [
+          0.5674085500179789,
+          -0.6090790242732003
+        ]
+      },
+      "release_time_s": 1800,
+      "replay": {
+        "accepted": false,
+        "errors": {
+          "accepted": false,
+          "position_error_m": 45.175805741403906,
+          "velocity_error_m_s": 0.024051205600800454
+        },
+        "final_slew_s": 0.0,
+        "first_burn_s": 8.80794540135482,
+        "first_to_second_available_s": 1758.5821451695972,
+        "first_to_second_required_s": 340.9993621825134,
+        "fuel_remaining_kg": 9.470774014182325,
+        "fuel_used_kg": 0.5292259858176749,
+        "integrated_delta_v_m_s": [
+          2.8069032808551433,
+          0.8324240028035018
+        ],
+        "minimum_endpoint_perigee_m": 6826833.112959475,
+        "momentum_residual_kg_m_s": 4.656612873077393e-10,
+        "parameters": [
+          2.8356675942749625,
+          -0.8208027546607423,
+          8.80794540135482,
+          2.609909429047988
+        ],
+        "payload_release_state": [
+          -2933437.624713012,
+          6165906.474749505,
+          -6899.406401180268,
+          -3282.39673784401
+        ],
+        "residual": [
+          4.558778093243018,
+          2.2018097303807735,
+          -1.2655314721087052,
+          6.10947945378939,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 2.609909429047988,
+        "second_burn_start_s": 1767.390090570952,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "terminal_state": [
+          -4311468.968863324,
+          -5294735.767377279,
+          5924.67643162568,
+          -4824.389234513062
+        ]
+      },
+      "selected": {
+        "accepted": true,
+        "errors": {
+          "accepted": true,
+          "position_error_m": 6.392710057783707e-05,
+          "velocity_error_m_s": 9.85149945416015e-08
+        },
+        "final_slew_s": 11.107137732878913,
+        "first_burn_s": 8.92108253948138,
+        "first_to_second_available_s": 1747.249305004832,
+        "first_to_second_required_s": 338.06078620473755,
+        "fuel_remaining_kg": 9.460312540132122,
+        "fuel_used_kg": 0.5396874598678778,
+        "integrated_delta_v_m_s": [
+          2.8429814257094277,
+          0.8683481678522946
+        ],
+        "minimum_endpoint_perigee_m": 6826820.189214135,
+        "momentum_residual_kg_m_s": 0.0,
+        "nfev": 6,
+        "parameters": [
+          2.8343966739830107,
+          -0.8477175880187939,
+          8.92108253948138,
+          2.7224747228077297
+        ],
+        "payload_release_state": [
+          -2933483.212493947,
+          6165884.456652213,
+          -6899.393745865543,
+          -3282.457832638552
+        ],
+        "residual": [
+          -2.3283064365386963e-10,
+          1.2107193470001221e-09,
+          4.547473508864641e-10,
+          -4.092726157978177e-10,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_burn_s": 2.7224747228077297,
+        "second_burn_start_s": 1756.1703875443134,
+        "seed_offset_rad": -0.05,
+        "service_pass": true,
+        "settle_s": 30.0,
+        "solver_success": true,
+        "terminal_state": [
+          -4311467.267024452,
+          -5294780.911109433,
+          5924.661508035129,
+          -4824.370373230448
+        ]
+      },
+      "speed_m_s": 2.0,
+      "thrust_N": 100.0,
+      "verification": {
+        "passed": true,
+        "position_m": 0.0002436731800819794,
+        "velocity_m_s": 2.53215437095192e-07
+      }
+    }
+  ],
+  "source_sha256": {
+    "analysis/campaign_allocation.py": "fb5934b38ea182263ac90a9a690d97d0011b0c5323abae2a2bbc3a0d66bd7b4b",
+    "analysis/finite_burn_departure.py": "9004a6a88b180e40ca2360843a4e0eaf26a18a901d94ed7d11edd23d7170ed65",
+    "analysis/host_reference.py": "e21d08709852fc711d112efe69fe56493ffe839142db87d110e1511a10abfaa3",
+    "analysis/results/terminal_timing.json": "8e5f4b6670eeeed3137ea72b0daad74a9ee3f2216c94fe58ae7a4f2df197c033",
+    "analysis/terminal_timing.py": "9aa736afc979227db057eb7478ff090ce35578308a82a60c6b29c48fe5ac5652",
+    "validation/P113_S11_finite_burn.md": "ae82d6e3727f9e88363f8f362b9b91777b8dbaaf3c88bbeb3ebb995cb5caf6e9"
+  },
+  "study": "P113-S11",
+  "verification": {
+    "impulse_limit": true,
+    "mass_identity": true,
+    "rocket_identity": true,
+    "tight_propagation": true,
+    "trapezoidal_slew": true,
+    "triangular_slew": true,
+    "zero_duration": true,
+    "zero_slew": true
+  }
+}

@@ -1,0 +1,18 @@
+name,expression,unit,status,meaning
+PayloadLength,340.5,mm,PROXY,Replace with actual payload ICD
+PayloadWidth,100,mm,PROXY,Not a complete rail protrusion envelope
+PayloadHeight,100,mm,PROXY,Not a complete rail protrusion envelope
+PayloadMass,4,kg,STUDY,Case 88 payload mass
+PusherMass,0.25,kg,STUDY,Allocated assumption not a measured part
+WorkingStroke,240,mm,STUDY_CASE_88,Fixed frame analytical stroke
+InitialCompression,320,mm,STUDY_CASE_88,Deflection not free length
+FinalCompression,80,mm,STUDY_CASE_88,Retained preload deflection
+CatcherTravel,20,mm,LAYOUT_ASSUMPTION,Editable 5 10 20 mm sensitivity
+ReleasePlane,WorkingStroke,mm,DERIVED,Pusher contact face at ideal release
+CatchPlane,WorkingStroke+CatcherTravel,mm,LAYOUT_ASSUMPTION,Does not define peak catcher shock
+SpringFreeLength,TBD,mm,BLOCKED,Part selection solid height and buckling
+GuideClearance,TBD,mm,BLOCKED,Thermal tolerance contact and friction closure
+GuideSpacing,TBD,mm,BLOCKED,Tip off stiffness and payload interface
+CellPitch,TBD,mm,BLOCKED,Clearance access and installed system trade
+FrameThickness,TBD,mm,BLOCKED,Structural load path and stiffness
+MountPattern,TBD,mm,HOST_DATA,Provider interface unselected

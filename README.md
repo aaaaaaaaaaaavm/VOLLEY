@@ -6,6 +6,13 @@ I started VOLLEY with a question: **how much of a satellite's initial orbital di
 
 The project investigates provider-hosted control of individual payload departure conditions: relative release velocity, direction and timing across one spacecraft or a manifest. Keeping the spacecraft mechanically and electrically unmodified is the design objective; the interfaces still have to earn that claim.
 
+**Not every satellite needs VOLLEY.** Conventional separation is sufficient when
+safe clearance is the whole task. VOLLEY investigates the narrower case where a
+propulsionless payload benefits from individually controlled departure conditions.
+Continuing orbit changes, stationkeeping and later avoidance require additional
+spacecraft or carrier capability. Extra departure authority must justify its full
+installed mass, volume, cost and operating burden.
+
 > **Computational engineering programme. Nothing has been built, fired, measured, qualified or flown.**
 
 [Interactive project site](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Documentation portal](https://aaaaaaaaaaaavm.github.io/VOLLEY/docs.html) · [Current work](docs/PROGRAMME_EXECUTION.md) · [Evidence](https://aaaaaaaaaaaavm.github.io/VOLLEY/evidence.html) · [CAD](cad/README.md) · [Open problems](OPEN_PROBLEMS.md)
@@ -30,6 +37,8 @@ The project investigates provider-hosted control of individual payload departure
 <table><tr><td width="48%"><img src="cad/renders/gen5/hero_open.png" alt="Gen5 electromagnetic VOLLEY CAD"></td><td width="52%"><img src="docs/assets/hero_departure.svg" alt="VOLLEY programmable departure concept"></td></tr><tr><td><b>A machine that actually existed in the engineering record.</b> Gen5 is the frozen electromagnetic comparator, not the next design.</td><td><b>The idea that survives the machines.</b> Same host, individually controlled departure conditions, then the spacecraft is on its own.</td></tr></table>
 
 ---
+
+[Mission-fit table and capability stack](docs/MISSION_FIT.md)
 
 ## The mission in one picture
 
@@ -79,7 +88,24 @@ For a **4 kg** payload, the S4 study point is only **41.77 J** of ideal payload 
 
 ## What the evidence actually says
 
-**Latest review, 16 September:** [combined release errors](docs/COMBINED_RELEASE_ERRORS.md)
+**Latest local engineering:** [Mission-sized cartridges](docs/MISSION_CARTRIDGES.md)
+and [finite-burn/slew replanning](docs/FINITE_BURN_DEPARTURE.md). These are bounded
+computations. [The continuation record](docs/LOCAL_CONTINUATION_STATUS.md) states
+the reproducible evidence and remaining work.
+
+
+**Build and future scope, 17 September:** [Current-cell Fusion handoff](docs/CURRENT_CELL_FUSION_HANDOFF.md),
+[next-generation product and customer](docs/NEXT_GENERATION_PRODUCT.md), and
+[lunar concept](docs/LUNAR_VOLLEY_CONCEPT.md). The [first lunar/size screen](docs/LUNAR_RELEASE_SCREEN.md)
+contains 126 ideal release cases and 42 size cases; it establishes neither lunar lifetime nor hardware compatibility.
+
+**Latest study, 17 September:** [S7 coupled release campaign](docs/COUPLED_RELEASE_CAMPAIGN.md)
+carries the first release's host error into the second delivery across 2,508 sampled histories.
+Exact-navigation replanning helps the second payload, but cannot fix a first-payload miss.
+The 120 s coast increases nominal wider-screen host fuel from 2.778 to 3.181 kg.
+These are idealized controls, not hardware or provider capability.
+
+**Previous review, 16 September:** [combined release errors](docs/COMBINED_RELEASE_ERRORS.md)
 now cover 512 conditional event corners. The [reference-cell mechanics screen](docs/REFERENCE_CELL_MECHANICS.md)
 retains all 144 spring/pusher cases, including the 96 that fail its acceleration/contact assumptions.
 The [verification matrix](docs/REFERENCE_VERIFICATION_MATRIX.md) connects each result to the closure it still needs.

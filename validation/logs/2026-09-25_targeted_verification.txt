@@ -1,0 +1,48 @@
+[{'speed_m_s': 0.5, 'candidate_index': 0, 'status': 'SAMPLED_LAYOUT_CANDIDATE'}, {'speed_m_s': 1, 'candidate_index': 5, 'status': 'SAMPLED_LAYOUT_CANDIDATE'}, {'speed_m_s': 2, 'candidate_index': 12, 'status': 'SAMPLED_LAYOUT_CANDIDATE'}, {'speed_m_s': 3, 'candidate_index': 18, 'status': 'SAMPLED_LAYOUT_CANDIDATE'}, {'speed_m_s': 5, 'candidate_index': None, 'status': 'NO_CANDIDATE_WITHIN_FROZEN_LIMITS'}]
+{'inverse': True, 'integrated': True, 'momentum': True, 'contact_failure': True, 'case_count': True}
+{'impulse_limit': True, 'mass_identity': True, 'rocket_identity': True, 'tight_propagation': True, 'trapezoidal_slew': True, 'triangular_slew': True, 'zero_duration': True, 'zero_slew': True}
+{
+  "verification": {
+    "spring_inverse": true,
+    "catch_energy": true,
+    "catch_stroke": true,
+    "finite_base_limit": true,
+    "torque_monotonic": true,
+    "geometric_reserve": true,
+    "cases": true
+  },
+  "loads": {
+    "latch_N": 180.50219649528808,
+    "catch_absorption_J": 1.131897619706482,
+    "catch_planning_energy_J": 1.697846429559723,
+    "constant_absorber_N": 84.89232147798616,
+    "linear_absorber_full_stroke_peak_N": 169.78464295597232,
+    "charge_energy_J": 9.671909362205854,
+    "peak_g": 4.330847441044072
+  },
+  "bench": {
+    "fixed_base_speed_m_s": 1.9876370840169784,
+    "finite_host_nominal_speed_m_s": 2.0,
+    "velocity_range_m_s": 6.0,
+    "expanded_velocity_uncertainty_at_range_m_s": 0.013994284547628723,
+    "uncertainty_target_pass": false,
+    "required_spacing_standard_uncertainty_m": 5.783117190965825e-05,
+    "shot_count": 20,
+    "model_error_limit_m_s": 0.1,
+    "sample_std_limit_m_s": 0.03,
+    "actual_tests_completed": 0
+  }
+}
+{'break_even': True, 'zero': True, 'monotonic': True, 'count': True, 'negative_retained': True}
+R1 calculated budget: 0.006997142273814361 m/s; physical calibration not performed
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+OK
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.413s
+
+OK
+PASS: focused local continuation checks; full programme remains open

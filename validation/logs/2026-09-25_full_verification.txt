@@ -1,0 +1,105 @@
+== gates ==
+authorship                        PASS  authorship: 580 commits, every author and committer is the repository's own
+links                             PASS  cross-link block: consistent
+website routes                    PASS  site: 93 local assets/routes stay within the published docs root
+register                          PASS  register: 154 entries, 51 LIVE, 60 CORRECTED, 43 CLOSED
+baseline                          PASS  baseline holds: 23 values match the scripts
+public surfaces                   PASS  public surfaces: 21 checked against 27 withdrawn claims, 18 historical passages explicitly allowed, counts match (154 entries, 51 live), key links resolve
+routing                           PASS  routing: 51 routed entries, every quoted title matches the register
+BSX review                        PASS  BSX review agrees with the live register
+README overview                   PASS  overview current
+cross-references                  PASS  cross-references: 18 pairs agree; 5 pairs deliberately excluded and documented
+companion payloads                PASS  companions: payloads current at flagship 65028b4; 31 manifest sources unchanged since; 2 working copy/copies agree
+A24-R reference                   PASS  A24-R current reference reproduced; historical A24 bands retained
+A2-R levers                       FAIL
+      Traceback (most recent call last):
+        File "/workspace/scratch/41e6a84516b4/VOLLEY/analysis/levers_depth.py", line 6, in <module>
+          import motor_model as mm
+        File "/workspace/scratch/41e6a84516b4/VOLLEY/analysis/motor_model.py", line 38, in <module>
+          import magpylib as magpy
+      ModuleNotFoundError: No module named 'magpylib'
+band integrity                    PASS  bands: 142 scripts scanned, no uncomputed band verdicts; 2 declared report-only or not-evaluable
+A13 band consistency              FAIL
+      Traceback (most recent call last):
+        File "/workspace/scratch/41e6a84516b4/VOLLEY/analysis/attitude_budget.py", line 16, in <module>
+          import motor_model as mm
+        File "/workspace/scratch/41e6a84516b4/VOLLEY/analysis/motor_model.py", line 38, in <module>
+          import magpylib as magpy
+      ModuleNotFoundError: No module named 'magpylib'
+results freshness                 FAIL
+      results freshness: 5 problem(s)
+      
+        analysis/run_a70.py: exited 1. ModuleNotFoundError: No module named 'magpylib'
+        analysis/cell_manifest.py: exited 1. ModuleNotFoundError: No module named 'magpylib'
+        analysis/payload_family.py: exited 1. ModuleNotFoundError: No module named 'magpylib'
+        analysis/decay_calibration.py: exited 1. ModuleNotFoundError: No module named 'magpylib'
+        analysis/inclination_density.py: exited 1. ModuleNotFoundError: No module named 'pymsis'
+      
+        fix: re-run the script and commit its output, or find why it moved
+computational closure             PASS    GEN6 remaining COMPUTATION: 18
+artifacts                         FAIL
+      REBUILD DIFFERS cad/step/gen5/VOLLEY_Track_Gen5.step: 8 package file(s)
+                     cad/step/gen5/VOLLEY_Brake_Gen5.step
+                     cad/step/gen5/VOLLEY_Enclosure_Gen5.step
+                     cad/step/gen5/VOLLEY_Interface_ESPA_Gen5.step
+                     cad/step/gen5/VOLLEY_Magazine_Cassette_Gen5.step
+                     cad/step/gen5/VOLLEY_Payload_3U_Gen5.step
+                     cad/step/gen5/VOLLEY_Sled_Gen5.step
+                     cad/step/gen5/VOLLEY_Stator_Gen5.step
+                     cad/step/gen5/VOLLEY_Track_Gen5.step
+      REBUILD DIFFERS cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step: 9 package file(s)
+                     cad/step/gen6/VOLLEY_Carriage_Gen6.step
+                     cad/step/gen6/VOLLEY_Chamber_Gen6.step
+                     cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step
+                     cad/step/gen6/VOLLEY_Magazine_Cassette_Gen6.step
+                     cad/step/gen6/VOLLEY_Reservoir_Gen6.step
+                     cad/step/gen6/VOLLEY_Stage_Rail_Gen6.step
+                     cad/step/gen6/VOLLEY_Trim_Stator_Gen6.step
+                     cad/stl/VOLLEY_Chamber_Gen6.stl
+      STALE  cad/step/gen5/VOLLEY_Track_Gen5.step
+             built before cad/parameters.json, which changed 238.1 h later
+             rebuild it, or the published artifact contradicts its own source
+      STALE  cad/step/gen5/VOLLEY_Track_Gen5.step
+             built before cad/build_gen5.py, which changed 132.4 h later
+             rebuild it, or the published artifact contradicts its own source
+      STALE  cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step
+             built before cad/parameters.json, which changed 37.9 h later
+             rebuild it, or the published artifact contradicts its own source
+      STALE  cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step
+             built before cad/build_gen6.py, which changed 78.9 h later
+             rebuild it, or the published artifact contradicts its own source
+      
+      4 stale, 0 missing, 0 unverified, of 7 checked
+host-reference blocks             PASS  host reference: 19 generated blocks reproduce exactly in docs/HOST_REFERENCE_CASES.md
+host-reference self-test          PASS  self-test: 35 identities hold
+departure trade freshness         PASS  departure trade: current; P113/E5 remain open
+campaign allocation freshness     FAIL
+      campaign allocation: figures/campaign_allocation.svg STALE
+terminal timing freshness         FAIL
+      terminal timing: STALE figures/terminal_timing.svg
+manifest timing freshness         FAIL
+      manifest timing: STALE figures/manifest_timing.svg
+operational uncertainty freshness PASS  P113-S5 outputs are fresh and declared numerical checks pass
+combined release errors           PASS  P113-S6: 512 conditional corners; verification PASS; campaign closure remains open
+coupled release campaign          FAIL
+      S7 computed fixed_1 delay=0 REPLAY
+      S7 computed fixed_1 delay=0 EXACT_NAV_REPLAN
+      S7 computed fixed_1 delay=120 REPLAY
+      S7 computed fixed_1 delay=120 EXACT_NAV_REPLAN
+      S7 computed spring_screen delay=0 REPLAY
+      S7 computed spring_screen delay=0 EXACT_NAV_REPLAN
+      S7 computed spring_screen delay=120 REPLAY
+      S7 computed spring_screen delay=120 EXACT_NAV_REPLAN
+      S7 computed bolley_screen delay=0 REPLAY
+      S7 computed bolley_screen delay=0 EXACT_NAV_REPLAN
+      S7 computed bolley_screen delay=120 REPLAY
+      S7 computed bolley_screen delay=120 EXACT_NAV_REPLAN
+      P113-S7 outputs stale: figure
+lunar release and size screen     PASS  C0-S1: 126 release / 42 scaling cases; verification PASS; lifetime and hardware remain open
+local continuation                PASS  PASS: focused local continuation checks; full programme remains open
+reference cell mechanics          PASS  P92-S2: 48/144 feasible analytical cases; verification PASS; P92 open
+Gen6 reference freshness          PASS  reference architecture freshness: PASS
+properties and regressions        SKIP  pytest or hypothesis not installed: pip install -r requirements.txt -r requirements-dev.txt
+
+working tree clean after verification
+VERIFY: FAILURES ABOVE

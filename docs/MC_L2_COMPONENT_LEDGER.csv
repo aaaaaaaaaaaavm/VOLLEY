@@ -1,0 +1,22 @@
+id,component,requirement,drawing,supplier_part,quantity,measured_mass_kg,status,closure_evidence
+MC01,master skeleton,80 mm release and 100 mm caught state; separate host and payload datums,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC02,payload dummy,4 kg nominal; measure mass CG inertia and contact geometry,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC03,base and cell frame,Review spring/catch reactions; host launch loads unavailable,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC04,guidance,Measure alignment breakaway and running friction; spring buckling guidance,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC05,pusher,0.25 kg model; weigh actual plate bearings and attached hardware,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC06,spring cassette,Two symmetric springs; aggregate 1604.108 N/m; 106.667 mm nominal compression; material open,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC07,preload carriage,Calibrated position and force; account for backlash,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC08,charger,180.502 N sampled load; lead/efficiency sensitivity in P92-S6,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC09,charger disengagement,Physical load isolation; independently prove clear before release,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC10,release latch,180.502 N unfactored load; contact strength and release transient open,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC11,ascent restraint,Independent ascent load path; provider loads and inhibit ICD required,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC12,catcher,20 mm envelope; 1.697846 J planning allocation; actual force law required,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC13,anti-rebound lock,Positive retained pusher; rebound and wear tests required,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC14,exit guard,Entire sweep outside actual payload corridor,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC15,state sensing,Charge latch coupling-clear payload-clear caught; failure-state tests,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC16,harness and electronics,Fault-isolated inhibit and power; actual connectors and mass required,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC17,thermal interfaces,Operating and dwell temperatures unknown; supplier material evidence,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC18,cell-bank mounts,Repeated alignment and one-cell jam isolation verification,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC19,bank-host mounts,Provider mount and stiffness ICD missing,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC20,fasteners and access,Bill of fasteners torque locking and tool access with drawing release,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record
+MC21,coupon fixture,Review reaction loads containment calibration and energy-isolation procedure,TBD,TBD,TBD,,OPEN,Reviewed drawing and inspection/test record

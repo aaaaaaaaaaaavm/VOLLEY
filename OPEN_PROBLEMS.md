@@ -1,5 +1,9 @@
 # Open problems, known errors, and the fix list
 
+**Local continuation, 17 September:** [P92-S5 mission cartridges](docs/MISSION_CARTRIDGES.md)
+and [P113-S11 finite-burn replanning](docs/FINITE_BURN_DEPARTURE.md) add bounded
+computed evidence. P92/P113 remain open; no item is closed by these increments.
+
 Two categories: P-items are errors in the currently published paper and should be
 fixed first. E-items are genuinely unsolved engineering.
 
@@ -5958,6 +5962,13 @@ tens of percent of clearance rather than twelve times it, and the remaining
 non-convergence is a genuine numerical-method problem rather than a masked geometry error.
 
 ### P113. How the orbital work divides between host and deployer has never been computed, and it sets VOLLEY's release-velocity requirement: MEDIUM, NEW 2026-08-26
+
+**Further partial work, 2026-09-17:** [P113-S7](validation/P113_S7_coupled_release_campaign.md)
+and [the coupled campaign](docs/COUPLED_RELEASE_CAMPAIGN.md) carry first-release
+host errors through the second transfer/release under replay or exact-navigation
+replanning, with a 0/120 s coast trade. All 2,508 sampled histories and failures
+are retained. N1 is partial: realistic navigation/finite control, clearance,
+full manifest, disposal and installed burdens remain. P113/E5/P92 stay open.
 
 **Further partial work, 2026-09-15:** [P113-S3](validation/P113_S3_terminal_timing.md)
 and [terminal-state timing](docs/TERMINAL_TIMING.md) add a single-payload position/velocity

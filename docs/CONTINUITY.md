@@ -1,9 +1,20 @@
 # Project continuity and work ownership
 
-Updated 2026-09-17. This is the starting point when resuming work. Fetch current `main`, inspect the latest evidence and read the current workstream before editing. The programme has two coordinated workstreams.
+Updated 2026-09-17. This is the starting point when resuming work. Preserve the local working copy and inspect its evidence before editing. The current instruction holds all GitHub writes, object uploads, exports and publication until the entire agreed plan is complete. The programme has two coordinated workstreams.
+
+**Current local continuation:** [Verified work and missing checkpoint artifacts](LOCAL_CONTINUATION_STATUS.md).
 
 **Latest restart and next-batch scope:** [17 September checkpoint](RESTART_20260917.md).
-**Latest executed engineering batch:** [16 September review](REVIEW_20260916.md).
+**Latest executed engineering batch:** [17 September S7 checkpoint](REVIEW_20260917.md).
+[P113-S7](COUPLED_RELEASE_CAMPAIGN.md) now carries host error through two releases in 2,508 sampled histories. Exact-navigation replanning and a 120 s coast are bounded study assumptions; N1 remains partial.
+
+**Current CAD handoff:** [mechanical-cell layout](CURRENT_CELL_FUSION_HANDOFF.md).
+**Future scope:** [product/customer and scaling](NEXT_GENERATION_PRODUCT.md),
+[lunar programme](LUNAR_VOLLEY_CONCEPT.md), [executed C0-S1 screen](LUNAR_RELEASE_SCREEN.md).
+C0-S1 is early requirements work. Detailed lunar development remains gated by the
+current LEO prototype review package; no lunar hardware or lifetime is established.
+
+Previous batch: [16 September review](REVIEW_20260916.md).
 P113-S6 and P92-S2 have now run: 512 conditional error corners and 144 reference-cell
 mechanical cases. They extend, but do not close, the mission/reference decision.
 The previous two-workstream ownership split no longer implies separate active contributors.

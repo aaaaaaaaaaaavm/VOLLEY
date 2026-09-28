@@ -1,5 +1,74 @@
 # Change log / audit record
 
+## 2026-09-17: lunar-first concept and visual continuation
+
+C0-S2 criteria were committed at 31d5dd6 before implementation. The ideal
+Earth-transfer screen now supplies its implied lunar arrival speed to capture
+calculations. All 42 release and 18 mass cases remain available. Four named
+concept STEP/STL assemblies, five renders and six SVG/PNG engineering figures
+feed a local lunar explorer and main-page entry. No hardware or lunar lifetime
+gate closes. The MC-L2 handoff explicitly uses 0/40/80/100 mm motion states,
+keeping the older 240/260 mm S2 sequence historical. The customer definition
+now explicitly excludes attitude thrusters as well as orbit-change thrusters.
+
+An initial numerical-result JSON boolean conversion failed before output; its
+original source is retained and physical bands did not change. A CAD exporter
+color lookup was corrected before artifacts were produced. Initial painter-order
+render artifacts were replaced by depth-buffered static rendering and WebGL
+depth testing. Real-browser testing is pending because the browser runtime is
+unavailable and its download timed out; stubbed logic checks are not a substitute.
+No GitHub publication or companion export occurred.
+
+
+## Local continuation: cartridges and finite burns
+
+I executed P92-S5 and P113-S11 under precommitted criteria, retaining failed cases.
+Separate lower-authority force-law candidates replace the unsupported assumption
+that one fixed cartridge covers 0.5–5 m/s. Finite thrust, mass flow, slewing and
+settling now enter a bounded twelve-case single-departure screen. This does not
+close the manifest, real attitude control, selected components or hardware.
+The local continuation record documents the missing newer workspace checkpoint
+and the retained count/serialization corrections. No GitHub publication occurred.
+
+## 2026-09-17: current-cell CAD handoff and conditional lunar/size screen
+
+- Identified the gas-Gen6 Fusion package and old CAD landing instructions as
+  historical; routed current work to a new mechanical-cell handoff with 21 missing
+  component groups, case-consistent layout parameters and explicit drawing blockers.
+- Defined the mission-limited propulsionless-fleet customer, common operating
+  principle, installed-burden criteria and larger-payload/OTV scope as future concepts.
+- Predeclared C0-S1 locally at `bdb578a` before implementation: 126 ideal lunar
+  release histories and 42 payload-size cases, with independent Cartesian propagation,
+  conservation and limiting checks. Lunar lifetime, connected transfer, carrier selection
+  and hardware compatibility remain open. No register item is closed by this screen.
+- Removed private progress estimates from the current public restart document.
+  Public progress remains evidence-gate based.
+- Published criteria retain the original local acceptance records; authenticated
+  connector transport may assign different commit identifiers from local Git history.
+
+
+## 2026-09-17: first coupled release-error campaign
+
+P113-S7 criteria were committed at `1942c4f` before implementation or execution.
+The study carries the first release's actual retained-host error through the next
+coast, burn and release, comparing fixed command replay with exact-state replanning
+for three matched authority screens and 0/120 s post-release coast delays. It
+retains 2,508 attempted histories, mission misses and local search failures.
+Independent RK4, circular limits, tighter adaptive runs, S4 zero-error reproduction
+and momentum/mass/coast-invariant checks pass. The declared physical bands remain
+10 m and 0.01 m/s.
+
+In the wider-authority nominal case, the 120 s coast increases host propellant
+from 2.777987 to 3.181084 kg. Replanning improves the second payload but cannot
+repair the first payload after separation. Exact navigation and impulsive burns
+remain optimistic assumptions; the coast does not establish safe clearance or
+settling. This is partial N1 work, not full campaign closure. P113, E5 and P92
+remain open; cislunar requirements screening, four/twelve-payload campaigns, noisy
+navigation, disposal and installed-system comparisons remain next work.
+
+[Generated result](docs/COUPLED_RELEASE_CAMPAIGN.md) and full source-hashed histories
+are included in the normal freshness gates and companion evidence export.
+
 ## 2026-09-16: combined errors, reference-cell mechanics and review surfaces
 
 I declared P113-S6 and P92-S2 in f0026a7 before implementing or executing them. S6 retains

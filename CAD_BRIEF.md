@@ -1,5 +1,7 @@
 # CAD brief
 
+> **Current configuration, 17 September 2026:** use the [mechanical-cell Fusion handoff](docs/CURRENT_CELL_FUSION_HANDOFF.md). The geometry and older build instructions below describe historical configurations; they are not the current cell design. Historical “current” labels are scoped to their dated generation.
+
 A brief written to be read before modelling, from a link to this repository alone. It answers the questions a modeller has to answer before the first sketch,
 and it resolves, explicitly, every place where two files in this repository disagree.
 

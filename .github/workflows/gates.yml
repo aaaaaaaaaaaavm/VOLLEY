@@ -108,8 +108,15 @@ jobs:
         run: python3 analysis/manifest_timing.py --check
       - name: operational uncertainty freshness
         run: python3 analysis/operational_uncertainty.py --check
+      - name: coupled release campaign freshness
+        run: python3 analysis/coupled_release_campaign.py --check
+      - name: lunar release and size screen
+        run: python3 analysis/lunar_release_scaling.py --check
       - name: Gen6 reference freshness
         run: python3 analysis/reference_architecture.py --check
+
+      - name: local continuation requirements
+        run: python3 tools/check_continuation_local.py
 
       - name: properties and regressions
         run: python3 -m pytest

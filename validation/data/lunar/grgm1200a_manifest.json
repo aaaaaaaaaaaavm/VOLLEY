@@ -1,0 +1,14 @@
+{
+  "frame": "DE430 lunar principal axes",
+  "header": "1.7380000000000000e+03, 4.9028001224453001e+03, 6.4536052689015518e-15, 1200, 1200,    1, 0.0000000000000000e+00, 0.0000000000000000e+00",
+  "normalization": "fully normalized (4-pi), no Condon-Shortley phase",
+  "note": "Exact original byte prefix including header. Degree zero central term is implicit. Full file can be restored from URL and verified using source_sha256.",
+  "retrieved_utc_date": "2026-09-26",
+  "source_bytes": 88059844,
+  "source_sha256": "fa04c3dce9376948ad243f3df74144e2602f12d183ea4d179604ed0a79da7ded",
+  "source_url": "https://pds-geosciences.wustl.edu/grail/grail-l-lgrs-5-rdr-v1/grail_1001/shadr/gggrx_1200a_sha.tab",
+  "subset_bytes": 2476844,
+  "subset_max_degree": 200,
+  "subset_records": 20300,
+  "subset_sha256": "627f07d4beddf08f21e302784661702ea1672da5d4614de07924487a044f0ace"
+}

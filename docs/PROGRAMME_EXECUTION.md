@@ -6,7 +6,7 @@ Adityavardhan Mishra · 2026-09-16
 
 ## Working on now / next / blocked
 
-**Last reviewed: 2026-09-16, after the clean-sheet P92 reference screen.** This is the current execution summary, not a declaration that every listed task is underway.
+**Last reviewed: 2026-09-17, after the first coupled P113-S7 screen.** This is the current execution summary, not a declaration that every listed task is underway.
 
 | State | Work | Next reviewable result |
 |---|---|---|
@@ -18,6 +18,8 @@ Adityavardhan Mishra · 2026-09-16
 | Later | One engineered release cell, scaling and reviewed build package | A named test article with drawings, BOM, assembly, inspection and instrumented acceptance procedure |
 
 P113-S4 is on main with generated JSON, report, SVG, independent tests and a normal freshness gate. It is **not** full-manifest closure: P113/E5 remain open because clearing/settling intervals, release/navigation error, installed burden and the complete manifest can still change the architecture result. The clean-sheet P92 screen has now used S4 to select a compact reference for the next calculations; it did not close P92 or select flight hardware.
+
+[P113-S7](COUPLED_RELEASE_CAMPAIGN.md) carries first-release host error through the next transfer and release in 2,508 histories. It compares replay with exact-navigation replanning and 0/120 s post-release coast delays. Noisy navigation, finite burns, attitude/clearance, complete manifest and disposal remain. N1 is partial.
 
 ### Completed foundation
 
@@ -57,7 +59,7 @@ Those are dated verification results for bounded batches, not prototype readines
 
 The [13-package prototype programme](PROTOTYPE_READINESS.md) remains the detailed build-readiness framework. Evidence maintenance, mission comparison and configuration screening advanced; none of the packages is closed by S4 or the P92 reference screen alone. Release physics, structures/tolerances, thermal/materials, accounting, controls/faults, manufacturing, experiments and independent review still need their own exit evidence. Hardware and facility checks cannot be completed in software.
 
-BOLLEY's [current review](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md) remains a separate cooperative-interface programme. Its selected A9f/A5h winding and drive require fresh actual-geometry field/circuit evidence, supplier-backed current and switching limits, complete installed mass, mechanical tolerances and release/fault dynamics before it can be treated as a mature comparator. Fluxrelay, Fluxframe and Fluxpiston retain separate configurations and evidence. VOLLEY mission results do not complete those BOLLEY design tasks.
+BOLLEY's [current review](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md) remains a separate cooperative-interface programme. A9g adds bounded selected-winding reclosure; its A9f/A5h winding and drive still require fresh actual-geometry field/circuit evidence, supplier-backed current and switching limits, complete installed mass, mechanical tolerances and release/fault dynamics before it can be treated as a mature comparator. Fluxrelay, Fluxframe and Fluxpiston retain separate configurations and evidence. VOLLEY mission results do not complete those BOLLEY design tasks.
 
 Gen5's remaining investigations stay in its own record. Complete them when a live claim or reused component needs the result, not as an arbitrary prerequisite to a different mechanism. Historical gas-Gen6 work follows the same rule. Reference/prior-art audits and register reconciliation remain work.
 

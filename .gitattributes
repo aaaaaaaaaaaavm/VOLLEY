@@ -1,0 +1,3 @@
+# Preserve archived fixed-record PDS bytes and their provenance hashes.
+validation/data/lunar/*.tab -text -diff
+validation/data/lunar/*.lbl -text -diff

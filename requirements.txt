@@ -30,3 +30,6 @@ CoolProp==8.0.0
 #
 # System solvers, installed outside pip: CalculiX (ccx), GetDP, ngspice, GMAT R2022a.
 # tools/env-setup.sh is the record of how each was obtained.
+
+# Independent evaluation of the archived GRGM1200A gravity coefficients.
+pyshtools==4.14.1
