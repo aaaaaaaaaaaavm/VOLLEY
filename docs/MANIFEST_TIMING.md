@@ -22,7 +22,7 @@ of the reference host at 3600 s. Acceptance tests position AND velocity.
 | spring_screen | 4.192175 | phase_5km | [1200, 3000] | 2.000000 | 4.192175 |
 | bolley_screen | 2.777987 | phase_5km | [1200, 3000] | 4.569852 | 2.777987 |
 | gen5_screen | 2.777987 | phase_5km | [1200, 3000] | 4.569852 | 2.777987 |
-| LEGACY_STUDY_screen | 2.777987 | phase_5km | [1200, 3000] | 4.569852 | 2.777987 |
+| legacy_study_screen | 2.777987 | phase_5km | [1200, 3000] | 4.569852 | 2.777987 |
 
 44 of 100 schedule/order/screen cases have an accepted campaign.
 Failed searches and interrupted deliveries remain in the JSON; missing roots are not proofs of infeasibility.
