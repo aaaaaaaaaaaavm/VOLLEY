@@ -45,7 +45,7 @@ def design_point():
     path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                         'cad', 'parameters.json')
     with open(path, encoding='utf-8') as f:
-        s = json.load(f)['groups']['gen6_store']
+        s = json.load(f)['groups']['legacy_study_store']
     return s['charge_pressure_bar'] * 1e5, s['chamber_volume_l'] / 1e3
 
 

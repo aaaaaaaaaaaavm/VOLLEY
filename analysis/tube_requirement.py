@@ -43,7 +43,7 @@ FIELDS = ad.FIELDS
 
 # A59: the hoop stress at 17.96 MPa against 250 allowable means 0.16 mm of wall holds the gas.
 # The 1.0 mm as drawn is set by handling and by A38's 201.7 N cradle preload, per the docstring
-# in cad/build_gen6.py. 0.16 mm is therefore the floor thinning could reach on pressure alone,
+# in cad/build_legacy_study.py. 0.16 mm is therefore the floor thinning could reach on pressure alone,
 # and it is already below what the part is drawn for.
 WALL_PRESSURE_FLOOR_M = 0.16e-3
 STEEL_PENALTY_KG = 2.154                             # A59 band 9, A63, ADR-035

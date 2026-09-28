@@ -43,8 +43,8 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.join(HERE, "results")
 P = json.load(open(os.path.join(os.path.dirname(HERE), "cad", "parameters.json")))
-D = P["groups"]["gen6_drive"]
-S = P["groups"]["gen6_store"]
+D = P["groups"]["legacy_study_drive"]
+S = P["groups"]["legacy_study_store"]
 
 BORE = D["bore_mm"] / 1e3
 WALL = D["tube_wall_mm"] / 1e3

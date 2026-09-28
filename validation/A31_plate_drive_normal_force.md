@@ -4,7 +4,7 @@
 
 [A30](A30_rail_drive.md) bands 4 and 5 established that a **90 mm × 340 mm × 3 mm aluminium
 plate has an edge factor of 0.6691, makes 1652 N at 0.45 T, and weighs 0.248 kg,
-half the lightest cold-gas module it would replace. That is two measured bands, and it is exactly
+half the lightest cold-gas module it would replace. That is two computed bands, and it is exactly
 as many as the CDS-rail proposal had before A30 band 1 killed it.
 
 What A30 did not touch is whether a 3 mm plate will stay centred in a ~7 mm magnetic gap while
@@ -100,7 +100,7 @@ close, and it is reported as a direction rather than as a result.
 | 0.60 T | 48 mm | 2.0 mm | 5 mm | 29.5 % | 868 N | 20.0 g | 22.61 m/s | 0.414 kg |
 | 0.60 T | 48 mm | 2.0 mm | 3 mm | 22.8 % | 671 N | 16.1 g | 20.26 m/s | 0.248 kg |
 
-The best point inside the 25 g payload qualification cap is 900 N, 21.6 g, 23.48 m/s, on a
+The best point inside the chosen 25 g study ceiling is 900 N, 21.6 g, 23.48 m/s, on a
 0.248 kg plate, against Gen5's 16.39 m/s from a 9.445 kg sled. The two rows above it exceed
 the cap and are excluded, not quoted.
 

@@ -3,13 +3,13 @@
   "bands_declared_commit": "HEAD~1",
   "note": "rigid host, all shots along one axis in one direction so angular impulse accumulates, no attitude control during the shot, no host flexibility, no propellant slosh. The CoM offset is a sweep, not a number, because no stage's mass properties are public -- E5.",
   "gen5_per_shot": 64.1167712256599,
-  "gen6_per_shot": 116.032,
+  "legacy_study_per_shot": 116.032,
   "trim_per_shot": 1.292,
   "gen5_campaign": 769.4012547079188,
-  "gen6_campaign": 1407.888,
-  "ratio_gen6_gen5": 1.8096981145794708,
+  "legacy_study_campaign": 1407.888,
+  "ratio_legacy_study_gen5": 1.8096981145794708,
   "propellant_gen5_kg": 0.35662315168692066,
-  "propellant_gen6_kg": 0.6525664634804862,
+  "propellant_legacy_study_kg": 0.6525664634804862,
   "wheel_N_m_s": 15.0,
   "isp_s": 220.0,
   "offsets": [
@@ -73,7 +73,7 @@
     },
     {
       "n": "2",
-      "band": "Gen6 per-shot and campaign linear recoil reported",
+      "band": "LegacyStudy per-shot and campaign linear recoil reported",
       "got": "116.03 N.s, 1392.4 N.s campaign",
       "passed": true
     },

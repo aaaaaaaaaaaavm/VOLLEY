@@ -11,7 +11,7 @@
   "total_tube_kg": 8.71280383939064,
   "per_sat_clearance": 1.537748,
   "per_sat_tube": 2.1288149866158865,
-  "a47_gen6": 6.9922333708074795,
+  "a47_legacy_study": 6.9922333708074795,
   "a47_with_ejector": 9.261168439286433,
   "latch_guide_kg": 0.12,
   "spring_len_mm": 60.0,

@@ -1,14 +1,14 @@
-> # SUPERSEDED 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+> # SUPERSEDED 2026-08-14 by [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md)
 >
 > The rail drive was rejected by its own band, a measured transverse edge factor of 0.0253
-> against the 0.55 it had been sized on, and the Gen6 it belonged to has since been replaced
+> against the 0.55 it had been sized on, and the historical study it belonged to has since been replaced
 > for a different reason: [A35](../validation/A35_constraint_ledger.md) found the mover it
 > optimises is 11 % of dry mass.
 >
 > Nothing below is edited. Both records are kept: a variant killed by measurement, inside an
 > architecture retired by attribution.
 
-# Gen6: the satellite is the mover, and it already has the hardware
+# historical study: the satellite is the mover, and it already has the hardware
 
 > # REJECTED, 2026-08-13, by A30 band 1.
 >
@@ -71,7 +71,7 @@ The satellite becomes the mover. There is no sled.
 And once there is no sled, a chain of this project's most expensive problems stops existing
 rather than being solved:
 
-| Today | Gen6 |
+| Today | historical study |
 |---|---|
 | A 9.445 kg sled carries the magnets. It is 70 % of the moving mass, so 70 % of the shot energy accelerates hardware that is not the payload | The moving mass is the 4 kg satellite |
 | That sled must then be stopped: an eddy brake absorbing 1162 J and putting 18.5 kN through a structure holding eleven stowed satellites, eleven times (E34) | Nothing to arrest. No brake |
@@ -95,7 +95,7 @@ satellite is exactly what ADR-022's segmented stator already provides.
 Design point, modest flux, a realistic 2 mm clearance, and the *worse* of the two rail alloys,
 so nothing rests on a customer's metallurgy being lucky:
 
-| | Today | Gen6 rail drive |
+| | Today | historical study rail drive |
 |---|---:|---:|
 | Moving mass | 13.45 kg | 4.0 kg |
 | Thrust | 1389 N | 513 N |
@@ -177,7 +177,7 @@ modes below are where this actually gets decided.
 
 Not claimed as closed. Listed as what the proposal would have to be measured against.
 
-| Entry | Today | Under Gen6 |
+| Entry | Today | Under historical study |
 |---|---|---|
 | E30, 9 of 13 elements forfeit the remaining manifest, #1 on the lethality ranking | Sled, brake, sled return and cradle are four of the shared nine | Those four have no counterpart. The element count needs recomputing, not assuming |
 | E34, 18.5 kN through eleven stowed satellites, #4 | Brake | No brake |
@@ -205,6 +205,6 @@ has been:
    lethality ranking.
 
 Nothing above should move the Gen5 baseline. Gen5 is generated, checked and current;
-Gen6 is a proposal with one sizing script behind it. The right next step is A30 band 1, and
+historical study is a proposal with one sizing script behind it. The right next step is A30 band 1, and
 if the edge factor comes in low, this document is what a rejected idea looks like when it was
 written down honestly.

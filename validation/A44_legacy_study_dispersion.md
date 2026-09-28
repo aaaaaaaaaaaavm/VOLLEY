@@ -1,17 +1,17 @@
-# A44, commanded velocity at Gen6, and what actually sets its spread
+# A44, commanded velocity at historical study, and what actually sets its spread
 
-**Bands declared 2026-08-16, before `analysis/gen6_dispersion.py` existed.**
-Verify with `git show --stat <this commit> -- analysis/gen6_dispersion.py`, which must return nothing.
+**Bands declared 2026-08-16, before `analysis/LEGACY_STUDY_dispersion.py` existed.**
+Verify with `git show --stat <this commit> -- analysis/LEGACY_STUDY_dispersion.py`, which must return nothing.
 
 ---
 
 ## Why this run exists
 
-The product claim is commanded per-satellite velocity, and at Gen6 that claim is unmodelled.
+The product claim is commanded per-satellite velocity, and at historical study that claim is unmodelled.
 
 Gen5 backed it with a designed loop: 0.0274 m/s at 3σ about a 15.8 m/s setpoint, on a gain
 designed against phase margin after [A28](A28_control_stability.md) found the previous one crossing
-over above both track modes. Gen6 has **[A41](A41_precharged_chamber.md) band 6 — an open-loop
+over above both track modes. historical study has **[A41](A41_precharged_chamber.md) band 6 — an open-loop
 sensitivity of 0.499 % of velocity per 1 % of charge, and nothing else. No sensor, no loop, no
 error budget. `precharged.py`'s own header records that it models no temperature effect on
 charge** and **no friction**, and A41 band 8 computed a friction *allowance* rather than a friction.
@@ -47,7 +47,7 @@ Declared before the script. Not to be edited after the run.
 | **1** | Zero-friction exit velocity at A41's selected point reproduces **30.535 m/s** within **0.1 %** | The formulation is not A41's and nothing after this is comparable |
 | **2** | Open-loop sensitivity reproduces A41 band 6's **0.499 % per 1 %** within **2 %** | Same |
 | **3** | **Exit velocity varies by ≤ 0.01 % across a 250 – 450 K chamber temperature sweep at fixed fire pressure** | Firing on *measured chamber pressure* does not remove the thermal term, the fill-to-fire delay enters the velocity budget, and A43's chamber assumption propagates into the claim |
-| **4** | **3σ exit-velocity dispersion ≤ 0.5 %** at the declared terms | Gen6 cannot command velocity to a precision comparable with the Gen5 loop it replaces, and the product claim needs restating |
+| **4** | **3σ exit-velocity dispersion ≤ 0.5 %** at the declared terms | historical study cannot command velocity to a precision comparable with the Gen5 loop it replaces, and the product claim needs restating |
 | **5** | The **largest single contributor** is identified and accounts for **≥ 50 %** of the variance | The budget has no dominant term to attack and the result is not actionable |
 | **6** | Commanding **20 → 30 m/s** by charge pressure keeps 3σ dispersion ≤ **1.5 %** at every setpoint | Precision collapses away from the design point and the machine is only accurate where it was sized |
 | **7** | Friction at A41's **full 83.4 N** allowance costs ≤ **10 %** of exit velocity | The allowance A41 declared is large enough to invalidate its own result |
@@ -104,7 +104,7 @@ And buying a better sensor buys nothing:
 A fivefold improvement in the instrument moves the answer by 0.008 %. There is no
 instrumentation route to the claim.
 
-### What actually sets Gen6's precision
+### What actually sets historical study's precision
 
 **A seal friction that has never been measured, specified, or designed.** A41 band 8 computed an
 *allowance*, the machine tolerates up to 83.4 N, and no run since has put a number on what
@@ -113,7 +113,7 @@ which is the conservative end, and the spread of ±20 % about it is this run's a
 nobody's measurement.
 
 **So band 4's failure is conditional, and the condition is the point.** If friction sits near
-A41's ceiling with any meaningful spread, Gen6 cannot command velocity to a precision comparable
+A41's ceiling with any meaningful spread, historical study cannot command velocity to a precision comparable
 with the Gen5 loop it replaces. If it sits far below, it can. Nothing in this repository
 distinguishes those two cases, and the Gen5 machine did not have this problem because a motor
 under closed-loop control corrects a friction it does not have to predict.
@@ -130,7 +130,7 @@ V₀, so at a *fixed fire pressure* the chamber's temperature does not appear in
 That turns the thermal problem into a sequencing requirement: measure chamber pressure
 immediately before firing, not at the end of the fill. Do that and the fill-to-fire delay, the
 heat of compression A42 excluded, and A43's 300 K chamber assumption all drop out of the velocity
-budget together. This is the cheapest good news in the Gen6 record and it costs one sensor
+budget together. This is the cheapest good news in the historical study record and it costs one sensor
 placement.
 
 ### Band 8, and a credit back to A43

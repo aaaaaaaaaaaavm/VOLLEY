@@ -15,9 +15,9 @@ THE CLASSIFICATION
 ------------------
 Every LIVE entry in OPEN_PROBLEMS.md carries, under its Status line:
 
-    > **Scope:** `GEN6` · **Next step:** `HARDWARE` - measure the seal friction
+    > **Scope:** `LEGACY_STUDY` · **Next step:** `HARDWARE` - measure the seal friction
 
-Scope is GEN6, GEN5 or PROGRAMME. Closure is counted over GEN6 only, because Gen5 is a frozen
+Scope is LEGACY_STUDY, GEN5 or PROGRAMME. Closure is counted over LEGACY_STUDY only, because Gen5 is a frozen
 baseline and reclassifying its history to shrink the number would be the same dishonesty in a
 different place. Classes:
 
@@ -29,7 +29,7 @@ different place. Classes:
     DECISION      a human programme decision that no analysis settles
 
     python3 tools/check_computational_closure.py
-    python3 tools/check_computational_closure.py --closed   # also require GEN6 COMPUTATION == 0
+    python3 tools/check_computational_closure.py --closed   # also require LEGACY_STUDY COMPUTATION == 0
 """
 import os
 import re
@@ -40,7 +40,7 @@ sys.path.insert(0, os.path.join(ROOT, "tools"))
 import register_status as rs                                        # noqa: E402
 
 CLASSES = ("COMPUTATION", "HARDWARE", "HOST_DATA", "FLIGHT_OPS", "DECISION")
-SCOPES = ("GEN6", "GEN5", "PROGRAMME")
+SCOPES = ("LEGACY_STUDY", "GEN5", "PROGRAMME")
 MARK = re.compile(r'^> \*\*Scope:\*\* `(\w+)` · \*\*Next step:\*\* `(\w+)` — (.+)$', re.M)
 
 # Words that describe computation. A non-COMPUTATION entry whose next step uses one is either
@@ -96,13 +96,13 @@ def main():
         if not m:
             problems.append("docs/COMPUTATIONAL_CLOSURE.md does not state "
                             "'Remaining COMPUTATION items: N'")
-        elif int(m.group(1)) != counts["GEN6"]["COMPUTATION"]:
+        elif int(m.group(1)) != counts["LEGACY_STUDY"]["COMPUTATION"]:
             problems.append(f"docs/COMPUTATIONAL_CLOSURE.md says "
                             f"'Remaining COMPUTATION items: {m.group(1)}' and the register has "
-                            f"{counts['GEN6']['COMPUTATION']}")
+                            f"{counts['LEGACY_STUDY']['COMPUTATION']}")
 
-    if "--closed" in sys.argv and counts["GEN6"]["COMPUTATION"]:
-        problems.append(f"closure was asserted with {counts['GEN6']['COMPUTATION']} GEN6 entries "
+    if "--closed" in sys.argv and counts["LEGACY_STUDY"]["COMPUTATION"]:
+        problems.append(f"closure was asserted with {counts['LEGACY_STUDY']['COMPUTATION']} LEGACY_STUDY entries "
                         f"still classified COMPUTATION")
 
     if problems:
@@ -114,7 +114,7 @@ def main():
     for s in SCOPES:
         line = "  ".join(f"{c} {counts[s][c]}" for c in CLASSES if counts[s][c])
         print(f"  {s:10s} {line}")
-    print(f"\n  GEN6 remaining COMPUTATION: {counts['GEN6']['COMPUTATION']}")
+    print(f"\n  LEGACY_STUDY remaining COMPUTATION: {counts['LEGACY_STUDY']['COMPUTATION']}")
     return 0
 
 

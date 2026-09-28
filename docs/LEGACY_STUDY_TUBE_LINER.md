@@ -1,7 +1,7 @@
 # The stator, the tube, and whether a liner deletes the question
 
 Scoping trade, 2026-08-22. [P92](../OPEN_PROBLEMS.md) records that
-[ADR-033](adr/033-gen6-trim-stage.md) puts the trim stator *outside* the drive tube and its magnets
+[ADR-033](adr/033-legacy_study-trim-stage.md) puts the trim stator *outside* the drive tube and its magnets
 *inside*, [ADR-035](adr/035-drive-tube-material.md) made that tube aluminium four days later, and
 no file computes what a conducting sleeve between a travelling-field stator and its secondary
 costs.
@@ -23,11 +23,11 @@ costs.
 | | |
 |---|---:|
 | Pole pitch, `stator.pole_pitch` | 24 mm |
-| Carriage speed, `gen6_drive.exit_velocity_m_s_zero_friction` | 34.28 m/s |
+| Carriage speed, `LEGACY_STUDY_drive.exit_velocity_m_s_zero_friction` | 34.28 m/s |
 | Excitation frequency, *v* / 2λ | 714.2 Hz |
 | Aluminium conductivity, `analysis/phase1_closeout.py` | 3.5 x 10⁷ S/m |
 | Skin depth at 714 Hz | 3.183 mm |
-| Wall, `gen6_drive.tube_wall_mm` | 1.0 mm |
+| Wall, `LEGACY_STUDY_drive.tube_wall_mm` | 1.0 mm |
 | Wall ÷ skin depth | 0.314 |
 
 A sleeve shields when it is thick against the skin depth. This one is about a third of it. The

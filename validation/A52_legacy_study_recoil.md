@@ -1,7 +1,7 @@
-# A52, recoil and angular impulse at Gen6
+# A52, recoil and angular impulse at historical study
 
-**Bands declared 2026-08-16, before `analysis/gen6_recoil.py` existed.**
-Verify with `git show --stat <this commit> -- analysis/gen6_recoil.py`, which must return nothing.
+**Bands declared 2026-08-16, before `analysis/LEGACY_STUDY_recoil.py` existed.**
+Verify with `git show --stat <this commit> -- analysis/LEGACY_STUDY_recoil.py`, which must return nothing.
 
 ---
 
@@ -12,13 +12,13 @@ Two of the four `NEEDS SOURCE` rows in [`KILL_CRITERIA.md`](../docs/KILL_CRITERI
 
 > *"Nothing computes the shot's angular impulse about the host, and a reaction wheel saturates."*
 
-Gen5's recoil is 64.1 N·s per shot and is called *"the healthiest item on the list"*. Gen6
+Gen5's recoil is 64.1 N·s per shot and is called *"the healthiest item on the list"*. historical study
 has never been computed, and it fires a heavier impulse: 4 kg at 29.009 m/s against 4 kg at
 16.029. Recoil scales with the impulse and the impulse has nearly doubled, so a row marked
-*healthy* for Gen5 cannot be assumed healthy for Gen6.
+*healthy* for Gen5 cannot be assumed healthy for historical study.
 
 And the geometry changed underneath it. Gen5 fired along the axis of a machine bolted to a
-host. Gen6 fires along a rail that *is* the stage, so the thrust line's offset from the host centre
+host. historical study fires along a rail that *is* the stage, so the thrust line's offset from the host centre
 of mass is a different quantity, and it is the quantity E29 says nobody has computed.
 
 ## Method
@@ -39,7 +39,7 @@ Declared before the script. Not to be edited after the run.
 | # | Band | FAIL if |
 |---|---|---|
 | **1** | Applying the method at Gen5's operating point reproduces **64.1 N·s** within 1 % | The method is not the one `astro.py` used and the comparison is meaningless |
-| **2** | Gen6 linear recoil per shot is reported, and the **campaign total** with it | A per-shot figure alone understates what the host is asked to absorb |
+| **2** | historical study linear recoil per shot is reported, and the **campaign total** with it | A per-shot figure alone understates what the host is asked to absorb |
 | **3** | **Angular impulse about the host CoM is computed** across an offset sweep | E29 stays open and this run did not do its job |
 | **4** | The offset at which a **15 N·m·s** wheel saturates within twelve shots is stated | The result is not actionable as an interface requirement |
 | **5** | Propellant to null the campaign's linear recoil is **≤ 1.0 kg** at a stated I<sub>sp</sub> | Recoil stops being *"a customer decision rather than an engineering one"* |
@@ -63,11 +63,11 @@ Declared before the script. Not to be edited after the run.
 | | Per shot | Campaign |
 |---|---:|---:|
 | Gen5 | 64.12 N·s | 769.4 N·s |
-| **Gen6, gas shot** | **116.03 N·s** | **1392.4 N·s** |
-| Gen6, trim stage | 1.29 N·s | 15.5 N·s |
-| **Gen6, total** | **117.32 N·s** | **1407.9 N·s** |
+| **historical study, gas shot** | **116.03 N·s** | **1392.4 N·s** |
+| historical study, trim stage | 1.29 N·s | 15.5 N·s |
+| **historical study, total** | **117.32 N·s** | **1407.9 N·s** |
 
-Gen6 recoils 1.81x harder than Gen5 per shot. Nulling the campaign costs 0.653 kg at a
+historical study recoils 1.81x harder than Gen5 per shot. Nulling the campaign costs 0.653 kg at a
 hydrazine-class I<sub>sp</sub>, against Gen5's 0.357, still under a kilogram, so
 `KILL_CRITERIA.md`'s judgement that recoil is *"a customer decision rather than an engineering
 one"* survives the architecture change.
@@ -86,13 +86,13 @@ one"* survives the architecture change.
 > The thrust line must pass within 10.7 mm of the host centre of mass to keep a 15 N·m·s wheel
 > unsaturated across a twelve-shot campaign.
 >
-> Gen5's equivalent was 19.5 mm. Gen6 tightens it by 1.8x, in exact proportion to the impulse.
+> Gen5's equivalent was 19.5 mm. historical study tightens it by 1.8x, in exact proportion to the impulse.
 
 E29's complaint was that no such requirement existed. It exists now, and it is demanding: 10.7
 mm of alignment to the centre of mass of a spent stage whose mass properties are not public,
 which is E5, and which is why this is a sweep rather than a number.
 
-Momentum management is not optional at Gen6. Either the alignment requirement is met, or the
+Momentum management is not optional at historical study. Either the alignment requirement is met, or the
 host dumps momentum between shots, and the 1200 s cadence of ADR-020 is enough time to do it.
 
 ## What this run does not do

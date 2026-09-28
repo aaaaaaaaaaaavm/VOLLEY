@@ -51,7 +51,7 @@
     "P34 -- a payload carrying a magnetometer cannot fly in this magazine. Magnets return to the moving part, so this defect returns with them",
     "E35 -- the payload's field exposure becomes a design variable again",
     "the cradle -- the carriage must now hold magnets in alignment as well as the payload",
-    "a velocity sensor before the trim section, which Gen6 does not have",
+    "a velocity sensor before the trim section, which LegacyStudy does not have",
     "one more element in the FMEA, shared across all twelve shots (A47)"
   ],
   "bands": [

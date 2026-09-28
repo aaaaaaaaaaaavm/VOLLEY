@@ -40,25 +40,25 @@ G = P['groups']
 
 # --- inputs, every one from the repository -------------------------------------------------
 SIGMA_AL = 3.5e7                                   # S/m, SIG_AL in analysis/phase1_closeout.py
-WALL_M = G['gen6_drive']['tube_wall_mm'] / 1e3
-BORE_M = G['gen6_drive']['bore_mm'] / 1e3
-V_SYNC = G['gen6_drive']['exit_velocity_m_s_zero_friction']
-V_ADOPTED = G['gen6_drive']['exit_velocity_m_s']
+WALL_M = G['legacy_study_drive']['tube_wall_mm'] / 1e3
+BORE_M = G['legacy_study_drive']['bore_mm'] / 1e3
+V_SYNC = G['legacy_study_drive']['exit_velocity_m_s_zero_friction']
+V_ADOPTED = G['legacy_study_drive']['exit_velocity_m_s']
 WAVELENGTH_M = G['stator']['wavelength'] / 1e3
 POLE_PITCH_M = G['stator']['pole_pitch'] / 1e3
 ACTIVE_W_M = G['stator']['active_width_y'] / 1e3
-SECTION_M = G['gen6_trim']['section_length_mm'] / 1e3
-FORCE_N = G['gen6_trim']['force_N']
-AUTHORITY_MS = G['gen6_trim']['authority_m_s']
-SECTION_MASS_KG = G['gen6_trim']['added_mass_kg']
-T_CEILING_K = G['gen6_drive']['tube_temperature_ceiling_K']
+SECTION_M = G['legacy_study_trim']['section_length_mm'] / 1e3
+FORCE_N = G['legacy_study_trim']['force_N']
+AUTHORITY_MS = G['legacy_study_trim']['authority_m_s']
+SECTION_MASS_KG = G['legacy_study_trim']['added_mass_kg']
+T_CEILING_K = G['legacy_study_drive']['tube_temperature_ceiling_K']
 SHOTS = 12                                         # ADR-030 manifest
 STROKE_M = 8.0                                     # ADR-034
 PER_SAT_BASE_KG = 1.296                            # A49, the figure trim_authority.py adds to
 N_MANIFEST = 12
 
 # --- the air-gap surface, which is an ANNULUS and not the flat Gen5 array ------------------
-# cad/build_gen6.py draws the trim winding from bore/2 + wall outward and the magnets ride
+# cad/build_legacy_study.py draws the trim winding from bore/2 + wall outward and the magnets ride
 # inside the bore, so the surface the force acts across is the cylinder at the wall's mid
 # thickness. The first version of this file used SECTION_M * stator.active_width_y instead.
 # 90 mm is the DEPTH of the flat Gen5 array and has no meaning around a 15.805 mm bore; it is
@@ -67,10 +67,10 @@ GAP_RADIUS_M = BORE_M / 2.0 + WALL_M / 2.0
 GAP_AREA_M2 = 2.0 * math.pi * GAP_RADIUS_M * SECTION_M
 FLAT_AREA_M2 = SECTION_M * ACTIVE_W_M
 BR_T = 1.32                                        # magnet remanence, motor_model.BR
-K_SHEET = G['gen6_trim']['sheet_current_A_per_m']
+K_SHEET = G['legacy_study_trim']['sheet_current_A_per_m']
 
 # aluminium 6061-T6 thermal, handbook at room temperature. E4: nothing here is measured.
-RHO_AL = G['gen6_drive']['tube_material_density_kg_m3']
+RHO_AL = G['legacy_study_drive']['tube_material_density_kg_m3']
 CP_AL = 896.0                                      # J/(kg K)
 K_AL = 167.0                                       # W/(m K), 6061-T6 handbook. E4: not measured
 CADENCE_S = 1200.0                                 # ADR-020
@@ -373,7 +373,7 @@ def build():
     return {
         'analysis': 'A66',
         'bands_declared_commit': 'e05551b, band 1R at 10d23b1 under ADR-037',
-        'note': ('Tube shielding of the Gen6 trim stator. The wall is stationary so it sees '
+        'note': ('Tube shielding of the LegacyStudy trim stator. The wall is stationary so it sees '
                  'full slip. Two independent methods. Nothing measured, E4.'),
         'inputs': {'sigma_S_m': SIGMA_AL, 'wall_m': WALL_M, 'bore_m': BORE_M,
                    'v_sync_m_s': V_SYNC, 'wavelength_m': WAVELENGTH_M,
@@ -395,8 +395,8 @@ def build():
         'breakeven_b_net_T': b_break,
         'loss_sweep': sweep,
         'loss': dict(loss,
-                     against_peak_mechanical_W=G['gen6_trim']['peak_mechanical_W'],
-                     loss_over_mechanical=p_loss / G['gen6_trim']['peak_mechanical_W'],
+                     against_peak_mechanical_W=G['legacy_study_trim']['peak_mechanical_W'],
+                     loss_over_mechanical=p_loss / G['legacy_study_trim']['peak_mechanical_W'],
                      nominal_force_for_comparison_N=FORCE_N),
         'thermal': thermal,
         'verification': b1,

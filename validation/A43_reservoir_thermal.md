@@ -20,7 +20,7 @@ between shots. A42 treated the reservoir as adiabatic, which is right for a 4 s 
 never argued for the 1200 s cadence of [ADR-020](../docs/adr/020-inter-shot-cadence.md) that
 follows it.
 
-This is the only open number in the Gen6 architecture. It is worth about 1.3 kg of store,
+This is the only open number in the historical study architecture. It is worth about 1.3 kg of store,
 and every velocity-control question behind it inherits the reservoir temperature as an input.
 
 ## What A42 actually assumed, stated precisely
@@ -78,7 +78,7 @@ seal, friction and gas-budget predictions.
 1. τ will come out long compared with the 1200 s cadence, because conduction through a
    stagnant gas is the only path and the gas thermal mass is around a kilogram. If so the honest
    answer is nearer the adiabatic 11.25 L than the isothermal 7.65 L, which is the opposite of
-   what [ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md) and P64 both currently say.
+   what [ADR-032](../docs/adr/032-legacy_study-stage-integrated-gas-store.md) and P64 both currently say.
 2. **Band 5 will pass comfortably.** The expansion is from 200 bar and takes out roughly a quarter
    of the mass over twelve shots, so the temperature excursion should be tens of kelvin, not
    hundreds.
@@ -117,7 +117,7 @@ somebody else's arithmetic, and it found it wrong.
 Conduction through stagnant nitrogen gives h = 0.326 W/m²K at this geometry, and τ = 17 460 s
 against a 1200 s cadence, fourteen and a half times longer than the wait between shots.
 
-[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md) and [A42](A42_fill_window.md) both
+[ADR-032](../docs/adr/032-legacy_study-stage-integrated-gas-store.md) and [A42](A42_fill_window.md) both
 say the truth sits nearer the isothermal figure. It does not. It sits at the other end, and the
 reason is that the two paths that would carry heat into the gas are both absent in this
 application: nitrogen is a homonuclear diatomic and does not absorb infrared, so the wall cannot

@@ -1,8 +1,10 @@
 # The generation archive
 
+> **Current status, 2026-09-28:** The gas-guide generation below is a retired architecture study. No next-generation architecture has been selected; see [current status](../NEXT_GENERATION_STATUS.md).
+
 One file per CAD generation, to the same structure. Until 2026-08-16 this record was uneven:
 Gen1, Gen3 existed only as sections inside `cad/CHANGELOG_CAD.md`, Gen4 had a status document of its
-own, and Gen5 and Gen6, the frozen baseline and the current design target, had no
+own, and Gen5 and the later gas-guide study had no
 per-generation record at all, only the ADRs that adopted them.
 
 Each file answers the same seven questions, so two generations can be read against each other:
@@ -22,9 +24,9 @@ Each file answers the same seven questions, so two generations can be read again
 | [Gen1](GEN1.md) | the geometric ancestor | 11 STEP | Fusion, not in this repository |
 | [Gen2](GEN2.md) | first structured revision | 9 STEP | Fusion, not in this repository |
 | [Gen3](GEN3.md) | parameter-reconciled; the masses come from here | 10 STEP, 2 STL | Fusion, not in this repository |
-| [Gen4](GEN4.md) | last drawn by hand | none, P43 | Fusion, not in this repository |
+| [Gen4](GEN4.md) | Fusion CAD design | none, P43 | Fusion source documents, not in this repository |
 | [Gen5](GEN5.md) | the frozen baseline | 8 STEP, 8 STL | `cad/build_gen5.py`, in this repository |
-| [Gen6](GEN6.md) | the current design target | 6 STEP, 6 STL | `cad/build_gen6.py`, in this repository |
+| [Historical gas-guide study](LEGACY_STUDY.md) | retired architecture study | 6 STEP, 6 STL | `cad/build_legacy_study.py`, in this repository |
 
 ## The gap this table makes visible
 
@@ -37,7 +39,7 @@ that Fusion user parameters are document-scoped and drift silently across docume
 documents themselves are not in the repository to check that against. If the Fusion hub is lost,
 Gen1 through Gen4 are lost with it, and only their exports survive.
 
-Gen5 and Gen6 do not have this problem, and that is the whole argument of
+Gen5 and historical study do not have this problem, and that is the whole argument of
 [ADR-026](../adr/026-cad-built-from-parameters.md): their source is a script in this repository,
 and the geometry is a function of a parameter file that is also here.
 

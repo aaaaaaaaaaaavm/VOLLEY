@@ -1,5 +1,5 @@
 """
-VOLLEY | Gen6: the CAD, built from parameters.
+VOLLEY | LegacyStudy: the CAD, built from parameters.
 
 WHY THIS EXISTS
 ---------------
@@ -42,8 +42,8 @@ THREE THINGS IT DRAWS THAT ARE NOT SETTLED
    number in the architecture.
 
 USAGE
-    python3 cad/build_gen6.py                 # build STEP + STL into cad/step/gen6, cad/stl
-    python3 cad/build_gen6.py --check         # build, then verify against parameters.json
+    python3 cad/build_legacy_study.py                 # build STEP + STL into cad/step/legacy_study, cad/stl
+    python3 cad/build_legacy_study.py --check         # build, then verify against parameters.json
 """
 import argparse
 import json
@@ -54,13 +54,13 @@ import re
 import cadquery as cq
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STEP_DIR = os.path.join(HERE, "step", "gen6")
+STEP_DIR = os.path.join(HERE, "step", "legacy_study")
 STL_DIR = os.path.join(HERE, "stl")
 
 P = json.load(open(os.path.join(HERE, "parameters.json")))
-D = P["groups"]["gen6_drive"]
-S = P["groups"]["gen6_store"]
-T = P["groups"]["gen6_trim"]
+D = P["groups"]["legacy_study_drive"]
+S = P["groups"]["legacy_study_store"]
+T = P["groups"]["legacy_study_trim"]
 MAG = P["groups"]["magazine"]
 PAY = P["groups"]["payload_3u"]
 
@@ -78,12 +78,12 @@ def _norm(path):
 
 def export(shape, name, stl=False):
     os.makedirs(STEP_DIR, exist_ok=True)
-    path = os.path.join(STEP_DIR, f"VOLLEY_{name}_Gen6.step")
+    path = os.path.join(STEP_DIR, f"VOLLEY_{name}_LegacyStudy.step")
     cq.exporters.export(shape, path)
     _norm(path)
     if stl:
         os.makedirs(STL_DIR, exist_ok=True)
-        cq.exporters.export(shape, os.path.join(STL_DIR, f"VOLLEY_{name}_Gen6.stl"))
+        cq.exporters.export(shape, os.path.join(STL_DIR, f"VOLLEY_{name}_LegacyStudy.stl"))
     return path
 
 

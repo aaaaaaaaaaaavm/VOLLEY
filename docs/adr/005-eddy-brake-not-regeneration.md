@@ -20,7 +20,7 @@ credit.
 
 ## Consequences
 This decision corrected an error in my own earlier work. The 52 % figure was
-double-counting; the honest number was 32 % and is now 19.6 % at the measured sled mass. It
+double-counting; the honest number was 32 % and is now 19.6 % at the CAD-calculated sled mass. It
 also makes the sled mass doubly expensive, a heavier sled takes more of the shot energy *and*
 throws more of it away, which is why efficiency fell so far when the mass was measured
 (ADR-012). E8 records the thrown-away energy as an open inefficiency.

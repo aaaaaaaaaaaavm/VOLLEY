@@ -136,7 +136,7 @@ unanswered, and each of them belongs to the stage rather than to the engine.
 | Engine feed system and chill-down | the interval between restarts |
 | Restart sequencing and command authority after primary separation | whether the stage will still take commands |
 | Guidance, navigation and control | where the stage thinks it is when VOLLEY fires |
-| Attitude control and its authority | [P94](../OPEN_PROBLEMS.md), and [A52](../validation/A52_gen6_recoil.md)'s requirement that the thrust line pass within 10.7 mm of the host centre of mass |
+| Attitude control and its authority | [P94](../OPEN_PROBLEMS.md), and [A52](../validation/A52_LEGACY_STUDY_recoil.md)'s requirement that the thrust line pass within 10.7 mm of the host centre of mass |
 | Reaction control for fine manoeuvres | section 10, and it turns out to be the load-bearing one |
 | Electrical power and communications | keeping VOLLEY commandable for the length of the campaign |
 | Structural interface and VOLLEY mounting | [E31](../OPEN_PROBLEMS.md) |
@@ -192,7 +192,7 @@ system is examined here inside an assumed Class-B stage, under declared assumpti
 
 The two systems stay separate at every step. The engine changes the stage's orbit. VOLLEY
 produces each satellite's release state relative to the stage. VOLLEY does not command the
-engine, the engine is no part of Gen6's cold-gas deployment system, and neither substitutes for
+engine, the engine is no part of historical study's cold-gas deployment system, and neither substitutes for
 the other.
 
 ---
@@ -849,7 +849,7 @@ Inventing one would be worse than leaving it blank, because a blank is visibly a
 is not.
 
 Two things can be said without provider data. The released satellite's separation velocity is
-VOLLEY's own and is known: at Gen6's current design point it is 29.009 m/s, so range grows by
+VOLLEY's own and is known: at historical study's current design point it is 29.009 m/s, so range grows by
 about 1.7 km per minute, which makes range the easy part of the problem. And the transfer arc in
 section 12 puts about 47 minutes between the two impulses of a shell change, which is time the
 sequence can use.
@@ -971,12 +971,12 @@ never been computed, and it sets VOLLEY's release-velocity requirement.
 > A lower release velocity would reduce chamber pressure, acceleration, contact severity and
 > tip-off sensitivity, which makes this trade a tempting route to making
 > [P108](../OPEN_PROBLEMS.md) look smaller without answering it. **Nothing in this file lowers the
-> Gen6 requirement, and P108 is unresolved.** The tip-off magnitude is not established, A72 has
+> historical study requirement, and P108 is unresolved.** The tip-off magnitude is not established, A72 has
 > not been run, and the coupled trade is recorded for computation on its own merits, later and
 > separately.
 
-Gen6's design point is unchanged at 29.009 m/s. The Fusion package in
-[`GEN6_FUSION_BUILD_PACKAGE.md`](GEN6_FUSION_BUILD_PACKAGE.md) remains the current CAD handoff.
+historical study's design point is unchanged at 29.009 m/s. The Fusion package in
+[`LEGACY_STUDY_FUSION_BUILD_PACKAGE.md`](LEGACY_STUDY_FUSION_BUILD_PACKAGE.md) remains the current CAD handoff.
 
 ---
 

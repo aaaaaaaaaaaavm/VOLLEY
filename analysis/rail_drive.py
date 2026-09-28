@@ -1,5 +1,5 @@
 """
-VOLLEY | Gen6 sizing: the satellite's own CDS corner rails as the motor secondary.
+VOLLEY | LegacyStudy sizing: the satellite's own CDS corner rails as the motor secondary.
 
 THE IDEA
 --------
@@ -125,7 +125,7 @@ if __name__ == '__main__':
     ref = mm.shot(Kt)
     m_move_today = mm.M_SAT + mm.M_SLED
 
-    print("Gen6 sizing: the satellite's own CDS rails as the secondary\n")
+    print("LegacyStudy sizing: the satellite's own CDS rails as the secondary\n")
     print(f"coupling area   {A_COUPLE*1e4:.1f} cm2  ({N_RAILS} rails x {RAIL_W*1e3:.1f} mm "
           f"x {RAIL_LEN*1e3:.1f} mm)")
     print(f"rail mass       {RAIL_KG*1e3:.0f} g of aluminium the satellite already carries")

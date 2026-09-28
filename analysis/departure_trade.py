@@ -22,7 +22,7 @@ INPUTS = {
     "assumed_minimum_relative_speed_m_s": 0.5,
     "maximum_speed_screens_m_s": {
         "spring_reference": 2, "bolley_reference": 11.8,
-        "gen5_reference": 16.029, "gen6_reference": 29.009,
+        "gen5_reference": 16.029, "legacy_study_reference": 29.009,
         "exploratory_100": 100, "exploratory_120": 120,
     },
     "stroke_m": 8, "assumed_acceleration_ceiling_g": 25,
@@ -122,7 +122,7 @@ def report(data):
              "**P113-S1 is a single-event kinematic screen. P113 and E5 remain open.**", "",
              "A covered cell is not a feasible mission. Every speed interval, including the",
              "0.5 m/s minimum, is an optimistic assumption, not a validated control envelope.",
-             "Neither provider supplied inputs. Gen5, Gen6 and BOLLEY are not reselected here.", "",
+             "Neither provider supplied inputs. Gen5, LegacyStudy and BOLLEY are not reselected here.", "",
              "[Criteria](../validation/P113_S1_departure_trade.md) ·",
              "[Full results](../analysis/results/departure_trade.json) ·",
              "[Provider study](HOST_COMPATIBILITY.md)", "",
@@ -155,7 +155,7 @@ def report(data):
               "|---:|---:|---:|"]
     for row in data["stroke_bounds"]:
         lines.append(f"| {row['speed_m_s']:.3f} | {row['ideal_minimum_stroke_m']:.3f} | {row['mean_acceleration_over_stroke_g']:.3f} |")
-    lines += ["", "89.4 m/s is a historical store trade boundary, not a demonstrated Gen6 speed.",
+    lines += ["", "89.4 m/s is a historical store trade boundary, not a demonstrated LegacyStudy speed.",
               "100 and 120 m/s are exploratory points, not adopted requirements.", "",
               "## What still determines whether the machine deserves to exist", "",
               "Finite burns and minimum impulse bit; sequential release timing; changing mass",

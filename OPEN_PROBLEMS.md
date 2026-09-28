@@ -96,7 +96,7 @@ register's own severity labels.
 | 1 | E30 | Below r = 0.99326 per element per cycle, the machine delivers less total mission value than a spring dispenser, nine of thirteen elements forfeit the remaining manifest where a spring forfeits one satellite. The product then has no reason to exist | Cycle-life test of the escapement, retention gate and sled to twelve cycles with margin, giving a measured per-element reliability. This is metal, not computation |
 | 2 | E4 | Every number in the repository descends from a field model checked only analytic-against-analytic. If the measured thrust constant departs materially from 11.03 N per kA/m, the design point, the velocity, the lifetime multiplier and the comparison against a spring all move together | B-1, a gaussmeter and eight magnetised blocks, ₹22,000, method and bill of materials already written in `docs/B1_ORDER.md`. Unordered |
 | 3 | E33 | The residual dipole from magnet tolerance saturates a 15 N·m·s wheel in 3.0-7.5 days with the machine idle. Combined with E31, a host that has lost attitude authority may not legally deploy, so the campaign ends before the manifest does | Measure the moment and axis of each block on receipt and compute the assembled residual, rather than assuming the Monte-Carlo tolerance distribution. The same instrument B-1 buys |
-| 4 | E34 | The 200 g arrest puts 18.5 kN through the structure eleven times while eleven satellites are still stowed. A stowed CubeSat is qualified to 25 g and launch random vibration, not to this. If it does not close, the arrest cap must fall, and the 50 g case needs 202 mm of run-out the envelope does not have | A shock response spectrum at the cassette interface for the 200 g arrest, against a stated payload shock qualification level |
+| 4 | E34 | The modelled 200 g arrest puts 18.5 kN through the structure while other satellites are stowed. The project's 25 g study ceiling is not a CubeSat qualification. If the payload-specific shock case does not close, arrest loads or geometry must change; the modelled 50 g case needs another 202 mm of run-out | A shock response spectrum and force-time history at the cassette interface, compared with a named payload's qualified levels and provider interface |
 | 5 | E35 | The payload sits 20 mm from the array at 442x a magnetometer's full scale, and soft-magnetic parts leave permanently magnetised. The claim that the satellite is never modified is therefore false as built, and that claim is the product | Carry a longitudinal-separation layout into `cad/parameters.json` and recompute the field at the real payload station, or write a magnetic-cleanliness limit into a payload interface document. Computation, not test |
 
 ### Where the rest sit
@@ -2182,7 +2182,7 @@ a single-rotor store of 17.5 N·m·s, five times the shot disturbance it sits be
 
 ### E29. Nothing computes the shot's angular impulse about the host, and a reaction wheel saturates in about four shots: CLOSED 2026-09-06, disposition reconciled
 > **Status:** `CLOSED` — resolved; see the entry for what closed it
-> Closure review, 2026-09-06: A52 supplies both the Gen5 comparison and the Gen6 campaign angular-momentum budget and alignment requirement. Host mass properties and authority remain E5; this closes the missing-budget question only.
+> Closure review, 2026-09-06: A52 supplies both the Gen5 comparison and the historical study campaign angular-momentum budget and alignment requirement. Host mass properties and authority remain E5; this closes the missing-budget question only.
 
 
 Found 2026-08-10 while pricing momentum management, not by any check.
@@ -2247,14 +2247,14 @@ interface requirement, in ADR-010's successor or an amendment to it, stating the
 thrust-line-to-CoM offset, which is the number the budget exists to set. Neither exists.
 
 
-> Answered 2026-08-16 by [A52](validation/A52_gen6_recoil.md), and the requirement now exists.
+> Answered 2026-08-16 by [A52](validation/A52_LEGACY_STUDY_recoil.md), and the requirement now exists.
 > The angular impulse is 117.32 N·s x the CoM offset per shot, accumulating across twelve
 > because the magazine fires one way. The thrust line must pass within 10.7 mm of the host centre
 > of mass to keep a 15 N·m·s wheel unsaturated over a campaign; Gen5's equivalent was 19.5 mm.
 >
 > This entry's complaint was that no such requirement existed. It does now, and it is
 > demanding, because it is 10.7 mm to the centre of mass of a spent stage whose mass properties are
-> not public (E5). Momentum management is not optional at Gen6: either the alignment is
+> not public (E5). Momentum management is not optional at historical study: either the alignment is
 > met, or the host dumps momentum between shots, and ADR-020's 1200 s cadence is enough time to.
 
 
@@ -2415,7 +2415,7 @@ satisfiable and still be the wrong question.
 
 Full sheet: `validation/A29_ground_test_air_drag.md`.
 
-### P49. A Gen6 proposal was sized on an assumption wrong by 22x, and the band declared to kill it did: CORRECTED 2026-08-13
+### P49. A historical study proposal was sized on an assumption wrong by 22x, and the band declared to kill it did: CORRECTED 2026-08-13
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
@@ -2429,7 +2429,7 @@ requiring nothing to be added. `analysis/rail_drive.py` sized it at 513 N, 18.26
 and it looked better than Gen5 on every axis.
 
 It rested on a transverse edge-effect derating assumed at 0.55. The file declared that at the
-top as its dominant assumption; `docs/GEN6_RAIL_DRIVE.md` named 0.20 as the value at which the
+top as its dominant assumption; `docs/LEGACY_STUDY_RAIL_DRIVE.md` named 0.20 as the value at which the
 idea would be dead. The measured figure is 0.0253.
 
 | | |
@@ -2454,7 +2454,7 @@ reported success.
 
 Corrected. `rail_drive.py`'s `EDGE` is set to the measured 0.0253, so the file now reports
 the rejection instead of the proposal, with the original assumption recorded rather than deleted.
-`docs/GEN6_RAIL_DRIVE.md` carries a rejection header. Nothing in Gen5 was ever changed on the
+`docs/LEGACY_STUDY_RAIL_DRIVE.md` carries a rejection header. Nothing in Gen5 was ever changed on the
 strength of the proposal, which is why this is a corrected defect and not a baseline event.
 
 What survives, and it is the reason band 4 was declared in advance. The same solver puts a
@@ -2490,7 +2490,7 @@ A30 band 4 is unaffected, the edge factor is 0.6691 and that is a separate measu
 with a separate solver, and it still stands.
 
 Corrected in place, and the architecture still closes. A31's design sweep puts the best point inside
-the 25 g payload qualification cap at 900 N, 21.6 g, 23.48 m/s at 0.75 T, and a conservative
+the chosen 25 g study ceiling at 900 N, 21.6 g, 23.48 m/s at 0.75 T, and a conservative
 671 N, 16.1 g, 20.26 m/s at 0.60 T, both on the same 0.248 kg plate, against Gen5's
 16.39 m/s from a 9.445 kg sled. What changes is the flux density the stator has to produce,
 from 0.45 T to 0.60-0.75 T, which is inside what an iron-cored stator gives.
@@ -2735,7 +2735,7 @@ Propagated to `docs/RESULTS.md`. Nothing else changed, and no band was edited.
 
 ### P57. A voice-coil CubeSat deployer making this project's core claim has been on the reading list unread since 2026-07-30: HIGH, NEW 2026-08-14
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — read the voice-coil deployer in full and record it in PRIOR_ART under that file's five fields
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — read the voice-coil deployer in full and record it in PRIOR_ART under that file's five fields
 
 [`RELATED_WORK.md`](docs/RELATED_WORK.md) already flags it: *"the nearest published neighbour to
 this design's topology that has turned up so far. It has not been read."* A search on 2026-08-14
@@ -3092,7 +3092,7 @@ The two errors have different causes and only one of them is arithmetic.
 The isothermal figure was never computed by a script. `analysis/fill_window.py` contains no
 isothermal path; 7.65 L appears in A42's result table, in `cad/parameters.json` as
 `reservoir_volume_isothermal_l`, and in ADR-032, without a generator. It is the only number in the
-Gen6 store that no file produces.
+historical study store that no file produces.
 
 The adiabatic figure is a bookkeeping error. A42 carried *pressure* across shots and recomputed
 mass at each shot start as `p·V/(R·T₀)`. Gas that has cooled adiabatically is denser than that at
@@ -3100,7 +3100,7 @@ the same pressure, so the model discarded mass that was really there and asked f
 bottle than the physics does.
 
 Corrected. `cad/parameters.json` now carries 9.55 L as the design reservoir with the
-conduction estimate and the isothermal limit beside it, each naming A43 as its source; the Gen6 CAD
+conduction estimate and the isothermal limit beside it, each naming A43 as its source; the historical study CAD
 is regenerated against it; and ADR-032 and A42's result table are annotated rather than rewritten,
 because A42's bands stand as declared and its result is the record of what that run found.
 
@@ -3131,12 +3131,12 @@ and compares against the committed file, and it names the fields that differ so 
 what moved. Verified by reverting the file and confirming a non-zero exit. The stale counts are
 propagated to the front page, the register header and the wiki source.
 
-### P67. Gen6's precision rests on a seal friction nobody has measured, and its rated velocity excludes it: HIGH, NEW 2026-08-16
+### P67. historical study's precision rests on a seal friction nobody has measured, and its rated velocity excludes it: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HARDWARE` — measure the seal friction -- B-2
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HARDWARE` — measure the seal friction -- B-2
 
 
-[A44](validation/A44_gen6_dispersion.md) bands 4 and 6 failed, and both failed on the same term.
+[A44](validation/A44_LEGACY_STUDY_dispersion.md) bands 4 and 6 failed, and both failed on the same term.
 
 | Term | 3σ alone | Share of variance |
 |---|---:|---:|
@@ -3147,7 +3147,7 @@ propagated to the front page, the register header and the wiki source.
 Two separate defects, and the second is the one that will be quoted wrongly.
 
 The precision claim. Gen5 commanded velocity through a designed loop at 0.0274 m/s (3σ).
-Gen6 has no loop, the shot is a 133 ms open-loop expansion, so its spread is whatever the
+historical study has no loop, the shot is a 133 ms open-loop expansion, so its spread is whatever the
 hardware's repeatability is, and 93.4 % of it is a seal friction that has never been measured,
 specified or designed. A41 band 8 computed an *allowance* of 83.4 N, meaning the machine
 tolerates that much; no run has ever said what the friction *is*. A fivefold better pressure
@@ -3196,13 +3196,13 @@ and the store is not affected.
 > | 17.8,  22.3 N | The stage is still unnecessary, but the seal does not survive its own heat, P88 stays open |
 > | > 22.3 N (5.00 %) | The trim stage is needed. ADR-036 falsifier 1 fires, ADR-033 stands, and P92 becomes the next run |
 >
-> Every published Gen6 dispersion figure descends from A41's 83.4 N ceiling, which is 4.68x the
+> Every published historical study dispersion figure descends from A41's 83.4 N ceiling, which is 4.68x the
 > specification. *This is no longer one measurement among several. It is the measurement that
 > chooses between two architectures*, and ADR-036 suspended a subsystem rather than guess which.
 
 ### P68. ADR-032's first falsifier fires, and the largest piece of the stage credit is a mass P10 says was never itemised: CRITICAL, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — a real stage interface: what a provider will actually credit
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HOST_DATA` — a real stage interface: what a provider will actually credit
 
 
 [A45](validation/A45_stage_credit.md) bands 4, 5 and 6 failed. ADR-032 records that the design
@@ -3264,7 +3264,7 @@ is now crossed on both numerators rather than one, and the threshold has not mov
 > argument, a mass never itemised cannot be credited, so every enclosure fraction was re-argued
 > upward, to 0.50-0.85 from zero. The hostile figure still lands at 3.271 kg per satellite, and
 > the break-even halved again to 8.4 % because the credit grew to 85.36 kg while the 7.17 kg
-> allowance did not. The five enclosure lines are 58.6 % of the credit, so the Gen6 mass case
+> allowance did not. The five enclosure lines are 58.6 % of the credit, so the historical study mass case
 > now rests, majority-wise, on one assumption about somebody else's skin. ADR-032's 30 % threshold
 > is wrong by 3.6 times.
 
@@ -3424,13 +3424,13 @@ Every one of those percentages fell without a single kilogram moving.
 | C5, the deployer carries its own store | 6.50 kg |, | 5.1 % |
 
 The argument is unharmed and slightly stronger. The pulse is still the largest single driver
-and still the reason Gen6 exists; the ratio it beats the mover by went from 2.07x to 2.28x.
+and still the reason historical study exists; the ratio it beats the mover by went from 2.07x to 2.28x.
 What is wrong is only the *form* the result was published in.
 
 Corrected. Where this is being newly written, the front page quotes kilograms, which are what
-A35 measured and which do not move when the denominator does.
+A35 calculated and which do not move when the denominator does.
 
-Not rewritten where it is a record. [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)
+Not rewritten where it is a record. [ADR-032](docs/adr/032-legacy_study-stage-integrated-gas-store.md)
 and `docs/VAULT.md` keep the percentages they were decided against, each now annotated with the
 rollup they were computed at. A decision records the numbers it was taken on.
 
@@ -3456,7 +3456,7 @@ committed anywhere in this repository.
 | Gen3 | 10 STEP, 2 STL | Fusion hub. Not here |
 | Gen4 | nothing at all | Fusion hub. Not here |
 | Gen5 | 8 STEP, 8 STL | `cad/build_gen5.py`, here |
-| Gen6 | 6 STEP, 6 STL | `cad/build_gen6.py`, here |
+| historical study | 6 STEP, 6 STL | `cad/build_legacy_study.py`, here |
 
 STEP is a result of the model, not the model. It carries geometry and no parameters, no
 sketches, no constraints and no feature tree, so a STEP export cannot be edited back into the
@@ -3468,7 +3468,7 @@ warning that Fusion user parameters are document-scoped and *"will silently drif
 documents"*, and the documents that would let anyone check that are not in the repository. If
 the Fusion hub is lost, Gen1 through Gen4 are lost with it.
 
-Gen5 and Gen6 do not have this problem, and that is the entire argument of
+Gen5 and historical study do not have this problem, and that is the entire argument of
 [ADR-026](docs/adr/026-cad-built-from-parameters.md). Their source is a script here, and their
 geometry is a function of a parameter file that is also here.
 
@@ -3480,18 +3480,18 @@ Fusion, and no tool here can perform or verify it.
 What it does not affect. No number moves. This is an archival gap, not a technical error, and
 the exports that do exist have not been shown to be wrong.
 
-### P75. Gen6 improves reliability incidentally, and E30 is not answered by it: HIGH, NEW 2026-08-16
+### P75. historical study improves reliability incidentally, and E30 is not answered by it: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a Gen6 reliability architecture, the way A47 did Gen5
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — a historical study reliability architecture, the way A47 did Gen5
 
 
-[A47](validation/A47_gen6_fmea.md) scored Gen6 on Gen5's own model, imported unchanged.
+[A47](validation/A47_LEGACY_STUDY_fmea.md) scored historical study on Gen5's own model, imported unchanged.
 
 | | Elements | Manifest-forfeiting | Required *r* | Delivered at *r* = 0.99 |
 |---|---:|---:|---:|---:|
 | Gen5 | 13 | 9 | 0.99326 | 6.620 |
-| Gen6 | 12 | 8 | 0.99252 | 6.992 |
-| Gen6 + per-cell ejector | 8 | 3 | 0.98388 | 9.261 |
+| historical study | 12 | 8 | 0.99252 | 6.992 |
+| historical study + per-cell ejector | 8 | 3 | 0.98388 | 9.261 |
 | *a spring dispenser* | 12 | 0 |, | 11.880 |
 
 ADR-032 deletes six of the nine and the count falls by one. It adds the reservoir, both
@@ -3507,7 +3507,7 @@ deleting subsystems changes the *count* of shared elements and a per-cell mechan
 *structure*.
 
 E30 says the architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series
-mechanism. Gen6 is still one twelve-cycle series mechanism. The criticism stands against it
+mechanism. historical study is still one twelve-cycle series mechanism. The criticism stands against it
 essentially undiminished, and this entry exists so that is written down rather than assumed
 away by an architecture change that did not address it.
 
@@ -3544,7 +3544,7 @@ needs its own bands.
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
-[ADR-033](docs/adr/033-gen6-trim-stage.md) falsifier 1, recorded here so it is a defect and not
+[ADR-033](docs/adr/033-legacy_study-trim-stage.md) falsifier 1, recorded here so it is a defect and not
 only a caveat inside a decision.
 
 The trim stage corrects ±0.323 m/s for 37.7 J, delivered over 39.7 mm in 1.4 ms,
@@ -3559,7 +3559,7 @@ has weighed the store, the switch or the conductors.
 |---|---:|
 | Trim section, weighed | 0.340 kg |
 | Pulse store feeding it | unweighed |
-| `cad/parameters.json` to `gen6_trim.pulse_store_kg` | null, deliberately |
+| `cad/parameters.json` to `LEGACY_STUDY_trim.pulse_store_kg` | null, deliberately |
 
 Why this is a defect rather than a to-do. [A39](validation/A39_store_trade.md) chose gas over
 a spring while assuming 50 bar held at the piston throughout, a regulator it never named,
@@ -3591,15 +3591,15 @@ dispersion the stage exists to correct is not there, and neither the stage nor i
 
 ### P78. Stroke buys velocity and gentleness together, and makes the worst defect worse: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HARDWARE` — it resolves with P67; the friction share is what is unmeasured
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HARDWARE` — it resolves with P67; the friction share is what is unmeasured
 
 
 [A49](validation/A49_design_surface.md) swept the surface A37 never asked about, and found a
 better design point, with one cost that lands squarely on the defect that already matters most.
 
-The win. Holding Gen6's exit velocity and spending stroke instead of pressure:
+The win. Holding historical study's exit velocity and spending stroke instead of pressure:
 
-| | Gen6 today | 8 m recommended |
+| | historical study today | 8 m recommended |
 |---|---:|---:|
 | Stroke | 2.18 m | 8.00 m |
 | Charge | 50.00 bar | 22.73 bar |
@@ -3636,7 +3636,7 @@ this, ADR-033's trim stage and P77's pulse store. One bench test governs three o
 
 ### P79. The decay model is optimistic by about two against the runs that raised E28: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A76 has falsified inclination as the residual's cause; the reference orbits' own provenance is the next thing to check
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — A76 has falsified inclination as the residual's cause; the reference orbits' own provenance is the next thing to check
 
 
 [A50](validation/A50_campaign_altitude.md) band 1 was declared as a calibration against E28's own
@@ -3730,19 +3730,19 @@ environment still cannot run. The GMAT runs already
 exist: `validation/gmat/` carries the campaign that stopped early. Until then E28 stays open,
 and it stays open *because* a model disagreeing with its own evidence is not a closure.
 
-### P80. Gen6's charging power is a spring's, quoted for a machine that has no spring: MEDIUM, CORRECTED 2026-08-16
+### P80. historical study's charging power is a spring's, quoted for a machine that has no spring: MEDIUM, CORRECTED 2026-08-16
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
-[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) states Gen6's charging as
-"25 to 131 W, which is solar". It is not Gen6's figure.
+[ADR-032](docs/adr/032-legacy_study-stage-integrated-gas-store.md) states historical study's charging as
+"25 to 131 W, which is solar". It is not historical study's figure.
 
 It is `analysis/host_integrated.py`'s `charge_W_60s = e / 60.0`, where *e* is the spring
 option's shot energy, the power needed to wind a spring across a sixty-second indexing window.
-Gen6 has no spring. Its reservoir is filled on the ground to 200 bar and nothing in the
+historical study has no spring. Its reservoir is filled on the ground to 200 bar and nothing in the
 architecture recompresses gas on orbit.
 
-[A51](validation/A51_gen6_power.md) computed the real figure from a named component list:
+[A51](validation/A51_LEGACY_STUDY_power.md) computed the real figure from a named component list:
 
 | | |
 |---|---:|
@@ -3752,10 +3752,10 @@ architecture recompresses gas on orbit.
 | The claim it replaces | 25-131 W |
 
 About a hundredth of what was being claimed, and the error was in the conservative direction,
-Gen6 asks the host for far less than the record says, which is unusual enough to note.
+historical study asks the host for far less than the record says, which is unusual enough to note.
 
 How far it spread. ADR-032 originally, then repeated on 2026-08-16 in
-[ADR-033](docs/adr/033-gen6-trim-stage.md), `docs/GENERATIONS.md`, `docs/LINEAGE.md` and the front
+[ADR-033](docs/adr/033-legacy_study-trim-stage.md), `docs/GENERATIONS.md`, `docs/LINEAGE.md` and the front
 page, four times in one day, by me, from a source I did not check.
 
 Corrected. Every live occurrence now carries A51's figures; ADR-032 keeps the number it was
@@ -3768,14 +3768,14 @@ real run, and only their applicability differs.
 
 ### P81. The backup ejector cannot get the payload out of the tube: HIGH, NEW 2026-08-16
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — an ejector concept that clears the tube on the energy available
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — an ejector concept that clears the tube on the energy available
 
 
 [A53](validation/A53_backup_ejector.md) band 7 failed by a factor of forty, and it takes the
 highest-value reliability change in the record with it.
 
-[A47](validation/A47_gen6_fmea.md) priced a per-cell ejector at +2.27 satellites delivered at
-*r* = 0.99, against +0.37 for the entire Gen5 to Gen6 architecture change, six times more,
+[A47](validation/A47_LEGACY_STUDY_fmea.md) priced a per-cell ejector at +2.27 satellites delivered at
+*r* = 0.99, against +0.37 for the entire Gen5 to historical study architecture change, six times more,
 because a mechanism in every cell makes the drive satellite-forfeiting instead of
 manifest-forfeiting, which is the only move that touches E30.
 
@@ -3788,10 +3788,10 @@ A47 priced the effect. A53 designed the thing, and it does not fit the architect
 | Shortfall | 40.4x |
 | At ADR-034's 8.0 m stroke, 2026-08-19 | 667.2 J, a 148x shortfall |
 
-In Gen5 the payload sat in an open cell. In Gen6 it is inside a tube with a piston behind it,
+In Gen5 the payload sat in an open cell. In historical study it is inside a tube with a piston behind it,
 and if the drive is dead something must move both the length of the stroke.
 
-> [ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) made this worse by 3.67x, 2026-08-19.
+> [ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md) made this worse by 3.67x, 2026-08-19.
 > The stroke is now 8.0 m and the friction work to traverse it is 667.2 J. The masses below
 > are the 2.18 m case and are no longer the governing ones. A53 has not been re-run, and at
 > 8.0 m the "clearing the tube" row cannot plausibly stay under the threshold. *The two unpriced
@@ -3804,7 +3804,7 @@ Sizing the spring to actually do that costs the mass argument:
 | Clearance only, *cannot clear the tube* | 1.620 kg | 1.538 kg |
 | Clearing the tube | 8.713 kg | 2.129 kg, crosses the 2.0 threshold |
 
-So the change is either ineffective or it re-crosses the one kill-criterion numerator Gen6
+So the change is either ineffective or it re-crosses the one kill-criterion numerator historical study
 currently passes.
 
 > ### The energy verdict is withdrawn, 2026-08-20, [A65](validation/A65_pyrotechnic_ejector.md)
@@ -3840,11 +3840,11 @@ measured. At a genuinely small friction the light ejector works and this entry c
 test now governs four open decisions, this, A49's long-stroke design point, ADR-033's trim
 stage, and P77's pulse store.
 
-### P82. The Gen6 reservoir is still sized for a charge pressure the design no longer uses: MEDIUM, CORRECTED 2026-08-19
+### P82. The historical study reservoir is still sized for a charge pressure the design no longer uses: MEDIUM, CORRECTED 2026-08-19
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
-[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) dropped the charge pressure from 50 bar
+[ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md) dropped the charge pressure from 50 bar
 to 22.73 bar and cut gas per shot by 54.55 %. The reservoir did not move.
 
 `cad/parameters.json` still carries 9.55 L at 200 bar, which
@@ -3863,7 +3863,7 @@ one. That argument has to be re-run at the new refill mass before the volume can
 Why this matters more than a bookkeeping note. The reservoir saving is the whole of ADR-034's
 mass argument, the tube itself gains 0.829 kg. If A43 re-run at 22.73 bar does not recover the
 saving, ADR-034 buys gentleness and pays mass for it, and the added-mass-per-satellite figures in
-`docs/generations/GEN6.md`, `docs/GENERATIONS.md` and the front page are optimistic by up to
+`docs/generations/LEGACY_STUDY.md`, `docs/GENERATIONS.md` and the front page are optimistic by up to
 0.829 kg spread over twelve.
 
 What closed it: [A56](validation/A56_reservoir_resized.md) re-ran A43 at 22.73 bar with its
@@ -3894,15 +3894,15 @@ bands declared first, and wrote the sized volume into `parameters.json`.
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
-[ADR-033](docs/adr/033-gen6-trim-stage.md) exists because Gen6 cannot command velocity
-open-loop. [A44](validation/A44_gen6_dispersion.md) measured 1.113 % at 3σ with 93.4 % of
+[ADR-033](docs/adr/033-legacy_study-trim-stage.md) exists because historical study cannot command velocity
+open-loop. [A44](validation/A44_LEGACY_STUDY_dispersion.md) measured 1.113 % at 3σ with 93.4 % of
 the variance in seal friction, and [A48](validation/A48_trim_stage.md) sized a 39.7 mm stator
 carrying ±0.323 m/s to cover it.
 
-[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) tripled the term that dominates that
+[ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md) tripled the term that dominates that
 variance.
 
-| | Gen6 at ADR-033 | Gen6 at ADR-034 |
+| | historical study at ADR-033 | historical study at ADR-034 |
 |---|---:|---:|
 | Friction work per shot | 181.8 J | 667.2 J |
 | As a fraction of shot work | 9.75 % | 28.39 % |
@@ -3950,13 +3950,13 @@ measured on nothing.
 
 
 `analysis/precharged.py` still declares `STROKE = 2.18` and `G_CAP = 25.0`.
-[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) took the stroke to 8.0 m and the
+[ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md) took the stroke to 8.0 m and the
 charge pressure to 22.73 bar, and propagated that into `cad/parameters.json`, the CAD, the
 renders and eleven documents. It did not propagate into the scripts.
 
 | Reads the stale constant | Consequence |
 |---|---|
-| `analysis/gen6_dispersion.py`, `w_net = w - friction_N * pc.STROKE` | A44's dispersion is computed over 2.18 m. It is the input to ADR-033's whole justification |
+| `analysis/LEGACY_STUDY_dispersion.py`, `w_net = w - friction_N * pc.STROKE` | A44's dispersion is computed over 2.18 m. It is the input to ADR-033's whole justification |
 | `analysis/trim_stage.py`, `STROKE = pc.STROKE` | A48's section length and authority are sized against that dispersion |
 | `analysis/precharged.py::store_mass` | Uses `P_MAX`, the charge pressure at the 25 g cap, the point ADR-034 replaced |
 
@@ -3965,7 +3965,7 @@ P83 arriving by a second route: P83 says the friction *share* tripled, and this 
 scripts never saw it.
 
 > Why the checks did not catch it, which is the part worth keeping. `make_baseline.py --check`
-> compares the scripts against their own outputs, and `build_gen6.py --check` compares the CAD
+> compares the scripts against their own outputs, and `build_legacy_study.py --check` compares the CAD
 > against `parameters.json`. Nothing in this repository compares the parameter file against
 > the analysis scripts, so a design point can move in one and not the other and every gate stays
 > green. That is a hole in the verification, not just a stale constant.
@@ -3974,7 +3974,7 @@ What closed it. `precharged.py` reads the design point from `cad/parameters.json
 than declaring it, ADR-015's *derive, never paste*, which
 [`cad/tools/make_scad_params.py`](cad/tools/make_scad_params.py) already cites for the CAD side.
 A41's own declared values stay in the file under their own names so A41 continues to reproduce;
-the Gen6 scripts read the current point. And a check that fails when the two disagree, which is
+the historical study scripts read the current point. And a check that fails when the two disagree, which is
 the thing that was actually missing. Landed with A55 on 2026-08-19.
 
 This is a defect in work done three days ago, and it was found by reading rather than by any
@@ -3984,7 +3984,7 @@ enforce.
 > ### A third live instance, found 2026-08-20
 >
 > This entry named A44 and A48 as "answering a superseded question" and repaired neither
-> script. `gen6_dispersion.py`, A44's, now has one leg in each design point:
+> script. `LEGACY_STUDY_dispersion.py`, A44's, now has one leg in each design point:
 >
 > | | |
 > |---|---|
@@ -3996,17 +3996,17 @@ enforce.
 > 93.4 %, *and 1.504 is not the corrected number either, because the pressure is still A41's.*
 >
 > Nothing surfaced it because the stored artefact was never regenerated.
-> `analysis/results/gen6_dispersion.json` still holds 1.113 %, last written 2026-08-16 with the
+> `analysis/results/LEGACY_STUDY_dispersion.json` still holds 1.113 %, last written 2026-08-16 with the
 > script; `precharged.py` changed underneath it on 2026-08-19. `trim_stage.py` band 1 asserts
 > against that stored file, so it passes today and fails the moment anyone runs
-> `gen6_dispersion.py`.
+> `LEGACY_STUDY_dispersion.py`.
 >
 > This is the hole this entry already identified, one level down. P84 found that nothing
 > compares the parameter file against the scripts and fixed that. Nothing compares a script
 > against the run sheet it produced, so a dated result can stop reproducing and every gate stays
 > green.
 >
-> What closed the scripts, 2026-08-20. `gen6_dispersion.py` now freezes `STROKE_A44 = 2.18`
+> What closed the scripts, 2026-08-20. `LEGACY_STUDY_dispersion.py` now freezes `STROKE_A44 = 2.18`
 > and `trim_stage.py` `STROKE_A48 = 2.18`, the way `precharged.py` freezes `STROKE_A41`, *the
 > pattern already existed in this repository and had not been applied here.* Both reproduce their
 > run sheets again: 1.1133466932586118 % and 93.4 %, and A48 band 3 is back to 1.822 %
@@ -4014,13 +4014,13 @@ enforce.
 >
 > ### The last sentence of this block was wrong when it was written, and is corrected here
 >
-> It said Gen6's dispersion at ADR-034's design point *"is not known"*. It was known, and had been
+> It said historical study's dispersion at ADR-034's design point *"is not known"*. It was known, and had been
 > for a day. [A55](validation/A55_trim_authority.md) computed 3.9798 % on 2026-08-19 with its
 > bands declared first, and [A61](validation/A61_seal_class.md) reproduced it independently on
 > 2026-08-20. No further run is needed and none should be written.
 >
 > The defect was never a missing number. It was that the number never propagated, four
-> documents still carried A44's 1.113 % as Gen6's, which is what this entry's correction now fixes
+> documents still carried A44's 1.113 % as historical study's, which is what this entry's correction now fixes
 > everywhere. *A stale figure with a correct replacement sitting one file away is a worse failure
 > than an unknown one, because nothing about it looks unfinished.*
 
@@ -4063,7 +4063,7 @@ not find it stated anywhere in this repository.
 | [`analysis/design_surface.py`](analysis/design_surface.py) | `RHO_AL = 2700.0`, and A49's `tube_kg` is computed from it |
 | [`analysis/precharged.py`](analysis/precharged.py) | sizes the chamber, the same pressure boundary, at 7800 kg/m³ with a 500 MPa allowable and a safety factor of 2 |
 | `cad/parameters.json` | carries `tube_wall_mm` and now `tube_mass_kg`, and names no material |
-| [`cad/build_gen6.py`](cad/build_gen6.py) | says the wall "is set by handling and by carrying A38's 201.7 N cradle preload, neither of which is modelled here" |
+| [`cad/build_legacy_study.py`](cad/build_legacy_study.py) | says the wall "is set by handling and by carrying A38's 201.7 N cradle preload, neither of which is modelled here" |
 
 The difference is larger than everything else A59 computed put together.
 
@@ -4124,7 +4124,7 @@ What closed it: [ADR-035](docs/adr/035-drive-tube-material.md), 2026-08-20.
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
-[ADR-033](docs/adr/033-gen6-trim-stage.md)'s first falsifier has fired, and it fired on the
+[ADR-033](docs/adr/033-legacy_study-trim-stage.md)'s first falsifier has fired, and it fired on the
 argument the ADR itself used to name it.
 
 > *"Pulse hardware scales with current, not energy, and nothing has weighed it. This is the
@@ -4132,7 +4132,7 @@ argument the ADR itself used to name it.
 
 [A54](validation/A54_pulse_chain.md) weighed it. One of eight bands passes.
 
-| | The chain [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) deleted | The trim stage that replaced it |
+| | The chain [ADR-032](docs/adr/032-legacy_study-stage-integrated-gas-store.md) deleted | The trim stage that replaced it |
 |---|---:|---:|
 | Peak power | 30 674 W | 28 606 W, 93.3 % |
 | Peak current at 96 V | 319.5 A | 298.0 A, 93.3 % |
@@ -4153,7 +4153,7 @@ string `mass_properties.py` carries, sized so its ESR takes at most 10 % of the 
 
 And no sheet current rescues it. Peak power scales with sheet current and section length
 inversely, so the trade has a minimum, the minimum is 10.755 kg, 5.4x the 2.0 kg band, with
-added mass per satellite at 2.4313 kg, which re-crosses the one kill-criterion numerator Gen6
+added mass per satellite at 2.4313 kg, which re-crosses the one kill-criterion numerator historical study
 passes.
 
 > What it proves is narrower than "impossible", and more useful. Any store that fits inside the
@@ -4214,7 +4214,7 @@ trim stage rather than feed it, but it is no longer the only one.
 
 ### P87. The last fill of the campaign does not fit the window, and never did: MEDIUM, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — re-plan the campaign fill schedule against the window
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — re-plan the campaign fill schedule against the window
 
 
 [A42](validation/A42_fill_window.md) established that filling is *not* the constraint, 4.14 s
@@ -4245,12 +4245,12 @@ It was present at A43's point and would have been found by anyone who looked pas
 > and that trade has not been run.
 
 What would close it: size the orifice against the *last* fill rather than the first, and check
-what the larger hole does to the pressure-setting resolution [A44](validation/A44_gen6_dispersion.md)
+what the larger hole does to the pressure-setting resolution [A44](validation/A44_LEGACY_STUDY_dispersion.md)
 depends on. Neither the cadence nor the store needs to change.
 
 ### P88. The seal cannot absorb its own friction, and P67 is a harder measurement than it has been described as: HIGH, NEW 2026-08-19
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HARDWARE` — the seal's own conduction path, measured
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HARDWARE` — the seal's own conduction path, measured
 
 
 [A58](validation/A58_chamber_thermal.md) band 5 failed across the whole swept range.
@@ -4296,7 +4296,7 @@ it and does not compute it.
 
 What would close it: a seal specification, material, section, mass and a conduction path out,
 and P67 run at temperature, over a representative stroke, with the spread reported. Until a seal
-exists, the 83.4 N in `gen6_dispersion.py` is an allowance A41 declared rather than a property of
+exists, the 83.4 N in `LEGACY_STUDY_dispersion.py` is an allowance A41 declared rather than a property of
 anything.
 
 ### P89. The seal has a specification now, and `parameters.json` still carries no seal: HIGH, CLOSED 2026-08-20
@@ -4343,12 +4343,12 @@ than affordable. But A61 band 5 found no friction in 1-30 % makes the store itse
 
 > ### Closed 2026-08-20 by [ADR-036](docs/adr/036-seal-specification-and-the-trim-stage.md)
 >
-> `cad/parameters.json` now carries a `gen6_seal` group. It holds both numbers and says
+> `cad/parameters.json` now carries a `LEGACY_STUDY_seal` group. It holds both numbers and says
 > which is which: `friction_max_N` 17.8 as the specification, and `friction_allowance_N`
-> 83.40371375447981 as A41's retained ceiling, *4.68x apart, with every published Gen6
+> 83.40371375447981 as A41's retained ceiling, *4.68x apart, with every published historical study
 > dispersion figure descending from the ceiling rather than from the specification.*
 >
-> The allowance was not deleted and that is deliberate. [P67](#p67-gen6s-precision-rests-on-a-seal-friction-nobody-has-measured-and-its-rated-velocity-excludes-it-high-new-2026-08-16)
+> The allowance was not deleted and that is deliberate. [P67](#p67-historical studys-precision-rests-on-a-seal-friction-nobody-has-measured-and-its-rated-velocity-excludes-it-high-new-2026-08-16)
 > has measured neither, so the ceiling remains the only honest number for a worst-case argument.
 > `measured` is recorded in the group as `NO`.
 >
@@ -4435,7 +4435,7 @@ declared first.
 
 ### P91. A65 band 4 misses A53's per-cell mass threshold, and the mass is in the pressure vessel: MEDIUM, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a pressure vessel design that meets A53's per-cell mass
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — a pressure vessel design that meets A53's per-cell mass
 
 
 [A65](validation/A65_pyrotechnic_ejector.md) band 4 failed at 0.4350 kg against 0.25 kg. Nine of
@@ -4472,11 +4472,11 @@ argues for, with the vessel material and the housing allowance both derived rath
 
 ### P92. The trim stator has to reach its magnets through a conducting tube, and nothing has computed what that costs: HIGH, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `DECISION` — A74 has stated the requirement and eliminated every local fix; which of ADR-033 and ADR-035 yields is a programme choice
+> **Scope:** `LEGACY_STUDY` · **Next step:** `DECISION` — A74 has stated the requirement and eliminated every local fix; which of ADR-033 and ADR-035 yields is a programme choice
 
 
-[ADR-033](docs/adr/033-gen6-trim-stage.md) puts the stator outside the tube and the magnets
-inside it. `cad/build_gen6.py` draws the section as an annulus running from `bore/2 + wall` to
+[ADR-033](docs/adr/033-legacy_study-trim-stage.md) puts the stator outside the tube and the magnets
+inside it. `cad/build_legacy_study.py` draws the section as an annulus running from `bore/2 + wall` to
 `bore/2 + wall + 6.0`, and the ADR's own words are *"a magnet set carried by the carriage"*. The
 travelling field therefore crosses the drive tube on its way to the thing it acts on.
 
@@ -4487,8 +4487,8 @@ the heating.
 
 | | |
 |---|---|
-| `gen6_drive.tube_wall_mm` | 1.0 mm |
-| `gen6_drive.tube_material` | aluminium 6061-T6, hard anodised |
+| `LEGACY_STUDY_drive.tube_wall_mm` | 1.0 mm |
+| `LEGACY_STUDY_drive.tube_material` | aluminium 6061-T6, hard anodised |
 | `stator.pole_pitch` | 24 mm |
 | Carriage speed through the section | 34.28 m/s, `exit_velocity_m_s_zero_friction` |
 | Aluminium conductivity already in the repository | 3.5 x 10⁷ S/m, `analysis/phase1_closeout.py` |
@@ -4581,7 +4581,7 @@ speed.
 | The **passive secondary** `docs/VAULT.md` holds under PII-19 | Survives, because it is the one that takes the magnets off the carriage. Its stopping constraint is recorded there and has not been re-examined against this |
 
 A fourth route exists that none of the original three named: **give up the carriage-borne
-secondary**, which gives up [ADR-033](docs/adr/033-gen6-trim-stage.md) rather than
+secondary**, which gives up [ADR-033](docs/adr/033-legacy_study-trim-stage.md) rather than
 [ADR-035](docs/adr/035-drive-tube-material.md). It belongs in the trade for completeness, and
 which of the two decisions yields is not this entry's to choose.
 
@@ -4596,7 +4596,7 @@ What would close it: a run with its bands declared first, comparing the 1.0 mm w
 skin depth at the section's own excitation frequency, and reporting the thrust attenuation, the
 induced loss and the resulting wall temperature against ADR-035's 473 K ceiling. If the
 attenuation is material, [A55](validation/A55_trim_authority.md)'s 1.1543 m/s of authority and
-[ADR-033](docs/adr/033-gen6-trim-stage.md)'s 28 606 W are both optimistic, and the section grows
+[ADR-033](docs/adr/033-legacy_study-trim-stage.md)'s 28 606 W are both optimistic, and the section grows
 again, which is P83's failure mode a second time.
 
 A cheaper answer may exist and is not this entry's to choose: a non-conducting liner, a slotted
@@ -4689,7 +4689,7 @@ Both PDFs rebuilt and verified: `126.6` present, `84.5` and `76.5` absent from b
 
 ### P94. A13 band 5 passes on a host control authority that E5 says does not exist: HIGH, NEW 2026-08-20
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — a published control authority for a real stage
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HOST_DATA` — a published control authority for a real stage
 
 
 Found by a provenance audit of every module-level constant in the analysis scripts, 2026-08-20.
@@ -4986,7 +4986,7 @@ accepts it.
 
 ### P99. One shot's angular momentum exceeds the only wheel this project has ever named: HIGH, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — a real host wheel, or a host that does not need one
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HOST_DATA` — a real host wheel, or a host that does not need one
 
 
 Found by [A57](validation/A57_stage_attitude_packaging.md), and recorded outside its bands on
@@ -4996,7 +4996,7 @@ purpose.
 |---|---:|
 | Angular momentum the host absorbs per shot | 1.46 N·m·s |
 | Over a twelve-shot campaign | 17.53 N·m·s |
-| The wheel [A52](validation/A52_gen6_recoil.md) declared | 15 N·m·s |
+| The wheel [A52](validation/A52_LEGACY_STUDY_recoil.md) declared | 15 N·m·s |
 
 > Corrected 2026-08-22, hours after this entry opened. It first read 22.76 and 273.14 N·m·s.
 > A57 had used a lever arm 15.6x its own interface requirement, see P100, and the figures
@@ -5046,7 +5046,7 @@ up also closes it, which was not true at the figure this entry opened with.
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
-Found by reading [A52](validation/A52_gen6_recoil.md) after
+Found by reading [A52](validation/A52_LEGACY_STUDY_recoil.md) after
 [A57](validation/A57_stage_attitude_packaging.md) had already run and been recorded.
 
 [A57](validation/A57_stage_attitude_packaging.md) imported `attitude_budget.ASSUMED_ARM = 0.166 m`
@@ -5054,7 +5054,7 @@ for the perpendicular distance from the host centre of mass to the payload's lin
 
 That is A13's arm, and A13 is a Gen5 run. It measures from a Gen5 host centre of mass to *the
 deployer's*, a sensible quantity for a 9.445 kg sled moving inside a 1.839 m box bolted to a
-satellite bus. A Gen6 payload traverses an 8 m tube that is the stage, and the arm that matters
+satellite bus. A historical study payload traverses an 8 m tube that is the stage, and the arm that matters
 is how far that tube's axis sits from the stage's own centre of mass.
 
 A52 band 4 had already published a requirement on precisely that, on 2026-08-16, six days
@@ -5078,13 +5078,13 @@ in every attitude figure it reported.
 | Campaign offset | 2.0969° | 0.1346° |
 | Momentum per shot | 22.76 N·m·s | 1.46 N·m·s |
 | Campaign momentum | 273.14 N·m·s | 17.53 N·m·s |
-| Band 4, Gen6 ÷ Gen5 | 2.33x | 0.149x |
+| Band 4, historical study ÷ Gen5 | 2.33x | 0.149x |
 
 No band verdict moves. Five pass with more margin, band 6 still fails at 200 mm because
 geometry does not depend on the arm, and two report.
 
 But band 4 reverses. A57 concluded that *"deleting the mover increased the attitude cost"*, and
-that conclusion is withdrawn, at each architecture's own arm, Gen6's offset is about a seventh
+that conclusion is withdrawn, at each architecture's own arm, historical study's offset is about a seventh
 of Gen5's. *What the reversal actually demonstrates is that the lever arm dominates the result and
 the architecture barely enters it*, which is a more useful finding than either number.
 
@@ -5111,7 +5111,7 @@ re-declared and its verdict is not edited. P99's figures are corrected in place 
 the campaign still exceeds A52's wheel, at 1.17x instead of 18x.
 
 The Gen5 arm is still unsourced. `ASSUMED_ARM` remains a declared assumption with no derivation
-behind it, and A13's numbers still rest on it. This entry corrects where Gen6 got its arm; it does
+behind it, and A13's numbers still rest on it. This entry corrects where historical study got its arm; it does
 not give Gen5 one.
 
 ### P101. The payload ladder D2 turns on was three rollup generations stale, and the rung the project was leaning on does not close: HIGH, CORRECTED 2026-08-22
@@ -5207,7 +5207,7 @@ PocketQube against a cold-gas module was derived from the stale figure; it is re
 re-derived, with a NEEDS SOURCE line in its place, because re-computing it here would put a
 number in a document that no results file holds.
 
-### P102. The only Gen6 tip-off run was left at A37's window when ADR-034 moved the stroke, and its run sheet predicted exactly this: HIGH, CORRECTED 2026-08-22
+### P102. The only historical study tip-off run was left at A37's window when ADR-034 moved the stroke, and its run sheet predicted exactly this: HIGH, CORRECTED 2026-08-22
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
@@ -5216,10 +5216,10 @@ strongest claim is that a long guided interface makes contact and geometry matte
 energy path, and that tip-off is the term to watch. Checking whether this project had answered
 that at 8 m found that it had answered it at 2.18 m.
 
-[A38](validation/A38_tipoff_at_gen6.md) is the only run that takes tip-off to Gen6.
-`analysis/tipoff_gen6.py` held its operating point as two module constants:
+[A38](validation/A38_tipoff_at_legacy_study.md) is the only run that takes tip-off to historical study.
+`analysis/tipoff_legacy_study.py` held its operating point as two module constants:
 
-| | A38, hardcoded | `gen6_drive`, since [ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) |
+| | A38, hardcoded | `LEGACY_STUDY_drive`, since [ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md) |
 |---|---:|---:|
 | Acceleration | 25.0 g | 11.362895 g |
 | Acceleration length | 2.18 m | 8.0 m |
@@ -5230,7 +5230,7 @@ was never re-run and nothing pointed at it.
 
 > ### The run sheet wrote the warning and then became the example
 >
-> A38's own opening, and `tipoff_gen6.py`'s docstring, both say:
+> A38's own opening, and `tipoff_legacy_study.py`'s docstring, both say:
 >
 > > *"This is the P19 and P53 pattern, which this project has now recorded twice: an analysis that
 > > closed at one operating point, left standing while the point moved underneath it. The
@@ -5242,7 +5242,7 @@ was never re-run and nothing pointed at it.
 
 ### Corrected. Re-run 2026-08-22, and no band verdict moves
 
-`tipoff_gen6.py` now reads `acceleration_g` and `stroke_mm` from `cad/parameters.json` at import,
+`tipoff_legacy_study.py` now reads `acceleration_g` and `stroke_mm` from `cad/parameters.json` at import,
 the same repair [P84](#p84) applied to `precharged.py`. `G_CAP` stays at 25.0, it is the
 payload qualification cap and band 6's declared threshold, not the design point, and lowering
 it to the design point would have widened a band.
@@ -5266,13 +5266,13 @@ usually have.
 regression band comparing a run sheet's recorded figures against its script's current output"* and
 recorded it as not built. `tools/check_crossrefs.py` now does the results-file half of that, and
 the pair that would have caught this is declared in it, the design point in
-`cad/parameters.json` against the point `tipoff_gen6.json` says it ran at. Restoring 25 g and
+`cad/parameters.json` against the point `tipoff_legacy_study.json` says it ran at. Restoring 25 g and
 2.18 m makes the gate exit 1.
 
 ### Two things it leaves open, and neither is bookkeeping
 
 1. `cad/parameters.json` carries 201.7 N and the design point needs 91.7.
-`gen6_drive.cradle_preload_N_per_contact` is A38's figure at 25 g, and `cad/build_gen6.py` says in
+`LEGACY_STUDY_drive.cradle_preload_N_per_contact` is A38's figure at 25 g, and `cad/build_legacy_study.py` says in
 its own docstring that the tube wall is set partly by *"carrying A38's 201.7 N cradle preload"*.
 The parameter is not being changed here. It is conservative by 2.2x, no script reads it as a
 driver, and lowering a retention requirement on the strength of a re-run is a design decision
@@ -5280,7 +5280,7 @@ rather than a correction. It is recorded as one.
 
 2. The model is constant-acceleration, and at 8 m that is the constant-pressure bound.
 `point()` takes `v = sqrt(2 a L)` and returns 42.23 m/s, which is exactly
-`gen6_drive.exit_velocity_m_s_constant_pressure_bound`. The delivered figure is 29.01 m/s and
+`LEGACY_STUDY_drive.exit_velocity_m_s_constant_pressure_bound`. The delivered figure is 29.01 m/s and
 the shot is a blowdown, not a constant push.
 
 The conservatism this buys is one scalar wide. A lower delivered exit velocity over the same
@@ -5288,7 +5288,7 @@ The conservatism this buys is one scalar wide. A lower delivered exit velocity o
 is understated. It does not follow that the contact trajectory or the angular response is
 conservative under the real pressure, time history: under blowdown the acceleration is time-varying,
 the angular forcing from force-line eccentricity varies with it, and contact timing, arrival rate
-and rebound timing all move. A38's Gen6 answer is a bound on one comparison, not a bound on the
+and rebound timing all move. A38's historical study answer is a bound on one comparison, not a bound on the
 motion. *Narrowed here on the same day it was written; the first version of this paragraph
 claimed the direction was safe without qualifying what it was safe about.* Contained in
 [P103](#p103), which owns the trajectory, rather than opened as a separate entry.
@@ -5302,19 +5302,19 @@ no lateral or angular state carried through the stroke, and `docs/EXTERNAL_EVIDE
 that the nearest published work makes exactly those the dominant terms. P67 measures a force;
 what that force is a property of has never been modelled.
 
-### P103. Gen6 has no model of the payload's guided contact state through the 8 m bore, so its exit angular and lateral state is not established: HIGH, NEW 2026-08-22
+### P103. historical study has no model of the payload's guided contact state through the 8 m bore, so its exit angular and lateral state is not established: HIGH, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A67 has run; what is left is roundness, stick-slip, inertia variation, tube compliance and a contact law that passes its own restitution check
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — A67 has run; what is left is roundness, stick-slip, inertia variation, tube compliance and a contact law that passes its own restitution check
 
 
 [P102](#p102) found this while correcting something smaller and did not own it. That entry is a
 propagation defect and it is closed. This one is the engineering, and it is open.
 
-The chain Gen6 models is chamber pressure to axial force to exit velocity. The chain that decides
+The chain historical study models is chamber pressure to axial force to exit velocity. The chain that decides
 whether a customer's satellite arrives usable is contact state to lateral impulse and torque to
 release pose and rate, and no file in this repository contains it.
 
-[A34](validation/A34_cradle_restitution.md) and [A38](validation/A38_tipoff_at_gen6.md) model the
+[A34](validation/A34_cradle_restitution.md) and [A38](validation/A38_tipoff_at_legacy_study.md) model the
 payload crossing its cradle clearance in the first tens of milliseconds and answer it well,
 the rattle settles, the residual rate at force removal is exactly zero. Then the payload travels
 another eight metres inside a tube and nothing follows it.
@@ -5326,14 +5326,14 @@ all, only an axial one:
 
 | Term | Where it stands today |
 |---|---|
-| Local clearance, bore against carriage, as a distribution | Not stated anywhere. `gen6_drive.bore_mm` is a nominal 15.805 |
+| Local clearance, bore against carriage, as a distribution | Not stated anywhere. `LEGACY_STUDY_drive.bore_mm` is a nominal 15.805 |
 | Bore straightness over 8.0 m | Not stated. [A59](validation/A59_tube_structure.md) needs seven supports at 1.0 m and models no resulting shape |
-| Force-line eccentricity, gas thrust axis against bore axis | No tolerance exists. [A52](validation/A52_gen6_recoil.md) publishes a 10.65 mm requirement against the *stage* centre of mass, which is a different quantity |
+| Force-line eccentricity, gas thrust axis against bore axis | No tolerance exists. [A52](validation/A52_LEGACY_STUDY_recoil.md) publishes a 10.65 mm requirement against the *stage* centre of mass, which is a different quantity |
 | Payload CG eccentricity | `cradle_restitution.COM_OFFSET` exists for the cradle moment and nothing sweeps it |
 | Friction law, breakaway and sliding, with spread | [P67](#p67). [`docs/B2_ORDER.md`](docs/B2_ORDER.md) is the order |
 | Contact stiffness and damping | Only as a restitution coefficient, swept not measured, inside A34 |
 | Lateral translation and pitch/yaw integrated through the stroke | Does not exist |
-| Exit lateral velocity, exit angular rate | Does not exist. Kill criterion 4's Gen6 answer is the cradle result and says nothing about the other 8 m |
+| Exit lateral velocity, exit angular rate | Does not exist. Kill criterion 4's historical study answer is the cradle result and says nothing about the other 8 m |
 | Peak contact load and contact impulse count | Does not exist, and nothing in the record states what either may be |
 
 Second order, and explicitly not required for the first model. Adding these before the
@@ -5396,7 +5396,7 @@ Ordered. B-2 calibrates step 2; it no longer gates it.
    lateral velocity, exit angular rate, peak contact load, and contact impulse count and timing.
 5. The results are checked against thresholds that already exist, the 2.0 °/s residual
    rate A38 band 2 was declared against and A23 quotes as the tighter flown deployer figure, and
-   the exit-velocity dispersion chain [A44](validation/A44_gen6_dispersion.md) publishes.
+   the exit-velocity dispersion chain [A44](validation/A44_LEGACY_STUDY_dispersion.md) publishes.
    For peak contact load and contact impulse there is no threshold in this repository, and the
    run that produces them will have to say against what they are being judged before it judges them.
 
@@ -5404,10 +5404,10 @@ No numerical tolerance is declared here, because a tolerance declared in a regis
 band chosen outside the discipline that makes bands worth anything.
 
 > Nothing here says the machine fails. It says the quantity that decides kill criterion 4 for
-> Gen6 has not been computed, and that the cradle settling result must stop being quoted as
+> historical study has not been computed, and that the cradle settling result must stop being quoted as
 > though it had been.
 
-### P104. B-2 as first written measures a pneumatic cylinder and would have been recorded as measuring the Gen6 seal: HIGH, CORRECTED 2026-08-22
+### P104. B-2 as first written measures a pneumatic cylinder and would have been recorded as measuring the historical study seal: HIGH, CORRECTED 2026-08-22
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
@@ -5425,7 +5425,7 @@ to do with the reading. It never asked what the load cell is attached to.
 
 A rod on a stock cylinder carries four friction paths and VOLLEY has one.
 [ADR-035](docs/adr/035-drive-tube-material.md) records that the carriage is not recovered and that
-every seal makes exactly one 8.0 m pass, the Gen6 interface is a free piston in a bore,
+every seal makes exactly one 8.0 m pass, the historical study interface is a free piston in a bore,
 with no rod, no rod seal, no wiper and no rod bearing. A pull on a cylinder rod measures all
 four, plus a return spring if one is fitted, and §1.1 as first written permitted *"spring-return
 or double-acting"*. A return spring on a 16 mm bore develops a force of the same order as the
@@ -5475,7 +5475,7 @@ reproducibility payload, generated by `tools/export_companion.py`. Both were sit
 commit `28bfaba` while the flagship stood at `ef8f07b`, four commits, carrying P100's
 propagation, [P101](#p101) and [P102](#p102).
 
-Both companions were therefore publishing `validation/A38_tipoff_at_gen6.md` with no correction
+Both companions were therefore publishing `validation/A38_tipoff_at_legacy_study.md` with no correction
 block on it, at 25 g over 2.18 m, under a banner that names a flagship commit and says *"where a
 generated file disagrees with VOLLEY, VOLLEY is right and this copy is stale."* The banner was
 telling the truth and nothing was listening.
@@ -5563,16 +5563,16 @@ question: it is CC BY 4.0 and always has been.
 > [`docs/STATE_OF_THE_PROJECT.md`](docs/STATE_OF_THE_PROJECT.md) at D4. *If a venue is selected and
 > requires a transfer, that is a decision taken then, on the accepted version, and recorded then.*
 
-### P107. The Gen6 CAD described the pre-ADR-034 design point for three days, and called Gen5 a measured baseline: HIGH, CORRECTED 2026-08-22
+### P107. The historical study CAD described the pre-ADR-034 design point for three days, and called Gen5 a measured baseline: HIGH, CORRECTED 2026-08-22
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
-`cad/build_gen6.py`'s header, `cad/README.md` and `CAD_BRIEF.md` all described a machine the
+`cad/build_legacy_study.py`'s header, `cad/README.md` and `CAD_BRIEF.md` all described a machine the
 parameter file had already replaced.
 
 | Described | `cad/parameters.json` |
 |---|---|
-| chamber 2 L at 50 bar | 2 L at 22.7258 bar, [ADR-034](docs/adr/034-gen6-long-stroke-design-point.md) |
+| chamber 2 L at 50 bar | 2 L at 22.7258 bar, [ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md) |
 | reservoir 11.25 L, *"A42, the ADIABATIC figure"* | 3.46 L, [A56](validation/A56_reservoir_resized.md), sized rather than scaled |
 | exit velocity 30.54 m/s at 25 g | 29.01 m/s at the friction allowance, 11.36 g peak |
 | hoop stress *"at 50 bar ... needs 0.16 mm"* | A59 band 1: 17.96 MPa against 250 allowable, 13.9x |
@@ -5584,7 +5584,7 @@ to *"model the reservoir at 11.25 L and expect it to shrink."*
 
 ### The geometry was never wrong
 
-`build_gen6.py` reads every one of those numbers from `parameters.json` at import, and
+`build_legacy_study.py` reads every one of those numbers from `parameters.json` at import, and
 `--check` verifies the built solids against it: chamber 2.0000 L, reservoir 3.4600 L, force
 445.8802 N, acceleration 11.3629 g, all OK. The STEP files describe the current machine. The
 prose around them described the old one, and nothing could see the difference because none of
@@ -5605,7 +5605,7 @@ repository. It was never caught because the file was not on the list.
 
 All three files are corrected in place with dated notes naming what they replaced; nothing is
 deleted. `check_public.py` now checks thirteen surfaces instead of ten, `cad/README.md`,
-`CAD_BRIEF.md` and `cad/build_gen6.py` are added, against twenty-seven withdrawn claims instead
+`CAD_BRIEF.md` and `cad/build_legacy_study.py` are added, against twenty-seven withdrawn claims instead
 of twenty-two, the five new ones being ADR-034's superseded design point: the 11.25 L, 7.65 L and
 9.55 L reservoirs, a 50 bar charge, and the 30.54 m/s zero-friction velocity. Fifteen historical
 passages are explicitly allowed, each naming the file, the pattern and why that occurrence is a
@@ -5616,9 +5616,9 @@ about. The general case, every live document that restates a parameter, is still
 mechanically guarded, and `check_crossrefs.py` only covers results files. *That gap is real and
 is recorded here rather than claimed closed.*
 
-### P108. Gen6's exit angular rate misses the tip-off band by 7.4x, and the input that decides it is bore straightness: CRITICAL, NEW 2026-08-22
+### P108. historical study's exit angular rate misses the tip-off band by 7.4x, and the input that decides it is bore straightness: CRITICAL, NEW 2026-08-22
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A71 posed the convergence problem properly and did not solve it: raise the penalty stiffness until peak penetration is under 10 % of the clearance and re-converge in tolerance, or replace the penalty with a stabilised constraint formulation, or make the piston compliant so the contact stiffness is physical
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — A71 posed the convergence problem properly and did not solve it: raise the penalty stiffness until peak penetration is under 10 % of the clearance and re-converge in tolerance, or replace the penalty with a stabilised constraint formulation, or make the piston compliant so the contact stiffness is physical
 
 
 [A67](validation/A67_guided_contact.md) ran on 2026-08-22, six of nine, and band 5 is the
@@ -5627,7 +5627,7 @@ finding.
 | | |
 |---|---:|
 | Exit angular rate at the nominal point | 14.845 °/s |
-| The band, from [A38](validation/A38_tipoff_at_gen6.md) band 2 and [A23](validation/A23_tipoff_release.md) | 2.0 °/s |
+| The band, from [A38](validation/A38_tipoff_at_legacy_study.md) band 2 and [A23](validation/A23_tipoff_release.md) | 2.0 °/s |
 | Miss | 7.4x |
 | 3σ under the declared tolerance brackets | 52.33 °/s, 26x |
 | Median of 271 good Monte Carlo samples | 19.39 °/s |
@@ -5641,7 +5641,7 @@ the rattle settles in 26 ms against a stop while the gas is still holding the pa
 Then the payload spends 0.42 s crossing eight metres of a bore that is not straight, and
 acquires an angular rate the cradle model has no way to see.
 
-> Kill criterion 4's Gen6 answer has been quoted against the wrong 27 milliseconds.
+> Kill criterion 4's historical study answer has been quoted against the wrong 27 milliseconds.
 > [`KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) threat 4 already said *"not demonstrated"* and
 > *"nothing models the 8 m of guided travel after the cradle"*, [P103](#p103). This is what was
 > behind that sentence.
@@ -5690,7 +5690,7 @@ at a 65.8 % model-form spread.
 > ### The number is restated, 2026-08-22. The finding is not withdrawn.
 >
 > 14.845 °/s is not a physical prediction. The honest statement is: the first full-bore
-> contact model puts Gen6's exit angular rate between roughly 9 and 15 °/s against a 2.0 °/s band,
+> contact model puts historical study's exit angular rate between roughly 9 and 15 °/s against a 2.0 °/s band,
 > with the spread between two credible contact laws accounting for most of the range, and bore
 > straightness as the dominant sensitivity.
 >
@@ -5708,7 +5708,7 @@ at a 65.8 % model-form spread.
 > What does not survive: quoting 14.845, or 7.4x, as settled. *A67's band 5 verdict stands as
 > recorded; what is corrected is the use made of its number.*
 
-### P109. ~~At a one-kelvin gradient the Gen6 bore does not admit its own piston~~ WITHDRAWN: was CRITICAL, CORRECTED 2026-08-22
+### P109. ~~At a one-kelvin gradient the historical study bore does not admit its own piston~~ WITHDRAWN: was CRITICAL, CORRECTED 2026-08-22
 > **Status:** `CLOSED` — resolved; see the entry for what closed it
 
 > ## WITHDRAWN the same day it was opened, [P110](#p110).
@@ -5748,7 +5748,7 @@ the radial clearance. At 2 K nothing passes at any land separation tested.
 
 It needs no solver. No contact law, no integrator, no friction, no restitution, no
 eccentricity. It is the geometry of a rigid body in a curved tube, computed from A69's beam
-solve and `gen6_drive.bore_mm`, with a three-point construction that does not differentiate
+solve and `LEGACY_STUDY_drive.bore_mm`, with a three-point construction that does not differentiate
 anything. *[P108](#p108) depends on a contact model whose own model-form spread is 65.8 %
 ([A68](validation/A68_contact_law.md) band 6). This does not.*
 
@@ -5789,7 +5789,7 @@ never been chosen against this constraint:
 Nothing is being changed here. A70 explicitly changed no parameter to make a band pass, and the
 redesign belongs in a run of its own with its bands declared first.
 
-> This does not say Gen6 fails. It says this configuration does not admit its own piston at
+> This does not say historical study fails. It says this configuration does not admit its own piston at
 > a gradient nobody has computed, and that five design variables have been carried this far
 > without anyone knowing there was a constraint on them.
 
@@ -5905,7 +5905,7 @@ identification is a fitting step and is now labelled as one.*
 ### What survives
 
 Band 6 still fails at 65.8 % and the three correctly-named formulations give 14.845, 12.390
-and 8.954 °/s on the same VOLLEY case. The conclusion, that the magnitude of Gen6's tip-off
+and 8.954 °/s on the same VOLLEY case. The conclusion, that the magnitude of historical study's tip-off
 problem is model-form-limited and unresolved, is unchanged. What changes is that it now rests
 on three formulations that are named for what they are.
 
@@ -5989,8 +5989,8 @@ division is stated qualitatively and has never been priced. Nothing in this repo
 much of the orbital-energy change belongs on each side, or what release-velocity envelope VOLLEY
 would need if the host supplied more of it.
 
-Gen6's 29.009 m/s design point was not derived from that division. It came from
-[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md)'s stroke and
+historical study's 29.009 m/s design point was not derived from that division. It came from
+[ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md)'s stroke and
 [A49](validation/A49_design_surface.md)'s design surface, which are mechanism arguments.
 
 | Host class | What the stage supplies | What VOLLEY has to supply | Computed |
@@ -6002,11 +6002,11 @@ Gen6's 29.009 m/s design point was not derived from that division. It came from
 Class C is the only column the current design point can be said to answer, and it answers it by
 accident rather than by derivation.
 
-**Why it is scoped `PROGRAMME` and not `GEN6`.** The deliverable is a requirement envelope for
+**Why it is scoped `PROGRAMME` and not `historical study`.** The deliverable is a requirement envelope for
 whatever generation is current, and its owner is the mission-architecture file rather than the
-Gen6 mechanism. It is not a defect in the Gen6 design and it does not enter the Gen6 closure
+historical study mechanism. It is not a defect in the historical study design and it does not enter the historical study closure
 count. If the computed envelope later moves the design point, that is an ADR, and the entry it
-creates would be a Gen6 one.
+creates would be a historical study one.
 
 **What this entry must not be used for.** [P108](#p108) is unresolved and the tip-off magnitude
 is not established. A lower commanded release velocity would reduce chamber pressure,
@@ -6030,9 +6030,9 @@ the number of post-primary ignitions a campaign needs depends on how the shells 
 depends on how much of the differential VOLLEY supplies.
 
 The scope stays `PROGRAMME` and the class stays `COMPUTATION`. The deliverable is still a
-requirement envelope owned by the mission-architecture file rather than a defect in the Gen6
+requirement envelope owned by the mission-architecture file rather than a defect in the historical study
 mechanism, and the reference-host exercise reveals this entry without resolving any part of it.
-Nothing in that exercise lowers a Gen6 requirement, and the warning above stands unchanged.
+Nothing in that exercise lowers a historical study requirement, and the warning above stands unchanged.
 
 ### P114. The host-reference model conflated a manoeuvre with an impulse, in two places at once: HIGH, CORRECTED 2026-08-26
 
@@ -6112,8 +6112,8 @@ same dv buys as a complete circular transfer, which is the distinction that was 
 > faults were used to demonstrate that it fails on each. *A gate that checks presence is not
 > checking agreement, and this entry is what that distinction cost.*
 
-Nothing here touches [P108](#p108), [P113](#p113) or the Gen6 design point. The corrected model
-makes the host case harder rather than easier, and no Gen6 requirement moves.
+Nothing here touches [P108](#p108), [P113](#p113) or the historical study design point. The corrected model
+makes the host case harder rather than easier, and no historical study requirement moves.
 
 ### P115. Rigid supports held by a penalty put A69's beam solve at cond 8.6e15, and only the machine it ran on could not see it: MEDIUM, CORRECTED 2026-08-26
 
@@ -6273,7 +6273,7 @@ universally binding, and the file no longer says it is.
 
 ### What this does not do
 
-It does not touch [P108](#p108) and does not lower the Gen6 design point, which stays at
+It does not touch [P108](#p108) and does not lower the historical study design point, which stays at
 29.009 m/s. It makes [P113](#p113) **more** important and does not close it: if a host main engine
 cannot perform fine shell changes, dividing orbital work between host, auxiliary propulsion and
 deployer is a harder problem than the file first made it look. The assumed 4-ignition budget stays
@@ -6281,7 +6281,7 @@ a `VOLLEY_ASSUMPTION` and is marked as one wherever it appears.
 
 ### E30. The architecture trades twelve parallel one-shot mechanisms for one twelve-cycle series mechanism, and nothing estimates its reliability: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `FLIGHT_OPS` — published dispenser deployment counts and failure records
+> **Scope:** `LEGACY_STUDY` · **Next step:** `FLIGHT_OPS` — published dispenser deployment counts and failure records
 
 
 Raised in review, 2026-08-10, and it is the strongest structural criticism this design has
@@ -6363,7 +6363,7 @@ credited in a reliability model because no reliability model exists.
 
 ### E31. The two ConOps have different launch-interface compliance positions, and nothing distinguishes them: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — the launch-interface position of an actual provider
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HOST_DATA` — the launch-interface position of an actual provider
 
 
 Found by the ICD survey, 2026-08-10. See [`docs/ICD_COMPLIANCE.md`](docs/ICD_COMPLIANCE.md).
@@ -6414,7 +6414,7 @@ this interface at this revision.
 
 ### E32. Nothing inhibits the drive during the ascent pressure transit, and a fault there would break down: NEW 2026-08-10
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — design the ascent inhibit and its fault logic
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — design the ascent inhibit and its fault logic
 
 
 Found answering review item 26, 2026-08-10. `analysis/paschen_multipaction.py`.
@@ -6530,10 +6530,10 @@ the structure:
 The sled enters the brake at 14.07 m/s carrying 935 J, and `cad/parameters.json` sets
 `arrest_g_cap: 200`, the tapered pole entry exists specifically to limit deceleration to it.
 
-A stowed 3U's qualification case is the 25 g CDS cap and the launch random-vibration
-spectrum. It is not a 200 g mechanical shock delivered through its own dispenser, repeated
-eleven times. Nothing in this repository computes what actually reaches a cassette, there is no
-shock response spectrum anywhere; `grep -ri "shock spectrum"` returns nothing.
+The stowed 3U's qualified acceleration, vibration and shock cases require payload- and
+provider-specific data. The project's 25 g study ceiling does not establish them. A modelled
+200 g arrest repeated while payloads remain stowed needs a force-time history and an interface
+shock response spectrum; this repository does not compute what reaches a cassette.
 
 What would close it: a shock response spectrum at the cassette interface for the 200 g arrest,
 compared against a stated payload shock qualification level, and, if it does not close, either a
@@ -6592,7 +6592,7 @@ unrelated reason.
 
 ### E28. Campaign mission life at a real POEM altitude is about a month, and is not modelled: MODELLED 2026-08-16 by A50, STILL OPEN
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — campaign mission life at a real deployment altitude
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — campaign mission life at a real deployment altitude
 
 
 Found by A15, and only because two GMAT runs stopped early. R2 (350 km, 55.2 deg) and R3
@@ -6619,10 +6619,10 @@ What would close it: a stated campaign mission life per host altitude, computed 
 assumed, with the customer-facing consequence written where the host is described rather than only
 in a run sheet. The GMAT runs already contain the data for 350 and 450 km.
 
-### P117. A55 gave the Gen6 trim section the whole of Gen5's thrust constant, and the force it specifies needs a field above the magnets' own remanence: HIGH, NEW 2026-08-30
+### P117. A55 gave the historical study trim section the whole of Gen5's thrust constant, and the force it specifies needs a field above the magnets' own remanence: HIGH, NEW 2026-08-30
 
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A73 has derived the constant; A55's re-run waits on [P92](#p92)'s trade
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — A73 has derived the constant; A55's re-run waits on [P92](#p92)'s trade
 
 Found by [A66](validation/A66_tube_shielding.md), which needed the section's working flux density
 and therefore needed the area its force acts across.
@@ -6638,11 +6638,11 @@ force_per_m = KT * SHEET_A_PER_M / 1e3     # 10.5386 x 90 = 948.5 N
 scales by `SLED_ACTIVE_LEN / LAM`. **`SLED_ACTIVE_LEN` is 0.34 m**, and `DEPTH` is 0.09 m: it is
 the total thrust constant of Gen5's flat array, 340 mm long and 90 mm deep.
 
-[A55](validation/A55_trim_authority.md) applied that constant, unchanged, to a Gen6 trim section
+[A55](validation/A55_trim_authority.md) applied that constant, unchanged, to a historical study trim section
 that is **0.14401 m** long and is an annulus around a **15.805 mm** bore. Neither the length nor
 the area was rescaled.
 
-| | Gen5, where `KT` is defined | Gen6 trim, where it is used |
+| | Gen5, where `KT` is defined | historical study trim, where it is used |
 |---|---|---|
 | Length along travel | 0.34 m | **0.14401 m**, 2.361× shorter |
 | Air-gap surface | flat, 0.09 m deep | **annulus**, 76.03 cm² |
@@ -6671,7 +6671,7 @@ air-gap field for exactly this reason, so that its own result does not rest on t
 
 ### Derived 2026-08-30 by A73, and the shortfall is 16.7x
 
-[A73](validation/A73_trim_secondary.md) built the annular Halbach `cad/build_gen6.py` implies out
+[A73](validation/A73_trim_secondary.md) built the annular Halbach `cad/build_legacy_study.py` implies out
 of magpylib cylinder segments and pushed it through the same Lorentz integral
 `motor_model.thrust_constant()` uses. Band 1 required that integral, handed Gen5's own flat field
 and Gen5's geometry, to return Gen5's own constant: it returns **10.538611491665296** against
@@ -6686,7 +6686,7 @@ change of convention.
 
 **The constant is 16.67x smaller than the one A55 used.** About **4.02x** of that is the
 interaction surface, 306.0 cm² of flat array against 76.03 cm² of annulus. The other **4.14x** is
-chiefly that Gen5's winding lies between two arrays while Gen6's lies entirely outside one, so its
+chiefly that Gen5's winding lies between two arrays while historical study's lies entirely outside one, so its
 outer copper sits where the field has fallen to 45.6 % across the 6 mm belt.
 
 Two further failures came with it. Reaching 948.0 N needs **2398.9 mm** of magnet array against
@@ -6714,7 +6714,7 @@ it.
 ### P118. The trim magnets brake against the aluminium tube for the whole stroke, not only under the stator, and the array's length is not in the parameters: CRITICAL, NEW 2026-08-30
 
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — A72 has integrated it; what remains is the same fix trade [P92](#p92) owns, now with numbers in it
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — A72 has integrated it; what remains is the same fix trade [P92](#p92) owns, now with numbers in it
 
 [A66](validation/A66_tube_shielding.md) was asked what the tube costs the stator. It answered
 that, band 3, 19 % of authority. Then the loss model gave an answer to a question nobody asked.
@@ -6730,23 +6730,23 @@ machine. At 0.2 T the ratio is 1.08; at 0.6 T, 3.24; at the 1.32 T remanence, 7.
 
 ### Why it is worse than a trim-stage problem
 
-The magnets ride the carriage. [ADR-033](docs/adr/033-gen6-trim-stage.md) puts them inside the
+The magnets ride the carriage. [ADR-033](docs/adr/033-legacy_study-trim-stage.md) puts them inside the
 tube and the stator outside it, and the carriage travels the whole **8.0 m** of
-[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md)'s stroke. **The magnets face the
+[ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md)'s stroke. **The magnets face the
 aluminium wall for all of it, energised stator or not.** Eddy-current braking does not require the
 stator: it requires a magnet and a conductor in relative motion, and that condition holds from the
 first millimetre of travel.
 
 The drag is therefore a loss on the gas-driven shot, not a load on the trim supply, and it is
-absent from every energy account in the repository. `gen6_drive.exit_velocity_m_s` is 29.01 m/s
+absent from every energy account in the repository. `LEGACY_STUDY_drive.exit_velocity_m_s` is 29.01 m/s
 against 34.28 zero-friction, and that 28.39 % friction allowance
-([ADR-034](docs/adr/034-gen6-long-stroke-design-point.md), A49 band 6) is seal and bearing
+([ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md), A49 band 6) is seal and bearing
 friction. It does not contain this.
 
 ### Why A66 could not close it
 
-**The magnet array's own length is not in `cad/parameters.json`.** `gen6_trim` carries the
-stator section's length, 144.01 mm, and `cad/build_gen6.py` draws the winding from it. The magnet
+**The magnet array's own length is not in `cad/parameters.json`.** `LEGACY_STUDY_trim` carries the
+stator section's length, 144.01 mm, and `cad/build_legacy_study.py` draws the winding from it. The magnet
 set is named in ADR-033 and in the `trim_stator()` docstring and is not dimensioned anywhere. The
 drag over the stroke is proportional to that length and cannot be integrated without it.
 
@@ -6781,7 +6781,7 @@ Nothing here touches Gen5, which has no tube and no conducting member between it
 array.
 
 What would still close the fix: the trade [P92](#p92) owns, and the magnet array stated as
-geometry in `cad/parameters.json` and drawn in `build_gen6.py` once the architecture that carries
+geometry in `cad/parameters.json` and drawn in `build_legacy_study.py` once the architecture that carries
 it is settled. If the answer is what the ratio above suggests, the
 question is not how much authority the tube costs the trim stage but whether a conducting tube and
 a carriage-borne magnet array can coexist at all — which is a decision about
@@ -6893,7 +6893,7 @@ the cheapest of them and needs no CAD, no mesh, and no licence.
 
 ### E3. Masses are parametric and unchecked against vendor data
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — select components from public vendor data instead of parametric masses
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — select components from public vendor data instead of parametric masses
 
 CAD now exists (`cad/`, nine documents), so the "no CAD" half of this item is closed,
 but the mass problem is not. `mass_properties.py` still uses primitive solids with
@@ -6906,7 +6906,7 @@ radiator, and avionics are still missing from the rollup entirely (P10).
 
 ### E4. No hardware at any level
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HARDWARE` — build something
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HARDWARE` — build something
 
 > A protocol now exists, 2026-07-29. `docs/BENCHTOP_TESTS.md` specifies four sub-scale
 > experiments, cheapest first, each closing a named claim with its acceptance band declared
@@ -6933,14 +6933,14 @@ tip-off claims are all model outputs.
 
 ### E5. Host stage properties unavailable
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `HOST_DATA` — host stage propellant, authority and restart constraints
+> **Scope:** `LEGACY_STUDY` · **Next step:** `HOST_DATA` — host stage propellant, authority and restart constraints
 
 Recoil budgets are parametric across 300-900 kg host classes because no candidate
 stage publishes its mass and control authority. Cannot be closed from public data.
 
 ### E6. Absolute orbital lifetimes are uncertain
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — uncertainty range from a variable atmosphere, not a single multiplier
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — uncertainty range from a variable atmosphere, not a single multiplier
 
 Static exponential atmosphere at mean solar activity. Absolute lifetimes swing
 severalfold across the solar cycle. The x1.80 ratio was believed invariant and defensible;
@@ -6954,7 +6954,7 @@ agreeing is weaker than a model reproducing a flown decay, and the flight data i
 
 ### E7. Velocity dispersion rests on assumed sensor noise
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — select a sensor from public data and use its stated noise
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — select a sensor from public data and use its stated noise
 
 The 0.027 m/s (3σ) result is a closed-loop simulation using an assumed 8 mm/s sensor
 sigma and assumed tolerance distributions. No sensor has been selected or characterised.
@@ -7018,7 +7018,7 @@ is drawn or described, not analysed.
 
 ### E11. No contamination or outgassing analysis
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — public material screening -- ASTM E595 class data for the Gen6 BOM
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — public material screening -- ASTM E595 class data for the historical study BOM
 
 > ADR-004 gains external support 2026-07-29: coreless construction lowers outgassing and
 > vacuum-rated ironless linear motors are catalogue products, so this architecture converges
@@ -7125,7 +7125,7 @@ The build is the declared next step and is unfunded.
 
 ### E16. Reference hygiene
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a reference audit against publisher records
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — a reference audit against publisher records
 
 Three references in `paper/paper.tex` were flagged verify-before-submission and have
 not been fully verified: eddy-damper heritage [15], Yudintsev separation dynamics [17],
@@ -7266,7 +7266,7 @@ attacks three headline-adjacent numbers at once.
 
 ### E18. Conjunction covariance is invented: NEW 2026-07-27
 > **Status:** `LIVE` — open engineering; something still has to be done
-> **Scope:** `GEN6` · **Next step:** `COMPUTATION` — a conjunction covariance from a defensible public source
+> **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — a conjunction covariance from a defensible public source
 
 Any probability-of-collision result (A6) inherits whatever covariance it is given, and no
 covariance exists for a satellite that has never flown. Space-Track Conjunction Data

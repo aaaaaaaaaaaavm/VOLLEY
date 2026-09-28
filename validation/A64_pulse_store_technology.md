@@ -71,7 +71,7 @@ Declared before the script. Not to be edited after the run.
 | **2** | At the worst swept ESR × C, the **power-driven** stored energy is **≤ 10×** the 136.59 J delivered | The store stays power-limited even on film, and the technology change buys nothing |
 | **3** | Store mass at the worst corner — 10⁻³ s, 2000 J/kg — is **≤ the 1.2328 kg section it feeds** | **A54's falsifier stands and P86 does not close on technology** |
 | **4** | Store mass at the **typical** corner is **≤ 0.25 kg** | The store is a significant fraction of the section and the trade against a per-cell ejector must be re-run |
-| **5** | Added mass per satellite, section plus store, stays **≤ 2.0 kg** | The design re-crosses the one kill-criterion numerator Gen6 passes |
+| **5** | Added mass per satellite, section plus store, stays **≤ 2.0 kg** | The design re-crosses the one kill-criterion numerator historical study passes |
 | **6** | The **specific power** achieved exceeds A54's required **23.20 kW/kg** | The store cannot source the current whatever its energy density, and band 3 passed for the wrong reason |
 | **7** | **REPORT, no pass/fail.** Store mass against ESR × C and specific energy, so a datasheet can be read off it | — |
 
@@ -140,7 +140,7 @@ guessing.
 ## Consequences
 
 - P86 closes. The trim store is ~70 g, not 23-37 kg.
-- [ADR-033](../docs/adr/033-gen6-trim-stage.md)'s falsifier 1 is answered and does not fire. The
+- [ADR-033](../docs/adr/033-legacy_study-trim-stage.md)'s falsifier 1 is answered and does not fire. The
   store weighs 6 % of the 1.2328 kg section it feeds, not more than it.
 - Added mass per satellite is 1.4047 kg against an unmoved 2.0 kg threshold. The design does
   not re-cross the numerator it passes.

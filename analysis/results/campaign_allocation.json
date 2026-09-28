@@ -513,7 +513,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -557,7 +557,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -601,7 +601,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -1119,7 +1119,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -1163,7 +1163,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -1207,7 +1207,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -2479,7 +2479,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -2601,7 +2601,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -2723,7 +2723,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -3995,7 +3995,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 10800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -4117,7 +4117,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 10800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -4239,7 +4239,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 10800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -7383,7 +7383,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 6600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -7713,7 +7713,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 6600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -8043,7 +8043,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 6600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -11187,7 +11187,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 39600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -11517,7 +11517,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 39600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -11847,7 +11847,7 @@
       "mission": "COMMON_ENERGY",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 39600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -12365,7 +12365,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -12409,7 +12409,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -12453,7 +12453,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -12971,7 +12971,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -13015,7 +13015,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -13059,7 +13059,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 0,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -14279,7 +14279,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -14401,7 +14401,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -14523,7 +14523,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -15743,7 +15743,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 10800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -15865,7 +15865,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 10800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -15987,7 +15987,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 10800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.0
@@ -18377,7 +18377,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 6600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": "BURN_COUNT_LIMIT",
       "total_host_delta_v_m_s": 0.0
@@ -18707,7 +18707,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0175327443409401,
       "scheduled_duration_s": 6600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.10932718385818739
@@ -19037,7 +19037,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0175327443409401,
       "scheduled_duration_s": 6600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.10932718385818739
@@ -21427,7 +21427,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.0,
       "scheduled_duration_s": 39600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": "BURN_COUNT_LIMIT",
       "total_host_delta_v_m_s": 0.0
@@ -21757,7 +21757,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.01753337244940667,
       "scheduled_duration_s": 39600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.10933110059075415
@@ -22087,7 +22087,7 @@
       "mission": "ENERGY_LADDER",
       "propellant_used_kg": 0.01753337244940667,
       "scheduled_duration_s": 39600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "spacing_s": 3600,
       "stopping_reason": null,
       "total_host_delta_v_m_s": 0.10933110059075415
@@ -22128,7 +22128,7 @@
         0.5,
         16.029
       ],
-      "gen6_screen": [
+      "legacy_study_screen": [
         0.5,
         29.009
       ],

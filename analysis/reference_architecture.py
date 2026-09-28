@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'Generate the clean-sheet Gen6 reference-architecture screen.'
+'Reproduce the withdrawn spring-cell architecture study.'
 from __future__ import annotations
 import argparse, json, math, re
 from pathlib import Path
@@ -12,8 +12,8 @@ ACCEL_G = (5.0, 10.0, 25.0)
 EFFICIENCIES = (0.60, 0.70, 0.80)
 OUTPUTS = (
     ROOT / 'analysis/results/reference_architecture.json',
-    ROOT / 'docs/GEN6_REFERENCE_ARCHITECTURE.md',
-    ROOT / 'figures/gen6_reference_cell.svg',
+    ROOT / 'docs/LEGACY_STUDY_REFERENCE_ARCHITECTURE.md',
+    ROOT / 'figures/legacy_study_reference_cell.svg',
 )
 
 def s4_speed():
@@ -44,21 +44,22 @@ def build():
     duty = [duty_row(v, g) for v in SPEEDS for g in ACCEL_G]
     at_s4 = [r for r in duty if r['speed_mps'] == speed]
     arrangements = [
-        {'name':'independent retained cells','blocked_path':'one cell; unrelated cells remain mechanically retained and available','shared_common_modes':'power, command and host services remain shared unless banked','disposition':'REFERENCE','reason':'best mechanical fault isolation without requiring a shared payload path'},
+        {'name':'independent retained cells','blocked_path':'one cell; unrelated cells remain mechanically retained and available','shared_common_modes':'power, command and host services remain shared unless banked','disposition':'WITHDRAWN_COMPARATOR','reason':'conditional mechanical jam isolation; reliability, installed burden and mission benefit unproven'},
         {'name':'small banks with shared local path','blocked_path':'can strand the affected bank downstream of the blockage','shared_common_modes':'bank path plus power and command','disposition':'BACKUP','reason':'may reduce installed burden, but trades away cell-level mechanical isolation'},
-        {'name':'shared magazine/path','blocked_path':'can strand all downstream payloads','shared_common_modes':'path, indexing, power and command','disposition':'COMPARATOR','reason':'mass efficiency is unproven and a single path recreates manifest coupling'},
+        {'name':'shared magazine/path','blocked_path':'can strand all downstream payloads','shared_common_modes':'path, indexing, power and command','disposition':'REOPENED','reason':'common blockage consequence needs probability and mitigation study; shared installed burden may be lower'},
     ]
     concepts = [
-        {'name':'motor-charged mechanical accumulator','energy_control':'pre-release accumulator preload/position','payload_modification':False,'eight_metre_dependency':False,'independent_cell_compatible':True,'pusher_catch_concept':'required local catcher/retainer after payload clears','peak_power':'release power comes from locally stored mechanical energy; recharge can be slow','known_failure_evidence':'repeatability, latch shock, friction and catcher dynamics are unmeasured','installed_mass_state':'UNKNOWN','disposition':'REFERENCE','reason':'passes concept-level hard screens while avoiding the long guide, gas seal/store and full release-power bus demand'},
+        {'name':'motor-charged mechanical accumulator','energy_control':'pre-release accumulator preload/position','payload_modification':False,'eight_metre_dependency':False,'independent_cell_compatible':True,'pusher_catch_concept':'required local catcher/retainer after payload clears','peak_power':'release power comes from locally stored mechanical energy; recharge can be slow','known_failure_evidence':'repeatability, latch shock, friction and catcher dynamics are unmeasured','installed_mass_state':'UNKNOWN','disposition':'WITHDRAWN_COMPARATOR','reason':'low-speed comparator only; lacks shared reusable launch path and proven speed authority'},
         {'name':'direct short-stroke electromechanical pusher','energy_control':'commanded force/position/current trajectory','payload_modification':False,'eight_metre_dependency':False,'independent_cell_compatible':True,'pusher_catch_concept':'required local brake/catcher','peak_power':'S4 point at 10 g reaches about 1.79 kW ideal terminal payload power','known_failure_evidence':'electrical storage and actuator thermal duty are unresolved','installed_mass_state':'UNKNOWN','disposition':'BACKUP','reason':'passes geometry screens but adds a high short-duration power path unless energy is stored locally'},
-        {'name':'compact gas pusher','energy_control':'charge pressure/mass and valve timing','payload_modification':False,'eight_metre_dependency':False,'independent_cell_compatible':True,'pusher_catch_concept':'required local catcher and pressure-safe end state','peak_power':'stored pneumatic energy supplies the release pulse','known_failure_evidence':'existing Gen6 exposes seal, contact and gas-system uncertainties; compact geometry is not analysed','installed_mass_state':'UNKNOWN','disposition':'BACKUP','reason':'can be compact but imports unresolved fluid/seal/contact hardware'},
+        {'name':'compact gas pusher','energy_control':'charge pressure/mass and valve timing','payload_modification':False,'eight_metre_dependency':False,'independent_cell_compatible':True,'pusher_catch_concept':'required local catcher and pressure-safe end state','peak_power':'stored pneumatic energy supplies the release pulse','known_failure_evidence':'existing LegacyStudy exposes seal, contact and gas-system uncertainties; compact geometry is not analysed','installed_mass_state':'UNKNOWN','disposition':'BACKUP','reason':'can be compact but imports unresolved fluid/seal/contact hardware'},
         {'name':'existing long gas guide','energy_control':'gas charge/pressure','payload_modification':False,'eight_metre_dependency':True,'independent_cell_compatible':False,'pusher_catch_concept':'historical guide/piston architecture','peak_power':'stored pneumatic energy','known_failure_evidence':'published guide/contact work exposed geometry/contact/tip-off sensitivity','installed_mass_state':'PARTIAL','disposition':'HISTORICAL_COMPARATOR','reason':'fails the clean-sheet no-eight-metre-dependency screen'},
         {'name':'frozen Gen5 electromagnetic LSM','energy_control':'electrical pulse/current waveform','payload_modification':False,'eight_metre_dependency':False,'independent_cell_compatible':False,'pusher_catch_concept':'reusable mover brake/return architecture','peak_power':'high pulse-power electromagnetic system','known_failure_evidence':'frozen 126.6 kg dry baseline plus EMI, arrest and shared-manifest liabilities remain recorded','installed_mass_state':'MODELLED','disposition':'HISTORICAL_COMPARATOR','reason':'evidence baseline, but clean-sheet selection removes demonstrated shared/mass/EM liabilities'},
         {'name':'BOLLEY cooperative interface','energy_control':'cooperative electromagnetic payload/interface interaction','payload_modification':True,'eight_metre_dependency':False,'independent_cell_compatible':True,'pusher_catch_concept':'architecture-specific','peak_power':'architecture-specific','known_failure_evidence':'hot switching, protection, tolerance and installed mass remain open','installed_mass_state':'UNKNOWN','disposition':'COOPERATIVE_PATH','reason':'charged alternative that intentionally relaxes the unmodified-payload boundary'},
     ]
     return {
-        'study':'P92 clean-sheet Gen6 reference-architecture screen',
-        'status':'REFERENCE_SELECTED_P92_OPEN',
+        'study':'P92 clean-sheet LegacyStudy reference-architecture screen',
+        'status':'FORMER_REFERENCE_WITHDRAWN_P92_OPEN',
+        'programme_disposition':'withdrawn 2026-09-28; one reusable launch path and a feeder are controlling objectives; this file preserves a bounded comparator calculation',
         'source_revisions':{
             'criteria_path':'validation/P92_reference_architecture.md',
             'criteria_declared_commit':'0546e227e790111f2036d66adeb144f35c852fb8',
@@ -89,14 +90,14 @@ def build():
 def report(d):
     r10 = next(r for r in d['s4_point']['duty'] if r['acceleration_g']==10.0)
     lines=[
-        '# Clean-sheet Gen6 reference architecture','',
+        '# Withdrawn spring-cell architecture study','',
         'Generated by `analysis/reference_architecture.py`. Do not hand-edit.','',
-        '**Reference selected for the next calculations; P92/P113 remain open. No hardware has been built or tested.**','',
-        'S4 changed the useful question. The bounded two-payload screen did not reward release authority above 4.569852 m/s in its best tested BOLLEY/Gen5/existing-Gen6 campaigns. That number is not a product requirement, but it is enough to test whether Gen6 still needs to look like an eight-metre launcher.','',
-        f"It does not. For a 4 kg payload, 4.569852 m/s is 41.77 J of ideal payload energy. At a 10 g constant-acceleration screen the ideal stroke is {r10['ideal_stroke_m']*1000:.1f} mm and the acceleration lasts {r10['acceleration_time_s']*1000:.1f} ms. The terminal constant-force payload power is {r10['terminal_constant_force_power_W']/1000:.2f} kW. That is a compact release-cell problem, not evidence for an 8 m guide.",'',
-        '![Gen6 reference-cell functional architecture](../figures/gen6_reference_cell.svg)','',
-        '## What moves forward','',
-        'The next Gen6 reference is **independent retained cells with a motor-charged mechanical accumulator and a short guided pusher**. A small actuator charges the accumulator before release; preload/position is the commanded release-energy variable; an independent latch releases the pusher; a local catcher keeps the pusher with the host after the payload clears. Shared power, command and host navigation remain common-mode services and are not disguised as independent.','',
+        '**Status, 2026-09-28: the independent spring-cell selection is withdrawn. It does not meet the shared reusable launcher objective. This is a historical comparator, not the next design. P92/P113 remain open. No hardware has been built or tested.**','',
+        'The bounded S4 two-payload screen found a useful sampled point near 4.569852 m/s under its assumptions. It cannot define a product speed ceiling or choose an architecture. The later twelve-payload finite-burn study failed all six tested full-manifest cases.','',
+        f"For a 4 kg payload, 4.569852 m/s is 41.77 J of ideal payload energy. At a 10 g constant-acceleration screen the ideal stroke is {r10['ideal_stroke_m']*1000:.1f} mm and the acceleration lasts {r10['acceleration_time_s']*1000:.1f} ms. The terminal constant-force payload power is {r10['terminal_constant_force_power_W']/1000:.2f} kW. Those numbers are a low-speed comparator calculation, not a selected launcher design.",'',
+        '![LegacyStudy reference-cell functional architecture](../figures/legacy_study_reference_cell.svg)','',
+        '## What the withdrawn proposal contained','',
+        'The proposal used **independent retained cells with a motor-charged mechanical accumulator and a short guided pusher**. A small actuator would charge the accumulator before release; preload/position would set stored energy; an independent latch would release the pusher; a local catcher would retain it after payload clearance. The spring supplies release force. Shared power, command and host navigation remain common-mode services.','',
         'This is a reference architecture, not a final mechanism. Spring form, latch, bearings, catcher, motor/gearbox and cell structure are deliberately unselected. The point is to move peak release power out of the host bus, remove the historical eight-metre dependency, keep the payload passive, and isolate a blocked mechanical path to one cell.','',
         '## Physics screen','',
         '| speed (m/s) | accel (g) | ideal energy (J) | ideal stroke (m) | time (ms) | force (N) | terminal power (kW) |',
@@ -112,7 +113,7 @@ def report(d):
         '| arrangement | blocked path consequence | disposition |','|---|---|---|'
     ]
     for a in d['payload_arrangements']: lines.append(f"| {a['name']} | {a['blocked_path']} | {a['disposition']} |")
-    lines += ['','Independent cells take the reference position because the failure topology is explicit: a jammed pusher does not mechanically strand the rest of the manifest. That may cost more structure and actuators. The installed-mass trade is still open, so this is not yet a P92 closure.','','## Release-concept trade','','| concept | control variable | installed mass | disposition |','|---|---|---|---|']
+    lines += ['','A local pusher jam need not mechanically strand other cells, but no failure probabilities, complete installed budget or full-manifest benefit established that this topology should displace a shared launcher. Empty fired cells also remain installed. This is not a P92 closure.','','## Release-concept trade','','| concept | control variable | installed mass | disposition |','|---|---|---|---|']
     for c in d['release_concepts']: lines.append(f"| {c['name']} | {c['energy_control']} | {c['installed_mass_state']} | {c['disposition']} |")
     lines += [
         '',
@@ -132,7 +133,7 @@ def svg(d):
     return '''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540">
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#111827}.t{font-size:30px;font-weight:700}.s{font-size:16px}.h{font-size:18px;font-weight:700}.box{fill:#f8fafc;stroke:#334155;stroke-width:2}.cell{fill:#eef2ff;stroke:#4338ca;stroke-width:2}.payload{fill:#f0fdf4;stroke:#15803d;stroke-width:2}.arrow{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#a)}.dash{stroke:#64748b;stroke-width:2;stroke-dasharray:8 7;fill:none}</style>
 <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
-<text x="60" y="55" class="t">Gen6 reference cell: stored energy, independent release</text><text x="60" y="86" class="s">Functional allocation only. Component geometry is intentionally not selected.</text>
+<text x="60" y="55" class="t">LegacyStudy reference cell: stored energy, independent release</text><text x="60" y="86" class="s">Functional allocation only. Component geometry is intentionally not selected.</text>
 <rect x="60" y="130" width="220" height="95" rx="12" class="box"/><text x="85" y="165" class="h">Shared host services</text><text x="85" y="194" class="s">power · command · nav/time</text>
 <rect x="355" y="120" width="520" height="280" rx="18" class="cell"/><text x="385" y="155" class="h">Independent retained release cell</text>
 <rect x="395" y="190" width="135" height="70" rx="9" class="box"/><text x="414" y="218" class="s">slow preload</text><text x="425" y="241" class="s">actuator</text>

@@ -1,5 +1,8 @@
 # VOLLEY: one page
 
+> **Architecture disposition, 2026-09-28:** The separate motor-charged spring-cell bank is withdrawn as VOLLEY's next architecture. It is retained here only as a dated study. Any selection or current-reference wording below describes the former decision and is superseded. A reusable shared launch path with sequential loading is the open design objective; no speed envelope is validated. See [current status](docs/NEXT_GENERATION_STATUS.md).
+
+
 Updated 2026-09-16. [Current review and remaining work](docs/REVIEW_20260916.md) ·
 [Project website](https://aaaaaaaaaaaavm.github.io/VOLLEY/)
 
@@ -27,7 +30,7 @@ passivation, disposal and contingency reserves; no provider mission is approved 
 
 The mission has been that since [ADR-002](docs/adr/002-host-is-a-spent-upper-stage.md) in 2023.
 What has changed across the generations is how much of the deployment machinery VOLLEY carries
-itself. Gen5 is the frozen self-contained electromagnetic implementation. The earlier gas-Gen6
+itself. Gen5 is the frozen self-contained electromagnetic implementation. The earlier gas-historical study
 study used a long stage-integrated guide; the current calculation reference is an independent
 motor-charged retained release cell. Host support and services must be charged to installed burden.
 [`docs/LINEAGE.md`](docs/LINEAGE.md) keeps the configurations apart.
@@ -122,10 +125,10 @@ Four results moved the design rather than confirming it.
 
 Result 4 is why. No combination of requirement deletions closes kill criterion 1, so Gen5 cannot
 be optimised into its own mass target. On 2026-08-14
-[ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) changed the target, to deleting the
+[ADR-032](docs/adr/032-legacy_study-stage-integrated-gas-store.md) changed the target, to deleting the
 subsystems rather than shrinking them.
 
-## 7. Current calculation reference, Gen6
+## 7. Current calculation reference, historical study
 
 I carry forward independent retained cells with a motor-charged mechanical accumulator,
 independent latch, short guided pusher and local catcher. The historical gas guide remains a

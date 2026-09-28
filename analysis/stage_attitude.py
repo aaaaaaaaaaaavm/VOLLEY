@@ -1,4 +1,4 @@
-"""A57: attitude rate and packaging on the stage, for Gen6.
+"""A57: attitude rate and packaging on the stage, for LegacyStudy.
 
 WHAT THIS ANSWERS
 -----------------
@@ -6,7 +6,7 @@ The two `NEEDS SOURCE` rows in docs/KILL_CRITERIA.md -- row 2 (envelope) and row
 at firing). Both were quantified for Gen5 and neither was recomputed after ADR-032 changed the
 architecture.
 
-Gen6 deleted the mover and kept the problem. What translates internally is no longer a 9.445 kg
+LegacyStudy deleted the mover and kept the problem. What translates internally is no longer a 9.445 kg
 sled over 1.50 m; it is the 4 kg payload over 8.0 m, on a vehicle an order of magnitude heavier.
 Displacement up 5.3x, moving mass down 2.4x, and nobody had multiplied those together.
 
@@ -53,7 +53,7 @@ def _a52_saturating_offset_m():
 
     The first run of this script used attitude_budget.ASSUMED_ARM = 0.166 m -- A13's arm from a
     GEN5 host centre of mass to the DEPLOYER's, inherited without asking whether it describes a
-    Gen6 geometry. It does not. For a payload traversing the drive tube, the arm that matters is
+    LegacyStudy geometry. It does not. For a payload traversing the drive tube, the arm that matters is
     the perpendicular distance from the host CoM to the line of travel, and A52 already published
     a requirement on exactly that: 10.65 mm.
 
@@ -61,7 +61,7 @@ def _a52_saturating_offset_m():
     arm, so the first run was conservative by that factor in every attitude figure. Read live
     from A52 rather than restated. P100.
     """
-    with open(os.path.join(RESULTS, "gen6_recoil.json"), encoding="utf-8") as fh:
+    with open(os.path.join(RESULTS, "legacy_study_recoil.json"), encoding="utf-8") as fh:
         return json.load(fh)["saturating_offset_mm"] / 1000.0
 G = 9.80665
 
@@ -75,7 +75,7 @@ def _stage_inertia(mass, length_m):
     """A slender stage about a transverse axis through its centre.
 
     A13 used a stubby cylinder scaled from 500 kg because a Gen5 host was a satellite bus. A
-    Gen6 host is the stage itself and its length is the rail: 8 m of tube, not a 2 m bus. Using
+    LegacyStudy host is the stage itself and its length is the rail: 8 m of tube, not a 2 m bus. Using
     A13's aspect ratio here would understate the inertia and flatter every offset below.
     """
     radius = 0.9                     # DECLARED: a large upper stage's radius, E5 has no source
@@ -84,7 +84,7 @@ def _stage_inertia(mass, length_m):
 
 def run():
     p = _params()
-    drive = p["gen6_drive"]
+    drive = p["legacy_study_drive"]
     stroke = drive["stroke_mm"] / 1000.0
     rail_as_drawn = 8.2                       # ADR-034
     usable = 8.0                              # A37's usable acceleration length
@@ -150,7 +150,7 @@ def run():
              campaign_Nms=round(m_sat * a * v_free * N_SHOTS, 4), source=src)
         for a, src in ((arm_required, "A52 band 4, the published alignment requirement"),
                        (arm_inherited, "A13's Gen5 arm, inherited by the first run of this "
-                                       "script and not applicable to a Gen6 geometry (P100)"))]
+                                       "script and not applicable to a LegacyStudy geometry (P100)"))]
 
     bands = [
         dict(band=1, question="host rate returns to zero", limit="<= 1e-9 deg/s",
@@ -162,7 +162,7 @@ def run():
         dict(band=3, question="campaign offset, twelve shots, lightest host", limit="<= 15 deg",
              value=light["offset_campaign_deg"],
              verdict="PASS" if light["offset_campaign_deg"] <= 15.0 else "FAIL"),
-        dict(band=4, question="Gen6 against Gen5 offset per shot, same host",
+        dict(band=4, question="LegacyStudy against Gen5 offset per shot, same host",
              limit="REPORT, no pass/fail",
              value=round(light["offset_per_shot_deg"] / gen5_offset, 4),
              gen5_offset_deg=round(gen5_offset, 4), verdict="REPORT"),
@@ -207,7 +207,7 @@ def run():
                     usable_m=usable, v_exit_zero_friction_m_s=v_free,
                     lever_arm_m=arm,
                     lever_arm_source="A52 band 4, saturating_offset_mm, read live from "
-                                     "gen6_recoil.json -- the published alignment requirement",
+                                     "legacy_study_recoil.json -- the published alignment requirement",
                     lever_arm_inherited_m=arm_inherited,
                     lever_arm_inherited_note="A13's Gen5 arm. Used by the first run of this "
                                              "script and 15.6x the requirement above. P100",
@@ -229,8 +229,8 @@ def run():
                 what_it_is_not="This is NOT a finding about any real stage. It is a finding about "
                                "A52's assumed wheel, and it would change entirely on a real one."),
             band4_direction=dict(
-                gen6_over_gen5=round(light["offset_per_shot_deg"] / gen5_offset, 4),
-                why="Gen6 moves 2.4x less mass 5.3x further on a longer, more slender body. The "
+                legacy_study_over_gen5=round(light["offset_per_shot_deg"] / gen5_offset, 4),
+                why="LegacyStudy moves 2.4x less mass 5.3x further on a longer, more slender body. The "
                     "displacement wins: the offset per shot is larger, not smaller.")),
         software=dict(python=platform.python_version(),
                       source_sha256=hashlib.sha256(

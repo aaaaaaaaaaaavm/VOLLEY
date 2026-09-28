@@ -119,16 +119,16 @@ xychart-beta
 
 ```mermaid
 xychart-beta
-    title "Acceleration on the satellite (g), 25 g qualification limit"
+    title "Modelled acceleration on the satellite (g); 25 g study ceiling"
     x-axis ["1U", "3U", "6U", "12U"]
     y-axis "Acceleration (g)" 0 --> 25
     bar [13.4, 10.7, 8.3, 6.7]
 ```
 
-Every class now sits well inside the 25 g qualification limit, the 1U case peaks at 13.4 g,
+Every class is below the chosen 25 g study ceiling; the 1U case peaks at 13.4 g,
 against 23.4 g before the CAD-derived sled mass was adopted. The machine is no longer
-acceleration-limited but thrust-and-mass limited, so more than half the qualification
-margin goes unused and recovering velocity means removing mass or raising current, not
+acceleration-limited within that model but thrust-and-mass limited. This is not a payload
+qualification margin. Recovering velocity in this configuration means removing mass or raising current, not
 shortening the stroke. Source:
 `analysis/results/motor_results.json` to `family`.
 

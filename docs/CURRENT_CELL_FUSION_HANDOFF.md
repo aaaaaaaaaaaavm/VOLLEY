@@ -1,5 +1,8 @@
 # Current release-cell Fusion handoff
 
+> **Architecture disposition, 2026-09-28:** The separate motor-charged spring-cell bank is withdrawn as VOLLEY's next architecture. It is retained here only as a dated study. Any selection or current-reference wording below describes the former decision and is superseded. A reusable shared launch path with sequential loading is the open design objective; no speed envelope is validated. See [current status](NEXT_GENERATION_STATUS.md).
+
+
 ## Lunar-first concept models and current motion states
 
 The new packaging references are in `cad/lunar_concept`: single mechanical cell,
@@ -50,7 +53,7 @@ BOLLEY/docs/RECONCILED_WIRE_FIELD.md; no old magnetic pass can be inherited.
 Adityavardhan Mishra · 17 September 2026 · layout revision A
 
 **Build an editable mechanism layout tonight, not manufacturing drawings.** The
-current cell has no committed detailed solids. The STEP files in `cad/step/gen6`
+current cell has no committed detailed solids. The STEP files in `cad/step/historical study`
 are the historical gas machine. They are reference evidence, not this assembly.
 The current design does not inherit its 8 m guide, pressure vessel or trim stator.
 
@@ -165,7 +168,7 @@ before the load paths and motion are clear.
 ## Existing CAD and BOLLEY companion work
 
 The download pack inventories every committed VOLLEY STEP by generation. Gen5's
-eight STEP parts are the frozen EM comparison set; Gen6's seven are the gas set;
+eight STEP parts are the frozen EM comparison set; historical study's seven are the gas set;
 Gen1/2/3 are heritage. None is a new mechanical-cell assembly. No native Fusion
 file for this new cell is available to hand over.
 

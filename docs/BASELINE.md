@@ -66,7 +66,7 @@ artefact -- is withdrawn.
 enters main when its bands were declared before its script existed and run; it reaches the paper
 or the thesis only when it is **stable, effective and reliable against the problem statement**.
 Architecture changes are developed in [`VAULT.md`](VAULT.md) with an entry criterion for exactly
-that reason, and Gen6 is there now.
+that reason, and historical study is there now.
 
 **The boundary is by type, not by convenience.** The momentum-transfer release in
 `docs/DESIGN_OPTIONS_exit_velocity.md` recovers the entire velocity shortfall for 1.6 % of

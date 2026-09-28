@@ -43,7 +43,7 @@ in the record; only the input is assumed.
 | Friction parameterised as a **fraction of the piston pressure force**, p₀·A = **445.9 N** | the unit seal data is quoted in |
 | Swept **1 % to 30 %** | spanning every common class |
 | **Filled PTFE glide ring: 2–10 %** · **elastomer O-ring: 10–25 %** | **handbook ranges. NEEDS SOURCE, and stated as such** |
-| Dispersion, trim geometry, store model | imported from `gen6_dispersion`, `trim_stage`, `pulse_chain` — not restated |
+| Dispersion, trim geometry, store model | imported from `LEGACY_STUDY_dispersion`, `trim_stage`, `pulse_chain` — not restated |
 | Bore alternatives | **15.805 mm** as drawn, **16.000 mm** as an ISO 6432 stock size |
 
 ## The prediction, recorded before the run

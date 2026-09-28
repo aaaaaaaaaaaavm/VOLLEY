@@ -57,16 +57,16 @@ Each entry gets one of three outcomes, recorded here:
 
 ## The design target main is working toward
 
-Reset 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md).
+Reset 2026-08-14 by [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md).
 
-Gen6 is the payload accelerated directly, by gas, along a rail the host stage provides. No
+historical study is the payload accelerated directly, by gas, along a rail the host stage provides. No
 mover, no pulse-power chain, no brake, no return stroke. Added hardware is 11.45 kg of
 containment plus about 3 kg of store, and added mass per satellite is 1.608 kg on a
 kick-stage class.
 
 > The previous definition is superseded and is worth stating, because it was the target for one
-> day. ADR-029 set Gen6 as *a linear induction drive on a passive aluminium mover*, no magnets,
-> a 0.6 kg shuttle, an arrest of 82 J instead of 1938. Its nine measured bands (A30 4-5, A31 1-4,
+> day. ADR-029 set historical study as *a linear induction drive on a passive aluminium mover*, no magnets,
+> a 0.6 kg shuttle, an arrest of 82 J instead of 1938. Its nine computed bands (A30 4-5, A31 1-4,
 > A32 1-2) stand as declared. What retired it was not a refutation but
 > [A35](../validation/A35_constraint_ledger.md): the mover it optimised is 11 % of dry mass,
 > so an architecture built around making it lighter was optimising the wrong term.
@@ -87,7 +87,7 @@ cradle mechanism does not exist, and no provider has agreed to lend a stage.
 > P73.*
 
 The vault's one rule is that every entry states why it stopped. These nine stopped the same
-way, and the reason is worth stating once rather than nine times: [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+way, and the reason is worth stating once rather than nine times: [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md)
 deletes the subsystem each of them improves. Not one was refuted. Each was a correct optimisation
 of a part that no longer exists.
 
@@ -97,7 +97,7 @@ of a part that no longer exists.
 | PII-2 | the sled chassis, by ribbing it | No sled |
 | PII-3 | K<sub>t</sub>, by a two-layer stator | No stator |
 | PII-4 | the envelope, by repackaging 1839 mm | No envelope, the stage is the structure |
-| PII-7 | the supercapacitor bank, by four parallel strings | No bank. This is P26, the largest live defect this project carried, and Gen6's answer is an architecture A51 measures at 0.26 W average *(A39's 25-131 W was the spring option's figure, P80)* |
+| PII-7 | the supercapacitor bank, by four parallel strings | No bank. This is P26, the largest live defect this project carried, and historical study's answer is an architecture A51 measures at 0.26 W average *(A39's 25-131 W was the spring option's figure, P80)* |
 | PII-11 | the track, by making it deployable | The stage is already deployed, already long, and already straight |
 | PII-12 | copper loss, by block commutation | No stator |
 | PII-17 | the mover, by letting it depart with the satellite | No mover |
@@ -123,7 +123,7 @@ and ADR-032 has no airgap.
 > Δv = √(2EM/(m(M+m))). On PII-18's 0.6 kg shuttle the same 41.8 J buys 1.65 m/s instead of
 > 3.83, and matching the original costs 225 J. PII-18 reaches the same exit velocity by not
 > putting the energy into a sled at all, and adds no mechanism to the release path, which is
-> this entry's own stated reason for deferring. See [`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md).
+> this entry's own stated reason for deferring. See [`LEGACY_STUDY_ARCHITECTURE.md`](LEGACY_STUDY_ARCHITECTURE.md).
 > Recorded as an interaction, not as a status change: the gate below still applies.
 
 The strongest idea in the project, and it defers.
@@ -141,8 +141,8 @@ electrical-to-payload efficiency from 18.5 % to 31.8 % and brake duty from 1268 
 neither to 711 J with both. That is past the 31.5 % the superseded 4.86 kg design claimed, on a
 sled twice the mass.
 
-Held at the 25 g qualification limit the kick is 15.6 ms over 42.7 mm at 981 N, an ordinary
-spring, not a shock event. Full working in
+Held at the chosen 25 g study ceiling, the modelled kick is 15.6 ms over 42.7 mm at 981 N.
+That calculation does not establish payload shock or contact compatibility. Full working in
 [`DESIGN_OPTIONS_exit_velocity.md`](DESIGN_OPTIONS_exit_velocity.md).
 
 > Entry criterion. A7 (separation and tip-off) must run and show that a guided release
@@ -325,7 +325,7 @@ per-satellite shoe.
 
 ### PII-16: the satellite's own CDS rails as the motor secondary, REJECTED 2026-08-13
 
-Full proposal: [`GEN6_RAIL_DRIVE.md`](GEN6_RAIL_DRIVE.md). Sizing in
+Full proposal: [`LEGACY_STUDY_RAIL_DRIVE.md`](LEGACY_STUDY_RAIL_DRIVE.md). Sizing in
 `analysis/rail_drive.py`. No band declared, nothing validated.
 
 The CubeSat Design Specification has mandated four hard-anodised aluminium corner rails on every
@@ -353,7 +353,7 @@ which has a different rail standard. That is decision D2, not an analysis.
 
 ### PII-18: the plate as a reusable shuttle, the catapult, with a quarter-kilo carriage
 
-Proposed 2026-08-13. Not sized beyond the arithmetic below, and it inherits nine measured bands
+Proposed 2026-08-13. Not sized beyond the arithmetic below, and it inherits nine computed bands
 rather than needing them re-run.
 
 PII-16 put the conductor on the satellite's own rails and died on the edge factor. PII-17
@@ -369,11 +369,11 @@ and surviving the brake that carrying them made necessary.
 | Mover | Mass | Energy to arrest at 20.26 m/s | |
 |---|---:|---:|---|
 | Gen5 sled, Halbach + Ti chassis | 9.445 kg | 1938 J | 200 g arrest, 18.5 kN through eleven stowed satellites (E34) |
-| Plate bolted to the satellite (Gen6a) | 0.248 kg |, | departs; nothing to arrest, but the customer pays and classes without room are excluded |
+| Plate bolted to the satellite (historical studya) | 0.248 kg |, | departs; nothing to arrest, but the customer pays and classes without room are excluded |
 | Plate as a reusable shuttle | 0.398 kg | 82 J | 23.7x less |
 | Shuttle + pusher + latch, generous | 0.600 kg | 123 J | 15.7x; at a 200 g arrest that is 1177 N over 105 mm |
 
-What this buys over Gen6a, and it is a lot. The satellite is unmodified again, no plate,
+What this buys over historical studya, and it is a lot. The satellite is unmodified again, no plate,
 no consumable, no interface to publish and no adopters to recruit, so decision D2 dissolves:
 every payload class works, including the PocketQube classes that are the only ones where kill
 criterion 1 closes, because a small satellite rides a carrier that *is* the shuttle. And there
@@ -415,7 +415,7 @@ nothing at all because the passive half is already bolted to it.
 >
 > [`EXTERNAL_EVIDENCE.md`](EXTERNAL_EVIDENCE.md) has the full map. The finding worth carrying
 > here: PII-8, PII-9 and PII-14 each stopped partly on *"the capacitor bank cannot source
-> this"*. [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) deleted the bank and
+> this"*. [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md) deleted the bank and
 > [A64](../validation/A64_pulse_store_technology.md) re-priced what replaced it, so one
 > retirement quietly retired a blocker in three entries, and none had been re-read since.
 >
@@ -442,9 +442,9 @@ stop the numbers forking, which they briefly did.
 | PII-10 | Magazine indexing disturbance (E24). Designing an indexing sequence that minimises attitude disturbance. The *bookkeeping* half is an error correction and belongs upstream in Phase I; only the optimisation belongs in the lab |
 | PII-11 | [A deployable track, and the side-rail layout](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-11_deployable_track.md). A telescoping track long enough to accelerate *and* regeneratively arrest the sled reaches 48 % electrical-to-payload efficiency against 18.5 %, deletes the eddy brake, closes P28, and stows at 1150 mm, inside the ESPA Grande envelope this design misses by 44 %. The only option in the programme that improves velocity and envelope together. The side-rail half loses on thrust in every variant priced and is there because it drives the tip-off moment to zero |
 
-| PII-14 | [A cable-driven gondola on a deployed truss](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md). Propulsion moved off the vehicle onto a cable, energy from a flywheel, a permanently-locked deployed truss, and a tensioned wire as the running surface. A 2 kg gondola carries no magnets, no chassis resisting 2.69 kN, and no brake fin, so it reaches 24.5 m/s in the existing 1.30 m track, if the drivetrain has no rotating inertia. It does. `m_eff = I/r²` adds directly to the moving mass, a 34 kW machine at a 100 mm drum is 1-5 kg of it before the drum or any gearbox, and at 7.4 kg the entire gain is gone. Assessed and declined for Phase I on 2026-08-10, +15 to +30 % velocity, uncertain, against deleting the LSM and the 24 validations behind it. Entry criterion: a computed drivetrain inertia budget showing m_eff <= 2 kg, and a Phase I baseline that has been measured rather than modelled. The flywheel it split out is closed, 2026-08-20: that half was a Phase I candidate against P26, the question is now Gen6's pulse store, and [A64](../validation/A64_pulse_store_technology.md) answered it at ~70 g on published capacitor data. *A rotating machine with bearings, containment and 7.15 N·m·s of stored angular momentum does not beat that, and the momentum is a disturbance in a machine whose shot already dumps 3.28 N·m·s* |
+| PII-14 | [A cable-driven gondola on a deployed truss](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-14_cable_driven_gondola.md). Propulsion moved off the vehicle onto a cable, energy from a flywheel, a permanently-locked deployed truss, and a tensioned wire as the running surface. A 2 kg gondola carries no magnets, no chassis resisting 2.69 kN, and no brake fin, so it reaches 24.5 m/s in the existing 1.30 m track, if the drivetrain has no rotating inertia. It does. `m_eff = I/r²` adds directly to the moving mass, a 34 kW machine at a 100 mm drum is 1-5 kg of it before the drum or any gearbox, and at 7.4 kg the entire gain is gone. Assessed and declined for Phase I on 2026-08-10, +15 to +30 % velocity, uncertain, against deleting the LSM and the 24 validations behind it. Entry criterion: a computed drivetrain inertia budget showing m_eff <= 2 kg, and a Phase I baseline that has been measured rather than modelled. The flywheel it split out is closed, 2026-08-20: that half was a Phase I candidate against P26, the question is now historical study's pulse store, and [A64](../validation/A64_pulse_store_technology.md) answered it at ~70 g on published capacitor data. *A rotating machine with bearings, containment and 7.15 N·m·s of stored angular momentum does not beat that, and the momentum is a disturbance in a machine whose shot already dumps 3.28 N·m·s* |
 
-| PII-15 | SUPERSEDED IF PII-18 IS PROMOTED, 2026-08-13, its only claimed benefit is shortening the machine, and spending the qualification margin Gen5 leaves idle does the same for free: 850 mm at 16.1 g against 1300 mm at 10.1 g, with no cable over a sheave. See [`GEN6_ARCHITECTURE.md`](GEN6_ARCHITECTURE.md). An LSM tug reeved to a separate payload carriage. Distinct from PII-14: the linear motor stays, only the coupling changes. A reeving ratio *n* moves the carriage *n* times the tug's distance, and divides the tug's 9.445 kg by *n²*, so 2:1 halves the acceleration zone, 1.30 m to 0.65 m, for 4 % of exit velocity. That is the only lever found that shortens the machine without lengthening anything else, against P9's 44 % envelope overrun. And it separates the payload from the magnets longitudinally at the same time, which is E35's fix. Costs, none analysed: a cable and pulleys in vacuum (E21, and A27 screened out a rack for exactly this), a second guided body, and a single tension load path that becomes another manifest-forfeiting element in `docs/FMEA.md`. Entry criterion: E35 shows separation is required, and a vacuum cable/sheave life case exists |
+| PII-15 | SUPERSEDED IF PII-18 IS PROMOTED, 2026-08-13, its only claimed benefit is shortening the machine, and spending the qualification margin Gen5 leaves idle does the same for free: 850 mm at 16.1 g against 1300 mm at 10.1 g, with no cable over a sheave. See [`LEGACY_STUDY_ARCHITECTURE.md`](LEGACY_STUDY_ARCHITECTURE.md). An LSM tug reeved to a separate payload carriage. Distinct from PII-14: the linear motor stays, only the coupling changes. A reeving ratio *n* moves the carriage *n* times the tug's distance, and divides the tug's 9.445 kg by *n²*, so 2:1 halves the acceleration zone, 1.30 m to 0.65 m, for 4 % of exit velocity. That is the only lever found that shortens the machine without lengthening anything else, against P9's 44 % envelope overrun. And it separates the payload from the magnets longitudinally at the same time, which is E35's fix. Costs, none analysed: a cable and pulleys in vacuum (E21, and A27 screened out a rack for exactly this), a second guided body, and a single tension load path that becomes another manifest-forfeiting element in `docs/FMEA.md`. Entry criterion: E35 shows separation is required, and a vacuum cable/sheave life case exists |
 
 > Entry criterion for PII-8, PII-9 and PII-11: none, deliberately. None is a candidate for
 > this baseline. The correct outcome for the thesis is that all stay closed until the Phase I
@@ -501,7 +501,7 @@ number that does not stay inside that scope.
 
 A device sized to rescue a dead drive reproduces the drive. *If a per-cell gas generator can
 deliver the shot, the reservoir, the fill valve, the fire valve, the chamber and the 3.1216 kg store
-all stop being necessary, five of the seven shared elements [A47](../validation/A47_gen6_fmea.md)
+all stop being necessary, five of the seven shared elements [A47](../validation/A47_LEGACY_STUDY_fmea.md)
 counts, in an architecture whose shared elements are the whole of what E30 is about.*
 
 A65 refused to chase it and said so in the run sheet. The sizing there is deliberately a
@@ -524,7 +524,7 @@ What it would have to beat, and none of it is priced here:
 
 > Entry criterion: [P67](../OPEN_PROBLEMS.md) measured, and a commanded-velocity mechanism for a
 > solid charge that A44's sensitivity model can be run against. *Without the second, this is a
-> deployer that cannot command what it deploys at, and Gen6's central claim is exactly that it can.*
+> deployer that cannot command what it deploys at, and historical study's central claim is exactly that it can.*
 
 ### PII-20: gas and electromagnetic as mutual fail-safes, DECLINED 2026-08-16, not run
 
@@ -537,11 +537,11 @@ Mass. For either drive to deploy alone, each must carry the full duty. A35 price
 electromagnetic half at C2 + C3 = 11.54 + 26.35 = 37.89 kg, the reusable mover, and the
 requirement that the energy arrive during the shot. That is precisely what ADR-032 deleted.
 Re-adding it beside the 5.38 kg gas store puts added mass per satellite at roughly 4.6 kg
-against an unmoved 2.0 kg threshold, so it re-crosses the one numerator Gen6 currently passes.
+against an unmoved 2.0 kg threshold, so it re-crosses the one numerator historical study currently passes.
 
 The redundancy does not buy what it looks like it buys. Of Gen5's nine manifest-forfeiting
 elements the drive is three. The sequencer, launch lock, magazine follower, escapement,
-retention gate and cradle stay single-path, and [A47](../validation/A47_gen6_fmea.md) has since
+retention gate and cradle stay single-path, and [A47](../validation/A47_LEGACY_STUDY_fmea.md) has since
 measured what that ceiling is worth: an entire architecture change moved expected delivery from
 6.620 to 6.992 satellites. Spending 37.89 kg to duplicate three of eight shared elements buys
 less than that.
@@ -558,11 +558,11 @@ since *v* ∝ √*E*. That is a degraded mode bought at nearly full mass, guaran
 >
 > The control half became [A48](../validation/A48_trim_stage.md), gas for energy, a short
 > motor section for the velocity it actually produced. 2.021 % of the shot, 1.822 % of the
-> stroke, 0.340 kg, and it gives back the precision Gen6 traded. It fails on peak power against
+> stroke, 0.340 kg, and it gives back the precision historical study traded. It fails on peak power against
 > a band that should not have been declared, and its open question is what a 37.7 J at 28 kW
 > store weighs.
 >
-> The fail-safe half became [A47](../validation/A47_gen6_fmea.md) band 8, and the answer is
+> The fail-safe half became [A47](../validation/A47_LEGACY_STUDY_fmea.md) band 8, and the answer is
 > not a second drive. A per-cell backup ejector, a 1-2 m/s spring guaranteeing clearance,
 > takes expected delivery from 6.992 to 9.261 satellites at *r* = 0.99. Six times the
 > architecture change, because it converts the drive from manifest-forfeiting to

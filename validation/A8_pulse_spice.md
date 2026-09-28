@@ -89,7 +89,7 @@ correction and not rerun since 2026-08-03. It is now current at 16.388 m/s.
 ## A8-R: re-run at the current operating point, bands declared 2026-07-30 before running
 
 The bands above were set against the 20.37 m/s point and the 4.86 kg parametric sled. P15 moved
-the sled to a measured 9.445 kg, and P23 established that the recorded pass sits outside the band
+the sled to a CAD-calculated 9.445 kg, and P23 established that the recorded pass sits outside the band
 the current model would produce. Re-running needs fresh bands, and rewriting the old ones to fit
 the new number would destroy the only thing that makes a declared band worth anything.
 

@@ -52,11 +52,11 @@ STROKE_M = pc.STROKE
 AREA_M2 = pc.AREA
 M_PAY_KG = pc.M_PAY
 P0_PA = pc.P_MAX
-V_CHAMBER_M3 = G['gen6_store']['chamber_volume_l'] / 1e3
+V_CHAMBER_M3 = G['legacy_study_store']['chamber_volume_l'] / 1e3
 GAMMA = pc.GAMMA
 FRICTION_N = 83.4                                    # A41 band 8's allowance, as A44 uses it
 FRICTION_SHARE = FRICTION_N * STROKE_M / pc.work(P0_PA, V_CHAMBER_M3)
-V_ADOPTED = G['gen6_drive']['exit_velocity_m_s']
+V_ADOPTED = G['legacy_study_drive']['exit_velocity_m_s']
 
 FIELDS = [0.2, 0.4, 0.6, 0.8, 1.0, BR_T]             # A66's ladder, unchanged
 # 2000 RK4 steps. Halving to 1000 moves the exit velocity by 5.5e-8 and the drag energy by

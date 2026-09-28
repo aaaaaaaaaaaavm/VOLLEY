@@ -1,6 +1,6 @@
-# ADR-034: Gen6 spends the stage's whole length, and buys gentleness rather than speed with it
+# ADR-034: historical study spends the stage's whole length, and buys gentleness rather than speed with it
 
-Status: Accepted, Date: 2026-08-19, Phase: I, Extends: [ADR-032](032-gen6-stage-integrated-gas-store.md), [ADR-033](033-gen6-trim-stage.md)
+Status: Accepted, Date: 2026-08-19, Phase: I, Extends: [ADR-032](032-legacy_study-stage-integrated-gas-store.md), [ADR-033](033-legacy_study-trim-stage.md)
 
 ## Context
 
@@ -8,7 +8,7 @@ The request was for a design that is best on velocity, best on acceleration and 
 once. [A49](../../validation/A49_design_surface.md) was run to find out whether such a point
 exists, and it answered in two halves.
 
-The first half is yes. Band 5 found 14 points out of 63 that beat the adopted Gen6 on exit
+The first half is yes. Band 5 found 14 points out of 63 that beat the adopted historical study on exit
 velocity, peak acceleration and gas per shot *simultaneously*. "Best overall" is available in
 principle, which is not what a reader of A35 or A47 would have predicted.
 
@@ -28,10 +28,10 @@ spend the stroke on.
 
 ## Decision
 
-Gen6's stroke goes from 2.18 m to 8.0 m, and the charge pressure falls from 50 bar to
+historical study's stroke goes from 2.18 m to 8.0 m, and the charge pressure falls from 50 bar to
 22.73 bar. The exit velocity is held exactly where it was.
 
-| | Gen6 as adopted | Gen6 at ADR-034 | |
+| | historical study as adopted | historical study at ADR-034 | |
 |---|---:|---:|---|
 | Stroke | 2.18 m | 8.00 m | the whole class |
 | Charge pressure | 50.0 bar | 22.73 bar | |
@@ -49,10 +49,10 @@ Velocity is held rather than taken, and that is the substantive choice in this A
 
 The Pareto front offers 30.97 m/s at 12.5 g and 52.62 m/s at 30.0 g on the same 8 m of
 stroke. Taking either would raise the headline number. It would also invalidate every downstream
-result in the repository at once, [A44](../../validation/A44_gen6_dispersion.md)'s dispersion,
+result in the repository at once, [A44](../../validation/A44_LEGACY_STUDY_dispersion.md)'s dispersion,
 [A50](../../validation/A50_campaign_altitude.md)'s campaign, [A15](../../validation/A15_poem_campaign.md)'s
 lifetime spread, [A20](../../validation/A20_reachable_envelope.md)'s envelope and
-[A52](../../validation/A52_gen6_recoil.md)'s recoil are all computed on 29.009 m/s or its
+[A52](../../validation/A52_LEGACY_STUDY_recoil.md)'s recoil are all computed on 29.009 m/s or its
 zero-friction twin. The velocity increase is available and it is unpriced, and this ADR
 declines to adopt a number whose consequences have not been run.
 
@@ -61,21 +61,21 @@ delivered velocity at 45.5 % of the acceleration and 45.5 % of the gas.
 
 ## What this buys that was not asked for
 
-The payload environment stops being the binding constraint. 25 g is the payload qualification
-cap [A37](../../validation/A37_host_integrated.md) sized its window on, and Gen6 sat exactly on it
-with no margin for a customer whose qualification is softer. 11.36 g is 45.5 % of that cap, so
-the acceleration requirement becomes something a customer can be *offered* rather than argued with.
+In this model, acceleration stops binding against the **chosen 25 g study ceiling** used by
+[A37](../../validation/A37_host_integrated.md). That ceiling is not a universal CubeSat
+qualification. The 11.36 g point is 45.5 % of the chosen ceiling; customer payload loads and
+contact limits still require their own qualification.
 
 Gas per shot halves, and gas per shot is what the campaign is metered in. A campaign of twelve
 costs 612.6 g instead of 1347.7 g. This is the only axis on which "more efficient in power" has a
-defensible Gen6 meaning, since [A51](../../validation/A51_gen6_power.md) established that Gen6's
+defensible historical study meaning, since [A51](../../validation/A51_LEGACY_STUDY_power.md) established that historical study's
 electrical draw is 0.26 W averaged and 36 W peak and was never the constraint.
 
 ## What this costs, stated rather than absorbed
 
 Friction becomes the dominant loss, and it is the one term nobody has measured.
 
-| | Gen6 as adopted | Gen6 at ADR-034 |
+| | historical study as adopted | historical study at ADR-034 |
 |---|---:|---:|
 | Friction work per shot | 181.8 J | 667.2 J |
 | As a fraction of shot work | 9.75 % | 28.39 % |
@@ -110,7 +110,7 @@ This decision is wrong if any of these turns out true.
    3.1216 kg on a 3.460 L reservoir, which is 24 % below the ~ 4.10 kg quoted above, the
    bottle falls 63.8 % where the gas falls 54.55 %, because a lower target pressure lets it be
    drawn further down. The mass argument is stronger than this ADR claimed. P82 closed.
-3. The trim stage cannot cover the wider dispersion. ADR-033 exists because Gen6 cannot command
+3. The trim stage cannot cover the wider dispersion. ADR-033 exists because historical study cannot command
    velocity open-loop. If the correction authority has to grow with friction, the pulse store
    ADR-033 never weighed grows with it. P83, feeding ADR-033 falsifier 1.
 4. No stage of this class is available. Every dominating point needs the full 8.0 m. On A37's
@@ -122,7 +122,7 @@ This decision is wrong if any of these turns out true.
 > ### The velocity that was not taken
 >
 > A reader who wanted the request answered literally should know what was left on the table.
-> 30.97 m/s at 12.5 g and 56.2 g of gas dominates the adopted Gen6 on all three axes at once
+> 30.97 m/s at 12.5 g and 56.2 g of gas dominates the adopted historical study on all three axes at once
 > and is only 6.8 % above the velocity adopted here.
 >
 > It is not taken because taking it silently would make eight run sheets wrong, and this
@@ -131,10 +131,10 @@ This decision is wrong if any of these turns out true.
 
 ## Alternatives, and why not
 
-Take the maximum-velocity point, 52.62 m/s at 30 g. It exceeds the 25 g payload qualification
-cap, although [A38](../../validation/A38_tipoff_at_gen6.md)'s tip-off ceiling of 30.9 g would
-permit it. A band was not widened to admit it, 25 g is a payload limit, not a preference, and
-the tip-off ceiling being higher does not raise it.
+Take the maximum-velocity model point, 52.62 m/s at 30 g. It exceeds the **chosen 25 g study
+ceiling**, although [A38](../../validation/A38_tipoff_at_legacy_study.md)'s modelled tip-off
+ceiling of 30.9 g would permit it. The study band was not widened to admit it. Neither number
+qualifies an assembled satellite; its actual load-time and contact limits remain unknown.
 
 Take an intermediate stroke. 4.0 m gives 16.26 g and a 35.0 % gas saving, and fits A37's 3.0 m
 class no better than 8.0 m does. The stroke either fits the large class or it does not, and
@@ -143,7 +143,7 @@ inside that class there is no reason to leave length unspent.
 Keep 2.18 m and raise pressure. Peak acceleration rises with pressure at 1:1 and A38's cap is
 already met exactly. There is no headroom in this direction at all.
 
-Do nothing. Defensible, and it was the state of the repository this morning. It leaves Gen6
+Do nothing. Defensible, and it was the state of the repository this morning. It leaves historical study
 sitting exactly on the payload acceleration cap with a full gas bill, when the host supplies six
 more metres of rail free.
 
@@ -153,4 +153,4 @@ more metres of rail free.
   band 1 is recorded as a declaration error (a with-friction surface compared against A41's
   zero-friction 30.535 m/s) and band 6 as P78, the real finding above.
 - `cad/parameters.json` carries both velocity numerators and the constant-pressure bound.
-- `cd cad && python3 build_gen6.py --check` reads the geometry back against them.
+- `cd cad && python3 build_legacy_study.py --check` reads the geometry back against them.

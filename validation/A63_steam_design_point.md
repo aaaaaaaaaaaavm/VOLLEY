@@ -84,7 +84,7 @@ Declared before the script. Not to be edited after the run.
 | **2** | The nitrogen baseline reproduces **2350 J** and **34.28 m/s** within 1 % | Nothing below is comparable to the fluid it must beat |
 | **3** | **A point exists with T_dry ≤ 533 K delivering ≥ 2350 J** | **Steam cannot run inside filled PTFE's limit at any chamber**, and A61's seal specification really does not survive it |
 | **4** | A point exists with **T_dry ≤ 473 K** delivering ≥ 2350 J | The tube is steel at every steam design point, and P85 is forced |
-| **5** | At the selected point, peak acceleration is **≤ 25 g** — the payload qualification cap | The chamber that fixes the temperature breaks the payload environment |
+| **5** | At the selected point, peak acceleration is **≤ 25 g** — the project study ceiling | The chamber that fixes the temperature breaks the payload environment |
 | **6** | **Net mass is a saving**, counting the store, the water, the tank, the chamber growth **and the tube material the temperature forces** | **Steam costs mass, and A62's verdict survives its own correction** |
 | **7** | Campaign water mass is **≤ nitrogen's 612 g** | The fluid advantage is spent on the larger chamber |
 | **8** | At the selected point the shot delivers **≥ nitrogen's 34.28 m/s** | Steam is bought at a velocity penalty |

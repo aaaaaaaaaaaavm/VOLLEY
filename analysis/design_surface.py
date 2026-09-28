@@ -3,7 +3,7 @@ VOLLEY | The velocity, acceleration and stroke surface.
 
 WHY THIS EXISTS
 ---------------
-Asked directly: make Gen6 best on velocity, on acceleration and on power. Best at everything is
+Asked directly: make LegacyStudy best on velocity, on acceleration and on power. Best at everything is
 not available. A point that DOMINATES the current one on several axes may be, and the record
 contains a lever nobody has pulled: A37 swept stage length at a fixed 25 g and let velocity
 rise, and never asked the inverse. A spent upper stage is 8 m long, so stroke is the one
@@ -45,7 +45,7 @@ TARGET_KG = 2.0
 
 STROKES = (1.3, 2.18, 3.0, 4.0, 5.0, 6.0, 8.0)
 PRESSURES_BAR = (10, 15, 18, 20, 25, 30, 40, 50, 60)
-GEN6 = dict(L=2.18, p0_bar=50.0)
+LEGACY_STUDY = dict(L=2.18, p0_bar=50.0)
 
 
 def work(p0, L, v0=V_CHAMBER):
@@ -94,8 +94,8 @@ def dominates(a, b):
 
 
 def main():
-    base = point(GEN6['p0_bar'] * 1e5, GEN6['L'])
-    print(f"Gen6 today: {base['v_exit']:.3f} m/s, {base['a_peak_g']:.2f} g peak, "
+    base = point(LEGACY_STUDY['p0_bar'] * 1e5, LEGACY_STUDY['L'])
+    print(f"LegacyStudy today: {base['v_exit']:.3f} m/s, {base['a_peak_g']:.2f} g peak, "
           f"{base['gas_kg']*1e3:.1f} g gas, {base['work_J']:.1f} J\n")
 
     # band 2, 3, 4: what stroke alone does at fixed pressure
@@ -112,7 +112,7 @@ def main():
 
     # the inverse A37 never asked: hold velocity, let stroke buy the g down
     print(f"\nholding {base['v_exit']:.3f} m/s and spending stroke on gentleness:")
-    print(f"{'L m':>6s} {'p0 bar':>8s} {'a_pk g':>8s} {'gas g':>7s} {'vs Gen6 gas':>12s} "
+    print(f"{'L m':>6s} {'p0 bar':>8s} {'a_pk g':>8s} {'gas g':>7s} {'vs LegacyStudy gas':>12s} "
           f"{'tube kg':>8s}")
     held = []
     for L in STROKES:
@@ -129,7 +129,7 @@ def main():
               if not any(dominates(o, q) for o in surface)]
     pareto.sort(key=lambda q: -q['v_exit'])
 
-    print(f"\n{len(doms)} of {len(surface)} surface points dominate Gen6 on all three axes")
+    print(f"\n{len(doms)} of {len(surface)} surface points dominate LegacyStudy on all three axes")
     if doms:
         best = max(doms, key=lambda q: q['v_exit'] / max(q['a_peak_g'], 1e-9))
         store = (pc.CHAMBER_KG if hasattr(pc, 'CHAMBER_KG') else 0.936) + best['tube_kg']
@@ -169,7 +169,7 @@ def main():
         ('4', 'gas per shot is unchanged across the stroke sweep within 0.1 %',
          f"max deviation {gas_dev*1e6:.3f} mg",
          gas_dev / fixed_p[0]['gas_kg'] <= 1e-3),
-        ('5', 'a point exists beating Gen6 on velocity, peak g and gas at once',
+        ('5', 'a point exists beating LegacyStudy on velocity, peak g and gas at once',
          f"{len(doms)} such points", bool(doms)),
         ('6', 'friction fraction varies by <= 2 percentage points across the stroke sweep',
          f"{min(fr)*100:.2f} % to {max(fr)*100:.2f} %", (max(fr) - min(fr)) * 100 <= 2.0),
@@ -195,7 +195,7 @@ def main():
                     'alignment tolerance, no dynamic seal behaviour. Every omission flatters a '
                     'long tube. Store mass at the recommended point is scaled from A43 by gas '
                     'ratio and is an ESTIMATE, not a sized store.',
-               gen6_today=base, fixed_pressure_sweep=fixed_p, held_velocity_sweep=held,
+               legacy_study_today=base, fixed_pressure_sweep=fixed_p, held_velocity_sweep=held,
                pareto=pareto, dominating_count=len(doms), surface_size=len(surface),
                recommended=rec, recommended_store_kg=store_rec,
                recommended_per_satellite_kg=per_sat, gas_saved_pct=gas_saved,

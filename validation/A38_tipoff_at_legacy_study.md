@@ -1,7 +1,7 @@
-# A38, does A34's cradle closure survive the Gen6 operating point?
+# A38, does A34's cradle closure survive the historical study operating point?
 
-**Bands declared 2026-08-14, before `analysis/tipoff_gen6.py` existed.**
-Verify with `git show --stat <this commit> -- analysis/tipoff_gen6.py`, which must return nothing.
+**Bands declared 2026-08-14, before `analysis/tipoff_legacy_study.py` existed.**
+Verify with `git show --stat <this commit> -- analysis/tipoff_legacy_study.py`, which must return nothing.
 
 ---
 
@@ -35,7 +35,7 @@ Stated now, so it can fail. From the closed forms A34 already declares:
 - The cost lands on preload, which scales with the moment: 85 N per contact becomes about
   204 N.
 
-If that is right, tip-off does not cap Gen6 and the A37 window stands. If it is wrong, A37's
+If that is right, tip-off does not cap historical study and the A37 window stands. If it is wrong, A37's
 1.83-2.18 m window is computed at an acceleration the payload cannot take, and the store trade must
 be re-run before it is written.
 
@@ -54,15 +54,15 @@ Declared before the script. Not to be edited after the run.
 | # | Band | FAIL if |
 |---|---|---|
 | **1** | Driven at the **Gen5** point the model reproduces A34's settling time and critical restitution to **1 %** | The model is not the one that produced A34, and nothing below is comparable |
-| **2** | At the Gen6 point, residual angular rate at force removal is **< 2 °/s** for **every** clearance A23 tabulated | The payload leaves tumbling. Kill criterion 4 is crossed and Gen6 is dead as drawn |
-| **3** | At the Gen6 point, settling completes **inside the powered stroke** at e = 0.7, the top of the published aluminium range | The rattle is still live at release and band 2 passes only by luck of phase |
-| **4** | Critical restitution **e\* ≥ 0.80** at the Gen6 point — **A34's own threshold, not relaxed** | Margin against the aluminium range has been spent |
+| **2** | At the historical study point, residual angular rate at force removal is **< 2 °/s** for **every** clearance A23 tabulated | The payload leaves tumbling. Kill criterion 4 is crossed and historical study is dead as drawn |
+| **3** | At the historical study point, settling completes **inside the powered stroke** at e = 0.7, the top of the published aluminium range | The rattle is still live at release and band 2 passes only by luck of phase |
+| **4** | Critical restitution **e\* ≥ 0.80** at the historical study point — **A34's own threshold, not relaxed** | Margin against the aluminium range has been spent |
 | **5** | Required cradle preload ≤ **250 N** per contact | The preload is no longer an ordinary spring, and the release mechanism A34 already calls non-existent becomes a harder problem than the deployer |
 | **6** | **The acceleration ceiling tip-off imposes is ≥ 25 g** | **A37's window is computed at an acceleration the payload cannot take**, and the store trade must be re-run before anything is written |
 
 ### Band 6 is the one the next run needs
 
-A37 chose its window at the 25 g qualification cap because that is the payload's limit. **Band 6
+A37 chose its window at the chosen 25 g study ceiling because that is the payload's limit. **Band 6
 asks whether tip-off is a tighter limit than qualification, and reports the ceiling either way.
 Whatever number it returns is the acceleration the store trade must use.
 
@@ -89,9 +89,9 @@ still a closure at 2.4x the moment.
 > **Nothing below is edited.** The bands are not re-declared, the verdicts recorded on 2026-08-14
 > stand as run, and this block is the whole of the change.
 >
-> This run took the Gen6 point to be 25 g over 2.18 m, the acceleration cap and the long end
-> of [A37](A37_host_integrated.md)'s feasible window, and `analysis/tipoff_gen6.py` held both as
-> module constants. [ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md) replaced that
+> This run took the historical study point to be 25 g over 2.18 m, the acceleration cap and the long end
+> of [A37](A37_host_integrated.md)'s feasible window, and `analysis/tipoff_legacy_study.py` held both as
+> module constants. [ADR-034](../docs/adr/034-legacy_study-long-stroke-design-point.md) replaced that
 > window with the host stage's whole usable length on 2026-08-19, three days later, and this run
 > was never pointed at again.
 >
@@ -124,14 +124,14 @@ still a closure at 2.4x the moment.
 >
 > Two things this correction does not repair.
 >
-> `cad/parameters.json` still carries 201.7 N. `gen6_drive.cradle_preload_N_per_contact` is
-> this run's figure at 25 g, and `cad/build_gen6.py` says the tube wall is set partly by carrying
+> `cad/parameters.json` still carries 201.7 N. `LEGACY_STUDY_drive.cradle_preload_N_per_contact` is
+> this run's figure at 25 g, and `cad/build_legacy_study.py` says the tube wall is set partly by carrying
 > it. It is conservative by 2.2x and nothing reads it as a driver, so it is left as it stands
 > and recorded as a decision rather than corrected into a lower retention requirement.
 >
 > The model is constant-acceleration, and the conservatism that buys is narrower than it first
 > reads. `point()` returns 42.23 m/s, which is exactly
-> `gen6_drive.exit_velocity_m_s_constant_pressure_bound`; the delivered figure is 29.01 m/s and
+> `LEGACY_STUDY_drive.exit_velocity_m_s_constant_pressure_bound`; the delivered figure is 29.01 m/s and
 > the shot is a blowdown.
 >
 > What is conservative: the *time available*. A lower delivered exit velocity over the same
@@ -142,7 +142,7 @@ still a closure at 2.4x the moment.
 > under the real pressure, time history. Under blowdown the acceleration is time-varying, so the
 > angular forcing from any force-line eccentricity is time-varying with it, and contact timing,
 > arrival rate and rebound timing all move. A closed form driven by a constant acceleration
-> cannot bound a trajectory whose forcing changes shape. This run's Gen6 answer is a bound on one
+> cannot bound a trajectory whose forcing changes shape. This run's historical study answer is a bound on one
 > scalar comparison, not a bound on the motion. That is [P103](../OPEN_PROBLEMS.md)'s to settle,
 > and it is why P103 step 2 requires the design point to be read live rather than a constant
 > acceleration to be assumed.
@@ -168,7 +168,7 @@ find.
 
 ### The answer to the question asked
 
-| | Gen5 | **Gen6** |
+| | Gen5 | **historical study** |
 |---|---:|---:|
 | Acceleration | 10.07 g | **25.00 g** |
 | Payload force | 395 N | **981 N** |
@@ -180,13 +180,13 @@ find.
 | **Critical restitution** | 0.9263 | **0.9462** |
 | Preload per contact | 81.2 N | **201.7 N** |
 
-A34's closure does not merely survive the Gen6 point, it improves. Settling occupies 13 % of
+A34's closure does not merely survive the historical study point, it improves. Settling occupies 13 % of
 the stroke instead of 19 %, and margin against the published aluminium range of 0.3-0.7 widens.
 The arrival rate worsens to 355 °/s and remains what A34 established it to be: transient, and
 never a release rate.
 
 **Band 6 is what the store trade needed.** The ceiling tip-off imposes is **30.9 g**, above the
-25 g qualification cap. Tip-off is not the binding limit and A37's 1.83-2.18 m window
+chosen 25 g study ceiling. Tip-off is not the binding limit and A37's 1.83-2.18 m window
 stands. The cost lands exactly where the prediction said it would: preload rises from 81 N to
 202 N per contact.
 

@@ -7,12 +7,12 @@ Verify with `git show --stat <this commit> -- analysis/backup_ejector.py`, which
 
 ## Why this run exists
 
-[A47](A47_gen6_fmea.md) found it is worth six times the entire architecture change.
+[A47](A47_LEGACY_STUDY_fmea.md) found it is worth six times the entire architecture change.
 
 | Change | Satellites delivered at *r* = 0.99 | Gain |
 |---|---:|---:|
-| Gen5 → Gen6, an entire architecture | 6.620 → 6.992 | **+0.37** |
-| **Gen6 → Gen6 with a per-cell ejector** | 6.992 → **9.261** | **+2.27** |
+| Gen5 → historical study, an entire architecture | 6.620 → 6.992 | **+0.37** |
+| **historical study → historical study with a per-cell ejector** | 6.992 → **9.261** | **+2.27** |
 
 Because it changes the structure rather than the count. Deleting subsystems removes shared
 elements one at a time; a mechanism in every cell makes the drive satellite-forfeiting instead of
@@ -37,7 +37,7 @@ Declared before the script. Not to be edited after the run.
 | # | Band | FAIL if |
 |---|---|---|
 | **1** | Ejector mass per cell at **1.5 m/s** on a 4 kg payload is **≤ 0.25 kg**, using `actuator_trade.py`'s spring energy density | Twelve of them cost more than the reliability they buy |
-| **2** | Twelve ejectors add **≤ 3.0 kg**, keeping added mass per satellite **≤ 2.0 kg** | It re-crosses the numerator Gen6 currently passes, which is what A47's +2.27 was bought against |
+| **2** | Twelve ejectors add **≤ 3.0 kg**, keeping added mass per satellite **≤ 2.0 kg** | It re-crosses the numerator historical study currently passes, which is what A47's +2.27 was bought against |
 | **3** | The ejector fits **inside the existing cell envelope** — `magazine.satellite_pitch_z` unchanged | It is not a per-cell addition, it is a magazine redesign |
 | **4** | Its stored energy is **≤ 2 %** of the gas shot's | A spring big enough to matter is a second drive, which is **PII-20** and was declined |
 | **5** | Re-running A47's model with the **designed** mass confirms delivery **≥ 9.0** satellites at *r* = 0.99 | The design erodes the benefit the design exists for |
@@ -76,7 +76,7 @@ highest-value reliability change in the record with it.
 A spring sized for a clean 1.5 m/s departure stores 4.5 J. Pushing the payload the length of a
 2.18 m sealed tube against A41's friction allowance costs 181.8 J. A shortfall of 40.4x.
 
-A47 priced a mechanism in the abstract. In Gen6 the payload is not sitting in an open cell, it
+A47 priced a mechanism in the abstract. In historical study the payload is not sitting in an open cell, it
 is in a tube, with a piston behind it, and if the drive is dead something has to move both.
 
 Sizing the spring to actually clear the tube costs the mass argument:
@@ -87,7 +87,7 @@ Sizing the spring to actually clear the tube costs the mass argument:
 | **Clearing the tube** | **0.726 kg** | **8.713 kg** | **2.129 kg — crosses** |
 
 So the change A47 valued at +2.27 satellites either does not work, or it re-crosses the one
-kill-criterion numerator Gen6 currently passes. Recorded as P81.
+kill-criterion numerator historical study currently passes. Recorded as P81.
 
 ### And P67 decides this too, which is now the fourth thing it decides
 
@@ -96,13 +96,13 @@ The 181.8 J is A41's friction *allowance* over the full stroke, the pessimistic 
 clearing energy collapses and the light ejector works.
 
 One bench test now governs four open decisions: this ejector, [A49](A49_design_surface.md)'s
-long-stroke design point, [ADR-033](../docs/adr/033-gen6-trim-stage.md)'s trim stage, and
+long-stroke design point, [ADR-033](../docs/adr/033-legacy_study-trim-stage.md)'s trim stage, and
 P77's pulse store. Nothing else in this project has that reach.
 
 ### What survives
 
 **Bands 1 to 6 all pass**, so the *concept* is sound wherever the payload does not have to
-traverse a sealed tube, a Gen5-style open cell, or a Gen6 variant that vents the tube and
+traverse a sealed tube, a Gen5-style open cell, or a historical study variant that vents the tube and
 disengages the piston. The failure is architectural, not conceptual, and that distinction is
 the deliverable.
 

@@ -2,7 +2,7 @@
   "analysis": "A49",
   "bands_declared_commit": "HEAD~1",
   "note": "ideal gas, closed adiabatic expansion, Coulomb friction constant over the stroke, tube as a plain cylinder at one wall thickness, no bending, no alignment tolerance, no dynamic seal behaviour. Every omission flatters a long tube. Store mass at the recommended point is scaled from A43 by gas ratio and is an ESTIMATE, not a sized store.",
-  "gen6_today": {
+  "legacy_study_today": {
     "p0_bar": 50.0,
     "L": 2.18,
     "work_J": 1864.821497279651,
@@ -390,7 +390,7 @@
     },
     {
       "n": "5",
-      "band": "a point exists beating Gen6 on velocity, peak g and gas at once",
+      "band": "a point exists beating LegacyStudy on velocity, peak g and gas at once",
       "got": "14 such points",
       "passed": true
     },

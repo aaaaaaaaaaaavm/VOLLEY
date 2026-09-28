@@ -1,7 +1,7 @@
 {
   "analysis": "A66",
   "bands_declared_commit": "e05551b, band 1R at 10d23b1 under ADR-037",
-  "note": "Tube shielding of the Gen6 trim stator. The wall is stationary so it sees full slip. Two independent methods. Nothing measured, E4.",
+  "note": "Tube shielding of the LegacyStudy trim stator. The wall is stationary so it sees full slip. Two independent methods. Nothing measured, E4.",
   "inputs": {
     "sigma_S_m": 35000000.0,
     "wall_m": 0.001,

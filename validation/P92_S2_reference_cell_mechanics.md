@@ -1,5 +1,8 @@
 # P92-S2: mechanical accumulator and catcher screen
 
+> **Architecture disposition, 2026-09-28:** The separate motor-charged spring-cell bank is withdrawn as VOLLEY's next architecture. It is retained here only as a dated study. Any selection or current-reference wording below describes the former decision and is superseded. A reusable shared launch path with sequential loading is the open design objective; no speed envelope is validated. See [current status](../docs/NEXT_GENERATION_STATUS.md).
+
+
 Declared 2026-09-16 before implementation or execution. Starting source: `682498b10b6e7182fe672b523f2eac51ddeb1ead`.
 
 I test the independent motor-charged retained-cell reference using a linear unloading spring, guided pusher and local catcher. This is an analytical sizing screen, not component selection or nominal CAD. The payload is 4 kg and target relative release speed is the first event of the accepted S4 fine-grid BOLLEY-authority campaign. The host recoil definition stays separate from internal payload/pusher motion.

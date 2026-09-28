@@ -46,7 +46,7 @@ run "manifest timing freshness" python3 analysis/manifest_timing.py --check
 run "operational uncertainty freshness" python3 analysis/operational_uncertainty.py --check
 run "combined release errors" python3 analysis/combined_release_errors.py --check
 run "reference cell mechanics" python3 analysis/reference_cell_mechanics.py --check
-run "Gen6 reference freshness" python3 analysis/reference_architecture.py --check
+run "LegacyStudy reference freshness" python3 analysis/reference_architecture.py --check
 # Properties and regressions. The self-test above checks the reference point; this checks
 # rules that must hold for any input, and reintroduces every defect the repository has
 # shipped to confirm a gate still catches it. Skipped with a stated reason rather than
@@ -62,7 +62,7 @@ if [ "${1:-}" = "--full" ]; then
     echo
     echo "== regenerate, then require no diff =="
     run "Gen5 CAD"       python3 cad/build_gen5.py --check
-    run "Gen6 CAD"       python3 cad/build_gen6.py --check
+    run "LegacyStudy CAD"       python3 cad/build_legacy_study.py --check
     run "payload family" python3 analysis/payload_family.py
     run "cell manifest"  python3 analysis/cell_manifest.py
     run "register file"  python3 tools/register_status.py

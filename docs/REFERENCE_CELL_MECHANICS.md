@@ -29,6 +29,6 @@ Measure force versus travel through the declared stroke, preload after dwell and
 
 Reject a candidate if the measured envelope violates its 10 g study ceiling, loses required contact, jams, relatches into the payload, ejects retained hardware or lets catcher rebound recontact it. Flight ascent retention, wear life, contamination and environmental acceptance require separately frozen specifications.
 
-[Declared criteria](../validation/P92_S2_reference_cell_mechanics.md) · [Complete result](../analysis/results/reference_cell_mechanics.json) · [Reference architecture](GEN6_REFERENCE_ARCHITECTURE.md)
+[Declared criteria](../validation/P92_S2_reference_cell_mechanics.md) · [Complete result](../analysis/results/reference_cell_mechanics.json) · [Reference architecture](LEGACY_STUDY_REFERENCE_ARCHITECTURE.md)
 
 Reproduce: `python analysis/reference_cell_mechanics.py --check`.

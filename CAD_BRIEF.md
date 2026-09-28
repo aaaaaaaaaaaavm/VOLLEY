@@ -9,9 +9,9 @@ and that file differ, `parameters.json` wins and this brief is wrong; report it.
 > Which machine are you modelling? Everything from here to *"What a good model would add"*
 > describes Gen5, nine Fusion documents around a sled, a stator and an eddy brake. That is the
 > analysed baseline and the brief for it is correct. It is not the current design target.
-> [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md) moved that to Gen6 on 2026-08-14,
-> which deletes all three. If you are modelling Gen6, read
-> [that section](#gen6--what-exists-and-the-three-parts-that-do-not) first, six parts are
+> [ADR-032](docs/adr/032-legacy_study-stage-integrated-gas-store.md) moved that to historical study on 2026-08-14,
+> which deletes all three. If you are modelling historical study, read
+> [that section](#legacy_study--what-exists-and-the-three-parts-that-do-not) first, six parts are
 > script-built, and the mechanism that pushes the satellite is not one of them.
 
 ---
@@ -192,16 +192,16 @@ silently drift across the nine documents. Change `parameters.json`, then regener
 
 ---
 
-## Gen6, what exists, and the three parts that do not
+## historical study, what exists, and the three parts that do not
 
 Added 2026-08-16. Everything above this line describes Gen5: nine Fusion documents built
-around a sled, a stator and an eddy brake. [ADR-032](docs/adr/032-gen6-stage-integrated-gas-store.md)
+around a sled, a stator and an eddy brake. [ADR-032](docs/adr/032-legacy_study-stage-integrated-gas-store.md)
 moved the design target on 2026-08-14 and deletes all three. Gen5 remains the analysed
 baseline and the brief above remains correct for it; it is simply no longer the machine being
 designed. *Both sentences said "measured baseline" until 2026-08-22, P107. Nothing in this
 project has been measured (E4), and this file was not a checked surface until then.*
 
-Read this section before starting any Gen6 modelling. Two of the six script-built parts are
+Read this section before starting any historical study modelling. Two of the six script-built parts are
 pressure vessels, and the mechanism that actually pushes the satellite has no geometry at all.
 
 ### The object
@@ -213,28 +213,28 @@ sense the Gen5 sled was.
 
 ### What is script-built today
 
-`cad/build_gen6.py` emits six parts into `cad/step/gen6/` from `cad/parameters.json`, groups
-`gen6_drive` and `gen6_store`. Do not re-enter any of these by hand, the parameter file is the
+`cad/build_legacy_study.py` emits six parts into `cad/step/legacy_study/` from `cad/parameters.json`, groups
+`LEGACY_STUDY_drive` and `LEGACY_STUDY_store`. Do not re-enter any of these by hand, the parameter file is the
 source and the build regenerates byte-stably.
 
 | Part | STEP | Governing parameters |
 |---|---|---|
-| Drive tube | `VOLLEY_Drive_Tube_Gen6.step` | bore 15.805 mm, stroke 8000 mm, wall 1.0 mm |
-| Carriage | `VOLLEY_Carriage_Gen6.step` | rides the tube; carries the cradle interface |
-| Chamber | `VOLLEY_Chamber_Gen6.step` | 2.0 L at 22.7258 bar, nitrogen |
-| Reservoir | `VOLLEY_Reservoir_Gen6.step` | 3.46 L at 200 bar |
-| Stage rail | `VOLLEY_Stage_Rail_Gen6.step` | the host-provided structure the rest mounts to |
-| Magazine cassette | `VOLLEY_Magazine_Cassette_Gen6.step` | carried across from Gen5's cell geometry |
+| Drive tube | `VOLLEY_Drive_Tube_legacy_study.step` | bore 15.805 mm, stroke 8000 mm, wall 1.0 mm |
+| Carriage | `VOLLEY_Carriage_legacy_study.step` | rides the tube; carries the cradle interface |
+| Chamber | `VOLLEY_Chamber_legacy_study.step` | 2.0 L at 22.7258 bar, nitrogen |
+| Reservoir | `VOLLEY_Reservoir_legacy_study.step` | 3.46 L at 200 bar |
+| Stage rail | `VOLLEY_Stage_Rail_legacy_study.step` | the host-provided structure the rest mounts to |
+| Magazine cassette | `VOLLEY_Magazine_Cassette_legacy_study.step` | carried across from Gen5's cell geometry |
 
 The reservoir is sized, not bracketed. [A56](validation/A56_reservoir_resized.md) sized it at
-[ADR-034](docs/adr/034-gen6-long-stroke-design-point.md)'s charge pressure rather than scaling it,
+[ADR-034](docs/adr/034-legacy_study-long-stroke-design-point.md)'s charge pressure rather than scaling it,
 and got 3.46 L, the bottle falls 63.8 % where the gas falls 54.55 %, because a lower target
 pressure lets it be drawn further down. P82 closed on it.
 
 > Corrected 2026-08-22, [P107](OPEN_PROBLEMS.md). This table read 2.0 L at 50 bar and
 > 11.25 L, and the paragraph above told a reader to *"model the reservoir at 11.25 L and expect
 > it to shrink."* It had already shrunk, twice: A42's 7.65/11.25 L bracket, then A43's 9.55 L, then
-> A56's sized 3.46. The STEP files were never wrong, `cad/build_gen6.py` reads both figures
+> A56's sized 3.46. The STEP files were never wrong, `cad/build_legacy_study.py` reads both figures
 > from `cad/parameters.json` and always has. *The prose was the stale copy.*
 
 ### The three parts that do not exist
@@ -253,7 +253,7 @@ tube with nothing in it.
 3. Stage attachment. The rail is drawn as a rail. How it attaches to a vehicle nobody has
    agreed to lend is not specified, and cannot be until a vehicle is named.
 
-### What a Gen6 model must not do
+### What a historical study model must not do
 
 - Do not size the reservoir from a velocity target. Velocity comes from *charge pressure* in a
   fixed 2 L chamber. The expansion ratio is the binding variable and it saturates: 2 L to 4 L buys
@@ -261,14 +261,14 @@ tube with nothing in it.
 - Do not add a regulator. A41 closed P63 by deleting it. Re-introducing one re-opens the
   largest guess in A39.
 - Do not carry Gen5 stations across. Release at 1500 mm, brake entry at 1530 mm and the
-  488 mm sled are Gen5 geometry and mean nothing here. The Gen6 stroke is 8000 mm and there is
+  488 mm sled are Gen5 geometry and mean nothing here. The historical study stroke is 8000 mm and there is
   no brake.
 
 ### Where the numbers live
 
-`cad/parameters.json` to `groups.gen6_drive` and `groups.gen6_store`, each carrying a `_source`
+`cad/parameters.json` to `groups.LEGACY_STUDY_drive` and `groups.LEGACY_STUDY_store`, each carrying a `_source`
 field naming the run it came from. `cad/DIMENSIONS.md` is built from the same file and lists
-both groups. `cad/BOM.md` does not yet cover Gen6, its masses come from
+both groups. `cad/BOM.md` does not yet cover historical study, its masses come from
 `analysis/mass_properties.py`, which is still Gen5's rollup.
 
 ## What a good model would add that the current one does not have

@@ -213,9 +213,10 @@ Saturation is recoverable. Remanent magnetisation is not, see 9.
 
 ### 8. Is 10.1 g tolerable for typical CubeSat payloads?
 
-Yes, with margin. The CubeSat Design Specification qualification cap used here is 25 g;
-the shot is 10.07 g, about 42 % of it. `docs/VELOCITY_CEILING.md` records that the 25 g
-cap, not the motor, is what limits exit velocity to 25.25 m/s over the 1.30 m stroke.
+Not established for a typical payload. The modelled shot is 10.07 g, about 42 % of the
+project's chosen 25 g study ceiling. The CubeSat Design Specification does not make that
+ceiling a universal qualification. `docs/VELOCITY_CEILING.md` shows what the chosen ceiling
+would permit over 1.30 m; a specific payload still needs a sustained-load and contact review.
 
 The caveat is duration, not magnitude: 162.3 ms is long compared with a pyroshock, and
 whether 25 g survives review as a *sustained* load rather than a transient is flagged in

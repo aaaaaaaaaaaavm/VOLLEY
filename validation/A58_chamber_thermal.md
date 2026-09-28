@@ -13,7 +13,7 @@ expansion cooling and twelve cycles of both are unmodelled.
 [A39](A39_store_trade.md) states it designs *"no cylinder, valve, seal or latch"*, and
 [A40](A40_blowdown_transient.md) that it does not model *"temperature drop in the chamber"*.
 
-[ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md) made both halves of it worse and
+[ADR-034](../docs/adr/034-legacy_study-long-stroke-design-point.md) made both halves of it worse and
 neither was checked.
 
 ## Two opposing effects, and both land on the same component
@@ -46,7 +46,7 @@ standing A39 gave its gas model.
 | Elastomer seal: c_p | **1500 J/kg·K** | |
 | **Seal mass** | **swept 0.5 – 10 g** | *NEEDS SOURCE: no seal exists in any file* |
 | Nitrogen condensation at 10.10 bar | **≈ 103 K** | |
-| Chamber, tube, friction, cadence | 0.3382 kg, 1.1404 / 3.294 kg, 83.4 N, 1200 s | `fill_window`, A49, A59, `gen6_dispersion` |
+| Chamber, tube, friction, cadence | 0.3382 kg, 1.1404 / 3.294 kg, 83.4 N, 1200 s | `fill_window`, A49, A59, `LEGACY_STUDY_dispersion` |
 
 The gas model, the friction force and the design point are imported, not restated, `pc.work`,
 `gd.FRICTION_N`, and `cad/parameters.json` through `precharged.design_point()`.

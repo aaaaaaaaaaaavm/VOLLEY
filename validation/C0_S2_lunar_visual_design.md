@@ -5,7 +5,7 @@ Adityavardhan Mishra · 17 September 2026
 Criteria declared before implementation. This study supports lunar-first concept
 review while detailed native CAD is being prepared. No hardware or lunar lifetime
 gate is closed. The mechanical-cell architecture remains distinct from historical
-gas Gen6. All geometry not inherited from MC-L2 is a packaging assumption.
+gas historical study. All geometry not inherited from MC-L2 is a packaging assumption.
 
 ## Question and frozen scope
 

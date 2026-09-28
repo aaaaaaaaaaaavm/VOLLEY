@@ -3,7 +3,7 @@
 Status: Accepted, Date: 2026-07-29, Phase: I
 
 ## Context
-Adopting the measured sled mass (ADR-012) broke three things that had nothing to do with mass,
+Adopting the CAD-calculated sled mass (ADR-012) broke three things that had nothing to do with mass,
 because each held a pasted copy of a value that moved:
 
 - `sizing.py` hard-coded 672 J copper loss and 26 J auxiliary. Energy closure fell to 94.2 %.

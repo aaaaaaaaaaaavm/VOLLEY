@@ -34,7 +34,7 @@ import math
 import os
 
 import precharged as pc
-import gen6_dispersion as gd
+import legacy_study_dispersion as gd
 import fill_window as fw
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')

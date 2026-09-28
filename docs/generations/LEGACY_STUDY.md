@@ -1,17 +1,19 @@
-# Gen6, the current design target
+# Historical gas-guide architecture study
+
+> **Withdrawn as the current architecture, 2026-09-28.** This page records a dated gas-guide model. Its numbers are configuration-specific calculations, not a selected VOLLEY design or qualified payload limits. See [current status](../NEXT_GENERATION_STATUS.md).
 
 Part of the [generation archive](README.md). Adopted 2026-08-14 by
-[ADR-032](../adr/032-gen6-stage-integrated-gas-store.md).
+[ADR-032](../adr/032-legacy_study-stage-integrated-gas-store.md).
 
 | | |
 |---|---|
-| Amended | 2026-08-16 by [ADR-033](../adr/033-gen6-trim-stage.md), a 39.7 mm trim stator at the muzzle. Gas for the energy, a motor for the control |
-| Amended | 2026-08-19 by [ADR-034](../adr/034-gen6-long-stroke-design-point.md), the stroke goes to 8.0 m, the host stage's whole usable acceleration length. Same velocity, 45.5 % of the acceleration, 45.5 % of the gas, and friction rises from 9.75 % to 28.39 % of shot work |
-| Status | CURRENT DESIGN TARGET. Not a baseline, nothing in it is measured, and Gen5 remains what every headline number is computed against |
-| Committed here | 6 STEP in `cad/step/gen6/`, 6 STL in `cad/stl/` |
-| Source document | [`cad/build_gen6.py`](../../cad/build_gen6.py), in this repository |
+| Amended | 2026-08-16 by [ADR-033](../adr/033-legacy_study-trim-stage.md), a 39.7 mm trim stator at the muzzle. Gas for the energy, a motor for the control |
+| Amended | 2026-08-19 by [ADR-034](../adr/034-legacy_study-long-stroke-design-point.md), the stroke goes to 8.0 m, the host stage's whole usable acceleration length. Same velocity, 45.5 % of the acceleration, 45.5 % of the gas, and friction rises from 9.75 % to 28.39 % of shot work |
+| Status | Retired gas-guide architecture study. Nothing in it is measured; Gen5 remains the frozen computational comparison |
+| Committed here | 6 STEP in `cad/step/legacy_study/`, 6 STL in `cad/stl/` |
+| Source document | [`cad/build_legacy_study.py`](../../cad/build_legacy_study.py), in this repository |
 | Rebuildable from this repository | Yes, byte-identically |
-| Second implementation | None. Gen5 has one; Gen6 does not, and the defect that found in Gen5 (P71) is the argument for building one |
+| Second implementation | None. Gen5 has one; historical study does not, and the defect that found in Gen5 (P71) is the argument for building one |
 
 ## What it is, and how it differs in kind
 
@@ -19,7 +21,7 @@ The payload is accelerated directly by cold gas along a rail a spent upper stage
 
 No mover. No stator. No supercapacitor bank. No power electronics. No eddy brake. No return
 stroke. 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charging is
-0.26 W average and 36 W peak ([A51](../../validation/A51_gen6_power.md)). *The 25-131 W this file quoted until 2026-08-16 was A37's spring-winding figure, P80.*
+0.26 W average and 36 W peak ([A51](../../validation/A51_LEGACY_STUDY_power.md)). *The 25-131 W this file quoted until 2026-08-16 was A37's spring-winding figure, P80.*
 
 | Part | Governing parameters |
 |---|---|
@@ -38,7 +40,7 @@ stroke. 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and chargin
 | Exit velocity | 34.280 m/s at 11.36 g | zero-friction. At A41's full tolerable friction scaled over the longer stroke, 29.009 m/s, P67 |
 | Stroke | 8.00 m | A37's whole usable acceleration length for a large upper stage |
 | Charge pressure | 22.73 bar | 50 bar until ADR-034 |
-| Peak acceleration | 11.36 g | against a 25 g payload qualification cap. Gen6 sat exactly on that cap until ADR-034 |
+| Peak acceleration | 11.36 g | compared with a 25 g project study ceiling, which is not a universal payload qualification. The earlier model sat exactly on that chosen ceiling until ADR-034 |
 | Gas per shot | 51.0 g | 112.3 g until ADR-034. A campaign of twelve costs 612.6 g against 1347.7 g |
 | Friction work | 28.39 % of shot work | 9.75 % until ADR-034, this is what the long stroke costs. P78 |
 | Dispersion, 3σ | 3.9798 % open-loop | 0.0274 m/s closed, with the trim stage, ADR-033. 98.68 % of the open-loop variance is seal friction. *A44's 1.113 % was the 2.18 m machine; [A55](../../validation/A55_trim_authority.md) re-ran it at ADR-034's stroke and [A61](../../validation/A61_seal_class.md) reproduced it, P83 confirmed and closed* |
@@ -66,13 +68,13 @@ sized on gas the bottle cannot give back; A43 found the bottle does not warm bac
 |---|---|
 | P67 | Precision rests on a seal friction nobody has measured, and no transducer buys it back |
 | P68 | ADR-032's first falsifier has fired. Break-even on the stage credit is 11.0 %, not the 30 % the ADR states, at A56's sized store ([A45-R2](../../validation/A45R2_stage_credit_resized_store.md); it was 8.4 % at A43's), and 58.6 % of that credit is the enclosure, a skin belonging to a vehicle nobody has agreed to lend |
-| P59 | Kill criterion 1 is unreachable by architecture and by manifest size. Gen6 does not change that |
+| P59 | Kill criterion 1 is unreachable by architecture and by manifest size. historical study does not change that |
 
 ## How this becomes the frozen baseline
 
-[`../GEN6_CLOSURE.md`](../GEN6_CLOSURE.md) sets it out in Phase I's own categories: seven
+[`../LEGACY_STUDY_CLOSURE.md`](../LEGACY_STUDY_CLOSURE.md) sets it out in Phase I's own categories: seven
 analyses that are computation, four decisions that are the owner's, and a measurement, P67,
-that can delete work rather than add it. Gen5 earned the label on five properties and Gen6 has
+that can delete work rather than add it. Gen5 earned the label on five properties and historical study has
 two.
 
 ## What does not exist
@@ -82,13 +84,13 @@ first falsifier. The cradle, 201.7 N per contact of preload releasing inside a <
 residual, with no mechanism in any file, and it must now hold magnets in alignment too. The piston, seals, valves and plumbing, A41 allows 1.5 kg and designs
 none of it. And the stage: no launch provider has agreed to keep one alive past passivation.
 
-Three of Gen5's crossed kill criteria are dissolved by Gen6 rather than passed. A criterion
+Three of Gen5's crossed kill criteria are dissolved by historical study rather than passed. A criterion
 that no longer applies has not been met, and [`docs/KILL_CRITERIA.md`](../KILL_CRITERIA.md) says
 so in those words.
 
 ## What this generation assumed about the host
 
-It assumed the host *is* the machine. Not a mounting surface, not a platform, the structure, the power, the thermal path and the avionics bay are the stage's, the rail is the stage, and since [ADR-034](../adr/034-gen6-long-stroke-design-point.md) the stroke is the stage's whole length.
+It assumed the host *is* the machine. Not a mounting surface, not a platform, the structure, the power, the thermal path and the avionics bay are the stage's, the rail is the stage, and since [ADR-034](../adr/034-legacy_study-long-stroke-design-point.md) the stroke is the stage's whole length.
 
 85.36 kg, 67.4 % of the ledger, is credited to the stage, and 29.75 kg is deleted outright. This is [ADR-002](../adr/002-host-is-a-spent-upper-stage.md)'s 2023 decision followed all the way down: if the stage supplies attitude control, power and mass, it can supply the structure too. The exposure that creates is [P68](../../OPEN_PROBLEMS.md), and it is the largest open defect in the design.
 

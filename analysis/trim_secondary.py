@@ -1,4 +1,4 @@
-"""A73: the Gen6 trim secondary, derived for the annulus it is actually drawn as.
+"""A73: the LegacyStudy trim secondary, derived for the annulus it is actually drawn as.
 
 P117. `analysis/trim_stage.py` sets the section's force as `KT * SHEET_A_PER_M / 1e3`, and A2
 defines that thrust constant over `motor_model.SLED_ACTIVE_LEN` -- 0.34 m of flat, DOUBLE-sided
@@ -46,18 +46,18 @@ DEPTH_GEN5 = mm.DEPTH                                 # 0.090 m
 ACTIVE_GEN5 = mm.SLED_ACTIVE_LEN                      # 0.340 m
 K_NORM = 45e3                                         # motor_model's own normalising sheet current
 
-BORE_M = G['gen6_drive']['bore_mm'] / 1e3
-WALL_M = G['gen6_drive']['tube_wall_mm'] / 1e3
-SECTION_M = G['gen6_trim']['section_length_mm'] / 1e3
-FORCE_N = G['gen6_trim']['force_N']
-K_SHEET = G['gen6_trim']['sheet_current_A_per_m']
-BELT_T_GEN6 = 6.0e-3                                  # cad/build_gen6.py trim_stator(), belt_t
+BORE_M = G['legacy_study_drive']['bore_mm'] / 1e3
+WALL_M = G['legacy_study_drive']['tube_wall_mm'] / 1e3
+SECTION_M = G['legacy_study_trim']['section_length_mm'] / 1e3
+FORCE_N = G['legacy_study_trim']['force_N']
+K_SHEET = G['legacy_study_trim']['sheet_current_A_per_m']
+BELT_T_LEGACY_STUDY = 6.0e-3                                  # cad/build_legacy_study.py trim_stator(), belt_t
 WIND_R_IN = BORE_M / 2.0 + WALL_M                     # same file: the winding starts at the wall
-PISTON_R_M = BORE_M / 2.0 - 0.1e-3                    # cad/build_gen6.py carriage(), circle()
+PISTON_R_M = BORE_M / 2.0 - 0.1e-3                    # cad/build_legacy_study.py carriage(), circle()
 PISTON_L_M = 12.0e-3                                  # same, .extrude(12.0)
 RHO_MAGNET = 7500.0                                   # kg/m3, NdFeB handbook. E4: not measured
 PER_SAT_BASE_KG = 1.296                               # A49, the figure trim_authority.py adds to
-SECTION_MASS_KG = G['gen6_trim']['added_mass_kg']
+SECTION_MASS_KG = G['legacy_study_trim']['added_mass_kg']
 N_MANIFEST = 12
 
 BELT_SEQ = [(0, +1), (2, -1), (1, +1), (0, -1), (2, +1), (1, -1)]
@@ -217,8 +217,8 @@ NX, NY, N_THETA = 120, 5, 2
 def annular_kt(depth_m, r_o=PISTON_R_M, active_len=SECTION_M, n_sect=N_SECT):
     sample, _ = annular_sampler(r_o - depth_m, r_o, n_lam=N_LAM, n_sect=n_sect,
                                 n_theta=N_THETA)
-    return lorentz_kt(sample, WIND_R_IN, WIND_R_IN + BELT_T_GEN6,
-                      lambda r: 2.0 * math.pi * r, active_len, BELT_T_GEN6, nx=NX, ny=NY)
+    return lorentz_kt(sample, WIND_R_IN, WIND_R_IN + BELT_T_LEGACY_STUDY,
+                      lambda r: 2.0 * math.pi * r, active_len, BELT_T_LEGACY_STUDY, nx=NX, ny=NY)
 
 
 def array_mass_kg(depth_m, length_m, r_o=PISTON_R_M, rho=RHO_MAGNET):
@@ -330,11 +330,11 @@ def build():
     return {
         'analysis': 'A73',
         'bands_declared_commit': '79eff67, before this file existed',
-        'note': ('The Gen6 trim secondary derived for the single-sided annulus cad/build_gen6.py '
+        'note': ('The LegacyStudy trim secondary derived for the single-sided annulus cad/build_legacy_study.py '
                  'draws, by motor_model own Lorentz integral. Closes P117. E4: nothing measured.'),
         'inputs': {'bore_m': BORE_M, 'wall_m': WALL_M, 'piston_radius_m': PISTON_R_M,
                    'piston_length_m': PISTON_L_M, 'winding_inner_radius_m': WIND_R_IN,
-                   'winding_thickness_m': BELT_T_GEN6, 'section_m': SECTION_M,
+                   'winding_thickness_m': BELT_T_LEGACY_STUDY, 'section_m': SECTION_M,
                    'specified_force_N': FORCE_N, 'sheet_current_A_m': K_SHEET,
                    'gen5_kt_N_per_kA_m': ACTIVE_GEN5 and b1['kt_motor_model_N_per_kA_m'],
                    'magnet_density_kg_m3': RHO_MAGNET, 'remanence_T': BR,
@@ -359,7 +359,7 @@ def main():
     r = build()
     b1 = r['verification']
     print(f"A73 trim secondary, annular, bore {BORE_M*1e3:.3f} mm, winding from "
-          f"{WIND_R_IN*1e3:.4f} mm over {BELT_T_GEN6*1e3:.1f} mm")
+          f"{WIND_R_IN*1e3:.4f} mm over {BELT_T_LEGACY_STUDY*1e3:.1f} mm")
     print(f"  verification: integral identity {b1['identity_rel']:.1e}, sector convergence "
           f"{b1['sector_convergence_rel']*100:.4f} %, large-radius limit "
           f"{b1['large_radius_rel']*100:.3f} %")

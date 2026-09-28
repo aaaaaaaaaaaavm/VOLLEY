@@ -1,4 +1,4 @@
-# Gen4, the last one drawn by a person
+# Gen4 Fusion CAD design
 
 Part of the [generation archive](README.md). The full configuration record is
 [`docs/GEN4_STATUS.md`](../GEN4_STATUS.md), which this file does not duplicate.
@@ -6,9 +6,9 @@ Part of the [generation archive](README.md). The full configuration record is
 | | |
 |---|---|
 | Status | PROVISIONAL, SUPERSEDED. Adopted 2026-08-03 by [ADR-019](../adr/019-gen4-open-assembly-before-export.md); superseded as the design by Gen5 |
-| Committed here | No STEP. No STL. Nothing. The render set in `cad/renders/` is all that exists of it |
+| Committed here | Render set in `cad/renders/`; no STEP or STL export from this revision is committed |
 | Source document | `EMOCD_Gen4_Open v7` in Fusion. Not in this repository, see [P74](../../OPEN_PROBLEMS.md) |
-| Rebuildable from this repository | No. Neither the model nor an export of it is here |
+| Rebuildable from this repository | No. The Fusion source documents and their exports are not committed here |
 | Export gate | Deliberately closed. ADR-019 records that Gen4 does not become the committed geometry until it is exported and reconciled. It never was |
 
 ## Why it exists
@@ -42,11 +42,11 @@ The render set on the front page. Seven shots, cropped and annotated by
 
 ## Why it was superseded
 
-Not because it was wrong. Because it could not be checked. Nine hand-maintained Fusion
-documents, no export, and stations that disagree with the analysis are exactly the failure
-`cad/parameters.json` warns about in its own header. Gen5 is the answer, and
-[ADR-026](../adr/026-cad-built-from-parameters.md) is the decision:
-[GEN5.md](GEN5.md).
+Gen4 is a substantial Fusion CAD design. The project did not commit a STEP export from that
+revision, and its modeled stations differ from the analysis assumptions. Those are traceability
+and reconciliation gaps in this repository, not a judgment about the quality of the Fusion work.
+[ADR-026](../adr/026-cad-built-from-parameters.md) records the later choice to build the
+[Gen5 comparison geometry](GEN5.md) from committed parameters.
 
 ## What this generation assumed about the host
 

@@ -19,7 +19,7 @@ armature, no plating, no electrical interface, and sits in a cradle on standard 
 ## Consequences
 This is the decision the whole value proposition rests on. It costs a reusable mechanism
 that must survive twelve arrests per campaign, a magazine feed, and a sled mass that directly
-subtracts from exit velocity, the 9.445 kg measured sled is why the headline is 16.5 m/s and
+subtracts from exit velocity, the 9.445 kg CAD-calculated sled is why the headline is 16.5 m/s and
 not 20.4 (ADR-012). It also creates a magnetic keep-out constraint for satellites still in
 the cassettes.
 

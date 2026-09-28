@@ -176,8 +176,9 @@ against 1268 J with neither.
 
 ### The constraint that decides it is the payload's g-limit, not the energy
 
-The energy is trivial; the question is whether the push can be delivered without exceeding
-the 25 g qualification limit that "unmodified CubeSat" depends on. Delivering 3.982 m/s to
+The payload's actual acceleration and contact limits are unknown. This calculation uses a
+**chosen 25 g study ceiling**, not a qualification applicable to every unmodified CubeSat.
+Delivering 3.982 m/s to
 4.0 kg is a 15.93 N·s impulse, over a 2 ms release that is 195 g and the option is dead. It
 is only the interaction *time* that decides this, and time is a design variable. Held at
 exactly 25 g:

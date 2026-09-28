@@ -1,11 +1,13 @@
 # Gen5, the frozen baseline
 
+> The later gas-guide target named in this historical record has also been withdrawn. See [current status](../NEXT_GENERATION_STATUS.md).
+
 Part of the [generation archive](README.md). Adopted by
 [ADR-026](../adr/026-cad-built-from-parameters.md).
 
 | | |
 |---|---|
-| Status | FROZEN BASELINE. Superseded as the *design target* by Gen6 on 2026-08-14 ([ADR-032](../adr/032-gen6-stage-integrated-gas-store.md)); not superseded as the frozen computational baseline |
+| Status | Frozen computational baseline. Replaced as the design target by a gas-guide study on 2026-08-14 ([ADR-032](../adr/032-legacy_study-stage-integrated-gas-store.md)); that target was later withdrawn |
 | Committed here | 8 STEP in `cad/step/gen5/`, 8 STL in `cad/stl/` |
 | Source document | [`cad/build_gen5.py`](../../cad/build_gen5.py), in this repository |
 | Rebuildable from this repository | Yes, byte-identically, from a clean clone |
@@ -36,7 +38,7 @@ It incorporates Gen4's recorded stations, release s = 1200 mm, brake entry s = 1
 |---|---|
 | P71 | Both sled rollers were outside their channels in every Gen5 STEP ever built, one inboard in the stator gap, one outboard of the longeron, the sled asymmetric about y = 0. Corrected 2026-08-16. Found by the second implementation, not by any guard here, because every guard compares a built artifact against the script that built it |
 | P46 | K<sub>t</sub> is a centre-plane value and overstates thrust by 4.42 %. Computed and held, not applied |
-| P26 | No purchasable supercapacitor bank sources the shot. Moot for Gen6, live for Gen5 |
+| P26 | No purchasable supercapacitor bank sources the shot. Moot for historical study, live for Gen5 |
 | P9 / envelope | 1839 mm against roughly 1270 mm of ESPA Grande, over by 44 % |
 
 ## What it is not
@@ -48,9 +50,9 @@ parameter describes.
 
 ## Why it was superseded as the target
 
-Three kill criteria crossed, and [ADR-032](../adr/032-gen6-stage-integrated-gas-store.md)
+Three kill criteria crossed, and [ADR-032](../adr/032-legacy_study-stage-integrated-gas-store.md)
 deletes the subsystems two of them were about rather than meeting them. Gen5 remains the
-frozen computational baseline and the record of what a self-contained deployer costs: [GEN6.md](GEN6.md).
+frozen computational baseline and the record of what a self-contained deployer costs: [historical gas-guide study](LEGACY_STUDY.md).
 
 ## What this generation assumed about the host
 
@@ -75,10 +77,10 @@ Gen5's concept of operations, in the order it happens:
 
 > So Gen5 is not an electromagnetic dispenser bolted to a passive ring. It is a
 > self-contained electromagnetic last-mile deployment mechanism operating aboard a post-primary
-> upper-stage delivery platform, the same mission Gen6 flies, implemented with far more of the
+> upper-stage delivery platform, the same mission historical study flies, implemented with far more of the
 > machinery carried by VOLLEY itself.
 >
-> That duplication is the weakness Gen6 attacks, and it is a weakness of the *integration*,
+> That duplication is the weakness historical study attacks, and it is a weakness of the *integration*,
 > not of the concept of operations.
 
 And it is where the cost of the assumption became measurable. [A46](../../validation/A46_enclosure_buildup.md) built the enclosure from its own geometry and found 50.04 kg against an 8.00 kg placeholder, a skin, a radiator and an avionics bay that a spent stage already carries. *The largest single mass in the machine was a duplicate of something the host already had.*

@@ -31,13 +31,13 @@ has chosen.
 
 | Input | Value | Source |
 |---|---|---|
-| Wall, conductivity | 1.0 mm, 3.5e7 S/m | `gen6_drive.tube_wall_mm`, `SIG_AL` in `analysis/phase1_closeout.py` |
-| Air-gap radius | bore/2 + wall/2 | `gen6_drive.bore_mm`, A66 |
-| Stroke, chamber, charge | 8.0 m, 2.0 L, 22.7258 bar | `gen6_drive.stroke_mm`, `gen6_store` |
+| Wall, conductivity | 1.0 mm, 3.5e7 S/m | `LEGACY_STUDY_drive.tube_wall_mm`, `SIG_AL` in `analysis/phase1_closeout.py` |
+| Air-gap radius | bore/2 + wall/2 | `LEGACY_STUDY_drive.bore_mm`, A66 |
+| Stroke, chamber, charge | 8.0 m, 2.0 L, 22.7258 bar | `LEGACY_STUDY_drive.stroke_mm`, `LEGACY_STUDY_store` |
 | Accelerated mass | 4.0 kg | `precharged.M_PAY` |
-| Seal friction | 83.4 N | A41 band 8's allowance, as `gen6_dispersion` uses it |
-| Exit velocity, zero friction / adopted | 34.28 / 29.01 m/s | `gen6_drive` |
-| Section force, sheet current | 948.0 N, 90 kA/m | `gen6_trim` |
+| Seal friction | 83.4 N | A41 band 8's allowance, as `LEGACY_STUDY_dispersion` uses it |
+| Exit velocity, zero friction / adopted | 34.28 / 29.01 m/s | `LEGACY_STUDY_drive` |
+| Section force, sheet current | 948.0 N, 90 kA/m | `LEGACY_STUDY_trim` |
 | Magnet remanence | 1.32 T | `motor_model.BR` |
 | Wavelength | 48 mm | `stator.wavelength` |
 
@@ -62,7 +62,7 @@ reaches 0.7539 at the muzzle, three quarters of the way to the peak of that curv
 ## What this run will not do
 
 It does not choose the fix, and it does not re-open [ADR-035](../docs/adr/035-drive-tube-material.md)
-or [ADR-033](../docs/adr/033-gen6-trim-stage.md). It computes what they cost together, which is
+or [ADR-033](../docs/adr/033-legacy_study-trim-stage.md). It computes what they cost together, which is
 the thing [P92](../OPEN_PROBLEMS.md#p92) said no document owns.
 
 It does not resolve [P117](../OPEN_PROBLEMS.md#p117). The 948.0 N it uses is the number A55
@@ -161,7 +161,7 @@ against 44.7× at the remanence. **The trade the ladder looks like it offers doe
 
 ### The two decisions are not expensive together, they are exclusive
 
-[ADR-033](../docs/adr/033-gen6-trim-stage.md) put the trim stator outside the tube and its magnets
+[ADR-033](../docs/adr/033-legacy_study-trim-stage.md) put the trim stator outside the tube and its magnets
 on the carriage. [ADR-035](../docs/adr/035-drive-tube-material.md) made that tube aluminium, four
 days later, on mass. Each is defensible on the questions asked of it. Together they put a
 permanent-magnet array and a stationary 35 000 S conducting sheet in relative motion at 34.28 m/s

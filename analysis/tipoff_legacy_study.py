@@ -1,5 +1,5 @@
 """
-VOLLEY | Does A34's cradle closure survive the Gen6 operating point?
+VOLLEY | Does A34's cradle closure survive the LegacyStudy operating point?
 
 WHY THIS EXISTS
 ---------------
@@ -21,7 +21,7 @@ is that this point has NOT moved yet. Checking before adopting is the whole disc
 Nothing here edits A34. Its closed forms are IMPORTED, not restated, so the two cannot fork;
 band 1 drives them at the Gen5 point and requires A34's own answer back.
 
-Bands declared in validation/A38_tipoff_at_gen6.md at 4e4bd58, BEFORE this file existed.
+Bands declared in validation/A38_tipoff_at_legacy_study.md at 4e4bd58, BEFORE this file existed.
 
 Provenance: model output, on A34's model. Restitution is swept, not measured, and the cradle
 mechanism still does not exist -- both limitations carry forward unchanged.
@@ -38,7 +38,7 @@ RESULTS = os.path.join(HERE, 'results')
 
 
 def _design_point():
-    """The Gen6 operating point, read live from the parameter file.
+    """The LegacyStudy operating point, read live from the parameter file.
 
     P102. This run was written at A37's window -- 25 g over 2.18 m -- and ADR-034 moved the
     design point to the host stage's whole usable length. Reading it here rather than restating
@@ -46,13 +46,13 @@ def _design_point():
     """
     path = os.path.join(os.path.dirname(HERE), 'cad', 'parameters.json')
     with open(path, encoding='utf-8') as fh:
-        d = json.load(fh)['groups']['gen6_drive']
+        d = json.load(fh)['groups']['legacy_study_drive']
     return d['acceleration_g'], d['stroke_mm'] / 1e3
 
 
 G = 9.81
 # The payload qualification cap, and band 6's declared threshold. NOT the design point --
-# ADR-034 runs at gen6_drive.acceleration_g, well under this. The band is not re-declared.
+# ADR-034 runs at legacy_study_drive.acceleration_g, well under this. The band is not re-declared.
 G_CAP = 25.0
 M_SAT = 4.0
 A34_SETTLE_MS = 27.25        # A34's published result at Gen5, for the band 1 regression
@@ -113,7 +113,7 @@ def main():
     arrive6, settle6, resid6 = worst(g6, cr.E_ALUMINIUM)
     ecrit6 = critical_e(g6)
 
-    print("                              Gen5 (A34)      Gen6 (design point)")
+    print("                              Gen5 (A34)      LegacyStudy (design point)")
     for label, k, fmt in (('acceleration, g', 'a_g', '%.2f'),
                           ('payload force, N', 'F_payload_N', '%.0f'),
                           ('offset moment, N.m', 'moment_Nm', '%.2f'),
@@ -173,17 +173,17 @@ def main():
                note='A34 is imported, not restated; its bands are untouched and its result '
                     'stands at the point it was declared for. Restitution swept not measured; '
                     'the cradle mechanism still does not exist.',
-               gen5=g5, gen6=g6, e_aluminium=cr.E_ALUMINIUM,
+               gen5=g5, legacy_study=g6, e_aluminium=cr.E_ALUMINIUM,
                gen5_settle_ms=settle5 * 1e3, gen5_e_crit=ecrit5,
-               gen6_worst_arrival_deg_s=arrive6, gen6_settle_ms=settle6 * 1e3,
-               gen6_residual_deg_s=resid6, gen6_e_crit=ecrit6,
+               legacy_study_worst_arrival_deg_s=arrive6, legacy_study_settle_ms=settle6 * 1e3,
+               legacy_study_residual_deg_s=resid6, legacy_study_e_crit=ecrit6,
                tipoff_ceiling_g=ceiling, qualification_cap_g=G_CAP,
                design_point=dict(a_g=DESIGN_G, stroke_m=DESIGN_STROKE_M,
-                                 source='cad/parameters.json gen6_drive, ADR-034'),
+                                 source='cad/parameters.json legacy_study_drive, ADR-034'),
                bands=[dict(band=n, name=nm, detail=d, pass_=ok)
                       for n, nm, d, ok in bands])
     os.makedirs(RESULTS, exist_ok=True)
-    path = os.path.join(RESULTS, 'tipoff_gen6.json')
+    path = os.path.join(RESULTS, 'tipoff_legacy_study.json')
     with open(path, 'w', encoding='utf-8') as fh:
         json.dump(out, fh, indent=2, default=float)
         fh.write('\n')

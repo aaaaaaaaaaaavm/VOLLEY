@@ -49,13 +49,13 @@ Declared before the script is changed. Not to be edited after the run.
 | # | Band | FAIL if |
 |---|---|---|
 | **1** | Credit reproduces A37's re-run **85.36 kg** to 0.01 kg | The re-run is not reading the corrected ledger |
-| **2** | At the full credit, added mass per satellite is **1.403 kg** within 0.5 % | Gen6's added-mass numerator moved, which A46 should not have touched |
+| **2** | At the full credit, added mass per satellite is **1.403 kg** within 0.5 % | historical study's added-mass numerator moved, which A46 should not have touched |
 | **3** | Every item carries a surviving fraction **with a written reason** — zero unjustified | Same failure A45 existed to avoid |
 | **4** | **Hostile reading keeps added mass per satellite ≤ 2.0 kg** | ADR-032 falsifier 1 still fires after the enclosure was properly itemised, so P68 is not an artefact of the placeholder |
 | **5** | Uniform break-even ≥ **30 %**, as ADR-032 states | The decision record's threshold is still wrong |
 | **6** | **Break-even is no worse than A45's 16.5 %** | Itemising the enclosure *reduced* the margin rather than clarifying it, and the credit growing is itself the problem |
 | **7** | Added mass per satellite **monotone decreasing** in surviving fraction | The model is not behaving |
-| **8** | The five enclosure lines are **less than half** the total credit | The stage credit has become mostly one subsystem, and the whole Gen6 mass case rests on a single assumption about somebody else's skin |
+| **8** | The five enclosure lines are **less than half** the total credit | The stage credit has become mostly one subsystem, and the whole historical study mass case rests on a single assumption about somebody else's skin |
 
 ## Predictions
 
@@ -96,7 +96,7 @@ the falsifier fires. ADR-032's threshold is now wrong by 3.6 times.
 
 ### Band 8 is the one that should worry a reader
 
-The five enclosure lines are 50.03 kg of an 85.36 kg credit, 58.6 %. The Gen6 mass case now
+The five enclosure lines are 50.03 kg of an 85.36 kg credit, 58.6 %. The historical study mass case now
 rests, majority-wise, on a single assumption about a skin belonging to a vehicle nobody has agreed
 to lend.
 

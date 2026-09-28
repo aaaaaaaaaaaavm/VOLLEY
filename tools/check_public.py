@@ -60,20 +60,20 @@ SURFACES = [
     # programme header. It carried "a conference contribution" for two weeks after the paper
     # repository stopped calling itself that. Checked here for exactly that reason.
     '../VOLLEY-lab/README.md',
-    # The CAD surfaces. Added 2026-08-22 after P107: build_gen6.py's header, cad/README.md and
+    # The CAD surfaces. Added 2026-08-22 after P107: build_legacy_study.py's header, cad/README.md and
     # CAD_BRIEF.md all described the pre-ADR-034 design point while the geometry they describe
     # read the current one from parameters.json. The STEP files were right and the prose was not,
     # which no gate here could see because none of these files was a checked surface.
     'cad/README.md',
     'CAD_BRIEF.md',
-    'cad/build_gen6.py',
+    'cad/build_legacy_study.py',
     # The generation pages and the lineage. Added 2026-08-22: "measured baseline" survived in
     # four of them for six days because none was a checked surface, and the phrase is the first
     # entry in the blocked list -- nothing here has been measured (E4).
     'docs/LINEAGE.md',
     'docs/GENERATIONS.md',
     'docs/generations/GEN5.md',
-    'docs/generations/GEN6.md',
+    'docs/generations/LEGACY_STUDY.md',
     'docs/BUILD_READINESS.md',
     'docs/MISSION_ARCHITECTURE.md',
     'docs/COMPUTATIONAL_CLOSURE.md',
@@ -104,7 +104,7 @@ BLOCKED = [
     (r'130 (?:defect|numbered|register)', 'the register count is generated -- read it from public_facts'),
     (r'\((?:1[0-7]) pages\)', 'the manuscript is 18 pages; a landing page must not state an older count'),
     (r'the conference paper', 'it is an IEEE-formatted manuscript; no venue has been selected'),
-    # Gen6 design-point values ADR-034 replaced. P107.
+    # LegacyStudy design-point values ADR-034 replaced. P107.
     (r'\b11\.25\s*L\b', 'pre-A56 reservoir; A56 SIZED it at 3.46 L and P82 closed'),
     (r'\b7\.65\s*L\b', 'the other end of the same superseded P64 bracket'),
     (r'\b9\.55\s*L\b', 'A43 reservoir, superseded by A56 at 3.46 L'),
@@ -121,20 +121,20 @@ BLOCKED = [
 ALLOW = [
     ('README.md', r'39\.7\s*mm',
      'dated 2026-08-14 timeline rows recording what ADR-032 decided at the time; the current '
-     'state is stated at the Gen6 table and again at the A55 resize'),
+     'state is stated at the LegacyStudy table and again at the A55 resize'),
     ('docs/GEN5_CLOSURE.md', r'\b16\.388\b',
      'the narrative of the ADR-030 correction, which has to name the value it replaced'),
     ('docs/GEN5_CLOSURE.md', r'\b84\.5\b|\b132\.5\b|\b76\.5\b|\b124\.5\b',
      'the P93 account of the paper mass defect, which is arithmetic on the superseded figures'),
     ('docs/index.html', r'\b16\.388\b',
      'the site\'s account of the same two corrections, in a section headed by their dates'),
-    ('cad/build_gen6.py', r'\b11\.25\s*L\b',
+    ('cad/build_legacy_study.py', r'\b11\.25\s*L\b',
      'the dated P107 correction block in the header, which names the figure it replaced'),
-    ('cad/build_gen6.py', r'\b7\.65\s*L\b',
+    ('cad/build_legacy_study.py', r'\b7\.65\s*L\b',
      'the same block: the superseded P64 bracket is named as superseded'),
-    ('cad/build_gen6.py', r'\b9\.55\s*L\b',
+    ('cad/build_legacy_study.py', r'\b9\.55\s*L\b',
      'the same block: A43 is named as the correction between A42 and A56'),
-    ('cad/build_gen6.py', r'(?:chamber|charge|reservoir)[^.\n]{0,40}\b50\s*bar\b',
+    ('cad/build_legacy_study.py', r'(?:chamber|charge|reservoir)[^.\n]{0,40}\b50\s*bar\b',
      'the same block, quoting the header line ADR-034 superseded'),
     ('CAD_BRIEF.md', r'\b11\.25\s*L\b',
      'the dated P107 correction paragraph, which has to name what it corrected'),
@@ -149,7 +149,7 @@ ALLOW = [
     ('docs/COMPUTATIONAL_CLOSURE.md', r'\b84\.5\b|\b132\.5\b|\b76\.5\b|\b124\.5\b',
      'the gate-replay table, which names the superseded value that was injected to make the '
      'cross-reference gate fire'),
-    ('docs/generations/GEN6.md', r'39\.7\s*mm',
+    ('docs/generations/LEGACY_STUDY.md', r'39\.7\s*mm',
      'the dated P107 correction naming the trim section A55 resized and ADR-036 suspended'),
     ('docs/BUILD_READINESS.md', r'\b9\.55\s*L\b',
      'the dated P107 correction naming A43\'s reservoir that A56 superseded'),

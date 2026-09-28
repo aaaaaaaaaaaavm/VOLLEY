@@ -39,7 +39,7 @@
   "per_satellite_kg": 1.6495810529308732,
   "housing_kg": 0.12,
   "generant_kg": 0.02,
-  "a47_gen6": 6.9922333708074795,
+  "a47_legacy_study": 6.9922333708074795,
   "a47_with_pyro": 9.261168439286433,
   "unpriced": [
     "range safety: twelve initiators on a launch vehicle is a licensing question, not an engineering one, and no file in this repository has ever priced it",

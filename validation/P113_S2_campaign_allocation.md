@@ -1,7 +1,7 @@
 # P113-S2: sequential orbital-energy delivery and host resources
 
 Declared 2026-09-14 before `analysis/campaign_allocation.py` exists.
-P113 and E5 remain open. This study cannot select Gen6 or establish compatibility.
+P113 and E5 remain open. This study cannot select historical study or establish compatibility.
 
 ## Decision and boundary
 

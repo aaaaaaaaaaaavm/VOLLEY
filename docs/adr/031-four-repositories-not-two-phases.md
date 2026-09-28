@@ -12,7 +12,7 @@ Phase I closed on 2026-08-13 ([ADR-029](029-phase-one-closes-on-gen5.md)).
 
 The phase model did real work and it is worth saying what. The freeze is what made
 `make_baseline.py --check`, the operating-point fork guard and the bands-before-scripts rule
-mean anything, and the boundary is what allowed Gen6 to be developed and then *not* adopted on
+mean anything, and the boundary is what allowed historical study to be developed and then *not* adopted on
 the day it looked best. Without a line, the search does not terminate.
 
 But the vocabulary costs more than it now buys. "Phase I" requires the reader to know the
@@ -105,7 +105,7 @@ and a frozen repository is easier to explain to a reader than a tag policy.
 A reader needs no glossary. Four repositories, four sentences, no roman numerals.
 
 Main can improve without ceremony, which is what it does anyway and what
-`GEN6_ARCHITECTURE.md` is queued for.
+`LEGACY_STUDY_ARCHITECTURE.md` is queued for.
 
 And the risk is named rather than hidden: main improving freely is exactly how the search
 becomes unbounded again. The protection is that nothing reaches paper or thesis without being

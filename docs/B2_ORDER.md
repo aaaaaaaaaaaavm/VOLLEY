@@ -58,7 +58,7 @@ would be the expensive mistake.*
 > introduced into a measurement whose entire purpose is to resolve a decision window under 4.5 N
 > wide.* Double-acting, no spring, both ports open to ambient unless band 7 pressurises one.
 >
-> And the deeper point, which the first version of this order did not state. VOLLEY's Gen6
+> And the deeper point, which the first version of this order did not state. VOLLEY's historical study
 > interface is a free piston in a bore. [ADR-035](adr/035-drive-tube-material.md) records that
 > the carriage is not recovered and that every seal makes exactly one 8.0 m pass, so the
 > machine has one dynamic seal and nothing else in the force path: no rod, no rod seal, no
@@ -108,7 +108,7 @@ seals are not oiled), and a dial indicator for stroke position. ₹2,500,  ₹7,
 | # | Question | Band | What a miss means |
 |---|---|---|---|
 | 1 | Breakaway friction, dry, at ambient, three units | report; >= 3 units, >= 10 pulls each | A single pull is an anecdote. The spread is the deliverable |
-| 2 | Running friction over the stroke, same units | report, with the 3σ spread | This is the term A44 found carries 93.4 % of Gen6's dispersion variance |
+| 2 | Running friction over the stroke, same units | report, with the 3σ spread | This is the term A44 found carries 93.4 % of historical study's dispersion variance |
 | 3 | Which side of 17.8 N the running friction falls | decides ADR-036 | *This is the whole purpose.* It is a discrimination, not a value |
 | 4 | Which side of 22.3 N | decides whether A66 is ever written | See the table above |
 | 5 | Unit-to-unit spread <= 20 % of the mean | <= 20 % | A44 swept ±20 % of the allowance and got 0.3115 m/s at 3σ. Above 20 % the dispersion claim is worse than modelled |
@@ -128,7 +128,7 @@ seals are not oiled), and a dial indicator for stroke position. ₹2,500,  ₹7,
 > |---|---|---|---|
 > | 9 | Direction dependence, pull each unit both ways | report both, with the spread | The piston travels one way and returns never. A seal with a lip is not symmetric, and if it is, that is a result too |
 > | 10 | Conditioning, first pull against the tenth against the last | report the trend over >= 30 pulls per unit | The machine fires twelve times ever. If breakaway falls after the first few pulls, the design point is the *unconditioned* seal and every figure taken from a bedded-in one is optimistic |
-> | 11 | The force, time trace, not the peak | commit the trace; report whether stick-slip appears | [A44](../validation/A44_gen6_dispersion.md) models friction as a constant allowance. Stick-slip inside a stroke is a different disturbance from a constant offset and would land on dispersion in a way the current model cannot represent |
+> | 11 | The force, time trace, not the peak | commit the trace; report whether stick-slip appears | [A44](../validation/A44_LEGACY_STUDY_dispersion.md) models friction as a constant allowance. Stick-slip inside a stroke is a different disturbance from a constant offset and would land on dispersion in a way the current model cannot represent |
 > | 12 | State the temperature the pulls were made at | report it, and the gap to A58's case | Band 8 enumerates air-side, low-speed and unpressurised, and does not name temperature. [A58](../validation/A58_chamber_thermal.md) puts the gas at 238 K, −35.2 °C every shot. *That omission is recorded here rather than repaired above* |
 >
 > None of these changes what the order buys. Bands 9-11 are how the same three cylinders are
@@ -143,7 +143,7 @@ seals are not oiled), and a dial indicator for stroke position. ₹2,500,  ₹7,
 >
 > | # | Question | Band | What a miss means |
 > |---|---|---|---|
-> | 13 | Is the non-target force measured on the same hardware? Pull each unit twice: complete, and again with the piston seal removed and everything else, rod, rod seal, wiper, bearing, alignment, speed, unchanged | both configurations, >= 3 units, >= 10 pulls each; report the difference and its spread | The rig measured a pneumatic cylinder and the run sheet claimed a Gen6 seal. A tare taken on different hardware, or estimated from a catalogue, does not satisfy this |
+> | 13 | Is the non-target force measured on the same hardware? Pull each unit twice: complete, and again with the piston seal removed and everything else, rod, rod seal, wiper, bearing, alignment, speed, unchanged | both configurations, >= 3 units, >= 10 pulls each; report the difference and its spread | The rig measured a pneumatic cylinder and the run sheet claimed a historical study seal. A tare taken on different hardware, or estimated from a catalogue, does not satisfy this |
 > | 14 | Does the result classify? Take the piston-seal friction as the band-13 difference, with its combined 3σ spread. That interval must lie wholly below 17.8352 N, wholly above 22.294 N, or wholly between them | it must not straddle either boundary | P67 is not answered. Band 8's third outcome applies, it is written down as not answered, and the vacuum test is what is needed |
 >
 > Band 14 declares no new tolerance. Both numbers are [A61](../validation/A61_seal_class.md)'s,
@@ -205,7 +205,7 @@ Thresholds from [ADR-036](adr/036-seal-specification-and-the-trim-stage.md) and
 `analysis/results/seal_class.json`, 17.8352 N at the thermal specification and 22.294 N at
 the trim-unnecessary fraction, both at the 15.805 mm bore and 22.7258 bar charge. Bore
 substitution from [A61](../validation/A61_seal_class.md) band 7. Dispersion share from
-[A44](../validation/A44_gen6_dispersion.md). Piston speeds derived from
-`gen6_drive.exit_velocity_m_s_zero_friction` and `stroke_mm`.
+[A44](../validation/A44_LEGACY_STUDY_dispersion.md). Piston speeds derived from
+`LEGACY_STUDY_drive.exit_velocity_m_s_zero_friction` and `stroke_mm`.
 
 Every price in section 1 is an estimate and no supplier has quoted any of it.

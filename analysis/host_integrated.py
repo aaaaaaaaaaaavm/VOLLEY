@@ -74,7 +74,7 @@ STAGE_PROVIDES = {
     'Fasteners and brackets': 'stage structure is already joined to itself',
 }
 
-# Deleted outright by Gen6 physics, and therefore neither added NOR stage-provided.
+# Deleted outright by LegacyStudy physics, and therefore neither added NOR stage-provided.
 # These are A35's C2 and C3 full-driver items: no mover, no pulse.
 DELETED_PREFIXES = ('Stator copper', 'Stator formers', 'Sled Halbach magnets',
                     'Sled Ti chassis', 'Sled CAD reconciliation', 'Sled rollers',
@@ -124,7 +124,7 @@ def main():
     deleted_kg = sum(r['kg'] for r in deleted)
 
     print("A35's ledger, reassigned:")
-    print(f"  deleted by Gen6 physics (no mover, no pulse)  {deleted_kg:7.2f} kg")
+    print(f"  deleted by LegacyStudy physics (no mover, no pulse)  {deleted_kg:7.2f} kg")
     print(f"  provided by a live stage                      {stage_kg:7.2f} kg")
     print(f"  ADDED -- what this machine still costs        {added_kg:7.2f} kg")
     for r in added:

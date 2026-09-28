@@ -10,7 +10,7 @@ This is deliberately a **local deterministic sensitivity study**, not a probabil
 
 ## Frozen nominal case
 
-Use the best tested **fine-grid, enumerated, either-order** P113-S4 campaign under the `BOLLEY` release-authority screen from the committed `analysis/results/manifest_timing.json` payload. This screen is used only because S4 reports the same best tested fuel result and first-release speed for BOLLEY, Gen5 and historical gas-Gen6 authority; it is not a BOLLEY hardware selection.
+Use the best tested **fine-grid, enumerated, either-order** P113-S4 campaign under the `BOLLEY` release-authority screen from the committed `analysis/results/manifest_timing.json` payload. This screen is used only because S4 reports the same best tested fuel result and first-release speed for BOLLEY, Gen5 and historical gas-guide study authority; it is not a BOLLEY hardware selection.
 
 The script must refuse to run if the S4 payload is stale against its source hashes or if the selected campaign is not accepted. Preserve both payload events and their actual release epochs, retained masses, separation vectors and terminal targets.
 
@@ -94,7 +94,7 @@ The normal verification path must include a freshness check for these outputs be
 
 ## What this can and cannot change
 
-This run may tighten or expose the **analysis requirements** that the Gen6 reference cell must later satisfy. It may identify release-speed, direction or common navigation terms as dominant. It may show that the current terminal-state bands are incompatible with plausible future error budgets.
+This run may tighten or expose the **analysis requirements** that the historical study reference cell must later satisfy. It may identify release-speed, direction or common navigation terms as dominant. It may show that the current terminal-state bands are incompatible with plausible future error budgets.
 
 It may **not** close P92, P113 or E5; select a sensor; claim provider compatibility; claim release repeatability; assign a probability of success; or convert a local linear allowance into a hardware requirement without a mission/host decision.
 

@@ -12,7 +12,7 @@
     "t_powered_s": 0.15009999999999846,
     "preload_N": 81.21458848792282
   },
-  "gen6": {
+  "legacy_study": {
     "a_g": 11.362895,
     "stroke_m": 8.0,
     "v_exit": 42.23174160746866,
@@ -25,16 +25,16 @@
   "e_aluminium": 0.7,
   "gen5_settle_ms": 27.876758924371433,
   "gen5_e_crit": 0.9262734333328188,
-  "gen6_worst_arrival_deg_s": 239.41008383169776,
-  "gen6_settle_ms": 26.239759209196418,
-  "gen6_residual_deg_s": 0.0,
-  "gen6_e_crit": 0.9711730502153033,
+  "legacy_study_worst_arrival_deg_s": 239.41008383169776,
+  "legacy_study_settle_ms": 26.239759209196418,
+  "legacy_study_residual_deg_s": 0.0,
+  "legacy_study_e_crit": 0.9711730502153033,
   "tipoff_ceiling_g": 30.9,
   "qualification_cap_g": 25.0,
   "design_point": {
     "a_g": 11.362895,
     "stroke_m": 8.0,
-    "source": "cad/parameters.json gen6_drive, ADR-034"
+    "source": "cad/parameters.json legacy_study_drive, ADR-034"
   },
   "bands": [
     {

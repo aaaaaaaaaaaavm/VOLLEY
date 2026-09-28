@@ -1,12 +1,10 @@
 """Generate cad/DIMENSIONS.md and cad/BOM.md from the sources that already hold the data.
 
-WHY THIS IS MACHINE-WRITTEN
+WHY THESE TABLES ARE GENERATED
 ---------------------
-A CAD agent reading this repository cross-references everything it finds and, in its own
-words, "conflicts and gaps are where CAD goes wrong". A hand-written dimension table is a
-second copy of `cad/parameters.json` that drifts from it -- which is precisely the failure
-`parameters.json` exists to prevent between the nine Fusion documents. So the table is
-derived, never typed: change `parameters.json`, re-run this, and the tables follow.
+A separately maintained dimension table is a second copy of `cad/parameters.json` and can
+drift from it. To keep the CAD dimensions traceable, these tables are derived from the
+committed parameters: change `cad/parameters.json`, re-run this script, and the tables follow.
 
 Masses and materials come from `analysis/mass_properties.py` by import, for the same reason
 `cost.py` imports it rather than re-entering the numbers. That module is authoritative for
@@ -44,7 +42,7 @@ def is_dim(k, v):
 # Longest suffix first: "_m_s" must be tested before "_s", "_m2" before "_m". The fallback is
 # millimetres because most of this file is geometry -- but a fallback that ASSERTS a unit is
 # worse than one that admits it does not know, and this table exists so that the assertion is
-# only made where it is true. Every physical quantity Gen6 added -- pressures in bar, masses in
+# only made where it is true. Every physical quantity LegacyStudy added -- pressures in bar, masses in
 # kg, a temperature ceiling in K -- read as "mm" until 2026-08-20, in the document whose whole
 # purpose is to be read instead of the JSON by whoever is cutting metal.
 _UNIT_SUFFIXES = (

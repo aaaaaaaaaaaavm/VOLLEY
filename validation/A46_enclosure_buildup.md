@@ -25,7 +25,7 @@ bays with coordinates.
 ## What is being built
 
 The Gen5 enclosure, because that is what the placeholder is in and what A35's ledger carries.
-Gen6 deletes it, the stage provides the skin, which is exactly why the number matters: it is
+historical study deletes it, the stage provides the skin, which is exactly why the number matters: it is
 the largest thing being credited away.
 
 | Element | From |

@@ -141,11 +141,11 @@ the answer.
 
 ### Where this leaves kill criterion 1
 
-Three routes existed. Two are now closed by measurement:
+For the frozen Gen5 model, two of the three sampled routes failed their declared calculation bands. This is a model result, not a physical measurement or proof that every future architecture fails:
 
 | | |
 |---|---|
-| **Architecture** | **Closed by A35.** 49.23 kg survives every requirement deletion in all 64 corners |
+| **Architecture in A35's modeled corners** | 49.23 kg survived every requirement deletion in that original 64-corner calculation; later A46 mass corrections are tracked separately. This does not screen a different shared-path architecture |
 | **Manifest size** | **Closed by A36 band 4.** Reachable only at N ≈ 116–126, outside the envelope or at its edge, on a 244.6 kg machine |
 | **Smaller payloads** | **Open.** `docs/PAYLOAD_CLASSES.md` already puts PocketQube at 0.266 kg/satellite. It closes the criterion and changes the product |
 

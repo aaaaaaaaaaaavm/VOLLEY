@@ -1,10 +1,10 @@
 # CAD
 
-> ## Gen6 is here too, and it is a different machine
+> ## historical study is here too, and it is a different machine
 >
-> [ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md). The payload is accelerated
+> [ADR-032](../docs/adr/032-legacy_study-stage-integrated-gas-store.md). The payload is accelerated
 > directly by cold gas along a rail the host stage provides, no mover, no stator, no brake, no
-> return stroke. `cad/build_gen6.py` generates it from the same `parameters.json`, and it is
+> return stroke. `cad/build_legacy_study.py` generates it from the same `parameters.json`, and it is
 > byte-stable across rebuilds like Gen5.
 >
 > Six parts, and only one of them is inherited: the magazine cassette. A36 and A37 agree from
@@ -20,7 +20,7 @@
 >
 > Corrected 2026-08-22, [P107](../OPEN_PROBLEMS.md). These three rows read 50 bar, 11.25 L
 > and 30.54 m/s at 25 g, the pre-ADR-034 design point. The geometry never moved with them:
-> `build_gen6.py` reads every one of these from `parameters.json`.
+> `build_legacy_study.py` reads every one of these from `parameters.json`.
 >
 > Three things it draws that are not settled, and they are in the script's own header rather
 > than only here: the cradle is an envelope, not a design, because A34 says the mechanism

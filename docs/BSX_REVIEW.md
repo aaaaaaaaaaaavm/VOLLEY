@@ -1,4 +1,4 @@
-# BSX review and Gen6 handoff
+# BSX review and LegacyStudy handoff
 
 Reviewed 2026-09-16. I use this as an engineering-conversation entry point. The live-item tables are generated from the register; configuration-specific history is retained rather than rewritten as current hardware.
 
@@ -8,40 +8,36 @@ VOLLEY Gen5 is a frozen computational baseline with declared failures. Nothing h
 
 The programme remains provider-hosted control of spacecraft departure conditions: provider-authorised host manoeuvres can supply coarse orbital placement and the deployment system supplies the relative release condition. Host propulsion reserve, restart capability, attitude control, navigation uncertainty, interface limits and disposal authority require provider data.
 
-## Current Gen6 preparation
+## Current architecture disposition
 
-The clean-sheet reference carried forward for the next calculations is **independent retained cells with a motor-charged mechanical accumulator, independent latch, short guided pusher and local catcher**. It is not selected flight hardware. P92/P113 remain open.
+The independent motor-charged cell bank was withdrawn as the next-generation reference on 2026-09-28. It remains a historical low-speed comparator. One reusable release path with sequential loading and commanded speed is the controlling design objective; no mechanism or speed envelope is selected.
 
-1. Turn S1-S4 into architecture-driving uncertainty and clearing/settling requirements before assigning release-cell tolerances.
-2. Quantify installed burden and failure topology for independent cells, small banks and the shared magazine/path using one system boundary.
-3. Try to falsify the reference before detailed CAD: accumulator force-displacement, preload sensitivity, latch shock, pusher friction/guidance, tip-off, catcher load and cycle life.
-4. Carry the surviving reference into a dated P92 configuration decision, then engineer one real cell and scale 2/4/12-cell arrangements.
-5. Keep the approximately 8 m gas guide, A72-A74 trim/tube conflict, P103/P108 contact work and pressure-system studies as historical gas-Gen6 evidence. Do not transfer their geometry or failure magnitudes to the compact reference without a new validation path.
+The S4 two-payload point near 4.57 m/s cannot define a product maximum. The S12 twelve-payload screens failed complete delivery in all six tested cases. The next trade must compare complete installed systems and full-manifest outcomes, including spent cell mass/volume and shared-path jam recovery.
 
-The generated live-item table below still reproduces each register entry's recorded next-step wording. P92's legacy row therefore describes the historical gas trim/tube decision that produced A72-A74; the current programme-level P92 path is the clean-sheet reference and its explicit falsifiers in [GEN6_REFERENCE_ARCHITECTURE.md](GEN6_REFERENCE_ARCHITECTURE.md). The register status remains LIVE until its native closure condition is legitimately dispositioned.
+Nothing has been built, fired or measured. P92/P113 remain open. Earlier register entries and numerical results retain their original configuration and are not product claims.
 
 ## Questions for BSX / host review
 
 - Launch provider: retained post-primary body, usable envelope/mounts/keep-outs, remaining propulsion and restart windows, stage mass properties, attitude authority, navigation uncertainty, power/energy, thermal limits, command access, and disposal/passivation constraints.
-- Mechanisms or test team: review independent retention, accumulator/latch/pusher/catcher load paths, release repeatability, shock/tip-off measurement and the smallest useful coupon before a flight-like cell is drawn.
+- Mechanisms or test team: review shared loading, retention, jam recovery, actuator and catcher load paths, release repeatability and the smallest useful coupon before flight-like geometry is drawn.
 - Payload team: actual retention, acceleration, shock, tip-off, contamination and magnetic limits. Unmodified is a design objective; compatibility is not demonstrated.
 
 ## Remaining work by scope
 
 | Scope | Computation | Hardware | Host data | Flight/operations | Decision |
 |---|---:|---:|---:|---:|---:|
-| GEN6 | 18 | 4 | 5 | 1 | 1 |
+| LEGACY_STUDY | 18 | 4 | 5 | 1 | 1 |
 | GEN5 | 11 | 0 | 0 | 0 | 3 |
 | PROGRAMME | 1 | 0 | 0 | 1 | 6 |
 
-## GEN6 live items
+## LEGACY_STUDY live items
 
 | Entry | Next step class | Action that would move it |
 |---|---|---|
 | [P57](../OPEN_PROBLEMS.md) | COMPUTATION | read the voice-coil deployer in full and record it in PRIOR_ART under that file's five fields |
 | [P67](../OPEN_PROBLEMS.md) | HARDWARE | measure the seal friction -- B-2 |
 | [P68](../OPEN_PROBLEMS.md) | HOST_DATA | a real stage interface: what a provider will actually credit |
-| [P75](../OPEN_PROBLEMS.md) | COMPUTATION | a Gen6 reliability architecture, the way A47 did Gen5 |
+| [P75](../OPEN_PROBLEMS.md) | COMPUTATION | a historical study reliability architecture, the way A47 did Gen5 |
 | [P78](../OPEN_PROBLEMS.md) | HARDWARE | it resolves with P67; the friction share is what is unmeasured |
 | [P79](../OPEN_PROBLEMS.md) | COMPUTATION | A76 has falsified inclination as the residual's cause; the reference orbits' own provenance is the next thing to check |
 | [P81](../OPEN_PROBLEMS.md) | COMPUTATION | an ejector concept that clears the tube on the energy available |
@@ -64,7 +60,7 @@ The generated live-item table below still reproduces each register entry's recor
 | [E5](../OPEN_PROBLEMS.md) | HOST_DATA | host stage propellant, authority and restart constraints |
 | [E6](../OPEN_PROBLEMS.md) | COMPUTATION | uncertainty range from a variable atmosphere, not a single multiplier |
 | [E7](../OPEN_PROBLEMS.md) | COMPUTATION | select a sensor from public data and use its stated noise |
-| [E11](../OPEN_PROBLEMS.md) | COMPUTATION | public material screening -- ASTM E595 class data for the Gen6 BOM |
+| [E11](../OPEN_PROBLEMS.md) | COMPUTATION | public material screening -- ASTM E595 class data for the historical study BOM |
 | [E16](../OPEN_PROBLEMS.md) | COMPUTATION | a reference audit against publisher records |
 | [E18](../OPEN_PROBLEMS.md) | COMPUTATION | a conjunction covariance from a defensible public source |
 

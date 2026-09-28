@@ -53,14 +53,14 @@ def design_point():
 
     ADR-034 moved the stroke to 8.0 m and the charge pressure to 22.73 bar in the parameter
     file, the CAD and eleven documents, and this module went on declaring 2.18 m and 25 g --
-    so gen6_dispersion.py and trim_stage.py, which both read STROKE from here, spent three
+    so legacy_study_dispersion.py and trim_stage.py, which both read STROKE from here, spent three
     days answering a superseded question. Nothing compared the parameter file against the
     scripts, so every gate stayed green. That is P84, and ADR-015's rule is derive, never
     paste.
     """
     with open(PARAMS, encoding='utf-8') as f:
         g = json.load(f)['groups']
-    d, s = g['gen6_drive'], g['gen6_store']
+    d, s = g['legacy_study_drive'], g['legacy_study_store']
     return dict(stroke=d['stroke_mm'] / 1e3, g_cap=d['acceleration_g'],
                 p_max=s['charge_pressure_bar'] * 1e5,
                 chamber_m3=s['chamber_volume_l'] / 1e3)
@@ -74,7 +74,7 @@ def check_against_parameters(tol=1e-3):
     """FAIL if the design point here and in cad/parameters.json have drifted apart.
 
     This is the check that did not exist. make_baseline.py compares the scripts against
-    their own outputs and build_gen6.py compares the CAD against the parameter file --
+    their own outputs and build_legacy_study.py compares the CAD against the parameter file --
     nothing compared the parameter file against the analysis. P84.
     """
     dp = design_point()
@@ -86,7 +86,7 @@ def check_against_parameters(tol=1e-3):
             fails.append(f'{name}: {got} against {want}')
     # the force the parameter file records must follow from the pressure it records
     with open(PARAMS, encoding='utf-8') as f:
-        d = json.load(f)['groups']['gen6_drive']
+        d = json.load(f)['groups']['legacy_study_drive']
     f_derived = dp['p_max'] * AREA
     if abs(f_derived - d['commanded_force_N']) > 0.5:
         fails.append(f"commanded_force_N: {f_derived:.3f} derived against {d['commanded_force_N']}")

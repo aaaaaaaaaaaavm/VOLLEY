@@ -102,7 +102,7 @@ Walking three 50 km shells costs ~ 55 m/s, well inside the host budgets A20 swep
 A one-year campaign needs 450 km, which is the altitude the project already baselines.
 
 So orbital mechanics is not the constraint on loiter. The stage keep-alive agreement is, and
-[A47](A47_gen6_fmea.md) already counts that as a manifest-forfeiting shared element that no launch
+[A47](A47_LEGACY_STUDY_fmea.md) already counts that as a manifest-forfeiting shared element that no launch
 provider has agreed to.
 
 ### Band 1 failed, and it invalidates the durations above as anything but upper bounds

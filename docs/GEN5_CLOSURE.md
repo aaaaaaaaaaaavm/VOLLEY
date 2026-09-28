@@ -99,7 +99,7 @@ deferred rather than taken.
 
 The Phase I freeze does not mean all computer work is complete. The live Gen5 work is listed
 in [BSX_REVIEW.md](BSX_REVIEW.md), generated from the register with an explicit next action.
-Failed kill criteria, unrun qualification and remaining calculations stay visible. Gen6
+Failed kill criteria, unrun qualification and remaining calculations stay visible. historical study
 preparation does not retire a Gen5 problem merely by changing architecture.
 
 ## What is deliberately left open
@@ -147,11 +147,11 @@ purchase."* It has not been ordered.
 
 > ### The benchtop programme belongs to Gen5, and that is worth stating plainly
 >
-> All four specified tests validate subsystems Gen6 deleted, B-1 and B-2 the motor,
-> B-3 the capacitor bank, B-4 the eddy brake. [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+> All four specified tests validate subsystems historical study deleted, B-1 and B-2 the motor,
+> B-3 the capacitor bank, B-4 the eddy brake. [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md)
 > removed all four on 2026-08-14.
 >
-> That is not a reason to skip them. It is the reason they are Gen5's closure rather than Gen6's
+> That is not a reason to skip them. It is the reason they are Gen5's closure rather than historical study's
 > start. B-1 changes E4 from true to false, *a change of category, not of degree*, and it
 > measures the field model that every Gen5 number in the table above descends from.
 
@@ -177,26 +177,26 @@ All of it is regenerated from `payload_family.json` and both PDFs are rebuilt an
 > the table, the prose carries 16.0 and the table carried 16.4. *The right number in the wrong
 > place hides the wrong number in the right one.*
 
-## Gen6, and why it is not in the paper
+## historical study, and why it is not in the paper
 
-On 2026-08-14 the design target changed. [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+On 2026-08-14 the design target changed. [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md)
 made the payload accelerate directly, by cold gas, along a rail a spent upper stage provides, no
 mover, no stator, no capacitor bank, no brake, no return stroke.
 
 Gen5 remains the entire technical contribution of the paper and thesis, and that is deliberate.
-Nothing in Gen6 is measured, its cradle mechanism does not exist, no launch provider has agreed to
+Nothing in historical study is measured, its cradle mechanism does not exist, no launch provider has agreed to
 lend a stage, and [ADR-036](adr/036-seal-specification-and-the-trim-stage.md) suspended its trim
 stage on 2026-08-20 pending a seal friction nobody has measured. A paper reports what has been
 analysed to a declared standard, not what looks best this week.
 
-Gen6 is documented in full in this repository, [`generations/GEN6.md`](generations/GEN6.md),
+historical study is documented in full in this repository, [`generations/LEGACY_STUDY.md`](generations/LEGACY_STUDY.md),
 ADRs 032 through 036, and the register, and it is future work.
 
 ## Where the rest of the programme lives
 
 | | |
 |---|---|
-| [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | The vault. Ideas that never became a complete thing, each with the number that stopped it, and where Gen6's own future work is parked |
+| [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | The vault. Ideas that never became a complete thing, each with the number that stopped it, and where historical study's own future work is parked |
 | [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | Gen5 as an IEEE-formatted manuscript. Frozen when published |
 | [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) | The same work as a full submission, with its defect register attached |
 | [engineering-evidence-toolkit](https://github.com/aaaaaaaaaaaavm/engineering-evidence-toolkit) | The consistency checks, extracted. Its own badge reads "scope: consistency, not validation", *that distinction is this project's thesis in miniature* |

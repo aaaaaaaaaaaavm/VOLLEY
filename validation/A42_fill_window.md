@@ -7,7 +7,7 @@ Verify with `git show --stat <this commit> -- analysis/fill_window.py`, which mu
 
 ## Why this run exists
 
-[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md)'s replacement falsifier, written
+[ADR-032](../docs/adr/032-legacy_study-stage-integrated-gas-store.md)'s replacement falsifier, written
 when A41 closed P63: *a 2 L chamber cannot be filled to 50 bar inside the inter-shot window.* A41
 specified the store and never checked that the store can be reloaded.
 

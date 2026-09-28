@@ -13,8 +13,8 @@ spring steel at an 8 m stroke, **78.5 % of everything added.** Band 4 was the fa
 [A35](A35_constraint_ledger.md) declared and left open, and it says the mass *relocated* rather
 than left.
 
-[A38](A38_tipoff_at_gen6.md) has since established that tip-off does not bind, its ceiling is
-30.9 g against a 25 g qualification cap, so the acceleration is free and the store is the only
+[A38](A38_tipoff_at_legacy_study.md) has since established that tip-off does not bind, its ceiling is
+30.9 g against a chosen 25 g study ceiling, so the acceleration is free and the store is the only
 thing left setting the design point.
 
 ## The budget, and where each number comes from
@@ -26,7 +26,7 @@ thing left setting the design point.
 | **Budget for store + mechanism** | **12.55 kg** |
 | A35's falsifier, the looser of the two | **14.26 kg** |
 | A37's feasible window | **1.83–2.18 m, 30.0–32.7 m/s** |
-| Acceleration cap | **25 g** (qualification), tip-off permits 30.9 |
+| Acceleration cap | **25 g** (chosen study ceiling), tip-off permits 30.9 |
 
 ## What is traded, and what is excluded
 
@@ -74,14 +74,14 @@ Declared before the script. Not to be edited after the run.
 | # | Band | FAIL if |
 |---|---|---|
 | **1** | The steel-spring row reproduces A37's store + mechanism at A37's selected point to **1 %** | The model is not the one that produced A37 and nothing below is comparable — the A38 band 1 lesson applied deliberately |
-| **2** | At least one store keeps **store + mechanism ≤ 12.55 kg** at **≥ 30 m/s** | Nothing fits the kill-criterion budget at the velocity A37's window needs, and Gen6 has no design point |
+| **2** | At least one store keeps **store + mechanism ≤ 12.55 kg** at **≥ 30 m/s** | Nothing fits the kill-criterion budget at the velocity A37's window needs, and historical study has no design point |
 | **3** | The selected store is inside **A35's 14.26 kg falsifier** | The mass relocated after all, and A35's C3 result does not mean what it appeared to |
 | **4** | The selected store reaches **≥ 35 m/s** while still inside the falsifier | **The velocity goal has no headroom.** A store that fits only at the bottom of A37's window means the design is at its limit the day it is drawn |
 | **5** | **Every** screened-out option carries the run that screened it | The trade looks narrower than the record supports |
 | **6** | The control — keeping the LSM — **exceeds** the 12.55 kg budget | The trade is rigged: if the incumbent fits, there was nothing to decide |
 | **7** | The selected store holds its energy from launch through the campaign **without active maintenance**, or the row names what maintains it | An unstated standby requirement is hiding in the answer |
 
-### Band 4 is the one that decides the shape of Gen6
+### Band 4 is the one that decides the shape of historical study
 
 A store that fits at 30 m/s and busts at 33 is a design with no margin on the only claim A21-R left
 standing. **Band 4 asks for headroom, not feasibility.**

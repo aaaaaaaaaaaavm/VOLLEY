@@ -359,10 +359,10 @@ decide whether any of this leaves the repository.
 > only the author can take. Then Phase I closes with E4, category D and category E open and
 > named, which is exactly the end state §9 defined before any of this year's work was done.
 
-What is explicitly not on this list: P52, and the whole of Gen6.
+What is explicitly not on this list: P52, and the whole of historical study.
 [ADR-029](adr/029-phase-one-closes-on-gen5.md) closes Phase I on Gen5, and Gen5's winding is
 segmented for fault isolation and driven as one section (ADR-022), so it has no segment
-handover and P52 cannot apply to it. Gen6's debts travel with Gen6.
+handover and P52 cannot apply to it. historical study's debts travel with historical study.
 
 ---
 

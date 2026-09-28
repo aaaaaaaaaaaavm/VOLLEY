@@ -7,7 +7,7 @@ Verify with `git show --stat <this commit> -- analysis/reservoir_resized.py`, wh
 
 ## Why this run exists
 
-[P82](../OPEN_PROBLEMS.md). [ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md) dropped
+[P82](../OPEN_PROBLEMS.md). [ADR-034](../docs/adr/034-legacy_study-long-stroke-design-point.md) dropped
 the charge pressure from 50 bar to 22.7258 bar and cut gas per shot by 54.55 %. The
 reservoir did not move: `cad/parameters.json` still carries 9.55 L at 200 bar, which
 [A43](A43_reservoir_thermal.md) sized around refills at 50 bar.
@@ -72,7 +72,7 @@ Declared before the script. Not to be edited after the run.
 | **3** | Required reservoir at **22.7258 bar** is **≤ 6.0 L** | The saving ADR-034's mass argument rests on is not there |
 | **4** | The conduction time constant at the resized reservoir still exceeds the **1200 s** cadence by **≥ 5×** | **A43's central finding is pressure-dependent**, the bottle does relax, and the no-relaxation figure was the wrong end all along |
 | **5** | Sized store mass at the resized reservoir is **≤ 4.10 kg** — the figure ADR-034 quotes from A49's scaling | **ADR-034's store figure was optimistic**, and its per-satellite number moves |
-| **6** | Added mass per satellite with the sized store stays **≤ 2.0 kg** | The design re-crosses the one kill-criterion numerator Gen6 passes |
+| **6** | Added mass per satellite with the sized store stays **≤ 2.0 kg** | The design re-crosses the one kill-criterion numerator historical study passes |
 | **7** | Twelve charges complete off the resized bottle with the **last fill inside the 10 s window** A42 declared | The bottle runs out or the fill stops fitting the cadence, which is what P64 caught A41 doing |
 | **8** | The minimum reservoir temperature stays above the **150 K** floor A43 declared | The gas is approaching condensation and the ideal-gas model stops being the right one |
 | **9** | **REPORT, no pass/fail.** Required reservoir and store mass against charge pressure, swept, so a future design point can be read off it | — |

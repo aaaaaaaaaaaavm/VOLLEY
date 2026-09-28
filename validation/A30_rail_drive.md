@@ -1,7 +1,7 @@
 # A30: can an induction drive couple to what the satellite already has?
 
 Entry criterion for [PII-16](../docs/VAULT.md) and the whole of
-[`../docs/GEN6_RAIL_DRIVE.md`](../docs/GEN6_RAIL_DRIVE.md).
+[`../docs/LEGACY_STUDY_RAIL_DRIVE.md`](../docs/LEGACY_STUDY_RAIL_DRIVE.md).
 
 `analysis/rail_drive.py` sizes a linear induction drive coupling to the CubeSat Design
 Specification's four aluminium corner rails, and it clears the thrust requirement, but only
@@ -124,7 +124,7 @@ pitch and identical slip. Dimensionless, in [0, 1].
 
 **Band: ≥ 0.35.**
 
-`rail_drive.py` assumes 0.55. `GEN6_RAIL_DRIVE.md` states that at 0.20 the design point falls to
+`rail_drive.py` assumes 0.55. `LEGACY_STUDY_RAIL_DRIVE.md` states that at 0.20 the design point falls to
 187 N and the idea is dead. 0.35 is the midpoint of the range the proposal itself named as the
 live/dead boundary, and it is set here before the answer is known.
 
@@ -146,7 +146,7 @@ was read off it.
 
 **Band: at the edge factor band 1 measures, with airgap clearance 2.0 mm and airgap flux density
 no greater than 0.60 T, the drive produces >= 413 N on a 3U, the thrust Gen5 delivers, and
-therefore the minimum at which Gen6 is not a downgrade.
+therefore the minimum at which historical study is not a downgrade.
 
 **This band may fail even if band 1 passes**, because band 1 is a ratio and this is a force.
 

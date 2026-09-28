@@ -108,7 +108,7 @@ jobs:
         run: python3 analysis/manifest_timing.py --check
       - name: operational uncertainty freshness
         run: python3 analysis/operational_uncertainty.py --check
-      - name: Gen6 reference freshness
+      - name: historical study reference freshness
         run: python3 analysis/reference_architecture.py --check
 
       - name: properties and regressions
@@ -164,6 +164,6 @@ jobs:
       - name: CAD against parameters
         run: |
           python3 cad/build_gen5.py --check
-          python3 cad/build_gen6.py --check
+          python3 cad/build_legacy_study.py --check
       - name: artifacts
         run: python3 tools/check_artifacts.py
