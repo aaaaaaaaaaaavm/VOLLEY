@@ -130,7 +130,7 @@ What it was for. Five runs, none of which set out to change the architecture:
 | A39 | replaced the spring with gas |
 
 What it deletes. No mover, no stator, no supercapacitor bank, no power electronics, no eddy
-brake, no return stroke. 29.75 kg deleted outright; charging is 0.26 W average, 36 W peak ([A51](../validation/A51_LEGACY_STUDY_power.md), the 25-131 W previously quoted was a *spring*-winding figure, P80).
+brake, no return stroke. 29.75 kg deleted outright; charging is 0.26 W average, 36 W peak ([A51](../validation/A51_legacy_study_power.md), the 25-131 W previously quoted was a *spring*-winding figure, P80).
 
 What it costs, stated rather than absorbed. Three of Gen5's crossed kill criteria are
 dissolved rather than passed, a criterion that no longer applies has not been met, and

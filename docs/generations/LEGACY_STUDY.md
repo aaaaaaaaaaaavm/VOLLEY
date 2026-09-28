@@ -21,7 +21,7 @@ The payload is accelerated directly by cold gas along a rail a spent upper stage
 
 No mover. No stator. No supercapacitor bank. No power electronics. No eddy brake. No return
 stroke. 29.75 kg deleted outright, 43.33 kg reassigned to the stage, and charging is
-0.26 W average and 36 W peak ([A51](../../validation/A51_LEGACY_STUDY_power.md)). *The 25-131 W this file quoted until 2026-08-16 was A37's spring-winding figure, P80.*
+0.26 W average and 36 W peak ([A51](../../validation/A51_legacy_study_power.md)). *The 25-131 W this file quoted until 2026-08-16 was A37's spring-winding figure, P80.*
 
 | Part | Governing parameters |
 |---|---|

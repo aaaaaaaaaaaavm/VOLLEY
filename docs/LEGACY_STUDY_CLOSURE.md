@@ -45,8 +45,8 @@ What has run since this file was written:
 |---|---|---|
 | [A49](../validation/A49_design_surface.md) | the velocity/acceleration/stroke surface | 7 of 9. Found 14 dominating points and produced [ADR-034](adr/034-legacy_study-long-stroke-design-point.md). Band 6 failed and is P78 |
 | [A50](../validation/A50_campaign_altitude.md) | the campaign with altitude free | Satellite life 476.6 d at 450 km; three 50 km shells for ~ 55 m/s. Opened P79; E28 stays open until the decay model meets a variable atmosphere |
-| [A51](../validation/A51_LEGACY_STUDY_power.md) | power and efficiency end to end | 7 of 8. 311.76 J/shot, 0.26 W average, 36 W peak. Traced the repeated "25-131 W" to a spring figure, P80 |
-| [A52](../validation/A52_LEGACY_STUDY_recoil.md) | recoil and angular impulse | 7 of 7. 116.03 N·s/shot, 1.81x Gen5. Answered E29 and closed a NEEDS SOURCE row: the thrust line must pass within 10.7 mm of the host centre of mass |
+| [A51](../validation/A51_legacy_study_power.md) | power and efficiency end to end | 7 of 8. 311.76 J/shot, 0.26 W average, 36 W peak. Traced the repeated "25-131 W" to a spring figure, P80 |
+| [A52](../validation/A52_legacy_study_recoil.md) | recoil and angular impulse | 7 of 7. 116.03 N·s/shot, 1.81x Gen5. Answered E29 and closed a NEEDS SOURCE row: the thrust line must pass within 10.7 mm of the host centre of mass |
 | [A53](../validation/A53_backup_ejector.md) | the per-cell backup ejector | 7 of 8. Band 7 failed by 40.4x at 2.18 m and by 148x at ADR-034's 8.0 m, P81. The highest-value reliability change in the record does not fit the architecture |
 
 What is still Category A, renumbered to what is actually free:

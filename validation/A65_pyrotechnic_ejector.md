@@ -14,7 +14,7 @@ the length of a sealed tube against [A41](A41_precharged_chamber.md)'s friction 
 8.0 m, a 148x shortfall.
 
 [P81](../OPEN_PROBLEMS.md) carries the consequence, and it is the most expensive open entry in
-the record: [A47](A47_LEGACY_STUDY_fmea.md) priced a per-cell ejector at +2.27 satellites delivered at
+the record: [A47](A47_legacy_study_fmea.md) priced a per-cell ejector at +2.27 satellites delivered at
 *r* = 0.99, against +0.37 for the entire Gen5 to historical study architecture change, six times more,
 because a mechanism in every cell makes the drive satellite-forfeiting instead of
 manifest-forfeiting, which is the only move that touches what E30 actually says.

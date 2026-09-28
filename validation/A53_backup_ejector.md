@@ -7,7 +7,7 @@ Verify with `git show --stat <this commit> -- analysis/backup_ejector.py`, which
 
 ## Why this run exists
 
-[A47](A47_LEGACY_STUDY_fmea.md) found it is worth six times the entire architecture change.
+[A47](A47_legacy_study_fmea.md) found it is worth six times the entire architecture change.
 
 | Change | Satellites delivered at *r* = 0.99 | Gain |
 |---|---:|---:|

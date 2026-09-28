@@ -501,7 +501,7 @@ number that does not stay inside that scope.
 
 A device sized to rescue a dead drive reproduces the drive. *If a per-cell gas generator can
 deliver the shot, the reservoir, the fill valve, the fire valve, the chamber and the 3.1216 kg store
-all stop being necessary, five of the seven shared elements [A47](../validation/A47_LEGACY_STUDY_fmea.md)
+all stop being necessary, five of the seven shared elements [A47](../validation/A47_legacy_study_fmea.md)
 counts, in an architecture whose shared elements are the whole of what E30 is about.*
 
 A65 refused to chase it and said so in the run sheet. The sizing there is deliberately a
@@ -541,7 +541,7 @@ against an unmoved 2.0 kg threshold, so it re-crosses the one numerator historic
 
 The redundancy does not buy what it looks like it buys. Of Gen5's nine manifest-forfeiting
 elements the drive is three. The sequencer, launch lock, magazine follower, escapement,
-retention gate and cradle stay single-path, and [A47](../validation/A47_LEGACY_STUDY_fmea.md) has since
+retention gate and cradle stay single-path, and [A47](../validation/A47_legacy_study_fmea.md) has since
 measured what that ceiling is worth: an entire architecture change moved expected delivery from
 6.620 to 6.992 satellites. Spending 37.89 kg to duplicate three of eight shared elements buys
 less than that.
@@ -562,7 +562,7 @@ since *v* ∝ √*E*. That is a degraded mode bought at nearly full mass, guaran
 > a band that should not have been declared, and its open question is what a 37.7 J at 28 kW
 > store weighs.
 >
-> The fail-safe half became [A47](../validation/A47_LEGACY_STUDY_fmea.md) band 8, and the answer is
+> The fail-safe half became [A47](../validation/A47_legacy_study_fmea.md) band 8, and the answer is
 > not a second drive. A per-cell backup ejector, a 1-2 m/s spring guaranteeing clearance,
 > takes expected delivery from 6.992 to 9.261 satellites at *r* = 0.99. Six times the
 > architecture change, because it converts the drive from manifest-forfeiting to
