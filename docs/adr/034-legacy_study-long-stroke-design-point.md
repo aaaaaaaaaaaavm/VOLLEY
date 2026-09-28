@@ -49,10 +49,10 @@ Velocity is held rather than taken, and that is the substantive choice in this A
 
 The Pareto front offers 30.97 m/s at 12.5 g and 52.62 m/s at 30.0 g on the same 8 m of
 stroke. Taking either would raise the headline number. It would also invalidate every downstream
-result in the repository at once, [A44](../../validation/A44_LEGACY_STUDY_dispersion.md)'s dispersion,
+result in the repository at once, [A44](../../validation/A44_legacy_study_dispersion.md)'s dispersion,
 [A50](../../validation/A50_campaign_altitude.md)'s campaign, [A15](../../validation/A15_poem_campaign.md)'s
 lifetime spread, [A20](../../validation/A20_reachable_envelope.md)'s envelope and
-[A52](../../validation/A52_LEGACY_STUDY_recoil.md)'s recoil are all computed on 29.009 m/s or its
+[A52](../../validation/A52_legacy_study_recoil.md)'s recoil are all computed on 29.009 m/s or its
 zero-friction twin. The velocity increase is available and it is unpriced, and this ADR
 declines to adopt a number whose consequences have not been run.
 
@@ -68,7 +68,7 @@ contact limits still require their own qualification.
 
 Gas per shot halves, and gas per shot is what the campaign is metered in. A campaign of twelve
 costs 612.6 g instead of 1347.7 g. This is the only axis on which "more efficient in power" has a
-defensible historical study meaning, since [A51](../../validation/A51_LEGACY_STUDY_power.md) established that historical study's
+defensible historical study meaning, since [A51](../../validation/A51_legacy_study_power.md) established that historical study's
 electrical draw is 0.26 W averaged and 36 W peak and was never the constraint.
 
 ## What this costs, stated rather than absorbed

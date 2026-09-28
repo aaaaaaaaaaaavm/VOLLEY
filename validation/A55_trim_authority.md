@@ -8,7 +8,7 @@ Verify with `git show --stat <this commit> -- analysis/trim_authority.py`, which
 ## Why this run exists
 
 [P83](../OPEN_PROBLEMS.md). [A48](A48_trim_stage.md) sized a 39.7 mm stator carrying
-±0.323 m/s against [A44](A44_LEGACY_STUDY_dispersion.md)'s dispersion of 1.113 % at 3σ, of which
+±0.323 m/s against [A44](A44_legacy_study_dispersion.md)'s dispersion of 1.113 % at 3σ, of which
 93.4 % was seal friction. Both were computed over a 2.18 m stroke.
 
 [ADR-034](../docs/adr/034-legacy_study-long-stroke-design-point.md) took the stroke to 8.0 m and tripled

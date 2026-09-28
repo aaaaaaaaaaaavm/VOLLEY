@@ -136,7 +136,7 @@ unanswered, and each of them belongs to the stage rather than to the engine.
 | Engine feed system and chill-down | the interval between restarts |
 | Restart sequencing and command authority after primary separation | whether the stage will still take commands |
 | Guidance, navigation and control | where the stage thinks it is when VOLLEY fires |
-| Attitude control and its authority | [P94](../OPEN_PROBLEMS.md), and [A52](../validation/A52_LEGACY_STUDY_recoil.md)'s requirement that the thrust line pass within 10.7 mm of the host centre of mass |
+| Attitude control and its authority | [P94](../OPEN_PROBLEMS.md), and [A52](../validation/A52_legacy_study_recoil.md)'s requirement that the thrust line pass within 10.7 mm of the host centre of mass |
 | Reaction control for fine manoeuvres | section 10, and it turns out to be the load-bearing one |
 | Electrical power and communications | keeping VOLLEY commandable for the length of the campaign |
 | Structural interface and VOLLEY mounting | [E31](../OPEN_PROBLEMS.md) |

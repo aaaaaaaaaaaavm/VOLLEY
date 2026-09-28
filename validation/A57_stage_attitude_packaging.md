@@ -8,7 +8,7 @@
 > The first run imported `attitude_budget.ASSUMED_ARM = 0.166 m`. That is A13's arm from a
 > Gen5 host centre of mass to the *deployer's*, and it does not describe a historical study geometry. For a
 > payload traversing the drive tube, the arm that matters is the perpendicular distance from the
-> host centre of mass to the **line of travel** — and [A52](A52_LEGACY_STUDY_recoil.md) band 4 already
+> host centre of mass to the **line of travel** — and [A52](A52_legacy_study_recoil.md) band 4 already
 > published a requirement on exactly that: the thrust line must pass within 10.65 mm of the host
 > centre of mass.
 >
@@ -53,7 +53,7 @@
 [`docs/KILL_CRITERIA.md`](../docs/KILL_CRITERIA.md), row 2, envelope and row 5, attitude
 rate at firing. Both were quantified for Gen5 and neither has been recomputed for the
 architecture now carried as the design target. Recoil was the third and
-[A52](A52_LEGACY_STUDY_recoil.md) closed it on 2026-08-19.
+[A52](A52_legacy_study_recoil.md) closed it on 2026-08-19.
 
 > ## BANDS DECLARED 2026-08-22, BEFORE `analysis/stage_attitude.py` EXISTS.
 >
@@ -173,7 +173,7 @@ it *cannot* be passed by inventing one.
 | Rail length as drawn | **8.2 m** | ADR-034, against A37's 8.0 m usable |
 | Exit velocity | **34.28 m/s** zero-friction, **29.01** at the allowance | `LEGACY_STUDY_drive`, both carried |
 | Host class | **300–900 kg**, parametric | **E5.** No candidate stage publishes a mass |
-| Wheel capacity for the offset comparison | 15 N·m·s | [A52](A52_LEGACY_STUDY_recoil.md), the same wheel, so the two runs are comparable |
+| Wheel capacity for the offset comparison | 15 N·m·s | [A52](A52_legacy_study_recoil.md), the same wheel, so the two runs are comparable |
 | Manifest | 12 | ADR-032 |
 
 **No host control authority is an input to this run.** That is deliberate and it is band 5.
@@ -231,7 +231,7 @@ so that the miss is dated, sized and carried in the results file rather than liv
 
 Payload mass and exit velocities from `cad/parameters.json` and `motor_model` by import, never as
 literals. Host mass range from E5, which is why it is a range. Wheel capacity from
-[A52](A52_LEGACY_STUDY_recoil.md), reused rather than re-chosen so the two attitude runs are comparable.
+[A52](A52_legacy_study_recoil.md), reused rather than re-chosen so the two attitude runs are comparable.
 
 Nothing in this run is measured. It is a rigid-body model of an internal mass translation on a
 vehicle whose mass and control authority are both undisclosed, and the second of those is why

@@ -111,7 +111,7 @@ launch multiplies the interface problem rather than solving it, and keeping a st
 manoeuvring past passivation is a regulatory conversation this project has not had.
 
 And the honest reading of the propellant. The residuals a stage carries are its disposal burn.
-historical study does not spend them, A39's charge budget is 25-131 W *(corrected 2026-08-16: that figure is A37's `charge_W_60s` for the spring option, not this architecture's. [A51](../../validation/A51_LEGACY_STUDY_power.md) measures historical study at 0.26 W average, 36 W peak. The decision stands; the number was never historical study's, P80)*, which is solar, and the
+historical study does not spend them, A39's charge budget is 25-131 W *(corrected 2026-08-16: that figure is A37's `charge_W_60s` for the spring option, not this architecture's. [A51](../../validation/A51_legacy_study_power.md) measures historical study at 0.26 W average, 36 W peak. The decision stands; the number was never historical study's, P80)*, which is solar, and the
 altitude-shell repositioning in [ADR-024](024-last-mile-delivery-conops.md) is therefore an option
 a host may decline without historical study failing.
 

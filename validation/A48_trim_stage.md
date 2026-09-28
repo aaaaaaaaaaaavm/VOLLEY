@@ -12,7 +12,7 @@ Asked in review: can historical study be gas *and* electromagnetic, each a fail-
 The mutual-redundancy form does not survive arithmetic and is recorded as
 [PII-20](../docs/VAULT.md) rather than run. For either drive to deploy alone, each must be
 sized for the full duty; A35 prices the electromagnetic half at C2 + C3 = 11.54 + 26.35 kg,
-which is exactly what ADR-032 deleted. And [A47](A47_LEGACY_STUDY_fmea.md) has since shown the payoff
+which is exactly what ADR-032 deleted. And [A47](A47_legacy_study_fmea.md) has since shown the payoff
 would be small anyway, an entire architecture change moved expected delivery by 0.37
 satellites.
 
@@ -127,7 +127,7 @@ its own bands.
 - The cradle, the carriage must hold magnets in alignment as well as the payload, and it
   already does not exist.
 - A velocity sensor before the trim section, which historical study has no equivalent of.
-- One more shared element in the FMEA, and [A47](A47_LEGACY_STUDY_fmea.md) has just shown that
+- One more shared element in the FMEA, and [A47](A47_legacy_study_fmea.md) has just shown that
   shared elements are what cost delivered satellites.
 
 ### The predictions

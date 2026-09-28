@@ -2247,7 +2247,7 @@ interface requirement, in ADR-010's successor or an amendment to it, stating the
 thrust-line-to-CoM offset, which is the number the budget exists to set. Neither exists.
 
 
-> Answered 2026-08-16 by [A52](validation/A52_LEGACY_STUDY_recoil.md), and the requirement now exists.
+> Answered 2026-08-16 by [A52](validation/A52_legacy_study_recoil.md), and the requirement now exists.
 > The angular impulse is 117.32 N·s x the CoM offset per shot, accumulating across twelve
 > because the magazine fires one way. The thrust line must pass within 10.7 mm of the host centre
 > of mass to keep a 15 N·m·s wheel unsaturated over a campaign; Gen5's equivalent was 19.5 mm.
@@ -3136,7 +3136,7 @@ propagated to the front page, the register header and the wiki source.
 > **Scope:** `LEGACY_STUDY` · **Next step:** `HARDWARE` — measure the seal friction -- B-2
 
 
-[A44](validation/A44_LEGACY_STUDY_dispersion.md) bands 4 and 6 failed, and both failed on the same term.
+[A44](validation/A44_legacy_study_dispersion.md) bands 4 and 6 failed, and both failed on the same term.
 
 | Term | 3σ alone | Share of variance |
 |---|---:|---:|
@@ -3485,7 +3485,7 @@ the exports that do exist have not been shown to be wrong.
 > **Scope:** `LEGACY_STUDY` · **Next step:** `COMPUTATION` — a historical study reliability architecture, the way A47 did Gen5
 
 
-[A47](validation/A47_LEGACY_STUDY_fmea.md) scored historical study on Gen5's own model, imported unchanged.
+[A47](validation/A47_legacy_study_fmea.md) scored historical study on Gen5's own model, imported unchanged.
 
 | | Elements | Manifest-forfeiting | Required *r* | Delivered at *r* = 0.99 |
 |---|---:|---:|---:|---:|
@@ -3742,7 +3742,7 @@ option's shot energy, the power needed to wind a spring across a sixty-second in
 historical study has no spring. Its reservoir is filled on the ground to 200 bar and nothing in the
 architecture recompresses gas on orbit.
 
-[A51](validation/A51_LEGACY_STUDY_power.md) computed the real figure from a named component list:
+[A51](validation/A51_legacy_study_power.md) computed the real figure from a named component list:
 
 | | |
 |---|---:|
@@ -3774,7 +3774,7 @@ real run, and only their applicability differs.
 [A53](validation/A53_backup_ejector.md) band 7 failed by a factor of forty, and it takes the
 highest-value reliability change in the record with it.
 
-[A47](validation/A47_LEGACY_STUDY_fmea.md) priced a per-cell ejector at +2.27 satellites delivered at
+[A47](validation/A47_legacy_study_fmea.md) priced a per-cell ejector at +2.27 satellites delivered at
 *r* = 0.99, against +0.37 for the entire Gen5 to historical study architecture change, six times more,
 because a mechanism in every cell makes the drive satellite-forfeiting instead of
 manifest-forfeiting, which is the only move that touches E30.
@@ -3895,7 +3895,7 @@ bands declared first, and wrote the sized volume into `parameters.json`.
 
 
 [ADR-033](docs/adr/033-legacy_study-trim-stage.md) exists because historical study cannot command velocity
-open-loop. [A44](validation/A44_LEGACY_STUDY_dispersion.md) measured 1.113 % at 3σ with 93.4 % of
+open-loop. [A44](validation/A44_legacy_study_dispersion.md) measured 1.113 % at 3σ with 93.4 % of
 the variance in seal friction, and [A48](validation/A48_trim_stage.md) sized a 39.7 mm stator
 carrying ±0.323 m/s to cover it.
 
@@ -4245,7 +4245,7 @@ It was present at A43's point and would have been found by anyone who looked pas
 > and that trade has not been run.
 
 What would close it: size the orifice against the *last* fill rather than the first, and check
-what the larger hole does to the pressure-setting resolution [A44](validation/A44_LEGACY_STUDY_dispersion.md)
+what the larger hole does to the pressure-setting resolution [A44](validation/A44_legacy_study_dispersion.md)
 depends on. Neither the cadence nor the store needs to change.
 
 ### P88. The seal cannot absorb its own friction, and P67 is a harder measurement than it has been described as: HIGH, NEW 2026-08-19
@@ -4996,7 +4996,7 @@ purpose.
 |---|---:|
 | Angular momentum the host absorbs per shot | 1.46 N·m·s |
 | Over a twelve-shot campaign | 17.53 N·m·s |
-| The wheel [A52](validation/A52_LEGACY_STUDY_recoil.md) declared | 15 N·m·s |
+| The wheel [A52](validation/A52_legacy_study_recoil.md) declared | 15 N·m·s |
 
 > Corrected 2026-08-22, hours after this entry opened. It first read 22.76 and 273.14 N·m·s.
 > A57 had used a lever arm 15.6x its own interface requirement, see P100, and the figures
@@ -5046,7 +5046,7 @@ up also closes it, which was not true at the figure this entry opened with.
 > **Status:** `CORRECTED` — found, fixed and propagated. Retained as the published record
 
 
-Found by reading [A52](validation/A52_LEGACY_STUDY_recoil.md) after
+Found by reading [A52](validation/A52_legacy_study_recoil.md) after
 [A57](validation/A57_stage_attitude_packaging.md) had already run and been recorded.
 
 [A57](validation/A57_stage_attitude_packaging.md) imported `attitude_budget.ASSUMED_ARM = 0.166 m`
@@ -5328,7 +5328,7 @@ all, only an axial one:
 |---|---|
 | Local clearance, bore against carriage, as a distribution | Not stated anywhere. `LEGACY_STUDY_drive.bore_mm` is a nominal 15.805 |
 | Bore straightness over 8.0 m | Not stated. [A59](validation/A59_tube_structure.md) needs seven supports at 1.0 m and models no resulting shape |
-| Force-line eccentricity, gas thrust axis against bore axis | No tolerance exists. [A52](validation/A52_LEGACY_STUDY_recoil.md) publishes a 10.65 mm requirement against the *stage* centre of mass, which is a different quantity |
+| Force-line eccentricity, gas thrust axis against bore axis | No tolerance exists. [A52](validation/A52_legacy_study_recoil.md) publishes a 10.65 mm requirement against the *stage* centre of mass, which is a different quantity |
 | Payload CG eccentricity | `cradle_restitution.COM_OFFSET` exists for the cradle moment and nothing sweeps it |
 | Friction law, breakaway and sliding, with spread | [P67](#p67). [`docs/B2_ORDER.md`](docs/B2_ORDER.md) is the order |
 | Contact stiffness and damping | Only as a restitution coefficient, swept not measured, inside A34 |
@@ -5396,7 +5396,7 @@ Ordered. B-2 calibrates step 2; it no longer gates it.
    lateral velocity, exit angular rate, peak contact load, and contact impulse count and timing.
 5. The results are checked against thresholds that already exist, the 2.0 °/s residual
    rate A38 band 2 was declared against and A23 quotes as the tighter flown deployer figure, and
-   the exit-velocity dispersion chain [A44](validation/A44_LEGACY_STUDY_dispersion.md) publishes.
+   the exit-velocity dispersion chain [A44](validation/A44_legacy_study_dispersion.md) publishes.
    For peak contact load and contact impulse there is no threshold in this repository, and the
    run that produces them will have to say against what they are being judged before it judges them.
 

@@ -128,7 +128,7 @@ seals are not oiled), and a dial indicator for stroke position. ₹2,500,  ₹7,
 > |---|---|---|---|
 > | 9 | Direction dependence, pull each unit both ways | report both, with the spread | The piston travels one way and returns never. A seal with a lip is not symmetric, and if it is, that is a result too |
 > | 10 | Conditioning, first pull against the tenth against the last | report the trend over >= 30 pulls per unit | The machine fires twelve times ever. If breakaway falls after the first few pulls, the design point is the *unconditioned* seal and every figure taken from a bedded-in one is optimistic |
-> | 11 | The force, time trace, not the peak | commit the trace; report whether stick-slip appears | [A44](../validation/A44_LEGACY_STUDY_dispersion.md) models friction as a constant allowance. Stick-slip inside a stroke is a different disturbance from a constant offset and would land on dispersion in a way the current model cannot represent |
+> | 11 | The force, time trace, not the peak | commit the trace; report whether stick-slip appears | [A44](../validation/A44_legacy_study_dispersion.md) models friction as a constant allowance. Stick-slip inside a stroke is a different disturbance from a constant offset and would land on dispersion in a way the current model cannot represent |
 > | 12 | State the temperature the pulls were made at | report it, and the gap to A58's case | Band 8 enumerates air-side, low-speed and unpressurised, and does not name temperature. [A58](../validation/A58_chamber_thermal.md) puts the gas at 238 K, −35.2 °C every shot. *That omission is recorded here rather than repaired above* |
 >
 > None of these changes what the order buys. Bands 9-11 are how the same three cylinders are
@@ -205,7 +205,7 @@ Thresholds from [ADR-036](adr/036-seal-specification-and-the-trim-stage.md) and
 `analysis/results/seal_class.json`, 17.8352 N at the thermal specification and 22.294 N at
 the trim-unnecessary fraction, both at the 15.805 mm bore and 22.7258 bar charge. Bore
 substitution from [A61](../validation/A61_seal_class.md) band 7. Dispersion share from
-[A44](../validation/A44_LEGACY_STUDY_dispersion.md). Piston speeds derived from
+[A44](../validation/A44_legacy_study_dispersion.md). Piston speeds derived from
 `LEGACY_STUDY_drive.exit_velocity_m_s_zero_friction` and `stroke_mm`.
 
 Every price in section 1 is an estimate and no supplier has quoted any of it.
