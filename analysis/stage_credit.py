@@ -51,7 +51,7 @@ def store_kg_current():
     two predecessors did.
     """
     with open(PARAMS, encoding='utf-8') as f:
-        return json.load(f)['groups']['gen6_store']['store_mass_kg']
+        return json.load(f)['groups']['legacy_study_store']['store_mass_kg']
 ADR_CLAIMED_BREAKEVEN = 0.30         # what ADR-032 states
 A45_BREAKEVEN = 0.165                # A45's break-even, for band 6 of the re-run
 TRIM_KG = 1.2328                     # A55's resized trim section, SUSPENDED by ADR-036 -- carried
@@ -200,7 +200,7 @@ def main():
     reconcile = [
         ('A45 / A45-R / P68', STORE_KG_A43, False, (base + STORE_KG_A43) / N),
         ('README, index.html, GENERATIONS', STORE_ADR034, False, (base + STORE_ADR034) / N),
-        ('generations/GEN6, with the trim stage', STORE_ADR034, True,
+        ('generations/LEGACY_STUDY, with the trim stage', STORE_ADR034, True,
          (base + STORE_ADR034 + TRIM_KG) / N),
         ('A45-R2, CANONICAL', store, False, (base + store) / N),
         ('A45-R2, with the suspended trim stage', store, True, (base + store + TRIM_KG) / N),

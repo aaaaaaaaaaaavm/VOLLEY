@@ -1,11 +1,11 @@
 # What VOLLEY actually is: a last-mile delivery vehicle, not a bigger spring
 
-> **Historical architecture narrative.** The sections below preserve the earlier concept and its assumptions. For the current mission, reopened Gen6 selection and evidence boundaries, read [the front page](../README.md) and [project continuity](CONTINUITY.md). In particular, conventional release speeds can differ, host structure is not free installed hardware, and no primary-mission isolation or provider accommodation has been demonstrated.
+> **Historical architecture narrative.** The sections below preserve the earlier concept and its assumptions. For the current mission, reopened historical study selection and evidence boundaries, read [the front page](../README.md) and [project continuity](CONTINUITY.md). In particular, conventional release speeds can differ, host structure is not free installed hardware, and no primary-mission isolation or provider accommodation has been demonstrated.
 
 > Nothing in this project has been built, fired, measured, qualified or flown, and no result
 > here has been reviewed by a third party. Every number is a script output.
 
-> ## Extended 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+> ## Extended 2026-08-14 by [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md)
 >
 > This file already had the idea and stopped one step short of it. §2 argues that a spent
 > stage is a waste rather than a necessity, and then treats it as a *host*, something VOLLEY is

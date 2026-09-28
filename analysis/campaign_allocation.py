@@ -18,7 +18,7 @@ INPUTS = dict(altitude_km=450, dry_mass_kg=300, fuel_kg=10, reserve_kg=2,
               burn_limits=[0, 2, 12], missions=['COMMON_ENERGY', 'ENERGY_LADDER'],
               screens={'fixed_1': [1, 1], 'spring_screen': [.5, 2],
                        'bolley_screen': [.5, 11.8], 'gen5_screen': [.5, 16.029],
-                       'gen6_screen': [.5, 29.009]})
+                       'legacy_study_screen': [.5, 29.009]})
 BURN_EPS = 1e-8
 
 
@@ -214,7 +214,7 @@ def report(data):
               'it is not a disposal, payload-orbit or collision-safety acceptance test.', '',
               'Both providers still need to supply interfaces. No common-stage mass credit or',
               'flight reliability follows from this resource screen. BOLLEY cage acceptance and',
-              'Gen6 contact/trim problems remain independent of these hypothetical speed intervals.', '',
+              'LegacyStudy contact/trim problems remain independent of these hypothetical speed intervals.', '',
               '## Reproduce', '', '```bash', 'python3 analysis/campaign_allocation.py',
               'python3 analysis/campaign_allocation.py --check',
               'python3 -m pytest tests/test_campaign_allocation.py', '```', '']

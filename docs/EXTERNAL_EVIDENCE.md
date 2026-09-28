@@ -43,7 +43,7 @@ at 400 kW/kg against the 23.20 required. P86 closed and ADR-033's falsifier 1 do
 | E30 / A47, the reliability the design must hit is unmeasured | Flight reliability data for canisterised dispensers | A47 computes what *r* must be, 0.99326, and cannot say what *r* is. Published deployment counts and failure records would give the comparator a real number instead of an assumed one |
 | P44, separation hardware outweighs a femtosat | ChipSat and femtosat deployer masses actually flown | The claim is a scaling argument with no flown datapoint under it |
 | P45 / A25, the flywheel is at mass parity, not a saving | Reaction-wheel and flywheel-store specific energy from flown units | A25's 1.1 kg band-4 failure is owned by one unsourced number, and it says so |
-| P57, the voice-coil deployer | Marked *"needs institutional access"* in `GEN6_CLOSURE.md` | May be a literature question rather than an access one |
+| P57, the voice-coil deployer | Marked *"needs institutional access"* in `LEGACY_STUDY_CLOSURE.md` | May be a literature question rather than an access one |
 | A21 comparators, spring dispenser performance | Published dispenser specifications | A21-R already uses one published figure; the comparison would be firmer with more |
 
 ---
@@ -64,11 +64,11 @@ attractive here than they are in a car.
 | P67 / P88 / P89, seal friction, unmeasured | Telescopic fork and damper rod seals, a sliding rod seal engineered against *breakaway friction* as its primary figure of merit, in hard-anodised aluminium bores | [A61](../validation/A61_seal_class.md) specified 17.8 N, 4.00 % of the pressure force. A component class whose whole design brief is minimising exactly that number is the closest existing analogue to VOLLEY's requirement | Fork seals run wet. Their friction figure is an oil-film figure. VOLLEY runs dry at −35 °C, and [A61's own note](../validation/A61_seal_class.md) is that the empirical factor is *"difficult to obtain unless evaluated on empirical lines"* |
 | P81, the backup ejector cannot clear the tube | Pyrotechnic gas generators, an automotive restraint inflator produces 0.5 to 0.9 mol of gas from 20 to 100 g of solid generant in roughly 30 ms, filling 60 L | [A53](../validation/A53_backup_ejector.md) failed band 7 because a spring stores 4.5 J and clearing the tube costs 667.2 J. A device in this class releases energy of a wholly different order, and it is one-shot, which the carriage already is. [A65](../validation/A65_pyrotechnic_ejector.md) tests it | Total gas temperature is 1000 to 1400 K and [ADR-035](adr/035-drive-tube-material.md) set a 473 K tube ceiling. The same ceiling foreclosed steam in [A63](../validation/A63_steam_design_point.md). Pyrotechnics also carry a range-safety and handling regime this repository has never priced |
 | P86, the trim stage's pulse store | Traction-inverter DC-link capacitors and capacitor-discharge ignition, the same metallised-film construction, sized for millisecond discharge into an inductive load | Already closed, by [A64](../validation/A64_pulse_store_technology.md), on pulsed-power literature. The vehicle route is the *second* independent path to the same answer, and it is the one built in volume | Nothing material. This row is here because it is the worked example: the store looked impossible at 23-37 kg only because an EDLC was the sole technology in the record |
-| [ADR-033](adr/033-gen6-trim-stage.md) falsifier 3, no velocity sensor exists | Variable-reluctance wheel-speed and resolver sensing, a passive, radiation-tolerant, non-contacting measurement of a moving steel feature | [A55](../validation/A55_trim_authority.md) records that *"there is still no velocity sensor in any file"*, and the loop has 1.4 ms to measure in. This class needs no optics and no window | A wheel sensor measures a rotating target at kHz. VOLLEY needs a linear velocity to a tolerance A44's dispersion sets, in a single pass, once |
-| E30 / A47, twelve-cycle series mechanisms forfeit the manifest | Sequential gearbox shift drums and detent escapements, a single-actuator indexer moving a fixed sequence of positions under load | [A47](../validation/A47_gen6_fmea.md) counts the escapement among the shared elements that forfeit everything remaining. A drum indexer is the same problem solved for a component with a very large field population | Field reliability for a gearbox is a warranty figure, not a mission figure, and it is measured on units that are serviced. It cannot be read across to twelve shots with no maintenance |
+| [ADR-033](adr/033-legacy_study-trim-stage.md) falsifier 3, no velocity sensor exists | Variable-reluctance wheel-speed and resolver sensing, a passive, radiation-tolerant, non-contacting measurement of a moving steel feature | [A55](../validation/A55_trim_authority.md) records that *"there is still no velocity sensor in any file"*, and the loop has 1.4 ms to measure in. This class needs no optics and no window | A wheel sensor measures a rotating target at kHz. VOLLEY needs a linear velocity to a tolerance A44's dispersion sets, in a single pass, once |
+| E30 / A47, twelve-cycle series mechanisms forfeit the manifest | Sequential gearbox shift drums and detent escapements, a single-actuator indexer moving a fixed sequence of positions under load | [A47](../validation/A47_LEGACY_STUDY_fmea.md) counts the escapement among the shared elements that forfeit everything remaining. A drum indexer is the same problem solved for a component with a very large field population | Field reliability for a gearbox is a warranty figure, not a mission figure, and it is measured on units that are serviced. It cannot be read across to twelve shots with no maintenance |
 | P78, the chamber-to-tube gas interface | Internal-floating-piston dampers, a gas charge separated from the working volume by a free piston with a single dynamic seal | The gas store and the bore meet somewhere, and no file draws that junction. This class is the standard answer to the same geometry | It is a *damper*, sized for cyclic low-rate motion. The pressure is comparable; the rate is not |
 
-> The strongest row is P81. It is the only one that could resurrect a defect [A53](../validation/A53_backup_ejector.md) closed as architectural, and [A47](../validation/A47_gen6_fmea.md) priced that defect at +2.27 satellites delivered against +0.37 for the entire Gen5 to Gen6 change, six times more. That is why it was run rather than listed.
+> The strongest row is P81. It is the only one that could resurrect a defect [A53](../validation/A53_backup_ejector.md) closed as architectural, and [A47](../validation/A47_LEGACY_STUDY_fmea.md) priced that defect at +2.27 satellites delivered against +0.37 for the entire Gen5 to historical study change, six times more. That is why it was run rather than listed.
 
 > The weakest is E30. *Automotive reliability data is abundant and is the wrong kind of number.* A warranty rate on a serviced, lubricated, million-cycle component says nothing about twelve unserviced shots in vacuum, and quoting it would be worse than the current honest blank.
 
@@ -105,22 +105,22 @@ That is the only kind of stop an outside source can move, and it is the lesson
 [A64](../validation/A64_pulse_store_technology.md) taught at the cost of A54.
 
 Most of the vault fails that test immediately, and it is worth saying why in one line. Nine
-entries stopped on 2026-08-14 because [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) deleted
+entries stopped on 2026-08-14 because [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md) deleted
 the subsystem they improve, no mover, no stator, no bank, no track. *No literature resurrects an
 optimisation of a part that no longer exists.* PII-9 describes a different programme and
 PII-8 a different vehicle; a source cannot supply a host. Those are stops by type, and they
 stay shut.
 
-Three entries survive the filter. One of them has a live route back into Gen6.
+Three entries survive the filter. One of them has a live route back into historical study.
 
 ### PII-19, the passive secondary, and it is aimed at the wrong generation's problem
 
 PII-19 stopped by attribution, not refutation: [A35](../validation/A35_constraint_ledger.md)
 measured the mover it optimises at 11 % of dry mass, so it was *"a careful, banded, correct
-optimisation of the wrong term."* That verdict was about Gen5's whole drive. Gen6 no longer has
+optimisation of the wrong term."* That verdict was about Gen5's whole drive. historical study no longer has
 one, but it has a 144.01 mm motor at the muzzle, and that motor has PII-19's exact problem.
 
-[ADR-033](adr/033-gen6-trim-stage.md) brought magnets back to the moving part and listed the
+[ADR-033](adr/033-legacy_study-trim-stage.md) brought magnets back to the moving part and listed the
 cost itself: *"P34, a payload carrying a magnetometer cannot fly in this magazine. This
 defect returns because the magnets do"*, plus E35, plus a cradle that must now hold magnets in
 alignment.
@@ -153,7 +153,7 @@ right."* [P45](../OPEN_PROBLEMS.md) then found it at mass parity, owned by one u
 and [A25](../validation/A25_flywheel_store.md) band 4 failed on it.
 
 > The external check settles it and the answer is no. The question a flywheel was competing for
-> is now Gen6's pulse store, and A64 answered it at ~70 g on published pulsed-power capacitor
+> is now historical study's pulse store, and A64 answered it at ~70 g on published pulsed-power capacitor
 > data. *A rotating machine, its bearings, its containment and its 7.15 N·m·s of stored angular
 > momentum are not going to beat seventy grams of film capacitor*, and the angular momentum is a
 > disturbance in a machine whose shot already dumps 3.28 N·m·s.
@@ -166,7 +166,7 @@ PII-11 §5 argued the straightness requirement had been overstated, *"a 3.3 m de
 a looser straightness requirement than the machine already meets"*, because an ironless Halbach
 airgap tolerates error at 1 mm of clearance and costs thrust rather than running away.
 
-Gen6's 8.0 m tube is not an airgap. It is a bore with a sliding seal in it, and a seal's job is
+historical study's 8.0 m tube is not an airgap. It is a bore with a sliding seal in it, and a seal's job is
 to *maintain* contact, so the same argument runs backwards: the tolerance that made a deployed
 track plausible does not exist here. [A59](../validation/A59_tube_structure.md) already found the
 tube needs seven supports, and P67, P88 and P89 all rest on a friction that bore
@@ -174,7 +174,7 @@ straightness and roundness directly set.
 
 | What is needed | Why it is gettable |
 |---|---|
-| Straightness and roundness tolerances for long honed and skived tube in the bore class Gen6 uses | It is a stock manufacturing specification, published per metre of length, for exactly the sliding-seal duty A61 specified. A61 already found a 16.000 mm ISO 6432 stock bore costs 0.00 % on the seal specification, the sourcing route into this design is open and has been used once |
+| Straightness and roundness tolerances for long honed and skived tube in the bore class historical study uses | It is a stock manufacturing specification, published per metre of length, for exactly the sliding-seal duty A61 specified. A61 already found a 16.000 mm ISO 6432 stock bore costs 0.00 % on the seal specification, the sourcing route into this design is open and has been used once |
 
 This does not reopen PII-11. It takes one paragraph of its arithmetic, notes that the sign flips,
 and points at three live entries that inherit the consequence.
@@ -194,7 +194,7 @@ nothing owns the interaction.
 ## Guided separation and contact dynamics, the cluster this file was missing
 
 Added 2026-08-22, after a sweep of the outside separation literature was reconciled against
-the record. It found the largest single gap in the Gen6 evidence, and it is not a number, it is a whole class of
+the record. It found the largest single gap in the historical study evidence, and it is not a number, it is a whole class of
 model this repository does not have.
 
 ### What the record has, and where it stops
@@ -203,9 +203,9 @@ model this repository does not have.
 |---|---|
 | [A23](../validation/A23_tipoff_release.md) | Tip-off rates against deployer classes. A comparison, not a mechanism |
 | [A34](../validation/A34_cradle_restitution.md) | The payload rattling across its cradle clearance, Gen5 |
-| [A38](../validation/A38_tipoff_at_gen6.md) | The same closed forms at the Gen6 point, corrected to ADR-034's stroke on 2026-08-22, P102 |
+| [A38](../validation/A38_tipoff_at_legacy_study.md) | The same closed forms at the historical study point, corrected to ADR-034's stroke on 2026-08-22, P102 |
 
-All three model the release interface. None models the guide. Gen6 accelerates a payload along
+All three model the release interface. None models the guide. historical study accelerates a payload along
 8.0 m of bore and this repository has no contact state along it: no straightness, no roundness,
 no local clearance, no force-line eccentricity, no payload centre-of-mass offset, and no lateral or
 angular state carried through the stroke. The chain that is modelled is chamber pressure to axial
@@ -237,7 +237,7 @@ Evidence level: ABSTRACT ONLY. What the published abstract states:
 > recommendation. VOLLEY's bore is 15.805 mm over 8.0 m and shares nothing with a 270 mm rail but
 > the physics.
 
-> Two of those land directly on Gen6. The tribological pair is the one
+> Two of those land directly on historical study. The tribological pair is the one
 > [ADR-035](adr/035-drive-tube-material.md) and [A61](../validation/A61_seal_class.md) chose,
 > hard-anodised aluminium against PTFE, and the output quantity is the one
 > [`KILL_CRITERIA.md`](KILL_CRITERIA.md) threat 4 is written in. *This is a guided ejection of a
@@ -369,7 +369,7 @@ about an engine.
 | A modularity or customization claim | The cryogenic coast limit that sets campaign duration |
 | That an ignition technology exists and has been fired | The flight interface ([E31](../OPEN_PROBLEMS.md)) and what a provider will credit ([P68](../OPEN_PROBLEMS.md)) |
 
-So no `HOST_DATA` entry moves, [E5](../OPEN_PROBLEMS.md) stays open, and the Gen6 computation
+So no `HOST_DATA` entry moves, [E5](../OPEN_PROBLEMS.md) stays open, and the historical study computation
 count is unchanged at seventeen. What the study produced instead is a list of the specific
 provider numbers that would replace each of its assumptions, which is the form E5 would actually
 be closed in if anyone ever supplied them.

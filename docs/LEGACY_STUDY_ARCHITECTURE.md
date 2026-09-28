@@ -1,6 +1,6 @@
-> # SUPERSEDED 2026-08-14 by [ADR-032](adr/032-gen6-stage-integrated-gas-store.md)
+> # SUPERSEDED 2026-08-14 by [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md)
 >
-> This file defines a Gen6 that no longer exists. It combines the vault's Phase II items into
+> This file defines a historical study that no longer exists. It combines the vault's Phase II items into
 > a linear induction drive on a passive aluminium mover, and it was the target for one day.
 >
 > What retired it is not a refutation. Every number below stands, and A30's, A31's and A32's
@@ -9,8 +9,8 @@
 > is 11 % of dry mass, so the whole synthesis below is a careful optimisation of the wrong
 > term. The pulse was 28.1 %, and an unmodified satellite cost nothing.
 >
-> Gen6 is now the payload accelerated directly, by gas, along a rail the host stage provides:
-> A35, A36, A37, A38, A39, and [ADR-032](adr/032-gen6-stage-integrated-gas-store.md).
+> historical study is now the payload accelerated directly, by gas, along a rail the host stage provides:
+> A35, A36, A37, A38, A39, and [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md).
 >
 > Nothing below is edited. It is the record of an architecture that was correct about its own
 > arithmetic and aimed at the wrong quantity, which is worth more kept than deleted.
@@ -163,7 +163,7 @@ promoted by meeting the criterion it was given."* PII-1 and PII-15 are recorded 
 superseded if PII-18 is promoted, which is a finding about their interaction, not a decision
 about their status.
 
-It is not sized. Nine measured bands stand behind PII-18's plate (A30 band 4/5, A31 bands
+It is not sized. Nine computed bands stand behind PII-18's plate (A30 band 4/5, A31 bands
 1-4, A32 bands 1-2). Zero stand behind the twin-fin geometry, the retention, the release, the
 850 mm stroke or the 3 kg of stator iron. Every number on this page above the band line is
 arithmetic over committed values; every number below it is a sketch.

@@ -32,11 +32,11 @@ Every one is already in the repository. No new material data enters this run.
 |---|---|---|
 | Drag over thrust | `σ d v B_net / 2K` | [A66](A66_tube_shielding.md), derived there |
 | Bands 3R and 4R | `L_force` against `L_parity` and `L_stall` | [A72](A72_trim_array_drag.md), imported not restated |
-| Aluminium sheet conductance at 1.0 mm | 35 000 S | `SIG_AL`, `gen6_drive.tube_wall_mm` |
+| Aluminium sheet conductance at 1.0 mm | 35 000 S | `SIG_AL`, `LEGACY_STUDY_drive.tube_wall_mm` |
 | Wavelength, and the decay it sets | 48 mm, `k` = 130.9 m⁻¹ | `stator.wavelength` |
-| Bore | 15.805 mm | `gen6_drive.bore_mm` |
+| Bore | 15.805 mm | `LEGACY_STUDY_drive.bore_mm` |
 | Wall the gas alone needs | 0.16 mm | [A59](A59_tube_structure.md), hoop at 13.9× margin |
-| Wall as drawn, and why | 1.0 mm, set by handling and A38's 201.7 N cradle preload | `cad/build_gen6.py` docstring, A59 |
+| Wall as drawn, and why | 1.0 mm, set by handling and A38's 201.7 N cradle preload | `cad/build_legacy_study.py` docstring, A59 |
 | The one lower-conductivity metal already priced | steel, **+2.154 kg** | A59 band 9, [A63](A63_steam_design_point.md), ADR-035 |
 
 ## Acceptance bands
@@ -56,7 +56,7 @@ Every one is already in the repository. No new material data enters this run.
 **It does not choose the tube material, and it does not name one.** It produces a number. E11 and
 E3 own the search against it, and neither is closed by this run.
 
-It does not re-open [ADR-033](../docs/adr/033-gen6-trim-stage.md) or
+It does not re-open [ADR-033](../docs/adr/033-legacy_study-trim-stage.md) or
 [ADR-035](../docs/adr/035-drive-tube-material.md). Which of the two yields is a programme decision
 and this run supplies one side of the input to it.
 
@@ -144,7 +144,7 @@ the brake is not local, and an insulator does not stop a field.
 
 `σd` falls with `d`, so the obvious move is to thin the tube. At the remanence the requirement is
 **18.8 µm**. [A59](A59_tube_structure.md) puts the wall the gas alone needs at **0.16 mm**, and
-`cad/build_gen6.py` sets the 1.0 mm as drawn by handling and by A38's 201.7 N cradle preload.
+`cad/build_legacy_study.py` sets the 1.0 mm as drawn by handling and by A38's 201.7 N cradle preload.
 
 **18.8 µm is 8.5× below the pressure floor and 53× below the wall as drawn.** No thickness of this
 metal works, so the material has to change.

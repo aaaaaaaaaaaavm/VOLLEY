@@ -10,7 +10,7 @@ Seven register entries in ten days were the same defect wearing different clothe
     P97   ADR-030 shortened the regenerative section and the recovery figure never moved with it
     P100  A57 used a lever arm 15.6x the interface requirement A52 had published six days earlier
     P101  the payload ladder D2 turns on divided a dry mass three corrections out of date
-    P102  the only Gen6 tip-off run stayed at a stroke ADR-034 had already replaced
+    P102  the only LegacyStudy tip-off run stayed at a stroke ADR-034 had already replaced
 
 **Every one of them is two files disagreeing about a shared quantity**, and every existing gate
 passed while they were true. `make_baseline.py --check` guards the twenty-three values BASELINE.md
@@ -25,7 +25,7 @@ WHAT A CROSS-REFERENCE IS
 -------------------------
 A quantity that two files both state, where one of them is the source and the other should agree.
 Each is declared below with both paths, a tolerance, and **why they must agree** -- because a pair
-that must NOT agree is the more common mistake. `gen6_seal.friction_max_N` is 17.8 N and
+that must NOT agree is the more common mistake. `legacy_study_seal.friction_max_N` is 17.8 N and
 `seal_class.specification.trim_unnecessary.friction_N` is 22.29 N, and they are supposed to
 differ: ADR-036 names them as two ends of a decision. That pair is not in this file, and the
 reason it is not is written down.
@@ -86,44 +86,44 @@ REFS = [
     ("energy recovered per shot",
      "motor_results", "regen.E_recovered", "sizing", "energy_closure.regen_recovered_J", 1.0, 0.5,
      "P97 again, and this is the half that was quoted on the front page"),
-    ("Gen6 stroke",
-     "parameters", "gen6_drive.stroke_mm", "stage_attitude", "inputs.stroke_m", 1000.0, 0.5,
+    ("LegacyStudy stroke",
+     "parameters", "legacy_study_drive.stroke_mm", "stage_attitude", "inputs.stroke_m", 1000.0, 0.5,
      "P84: ADR-034 moved the stroke and left the scripts behind"),
-    ("Gen6 exit velocity, zero friction",
-     "parameters", "gen6_drive.exit_velocity_m_s_zero_friction",
+    ("LegacyStudy exit velocity, zero friction",
+     "parameters", "legacy_study_drive.exit_velocity_m_s_zero_friction",
      "stage_attitude", "inputs.v_exit_zero_friction_m_s", 1.0, 0.5,
      "the same propagation as the stroke, one field along"),
-    ("Gen6 charge pressure, adopted point",
-     "parameters", "gen6_store.charge_pressure_bar",
+    ("LegacyStudy charge pressure, adopted point",
+     "parameters", "legacy_study_store.charge_pressure_bar",
      "trim_authority", "adopted_point.p0_bar", 1.0, 0.5,
      "A55 carries BOTH points deliberately -- a44_point at 50 bar and adopted_point at the "
      "design point. The adopted one must track the parameter file or the published 3.9798 % "
      "dispersion is quoted at a pressure the machine does not use"),
-    ("Gen6 stroke, adopted point",
-     "parameters", "gen6_drive.stroke_mm",
+    ("LegacyStudy stroke, adopted point",
+     "parameters", "legacy_study_drive.stroke_mm",
      "trim_authority", "adopted_point.stroke_m", 1000.0, 0.5,
      "the other half of A55's adopted point, and the half ADR-034 moved"),
     ("piston pressure force",
-     "parameters", "gen6_drive.commanded_force_N", "seal_class", "pressure_force_N", 1.0, 0.5,
+     "parameters", "legacy_study_drive.commanded_force_N", "seal_class", "pressure_force_N", 1.0, 0.5,
      "A61 specifies the seal as a FRACTION of this force -- 4.00 % is 17.8352 N only while the "
      "force is 445.88. If the design point moves and this does not, both B-2 thresholds move "
      "silently underneath ADR-036"),
     ("seal specification",
      "seal_class", "specification.seal_thermal.friction_N",
-     "parameters", "gen6_seal.friction_max_N", 1.0, 0.5,
+     "parameters", "legacy_study_seal.friction_max_N", 1.0, 0.5,
      "P89 put the specification into the parameter file. B-2 bands 3, 4 and 14 are quoted "
      "against the parameter file's copy and A61 owns the original"),
     ("seal friction allowance",
-     "parameters", "gen6_seal.friction_allowance_N",
-     "gen6_dispersion", "friction_N", 1.0, 0.5,
+     "parameters", "legacy_study_seal.friction_allowance_N",
+     "legacy_study_dispersion", "friction_N", 1.0, 0.5,
      "A41's ceiling is what A44's dispersion is driven by, and 93.4 % of that dispersion's "
      "variance is this one term"),
-    ("Gen6 design-point acceleration",
-     "parameters", "gen6_drive.acceleration_g", "tipoff_gen6", "design_point.a_g", 1.0, 0.5,
-     "P102. A38 is the only run that takes tip-off to Gen6 and it held 25 g as a module constant "
+    ("LegacyStudy design-point acceleration",
+     "parameters", "legacy_study_drive.acceleration_g", "tipoff_legacy_study", "design_point.a_g", 1.0, 0.5,
+     "P102. A38 is the only run that takes tip-off to LegacyStudy and it held 25 g as a module constant "
      "while ADR-034 moved the design point. Every cradle figure it publishes scales with this"),
-    ("Gen6 design-point stroke, tip-off",
-     "parameters", "gen6_drive.stroke_mm", "tipoff_gen6", "design_point.stroke_m", 1000.0, 0.5,
+    ("LegacyStudy design-point stroke, tip-off",
+     "parameters", "legacy_study_drive.stroke_mm", "tipoff_legacy_study", "design_point.stroke_m", 1000.0, 0.5,
      "P102, the other half. 2.18 m was A37's window and the stroke is now the stage's whole "
      "usable length; the powered time every settling band is measured against descends from it"),
     ("Gen5 dry mass, designed cell",
@@ -137,7 +137,7 @@ REFS = [
      "P101. At 3U a designed cell holds exactly one satellite, so the two ladders MUST return the "
      "same rung. When they do not, one of them was not re-run"),
     ("thrust-line lever arm",
-     "gen6_recoil", "saturating_offset_mm", "stage_attitude", "inputs.lever_arm_m", 1000.0, 1.0,
+     "legacy_study_recoil", "saturating_offset_mm", "stage_attitude", "inputs.lever_arm_m", 1000.0, 1.0,
      "P100. A52 published an alignment REQUIREMENT and A57 modelled the disturbance it causes; "
      "an attitude run must use the arm the interface requires, not one inherited from Gen5"),
 ]
@@ -145,24 +145,24 @@ REFS = [
 # Pairs deliberately NOT checked, because they are supposed to differ. Recording them here is
 # the point: the next person to notice the difference finds the reason instead of 'fixing' it.
 NOT_REFS = [
-    ("gen6_seal.friction_max_N (17.8 N) vs seal_class.trim_unnecessary.friction_N (22.29 N)",
+    ("legacy_study_seal.friction_max_N (17.8 N) vs seal_class.trim_unnecessary.friction_N (22.29 N)",
      "ADR-036 names both as the two ends of one decision: at or below 17.8 N the trim stator is "
      "unnecessary AND the seal survives its own heat; above 22.3 N the stator is needed. P67 "
      "measures which side. Making them agree would delete the decision"),
-    ("gen6_drive.exit_velocity_m_s_zero_friction (34.28) vs _at_friction_allowance (29.01)",
+    ("legacy_study_drive.exit_velocity_m_s_zero_friction (34.28) vs _at_friction_allowance (29.01)",
      "A ceiling and a floor. P67 says both are real and neither should appear alone"),
-    ("gen6_drive.cradle_preload_N_per_contact (201.7) vs tipoff_gen6.gen6.preload_N (91.66)",
+    ("legacy_study_drive.cradle_preload_N_per_contact (201.7) vs tipoff_legacy_study.legacy_study.preload_N (91.66)",
      "P102 owns this one explicitly. 201.7 N is A38's requirement at the 25 g qualification cap "
      "and is RETAINED as the conservative retention figure; 91.66 N is what the ADR-034 design "
      "point needs. Making them agree would lower a retention requirement by re-run rather than "
      "by decision"),
-    ("gen6_dispersion.v_zero_friction (30.5354) vs gen6_drive.exit_velocity_m_s_zero_friction "
+    ("legacy_study_dispersion.v_zero_friction (30.5354) vs legacy_study_drive.exit_velocity_m_s_zero_friction "
      "(34.28)",
      "A44 records ITS OWN operating point, which is the convention every run sheet here follows. "
      "A55 is the run that carries both -- a44_point and adopted_point side by side -- and the "
      "adopted one IS checked above. Forcing A44's file to the current point would rewrite a run "
      "as though today's design point was the one analysed"),
-    ("tipoff_gen6.gen6.v_exit (42.23) vs gen6_drive.exit_velocity_m_s (29.01)",
+    ("tipoff_legacy_study.legacy_study.v_exit (42.23) vs legacy_study_drive.exit_velocity_m_s (29.01)",
      "A38's model is constant-acceleration, so it returns the constant-pressure bound and not "
      "the delivered blowdown figure. P102 records that; P103 owns replacing the model. Pinning "
      "them together would freeze the assumption P103 exists to remove"),

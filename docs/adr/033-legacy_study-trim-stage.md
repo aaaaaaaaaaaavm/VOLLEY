@@ -1,13 +1,13 @@
-# ADR-033: Gen6 gains a motor that steers, and it is adopted on a number nobody has weighed
+# ADR-033: historical study gains a motor that steers, and it is adopted on a number nobody has weighed
 
-Status: Accepted, suspended 2026-08-20 by [ADR-036](036-seal-specification-and-the-trim-stage.md), Date: 2026-08-16, Phase: I, Extends: [ADR-032](032-gen6-stage-integrated-gas-store.md)
+Status: Accepted, suspended 2026-08-20 by [ADR-036](036-seal-specification-and-the-trim-stage.md), Date: 2026-08-16, Phase: I, Extends: [ADR-032](032-legacy_study-stage-integrated-gas-store.md)
 
 > ## Falsifier 1 fired, 2026-08-19, [A54](../../validation/A54_pulse_chain.md)
 >
 > This ADR named the pulse store as the falsifier most likely to fire and adopted the decision
 > before answering it. It has been answered.
 >
-> | | The chain [ADR-032](032-gen6-stage-integrated-gas-store.md) deleted | This trim stage |
+> | | The chain [ADR-032](032-legacy_study-stage-integrated-gas-store.md) deleted | This trim stage |
 > |---|---:|---:|
 > | Peak power | 30 674 W | 28 606 W, 93.3 % |
 > | Peak current at 96 V | 319.5 A | 298.0 A, 93.3 % |
@@ -36,12 +36,12 @@ Status: Accepted, suspended 2026-08-20 by [ADR-036](036-seal-specification-and-t
 >
 > Read this ADR as adopted, measured, and awaiting that decision.
 
-> ## Amended 2026-08-19 by [ADR-034](034-gen6-long-stroke-design-point.md), and resized the same day by [A55](../../validation/A55_trim_authority.md)
+> ## Amended 2026-08-19 by [ADR-034](034-legacy_study-long-stroke-design-point.md), and resized the same day by [A55](../../validation/A55_trim_authority.md)
 >
 > The dispersion this stage exists to correct is 3.9798 %, not the 1.113 % quoted below.
 > *Added to this banner 2026-08-20: dispersion was not on its list of amended quantities, so the
 > 1.113 % in the Context section stayed uncorrected for a day after A55 superseded it.* 1.113 %
-> is [A44](../../validation/A44_gen6_dispersion.md)'s figure for A44's 2.18 m machine. At
+> is [A44](../../validation/A44_LEGACY_STUDY_dispersion.md)'s figure for A44's 2.18 m machine. At
 > ADR-034's adopted point [A55](../../validation/A55_trim_authority.md) measures 3.9798 %, and
 > [A61](../../validation/A61_seal_class.md) reproduces it. Friction's share rises with it, 93.4 %
 > to 98.68 %, the long stroke concentrates the variance in the one term nobody has measured.
@@ -76,18 +76,18 @@ Status: Accepted, suspended 2026-08-20 by [ADR-036](036-seal-specification-and-t
 
 ## Context
 
-[ADR-032](032-gen6-stage-integrated-gas-store.md) deleted the motor and bought a 50 % reduction
-in added mass per satellite with it. [A44](../../validation/A44_gen6_dispersion.md) then priced
+[ADR-032](032-legacy_study-stage-integrated-gas-store.md) deleted the motor and bought a 50 % reduction
+in added mass per satellite with it. [A44](../../validation/A44_LEGACY_STUDY_dispersion.md) then priced
 what that cost: 3σ dispersion of 1.113 % against Gen5's 0.0274 m/s, with 93.4 % of the
 variance a seal friction nobody has measured, and a fivefold better transducer moving it
 0.008 %. There is no instrumentation route to the product's central claim.
 
-The claim is commanded per-satellite velocity. Gen6 as adopted cannot command it; it can only
+The claim is commanded per-satellite velocity. historical study as adopted cannot command it; it can only
 *set* it, before a 133 ms open-loop expansion, and hope the seal behaves.
 
 ## Decision
 
-Gen6 gains a short stator section at the muzzle end, energised only after the gas has finished,
+historical study gains a short stator section at the muzzle end, energised only after the gas has finished,
 acting on a magnet set carried by the carriage. It corrects the velocity the gas actually
 produced. It never throws the payload.
 
@@ -105,7 +105,7 @@ an excellent servo.
 | Added mass per satellite | 1.403 to 1.431 kg |
 | At 3x the friction spread | 5.53 % of stroke, 1.032 kg |
 
-Band 6 is why this is adopted: the precision Gen6 traded is recoverable. A loop correcting a
+Band 6 is why this is adopted: the precision historical study traded is recoverable. A loop correcting a
 *measured* velocity does not care that the gas produced it open-loop.
 
 ## What this costs, stated rather than absorbed
@@ -117,8 +117,8 @@ The magnets come back to the moving part, and the defects come with them.
 | P34 | A payload carrying a magnetometer cannot fly in this magazine. This defect returns because the magnets do |
 | E35 | The payload's field exposure is a design variable again |
 | The cradle | Must hold magnets in alignment as well as the payload, and it still does not exist |
-| A velocity sensor | Gen6 has no equivalent. The loop is only as good as what it measures |
-| [A47](../../validation/A47_gen6_fmea.md) | One more element, shared across all twelve shots, in an architecture whose shared elements are what cost delivered satellites |
+| A velocity sensor | historical study has no equivalent. The loop is only as good as what it measures |
+| [A47](../../validation/A47_LEGACY_STUDY_fmea.md) | One more element, shared across all twelve shots, in an architecture whose shared elements are what cost delivered satellites |
 
 ## Falsifiers
 
@@ -155,7 +155,7 @@ This decision is wrong if any of these turns out true.
 
 ## Alternatives, and why not
 
-Leave Gen6 open-loop. Then the product claim is *set* velocity, not *commanded* velocity, and
+Leave historical study open-loop. Then the product claim is *set* velocity, not *commanded* velocity, and
 `SUMMARY.md`, `LANDSCAPE.md` and the paper all need rewriting to say so. That is the honest
 alternative and it is a marketing retreat, not an engineering one.
 

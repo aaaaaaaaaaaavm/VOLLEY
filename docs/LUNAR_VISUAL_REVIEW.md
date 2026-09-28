@@ -1,5 +1,8 @@
 # Lunar-first visual and mission review
 
+> **Architecture disposition, 2026-09-28:** The separate motor-charged spring-cell bank is withdrawn as VOLLEY's next architecture. It is retained here only as a dated study. Any selection or current-reference wording below describes the former decision and is superseded. A reusable shared launch path with sequential loading is the open design objective; no speed envelope is validated. See [current status](NEXT_GENERATION_STATUS.md).
+
+
 Adityavardhan Mishra · 17 September 2026 · C0-S2
 
 **Status: concept review and ideal numerical screen. No flight design or useful

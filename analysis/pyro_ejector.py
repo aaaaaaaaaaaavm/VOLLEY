@@ -6,7 +6,7 @@ WHY THIS EXISTS
 A53 failed on energy and nothing else. Seven of eight bands passed; band 7 failed because a
 spring sized for a clean departure stores 4.5 J and clearing the tube costs 667.2 J at ADR-034's
 8.0 m stroke -- a 148x shortfall. P81 carries the consequence, and A47 priced it at +2.27
-satellites against +0.37 for the whole Gen5 -> Gen6 change.
+satellites against +0.37 for the whole Gen5 -> LegacyStudy change.
 
 A53 closed it as architectural. It was a STORE CHOICE, which is the same mistake A54 made about
 the pulse store and A64 corrected by changing technology class rather than design.
@@ -26,7 +26,7 @@ import math
 import os
 
 import fmea
-import fmea_gen6 as g6
+import fmea_legacy_study as g6
 import precharged as pc
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
@@ -36,11 +36,11 @@ M_PAY, G = pc.M_PAY, pc.G
 AREA, STROKE = pc.AREA, pc.STROKE
 FRICTION_N = 83.40371375447981      # A41 band 8's allowance, as backup_ejector.py carries it
 V_TARGET = 1.5                      # m/s, A53's clearance velocity, for the band 1 anchor
-G_CAP_PAYLOAD = 25.0                # A37's payload cap. NOT Gen6's commanded 11.36 g: a backup
+G_CAP_PAYLOAD = 25.0                # A37's payload cap. NOT LegacyStudy's commanded 11.36 g: a backup
                                     # ejector is an off-nominal event.
-CHAMBER_L_EXISTING = 2.0            # gen6_store.chamber_volume_l
-T_CEILING = 473.0                   # ADR-035, gen6_drive.tube_temperature_ceiling_K
-STORE_KG = 3.1216                   # A56's resized store, gen6_store.store_mass_kg
+CHAMBER_L_EXISTING = 2.0            # legacy_study_store.chamber_volume_l
+T_CEILING = 473.0                   # ADR-035, legacy_study_drive.tube_temperature_ceiling_K
+STORE_KG = 3.1216                   # A56's resized store, legacy_study_store.store_mass_kg
 ADDED_BASE_KG = 11.452976           # A37's base, as backup_ejector.py carries it
 N_CELLS = 12
 TARGET_KG = 2.0
@@ -103,10 +103,10 @@ def per_cell_kg(d, generant_kg=GENERANT_LO):
 
 
 # A47's model with the pyrotechnic device as a shot-scope element that can itself fail. Same
-# shape as fmea_gen6.ELEMENTS_GEN6_BACKUP: it deletes nothing the gas drive needs, it makes the
+# shape as fmea_legacy_study.ELEMENTS_LEGACY_STUDY_BACKUP: it deletes nothing the gas drive needs, it makes the
 # drive satellite-forfeiting by giving every cell its own way out.
-ELEMENTS_GEN6_PYRO = [
-    e for e in g6.ELEMENTS_GEN6
+ELEMENTS_LEGACY_STUDY_PYRO = [
+    e for e in g6.ELEMENTS_LEGACY_STUDY
     if not (e[1] == "shared" and e[0] in ("Gas reservoir", "Fill valve", "Fire valve",
                                           "Piston and seals", "Chamber"))
 ] + [("Drive, gas or pyrotechnic ejector", "shot", 1, "one",
@@ -164,11 +164,11 @@ def main():
     print(f"  total per cell {m_lo:.4f} kg   x12 {total_lo:.4f} kg   "
           f"per satellite {per_sat:.4f} kg")
 
-    pyro = g6.score(ELEMENTS_GEN6_PYRO)
-    plain = g6.score(g6.ELEMENTS_GEN6)
+    pyro = g6.score(ELEMENTS_LEGACY_STUDY_PYRO)
+    plain = g6.score(g6.ELEMENTS_LEGACY_STUDY)
     print(f"\nA47 re-run, the ejector a shot-scope element that can fail:")
-    print(f"  Gen6 alone      {plain['expected_at_r99']:.3f} satellites at r = 0.99")
-    print(f"  Gen6 + pyro     {pyro['expected_at_r99']:.3f}")
+    print(f"  LegacyStudy alone      {plain['expected_at_r99']:.3f} satellites at r = 0.99")
+    print(f"  LegacyStudy + pyro     {pyro['expected_at_r99']:.3f}")
 
     # band 10: the whole published class
     print("\nband 10, the published class:")
@@ -239,7 +239,7 @@ def main():
         bottom_of_class=lo, top_of_class=hi, top_of_class_usable=bool(top_usable),
         per_cell_kg=m_lo, total_kg=total_lo, per_satellite_kg=per_sat,
         housing_kg=HOUSING_KG, generant_kg=GENERANT_LO,
-        a47_gen6=plain['expected_at_r99'], a47_with_pyro=pyro['expected_at_r99'],
+        a47_legacy_study=plain['expected_at_r99'], a47_with_pyro=pyro['expected_at_r99'],
         unpriced=UNPRICED, sweep=sweep,
         bands=[dict(n=n, band=t, got=g,
                     passed=(None if o is None else bool(o))) for n, t, g, o in bands])

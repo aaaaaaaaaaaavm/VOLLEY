@@ -65,7 +65,7 @@ def move(mass, distance, duration, inertia, n=20001, arm=None):
 
     `arm` defaults to ASSUMED_ARM so A13's own results are unchanged. It is a parameter because
     A57 needed a DIFFERENT arm and the first version of that run silently reused this one --
-    A13's arm is from a Gen5 host CoM to the deployer's, and a Gen6 payload traverses a tube
+    A13's arm is from a Gen5 host CoM to the deployer's, and a LegacyStudy payload traverses a tube
     whose offset from the stage CoM A52 already published a requirement on. P100.
     """
     if arm is None:

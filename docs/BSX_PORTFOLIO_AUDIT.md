@@ -6,7 +6,7 @@ I audited the public portfolio against the current repository heads, with VOLLEY
 
 | Repository | Checks and disposition |
 |---|---|
-| VOLLEY | Full local gate, 31 existing property/regression tests, result freshness, baseline and public claims. Repaired stale overview; reconciled four already-completed register entries; executed separately declared A24-R and A2-R. Gen5 has 11 computation items and three decisions left; Gen6 has 18 computation items. |
+| VOLLEY | Full local gate, 31 existing property/regression tests, result freshness, baseline and public claims. Repaired stale overview; reconciled four already-completed register entries; executed separately declared A24-R and A2-R. Gen5 has 11 computation items and three decisions left; historical study has 18 computation items. |
 | VOLLEY-paper | Compared headline PDF values, checked page counts, corrected the abstract's acceleration wording and spring comparison, rebuilt Letter/A4 manuscripts, and regenerated the evidence payload. |
 | VOLLEY-thesis | Same manuscript corrections and matching rebuilt PDF; regenerated the flagship evidence payload. |
 | VOLLEY-lab | Repaired the route inventory for existing VLAB-B002/B003 entries; checked namespaces, links and generated figures. |

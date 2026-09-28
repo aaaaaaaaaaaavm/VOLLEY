@@ -16,7 +16,7 @@ The full test suite subsequently passed all 94 tests.
 
 A fresh local installation of the native dependencies, ending with the same declared
 CadQuery 2.8.0, cadquery-ocp 7.9.3.1.1 and VTK 9.6.2 versions, restored the import.
-Re-running `python3 tools/check_artifacts.py` then rebuilt the Gen5 and Gen6 packages
+Re-running `python3 tools/check_artifacts.py` then rebuilt the Gen5 and historical study packages
 byte-identically and passed all seven artifact checks. This resolves the observed
 verification blockage; the precise underlying cause of the original native crash
 was not established. No geometric correction was needed or claimed.

@@ -15,7 +15,7 @@ energy needed. It never asked whether the gas can arrive in time. Filling a 0.42
 swept volume in a 133 ms stroke is roughly 3 L/s at working pressure, and nothing has
 modelled the orifice, the valve, or what the reservoir pressure does while it happens.
 
-Nothing about Gen6's geometry can be drawn until this closes. The bore, the reservoir and the
+Nothing about historical study's geometry can be drawn until this closes. The bore, the reservoir and the
 valve are the first three dimensions in `cad/parameters.json`, and all three come out of here.
 
 ## And a second question A39 could not ask
@@ -69,10 +69,10 @@ Declared before the script. Not to be edited after the run.
 | **7** | A **±1 ms** valve-timing error gives ≤ **1 %** velocity error at the selected point | The commanded velocity is not repeatable, and the ±0.10 km apogee claim goes with it |
 | **8** | Gas consumed per shot is within **20 %** of A39's declared swept-volume figure | A39's reservoir sizing was wrong and the mass result moves |
 
-### Band 6 is the one that decides whether Gen6 is VOLLEY
+### Band 6 is the one that decides whether historical study is VOLLEY
 
 Every previous architecture commanded velocity with current. If gas cannot be commanded,
-Gen6 is a fixed-velocity spring with extra steps** — and A21 band 3's finding that a spring's
+historical study is a fixed-velocity spring with extra steps** — and A21 band 3's finding that a spring's
 designed differential is zero would apply to it too.
 
 ### Band 5 is where the single-bottle result is most likely to fail

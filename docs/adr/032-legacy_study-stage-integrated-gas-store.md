@@ -1,10 +1,10 @@
-# ADR-032: Gen6 is a stage-integrated, payload-direct, gas-driven deployer
+# ADR-032: historical study is a stage-integrated, payload-direct, gas-driven deployer
 
-Status: Accepted, Date: 2026-08-14, Supersedes: the Gen6 definition in
-[ADR-029](029-phase-one-closes-on-gen5.md) and [`../GEN6_ARCHITECTURE.md`](../GEN6_ARCHITECTURE.md) ·
+Status: Accepted, Date: 2026-08-14, Supersedes: the historical study definition in
+[ADR-029](029-phase-one-closes-on-gen5.md) and [`../LEGACY_STUDY_ARCHITECTURE.md`](../LEGACY_STUDY_ARCHITECTURE.md) ·
 Rests on: A35, A36, A37, A38, A39
 
-> ## Design point moved 2026-08-19 by [ADR-034](034-gen6-long-stroke-design-point.md)
+> ## Design point moved 2026-08-19 by [ADR-034](034-legacy_study-long-stroke-design-point.md)
 >
 > The architecture below is unchanged. Its numbers are not. The stroke went from 2.18 m to
 > 8.0 m and the charge pressure from 50 bar to 22.73 bar, holding exit velocity while peak
@@ -13,9 +13,9 @@ Rests on: A35, A36, A37, A38, A39
 
 ## Context
 
-Gen6 has meant something different since 2026-08-13. ADR-029 set the target as *a linear
+historical study has meant something different since 2026-08-13. ADR-029 set the target as *a linear
 induction drive on a passive aluminium mover*, no magnets, a 0.6 kg shuttle, an arrest of 82 J
-instead of 1938. It carried nine measured bands and an unsized remainder larger than that.
+instead of 1938. It carried nine computed bands and an unsized remainder larger than that.
 
 Five runs on 2026-08-14 replaced it, and not one of them set out to. Each was aimed at a
 different question and the answers compounded:
@@ -30,9 +30,9 @@ different question and the answers compounded:
 
 ## Decision
 
-Gen6 is the payload accelerated directly, by gas, along a rail the host stage provides.
+historical study is the payload accelerated directly, by gas, along a rail the host stage provides.
 
-| | Gen5 | Gen6 |
+| | Gen5 | historical study |
 |---|---|---|
 | What moves | 9.445 kg sled + payload | payload only |
 | Energy source | supercapacitor bank, ~17 kW for 162 ms | one 1.71 L gas bottle for the manifest |
@@ -111,9 +111,9 @@ launch multiplies the interface problem rather than solving it, and keeping a st
 manoeuvring past passivation is a regulatory conversation this project has not had.
 
 And the honest reading of the propellant. The residuals a stage carries are its disposal burn.
-Gen6 does not spend them, A39's charge budget is 25-131 W *(corrected 2026-08-16: that figure is A37's `charge_W_60s` for the spring option, not this architecture's. [A51](../../validation/A51_gen6_power.md) measures Gen6 at 0.26 W average, 36 W peak. The decision stands; the number was never Gen6's, P80)*, which is solar, and the
+historical study does not spend them, A39's charge budget is 25-131 W *(corrected 2026-08-16: that figure is A37's `charge_W_60s` for the spring option, not this architecture's. [A51](../../validation/A51_LEGACY_STUDY_power.md) measures historical study at 0.26 W average, 36 W peak. The decision stands; the number was never historical study's, P80)*, which is solar, and the
 altitude-shell repositioning in [ADR-024](024-last-mile-delivery-conops.md) is therefore an option
-a host may decline without Gen6 failing.
+a host may decline without historical study failing.
 
 ## What this does not change
 
@@ -134,7 +134,7 @@ Gen5 as it stands. Kill criterion 1 crossed 3.5x, a bank that cannot be bought, 
 44 % over. It remains the frozen computational baseline and the record of what a self-contained deployer
 costs.
 
-The induction-drive Gen6 of ADR-029. Superseded, not refuted: A30 killed its rail-drive variant
+The induction-drive historical study of ADR-029. Superseded, not refuted: A30 killed its rail-drive variant
 on a measured transverse edge factor of 0.0253, and A35 then showed the mover it optimised was 11 %
 of the mass. Its nine bands stand as declared.
 

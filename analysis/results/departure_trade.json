@@ -50,7 +50,7 @@
             29.36188377783932
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             29.36188377783932,
@@ -110,7 +110,7 @@
             31.44188377783932
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -174,7 +174,7 @@
             39.76188377783932
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -246,7 +246,7 @@
           ],
           "retained_host_increment_m_s": -27.73258055561473
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.7518113248455,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -322,7 +322,7 @@
           ],
           "retained_host_increment_m_s": -27.73258055561473
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.7518113248455,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -390,7 +390,7 @@
             28.60901496302293
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -454,7 +454,7 @@
             30.635681629689596
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -518,7 +518,7 @@
             38.74234829635626
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -590,7 +590,7 @@
           ],
           "retained_host_increment_m_s": -27.73258055561473
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.739159502983153,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -666,7 +666,7 @@
           ],
           "retained_host_increment_m_s": -27.73258055561473
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.739159502983153,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -734,7 +734,7 @@
             28.34551087783719
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -798,7 +798,7 @@
             30.35351087783719
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -862,7 +862,7 @@
             38.38551087783719
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -934,7 +934,7 @@
           ],
           "retained_host_increment_m_s": -27.73258055561473
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.734572587487243,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -1010,7 +1010,7 @@
           ],
           "retained_host_increment_m_s": -27.73258055561473
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.734572587487243,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -28.23258055561473,
@@ -1082,7 +1082,7 @@
           ],
           "retained_host_increment_m_s": 0.5620540698711917
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1150,7 +1150,7 @@
           ],
           "retained_host_increment_m_s": -1.5179459301288083
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1222,7 +1222,7 @@
           ],
           "retained_host_increment_m_s": -9.837945930128807
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1294,7 +1294,7 @@
           ],
           "retained_host_increment_m_s": -13.551351746779801
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.570582516010571,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1370,7 +1370,7 @@
           ],
           "retained_host_increment_m_s": -13.551351746779801
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.570582516010571,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1442,7 +1442,7 @@
           ],
           "retained_host_increment_m_s": 0.18735135662373126
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1510,7 +1510,7 @@
           ],
           "retained_host_increment_m_s": -1.8393153100429356
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1582,7 +1582,7 @@
           ],
           "retained_host_increment_m_s": -9.945981976709602
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1654,7 +1654,7 @@
           ],
           "retained_host_increment_m_s": -13.551351746779801
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.557930694148222,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1730,7 +1730,7 @@
           ],
           "retained_host_increment_m_s": -13.551351746779801
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.557930694148222,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1802,7 +1802,7 @@
           ],
           "retained_host_increment_m_s": 0.05620540698711916
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1870,7 +1870,7 @@
           ],
           "retained_host_increment_m_s": -1.9517945930128808
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -1942,7 +1942,7 @@
           ],
           "retained_host_increment_m_s": -9.983794593012881
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -2014,7 +2014,7 @@
           ],
           "retained_host_increment_m_s": -13.551351746779801
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.55334377865231,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -2090,7 +2090,7 @@
           ],
           "retained_host_increment_m_s": -13.551351746779801
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.55334377865231,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -14.051351746779801,
@@ -2150,7 +2150,7 @@
             0.0
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             0.0,
@@ -2218,7 +2218,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4807692307692308,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -2294,7 +2294,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4807692307692308,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -2370,7 +2370,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4807692307692308,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -2446,7 +2446,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4807692307692308,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -2506,7 +2506,7 @@
             0.0
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             0.0,
@@ -2574,7 +2574,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4934210526315789,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -2650,7 +2650,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4934210526315789,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -2726,7 +2726,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4934210526315789,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -2802,7 +2802,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4934210526315789,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -2862,7 +2862,7 @@
             0.0
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             0.0,
@@ -2930,7 +2930,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49800796812749004,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -3006,7 +3006,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49800796812749004,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -3082,7 +3082,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49800796812749004,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -3158,7 +3158,7 @@
           ],
           "retained_host_increment_m_s": -0.5
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49800796812749004,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 0.0,
@@ -3234,7 +3234,7 @@
           ],
           "retained_host_increment_m_s": -0.11179392959187673
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3306,7 +3306,7 @@
           ],
           "retained_host_increment_m_s": 1.9682060704081232
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3382,7 +3382,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.3140790090276893,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3458,7 +3458,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.3140790090276893,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3534,7 +3534,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.3140790090276893,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3610,7 +3610,7 @@
           ],
           "retained_host_increment_m_s": -0.037264643197292384
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3682,7 +3682,7 @@
           ],
           "retained_host_increment_m_s": 1.9894020234693743
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3758,7 +3758,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.3014271871653413,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3834,7 +3834,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.3014271871653413,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3910,7 +3910,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.3014271871653413,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -3986,7 +3986,7 @@
           ],
           "retained_host_increment_m_s": -0.01117939295918767
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -4058,7 +4058,7 @@
           ],
           "retained_host_increment_m_s": 1.9968206070408123
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -4134,7 +4134,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.29684027166943,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -4210,7 +4210,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.29684027166943,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -4286,7 +4286,7 @@
           ],
           "retained_host_increment_m_s": 2.29484823979692
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.29684027166943,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.79484823979692,
@@ -4358,7 +4358,7 @@
           ],
           "retained_host_increment_m_s": -0.5569328478401799
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -4426,7 +4426,7 @@
           ],
           "retained_host_increment_m_s": 1.52306715215982
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -4498,7 +4498,7 @@
           ],
           "retained_host_increment_m_s": 9.84306715215982
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -4570,7 +4570,7 @@
           ],
           "retained_host_increment_m_s": 13.423321196004508
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.442551965235278,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -4646,7 +4646,7 @@
           ],
           "retained_host_increment_m_s": 13.423321196004508
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.442551965235278,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -4718,7 +4718,7 @@
           ],
           "retained_host_increment_m_s": -0.18564428261339402
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -4786,7 +4786,7 @@
           ],
           "retained_host_increment_m_s": 1.8410223840532727
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -4858,7 +4858,7 @@
           ],
           "retained_host_increment_m_s": 9.947689050719939
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -4930,7 +4930,7 @@
           ],
           "retained_host_increment_m_s": 13.423321196004508
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.42990014337293,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -5006,7 +5006,7 @@
           ],
           "retained_host_increment_m_s": 13.423321196004508
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.42990014337293,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -5078,7 +5078,7 @@
           ],
           "retained_host_increment_m_s": -0.055693284784017985
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -5146,7 +5146,7 @@
           ],
           "retained_host_increment_m_s": 1.952306715215982
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -5218,7 +5218,7 @@
           ],
           "retained_host_increment_m_s": 9.984306715215983
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -5290,7 +5290,7 @@
           ],
           "retained_host_increment_m_s": 13.423321196004508
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.425313227877018,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -5366,7 +5366,7 @@
           ],
           "retained_host_increment_m_s": 13.423321196004508
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.425313227877018,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.923321196004508,
@@ -5434,7 +5434,7 @@
             28.829238930842983
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -5498,7 +5498,7 @@
             30.909238930842985
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -5562,7 +5562,7 @@
             39.22923893084298
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -5634,7 +5634,7 @@
           ],
           "retained_host_increment_m_s": 27.220422048887485
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 27.239652818118255,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -5710,7 +5710,7 @@
           ],
           "retained_host_increment_m_s": 27.220422048887485
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 27.239652818118255,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -5778,7 +5778,7 @@
             28.090027676205985
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -5842,7 +5842,7 @@
             30.116694342872652
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -5906,7 +5906,7 @@
             38.22336100953932
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -5978,7 +5978,7 @@
           ],
           "retained_host_increment_m_s": 27.220422048887485
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 27.227000996255907,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -6054,7 +6054,7 @@
           ],
           "retained_host_increment_m_s": 27.220422048887485
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 27.227000996255907,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -6122,7 +6122,7 @@
             27.831303737083037
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -6186,7 +6186,7 @@
             29.839303737083036
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -6250,7 +6250,7 @@
             37.87130373708303
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -6322,7 +6322,7 @@
           ],
           "retained_host_increment_m_s": 27.220422048887485
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 27.222414080759997,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -6398,7 +6398,7 @@
           ],
           "retained_host_increment_m_s": 27.220422048887485
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 27.222414080759997,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.720422048887485,
@@ -6466,7 +6466,7 @@
             57.140748663105406
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             57.140748663105406,
@@ -6526,7 +6526,7 @@
             59.220748663105404
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             55.06074866310541,
@@ -6586,7 +6586,7 @@
             67.5407486631054
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             46.74074866310541,
@@ -6646,7 +6646,7 @@
             88.3407486631054
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 30.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.943027560678274,
@@ -6718,7 +6718,7 @@
           ],
           "retained_host_increment_m_s": 54.443027560678274
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 54.46225832990904,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.943027560678274,
@@ -6786,7 +6786,7 @@
             55.67560126148732
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             55.67560126148732,
@@ -6846,7 +6846,7 @@
             57.70226792815399
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             53.64893459482065,
@@ -6906,7 +6906,7 @@
             65.80893459482066
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             45.54226792815399,
@@ -6966,7 +6966,7 @@
             86.07560126148732
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 30.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.943027560678274,
@@ -7038,7 +7038,7 @@
           ],
           "retained_host_increment_m_s": 54.443027560678274
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 54.44960650804669,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.943027560678274,
@@ -7106,7 +7106,7 @@
             55.16279967092099
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             55.16279967092099,
@@ -7166,7 +7166,7 @@
             57.170799670920985
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             53.15479967092099,
@@ -7226,7 +7226,7 @@
             65.20279967092098
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             45.12279967092099,
@@ -7286,7 +7286,7 @@
             85.282799670921
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 30.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.943027560678274,
@@ -7358,7 +7358,7 @@
           ],
           "retained_host_increment_m_s": 54.443027560678274
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 54.445019592550786,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.943027560678274,
@@ -7426,7 +7426,7 @@
             29.04034934457479
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             29.04034934457479,
@@ -7486,7 +7486,7 @@
             31.120349344574787
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -7550,7 +7550,7 @@
             39.440349344574784
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -7622,7 +7622,7 @@
           ],
           "retained_host_increment_m_s": -27.42341283132191
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.44264360055268,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -7698,7 +7698,7 @@
           ],
           "retained_host_increment_m_s": -27.42341283132191
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.44264360055268,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -7766,7 +7766,7 @@
             28.295725002406204
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -7830,7 +7830,7 @@
             30.32239166907287
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -7894,7 +7894,7 @@
             38.42905833573954
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -7966,7 +7966,7 @@
           ],
           "retained_host_increment_m_s": -27.42341283132191
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.429991778690333,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -8042,7 +8042,7 @@
           ],
           "retained_host_increment_m_s": -27.42341283132191
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.429991778690333,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -8110,7 +8110,7 @@
             28.035106482647198
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -8174,7 +8174,7 @@
             30.0431064826472
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -8238,7 +8238,7 @@
             38.0751064826472
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -8310,7 +8310,7 @@
           ],
           "retained_host_increment_m_s": -27.42341283132191
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.425404863194423,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -8386,7 +8386,7 @@
           ],
           "retained_host_increment_m_s": -27.42341283132191
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -27.425404863194423,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -27.92341283132191,
@@ -8458,7 +8458,7 @@
           ],
           "retained_host_increment_m_s": 0.5559179319164829
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -8526,7 +8526,7 @@
           ],
           "retained_host_increment_m_s": -1.5240820680835172
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -8598,7 +8598,7 @@
           ],
           "retained_host_increment_m_s": -9.844082068083518
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -8670,7 +8670,7 @@
           ],
           "retained_host_increment_m_s": -13.39794829791208
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.41717906714285,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -8746,7 +8746,7 @@
           ],
           "retained_host_increment_m_s": -13.39794829791208
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.41717906714285,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -8818,7 +8818,7 @@
           ],
           "retained_host_increment_m_s": 0.18530597730549497
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -8886,7 +8886,7 @@
           ],
           "retained_host_increment_m_s": -1.8413606893611718
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -8958,7 +8958,7 @@
           ],
           "retained_host_increment_m_s": -9.948027356027838
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -9030,7 +9030,7 @@
           ],
           "retained_host_increment_m_s": -13.39794829791208
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.404527245280502,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -9106,7 +9106,7 @@
           ],
           "retained_host_increment_m_s": -13.39794829791208
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.404527245280502,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -9178,7 +9178,7 @@
           ],
           "retained_host_increment_m_s": 0.055591793191648274
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -9246,7 +9246,7 @@
           ],
           "retained_host_increment_m_s": -1.9524082068083517
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -9318,7 +9318,7 @@
           ],
           "retained_host_increment_m_s": -9.984408206808352
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -9390,7 +9390,7 @@
           ],
           "retained_host_increment_m_s": -13.39794829791208
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.39994032978459,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -9466,7 +9466,7 @@
           ],
           "retained_host_increment_m_s": -13.39794829791208
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -13.39994032978459,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": -13.89794829791208,
@@ -9526,7 +9526,7 @@
             9.458744898438454e-13
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             9.458744898438454e-13,
@@ -9594,7 +9594,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4807692307683213,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -9670,7 +9670,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4807692307683213,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -9746,7 +9746,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4807692307683213,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -9822,7 +9822,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.4807692307683213,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -9882,7 +9882,7 @@
             9.216212977965674e-13
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             9.216212977965674e-13,
@@ -9950,7 +9950,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49342105263066943,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -10026,7 +10026,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49342105263066943,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -10102,7 +10102,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49342105263066943,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -10178,7 +10178,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49342105263066943,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -10238,7 +10238,7 @@
             9.1313268058002e-13
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             9.1313268058002e-13,
@@ -10306,7 +10306,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49800796812658055,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -10382,7 +10382,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49800796812658055,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -10458,7 +10458,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49800796812658055,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -10534,7 +10534,7 @@
           ],
           "retained_host_increment_m_s": -0.4999999999990905
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": -0.49800796812658055,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 9.094947017729282e-13,
@@ -10610,7 +10610,7 @@
           ],
           "retained_host_increment_m_s": -0.11057786879428015
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -10682,7 +10682,7 @@
           ],
           "retained_host_increment_m_s": 1.9694221312057199
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -10758,7 +10758,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2836774890877747,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -10834,7 +10834,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2836774890877747,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -10910,7 +10910,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2836774890877747,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -10986,7 +10986,7 @@
           ],
           "retained_host_increment_m_s": -0.03685928959809352
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11058,7 +11058,7 @@
           ],
           "retained_host_increment_m_s": 1.9898073770685731
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11134,7 +11134,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2710256672254268,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11210,7 +11210,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2710256672254268,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11286,7 +11286,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2710256672254268,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11362,7 +11362,7 @@
           ],
           "retained_host_increment_m_s": -0.011057786879428011
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11434,7 +11434,7 @@
           ],
           "retained_host_increment_m_s": 1.996942213120572
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11510,7 +11510,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2664387517295155,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11586,7 +11586,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2664387517295155,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11662,7 +11662,7 @@
           ],
           "retained_host_increment_m_s": 2.2644467198570055
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.2664387517295155,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 2.7644467198570055,
@@ -11734,7 +11734,7 @@
           ],
           "retained_host_increment_m_s": -0.5508892754559925
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -11802,7 +11802,7 @@
           ],
           "retained_host_increment_m_s": 1.5291107245440074
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -11874,7 +11874,7 @@
           ],
           "retained_host_increment_m_s": 9.849110724544007
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -11946,7 +11946,7 @@
           ],
           "retained_host_increment_m_s": 13.272231886399823
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.291462655630593,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12022,7 +12022,7 @@
           ],
           "retained_host_increment_m_s": 13.272231886399823
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.291462655630593,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12094,7 +12094,7 @@
           ],
           "retained_host_increment_m_s": -0.18362975848533153
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12162,7 +12162,7 @@
           ],
           "retained_host_increment_m_s": 1.8430369081813351
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12234,7 +12234,7 @@
           ],
           "retained_host_increment_m_s": 9.949703574848002
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12306,7 +12306,7 @@
           ],
           "retained_host_increment_m_s": 13.272231886399823
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.278810833768244,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12382,7 +12382,7 @@
           ],
           "retained_host_increment_m_s": 13.272231886399823
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.278810833768244,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12454,7 +12454,7 @@
           ],
           "retained_host_increment_m_s": -0.05508892754559924
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12522,7 +12522,7 @@
           ],
           "retained_host_increment_m_s": 1.9529110724544008
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12594,7 +12594,7 @@
           ],
           "retained_host_increment_m_s": 9.9849110724544
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12666,7 +12666,7 @@
           ],
           "retained_host_increment_m_s": 13.272231886399823
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.274223918272332,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12742,7 +12742,7 @@
           ],
           "retained_host_increment_m_s": 13.272231886399823
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 13.274223918272332,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 13.772231886399823,
@@ -12810,7 +12810,7 @@
             28.51733253644001
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -12874,7 +12874,7 @@
             30.597332536440007
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -12938,7 +12938,7 @@
             38.91733253644001
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13010,7 +13010,7 @@
           ],
           "retained_host_increment_m_s": 26.92051205426924
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 26.93974282350001,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13086,7 +13086,7 @@
           ],
           "retained_host_increment_m_s": 26.92051205426924
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 26.93974282350001,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13154,7 +13154,7 @@
             27.786118881659498
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13218,7 +13218,7 @@
             29.81278554832616
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13282,7 +13282,7 @@
             37.91945221499283
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13354,7 +13354,7 @@
           ],
           "retained_host_increment_m_s": 26.92051205426924
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 26.92709100163766,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13430,7 +13430,7 @@
           ],
           "retained_host_increment_m_s": 26.92051205426924
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 26.92709100163766,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13498,7 +13498,7 @@
             27.530194102486316
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 0.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13562,7 +13562,7 @@
             29.538194102486315
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 2.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13626,7 +13626,7 @@
             37.57019410248631
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 10.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13698,7 +13698,7 @@
           ],
           "retained_host_increment_m_s": 26.92051205426924
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 26.92250408614175,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13774,7 +13774,7 @@
           ],
           "retained_host_increment_m_s": 26.92051205426924
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 26.92250408614175,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 27.42051205426924,
@@ -13842,7 +13842,7 @@
             56.52618988419162
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             56.52618988419162,
@@ -13902,7 +13902,7 @@
             58.60618988419162
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             54.446189884191625,
@@ -13962,7 +13962,7 @@
             66.92618988419163
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             46.126189884191625,
@@ -14022,7 +14022,7 @@
             87.72618988419163
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 30.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.352105657876564,
@@ -14094,7 +14094,7 @@
           ],
           "retained_host_increment_m_s": 53.852105657876564
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 53.87133642710733,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.352105657876564,
@@ -14162,7 +14162,7 @@
             55.076800399981586
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             55.076800399981586,
@@ -14222,7 +14222,7 @@
             57.10346706664826
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             53.05013373331492,
@@ -14282,7 +14282,7 @@
             65.21013373331492
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             44.94346706664825,
@@ -14342,7 +14342,7 @@
             85.47680039998158
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 30.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.352105657876564,
@@ -14414,7 +14414,7 @@
           ],
           "retained_host_increment_m_s": 53.852105657876564
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 53.85868460524498,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.352105657876564,
@@ -14482,7 +14482,7 @@
             54.56951408050807
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             54.56951408050807,
@@ -14542,7 +14542,7 @@
             56.57751408050807
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             52.56151408050807,
@@ -14602,7 +14602,7 @@
             64.60951408050806
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "kinematic_screen_covered": false,
           "required_relative_magnitude_interval_m_s": [
             44.52951408050807,
@@ -14662,7 +14662,7 @@
             84.68951408050808
           ]
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 30.0,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.352105657876564,
@@ -14734,7 +14734,7 @@
           ],
           "retained_host_increment_m_s": 53.852105657876564
         },
-        "gen6_reference": {
+        "legacy_study_reference": {
           "host_impulse_m_s": 53.854097689749075,
           "kinematic_screen_covered": true,
           "payload_increment_m_s": 54.352105657876564,
@@ -14775,7 +14775,7 @@
       "exploratory_100": 100,
       "exploratory_120": 120,
       "gen5_reference": 16.029,
-      "gen6_reference": 29.009,
+      "legacy_study_reference": 29.009,
       "spring_reference": 2
     },
     "opposite_apsis_offsets_km": [

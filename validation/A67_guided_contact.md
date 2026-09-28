@@ -1,6 +1,6 @@
 # A67, the payload's guided contact state through the 8 m bore
 
-Closes, if it passes: the first-order half of [P103](../OPEN_PROBLEMS.md). Gen6 has an axial
+Closes, if it passes: the first-order half of [P103](../OPEN_PROBLEMS.md). historical study has an axial
 model and no lateral or angular one, so it has no exit attitude at all, only an exit speed.
 
 > ## BANDS DECLARED 2026-08-22, BEFORE `analysis/guided_contact.py` EXISTS.
@@ -20,13 +20,13 @@ separation-dynamics papers that do exactly that, one of them by unscented Kalman
 finite-element collision solve. So the model is built now on a declared friction bracket, and
 B-2 replaces the bracket with a distribution when it lands.
 
-What the record has: [A34](A34_cradle_restitution.md) and [A38](A38_tipoff_at_gen6.md) model
+What the record has: [A34](A34_cradle_restitution.md) and [A38](A38_tipoff_at_legacy_study.md) model
 the payload crossing its cradle clearance in the first tens of milliseconds.
 What it does not have: anything at all for the remaining eight metres.
 
 ## The geometry this run is about, and the dimension that does not exist
 
-`gen6_drive` gives bore 15.805 mm over 8000 mm, an L/D of 506. The piston is small and the
+`LEGACY_STUDY_drive` gives bore 15.805 mm over 8000 mm, an L/D of 506. The piston is small and the
 tube is very long, so the assembly's angular constraint comes from two bearing lands a short
 distance apart inside a bore whose centreline is not straight.
 
@@ -42,11 +42,11 @@ All declared here, before the script. Anything not in this table is read live fr
 
 | Input | Nominal | Bracket swept | Where it comes from |
 |---|---:|---|---|
-| Bore diameter | **15.805 mm** | — | `gen6_drive.bore_mm` |
-| Stroke | **8000 mm** | — | `gen6_drive.stroke_mm` |
+| Bore diameter | **15.805 mm** | — | `LEGACY_STUDY_drive.bore_mm` |
+| Stroke | **8000 mm** | — | `LEGACY_STUDY_drive.stroke_mm` |
 | Payload + carriage mass | **4.0 kg** | — | the 3U reference payload |
-| Charge pressure | **22.7258 bar** | — | `gen6_store.charge_pressure_bar` |
-| Chamber volume | **2.0 L** | — | `gen6_store.chamber_volume_l` |
+| Charge pressure | **22.7258 bar** | — | `LEGACY_STUDY_store.charge_pressure_bar` |
+| Chamber volume | **2.0 L** | — | `LEGACY_STUDY_store.chamber_volume_l` |
 | **Diametral clearance** | **50 µm** | **20 – 200 µm** | *declared here.* A sliding fit in a hard-anodised bore; no repository source, so it is a swept design variable and not a claim |
 | **Land separation** | **120 mm** | **40 – 400 mm** | *declared here*, for the reason above |
 | **Bore straightness** | **0.5 mm** peak over 8 m | **0.1 – 2.0 mm** | *declared here.* A59 requires seven supports at 1.0 m; the deviation between them is not modelled anywhere |
@@ -70,7 +70,7 @@ of the result.
 | **2** | **Symmetry.** With every eccentricity, straightness and offset set to zero, all four lateral/angular exit states are below **1e-9** of their own scales | A sign error or an asymmetry in the contact implementation |
 | **3** | **Contact-law verification.** A free radial impact at 0.05–2.0 m/s returns the declared restitution to **5 %** | The Lankarani–Nikravesh implementation is wrong, independently of VOLLEY |
 | **4** | **Energy closes.** Gas work = payload kinetic energy + friction dissipation + contact dissipation, to **0.5 %** | Energy is being created or lost, which invalidates every exit state |
-| **5** | **Nominal tip-off.** At the nominal row of the table above, exit angular rate ≤ **2.0 °/s** | The design point does not meet the tip-off band [A38](A38_tipoff_at_gen6.md) band 2 was declared against and [A23](A23_tipoff_release.md) quotes as the tighter flown figure |
+| **5** | **Nominal tip-off.** At the nominal row of the table above, exit angular rate ≤ **2.0 °/s** | The design point does not meet the tip-off band [A38](A38_tipoff_at_legacy_study.md) band 2 was declared against and [A23](A23_tipoff_release.md) quotes as the tighter flown figure |
 | **6** | **Guide loads stay below the drive.** Peak contact normal force ≤ **445.88 N**, the commanded axial force | The guide is carrying more than the machine is pushing with, and the bore is a structural problem before it is a kinematic one |
 | **7** | **Monte Carlo.** Over the declared brackets, **3σ exit angular rate ≤ 2.0 °/s** | Tip-off is not met under tolerance, and the machine needs geometry it does not have |
 | **8** | **The answer depends on land separation.** Sweeping 40–400 mm moves 3σ exit angular rate by **more than 5 %** | The model is not sensitive to the geometry that provides the angular constraint, so it is measuring something other than guided contact — **the anti-self-deception band** |
@@ -106,9 +106,9 @@ existed. Results in `analysis/results/guided_contact.json`.
 | 8 | land separation moves the answer by more than 5 % | **97.3 %** over 40–400 mm | **PASS** |
 | 9 | sensitivity reported and the dominant input named | **bore straightness** | **PASS** |
 
-### Band 5 is the finding: Gen6 does not meet tip-off, and it is not close
+### Band 5 is the finding: historical study does not meet tip-off, and it is not close
 
-**14.845 °/s at the nominal point, against the 2.0 °/s band** [A38](A38_tipoff_at_gen6.md) band 2
+**14.845 °/s at the nominal point, against the 2.0 °/s band** [A38](A38_tipoff_at_legacy_study.md) band 2
 was declared against and [A23](A23_tipoff_release.md) quotes as the tighter flown deployer figure.
 That is 7.4x over. Under the declared tolerance brackets the 3σ figure is 52.3 °/s, 26x
 over**, and the whole Monte Carlo distribution sits above the band: **the median sample is

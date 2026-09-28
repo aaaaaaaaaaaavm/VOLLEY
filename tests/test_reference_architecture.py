@@ -30,9 +30,10 @@ def test_high_speed_points_are_not_compact_inherited_requirements():
     assert r16['ideal_stroke_m'] > 0.5
     assert r29['ideal_stroke_m'] > 1.7
 
-def test_reference_passes_concept_hard_screens():
+def test_former_spring_concept_remains_a_comparator():
     d = data()
-    ref = next(x for x in d['release_concepts'] if x['disposition'] == 'REFERENCE')
+    ref = next(x for x in d['release_concepts'] if x['name'] == 'motor-charged mechanical accumulator')
+    assert ref['disposition'] == 'WITHDRAWN_COMPARATOR'
     assert ref['name'] == 'motor-charged mechanical accumulator'
     assert ref['payload_modification'] is False
     assert ref['eight_metre_dependency'] is False
@@ -48,10 +49,11 @@ def test_long_guide_and_bolley_do_not_sneak_into_unmodified_reference():
     assert bolley['payload_modification'] is True
     assert bolley['disposition'] != 'REFERENCE'
 
-def test_independent_cell_failure_boundary_is_explicit():
+def test_independent_cell_failure_boundary_is_conditional():
     d = data()
-    arrangement = next(x for x in d['payload_arrangements'] if x['disposition'] == 'REFERENCE')
+    arrangement = next(x for x in d['payload_arrangements'] if x['name'] == 'independent retained cells')
     assert arrangement['name'] == 'independent retained cells'
+    assert arrangement['disposition'] == 'WITHDRAWN_COMPARATOR'
     assert 'unrelated cells' in arrangement['blocked_path']
     assert 'shared' in arrangement['shared_common_modes']
 
@@ -74,6 +76,6 @@ def test_generated_outputs_are_fresh():
 
 def test_result_keeps_p92_open_and_falsifiers():
     d = data()
-    assert d['status'] == 'REFERENCE_SELECTED_P92_OPEN'
+    assert d['status'] == 'FORMER_REFERENCE_WITHDRAWN_P92_OPEN'
     assert len(d['falsifiers']) >= 5
     assert 'installed mass and envelope for all candidates' in d['open_evidence']

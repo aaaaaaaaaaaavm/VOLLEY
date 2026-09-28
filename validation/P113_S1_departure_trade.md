@@ -35,7 +35,7 @@ A zero-width intersection at a boundary is accepted. Numerical tolerance is 1e-1
 - Assumed minimum relative speed: 0.5 m/s for every screen. This is NOT an
   established lower controllable limit, nor proof of collision clearance.
 - Optimistic maximum-speed screens: spring reference 2 m/s (assumed comparator),
-  BOLLEY reference 11.8, Gen5 reference 16.029, Gen6 reference 29.009 m/s
+  BOLLEY reference 11.8, Gen5 reference 16.029, historical study reference 29.009 m/s
   (rounded published design points, NOT verified operating envelopes).
   Exploratory 100 and 120 m/s screens are hypotheses only.
 - Geometric lower bounds: 8 m stroke and 25 g assumed acceleration ceiling.
@@ -75,7 +75,7 @@ Do not rank architectures by the number of sweep cells covered.
 - If none covers it, retain the uncovered cell.
 - The zero-offset, zero-budget case cannot supply a nonzero tangential separation
   while exactly preserving the circular target. Retain that negative control.
-- Generated report and JSON must explicitly retain P113/E5 as open. No Gen5/Gen6
+- Generated report and JSON must explicitly retain P113/E5 as open. No Gen5/historical study
   design point, acceptance band or existing result is changed by this study.
 
 ## Planned outputs

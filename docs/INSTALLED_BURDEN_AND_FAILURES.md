@@ -1,6 +1,9 @@
 # Installed burden and failure consequences
 
-I recover the useful accounting and topology from the superseded [architecture-trade work](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/548ad101b2d3f9605079274837081be4a407c11c), associated with closed PR36. Its source predates the accepted independent-cell reference. I do not restore its obsolete statement that no reference mechanism has been carried forward. [The current reference](GEN6_REFERENCE_ARCHITECTURE.md) remains a calculation candidate, not selected flight hardware.
+> **Architecture disposition, 2026-09-28:** The separate motor-charged spring-cell bank is withdrawn as VOLLEY's next architecture. It is retained here only as a dated study. Any selection or current-reference wording below describes the former decision and is superseded. A reusable shared launch path with sequential loading is the open design objective; no speed envelope is validated. See [current status](NEXT_GENERATION_STATUS.md).
+
+
+This page retains accounting and fault topology from the earlier [architecture trade](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/548ad101b2d3f9605079274837081be4a407c11c), associated with closed PR36. The later [independent-cell screen](LEGACY_STUDY_REFERENCE_ARCHITECTURE.md) is also withdrawn as the selected reference. The counts below are conditional topology outcomes, not reliability probabilities or a complete-system selection.
 
 ## Twelve-payload topology, with no invented reliability
 

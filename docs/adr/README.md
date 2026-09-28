@@ -40,7 +40,7 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | [009](009-coast-and-trim.md) | Coast-and-trim release zone | Accepted | I |
 | [010](010-host-agnostic-interface.md) | Host-agnostic four-item interface | Accepted | I |
 | [011](011-publish-publicly.md) | Publish publicly, defects included | Accepted | I |
-| [012](012-adopt-measured-sled-mass.md) | Adopt the measured 9.445 kg sled | Accepted | I |
+| [012](012-adopt-modelled-sled-mass.md) | Adopt the CAD-calculated 9.445 kg sled | Accepted | I |
 | [013](013-drop-invariance-claim.md) | Drop the lifetime-ratio invariance claim | Accepted | I |
 | [014](014-fleet-setpoint-below-ceiling.md) | Fleet setpoint at 98.2 % of the open-loop ceiling | Accepted | I |
 | [015](015-derive-not-paste.md) | Derive coupled values; never paste them | Accepted | I |
@@ -57,12 +57,12 @@ benefits is advocacy, not a decision record, and one with no validation path vio
 | [026](026-cad-built-from-parameters.md) | The CAD is generated from parameters, not drawn | Accepted | I |
 | [027](027-designed-velocity-loop.md) | The velocity loop is designed against margins; closes P47 | Accepted | I |
 | [028](028-no-latex-in-the-flagship.md) | No LaTeX in the flagship; the manuscript is authored in VOLLEY-paper | Accepted | I |
-| [029](029-phase-one-closes-on-gen5.md) | Phase I closes on Gen5; Gen6 is the Phase II design target | Accepted | I |
+| [029](029-phase-one-closes-on-gen5.md) | Phase I closes on Gen5; historical study is the Phase II design target | Accepted | I |
 | [030](030-apply-the-depth-resolved-thrust-constant.md) | Apply the depth-resolved K_t and the three decisions beside it; moves the baseline | Accepted | I |
 | [031](031-four-repositories-not-two-phases.md) | Four repositories by role, replacing the two-phase model | Accepted |, |
-| [032](032-gen6-stage-integrated-gas-store.md) | Gen6 is a stage-integrated, payload-direct, gas-driven deployer; supersedes the Gen6 of ADR-029 | Accepted |, |
-| [033](033-gen6-trim-stage.md) | Gen6 gains a motor that steers rather than throws, adopted with its pulse store unweighed (P77) | Accepted | I |
-| [034](034-gen6-long-stroke-design-point.md) | Gen6's stroke becomes the host stage's whole 8.0 m, same velocity, half the acceleration, half the gas, and friction at 28.39 % of shot work (P78, P82, P83) | Accepted | I |
+| [032](032-legacy_study-stage-integrated-gas-store.md) | historical study is a stage-integrated, payload-direct, gas-driven deployer; supersedes the historical study of ADR-029 | Accepted |, |
+| [033](033-legacy_study-trim-stage.md) | historical study gains a motor that steers rather than throws, adopted with its pulse store unweighed (P77) | Accepted | I |
+| [034](034-legacy_study-long-stroke-design-point.md) | historical study's stroke becomes the host stage's whole 8.0 m, same velocity, half the acceleration, half the gas, and friction at 28.39 % of shot work (P78, P82, P83) | Accepted | I |
 | [035](035-drive-tube-material.md) | The drive tube is hard-anodised aluminium and the piston matches it, closes P85, and forecloses steam | Accepted | I |
 | [036](036-seal-specification-and-the-trim-stage.md) | The seal is specified at 17.8 N and the trim stage is suspended rather than built, closes P89, amends ADR-033, defers A66 | Accepted | I |
 | [037](037-a66-band-one-was-unsatisfiable.md) | A66's first band was unsatisfiable by a correct implementation and is withdrawn rather than widened; band 1R replaces it | Accepted | I |

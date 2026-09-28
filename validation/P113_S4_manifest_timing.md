@@ -90,4 +90,4 @@ This adds coupling between deliveries, not a validated speed envelope or mechani
 selection. Larger manifests, unrestricted speed/direction/branch search, navigation
 and release uncertainty, J2/drag, host attitude, mechanism energy, installed mass,
 failure topology, packaging and provider interfaces remain unresolved. No Gen5
-baseline, Gen6 configuration, or open-item disposition changes.
+baseline, historical study configuration, or open-item disposition changes.

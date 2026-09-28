@@ -22,7 +22,7 @@ array the supply, its residual propellant the repositioning budget.
 
 This run also settles the falsification test declared in A35 and left open. That test was:
 *deleting "the energy arrives during the shot" removes more than 40 % of dry mass; the falsifier is
-that its replacement weighs more than 60 % of what came out.* A35 measured the removal at
+that its replacement weighs more than 60 % of what came out.* A35 calculated the removal at
 **23.76 kg**. Band 4 below measures the replacement.
 
 ## The honesty problem this run must not fall into
@@ -125,7 +125,7 @@ survives every architecture on this page and gets worse with acceleration.
 
 | | |
 |---|---:|
-| **Deleted by Gen6 physics** — no mover, no pulse | **29.75 kg** |
+| **Deleted by historical study physics** — no mover, no pulse | **29.75 kg** |
 | **Provided by a live stage**, each item naming its subsystem | **43.33 kg** |
 | **Added — what the machine still costs** | **11.45 kg** |
 

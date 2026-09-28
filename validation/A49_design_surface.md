@@ -7,7 +7,7 @@ Verify with `git show --stat <this commit> -- analysis/design_surface.py`, which
 
 ## Why this run exists
 
-Asked directly: make Gen6 best on velocity, on acceleration, and on power, best overall.
+Asked directly: make historical study best on velocity, on acceleration, and on power, best overall.
 
 Best at everything is not available and this repository says so elsewhere. What is available
 is a design point that dominates the current one on several axes at once, and the record contains
@@ -53,10 +53,10 @@ Declared before the script. Not to be edited after the run.
 | **2** | Work from a fixed charge is **monotonically increasing** in stroke | The efficiency claim above is wrong |
 | **3** | Peak acceleration is **independent of stroke** to within 0.1 % at fixed p₀ | The stated physics is wrong, and the trade is not the one this run is built on |
 | **4** | Gas per shot is **unchanged** across a stroke sweep at fixed p₀, within 0.1 % | Same |
-| **5** | **A point exists that beats the current Gen6 on exit velocity, peak g and gas per shot simultaneously** | **There is no dominating point, "best overall" is not available even in principle, and the answer to the request is no** |
+| **5** | **A point exists that beats the current historical study on exit velocity, peak g and gas per shot simultaneously** | **There is no dominating point, "best overall" is not available even in principle, and the answer to the request is no** |
 | **6** | Friction work as a fraction of shot work varies by **≤ 2 percentage points** across the stroke sweep | Lengthening the tube makes **P67** relatively worse, and the longer stroke buys performance by making the worst defect worse |
 | **7** | Tube mass at **L = 8.0 m** is **≤ 2.0 kg** | The structure eats the store saving |
-| **8** | At the recommended point, **added mass per satellite ≤ 2.0 kg** | The design point re-crosses the one kill-criterion numerator Gen6 currently passes |
+| **8** | At the recommended point, **added mass per satellite ≤ 2.0 kg** | The design point re-crosses the one kill-criterion numerator historical study currently passes |
 | **9** | The **Pareto front is published**, not a single point | The run picks the answer instead of showing the trade, which is what was asked for |
 
 ## Predictions, with the arithmetic behind them
@@ -86,7 +86,7 @@ with a no — passes fourteen times over. Bands 1 and 6 fail, and both failures 
 | 2 | work from a fixed charge rises with stroke | 1171.9 → 5170.8 J | **PASS** |
 | 3 | peak g independent of stroke | **deviation 0.000000 g** | **PASS** |
 | 4 | gas per shot unchanged across stroke | deviation 0.000 mg | **PASS** |
-| 5 | **a point beats Gen6 on velocity, g and gas at once** | **14 of 63 points** | **PASS** |
+| 5 | **a point beats historical study on velocity, g and gas at once** | **14 of 63 points** | **PASS** |
 | 6 | friction fraction varies ≤ 2 points | **9.25 % → 12.90 %** | **FAIL** |
 | 7 | tube mass at 8 m ≤ 2.0 kg | 1.140 kg | **PASS** |
 | 8 | added mass per satellite ≤ 2.0 kg | **1.296 kg** | **PASS** |
@@ -94,13 +94,13 @@ with a no — passes fourteen times over. Bands 1 and 6 fail, and both failures 
 
 ### The answer to the question that was asked
 
-Yes, a better point exists, and there are fourteen of them. Holding the velocity Gen6 already
+Yes, a better point exists, and there are fourteen of them. Holding the velocity historical study already
 delivers and spending stroke on gentleness instead:
 
-| Stroke | Charge | **Peak g** | Gas per shot | vs Gen6 |
+| Stroke | Charge | **Peak g** | Gas per shot | vs historical study |
 |---:|---:|---:|---:|---:|
 | 1.30 m | 76.43 bar | 38.22 | 171.7 g | +52.9 % |
-| **2.18 m — Gen6 today** | **50.00 bar** | **25.00** | **112.3 g** | — |
+| **2.18 m — historical study today** | **50.00 bar** | **25.00** | **112.3 g** | — |
 | 4.00 m | 32.52 bar | 16.26 | 73.0 g | −35.0 % |
 | 6.00 m | 25.84 bar | 12.92 | 58.0 g | −48.3 % |
 | **8.00 m** | **22.73 bar** | **11.36** | **51.0 g** | **−54.5 %** |
@@ -109,7 +109,7 @@ The same exit velocity at 45 % of the acceleration on 45 % of the gas. Added mas
 falls 1.403 to 1.296 kg, because the store shrinks with the charge faster than the tube grows.
 
 And if velocity is wanted instead of gentleness, the front runs to 52.62 m/s at 8 m and 60 bar,
-against Gen6's 29.009. The best single point on velocity-per-g is 8 m at 25 bar: 30.97 m/s at
+against historical study's 29.009. The best single point on velocity-per-g is 8 m at 25 bar: 30.97 m/s at
 12.50 g on 56.2 g of gas, which beats today's design on all three simultaneously.
 
 ### Why stroke is the lever, in two facts the sweep confirms

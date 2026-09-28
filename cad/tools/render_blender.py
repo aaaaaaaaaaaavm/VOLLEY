@@ -61,26 +61,26 @@ VIEWS = [
 ]
 
 
-# Gen6: ADR-032. No mover, no stator, no bank, no brake. A rail a spent stage provides,
+# LegacyStudy: ADR-032. No mover, no stator, no bank, no brake. A rail a spent stage provides,
 # a pre-charged chamber, and a carriage that is not recovered.
-PARTS_GEN6 = {
-    "Stage_Rail":        ("VOLLEY_Stage_Rail_Gen6.stl",        (0.48, 0.50, 0.54), 1.0, 0.55),
-    "Drive_Tube":        ("VOLLEY_Drive_Tube_Gen6.stl",         (0.66, 0.68, 0.72), 1.0, 0.34),
-    "Trim_Stator":       ("VOLLEY_Trim_Stator_Gen6.stl",        (0.72, 0.34, 0.16), 1.0, 0.30),
-    "Carriage":          ("VOLLEY_Carriage_Gen6.stl",           (0.72, 0.74, 0.77), 1.0, 0.26),
-    "Chamber":           ("VOLLEY_Chamber_Gen6.stl",            (0.55, 0.32, 0.20), 1.0, 0.32),
-    "Reservoir":         ("VOLLEY_Reservoir_Gen6.stl",          (0.30, 0.42, 0.52), 1.0, 0.30),
-    "Magazine_Cassette": ("VOLLEY_Magazine_Cassette_Gen6.stl",  (0.50, 0.52, 0.56), 1.0, 0.52),
+PARTS_LEGACY_STUDY = {
+    "Stage_Rail":        ("VOLLEY_Stage_Rail_LegacyStudy.stl",        (0.48, 0.50, 0.54), 1.0, 0.55),
+    "Drive_Tube":        ("VOLLEY_Drive_Tube_LegacyStudy.stl",         (0.66, 0.68, 0.72), 1.0, 0.34),
+    "Trim_Stator":       ("VOLLEY_Trim_Stator_LegacyStudy.stl",        (0.72, 0.34, 0.16), 1.0, 0.30),
+    "Carriage":          ("VOLLEY_Carriage_LegacyStudy.stl",           (0.72, 0.74, 0.77), 1.0, 0.26),
+    "Chamber":           ("VOLLEY_Chamber_LegacyStudy.stl",            (0.55, 0.32, 0.20), 1.0, 0.32),
+    "Reservoir":         ("VOLLEY_Reservoir_LegacyStudy.stl",          (0.30, 0.42, 0.52), 1.0, 0.30),
+    "Magazine_Cassette": ("VOLLEY_Magazine_Cassette_LegacyStudy.stl",  (0.50, 0.52, 0.56), 1.0, 0.52),
 }
 
 # ADR-034 took the stroke from 2.18 m to 8.0 m, so the assembly spans x -190..8100 and the
 # framing that suited a 2.18 m machine puts it off both edges. These distances are set from the
 # 8.2 m extent: a 50 mm lens on a 36 mm sensor needs about 11.4 m of standoff to contain it.
 # The aspect ratio is roughly 42:1 and the renders look like it. That is the machine.
-VIEWS_GEN6 = [
-    ("hero_open", list(PARTS_GEN6), (-3400, -8800, 3300), (3350, 0, -320), 50),
-    ("three_quarter", list(PARTS_GEN6), (12000, -10000, 4000), (4000, 0, 0), 55),
-    ("side", list(PARTS_GEN6), (4000, -16000, 700), (4000, 0, 0), 60),
+VIEWS_LEGACY_STUDY = [
+    ("hero_open", list(PARTS_LEGACY_STUDY), (-3400, -8800, 3300), (3350, 0, -320), 50),
+    ("three_quarter", list(PARTS_LEGACY_STUDY), (12000, -10000, 4000), (4000, 0, 0), 55),
+    ("side", list(PARTS_LEGACY_STUDY), (4000, -16000, 700), (4000, 0, 0), 60),
     ("store", ["Chamber", "Reservoir", "Drive_Tube"], (-900, -1700, 700), (250, 0, 0), 55),
 ]
 
@@ -92,8 +92,8 @@ VIEWS_GEN3 = [
 
 GROUND_SIZE, GROUND_AT = 9000, (900, 0, -300)
 
-if GEN == "gen6":
-    PARTS, VIEWS, MECHANISM = PARTS_GEN6, VIEWS_GEN6, list(PARTS_GEN6)
+if GEN == "legacy_study":
+    PARTS, VIEWS, MECHANISM = PARTS_LEGACY_STUDY, VIEWS_LEGACY_STUDY, list(PARTS_LEGACY_STUDY)
     GROUND_SIZE, GROUND_AT = 26000, (4000, 0, -400)
 elif GEN == "gen3":
     PARTS, VIEWS, MECHANISM = GEN3, VIEWS_GEN3, list(GEN3)
@@ -159,7 +159,7 @@ def build_scene(parts):
                 poly.use_smooth = False
 
     # A floor, kept small enough to read as a plinth rather than a horizon. It has to track
-    # the machine's length: at Gen6's 8.2 m the old 9000-unit plinth ended under the midpoint.
+    # the machine's length: at LegacyStudy's 8.2 m the old 9000-unit plinth ended under the midpoint.
     bpy.ops.mesh.primitive_plane_add(size=GROUND_SIZE, location=GROUND_AT)
     ground = bpy.context.object
     ground.data.materials.append(material("Ground", (0.32, 0.33, 0.35), 0.0, 0.9))

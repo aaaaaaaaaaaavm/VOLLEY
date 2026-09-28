@@ -3,12 +3,12 @@ VOLLEY | A motor that steers rather than throws.
 
 WHY THIS EXISTS
 ---------------
-Asked in review: can Gen6 be gas AND electromagnetic, each a fail-safe for the other? The
+Asked in review: can LegacyStudy be gas AND electromagnetic, each a fail-safe for the other? The
 mutual-redundancy form does not survive arithmetic and is recorded as PII-20 rather than run --
 each drive must be sized for the full duty, and A35 prices the electromagnetic half at the
 37.89 kg ADR-032 deleted.
 
-But the question contains a better idea. Gen6's largest live defect is control, not energy:
+But the question contains a better idea. LegacyStudy's largest live defect is control, not energy:
 P67, 1.113 % dispersion of which 93.4 % is an unmeasured seal friction, and no transducer buys
 it back. Gas is an excellent energy store and cannot servo. A linear motor is a mediocre energy
 store and an excellent servo. This prices using each for what it is good at.
@@ -34,7 +34,7 @@ SHEET_A_PER_M = 90e3         # the sheet current Gen5's stator runs at, A1
 # 1.822 %. The section length never moved; only the machine it was a fraction of did.
 STROKE_A48 = 2.18
 STROKE = STROKE_A48
-TARGET_SIGMA = 0.0274        # A28: the dispersion Gen5 achieved, and Gen6 gave up
+TARGET_SIGMA = 0.0274        # A28: the dispersion Gen5 achieved, and LegacyStudy gave up
 MAX_SECTION_FRAC = 0.15      # band 3
 POWER_CAP_W = 200.0          # band 5, A37
 MASS_CAP_KG = 2.0            # band 4
@@ -59,13 +59,13 @@ def peak_power(dv, m, v, force_N):
 
 def main():
     shot = json.load(open(os.path.join(RESULTS, 'precharged.json')))['selected']
-    disp = json.load(open(os.path.join(RESULTS, 'gen6_dispersion.json')))
+    disp = json.load(open(os.path.join(RESULTS, 'legacy_study_dispersion.json')))
     e_shot = shot['work_J']
     v = disp['mean']
     sigma3 = disp['three_sigma']
     m = pc.M_PAY
 
-    print(f"Gen6 shot {e_shot:.1f} J, exit {v:.3f} m/s, 3-sigma {sigma3:.4f} m/s "
+    print(f"LegacyStudy shot {e_shot:.1f} J, exit {v:.3f} m/s, 3-sigma {sigma3:.4f} m/s "
           f"({disp['three_sigma_pct']:.3f} %)\n")
 
     # Force available from a trim stator at Gen5's sheet current, per metre of active length
@@ -116,7 +116,7 @@ def main():
         "to the moving part, so this defect returns with them",
         "E35 -- the payload's field exposure becomes a design variable again",
         "the cradle -- the carriage must now hold magnets in alignment as well as the payload",
-        "a velocity sensor before the trim section, which Gen6 does not have",
+        "a velocity sensor before the trim section, which LegacyStudy does not have",
         "one more element in the FMEA, shared across all twelve shots (A47)",
     ]
 

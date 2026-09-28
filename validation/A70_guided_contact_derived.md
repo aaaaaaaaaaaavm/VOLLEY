@@ -29,7 +29,7 @@ sensitivity at S_T = 0.894.
 | # | Band | FAIL if |
 |---|---|---|
 | **1** | **The coupling is exact.** With A69's shape scaled to zero, the model reproduces A67's zero-straightness case to **0.5 %** on exit velocity | The centreline plumbing changed something it should not have |
-| **2** | **Exit angular rate at the orbital centreline ≤ 2.0 °/s** | Gen6 still misses tip-off with a derived shape and a verified law, and **[P108](../OPEN_PROBLEMS.md) survives every objection raised against A67** |
+| **2** | **Exit angular rate at the orbital centreline ≤ 2.0 °/s** | historical study still misses tip-off with a derived shape and a verified law, and **[P108](../OPEN_PROBLEMS.md) survives every objection raised against A67** |
 | **3** | **3σ over A69's orbital range ≤ 2.0 °/s** | Same, under the tolerance the structural model actually produces rather than an assumed bracket |
 | **4** | **Peak contact normal force ≤ 445.88 N** at the orbital centreline | The guide carries more than the drive pushes with |
 | **5** | **The A67 → A70 change in exit angular rate is ≤ 50 %** | The two runs disagree about the machine by more than model form should account for, and the earlier headline must be withdrawn rather than refined |
@@ -101,11 +101,11 @@ Three-point sagitta, in µm, against a nominal radial clearance of 25.0 µm:
 This is a hard constraint, not a sensitivity. It does not depend on the contact law, the
 integrator, the friction, the eccentricity or the restitution. It is the geometry of a rigid
 body in a curved tube, and the only inputs are A69's computed centreline and
-`gen6_drive.bore_mm`.
+`LEGACY_STUDY_drive.bore_mm`.
 
 ### What it does not say
 
-It does not say Gen6 fails. It says this configuration, 15.805 mm bore, 50 µm diametral
+It does not say historical study fails. It says this configuration, 15.805 mm bore, 50 µm diametral
 clearance, a rigid two-land piston at 120 mm, seven supports at 1.0 m, at a 1 K gradient, does
 not admit its own piston. Every one of those is a design variable and none has been chosen
 against this constraint, because until now the constraint was not known.

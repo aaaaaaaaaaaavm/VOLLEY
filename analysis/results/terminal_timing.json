@@ -324,7 +324,7 @@
       ],
       "reason": null,
       "release_time_s": 150,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -819,7 +819,7 @@
       ],
       "reason": null,
       "release_time_s": 300,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -1314,7 +1314,7 @@
       ],
       "reason": null,
       "release_time_s": 450,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -1809,7 +1809,7 @@
       ],
       "reason": null,
       "release_time_s": 600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -2304,7 +2304,7 @@
       ],
       "reason": null,
       "release_time_s": 750,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -2799,7 +2799,7 @@
       ],
       "reason": null,
       "release_time_s": 900,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -3294,7 +3294,7 @@
       ],
       "reason": null,
       "release_time_s": 1050,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -3789,7 +3789,7 @@
       ],
       "reason": null,
       "release_time_s": 1200,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -4284,7 +4284,7 @@
       ],
       "reason": null,
       "release_time_s": 1350,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -4779,7 +4779,7 @@
       ],
       "reason": null,
       "release_time_s": 1500,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -5274,7 +5274,7 @@
       ],
       "reason": null,
       "release_time_s": 1650,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -5769,7 +5769,7 @@
       ],
       "reason": null,
       "release_time_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -6264,7 +6264,7 @@
       ],
       "reason": null,
       "release_time_s": 1950,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -6759,7 +6759,7 @@
       ],
       "reason": null,
       "release_time_s": 2100,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -7254,7 +7254,7 @@
       ],
       "reason": null,
       "release_time_s": 2250,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -7749,7 +7749,7 @@
       ],
       "reason": null,
       "release_time_s": 2400,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -8244,7 +8244,7 @@
       ],
       "reason": null,
       "release_time_s": 2550,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -8739,7 +8739,7 @@
       ],
       "reason": null,
       "release_time_s": 2700,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -9234,7 +9234,7 @@
       ],
       "reason": null,
       "release_time_s": 2850,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -9729,7 +9729,7 @@
       ],
       "reason": null,
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_5km"
     },
     {
@@ -9774,7 +9774,7 @@
       "candidates": [],
       "reason": "SEARCH_FAILED",
       "release_time_s": 150,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -9849,7 +9849,7 @@
       ],
       "reason": "CANDIDATES_REJECTED",
       "release_time_s": 300,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -9924,7 +9924,7 @@
       ],
       "reason": "CANDIDATES_REJECTED",
       "release_time_s": 450,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -9999,7 +9999,7 @@
       ],
       "reason": "CANDIDATES_REJECTED",
       "release_time_s": 600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -10242,7 +10242,7 @@
       ],
       "reason": null,
       "release_time_s": 750,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -10569,7 +10569,7 @@
       ],
       "reason": null,
       "release_time_s": 900,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -11064,7 +11064,7 @@
       ],
       "reason": null,
       "release_time_s": 1050,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -11559,7 +11559,7 @@
       ],
       "reason": null,
       "release_time_s": 1200,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -12054,7 +12054,7 @@
       ],
       "reason": null,
       "release_time_s": 1350,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -12549,7 +12549,7 @@
       ],
       "reason": null,
       "release_time_s": 1500,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -13044,7 +13044,7 @@
       ],
       "reason": null,
       "release_time_s": 1650,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -13539,7 +13539,7 @@
       ],
       "reason": null,
       "release_time_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -14034,7 +14034,7 @@
       ],
       "reason": null,
       "release_time_s": 1950,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -14529,7 +14529,7 @@
       ],
       "reason": null,
       "release_time_s": 2100,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -15024,7 +15024,7 @@
       ],
       "reason": null,
       "release_time_s": 2250,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -15519,7 +15519,7 @@
       ],
       "reason": null,
       "release_time_s": 2400,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -16014,7 +16014,7 @@
       ],
       "reason": null,
       "release_time_s": 2550,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -16509,7 +16509,7 @@
       ],
       "reason": null,
       "release_time_s": 2700,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -17004,7 +17004,7 @@
       ],
       "reason": null,
       "release_time_s": 2850,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -17499,7 +17499,7 @@
       ],
       "reason": null,
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "phase_25km"
     },
     {
@@ -17544,7 +17544,7 @@
       "candidates": [],
       "reason": "SEARCH_FAILED",
       "release_time_s": 150,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -17589,7 +17589,7 @@
       "candidates": [],
       "reason": "SEARCH_FAILED",
       "release_time_s": 300,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -17634,7 +17634,7 @@
       "candidates": [],
       "reason": "SEARCH_FAILED",
       "release_time_s": 450,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -17709,7 +17709,7 @@
       ],
       "reason": "CANDIDATES_REJECTED",
       "release_time_s": 600,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -17784,7 +17784,7 @@
       ],
       "reason": "CANDIDATES_REJECTED",
       "release_time_s": 750,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -17859,7 +17859,7 @@
       ],
       "reason": "CANDIDATES_REJECTED",
       "release_time_s": 900,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -17934,7 +17934,7 @@
       ],
       "reason": "CANDIDATES_REJECTED",
       "release_time_s": 1050,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -18009,7 +18009,7 @@
       ],
       "reason": "CANDIDATES_REJECTED",
       "release_time_s": 1200,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -18168,7 +18168,7 @@
       ],
       "reason": null,
       "release_time_s": 1350,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -18411,7 +18411,7 @@
       ],
       "reason": null,
       "release_time_s": 1500,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -18738,7 +18738,7 @@
       ],
       "reason": null,
       "release_time_s": 1650,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -19233,7 +19233,7 @@
       ],
       "reason": null,
       "release_time_s": 1800,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -19728,7 +19728,7 @@
       ],
       "reason": null,
       "release_time_s": 1950,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -20223,7 +20223,7 @@
       ],
       "reason": null,
       "release_time_s": 2100,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -20718,7 +20718,7 @@
       ],
       "reason": null,
       "release_time_s": 2250,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -21213,7 +21213,7 @@
       ],
       "reason": null,
       "release_time_s": 2400,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -21708,7 +21708,7 @@
       ],
       "reason": null,
       "release_time_s": 2550,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -22203,7 +22203,7 @@
       ],
       "reason": null,
       "release_time_s": 2700,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -22698,7 +22698,7 @@
       ],
       "reason": null,
       "release_time_s": 2850,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     },
     {
@@ -23193,7 +23193,7 @@
       ],
       "reason": null,
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "target": "higher_circle"
     }
   ],
@@ -23241,7 +23241,7 @@
         0.5,
         16.029
       ],
-      "gen6_screen": [
+      "legacy_study_screen": [
         0.5,
         29.009
       ],
@@ -23363,7 +23363,7 @@
       "fuel_kg": 0.1793621867794286,
       "grid": "coarse_300s",
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED",
       "target": "phase_5km"
     },
@@ -23372,7 +23372,7 @@
       "fuel_kg": 0.1793621867794286,
       "grid": "fine_150s",
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED",
       "target": "phase_5km"
     },
@@ -23453,7 +23453,7 @@
       "fuel_kg": 0.8949810970161707,
       "grid": "coarse_300s",
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED",
       "target": "phase_25km"
     },
@@ -23462,7 +23462,7 @@
       "fuel_kg": 0.8949810970161707,
       "grid": "fine_150s",
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED",
       "target": "phase_25km"
     },
@@ -23543,7 +23543,7 @@
       "fuel_kg": 1.3890829326604717,
       "grid": "coarse_300s",
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED",
       "target": "higher_circle"
     },
@@ -23552,7 +23552,7 @@
       "fuel_kg": 1.3890829326604717,
       "grid": "fine_150s",
       "release_time_s": 3000,
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED",
       "target": "higher_circle"
     }

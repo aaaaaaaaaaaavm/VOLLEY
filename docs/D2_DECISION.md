@@ -2,7 +2,7 @@
 
 Written 2026-08-22. [`STATE_OF_THE_PROJECT.md`](STATE_OF_THE_PROJECT.md) lists ten decisions
 nobody has taken and calls D2 *"the one that changes the most and has been avoided the
-hardest."* [`GEN6_CLOSURE.md`](GEN6_CLOSURE.md) puts D2 and the enclosure panel together as step 5
+hardest."* [`LEGACY_STUDY_CLOSURE.md`](LEGACY_STUDY_CLOSURE.md) puts D2 and the enclosure panel together as step 5
 of the order of work and says they are *"together worth more than any analysis on this page."*
 
 This file does not decide either of them. It puts each business case beside the other at the
@@ -97,10 +97,10 @@ differential between the 24 satellites in a cell is also exactly zero. It keeps 
 ### Two things that must be said with that table
 
 The ladder is Gen5's cassette. `cad/parameters.json` carries `magazine` and `payload_cell` as
-Gen5 documents. The `gen6_*` groups define a drive, a store, a seal and a trim section, there is
-no Gen6 magazine and no Gen6 cell in any committed file. The table above therefore prices D2
+Gen5 documents. The `LEGACY_STUDY_*` groups define a drive, a store, a seal and a trim section, there is
+no historical study magazine and no historical study cell in any committed file. The table above therefore prices D2
 against the architecture that has been analysed, not the one currently being designed. *A rung
-chosen here does not transfer to Gen6 without a cell geometry that does not exist.*
+chosen here does not transfer to historical study without a cell geometry that does not exist.*
 
 Below 3U, satellites sharing a cell never separate from each other. A24 raises this and does
 not solve it. Band 6 failed on exactly the mechanism meant to address it, and
@@ -112,7 +112,7 @@ not solve it. Band 6 failed on exactly the mechanism meant to address it, and
 than a payload on one, and A37 band 3 requires both numerators to appear wherever either does.
 That rule binds this file.
 
-| At the Gen6 design point | Per satellite |
+| At the historical study design point | Per satellite |
 |---|---:|
 | Dry mass, the numerator a customer pays if the deployer is hardware | 10.547 kg |
 | Added mass, full credit at [A56](../validation/A56_reservoir_resized.md)'s sized store | 1.2145 kg |
@@ -122,7 +122,7 @@ That rule binds this file.
 Kill criterion 1 is crossed on both numerators, not one,
 [P68](../OPEN_PROBLEMS.md), CRITICAL and open. The added-mass case closes at the full credit and
 crosses at the hostile one, and the break-even is 11.0 %: the credit may fail by that
-much before added mass reaches 2.0 kg. [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) declared 30 %.
+much before added mass reaches 2.0 kg. [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md) declared 30 %.
 The falsifier fires. 58.6 % of the credit is the enclosure, one assumption about somebody
 else's skin, which is what makes Part 2 a decision and not a detail.
 
@@ -197,11 +197,11 @@ Adopting one is an ADR, not a parameter edit.
 |---|---|
 | On kill criterion 1 at 3U | Nothing that closes it. [P69](../OPEN_PROBLEMS.md) records the honeycomb case at 8.87 kg per satellite, ratio 1.48 against a canisterised dispenser, *still failing*, and states plainly: no enclosure change reaches parity |
 | On kill criterion 1 at PocketQube | Nothing that is needed. 0.440 kg already closes it |
-| On the Gen6 added-mass case | The exposure, not the mass. The enclosure is 58.6 % of the stage credit and its skins are the largest single loss in the hostile reading at 4.92 kg. A lighter panel is a smaller thing to be wrong about |
+| On the historical study added-mass case | The exposure, not the mass. The enclosure is 58.6 % of the stage credit and its skins are the largest single loss in the hostile reading at 4.92 kg. A lighter panel is a smaller thing to be wrong about |
 | On the record | Twenty kilograms of a 126.6 kg rollup, in a document whose enclosure was a placeholder six days ago |
 
 So the enclosure panel is not the decision it looks like. It changes no verdict on either
-numerator at either payload class. What it changes is how much of the Gen6 mass case rests on
+numerator at either payload class. What it changes is how much of the historical study mass case rests on
 one assumption about a stage's skin, and that is the argument for taking it, not the twenty
 kilograms.
 

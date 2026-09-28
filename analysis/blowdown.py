@@ -8,7 +8,7 @@ problem, and A39 sized the first and not the second. It chose gas on a quasi-sta
 -- swept volume times working pressure equals the energy needed -- and never asked whether the
 gas can ARRIVE in time. Filling 0.428 litres in a 133 ms stroke is roughly 3 L/s.
 
-Nothing about Gen6's geometry can be drawn until this closes. The bore, the reservoir and the
+Nothing about LegacyStudy's geometry can be drawn until this closes. The bore, the reservoir and the
 valve are the first three dimensions in cad/parameters.json.
 
 AND A SECOND QUESTION A39 COULD NOT ASK

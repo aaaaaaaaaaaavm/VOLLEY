@@ -170,7 +170,7 @@ evidence maturity.
 | VOLLEY-paper / -thesis | The same concept at its most reliable | Frozen when presented or published |
 
 What the dossier was protecting is kept. The freeze made the verification tools mean
-something, and the boundary is what let Gen6 be developed and then *not* adopted on the day it
+something, and the boundary is what let historical study be developed and then *not* adopted on the day it
 looked best. That line moves from a date to a publication; it does not disappear. Promotion
 conditions are stated per tier in `../VAULT.md`, and the strictest one is unchanged and not
 negotiable: an idea enters the record only when its acceptance bands were declared before its

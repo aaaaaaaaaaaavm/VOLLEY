@@ -1,4 +1,4 @@
-"""A59: the Gen6 drive tube as a beam, a column and a pressure vessel.
+"""A59: the LegacyStudy drive tube as a beam, a column and a pressure vessel.
 
 Bands declared in validation/A59_tube_structure.md at 6ff6dd5, BEFORE this file existed.
 
@@ -6,7 +6,7 @@ WHY THIS EXISTS
 ---------------
 ADR-034 took the stroke from 2.18 m to 8.0 m and nothing structural was checked. A49 costed the
 tube as "a plain cylinder at one wall thickness, no bending, no alignment tolerance, no dynamic
-seal behaviour" and added that every omission flatters a long tube. build_gen6.py says in its own
+seal behaviour" and added that every omission flatters a long tube. build_legacy_study.py says in its own
 docstring that the 1.0 mm wall "is set by handling and by carrying A38's 201.7 N cradle preload --
 neither of which is modelled here."
 
@@ -57,7 +57,7 @@ def geometry():
     """Bore, wall, stroke and charge pressure, read from the parameter file."""
     with open(PARAMS, encoding='utf-8') as f:
         g = json.load(f)['groups']
-    d, s = g['gen6_drive'], g['gen6_store']
+    d, s = g['legacy_study_drive'], g['legacy_study_store']
     bore, wall = d['bore_mm'] / 1e3, d['tube_wall_mm'] / 1e3
     r_o, r_i = bore / 2 + wall, bore / 2
     return dict(bore=bore, wall=wall, L=d['stroke_mm'] / 1e3, r_o=r_o, r_i=r_i,

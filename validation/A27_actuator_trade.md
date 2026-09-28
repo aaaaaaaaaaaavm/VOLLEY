@@ -105,7 +105,7 @@ From `docs/BASELINE.md` and `cad/parameters.json`, unchanged:
 | Moving mass | **13.445 kg** (9.445 kg sled + 4 kg payload) |
 | Stroke | **1.30 m** acceleration zone |
 | Exit velocity | **16.388 m/s** |
-| Peak acceleration | **≤ 25 g**, the CubeSat Design Specification qualification cap |
+| Peak acceleration | **≤ 25 g**, the project's chosen study ceiling |
 | Mechanical energy to the payload | **537 J** |
 | Cycles | **12** per campaign, in vacuum, after launch vibration |
 | **Velocity control** | **commanded per shot** — the product |

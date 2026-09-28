@@ -2229,7 +2229,7 @@
         600,
         1200
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -5408,7 +5408,7 @@
         600,
         1800
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -8587,7 +8587,7 @@
         600,
         2400
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -11766,7 +11766,7 @@
         600,
         3000
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -14243,7 +14243,7 @@
         1200,
         1800
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -17422,7 +17422,7 @@
         1200,
         2400
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -20601,7 +20601,7 @@
         1200,
         3000
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -23078,7 +23078,7 @@
         1800,
         2400
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -26257,7 +26257,7 @@
         1800,
         3000
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -28858,7 +28858,7 @@
         2400,
         3000
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -29587,7 +29587,7 @@
         600,
         1200
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": []
     },
     {
@@ -30071,7 +30071,7 @@
         600,
         1800
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": []
     },
     {
@@ -30555,7 +30555,7 @@
         600,
         2400
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": []
     },
     {
@@ -31039,7 +31039,7 @@
         600,
         3000
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": []
     },
     {
@@ -32915,7 +32915,7 @@
         1200,
         1800
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -35198,7 +35198,7 @@
         1200,
         2400
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -37697,7 +37697,7 @@
         1200,
         3000
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -40050,7 +40050,7 @@
         1800,
         2400
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -42889,7 +42889,7 @@
         1800,
         3000
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -45366,7 +45366,7 @@
         2400,
         3000
       ],
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "second_transfers": [
         {
           "arcs": [
@@ -45654,7 +45654,7 @@
         0.5,
         16.029
       ],
-      "gen6_screen": [
+      "legacy_study_screen": [
         0.5,
         29.009
       ],
@@ -46186,7 +46186,7 @@
       "grid": "coarse",
       "order": "either",
       "policy": "enumerated",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46196,7 +46196,7 @@
       "grid": "coarse",
       "order": "phase_5kmthenphase_25km",
       "policy": "enumerated",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46206,7 +46206,7 @@
       "grid": "coarse",
       "order": "phase_25kmthenphase_5km",
       "policy": "enumerated",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46216,7 +46216,7 @@
       "grid": "coarse",
       "order": "either",
       "policy": "local_only",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46226,7 +46226,7 @@
       "grid": "coarse",
       "order": "phase_5kmthenphase_25km",
       "policy": "local_only",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46236,7 +46236,7 @@
       "grid": "coarse",
       "order": "phase_25kmthenphase_5km",
       "policy": "local_only",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46246,7 +46246,7 @@
       "grid": "fine",
       "order": "either",
       "policy": "enumerated",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46256,7 +46256,7 @@
       "grid": "fine",
       "order": "phase_5kmthenphase_25km",
       "policy": "enumerated",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46266,7 +46266,7 @@
       "grid": "fine",
       "order": "phase_25kmthenphase_5km",
       "policy": "enumerated",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46276,7 +46276,7 @@
       "grid": "fine",
       "order": "either",
       "policy": "local_only",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46286,7 +46286,7 @@
       "grid": "fine",
       "order": "phase_5kmthenphase_25km",
       "policy": "local_only",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     },
     {
@@ -46296,7 +46296,7 @@
       "grid": "fine",
       "order": "phase_25kmthenphase_5km",
       "policy": "local_only",
-      "screen": "gen6_screen",
+      "screen": "legacy_study_screen",
       "status": "BEST_TESTED"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "analysis": "A73",
   "bands_declared_commit": "79eff67, before this file existed",
-  "note": "The Gen6 trim secondary derived for the single-sided annulus cad/build_gen6.py draws, by motor_model own Lorentz integral. Closes P117. E4: nothing measured.",
+  "note": "The LegacyStudy trim secondary derived for the single-sided annulus cad/build_legacy_study.py draws, by motor_model own Lorentz integral. Closes P117. E4: nothing measured.",
   "inputs": {
     "bore_m": 0.015805,
     "wall_m": 0.001,

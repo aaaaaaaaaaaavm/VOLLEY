@@ -8,7 +8,7 @@ I like problems that survive the first calculation. My main project is **VOLLEY*
 
 [Explore VOLLEY](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Explore BOLLEY](https://aaaaaaaaaaaavm.github.io/VOLLEY/bolley.html) · [Engineering record](https://github.com/aaaaaaaaaaaavm/VOLLEY) · [Contact](mailto:adityavardhanmishr@gmail.com)
 
-<p align="center"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/gen5/hero_open.png" alt="Frozen Gen5 electromagnetic comparison model, not the current release-cell reference" width="100%"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/gen5/hero_open.png" alt="Frozen Gen5 electromagnetic comparison model, a historical model, not a physical release test" width="100%"></p>
 
 *The image is nominal CAD of the frozen Gen5 comparator. VOLLEY and BOLLEY are computational design studies. Nothing in either project has been built, measured, qualified or flown.*
 
@@ -16,7 +16,7 @@ I like problems that survive the first calculation. My main project is **VOLLEY*
 
 | Project | What I am investigating | Useful starting point |
 |---|---|---|
-| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Can provider-hosted control of release velocity, direction and timing earn its installed mass and operating burden? | [Mission and current reference](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/GEN6_REFERENCE_ARCHITECTURE.md) |
+| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Can provider-hosted control of release velocity, direction and timing earn its installed mass and operating burden? | [Current status](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/NEXT_GENERATION_STATUS.md) |
 | **[BOLLEY](https://github.com/aaaaaaaaaaaavm/BOLLEY)** | Does a passive spacecraft interface justify its mass by letting the launcher remove the moving sled and return mechanism? | [Selected winding and drive](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md) |
 | **[GatewayCX](https://github.com/aaaaaaaaaaaavm/GatewayCX)** | How should ordinary network applications survive long delays and interrupted Earth–Moon links? | [Architecture and executable software evidence](https://github.com/aaaaaaaaaaaavm/GatewayCX#readme) |
 
@@ -24,7 +24,7 @@ I like problems that survive the first calculation. My main project is **VOLLEY*
 
 The frozen electromagnetic Gen5 model gives 16.029 m/s at 10.07 g, with a 126.6 kg dry mass. Its mass comparison failed. I retain that design, its nominal CAD, structural and field studies, and the calculations that rejected its original mass claim.
 
-The current reference is an **independent retained release cell with a motor-charged mechanical accumulator, independent latch, short guided pusher and local catcher**. The earlier long gas guide remains a comparator. Neither inherits Gen5's evidence.
+**Gen6 is in development. No mechanism or speed range is selected or validated.** The independent motor-charged spring-cell bank and the long gas guide are unselected studies. The next architecture must recover VOLLEY's shared sequential loading path and individually commanded release speed.
 
 The mission work compares release authority with host manoeuvres and competent spring/timing alternatives. The two-payload study retained 100 tested campaign cases, 44 of which met its terminal-state bands. Higher available ejection speed did not automatically reduce fuel: three authority screens tied at the same best tested point. That is a bounded result, not an optimum or a provider-approved mission.
 

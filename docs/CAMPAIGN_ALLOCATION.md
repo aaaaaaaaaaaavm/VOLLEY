@@ -27,12 +27,12 @@ Every interval is hypothetical, including the 0.5 m/s lower limit. Even the fixe
 | COMMON_ENERGY | spring_screen | 12/12 | 3.8723 | 0.63899 | 12 | none |
 | COMMON_ENERGY | bolley_screen | 12/12 | 0.0000 | 0.00000 | 0 | none |
 | COMMON_ENERGY | gen5_screen | 12/12 | 0.0000 | 0.00000 | 0 | none |
-| COMMON_ENERGY | gen6_screen | 12/12 | 0.0000 | 0.00000 | 0 | none |
+| COMMON_ENERGY | LEGACY_STUDY_screen | 12/12 | 0.0000 | 0.00000 | 0 | none |
 | ENERGY_LADDER | fixed_1 | 12/12 | 25.0813 | 3.89265 | 12 | none |
 | ENERGY_LADDER | spring_screen | 12/12 | 23.1166 | 3.57355 | 12 | none |
 | ENERGY_LADDER | bolley_screen | 12/12 | 5.8510 | 0.86125 | 4 | none |
 | ENERGY_LADDER | gen5_screen | 12/12 | 1.7327 | 0.25370 | 2 | none |
-| ENERGY_LADDER | gen6_screen | 12/12 | 0.1093 | 0.01753 | 1 | none |
+| ENERGY_LADDER | LEGACY_STUDY_screen | 12/12 | 0.1093 | 0.01753 | 1 | none |
 
 Fuel and delta-v for incomplete cases cover only their delivered prefix.
 They cannot be ranked against complete deliveries as if the mission were equal.
@@ -58,7 +58,7 @@ it is not a disposal, payload-orbit or collision-safety acceptance test.
 
 Both providers still need to supply interfaces. No common-stage mass credit or
 flight reliability follows from this resource screen. BOLLEY cage acceptance and
-Gen6 contact/trim problems remain independent of these hypothetical speed intervals.
+historical study contact/trim problems remain independent of these hypothetical speed intervals.
 
 ## Reproduce
 

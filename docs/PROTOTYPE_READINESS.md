@@ -1,10 +1,13 @@
 # From the current record to a prototype design review
 
+> **Architecture disposition, 2026-09-28:** The separate motor-charged spring-cell bank is withdrawn as VOLLEY's next architecture. It is retained here only as a dated study. Any selection or current-reference wording below describes the former decision and is superseded. A reusable shared launch path with sequential loading is the open design objective; no speed envelope is validated. See [current status](NEXT_GENERATION_STATUS.md).
+
+
 Adityavardhan Mishra · 2026-09-16
 
 I am continuing VOLLEY and BOLLEY from their existing evidence. I am not restarting either history or treating a newer generation as a more mature machine. This programme defines the work I want a prospective builder to be able to inspect before committing to a prototype. It is a work programme, not a claim that these deliverables are complete.
 
-[Programme execution](PROGRAMME_EXECUTION.md) is the current sequence. [P113-S4](MANIFEST_TIMING.md) supplies the latest bounded mission result. [The clean-sheet P92 screen](GEN6_REFERENCE_ARCHITECTURE.md) carries that result into a compact reference architecture: independent retained cells with a motor-charged mechanical accumulator, independent latch, short guided pusher and local catcher. That reference is selected for the next calculations; P92/P113 remain open and no hardware has been built or tested.
+[Current status](NEXT_GENERATION_STATUS.md) controls the next architecture decision. [P113-S4](MANIFEST_TIMING.md) is a bounded two-payload mission result. [P92](LEGACY_STUDY_REFERENCE_ARCHITECTURE.md) records a separate spring-cell study that is withdrawn as the selected reference. P92/P113 remain open and no hardware has been built or tested.
 
 ## The endpoint
 
@@ -27,14 +30,14 @@ There is no useful universal percentage of completion. A single unresolved relea
 | Record | Role going forward |
 |---|---|
 | VOLLEY Gen5 | Frozen electromagnetic comparison case and manuscript baseline, with failed criteria retained |
-| Historical gas-driven Gen6 | Evidence-rich comparator/backup; retain its pressure, guide, contact, trim and campaign evidence under that configuration |
-| Clean-sheet Gen6 reference | Current calculation reference: independent stored-energy release cells; mechanism details deliberately unselected until falsification evidence exists |
+| Historical gas-guide study | Evidence-rich comparator/backup; retain its pressure, guide, contact, trim and campaign evidence under that configuration |
+| Independent spring-cell study | Withdrawn as the selected reference; retain its low-speed calculation and failure conditions for a matched architecture comparison |
 | BOLLEY Fluxrelay | Cooperative-interface comparator; carry the selected 12-turn A9f/A5h candidate through its missing downstream checks |
 | BOLLEY Fluxframe and Fluxpiston | Separate exploratory directions, with their own entry criteria and no inherited closure |
 | VOLLEY-paper and VOLLEY-thesis | Authored Gen5 manuscripts plus exported evidence; a newer export does not change manuscript scope |
 | VOLLEY-lab | Stopped alternatives and explicit conditions for reopening them |
 
-The mission and requirements control the hardware. S4 did not reward authority above 4.569852 m/s in its best tested BOLLEY/Gen5/historical gas-Gen6 campaigns. That result is not a product requirement or global optimum, but it is enough to stop treating higher velocity as inherently better. Every extra joule, metre and subsystem now has to earn its place against a mission.
+The mission and requirements control the hardware. S4 did not reward authority above 4.569852 m/s in its best tested BOLLEY/Gen5/historical gas-guide study campaigns. That is a bounded two-payload observation, not a product ceiling or proof that higher speed lacks value in other missions. Every extra joule, metre and subsystem needs a complete-manifest comparison.
 
 ## Execution order and exit criteria
 
@@ -44,8 +47,8 @@ Each new physical analysis needs its own committed run sheet, justified numerica
 |---|---|---|---|
 | 0. Evidence repair | Reproduce current gates, reconcile stale public statements and companion payloads, distinguish a successful analysis from an acceptable design | Source-pinned audit; failures, omissions and environment limitations recorded separately | Current repositories |
 | 1. Mission requirement | Extend P113 beyond ideal S4: clearing/settling, release/navigation uncertainty, host attitude recovery, complete-manifest effects and replenishment mission definition | Mission cases, payload/host constraints, uncertainty budgets, explicit no-benefit regions and architecture-driving requirements | S1–S4; host classes; public inputs labelled |
-| 2. Configuration selection | Falsify the current independent stored-energy reference against banks/shared path and direct-electromechanical/compact-gas backups; keep Gen5 and historical gas Gen6 as comparators | Dated P92 decision, rejected alternatives, dependency map and explicit reason the survivor is worth building | 1; current P92 reference screen; installed-burden evidence |
-| 3. Release physics | For the current reference: accumulator force-displacement, preload setting, latch release, pusher friction/guidance, catcher dynamics, payload CG/inertia and 6-DOF tip-off. Historical P103/P108 work stays scoped to the gas guide | Credible release-state envelope, model-form disagreement and domains where prediction is not credible | 2 for detailed reference work; contact-law verification for historical guide |
+| 2. Configuration selection | Compare shared loader and release path options with banked cells, gas and conventional spring deployment on one installed-system and complete-manifest boundary | Dated P92 decision, rejected alternatives, dependency map and explicit reason the survivor is worth building | 1; P92 reference withdrawn; installed-burden evidence open |
+| 3. Release physics | For any selected shared mechanism: drive force/travel, feed clearance, release contact, retention, payload CG/inertia and 6-DOF tip-off. Keep historical spring-cell and gas-guide work scoped to those configurations | Credible release-state envelope, model-form disagreement and domains where prediction is not credible | 2 for architecture trade; contact-law verification for historical guide |
 | 4. BOLLEY electrical closure | Revisit A9f at the A5h winding: fresh field/current-distribution check, hot semiconductor losses, switching, parasitics, supply sag, protection and faults | Coupled time histories and a component-by-component loss/voltage/temperature budget | BOLLEY A9f/A5h; supplier data |
 | 5. Structural and tolerance closure | Trace ascent, retained, charged, release, catcher and fault loads through payload, cell, mounts and host interface; include thermal distortion and assembly errors | Drawings linked to stress, modes, clearance and preload margins; worst-case stack plus justified statistical study | 2–4; declared load envelopes |
 | 6. Thermal and materials | Couple recharge/repeated releases, duty cycle, vacuum heat paths and temperature-dependent properties; screen materials, insulation, adhesives and contamination | Full-campaign temperature histories, selected materials with sources, limits and measurement dependencies | 4–5; operating timeline |
@@ -60,13 +63,13 @@ Packages can overlap where their inputs are fixed. A geometry-changing result mu
 
 ## VOLLEY: the work that controls the next design
 
-**The product requirement comes first.** P113 is programme-scoped and still controls what Gen6 should be. S4 establishes a bounded two-payload terminal-state comparison, not a complete mission requirement. The next mission evidence must add clearing/settling, release/navigation uncertainty, attitude recovery and replenishment/full-manifest cases before a hardware burden is justified.
+**The product requirement comes first.** P113 is programme-scoped and still controls what historical study should be. S4 establishes a bounded two-payload terminal-state comparison, not a complete mission requirement. The next mission evidence must add clearing/settling, release/navigation uncertainty, attitude recovery and replenishment/full-manifest cases before a hardware burden is justified.
 
-**The current reference is meant to be killed if it is weak.** The functional chain is independent launch retention → slow preload actuator → mechanical accumulator → preload measurement → independent latch → short guided pusher → payload clears → local catcher/retainer → post-release state sensing. Spring form, latch, bearings, catcher, motor/gearbox and cell structure are deliberately unselected. Before detailed CAD I need force-displacement bounds, preload-to-exit sensitivity, latch shock, pusher friction, clearance/tolerance sensitivity, payload CG/inertia variation, tip-off, catcher impulse and cycle-life evidence.
+**The former spring-cell reference has been withdrawn.** Its functional chain was independent launch retention → slow preload actuator → mechanical accumulator → latch → short guided pusher → local catcher. Those components remain a comparator and may inform a coupon, but the next VOLLEY release path must include sequential loading. Before detailed CAD, the shared alternatives need force/travel bounds, loader clearance and jam recovery, payload CG/inertia variation, tip-off, catcher/retention behavior and cycle-life evidence.
 
 **Installed burden decides whether fault isolation is worth it.** Independent cells isolate a blocked mechanical path, but duplicate structure and actuators. Small banks and a shared magazine may be lighter. Compare them using one accounting boundary: structure, retention, actuator/energy storage, control, sensors, harness, thermal hardware, host reinforcement, volume, operations and failure consequences. Shared command and power remain common-mode risks even with independent mechanical paths.
 
-**The historical gas machine stays useful without staying current.** P103/P108, pressure-vessel, fill-schedule, backup-ejector and trim evidence remain valuable where they answer a live comparison or reusable engineering question. Their geometry and failure magnitudes do not automatically transfer to the clean-sheet cell. The approximately 8 m guide is no longer the assumed Gen6 packaging basis.
+**The historical gas machine stays useful without staying current.** P103/P108, pressure-vessel, fill-schedule, backup-ejector and trim evidence remain valuable where they answer a live comparison or reusable engineering question. Their geometry and failure magnitudes do not automatically transfer to the clean-sheet cell. The approximately 8 m guide is no longer the assumed historical study packaging basis.
 
 **Gen5 remains useful.** Its remaining structural dynamics, field exposure, winding inductance, segment handover and release-environment questions belong to its own baseline. I will not quietly mark them complete because the reference removes those components. Improvements are worthwhile when they resolve a live claim or enable a specific experiment.
 
@@ -130,9 +133,9 @@ I want capability to be apparent from decisions a reviewer can audit: finding a 
 
 ## Entry points for the existing work
 
-- [Current VOLLEY handoff](STATE_OF_THE_PROJECT.md), [live work list](BSX_REVIEW.md), [computational closure](COMPUTATIONAL_CLOSURE.md) and [current Gen6 reference](GEN6_REFERENCE_ARCHITECTURE.md).
+- [Current VOLLEY status](NEXT_GENERATION_STATUS.md), [live work list](BSX_REVIEW.md), [computational closure](COMPUTATIONAL_CLOSURE.md) and [withdrawn spring-cell study](LEGACY_STUDY_REFERENCE_ARCHITECTURE.md).
 - [Gen5 baseline](BASELINE.md), [declared exceptions](GEN5_CLOSURE.md), and [provenance](PROVENANCE.md).
-- [Manufacturing study](MANUFACTURING.md) and [qualification plan](QUALIFICATION_PLAN.md). Historical gas-Gen6 CAD/build documents remain configuration-specific inputs, not the manufacturing package for the current reference.
+- [Manufacturing study](MANUFACTURING.md) and [qualification plan](QUALIFICATION_PLAN.md). Historical gas-guide CAD/build documents remain configuration-specific inputs, not a manufacturing package for a new architecture.
 - [BOLLEY completion standard](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/COMPLETION_STANDARD.md) and [latest Fluxrelay evidence](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md).
 
 ## Audit basis and limits

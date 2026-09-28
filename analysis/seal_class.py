@@ -30,7 +30,7 @@ import math
 import os
 
 import precharged as pc
-import gen6_dispersion as gd
+import legacy_study_dispersion as gd
 import trim_stage as ts
 import pulse_chain as pcx
 import trim_authority as ta

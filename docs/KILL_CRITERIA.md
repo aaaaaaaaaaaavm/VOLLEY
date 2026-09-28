@@ -45,17 +45,19 @@ nothing in the rollup is physically measured.
 
 Status at 3U: crossed. 10.547 kg against a 2 kg threshold.
 
-> ### Two of the three routes out are now closed by measurement, 2026-08-14 (P59)
+> ### Historical Gen5 model screen, corrected 2026-09-28 (P59)
+>
+> A35 and A36 are calculations for their stated Gen5 geometry and assumptions. They contain no physical measurement and cannot rule out every future shared-loader architecture or customer case.
 >
 > | Route | |
 > |---|---|
-> | Architecture | Closed by [A35](../validation/A35_constraint_ledger.md). Every kilogram was attributed to the requirement causing it and 88.67 kg, 70.06 %, survives every deletion of every requirement in all 64 corners. The deletable fraction caps at 29.90 %, the best corner deleting C2 and C3. *[P95](../OPEN_PROBLEMS.md): A35's run sheet still reads 49.23 kg / 58.2 % / 41.8 % at the pre-A46 dry mass, and its twenty-four-satellite escape route does not survive the correction.* There is no architecture that reaches 2 kg |
+> | Architecture within A35's modeled deletion corners | 88.67 kg, 70.06 %, survives the six requirement deletions in all 64 modeled corners. The deletable fraction caps at 29.90 %, the best corner deleting C2 and C3. *[P95](../OPEN_PROBLEMS.md): A35's run sheet still reads 49.23 kg / 58.2 % / 41.8 % at the pre-A46 dry mass.* This does not bound architectures that change the machine or accounting boundary |
 > | Manifest size | Closed by [A36](../validation/A36_magazine_density.md) band 4. The N to ∞ limit is a healthy 0.954 kg/satellite, but 2.0 kg is first reached at N = 116, and no factorisation of 116 packages inside the 1500 mm track length. The largest manifest that fits is N = 126, at 1.941 kg/satellite, on a 244.6 kg machine running a 42-hour campaign |
 > | Smaller payloads | Open, and now the only one |
 >
-> The sentence below was written before either run and it is still the answer. It is now the
-> *only* answer, which is a much stronger statement than it was, and it makes D2, which
-> payload class is the product, the decision the whole criterion rests on.
+> The smaller-payload route remained open in this historical Gen5 screen. The current product
+> decision also requires a matched installed-system and mission comparison for the intended
+> shared sequential launcher.
 >
 > The threshold is not being moved. ~2 kg comes from what canisterised dispensers achieve, and
 > a threshold revised after a result is known is not a threshold. The honest options are to change
@@ -331,9 +333,9 @@ any framing implying otherwise is wrong.
 
 ---
 
-## Where Gen6 stands against these seven
+## Where historical study stands against these seven
 
-Added 2026-08-16. [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) moved the design target
+Added 2026-08-16. [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md) moved the design target
 on 2026-08-14 and this file did not follow it, so for two days the document that exists to say what
 would make the project pointless described a machine the project had stopped building. That is the
 failure this file was written to prevent.
@@ -342,22 +344,22 @@ The seven thresholds below are unchanged. Not one has been revised, and none wil
 because a result came back against it. What follows is only where the *other* architecture sits
 against them.
 
-Read the whole column before the good rows in it. Gen6 improves four of the seven, and it
+Read the whole column before the good rows in it. historical study improves four of the seven, and it
 improves three of those by deleting the subsystem the threshold was about rather than by
 meeting it. A criterion that no longer applies has not been passed.
 
-| | Gen5, the analysed baseline | Gen6 | |
+| | Gen5, the analysed baseline | historical study | |
 |---|---|---|---|
 | 1. Mass per satellite | 10.547 kg, crossed 5.3x | 10.547 kg on dry mass, crossed, and 1.2145 to 3.0827 kg on added mass at A56's sized store, the range [A45-R2](../validation/A45R2_stage_credit_resized_store.md) found when the stage credit is read hostilely. *The 1.296-3.164 published until 2026-08-20 was ADR-034's scaled store* | Crossed on dry mass always, and on added mass as soon as P10's unmodelled lump is not credited to the stage. P59 and P68 both LIVE |
-| 2. Envelope | 1839 mm against ~1270, over by 44 % | Crossed, by 200 mm. Gen6 is a rail on an 8 m stage rather than a payload in a rideshare port, so the *rideshare* envelope does not apply, but the rail is 8.2 m against A37's 8.0 m usable acceleration length, and [A57](../validation/A57_stage_attitude_packaging.md) band 6 fails on it as declared | Answered, and it is a miss. The overrun is end hardware, not stroke. A57 band 7 prices the contingency ADR-034 named: if that hardware cannot live outside the usable length, the stroke gives up 200 mm, 1.2579 % of exit velocity, at 11.6543 g. Small, and now a number |
-| 3. Bank ESR | crossed; 65 mΩ ceiling against 116-185 available | Dissolved. There is no bank. A51 measures the electrical demand at 0.26 W average, 36 W peak | Deleted, not solved. P26 is moot for Gen6 and stands for Gen5 |
+| 2. Envelope | 1839 mm against ~1270, over by 44 % | Crossed, by 200 mm. historical study is a rail on an 8 m stage rather than a payload in a rideshare port, so the *rideshare* envelope does not apply, but the rail is 8.2 m against A37's 8.0 m usable acceleration length, and [A57](../validation/A57_stage_attitude_packaging.md) band 6 fails on it as declared | Answered, and it is a miss. The overrun is end hardware, not stroke. A57 band 7 prices the contingency ADR-034 named: if that hardware cannot live outside the usable length, the stroke gives up 200 mm, 1.2579 % of exit velocity, at 11.6543 g. Small, and now a number |
+| 3. Bank ESR | crossed; 65 mΩ ceiling against 116-185 available | Dissolved. There is no bank. A51 measures the electrical demand at 0.26 W average, 36 W peak | Deleted, not solved. P26 is moot for historical study and stands for Gen5 |
 | 4. Tip-off | modelled at 85.0 N of cradle preload, mechanism absent | A38: raising acceleration does not make it worse. Re-run at ADR-034's design point 2026-08-22 (P102): preload 91.7 N per contact, worst arrival 239.4 °/s, residual 0.0000 °/s, still releasing inside <= 1 N. *`parameters.json` still carries A38's 201.7 N at the 25 g cap, and that is left standing as the conservative figure* | CROSSED, 2026-08-22. [A67](../validation/A67_guided_contact.md) modelled the 8 m of guided travel the cradle result never covered: 14.845 °/s at the nominal point against a 2.0 °/s band, 3σ 52.3 °/s, and not one of 271 Monte Carlo samples inside it, [P108](../OPEN_PROBLEMS.md). *A38 answered the cradle and was right about the cradle.* Bore straightness is the dominant input, S_T = 0.894 against seal friction's 0.141 |
 | 5. Attitude rate at firing | quantified | [A57](../validation/A57_stage_attitude_packaging.md), 2026-08-22: 0.0112° per shot at 300 kg, 0.0037° at 900 kg, 0.135° over an uncorrected campaign, at A52's published 10.65 mm alignment requirement. Peak body rate 0.0481 °/s, returning to zero when the payload leaves | Answered, and small. The momentum the host must absorb is 1.46 N·m·s per shot, 17.53 over the campaign, reported without a margin because E5 has no authority to compare it against, P99. *A57 first ran at a lever arm 15.6x the requirement and reported figures that size; corrected the same day, P100, with no band verdict moving* |
-| 6. Host recoil | 64.1 N·s per shot | 116.03 N·s per shot, 1.81x, 1407.9 N·s over the campaign, 0.653 kg of propellant to null ([A52](../validation/A52_gen6_recoil.md)) | Answered. The interface requirement follows: the thrust line must pass within 10.7 mm of the host centre of mass, against Gen5's 19.5 mm |
-| 7. Is the Δv worth anything | 16.029 m/s | 34.280 m/s zero-friction, 29.009 at the friction allowance, on ADR-034's design point | The one row Gen6 improves by doing more, not less. ADR-033 restores the *commandability* the Δv is sold on |
+| 6. Host recoil | 64.1 N·s per shot | 116.03 N·s per shot, 1.81x, 1407.9 N·s over the campaign, 0.653 kg of propellant to null ([A52](../validation/A52_LEGACY_STUDY_recoil.md)) | Answered. The interface requirement follows: the thrust line must pass within 10.7 mm of the host centre of mass, against Gen5's 19.5 mm |
+| 7. Is the Δv worth anything | 16.029 m/s | 34.280 m/s zero-friction, 29.009 at the friction allowance, on ADR-034's design point | The one row historical study improves by doing more, not less. ADR-033 restores the *commandability* the Δv is sold on |
 
 > All three rows now have a source, as of 2026-08-22. Recoil closed first,
-> [A52](../validation/A52_gen6_recoil.md), 2026-08-19, at 1.81x rather than the "roughly doubled"
+> [A52](../validation/A52_LEGACY_STUDY_recoil.md), 2026-08-19, at 1.81x rather than the "roughly doubled"
 > this paragraph used to guess at. Envelope and attitude rate closed together in
 > [A57](../validation/A57_stage_attitude_packaging.md), and they closed differently: attitude
 > rate is *answered* and small, while envelope is a measured 200 mm miss rather than a row that
@@ -367,13 +369,13 @@ meeting it. A criterion that no longer applies has not been passed.
 
 Criterion 1 is the one that matters and it has not moved. Both numerators are reported wherever
 either appears, the 2.0 kg threshold is untouched, and the honest options remain what they were:
-change the payload class, or publish the criterion as crossed. Gen6 does not change that sentence.
+change the payload class, or publish the criterion as crossed. historical study does not change that sentence.
 
 ## What this list says, taken together
 
 The 3U configuration as designed fails three thresholds: mass per satellite, envelope, and
 bank sizing. Two have identified fixes that make the third worse, since a bigger bank and a
-repackaged envelope both add mass. Gen6 removes two of the three by removing the subsystems
+repackaged envelope both add mass. historical study removes two of the three by removing the subsystems
 they were about, and leaves the first exactly where it was, see the section above.
 
 The payload ladder is the only change that improves all three at once. Smaller satellites

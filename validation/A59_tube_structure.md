@@ -7,12 +7,12 @@ Verify with `git show --stat <this commit> -- analysis/tube_structure.py`, which
 
 ## Why this run exists
 
-[ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md) took the stroke from 2.18 m to
+[ADR-034](../docs/adr/034-legacy_study-long-stroke-design-point.md) took the stroke from 2.18 m to
 8.0 m and nothing structural was checked. [A49](A49_design_surface.md) costed the tube as
 *"a plain cylinder at one wall thickness, no bending, no alignment tolerance, no dynamic seal
 behaviour"*, its own words, and added that every omission flatters a long tube.
 
-`cad/build_gen6.py` says the same thing in its docstring: 22.73 bar on this bore needs
+`cad/build_legacy_study.py` says the same thing in its docstring: 22.73 bar on this bore needs
 0.16 mm of wall and the minimum practical wall is 1.0 mm, *"so the section is set by handling and
 by carrying A38's 201.7 N cradle preload, neither of which is modelled here."*
 
@@ -45,7 +45,7 @@ are computed here and the difference is reported rather than resolved by prefere
 
 | | Value | Where it comes from |
 |---|---|---|
-| Bore / wall / length | 15.805 mm / 1.0 mm / 8.0 m | `cad/parameters.json`, `gen6_drive` |
+| Bore / wall / length | 15.805 mm / 1.0 mm / 8.0 m | `cad/parameters.json`, `LEGACY_STUDY_drive` |
 | Charge pressure | 22.7258 bar | `cad/parameters.json`, ADR-034 |
 | Allowable stress, safety factor | 500 MPa, 2.0 | `precharged.py` |
 | Aluminium | E = 69 GPa, ρ = 2700 kg/m³ | `sizing.py` E_al, A49 RHO_AL |
@@ -76,7 +76,7 @@ Declared before the script. Not to be edited after the run.
 
 | # | Band | FAIL if |
 |---|---|---|
-| **1** | Hoop stress at 22.7258 bar is **within 500 MPa / 2.0** | The tube is a pressure problem after all, and `build_gen6.py`'s claim that 0.16 mm suffices is wrong |
+| **1** | Hoop stress at 22.7258 bar is **within 500 MPa / 2.0** | The tube is a pressure problem after all, and `build_legacy_study.py`'s claim that 0.16 mm suffices is wrong |
 | **2** | The **unsupported** 8.0 m tube's first bending mode is **≥ 70 Hz**, `sizing.py`'s own target | **The tube as drawn does not meet the dynamic target this repository set for its own structure** |
 | **3** | Euler buckling load of the **unsupported** tube exceeds the shot's axial reaction **p₀·A with the declared safety factor of 2** | **The tube buckles under the reaction of its own shot**, and intermediate support is mandatory rather than good practice |
 | **4** | The support spacing that satisfies bands 2, 3 and 7 simultaneously is **≥ 2.0 m** — at most three intermediate supports on an 8 m span | The tube needs a support roughly every metre, and the rail interface is a structure rather than a set of brackets |
@@ -122,7 +122,7 @@ prediction above was half wrong in a way that matters.
 
 ### The tube is not a pressure vessel, and it is barely a beam. It is a column.
 
-Hoop stress is a non-issue at 13.9x margin, which confirms `build_gen6.py`'s own docstring:
+Hoop stress is a non-issue at 13.9x margin, which confirms `build_legacy_study.py`'s own docstring:
 0.16 mm of wall would hold the gas and the section is set by something else entirely.
 
 That something else is buckling. The shot's axial reaction is 445.86 N, and the Euler load

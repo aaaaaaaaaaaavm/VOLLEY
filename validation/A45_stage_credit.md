@@ -7,7 +7,7 @@ Verify with `git show --stat <this commit> -- analysis/stage_credit.py`, which m
 
 ## Why this run exists
 
-[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md)'s first falsifier, and the only
+[ADR-032](../docs/adr/032-legacy_study-stage-integrated-gas-store.md)'s first falsifier, and the only
 one of the four that nothing has ever bounded:
 
 > The 43.33 kg stage credit is optimistic by more than 30 %. Then added mass per satellite
@@ -73,7 +73,7 @@ Declared before the script. Not to be edited after the run.
 3. **Band 4 fails**, and not narrowly.
 4. **Band 2 passes**, since it is arithmetic already done.
 
-If 1-3 all fail, the honest reading is that Gen6's mass case rests on a credit with far less
+If 1-3 all fail, the honest reading is that historical study's mass case rests on a credit with far less
 margin than ADR-032 records, and the ADR needs its falsifier restated rather than the design
 changed.
 
@@ -134,9 +134,9 @@ hostile credit, and kill criterion 1 is crossed on *both* numerators rather than
 the criterion on the assignment it made, and the answer it recorded is correct for that
 assignment. What A45 adds is that the assignment does not survive being disbelieved.
 
-Nothing here says Gen6 is wrong. It says the mass case has half the margin the decision
+Nothing here says historical study is wrong. It says the mass case has half the margin the decision
 record claims, and that the biggest single piece of it is an item this project has been carrying
-as unmodelled since long before Gen6 existed. Recorded as P68.
+as unmodelled since long before historical study existed. Recorded as P68.
 
 ### The predictions
 

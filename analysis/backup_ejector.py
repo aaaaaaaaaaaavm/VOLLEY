@@ -3,7 +3,7 @@ VOLLEY | The per-cell backup ejector, designed rather than priced.
 
 WHY THIS EXISTS
 ---------------
-A47 found it worth six times the entire architecture change: Gen5 to Gen6 moved expected
+A47 found it worth six times the entire architecture change: Gen5 to LegacyStudy moved expected
 delivery by 0.37 satellites, and a per-cell ejector moves it by 2.27, because it changes the
 structure rather than the count -- a mechanism in every cell makes the drive satellite-
 forfeiting instead of manifest-forfeiting, which is the only move that touches what E30 says.
@@ -22,7 +22,7 @@ import json
 import os
 
 import fmea
-import fmea_gen6 as g6
+import fmea_legacy_study as g6
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 
@@ -32,7 +32,7 @@ SPRING_J_PER_KG = 300.0       # actuator_trade.py, upper end for spring steel
 LATCH_GUIDE_KG = 0.12         # DECLARED GUESS per cell: latch, guide rail, baseplate. No
                               # derivation. It is the largest assumption in this run.
 N_CELLS = 12
-STROKE_M = 2.18               # gen6_drive
+STROKE_M = 2.18               # legacy_study_drive
 FRICTION_N = 83.40371375447981   # A41 band 8's allowance
 PITCH_Z_MM = 104.0            # magazine.satellite_pitch_z
 SHOT_J = 1864.8
@@ -86,11 +86,11 @@ def main():
     per_sat_tube = (ADDED_BASE_KG + STORE_KG + total_tube) / N_CELLS
 
     # band 5 and 6: A47's model with the ejector as a shot-scope element that can itself fail
-    backup = g6.score(g6.ELEMENTS_GEN6_BACKUP)
-    plain = g6.score(g6.ELEMENTS_GEN6)
+    backup = g6.score(g6.ELEMENTS_LEGACY_STUDY_BACKUP)
+    plain = g6.score(g6.ELEMENTS_LEGACY_STUDY)
     print(f"\nA47 re-run with the ejector as a shot-scope element that can fail:")
-    print(f"  Gen6 alone                {plain['expected_at_r99']:.3f} satellites at r = 0.99")
-    print(f"  Gen6 + ejector            {backup['expected_at_r99']:.3f}")
+    print(f"  LegacyStudy alone                {plain['expected_at_r99']:.3f} satellites at r = 0.99")
+    print(f"  LegacyStudy + ejector            {backup['expected_at_r99']:.3f}")
 
     # does the ejector fit the cell it must live in?
     spring_len_mm = 60.0     # DECLARED: a compressed coil for this energy, order 60 mm
@@ -109,8 +109,8 @@ def main():
         ('5', 'A47 re-run confirms >= 9.0 satellites at r = 0.99',
          f"{backup['expected_at_r99']:.3f}", backup['expected_at_r99'] >= 9.0),
         ('6', "the ejector's own failure rate is included as a shot-scope element",
-         'included' if any(e[1] == 'shot' for e in g6.ELEMENTS_GEN6_BACKUP) else 'NOT',
-         any(e[1] == 'shot' for e in g6.ELEMENTS_GEN6_BACKUP)),
+         'included' if any(e[1] == 'shot' for e in g6.ELEMENTS_LEGACY_STUDY_BACKUP) else 'NOT',
+         any(e[1] == 'shot' for e in g6.ELEMENTS_LEGACY_STUDY_BACKUP)),
         ('7', f'firing alone clears the tube at >= 1.0 m/s',
          f"needs {e_tube:.1f} J, has {e_clear:.1f} J", e_clear >= e_tube),
         ('8', 'the standby problem is stated',
@@ -130,7 +130,7 @@ def main():
                per_cell_clearance_kg=per_cell_clear, per_cell_tube_kg=per_cell_tube,
                total_clearance_kg=total_clear, total_tube_kg=total_tube,
                per_sat_clearance=per_sat_clear, per_sat_tube=per_sat_tube,
-               a47_gen6=plain['expected_at_r99'], a47_with_ejector=backup['expected_at_r99'],
+               a47_legacy_study=plain['expected_at_r99'], a47_with_ejector=backup['expected_at_r99'],
                latch_guide_kg=LATCH_GUIDE_KG, spring_len_mm=spring_len_mm,
                standby='a spring held compressed from integration to the last shot; A39 recorded '
                        'the same class of problem against the gas option',

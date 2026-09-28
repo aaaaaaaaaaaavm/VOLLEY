@@ -40,7 +40,7 @@ This sheet is that model.
 > | Preload per contact | 85.0 N | 81.2 N |
 >
 > **Every band below still passes when re-run**, and no verdict changes; the figures are stale by
-> about 2.3 %. Found by [A38](A38_tipoff_at_gen6.md) band 1, which exists to catch exactly this.
+> about 2.3 %. Found by [A38](A38_tipoff_at_legacy_study.md) band 1, which exists to catch exactly this.
 > Recorded as P61.
 
 ## Result, 2026-08-13: it settles in 27 ms of a 146 ms stroke, and leaves at zero

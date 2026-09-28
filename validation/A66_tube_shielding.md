@@ -1,6 +1,6 @@
 # A66, what the drive tube costs the trim stator
 
-**Closes, if it passes:** [P92](../OPEN_PROBLEMS.md#p92). [ADR-033](../docs/adr/033-gen6-trim-stage.md)
+**Closes, if it passes:** [P92](../OPEN_PROBLEMS.md#p92). [ADR-033](../docs/adr/033-legacy_study-trim-stage.md)
 puts the trim stator outside the drive tube and its magnets inside.
 [ADR-035](../docs/adr/035-drive-tube-material.md) then made that tube aluminium, four days later,
 on mass alone. A conducting sleeve between a travelling-field stator and its secondary is a
@@ -19,14 +19,14 @@ whole of the problem and it is why the wall is not a passive spacer.
 
 | Input | Value | Source |
 |---|---|---|
-| Wall thickness | 1.0 mm | `gen6_drive.tube_wall_mm` |
-| Wall material | aluminium 6061-T6 | `gen6_drive.tube_material`, ADR-035 |
+| Wall thickness | 1.0 mm | `LEGACY_STUDY_drive.tube_wall_mm` |
+| Wall material | aluminium 6061-T6 | `LEGACY_STUDY_drive.tube_material`, ADR-035 |
 | Conductivity | 3.5e7 S/m | `SIG_AL`, `analysis/phase1_closeout.py` |
 | Pole pitch, wavelength | 24 mm, 48 mm | `stator.pole_pitch`, `stator.wavelength` |
-| Carriage speed at the section | 34.28 m/s | `gen6_drive.exit_velocity_m_s_zero_friction` |
-| Section length, force | 144.01 mm, 948.0 N | `gen6_trim.section_length_mm`, `.force_N` |
-| Authority the section was sized for | 1.1543 m/s | `gen6_trim.authority_m_s`, A55 band 4 |
-| Wall temperature ceiling | 473.0 K | `gen6_drive.tube_temperature_ceiling_K` |
+| Carriage speed at the section | 34.28 m/s | `LEGACY_STUDY_drive.exit_velocity_m_s_zero_friction` |
+| Section length, force | 144.01 mm, 948.0 N | `LEGACY_STUDY_trim.section_length_mm`, `.force_N` |
+| Authority the section was sized for | 1.1543 m/s | `LEGACY_STUDY_trim.authority_m_s`, A55 band 4 |
+| Wall temperature ceiling | 473.0 K | `LEGACY_STUDY_drive.tube_temperature_ceiling_K` |
 | Shots per campaign | 12 | ADR-030 |
 
 ## Acceptance bands
@@ -39,7 +39,7 @@ whole of the problem and it is why the wall is not a passive spacer.
 | **2** | **REPORT, no pass/fail.** Skin depth at the section's own excitation frequency, and the wall expressed in skin depths | P92 names this as the governing comparison, and it has to be on the record whichever way it falls |
 | **3** | **The section as drawn still delivers its sized authority**, 1.1543 m/s, through the wall | The section is under-authority again and [P83](../OPEN_PROBLEMS.md#p83) reopens at the point A55 closed it |
 | **4** | **The section length needed to restore 1.1543 m/s stays inside A55 band 5**, 15 % of the 8.0 m stroke | The correction has stopped being a trim and become a second drive, which is A48's own limit |
-| **5** | **Added mass per satellite, with the compensated section, stays ≤ 2.0 kg** | Gen6 re-crosses the one kill-criterion numerator it currently passes, A55 band 7 |
+| **5** | **Added mass per satellite, with the compensated section, stays ≤ 2.0 kg** | historical study re-crosses the one kill-criterion numerator it currently passes, A55 band 7 |
 | **6** | **An independent implementation agrees on the transmitted force fraction within 10 %** | One method is not a result. Two wrappers around the same expression are not two methods |
 
 ## What this run will not do
@@ -181,7 +181,7 @@ stator bolted to the outside of it.
 
 Backing the working flux density out of the specified force needs the area the force acts across,
 and I first used `SECTION × stator.active_width_y`. **90 mm is the depth of the flat Gen5 array.**
-The Gen6 trim section is an annulus around a 15.805 mm bore and `cad/build_gen6.py` has always
+The historical study trim section is an annulus around a 15.805 mm bore and `cad/build_legacy_study.py` has always
 drawn it as one. The real air-gap surface is **76.03 cm²** against the 129.61 cm² I used, 1.7047×.
 
 Corrected, **948.0 N at 90 kA/m across that annulus needs 1.3854 T**, against the **1.32 T**

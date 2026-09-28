@@ -1,6 +1,6 @@
-# Current-reference verification and model credibility
+# VOLLEY architecture verification and model credibility
 
-I use this matrix to connect the current release-cell questions to evidence and the next closure action. These are review rows, not newly approved flight requirements. A model verification pass does not establish mission acceptance or hardware validity.
+This matrix connects mission, shared-path and comparator questions to evidence and next closure actions. The independent spring-cell model is a withdrawn candidate, and these rows are not approved flight requirements. A model verification pass does not establish mission acceptance or hardware validity.
 
 | Question / boundary | Current evidence | What it establishes | Missing closure |
 |---|---|---|---|
@@ -11,7 +11,7 @@ I use this matrix to connect the current release-cell questions to evidence and 
 | Does an accumulator fit a bounded stroke/load? | [P92-S2](REFERENCE_CELL_MECHANICS.md) | 144 spring/pusher cases; 48 pass the analytical screen | Finite-host coupling, selected component geometry and nonlinear force law |
 | Does the pusher stay retained without recontact? | P92-S2 kinetic-energy accounting | Catcher work and ideal average force | Dynamic peak load, damping, rebound, latch shock and debris |
 | Is one jam isolated? | [Topology recovery](INSTALLED_BURDEN_AND_FAILURES.md) | Conditional stranded-payload counts | Mechanical isolation, common services and actual failure tests |
-| Does the system earn installed burden? | Gen5 frozen ledger; partial BOLLEY ledger | Known partial masses and failed prior mass claim | Complete selected spring comparator, cell/BOM/support and host accounting |
+| Does the system earn installed burden? | Gen5 frozen ledger; partial BOLLEY ledger | Known partial masses and failed prior mass claim | Complete shared-path, spring, bank and ordinary-dispenser installed accounting on the same boundary |
 | Can the payload remain unmodified? | [Mission boundary](CONCEPT.md) | Design objective and interface ownership | Actual cradle/contact/retention and customer/provider acceptance |
 | Is cadence physically achievable? | S5/S6 timestamp headroom | Difference between scheduled event times | Slew, settling, thermal recovery, clearance and operational permission |
 | Are the models independently credible? | Regression/property tests, equation checks, retained failed runs | Internal consistency and limited model-to-model agreement | Independent implementation/review and representative measurements |

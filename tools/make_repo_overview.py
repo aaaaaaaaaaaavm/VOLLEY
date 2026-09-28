@@ -44,9 +44,6 @@ def render() -> str:
     shot = load("motor_results.json")["shot"]
     energy = load("sizing.json")["energy_closure"]
     run_sheets, analyses = validation_counts()
-    ref = load("reference_architecture.json")
-    s4 = ref["inputs"]["s4_study_speed_mps"]
-    s4_10g = next(r for r in ref["duty"] if r["speed_mps"] == s4 and r["acceleration_g"] == 10.0)
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">',
         f'<rect width="1600" height="900" fill="{BG}"/>',
@@ -58,7 +55,7 @@ def render() -> str:
 
     stages = [
         ("HOST", "controlled orbital state", VIOLET),
-        ("CELLS", "independent retention", CYAN),
+        ("LOAD", "one sequential path sought", CYAN),
         ("COMMAND", "departure condition", AMBER),
         ("RELEASE", "spacecraft is on its own", GREEN),
     ]
@@ -79,12 +76,12 @@ def render() -> str:
             ],
         ),
         (
-            816, "GEN6 · CLEAN-SHEET REFERENCE", AMBER,
+            816, "NEXT DESIGN · NOT SELECTED", AMBER,
             [
-                "independent retained cells · short guided pusher",
-                "motor-charged mechanical accumulator · local catcher",
-                f"S4 point: {s4:.6f} m/s · {s4_10g['ideal_payload_energy_J']:.2f} J · {s4_10g['ideal_stroke_m'] * 1000:.1f} mm at 10 g",
-                "P92 open · installed mass, release dynamics and provider interfaces remain open",
+                "shared reusable launcher and feeder are design goals",
+                "motor-charged cell bank is a withdrawn comparator",
+                "S4 two-payload speed does not set a product maximum",
+                "P92 open · full manifest, installed mass and provider interface unproven",
             ],
         ),
     ]

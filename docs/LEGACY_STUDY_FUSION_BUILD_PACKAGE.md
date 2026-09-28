@@ -1,11 +1,11 @@
-# Gen6 Fusion build package
+# historical study Fusion build package
 
 Written 2026-08-22, for the person building the authoritative Fusion assembly.
-Everything here traces to `cad/parameters.json`, `cad/build_gen6.py` or a numbered run.
+Everything here traces to `cad/parameters.json`, `cad/build_legacy_study.py` or a numbered run.
 Nothing in this file is a new engineering dimension. Where a dimension does not exist, it says
 so and names what owns it.
 
-> What `cad/build_gen6.py` is. A geometry and interface model: the simplest solid carrying
+> What `cad/build_legacy_study.py` is. A geometry and interface model: the simplest solid carrying
 > the right interface at the right station. No fillets, no fasteners, no harness, no tolerancing,
 > no seal or valve detail. It is a check that the parts do not collide and that the volumes are
 > real, it is *not* a design, and §9 lists every place that distinction matters.
@@ -19,7 +19,7 @@ so and names what owns it.
 `H` host-provided reference, `V` VOLLEY hardware, `O` optional, `P` placeholder envelope only
 
 ```
-VOLLEY_Gen6                                    (root, no bodies)
+VOLLEY_legacy_study                                    (root, no bodies)
 ├── 00_REFERENCE
 │   ├── Stage_Rail_REFERENCE            H P    host structure, drawn to check the interface
 │   └── Host_Mount_Datum_REFERENCE      H      construction geometry only, no body
@@ -36,7 +36,7 @@ VOLLEY_Gen6                                    (root, no bodies)
 │   ├── Support_1 … Support_7           V —    stations known, hardware DOES NOT EXIST
 │   └── Trim_Stator                     O P    SUSPENDED by ADR-036; build last or not at all
 ├── 30_CARRIAGE                                ← everything here is P108-dependent
-│   ├── Free_Piston                     V P    12 mm disc in build_gen6; NOT a piston design
+│   ├── Free_Piston                     V P    12 mm disc in build_legacy_study; NOT a piston design
 │   ├── Front_Land                      V —    DOES NOT EXIST as geometry
 │   ├── Rear_Land                       V —    DOES NOT EXIST as geometry
 │   ├── Seal_Gland                      V —    DOES NOT EXIST
@@ -59,17 +59,17 @@ exist.
 ## 2. Coordinate system and datums
 
 Global X = firing direction = bore axis. Z up (payload sits below the tube axis in
-`build_gen6`). Y completes right-handed. Origin at `x = 0`.
+`build_legacy_study`). Y completes right-handed. Origin at `x = 0`.
 
 | Datum | x (mm) | Status | Defined by |
 |---|---:|---|---|
-| CHAMBER_FACE / x = 0 | 0.000 | FIXED | `build_gen6` origin: the piston pressure face at rest |
+| CHAMBER_FACE / x = 0 | 0.000 | FIXED | `build_legacy_study` origin: the piston pressure face at rest |
 | Tube rear end | −30.000 | FIXED | tube extruded `L + 60` translated `−30` |
 | BORE_START | 0.000 | AMBIGUOUS, see below | not separately defined anywhere |
 | BORE_END / MUZZLE | 8000.000 | FIXED | `stroke_mm` |
 | Tube front end | 8030.000 | FIXED | same extrusion |
 | PISTON_FACE (t=0) | 0.000 | FIXED | coincident with CHAMBER_FACE |
-| Piston rear (as drawn) | 12.000 | PLACEHOLDER | 12 mm disc, `build_gen6.carriage()` |
+| Piston rear (as drawn) | 12.000 | PLACEHOLDER | 12 mm disc, `build_legacy_study.carriage()` |
 | FRONT_LAND datum | UNRESOLVED | P108_DEPENDENT | no land geometry exists |
 | REAR_LAND datum | UNRESOLVED | P108_DEPENDENT | no land geometry exists |
 | BODY_REF / CG datum | UNRESOLVED | P108_DEPENDENT | A71 places it midway between lands |
@@ -77,7 +77,7 @@ Global X = firing direction = bore axis. Z up (payload sits below the tube axis 
 | Cradle seat end | 352.500 | PLACEHOLDER | `12 + 2 × 170.25` |
 | Cradle stop 1 / stop 2 | 16.000 / 348.500 | PLACEHOLDER | `carriage()` |
 | PAYLOAD datum | seat top face, z = −(payload_height/2) − 4 | PLACEHOLDER | `carriage()` |
-| TRIM_START | 7855.990 | COMPUTED_CURRENT | `gen6_trim.section_start_mm`, A55 |
+| TRIM_START | 7855.990 | COMPUTED_CURRENT | `LEGACY_STUDY_trim.section_start_mm`, A55 |
 | TRIM_END | 8000.000 | COMPUTED_CURRENT | start + 144.01 |
 | SUPPORT_1 ... 7 | 1000 ... 7000, 1000 pitch | COMPUTED_CURRENT | A59; A69 models them here |
 | HOST_MOUNT datum | rail top face z = −60.000 | HOST_DEPENDENT | `stage_rail()`, unvalidated |
@@ -115,47 +115,47 @@ Create all of these as Fusion user parameters before any sketch. Status key:
 
 | Fusion name | Value | Unit | Source | Analysis / ADR | Status |
 |---|---:|---|---|---|---|
-| `Bore` | 15.805 | mm | `gen6_drive.bore_mm` | A41/A49 | FIXED |
-| `TubeWall` | 1.0 | mm | `gen6_drive.tube_wall_mm` | A59 band 1, 13.9x margin | FIXED |
+| `Bore` | 15.805 | mm | `LEGACY_STUDY_drive.bore_mm` | A41/A49 | FIXED |
+| `TubeWall` | 1.0 | mm | `LEGACY_STUDY_drive.tube_wall_mm` | A59 band 1, 13.9x margin | FIXED |
 | `TubeOD` | 17.805 | mm | `Bore + 2*TubeWall` | derived | FIXED |
-| `Stroke` | 8000.0 | mm | `gen6_drive.stroke_mm` | ADR-034 | FIXED |
-| `PistonArea` | 196.2 | mm² | `gen6_drive.piston_area_mm2` | π·Bore²/4 | FIXED |
-| `ChargePressure` | 22.7258 | bar | `gen6_store.charge_pressure_bar` | ADR-034 | FIXED |
-| `CommandedForce` | 445.88 | N | `gen6_drive.commanded_force_N` | `PistonArea × ChargePressure` | FIXED |
-| `ChamberVolume` | 2.0 | L | `gen6_store.chamber_volume_l` | A41 | COMPUTED_CURRENT |
-| `ChamberRadius` | 60.0 | mm | `build_gen6.chamber()` | none, drawing choice | PLACEHOLDER |
-| `ChamberWall` | 3.0 | mm | `build_gen6.chamber()` | none, not a vessel calc | PLACEHOLDER |
+| `Stroke` | 8000.0 | mm | `LEGACY_STUDY_drive.stroke_mm` | ADR-034 | FIXED |
+| `PistonArea` | 196.2 | mm² | `LEGACY_STUDY_drive.piston_area_mm2` | π·Bore²/4 | FIXED |
+| `ChargePressure` | 22.7258 | bar | `LEGACY_STUDY_store.charge_pressure_bar` | ADR-034 | FIXED |
+| `CommandedForce` | 445.88 | N | `LEGACY_STUDY_drive.commanded_force_N` | `PistonArea × ChargePressure` | FIXED |
+| `ChamberVolume` | 2.0 | L | `LEGACY_STUDY_store.chamber_volume_l` | A41 | COMPUTED_CURRENT |
+| `ChamberRadius` | 60.0 | mm | `build_legacy_study.chamber()` | none, drawing choice | PLACEHOLDER |
+| `ChamberWall` | 3.0 | mm | `build_legacy_study.chamber()` | none, not a vessel calc | PLACEHOLDER |
 | `ChamberLength` | 176.839 | mm | derived from volume and radius |, | PLACEHOLDER |
-| `ReservoirVolume` | 3.46 | L | `gen6_store.reservoir_volume_l` | A56, sized | COMPUTED_CURRENT |
-| `ReservoirPressure` | 200.0 | bar | `gen6_store.storage_pressure_bar` | A42 | COMPUTED_CURRENT |
-| `ReservoirRadius` | 90.0 | mm | `build_gen6.reservoir()` | none, drawing choice | PLACEHOLDER |
-| `ReservoirWall` | 6.0 | mm | `build_gen6.reservoir()` | none | PLACEHOLDER |
+| `ReservoirVolume` | 3.46 | L | `LEGACY_STUDY_store.reservoir_volume_l` | A56, sized | COMPUTED_CURRENT |
+| `ReservoirPressure` | 200.0 | bar | `LEGACY_STUDY_store.storage_pressure_bar` | A42 | COMPUTED_CURRENT |
+| `ReservoirRadius` | 90.0 | mm | `build_legacy_study.reservoir()` | none, drawing choice | PLACEHOLDER |
+| `ReservoirWall` | 6.0 | mm | `build_legacy_study.reservoir()` | none | PLACEHOLDER |
 | `ReservoirLength` | 135.969 | mm | derived |, | PLACEHOLDER |
-| `FillOrifice` | 1.0 | mm | `gen6_store.fill_orifice_mm` | A42, 4.14 s first fill | COMPUTED_CURRENT |
+| `FillOrifice` | 1.0 | mm | `LEGACY_STUDY_store.fill_orifice_mm` | A42, 4.14 s first fill | COMPUTED_CURRENT |
 | `SupportPitch` | 1000.0 | mm | A59 | seven supports | COMPUTED_CURRENT |
 | `SupportStation_n` | 1000·n, n=1...7 | mm | A59 / A69 |, | COMPUTED_CURRENT |
 | `SupportPlacementTol` | ±0.05 | mm | A69 declared | A69 | OPTIMISABLE |
 | `DiametralClearance` | 0.050 | mm | A67 declared bracket 0.020-0.200 | no repository source | P108_DEPENDENT / OPTIMISABLE |
 | `LandSeparation` | 120.0 | mm | A67 declared, swept 40-400 | no repository source | P108_DEPENDENT |
 | `LandLength` | UNRESOLVED | mm |, | does not exist anywhere | P108_DEPENDENT |
-| `PistonLength` | 12.0 | mm | `build_gen6.carriage()` | drawing convenience only | PLACEHOLDER / P108_DEPENDENT |
-| `TubeMaterial` | 6061-T6, hard anodised |, | `gen6_drive.tube_material` | ADR-035 | FIXED |
-| `PistonMaterial` | 6061-T6, matched |, | `gen6_drive.piston_material` | ADR-035, A58 band 6 | FIXED |
-| `TubeTempCeiling` | 473 | K | `gen6_drive.tube_temperature_ceiling_K` | ADR-035 | FIXED |
-| `SealFriction` | 17.8 | N | `gen6_seal.friction_max_N` | A61, 4.00 % of p₀A | P67_DEPENDENT |
-| `SealFrictionAllowance` | 83.404 | N | `gen6_seal.friction_allowance_N` | A41 ceiling | P67_DEPENDENT |
+| `PistonLength` | 12.0 | mm | `build_legacy_study.carriage()` | drawing convenience only | PLACEHOLDER / P108_DEPENDENT |
+| `TubeMaterial` | 6061-T6, hard anodised |, | `LEGACY_STUDY_drive.tube_material` | ADR-035 | FIXED |
+| `PistonMaterial` | 6061-T6, matched |, | `LEGACY_STUDY_drive.piston_material` | ADR-035, A58 band 6 | FIXED |
+| `TubeTempCeiling` | 473 | K | `LEGACY_STUDY_drive.tube_temperature_ceiling_K` | ADR-035 | FIXED |
+| `SealFriction` | 17.8 | N | `LEGACY_STUDY_seal.friction_max_N` | A61, 4.00 % of p₀A | P67_DEPENDENT |
+| `SealFrictionAllowance` | 83.404 | N | `LEGACY_STUDY_seal.friction_allowance_N` | A41 ceiling | P67_DEPENDENT |
 | `SealGlandGeometry` | UNRESOLVED |, |, | class only: filled-PTFE glide ring | P67_DEPENDENT |
-| `SealMass` | 0.002 | kg | `gen6_seal.seal_mass_kg` | A58 band 5 | PLACEHOLDER |
-| `TrimSectionLength` | 144.01 | mm | `gen6_trim.section_length_mm` | A55 | SUSPENDED (ADR-036) |
-| `TrimSectionStart` | 7855.99 | mm | `gen6_trim.section_start_mm` | A55 | SUSPENDED |
-| `TrimBeltDepth` | 6.0 | mm | `build_gen6.trim_stator()` | none, drawing choice | PLACEHOLDER |
-| `CradleLever` | 170.25 | mm | `gen6_drive.cradle_contact_lever_mm` | A34: half the payload length | COMPUTED_CURRENT |
-| `CradlePreload` | 201.7 | N | `gen6_drive.cradle_preload_N_per_contact` | A38 at the 25 g cap; P102 keeps it as the conservative figure, design point needs 91.7 | COMPUTED_CURRENT |
+| `SealMass` | 0.002 | kg | `LEGACY_STUDY_seal.seal_mass_kg` | A58 band 5 | PLACEHOLDER |
+| `TrimSectionLength` | 144.01 | mm | `LEGACY_STUDY_trim.section_length_mm` | A55 | SUSPENDED (ADR-036) |
+| `TrimSectionStart` | 7855.99 | mm | `LEGACY_STUDY_trim.section_start_mm` | A55 | SUSPENDED |
+| `TrimBeltDepth` | 6.0 | mm | `build_legacy_study.trim_stator()` | none, drawing choice | PLACEHOLDER |
+| `CradleLever` | 170.25 | mm | `LEGACY_STUDY_drive.cradle_contact_lever_mm` | A34: half the payload length | COMPUTED_CURRENT |
+| `CradlePreload` | 201.7 | N | `LEGACY_STUDY_drive.cradle_preload_N_per_contact` | A38 at the 25 g cap; P102 keeps it as the conservative figure, design point needs 91.7 | COMPUTED_CURRENT |
 | `CellLengthX / SectionY / SectionZ` | 340.5 / 100.0 / 100.0 | mm | `payload_cell` | ADR-025 | FIXED |
 | `CellPitchZ` | 104.0 | mm | `payload_cell.cell_pitch_z` | ADR-025 | FIXED |
 | `CellsTotal` | 12 |, | `payload_cell.cells_total` | ADR-025 | FIXED |
 | `CassetteLX/WY/HZ` | 380.5 / 166 / 690 | mm | `magazine` | Gen5 | COMPUTED_CURRENT |
-| `RailWidth / RailHeight` | 120 / 40 | mm | `build_gen6.stage_rail()` | none, invented to draw an interface | HOST_DEPENDENT / PLACEHOLDER |
+| `RailWidth / RailHeight` | 120 / 40 | mm | `build_legacy_study.stage_rail()` | none, invented to draw an interface | HOST_DEPENDENT / PLACEHOLDER |
 | `RailTopZ` | −60.0 | mm | derived |, | HOST_DEPENDENT |
 
 ---
@@ -243,17 +243,17 @@ Fusion technique so these can change later without a rebuild:
 
 ---
 
-## 6. Current STEP file map, `cad/step/gen6/`
+## 6. Current STEP file map, `cad/step/legacy_study/`
 
 | File | Represents | Import directly? | Status | Action |
 |---|---|---|---|---|
-| `VOLLEY_Drive_Tube_Gen6.step` | 8060 mm tube, ⌀17.805/15.805 | Yes | Authoritative | Remodel natively, it is 4 dimensions and you want the parametric version |
-| `VOLLEY_Chamber_Gen6.step` | 126/120 ⌀ x 176.839, 3 mm caps | Yes | Provisional envelope | Import as reference body, then remodel when a vessel calc exists |
-| `VOLLEY_Reservoir_Gen6.step` | 192/180 ⌀ x 135.969, 6 mm caps | Yes | Provisional envelope | Reference body |
-| `VOLLEY_Carriage_Gen6.step` | 12 mm disc + seat + 2 stops | Yes | PLACEHOLDER | Do not import. §5 |
-| `VOLLEY_Magazine_Cassette_Gen6.step` | 380.5x166x690 shelled | Yes | Provisional | Remodel natively, you will pattern cells into it |
-| `VOLLEY_Stage_Rail_Gen6.step` | 8200x120x40 box | Yes | Host reference, invented | Reference body, suppressed from mass |
-| `VOLLEY_Trim_Stator_Gen6.step` | ⌀29.805/17.805 x 144.01 belt | Yes | SUSPENDED | Leave out; build last if P67 requires it |
+| `VOLLEY_Drive_Tube_legacy_study.step` | 8060 mm tube, ⌀17.805/15.805 | Yes | Authoritative | Remodel natively, it is 4 dimensions and you want the parametric version |
+| `VOLLEY_Chamber_legacy_study.step` | 126/120 ⌀ x 176.839, 3 mm caps | Yes | Provisional envelope | Import as reference body, then remodel when a vessel calc exists |
+| `VOLLEY_Reservoir_legacy_study.step` | 192/180 ⌀ x 135.969, 6 mm caps | Yes | Provisional envelope | Reference body |
+| `VOLLEY_Carriage_legacy_study.step` | 12 mm disc + seat + 2 stops | Yes | PLACEHOLDER | Do not import. §5 |
+| `VOLLEY_Magazine_Cassette_legacy_study.step` | 380.5x166x690 shelled | Yes | Provisional | Remodel natively, you will pattern cells into it |
+| `VOLLEY_Stage_Rail_legacy_study.step` | 8200x120x40 box | Yes | Host reference, invented | Reference body, suppressed from mass |
+| `VOLLEY_Trim_Stator_legacy_study.step` | ⌀29.805/17.805 x 144.01 belt | Yes | SUSPENDED | Leave out; build last if P67 requires it |
 
 ---
 
@@ -286,7 +286,7 @@ Fusion technique so these can change later without a rebuild:
 
 ```
 STEP 1   New design, units mm. Create ALL §3 user parameters first. Do not sketch yet.
-STEP 2   Root component VOLLEY_Gen6. Create the §4.7 datum planes.
+STEP 2   Root component VOLLEY_legacy_study. Create the §4.7 datum planes.
 STEP 3   00_REFERENCE: import Stage_Rail STEP as a reference body, suppress from mass.
 STEP 4   20_DRIVE / Drive_Tube: model natively per §4.1. Rigid-joint to root at origin.
 STEP 5   Support planes 1..7 from SupportPitch. No hardware.
@@ -304,7 +304,7 @@ STEP 10  STOP. Everything after this is P108-dependent or vendor selection.
 
 ## 9. Existing CAD defects and placeholders, do not mistake these for design
 
-| In `build_gen6.py` | What it actually is |
+| In `build_legacy_study.py` | What it actually is |
 |---|---|
 | `chamber()` | `r = 60`, `wall = 3` are hard-coded drawing choices. No pressure-vessel calculation sets either. MAWP, proof, burst, fracture mode and cycle count are all unanalysed |
 | `reservoir()` | `r = 90`, `wall = 6`, same. A 200 bar vessel whose wall was chosen to look right |
@@ -321,9 +321,9 @@ STEP 10  STOP. Everything after this is P108-dependent or vendor selection.
 
 Build order at the workstation, in this sequence.
 
-1. Import as reference only: `VOLLEY_Stage_Rail_Gen6.step`, `VOLLEY_Chamber_Gen6.step`,
-   `VOLLEY_Reservoir_Gen6.step`. Mark all three reference / excluded from mass.
-2. Do not import `VOLLEY_Carriage_Gen6.step`. It is a placeholder.
+1. Import as reference only: `VOLLEY_Stage_Rail_legacy_study.step`, `VOLLEY_Chamber_legacy_study.step`,
+   `VOLLEY_Reservoir_legacy_study.step`. Mark all three reference / excluded from mass.
+2. Do not import `VOLLEY_Carriage_legacy_study.step`. It is a placeholder.
 3. Create every parameter in §3 before the first sketch. Values and names exactly as given.
 4. Build immediately, natively: `Drive_Tube` (§4.1), support planes (§4.2),
    `Magazine_Cassette` + cell pattern (§4.5), the four datum planes (§4.7).

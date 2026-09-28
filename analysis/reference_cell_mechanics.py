@@ -95,7 +95,7 @@ def report(d):
         "## Coupon needed next", "",
         "Measure force versus travel through the declared stroke, preload after dwell and repeated charging, breakaway/sliding force versus temperature, latch shock, pusher/payload separation, exit speed, angular rate and catcher peak/rebound. Use independent position/time measurements and calibrate their uncertainty before comparing repeatability with a mission allocation. S5's local allowances are not approved hardware tolerances.", "",
         "Reject a candidate if the measured envelope violates its 10 g study ceiling, loses required contact, jams, relatches into the payload, ejects retained hardware or lets catcher rebound recontact it. Flight ascent retention, wear life, contamination and environmental acceptance require separately frozen specifications.", "",
-        "[Declared criteria](../validation/P92_S2_reference_cell_mechanics.md) · [Complete result](../analysis/results/reference_cell_mechanics.json) · [Reference architecture](GEN6_REFERENCE_ARCHITECTURE.md)", "",
+        "[Declared criteria](../validation/P92_S2_reference_cell_mechanics.md) · [Complete result](../analysis/results/reference_cell_mechanics.json) · [Reference architecture](LEGACY_STUDY_REFERENCE_ARCHITECTURE.md)", "",
         "Reproduce: `python analysis/reference_cell_mechanics.py --check`.", ""]
     return "\n".join(out)
 

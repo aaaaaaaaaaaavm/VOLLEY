@@ -27,17 +27,17 @@ Every speed range is hypothetical, including the 0.5 m/s lower limit.
 | phase_5km | spring_screen | 0.17936 | 0.17936 | 3000 | BEST_TESTED |
 | phase_5km | bolley_screen | 0.17936 | 0.17936 | 3000 | BEST_TESTED |
 | phase_5km | gen5_screen | 0.17936 | 0.17936 | 3000 | BEST_TESTED |
-| phase_5km | gen6_screen | 0.17936 | 0.17936 | 3000 | BEST_TESTED |
+| phase_5km | LEGACY_STUDY_screen | 0.17936 | 0.17936 | 3000 | BEST_TESTED |
 | phase_25km | fixed_1 | 1.64452 | 1.64452 | 3000 | BEST_TESTED |
 | phase_25km | spring_screen | 1.50156 | 1.50156 | 3000 | BEST_TESTED |
 | phase_25km | bolley_screen | 0.89498 | 0.89498 | 3000 | BEST_TESTED |
 | phase_25km | gen5_screen | 0.89498 | 0.89498 | 3000 | BEST_TESTED |
-| phase_25km | gen6_screen | 0.89498 | 0.89498 | 3000 | BEST_TESTED |
+| phase_25km | LEGACY_STUDY_screen | 0.89498 | 0.89498 | 3000 | BEST_TESTED |
 | higher_circle | fixed_1 | 2.50452 | 2.50452 | 3000 | BEST_TESTED |
 | higher_circle | spring_screen | 2.36196 | 2.36196 | 3000 | BEST_TESTED |
 | higher_circle | bolley_screen | 1.38908 | 1.38908 | 3000 | BEST_TESTED |
 | higher_circle | gen5_screen | 1.38908 | 1.38908 | 3000 | BEST_TESTED |
-| higher_circle | gen6_screen | 1.38908 | 1.38908 | 3000 | BEST_TESTED |
+| higher_circle | LEGACY_STUDY_screen | 1.38908 | 1.38908 | 3000 | BEST_TESTED |
 
 The two phase targets are 5 km and 25 km ahead along the 450 km reference circle.
 The higher-circle target is 460 km at the unperturbed host terminal angle.

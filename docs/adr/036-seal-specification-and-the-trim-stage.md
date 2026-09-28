@@ -1,6 +1,6 @@
 # ADR-036: The seal is specified at 17.8 N, and the trim stage is suspended rather than built
 
-Status: Accepted, Date: 2026-08-20, Phase: I, Amends: [ADR-033](033-gen6-trim-stage.md), Closes: [P89](../../OPEN_PROBLEMS.md), Rests on: A55, A58, A61
+Status: Accepted, Date: 2026-08-20, Phase: I, Amends: [ADR-033](033-legacy_study-trim-stage.md), Closes: [P89](../../OPEN_PROBLEMS.md), Rests on: A55, A58, A61
 
 ## Context
 
@@ -8,7 +8,7 @@ No new analysis was performed for this decision. [A61](../../validation/A61_seal
 it on 2026-08-20 with its bands declared first, and band 3 passed. What follows is the decision
 A61 earned and did not have the authority to take.
 
-[ADR-033](033-gen6-trim-stage.md) added a motor to correct a dispersion. A61 found that the
+[ADR-033](033-legacy_study-trim-stage.md) added a motor to correct a dispersion. A61 found that the
 dispersion is a property of a seal nobody has chosen, and that choosing one moves the whole
 chain:
 
@@ -37,7 +37,7 @@ against the 5.00 % at which the trim stage stops earning its mass.
 
 83.4 N is a ceiling, not a prediction. It is the most friction A41 declared the design could
 tolerate. Every headline that descends from it is therefore an upper bound presented as a design
-point, including the 3.9798 % this repository now publishes as Gen6's dispersion, and the
+point, including the 3.9798 % this repository now publishes as historical study's dispersion, and the
 144.01 mm section [A55](../../validation/A55_trim_authority.md) sized to correct it.
 
 A design sized against its own worst case is not conservative if it then buys hardware to fix the
@@ -72,7 +72,7 @@ already recorded that as a defect once.
 
 > That last row is the honest limit of this decision. A61 band 3 asked whether the stage beats
 > A48's ±0.323 m/s of authority. It did not ask whether the product meets its spec, and it does
-> not. *Deleting the trim stage would make Gen6 cheaper and would not make it accurate.*
+> not. *Deleting the trim stage would make historical study cheaper and would not make it accurate.*
 
 ## Falsifiers
 

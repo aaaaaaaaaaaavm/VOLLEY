@@ -1,5 +1,7 @@
 # Six generations, and what each one was for
 
+> **Current status, 2026-09-28:** The gas-guide generation below is a withdrawn architecture study. Its tables compare dated model configurations and do not rank complete installed systems or qualify payloads. No next-generation architecture is selected; see [current status](NEXT_GENERATION_STATUS.md).
+
 This is the design's history as a sequence of machines, not a changelog. The per-generation
 records, one file each, to a common structure, are in
 [`docs/generations/`](generations/README.md). Each generation
@@ -7,13 +9,13 @@ exists because the one before it failed at something specific, and each is named
 it fixed and what it cost. `cad/CHANGELOG_CAD.md` carries the per-file detail; this page carries
 the argument.
 
-Three matter today, and they are not the same three a reader expects:
+Three records are useful for tracing the design history:
 
 | | | |
 |---|---|---|
 | Gen4 | *the last one modelled by hand* | The renders on the front page. Never exported |
 | Gen5 | *the frozen baseline* | Script-built, self-checking, and what every number is computed against |
-| Gen6 | *the current design target* | A different machine. No mover, no stator, no bank, no brake |
+| Historical gas-guide study | *withdrawn architecture study* | A different machine. No mover, no stator, no bank, no brake |
 
 Gen3 is a fourth that will not go away, because the sled mass every performance figure
 descends from was measured off its solids.
@@ -28,12 +30,12 @@ descends from was measured off its solids.
 > itself, and that is the second row. *A generation that models its mechanism host-agnostically
 > is making a statement about the model, not about the mission.*
 
-| | Gen4 | Gen5 | Gen6 |
+| | Gen4 | Gen5 | historical study |
 |---|---|---|---|
 | Mission role of the host | active post-primary orbital delivery platform | active post-primary orbital delivery platform | active post-primary orbital delivery platform |
 | Degree of host integration | low, self-contained mechanism | low, self-contained mechanism, frozen | HIGH, the stage's structure and length are part of the machine |
-| Status | provisional, superseded | frozen baseline | current design target |
-| Adopted | 2026-08-03 | 2026-08 | 2026-08-14, [ADR-032](adr/032-gen6-stage-integrated-gas-store.md) |
+| Status | provisional, superseded | frozen computational baseline | withdrawn architecture study |
+| Adopted | 2026-08-03 | 2026-08 | 2026-08-14, [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md) |
 | How it was built | by hand, nine Fusion documents | generated from `cad/parameters.json` | generated from the same file |
 | Committed STEP | none, P43 | eight parts | six parts |
 | Reproducible from a clean clone | no | yes, byte-identically | yes, byte-identically |
@@ -43,15 +45,15 @@ descends from was measured off its solids.
 | Arrest | eddy brake | eddy brake | none, nothing to stop |
 | Structure | its own track and enclosure | its own track and enclosure | a rail a spent upper stage provides |
 | Exit velocity | *not established* | 16.029 m/s at 10.07 g | 34.280 m/s at 11.36 g, zero-friction; 29.009 at the full tolerable friction (P67) |
-| Stroke | 1.3 m accelerating, release at 1.5 m | same | 8.00 m, A37's whole usable acceleration length ([ADR-034](adr/034-gen6-long-stroke-design-point.md)) |
-| Dry mass |, | 126.6 kg | 11.45 kg added, plus 3.1216 kg of store (A56, sized at the adopted charge pressure) |
-| Per 3U satellite |, | 10.547 kg dry | 1.2145 kg added ([A45-R2](../validation/A45R2_stage_credit_resized_store.md), at A56's sized store), and 1.2145-3.0827 once the stage credit is read hostilely (P68). *The 1.296 published until 2026-08-20 was ADR-034's scaled store, not a sized one* |
-| Velocity control |, | designed loop, 0.0274 m/s at 3σ | 3.9798 % open-loop at ADR-034's stroke (A55, reproduced by A61), 98.68 % of it seal friction (P67), *A44's 1.113 % was the 2.18 m machine*; 0.0274 m/s with the trim stage, on a ~70 g store (A64) |
+| Stroke | 1.3 m accelerating, release at 1.5 m | same | 8.00 m, A37's whole usable acceleration length ([ADR-034](adr/034-legacy_study-long-stroke-design-point.md)) |
+| Dry mass | not established | 126.6 kg | 11.45 kg added, plus 3.1216 kg of store (A56, sized at the adopted charge pressure); partial accounting only |
+| Per 3U satellite | not established | 10.547 kg dry | 1.2145 kg added ([A45-R2](../validation/A45R2_stage_credit_resized_store.md), at A56's sized store), and 1.2145-3.0827 once the stage credit is read hostilely (P68). *The 1.296 published until 2026-08-20 was ADR-034's scaled store, not a sized one* |
+| Velocity control | not established | designed loop, 0.0274 m/s at 3σ | 3.9798 % open-loop at ADR-034's stroke (A55, reproduced by A61), 98.68 % of it seal friction (P67), *A44's 1.113 % was the 2.18 m machine*; 0.0274 m/s with the trim stage, on a ~70 g store (A64) |
 
-Read the last two rows together. Gen6 is better on velocity and on added mass per satellite,
-and worse on the thing the product is sold on. Gen5 commanded velocity through a closed loop
-designed against phase margin; Gen6's shot is 133 ms of open-loop expansion and its spread is
-whatever the hardware repeats to.
+Read the last two rows as configuration-specific model outputs. The gas-guide study calculated
+higher velocity and lower *partial added mass*, but its complete installed mass was never closed.
+Gen5 modelled commanded velocity through a designed closed loop; the gas-guide shot is an
+open-loop expansion whose physical repeatability has not been measured.
 
 
 ---
@@ -60,26 +62,26 @@ whatever the hardware repeats to.
 
 <table>
 <tr>
-<td width="33%"><a href="../cad/renders/hero_open.png"><img src="../cad/renders/hero_open.png" alt="Gen4, the last hand-modelled generation"></a><br><sub><b>Gen4, drawn by hand.</b> Fusion, nine documents, more modelled detail than any generation since. <b>No committed STEP export</b>, and its stations disagree with the analysis model (<b>P43</b>). The annotation is drawn on by <code>cad/tools/prepare_renders.py</code>, and its velocity is now read from the result rather than typed (<b>P72</b>).</sub></td>
+<td width="33%"><a href="../cad/renders/hero_open.png"><img src="../cad/renders/hero_open.png" alt="Gen4 Fusion CAD design"></a><br><sub><b>Gen4 Fusion CAD design.</b> Nine Fusion documents with substantial modeled detail. <b>No committed STEP export</b>, and its stations disagree with the analysis model (<b>P43</b>). The annotation is added by <code>cad/tools/prepare_renders.py</code>, and its velocity is now read from the result rather than typed (<b>P72</b>).</sub></td>
 <td width="33%"><a href="../cad/renders/gen5/hero_open.png"><img src="../cad/renders/gen5/hero_open.png" alt="Gen5, the frozen generated baseline"></a><br><sub><b>Gen5, generated.</b> Eight parts from <code>cad/parameters.json</code>, rebuildable byte-identically. Plainer than Gen4 because every feature must trace to a parameter, and no parameter describes a fillet. The copper band is the stator; the sled sits on it.</sub></td>
-<td width="33%"><a href="../cad/renders/gen6/hero_open.png"><img src="../cad/renders/gen6/hero_open.png" alt="Gen6, the current design target"></a><br><sub><b>Gen6, what is left after deletion.</b> A rail the host stage provides, a drive tube, a pre-charged chamber and its reservoir. <b>No stator, no sled, no bank, no brake.</b> Since <a href="adr/034-gen6-long-stroke-design-point.md">ADR-034</a> the rail is <b>8.2 m</b> and the aspect ratio is roughly 42:1, the render looks like a line because the machine is one. The visual difference is the architecture, not the renderer.</sub></td>
+<td width="33%"><a href="../cad/renders/legacy_study/hero_open.png"><img src="../cad/renders/legacy_study/hero_open.png" alt="historical gas-guide study"></a><br><sub><b>Historical gas-guide study.</b> A rail the host stage would provide, a drive tube, a pre-charged chamber and its reservoir. <b>No stator, no sled, no bank, no brake.</b> The model uses an 8.2 m rail after <a href="adr/034-legacy_study-long-stroke-design-point.md">ADR-034</a>; the render shows this dated geometry, not a selected installation.</sub></td>
 </tr>
 <tr>
 <td><a href="../cad/renders/track_stator.png"><img src="../cad/renders/track_stator.png" alt="Gen4 track and stator"></a><br><sub><b>Gen4, track and stator.</b> Side elevation. Gen4 stows the sled at s = 300 mm and releases at s = 1200, against the 1500 mm <code>analysis/</code> assumes.</sub></td>
 <td><a href="../cad/renders/gen5/sled_detail.png"><img src="../cad/renders/gen5/sled_detail.png" alt="Gen5 sled on the stator"></a><br><sub><b>Gen5, sled on the stator.</b> The rollers in this image are in their channels for the first time: until 2026-08-16 both sat outside them in every committed STEP (<b>P71</b>), found by building the machine a second time in a different kernel.</sub></td>
-<td><a href="../cad/renders/gen6/store.png"><img src="../cad/renders/gen6/store.png" alt="Gen6 chamber and reservoir"></a><br><sub><b>Gen6, the store.</b> A 2 L chamber charged to 22.73 bar and fired as a closed adiabatic expansion, fed from a <b>3.46 L</b> reservoir at 200 bar, sized by A56 at that pressure rather than scaled. <b>There is no regulator</b>, A41 closed P63 by deleting the component rather than pricing it.</sub></td>
+<td><a href="../cad/renders/legacy_study/store.png"><img src="../cad/renders/legacy_study/store.png" alt="historical study chamber and reservoir"></a><br><sub><b>historical study, the store.</b> A 2 L chamber charged to 22.73 bar and fired as a closed adiabatic expansion, fed from a <b>3.46 L</b> reservoir at 200 bar, sized by A56 at that pressure rather than scaled. <b>There is no regulator</b>, A41 closed P63 by deleting the component rather than pricing it.</sub></td>
 </tr>
 </table>
 
-<sub><b>Gen4 is a Fusion render; Gen5 and Gen6 are Cycles renders of the committed STL sets, by
+<sub><b>Gen4 is a Fusion render; Gen5 and historical study are Cycles renders of the committed STL sets, by
 <a href="../cad/tools/render_blender.py"><code>cad/tools/render_blender.py</code></a>. They are not
-directly comparable as images.</b> Gen4 carries hand-modelled detail and Fusion's own materials;
+directly comparable as images.</b> Gen4 carries its original Fusion design detail and materials;
 the other two carry only what a parameter describes. <b>Where they differ in shape, that is the
 design; where they differ in finish, that is the tool.</b></sub>
 
 ---
 
-## Gen4, the last one drawn by a person
+## Gen4 Fusion CAD design
 
 What it was for. Gen3 accelerated through a uniform 1.30 m stator and released at 1500 mm,
 using a parametric sled. Gen4 rebuilt the assembly around the actual 488 mm sled and gave the
@@ -115,7 +117,7 @@ produced, one inboard in the stator gap, one outboard of the longeron, the sled 
 y = 0 (P71). Every guard here compares a generated artifact against the script that generated
 it, so both agreed. See [`../cad/scad/README.md`](../cad/scad/README.md).
 
-## Gen6, a different machine, arrived at by deletion
+## historical study, a different machine, arrived at by deletion
 
 What it was for. Five runs, none of which set out to change the architecture:
 
@@ -128,7 +130,7 @@ What it was for. Five runs, none of which set out to change the architecture:
 | A39 | replaced the spring with gas |
 
 What it deletes. No mover, no stator, no supercapacitor bank, no power electronics, no eddy
-brake, no return stroke. 29.75 kg deleted outright; charging is 0.26 W average, 36 W peak ([A51](../validation/A51_gen6_power.md), the 25-131 W previously quoted was a *spring*-winding figure, P80).
+brake, no return stroke. 29.75 kg deleted outright; charging is 0.26 W average, 36 W peak ([A51](../validation/A51_LEGACY_STUDY_power.md), the 25-131 W previously quoted was a *spring*-winding figure, P80).
 
 What it costs, stated rather than absorbed. Three of Gen5's crossed kill criteria are
 dissolved rather than passed, a criterion that no longer applies has not been met, and
@@ -146,6 +148,6 @@ it was 8.4 % at A43's), and 58.6 % of that credit is the enclosure, a skin belon
 ## What none of them are
 
 Nothing has been built, fired or measured at any scale. That is E4, it is open, and six
-generations of CAD do not touch it. Gen4 was drawn, Gen5 and Gen6 were generated, and all three
+generations of CAD do not touch it. Gen4 was drawn, Gen5 and historical study were generated, and all three
 are model outputs. [`B1_ORDER.md`](B1_ORDER.md) is still the order that changes the category of
 evidence rather than its degree, and it has not been placed.

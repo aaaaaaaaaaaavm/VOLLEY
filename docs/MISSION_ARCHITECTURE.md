@@ -1,9 +1,9 @@
 # The mission VOLLEY actually flies
 
-> **Historical architecture narrative.** The sections below preserve the earlier concept and its assumptions. For the current mission, reopened Gen6 selection and evidence boundaries, read [the front page](../README.md) and [project continuity](CONTINUITY.md). In particular, conventional release speeds can differ, host structure is not free installed hardware, and no primary-mission isolation or provider accommodation has been demonstrated.
+> **Historical architecture narrative.** The sections below preserve the earlier concept and its assumptions. For the current mission, reopened historical study selection and evidence boundaries, read [the front page](../README.md) and [project continuity](CONTINUITY.md). In particular, conventional release speeds can differ, host structure is not free installed hardware, and no primary-mission isolation or provider accommodation has been demonstrated.
 
 Written 2026-08-22. The one-line description, *an electromagnetic CubeSat deployer*, has been
-wrong since [ADR-032](adr/032-gen6-stage-integrated-gas-store.md), and the shorter it gets the
+wrong since [ADR-032](adr/032-legacy_study-stage-integrated-gas-store.md), and the shorter it gets the
 more wrong it is. This file is the operational concept, and it is the thing every other
 document in the programme should be read against.
 
@@ -56,7 +56,7 @@ This distinction has been collapsed in casual descriptions of the concept and it
 |---|---|---|
 | 1. Host-stage propulsion reserve | Propellant intentionally reserved for post-primary manoeuvres, or characterised residual a host can actually use. Main engine, auxiliary, RCS, it depends entirely on the vehicle | The launch provider's. VOLLEY does not own it and cannot assume it |
 | 2. Host-stage attitude, navigation and power | What keeps the stage pointed, located, powered and commandable after passivation would normally have begun | The launch provider's, and A37 counts a stage kept alive as hardware that exists whether or not VOLLEY's rollup counts it |
-| 3. VOLLEY's own deployment actuator | The Gen6 cold-gas system, 2.0 L at 22.7258 bar of nitrogen, a free piston, an 8.0 m bore, and the suspended trim stage | VOLLEY's. It is a different fluid system in a different pressure vessel and it never manoeuvres the stage |
+| 3. VOLLEY's own deployment actuator | The historical study cold-gas system, 2.0 L at 22.7258 bar of nitrogen, a free piston, an 8.0 m bore, and the suspended trim stage | VOLLEY's. It is a different fluid system in a different pressure vessel and it never manoeuvres the stage |
 
 Resource 3 produces the payload's local separation condition and nothing else. It cannot raise
 an orbit, and 51.0 g of nitrogen per shot is not a propulsion budget.
@@ -171,7 +171,7 @@ of it, and this file exists partly to say so in one place.*
 
 ## 8. What this file is not
 
-It is not a claim that the machine works. Gen6's exit attitude is not established
+It is not a claim that the machine works. historical study's exit attitude is not established
 ([P103](../OPEN_PROBLEMS.md)), its seal friction is unmeasured ([P67](../OPEN_PROBLEMS.md)), and
 nothing in this project has been built, fired or measured, E4. It is a statement of what
 is being designed, so that every other document can be read against a single description of the

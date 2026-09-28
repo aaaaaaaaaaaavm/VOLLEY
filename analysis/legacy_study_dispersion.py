@@ -1,11 +1,11 @@
 """
-VOLLEY | Commanded velocity at Gen6, and what actually sets its spread.
+VOLLEY | Commanded velocity at LegacyStudy, and what actually sets its spread.
 
 WHY THIS EXISTS
 ---------------
 The product claim is commanded per-satellite velocity. Gen5 backed it with a designed loop --
 0.0274 m/s at 3 sigma about a 15.8 m/s setpoint, on a gain designed against phase margin after
-A28. Gen6 has A41 band 6, an open-loop sensitivity of 0.499 % of velocity per 1 % of charge,
+A28. LegacyStudy has A41 band 6, an open-loop sensitivity of 0.499 % of velocity per 1 % of charge,
 and nothing else: no sensor, no loop, no error budget. precharged.py models no friction and no
 temperature effect on charge, and A41 band 8 computed a friction ALLOWANCE rather than a
 friction.
@@ -17,7 +17,7 @@ WHAT IS ADDED HERE
 The work integral is imported from precharged, not restated. What is added is friction over the
 stroke, a chamber temperature, and a Monte Carlo over the four terms that are actually uncertain.
 
-Bands declared in validation/A44_gen6_dispersion.md at HEAD, BEFORE this file existed.
+Bands declared in validation/A44_legacy_study_dispersion.md at HEAD, BEFORE this file existed.
 
 Provenance: model output. Ideal gas, adiabatic closed expansion, Coulomb friction constant over
 the stroke, no blow-by, no valve dynamics, no residual pressure ahead of the piston, payload
@@ -200,7 +200,7 @@ def main():
                charge_mass_g_hot=m_hot * 1e3, hot_saving_pct=saving,
                transducer_classes=classes,
                bands=[dict(n=n, band=t, got=g, passed=bool(o)) for n, t, g, o in bands])
-    with open(os.path.join(RESULTS, 'gen6_dispersion.json'), 'w') as f:
+    with open(os.path.join(RESULTS, 'legacy_study_dispersion.json'), 'w') as f:
         json.dump(out, f, indent=2)
         f.write('\n')
 

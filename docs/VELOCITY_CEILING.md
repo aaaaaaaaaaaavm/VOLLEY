@@ -47,10 +47,11 @@ restated, because there is no source for them.
 | 10.07 g, as designed | 16.0 m/s |
 | 25 g, the chosen design ceiling | 25.3 m/s |
 
-The machine is not velocity-limited. It is mass-limited. It currently runs at 10.07 g against
-its own 25 g ceiling, using 40 % of that headroom, because the sled measured 9.445 kg
-rather than the 4.86 kg assumed (P15). Recovering velocity means removing sled mass or raising
-thrust. It does not mean accepting more g, and there is no version of this machine where it does.
+In the frozen Gen5 model, the calculated point is 10.07 g against a chosen 25 g study ceiling.
+The reconciled CAD/mass calculation gave a 9.445 kg sled rather than the earlier assumed
+4.86 kg (P15); no physical sled was weighed. Lower moving mass, higher thrust, a different
+stroke or a different payload load limit would change the calculated release speed. None of
+those changes is authorized by a universal CubeSat qualification level.
 
 Whether a 10.07 g, 162 ms event is acceptable to any particular satellite is a payload-specific
 structural question, settled by that satellite's own qualified load environment and an

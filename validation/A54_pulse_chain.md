@@ -7,7 +7,7 @@ Verify with `git show --stat <this commit> -- analysis/pulse_chain.py`, which mu
 
 ## Why this run exists
 
-[P77](../OPEN_PROBLEMS.md), and [ADR-033](../docs/adr/033-gen6-trim-stage.md) named it as its own
+[P77](../OPEN_PROBLEMS.md), and [ADR-033](../docs/adr/033-legacy_study-trim-stage.md) named it as its own
 falsifier 1 on the day it was adopted:
 
 > *"The pulse store weighs more than the 0.340 kg stage it feeds. The correction is 37.7 J at
@@ -76,7 +76,7 @@ Declared before the script. Not to be edited after the run.
 | **3** | An EDLC store sized to source that power weighs **≤ the 1.2328 kg section it feeds** | **ADR-033 falsifier 1 fires as written** |
 | **4** | The specific power required, at a mass equal to the section, is **≤ 4.72 kW/kg** — what Gen5's own bank achieves | The store is asked for something no bank in this project has ever demonstrated |
 | **5** | **There is a sheet current at which section + store ≤ 2.0 kg** | **There is no operating point at which the trim stage is affordable, and ADR-033 reverses** |
-| **6** | At that sheet current, added mass per satellite stays **≤ 2.0 kg** | The escape re-crosses the one kill-criterion numerator Gen6 passes |
+| **6** | At that sheet current, added mass per satellite stays **≤ 2.0 kg** | The escape re-crosses the one kill-criterion numerator historical study passes |
 | **7** | The sized store holds **≤ 10×** the energy the correction needs | The store is power-limited rather than energy-limited, and specific *energy* is the wrong figure of merit for it |
 | **8** | **REPORT, no pass/fail.** Section mass and store mass against sheet current, with the minimum located | — |
 
@@ -90,7 +90,7 @@ Declared before the script. Not to be edited after the run.
   answer and **no vendor figure for either is in the record.** Band 4 is stated as a *required
   specific power* precisely so it can be checked against any datasheet without this run inventing
   one. *NEEDS SOURCE: specific power of a film capacitor bank at this pulse duration.*
-- It does not model the converter, the commutation, or the loop. Gen6 still has no velocity
+- It does not model the converter, the commutation, or the loop. historical study still has no velocity
   sensor in any file.
 - It assumes the 96 V bus `sizing.py` declares. A higher bus voltage lowers the current for the
   same power and is an escape this run reports but does not size.
@@ -166,7 +166,7 @@ The curve is flat near its minimum and the minimum is an order of magnitude too 
 the sheet current does not buy an affordable stage; it trades a heavy store for a heavy section.
 
 Added mass per satellite at the minimum is 2.4313 kg, which re-crosses the one
-kill-criterion numerator Gen6 currently passes.
+kill-criterion numerator historical study currently passes.
 
 ### The prediction, and the one that mattered was wrong
 
@@ -200,7 +200,7 @@ by about ten times. `sizing.py` declares 96 V and nothing in this project has ex
 **Band 5's declared FAIL text says ADR-033 reverses.** *I declared that before the run and it is
 recorded here rather than quietly dropped.* But reversing it requires choosing what replaces it,
 and that is a design decision rather than an analysis result, because deleting the trim stage
-deletes the commanded-velocity claim the product is sold on, Gen6's shot disperses at 3.980 %
+deletes the commanded-velocity claim the product is sold on, historical study's shot disperses at 3.980 %
 open-loop with nothing correcting it.
 
 Three routes exist and A54 cannot choose between them:

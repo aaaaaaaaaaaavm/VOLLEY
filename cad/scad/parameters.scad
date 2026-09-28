@@ -47,7 +47,7 @@
 // skipped (not numeric): enclosure_bays_verified_clear_of_track
 // skipped (not numeric): enclosure_status
 // skipped (not numeric): enclosure_mass_note
-// skipped (not numeric): gen6_store_gas
+// skipped (not numeric): legacy_study_store_gas
 
 brake_arrest_g_cap = 200;
 brake_pole_count = 2;
@@ -92,25 +92,25 @@ enclosure_z_top_skin_outer = 707;
 envelope_extremes_max_mm = [1807, 265, 710];
 envelope_extremes_min_mm = [-32, -265, -230];
 envelope_installed_closed_mm = [1839, 530, 940];
-gen6_drive_acceleration_g = 25.0;
-gen6_drive_bore_mm = 15.805;
-gen6_drive_commanded_force_N = 981.0;
-gen6_drive_cradle_contact_lever_mm = 170.25;
-gen6_drive_cradle_preload_N_per_contact = 201.7;
-gen6_drive_exit_velocity_m_s = 30.54;
-gen6_drive_exit_velocity_m_s_at_friction_allowance = 29.01;
-gen6_drive_exit_velocity_m_s_zero_friction = 30.54;
-gen6_drive_piston_area_mm2 = 196.2;
-gen6_drive_stroke_mm = 2180.0;
-gen6_drive_tube_wall_mm = 1.0;
-gen6_store_chamber_volume_l = 2.0;
-gen6_store_charge_pressure_bar = 50.0;
-gen6_store_fill_orifice_mm = 1.0;
-gen6_store_first_fill_s = 4.14;
-gen6_store_reservoir_volume_conduction_l = 8.95;
-gen6_store_reservoir_volume_isothermal_l = 8.25;
-gen6_store_reservoir_volume_l = 9.55;
-gen6_store_storage_pressure_bar = 200.0;
+legacy_study_drive_acceleration_g = 25.0;
+legacy_study_drive_bore_mm = 15.805;
+legacy_study_drive_commanded_force_N = 981.0;
+legacy_study_drive_cradle_contact_lever_mm = 170.25;
+legacy_study_drive_cradle_preload_N_per_contact = 201.7;
+legacy_study_drive_exit_velocity_m_s = 30.54;
+legacy_study_drive_exit_velocity_m_s_at_friction_allowance = 29.01;
+legacy_study_drive_exit_velocity_m_s_zero_friction = 30.54;
+legacy_study_drive_piston_area_mm2 = 196.2;
+legacy_study_drive_stroke_mm = 2180.0;
+legacy_study_drive_tube_wall_mm = 1.0;
+legacy_study_store_chamber_volume_l = 2.0;
+legacy_study_store_charge_pressure_bar = 50.0;
+legacy_study_store_fill_orifice_mm = 1.0;
+legacy_study_store_first_fill_s = 4.14;
+legacy_study_store_reservoir_volume_conduction_l = 8.95;
+legacy_study_store_reservoir_volume_isothermal_l = 8.25;
+legacy_study_store_reservoir_volume_l = 9.55;
+legacy_study_store_storage_pressure_bar = 200.0;
 interface_espa_bolt_circle_diameter = 400;
 interface_espa_bolt_hole_count = 24;
 interface_espa_bolt_hole_diameter = 9;

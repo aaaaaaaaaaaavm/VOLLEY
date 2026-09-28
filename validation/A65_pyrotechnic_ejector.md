@@ -10,12 +10,12 @@ Verify with `git show --stat <this commit> -- analysis/pyro_ejector.py`, which m
 **[A53](A53_backup_ejector.md) failed on energy and nothing else.** Seven of its eight bands passed.
 Band 7 failed because a spring sized for a clean departure stores **4.5 J**, and pushing the payload
 the length of a sealed tube against [A41](A41_precharged_chamber.md)'s friction allowance costs
-181.8 J at 2.18 m and 667.2 J at [ADR-034](../docs/adr/034-gen6-long-stroke-design-point.md)'s
+181.8 J at 2.18 m and 667.2 J at [ADR-034](../docs/adr/034-legacy_study-long-stroke-design-point.md)'s
 8.0 m, a 148x shortfall.
 
 [P81](../OPEN_PROBLEMS.md) carries the consequence, and it is the most expensive open entry in
-the record: [A47](A47_gen6_fmea.md) priced a per-cell ejector at +2.27 satellites delivered at
-*r* = 0.99, against +0.37 for the entire Gen5 to Gen6 architecture change, six times more,
+the record: [A47](A47_LEGACY_STUDY_fmea.md) priced a per-cell ejector at +2.27 satellites delivered at
+*r* = 0.99, against +0.37 for the entire Gen5 to historical study architecture change, six times more,
 because a mechanism in every cell makes the drive satellite-forfeiting instead of
 manifest-forfeiting, which is the only move that touches what E30 actually says.
 
@@ -56,7 +56,7 @@ the charge then expands adiabatically along the stroke, the same closed expansio
   only free variable once the charge is chosen.
 - V₀ is therefore solved, not guessed: it is the smallest plenum that holds the peak under the
   payload's acceleration cap.
-- The cap used is A37's 25 g payload limit, not Gen6's commanded 11.36 g. A backup ejector is an
+- The cap used is A37's 25 g payload limit, not historical study's commanded 11.36 g. A backup ejector is an
   off-nominal event. The payload must survive it; it does not have to enjoy it.
 
 Zonal cooling is the model's weakest link and is declared as such. Treating the sink as reaching
@@ -84,9 +84,9 @@ Declared before the script. Not to be edited after the run.
 |---|---|---|
 | **1** | The run reproduces the register's own arithmetic: friction work over the 8.0 m stroke at A41's allowance is **667.2 J**, and a 1.5 m/s spring stores **4.5 J**, within 1 % of both | This run is not the same model as A53 and nothing below is comparable to it |
 | **2** | At the **bottom** of the published class — **0.5 mol**, cooled to the tube ceiling — expansion work over the 8.0 m stroke **exceeds 667.2 J** | The smallest device in the class does not do the one thing the device is for. **This is A53 band 7, re-asked** |
-| **3** | The plenum the 25 g cap requires, at the bottom of the class, is **≤ 2.0 L** — no larger than the chamber `gen6_store` already carries | The backup needs a bigger pressure vessel than the drive it backs up |
+| **3** | The plenum the 25 g cap requires, at the bottom of the class, is **≤ 2.0 L** — no larger than the chamber `LEGACY_STUDY_store` already carries | The backup needs a bigger pressure vessel than the drive it backs up |
 | **4** | Per-cell mass — generant, plenum vessel, heat sink and a declared housing allowance — is **≤ 0.25 kg** | A53's own band 1 threshold, unchanged, so the two runs are directly comparable |
-| **5** | Twelve of them keep added mass per satellite **≤ 2.0 kg**, against A56's **3.1216 kg** store and A37's 11.452976 kg base | It re-crosses the one kill-criterion numerator Gen6 currently passes — **which is exactly how A53's tube-clearing variant died, at 2.129 kg** |
+| **5** | Twelve of them keep added mass per satellite **≤ 2.0 kg**, against A56's **3.1216 kg** store and A37's 11.452976 kg base | It re-crosses the one kill-criterion numerator historical study currently passes — **which is exactly how A53's tube-clearing variant died, at 2.129 kg** |
 | **6** | The gas **entering the tube** is at or below **ADR-035's 473 K ceiling**, with the sink that achieves it costed inside band 4 | The device destroys the tube it is clearing, and ADR-035's falsifier fires |
 | **7** | Exit velocity firing alone, **after** the 667.2 J of friction, is **≥ 1.0 m/s** | It clears the tube on paper and not in the tube. A53 band 7's own wording, at the new stroke |
 | **8** | The A47 model re-run **with the device as a shot-scope element that can itself fail** returns **≥ 9.0 satellites** at *r* = 0.99 | The gain is an artefact of giving a new pyrotechnic part infinite reliability. **A53 band 5, unchanged** |
@@ -165,7 +165,7 @@ run knows what to attack.
 
 **Band 4's 0.25 kg is A53's own band 1, inherited unchanged so the two runs compare.** A53 set it
 for a spring, and it is a proxy. **Band 5 is the real constraint** — it is the kill-criterion
-numerator, the one thing Gen6 currently passes and A53's tube-clearing variant re-crossed at
+numerator, the one thing historical study currently passes and A53's tube-clearing variant re-crossed at
 2.129 kg per satellite.
 
 | | Per satellite |
@@ -199,14 +199,14 @@ Exit velocity firing alone, at the smallest charge in the class, is 28.85 m/s. T
 own rated exit velocity is 29.01 m/s.
 
 > That is not a result about a backup ejector. It says a per-cell pyrotechnic charge reproduces
-> the entire Gen6 shot, which would delete the reservoir, the fill valve, the fire valve, the
+> the entire historical study shot, which would delete the reservoir, the fill valve, the fire valve, the
 > chamber and the store, five of the seven shared elements A47 counts, and the store's
 > 3.1216 kg with them.
 >
 > A65 is not that run and does not claim it. It is scoped to the defect P81 names, the sizing
 > here is deliberately a *backup* sizing carried on top of a store that stays, and the mass table
 > above keeps the store in. The larger question is recorded as P91 and belongs to whatever
-> comes after Gen6.
+> comes after historical study.
 
 ### What was not paid for
 

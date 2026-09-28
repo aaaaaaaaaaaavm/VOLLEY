@@ -15,7 +15,7 @@ carries 17 such items and this one carries none.
 
 | | Entry | Prerequisite | Deliverable | Feeds back into |
 |---|---|---|---|---|
-| Seal friction | [P67](../OPEN_PROBLEMS.md) | [`B2_ORDER.md`](B2_ORDER.md), bands 1-14 already declared, including bands 13 and 14 which make the rig measure the seal rather than the assembly | Breakaway and running friction, three units, >=10 pulls each, with the matched-tare difference and its 3σ spread | `gen6_seal.friction_max_N`; decides ADR-036 and whether the trim stage returns |
+| Seal friction | [P67](../OPEN_PROBLEMS.md) | [`B2_ORDER.md`](B2_ORDER.md), bands 1-14 already declared, including bands 13 and 14 which make the rig measure the seal rather than the assembly | Breakaway and running friction, three units, >=10 pulls each, with the matched-tare difference and its 3σ spread | `LEGACY_STUDY_seal.friction_max_N`; decides ADR-036 and whether the trim stage returns |
 | Seal thermal survival | [P88](../OPEN_PROBLEMS.md) | P67 first | Conduction path measured at representative ΔT | A58's 50 K limit |
 | Nothing has been built | [E4](../OPEN_PROBLEMS.md) |, | Any measured quantity at all | Every figure in the repository is a model output until this moves |
 | Bore straightness, roundness, cylindricity | P103 / A69 | An 8 m tube exists | As-built centreline over 8 m | A69's declared straightness input, currently a bracket |
@@ -47,7 +47,7 @@ still Gen5's.
 | Stage propellant reserve, Isp, restart count and constraints | [E5](../OPEN_PROBLEMS.md) | Not public. One conversation replaces a parametric sweep |
 | Host control authority | [P94](../OPEN_PROBLEMS.md) | A13 band 5 passed on an authority E5 says does not exist |
 | A real host reaction wheel, or a host that needs none | [P99](../OPEN_PROBLEMS.md) | One shot's angular momentum exceeds the only wheel ever named |
-| What a provider will actually credit against the stage | [P68](../OPEN_PROBLEMS.md) | 58.6 % of the Gen6 mass case rests on it |
+| What a provider will actually credit against the stage | [P68](../OPEN_PROBLEMS.md) | 58.6 % of the historical study mass case rests on it |
 | Launch-interface compliance position | [E31](../OPEN_PROBLEMS.md) |, |
 | Mechanical interface, envelope, mounting |, | Build package §7, `HOST_DEPENDENT` |
 

@@ -9,8 +9,8 @@
 <text x="98" y="302" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="21" font-weight="650" text-anchor="start">controlled orbital state</text>
 <line x1="402" y1="284" x2="444" y2="284" stroke="#3f718c" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="454" y="218" width="326" height="132" rx="18" fill="#0c1d2a" stroke="#38d6e8"/>
-<text x="480" y="262" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="700" text-anchor="start">CELLS</text>
-<text x="480" y="302" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="21" font-weight="650" text-anchor="start">independent retention</text>
+<text x="480" y="262" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="700" text-anchor="start">LOAD</text>
+<text x="480" y="302" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="21" font-weight="650" text-anchor="start">one sequential path sought</text>
 <line x1="784" y1="284" x2="826" y2="284" stroke="#3f718c" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="836" y="218" width="326" height="132" rx="18" fill="#0c1d2a" stroke="#ffb454"/>
 <text x="862" y="262" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="700" text-anchor="start">COMMAND</text>
@@ -30,15 +30,15 @@
 <text x="102" y="627" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
 <text x="130" y="627" fill="#8fa7ba" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">structural FEA · CFD · control design · second CAD implementation</text>
 <rect x="816" y="400" width="708" height="278" rx="18" fill="#0c1d2a" stroke="#ffb454"/>
-<text x="846" y="448" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="700" text-anchor="start">GEN6 · CLEAN-SHEET REFERENCE</text>
+<text x="846" y="448" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="700" text-anchor="start">NEXT DESIGN · NOT SELECTED</text>
 <text x="846" y="498" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="874" y="498" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">independent retained cells · short guided pusher</text>
+<text x="874" y="498" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">shared reusable launcher and feeder are design goals</text>
 <text x="846" y="541" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="874" y="541" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">motor-charged mechanical accumulator · local catcher</text>
+<text x="874" y="541" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">motor-charged cell bank is a withdrawn comparator</text>
 <text x="846" y="584" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="874" y="584" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">S4 point: 4.569852 m/s · 41.77 J · 106.5 mm at 10 g</text>
+<text x="874" y="584" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">S4 two-payload speed does not set a product maximum</text>
 <text x="846" y="627" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="874" y="627" fill="#8fa7ba" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">P92 open · installed mass, release dynamics and provider interfaces remain open</text>
+<text x="874" y="627" fill="#8fa7ba" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">P92 open · full manifest, installed mass and provider interface unproven</text>
 <rect x="72" y="728" width="448" height="98" rx="18" fill="#091720" stroke="#38d6e8"/>
 <text x="100" y="766" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700" text-anchor="start">DECLARED RECORD</text>
 <text x="100" y="802" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="650" text-anchor="start">78 run sheets · 73 analyses</text>

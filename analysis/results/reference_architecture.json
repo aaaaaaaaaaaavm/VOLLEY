@@ -176,9 +176,9 @@
   "payload_arrangements": [
     {
       "blocked_path": "one cell; unrelated cells remain mechanically retained and available",
-      "disposition": "REFERENCE",
+      "disposition": "WITHDRAWN_COMPARATOR",
       "name": "independent retained cells",
-      "reason": "best mechanical fault isolation without requiring a shared payload path",
+      "reason": "conditional mechanical jam isolation; reliability, installed burden and mission benefit unproven",
       "shared_common_modes": "power, command and host services remain shared unless banked"
     },
     {
@@ -190,12 +190,13 @@
     },
     {
       "blocked_path": "can strand all downstream payloads",
-      "disposition": "COMPARATOR",
+      "disposition": "REOPENED",
       "name": "shared magazine/path",
-      "reason": "mass efficiency is unproven and a single path recreates manifest coupling",
+      "reason": "common blockage consequence needs probability and mitigation study; shared installed burden may be lower",
       "shared_common_modes": "path, indexing, power and command"
     }
   ],
+  "programme_disposition": "withdrawn 2026-09-28; one reusable launch path and a feeder are controlling objectives; this file preserves a bounded comparator calculation",
   "reference": {
     "arrangement": "independent retained cells",
     "functional_chain": [
@@ -227,7 +228,7 @@
   },
   "release_concepts": [
     {
-      "disposition": "REFERENCE",
+      "disposition": "WITHDRAWN_COMPARATOR",
       "eight_metre_dependency": false,
       "energy_control": "pre-release accumulator preload/position",
       "independent_cell_compatible": true,
@@ -237,7 +238,7 @@
       "payload_modification": false,
       "peak_power": "release power comes from locally stored mechanical energy; recharge can be slow",
       "pusher_catch_concept": "required local catcher/retainer after payload clears",
-      "reason": "passes concept-level hard screens while avoiding the long guide, gas seal/store and full release-power bus demand"
+      "reason": "low-speed comparator only; lacks shared reusable launch path and proven speed authority"
     },
     {
       "disposition": "BACKUP",
@@ -258,7 +259,7 @@
       "energy_control": "charge pressure/mass and valve timing",
       "independent_cell_compatible": true,
       "installed_mass_state": "UNKNOWN",
-      "known_failure_evidence": "existing Gen6 exposes seal, contact and gas-system uncertainties; compact geometry is not analysed",
+      "known_failure_evidence": "existing LegacyStudy exposes seal, contact and gas-system uncertainties; compact geometry is not analysed",
       "name": "compact gas pusher",
       "payload_modification": false,
       "peak_power": "stored pneumatic energy supplies the release pulse",
@@ -354,6 +355,6 @@
     "s4_merge_commit": "2ae459cadcf56f752e0f0b97bf962b25efb342a2",
     "s4_report_path": "docs/MANIFEST_TIMING.md"
   },
-  "status": "REFERENCE_SELECTED_P92_OPEN",
-  "study": "P92 clean-sheet Gen6 reference-architecture screen"
+  "status": "FORMER_REFERENCE_WITHDRAWN_P92_OPEN",
+  "study": "P92 clean-sheet LegacyStudy reference-architecture screen"
 }

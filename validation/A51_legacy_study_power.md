@@ -1,18 +1,18 @@
-# A51, what Gen6 actually costs in power, and what efficiency means for a gas machine
+# A51, what historical study actually costs in power, and what efficiency means for a gas machine
 
-**Bands declared 2026-08-16, before `analysis/gen6_power.py` existed.**
-Verify with `git show --stat <this commit> -- analysis/gen6_power.py`, which must return nothing.
+**Bands declared 2026-08-16, before `analysis/LEGACY_STUDY_power.py` existed.**
+Verify with `git show --stat <this commit> -- analysis/LEGACY_STUDY_power.py`, which must return nothing.
 
 ---
 
 ## Why this run exists
 
-Gen6 has no efficiency figure at all. Gen5's 18.5 % electrical-to-payload has no Gen6
+historical study has no efficiency figure at all. Gen5's 18.5 % electrical-to-payload has no historical study
 equivalent anywhere in the repository, because the energy arrives as compressed gas rather than as
 current, and nobody has said what the corresponding measure is.
 
-And the power figure Gen6 does carry describes a different machine.
-[ADR-032](../docs/adr/032-gen6-stage-integrated-gas-store.md) states charging at 25-131 W,
+And the power figure historical study does carry describes a different machine.
+[ADR-032](../docs/adr/032-legacy_study-stage-integrated-gas-store.md) states charging at 25-131 W,
 "which is solar". That number is [A37](A37_host_integrated.md)'s `charge_W_60s`, defined in
 `analysis/host_integrated.py` as:
 
@@ -20,9 +20,9 @@ And the power figure Gen6 does carry describes a different machine.
 charge_W_60s = e / 60.0        # e is the SPRING option's shot energy
 ```
 
-It is the power needed to wind a spring over a sixty-second indexing window. Gen6 has no
+It is the power needed to wind a spring over a sixty-second indexing window. historical study has no
 spring. Its reservoir is filled on the ground to 200 bar, and nothing in the architecture
-recompresses gas on orbit. The figure has been quoted as Gen6's ever since, including four times
+recompresses gas on orbit. The figure has been quoted as historical study's ever since, including four times
 on 2026-08-16 in ADR-033, `GENERATIONS.md`, `LINEAGE.md` and the front page.
 
 ## What this run has to decide before it can compute anything
@@ -64,7 +64,7 @@ Declared before the script. Not to be edited after the run.
    *nRT·ln(200)*, order 600 kJ for the reservoir's gas mass, against twelve shots delivering
    about **22 kJ** of payload energy. **That is a few per cent, and it may fail the band.**
 3. **Band 6 passes comfortably**, since a 2 L charge at 50 bar is 0.112 kg delivering 1864.8 J.
-4. **Band 7 will find the number wrong rather than merely stale**, and the correction is that Gen6
+4. **Band 7 will find the number wrong rather than merely stale**, and the correction is that historical study
    asks the host for almost nothing, which is a better claim than the one being made.
 
 ## Result
@@ -85,14 +85,14 @@ the band was measuring the wrong ratio.**
 
 ### Band 7 first, because it is the reason this run exists
 
-ADR-032 states Gen6's charging as "25 to 131 W, which is solar". The figure is not Gen6's.
+ADR-032 states historical study's charging as "25 to 131 W, which is solar". The figure is not historical study's.
 
 It is `analysis/host_integrated.py`'s `charge_W_60s = e / 60.0`, where *e* is the spring
-option's shot energy, the power to wind a spring over a sixty-second indexing window. Gen6 has
+option's shot energy, the power to wind a spring over a sixty-second indexing window. historical study has
 no spring, and its reservoir is filled on the ground to 200 bar. Nothing in the architecture
 recompresses gas on orbit.
 
-What Gen6 actually asks the host for:
+What historical study actually asks the host for:
 
 | | |
 |---|---:|

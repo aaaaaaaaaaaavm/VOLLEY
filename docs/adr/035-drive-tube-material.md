@@ -30,7 +30,7 @@ decisively.
 ## The functional requirement nobody had stated
 
 The tube is not primarily a pressure vessel or a beam. It is a sliding seal bore, and
-`cad/build_gen6.py` said so in its own docstring before any of these runs: the 1.0 mm wall *"is set
+`cad/build_legacy_study.py` said so in its own docstring before any of these runs: the 1.0 mm wall *"is set
 by handling and by carrying A38's 201.7 N cradle preload."*
 
 So the material question is really a surface question, hardness and galling resistance against

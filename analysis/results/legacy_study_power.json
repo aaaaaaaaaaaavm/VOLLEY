@@ -46,7 +46,7 @@
     "expansion_pct": 18.648
   },
   "gen5_electrical_to_payload_pct": 18.5,
-  "traced_25_131_W": "A37 host_integrated.py: charge_W_60s = e / 60.0, where e is the SPRING option's shot energy. It is the power to wind a spring over a sixty-second indexing window. Gen6 has no spring and its reservoir is ground-filled, so the figure does not apply to this architecture at all.",
+  "traced_25_131_W": "A37 host_integrated.py: charge_W_60s = e / 60.0, where e is the SPRING option's shot energy. It is the power to wind a spring over a sixty-second indexing window. LegacyStudy has no spring and its reservoir is ground-filled, so the figure does not apply to this architecture at all.",
   "bands": [
     {
       "n": "1",

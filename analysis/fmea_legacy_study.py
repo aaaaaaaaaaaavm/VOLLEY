@@ -1,5 +1,5 @@
 """
-VOLLEY | Gen6's failure structure, scored on Gen5's basis.
+VOLLEY | LegacyStudy's failure structure, scored on Gen5's basis.
 
 WHY THIS EXISTS
 ---------------
@@ -7,16 +7,16 @@ E30, live since 2026-08-10: a spring dispenser is twelve independent one-shot me
 parallel and one failure costs one satellite, where VOLLEY is one mechanism in series with
 itself cycled twelve times. docs/FMEA.md answered that for Gen5 -- nine of thirteen elements
 forfeit the remaining manifest, r >= 0.99326 to match a spring on delivered life. It contains
-no mention of Gen6. The architecture changed on 2026-08-14 and the failure analysis did not.
+no mention of LegacyStudy. The architecture changed on 2026-08-14 and the failure analysis did not.
 
 THE MODEL IS IMPORTED, NOT REWRITTEN
 ------------------------------------
 fmea.campaign() and fmea.required_element_r() are used unchanged, with fmea.ELEMENTS
-monkey-patched for the Gen6 list. Gen5 and Gen6 are therefore scored by identical arithmetic
+monkey-patched for the LegacyStudy list. Gen5 and LegacyStudy are therefore scored by identical arithmetic
 and the only thing that differs is what is in the machine. A second model would make the
 comparison meaningless.
 
-Bands declared in validation/A47_gen6_fmea.md at HEAD, BEFORE this file existed.
+Bands declared in validation/A47_legacy_study_fmea.md at HEAD, BEFORE this file existed.
 
 Provenance: model output. No common-cause failures, elements independent, no wear-out, and one
 reliability shared across elements -- the same assumptions fmea.py already makes, kept so the
@@ -47,8 +47,8 @@ FATE = {
     "Individual release event":        ("replaced", "the cradle, which does not exist"),
 }
 
-# Gen6's list. Shared elements forfeit the remaining manifest exactly as Gen5's did.
-ELEMENTS_GEN6 = [
+# LegacyStudy's list. Shared elements forfeit the remaining manifest exactly as Gen5's did.
+ELEMENTS_LEGACY_STUDY = [
     ("Gas reservoir", "shared", 12, "all remaining",
      "One 9.55 L bottle feeds twelve shots. A leak is unrecoverable and A39 recorded gas as "
      "the store that 'leaks; needs a seal that holds from integration to the last shot'"),
@@ -63,7 +63,7 @@ ELEMENTS_GEN6 = [
     ("Avionics and shot sequencer", "shared", 12, "all remaining",
      "Carried across from Gen5 unchanged"),
     ("Host stage keep-alive", "shared", 12, "all remaining",
-     "NEW IN GEN6 AND NOT IN GEN5. The machine now depends on a vehicle somebody else owns "
+     "NEW IN LEGACY_STUDY AND NOT IN GEN5. The machine now depends on a vehicle somebody else owns "
      "staying alive past passivation. No launch provider has agreed to it"),
     ("Launch lock release", "shared", 1, "all", "One-shot, unchanged from Gen5"),
     ("Cassette follower drive", "cassette", 6, "six", "Magazine unchanged"),
@@ -74,8 +74,8 @@ ELEMENTS_GEN6 = [
 ]
 
 # Band 8: a small spring per cell, guaranteeing clearance if the drive is dead.
-ELEMENTS_GEN6_BACKUP = [
-    (n, s, c, cost, note) for (n, s, c, cost, note) in ELEMENTS_GEN6
+ELEMENTS_LEGACY_STUDY_BACKUP = [
+    (n, s, c, cost, note) for (n, s, c, cost, note) in ELEMENTS_LEGACY_STUDY
     if not (s == "shared" and n in ("Gas reservoir", "Fill valve", "Fire valve",
                                     "Piston and seals", "Chamber"))
 ] + [("Drive, gas or backup ejector", "shot", 1, "one",
@@ -102,13 +102,13 @@ def score(elements):
 
 def main():
     gen5 = score(fmea.ELEMENTS)
-    gen6 = score(ELEMENTS_GEN6)
-    backup = score(ELEMENTS_GEN6_BACKUP)
+    legacy_study = score(ELEMENTS_LEGACY_STUDY)
+    backup = score(ELEMENTS_LEGACY_STUDY_BACKUP)
 
     print(f"{'':28s} {'elements':>9s} {'shared':>7s} {'required r':>11s} "
           f"{'delivered @ r=0.99':>19s}")
-    for name, s in (("Gen5, as published", gen5), ("Gen6", gen6),
-                    ("Gen6 + per-cell ejector", backup)):
+    for name, s in (("Gen5, as published", gen5), ("LegacyStudy", legacy_study),
+                    ("LegacyStudy + per-cell ejector", backup)):
         print(f"{name:28s} {s['n_elements']:9d} {s['n_shared']:7d} "
               f"{s['required_r']:11.5f} {s['expected_at_r99']:19.3f}")
     print(f"{'a spring dispenser':28s} {'12':>9s} {0:7d} {'--':>11s} "
@@ -120,8 +120,8 @@ def main():
         print(f"  {fate:9s}  {name:34s} {why}")
     missing = [e[0] for e in fmea.ELEMENTS if e[0] not in FATE]
 
-    print("\nGen6 shared elements -- each forfeits the remaining manifest:")
-    for n in gen6['shared_names']:
+    print("\nLegacyStudy shared elements -- each forfeits the remaining manifest:")
+    for n in legacy_study['shared_names']:
         print(f"  {n}")
 
     bands = [
@@ -129,22 +129,22 @@ def main():
          f"{gen5['required_r']:.5f}", abs(gen5['required_r'] - 0.99326) <= 1e-4),
         ('2', 'every Gen5 element accounted for as deleted, retained or replaced',
          f"{len(missing)} unaccounted", not missing),
-        ('3', 'Gen6 has fewer manifest-forfeiting shared elements than Gen5',
-         f"{gen6['n_shared']} against {gen5['n_shared']}", gen6['n_shared'] < gen5['n_shared']),
-        ('4', "Gen6's required per-element reliability is lower than Gen5's",
-         f"{gen6['required_r']:.5f} against {gen5['required_r']:.5f}",
-         gen6['required_r'] < gen5['required_r']),
-        ('5', 'expected delivery at r = 0.99 is higher for Gen6',
-         f"{gen6['expected_at_r99']:.3f} against {gen5['expected_at_r99']:.3f}",
-         gen6['expected_at_r99'] > gen5['expected_at_r99']),
+        ('3', 'LegacyStudy has fewer manifest-forfeiting shared elements than Gen5',
+         f"{legacy_study['n_shared']} against {gen5['n_shared']}", legacy_study['n_shared'] < gen5['n_shared']),
+        ('4', "LegacyStudy's required per-element reliability is lower than Gen5's",
+         f"{legacy_study['required_r']:.5f} against {gen5['required_r']:.5f}",
+         legacy_study['required_r'] < gen5['required_r']),
+        ('5', 'expected delivery at r = 0.99 is higher for LegacyStudy',
+         f"{legacy_study['expected_at_r99']:.3f} against {gen5['expected_at_r99']:.3f}",
+         legacy_study['expected_at_r99'] > gen5['expected_at_r99']),
         ('6', "neither architecture reaches a spring's zero shared elements",
-         f"Gen5 {gen5['n_shared']}, Gen6 {gen6['n_shared']}",
-         gen5['n_shared'] > 0 and gen6['n_shared'] > 0),
+         f"Gen5 {gen5['n_shared']}, LegacyStudy {legacy_study['n_shared']}",
+         gen5['n_shared'] > 0 and legacy_study['n_shared'] > 0),
         ('7', 'the gas store is counted as manifest-forfeiting',
-         'yes' if 'Gas reservoir' in gen6['shared_names'] else 'NO',
-         'Gas reservoir' in gen6['shared_names']),
+         'yes' if 'Gas reservoir' in legacy_study['shared_names'] else 'NO',
+         'Gas reservoir' in legacy_study['shared_names']),
         ('8', 'the per-cell backup ejector is evaluated and its effect reported',
-         f"{backup['expected_at_r99']:.3f} against Gen6's {gen6['expected_at_r99']:.3f} "
+         f"{backup['expected_at_r99']:.3f} against LegacyStudy's {legacy_study['expected_at_r99']:.3f} "
          f"at r = 0.99", True),
     ]
     print()
@@ -156,10 +156,10 @@ def main():
                     'No common-cause failures, elements independent, no wear-out, one '
                     'reliability shared across elements. Same assumptions as fmea.py, kept '
                     'for comparability rather than because they are right.',
-               target_satellites=TARGET, gen5=gen5, gen6=gen6, gen6_with_backup=backup,
+               target_satellites=TARGET, gen5=gen5, legacy_study=legacy_study, legacy_study_with_backup=backup,
                gen5_element_fates={k: dict(fate=v[0], why=v[1]) for k, v in FATE.items()},
                bands=[dict(n=n, band=t, got=g, passed=bool(o)) for n, t, g, o in bands])
-    with open(os.path.join(RESULTS, 'fmea_gen6.json'), 'w') as f:
+    with open(os.path.join(RESULTS, 'fmea_legacy_study.json'), 'w') as f:
         json.dump(out, f, indent=2)
         f.write('\n')
 

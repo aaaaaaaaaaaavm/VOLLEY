@@ -275,9 +275,9 @@ Fusion document: `EMOCD_Enclosure`
 Status: `authoritative_geometry`
 
 
-## gen6 drive
+## historical study drive
 
-Fusion document: `Built by cad/build_gen6.py. ADR-032: the payload is accelerated directly by cold gas along a rail the host stage provides. There is no mover, no stator, no brake and no return stroke. ADR-034: the stroke is the host stage's whole usable acceleration length, and the charge pressure fell to hold the exit velocity while the peak acceleration halved.`
+Fusion document: `Built by cad/build_legacy_study.py. ADR-032: the payload is accelerated directly by cold gas along a rail the host stage provides. There is no mover, no stator, no brake and no return stroke. ADR-034: the stroke is the host stage's whole usable acceleration length, and the charge pressure fell to hold the exit velocity while the peak acceleration halved.`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -301,9 +301,9 @@ Fusion document: `Built by cad/build_gen6.py. ADR-032: the payload is accelerate
 | `piston_material` | aluminium 6061-T6, matched to the tube | |
 
 
-## gen6 store
+## historical study store
 
-Fusion document: `Built by cad/build_gen6.py.`
+Fusion document: `Built by cad/build_legacy_study.py.`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -317,9 +317,9 @@ Fusion document: `Built by cad/build_gen6.py.`
 | `store_mass_kg` | 3.1216 | kg |
 
 
-## gen6 seal
+## historical study seal
 
-Fusion document: `Built by cad/build_gen6.py. ADR-036: the seal is SPECIFIED, not allowed. A41 declared a tolerable friction and every figure downstream descended from that ceiling; A61 asked instead what the loosest seal is that the design can survive, and the THERMAL case sets it -- the seal must survive its own friction heating before it must satisfy any control requirement.`
+Fusion document: `Built by cad/build_legacy_study.py. ADR-036: the seal is SPECIFIED, not allowed. A41 declared a tolerable friction and every figure downstream descended from that ceiling; A61 asked instead what the loosest seal is that the design can survive, and the THERMAL case sets it -- the seal must survive its own friction heating before it must satisfy any control requirement.`
 
 | Parameter | Value | Units |
 |---|---:|---|
@@ -332,9 +332,9 @@ Fusion document: `Built by cad/build_gen6.py. ADR-036: the seal is SPECIFIED, no
 | `seal_temperature_rise_limit_K` | 50.0 | K |
 
 
-## gen6 trim
+## historical study trim
 
-Fusion document: `Built by cad/build_gen6.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.`
+Fusion document: `Built by cad/build_legacy_study.py. ADR-033: a short stator at the muzzle end, energised after the gas has finished, correcting the velocity the gas actually produced. It never throws the payload.`
 
 | Parameter | Value | Units |
 |---|---:|---|

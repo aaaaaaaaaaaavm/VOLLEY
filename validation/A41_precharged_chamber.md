@@ -65,7 +65,7 @@ Declared before the script. Not to be edited after the run.
 | **2** | The selected point delivers **≥ 30 m/s** at a peak acceleration **≤ 25 g** | The architecture does not reach A37's window |
 | **3** | Total store — chamber, reservoir, gas and A39's hardware allowance — **≤ 12.55 kg** | It does not fit the kill-criterion budget, and A37 band 5 fails with it |
 | **4** | The reservoir sized for **twelve** shots keeps band 3 | **The gas budget is what kills it**, exactly as predicted above, and a flat force profile is unaffordable |
-| **5** | Charge pressure produces exit velocity **monotonically** across at least **20 → 30 m/s** | Velocity cannot be commanded, and Gen6 is a fixed-velocity spring |
+| **5** | Charge pressure produces exit velocity **monotonically** across at least **20 → 30 m/s** | Velocity cannot be commanded, and historical study is a fixed-velocity spring |
 | **6** | A **±1 %** charge-pressure error gives **≤ 1 %** velocity error | The precision argument for moving control to the charge stroke does not hold |
 | **7** | Permissible leak rate for ≤ 1 % droop over 1200 s is **≥ 10⁻⁴ mbar·L/s** | My stated prediction was right after all and the seal is the constraint |
 | **8** | Friction budget for ≤ 5 % velocity loss is **≥ 20 N** | The piston seal is tighter than a 15.8 mm bore can give |

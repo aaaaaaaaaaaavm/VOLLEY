@@ -43,7 +43,7 @@ accuracy requirement.
 | **4** | **Energy closes to 1 %** at the converged point | Energy is being created or destroyed |
 | **5** | **Two formulations agree within 25 %** — the [A68](A68_contact_law.md) laws, at the same converged settings | Model form still dominates and no physical statement is available |
 | **6** | **Contact impulse is reported and the instantaneous peak force is not quoted as physical** | Report-only, and it is the honesty band |
-| **7** | **Exit angular rate at the nominal point ≤ 2.0 °/s** | Gen6 misses tip-off on a converged solution — **and unlike A67, that would be a physical statement** |
+| **7** | **Exit angular rate at the nominal point ≤ 2.0 °/s** | historical study misses tip-off on a converged solution — **and unlike A67, that would be a physical statement** |
 | **8** | **Land separation swept only inside the geometrically admissible region** — A70's map, so ≤ 200 mm at 1 K | The sweep includes configurations whose piston cannot pass the bore |
 
 ## What this run does not do

@@ -38,8 +38,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #
 # REGENERATORS. Commit time is a proxy for currency and it is a lossy one: a source can change
 # in a way the artifact does not depend on, and the artifact then stays byte-identical and
-# permanently "stale". That is not hypothetical -- cad/parameters.json gained gen6_drive and
-# gen6_store on 2026-08-14, and Gen5's STEP was reported stale against it while regenerating
+# permanently "stale". That is not hypothetical -- cad/parameters.json gained legacy_study_drive and
+# legacy_study_store on 2026-08-14, and Gen5's STEP was reported stale against it while regenerating
 # BYTE-IDENTICALLY. A false positive in a check is a defect in the check.
 #
 # Where an artifact can be rebuilt cheaply and deterministically, name the command. A pair that
@@ -47,7 +47,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # timestamp was lying. Artifacts with no regenerator fall back to the time comparison.
 REGENERATORS = {
     "cad/step/gen5/VOLLEY_Track_Gen5.step": [sys.executable, "cad/build_gen5.py"],
-    "cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step": [sys.executable, "cad/build_gen6.py"],
+    "cad/step/legacy_study/VOLLEY_Drive_Tube_LegacyStudy.step": [sys.executable, "cad/build_legacy_study.py"],
 }
 
 PAIRS = [
@@ -74,10 +74,10 @@ PAIRS = [
     # enough: they are all written by the same call, so any of them being older than the
     # parameter file means the whole generation is.
     ("cad/step/gen5/VOLLEY_Track_Gen5.step", ["cad/parameters.json", "cad/build_gen5.py"]),
-    # Gen6 is built the same way, from the same parameter file, by cad/build_gen6.py.
+    # LegacyStudy is built the same way, from the same parameter file, by cad/build_legacy_study.py.
     # Guarding one STEP guards the set: they are written in a single pass or not at all.
-    ("cad/step/gen6/VOLLEY_Drive_Tube_Gen6.step",
-     ["cad/parameters.json", "cad/build_gen6.py"]),
+    ("cad/step/legacy_study/VOLLEY_Drive_Tube_LegacyStudy.step",
+     ["cad/parameters.json", "cad/build_legacy_study.py"]),
     ("docs/BASELINE.md", ["analysis/results/motor_results.json",
                           "analysis/results/sizing.json",
                           "analysis/results/astro_results.json",

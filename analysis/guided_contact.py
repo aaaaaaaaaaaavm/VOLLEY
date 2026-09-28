@@ -3,7 +3,7 @@ VOLLEY | A67: the payload's guided contact state through the 8 m bore.
 
 WHY THIS EXISTS
 ---------------
-Gen6 has an axial model and no lateral or angular one, so it has an exit SPEED and no exit
+LegacyStudy has an axial model and no lateral or angular one, so it has an exit SPEED and no exit
 ATTITUDE. A34 and A38 model the payload crossing its cradle clearance in the first tens of
 milliseconds and answer that well. Nothing follows it for the remaining eight metres.
 
@@ -54,9 +54,9 @@ import cradle_restitution as cr
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.join(HERE, "results")
 P = json.load(open(os.path.join(os.path.dirname(HERE), "cad", "parameters.json")))
-D = P["groups"]["gen6_drive"]
-S = P["groups"]["gen6_store"]
-SEAL = P["groups"]["gen6_seal"]
+D = P["groups"]["legacy_study_drive"]
+S = P["groups"]["legacy_study_store"]
+SEAL = P["groups"]["legacy_study_seal"]
 
 GAMMA = 1.4                      # diatomic; A41's closed expansion uses the same
 M_BODY = 4.0                     # kg, the 3U reference payload -- A38's M_SAT

@@ -21,7 +21,7 @@
     "expected_at_r99": 6.619761180414527,
     "expected_at_required": 7.9500000000000215
   },
-  "gen6": {
+  "legacy_study": {
     "n_elements": 12,
     "n_shared": 8,
     "shared_names": [
@@ -38,7 +38,7 @@
     "expected_at_r99": 6.9922333708074795,
     "expected_at_required": 7.950000000000004
   },
-  "gen6_with_backup": {
+  "legacy_study_with_backup": {
     "n_elements": 8,
     "n_shared": 3,
     "shared_names": [
@@ -119,26 +119,26 @@
     },
     {
       "n": "3",
-      "band": "Gen6 has fewer manifest-forfeiting shared elements than Gen5",
+      "band": "LegacyStudy has fewer manifest-forfeiting shared elements than Gen5",
       "got": "8 against 9",
       "passed": true
     },
     {
       "n": "4",
-      "band": "Gen6's required per-element reliability is lower than Gen5's",
+      "band": "LegacyStudy's required per-element reliability is lower than Gen5's",
       "got": "0.99252 against 0.99326",
       "passed": true
     },
     {
       "n": "5",
-      "band": "expected delivery at r = 0.99 is higher for Gen6",
+      "band": "expected delivery at r = 0.99 is higher for LegacyStudy",
       "got": "6.992 against 6.620",
       "passed": true
     },
     {
       "n": "6",
       "band": "neither architecture reaches a spring's zero shared elements",
-      "got": "Gen5 9, Gen6 8",
+      "got": "Gen5 9, LegacyStudy 8",
       "passed": true
     },
     {
@@ -150,7 +150,7 @@
     {
       "n": "8",
       "band": "the per-cell backup ejector is evaluated and its effect reported",
-      "got": "9.261 against Gen6's 6.992 at r = 0.99",
+      "got": "9.261 against LegacyStudy's 6.992 at r = 0.99",
       "passed": true
     }
   ]

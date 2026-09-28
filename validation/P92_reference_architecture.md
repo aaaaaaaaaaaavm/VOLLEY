@@ -1,16 +1,19 @@
-# P92: clean-sheet Gen6 reference-architecture screen
+# P92: clean-sheet historical study reference-architecture screen
+
+> **Architecture disposition, 2026-09-28:** The separate motor-charged spring-cell bank is withdrawn as VOLLEY's next architecture. It is retained here only as a dated study. Any selection or current-reference wording below describes the former decision and is superseded. A reusable shared launch path with sequential loading is the open design objective; no speed envelope is validated. See [current status](../docs/NEXT_GENERATION_STATUS.md).
+
 
 Declared 2026-09-16 before `analysis/reference_architecture.py` exists. P92 and P113 remain open.
 
 ## Question
 
-What architecture is worth carrying forward as the **clean-sheet Gen6 reference candidate** after S4, without pretending that a bounded orbital screen has selected flight hardware?
+What architecture is worth carrying forward as the **clean-sheet historical study reference candidate** after S4, without pretending that a bounded orbital screen has selected flight hardware?
 
 The decision is deliberately split in two. First choose a payload arrangement and release-cell concept that is physically compatible with the mission evidence and fault-isolation intent. Then use experiments and installed-system accounting to decide whether it deserves to close P92. A reference candidate is not a qualified design, provider accommodation, or a claim that competing mechanisms are impossible.
 
 ## Frozen inputs and study points
 
-The current S4 result is an input, not a requirement: the best tested BOLLEY/Gen5/existing-Gen6 campaign used a 4.569852 m/s first release for one two-payload benchmark. S4 explicitly does not establish a global optimum, product minimum, or validated speed envelope.
+The current S4 result is an input, not a requirement: the best tested BOLLEY/Gen5/existing-historical study campaign used a 4.569852 m/s first release for one two-payload benchmark. S4 explicitly does not establish a global optimum, product minimum, or validated speed envelope.
 
 Use a 4 kg payload as the reference cell. Evaluate the kinematic duty at 4.569852, 11.8, 16.029 and 29.009 m/s and at constant-acceleration screens of 5 g, 10 g and 25 g. The 25 g value is only a study ceiling; it is not asserted as a universal CubeSat qualification limit. Compute ideal payload energy `0.5*m*v^2`, constant-acceleration stroke `v^2/(2*a)`, acceleration time `v/a`, force `m*a`, average payload power `E/t` and terminal constant-force power `F*v`.
 
@@ -31,7 +34,7 @@ Release concepts:
 1. motor-charged mechanical accumulator with a latched short-stroke pusher;
 2. direct short-stroke electromechanical pusher;
 3. compact gas pusher;
-4. existing long gas guide as the historical Gen6 comparator;
+4. existing long gas guide as the historical gas-guide comparator;
 5. frozen Gen5 electromagnetic LSM as the historical electromagnetic comparator;
 6. BOLLEY as a cooperative payload-interface path, not as evidence for an unmodified-payload VOLLEY cell.
 
@@ -64,8 +67,8 @@ This rule is intended to distinguish a reference candidate for the next calculat
 `analysis/reference_architecture.py` must generate:
 
 - `analysis/results/reference_architecture.json` with all inputs, equations, kinematic duty rows, candidate dispositions and open evidence;
-- `docs/GEN6_REFERENCE_ARCHITECTURE.md` with the decision and its limits;
-- `figures/gen6_reference_cell.svg` showing functional allocation, not invented detailed hardware;
+- `docs/LEGACY_STUDY_REFERENCE_ARCHITECTURE.md` with the decision and its limits;
+- `figures/LEGACY_STUDY_reference_cell.svg` showing functional allocation, not invented detailed hardware;
 - `tests/test_reference_architecture.py` with independent formula checks, hard-screen checks and freshness/corruption checks.
 
 The report must state what would falsify the selected reference candidate. The normal verification path must run a freshness check. No register status, frozen Gen5 baseline, provider compatibility or hardware-readiness claim changes merely because this screen passes.

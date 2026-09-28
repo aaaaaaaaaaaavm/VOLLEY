@@ -12,8 +12,8 @@ The useful mechanisms can still be tested independently in the shared
 
 | BOLLEY result or method | VOLLEY question it may answer | Boundary I preserve |
 |---|---|---|
-| Four-channel force-centroid allocation | Can four pressure quadrants or muzzle channels reduce Gen6 guided-contact tip-off? | VOLLEY's own CG, tube and 2 deg/s bands |
-| Deliberately bounded leakage | Can the flow become an aerostatic centring bearing? | Gen6 gas inventory, axial velocity and fault cases |
+| Four-channel force-centroid allocation | Can four pressure quadrants or muzzle channels reduce historical study guided-contact tip-off? | VOLLEY's own CG, tube and 2 deg/s bands |
+| Deliberately bounded leakage | Can the flow become an aerostatic centring bearing? | historical study gas inventory, axial velocity and fault cases |
 | Wide passive Fluxrelay secondary | Can the suspended muzzle trim avoid moving permanent magnets? | Launcher-owned secondary; spacecraft stays untouched |
 | Fluxframe displaced-parts ledger | Which claimed stage credits replace named structure, thermal paths or guides? | No host credit without an accepted removed part |
 | Full-face low-pressure piston | Can a deployer-owned pusher use more area without modifying the payload? | Pressure member and seal remain launcher hardware |

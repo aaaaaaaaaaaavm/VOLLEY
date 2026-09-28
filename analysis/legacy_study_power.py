@@ -1,17 +1,17 @@
 """
-VOLLEY | What Gen6 actually costs in power, and what efficiency means for a gas machine.
+VOLLEY | What LegacyStudy actually costs in power, and what efficiency means for a gas machine.
 
 WHY THIS EXISTS
 ---------------
-Gen6 has no efficiency figure at all. Gen5's 18.5 % electrical-to-payload has no Gen6
+LegacyStudy has no efficiency figure at all. Gen5's 18.5 % electrical-to-payload has no LegacyStudy
 equivalent anywhere, because the energy arrives as compressed gas rather than as current.
 
-And the power figure Gen6 does carry describes a different machine. ADR-032 states charging at
+And the power figure LegacyStudy does carry describes a different machine. ADR-032 states charging at
 25-131 W, "which is solar". That is A37's charge_W_60s, defined in host_integrated.py as the
 SPRING option's shot energy divided by sixty seconds -- the power to wind a spring over an
-indexing window. Gen6 has no spring, and its reservoir is filled on the ground.
+indexing window. LegacyStudy has no spring, and its reservoir is filled on the ground.
 
-Bands declared in validation/A51_gen6_power.md at HEAD, BEFORE this file existed.
+Bands declared in validation/A51_legacy_study_power.md at HEAD, BEFORE this file existed.
 
 Provenance: model output. Component draws are DECLARED figures for representative parts, named
 below and not sourced from datasheets -- no vendor quotation exists anywhere in this project
@@ -99,7 +99,7 @@ def main():
 
     traced = ("A37 host_integrated.py: charge_W_60s = e / 60.0, where e is the SPRING option's "
               "shot energy. It is the power to wind a spring over a sixty-second indexing "
-              "window. Gen6 has no spring and its reservoir is ground-filled, so the figure "
+              "window. LegacyStudy has no spring and its reservoir is ground-filled, so the figure "
               "does not apply to this architecture at all.")
 
     bands = [
@@ -138,7 +138,7 @@ def main():
                gen5_electrical_to_payload_pct=GEN5_EFFICIENCY_PCT,
                traced_25_131_W=traced,
                bands=[dict(n=n, band=t, got=g, passed=bool(o)) for n, t, g, o in bands])
-    with open(os.path.join(RESULTS, 'gen6_power.json'), 'w') as f:
+    with open(os.path.join(RESULTS, 'legacy_study_power.json'), 'w') as f:
         json.dump(out, f, indent=2)
         f.write('\n')
 

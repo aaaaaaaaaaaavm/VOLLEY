@@ -8,7 +8,7 @@ P83. A48 sized a 39.7 mm stator carrying +-0.323 m/s against A44's 1.113 % dispe
 computed over a 2.18 m stroke. ADR-034 took the stroke to 8.0 m and tripled the friction share
 that owns 93.4 % of that dispersion -- 9.75 % to 28.39 % of shot work, A49 band 6, P78.
 
-P84 is why nobody noticed: gen6_dispersion.py computes w_net = w - friction_N * pc.STROKE, and
+P84 is why nobody noticed: legacy_study_dispersion.py computes w_net = w - friction_N * pc.STROKE, and
 pc.STROKE was still 2.18 m three days after the design point moved. That repair is committed
 before this run.
 
@@ -22,7 +22,7 @@ store nobody has weighed.
 WHAT IS IMPORTED AND WHAT IS ADDED
 ----------------------------------
 The work integral comes from precharged, the variance terms and the Monte-Carlo seed from
-gen6_dispersion, and the trim geometry from trim_stage. Nothing is restated.
+legacy_study_dispersion, and the trim geometry from trim_stage. Nothing is restated.
 
 What is added is the STROKE as an explicit argument, so A44's point and the adopted point can be
 computed by one model, and a sweep of the friction share so the authority requirement is a
@@ -36,7 +36,7 @@ import os
 import random
 
 import precharged as pc
-import gen6_dispersion as gd
+import legacy_study_dispersion as gd
 import trim_stage as ts
 
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')

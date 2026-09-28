@@ -1,8 +1,10 @@
 # Host compatibility: Skyroot and Agnikul reference studies
 
+> **Architecture correction, 2026-09-28:** No VOLLEY release mechanism, loader or speed envelope is selected. Independent spring cells and the long gas guide are historical study configurations. Provider compatibility is open; see [current status](NEXT_GENERATION_STATUS.md).
+
 Updated 2026-09-16. **Neither launcher is established as compatible. No endorsement, provider-supplied interface data or flight allocation is implied.** This document defines questions and decision gates, not approved integration designs.
 
-[Mission sequence](PROGRAMME_EXECUTION.md) · [Current Gen6 reference](GEN6_REFERENCE_ARCHITECTURE.md) · [Host reference cases](HOST_REFERENCE_CASES.md)
+[Mission sequence](PROGRAMME_EXECUTION.md) · [Withdrawn spring-cell study](LEGACY_STUDY_REFERENCE_ARCHITECTURE.md) · [Host reference cases](HOST_REFERENCE_CASES.md)
 
 ## Public evidence, separated from inference
 
@@ -24,9 +26,9 @@ Use the same target states, tolerances, delivery windows, payload classes, manif
 |---|---|
 | Conventional carrier, release timing | All canisters, retention, integration, clearance and achievable state distribution |
 | Host manoeuvres plus conventional carrier | Above plus stage propellant, finite burn control, settling, starts and campaign time |
-| Host plus current VOLLEY reference | Independent retention, accumulator/actuator, latch, pusher/catcher, support, electronics, recharge energy, recoil, shock/tip-off and common-mode services |
+| Host plus independent spring-cell comparator | Retention, accumulator/actuator, latch, pusher/catcher, support, electronics, recharge energy, recoil, shock/tip-off and common-mode services, including spent cells |
 | Host plus banked/shared-path VOLLEY | Same functional boundary, with duplicated/shared hardware and stranded-manifest consequences charged explicitly |
-| Host plus historical gas-Gen6 comparator | Pressure system, valves, seals, guide/support, consumables, contact/tip-off and the full installed host burden |
+| Host plus historical gas-guide study comparator | Pressure system, valves, seals, guide/support, consumables, contact/tip-off and the full installed host burden |
 | Host plus BOLLEY | Above as applicable, plus passive payload cage, attachment, magnetic environment and payload acceptance; no unmodified-payload claim |
 | Payload propulsion | Complete installed and wet propulsion system, guidance, integration and qualification; only where the mission permits it |
 
@@ -51,11 +53,11 @@ Public estimates may bound a study but cannot change a gate to CONFIRMED. A conf
 
 ## Packaging is a design gate, not a render
 
-The current clean-sheet reference removes the historical **8 m dependency** from the assumed packaging basis. At the S4 4.569852 m/s study point, a 4 kg payload has 41.77 J ideal kinetic energy and the 10 g constant-acceleration screen is 106.5 mm. Those numbers are physics screens, not a finished cell envelope. Real stroke must include accumulator/pusher geometry, guidance, catcher travel, retention, structure, sensors and tolerances.
+The withdrawn spring-cell study used a shorter launch path than the historical 8 m gas guide. At the S4 4.569852 m/s study point, a 4 kg payload has 41.77 J ideal kinetic energy and a 10 g illustrative constant-acceleration stroke of 106.5 mm. Those are physics screens, not a complete cell envelope or a qualified payload load. The intended shared loader needs its own geometry and clearance analysis.
 
 The historical approximately 8 m gas guide remains a comparator. Existing [A57](../validation/A57_stage_attitude_packaging.md) exposes end-hardware overrun against that configuration's own assumed length. Do not erase that miss by borrowing a rocket's overall dimensions, and do not transfer it to the compact reference as though the geometries were the same.
 
-For the current reference, compare independent cells, small banks and a shared magazine/path. Each needs its own ascent load path, separation keep-outs, operational alignment, failed-payload handling and mass budget. Count net added host reinforcement, mounts, thermal hardware, harnesses and support equipment once in the installed ledger. Report displaced payload volume/mass capacity separately. Stage credit cannot hide hardware that the host must add.
+Compare the intended shared magazine/path with independent cells, banks and conventional dispensers. Each needs an ascent load path, separation keep-outs, operational alignment, failed-payload handling and complete mass budget. Count net host reinforcement, mounts, thermal hardware, harnesses and support equipment. Report displaced payload capacity and retained spent-cell volume separately. Stage credit cannot hide hardware the host must add.
 
 ## Failure exposure: retain safely, recover deliberately
 
@@ -78,9 +80,9 @@ Compute expected delivered payload count and the distribution of stranded payloa
 1. **S1-S4 complete as bounded studies:** single-departure allocation, sequential energy campaigns, single-payload terminal state and two-payload evolving-host timing/order are published. None is full mission closure.
 2. **Operational uncertainty next:** declare clearing/settling, navigation, pointing, release-speed/tip-off and host-attitude-recovery terms before extending the solver. A precise mechanism cannot remove common host navigation error.
 3. **Installed burden and manifest crossover:** evaluate only manifests that fit the host's mass and volume limits. Include complete installed hardware, displaced capacity, recharge/thermal time and common-mode loss exposure.
-4. **Reference-cell falsification:** test whether force-displacement, latch/pusher/catcher behaviour and tolerances can support the mission-derived release-state budget before detailed CAD.
+4. **Mechanism falsification:** test whether a shared loader and release path can satisfy mission-derived force, travel, fault and release-state budgets before detailed CAD; retain cell tests as comparator evidence.
 5. **Host review:** resolve the interface questions above before any compatibility claim.
-6. **Configuration decision:** retain, modify or reject the current reference based on mission value, installed burden, release evidence and interfaces. The historical gas guide and Gen5 remain in the comparison rather than being erased.
+6. **Configuration decision:** select a mechanism only after mission value, full installed burden, release/feed evidence and provider interfaces are compared. The gas guide and Gen5 remain historical comparisons.
 
 For a temporary propulsion-less constellation, specify mission duration and disposal strategy before calling a lifetime increase beneficial. Longer orbital persistence is not automatically a mission advantage. Large plane changes and arbitrary circular destinations are not free consequences of commanded separation speed.
 

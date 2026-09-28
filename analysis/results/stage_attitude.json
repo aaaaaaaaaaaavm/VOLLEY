@@ -9,7 +9,7 @@
     "usable_m": 8.0,
     "v_exit_zero_friction_m_s": 34.28,
     "lever_arm_m": 0.010654256588592275,
-    "lever_arm_source": "A52 band 4, saturating_offset_mm, read live from gen6_recoil.json -- the published alignment requirement",
+    "lever_arm_source": "A52 band 4, saturating_offset_mm, read live from legacy_study_recoil.json -- the published alignment requirement",
     "lever_arm_inherited_m": 0.166,
     "lever_arm_inherited_note": "A13's Gen5 arm. Used by the first run of this script and 15.6x the requirement above. P100",
     "stage_radius_m": 0.9,
@@ -26,7 +26,7 @@
       "arm_mm": 166.0,
       "per_shot_Nms": 22.7619,
       "campaign_Nms": 273.143,
-      "source": "A13's Gen5 arm, inherited by the first run of this script and not applicable to a Gen6 geometry (P100)"
+      "source": "A13's Gen5 arm, inherited by the first run of this script and not applicable to a LegacyStudy geometry (P100)"
     }
   ],
   "rows": [
@@ -95,7 +95,7 @@
     },
     {
       "band": 4,
-      "question": "Gen6 against Gen5 offset per shot, same host",
+      "question": "LegacyStudy against Gen5 offset per shot, same host",
       "limit": "REPORT, no pass/fail",
       "value": 0.1494,
       "gen5_offset_deg": 0.0751,
@@ -146,8 +146,8 @@
       "what_it_is_not": "This is NOT a finding about any real stage. It is a finding about A52's assumed wheel, and it would change entirely on a real one."
     },
     "band4_direction": {
-      "gen6_over_gen5": 0.1494,
-      "why": "Gen6 moves 2.4x less mass 5.3x further on a longer, more slender body. The displacement wins: the offset per shot is larger, not smaller."
+      "legacy_study_over_gen5": 0.1494,
+      "why": "LegacyStudy moves 2.4x less mass 5.3x further on a longer, more slender body. The displacement wins: the offset per shot is larger, not smaller."
     }
   },
   "software": {
