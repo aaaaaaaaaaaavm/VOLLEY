@@ -5836,9 +5836,9 @@
   ],
   "payload_kg": 4.0,
   "source_sha256": {
-    "analysis/reference_cell_mechanics.py": "62c70ece8e9b117d56c66a69036af4fe8f3d105673b7727aa84c411f8170e9c3",
-    "analysis/results/manifest_timing.json": "f84018cdec6109638d64e0485d5f4d74d932bb8939a4e0ac7002e3f62ece4797",
-    "validation/P92_S2_reference_cell_mechanics.md": "b5aedb4141e259827f33a072b7627a0fe722b6a45ff08d4e2d574e0255e2838b"
+    "analysis/reference_cell_mechanics.py": "ecb342cd807332a541282768d19516bb7054f3cbaf98ed183623c17e58b5fe90",
+    "analysis/results/manifest_timing.json": "95aede0cf81df41bddc5289a4626d091283c4c288d2d1692878c658ac91a2a38",
+    "validation/P92_S2_reference_cell_mechanics.md": "e06c74febcbd39f26ea5b955e41519e160a7ccd626eb68a6a0885ecd5a3f9b3e"
   },
   "speed_m_s": 4.569852054443217,
   "study": "P92-S2",
