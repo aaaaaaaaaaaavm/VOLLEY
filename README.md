@@ -8,7 +8,7 @@ VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3
 
 *Mission concept illustration. No host, launch provider, CubeSat, flight interface or trajectory has been approved for this design.*
 
-**Read first:** [Gen5 freeze readiness](docs/GEN5_FREEZE_READINESS.md) · [Market and spacecraft fit](MARKET_AND_CUSTOMER_FIT.md) · [Gen5 technical closure](docs/GEN5_CLOSURE.md) · [Full baseline](docs/BASELINE.md) · [Evidence provenance](docs/PROVENANCE.md) · [Open problems](OPEN_PROBLEMS.md) · [CAD](cad/README.md) · [Validation](validation/README.md)
+**Read first:** [Computational review report](reports/GEN5_COMPUTATIONAL_REVIEW.pdf) · [FreeCAD/CAD report](cad/GEN5_CAD_REVIEW.pdf) · [Gen5 freeze readiness](docs/GEN5_FREEZE_READINESS.md) · [Market and spacecraft fit](MARKET_AND_CUSTOMER_FIT.md) · [Gen5 technical closure](docs/GEN5_CLOSURE.md) · [Full baseline](docs/BASELINE.md) · [Evidence provenance](docs/PROVENANCE.md) · [Open problems](OPEN_PROBLEMS.md) · [CAD](cad/README.md) · [Validation](validation/README.md)
 
 > **Evidence status, October 2026.** Gen5 is the selected computational design for academic review. Its configuration, model results and failed criteria are documented; [decisive verification items remain open](docs/GEN5_FREEZE_READINESS.md), so the final academic freeze has not been declared. No VOLLEY article has been built, fired, measured, qualified or flown; no complete installed-system or provider-specific interface has been validated. Published work on related systems is prior art and a source of assumptions, not a physical test of Gen5.
 
@@ -43,7 +43,7 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 |:--|:--|:--|
 | Does the field model agree with other methods? | Analytic field compared with magpylib and meshed 2-D/3-D field solves; checks apply to stated field quantities. | [A1](validation/A1_field_femm.md), [validation register](validation/README.md) |
 | Does the electrical shot model agree with circuit simulation? | ngspice cross-check also exposed an omitted bank resistance loss. | [Gen5 closure](docs/GEN5_CLOSURE.md), [validation register](validation/README.md) |
-| Does the CAD survive all criteria? | No. The revised enclosure is **50.04 kg**; dry mass and per-payload mass exceed the study screen. | [CAD record](cad/README.md), [mass ledger](validation/A35_constraint_ledger.md) |
+| Does the CAD survive all criteria? | No. The revised enclosure is **50.04 kg**, and the new reference assembly exposes an **11 mm side-fed width shortfall** plus exact track/cassette interference. | [CAD record](cad/README.md), [assembly screen](validation/P116_gen5_assembly_packaging.md), [mass ledger](validation/A35_constraint_ledger.md) |
 | Does a complete twelve-payload mission close? | No complete delivery in the six sampled finite-burn cases; best case delivered **5/12**. This is a bounded screen, not an impossibility proof. | [Finite-burn study](docs/MANIFEST_FINITE_BURN.md) |
 | Has the concept been independently tested? | Selected numerical cross-checks exist. Hardware, host integration, release reliability and payload compatibility remain untested. | [Provenance](docs/PROVENANCE.md), [open problems](OPEN_PROBLEMS.md) |
 
@@ -55,6 +55,10 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 
 *A 468 s wait alone produces no persistent relative phase in the zero-impulse case. The nonzero curves require a differential release impulse; host maneuver and drag cases remain to be compared on matched missions. [Correction and method](docs/PHASING_CORRECTION_2026-10-09.md).*
 
+![Independent two-body check of the rated 450 km orbit case](figures/rated_orbit_crosscheck.svg)
+
+*A separate Cartesian integrator recovers **28.800775 km** of immediate semi-major-axis rise for the modeled 16.029 m/s prograde shot. This checks two-body orbit geometry only; the 1.60 lifetime estimate, host campaign and flight performance remain unverified. [Method and numerical band](validation/P115_rated_orbit_cartesian.md).*
+
 ![Accepted delivery prefixes in the six sampled finite-burn campaigns](figures/manifest_finite_burn.svg)
 
 *The finite-burn campaign has been rerun from the restored source and again stops at 0/3/4/0/4/5 accepted deliveries. No case delivers all twelve. This is a surrogate calculation with assumed host thrust and release speeds; it does not establish mission infeasibility or hardware performance. [Run record and limitation](docs/MANIFEST_FINITE_BURN.md).*
@@ -63,7 +67,13 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 
 <p align="center"><img src="cad/renders/gen5/exploded.png" alt="Exploded Gen5 CAD model" width="49%"> <img src="figures/D02_layout.png" alt="Gen5 layout drawing" width="49%"></p>
 
-The [Gen5 STEP parts](cad/step/gen5/), [renders](cad/renders/gen5/), [layout](figures/D02_layout.png) and [CAD audit](cad/README.md) are reviewable design artifacts. They establish a modeled geometry and expose packaging and load-path questions. They are not manufacturing drawings, tolerance stacks, an approved ICD or proof of buildability.
+The [Gen5 STEP parts](cad/step/gen5/), [native FreeCAD document](cad/native/Gen5_Review.FCStd), [FreeCAD assembly STEP](cad/step/gen5/VOLLEY_Review_Assembly_FreeCAD_Gen5.step), [renders](cad/renders/gen5/), [layout](figures/D02_layout.png) and [CAD audit](cad/GEN5_CAD_REVIEW.pdf) are reviewable design artifacts. The reference assembly **fails** the stated side-fed placement screen:
+
+![Gen5 reference assembly transverse packaging conflict](figures/gen5_packaging_section.svg)
+
+*The two 166 mm cassettes and 205 mm track require 537 mm across an internal 526 mm width before clearance. Exact STEP-solid intersection finds 32,915 mm³ overlap per cassette in the reference placement. A different feeder or larger enclosure could change the result, but has not been designed. [Rebuild and inspect](validation/P116_gen5_assembly_packaging.md).*
+
+The CAD does not provide manufacturing drawings, tolerance stacks, an approved ICD or proof of buildability.
 
 ## From study to product
 

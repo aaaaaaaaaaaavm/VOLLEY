@@ -1,0 +1,45 @@
+{
+  "status": "REVIEW_ONLY_INTERFERENCE_FOUND",
+  "configuration": "Gen5 side-fed reference, stationary first-cell alignment",
+  "not_demonstrated": [
+    "feeder kinematics",
+    "launch locks",
+    "tolerances",
+    "fasteners",
+    "electrical harness",
+    "approved host ICD",
+    "payload qualification"
+  ],
+  "parameters_sha256": "bb18ba845cdafc4569b7a16f2a34e6a38812f2765b4ee3aa6c96dc507387a3f3",
+  "part_sha256": {
+    "Interface_ESPA": "ad2804ec4f41f9d5a1acba7ead0229444174161d47f4759c833cca95c6e4dbe5",
+    "Track": "3a03ef426fedfd00143c369fd01b41c18b6fa54752dc5721c136701c51ff900b",
+    "Stator": "4d5c733bf544ce6f73736fa67166e0b9d2f1624cb6270a629dafbff0856b6d13",
+    "Sled": "8bc91ae9f4185db908bc9c7e242f3dfa77e05acb0918e24ee6fa4b264d4c4f09",
+    "Magazine_Cassette": "12a27918ba9113837308930cdcf0d60fe66a6cd3abde903a6c2e2d16cb98a433",
+    "Brake": "3b313f96dd48dd09eed7ae7c9933374e2a6d7a0cf31776e33062816d98feb3fb",
+    "Payload_3U": "4eee305dab98bb763f602c6ed11c94f9fd532e7d59925f804899c6c899174dff",
+    "Enclosure": "283f494098dc9a6d98d27c1191bd573902848879bea5b0eec46ca2cf91411f51"
+  },
+  "assembly_sha256": "d1b58e042ff9da11ea65a31953cea40232f31a20c8c95f933e1490ab935d408c",
+  "step_file": "step/gen5/VOLLEY_Review_Assembly_Gen5.step",
+  "instance_count": 20,
+  "reference_placement_mm": {
+    "cassette_x": 200.0,
+    "cassette_center_y_abs": 180.0,
+    "payload_x": 220.0,
+    "cassette_z_min": 0.0,
+    "payload_first_center_z": 76.0
+  },
+  "side_by_side_width_screen_mm": {
+    "enclosure_internal_width": 526.0,
+    "track_overall_width": 205,
+    "two_cassette_width": 332,
+    "required_without_clearance": 537,
+    "shortfall_without_clearance": 11.0
+  },
+  "track_cassette_overlap_mm3": {
+    "S": 32915.0,
+    "P": 32915.0
+  }
+}

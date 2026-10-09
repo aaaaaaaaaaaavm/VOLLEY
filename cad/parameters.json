@@ -308,7 +308,7 @@
       },
       "bays_verified_clear_of_track": true,
       "status": "authoritative_geometry",
-      "mass_note": "The enclosure, radiator, and packaged avionics have NO line items in mass_properties.py. The dry-mass rollup is incomplete until they are added. Open problem P10."
+      "mass_note": "A46 replaced the earlier P10 enclosure placeholder with separate modeled enclosure, frame, radiator, equipment-bay and bracket line items in mass_properties.py. These are estimates; installed host-specific mass and supplier-backed component masses remain unclosed."
     },
     "legacy_study_drive": {
       "_document": "Built by cad/build_legacy_study.py. ADR-032: the payload is accelerated directly by cold gas along a rail the host stage provides. There is no mover, no stator, no brake and no return stroke. ADR-034: the stroke is the host stage's whole usable acceleration length, and the charge pressure fell to hold the exit velocity while the peak acceleration halved.",
@@ -389,7 +389,7 @@
     "P5": "CAD sled mass contradicts the parametric assumption",
     "P8": "exit velocity provisional pending sled structural FEA",
     "P9": "closed envelope exceeds ESPA Grande by ~44%",
-    "P10": "enclosure + packaged avionics absent from mass_properties.py",
+    "P10": "historical enclosure mass omission resolved by A46; installed host-specific mass remains unclosed",
     "E1": "3-D end effects on the thrust constant \u2014 closed only by FEMM/Maxwell",
     "P44": "intra-cell separation hardware outweighs the payload at femtosat scale"
   }

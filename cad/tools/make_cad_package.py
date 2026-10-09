@@ -158,15 +158,16 @@ def bom_md(p):
          "> No line item has a vendor quotation. `analysis/cost.py` carries assumed prices and",
          "> says so in its own header; no cost claim in this repository is supported, and none",
          "> should be made from this table. It is a mass and materials list, not a purchase order.\n",
-         "> This rollup is incomplete. The enclosure, radiator and packaged avionics have no",
-         "> line items, which is open problem P10. Dry mass below is therefore a floor rather than a total.\n",
+         "> The earlier P10 enclosure omission was resolved by A46: enclosure skins, frames, radiator,",
+         "> equipment bays and brackets now have separate modelled line items below. These and other",
+         "> component masses remain estimates, not a weighed assembly or complete host-installed mass.\n",
          "| # | Item | Qty | Material | Mass, kg | CG x, m | Notes |",
          "|---:|---|---:|---|---:|---:|---|"]
     for i, (name, m, cgx) in enumerate(mass_properties.parts, 1):
         mat, note = DERIVED.get(name, ("", ""))
         qty = "2" if "2x" in name else "1"
         L.append(f"| {i} | {name} | {qty} | {mat} | {m:.2f} | {cgx:.2f} | {note} |")
-    L.append(f"| | DRY TOTAL | | | {m_tot:.1f} | {cg:.2f} | P10: incomplete |")
+    L.append(f"| | MODELLED DRY TOTAL | | | {m_tot:.1f} | {cg:.2f} | A46 enclosure included; host installation unclosed |")
     L.append(f"| | LOADED (12 x 3U at 4 kg) | | | {m_tot + 48:.1f} | | |")
     L.append("")
     L.append(f"Sled assembly: {sled:.2f} kg, the CAD-derived value from the Gen3 STEP solids (P15).")

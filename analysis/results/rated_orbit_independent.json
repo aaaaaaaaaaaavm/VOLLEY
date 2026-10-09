@@ -1,0 +1,107 @@
+{
+  "status": "PASS_NUMERICAL_TWO_BODY_ONLY",
+  "scope": "instantaneous tangential impulse in a 450 km circular Earth orbit; two-body Cartesian propagation",
+  "excluded": [
+    "atmospheric lifetime",
+    "finite-duration release",
+    "host recoil or maneuver",
+    "dispersion",
+    "payload loads",
+    "provider orbit or flight compatibility"
+  ],
+  "motor_result_sha256": "afadd4d66271d9d1476b294ecea2723500ad813c0adc6d9648a07b83692c3875",
+  "constants": {
+    "mu_m3_s2": 398600441800000.0,
+    "earth_radius_m": 6378137.0,
+    "host_altitude_m": 450000.0
+  },
+  "rated": {
+    "dv_m_s": 16.029,
+    "semi_major_axis_rise_km": 28.800775155548937,
+    "perigee_altitude_km": 450.00000000013785,
+    "apogee_altitude_km": 507.60155031096,
+    "period_change_s": 35.56435409500955,
+    "a_conservation_max_m": 1.210719347000122e-08,
+    "e_conservation_max": 7.92976795338518e-14,
+    "steps": 721
+  },
+  "numerical_check": {
+    "coarse_rtol": 1e-09,
+    "fine_rtol": 1e-11,
+    "semi_major_axis_difference_m": 0.0,
+    "vis_viva_identity_difference_m": 9.313225746154785e-10,
+    "pass_band_m": 0.02
+  },
+  "impulse_sweep": [
+    {
+      "dv_m_s": 0.0,
+      "semi_major_axis_rise_km": 0.0,
+      "perigee_altitude_km": 450.0,
+      "apogee_altitude_km": 450.0,
+      "period_change_s": 0.0,
+      "a_conservation_max_m": 1.4901161193847656e-08,
+      "e_conservation_max": 2.1073424255447017e-08,
+      "steps": 721
+    },
+    {
+      "dv_m_s": 1.0,
+      "semi_major_axis_rise_km": 1.7879549527689815,
+      "perigee_altitude_km": 450.00000000338906,
+      "apogee_altitude_km": 453.5759099021489,
+      "period_change_s": 2.205658913019761,
+      "a_conservation_max_m": 9.313225746154785e-09,
+      "e_conservation_max": 1.272303822626858e-12,
+      "steps": 721
+    },
+    {
+      "dv_m_s": 2.0,
+      "semi_major_axis_rise_km": 3.577080687562004,
+      "perigee_altitude_km": 450.0000000011325,
+      "apogee_altitude_km": 457.15416137399154,
+      "period_change_s": 4.41305113143153,
+      "a_conservation_max_m": 2.7008354663848877e-08,
+      "e_conservation_max": 6.361103050550598e-13,
+      "steps": 721
+    },
+    {
+      "dv_m_s": 5.0,
+      "semi_major_axis_rise_km": 8.951493634562008,
+      "perigee_altitude_km": 450.00000000102074,
+      "apogee_altitude_km": 467.9029872681024,
+      "period_change_s": 11.04564655687318,
+      "a_conservation_max_m": 1.4901161193847656e-08,
+      "e_conservation_max": 2.543943788263503e-13,
+      "steps": 721
+    },
+    {
+      "dv_m_s": 10.0,
+      "semi_major_axis_rise_km": 17.932367534864692,
+      "perigee_altitude_km": 450.0000000003325,
+      "apogee_altitude_km": 485.8647350693969,
+      "period_change_s": 22.13481553000929,
+      "a_conservation_max_m": 1.862645149230957e-08,
+      "e_conservation_max": 1.2715566446996895e-13,
+      "steps": 721
+    },
+    {
+      "dv_m_s": 16.029,
+      "semi_major_axis_rise_km": 28.800775155548937,
+      "perigee_altitude_km": 450.00000000013785,
+      "apogee_altitude_km": 507.60155031096,
+      "period_change_s": 35.56435409500955,
+      "a_conservation_max_m": 1.4901161193847656e-08,
+      "e_conservation_max": 7.92976795338518e-14,
+      "steps": 721
+    },
+    {
+      "dv_m_s": 20.0,
+      "semi_major_axis_rise_km": 35.98281340910308,
+      "perigee_altitude_km": 450.0000000001192,
+      "apogee_altitude_km": 521.965626818087,
+      "period_change_s": 44.44467672333576,
+      "a_conservation_max_m": 4.377216100692749e-08,
+      "e_conservation_max": 6.353684939286453e-14,
+      "steps": 721
+    }
+  ]
+}

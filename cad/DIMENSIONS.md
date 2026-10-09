@@ -270,7 +270,7 @@ Fusion document: `EMOCD_Enclosure`
 | `bays_verified_clear_of_track` | True | mm |
 | `skin_material` | aluminium | |
 
-- `mass_note`: The enclosure, radiator, and packaged avionics have NO line items in mass_properties.py. The dry-mass rollup is incomplete until they are added. Open problem P10.
+- `mass_note`: A46 replaced the earlier P10 enclosure placeholder with separate modeled enclosure, frame, radiator, equipment-bay and bracket line items in mass_properties.py. These are estimates; installed host-specific mass and supplier-backed component masses remain unclosed.
 
 Status: `authoritative_geometry`
 

@@ -12,8 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs/GEN5_CONFIGURATION_INDEX.json"
 
 SOURCES = [
-    "cad/parameters.json", "cad/BUILD.json", "cad/DIMENSIONS.md",
+    "cad/parameters.json", "cad/BUILD.json", "cad/DIMENSIONS.md", "cad/BOM.md",
+    "cad/build_review_assembly.py", "cad/REVIEW_ASSEMBLY.json",
+    "cad/freecad_export_review.py", "cad/FREECAD_EXPORT.json",
+    "cad/native/Gen5_Review.FCStd", "cad/GEN5_CAD_REVIEW.pdf",
     "analysis/motor_model.py", "analysis/mass_properties.py", "analysis/astro.py",
+    "analysis/rated_orbit_independent.py", "analysis/results/rated_orbit_independent.json",
     "analysis/results/motor_results.json", "analysis/results/mass_properties.json",
     "analysis/results/astro_results.json", "analysis/results/manifest_finite_burn.json",
     "analysis/results/phasing_reference.json", "docs/BASELINE.md",
@@ -25,10 +29,16 @@ def digest(path: Path) -> str:
 
 
 def main() -> None:
-    step = sorted((ROOT / "cad/step/gen5").glob("*_Gen5.step"))
+    step = sorted(p for p in (ROOT / "cad/step/gen5").glob("*_Gen5.step")
+                  if "Review_Assembly" not in p.name)
     if len(step) != 8:
         raise SystemExit(f"expected eight Gen5 STEP parts; found {len(step)}")
-    paths = [ROOT / name for name in SOURCES] + step
+    review_assembly = ROOT / "cad/step/gen5/VOLLEY_Review_Assembly_Gen5.step"
+    freecad_parts = sorted((ROOT / "cad/step/freecad_gen5").glob("*_FreeCAD_Gen5.step"))
+    if len(freecad_parts) != 8:
+        raise SystemExit(f"expected eight FreeCAD-exported STEP parts; found {len(freecad_parts)}")
+    freecad_assembly = ROOT / "cad/step/gen5/VOLLEY_Review_Assembly_FreeCAD_Gen5.step"
+    paths = [ROOT / name for name in SOURCES] + step + freecad_parts + [review_assembly, freecad_assembly]
     missing = [str(p.relative_to(ROOT)) for p in paths if not p.is_file()]
     if missing:
         raise SystemExit(f"missing configuration inputs: {missing}")
@@ -47,13 +57,13 @@ def main() -> None:
         },
         "files": {str(p.relative_to(ROOT)): digest(p) for p in paths},
         "exclusions": [
-            "No approved integrated STEP assembly or manufacturing drawing set",
+            "The reference STEP assembly fails a side-fed packaging screen; no approved assembly or manufacturing drawing set",
             "No provider-specific interface, qualified payload, hardware test or flight evidence",
             "No complete installed-system mass, tolerance, shock or thermal closure",
         ],
     }
     OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(f"{result['configuration_id']}: {len(paths)} hashed inputs; {len(step)} STEP parts")
+    print(f"{result['configuration_id']}: {len(paths)} hashed inputs; {len(step)} source plus {len(freecad_parts)} FreeCAD STEP parts")
 
 
 if __name__ == "__main__":

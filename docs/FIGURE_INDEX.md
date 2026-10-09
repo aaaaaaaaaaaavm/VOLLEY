@@ -10,7 +10,7 @@ histogram and a measurement can look identical; their evidence classes cannot.
 | Class | Meaning | How many |
 |---|---|---:|
 | M | Model output. One script, one physics implementation. Reproducible, not corroborated | most |
-| X | Cross-checked. Two independent methods agree, and the agreement is quoted | 3 |
+| X | Cross-checked. Two independent methods agree on the stated quantity; the scope is quoted | selected figures |
 | S | Schematic. A drawing, not a computation. No numbers descend from it | 2 |
 | R | Render. A picture of geometry. Carries no result at all | Gen5 and historical sets |
 | D | Measured data. Something physical was observed | 0 |
@@ -54,6 +54,8 @@ New mission figures below name their own local generator.
 | Gen5 mass decision | Dry mass per 3U against two separate mass screens | `tools/plot_gen5_decision.py` | `mass_properties.json` and declared approximate comparators | 10.55 kg/3U; fails both stated comparisons | M |
 | Gen5 energy accounting | Rated shot gross, modeled recovery, net and payload kinetic energy | `tools/plot_gen5_decision.py` | `motor_results.json` | 514 J payload out of 2735 J net; grey balance is not an itemized loss budget | M |
 | P113-S16 | Same-epoch phasing after a 468 s wait with first-payload differential impulses | `analysis/phasing_reference.py` | `phasing_reference.json`, two-body initial states | Zero impulse stays at zero relative phase; nonzero curves require a relative-state change | M |
+| P115 | Current rated prograde impulse versus immediate 450 km orbit geometry | `analysis/rated_orbit_independent.py` | Cartesian DOP853 propagation and vis-viva identity | 16.029 m/s input gives 28.800775 km axis rise; lifetime and mission excluded | X, two-body orbit quantity only |
+| P116 | Gen5 side-fed transverse assembly section | `cad/plot_review_packaging.py` | `cad/REVIEW_ASSEMBLY.json` and `cad/parameters.json` | 11 mm width shortfall and exact-solid track/cassette overlap in the reference placement | X, CadQuery/FreeCAD overlap agree |
 
 Numbering note: there is no F10. It was withdrawn and the gap is left rather than
 renumbered, so a reference to F10 in any older document resolves to nothing instead of silently

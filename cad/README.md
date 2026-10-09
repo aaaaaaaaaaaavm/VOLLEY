@@ -1,18 +1,19 @@
 # CAD
 
 > **Current academic configuration: Gen5.** Start with the [eight generated Gen5 STEP
-> parts](step/gen5/), [Gen5 renders](renders/gen5/), [dimension sheet](DIMENSIONS.md),
+> parts](step/gen5/), [20-instance reference assembly](step/gen5/VOLLEY_Review_Assembly_Gen5.step), [Gen5 renders](renders/gen5/), [dimension sheet](DIMENSIONS.md),
 > [configuration hashes](../docs/GEN5_CONFIGURATION_INDEX.json) and
 > [freeze-readiness matrix](../docs/GEN5_FREEZE_READINESS.md). The Gen3 Fusion files below
 > are historical source geometry used in some mass/FEA records; their age and role must
-> accompany any citation. The Gen5 parts are a geometry and interface model, without
-> a controlled integrated assembly, manufacturing drawings or physical fit test.
+> accompany any citation. The reference assembly has a [measured side-fed clash](../validation/P116_gen5_assembly_packaging.md): 11 mm width shortfall and track/cassette intersection. It is a controlled review artifact, not an approved integrated design, manufacturing drawing or physical fit test.
 >
 > The 9.445 kg modeled sled value was adopted from Gen3 solid volumes and tested with
 > the A4 CalculiX chassis idealization. It is carried into Gen5; the Gen5 STEP build
 > checks dimensions but does not independently recompute an installed mass for all
 > hardware. The 126.6 kg dry rollup includes modeled and assumed components, so it
 > must not be described as the weight of a complete verified Gen5 CAD assembly.
+
+**Professional CAD handover:** [native FreeCAD 1.0 review document](native/Gen5_Review.FCStd), [eight FreeCAD-exported STEP parts](step/freecad_gen5/), [FreeCAD assembly STEP](step/gen5/VOLLEY_Review_Assembly_FreeCAD_Gen5.step), [read-back and interference report](FREECAD_EXPORT.json), and [three-page CAD review PDF](GEN5_CAD_REVIEW.pdf). The source B-reps were created parametrically in CadQuery and imported into FreeCAD; the imported parts do not contain native FreeCAD feature histories. Both FreeCAD and CadQuery report the same stated side-fed track/cassette clash. The PDF includes a model render and measured section, each labeled by evidence type.
 
 > ## historical study is here too, and it is a different machine
 >
@@ -65,7 +66,7 @@ the script that built it. See [`scad/README.md`](scad/README.md).
 
 | Folder | What it is | Status |
 |---|---|---|
-| `step/gen5/` | Generated from `parameters.json`; eight STEP parts with 23 read-back dimension checks | **Current academic geometry**, conceptual assembly and interfaces |
+| `step/gen5/` | Generated from `parameters.json`; eight STEP parts with 23 read-back dimension checks and one 20-instance reference assembly | **Current academic geometry**, documented interference and conceptual interfaces |
 | `step/gen3/` | Parameter-reconciled Fusion revision, plus `EMOCD_Gen3.step`, a monolithic single-file model (395 solids) holding all nine sub-systems | **Historical mass and FEA source**; not the Gen5 release geometry |
 | `step/gen2/` | First structured revision. Mechanism-level detail arrives: single-layer stator, sled Halbach arrays and rollers, magazine escapement and D6 pins, brake ring spring | SUPERSEDED, carries a 360 mm sled chassis where the spec says 488 mm |
 | `step/gen1/` | The original CAD, 2021-2025. Structural envelope rather than mechanism model; the geometry `parameters.json` was reverse-engineered from. Includes the pre-split single-file `EMOCD_Deployer_Assembly_Gen1.step` and a second sled revision, `Sled_Gen1b` | SUPERSEDED, heritage only |

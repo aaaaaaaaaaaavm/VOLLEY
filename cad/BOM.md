@@ -12,8 +12,9 @@ re-entered by hand. Quantities and interface dimensions come from
 > says so in its own header; no cost claim in this repository is supported, and none
 > should be made from this table. It is a mass and materials list, not a purchase order.
 
-> This rollup is incomplete. The enclosure, radiator and packaged avionics have no
-> line items, which is open problem P10. Dry mass below is therefore a floor rather than a total.
+> The earlier P10 enclosure omission was resolved by A46: enclosure skins, frames, radiator,
+> equipment bays and brackets now have separate modelled line items below. These and other
+> component masses remain estimates, not a weighed assembly or complete host-installed mass.
 
 | # | Item | Qty | Material | Mass, kg | CG x, m | Notes |
 |---:|---|---:|---|---:|---:|---|
@@ -40,7 +41,7 @@ re-entered by hand. Quantities and interface dimensions come from
 | 21 | Equipment-bay boxes (4 bays, 1.5 mm Al, A46) | 1 |  | 1.87 | 0.30 |  |
 | 22 | Fasteners and brackets (A46, 10 % of structure, declared) | 1 |  | 4.55 | 0.50 |  |
 | 23 | Sled CAD reconciliation (P15, CAD-derived 9.445 kg) | 1 |  | 4.59 | 0.15 | see note |
-| | DRY TOTAL | | | 126.6 | 0.46 | P10: incomplete |
+| | MODELLED DRY TOTAL | | | 126.6 | 0.46 | A46 enclosure included; host installation unclosed |
 | | LOADED (12 x 3U at 4 kg) | | | 174.6 | | |
 
 Sled assembly: 9.45 kg, the CAD-derived value from the Gen3 STEP solids (P15).

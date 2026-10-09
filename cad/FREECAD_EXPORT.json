@@ -1,0 +1,36 @@
+{
+  "status": "NATIVE_REVIEW_ASSEMBLY_EXPORTED_WITH_KNOWN_INTERFERENCE",
+  "freecad_version": [
+    "1",
+    "0",
+    "0",
+    "",
+    "https://code.launchpad.net/~vcs-imports/freecad/trunk",
+    "2026/08/25 11:49:11"
+  ],
+  "source_method": "FreeCAD 1.0 Part B-rep imports of the eight CadQuery-generated STEP parts",
+  "instance_count": 20,
+  "native_fcstd_sha256": "301a360c51738bd2eaa1247f0d29876e89dffa6470de8fb7a6830c9a4d595403",
+  "freecad_step_sha256": "596b3eb9abd0786e2c484511d3886194ee896b017e9b910d0024eb4156bc4d20",
+  "freecad_part_step_sha256": {
+    "Interface_ESPA": "beddb4251fc605e02bf5e9466d49dc4ad1522d8e719c4a42bced53ba8bff58d0",
+    "Track": "4b3bce17cc8f2a78d293f51c35183a82a6c8651c8f850b095e6d3fc2dc56cc36",
+    "Stator": "832b36dc9fb5301603195b3fefe85805ec2ec5b221fa05e08c885949fcb2c2da",
+    "Sled": "e94a5ac4a276009627c25406b26d132f0737064e617d60e7868a66f325975a05",
+    "Magazine_Cassette": "f0121a3e5e8ed79aa857937ac78d1773341538cbd83278cb6e80ade2c87afb10",
+    "Brake": "c3726fbe7aa94170f66cee33d43dd5acb94ce78c51da410c13afcf70440b4308",
+    "Payload_3U": "71a94df16289369ce05768c9069553c837c942694d9eef10aacdc73944563b54",
+    "Enclosure": "48d7a6b405e4de92e490e2cfca538cdfb227a61d4b40a248f8319debc8578858"
+  },
+  "freecad_step_readback_valid": true,
+  "track_cassette_overlap_mm3": {
+    "S": 32915.0,
+    "P": 32915.0
+  },
+  "geometry_limits": [
+    "no native parametric feature history for imported part solids",
+    "known side-fed interference",
+    "no fasteners/harness/tolerance stack",
+    "no provider ICD or payload qualification"
+  ]
+}
