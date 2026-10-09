@@ -1,4 +1,6 @@
-# Gen5, frozen with declared exceptions
+# Historical Gen5 Phase I closure — superseded for academic freeze
+
+> **Status note, 9 October 2026:** This page preserves the September Phase I decision record. It is **not** the current Gen5 academic freeze decision. The controlled status is [Gen5 academic freeze readiness](GEN5_FREEZE_READINESS.md): review candidate, with failed side-fed CAD packaging, failed installed-mass criterion, an unitemized rated-shot energy remainder, and other open checks. Historical shorthand below (including “1.5 m track” and mass provenance) must not be used as a current configuration specification; use the [baseline](BASELINE.md), [CAD review](../cad/GEN5_CAD_REVIEW.md), and [configuration index](GEN5_CONFIGURATION_INDEX.json) for the evaluated geometry and result revisions.
 
 Phase I baseline closure is recorded here. This page is the whole Gen5 case in one place: what it is, what every
 headline number rests on, what failed, and what is deliberately left open. It is written to be
