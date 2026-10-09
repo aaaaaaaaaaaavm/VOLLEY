@@ -5,6 +5,41 @@
   },
   "configuration_id": "VOLLEY-GEN5-ACADEMIC-2026-10-09",
   "design_scope": "3U, twelve-slot conceptual magazine, 1.5 m release station on 1.8 m structural longerons, electromagnetic Gen5",
+  "deterministic_gap_scenarios": {
+    "cases": [
+      {
+        "depth_offset_m": 0.0,
+        "gap_m": 0.012,
+        "ideal_work_J": 1041.7428783300404,
+        "name": "nominal_12mm_gap"
+      },
+      {
+        "depth_offset_m": 0.0,
+        "gap_m": 0.014,
+        "ideal_work_J": 906.7219828870661,
+        "name": "gap_14mm"
+      },
+      {
+        "depth_offset_m": 0.0,
+        "gap_m": 0.016,
+        "ideal_work_J": 789.9372722020431,
+        "name": "gap_16mm"
+      },
+      {
+        "depth_offset_m": 0.005,
+        "gap_m": 0.012,
+        "ideal_work_J": 1001.0291555468658,
+        "name": "depth_offset_5mm"
+      },
+      {
+        "depth_offset_m": 0.01,
+        "gap_m": 0.012,
+        "ideal_work_J": 961.2228225990108,
+        "name": "depth_offset_10mm"
+      }
+    ],
+    "measured_tolerance_distribution": false
+  },
   "evidence_class": "model_only_no_gen5_hardware_test",
   "exclusions": [
     "The reference STEP assembly fails a side-fed packaging screen; no approved assembly or manufacturing drawing set",
@@ -16,6 +51,8 @@
     "analysis/gen5_finite_coupled_shot.py": "0c3b3144d92b2758429a001dd54ddef5c019f26ab02d600c6afdda6155340d05",
     "analysis/gen5_finite_force_fem2d.py": "5d6f2eefd8b9cc90f30642e5f9bafcbcbf8ee401449ab4a9c7b769a7679879e2",
     "analysis/gen5_finite_force_map.py": "4b0ae9ea54bbb24ccbda5e34e2e0e1b3eb25c52d85e68313770c583539e9f107",
+    "analysis/gen5_finite_force_sensitivity.py": "4800412216e6c758e163b7587f4b2622b76ae26f2be785fd3104f340d96d26e1",
+    "analysis/gen5_finite_force_surface3d.py": "842c4a5133c3704198a70d5bbba3be5ec2cd63246f7c8d786a8ed4bb4e49bf6d",
     "analysis/mass_properties.py": "b8547e763806b0c740ee342c3278d85b1295d18f7cfe52be5239c9136c08d777",
     "analysis/matched_mission_reference.py": "834ff8130bdd9f7e14d966b622e310d49e18dabcf7ba845af11adfaec51da12a",
     "analysis/motor_model.py": "aafef3beb496e8db3bb96c9314bd604a5976c24ccc856335bf2db67f3f8fa0f2",
@@ -25,6 +62,8 @@
     "analysis/results/gen5_finite_coupled_shot.json": "9b63bd5d2bb7ed6f96da097f6043518d890fcd39ab314eb9294eae97ff2c931d",
     "analysis/results/gen5_finite_force_fem2d.json": "5eb0b7c9dd53504f1cb5bd4b0238f9f31c31df58e41cfd0829e3df2006bf96ee",
     "analysis/results/gen5_finite_force_map.json": "01dfc9743ba37ccc25f0591afa21479e8fa6500f2792a43bfcafdf3ed5cb21c0",
+    "analysis/results/gen5_finite_force_sensitivity.json": "fe1156b04a6a1e84fba7f033ea3f8af2483853bc9f962133ce1af4ea6cc3b451",
+    "analysis/results/gen5_finite_force_surface3d.json": "65ee00c5e63fb493746cdb5e03a1dd4b6f4184300e33b0c4875fb5eedca45568",
     "analysis/results/manifest_finite_burn.json": "c9260a39550a6c4f90c2527ce1c649296cab92614c36f738880af171b61698b0",
     "analysis/results/mass_properties.json": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
     "analysis/results/matched_mission_reference.json": "10cbe54cd22ea2309a4180c81104c3c6947d42c88288fd6db089cbc68b75627f",
@@ -62,13 +101,15 @@
     "cad/step/gen5/VOLLEY_Track_Gen5.step": "3a03ef426fedfd00143c369fd01b41c18b6fa54752dc5721c136701c51ff900b",
     "docs/BASELINE.md": "9a5b42e3bdd65e9741fdd69dce31e0f2f128c5f3b816855aa8e8807c4dbb6009",
     "docs/MATCHED_MISSION_REFERENCE.md": "e14f1790ed3156e5bdf5ee654a6b18fe8c97b778c64cd9e77f4e3d08cedd228e",
-    "reports/GEN5_COMPUTATIONAL_REVIEW.pdf": "79f24b5c61c4ddd585e0f559507ded6a212ca0f3ac0904a0d97705542e925cf0",
+    "reports/GEN5_COMPUTATIONAL_REVIEW.pdf": "522417899d4b128a76bbf6b3fc096372d4463a72f32d076ca4aa6c90c863004a",
     "validation/P115_rated_orbit_cartesian.md": "4435ba1ae93dc3d12ab5326ed10842ae5a90eb6161e0495fff354d26b90274ec",
     "validation/P116_gen5_assembly_packaging.md": "b1305e9b7eb1e602bc1cd61151697d9831b067e49439f79d788de94163afbbb4",
     "validation/P117_rated_energy_mass_audit.md": "aafec21269bcec63c245ad6db812e7a78ffe97e86d429d0c705fd3d455ee2b36",
     "validation/P118_gen5_finite_force_map.md": "674cf1bca3d9321107842fc9c28f14fe878721cc80ecc87482a9c3795e1fd0f8",
     "validation/P119_gen5_finite_force_fem2d.md": "e18b93ac526a369501b5efd8fdb889efa36295981ecb5eb9e747fa8a7d7de5f6",
-    "validation/P120_gen5_finite_coupled_shot.md": "fe63020cbb5efd1d19b17a378ea8caae4402ce15a384359eb44eb3c007b95ce5"
+    "validation/P120_gen5_finite_coupled_shot.md": "fe63020cbb5efd1d19b17a378ea8caae4402ce15a384359eb44eb3c007b95ce5",
+    "validation/P121_gen5_finite_force_surface3d.md": "049fd80b7c633403fe18622d41216d5951a03fea086cac9873c649c74dced90a",
+    "validation/P122_gen5_finite_force_sensitivity.md": "1e9de376ce09f65f9b6a8a55f925b2aae97d86157af03f12062ccbbf953ad045"
   },
   "finite_geometry_finding": {
     "ideal_phase_geometry_only_speed_m_s": 12.448437098832297,
@@ -86,6 +127,11 @@
     "ideal_work_J": 1081.625979493439,
     "mesh_size_m": 0.001,
     "omits_magnet_depth_end_effects": true
+  },
+  "independent_3d_surface_charge_screen": {
+    "ideal_work_J": 1041.742708707007,
+    "independent_3d_force_fem": false,
+    "shared_ideal_phase_and_geometry": true
   },
   "status": "COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE"
 }

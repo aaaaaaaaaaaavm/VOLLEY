@@ -16,6 +16,12 @@ VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3
 
 An [independent 2-D finite-element screen](validation/P119_gen5_finite_force_fem2d.md) now checks the finite-array force decline using a magnetostatic PDE instead of the cuboid field law. It gives **1,081.6 J ideal in-plane work** on a 1 mm mesh, compared with **1,041.7 J** in the 3-D analytic screen. Depth effects and coupled electrical behavior remain open, so neither result is a motor rating.
 
+A [depth-resolved 3-D surface-charge cross-check](validation/P121_gen5_finite_force_surface3d.md) independently evaluates the finite cuboids and all 162 stator belts. It recovers **1,041.7 J** ideal work, with 16-to-24 point face quadrature changing work by **0.00002%** and 25-to-12.5 mm station spacing changing it by **0.096%**. The separate [gap and depth scenarios](validation/P122_gen5_finite_force_sensitivity.md) show **906.7 J at a 14 mm gap** versus 1,041.7 J at 12 mm. These are ideal-phase model checks with shared magnetic material assumptions, not motor ratings or hardware tolerances.
+
+<p align="center"><img src="figures/gen5_finite_force_surface3d.png" alt="Independent numerical three-dimensional surface-charge force integration" width="48%"> <img src="figures/gen5_finite_force_sensitivity.png" alt="Illustrative magnet gap and depth sensitivity scenarios" width="48%"></p>
+
+*Reproducible [P121 3-D numerical check](validation/P121_gen5_finite_force_surface3d.md) and [P122 deterministic scenarios](validation/P122_gen5_finite_force_sensitivity.md). The agreement checks the ideal finite-geometry integral; it does not select a winding, switching law or physical release speed.*
+
 A [finite-force shot rerun](validation/P120_gen5_finite_coupled_shot.md) carries the P118 force profile through the historical capacitor/ESR model. With the old full-winding assumption it gives **12.448 m/s and 2.099 kJ gross draw**; a hypothetical segmented-copper branch gives the same ideal speed and **1.394 kJ**. These are conditional calculations using unselected power hardware and ideal phase at every position. The old energy, brake and precision figures cannot be transferred to them.
 
 <p align="center"><img src="figures/gen5_finite_force_map.png" alt="Finite-stator force map and historical periodic assumption" width="48%"> <img src="figures/matched_mission_reference.png" alt="Matched single-event and twelve-shot reference comparison" width="48%"></p>
@@ -55,7 +61,7 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 
 <p align="center"><img src="figures/A02_field_map.png" alt="Calculated magnetic airgap field" width="32%"> <img src="figures/F01_shot.png" alt="Calculated Gen5 shot history" width="32%"> <img src="figures/A35_ledger.png" alt="Requirement-attributed mass floor" width="32%"></p>
 
-*Field model → modeled shot → mass verdict. The 2-D and 3-D field comparisons check selected field quantities; they do not independently validate the full depth-integrated thrust or hardware performance. The mass ledger leaves **88.67 kg (70.06%)** in its most favorable evaluated requirement-deletion corner, so the evaluated corners cannot meet the mass screen. [Methods and limits](docs/GEN5_CLOSURE.md).*
+*Field model → modeled shot → mass verdict. P121 independently checks the ideal full-depth force integral under shared linear magnetic assumptions; neither that check nor the 2-D FEM validates hardware performance. The mass ledger leaves **88.67 kg (70.06%)** in its most favorable evaluated requirement-deletion corner, so the evaluated corners cannot meet the mass screen. [Methods and limits](docs/GEN5_CLOSURE.md).*
 
 | Question | Best available answer | Where to inspect it |
 |:--|:--|:--|

@@ -4,8 +4,11 @@
 
 > **Independent 2-D follow-up (P119).** A triangular-mesh magnetostatic PDE calculation supports the finite-array end-of-stator force decline and gives 1,081.6 J ideal in-plane work on a 1 mm mesh. The 2-D method omits magnet-depth effects and does not certify the full 3-D force or a coupled shot. See [P119](P119_gen5_finite_force_fem2d.md) and its [solver output](../analysis/results/gen5_finite_force_fem2d.json).
 
-Independent cross-checks of the claims in `analysis/`. **73 run sheets, one row each, and every
-file in this directory has a row.** All but the last have run; A73 is declared and executing.
+> **Depth-resolved 3-D follow-up (P121–P122).** An independent numerical surface-charge implementation agrees with the ideal finite-cuboid integral at 1,041.7 J; [P121](P121_gen5_finite_force_surface3d.md) records convergence and field probes. [P122](P122_gen5_finite_force_sensitivity.md) varies gap, depth offset, remanence and moving mass as deterministic scenarios. These are model checks with shared design inputs, not a selected motor, measured tolerances or hardware validation.
+
+Independent cross-checks of the claims in `analysis/`. The historical A-series
+table below contains 73 rows; newer P-series review checks are linked above. A73 is
+declared and executing.
 
 > ### This index was nineteen rows short until 2026-08-30, and said so nowhere
 >

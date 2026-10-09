@@ -30,6 +30,10 @@ SOURCES = [
     "validation/P119_gen5_finite_force_fem2d.md",
     "analysis/gen5_finite_coupled_shot.py", "analysis/results/gen5_finite_coupled_shot.json",
     "validation/P120_gen5_finite_coupled_shot.md",
+    "analysis/gen5_finite_force_surface3d.py", "analysis/results/gen5_finite_force_surface3d.json",
+    "validation/P121_gen5_finite_force_surface3d.md",
+    "analysis/gen5_finite_force_sensitivity.py", "analysis/results/gen5_finite_force_sensitivity.json",
+    "validation/P122_gen5_finite_force_sensitivity.md",
     "analysis/matched_mission_reference.py", "analysis/results/matched_mission_reference.json",
     "docs/MATCHED_MISSION_REFERENCE.md",
 ]
@@ -58,6 +62,8 @@ def main() -> None:
     finite = json.loads((ROOT / "analysis/results/gen5_finite_force_map.json").read_text())
     fem = json.loads((ROOT / "analysis/results/gen5_finite_force_fem2d.json").read_text())
     bank = json.loads((ROOT / "analysis/results/gen5_finite_coupled_shot.json").read_text())
+    surface = json.loads((ROOT / "analysis/results/gen5_finite_force_surface3d.json").read_text())
+    sensitivity = json.loads((ROOT / "analysis/results/gen5_finite_force_sensitivity.json").read_text())
     result = {
         "configuration_id": "VOLLEY-GEN5-ACADEMIC-2026-10-09",
         "status": "COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE",
@@ -79,6 +85,19 @@ def main() -> None:
             "ideal_work_J": fem["runs"][-1]["work_J"],
             "mesh_size_m": fem["runs"][-1]["dx_m"],
             "omits_magnet_depth_end_effects": True,
+        },
+        "independent_3d_surface_charge_screen": {
+            "ideal_work_J": surface["runs"][-1]["ideal_work_J"],
+            "independent_3d_force_fem": False,
+            "shared_ideal_phase_and_geometry": True,
+        },
+        "deterministic_gap_scenarios": {
+            "cases": [
+                {"name": case["name"], "gap_m": case["gap_m"],
+                 "depth_offset_m": case["depth_offset_m"], "ideal_work_J": case["ideal_work_J"]}
+                for case in sensitivity["cases"]
+            ],
+            "measured_tolerance_distribution": False,
         },
         "conditional_finite_force_bank_screen": {
             "full_winding_gross_draw_J": bank["branches"][0]["result"]["gross_capacitor_draw_J"],

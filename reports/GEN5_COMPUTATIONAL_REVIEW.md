@@ -9,7 +9,7 @@ header-includes:
 
 # Abstract
 
-Gen5 is a computational study of a sequential electromagnetic deployer for twelve 3U CubeSats. Its historical periodic-force model gives 16.029 m/s and 10.068 g, but a finite-array calculation challenges that speed; no current motor rating is selected. This report gathers the electromagnetic, power, dynamics, orbit, mass, CAD and mission evidence into a claim-by-claim review. It records decisive failures: 10.547 kg of modeled deployer per 3U customer fails two mass comparisons; a side-fed CAD reference arrangement has an 11 mm width shortfall and exact-solid interference; and no sampled twelve-shot option closes. Independent 2-D finite-element force analysis confirms the finite-stator force decline while leaving depth and circuit effects open. The immediate two-body orbit change has a Cartesian check for an assumed historical 16.029 m/s release; the 1.60 lifetime multiplier has no independent rerun at that input. **VOLLEY itself has no built, fired, measured, qualified or flown hardware**.
+Gen5 is a computational study of a sequential electromagnetic deployer for twelve 3U CubeSats. Its historical periodic-force model gives 16.029 m/s and 10.068 g, but a finite-array calculation challenges that speed; no current motor rating is selected. This report gathers the electromagnetic, power, dynamics, orbit, mass, CAD and mission evidence into a claim-by-claim review. It records decisive failures: 10.547 kg of modeled deployer per 3U customer fails two mass comparisons; a side-fed CAD reference arrangement has an 11 mm width shortfall and exact-solid interference; and no sampled twelve-shot option closes. An independent 2-D finite-element solve confirms the finite-stator trend; a separate depth-resolved 3-D numerical formulation reproduces 1.042 kJ ideal work under shared assumptions. Circuit and selected-hardware effects remain open. The immediate two-body orbit change has a Cartesian check for an assumed historical 16.029 m/s release; the 1.60 lifetime multiplier has no independent rerun at that input. **VOLLEY itself has no built, fired, measured, qualified or flown hardware**.
 
 # 1. Configuration and evidence classes
 
@@ -18,6 +18,14 @@ Gen5 is a computational study of a sequential electromagnetic deployer for twelv
 ![Finite analytic force map](../figures/gen5_finite_force_map.png)
 
 An [independent 2-D finite-element solve](../validation/P119_gen5_finite_force_fem2d.md) uses a vector-potential PDE, finite seven-wavelength arrays and the drawn 162-belt stator. Its 1 mm mesh gives **1,081.6 J ideal in-plane work**, compared with 1,041.7 J from the 3-D analytic screen. The 2-to-1 mm mesh change is 0.59%. This supports the end-of-stator force decline by a different field method; the 2-D solve omits magnet-depth end effects and is not a 3-D motor validation.
+
+The [P121 independent depth-resolved 3-D surface-charge implementation](../validation/P121_gen5_finite_force_surface3d.md) calculates the full finite-depth cuboid field and integrates all 162 belts without calling the P118 field code. It finds **1,041.7 J ideal work**, agreeing with P118 to 4.35e-08%; face quadrature changes work by 0.00002% from 16 to 24 nodes and station refinement changes it by 0.096%. Seven independent air-field probes differ by at most 0.00002%. These close a numerical formulation check under shared magnetization, geometry and ideal-phase assumptions. They are not a 3-D FEM, a selected motor or measurement.
+
+The [P122 deterministic sensitivity sweep](../validation/P122_gen5_finite_force_sensitivity.md) gives **906.7 J at 14 mm face gap** versus 1,041.7 J at 12 mm, a 13.0% ideal-work decrease. A 16 mm gap gives 789.9 J; a 10 mm copper depth offset gives 961.2 J. These are illustrative perturbations, not supplier or fabrication tolerances, and do not define an achievable release speed.
+
+![Independent depth-resolved force cross-check](../figures/gen5_finite_force_surface3d.png)
+
+![Ideal finite-force geometry sensitivity](../figures/gen5_finite_force_sensitivity.png)
 
 ![Independent 2-D finite-element force comparison](../figures/gen5_finite_force_fem2d.png)
 
@@ -44,7 +52,7 @@ This report distinguishes **model output**, **independent numerical cross-check*
 | Closed-loop exit-speed dispersion | 0.0274 m/s, 3σ | Simulated sensor/uncertainty assumptions |
 | Modeled dry / loaded mass | 126.6 / 174.6 kg | Assumed and geometry-derived lines mixed |
 
-The shot trace below comes from `analysis/motor_model.py` and the checked-in model result. It is not an oscilloscope capture. The field plot is from the declared analytical field builder; separate 2-D and 3-D checks agree on *selected field quantities*, not on the complete depth-integrated thrust constant. Hot winding resistance, inverter switching, full bank supplier data and protection remain unresolved.
+The shot trace below comes from `analysis/motor_model.py` and the checked-in model result. It is not an oscilloscope capture. The field plot is from the declared analytical field builder; P121 separately checks the ideal full-depth force integral under shared linear magnetic assumptions. Hot winding resistance, inverter switching, full bank supplier data and protection remain unresolved.
 
 \begin{center}
 \includegraphics[width=0.74\linewidth]{../figures/F01_shot.png}\\
@@ -82,7 +90,7 @@ The [FreeCAD 1.0 CAD review](../cad/GEN5_CAD_REVIEW.pdf) releases a native `.FCS
 
 # 5. Evidence closure and review decision
 
-The [C-00–C-20 freeze register](../docs/GEN5_FREEZE_READINESS.md) is the authority for each unresolved question. A dated clean-snapshot gate run passed 148 tests and left tracked files clean; that gate does not rerun all native FEM, SPICE, GMAT or CAD studies, and companion files were unavailable inside that isolated snapshot. The present P115 and P116 checks reduce uncertainty on immediate two-body orbit geometry and expose a mechanical packaging failure. They do not close independent full-depth force, installed bank/inverter design, release contact, brake arrest/reset, moving-load structure, magnetic payload compatibility, thermal cycling, provider integration, disposal or complete mission delivery.
+The [C-00–C-20 freeze register](../docs/GEN5_FREEZE_READINESS.md) is the authority for each unresolved question. A dated clean-snapshot gate run passed 148 tests and left tracked files clean; that gate does not rerun all native FEM, SPICE, GMAT or CAD studies, and companion files were unavailable inside that isolated snapshot. P121 checks the ideal full-depth force by a second numerical formulation; P115 and P116 reduce uncertainty on immediate two-body orbit geometry and expose a mechanical packaging failure. They do not close a selected bank/inverter, release contact, brake arrest/reset, moving-load structure, magnetic payload compatibility, thermal cycling, provider integration, disposal or complete mission delivery.
 
 The college rubric calls for achievement of objectives, technical quality, validation, documentation and demonstration. It offers special recognition for a working prototype; it does not make a prototype a stated prerequisite for all 40 final marks. A professional final review should demonstrate the reproducible models and native CAD, show the failed criteria prominently, and explain what a later physical programme must measure. A literature analogy or polished render must not be described as a Gen5 physical validation.
 
