@@ -15,6 +15,10 @@ Gen5 is a computational study of a sequential electromagnetic deployer for twelv
 
 **New finite-geometry disposition.** The historical 16.029 m/s rating in the table below assumes periodic force over the 1.3 m powered stroke. A [finite-array/stator 3-D analytic integration](../validation/P118_gen5_finite_force_map.md) gives 1.042 kJ ideal work and a 12.448 m/s geometry-only speed under optimal phase with circuit losses omitted. The modeled magnet array has no direct stator overlap after 1.066 m travel. This challenges the rated performance claim and is not an independent FEM or hardware validation. The [unselected R1 FreeCAD feeder candidate](../cad/FEEDER_CANDIDATE_R1.pdf) clears twelve scripted envelope routes in a widened 570 mm enclosure, but no actuator, restraint or revised installed-system budgets exist. A [matched reference mission](../docs/MATCHED_MISSION_REFERENCE.md) includes dispenser mass and host recoil; no sampled twelve-shot option closes. These findings have not been rolled into the original rated shot, mass or lifetime models.
 
+![STEP-derived Gen5 reference assembly, enclosure hidden; reference placement has a known track/cassette clash.](../cad/renders/step_review/gen5_reference_open.jpg){width=95%}
+
+*Figure: FreeCAD-linked STEP geometry visualized in Blender. The enclosure is hidden; this is neither photographed hardware nor a manufacturing release. [Source and image provenance](../cad/renders/step_review/README.md).*
+
 ![Finite analytic force map](../figures/gen5_finite_force_map.png)
 
 An [independent 2-D finite-element solve](../validation/P119_gen5_finite_force_fem2d.md) uses a vector-potential PDE, finite seven-wavelength arrays and the drawn 162-belt stator. Its 1 mm mesh gives **1,081.6 J ideal in-plane work**, compared with 1,041.7 J from the 3-D analytic screen. The 2-to-1 mm mesh change is 0.59%. This supports the end-of-stator force decline by a different field method; the 2-D solve omits magnet-depth end effects and is not a 3-D motor validation.

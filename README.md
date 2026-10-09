@@ -8,6 +8,10 @@ VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3
 
 *Mission concept illustration. No host, launch provider, CubeSat, flight interface or trajectory has been approved for this design.*
 
+![Gen5 STEP-derived reference assembly with its enclosure hidden](cad/renders/step_review/gen5_reference_open.jpg)
+
+*Blender view tessellated from the [FreeCAD-linked STEP solids](cad/renders/step_review/README.md). The evaluated side-fed assembly **fails** its track/cassette fit check; the enclosure is hidden to expose the modeled parts. This is CAD visualization, not photographed or fabricated hardware.*
+
 **Read first:** [Computational review report](reports/GEN5_COMPUTATIONAL_REVIEW.pdf) · [FreeCAD/CAD report](cad/GEN5_CAD_REVIEW.pdf) · [Gen5 freeze readiness](docs/GEN5_FREEZE_READINESS.md) · [Remaining CAD and IEEE work](IEEE_AND_CAD_REMAINING_WORK.md) · [IEEE prior-art update](docs/IEEE_PRIOR_ART_UPDATE_2026-10-09.md) · [Market and spacecraft fit](MARKET_AND_CUSTOMER_FIT.md) · [Gen5 technical closure](docs/GEN5_CLOSURE.md) · [Full baseline](docs/BASELINE.md) · [Evidence provenance](docs/PROVENANCE.md) · [Open problems](OPEN_PROBLEMS.md) · [CAD](cad/README.md) · [Validation](validation/README.md)
 
 > **Evidence status, October 2026.** Gen5 is the selected computational design for academic review. Its configuration, model results and failed criteria are documented; [decisive verification items remain open](docs/GEN5_FREEZE_READINESS.md), so the final academic freeze has not been declared. No VOLLEY article has been built, fired, measured, qualified or flown; no complete installed-system or provider-specific interface has been validated. Published work on related systems is prior art and a source of assumptions, not a physical test of Gen5.
@@ -40,7 +44,7 @@ A [finite-force shot rerun](validation/P120_gen5_finite_coupled_shot.md) carries
 
 Gen5 places the release station 1.5 m from the breech on 1.8 m structural longerons, with a 1.3 m powered stroke. It models a double-sided ironless Halbach linear synchronous drive, reusable permanent-magnet sled, eddy-current arrest, capacitor pulse store and conceptual twelve-payload magazine. The satellite is intended to remain mechanically and electrically unmodified. The modeled acceleration is **10.07 g**, but that value does not qualify any real payload.
 
-<p align="center"><img src="cad/renders/gen5/hero_open.png" alt="Rendered Gen5 electromagnetic deployer, open configuration" width="68%"><br><sub>Gen5 CAD rendering; geometry and mass model, not fabricated hardware.</sub></p>
+<p align="center"><img src="cad/renders/step_review/gen5_drive_detail.jpg" alt="STEP-derived Gen5 track, stator and sled geometry" width="68%"><br><sub>Cropped reference CAD view. Switching, release contact and fabrication details are not defined by these solids.</sub></p>
 
 | Gen5 model output | Result | Evidence boundary |
 |:--|--:|:--|
@@ -89,7 +93,9 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 
 ## Inspect the hardware definition
 
-<p align="center"><img src="cad/renders/gen5/exploded.png" alt="Exploded Gen5 CAD model" width="49%"> <img src="figures/D02_layout.png" alt="Gen5 layout drawing" width="49%"></p>
+<p align="center"><img src="cad/renders/step_review/gen5_reference_closed.jpg" alt="STEP-derived outer Gen5 reference envelope, which conceals an unresolved internal clash" width="49%"> <img src="cad/renders/step_review/gen5_fit_plan.jpg" alt="STEP-derived top view of the Gen5 side-fed reference arrangement" width="49%"></p>
+
+*Left: closed external envelope; the internal clash cannot be seen from outside. Right: enclosure and payloads hidden to inspect the side-fed track/cassette placement. The [exact-solid packaging result](validation/P116_gen5_assembly_packaging.md), rather than pixel measurements, establishes the 11 mm shortfall.*
 
 The [Gen5 STEP parts](cad/step/gen5/), [native FreeCAD document](cad/native/Gen5_Review.FCStd), [FreeCAD assembly STEP](cad/step/gen5/VOLLEY_Review_Assembly_FreeCAD_Gen5.step), [renders](cad/renders/gen5/), [layout](figures/D02_layout.png) and [CAD audit](cad/GEN5_CAD_REVIEW.pdf) are reviewable design artifacts. The reference assembly **fails** the stated side-fed placement screen:
 
@@ -98,6 +104,8 @@ The [Gen5 STEP parts](cad/step/gen5/), [native FreeCAD document](cad/native/Gen5
 *The two 166 mm cassettes and 205 mm track require 537 mm across an internal 526 mm width before clearance. Exact STEP-solid intersection finds 32,915 mm³ overlap per cassette in the reference placement. [Rebuild and inspect](validation/P116_gen5_assembly_packaging.md).*
 
 ![Unselected R1 feeder geometry section](figures/gen5_feeder_candidate_r1.png)
+
+<p align="center"><img src="cad/renders/step_review/r1_candidate_open.jpg" alt="STEP-derived unselected R1 widened feeder candidate" width="49%"> <img src="cad/renders/step_review/r1_candidate_plan.jpg" alt="STEP-derived top view of the R1 feeder candidate" width="49%"></p>
 
 *An [unselected R1 feeder geometry](cad/FEEDER_CANDIDATE_R1.md) widens the enclosure to 570 mm and clears twelve scripted envelope routes and fixed-part swept-box checks. The [native FreeCAD document](cad/native/Feeder_Candidate_R1.FCStd) and [STEP files](cad/step/feeder_candidate_r1/) are review artifacts. No lift mechanism, retention, tolerances, supplier mass or approved host interface is defined; R1 does not change the evaluated Gen5 results.*
 

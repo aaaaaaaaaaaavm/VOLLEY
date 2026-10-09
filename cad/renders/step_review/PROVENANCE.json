@@ -1,0 +1,258 @@
+{
+  "evidence_class": "STEP-derived FreeCAD/Blender visualization, not measured hardware",
+  "exporter": "cad/tools/export_step_view_meshes.py",
+  "renderer": "cad/tools/render_step_review.py",
+  "blender_engine": "CYCLES",
+  "cycles_samples": 64,
+  "freecad_source": {
+    "gen5_reference": {
+      "native_document": "cad/native/Gen5_Review.FCStd",
+      "native_document_sha256": "301a360c51738bd2eaa1247f0d29876e89dffa6470de8fb7a6830c9a4d595403",
+      "source_steps": [
+        [
+          "cad/step/gen5/VOLLEY_Brake_Gen5.step",
+          "3b313f96dd48dd09eed7ae7c9933374e2a6d7a0cf31776e33062816d98feb3fb"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Enclosure_Gen5.step",
+          "283f494098dc9a6d98d27c1191bd573902848879bea5b0eec46ca2cf91411f51"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Interface_ESPA_Gen5.step",
+          "ad2804ec4f41f9d5a1acba7ead0229444174161d47f4759c833cca95c6e4dbe5"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Magazine_Cassette_Gen5.step",
+          "12a27918ba9113837308930cdcf0d60fe66a6cd3abde903a6c2e2d16cb98a433"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Payload_3U_Gen5.step",
+          "4eee305dab98bb763f602c6ed11c94f9fd532e7d59925f804899c6c899174dff"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Sled_Gen5.step",
+          "8bc91ae9f4185db908bc9c7e242f3dfa77e05acb0918e24ee6fa4b264d4c4f09"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Stator_Gen5.step",
+          "4d5c733bf544ce6f73736fa67166e0b9d2f1624cb6270a629dafbff0856b6d13"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Track_Gen5.step",
+          "3a03ef426fedfd00143c369fd01b41c18b6fa54752dc5721c136701c51ff900b"
+        ]
+      ]
+    },
+    "r1_candidate": {
+      "native_document": "cad/native/Feeder_Candidate_R1.FCStd",
+      "native_document_sha256": "97b95fe8c291771786c4af90a2038365dbc59182fbdd856fc4be684856f782b5",
+      "source_steps": [
+        [
+          "cad/step/feeder_candidate_r1/VOLLEY_Lift_Guides_R1.step",
+          "43dca555cb97d3a7a5eb616db28f69688391ebf350b4e53da0ad11a055571ec2"
+        ],
+        [
+          "cad/step/feeder_candidate_r1/VOLLEY_Open_Cassette_P_R1.step",
+          "051a81498ef3e7088849d01736932a6dfb65c47d2535c9fc7131aefadc7e4448"
+        ],
+        [
+          "cad/step/feeder_candidate_r1/VOLLEY_Open_Cassette_S_R1.step",
+          "b6498bb483ae1ea7c8803076af1fca0a0302086048727c7fa6df71eb6249297b"
+        ],
+        [
+          "cad/step/feeder_candidate_r1/VOLLEY_Wide_Enclosure_R1.step",
+          "f7c62ab408340e206f24e807da6bdae9dae433928e1d95774b672fe3394b35b6"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Brake_Gen5.step",
+          "3b313f96dd48dd09eed7ae7c9933374e2a6d7a0cf31776e33062816d98feb3fb"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Interface_ESPA_Gen5.step",
+          "ad2804ec4f41f9d5a1acba7ead0229444174161d47f4759c833cca95c6e4dbe5"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Payload_3U_Gen5.step",
+          "4eee305dab98bb763f602c6ed11c94f9fd532e7d59925f804899c6c899174dff"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Sled_Gen5.step",
+          "8bc91ae9f4185db908bc9c7e242f3dfa77e05acb0918e24ee6fa4b264d4c4f09"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Stator_Gen5.step",
+          "4d5c733bf544ce6f73736fa67166e0b9d2f1624cb6270a629dafbff0856b6d13"
+        ],
+        [
+          "cad/step/gen5/VOLLEY_Track_Gen5.step",
+          "3a03ef426fedfd00143c369fd01b41c18b6fa54752dc5721c136701c51ff900b"
+        ]
+      ]
+    }
+  },
+  "views": [
+    {
+      "file": "cad/renders/step_review/gen5_reference_open.jpg",
+      "sha256": "237b92f0a5ba4a4dae755fa2fd08544e159a3bc49e83456c9eb9858862e2c01e",
+      "configuration": "gen5_reference",
+      "omitted_instance_prefixes": [
+        "Enclosure"
+      ],
+      "only_instance_prefixes": [],
+      "meaning_and_limit": "Reference placement; track/cassette solids intersect.",
+      "title_on_image": "GEN5 / REFERENCE ASSEMBLY",
+      "status_on_image": "STEP-DERIVED CAD  |  ENCLOSURE HIDDEN  |  SIDE-FED FIT FAILS",
+      "included_instances": [
+        "Interface_ESPA",
+        "Track",
+        "Stator",
+        "Sled",
+        "Brake",
+        "Magazine_S",
+        "Payload_S01",
+        "Payload_S02",
+        "Payload_S03",
+        "Payload_S04",
+        "Payload_S05",
+        "Payload_S06",
+        "Magazine_P",
+        "Payload_P01",
+        "Payload_P02",
+        "Payload_P03",
+        "Payload_P04",
+        "Payload_P05",
+        "Payload_P06"
+      ]
+    },
+    {
+      "file": "cad/renders/step_review/gen5_reference_closed.jpg",
+      "sha256": "2916fd1401243f6dafe1f27c589d516e375e60d82f641f41c0e420def2ba1d6e",
+      "configuration": "gen5_reference",
+      "omitted_instance_prefixes": [],
+      "only_instance_prefixes": [],
+      "meaning_and_limit": "External envelope view; the concealed side-fed fit failure remains.",
+      "title_on_image": "GEN5 / CLOSED ENVELOPE",
+      "status_on_image": "STEP-DERIVED CAD  |  REFERENCE ONLY  |  INTERNAL CLASH NOT VISIBLE",
+      "included_instances": [
+        "Interface_ESPA",
+        "Track",
+        "Stator",
+        "Sled",
+        "Brake",
+        "Enclosure",
+        "Magazine_S",
+        "Payload_S01",
+        "Payload_S02",
+        "Payload_S03",
+        "Payload_S04",
+        "Payload_S05",
+        "Payload_S06",
+        "Magazine_P",
+        "Payload_P01",
+        "Payload_P02",
+        "Payload_P03",
+        "Payload_P04",
+        "Payload_P05",
+        "Payload_P06"
+      ]
+    },
+    {
+      "file": "cad/renders/step_review/gen5_fit_plan.jpg",
+      "sha256": "d88be415224f71cd1bb717923c3e874a81d80c7109673fee5d0d2ea908270b41",
+      "configuration": "gen5_reference",
+      "omitted_instance_prefixes": [
+        "Enclosure",
+        "Payload"
+      ],
+      "only_instance_prefixes": [],
+      "meaning_and_limit": "Top view of reference track and cassette placement; 11 mm width shortfall is from the exact-solid CAD audit.",
+      "title_on_image": "GEN5 / SIDE-FED TOP VIEW",
+      "status_on_image": "STEP-DERIVED CAD  |  ENCLOSURE + PAYLOADS HIDDEN  |  11 MM SHORTFALL",
+      "included_instances": [
+        "Interface_ESPA",
+        "Track",
+        "Stator",
+        "Sled",
+        "Brake",
+        "Magazine_S",
+        "Magazine_P"
+      ]
+    },
+    {
+      "file": "cad/renders/step_review/gen5_drive_detail.jpg",
+      "sha256": "3018ac4311222403c72edf2e5bda301efb97d0e5eb3225d25f9ccfb6cd930a59",
+      "configuration": "gen5_reference",
+      "omitted_instance_prefixes": [],
+      "only_instance_prefixes": [
+        "Track",
+        "Stator",
+        "Sled"
+      ],
+      "meaning_and_limit": "Cropped visualization of the reference track, stator and sled; no switching or release-contact mechanism shown.",
+      "title_on_image": "GEN5 / DRIVE GEOMETRY",
+      "status_on_image": "STEP-DERIVED CAD CROP  |  WINDING, CONTROL + HARDWARE UNSELECTED",
+      "included_instances": [
+        "Track",
+        "Stator",
+        "Sled"
+      ]
+    },
+    {
+      "file": "cad/renders/step_review/r1_candidate_open.jpg",
+      "sha256": "5c204d24c9f9517745f88e3dfbff295643405c3699b8a7d2a0f8981eff45c47a",
+      "configuration": "r1_candidate",
+      "omitted_instance_prefixes": [
+        "Wide_Enclosure_R1"
+      ],
+      "only_instance_prefixes": [],
+      "meaning_and_limit": "Separate widened 570 mm enclosure candidate; path screen only, not selected Gen5 hardware.",
+      "title_on_image": "R1 / FEEDER GEOMETRY CANDIDATE",
+      "status_on_image": "STEP-DERIVED CAD  |  ENCLOSURE HIDDEN  |  ACTUATION UNDESIGNED",
+      "included_instances": [
+        "Interface_ESPA",
+        "Track",
+        "Stator",
+        "Sled",
+        "Brake",
+        "Lift_Guides_R1",
+        "Open_Cassette_P_R1",
+        "Payload_P01",
+        "Payload_P02",
+        "Payload_P03",
+        "Payload_P04",
+        "Payload_P05",
+        "Payload_P06",
+        "Open_Cassette_S_R1",
+        "Payload_S01",
+        "Payload_S02",
+        "Payload_S03",
+        "Payload_S04",
+        "Payload_S05",
+        "Payload_S06"
+      ]
+    },
+    {
+      "file": "cad/renders/step_review/r1_candidate_plan.jpg",
+      "sha256": "63ef6f15925e834da84f16bce316d6d2557c21b269db1e4908b2c76a54371df4",
+      "configuration": "r1_candidate",
+      "omitted_instance_prefixes": [
+        "Wide_Enclosure_R1",
+        "Payload"
+      ],
+      "only_instance_prefixes": [],
+      "meaning_and_limit": "Separate R1 candidate top view; scripted route clears but actuator, retention, tolerance and mass remain open.",
+      "title_on_image": "R1 / TOP VIEW",
+      "status_on_image": "STEP-DERIVED CAD  |  ENCLOSURE + PAYLOADS HIDDEN  |  UNSELECTED",
+      "included_instances": [
+        "Interface_ESPA",
+        "Track",
+        "Stator",
+        "Sled",
+        "Brake",
+        "Lift_Guides_R1",
+        "Open_Cassette_P_R1",
+        "Open_Cassette_S_R1"
+      ]
+    }
+  ]
+}
