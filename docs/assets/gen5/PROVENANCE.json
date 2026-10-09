@@ -1,0 +1,89 @@
+{
+  "purpose": "GitHub Pages copies of checked Gen5 and R1 visual evidence; no physical measurements",
+  "assets": [
+    {
+      "file": "gen5_drive_detail.jpg",
+      "sha256": "3018ac4311222403c72edf2e5bda301efb97d0e5eb3225d25f9ccfb6cd930a59",
+      "source": "cad/renders/step_review/gen5_drive_detail.jpg",
+      "evidence_class": "STEP-derived geometry render"
+    },
+    {
+      "file": "gen5_energy_accounting.png",
+      "sha256": "6fab291293dc55d7af2a5011467e4c48bad6625329f5b6e70c097811164f3b6c",
+      "source": "figures/gen5_energy_accounting.png",
+      "evidence_class": "computational or CAD audit figure"
+    },
+    {
+      "file": "gen5_feeder_candidate_r1.png",
+      "sha256": "58985597161987ddfc79df042e0b2f58c3909fd0607bc67fad46b517d6d1d24a",
+      "source": "figures/gen5_feeder_candidate_r1.png",
+      "evidence_class": "computational or CAD audit figure"
+    },
+    {
+      "file": "gen5_finite_coupled_shot.png",
+      "sha256": "f1be92a6782c13a99d6fa36cf342c6da5e3fc1cdcc25072020ca22664622f119",
+      "source": "figures/gen5_finite_coupled_shot.png",
+      "evidence_class": "computational or CAD audit figure"
+    },
+    {
+      "file": "gen5_finite_force_fem2d.png",
+      "sha256": "d45e8dc6b8d9ddea3f0a5e65ef208d52a04c8acd9645ec608b5667a1d5186e3a",
+      "source": "figures/gen5_finite_force_fem2d.png",
+      "evidence_class": "computational or CAD audit figure"
+    },
+    {
+      "file": "gen5_finite_force_map.png",
+      "sha256": "a947fc5ebde8086a6e8e8325925d22f69a884dd0846de1997c19639f5e189f2c",
+      "source": "figures/gen5_finite_force_map.png",
+      "evidence_class": "computational or CAD audit figure"
+    },
+    {
+      "file": "gen5_fit_plan.jpg",
+      "sha256": "d88be415224f71cd1bb717923c3e874a81d80c7109673fee5d0d2ea908270b41",
+      "source": "cad/renders/step_review/gen5_fit_plan.jpg",
+      "evidence_class": "STEP-derived geometry render"
+    },
+    {
+      "file": "gen5_mass_decision.png",
+      "sha256": "f97c88b85e24b1fe28cca0e172126ba67d76e06bc17988eb1877b5f41d73743a",
+      "source": "figures/gen5_mass_decision.png",
+      "evidence_class": "computational or CAD audit figure"
+    },
+    {
+      "file": "gen5_packaging_section.svg",
+      "sha256": "521723aee22dcc46be593da68730f69ee29c707ad7c739ecdd2e8899db49fc0e",
+      "source": "figures/gen5_packaging_section.svg",
+      "evidence_class": "computational or CAD audit figure"
+    },
+    {
+      "file": "gen5_reference_closed.jpg",
+      "sha256": "2916fd1401243f6dafe1f27c589d516e375e60d82f641f41c0e420def2ba1d6e",
+      "source": "cad/renders/step_review/gen5_reference_closed.jpg",
+      "evidence_class": "STEP-derived geometry render"
+    },
+    {
+      "file": "gen5_reference_open.jpg",
+      "sha256": "237b92f0a5ba4a4dae755fa2fd08544e159a3bc49e83456c9eb9858862e2c01e",
+      "source": "cad/renders/step_review/gen5_reference_open.jpg",
+      "evidence_class": "STEP-derived geometry render"
+    },
+    {
+      "file": "matched_mission_reference.png",
+      "sha256": "228fd1b68477f56b159c2fd8cb670b69e0ad6ae455314eda0b506b6f6f6fbf7a",
+      "source": "figures/matched_mission_reference.png",
+      "evidence_class": "computational or CAD audit figure"
+    },
+    {
+      "file": "r1_candidate_open.jpg",
+      "sha256": "5c204d24c9f9517745f88e3dfbff295643405c3699b8a7d2a0f8981eff45c47a",
+      "source": "cad/renders/step_review/r1_candidate_open.jpg",
+      "evidence_class": "STEP-derived geometry render"
+    },
+    {
+      "file": "r1_candidate_plan.jpg",
+      "sha256": "63ef6f15925e834da84f16bce316d6d2557c21b269db1e4908b2c76a54371df4",
+      "source": "cad/renders/step_review/r1_candidate_plan.jpg",
+      "evidence_class": "STEP-derived geometry render"
+    }
+  ]
+}
