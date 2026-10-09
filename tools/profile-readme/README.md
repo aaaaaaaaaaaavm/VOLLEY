@@ -8,9 +8,9 @@ I like problems that survive the first calculation. My main project is **VOLLEY*
 
 [Explore VOLLEY](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Explore BOLLEY](https://aaaaaaaaaaaavm.github.io/VOLLEY/bolley.html) · [Engineering record](https://github.com/aaaaaaaaaaaavm/VOLLEY) · [Contact](mailto:adityavardhanmishr@gmail.com)
 
-<p align="center"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/gen5/hero_open.png" alt="Frozen Gen5 electromagnetic comparison model, a historical model, not a physical release test" width="100%"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY/main/cad/renders/sequence/gen5_operations_hero.png" alt="Four STEP-derived Blender views showing intended Gen5 operations; the evaluated reference fit and 3U mass criteria fail" width="100%"></p>
 
-*The image is nominal CAD of the frozen Gen5 comparator. VOLLEY and BOLLEY are computational design studies. Nothing in either project has been built, measured, qualified or flown.*
+*The storyboard is conceptual motion from FreeCAD-linked STEP geometry, not a mechanism test. The current Gen5 academic evaluation fails its reference fit and 3U installed-mass criteria; final freeze is open. Nothing in VOLLEY or BOLLEY has been built, measured, qualified or flown. [Watch the eight-second Gen5 sequence](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/cad/renders/sequence/gen5_intended_sequence.mp4).*
 
 ## Start with the question, then inspect the evidence
 
@@ -20,17 +20,17 @@ I like problems that survive the first calculation. My main project is **VOLLEY*
 | **[BOLLEY](https://github.com/aaaaaaaaaaaavm/BOLLEY)** | Does a passive spacecraft interface justify its mass by letting the launcher remove the moving sled and return mechanism? | [Selected winding and drive](https://github.com/aaaaaaaaaaaavm/BOLLEY/blob/main/docs/CURRENT_REVIEW.md) |
 | **[GatewayCX](https://github.com/aaaaaaaaaaaavm/GatewayCX)** | How should ordinary network applications survive long delays and interrupted Earth–Moon links? | [Architecture and executable software evidence](https://github.com/aaaaaaaaaaaavm/GatewayCX#readme) |
 
-## VOLLEY: the mechanism has changed because the results changed
+## VOLLEY: evaluate one configuration, then decide what follows
 
-The frozen electromagnetic Gen5 model gives 16.029 m/s at 10.07 g, with a 126.6 kg dry mass. Its mass comparison failed. I retain that design, its nominal CAD, structural and field studies, and the calculations that rejected its original mass claim.
+Gen5 is the controlled computational configuration for academic review. Its historical periodic model returned **16.029 m/s at 10.07 g** and a **126.6 kg** modeled dry mass. A finite-geometry force screen challenges that speed with an ideal-phase **12.448 m/s** result; neither is a demonstrated release setting. The modeled **10.55 kg per 3U** fails the installed-mass screen, and the side-fed reference STEP assembly has an **11 mm width shortfall**. The final freeze remains open while these and other verification items are resolved or dispositioned.
 
-**Gen6 is in development. No mechanism or speed range is selected or validated.** The independent motor-charged spring-cell bank and the long gas guide are unselected studies. The next architecture must recover VOLLEY's shared sequential loading path and individually commanded release speed.
+**Gen6 is future scaling research toward a 1 km/s-class objective.** No mechanism, payload class or speed range is selected or validated. The independent motor-charged spring-cell bank and long gas guide remain unselected historical studies.
 
-The mission work compares release authority with host manoeuvres and competent spring/timing alternatives. The two-payload study retained 100 tested campaign cases, 44 of which met its terminal-state bands. Higher available ejection speed did not automatically reduce fuel: three authority screens tied at the same best tested point. That is a bounded result, not an optimum or a provider-approved mission.
+The mission work compares release authority with host manoeuvres and competent spring/timing alternatives. A historical two-payload screen found accepted cases under its assumptions, but the later matched twelve-shot reference does **not** close in any sampled case. Neither study establishes product value or a provider-approved mission.
 
 What I want a reviewer to inspect:
 
-- [The campaign calculation](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/MANIFEST_TIMING.md): one evolving host, explicit payload order and terminal position/velocity.
+- [The matched mission reference](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/MATCHED_MISSION_REFERENCE.md): one declared host, payload and target compared across release concepts.
 - [The open-problem register](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/OPEN_PROBLEMS.md): corrections and failed claims remain visible.
 - [The evidence boundary](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/PROVENANCE.md): model output, cross-checks, nominal CAD and missing measurement are kept distinct.
 - [The reproduction route](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/CONTRIBUTING.md): acceptance criteria before execution, source hashes and executable checks.
@@ -69,6 +69,6 @@ I contributed to Team THRUST's payload-deployment work for the payload that plac
 
 My engineering work uses Python for numerics and traceability, parametric CAD, field and structural solvers, and independent checks of equations and units. [The skills evidence map](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/SKILLS.md) points to the actual files.
 
-[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) holds the authored Gen5 manuscript and generated evidence snapshot. [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) holds the thesis work. [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) preserves exploratory and rejected branches.
+[VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) holds the standalone IEEE-formatted Gen5 manuscript and evidence package; it has not been submitted. [VOLLEY-thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) holds the standalone college review, report, presentation and local evidence. [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) preserves exploratory and rejected branches.
 
 [adityavardhanmishr@gmail.com](mailto:adityavardhanmishr@gmail.com) · [LinkedIn](https://www.linkedin.com/in/adityavardhanmishra/) · Pune, India
