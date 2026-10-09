@@ -2,7 +2,7 @@
 
 ### A computational design study for sequential CubeSat deployment
 
-VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3U CubeSats through one reusable launch path and command an individual departure speed for each release. **Gen5 is the fixed academic design baseline.** Gen6 is a separate, future scaling programme toward a 1 km/s-class objective; it has no selected mechanism or validated performance.
+VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3U CubeSats through one reusable launch path and command an individual departure speed for each release. **Gen5 is the controlled academic evaluation snapshot, with a negative 3U selection finding.** Its final engineering release and academic freeze are open. Gen6 is a separate, future architecture trade toward a 1 km/s-class objective; it has no selected mechanism or validated performance.
 
 ![Conceptual host and sequential departures](docs/assets/hero_departure.svg)
 
@@ -102,4 +102,4 @@ For **Gen6**, the 1 km/s-class goal is only a research target. Ideal constant-ac
 | [VOLLEY-paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) | Self-contained IEEE-formatted manuscript and reproducibility package; venue not yet selected |
 | [VOLLEY-lab](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) | Explored, rejected or gated alternative architectures and the reasons they stopped |
 
-**Reproduce and audit:** [verification entry point](tools/verify_all.sh) · [figure index](docs/FIGURE_INDEX.md) · [literature](docs/LITERATURE.md) · [prior art](docs/PRIOR_ART.md) · [change history](CHANGELOG.md). Review acceptance bands and failures before citing any headline number.
+**Reproduce and audit:** [verification entry point](tools/verify_all.sh) · [four-repository adversarial review](docs/FOUR_REPO_AUDIT_2026-10-09.md) · [figure index](docs/FIGURE_INDEX.md) · [literature](docs/LITERATURE.md) · [prior art](docs/PRIOR_ART.md) · [change history](CHANGELOG.md). Review acceptance bands and failures before citing any headline number.

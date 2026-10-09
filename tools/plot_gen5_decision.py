@@ -68,9 +68,9 @@ def energy_accounting():
     fig, ax = plt.subplots(figsize=(8.6, 3.8), dpi=160)
     fig.patch.set_facecolor("white")
     ax.set_facecolor("#f7fafc")
-    ax.barh(["Energy per rated shot"], [payload], color="#197e91", height=0.48,
+    ax.barh(["Historical model shot"], [payload], color="#197e91", height=0.48,
             label="Payload kinetic energy")
-    ax.barh(["Energy per rated shot"], [other], left=[payload], color="#8497a5",
+    ax.barh(["Historical model shot"], [other], left=[payload], color="#8497a5",
             height=0.48, label="Other net energy")
     ax.text(payload/2, 0, f"Payload\n{payload:.0f} J", ha="center", va="center",
             color="white", fontweight="bold")
@@ -79,7 +79,7 @@ def energy_accounting():
     ax.set_xlim(0, 3100)
     ax.set_yticks([])
     ax.set_xlabel("Energy (J)")
-    ax.set_title("Rated Gen5 shot: energy entering the payload",
+    ax.set_title("Historical periodic-model shot: energy allocation",
                  loc="left", pad=13, fontweight="bold", color="#102d44")
     ax.grid(axis="x", color="#d7e0e7", lw=0.8)
     ax.set_axisbelow(True)
