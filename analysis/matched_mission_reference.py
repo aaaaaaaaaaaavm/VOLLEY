@@ -11,11 +11,13 @@ import argparse
 import hashlib
 import json
 import math
+import platform
 from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import scipy
 from scipy.optimize import brentq
 
 import astro
@@ -100,6 +102,8 @@ def build():
     vc = math.sqrt(astro.MU/r)
     sma = 1/(2/r-(vc+TARGET_DV)**2/astro.MU)
     return dict(status="MATCHED_REFERENCE_SCREEN_NOT_PROVIDER_MISSION_OR_HARDWARE_VALIDATION",
+                software_versions=dict(python=platform.python_version(),scipy=scipy.__version__,
+                                       matplotlib=matplotlib.__version__),
                 input=dict(altitude_m=ALT, payload_kg=PAYLOAD, count=N,
                            host_base_dry_kg=BASE_HOST_DRY, host_initial_fuel_kg=FUEL,
                            reserve_kg=RESERVE, isp_s=fb.ISP_S,

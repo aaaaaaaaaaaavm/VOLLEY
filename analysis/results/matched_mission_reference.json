@@ -1,5 +1,10 @@
 {
   "status": "MATCHED_REFERENCE_SCREEN_NOT_PROVIDER_MISSION_OR_HARDWARE_VALIDATION",
+  "software_versions": {
+    "python": "3.12.14",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1"
+  },
   "input": {
     "altitude_m": 450000.0,
     "payload_kg": 4.0,
@@ -208,9 +213,9 @@
     "differential drag: cannot provide this immediate same-epoch target; long-deadline trade separate"
   ],
   "source_sha256": {
-    "analysis/matched_mission_reference.py": "b71708863158809a9669041fee31e9eb19fddccba22344340ea8402b811afc5a",
+    "analysis/matched_mission_reference.py": "834ff8130bdd9f7e14d966b622e310d49e18dabcf7ba845af11adfaec51da12a",
     "analysis/manifest_finite_burn.py": "0612e9844861c3824eba532689a357bfd17624c0a313b9f035a67050c221c937",
     "analysis/finite_burn_departure.py": "ee64668b33943c0be12d0a29fe55be0a27901471fe53205f18a5b64749b6e406",
-    "analysis/results/gen5_finite_force_map.json": "5e32bb2658797886f302fb9fe4b2cec7fea81ffad19b9790dfd6b3026f068c28"
+    "analysis/results/gen5_finite_force_map.json": "01dfc9743ba37ccc25f0591afa21479e8fa6500f2792a43bfcafdf3ed5cb21c0"
   }
 }

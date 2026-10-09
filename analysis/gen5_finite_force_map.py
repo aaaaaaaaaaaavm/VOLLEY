@@ -13,12 +13,14 @@ import argparse
 import hashlib
 import json
 import math
+import platform
 from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+import magpylib
 
 import field_3d
 import motor_model as mm
@@ -106,6 +108,8 @@ def build(step=0.025, order=(3, 3, 5)) -> dict:
     no_geometric_overlap_after = stator["active_span_end"] / 1000 - 0.230
     return dict(status="MODEL_SCREEN_NOT_FEM_OR_HARDWARE_VALIDATION",
                 method="3-D analytic cuboid field; volume-integrated J cross B in finite stator belts; ideal phase at every station",
+                software_versions=dict(python=platform.python_version(),numpy=np.__version__,
+                                       matplotlib=matplotlib.__version__,magpylib=magpylib.__version__),
                 parameter_sha256=hashlib.sha256(PARAM.read_bytes()).hexdigest(),
                 source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                 model_3d_field_source="analysis/field_3d.py; same analytic field law as motor_model.py",

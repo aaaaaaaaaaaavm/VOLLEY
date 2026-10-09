@@ -1,8 +1,14 @@
 {
   "status": "MODEL_SCREEN_NOT_FEM_OR_HARDWARE_VALIDATION",
   "method": "3-D analytic cuboid field; volume-integrated J cross B in finite stator belts; ideal phase at every station",
+  "software_versions": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.1",
+    "magpylib": "5.2.3"
+  },
   "parameter_sha256": "bb18ba845cdafc4569b7a16f2a34e6a38812f2765b4ee3aa6c96dc507387a3f3",
-  "source_sha256": "3b56274093199f425e86a19214f4db5596ad239b137a60cf5cd572e5024cc415",
+  "source_sha256": "4b0ae9ea54bbb24ccbda5e34e2e0e1b3eb25c52d85e68313770c583539e9f107",
   "model_3d_field_source": "analysis/field_3d.py; same analytic field law as motor_model.py",
   "cad_to_field_axes": "CAD y=depth, z=gap; field model y=gap, z=depth",
   "magnetic_length_m": 0.336,
