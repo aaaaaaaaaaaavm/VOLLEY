@@ -1,5 +1,11 @@
 # Change log / audit record
 
+## 2026-10-09: finite-stator finding, R1 feeder geometry and matched reference
+
+P118 integrated the existing 3-D analytic cuboid field through the finite 162-belt Gen5 stator. The result is 1.042 kJ ideal work and 12.448 m/s geometry-only under ideal phase, challenging the historical periodic-force 16.029 m/s shot. It is not independent FEM. Quadrature/station convergence is recorded. The [change-impact record](docs/GEN5_2026_10_09_FINDING_DISPOSITION.md) identifies every coupled shot, power, control and orbital claim that must be rerun before a corrected performance rating.
+
+An unselected 570 mm enclosure/side-transfer R1 candidate was exported as CadQuery and native FreeCAD STEP, with exact-solid static and twelve-route swept-envelope checks. It has no lift/retention design or revised installed mass. A same-input spring/Gen5 host screen includes device mass and recoil; its sampled twelve-shot optimizer closes no option. The research result, limitations and figures were carried into the review report, thesis and IEEE-formatted manuscript while the evaluated Gen5 inputs remain unchanged.
+
 ## 2026-09-16: combined errors, reference-cell mechanics and review surfaces
 
 I declared P113-S6 and P92-S2 in f0026a7 before implementing or executing them. S6 retains

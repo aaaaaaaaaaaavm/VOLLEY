@@ -1,0 +1,357 @@
+{
+  "status": "UNSELECTED_R1_GEOMETRY_SCREEN_NOT_FLIGHT_DESIGN",
+  "parameter_sha256": "bb18ba845cdafc4569b7a16f2a34e6a38812f2765b4ee3aa6c96dc507387a3f3",
+  "external_width_mm": 570.0,
+  "previous_width_mm": 530,
+  "internal_width_mm": 566.0,
+  "cassette_centers_y_mm": [
+    -190.5,
+    190.5
+  ],
+  "cassette_to_track_clearance_mm": 5.0,
+  "static": {
+    "track_cassette_mm3": {
+      "1": 0.0,
+      "-1": 0.0
+    },
+    "cassette_enclosure_mm3": {
+      "1": 0.0,
+      "-1": 0.0
+    },
+    "track_lift_mm3": 0.0,
+    "sled_lift_mm3": 0.0,
+    "cassette_outer_clearance_mm": 9.5
+  },
+  "routes": [
+    {
+      "side": "P",
+      "cell": 1,
+      "source_center_y_mm": 190.5,
+      "source_bottom_z_mm": 26,
+      "horizontal_then_vertical_samples": 10,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "P",
+      "cell": 2,
+      "source_center_y_mm": 190.5,
+      "source_bottom_z_mm": 130,
+      "horizontal_then_vertical_samples": 13,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "P",
+      "cell": 3,
+      "source_center_y_mm": 190.5,
+      "source_bottom_z_mm": 234,
+      "horizontal_then_vertical_samples": 17,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "P",
+      "cell": 4,
+      "source_center_y_mm": 190.5,
+      "source_bottom_z_mm": 338,
+      "horizontal_then_vertical_samples": 21,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "P",
+      "cell": 5,
+      "source_center_y_mm": 190.5,
+      "source_bottom_z_mm": 442,
+      "horizontal_then_vertical_samples": 25,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "P",
+      "cell": 6,
+      "source_center_y_mm": 190.5,
+      "source_bottom_z_mm": 546,
+      "horizontal_then_vertical_samples": 29,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "S",
+      "cell": 1,
+      "source_center_y_mm": -190.5,
+      "source_bottom_z_mm": 26,
+      "horizontal_then_vertical_samples": 10,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "S",
+      "cell": 2,
+      "source_center_y_mm": -190.5,
+      "source_bottom_z_mm": 130,
+      "horizontal_then_vertical_samples": 13,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "S",
+      "cell": 3,
+      "source_center_y_mm": -190.5,
+      "source_bottom_z_mm": 234,
+      "horizontal_then_vertical_samples": 17,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "S",
+      "cell": 4,
+      "source_center_y_mm": -190.5,
+      "source_bottom_z_mm": 338,
+      "horizontal_then_vertical_samples": 21,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "S",
+      "cell": 5,
+      "source_center_y_mm": -190.5,
+      "source_bottom_z_mm": 442,
+      "horizontal_then_vertical_samples": 25,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    },
+    {
+      "side": "S",
+      "cell": 6,
+      "source_center_y_mm": -190.5,
+      "source_bottom_z_mm": 546,
+      "horizontal_then_vertical_samples": 29,
+      "maximum_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "conservative_swept_envelope_intersection_mm3": {
+        "cassette": 0.0,
+        "opposite_cassette": 0.0,
+        "track": 0.0,
+        "stator": 0.0,
+        "sled": 0.0,
+        "enclosure": 0.0,
+        "lift": 0.0
+      },
+      "clear": true
+    }
+  ],
+  "all_routes_clear": true,
+  "enclosure_added_skin_mass_proxy_kg": 0.9910079999979884,
+  "step_files_sha256": {
+    "VOLLEY_Wide_Enclosure_R1.step": "f7c62ab408340e206f24e807da6bdae9dae433928e1d95774b672fe3394b35b6",
+    "VOLLEY_Open_Cassette_P_R1.step": "051a81498ef3e7088849d01736932a6dfb65c47d2535c9fc7131aefadc7e4448",
+    "VOLLEY_Open_Cassette_S_R1.step": "b6498bb483ae1ea7c8803076af1fca0a0302086048727c7fa6df71eb6249297b",
+    "VOLLEY_Lift_Guides_R1.step": "43dca555cb97d3a7a5eb616db28f69688391ebf350b4e53da0ad11a055571ec2",
+    "VOLLEY_Feeder_Assembly_R1.step": "4f1a852b95bf7ecd26d2fd3a46304b2f0ba8cefaf6938cd562e17142644daad2"
+  },
+  "step_assembly_readback_valid": true,
+  "unresolved": [
+    "no actuator, lift carriage or motor package",
+    "no launch retention gate or load path",
+    "no fastener/harness/thermal/tolerance clearance",
+    "no provider ICD or named payload",
+    "larger enclosure invalidates Gen5 mass, structural and host envelopes",
+    "rigid swept-envelope screen excludes dynamics, elastic deflection and fault cases"
+  ]
+}

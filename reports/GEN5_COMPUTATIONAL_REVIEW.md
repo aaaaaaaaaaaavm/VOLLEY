@@ -13,6 +13,14 @@ Gen5 is a fixed computational study of a sequential electromagnetic deployer for
 
 # 1. Configuration and evidence classes
 
+**New finite-geometry disposition.** The historical 16.029 m/s rating in the table below assumes periodic force over the 1.3 m powered stroke. A [finite-array/stator 3-D analytic integration](../validation/P118_gen5_finite_force_map.md) gives 1.042 kJ ideal work and a 12.448 m/s geometry-only speed under optimal phase with circuit losses omitted. The modeled magnet array has no direct stator overlap after 1.066 m travel. This challenges the rated performance claim and is not an independent FEM or hardware validation. The [unselected R1 FreeCAD feeder candidate](../cad/FEEDER_CANDIDATE_R1.pdf) clears twelve scripted envelope routes in a widened 570 mm enclosure, but no actuator, restraint or revised installed-system budgets exist. A [matched reference mission](../docs/MATCHED_MISSION_REFERENCE.md) includes dispenser mass and host recoil; no sampled twelve-shot option closes. These findings have not been rolled into the original rated shot, mass or lifetime models.
+
+![Finite analytic force map](../figures/gen5_finite_force_map.png)
+
+![Matched reference mission](../figures/matched_mission_reference.png)
+
+![Unselected R1 geometry section](../figures/gen5_feeder_candidate_r1.png)
+
 The [configuration index](../docs/GEN5_CONFIGURATION_INDEX.json) hashes the eight source STEP parts, the FreeCAD exports and native document, geometry parameters, governing model code and result files. Its status is `COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE`; identity of files is not proof that an equation or material assumption is correct. The reference host is a 450 km circular orbit with a tangential prograde impulse for the orbital comparison, not a provider-approved mission. No named flight CubeSat, provider ICD or full installed system exists.
 
 This report distinguishes **model output**, **independent numerical cross-check**, **prior-art support**, and **physical measurement**. The last class is empty for Gen5. A plot exported by a Python model is not a screenshot of a solver or an experimental trace. The CAD views are B-rep visualizations. The [figure evidence index](../docs/FIGURE_INDEX.md) and individual run sheets identify each image's source.
@@ -21,7 +29,7 @@ This report distinguishes **model output**, **independent numerical cross-check*
 
 | Quantity | Rated model value | Boundary |
 |:--|--:|:--|
-| Exit speed, 3U | 16.029 m/s | Calculated operating point |
+| Exit speed, 3U | 16.029 m/s | Historical periodic-model operating point, challenged by finite geometry |
 | Peak acceleration | 10.068 g | Payload load not qualified |
 | Gross / net electrical draw | 2782.391 / 2735.3 J | Coupled circuit/dynamics model |
 | Net electrical-to-payload efficiency | 18.79% | Modeled recovery and losses |
@@ -70,7 +78,7 @@ The [C-00–C-20 freeze register](../docs/GEN5_FREEZE_READINESS.md) is the autho
 
 The college rubric calls for achievement of objectives, technical quality, validation, documentation and demonstration. It offers special recognition for a working prototype; it does not make a prototype a stated prerequisite for all 40 final marks. A professional final review should demonstrate the reproducible models and native CAD, show the failed criteria prominently, and explain what a later physical programme must measure. A literature analogy or polished render must not be described as a Gen5 physical validation.
 
-**Release decision:** Gen5 is a complete *reported computational experiment* at the specified model points, with a negative current 3U hardware selection result. It is **not** a complete deployer product, a provider-approved flight design, or a final evidence freeze. Gen6's 1 km/s-class objective remains a distinct research direction; it cannot repair a failed Gen5 criterion by changing the label.
+**Release decision:** Gen5 is a documented computational design study with an unresolved internal performance discrepancy and negative 3U mass/fit findings. It is **not** a complete deployer product, a provider-approved flight design, or a final evidence freeze. Gen6's 1 km/s-class objective remains a distinct research direction; it cannot repair a failed Gen5 criterion by changing the label.
 
 # Reproduce and audit
 

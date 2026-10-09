@@ -56,6 +56,9 @@ New mission figures below name their own local generator.
 | P113-S16 | Same-epoch phasing after a 468 s wait with first-payload differential impulses | `analysis/phasing_reference.py` | `phasing_reference.json`, two-body initial states | Zero impulse stays at zero relative phase; nonzero curves require a relative-state change | M |
 | P115 | Current rated prograde impulse versus immediate 450 km orbit geometry | `analysis/rated_orbit_independent.py` | Cartesian DOP853 propagation and vis-viva identity | 16.029 m/s input gives 28.800775 km axis rise; lifetime and mission excluded | X, two-body orbit quantity only |
 | P116 | Gen5 side-fed transverse assembly section | `cad/plot_review_packaging.py` | `cad/REVIEW_ASSEMBLY.json` and `cad/parameters.json` | 11 mm width shortfall and exact-solid track/cassette overlap in the reference placement | X, CadQuery/FreeCAD overlap agree |
+| P118 | Finite Gen5 3-D analytic force versus sled position | `analysis/gen5_finite_force_map.py` | Finite 162-belt CAD geometry, analytic cuboid magnet field | 1.042 kJ ideal work; 12.448 m/s geometry-only speed; historical 16.029 m/s challenged | M, not independent FEM |
+| R1 feeder | Unselected widened-enclosure section and 3U transfer path | `cad/plot_feeder_candidate_r1.py` | `cad/FEEDER_CANDIDATE_R1.json`, FreeCAD STEP readback | Twelve scripted envelope routes clear; lift/retention unmodeled | M/X geometry only |
+| Matched reference | Same-epoch host preburn and finite-burn accepted prefixes | `analysis/matched_mission_reference.py` | Common-input reference manifest and assumed device masses | Spring 4/12, finite Gen5 1/12, historical Gen5 1/12; no full campaign | M, bounded optimizer |
 
 Numbering note: there is no F10. It was withdrawn and the gap is left rather than
 renumbered, so a reference to F10 in any older document resolves to nothing instead of silently

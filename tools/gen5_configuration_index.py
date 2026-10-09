@@ -24,6 +24,10 @@ SOURCES = [
     "analysis/results/phasing_reference.json", "docs/BASELINE.md",
     "validation/P115_rated_orbit_cartesian.md", "validation/P116_gen5_assembly_packaging.md",
     "validation/P117_rated_energy_mass_audit.md", "reports/GEN5_COMPUTATIONAL_REVIEW.pdf",
+    "analysis/gen5_finite_force_map.py", "analysis/results/gen5_finite_force_map.json",
+    "validation/P118_gen5_finite_force_map.md",
+    "analysis/matched_mission_reference.py", "analysis/results/matched_mission_reference.json",
+    "docs/MATCHED_MISSION_REFERENCE.md",
 ]
 
 
@@ -47,6 +51,7 @@ def main() -> None:
         raise SystemExit(f"missing configuration inputs: {missing}")
     mass = json.loads((ROOT / "analysis/results/mass_properties.json").read_text())
     motor = json.loads((ROOT / "analysis/results/motor_results.json").read_text())
+    finite = json.loads((ROOT / "analysis/results/gen5_finite_force_map.json").read_text())
     result = {
         "configuration_id": "VOLLEY-GEN5-ACADEMIC-2026-10-09",
         "status": "COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE",
@@ -57,6 +62,12 @@ def main() -> None:
             "sled_mass_kg": mass["sled_kg"],
             "exit_speed_m_s": motor["shot"]["v_exit"],
             "net_energy_J": motor["E_drawn_net_J"],
+        },
+        "headline_status": "Historical periodic-force speed is challenged by the finite-array/stator screen; no accepted performance rating",
+        "finite_geometry_finding": {
+            "ideal_work_J": finite["ideal_finite_stator_work_J"],
+            "ideal_phase_geometry_only_speed_m_s": finite["ideal_finite_stator_exit_upper_m_s"],
+            "independent_3d_force_fem": False,
         },
         "files": {str(p.relative_to(ROOT)): digest(p) for p in paths},
         "exclusions": [

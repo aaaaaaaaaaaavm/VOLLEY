@@ -9,13 +9,17 @@
   ],
   "files": {
     "analysis/astro.py": "8906c54ef52209a4ab6a58156c5cbb1a153d65dbbe6e50bd65ef75ac805dedeb",
+    "analysis/gen5_finite_force_map.py": "3b56274093199f425e86a19214f4db5596ad239b137a60cf5cd572e5024cc415",
     "analysis/mass_properties.py": "b8547e763806b0c740ee342c3278d85b1295d18f7cfe52be5239c9136c08d777",
+    "analysis/matched_mission_reference.py": "b71708863158809a9669041fee31e9eb19fddccba22344340ea8402b811afc5a",
     "analysis/motor_model.py": "aafef3beb496e8db3bb96c9314bd604a5976c24ccc856335bf2db67f3f8fa0f2",
     "analysis/rated_energy_mass_audit.py": "99dd1e3a136bd9fae43c86dbcfeb97238a4c54854acf8228b84facf27dcb05da",
     "analysis/rated_orbit_independent.py": "0a1f4821384d6f6e404b6c2baf576df3e41886c14f31cb5a341f7ffae4585b52",
     "analysis/results/astro_results.json": "092c12fac9d89fcc464169e261babaaa1245b5047e4ec145d7d38ff69396f660",
+    "analysis/results/gen5_finite_force_map.json": "5e32bb2658797886f302fb9fe4b2cec7fea81ffad19b9790dfd6b3026f068c28",
     "analysis/results/manifest_finite_burn.json": "c9260a39550a6c4f90c2527ce1c649296cab92614c36f738880af171b61698b0",
     "analysis/results/mass_properties.json": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
+    "analysis/results/matched_mission_reference.json": "c7b7b7b67f7e2ba61e1aa98f8f263ffcb716443e2ca66981319cf891620f76ae",
     "analysis/results/motor_results.json": "afadd4d66271d9d1476b294ecea2723500ad813c0adc6d9648a07b83692c3875",
     "analysis/results/phasing_reference.json": "f9b7a450dc986f6fe7596bfadf3c7f9c3bc2104725873e030aee45f35b2d2238",
     "analysis/results/rated_energy_mass_audit.json": "89ce8bdb5423c6ef1c20551031dc02373b662401a34a491574a70049ca66bb0a",
@@ -49,10 +53,17 @@
     "cad/step/gen5/VOLLEY_Stator_Gen5.step": "4d5c733bf544ce6f73736fa67166e0b9d2f1624cb6270a629dafbff0856b6d13",
     "cad/step/gen5/VOLLEY_Track_Gen5.step": "3a03ef426fedfd00143c369fd01b41c18b6fa54752dc5721c136701c51ff900b",
     "docs/BASELINE.md": "9a5b42e3bdd65e9741fdd69dce31e0f2f128c5f3b816855aa8e8807c4dbb6009",
-    "reports/GEN5_COMPUTATIONAL_REVIEW.pdf": "b44f2582802162a4e116363ff886ce267b255c7f5dd9fba2907cfd2eb35e08ee",
+    "docs/MATCHED_MISSION_REFERENCE.md": "e14f1790ed3156e5bdf5ee654a6b18fe8c97b778c64cd9e77f4e3d08cedd228e",
+    "reports/GEN5_COMPUTATIONAL_REVIEW.pdf": "cd7c9e2011d697bccba17a003cdeb70f3cf067b20b6afe9c4615592f02207e5c",
     "validation/P115_rated_orbit_cartesian.md": "4435ba1ae93dc3d12ab5326ed10842ae5a90eb6161e0495fff354d26b90274ec",
     "validation/P116_gen5_assembly_packaging.md": "b1305e9b7eb1e602bc1cd61151697d9831b067e49439f79d788de94163afbbb4",
-    "validation/P117_rated_energy_mass_audit.md": "551471c3cbd85950bc6d1a4f414668727694e46d4341d0ebc5ca7eba19ac490d"
+    "validation/P117_rated_energy_mass_audit.md": "551471c3cbd85950bc6d1a4f414668727694e46d4341d0ebc5ca7eba19ac490d",
+    "validation/P118_gen5_finite_force_map.md": "674cf1bca3d9321107842fc9c28f14fe878721cc80ecc87482a9c3795e1fd0f8"
+  },
+  "finite_geometry_finding": {
+    "ideal_phase_geometry_only_speed_m_s": 12.448437098832297,
+    "ideal_work_J": 1041.742708253595,
+    "independent_3d_force_fem": false
   },
   "headline_model_values": {
     "dry_mass_kg": 126.6,
@@ -60,5 +71,6 @@
     "net_energy_J": 2735.3,
     "sled_mass_kg": 9.45
   },
+  "headline_status": "Historical periodic-force speed is challenged by the finite-array/stator screen; no accepted performance rating",
   "status": "COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE"
 }

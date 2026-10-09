@@ -15,6 +15,8 @@
 
 **Professional CAD handover:** [native FreeCAD 1.0 review document](native/Gen5_Review.FCStd), [eight FreeCAD-exported STEP parts](step/freecad_gen5/), [FreeCAD assembly STEP](step/gen5/VOLLEY_Review_Assembly_FreeCAD_Gen5.step), [read-back and interference report](FREECAD_EXPORT.json), and [three-page CAD review PDF](GEN5_CAD_REVIEW.pdf). The source B-reps were created parametrically in CadQuery and imported into FreeCAD; the imported parts do not contain native FreeCAD feature histories. Both FreeCAD and CadQuery report the same stated side-fed track/cassette clash. The PDF includes a model render and measured section, each labeled by evidence type.
 
+**Unselected R1 feeder geometry:** [review report](FEEDER_CANDIDATE_R1.pdf), [native FreeCAD document](native/Feeder_Candidate_R1.FCStd), [part and assembly STEP](step/feeder_candidate_r1/) and [exact-solid collision ledger](FEEDER_CANDIDATE_R1.json). A 570 mm enclosure clears the scripted 3U envelope routes, but the actual lift, restraint, fault recovery and changed installed mass are not designed. R1 is a separate candidate, not a revision of the evaluated Gen5 configuration.
+
 > ## historical study is here too, and it is a different machine
 >
 > [ADR-032](../docs/adr/032-legacy_study-stage-integrated-gas-store.md). The payload is accelerated

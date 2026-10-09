@@ -12,6 +12,12 @@ VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3
 
 > **Evidence status, October 2026.** Gen5 is the selected computational design for academic review. Its configuration, model results and failed criteria are documented; [decisive verification items remain open](docs/GEN5_FREEZE_READINESS.md), so the final academic freeze has not been declared. No VOLLEY article has been built, fired, measured, qualified or flown; no complete installed-system or provider-specific interface has been validated. Published work on related systems is prior art and a source of assumptions, not a physical test of Gen5.
 
+> **Decisive new finding:** the CAD finite-array/stator force screen gives **12.448 m/s only under ideal phase and omitted circuit losses**, versus **16.029 m/s** in the historical periodic-force shot model. The historical value below is retained for traceability, not an established Gen5 performance claim. [Force map and numerical limits](validation/P118_gen5_finite_force_map.md) · [Affected claims and rerun decisions](docs/GEN5_2026_10_09_FINDING_DISPOSITION.md).
+
+<p align="center"><img src="figures/gen5_finite_force_map.png" alt="Finite-stator force map and historical periodic assumption" width="48%"> <img src="figures/matched_mission_reference.png" alt="Matched single-event and twelve-shot reference comparison" width="48%"></p>
+
+*New model screens: the finite-force result is analytic and shares the original magnetic field law; the matched mission uses assumed host and dispenser data. Neither is a physical result. [Mission assumptions and results](docs/MATCHED_MISSION_REFERENCE.md).*
+
 ## One machine, one evaluated configuration
 
 Gen5 places the release station 1.5 m from the breech on 1.8 m structural longerons, with a 1.3 m powered stroke. It models a double-sided ironless Halbach linear synchronous drive, reusable permanent-magnet sled, eddy-current arrest, capacitor pulse store and conceptual twelve-payload magazine. The satellite is intended to remain mechanically and electrically unmodified. The modeled acceleration is **10.07 g**, but that value does not qualify any real payload.
@@ -20,7 +26,7 @@ Gen5 places the release station 1.5 m from the breech on 1.8 m structural longer
 
 | Gen5 model output | Result | Evidence boundary |
 |:--|--:|:--|
-| 3U exit speed | **16.029 m/s** | Calculated shot, not measured or a demonstrated command range |
+| 3U exit speed | **16.029 m/s, historical periodic model** | Challenged by the finite-geometry force screen; not a demonstrated command range |
 | Peak modeled acceleration | **10.07 g** | Payload-specific qualification remains open |
 | Dry / loaded mass | **126.6 / 174.6 kg** | Modeled rollup using historical Gen3 sled volumes and assumed component masses; not complete installed-system mass |
 | Electrical-to-payload efficiency | **18.8%** | Circuit and mechanics model, net of modeled recovery |
@@ -71,7 +77,11 @@ The [Gen5 STEP parts](cad/step/gen5/), [native FreeCAD document](cad/native/Gen5
 
 ![Gen5 reference assembly transverse packaging conflict](figures/gen5_packaging_section.svg)
 
-*The two 166 mm cassettes and 205 mm track require 537 mm across an internal 526 mm width before clearance. Exact STEP-solid intersection finds 32,915 mm³ overlap per cassette in the reference placement. A different feeder or larger enclosure could change the result, but has not been designed. [Rebuild and inspect](validation/P116_gen5_assembly_packaging.md).*
+*The two 166 mm cassettes and 205 mm track require 537 mm across an internal 526 mm width before clearance. Exact STEP-solid intersection finds 32,915 mm³ overlap per cassette in the reference placement. [Rebuild and inspect](validation/P116_gen5_assembly_packaging.md).*
+
+![Unselected R1 feeder geometry section](figures/gen5_feeder_candidate_r1.png)
+
+*An [unselected R1 feeder geometry](cad/FEEDER_CANDIDATE_R1.md) widens the enclosure to 570 mm and clears twelve scripted envelope routes and fixed-part swept-box checks. The [native FreeCAD document](cad/native/Feeder_Candidate_R1.FCStd) and [STEP files](cad/step/feeder_candidate_r1/) are review artifacts. No lift mechanism, retention, tolerances, supplier mass or approved host interface is defined; R1 does not change the evaluated Gen5 results.*
 
 The CAD does not provide manufacturing drawings, tolerance stacks, an approved ICD or proof of buildability.
 

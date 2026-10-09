@@ -2,6 +2,8 @@
 
 **Status: 9 October 2026.** Gen5 is a controlled computational *review candidate*, not a validated product or completed academic freeze. Gen6's 1 km/s-class objective is future research. This list is a decision and evidence plan; it does not turn an unrun analysis into a passed test. See `docs/GEN5_FREEZE_READINESS.md` in the flagship for C-00–C-20 dispositions. The paper and thesis copies of this file are standalone.
 
+**Since this inventory:** P118 finite geometry challenges the 16.029 m/s historical result; an unselected R1 FreeCAD/STEP feeder clears twelve scripted geometry routes after widening the enclosure; a matched spring/Gen5 reference screen closes no twelve-shot option. Local records: `validation/P118_gen5_finite_force_map.md`, `cad/FEEDER_CANDIDATE_R1.md`, and `docs/MATCHED_MISSION_REFERENCE.md`. Independent full-force FEM, actual feeder hardware, selected interfaces and physical tests remain open.
+
 ## Three different decisions
 
 | Decision | Defensible release criterion |

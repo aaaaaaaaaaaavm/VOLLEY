@@ -1,0 +1,216 @@
+{
+  "status": "MATCHED_REFERENCE_SCREEN_NOT_PROVIDER_MISSION_OR_HARDWARE_VALIDATION",
+  "input": {
+    "altitude_m": 450000.0,
+    "payload_kg": 4.0,
+    "count": 12,
+    "host_base_dry_kg": 300.0,
+    "host_initial_fuel_kg": 10.0,
+    "reserve_kg": 2.0,
+    "isp_s": 220.0,
+    "single_event_target_inertial_tangential_increment_m_s": 16.029,
+    "campaign_release_interval_s": 1200,
+    "campaign_target_spacing_m": 5000,
+    "campaign_terminal_time_s": 18000,
+    "campaign_thrust_N": 100
+  },
+  "target_semi_major_axis_rise_km": 28.800775155549868,
+  "single_event": [
+    {
+      "option": "Spring dispenser class",
+      "release_speed_m_s": 2.5,
+      "installed_device_kg": 72.0,
+      "initial_host_plus_manifest_kg": 430.0,
+      "host_preburn_m_s": 13.552402358354287,
+      "ideal_propellant_kg": 2.6926385533602684,
+      "fuel_after_event_kg": 7.307361446639732,
+      "host_increment_after_release_m_s": 13.528999999999998,
+      "payload_increment_m_s": 16.028999999999996,
+      "target_residual_m_s": -3.552713678800501e-15,
+      "reserve_screen_pass": true
+    },
+    {
+      "option": "Gen5 finite-force ideal upper",
+      "release_speed_m_s": 12.448437098832297,
+      "installed_device_kg": 126.562,
+      "initial_host_plus_manifest_kg": 484.562,
+      "host_preburn_m_s": 3.6834988212635977,
+      "ideal_propellant_kg": 0.8266008413645523,
+      "fuel_after_event_kg": 9.173399158635448,
+      "host_increment_after_release_m_s": 3.580562901167744,
+      "payload_increment_m_s": 16.02900000000004,
+      "target_residual_m_s": 3.907985046680551e-14,
+      "reserve_screen_pass": true
+    },
+    {
+      "option": "Gen5 historical rated model",
+      "release_speed_m_s": 16.029,
+      "installed_device_kg": 126.562,
+      "initial_host_plus_manifest_kg": 484.562,
+      "host_preburn_m_s": 0.1323255488519944,
+      "ideal_propellant_kg": 0.02971914989097968,
+      "fuel_after_event_kg": 9.97028085010902,
+      "host_increment_after_release_m_s": -1.27675647831893e-15,
+      "payload_increment_m_s": 16.029,
+      "target_residual_m_s": 0.0,
+      "reserve_screen_pass": true
+    }
+  ],
+  "finite_burn_campaign": [
+    {
+      "option": "Spring dispenser class",
+      "release_speed_m_s": 2.5,
+      "device_mass_kg": 72.0,
+      "base_host_dry_kg": 300.0,
+      "initial_mass_kg": 430.0,
+      "modeled_thrust_N": 100.0,
+      "completed_deliveries": 4,
+      "accepted_all_12": false,
+      "stages": [
+        {
+          "index": 1,
+          "reason": null,
+          "selected_accepted": true,
+          "selected_errors": {
+            "position_error_m": 5.092693337388134e-07,
+            "velocity_error_m_s": 5.565609708262161e-10,
+            "accepted": true
+          },
+          "selected_service_pass": true,
+          "accepted_attempts": 3
+        },
+        {
+          "index": 2,
+          "reason": null,
+          "selected_accepted": true,
+          "selected_errors": {
+            "position_error_m": 2.8562778562940944e-07,
+            "velocity_error_m_s": 3.099295865720476e-10,
+            "accepted": true
+          },
+          "selected_service_pass": true,
+          "accepted_attempts": 3
+        },
+        {
+          "index": 3,
+          "reason": null,
+          "selected_accepted": true,
+          "selected_errors": {
+            "position_error_m": 1.970319606290296e-07,
+            "velocity_error_m_s": 2.0959117444538122e-10,
+            "accepted": true
+          },
+          "selected_service_pass": true,
+          "accepted_attempts": 3
+        },
+        {
+          "index": 4,
+          "reason": null,
+          "selected_accepted": true,
+          "selected_errors": {
+            "position_error_m": 4.5009295020017155e-07,
+            "velocity_error_m_s": 5.083619801646064e-10,
+            "accepted": true
+          },
+          "selected_service_pass": true,
+          "accepted_attempts": 3
+        },
+        {
+          "index": 5,
+          "reason": "NO_ACCEPTED_IMPULSIVE_SEED",
+          "selected_accepted": false,
+          "selected_errors": null,
+          "selected_service_pass": null,
+          "accepted_attempts": 0
+        }
+      ],
+      "accepted_prefix_fuel_remaining_kg": 2.748450926859448,
+      "accepted_prefix_convergence": true,
+      "uncertainty_corners_run": 64,
+      "passing_prefix_corners": 24
+    },
+    {
+      "option": "Gen5 finite-force ideal upper",
+      "release_speed_m_s": 12.448437098832297,
+      "device_mass_kg": 126.562,
+      "base_host_dry_kg": 300.0,
+      "initial_mass_kg": 484.562,
+      "modeled_thrust_N": 100.0,
+      "completed_deliveries": 1,
+      "accepted_all_12": false,
+      "stages": [
+        {
+          "index": 1,
+          "reason": null,
+          "selected_accepted": true,
+          "selected_errors": {
+            "position_error_m": 6.291931844658806e-07,
+            "velocity_error_m_s": 7.128571955358975e-10,
+            "accepted": true
+          },
+          "selected_service_pass": true,
+          "accepted_attempts": 3
+        },
+        {
+          "index": 2,
+          "reason": "NO_ACCEPTED_IMPULSIVE_SEED",
+          "selected_accepted": false,
+          "selected_errors": null,
+          "selected_service_pass": null,
+          "accepted_attempts": 0
+        }
+      ],
+      "accepted_prefix_fuel_remaining_kg": 6.687259539534068,
+      "accepted_prefix_convergence": true,
+      "uncertainty_corners_run": 64,
+      "passing_prefix_corners": 0
+    },
+    {
+      "option": "Gen5 historical rated model",
+      "release_speed_m_s": 16.029,
+      "device_mass_kg": 126.562,
+      "base_host_dry_kg": 300.0,
+      "initial_mass_kg": 484.562,
+      "modeled_thrust_N": 100.0,
+      "completed_deliveries": 1,
+      "accepted_all_12": false,
+      "stages": [
+        {
+          "index": 1,
+          "reason": null,
+          "selected_accepted": true,
+          "selected_errors": {
+            "position_error_m": 1.5997684920487817e-08,
+            "velocity_error_m_s": 2.5664032472418444e-11,
+            "accepted": true
+          },
+          "selected_service_pass": true,
+          "accepted_attempts": 3
+        },
+        {
+          "index": 2,
+          "reason": "NO_ACCEPTED_IMPULSIVE_SEED",
+          "selected_accepted": false,
+          "selected_errors": null,
+          "selected_service_pass": null,
+          "accepted_attempts": 0
+        }
+      ],
+      "accepted_prefix_fuel_remaining_kg": 5.111340218779901,
+      "accepted_prefix_convergence": true,
+      "uncertainty_corners_run": 64,
+      "passing_prefix_corners": 0
+    }
+  ],
+  "unmodeled_alternatives": [
+    "onboard propulsion: no named tank, thrust, pointing or installed mass",
+    "orbital transport: no quoted service, provider trajectory or interface",
+    "differential drag: cannot provide this immediate same-epoch target; long-deadline trade separate"
+  ],
+  "source_sha256": {
+    "analysis/matched_mission_reference.py": "b71708863158809a9669041fee31e9eb19fddccba22344340ea8402b811afc5a",
+    "analysis/manifest_finite_burn.py": "0612e9844861c3824eba532689a357bfd17624c0a313b9f035a67050c221c937",
+    "analysis/finite_burn_departure.py": "ee64668b33943c0be12d0a29fe55be0a27901471fe53205f18a5b64749b6e406",
+    "analysis/results/gen5_finite_force_map.json": "5e32bb2658797886f302fb9fe4b2cec7fea81ffad19b9790dfd6b3026f068c28"
+  }
+}

@@ -1,5 +1,7 @@
 # Validation plan
 
+> **New current finding (P118).** A finite-array/stator 3-D analytic force integral gives 1.042 kJ ideal work and a 12.448 m/s geometry-only speed under ideal phase, challenging the historical 16.029 m/s periodic shot. It shares the earlier cuboid magnetic field law and is not an independent FEM or measurement. See [P118](P118_gen5_finite_force_map.md), the [result JSON](../analysis/results/gen5_finite_force_map.json) and [matched mission screen](../docs/MATCHED_MISSION_REFERENCE.md). The older run-sheet count below describes the historical A-series table, not these new P-series review checks.
+
 Independent cross-checks of the claims in `analysis/`. **73 run sheets, one row each, and every
 file in this directory has a row.** All but the last have run; A73 is declared and executing.
 

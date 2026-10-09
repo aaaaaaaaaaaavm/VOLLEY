@@ -1,0 +1,20 @@
+{
+  "status": "UNSELECTED_R1_NATIVE_REVIEW_NOT_FLIGHT_DESIGN",
+  "freecad_version": [
+    "1",
+    "0",
+    "0",
+    "",
+    "https://code.launchpad.net/~vcs-imports/freecad/trunk",
+    "2026/08/25 11:49:11"
+  ],
+  "named_instances": 21,
+  "native_sha256": "97b95fe8c291771786c4af90a2038365dbc59182fbdd856fc4be684856f782b5",
+  "step_sha256": "ed820595f6bb7fea9589b889861f318781e2b8d4354bc93754f1bf2fa6954a51",
+  "track_cassette_overlap_mm3": {
+    "P": 0.0,
+    "S": 0.0
+  },
+  "readback_valid": true,
+  "limitation": "B-rep imports; no native parametric feature history, actuator, retention gate, ICD or qualification"
+}
