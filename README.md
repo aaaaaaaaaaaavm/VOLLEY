@@ -14,9 +14,21 @@ VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3
 
 > **Decisive new finding:** the CAD finite-array/stator force screen gives **12.448 m/s only under ideal phase and omitted circuit losses**, versus **16.029 m/s** in the historical periodic-force shot model. The historical value below is retained for traceability, not an established Gen5 performance claim. [Force map and numerical limits](validation/P118_gen5_finite_force_map.md) · [Affected claims and rerun decisions](docs/GEN5_2026_10_09_FINDING_DISPOSITION.md).
 
+An [independent 2-D finite-element screen](validation/P119_gen5_finite_force_fem2d.md) now checks the finite-array force decline using a magnetostatic PDE instead of the cuboid field law. It gives **1,081.6 J ideal in-plane work** on a 1 mm mesh, compared with **1,041.7 J** in the 3-D analytic screen. Depth effects and coupled electrical behavior remain open, so neither result is a motor rating.
+
+A [finite-force shot rerun](validation/P120_gen5_finite_coupled_shot.md) carries the P118 force profile through the historical capacitor/ESR model. With the old full-winding assumption it gives **12.448 m/s and 2.099 kJ gross draw**; a hypothetical segmented-copper branch gives the same ideal speed and **1.394 kJ**. These are conditional calculations using unselected power hardware and ideal phase at every position. The old energy, brake and precision figures cannot be transferred to them.
+
 <p align="center"><img src="figures/gen5_finite_force_map.png" alt="Finite-stator force map and historical periodic assumption" width="48%"> <img src="figures/matched_mission_reference.png" alt="Matched single-event and twelve-shot reference comparison" width="48%"></p>
 
 *New model screens: the finite-force result is analytic and shares the original magnetic field law; the matched mission uses assumed host and dispenser data. Neither is a physical result. [Mission assumptions and results](docs/MATCHED_MISSION_REFERENCE.md).*
+
+<p align="center"><img src="figures/gen5_finite_force_fem2d.png" alt="Independent two-dimensional finite-element force map compared with the three-dimensional analytic screen" width="48%"> <img src="figures/gen5_fem2d_field.png" alt="Solved two-dimensional magnetic field around finite Halbach arrays" width="48%"></p>
+
+*Actual scikit-fem solver outputs, not CAD renders or physical measurements. The 2-D method omits finite magnet-depth effects; [P119](validation/P119_gen5_finite_force_fem2d.md) records mesh and boundary sensitivity.*
+
+![Finite-force shot under the historical bank assumptions](figures/gen5_finite_coupled_shot.png)
+
+*Position-dependent model rerun, not a measured pulse or inverter validation. [P120 inputs, ledger and timestep check](validation/P120_gen5_finite_coupled_shot.md).*
 
 ## One machine, one evaluated configuration
 
@@ -35,9 +47,9 @@ Gen5 places the release station 1.5 m from the breech on 1.8 m structural longer
 
 Values and definitions are in [the baseline](docs/BASELINE.md); scripts and machine-readable outputs are in [analysis](analysis/) and [validation](validation/). The [Gen5 closure](docs/GEN5_CLOSURE.md) records corrections and failed bands as part of the result.
 
-<p align="center"><img src="figures/gen5_mass_decision.svg" alt="Gen5 mass per 3U versus canister and economic screens" width="49%"> <img src="figures/gen5_energy_accounting.svg" alt="Rated shot net energy and payload share" width="49%"></p>
+<p align="center"><img src="figures/gen5_mass_decision.svg" alt="Gen5 mass per 3U versus canister and economic screens" width="49%"> <img src="figures/gen5_energy_accounting.svg" alt="Historical shot gross energy and modeled components" width="49%"></p>
 
-*These charts are generated directly from the checked-in [mass](analysis/results/mass_properties.json) and [shot](analysis/results/motor_results.json) JSON. The 6 kg canister is an approximate comparator. An [independent algebra audit](validation/P117_rated_energy_mass_audit.md) leaves 124.488 J (4.47%) of gross draw unitemized; the grey energy segment is not a closed loss audit. [Rebuild charts](tools/plot_gen5_decision.py).*
+*These charts are generated from the checked-in [mass](analysis/results/mass_properties.json), [shot](analysis/results/motor_results.json) and [energy audit](analysis/results/rated_energy_mass_audit.json) JSON. The 6 kg canister is an approximate comparator. [P117](validation/P117_rated_energy_mass_audit.md) now accounts for the old 124.488 J compact-output remainder as modeled converter loss, auxiliary draw and an integration step. The electrical hardware and revised finite-force shot remain unverified. [Rebuild charts](tools/plot_gen5_decision.py).*
 
 ## See the evidence, including what failed
 

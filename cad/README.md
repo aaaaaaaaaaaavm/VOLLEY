@@ -108,7 +108,7 @@ and `OPEN_PROBLEMS.md` P13.
 2. Cross-check every dimension against `parameters.json` before quoting it.
 3. No uncorrected Fusion masses. The modeled mass authority is `analysis/mass_properties.py`;
    its 126.6 kg rollup includes assumptions and is not a measured or complete installed mass.
-4. The sled mass conflict was dispositioned on 2026-07-29. The scripts now carry 9.445 kg from Gen3 solid volumes; after the depth-resolved electromagnetic correction the current modeled speed is **16.029 m/s**. Historical note follows: 20.37 m/s assumed a 4.86 kg sled; the Gen3
+4. The sled mass conflict was dispositioned on 2026-07-29. The scripts now carry 9.445 kg from Gen3 solid volumes. The historical periodic-force model predicted **16.029 m/s** after a depth correction; [P118](../validation/P118_gen5_finite_force_map.md) and the independent 2-D [P119](../validation/P119_gen5_finite_force_fem2d.md) finite-array checks challenge its force input, so no current speed rating is selected. Historical note follows: 20.37 m/s assumed a 4.86 kg sled; the Gen3
    geometry implies ~7.50 kg and a provisional 17.88 m/s. Quote neither without the
    conflict (P5, P8). `validation/A4_sled_structural.md` is the analysis that settles it.
 5. The ESPA comparison fails: 1839 mm installed against a quoted ~1270 mm class

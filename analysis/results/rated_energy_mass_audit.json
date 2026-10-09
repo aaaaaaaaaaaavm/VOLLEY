@@ -1,5 +1,5 @@
 {
-  "status": "PASS_ALGEBRA_ONLY_GROSS_LOSS_BUDGET_OPEN",
+  "status": "PASS_HISTORICAL_MODEL_ENERGY_ARITHMETIC_PHYSICAL_SOURCE_OPEN",
   "motor_sha256": "afadd4d66271d9d1476b294ecea2723500ad813c0adc6d9648a07b83692c3875",
   "mass_sha256": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
   "derived": {
@@ -11,7 +11,12 @@
     "constant_accel_equivalent_g": 10.070875648689595,
     "brake_force_distance_work_J": 51.786735,
     "gross_draw_unallocated_J": 124.4880000000002,
-    "gross_draw_unallocated_fraction": 0.044741375313534365
+    "gross_draw_unallocated_fraction": 0.044741375313534365,
+    "converter_loss_at_model_assumption_J": 90.96369632457173,
+    "auxiliary_draw_at_model_assumption_J": 32.46,
+    "forward_euler_mechanical_excess_J": 1.0642301668646985,
+    "gross_residual_after_model_terms_J": 7.350856377086323e-05,
+    "historical_model_steps": 1623
   },
   "identity_residuals": {
     "dry_rollup_difference_kg": -0.03999999999999204,
@@ -21,7 +26,8 @@
     "brake_work_difference_J": -0.011265000000001635,
     "brake_energy_split_difference_J": -0.0019999999999527063,
     "recovery_loss_balance_difference_J": 0.006000000000007333,
-    "net_draw_difference_J": 0.04999999999972715
+    "net_draw_difference_J": 0.04999999999972715,
+    "gross_energy_after_model_terms_difference_J": 7.350856377086323e-05
   },
   "predeclared_bands": {
     "dry_rollup_difference_kg": 0.1,
@@ -31,10 +37,12 @@
     "brake_work_difference_J": 0.1,
     "brake_energy_split_difference_J": 0.1,
     "recovery_loss_balance_difference_J": 0.1,
-    "net_draw_difference_J": 0.1
+    "net_draw_difference_J": 0.1,
+    "gross_energy_after_model_terms_difference_J": 0.1
   },
   "unclosed": [
-    "The 124.488 J gross-draw remainder is not itemized in the cited model output.",
+    "The old 124.488 J compact-output remainder is accounted for by the model's 95% converter assumption, 200 W auxiliaries and Euler integration excess; it is not an unexplained hardware loss.",
+    "The converter efficiency, auxiliary load and source rating are assumptions, not selected or independently verified components.",
     "These identities do not independently solve magnetic thrust, winding loss, bank ESR or brake transients.",
     "No supplier-backed installed power source, thermal test or physical shot exists."
   ]

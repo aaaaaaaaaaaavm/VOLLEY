@@ -4,13 +4,13 @@
 
 ## P118 force discrepancy
 
-The historical rated shot uses a periodic thrust constant across 1.300 m of powered travel. The actual Gen5 CAD declares a 162-belt finite stator ending at 1.296 m, with a magnet array initially at 0.230–0.570 m. Direct array/stator overlap ends after 1.066 m of travel. The [finite analytic force map](../validation/P118_gen5_finite_force_map.md) gives 1.042 kJ ideal work and a 12.448 m/s geometry-only result under independently optimized phase at each station. It shares the earlier cuboid magnetic field law and is not independent FEM.
+The historical rated shot uses a periodic thrust constant across 1.300 m of powered travel. The actual Gen5 CAD declares a 162-belt finite stator ending at 1.296 m, with a magnet array initially at 0.230–0.570 m. Direct array/stator overlap ends after 1.066 m of travel. The [finite analytic force map](../validation/P118_gen5_finite_force_map.md) gives 1.042 kJ ideal work and a 12.448 m/s geometry-only result under independently optimized phase at each station. It shares the earlier cuboid magnetic field law and is not independent FEM. [P119](../validation/P119_gen5_finite_force_fem2d.md) now provides a separate 2-D finite-element field screen, while [P120](../validation/P120_gen5_finite_coupled_shot.md) couples the finite analytic force to an assumed bank. Neither establishes a selected motor rating.
 
 | Prior claim/output | Disposition | Required rerun before a performance claim |
 |:--|:--|:--|
 | 16.029 m/s rated 3U exit speed | **Challenged; historical periodic-model result** | Independent 3-D force integral, revised finite-stator winding/drive and coupled shot with actual phase, current and voltage limits |
 | 10.07 g peak acceleration and 162.3 ms pulse | **Historical model point** | Recompute the trajectory and actual force/time history for a selected geometry |
-| 18.8% net efficiency, 2.78 kJ draw, 47 J recovery and 1,162 J arrest | **Historical coupled-model outputs** | Reconcile finite-force trajectory, electrical losses, source sizing and brake entry state; separately close P117's 124.488 J gross-energy remainder |
+| 18.8% net efficiency, 2.78 kJ draw, 47 J recovery and 1,162 J arrest | **Historical coupled-model outputs** | P117 now reconciles the old 124.488 J compact-output remainder arithmetically. A finite-force trajectory, actual electrical losses, source sizing and new brake entry state remain open. |
 | 0.0274 m/s simulated dispersion | **Historical control simulation** | Recompute under finite-stator handover, latency and uncertain force map; no measured repeatability claim |
 | 28.800775 km immediate orbit-axis check and 1.60 lifetime multiplier | **Conditional on the 16.029 m/s input** | New orbit and lifetime runs after a credible release speed is selected; the Cartesian check itself remains mathematically valid at its stated input |
 | 126.562 kg modeled Gen5 dry mass | **Unaffected by P118 alone, still incomplete installed mass** | Rerun if stator, inverter, energy source, feeder or structure changes |

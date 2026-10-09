@@ -26,6 +26,10 @@ SOURCES = [
     "validation/P117_rated_energy_mass_audit.md", "reports/GEN5_COMPUTATIONAL_REVIEW.pdf",
     "analysis/gen5_finite_force_map.py", "analysis/results/gen5_finite_force_map.json",
     "validation/P118_gen5_finite_force_map.md",
+    "analysis/gen5_finite_force_fem2d.py", "analysis/results/gen5_finite_force_fem2d.json",
+    "validation/P119_gen5_finite_force_fem2d.md",
+    "analysis/gen5_finite_coupled_shot.py", "analysis/results/gen5_finite_coupled_shot.json",
+    "validation/P120_gen5_finite_coupled_shot.md",
     "analysis/matched_mission_reference.py", "analysis/results/matched_mission_reference.json",
     "docs/MATCHED_MISSION_REFERENCE.md",
 ]
@@ -52,6 +56,8 @@ def main() -> None:
     mass = json.loads((ROOT / "analysis/results/mass_properties.json").read_text())
     motor = json.loads((ROOT / "analysis/results/motor_results.json").read_text())
     finite = json.loads((ROOT / "analysis/results/gen5_finite_force_map.json").read_text())
+    fem = json.loads((ROOT / "analysis/results/gen5_finite_force_fem2d.json").read_text())
+    bank = json.loads((ROOT / "analysis/results/gen5_finite_coupled_shot.json").read_text())
     result = {
         "configuration_id": "VOLLEY-GEN5-ACADEMIC-2026-10-09",
         "status": "COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE",
@@ -68,6 +74,15 @@ def main() -> None:
             "ideal_work_J": finite["ideal_finite_stator_work_J"],
             "ideal_phase_geometry_only_speed_m_s": finite["ideal_finite_stator_exit_upper_m_s"],
             "independent_3d_force_fem": False,
+        },
+        "independent_2d_fem_screen": {
+            "ideal_work_J": fem["runs"][-1]["work_J"],
+            "mesh_size_m": fem["runs"][-1]["dx_m"],
+            "omits_magnet_depth_end_effects": True,
+        },
+        "conditional_finite_force_bank_screen": {
+            "full_winding_gross_draw_J": bank["branches"][0]["result"]["gross_capacitor_draw_J"],
+            "selected_winding_and_inverter": False,
         },
         "files": {str(p.relative_to(ROOT)): digest(p) for p in paths},
         "exclusions": [
