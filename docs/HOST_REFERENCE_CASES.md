@@ -746,10 +746,10 @@ proportion. That is worth knowing and it is not an optimisation.
 > requires a mission planner with target states, timing and a cost function. That is
 > [P113](../OPEN_PROBLEMS.md), and this file does not attempt it.
 
-What batching does not cost is the product. VOLLEY supplies a commanded velocity per satellite
-inside every batch, so satellites released together still separate from each other, and
-[A15](../validation/A15_poem_campaign.md) and [P56](../OPEN_PROBLEMS.md) record that release
-timing alone gives in-track phase at zero dv.
+VOLLEY's proposed commandable release can create a relative state within a
+batch. Timing alone gives no persistent phase at zero relative impulse from an
+unchanged host. The [9 October correction](PHASING_CORRECTION_2026-10-09.md)
+separates these effects; the complete batching trade remains open.
 
 ---
 

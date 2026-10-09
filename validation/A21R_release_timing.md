@@ -1,5 +1,11 @@
 # A21-R, release timing as the free baseline for phase, and what survives it
 
+> **WITHDRAWN 9 October 2026:** The R2/R3 conclusion below is physically invalid.
+> It used the host's absolute angle travelled during a wait as the relative phase
+> between co-orbital payloads. The original bands and result remain as an audit
+> trail, not as passing current evidence. See the [corrective same-epoch model](P113_S16_phasing_correction.md)
+> and [engineering correction](../docs/PHASING_CORRECTION_2026-10-09.md).
+
 **Bands declared 2026-08-14, before `analysis/comparators.py` gained a release-timing row.**
 Verify with `git show <this commit> -- analysis/comparators.py`, which must show no change to
 that file.

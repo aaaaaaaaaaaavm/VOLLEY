@@ -190,8 +190,11 @@ orbits from one release event.
 ### 6. What's wrong with free drag-differential phasing over three weeks?
 
 Nothing, and `A21` treats it as the real comparator rather than the spring. It is free and has
-flown. VOLLEY's advantage is not phase, release timing gives 30° in 468 s for free (P56, A21-R). It is orbit change: ~1.4 days to 30° of phase against
-~25 days by drag, roughly 18x.
+flown. **Correction 2026-10-09:** the earlier timing-only 468 s claim is withdrawn;
+waiting between zero-impulse releases from an unchanged host produces no persistent
+phase. A commanded differential can change orbital energy and relative phase,
+but the matched mission comparison with drag and host manoeuvres remains open.
+See [the corrected calculation](PHASING_CORRECTION_2026-10-09.md).
 
 Drag phasing also requires differential ballistic coefficient, attitude control or deployable
 area, which is itself a satellite modification.

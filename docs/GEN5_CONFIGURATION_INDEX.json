@@ -1,0 +1,39 @@
+{
+  "configuration_id": "VOLLEY-GEN5-ACADEMIC-2026-10-09",
+  "design_scope": "3U, twelve-slot conceptual magazine, 1.5 m track, electromagnetic Gen5",
+  "evidence_class": "model_only_no_gen5_hardware_test",
+  "exclusions": [
+    "No approved integrated STEP assembly or manufacturing drawing set",
+    "No provider-specific interface, qualified payload, hardware test or flight evidence",
+    "No complete installed-system mass, tolerance, shock or thermal closure"
+  ],
+  "files": {
+    "analysis/astro.py": "8906c54ef52209a4ab6a58156c5cbb1a153d65dbbe6e50bd65ef75ac805dedeb",
+    "analysis/mass_properties.py": "b8547e763806b0c740ee342c3278d85b1295d18f7cfe52be5239c9136c08d777",
+    "analysis/motor_model.py": "aafef3beb496e8db3bb96c9314bd604a5976c24ccc856335bf2db67f3f8fa0f2",
+    "analysis/results/astro_results.json": "092c12fac9d89fcc464169e261babaaa1245b5047e4ec145d7d38ff69396f660",
+    "analysis/results/manifest_finite_burn.json": "c9260a39550a6c4f90c2527ce1c649296cab92614c36f738880af171b61698b0",
+    "analysis/results/mass_properties.json": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
+    "analysis/results/motor_results.json": "afadd4d66271d9d1476b294ecea2723500ad813c0adc6d9648a07b83692c3875",
+    "analysis/results/phasing_reference.json": "f9b7a450dc986f6fe7596bfadf3c7f9c3bc2104725873e030aee45f35b2d2238",
+    "cad/BUILD.json": "b706b1b5b33ddd8bb7e75033be0fc004e607791960d1a1624365a80843ab65fd",
+    "cad/DIMENSIONS.md": "8767a6e5f778dc96b0fddb85508162f887e8725e2c3a6af3d5d31545190c834f",
+    "cad/parameters.json": "7a1e3c9057d16d60796da0673922d4db1c6954955e4bffefc75c32aa63983978",
+    "cad/step/gen5/VOLLEY_Brake_Gen5.step": "3b313f96dd48dd09eed7ae7c9933374e2a6d7a0cf31776e33062816d98feb3fb",
+    "cad/step/gen5/VOLLEY_Enclosure_Gen5.step": "283f494098dc9a6d98d27c1191bd573902848879bea5b0eec46ca2cf91411f51",
+    "cad/step/gen5/VOLLEY_Interface_ESPA_Gen5.step": "ad2804ec4f41f9d5a1acba7ead0229444174161d47f4759c833cca95c6e4dbe5",
+    "cad/step/gen5/VOLLEY_Magazine_Cassette_Gen5.step": "12a27918ba9113837308930cdcf0d60fe66a6cd3abde903a6c2e2d16cb98a433",
+    "cad/step/gen5/VOLLEY_Payload_3U_Gen5.step": "4eee305dab98bb763f602c6ed11c94f9fd532e7d59925f804899c6c899174dff",
+    "cad/step/gen5/VOLLEY_Sled_Gen5.step": "8bc91ae9f4185db908bc9c7e242f3dfa77e05acb0918e24ee6fa4b264d4c4f09",
+    "cad/step/gen5/VOLLEY_Stator_Gen5.step": "4d5c733bf544ce6f73736fa67166e0b9d2f1624cb6270a629dafbff0856b6d13",
+    "cad/step/gen5/VOLLEY_Track_Gen5.step": "3a03ef426fedfd00143c369fd01b41c18b6fa54752dc5721c136701c51ff900b",
+    "docs/BASELINE.md": "9a5b42e3bdd65e9741fdd69dce31e0f2f128c5f3b816855aa8e8807c4dbb6009"
+  },
+  "headline_model_values": {
+    "dry_mass_kg": 126.6,
+    "exit_speed_m_s": 16.029,
+    "net_energy_J": 2735.3,
+    "sled_mass_kg": 9.45
+  },
+  "status": "COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE"
+}

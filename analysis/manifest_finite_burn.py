@@ -207,12 +207,15 @@ def verification(rows):
 def hashes():
     names = ['analysis/manifest_finite_burn.py','analysis/finite_burn_departure.py',
              'analysis/manifest_timing.py','analysis/terminal_timing.py','analysis/campaign_allocation.py',
-             'analysis/host_reference.py','validation/P113_S12_manifest_finite_burn.md']
+             'analysis/host_reference.py','validation/P113_S11_restored_propagator.md',
+             'validation/P113_S12_manifest_finite_burn.md']
     return {n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}
 
 
 def report(d):
-    lines = ['# Twelve-payload finite-burn campaign — P113-S12','', 'Adityavardhan Mishra · 26 September 2026','',
+    lines = ['# Twelve-payload finite-burn campaign — P113-S12','',
+             'Original study · 26 September 2026. Reproducibility repair · 9 October 2026.','',
+             'The original result referenced an uncommitted finite-burn propagator. A newly documented implementation was restored and the full screen rerun. The six accepted-prefix counts agree with the archived result; this is a reproducibility check, not independent physical or mission validation. [Restoration record](../validation/P113_S11_restored_propagator.md).','',
              'A matched reference screen carries finite burns, propellant, host recoil and the previous release attitude through twelve planned deliveries. Every scenario uses the same targets and release times. The host dry mass is held equal as a sensitivity, not an installed architecture comparison.','',
              '| Speed (m/s) | Thrust (N) | Delivered / 12 | Fuel used (kg) | Passing partial-history corners |',
              '|---:|---:|---:|---:|---:|']

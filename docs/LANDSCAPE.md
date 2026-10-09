@@ -128,23 +128,22 @@ propulsion, carrying satellites to a destination. VOLLEY imparts one impulse alo
 velocity vector and cannot change plane meaningfully (`astro.py` puts the plane-change
 ceiling at 0.15°).
 
-> Corrected 2026-08-14 (P56, A21-R). The paragraph below named differential drag as the
-> comparison that matters. It is not the binding one. Satellites released at different times
-> from the same host arrive at different true anomalies *in the same orbit*, for no velocity at
-> all: at 450 km, 30° costs 468 seconds of waiting, and ADR-020's adopted 1200 s cadence
-> already gives 76.9° per shot. Release timing beats commanded differential by 255x and beats
-> drag by four orders. A spring and a clock do phase spacing, and do it better, timing sets
-> an offset that holds, while a differential sets a 21.75 °/day drift a propulsion-less satellite
-> cannot null.
+> **Corrected 2026-10-09:** The earlier A21-R timing-only comparator is
+> [withdrawn](PHASING_CORRECTION_2026-10-09.md). Satellites released at different
+> times from an unchanged host with zero relative impulse remain co-orbital;
+> a 468 s wait gives no persistent 30° offset. Compare spring impulse, host
+> manoeuvres and differential drag with commanded release at a common epoch,
+> including installed mass and mission constraints.
 >
-> What survives is orbit change, which no clock can imitate: +28.8 km of semi-major axis and
-> x1.602 of orbital life, against x1.0000 for release timing at any cadence (bands R5, R6).
+> The rated model predicts a +28.8 km semi-major-axis change and x1.602
+> lifetime for one stated case. A clock alone changes neither. These outputs
+> still require current-point independent checks and a matched mission trade.
 
 Where VOLLEY competes is placing a propulsion-less satellite into a different orbit from the one
 its host is in: no propulsion on the satellites, no propulsion on the deployer, one shot each.
-Against differential drag, free, flown by Planet Labs on a 12-satellite constellation, and the
-right baseline for *phasing*, VOLLEY offers nothing on phase and everything on orbit. Drag
-changes when a satellite decays; it cannot raise an apogee.
+Differential drag has flight heritage and is a relevant phasing comparator.
+Commanded release may change orbital energy more quickly for a particular
+mission, but its installed burden and full campaign outcome are unresolved.
 
 ## Prior art VOLLEY must distinguish itself from
 

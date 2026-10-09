@@ -1,0 +1,35 @@
+# Gen5 academic freeze readiness
+
+**Review candidate, 9 October 2026.** Gen5 is the selected academic configuration; Gen6 is future work. This page records what the computational study can support today and what still prevents a defensible final freeze. The [configuration index](GEN5_CONFIGURATION_INDEX.json) hashes the model inputs and eight STEP parts. Its `COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE` status is deliberate: a hash proves identity, not correctness.
+
+No VOLLEY hardware has been built or tested. Independent published results support methods and comparison assumptions but cannot validate this particular mechanism. A failed criterion is a result to report, not a threshold to move. The detailed C-00–C-20 closure instructions are in the academic review package; this is the live disposition of each area.
+
+| ID | Review question | Evidence in this repository | Disposition for final academic freeze |
+|:--|:--|:--|:--|
+| C-00 | Are source, environment and outputs reproducible? | [Verification script](../tools/verify_all.sh), restored [finite-burn source](../analysis/finite_burn_departure.py), [run record](../validation/P113_S11_restored_propagator.md) | **Open.** Clean checkout, native-solver availability and companion provenance need one recorded green run. |
+| C-01 | Does one configuration support all headline claims? | [Baseline](BASELINE.md), [configuration index](GEN5_CONFIGURATION_INDEX.json), [figure index](FIGURE_INDEX.md) | **Partial.** File identity is controlled; manuscript, drawing and table cross-reference audit remains. |
+| C-02 | Is prior art traced to primary revisions? | [Literature](LITERATURE.md), [prior art](PRIOR_ART.md) | **Partial.** Product, price and provider statements still require source/revision audit. |
+| C-03 | Is depth-integrated motor force independently checked? | [Field/FEM record](../validation/A1_field_femm.md), [Gen5 closure](GEN5_CLOSURE.md) | **Open.** Independent 3-D force integral at Gen5 geometry remains decisive. |
+| C-04 | Are winding and inverter ratings consistent? | [Gen5 electrical studies](../validation/README.md), [sizing](../analysis/results/sizing.json) | **Open.** Hot resistance, phase/DC current, switching and protection require one circuit definition. |
+| C-05 | Can the energy source supply the shot? | [Shot model](../analysis/results/motor_results.json), [energy chart](../figures/gen5_energy_accounting.svg) | **Failed/open.** Existing source branches do not establish a supplier-backed installed bank; chart is aggregate, not a loss audit. |
+| C-06 | Does control survive nonlinear and fault corners? | [Closed-loop model](../analysis/motor_model.py), [control record](../validation/A28_control_stability.md) | **Open.** Assumed sensor noise is not measured repeatability; stated latency case fails phase margin. |
+| C-07 | Are omitted parasitic terms bounded? | [Open problems](../OPEN_PROBLEMS.md) | **Open.** Magnet heating, vacuum friction and parasitic eddy drag lack claim-level error bounds. |
+| C-08 | Is brake arrest/reset resolved? | [Brake model](../analysis/motor_model.py), [closure](GEN5_CLOSURE.md) | **Open.** First-order force law is not a transient electromagnetic/thermal/structural proof. |
+| C-09 | Is CAD controlled and complete? | [Eight STEP parts](../cad/step/gen5/), [dimensions](../cad/DIMENSIONS.md), [configuration index](GEN5_CONFIGURATION_INDEX.json) | **Partial.** Geometry is reviewable; assembly, harness, fasteners, tolerances and motion interference are unclosed. |
+| C-10 | Do structure and stator handover meet bands? | [Structural study](../validation/A4_sled_structural.md), [open problems](../OPEN_PROBLEMS.md) | **Failed/open.** Moving-load modes and segmented force ripple require coupled transient treatment. |
+| C-11 | Are release contact and tip-off credible? | [Tip-off study](../analysis/tipoff_release.py) | **Open.** Contact law and exact-zero residual-rate assumption need independent review. |
+| C-12 | Is a named payload qualified for shot/brake loads? | [Peak shot](BASELINE.md), [open problems](../OPEN_PROBLEMS.md) | **Open.** 10.07 g is model acceleration, not payload qualification; no named payload envelope. |
+| C-13 | Is magnetic exposure compatible? | [Field studies](../validation/README.md), [open problems](../OPEN_PROBLEMS.md) | **Failed/open.** Modeled magnetometer saturation requires scope exclusion, shielding or standoff design. |
+| C-14 | Are thermal, materials and tolerances closed? | [CAD notes](../cad/DIMENSIONS.md), [manufacturing study](MANUFACTURING.md) | **Open.** Repeated-shot thermal and supplier-backed tolerance/derating data absent. |
+| C-15 | Is the rated orbital utility independently propagated? | [Orbital model](../analysis/astro.py), [GMAT archive](../validation/gmat/) | **Open.** Published GMAT case is an older operating point; 16.029 m/s current case needs rerun. |
+| C-16 | Is phasing compared at a common epoch? | [Correction](PHASING_CORRECTION_2026-10-09.md), [same-epoch run](../validation/P113_S16_phasing_correction.md) | **Partial.** Timing-only benefit withdrawn; matched spring, host maneuver and drag full-manifest comparison remains. |
+| C-17 | Does a sequential 12-shot host campaign close? | [Finite-burn screen](MANIFEST_FINITE_BURN.md), [attitude budget](../analysis/results/attitude_budget.json) | **Failed/open.** Six sampled cases achieve 0/3/4/0/4/5 deliveries; no complete case. |
+| C-18 | Are conjunction, abort and disposal bounded? | [Conjunction model](../analysis/astro.py), [open problems](../OPEN_PROBLEMS.md) | **Open.** No operational ephemerides, covariance or provider COLA. |
+| C-19 | Does the installed system beat a matched alternative? | [Mass ledger](../validation/A35_constraint_ledger.md), [mass chart](../figures/gen5_mass_decision.svg) | **Failed/open.** 10.547 kg/3U fails the study's 2 kg/3U screen; installed resource and common-mode fault trade incomplete. |
+| C-20 | Is host/provider/payload compatibility demonstrated? | [Reference cases](HOST_REFERENCE_CASES.md), [CAD envelope](../cad/DIMENSIONS.md) | **Open.** No named approved provider ICD; existing envelope exceeds the quoted ESPA-class comparison. |
+
+## Required release set
+
+The final academic package should contain the eight Gen5 STEP parts plus an integrated assembly and drawing index; the current configuration index and exact model source/results; a claim-to-evidence matrix; uncertainty and convergence runs for decisive models; a matched mission trade; a report in the college's required format; source, figures, PDFs and slides; a clean verification log; an independent technical review; and a signed exception list. The present [review presentation](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/tree/main/university/final_review_2026_10_10) and manuscripts are **review drafts**, not a released final freeze.
+
+The B-1–B-4 bench tests and T-1–T-8 qualification tests are future physical validation. They cannot be marked passed by simulation, literature analogy or this document.

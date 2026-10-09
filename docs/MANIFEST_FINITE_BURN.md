@@ -1,6 +1,8 @@
 # Twelve-payload finite-burn campaign — P113-S12
 
-Study record · 26 September 2026
+Original study · 26 September 2026. Reproducibility repair · 9 October 2026.
+
+The original result referenced an uncommitted finite-burn propagator. A newly documented implementation was restored and the full screen rerun. The six accepted-prefix counts agree with the archived result; this is a reproducibility check, not independent physical or mission validation. [Restoration record](../validation/P113_S11_restored_propagator.md).
 
 A matched reference screen carries finite burns, propellant, host recoil and the previous release attitude through twelve planned deliveries. Every scenario uses the same targets and release times. The host dry mass is held equal as a sensitivity, not an installed architecture comparison.
 

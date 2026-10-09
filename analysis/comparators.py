@@ -71,26 +71,28 @@ def days_to_phase(dv_differential, target_deg=PHASE_TARGET_DEG):
 
 
 def in_track_rate_deg_s(alt_m=None):
-    """Angular rate along the orbit, degrees per second. The clock's phasing authority.
-
-    A21 never declared this comparator and the claim built on band 3 assumed it did not
-    exist: satellites released at different times from the same host arrive at different
-    true anomalies IN THE SAME ORBIT, for no velocity at all. See P56.
-    """
+    """Absolute circular-orbit angular rate, not relative phasing authority."""
     r = astro.RE + (ALT_M if alt_m is None else alt_m)
     return 360.0 / (2 * math.pi * math.sqrt(r ** 3 / astro.MU))
 
 
 def seconds_to_phase_by_timing(target_deg=PHASE_TARGET_DEG, alt_m=None):
-    """How long to WAIT between releases for `target_deg` of in-track separation."""
-    return target_deg / in_track_rate_deg_s(alt_m)
+    """Waiting alone has no finite solution for unchanged-host zero-impulse releases.
+
+    Both objects occupy the same state at the later release epoch. A spring
+    impulse, host manoeuvre or differential drag can create a relative state;
+    that contribution must be modeled explicitly.
+    """
+    if not (math.isfinite(target_deg) and target_deg > 0):
+        raise ValueError("positive finite phase target required")
+    return None
 
 
 def drift_rate_deg_day(dv_differential):
     """Phase drift rate under a commanded differential. Constant, and it never stops.
 
-    This is the asymmetry band R4 measures. Timed release sets an offset and leaves it
-    there; a differential sets a RATE, and a satellite with no propulsion cannot null it.
+    This is the asymmetry band R4 measures. Waiting alone sets no offset;
+    a differential impulse sets a rate in this two-body approximation.
     """
     a0 = astro.RE + ALT_M
     a1 = astro.boosted_elements(ALT_M, dv_differential)[0]
@@ -224,7 +226,7 @@ def main():
     rate = in_track_rate_deg_s()
     t_timing = seconds_to_phase_by_timing()
     t_commanded = days_to_phase(10.0) * 86400.0
-    cadence_deg = 1200.0 * rate
+    cadence_deg = 0.0  # same co-orbital state at the later zero-impulse release
     drift = drift_rate_deg_day(10.0)
     a_host = astro.RE + ALT_M
     a_timed = a_host                       # a clock imparts no velocity
@@ -233,12 +235,12 @@ def main():
     life_timed = astro.lifetime(a_timed, 0.0)
     life_shot = lifetime_multiplier(dv_volley)
 
-    print("\nA21-R, release timing as the free baseline for phase:")
+    print("\nA21-R correction: waiting alone has no relative phasing authority:")
     print(f"  in-track rate at {ALT_M/1e3:.0f} km        {rate:.4f} deg/s")
-    print(f"  30 deg by waiting                {t_timing:8.0f} s  ({t_timing/60:.1f} min)")
+    print("  30 deg by waiting alone         no finite solution")
     print(f"  30 deg by commanded differential {t_commanded:8.0f} s  "
           f"({t_commanded/86400:.2f} days)")
-    print(f"  ADR-020's 1200 s cadence gives   {cadence_deg:8.1f} deg per shot")
+    print(f"  zero-impulse 1200 s cadence     {cadence_deg:8.1f} deg persistent phase")
     print(f"  drift under 10 m/s differential  {drift:8.2f} deg/day, and it does not stop")
     print(f"  semi-major axis change: timed {a_timed - a_host:.1f} m, "
           f"commanded {a_shot - a_host:.0f} m")
@@ -250,11 +252,11 @@ def main():
             passed=abs(rate - 360.0 / (2 * math.pi * math.sqrt(
                 (astro.RE + ALT_M) ** 3 / astro.MU))) / rate <= 1e-3),
         'R2_timing_beats_commanded': dict(
-            value=t_timing / t_commanded, band='<= 0.01',
-            passed=t_timing / t_commanded <= 0.01),
+            value=None, band='<= 0.01 (historical, invalid premise)',
+            passed=False, status='WITHDRAWN_NO_RELATIVE_STATE'),
         'R3_adopted_cadence_exceeds_target': dict(
             value=cadence_deg, band='>= 60 deg per shot',
-            passed=cadence_deg >= 60.0),
+            passed=False, status='WITHDRAWN_NO_RELATIVE_STATE'),
         'R4_commanded_offset_does_not_hold': dict(
             value=drift, band='non-zero drift rate', passed=drift > 0.0),
         'R5_only_dv_changes_the_orbit': dict(
@@ -273,6 +275,7 @@ def main():
                    in_track_rate_deg_s=rate, seconds_to_30deg_by_timing=t_timing,
                    seconds_to_30deg_commanded=t_commanded,
                    adopted_cadence_s=1200.0, deg_per_shot_at_adopted_cadence=cadence_deg,
+                   status='WITHDRAWN_ZERO_IMPULSE_PHASE_CLAIM',
                    drift_deg_per_day_at_10_m_s=drift,
                    da_timed_m=a_timed - a_host, da_commanded_m=a_shot - a_host,
                    lifetime_ratio_timed=life_timed / life_host,

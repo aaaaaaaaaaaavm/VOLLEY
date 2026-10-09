@@ -8,9 +8,9 @@ VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3
 
 *Mission concept illustration. No host, launch provider, CubeSat, flight interface or trajectory has been approved for this design.*
 
-**Read first:** [Gen5 technical closure](docs/GEN5_CLOSURE.md) · [Full baseline](docs/BASELINE.md) · [Evidence provenance](docs/PROVENANCE.md) · [Open problems](OPEN_PROBLEMS.md) · [CAD](cad/README.md) · [Validation](validation/README.md)
+**Read first:** [Gen5 freeze readiness](docs/GEN5_FREEZE_READINESS.md) · [Gen5 technical closure](docs/GEN5_CLOSURE.md) · [Full baseline](docs/BASELINE.md) · [Evidence provenance](docs/PROVENANCE.md) · [Open problems](OPEN_PROBLEMS.md) · [CAD](cad/README.md) · [Validation](validation/README.md)
 
-> **Evidence status, October 2026.** This is a complete *computational design study*, with a fixed configuration, documented methods, reproducible outputs and explicit failed criteria. It is **not** a complete physical product. No VOLLEY article has been built, fired, measured, qualified or flown; no complete installed-system or provider-specific interface has been validated. Published work on related systems is prior art and a source of assumptions, not a physical test of Gen5.
+> **Evidence status, October 2026.** Gen5 is the selected computational design for academic review. Its configuration, model results and failed criteria are documented; [decisive verification items remain open](docs/GEN5_FREEZE_READINESS.md), so the final academic freeze has not been declared. No VOLLEY article has been built, fired, measured, qualified or flown; no complete installed-system or provider-specific interface has been validated. Published work on related systems is prior art and a source of assumptions, not a physical test of Gen5.
 
 ## One machine, one evaluated configuration
 
@@ -29,6 +29,10 @@ Gen5 uses a 1.5 m track (1.3 m powered stroke), double-sided ironless Halbach li
 
 Values and definitions are in [the baseline](docs/BASELINE.md); scripts and machine-readable outputs are in [analysis](analysis/) and [validation](validation/). The [Gen5 closure](docs/GEN5_CLOSURE.md) records corrections and failed bands as part of the result.
 
+<p align="center"><img src="figures/gen5_mass_decision.svg" alt="Gen5 mass per 3U versus canister and economic screens" width="49%"> <img src="figures/gen5_energy_accounting.svg" alt="Rated shot net energy and payload share" width="49%"></p>
+
+*These charts are generated directly from the checked-in [mass](analysis/results/mass_properties.json) and [shot](analysis/results/motor_results.json) JSON. The 6 kg canister is an approximate comparator; the grey energy balance is not a detailed loss audit. [Rebuild charts](tools/plot_gen5_decision.py).*
+
 ## See the evidence, including what failed
 
 <p align="center"><img src="figures/A02_field_map.png" alt="Calculated magnetic airgap field" width="32%"> <img src="figures/F01_shot.png" alt="Calculated Gen5 shot history" width="32%"> <img src="figures/A35_ledger.png" alt="Requirement-attributed mass floor" width="32%"></p>
@@ -46,6 +50,14 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 <p align="center"><img src="figures/manifest_timing.svg" alt="Bounded two-payload mission timing screen" width="49%"> <img src="figures/operational_uncertainty.svg" alt="Operational uncertainty study" width="49%"></p>
 
 *These are model studies with stated assumptions. The sampled 4.57 m/s two-payload point is a mission-screen result, not a launcher maximum or a validated setting. [Timing assumptions](docs/MANIFEST_TIMING.md) · [Uncertainty study](docs/OPERATIONAL_UNCERTAINTY.md).*
+
+![Corrected same-epoch phase comparison](figures/phasing_reference.svg)
+
+*A 468 s wait alone produces no persistent relative phase in the zero-impulse case. The nonzero curves require a differential release impulse; host maneuver and drag cases remain to be compared on matched missions. [Correction and method](docs/PHASING_CORRECTION_2026-10-09.md).*
+
+![Accepted delivery prefixes in the six sampled finite-burn campaigns](figures/manifest_finite_burn.svg)
+
+*The finite-burn campaign has been rerun from the restored source and again stops at 0/3/4/0/4/5 accepted deliveries. No case delivers all twelve. This is a surrogate calculation with assumed host thrust and release speeds; it does not establish mission infeasibility or hardware performance. [Run record and limitation](docs/MANIFEST_FINITE_BURN.md).*
 
 ## Inspect the hardware definition
 

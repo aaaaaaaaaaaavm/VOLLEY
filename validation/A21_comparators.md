@@ -1,5 +1,13 @@
 # A21: VOLLEY against the alternatives, on identical axes
 
+> **Current-use correction, 9 October 2026:** This is a historical comparison at
+> pre-correction mass and velocity. Its spring-versus-VOLLEY phase-time and
+> schedulability verdicts do not establish a matched twelve-payload mission.
+> The later A21-R timing-only phase claim is [withdrawn](A21R_release_timing.md).
+> Use the [same-epoch correction](P113_S16_phasing_correction.md), the
+> [finite-burn campaign](../docs/MANIFEST_FINITE_BURN.md) and the
+> [freeze-readiness matrix](../docs/GEN5_FREEZE_READINESS.md) for current scope.
+
 > ## Forward note, 2026-08-21: the comparison table below is pre-A46 and pre-ADR-030
 >
 > **Nothing below is edited, no band is re-declared and the verdict stands.** Two rows of the
@@ -24,13 +32,12 @@
 > 5.3x on dry mass. P69 records that no enclosure change reaches parity: the honeycomb sandwich
 > A46 costed would give 8.87 kg per satellite, ratio 1.48, still failing.
 >
-> The "30° of phase" row is superseded by [A21-R](A21R_release_timing.md). A21 never declared
-> release timing as a comparator. Satellites released 1200 s apart from the same host reach 30° of
-> in-track phase in 468 s, at zero Δv, and hold it with zero relative rate; the commanded
-> differential reaches 30° in 1.38 days and then drifts through it at 21.75 °/day, which a
-> propulsion-less satellite cannot null. Phase spacing is not a VOLLEY advantage. What survives
-> R5 and R6 is orbit change: timed release moves semi-major axis by 0.0 m and lifetime by
-> x1.0000, a commanded shot by 28 801 m and x1.602. A clock cannot change an orbit.
+> **Correction, 9 October 2026:** A21-R's later timing-only comparator was invalid and is
+> [withdrawn](A21R_release_timing.md). Waiting between zero-relative-impulse releases from
+> an unchanged host gives no persistent phase offset. A relative impulse, host maneuver or
+> differential drag is needed. The commanded differential can change semi-major axis and
+> modelled lifetime, but its full mission benefit and installed-system trade remain open.
+> See the [same-epoch correction](P113_S16_phasing_correction.md).
 >
 > What is left of the competitive case, stated exactly: a commanded per-satellite change in
 > orbital energy, on a satellite that carries nothing, inside its qualification envelope. The mass

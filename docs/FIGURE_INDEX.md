@@ -1,9 +1,9 @@
-# Every figure, and what stands behind it
+# Figure evidence index
 
-A figure without provenance is decoration. This index gives, for every image this project
-publishes: what it shows, the script that draws it, the data it draws from, the claim it
-supports, and what class of evidence it is, because a Monte Carlo histogram and a
-measurement look identical on a page and are not the same thing.
+A figure without provenance is decoration. This index covers the manuscript and
+presentation figures and names their evidence class. Other mission illustrations
+and historical drawings have their own captions at point of use. A Monte Carlo
+histogram and a measurement can look identical; their evidence classes cannot.
 
 ## Evidence classes, used throughout
 
@@ -12,7 +12,7 @@ measurement look identical on a page and are not the same thing.
 | M | Model output. One script, one physics implementation. Reproducible, not corroborated | most |
 | X | Cross-checked. Two independent methods agree, and the agreement is quoted | 3 |
 | S | Schematic. A drawing, not a computation. No numbers descend from it | 2 |
-| R | Render. A picture of geometry. Carries no result at all | 7 |
+| R | Render. A picture of geometry. Carries no result at all | Gen5 and historical sets |
 | D | Measured data. Something physical was observed | 0 |
 
 > There are no class-D figures in this repository. Nothing has been built, fired or measured
@@ -22,11 +22,11 @@ measurement look identical on a page and are not the same thing.
 
 ---
 
-## Paper figures
+## Paper and flagship figures
 
-All are drawn by [`../paper/make_figures.py`](../tools/make_figures.py), which imports
-`analysis/` and re-derives nothing. A figure that reimplemented its own physics could drift from
-the number it illustrates, which is the defect the generator was written to remove.
+The manuscript's numbered plots are drawn by the paper companion's `paper/make_figures.py`
+from its local `analysis/` snapshot. The flagship keeps copies for engineering review.
+New mission figures below name their own local generator.
 
 | Fig | Shows | Drawn by | From | Supports | Class |
 |---|---|---|---|---|:-:|
@@ -41,7 +41,7 @@ the number it illustrates, which is the defect the generator was written to remo
 | A35-L | Constraint ledger: what each requirement is worth alone, and the floor no corner reaches | `analysis/make_ledger_figure.py` | `analysis/results/constraint_ledger.json`, 64 corners | 88.67 kg, 70.06 %, survives every deletion (P95) | M |
 | GEN5-X | Blender exploded view of the drive stack: track, stator, sled, payload | `cad/tools/render_blender.py`, view `exploded` | `cad/stl/*_Gen5.stl` | geometry only; offsets are presentation and nothing reads them | S |
 | F04 | Orbital lifetime vs deployment altitude | `f04_life()` | `astro.lifetime()` | x1.60 multiplier | M |
-| F05 | Constellation seeding vs differential drag | `f05_dragvs()` | `astro` | 30° in 1.4 days vs 25. Caption must name release timing at 468 s as the free baseline (P56) | M |
+| F05 | Relative-impulse phasing vs differential drag | `f05_dragvs()` | `astro` and assumed drag case | A 30° model comparison after an actual relative-state change; waiting alone between zero-impulse releases from an unchanged host does not create persistent phase | M |
 | F06 | Satellite, stage range over 30 days | `f06_conj()` | `astro.conjunction(trace=True)` | Deployment safety, §V-D | M |
 | F07 | Payload family, force-limited above 1U | `f07_family()` | `motor_model.payload_family()` | Table \ref{tab:family}, kill criterion 1 | M |
 | F08 | Eddy-brake arrest, taper-limited to 200 g | `f08_brake()` | `motor_model.regen_brake()` + a first-order plate-drag law | Arrest §III-E. The second leg is a first-order law and nothing more, E20 records that no force, time profile for the arrest exists anywhere | M |
@@ -50,6 +50,10 @@ the number it illustrates, which is the defect the generator was written to remo
 | F12 | Open-loop velocity-loop response, both gains | `f12_bode()` | `analysis/control_design.py` | A28. Margins, the 48-109 Hz mode band, both crossovers | M |
 | F13 | Phase margin against transport delay | `f13_latency()` | `analysis/control_design.py` | A28 band 5. The stability floor at 0.35 ms | M |
 | shot.gif | The stroke, animated | `tools/make_animation.py` | `motor_model.shot(trace=True)` | Same integrator as F01 | M |
+| P113-S12 | Accepted delivery prefix in six finite-burn twelve-payload screens | `tools/plot_manifest_finite_burn.py` | `analysis/results/manifest_finite_burn.json` | 0/3/4/0/4/5 accepted; no sampled full-manifest closure | M |
+| Gen5 mass decision | Dry mass per 3U against two separate mass screens | `tools/plot_gen5_decision.py` | `mass_properties.json` and declared approximate comparators | 10.55 kg/3U; fails both stated comparisons | M |
+| Gen5 energy accounting | Rated shot gross, modeled recovery, net and payload kinetic energy | `tools/plot_gen5_decision.py` | `motor_results.json` | 514 J payload out of 2735 J net; grey balance is not an itemized loss budget | M |
+| P113-S16 | Same-epoch phasing after a 468 s wait with first-payload differential impulses | `analysis/phasing_reference.py` | `phasing_reference.json`, two-body initial states | Zero impulse stays at zero relative phase; nonzero curves require a relative-state change | M |
 
 Numbering note: there is no F10. It was withdrawn and the gap is left rather than
 renumbered, so a reference to F10 in any older document resolves to nothing instead of silently
@@ -68,16 +72,12 @@ They previously held only a hand-picked subset of the operating point and so cou
 
 ## Renders
 
-Seven images under `cad/renders/`, produced in Fusion from the Gen4 assembly and processed by
-`cad/tools/prepare_renders.py` (crop, fit to 1600 x 900, departure arrow).
-
-> These are class R and they carry a disclosure. Gen4 has never been exported, and its
-> stations do not match the parameters the published numbers rest on, it releases at
-> s = 1200 mm where `analysis/` assumes 1500 mm (P32, P43). The renders therefore show
-> geometry that no committed file matches. They are kept because they are the only visual
-> record of the assembly, and the mismatch is stated wherever they appear rather than left for a
-> reader to find. The geometry that *is* committed and *does* match is Gen5, generated by
-> `cad/build_gen5.py`, and it has no renders.
+The [Gen5 render set](../cad/renders/gen5/) illustrates the evaluated electromagnetic
+geometry; the [Gen5 STEP parts](../cad/step/gen5/) and `cad/build_gen5.py` define its
+reproducible model. The [historical study render set](../cad/renders/legacy_study/)
+illustrates an unselected gas-guide comparison. Both are class R: a visual fit to CAD,
+not evidence of manufacture, motion, tolerance or host accommodation. Earlier Gen4
+images in the record remain historical and must not be used as Gen5 geometry.
 
 ---
 
@@ -87,13 +87,13 @@ These are results in the same sense, and a referee will want them in the same li
 
 | Artefact | What it is | Where | Class |
 |---|---|---|:-:|
-| `analysis/results/*.json` | Every computed value, 33 files. `docs/BASELINE.md` is generated from them and `make_baseline.py --check` verifies 23 of them against the scripts on every commit | `analysis/results/` | M |
+| `analysis/results/*.json` | Captured model outputs. `docs/BASELINE.md` checks 23 named headline fields against source scripts; it is not a check of every result file | `analysis/results/` | M |
 | 2-D magnetostatic FEM | FEMM/`skfem` solve of the array, agreeing with the analytic model to 0.03 %, the figure after the 2026-08-03 quadrature correction, which found both implementations sharing an invalid winding-thickness rule; the pre-correction agreement was 0.07 % and did not test that rule | `validation/A1_field_femm.md` | X |
 | 3-D magnetostatic FEM | `getdp` reduced-scalar-potential solve, 274,105 DoF on a 315,370-node tetrahedral mesh, agreeing with magpylib to 0.059 % | `validation/fem3d/` | X |
 | Structural FEM | CalculiX solve of the sled chassis | `validation/A4_sled_structural.md` | M |
 | Independent propagator | GMAT R2022a against `astro.py`, and it falsified a claim in the paper's own abstract (P16) | `validation/gmat/` | X |
 | CFD | `simpleFoam` external aerodynamics of the Gen5 sled and payload, for the ground-test air correction | `validation/cfd/`, A29 | M |
-| 27 run sheets | Every analysis, each with its acceptance bands declared and committed before its script existed | `validation/` |, |
+| Validation run sheets | Named acceptance bands, limitations and failed outcomes; the restored P113-S11 implementation is explicitly post-result and must not be described as predeclared | `validation/` | M |
 
 ---
 

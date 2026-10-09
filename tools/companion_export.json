@@ -1,33 +1,12 @@
 {
-  "flagship_commit": "06ebd07",
-  "flagship_tree_was_dirty": false,
-  "note": "The commit the companions were last generated from. tools/check_companions.py fails when any manifest source has been committed since. Regenerate with tools/export_companion.py and push both companions.",
-  "manifest_sources": [
-    "CAD_BRIEF.md",
-    "CHANGELOG.md",
-    "CITATION.cff",
-    "LICENSE",
-    "LICENSE-MIT-superseded",
-    "LICENSING.md",
-    "NOTICE",
-    "OPEN_PROBLEMS.md",
-    "analysis",
-    "cad",
-    "docs/BASELINE.md",
-    "docs/DECISION_LOG.md",
-    "docs/GEN4_STATUS.md",
-    "docs/HISTORY.md",
-    "docs/LITERATURE.md",
-    "docs/PRIOR_ART.md",
-    "docs/PROVENANCE.md",
-    "docs/RELATED_WORK.md",
-    "docs/VALIDATION_REPORT.md",
-    "docs/adr",
-    "figures",
-    "requirements-dev.txt",
-    "requirements.txt",
-    "tools/make_animation.py",
-    "tools/make_figures.py",
-    "validation"
-  ]
+  "flagship_source_snapshot_commit": "06ebd07",
+  "note": "The paper and thesis retain a dated source snapshot. This record checks exact common results, not recency of all flagship work or published remote checkout content.",
+  "pinned_common_files_sha256": {
+    "analysis/mass_properties.py": "b8547e763806b0c740ee342c3278d85b1295d18f7cfe52be5239c9136c08d777",
+    "analysis/motor_model.py": "aafef3beb496e8db3bb96c9314bd604a5976c24ccc856335bf2db67f3f8fa0f2",
+    "analysis/results/astro_results.json": "092c12fac9d89fcc464169e261babaaa1245b5047e4ec145d7d38ff69396f660",
+    "analysis/results/mass_properties.json": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
+    "analysis/results/motor_results.json": "afadd4d66271d9d1476b294ecea2723500ad813c0adc6d9648a07b83692c3875"
+  },
+  "publication_scope": "pinned Gen5 academic results; companion repositories independently authored"
 }

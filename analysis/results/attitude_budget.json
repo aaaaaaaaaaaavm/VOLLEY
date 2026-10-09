@@ -3,11 +3,11 @@
   "supersedes": "A13 result run 2026-07-31",
   "method": "angular-momentum conservation with numerical time integration",
   "software": {
-    "python": "3.12.13",
+    "python": "3.12.14",
     "python_license": "PSF License",
     "numpy": "2.4.6",
     "numpy_license": "BSD-3-Clause",
-    "source_sha256": "e700700ecf469acfcab950fdf0ba4d442cd566139ba8f1460e7194803dc54331"
+    "source_sha256": "939e80fac9cc159ecb5a34ecba108e5045a010c14eca2d68fd8d96c9ca078b31"
   },
   "solver_settings": {
     "time_samples": 20001,

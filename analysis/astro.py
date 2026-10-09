@@ -5,7 +5,7 @@ Reproduces (paper Secs. IV-C, V-B, V-C) at the rated velocity of 16.029 m/s:
     lifetime multiplier         x1.60 at 450 km, BC 61 kg/m^2, MEAN ACTIVITY ONLY
     Cowell vs orbit-averaged    99.4 % agreement on 30-day decay
     drift seeding 2/5/10 m/s    30 deg in 6.9 / 2.8 / 1.4 days
-    release timing              30 deg in 468 s at zero dv  <- the free baseline (A21-R)
+    release timing alone        no persistent phase at zero relative impulse
     differential drag (3:1)     30 deg in 25.0 days
     conjunction (screening)     42.2 km min / 46.6 km median -- fragile
     phase realignment           10.3 days (the robust quantity; see OPEN_PROBLEMS P1)
@@ -18,11 +18,12 @@ in the same slot, so both sweeps divide the two lifetimes being compared by the 
 factor and their ratio cannot move. The flatness was an artefact of how the sweep was
 posed. The multiplier is quoted at a STATED ACTIVITY LEVEL and is not claimed invariant.
 
-PHASE SPACING IS NOT A CLAIM OF THIS PROJECT (P56, A21-R). Release timing reaches
-30 deg of in-track phase in 468 s at zero dv and holds it at zero relative rate; a
-commanded split reaches it in 1.4 days and then drifts through it at 21.75 deg/day.
-What only dv can do is change the orbit: timed release moves semi-major axis by 0 m,
-a commanded shot by 28.8 km. Compare against the clock, not against drag.
+THE OLD TIMING-ONLY PHASE CLAIM IS WITHDRAWN (P56, A21-R). Two zero-relative-
+impulse releases from an unchanged co-orbital host remain co-located; a
+10 m/s relative impulse reaches 30 deg in about 1.4 days and then continues drifting.
+A zero-impulse wait changes semi-major axis by 0 m; a commanded shot changes it
+in the stated model. Compare against spring impulse, host manoeuvre and drag
+under matched initial states and epochs.
 
 MODEL LIMITATION: static exponential atmosphere (Vallado-class table, mean solar
 activity). Absolute lifetimes carry severalfold uncertainty across the solar cycle,

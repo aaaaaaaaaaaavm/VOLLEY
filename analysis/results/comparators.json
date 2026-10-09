@@ -5,10 +5,11 @@
   "reanalysis_bands_commit": "9bab1ce",
   "release_timing": {
     "in_track_rate_deg_s": 0.06411183109514268,
-    "seconds_to_30deg_by_timing": 467.9323533199303,
+    "seconds_to_30deg_by_timing": null,
     "seconds_to_30deg_commanded": 119173.6086594985,
     "adopted_cadence_s": 1200.0,
-    "deg_per_shot_at_adopted_cadence": 76.93419731417121,
+    "deg_per_shot_at_adopted_cadence": 0.0,
+    "status": "WITHDRAWN_ZERO_IMPULSE_PHASE_CLAIM",
     "drift_deg_per_day_at_10_m_s": 21.74978192869726,
     "da_timed_m": 0.0,
     "da_commanded_m": 28800.77515554987,
@@ -156,14 +157,16 @@
       "passed": true
     },
     "R2_timing_beats_commanded": {
-      "value": 0.003926476327967054,
-      "band": "<= 0.01",
-      "passed": true
+      "value": null,
+      "band": "<= 0.01 (historical, invalid premise)",
+      "passed": false,
+      "status": "WITHDRAWN_NO_RELATIVE_STATE"
     },
     "R3_adopted_cadence_exceeds_target": {
-      "value": 76.93419731417121,
+      "value": 0.0,
       "band": ">= 60 deg per shot",
-      "passed": true
+      "passed": false,
+      "status": "WITHDRAWN_NO_RELATIVE_STATE"
     },
     "R4_commanded_offset_does_not_hold": {
       "value": 21.74978192869726,

@@ -42,14 +42,15 @@ Twelve 3U satellites, one plane, 30° spacing, from one release event at 450 km.
 | Differential drag, what a spring-deployed fleet must use | 25.0 days |
 | Commanded differential, 2 m/s | 6.9 days |
 | Commanded differential, 5 m/s | 2.8 days |
-| Release timing, no velocity at all | 468 s |
+| Release timing alone, no relative state change | No finite solution in the stated two-body model |
 | Commanded differential, 10 m/s | 1.4 days |
 
 *(`analysis/astro.py`, `seeding()`.)*
 
-The constellation is usable roughly 24 days sooner. That is the product. It is not a velocity
-number and not an efficiency number, it is a schedule number, and it is the only axis on
-which nothing else available competes.
+This idealized pairwise comparison suggests a schedule benefit if the release velocity can be
+commanded as modeled. It does **not** show that twelve satellites reach their assigned slots
+24 days sooner: the finite-burn full-manifest screen has no complete successful case, and
+the spring, drag and host-maneuver alternatives still need matched end-to-end evaluation.
 
 And each satellite lives longer, because lifetime extension is superlinear in Δv:
 
@@ -75,7 +76,7 @@ axis they win on, not without it.
 
 | Alternative | Where it beats VOLLEY | Why it cannot do *this* job |
 |---|---|---|
-| Spring dispenser | Maturity (TRL 9 vs 2-3), reliability, simplicity. A ~1.8 kg spring reaches the same 16.0 m/s within the g-cap (A27) | Its designed differential is exactly zero. Every satellite gets the same push, so the fleet can only phase by drag, 25 days, and not schedulable |
+| Spring dispenser | Maturity, reliability and simplicity; a modeled spring can reach the same 16.0 m/s within the study g-cap (A27) | A fixed nominal impulse cannot separately command each payload's exit speed. Release geometry, scatter, drag, host maneuvers and any adjustable spring alternative still belong in a matched mission trade |
 | Differential drag | Free, and it has flown on a 12-satellite constellation | 25 days, and it needs differential ballistic coefficient, attitude control or deployable area, which is itself a satellite modification |
 | Cold-gas module | Mass, by 8.3x at 3U (A21, declared as a loss before the run) | Puts a pressure vessel, a propulsion system and a regulatory path on the customer's satellite. VOLLEY's whole proposition is that the satellite carries nothing |
 | Orbital transfer vehicle | Δv, by hundreds of m/s. It can change plane; VOLLEY cannot at any price (133 m/s per degree) | Over-specified for a job needing ~16 m/s, and it makes the customer buy a spacecraft. Right-sizing is the argument, not superiority |
@@ -149,10 +150,14 @@ wrong thing to do next.
 
 ## The one-paragraph version
 
-*A fleet of propulsion-less CubeSats released from a single rideshare must either accept the orbit
-it inherits or wait about a month for atmospheric drag to spread it along track. VOLLEY replaces
+*A fleet of propulsion-less CubeSats released from a single rideshare inherits
+the host orbit and can develop relative motion through spring impulse,
+differential drag or host manoeuvres. VOLLEY replaces
 the spring with a linear motor that gives every satellite a separately commanded exit velocity, so
-a twelve-satellite plane reaches 30° of spacing in 468 s by release timing alone, which costs nothing and is not a VOLLEY capability (P56), and each satellite
-gains 49 % of orbital life, without carrying propulsion, a pressure vessel, or any
-modification. It is heavier than a cold-gas module, less mature than a spring, and has never been
-built. What it offers that neither can is a constellation that is usable on a schedule.*
+a modeled release impulse can change orbital energy without spacecraft propulsion.
+The former 468 s timing-only spacing claim is withdrawn: an unchanged host cannot
+create persistent relative phase by waiting between zero-impulse releases. The
+modeled lifetime benefit is conditional on orbit and atmosphere; the complete
+twelve-payload mission has not been closed. Gen5 is heavier than its spring
+comparator and has never been built or measured. The market case therefore
+remains a question for a matched mission and installed-system trade.*

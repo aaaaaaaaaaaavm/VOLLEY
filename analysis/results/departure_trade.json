@@ -14759,7 +14759,7 @@
       }
     }
   ],
-  "input_sha256": "087fe5414f533b83a62c3b11fa3f719325c53195e51a2710e8a2aa62960ddb65",
+  "input_sha256": "ebc02d4a977f44a0903870a0add564c5a5491eebb4f2a933763ea8814632363a",
   "inputs": {
     "assumed_acceleration_ceiling_g": 25,
     "assumed_minimum_relative_speed_m_s": 0.5,
@@ -14804,9 +14804,9 @@
     "E5"
   ],
   "source_sha256": {
-    "analysis/departure_trade.py": "f3a715e883e9b3414cc07836b720bb8c1b87f94c4a8f3288d454d89c3c650044",
+    "analysis/departure_trade.py": "7c074bea89d84a9ecf3658583371b780998220b6a2da104786299743e08abc34",
     "analysis/host_reference.py": "e21d08709852fc711d112efe69fe56493ffe839142db87d110e1511a10abfaa3",
-    "validation/P113_S1_departure_trade.md": "1746dc27ace7c3b7d30d134b56791bab107b509c67e04be238eda81586c67dfd"
+    "validation/P113_S1_departure_trade.md": "f84d9e1f7715fd741cb6dcbc84f079c48b423d8d85e1e9cd8ff38c4a3f0dfaf8"
   },
   "status": "MODEL_OUTPUT_NOT_HARDWARE_VALIDATION",
   "stroke_bounds": [

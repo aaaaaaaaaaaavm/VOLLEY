@@ -106,11 +106,12 @@ Derived here. Arithmetic shown, circular orbit, impulsive burn, `MU` and `RE` fr
 > with a different propellant budget. *A tenth of a degree is affordable on a modest reserve; a
 > degree is a mission of its own.*
 
-Phase is the cheap one and it is free. [A15](../validation/A15_poem_campaign.md) and
-[P56](../OPEN_PROBLEMS.md) record it: release timing gives phase at zero Δv, because two
-satellites released minutes apart from the same orbit separate in true anomaly by construction.
-*That is a scheduling result, not a propulsion one, and it is the least appreciated part of the
-architecture.*
+**Correction 2026-10-09:** release timing alone is not free phase. Two payloads
+released with zero relative impulse from an unchanged host remain in the same
+two-body state. Spring impulse, host manoeuvre or differential drag can establish
+a relative state, and a commanded impulse can change orbital energy. See the
+[same-epoch calculation](PHASING_CORRECTION_2026-10-09.md). A full campaign
+trade remains open.
 
 ---
 

@@ -65,12 +65,13 @@ The middle is empty, and the 92 % of flown CubeSats without propulsion are the e
 is: those operators did not decline propulsion because they had no use for orbital control. They
 declined it because the smallest available step was a propulsion system.
 
-One 16.5 m/s ejection multiplies a propulsion-less satellite's orbital lifetime by 1.62 at mean
-solar activity, and differential ejection at 2-10 m/s establishes 30° of constellation spacing in
-a 28.8 km rise in semi-major axis and +60.2 % of orbital life, against +8.2 % for the fastest published spring. Phase spacing is not among them: release timing delivers 30° in 468 s for nothing (P56). Those numbers are what
-the gap is worth, they come from [`RESULTS.md`](RESULTS.md), and the lifetime one has an
-independent propagator behind it that disagrees at low solar activity, which is why it is
-quoted at a stated activity level and not claimed invariant.
+The rated Gen5 model predicts a 28.8 km semi-major-axis rise and about 60.2 %
+more orbital life for one stated 450 km, mean-activity case, against a smaller
+modelled spring impulse. These are conditional calculations, not verified customer
+benefits. **Correction 2026-10-09:** waiting alone cannot deliver 30° of persistent
+relative phase from zero-impulse releases on an unchanged host. The old 468 s
+claim is withdrawn; [matched phasing and mission comparisons](PHASING_CORRECTION_2026-10-09.md)
+remain part of the value assessment.
 
 Stated as a ratio against the incumbent ([A21](../validation/A21_comparators.md)): 7.33x
 the orbital lifetime extension of the fastest published spring, 9.45x against a typical one, at
