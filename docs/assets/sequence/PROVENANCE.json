@@ -1,0 +1,23 @@
+{
+  "evidence_class": "STEP-derived Blender animation of intended operations; no moving-clearance, release-contact, electrical, brake, or hardware validation",
+  "source_mesh_manifest_sha256": "cf2b94b52be5d8b78937e1c559f377ce0f55feea94c3176c834bd5ddbe424f6d",
+  "native_freecad_document": "cad/native/Gen5_Review.FCStd",
+  "native_freecad_sha256": "301a360c51738bd2eaa1247f0d29876e89dffa6470de8fb7a6830c9a4d595403",
+  "reference_fit": "FAIL: 11 mm transverse shortfall and 32915 mm3 track/cassette overlap per side",
+  "hidden": [
+    "Enclosure",
+    "Magazine_S"
+  ],
+  "animated": [
+    "Payload_S01",
+    "Sled"
+  ],
+  "stage_frames": [
+    12,
+    57,
+    83,
+    123
+  ],
+  "frames": 128,
+  "fps": 16
+}

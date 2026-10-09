@@ -4,13 +4,11 @@
 
 VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3U CubeSats through one reusable launch path and command an individual departure speed for each release. **Gen5 is the controlled academic evaluation snapshot, with a negative 3U selection finding.** Its final engineering release and academic freeze are open. Gen6 is a separate, future architecture trade toward a 1 km/s-class objective; it has no selected mechanism or validated performance.
 
-![Conceptual host and sequential departures](docs/assets/hero_departure.svg)
+![Four-stage STEP-derived Blender storyboard of intended Gen5 storage, handoff, acceleration and departure](cad/renders/sequence/gen5_operations_hero.png)
 
-*Mission concept illustration. No host, launch provider, CubeSat, flight interface or trajectory has been approved for this design.*
+*Intended operations, not validated motion. The enclosure and near cassette shell are hidden for visibility. The evaluated side-fed assembly **fails** its static fit check; feed, contact and brake dynamics remain unverified. [Watch the eight-second conceptual animation](cad/renders/sequence/gen5_intended_sequence.mp4) · [inspect its STEP sources and provenance](cad/renders/sequence/README.md) · [open the interactive website](https://aaaaaaaaaaaavm.github.io/VOLLEY/).*
 
-![Gen5 STEP-derived reference assembly with its enclosure hidden](cad/renders/step_review/gen5_reference_open.jpg)
-
-*Blender view tessellated from the [FreeCAD-linked STEP solids](cad/renders/step_review/README.md). The evaluated side-fed assembly **fails** its track/cassette fit check; the enclosure is hidden to expose the modeled parts. This is CAD visualization, not photographed or fabricated hardware.*
+<p align="center"><img src="cad/renders/sequence/gen5_intended_sequence.gif" alt="Concept animation of intended Gen5 storage, lateral handoff, track motion and departure; motion is not validated" width="74%"></p>
 
 **Read first:** [Computational review report](reports/GEN5_COMPUTATIONAL_REVIEW.pdf) · [FreeCAD/CAD report](cad/GEN5_CAD_REVIEW.pdf) · [Gen5 freeze readiness](docs/GEN5_FREEZE_READINESS.md) · [Remaining CAD and IEEE work](IEEE_AND_CAD_REMAINING_WORK.md) · [IEEE prior-art update](docs/IEEE_PRIOR_ART_UPDATE_2026-10-09.md) · [Market and spacecraft fit](MARKET_AND_CUSTOMER_FIT.md) · [Gen5 technical closure](docs/GEN5_CLOSURE.md) · [Full baseline](docs/BASELINE.md) · [Evidence provenance](docs/PROVENANCE.md) · [Open problems](OPEN_PROBLEMS.md) · [CAD](cad/README.md) · [Validation](validation/README.md)
 

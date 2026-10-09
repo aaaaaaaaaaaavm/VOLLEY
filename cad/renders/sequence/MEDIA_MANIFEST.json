@@ -1,0 +1,37 @@
+{
+  "classification": "STEP-derived conceptual media; not validation or hardware evidence",
+  "outputs": {
+    "gen5_intended_sequence.gif": {
+      "sha256": "051c1f8c1b09d67594924032fb0e5ccd3d3544a5575b11ee16c50271b3c27572",
+      "bytes": 122089
+    },
+    "gen5_intended_sequence.mp4": {
+      "sha256": "ae7af82c58424a592667603c4472f90a8bccec0a73408f875549c5b45bab2f08",
+      "bytes": 85783
+    },
+    "gen5_operations_hero.png": {
+      "sha256": "0372daacb5c590b0c16e9d3cae3d378fad62c53969e76f4240c7fa2b49a8dc75",
+      "bytes": 3912919
+    },
+    "gen5_social_preview.png": {
+      "sha256": "f26951dfc814640bd27d3fc0fac32a315c19b4c98833b73d785a9f09a31dbd22",
+      "bytes": 625537
+    },
+    "step_01.png": {
+      "sha256": "5e38b48fb6e5328f378492ae440151979c4ec0625af141d9ba94e700cf05d23b",
+      "bytes": 1293048
+    },
+    "step_02.png": {
+      "sha256": "4ddd96a42ee16e6716537036bdca69a3fe3de5f65fd63f92d7b6f740d4b2305f",
+      "bytes": 1294378
+    },
+    "step_03.png": {
+      "sha256": "5114aabcf3670633215a4689d785bddda318ceed517706c72c71496ea10bdeec",
+      "bytes": 1297411
+    },
+    "step_04.png": {
+      "sha256": "ac1a0067ebbf223d3c3a7c4daaca7cdb3756b5f4e3723f29d3454d8831da57ed",
+      "bytes": 1296097
+    }
+  }
+}
