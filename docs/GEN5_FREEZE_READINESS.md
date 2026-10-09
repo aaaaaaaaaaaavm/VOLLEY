@@ -6,7 +6,7 @@ No VOLLEY hardware has been built or tested. Independent published results suppo
 
 | ID | Review question | Evidence in this repository | Disposition for final academic freeze |
 |:--|:--|:--|:--|
-| C-00 | Are source, environment and outputs reproducible? | [Verification script](../tools/verify_all.sh), restored [finite-burn source](../analysis/finite_burn_departure.py), [run record](../validation/P113_S11_restored_propagator.md) | **Open.** Clean checkout, native-solver availability and companion provenance need one recorded green run. |
+| C-00 | Are source, environment and outputs reproducible? | [Verification script](../tools/verify_all.sh), [clean-snapshot run and log](../validation/P114_clean_gate_2026-10-09.md), restored [finite-burn source](../analysis/finite_burn_departure.py) | **Partial.** The recorded snapshot passed all repository gates and 148 tests with a clean tracked tree. Native-solver reruns and exact companion provenance remain open. |
 | C-01 | Does one configuration support all headline claims? | [Baseline](BASELINE.md), [configuration index](GEN5_CONFIGURATION_INDEX.json), [figure index](FIGURE_INDEX.md) | **Partial.** File identity is controlled; manuscript, drawing and table cross-reference audit remains. |
 | C-02 | Is prior art traced to primary revisions? | [Literature](LITERATURE.md), [prior art](PRIOR_ART.md) | **Partial.** Product, price and provider statements still require source/revision audit. |
 | C-03 | Is depth-integrated motor force independently checked? | [Field/FEM record](../validation/A1_field_femm.md), [Gen5 closure](GEN5_CLOSURE.md) | **Open.** Independent 3-D force integral at Gen5 geometry remains decisive. |
