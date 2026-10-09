@@ -22,7 +22,7 @@ Gen5 uses a 1.5 m track (1.3 m powered stroke), double-sided ironless Halbach li
 |:--|--:|:--|
 | 3U exit speed | **16.029 m/s** | Calculated shot, not measured or a demonstrated command range |
 | Peak modeled acceleration | **10.07 g** | Payload-specific qualification remains open |
-| Dry / loaded mass | **126.6 / 174.6 kg** | CAD-derived design mass; not complete installed-system mass |
+| Dry / loaded mass | **126.6 / 174.6 kg** | Modeled rollup using historical Gen3 sled volumes and assumed component masses; not complete installed-system mass |
 | Electrical-to-payload efficiency | **18.8%** | Circuit and mechanics model, net of modeled recovery |
 | Closed-loop exit-speed dispersion | **0.0274 m/s, 3σ** | Simulation with assumed sensor noise; not measured repeatability |
 | Mass per carried 3U | **10.547 kg** | **Fails** the study's 2 kg/satellite economic screen by about 5.3× |

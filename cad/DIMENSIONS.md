@@ -117,7 +117,7 @@ Fusion document: `EMOCD_Sled`
 | `payload_com_offset_above_thrust_line` | 70 | mm |
 | `gap_shim_tolerance` | 0.05 | mm |
 
-- `provisional_note`: The 6 mm chassis is a first-pass stiffness-driven design (0.0115 mm deflection under 3.7 kN inter-array attraction -- superseded, A12 gives 2.69 kN, so the deflection is conservative -- against a +/-0.05 mm gap budget) with NO structural FEA behind it. Sled mass from this geometry contradicts the 4.86 kg assumed by mass_properties.py and drives exit velocity. Open problems P5/P8. ANSYS analysis A4 must close this before any number downstream is locked.
+- `provisional_note`: The 6 mm chassis was the original first-pass stiffness design. A4 subsequently ran CalculiX 2.21 on the Gen3 chassis and passed its stated deflection, stress and first-mode bands at the conservative 3.68 kN attraction case; A12 later revised that attraction to 2.69 kN. The adopted 9.445 kg sled is from Gen3 solid volumes and is carried into Gen5 analysis, not independently measured from a complete Gen5 installed assembly. A lighter ribbed chassis, moving-load response and payload interface remain open. See validation/A4_sled_structural.md and docs/GEN5_FREEZE_READINESS.md.
 
 Status: `PROVISIONAL_PENDING_FEA`
 

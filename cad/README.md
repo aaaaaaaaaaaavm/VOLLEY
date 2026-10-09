@@ -1,5 +1,19 @@
 # CAD
 
+> **Current academic configuration: Gen5.** Start with the [eight generated Gen5 STEP
+> parts](step/gen5/), [Gen5 renders](renders/gen5/), [dimension sheet](DIMENSIONS.md),
+> [configuration hashes](../docs/GEN5_CONFIGURATION_INDEX.json) and
+> [freeze-readiness matrix](../docs/GEN5_FREEZE_READINESS.md). The Gen3 Fusion files below
+> are historical source geometry used in some mass/FEA records; their age and role must
+> accompany any citation. The Gen5 parts are a geometry and interface model, without
+> a controlled integrated assembly, manufacturing drawings or physical fit test.
+>
+> The 9.445 kg modeled sled value was adopted from Gen3 solid volumes and tested with
+> the A4 CalculiX chassis idealization. It is carried into Gen5; the Gen5 STEP build
+> checks dimensions but does not independently recompute an installed mass for all
+> hardware. The 126.6 kg dry rollup includes modeled and assumed components, so it
+> must not be described as the weight of a complete verified Gen5 CAD assembly.
+
 > ## historical study is here too, and it is a different machine
 >
 > [ADR-032](../docs/adr/032-legacy_study-stage-integrated-gas-store.md). The payload is accelerated
@@ -7,7 +21,7 @@
 > return stroke. `cad/build_legacy_study.py` generates it from the same `parameters.json`, and it is
 > byte-stable across rebuilds like Gen5.
 >
-> Six parts, and only one of them is inherited: the magazine cassette. A36 and A37 agree from
+> Seven exported parts, and only one of them is inherited: the magazine cassette. A36 and A37 agree from
 > opposite directions that the containment is the only subsystem surviving every architecture
 > deletion.
 >
@@ -51,11 +65,12 @@ the script that built it. See [`scad/README.md`](scad/README.md).
 
 | Folder | What it is | Status |
 |---|---|---|
-| `step/gen3/` | Parameter-reconciled revision, plus `EMOCD_Gen3.step`, a monolithic single-file model (395 solids) holding all nine sub-systems. The renders in `renders/` came from it | CURRENT. Open problems P5, P12 are indexed against it |
+| `step/gen5/` | Generated from `parameters.json`; eight STEP parts with 23 read-back dimension checks | **Current academic geometry**, conceptual assembly and interfaces |
+| `step/gen3/` | Parameter-reconciled Fusion revision, plus `EMOCD_Gen3.step`, a monolithic single-file model (395 solids) holding all nine sub-systems | **Historical mass and FEA source**; not the Gen5 release geometry |
 | `step/gen2/` | First structured revision. Mechanism-level detail arrives: single-layer stator, sled Halbach arrays and rollers, magazine escapement and D6 pins, brake ring spring | SUPERSEDED, carries a 360 mm sled chassis where the spec says 488 mm |
 | `step/gen1/` | The original CAD, 2021-2025. Structural envelope rather than mechanism model; the geometry `parameters.json` was reverse-engineered from. Includes the pre-split single-file `EMOCD_Deployer_Assembly_Gen1.step` and a second sled revision, `Sled_Gen1b` | SUPERSEDED, heritage only |
 
-Use Gen3 unless you specifically need a heritage comparison.
+Use Gen5 for the current design. Use Gen3 only when tracing the earlier volume or A4 FEA evidence.
 
 ## What is authoritative here
 
@@ -69,9 +84,9 @@ Use Gen3 unless you specifically need a heritage comparison.
   NdFeB) and are deliberately excluded from `parameters.json`. Never quote a
   Fusion-computed mass.
 
-## Status (2026-07-28)
+## Historical status note (2026-07-28)
 
-First-pass CAD, no structural or magnetic FEA behind any of it. Several values are
+At that date this was first-pass CAD, with no structural or magnetic FEA behind it. Several values were
 flagged `PROVISIONAL_PENDING_FEA` in `parameters.json`. Open: the sled chassis mass (P5),
 the resulting exit velocity (P8), the ESPA envelope overrun (P9), the incomplete mass
 rollup (P10), and the CAD-side geometry defects P14, see `../OPEN_PROBLEMS.md`.
@@ -85,16 +100,17 @@ and `OPEN_PROBLEMS.md` P13.
 
 ## Before using any file
 
-1. Gen3 unless you need heritage. Gen1 and Gen2 carry known dimensional and mechanism
+1. Gen5 for current geometry; Gen3 for the cited historical mass and FEA input. Gen1 and Gen2 carry known dimensional and mechanism
    defects, listed per file in `CHANGELOG_CAD.md`.
 2. Cross-check every dimension against `parameters.json` before quoting it.
-3. No Fusion masses. Mass authority is `analysis/mass_properties.py`, and even that is
-   incomplete (P10).
-4. The sled mass conflict is resolved (2026-07-29). The scripts now carry the CAD-derived 9.445 kg and the headline is 16.39 m/s. Historical note follows: 20.37 m/s assumed a 4.86 kg sled; the Gen3
+3. No uncorrected Fusion masses. The modeled mass authority is `analysis/mass_properties.py`;
+   its 126.6 kg rollup includes assumptions and is not a measured or complete installed mass.
+4. The sled mass conflict was dispositioned on 2026-07-29. The scripts now carry 9.445 kg from Gen3 solid volumes; after the depth-resolved electromagnetic correction the current modeled speed is **16.029 m/s**. Historical note follows: 20.37 m/s assumed a 4.86 kg sled; the Gen3
    geometry implies ~7.50 kg and a provisional 17.88 m/s. Quote neither without the
    conflict (P5, P8). `validation/A4_sled_structural.md` is the analysis that settles it.
-5. The ESPA envelope claim is not supported. 1839 mm installed against a ~1270 mm class
-   limit, ~44 % over (P9), and the paper still asserts compatibility (P12).
+5. The ESPA comparison fails: 1839 mm installed against a quoted ~1270 mm class
+   envelope, about 44 % over (P9). No host provider has approved an interface; P12
+   records the historical compatibility claim and its correction.
 6. The stator layer count is an open design decision. Gen1 built two layers, Gen2 and
    Gen3 one, and `parameters.json` flags it open. The electromagnetic consequence, roughly
    x2 force for the same current against x2 copper mass and winding complexity, has never
@@ -120,12 +136,11 @@ and `OPEN_PROBLEMS.md` P13.
   It is a geometry and interface model, not a manufacturing model: no fillets, no chamfers,
   no fasteners, no harness routing, no tolerancing. Do not send it to a machine shop; do use it
  to check fit, envelope, clearance and station alignment
-- `renders/`, the published PNG set, and `renders/source/`, the uncropped frames it is
-  produced from by `tools/prepare_renders.py`. These are Gen4 shots and Gen4 has no
-  committed STEP export, so they show geometry no file in `step/` matches, and Gen4's
-  stations are not the analysis model's, see `../docs/GEN4_STATUS.md`, ADR-019 and P43.
-  No performance number anywhere in this repository is taken from them.
-  `exploded_view.png` alone is retained from the Gen3 monolithic model
+- `renders/gen5/` is the current Gen5 presentation set generated from the Gen5 geometry.
+  `renders/` and `renders/source/` also retain older Gen4 frames prepared by
+  `tools/prepare_renders.py`; those have no matching committed Gen4 STEP export and must
+  be captioned as historical. `exploded_view.png` comes from the Gen3 monolithic model.
+  No performance number is taken from a render.
 - `tools/prepare_renders.py`, which crops the raw frames to content, fits them to a
   publishing box and draws the departure direction on each. The direction is per-render
   because the camera flips between views; P43 is what happens when it is wrong
