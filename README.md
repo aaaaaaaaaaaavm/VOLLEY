@@ -14,7 +14,7 @@ VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3
 
 ## One machine, one evaluated configuration
 
-Gen5 uses a 1.5 m track (1.3 m powered stroke), double-sided ironless Halbach linear synchronous drive, reusable permanent-magnet sled, eddy-current arrest, capacitor pulse store and a conceptual twelve-payload magazine. The satellite is intended to remain mechanically and electrically unmodified. The modeled acceleration is **10.07 g**, but that value does not qualify any real payload.
+Gen5 places the release station 1.5 m from the breech on 1.8 m structural longerons, with a 1.3 m powered stroke. It models a double-sided ironless Halbach linear synchronous drive, reusable permanent-magnet sled, eddy-current arrest, capacitor pulse store and conceptual twelve-payload magazine. The satellite is intended to remain mechanically and electrically unmodified. The modeled acceleration is **10.07 g**, but that value does not qualify any real payload.
 
 <p align="center"><img src="cad/renders/gen5/hero_open.png" alt="Rendered Gen5 electromagnetic deployer, open configuration" width="68%"><br><sub>Gen5 CAD rendering; geometry and mass model, not fabricated hardware.</sub></p>
 
@@ -31,7 +31,7 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 
 <p align="center"><img src="figures/gen5_mass_decision.svg" alt="Gen5 mass per 3U versus canister and economic screens" width="49%"> <img src="figures/gen5_energy_accounting.svg" alt="Rated shot net energy and payload share" width="49%"></p>
 
-*These charts are generated directly from the checked-in [mass](analysis/results/mass_properties.json) and [shot](analysis/results/motor_results.json) JSON. The 6 kg canister is an approximate comparator; the grey energy balance is not a detailed loss audit. [Rebuild charts](tools/plot_gen5_decision.py).*
+*These charts are generated directly from the checked-in [mass](analysis/results/mass_properties.json) and [shot](analysis/results/motor_results.json) JSON. The 6 kg canister is an approximate comparator. An [independent algebra audit](validation/P117_rated_energy_mass_audit.md) leaves 124.488 J (4.47%) of gross draw unitemized; the grey energy segment is not a closed loss audit. [Rebuild charts](tools/plot_gen5_decision.py).*
 
 ## See the evidence, including what failed
 

@@ -40,6 +40,8 @@ The shot trace below comes from `analysis/motor_model.py` and the checked-in mod
 \small Figure 2. Calculated Gen5 magnetic field; this does not measure integrated thrust.
 \end{center}
 
+A separate [rated energy and mass algebra audit](../validation/P117_rated_energy_mass_audit.md) reproduces the 4.000 kg/payload inference, 513.858 J payload kinetic energy, 1.30075 m constant-acceleration equivalent stroke, and rounded brake/recovery identities from the captured JSON. It also finds **124.488 J (4.47%) of gross draw unitemized** after the reported kinetic energies, copper heat and bank ESR are subtracted. That remainder is an unresolved accounting item, not an inferred new component loss; no claim of a fully closed electrical loss budget follows from these checks.
+
 # 3. Orbit, timing and complete-manifest checks
 
 For a 450 km circular host reference, a 16.029 m/s instantaneous tangential impulse gives a **28.800775 km** semi-major-axis rise in the [separate Cartesian DOP853 propagation](../validation/P115_rated_orbit_cartesian.md). The two-body numerical band is 0.02 m and passes. This confirms immediate orbital geometry at the modeled release speed. It does not independently establish the stated **1.60 lifetime multiplier**, which depends on a static atmosphere at mean activity and has no current rated-case independent rerun. It does not establish thrust, finite release duration or host acceptability.

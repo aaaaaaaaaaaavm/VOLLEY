@@ -18,9 +18,12 @@ SOURCES = [
     "cad/native/Gen5_Review.FCStd", "cad/GEN5_CAD_REVIEW.pdf",
     "analysis/motor_model.py", "analysis/mass_properties.py", "analysis/astro.py",
     "analysis/rated_orbit_independent.py", "analysis/results/rated_orbit_independent.json",
+    "analysis/rated_energy_mass_audit.py", "analysis/results/rated_energy_mass_audit.json",
     "analysis/results/motor_results.json", "analysis/results/mass_properties.json",
     "analysis/results/astro_results.json", "analysis/results/manifest_finite_burn.json",
     "analysis/results/phasing_reference.json", "docs/BASELINE.md",
+    "validation/P115_rated_orbit_cartesian.md", "validation/P116_gen5_assembly_packaging.md",
+    "validation/P117_rated_energy_mass_audit.md", "reports/GEN5_COMPUTATIONAL_REVIEW.pdf",
 ]
 
 
@@ -48,7 +51,7 @@ def main() -> None:
         "configuration_id": "VOLLEY-GEN5-ACADEMIC-2026-10-09",
         "status": "COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE",
         "evidence_class": "model_only_no_gen5_hardware_test",
-        "design_scope": "3U, twelve-slot conceptual magazine, 1.5 m track, electromagnetic Gen5",
+        "design_scope": "3U, twelve-slot conceptual magazine, 1.5 m release station on 1.8 m structural longerons, electromagnetic Gen5",
         "headline_model_values": {
             "dry_mass_kg": mass["dry_kg"],
             "sled_mass_kg": mass["sled_kg"],

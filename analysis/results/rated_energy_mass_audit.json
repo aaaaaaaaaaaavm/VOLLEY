@@ -1,0 +1,41 @@
+{
+  "status": "PASS_ALGEBRA_ONLY_GROSS_LOSS_BUDGET_OPEN",
+  "motor_sha256": "afadd4d66271d9d1476b294ecea2723500ad813c0adc6d9648a07b83692c3875",
+  "mass_sha256": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
+  "derived": {
+    "dry_parts_sum_kg": 126.56,
+    "payload_mass_each_kg": 4.0,
+    "payload_ke_recalculated_J": 513.857682,
+    "sled_ke_from_rounded_mass_J": 1213.9887737249999,
+    "constant_accel_equivalent_stroke_m": 1.30075335,
+    "constant_accel_equivalent_g": 10.070875648689595,
+    "brake_force_distance_work_J": 51.786735,
+    "gross_draw_unallocated_J": 124.4880000000002,
+    "gross_draw_unallocated_fraction": 0.044741375313534365
+  },
+  "identity_residuals": {
+    "dry_rollup_difference_kg": -0.03999999999999204,
+    "payload_ke_difference_J": -0.012318000000050233,
+    "sled_ke_difference_J": 0.6127737249998972,
+    "constant_accel_stroke_difference_m": 0.000753349999999875,
+    "brake_work_difference_J": -0.011265000000001635,
+    "brake_energy_split_difference_J": -0.0019999999999527063,
+    "recovery_loss_balance_difference_J": 0.006000000000007333,
+    "net_draw_difference_J": 0.04999999999972715
+  },
+  "predeclared_bands": {
+    "dry_rollup_difference_kg": 0.1,
+    "payload_ke_difference_J": 0.1,
+    "sled_ke_difference_J": 1.0,
+    "constant_accel_stroke_difference_m": 0.003,
+    "brake_work_difference_J": 0.1,
+    "brake_energy_split_difference_J": 0.1,
+    "recovery_loss_balance_difference_J": 0.1,
+    "net_draw_difference_J": 0.1
+  },
+  "unclosed": [
+    "The 124.488 J gross-draw remainder is not itemized in the cited model output.",
+    "These identities do not independently solve magnetic thrust, winding loss, bank ESR or brake transients.",
+    "No supplier-backed installed power source, thermal test or physical shot exists."
+  ]
+}
