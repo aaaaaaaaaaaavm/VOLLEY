@@ -60,6 +60,8 @@ jobs:
           git checkout -q --detach "$TEST_COMMIT"
       - name: mission freshness diagnostics
         run: python3 tools/diagnose_mission_freshness.py
+      - name: one-event mission and mass screen
+        run: python3 analysis/gen5_one_event_mass_screen.py --check
       - name: combined release errors and reference-cell mechanics
         run: |
           python3 analysis/combined_release_errors.py --check
