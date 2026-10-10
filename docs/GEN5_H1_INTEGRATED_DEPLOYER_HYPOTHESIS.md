@@ -1,6 +1,6 @@
-# H1 — integrated deployer with a captive passive armature
+# H1 — whole-system reassessment of a captive passive armature
 
-**Status: unselected research hypothesis, 10 October 2026.** This is a candidate direction for work *after* the evaluated Gen5 snapshot. It is neither a revised Gen5 performance claim nor the Gen6 1 km/s programme. No H1 CAD, drive rating, twelve-shot trajectory, supplier mass or hardware test exists. "New" means a new VOLLEY architecture trade; patentable or literature novelty has **not** been established.
+**Status: unselected research hypothesis, 10 October 2026.** This is a proposed *reassessment* of [VOLLEY-lab PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-19_induction_drive_legacy_study.md) after the evaluated Gen5 snapshot. PII-19 already used a light captive passive plate and left the spacecraft unmodified. H1 asks whether coupling that old drive idea to a credible shared structure, feed and matched mission changes its whole-system result. It is neither a revised Gen5 performance claim nor the Gen6 1 km/s programme. No H1 CAD, drive rating, twelve-shot trajectory, supplier mass or hardware test exists. No mechanism or patent novelty is claimed.
 
 ## Why a motor improvement alone cannot solve the present problem
 
@@ -33,7 +33,7 @@ flowchart LR
     G --- F
 ```
 
-This attacks several costs together: moving permanent magnets, motor copper outside the active zone, brake energy, duplicated enclosure structure and the side-fed width conflict. It also creates new risks: induction heating, transient edge effects, peak electrical demand, carrier capture shock, field exposure, launch retention and host structural coupling. It cannot be selected from a sketch.
+This *would need to* attack several costs together: moving permanent magnets, motor copper outside the active zone, brake energy, duplicated enclosure structure and the side-fed width conflict. PII-19 already showed why reducing the mover alone is insufficient: it was about **11% of dry mass**, while the pulse chain survived. Its segmented drive also left a **30.1% peak-to-peak handover ripple against a 20% band**. H1 additionally faces induction heating, transient edge effects, peak electrical demand, carrier capture shock, field exposure, launch retention and host structural coupling. It cannot be selected from a sketch.
 
 The reason to investigate moving mass is physical, not a predicted redesign result: at the P118 ideal 12.448 m/s, **each kilogram of carrier requires about 77.48 J of ideal kinetic energy and the same amount of arrest energy** if not regenerated. The current 9.445 kg modeled permanent-magnet sled therefore carries about 732 J of ideal kinetic energy at that speed. An H1 carrier has no proven mass; the 0.248 kg conductive plate in [A30](../validation/A30_rail_drive.md) is only an electromagnetic secondary, not a complete restrained, guided and captured carrier. [A31](../validation/A31_plate_drive_normal_force.md) analyzed a plate *on the spacecraft* under steady 2-D assumptions. Its speed and self-centering predictions cannot be transferred to this captive-carrier arrangement.
 
@@ -44,6 +44,7 @@ The reason to investigate moving mass is physical, not a predicted redesign resu
 - [US10538348B2](https://patents.google.com/patent/US10538348B2/en) describes captive satellite restraint and pusher elements; the presence of broad related claims prevents an unsupported novelty assertion here.
 - [NASA's ST5 structural review](https://ntrs.nasa.gov/citations/20070016620) documents a multifunctional electronics enclosure and integrated deployment mechanism.
 - VOLLEY's own [A30](../validation/A30_rail_drive.md) and [A31](../validation/A31_plate_drive_normal_force.md) already explored plate induction drive. H1's contribution, if one survives the evidence programme, would have to be a **specific validated system integration and trade**, not "electromagnetic deployment," "a pusher," or "a passive armature."
+- [VOLLEY-lab PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-19_induction_drive_legacy_study.md) already proposed a deployer-owned passive plate shuttle, with no spacecraft modification. Its pulse source and installed-mass problem are direct antecedents and must not be hidden by calling H1 a new launcher.
 
 This is an initial source screen, not a freedom-to-operate or exhaustive patent review. The IEEE paper should not describe H1 as a demonstrated invention.
 
