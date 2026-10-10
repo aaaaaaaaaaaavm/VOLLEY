@@ -2,7 +2,7 @@
 
 ### A computational design study for sequential CubeSat deployment
 
-VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3U CubeSats through one reusable launch path and command an individual departure speed for each release. **Gen5 is the controlled academic evaluation snapshot, with a negative 3U selection finding.** Its final engineering release and academic freeze are open. Gen6 is a separate, future architecture trade toward a 1 km/s-class objective; it has no selected mechanism or validated performance.
+VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3U CubeSats through one reusable launch path and command an individual departure speed for each release. **Gen5 is the controlled academic evaluation snapshot, with a negative 3U selection finding.** Its final engineering release and academic freeze are open. Gen6 is the proposed first instrumented prototype programme, with its speed and accuracy to be derived from a named mission and payload. A 1 km/s-class release is a separate long-range research objective; Gen6 has no selected mechanism or validated performance.
 
 ![Four-stage STEP-derived Blender storyboard of intended Gen5 storage, handoff, acceleration and departure](cad/renders/sequence/gen5_operations_hero.png)
 
@@ -127,7 +127,7 @@ The CAD does not provide manufacturing drawings, tolerance stacks, an approved I
 
 The sequence above is the product intent. The decisive next gates are a named host and deployment ICD; complete installed mass and thermal, power and structural budgets; feeder, retention, recoil and jam-recovery design; payload-specific loads; uncertainty and full-manifest mission closure; then representative calibrated multi-shot hardware testing. The [gap register](OPEN_PROBLEMS.md) keeps failed and unrun items visible.
 
-For **Gen6**, the 1 km/s-class goal is only a research target. Ideal constant-acceleration scaling gives about **5.1 km of stroke at 10 g** or **204 m at 250 g** for 1 km/s, before losses, arrest, thermal design or payload qualification. A radically different payload class, host or architecture may be required. [Scaling illustration](docs/assets/scaling.svg) · [programme decisions](docs/PROGRAMME_EXECUTION.md).
+For the **first Gen6 prototype**, choose a test speed and tolerance from a named mission and payload load limit; do not inherit the 1 km/s target. For the separate high-speed research stream, ideal constant-acceleration scaling gives about **5.1 km of stroke at 10 g** or **204 m at 250 g** for 1 km/s, before losses, arrest, thermal design or payload qualification. A radically different payload class, host or architecture may be required. [Scaling illustration](docs/assets/scaling.svg) · [programme decisions](docs/PROGRAMME_EXECUTION.md).
 
 ## Explore the programme
 

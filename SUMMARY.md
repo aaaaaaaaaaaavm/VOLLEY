@@ -20,6 +20,6 @@
 
 ## What follows
 
-R1 is an **unselected widened geometry candidate** with twelve scripted 3U envelope routes cleared; actuator, restraint, tolerances, installed mass and host fit remain open. Gen6 is a **separate future architecture trade** toward a 1 km/s-class research objective, not an achieved release speed. A named payload and provider interface, complete mechanism and budgets, fair mission comparison, independent review and future instrumented hardware tests are needed before a product claim. [Current status](docs/NEXT_GENERATION_STATUS.md) · [issue #42](https://github.com/aaaaaaaaaaaavm/VOLLEY/issues/42).
+R1 is an **unselected widened geometry candidate** with twelve scripted 3U envelope routes cleared; actuator, restraint, tolerances, installed mass and host fit remain open. Gen6 is the proposed **first instrumented prototype programme** for a mission-derived command range; 1 km/s is separate long-range research, not an achieved release speed. A named payload and provider interface, complete mechanism and budgets, fair mission comparison, independent review and future instrumented hardware tests are needed before a product claim. [Current status](docs/NEXT_GENERATION_STATUS.md) · [prototype-to-flight gates](docs/GEN6_PROTOTYPE_TO_FLIGHT_ROADMAP.md).
 
 The [thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis), [IEEE-formatted paper companion](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) and [lab vault](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) are each self-contained. The paper has not been submitted; no IEEE venue is selected.
