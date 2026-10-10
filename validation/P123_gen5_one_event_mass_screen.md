@@ -28,7 +28,7 @@ The bracketed term follows the reference model's ideal recoil bookkeeping. The f
 
 The fixed-fuel Gen5 case saves **1.866038 kg of propellant for this single ideal event**. The Gen5 device is **54.562 kg** heavier. With the one-event fuel load resized self-consistently, its *device plus required fuel* proxy is **52.717433 kg** higher than the spring reference. On this narrow proxy, a Gen5 device would need mass at or below **73.931985 kg** for parity at the P118 ideal speed. This is a conditional design threshold, not a feasible redesign claim or full mission break-even mass.
 
-| P122 ideal geometry case | Ideal conversion | Gen5 one-event resized fuel | Gen5 minus spring device + fuel |
+That proxy parity requires **52.630015 kg less Gen5 device dry mass**, about **41.6%** of the current 126.562 kg model, while preserving the same ideal release conversion. The five enclosure-related entries in the existing [mass ledger](../analysis/results/mass_properties.json)—skins 32.82, frames 8.20, radiator 2.59, bay boxes 1.87 and fasteners 4.55 kg—sum to **50.03 kg**. Even the physically impossible act of removing all five would miss this narrow parity target by about **2.60 kg** before the structure, radiator, interfaces or drive are replaced. This is an arithmetic lower-bound warning, not a proposed design. A feasible mass trade must involve multiple subsystems and rerun the force, thermal, stiffness, containment and host-interface models as their masses and shapes change.\n\n| P122 ideal geometry case | Ideal conversion | Gen5 one-event resized fuel | Gen5 minus spring device + fuel |
 |:--|--:|--:|--:|
 | Nominal 12 mm gap | 12.448438 m/s | 2.814686 kg | +52.717433 kg |
 | Gap 14 mm | 11.613728 m/s | 2.997865 kg | +52.900612 kg |
