@@ -38,6 +38,8 @@ The fixed-fuel Gen5 case saves **1.866038 kg of propellant for this single ideal
 
 The tiny difference between P118's nominal 12.448437 m/s and P122's 12.448438 m/s is their separate numerical integrations. It has no physical meaning at this precision. All table speeds are ideal energy conversions and are **not** commanded or guaranteed releases. The five cases are selected perturbations, not a probability distribution.
 
+![P123 device and one-event resized-fuel comparison](../figures/gen5_one_event_installed_burden.svg)
+
 ## Interpretation and closure
 
 The one-event calculation exposes the installed-mass hurdle and gives a quantitative design target. It does **not** overturn the [twelve-release reference](../docs/MATCHED_MISSION_REFERENCE.md): neither option completes that sampled campaign, and the tested Gen5 case reaches only one accepted release under its short spacing target. Mission value must therefore be re-evaluated with one named payload, host and interface, a selected and derated drive, a complete feed and brake, all twelve sequential releases, reliability and disposal, and a common cost/mass accounting boundary.
