@@ -26,6 +26,11 @@ A [depth-resolved 3-D surface-charge cross-check](validation/P121_gen5_finite_fo
 
 > **Precision delivery must be specified by the orbit, not by speed alone.** The [P124 design-space screen](validation/P124_precision_delivery_design_space.md) converts declared 450 km orbit targets into ideal tangential increments and velocity-error budgets. It also shows that 1 km/s over the Gen5 1.3 m stroke implies about **39,220 g** for an ordinary 4 kg 3U payload. The first Gen6 prototype needs a payload and mission-derived speed/load specification; the 1 km/s goal remains separate long-range research.
 
+The [P126 R1 tolerance screen](cad/FEEDER_R1_TOLERANCE_SCREEN.md) uses the R1 CAD-derived 5 mm lateral gap and declared alignment bands. A 0.2° band retains 1.31 mm; a 0.5° band overlaps by 0.47 mm. These are assumed tolerances, not measured fit or accepted mechanism clearances.
+
+> **P125 drive feasibility screen:** A quasi-steady, three-phase voltage/current model uses the finite Gen5 force map and the historical **unselected** winding and 96 V source. The reference surrogate reaches 12.448 m/s; halving the current limit gives 8.802 m/s and halving the initial source voltage gives 10.794 m/s. These are conditional model outputs, **not a rated release speed or selected drive**. [Method and limits](validation/P125_gen5_voltage_limited_screen.md) · [source](analysis/gen5_voltage_limited_screen.py) · [result](analysis/results/gen5_voltage_limited_screen.json).
+
+
 The [Gen6 prototype-to-flight roadmap](docs/GEN6_PROTOTYPE_TO_FLIGHT_ROADMAP.md) sets explicit mission, architecture, predictive-model, measured-prototype, engineering-model, qualification and flight decision gates. These are proposed development stages, not achieved milestones.
 
 ![Ideal speed, stroke and payload-load screen](figures/precision_delivery_design_space.svg)

@@ -1,0 +1,158 @@
+{
+  "evidence_class": "CONDITIONAL_QUASI_STEADY_SCREEN_NOT_SELECTED_DRIVE_OR_RATED_SPEED",
+  "sources_sha256": {
+    "force_map": "01dfc9743ba37ccc25f0591afa21479e8fa6500f2792a43bfcafdf3ed5cb21c0",
+    "historical_drive": "ee2a1eb4aca00cca3c4c8a56d38d2d0d572dd225f7128bedf2090782bcb0d98c",
+    "source": "caa2f4dbaa025c37333e20f1a2ead90f2a70b56d1c8ba3e6afd832410cdc6216"
+  },
+  "assumptions": {
+    "phase_peak_current_A": 354.0748484575519,
+    "phase_resistance_ohm": 0.02798616320768922,
+    "phase_inductance_H": 2.1888596323797692e-05,
+    "pitch_m": 0.048,
+    "source_initial_V": 96.0,
+    "capacitance_F": 6.0,
+    "bank_esr_ohm": 0.012,
+    "converter_efficiency": 0.95,
+    "auxiliary_W": 200.0,
+    "mass_kg": 13.445,
+    "phase_voltage_limit": "Vdc/sqrt(3), ideal space-vector modulation",
+    "source_of_R_L_I": "historical periodic winding model, not selected hardware",
+    "omitted": [
+      "transient switched currents and commutation error",
+      "thermal rise and derating",
+      "iron and saturation",
+      "feed/contact/recoil/brake",
+      "supplier cell and switch ratings"
+    ]
+  },
+  "variants": {
+    "reference_unselected": {
+      "R_ohm": 0.02798616320768922,
+      "L_H": 2.1888596323797692e-05,
+      "I_limit_A": 354.0748484575519,
+      "source_initial_V": 96.0
+    },
+    "twice_resistance": {
+      "R_ohm": 0.05597232641537844,
+      "L_H": 2.1888596323797692e-05,
+      "I_limit_A": 354.0748484575519,
+      "source_initial_V": 96.0
+    },
+    "twice_inductance": {
+      "R_ohm": 0.02798616320768922,
+      "L_H": 4.3777192647595384e-05,
+      "I_limit_A": 354.0748484575519,
+      "source_initial_V": 96.0
+    },
+    "half_current_limit": {
+      "R_ohm": 0.02798616320768922,
+      "L_H": 2.1888596323797692e-05,
+      "I_limit_A": 177.03742422877596,
+      "source_initial_V": 96.0
+    },
+    "half_source_voltage": {
+      "R_ohm": 0.02798616320768922,
+      "L_H": 2.1888596323797692e-05,
+      "I_limit_A": 354.0748484575519,
+      "source_initial_V": 48.0
+    }
+  },
+  "cases": {
+    "reference_unselected": {
+      "status": "COMPLETED_CONDITIONAL_SCREEN",
+      "speed_m_s": 12.448435460034267,
+      "duration_s": 0.17619999999999691,
+      "end_voltage_V": 92.19357327274894,
+      "cap_draw_J": 2149.035141606817,
+      "mechanical_J": 1042.444591599346,
+      "copper_J": 927.322224982215,
+      "bank_esr_J": 40.3844320547736,
+      "auxiliary_J": 35.23999999999991,
+      "converter_J": 103.67193771482079,
+      "ledger_residual_J": -0.028044744338288297,
+      "peak_phase_current_A": 354.07484318142554,
+      "peak_bank_current_A": 211.52276583793113,
+      "peak_acceleration_g": 8.96431398448081,
+      "voltage_limited_fraction": 0.0,
+      "trace": []
+    },
+    "twice_resistance": {
+      "status": "COMPLETED_CONDITIONAL_SCREEN",
+      "speed_m_s": 12.448435460034267,
+      "duration_s": 0.17619999999999691,
+      "end_voltage_V": 90.33125409326817,
+      "cap_draw_J": 3168.7936018122664,
+      "mechanical_J": 1042.444591599346,
+      "copper_J": 1854.64444996443,
+      "bank_esr_J": 84.04455391331268,
+      "auxiliary_J": 35.23999999999991,
+      "converter_J": 152.47837060862335,
+      "ledger_residual_J": -0.05836427344550543,
+      "peak_phase_current_A": 354.07484318142554,
+      "peak_bank_current_A": 279.245199078981,
+      "peak_acceleration_g": 8.96431398448081,
+      "voltage_limited_fraction": 0.0,
+      "trace": []
+    },
+    "twice_inductance": {
+      "status": "COMPLETED_CONDITIONAL_SCREEN",
+      "speed_m_s": 12.448435460034267,
+      "duration_s": 0.17619999999999691,
+      "end_voltage_V": 92.19357327274894,
+      "cap_draw_J": 2149.035141606817,
+      "mechanical_J": 1042.444591599346,
+      "copper_J": 927.322224982215,
+      "bank_esr_J": 40.3844320547736,
+      "auxiliary_J": 35.23999999999991,
+      "converter_J": 103.67193771482079,
+      "ledger_residual_J": -0.028044744338288297,
+      "peak_phase_current_A": 354.07484318142554,
+      "peak_bank_current_A": 211.52276583793113,
+      "peak_acceleration_g": 8.96431398448081,
+      "voltage_limited_fraction": 0.0,
+      "trace": []
+    },
+    "half_current_limit": {
+      "status": "COMPLETED_CONDITIONAL_SCREEN",
+      "speed_m_s": 8.80237469831346,
+      "duration_s": 0.24919999999998887,
+      "end_voltage_V": 94.33787294335755,
+      "cap_draw_J": 949.0971855687822,
+      "mechanical_J": 521.1196529613245,
+      "copper_J": 327.878403044221,
+      "bank_esr_J": 5.578895585670928,
+      "auxiliary_J": 49.84000000000219,
+      "converter_J": 44.684108210818785,
+      "ledger_residual_J": -0.0038742332552388348,
+      "peak_phase_current_A": 177.03742159071277,
+      "peak_bank_current_A": 67.40055012311477,
+      "peak_acceleration_g": 4.482157175309918,
+      "voltage_limited_fraction": 0.0,
+      "trace": []
+    },
+    "half_source_voltage": {
+      "status": "COMPLETED_CONDITIONAL_SCREEN",
+      "speed_m_s": 10.794259655698342,
+      "duration_s": 0.18669999999999576,
+      "end_voltage_V": 41.296506901862486,
+      "cap_draw_J": 1795.795553113272,
+      "mechanical_J": 783.82088794996,
+      "copper_J": 778.9875369192207,
+      "bank_esr_J": 113.47285384387122,
+      "auxiliary_J": 37.34000000000024,
+      "converter_J": 82.25307499311587,
+      "ledger_residual_J": -0.07880059289603025,
+      "peak_phase_current_A": 354.07484318142554,
+      "peak_bank_current_A": 347.8326898128581,
+      "peak_acceleration_g": 8.964064227785062,
+      "voltage_limited_fraction": 0.36957686127477235,
+      "trace": []
+    }
+  },
+  "time_step_refinement": {
+    "0.0002": 12.448443131437497,
+    "5e-05": 12.44843751154817
+  },
+  "speed_step_change_m_s": 7.671403229991824e-06
+}

@@ -20,13 +20,15 @@ The [necessary one-event bound](../analysis/results/gen5_architecture_bounds.jso
 - a circuit netlist (ngspice), explicit switching logic, position-dependent back EMF and force, and coupled electrical/kinematic integration using the same CAD revision;
 - voltage/current/force/speed/temperature/energy histories, a closed energy ledger, time-step and mesh convergence, parameter corners, and failed cases.
 
+[P125](../validation/P125_gen5_voltage_limited_screen.md) adds an ideal quasi-steady three-phase voltage/current screen using unselected historical winding and source values. It bounds sensitivity but does not specify a switch, coil or cell.
+
 **Decision gate:** report the **achievable** release range under component limits and uncertainty. The 12.448 m/s ideal conversion is an upper screen until this gate closes. Preserve 16.029 m/s as a historical contradicted result.
 
 ## 2. Mechanism, packaging and mass
 
 **Ideas to test:** center lift (R1), a translating shuttle, and a more compact low-count magazine. Score them on restraint during launch, single-payload indexing, fault isolation, reset after an abort, actuator count, service access, moving clearance, width, and installed mass. A lower-count magazine may reduce mass but must be compared on delivered payload count and operations, not per-shot performance alone.
 
-**Build and publish:** one controlled native CAD model per candidate; part and assembly STEP exports; dimensioned envelope/interface/section drawings; identified datum scheme and GD&T assumptions; state-by-state kinematics, swept-solid interference and tolerance stack; hardware/fastener/harness/radiator keep-outs; revised part-level mass, center of gravity and inertia, with material densities and mass margins. Keep a compact design-selection table rather than quietly replacing Gen5 with R1. The current Gen5 side feed has an **11 mm width shortfall**; R1's scripted clearances do not show feed actuation or launch restraint.
+**Build and publish:** one controlled native CAD model per candidate; part and assembly STEP exports; dimensioned envelope/interface/section drawings; identified datum scheme and GD&T assumptions; state-by-state kinematics, swept-solid interference and tolerance stack; hardware/fastener/harness/radiator keep-outs; revised part-level mass, center of gravity and inertia, with material densities and mass margins. Keep a compact design-selection table rather than quietly replacing Gen5 with R1. The current Gen5 side feed has an **11 mm width shortfall**; R1's scripted clearances do not show feed actuation or launch restraint. [P126](../cad/FEEDER_R1_TOLERANCE_SCREEN.md) further shows that R1's 5 mm nominal corridor fails an illustrative 0.5° alignment stack by 0.47 mm, while a 0.2° stack leaves 1.31 mm. These are declared study bands, not released drawing tolerances.
 
 **Decision gate:** a candidate must close its own envelope, swept clearance, tolerance and mass ledger against a *named or explicitly surrogate* payload and host interface. Recalculate the drive and structural modes after any track, enclosure or cassette change.
 

@@ -62,6 +62,10 @@ jobs:
         run: python3 tools/diagnose_mission_freshness.py
       - name: one-event mission and mass screen
         run: python3 analysis/gen5_one_event_mass_screen.py --check
+      - name: Recompute P126 R1 tolerance screen
+        run: python3 cad/screen_feeder_r1_tolerance.py --check
+      - name: Recompute P125 voltage screen
+        run: python3 analysis/gen5_voltage_limited_screen.py --check
       - name: precision-delivery design space
         run: python3 analysis/precision_delivery_design_space.py --check
       - name: necessary Gen5 architecture bounds

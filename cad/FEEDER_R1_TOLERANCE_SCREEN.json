@@ -1,0 +1,37 @@
+{
+  "evidence_class": "CAD_DERIVED_NOMINAL_CLEARANCE_WITH_ASSUMED_WORST_CASE_TOLERANCES",
+  "source_sha256": "eff37a1ef4340b86e41e64a23ccef590fb9fff58f59baaf5802128d932d949d6",
+  "source_code_sha256": "262f5b52f268826e74ed7918184aaf10ae637f3f108bc6874d693b8ebe1998fa",
+  "nominal_track_to_cassette_mm": 5.0,
+  "nominal_cassette_to_skin_mm": 9.5,
+  "payload_proxy_length_mm": 340.5,
+  "assumed_cases": {
+    "controlled_study_band": {
+      "track_mount_mm": 1,
+      "cassette_mount_mm": 1,
+      "combined_form_mm": 0.5,
+      "angular_error_deg": 0.2,
+      "angular_lateral_sweep_mm": 1.1885740480835232,
+      "worst_case_stack_mm": 3.688574048083523,
+      "residual_clearance_mm": 1.311425951916477,
+      "conditional_pass": true
+    },
+    "looser_alignment_band": {
+      "track_mount_mm": 1,
+      "cassette_mount_mm": 1,
+      "combined_form_mm": 0.5,
+      "angular_error_deg": 0.5,
+      "angular_lateral_sweep_mm": 2.971498482753368,
+      "worst_case_stack_mm": 5.471498482753368,
+      "residual_clearance_mm": -0.47149848275336836,
+      "conditional_pass": false
+    }
+  },
+  "maximum_tilt_with_fixed_2_5mm_linear_stack_deg": 0.4206662995377809,
+  "limitations": [
+    "illustrative tolerance bands, not GD&T or supplier process capability",
+    "rigid-body lateral stack only; no deformed, thermal or launch-loaded shapes",
+    "no moving gripper, gate, hinge, fasteners, harness or latch envelope",
+    "not a selected Gen5 revision or flight-interface clearance"
+  ]
+}
