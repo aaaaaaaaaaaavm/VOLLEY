@@ -15,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 P122 = ROOT / "analysis/results/gen5_finite_force_sensitivity.json"
+SNAPSHOT = ROOT / "analysis/results/gen5_one_event_mass_screen.json"
 
 PAYLOAD_KG = 4.0
 COUNT = 12
@@ -105,7 +106,20 @@ def build() -> dict:
                 - SPRING_DEVICE_KG - spring_fuel,
         })
     return {
-        "evidence_class": "reference algebra only; no motor, full campaign, or hardware validation",
+        "evidence_class": "deterministic one-event reference algebra; not a motor rating, twelve-release campaign, provider mission, or hardware validation",
+        "inputs": {
+            "payload_kg": PAYLOAD_KG,
+            "payload_count": COUNT,
+            "host_base_dry_kg": HOST_BASE_DRY_KG,
+            "fixed_fuel_kg": FIXED_FUEL_KG,
+            "reserve_kg": RESERVE_KG,
+            "host_isp_s": ISP_S,
+            "target_inertial_increment_m_s": TARGET_M_S,
+            "spring_device_kg": SPRING_DEVICE_KG,
+            "spring_release_m_s": SPRING_RELEASE_M_S,
+            "gen5_modeled_device_kg": GEN5_DEVICE_KG,
+            "gen5_ideal_finite_release_conversion_m_s": GEN5_FINITE_RELEASE_M_S,
+        },
         "fixed_10kg_fuel": {
             "spring": spring_fixed,
             "gen5_ideal_finite_force": gen5_fixed,
@@ -128,7 +142,28 @@ def build() -> dict:
     }
 
 
+def compare_snapshot(expected: object, actual: object, name: str = "root") -> None:
+    """Check the committed result numerically, allowing platform roundoff."""
+    if isinstance(expected, dict):
+        if not isinstance(actual, dict) or set(expected) != set(actual):
+            raise AssertionError(f"{name}: result fields changed")
+        for key, value in expected.items():
+            compare_snapshot(value, actual[key], f"{name}.{key}")
+    elif isinstance(expected, list):
+        if not isinstance(actual, list) or len(expected) != len(actual):
+            raise AssertionError(f"{name}: result length changed")
+        for index, value in enumerate(expected):
+            compare_snapshot(value, actual[index], f"{name}[{index}]")
+    elif isinstance(expected, (int, float)) and not isinstance(expected, bool):
+        if not isinstance(actual, (int, float)) or not math.isclose(
+                float(expected), float(actual), rel_tol=1e-9, abs_tol=1e-8):
+            raise AssertionError(f"{name}: committed number changed")
+    elif expected != actual:
+        raise AssertionError(f"{name}: committed value changed")
+
+
 def check(result: dict) -> None:
+    compare_snapshot(json.loads(SNAPSHOT.read_text()), result)
     fixed = result["fixed_10kg_fuel"]
     resized = result["hypothetical_resized_one_event_fuel"]
     if abs(fixed["spring"]["propellant_used_kg"] - 2.6926385533602684) > 1e-9:
@@ -160,7 +195,7 @@ def main() -> None:
     result = build()
     if args.check:
         check(result)
-        print("one-event mass screen: published reference identities and five P122 cases PASS")
+        print("one-event mass screen: committed result, reference identities and five P122 cases PASS")
     else:
         print(json.dumps(result, indent=2))
 
