@@ -38,6 +38,8 @@ The [necessary one-event bound](../analysis/results/gen5_architecture_bounds.jso
 
 **Build and publish:** contact force and tip-off time histories; host reaction impulses/torques; brake deceleration and repeated-shot temperature; reset and jam-clearance envelopes; abort state machine and FMEA; magnetic-field map at payload equipment locations; structural modal/transient response on the *revised* geometry. Use the named payload's acceleration, shock, magnetic and cleanliness limits. Without them, label results as sensitivity cases, not compliance.
 
+[P127](../validation/P127_gen5_release_arrest_bounds.md) now gives necessary ideal-speed sled energy, mean brake load and first-order host momentum bounds using the provisional 210 mm corridor. It does not solve eddy-current peak force, contact or heat.
+
 **Decision gate:** every claimed limit traces to a source or declared study band, with uncertainty and fault corners. Physical bench/qualification tests and provider sign-off remain future work.
 
 ## 4. Matched mission, utility and economics

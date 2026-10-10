@@ -1,0 +1,60 @@
+{
+  "evidence_class": "NECESSARY_CONSERVATION_BOUNDS_NOT_BRAKE_OR_HOST_VALIDATION",
+  "source_sha256": {
+    "force": "01dfc9743ba37ccc25f0591afa21479e8fa6500f2792a43bfcafdf3ed5cb21c0",
+    "parameters": "bb18ba845cdafc4569b7a16f2a34e6a38812f2765b4ee3aa6c96dc507387a3f3",
+    "mass": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3"
+  },
+  "source_code_sha256": "f9ddcf14e914ca438a91dc0b38f5dce6cb436fdfc86b4731fdbc39f8d00c6370",
+  "assumptions": {
+    "speed_m_s": 12.448437098832297,
+    "speed_status": "P118 ideal phase finite-force upper screen, not achieved",
+    "sled_kg": 9.445,
+    "payload_kg": 4.0,
+    "host_before_kg": 484.6,
+    "modeled_device_kg": 126.6,
+    "provisional_brake_start_mm": 1530,
+    "provisional_brake_end_mm": 1740,
+    "provisional_peak_deceleration_cap_g": 200,
+    "no_regeneration_or_friction_credit": true
+  },
+  "sled_kinetic_J": 731.8155358464268,
+  "twelve_shot_sled_kinetic_J": 8781.78643015712,
+  "sled_arrest_impulse_Ns": 117.57548839847105,
+  "payload_departure_impulse_Ns": 49.79374839532919,
+  "first_order_host_reaction_during_acceleration_m_s": 0.34537605611597244,
+  "first_order_host_recovery_during_sled_arrest_m_s": 0.24262378951397245,
+  "first_order_net_host_recoil_m_s": 0.10275226660199997,
+  "stop_distance_for_200g_mean_m": 0.03950472031824942,
+  "cases": {
+    "provisional_brake_full_length": {
+      "effective_stop_m": 0.21,
+      "necessary_mean_force_N": 3484.8358849829847,
+      "necessary_mean_deceleration_g": 37.623543160237546,
+      "constant_deceleration_stop_time_ms": 33.739175180424645,
+      "below_provisional_200g_mean_cap": true
+    },
+    "half_length_effective": {
+      "effective_stop_m": 0.105,
+      "necessary_mean_force_N": 6969.671769965969,
+      "necessary_mean_deceleration_g": 75.24708632047509,
+      "constant_deceleration_stop_time_ms": 16.869587590212323,
+      "below_provisional_200g_mean_cap": true
+    },
+    "quarter_length_effective": {
+      "effective_stop_m": 0.0525,
+      "necessary_mean_force_N": 13939.343539931939,
+      "necessary_mean_deceleration_g": 150.49417264095018,
+      "constant_deceleration_stop_time_ms": 8.434793795106161,
+      "below_provisional_200g_mean_cap": true
+    }
+  },
+  "limitations": [
+    "constant mean braking force is not an eddy-current force curve",
+    "200g is a provisional sled design cap, not a payload qualification limit",
+    "no payload/sled contact, tip-off, structural compliance or friction",
+    "no brake heat distribution, cooling or repeated-shot timing",
+    "host impulse is first-order and excludes attitude, mounting moment and propellant burns",
+    "no failure or abort load case"
+  ]
+}
