@@ -1,0 +1,41 @@
+{
+  "evidence_class": "necessary bound on the P123 one-event reference, not an achievable redesign or campaign result",
+  "source_results": [
+    "analysis/results/gen5_one_event_mass_screen.json",
+    "analysis/results/mass_properties.json"
+  ],
+  "spring_device_plus_one_event_fuel_kg": 76.65925262953323,
+  "common_fuel_reserve_kg": 2,
+  "maximum_gen5_device_for_one_event_parity_even_with_zero_burn_kg": 74.65925262953323,
+  "gen5_current_modeled_device_kg": 126.562,
+  "minimum_current_one_event_mass_proxy_deficit_kg": 51.90274737046677,
+  "parity_device_at_p118_ideal_speed_kg": 73.93198489552125,
+  "additional_device_mass_allowance_from_perfect_speed_kg": 0.7272677340119742,
+  "enclosure_related_rows": [
+    {
+      "item": "Enclosure skins (2 mm Al, 6.077 m2 net, A46)",
+      "modeled_kg": 32.82
+    },
+    {
+      "item": "Enclosure frames and ribs (A46, 25 % of skin, declared)",
+      "modeled_kg": 8.2
+    },
+    {
+      "item": "Radiator (1600 x 200 x 3 mm Al, A46)",
+      "modeled_kg": 2.59
+    },
+    {
+      "item": "Equipment-bay boxes (4 bays, 1.5 mm Al, A46)",
+      "modeled_kg": 1.87
+    },
+    {
+      "item": "Fasteners and brackets (A46, 10 % of structure, declared)",
+      "modeled_kg": 4.55
+    }
+  ],
+  "enclosure_related_modeled_kg": 50.03,
+  "remaining_deficit_after_impossible_zero_enclosure_kg": 1.8727473704667688,
+  "study_economic_screen_kg_per_3u": 2.0,
+  "study_economic_screen_total_kg_for_manifest": 24.0,
+  "absolute_parity_device_kg_per_3u": 6.221604385794436
+}

@@ -6,7 +6,9 @@
 
 > **Depth-resolved 3-D follow-up (P121–P122).** An independent numerical surface-charge implementation agrees with the ideal finite-cuboid integral at 1,041.7 J; [P121](P121_gen5_finite_force_surface3d.md) records convergence and field probes. [P122](P122_gen5_finite_force_sensitivity.md) varies gap, depth offset, remanence and moving mass as deterministic scenarios. These are model checks with shared design inputs, not a selected motor, measured tolerances or hardware validation.
 
-> **One-event installed-burden follow-up (P123).** [P123](P123_gen5_one_event_mass_screen.md) re-solves the matched reference after hypothetically resizing fuel for one ideal release. The Gen5 device-plus-one-event-fuel proxy is 52.717 kg above the spring class despite 1.866 kg less fuel consumed with both carrying the original 10 kg load. The [labeled figure](../figures/gen5_one_event_installed_burden.svg) and [stdlib source](../analysis/gen5_one_event_mass_screen.py) show the calculation. This is not a twelve-shot campaign, selected drive, or launch-mass claim.\n\nIndependent cross-checks of the claims in `analysis/`. The historical A-series
+> **One-event installed-burden follow-up (P123).** [P123](P123_gen5_one_event_mass_screen.md) re-solves the matched reference after hypothetically resizing fuel for one ideal release. The Gen5 device-plus-one-event-fuel proxy is 52.717 kg above the spring class despite 1.866 kg less fuel consumed with both carrying the original 10 kg load. The [labeled figure](../figures/gen5_one_event_installed_burden.svg) and [stdlib source](../analysis/gen5_one_event_mass_screen.py) show the calculation. This is not a twelve-shot campaign, selected drive, or launch-mass claim.
+
+Independent cross-checks of the claims in `analysis/`. The historical A-series
 table below contains 73 rows; newer P-series review checks are linked above. A73 is
 declared and executing.
 

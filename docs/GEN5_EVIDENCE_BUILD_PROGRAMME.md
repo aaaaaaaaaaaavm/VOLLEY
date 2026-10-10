@@ -8,6 +8,8 @@
 
 The first architecture review should ask whether any credible mass and interface revision can approach that threshold **without** losing validated separation speed, structural margin, thermal control, payload protection or reliability. If it cannot, a rigorous IEEE contribution may be the quantified feasibility limit and failed criteria. That is a legitimate study result; it is not a product qualification.
 
+The [necessary one-event bound](../analysis/results/gen5_architecture_bounds.json) shows that even zero host fuel burn would allow only 74.659 kg of Gen5 device for parity in this reference. The unselected [H1 captive passive-armature hypothesis](GEN5_H1_INTEGRATED_DEPLOYER_HYPOTHESIS.md) combines moving-mass reduction with structural integration as a falsifiable candidate. Its component ideas have prior art; neither its mass nor its novelty has been demonstrated.
+
 ## 1. Drive, force and power
 
 **Ideas to test:** compare a segmented ironless stator with local commutation, a shorter active winding, different coil pitch and copper fill, and a lower speed command where the mission actually benefits. P120's 0.34 m and 1.30 m energized lengths are exploratory branches, not selected windings. Add the actual end turns, series/parallel connections, bus impedance, switching dead time and position-estimation latency before choosing a branch.

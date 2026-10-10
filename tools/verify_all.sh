@@ -46,6 +46,7 @@ run "terminal timing freshness" python3 analysis/terminal_timing.py --check
 run "manifest timing freshness" python3 analysis/manifest_timing.py --check
 run "operational uncertainty freshness" python3 analysis/operational_uncertainty.py --check
 run "one-event mass screen" python3 analysis/gen5_one_event_mass_screen.py --check
+run "architecture mass bounds" python3 analysis/gen5_architecture_bounds.py --check
 run "combined release errors" python3 analysis/combined_release_errors.py --check
 run "reference cell mechanics" python3 analysis/reference_cell_mechanics.py --check
 run "LegacyStudy reference freshness" python3 analysis/reference_architecture.py --check
