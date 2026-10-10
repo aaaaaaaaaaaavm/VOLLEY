@@ -1,0 +1,69 @@
+{
+  "evidence_class": "deterministic one-event reference algebra; not a motor rating, twelve-release campaign, provider mission, or hardware validation",
+  "inputs": {
+    "payload_kg": 4,
+    "payload_count": 12,
+    "host_base_dry_kg": 300,
+    "fixed_fuel_kg": 10,
+    "reserve_kg": 2,
+    "host_isp_s": 220,
+    "target_inertial_increment_m_s": 16.029,
+    "spring_device_kg": 72,
+    "spring_release_m_s": 2.5,
+    "gen5_modeled_device_kg": 126.562,
+    "gen5_ideal_finite_release_conversion_m_s": 12.448437098832297
+  },
+  "fixed_10kg_fuel": {
+    "spring": {
+      "preburn_m_s": 13.55240235835429,
+      "propellant_used_kg": 2.6926385533602417,
+      "target_residual_m_s": 0
+    },
+    "gen5_ideal_finite_force": {
+      "preburn_m_s": 3.6834988212635587,
+      "propellant_used_kg": 0.8266008413645441,
+      "target_residual_m_s": 3.552713678800501e-15
+    },
+    "propellant_saving_kg": 1.8660377119956975,
+    "device_dry_mass_penalty_kg": 54.562
+  },
+  "hypothetical_resized_one_event_fuel": {
+    "reserve_kg": 2,
+    "spring_loaded_fuel_kg": 4.659252629533221,
+    "gen5_loaded_fuel_kg": 2.8146858679616855,
+    "gen5_minus_spring_device_plus_fuel_kg": 52.71743323842845,
+    "gen5_device_mass_for_proxy_parity_kg": 73.93198489552125
+  },
+  "p122_ideal_geometry_cases": [
+    {
+      "case": "nominal_12mm_gap",
+      "ideal_release_conversion_m_s": 12.448438115007322,
+      "one_event_loaded_fuel_kg": 2.814685645002326,
+      "gen5_minus_spring_device_plus_fuel_kg": 52.71743301546909
+    },
+    {
+      "case": "gap_14mm",
+      "ideal_release_conversion_m_s": 11.613728446005737,
+      "one_event_loaded_fuel_kg": 2.997864773907538,
+      "gen5_minus_spring_device_plus_fuel_kg": 52.90061214437433
+    },
+    {
+      "case": "gap_16mm",
+      "ideal_release_conversion_m_s": 10.84004031863527,
+      "one_event_loaded_fuel_kg": 3.167715341565886,
+      "gen5_minus_spring_device_plus_fuel_kg": 53.07046271203266
+    },
+    {
+      "case": "depth_offset_5mm",
+      "ideal_release_conversion_m_s": 12.202756856739503,
+      "one_event_loaded_fuel_kg": 2.868593714890377,
+      "gen5_minus_spring_device_plus_fuel_kg": 52.77134108535714
+    },
+    {
+      "case": "depth_offset_10mm",
+      "ideal_release_conversion_m_s": 11.957671861215289,
+      "one_event_loaded_fuel_kg": 2.9223770165961227,
+      "gen5_minus_spring_device_plus_fuel_kg": 52.82512438706289
+    }
+  ]
+}
