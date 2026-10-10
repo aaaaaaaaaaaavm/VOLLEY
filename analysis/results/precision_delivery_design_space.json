@@ -1,0 +1,223 @@
+{
+  "evidence_class": "ideal kinematic and two-body sensitivity screen; no rated speed, precision, motor, host, payload compliance, or delivery service verified",
+  "inputs": {
+    "mu_m3_s2": 398600441800000.0,
+    "earth_radius_m": 6378137.0,
+    "altitude_m": 450000.0,
+    "stroke_m": 1.3,
+    "payload_kg": 4.0,
+    "g0_m_s2": 9.80665,
+    "p118_ideal_speed_m_s": 12.448437098832297,
+    "historical_challenged_speed_m_s": 16.029,
+    "historical_model_3sigma_speed_m_s": 0.0274,
+    "assumptions": [
+      "circular starting orbit",
+      "instantaneous prograde tangential inertial increment",
+      "no host recoil correction in orbit table",
+      "no drag, J2, maneuvers or state covariance",
+      "constant acceleration along full usable stroke",
+      "no feeder, brake or host loads"
+    ]
+  },
+  "circular_speed_m_s": 7640.429535277371,
+  "orbit_targets": [
+    {
+      "target_axis_rise_km": 1,
+      "axis_tolerance_km": 0.1,
+      "ideal_tangential_increment_m_s": 0.5593788685209802,
+      "permitted_inertial_increment_m_s": [
+        0.5034501963182265,
+        0.6153054934538886
+      ],
+      "smaller_side_velocity_margin_m_s": 0.05592662493290845
+    },
+    {
+      "target_axis_rise_km": 1,
+      "axis_tolerance_km": 1.0,
+      "ideal_tangential_increment_m_s": 0.5593788685209802,
+      "permitted_inertial_increment_m_s": [
+        0.0,
+        1.1185530099483003
+      ],
+      "smaller_side_velocity_margin_m_s": 0.5591741414273201
+    },
+    {
+      "target_axis_rise_km": 5,
+      "axis_tolerance_km": 0.1,
+      "ideal_tangential_increment_m_s": 2.79484823979692,
+      "permitted_inertial_increment_m_s": [
+        2.7390013673357316,
+        2.8506930696566997
+      ],
+      "smaller_side_velocity_margin_m_s": 0.055844829859779566
+    },
+    {
+      "target_axis_rise_km": 5,
+      "axis_tolerance_km": 1.0,
+      "ideal_tangential_increment_m_s": 2.79484823979692,
+      "permitted_inertial_increment_m_s": [
+        2.236287578863994,
+        3.3532046405216533
+      ],
+      "smaller_side_velocity_margin_m_s": 0.5583564007247332
+    },
+    {
+      "target_axis_rise_km": 10,
+      "axis_tolerance_km": 0.1,
+      "ideal_tangential_increment_m_s": 5.584589969753324,
+      "permitted_inertial_increment_m_s": [
+        5.528845084822024,
+        5.640332817897615
+      ],
+      "smaller_side_velocity_margin_m_s": 0.0557428481442912
+    },
+    {
+      "target_axis_rise_km": 10,
+      "axis_tolerance_km": 1.0,
+      "ideal_tangential_increment_m_s": 5.584589969753324,
+      "permitted_inertial_increment_m_s": [
+        5.0270494458836765,
+        6.141926814943872
+      ],
+      "smaller_side_velocity_margin_m_s": 0.557336845190548
+    },
+    {
+      "target_axis_rise_km": 20,
+      "axis_tolerance_km": 0.1,
+      "ideal_tangential_increment_m_s": 11.148811995675715,
+      "permitted_inertial_increment_m_s": [
+        11.093270216349083,
+        11.204351749778652
+      ],
+      "smaller_side_velocity_margin_m_s": 0.05553975410293788
+    },
+    {
+      "target_axis_rise_km": 20,
+      "axis_tolerance_km": 1.0,
+      "ideal_tangential_increment_m_s": 11.148811995675715,
+      "permitted_inertial_increment_m_s": [
+        10.593303048276539,
+        11.704118420568193
+      ],
+      "smaller_side_velocity_margin_m_s": 0.5553064248924784
+    },
+    {
+      "target_axis_rise_km": 28.8,
+      "axis_tolerance_km": 0.1,
+      "ideal_tangential_increment_m_s": 16.028570850757205,
+      "permitted_inertial_increment_m_s": [
+        15.973206851409486,
+        16.08393283497935
+      ],
+      "smaller_side_velocity_margin_m_s": 0.05536198422214511
+    },
+    {
+      "target_axis_rise_km": 28.8,
+      "axis_tolerance_km": 1.0,
+      "ideal_tangential_increment_m_s": 16.028570850757205,
+      "permitted_inertial_increment_m_s": [
+        15.474840157733524,
+        16.582100031173468
+      ],
+      "smaller_side_velocity_margin_m_s": 0.5535291804162625
+    },
+    {
+      "target_axis_rise_km": 50,
+      "axis_tolerance_km": 0.1,
+      "ideal_tangential_increment_m_s": 27.720422048887485,
+      "permitted_inertial_increment_m_s": [
+        27.66548271255124,
+        27.77535939414156
+      ],
+      "smaller_side_velocity_margin_m_s": 0.0549373452540749
+    },
+    {
+      "target_axis_rise_km": 50,
+      "axis_tolerance_km": 1.0,
+      "ideal_tangential_increment_m_s": 27.720422048887485,
+      "permitted_inertial_increment_m_s": [
+        27.170939068265398,
+        28.26970592127782
+      ],
+      "smaller_side_velocity_margin_m_s": 0.5492838723903333
+    }
+  ],
+  "ideal_stroke_loads": [
+    {
+      "relative_speed_m_s": 2.5,
+      "stroke_m": 1.3,
+      "minimum_constant_acceleration_g": 0.24512408965815582,
+      "payload_kinetic_energy_j": 12.5,
+      "ideal_stroke_for_10g_m": 0.03186613165556026,
+      "ideal_stroke_for_20g_m": 0.01593306582778013
+    },
+    {
+      "relative_speed_m_s": 5.0,
+      "stroke_m": 1.3,
+      "minimum_constant_acceleration_g": 0.9804963586326233,
+      "payload_kinetic_energy_j": 50.0,
+      "ideal_stroke_for_10g_m": 0.12746452662224103,
+      "ideal_stroke_for_20g_m": 0.06373226331112052
+    },
+    {
+      "relative_speed_m_s": 12.448437098832297,
+      "stroke_m": 1.3,
+      "minimum_constant_acceleration_g": 6.0776492797306805,
+      "payload_kinetic_energy_j": 309.92717240716854,
+      "ideal_stroke_for_10g_m": 0.7900944063649885,
+      "ideal_stroke_for_20g_m": 0.39504720318249426
+    },
+    {
+      "relative_speed_m_s": 16.029,
+      "stroke_m": 1.3,
+      "minimum_constant_acceleration_g": 10.07671172112801,
+      "payload_kinetic_energy_j": 513.857682,
+      "ideal_stroke_for_10g_m": 1.3099725237466413,
+      "ideal_stroke_for_20g_m": 0.6549862618733207
+    },
+    {
+      "relative_speed_m_s": 20.0,
+      "stroke_m": 1.3,
+      "minimum_constant_acceleration_g": 15.687941738121973,
+      "payload_kinetic_energy_j": 800.0,
+      "ideal_stroke_for_10g_m": 2.0394324259558565,
+      "ideal_stroke_for_20g_m": 1.0197162129779282
+    },
+    {
+      "relative_speed_m_s": 50.0,
+      "stroke_m": 1.3,
+      "minimum_constant_acceleration_g": 98.04963586326234,
+      "payload_kinetic_energy_j": 5000.0,
+      "ideal_stroke_for_10g_m": 12.746452662224105,
+      "ideal_stroke_for_20g_m": 6.373226331112052
+    },
+    {
+      "relative_speed_m_s": 1000.0,
+      "stroke_m": 1.3,
+      "minimum_constant_acceleration_g": 39219.854345304935,
+      "payload_kinetic_energy_j": 2000000.0,
+      "ideal_stroke_for_10g_m": 5098.581064889641,
+      "ideal_stroke_for_20g_m": 2549.2905324448207
+    }
+  ],
+  "ideal_speed_limits_for_load": [
+    {
+      "load_limit_g": 5,
+      "max_ideal_speed_m_s": 11.290989770609128
+    },
+    {
+      "load_limit_g": 10,
+      "max_ideal_speed_m_s": 15.967870866211312
+    },
+    {
+      "load_limit_g": 20,
+      "max_ideal_speed_m_s": 22.581979541218256
+    },
+    {
+      "load_limit_g": 100,
+      "max_ideal_speed_m_s": 50.49484132067354
+    }
+  ],
+  "p118_ideal_speed_axis_rise_km_if_entirely_inertial_tangential": 22.340946748248303,
+  "historical_model_only_3sigma_axis_halfwidth_m_if_tangential": 49.49155899789184
+}

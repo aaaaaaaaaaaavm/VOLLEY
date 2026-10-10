@@ -46,6 +46,8 @@ The [necessary one-event bound](../analysis/results/gen5_architecture_bounds.jso
 
 **Decision gate:** at least one defined mission must close all twelve releases with the selected drive and installed mass, or the paper states that the studied Gen5 mission does not close.
 
+**P124 update:** the [ideal precision-delivery design-space screen](../validation/P124_precision_delivery_design_space.md) now maps specified 450 km semimajor-axis targets and tolerance bands to tangential velocity requirements and minimum stroke acceleration. It exposes why 1 km/s cannot be assigned to a first ordinary-3U Gen6 article on the Gen5 stroke. It does not close host-state, release-vector or delivery-accuracy budgets. The [Gen6 prototype-to-flight roadmap](GEN6_PROTOTYPE_TO_FLIGHT_ROADMAP.md) makes the subsequent evidence gates explicit.
+
 ## 5. IEEE research claim and reproducibility
 
 **Candidate contribution:** a source-graded, falsifiable *system-level feasibility evaluation* of a specific electromagnetic multi-satellite deployment architecture, including an independent force check, coupled constraints, installed burden and adverse mission results. Adjustable electromagnetic separation and stacked feed are prior art; neither is claimed as VOLLEY's invention without a narrower demonstrated distinction.

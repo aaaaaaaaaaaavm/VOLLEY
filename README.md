@@ -24,6 +24,12 @@ A [depth-resolved 3-D surface-charge cross-check](validation/P121_gen5_finite_fo
 
 > **Necessary bound for the next design:** even a perfect release needing no host preburn would require Gen5 device mass **≤74.659 kg** to tie this one-event spring reference; today's model is 126.562 kg. The [reproducible bound](analysis/gen5_architecture_bounds.py) shows that motor speed alone cannot close this specific gap. A [captive passive-armature and integrated-structure hypothesis](docs/GEN5_H1_INTEGRATED_DEPLOYER_HYPOTHESIS.md) is an unselected research direction, not a revised Gen5 result or a verified invention.
 
+> **Precision delivery must be specified by the orbit, not by speed alone.** The [P124 design-space screen](validation/P124_precision_delivery_design_space.md) converts declared 450 km orbit targets into ideal tangential increments and velocity-error budgets. It also shows that 1 km/s over the Gen5 1.3 m stroke implies about **39,220 g** for an ordinary 4 kg 3U payload. The first Gen6 prototype needs a payload and mission-derived speed/load specification; the 1 km/s goal remains separate long-range research.
+
+The [Gen6 prototype-to-flight roadmap](docs/GEN6_PROTOTYPE_TO_FLIGHT_ROADMAP.md) sets explicit mission, architecture, predictive-model, measured-prototype, engineering-model, qualification and flight decision gates. These are proposed development stages, not achieved milestones.
+
+![Ideal speed, stroke and payload-load screen](figures/precision_delivery_design_space.svg)
+
 ![One-event installed device plus resized-fuel comparison](figures/gen5_one_event_installed_burden.svg)
 
 <p align="center"><img src="figures/gen5_finite_force_surface3d.png" alt="Independent numerical three-dimensional surface-charge force integration" width="48%"> <img src="figures/gen5_finite_force_sensitivity.png" alt="Illustrative magnet gap and depth sensitivity scenarios" width="48%"></p>
