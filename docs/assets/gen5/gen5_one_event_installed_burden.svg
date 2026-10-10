@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" role="img" aria-labelledby="title desc">
+<title id="title">One-event installed device and resized-fuel comparison</title>
+<desc id="desc">Spring class is 72 kilograms of device plus 4.659 kilograms of one-event fuel. Gen5 is 126.562 kilograms of device plus 2.815 kilograms of one-event fuel. Gen5 has a 52.717 kilogram higher device-plus-fuel proxy. This is a reference algebra screen, not a twelve-release mission or motor rating.</desc>
+<rect width="1000" height="430" fill="#0c1422"/>
+<text x="50" y="54" fill="#f4f7fc" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700">Installed burden after one ideal release</text>
+<text x="50" y="83" fill="#9fb3cb" font-family="Arial,Helvetica,sans-serif" font-size="17">Common 16.029 m/s inertial target · illustrative host and payload · P123</text>
+<g stroke="#314358" stroke-width="1">
+<line x1="250" y1="125" x2="250" y2="310"/>
+<line x1="350" y1="125" x2="350" y2="310"/>
+<line x1="450" y1="125" x2="450" y2="310"/>
+<line x1="550" y1="125" x2="550" y2="310"/>
+<line x1="650" y1="125" x2="650" y2="310"/>
+<line x1="750" y1="125" x2="750" y2="310"/>
+<line x1="850" y1="125" x2="850" y2="310"/>
+<line x1="950" y1="125" x2="950" y2="310"/>
+</g>
+<g fill="#a9bed3" font-family="Arial,Helvetica,sans-serif" font-size="15" text-anchor="middle">
+<text x="250" y="120">0</text><text x="350" y="120">20</text><text x="450" y="120">40</text><text x="550" y="120">60</text><text x="650" y="120">80</text><text x="750" y="120">100</text><text x="850" y="120">120</text><text x="950" y="120">140 kg</text>
+</g>
+<text x="50" y="188" fill="#f4f7fc" font-family="Arial,Helvetica,sans-serif" font-size="19">Spring class</text>
+<text x="50" y="273" fill="#f4f7fc" font-family="Arial,Helvetica,sans-serif" font-size="19">Gen5 finite ideal</text>
+<rect x="250" y="156" width="360" height="44" rx="4" fill="#6689a9"/>
+<rect x="610" y="156" width="23.2963" height="44" rx="4" fill="#55d7c2"/>
+<rect x="250" y="241" width="632.81" height="44" rx="4" fill="#6689a9"/>
+<rect x="882.81" y="241" width="14.0734" height="44" rx="4" fill="#55d7c2"/>
+<g fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700">
+<text x="650" y="185">76.659 kg</text><text x="955" y="270" text-anchor="end">129.377 kg</text>
+</g>
+<rect x="50" y="336" width="18" height="18" fill="#6689a9"/><text x="78" y="351" fill="#d8e4f1" font-family="Arial,Helvetica,sans-serif" font-size="16">modeled installed device</text>
+<rect x="317" y="336" width="18" height="18" fill="#55d7c2"/><text x="345" y="351" fill="#d8e4f1" font-family="Arial,Helvetica,sans-serif" font-size="16">one-event loaded fuel, including 2 kg reserve</text>
+<text x="50" y="398" fill="#9fb3cb" font-family="Arial,Helvetica,sans-serif" font-size="14">Difference: +52.717 kg for Gen5. Fuel is resized for one event only; no complete campaign closes.</text>
+</svg>
