@@ -3,7 +3,7 @@
   "sources_sha256": {
     "force_map": "01dfc9743ba37ccc25f0591afa21479e8fa6500f2792a43bfcafdf3ed5cb21c0",
     "historical_drive": "ee2a1eb4aca00cca3c4c8a56d38d2d0d572dd225f7128bedf2090782bcb0d98c",
-    "source": "caa2f4dbaa025c37333e20f1a2ead90f2a70b56d1c8ba3e6afd832410cdc6216"
+    "source": "58838dc581725ef98a27712164a8a7ac11bc7b6015328fe4af44ac042ef0027d"
   },
   "assumptions": {
     "phase_peak_current_A": 354.0748484575519,
@@ -31,31 +31,73 @@
       "R_ohm": 0.02798616320768922,
       "L_H": 2.1888596323797692e-05,
       "I_limit_A": 354.0748484575519,
-      "source_initial_V": 96.0
+      "source_initial_V": 96.0,
+      "source_esr_ohm": 0.012,
+      "capacitance_F": 6.0
     },
     "twice_resistance": {
       "R_ohm": 0.05597232641537844,
       "L_H": 2.1888596323797692e-05,
       "I_limit_A": 354.0748484575519,
-      "source_initial_V": 96.0
+      "source_initial_V": 96.0,
+      "source_esr_ohm": 0.012,
+      "capacitance_F": 6.0
     },
     "twice_inductance": {
       "R_ohm": 0.02798616320768922,
       "L_H": 4.3777192647595384e-05,
       "I_limit_A": 354.0748484575519,
-      "source_initial_V": 96.0
+      "source_initial_V": 96.0,
+      "source_esr_ohm": 0.012,
+      "capacitance_F": 6.0
     },
     "half_current_limit": {
       "R_ohm": 0.02798616320768922,
       "L_H": 2.1888596323797692e-05,
       "I_limit_A": 177.03742422877596,
-      "source_initial_V": 96.0
+      "source_initial_V": 96.0,
+      "source_esr_ohm": 0.012,
+      "capacitance_F": 6.0
     },
     "half_source_voltage": {
       "R_ohm": 0.02798616320768922,
       "L_H": 2.1888596323797692e-05,
       "I_limit_A": 354.0748484575519,
-      "source_initial_V": 48.0
+      "source_initial_V": 48.0,
+      "source_esr_ohm": 0.012,
+      "capacitance_F": 6.0
+    },
+    "legacy_commercial_low_esr": {
+      "R_ohm": 0.02798616320768922,
+      "L_H": 2.1888596323797692e-05,
+      "I_limit_A": 354.0748484575519,
+      "source_initial_V": 96.0,
+      "source_esr_ohm": 0.116,
+      "capacitance_F": 6.0
+    },
+    "legacy_commercial_high_esr": {
+      "R_ohm": 0.02798616320768922,
+      "L_H": 2.1888596323797692e-05,
+      "I_limit_A": 354.0748484575519,
+      "source_initial_V": 96.0,
+      "source_esr_ohm": 0.185,
+      "capacitance_F": 6.0
+    },
+    "two_parallel_low_esr": {
+      "R_ohm": 0.02798616320768922,
+      "L_H": 2.1888596323797692e-05,
+      "I_limit_A": 354.0748484575519,
+      "source_initial_V": 96.0,
+      "source_esr_ohm": 0.058,
+      "capacitance_F": 12.0
+    },
+    "three_parallel_high_esr": {
+      "R_ohm": 0.02798616320768922,
+      "L_H": 2.1888596323797692e-05,
+      "I_limit_A": 354.0748484575519,
+      "source_initial_V": 96.0,
+      "source_esr_ohm": 0.06166666666666667,
+      "capacitance_F": 18.0
     }
   },
   "cases": {
@@ -147,6 +189,58 @@
       "peak_bank_current_A": 347.8326898128581,
       "peak_acceleration_g": 8.964064227785062,
       "voltage_limited_fraction": 0.36957686127477235,
+      "trace": []
+    },
+    "legacy_commercial_low_esr": {
+      "status": "SOURCE_ESR_POWER_LIMIT",
+      "position_m": 0.6117253282801265,
+      "speed_at_failure_m_s": 10.288527753191573,
+      "voltage_at_failure_V": 92.63060092151764,
+      "terminal_demand_W": 18499.84203353035,
+      "source_max_terminal_W": 18492.30221353764
+    },
+    "legacy_commercial_high_esr": {
+      "status": "SOURCE_ESR_POWER_LIMIT",
+      "position_m": 0.16023045179302656,
+      "speed_at_failure_m_s": 5.265142180474506,
+      "voltage_at_failure_V": 94.6736542209782,
+      "terminal_demand_W": 12121.402632201925,
+      "source_max_terminal_W": 12112.298383180192
+    },
+    "two_parallel_low_esr": {
+      "status": "COMPLETED_CONDITIONAL_SCREEN",
+      "speed_m_s": 12.448435460034267,
+      "duration_s": 0.17619999999999691,
+      "end_voltage_V": 93.94690024697233,
+      "cap_draw_J": 2339.8796039125737,
+      "mechanical_J": 1042.444591599346,
+      "copper_J": 927.322224982215,
+      "bank_esr_J": 231.21746006565957,
+      "auxiliary_J": 35.23999999999991,
+      "converter_J": 103.67193771482079,
+      "ledger_residual_J": -0.016610449467592048,
+      "peak_phase_current_A": 354.07484318142554,
+      "peak_bank_current_A": 237.56283130837846,
+      "peak_acceleration_g": 8.96431398448081,
+      "voltage_limited_fraction": 0.0,
+      "trace": []
+    },
+    "three_parallel_high_esr": {
+      "status": "COMPLETED_CONDITIONAL_SCREEN",
+      "speed_m_s": 12.448435460034267,
+      "duration_s": 0.17619999999999691,
+      "end_voltage_V": 94.62644587494043,
+      "cap_draw_J": 2356.5216696927255,
+      "mechanical_J": 1042.444591599346,
+      "copper_J": 927.322224982215,
+      "bank_esr_J": 247.85407999476558,
+      "auxiliary_J": 35.23999999999991,
+      "converter_J": 103.67193771482079,
+      "ledger_residual_J": -0.011164598421785854,
+      "peak_phase_current_A": 354.07484318142554,
+      "peak_bank_current_A": 238.8730228719638,
+      "peak_acceleration_g": 8.96431398448081,
+      "voltage_limited_fraction": 0.0,
       "trace": []
     }
   },

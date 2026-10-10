@@ -43,7 +43,8 @@ def force_at(x, xs, fs):
 
 
 def simulate(xs, fs, i_ref, resistance, inductance, current_limit,
-             source_voltage=V0, step=.0001, trace=False):
+             source_voltage=V0, source_esr=ESR, capacitance=CAP_F,
+             step=.0001, trace=False):
     x = v = t = w_mech = w_cu = w_esr = w_aux = w_conv = 0.0
     vc = source_voltage
     records = []
@@ -74,16 +75,19 @@ def simulate(xs, fs, i_ref, resistance, inductance, current_limit,
         copper_power = 1.5 * resistance * current**2
         mechanical_power = force * vn
         dc_terminal = (mechanical_power + copper_power) / EFF + AUX_W
-        discriminant = vc**2 - 4 * ESR * dc_terminal
+        discriminant = vc**2 - 4 * source_esr * dc_terminal
         if discriminant <= 0:
-            return {"status": "SOURCE_ESR_POWER_LIMIT", "position_m": x}
+            return {"status": "SOURCE_ESR_POWER_LIMIT", "position_m": x,
+                    "speed_at_failure_m_s": v, "voltage_at_failure_V": vc,
+                    "terminal_demand_W": dc_terminal,
+                    "source_max_terminal_W": vc**2/(4*source_esr)}
         ibank = 2 * dc_terminal / (vc + math.sqrt(discriminant))
         w_mech += force * (xn - x)
         w_cu += copper_power * step
-        w_esr += ibank**2 * ESR * step
+        w_esr += ibank**2 * source_esr * step
         w_aux += AUX_W * step
         w_conv += (mechanical_power + copper_power) * (1 / EFF - 1) * step
-        vc -= ibank * step / CAP_F
+        vc -= ibank * step / capacitance
         if trace and len(records) % 20 == 0:
             records.append([t, x, v, force, current, vc,
                             math.hypot(ke * v + resistance * current,
@@ -96,7 +100,7 @@ def simulate(xs, fs, i_ref, resistance, inductance, current_limit,
         peak_accel = max(peak_accel, force / MASS)
         if t > 5:
             return {"status": "STALLED", "position_m": x}
-    drawn = .5 * CAP_F * (source_voltage**2 - vc**2)
+    drawn = .5 * capacitance * (source_voltage**2 - vc**2)
     return dict(status="COMPLETED_CONDITIONAL_SCREEN", speed_m_s=v,
                 duration_s=t, end_voltage_V=vc, cap_draw_J=drawn,
                 mechanical_J=w_mech, copper_J=w_cu, bank_esr_J=w_esr,
@@ -109,21 +113,22 @@ def simulate(xs, fs, i_ref, resistance, inductance, current_limit,
 
 
 def make_svg(cases):
-    vals = [(k, v["speed_m_s"]) for k, v in cases.items()]
-    width, height = 800, 340
+    vals = [(k, v.get("speed_m_s", v.get("speed_at_failure_m_s", 0)), v["status"])
+            for k, v in cases.items()]
+    width, height = 850, 560
     bars = []
-    for i, (name, speed) in enumerate(vals):
+    for i, (name, speed, status) in enumerate(vals):
         y = 58 + i * 54
         w = 500 * speed / 13
-        color = "#13859d" if name == "reference_unselected" else "#b86b4a"
+        color = "#13859d" if name == "reference_unselected" else ("#9d273e" if status != "COMPLETED_CONDITIONAL_SCREEN" else "#b86b4a")
         bars.append(f'<text x="22" y="{y+18}" font-size="14">{name.replace("_", " ")}</text>'
                     f'<rect x="245" y="{y}" width="{w:.1f}" height="24" fill="{color}"/>'
-                    f'<text x="{255+w:.1f}" y="{y+18}" font-size="14">{speed:.3f} m/s</text>')
+                    f'<text x="{255+w:.1f}" y="{y+18}" font-size="14">{speed:.3f} m/s {"STOP" if status != "COMPLETED_CONDITIONAL_SCREEN" else ""}</text>')
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">'
             '<rect width="100%" height="100%" fill="#f6f9fb"/>'
             '<text x="22" y="32" font-size="20" font-weight="bold">P125 · conditional voltage-limited screen</text>'
             + "".join(bars) +
-            '<text x="22" y="325" font-size="12">Unselected R/L/current and ideal phase; no rated Gen5 speed</text></svg>\n')
+            '<text x="22" y="545" font-size="12">Unselected R/L/current and ideal phase; red bars stop at source power limit. No rated Gen5 speed.</text></svg>\n')
 
 
 def main():
@@ -136,16 +141,22 @@ def main():
     i_ref = drive["phase_current_peak_A"]
     r, l = drive["phase_resistance_ohm"], drive["phase_inductance_H"]
     variants = {
-        "reference_unselected": (r, l, i_ref, V0),
-        "twice_resistance": (2*r, l, i_ref, V0),
-        "twice_inductance": (r, 2*l, i_ref, V0),
-        "half_current_limit": (r, l, i_ref/2, V0),
-        "half_source_voltage": (r, l, i_ref, V0/2),
+        "reference_unselected": (r, l, i_ref, V0, ESR, CAP_F),
+        "twice_resistance": (2*r, l, i_ref, V0, ESR, CAP_F),
+        "twice_inductance": (r, 2*l, i_ref, V0, ESR, CAP_F),
+        "half_current_limit": (r, l, i_ref/2, V0, ESR, CAP_F),
+        "half_source_voltage": (r, l, i_ref, V0/2, ESR, CAP_F),
+        "legacy_commercial_low_esr": (r, l, i_ref, V0, .116, CAP_F),
+        "legacy_commercial_high_esr": (r, l, i_ref, V0, .185, CAP_F),
+        "two_parallel_low_esr": (r, l, i_ref, V0, .116/2, CAP_F*2),
+        "three_parallel_high_esr": (r, l, i_ref, V0, .185/3, CAP_F*3),
     }
     cases = {name: simulate(xs, fs, i_ref, *p) for name, p in variants.items()}
-    if any(v["status"] != "COMPLETED_CONDITIONAL_SCREEN" for v in cases.values()):
-        raise RuntimeError("at least one surrogate case did not complete")
-    refinements = {dt: simulate(xs, fs, i_ref, r, l, i_ref, V0, dt)["speed_m_s"]
+    if any(v["status"] != "COMPLETED_CONDITIONAL_SCREEN"
+           for name,v in cases.items() if not name.startswith("legacy_commercial")
+           and not name.startswith("two_parallel") and not name.startswith("three_parallel")):
+        raise RuntimeError("one of the baseline surrogate cases did not complete")
+    refinements = {dt: simulate(xs, fs, i_ref, r, l, i_ref, V0, ESR, CAP_F, dt)["speed_m_s"]
                    for dt in (.0002, .00005)}
     data = dict(evidence_class="CONDITIONAL_QUASI_STEADY_SCREEN_NOT_SELECTED_DRIVE_OR_RATED_SPEED",
                 sources_sha256={"force_map": hashlib.sha256(raw_force).hexdigest(),
@@ -160,13 +171,15 @@ def main():
                                  omitted=["transient switched currents and commutation error",
                                           "thermal rise and derating", "iron and saturation",
                                           "feed/contact/recoil/brake", "supplier cell and switch ratings"]),
-                variants={name: dict(R_ohm=p[0], L_H=p[1], I_limit_A=p[2], source_initial_V=p[3])
+                variants={name: dict(R_ohm=p[0], L_H=p[1], I_limit_A=p[2], source_initial_V=p[3], source_esr_ohm=p[4], capacitance_F=p[5])
                           for name,p in variants.items()},
                 cases=cases, time_step_refinement=refinements,
                 speed_step_change_m_s=max(abs(cases["reference_unselected"]["speed_m_s"]-x)
                                           for x in refinements.values()))
     svg = make_svg(cases)
     rows = [f"| {name.replace('_',' ')} | {v['speed_m_s']:.3f} | {v['cap_draw_J']:.0f} | {100*v['voltage_limited_fraction']:.1f}% |"
+            if v["status"] == "COMPLETED_CONDITIONAL_SCREEN" else
+            f"| {name.replace('_',' ')} | **fails at {v['position_m']:.3f} m** | — | source power limit |"
             for name,v in cases.items()]
     report = "\n".join([
         "# P125 — voltage and current feasibility screen", "",
@@ -177,8 +190,17 @@ def main():
         "integrates capacitor droop and ESR. The resistance, inductance and peak current",
         "come from the historical periodic-winding calculation; they are **not selected parts**.",
         "Ideal space-vector modulation and instantaneous q-axis current are assumed.", "",
-        "| Surrogate case | Exit speed (m/s) | Cap draw (J) | Steps voltage limited |",
+        "| Surrogate case | Exit speed (m/s) | Cap draw (J) | Steps voltage limited / failure |",
         "|:--|--:|--:|--:|", *rows, "",
+        "The 116–185 mΩ source range is an **older distributor-data bound**, not a",
+        "manufacturer-qualified cell selection; see `validation/A10_bank_esr.md`.",
+        "The model solves the source power quadratic at each step and reports failure",
+        "when demanded terminal power exceeds `Vcap²/(4 ESR)`. Source ESR and",
+        "capacitance are varied independently here; an actual cell string couples them.", "",
+        "The two- and three-parallel-string branches scale capacitance and divide",
+        "ESR together as ideal identical strings. They also multiply cell count and",
+        "source mass; busbars, balancing, current limits and actual cell ratings are",
+        "unselected. A completed numerical branch is not a buildable bank.", "",
         f"Reference step refinement (0.2–0.05 ms) changes exit speed by at most {data['speed_step_change_m_s']:.4f} m/s.",
         f"Reference energy-ledger residual is {cases['reference_unselected']['ledger_residual_J']:.4f} J.",
         "This step check does not cover force-map interpolation, winding tolerance or source uncertainty.", "",
@@ -199,7 +221,8 @@ def main():
     RESULT.write_text(rendered)
     REPORT.write_text(report)
     FIGURE.write_text(svg)
-    print({k: round(v["speed_m_s"],3) for k,v in cases.items()})
+    print({k: (round(v["speed_m_s"],3) if "speed_m_s" in v else v["status"])
+           for k,v in cases.items()})
 
 
 if __name__ == "__main__":

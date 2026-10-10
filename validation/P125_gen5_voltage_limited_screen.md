@@ -9,13 +9,28 @@ integrates capacitor droop and ESR. The resistance, inductance and peak current
 come from the historical periodic-winding calculation; they are **not selected parts**.
 Ideal space-vector modulation and instantaneous q-axis current are assumed.
 
-| Surrogate case | Exit speed (m/s) | Cap draw (J) | Steps voltage limited |
+| Surrogate case | Exit speed (m/s) | Cap draw (J) | Steps voltage limited / failure |
 |:--|--:|--:|--:|
 | reference unselected | 12.448 | 2149 | 0.0% |
 | twice resistance | 12.448 | 3169 | 0.0% |
 | twice inductance | 12.448 | 2149 | 0.0% |
 | half current limit | 8.802 | 949 | 0.0% |
 | half source voltage | 10.794 | 1796 | 37.0% |
+| legacy commercial low esr | **fails at 0.612 m** | — | source power limit |
+| legacy commercial high esr | **fails at 0.160 m** | — | source power limit |
+| two parallel low esr | 12.448 | 2340 | 0.0% |
+| three parallel high esr | 12.448 | 2357 | 0.0% |
+
+The 116–185 mΩ source range is an **older distributor-data bound**, not a
+manufacturer-qualified cell selection; see `validation/A10_bank_esr.md`.
+The model solves the source power quadratic at each step and reports failure
+when demanded terminal power exceeds `Vcap²/(4 ESR)`. Source ESR and
+capacitance are varied independently here; an actual cell string couples them.
+
+The two- and three-parallel-string branches scale capacitance and divide
+ESR together as ideal identical strings. They also multiply cell count and
+source mass; busbars, balancing, current limits and actual cell ratings are
+unselected. A completed numerical branch is not a buildable bank.
 
 Reference step refinement (0.2–0.05 ms) changes exit speed by at most 0.0000 m/s.
 Reference energy-ledger residual is -0.0280 J.

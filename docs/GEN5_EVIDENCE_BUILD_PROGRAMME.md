@@ -20,7 +20,7 @@ The [necessary one-event bound](../analysis/results/gen5_architecture_bounds.jso
 - a circuit netlist (ngspice), explicit switching logic, position-dependent back EMF and force, and coupled electrical/kinematic integration using the same CAD revision;
 - voltage/current/force/speed/temperature/energy histories, a closed energy ledger, time-step and mesh convergence, parameter corners, and failed cases.
 
-[P125](../validation/P125_gen5_voltage_limited_screen.md) adds an ideal quasi-steady three-phase voltage/current screen using unselected historical winding and source values. It bounds sensitivity but does not specify a switch, coil or cell.
+[P125](../validation/P125_gen5_voltage_limited_screen.md) adds an ideal quasi-steady three-phase voltage/current screen using unselected historical winding and source values. It bounds sensitivity but does not specify a switch, coil or cell. A single string at the older 116–185 mΩ commercial ESR bound fails before release in that model; ideal two- or three-parallel-string branches complete while increasing cell count and source mass.
 
 **Decision gate:** report the **achievable** release range under component limits and uncertainty. The 12.448 m/s ideal conversion is an upper screen until this gate closes. Preserve 16.029 m/s as a historical contradicted result.
 
