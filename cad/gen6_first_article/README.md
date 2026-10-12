@@ -15,6 +15,8 @@ Nominal side gap is 5 mm per side; armature-to-primary gap is 2 mm. The report c
 
 The ~9.93 kg partial material estimate counts only simple aluminium frame/guide/carrier volumes and one armature material proxy. It **excludes** the 4 kg dummy, primary copper/laminations, inverter, source, launch restraint, payload contact hardware, bearings, brake, thermal parts, controls, harness, host mounting and margins. It is neither an installed mass nor the 30 kg P130 assumption. Material densities are declared study values in [parameters.json](parameters.json), not a sourced procurement specification.
 
+[P132](../../validation/P132_gen6_go2_power_instrument_screen.md) adds explicitly assumed 5/10/20% source-efficiency and 96-to-72 V bus scenarios and a first speed-measurement resolution budget. It does not select a source, winding or instrument.
+
 ## Reproduce
 
 ```bash

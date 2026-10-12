@@ -1,0 +1,214 @@
+{
+  "evidence_class": "GEN6_G2_NECESSARY_SOURCE_AND_SENSOR_BOUNDS_NO_SELECTED_HARDWARE",
+  "provenance": {
+    "source_sha256": "4f1437808a06e0de71c7db4369f829a4a64378c278b8a6f3cf1a5383d13f1bc7",
+    "p131_result_sha256": "bc497043d19d6daa18e4d415cfdfe432e0eb58137ad95465fdbdcc326f5c83c6"
+  },
+  "assumptions": {
+    "end_to_end_efficiencies": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "voltage_swing_V": [
+      96.0,
+      72.0
+    ],
+    "capacitor_model": "0.5*C*(Vmax^2-Vmin^2); 100% usable capacitor energy, no ESR or inverter limits",
+    "optical_gate_baseline_m": 0.2,
+    "illustrative_speed_measurement_resolution_m_s": 0.01,
+    "same_dummy_shots_for_heat_screen": 4
+  },
+  "candidates": {
+    "A": {
+      "captured_carrier_kg": 0.5431199999999999,
+      "cases": [
+        {
+          "speed_m_s": 3.0,
+          "ideal_constant_acceleration_shot_time_s": 0.8666666666666667,
+          "ideal_peak_mechanical_power_W": 47.17855384615385,
+          "gate_interval_s": 0.06666666666666667,
+          "gate_timing_error_if_sole_source_us": 222.22222222222223,
+          "gate_baseline_error_if_sole_source_mm": 0.6666666666666666,
+          "efficiency_scenarios": [
+            {
+              "assumed_end_to_end_efficiency": 0.05,
+              "required_bus_energy_at_least_J": 408.8808,
+              "loss_heat_somewhere_in_chain_J": 388.43676000000005,
+              "four_identical_shots_input_J": 1635.5232,
+              "four_identical_shots_loss_heat_J": 1553.7470400000002,
+              "ideal_min_capacitance_F": 0.20281785714285716,
+              "mean_bus_power_lower_bound_W": 471.78553846153847,
+              "end_of_stroke_bus_power_lower_bound_W": 943.5710769230769,
+              "bus_current_at_72V_lower_bound_A": 13.105153846153845
+            },
+            {
+              "assumed_end_to_end_efficiency": 0.1,
+              "required_bus_energy_at_least_J": 204.4404,
+              "loss_heat_somewhere_in_chain_J": 183.99636,
+              "four_identical_shots_input_J": 817.7616,
+              "four_identical_shots_loss_heat_J": 735.98544,
+              "ideal_min_capacitance_F": 0.10140892857142858,
+              "mean_bus_power_lower_bound_W": 235.89276923076923,
+              "end_of_stroke_bus_power_lower_bound_W": 471.78553846153847,
+              "bus_current_at_72V_lower_bound_A": 6.552576923076923
+            },
+            {
+              "assumed_end_to_end_efficiency": 0.2,
+              "required_bus_energy_at_least_J": 102.2202,
+              "loss_heat_somewhere_in_chain_J": 81.77616,
+              "four_identical_shots_input_J": 408.8808,
+              "four_identical_shots_loss_heat_J": 327.10464,
+              "ideal_min_capacitance_F": 0.05070446428571429,
+              "mean_bus_power_lower_bound_W": 117.94638461538462,
+              "end_of_stroke_bus_power_lower_bound_W": 235.89276923076923,
+              "bus_current_at_72V_lower_bound_A": 3.2762884615384613
+            }
+          ]
+        },
+        {
+          "speed_m_s": 6.0,
+          "ideal_constant_acceleration_shot_time_s": 0.43333333333333335,
+          "ideal_peak_mechanical_power_W": 377.4284307692308,
+          "gate_interval_s": 0.03333333333333333,
+          "gate_timing_error_if_sole_source_us": 55.55555555555556,
+          "gate_baseline_error_if_sole_source_mm": 0.3333333333333333,
+          "efficiency_scenarios": [
+            {
+              "assumed_end_to_end_efficiency": 0.05,
+              "required_bus_energy_at_least_J": 1635.5232,
+              "loss_heat_somewhere_in_chain_J": 1553.7470400000002,
+              "four_identical_shots_input_J": 6542.0928,
+              "four_identical_shots_loss_heat_J": 6214.988160000001,
+              "ideal_min_capacitance_F": 0.8112714285714286,
+              "mean_bus_power_lower_bound_W": 3774.2843076923077,
+              "end_of_stroke_bus_power_lower_bound_W": 7548.568615384615,
+              "bus_current_at_72V_lower_bound_A": 104.84123076923076
+            },
+            {
+              "assumed_end_to_end_efficiency": 0.1,
+              "required_bus_energy_at_least_J": 817.7616,
+              "loss_heat_somewhere_in_chain_J": 735.98544,
+              "four_identical_shots_input_J": 3271.0464,
+              "four_identical_shots_loss_heat_J": 2943.94176,
+              "ideal_min_capacitance_F": 0.4056357142857143,
+              "mean_bus_power_lower_bound_W": 1887.1421538461539,
+              "end_of_stroke_bus_power_lower_bound_W": 3774.2843076923077,
+              "bus_current_at_72V_lower_bound_A": 52.42061538461538
+            },
+            {
+              "assumed_end_to_end_efficiency": 0.2,
+              "required_bus_energy_at_least_J": 408.8808,
+              "loss_heat_somewhere_in_chain_J": 327.10464,
+              "four_identical_shots_input_J": 1635.5232,
+              "four_identical_shots_loss_heat_J": 1308.41856,
+              "ideal_min_capacitance_F": 0.20281785714285716,
+              "mean_bus_power_lower_bound_W": 943.5710769230769,
+              "end_of_stroke_bus_power_lower_bound_W": 1887.1421538461539,
+              "bus_current_at_72V_lower_bound_A": 26.21030769230769
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "captured_carrier_kg": 0.561808,
+      "cases": [
+        {
+          "speed_m_s": 3.0,
+          "ideal_constant_acceleration_shot_time_s": 0.8666666666666667,
+          "ideal_peak_mechanical_power_W": 47.372621538461544,
+          "gate_interval_s": 0.06666666666666667,
+          "gate_timing_error_if_sole_source_us": 222.22222222222223,
+          "gate_baseline_error_if_sole_source_mm": 0.6666666666666666,
+          "efficiency_scenarios": [
+            {
+              "assumed_end_to_end_efficiency": 0.05,
+              "required_bus_energy_at_least_J": 410.56272000000007,
+              "loss_heat_somewhere_in_chain_J": 390.03458400000005,
+              "four_identical_shots_input_J": 1642.2508800000003,
+              "four_identical_shots_loss_heat_J": 1560.1383360000002,
+              "ideal_min_capacitance_F": 0.2036521428571429,
+              "mean_bus_power_lower_bound_W": 473.72621538461544,
+              "end_of_stroke_bus_power_lower_bound_W": 947.4524307692309,
+              "bus_current_at_72V_lower_bound_A": 13.15906153846154
+            },
+            {
+              "assumed_end_to_end_efficiency": 0.1,
+              "required_bus_energy_at_least_J": 205.28136000000003,
+              "loss_heat_somewhere_in_chain_J": 184.75322400000005,
+              "four_identical_shots_input_J": 821.1254400000001,
+              "four_identical_shots_loss_heat_J": 739.0128960000002,
+              "ideal_min_capacitance_F": 0.10182607142857145,
+              "mean_bus_power_lower_bound_W": 236.86310769230772,
+              "end_of_stroke_bus_power_lower_bound_W": 473.72621538461544,
+              "bus_current_at_72V_lower_bound_A": 6.57953076923077
+            },
+            {
+              "assumed_end_to_end_efficiency": 0.2,
+              "required_bus_energy_at_least_J": 102.64068000000002,
+              "loss_heat_somewhere_in_chain_J": 82.11254400000001,
+              "four_identical_shots_input_J": 410.56272000000007,
+              "four_identical_shots_loss_heat_J": 328.45017600000006,
+              "ideal_min_capacitance_F": 0.05091303571428572,
+              "mean_bus_power_lower_bound_W": 118.43155384615386,
+              "end_of_stroke_bus_power_lower_bound_W": 236.86310769230772,
+              "bus_current_at_72V_lower_bound_A": 3.289765384615385
+            }
+          ]
+        },
+        {
+          "speed_m_s": 6.0,
+          "ideal_constant_acceleration_shot_time_s": 0.43333333333333335,
+          "ideal_peak_mechanical_power_W": 378.98097230769235,
+          "gate_interval_s": 0.03333333333333333,
+          "gate_timing_error_if_sole_source_us": 55.55555555555556,
+          "gate_baseline_error_if_sole_source_mm": 0.3333333333333333,
+          "efficiency_scenarios": [
+            {
+              "assumed_end_to_end_efficiency": 0.05,
+              "required_bus_energy_at_least_J": 1642.2508800000003,
+              "loss_heat_somewhere_in_chain_J": 1560.1383360000002,
+              "four_identical_shots_input_J": 6569.003520000001,
+              "four_identical_shots_loss_heat_J": 6240.553344000001,
+              "ideal_min_capacitance_F": 0.8146085714285716,
+              "mean_bus_power_lower_bound_W": 3789.8097230769235,
+              "end_of_stroke_bus_power_lower_bound_W": 7579.619446153847,
+              "bus_current_at_72V_lower_bound_A": 105.27249230769232
+            },
+            {
+              "assumed_end_to_end_efficiency": 0.1,
+              "required_bus_energy_at_least_J": 821.1254400000001,
+              "loss_heat_somewhere_in_chain_J": 739.0128960000002,
+              "four_identical_shots_input_J": 3284.5017600000006,
+              "four_identical_shots_loss_heat_J": 2956.0515840000007,
+              "ideal_min_capacitance_F": 0.4073042857142858,
+              "mean_bus_power_lower_bound_W": 1894.9048615384618,
+              "end_of_stroke_bus_power_lower_bound_W": 3789.8097230769235,
+              "bus_current_at_72V_lower_bound_A": 52.63624615384616
+            },
+            {
+              "assumed_end_to_end_efficiency": 0.2,
+              "required_bus_energy_at_least_J": 410.56272000000007,
+              "loss_heat_somewhere_in_chain_J": 328.45017600000006,
+              "four_identical_shots_input_J": 1642.2508800000003,
+              "four_identical_shots_loss_heat_J": 1313.8007040000002,
+              "ideal_min_capacitance_F": 0.2036521428571429,
+              "mean_bus_power_lower_bound_W": 947.4524307692309,
+              "end_of_stroke_bus_power_lower_bound_W": 1894.9048615384618,
+              "bus_current_at_72V_lower_bound_A": 26.31812307692308
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "exclusions": [
+    "Efficiencies are scenarios, not measured or supported by motor/circuit selection",
+    "Ideal average and end-of-stroke power assume constant acceleration; actual force and source peaks can be higher",
+    "Capacitance and bus-current values omit ESR, ripple, switching, reactive current, derating, aging, thermal limits and recharge",
+    "Heat is an aggregate energy difference; local component temperatures and spacecraft magnetic/EMI exposure are unknown",
+    "Optical gate timing and baseline values are single-error budgets, not calibrated instrument specifications or 3-D vector accuracy",
+    "No launch or bench operation authorized by this calculation"
+  ]
+}
