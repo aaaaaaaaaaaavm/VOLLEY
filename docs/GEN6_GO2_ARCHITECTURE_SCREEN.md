@@ -14,7 +14,7 @@ Both layouts retain an ordinary, passive 3U spacecraft envelope. A reusable carr
 | Actual drive, contact, brake and electrical closure | **Open** | **Open** |
 | G1 disposition | **Analysis lead only; not selected for construction** | **Live challenger; not rejected** |
 
-This order reflects the user's intention to make Gen6 the first practical prototype while preserving the negative Gen5 academic result. It does not carry Gen5's 12.448 m/s ideal force screen into Gen6. It does not claim novel electromagnetic separation; comparable work is prior art.
+This order reflects the programme objective to make Gen6 the first practical prototype while preserving the negative Gen5 academic result. It does not carry Gen5's 12.448 m/s ideal force screen into Gen6. It does not claim novel electromagnetic separation; comparable work is prior art.
 
 ## Findings from controlled CAD and mechanics
 

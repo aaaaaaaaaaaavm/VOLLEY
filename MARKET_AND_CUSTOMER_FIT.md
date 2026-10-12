@@ -4,7 +4,7 @@ This is a decision aid for the **evaluated Gen5 reference case** and a requireme
 
 ## What the evidence actually supports
 
-The user’s [combined market report](https://docs.google.com/document/d/1gGDzdnV6cEMih5l_c0wRZkgwX8g_uw7JsgEblFZJjDs/edit) develops a hypothesis: standardized spacecraft fleets, replenished in batches, may value a shared host that provides common orbital movement and individualized final release states. The [independent business-case review](https://drive.google.com/file/d/1ijp-R79e9zXbYW-z7d5nlBQN_wiSUwf1/view) correctly separates supporting industry evidence from unmeasured demand. Relevant [payload-class calculations](https://drive.google.com/file/d/1dwnwmfMdkDE62zz2RIhFt6pSR2xxiPuN/view) and [mission-fit boundaries](https://drive.google.com/file/d/16V9v-P90CDWzz6VEb11Yfqu7blKnJa7z/view) were checked against the current Gen5 baseline before use here.
+The [combined market report](https://docs.google.com/document/d/1gGDzdnV6cEMih5l_c0wRZkgwX8g_uw7JsgEblFZJjDs/edit) develops a hypothesis: standardized spacecraft fleets, replenished in batches, may value a shared host that provides common orbital movement and individualized final release states. The [independent business-case review](https://drive.google.com/file/d/1ijp-R79e9zXbYW-z7d5nlBQN_wiSUwf1/view) correctly separates supporting industry evidence from unmeasured demand. Relevant [payload-class calculations](https://drive.google.com/file/d/1dwnwmfMdkDE62zz2RIhFt6pSR2xxiPuN/view) and [mission-fit boundaries](https://drive.google.com/file/d/16V9v-P90CDWzz6VEb11Yfqu7blKnJa7z/view) were checked against the current Gen5 baseline before use here.
 
 | Proposition | What was checked | Decision for this project |
 |:--|:--|:--|
