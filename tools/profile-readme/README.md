@@ -24,7 +24,7 @@ I like problems that survive the first calculation. My main project is **VOLLEY*
 
 Gen5 is the controlled computational configuration for academic review. Its historical periodic model returned **16.029 m/s at 10.07 g** and a **126.6 kg** modeled dry mass. A finite-geometry force screen challenges that speed with an ideal-phase **12.448 m/s** result; neither is a demonstrated release setting. The modeled **10.55 kg per 3U** fails the installed-mass screen, and the side-fed reference STEP assembly has an **11 mm width shortfall**. The final freeze remains open while these and other verification items are resolved or dispositioned.
 
-**Gen6 is future scaling research toward a 1 km/s-class objective.** No mechanism, payload class or speed range is selected or validated. The independent motor-charged spring-cell bank and long gas guide remain unselected historical studies.
+**Gen6 is future research on sequential mixed-size delivery.** Its current service study uses two passive 1U and two passive 3U spacecraft with surrogate host and interface inputs. No mechanism, installed hardware or release speed is selected or validated. A 1 km/s-class release remains a separate long-range research objective. The independent motor-charged spring-cell bank and long gas guide remain unselected historical studies.
 
 The mission work compares release authority with host manoeuvres and competent spring/timing alternatives. A historical two-payload screen found accepted cases under its assumptions, but the later matched twelve-shot reference does **not** close in any sampled case. Neither study establishes product value or a provider-approved mission.
 

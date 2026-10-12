@@ -1,7 +1,7 @@
 {
   "evidence_class": "SURROGATE_BALLISTIC_SCREEN_NOT_MATCHED_OPTIMIZED_CAMPAIGN_OR_HARDWARE_RESULT",
   "provenance": {
-    "source_sha256": "efe9b4cc9c6a1eb6fbf312c381490b7b933bc02178efe16b4891d038076362db"
+    "source_sha256": "c9f62bdf2f96f56975c2e96c11656e2af72920c47e6c6a032654db52a16256d9"
   },
   "assumptions": {
     "orbit_altitude_km": 500.0,

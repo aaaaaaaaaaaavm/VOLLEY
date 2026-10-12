@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""P129: user-selected Gen6 mixed-size, common-epoch J2 mission screen.
+"""P129: defined Gen6 mixed-size, common-epoch J2 mission screen.
 
 The target trajectories and all hardware/host inputs are explicit surrogates.
 This is a ballistic sensitivity screen, not a mission solution or product rating.
@@ -212,7 +212,7 @@ def report(d, convergence):
     volley = d["cases"]["volley_no_host_correction"]
     spring = d["cases"]["spring_ideal_local_host_burn"]
     lines = ["# P129 — Gen6 mixed-size full-state mission screen", "",
-             "**Status:** user-selected service architecture with surrogate numeric inputs; ballistic requirements screen, not a solved customer mission or achieved VOLLEY release capability.", "",
+             "**Status:** defined service architecture with surrogate numeric inputs; ballistic requirements screen, not a solved customer mission or achieved VOLLEY release capability.", "",
              "The selected service is two ordinary passive 1U and two ordinary passive 3U spacecraft from a rideshare/OTV host, released within one orbit. Each should reach a distinct **position and velocity at one common epoch**, 24 hours after the last release. The target pattern varies both initial orbit energy and resulting along-track position while remaining in one plane. The buyer is hypothesized to be the host operator; no customer or provider has approved the case.", "",
              f"This numerical reference starts from a circular 500 km orbit at the first-order J2 sun-synchronous inclination ({d['assumptions']['sso_inclination_deg']:.3f}°). Four releases occur at 0/20/40/60 minutes; the epoch is 25 hours after the first release. Payload masses of 1.33/4/1.33/4 kg, a 300 kg base host, 10 kg fuel, 220 s Isp, a 30 kg VOLLEY *recoil study mass* and a 16 kg spring-class installed proxy are **assumptions, not selected hardware or supplier limits**.", "",
              "## Independent target construction", "",
