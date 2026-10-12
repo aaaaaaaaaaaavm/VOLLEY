@@ -20,7 +20,7 @@ approval from these models.
 
 [Interactive viewer](https://aaaaaaaaaaaavm.github.io/VOLLEY/lunar.html#architecture)
 · [Engineering review](../../docs/LUNAR_VISUAL_REVIEW.md)
-· [Fusion handoff](../../docs/CURRENT_CELL_FUSION_HANDOFF.md)
+
 · [Generator](build_concepts.py)
 
 ![Current mechanical cell](../../docs/assets/lunar/exploded_cell.png)

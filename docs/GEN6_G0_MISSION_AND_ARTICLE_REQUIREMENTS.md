@@ -1,6 +1,6 @@
 # Gen6 G0 mission and first-article requirements, revision 2
 
-**Status:** user-selected service case with surrogate engineering inputs, 12 October 2026. **Gate G0 remains open.** This document directs the next calculations and first laboratory article. It is not a customer specification, selected architecture, provider interface, hardware performance claim, or authorization to build or launch. [P130](../validation/P130_gen6_matched_campaign.md) is the current matched four-release construction; [P129](../validation/P129_gen6_mixed_mission.md) preserves the earlier unoptimized policies. [Public reference audit](GEN6_GO1_PUBLIC_REFERENCE_AUDIT.md). [P128](../validation/P128_gen6_g0_reference.md) remains a different four-identical-3U one-event screen.
+**Status:** defined service case with surrogate engineering inputs, 12 October 2026. **Gate G0 remains open.** This document directs the next calculations and first laboratory article. It is not a customer specification, selected architecture, provider interface, hardware performance claim, or authorization to build or launch. [P130](../validation/P130_gen6_matched_campaign.md) is the current matched four-release construction; [P129](../validation/P129_gen6_mixed_mission.md) preserves the earlier unoptimized policies. [Public reference audit](GEN6_GO1_PUBLIC_REFERENCE_AUDIT.md). [P128](../validation/P128_gen6_g0_reference.md) remains a different four-identical-3U one-event screen.
 
 ## Intended service and reference case
 

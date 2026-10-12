@@ -1,6 +1,6 @@
 # P129 — Gen6 mixed-size full-state mission screen
 
-**Status:** user-selected service architecture with surrogate numeric inputs; ballistic requirements screen, not a solved customer mission or achieved VOLLEY release capability.
+**Status:** defined service architecture with surrogate numeric inputs; ballistic requirements screen, not a solved customer mission or achieved VOLLEY release capability.
 
 The selected service is two ordinary passive 1U and two ordinary passive 3U spacecraft from a rideshare/OTV host, released within one orbit. Each should reach a distinct **position and velocity at one common epoch**, 24 hours after the last release. The target pattern varies both initial orbit energy and resulting along-track position while remaining in one plane. The buyer is hypothesized to be the host operator; no customer or provider has approved the case.
 
