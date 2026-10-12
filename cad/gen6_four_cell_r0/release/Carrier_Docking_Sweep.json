@@ -1,0 +1,18 @@
+{
+  "status": "NOMINAL_UNLOADED_CARRIER_DOCKING_SCREEN",
+  "source": "00_stowed.FCStd",
+  "source_sha256": "f799107cadbd8b5b74650a7961d1fb42e33cacc10c8271ddd2ac3d8e9b78249c",
+  "station_count": 191,
+  "travel_mm": 950.0,
+  "maximum_step_mm": 5,
+  "intersections": [],
+  "unverified": [
+    "loaded carrier travel",
+    "motored positioning repeatability",
+    "brake return and homing",
+    "hard stops and locks",
+    "tolerances/deflection",
+    "guide/bridge transition",
+    "safe state"
+  ]
+}

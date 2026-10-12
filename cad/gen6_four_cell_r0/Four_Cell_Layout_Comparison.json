@@ -1,0 +1,41 @@
+{
+  "status": "NOMINAL_PACKAGING_COMPARISON_NOT_ARCHITECTURE_SELECTION",
+  "same_boundaries": [
+    "1800 mm rail",
+    "x=1450 mm modeled brake start",
+    "two 3U and two 1U passive boxes",
+    "two fixed cassette sides"
+  ],
+  "variants": [
+    {
+      "layout": "staggered",
+      "cell_group_x_min_mm": 170.0,
+      "cell_group_x_max_mm": 1233.5,
+      "shortest_drive_travel_mm": 330.0,
+      "greatest_ideal_mean_g_for_6_m_s": 5.562,
+      "lateral_span_mm": 560,
+      "nominal_states": 13,
+      "verified_step_states": 13
+    },
+    {
+      "layout": "paired",
+      "cell_group_x_min_mm": 170.0,
+      "cell_group_x_max_mm": 663.5,
+      "shortest_drive_travel_mm": 900.0,
+      "greatest_ideal_mean_g_for_6_m_s": 2.039,
+      "lateral_span_mm": 560,
+      "nominal_states": 13,
+      "verified_step_states": 13
+    }
+  ],
+  "remaining": [
+    "host accommodation",
+    "independent payload restraints",
+    "cell-select/shot carrier positioning",
+    "bridge/guide sequencing",
+    "actuator and energy source",
+    "loads and tolerances",
+    "installed mass/CG/inertia",
+    "common-fault analysis and physical reliability"
+  ]
+}

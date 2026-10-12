@@ -1,0 +1,41 @@
+{
+  "status": "FOUR_NOMINAL_STATES_PASS_STEP_READBACK_ONLY",
+  "method": "FreeCAD 1.0 STEP readback and exact pairwise solid common-volume check",
+  "states": [
+    {
+      "step": "Gen6_Integrated_R1_00_stowed.step",
+      "sha256": "c37bc60df7cbc69b223754d1f9af76373092508e9170b221bd2dfc9f53b7b8d6",
+      "solid_count": 27,
+      "shape_valid": true,
+      "solid_intersections": []
+    },
+    {
+      "step": "Gen6_Integrated_R1_01_transfer_armed.step",
+      "sha256": "f1c41a55d86b9b2ca10018aab07f2bd7d83f06f1f5a4520313b3bdcebe763527",
+      "solid_count": 27,
+      "shape_valid": true,
+      "solid_intersections": []
+    },
+    {
+      "step": "Gen6_Integrated_R1_02_mid_transfer.step",
+      "sha256": "52d536ce0ede6bbf693368ad61e1dcf984bf247a7478379494b3f84b47ac15c9",
+      "solid_count": 27,
+      "shape_valid": true,
+      "solid_intersections": []
+    },
+    {
+      "step": "Gen6_Integrated_R1_03_seated.step",
+      "sha256": "6a13ff381d34b7f35a9dbcde31b014bae2cb398d21102cde181f25af7bf08ffc",
+      "solid_count": 27,
+      "shape_valid": true,
+      "solid_intersections": []
+    }
+  ],
+  "not_verified": [
+    "motion between states",
+    "manufacturing tolerances",
+    "contact loads",
+    "launch restraint",
+    "four-cell layout"
+  ]
+}

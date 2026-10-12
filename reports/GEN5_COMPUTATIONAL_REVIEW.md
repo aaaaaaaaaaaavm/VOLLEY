@@ -2,18 +2,18 @@
 title: "VOLLEY Gen5 — computational evidence review"
 subtitle: "Fixed academic configuration and negative design findings"
 author: "VOLLEY engineering record"
-date: "9 October 2026"
+date: "12 October 2026"
 header-includes:
   - \usepackage{graphicx}
 ---
 
 # Abstract
 
-Gen5 is a computational study of a sequential electromagnetic deployer for twelve 3U CubeSats. Its historical periodic-force model gives 16.029 m/s and 10.068 g, but a finite-array calculation challenges that speed; no current motor rating is selected. This report gathers the electromagnetic, power, dynamics, orbit, mass, CAD and mission evidence into a claim-by-claim review. It records decisive failures: 10.547 kg of modeled deployer per 3U customer fails two mass comparisons; a side-fed CAD reference arrangement has an 11 mm width shortfall and exact-solid interference; and no sampled twelve-shot option closes. An independent 2-D finite-element solve confirms the finite-stator trend; a separate depth-resolved 3-D numerical formulation reproduces 1.042 kJ ideal work under shared assumptions. Circuit and selected-hardware effects remain open. The immediate two-body orbit change has a Cartesian check for an assumed historical 16.029 m/s release; the 1.60 lifetime multiplier has no independent rerun at that input. **VOLLEY itself has no built, fired, measured, qualified or flown hardware**.
+Gen5 is a computational study of a sequential electromagnetic deployer for twelve 3U CubeSats. Its historical periodic-force model gives 16.029 m/s and 10.068 g, but a finite-array calculation challenges that speed; no current motor rating is selected. This report gathers the electromagnetic, power, dynamics, orbit, mass, CAD and mission evidence into a claim-by-claim review. It records decisive failures: 10.547 kg of modeled deployer per 3U customer fails two mass comparisons; a side-fed CAD reference has an 11 mm width shortfall and 17 intersecting leaf-solid pairs, including sled/track and sled/stator; no sampled twelve-shot option closes. An independent 2-D finite-element solve confirms the finite-stator trend; a separate depth-resolved 3-D numerical formulation reproduces 1.042 kJ ideal work under shared assumptions. Circuit and selected-hardware effects remain open. The immediate two-body orbit change has a Cartesian check for an assumed historical 16.029 m/s release; the 1.60 lifetime multiplier has no independent rerun at that input. **VOLLEY itself has no built, fired, measured, qualified or flown hardware**.
 
 # 1. Configuration and evidence classes
 
-**New finite-geometry disposition.** The historical 16.029 m/s rating in the table below assumes periodic force over the 1.3 m powered stroke. A [finite-array/stator 3-D analytic integration](../validation/P118_gen5_finite_force_map.md) gives 1.042 kJ ideal work and a 12.448 m/s geometry-only speed under optimal phase with circuit losses omitted. The modeled magnet array has no direct stator overlap after 1.066 m travel. This challenges the rated performance claim and is not an independent FEM or hardware validation. The [unselected R1 FreeCAD feeder candidate](../cad/FEEDER_CANDIDATE_R1.pdf) clears twelve scripted envelope routes in a widened 570 mm enclosure, but no actuator, restraint or revised installed-system budgets exist. A [matched reference mission](../docs/MATCHED_MISSION_REFERENCE.md) includes dispenser mass and host recoil; no sampled twelve-shot option closes. These findings have not been rolled into the original rated shot, mass or lifetime models.
+**New finite-geometry disposition.** The historical 16.029 m/s rating in the table below assumes periodic force over the 1.3 m powered stroke. A [finite-array/stator 3-D analytic integration](../validation/P118_gen5_finite_force_map.md) gives 1.042 kJ ideal work and a 12.448 m/s geometry-only speed under optimal phase with circuit losses omitted. The modeled magnet array has no direct stator overlap after 1.066 m travel. This challenges the rated performance claim and is not an independent FEM or hardware validation. The [unselected R1 FreeCAD feeder candidate](../cad/FEEDER_CANDIDATE_R1.pdf) clears twelve scripted envelope routes in a widened 570 mm enclosure, but an [all-leaf audit](../cad/GEN5_FULL_INTERFERENCE_AUDIT_2026_10_12.md) retains five other intersecting pairs, including sled/track and sled/stator. No actuator, restraint or revised installed-system budgets exist. A [matched reference mission](../docs/MATCHED_MISSION_REFERENCE.md) includes dispenser mass and host recoil; no sampled twelve-shot option closes. These findings have not been rolled into the original rated shot, mass or lifetime models.
 
 ![STEP-derived Gen5 reference assembly, enclosure hidden; reference placement has a known track/cassette clash.](../cad/renders/step_review/gen5_reference_open.jpg){width=95%}
 
@@ -53,7 +53,7 @@ This report distinguishes **model output**, **independent numerical cross-check*
 | Peak acceleration | 10.068 g | Payload load not qualified |
 | Gross / net electrical draw | 2782.391 / 2735.3 J | Coupled circuit/dynamics model |
 | Net electrical-to-payload efficiency | 18.79% | Modeled recovery and losses |
-| Closed-loop exit-speed dispersion | 0.0274 m/s, 3σ | Simulated sensor/uncertainty assumptions |
+| Closed-loop exit-speed dispersion | 0.0274 m/s, $3\sigma$ | Simulated sensor/uncertainty assumptions |
 | Modeled dry / loaded mass | 126.6 / 174.6 kg | Assumed and geometry-derived lines mixed |
 
 The shot trace below comes from `analysis/motor_model.py` and the checked-in model result. It is not an oscilloscope capture. The field plot is from the declared analytical field builder; P121 separately checks the ideal full-depth force integral under shared linear magnetic assumptions. Hot winding resistance, inverter switching, full bank supplier data and protection remain unresolved.

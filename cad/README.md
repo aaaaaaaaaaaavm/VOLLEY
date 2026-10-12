@@ -7,7 +7,7 @@
 > [configuration hashes](../docs/GEN5_CONFIGURATION_INDEX.json) and
 > [freeze-readiness matrix](../docs/GEN5_FREEZE_READINESS.md). The Gen3 Fusion files below
 > are historical source geometry used in some mass/FEA records; their age and role must
-> accompany any citation. The reference assembly has a [measured side-fed clash](../validation/P116_gen5_assembly_packaging.md): 11 mm width shortfall and track/cassette intersection. It is a controlled review artifact, not an approved integrated design, manufacturing drawing or physical fit test.
+> accompany any citation. The reference assembly has an 11 mm side-fed width shortfall and [17 intersecting leaf-solid pairs](GEN5_FULL_INTERFERENCE_AUDIT_2026_10_12.md), including cassette/track, sled/track and sled/stator. It is a controlled review artifact, not an approved integrated design, manufacturing drawing or physical fit test.
 >
 > The 9.445 kg modeled sled value was adopted from Gen3 solid volumes and tested with
 > the A4 CalculiX chassis idealization. It is carried into Gen5; the Gen5 STEP build
@@ -19,7 +19,9 @@
 
 **New visual review set:** [six labeled STEP-derived Blender JPEGs and source hashes](renders/step_review/README.md) show the reference assembly open, closed and from above, a cropped drive detail, and the separate R1 candidate. The image pipeline reopens each source STEP in FreeCAD and checks its placed bounds and volume against the native review document before rendering. The views describe geometry only; a rendered surface is not a physical or manufacturing validation.
 
-**Unselected R1 feeder geometry:** [review report](FEEDER_CANDIDATE_R1.pdf), [native FreeCAD document](native/Feeder_Candidate_R1.FCStd), [part and assembly STEP](step/feeder_candidate_r1/) and [exact-solid collision ledger](FEEDER_CANDIDATE_R1.json). A 570 mm enclosure clears the scripted 3U envelope routes, but the actual lift, restraint, fault recovery and changed installed mass are not designed. R1 is a separate candidate, not a revision of the evaluated Gen5 configuration.
+**Unselected R1 feeder geometry:** [review report](FEEDER_CANDIDATE_R1.pdf), [native FreeCAD document](native/Feeder_Candidate_R1.FCStd), [part and assembly STEP](step/feeder_candidate_r1/) and [exact-solid collision ledger](FEEDER_CANDIDATE_R1.json). A 570 mm enclosure clears the original cassette/track overlap and scripted 3U envelope routes, but a whole-assembly audit retains **five** intersecting pairs, including sled/track and sled/stator. The actual lift, restraint, fault recovery and changed installed mass are not designed. R1 is a separate candidate, not a revision of the evaluated Gen5 configuration.
+
+**Separate Gen6 integration screen:** [CAD issue and correction record](GEN6_INTEGRATION_AUDIT_2026_10_12.md) · [one-cell R2 FCStd and STEP states](gen6_integration_r2/README.md) · [staggered and paired four-cell 1U/3U FCStd and STEP states](gen6_four_cell_r0/README.md) · [weighted seven-concept feeder screen](gen6_feeder/WEIGHTED_TRADE_SCREEN_2026_10_12.md). Both four-cell envelopes clear sampled nominal intersections. Pairing cells upstream avoids the staggered 330 mm drive path, but positive restraint, carrier docking, host fit and full swept/tolerance checks remain open.
 
 > ## historical study is here too, and it is a different machine
 >

@@ -1,0 +1,80 @@
+{
+  "status": "UNSELECTED_NOMINAL_ONE_CELL_INTEGRATION_SCREEN_R2",
+  "freecad_version": "1.0.0",
+  "source_sha256": "ee21ebc8310fd9df5d6de2106f5e01283da010227662dc5e9c58414aabab4633",
+  "first_article_native_sha256": "6fd240542129a6531dc1a4e14db5704ac3090a899bb5f296f9750fffb325befc",
+  "feeder_parameters_sha256": "864a231ef814cf29cbb405c376d843a9b2c68d4da2c513e3c2acdd96706b583b",
+  "corrections": [
+    "split and lift 340.5 mm of left guide during transfer",
+    "extend support bridge to left lip only while guide is raised; retract before guide closes",
+    "shorten cassette end stops outside carrier path",
+    "use one payload/cradle/guide set in combined assembly"
+  ],
+  "states": [
+    {
+      "state": "00_stowed",
+      "part_count": 27,
+      "overlaps": [],
+      "sampled_transfer_sweep": null,
+      "source_total_volume_mm3": 9265600.0,
+      "step_readback_volume_mm3": 9265600.0,
+      "native": "Gen6_Integrated_R2_00_stowed.FCStd",
+      "native_sha256": "dda42fc525a221794db4a09755f58d6fee4cf5675516e15a7d859f07ea763914",
+      "step": "Gen6_Integrated_R2_00_stowed.step",
+      "step_sha256": "c3bbe6ab02a490eff1e37c91388fb30cab28510a0a485c3cca4378922860623a"
+    },
+    {
+      "state": "01_transfer_armed",
+      "part_count": 27,
+      "overlaps": [],
+      "sampled_transfer_sweep": {
+        "stations": 81,
+        "increment_mm": 2.5,
+        "maximum_intersection_mm3": 0.0,
+        "continuous_sweep_or_tolerance_proven": false
+      },
+      "source_total_volume_mm3": 9299650.0,
+      "step_readback_volume_mm3": 9299650.0,
+      "native": "Gen6_Integrated_R2_01_transfer_armed.FCStd",
+      "native_sha256": "47d6309eed25eb828a3a9f37e9b890fd4708b92a365906e3360accfa59fd944f",
+      "step": "Gen6_Integrated_R2_01_transfer_armed.step",
+      "step_sha256": "9e61481d69e6d90ac4612ebd6e75c5ef3ac91e4b1397415b09c80dcc668d4fb9"
+    },
+    {
+      "state": "02_mid_transfer",
+      "part_count": 27,
+      "overlaps": [],
+      "sampled_transfer_sweep": null,
+      "source_total_volume_mm3": 9299650.0,
+      "step_readback_volume_mm3": 9299650.000000004,
+      "native": "Gen6_Integrated_R2_02_mid_transfer.FCStd",
+      "native_sha256": "afb0e84b1382daa1c7e5036c03774b375a5aa790b57db2adaac90459f5135cb4",
+      "step": "Gen6_Integrated_R2_02_mid_transfer.step",
+      "step_sha256": "44a3b54997b7fe6b507c01d597e6f476cdc9cdaeedc8902dc2c01ade45f63270"
+    },
+    {
+      "state": "03_seated",
+      "part_count": 27,
+      "overlaps": [],
+      "sampled_transfer_sweep": null,
+      "source_total_volume_mm3": 9265600.0,
+      "step_readback_volume_mm3": 9265600.0,
+      "native": "Gen6_Integrated_R2_03_seated.FCStd",
+      "native_sha256": "1babbab852c5e1270cb52760967ae6805033f4aab172e5412690e4afac3037f6",
+      "step": "Gen6_Integrated_R2_03_seated.step",
+      "step_sha256": "7ea6df03231b2c1dc52e6d951dffe2a696518ce82fd2705b60d88eb1361461d6"
+    }
+  ],
+  "open": [
+    "full four-cell 1U/3U layout",
+    "mechanical launch restraints",
+    "positive mid-transfer containment",
+    "extension and guide sequencing and contact/deflection",
+    "actuators and guide alignment",
+    "manufacturing tolerances",
+    "continuous swept solids",
+    "loads, thermal, wear and faults",
+    "mass/CG/inertia reconciliation",
+    "host mounting and provider ICD"
+  ]
+}

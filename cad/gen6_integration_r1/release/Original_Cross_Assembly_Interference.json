@@ -1,0 +1,278 @@
+{
+  "status": "ORIGINAL_SEPARATE_STUDIES_NOT_AN_INTEGRATED_ASSEMBLY",
+  "method": "FreeCAD 1.0 exact Part B-rep intersections of all Part::Box pairs",
+  "input_files": {
+    "feeder_armed": "gen6_feeder/release/Gen6_Feed_01_transfer_armed.FCStd",
+    "feeder_mid": "gen6_feeder/release/Gen6_Feed_02_mid_transfer.FCStd",
+    "feeder_seated": "gen6_feeder/release/Gen6_Feed_03_seated.FCStd",
+    "article_A": "gen6_first_article/release/Gen6_G1_A_Envelope.FCStd",
+    "article_B": "gen6_first_article/release/Gen6_G1_B_Envelope.FCStd"
+  },
+  "part_counts": {
+    "feeder_armed": 11,
+    "feeder_mid": 11,
+    "feeder_seated": 11,
+    "article_A": 18,
+    "article_B": 18
+  },
+  "cross_intersections": {
+    "feeder_armed__article_A": [
+      {
+        "feeder": "Cradle_Right_Guide",
+        "article": "Guide_Right",
+        "intersection_mm3": 37455.0
+      },
+      {
+        "feeder": "Transfer_Bridge",
+        "article": "Guide_Left",
+        "intersection_mm3": 34050.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Left",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Right",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Carrier_Pusher_Face",
+        "intersection_mm3": 1800.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      },
+      {
+        "feeder": "End_Stop_Aft",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      }
+    ],
+    "feeder_armed__article_B": [
+      {
+        "feeder": "Cradle_Right_Guide",
+        "article": "Guide_Right",
+        "intersection_mm3": 37455.0
+      },
+      {
+        "feeder": "Transfer_Bridge",
+        "article": "Guide_Left",
+        "intersection_mm3": 34050.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Left",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Right",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Carrier_Pusher_Face",
+        "intersection_mm3": 1800.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      },
+      {
+        "feeder": "End_Stop_Aft",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      }
+    ],
+    "feeder_mid__article_A": [
+      {
+        "feeder": "Passive_3U_Box",
+        "article": "Guide_Left",
+        "intersection_mm3": 74910.0
+      },
+      {
+        "feeder": "Cradle_Right_Guide",
+        "article": "Guide_Right",
+        "intersection_mm3": 37455.0
+      },
+      {
+        "feeder": "Transfer_Bridge",
+        "article": "Guide_Left",
+        "intersection_mm3": 34050.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Left",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Right",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Carrier_Pusher_Face",
+        "intersection_mm3": 1800.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      },
+      {
+        "feeder": "End_Stop_Aft",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      }
+    ],
+    "feeder_mid__article_B": [
+      {
+        "feeder": "Passive_3U_Box",
+        "article": "Guide_Left",
+        "intersection_mm3": 74910.0
+      },
+      {
+        "feeder": "Cradle_Right_Guide",
+        "article": "Guide_Right",
+        "intersection_mm3": 37455.0
+      },
+      {
+        "feeder": "Transfer_Bridge",
+        "article": "Guide_Left",
+        "intersection_mm3": 34050.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Left",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Right",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Carrier_Pusher_Face",
+        "intersection_mm3": 1800.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      },
+      {
+        "feeder": "End_Stop_Aft",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      }
+    ],
+    "feeder_seated__article_A": [
+      {
+        "feeder": "Passive_3U_Box",
+        "article": "Passive_3U_Dummy_Envelope",
+        "intersection_mm3": 3405000.0
+      },
+      {
+        "feeder": "Cradle_Right_Guide",
+        "article": "Guide_Right",
+        "intersection_mm3": 37455.0
+      },
+      {
+        "feeder": "Cradle_Left_Guide",
+        "article": "Guide_Left",
+        "intersection_mm3": 37455.0
+      },
+      {
+        "feeder": "Transfer_Bridge",
+        "article": "Guide_Left",
+        "intersection_mm3": 34050.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Left",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Right",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Carrier_Pusher_Face",
+        "intersection_mm3": 1800.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      },
+      {
+        "feeder": "End_Stop_Aft",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      }
+    ],
+    "feeder_seated__article_B": [
+      {
+        "feeder": "Passive_3U_Box",
+        "article": "Passive_3U_Dummy_Envelope",
+        "intersection_mm3": 3405000.0
+      },
+      {
+        "feeder": "Cradle_Right_Guide",
+        "article": "Guide_Right",
+        "intersection_mm3": 37455.0
+      },
+      {
+        "feeder": "Cradle_Left_Guide",
+        "article": "Guide_Left",
+        "intersection_mm3": 37455.0
+      },
+      {
+        "feeder": "Transfer_Bridge",
+        "article": "Guide_Left",
+        "intersection_mm3": 34050.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Left",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "Cradle_Floor",
+        "article": "Support_Lip_Right",
+        "intersection_mm3": 27240.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Carrier_Pusher_Face",
+        "intersection_mm3": 1800.0
+      },
+      {
+        "feeder": "End_Stop_Front",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      },
+      {
+        "feeder": "End_Stop_Aft",
+        "article": "Guide_Left",
+        "intersection_mm3": 1100.0
+      }
+    ]
+  },
+  "interpretation": [
+    "The duplicate seated 3U boxes represent one intended spacecraft and are not two real parts.",
+    "Some lip/cradle and guide pairs represent alternative proxies for one intended part.",
+    "Bridge/guide, mid-transfer payload/guide and end-stop/carrier intersections show that the independently passing studies cannot be combined unchanged.",
+    "Zero-volume face contact, moving loads, tolerances, deformations and actual host mounts are outside this screen."
+  ]
+}

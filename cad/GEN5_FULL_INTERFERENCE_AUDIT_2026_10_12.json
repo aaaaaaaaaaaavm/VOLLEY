@@ -1,0 +1,132 @@
+{
+  "method": "FreeCAD 1.0 exact Part B-rep common-volume for every named leaf-solid pair",
+  "classification_note": "A nonzero intersection is a geometric conflict or proxy overlap, not by itself a load/flight failure. Every pair needs contact and part-definition disposition.",
+  "models": {
+    "evaluated_gen5": {
+      "source": "native/Gen5_Review.FCStd",
+      "source_sha256": "301a360c51738bd2eaa1247f0d29876e89dffa6470de8fb7a6830c9a4d595403",
+      "leaf_solid_count": 20,
+      "nonzero_pair_count": 17,
+      "intersections": [
+        {
+          "part_a": "Track",
+          "part_b": "Sled",
+          "intersection_mm3": 82982.934
+        },
+        {
+          "part_a": "Interface_ESPA",
+          "part_b": "Track",
+          "intersection_mm3": 70425.0
+        },
+        {
+          "part_a": "Track",
+          "part_b": "Magazine_S",
+          "intersection_mm3": 32915.0
+        },
+        {
+          "part_a": "Track",
+          "part_b": "Magazine_P",
+          "intersection_mm3": 32915.0
+        },
+        {
+          "part_a": "Interface_ESPA",
+          "part_b": "Stator",
+          "intersection_mm3": 12600.0
+        },
+        {
+          "part_a": "Interface_ESPA",
+          "part_b": "Enclosure",
+          "intersection_mm3": 10228.546
+        },
+        {
+          "part_a": "Stator",
+          "part_b": "Sled",
+          "intersection_mm3": 6300.0
+        },
+        {
+          "part_a": "Magazine_S",
+          "part_b": "Payload_S03",
+          "intersection_mm3": 6193.785
+        },
+        {
+          "part_a": "Magazine_P",
+          "part_b": "Payload_P03",
+          "intersection_mm3": 6193.785
+        },
+        {
+          "part_a": "Magazine_S",
+          "part_b": "Payload_S04",
+          "intersection_mm3": 5940.457
+        },
+        {
+          "part_a": "Magazine_P",
+          "part_b": "Payload_P04",
+          "intersection_mm3": 5940.457
+        },
+        {
+          "part_a": "Magazine_S",
+          "part_b": "Payload_S02",
+          "intersection_mm3": 5703.5
+        },
+        {
+          "part_a": "Magazine_S",
+          "part_b": "Payload_S05",
+          "intersection_mm3": 5703.5
+        },
+        {
+          "part_a": "Magazine_S",
+          "part_b": "Payload_S06",
+          "intersection_mm3": 5703.5
+        },
+        {
+          "part_a": "Magazine_P",
+          "part_b": "Payload_P02",
+          "intersection_mm3": 5703.5
+        },
+        {
+          "part_a": "Magazine_P",
+          "part_b": "Payload_P05",
+          "intersection_mm3": 5703.5
+        },
+        {
+          "part_a": "Magazine_P",
+          "part_b": "Payload_P06",
+          "intersection_mm3": 5703.5
+        }
+      ]
+    },
+    "unselected_wide_r1": {
+      "source": "native/Feeder_Candidate_R1.FCStd",
+      "source_sha256": "97b95fe8c291771786c4af90a2038365dbc59182fbdd856fc4be684856f782b5",
+      "leaf_solid_count": 21,
+      "nonzero_pair_count": 5,
+      "intersections": [
+        {
+          "part_a": "Track",
+          "part_b": "Sled",
+          "intersection_mm3": 82982.934
+        },
+        {
+          "part_a": "Interface_ESPA",
+          "part_b": "Track",
+          "intersection_mm3": 70425.0
+        },
+        {
+          "part_a": "Interface_ESPA",
+          "part_b": "Stator",
+          "intersection_mm3": 12600.0
+        },
+        {
+          "part_a": "Interface_ESPA",
+          "part_b": "Wide_Enclosure_R1",
+          "intersection_mm3": 10228.546
+        },
+        {
+          "part_a": "Stator",
+          "part_b": "Sled",
+          "intersection_mm3": 6300.0
+        }
+      ]
+    }
+  }
+}

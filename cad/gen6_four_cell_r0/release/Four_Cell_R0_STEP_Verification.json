@@ -1,0 +1,103 @@
+{
+  "status": "NOMINAL_STEP_READBACK_ONLY",
+  "states": [
+    {
+      "step": "00_stowed.step",
+      "sha256": "d953c5a16317cb101375c8c8bffdf35a37c65a091888659629e28494b5863ccf",
+      "solids": 54,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "A_3U_armed.step",
+      "sha256": "339bdaf1738a2fdd9a27d660ca492d076606e84414a16329970f70f2e1ff408d",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "A_3U_mid.step",
+      "sha256": "9c36357c0a87878a07539f078a6fec318320b89cc277d7cdd288d2e124f6c100",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "A_3U_seated.step",
+      "sha256": "162f5070e1f63dd4d461307ab80e1816a7c6374aa0dd2e020875b6366afcd50d",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "B_3U_armed.step",
+      "sha256": "702e97bee22ec1d05e8683337b2c9a08e366960a8ac0d7e8ac88a39581d9a7e4",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "B_3U_mid.step",
+      "sha256": "6cdddf684c99da8e744c65ab36b74219487b113fb64dd28e0923ad307705b881",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "B_3U_seated.step",
+      "sha256": "78e91b9bd65ffd46d88d24cc9c4e6814fa73dc3edf773b4659486334092903c8",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "C_1U_armed.step",
+      "sha256": "8a522f3c31ed20a5eafe7faa758d64652e27e5bbe631951d768783a858773154",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "C_1U_mid.step",
+      "sha256": "7dbde214e5613b7c3b95fa3afa9a21ff3ad2832a4ba8b9934f6cefc7dfb018b4",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "C_1U_seated.step",
+      "sha256": "72b6d346b138c2200c968c6f4534f35070af3c92a4f1e8a7b0ffe26ec9c84884",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "D_1U_armed.step",
+      "sha256": "f5b78a6e7e13d8994106deff374ccfc1ab3370ade8e25f999e595cde3162f0b3",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "D_1U_mid.step",
+      "sha256": "766f5a6621bfcd20fdc4baf425ca3e640c3fc0f1c29c3352069921d81eea269c",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    },
+    {
+      "step": "D_1U_seated.step",
+      "sha256": "2ae011d7f3b38dbd8906dcf63047862e71c169cf361f6c74bbbee3496ee63172",
+      "solids": 57,
+      "shape_valid": true,
+      "overlaps": []
+    }
+  ],
+  "exclusions": [
+    "continuous swept motion",
+    "manufacturing tolerance",
+    "contact/load",
+    "bridge/guide sequencing",
+    "flight interface"
+  ]
+}

@@ -1,4 +1,4 @@
-# Gen6 G0 mission and first-article requirements, revision 2
+# Gen6 G0 mission and first-article requirements, revision 3
 
 **Status:** defined service case with surrogate engineering inputs, 12 October 2026. **Gate G0 remains open.** This document directs the next calculations and first laboratory article. It is not a customer specification, selected architecture, provider interface, hardware performance claim, or authorization to build or launch. [P130](../validation/P130_gen6_matched_campaign.md) is the current matched four-release construction; [P129](../validation/P129_gen6_mixed_mission.md) preserves the earlier unoptimized policies. [Public reference audit](GEN6_GO1_PUBLIC_REFERENCE_AUDIT.md). [P128](../validation/P128_gen6_g0_reference.md) remains a different four-identical-3U one-event screen.
 
@@ -37,3 +37,21 @@ P130 applies the same target states and ideal host-burn schedule to a commanded 
 The [prototype-to-flight roadmap](GEN6_PROTOTYPE_TO_FLIGHT_ROADMAP.md) controls later Gen7 engineering, Gen8 qualification and Gen9 flight decisions. Provider approval, physical qualification, launch authorization and customer demand require outside evidence.
 
 ![P130 matched four-release mass and fuel proxy](../figures/gen6_matched_campaign.svg)
+
+## Controlled study choices, 12 October 2026 (D01–D27)
+
+The controlled choices below fix the **analysis boundary**, not the completion status of hardware, mission or academic gates. The Gen5 academic configuration remains the evaluated negative computational study (D01–D02); the Gen6 feeder and service comparison are a separately versioned future-work chapter (D03, D21). The companion paper remains IEEE-formatted and unsubmitted (D20).
+
+| Decision | Study basis | Evidence still required before a positive engineering claim |
+|:--|:--|:--|
+| D04, D09, D22 | Passive 1U/3U envelope, named public form-factor exemplars, dedicated independently restrained cells and passive inserts; nominal mission masses 1.33/4 kg with a sourced upper envelope study | Actual payload ICD, approved contact faces, mass and load maxima, insert geometry and four-cell fit |
+| D05–D08 | Generic maneuvering OTV deck, vehicle-agnostic 500 km SSO, provisional parametric adapter and two-sided/staggered fixed-cassette packaging | Host accommodation, bolt/load interface, launch vehicle constraints, full swept layout and provider approval |
+| D10, D27 | Feeder criteria weighted fault safety 35%, fit/mass 25%, positioning 20%, cycle/power 10%, manufacture 10%; downselect only after comparable CAD/STEP, loads, motion, mass and failure checks | The [current seven-concept ordinal screen](../cad/gen6_feeder/WEIGHTED_TRADE_SCREEN_2026_10_12.md) has overlapping score intervals and zero physical selection gates passed; no feed mechanism selected |
+| D11, D25 | Power-off containment, shot inhibit and supervised recovery; each failed cell stays locked and other cells proceed only after independent safe-path verification | Positive restraint, barrier/lock hardware, sensor agreement and fault-injection evidence |
+| D12–D13 | Permanent-magnet carrier is an analysis lead; conductive plate remains a challenger. Proposed laboratory band 3–6 m/s, with 7–9 m/s surrogate mission requests explicitly outside it | Same-boundary sourceable drive/circuit/thermal comparison and instrumented shots |
+| D14–D15 | Full-state sensitivity at 1/10/30 km position and 0.01/0.1/1 m/s velocity; 5/10/25 g acceleration cases plus separate contact/shock variables | Customer acceptance tolerance/covariance, payload qualified loads and release-contact model |
+| D16–D18 | Local pulse store charged slowly from a parametric host DC bus; compare complete installed resources and customer value; host-assisted spring is a mandatory same-mission comparator | Rated components, complete BOM/power/thermal/attitude budgets, optimized mission and source-backed alternatives |
+| D23–D24 | 0/20/40/60 minute schedule is a reproducible reference; optimize four releases within one orbit. Fixed launch rail uses host slews for pointing | Finite-time slew/settle/charge/reset model, host control and propellant accounting |
+| D26 | Public-reference load, temperature, vacuum, vibration and EMC bands are provisional sensitivities | Applicable provider and payload documents, qualification and compliance evidence |
+
+The [Gen6 R2 one-cell CAD](../cad/gen6_integration_r2/README.md) removes a nominal bridge gap. The subsequent [four-cell R0 packaging study](../cad/gen6_four_cell_r0/README.md) compares staggered and paired placement of two 1U and two 3U proxies. Both variants have 13 nonintersecting nominal FreeCAD/STEP states; the staggered last cell has only 330 mm nominal drive travel, while paired sides give each cell at least 900 mm. Bridge sequencing, loaded contact, power-off restraint, carrier docking, host fit and the complete mixed-size feeder remain open. No result in this section revises the evaluated Gen5 geometry or establishes flight performance.

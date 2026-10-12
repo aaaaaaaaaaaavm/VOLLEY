@@ -10,7 +10,7 @@
 
 | Question | Result | Interpretation |
 |:--|--:|:--|
-| Reference side-fed CAD fit | **11 mm short**; 32,915 mm³ overlap per cassette | Failed exact-solid placement, not a tolerance-ready assembly |
+| Reference side-fed CAD fit | **11 mm short**; 32,915 mm³ overlap per cassette; 17 intersecting pairs overall | Failed exact-solid assembly, including sled/track and sled/stator, not a tolerance-ready design |
 | Modeled dry mass per carried 3U | **10.55 kg** | Fails the approximately 6 kg canister comparator and study's 2 kg/customer screen |
 | Finite-geometry force screen | **12.448 m/s** ideal-phase shot equivalent | Challenges historical 16.029 m/s periodic model; not a selected motor rating |
 | Independent 2-D finite-element screen | **1.082 kJ** ideal in-plane work | Numerical method check with stated limits, not physical validation |

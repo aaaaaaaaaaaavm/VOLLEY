@@ -56,3 +56,6 @@ validation/fem3d/*.pos
 validation/fem3d/diag_*.txt
 validation/fem3d/p[0-9].txt
 validation/cfd/field_cache.npz
+
+# FreeCAD autosave snapshots
+*.FCBak

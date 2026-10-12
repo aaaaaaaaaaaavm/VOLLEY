@@ -1,0 +1,133 @@
+{
+  "status": "ORDINAL_SCREEN_ONLY_NO_BASELINE_SELECTION",
+  "weights": {
+    "fault_safety": 0.35,
+    "fit_mass": 0.25,
+    "positioning": 0.2,
+    "cycle_power": 0.1,
+    "manufacturability": 0.1
+  },
+  "score_meaning": "1 = unfavorable, 5 = favorable engineering hypothesis",
+  "uncertainty": "Every unmeasured criterion varied by \u00b11 ordinal point, clipped to 1\u20135; not a statistical confidence interval",
+  "physical_selection_gates": [
+    "same-boundary four-cell 1U/3U CAD and STEP",
+    "full motion and loaded/tolerance sweep",
+    "positive power-off restraint and independent cell isolation",
+    "installed mass, CG, inertia, actuator and cycle power",
+    "launch/load, fault and recovery analysis"
+  ],
+  "results": [
+    {
+      "candidate": "Fixed-cell captive lead screw",
+      "nominal_ordinal_score_of_5": 3.65,
+      "one_point_interval_of_5": [
+        2.65,
+        4.65
+      ],
+      "physical_gates_passed": 0,
+      "scores": {
+        "fault_safety": 4.0,
+        "fit_mass": 3.0,
+        "positioning": 4.0,
+        "cycle_power": 3.0,
+        "manufacturability": 4.0
+      }
+    },
+    {
+      "candidate": "Fixed-cell spring follower and two gates",
+      "nominal_ordinal_score_of_5": 3.075,
+      "one_point_interval_of_5": [
+        2.075,
+        4.075
+      ],
+      "physical_gates_passed": 0,
+      "scores": {
+        "fault_safety": 2.5,
+        "fit_mass": 4.0,
+        "positioning": 2.5,
+        "cycle_power": 4.0,
+        "manufacturability": 3.0
+      }
+    },
+    {
+      "candidate": "Indexed rack and pawl",
+      "nominal_ordinal_score_of_5": 2.925,
+      "one_point_interval_of_5": [
+        1.925,
+        3.925
+      ],
+      "physical_gates_passed": 0,
+      "scores": {
+        "fault_safety": 2.5,
+        "fit_mass": 3.0,
+        "positioning": 3.5,
+        "cycle_power": 3.0,
+        "manufacturability": 3.0
+      }
+    },
+    {
+      "candidate": "Nested telescoping carriage",
+      "nominal_ordinal_score_of_5": 2.65,
+      "one_point_interval_of_5": [
+        1.65,
+        3.65
+      ],
+      "physical_gates_passed": 0,
+      "scores": {
+        "fault_safety": 2.0,
+        "fit_mass": 4.0,
+        "positioning": 2.5,
+        "cycle_power": 2.5,
+        "manufacturability": 2.0
+      }
+    },
+    {
+      "candidate": "Belt or cable shuttle",
+      "nominal_ordinal_score_of_5": 2.525,
+      "one_point_interval_of_5": [
+        1.7,
+        3.525
+      ],
+      "physical_gates_passed": 0,
+      "scores": {
+        "fault_safety": 1.5,
+        "fit_mass": 3.0,
+        "positioning": 3.0,
+        "cycle_power": 3.5,
+        "manufacturability": 3.0
+      }
+    },
+    {
+      "candidate": "Geneva indexed drum or tray",
+      "nominal_ordinal_score_of_5": 2.5,
+      "one_point_interval_of_5": [
+        1.5,
+        3.5
+      ],
+      "physical_gates_passed": 0,
+      "scores": {
+        "fault_safety": 2.0,
+        "fit_mass": 2.0,
+        "positioning": 4.0,
+        "cycle_power": 3.0,
+        "manufacturability": 2.0
+      }
+    },
+    {
+      "candidate": "Segmented pantograph",
+      "nominal_ordinal_score_of_5": 2.325,
+      "one_point_interval_of_5": [
+        1.5,
+        3.325
+      ],
+      "physical_gates_passed": 0,
+      "scores": {
+        "fault_safety": 1.5,
+        "fit_mass": 4.0,
+        "positioning": 2.0,
+        "cycle_power": 2.0,
+        "manufacturability": 2.0
+      }
+    }
+  ]
+}
