@@ -205,6 +205,17 @@ def figure(d: dict) -> str:
             '<text x="35" y="375" font-size="13">All results are ideal, input-dependent requirements screens; no selected Gen6 hardware or customer mission.</text></svg>\n')
 
 
+def same_result(a, b) -> bool:
+    """Allow last-bit libm differences while requiring the same model and keys."""
+    if isinstance(a, dict) and isinstance(b, dict):
+        return a.keys() == b.keys() and all(same_result(a[k], b[k]) for k in a)
+    if isinstance(a, list) and isinstance(b, list):
+        return len(a) == len(b) and all(same_result(x, y) for x, y in zip(a, b))
+    if isinstance(a, (int, float)) and not isinstance(a, bool) and isinstance(b, (int, float)) and not isinstance(b, bool):
+        return math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-10)
+    return type(a) is type(b) and a == b
+
+
 def main() -> None:
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check",action="store_true")
@@ -219,7 +230,9 @@ def main() -> None:
     prose=report(data)
     svg=figure(data)
     if args.check:
-        if not all(p.exists() and p.read_text()==content for p,content in ((OUT,result),(REPORT,prose),(FIG,svg))):
+        if not OUT.exists() or not same_result(data, json.loads(OUT.read_text())):
+            raise AssertionError("P128 committed numerical result is stale")
+        if not all(p.exists() and p.read_text()==content for p,content in ((REPORT,prose),(FIG,svg))):
             raise AssertionError("P128 committed artifacts are stale")
         print("P128 G0 reference: result, report and figure current")
     else:
