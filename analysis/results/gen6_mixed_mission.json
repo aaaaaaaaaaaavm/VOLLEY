@@ -1,0 +1,365 @@
+{
+  "evidence_class": "SURROGATE_BALLISTIC_SCREEN_NOT_MATCHED_OPTIMIZED_CAMPAIGN_OR_HARDWARE_RESULT",
+  "provenance": {
+    "source_sha256": "efe9b4cc9c6a1eb6fbf312c381490b7b933bc02178efe16b4891d038076362db"
+  },
+  "assumptions": {
+    "orbit_altitude_km": 500.0,
+    "sso_inclination_deg": 97.40180753799322,
+    "raan_deg": 0,
+    "circular_start": true,
+    "propagator": "Cartesian RK4 with central Earth and J2 only",
+    "integration_step_s": 10.0,
+    "target_epoch_s": 90000.0,
+    "release_times_s": [
+      0.0,
+      1200.0,
+      2400.0,
+      3600.0
+    ],
+    "host_dry_kg": 300.0,
+    "host_initial_fuel_kg": 10.0,
+    "host_isp_s": 220.0,
+    "volley_device_study_kg": 30.0,
+    "spring_device_class_kg": 16.0,
+    "spring_release_m_s": 2.5,
+    "target_definition": "Four independent inertial tangential 3/5/7/9 m/s impulses from unperturbed host at fixed times; all terminal states propagated to common epoch"
+  },
+  "reference_host_state_at_epoch_si": [
+    4551779.922118866,
+    745363.5379888056,
+    -5098736.539789951,
+    5705.664651257861,
+    -547.6217096573073,
+    5005.404863035645
+  ],
+  "reference_host_states_at_release_si": [
+    [
+      6878137.0,
+      0.0,
+      0.0,
+      0.0,
+      -980.7085691262156,
+      7549.173060771443
+    ],
+    [
+      1650755.882334076,
+      -860257.5877488656,
+      6615766.55848256,
+      -7387.309266252967,
+      -236.53348768306734,
+      1807.1354239372877
+    ],
+    [
+      -6082297.321334949,
+      -415272.3193439094,
+      3169717.597955912,
+      -3545.274310669945,
+      866.9739953822565,
+      -6686.792275055657
+    ],
+    [
+      -4552341.140950517,
+      660682.3459247549,
+      -5103808.064169706,
+      5704.039805402961,
+      653.924959358064,
+      -5002.089498240366
+    ]
+  ],
+  "targets": [
+    {
+      "name": "1U-A",
+      "payload_kg": 1.33,
+      "target_departure_inertial_increment_m_s": 3.0,
+      "release_time_s": 0.0,
+      "departure_state_si": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -981.0950497699622,
+        7552.148062067578
+      ],
+      "target_state_at_epoch_si": [
+        3910012.7744470164,
+        798880.3082350185,
+        -5600369.520407749,
+        6259.556423300031,
+        -446.9217613199396,
+        4304.724652270009
+      ],
+      "initial_axis_rise_km": 5.426460670442321,
+      "along_track_at_epoch_km": -814.9907900215231
+    },
+    {
+      "name": "3U-A",
+      "payload_kg": 4.0,
+      "target_departure_inertial_increment_m_s": 5.0,
+      "release_time_s": 1200.0,
+      "departure_state_si": [
+        1650755.882334076,
+        -860257.5877488656,
+        6615766.55848256,
+        -7392.16370934341,
+        -236.6889215918908,
+        1808.3229518660698
+      ],
+      "target_state_at_epoch_si": [
+        3473433.088294456,
+        828838.2751654135,
+        -5891729.405782504,
+        6559.041037522831,
+        -378.1550573350342,
+        3815.2235717239864
+      ],
+      "initial_axis_rise_km": 8.998793806469068,
+      "along_track_at_epoch_km": -1336.131099013399
+    },
+    {
+      "name": "1U-B",
+      "payload_kg": 1.33,
+      "target_departure_inertial_increment_m_s": 7.0,
+      "release_time_s": 2400.0,
+      "departure_state_si": [
+        -6082297.321334949,
+        -415272.3193439094,
+        3169717.597955912,
+        -3548.531982718568,
+        867.7706380970783,
+        -6692.936616615869
+      ],
+      "target_state_at_epoch_si": [
+        3052069.17999578,
+        851721.4061348964,
+        -6126360.515857461,
+        6811.112387472117,
+        -311.42017327251267,
+        3334.8238254756793
+      ],
+      "initial_axis_rise_km": 12.672334133127704,
+      "along_track_at_epoch_km": -1808.0398252323178
+    },
+    {
+      "name": "3U-B",
+      "payload_kg": 4.0,
+      "target_departure_inertial_increment_m_s": 9.0,
+      "release_time_s": 3600.0,
+      "departure_state_si": [
+        -4552341.140950517,
+        660682.3459247549,
+        -5103808.064169706,
+        5710.781495295519,
+        654.6978430404008,
+        -5008.00154257428
+      ],
+      "target_state_at_epoch_si": [
+        2612592.8251899714,
+        867566.3417966283,
+        -6309159.964268138,
+        7044.6486964711485,
+        -245.62585285145417,
+        2859.0130940972513
+      ],
+      "initial_axis_rise_km": 16.265877267597244,
+      "along_track_at_epoch_km": -2258.929623700862
+    }
+  ],
+  "cases": {
+    "volley_no_host_correction": {
+      "installed_device_study_kg": 30.0,
+      "fuel_remaining_kg": 10.0,
+      "total_host_burn_m_s": 0.0,
+      "shots": [
+        {
+          "name": "1U-A",
+          "release_time_s": 0.0,
+          "relative_release_m_s": 3.0114218647124495,
+          "local_host_burn_m_s": 0.0,
+          "fuel_used_kg": 0.0,
+          "departure_position_error_m": 0.0,
+          "departure_velocity_error_m_s": 0.0,
+          "terminal_error": {
+            "position_3d_km": 0.0,
+            "velocity_3d_m_s": 0.0
+          },
+          "terminal_state_si": [
+            3910012.7744470164,
+            798880.3082350185,
+            -5600369.520407749,
+            6259.556423300031,
+            -446.9217613199396,
+            4304.724652270009
+          ]
+        },
+        {
+          "name": "3U-A",
+          "release_time_s": 1200.0,
+          "relative_release_m_s": 5.05791561694611,
+          "local_host_burn_m_s": 0.0,
+          "fuel_used_kg": 0.0,
+          "departure_position_error_m": 15.72609163746838,
+          "departure_velocity_error_m_s": 0.0241006237484087,
+          "terminal_error": {
+            "position_3d_km": 3.1093653906815475,
+            "velocity_3d_m_s": 3.4123550176270254
+          },
+          "terminal_state_si": [
+            3476112.5490378686,
+            828682.7077451553,
+            -5890159.551637995,
+            6557.322261954535,
+            -378.56393654717306,
+            3818.1429543816785
+          ]
+        },
+        {
+          "name": "1U-B",
+          "release_time_s": 2400.0,
+          "relative_release_m_s": 7.027063953488372,
+          "local_host_burn_m_s": 0.0,
+          "fuel_used_kg": 0.0,
+          "departure_position_error_m": 136.6461119873388,
+          "departure_velocity_error_m_s": 0.20834714097975143,
+          "terminal_error": {
+            "position_3d_km": 18.61742704075835,
+            "velocity_3d_m_s": 20.412780143548986
+          },
+          "terminal_state_si": [
+            3068679.4751346703,
+            850932.8854959239,
+            -6117988.842176599,
+            6802.201395442604,
+            -313.9355895474714,
+            3353.0158153394214
+          ]
+        },
+        {
+          "name": "3U-B",
+          "release_time_s": 3600.0,
+          "relative_release_m_s": 9.105882352941176,
+          "local_host_burn_m_s": 0.0,
+          "fuel_used_kg": 0.0,
+          "departure_position_error_m": 546.711452643442,
+          "departure_velocity_error_m_s": 0.6492136293710721,
+          "terminal_error": {
+            "position_3d_km": 25.668525765602578,
+            "velocity_3d_m_s": 28.26485009678348
+          },
+          "terminal_state_si": [
+            2636237.0304679093,
+            866697.8481049,
+            -6299206.5482484205,
+            7034.100620334221,
+            -249.17897067907154,
+            2884.994148627549
+          ]
+        }
+      ]
+    },
+    "spring_ideal_local_host_burn": {
+      "installed_device_study_kg": 16.0,
+      "fuel_remaining_kg": 4.092681858671483,
+      "total_host_burn_m_s": 38.87289847761926,
+      "shots": [
+        {
+          "name": "1U-A",
+          "release_time_s": 0.0,
+          "relative_release_m_s": 2.5,
+          "local_host_burn_m_s": 0.5098787675954327,
+          "fuel_used_kg": 0.07955432077873867,
+          "departure_position_error_m": 0.0,
+          "departure_velocity_error_m_s": 0.0,
+          "terminal_error": {
+            "position_3d_km": 0.0,
+            "velocity_3d_m_s": 0.0
+          },
+          "terminal_state_si": [
+            3910012.7744470164,
+            798880.3082350185,
+            -5600369.520407749,
+            6259.556423300031,
+            -446.9217613199396,
+            4304.724652270009
+          ]
+        },
+        {
+          "name": "3U-A",
+          "release_time_s": 1200.0,
+          "relative_release_m_s": 2.5,
+          "local_host_burn_m_s": 2.970874559363294,
+          "fuel_used_kg": 0.4613296202965933,
+          "departure_position_error_m": 688.4146389358402,
+          "departure_velocity_error_m_s": 0.0,
+          "terminal_error": {
+            "position_3d_km": 202.69778175512195,
+            "velocity_3d_m_s": 223.1090513916671
+          },
+          "terminal_state_si": [
+            3297885.350673656,
+            838772.443283515,
+            -5992579.268690032,
+            6667.3114145910495,
+            -351.193856822182,
+            3622.018323531032
+          ]
+        },
+        {
+          "name": "1U-B",
+          "release_time_s": 2400.0,
+          "relative_release_m_s": 2.5,
+          "local_host_burn_m_s": 9.713993742407535,
+          "fuel_used_kg": 1.4860325908496004,
+          "departure_position_error_m": 4863.859603052971,
+          "departure_velocity_error_m_s": 0.0,
+          "terminal_error": {
+            "position_3d_km": 1322.5260416199255,
+            "velocity_3d_m_s": 1459.9877867604407
+          },
+          "terminal_state_si": [
+            1818896.578966205,
+            891465.3560414935,
+            -6602575.682855157,
+            7320.116835736734,
+            -126.7355775430875,
+            1978.958637030773
+          ]
+        },
+        {
+          "name": "3U-B",
+          "release_time_s": 3600.0,
+          "relative_release_m_s": 2.5,
+          "local_host_burn_m_s": 25.678151408252994,
+          "fuel_used_kg": 3.880401609403585,
+          "departure_position_error_m": 15560.01494765697,
+          "departure_velocity_error_m_s": 0.0,
+          "terminal_error": {
+            "position_3d_km": 3588.2963303670213,
+            "velocity_3d_m_s": 3959.9744460348847
+          },
+          "terminal_state_si": [
+            -946710.4210857304,
+            863416.4552308782,
+            -6764367.317040667,
+            7542.713301872608,
+            267.66597430775874,
+            -1035.837450181327
+          ]
+        }
+      ]
+    }
+  },
+  "exclusions": [
+    "target states are constructed surrogates, not customer-requested orbital slots",
+    "no optimized host guidance or correction burns to retarget later release positions",
+    "instantaneous burns/releases; no finite thrust, slew, duty cycle, collision or disposal",
+    "no drag, third bodies, gravity harmonics beyond J2, navigation covariance or tracking",
+    "device masses, 1U/3U payload masses, spring speed and host propulsion are unquoted study inputs",
+    "VOLLEY release 3/5/7/9 m/s is commanded-input scenario, not achieved mechanism range",
+    "spring comparator is a local velocity-matching policy, not the best possible campaign"
+  ],
+  "time_step_convergence": {
+    "max_target_position_difference_m": 0.45141342418570674,
+    "max_target_velocity_difference_m_s": 0.0004980859148210851
+  }
+}
