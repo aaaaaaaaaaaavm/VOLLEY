@@ -1,0 +1,20 @@
+#!/bin/sh
+# Install once in this checkout: git config core.hooksPath .githooks
+set -eu
+while read -r local_ref local_sha remote_ref remote_sha; do
+    head_sha=$(git rev-parse HEAD)
+    if [ "$local_sha" != "$head_sha" ]; then
+        echo "FAIL: check out the exact commit being published before pushing" >&2
+        exit 1
+    fi
+    case "$remote_ref" in
+        refs/heads/main|refs/tags/*) ;;
+        *) echo "FAIL: publish only remote main or a reviewed release tag" >&2; exit 1 ;;
+    esac
+    case "$remote_sha" in
+        0000000000000000000000000000000000000000)
+            python3 tools/prepublish_gate.py --all ;;
+        *)
+            python3 tools/prepublish_gate.py --base "$remote_sha" ;;
+    esac
+done

@@ -43,6 +43,17 @@ jobs:
           python3 -m pip install --upgrade -q pip
           python3 -m pip install -q -r requirements.txt -r requirements-dev.txt
 
+      - name: prepublication file gate
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -z "$BASE_SHA" ] || [ "$BASE_SHA" = 0000000000000000000000000000000000000000 ]; then
+            python3 tools/prepublish_gate.py --all
+          else
+            git fetch -q origin "$BASE_SHA"
+            python3 tools/prepublish_gate.py --base "$BASE_SHA"
+          fi
+
       - name: authorship
         # A PR's github.sha is a temporary GitHub-committed merge, not authored history.
         # Audit both actual histories, then restore the merge tree for integration gates.
