@@ -1,5 +1,7 @@
 # CAD
 
+> **Separate Gen6 Go 2 envelope candidates:** [native FreeCAD, STEP, Blender review views and P131 bounds](gen6_first_article/README.md). These are single-dummy first-article studies; their drive, source, restraint and brake are not selected. They do not revise the Gen5 academic geometry below.
+
 > **Current academic configuration: Gen5.** Start with the [eight generated Gen5 STEP
 > parts](step/gen5/), [20-instance reference assembly](step/gen5/VOLLEY_Review_Assembly_Gen5.step), [Gen5 renders](renders/gen5/), [dimension sheet](DIMENSIONS.md),
 > [configuration hashes](../docs/GEN5_CONFIGURATION_INDEX.json) and

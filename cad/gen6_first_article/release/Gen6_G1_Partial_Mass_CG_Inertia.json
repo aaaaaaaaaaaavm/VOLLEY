@@ -1,0 +1,623 @@
+{
+  "evidence_class": "FREECAD_RECTANGULAR_PROXY_MASS_PROPERTIES_NOT_INSTALLED_HARDWARE",
+  "method": "FreeCAD exact box B-rep volume/center; declared density; rectangular local inertia plus parallel-axis theorem",
+  "parameters_sha256": "c8c4bece82573bcb80d82ea1156f300f7abda0ac71d383b310a93749cb4376e7",
+  "source_sha256": "9f5d35413d7365a392e922f1735a89bac8705530dd5a399f53018995d4c9b7bd",
+  "candidates": {
+    "A": {
+      "native_sha256": "6fd240542129a6531dc1a4e14db5704ac3090a899bb5f296f9750fffb325befc",
+      "parts": [
+        {
+          "part": "Frame_Left",
+          "mass_kg": 1.7496,
+          "dimensions_m": [
+            1.8,
+            0.02,
+            0.018
+          ],
+          "center_start_m": [
+            0.9,
+            -0.07,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Frame_Right",
+          "mass_kg": 1.7496,
+          "dimensions_m": [
+            1.8,
+            0.02,
+            0.018
+          ],
+          "center_start_m": [
+            0.9,
+            0.07,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_1",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            0.01,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_2",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            0.41,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_3",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            0.81,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_4",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            1.21,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_5",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            1.61,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_6",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            1.79,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Guide_Left",
+          "mass_kg": 2.2463999999999995,
+          "dimensions_m": [
+            1.6,
+            0.01,
+            0.052
+          ],
+          "center_start_m": [
+            0.9000000000000002,
+            -0.06,
+            0.044
+          ],
+          "moving": false
+        },
+        {
+          "part": "Guide_Right",
+          "mass_kg": 2.2463999999999995,
+          "dimensions_m": [
+            1.6,
+            0.01,
+            0.052
+          ],
+          "center_start_m": [
+            0.9000000000000002,
+            0.06,
+            0.044
+          ],
+          "moving": false
+        },
+        {
+          "part": "Support_Lip_Left",
+          "mass_kg": 0.34559999999999996,
+          "dimensions_m": [
+            1.6,
+            0.01,
+            0.008
+          ],
+          "center_start_m": [
+            0.9000000000000001,
+            -0.05,
+            0.044
+          ],
+          "moving": false
+        },
+        {
+          "part": "Support_Lip_Right",
+          "mass_kg": 0.34559999999999996,
+          "dimensions_m": [
+            1.6,
+            0.01,
+            0.008
+          ],
+          "center_start_m": [
+            0.9000000000000001,
+            0.05,
+            0.044
+          ],
+          "moving": false
+        },
+        {
+          "part": "Carrier_Al_Chassis",
+          "mass_kg": 0.23328,
+          "dimensions_m": [
+            0.06,
+            0.08,
+            0.018
+          ],
+          "center_start_m": [
+            0.13,
+            0.0,
+            0.039
+          ],
+          "moving": true
+        },
+        {
+          "part": "Carrier_Pusher_Face",
+          "mass_kg": 0.21384,
+          "dimensions_m": [
+            0.01,
+            0.088,
+            0.09
+          ],
+          "center_start_m": [
+            0.165,
+            0.0,
+            0.093
+          ],
+          "moving": true
+        },
+        {
+          "part": "PM_Armature_Proxy",
+          "mass_kg": 0.09599999999999997,
+          "dimensions_m": [
+            0.04,
+            0.08,
+            0.004
+          ],
+          "center_start_m": [
+            0.13,
+            0.0,
+            0.028
+          ],
+          "moving": true
+        }
+      ],
+      "dry_partial_start": {
+        "mass_kg": 9.92616,
+        "cg_m": [
+          0.8637930075678812,
+          0.0,
+          0.029977393070432068
+        ],
+        "inertia_about_cg_kg_m2": [
+          [
+            0.041377474927005005,
+            0.0,
+            0.01245653004910175
+          ],
+          [
+            0.0,
+            2.6373055741120743,
+            0.0
+          ],
+          [
+            0.01245653004910175,
+            0.0,
+            2.66865094334507
+          ]
+        ]
+      },
+      "loaded_assigned_dummy_start": {
+        "mass_kg": 13.92616,
+        "cg_m": [
+          0.7134161606645336,
+          0.0,
+          0.04951547303779362
+        ],
+        "inertia_about_cg_kg_m2": [
+          [
+            0.06123631727253648,
+            0.0,
+            0.11399147031430001
+          ],
+          [
+            0.0,
+            3.473951969431749,
+            0.0
+          ],
+          [
+            0.11399147031430001,
+            0.0,
+            3.4921051629858804
+          ]
+        ]
+      },
+      "loaded_assigned_dummy_at_stroke_end": {
+        "mass_kg": 13.92616,
+        "cg_m": [
+          1.1375141173159005,
+          0.0,
+          0.04951547303779362
+        ],
+        "inertia_about_cg_kg_m2": [
+          [
+            0.06123631727253648,
+            0.0,
+            -0.14434232505800076
+          ],
+          [
+            0.0,
+            3.961760895583738,
+            0.0
+          ],
+          [
+            -0.14434232505800076,
+            0.0,
+            3.9799140891378686
+          ]
+        ]
+      }
+    },
+    "B": {
+      "native_sha256": "77c42b2dc9d385e594b8a767976340ea70dadc1ea6415c2501646e559f51b449",
+      "parts": [
+        {
+          "part": "Frame_Left",
+          "mass_kg": 1.7496,
+          "dimensions_m": [
+            1.8,
+            0.02,
+            0.018
+          ],
+          "center_start_m": [
+            0.9,
+            -0.07,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Frame_Right",
+          "mass_kg": 1.7496,
+          "dimensions_m": [
+            1.8,
+            0.02,
+            0.018
+          ],
+          "center_start_m": [
+            0.9,
+            0.07,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_1",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            0.01,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_2",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            0.41,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_3",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            0.81,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_4",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            1.21,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_5",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            1.61,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Crossmember_6",
+          "mass_kg": 0.11664,
+          "dimensions_m": [
+            0.02,
+            0.12,
+            0.018
+          ],
+          "center_start_m": [
+            1.79,
+            0.0,
+            0.009
+          ],
+          "moving": false
+        },
+        {
+          "part": "Guide_Left",
+          "mass_kg": 2.2463999999999995,
+          "dimensions_m": [
+            1.6,
+            0.01,
+            0.052
+          ],
+          "center_start_m": [
+            0.9000000000000002,
+            -0.06,
+            0.044
+          ],
+          "moving": false
+        },
+        {
+          "part": "Guide_Right",
+          "mass_kg": 2.2463999999999995,
+          "dimensions_m": [
+            1.6,
+            0.01,
+            0.052
+          ],
+          "center_start_m": [
+            0.9000000000000002,
+            0.06,
+            0.044
+          ],
+          "moving": false
+        },
+        {
+          "part": "Support_Lip_Left",
+          "mass_kg": 0.34559999999999996,
+          "dimensions_m": [
+            1.6,
+            0.01,
+            0.008
+          ],
+          "center_start_m": [
+            0.9000000000000001,
+            -0.05,
+            0.044
+          ],
+          "moving": false
+        },
+        {
+          "part": "Support_Lip_Right",
+          "mass_kg": 0.34559999999999996,
+          "dimensions_m": [
+            1.6,
+            0.01,
+            0.008
+          ],
+          "center_start_m": [
+            0.9000000000000001,
+            0.05,
+            0.044
+          ],
+          "moving": false
+        },
+        {
+          "part": "Carrier_Al_Chassis",
+          "mass_kg": 0.23328,
+          "dimensions_m": [
+            0.06,
+            0.08,
+            0.018
+          ],
+          "center_start_m": [
+            0.13,
+            0.0,
+            0.039
+          ],
+          "moving": true
+        },
+        {
+          "part": "Carrier_Pusher_Face",
+          "mass_kg": 0.21384,
+          "dimensions_m": [
+            0.01,
+            0.088,
+            0.09
+          ],
+          "center_start_m": [
+            0.165,
+            0.0,
+            0.093
+          ],
+          "moving": true
+        },
+        {
+          "part": "Copper_Armature_Proxy",
+          "mass_kg": 0.11468799999999997,
+          "dimensions_m": [
+            0.04,
+            0.08,
+            0.004
+          ],
+          "center_start_m": [
+            0.13,
+            0.0,
+            0.028
+          ],
+          "moving": true
+        }
+      ],
+      "dry_partial_start": {
+        "mass_kg": 9.944847999999999,
+        "cg_m": [
+          0.8624140901902172,
+          0.0,
+          0.02997367722462927
+        ],
+        "inertia_about_cg_kg_m2": [
+          [
+            0.0413875397119958,
+            0.0,
+            0.012429464769126352
+          ],
+          [
+            0.0,
+            2.6473518487340906,
+            0.0
+          ],
+          [
+            0.012429464769126352,
+            0.0,
+            2.6787070870487617
+          ]
+        ]
+      },
+      "loaded_assigned_dummy_start": {
+        "mass_kg": 13.944847999999999,
+        "cg_m": [
+          0.7126343033642247,
+          0.0,
+          0.0494866393667396
+        ],
+        "inertia_about_cg_kg_m2": [
+          [
+            0.061254948496087036,
+            0.0,
+            0.11375720403767163
+          ],
+          [
+            0.0,
+            3.4803155180540424,
+            0.0
+          ],
+          [
+            0.11375720403767163,
+            0.0,
+            3.498470014251288
+          ]
+        ]
+      },
+      "loaded_assigned_dummy_at_stroke_end": {
+        "mass_kg": 13.944847999999999,
+        "cg_m": [
+          1.1379060883273882,
+          0.0,
+          0.0494866393667396
+        ],
+        "inertia_about_cg_kg_m2": [
+          [
+            0.061254948496087036,
+            0.0,
+            -0.14422487959912844
+          ],
+          [
+            0.0,
+            3.963368629969529,
+            0.0
+          ],
+          [
+            -0.14422487959912844,
+            0.0,
+            3.981523126166776
+          ]
+        ]
+      }
+    }
+  },
+  "exclusions": [
+    "All unrated drive/brake/source and other hardware excluded",
+    "The 4 kg payload is assigned mass in a uniform box, not a real spacecraft mass distribution",
+    "No launch-load deflection, installed mounting or actual dynamic trajectory"
+  ]
+}

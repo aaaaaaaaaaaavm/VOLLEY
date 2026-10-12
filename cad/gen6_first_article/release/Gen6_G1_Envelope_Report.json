@@ -1,0 +1,297 @@
+{
+  "evidence_class": "GEN6_G1_UNSELECTED_FIRST_ARTICLE_GEOMETRY_SCREEN",
+  "source_sha256": "51dd01e1d09bc3f5b09627a75f3929f4f3df42231094caa475709fb06c148cf2",
+  "parameters_sha256": "c8c4bece82573bcb80d82ea1156f300f7abda0ac71d383b310a93749cb4376e7",
+  "freecad_version": "1.0.0",
+  "candidates": {
+    "A": {
+      "candidate": "A",
+      "source_status": "PARAMETRIC_FREECAD_ENVELOPE_NOT_DESIGN_RELEASE",
+      "cross_section": {
+        "payload_width_mm": 100.0,
+        "guide_inner_width_mm": 110.0,
+        "nominal_each_side_gap_mm": 5.0,
+        "armature_to_primary_vertical_gap_mm": 2
+      },
+      "motion": {
+        "stroke_mm": 1300,
+        "sampled_solid_intersections": [
+          {
+            "stroke_offset_mm": 0,
+            "maximum_solid_intersection_mm3": 0.0
+          },
+          {
+            "stroke_offset_mm": 325,
+            "maximum_solid_intersection_mm3": 0.0
+          },
+          {
+            "stroke_offset_mm": 650,
+            "maximum_solid_intersection_mm3": 0.0
+          },
+          {
+            "stroke_offset_mm": 975,
+            "maximum_solid_intersection_mm3": 0.0
+          },
+          {
+            "stroke_offset_mm": 1300,
+            "maximum_solid_intersection_mm3": 0.0
+          }
+        ],
+        "contact_dynamics_and_thermal_deflection": "UNMODELED"
+      },
+      "partial_material_mass": {
+        "fixed_and_carrier_kg": 9.92616,
+        "captured_carrier_kg": 0.5431199999999999,
+        "parts": [
+          {
+            "part": "Frame_Left",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 648000.0,
+            "mass_kg": 1.7496
+          },
+          {
+            "part": "Frame_Right",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 648000.0,
+            "mass_kg": 1.7496
+          },
+          {
+            "part": "Crossmember_1",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_2",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_3",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_4",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_5",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_6",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Guide_Left",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 831999.9999999999,
+            "mass_kg": 2.2463999999999995
+          },
+          {
+            "part": "Guide_Right",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 831999.9999999999,
+            "mass_kg": 2.2463999999999995
+          },
+          {
+            "part": "Support_Lip_Left",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 127999.99999999999,
+            "mass_kg": 0.34559999999999996
+          },
+          {
+            "part": "Support_Lip_Right",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 127999.99999999999,
+            "mass_kg": 0.34559999999999996
+          },
+          {
+            "part": "Carrier_Al_Chassis",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 86400.0,
+            "mass_kg": 0.23328
+          },
+          {
+            "part": "Carrier_Pusher_Face",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 79200.0,
+            "mass_kg": 0.21384
+          },
+          {
+            "part": "PM_Armature_Proxy",
+            "material_proxy": "ndfeb_proxy",
+            "volume_mm3": 12799.999999999996,
+            "mass_kg": 0.09599999999999997
+          }
+        ],
+        "excluded": "payload 4 kg; all primary windings, inverter, source, real brake, restraint, bearings, controls, harness, mounting, shielding and thermal hardware"
+      },
+      "export": {
+        "native": "Gen6_G1_A_Envelope.FCStd",
+        "native_sha256": "6fd240542129a6531dc1a4e14db5704ac3090a899bb5f296f9750fffb325befc",
+        "step": "Gen6_G1_A_Envelope.step",
+        "step_sha256": "465e684ab437bee1619b0dc7e75e8e4c34db79425b6cbd660cc70c89d84e784e",
+        "readback_total_volume_mm3": 7778599.999999998,
+        "original_total_volume_mm3": 7778600.0
+      }
+    },
+    "B": {
+      "candidate": "B",
+      "source_status": "PARAMETRIC_FREECAD_ENVELOPE_NOT_DESIGN_RELEASE",
+      "cross_section": {
+        "payload_width_mm": 100.0,
+        "guide_inner_width_mm": 110.0,
+        "nominal_each_side_gap_mm": 5.0,
+        "armature_to_primary_vertical_gap_mm": 2
+      },
+      "motion": {
+        "stroke_mm": 1300,
+        "sampled_solid_intersections": [
+          {
+            "stroke_offset_mm": 0,
+            "maximum_solid_intersection_mm3": 0.0
+          },
+          {
+            "stroke_offset_mm": 325,
+            "maximum_solid_intersection_mm3": 0.0
+          },
+          {
+            "stroke_offset_mm": 650,
+            "maximum_solid_intersection_mm3": 0.0
+          },
+          {
+            "stroke_offset_mm": 975,
+            "maximum_solid_intersection_mm3": 0.0
+          },
+          {
+            "stroke_offset_mm": 1300,
+            "maximum_solid_intersection_mm3": 0.0
+          }
+        ],
+        "contact_dynamics_and_thermal_deflection": "UNMODELED"
+      },
+      "partial_material_mass": {
+        "fixed_and_carrier_kg": 9.944847999999999,
+        "captured_carrier_kg": 0.561808,
+        "parts": [
+          {
+            "part": "Frame_Left",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 648000.0,
+            "mass_kg": 1.7496
+          },
+          {
+            "part": "Frame_Right",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 648000.0,
+            "mass_kg": 1.7496
+          },
+          {
+            "part": "Crossmember_1",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_2",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_3",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_4",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_5",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Crossmember_6",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 43200.0,
+            "mass_kg": 0.11664
+          },
+          {
+            "part": "Guide_Left",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 831999.9999999999,
+            "mass_kg": 2.2463999999999995
+          },
+          {
+            "part": "Guide_Right",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 831999.9999999999,
+            "mass_kg": 2.2463999999999995
+          },
+          {
+            "part": "Support_Lip_Left",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 127999.99999999999,
+            "mass_kg": 0.34559999999999996
+          },
+          {
+            "part": "Support_Lip_Right",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 127999.99999999999,
+            "mass_kg": 0.34559999999999996
+          },
+          {
+            "part": "Carrier_Al_Chassis",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 86400.0,
+            "mass_kg": 0.23328
+          },
+          {
+            "part": "Carrier_Pusher_Face",
+            "material_proxy": "aluminium_proxy",
+            "volume_mm3": 79200.0,
+            "mass_kg": 0.21384
+          },
+          {
+            "part": "Copper_Armature_Proxy",
+            "material_proxy": "copper_proxy",
+            "volume_mm3": 12799.999999999996,
+            "mass_kg": 0.11468799999999997
+          }
+        ],
+        "excluded": "payload 4 kg; all primary windings, inverter, source, real brake, restraint, bearings, controls, harness, mounting, shielding and thermal hardware"
+      },
+      "export": {
+        "native": "Gen6_G1_B_Envelope.FCStd",
+        "native_sha256": "77c42b2dc9d385e594b8a767976340ea70dadc1ea6415c2501646e559f51b449",
+        "step": "Gen6_G1_B_Envelope.step",
+        "step_sha256": "0db18910784a3d5337a6146519539f482681ed699926137e7ec9e826b3747554",
+        "readback_total_volume_mm3": 7778599.999999998,
+        "original_total_volume_mm3": 7778600.0
+      }
+    }
+  },
+  "exclusions": [
+    "A 3U inert dummy is a geometry proxy, not a qualified payload interface",
+    "Neither candidate has a selected motor, winding, source or brake hardware",
+    "Only five stroke stations and static B-rep intersections are checked",
+    "No launch loads, tolerance stack, contact dynamics, magnetic exposure or failure containment",
+    "Partial material mass is not installed mass or the P130 30 kg assumption"
+  ]
+}

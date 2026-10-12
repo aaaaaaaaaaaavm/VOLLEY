@@ -1,0 +1,158 @@
+{
+  "evidence_class": "GEN6_G1_NECESSARY_BOUNDS_NOT_SOURCEABLE_INSTALLED_DESIGN",
+  "provenance": {
+    "source_sha256": "49117fd9a7cf9b54e0d98fce1d6669d7fb00567d7026f3052e63167052a37511",
+    "cad_report_sha256": "c6c8718127a56d450b7f45c91273b6e86300da0a4fed11c33a563834d3750565",
+    "cad_parameters_sha256": "c8c4bece82573bcb80d82ea1156f300f7abda0ac71d383b310a93749cb4376e7",
+    "mass_cg_inertia_ledger_sha256": "3a20e5444b81067f94956a740844baa55a705352150bc348be09fa228c18daa4"
+  },
+  "mission_proxy": {
+    "spring_device_assumption_kg": 16,
+    "spring_host_fuel_kg": 3.2977038038480266,
+    "max_volley_device_kg_for_device_plus_consumed_fuel_parity": 19.282150268554688,
+    "comparison": "P130 same four surrogate states and ideal burn schedule; 10 kg initial host fuel; device plus consumed fuel proxy, not launch manifest mass or price"
+  },
+  "candidates": {
+    "A": {
+      "partial_structure_and_carrier_kg": 9.92616,
+      "carrier_kg": 0.5431199999999999,
+      "partial_dry_cg_m": [
+        0.8637930075678812,
+        0.0,
+        0.029977393070432068
+      ],
+      "assigned_dummy_combined_cg_start_m": [
+        0.7134161606645336,
+        0.0,
+        0.04951547303779362
+      ],
+      "assigned_dummy_combined_cg_at_stroke_end_m": [
+        1.1375141173159005,
+        0.0,
+        0.04951547303779362
+      ],
+      "unresolved_mass_allowance_kg": 9.355990268554688,
+      "speed_bounds": [
+        {
+          "speed_m_s": 3.0,
+          "ideal_payload_kinetic_J": 18.0,
+          "ideal_total_moving_kinetic_J": 20.44404,
+          "ideal_mean_drive_force_N": 15.726184615384616,
+          "ideal_mean_payload_acceleration_g": 0.3529786891077444,
+          "carrier_brake_energy_J": 2.4440399999999993,
+          "ideal_mean_carrier_brake_force_N": 12.220199999999997,
+          "ideal_mean_carrier_brake_deceleration_g": 2.2943614792003384
+        },
+        {
+          "speed_m_s": 6.0,
+          "ideal_payload_kinetic_J": 72.0,
+          "ideal_total_moving_kinetic_J": 81.77616,
+          "ideal_mean_drive_force_N": 62.904738461538464,
+          "ideal_mean_payload_acceleration_g": 1.4119147564309775,
+          "carrier_brake_energy_J": 9.776159999999997,
+          "ideal_mean_carrier_brake_force_N": 48.88079999999999,
+          "ideal_mean_carrier_brake_deceleration_g": 9.177445916801354
+        }
+      ],
+      "lateral_tolerance_screen": {
+        "nominal_side_gap_mm": 5.0,
+        "assumed_linear_stack_mm": 1.5,
+        "cases": [
+          {
+            "angle_deg": 0.2,
+            "lateral_sweep_mm": 1.1885740480835232,
+            "residual_mm": 2.311425951916477,
+            "conditional_clear": true
+          },
+          {
+            "angle_deg": 0.5,
+            "lateral_sweep_mm": 2.971498482753368,
+            "residual_mm": 0.5285015172466321,
+            "conditional_clear": true
+          },
+          {
+            "angle_deg": 0.7,
+            "lateral_sweep_mm": 4.160199261485133,
+            "residual_mm": -0.6601992614851326,
+            "conditional_clear": false
+          }
+        ],
+        "maximum_yaw_deg_given_stack": 0.5889226608958966
+      }
+    },
+    "B": {
+      "partial_structure_and_carrier_kg": 9.944847999999999,
+      "carrier_kg": 0.561808,
+      "partial_dry_cg_m": [
+        0.8624140901902172,
+        0.0,
+        0.02997367722462927
+      ],
+      "assigned_dummy_combined_cg_start_m": [
+        0.7126343033642247,
+        0.0,
+        0.0494866393667396
+      ],
+      "assigned_dummy_combined_cg_at_stroke_end_m": [
+        1.1379060883273882,
+        0.0,
+        0.0494866393667396
+      ],
+      "unresolved_mass_allowance_kg": 9.337302268554689,
+      "speed_bounds": [
+        {
+          "speed_m_s": 3.0,
+          "ideal_payload_kinetic_J": 18.0,
+          "ideal_total_moving_kinetic_J": 20.528136000000003,
+          "ideal_mean_drive_force_N": 15.790873846153849,
+          "ideal_mean_payload_acceleration_g": 0.3529786891077444,
+          "carrier_brake_energy_J": 2.528136,
+          "ideal_mean_carrier_brake_force_N": 12.64068,
+          "ideal_mean_carrier_brake_deceleration_g": 2.2943614792003384
+        },
+        {
+          "speed_m_s": 6.0,
+          "ideal_payload_kinetic_J": 72.0,
+          "ideal_total_moving_kinetic_J": 82.11254400000001,
+          "ideal_mean_drive_force_N": 63.163495384615395,
+          "ideal_mean_payload_acceleration_g": 1.4119147564309775,
+          "carrier_brake_energy_J": 10.112544,
+          "ideal_mean_carrier_brake_force_N": 50.56272,
+          "ideal_mean_carrier_brake_deceleration_g": 9.177445916801354
+        }
+      ],
+      "lateral_tolerance_screen": {
+        "nominal_side_gap_mm": 5.0,
+        "assumed_linear_stack_mm": 1.5,
+        "cases": [
+          {
+            "angle_deg": 0.2,
+            "lateral_sweep_mm": 1.1885740480835232,
+            "residual_mm": 2.311425951916477,
+            "conditional_clear": true
+          },
+          {
+            "angle_deg": 0.5,
+            "lateral_sweep_mm": 2.971498482753368,
+            "residual_mm": 0.5285015172466321,
+            "conditional_clear": true
+          },
+          {
+            "angle_deg": 0.7,
+            "lateral_sweep_mm": 4.160199261485133,
+            "residual_mm": -0.6601992614851326,
+            "conditional_clear": false
+          }
+        ],
+        "maximum_yaw_deg_given_stack": 0.5889226608958966
+      }
+    }
+  },
+  "exclusions": [
+    "No wound stator, source, switch, brake, restraints, bearings, harness, electronics, mounting, thermal hardware or qualified payload contact",
+    "FreeCAD masses use full rectangular proxies and assumed material densities, not a sourced BOM or weighed assembly",
+    "Constant-acceleration and stop-length bounds do not predict peak contact force, current, heating, tip-off or achievable release speed",
+    "Tolerance bands are assumed and do not include thermomechanical deflection or a payload-specific provider ICD",
+    "Mass parity uses P130's constructed target topology and ideal host burns; no customer service advantage is established"
+  ]
+}
