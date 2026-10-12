@@ -1,0 +1,450 @@
+{
+  "evidence_class": "UNSELECTED_GEN6_ONE_CELL_GEOMETRY_SCREEN",
+  "freecad_version": "1.0.0",
+  "source_sha256": "71753db834d629b01bce922a88c59e04d345f649c52adaaf6348315f54894f65",
+  "parameters_sha256": "864a231ef814cf29cbb405c376d843a9b2c68d4da2c513e3c2acdd96706b583b",
+  "nominal_end_stop_gap_mm": 5.0,
+  "nominal_cradle_side_gap_mm": 5.0,
+  "states": [
+    {
+      "state": "00_stowed",
+      "payload_advance_mm": 0.0,
+      "gate_open": false,
+      "pusher_withdrawn": false,
+      "checks": [
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Transfer_Bridge",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Back_Wall",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "End_Stop_Front",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "End_Stop_Aft",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Right_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Gate",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Left_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Transfer_Bridge",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Back_Wall",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "End_Stop_Front",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "End_Stop_Aft",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Right_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Gate",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Left_Guide",
+          "intersection_mm3": 0.0
+        }
+      ],
+      "max_payload_obstacle_intersection_mm3": 0.0,
+      "pusher_payload_intersection_mm3": 0.0,
+      "sampled_transfer_sweep": null,
+      "original_total_volume_mm3": 5570850.0,
+      "step_readback_volume_mm3": 5570850.000000001,
+      "native_file": "Gen6_Feed_00_stowed.FCStd",
+      "native_sha256": "c837fa3f06db0d43d2b9675b27907079185c4e742dedc0890e85bfa39810c2cc",
+      "step_file": "Gen6_Feed_00_stowed.step",
+      "step_sha256": "89af318f82609b75d5dc5b262de0946149e11960824eebea7ea5672ca13a7187"
+    },
+    {
+      "state": "01_transfer_armed",
+      "payload_advance_mm": 0.0,
+      "gate_open": true,
+      "pusher_withdrawn": false,
+      "checks": [
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Transfer_Bridge",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Back_Wall",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "End_Stop_Front",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "End_Stop_Aft",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Right_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Gate",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Left_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Transfer_Bridge",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Back_Wall",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "End_Stop_Front",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "End_Stop_Aft",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Right_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Gate",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Left_Guide",
+          "intersection_mm3": 0.0
+        }
+      ],
+      "max_payload_obstacle_intersection_mm3": 0.0,
+      "pusher_payload_intersection_mm3": 0.0,
+      "sampled_transfer_sweep": {
+        "stations": 81,
+        "increment_mm": 2.5,
+        "max_solid_intersection_mm3": 0.0,
+        "continuous_swept_volume_proven": false
+      },
+      "original_total_volume_mm3": 5570850.0,
+      "step_readback_volume_mm3": 5570850.000000001,
+      "native_file": "Gen6_Feed_01_transfer_armed.FCStd",
+      "native_sha256": "4890ce5dc86f41526018eb3fd36f95d1e8ec0320c30c110193ff2d007ff34f27",
+      "step_file": "Gen6_Feed_01_transfer_armed.step",
+      "step_sha256": "92547b80339ffe875109db5f404198127d83cefc3143bbc3261b0c4f66330eec"
+    },
+    {
+      "state": "02_mid_transfer",
+      "payload_advance_mm": 100.0,
+      "gate_open": true,
+      "pusher_withdrawn": false,
+      "checks": [
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Transfer_Bridge",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Back_Wall",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "End_Stop_Front",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "End_Stop_Aft",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Right_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Gate",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Left_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Transfer_Bridge",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Back_Wall",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "End_Stop_Front",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "End_Stop_Aft",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Right_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Gate",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Left_Guide",
+          "intersection_mm3": 0.0
+        }
+      ],
+      "max_payload_obstacle_intersection_mm3": 0.0,
+      "pusher_payload_intersection_mm3": 0.0,
+      "sampled_transfer_sweep": null,
+      "original_total_volume_mm3": 5570850.0,
+      "step_readback_volume_mm3": 5570850.000000001,
+      "native_file": "Gen6_Feed_02_mid_transfer.FCStd",
+      "native_sha256": "425cf89663aa341d4bb5e70890659eeb20a63bbc362c3bef0f921fdc803647dc",
+      "step_file": "Gen6_Feed_02_mid_transfer.step",
+      "step_sha256": "6c028f9712cad012ea36104586a12f6015a64162aed68f0bfd2ac02d62a3a91c"
+    },
+    {
+      "state": "03_seated",
+      "payload_advance_mm": 200.0,
+      "gate_open": false,
+      "pusher_withdrawn": true,
+      "checks": [
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Transfer_Bridge",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Back_Wall",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "End_Stop_Front",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "End_Stop_Aft",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Right_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cassette_Gate",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Passive_3U_Box",
+          "obstacle": "Cradle_Left_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Transfer_Bridge",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Back_Wall",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "End_Stop_Front",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "End_Stop_Aft",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Floor",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Right_Guide",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cassette_Gate",
+          "intersection_mm3": 0.0
+        },
+        {
+          "actor": "Captured_Pusher_Face",
+          "obstacle": "Cradle_Left_Guide",
+          "intersection_mm3": 0.0
+        }
+      ],
+      "max_payload_obstacle_intersection_mm3": 0.0,
+      "pusher_payload_intersection_mm3": 0.0,
+      "sampled_transfer_sweep": null,
+      "original_total_volume_mm3": 5570850.0,
+      "step_readback_volume_mm3": 5570850.0,
+      "native_file": "Gen6_Feed_03_seated.FCStd",
+      "native_sha256": "adcc7a42a87f7dc6bf6a90a7c2df81ba02c0e060bac681494e6d8619f59133ab",
+      "step_file": "Gen6_Feed_03_seated.step",
+      "step_sha256": "9953d1a2dbf679518c601e56099b7f77d65ce5fbf34771aedeb94486594add36"
+    }
+  ],
+  "limitations": [
+    "Nominal exact-solid screen only; no tolerance or continuous swept-solid result",
+    "No launch-rated individual restraint or power-loss containment at mid-transfer",
+    "No selected screw, actuator, bearing, gate return, latch, sensor or interlock",
+    "No contact force, payload face approval, jam torque, debris or environmental test",
+    "No four-cell 1U/3U architecture, installed mass or provider interface"
+  ]
+}

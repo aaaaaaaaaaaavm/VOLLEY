@@ -1,0 +1,32 @@
+{
+  "evidence_class": "ASSUMED_INTERVAL_SENSITIVITY_NOT_DRAWING_TOLERANCE",
+  "inputs_assumed_mm": {
+    "payload_width_plus": 1.0,
+    "payload_length_plus": 1.0,
+    "payload_height_plus": 1.0,
+    "payload_lateral_shift": 0.5,
+    "guide_inward_shift": 0.5,
+    "payload_axial_shift": 1.0,
+    "stop_inward_shift": 1.0,
+    "gate_vertical_error": 2.0,
+    "payload_vertical_shift": 1.0
+  },
+  "results_mm": {
+    "cradle_side_nominal": 5.0,
+    "cradle_side_worst_under_assumptions": 3.5,
+    "end_stop_nominal": 5.0,
+    "end_stop_worst_under_assumptions": 2.5,
+    "lifted_gate_over_payload_nominal": 20.0,
+    "lifted_gate_over_payload_worst_under_assumptions": 16.0
+  },
+  "exclusions": [
+    "thermal growth",
+    "launch deflection",
+    "backlash",
+    "joint wear",
+    "actual spacecraft rail/contact tolerance",
+    "actuator positioning evidence",
+    "dynamic contact and jam force",
+    "four-cell alignment"
+  ]
+}

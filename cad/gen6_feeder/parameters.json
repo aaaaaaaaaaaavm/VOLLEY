@@ -1,0 +1,21 @@
+{
+  "evidence_class": "UNSELECTED_GEN6_ONE_CELL_GEOMETRY_SCREEN",
+  "length_mm": 340.5,
+  "payload_width_mm": 100.0,
+  "payload_height_mm": 100.0,
+  "payload_x_mm": 170.0,
+  "payload_z_mm": 48.0,
+  "cassette_payload_y_mm": -250.0,
+  "cradle_payload_y_mm": -50.0,
+  "feeder_travel_mm": 200.0,
+  "gate_lift_mm": 120.0,
+  "contact_proxy_gap_mm": 0.0,
+  "nominal_end_stop_gap_mm": 5.0,
+  "nominal_cradle_side_gap_mm": 5.0,
+  "states": {
+    "00_stowed": {"payload_advance_mm": 0.0, "gate_open": false, "pusher_withdrawn": false},
+    "01_transfer_armed": {"payload_advance_mm": 0.0, "gate_open": true, "pusher_withdrawn": false},
+    "02_mid_transfer": {"payload_advance_mm": 100.0, "gate_open": true, "pusher_withdrawn": false},
+    "03_seated": {"payload_advance_mm": 200.0, "gate_open": false, "pusher_withdrawn": true}
+  }
+}

@@ -138,6 +138,14 @@ The [Gen5 STEP parts](cad/step/gen5/), [native FreeCAD document](cad/native/Gen5
 
 *An [unselected R1 feeder geometry](cad/FEEDER_CANDIDATE_R1.md) widens the enclosure to 570 mm and clears twelve scripted envelope routes and fixed-part swept-box checks. The [native FreeCAD document](cad/native/Feeder_Candidate_R1.FCStd) and [STEP files](cad/step/feeder_candidate_r1/) are review artifacts. No lift mechanism, retention, tolerances, supplier mass or approved host interface is defined; R1 does not change the evaluated Gen5 results.*
 
+### Gen6 one-cell feeder study
+
+The future mixed-size service starts its packaging study with **separate fixed side cassettes**. A [four-state FreeCAD/STEP study](cad/gen6_feeder/README.md) depicts one inert 3U envelope moving from a fixed cassette to a cradle. The captive lead-screw pusher is an **analysis reference**, not selected hardware. The [concept comparison](cad/gen6_feeder/concept_decision.md) includes the proposed segmented pantograph and simpler gate, pawl and indexing alternatives.
+
+![Four modeled states of the Gen6 one-cell feeder concept; STEP-derived Blender render, not a working mechanism.](cad/gen6_feeder/release/Gen6_Feed_One_Cell_Storyboard.jpg)
+
+An 81-station nominal FreeCAD B-rep sweep found no solid penetration on the 200 mm transfer, and the STEP exports passed volume readback. The [assumed interval screen](cad/gen6_feeder/release/Gen6_Feed_Assumed_Tolerance_Screen.json) leaves 3.5 mm side and 2.5 mm end-stop clearance under its stated perturbations. **Power-loss containment at mid-transfer is not solved**; nor are the actuator, flight restraint, contact loads, jams or four-cell 1U/3U layout. These Gen6 files do not repair the evaluated Gen5 feeder failure or establish P-POD-like reliability.
+
 The CAD does not provide manufacturing drawings, tolerance stacks, an approved ICD or proof of buildability.
 
 ## From study to product
