@@ -1,0 +1,320 @@
+{
+  "evidence_class": "MATCHED_FULL_STATE_CONSTRUCTIVE_SURROGATE_NOT_OPTIMIZED_OR_HARDWARE_VALIDATED",
+  "provenance": {
+    "source_sha256": "a5b9063e2f5eb8a279454d3adc7f37731b8d19527de730b4400916fa184994c2",
+    "p129_source_sha256": "efe9b4cc9c6a1eb6fbf312c381490b7b933bc02178efe16b4891d038076362db"
+  },
+  "assumptions": {
+    "integration_step_s": 10,
+    "dynamics": "P129 Cartesian central Earth + J2 RK4",
+    "target_definition": "P129 unperturbed-host prograde departure vectors at 0/20/40/60 min, common epoch 24h after final release",
+    "control_policy": "fixed release times; one ideal pre-release burn at each event and one ideal post-release transfer burn between events; transfer shooting enforces reference release positions",
+    "host_dry_kg": 300.0,
+    "host_initial_fuel_kg": 10.0,
+    "host_isp_s": 220.0,
+    "volley_device_assumption_kg": 30.0,
+    "spring_device_assumption_kg": 16.0,
+    "spring_nominal_speed_m_s": 2.5,
+    "release_direction": "reference-orbit prograde for both devices"
+  },
+  "volley": {
+    "device_assumption_kg": 30.0,
+    "fuel_used_kg": 0.015434646368596816,
+    "fuel_remaining_kg": 9.984565353631403,
+    "total_host_delta_v_m_s": 0.09640266624346283,
+    "maximum_host_burn_m_s": 0.057915927108114995,
+    "burns": [
+      {
+        "event": "pre 1U-A",
+        "delta_v_m_s": 0.0,
+        "fuel_kg": 0.0
+      },
+      {
+        "event": "transfer to 3U-A",
+        "delta_v_m_s": 0.01142186493749372,
+        "fuel_kg": 0.0018493895454269292,
+        "shooting_evaluations": 5,
+        "arrival_position_error_m": 1.0185425527796858e-06
+      },
+      {
+        "event": "pre 3U-A",
+        "delta_v_m_s": 3.2821522461460457e-10,
+        "fuel_kg": 5.31330053661708e-11
+      },
+      {
+        "event": "transfer to 1U-B",
+        "delta_v_m_s": 0.057915927108114995,
+        "fuel_kg": 0.009270022965359772,
+        "shooting_evaluations": 9,
+        "arrival_position_error_m": 9.724861059513248e-09
+      },
+      {
+        "event": "pre 1U-B",
+        "delta_v_m_s": 1.7155792074515948e-11,
+        "fuel_kg": 2.760342998874887e-12
+      },
+      {
+        "event": "transfer to 3U-B",
+        "delta_v_m_s": 0.027064822891754492,
+        "fuel_kg": 0.0043152256767742155,
+        "shooting_evaluations": 5,
+        "arrival_position_error_m": 3.7183021634236665e-05
+      },
+      {
+        "event": "pre 3U-B",
+        "delta_v_m_s": 5.0960728601849356e-08,
+        "fuel_kg": 8.125142801696614e-09
+      }
+    ],
+    "shots": [
+      {
+        "name": "1U-A",
+        "relative_speed_m_s": 3.0114218647124495,
+        "preburn_delta_v_m_s": 0.0,
+        "terminal_error": {
+          "position_3d_km": 0.0,
+          "velocity_3d_m_s": 0.0
+        },
+        "one_at_a_time_release_perturbations": {
+          "speed_plus_0p1_m_s": {
+            "position_3d_km": 27.15393069473592,
+            "velocity_3d_m_s": 29.876885736618934
+          },
+          "pitch_plus_1_deg": {
+            "position_3d_km": 0.09631020892720714,
+            "velocity_3d_m_s": 0.07673433741584815
+          }
+        }
+      },
+      {
+        "name": "3U-A",
+        "relative_speed_m_s": 5.057915927110619,
+        "preburn_delta_v_m_s": 3.2821522461460457e-10,
+        "terminal_error": {
+          "position_3d_km": 0.0,
+          "velocity_3d_m_s": 0.0
+        },
+        "one_at_a_time_release_perturbations": {
+          "speed_plus_0p1_m_s": {
+            "position_3d_km": 26.539034425812375,
+            "velocity_3d_m_s": 29.138608762250808
+          },
+          "pitch_plus_1_deg": {
+            "position_3d_km": 0.0745469087230552,
+            "velocity_3d_m_s": 0.06722979934681443
+          }
+        }
+      },
+      {
+        "name": "1U-B",
+        "relative_speed_m_s": 7.027064828328466,
+        "preburn_delta_v_m_s": 1.7155792074515948e-11,
+        "terminal_error": {
+          "position_3d_km": 0.0,
+          "velocity_3d_m_s": 0.0
+        },
+        "one_at_a_time_release_perturbations": {
+          "speed_plus_0p1_m_s": {
+            "position_3d_km": 25.952760019627565,
+            "velocity_3d_m_s": 28.700379281634106
+          },
+          "pitch_plus_1_deg": {
+            "position_3d_km": 0.14498927893910088,
+            "velocity_3d_m_s": 0.07605134561386372
+          }
+        }
+      },
+      {
+        "name": "3U-B",
+        "relative_speed_m_s": 9.105887159794136,
+        "preburn_delta_v_m_s": 5.0960728601849356e-08,
+        "terminal_error": {
+          "position_3d_km": 0.0,
+          "velocity_3d_m_s": 0.0
+        },
+        "one_at_a_time_release_perturbations": {
+          "speed_plus_0p1_m_s": {
+            "position_3d_km": 25.321164295164298,
+            "velocity_3d_m_s": 28.124844429032937
+          },
+          "pitch_plus_1_deg": {
+            "position_3d_km": 0.22225207295497038,
+            "velocity_3d_m_s": 0.20201666788225534
+          }
+        }
+      }
+    ]
+  },
+  "spring": {
+    "device_assumption_kg": 16.0,
+    "fuel_used_kg": 3.297703803847882,
+    "fuel_remaining_kg": 6.702296196152118,
+    "total_host_delta_v_m_s": 21.580442754001826,
+    "maximum_host_burn_m_s": 6.530608906154685,
+    "burns": [
+      {
+        "event": "pre 1U-A",
+        "delta_v_m_s": 0.5098787675953682,
+        "fuel_kg": 0.07955432077873867
+      },
+      {
+        "event": "transfer to 3U-A",
+        "delta_v_m_s": 0.4999999999978236,
+        "fuel_kg": 0.07768652368906163,
+        "shooting_evaluations": 9,
+        "arrival_position_error_m": 2.725212813988241e-09
+      },
+      {
+        "event": "pre 3U-A",
+        "delta_v_m_s": 2.5298703660686734,
+        "fuel_kg": 0.3927977768649567
+      },
+      {
+        "event": "transfer to 1U-B",
+        "delta_v_m_s": 2.499999999887806,
+        "fuel_kg": 0.38307538377326766,
+        "shooting_evaluations": 9,
+        "arrival_position_error_m": 1.4572372483184532e-07
+      },
+      {
+        "event": "pre 1U-B",
+        "delta_v_m_s": 4.5100847138773545,
+        "fuel_kg": 0.6899592325144757
+      },
+      {
+        "event": "transfer to 3U-B",
+        "delta_v_m_s": 4.500000000420114,
+        "fuel_kg": 0.6842092608608047,
+        "shooting_evaluations": 9,
+        "arrival_position_error_m": 5.801269262595333e-07
+      },
+      {
+        "event": "pre 3U-B",
+        "delta_v_m_s": 6.530608906154685,
+        "fuel_kg": 0.9904213053665781
+      }
+    ],
+    "shots": [
+      {
+        "name": "1U-A",
+        "relative_speed_m_s": 2.5,
+        "preburn_delta_v_m_s": 0.5098787675953682,
+        "terminal_error": {
+          "position_3d_km": 0.0,
+          "velocity_3d_m_s": 0.0
+        },
+        "one_at_a_time_release_perturbations": {
+          "speed_plus_0p1_m_s": {
+            "position_3d_km": 27.149605911627077,
+            "velocity_3d_m_s": 29.872127386716095
+          },
+          "pitch_plus_1_deg": {
+            "position_3d_km": 0.07994765825295094,
+            "velocity_3d_m_s": 0.06369897365246852
+          }
+        }
+      },
+      {
+        "name": "3U-A",
+        "relative_speed_m_s": 2.5,
+        "preburn_delta_v_m_s": 2.5298703660686734,
+        "terminal_error": {
+          "position_3d_km": 0.0,
+          "velocity_3d_m_s": 0.0
+        },
+        "one_at_a_time_release_perturbations": {
+          "speed_plus_0p1_m_s": {
+            "position_3d_km": 26.525675988745537,
+            "velocity_3d_m_s": 29.12394218952923
+          },
+          "pitch_plus_1_deg": {
+            "position_3d_km": 0.03680923206364696,
+            "velocity_3d_m_s": 0.033218841611400346
+          }
+        }
+      },
+      {
+        "name": "1U-B",
+        "relative_speed_m_s": 2.5,
+        "preburn_delta_v_m_s": 4.5100847138773545,
+        "terminal_error": {
+          "position_3d_km": 0.0,
+          "velocity_3d_m_s": 0.0
+        },
+        "one_at_a_time_release_perturbations": {
+          "speed_plus_0p1_m_s": {
+            "position_3d_km": 25.948008737019155,
+            "velocity_3d_m_s": 28.695125085719656
+          },
+          "pitch_plus_1_deg": {
+            "position_3d_km": 0.05151856960354096,
+            "velocity_3d_m_s": 0.02701469249173533
+          }
+        }
+      },
+      {
+        "name": "3U-B",
+        "relative_speed_m_s": 2.5,
+        "preburn_delta_v_m_s": 6.530608906154685,
+        "terminal_error": {
+          "position_3d_km": 0.0,
+          "velocity_3d_m_s": 0.0
+        },
+        "one_at_a_time_release_perturbations": {
+          "speed_plus_0p1_m_s": {
+            "position_3d_km": 25.305404649094935,
+            "velocity_3d_m_s": 28.10734010834057
+          },
+          "pitch_plus_1_deg": {
+            "position_3d_km": 0.06104897619818827,
+            "velocity_3d_m_s": 0.055493724825271804
+          }
+        }
+      }
+    ]
+  },
+  "spring_speed_sensitivity": [
+    {
+      "spring_speed_m_s": 0.5,
+      "host_fuel_kg": 5.419382987367365,
+      "total_host_delta_v_m_s": 35.516156371580244
+    },
+    {
+      "spring_speed_m_s": 1.0,
+      "host_fuel_kg": 4.89026046814667,
+      "total_host_delta_v_m_s": 32.03227876676885
+    },
+    {
+      "spring_speed_m_s": 2.0,
+      "host_fuel_kg": 3.829422283744747,
+      "total_host_delta_v_m_s": 25.064421892207804
+    },
+    {
+      "spring_speed_m_s": 2.5,
+      "host_fuel_kg": 3.297703803847882,
+      "total_host_delta_v_m_s": 21.580442754001826
+    },
+    {
+      "spring_speed_m_s": 3.0,
+      "host_fuel_kg": 2.765117185195992,
+      "total_host_delta_v_m_s": 18.096429902674
+    }
+  ],
+  "installed_mass_difference_assumed_kg": 14.0,
+  "fuel_saved_by_volley_kg": 3.282269157479285,
+  "installed_plus_consumed_mass_difference_kg": 10.717730842520716,
+  "exclusions": [
+    "No global optimization over burn timing, release time, release direction or target assignment",
+    "Instantaneous host impulses and releases; no finite thrust, slew, thermal, power, pointing or structural constraints",
+    "3/5/7/9 m/s VOLLEY commands are hypothetical and exceed the 3\u20136 m/s first-article proposed range",
+    "The target construction favors prograde commanded release, so it is not an independent customer job",
+    "No tracking, covariance, drag, collision, recontact, disposal, reliability, cost or approved provider ICD",
+    "Device masses, spring speed, fuel capacity and host propulsion remain unsourced study assumptions"
+  ],
+  "numerical_checks": {
+    "max_fuel_change_kg": 1.2073897437403502e-11,
+    "max_transfer_position_residual_m": 3.7183021634236665e-05,
+    "max_terminal_position_residual_m": 0.0,
+    "max_terminal_velocity_residual_m_s": 0.0
+  }
+}
