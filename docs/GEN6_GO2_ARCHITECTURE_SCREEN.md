@@ -4,7 +4,7 @@
 
 ## Candidate set and decision
 
-Both layouts retain an ordinary, passive 3U spacecraft envelope. A reusable carrier pushes it along a common guide and is captured while the payload continues. A 1U adapter and four-slot feeder are **future interfaces**, not items in this first-article CAD. The first article's 3–6 m/s study band is a proposed measurement range; P130's 7 and 9 m/s mission commands remain unproven.
+Both layouts retain an ordinary, passive 3U spacecraft envelope. A reusable carrier pushes it along a common guide and is captured while the payload continues. A 1U adapter and four-slot feeder are **future interfaces**, not items in this first-article CAD. The [feeder concept trade](GEN6_FEEDER_CONCEPT_TRADE.md) now records fixed side cassettes as the user-selected packaging study and compares transfer mechanisms; none is selected or modeled as a working feeder. The first article's 3–6 m/s study band is a proposed measurement range; P130's 7 and 9 m/s mission commands remain unproven.
 
 | Criterion | A: captured permanent-magnet carrier | B: captured conductive-plate carrier |
 |:--|:--|:--|
