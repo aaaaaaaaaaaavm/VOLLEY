@@ -1063,6 +1063,8 @@ script value, no band and no operating point moved, all four checks pass unchang
 
 ## 2026-08-13 (twenty-fifth pass): the machine flies in vacuum, the test happens in a room
 
+**Current reading:** the room test was proposed and has not been run. A29 is a pre-test CFD calculation at an older model point; see its updated validation record for the claim boundary.
+
 | ID | Item | Detail |
 |---|---|---|
 | A29 | What air costs a ground test, computed for the first time | Every velocity in this repository is computed with no aerodynamic term. The TRL-5 step fires a mass simulator down a full 1.5 m track at sea level, and nothing said what the air was worth. Steady RANS (`simpleFoam`, k-ω SST) on the Gen5 sled and payload as generated, meshed by `snappyHexMesh` from `cad/stl`, not an idealised box. |

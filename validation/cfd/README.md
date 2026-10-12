@@ -1,9 +1,11 @@
 # A29: the ground-test air correction
 
-The machine flies in vacuum. The test happens in a room. Every velocity in this repository
-is computed with no aerodynamic drag, and the TRL-5 step in
-[`../../docs/QUALIFICATION_PLAN.md`](../../docs/QUALIFICATION_PLAN.md) fires a mass simulator
-down a full 1.5 m track at sea level. Nothing said what the air was worth.
+The proposed flight machine would operate in vacuum. A future ground test could take place
+in a room, but no VOLLEY shot or exit velocity has been measured. Every release velocity in
+the study is computed without aerodynamic drag. The TRL-5 plan in
+[`../../docs/QUALIFICATION_PLAN.md`](../../docs/QUALIFICATION_PLAN.md) calls for a full
+1.5 m track and a mass simulator at sea level; the CFD files estimate the air correction
+for a historical model point. They do not report a test result.
 
 Bands are declared in [`../A29_ground_test_air_drag.md`](../A29_ground_test_air_drag.md), committed
 at `949fdf4` before this directory existed.
