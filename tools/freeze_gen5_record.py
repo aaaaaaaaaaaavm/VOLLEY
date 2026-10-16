@@ -47,7 +47,7 @@ def build():
     for rel in paths:
         p = ROOT / rel
         records[rel] = {"sha256": hashlib.sha256(p.read_bytes()).hexdigest(), "bytes": p.stat().st_size}
-    return {"configuration_id": "VOLLEY-GEN5-EVALUATED-2026-10-16-R1",
+    return {"configuration_id": "VOLLEY-GEN5-EVALUATED-2026-10-16-R2",
             "status": "FROZEN_TECHNICAL_EVIDENCE_RECORD; ACADEMIC_SUBMISSION_APPROVAL_PENDING",
             "scope": "Twelve 4 kg 3U conceptual Gen5 payloads; evaluated adverse configuration",
             "geometry_changed_from_12_October": False,

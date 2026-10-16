@@ -9,7 +9,7 @@ A software gate passing means that its stated calculation is consistent. It does
 | Mass | 126.561588 kg; 10.546799 kg/3U | Primitive/fill/lump model; ±15% is assumed, not statistical | FAIL HISTORICAL MASS SCREEN | Sourceable installed BOM and measured mass properties |
 | Immediate orbit | 28.800775 km for imposed inertial 16.029 m/s | 0.02 m numerical band; no host or atmosphere in P115 | PASS TWO-BODY IDENTITY ONLY | Finite host, real release state and mission control |
 | Lifetime | P134 independent integration of shared static density | Numerical refinement below 0.5%; environmental/model-form error unbounded | CONDITIONAL MODEL OUTPUT | Time-varying atmosphere and current independent propagator |
-| Mission | P123 12-shot matched reference | Finite optimizer search and 64 prefix corners; no global proof | NO SAMPLED OPTION COMPLETES | Named mission/host, feasible optimization and full resources |
+| Mission | Matched twelve-shot reference | Finite optimizer search and 64 prefix corners; no global proof | NO SAMPLED OPTION COMPLETES | Named mission/host, feasible optimization and full resources |
 | Release/contact | A34 zero-rate inference withdrawn | No measured compliance, preload or friction law | UNVERIFIED | Contact model and instrumented release |
 | Structure/thermal/fields | Historical isolated cases only | No same-revision assembly/load/mesh qualification closure | UNVERIFIED | Updated FE, thermal, exposure and payload interface |
 | Gen6 feeder | R2/R0 nominal states and sampled paths | No continuous tolerance/load/fault proof; ordinal scores not probabilities | UNSELECTED | Locks, docking, containment and same-boundary trade |

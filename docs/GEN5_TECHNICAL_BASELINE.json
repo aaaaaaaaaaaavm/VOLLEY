@@ -1,5 +1,5 @@
 {
-  "configuration_id": "VOLLEY-GEN5-EVALUATED-2026-10-16-R1",
+  "configuration_id": "VOLLEY-GEN5-EVALUATED-2026-10-16-R2",
   "status": "FROZEN_TECHNICAL_EVIDENCE_RECORD; ACADEMIC_SUBMISSION_APPROVAL_PENDING",
   "scope": "Twelve 4 kg 3U conceptual Gen5 payloads; evaluated adverse configuration",
   "geometry_changed_from_12_October": false,
@@ -82,8 +82,8 @@
       "bytes": 539
     },
     "analysis/gen5_evidence_audit.py": {
-      "sha256": "5b6427f4cab3ce998332b29d5526c9fb6993012a1c6b5505117222d77c93b689",
-      "bytes": 16036
+      "sha256": "4a225c4e61ed38de13902768ab073c0a5ec747f7cba226fd5f59bf2c6489cacd",
+      "bytes": 16042
     },
     "analysis/gen5_lifetime_crosscheck.py": {
       "sha256": "b042981e63f42574c7b237b7d8df3ead7f879da58d2657a480d27b7baaf129d6",
@@ -182,12 +182,12 @@
       "bytes": 5737
     },
     "docs/GEN5_UNCERTAINTY_AND_ACCEPTANCE.md": {
-      "sha256": "6d78855b3dd60f7fd15e3caadcc3fbcaae295ebe7d030984a105f60170e06bd7",
-      "bytes": 3802
+      "sha256": "942a9df794f2eb3c32218de487584d4b266f34b677176a5995c7c711667ed398",
+      "bytes": 3801
     },
     "docs/GEN5_ORBIT_AND_MISSION_DISPOSITION.md": {
-      "sha256": "6a366b367bd79a8c6283e1879d7a252402b6648f35046d1fb1010cca0064b1bc",
-      "bytes": 3165
+      "sha256": "41e4ae5282436891903714c69615ff595975632bc707639a928be524e1029482",
+      "bytes": 3172
     },
     "docs/GEN5_STRUCTURAL_DISPOSITION.md": {
       "sha256": "8e1f63f16f330a293a51981e06c04b49da44e3353e8b642e91458906c4db63cd",

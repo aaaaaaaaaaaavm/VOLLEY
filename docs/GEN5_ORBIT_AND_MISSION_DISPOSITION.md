@@ -28,4 +28,4 @@ The single-event ideal solutions reach the same state by combining release with 
 
 No matched onboard-propulsion, drag or quoted OTV service model is available. Those alternatives remain unevaluated, rather than being assigned losing scores. No customer, provider, continuous collision-clearance, disposal or economic advantage is established.
 
-[P134 inputs and result](../analysis/results/gen5_lifetime_crosscheck.json) · [P123 matched case](../analysis/results/matched_mission_reference.json) · [A15 corrected orbital screen](../validation/A15_poem_campaign.md).
+[P134 inputs and result](../analysis/results/gen5_lifetime_crosscheck.json) · [Matched twelve-shot case](../analysis/results/matched_mission_reference.json) · [A15 corrected orbital screen](../validation/A15_poem_campaign.md).
