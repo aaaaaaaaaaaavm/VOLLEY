@@ -1,0 +1,70 @@
+{
+  "analysis": "A15 R1 current-baseline review",
+  "solver": "GMAT R2026a",
+  "status": "NATIVE EXECUTED; provisional until independent review",
+  "relative_speed_m_s": 16.029,
+  "payload_delta_v_m_s": 15.818092105263158,
+  "sample_count_per_satellite": 59590,
+  "start_utc": "2027-01-01T00:00:00",
+  "end_utc": "2027-04-01T00:00:00",
+  "elapsed_days": 90.0,
+  "largest_report_step_s": 163.769,
+  "initial_circular_raan_span_deg": 0.274888000000999,
+  "minimum_sampled_separation_km": 0.24722466850447095,
+  "minimum_sampled_pair": [
+    11,
+    12
+  ],
+  "minimum_sampled_time": "2027-01-09T00:42:48.599000",
+  "bands": [
+    {
+      "band": 1,
+      "value": 0.10510800000000131,
+      "limit": "<=0.13 deg",
+      "pass": true
+    },
+    {
+      "band": 2,
+      "value": 113.09403737546108,
+      "limit": ">=100 km",
+      "pass": true
+    },
+    {
+      "band": 3,
+      "value": 0.14658200000008037,
+      "limit": "<=0.75 deg",
+      "pass": true
+    },
+    {
+      "band": 4,
+      "value": 14.55854535100002,
+      "limit": ">=5 deg",
+      "pass": true
+    },
+    {
+      "band": 5,
+      "value": 2.8824104081063372e-09,
+      "limit": "<=0.5 pct",
+      "pass": true,
+      "caveat": "GMAT initializes with generated SMA; this is an input consistency check"
+    },
+    {
+      "band": 6,
+      "value": 0.24722466850447095,
+      "limit": ">0.1 km",
+      "sampled_pass": true,
+      "caveat": "Adaptive output samples do not prove continuous-time clearance"
+    }
+  ],
+  "band7": {
+    "allocated_slot_h": 4.0,
+    "first_to_last_shot_h": 3.6666666666666665
+  },
+  "band8": "VOID; no named host manoeuvre authority",
+  "limitations": [
+    "Fixed 300 kg host per shot; no recoil propagation or mass depletion",
+    "Preloaded post-release orbits, not a real sequential release simulation",
+    "Analytic backward propagation neglects J2 and drag during up to 3.67 h",
+    "R2/R3 reference orbit provenance remains unverified"
+  ]
+}

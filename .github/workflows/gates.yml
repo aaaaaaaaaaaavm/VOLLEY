@@ -97,6 +97,13 @@ jobs:
         run: |
           python3 analysis/combined_release_errors.py --check
           python3 analysis/reference_cell_mechanics.py --check
+      - name: frozen Gen5 evidence and numerical lifetime
+        run: |
+          python3 analysis/gen5_evidence_audit.py --check
+          python3 analysis/gen5_lifetime_crosscheck.py --check
+          python3 tools/freeze_gen5_record.py --check
+          python3 validation/gmat/test_orbit_state.py
+          python3 tools/check_figure_inventory.py
       - name: links
         run: python3 tools/check_links.py
       - name: deployed website routes

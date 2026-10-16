@@ -10,3 +10,7 @@ The maintained engineering record is the [VOLLEY repository](https://github.com/
 - [Validation records](https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/validation)
 
 Gen5 is a computational evaluation with an adverse 3U mass and assembly finding. Gen6 is a separate research programme. No VOLLEY hardware has been built, tested, qualified or flown.
+
+## Evaluated Gen5 evidence revision, 16 October 2026
+
+[Technical baseline](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/GEN5_TECHNICAL_BASELINE.json), [mass and interface ledger](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/GEN5_MASS_AND_INTERFACE_LEDGER.md), and [P134 lifetime numerical check](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/validation/P134_gen5_lifetime_crosscheck.md) retain failed geometry, mass and mission criteria. Shared-atmosphere numerical agreement and corrected archived GMAT readback do not establish an achieved release, real lifetime or hardware qualification.

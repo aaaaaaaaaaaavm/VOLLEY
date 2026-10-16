@@ -1,7 +1,14 @@
 # A34: does the rattle settle before release?
 
-Closes the analysis half of [P41](../OPEN_PROBLEMS.md), and with it kill criterion 4's last
-open question.
+**Current disposition: historical scalar-restitution model; no release-quality closure.**
+The zero residual-rate result assumes away compliant contact energy, preload,
+friction and three-dimensional force sharing. It cannot establish zero tip-off,
+settling before release, or safe operation without preload. A selected contact
+geometry, measured contact law and nonlinear dynamic cross-check are required.
+The dated calculation below is retained as an assumption-bound record and does
+not close [P41](../OPEN_PROBLEMS.md) or a qualification criterion.
+
+## Historical calculation
 
 [A23](A23_tipoff_release.md) found the release itself comfortable, the payload coasts 12.2 ms
 with commanded force already at zero, and at the ~1 N residual that leaves, the mechanism has

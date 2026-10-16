@@ -2,14 +2,14 @@
 title: "VOLLEY Gen5 — computational evidence review"
 subtitle: "Fixed academic configuration and negative design findings"
 author: "VOLLEY engineering record"
-date: "12 October 2026"
+date: "16 October 2026"
 header-includes:
   - \usepackage{graphicx}
 ---
 
 # Abstract
 
-Gen5 is a computational study of a sequential electromagnetic deployer for twelve 3U CubeSats. Its historical periodic-force model gives 16.029 m/s and 10.068 g, but a finite-array calculation challenges that speed; no current motor rating is selected. This report gathers the electromagnetic, power, dynamics, orbit, mass, CAD and mission evidence into a claim-by-claim review. It records decisive failures: 10.547 kg of modeled deployer per 3U customer fails two mass comparisons; a side-fed CAD reference has an 11 mm width shortfall and 17 intersecting leaf-solid pairs, including sled/track and sled/stator; no sampled twelve-shot option closes. An independent 2-D finite-element solve confirms the finite-stator trend; a separate depth-resolved 3-D numerical formulation reproduces 1.042 kJ ideal work under shared assumptions. Circuit and selected-hardware effects remain open. The immediate two-body orbit change has a Cartesian check for an assumed historical 16.029 m/s release; the 1.60 lifetime multiplier has no independent rerun at that input. **VOLLEY itself has no built, fired, measured, qualified or flown hardware**.
+Gen5 is a computational study of a sequential electromagnetic deployer for twelve 3U CubeSats. Its historical periodic-force model gives 16.029 m/s and 10.068 g, but a finite-array calculation challenges that speed; no current motor rating is selected. This report gathers the electromagnetic, power, dynamics, orbit, mass, CAD and mission evidence into a claim-by-claim review. It records decisive failures: 10.547 kg of modeled deployer per 3U customer fails two mass comparisons; a side-fed CAD reference has an 11 mm width shortfall and 17 intersecting leaf-solid pairs, including sled/track and sled/stator; no sampled twelve-shot option closes. An independent 2-D finite-element solve confirms the finite-stator trend; a separate depth-resolved 3-D numerical formulation reproduces 1.042 kJ ideal work under shared assumptions. Circuit and selected-hardware effects remain open. The immediate two-body orbit change has a Cartesian check for an assumed historical 16.029 m/s release; P134 numerically reproduces the 1.60 ratio under the same static atmosphere; real lifetime remains unvalidated. **VOLLEY itself has no built, fired, measured, qualified or flown hardware**.
 
 # 1. Configuration and evidence classes
 
@@ -72,7 +72,7 @@ A separate [historical energy and mass algebra audit](../validation/P117_rated_e
 
 # 3. Orbit, timing and complete-manifest checks
 
-For a 450 km circular host reference, an **assumed historical 16.029 m/s** instantaneous tangential impulse gives a **28.800775 km** semi-major-axis rise in the [separate Cartesian DOP853 propagation](../validation/P115_rated_orbit_cartesian.md). The two-body numerical band is 0.02 m and passes. This confirms immediate orbital geometry for that assumed state. It does not independently establish the stated **1.60 lifetime multiplier**, which depends on a static atmosphere at mean activity and has no independent rerun at that input. It does not establish thrust, finite release duration or host acceptability.
+For a 450 km circular host reference, an **assumed historical 16.029 m/s** instantaneous tangential impulse gives a **28.800775 km** semi-major-axis rise in the [separate Cartesian DOP853 propagation](../validation/P115_rated_orbit_cartesian.md). The two-body numerical band is 0.02 m and passes. This confirms immediate orbital geometry for that assumed state. It does not independently establish the stated **1.60 lifetime multiplier**, which depends on a static atmosphere at mean activity and has only a shared-atmosphere numerical cross-check, not environmental validation. It does not establish thrust, finite release duration or host acceptability.
 
 \begin{center}
 \includegraphics[width=0.78\linewidth]{../figures/rated_orbit_crosscheck.png}\\
@@ -103,3 +103,17 @@ The college rubric calls for achievement of objectives, technical quality, valid
 # Reproduce and audit
 
 From a clean checkout, install the pinned or declared Python dependencies, run `./tools/verify_all.sh`, then inspect its report and the exact source/result hashes. Rebuild the new orbit figure with `python3 analysis/rated_orbit_independent.py`. Rebuild the Gen5 STEP parts with `python3 cad/build_gen5.py --check`, the reference assembly with `python3 cad/build_review_assembly.py`, and the native handover with `/usr/bin/python3 cad/freecad_export_review.py` on FreeCAD 1.0. See [P115](../validation/P115_rated_orbit_cartesian.md), [P116](../validation/P116_gen5_assembly_packaging.md), the [CAD PDF](../cad/GEN5_CAD_REVIEW.pdf) and the [market/customer audit](../MARKET_AND_CUSTOMER_FIT.md) for source-specific limits.
+
+# Reconciled engineering record, 16 October 2026
+
+The 23-line historical mass model sums to 126.561588 kg dry, with an assumed axial CG of 0.457690 m. This is not a complete Gen5 material extraction or full inertia tensor. Potential enclosure/thermal/bracket allocation overlap remains unresolved; no unverified mass credit is taken. The original mass failure is retained.
+
+All 17 evaluated Gen5 and five widened-R1 intersections are classified as confirmed conflicts or unresolved adapter/payload proxy intersections. None is accepted as intentional contact without an interface definition; no geometry repair is claimed. Historical isolated FE results do not qualify the failed assembly.
+
+P134 uses a separate orbit-averaged DOP853 integration of the shared static atmosphere. At imposed inertial increments of 2.5, 12.448437 and 16.029 m/s it gives lifetime ratios of 1.082110, 1.451222 and 1.602165. The maximum refinement change is 0.000145%, below its 0.5% numerical band. Space weather, ballistic coefficient history and actual achieved release remain outside that evidence.
+
+The corrected A15 R1 archive was executed in GMAT R2026a on 30 September and reparsed on 16 October. Its circular RAAN span is 14.558545°; the focused window minimum sampled separation is 190.149944 m. No continuous-clearance, coupled sequential host or complete mission verdict follows. The 367° historical span is withdrawn.
+
+![Independent numerical lifetime check under a shared static atmosphere; imposed input speeds, no environmental validation.](../figures/gen5_lifetime_numerical_check.png){width=92%}
+
+[Mass and interface ledger](../docs/GEN5_MASS_AND_INTERFACE_LEDGER.md) · [Uncertainty and acceptance](../docs/GEN5_UNCERTAINTY_AND_ACCEPTANCE.md) · [Solver boundary](../docs/SOLVER_EVIDENCE_BOUNDARY.md).

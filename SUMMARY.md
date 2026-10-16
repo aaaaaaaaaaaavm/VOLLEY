@@ -16,10 +16,12 @@
 | Independent 2-D finite-element screen | **1.082 kJ** ideal in-plane work | Numerical method check with stated limits, not physical validation |
 | Matched twelve-shot mission | **No sampled case closes** | Bounded assumed-host comparison, not proof that every possible mission fails |
 
-[Full computational report](reports/GEN5_COMPUTATIONAL_REVIEW.pdf) · [FreeCAD/STEP report](cad/GEN5_CAD_REVIEW.pdf) · [Validation register](validation/README.md) · [Open review gates](docs/GEN5_FREEZE_READINESS.md) · [Market and spacecraft fit](MARKET_AND_CUSTOMER_FIT.md).
+[Full computational report](reports/GEN5_COMPUTATIONAL_REVIEW.pdf) · [FreeCAD/STEP report](cad/GEN5_CAD_REVIEW.pdf) · [Validation register](validation/README.md) · [Evidence disposition](docs/GEN5_UNCERTAINTY_AND_ACCEPTANCE.md) · [Market and spacecraft fit](MARKET_AND_CUSTOMER_FIT.md).
 
 ## What follows
 
 R1 is an **unselected widened geometry candidate** with twelve scripted 3U envelope routes cleared; actuator, restraint, tolerances, installed mass and host fit remain open. Gen6 is the proposed **first instrumented prototype programme** for a mission-derived command range; 1 km/s is separate long-range research, not an achieved release speed. A named payload and provider interface, complete mechanism and budgets, fair mission comparison, independent review and future instrumented hardware tests are needed before a product claim. [Current status](docs/NEXT_GENERATION_STATUS.md) · [prototype-to-flight gates](docs/GEN6_PROTOTYPE_TO_FLIGHT_ROADMAP.md).
 
 The [thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis), [IEEE-formatted paper companion](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) and [lab vault](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) are each self-contained. The paper has not been submitted; no IEEE venue is selected.
+
+The legacy A1 field check is **partial**, including two missed field bands, and used scikit-fem rather than FEMM. A15 now records the corrected R1 GMAT archive; its sampled separations do not prove continuous clearance. [Solver boundary](docs/SOLVER_EVIDENCE_BOUNDARY.md).

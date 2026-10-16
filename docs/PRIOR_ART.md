@@ -197,3 +197,14 @@ CubeSat.
 | `docs/RELATED_WORK.md` | "Direct competitors" section added; it had none |
 | `docs/BENCHTOP_TESTS.md` | B-1 and B-2 bands derived from an error budget rather than chosen, by `validation/bench/bench_predict.py`; two procedural traps documented |
 | Phase II candidate | Adopt reachable-domain analysis in place of, or alongside, the lifetime multiplier |
+
+## Current evidence boundary, 16 October 2026
+
+The 2022 Zhao stacked electromagnetic transport/release concept is prior art.
+Q-SAT electromagnetic lock/ejection flight heritage (Acta Astronautica 184,
+180–192, DOI 10.1016/j.actaastro.2021.03.026) must be distinguished from
+VOLLEY's proposed reusable linear-motor carrier. Metadata/abstract evidence
+for that work and newer separation benchmarks does not replace a full-text
+review of measured conditions. No claim that EMALS is the only operational
+electromagnetic launch system is made. The defensible VOLLEY contribution
+is its bounded system-level computational disposition, including adverse results.

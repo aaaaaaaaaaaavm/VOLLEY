@@ -1,0 +1,21 @@
+{
+  "fine_rows": 347,
+  "window_start": "2027-01-09T00:28:48",
+  "window_end": "2027-01-09T00:57:36",
+  "largest_sample_gap_s": 5.0,
+  "minimum_sampled_separation_km": 0.19014994384883488,
+  "sampled_pair_time": [
+    11,
+    12,
+    "2027-01-09T00:42:53"
+  ],
+  "minimum_linear_interpolation_km": 0.18028583598145909,
+  "linear_pair_interval": [
+    11,
+    12,
+    "2027-01-09T00:42:53",
+    "2027-01-09T00:42:58",
+    0.4894259124351128
+  ],
+  "caveat": "A sampled and interpolated separation does not bound continuous trajectory clearance."
+}

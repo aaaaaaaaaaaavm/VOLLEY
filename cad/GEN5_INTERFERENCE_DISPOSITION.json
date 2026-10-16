@@ -1,0 +1,248 @@
+{
+  "census_sha256": "ea9a5882b4628359b7192ffdacb3d863664823da8f97cc65bd7c870e82b21ae7",
+  "classification_rule": "No nonzero solid penetration is accepted as contact without a drawing or physical interface definition. Classification closes interpretation only, never a geometry repair.",
+  "pairs": [
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Track",
+      "part_b": "Sled",
+      "intersection_mm3": 82982.934,
+      "classification": "CONFIRMED_MOVING_GEOMETRY_CONFLICT",
+      "cause": "Roller/body proxy occupies uncut longeron volume.",
+      "correction": "New rail corridor, bearing gaps and deflected sweep; rerun dynamics/mass/brake.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Interface_ESPA",
+      "part_b": "Track",
+      "intersection_mm3": 70425.0,
+      "classification": "UNRESOLVED_ADAPTER_PROXY_INTERSECTION",
+      "cause": "Adapter/hub/gusset proxy occupies another part; no joint drawing proves intended contact.",
+      "correction": "Replace with parametric adapter, explicit datum, cutouts and verified load path.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Track",
+      "part_b": "Magazine_S",
+      "intersection_mm3": 32915.0,
+      "classification": "CONFIRMED_PACKAGING_FAILURE",
+      "cause": "Specified track and side cassettes require 537 mm in 526 mm clear width.",
+      "correction": "Separate wider or rearranged configuration, with complete new budgets.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Track",
+      "part_b": "Magazine_P",
+      "intersection_mm3": 32915.0,
+      "classification": "CONFIRMED_PACKAGING_FAILURE",
+      "cause": "Specified track and side cassettes require 537 mm in 526 mm clear width.",
+      "correction": "Separate wider or rearranged configuration, with complete new budgets.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Interface_ESPA",
+      "part_b": "Stator",
+      "intersection_mm3": 12600.0,
+      "classification": "UNRESOLVED_ADAPTER_PROXY_INTERSECTION",
+      "cause": "Adapter/hub/gusset proxy occupies another part; no joint drawing proves intended contact.",
+      "correction": "Replace with parametric adapter, explicit datum, cutouts and verified load path.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Interface_ESPA",
+      "part_b": "Enclosure",
+      "intersection_mm3": 10228.546,
+      "classification": "UNRESOLVED_ADAPTER_PROXY_INTERSECTION",
+      "cause": "Adapter/hub/gusset proxy occupies another part; no joint drawing proves intended contact.",
+      "correction": "Replace with parametric adapter, explicit datum, cutouts and verified load path.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Stator",
+      "part_b": "Sled",
+      "intersection_mm3": 6300.0,
+      "classification": "CONFIRMED_MOVING_GEOMETRY_CONFLICT",
+      "cause": "Backstop crosses the active stator proxy.",
+      "correction": "Redesign backstop/contact and coil keep-out in a separately numbered revision.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_S",
+      "part_b": "Payload_S03",
+      "intersection_mm3": 6193.785,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_P",
+      "part_b": "Payload_P03",
+      "intersection_mm3": 6193.785,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_S",
+      "part_b": "Payload_S04",
+      "intersection_mm3": 5940.457,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_P",
+      "part_b": "Payload_P04",
+      "intersection_mm3": 5940.457,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_S",
+      "part_b": "Payload_S02",
+      "intersection_mm3": 5703.5,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_S",
+      "part_b": "Payload_S05",
+      "intersection_mm3": 5703.5,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_S",
+      "part_b": "Payload_S06",
+      "intersection_mm3": 5703.5,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_P",
+      "part_b": "Payload_P02",
+      "intersection_mm3": 5703.5,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_P",
+      "part_b": "Payload_P05",
+      "intersection_mm3": 5703.5,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "evaluated_gen5",
+      "part_a": "Magazine_P",
+      "part_b": "Payload_P06",
+      "intersection_mm3": 5703.5,
+      "classification": "UNRESOLVED_PAYLOAD_ACCOMMODATION_INTERSECTION",
+      "cause": "Full payload proxy penetrates cassette wall/septum/rail representation; no approved contact geometry.",
+      "correction": "Define keep-outs, permitted rails, pitch and tolerance; verify every stored envelope.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "unselected_wide_r1",
+      "part_a": "Track",
+      "part_b": "Sled",
+      "intersection_mm3": 82982.934,
+      "classification": "CONFIRMED_MOVING_GEOMETRY_CONFLICT",
+      "cause": "Roller/body proxy occupies uncut longeron volume.",
+      "correction": "New rail corridor, bearing gaps and deflected sweep; rerun dynamics/mass/brake.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "unselected_wide_r1",
+      "part_a": "Interface_ESPA",
+      "part_b": "Track",
+      "intersection_mm3": 70425.0,
+      "classification": "UNRESOLVED_ADAPTER_PROXY_INTERSECTION",
+      "cause": "Adapter/hub/gusset proxy occupies another part; no joint drawing proves intended contact.",
+      "correction": "Replace with parametric adapter, explicit datum, cutouts and verified load path.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "unselected_wide_r1",
+      "part_a": "Interface_ESPA",
+      "part_b": "Stator",
+      "intersection_mm3": 12600.0,
+      "classification": "UNRESOLVED_ADAPTER_PROXY_INTERSECTION",
+      "cause": "Adapter/hub/gusset proxy occupies another part; no joint drawing proves intended contact.",
+      "correction": "Replace with parametric adapter, explicit datum, cutouts and verified load path.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "unselected_wide_r1",
+      "part_a": "Interface_ESPA",
+      "part_b": "Wide_Enclosure_R1",
+      "intersection_mm3": 10228.546,
+      "classification": "UNRESOLVED_ADAPTER_PROXY_INTERSECTION",
+      "cause": "Adapter/hub/gusset proxy occupies another part; no joint drawing proves intended contact.",
+      "correction": "Replace with parametric adapter, explicit datum, cutouts and verified load path.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    },
+    {
+      "configuration": "unselected_wide_r1",
+      "part_a": "Stator",
+      "part_b": "Sled",
+      "intersection_mm3": 6300.0,
+      "classification": "CONFIRMED_MOVING_GEOMETRY_CONFLICT",
+      "cause": "Backstop crosses the active stator proxy.",
+      "correction": "Redesign backstop/contact and coil keep-out in a separately numbered revision.",
+      "engineering_status": "NOT_REPAIRED",
+      "study_disposition": "RETAIN_FAILED_OR_UNRESOLVED_CONFIGURATION; NO CLEARANCE OR INTENDED CONTACT CLAIM"
+    }
+  ]
+}

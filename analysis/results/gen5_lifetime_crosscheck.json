@@ -1,0 +1,81 @@
+{
+  "status": "NUMERICAL_CROSSCHECK_SHARED_STATIC_ATMOSPHERE_ONLY",
+  "inputs": {
+    "altitude_km": 450,
+    "BC_kg_m2": 61,
+    "stop_perigee_km": 120,
+    "speed_meaning": "imposed inertial tangential payload increment; host omitted"
+  },
+  "source_sha256": "b042981e63f42574c7b237b7d8df3ead7f879da58d2657a480d27b7baaf129d6",
+  "runs": [
+    {
+      "speed_input_m_s": 2.5,
+      "lifetime_years": 1.411022539006018,
+      "quadrature_nodes": 360,
+      "rtol": 1e-07,
+      "density_multiplier": 1.0,
+      "evaluations": 1805,
+      "base_lifetime_years": 1.3039545974817006,
+      "lifetime_ratio": 1.082110176022306
+    },
+    {
+      "speed_input_m_s": 12.448437098832297,
+      "lifetime_years": 1.8923274223840898,
+      "quadrature_nodes": 360,
+      "rtol": 1e-07,
+      "density_multiplier": 1.0,
+      "evaluations": 2141,
+      "base_lifetime_years": 1.3039545974817006,
+      "lifetime_ratio": 1.451221864655948
+    },
+    {
+      "speed_input_m_s": 16.029,
+      "lifetime_years": 2.089153028524559,
+      "quadrature_nodes": 360,
+      "rtol": 1e-07,
+      "density_multiplier": 1.0,
+      "evaluations": 2429,
+      "base_lifetime_years": 1.3039545974817006,
+      "lifetime_ratio": 1.6021670022555197
+    },
+    {
+      "speed_input_m_s": 2.5,
+      "lifetime_years": 1.4110225667163472,
+      "quadrature_nodes": 720,
+      "rtol": 1e-09,
+      "density_multiplier": 1.0,
+      "evaluations": 2597,
+      "base_lifetime_years": 1.303954834699167,
+      "lifetime_ratio": 1.082110000414149
+    },
+    {
+      "speed_input_m_s": 12.448437098832297,
+      "lifetime_years": 1.8923274852474152,
+      "quadrature_nodes": 720,
+      "rtol": 1e-09,
+      "density_multiplier": 1.0,
+      "evaluations": 2909,
+      "base_lifetime_years": 1.303954834699167,
+      "lifetime_ratio": 1.451221648857179
+    },
+    {
+      "speed_input_m_s": 16.029,
+      "lifetime_years": 2.0891503793033634,
+      "quadrature_nodes": 720,
+      "rtol": 1e-09,
+      "density_multiplier": 1.0,
+      "evaluations": 6293,
+      "base_lifetime_years": 1.303954834699167,
+      "lifetime_ratio": 1.6021646791051223
+    }
+  ],
+  "max_ratio_refinement_fraction": 1.4500072480494453e-06,
+  "numerical_band_fraction": 0.005,
+  "limitations": [
+    "same static density table as the historical model; no independent atmosphere",
+    "uniform density or ballistic-coefficient scaling cannot test solar invariance",
+    "no measured orbit, time-varying space weather, attitude or area distribution",
+    "no proof that the launcher delivers any input speed",
+    "not a GMAT/Orekit lifetime or mission-acceptance result"
+  ]
+}

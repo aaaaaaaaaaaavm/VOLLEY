@@ -1,17 +1,14 @@
 # Qualification and environmental test plan
 
-Status: written, none of it run. Nothing in this project has been built, so every entry
-below is a specification. It exists because a design study with eight analysis run sheets and
-no test campaign has only described half of what qualifying hardware requires, and because
-the levels an VOLLEY unit must survive are already what sets the 25 g payload cap the whole
-architecture is designed around.
+**Status: proposed physical validation; every test below is unrun.** No VOLLEY
+hardware has been built. The plan describes the evidence a later article would
+need; it is not a qualification result or an approved test specification.
 
-Read alongside `validation/` (the analyses) and `docs/BENCHTOP_TESTS.md` (the cheap
-sub-scale experiments that come first). Levels reference NASA GEVS (GSFC-STD-7000) and the
-CubeSat Design Specification, both of which the paper already cites.
-
-Nothing here is a substitute for the launch provider's own ICD. Where this plan and a
-vehicle's user guide disagree, the user guide wins.
+Provider and spacecraft interface documents must establish applicable environments,
+limits, margins, notching and acceptance procedures. GEVS and the CubeSat Design
+Specification provide context; neither establishes a universal 25 g payload limit.
+The 5/10/25 g cases are provisional sensitivity inputs. Random-vibration RMS levels
+cannot be substituted for quasi-static strength or inflicted release-load limits.
 
 ---
 
@@ -27,8 +24,7 @@ Two directions, and they are easy to conflate:
 
 The second column is the unusual one. A spring deployer imparts 1-2 m/s and is magnetically
 inert; VOLLEY carries a Halbach array centimetres from satellites it has not built, and fires
-a 330 A pulse next to them. T-6 and T-7 exist for that reason and have no counterpart in a
-spring dispenser's qualification.
+a 330 A pulse next to them. T-6 and T-7 address this electromagnetic configuration. Conventional dispensers also require mission-specific compatibility and release-environment verification.
 
 ---
 
@@ -123,23 +119,26 @@ envelope within 20 % of that model, and inside the magnetometer limit of whateve
 is manifested. A customer flying a magnetometer or a magnetorquer needs this number measured,
 not modelled, and the far-field values are the least trustworthy row in the whole field model.
 
-## T-7: Ejection environment inflicted on the payload
+## T-7: Payload-specific inflicted release environment
 
-The test that decides whether "unmodified CubeSat" is true.
+An instrumented inert 3U surrogate would record axial/lateral acceleration, shock,
+angular rate, restraint unloading and contact across the actual release stroke.
+The historical periodic-force model predicts 10.068 g, but its release-speed claim
+is challenged. The 5/10/25 g sensitivity cases are not payload allowables.
 
-Instrument a 3U mass simulator with accelerometers and rate gyros, on the real machine,
-through the real stroke. Pass criteria: axial acceleration <= 25 g (the model says 10.7 g,
-so there is margin to lose); tip-off within the declared band, noting that the band itself
-is unresolved, since `validation/A7_separation_chrono.md` declares <= 5 °/s citing NRCSD-E
-while the sibling NRCSD ICD says 2 °/s (`docs/LANDSCAPE.md`); and lateral and rotational
-loads inside CDS qualification.
+Pass bands must come from the selected spacecraft and host interface documents.
+The checked NRCSD IDD Rev. - gives 0.5–2.0 m/s deployment and up to 5°/s per axis
+for its ISS interface. Those values do not approve a VOLLEY release. The CDS does
+not supply a universal quasi-static or rotational qualification limit.
 
 ## T-8: Life and reuse
 
-The sled is reused twelve times per campaign and the machine is intended to be
-multi-mission. Run 200 shots, ten times a campaign, and inspect rollers, rails, magnet
-bonds and the retention-gate mechanism between blocks. Closes the reuse half of E21 and
-gives E20 its first measured arrest profile.
+A provisional endurance study could use 200 shots with inspections of rollers,
+rails, magnet bonds, retention, brake and reset behavior between blocks. That is
+16 complete twelve-shot campaigns plus eight shots, not ten campaigns.
+The actual required count, duty cycle, environments, wear limits and statistical
+reliability demonstration must be defined from a service requirement before testing.
+No endurance run has occurred, and a proposed shot count closes no reuse criterion.
 
 ---
 

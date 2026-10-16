@@ -31,8 +31,9 @@ and after P16 the ratio carries the same uncertainty as everything else derived 
 
 Conjunction results are SCREENING LEVEL. They do not replace per-shot COLA products.
 
-Provenance: model output. The lifetime multiplier and the 30-day decay have been run
-against GMAT R2022a (A15); nothing here has been measured.
+Provenance: model output. Historical decay summaries use older A5 inputs; A15 is a separate
+preloaded-orbit screen. Neither validates the current lifetime multiplier.
+Nothing here has been measured.
 """
 import numpy as np
 import math
@@ -48,8 +49,7 @@ import motor_model as mm
 # already (P16, P19).
 RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 
-MU = 3.986004418e14
-RE = 6378.137e3
+from orbit_core import MU, RE  # dependency-free constants and generator input check
 J2 = 1.08263e-3
 
 # (base_alt_km, rho0 kg/m^3, scale height km) -- exponential atmosphere, mean activity

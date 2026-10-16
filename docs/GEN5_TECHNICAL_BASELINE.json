@@ -1,0 +1,293 @@
+{
+  "configuration_id": "VOLLEY-GEN5-EVALUATED-2026-10-16-R1",
+  "status": "FROZEN_TECHNICAL_EVIDENCE_RECORD; ACADEMIC_SUBMISSION_APPROVAL_PENDING",
+  "scope": "Twelve 4 kg 3U conceptual Gen5 payloads; evaluated adverse configuration",
+  "geometry_changed_from_12_October": false,
+  "hardware_build_or_test": false,
+  "component_rated_release_speed": null,
+  "exceptions": [
+    "17 Gen5 solid intersections; 11 mm side-fit failure",
+    "historical 16.029 m/s periodic-force output challenged; ideal finite screen not a rating",
+    "126.561588 kg historical mass model; installed BOM and full inertia unavailable",
+    "no sampled twelve-shot matched campaign completes; not a global infeasibility proof",
+    "lifetime numerical agreement uses shared static atmosphere; actual lifetime unvalidated",
+    "release/contact, structural/thermal, magnetic compatibility and provider interfaces unverified",
+    "native solver and hardware validation gaps are listed in SOLVER_EVIDENCE_BOUNDARY",
+    "guide ruling, approved formatting, independent review and submission are separate gates",
+    "Gen6 R0/R2 and future speed/feeder/product proposals are excluded from Gen5 achieved results"
+  ],
+  "files": {
+    "analysis/mass_properties.py": {
+      "sha256": "b8547e763806b0c740ee342c3278d85b1295d18f7cfe52be5239c9136c08d777",
+      "bytes": 6924
+    },
+    "analysis/motor_model.py": {
+      "sha256": "aafef3beb496e8db3bb96c9314bd604a5976c24ccc856335bf2db67f3f8fa0f2",
+      "bytes": 24583
+    },
+    "analysis/astro.py": {
+      "sha256": "95da3b9eb490a15cc04e2a73a1aa7c5d1427acb5eccb67d4887b1e019167f2a9",
+      "bytes": 11579
+    },
+    "analysis/gen5_finite_force_map.py": {
+      "sha256": "4b0ae9ea54bbb24ccbda5e34e2e0e1b3eb25c52d85e68313770c583539e9f107",
+      "bytes": 11463
+    },
+    "analysis/gen5_finite_force_fem2d.py": {
+      "sha256": "5d6f2eefd8b9cc90f30642e5f9bafcbcbf8ee401449ab4a9c7b769a7679879e2",
+      "bytes": 13752
+    },
+    "analysis/gen5_finite_force_surface3d.py": {
+      "sha256": "842c4a5133c3704198a70d5bbba3be5ec2cd63246f7c8d786a8ed4bb4e49bf6d",
+      "bytes": 14775
+    },
+    "analysis/gen5_finite_force_sensitivity.py": {
+      "sha256": "4800412216e6c758e163b7587f4b2622b76ae26f2be785fd3104f340d96d26e1",
+      "bytes": 9040
+    },
+    "analysis/gen5_finite_coupled_shot.py": {
+      "sha256": "0c3b3144d92b2758429a001dd54ddef5c019f26ab02d600c6afdda6155340d05",
+      "bytes": 9494
+    },
+    "analysis/gen5_voltage_limited_screen.py": {
+      "sha256": "58838dc581725ef98a27712164a8a7ac11bc7b6015328fe4af44ac042ef0027d",
+      "bytes": 12558
+    },
+    "analysis/gen5_release_arrest_bounds.py": {
+      "sha256": "f9ddcf14e914ca438a91dc0b38f5dce6cb436fdfc86b4731fdbc39f8d00c6370",
+      "bytes": 8238
+    },
+    "analysis/rated_energy_mass_audit.py": {
+      "sha256": "70adc632e7af149978a9bedcad85763f5debbf99d2dc6d937333220415e3b393",
+      "bytes": 6233
+    },
+    "analysis/matched_mission_reference.py": {
+      "sha256": "834ff8130bdd9f7e14d966b622e310d49e18dabcf7ba845af11adfaec51da12a",
+      "bytes": 11935
+    },
+    "analysis/manifest_finite_burn.py": {
+      "sha256": "0612e9844861c3824eba532689a357bfd17624c0a313b9f035a67050c221c937",
+      "bytes": 14779
+    },
+    "analysis/finite_burn_departure.py": {
+      "sha256": "ee64668b33943c0be12d0a29fe55be0a27901471fe53205f18a5b64749b6e406",
+      "bytes": 4240
+    },
+    "analysis/field_3d.py": {
+      "sha256": "6a276437240ca9a368ce57d1659030c82b4aaee725940ab7bb561d262119cf4f",
+      "bytes": 9632
+    },
+    "analysis/orbit_core.py": {
+      "sha256": "97bf2b67dc78740c8e7d3b1a304213768863d3233380b1af61e225fc34b378f8",
+      "bytes": 539
+    },
+    "analysis/gen5_evidence_audit.py": {
+      "sha256": "5b6427f4cab3ce998332b29d5526c9fb6993012a1c6b5505117222d77c93b689",
+      "bytes": 16036
+    },
+    "analysis/gen5_lifetime_crosscheck.py": {
+      "sha256": "b042981e63f42574c7b237b7d8df3ead7f879da58d2657a480d27b7baaf129d6",
+      "bytes": 5489
+    },
+    "analysis/rated_orbit_independent.py": {
+      "sha256": "0a1f4821384d6f6e404b6c2baf576df3e41886c14f31cb5a341f7ffae4585b52",
+      "bytes": 6030
+    },
+    "analysis/results/mass_properties.json": {
+      "sha256": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
+      "bytes": 1959
+    },
+    "analysis/results/motor_results.json": {
+      "sha256": "afadd4d66271d9d1476b294ecea2723500ad813c0adc6d9648a07b83692c3875",
+      "bytes": 1221
+    },
+    "analysis/results/gen5_mass_ledger.json": {
+      "sha256": "17da99d5146f25bd510aeca0c6b7f35f2fb2edcf5ae6b5edc40bce2435892b24",
+      "bytes": 7672
+    },
+    "analysis/results/gen5_lifetime_crosscheck.json": {
+      "sha256": "380234ed43ee36dd23d6b4f86541a55be49cad45399754fa98c0835102d11ecf",
+      "bytes": 2612
+    },
+    "analysis/results/rated_orbit_independent.json": {
+      "sha256": "3a37eb9a88d1f4981504777a504dc90b85d24899cfa7311fde2d79c13434aae4",
+      "bytes": 3534
+    },
+    "analysis/results/rated_energy_mass_audit.json": {
+      "sha256": "f05c417de2ba1d8e79ce0ed0d3635d565f9034d2a0e1f34cfc7cb160550371dd",
+      "bytes": 2483
+    },
+    "analysis/results/gen5_finite_force_map.json": {
+      "sha256": "01dfc9743ba37ccc25f0591afa21479e8fa6500f2792a43bfcafdf3ed5cb21c0",
+      "bytes": 4285
+    },
+    "analysis/results/gen5_finite_force_fem2d.json": {
+      "sha256": "5eb0b7c9dd53504f1cb5bd4b0238f9f31c31df58e41cfd0829e3df2006bf96ee",
+      "bytes": 7291
+    },
+    "analysis/results/gen5_finite_force_surface3d.json": {
+      "sha256": "65ee00c5e63fb493746cdb5e03a1dd4b6f4184300e33b0c4875fb5eedca45568",
+      "bytes": 11653
+    },
+    "analysis/results/gen5_finite_force_sensitivity.json": {
+      "sha256": "fe1156b04a6a1e84fba7f033ea3f8af2483853bc9f962133ce1af4ea6cc3b451",
+      "bytes": 11716
+    },
+    "analysis/results/gen5_finite_coupled_shot.json": {
+      "sha256": "9b63bd5d2bb7ed6f96da097f6043518d890fcd39ab314eb9294eae97ff2c931d",
+      "bytes": 48850
+    },
+    "analysis/results/matched_mission_reference.json": {
+      "sha256": "10cbe54cd22ea2309a4180c81104c3c6947d42c88288fd6db089cbc68b75627f",
+      "bytes": 7426
+    },
+    "cad/parameters.json": {
+      "sha256": "bb18ba845cdafc4569b7a16f2a34e6a38812f2765b4ee3aa6c96dc507387a3f3",
+      "bytes": 21392
+    },
+    "cad/build_gen5.py": {
+      "sha256": "93e98dfac8abf1817fa1fb1bf39578d84406eb9863865b9f8e1d3b877316315f",
+      "bytes": 18066
+    },
+    "cad/build_review_assembly.py": {
+      "sha256": "2144ddd91d4bf903aae5df4469dc6b7c460d9cc3dfbcbf2d6d02ce86f686bdc8",
+      "bytes": 5025
+    },
+    "cad/REVIEW_ASSEMBLY.json": {
+      "sha256": "cdac40e1caa1716e4852d9f60b797497cff13e89e84cf000555e0c5bc48b2091",
+      "bytes": 1760
+    },
+    "cad/FREECAD_EXPORT.json": {
+      "sha256": "dca2e34d7f2acf8ca9798dc7efcc568ef52246741d46ed6db65156591c68c4b4",
+      "bytes": 1580
+    },
+    "cad/native/Gen5_Review.FCStd": {
+      "sha256": "301a360c51738bd2eaa1247f0d29876e89dffa6470de8fb7a6830c9a4d595403",
+      "bytes": 117428
+    },
+    "cad/GEN5_FULL_INTERFERENCE_AUDIT_2026_10_12.json": {
+      "sha256": "ea9a5882b4628359b7192ffdacb3d863664823da8f97cc65bd7c870e82b21ae7",
+      "bytes": 3598
+    },
+    "cad/GEN5_INTERFERENCE_DISPOSITION.json": {
+      "sha256": "05a23fd52a4246c35d4efea4bfae0c869889702aaf981e736495a21931a49847",
+      "bytes": 13065
+    },
+    "cad/GEN5_INTERFERENCE_DISPOSITION.md": {
+      "sha256": "fabbc15a30ea1659d2af9187b83a99c6afa7150d0e1d73e03b82a259b7a8eeee",
+      "bytes": 4781
+    },
+    "docs/GEN5_MASS_AND_INTERFACE_LEDGER.md": {
+      "sha256": "3e9a6f35be46c5da468407190545198d00927daedfd33e7d49278ccda481e0eb",
+      "bytes": 5737
+    },
+    "docs/GEN5_UNCERTAINTY_AND_ACCEPTANCE.md": {
+      "sha256": "6d78855b3dd60f7fd15e3caadcc3fbcaae295ebe7d030984a105f60170e06bd7",
+      "bytes": 3802
+    },
+    "docs/GEN5_ORBIT_AND_MISSION_DISPOSITION.md": {
+      "sha256": "6a366b367bd79a8c6283e1879d7a252402b6648f35046d1fb1010cca0064b1bc",
+      "bytes": 3165
+    },
+    "docs/GEN5_STRUCTURAL_DISPOSITION.md": {
+      "sha256": "8e1f63f16f330a293a51981e06c04b49da44e3353e8b642e91458906c4db63cd",
+      "bytes": 1334
+    },
+    "docs/SOLVER_EVIDENCE_BOUNDARY.md": {
+      "sha256": "8b24b80a98c51c6d7ceb7c616915ff3cc7c84fd481e99825bb6e93e6a5c3213a",
+      "bytes": 3281
+    },
+    "validation/P133_gen5_evidence_audit.md": {
+      "sha256": "817072df4a9b7117ca9f23f41208e6cac5b8f240ac37c1be41b2690313fccc0a",
+      "bytes": 1363
+    },
+    "validation/P134_gen5_lifetime_crosscheck.md": {
+      "sha256": "018aa9db495d16cef4a06147e3d890eccf3cd2dca4d5376ae885df4844487bcb",
+      "bytes": 1325
+    },
+    "validation/A15_poem_campaign.md": {
+      "sha256": "f42abdeb4c8bda25edd502ca6c27f072c9403d78c8c7b49ef1fc6c3bbd1ad4d0",
+      "bytes": 4687
+    },
+    "validation/gmat/orbit_state.py": {
+      "sha256": "b327a120da417ee1c9efeb2e6be62db5c1542ca16f39859eb66eb9fd2e382b1d",
+      "bytes": 4316
+    },
+    "validation/gmat/build_poem_campaign.py": {
+      "sha256": "0305f87fc8dd8656c2653f468fc8e07d27c02946a2838c8508a46ba2138977b0",
+      "bytes": 11042
+    },
+    "validation/gmat/parse_poem_campaign.py": {
+      "sha256": "4e626eef9065707af1226ccf73d916a1fdb7efff57fce9d1ed6042559f0284b5",
+      "bytes": 6636
+    },
+    "validation/gmat/test_orbit_state.py": {
+      "sha256": "114803e59e93d4cd6296f0bc7c04cfaaff34135e26988b1b1c3e4e9f8ee06e2d",
+      "bytes": 4766
+    },
+    "validation/gmat/evidence/A15_R1_NATIVE_CAPTURE.json": {
+      "sha256": "21f706ac4b8a15fecdcd52c0ebb575a302d4a2f822e1bf46b278a8c113f1b697",
+      "bytes": 5486
+    },
+    "validation/results/A15_R1_gmat_r2026a_review.json": {
+      "sha256": "a8d12a2f17c871513eea5052a810965472ec5bd3dcfa06d144751b7c99247022",
+      "bytes": 1947
+    },
+    "validation/results/A15_R1_FINE_WINDOW_RESULT.json": {
+      "sha256": "1074fbc4183b78236abc82cab2a8b448d7786b6ddc1f87c2b5a8528b77306019",
+      "bytes": 547
+    },
+    "figures/gen5_reconciled_mass.png": {
+      "sha256": "a2cfd3d9c7c3dd25e52e90c097f438835832bd037607f6efde0447029a696fdd",
+      "bytes": 71597
+    },
+    "figures/gen5_lifetime_numerical_check.png": {
+      "sha256": "5142b3fdb6a204e429a1f86c870bccdc5332a4654a260cfac5811f603c202fd0",
+      "bytes": 107203
+    },
+    "tools/plot_gen5_record.py": {
+      "sha256": "6b3b92d75845a22f4224501af1ea51747c19075c0424460e37191b6836bab9f3",
+      "bytes": 2874
+    },
+    "cad/step/gen5/VOLLEY_Brake_Gen5.step": {
+      "sha256": "3b313f96dd48dd09eed7ae7c9933374e2a6d7a0cf31776e33062816d98feb3fb",
+      "bytes": 33737
+    },
+    "cad/step/gen5/VOLLEY_Enclosure_Gen5.step": {
+      "sha256": "283f494098dc9a6d98d27c1191bd573902848879bea5b0eec46ca2cf91411f51",
+      "bytes": 60253
+    },
+    "cad/step/gen5/VOLLEY_Interface_ESPA_Gen5.step": {
+      "sha256": "ad2804ec4f41f9d5a1acba7ead0229444174161d47f4759c833cca95c6e4dbe5",
+      "bytes": 199128
+    },
+    "cad/step/gen5/VOLLEY_Magazine_Cassette_Gen5.step": {
+      "sha256": "12a27918ba9113837308930cdcf0d60fe66a6cd3abde903a6c2e2d16cb98a433",
+      "bytes": 132921
+    },
+    "cad/step/gen5/VOLLEY_Payload_3U_Gen5.step": {
+      "sha256": "4eee305dab98bb763f602c6ed11c94f9fd532e7d59925f804899c6c899174dff",
+      "bytes": 81380
+    },
+    "cad/step/gen5/VOLLEY_Review_Assembly_FreeCAD_Gen5.step": {
+      "sha256": "596b3eb9abd0786e2c484511d3886194ee896b017e9b910d0024eb4156bc4d20",
+      "bytes": 1644626
+    },
+    "cad/step/gen5/VOLLEY_Review_Assembly_Gen5.step": {
+      "sha256": "d1b58e042ff9da11ea65a31953cea40232f31a20c8c95f933e1490ab935d408c",
+      "bytes": 4252731
+    },
+    "cad/step/gen5/VOLLEY_Sled_Gen5.step": {
+      "sha256": "8bc91ae9f4185db908bc9c7e242f3dfa77e05acb0918e24ee6fa4b264d4c4f09",
+      "bytes": 164622
+    },
+    "cad/step/gen5/VOLLEY_Stator_Gen5.step": {
+      "sha256": "4d5c733bf544ce6f73736fa67166e0b9d2f1624cb6270a629dafbff0856b6d13",
+      "bytes": 2756891
+    },
+    "cad/step/gen5/VOLLEY_Track_Gen5.step": {
+      "sha256": "3a03ef426fedfd00143c369fd01b41c18b6fa54752dc5721c136701c51ff900b",
+      "bytes": 60953
+    }
+  }
+}

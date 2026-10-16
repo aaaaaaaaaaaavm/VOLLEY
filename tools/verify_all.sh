@@ -36,6 +36,9 @@ run "band integrity"      python3 tools/check_bands.py
 run "A13 band consistency" python3 analysis/attitude_budget.py --check
 run "results freshness"   python3 tools/check_results_fresh.py
 run "computational closure" python3 tools/check_computational_closure.py
+run "Gen5 evidence record" python3 analysis/gen5_evidence_audit.py --check
+run "Gen5 baseline hashes" python3 tools/freeze_gen5_record.py --check
+run "reviewed figure inventory" python3 tools/check_figure_inventory.py
 run "artifacts"          python3 tools/check_artifacts.py
 run "STEP view provenance" python3 cad/tools/check_step_views.py
 run "host-reference blocks" python3 analysis/host_reference.py --check-doc

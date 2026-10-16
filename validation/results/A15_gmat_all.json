@@ -37,5 +37,8 @@
       "sat11"
     ],
     "rows": 21592
-  }
+  },
+  "evidence_status": "WITHDRAWN_HISTORICAL_SUMMARY_NOT_CURRENT_NATIVE_EVIDENCE",
+  "current_record": "A15_R1_gmat_r2026a_review.json",
+  "limitation": "Historical raw R2022a reports unavailable; non-circular 367-degree spread and continuous-clearance verdict cannot be reused."
 }

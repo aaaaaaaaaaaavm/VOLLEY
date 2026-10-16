@@ -1,23 +1,10 @@
-"""VOLLEY | Generate the A15 POEM deployment-campaign GMAT scripts, and cross-check them.
+"""Generate A15 preloaded GMAT state cases from a historical relative-speed input.
 
-Runs with no GMAT installed: it writes .script files and verifies every orbital quantity it
-writes against analysis/astro.py, which is imported rather than reimplemented so the orbit
-definition cannot fork between the two codes.
-
-WHY THIS IS A SEPARATE FILE FROM build_scripts.py
--------------------------------------------------
-build_scripts.py generates the A5 and A6 inputs and is pinned to DV = 20.37 m/s, the operating
-point those analyses were actually run at. Changing it would make regenerated scripts differ
-from the ones whose results are recorded, which is a different kind of dishonesty. A15 is a new
-analysis at the current point, so it gets its own generator. See P35.
-
-WHAT IT PRODUCES
-----------------
-For each reference orbit (R1, R2, R3) and each case (A: VOLLEY only; B: POEM-assisted), one
-GMAT script placing twelve satellites on their post-burn orbits, plus a cross-check JSON with
-the analytically predicted spreads that A15's bands will be applied to.
-
-Usage:  python3 build_poem_campaign.py [--epoch '01 Jan 2027 00:00:00.000'] [--days 90]
+Each two-body state is constructed at its scheduled release epoch with exact
+finite-host momentum sharing, then rewound to the common initialization epoch.
+Generation and state reconstruction do not execute GMAT or propagate cumulative
+host recoil, mass depletion or control. R2/R3 references remain unverified.
+Use parse_poem_campaign.py for captured native R1 reports.
 """
 import argparse
 import json
@@ -29,7 +16,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, os.path.join(REPO, 'analysis'))
 
-from astro import MU, RE, boosted_elements                 # noqa: E402  the whole point
+from orbit_core import MU, RE, boosted_elements             # noqa: E402
+from orbit_state import release_elements
 
 J2 = 1.08263e-3
 SPACING_S = 1200.0          # ADR-020, closes P31
@@ -66,27 +54,18 @@ def drag_area(mass, bc, cd=CD):
     return mass / (bc * cd)
 
 
-def burn_elements(alt_m, inc_deg, dv, in_plane_deg, out_plane_deg):
-    """Keplerian elements after one impulsive burn on a circular orbit.
+def circular_span_deg(angles):
+    """Shortest arc containing all RAAN values; 359.9° and 0.1° are 0.2° apart."""
+    ordered = sorted(x % 360.0 for x in angles)
+    if len(ordered) < 2:
+        return 0.0
+    gaps = [b - a for a, b in zip(ordered, ordered[1:])]
+    gaps.append(ordered[0] + 360.0 - ordered[-1])
+    return 360.0 - max(gaps)
 
-    Gauss variational equations for a single impulse, small-dv linearisation. The
-    tangential component is checked against astro.boosted_elements() by the caller.
-    """
-    r0 = RE + alt_m                            # astro.RE and astro.MU are both SI
-    v0 = math.sqrt(MU / r0)
-    b = math.radians(out_plane_deg)
-    a_ip = math.radians(in_plane_deg)
-    dv_t = dv * math.cos(b) * math.cos(a_ip)   # along-track
-    dv_r = dv * math.cos(b) * math.sin(a_ip)   # radial
-    dv_n = dv * math.sin(b)                    # cross-track
 
-    v2 = (v0 + dv_t) ** 2 + dv_r ** 2 + dv_n ** 2          # vis-viva, exact in the impulse
-    a = 1.0 / (2.0 / r0 - v2 / MU)
-    ecc = math.hypot(2 * dv_t / v0, dv_r / v0)
-    di = math.degrees(dv_n / v0)               # burn at the node: pure inclination
-    draan = math.degrees(dv_n / (v0 * math.sin(math.radians(inc_deg))))
-    return dict(sma_km=a / 1000.0, ecc=ecc, dinc_deg=di, draan_deg=draan,
-                dv_t=dv_t, dv_r=dv_r, dv_n=dv_n)
+def angular_distance_deg(angle, reference=0.0):
+    return abs((angle - reference + 180.0) % 360.0 - 180.0)
 
 
 def raan_dot_deg_day(a_km, inc_deg):
@@ -109,23 +88,26 @@ def fill(template, mapping):
 def build_case(case_id, cfg, dv, epoch, days, outdir, tmpl):
     alt_m, inc = cfg['alt_m'], cfg['inc_deg']
     r0_km = (RE + alt_m) / 1000.0
-    a_ref, e_ref = boosted_elements(alt_m, dv)
+    payload_dv = STAGE_MASS / (STAGE_MASS + PAYLOAD_MASS) * dv
+    a_ref, e_ref = boosted_elements(alt_m, payload_dv)
 
     sats, sc_blocks, rep_blocks, names = [], [], [], []
     for k, (ip, op) in enumerate(DIRECTIONS[:N_SHOTS]):
-        el = burn_elements(alt_m, inc, dv, ip, op)
-        n = math.sqrt(MU / el['sma_km'] ** 3)                 # rad/s
         t_k = k * SPACING_S
-        ma = math.degrees(-n * t_k) % 360.0                   # rewind, see template header
+        el = release_elements(MU, RE, alt_m, inc, dv, STAGE_MASS, PAYLOAD_MASS,
+                              ip, op, t_k)
+        ta = el['epoch_true_anomaly_deg']
         name = 'sat%02d' % (k + 1)
         names.append(name)
         rec = dict(name=name, shot=k + 1, t_s=t_k,
                    in_plane_deg=ip, out_plane_deg=op,
                    sma_km=el['sma_km'], ecc=el['ecc'],
-                   inc_deg=inc + el['dinc_deg'], raan_deg=el['draan_deg'],
-                   apogee_km=el['sma_km'] * (1 + el['ecc']) - r0_km,
-                   perigee_km=el['sma_km'] * (1 - el['ecc']) - r0_km,
-                   raan_dot_deg_day=raan_dot_deg_day(el['sma_km'], inc + el['dinc_deg']))
+                   inc_deg=el['inc_deg'], raan_deg=el['raan_deg'],
+                   argp_deg=el['argp_deg'], epoch_true_anomaly_deg=ta,
+                   payload_delta_v_m_s=el['payload_delta_v_m_s'],
+                   apogee_km=el['sma_km'] * (1 + el['ecc']) - RE / 1000.0,
+                   perigee_km=el['sma_km'] * (1 - el['ecc']) - RE / 1000.0,
+                   raan_dot_deg_day=raan_dot_deg_day(el['sma_km'], el['inc_deg']))
         sats.append(rec)
         sc_blocks.append(
             "Create Spacecraft {n};\n"
@@ -137,15 +119,16 @@ def build_case(case_id, cfg, dv, epoch, days, outdir, tmpl):
             "GMAT {n}.ECC = {e:.9f};\n"
             "GMAT {n}.INC = {i:.6f};\n"
             "GMAT {n}.RAAN = {raan:.6f};\n"
-            "GMAT {n}.AOP = 0;\n"
-            "GMAT {n}.TA = {ma:.6f};\n"
+            "GMAT {n}.AOP = {argp:.9f};\n"
+            "GMAT {n}.TA = {ta:.9f};\n"
             "GMAT {n}.DryMass = {m};\n"
             "GMAT {n}.Cd = {cd};\n"
             "GMAT {n}.DragArea = {da:.6f};\n"
             "GMAT {n}.Cr = 1.8;\n"
             "GMAT {n}.SRPArea = {da:.6f};\n".format(
                 n=name, ep=epoch, a=rec['sma_km'], e=rec['ecc'], i=rec['inc_deg'],
-                raan=rec['raan_deg'], ma=ma, m=PAYLOAD_MASS, cd=CD,
+                raan=rec['raan_deg'], argp=rec['argp_deg'], ta=ta,
+                m=PAYLOAD_MASS, cd=CD,
                 da=drag_area(PAYLOAD_MASS, BC)))
         rep_blocks.append(
             "Create ReportFile rep{n};\n"
@@ -171,7 +154,7 @@ def build_case(case_id, cfg, dv, epoch, days, outdir, tmpl):
     with open(path, 'w', encoding='utf-8') as f:
         f.write(fill(tmpl, mapping))
 
-    # --- cross-check against astro.py and the A15 bands ----------------------
+    # --- same-formula input screen; not an independent GMAT result -----------
     incs = [s['inc_deg'] for s in sats]
     raans = [s['raan_deg'] for s in sats]
     apo = max(s['apogee_km'] for s in sats)
@@ -180,24 +163,27 @@ def build_case(case_id, cfg, dv, epoch, days, outdir, tmpl):
     prograde = next(s for s in sats if s['in_plane_deg'] == 0 and s['out_plane_deg'] == 0)
     sma_err = abs(prograde['sma_km'] - a_ref / 1000.0) / (a_ref / 1000.0) * 100
 
+    projected_raans = [s['raan_deg'] + s['raan_dot_deg_day'] * days for s in sats]
     return dict(
         case=case_id, script=os.path.relpath(path, REPO), provenance=cfg['provenance'],
-        alt_km=alt_m / 1000.0, inc_deg=inc, dv=dv, spacing_s=SPACING_S,
+        alt_km=alt_m / 1000.0, inc_deg=inc, relative_speed_m_s=dv,
+        payload_delta_v_m_s=payload_dv, spacing_s=SPACING_S,
         satellites=sats,
         predicted=dict(
             # Bands 1 and 3 test the PER-SATELLITE ceiling, which is the physically
             # meaningful quantity; the fleet spread is reported alongside because a
             # +/- pair doubles it and that is a fact about the campaign, not the machine.
             max_inclination_change_deg=max(abs(s['inc_deg'] - inc) for s in sats),
-            max_raan_change_deg=max(abs(s['raan_deg']) for s in sats),
+            max_raan_change_deg=max(angular_distance_deg(s['raan_deg']) for s in sats),
             inclination_spread_deg=max(incs) - min(incs),
-            raan_spread_at_epoch_deg=max(raans) - min(raans),
+            raan_spread_at_epoch_deg=circular_span_deg(raans),
             altitude_extent_km=apo - per,
             max_apogee_km=apo, min_perigee_km=per,
             raan_dot_spread_deg_day=max(rd) - min(rd),
-            raan_spread_after_days_deg=(max(rd) - min(rd)) * days,
-            campaign_duration_h=N_SHOTS * SPACING_S / 3600.0,
-            sma_vs_astro_pct=sma_err))
+            raan_spread_after_days_deg=circular_span_deg(projected_raans),
+            allocated_slot_h=N_SHOTS * SPACING_S / 3600.0,
+            first_to_last_shot_h=(N_SHOTS - 1) * SPACING_S / 3600.0,
+            sma_input_consistency_pct=sma_err))
 
 
 def main():
@@ -231,14 +217,15 @@ def main():
               % (p['max_raan_change_deg'], p['raan_spread_at_epoch_deg']))
         print("   RAAN after %dd  %8.2f deg    (band 4: >= 5)" % (args.days,
                                                                  p['raan_spread_after_days_deg']))
-        print("   SMA vs astro.py %8.4f %%      (band 5: <= 0.5)" % p['sma_vs_astro_pct'])
-        print("   campaign        %8.2f h      (band 7: == 4.00)\n" % p['campaign_duration_h'])
+        print("   SMA input check %8.4f %%      (band 5: <= 0.5; same formula)" % p['sma_input_consistency_pct'])
+        print("   allocated slot  %8.2f h      (band 7: == 4.00); first-to-last %.2f h\n"
+              % (p['allocated_slot_h'], p['first_to_last_shot_h']))
 
     res = dict(analysis='A15', status='GENERATED AND CROSS-CHECKED, NOT EXECUTED IN GMAT',
                bands_declared_commit='e067da8', dv_m_s=dv, spacing_s=SPACING_S,
                adr='ADR-020', days=args.days, cases=out,
                note=('Band verdicts are NOT set here. These are the analytic predictions the '
-                     'GMAT reports will be tested against by parse_reports.py.'))
+                     'GMAT reports will be tested against by parse_poem_campaign.py.'))
     path = os.path.join(REPO, 'validation', 'results', 'A15_poem_campaign.json')
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(res, f, indent=2)

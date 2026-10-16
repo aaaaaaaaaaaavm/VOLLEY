@@ -140,3 +140,10 @@ advance.
 It does not rank the figures by how convincing they are. The evidence class does that, and
 the honest reading of the class column is that this project has no measurements. Adding one
 is what `docs/B1_ORDER.md` exists for, and it costs about ₹22,000.
+
+## Reconciled numerical record, 16 October 2026
+
+| Figure | Source | Evidence type and boundary |
+|:--|:--|:--|
+| [Historical mass screen](../figures/gen5_reconciled_mass.png) | `tools/plot_gen5_record.py`, `analysis/results/gen5_mass_ledger.json` | Computational mass estimate and assumed comparator; no measured mass or complete BOM |
+| [Lifetime numerical check](../figures/gen5_lifetime_numerical_check.png) | `tools/plot_gen5_record.py`, `analysis/results/gen5_lifetime_crosscheck.json` | Separate numerical integration under shared static atmosphere; no environment or achieved-speed validation |

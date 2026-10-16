@@ -1,87 +1,49 @@
-# Running the A15 POEM campaign in GMAT
+# Run the A15 orbital screen in GMAT
 
-GMAT R2022a is installed in the development environment as of 2026-08-06 at
-`/opt/gmat/GMAT/R2022a`, so the scripts are now validated by execution rather than by
-inspection. The first delivery did not run: `ReportFile` has no `ReportStepSize` field and
-all three scripts were rejected at parse time. That is fixed.
+This run checks a specified set of twelve payload orbits after ideal instantaneous releases. It does not simulate a loading mechanism, a release force history, or a host that changes state after each shot. The current reproducible R1 input uses a 4 kg payload, a 300 kg retained host, a 16.029 m/s *relative* separation speed, and shots spaced 1200 s apart.
 
-## 1. Regenerate, if anything upstream changed
+The earlier A15 report used a 16.388 m/s input and reported a 367° RAAN spread. That number is not a valid circular spread. Its R2022a report files are absent from this checkout, so those verdicts remain historical, unverified claims. The current R2026a R1 raw reports and review are in the [versioned audit bundle](https://drive.google.com/file/d/1aHwr5eszoDd9ywXlpL9qCrOCdsdMIxqD/view). R2 and R3 orbit definitions still lack verified provenance.
 
-```bash
-python3 validation/gmat/build_poem_campaign.py
+## Generate the inputs
+
+From the repository root:
+
+```sh
+python validation/gmat/build_poem_campaign.py
 ```
 
-Reads `analysis/results/motor_results.json` for Δv and imports `analysis/astro.py` for the orbit
-definition, so the scripts cannot drift from the operating point. Writes three scripts to
-`validation/gmat/output/` and the cross-check to `validation/results/A15_poem_campaign.json`.
+The generator reads `analysis/results/motor_results.json`. It writes the current speed and twelve initial states into `validation/results/A15_poem_campaign.json` and GMAT scripts into `validation/gmat/output/`. These regenerated inputs were state-reconstruction checked on 16 October 2026; no new native run is claimed. The states account for the host's orbital position at each scheduled shot and split relative speed between payload and retained host by momentum conservation. They preload post-release orbits at a common epoch. That construction is an input approximation, not a sequential host propagation.
 
-It fails loudly on any unfilled `@@PLACEHOLDER@@` rather than emitting a broken script.
+Run the state reconstruction check before GMAT:
 
-## 2. Run each case
-
-```bash
-cd validation/gmat/output
-GMAT -m -r a15_poem_r1.script      # 450 km / 51.6  -- the case the bands are set against
-GMAT -m -r a15_poem_r2.script      # 350 km / 55.2  -- POEM-4-like, UNVERIFIED
-GMAT -m -r a15_poem_r3.script      # 350 km /  9.6  -- POEM-3-like, UNVERIFIED
+```sh
+python validation/gmat/test_orbit_state.py
 ```
 
-`-m` is minimise-the-GUI, `-r` runs and exits. On Windows the binary is `GMAT.exe` in
-`GMAT/bin`. Each case propagates one host plus twelve satellites for 90 days.
+The test checks the twelve release states against independently reconstructed two-body states. It cannot test perturbations, release contact, or host recovery.
 
-Expect a few minutes per case. RungeKutta89 at 1e-11 accuracy with a 20x20 field, drag and
-SRP over 90 days for thirteen objects is not instant.
+## Execute R1
 
-## 3. What a good run produces
+Use the `GmatConsole` or `GmatConsole.exe` from GMAT R2026a. Replace the executable path for your installation:
 
-Twelve report files per case, `sat01.txt` ... `sat12.txt`, each with hourly rows of
-
-```
-UTCGregorian   SMA   ECC   INC   RAAN   Altitude
+```sh
+GmatConsole --run validation/gmat/output/a15_poem_r1.script
 ```
 
-Sanity checks before you send them back, these are the ones that catch a broken run:
+The generated script contains absolute output paths, so regenerate it on the computer that will run GMAT. Retain the console log, GMAT log, generated script, and all twelve files under `validation/gmat/output/r1/`. Confirm that all twelve report files have synchronized timestamps and that the final timestamp is 1 April 2027 for the default 90-day case. A process exit code alone is not a result check.
 
-| Check | Expected |
-|---|---|
-| Row count per file | ~2160 (90 days, hourly) |
-| SMA at epoch, prograde satellites | 6857.6 km at R1 |
-| INC at epoch | within 0.13° of the reference inclination |
-| RAAN at 90 days | spread of **13°** (R1), **12.7°** (R2), **21.9°** (R3) |
-| Altitude | never negative, and no satellite reentering inside 90 days |
+## Read the native reports
 
-If any file is empty, GMAT could not resolve the report path. It resolves relative paths against
-`bin/../output`, not your working directory, which is why the generator writes absolute paths.
-
-## 4. Send the reports back
-
-Paste the files, or the whole `validation/gmat/output/` directory, into the next session. Then:
-
-```bash
-python3 validation/gmat/parse_reports.py --analysis A15
+```sh
+python validation/gmat/parse_poem_campaign.py
 ```
 
-which applies A15's eight declared bands and writes the verdicts into
-`validation/results/A15_poem_campaign.json`. **The bands are in the run sheet and were committed
-at `e067da8`, before the template existed. Do not edit them to match what comes back, a missed
-band is a numbered defect, which is the whole point of the directory.
+This parser reads the twelve R1 reports and writes `validation/results/A15_R1_gmat_r2026a_review.json`. It reports sampled separation, inclination and altitude values, and the shortest circular RAAN span. It does not accept an `--analysis` argument. `parse_reports.py` belongs to a different study and must not be used for A15.
 
-## 5. If a band fails
+For the audited 2026-09-30 R1 run, the twelve reports each had 59,590 data rows. The initial inclination, altitude-extent and RAAN-offset checks and the final circular RAAN-spread check met their stated numerical thresholds. The nearest separation at the 90-day report samples was 247 m. A separate five-second GMAT window around that encounter found 190 m at a sample and about 180 m by linear interpolation. The sparse remainder of the 90-day reports does not establish continuous clearance above 100 m. The semimajor-axis comparison only checks the generated GMAT input. Keep the full band-6 verdict unresolved.
 
-The consequences were fixed before the run and are written down in A15 §"What happens at each
-outcome". In short: bands 1, 3 or 5 failing means suspect the script before the physics; band 2 or
-4 failing narrows the deployment claim and needs the paper corrected; band 6 failing re-opens
-ADR-020's cadence.
+The report does not close the coupled deployment task. It holds the host at 300 kg for each constructed shot and does not propagate host recoil, mass depletion, navigation, manoeuvres, or actual release timing through the campaign. Do not use R2 or R3 to make mission claims until their reference orbits and native outputs are checked.
 
-## Known caveats you are running with
+## Archived run identity
 
-- R2 and R3's orbital elements are unverified. They are written from recollection of published
-  PSLV mission profiles and are marked as such in the script header and the results JSON. Confirm
-  or cite them before any of R2/R3 is published. R1 is the traceable case.
-- Satellites are staggered analytically, not fired in sequence. Each is placed on its
-  post-burn orbit with mean anomaly rewound by `n·t_k`, the same device
-  `emocd_fleet.script.tmpl` uses. This ignores J2 during a 4 h rewind against a 90 day
-  propagation.
-- Case B is not generated yet. The host-assisted plane change needs a POEM Δv budget, and
-  paper §VII records that POEM's mass and control authority are undisclosed (E5). Band 8 is
-  declared VOID-able for that reason.
+[Native capture manifest](evidence/A15_R1_NATIVE_CAPTURE.json) records input/log/raw-report hashes for the 30 September execution. The archived raw reports were reparsed on 16 October. Regeneration today does not make that archived run a new execution. The captured result is in [the local JSON](../results/A15_R1_gmat_r2026a_review.json), with [fine-window results](../results/A15_R1_FINE_WINDOW_RESULT.json).

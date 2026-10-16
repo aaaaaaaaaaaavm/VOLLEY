@@ -1,0 +1,228 @@
+{
+  "source_sha256": "b8547e763806b0c740ee342c3278d85b1295d18f7cfe52be5239c9136c08d777",
+  "cad_parameters_sha256": "bb18ba845cdafc4569b7a16f2a34e6a38812f2765b4ee3aa6c96dc507387a3f3",
+  "historical_dry_kg": 126.561588,
+  "historical_loaded_kg": 174.561588,
+  "modeled_axial_cg_m": 0.45768963802824597,
+  "first_moment_kg_m": 57.9259274,
+  "kg_per_3U": 10.546799,
+  "full_tensor_kg_m2": null,
+  "rows": [
+    {
+      "item": 1,
+      "name": "Track longerons (2x Al box section)",
+      "mass_kg": 6.829919999999998,
+      "cg_x_m": 0.75,
+      "first_moment_kg_m": 5.122439999999998,
+      "CAD_reference": "Track",
+      "basis": "parametric hollow-section estimate; 1.55 m mass length versus 1.8 m CAD"
+    },
+    {
+      "item": 2,
+      "name": "Stator copper (1.3 m, 60% fill)",
+      "mass_kg": 6.2899199999999995,
+      "cg_x_m": 0.65,
+      "first_moment_kg_m": 4.088448,
+      "CAD_reference": "Stator",
+      "basis": "fill-factor material estimate; not solid proxy density"
+    },
+    {
+      "item": 3,
+      "name": "Stator formers / potting (PEEK eq.)",
+      "mass_kg": 0.9729720000000001,
+      "cg_x_m": 0.65,
+      "first_moment_kg_m": 0.6324318000000001,
+      "CAD_reference": "Stator",
+      "basis": "fill-factor material estimate; not solid proxy density"
+    },
+    {
+      "item": 4,
+      "name": "Sled Halbach magnets (2 faces)",
+      "mass_kg": 3.6720000000000006,
+      "cg_x_m": 0.15,
+      "first_moment_kg_m": 0.5508000000000001,
+      "CAD_reference": "Sled",
+      "basis": "parametric plus historical Gen3 solid-volume reconciliation"
+    },
+    {
+      "item": 5,
+      "name": "Sled Ti chassis (shell equivalent)",
+      "mass_kg": 0.7367975999999999,
+      "cg_x_m": 0.15,
+      "first_moment_kg_m": 0.11051963999999999,
+      "CAD_reference": "Sled",
+      "basis": "parametric plus historical Gen3 solid-volume reconciliation"
+    },
+    {
+      "item": 6,
+      "name": "Sled rollers / latch / backstop",
+      "mass_kg": 0.45,
+      "cg_x_m": 0.15,
+      "first_moment_kg_m": 0.0675,
+      "CAD_reference": "Sled",
+      "basis": "parametric plus historical Gen3 solid-volume reconciliation"
+    },
+    {
+      "item": 7,
+      "name": "Eddy brake magnets + yoke",
+      "mass_kg": 1.6847999999999996,
+      "cg_x_m": 1.42,
+      "first_moment_kg_m": 2.3924159999999994,
+      "CAD_reference": "Brake",
+      "basis": "primitive/lump estimate; no selected brake"
+    },
+    {
+      "item": 8,
+      "name": "Fixed brake hardware + ring spring (moving Cu fin is in sled)",
+      "mass_kg": 0.856,
+      "cg_x_m": 1.4,
+      "first_moment_kg_m": 1.1984,
+      "CAD_reference": "Brake",
+      "basis": "primitive/lump estimate; no selected brake"
+    },
+    {
+      "item": 9,
+      "name": "Cassette shells (2x Al sheet eq.)",
+      "mass_kg": 8.852976,
+      "cg_x_m": 0.35,
+      "first_moment_kg_m": 3.0985416,
+      "CAD_reference": "Magazine_P / Magazine_S",
+      "basis": "shell/fill or lump estimate; feeder not modeled"
+    },
+    {
+      "item": 10,
+      "name": "Followers, gates, escapements (2x)",
+      "mass_kg": 2.6,
+      "cg_x_m": 0.3,
+      "first_moment_kg_m": 0.78,
+      "CAD_reference": "Magazine_P / Magazine_S",
+      "basis": "shell/fill or lump estimate; feeder not modeled"
+    },
+    {
+      "item": 11,
+      "name": "Supercapacitor cells + busbars",
+      "mass_kg": 6.5,
+      "cg_x_m": 0.1,
+      "first_moment_kg_m": 0.65,
+      "CAD_reference": "not individually represented",
+      "basis": "assumed lump; no selected component"
+    },
+    {
+      "item": 12,
+      "name": "PPU (SiC bridge, filters)",
+      "mass_kg": 4.0,
+      "cg_x_m": 0.1,
+      "first_moment_kg_m": 0.4,
+      "CAD_reference": "not individually represented",
+      "basis": "assumed lump; no selected component"
+    },
+    {
+      "item": 13,
+      "name": "Battery + avionics + IMU",
+      "mass_kg": 5.5,
+      "cg_x_m": 0.12,
+      "first_moment_kg_m": 0.6599999999999999,
+      "CAD_reference": "not individually represented",
+      "basis": "assumed lump; no selected component"
+    },
+    {
+      "item": 14,
+      "name": "Harness",
+      "mass_kg": 2.5,
+      "cg_x_m": 0.6,
+      "first_moment_kg_m": 1.5,
+      "CAD_reference": "not individually represented",
+      "basis": "assumed lump; no selected component"
+    },
+    {
+      "item": 15,
+      "name": "Thermal (pipes, radiator, MLI)",
+      "mass_kg": 6.0,
+      "cg_x_m": 0.7,
+      "first_moment_kg_m": 4.199999999999999,
+      "CAD_reference": "not individually represented",
+      "basis": "assumed lump; no selected component"
+    },
+    {
+      "item": 16,
+      "name": "ESPA bracket + fasteners",
+      "mass_kg": 9.0,
+      "cg_x_m": 0.35,
+      "first_moment_kg_m": 3.15,
+      "CAD_reference": "Interface_ESPA",
+      "basis": "assumed lump; provider mount not selected"
+    },
+    {
+      "item": 17,
+      "name": "Panels / closeouts",
+      "mass_kg": 5.5,
+      "cg_x_m": 0.75,
+      "first_moment_kg_m": 4.125,
+      "CAD_reference": "Enclosure or omitted detail",
+      "basis": "skin/fill/lump estimate; allocation overlap must be resolved in any redesign"
+    },
+    {
+      "item": 18,
+      "name": "Enclosure skins (2 mm Al, 6.077 m2 net, A46)",
+      "mass_kg": 32.82,
+      "cg_x_m": 0.5,
+      "first_moment_kg_m": 16.41,
+      "CAD_reference": "Enclosure or omitted detail",
+      "basis": "skin/fill/lump estimate; allocation overlap must be resolved in any redesign"
+    },
+    {
+      "item": 19,
+      "name": "Enclosure frames and ribs (A46, 25 % of skin, declared)",
+      "mass_kg": 8.2,
+      "cg_x_m": 0.5,
+      "first_moment_kg_m": 4.1,
+      "CAD_reference": "Enclosure or omitted detail",
+      "basis": "skin/fill/lump estimate; allocation overlap must be resolved in any redesign"
+    },
+    {
+      "item": 20,
+      "name": "Radiator (1600 x 200 x 3 mm Al, A46)",
+      "mass_kg": 2.59,
+      "cg_x_m": 0.45,
+      "first_moment_kg_m": 1.1655,
+      "CAD_reference": "Enclosure or omitted detail",
+      "basis": "skin/fill/lump estimate; allocation overlap must be resolved in any redesign"
+    },
+    {
+      "item": 21,
+      "name": "Equipment-bay boxes (4 bays, 1.5 mm Al, A46)",
+      "mass_kg": 1.87,
+      "cg_x_m": 0.3,
+      "first_moment_kg_m": 0.561,
+      "CAD_reference": "Enclosure or omitted detail",
+      "basis": "skin/fill/lump estimate; allocation overlap must be resolved in any redesign"
+    },
+    {
+      "item": 22,
+      "name": "Fasteners and brackets (A46, 10 % of structure, declared)",
+      "mass_kg": 4.55,
+      "cg_x_m": 0.5,
+      "first_moment_kg_m": 2.275,
+      "CAD_reference": "Enclosure or omitted detail",
+      "basis": "skin/fill/lump estimate; allocation overlap must be resolved in any redesign"
+    },
+    {
+      "item": 23,
+      "name": "Sled CAD reconciliation (P15, CAD-derived 9.445 kg)",
+      "mass_kg": 4.5862023999999995,
+      "cg_x_m": 0.15,
+      "first_moment_kg_m": 0.6879303599999999,
+      "CAD_reference": "Sled",
+      "basis": "parametric plus historical Gen3 solid-volume reconciliation"
+    }
+  ],
+  "unresolved": [
+    "No installed BOM or vendor-checked component masses",
+    "x-only lump centers are not measured assembly CG; lateral/vertical CG and full inertia unavailable",
+    "Historical Gen3 sled volume is not a complete Gen5 material extraction",
+    "CAD solid material proxies cannot replace shell/fill mass estimates",
+    "Thermal/radiator, panel/enclosure and bracket allocations may overlap; no quantified credit taken",
+    "Harness routing, actual feeder/locks, actuator, winding ends and provider adapter lack installed detail",
+    "A new geometry or component selection requires a new mass/CG/inertia revision"
+  ]
+}

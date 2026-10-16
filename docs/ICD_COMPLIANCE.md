@@ -115,25 +115,20 @@ gates are least studied in.
 
 ---
 
-## The qualification gap, which is paperwork rather than physics
+## Payload release-environment compatibility
 
-A secondary source reports the NRCSD-E requirement that a CubeSat *"shall be capable of
-withstanding a deployment velocity of 0.5 to 2.5 m/s at ejection."* This figure was not read in
-the primary document and is flagged as second-hand.
+The directly checked NRCSD IDD Rev. - specifies survival of 0.5–2.0 m/s deployment
+and up to 5°/s per axis tip-off (§4.1.6). These are requirements for that particular
+ISS dispenser, not universal CubeSat limits or approval of VOLLEY. The historical
+16.029 m/s periodic-force output is challenged and is not a selected release rating.
 
-If it holds, customer satellites are qualified to a velocity range whose ceiling is 2.5 m/s.
-VOLLEY deploys at 16.029 m/s, 6.4x that ceiling.
-
-Physically this is a non-issue and the repository can show why: a satellite is not damaged by
-velocity, it is damaged by acceleration, and VOLLEY's 10.07 g against this design's own 25 g ceiling is well
-inside qualification. Velocity is a consequence of acceleration and stroke, and the stroke is the
-deployer's problem, not the satellite's.
-
-Programmatically it is a real barrier. A customer whose satellite is qualified "per NRCSD-E"
-has no qualification basis for a 16.0 m/s release, even though nothing about their hardware is
-actually threatened. Paperwork barriers of this kind end space projects that physics does not,
-and closing it means either a qualification argument that translates velocity limits into
-acceleration limits, or an accepted difference negotiated per customer.
+A speed outside an approved interface range requires a physical as well as an
+integration assessment. Kinetic energy, guide contact, restraint unloading, shock,
+tip-off, recontact and host response depend on the complete release history.
+An axial acceleration below the self-imposed 25 g study screen establishes none of
+those limits. Payload compatibility remains unverified until the actual spacecraft
+and host authority accept the relevant loads, fields and release conditions.
+See the [public reference audit](GEN6_GO1_PUBLIC_REFERENCE_AUDIT.md).
 
 ---
 
