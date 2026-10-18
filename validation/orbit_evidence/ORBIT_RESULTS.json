@@ -1,0 +1,147 @@
+{
+  "assumptions": {
+    "equatorial_radius_m": 6378137.0,
+    "force_axis": "Orekit J2 about fixed GCRF z; GMAT degree-2/order-0 uses its Earth-fixed gravity configuration",
+    "inclination_deg": 51.6,
+    "initial_altitude_m": 450000,
+    "j2": 0.00108262668,
+    "mu_m3_s2": 398600441800000.0,
+    "payload_kg": 4,
+    "remaining_host_kg": 300,
+    "speeds": "Prescribed relative separation inputs; not achieved motor ratings"
+  },
+  "cases": [
+    {
+      "initial_eccentricity": 0.0,
+      "initial_semimajor_axis_m": 6828137.0,
+      "max_refinement_position_m": 1.1533182678571363e-06,
+      "max_relative_energy_drift": 1.659196870437061e-14,
+      "max_relative_hz_drift": 1.341992197592422e-14,
+      "max_scipy_position_difference_m": 1.0743263485939298e-05,
+      "model": "two_body",
+      "payload_inertial_dv_m_s": 0.0,
+      "relative_speed_m_s": 0.0
+    },
+    {
+      "initial_eccentricity": 0.00064590703117284,
+      "initial_semimajor_axis_m": 6832550.19220999,
+      "max_refinement_position_m": 2.1460907939415593e-06,
+      "max_relative_energy_drift": 1.685811853865739e-14,
+      "max_relative_hz_drift": 6.119391958716437e-15,
+      "max_scipy_position_difference_m": 6.558229975645923e-06,
+      "model": "two_body",
+      "payload_inertial_dv_m_s": 2.4671052631578947,
+      "relative_speed_m_s": 2.5
+    },
+    {
+      "initial_eccentricity": 0.0032182791901472,
+      "initial_semimajor_axis_m": 6850182.800756378,
+      "max_refinement_position_m": 3.8997326082567245e-06,
+      "max_relative_energy_drift": 1.9846603828847048e-14,
+      "max_relative_hz_drift": 1.3398379431628674e-14,
+      "max_scipy_position_difference_m": 7.5819985118888414e-06,
+      "model": "two_body",
+      "payload_inertial_dv_m_s": 12.28464177631579,
+      "relative_speed_m_s": 12.448437
+    },
+    {
+      "initial_eccentricity": 0.0041449152158086,
+      "initial_semimajor_axis_m": 6856556.846802368,
+      "max_refinement_position_m": 1.6270671999369006e-06,
+      "max_relative_energy_drift": 8.971322365238698e-15,
+      "max_relative_hz_drift": 5.168917722905135e-15,
+      "max_scipy_position_difference_m": 7.90692214525801e-07,
+      "model": "two_body",
+      "payload_inertial_dv_m_s": 15.818092105263156,
+      "relative_speed_m_s": 16.029
+    },
+    {
+      "initial_eccentricity": 0.0,
+      "initial_semimajor_axis_m": 6828137.0,
+      "max_refinement_position_m": 2.4080615323177293e-06,
+      "max_relative_energy_drift": 6.7580341651069174e-15,
+      "max_relative_hz_drift": 7.651709898553283e-15,
+      "max_scipy_position_difference_m": 4.58962851687494e-06,
+      "model": "J2",
+      "payload_inertial_dv_m_s": 0.0,
+      "relative_speed_m_s": 0.0
+    },
+    {
+      "initial_eccentricity": 0.00064590703117284,
+      "initial_semimajor_axis_m": 6832550.19220999,
+      "max_refinement_position_m": 6.129961454177363e-06,
+      "max_relative_energy_drift": 1.5438682051385417e-14,
+      "max_relative_hz_drift": 8.23764302134905e-15,
+      "max_scipy_position_difference_m": 6.167085604161297e-07,
+      "model": "J2",
+      "payload_inertial_dv_m_s": 2.4671052631578947,
+      "relative_speed_m_s": 2.5
+    },
+    {
+      "initial_eccentricity": 0.0032182791901472,
+      "initial_semimajor_axis_m": 6850182.800756378,
+      "max_refinement_position_m": 2.6877149830470217e-06,
+      "max_relative_energy_drift": 8.826574996919203e-15,
+      "max_relative_hz_drift": 5.758952562717588e-15,
+      "max_scipy_position_difference_m": 5.1792882724085675e-06,
+      "model": "J2",
+      "payload_inertial_dv_m_s": 12.28464177631579,
+      "relative_speed_m_s": 12.448437
+    },
+    {
+      "initial_eccentricity": 0.0041449152158086,
+      "initial_semimajor_axis_m": 6856556.846802368,
+      "max_refinement_position_m": 3.786639882821813e-06,
+      "max_relative_energy_drift": 7.810457927397813e-15,
+      "max_relative_hz_drift": 3.5242620837989555e-15,
+      "max_scipy_position_difference_m": 6.4272619791705455e-06,
+      "model": "J2",
+      "payload_inertial_dv_m_s": 15.818092105263156,
+      "relative_speed_m_s": 16.029
+    }
+  ],
+  "cross_code": [
+    {
+      "max_epoch_alignment_s": 7.823109910987114e-07,
+      "max_position_difference_m": 0.7627381247956209,
+      "model": "two_body",
+      "note": "Central gravitational constants differ slightly (GMAT 398600.4415 vs Orekit 398600.4418 km^3/s^2).",
+      "same_force_configuration": false,
+      "terminal_position_difference_m": 0.7596860968324559
+    },
+    {
+      "max_epoch_alignment_s": 7.823109910987114e-07,
+      "max_position_difference_m": 1498.9502107981057,
+      "model": "J2",
+      "note": "Different Earth pole/gravity definitions; do not interpret as matched-force numerical validation.",
+      "same_force_configuration": false,
+      "terminal_position_difference_m": 1361.9457320323197
+    }
+  ],
+  "duration_s": 86400,
+  "epoch": "2026-09-29 00:00:00 TAI",
+  "gmat_version": "R2026a",
+  "limitations": [
+    "One-day prescribed-state numerical propagation, not coupled sequential host deployment",
+    "No drag, SRP, third bodies, actual release error, conjunction probability or validated atmospheric lifetime",
+    "J2 configurations differ in pole/frame treatment and gravity constants; residual is a model/configuration difference, not an isolated integrator error",
+    "Thresholds were not preregistered before exploratory runs; report observed residuals, not a qualification pass"
+  ],
+  "matched_central_gravity": {
+    "force_boundary": "Identical central gravity constant and numerical initial Cartesian state; output epochs aligned",
+    "max_position_difference_m": 0.22704340921774763,
+    "mu_m3_s2": 398600441500000.0,
+    "not_established": "J2 frame harmonization, atmospheric lifetime, coupled host dynamics, hardware accuracy",
+    "terminal_position_difference_m": 0.22704340921774763
+  },
+  "orekit_version": "13.1.6",
+  "output_step_s": 60,
+  "source_hashes": {
+    "OrbitEvidence.java": "29c0e380b56f9adc183fc0122867c65fd98adef4495846144ea34149fe7c9509",
+    "gmat_J2.txt": "f1be3651147de7f6da896bc3b9707a2e702b722581f4b99e89430ae55649f296",
+    "gmat_two_body.txt": "5ec83a51819b9c00495f114570e60bffe7d582972a6451000af844567c1a8919",
+    "orekit_30s.csv": "f07a61cfaae75411f402b4857f74c78a3eebeb80811143fc41a95a93c3127956",
+    "orekit_60s.csv": "6baf626f61dab0c7ea58b8e819da09ca467d44c5228ce1c35b58aa3a3580a4d9",
+    "orekit_gmat_mu.csv": "41bffda8716956d60313792a34d1da4e8b2c71bbed958e7449d2050d4bdb7097"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-16 current review deliverables",
+  "revision": "2026-10-18 orbital software supplement; Gen5 technical record unchanged",
   "hardware_measurements": false,
   "boundary": "Legacy graphs remain historical model outputs with current manuscript limitations. STEP-derived views do not prove loaded clearance. This catalog fixes image identity; method/units/case are described by captions and validation records.",
   "figures": [
@@ -193,10 +193,48 @@
         "README.md"
       ],
       "evidence_class": "computational plot or diagram; no physical measurement"
+    },
+    {
+      "path": "validation/orbit_evidence/figures/archived_campaign.png",
+      "sha256": "67432ddada9dc6be2661a72bf669b74732794f3c314de80a402c0ceb8fac37f8",
+      "bytes": 195302,
+      "referenced_by": [
+        "validation/orbit_evidence/README.md"
+      ],
+      "evidence_class": "Native solver output plotted with Matplotlib; archived campaign clearly separated; not a GUI screenshot or physical measurement"
+    },
+    {
+      "path": "validation/orbit_evidence/figures/numerical_checks.png",
+      "sha256": "3b1a0072957c13dac0a0854755314f2a96b62e7d5773f96b8ff5928a26e76154",
+      "bytes": 106560,
+      "referenced_by": [
+        "validation/orbit_evidence/README.md"
+      ],
+      "evidence_class": "Native solver output plotted with Matplotlib; archived campaign clearly separated; not a GUI screenshot or physical measurement"
+    },
+    {
+      "path": "validation/orbit_evidence/figures/release_history.png",
+      "sha256": "d6822488a0d57b7de0250fd26f814c5332329967948137b2db4f08261e09660f",
+      "bytes": 236231,
+      "referenced_by": [
+        "validation/orbit_evidence/README.md"
+      ],
+      "evidence_class": "Native solver output plotted with Matplotlib; archived campaign clearly separated; not a GUI screenshot or physical measurement"
+    },
+    {
+      "path": "validation/orbit_evidence/figures/solver_comparison.png",
+      "sha256": "6241e49a0dce1af9af2ee61473c311e1d9c4a7710436c7042dda2380880831e7",
+      "bytes": 247952,
+      "referenced_by": [
+        "validation/orbit_evidence/README.md",
+        "README.md"
+      ],
+      "evidence_class": "Native solver output plotted with Matplotlib; archived campaign clearly separated; not a GUI screenshot or physical measurement"
     }
   ],
   "document_sha256": {
-    "README.md": "d7d3978530898f5ef33d0f472d8d44f890fbb168b833925059d296aaf4294132",
-    "reports/GEN5_COMPUTATIONAL_REVIEW.md": "1541b43f05818888dd0cc1ded1fe42dc1d7e5e73f3f17a8a6ecc45668d6619e6"
+    "README.md": "1a8af9aadef27a9e799915bad37bc4fea3d0f250420b5f27fccab93cafb5ac62",
+    "reports/GEN5_COMPUTATIONAL_REVIEW.md": "1541b43f05818888dd0cc1ded1fe42dc1d7e5e73f3f17a8a6ecc45668d6619e6",
+    "validation/orbit_evidence/README.md": "c00443d41ebafacc3de5e6e94c38f0f75ba37247c629fe2839d04687995bf415"
   }
 }

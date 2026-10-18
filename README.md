@@ -1,5 +1,9 @@
 # VOLLEY
 
+
+
+
+
 ### A computational design study for sequential CubeSat deployment
 
 VOLLEY studies a host-mounted electromagnetic machine that would feed ordinary 3U CubeSats through one reusable launch path and command an individual departure speed for each release. **Gen5 is the controlled academic evaluation snapshot, with a negative 3U selection finding.** Its final engineering release and academic freeze are open. Gen6 is the proposed first instrumented prototype programme, with its speed and accuracy to be derived from a named mission and payload. A 1 km/s-class release is a separate long-range research objective; Gen6 has no selected mechanism or validated performance.
@@ -75,7 +79,7 @@ A [finite-force shot rerun](validation/P120_gen5_finite_coupled_shot.md) carries
 
 *Position-dependent model rerun, not a measured pulse or inverter validation. [P120 inputs, ledger and timestep check](validation/P120_gen5_finite_coupled_shot.md).*
 
-## One machine, one evaluated configuration
+## Evaluated configuration
 
 Gen5 places the release station 1.5 m from the breech on 1.8 m structural longerons, with a 1.3 m powered stroke. It models a double-sided ironless Halbach linear synchronous drive, reusable permanent-magnet sled, eddy-current arrest, capacitor pulse store and conceptual twelve-payload magazine. The satellite is intended to remain mechanically and electrically unmodified. The modeled acceleration is **10.07 g**, but that value does not qualify any real payload.
 
@@ -96,7 +100,7 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 
 *These charts are generated from the checked-in [mass](analysis/results/mass_properties.json), [shot](analysis/results/motor_results.json) and [energy audit](analysis/results/rated_energy_mass_audit.json) JSON. The 6 kg canister is an approximate comparator. [P117](validation/P117_rated_energy_mass_audit.md) now accounts for the old 124.488 J compact-output remainder as modeled converter loss, auxiliary draw and an integration step. The electrical hardware and revised finite-force shot remain unverified. [Rebuild charts](tools/plot_gen5_decision.py).*
 
-## See the evidence, including what failed
+## Computational evidence
 
 <p align="center"><img src="figures/A02_field_map.png" alt="Calculated magnetic airgap field" width="32%"> <img src="figures/F01_shot.png" alt="Calculated Gen5 shot history" width="32%"> <img src="figures/A35_ledger.png" alt="Requirement-attributed mass floor" width="32%"></p>
 
@@ -126,7 +130,7 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 
 *The finite-burn campaign has been rerun from the restored source and again stops at 0/3/4/0/4/5 accepted deliveries. No case delivers all twelve. This is a surrogate calculation with assumed host thrust and release speeds; it does not establish mission infeasibility or hardware performance. [Run record and limitation](docs/MANIFEST_FINITE_BURN.md).*
 
-## Inspect the hardware definition
+## Mechanical design record
 
 <p align="center"><img src="cad/renders/step_review/gen5_reference_closed.jpg" alt="STEP-derived outer Gen5 reference envelope, which conceals an unresolved internal clash" width="49%"> <img src="cad/renders/step_review/gen5_fit_plan.jpg" alt="STEP-derived top view of the Gen5 side-fed reference arrangement" width="49%"></p>
 
@@ -156,7 +160,7 @@ An 81-station nominal FreeCAD B-rep sweep found no solid penetration **within th
 
 The CAD does not provide manufacturing drawings, tolerance stacks, an approved ICD or proof of buildability.
 
-## From study to product
+## Development roadmap
 
 ![Sequence from host preparation to repeated release](docs/assets/mission_sequence.svg)
 
@@ -164,7 +168,7 @@ The sequence above is the product intent. The decisive next gates are a named ho
 
 For the **first Gen6 prototype**, choose a test speed and tolerance from a named mission and payload load limit; do not inherit the 1 km/s target. For the separate high-speed research stream, ideal constant-acceleration scaling gives about **5.1 km of stroke at 10 g** or **204 m at 250 g** for 1 km/s, before losses, arrest, thermal design or payload qualification. A radically different payload class, host or architecture may be required. [Scaling illustration](docs/assets/scaling.svg) · [programme decisions](docs/PROGRAMME_EXECUTION.md).
 
-## Explore the programme
+## Project repositories
 
 | Repository | What a reader gets |
 |:--|:--|
@@ -182,3 +186,17 @@ The [engineering record](validation/P133_gen5_evidence_audit.md) reconciles the 
 ![Reconciled historical mass screen; model assumptions, not measured installed mass](figures/gen5_reconciled_mass.png)
 
 [Versioned evaluated Gen5 technical baseline](docs/GEN5_TECHNICAL_BASELINE.json) fixes exact source/result/CAD hashes and known exceptions. Academic guide approval and final submission remain separate gates.
+
+## Native orbital analysis — 18 October 2026
+
+The [standalone orbital evidence guide](validation/orbit_evidence/README.md) contains executed
+Orekit 13.1.6 and GMAT R2026a cases, source and CSV histories, refinement/conservation checks,
+and the archived 90-day campaign. The unresolved J2 setup difference is shown explicitly;
+this supplement does not establish hardware performance or continuous clearance.
+
+![Native solver comparison with the unresolved J2 difference](validation/orbit_evidence/figures/solver_comparison.png)
+
+[Five-page evidence brief](validation/orbit_evidence/ORBIT_EVIDENCE_BRIEF.pdf) ·
+[Release histories](validation/orbit_evidence/figures/release_history.svg) ·
+[Archived campaign](validation/orbit_evidence/figures/archived_campaign.svg) ·
+[Figure conventions](docs/FIGURE_STANDARD.md)

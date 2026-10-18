@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-18",
+  "gmat": "R2026a build 30 March 2026",
+  "orekit": "13.1.6",
+  "java": "OpenJDK 21.0.12.1",
+  "evidence": "Native console execution; figures are computed output, not GUI screenshots",
+  "runtime_archive_sha256": "fe124b4a606b2e3b704a6fbb1c37b87598d5df0d18cb661c304b5f60074a7754",
+  "gmat_download": "https://sourceforge.net/projects/gmat/files/GMAT/GMAT-R2026a/gmat-ubuntu-x64-R2026a.tar.gz/download",
+  "history_scripts": [
+    "gmat_two_body.script",
+    "gmat_J2.script"
+  ],
+  "source_and_output_hashes": {
+    "orekit_60s.csv": "6baf626f61dab0c7ea58b8e819da09ca467d44c5228ce1c35b58aa3a3580a4d9",
+    "gmat_two_body.txt": "5ec83a51819b9c00495f114570e60bffe7d582972a6451000af844567c1a8919",
+    "orekit_30s.csv": "f07a61cfaae75411f402b4857f74c78a3eebeb80811143fc41a95a93c3127956",
+    "gmat_release_crosscheck.script": "ca99453bab8d1d2fdd69a564ecfd702a33f77d97a37882db6100a5756dca08f6",
+    "gmat_J2.script": "35975cb3fb244a085cc85a648604d522f15e2e13cef3392515239323df2c77fd",
+    "gmat_close_approach.csv": "ab8670c5c789c8333883f47beac64d4fed2f8b98ef3820c22a17dd691e699666",
+    "OrbitEvidence.java": "29c0e380b56f9adc183fc0122867c65fd98adef4495846144ea34149fe7c9509",
+    "gmat_two_body.script": "4470ff7f07a578c2ac6363f80a9fd90c2c41c73740326239105344fadfc885f2",
+    "gmat_archive_sampled.csv": "6e7f4d22ad17eebb498f563c3dc0a8b31e432cda8535a8a02ee0617f2b64dc3b",
+    "orekit_gmat_mu.csv": "41bffda8716956d60313792a34d1da4e8b2c71bbed958e7449d2050d4bdb7097",
+    "OrekitReleaseCrosscheck.java": "f27d70e6639fa9cd192c2d1c67c91b5a0f475cd73dd52cf25887c65726535d39",
+    "gmat_release_crosscheck.txt": "31e76fc3c4fda7ad12307b2a5f525474a68bd253ae27b25d9c038984b32f530e",
+    "gmat_J2.txt": "f1be3651147de7f6da896bc3b9707a2e702b722581f4b99e89430ae55649f296"
+  }
+}

@@ -1,0 +1,62 @@
+% GMAT R2026a single-release finite-host cross-check
+% STATUS: repaired input; execution outcome is recorded in the companion manifest.
+% Case: 450 km circular, i=51.6 deg, 4 kg payload, 300 kg retained host,
+% commanded relative speed 16.029 m/s -> payload inertial dV = 15.818092105 m/s.
+%
+% This case deliberately applies an impulsive V-direction burn to the payload only and reports
+% osculating elements. It is an independent solver check of the immediate orbit geometry.
+%
+Create Spacecraft Sat;
+Sat.DateFormat = UTCGregorian;
+Sat.Epoch = '29 Sep 2026 00:00:00.000';
+Sat.CoordinateSystem = EarthMJ2000Eq;
+Sat.DisplayStateType = Keplerian;
+Sat.SMA = 6828.137;
+Sat.ECC = 0;
+Sat.INC = 51.6;
+Sat.RAAN = 0;
+Sat.AOP = 0;
+Sat.TA = 0;
+Sat.DryMass = 4;
+Sat.Cd = 2.2;
+Sat.DragArea = 0.03;
+Sat.Cr = 1.2;
+Sat.SRPArea = 0.03;
+
+Create ImpulsiveBurn Release;
+Release.CoordinateSystem = Local;
+Release.Origin = Earth;
+Release.Axes = VNB;
+Release.Element1 = 0.015818092105263; % km/s
+Release.Element2 = 0;
+Release.Element3 = 0;
+Release.DecrementMass = false;
+
+Create ForceModel FM;
+FM.CentralBody = Earth;
+FM.PrimaryBodies = {Earth};
+FM.GravityField.Earth.Degree = 2;
+FM.GravityField.Earth.Order = 0;
+FM.Drag = None;
+FM.SRP = Off;
+
+Create Propagator Prop;
+Prop.FM = FM;
+Prop.Type = RungeKutta89;
+Prop.InitialStepSize = 10;
+Prop.Accuracy = 1e-12;
+Prop.MinStep = 0.001;
+Prop.MaxStep = 60;
+
+Create ReportFile OrbitReport;
+OrbitReport.Filename = 'gmat_release_crosscheck.txt';
+OrbitReport.WriteHeaders = true;
+OrbitReport.LeftJustify = On;
+OrbitReport.ColumnWidth = 24;
+
+BeginMissionSequence;
+Maneuver Release(Sat);
+Report OrbitReport Sat.ElapsedSecs Sat.Earth.SMA Sat.Earth.ECC Sat.Earth.Altitude;
+Propagate Prop(Sat) {Sat.ElapsedSecs = 6000};
+Report OrbitReport Sat.ElapsedSecs Sat.Earth.SMA Sat.Earth.ECC Sat.Earth.Altitude;
+
