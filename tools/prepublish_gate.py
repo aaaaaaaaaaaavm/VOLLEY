@@ -69,6 +69,9 @@ def check(path_name: str, errors: list[str]) -> None:
     path = ROOT / path_name
     if not path.is_file():
         return
+    if path.suffix.lower() == ".fcbak":
+        errors.append(f"{path_name}: uncontrolled native CAD backup is not publishable")
+        return
     if any(marker in path_name.upper() for marker in FORBIDDEN_NAMES):
         errors.append(f"{path_name}: internal draft filename is not publishable")
     if path.stat().st_size > 30_000_000:
