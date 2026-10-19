@@ -230,10 +230,28 @@
         "README.md"
       ],
       "evidence_class": "Native solver output plotted with Matplotlib; archived campaign clearly separated; not a GUI screenshot or physical measurement"
+    },
+    {
+      "path": "figures/gen5_scientific_mass.png",
+      "sha256": "5245283936271504138e1fdd53a645f4a6bbbf6370c0154e5f1add53b0ed6fc7",
+      "bytes": 144768,
+      "referenced_by": [
+        "README.md"
+      ],
+      "evidence_class": "Computed plot of captured historical model; scientific presentation edition, not hardware measurement"
+    },
+    {
+      "path": "figures/gen5_scientific_lifetime.png",
+      "sha256": "767a399795ec198a204eceab92f828cf376404dc7da7701e6c78083b11ac14bb",
+      "bytes": 178723,
+      "referenced_by": [
+        "tools/plot_scientific_summary.py"
+      ],
+      "evidence_class": "Computed plot of captured historical model; scientific presentation edition, not hardware measurement"
     }
   ],
   "document_sha256": {
-    "README.md": "1a8af9aadef27a9e799915bad37bc4fea3d0f250420b5f27fccab93cafb5ac62",
+    "README.md": "645b329bad2fef3d512e78485e2d3ef3ea193c52a543177377155dbc9315e4a7",
     "reports/GEN5_COMPUTATIONAL_REVIEW.md": "1541b43f05818888dd0cc1ded1fe42dc1d7e5e73f3f17a8a6ecc45668d6619e6",
     "validation/orbit_evidence/README.md": "c00443d41ebafacc3de5e6e94c38f0f75ba37247c629fe2839d04687995bf415"
   }

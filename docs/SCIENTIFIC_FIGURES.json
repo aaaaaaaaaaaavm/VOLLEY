@@ -1,0 +1,98 @@
+{
+  "revision": "2026-10-19 scientific presentation edition",
+  "scope": "Selected current figure sets only. Retained historical graphics are not automatically certified compliant.",
+  "figures": [
+    {
+      "evidence_class": "Computed plot",
+      "caption": "Scientific presentation edition of captured Gen5 mass ledger",
+      "limitations": "Preserves adverse findings; not measured hardware, installed BOM, real-atmosphere validation or achieved release speed.",
+      "sources": {
+        "tools/plot_scientific_summary.py": "a46b0a0cd6f10db5d953bb447ae1e4e81d07797f40aec91a58df9e04894560bd",
+        "tools/scientific.mplstyle": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+        "analysis/results/gen5_mass_ledger.json": "17da99d5146f25bd510aeca0c6b7f35f2fb2edcf5ae6b5edc40bce2435892b24",
+        "analysis/results/gen5_lifetime_crosscheck.json": "380234ed43ee36dd23d6b4f86541a55be49cad45399754fa98c0835102d11ecf"
+      },
+      "exports": {
+        "figures/gen5_scientific_mass.svg": "18c99ce1eda04d7f570846e36851302f2923f12134370742b3c9609461c37ab3",
+        "figures/gen5_scientific_mass.pdf": "e54a7a23053c48be40e0ed4ae28c92aaff390eee9f9919458101440588eebcd8",
+        "figures/gen5_scientific_mass.png": "5245283936271504138e1fdd53a645f4a6bbbf6370c0154e5f1add53b0ed6fc7"
+      }
+    },
+    {
+      "evidence_class": "Computed plot",
+      "caption": "Scientific presentation edition of captured Gen5 static-atmosphere lifetime integration",
+      "limitations": "Preserves adverse findings; not measured hardware, installed BOM, real-atmosphere validation or achieved release speed.",
+      "sources": {
+        "tools/plot_scientific_summary.py": "a46b0a0cd6f10db5d953bb447ae1e4e81d07797f40aec91a58df9e04894560bd",
+        "tools/scientific.mplstyle": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+        "analysis/results/gen5_mass_ledger.json": "17da99d5146f25bd510aeca0c6b7f35f2fb2edcf5ae6b5edc40bce2435892b24",
+        "analysis/results/gen5_lifetime_crosscheck.json": "380234ed43ee36dd23d6b4f86541a55be49cad45399754fa98c0835102d11ecf"
+      },
+      "exports": {
+        "figures/gen5_scientific_lifetime.svg": "212d63ffc1a38476dc7ea5f899bfd4d1559d4c9584f6c73b88ac75e47311a554",
+        "figures/gen5_scientific_lifetime.pdf": "b599ba3e5022f4f93b1caddad200d03d1396ca0b2cd6da77441f18f3ba45f49f",
+        "figures/gen5_scientific_lifetime.png": "767a399795ec198a204eceab92f828cf376404dc7da7701e6c78083b11ac14bb"
+      }
+    },
+    {
+      "evidence_class": "Computed plot",
+      "caption": "Native orbital evidence: release history",
+      "limitations": "Fixed stated forces/epochs; archived and fresh cases distinguished; unresolved J2 configuration discrepancy and sampled-clearance boundary retained.",
+      "sources": {
+        "validation/orbit_evidence/plot.py": "4253c3af940df1cf8bf892f73df3e7e93de86efdaf203d908c3cae7c9914027b",
+        "validation/orbit_evidence/ORBIT_RESULTS.json": "6039605254f48e35481ac70352fd21b4c5b9a48207b49619d91ef061463525a6",
+        "validation/orbit_evidence/ARCHIVE_SAMPLING.json": "fc89227edded053e10cf6efb70ed98e6408f31f8d3cc727a6bcf8428d65b817c"
+      },
+      "exports": {
+        "validation/orbit_evidence/figures/release_history.svg": "2ed74e9a827ea452dde9bbf7b165a0c966cfed53763ffb2e52039ed920b34023",
+        "validation/orbit_evidence/figures/release_history.pdf": "59c4c7364350fd72515baf38499ede4e80442ea8ed74345d8065a0d044eb3f00",
+        "validation/orbit_evidence/figures/release_history.png": "d6822488a0d57b7de0250fd26f814c5332329967948137b2db4f08261e09660f"
+      }
+    },
+    {
+      "evidence_class": "Computed plot",
+      "caption": "Native orbital evidence: solver comparison",
+      "limitations": "Fixed stated forces/epochs; archived and fresh cases distinguished; unresolved J2 configuration discrepancy and sampled-clearance boundary retained.",
+      "sources": {
+        "validation/orbit_evidence/plot.py": "4253c3af940df1cf8bf892f73df3e7e93de86efdaf203d908c3cae7c9914027b",
+        "validation/orbit_evidence/ORBIT_RESULTS.json": "6039605254f48e35481ac70352fd21b4c5b9a48207b49619d91ef061463525a6",
+        "validation/orbit_evidence/ARCHIVE_SAMPLING.json": "fc89227edded053e10cf6efb70ed98e6408f31f8d3cc727a6bcf8428d65b817c"
+      },
+      "exports": {
+        "validation/orbit_evidence/figures/solver_comparison.svg": "3b0281e97780805a9f88c881635176993bc044fbc15fc30377b1cbadb5cb0606",
+        "validation/orbit_evidence/figures/solver_comparison.pdf": "fb1cabe7cbd7ffa9cde3e0ddb1b09fec3fc32f9136921d788c7caab8f9c6ce4a",
+        "validation/orbit_evidence/figures/solver_comparison.png": "6241e49a0dce1af9af2ee61473c311e1d9c4a7710436c7042dda2380880831e7"
+      }
+    },
+    {
+      "evidence_class": "Computed plot",
+      "caption": "Native orbital evidence: numerical checks",
+      "limitations": "Fixed stated forces/epochs; archived and fresh cases distinguished; unresolved J2 configuration discrepancy and sampled-clearance boundary retained.",
+      "sources": {
+        "validation/orbit_evidence/plot.py": "4253c3af940df1cf8bf892f73df3e7e93de86efdaf203d908c3cae7c9914027b",
+        "validation/orbit_evidence/ORBIT_RESULTS.json": "6039605254f48e35481ac70352fd21b4c5b9a48207b49619d91ef061463525a6",
+        "validation/orbit_evidence/ARCHIVE_SAMPLING.json": "fc89227edded053e10cf6efb70ed98e6408f31f8d3cc727a6bcf8428d65b817c"
+      },
+      "exports": {
+        "validation/orbit_evidence/figures/numerical_checks.svg": "a0d06245147bf2aa450e908c8deafa80a198c36cb0972929d20a43fd58d15d5e",
+        "validation/orbit_evidence/figures/numerical_checks.pdf": "cab2545025850d48bf2948169f1f3d94e284046f4edfa29d6076e490802777fc",
+        "validation/orbit_evidence/figures/numerical_checks.png": "3b1a0072957c13dac0a0854755314f2a96b62e7d5773f96b8ff5928a26e76154"
+      }
+    },
+    {
+      "evidence_class": "Computed plot",
+      "caption": "Native orbital evidence: archived campaign",
+      "limitations": "Fixed stated forces/epochs; archived and fresh cases distinguished; unresolved J2 configuration discrepancy and sampled-clearance boundary retained.",
+      "sources": {
+        "validation/orbit_evidence/plot.py": "4253c3af940df1cf8bf892f73df3e7e93de86efdaf203d908c3cae7c9914027b",
+        "validation/orbit_evidence/ORBIT_RESULTS.json": "6039605254f48e35481ac70352fd21b4c5b9a48207b49619d91ef061463525a6",
+        "validation/orbit_evidence/ARCHIVE_SAMPLING.json": "fc89227edded053e10cf6efb70ed98e6408f31f8d3cc727a6bcf8428d65b817c"
+      },
+      "exports": {
+        "validation/orbit_evidence/figures/archived_campaign.svg": "42bf364e43b82d5c83af1ff2926498c0257909c8a5327bed28c6300c0b6b021c",
+        "validation/orbit_evidence/figures/archived_campaign.pdf": "1ff836b7de31203cbf34e65b05ee21d161abc17f5e67fe8287ab47a5707f2463",
+        "validation/orbit_evidence/figures/archived_campaign.png": "67432ddada9dc6be2661a72bf669b74732794f3c314de80a402c0ceb8fac37f8"
+      }
+    }
+  ]
+}

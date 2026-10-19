@@ -200,3 +200,13 @@ this supplement does not establish hardware performance or continuous clearance.
 [Release histories](validation/orbit_evidence/figures/release_history.svg) ·
 [Archived campaign](validation/orbit_evidence/figures/archived_campaign.svg) ·
 [Figure conventions](docs/FIGURE_STANDARD.md)
+
+[Scientific figures and documentation conventions](docs/FIGURE_STANDARD.md) · [Released figure sources](docs/SCIENTIFIC_FIGURES.json)
+
+[Independent project and evidence boundary](docs/PROJECT_BOUNDARY.md)
+
+### Scientific presentation edition
+
+![Captured Gen5 mass comparison](figures/gen5_scientific_mass.png)
+
+Captured numerical mass values and explicitly assumed comparisons; no measured hardware mass. [Vector figure](figures/gen5_scientific_mass.pdf) · [source](tools/plot_scientific_summary.py). The original technical evidence record remains unchanged.

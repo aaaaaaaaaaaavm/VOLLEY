@@ -1,0 +1,16 @@
+name: scientific-figures
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  figures:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch exact source
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git fetch -q origin "${{ github.sha }}"
+          git checkout -q --detach "${{ github.sha }}"
+      - name: Released figure identities
+        run: python3 tools/check_scientific_assets.py
