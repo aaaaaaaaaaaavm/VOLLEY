@@ -484,6 +484,70 @@
         "validation/replenishment_feasibility/release/figures/replenishment.pdf": "69a99ed8864c01f4a15d18f057001087e4c7c3cf246e6eb5ac5ee394d17712b6",
         "docs/assets/transfer/replenishment.png": "d8821010cc144152c174494741195c7f99a0ad765f4671dd4573ac567349df34"
       }
+    },
+    {
+      "evidence_class": "Native numerical verification / deterministic surrogate sensitivity",
+      "caption": "control sensitivity",
+      "limitations": "Prescribed point-mass ideal-impulse commands, fixed-axis J2 and assumed error bounds. No measured precision, hardware rating, independently optimized policy or finite-burn acceptance.",
+      "sources": {
+        "validation/native_campaign_review/MANIFEST.json": "47f1dbbeb4b3ed33823010416dfa066e3b5f3cd70b8db73bb152e91d9a5b9dac",
+        "validation/native_campaign_review/full/SUMMARY.json": "1abdc328678d0f05f38ff34cc032808044d0053770c29d64232b470499aa1d03",
+        "validation/native_campaign_review/report.py": "fd8bd25e04cdb7f478fd773d031c8b13753f8f763b47d2d3d5def6570efaa8ec"
+      },
+      "exports": {
+        "validation/native_campaign_review/figures/control_sensitivity.pdf": "698e8140e7d467bdf59dcb76408dce6d3541621394b96dab3ad3295b02e95c14",
+        "validation/native_campaign_review/figures/control_sensitivity.png": "a11c66ae5d3917b81035dfaa2430d2a92c15484bdf9b41d786cffbdfc9e75eaf",
+        "validation/native_campaign_review/figures/control_sensitivity.svg": "e9f493d5849ce191a873193899c6b9b72e307df9479a50f6acc0d510fe38cc52",
+        "docs/assets/native-campaign/control_sensitivity.png": "a11c66ae5d3917b81035dfaa2430d2a92c15484bdf9b41d786cffbdfc9e75eaf"
+      }
+    },
+    {
+      "evidence_class": "Native numerical verification / deterministic surrogate sensitivity",
+      "caption": "metrology budget",
+      "limitations": "Prescribed point-mass ideal-impulse commands, fixed-axis J2 and assumed error bounds. No measured precision, hardware rating, independently optimized policy or finite-burn acceptance.",
+      "sources": {
+        "validation/native_campaign_review/MANIFEST.json": "47f1dbbeb4b3ed33823010416dfa066e3b5f3cd70b8db73bb152e91d9a5b9dac",
+        "validation/native_campaign_review/full/SUMMARY.json": "1abdc328678d0f05f38ff34cc032808044d0053770c29d64232b470499aa1d03",
+        "validation/native_campaign_review/report.py": "fd8bd25e04cdb7f478fd773d031c8b13753f8f763b47d2d3d5def6570efaa8ec"
+      },
+      "exports": {
+        "validation/native_campaign_review/figures/metrology_budget.pdf": "46fc549fbb0d31ed5ab0bb67cc06af2ce2a81337feb6b3027fe1a5e184a3e7be",
+        "validation/native_campaign_review/figures/metrology_budget.png": "f4c4858ad719950c01d20e77b6a051a97c9d9252b2d3870bbb7dc9c96393f620",
+        "validation/native_campaign_review/figures/metrology_budget.svg": "e11fb7d3b87e71a879ca44df96f1e4bfcfcdaf8e0dd52030e838042d58447a2c",
+        "docs/assets/native-campaign/metrology_budget.png": "f4c4858ad719950c01d20e77b6a051a97c9d9252b2d3870bbb7dc9c96393f620"
+      }
+    },
+    {
+      "evidence_class": "Native numerical verification / deterministic surrogate sensitivity",
+      "caption": "nominal consistency",
+      "limitations": "Prescribed point-mass ideal-impulse commands, fixed-axis J2 and assumed error bounds. No measured precision, hardware rating, independently optimized policy or finite-burn acceptance.",
+      "sources": {
+        "validation/native_campaign_review/MANIFEST.json": "47f1dbbeb4b3ed33823010416dfa066e3b5f3cd70b8db73bb152e91d9a5b9dac",
+        "validation/native_campaign_review/full/SUMMARY.json": "1abdc328678d0f05f38ff34cc032808044d0053770c29d64232b470499aa1d03",
+        "validation/native_campaign_review/report.py": "fd8bd25e04cdb7f478fd773d031c8b13753f8f763b47d2d3d5def6570efaa8ec"
+      },
+      "exports": {
+        "validation/native_campaign_review/figures/nominal_consistency.pdf": "6e93039a0999a659c205d5f62697178fa750144b1b394fd16a6a6660dcbd1c48",
+        "validation/native_campaign_review/figures/nominal_consistency.png": "abac2a6983bda96cb70d5b50ab8f52b28cc9ad3588dc3474e3fc64992ce43cc8",
+        "validation/native_campaign_review/figures/nominal_consistency.svg": "3b341176cb655cc0d64230a226ccf645bf28581007c2df3762cb597371c7dfd9",
+        "docs/assets/native-campaign/nominal_consistency.png": "abac2a6983bda96cb70d5b50ab8f52b28cc9ad3588dc3474e3fc64992ce43cc8"
+      }
+    },
+    {
+      "evidence_class": "Native numerical verification / deterministic surrogate sensitivity",
+      "caption": "thrust time",
+      "limitations": "Prescribed point-mass ideal-impulse commands, fixed-axis J2 and assumed error bounds. No measured precision, hardware rating, independently optimized policy or finite-burn acceptance.",
+      "sources": {
+        "validation/native_campaign_review/MANIFEST.json": "47f1dbbeb4b3ed33823010416dfa066e3b5f3cd70b8db73bb152e91d9a5b9dac",
+        "validation/native_campaign_review/full/SUMMARY.json": "1abdc328678d0f05f38ff34cc032808044d0053770c29d64232b470499aa1d03",
+        "validation/native_campaign_review/report.py": "fd8bd25e04cdb7f478fd773d031c8b13753f8f763b47d2d3d5def6570efaa8ec"
+      },
+      "exports": {
+        "validation/native_campaign_review/figures/thrust_time.pdf": "cbc1538a9cbb1c9df63a7d6abb0b0cc6cdd35328b34117bb0101053c73945be1",
+        "validation/native_campaign_review/figures/thrust_time.png": "e2a78adfc73fb6186b83c31fad2a7a7024a1db50a846304fb8ac71175cc4bd1c",
+        "validation/native_campaign_review/figures/thrust_time.svg": "4693441a7d254e3281beea786e8e33572069355d0d57081f7ada751139b8c57b",
+        "docs/assets/native-campaign/thrust_time.png": "e2a78adfc73fb6186b83c31fad2a7a7024a1db50a846304fb8ac71175cc4bd1c"
+      }
     }
   ]
 }

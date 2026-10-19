@@ -1,0 +1,4 @@
+jars/
+__pycache__/
+*.class
+*.part

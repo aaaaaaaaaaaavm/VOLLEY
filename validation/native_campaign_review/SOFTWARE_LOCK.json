@@ -1,0 +1,46 @@
+{
+  "Java": "OpenJDK21.0.12.1,source-file launcher with compiler module",
+  "numerical_runtime": "Python3.12.14,NumPy2.3.5,SciPy1.17.0,Matplotlib3.10.8",
+  "artifacts": [
+    {
+      "name": "hipparchus-core-4.0.3.jar",
+      "sha256": "5af54dc3c21b8d85e1264157ee91d93fa67e68c825cfb38834dc2bbb9b0f6583",
+      "url": "https://repo.maven.apache.org/maven2/org/hipparchus/hipparchus-core/4.0.3/hipparchus-core-4.0.3.jar"
+    },
+    {
+      "name": "hipparchus-filtering-4.0.3.jar",
+      "sha256": "279eece43411f372bd8340355cb89101def0bf9b1b6824231b76181d1ec63a81",
+      "url": "https://repo.maven.apache.org/maven2/org/hipparchus/hipparchus-filtering/4.0.3/hipparchus-filtering-4.0.3.jar"
+    },
+    {
+      "name": "hipparchus-fitting-4.0.3.jar",
+      "sha256": "3712c3b4f43d9c12bf7b7aad187764f4b3c09cc962504899d8951eb310b1e4be",
+      "url": "https://repo.maven.apache.org/maven2/org/hipparchus/hipparchus-fitting/4.0.3/hipparchus-fitting-4.0.3.jar"
+    },
+    {
+      "name": "hipparchus-geometry-4.0.3.jar",
+      "sha256": "19594d5106ec6a46951e859e2924bfcade02a834c06c56bd3d2130a74f0fbb7e",
+      "url": "https://repo.maven.apache.org/maven2/org/hipparchus/hipparchus-geometry/4.0.3/hipparchus-geometry-4.0.3.jar"
+    },
+    {
+      "name": "hipparchus-ode-4.0.3.jar",
+      "sha256": "75f0f0b3fdcd99d13e9c394b7ae809cce5a9c22f1c14b1b90a5109ed951467fe",
+      "url": "https://repo.maven.apache.org/maven2/org/hipparchus/hipparchus-ode/4.0.3/hipparchus-ode-4.0.3.jar"
+    },
+    {
+      "name": "hipparchus-optim-4.0.3.jar",
+      "sha256": "4bc0dbb5c6d5fefda5db9d92141c6cbb807174a1d491a85df46bcc57a67b8992",
+      "url": "https://repo.maven.apache.org/maven2/org/hipparchus/hipparchus-optim/4.0.3/hipparchus-optim-4.0.3.jar"
+    },
+    {
+      "name": "hipparchus-stat-4.0.3.jar",
+      "sha256": "8b066e3060dc119efcce241fb0720a3b9e59c026d0f5fe9e70abfd5e22d3817b",
+      "url": "https://repo.maven.apache.org/maven2/org/hipparchus/hipparchus-stat/4.0.3/hipparchus-stat-4.0.3.jar"
+    },
+    {
+      "name": "orekit-13.1.6.jar",
+      "sha256": "691d6f87443749176e9bba0eee8f5dbb7c9823be7edd45f921e7f3a448f28ded",
+      "url": "https://repo.maven.apache.org/maven2/org/orekit/orekit/13.1.6/orekit-13.1.6.jar"
+    }
+  ]
+}

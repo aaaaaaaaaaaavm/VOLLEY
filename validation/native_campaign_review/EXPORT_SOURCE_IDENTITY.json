@@ -1,0 +1,6 @@
+{
+  "upstream": "VOLLEY-lab/experiments/coupled-delivery-review/run.py",
+  "upstream_sha256": "dcbf267c2fbd22c807fdc4319e05d2f79b9b59520d48f906c16db624f2278d4b",
+  "derived_sha256": "df58b679a7193856c0044ea9f1bfeafea73bf6f6c914e839033bf3562ee92730",
+  "scope": "Same trajectory/root/recoil/rocket calculations; adds event logging and replaces later clearance/dense-output reporting. No original source or result changed."
+}

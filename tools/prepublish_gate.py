@@ -106,7 +106,9 @@ def check_evidence_tracking(errors: list[str]) -> None:
     """Every file in a current captured-study manifest must enter the Git payload."""
     import json
     tracked = set(git("ls-files", "-z").decode().split("\0"))
-    for name in ["validation/captive_transfer_review/MANIFEST.json",
+    for name in ["validation/native_campaign_review/MANIFEST.json",
+                 "experiments/native-campaign-review/MANIFEST.json",
+                 "validation/captive_transfer_review/MANIFEST.json",
                  "validation/replenishment_feasibility/MANIFEST.json",
                  "experiments/captive-transfer-review/MANIFEST.json",
                  "experiments/replenishment-feasibility/MANIFEST.json"]:
