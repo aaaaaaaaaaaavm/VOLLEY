@@ -1,0 +1,61 @@
+{
+  "comparison": "60 to30s maximum DOP853 step; same solver, model and conditional bounds, not independent validation",
+  "cases": [
+    {
+      "count": 4,
+      "strategy": "spring",
+      "status": "COMPUTED",
+      "fuel_change_kg": 2.0198953620820248e-11,
+      "host_dv_change_m_s": 1.3418244293461612e-10,
+      "maximum_terminal_position_residual_m": 4.49259384316158e-06,
+      "same_final_host_position_residual_m": 7.219731599517128e-06,
+      "all_conditional_clearance_screens_pass": true
+    },
+    {
+      "count": 4,
+      "strategy": "volley_3_6",
+      "status": "COMPUTED",
+      "fuel_change_kg": 8.334666290465975e-12,
+      "host_dv_change_m_s": 5.438316463823867e-11,
+      "maximum_terminal_position_residual_m": 6.811676312591195e-06,
+      "same_final_host_position_residual_m": 6.226638879925959e-07,
+      "all_conditional_clearance_screens_pass": true
+    },
+    {
+      "count": 4,
+      "strategy": "volley_unrestricted",
+      "status": "COMPUTED",
+      "fuel_change_kg": -5.205258446494554e-11,
+      "host_dv_change_m_s": -3.2657146431525064e-10,
+      "maximum_terminal_position_residual_m": 8.332586209439098e-06,
+      "same_final_host_position_residual_m": 9.821282743751738e-06,
+      "all_conditional_clearance_screens_pass": true
+    },
+    {
+      "count": 12,
+      "strategy": "spring",
+      "status": "FAILED",
+      "reason": "Fuel exhausted at transfer 10: 0.940591 kg requested, 0.264673 kg remaining"
+    },
+    {
+      "count": 12,
+      "strategy": "volley_3_6",
+      "status": "COMPUTED",
+      "fuel_change_kg": 2.8337332480532496e-11,
+      "host_dv_change_m_s": 1.5423395893776615e-10,
+      "maximum_terminal_position_residual_m": 9.91777995210556e-06,
+      "same_final_host_position_residual_m": 3.063045413235186e-06,
+      "all_conditional_clearance_screens_pass": true
+    },
+    {
+      "count": 12,
+      "strategy": "volley_unrestricted",
+      "status": "COMPUTED",
+      "fuel_change_kg": -2.6977531319971604e-11,
+      "host_dv_change_m_s": -1.448886566279839e-10,
+      "maximum_terminal_position_residual_m": 7.511856188267038e-06,
+      "same_final_host_position_residual_m": 1.1286392623766523e-06,
+      "all_conditional_clearance_screens_pass": true
+    }
+  ]
+}

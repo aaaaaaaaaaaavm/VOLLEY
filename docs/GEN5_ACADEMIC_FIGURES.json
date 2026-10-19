@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-18 orbital software supplement; Gen5 technical record unchanged",
+  "revision": "19 October2026 computational supplements; fixed Gen5 technical record unchanged",
   "hardware_measurements": false,
   "boundary": "Legacy graphs remain historical model outputs with current manuscript limitations. STEP-derived views do not prove loaded clearance. This catalog fixes image identity; method/units/case are described by captions and validation records.",
   "figures": [
@@ -248,11 +248,195 @@
         "tools/plot_scientific_summary.py"
       ],
       "evidence_class": "Computed plot of captured historical model; scientific presentation edition, not hardware measurement"
+    },
+    {
+      "path": "validation/feeder_review/release/figures/belt_shuttle_cad.png",
+      "sha256": "5ce58b2d9df16386046dee914763b0336eadb0d57a4f1365349784e8ea19271f",
+      "bytes": 172064,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "STEP-derived orthographic geometry; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/fea_convergence.png",
+      "sha256": "8b751d13e8c17a8f2cbe082949d3a793c9b78ad3f252ad6deed20a31aad5d2b8",
+      "bytes": 177083,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "Computed load/tolerance/native-FEA plot; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/indexed_drum_cad.png",
+      "sha256": "0acbb1dd6401605dacd0ee3586301ee0145cf952bc2933228ed4d76be6e3209a",
+      "bytes": 237582,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "STEP-derived orthographic geometry; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/lead_screw_cad.png",
+      "sha256": "0d1b4c8547e553d9eb3b4967f8a44747784a927a65a9b9283be6f8487b8ae140",
+      "bytes": 170071,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "STEP-derived orthographic geometry; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/loads.png",
+      "sha256": "913a51637567bf85364be1ee82d95ce58b9323a41a600349fa932e7452cab59e",
+      "bytes": 215298,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "Computed load/tolerance/native-FEA plot; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/pantograph_cad.png",
+      "sha256": "3649c79f81ce0cafb51afbad3eef1b03480ea277d6cafd95fba60dd2818f90cb",
+      "bytes": 178309,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "STEP-derived orthographic geometry; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/rack_pawl_cad.png",
+      "sha256": "22d8a1ebcca61fe46c869ac2132f604f3e465b6073a3ec63946bd69a92d064a4",
+      "bytes": 174115,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "STEP-derived orthographic geometry; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/spring_dual_gate_cad.png",
+      "sha256": "510f938a4d15523e5486ba6c37b51c3a8384fa9167b902019908d7b4e8c903d7",
+      "bytes": 181022,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "STEP-derived orthographic geometry; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/telescopic_cad.png",
+      "sha256": "b339be32b976a8ca0255d70de73e6aa70005d7120b80149b5ae856f9dded63f6",
+      "bytes": 168895,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "STEP-derived orthographic geometry; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/figures/tolerance.png",
+      "sha256": "81a3fa4436a4fa1eb34cd76d31aa57a4ab163d8546cf5ad0bc231b347204f75a",
+      "bytes": 99929,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "Computed load/tolerance/native-FEA plot; Unselected candidates;210 nominal states/straight-payload sweeps only. Material proxies exclude purchased hardware; failed fits/arrest sizing retained. No full-cycle, contact, installed strength, reliability or manufacturing pass."
+    },
+    {
+      "path": "validation/feeder_review/release/captures/FreeCAD_belt_shuttle_3U.png",
+      "sha256": "5e783384db4b9110e36aaf8605464764c328c5840676a3429a1dd95a36b60507",
+      "bytes": 46476,
+      "referenced_by": [
+        "validation/feeder_review/release/captures/PROVENANCE.json"
+      ],
+      "evidence_class": "Genuine native application viewport; Display providers duplicate unchanged native Part shapes for visibility; source document unsaved. Candidate geometry is not hardware, a full mechanism or a validated load path."
+    },
+    {
+      "path": "validation/feeder_review/release/captures/FreeCAD_indexed_drum_3U.png",
+      "sha256": "8b58e04b9127aa2e2c8f598a2f1afd9d0cf8ae40919694496ecb2cb7575ad03f",
+      "bytes": 94238,
+      "referenced_by": [
+        "validation/feeder_review/release/captures/PROVENANCE.json"
+      ],
+      "evidence_class": "Genuine native application viewport; Display providers duplicate unchanged native Part shapes for visibility; source document unsaved. Candidate geometry is not hardware, a full mechanism or a validated load path."
+    },
+    {
+      "path": "validation/feeder_review/release/captures/FreeCAD_lead_screw_3U.png",
+      "sha256": "7f93b4b3427066a93f38a2e704d3aa32ce176a2832496da8f45014a8f30ec3f3",
+      "bytes": 51221,
+      "referenced_by": [
+        "validation/feeder_review/release/captures/PROVENANCE.json"
+      ],
+      "evidence_class": "Genuine native application viewport; Display providers duplicate unchanged native Part shapes for visibility; source document unsaved. Candidate geometry is not hardware, a full mechanism or a validated load path."
+    },
+    {
+      "path": "validation/feeder_review/release/captures/FreeCAD_pantograph_3U.png",
+      "sha256": "9dc6a91ec38179bb4e307e65905a8c9425e354b71f83ce9e27952c0e61ffc14d",
+      "bytes": 50729,
+      "referenced_by": [
+        "validation/feeder_review/release/captures/PROVENANCE.json"
+      ],
+      "evidence_class": "Genuine native application viewport; Display providers duplicate unchanged native Part shapes for visibility; source document unsaved. Candidate geometry is not hardware, a full mechanism or a validated load path."
+    },
+    {
+      "path": "validation/feeder_review/release/captures/FreeCAD_rack_pawl_3U.png",
+      "sha256": "c863dccd836f6392eba207ac25231da25e892adbb444b0da77441249aba9824c",
+      "bytes": 46580,
+      "referenced_by": [
+        "validation/feeder_review/release/captures/PROVENANCE.json"
+      ],
+      "evidence_class": "Genuine native application viewport; Display providers duplicate unchanged native Part shapes for visibility; source document unsaved. Candidate geometry is not hardware, a full mechanism or a validated load path."
+    },
+    {
+      "path": "validation/feeder_review/release/captures/FreeCAD_spring_dual_gate_3U.png",
+      "sha256": "eaad8f316f713d3def2c04d531bad4f6c8d7b09ed7ff8b8485d20ff239dd48df",
+      "bytes": 54088,
+      "referenced_by": [
+        "validation/feeder_review/release/captures/PROVENANCE.json"
+      ],
+      "evidence_class": "Genuine native application viewport; Display providers duplicate unchanged native Part shapes for visibility; source document unsaved. Candidate geometry is not hardware, a full mechanism or a validated load path."
+    },
+    {
+      "path": "validation/feeder_review/release/captures/FreeCAD_telescopic_3U.png",
+      "sha256": "85f7e3d1e7d18cdf41ff0a7316911da60486bc499eedd29aefa232c326d781ea",
+      "bytes": 45502,
+      "referenced_by": [
+        "validation/feeder_review/release/captures/PROVENANCE.json"
+      ],
+      "evidence_class": "Genuine native application viewport; Display providers duplicate unchanged native Part shapes for visibility; source document unsaved. Candidate geometry is not hardware, a full mechanism or a validated load path."
+    },
+    {
+      "path": "validation/feeder_review/release/fea/Gmsh_CalculiX_floor.png",
+      "sha256": "230839cb73b5fc3dc75167e5ead560547a92cbc5804ca5d54a96e511f1ed63bb",
+      "bytes": 52675,
+      "referenced_by": [
+        "validation/feeder_review/README.md"
+      ],
+      "evidence_class": "Native solver-data viewport; Undeformed assumed-clamped fixture; E69GPa/nu0.33,6kg x25g. Actual mounts/contact absent; peak support stress not converged. No assembly qualification."
+    },
+    {
+      "path": "validation/coupled_delivery/release/figures/resource_comparison.png",
+      "sha256": "f3a75ceaf997b0177b8d296e676a7a6e4dccd576fd0343510f29b1d0dca87d51",
+      "bytes": 184963,
+      "referenced_by": [
+        "validation/coupled_delivery/README.md"
+      ],
+      "evidence_class": "Constructed numerical mission comparison; Ideal host impulses, constructed targets, fixed-axis J2 and16/30kg per4 device proxies. No customer mission, installed BOM, flight clearance or commercial advantage established."
+    },
+    {
+      "path": "validation/orbit_harmonization/figures/harmonization.png",
+      "sha256": "f4204418f84e7cc404db48cf0ff5418458e8d9324c7da80cd4d5a4369f67743e",
+      "bytes": 215453,
+      "referenced_by": [
+        "validation/orbit_harmonization/README.md",
+        "README.md"
+      ],
+      "evidence_class": "Native solver numerical consistency; Shared prescribed orientation, one-day J2 case. Diagnostic bars use declared different numerical histories. Millimetre agreement is not physical orbit or release accuracy."
     }
   ],
   "document_sha256": {
-    "README.md": "645b329bad2fef3d512e78485e2d3ef3ea193c52a543177377155dbc9315e4a7",
+    "README.md": "4c933cec00baaab5b2bd1e1da85d5e4c93f5b1956911b63d3c4d6ab3a1f34b66",
     "reports/GEN5_COMPUTATIONAL_REVIEW.md": "1541b43f05818888dd0cc1ded1fe42dc1d7e5e73f3f17a8a6ecc45668d6619e6",
-    "validation/orbit_evidence/README.md": "c00443d41ebafacc3de5e6e94c38f0f75ba37247c629fe2839d04687995bf415"
+    "validation/orbit_evidence/README.md": "3f350ec088a33fb413861c20e88e04946c183bb67c67c2378625103412190967",
+    "validation/feeder_review/README.md": "b226b959274eb24030f6f20b4ac58932154fa9b2713ea486bf49a09bb4dba94a",
+    "validation/coupled_delivery/README.md": "2969768ba2bff29cf6f80fcf51a1a7828ad01b6fc8a0a1bb1500518bc7ee7fbd",
+    "validation/orbit_harmonization/README.md": "b1923a072300b7f5162b5c17249205a3e86b0c1ff9c4b385e44566986d89bd4c"
   }
 }

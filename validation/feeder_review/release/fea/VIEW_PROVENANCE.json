@@ -1,0 +1,11 @@
+{
+  "viewer": "Gmsh4.14.1 native OpenGL viewport export",
+  "solver": "CalculiX2.23",
+  "case": "3U_48x24x2",
+  "geometry": "Undeformed actual C3D8I INP mesh; displacement norm from native DAT in metres",
+  "limitations": "Assumed clamped edges and E69GPa/nu0.33 fixture; not actual assembly, converged peak stress, contact or qualification",
+  "inputs": {
+    "3U_48x24x2.inp": "d94efb0596a2da68eb493527fdef07cc54c25715e9e9f3d4444704440756db62",
+    "3U_48x24x2.dat": "68988e6ca939fba4670c627ad679cb1178fdfd7b3240aa896506b530bf0ef419"
+  }
+}

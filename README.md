@@ -191,10 +191,10 @@ The [engineering record](validation/P133_gen5_evidence_audit.md) reconciles the 
 
 The [standalone orbital evidence guide](validation/orbit_evidence/README.md) contains executed
 Orekit 13.1.6 and GMAT R2026a cases, source and CSV histories, refinement/conservation checks,
-and the archived 90-day campaign. The unresolved J2 setup difference is shown explicitly;
+and the archived 90-day campaign. The original unmatched J2 setup difference is retained as dated evidence;
 this supplement does not establish hardware performance or continuous clearance.
 
-![Native solver comparison with the unresolved J2 difference](validation/orbit_evidence/figures/solver_comparison.png)
+![Native solver comparison with the original unmatched J2 difference](validation/orbit_evidence/figures/solver_comparison.png)
 
 [Five-page evidence brief](validation/orbit_evidence/ORBIT_EVIDENCE_BRIEF.pdf) ·
 [Release histories](validation/orbit_evidence/figures/release_history.svg) ·
@@ -210,3 +210,11 @@ this supplement does not establish hardware performance or continuous clearance.
 ![Captured Gen5 mass comparison](figures/gen5_scientific_mass.png)
 
 Captured numerical mass values and explicitly assumed comparisons; no measured hardware mass. [Vector figure](figures/gen5_scientific_mass.pdf) · [source](tools/plot_scientific_summary.py). The original technical evidence record remains unchanged.
+
+## 19 October computational follow-up
+
+[GMAT–Orekit harmonization](validation/orbit_harmonization/README.md) isolates the earlier gravity-axis and reporting mismatch: approximately 1.285 mm maximum difference over a day in the matched prescribed-pole case. This is numerical agreement, not achieved release accuracy.
+
+[Seven-feeder engineering review](validation/feeder_review/README.md) provides native CAD/STEP, material properties, load/tolerance/fault records and native fixture FEA. All concepts remain unselected; full-cycle restraint, contact and installed hardware remain unverified. [Four/twelve-payload coupled campaigns](validation/coupled_delivery/README.md) retain ideal-host assumptions, fuel-reserve failures and larger-reserve countercases. These separately versioned Gen6 studies do not alter the evaluated Gen5 failure findings.
+
+![Matched native solver residuals](validation/orbit_harmonization/figures/harmonization.png)

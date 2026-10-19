@@ -1,0 +1,27 @@
+{
+  "scope": "Bounded computational study; no engineering/hardware qualification follows from file integrity",
+  "files": {
+    "GMAT_RUNTIME.json": "2c8c10d0e07a1f48d9e7e6f9e0a304d526e307ba8c7304e4bb02fc355d2a0a62",
+    "HARMONIZATION_REPORT.pdf": "4a19b673f94bfa31bc4f524df8698c3dcf8e29c0e4c63f7649c1e741fefa2454",
+    "MatchedJ2.java": "ebc38efcb6507a6ca5f2fd25f4ca28add9aee589a6217b7a41c7c212ba68cc79",
+    "OREKIT_RUNTIME.json": "b2eb590ab80075e45f7b96d21e390dc23f32f153b940efd67b125b5f24166065",
+    "README.md": "b1923a072300b7f5162b5c17249205a3e86b0c1ff9c4b385e44566986d89bd4c",
+    "RESULTS.json": "335fcd3f5dd3ddd6019cd2c67f2ace7d61fc778e7a74db796c745204f31078fc",
+    "RUN_COMPLETION.json": "cd7a2b0818fe2e51b75dd8420c02d101065da6a33b166db6f0bf33ac7221b8df",
+    "SOURCE_IDENTITY.json": "1560e63f7ff19dea243dc6eb156951cf460c618b5373d8aa7530b7eeebfdef6a",
+    "analyze.py": "e5dca777230ea4feab2940f2566ad4aa437778002a44b99fd956d68739330ae4",
+    "check_capture.py": "435071abc6ac4c13068b5c4cf8d2bf4d9cb5d825dd807d7e2d7d819692cdd453",
+    "figures/harmonization.pdf": "0941cc25397256c49be76d0665cc2c6f09a0a8254e9e5f6924927e0623a8cd82",
+    "figures/harmonization.png": "f4204418f84e7cc404db48cf0ff5418458e8d9324c7da80cd4d5a4369f67743e",
+    "figures/harmonization.svg": "5dfaf2d80b43f48d574e2f9c36607010cf416f27098f03f17557324afc1c3823",
+    "gmat_J2_continuous.script": "6bb1b66264fb36c65445fb76c8ebb6c63d821060481315fbd525957d52b827f8",
+    "gmat_J2_continuous.txt": "6c6787d6c8c692c7e639d2eab6c93887f839f21b1a83365be1d48c1221e0ea88",
+    "gmat_J2_pole.script": "ee44129b7c913174a6b403d33e72d398dd4b177bcb127418f2223cfc5213f3d0",
+    "gmat_J2_pole.txt": "be54979cf8c90992feb4206049f1185e0624e0aaa20df2b7af1342ffab1f8648",
+    "orekit_matched_native.csv": "4983a79805275b7ce7f59f5918f768e0f5ebf8e77d7beb538c8edb98df49fec0",
+    "orekit_matched_native_15.csv": "acbc2995c68beb3730eb785cc3daf77335dad700d375030419b26ee655391236",
+    "plot.py": "194dfd28d1aa41508a2de2622cd54ed9ecf1332f2734e082f33da5a55fcf2e94",
+    "requirements-python.txt": "815360a00e0e1d7a128cade3de11b66d3fe997cbd6e2c69f8081eb9bc8b88197",
+    "residuals.csv": "d31b3b6c165b2f7d88a2cd362f5675e9612cd75348d425381b8e367b3b35cc86"
+  }
+}

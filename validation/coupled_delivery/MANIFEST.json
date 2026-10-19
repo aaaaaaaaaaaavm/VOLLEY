@@ -1,0 +1,33 @@
+{
+  "scope": "Bounded computational study; no engineering/hardware qualification follows from file integrity",
+  "files": {
+    "COUPLED_DELIVERY_REPORT.pdf": "b80f8d430be4494c9857a589866f447a1af8352d80f9ad1d603fde727037e827",
+    "README.md": "2969768ba2bff29cf6f80fcf51a1a7828ad01b6fc8a0a1bb1500518bc7ee7fbd",
+    "SOURCE_IDENTITY.json": "b5e67d40e14c17b06318590c9e2a4f082c4b156fd6b893b165f825e9ac7c0cd1",
+    "check_capture.py": "3b937e7eda1bce822b7f5b1318ab2fac7775423f4aad4d29ffad65acfd28d8f9",
+    "refine.py": "dc425e56d91a1aa788d6782485e677f2c35fc657752715f56e772a136493c082",
+    "release/12_spring_20kg_step60_states.csv": "ccace86441f48d97ffcdac9f542aee40154a8142a197a996afd8222efb536799",
+    "release/12_volley_3_6_10kg_step30_states.csv": "3f03dfe973f4e19e1e8612133bbbf6bc7a584df98e170701fd39560cba0407a0",
+    "release/12_volley_3_6_10kg_step60_states.csv": "8a06007d55dfcf86c4d14f0827b22089fac81b9ebe258e042de46687e978b617",
+    "release/12_volley_3_6_20kg_step60_states.csv": "5b0efc016057bf186ef73ffab5915d68d6eb904a3d7b77310adb2aa53f18ed84",
+    "release/12_volley_unrestricted_10kg_step30_states.csv": "d142482f893c6d79a7fa233681168e22f67ec4209eec5c21031de8e6387f2d7e",
+    "release/12_volley_unrestricted_10kg_step60_states.csv": "7c08ea517e758d26b826e111c8c18b799c8a15b19910d685e36624af261d12af",
+    "release/12_volley_unrestricted_20kg_step60_states.csv": "a73badd2529d38b7dcb70cc07f18423fb27c03581d2231a9e29a5f1387d6afe5",
+    "release/4_spring_10kg_step30_states.csv": "eeb84ece9e363cbbc77a5f2d30dc5eab5917e0b85958f516c24ef12809849792",
+    "release/4_spring_10kg_step60_states.csv": "b320c7d32e2980197eda0e69be935a78e07d37e31b2d49bf6c8459e26a20dbe1",
+    "release/4_volley_3_6_10kg_step30_states.csv": "f057fde0398395a8bbba8bac3847934e0770b662c90aad23a32d2b6dd75a61eb",
+    "release/4_volley_3_6_10kg_step60_states.csv": "fe17cc61cbfa6b4ba57ee73c521a4a907c5426400bf6847c343b7dfe6c2f5fa8",
+    "release/4_volley_unrestricted_10kg_step30_states.csv": "7e06307b6e1bf3f71d42585104c4e5e829fea6867d43e78ddfe6e6badc6e4591",
+    "release/4_volley_unrestricted_10kg_step60_states.csv": "3f8a4fd07e14ef6bfe69a4c83773b9b69a4d8a933c16825bfa4f94f02cbc0d17",
+    "release/REFINEMENT.json": "c8780739f426a62c5b1b37be8f036b1224f65363cb08244c6ed5baa9c3f24c70",
+    "release/RESERVE_CASES.json": "bd5c2f3a187f20d4b104a783a29ed842fd434c78d94f90270ffff9ecb53ce953",
+    "release/RESULTS.json": "078ebe751e4d1161ab8fc5ca31baf4127f787eb2221bec789de37d1528903f40",
+    "release/figures/resource_comparison.pdf": "956313b08071b3ee69d334ba05685e1bc1e55a5c734a12610a001cabbe997437",
+    "release/figures/resource_comparison.png": "f3a75ceaf997b0177b8d296e676a7a6e4dccd576fd0343510f29b1d0dca87d51",
+    "release/figures/resource_comparison.svg": "64278ba59a0968ea95757147b4278eea2e5978e4f10364bbf9b36030dc71cadd",
+    "report.py": "dd9b34ad7597a1ce9541bf608fb14047065bed17038708e3dba6901ecbb222e6",
+    "requirements-python.txt": "815360a00e0e1d7a128cade3de11b66d3fe997cbd6e2c69f8081eb9bc8b88197",
+    "reserve.py": "1156776b29bc2ec22d280332883394cca9e8d3a4373279ec1d6e57064ff2d585",
+    "run.py": "dcbf267c2fbd22c807fdc4319e05d2f79b9b59520d48f906c16db624f2278d4b"
+  }
+}

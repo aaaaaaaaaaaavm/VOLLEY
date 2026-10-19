@@ -14,3 +14,11 @@ Gen5 is a computational evaluation with an adverse 3U mass and assembly finding.
 ## Evaluated Gen5 evidence revision, 16 October 2026
 
 [Technical baseline](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/GEN5_TECHNICAL_BASELINE.json), [mass and interface ledger](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/docs/GEN5_MASS_AND_INTERFACE_LEDGER.md), and [P134 lifetime numerical check](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/validation/P134_gen5_lifetime_crosscheck.md) retain failed geometry, mass and mission criteria. Shared-atmosphere numerical agreement and corrected archived GMAT readback do not establish an achieved release, real lifetime or hardware qualification.
+
+## Computational follow-ups, 19 October 2026
+
+- [GMAT–Orekit gravity-axis harmonization](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/validation/orbit_harmonization/README.md)
+- [Seven-feeder CAD/load/fault review](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/validation/feeder_review/README.md)
+- [Coupled four/twelve-payload campaigns and reserve countercases](https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/main/validation/coupled_delivery/README.md)
+
+These separately versioned supplements retain their assumptions, failed cases and unverified engineering gates. The linked record is authoritative; this archived wiki does not duplicate its technical results.

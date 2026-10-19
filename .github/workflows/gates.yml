@@ -75,6 +75,11 @@ jobs:
         run: python3 analysis/gen5_one_event_mass_screen.py --check
       - name: Captured native orbital evidence
         run: python3 validation/orbit_evidence/check_capture.py
+      - name: Captured 19 October supplement integrity
+        run: |
+          python3 validation/orbit_harmonization/check_capture.py
+          python3 validation/coupled_delivery/check_capture.py
+          python3 tools/check_feeder_archive.py
       - name: Gen6 mixed-size full-state screen
         run: python3 analysis/gen6_mixed_mission.py --check
       - name: Gen6 matched four-release campaign

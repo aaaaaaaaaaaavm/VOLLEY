@@ -1,0 +1,3144 @@
+{
+  "evidence": "Constructive coupled ideal-impulse surrogate; not customer mission/hardware validation",
+  "target_definition": "Reference-host prograde increments linearly 3\u20139m/s; 0\u20133600s releases; common 90000s epoch; final host restored at4200s",
+  "mass_basis": "300kg host dry,10kg fuel,Isp220s; device proxies 30/16kg per4 payloads, not a designed installed mass",
+  "clearance_boundary": "Conditional interval bound for nominal point centres after20s host guard; assumed1cm state error, not navigation covariance or launch-interface proof",
+  "limitations": [
+    "Finite burns, slew/settling, plume and actual host control not modeled",
+    "Capsule/contact/motor errors not measured; nominal commands are imposed inputs",
+    "Customer target states and actual installed mass/source/cost remain unknown"
+  ],
+  "cases": [
+    {
+      "count": 4,
+      "strategy": "spring",
+      "force_model": "Fixed-axis J2 surrogate, distinct from Earth-orientation harmonization benchmark",
+      "device_mass_proxy_kg": 16.0,
+      "initial_fuel_kg": 10.0,
+      "fuel_used_kg": 4.3551629463908546,
+      "total_host_dv_m_s": 28.65959905531593,
+      "maximum_release_m_s": 2.5,
+      "shots": [
+        {
+          "payload": 1,
+          "payload_kg": 1.33,
+          "release_s": 0.0,
+          "relative_speed_m_s": 2.5,
+          "terminal_position_residual_m": 0.0,
+          "terminal_velocity_residual_m_s": 0.0,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 2,
+          "payload_kg": 4.0,
+          "release_s": 1200.0,
+          "relative_speed_m_s": 2.5,
+          "terminal_position_residual_m": 1.964485320918556e-06,
+          "terminal_velocity_residual_m_s": 2.1613997781856557e-09,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 3,
+          "payload_kg": 1.33,
+          "release_s": 2400.0,
+          "relative_speed_m_s": 2.5,
+          "terminal_position_residual_m": 2.236775968057353e-06,
+          "terminal_velocity_residual_m_s": 2.4066499360348645e-09,
+          "momentum_identity_residual_kg_m_s": 2.3283064365386963e-10
+        },
+        {
+          "payload": 4,
+          "payload_kg": 4.0,
+          "release_s": 3600.0,
+          "relative_speed_m_s": 2.5,
+          "terminal_position_residual_m": 4.847038020787856e-06,
+          "terminal_velocity_residual_m_s": 5.38050461180131e-09,
+          "momentum_identity_residual_kg_m_s": 2.3283064365386963e-10
+        }
+      ],
+      "burns": [
+        {
+          "event": "pre 1",
+          "dv_m_s": 0.5098787675956206,
+          "fuel_kg": 0.07955432077878487
+        },
+        {
+          "event": "transfer 1",
+          "dv_m_s": 0.5050659780119052,
+          "fuel_kg": 0.07847354800201099
+        },
+        {
+          "event": "pre 2",
+          "dv_m_s": 2.534733441718401,
+          "fuel_kg": 0.3935514698450479
+        },
+        {
+          "event": "transfer 2",
+          "dv_m_s": 2.5253633717519257,
+          "fuel_kg": 0.3869577406107667
+        },
+        {
+          "event": "pre 3",
+          "dv_m_s": 4.534506904089807,
+          "fuel_kg": 0.6936800632134896
+        },
+        {
+          "event": "transfer 3",
+          "dv_m_s": 4.5454714436411265,
+          "fuel_kg": 0.6910965095265927
+        },
+        {
+          "event": "pre 4",
+          "dv_m_s": 6.574607002588569,
+          "fuel_kg": 0.9970350431045023
+        },
+        {
+          "event": "transfer 4",
+          "dv_m_s": 6.695134836399757,
+          "fuel_kg": 0.9998016836742943
+        },
+        {
+          "event": "final host velocity restoration",
+          "dv_m_s": 0.2348373095188167,
+          "fuel_kg": 0.03501256763536491
+        }
+      ],
+      "clearance": [
+        {
+          "pair": [
+            "host",
+            1
+          ],
+          "minimum_evaluated_m": 52.812535548829274,
+          "conditional_lower_bound_m": 21.94352571307,
+          "passes": true,
+          "evaluations": 1649
+        },
+        {
+          "pair": [
+            "host",
+            2
+          ],
+          "minimum_evaluated_m": 54.70655043413516,
+          "conditional_lower_bound_m": 22.381408320339244,
+          "passes": true,
+          "evaluations": 1582
+        },
+        {
+          "pair": [
+            "host",
+            3
+          ],
+          "minimum_evaluated_m": 56.60032107993901,
+          "conditional_lower_bound_m": 41.186802010925554,
+          "passes": true,
+          "evaluations": 1541
+        },
+        {
+          "pair": [
+            "host",
+            4
+          ],
+          "minimum_evaluated_m": 58.61573244744283,
+          "conditional_lower_bound_m": 38.657498490023706,
+          "passes": true,
+          "evaluations": 1504
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "sampled_midpoint_min_m": 4230.81432317709,
+          "conditional_lower_bound_m": 488.244780943804,
+          "interval_evaluations": 1498,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "sampled_midpoint_min_m": 20162.54889912564,
+          "conditional_lower_bound_m": 10372.36112570213,
+          "interval_evaluations": 1460,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "sampled_midpoint_min_m": 30200.385366506955,
+          "conditional_lower_bound_m": 20373.17964493135,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "sampled_midpoint_min_m": 729.0714508800668,
+          "conditional_lower_bound_m": 50.13482166570973,
+          "interval_evaluations": 1524,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "sampled_midpoint_min_m": 931.0513931220496,
+          "conditional_lower_bound_m": 163.3139982038227,
+          "interval_evaluations": 1474,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "sampled_midpoint_min_m": 10119.54958739798,
+          "conditional_lower_bound_m": 530.4123978718967,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        }
+      ],
+      "maximum_terminal_position_residual_m": 4.847038020787856e-06,
+      "same_final_host_position_residual_m": 9.748822052973433e-06,
+      "assumed_device_plus_consumed_fuel_kg": 20.355162946390855,
+      "initial_device_plus_loaded_fuel_kg": 26.0,
+      "status": "COMPUTED_IDEAL_IMPULSE_CASE"
+    },
+    {
+      "count": 4,
+      "strategy": "volley_3_6",
+      "force_model": "Fixed-axis J2 surrogate, distinct from Earth-orientation harmonization benchmark",
+      "device_mass_proxy_kg": 30.0,
+      "initial_fuel_kg": 10.0,
+      "fuel_used_kg": 1.3285012900429258,
+      "total_host_dv_m_s": 8.381030180705238,
+      "maximum_release_m_s": 6.0,
+      "shots": [
+        {
+          "payload": 1,
+          "payload_kg": 1.33,
+          "release_s": 0.0,
+          "relative_speed_m_s": 3.0114218647124495,
+          "terminal_position_residual_m": 0.0,
+          "terminal_velocity_residual_m_s": 0.0,
+          "momentum_identity_residual_kg_m_s": 4.656612873077393e-10
+        },
+        {
+          "payload": 2,
+          "payload_kg": 4.0,
+          "release_s": 1200.0,
+          "relative_speed_m_s": 5.057915930253192,
+          "terminal_position_residual_m": 5.653329521602634e-07,
+          "terminal_velocity_residual_m_s": 6.64691308772302e-10,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 3,
+          "payload_kg": 1.33,
+          "release_s": 2400.0,
+          "relative_speed_m_s": 6.0,
+          "terminal_position_residual_m": 1.0432802165654288e-06,
+          "terminal_velocity_residual_m_s": 1.2504199009017456e-09,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 4,
+          "payload_kg": 4.0,
+          "release_s": 3600.0,
+          "relative_speed_m_s": 6.0,
+          "terminal_position_residual_m": 7.333427586169793e-06,
+          "terminal_velocity_residual_m_s": 8.134987651605524e-09,
+          "momentum_identity_residual_kg_m_s": 2.346425826049686e-10
+        }
+      ],
+      "burns": [
+        {
+          "event": "pre 1",
+          "dv_m_s": 0.0,
+          "fuel_kg": 0.0
+        },
+        {
+          "event": "transfer 1",
+          "dv_m_s": 0.011537590458411835,
+          "fuel_kg": 0.0018681273783064153
+        },
+        {
+          "event": "pre 2",
+          "dv_m_s": 0.00020752521249892014,
+          "fuel_kg": 3.360168462315145e-05
+        },
+        {
+          "event": "transfer 2",
+          "dv_m_s": 0.05850350487139255,
+          "fuel_kg": 0.009364067964450216
+        },
+        {
+          "event": "pre 3",
+          "dv_m_s": 1.0225584371479428,
+          "fuel_kg": 0.16362965117624018
+        },
+        {
+          "event": "transfer 3",
+          "dv_m_s": 1.010104700587054,
+          "fuel_kg": 0.16093813231699872
+        },
+        {
+          "event": "pre 4",
+          "dv_m_s": 3.0796697724081517,
+          "fuel_kg": 0.49021332834573184
+        },
+        {
+          "event": "transfer 4",
+          "dv_m_s": 3.0900621653227867,
+          "fuel_kg": 0.48543979725092584
+        },
+        {
+          "event": "final host velocity restoration",
+          "dv_m_s": 0.1083864846970006,
+          "fuel_kg": 0.017014583925650934
+        }
+      ],
+      "clearance": [
+        {
+          "pair": [
+            "host",
+            1
+          ],
+          "minimum_evaluated_m": 65.84676223305262,
+          "conditional_lower_bound_m": 25.04738879116307,
+          "passes": true,
+          "evaluations": 1647
+        },
+        {
+          "pair": [
+            "host",
+            2
+          ],
+          "minimum_evaluated_m": 110.52144449772231,
+          "conditional_lower_bound_m": 22.010173591852872,
+          "passes": true,
+          "evaluations": 1574
+        },
+        {
+          "pair": [
+            "host",
+            3
+          ],
+          "minimum_evaluated_m": 133.13101444409224,
+          "conditional_lower_bound_m": 31.906559065412164,
+          "passes": true,
+          "evaluations": 1533
+        },
+        {
+          "pair": [
+            "host",
+            4
+          ],
+          "minimum_evaluated_m": 137.0310108132096,
+          "conditional_lower_bound_m": 24.056315543442434,
+          "passes": true,
+          "evaluations": 1498
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "sampled_midpoint_min_m": 4230.814323172694,
+          "conditional_lower_bound_m": 488.2447809369464,
+          "interval_evaluations": 1498,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "sampled_midpoint_min_m": 20162.548899117963,
+          "conditional_lower_bound_m": 10372.361125694446,
+          "interval_evaluations": 1460,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "sampled_midpoint_min_m": 30200.38536647839,
+          "conditional_lower_bound_m": 20373.179644904336,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "sampled_midpoint_min_m": 729.0714507928955,
+          "conditional_lower_bound_m": 50.1348215790948,
+          "interval_evaluations": 1524,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "sampled_midpoint_min_m": 931.0513925229341,
+          "conditional_lower_bound_m": 163.3139976093124,
+          "interval_evaluations": 1474,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "sampled_midpoint_min_m": 10119.549587415822,
+          "conditional_lower_bound_m": 530.4123978896337,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        }
+      ],
+      "maximum_terminal_position_residual_m": 7.333427586169793e-06,
+      "same_final_host_position_residual_m": 9.427802291939526e-06,
+      "assumed_device_plus_consumed_fuel_kg": 31.328501290042926,
+      "initial_device_plus_loaded_fuel_kg": 40.0,
+      "status": "COMPUTED_IDEAL_IMPULSE_CASE"
+    },
+    {
+      "count": 4,
+      "strategy": "volley_unrestricted",
+      "force_model": "Fixed-axis J2 surrogate, distinct from Earth-orientation harmonization benchmark",
+      "device_mass_proxy_kg": 30.0,
+      "initial_fuel_kg": 10.0,
+      "fuel_used_kg": 0.033661199613188586,
+      "total_host_dv_m_s": 0.2120236386693801,
+      "maximum_release_m_s": 9.105887271465443,
+      "shots": [
+        {
+          "payload": 1,
+          "payload_kg": 1.33,
+          "release_s": 0.0,
+          "relative_speed_m_s": 3.0114218647124495,
+          "terminal_position_residual_m": 0.0,
+          "terminal_velocity_residual_m_s": 0.0,
+          "momentum_identity_residual_kg_m_s": 4.656612873077393e-10
+        },
+        {
+          "payload": 2,
+          "payload_kg": 4.0,
+          "release_s": 1200.0,
+          "relative_speed_m_s": 5.057915930253192,
+          "terminal_position_residual_m": 5.653329521602634e-07,
+          "terminal_velocity_residual_m_s": 6.64691308772302e-10,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 3,
+          "payload_kg": 1.33,
+          "release_s": 2400.0,
+          "relative_speed_m_s": 7.027064839845909,
+          "terminal_position_residual_m": 1.0432802165654288e-06,
+          "terminal_velocity_residual_m_s": 1.2504199009017456e-09,
+          "momentum_identity_residual_kg_m_s": 2.3283064365386963e-10
+        },
+        {
+          "payload": 4,
+          "payload_kg": 4.0,
+          "release_s": 3600.0,
+          "relative_speed_m_s": 9.105887271465443,
+          "terminal_position_residual_m": 1.41604841623678e-06,
+          "terminal_velocity_residual_m_s": 1.530424357484275e-09,
+          "momentum_identity_residual_kg_m_s": 2.346425826049686e-10
+        }
+      ],
+      "burns": [
+        {
+          "event": "pre 1",
+          "dv_m_s": 0.0,
+          "fuel_kg": 0.0
+        },
+        {
+          "event": "transfer 1",
+          "dv_m_s": 0.011537590458411835,
+          "fuel_kg": 0.0018681273783064153
+        },
+        {
+          "event": "pre 2",
+          "dv_m_s": 0.00020752521249892014,
+          "fuel_kg": 3.360168462315145e-05
+        },
+        {
+          "event": "transfer 2",
+          "dv_m_s": 0.05850350487139255,
+          "fuel_kg": 0.009364067964450216
+        },
+        {
+          "event": "pre 3",
+          "dv_m_s": 0.0010531770023113713,
+          "fuel_kg": 0.00016856912983595606
+        },
+        {
+          "event": "transfer 3",
+          "dv_m_s": 0.027338321452063854,
+          "fuel_kg": 0.0043588281242757446
+        },
+        {
+          "event": "pre 4",
+          "dv_m_s": 0.0004918537969822929,
+          "fuel_kg": 7.8420774276804e-05
+        },
+        {
+          "event": "transfer 4",
+          "dv_m_s": 0.10906608171800532,
+          "fuel_kg": 0.01718676031758494
+        },
+        {
+          "event": "final host velocity restoration",
+          "dv_m_s": 0.003825584157713955,
+          "fuel_kg": 0.0006028242398353368
+        }
+      ],
+      "clearance": [
+        {
+          "pair": [
+            "host",
+            1
+          ],
+          "minimum_evaluated_m": 65.84676223305262,
+          "conditional_lower_bound_m": 25.04738879116307,
+          "passes": true,
+          "evaluations": 1647
+        },
+        {
+          "pair": [
+            "host",
+            2
+          ],
+          "minimum_evaluated_m": 110.52144449772231,
+          "conditional_lower_bound_m": 22.010173591852872,
+          "passes": true,
+          "evaluations": 1574
+        },
+        {
+          "pair": [
+            "host",
+            3
+          ],
+          "minimum_evaluated_m": 153.6506972563527,
+          "conditional_lower_bound_m": 52.36610169350596,
+          "passes": true,
+          "evaluations": 1533
+        },
+        {
+          "pair": [
+            "host",
+            4
+          ],
+          "minimum_evaluated_m": 215.83089744389855,
+          "conditional_lower_bound_m": 23.96944668350123,
+          "passes": true,
+          "evaluations": 1494
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "sampled_midpoint_min_m": 4230.814323172694,
+          "conditional_lower_bound_m": 488.2447809369464,
+          "interval_evaluations": 1498,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "sampled_midpoint_min_m": 20162.548899117963,
+          "conditional_lower_bound_m": 10372.361125694446,
+          "interval_evaluations": 1460,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "sampled_midpoint_min_m": 30200.385366485614,
+          "conditional_lower_bound_m": 20373.17964491131,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "sampled_midpoint_min_m": 729.0714507928955,
+          "conditional_lower_bound_m": 50.1348215790948,
+          "interval_evaluations": 1524,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "sampled_midpoint_min_m": 931.0513926970422,
+          "conditional_lower_bound_m": 163.313997782187,
+          "interval_evaluations": 1474,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "sampled_midpoint_min_m": 10119.549587413856,
+          "conditional_lower_bound_m": 530.412397887671,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        }
+      ],
+      "maximum_terminal_position_residual_m": 1.41604841623678e-06,
+      "same_final_host_position_residual_m": 1.087662176366832e-05,
+      "assumed_device_plus_consumed_fuel_kg": 30.03366119961319,
+      "initial_device_plus_loaded_fuel_kg": 40.0,
+      "status": "COMPUTED_IDEAL_IMPULSE_CASE"
+    },
+    {
+      "count": 12,
+      "strategy": "spring",
+      "status": "FAILED",
+      "reason": "Fuel exhausted at transfer 10: 0.940591 kg requested, 0.264673 kg remaining"
+    },
+    {
+      "count": 12,
+      "strategy": "volley_3_6",
+      "force_model": "Fixed-axis J2 surrogate, distinct from Earth-orientation harmonization benchmark",
+      "device_mass_proxy_kg": 90.0,
+      "initial_fuel_kg": 10.0,
+      "fuel_used_kg": 3.954434169260849,
+      "total_host_dv_m_s": 21.106103089721035,
+      "maximum_release_m_s": 6.0,
+      "shots": [
+        {
+          "payload": 1,
+          "payload_kg": 1.33,
+          "release_s": 0.0,
+          "relative_speed_m_s": 3.009265064437478,
+          "terminal_position_residual_m": 0.0,
+          "terminal_velocity_residual_m_s": 0.0,
+          "momentum_identity_residual_kg_m_s": 4.692851652099372e-10
+        },
+        {
+          "payload": 2,
+          "payload_kg": 4.0,
+          "release_s": 327.27272727272725,
+          "relative_speed_m_s": 3.5786946333315246,
+          "terminal_position_residual_m": 4.545907172889133e-06,
+          "terminal_velocity_residual_m_s": 5.161129741415165e-09,
+          "momentum_identity_residual_kg_m_s": 4.656612873077393e-10
+        },
+        {
+          "payload": 3,
+          "payload_kg": 1.33,
+          "release_s": 654.5454545454545,
+          "relative_speed_m_s": 4.103701870775846,
+          "terminal_position_residual_m": 7.942536239922013e-07,
+          "terminal_velocity_residual_m_s": 9.229859288252961e-10,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 4,
+          "payload_kg": 4.0,
+          "release_s": 981.8181818181818,
+          "relative_speed_m_s": 4.680382412903465,
+          "terminal_position_residual_m": 2.9573068411407665e-06,
+          "terminal_velocity_residual_m_s": 3.2304097079376286e-09,
+          "momentum_identity_residual_kg_m_s": 4.665698955615924e-10
+        },
+        {
+          "payload": 5,
+          "payload_kg": 1.33,
+          "release_s": 1309.090909090909,
+          "relative_speed_m_s": 5.198228502910108,
+          "terminal_position_residual_m": 3.06830604753374e-06,
+          "terminal_velocity_residual_m_s": 3.370544526785501e-09,
+          "momentum_identity_residual_kg_m_s": 5.820766091346741e-11
+        },
+        {
+          "payload": 6,
+          "payload_kg": 4.0,
+          "release_s": 1636.3636363636363,
+          "relative_speed_m_s": 5.782347350300078,
+          "terminal_position_residual_m": 2.717127077410883e-06,
+          "terminal_velocity_residual_m_s": 2.946749114097056e-09,
+          "momentum_identity_residual_kg_m_s": 4.658886054991198e-10
+        },
+        {
+          "payload": 7,
+          "payload_kg": 1.33,
+          "release_s": 1963.6363636363635,
+          "relative_speed_m_s": 6.0,
+          "terminal_position_residual_m": 1.9641831696161664e-07,
+          "terminal_velocity_residual_m_s": 1.8592692462759993e-10,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 8,
+          "payload_kg": 4.0,
+          "release_s": 2290.909090909091,
+          "relative_speed_m_s": 6.0,
+          "terminal_position_residual_m": 2.567123021376319e-06,
+          "terminal_velocity_residual_m_s": 2.8311733750973957e-09,
+          "momentum_identity_residual_kg_m_s": 2.3283064365386963e-10
+        },
+        {
+          "payload": 9,
+          "payload_kg": 1.33,
+          "release_s": 2618.181818181818,
+          "relative_speed_m_s": 6.0,
+          "terminal_position_residual_m": 3.7712153698331133e-07,
+          "terminal_velocity_residual_m_s": 4.921503106487435e-10,
+          "momentum_identity_residual_kg_m_s": 4.799926683327254e-10
+        },
+        {
+          "payload": 10,
+          "payload_kg": 4.0,
+          "release_s": 2945.454545454545,
+          "relative_speed_m_s": 6.0,
+          "terminal_position_residual_m": 4.6203701674225785e-06,
+          "terminal_velocity_residual_m_s": 5.140852892146462e-09,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 11,
+          "payload_kg": 1.33,
+          "release_s": 3272.7272727272725,
+          "relative_speed_m_s": 6.0,
+          "terminal_position_residual_m": 2.701554897541488e-06,
+          "terminal_velocity_residual_m_s": 2.962305678998962e-09,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 12,
+          "payload_kg": 4.0,
+          "release_s": 3600.0,
+          "relative_speed_m_s": 6.0,
+          "terminal_position_residual_m": 2.277109956675408e-06,
+          "terminal_velocity_residual_m_s": 2.5163736401383354e-09,
+          "momentum_identity_residual_kg_m_s": 5.214379887087537e-10
+        }
+      ],
+      "burns": [
+        {
+          "event": "pre 1",
+          "dv_m_s": 0.0,
+          "fuel_kg": 0.0
+        },
+        {
+          "event": "transfer 1",
+          "dv_m_s": 0.009843359980504292,
+          "fuel_kg": 0.0019648231767431966
+        },
+        {
+          "event": "pre 2",
+          "dv_m_s": 0.0006133951820744552,
+          "fuel_kg": 0.00012243889809261018
+        },
+        {
+          "event": "transfer 2",
+          "dv_m_s": 0.03531497992730637,
+          "fuel_kg": 0.0069836373372448935
+        },
+        {
+          "event": "pre 3",
+          "dv_m_s": 0.0022005996929838328,
+          "fuel_kg": 0.00043517104060388536
+        },
+        {
+          "event": "transfer 3",
+          "dv_m_s": 0.013591406878667438,
+          "fuel_kg": 0.002679327415964882
+        },
+        {
+          "event": "pre 4",
+          "dv_m_s": 0.000846877959146502,
+          "fuel_kg": 0.00016694781942823257
+        },
+        {
+          "event": "transfer 4",
+          "dv_m_s": 0.0467669938517926,
+          "fuel_kg": 0.009132522141277731
+        },
+        {
+          "event": "pre 5",
+          "dv_m_s": 0.002914014443404179,
+          "fuel_kg": 0.0005690336886396194
+        },
+        {
+          "event": "transfer 5",
+          "dv_m_s": 0.01743486832892549,
+          "fuel_kg": 0.0033938270353154236
+        },
+        {
+          "event": "pre 6",
+          "dv_m_s": 0.0010863531139099006,
+          "fuel_kg": 0.00021146582084076405
+        },
+        {
+          "event": "transfer 6",
+          "dv_m_s": 0.05851282489584498,
+          "fuel_kg": 0.011281268130925032
+        },
+        {
+          "event": "pre 7",
+          "dv_m_s": 0.28849472966601253,
+          "fuel_kg": 0.05561728875020418
+        },
+        {
+          "event": "transfer 7",
+          "dv_m_s": 0.28975084893999414,
+          "fuel_kg": 0.055673354515488424
+        },
+        {
+          "event": "pre 8",
+          "dv_m_s": 0.8930751229437393,
+          "fuel_kg": 0.17155035335734942
+        },
+        {
+          "event": "transfer 8",
+          "dv_m_s": 0.8692462319395197,
+          "fuel_kg": 0.16529360806317275
+        },
+        {
+          "event": "pre 9",
+          "dv_m_s": 1.4340681411211629,
+          "fuel_kg": 0.272553151820726
+        },
+        {
+          "event": "transfer 9",
+          "dv_m_s": 1.4487389440700769,
+          "fuel_kg": 0.2742647337337474
+        },
+        {
+          "event": "pre 10",
+          "dv_m_s": 2.0528981038601453,
+          "fuel_kg": 0.3883245048625841
+        },
+        {
+          "event": "transfer 10",
+          "dv_m_s": 2.028239119697416,
+          "fuel_kg": 0.37953868218011455
+        },
+        {
+          "event": "pre 11",
+          "dv_m_s": 2.593340419977775,
+          "fuel_kg": 0.48476501604061883
+        },
+        {
+          "event": "transfer 11",
+          "dv_m_s": 2.6077537537850297,
+          "fuel_kg": 0.4852654224345294
+        },
+        {
+          "event": "pre 12",
+          "dv_m_s": 3.212923349457857,
+          "fuel_kg": 0.5970728158701356
+        },
+        {
+          "event": "transfer 12",
+          "dv_m_s": 3.090062165317104,
+          "fuel_kg": 0.5676777641784931
+        },
+        {
+          "event": "final host velocity restoration",
+          "dv_m_s": 0.10838648469064138,
+          "fuel_kg": 0.019897010948608455
+        }
+      ],
+      "clearance": [
+        {
+          "pair": [
+            "host",
+            1
+          ],
+          "minimum_evaluated_m": 65.80276298632809,
+          "conditional_lower_bound_m": 25.004256227363346,
+          "passes": true,
+          "evaluations": 1655
+        },
+        {
+          "pair": [
+            "host",
+            2
+          ],
+          "minimum_evaluated_m": 78.210062320163,
+          "conditional_lower_bound_m": 36.39194607835362,
+          "passes": true,
+          "evaluations": 1628
+        },
+        {
+          "pair": [
+            "host",
+            3
+          ],
+          "minimum_evaluated_m": 89.73422316320205,
+          "conditional_lower_bound_m": 33.393912588740626,
+          "passes": true,
+          "evaluations": 1611
+        },
+        {
+          "pair": [
+            "host",
+            4
+          ],
+          "minimum_evaluated_m": 102.28569711988119,
+          "conditional_lower_bound_m": 22.427564992870725,
+          "passes": true,
+          "evaluations": 1592
+        },
+        {
+          "pair": [
+            "host",
+            5
+          ],
+          "minimum_evaluated_m": 113.66748555292357,
+          "conditional_lower_bound_m": 40.98783494357895,
+          "passes": true,
+          "evaluations": 1577
+        },
+        {
+          "pair": [
+            "host",
+            6
+          ],
+          "minimum_evaluated_m": 126.36680766343201,
+          "conditional_lower_bound_m": 60.81089035304709,
+          "passes": true,
+          "evaluations": 1564
+        },
+        {
+          "pair": [
+            "host",
+            7
+          ],
+          "minimum_evaluated_m": 131.78045373672822,
+          "conditional_lower_bound_m": 26.504196831327146,
+          "passes": true,
+          "evaluations": 1547
+        },
+        {
+          "pair": [
+            "host",
+            8
+          ],
+          "minimum_evaluated_m": 132.8669643353627,
+          "conditional_lower_bound_m": 30.85033235953217,
+          "passes": true,
+          "evaluations": 1536
+        },
+        {
+          "pair": [
+            "host",
+            9
+          ],
+          "minimum_evaluated_m": 133.9534826309237,
+          "conditional_lower_bound_m": 35.1964719184079,
+          "passes": true,
+          "evaluations": 1529
+        },
+        {
+          "pair": [
+            "host",
+            10
+          ],
+          "minimum_evaluated_m": 135.04004150148728,
+          "conditional_lower_bound_m": 38.480212600967754,
+          "passes": true,
+          "evaluations": 1518
+        },
+        {
+          "pair": [
+            "host",
+            11
+          ],
+          "minimum_evaluated_m": 136.12665546355436,
+          "conditional_lower_bound_m": 43.88912303924784,
+          "passes": true,
+          "evaluations": 1507
+        },
+        {
+          "pair": [
+            "host",
+            12
+          ],
+          "minimum_evaluated_m": 137.03101081383147,
+          "conditional_lower_bound_m": 24.056315542277826,
+          "passes": true,
+          "evaluations": 1498
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "sampled_midpoint_min_m": 916.9925156872167,
+          "conditional_lower_bound_m": 21.911495818904296,
+          "interval_evaluations": 1807,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "sampled_midpoint_min_m": 1879.3762834306308,
+          "conditional_lower_bound_m": 25.379786054334982,
+          "interval_evaluations": 1632,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "sampled_midpoint_min_m": 3046.156301511683,
+          "conditional_lower_bound_m": 400.7012792790106,
+          "interval_evaluations": 1512,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            5
+          ],
+          "sampled_midpoint_min_m": 5001.708630627493,
+          "conditional_lower_bound_m": 543.9992154092456,
+          "interval_evaluations": 1493,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            6
+          ],
+          "sampled_midpoint_min_m": 8130.2125224197725,
+          "conditional_lower_bound_m": 701.1373883938927,
+          "interval_evaluations": 1477,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            7
+          ],
+          "sampled_midpoint_min_m": 12763.603426371468,
+          "conditional_lower_bound_m": 3175.6714672075236,
+          "interval_evaluations": 1468,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            8
+          ],
+          "sampled_midpoint_min_m": 18186.421118188002,
+          "conditional_lower_bound_m": 8447.329887536147,
+          "interval_evaluations": 1462,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            9
+          ],
+          "sampled_midpoint_min_m": 24278.34551331011,
+          "conditional_lower_bound_m": 14386.309963506174,
+          "interval_evaluations": 1457,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            10
+          ],
+          "sampled_midpoint_min_m": 27579.087411331442,
+          "conditional_lower_bound_m": 17811.83632842239,
+          "interval_evaluations": 1451,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            11
+          ],
+          "sampled_midpoint_min_m": 29157.54597810218,
+          "conditional_lower_bound_m": 19349.67867440082,
+          "interval_evaluations": 1446,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            12
+          ],
+          "sampled_midpoint_min_m": 30200.385366478695,
+          "conditional_lower_bound_m": 20373.179644904678,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "sampled_midpoint_min_m": 1096.7933687454831,
+          "conditional_lower_bound_m": 91.08364041713229,
+          "interval_evaluations": 1800,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "sampled_midpoint_min_m": 2222.2845436571242,
+          "conditional_lower_bound_m": 25.776855959418736,
+          "interval_evaluations": 1602,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "sampled_midpoint_min_m": 3600.0516454577105,
+          "conditional_lower_bound_m": 157.43559212860097,
+          "interval_evaluations": 1501,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            6
+          ],
+          "sampled_midpoint_min_m": 5906.094279708323,
+          "conditional_lower_bound_m": 460.86428796590235,
+          "interval_evaluations": 1483,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            7
+          ],
+          "sampled_midpoint_min_m": 9853.29673883997,
+          "conditional_lower_bound_m": 337.5621806865497,
+          "interval_evaluations": 1468,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            8
+          ],
+          "sampled_midpoint_min_m": 15069.600983468052,
+          "conditional_lower_bound_m": 5385.491547043173,
+          "interval_evaluations": 1462,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            9
+          ],
+          "sampled_midpoint_min_m": 19880.297142136344,
+          "conditional_lower_bound_m": 9622.741632848942,
+          "interval_evaluations": 1457,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            10
+          ],
+          "sampled_midpoint_min_m": 23371.069235349485,
+          "conditional_lower_bound_m": 12949.622981517536,
+          "interval_evaluations": 1451,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            11
+          ],
+          "sampled_midpoint_min_m": 27646.519702720212,
+          "conditional_lower_bound_m": 17055.194958078555,
+          "interval_evaluations": 1446,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            12
+          ],
+          "sampled_midpoint_min_m": 31656.999472759617,
+          "conditional_lower_bound_m": 21768.45542004586,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "sampled_midpoint_min_m": 1275.9282171367704,
+          "conditional_lower_bound_m": 44.13167914728863,
+          "interval_evaluations": 1790,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "sampled_midpoint_min_m": 2568.453671854958,
+          "conditional_lower_bound_m": 26.784776541126558,
+          "interval_evaluations": 1585,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            6
+          ],
+          "sampled_midpoint_min_m": 4152.889103775953,
+          "conditional_lower_bound_m": 36.40876179381346,
+          "interval_evaluations": 1521,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            7
+          ],
+          "sampled_midpoint_min_m": 6809.683679507731,
+          "conditional_lower_bound_m": 351.387692213661,
+          "interval_evaluations": 1494,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            8
+          ],
+          "sampled_midpoint_min_m": 9165.78693488664,
+          "conditional_lower_bound_m": 296.9445626038728,
+          "interval_evaluations": 1472,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            9
+          ],
+          "sampled_midpoint_min_m": 10690.610233239913,
+          "conditional_lower_bound_m": 742.4221623857688,
+          "interval_evaluations": 1457,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            10
+          ],
+          "sampled_midpoint_min_m": 12709.537612176633,
+          "conditional_lower_bound_m": 2623.0726631770817,
+          "interval_evaluations": 1451,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            11
+          ],
+          "sampled_midpoint_min_m": 15442.60755800115,
+          "conditional_lower_bound_m": 5213.071200888036,
+          "interval_evaluations": 1446,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            12
+          ],
+          "sampled_midpoint_min_m": 19085.25151648937,
+          "conditional_lower_bound_m": 8704.149637165865,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "sampled_midpoint_min_m": 1454.4541693390274,
+          "conditional_lower_bound_m": 21.06429826914471,
+          "interval_evaluations": 1817,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            6
+          ],
+          "sampled_midpoint_min_m": 2847.746098790902,
+          "conditional_lower_bound_m": 65.05557193934372,
+          "interval_evaluations": 1573,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            7
+          ],
+          "sampled_midpoint_min_m": 3304.71360910906,
+          "conditional_lower_bound_m": 398.9144106857498,
+          "interval_evaluations": 1524,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            8
+          ],
+          "sampled_midpoint_min_m": 3517.816674498762,
+          "conditional_lower_bound_m": 203.04026520125123,
+          "interval_evaluations": 1498,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            9
+          ],
+          "sampled_midpoint_min_m": 3741.6706364683755,
+          "conditional_lower_bound_m": 515.6679934466652,
+          "interval_evaluations": 1483,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            10
+          ],
+          "sampled_midpoint_min_m": 4289.382987043202,
+          "conditional_lower_bound_m": 612.5928826978857,
+          "interval_evaluations": 1473,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            11
+          ],
+          "sampled_midpoint_min_m": 5425.758809079644,
+          "conditional_lower_bound_m": 283.06023694162695,
+          "interval_evaluations": 1464,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            12
+          ],
+          "sampled_midpoint_min_m": 7398.755061452227,
+          "conditional_lower_bound_m": 442.5839737166284,
+          "interval_evaluations": 1454,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            6
+          ],
+          "sampled_midpoint_min_m": 717.2107414861235,
+          "conditional_lower_bound_m": 29.435927362175317,
+          "interval_evaluations": 1833,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "sampled_midpoint_min_m": 598.0268707359508,
+          "conditional_lower_bound_m": 49.80375296055772,
+          "interval_evaluations": 1600,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            8
+          ],
+          "sampled_midpoint_min_m": 59.562502580176584,
+          "conditional_lower_bound_m": 32.480829857369876,
+          "interval_evaluations": 1576,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            9
+          ],
+          "sampled_midpoint_min_m": 948.0833908302116,
+          "conditional_lower_bound_m": 130.28527089616998,
+          "interval_evaluations": 1515,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            10
+          ],
+          "sampled_midpoint_min_m": 1756.639908086397,
+          "conditional_lower_bound_m": 281.58103940333694,
+          "interval_evaluations": 1497,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            11
+          ],
+          "sampled_midpoint_min_m": 2173.470803692023,
+          "conditional_lower_bound_m": 55.409632884824966,
+          "interval_evaluations": 1480,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            12
+          ],
+          "sampled_midpoint_min_m": 1891.6360271797143,
+          "conditional_lower_bound_m": 265.73334800821567,
+          "interval_evaluations": 1476,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "sampled_midpoint_min_m": 421.5923049138633,
+          "conditional_lower_bound_m": 33.491039714622595,
+          "interval_evaluations": 1860,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            8
+          ],
+          "sampled_midpoint_min_m": 1684.021819772223,
+          "conditional_lower_bound_m": 110.79137712813689,
+          "interval_evaluations": 1584,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "sampled_midpoint_min_m": 3470.0256644459846,
+          "conditional_lower_bound_m": 146.03431771601433,
+          "interval_evaluations": 1517,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            10
+          ],
+          "sampled_midpoint_min_m": 5434.200678490851,
+          "conditional_lower_bound_m": 157.51396276833518,
+          "interval_evaluations": 1489,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            11
+          ],
+          "sampled_midpoint_min_m": 7238.857481283664,
+          "conditional_lower_bound_m": 69.70702894109353,
+          "interval_evaluations": 1474,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            12
+          ],
+          "sampled_midpoint_min_m": 8560.469548675806,
+          "conditional_lower_bound_m": 208.67861108312033,
+          "interval_evaluations": 1458,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            8
+          ],
+          "sampled_midpoint_min_m": 1567.2678818984664,
+          "conditional_lower_bound_m": 26.28590235929958,
+          "interval_evaluations": 1814,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            9
+          ],
+          "sampled_midpoint_min_m": 3913.8669057249213,
+          "conditional_lower_bound_m": 176.58413553982106,
+          "interval_evaluations": 1547,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            10
+          ],
+          "sampled_midpoint_min_m": 6372.760550991802,
+          "conditional_lower_bound_m": 27.39201835686661,
+          "interval_evaluations": 1507,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            11
+          ],
+          "sampled_midpoint_min_m": 9390.410762722404,
+          "conditional_lower_bound_m": 38.16170422377079,
+          "interval_evaluations": 1448,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            12
+          ],
+          "sampled_midpoint_min_m": 11889.221484785858,
+          "conditional_lower_bound_m": 2381.165007607817,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            8,
+            9
+          ],
+          "sampled_midpoint_min_m": 2165.120688174284,
+          "conditional_lower_bound_m": 49.02311150224566,
+          "interval_evaluations": 1731,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            8,
+            10
+          ],
+          "sampled_midpoint_min_m": 4286.726709500899,
+          "conditional_lower_bound_m": 40.25633735406016,
+          "interval_evaluations": 1539,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            8,
+            11
+          ],
+          "sampled_midpoint_min_m": 6931.663071885903,
+          "conditional_lower_bound_m": 149.42546804247146,
+          "interval_evaluations": 1464,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            8,
+            12
+          ],
+          "sampled_midpoint_min_m": 11666.099721235118,
+          "conditional_lower_bound_m": 2005.5162812036692,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            9,
+            10
+          ],
+          "sampled_midpoint_min_m": 2342.500831289861,
+          "conditional_lower_bound_m": 39.08183462897157,
+          "interval_evaluations": 1699,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            9,
+            11
+          ],
+          "sampled_midpoint_min_m": 4631.571776988959,
+          "conditional_lower_bound_m": 22.82872687360985,
+          "interval_evaluations": 1534,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            9,
+            12
+          ],
+          "sampled_midpoint_min_m": 7489.64015068565,
+          "conditional_lower_bound_m": 337.14113112143104,
+          "interval_evaluations": 1446,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            10,
+            11
+          ],
+          "sampled_midpoint_min_m": 2519.543283034438,
+          "conditional_lower_bound_m": 35.38648359464285,
+          "interval_evaluations": 1696,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            10,
+            12
+          ],
+          "sampled_midpoint_min_m": 4976.4829551802495,
+          "conditional_lower_bound_m": 73.46824799576142,
+          "interval_evaluations": 1500,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            11,
+            12
+          ],
+          "sampled_midpoint_min_m": 2645.7458293871105,
+          "conditional_lower_bound_m": 46.864952046541,
+          "interval_evaluations": 1690,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        }
+      ],
+      "maximum_terminal_position_residual_m": 4.6203701674225785e-06,
+      "same_final_host_position_residual_m": 1.1914500880215731e-05,
+      "assumed_device_plus_consumed_fuel_kg": 93.95443416926085,
+      "initial_device_plus_loaded_fuel_kg": 100.0,
+      "status": "COMPUTED_IDEAL_IMPULSE_CASE"
+    },
+    {
+      "count": 12,
+      "strategy": "volley_unrestricted",
+      "force_model": "Fixed-axis J2 surrogate, distinct from Earth-orientation harmonization benchmark",
+      "device_mass_proxy_kg": 90.0,
+      "initial_fuel_kg": 10.0,
+      "fuel_used_kg": 0.10161891323698136,
+      "total_host_dv_m_s": 0.5329449407589759,
+      "maximum_release_m_s": 9.090018787874873,
+      "shots": [
+        {
+          "payload": 1,
+          "payload_kg": 1.33,
+          "release_s": 0.0,
+          "relative_speed_m_s": 3.009265064437478,
+          "terminal_position_residual_m": 0.0,
+          "terminal_velocity_residual_m_s": 0.0,
+          "momentum_identity_residual_kg_m_s": 4.692851652099372e-10
+        },
+        {
+          "payload": 2,
+          "payload_kg": 4.0,
+          "release_s": 327.27272727272725,
+          "relative_speed_m_s": 3.5786946333315246,
+          "terminal_position_residual_m": 4.545907172889133e-06,
+          "terminal_velocity_residual_m_s": 5.161129741415165e-09,
+          "momentum_identity_residual_kg_m_s": 4.656612873077393e-10
+        },
+        {
+          "payload": 3,
+          "payload_kg": 1.33,
+          "release_s": 654.5454545454545,
+          "relative_speed_m_s": 4.103701870775846,
+          "terminal_position_residual_m": 7.942536239922013e-07,
+          "terminal_velocity_residual_m_s": 9.229859288252961e-10,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 4,
+          "payload_kg": 4.0,
+          "release_s": 981.8181818181818,
+          "relative_speed_m_s": 4.680382412903465,
+          "terminal_position_residual_m": 2.9573068411407665e-06,
+          "terminal_velocity_residual_m_s": 3.2304097079376286e-09,
+          "momentum_identity_residual_kg_m_s": 4.665698955615924e-10
+        },
+        {
+          "payload": 5,
+          "payload_kg": 1.33,
+          "release_s": 1309.090909090909,
+          "relative_speed_m_s": 5.198228502910108,
+          "terminal_position_residual_m": 3.06830604753374e-06,
+          "terminal_velocity_residual_m_s": 3.370544526785501e-09,
+          "momentum_identity_residual_kg_m_s": 5.820766091346741e-11
+        },
+        {
+          "payload": 6,
+          "payload_kg": 4.0,
+          "release_s": 1636.3636363636363,
+          "relative_speed_m_s": 5.782347350300078,
+          "terminal_position_residual_m": 2.717127077410883e-06,
+          "terminal_velocity_residual_m_s": 2.946749114097056e-09,
+          "momentum_identity_residual_kg_m_s": 4.658886054991198e-10
+        },
+        {
+          "payload": 7,
+          "payload_kg": 1.33,
+          "release_s": 1963.6363636363635,
+          "relative_speed_m_s": 6.292848505931314,
+          "terminal_position_residual_m": 1.9641831696161664e-07,
+          "terminal_velocity_residual_m_s": 1.8592692462759993e-10,
+          "momentum_identity_residual_kg_m_s": 2.9103830456733704e-11
+        },
+        {
+          "payload": 8,
+          "payload_kg": 4.0,
+          "release_s": 2290.909090909091,
+          "relative_speed_m_s": 6.8846005109328585,
+          "terminal_position_residual_m": 4.853606629683733e-06,
+          "terminal_velocity_residual_m_s": 5.364118123556037e-09,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 9,
+          "payload_kg": 1.33,
+          "release_s": 2618.181818181818,
+          "relative_speed_m_s": 7.387565621063565,
+          "terminal_position_residual_m": 3.952058648857248e-06,
+          "terminal_velocity_residual_m_s": 4.313625219245637e-09,
+          "momentum_identity_residual_kg_m_s": 0.0
+        },
+        {
+          "payload": 10,
+          "payload_kg": 4.0,
+          "release_s": 2945.454545454545,
+          "relative_speed_m_s": 7.987153556912628,
+          "terminal_position_residual_m": 9.86838228954042e-07,
+          "terminal_velocity_residual_m_s": 1.007724799704732e-09,
+          "momentum_identity_residual_kg_m_s": 5.820766091346741e-11
+        },
+        {
+          "payload": 11,
+          "payload_kg": 1.33,
+          "release_s": 3272.7272727272725,
+          "relative_speed_m_s": 8.482383792033422,
+          "terminal_position_residual_m": 9.586612319451737e-07,
+          "terminal_velocity_residual_m_s": 1.0243179788647357e-09,
+          "momentum_identity_residual_kg_m_s": 5.206251464550825e-10
+        },
+        {
+          "payload": 12,
+          "payload_kg": 4.0,
+          "release_s": 3600.0,
+          "relative_speed_m_s": 9.090018787874873,
+          "terminal_position_residual_m": 8.765784004592862e-07,
+          "terminal_velocity_residual_m_s": 9.854961384689513e-10,
+          "momentum_identity_residual_kg_m_s": 0.0
+        }
+      ],
+      "burns": [
+        {
+          "event": "pre 1",
+          "dv_m_s": 0.0,
+          "fuel_kg": 0.0
+        },
+        {
+          "event": "transfer 1",
+          "dv_m_s": 0.009843359980504292,
+          "fuel_kg": 0.0019648231767431966
+        },
+        {
+          "event": "pre 2",
+          "dv_m_s": 0.0006133951820744552,
+          "fuel_kg": 0.00012243889809261018
+        },
+        {
+          "event": "transfer 2",
+          "dv_m_s": 0.03531497992730637,
+          "fuel_kg": 0.0069836373372448935
+        },
+        {
+          "event": "pre 3",
+          "dv_m_s": 0.0022005996929838328,
+          "fuel_kg": 0.00043517104060388536
+        },
+        {
+          "event": "transfer 3",
+          "dv_m_s": 0.013591406878667438,
+          "fuel_kg": 0.002679327415964882
+        },
+        {
+          "event": "pre 4",
+          "dv_m_s": 0.000846877959146502,
+          "fuel_kg": 0.00016694781942823257
+        },
+        {
+          "event": "transfer 4",
+          "dv_m_s": 0.0467669938517926,
+          "fuel_kg": 0.009132522141277731
+        },
+        {
+          "event": "pre 5",
+          "dv_m_s": 0.002914014443404179,
+          "fuel_kg": 0.0005690336886396194
+        },
+        {
+          "event": "transfer 5",
+          "dv_m_s": 0.01743486832892549,
+          "fuel_kg": 0.0033938270353154236
+        },
+        {
+          "event": "pre 6",
+          "dv_m_s": 0.0010863531139099006,
+          "fuel_kg": 0.00021146582084076405
+        },
+        {
+          "event": "transfer 6",
+          "dv_m_s": 0.05851282489584498,
+          "fuel_kg": 0.011281268130925032
+        },
+        {
+          "event": "pre 7",
+          "dv_m_s": 0.003646129636274328,
+          "fuel_kg": 0.0007029633862228282
+        },
+        {
+          "event": "transfer 7",
+          "dv_m_s": 0.02137719613224482,
+          "fuel_kg": 0.004108260269438216
+        },
+        {
+          "event": "pre 8",
+          "dv_m_s": 0.0013321403560941178,
+          "fuel_kg": 0.00025600880776730243
+        },
+        {
+          "event": "transfer 8",
+          "dv_m_s": 0.07056402012734524,
+          "fuel_kg": 0.01342983978837034
+        },
+        {
+          "event": "pre 9",
+          "dv_m_s": 0.004397538457171834,
+          "fuel_kg": 0.0008369309294817672
+        },
+        {
+          "event": "transfer 9",
+          "dv_m_s": 0.02542264785681283,
+          "fuel_kg": 0.004822683169304113
+        },
+        {
+          "event": "pre 10",
+          "dv_m_s": 0.0015843051421397946,
+          "fuel_kg": 0.00030054123256363646
+        },
+        {
+          "event": "transfer 10",
+          "dv_m_s": 0.08293461284714242,
+          "fuel_kg": 0.015578551579778784
+        },
+        {
+          "event": "pre 11",
+          "dv_m_s": 0.0051682912684912225,
+          "fuel_kg": 0.0009707991078097634
+        },
+        {
+          "event": "transfer 11",
+          "dv_m_s": 0.029575956165767435,
+          "fuel_kg": 0.005537197647683537
+        },
+        {
+          "event": "pre 12",
+          "dv_m_s": 0.001842939102929905,
+          "fuel_kg": 0.00034503174482246985
+        },
+        {
+          "event": "transfer 12",
+          "dv_m_s": 0.09272121512630899,
+          "fuel_kg": 0.017186814560369315
+        },
+        {
+          "event": "final host velocity restoration",
+          "dv_m_s": 0.0032522742856929453,
+          "fuel_kg": 0.0006028285082897363
+        }
+      ],
+      "clearance": [
+        {
+          "pair": [
+            "host",
+            1
+          ],
+          "minimum_evaluated_m": 65.80276298632809,
+          "conditional_lower_bound_m": 25.004256227363346,
+          "passes": true,
+          "evaluations": 1655
+        },
+        {
+          "pair": [
+            "host",
+            2
+          ],
+          "minimum_evaluated_m": 78.210062320163,
+          "conditional_lower_bound_m": 36.39194607835362,
+          "passes": true,
+          "evaluations": 1628
+        },
+        {
+          "pair": [
+            "host",
+            3
+          ],
+          "minimum_evaluated_m": 89.73422316320205,
+          "conditional_lower_bound_m": 33.393912588740626,
+          "passes": true,
+          "evaluations": 1611
+        },
+        {
+          "pair": [
+            "host",
+            4
+          ],
+          "minimum_evaluated_m": 102.28569711988119,
+          "conditional_lower_bound_m": 22.427564992870725,
+          "passes": true,
+          "evaluations": 1592
+        },
+        {
+          "pair": [
+            "host",
+            5
+          ],
+          "minimum_evaluated_m": 113.66748555292357,
+          "conditional_lower_bound_m": 40.98783494357895,
+          "passes": true,
+          "evaluations": 1577
+        },
+        {
+          "pair": [
+            "host",
+            6
+          ],
+          "minimum_evaluated_m": 126.36680766343201,
+          "conditional_lower_bound_m": 60.81089035304709,
+          "passes": true,
+          "evaluations": 1564
+        },
+        {
+          "pair": [
+            "host",
+            7
+          ],
+          "minimum_evaluated_m": 137.60252415685693,
+          "conditional_lower_bound_m": 32.22290290826792,
+          "passes": true,
+          "evaluations": 1547
+        },
+        {
+          "pair": [
+            "host",
+            8
+          ],
+          "minimum_evaluated_m": 150.453560457719,
+          "conditional_lower_bound_m": 48.12473131042825,
+          "passes": true,
+          "evaluations": 1536
+        },
+        {
+          "pair": [
+            "host",
+            9
+          ],
+          "minimum_evaluated_m": 161.53944704737273,
+          "conditional_lower_bound_m": 26.2104150846453,
+          "passes": true,
+          "evaluations": 1527
+        },
+        {
+          "pair": [
+            "host",
+            10
+          ],
+          "minimum_evaluated_m": 174.5463053725797,
+          "conditional_lower_bound_m": 70.66837016035775,
+          "passes": true,
+          "evaluations": 1518
+        },
+        {
+          "pair": [
+            "host",
+            11
+          ],
+          "minimum_evaluated_m": 201.32240807846188,
+          "conditional_lower_bound_m": 28.990407722837983,
+          "passes": true,
+          "evaluations": 1505
+        },
+        {
+          "pair": [
+            "host",
+            12
+          ],
+          "minimum_evaluated_m": 215.5153573103315,
+          "conditional_lower_bound_m": 23.67408671809549,
+          "passes": true,
+          "evaluations": 1494
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "sampled_midpoint_min_m": 916.9925156872167,
+          "conditional_lower_bound_m": 21.911495818904296,
+          "interval_evaluations": 1807,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "sampled_midpoint_min_m": 1879.3762834306308,
+          "conditional_lower_bound_m": 25.379786054334982,
+          "interval_evaluations": 1632,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "sampled_midpoint_min_m": 3046.156301511683,
+          "conditional_lower_bound_m": 400.7012792790106,
+          "interval_evaluations": 1512,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            5
+          ],
+          "sampled_midpoint_min_m": 5001.708630627493,
+          "conditional_lower_bound_m": 543.9992154092456,
+          "interval_evaluations": 1493,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            6
+          ],
+          "sampled_midpoint_min_m": 8130.2125224197725,
+          "conditional_lower_bound_m": 701.1373883938927,
+          "interval_evaluations": 1477,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            7
+          ],
+          "sampled_midpoint_min_m": 12763.603426371468,
+          "conditional_lower_bound_m": 3175.6714672075236,
+          "interval_evaluations": 1468,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            8
+          ],
+          "sampled_midpoint_min_m": 18186.421118188937,
+          "conditional_lower_bound_m": 8447.329887537082,
+          "interval_evaluations": 1462,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            9
+          ],
+          "sampled_midpoint_min_m": 24278.34551331032,
+          "conditional_lower_bound_m": 14386.30996350638,
+          "interval_evaluations": 1457,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            10
+          ],
+          "sampled_midpoint_min_m": 27579.087411336615,
+          "conditional_lower_bound_m": 17811.836328427387,
+          "interval_evaluations": 1451,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            11
+          ],
+          "sampled_midpoint_min_m": 29157.54597809869,
+          "conditional_lower_bound_m": 19349.678674397313,
+          "interval_evaluations": 1446,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            1,
+            12
+          ],
+          "sampled_midpoint_min_m": 30200.385366469112,
+          "conditional_lower_bound_m": 20373.179644895474,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "sampled_midpoint_min_m": 1096.7933687454831,
+          "conditional_lower_bound_m": 91.08364041713229,
+          "interval_evaluations": 1800,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "sampled_midpoint_min_m": 2222.2845436571242,
+          "conditional_lower_bound_m": 25.776855959418736,
+          "interval_evaluations": 1602,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "sampled_midpoint_min_m": 3600.0516454577105,
+          "conditional_lower_bound_m": 157.43559212860097,
+          "interval_evaluations": 1501,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            6
+          ],
+          "sampled_midpoint_min_m": 5906.094279708323,
+          "conditional_lower_bound_m": 460.86428796590235,
+          "interval_evaluations": 1483,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            7
+          ],
+          "sampled_midpoint_min_m": 9853.29673883997,
+          "conditional_lower_bound_m": 337.5621806865497,
+          "interval_evaluations": 1468,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            8
+          ],
+          "sampled_midpoint_min_m": 15069.60098346882,
+          "conditional_lower_bound_m": 5385.491547043941,
+          "interval_evaluations": 1462,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            9
+          ],
+          "sampled_midpoint_min_m": 19880.29714204866,
+          "conditional_lower_bound_m": 9622.741632763838,
+          "interval_evaluations": 1457,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            10
+          ],
+          "sampled_midpoint_min_m": 23371.069235453204,
+          "conditional_lower_bound_m": 12949.622981617795,
+          "interval_evaluations": 1451,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            11
+          ],
+          "sampled_midpoint_min_m": 27646.519702658883,
+          "conditional_lower_bound_m": 17055.194958018856,
+          "interval_evaluations": 1446,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            2,
+            12
+          ],
+          "sampled_midpoint_min_m": 31656.99947274681,
+          "conditional_lower_bound_m": 21768.455420033388,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "sampled_midpoint_min_m": 1275.9282171367704,
+          "conditional_lower_bound_m": 44.13167914728863,
+          "interval_evaluations": 1790,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "sampled_midpoint_min_m": 2568.453671854958,
+          "conditional_lower_bound_m": 26.784776541126558,
+          "interval_evaluations": 1585,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            6
+          ],
+          "sampled_midpoint_min_m": 4152.889103775953,
+          "conditional_lower_bound_m": 36.40876179381346,
+          "interval_evaluations": 1521,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            7
+          ],
+          "sampled_midpoint_min_m": 6809.683679507731,
+          "conditional_lower_bound_m": 351.387692213661,
+          "interval_evaluations": 1494,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            8
+          ],
+          "sampled_midpoint_min_m": 9165.78693475898,
+          "conditional_lower_bound_m": 296.9445624967416,
+          "interval_evaluations": 1472,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            9
+          ],
+          "sampled_midpoint_min_m": 10690.61023314778,
+          "conditional_lower_bound_m": 742.4221622965074,
+          "interval_evaluations": 1457,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            10
+          ],
+          "sampled_midpoint_min_m": 12709.537612279419,
+          "conditional_lower_bound_m": 2623.072663276282,
+          "interval_evaluations": 1451,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            11
+          ],
+          "sampled_midpoint_min_m": 15442.60755794922,
+          "conditional_lower_bound_m": 5213.071200837667,
+          "interval_evaluations": 1446,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            3,
+            12
+          ],
+          "sampled_midpoint_min_m": 19085.25151636186,
+          "conditional_lower_bound_m": 8704.149637042501,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "sampled_midpoint_min_m": 1454.4541693390274,
+          "conditional_lower_bound_m": 21.06429826914471,
+          "interval_evaluations": 1817,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            6
+          ],
+          "sampled_midpoint_min_m": 2847.746098790902,
+          "conditional_lower_bound_m": 65.05557193934372,
+          "interval_evaluations": 1573,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            7
+          ],
+          "sampled_midpoint_min_m": 3304.71360910906,
+          "conditional_lower_bound_m": 398.9144106857498,
+          "interval_evaluations": 1524,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            8
+          ],
+          "sampled_midpoint_min_m": 3517.8166743651154,
+          "conditional_lower_bound_m": 203.04026520181512,
+          "interval_evaluations": 1498,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            9
+          ],
+          "sampled_midpoint_min_m": 3741.6706363730473,
+          "conditional_lower_bound_m": 515.6679933757227,
+          "interval_evaluations": 1483,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            10
+          ],
+          "sampled_midpoint_min_m": 4289.382987144463,
+          "conditional_lower_bound_m": 612.5928827752164,
+          "interval_evaluations": 1473,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            11
+          ],
+          "sampled_midpoint_min_m": 5425.758809032541,
+          "conditional_lower_bound_m": 283.0602368814257,
+          "interval_evaluations": 1464,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            4,
+            12
+          ],
+          "sampled_midpoint_min_m": 7398.755061323514,
+          "conditional_lower_bound_m": 442.58397361527796,
+          "interval_evaluations": 1454,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            6
+          ],
+          "sampled_midpoint_min_m": 717.2107414861235,
+          "conditional_lower_bound_m": 29.435927362175317,
+          "interval_evaluations": 1833,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "sampled_midpoint_min_m": 598.0268707359508,
+          "conditional_lower_bound_m": 49.80375296055772,
+          "interval_evaluations": 1600,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            8
+          ],
+          "sampled_midpoint_min_m": 59.56250272169001,
+          "conditional_lower_bound_m": 32.48082994796972,
+          "interval_evaluations": 1576,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            9
+          ],
+          "sampled_midpoint_min_m": 948.0833909290046,
+          "conditional_lower_bound_m": 130.2852709187441,
+          "interval_evaluations": 1515,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            10
+          ],
+          "sampled_midpoint_min_m": 1756.6399079861553,
+          "conditional_lower_bound_m": 281.5810393360807,
+          "interval_evaluations": 1497,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            11
+          ],
+          "sampled_midpoint_min_m": 2173.470803730444,
+          "conditional_lower_bound_m": 55.40963290251282,
+          "interval_evaluations": 1480,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            5,
+            12
+          ],
+          "sampled_midpoint_min_m": 1891.6360273083449,
+          "conditional_lower_bound_m": 265.73334807357014,
+          "interval_evaluations": 1476,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "sampled_midpoint_min_m": 421.5923049138633,
+          "conditional_lower_bound_m": 33.491039714622595,
+          "interval_evaluations": 1860,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            8
+          ],
+          "sampled_midpoint_min_m": 1684.02181991749,
+          "conditional_lower_bound_m": 110.79137718524906,
+          "interval_evaluations": 1584,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "sampled_midpoint_min_m": 3470.025664547138,
+          "conditional_lower_bound_m": 146.0343176874671,
+          "interval_evaluations": 1517,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            10
+          ],
+          "sampled_midpoint_min_m": 5434.200678390269,
+          "conditional_lower_bound_m": 157.5139627955909,
+          "interval_evaluations": 1489,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            11
+          ],
+          "sampled_midpoint_min_m": 7238.857481311073,
+          "conditional_lower_bound_m": 69.70702896405645,
+          "interval_evaluations": 1474,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            6,
+            12
+          ],
+          "sampled_midpoint_min_m": 8560.46954879672,
+          "conditional_lower_bound_m": 208.67861113849946,
+          "interval_evaluations": 1458,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            8
+          ],
+          "sampled_midpoint_min_m": 1567.267882042535,
+          "conditional_lower_bound_m": 26.285902312225954,
+          "interval_evaluations": 1814,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            9
+          ],
+          "sampled_midpoint_min_m": 3913.8669058165347,
+          "conditional_lower_bound_m": 176.58413549824442,
+          "interval_evaluations": 1547,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            10
+          ],
+          "sampled_midpoint_min_m": 6372.76055099112,
+          "conditional_lower_bound_m": 27.392018348653874,
+          "interval_evaluations": 1507,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            11
+          ],
+          "sampled_midpoint_min_m": 9390.41076273563,
+          "conditional_lower_bound_m": 38.161704230586544,
+          "interval_evaluations": 1448,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            7,
+            12
+          ],
+          "sampled_midpoint_min_m": 11889.221484869933,
+          "conditional_lower_bound_m": 2381.165007694454,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            8,
+            9
+          ],
+          "sampled_midpoint_min_m": 2165.1206881745843,
+          "conditional_lower_bound_m": 49.023111546699944,
+          "interval_evaluations": 1731,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            8,
+            10
+          ],
+          "sampled_midpoint_min_m": 4286.7267095023035,
+          "conditional_lower_bound_m": 40.25633747237632,
+          "interval_evaluations": 1539,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            8,
+            11
+          ],
+          "sampled_midpoint_min_m": 6931.663071887955,
+          "conditional_lower_bound_m": 149.4254679192986,
+          "interval_evaluations": 1464,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            8,
+            12
+          ],
+          "sampled_midpoint_min_m": 11666.099721235629,
+          "conditional_lower_bound_m": 2005.5162812040548,
+          "interval_evaluations": 1440,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            9,
+            10
+          ],
+          "sampled_midpoint_min_m": 2342.5008312920304,
+          "conditional_lower_bound_m": 39.08183463110934,
+          "interval_evaluations": 1699,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            9,
+            11
+          ],
+          "sampled_midpoint_min_m": 4631.57177698968,
+          "conditional_lower_bound_m": 22.828726758147678,
+          "interval_evaluations": 1534,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            9,
+            12
+          ],
+          "sampled_midpoint_min_m": 7489.6401506873335,
+          "conditional_lower_bound_m": 337.14113112596215,
+          "interval_evaluations": 1446,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            10,
+            11
+          ],
+          "sampled_midpoint_min_m": 2519.543283032558,
+          "conditional_lower_bound_m": 35.38648319204592,
+          "interval_evaluations": 1696,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            10,
+            12
+          ],
+          "sampled_midpoint_min_m": 4976.482955181164,
+          "conditional_lower_bound_m": 73.46824801048795,
+          "interval_evaluations": 1500,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        },
+        {
+          "pair": [
+            11,
+            12
+          ],
+          "sampled_midpoint_min_m": 2645.74582909079,
+          "conditional_lower_bound_m": 46.8649517736362,
+          "interval_evaluations": 1690,
+          "observed_violations": 0,
+          "unresolved_intervals": 0,
+          "passes_conditional_20m_screen": true,
+          "assumptions": "1cm numerical state bound per object; fixed J2 point centres, radii validated by interval bound; not physical launch-interface clearance or covariance"
+        }
+      ],
+      "maximum_terminal_position_residual_m": 4.853606629683733e-06,
+      "same_final_host_position_residual_m": 1.6797858295783874e-05,
+      "assumed_device_plus_consumed_fuel_kg": 90.10161891323698,
+      "initial_device_plus_loaded_fuel_kg": 100.0,
+      "status": "COMPUTED_IDEAL_IMPULSE_CASE"
+    }
+  ],
+  "source_sha256": "6d032944ca4cca983301eb36b5c6226dc52e1a0580cdc399479176d54ecffb66"
+}

@@ -1,0 +1,829 @@
+{
+  "boundary": "Modeled material only; payload, uncatalogued actuator/sensors, fasteners/harness/interface omitted. This is not installed CG/inertia. Drum includes four cells; others one; raw masses are not a fair system ranking.",
+  "cases": [
+    {
+      "candidate": "lead_screw",
+      "class": "1U",
+      "mass_material_only_kg": 2.470681956084218,
+      "CG_mm": [
+        21.108125474666434,
+        -139.16936906102794,
+        60.143674958554676
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.03655271046836438,
+          -0.006735173485180285,
+          -0.0003586693828022445
+        ],
+        [
+          -0.006735173485180285,
+          0.014131939539023492,
+          0.0002099619604376697
+        ],
+        [
+          -0.0003586693828022445,
+          0.0002099619604376697,
+          0.04209056185448396
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        155.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 32.532435,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Tr8_nut_blank",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "e8a5630edbd0625617a4d50f5d2f954deeab77377e6adc9d072ae81bc8d2ee90"
+    },
+    {
+      "candidate": "lead_screw",
+      "class": "3U",
+      "mass_material_only_kg": 4.429510356084218,
+      "CG_mm": [
+        129.0566294159661,
+        -121.30581407054522,
+        57.704231403728436
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.05988263189060907,
+          -0.01721743919933476,
+          -0.0002220402714556929
+        ],
+        [
+          -0.01721743919933476,
+          0.09072290432059901,
+          0.001225439945414691
+        ],
+        [
+          -0.0002220402714556929,
+          0.001225439945414691,
+          0.13151760035638774
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        382.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 62.012925,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Tr8_nut_blank",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "013c389084ac894094576deae65a8d8a60f6a5ce88bdcdc4c182444c8b943365"
+    },
+    {
+      "candidate": "spring_dual_gate",
+      "class": "1U",
+      "mass_material_only_kg": 2.364112815060084,
+      "CG_mm": [
+        28.34846928219331,
+        -131.20394230894914,
+        58.60579637297466
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.031546236715736066,
+          -0.005847043425681636,
+          -0.0007516763177395629
+        ],
+        [
+          -0.005847043425681636,
+          0.013252257203755191,
+          -0.00020313783686459462
+        ],
+        [
+          -0.0007516763177395629,
+          -0.00020313783686459462,
+          0.036260508959166105
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        155.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 32.532435,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "2d376149db7ccfaf86c8a5a6ac32fc74178eb08f5ff94d02f42a4413748893d0"
+    },
+    {
+      "candidate": "spring_dual_gate",
+      "class": "3U",
+      "mass_material_only_kg": 4.506811215060083,
+      "CG_mm": [
+        139.44394857269768,
+        -115.16261772062515,
+        57.423073652908926
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.05458988884969588,
+          -0.014321789488628127,
+          -0.001324253873674079
+        ],
+        [
+          -0.014321789488628127,
+          0.08731080879482608,
+          0.0006186126325197464
+        ],
+        [
+          -0.001324253873674079,
+          0.0006186126325197464,
+          0.12251353514447427
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        382.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 62.012925,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "103d7e3ee5eadd28965f2c375a6757f88ec3d2dceecd424eb2acc748f257b29b"
+    },
+    {
+      "candidate": "rack_pawl",
+      "class": "1U",
+      "mass_material_only_kg": 2.4687676041911697,
+      "CG_mm": [
+        21.432021101565443,
+        -145.41841911175635,
+        60.31456949665971
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.03672684757158016,
+          -0.007691502752376564,
+          -0.0003448520499149854
+        ],
+        [
+          -0.007691502752376564,
+          0.014066567036496534,
+          0.0005865052062420561
+        ],
+        [
+          -0.0003448520499149854,
+          0.0005865052062420561,
+          0.042131733041400186
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        155.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 32.532435,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "3e40314b5e54760713279c53b19a2c3d42345423a0153d1567fdd1749ef72663"
+    },
+    {
+      "candidate": "rack_pawl",
+      "class": "3U",
+      "mass_material_only_kg": 4.4275960041911695,
+      "CG_mm": [
+        129.28390273827165,
+        -124.78247616377229,
+        57.79846514719211
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.060652305960434534,
+          -0.019819664817207094,
+          -0.00016517615949323308
+        ],
+        [
+          -0.019819664817207094,
+          0.09046469796959693,
+          0.0016482566858526347
+        ],
+        [
+          -0.00016517615949323308,
+          0.0016482566858526347,
+          0.131957315085066
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        382.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 62.012925,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "9f71926b610c63a0fed1c5d841961a4e9957e6607f1f8f4a81acfaa58839372f"
+    },
+    {
+      "candidate": "indexed_drum",
+      "class": "1U",
+      "mass_material_only_kg": 11.17882173406517,
+      "CG_mm": [
+        119.2757033033047,
+        -147.83523214677933,
+        317.4703372830806
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.784193335444737,
+          -0.002773740476204896,
+          -0.042587693183352995
+        ],
+        [
+          -0.002773740476204896,
+          0.6249271802694696,
+          0.008700717680092318
+        ],
+        [
+          -0.042587693183352995,
+          0.008700717680092318,
+          0.7130639568624115
+        ]
+      ],
+      "bounds_mm": [
+        -140.0,
+        440.5,
+        -484.00000000000006,
+        184.0,
+        16.0,
+        684.0
+      ],
+      "bounding_box_volume_litre": 259.033032,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "323ce73da03594cf2242e2fadec1236cae6bba352535d0d7a05c962b7e1f5de6"
+    },
+    {
+      "candidate": "indexed_drum",
+      "class": "3U",
+      "mass_material_only_kg": 12.21339693406517,
+      "CG_mm": [
+        129.2602219231588,
+        -139.4726597423381,
+        295.5111882734657
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.869677842782619,
+          -0.014134250457806086,
+          -0.013694562541222925
+        ],
+        [
+          -0.014134250457806086,
+          0.8737821747780607,
+          0.02950391877369086
+        ],
+        [
+          -0.013694562541222925,
+          0.02950391877369086,
+          0.5849421201891867
+        ]
+      ],
+      "bounds_mm": [
+        -140.0,
+        440.5,
+        -484.00000000000006,
+        184.0,
+        16.0,
+        684.0
+      ],
+      "bounding_box_volume_litre": 259.033032,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "9d060f884c4c73c6f83d3ea57242ee98590da7ee43bf61d52778e617aff706f0"
+    },
+    {
+      "candidate": "pantograph",
+      "class": "1U",
+      "mass_material_only_kg": 2.3343061431058776,
+      "CG_mm": [
+        22.987882740944958,
+        -135.60544651944275,
+        58.76247818120618
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.03165494701148984,
+          -0.006664943730124821,
+          -0.0004677581560670823
+        ],
+        [
+          -0.006664943730124821,
+          0.014443244833510711,
+          2.441531417369022e-06
+        ],
+        [
+          -0.0004677581560670823,
+          2.441531417369022e-06,
+          0.03757073764452219
+        ]
+      ],
+      "bounds_mm": [
+        -115.5,
+        155.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 35.19477,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "94e017b2da5859af9e385564b2cb6e5bec75bd8b90b7699c84e65b389987ccd7"
+    },
+    {
+      "candidate": "pantograph",
+      "class": "3U",
+      "mass_material_only_kg": 4.293134543105877,
+      "CG_mm": [
+        133.5078045951133,
+        -118.80054827724332,
+        56.87574182705804
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.05463179463186331,
+          -0.015875555318171822,
+          -0.0007355576706163075
+        ],
+        [
+          -0.015875555318171822,
+          0.08840585113538504,
+          0.0009366674859760761
+        ],
+        [
+          -0.0007355576706163075,
+          0.0009366674859760761,
+          0.12404641460984975
+        ]
+      ],
+      "bounds_mm": [
+        -115.5,
+        382.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 64.67526,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "1a4d3dbc87c206bbbc2d37dae5b36ed5a91a0a850e99966acaf877360b0c7f1e"
+    },
+    {
+      "candidate": "telescopic",
+      "class": "1U",
+      "mass_material_only_kg": 2.3442188808349913,
+      "CG_mm": [
+        24.816328895133488,
+        -136.7265080612336,
+        58.8691972835766
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.03218424884428324,
+          -0.006322067136892666,
+          -0.0005754757628034389
+        ],
+        [
+          -0.006322067136892666,
+          0.013432511241600113,
+          6.848562356044649e-05
+        ],
+        [
+          -0.0005754757628034389,
+          6.848562356044649e-05,
+          0.03716645538150419
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        155.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 32.532435,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "c2682764fb5b0429b7368c63f0172a3638fbd60d5a890c72772208cd8bb50f0b"
+    },
+    {
+      "candidate": "telescopic",
+      "class": "3U",
+      "mass_material_only_kg": 4.303047280834991,
+      "CG_mm": [
+        134.24930771832257,
+        -119.44999412324414,
+        56.93822676850004
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.0552543433023302,
+          -0.015766773831348606,
+          -0.0008219042928342393
+        ],
+        [
+          -0.015766773831348606,
+          0.086575220480622,
+          0.0010122942141184115
+        ],
+        [
+          -0.0008219042928342393,
+          0.0010122942141184115,
+          0.12291350371085363
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        382.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 62.012925,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "a9d957f475613987187e8e1d710de5498fb8562735b2be528b21bdf4dcc51fcf"
+    },
+    {
+      "candidate": "belt_shuttle",
+      "class": "1U",
+      "mass_material_only_kg": 2.2957383719807605,
+      "CG_mm": [
+        26.354035770106037,
+        -133.38405695403733,
+        58.37712940798812
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.03207316912682361,
+          -0.005751519379718135,
+          -0.0006594704762010961
+        ],
+        [
+          -0.005751519379718135,
+          0.013139191816858006,
+          -0.00012100888165817286
+        ],
+        [
+          -0.0006594704762010961,
+          -0.00012100888165817286,
+          0.036815606406249264
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        155.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 32.532435,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "1952276b6cc3456d4ef955618ce8b546bbb675123784575a2a2a68c7264e6928"
+    },
+    {
+      "candidate": "belt_shuttle",
+      "class": "3U",
+      "mass_material_only_kg": 4.25456677198076,
+      "CG_mm": [
+        136.3260266065308,
+        -117.44956307906557,
+        56.65070665133629
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.054867937299384516,
+          -0.014197981018675533,
+          -0.0010473854433182982
+        ],
+        [
+          -0.014197981018675533,
+          0.08491142452175332,
+          0.0007881774664131746
+        ],
+        [
+          -0.0010473854433182982,
+          0.0007881774664131746,
+          0.12092553049668185
+        ]
+      ],
+      "bounds_mm": [
+        -95.0,
+        382.5,
+        -445.0,
+        110.0,
+        16.0,
+        250.0
+      ],
+      "bounding_box_volume_litre": 62.012925,
+      "drive_chain_connections": [
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-34",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Driven_fork_frame",
+          "b": "Guide_bearing_-62",
+          "minimum_distance_mm": 0.0,
+          "status": "GEOMETRIC_CONTACT_ONLY_NOT_JOINT_PROOF"
+        },
+        {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "minimum_distance_mm": 1.0,
+          "status": "MISSING_MODELED_CONNECTION"
+        }
+      ],
+      "fork_frame_connected_solids": 1,
+      "FCStd_sha256": "89a7420c3b463bb0676979da5bd0b18cdcce0d70b85c11c7d18d353ee8c0268f"
+    }
+  ]
+}

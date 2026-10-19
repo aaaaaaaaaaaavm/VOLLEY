@@ -1,0 +1,483 @@
+{
+  "candidate": "indexed_drum",
+  "payload_class": "3U",
+  "source_revision": "FDR-08-2026-10-19",
+  "modeled_material_kg": 12.21339693406517,
+  "parts": [
+    {
+      "part": "Passive_payload",
+      "material": "payload",
+      "role": "payload",
+      "volume_mm3": 3405000.0,
+      "modeled_mass_kg": 0.0
+    },
+    {
+      "part": "Cassette_floor",
+      "material": "aluminium",
+      "role": "fixed",
+      "volume_mm3": 240570.0,
+      "modeled_mass_kg": 0.649539
+    },
+    {
+      "part": "Support_bridge",
+      "material": "aluminium",
+      "role": "fixed",
+      "volume_mm3": 218700.0,
+      "modeled_mass_kg": 0.59049
+    },
+    {
+      "part": "Receiving_sled_floor",
+      "material": "aluminium",
+      "role": "receiver",
+      "volume_mm3": 160380.0,
+      "modeled_mass_kg": 0.433026
+    },
+    {
+      "part": "Stored_side_cap_-6",
+      "material": "aluminium",
+      "role": "fixed",
+      "volume_mm3": 90576.0,
+      "modeled_mass_kg": 0.2445552
+    },
+    {
+      "part": "Stored_side_cap_342.5",
+      "material": "aluminium",
+      "role": "fixed",
+      "volume_mm3": 90576.0,
+      "modeled_mass_kg": 0.2445552
+    },
+    {
+      "part": "Cassette_rear",
+      "material": "aluminium",
+      "role": "fixed",
+      "volume_mm3": 163296.0,
+      "modeled_mass_kg": 0.4408992
+    },
+    {
+      "part": "Storage_gate",
+      "material": "aluminium",
+      "role": "gate",
+      "volume_mm3": 137000.0,
+      "modeled_mass_kg": 0.3699
+    },
+    {
+      "part": "Receiver_side_gate",
+      "material": "aluminium",
+      "role": "gate",
+      "volume_mm3": 78732.0,
+      "modeled_mass_kg": 0.2125764
+    },
+    {
+      "part": "Storage_gate_pin_-16",
+      "material": "steel",
+      "role": "latch",
+      "volume_mm3": 251.32741228718325,
+      "modeled_mass_kg": 0.0019729201864543884
+    },
+    {
+      "part": "Storage_gate_pin_356.5",
+      "material": "steel",
+      "role": "latch",
+      "volume_mm3": 251.32741228718365,
+      "modeled_mass_kg": 0.0019729201864543914
+    },
+    {
+      "part": "Driven_fork_frame",
+      "material": "aluminium",
+      "role": "moving",
+      "volume_mm3": 139620.2705261291,
+      "modeled_mass_kg": 0.3769747304205486
+    },
+    {
+      "part": "Fork_front_barrier",
+      "material": "aluminium",
+      "role": "moving",
+      "volume_mm3": 35752.5,
+      "modeled_mass_kg": 0.09653175
+    },
+    {
+      "part": "Receiver_clamp_5_-1",
+      "material": "steel",
+      "role": "clamp",
+      "volume_mm3": 63.999999999999986,
+      "modeled_mass_kg": 0.0005023999999999999
+    },
+    {
+      "part": "Receiver_clamp_5_100",
+      "material": "steel",
+      "role": "clamp",
+      "volume_mm3": 63.999999999999986,
+      "modeled_mass_kg": 0.0005023999999999999
+    },
+    {
+      "part": "Receiver_clamp_327.5_-1",
+      "material": "steel",
+      "role": "clamp",
+      "volume_mm3": 63.999999999999986,
+      "modeled_mass_kg": 0.0005023999999999999
+    },
+    {
+      "part": "Receiver_clamp_327.5_100",
+      "material": "steel",
+      "role": "clamp",
+      "volume_mm3": 63.999999999999986,
+      "modeled_mass_kg": 0.0005023999999999999
+    },
+    {
+      "part": "Guide_shaft_-34",
+      "material": "steel",
+      "role": "fixed",
+      "volume_mm3": 22619.46710584651,
+      "modeled_mass_kg": 0.17756281678089508
+    },
+    {
+      "part": "Guide_bearing_-34",
+      "material": "polymer",
+      "role": "moving",
+      "volume_mm3": 2597.7044254370594,
+      "modeled_mass_kg": 0.003662763239866254
+    },
+    {
+      "part": "Guide_shaft_-62",
+      "material": "steel",
+      "role": "fixed",
+      "volume_mm3": 22619.46710584651,
+      "modeled_mass_kg": 0.17756281678089508
+    },
+    {
+      "part": "Guide_bearing_-62",
+      "material": "polymer",
+      "role": "moving",
+      "volume_mm3": 2597.7044254370603,
+      "modeled_mass_kg": 0.003662763239866255
+    },
+    {
+      "part": "Power_off_capture_rack",
+      "material": "steel",
+      "role": "fixed",
+      "volume_mm3": 23400.000000001393,
+      "modeled_mass_kg": 0.18369000000001093
+    },
+    {
+      "part": "Spring_applied_pawl",
+      "material": "steel",
+      "role": "moving",
+      "volume_mm3": 191.99999999999997,
+      "modeled_mass_kg": 0.0015071999999999996
+    },
+    {
+      "part": "Drive_motor_envelope",
+      "material": "envelope",
+      "role": "unselected_actuator",
+      "volume_mm3": 55125.0,
+      "modeled_mass_kg": 0.0
+    },
+    {
+      "part": "Position_sensor_-203",
+      "material": "envelope",
+      "role": "unselected_sensor",
+      "volume_mm3": 1728.0,
+      "modeled_mass_kg": 0.0
+    },
+    {
+      "part": "Position_sensor_-3",
+      "material": "envelope",
+      "role": "unselected_sensor",
+      "volume_mm3": 1728.0,
+      "modeled_mass_kg": 0.0
+    },
+    {
+      "part": "Other_cell_1_Passive_payload",
+      "material": "payload",
+      "role": "other_payload",
+      "volume_mm3": 1135000.0,
+      "modeled_mass_kg": 0.0
+    },
+    {
+      "part": "Other_cell_1_Cassette_floor",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 90750.0,
+      "modeled_mass_kg": 0.245025
+    },
+    {
+      "part": "Other_cell_1_Stored_side_cap_-6",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 90576.0,
+      "modeled_mass_kg": 0.2445552
+    },
+    {
+      "part": "Other_cell_1_Stored_side_cap_115.5",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 90576.0,
+      "modeled_mass_kg": 0.2445552
+    },
+    {
+      "part": "Other_cell_1_Cassette_rear",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 61600.00000000001,
+      "modeled_mass_kg": 0.16632000000000002
+    },
+    {
+      "part": "Other_cell_1_Storage_gate",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 46200.0,
+      "modeled_mass_kg": 0.12474
+    },
+    {
+      "part": "Other_cell_1_Storage_gate_pin_-16",
+      "material": "steel",
+      "role": "drive",
+      "volume_mm3": 251.32741228718322,
+      "modeled_mass_kg": 0.001972920186454388
+    },
+    {
+      "part": "Other_cell_1_Storage_gate_pin_129.5",
+      "material": "steel",
+      "role": "drive",
+      "volume_mm3": 251.3274122871835,
+      "modeled_mass_kg": 0.0019729201864543905
+    },
+    {
+      "part": "Other_cell_2_Passive_payload",
+      "material": "payload",
+      "role": "other_payload",
+      "volume_mm3": 3404999.9999999995,
+      "modeled_mass_kg": 0.0
+    },
+    {
+      "part": "Other_cell_2_Cassette_floor",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 240570.0,
+      "modeled_mass_kg": 0.649539
+    },
+    {
+      "part": "Other_cell_2_Stored_side_cap_-6",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 90576.0,
+      "modeled_mass_kg": 0.2445552
+    },
+    {
+      "part": "Other_cell_2_Stored_side_cap_342.5",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 90576.0,
+      "modeled_mass_kg": 0.2445552
+    },
+    {
+      "part": "Other_cell_2_Cassette_rear",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 163296.0,
+      "modeled_mass_kg": 0.4408992
+    },
+    {
+      "part": "Other_cell_2_Storage_gate",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 137000.0,
+      "modeled_mass_kg": 0.3699
+    },
+    {
+      "part": "Other_cell_2_Storage_gate_pin_-16",
+      "material": "steel",
+      "role": "drive",
+      "volume_mm3": 251.32741228718325,
+      "modeled_mass_kg": 0.0019729201864543884
+    },
+    {
+      "part": "Other_cell_2_Storage_gate_pin_356.5",
+      "material": "steel",
+      "role": "drive",
+      "volume_mm3": 251.32741228718368,
+      "modeled_mass_kg": 0.001972920186454392
+    },
+    {
+      "part": "Other_cell_3_Passive_payload",
+      "material": "payload",
+      "role": "other_payload",
+      "volume_mm3": 1135000.0000000002,
+      "modeled_mass_kg": 0.0
+    },
+    {
+      "part": "Other_cell_3_Cassette_floor",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 90750.0,
+      "modeled_mass_kg": 0.245025
+    },
+    {
+      "part": "Other_cell_3_Stored_side_cap_-6",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 90576.0,
+      "modeled_mass_kg": 0.2445552
+    },
+    {
+      "part": "Other_cell_3_Stored_side_cap_115.5",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 90576.0,
+      "modeled_mass_kg": 0.2445552
+    },
+    {
+      "part": "Other_cell_3_Cassette_rear",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 61600.000000000015,
+      "modeled_mass_kg": 0.16632000000000005
+    },
+    {
+      "part": "Other_cell_3_Storage_gate",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 46200.0,
+      "modeled_mass_kg": 0.12474
+    },
+    {
+      "part": "Other_cell_3_Storage_gate_pin_-16",
+      "material": "steel",
+      "role": "drive",
+      "volume_mm3": 251.32741228718422,
+      "modeled_mass_kg": 0.0019729201864543957
+    },
+    {
+      "part": "Other_cell_3_Storage_gate_pin_129.5",
+      "material": "steel",
+      "role": "drive",
+      "volume_mm3": 251.32741228718456,
+      "modeled_mass_kg": 0.0019729201864543988
+    },
+    {
+      "part": "Drum_axle",
+      "material": "steel",
+      "role": "drive",
+      "volume_mm3": 262612.01309887785,
+      "modeled_mass_kg": 2.061504302826191
+    },
+    {
+      "part": "Drum_rotor_-120",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 356956.37582674046,
+      "modeled_mass_kg": 0.9637822147321993
+    },
+    {
+      "part": "Drum_rotor_360.5",
+      "material": "aluminium",
+      "role": "drive",
+      "volume_mm3": 356956.37576039357,
+      "modeled_mass_kg": 0.9637822145530627
+    }
+  ],
+  "valid_export_solids": 53,
+  "motion_stations": [
+    {
+      "advance_mm": 0,
+      "phase": "transfer",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 25,
+      "phase": "transfer",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 50,
+      "phase": "transfer",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 75,
+      "phase": "transfer",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 100,
+      "phase": "transfer",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 125,
+      "phase": "transfer",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 150,
+      "phase": "transfer",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 175,
+      "phase": "transfer",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 200,
+      "phase": "seated",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 0,
+      "phase": "stowed",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 0,
+      "phase": "gate_0",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 0,
+      "phase": "gate_30",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 0,
+      "phase": "gate_60",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 0,
+      "phase": "gate_90",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    },
+    {
+      "advance_mm": 0,
+      "phase": "gate_120",
+      "intersections": [],
+      "unresolved_payload_intersections": 0
+    }
+  ],
+  "continuous_translational_payload_sweep": {
+    "method": "Exact B-rep union of the straight-translating rectangular payload envelope against fixed feed-state geometry",
+    "unresolved_penetrations": [],
+    "not_proven": "Nonlinear drive/index motion, contacts, arbitrary attitude or tolerance clearance"
+  },
+  "limitations": [
+    "Discrete nominal B-rep stations, not continuous clearance or contact verification",
+    "Actuator/sensor envelopes excluded from material mass; no installed mass claim",
+    "No approved satellite interface, hardware reliability or manufacturing release",
+    "Every positive-volume intersection retained; no default intended-contact waiver"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "case": "450 km; 51.6 deg; imposed 16.029 m/s relative input, 4/300 kg finite-host split; not motor rating",
+  "gravity": {
+    "mu_m3_s2": 398600441500000.0,
+    "radius_m": 6378136.3,
+    "normalized_C20": -0.00048416539,
+    "J2": 0.001082626724392697,
+    "pole": "GMAT EarthFixed z exported in EarthMJ2000Eq every 60s; linear vector interpolation, renormalized",
+    "pole_tilt_initial_deg": 0.14974004573942562,
+    "orientation_boundary": "Shared prescribed pole input; not independent validation of Earth orientation or EOP"
+  },
+  "gmat_version": "R2026a",
+  "orekit_version": "13.1.6",
+  "duration_s": 86400,
+  "native_rows": 2881,
+  "max_gmat_orekit_position_m": 0.0012854175703222051,
+  "terminal_gmat_orekit_position_m": 0.00010692029937188374,
+  "max_gmat_orekit_velocity_m_s": 1.4328594115048402e-06,
+  "max_orekit_step_refinement_m": 1.925432463491084e-06,
+  "max_independent_cartesian_position_m": 7.661521325082426e-06,
+  "diagnostic_ablation_m": {
+    "original_axis_gravity_and_repeated_stops": 1498.950210929094,
+    "matched_constants_fixed_axis_repeated_stops": 1498.9193709672138,
+    "matched_axis_and_constants_repeated_stops": 0.26069307442880346,
+    "matched_axis_constants_continuous_arc": 0.0012854175703222051
+  },
+  "interpretation": [
+    "Earth pole/gravity configuration explains dominant kilometre-scale discrepancy",
+    "Repeated GMAT stop/restart commands contribute decimetre-scale numerical history differences; continuous accepted-step reports avoid those repeated commands",
+    "Remaining millimetre-scale inter-code residual includes representation/numerical effects; not isolated entirely to one source",
+    "Finite epoch representation can affect millimetre-scale comparisons; observed residual is reported without claiming physical flight accuracy",
+    "No atmospheric lifetime, actual release, coupled-host or continuous mission-clearance validation follows"
+  ],
+  "source_sha256": {
+    "orekit_matched_native_15.csv": "acbc2995c68beb3730eb785cc3daf77335dad700d375030419b26ee655391236",
+    "gmat_J2_continuous.txt": "6c6787d6c8c692c7e639d2eab6c93887f839f21b1a83365be1d48c1221e0ea88",
+    "orekit_matched_native.csv": "4983a79805275b7ce7f59f5918f768e0f5ebf8e77d7beb538c8edb98df49fec0",
+    "gmat_J2_pole.script": "ee44129b7c913174a6b403d33e72d398dd4b177bcb127418f2223cfc5213f3d0",
+    "gmat_J2_continuous.script": "6bb1b66264fb36c65445fb76c8ebb6c63d821060481315fbd525957d52b827f8",
+    "gmat_J2_pole.txt": "be54979cf8c90992feb4206049f1185e0624e0aaa20df2b7af1342ffab1f8648",
+    "MatchedJ2.java": "ebc38efcb6507a6ca5f2fd25f4ca28add9aee589a6217b7a41c7c212ba68cc79"
+  }
+}

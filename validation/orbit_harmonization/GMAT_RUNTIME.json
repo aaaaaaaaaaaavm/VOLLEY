@@ -1,0 +1,9 @@
+{
+  "version": "R2026a",
+  "files": {
+    "bin/GmatConsole": "f7cf5b3188902353ed4245bb21c22c1afa0451efdd221b7e19f6a74dc7ed1d93",
+    "data/gravity/earth/JGM2.cof": "bf182b1208e33be3716c8292a3947c1f87d4041ad6663a0c9ae621f65cafc20d",
+    "data/planetary_coeff/eopc04_08.62-now": "52c95d6871066e892463328424ca34f5e9cedde92c747465a40f7cd0ecd86ed3"
+  },
+  "boundary": "Prescribed pole outputs are the actual shared orientation input; runtime Earth-orientation accuracy is not independently validated."
+}

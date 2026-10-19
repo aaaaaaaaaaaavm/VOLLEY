@@ -1,0 +1,35 @@
+{
+  "earlier_reports": [
+    {
+      "revision": "FDR-02-2026-10-19",
+      "report_sha256": "012cefdb8f77d77f038660c81cab8a0fd48537224899074c9cd4ce95e471ded1",
+      "nominal_positive_pairs": 198,
+      "interpretation": "Historical diagnostic output, not a current pass. Earlier scopes omitted unselected envelopes or contained disconnected pieces."
+    },
+    {
+      "revision": "FDR-03-2026-10-19",
+      "report_sha256": "ca1f1c40594253ae121a4101535ad4d263ee228104c2757da92721a6dc85bcaf",
+      "nominal_positive_pairs": 66,
+      "interpretation": "Historical diagnostic output, not a current pass. Earlier scopes omitted unselected envelopes or contained disconnected pieces."
+    },
+    {
+      "revision": "FDR-04-2026-10-19",
+      "report_sha256": "471cd0f7c1f55d753c1aaa1be97d209f80c6d6fb29e6363c1f12c9d46c7b189f",
+      "nominal_positive_pairs": 0,
+      "interpretation": "Historical diagnostic output, not a current pass. Earlier scopes omitted unselected envelopes or contained disconnected pieces."
+    },
+    {
+      "revision": "FDR-05-2026-10-19",
+      "report_sha256": "8de587514f666391aae71c4962dd7d3c10a24be4554de9e77e55968a9b51f5f8",
+      "nominal_positive_pairs": 602,
+      "interpretation": "Historical diagnostic output, not a current pass. Earlier scopes omitted unselected envelopes or contained disconnected pieces."
+    },
+    {
+      "revision": "FDR-06-2026-10-19",
+      "report_sha256": "8aaf3a6206792980fe8c7193b77f027615ca68c7dfee71d38db8d750f3d8eff5",
+      "nominal_positive_pairs": 0,
+      "interpretation": "Historical diagnostic output, not a current pass. Earlier scopes omitted unselected envelopes or contained disconnected pieces."
+    }
+  ],
+  "current": "FDR-08; connected fork/housings, cap/rotor clearance corrections, pawl pocket and relocated sensor envelope; envelopes included in final audit. Pawl engagement/joints/full-cycle loads remain unverified."
+}

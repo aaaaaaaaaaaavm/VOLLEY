@@ -1,0 +1,473 @@
+candidate,class,part,material,role,volume_mm3,modeled_material_kg,boundary
+lead_screw,1U,Passive_payload,payload,payload,1135000.0,0.0,Envelope/payload excluded
+lead_screw,1U,Cassette_floor,aluminium,fixed,90750.0,0.245025,Material only; no installed rating
+lead_screw,1U,Support_bridge,aluminium,fixed,82500.0,0.22275,Material only; no installed rating
+lead_screw,1U,Receiving_sled_floor,aluminium,receiver,60500.0,0.16335,Material only; no installed rating
+lead_screw,1U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+lead_screw,1U,Stored_side_cap_115.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+lead_screw,1U,Cassette_rear,aluminium,fixed,61600.000000000015,0.16632000000000005,Material only; no installed rating
+lead_screw,1U,Storage_gate,aluminium,gate,46200.0,0.12474,Material only; no installed rating
+lead_screw,1U,Receiver_side_gate,aluminium,gate,29700.0,0.08019,Material only; no installed rating
+lead_screw,1U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+lead_screw,1U,Storage_gate_pin_129.5,steel,latch,251.32741228718353,0.0019729201864543905,Material only; no installed rating
+lead_screw,1U,Driven_fork_frame,aluminium,moving,66783.27052612911,0.1803148304205486,Material only; no installed rating
+lead_screw,1U,Fork_front_barrier,aluminium,moving,11917.5,0.03217725,Material only; no installed rating
+lead_screw,1U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+lead_screw,1U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+lead_screw,1U,Receiver_clamp_100.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+lead_screw,1U,Receiver_clamp_100.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+lead_screw,1U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+lead_screw,1U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+lead_screw,1U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+lead_screw,1U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+lead_screw,1U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+lead_screw,1U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+lead_screw,1U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+lead_screw,1U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+lead_screw,1U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+lead_screw,1U,Tr8x2_screw_blank,steel,drive,22619.467105846514,0.1775628167808951,Material only; no installed rating
+lead_screw,1U,Tr8_nut_blank,polymer,drive,3188.079723112549,0.004495192409588694,Material only; no installed rating
+lead_screw,1U,Screw_end_bearing_-440,steel,drive,1977.2398763530764,0.01552133302937165,Material only; no installed rating
+lead_screw,1U,Screw_end_bearing_-10,steel,drive,1977.2398763530764,0.01552133302937165,Material only; no installed rating
+lead_screw,3U,Passive_payload,payload,payload,3405000.0,0.0,Envelope/payload excluded
+lead_screw,3U,Cassette_floor,aluminium,fixed,240570.0,0.649539,Material only; no installed rating
+lead_screw,3U,Support_bridge,aluminium,fixed,218700.0,0.59049,Material only; no installed rating
+lead_screw,3U,Receiving_sled_floor,aluminium,receiver,160380.0,0.433026,Material only; no installed rating
+lead_screw,3U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+lead_screw,3U,Stored_side_cap_342.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+lead_screw,3U,Cassette_rear,aluminium,fixed,163296.0,0.4408992,Material only; no installed rating
+lead_screw,3U,Storage_gate,aluminium,gate,137000.0,0.3699,Material only; no installed rating
+lead_screw,3U,Receiver_side_gate,aluminium,gate,78732.0,0.2125764,Material only; no installed rating
+lead_screw,3U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+lead_screw,3U,Storage_gate_pin_356.5,steel,latch,251.32741228718365,0.0019729201864543914,Material only; no installed rating
+lead_screw,3U,Driven_fork_frame,aluminium,moving,141012.27052612888,0.38073313042054796,Material only; no installed rating
+lead_screw,3U,Fork_front_barrier,aluminium,moving,35752.5,0.09653175,Material only; no installed rating
+lead_screw,3U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+lead_screw,3U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+lead_screw,3U,Receiver_clamp_327.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+lead_screw,3U,Receiver_clamp_327.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+lead_screw,3U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+lead_screw,3U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+lead_screw,3U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+lead_screw,3U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+lead_screw,3U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+lead_screw,3U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+lead_screw,3U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+lead_screw,3U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+lead_screw,3U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+lead_screw,3U,Tr8x2_screw_blank,steel,drive,22619.467105846514,0.1775628167808951,Material only; no installed rating
+lead_screw,3U,Tr8_nut_blank,polymer,drive,3188.079723112549,0.004495192409588694,Material only; no installed rating
+lead_screw,3U,Screw_end_bearing_-440,steel,drive,1977.2398763530764,0.01552133302937165,Material only; no installed rating
+lead_screw,3U,Screw_end_bearing_-10,steel,drive,1977.2398763530764,0.01552133302937165,Material only; no installed rating
+spring_dual_gate,1U,Passive_payload,payload,payload,1135000.0,0.0,Envelope/payload excluded
+spring_dual_gate,1U,Cassette_floor,aluminium,fixed,90750.0,0.245025,Material only; no installed rating
+spring_dual_gate,1U,Support_bridge,aluminium,fixed,82500.0,0.22275,Material only; no installed rating
+spring_dual_gate,1U,Receiving_sled_floor,aluminium,receiver,60500.0,0.16335,Material only; no installed rating
+spring_dual_gate,1U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+spring_dual_gate,1U,Stored_side_cap_115.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+spring_dual_gate,1U,Cassette_rear,aluminium,fixed,61600.000000000015,0.16632000000000005,Material only; no installed rating
+spring_dual_gate,1U,Storage_gate,aluminium,gate,46200.0,0.12474,Material only; no installed rating
+spring_dual_gate,1U,Receiver_side_gate,aluminium,gate,29700.0,0.08019,Material only; no installed rating
+spring_dual_gate,1U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+spring_dual_gate,1U,Storage_gate_pin_129.5,steel,latch,251.32741228718353,0.0019729201864543905,Material only; no installed rating
+spring_dual_gate,1U,Driven_fork_frame,aluminium,moving,65391.27052612917,0.17655643042054875,Material only; no installed rating
+spring_dual_gate,1U,Fork_front_barrier,aluminium,moving,11917.5,0.03217725,Material only; no installed rating
+spring_dual_gate,1U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+spring_dual_gate,1U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+spring_dual_gate,1U,Receiver_clamp_100.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+spring_dual_gate,1U,Receiver_clamp_100.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+spring_dual_gate,1U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+spring_dual_gate,1U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+spring_dual_gate,1U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+spring_dual_gate,1U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+spring_dual_gate,1U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+spring_dual_gate,1U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+spring_dual_gate,1U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+spring_dual_gate,1U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+spring_dual_gate,1U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+spring_dual_gate,1U,Captured_spring_wire,steel,drive,2131.838754788865,0.01673493422509259,Material only; no installed rating
+spring_dual_gate,1U,Second_escapement_gate,aluminium,gate,34650.0,0.093555,Material only; no installed rating
+spring_dual_gate,1U,Governor_brake_envelope,envelope,unselected_actuator,27000.0,0.0,Envelope/payload excluded
+spring_dual_gate,3U,Passive_payload,payload,payload,3405000.0,0.0,Envelope/payload excluded
+spring_dual_gate,3U,Cassette_floor,aluminium,fixed,240570.0,0.649539,Material only; no installed rating
+spring_dual_gate,3U,Support_bridge,aluminium,fixed,218700.0,0.59049,Material only; no installed rating
+spring_dual_gate,3U,Receiving_sled_floor,aluminium,receiver,160380.0,0.433026,Material only; no installed rating
+spring_dual_gate,3U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+spring_dual_gate,3U,Stored_side_cap_342.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+spring_dual_gate,3U,Cassette_rear,aluminium,fixed,163296.0,0.4408992,Material only; no installed rating
+spring_dual_gate,3U,Storage_gate,aluminium,gate,137000.0,0.3699,Material only; no installed rating
+spring_dual_gate,3U,Receiver_side_gate,aluminium,gate,78732.0,0.2125764,Material only; no installed rating
+spring_dual_gate,3U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+spring_dual_gate,3U,Storage_gate_pin_356.5,steel,latch,251.32741228718365,0.0019729201864543914,Material only; no installed rating
+spring_dual_gate,3U,Driven_fork_frame,aluminium,moving,139620.2705261291,0.3769747304205486,Material only; no installed rating
+spring_dual_gate,3U,Fork_front_barrier,aluminium,moving,35752.5,0.09653175,Material only; no installed rating
+spring_dual_gate,3U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+spring_dual_gate,3U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+spring_dual_gate,3U,Receiver_clamp_327.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+spring_dual_gate,3U,Receiver_clamp_327.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+spring_dual_gate,3U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+spring_dual_gate,3U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+spring_dual_gate,3U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+spring_dual_gate,3U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+spring_dual_gate,3U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+spring_dual_gate,3U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+spring_dual_gate,3U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+spring_dual_gate,3U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+spring_dual_gate,3U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+spring_dual_gate,3U,Captured_spring_wire,steel,drive,2131.838754788865,0.01673493422509259,Material only; no installed rating
+spring_dual_gate,3U,Second_escapement_gate,aluminium,gate,102750.0,0.277425,Material only; no installed rating
+spring_dual_gate,3U,Governor_brake_envelope,envelope,unselected_actuator,27000.0,0.0,Envelope/payload excluded
+rack_pawl,1U,Passive_payload,payload,payload,1135000.0,0.0,Envelope/payload excluded
+rack_pawl,1U,Cassette_floor,aluminium,fixed,90750.0,0.245025,Material only; no installed rating
+rack_pawl,1U,Support_bridge,aluminium,fixed,82500.0,0.22275,Material only; no installed rating
+rack_pawl,1U,Receiving_sled_floor,aluminium,receiver,60500.0,0.16335,Material only; no installed rating
+rack_pawl,1U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+rack_pawl,1U,Stored_side_cap_115.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+rack_pawl,1U,Cassette_rear,aluminium,fixed,61600.000000000015,0.16632000000000005,Material only; no installed rating
+rack_pawl,1U,Storage_gate,aluminium,gate,46200.0,0.12474,Material only; no installed rating
+rack_pawl,1U,Receiver_side_gate,aluminium,gate,29700.0,0.08019,Material only; no installed rating
+rack_pawl,1U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+rack_pawl,1U,Storage_gate_pin_129.5,steel,latch,251.32741228718353,0.0019729201864543905,Material only; no installed rating
+rack_pawl,1U,Driven_fork_frame,aluminium,moving,65391.27052612917,0.17655643042054875,Material only; no installed rating
+rack_pawl,1U,Fork_front_barrier,aluminium,moving,11917.5,0.03217725,Material only; no installed rating
+rack_pawl,1U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+rack_pawl,1U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+rack_pawl,1U,Receiver_clamp_100.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+rack_pawl,1U,Receiver_clamp_100.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+rack_pawl,1U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+rack_pawl,1U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+rack_pawl,1U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+rack_pawl,1U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+rack_pawl,1U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+rack_pawl,1U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+rack_pawl,1U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+rack_pawl,1U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+rack_pawl,1U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+rack_pawl,1U,Driven_rack,steel,drive,22799.999999999964,0.1789799999999997,Material only; no installed rating
+rack_pawl,1U,Index_pinion_blank,steel,drive,4523.893421169301,0.035512563356179014,Material only; no installed rating
+rack_pawl,1U,Independent_index_pawl,steel,drive,57.599999999999795,0.0004521599999999984,Material only; no installed rating
+rack_pawl,3U,Passive_payload,payload,payload,3405000.0,0.0,Envelope/payload excluded
+rack_pawl,3U,Cassette_floor,aluminium,fixed,240570.0,0.649539,Material only; no installed rating
+rack_pawl,3U,Support_bridge,aluminium,fixed,218700.0,0.59049,Material only; no installed rating
+rack_pawl,3U,Receiving_sled_floor,aluminium,receiver,160380.0,0.433026,Material only; no installed rating
+rack_pawl,3U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+rack_pawl,3U,Stored_side_cap_342.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+rack_pawl,3U,Cassette_rear,aluminium,fixed,163296.0,0.4408992,Material only; no installed rating
+rack_pawl,3U,Storage_gate,aluminium,gate,137000.0,0.3699,Material only; no installed rating
+rack_pawl,3U,Receiver_side_gate,aluminium,gate,78732.0,0.2125764,Material only; no installed rating
+rack_pawl,3U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+rack_pawl,3U,Storage_gate_pin_356.5,steel,latch,251.32741228718365,0.0019729201864543914,Material only; no installed rating
+rack_pawl,3U,Driven_fork_frame,aluminium,moving,139620.2705261291,0.3769747304205486,Material only; no installed rating
+rack_pawl,3U,Fork_front_barrier,aluminium,moving,35752.5,0.09653175,Material only; no installed rating
+rack_pawl,3U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+rack_pawl,3U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+rack_pawl,3U,Receiver_clamp_327.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+rack_pawl,3U,Receiver_clamp_327.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+rack_pawl,3U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+rack_pawl,3U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+rack_pawl,3U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+rack_pawl,3U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+rack_pawl,3U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+rack_pawl,3U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+rack_pawl,3U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+rack_pawl,3U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+rack_pawl,3U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+rack_pawl,3U,Driven_rack,steel,drive,22799.999999999964,0.1789799999999997,Material only; no installed rating
+rack_pawl,3U,Index_pinion_blank,steel,drive,4523.893421169301,0.035512563356179014,Material only; no installed rating
+rack_pawl,3U,Independent_index_pawl,steel,drive,57.599999999999795,0.0004521599999999984,Material only; no installed rating
+indexed_drum,1U,Passive_payload,payload,payload,1135000.0,0.0,Envelope/payload excluded
+indexed_drum,1U,Cassette_floor,aluminium,fixed,90750.0,0.245025,Material only; no installed rating
+indexed_drum,1U,Support_bridge,aluminium,fixed,82500.0,0.22275,Material only; no installed rating
+indexed_drum,1U,Receiving_sled_floor,aluminium,receiver,60500.0,0.16335,Material only; no installed rating
+indexed_drum,1U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,1U,Stored_side_cap_115.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,1U,Cassette_rear,aluminium,fixed,61600.000000000015,0.16632000000000005,Material only; no installed rating
+indexed_drum,1U,Storage_gate,aluminium,gate,46200.0,0.12474,Material only; no installed rating
+indexed_drum,1U,Receiver_side_gate,aluminium,gate,29700.0,0.08019,Material only; no installed rating
+indexed_drum,1U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+indexed_drum,1U,Storage_gate_pin_129.5,steel,latch,251.32741228718353,0.0019729201864543905,Material only; no installed rating
+indexed_drum,1U,Driven_fork_frame,aluminium,moving,65391.27052612917,0.17655643042054875,Material only; no installed rating
+indexed_drum,1U,Fork_front_barrier,aluminium,moving,11917.5,0.03217725,Material only; no installed rating
+indexed_drum,1U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+indexed_drum,1U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+indexed_drum,1U,Receiver_clamp_100.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+indexed_drum,1U,Receiver_clamp_100.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+indexed_drum,1U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+indexed_drum,1U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+indexed_drum,1U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+indexed_drum,1U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+indexed_drum,1U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+indexed_drum,1U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+indexed_drum,1U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+indexed_drum,1U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+indexed_drum,1U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+indexed_drum,1U,Other_cell_1_Passive_payload,payload,other_payload,3405000.0,0.0,Envelope/payload excluded
+indexed_drum,1U,Other_cell_1_Cassette_floor,aluminium,drive,240570.0,0.649539,Material only; no installed rating
+indexed_drum,1U,Other_cell_1_Stored_side_cap_-6,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,1U,Other_cell_1_Stored_side_cap_342.5,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,1U,Other_cell_1_Cassette_rear,aluminium,drive,163296.0,0.4408992,Material only; no installed rating
+indexed_drum,1U,Other_cell_1_Storage_gate,aluminium,drive,137000.0,0.3699,Material only; no installed rating
+indexed_drum,1U,Other_cell_1_Storage_gate_pin_-16,steel,drive,251.32741228718322,0.001972920186454388,Material only; no installed rating
+indexed_drum,1U,Other_cell_1_Storage_gate_pin_356.5,steel,drive,251.32741228718362,0.0019729201864543914,Material only; no installed rating
+indexed_drum,1U,Other_cell_2_Passive_payload,payload,other_payload,1135000.0,0.0,Envelope/payload excluded
+indexed_drum,1U,Other_cell_2_Cassette_floor,aluminium,drive,90750.0,0.245025,Material only; no installed rating
+indexed_drum,1U,Other_cell_2_Stored_side_cap_-6,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,1U,Other_cell_2_Stored_side_cap_115.5,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,1U,Other_cell_2_Cassette_rear,aluminium,drive,61600.0,0.16632,Material only; no installed rating
+indexed_drum,1U,Other_cell_2_Storage_gate,aluminium,drive,46200.0,0.12474,Material only; no installed rating
+indexed_drum,1U,Other_cell_2_Storage_gate_pin_-16,steel,drive,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+indexed_drum,1U,Other_cell_2_Storage_gate_pin_129.5,steel,drive,251.32741228718353,0.0019729201864543905,Material only; no installed rating
+indexed_drum,1U,Other_cell_3_Passive_payload,payload,other_payload,3405000.0,0.0,Envelope/payload excluded
+indexed_drum,1U,Other_cell_3_Cassette_floor,aluminium,drive,240570.0,0.649539,Material only; no installed rating
+indexed_drum,1U,Other_cell_3_Stored_side_cap_-6,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,1U,Other_cell_3_Stored_side_cap_342.5,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,1U,Other_cell_3_Cassette_rear,aluminium,drive,163296.0,0.4408992,Material only; no installed rating
+indexed_drum,1U,Other_cell_3_Storage_gate,aluminium,drive,137000.0,0.3699,Material only; no installed rating
+indexed_drum,1U,Other_cell_3_Storage_gate_pin_-16,steel,drive,251.32741228718422,0.0019729201864543957,Material only; no installed rating
+indexed_drum,1U,Other_cell_3_Storage_gate_pin_356.5,steel,drive,251.32741228718461,0.001972920186454399,Material only; no installed rating
+indexed_drum,1U,Drum_axle,steel,drive,262612.01309887785,2.061504302826191,Material only; no installed rating
+indexed_drum,1U,Drum_rotor_-120,aluminium,drive,356956.37582674046,0.9637822147321993,Material only; no installed rating
+indexed_drum,1U,Drum_rotor_360.5,aluminium,drive,356956.37576039357,0.9637822145530627,Material only; no installed rating
+indexed_drum,3U,Passive_payload,payload,payload,3405000.0,0.0,Envelope/payload excluded
+indexed_drum,3U,Cassette_floor,aluminium,fixed,240570.0,0.649539,Material only; no installed rating
+indexed_drum,3U,Support_bridge,aluminium,fixed,218700.0,0.59049,Material only; no installed rating
+indexed_drum,3U,Receiving_sled_floor,aluminium,receiver,160380.0,0.433026,Material only; no installed rating
+indexed_drum,3U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,3U,Stored_side_cap_342.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,3U,Cassette_rear,aluminium,fixed,163296.0,0.4408992,Material only; no installed rating
+indexed_drum,3U,Storage_gate,aluminium,gate,137000.0,0.3699,Material only; no installed rating
+indexed_drum,3U,Receiver_side_gate,aluminium,gate,78732.0,0.2125764,Material only; no installed rating
+indexed_drum,3U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+indexed_drum,3U,Storage_gate_pin_356.5,steel,latch,251.32741228718365,0.0019729201864543914,Material only; no installed rating
+indexed_drum,3U,Driven_fork_frame,aluminium,moving,139620.2705261291,0.3769747304205486,Material only; no installed rating
+indexed_drum,3U,Fork_front_barrier,aluminium,moving,35752.5,0.09653175,Material only; no installed rating
+indexed_drum,3U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+indexed_drum,3U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+indexed_drum,3U,Receiver_clamp_327.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+indexed_drum,3U,Receiver_clamp_327.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+indexed_drum,3U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+indexed_drum,3U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+indexed_drum,3U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+indexed_drum,3U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+indexed_drum,3U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+indexed_drum,3U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+indexed_drum,3U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+indexed_drum,3U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+indexed_drum,3U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+indexed_drum,3U,Other_cell_1_Passive_payload,payload,other_payload,1135000.0,0.0,Envelope/payload excluded
+indexed_drum,3U,Other_cell_1_Cassette_floor,aluminium,drive,90750.0,0.245025,Material only; no installed rating
+indexed_drum,3U,Other_cell_1_Stored_side_cap_-6,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,3U,Other_cell_1_Stored_side_cap_115.5,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,3U,Other_cell_1_Cassette_rear,aluminium,drive,61600.00000000001,0.16632000000000002,Material only; no installed rating
+indexed_drum,3U,Other_cell_1_Storage_gate,aluminium,drive,46200.0,0.12474,Material only; no installed rating
+indexed_drum,3U,Other_cell_1_Storage_gate_pin_-16,steel,drive,251.32741228718322,0.001972920186454388,Material only; no installed rating
+indexed_drum,3U,Other_cell_1_Storage_gate_pin_129.5,steel,drive,251.3274122871835,0.0019729201864543905,Material only; no installed rating
+indexed_drum,3U,Other_cell_2_Passive_payload,payload,other_payload,3404999.9999999995,0.0,Envelope/payload excluded
+indexed_drum,3U,Other_cell_2_Cassette_floor,aluminium,drive,240570.0,0.649539,Material only; no installed rating
+indexed_drum,3U,Other_cell_2_Stored_side_cap_-6,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,3U,Other_cell_2_Stored_side_cap_342.5,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,3U,Other_cell_2_Cassette_rear,aluminium,drive,163296.0,0.4408992,Material only; no installed rating
+indexed_drum,3U,Other_cell_2_Storage_gate,aluminium,drive,137000.0,0.3699,Material only; no installed rating
+indexed_drum,3U,Other_cell_2_Storage_gate_pin_-16,steel,drive,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+indexed_drum,3U,Other_cell_2_Storage_gate_pin_356.5,steel,drive,251.32741228718368,0.001972920186454392,Material only; no installed rating
+indexed_drum,3U,Other_cell_3_Passive_payload,payload,other_payload,1135000.0000000002,0.0,Envelope/payload excluded
+indexed_drum,3U,Other_cell_3_Cassette_floor,aluminium,drive,90750.0,0.245025,Material only; no installed rating
+indexed_drum,3U,Other_cell_3_Stored_side_cap_-6,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,3U,Other_cell_3_Stored_side_cap_115.5,aluminium,drive,90576.0,0.2445552,Material only; no installed rating
+indexed_drum,3U,Other_cell_3_Cassette_rear,aluminium,drive,61600.000000000015,0.16632000000000005,Material only; no installed rating
+indexed_drum,3U,Other_cell_3_Storage_gate,aluminium,drive,46200.0,0.12474,Material only; no installed rating
+indexed_drum,3U,Other_cell_3_Storage_gate_pin_-16,steel,drive,251.32741228718422,0.0019729201864543957,Material only; no installed rating
+indexed_drum,3U,Other_cell_3_Storage_gate_pin_129.5,steel,drive,251.32741228718456,0.0019729201864543988,Material only; no installed rating
+indexed_drum,3U,Drum_axle,steel,drive,262612.01309887785,2.061504302826191,Material only; no installed rating
+indexed_drum,3U,Drum_rotor_-120,aluminium,drive,356956.37582674046,0.9637822147321993,Material only; no installed rating
+indexed_drum,3U,Drum_rotor_360.5,aluminium,drive,356956.37576039357,0.9637822145530627,Material only; no installed rating
+pantograph,1U,Passive_payload,payload,payload,1135000.0,0.0,Envelope/payload excluded
+pantograph,1U,Cassette_floor,aluminium,fixed,90750.0,0.245025,Material only; no installed rating
+pantograph,1U,Support_bridge,aluminium,fixed,82500.0,0.22275,Material only; no installed rating
+pantograph,1U,Receiving_sled_floor,aluminium,receiver,60500.0,0.16335,Material only; no installed rating
+pantograph,1U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+pantograph,1U,Stored_side_cap_115.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+pantograph,1U,Cassette_rear,aluminium,fixed,61600.000000000015,0.16632000000000005,Material only; no installed rating
+pantograph,1U,Storage_gate,aluminium,gate,46200.0,0.12474,Material only; no installed rating
+pantograph,1U,Receiver_side_gate,aluminium,gate,29700.0,0.08019,Material only; no installed rating
+pantograph,1U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+pantograph,1U,Storage_gate_pin_129.5,steel,latch,251.32741228718353,0.0019729201864543905,Material only; no installed rating
+pantograph,1U,Driven_fork_frame,aluminium,moving,65391.27052612917,0.17655643042054875,Material only; no installed rating
+pantograph,1U,Fork_front_barrier,aluminium,moving,11917.5,0.03217725,Material only; no installed rating
+pantograph,1U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+pantograph,1U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+pantograph,1U,Receiver_clamp_100.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+pantograph,1U,Receiver_clamp_100.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+pantograph,1U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+pantograph,1U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+pantograph,1U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+pantograph,1U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+pantograph,1U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+pantograph,1U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+pantograph,1U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+pantograph,1U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+pantograph,1U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+pantograph,1U,Scissor_-110_0A,steel,drive,1708.7741458786884,0.013413877045147703,Material only; no installed rating
+pantograph,1U,Scissor_-110_0B,steel,drive,1708.7741458786888,0.013413877045147706,Material only; no installed rating
+pantograph,1U,Scissor_-110_1A,steel,drive,1708.7741458786882,0.013413877045147701,Material only; no installed rating
+pantograph,1U,Scissor_-110_1B,steel,drive,1708.7741458786882,0.013413877045147701,Material only; no installed rating
+pantograph,1U,Scissor_-110_2A,steel,drive,1708.7741458786888,0.013413877045147706,Material only; no installed rating
+pantograph,1U,Scissor_-110_2B,steel,drive,1708.7741458786882,0.013413877045147701,Material only; no installed rating
+pantograph,1U,Scissor_input_actuator,envelope,unselected_actuator,61250.0,0.0,Envelope/payload excluded
+pantograph,3U,Passive_payload,payload,payload,3405000.0,0.0,Envelope/payload excluded
+pantograph,3U,Cassette_floor,aluminium,fixed,240570.0,0.649539,Material only; no installed rating
+pantograph,3U,Support_bridge,aluminium,fixed,218700.0,0.59049,Material only; no installed rating
+pantograph,3U,Receiving_sled_floor,aluminium,receiver,160380.0,0.433026,Material only; no installed rating
+pantograph,3U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+pantograph,3U,Stored_side_cap_342.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+pantograph,3U,Cassette_rear,aluminium,fixed,163296.0,0.4408992,Material only; no installed rating
+pantograph,3U,Storage_gate,aluminium,gate,137000.0,0.3699,Material only; no installed rating
+pantograph,3U,Receiver_side_gate,aluminium,gate,78732.0,0.2125764,Material only; no installed rating
+pantograph,3U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+pantograph,3U,Storage_gate_pin_356.5,steel,latch,251.32741228718365,0.0019729201864543914,Material only; no installed rating
+pantograph,3U,Driven_fork_frame,aluminium,moving,139620.2705261291,0.3769747304205486,Material only; no installed rating
+pantograph,3U,Fork_front_barrier,aluminium,moving,35752.5,0.09653175,Material only; no installed rating
+pantograph,3U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+pantograph,3U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+pantograph,3U,Receiver_clamp_327.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+pantograph,3U,Receiver_clamp_327.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+pantograph,3U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+pantograph,3U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+pantograph,3U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+pantograph,3U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+pantograph,3U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+pantograph,3U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+pantograph,3U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+pantograph,3U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+pantograph,3U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+pantograph,3U,Scissor_-110_0A,steel,drive,1708.7741458786884,0.013413877045147703,Material only; no installed rating
+pantograph,3U,Scissor_-110_0B,steel,drive,1708.7741458786888,0.013413877045147706,Material only; no installed rating
+pantograph,3U,Scissor_-110_1A,steel,drive,1708.7741458786882,0.013413877045147701,Material only; no installed rating
+pantograph,3U,Scissor_-110_1B,steel,drive,1708.7741458786882,0.013413877045147701,Material only; no installed rating
+pantograph,3U,Scissor_-110_2A,steel,drive,1708.7741458786888,0.013413877045147706,Material only; no installed rating
+pantograph,3U,Scissor_-110_2B,steel,drive,1708.7741458786882,0.013413877045147701,Material only; no installed rating
+pantograph,3U,Scissor_input_actuator,envelope,unselected_actuator,61250.0,0.0,Envelope/payload excluded
+telescopic,1U,Passive_payload,payload,payload,1135000.0,0.0,Envelope/payload excluded
+telescopic,1U,Cassette_floor,aluminium,fixed,90750.0,0.245025,Material only; no installed rating
+telescopic,1U,Support_bridge,aluminium,fixed,82500.0,0.22275,Material only; no installed rating
+telescopic,1U,Receiving_sled_floor,aluminium,receiver,60500.0,0.16335,Material only; no installed rating
+telescopic,1U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+telescopic,1U,Stored_side_cap_115.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+telescopic,1U,Cassette_rear,aluminium,fixed,61600.000000000015,0.16632000000000005,Material only; no installed rating
+telescopic,1U,Storage_gate,aluminium,gate,46200.0,0.12474,Material only; no installed rating
+telescopic,1U,Receiver_side_gate,aluminium,gate,29700.0,0.08019,Material only; no installed rating
+telescopic,1U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+telescopic,1U,Storage_gate_pin_129.5,steel,latch,251.32741228718353,0.0019729201864543905,Material only; no installed rating
+telescopic,1U,Driven_fork_frame,aluminium,moving,65391.27052612917,0.17655643042054875,Material only; no installed rating
+telescopic,1U,Fork_front_barrier,aluminium,moving,11917.5,0.03217725,Material only; no installed rating
+telescopic,1U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+telescopic,1U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+telescopic,1U,Receiver_clamp_100.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+telescopic,1U,Receiver_clamp_100.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+telescopic,1U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+telescopic,1U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+telescopic,1U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+telescopic,1U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+telescopic,1U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+telescopic,1U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+telescopic,1U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+telescopic,1U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+telescopic,1U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+telescopic,1U,Nested_stage_0,aluminium,drive,14759.999999999993,0.03985199999999998,Material only; no installed rating
+telescopic,1U,Nested_stage_1,aluminium,drive,11160.000000000004,0.03013200000000001,Material only; no installed rating
+telescopic,1U,Nested_stage_2,aluminium,drive,7560.0,0.020412,Material only; no installed rating
+telescopic,3U,Passive_payload,payload,payload,3405000.0,0.0,Envelope/payload excluded
+telescopic,3U,Cassette_floor,aluminium,fixed,240570.0,0.649539,Material only; no installed rating
+telescopic,3U,Support_bridge,aluminium,fixed,218700.0,0.59049,Material only; no installed rating
+telescopic,3U,Receiving_sled_floor,aluminium,receiver,160380.0,0.433026,Material only; no installed rating
+telescopic,3U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+telescopic,3U,Stored_side_cap_342.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+telescopic,3U,Cassette_rear,aluminium,fixed,163296.0,0.4408992,Material only; no installed rating
+telescopic,3U,Storage_gate,aluminium,gate,137000.0,0.3699,Material only; no installed rating
+telescopic,3U,Receiver_side_gate,aluminium,gate,78732.0,0.2125764,Material only; no installed rating
+telescopic,3U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+telescopic,3U,Storage_gate_pin_356.5,steel,latch,251.32741228718365,0.0019729201864543914,Material only; no installed rating
+telescopic,3U,Driven_fork_frame,aluminium,moving,139620.2705261291,0.3769747304205486,Material only; no installed rating
+telescopic,3U,Fork_front_barrier,aluminium,moving,35752.5,0.09653175,Material only; no installed rating
+telescopic,3U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+telescopic,3U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+telescopic,3U,Receiver_clamp_327.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+telescopic,3U,Receiver_clamp_327.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+telescopic,3U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+telescopic,3U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+telescopic,3U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+telescopic,3U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+telescopic,3U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+telescopic,3U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+telescopic,3U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+telescopic,3U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+telescopic,3U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+telescopic,3U,Nested_stage_0,aluminium,drive,14759.999999999993,0.03985199999999998,Material only; no installed rating
+telescopic,3U,Nested_stage_1,aluminium,drive,11160.000000000004,0.03013200000000001,Material only; no installed rating
+telescopic,3U,Nested_stage_2,aluminium,drive,7560.0,0.020412,Material only; no installed rating
+belt_shuttle,1U,Passive_payload,payload,payload,1135000.0,0.0,Envelope/payload excluded
+belt_shuttle,1U,Cassette_floor,aluminium,fixed,90750.0,0.245025,Material only; no installed rating
+belt_shuttle,1U,Support_bridge,aluminium,fixed,82500.0,0.22275,Material only; no installed rating
+belt_shuttle,1U,Receiving_sled_floor,aluminium,receiver,60500.0,0.16335,Material only; no installed rating
+belt_shuttle,1U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+belt_shuttle,1U,Stored_side_cap_115.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+belt_shuttle,1U,Cassette_rear,aluminium,fixed,61600.000000000015,0.16632000000000005,Material only; no installed rating
+belt_shuttle,1U,Storage_gate,aluminium,gate,46200.0,0.12474,Material only; no installed rating
+belt_shuttle,1U,Receiver_side_gate,aluminium,gate,29700.0,0.08019,Material only; no installed rating
+belt_shuttle,1U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+belt_shuttle,1U,Storage_gate_pin_129.5,steel,latch,251.32741228718353,0.0019729201864543905,Material only; no installed rating
+belt_shuttle,1U,Driven_fork_frame,aluminium,moving,65391.27052612917,0.17655643042054875,Material only; no installed rating
+belt_shuttle,1U,Fork_front_barrier,aluminium,moving,11917.5,0.03217725,Material only; no installed rating
+belt_shuttle,1U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+belt_shuttle,1U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+belt_shuttle,1U,Receiver_clamp_100.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+belt_shuttle,1U,Receiver_clamp_100.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+belt_shuttle,1U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+belt_shuttle,1U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+belt_shuttle,1U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+belt_shuttle,1U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+belt_shuttle,1U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+belt_shuttle,1U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+belt_shuttle,1U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+belt_shuttle,1U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+belt_shuttle,1U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+belt_shuttle,1U,Drive_pulley_-430,aluminium,drive,3619.114736935442,0.009771609789725693,Material only; no installed rating
+belt_shuttle,1U,Drive_pulley_-10,aluminium,drive,3619.1147369354417,0.009771609789725692,Material only; no installed rating
+belt_shuttle,1U,Belt_span_70.5,polymer,drive,5040.0,0.0071064000000000006,Material only; no installed rating
+belt_shuttle,1U,Belt_span_96,polymer,drive,5040.0,0.0071064000000000006,Material only; no installed rating
+belt_shuttle,1U,Belt_carriage_clamp,aluminium,drive,2520.0,0.006804,Material only; no installed rating
+belt_shuttle,1U,Belt_return_-430,polymer,drive,480.66367599923774,0.0006777357831589252,Material only; no installed rating
+belt_shuttle,1U,Belt_return_-10,polymer,drive,480.663675999238,0.0006777357831589257,Material only; no installed rating
+belt_shuttle,3U,Passive_payload,payload,payload,3405000.0,0.0,Envelope/payload excluded
+belt_shuttle,3U,Cassette_floor,aluminium,fixed,240570.0,0.649539,Material only; no installed rating
+belt_shuttle,3U,Support_bridge,aluminium,fixed,218700.0,0.59049,Material only; no installed rating
+belt_shuttle,3U,Receiving_sled_floor,aluminium,receiver,160380.0,0.433026,Material only; no installed rating
+belt_shuttle,3U,Stored_side_cap_-6,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+belt_shuttle,3U,Stored_side_cap_342.5,aluminium,fixed,90576.0,0.2445552,Material only; no installed rating
+belt_shuttle,3U,Cassette_rear,aluminium,fixed,163296.0,0.4408992,Material only; no installed rating
+belt_shuttle,3U,Storage_gate,aluminium,gate,137000.0,0.3699,Material only; no installed rating
+belt_shuttle,3U,Receiver_side_gate,aluminium,gate,78732.0,0.2125764,Material only; no installed rating
+belt_shuttle,3U,Storage_gate_pin_-16,steel,latch,251.32741228718325,0.0019729201864543884,Material only; no installed rating
+belt_shuttle,3U,Storage_gate_pin_356.5,steel,latch,251.32741228718365,0.0019729201864543914,Material only; no installed rating
+belt_shuttle,3U,Driven_fork_frame,aluminium,moving,139620.2705261291,0.3769747304205486,Material only; no installed rating
+belt_shuttle,3U,Fork_front_barrier,aluminium,moving,35752.5,0.09653175,Material only; no installed rating
+belt_shuttle,3U,Receiver_clamp_5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+belt_shuttle,3U,Receiver_clamp_5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+belt_shuttle,3U,Receiver_clamp_327.5_-1,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+belt_shuttle,3U,Receiver_clamp_327.5_100,steel,clamp,63.999999999999986,0.0005023999999999999,Material only; no installed rating
+belt_shuttle,3U,Guide_shaft_-34,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+belt_shuttle,3U,Guide_bearing_-34,polymer,moving,2597.7044254370594,0.003662763239866254,Material only; no installed rating
+belt_shuttle,3U,Guide_shaft_-62,steel,fixed,22619.46710584651,0.17756281678089508,Material only; no installed rating
+belt_shuttle,3U,Guide_bearing_-62,polymer,moving,2597.7044254370603,0.003662763239866255,Material only; no installed rating
+belt_shuttle,3U,Power_off_capture_rack,steel,fixed,23400.000000001393,0.18369000000001093,Material only; no installed rating
+belt_shuttle,3U,Spring_applied_pawl,steel,moving,191.99999999999997,0.0015071999999999996,Material only; no installed rating
+belt_shuttle,3U,Drive_motor_envelope,envelope,unselected_actuator,55125.0,0.0,Envelope/payload excluded
+belt_shuttle,3U,Position_sensor_-203,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+belt_shuttle,3U,Position_sensor_-3,envelope,unselected_sensor,1728.0,0.0,Envelope/payload excluded
+belt_shuttle,3U,Drive_pulley_-430,aluminium,drive,3619.114736935442,0.009771609789725693,Material only; no installed rating
+belt_shuttle,3U,Drive_pulley_-10,aluminium,drive,3619.1147369354417,0.009771609789725692,Material only; no installed rating
+belt_shuttle,3U,Belt_span_70.5,polymer,drive,5040.0,0.0071064000000000006,Material only; no installed rating
+belt_shuttle,3U,Belt_span_96,polymer,drive,5040.0,0.0071064000000000006,Material only; no installed rating
+belt_shuttle,3U,Belt_carriage_clamp,aluminium,drive,2520.0,0.006804,Material only; no installed rating
+belt_shuttle,3U,Belt_return_-430,polymer,drive,480.66367599923774,0.0006777357831589252,Material only; no installed rating
+belt_shuttle,3U,Belt_return_-10,polymer,drive,480.663675999238,0.0006777357831589257,Material only; no installed rating

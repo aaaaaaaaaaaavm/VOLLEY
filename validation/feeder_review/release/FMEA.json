@@ -1,0 +1,74 @@
+[
+  {
+    "mechanism": "All",
+    "fault": "Gate opens before fork capture",
+    "effect": "Uncontained payload",
+    "required_control": "Independent positive barrier; two dissimilar seat/closed indications",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  },
+  {
+    "mechanism": "All",
+    "fault": "Shared path obstructed",
+    "effect": "Remaining cells cannot deploy safely",
+    "required_control": "Fail locked; verify physical safe path before supervised continuation",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  },
+  {
+    "mechanism": "Lead screw",
+    "fault": "Nut jam/backdrive",
+    "effect": "Stalled or uncontrolled transfer",
+    "required_control": "Torque limit, positive independent brake/capture; do not rely on friction self-lock",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  },
+  {
+    "mechanism": "Spring",
+    "fault": "Governor/gate fails",
+    "effect": "Overspeed, double feed, end-stroke stall",
+    "required_control": "Two barriers, captured follower, governed energy dissipation",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  },
+  {
+    "mechanism": "Rack",
+    "fault": "Pawl bounce/tooth fracture",
+    "effect": "Lost index or reverse travel",
+    "required_control": "Independent holdback, tooth proof and partial-stroke detection",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  },
+  {
+    "mechanism": "Drum",
+    "fault": "Index lock absent or stalls",
+    "effect": "All payloads/common window unavailable",
+    "required_control": "Independent cell locks, hard index detent, swept-index proof",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  },
+  {
+    "mechanism": "Pantograph",
+    "fault": "Near-flat linkage/joint play",
+    "effect": "High force, lateral motion, jam",
+    "required_control": "Angle stop, joint/preload budget, individual platform locks",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  },
+  {
+    "mechanism": "Telescopic",
+    "fault": "Stage order or stop fails",
+    "effect": "Separation/binding",
+    "required_control": "Positive anti-separation stops, keyed overlap, stage position sensing",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  },
+  {
+    "mechanism": "Belt",
+    "fault": "Belt breaks/slips or creeps",
+    "effect": "Position lost/uncontrolled carriage",
+    "required_control": "Independent capture rack, tension monitor, verified return path",
+    "verification": "Not physically demonstrated; component-specific design required",
+    "probability": null
+  }
+]

@@ -29,7 +29,7 @@ The two-body original-constant comparison uses 398600.4418 versus 398600.4415 km
 
 The original queued GMAT input also used a reserved object name (`Report`) and unsupported periapsis/apoapsis report fields. The working input uses `OrbitReport` and reports semi-major axis and eccentricity directly. Apsis radii can then be derived explicitly; no failed run is relabeled successful.
 
-The current J2 discrepancy requires a controlled follow-up: harmonize gravity coefficients, equatorial radius, pole/frame transformation, epoch/time scale and integrator settings, then isolate each change. The current result does not identify one demonstrated root cause. It cannot support an accuracy, lifetime or clearance claim.
+The 18 October J2 comparison required a controlled follow-up: harmonize gravity coefficients, equatorial radius, pole/frame transformation, epoch/time scale and integrator settings, then isolate each change. That original comparison did not isolate a root cause. The [19 October harmonization follow-up](../orbit_harmonization/README.md) now isolates the dominant pole/gravity mismatch and repeated-stop history, with approximately 1.285 mm maximum residual in a matched continuous-arc case. It does not change the original captured outputs. It cannot support an accuracy, lifetime or clearance claim.
 
 ![Numerical convergence and independent integration](figures/numerical_checks.png)
 

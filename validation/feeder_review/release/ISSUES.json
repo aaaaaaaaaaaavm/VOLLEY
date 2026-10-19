@@ -1,0 +1,90 @@
+[
+  {
+    "id": "FDR-I01",
+    "issue": "Previous common side caps intersected side walls",
+    "cause": "Separate overlapping proxy solids",
+    "correction": "Fused one-piece L sections and gate slots",
+    "verification": "Current exact B-rep stations and payload sweep",
+    "state": "CORRECTED_WITHIN_STATED_GEOMETRY_CHECK"
+  },
+  {
+    "id": "FDR-I02",
+    "issue": "Receiver gate crossed fork at handoff",
+    "cause": "Closing gate while fork remained advanced",
+    "correction": "Seated snapshot retracts fork before receiver barrier closes",
+    "verification": "Snapshot checked only; transition not verified",
+    "state": "FULL_HANDOFF_TRANSITION_OPEN"
+  },
+  {
+    "id": "FDR-I03",
+    "issue": "Disconnected crosshead/link/rear fork",
+    "cause": "46/9 mm gaps in prior FDR04 drive chain",
+    "correction": "One connected overhead fork frame and nut-mount bridge in FDR08",
+    "verification": "Native connected-solid assertion; current intersections; joint/contact ratings still open",
+    "state": "FORK_AND_BEARING_HOUSING_CONNECTED_JOINT_RATINGS_OPEN"
+  },
+  {
+    "id": "FDR-I04",
+    "issue": "Power-off pawl engagement not represented",
+    "cause": "1 mm gap from capture teeth in prior topology",
+    "correction": "No assumed engagement; spring-applied capture is a requirement",
+    "verification": "Counterexample remains when sole restraint is lost",
+    "state": "OPEN_SAFETY_CRITICAL"
+  },
+  {
+    "id": "FDR-I05",
+    "issue": "0.5 degree adverse tolerance stack loses side gap",
+    "cause": "Angular displacement over 200mm plus thermal/manufacturing allowance",
+    "correction": "Require tighter datum alignment or redesign gap; 0.1 degree band screened",
+    "verification": "12 parametric stacks; not measured fit",
+    "state": "OPEN_UNTIL_INTERFACE_AND_DEFLECTION_DEFINED"
+  },
+  {
+    "id": "FDR-I06",
+    "issue": "Spring force insufficient at end of travel",
+    "cause": "15N modeled end force below20/50N resistance cases",
+    "correction": "Reject this spring sizing for those bands; re-size with governor/material fatigue checks",
+    "verification": "108 analytical cases and wire geometry identity",
+    "state": "FAILED_CASE_RETAINED"
+  },
+  {
+    "id": "FDR-I07",
+    "issue": "Unrated drive and receiver parts",
+    "cause": "No sourceable actuator, brake, latch, sensor, coupling, mounts or payload ICD selected",
+    "correction": "Use computed demands as component procurement requirements",
+    "verification": "Zero-envelope mass shown explicitly in BOM",
+    "state": "OPEN_NO_BUILD_RELEASE"
+  },
+  {
+    "id": "FDR-I08",
+    "issue": "Common-cycle and indexing evidence incomplete",
+    "cause": "Stations do not cover full gate/fork/capture return motion, drum indexing or sequential scissor collapse",
+    "correction": "Keep all seven as research candidates; no baseline lock",
+    "verification": "Bounded sweep explicitly excludes nonlinear motion",
+    "state": "OPEN"
+  },
+  {
+    "id": "FDR-I09",
+    "issue": "Fixture FEA is not assembly FEA",
+    "cause": "Clamped edges omit real joints, bearings and host",
+    "correction": "Retain mesh trends and no strength/qualification pass",
+    "verification": "Six native CalculiX inputs/DAT/FRD/logs",
+    "state": "BOUNDED_FIXTURE_RESULT_ONLY"
+  },
+  {
+    "id": "FDR-I10",
+    "issue": "Raw material mass is not equal-boundary installed mass",
+    "cause": "Drum has four cells, other models one; unknown actuators omitted",
+    "correction": "No raw-mass winner; four/twelve bookkeeping remains lower-bound material only",
+    "verification": "Material CG/inertia/BOM identity",
+    "state": "OPEN_SYSTEM_COMPARISON"
+  },
+  {
+    "id": "FDR-I11",
+    "issue": "Capture tooth cannot support adverse mean-arrest screens",
+    "cause": "1mm root section and short stopping compliance",
+    "correction": "Re-size section and stopping compliance/energy; model engagement and joint load path",
+    "verification": "972 cantilever sensitivity cases; no selected material or peak contact model",
+    "state": "FAILED_SIZING_RETAINED"
+  }
+]

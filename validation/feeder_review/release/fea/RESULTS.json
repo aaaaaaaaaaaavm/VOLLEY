@@ -1,0 +1,117 @@
+{
+  "solver": "CalculiX 2.23",
+  "evidence": "Native linear elastic fixture screen, not assembled feeder/launch qualification",
+  "material": "Assumed aluminium E69GPa nu0.33; no selected alloy/temperature allowable",
+  "load": "6kg x25g uniform normal force on top, both short edges fully clamped",
+  "cases": [
+    {
+      "case": "1U_12x6x2",
+      "geometry_m": {
+        "length": 0.1375,
+        "width": 0.11,
+        "thickness": 0.006
+      },
+      "nodes": 273,
+      "elements": 144,
+      "force_N": 1470.9975,
+      "max_abs_uz_m": 6.991805e-05,
+      "max_von_mises_Pa": 13667277.491132017,
+      "fixed_fixed_Euler_beam_deflection_m": 7.289110328072321e-05,
+      "beam_comparison_boundary": "1-D beam approximation; 3-D plate Poisson/edge effects differ",
+      "dat_sha256": "2defe02de72b5e0b1bce24d25d4f37a426575743eb9d23e1e4e31c7cc2efd59c",
+      "input_sha256": "20b5e883c421fc30d51f9f777d48f8989779b809e4edf87079144d284761deff"
+    },
+    {
+      "case": "1U_24x12x2",
+      "geometry_m": {
+        "length": 0.1375,
+        "width": 0.11,
+        "thickness": 0.006
+      },
+      "nodes": 975,
+      "elements": 576,
+      "force_N": 1470.9975,
+      "max_abs_uz_m": 7.327482e-05,
+      "max_von_mises_Pa": 16179745.20244147,
+      "fixed_fixed_Euler_beam_deflection_m": 7.289110328072321e-05,
+      "beam_comparison_boundary": "1-D beam approximation; 3-D plate Poisson/edge effects differ",
+      "dat_sha256": "14d177c02a7e00732b3557f4d40df4aa0b5b5ac9a6c84178a532b60f9a2e6d91",
+      "input_sha256": "54c97fe8b7af1e052103452ed6328efb25fbbc83c0f2ebac2add833bd36f7067"
+    },
+    {
+      "case": "1U_48x24x2",
+      "geometry_m": {
+        "length": 0.1375,
+        "width": 0.11,
+        "thickness": 0.006
+      },
+      "nodes": 3675,
+      "elements": 2304,
+      "force_N": 1470.9975,
+      "max_abs_uz_m": 7.453814e-05,
+      "max_von_mises_Pa": 17546663.646676283,
+      "fixed_fixed_Euler_beam_deflection_m": 7.289110328072321e-05,
+      "beam_comparison_boundary": "1-D beam approximation; 3-D plate Poisson/edge effects differ",
+      "dat_sha256": "6d5fce601e93bf266ca6c89454c7e98db8411b069bd08ae00ab05cd35aee3ee1",
+      "input_sha256": "37c4a45bb9ec2bfa241c963d8dbed9049867c5fe526f2e182e76889e0caeb4e4",
+      "deflection_refinement_relative": 0.016948638643250285
+    },
+    {
+      "case": "3U_12x6x2",
+      "geometry_m": {
+        "length": 0.3645,
+        "width": 0.11,
+        "thickness": 0.006
+      },
+      "nodes": 273,
+      "elements": 144,
+      "force_N": 1470.9975,
+      "max_abs_uz_m": 0.001227687,
+      "max_von_mises_Pa": 35324512.95429807,
+      "fixed_fixed_Euler_beam_deflection_m": 0.0013578726071473374,
+      "beam_comparison_boundary": "1-D beam approximation; 3-D plate Poisson/edge effects differ",
+      "dat_sha256": "2a1a9d9e204d40724dd1ec03555333a76112463b6a073444b184cd459d7579fb",
+      "input_sha256": "4fbd3e6faa255beacfac70b42308b0d7355a9ce67c99830072e88723c63e9d29"
+    },
+    {
+      "case": "3U_24x12x2",
+      "geometry_m": {
+        "length": 0.3645,
+        "width": 0.11,
+        "thickness": 0.006
+      },
+      "nodes": 975,
+      "elements": 576,
+      "force_N": 1470.9975,
+      "max_abs_uz_m": 0.001287397,
+      "max_von_mises_Pa": 42286890.78513014,
+      "fixed_fixed_Euler_beam_deflection_m": 0.0013578726071473374,
+      "beam_comparison_boundary": "1-D beam approximation; 3-D plate Poisson/edge effects differ",
+      "dat_sha256": "b38b3b8a0fde80a1dfb534e568b88b14bb41bcffc0950b209fc527a241cfa153",
+      "input_sha256": "1778f911c5bec1b249a78c0d7d56b491162c283895ef3637461f3879af59d1e3"
+    },
+    {
+      "case": "3U_48x24x2",
+      "geometry_m": {
+        "length": 0.3645,
+        "width": 0.11,
+        "thickness": 0.006
+      },
+      "nodes": 3675,
+      "elements": 2304,
+      "force_N": 1470.9975,
+      "max_abs_uz_m": 0.001308031,
+      "max_von_mises_Pa": 46066474.33654227,
+      "fixed_fixed_Euler_beam_deflection_m": 0.0013578726071473374,
+      "beam_comparison_boundary": "1-D beam approximation; 3-D plate Poisson/edge effects differ",
+      "dat_sha256": "68988e6ca939fba4670c627ad679cb1178fdfd7b3240aa896506b530bf0ef419",
+      "input_sha256": "d94efb0596a2da68eb493527fdef07cc54c25715e9e9f3d4444704440756db62",
+      "deflection_refinement_relative": 0.01577485548889901
+    }
+  ],
+  "limitations": [
+    "Actual mounts, bolt holes, guides, contacts, gate and load paths absent",
+    "Peak support stresses can depend on idealized constraints; no assembly pass from this screen",
+    "No fatigue, vibration, thermal stress, nonlinear contact or measured correlation"
+  ]
+}

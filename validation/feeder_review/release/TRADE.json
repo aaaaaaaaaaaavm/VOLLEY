@@ -1,0 +1,68 @@
+{
+  "weights": {
+    "safety": 0.35,
+    "fit_mass": 0.25,
+    "position": 0.2,
+    "cycle_power": 0.1,
+    "manufacture": 0.1
+  },
+  "interpretation": "Ordinal hypotheses retained from 12 Oct, not measured reliability or validated performance; all feasible-set gates remain open; no final selection",
+  "candidates": [
+    {
+      "candidate": "Fixed-cell captive lead screw",
+      "hypothesis_score": 3.65,
+      "lower_one_point": 2.65,
+      "upper_one_point": 4.65,
+      "eligible_for_baseline": false,
+      "reason": "Same-boundary installed hardware, full-cycle load/contact/fault evidence incomplete"
+    },
+    {
+      "candidate": "Fixed-cell spring follower and two gates",
+      "hypothesis_score": 3.0749999999999997,
+      "lower_one_point": 2.075,
+      "upper_one_point": 4.075,
+      "eligible_for_baseline": false,
+      "reason": "Same-boundary installed hardware, full-cycle load/contact/fault evidence incomplete"
+    },
+    {
+      "candidate": "Indexed rack and pawl",
+      "hypothesis_score": 2.925,
+      "lower_one_point": 1.9249999999999998,
+      "upper_one_point": 3.9249999999999994,
+      "eligible_for_baseline": false,
+      "reason": "Same-boundary installed hardware, full-cycle load/contact/fault evidence incomplete"
+    },
+    {
+      "candidate": "Geneva indexed drum or tray",
+      "hypothesis_score": 2.5,
+      "lower_one_point": 1.5,
+      "upper_one_point": 3.4999999999999996,
+      "eligible_for_baseline": false,
+      "reason": "Same-boundary installed hardware, full-cycle load/contact/fault evidence incomplete"
+    },
+    {
+      "candidate": "Segmented pantograph",
+      "hypothesis_score": 2.325,
+      "lower_one_point": 1.5000000000000002,
+      "upper_one_point": 3.3249999999999997,
+      "eligible_for_baseline": false,
+      "reason": "Same-boundary installed hardware, full-cycle load/contact/fault evidence incomplete"
+    },
+    {
+      "candidate": "Nested telescoping carriage",
+      "hypothesis_score": 2.6500000000000004,
+      "lower_one_point": 1.6500000000000001,
+      "upper_one_point": 3.65,
+      "eligible_for_baseline": false,
+      "reason": "Same-boundary installed hardware, full-cycle load/contact/fault evidence incomplete"
+    },
+    {
+      "candidate": "Belt or cable shuttle",
+      "hypothesis_score": 2.525,
+      "lower_one_point": 1.7,
+      "upper_one_point": 3.525,
+      "eligible_for_baseline": false,
+      "reason": "Same-boundary installed hardware, full-cycle load/contact/fault evidence incomplete"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "boundary": "Sources formatted after computation; before/after executable AST compared exactly. Original executed-byte hashes remain traceable; only whitespace layout changed, not equations or operations.",
+  "files": [
+    {
+      "path": "plot.py",
+      "original_sha256": "bd8fb42f803f35b435505809bb63a7047351f7b203da23de8a73c09b31ba932d",
+      "formatted_sha256": "194dfd28d1aa41508a2de2622cd54ed9ecf1332f2734e082f33da5a55fcf2e94",
+      "AST_unchanged": true,
+      "normalized_AST_sha256": "9eb2cfc3e9d394f924d459a3e53eb4df8c56fdb502bda2a7bbb3121cc5b889a7"
+    },
+    {
+      "path": "check_capture.py",
+      "original_sha256": "bef3394c58a26ddb790d1691ffc2f5f4aa4e62a945bed403837e98ac8d55f44a",
+      "formatted_sha256": "435071abc6ac4c13068b5c4cf8d2bf4d9cb5d825dd807d7e2d7d819692cdd453",
+      "AST_unchanged": true,
+      "normalized_AST_sha256": "46a983388b53dd91ace4e8d50bff93903d52b3eeb7bf5f3c1ecaa60dc016f319"
+    },
+    {
+      "path": "analyze.py",
+      "original_sha256": "546bce602246b6ead7224e41dfe81cebf0db31cc5254a951ef960a0f3cea59ec",
+      "formatted_sha256": "e5dca777230ea4feab2940f2566ad4aa437778002a44b99fd956d68739330ae4",
+      "AST_unchanged": true,
+      "normalized_AST_sha256": "941be3d1faf7fb943734fc49da2ca0251774c57400185adaf3c82951ebc2047b"
+    }
+  ]
+}

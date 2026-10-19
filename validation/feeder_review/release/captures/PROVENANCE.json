@@ -1,0 +1,62 @@
+{
+  "revision": "FDR-08-2026-10-19",
+  "capture_source_sha256": "8b0087040354a9a33f8ffb499ff975eb8771f96a4d7a09a8a4aa11370b08cee4",
+  "images": [
+    {
+      "image": "FreeCAD_belt_shuttle_3U.png",
+      "image_sha256": "5e783384db4b9110e36aaf8605464764c328c5840676a3429a1dd95a36b60507",
+      "source": "belt_shuttle_3U.FCStd",
+      "source_sha256": "89a7420c3b463bb0676979da5bd0b18cdcce0d70b85c11c7d18d353ee8c0268f",
+      "application": "FreeCAD1.0 Python-hosted native Qt/Coin viewport",
+      "boundary": "Unsaved duplicate Part display providers show the same native shapes; color/visibility only; no composited application UI or hardware claim"
+    },
+    {
+      "image": "FreeCAD_indexed_drum_3U.png",
+      "image_sha256": "8b58e04b9127aa2e2c8f598a2f1afd9d0cf8ae40919694496ecb2cb7575ad03f",
+      "source": "indexed_drum_3U.FCStd",
+      "source_sha256": "9d060f884c4c73c6f83d3ea57242ee98590da7ee43bf61d52778e617aff706f0",
+      "application": "FreeCAD1.0 Python-hosted native Qt/Coin viewport",
+      "boundary": "Unsaved duplicate Part display providers show the same native shapes; color/visibility only; no composited application UI or hardware claim"
+    },
+    {
+      "image": "FreeCAD_lead_screw_3U.png",
+      "image_sha256": "7f93b4b3427066a93f38a2e704d3aa32ce176a2832496da8f45014a8f30ec3f3",
+      "source": "lead_screw_3U.FCStd",
+      "source_sha256": "013c389084ac894094576deae65a8d8a60f6a5ce88bdcdc4c182444c8b943365",
+      "application": "FreeCAD1.0 Python-hosted native Qt/Coin viewport",
+      "boundary": "Unsaved duplicate Part display providers show the same native shapes; color/visibility only; no composited application UI or hardware claim"
+    },
+    {
+      "image": "FreeCAD_pantograph_3U.png",
+      "image_sha256": "9dc6a91ec38179bb4e307e65905a8c9425e354b71f83ce9e27952c0e61ffc14d",
+      "source": "pantograph_3U.FCStd",
+      "source_sha256": "1a4d3dbc87c206bbbc2d37dae5b36ed5a91a0a850e99966acaf877360b0c7f1e",
+      "application": "FreeCAD1.0 Python-hosted native Qt/Coin viewport",
+      "boundary": "Unsaved duplicate Part display providers show the same native shapes; color/visibility only; no composited application UI or hardware claim"
+    },
+    {
+      "image": "FreeCAD_rack_pawl_3U.png",
+      "image_sha256": "c863dccd836f6392eba207ac25231da25e892adbb444b0da77441249aba9824c",
+      "source": "rack_pawl_3U.FCStd",
+      "source_sha256": "9f71926b610c63a0fed1c5d841961a4e9957e6607f1f8f4a81acfaa58839372f",
+      "application": "FreeCAD1.0 Python-hosted native Qt/Coin viewport",
+      "boundary": "Unsaved duplicate Part display providers show the same native shapes; color/visibility only; no composited application UI or hardware claim"
+    },
+    {
+      "image": "FreeCAD_spring_dual_gate_3U.png",
+      "image_sha256": "eaad8f316f713d3def2c04d531bad4f6c8d7b09ed7ff8b8485d20ff239dd48df",
+      "source": "spring_dual_gate_3U.FCStd",
+      "source_sha256": "103d7e3ee5eadd28965f2c375a6757f88ec3d2dceecd424eb2acc748f257b29b",
+      "application": "FreeCAD1.0 Python-hosted native Qt/Coin viewport",
+      "boundary": "Unsaved duplicate Part display providers show the same native shapes; color/visibility only; no composited application UI or hardware claim"
+    },
+    {
+      "image": "FreeCAD_telescopic_3U.png",
+      "image_sha256": "85f7e3d1e7d18cdf41ff0a7316911da60486bc499eedd29aefa232c326d781ea",
+      "source": "telescopic_3U.FCStd",
+      "source_sha256": "a9d957f475613987187e8e1d710de5498fb8562735b2be528b21bdf4dcc51fcf",
+      "application": "FreeCAD1.0 Python-hosted native Qt/Coin viewport",
+      "boundary": "Unsaved duplicate Part display providers show the same native shapes; color/visibility only; no composited application UI or hardware claim"
+    }
+  ]
+}

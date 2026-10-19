@@ -1,0 +1,10 @@
+{
+  "gmat-continuous.log": {
+    "full_log_sha256": "47e3df141d248ca92ca17538280488708c7233b6588fec15b99f981e98409278",
+    "completion_excerpt": "Mission run completed.\n*** GMAT Integration test (Console version) successful! ***"
+  },
+  "orekit-matched-native.log": {
+    "full_log_sha256": "981f5ef324e31666fa20f4bfaca4b368de8161fe53f82aa2045aec0c915ed910",
+    "completion_excerpt": "Orekit 13.1.6 completed matched JGM2/prescribed-pole J2 history"
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VOLLEY — Feeder engineering review</title>
+<meta name="description" content="Seven unselected Gen6 feeder candidates: native CAD, STEP, loads, tolerances, fixture FEA and retained limitations.">
+<style>
+body{max-width:1050px;margin:auto;padding:28px 24px;color:#20282e;background:white;font:17px/1.65 system-ui,sans-serif}header{border-bottom:1px solid #aaa;padding-bottom:16px}h1,h2{font-weight:600;line-height:1.2}h1{font-size:36px;margin-top:36px}h2{font-size:25px;margin-top:42px}a{color:#00649c}figure{margin:28px 0 38px}img{width:100%;height:auto}figcaption{font-size:15px;color:#424a50}table{border-collapse:collapse;width:100%;font-size:15px}th,td{padding:9px 8px;border-bottom:1px solid #c9cdd0;text-align:left;vertical-align:top}.table-scroll{overflow-x:auto}.status{border-left:3px solid #a26022;padding-left:18px}footer{margin-top:48px;border-top:1px solid #aaa;padding-top:16px;font-size:14px}@media(max-width:600px){body{padding:18px 14px}h1{font-size:29px}table{font-size:13px}}
+</style>
+</head>
+<body>
+<header><a href="index.html">VOLLEY</a> / <a href="orbital-analysis.html">Orbital analysis</a> / Feeder review</header>
+<main>
+<h1>Feeding a payload is a separate engineering problem.</h1>
+<p>FDR-08 · 19 October 2026. Seven Gen6 concepts share a 200 mm lateral transfer task for passive 1U/3U envelope surrogates. The receiver, gate, captive transfer and arrest requirements are evaluated separately from the launcher motor.</p>
+<p class="status"><strong>No feeder is selected or released for manufacture.</strong> Native CAD and a clear pose do not demonstrate handoff, safe power-off restraint, joint strength, complete installed hardware or reliability. Gen5 remains the evaluated configuration with its original failures.</p>
+<h2>Inspect the actual geometry</h2>
+<figure><img src="assets/feeder/lead_screw_cad.png" alt="Independent STEP-derived plan and side views of the unselected three-unit lead-screw transfer reference"><figcaption>Native FreeCAD/OCC STEP readback; millimetre axes and equal geometric scales. This is an orthographic projection, not a solver screenshot. The lead screw is an analysis reference rather than a baseline downselect.</figcaption></figure>
+<figure><img src="assets/feeder/FreeCAD_lead_screw_3U.png" alt="Genuine FreeCAD Python-hosted native viewport showing the current lead-screw candidate assembly"><figcaption>Actual FreeCAD Python-hosted Qt/Coin viewport of the FDR-08 native assembly, captured without composited application chrome. Visible solids remain a candidate design; source document and screenshot hashes are retained.</figcaption></figure>
+<p>The package contains fourteen editable native assemblies and twenty-eight STEP states. Exact intersections are checked at nine transfer stations, one stowed pose and five gate heights per case. The rectangular payload sweep covers only straight translation against fixed feed-state geometry. Nonlinear indexing, handoff, return, loaded deformation and contact are outside that proof.</p>
+<h2>What the mechanisms demand</h2>
+<figure><img src="assets/feeder/loads.png" alt="Transfer force and idealized screw torque across duration and friction assumptions"><figcaption>Parameterized acceleration, friction and output demand. A 2 mm lead needs 6,000/2,400/1,200 rpm for the modeled 2/5/10 s triangular strokes. No actuator is rated by this plot.</figcaption></figure>
+<div class="table-scroll"><table><thead><tr><th>Candidate</th><th>Useful feature</th><th>Decisive unresolved concern</th></tr></thead><tbody>
+<tr><td>Lead screw</td><td>Reversible positive displacement</td><td>Nut, bearing, brake and vacuum-duty ratings; no reliance on friction self-lock</td></tr>
+<tr><td>Spring / two gates</td><td>Stored feed energy</td><td>15 N end force fails higher resistance cases; governor and dual-barrier proof</td></tr>
+<tr><td>Rack / pawl</td><td>Discrete indexing</td><td>Tooth engagement, bounce, holdback and partial strokes</td></tr>
+<tr><td>Indexed drum</td><td>One shared transfer window</td><td>Loaded rotor indexing, envelope, independent cell locks and common-path blockage</td></tr>
+<tr><td>Pantograph</td><td>Compact folded linkage</td><td>Near-flat force, joint play and independently sequenced platforms</td></tr>
+<tr><td>Telescoping carriage</td><td>Compact retracted length</td><td>Stage order, overlap, positive stops and anti-separation</td></tr>
+<tr><td>Belt shuttle</td><td>Low moving drive mass</td><td>Tension, creep, breakage and independent arrest</td></tr>
+</tbody></table></div>
+<h2>Retain adverse cases</h2>
+<figure><img src="assets/feeder/tolerance.png" alt="Remaining assumed side gap for different payload lengths and alignment bands"><figcaption>The adverse 0.5° alignment/thermal/manufacturing stack loses clearance. Positive nominal gap in the tighter band is not a manufactured or loaded fit.</figcaption></figure>
+<p>The capture-rack cantilever screen also fails adverse mean-arrest cases: its 1 mm tooth root reaches approximately 1,973 MPa nominal bending under the largest computed mean force. Actual peak force and a selected material allowable are unknown; this is a redesign finding, not a working positive lock.</p><h2>Native structural output, within its fixture</h2>
+<figure><img src="assets/feeder/fea_convergence.png" alt="Native CalculiX displacement and peak stress trends across three solid meshes for each floor size"><figcaption>CalculiX 2.23, six C3D8I cases, assumed clamped short edges and uniform 6 kg × 25 g load. Displacement trends refine; peak support stress is not converged. Actual joints, contacts and host mounts are absent, so no assembly strength or qualification pass is claimed.</figcaption></figure>
+<figure><img src="assets/feeder/Gmsh_CalculiX_floor.png" alt="Actual CalculiX nodal displacement displayed on its input mesh in the native Gmsh viewport"><figcaption>Gmsh4.14.1 native viewport export of actual CalculiX input topology and DAT displacement norm in metres; undeformed geometry and a sequential colour scale. The assumed clamped-floor boundary remains explicit.</figcaption></figure><h2>Read the engineering record</h2>
+<p><a href="https://github.com/aaaaaaaaaaaavm/VOLLEY/tree/main/validation/feeder_review">Report, local source/CAD archive, material BOM/CG/inertia, issue dispositions and native results</a>. <a href="https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/tree/main/experiments/feeder-design-review">All seven research candidates in Labs</a>. Safety-led ordinal scores remain hypotheses with overlapping intervals; incomplete mandatory evidence prevents a final selection.</p>
+</main>
+<footer>Computational design review · no built, measured, qualified or flown feeder.</footer>
+</body></html>

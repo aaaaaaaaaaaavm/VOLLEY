@@ -1,0 +1,32 @@
+{
+  "cad": "FreeCAD1.0 / OpenCascade native Part B-rep",
+  "fea": "CalculiX2.23 native CCX",
+  "packages": [
+    {
+      "name": "calculix-ccx_2.23-1_amd64.deb",
+      "source": "https://deb.debian.org/debian/pool/main/c/calculix-ccx/calculix-ccx_2.23-1_amd64.deb",
+      "sha256": "709b2d994699168f2754bd16117d51cef3241e268a7dfab185b8f78c98bd02aa"
+    },
+    {
+      "name": "xvfb_21.1.25-2_amd64.deb",
+      "source": "https://deb.debian.org/debian/pool/main/s/spooles/xvfb_21.1.25-2_amd64.deb",
+      "sha256": "525408bfcb832ebaa2c3521356d831048ef18ecafc5225e40b1da6932b7208bb"
+    },
+    {
+      "name": "libspooles2.2t64_2.2-16+b1_amd64.deb",
+      "source": "https://deb.debian.org/debian/pool/main/s/spooles/libspooles2.2t64_2.2-16+b1_amd64.deb",
+      "sha256": "e82c4173706d831a490439bf5b31dae5194dca07482ac8632bc219514372ac3c"
+    }
+  ],
+  "boundary": "Unmodified Debian binaries; native logs retained. Fixture output is not assembled mechanism qualification.",
+  "ccx_binary_sha256": "db2ed33d0fd97ef4daad298def2fd8d3e9879e488647b0e7b44f52038b62ea0b",
+  "FreeCAD_version": [
+    "1",
+    "0",
+    "0",
+    "",
+    "https://code.launchpad.net/~vcs-imports/freecad/trunk",
+    "2026/08/25 11:49:11"
+  ],
+  "OpenCascade_version": "7.8.1"
+}
