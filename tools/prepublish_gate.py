@@ -123,6 +123,23 @@ def check_evidence_tracking(errors: list[str]) -> None:
                 errors.append(f"{name}: required evidence is absent from Git index: {relative}")
 
 
+def check_outer_hashes(errors: list[str]) -> None:
+    """Keep the academic outer identity ledger synchronized with inner records."""
+    import hashlib
+    manifest = ROOT / "ARTIFACT_MANIFEST.sha256"
+    if not manifest.is_file():
+        return
+    for line in manifest.read_text().splitlines():
+        if not line.strip():
+            continue
+        expected, relative = line.split("  ", 1)
+        path = (ROOT / relative).resolve()
+        if not path.is_relative_to(ROOT.resolve()) or not path.is_file():
+            errors.append(f"outer manifest missing or external artifact: {relative}")
+        elif hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+            errors.append(f"outer manifest checksum stale: {relative}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", help="published commit to compare to HEAD")
@@ -135,6 +152,7 @@ def main() -> int:
         return 2
     errors: list[str] = []
     check_evidence_tracking(errors)
+    check_outer_hashes(errors)
     for name in paths:
         check(name, errors)
     if errors:
