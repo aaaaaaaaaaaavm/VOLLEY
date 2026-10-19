@@ -415,7 +415,7 @@
       "caption": "step sequence",
       "limitations": "Prescribed rigid translations and assumed stop/contact/fit cases. No component rating, safety, feeder selection or operational replenishment acceptance.",
       "sources": {
-        "validation/captive_transfer_review/MANIFEST.json": "ac83a00481655e9634efd470b4e52af8d7fd6fac9106c46f6a592541f4083568",
+        "validation/captive_transfer_review/MANIFEST.json": "9b0faa18cdba7ae77d87f41bc8adfeb89f1148a44472574782276de02bfd757a",
         "validation/captive_transfer_review/README.md": "19bd90e55f24b3555ca1923b9a94d5a80415051437cb5586a3840c7b905b2dd4"
       },
       "exports": {
@@ -431,7 +431,7 @@
       "caption": "stop runout",
       "limitations": "Prescribed rigid translations and assumed stop/contact/fit cases. No component rating, safety, feeder selection or operational replenishment acceptance.",
       "sources": {
-        "validation/captive_transfer_review/MANIFEST.json": "ac83a00481655e9634efd470b4e52af8d7fd6fac9106c46f6a592541f4083568",
+        "validation/captive_transfer_review/MANIFEST.json": "9b0faa18cdba7ae77d87f41bc8adfeb89f1148a44472574782276de02bfd757a",
         "validation/captive_transfer_review/README.md": "19bd90e55f24b3555ca1923b9a94d5a80415051437cb5586a3840c7b905b2dd4"
       },
       "exports": {
@@ -446,7 +446,7 @@
       "caption": "tooth mesh",
       "limitations": "Prescribed rigid translations and assumed stop/contact/fit cases. No component rating, safety, feeder selection or operational replenishment acceptance.",
       "sources": {
-        "validation/captive_transfer_review/MANIFEST.json": "ac83a00481655e9634efd470b4e52af8d7fd6fac9106c46f6a592541f4083568",
+        "validation/captive_transfer_review/MANIFEST.json": "9b0faa18cdba7ae77d87f41bc8adfeb89f1148a44472574782276de02bfd757a",
         "validation/captive_transfer_review/README.md": "19bd90e55f24b3555ca1923b9a94d5a80415051437cb5586a3840c7b905b2dd4"
       },
       "exports": {

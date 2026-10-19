@@ -99,6 +99,27 @@ def check(path_name: str, errors: list[str]) -> None:
         errors.append(f"{path_name}: invalid JPEG signature")
 
 
+def check_evidence_tracking(errors: list[str]) -> None:
+    """Every file in a current captured-study manifest must enter the Git payload."""
+    import json
+    tracked = set(git("ls-files", "-z").decode().split("\0"))
+    for name in ["validation/captive_transfer_review/MANIFEST.json",
+                 "validation/replenishment_feasibility/MANIFEST.json",
+                 "experiments/captive-transfer-review/MANIFEST.json",
+                 "experiments/replenishment-feasibility/MANIFEST.json"]:
+        manifest = ROOT / name
+        if not manifest.is_file():
+            continue
+        for relative in ["MANIFEST.json", *json.loads(manifest.read_text())["files"]]:
+            path = (manifest.parent / relative).resolve()
+            if path.suffix == ".FCBak" or path.name == "spooles.out":
+                errors.append(f"{name}: uncontrolled backup/scratch artifact in release: {relative}")
+            if not path.is_relative_to(ROOT.resolve()):
+                errors.append(f"{name}: evidence path escapes repository: {relative}")
+            elif path.relative_to(ROOT).as_posix() not in tracked:
+                errors.append(f"{name}: required evidence is absent from Git index: {relative}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", help="published commit to compare to HEAD")
@@ -110,6 +131,7 @@ def main() -> int:
         print(f"FAIL: cannot determine publication set: {exc}", file=sys.stderr)
         return 2
     errors: list[str] = []
+    check_evidence_tracking(errors)
     for name in paths:
         check(name, errors)
     if errors:
