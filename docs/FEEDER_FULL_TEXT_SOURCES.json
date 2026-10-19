@@ -1,0 +1,30 @@
+{
+  "review_date": "2026-10-19",
+  "source_files": {
+    "stacked2022": {
+      "pages": 20,
+      "bytes": 14929289,
+      "sha256": "c996e1768abfcbb85f97155acbe3871a4b69246079dcbb0b9b80abdb39782b9f",
+      "publisher_url": "https://www.mdpi.com/2072-4292/14/17/4205/pdf",
+      "license": "CC BY4.0 as stated in PDF"
+    },
+    "storage2025": {
+      "pages": 31,
+      "bytes": 15263643,
+      "sha256": "cb4ba3bef185597a330cea6db39cdd2778fb97371eadadd5493ede796c814463",
+      "publisher_url": "https://www.mdpi.com/2226-4310/12/6/466/pdf",
+      "license": "CC BY4.0 as stated in PDF"
+    }
+  },
+  "quantitative_checks": {
+    "reported_tension_N": 68.39,
+    "spool_radius_m": 0.006,
+    "simple_spool_torque_Nm": 0.41034000000000004,
+    "simple_spool_torque_kgf_cm": 4.184303508333631,
+    "source_reported_torque_kgf_cm": 11.63,
+    "source_discrepancy_status": "Additional factor/derivation unresolved; no supplier specification corrected",
+    "simulated_contact_N": 1200,
+    "contact_equivalent_g_for_4kg": 30.59148638933785
+  },
+  "remaining_review": "Other close electromagnetic, end-effect, orbital-service and carrier full-text review remains open"
+}

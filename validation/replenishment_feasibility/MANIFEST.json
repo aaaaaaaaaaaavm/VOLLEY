@@ -1,0 +1,14 @@
+{
+  "scope": "Captured bounded computational study; no hardware acceptance",
+  "files": {
+    "README.md": "d3f79b55b0e4017ce3ff4e93844b5242479b84e414a21a71e279838c3b612a02",
+    "REPLENISHMENT_FEASIBILITY.pdf": "576a13fdf4fa51ba918aea91835c609090c542ecab8623fa2ee6f28095e19880",
+    "analyze.py": "2fcfc6622d4b4199851c81c2cb29f290c9f80e590ad2b8296cac44c9d96fede3",
+    "check_capture.py": "fff9dc989feb8349cccca1e4692975b5e19dbf05d34d49795edb1c1baa241164",
+    "plot.py": "b15506b27515c0ab4a565416212ae5acdf2fcdf5543e4c2167c25bff180172a4",
+    "release/RESULTS.json": "a6f471125e09565dccd8f5207166c8cde3bf7f2317ea0f0582e5f0d7c104e2a8",
+    "release/figures/replenishment.pdf": "69a99ed8864c01f4a15d18f057001087e4c7c3cf246e6eb5ac5ee394d17712b6",
+    "release/figures/replenishment.png": "d8821010cc144152c174494741195c7f99a0ad765f4671dd4573ac567349df34",
+    "release/figures/replenishment.svg": "786a00ef7dd5e408338d7650d980fe52a3430fd7d09e92037d25768e3da9b52c"
+  }
+}

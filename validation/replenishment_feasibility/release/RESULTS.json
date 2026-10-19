@@ -1,0 +1,2137 @@
+{
+  "revision": "RPL-01-2026-10-19",
+  "capture_cases": [
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.0002459016393442623,
+      "mean_energy_force_N": 0.04918032786885246,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.0002555770660057282,
+      "mean_energy_force_N": 0.05111541320114564,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.00048778730588091093,
+      "mean_energy_force_N": 0.09755746117618218,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.0002459016393442623,
+      "mean_energy_force_N": 0.02459016393442623,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.0002555770660057282,
+      "mean_energy_force_N": 0.02555770660057282,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.00048778730588091093,
+      "mean_energy_force_N": 0.04877873058809109,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.0002459016393442623,
+      "mean_energy_force_N": 0.012295081967213115,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.0002555770660057282,
+      "mean_energy_force_N": 0.01277885330028641,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.00048778730588091093,
+      "mean_energy_force_N": 0.024389365294045545,
+      "linear_impulse_Ns": 0.04918032786885246,
+      "host_delta_v_m_s": 0.0001639344262295082,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006147540983606559,
+      "mean_energy_force_N": 1.2295081967213117,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006157216410268025,
+      "mean_energy_force_N": 1.231443282053605,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006389426650143208,
+      "mean_energy_force_N": 1.2778853300286415,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006147540983606559,
+      "mean_energy_force_N": 0.6147540983606559,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006157216410268025,
+      "mean_energy_force_N": 0.6157216410268025,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006389426650143208,
+      "mean_energy_force_N": 0.6389426650143207,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006147540983606559,
+      "mean_energy_force_N": 0.30737704918032793,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006157216410268025,
+      "mean_energy_force_N": 0.30786082051340125,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.006389426650143208,
+      "mean_energy_force_N": 0.31947133250716037,
+      "linear_impulse_Ns": 0.24590163934426232,
+      "host_delta_v_m_s": 0.0008196721311475411,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024590163934426236,
+      "mean_energy_force_N": 4.918032786885247,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024599839361087703,
+      "mean_energy_force_N": 4.919967872217541,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024832049600962885,
+      "mean_energy_force_N": 4.966409920192577,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024590163934426236,
+      "mean_energy_force_N": 2.4590163934426235,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024599839361087703,
+      "mean_energy_force_N": 2.4599839361087703,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024832049600962885,
+      "mean_energy_force_N": 2.4832049600962884,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024590163934426236,
+      "mean_energy_force_N": 1.2295081967213117,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024599839361087703,
+      "mean_energy_force_N": 1.2299919680543852,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.024832049600962885,
+      "mean_energy_force_N": 1.2416024800481442,
+      "linear_impulse_Ns": 0.49180327868852464,
+      "host_delta_v_m_s": 0.0016393442622950822,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09836065573770494,
+      "mean_energy_force_N": 19.672131147540988,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09837033116436641,
+      "mean_energy_force_N": 19.674066232873283,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09860254140424159,
+      "mean_energy_force_N": 19.720508280848318,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09836065573770494,
+      "mean_energy_force_N": 9.836065573770494,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09837033116436641,
+      "mean_energy_force_N": 9.837033116436642,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09860254140424159,
+      "mean_energy_force_N": 9.860254140424159,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09836065573770494,
+      "mean_energy_force_N": 4.918032786885247,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09837033116436641,
+      "mean_energy_force_N": 4.918516558218321,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 5,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 4.918032786885246,
+      "energy_J": 0.09860254140424159,
+      "mean_energy_force_N": 4.930127070212079,
+      "linear_impulse_Ns": 0.9836065573770493,
+      "host_delta_v_m_s": 0.0032786885245901644,
+      "launch_load_25g_N": 1225.83125,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0007142857142857144,
+      "mean_energy_force_N": 0.14285714285714288,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0007433119942701122,
+      "mean_energy_force_N": 0.14866239885402244,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0014399427138956603,
+      "mean_energy_force_N": 0.28798854277913205,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0007142857142857144,
+      "mean_energy_force_N": 0.07142857142857144,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0007433119942701122,
+      "mean_energy_force_N": 0.07433119942701122,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0014399427138956603,
+      "mean_energy_force_N": 0.14399427138956603,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0007142857142857144,
+      "mean_energy_force_N": 0.03571428571428572,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0007433119942701122,
+      "mean_energy_force_N": 0.03716559971350561,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0014399427138956603,
+      "mean_energy_force_N": 0.07199713569478301,
+      "linear_impulse_Ns": 0.14285714285714288,
+      "host_delta_v_m_s": 0.00047619047619047624,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.017857142857142863,
+      "mean_energy_force_N": 3.5714285714285725,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.01788616913712726,
+      "mean_energy_force_N": 3.5772338274254523,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.018582799856752808,
+      "mean_energy_force_N": 3.7165599713505615,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.017857142857142863,
+      "mean_energy_force_N": 1.7857142857142863,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.01788616913712726,
+      "mean_energy_force_N": 1.7886169137127261,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.018582799856752808,
+      "mean_energy_force_N": 1.8582799856752807,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.017857142857142863,
+      "mean_energy_force_N": 0.8928571428571431,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.01788616913712726,
+      "mean_energy_force_N": 0.8943084568563631,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.018582799856752808,
+      "mean_energy_force_N": 0.9291399928376404,
+      "linear_impulse_Ns": 0.7142857142857144,
+      "host_delta_v_m_s": 0.002380952380952381,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.07142857142857145,
+      "mean_energy_force_N": 14.28571428571429,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.07145759770855585,
+      "mean_energy_force_N": 14.29151954171117,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0721542284281814,
+      "mean_energy_force_N": 14.430845685636278,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.07142857142857145,
+      "mean_energy_force_N": 7.142857142857145,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.07145759770855585,
+      "mean_energy_force_N": 7.145759770855585,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0721542284281814,
+      "mean_energy_force_N": 7.215422842818139,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.07142857142857145,
+      "mean_energy_force_N": 3.5714285714285725,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.07145759770855585,
+      "mean_energy_force_N": 3.5728798854277923,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.0721542284281814,
+      "mean_energy_force_N": 3.6077114214090695,
+      "linear_impulse_Ns": 1.4285714285714288,
+      "host_delta_v_m_s": 0.004761904761904762,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2857142857142858,
+      "mean_energy_force_N": 57.14285714285716,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2857433119942702,
+      "mean_energy_force_N": 57.14866239885404,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2864399427138958,
+      "mean_energy_force_N": 57.28798854277915,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2857142857142858,
+      "mean_energy_force_N": 28.57142857142858,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2857433119942702,
+      "mean_energy_force_N": 28.57433119942702,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2864399427138958,
+      "mean_energy_force_N": 28.643994271389577,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2857142857142858,
+      "mean_energy_force_N": 14.28571428571429,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2857433119942702,
+      "mean_energy_force_N": 14.28716559971351,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 15,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 14.285714285714286,
+      "energy_J": 0.2864399427138958,
+      "mean_energy_force_N": 14.321997135694788,
+      "linear_impulse_Ns": 2.8571428571428577,
+      "host_delta_v_m_s": 0.009523809523809525,
+      "launch_load_25g_N": 3677.4937499999996,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.0017647058823529415,
+      "mean_energy_force_N": 0.35294117647058826,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.001842109295644669,
+      "mean_energy_force_N": 0.3684218591289338,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.0036997912146461303,
+      "mean_energy_force_N": 0.7399582429292261,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.0017647058823529415,
+      "mean_energy_force_N": 0.17647058823529413,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.001842109295644669,
+      "mean_energy_force_N": 0.1842109295644669,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.0036997912146461303,
+      "mean_energy_force_N": 0.36997912146461304,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.0017647058823529415,
+      "mean_energy_force_N": 0.08823529411764706,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.001842109295644669,
+      "mean_energy_force_N": 0.09210546478223346,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.01,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.0036997912146461303,
+      "mean_energy_force_N": 0.18498956073230652,
+      "linear_impulse_Ns": 0.35294117647058826,
+      "host_delta_v_m_s": 0.0011764705882352942,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04411764705882354,
+      "mean_energy_force_N": 8.823529411764708,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04419505047211527,
+      "mean_energy_force_N": 8.839010094423054,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04605273239111673,
+      "mean_energy_force_N": 9.210546478223346,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04411764705882354,
+      "mean_energy_force_N": 4.411764705882354,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04419505047211527,
+      "mean_energy_force_N": 4.419505047211527,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04605273239111673,
+      "mean_energy_force_N": 4.605273239111673,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04411764705882354,
+      "mean_energy_force_N": 2.205882352941177,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04419505047211527,
+      "mean_energy_force_N": 2.2097525236057636,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.05,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.04605273239111673,
+      "mean_energy_force_N": 2.3026366195558365,
+      "linear_impulse_Ns": 1.7647058823529413,
+      "host_delta_v_m_s": 0.005882352941176471,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.17647058823529416,
+      "mean_energy_force_N": 35.29411764705883,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.1765479916485859,
+      "mean_energy_force_N": 35.309598329717176,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.17840567356758735,
+      "mean_energy_force_N": 35.68113471351747,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.17647058823529416,
+      "mean_energy_force_N": 17.647058823529417,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.1765479916485859,
+      "mean_energy_force_N": 17.654799164858588,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.17840567356758735,
+      "mean_energy_force_N": 17.840567356758736,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.17647058823529416,
+      "mean_energy_force_N": 8.823529411764708,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.1765479916485859,
+      "mean_energy_force_N": 8.827399582429294,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.1,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.17840567356758735,
+      "mean_energy_force_N": 8.920283678379368,
+      "linear_impulse_Ns": 3.5294117647058827,
+      "host_delta_v_m_s": 0.011764705882352943,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": false,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7058823529411766,
+      "mean_energy_force_N": 141.17647058823533,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": true,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7059597563544684,
+      "mean_energy_force_N": 141.19195127089367,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": true,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.005,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7078174382734698,
+      "mean_energy_force_N": 141.56348765469394,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": true,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7058823529411766,
+      "mean_energy_force_N": 70.58823529411767,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7059597563544684,
+      "mean_energy_force_N": 70.59597563544683,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.01,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7078174382734698,
+      "mean_energy_force_N": 70.78174382734697,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 0,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7058823529411766,
+      "mean_energy_force_N": 35.29411764705883,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 1,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7059597563544684,
+      "mean_energy_force_N": 35.29798781772342,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    },
+    {
+      "cartridge_kg": 40,
+      "relative_m_s": 0.2,
+      "assumed_stopping_m": 0.02,
+      "pitch_rate_deg_s": 5,
+      "reduced_mass_kg": 35.294117647058826,
+      "energy_J": 0.7078174382734698,
+      "mean_energy_force_N": 35.390871913673486,
+      "linear_impulse_Ns": 7.058823529411765,
+      "host_delta_v_m_s": 0.023529411764705885,
+      "launch_load_25g_N": 9806.65,
+      "force_exceeds_sensitivity_N": {
+        "25": true,
+        "100": false,
+        "500": false
+      }
+    }
+  ],
+  "insertion_cases": [
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 1.6361721893699337,
+      "remaining_mm": 1.3638278106300663,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 1.6361721893699337,
+      "remaining_mm": 3.3638278106300663,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 1.6361721893699337,
+      "remaining_mm": 8.363827810630067,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 2.590426234290125,
+      "remaining_mm": 0.409573765709875,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 2.590426234290125,
+      "remaining_mm": 2.409573765709875,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 2.590426234290125,
+      "remaining_mm": 7.409573765709875,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 4.180822189157299,
+      "remaining_mm": -1.1808221891572988,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 4.180822189157299,
+      "remaining_mm": 0.8191778108427012,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 4.180822189157299,
+      "remaining_mm": 5.819177810842701,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 1,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 7.36140214638984,
+      "remaining_mm": -4.36140214638984,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 1,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 7.36140214638984,
+      "remaining_mm": -2.36140214638984,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 0.5,
+      "angle_deg": 1,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 7.36140214638984,
+      "remaining_mm": 2.63859785361016,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 3.1361721893699337,
+      "remaining_mm": -0.1361721893699337,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 3.1361721893699337,
+      "remaining_mm": 1.8638278106300663,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 3.1361721893699337,
+      "remaining_mm": 6.863827810630067,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 4.090426234290125,
+      "remaining_mm": -1.090426234290125,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 4.090426234290125,
+      "remaining_mm": 0.909573765709875,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 4.090426234290125,
+      "remaining_mm": 5.909573765709875,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 5.680822189157299,
+      "remaining_mm": -2.6808221891572988,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 5.680822189157299,
+      "remaining_mm": -0.6808221891572988,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 5.680822189157299,
+      "remaining_mm": 4.319177810842701,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 1,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 8.861402146389839,
+      "remaining_mm": -5.861402146389839,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 1,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 8.861402146389839,
+      "remaining_mm": -3.861402146389839,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 2,
+      "angle_deg": 1,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 8.861402146389839,
+      "remaining_mm": 1.138597853610161,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 5.136172189369933,
+      "remaining_mm": -2.1361721893699332,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 5.136172189369933,
+      "remaining_mm": -0.13617218936993325,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.1,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 5.136172189369933,
+      "remaining_mm": 4.863827810630067,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 6.090426234290125,
+      "remaining_mm": -3.090426234290125,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 6.090426234290125,
+      "remaining_mm": -1.090426234290125,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.25,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 6.090426234290125,
+      "remaining_mm": 3.909573765709875,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 7.680822189157299,
+      "remaining_mm": -4.680822189157299,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 7.680822189157299,
+      "remaining_mm": -2.6808221891572988,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 0.5,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 7.680822189157299,
+      "remaining_mm": 2.3191778108427012,
+      "positive_gap": true
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 1,
+      "radial_clearance_mm": 3,
+      "consumed_mm": 10.861402146389839,
+      "remaining_mm": -7.861402146389839,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 1,
+      "radial_clearance_mm": 5,
+      "consumed_mm": 10.861402146389839,
+      "remaining_mm": -5.861402146389839,
+      "positive_gap": false
+    },
+    {
+      "offset_mm": 4,
+      "angle_deg": 1,
+      "radial_clearance_mm": 10,
+      "consumed_mm": 10.861402146389839,
+      "remaining_mm": -0.8614021463898389,
+      "positive_gap": false
+    }
+  ],
+  "max_energy_J": 0.7078174382734698,
+  "max_mean_force_N": 141.56348765469394,
+  "fit_failures": 18,
+  "baseline_disposition": "NO_GO_FOR_OPERATIONAL_REPLENISHMENT_CLAIM",
+  "boundary": "Limited cooperative-cartridge concept and requirements. No servicer trajectory, robotics, physical capture/contact, docking stability, flight loads qualification, customer/provider ICD or replenishment hardware exists.",
+  "source_sha256": "2fcfc6622d4b4199851c81c2cb29f290c9f80e590ad2b8296cac44c9d96fede3"
+}

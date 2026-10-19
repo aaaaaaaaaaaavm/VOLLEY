@@ -1,0 +1,107 @@
+{
+  "solver": "CalculiX 2.23",
+  "cases": [
+    {
+      "case": "tooth_425225mN_4x2x2",
+      "elements": 16,
+      "nodes": 45,
+      "force_N": 425.22496995827527,
+      "max_uy_m": 2.304387e-07,
+      "max_von_mises_MPa": 10.264862829818867,
+      "root_reaction_y_N": -425.22497999999996,
+      "files": {
+        "tooth_425225mN_4x2x2.inp": "40ddd0301b42d9ba48fa3eb5b6f10cdfdaaaf5ae213091b08cbeee407bc0caa4",
+        "tooth_425225mN_4x2x2.dat": "04b4d9b2ad016d560359c86e6c92183d32c960a5144f0ef8192e16015203fc1b",
+        "tooth_425225mN_4x2x2.frd": "bf8bbc38cf7c534cb52e39fc35391bb93862e3c4bced108eba49a32ac98234e2",
+        "tooth_425225mN_4x2x2.log": "7a4617ef3f0169b98a1c725693626644cd177bc4160fbcbc5f6c9d7743ca64a1"
+      }
+    },
+    {
+      "case": "tooth_425225mN_8x4x4",
+      "elements": 128,
+      "nodes": 225,
+      "force_N": 425.22496995827527,
+      "max_uy_m": 2.720922e-07,
+      "max_von_mises_MPa": 13.056293444272418,
+      "root_reaction_y_N": -425.2249819999998,
+      "files": {
+        "tooth_425225mN_8x4x4.inp": "bbc72c197639f82b1ba4026f7641203a85353746e83b93fe20e0ef282ded26e0",
+        "tooth_425225mN_8x4x4.dat": "654082a61ac7d1895eeba7276ff8164a1eed04c707daf5dc9180cd5c4a0fb596",
+        "tooth_425225mN_8x4x4.frd": "fdd9c179b714512eb4e3cb0475ed068f59c41ca53879623288dbe2da07e5aff4",
+        "tooth_425225mN_8x4x4.log": "73d7a25b75500bcf3cec406d6b346a57dcac607f8ddd021029dc673aa9dc05f8"
+      }
+    },
+    {
+      "case": "tooth_425225mN_12x6x6",
+      "elements": 432,
+      "nodes": 637,
+      "force_N": 425.22496995827527,
+      "max_uy_m": 2.852468e-07,
+      "max_von_mises_MPa": 15.178657823345729,
+      "root_reaction_y_N": -425.2249729999999,
+      "files": {
+        "tooth_425225mN_12x6x6.inp": "56638ca9f8e962824013783798ca9b42941696c7218e0c0efe8432cfca009374",
+        "tooth_425225mN_12x6x6.dat": "aaae55350bb18bd8c5d9c0e35648984544794a7c7a75a47ccbe45052d2a39fdc",
+        "tooth_425225mN_12x6x6.frd": "2ce10c596769f249e003584540731bb6636b3f4ba07c5f807bf52faa32240bf4",
+        "tooth_425225mN_12x6x6.log": "b7ee1aab41f6177ff1b1263df514d2a46777a9cda709e23c7e4ccb723d3e79e4"
+      },
+      "last_displacement_relative_change": 0.04611655590877792,
+      "last_peak_stress_relative_change": 0.13982556322002207
+    },
+    {
+      "case": "tooth_876900mN_4x2x2",
+      "elements": 16,
+      "nodes": 45,
+      "force_N": 876.9,
+      "max_uy_m": 4.752113e-07,
+      "max_von_mises_MPa": 21.168223883022154,
+      "root_reaction_y_N": -876.8999799999999,
+      "files": {
+        "tooth_876900mN_4x2x2.inp": "d48bd835d7589188ffa2fe8bd62bb541975099cb9092f8afdfc2603747025a51",
+        "tooth_876900mN_4x2x2.dat": "b48ab475b109cfc12c84fe05096952ff11a16aed8f82227314cd14c017037507",
+        "tooth_876900mN_4x2x2.frd": "ae522a3121bbf5ab1c3d4553c60d882a12ec7f8c8bc5576603179fc6be534a96",
+        "tooth_876900mN_4x2x2.log": "b2e800e5bcc51896600a05078c74fafa23e809c4adbc3ff3b588625764a0313c"
+      }
+    },
+    {
+      "case": "tooth_876900mN_8x4x4",
+      "elements": 128,
+      "nodes": 225,
+      "force_N": 876.9,
+      "max_uy_m": 5.611091e-07,
+      "max_von_mises_MPa": 26.924722916638945,
+      "root_reaction_y_N": -876.8999660000001,
+      "files": {
+        "tooth_876900mN_8x4x4.inp": "41e46c08b6c791ddc45d7d7703c1d26d76a4d73d8dfc7c60d4ad5dee850c9607",
+        "tooth_876900mN_8x4x4.dat": "c961d0558f94e4caeea15cef6996700909b45ee1b87d7cc9063d6440f4287cd8",
+        "tooth_876900mN_8x4x4.frd": "24be05ad7be3f8a8a8a687639187c0fc810e3fe185d9871a111739b89121d103",
+        "tooth_876900mN_8x4x4.log": "afe22a1640d955c3a008081bdb45bbe6800d8e2880af04a7cc65f03cf52744c2"
+      }
+    },
+    {
+      "case": "tooth_876900mN_12x6x6",
+      "elements": 432,
+      "nodes": 637,
+      "force_N": 876.9,
+      "max_uy_m": 5.882368e-07,
+      "max_von_mises_MPa": 31.301468367829468,
+      "root_reaction_y_N": -876.8998860000002,
+      "files": {
+        "tooth_876900mN_12x6x6.inp": "017ef37667bab23a8628939c9883c2ef60a471d8e2502a079c01bca5f313afd6",
+        "tooth_876900mN_12x6x6.dat": "3f898aa783f1140e9eda2a7c6f49a8350aca5b0879d6d84aa80738d65caa15ed",
+        "tooth_876900mN_12x6x6.frd": "5e8d8f5672ac1db81fbba578abbec9c12baa86ca6aa1f46b0d76ff653b0c50c5",
+        "tooth_876900mN_12x6x6.log": "b2d0a2230ca1ffdd40d884b02eb01233a16a2fabfb8cbd52875c4ce779328a61"
+      },
+      "last_displacement_relative_change": 0.04611697194055188,
+      "last_peak_stress_relative_change": 0.1398255634450934
+    }
+  ],
+  "geometry_mm": [
+    16,
+    6,
+    3
+  ],
+  "material": "Assumed steel E200GPa nu0.3; no selected allowable",
+  "boundary": "Isolated short tooth with ideal fixed root and distributed top shear; sharp corners/constraint stresses can remain mesh-dependent. No pawl impact, root fillet, carrier joints, fatigue or assembly qualification.",
+  "source_sha256": "86e4f368715b089ddf71986defb7a92a8ebeeed7bf1f3b4cac2df5e76ab2a49d"
+}

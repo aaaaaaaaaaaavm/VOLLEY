@@ -78,6 +78,7 @@ jobs:
       - name: Captured 19 October supplement integrity
         run: |
           python3 validation/orbit_harmonization/check_capture.py
+          python3 tools/check_current_transfer.py
           python3 validation/coupled_delivery/check_capture.py
           python3 tools/check_feeder_archive.py
       - name: Gen6 mixed-size full-state screen

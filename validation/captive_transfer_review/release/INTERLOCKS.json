@@ -1,0 +1,4397 @@
+{
+  "revision": "CT-01-2026-10-19",
+  "nominal": [
+    {
+      "action": "open_storage",
+      "allowed": true,
+      "external_support_required": false
+    },
+    {
+      "action": "transfer",
+      "allowed": true,
+      "external_support_required": false
+    },
+    {
+      "action": "receiver_capture",
+      "allowed": true,
+      "external_support_required": false
+    },
+    {
+      "action": "open_fork_front",
+      "allowed": true,
+      "external_support_required": false
+    },
+    {
+      "action": "fork_return",
+      "allowed": true,
+      "external_support_required": false
+    },
+    {
+      "action": "close_storage",
+      "allowed": true,
+      "external_support_required": false
+    },
+    {
+      "action": "reset_fork_front",
+      "allowed": true,
+      "external_support_required": false
+    },
+    {
+      "action": "release_receiver",
+      "allowed": true,
+      "external_support_required": true
+    },
+    {
+      "action": "external_departure_surrogate",
+      "allowed": true,
+      "external_support_required": true
+    },
+    {
+      "action": "empty_receiver_reset",
+      "allowed": true,
+      "external_support_required": false
+    }
+  ],
+  "guard_cases": [
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 0,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 100,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 0,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 100,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 0,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": true
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 0,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": false,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": false,
+      "allowed": false
+    },
+    {
+      "action": "open_fork_front",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "fork_return",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    },
+    {
+      "action": "release_receiver",
+      "feed_mm": 200,
+      "payload_feed_mm": 200,
+      "front_mm": 105,
+      "receiver_mm": 120,
+      "path_proved": true,
+      "external_custody": true,
+      "allowed": false
+    }
+  ],
+  "counterexamples": [
+    {
+      "fault": "False receiver-locked indication",
+      "consequence": "Controller can open fork before actual receiver capture",
+      "required": "Independent physical retention verification, sensor diagnostics and common-cause analysis"
+    },
+    {
+      "fault": "Power loss while storage gate is straddled",
+      "consequence": "Uncontrolled gate closure can strike payload",
+      "required": "Mechanical hold-open interlock or independently rated holding actuator"
+    },
+    {
+      "fault": "Receiver unlock without real sled custody",
+      "consequence": "Nominal geometric clearance does not provide continuous load restraint",
+      "required": "Implement and verify actual receiver-to-sled custody interface"
+    }
+  ],
+  "blocked_other_cells_until_safe_path": true,
+  "boundary": "Exhaustive finite prerequisite combinations, not proof of complete hardware reliability, real sensor truth, latencies or mechanical holding.",
+  "source_sha256": "5e2c5b33aaeb0b6068c5bbda2eef909e4f68b8254f5d7b2bb179afe4efe5ffbc"
+}

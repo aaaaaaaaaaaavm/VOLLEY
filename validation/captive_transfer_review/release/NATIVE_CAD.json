@@ -1,0 +1,4358 @@
+{
+  "revision": "CT-01-2026-10-19",
+  "cases": [
+    {
+      "payload": "1U",
+      "phase": "stored_captive",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -99.19944923318025,
+        55.30406346822048
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.021223603074220602,
+          -0.00039906363050607645,
+          -0.00034058187312504705
+        ],
+        [
+          -0.00039906363050607645,
+          0.012867167741944088,
+          0.002120293411656032
+        ],
+        [
+          -0.00034058187312504705,
+          0.002120293411656032,
+          0.028149227205637065
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.0000000002,
+      "files": {
+        "CT01_1U_stored_captive.FCStd": "d2a7c8aca18f2ccfd92d4cd043649fc9ee1015367b0dcc5a2126de177123a438",
+        "CT01_1U_stored_captive.step": "4df5304aa9630b0ee9602f8332edf3f4d94acec98485ff893a0808585dc4c4bb"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "open_storage",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -99.19944923318025,
+        48.931544958550624
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.022424633849639258,
+          -0.00039906363050607645,
+          0.00011221383930261577
+        ],
+        [
+          -0.00039906363050607645,
+          0.01406819851736274,
+          0.0022430293273376597
+        ],
+        [
+          0.00011221383930261577,
+          0.0022430293273376597,
+          0.028149227205637065
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.0000000016,
+      "files": {
+        "CT01_1U_open_storage.FCStd": "08fdf882a943048f43dda8cf71461d6064fd3e3e115c6263eb21c462becbd547",
+        "CT01_1U_open_storage.step": "7e00d476e9d476c59e0f253a7b59b6a99d8088713a99ea35ca2db475e0cf7081"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "transfer",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -80.57891336571133,
+        48.931544958550624
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.024073484329083177,
+          -0.0011402799157591713,
+          0.00011221383930261588
+        ],
+        [
+          -0.0011402799157591713,
+          0.01406819851736274,
+          0.0001888319477561052
+        ],
+        [
+          0.00011221383930261588,
+          0.0001888319477561052,
+          0.029798077685080984
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.000000002,
+      "files": {
+        "CT01_1U_transfer.FCStd": "443e338757a8927d6c8e114fb04bc00008e247b403d0eea0239c088bc9fc789d",
+        "CT01_1U_transfer.step": "99c58a74b82a6622e3fb6ccd4af541ca24c257c012d96c7ece5660cae32315fb"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "receiver_capture",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -80.57891336571133,
+        48.75188427957991
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.024039589451156522,
+          -0.0011402799157591713,
+          0.00012497952762605306
+        ],
+        [
+          -0.0011402799157591713,
+          0.014029661463436096,
+          0.00024393833845904987
+        ],
+        [
+          0.00012497952762605306,
+          0.00024393833845904987,
+          0.029793435509080986
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.0000000035,
+      "files": {
+        "CT01_1U_receiver_capture.FCStd": "c390673d8155e9c988fca24b403a29168504363c88ce2d92c3aa08613d227f21",
+        "CT01_1U_receiver_capture.step": "5faee92e47552428d48761700a8d2a9cadd6c97629008d7188ac5a6d911f4e46"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "open_fork_front",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -80.57891336571133,
+        50.85427227539798
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.0250489737817515,
+          -0.0011402799157591713,
+          -2.4404466931402538e-05
+        ],
+        [
+          -0.0011402799157591713,
+          0.015039045794031073,
+          -0.000660183739285482
+        ],
+        [
+          -2.4404466931402538e-05,
+          -0.000660183739285482,
+          0.029793435509080986
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.000000002,
+      "files": {
+        "CT01_1U_open_fork_front.FCStd": "71ed657218842a27338a6d3acaab932c7bdb77e522b3f6edbc6d54fda406c860",
+        "CT01_1U_open_fork_front.step": "88da303b1130518c77059f29390e6c08f2a0183382ad0e7f86cd79ac05ddce57"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_return",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -99.19944923318025,
+        50.85427227539798
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.023400123302307594,
+          -0.00039906363050607645,
+          -2.44044669314027e-05
+        ],
+        [
+          -0.00039906363050607645,
+          0.015039045794031071,
+          0.002297601274002673
+        ],
+        [
+          -2.44044669314027e-05,
+          0.002297601274002673,
+          0.028144585029637067
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.0000000016,
+      "files": {
+        "CT01_1U_fork_return.FCStd": "6372bc9901eeaaa2998861b07503f89c479ce67c818342c942d2420466ba58d5",
+        "CT01_1U_fork_return.step": "fa7446cd2dfad0ac9234a390dc91ab9e173e0395132373bef03749ef79882f07"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "close_storage",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -99.19944923318025,
+        57.22679078506783
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.02214153068556809,
+          -0.00039906363050607645,
+          -0.00047720017935906525
+        ],
+        [
+          -0.00039906363050607645,
+          0.013780453177291568,
+          0.0021748653583210436
+        ],
+        [
+          -0.00047720017935906525,
+          0.0021748653583210436,
+          0.028144585029637067
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.0000000019,
+      "files": {
+        "CT01_1U_close_storage.FCStd": "33a6db4dfecc9a5f387d43a3b69ee1428c5757060469596e292afc390c255dfc",
+        "CT01_1U_close_storage.step": "668c4a7f3eef64b24c9e9b851e175634944b18acf2a8b4a00599bcda1e5fcfa1"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "reset_fork_front",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -99.19944923318025,
+        55.12440278924976
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.02119508680583672,
+          -0.00039906363050607645,
+          -0.00032781618480160954
+        ],
+        [
+          -0.00039906363050607645,
+          0.012834009297560203,
+          0.002183257966423622
+        ],
+        [
+          -0.00032781618480160954,
+          0.002183257966423622,
+          0.028144585029637067
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.0000000016,
+      "files": {
+        "CT01_1U_reset_fork_front.FCStd": "f9af7ebf89c5b1bf66570a0bdb34f39f2629bdaa65132672a52234a1c223ae94",
+        "CT01_1U_reset_fork_front.step": "b84f319d7cad2150e7fd2a06df5696da9f5aa9f63bfa4cb6143547de16dd070a"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "release_receiver",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -99.19944923318025,
+        55.30406346822048
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.021223603074220602,
+          -0.00039906363050607645,
+          -0.00034058187312504705
+        ],
+        [
+          -0.00039906363050607645,
+          0.012867167741944088,
+          0.002120293411656032
+        ],
+        [
+          -0.00034058187312504705,
+          0.002120293411656032,
+          0.028149227205637065
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.0000000002,
+      "files": {
+        "CT01_1U_release_receiver.FCStd": "d9a7b4cfee640360155e9bbbb07f06aab587a123e851c5f3b8d07414d2d086b1",
+        "CT01_1U_release_receiver.step": "e0083b9bd18a26dcc7513374637e575140e7ed491d152fb07ee83be8e2128481"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "external_departure_surrogate",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -99.19944923318025,
+        55.30406346822048
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.021223603074220602,
+          -0.00039906363050607645,
+          -0.00034058187312504705
+        ],
+        [
+          -0.00039906363050607645,
+          0.012867167741944088,
+          0.002120293411656032
+        ],
+        [
+          -0.00034058187312504705,
+          0.002120293411656032,
+          0.028149227205637065
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858801.9999999993,
+      "files": {
+        "CT01_1U_external_departure_surrogate.FCStd": "4453445cdfe43b6fa8e6e546019b90000ed002c0b18cee1c61cfb9f1da42b24f",
+        "CT01_1U_external_departure_surrogate.step": "36c6462de10e2a31b4d4d4c2a9db318ba55b62af1acf9079b32e142ea24ec248"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "empty_receiver_reset",
+      "parts": 21,
+      "material_kg": 2.3489614000000003,
+      "CG_material_mm": [
+        26.500700628797052,
+        -99.19944923318025,
+        55.12440278924976
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.02119508680583672,
+          -0.00039906363050607645,
+          -0.00032781618480160954
+        ],
+        [
+          -0.00039906363050607645,
+          0.012834009297560203,
+          0.002183257966423622
+        ],
+        [
+          -0.00032781618480160954,
+          0.002183257966423622,
+          0.028144585029637067
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 1135000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 261564.0,
+          "material": "aluminium",
+          "mass_kg": 0.7062228,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_117.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 61600.000000000015,
+          "material": "aluminium",
+          "mass_kg": 0.16632000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 46200.0,
+          "material": "aluminium",
+          "mass_kg": 0.12474,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_100.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(100.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(114.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 63578.5000000001,
+          "material": "aluminium",
+          "mass_kg": 0.17166195000000029,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 17419.5,
+          "material": "aluminium",
+          "mass_kg": 0.04703265,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 1858802.0,
+      "files": {
+        "CT01_1U_empty_receiver_reset.FCStd": "79ab1877f0d5939dc1eae814bdeb300f71aeaf1bb72e4a8e678a4f0f5a7f3e41",
+        "CT01_1U_empty_receiver_reset.step": "b9fe245618b8a5d8cbc00c1977b18975675aabcbd153ecb8a72606c13a52effd"
+      },
+      "native_pose_checks": [
+        {
+          "phase": "open_storage",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "open_storage",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "open_storage",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "transfer",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "transfer",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "transfer",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "receiver_capture",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "receiver_capture",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "receiver_capture",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "open_fork_front",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "open_fork_front",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "open_fork_front",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "fork_return",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "fork_return",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "fork_return",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "close_storage",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "close_storage",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "close_storage",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "reset_fork_front",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "reset_fork_front",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "reset_fork_front",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "release_receiver",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "release_receiver",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "release_receiver",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "external_departure_surrogate",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "external_departure_surrogate",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "external_departure_surrogate",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "empty_receiver_reset",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "empty_receiver_reset",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "empty_receiver_reset",
+          "fraction": 1,
+          "penetrations": []
+        }
+      ]
+    },
+    {
+      "payload": "3U",
+      "phase": "stored_captive",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -97.2656880206192,
+        51.06682164296493
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.043254659479718884,
+          -0.0011152006299595854,
+          -3.858009439735015e-05
+        ],
+        [
+          -0.0011152006299595854,
+          0.08513598106094666,
+          0.005472950088574062
+        ],
+        [
+          -3.858009439735015e-05,
+          0.005472950088574062,
+          0.11651559370658211
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884257.999999996,
+      "files": {
+        "CT01_3U_stored_captive.FCStd": "0b95cd14e6ecade9f43d8adb5968b771ee2589d7f46b8a718dd3b42ad1bd8761",
+        "CT01_3U_stored_captive.step": "bf3965dee63c590f7dc4e27d7b2c6d7990a172e12dd8838a48dc8627725fe67b"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "open_storage",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -97.2656880206192,
+        40.9526477771535
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.04627390768833911,
+          -0.0011152006299595854,
+          0.0013972268563719058
+        ],
+        [
+          -0.0011152006299595854,
+          0.08815522926956686,
+          0.005751071448433308
+        ],
+        [
+          0.0013972268563719058,
+          0.005751071448433308,
+          0.11651559370658211
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884258.0,
+      "files": {
+        "CT01_3U_open_storage.FCStd": "f7804c221e147a54c0040c619139e090af0e997ddbeed65d34b6239d18224504",
+        "CT01_3U_open_storage.step": "71290ba403d10920185f159c2673a130082d9cd253737fbc63d8992f7cc55481"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "transfer",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -70.98778466507315,
+        40.9526477771535
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.05142581556803908,
+          -0.0036140793473316765,
+          0.0013972268563719047
+        ],
+        [
+          -0.0036140793473316765,
+          0.08815522926956686,
+          -0.0003327814869718891
+        ],
+        [
+          0.0013972268563719047,
+          -0.0003327814869718891,
+          0.12166750158628213
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884257.999999993,
+      "files": {
+        "CT01_3U_transfer.FCStd": "f18660214949c70a6aaf7d1414022f933083539e62191a85f42b855054e83b33",
+        "CT01_3U_transfer.step": "7f37b49488502730343397bdcbe8788e84f5c532a749449c377458f8eee44383"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "receiver_capture",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -70.98778466507315,
+        40.85648793219193
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.05138522148425461,
+          -0.0036140793473316765,
+          0.0014108776968273405
+        ],
+        [
+          -0.0036140793473316765,
+          0.0881008694257824,
+          -0.0002817227060386731
+        ],
+        [
+          0.0014108776968273405,
+          -0.0002817227060386731,
+          0.12165373582628215
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884257.999999994,
+      "files": {
+        "CT01_3U_receiver_capture.FCStd": "c560758a4cac3c583bad43da7a4dd520abcfab2469eb9750b64182133c295088",
+        "CT01_3U_receiver_capture.step": "99a215ca3fb65bbb9dbf6b033686d4486295694078ab15578e8cbe64e933a2dc"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "open_fork_front",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -70.98778466507315,
+        45.457048187881746
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.05578040800604514,
+          -0.0036140793473316765,
+          0.0007577826956744923
+        ],
+        [
+          -0.0036140793473316765,
+          0.0924960559475729,
+          -0.003784518237118729
+        ],
+        [
+          0.0007577826956744923,
+          -0.003784518237118729,
+          0.12165373582628215
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884258.000000001,
+      "files": {
+        "CT01_3U_open_fork_front.FCStd": "3a7e92abf7f32390deeb961ae0a6ef121d10b003dfe80f523cf027329d9c7636",
+        "CT01_3U_open_fork_front.step": "0c705bb5fb65905e509532a9e7233139f9beb5824a22e0df31593136e897c989"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_return",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -97.2656880206192,
+        45.457048187881746
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.05062850012634515,
+          -0.0011152006299595851,
+          0.0007577826956744934
+        ],
+        [
+          -0.0011152006299595851,
+          0.0924960559475729,
+          0.00581795078810297
+        ],
+        [
+          0.0007577826956744934,
+          0.00581795078810297,
+          0.11650182794658213
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884258.000000006,
+      "files": {
+        "CT01_3U_fork_return.FCStd": "6c269fdb0c3299788eb35be24171c788178075fdda0eaff7f0afae34b14779a9",
+        "CT01_3U_fork_return.step": "7a9a566274be92d7a4a27a08976249ea2154ecb660375fd61f904a3356af6620"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "close_storage",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -97.2656880206192,
+        55.57122205369318
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.04720936926686211,
+          -0.0011152006299595851,
+          -0.000678024255094763
+        ],
+        [
+          -0.0011152006299595851,
+          0.08907692508808987,
+          0.005539829428243724
+        ],
+        [
+          -0.000678024255094763,
+          0.005539829428243724,
+          0.11650182794658213
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884258.000000001,
+      "files": {
+        "CT01_3U_close_storage.FCStd": "e61d20000260615ce9c816c701722e33ccc9718198e59997b9202cf12f3b1195",
+        "CT01_3U_close_storage.step": "bc6a5109a6f24cf658134901437c88fdbe6ce33bd92e4039bc4c5479a1fa3125"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "reset_fork_front",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -97.2656880206192,
+        50.970661798003356
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.043222602082330704,
+          -0.0011152006299595851,
+          -2.492925394191462e-05
+        ],
+        [
+          -0.0011152006299595851,
+          0.08509015790355845,
+          0.005535098565169774
+        ],
+        [
+          -2.492925394191462e-05,
+          0.005535098565169774,
+          0.11650182794658213
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884258.000000006,
+      "files": {
+        "CT01_3U_reset_fork_front.FCStd": "2a4fb50eacf6fae11886ad0be3c72fe231aa76db081519f57391c51eac702dae",
+        "CT01_3U_reset_fork_front.step": "bf1fc475d4a6e1a2bb1782b8cadabc9372412e2dbcee578a2afd7def44ae1f5d"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "release_receiver",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -97.2656880206192,
+        51.06682164296493
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.043254659479718884,
+          -0.0011152006299595854,
+          -3.858009439735015e-05
+        ],
+        [
+          -0.0011152006299595854,
+          0.08513598106094666,
+          0.005472950088574062
+        ],
+        [
+          -3.858009439735015e-05,
+          0.005472950088574062,
+          0.11651559370658211
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884257.9999999935,
+      "files": {
+        "CT01_3U_release_receiver.FCStd": "0c1d03d0bab6260e6ce0bc61b33f291825babbadbbc1661c236bbd715823114d",
+        "CT01_3U_release_receiver.step": "db510d8f3a8b59beb7c784ec9922ca59b93068053e39d335913fc75efb1c48a9"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "external_departure_surrogate",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -97.2656880206192,
+        51.06682164296493
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.043254659479718884,
+          -0.0011152006299595854,
+          -3.858009439735015e-05
+        ],
+        [
+          -0.0011152006299595854,
+          0.08513598106094666,
+          0.005472950088574062
+        ],
+        [
+          -3.858009439735015e-05,
+          0.005472950088574062,
+          0.11651559370658211
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884257.999999995,
+      "files": {
+        "CT01_3U_external_departure_surrogate.FCStd": "7a6ec5ad837226280006aa23e4e102759f24ed0273fb9c0634faa7a632b12cd4",
+        "CT01_3U_external_departure_surrogate.step": "0df39b86c67bbc92d37f4ec78fba336e0c378bbfc54c8c53d0a4d05708d38e23"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "empty_receiver_reset",
+      "parts": 21,
+      "material_kg": 4.3886926,
+      "CG_material_mm": [
+        137.90326325202182,
+        -97.2656880206192,
+        50.970661798003356
+      ],
+      "inertia_material_kg_m2": [
+        [
+          0.043222602082330704,
+          -0.0011152006299595851,
+          -2.492925394191462e-05
+        ],
+        [
+          -0.0011152006299595851,
+          0.08509015790355845,
+          0.005535098565169774
+        ],
+        [
+          -2.492925394191462e-05,
+          0.005535098565169774,
+          0.11650182794658213
+        ]
+      ],
+      "material_ledger": [
+        {
+          "part": "payload",
+          "volume_mm3": 3405000.0,
+          "material": "payload",
+          "mass_kg": 0.0,
+          "role": "payload"
+        },
+        {
+          "part": "support_floor",
+          "volume_mm3": 691956.0,
+          "material": "aluminium",
+          "mass_kg": 1.8682812,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_-8",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "cassette_L_344.5",
+          "volume_mm3": 95200.00000000001,
+          "material": "aluminium",
+          "mass_kg": 0.25704000000000005,
+          "role": "fixed"
+        },
+        {
+          "part": "rear_wall",
+          "volume_mm3": 163296.0,
+          "material": "aluminium",
+          "mass_kg": 0.4408992,
+          "role": "fixed"
+        },
+        {
+          "part": "storage_gate",
+          "volume_mm3": 137000.0,
+          "material": "aluminium",
+          "mass_kg": 0.3699,
+          "role": "gate"
+        },
+        {
+          "part": "receiver_top_5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_top_327.5",
+          "volume_mm3": 3200.0,
+          "material": "aluminium",
+          "mass_kg": 0.00864,
+          "role": "fixed"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, -2)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_y_dog_(327.5, 101)",
+          "volume_mm3": 63.999999999999986,
+          "material": "steel",
+          "mass_kg": 0.0005023999999999999,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(-2, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 10)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "receiver_x_dog_(341.5, 82)",
+          "volume_mm3": 112.00000000000001,
+          "material": "steel",
+          "mass_kg": 0.0008792,
+          "role": "receiver_lock"
+        },
+        {
+          "part": "fork_body",
+          "volume_mm3": 142347.50000000003,
+          "material": "aluminium",
+          "mass_kg": 0.3843382500000001,
+          "role": "fork"
+        },
+        {
+          "part": "fork_front",
+          "volume_mm3": 71218.5,
+          "material": "aluminium",
+          "mass_kg": 0.19228995,
+          "role": "front_barrier"
+        },
+        {
+          "part": "captive_guide",
+          "volume_mm3": 72863.99999999999,
+          "material": "steel",
+          "mass_kg": 0.5719823999999999,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_-238",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        },
+        {
+          "part": "end_block_30",
+          "volume_mm3": 1536.0,
+          "material": "steel",
+          "mass_kg": 0.012057599999999998,
+          "role": "fixed"
+        }
+      ],
+      "step_valid": true,
+      "step_volume_mm3": 4884258.000000007,
+      "files": {
+        "CT01_3U_empty_receiver_reset.FCStd": "a63fdafcacd0aea883018958aeb315074d61e1eede45a4406ff26ba8eaf09ed9",
+        "CT01_3U_empty_receiver_reset.step": "d9aa9e24454309610bd60a7b8e514a219a4a832ef2437772554da8826969297e"
+      },
+      "native_pose_checks": [
+        {
+          "phase": "open_storage",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "open_storage",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "open_storage",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "transfer",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "transfer",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "transfer",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "receiver_capture",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "receiver_capture",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "receiver_capture",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "open_fork_front",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "open_fork_front",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "open_fork_front",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "fork_return",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "fork_return",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "fork_return",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "close_storage",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "close_storage",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "close_storage",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "reset_fork_front",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "reset_fork_front",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "reset_fork_front",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "release_receiver",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "release_receiver",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "release_receiver",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "external_departure_surrogate",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "external_departure_surrogate",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "external_departure_surrogate",
+          "fraction": 1,
+          "penetrations": []
+        },
+        {
+          "phase": "empty_receiver_reset",
+          "fraction": 0,
+          "penetrations": []
+        },
+        {
+          "phase": "empty_receiver_reset",
+          "fraction": 0.5,
+          "penetrations": []
+        },
+        {
+          "phase": "empty_receiver_reset",
+          "fraction": 1,
+          "penetrations": []
+        }
+      ]
+    }
+  ],
+  "boundary": "Material-only coupon; no purchased drive/actuator/latch/bearing/harness or source-rated joints. STEP and solids do not establish manufacture readiness.",
+  "software": {
+    "FreeCAD": "1.0.0",
+    "OpenCascade": "7.8.1"
+  },
+  "source_hashes": {
+    "build_native.py": "b776b16887ff4e8d954be1523b8b644d38abf554ff843b7f4c28e7aaef5eca33",
+    "geometry.py": "adc13047c2ce62db6be3782fdb41e08000fbae2ce3bc47048a490f6a6b83b5ee"
+  },
+  "arrest_coupon": {
+    "face_contact_at_one_pose": true,
+    "positive_penetration_mm3": 0,
+    "engagement_height_mm": 3,
+    "root_section_mm": [
+      16,
+      6
+    ],
+    "boundary": "Square bolt in one rack slot; no insertion spring, pivots, engagement delay, rated actuator, damping cartridge or attached load path.",
+    "files": {
+      "arrest_contact_coupon.FCStd": "f28f8d96b3c2b664944e5aa93743b9a55bc183cd26e7fd82973197627b491e6d",
+      "arrest_contact_coupon.step": "3328f2f0fb35e9bdaa221c96cb1770dc14b973374fa5a83b8c8255e6464b6c63"
+    }
+  }
+}

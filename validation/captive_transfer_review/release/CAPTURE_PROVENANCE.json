@@ -1,0 +1,8 @@
+{
+  "method": "Genuine FreeCAD1.0 Python-hosted Qt/Coin window capture; labels control display colours, source document not saved",
+  "files": {
+    "capture_native.py": "7073e0db01ae11522308540f01bf24aa4c2ea1608f985114d39d6353d532a6fc",
+    "release/CT01_3U_receiver_capture.FCStd": "c560758a4cac3c583bad43da7a4dd520abcfab2469eb9750b64182133c295088",
+    "release/FreeCAD_CT01_receiver.png": "01a28788980bb6c79280f7ef15bf59bc9d5a1d187c9a2b73a5072e5c57b6e576"
+  }
+}

@@ -409,6 +409,81 @@
         "validation/orbit_harmonization/figures/harmonization.png": "f4204418f84e7cc404db48cf0ff5418458e8d9324c7da80cd4d5a4369f67743e",
         "docs/assets/orbit/harmonization.png": "f4204418f84e7cc404db48cf0ff5418458e8d9324c7da80cd4d5a4369f67743e"
       }
+    },
+    {
+      "evidence_class": "Independent STEP-derived nominal geometry",
+      "caption": "step sequence",
+      "limitations": "Prescribed rigid translations and assumed stop/contact/fit cases. No component rating, safety, feeder selection or operational replenishment acceptance.",
+      "sources": {
+        "validation/captive_transfer_review/MANIFEST.json": "ac83a00481655e9634efd470b4e52af8d7fd6fac9106c46f6a592541f4083568",
+        "validation/captive_transfer_review/README.md": "19bd90e55f24b3555ca1923b9a94d5a80415051437cb5586a3840c7b905b2dd4"
+      },
+      "exports": {
+        "validation/captive_transfer_review/release/figures/step_sequence.pdf": "6c9bc04b8ffdaf6bb33d3022a94b00d3d6e4032624ac843fcda4c3d5bfb988a2",
+        "validation/captive_transfer_review/release/figures/step_sequence.svg": "c529a7b299e53536cb3d54c179762a6e5585a1e0c84e45798a1fae8994a007a4",
+        "validation/captive_transfer_review/release/figures/step_sequence.jpg": "b975b266e18c31beae31c1154a764d1d98fd5175fd0fde5b4970a8fc9ed00d41",
+        "validation/captive_transfer_review/release/figures/step_sequence.png": "2d5225c43719c0b0741a0ae77b613283ee77572222aaa10782f67d48ab90ee4c",
+        "docs/assets/transfer/step_sequence.png": "2d5225c43719c0b0741a0ae77b613283ee77572222aaa10782f67d48ab90ee4c"
+      }
+    },
+    {
+      "evidence_class": "Conditional numerical / native fixture results",
+      "caption": "stop runout",
+      "limitations": "Prescribed rigid translations and assumed stop/contact/fit cases. No component rating, safety, feeder selection or operational replenishment acceptance.",
+      "sources": {
+        "validation/captive_transfer_review/MANIFEST.json": "ac83a00481655e9634efd470b4e52af8d7fd6fac9106c46f6a592541f4083568",
+        "validation/captive_transfer_review/README.md": "19bd90e55f24b3555ca1923b9a94d5a80415051437cb5586a3840c7b905b2dd4"
+      },
+      "exports": {
+        "validation/captive_transfer_review/release/figures/stop_runout.svg": "039f02c45b883bc9dc02264a50f3281ad2eee7ddfdc978b8b282ad57d41f87bc",
+        "validation/captive_transfer_review/release/figures/stop_runout.pdf": "6fe57e184784ee9798a6a8cadad6dfa9d12e815168b3635d4d9d8ba3e3555c6b",
+        "validation/captive_transfer_review/release/figures/stop_runout.png": "5546dcedd98622c098b7a294b4e8639b9151bcc6bdb3ce8fc17db9a132ce47e2",
+        "docs/assets/transfer/stop_runout.png": "5546dcedd98622c098b7a294b4e8639b9151bcc6bdb3ce8fc17db9a132ce47e2"
+      }
+    },
+    {
+      "evidence_class": "Conditional numerical / native fixture results",
+      "caption": "tooth mesh",
+      "limitations": "Prescribed rigid translations and assumed stop/contact/fit cases. No component rating, safety, feeder selection or operational replenishment acceptance.",
+      "sources": {
+        "validation/captive_transfer_review/MANIFEST.json": "ac83a00481655e9634efd470b4e52af8d7fd6fac9106c46f6a592541f4083568",
+        "validation/captive_transfer_review/README.md": "19bd90e55f24b3555ca1923b9a94d5a80415051437cb5586a3840c7b905b2dd4"
+      },
+      "exports": {
+        "validation/captive_transfer_review/release/figures/tooth_mesh.png": "1061d51ffcf16fa184f5f8d427e1a6e9d8c96f3cbe1f7ff77a08b37a6cb1c09e",
+        "validation/captive_transfer_review/release/figures/tooth_mesh.svg": "1d95d4390c6f94e89d52ac681107701aa48e988b52f3eb6ceff30201ce3c004f",
+        "validation/captive_transfer_review/release/figures/tooth_mesh.pdf": "ba472ddbb0a748100ff699403d3ecf356b4f383b03b3dd3ba0f01e68277c7f99",
+        "docs/assets/transfer/tooth_mesh.png": "1061d51ffcf16fa184f5f8d427e1a6e9d8c96f3cbe1f7ff77a08b37a6cb1c09e"
+      }
+    },
+    {
+      "evidence_class": "Genuine native FreeCAD viewport",
+      "caption": "CT-01 receiver-capture pose",
+      "limitations": "Python-hosted Qt/Coin application; native geometry, not physical hardware. Actual joints and component ratings absent.",
+      "sources": {
+        "validation/captive_transfer_review/release/CAPTURE_PROVENANCE.json": "a798de01147f6fce351ecb40d667910e9cd60431529779794389d71daa267ddf",
+        "validation/captive_transfer_review/release/CT01_3U_receiver_capture.FCStd": "c560758a4cac3c583bad43da7a4dd520abcfab2469eb9750b64182133c295088",
+        "validation/captive_transfer_review/capture_native.py": "7073e0db01ae11522308540f01bf24aa4c2ea1608f985114d39d6353d532a6fc"
+      },
+      "exports": {
+        "validation/captive_transfer_review/release/FreeCAD_CT01_receiver.png": "01a28788980bb6c79280f7ef15bf59bc9d5a1d187c9a2b73a5072e5c57b6e576",
+        "docs/assets/transfer/FreeCAD_CT01_receiver.png": "01a28788980bb6c79280f7ef15bf59bc9d5a1d187c9a2b73a5072e5c57b6e576"
+      }
+    },
+    {
+      "evidence_class": "Conditional numerical / native fixture results",
+      "caption": "replenishment",
+      "limitations": "Prescribed rigid translations and assumed stop/contact/fit cases. No component rating, safety, feeder selection or operational replenishment acceptance.",
+      "sources": {
+        "validation/replenishment_feasibility/MANIFEST.json": "6a9626ceb03c43e3cb1c62f3cddb2848eb71d1776012d0d57a13ef9bab8cbf3a",
+        "validation/replenishment_feasibility/README.md": "d3f79b55b0e4017ce3ff4e93844b5242479b84e414a21a71e279838c3b612a02"
+      },
+      "exports": {
+        "validation/replenishment_feasibility/release/figures/replenishment.png": "d8821010cc144152c174494741195c7f99a0ad765f4671dd4573ac567349df34",
+        "validation/replenishment_feasibility/release/figures/replenishment.svg": "786a00ef7dd5e408338d7650d980fe52a3430fd7d09e92037d25768e3da9b52c",
+        "validation/replenishment_feasibility/release/figures/replenishment.pdf": "69a99ed8864c01f4a15d18f057001087e4c7c3cf246e6eb5ac5ee394d17712b6",
+        "docs/assets/transfer/replenishment.png": "d8821010cc144152c174494741195c7f99a0ad765f4671dd4573ac567349df34"
+      }
     }
   ]
 }

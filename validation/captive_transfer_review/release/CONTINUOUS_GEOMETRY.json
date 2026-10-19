@@ -1,0 +1,153 @@
+{
+  "revision": "CT-01-2026-10-19",
+  "method": "simultaneous open interval slab inequalities; linear translation only",
+  "cases": [
+    {
+      "payload": "1U",
+      "phase": "open_storage",
+      "start": "stored_captive",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "transfer",
+      "start": "open_storage",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "receiver_capture",
+      "start": "transfer",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "open_fork_front",
+      "start": "receiver_capture",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_return",
+      "start": "open_fork_front",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "close_storage",
+      "start": "fork_return",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "reset_fork_front",
+      "start": "close_storage",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "release_receiver",
+      "start": "reset_fork_front",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "external_departure_surrogate",
+      "start": "release_receiver",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "empty_receiver_reset",
+      "start": "external_departure_surrogate",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "open_storage",
+      "start": "stored_captive",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "transfer",
+      "start": "open_storage",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "receiver_capture",
+      "start": "transfer",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "open_fork_front",
+      "start": "receiver_capture",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_return",
+      "start": "open_fork_front",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "close_storage",
+      "start": "fork_return",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "reset_fork_front",
+      "start": "close_storage",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "release_receiver",
+      "start": "reset_fork_front",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "external_departure_surrogate",
+      "start": "release_receiver",
+      "primitive_pairs": 852,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "empty_receiver_reset",
+      "start": "external_departure_surrogate",
+      "primitive_pairs": 852,
+      "penetrations": []
+    }
+  ],
+  "continuous_phase_cases": 20,
+  "penetration_count": 0,
+  "boundary": "Nominal prescribed rectangular geometry; fused same-part constituents excluded. No contact force, actuator linkage, tolerance, elastic or hardware qualification.",
+  "source_hashes": {
+    "geometry.py": "adc13047c2ce62db6be3782fdb41e08000fbae2ce3bc47048a490f6a6b83b5ee",
+    "audit.py": "e2386ba8c697d814530c292d3a46b6fd68cc39cf3629f4e8e4b99d021bd34032"
+  }
+}
