@@ -548,6 +548,86 @@
         "validation/native_campaign_review/figures/thrust_time.svg": "4693441a7d254e3281beea786e8e33572069355d0d57081f7ada751139b8c57b",
         "docs/assets/native-campaign/thrust_time.png": "e2a78adfc73fb6186b83c31fad2a7a7024a1db50a846304fb8ac71175cc4bd1c"
       }
+    },
+    {
+      "evidence_class": "Computed finite-force/native Orekit study; prescribed surrogate controls",
+      "caption": "force fuel trade \u00b7 FBR-01",
+      "limitations": "Fixed-axis J2 and point releases; no rated host, flight precision, physical clearance or installed product. Failed thrust/fuel and unverified attitude requirements retained.",
+      "sources": {
+        "validation/finite_burn_review/report.py": "2b6ba82c08e124604a9324e8d055feecd9b7c79726efacf2c0b534d05936e34b",
+        "validation/finite_burn_review/SUMMARY.json": "93ccab34fd7716890b035af9f247f608f3a86f39cac43d3611b85a8480281167",
+        "validation/finite_burn_review/target.py": "3a1319507b7923c88e585302d7aa1aef326409f8a74ba9d4689c402a7e541881",
+        "validation/finite_burn_review/FiniteReplay.java": "1f15a95d50d8d98ae7447147cfcf33f2329c42a90d0b0c6ece3c1ee88057c451"
+      },
+      "exports": {
+        "validation/finite_burn_review/figures/force_fuel_trade.svg": "abfb85d49f2976883a009eeac8f60d22e82af8b9b471152de90ea5de9a7d7822",
+        "validation/finite_burn_review/figures/force_fuel_trade.pdf": "2464ba6168327706784773a0998e2c22cb9f8332b381ca8dc014ffe1c64b009e",
+        "validation/finite_burn_review/figures/force_fuel_trade.png": "cae25e7b03ac82bb6c4385b13e8df09422072d6fb23450551bfb90f5161daba9"
+      }
+    },
+    {
+      "evidence_class": "Computed finite-force/native Orekit study; prescribed surrogate controls",
+      "caption": "twelve chronology \u00b7 FBR-01",
+      "limitations": "Fixed-axis J2 and point releases; no rated host, flight precision, physical clearance or installed product. Failed thrust/fuel and unverified attitude requirements retained.",
+      "sources": {
+        "validation/finite_burn_review/report.py": "2b6ba82c08e124604a9324e8d055feecd9b7c79726efacf2c0b534d05936e34b",
+        "validation/finite_burn_review/SUMMARY.json": "93ccab34fd7716890b035af9f247f608f3a86f39cac43d3611b85a8480281167",
+        "validation/finite_burn_review/target.py": "3a1319507b7923c88e585302d7aa1aef326409f8a74ba9d4689c402a7e541881",
+        "validation/finite_burn_review/FiniteReplay.java": "1f15a95d50d8d98ae7447147cfcf33f2329c42a90d0b0c6ece3c1ee88057c451"
+      },
+      "exports": {
+        "validation/finite_burn_review/figures/twelve_chronology.svg": "44297c3803322ebc72fb2593a882156b78f9e262f67e3ed5b01a20b68af3db75",
+        "validation/finite_burn_review/figures/twelve_chronology.pdf": "f928e24681cd1a34bcb4d62572f4795401fd166c1c5ffd1c45bfeb24219f2201",
+        "validation/finite_burn_review/figures/twelve_chronology.png": "6f6f83f43299e7b7ebf6f4a59cdebdc1450dde163603368635e0e731e094bf8e"
+      }
+    },
+    {
+      "evidence_class": "Computed finite-force/native Orekit study; prescribed surrogate controls",
+      "caption": "native consistency \u00b7 FBR-01",
+      "limitations": "Fixed-axis J2 and point releases; no rated host, flight precision, physical clearance or installed product. Failed thrust/fuel and unverified attitude requirements retained.",
+      "sources": {
+        "validation/finite_burn_review/report.py": "2b6ba82c08e124604a9324e8d055feecd9b7c79726efacf2c0b534d05936e34b",
+        "validation/finite_burn_review/SUMMARY.json": "93ccab34fd7716890b035af9f247f608f3a86f39cac43d3611b85a8480281167",
+        "validation/finite_burn_review/target.py": "3a1319507b7923c88e585302d7aa1aef326409f8a74ba9d4689c402a7e541881",
+        "validation/finite_burn_review/FiniteReplay.java": "1f15a95d50d8d98ae7447147cfcf33f2329c42a90d0b0c6ece3c1ee88057c451"
+      },
+      "exports": {
+        "validation/finite_burn_review/figures/native_consistency.svg": "b0fad1a07daa108440dd18749464c97d90fde68487a198bcc73b6d7739e2a032",
+        "validation/finite_burn_review/figures/native_consistency.pdf": "655d1b446068dfefdb90aa8b1e9107ef507cdc85db27bb437e8bbc9665bf4883",
+        "validation/finite_burn_review/figures/native_consistency.png": "0c32755cee238ecbb417c185d2c8ff6b52de44da247fbf8fd3846e24b0c6a76c"
+      }
+    },
+    {
+      "evidence_class": "Computed finite-force/native Orekit study; prescribed surrogate controls",
+      "caption": "finite control sensitivity \u00b7 FBR-01",
+      "limitations": "Fixed-axis J2 and point releases; no rated host, flight precision, physical clearance or installed product. Failed thrust/fuel and unverified attitude requirements retained.",
+      "sources": {
+        "validation/finite_burn_review/report.py": "2b6ba82c08e124604a9324e8d055feecd9b7c79726efacf2c0b534d05936e34b",
+        "validation/finite_burn_review/SUMMARY.json": "93ccab34fd7716890b035af9f247f608f3a86f39cac43d3611b85a8480281167",
+        "validation/finite_burn_review/target.py": "3a1319507b7923c88e585302d7aa1aef326409f8a74ba9d4689c402a7e541881",
+        "validation/finite_burn_review/FiniteReplay.java": "1f15a95d50d8d98ae7447147cfcf33f2329c42a90d0b0c6ece3c1ee88057c451"
+      },
+      "exports": {
+        "validation/finite_burn_review/figures/finite_control_sensitivity.svg": "9521262f7584d6f0f2134501fdef7437752eb46c76e2d5cc7a82ad303756348a",
+        "validation/finite_burn_review/figures/finite_control_sensitivity.pdf": "e8728bdd807f9c2dcf66f98444c13547d0df10cb10653f0c3c1c7189739e992f",
+        "validation/finite_burn_review/figures/finite_control_sensitivity.png": "50738f839e56ea8c9b90163c451f366df5e476a4c12ab43a08e91b76ad40246b"
+      }
+    },
+    {
+      "evidence_class": "Computed finite-force/native Orekit study; prescribed surrogate controls",
+      "caption": "slew requirements \u00b7 FBR-01",
+      "limitations": "Fixed-axis J2 and point releases; no rated host, flight precision, physical clearance or installed product. Failed thrust/fuel and unverified attitude requirements retained.",
+      "sources": {
+        "validation/finite_burn_review/report.py": "2b6ba82c08e124604a9324e8d055feecd9b7c79726efacf2c0b534d05936e34b",
+        "validation/finite_burn_review/SUMMARY.json": "93ccab34fd7716890b035af9f247f608f3a86f39cac43d3611b85a8480281167",
+        "validation/finite_burn_review/target.py": "3a1319507b7923c88e585302d7aa1aef326409f8a74ba9d4689c402a7e541881",
+        "validation/finite_burn_review/FiniteReplay.java": "1f15a95d50d8d98ae7447147cfcf33f2329c42a90d0b0c6ece3c1ee88057c451"
+      },
+      "exports": {
+        "validation/finite_burn_review/figures/slew_requirements.svg": "637de838f950766672326e6084a56081f31caa3ad72d559462a1e8541d931ade",
+        "validation/finite_burn_review/figures/slew_requirements.pdf": "428f183afd844ed99d0be27008e1e83337075170adb714aace31dd377820dff9",
+        "validation/finite_burn_review/figures/slew_requirements.png": "1b1c7816ea6eaf25e911ffe3bc1cd8cc8cd4d5dfff177a1a145f23085e95960e"
+      }
     }
   ]
 }

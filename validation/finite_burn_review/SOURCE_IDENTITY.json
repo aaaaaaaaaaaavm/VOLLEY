@@ -1,0 +1,13 @@
+{
+  "source_repository": "https://github.com/aaaaaaaaaaaavm/VOLLEY-lab",
+  "source_commit": "9dd51594d75a1150ce35a506c346323be355d038",
+  "upstream_directory": "experiments/native-campaign-review/events",
+  "unchanged_input_files": {
+    "inputs/12_spring_20kg_events.csv": "21dcb5791e71fe819526d97e5ff2ea0b975507fbb3a94ebfa9fa8c11c89c4254",
+    "inputs/12_volley_3_6_10kg_events.csv": "030af3a8a4c5c515f46f0deddb98bc8a4803d372a7db57890d9fbc8943385881",
+    "inputs/12_volley_3_6_20kg_events.csv": "d8c2467c0ea017404aaddb77be337178f8b28300e19faa917430304ad723103d",
+    "inputs/4_spring_10kg_events.csv": "fa5e88640fbc8cd487e9002f9211c46b81cf2d21e294953bc74f190df6fbd8c8",
+    "inputs/4_volley_3_6_10kg_events.csv": "886984c8b1bfc7adc905a8a7f44e8b8193a4429e23e729ecf8e685828cf6ec16"
+  },
+  "target_independence": "Archived constructed targets and release commands shared; finite-force targeter and native replay separately implemented."
+}

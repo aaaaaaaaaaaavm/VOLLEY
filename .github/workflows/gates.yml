@@ -80,6 +80,7 @@ jobs:
           python3 validation/orbit_harmonization/check_capture.py
           python3 tools/check_current_transfer.py
           python3 validation/coupled_delivery/check_capture.py
+          python3 validation/finite_burn_review/check_capture.py
           python3 tools/check_feeder_archive.py
       - name: Gen6 mixed-size full-state screen
         run: python3 analysis/gen6_mixed_mission.py --check
