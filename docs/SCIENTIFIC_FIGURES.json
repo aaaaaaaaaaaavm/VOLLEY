@@ -562,7 +562,8 @@
       "exports": {
         "validation/finite_burn_review/figures/force_fuel_trade.svg": "abfb85d49f2976883a009eeac8f60d22e82af8b9b471152de90ea5de9a7d7822",
         "validation/finite_burn_review/figures/force_fuel_trade.pdf": "2464ba6168327706784773a0998e2c22cb9f8332b381ca8dc014ffe1c64b009e",
-        "validation/finite_burn_review/figures/force_fuel_trade.png": "cae25e7b03ac82bb6c4385b13e8df09422072d6fb23450551bfb90f5161daba9"
+        "validation/finite_burn_review/figures/force_fuel_trade.png": "cae25e7b03ac82bb6c4385b13e8df09422072d6fb23450551bfb90f5161daba9",
+        "docs/assets/finite-burn/force_fuel_trade.png": "cae25e7b03ac82bb6c4385b13e8df09422072d6fb23450551bfb90f5161daba9"
       }
     },
     {
@@ -578,7 +579,8 @@
       "exports": {
         "validation/finite_burn_review/figures/twelve_chronology.svg": "44297c3803322ebc72fb2593a882156b78f9e262f67e3ed5b01a20b68af3db75",
         "validation/finite_burn_review/figures/twelve_chronology.pdf": "f928e24681cd1a34bcb4d62572f4795401fd166c1c5ffd1c45bfeb24219f2201",
-        "validation/finite_burn_review/figures/twelve_chronology.png": "6f6f83f43299e7b7ebf6f4a59cdebdc1450dde163603368635e0e731e094bf8e"
+        "validation/finite_burn_review/figures/twelve_chronology.png": "6f6f83f43299e7b7ebf6f4a59cdebdc1450dde163603368635e0e731e094bf8e",
+        "docs/assets/finite-burn/twelve_chronology.png": "6f6f83f43299e7b7ebf6f4a59cdebdc1450dde163603368635e0e731e094bf8e"
       }
     },
     {
@@ -594,7 +596,8 @@
       "exports": {
         "validation/finite_burn_review/figures/native_consistency.svg": "b0fad1a07daa108440dd18749464c97d90fde68487a198bcc73b6d7739e2a032",
         "validation/finite_burn_review/figures/native_consistency.pdf": "655d1b446068dfefdb90aa8b1e9107ef507cdc85db27bb437e8bbc9665bf4883",
-        "validation/finite_burn_review/figures/native_consistency.png": "0c32755cee238ecbb417c185d2c8ff6b52de44da247fbf8fd3846e24b0c6a76c"
+        "validation/finite_burn_review/figures/native_consistency.png": "0c32755cee238ecbb417c185d2c8ff6b52de44da247fbf8fd3846e24b0c6a76c",
+        "docs/assets/finite-burn/native_consistency.png": "0c32755cee238ecbb417c185d2c8ff6b52de44da247fbf8fd3846e24b0c6a76c"
       }
     },
     {
@@ -610,7 +613,8 @@
       "exports": {
         "validation/finite_burn_review/figures/finite_control_sensitivity.svg": "9521262f7584d6f0f2134501fdef7437752eb46c76e2d5cc7a82ad303756348a",
         "validation/finite_burn_review/figures/finite_control_sensitivity.pdf": "e8728bdd807f9c2dcf66f98444c13547d0df10cb10653f0c3c1c7189739e992f",
-        "validation/finite_burn_review/figures/finite_control_sensitivity.png": "50738f839e56ea8c9b90163c451f366df5e476a4c12ab43a08e91b76ad40246b"
+        "validation/finite_burn_review/figures/finite_control_sensitivity.png": "50738f839e56ea8c9b90163c451f366df5e476a4c12ab43a08e91b76ad40246b",
+        "docs/assets/finite-burn/finite_control_sensitivity.png": "50738f839e56ea8c9b90163c451f366df5e476a4c12ab43a08e91b76ad40246b"
       }
     },
     {
@@ -626,7 +630,8 @@
       "exports": {
         "validation/finite_burn_review/figures/slew_requirements.svg": "637de838f950766672326e6084a56081f31caa3ad72d559462a1e8541d931ade",
         "validation/finite_burn_review/figures/slew_requirements.pdf": "428f183afd844ed99d0be27008e1e83337075170adb714aace31dd377820dff9",
-        "validation/finite_burn_review/figures/slew_requirements.png": "1b1c7816ea6eaf25e911ffe3bc1cd8cc8cd4d5dfff177a1a145f23085e95960e"
+        "validation/finite_burn_review/figures/slew_requirements.png": "1b1c7816ea6eaf25e911ffe3bc1cd8cc8cd4d5dfff177a1a145f23085e95960e",
+        "docs/assets/finite-burn/slew_requirements.png": "1b1c7816ea6eaf25e911ffe3bc1cd8cc8cd4d5dfff177a1a145f23085e95960e"
       }
     }
   ]

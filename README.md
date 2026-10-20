@@ -80,11 +80,19 @@ A [finite-force shot rerun](validation/P120_gen5_finite_coupled_shot.md) carries
 *Position-dependent model rerun, not a measured pulse or inverter validation. [P120 inputs, ledger and timestep check](validation/P120_gen5_finite_coupled_shot.md).*
 
 
+## Finite-duration host manoeuvres
+
+The [FBR-01 finite-force study](validation/finite_burn_review/README.md) and [seven-page report](validation/finite_burn_review/FINITE_BURN_CAMPAIGN_REVIEW.pdf) replace the earlier ideal impulses with explicit preparation, thrust windows, mass flow and recovery. Eighteen targeted schedules and 46 native Orekit runs retain numerical refinements, control-error probes and thrust/fuel failures.
+
+At the declared 35%/35% policy, the twelve-release spring input requires 33.83 N peak and 23.12 kg fuel, failing the illustrative 20 N / 20 kg screen. The imposed VOLLEY input requires 18.00 N and 6.12 kg. With a common 30 kg reserve and 100 N limit, **both** cases reach the constructed translational targets. VOLLEY's assumed device-mass penalty still exceeds its propellant saving. A single fixed-thruster interpretation also needs nearly 9°/s mean direction reversals; host attitude/force allocation remains unverified.
+
+![Separately targeted finite-force schedules; surrogate controls and resource limits, no rated host or achieved release](validation/finite_burn_review/figures/force_fuel_trade.png)
+
 ## Native campaign replay and precision requirements · 19 October 2026
 
 The [CNR-01 local report](validation/native_campaign_review/README.md) provides 51 native Orekit runs: complete prescribed host-burn/recoil sequences, matched four/twelve-release cases, step comparisons and deterministic control-error probes. Nominal payload endpoint differences from the source implementation are below 8 µm. This is a numerical consistency result, **not delivered flight accuracy**.
 
-A common +0.1% imposed release-speed bias produces approximately 1.53 km terminal position error for the VOLLEY cases. Conditional photogate budgets and a frozen-command thrust-time screen expose the sensor, control and host requirements. Actual motor ratings, closed-loop accuracy, finite-burn targeting and installed integration remain open.
+A common +0.1% imposed release-speed bias produces approximately 1.53 km terminal position error for the VOLLEY cases. Conditional photogate budgets and a frozen-command thrust-time screen expose the sensor, control and host requirements. Actual motor ratings, closed-loop accuracy and installed integration remain open. FBR-01 separately targets finite-duration translational controls; host force allocation and operational compatibility remain unverified.
 
 ![Terminal position sensitivity to stated deterministic command probes; imposed velocities, surrogate host and no feedback](validation/native_campaign_review/figures/control_sensitivity.png)
 
@@ -130,7 +138,7 @@ Values and definitions are in [the baseline](docs/BASELINE.md); scripts and mach
 | Does the field model agree with other methods? | Analytic field compared with magpylib and meshed 2-D/3-D field solves; checks apply to stated field quantities. | [A1](validation/A1_field_femm.md), [validation register](validation/README.md) |
 | Does the electrical shot model agree with circuit simulation? | ngspice cross-check also exposed an omitted bank resistance loss. | [Gen5 closure](docs/GEN5_CLOSURE.md), [validation register](validation/README.md) |
 | Does the CAD survive all criteria? | No. The revised enclosure is **50.04 kg**, and the new reference assembly exposes an **11 mm side-fed width shortfall** plus 17 intersecting leaf-solid pairs, including cassette/track and sled/track. | [CAD record](cad/README.md), [assembly screen](validation/P116_gen5_assembly_packaging.md), [mass ledger](validation/A35_constraint_ledger.md) |
-| Does a complete twelve-payload mission close? | No complete delivery in the six sampled finite-burn cases; best case delivered **5/12**. This is a bounded screen, not an impossibility proof. | [Finite-burn study](docs/MANIFEST_FINITE_BURN.md) |
+| Does a complete twelve-payload mission close? | The six archived cases stop at **5/12** or fewer. New FBR-01 retargeted surrogate controls reach all twelve translational targets with sufficient thrust/fuel, while host attitude, clearance and hardware remain unverified. | [Archived study](docs/MANIFEST_FINITE_BURN.md) · [FBR-01](validation/finite_burn_review/README.md) |
 | Has the concept been independently tested? | Selected numerical cross-checks exist. Hardware, host integration, release reliability and payload compatibility remain untested. | [Provenance](docs/PROVENANCE.md), [open problems](OPEN_PROBLEMS.md) |
 
 <p align="center"><img src="figures/manifest_timing.svg" alt="Bounded two-payload mission timing screen" width="49%"> <img src="figures/operational_uncertainty.svg" alt="Operational uncertainty study" width="49%"></p>
