@@ -19,7 +19,7 @@ fit = read("FIT_BUDGET.json")
 mass = read("METROLOGY.json")
 sched = read("SCHEDULE.json")
 control = read("CONTROLLER_REVIEW.json")
-convergence=read('CONVERGENCE.json')
+convergence = read("CONVERGENCE.json")
 bytime = [
     (
         t,

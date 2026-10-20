@@ -63,13 +63,19 @@ for i in range(8):
     time.sleep(0.1)
 app.primaryScreen().grabWindow(window.winId()).save(sys.argv[2])
 assert hashlib.sha256(source_path.read_bytes()).hexdigest() == source_hash
-output_path.with_suffix('.provenance.json').write_text(json.dumps({
-    'evidence_class': 'Genuine FreeCAD Qt/Coin application-window capture',
-    'source': 'cad/' + source_path.name,
-    'source_sha256': source_hash,
-    'image': 'figures/' + output_path.name,
-    'image_sha256': hashlib.sha256(output_path.read_bytes()).hexdigest(),
-    'software': '.'.join(App.Version()[:3]),
-    'boundary': 'Nominal displayed geometry; material colours are display conventions. No loads, contact, qualification or manufacture proof.'
-}, indent=2) + '\n')
+output_path.with_suffix(".provenance.json").write_text(
+    json.dumps(
+        {
+            "evidence_class": "Genuine FreeCAD Qt/Coin application-window capture",
+            "source": "cad/" + source_path.name,
+            "source_sha256": source_hash,
+            "image": "figures/" + output_path.name,
+            "image_sha256": hashlib.sha256(output_path.read_bytes()).hexdigest(),
+            "software": ".".join(App.Version()[:3]),
+            "boundary": "Nominal displayed geometry; material colours are display conventions. No loads, contact, qualification or manufacture proof.",
+        },
+        indent=2,
+    )
+    + "\n"
+)
 print("Genuine FreeCAD application window captured")

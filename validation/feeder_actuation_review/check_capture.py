@@ -34,11 +34,11 @@ for case in cad["poses"]:
 assert all(not x["penetrations"] for x in cad["motion"])
 assert len(step["cases"]) == 28 and all(x["valid"] for x in step["cases"])
 physical = load("PHYSICAL_INTERLOCKS.json")
-capture=load('figures/FreeCAD_FM02_transfer.provenance.json')
-assert sha(H/capture['source'])==capture['source_sha256']
-assert sha(H/capture['image'])==capture['image_sha256']
-drawing=load('drawings/DRAWING_RECORD.json')
-assert sha(H/'cad/FM02_3U_transfer.FCStd')==drawing['source_sha256']
+capture = load("figures/FreeCAD_FM02_transfer.provenance.json")
+assert sha(H / capture["source"]) == capture["source_sha256"]
+assert sha(H / capture["image"]) == capture["image_sha256"]
+drawing = load("drawings/DRAWING_RECORD.json")
+assert sha(H / "cad/FM02_3U_transfer.FCStd") == drawing["source_sha256"]
 assert (
     physical["verified_rigid_obstructions"] == 22
     and physical["retained_counterexamples"] == 2
@@ -49,10 +49,10 @@ assert (
     control["total_cases"] == 796 and len(control["common_cause_counterexamples"]) == 26
 )
 drive = load("INTEGRATED_DRIVE.json")
-convergence=load('CONVERGENCE.json')
-assert len(convergence['cases'])==972 and convergence['all_gate_decisions_agree']
-assert convergence['max_801_torque_relative_error']<1e-4
-assert convergence['max_801_energy_relative_error']<1e-4
+convergence = load("CONVERGENCE.json")
+assert len(convergence["cases"]) == 972 and convergence["all_gate_decisions_agree"]
+assert convergence["max_801_torque_relative_error"] < 1e-4
+assert convergence["max_801_energy_relative_error"] < 1e-4
 assert drive["case_count"] == 972 and drive["passes"] == 729
 for c in drive["cases"]:
     # Exact quintic peak speed is attained at half-time; acceleration maximum

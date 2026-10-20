@@ -238,12 +238,22 @@ ax.set(
 )
 ax.legend(fontsize=8)
 save(fig, "handling_margin")
-convergence=json.loads((H/'CONVERGENCE.json').read_text())
-fig,ax=plt.subplots(figsize=(6.7,3.5))
-for key,label,color in [('peak_torque_relative_error','Torque',NAVY),('energy_relative_error','Input-energy proxy',ORANGE)]:
-    x=[101,201,401,801,1601]
-    y=[max(r[key] for r in convergence['refinements'] if r['samples']==n) for n in x]
-    ax.loglog(x,y,'o-',color=color,label=label,markersize=4)
-ax.set(xlabel='Trajectory samples',ylabel='Maximum relative error against polynomial reference',title='Drive numerical consistency · same equations, independent evaluation')
-ax.legend(fontsize=8);save(fig,'drive_convergence')
+convergence = json.loads((H / "CONVERGENCE.json").read_text())
+fig, ax = plt.subplots(figsize=(6.7, 3.5))
+for key, label, color in [
+    ("peak_torque_relative_error", "Torque", NAVY),
+    ("energy_relative_error", "Input-energy proxy", ORANGE),
+]:
+    x = [101, 201, 401, 801, 1601]
+    y = [
+        max(r[key] for r in convergence["refinements"] if r["samples"] == n) for n in x
+    ]
+    ax.loglog(x, y, "o-", color=color, label=label, markersize=4)
+ax.set(
+    xlabel="Trajectory samples",
+    ylabel="Maximum relative error against polynomial reference",
+    title="Drive numerical consistency · same equations, independent evaluation",
+)
+ax.legend(fontsize=8)
+save(fig, "drive_convergence")
 print("Seven numerical/STEP figure sets and a prescribed-pose GIF generated")
