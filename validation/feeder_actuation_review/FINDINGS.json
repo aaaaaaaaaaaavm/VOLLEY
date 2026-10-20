@@ -1,0 +1,102 @@
+{
+  "revision": "FM-02",
+  "scope": "Engineering findings, subordinate to existing project authority; not a replacement project checklist.",
+  "findings": [
+    {
+      "id": "FM-G01",
+      "location": "Storage-gate wing crossed the drive-side captive guide in mid-stroke.",
+      "severity": "critical",
+      "correction": "Outboard wing/crossbolt, lower blocker and local cassette bridge.",
+      "disposition": "verified_nominal_geometry",
+      "evidence": "CONTINUOUS_SWEEPS.json"
+    },
+    {
+      "id": "FM-G02",
+      "location": "Closed fork crossmember crossed the original tall receiver during return; raising it created new crossings.",
+      "severity": "critical",
+      "correction": "FM-02 uses a12mm underfloor receiver; original closed fork retained.",
+      "disposition": "verified_nominal_geometry",
+      "evidence": "CONTINUOUS_SWEEPS.json"
+    },
+    {
+      "id": "FM-G03",
+      "location": "Underfloor latch arms crossed a support web during opening.",
+      "severity": "critical",
+      "correction": "Slot the base at moving arms; route guide webs outside their Xbands.",
+      "disposition": "verified_nominal_geometry",
+      "evidence": "cad/NATIVE_CAD.json"
+    },
+    {
+      "id": "FM-G04",
+      "location": "Sled capture bar crossed cassette ends during captive80mm travel.",
+      "severity": "critical",
+      "correction": "Eight-millimetre receiver-port relief leaves4mm nominal Ygap.",
+      "disposition": "verified_only_for_prescribed80mm_sled_path",
+      "evidence": "CONTINUOUS_SWEEPS.json"
+    },
+    {
+      "id": "FM-S01",
+      "location": "Power loss could move an unlatched receiver into a straddling payload.",
+      "severity": "critical",
+      "correction": "Two3mm crosspins form-lock each endpoint; explicit unlock/move/lock phases.",
+      "disposition": "partial_axial_retention_and_actuation_unimplemented",
+      "evidence": "PHYSICAL_INTERLOCKS.json"
+    },
+    {
+      "id": "FM-S02",
+      "location": "Shared false receiver confirmation can defeat Boolean guards.",
+      "severity": "critical",
+      "correction": "Two-confirmation software model; physically inserted pins checked separately.",
+      "disposition": "open_common_cause_hardware_proof",
+      "evidence": "CONTROLLER_REVIEW.json"
+    },
+    {
+      "id": "FM-S03",
+      "location": "BXR-LE source manual prohibits its use for moving-load braking.",
+      "severity": "critical",
+      "correction": "Reject that dynamic application; examine BXW-L as a separate candidate.",
+      "disposition": "rejected_candidate_application_corrected_not_brake_selected",
+      "evidence": "BRAKE_REVIEW.json"
+    },
+    {
+      "id": "FM-P01",
+      "location": "Custom screw/nut high-speed rating was unestablished at2/5/10s.",
+      "severity": "major",
+      "correction": "Retain ACT-01 failure domain; assess integrated32L ball-screw separately.",
+      "disposition": "new_ambient_candidate_screen_not_installed_or_flight_rated",
+      "evidence": "INTEGRATED_DRIVE.json"
+    },
+    {
+      "id": "FM-T01",
+      "location": "Small functional gaps do not absorb declared manufacturing/alignment bands.",
+      "severity": "critical",
+      "correction": "Publish the115nonpositive residuals; define actual datums,bores and fits before release.",
+      "disposition": "open_loaded_manufacturing_fit",
+      "evidence": "FIT_BUDGET.json"
+    },
+    {
+      "id": "FM-T02",
+      "location": "Repeated feed/return heating can exceed winding ceiling.",
+      "severity": "major",
+      "correction": "Retain12of54failures and uncorrelated thermal assumptions.",
+      "disposition": "open_actual_thermal_path",
+      "evidence": "INTEGRATED_DRIVE.json"
+    },
+    {
+      "id": "FM-C01",
+      "location": "Slow auxiliaries exceed later twelve-release coast intervals.",
+      "severity": "major",
+      "correction": "Compare103.0s and74.5s cycle assumptions against92.182s available coasts.",
+      "disposition": "open_actual_component_and_full_campaign_timing",
+      "evidence": "SCHEDULE.json"
+    },
+    {
+      "id": "FM-I01",
+      "location": "Comparable installed seven-candidate and four/twelve-cell hardware boundary incomplete.",
+      "severity": "critical",
+      "correction": "Retain all alternatives and evidence-gated unselected disposition.",
+      "disposition": "open_no_downselect",
+      "evidence": "README.md"
+    }
+  ]
+}

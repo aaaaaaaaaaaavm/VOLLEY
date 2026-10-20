@@ -1,0 +1,206 @@
+{
+  "revision": "FM-01",
+  "method": "Initial solid plus exact boundary-face translation prisms; relative motion; endpoint shape overlap establishes translation premise.",
+  "cases": [
+    {
+      "payload": "1U",
+      "phase": "gate_open",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 20,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_inserted",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "transfer",
+      "rigid_translation_checked": true,
+      "relative_pairs": 34,
+      "exact_prism_tests": 86,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_captured",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 37,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_open",
+      "rigid_translation_checked": true,
+      "relative_pairs": 3,
+      "exact_prism_tests": 8,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_home",
+      "rigid_translation_checked": true,
+      "relative_pairs": 32,
+      "exact_prism_tests": 81,
+      "penetrations": [
+        {
+          "parts": [
+            "fork_body",
+            "sled_entry_bar"
+          ],
+          "component": "boundary_prism_7",
+          "mm3": 80.0
+        }
+      ]
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_withdrawn",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "cell_closed",
+      "rigid_translation_checked": true,
+      "relative_pairs": 5,
+      "exact_prism_tests": 19,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_reset",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 4,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_translation",
+      "rigid_translation_checked": true,
+      "relative_pairs": 4,
+      "exact_prism_tests": 16,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_return",
+      "rigid_translation_checked": true,
+      "relative_pairs": 4,
+      "exact_prism_tests": 16,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "gate_open",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 20,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_inserted",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "transfer",
+      "rigid_translation_checked": true,
+      "relative_pairs": 34,
+      "exact_prism_tests": 86,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_captured",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 37,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_open",
+      "rigid_translation_checked": true,
+      "relative_pairs": 3,
+      "exact_prism_tests": 8,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_home",
+      "rigid_translation_checked": true,
+      "relative_pairs": 32,
+      "exact_prism_tests": 81,
+      "penetrations": [
+        {
+          "parts": [
+            "fork_body",
+            "sled_entry_bar"
+          ],
+          "component": "boundary_prism_7",
+          "mm3": 80.00000000000006
+        }
+      ]
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_withdrawn",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "cell_closed",
+      "rigid_translation_checked": true,
+      "relative_pairs": 5,
+      "exact_prism_tests": 19,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_reset",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 4,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_translation",
+      "rigid_translation_checked": true,
+      "relative_pairs": 4,
+      "exact_prism_tests": 16,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_return",
+      "rigid_translation_checked": true,
+      "relative_pairs": 4,
+      "exact_prism_tests": 16,
+      "penetrations": []
+    }
+  ],
+  "total_penetrations": 2,
+  "source_sha256": {
+    "mechanism.py": "7dd3b98e05c2787626352d6d1e0d3c0782d26fcbe78ae70a70cd2ff61948668a",
+    "check_sweeps.py": "1c190b695c6a8e9dcedfb6b4339727d6d1352ac1415f6d463ecd3bd43336cd40"
+  },
+  "boundary": "Nominal prescribed rigid translations only. FreeCAD/OCC numerical thresholds are not a manufacturing clearance. No actual joint constraint, force, tolerance, flex, wear or reliability proof."
+}

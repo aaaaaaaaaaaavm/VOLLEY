@@ -633,6 +633,196 @@
         "validation/finite_burn_review/figures/slew_requirements.png": "1b1c7816ea6eaf25e911ffe3bc1cd8cc8cd4d5dfff177a1a145f23085e95960e",
         "docs/assets/finite-burn/slew_requirements.png": "1b1c7816ea6eaf25e911ffe3bc1cd8cc8cd4d5dfff177a1a145f23085e95960e"
       }
+    },
+    {
+      "evidence_class": "STEP-derived nominal geometry",
+      "caption": "step sequence \u2014 FM-02 / IDR-01 / FSR-01",
+      "limitations": "Unselected computational revision. No source-rated installed feeder, manufacturing fit, measured reliability or flight claim. Failed fit/thermal/brake/timeline criteria remain explicit.",
+      "sources": {
+        "validation/feeder_actuation_review/plot.py": "7e9810d1eaccd43236ee2912ad250d7452deae846768db1689cbea635db37092",
+        "validation/feeder_actuation_review/cad/STEP_EDGES.json": "0d87c1a7708e7e39e7b3200fa28356401b3b816e95f4ff11a6d1d8bb859273a4",
+        "validation/feeder_actuation_review/cad/INTERLOCK_EDGES.json": "a3dd1fa4220b82d57e7a70a9bf86e6f406ce100fc1408e77206adf7633ccdeb5",
+        "validation/feeder_actuation_review/INTEGRATED_DRIVE.json": "be37b8010a307da062a1dd9fe1b0a595ca0b2fa1d79e47d07cd7d8038b454d38",
+        "validation/feeder_actuation_review/BRAKE_REVIEW.json": "966180f064760e56b415b9e32823568b8a4f60fb7bb0af37fa247fbd6144eedf",
+        "validation/feeder_actuation_review/FIT_BUDGET.json": "821d1f7c79fdfba7300a72cc0f688895699186503ad83914a2e997e8d3926a15",
+        "validation/feeder_actuation_review/SCHEDULE.json": "305be96261719a1ed5b56f8f09545a033d34daf3a9130ec73c36cd3fa78aaf71",
+        "validation/feeder_actuation_review/CONVERGENCE.json": "7db921e2db3deaf02350d173b4531ad8bee8fbbe39e7110e259a345d9840e15f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/step_sequence.png": "b0e88e43fd718a8a5385e1e64ddeb4a8a05935ee4641bdefa496b2a0c8266e15",
+        "validation/feeder_actuation_review/figures/step_sequence.svg": "1277230dac6b2dea6d4c6cdeea109b78979039db62d412e1c01e01e428e87d63",
+        "validation/feeder_actuation_review/figures/step_sequence.pdf": "cb47e7be7edbf226456c64b7ab7ca81a74c17d9db7def2a23efb0a629c6ce1b6"
+      }
+    },
+    {
+      "evidence_class": "STEP-derived nominal geometry",
+      "caption": "interlock plan \u2014 FM-02 / IDR-01 / FSR-01",
+      "limitations": "Unselected computational revision. No source-rated installed feeder, manufacturing fit, measured reliability or flight claim. Failed fit/thermal/brake/timeline criteria remain explicit.",
+      "sources": {
+        "validation/feeder_actuation_review/plot.py": "7e9810d1eaccd43236ee2912ad250d7452deae846768db1689cbea635db37092",
+        "validation/feeder_actuation_review/cad/STEP_EDGES.json": "0d87c1a7708e7e39e7b3200fa28356401b3b816e95f4ff11a6d1d8bb859273a4",
+        "validation/feeder_actuation_review/cad/INTERLOCK_EDGES.json": "a3dd1fa4220b82d57e7a70a9bf86e6f406ce100fc1408e77206adf7633ccdeb5",
+        "validation/feeder_actuation_review/INTEGRATED_DRIVE.json": "be37b8010a307da062a1dd9fe1b0a595ca0b2fa1d79e47d07cd7d8038b454d38",
+        "validation/feeder_actuation_review/BRAKE_REVIEW.json": "966180f064760e56b415b9e32823568b8a4f60fb7bb0af37fa247fbd6144eedf",
+        "validation/feeder_actuation_review/FIT_BUDGET.json": "821d1f7c79fdfba7300a72cc0f688895699186503ad83914a2e997e8d3926a15",
+        "validation/feeder_actuation_review/SCHEDULE.json": "305be96261719a1ed5b56f8f09545a033d34daf3a9130ec73c36cd3fa78aaf71",
+        "validation/feeder_actuation_review/CONVERGENCE.json": "7db921e2db3deaf02350d173b4531ad8bee8fbbe39e7110e259a345d9840e15f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/interlock_plan.png": "f99c2725cf24f8898db71957cab5f6091ab8d25453f9db7efc9ac93cc107f319",
+        "validation/feeder_actuation_review/figures/interlock_plan.svg": "b445d2875aa1d90c5285bb024b87d8d4ff49567c5d4c784a25330f11f4a46f60",
+        "validation/feeder_actuation_review/figures/interlock_plan.pdf": "dd130c826afc70ef6e1471dbae4696396993b48bd4416775aee6ec3556fa674d"
+      }
+    },
+    {
+      "evidence_class": "Computed deterministic sensitivity or numerical consistency",
+      "caption": "drive thermal \u2014 FM-02 / IDR-01 / FSR-01",
+      "limitations": "Unselected computational revision. No source-rated installed feeder, manufacturing fit, measured reliability or flight claim. Failed fit/thermal/brake/timeline criteria remain explicit.",
+      "sources": {
+        "validation/feeder_actuation_review/plot.py": "7e9810d1eaccd43236ee2912ad250d7452deae846768db1689cbea635db37092",
+        "validation/feeder_actuation_review/cad/STEP_EDGES.json": "0d87c1a7708e7e39e7b3200fa28356401b3b816e95f4ff11a6d1d8bb859273a4",
+        "validation/feeder_actuation_review/cad/INTERLOCK_EDGES.json": "a3dd1fa4220b82d57e7a70a9bf86e6f406ce100fc1408e77206adf7633ccdeb5",
+        "validation/feeder_actuation_review/INTEGRATED_DRIVE.json": "be37b8010a307da062a1dd9fe1b0a595ca0b2fa1d79e47d07cd7d8038b454d38",
+        "validation/feeder_actuation_review/BRAKE_REVIEW.json": "966180f064760e56b415b9e32823568b8a4f60fb7bb0af37fa247fbd6144eedf",
+        "validation/feeder_actuation_review/FIT_BUDGET.json": "821d1f7c79fdfba7300a72cc0f688895699186503ad83914a2e997e8d3926a15",
+        "validation/feeder_actuation_review/SCHEDULE.json": "305be96261719a1ed5b56f8f09545a033d34daf3a9130ec73c36cd3fa78aaf71",
+        "validation/feeder_actuation_review/CONVERGENCE.json": "7db921e2db3deaf02350d173b4531ad8bee8fbbe39e7110e259a345d9840e15f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/drive_thermal.png": "1ccc5f6d00355046861cf55aae822b72c85950d9e8a70a472a8b093d90f58361",
+        "validation/feeder_actuation_review/figures/drive_thermal.svg": "44881eb0c2b4a8d3c13d0ad7326af1f785adb9b651e77a220156c85d8190c51f",
+        "validation/feeder_actuation_review/figures/drive_thermal.pdf": "9d9862c13cf9e9b304bbecb1571454a58dc9e6dd9f3776a114c2b2796a24ea88"
+      }
+    },
+    {
+      "evidence_class": "Computed deterministic sensitivity or numerical consistency",
+      "caption": "stop sensitivity \u2014 FM-02 / IDR-01 / FSR-01",
+      "limitations": "Unselected computational revision. No source-rated installed feeder, manufacturing fit, measured reliability or flight claim. Failed fit/thermal/brake/timeline criteria remain explicit.",
+      "sources": {
+        "validation/feeder_actuation_review/plot.py": "7e9810d1eaccd43236ee2912ad250d7452deae846768db1689cbea635db37092",
+        "validation/feeder_actuation_review/cad/STEP_EDGES.json": "0d87c1a7708e7e39e7b3200fa28356401b3b816e95f4ff11a6d1d8bb859273a4",
+        "validation/feeder_actuation_review/cad/INTERLOCK_EDGES.json": "a3dd1fa4220b82d57e7a70a9bf86e6f406ce100fc1408e77206adf7633ccdeb5",
+        "validation/feeder_actuation_review/INTEGRATED_DRIVE.json": "be37b8010a307da062a1dd9fe1b0a595ca0b2fa1d79e47d07cd7d8038b454d38",
+        "validation/feeder_actuation_review/BRAKE_REVIEW.json": "966180f064760e56b415b9e32823568b8a4f60fb7bb0af37fa247fbd6144eedf",
+        "validation/feeder_actuation_review/FIT_BUDGET.json": "821d1f7c79fdfba7300a72cc0f688895699186503ad83914a2e997e8d3926a15",
+        "validation/feeder_actuation_review/SCHEDULE.json": "305be96261719a1ed5b56f8f09545a033d34daf3a9130ec73c36cd3fa78aaf71",
+        "validation/feeder_actuation_review/CONVERGENCE.json": "7db921e2db3deaf02350d173b4531ad8bee8fbbe39e7110e259a345d9840e15f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/stop_sensitivity.png": "26fd0e9a07eccd67819660aa5c2d4714d7a0af1a9069d4d2614f51b6c587002b",
+        "validation/feeder_actuation_review/figures/stop_sensitivity.svg": "76260a621471df86784664e090c434445dffee57d9c0fde8d8fe8907e5da531f",
+        "validation/feeder_actuation_review/figures/stop_sensitivity.pdf": "9cb0c88a1554d0fb4d9824afbfbcbcfbd66c056d28384142902ac6e2f7c8a92b"
+      }
+    },
+    {
+      "evidence_class": "Computed deterministic sensitivity or numerical consistency",
+      "caption": "fit budget \u2014 FM-02 / IDR-01 / FSR-01",
+      "limitations": "Unselected computational revision. No source-rated installed feeder, manufacturing fit, measured reliability or flight claim. Failed fit/thermal/brake/timeline criteria remain explicit.",
+      "sources": {
+        "validation/feeder_actuation_review/plot.py": "7e9810d1eaccd43236ee2912ad250d7452deae846768db1689cbea635db37092",
+        "validation/feeder_actuation_review/cad/STEP_EDGES.json": "0d87c1a7708e7e39e7b3200fa28356401b3b816e95f4ff11a6d1d8bb859273a4",
+        "validation/feeder_actuation_review/cad/INTERLOCK_EDGES.json": "a3dd1fa4220b82d57e7a70a9bf86e6f406ce100fc1408e77206adf7633ccdeb5",
+        "validation/feeder_actuation_review/INTEGRATED_DRIVE.json": "be37b8010a307da062a1dd9fe1b0a595ca0b2fa1d79e47d07cd7d8038b454d38",
+        "validation/feeder_actuation_review/BRAKE_REVIEW.json": "966180f064760e56b415b9e32823568b8a4f60fb7bb0af37fa247fbd6144eedf",
+        "validation/feeder_actuation_review/FIT_BUDGET.json": "821d1f7c79fdfba7300a72cc0f688895699186503ad83914a2e997e8d3926a15",
+        "validation/feeder_actuation_review/SCHEDULE.json": "305be96261719a1ed5b56f8f09545a033d34daf3a9130ec73c36cd3fa78aaf71",
+        "validation/feeder_actuation_review/CONVERGENCE.json": "7db921e2db3deaf02350d173b4531ad8bee8fbbe39e7110e259a345d9840e15f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/fit_budget.png": "2ed346a42414a966e044914f871069757a5bd450bd1e558076af71f1c64db625",
+        "validation/feeder_actuation_review/figures/fit_budget.svg": "dff6c3c776daf4d7719c4ee054f0602f3117ce90a9bd6cc0518f658ce3236ac2",
+        "validation/feeder_actuation_review/figures/fit_budget.pdf": "9d049e20e6356c02f6fa1f193e9bea99b42eb9739bc218a45353df02fcd08073"
+      }
+    },
+    {
+      "evidence_class": "Computed deterministic sensitivity or numerical consistency",
+      "caption": "handling margin \u2014 FM-02 / IDR-01 / FSR-01",
+      "limitations": "Unselected computational revision. No source-rated installed feeder, manufacturing fit, measured reliability or flight claim. Failed fit/thermal/brake/timeline criteria remain explicit.",
+      "sources": {
+        "validation/feeder_actuation_review/plot.py": "7e9810d1eaccd43236ee2912ad250d7452deae846768db1689cbea635db37092",
+        "validation/feeder_actuation_review/cad/STEP_EDGES.json": "0d87c1a7708e7e39e7b3200fa28356401b3b816e95f4ff11a6d1d8bb859273a4",
+        "validation/feeder_actuation_review/cad/INTERLOCK_EDGES.json": "a3dd1fa4220b82d57e7a70a9bf86e6f406ce100fc1408e77206adf7633ccdeb5",
+        "validation/feeder_actuation_review/INTEGRATED_DRIVE.json": "be37b8010a307da062a1dd9fe1b0a595ca0b2fa1d79e47d07cd7d8038b454d38",
+        "validation/feeder_actuation_review/BRAKE_REVIEW.json": "966180f064760e56b415b9e32823568b8a4f60fb7bb0af37fa247fbd6144eedf",
+        "validation/feeder_actuation_review/FIT_BUDGET.json": "821d1f7c79fdfba7300a72cc0f688895699186503ad83914a2e997e8d3926a15",
+        "validation/feeder_actuation_review/SCHEDULE.json": "305be96261719a1ed5b56f8f09545a033d34daf3a9130ec73c36cd3fa78aaf71",
+        "validation/feeder_actuation_review/CONVERGENCE.json": "7db921e2db3deaf02350d173b4531ad8bee8fbbe39e7110e259a345d9840e15f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/handling_margin.png": "f84d980faa7a9f2c5462b6c661f94ec1788b344dc695de35cf2d44d8512d2552",
+        "validation/feeder_actuation_review/figures/handling_margin.svg": "595b74cb2ecf8dcaec32f63cb6ec5413fae8c8ff4df6babcd34c0eee4e65f56a",
+        "validation/feeder_actuation_review/figures/handling_margin.pdf": "727cf849e8e8c4ca67ea02bdd4823fe80b8d893a04e82fbacdb4d90782e0bc9a"
+      }
+    },
+    {
+      "evidence_class": "Computed deterministic sensitivity or numerical consistency",
+      "caption": "drive convergence \u2014 FM-02 / IDR-01 / FSR-01",
+      "limitations": "Unselected computational revision. No source-rated installed feeder, manufacturing fit, measured reliability or flight claim. Failed fit/thermal/brake/timeline criteria remain explicit.",
+      "sources": {
+        "validation/feeder_actuation_review/plot.py": "7e9810d1eaccd43236ee2912ad250d7452deae846768db1689cbea635db37092",
+        "validation/feeder_actuation_review/cad/STEP_EDGES.json": "0d87c1a7708e7e39e7b3200fa28356401b3b816e95f4ff11a6d1d8bb859273a4",
+        "validation/feeder_actuation_review/cad/INTERLOCK_EDGES.json": "a3dd1fa4220b82d57e7a70a9bf86e6f406ce100fc1408e77206adf7633ccdeb5",
+        "validation/feeder_actuation_review/INTEGRATED_DRIVE.json": "be37b8010a307da062a1dd9fe1b0a595ca0b2fa1d79e47d07cd7d8038b454d38",
+        "validation/feeder_actuation_review/BRAKE_REVIEW.json": "966180f064760e56b415b9e32823568b8a4f60fb7bb0af37fa247fbd6144eedf",
+        "validation/feeder_actuation_review/FIT_BUDGET.json": "821d1f7c79fdfba7300a72cc0f688895699186503ad83914a2e997e8d3926a15",
+        "validation/feeder_actuation_review/SCHEDULE.json": "305be96261719a1ed5b56f8f09545a033d34daf3a9130ec73c36cd3fa78aaf71",
+        "validation/feeder_actuation_review/CONVERGENCE.json": "7db921e2db3deaf02350d173b4531ad8bee8fbbe39e7110e259a345d9840e15f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/drive_convergence.png": "8177aad176298ddd04c6d3b0e32d03c2e457f881af55215b1c4707327c17566c",
+        "validation/feeder_actuation_review/figures/drive_convergence.svg": "b95531e04ed254389120902bcfff3ff6d5347328eb25dc7ef2d90c8f28cf37ff",
+        "validation/feeder_actuation_review/figures/drive_convergence.pdf": "ce1525e1a0a69719af6763a6055c86a162a88bc50afd60940ba53bdf94b4df91"
+      }
+    },
+    {
+      "evidence_class": "Genuine FreeCAD Qt/Coin application capture",
+      "caption": "FM-02 captive transfer geometry",
+      "limitations": "Nominal displayed poses only; no physical timing, load or qualification proof.",
+      "sources": {
+        "validation/feeder_actuation_review/cad/FM02_3U_transfer.FCStd": "03c68ae5433eadafb7dd7af7a1fbf457f3ecff0ad2f79549742273947744b814",
+        "validation/feeder_actuation_review/capture_native.py": "0ac0d7137ff27877039523b999495d607d589c353879a55da70ea060815120dc"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/FreeCAD_FM02_transfer.png": "a99e61238ee98392cc499b2877986f4e440680cde75a456f755c572b0e2f45bf"
+      }
+    },
+    {
+      "evidence_class": "STEP-derived prescribed-pose animation",
+      "caption": "FM-02 captive transfer geometry",
+      "limitations": "Nominal displayed poses only; no physical timing, load or qualification proof.",
+      "sources": {
+        "validation/feeder_actuation_review/cad/STEP_EDGES.json": "0d87c1a7708e7e39e7b3200fa28356401b3b816e95f4ff11a6d1d8bb859273a4",
+        "validation/feeder_actuation_review/plot.py": "7e9810d1eaccd43236ee2912ad250d7452deae846768db1689cbea635db37092"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/figures/prescribed_cycle.gif": "8d0166b0130161093666e82674e66f331a21ebcf846424b96d7c7a96a6534ebe"
+      }
+    },
+    {
+      "evidence_class": "Native FreeCAD TechDraw nominal reference sheet",
+      "caption": "FM-02 nominal pin geometry; not for manufacture",
+      "limitations": "Dimensions listed in annotations; no approved alloy,tolerance,finish,axial-retention or actuator interface.",
+      "sources": {
+        "validation/feeder_actuation_review/drawings/FM02_ReferenceDrawings.FCStd": "9abaddf018fdbd04709d737e11d98c25ade903ad6cd47e6eb43bf44d1dedacc9",
+        "validation/feeder_actuation_review/build_drawings.py": "4d7ca5ade5774515be7748ec7baa60e307bb613a8a1de0608de1cbd245967e9f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/drawings/FM02_reference_pin_1.png": "2e031f6055fb493444741f4a5595d9695a1712b78339272efe61f362cb7461e2",
+        "validation/feeder_actuation_review/drawings/FM02_reference_pin_1.pdf": "3a81d59fce9caad58370d2487301b7d0e311e397b510147203141e0e980e762d"
+      }
+    },
+    {
+      "evidence_class": "Native FreeCAD TechDraw nominal reference sheet",
+      "caption": "FM-02 nominal pin geometry; not for manufacture",
+      "limitations": "Dimensions listed in annotations; no approved alloy,tolerance,finish,axial-retention or actuator interface.",
+      "sources": {
+        "validation/feeder_actuation_review/drawings/FM02_ReferenceDrawings.FCStd": "9abaddf018fdbd04709d737e11d98c25ade903ad6cd47e6eb43bf44d1dedacc9",
+        "validation/feeder_actuation_review/build_drawings.py": "4d7ca5ade5774515be7748ec7baa60e307bb613a8a1de0608de1cbd245967e9f"
+      },
+      "exports": {
+        "validation/feeder_actuation_review/drawings/FM02_reference_pin_2.png": "8ff81f8d56f0678fd6dbb013479c45e7e1b4d76b75e2157f397fdcfc9aed1a41",
+        "validation/feeder_actuation_review/drawings/FM02_reference_pin_2.pdf": "6eb77afe9317e7a0868b60d6dcfc63aead87461f5529022498ec6d8fefc02088"
+      }
     }
   ]
 }

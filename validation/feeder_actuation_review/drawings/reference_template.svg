@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:freecad="https://www.freecad.org/wiki/index.php?title=Svg_Namespace" width="297mm" height="210mm" viewBox="0 0 297 210">
+<rect x="10" y="10" width="277" height="190" fill="none" stroke="black" stroke-width="0.5"/>
+<path d="M10 166H287M170 166V200M245 166V200M170 183H287" fill="none" stroke="black" stroke-width="0.25"/>
+<g font-family="DejaVu Sans" font-size="3.5"><text x="15" y="174" freecad:editable="title"><tspan>REFERENCE GEOMETRY</tspan></text>
+<text x="15" y="182">VOLLEY · All dimensions in mm</text><text x="15" y="190">NOT FOR MANUFACTURE · NO APPROVAL REPRESENTED</text>
+<text x="175" y="174" freecad:editable="number"><tspan>FM-02</tspan></text><text x="175" y="191">Review revision ·20October2026</text>
+<text x="250" y="174" freecad:editable="scale"><tspan>Scale3:1</tspan></text><text x="250" y="191" freecad:editable="sheet"><tspan>1/2</tspan></text></g></svg>

@@ -1,0 +1,174 @@
+{
+  "software": "CadQuery2.8.0/OpenCascade7.9",
+  "cases": [
+    {
+      "file": "FM02_1U_stored.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.1794693172
+    },
+    {
+      "file": "FM02_1U_gate_open.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.1794693056
+    },
+    {
+      "file": "FM02_1U_bolt_inserted.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.1794693042
+    },
+    {
+      "file": "FM02_1U_transfer.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.1794693004
+    },
+    {
+      "file": "FM02_1U_receiver_unlocked.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.1794693023
+    },
+    {
+      "file": "FM02_1U_receiver_closed.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.1794693014
+    },
+    {
+      "file": "FM02_1U_sled_captured.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.1794693
+    },
+    {
+      "file": "FM02_1U_fork_open.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.1794693032
+    },
+    {
+      "file": "FM02_1U_fork_home.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.179469305
+    },
+    {
+      "file": "FM02_1U_bolt_withdrawn.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.179469306
+    },
+    {
+      "file": "FM02_1U_cell_closed.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.179469314
+    },
+    {
+      "file": "FM02_1U_fork_reset.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.179469313
+    },
+    {
+      "file": "FM02_1U_sled_translation.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.179469313
+    },
+    {
+      "file": "FM02_1U_sled_return.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2074320.179469313
+    },
+    {
+      "file": "FM02_3U_stored.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469314
+    },
+    {
+      "file": "FM02_3U_gate_open.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469293
+    },
+    {
+      "file": "FM02_3U_bolt_inserted.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469291
+    },
+    {
+      "file": "FM02_3U_transfer.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469292
+    },
+    {
+      "file": "FM02_3U_receiver_unlocked.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469299
+    },
+    {
+      "file": "FM02_3U_receiver_closed.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469293
+    },
+    {
+      "file": "FM02_3U_sled_captured.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469285
+    },
+    {
+      "file": "FM02_3U_fork_open.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469288
+    },
+    {
+      "file": "FM02_3U_fork_home.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469291
+    },
+    {
+      "file": "FM02_3U_bolt_withdrawn.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469291
+    },
+    {
+      "file": "FM02_3U_cell_closed.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469319
+    },
+    {
+      "file": "FM02_3U_fork_reset.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469312
+    },
+    {
+      "file": "FM02_3U_sled_translation.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469316
+    },
+    {
+      "file": "FM02_3U_sled_return.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 5107494.179469312
+    }
+  ],
+  "boundary": "Independent exchange topology readback; not a tolerance, material or operational certification."
+}

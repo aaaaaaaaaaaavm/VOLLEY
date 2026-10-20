@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "numerical_packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1",
+    "Pillow": "13.0.0"
+  },
+  "native_CAD": "FreeCAD1.0/OpenCascade7.8.1",
+  "independent_CAD": "CadQuery2.8.0/OpenCascade7.9",
+  "native_drawings": "FreeCAD TechDraw viaQt/Coin; reference geometry only",
+  "PDF": "Pandoc3.1.11.1/XeLaTeX"
+}

@@ -1,0 +1,214 @@
+{
+  "revision": "FM-02",
+  "actions": [
+    {
+      "action": "open_storage",
+      "requirements": {
+        "fork_captive": true,
+        "fork_home": true,
+        "sled_docked": true
+      },
+      "truth_and_single_channel_fault_cases": 56
+    },
+    {
+      "action": "feed",
+      "requirements": {
+        "gate_open_locked": true,
+        "fork_captive": true,
+        "sled_docked": true,
+        "receiver_open_locked": true,
+        "path_proved": true
+      },
+      "truth_and_single_channel_fault_cases": 352
+    },
+    {
+      "action": "capture_receiver",
+      "requirements": {
+        "payload_seated": true,
+        "fork_captive": true,
+        "sled_docked": true
+      },
+      "truth_and_single_channel_fault_cases": 56
+    },
+    {
+      "action": "open_fork",
+      "requirements": {
+        "receiver_captive": true,
+        "payload_seated": true,
+        "sled_docked": true
+      },
+      "truth_and_single_channel_fault_cases": 56
+    },
+    {
+      "action": "withdraw_fork",
+      "requirements": {
+        "receiver_captive": true,
+        "sled_docked": true,
+        "fork_front_open": true
+      },
+      "truth_and_single_channel_fault_cases": 56
+    },
+    {
+      "action": "close_storage",
+      "requirements": {
+        "fork_home": true,
+        "receiver_captive": true
+      },
+      "truth_and_single_channel_fault_cases": 20
+    },
+    {
+      "action": "move_sled",
+      "requirements": {
+        "receiver_captive": true,
+        "fork_home": true,
+        "gate_closed_locked": true,
+        "path_proved": true
+      },
+      "truth_and_single_channel_fault_cases": 144
+    },
+    {
+      "action": "reset",
+      "requirements": {
+        "fork_home": true,
+        "path_proved": true,
+        "supervised_reset": true
+      },
+      "truth_and_single_channel_fault_cases": 56
+    }
+  ],
+  "total_cases": 796,
+  "common_cause_counterexamples": [
+    {
+      "action": "open_storage",
+      "common_cause_false_confirmation": "fork_captive",
+      "unsafe_permission": true
+    },
+    {
+      "action": "open_storage",
+      "common_cause_false_confirmation": "fork_home",
+      "unsafe_permission": true
+    },
+    {
+      "action": "open_storage",
+      "common_cause_false_confirmation": "sled_docked",
+      "unsafe_permission": true
+    },
+    {
+      "action": "feed",
+      "common_cause_false_confirmation": "gate_open_locked",
+      "unsafe_permission": true
+    },
+    {
+      "action": "feed",
+      "common_cause_false_confirmation": "fork_captive",
+      "unsafe_permission": true
+    },
+    {
+      "action": "feed",
+      "common_cause_false_confirmation": "sled_docked",
+      "unsafe_permission": true
+    },
+    {
+      "action": "feed",
+      "common_cause_false_confirmation": "receiver_open_locked",
+      "unsafe_permission": true
+    },
+    {
+      "action": "feed",
+      "common_cause_false_confirmation": "path_proved",
+      "unsafe_permission": true
+    },
+    {
+      "action": "capture_receiver",
+      "common_cause_false_confirmation": "payload_seated",
+      "unsafe_permission": true
+    },
+    {
+      "action": "capture_receiver",
+      "common_cause_false_confirmation": "fork_captive",
+      "unsafe_permission": true
+    },
+    {
+      "action": "capture_receiver",
+      "common_cause_false_confirmation": "sled_docked",
+      "unsafe_permission": true
+    },
+    {
+      "action": "open_fork",
+      "common_cause_false_confirmation": "receiver_captive",
+      "unsafe_permission": true
+    },
+    {
+      "action": "open_fork",
+      "common_cause_false_confirmation": "payload_seated",
+      "unsafe_permission": true
+    },
+    {
+      "action": "open_fork",
+      "common_cause_false_confirmation": "sled_docked",
+      "unsafe_permission": true
+    },
+    {
+      "action": "withdraw_fork",
+      "common_cause_false_confirmation": "receiver_captive",
+      "unsafe_permission": true
+    },
+    {
+      "action": "withdraw_fork",
+      "common_cause_false_confirmation": "sled_docked",
+      "unsafe_permission": true
+    },
+    {
+      "action": "withdraw_fork",
+      "common_cause_false_confirmation": "fork_front_open",
+      "unsafe_permission": true
+    },
+    {
+      "action": "close_storage",
+      "common_cause_false_confirmation": "fork_home",
+      "unsafe_permission": true
+    },
+    {
+      "action": "close_storage",
+      "common_cause_false_confirmation": "receiver_captive",
+      "unsafe_permission": true
+    },
+    {
+      "action": "move_sled",
+      "common_cause_false_confirmation": "receiver_captive",
+      "unsafe_permission": true
+    },
+    {
+      "action": "move_sled",
+      "common_cause_false_confirmation": "fork_home",
+      "unsafe_permission": true
+    },
+    {
+      "action": "move_sled",
+      "common_cause_false_confirmation": "gate_closed_locked",
+      "unsafe_permission": true
+    },
+    {
+      "action": "move_sled",
+      "common_cause_false_confirmation": "path_proved",
+      "unsafe_permission": true
+    },
+    {
+      "action": "reset",
+      "common_cause_false_confirmation": "fork_home",
+      "unsafe_permission": true
+    },
+    {
+      "action": "reset",
+      "common_cause_false_confirmation": "path_proved",
+      "unsafe_permission": true
+    },
+    {
+      "action": "reset",
+      "common_cause_false_confirmation": "supervised_reset",
+      "unsafe_permission": true
+    }
+  ],
+  "fault_policy": "Any jam,timeout,disagreement or unexpected occupancy latches campaign inhibit. Failed cell stays restrained; remaining cells require supervised reset and a newly proved common path.",
+  "boundary": "Finite Boolean requirements verification. Neither actual sensors nor their independence/contact coverage are implemented. Power loss does not itself provide mechanical containment."
+}

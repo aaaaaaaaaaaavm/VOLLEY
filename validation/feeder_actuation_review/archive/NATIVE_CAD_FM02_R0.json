@@ -1,0 +1,744 @@
+{
+  "revision": "FM-01",
+  "software": {
+    "FreeCAD": "1.0.0",
+    "OpenCascade": "7.8.1"
+  },
+  "poses": [
+    {
+      "payload": "1U",
+      "phase": "stored",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": 2.3283064365386963e-09,
+      "files": {
+        "FM01_1U_stored.FCStd": "aaf8349cf7c2c27648e61b3928cb4b3f91219bec57463d12ded0714a5735a832",
+        "FM01_1U_stored.step": "1c35d45b21edacd24ca241c5515d83894d0f241d020de1a7407cf6175fc7156d"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "gate_open",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -6.51925802230835e-09,
+      "files": {
+        "FM01_1U_gate_open.FCStd": "7088b68617135da96f63c1578b19d0e76dd4283c5e05b3e99f6e78277d729c3f",
+        "FM01_1U_gate_open.step": "393eb410432fcce340592102d0ace15d6ecb445d56daf692525f6357ef95855e"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_inserted",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -5.587935447692871e-09,
+      "files": {
+        "FM01_1U_bolt_inserted.FCStd": "52285bc282caec6259554cc14412e4f7b7225696bb410314b980c3b08329444b",
+        "FM01_1U_bolt_inserted.step": "ecb0e93e1256d2001d6cd15c3e3a7ececa8c76b1f5f6994f12c4a2826e874ddb"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "transfer",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -6.984919309616089e-09,
+      "files": {
+        "FM01_1U_transfer.FCStd": "d4e288032539ce339250cd2b589926f43a3506faee2cb480c9f999a3d6159429",
+        "FM01_1U_transfer.step": "35b971288bcf0db747474b38b54ead04991b1ae56223427f8914457593d589d5"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_captured",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -7.450580596923828e-09,
+      "files": {
+        "FM01_1U_sled_captured.FCStd": "0a3081901a0412cf1d4bfd9c171adfc7496913361a2f53463f0ff003078ed0ab",
+        "FM01_1U_sled_captured.step": "6c691a184af3f3dfb274bbcb047bdbf561ed49553dd149a36b451bfcc898f5a9"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_open",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -7.916241884231567e-09,
+      "files": {
+        "FM01_1U_fork_open.FCStd": "e8404613d595548f67f8cdb2daf67031a5fd8bb15023b7a60a7deb5b3e6f616f",
+        "FM01_1U_fork_open.step": "18785c92bc2587500da8eb501a59cc1f673ef727e8e98cc6322701483eb718d6"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_home",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -9.313225746154785e-09,
+      "files": {
+        "FM01_1U_fork_home.FCStd": "fb08f9496925de5e06a41e852006f167b88e64e629235ef18b57f4df05db74e1",
+        "FM01_1U_fork_home.step": "8e7f010201d7ae9bafaaa8075afcbeda248c832f9fbc0eadbc2651eb5d57d9db"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_withdrawn",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -1.0710209608078003e-08,
+      "files": {
+        "FM01_1U_bolt_withdrawn.FCStd": "f30f2bddf02e0b764bcf34505f6d94479376211b7ed2b53bed2d6d5a3378e7af",
+        "FM01_1U_bolt_withdrawn.step": "f505a2dc95f4f6c283fc59c88fa43b809d561d3305f93399952b36a96c1093ee"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "cell_closed",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -4.656612873077393e-10,
+      "files": {
+        "FM01_1U_cell_closed.FCStd": "c3b0ad29f247346f6b41871dcd0590a86bbbb78c5b08807668acbfa2d414c730",
+        "FM01_1U_cell_closed.step": "68e0d6774e91c457a5c374cf38833921d1666054c6cb9908bebbc9dc879d8fcc"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_reset",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -3.259629011154175e-09,
+      "files": {
+        "FM01_1U_fork_reset.FCStd": "0aa9c2cb7421693f8e0149663c516189079cd32cf545af2c0eb0ccbad1a6cd8e",
+        "FM01_1U_fork_reset.step": "5f1a1f79d3926c5322e1251c1044baf3207485a9680d1907e504ee03e15c22c5"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_translation",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -1.3969838619232178e-09,
+      "files": {
+        "FM01_1U_sled_translation.FCStd": "808b7fab739c6647147454b5ace316764b2c2ae71928ff3c90297027bc9154fb",
+        "FM01_1U_sled_translation.step": "f437f8d4d139c750e40c493938f55bd1116d6376ae3ab3205f9f361b1d9bc340"
+      }
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_return",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -3.259629011154175e-09,
+      "files": {
+        "FM01_1U_sled_return.FCStd": "c2533a3f1c07e0da1d82f0e1e5a334353482d2828cd4353cd92390fbcde32ea4",
+        "FM01_1U_sled_return.step": "6d524410b7f62f39f3461f15e43299e00b24da63124b778693b3c606020531db"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "stored",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -7.450580596923828e-09,
+      "files": {
+        "FM01_3U_stored.FCStd": "f747c712d6ed100f4393bfb4c5b74e49018f67c3f76fb1e4faa86113368fd0ee",
+        "FM01_3U_stored.step": "3667730c91b626e5866dd275084beffe699bf9b6125f0212d89ed3e614ec8a7b"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "gate_open",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -2.0489096641540527e-08,
+      "files": {
+        "FM01_3U_gate_open.FCStd": "fecfaf466959bcbfbf6c5b35aa732fe38a7ce3df559c25010f702e871c987aff",
+        "FM01_3U_gate_open.step": "689f56aa2dc01d666873892928be592885bff2655b17f513305a3b0527f3e006"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_inserted",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -1.955777406692505e-08,
+      "files": {
+        "FM01_3U_bolt_inserted.FCStd": "48324f5c8ca6734bda3ded3b41f6b86e69f97ee7d8afb7ed04814b0cdf5ab5f0",
+        "FM01_3U_bolt_inserted.step": "dc36b94ef97d2adf3d62dd78daec94e7305d157e44df4c657782ffbd1cee1a55"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "transfer",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -1.6763806343078613e-08,
+      "files": {
+        "FM01_3U_transfer.FCStd": "aa78c5ef4f560616654869cf64aa8fd9baf937afe7c3940438ed56a1eeb2f1b7",
+        "FM01_3U_transfer.step": "fd87153bb2a045abf3e56f08f0502ac1374e8002a0a2a4f230361c854d5da144"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_captured",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -1.6763806343078613e-08,
+      "files": {
+        "FM01_3U_sled_captured.FCStd": "3367ff31b6ab26a4a761834ae8fcc8f8818b9f0c01169083ee340b382a32ee43",
+        "FM01_3U_sled_captured.step": "6f842ed5833bbe11d6493e515eb5261d96c840ab7e290d385a2dfb62bf0c337e"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_open",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -2.0489096641540527e-08,
+      "files": {
+        "FM01_3U_fork_open.FCStd": "87420ea0ad6c60190452903b4d62f688630f61f4d3f5210196b7a79734db9961",
+        "FM01_3U_fork_open.step": "6fd05282b8b891a7aefe6943ea2d94b410b0e4a31679f3a7e059209785cd1302"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_home",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -1.862645149230957e-08,
+      "files": {
+        "FM01_3U_fork_home.FCStd": "dcc07d98c2c1303ba4c1fa39272e4d965db5a649dd57c8d2f311dbde9ec31f12",
+        "FM01_3U_fork_home.step": "dca7ce8becb9f83f2f5a6280c553e25e4073335fa340f0543734099a5e253c49"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_withdrawn",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": -1.955777406692505e-08,
+      "files": {
+        "FM01_3U_bolt_withdrawn.FCStd": "348ba8501bc842f68e759061557311442e6e7ecacbf7ad5088b16e86b45ea857",
+        "FM01_3U_bolt_withdrawn.step": "49465e3b920bdb7a135ffbdfd33a0187487e37defc26189496635aeea115f8e0"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "cell_closed",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": 9.313225746154785e-10,
+      "files": {
+        "FM01_3U_cell_closed.FCStd": "c22699f2916796e4072613ea818c8de5ffd42c267147312bf0cc68e1128652af",
+        "FM01_3U_cell_closed.step": "3c905ed3a880b69cad44d1cce45d4360608c098e06c354093a9ef0d041378ea3"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_reset",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": 8.381903171539307e-09,
+      "files": {
+        "FM01_3U_fork_reset.FCStd": "30e5214f030bfdfc9863e30cea02aaf8ae64516e2d53c62bff503961c88c9751",
+        "FM01_3U_fork_reset.step": "82b417da188f8e906ba59314180c4bba0f7343708a0a5dac700992eacd19dcd8"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_translation",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": 1.0244548320770264e-08,
+      "files": {
+        "FM01_3U_sled_translation.FCStd": "92bb331b0eaa609b9f063702c836318ac1d74f1ab709fbdb3664b19c0b776cd8",
+        "FM01_3U_sled_translation.step": "4bc181cc22581a2bbe96be4d76db3cb79d57e50eaaba675a5ded01e3055349c4"
+      }
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_return",
+      "invalid_parts": [],
+      "penetrations": [],
+      "step_valid": true,
+      "step_solids": 35,
+      "component_solids": 35,
+      "step_volume_error_mm3": 8.381903171539307e-09,
+      "files": {
+        "FM01_3U_sled_return.FCStd": "1fec55cd0e83e51cf277d2290d18c915c7f8ac9ec05377b170f9d4d0ee2825f0",
+        "FM01_3U_sled_return.step": "82d96c8a1ae111540611c59c951d0f6d1e1d06ea57559a2cd931395334589d29"
+      }
+    }
+  ],
+  "motion": [
+    {
+      "payload": "1U",
+      "phase": "gate_open",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "gate_open",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "gate_open",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_inserted",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_inserted",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_inserted",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "transfer",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "transfer",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "transfer",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_captured",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_captured",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_captured",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_open",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_open",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_open",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_home",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_home",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_home",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_withdrawn",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_withdrawn",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_withdrawn",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "cell_closed",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "cell_closed",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "cell_closed",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_reset",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_reset",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_reset",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_translation",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_translation",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_translation",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_return",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_return",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_return",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "gate_open",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "gate_open",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "gate_open",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_inserted",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_inserted",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_inserted",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "transfer",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "transfer",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "transfer",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_captured",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_captured",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_captured",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_open",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_open",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_open",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_home",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_home",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_home",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_withdrawn",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_withdrawn",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_withdrawn",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "cell_closed",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "cell_closed",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "cell_closed",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_reset",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_reset",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_reset",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_translation",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_translation",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_translation",
+      "fraction": 0.75,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_return",
+      "fraction": 0.25,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_return",
+      "fraction": 0.5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_return",
+      "fraction": 0.75,
+      "penetrations": []
+    }
+  ],
+  "boundary": "Prescribed motion and exact-solid samples, not continuous contact dynamics, actual actuator ratings, real toleranced joints or hardware validation."
+}

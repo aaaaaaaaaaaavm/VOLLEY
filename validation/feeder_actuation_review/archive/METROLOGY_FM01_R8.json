@@ -1,0 +1,1170 @@
+{
+  "revision": "FM-01",
+  "configurations": [
+    {
+      "payload": "1U",
+      "state": "sled_captured",
+      "total_with_payload_proxy_kg": 5.214034975816089,
+      "without_payload_proxy_kg": 3.884034975816089,
+      "CG_with_payload_mm": [
+        36.004065835796354,
+        -37.65305287837213,
+        52.78450013126305
+      ],
+      "inertia_with_payload_kg_m2": [
+        [
+          0.08172221238210543,
+          -0.021369094550965837,
+          0.003910509630198611
+        ],
+        [
+          -0.021369094550965837,
+          0.04404929290284109,
+          -0.0005967440840721424
+        ],
+        [
+          0.003910509630198611,
+          -0.0005967440840721424,
+          0.10368856491854099
+        ]
+      ],
+      "envelope_mm": [
+        351.5,
+        458.2,
+        368.0
+      ],
+      "ledger": [
+        {
+          "part": "payload",
+          "material": "payload",
+          "volume_mm3": 1135000.0,
+          "mass_proxy_kg": 1.33,
+          "CG_mm": [
+            56.75,
+            50.0,
+            72.0
+          ],
+          "basis": "Declared mission payload mass, homogeneous envelope inertia."
+        },
+        {
+          "part": "support_floor",
+          "material": "aluminium",
+          "volume_mm3": 96273.0,
+          "mass_proxy_kg": 0.2599371,
+          "CG_mm": [
+            56.58836589698046,
+            -153.64920071047956,
+            19.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "cassette_L_-8",
+          "material": "aluminium",
+          "volume_mm3": 95200.00000000001,
+          "mass_proxy_kg": 0.25704000000000005,
+          "CG_mm": [
+            -5.5,
+            -107.99999999999999,
+            80.57142857142857
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "cassette_L_117.5",
+          "material": "aluminium",
+          "volume_mm3": 89079.99999999996,
+          "mass_proxy_kg": 0.24051599999999987,
+          "CG_mm": [
+            119.99694656488556,
+            -109.16793893129777,
+            80.87328244274815
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "rear_wall",
+          "material": "aluminium",
+          "volume_mm3": 61600.000000000015,
+          "mass_proxy_kg": 0.16632000000000005,
+          "CG_mm": [
+            56.75,
+            -214.0,
+            78.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "storage_gate",
+          "material": "aluminium",
+          "volume_mm3": 52509.25865836533,
+          "mass_proxy_kg": 0.1417749983775864,
+          "CG_mm": [
+            67.35894436898967,
+            -91.00000000000004,
+            -43.66314674857586
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "fork_body",
+          "material": "aluminium",
+          "volume_mm3": 106551.34376660486,
+          "mass_proxy_kg": 0.2876886281698331,
+          "CG_mm": [
+            72.55563175132966,
+            -3.889972060545568,
+            77.3274369182072
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "fork_front",
+          "material": "aluminium",
+          "volume_mm3": 17419.5,
+          "mass_proxy_kg": 0.04703265,
+          "CG_mm": [
+            56.75,
+            102.5,
+            99.5
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "captive_guide",
+          "material": "steel",
+          "volume_mm3": 72863.99999999999,
+          "mass_proxy_kg": 0.5719823999999999,
+          "CG_mm": [
+            -58.0,
+            -100.0,
+            49.27272727272728
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "end_block_-238",
+          "material": "steel",
+          "volume_mm3": 1536.0,
+          "mass_proxy_kg": 0.012057599999999998,
+          "CG_mm": [
+            -58.0,
+            -234.0,
+            50.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "end_block_30",
+          "material": "steel",
+          "volume_mm3": 1536.0,
+          "mass_proxy_kg": 0.012057599999999998,
+          "CG_mm": [
+            -58.0,
+            34.0,
+            50.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "gate_bolt_guide",
+          "material": "steel",
+          "volume_mm3": 13381.24075031608,
+          "mass_proxy_kg": 0.10504273988998121,
+          "CG_mm": [
+            174.07852462930651,
+            -91.00000000000004,
+            -53.04437527576847
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "gate_crossbolt",
+          "material": "steel",
+          "volume_mm3": 1828.4069243892595,
+          "mass_proxy_kg": 0.014352994356455687,
+          "CG_mm": [
+            180.45876288659798,
+            -91.00000000000001,
+            -25.000000000000007
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "motor_3242_envelope",
+          "material": "catalogue",
+          "volume_mm3": 35547.74919389922,
+          "mass_proxy_kg": 0.179,
+          "CG_mm": [
+            -94.0,
+            -317.09999999999997,
+            70.0
+          ],
+          "basis": "Manufacturer mass, homogeneous envelope inertia approximation."
+        },
+        {
+          "part": "motor_shaft_envelope",
+          "material": "steel",
+          "volume_mm3": 255.25440310417062,
+          "mass_proxy_kg": 0.002003747064367739,
+          "CG_mm": [
+            -93.99999999999999,
+            -288.49999999999994,
+            70.00000000000001
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "shaft_extension",
+          "material": "steel",
+          "volume_mm3": 2277.6546738526004,
+          "mass_proxy_kg": 0.01787958918974291,
+          "CG_mm": [
+            -94.0,
+            -264.5,
+            70.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "screw_major_envelope",
+          "material": "steel",
+          "volume_mm3": 23169.24582022472,
+          "mass_proxy_kg": 0.18187857968876406,
+          "CG_mm": [
+            -94.00000000000001,
+            -102.50000000000001,
+            70.00000000000001
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "coupling_envelope",
+          "material": "aluminium",
+          "volume_mm3": 1930.4065838696863,
+          "mass_proxy_kg": 0.005212097776448153,
+          "CG_mm": [
+            -94.00000000000001,
+            -279.1493427235779,
+            70.00000000000001
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "bearing_housing",
+          "material": "aluminium",
+          "volume_mm3": 13536.946070110047,
+          "mass_proxy_kg": 0.036549754389297126,
+          "CG_mm": [
+            -94.0,
+            -253.99999999999997,
+            70.00000000000001
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "bearing_ring_A",
+          "material": "steel",
+          "volume_mm3": 3350.4378792188086,
+          "mass_proxy_kg": 0.026300937351867646,
+          "CG_mm": [
+            -94.00000000000001,
+            -257.5,
+            70.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "bearing_ring_B",
+          "material": "steel",
+          "volume_mm3": 3350.4378792188086,
+          "mass_proxy_kg": 0.026300937351867646,
+          "CG_mm": [
+            -94.00000000000001,
+            -248.49999999999994,
+            70.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "shaft_collar_A",
+          "material": "steel",
+          "volume_mm3": 65.95773776211774,
+          "mass_proxy_kg": 0.0005177682414326243,
+          "CG_mm": [
+            -94.00000000000001,
+            -263.0,
+            69.99999999999993
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "shaft_collar_B",
+          "material": "steel",
+          "volume_mm3": 65.95773776211774,
+          "mass_proxy_kg": 0.0005177682414326243,
+          "CG_mm": [
+            -94.00000000000001,
+            -242.99999999999994,
+            69.99999999999993
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "nut_SB3700_envelope",
+          "material": "catalogue",
+          "volume_mm3": 3850.033577946743,
+          "mass_proxy_kg": 0.00539004700912544,
+          "CG_mm": [
+            -93.99999999999997,
+            -16.000000000000004,
+            70.0
+          ],
+          "basis": "Assumed1.4g/cm3 polymer mass; supplier nut mass unverified."
+        },
+        {
+          "part": "drive_mount",
+          "material": "aluminium",
+          "volume_mm3": 19824.0,
+          "mass_proxy_kg": 0.0535248,
+          "CG_mm": [
+            -100.66101694915255,
+            -235.52058111380146,
+            31.14527845036319
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "motor_mount_envelope",
+          "material": "aluminium",
+          "volume_mm3": 6982.084710328736,
+          "mass_proxy_kg": 0.01885162871788759,
+          "CG_mm": [
+            -94.0,
+            -292.5,
+            69.99999999999999
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_body",
+          "material": "aluminium",
+          "volume_mm3": 132792.00000000006,
+          "mass_proxy_kg": 0.35853840000000015,
+          "CG_mm": [
+            55.44397252846556,
+            55.17368516175672,
+            24.037592626061794
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_front_stop",
+          "material": "steel",
+          "volume_mm3": 2952.0,
+          "mass_proxy_kg": 0.023173199999999998,
+          "CG_mm": [
+            115.5,
+            51.0,
+            31.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_entry_bar",
+          "material": "steel",
+          "volume_mm3": 15472.999999999938,
+          "mass_proxy_kg": 0.1214630499999995,
+          "CG_mm": [
+            56.74999999999993,
+            42.440186130679216,
+            138.04242874684965
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_bar_guide_0",
+          "material": "aluminium",
+          "volume_mm3": 19226.399999999994,
+          "mass_proxy_kg": 0.05191127999999998,
+          "CG_mm": [
+            8.999999999999998,
+            114.8713706154038,
+            117.31743852203212
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_bar_guide_1",
+          "material": "aluminium",
+          "volume_mm3": 19226.399999999987,
+          "mass_proxy_kg": 0.05191127999999996,
+          "CG_mm": [
+            104.49999999999997,
+            114.87137061540382,
+            117.31743852203216
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_guide_shoe_0",
+          "material": "steel",
+          "volume_mm3": 8262.0,
+          "mass_proxy_kg": 0.06485669999999999,
+          "CG_mm": [
+            56.75,
+            23.0,
+            5.470588235294117
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "launcher_guide_0",
+          "material": "steel",
+          "volume_mm3": 30420.0,
+          "mass_proxy_kg": 0.23879699999999998,
+          "CG_mm": [
+            106.75,
+            22.999999999999996,
+            3.15
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_guide_shoe_1",
+          "material": "steel",
+          "volume_mm3": 8262.0,
+          "mass_proxy_kg": 0.06485669999999999,
+          "CG_mm": [
+            56.75,
+            81.0,
+            5.470588235294117
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "launcher_guide_1",
+          "material": "steel",
+          "volume_mm3": 30420.0,
+          "mass_proxy_kg": 0.23879699999999998,
+          "CG_mm": [
+            106.75,
+            80.99999999999997,
+            3.15
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        }
+      ]
+    },
+    {
+      "payload": "3U",
+      "state": "sled_captured",
+      "total_with_payload_proxy_kg": 10.413110075816089,
+      "without_payload_proxy_kg": 6.413110075816089,
+      "CG_with_payload_mm": [
+        151.0261820776757,
+        -12.953073920474617,
+        51.33169824611534
+      ],
+      "inertia_with_payload_kg_m2": [
+        [
+          0.13790283956776875,
+          -0.04358730133054187,
+          0.007678050247177777
+        ],
+        [
+          -0.04358730133054187,
+          0.22097733886803558,
+          -0.003916174800931297
+        ],
+        [
+          0.007678050247177777,
+          -0.003916174800931297,
+          0.3158727314939126
+        ]
+      ],
+      "envelope_mm": [
+        578.5,
+        458.2,
+        368.0
+      ],
+      "ledger": [
+        {
+          "part": "payload",
+          "material": "payload",
+          "volume_mm3": 3405000.0,
+          "mass_proxy_kg": 4.0,
+          "CG_mm": [
+            170.24999999999997,
+            49.99999999999999,
+            72.0
+          ],
+          "basis": "Declared mission payload mass, homogeneous envelope inertia."
+        },
+        {
+          "part": "support_floor",
+          "material": "aluminium",
+          "volume_mm3": 255627.0,
+          "mass_proxy_kg": 0.6901929,
+          "CG_mm": [
+            170.07723655951835,
+            -153.55619124740343,
+            19.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "cassette_L_-8",
+          "material": "aluminium",
+          "volume_mm3": 95200.00000000001,
+          "mass_proxy_kg": 0.25704000000000005,
+          "CG_mm": [
+            -5.5,
+            -107.99999999999999,
+            80.57142857142857
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "cassette_L_344.5",
+          "material": "aluminium",
+          "volume_mm3": 89079.99999999996,
+          "mass_proxy_kg": 0.24051599999999987,
+          "CG_mm": [
+            346.99694656488555,
+            -109.16793893129773,
+            80.87328244274812
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "rear_wall",
+          "material": "aluminium",
+          "volume_mm3": 163296.0,
+          "mass_proxy_kg": 0.4408992,
+          "CG_mm": [
+            170.25,
+            -214.0,
+            78.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "storage_gate",
+          "material": "aluminium",
+          "volume_mm3": 143309.2586583654,
+          "mass_proxy_kg": 0.3869349983775866,
+          "CG_mm": [
+            179.1340642510268,
+            -90.99999999999994,
+            -46.41095438442481
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "fork_body",
+          "material": "aluminium",
+          "volume_mm3": 180780.34376660464,
+          "mass_proxy_kg": 0.48810692816983253,
+          "CG_mm": [
+            183.41136746452062,
+            -4.140451526256815,
+            80.27251476187901
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "fork_front",
+          "material": "aluminium",
+          "volume_mm3": 71218.5,
+          "mass_proxy_kg": 0.19228995,
+          "CG_mm": [
+            170.25,
+            102.5,
+            99.5
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "captive_guide",
+          "material": "steel",
+          "volume_mm3": 72863.99999999999,
+          "mass_proxy_kg": 0.5719823999999999,
+          "CG_mm": [
+            -58.0,
+            -100.0,
+            49.27272727272728
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "end_block_-238",
+          "material": "steel",
+          "volume_mm3": 1536.0,
+          "mass_proxy_kg": 0.012057599999999998,
+          "CG_mm": [
+            -58.0,
+            -234.0,
+            50.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "end_block_30",
+          "material": "steel",
+          "volume_mm3": 1536.0,
+          "mass_proxy_kg": 0.012057599999999998,
+          "CG_mm": [
+            -58.0,
+            34.0,
+            50.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "gate_bolt_guide",
+          "material": "steel",
+          "volume_mm3": 13381.24075031608,
+          "mass_proxy_kg": 0.10504273988998121,
+          "CG_mm": [
+            401.07852462930646,
+            -91.00000000000004,
+            -53.04437527576847
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "gate_crossbolt",
+          "material": "steel",
+          "volume_mm3": 1828.4069243892595,
+          "mass_proxy_kg": 0.014352994356455687,
+          "CG_mm": [
+            407.45876288659804,
+            -91.00000000000001,
+            -25.000000000000007
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "motor_3242_envelope",
+          "material": "catalogue",
+          "volume_mm3": 35547.74919389922,
+          "mass_proxy_kg": 0.179,
+          "CG_mm": [
+            -94.0,
+            -317.09999999999997,
+            70.0
+          ],
+          "basis": "Manufacturer mass, homogeneous envelope inertia approximation."
+        },
+        {
+          "part": "motor_shaft_envelope",
+          "material": "steel",
+          "volume_mm3": 255.25440310417062,
+          "mass_proxy_kg": 0.002003747064367739,
+          "CG_mm": [
+            -93.99999999999999,
+            -288.49999999999994,
+            70.00000000000001
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "shaft_extension",
+          "material": "steel",
+          "volume_mm3": 2277.6546738526004,
+          "mass_proxy_kg": 0.01787958918974291,
+          "CG_mm": [
+            -94.0,
+            -264.5,
+            70.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "screw_major_envelope",
+          "material": "steel",
+          "volume_mm3": 23169.24582022472,
+          "mass_proxy_kg": 0.18187857968876406,
+          "CG_mm": [
+            -94.00000000000001,
+            -102.50000000000001,
+            70.00000000000001
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "coupling_envelope",
+          "material": "aluminium",
+          "volume_mm3": 1930.4065838696863,
+          "mass_proxy_kg": 0.005212097776448153,
+          "CG_mm": [
+            -94.00000000000001,
+            -279.1493427235779,
+            70.00000000000001
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "bearing_housing",
+          "material": "aluminium",
+          "volume_mm3": 13536.946070110047,
+          "mass_proxy_kg": 0.036549754389297126,
+          "CG_mm": [
+            -94.0,
+            -253.99999999999997,
+            70.00000000000001
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "bearing_ring_A",
+          "material": "steel",
+          "volume_mm3": 3350.4378792188086,
+          "mass_proxy_kg": 0.026300937351867646,
+          "CG_mm": [
+            -94.00000000000001,
+            -257.5,
+            70.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "bearing_ring_B",
+          "material": "steel",
+          "volume_mm3": 3350.4378792188086,
+          "mass_proxy_kg": 0.026300937351867646,
+          "CG_mm": [
+            -94.00000000000001,
+            -248.49999999999994,
+            70.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "shaft_collar_A",
+          "material": "steel",
+          "volume_mm3": 65.95773776211774,
+          "mass_proxy_kg": 0.0005177682414326243,
+          "CG_mm": [
+            -94.00000000000001,
+            -263.0,
+            69.99999999999993
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "shaft_collar_B",
+          "material": "steel",
+          "volume_mm3": 65.95773776211774,
+          "mass_proxy_kg": 0.0005177682414326243,
+          "CG_mm": [
+            -94.00000000000001,
+            -242.99999999999994,
+            69.99999999999993
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "nut_SB3700_envelope",
+          "material": "catalogue",
+          "volume_mm3": 3850.033577946743,
+          "mass_proxy_kg": 0.00539004700912544,
+          "CG_mm": [
+            -93.99999999999997,
+            -16.000000000000004,
+            70.0
+          ],
+          "basis": "Assumed1.4g/cm3 polymer mass; supplier nut mass unverified."
+        },
+        {
+          "part": "drive_mount",
+          "material": "aluminium",
+          "volume_mm3": 19824.0,
+          "mass_proxy_kg": 0.0535248,
+          "CG_mm": [
+            -100.66101694915255,
+            -235.52058111380146,
+            31.14527845036319
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "motor_mount_envelope",
+          "material": "aluminium",
+          "volume_mm3": 6982.084710328736,
+          "mass_proxy_kg": 0.01885162871788759,
+          "CG_mm": [
+            -94.0,
+            -292.5,
+            69.99999999999999
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_body",
+          "material": "aluminium",
+          "volume_mm3": 321655.99999999994,
+          "mass_proxy_kg": 0.8684711999999999,
+          "CG_mm": [
+            168.6691745218493,
+            53.16342925361258,
+            18.381028179172795
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_front_stop",
+          "material": "steel",
+          "volume_mm3": 2952.0,
+          "mass_proxy_kg": 0.023173199999999998,
+          "CG_mm": [
+            342.5,
+            51.0,
+            31.0
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_entry_bar",
+          "material": "steel",
+          "volume_mm3": 22283.000000000095,
+          "mass_proxy_kg": 0.17492155000000073,
+          "CG_mm": [
+            170.24999999999966,
+            28.553022483507764,
+            140.62718215680118
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_bar_guide_0",
+          "material": "aluminium",
+          "volume_mm3": 19226.399999999994,
+          "mass_proxy_kg": 0.05191127999999998,
+          "CG_mm": [
+            8.999999999999998,
+            114.8713706154038,
+            117.31743852203212
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_bar_guide_1",
+          "material": "aluminium",
+          "volume_mm3": 19226.400000000016,
+          "mass_proxy_kg": 0.051911280000000046,
+          "CG_mm": [
+            331.49999999999994,
+            114.87137061540382,
+            117.31743852203223
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_guide_shoe_0",
+          "material": "steel",
+          "volume_mm3": 23697.999999999996,
+          "mass_proxy_kg": 0.18602929999999995,
+          "CG_mm": [
+            170.25,
+            23.0,
+            5.470588235294119
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "launcher_guide_0",
+          "material": "steel",
+          "volume_mm3": 57660.0,
+          "mass_proxy_kg": 0.45263099999999995,
+          "CG_mm": [
+            220.25000000000003,
+            23.0,
+            3.1500000000000004
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "sled_guide_shoe_1",
+          "material": "steel",
+          "volume_mm3": 23697.999999999996,
+          "mass_proxy_kg": 0.18602929999999995,
+          "CG_mm": [
+            170.25,
+            81.00000000000001,
+            5.470588235294119
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        },
+        {
+          "part": "launcher_guide_1",
+          "material": "steel",
+          "volume_mm3": 57660.0,
+          "mass_proxy_kg": 0.45263099999999995,
+          "CG_mm": [
+            220.25000000000003,
+            81.0,
+            3.1500000000000004
+          ],
+          "basis": "Assumed homogeneous material density; major/thread/bearing envelopes are not true manufactured material."
+        }
+      ]
+    }
+  ],
+  "pin_static_cases": [
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 5,
+      "additional_actuator_force_assumed_N": 0,
+      "total_pin_load_N": 6.951688939197788,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 2.8660916080274133,
+      "double_shear_average_MPa": 0.12293285083450914,
+      "wing_projected_bearing_MPa": 0.11586148231996313,
+      "simply_supported_deflection_mm": 0.00048723557336466025
+    },
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 5,
+      "additional_actuator_force_assumed_N": 50,
+      "total_pin_load_N": 56.95168893919779,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 23.48044614183481,
+      "double_shear_average_MPa": 1.0071269791228166,
+      "wing_projected_bearing_MPa": 0.9491948156532964,
+      "simply_supported_deflection_mm": 0.003991675844111918
+    },
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 5,
+      "additional_actuator_force_assumed_N": 200,
+      "total_pin_load_N": 206.9516889391978,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 85.323509743257,
+      "double_shear_average_MPa": 3.659709363987739,
+      "wing_projected_bearing_MPa": 3.4491948156532968,
+      "simply_supported_deflection_mm": 0.014504996656353691
+    },
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 10,
+      "additional_actuator_force_assumed_N": 0,
+      "total_pin_load_N": 13.903377878395576,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 5.7321832160548265,
+      "double_shear_average_MPa": 0.24586570166901828,
+      "wing_projected_bearing_MPa": 0.23172296463992625,
+      "simply_supported_deflection_mm": 0.0009744711467293205
+    },
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 10,
+      "additional_actuator_force_assumed_N": 50,
+      "total_pin_load_N": 63.903377878395574,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 26.346537749862218,
+      "double_shear_average_MPa": 1.1300598299573257,
+      "wing_projected_bearing_MPa": 1.0650562979732596,
+      "simply_supported_deflection_mm": 0.004478911417476578
+    },
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 10,
+      "additional_actuator_force_assumed_N": 200,
+      "total_pin_load_N": 213.9033778783956,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 88.18960135128442,
+      "double_shear_average_MPa": 3.7826422148222485,
+      "wing_projected_bearing_MPa": 3.5650562979732596,
+      "simply_supported_deflection_mm": 0.014992232229718351
+    },
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 25,
+      "additional_actuator_force_assumed_N": 0,
+      "total_pin_load_N": 34.758444695988935,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 14.330458040137065,
+      "double_shear_average_MPa": 0.6146642541725456,
+      "wing_projected_bearing_MPa": 0.5793074115998156,
+      "simply_supported_deflection_mm": 0.0024361778668233014
+    },
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 25,
+      "additional_actuator_force_assumed_N": 50,
+      "total_pin_load_N": 84.75844469598894,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 34.94481257394447,
+      "double_shear_average_MPa": 1.4988583824608532,
+      "wing_projected_bearing_MPa": 1.412640744933149,
+      "simply_supported_deflection_mm": 0.005940618137570559
+    },
+    {
+      "payload": "1U",
+      "gate_material_proxy_kg": 0.1417749983775864,
+      "acceleration_g": 25,
+      "additional_actuator_force_assumed_N": 200,
+      "total_pin_load_N": 234.75844469598894,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 96.78787617536666,
+      "double_shear_average_MPa": 4.151440767325775,
+      "wing_projected_bearing_MPa": 3.912640744933149,
+      "simply_supported_deflection_mm": 0.016453938949812334
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 5,
+      "additional_actuator_force_assumed_N": 0,
+      "total_pin_load_N": 18.972680509197797,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 7.822191249465217,
+      "double_shear_average_MPa": 0.3355106540824542,
+      "wing_projected_bearing_MPa": 0.3162113418199633,
+      "simply_supported_deflection_mm": 0.0013297725124090868
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 5,
+      "additional_actuator_force_assumed_N": 50,
+      "total_pin_load_N": 68.9726805091978,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 28.43654578327261,
+      "double_shear_average_MPa": 1.2197047823707616,
+      "wing_projected_bearing_MPa": 1.1495446751532967,
+      "simply_supported_deflection_mm": 0.004834212783156344
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 5,
+      "additional_actuator_force_assumed_N": 200,
+      "total_pin_load_N": 218.9726805091978,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 90.27960938469481,
+      "double_shear_average_MPa": 3.872287167235684,
+      "wing_projected_bearing_MPa": 3.6495446751532965,
+      "simply_supported_deflection_mm": 0.015347533595398118
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 10,
+      "additional_actuator_force_assumed_N": 0,
+      "total_pin_load_N": 37.945361018395594,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 15.644382498930433,
+      "double_shear_average_MPa": 0.6710213081649083,
+      "wing_projected_bearing_MPa": 0.6324226836399266,
+      "simply_supported_deflection_mm": 0.0026595450248181737
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 10,
+      "additional_actuator_force_assumed_N": 50,
+      "total_pin_load_N": 87.9453610183956,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 36.25873703273784,
+      "double_shear_average_MPa": 1.5552154364532158,
+      "wing_projected_bearing_MPa": 1.46575601697326,
+      "simply_supported_deflection_mm": 0.006163985295565431
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 10,
+      "additional_actuator_force_assumed_N": 200,
+      "total_pin_load_N": 237.9453610183956,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 98.10180063416004,
+      "double_shear_average_MPa": 4.207797821318138,
+      "wing_projected_bearing_MPa": 3.96575601697326,
+      "simply_supported_deflection_mm": 0.016677306107807204
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 25,
+      "additional_actuator_force_assumed_N": 0,
+      "total_pin_load_N": 94.86340254598898,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 39.11095624732608,
+      "double_shear_average_MPa": 1.6775532704122706,
+      "wing_projected_bearing_MPa": 1.5810567090998162,
+      "simply_supported_deflection_mm": 0.006648862562045434
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 25,
+      "additional_actuator_force_assumed_N": 50,
+      "total_pin_load_N": 144.86340254598898,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 59.72531078113347,
+      "double_shear_average_MPa": 2.561747398700578,
+      "wing_projected_bearing_MPa": 2.4143900424331495,
+      "simply_supported_deflection_mm": 0.010153302832792692
+    },
+    {
+      "payload": "3U",
+      "gate_material_proxy_kg": 0.3869349983775866,
+      "acceleration_g": 25,
+      "additional_actuator_force_assumed_N": 200,
+      "total_pin_load_N": 294.86340254598895,
+      "support_span_mm": 35.0,
+      "load_position_mm": 18.0,
+      "diameter_mm": 6.0,
+      "nominal_bending_MPa": 121.56837438255565,
+      "double_shear_average_MPa": 5.2143297835655,
+      "wing_projected_bearing_MPa": 4.9143900424331495,
+      "simply_supported_deflection_mm": 0.020666623645034462
+    }
+  ],
+  "boundary": "CAD material and catalogue mass proxies; no installed gearbox/brake/controller, gate actuators, fasteners, wiring, harness, launch locks or thermal hardware. Tensor uses homogeneous component approximations. Pin analysis is a simply-supported beam with assumed200GPa steel; no selected alloy allowable, hole contact, real bracket stiffness, impact, fatigue or qualification."
+}

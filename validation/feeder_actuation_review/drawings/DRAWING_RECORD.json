@@ -1,0 +1,24 @@
+{
+  "revision": "FM-02",
+  "software": "FreeCAD1.0 TechDraw",
+  "sheets": [
+    {
+      "part": "gate_crossbolt",
+      "measured_overall_mm": 54.0,
+      "files": {
+        "FM02_reference_pin_1.svg": "c68ac9e92d970f126d49a6d40578ea3301714b3099850c429e551c46e66becb4",
+        "FM02_reference_pin_1.pdf": "3a81d59fce9caad58370d2487301b7d0e311e397b510147203141e0e980e762d"
+      }
+    },
+    {
+      "part": "receiver_lock_pin_0",
+      "measured_overall_mm": 16.0,
+      "files": {
+        "FM02_reference_pin_2.svg": "6fb4b4539626f00274c2c9319435e94302e6f8cc973dae5843c4804ac585cab9",
+        "FM02_reference_pin_2.pdf": "6eb77afe9317e7a0868b60d6dcfc63aead87461f5529022498ec6d8fefc02088"
+      }
+    }
+  ],
+  "source_sha256": "03c68ae5433eadafb7dd7af7a1fbf457f3ecff0ad2f79549742273947744b814",
+  "boundary": "Reference geometry sheets, not approved manufacturing drawings. Dimensions are nominal model dimensions; no alloy, fit, finish, preload, actuator or inspection release."
+}
