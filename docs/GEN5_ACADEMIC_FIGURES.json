@@ -1,5 +1,5 @@
 {
-  "revision": "19 October2026 computational supplements; fixed Gen5 technical record unchanged",
+  "revision": "20October2026 \u00b7 FBR-01 source-route identity;Gen5technicalfreeze unchanged",
   "hardware_measurements": false,
   "boundary": "Legacy graphs remain historical model outputs with current manuscript limitations. STEP-derived views do not prove loaded clearance. This catalog fixes image identity; method/units/case are described by captions and validation records.",
   "figures": [
@@ -429,10 +429,19 @@
         "README.md"
       ],
       "evidence_class": "Native solver numerical consistency; Shared prescribed orientation, one-day J2 case. Diagnostic bars use declared different numerical histories. Millimetre agreement is not physical orbit or release accuracy."
+    },
+    {
+      "path": "validation/finite_burn_review/figures/force_fuel_trade.png",
+      "sha256": "cae25e7b03ac82bb6c4385b13e8df09422072d6fb23450551bfb90f5161daba9",
+      "bytes": 216051,
+      "referenced_by": [
+        "README.md"
+      ],
+      "evidence_class": "Computed finite-force surrogate control; no host or motor rating"
     }
   ],
   "document_sha256": {
-    "README.md": "6e61a7311206b602dd7f9781d30c4a57333ac2fbb919e3573fee0aa94ed2391a",
+    "README.md": "783731156a9f16494319df38cfc7fea712b77c8d289a47c41f32608872807889",
     "reports/GEN5_COMPUTATIONAL_REVIEW.md": "1541b43f05818888dd0cc1ded1fe42dc1d7e5e73f3f17a8a6ecc45668d6619e6",
     "validation/orbit_evidence/README.md": "3f350ec088a33fb413861c20e88e04946c183bb67c67c2378625103412190967",
     "validation/feeder_review/README.md": "b226b959274eb24030f6f20b4ac58932154fa9b2713ea486bf49a09bb4dba94a",
