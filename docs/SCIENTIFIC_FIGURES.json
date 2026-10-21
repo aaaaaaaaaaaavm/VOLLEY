@@ -832,6 +832,141 @@
         "validation/feeder_actuation_review/drawings/FM02_reference_pin_2.png": "8ff81f8d56f0678fd6dbb013479c45e7e1b4d76b75e2157f397fdcfc9aed1a41",
         "validation/feeder_actuation_review/drawings/FM02_reference_pin_2.pdf": "6eb77afe9317e7a0868b60d6dcfc63aead87461f5529022498ec6d8fefc02088"
       }
+    },
+    {
+      "evidence_class": "Computed CAD/component-fixture/native-contact research; no measurements",
+      "caption": "component compliance \u00b7 FM06-R1/FLR01/FLR02/FCE08",
+      "limitations": "Nominal geometry and bounded component fixtures. Native contact acceptance is not established: step/iteration sensitivity and actual-solid overlap retained. No material strength, installed mechanism or hardware validation.",
+      "sources": {
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab",
+        "validation/feeder_integrity_review/tine/SUMMARY.json": "20c40fcd52c6e25c1890df8f45af8391cfe7967badcb020cd838bc96b9ae8af7",
+        "validation/feeder_integrity_review/receiver/COMPONENT_SUMMARY.json": "12d000f008ae95db63ae1d57201bce29267501299510b2f0f6fde216ee576edc",
+        "validation/feeder_integrity_review/CONTACT_ASSESSMENT.json": "199e825da7dcb26940beb978fa7e5f58988908676a10705f96cca28f4281aaca"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/component_compliance.svg": "59ac416f779bbcc8a6b671de0304c9391b00b478f0196f80225aadcd5e91d254",
+        "validation/feeder_integrity_review/figures/component_compliance.pdf": "dd4a3086b0ad5e2a4417da8653894f4d4f5aada6bd67b9c21f84830f11d8610b",
+        "validation/feeder_integrity_review/figures/component_compliance.png": "4c2c53cc714384be08bcbaeb6eadf47fe9969139113504bf3f99d553a6a55bd1",
+        "docs/assets/feeder-integrity/component_compliance.png": "4c2c53cc714384be08bcbaeb6eadf47fe9969139113504bf3f99d553a6a55bd1"
+      }
+    },
+    {
+      "evidence_class": "Computed CAD/component-fixture/native-contact research; no measurements",
+      "caption": "mesh convergence \u00b7 FM06-R1/FLR01/FLR02/FCE08",
+      "limitations": "Nominal geometry and bounded component fixtures. Native contact acceptance is not established: step/iteration sensitivity and actual-solid overlap retained. No material strength, installed mechanism or hardware validation.",
+      "sources": {
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab",
+        "validation/feeder_integrity_review/tine/SUMMARY.json": "20c40fcd52c6e25c1890df8f45af8391cfe7967badcb020cd838bc96b9ae8af7",
+        "validation/feeder_integrity_review/receiver/COMPONENT_SUMMARY.json": "12d000f008ae95db63ae1d57201bce29267501299510b2f0f6fde216ee576edc",
+        "validation/feeder_integrity_review/CONTACT_ASSESSMENT.json": "199e825da7dcb26940beb978fa7e5f58988908676a10705f96cca28f4281aaca"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/mesh_convergence.svg": "6fd5443e174ec6dd3bd3617400fdf1298cf01aea2dadddac34d4496efe5015f0",
+        "validation/feeder_integrity_review/figures/mesh_convergence.pdf": "72e83a3a6d41d309592e67f8b8ed8eee6d975bc361db3e93712b28ad1e06964d",
+        "validation/feeder_integrity_review/figures/mesh_convergence.png": "a3876070d589bc8c6528e74364bec1bf461076d61d7f97003c58562750c3b76b"
+      }
+    },
+    {
+      "evidence_class": "Computed CAD/component-fixture/native-contact research; no measurements",
+      "caption": "receiver section \u00b7 FM06-R1/FLR01/FLR02/FCE08",
+      "limitations": "Nominal geometry and bounded component fixtures. Native contact acceptance is not established: step/iteration sensitivity and actual-solid overlap retained. No material strength, installed mechanism or hardware validation.",
+      "sources": {
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab",
+        "validation/feeder_integrity_review/tine/SUMMARY.json": "20c40fcd52c6e25c1890df8f45af8391cfe7967badcb020cd838bc96b9ae8af7",
+        "validation/feeder_integrity_review/receiver/COMPONENT_SUMMARY.json": "12d000f008ae95db63ae1d57201bce29267501299510b2f0f6fde216ee576edc",
+        "validation/feeder_integrity_review/CONTACT_ASSESSMENT.json": "199e825da7dcb26940beb978fa7e5f58988908676a10705f96cca28f4281aaca"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/receiver_section.svg": "728fcf3a74ed00b49d80f27a174f371bf04da954c10f9f813d347e9f856d2d1f",
+        "validation/feeder_integrity_review/figures/receiver_section.pdf": "122d331ad9b51d6865b3a387a543d2c21989f48c790f8c2fb0f1ab883b8df563",
+        "validation/feeder_integrity_review/figures/receiver_section.png": "64399db0c4ac04d9fd5a46677208dce4ebc04ce47e77cda27a65f7eee7e4647a"
+      }
+    },
+    {
+      "evidence_class": "Computed CAD/component-fixture/native-contact research; no measurements",
+      "caption": "tine fixture \u00b7 FM06-R1/FLR01/FLR02/FCE08",
+      "limitations": "Nominal geometry and bounded component fixtures. Native contact acceptance is not established: step/iteration sensitivity and actual-solid overlap retained. No material strength, installed mechanism or hardware validation.",
+      "sources": {
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab",
+        "validation/feeder_integrity_review/tine/SUMMARY.json": "20c40fcd52c6e25c1890df8f45af8391cfe7967badcb020cd838bc96b9ae8af7",
+        "validation/feeder_integrity_review/receiver/COMPONENT_SUMMARY.json": "12d000f008ae95db63ae1d57201bce29267501299510b2f0f6fde216ee576edc",
+        "validation/feeder_integrity_review/CONTACT_ASSESSMENT.json": "199e825da7dcb26940beb978fa7e5f58988908676a10705f96cca28f4281aaca"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/tine_fixture.svg": "f11f8288bde156fa4abc4ac999460b1b844622fd5ee3723f95bfa4352787a8c1",
+        "validation/feeder_integrity_review/figures/tine_fixture.pdf": "cfe66f8a28d1f3fc454ae5e41fc7834f09c1bb5529ec49a50529625f337e8b68",
+        "validation/feeder_integrity_review/figures/tine_fixture.png": "4f46dcee2bb731e0ada2a94d9c8582a77e61475446959c7fcb3d2a5f02093d4c"
+      }
+    },
+    {
+      "evidence_class": "Computed CAD/component-fixture/native-contact research; no measurements",
+      "caption": "receiver rigid play \u00b7 FM06-R1/FLR01/FLR02/FCE08",
+      "limitations": "Nominal geometry and bounded component fixtures. Native contact acceptance is not established: step/iteration sensitivity and actual-solid overlap retained. No material strength, installed mechanism or hardware validation.",
+      "sources": {
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab",
+        "validation/feeder_integrity_review/tine/SUMMARY.json": "20c40fcd52c6e25c1890df8f45af8391cfe7967badcb020cd838bc96b9ae8af7",
+        "validation/feeder_integrity_review/receiver/COMPONENT_SUMMARY.json": "12d000f008ae95db63ae1d57201bce29267501299510b2f0f6fde216ee576edc",
+        "validation/feeder_integrity_review/CONTACT_ASSESSMENT.json": "199e825da7dcb26940beb978fa7e5f58988908676a10705f96cca28f4281aaca"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/receiver_rigid_play.svg": "23e35f3ffbc196def88e1f908cdb90cd584199ce0a7b00e7336b970a9bac6b7e",
+        "validation/feeder_integrity_review/figures/receiver_rigid_play.pdf": "90303660dde0e4f57b8154eb65e5142ff1ada914815118e795afecfc1b8ad55c",
+        "validation/feeder_integrity_review/figures/receiver_rigid_play.png": "63e18311676467f1fdd889e7f4b1c0f5e52c1554f6c1c643d579e19c9d0e5a40"
+      }
+    },
+    {
+      "evidence_class": "Computed CAD/component-fixture/native-contact research; no measurements",
+      "caption": "contact refinement \u00b7 FM06-R1/FLR01/FLR02/FCE08",
+      "limitations": "Nominal geometry and bounded component fixtures. Native contact acceptance is not established: step/iteration sensitivity and actual-solid overlap retained. No material strength, installed mechanism or hardware validation.",
+      "sources": {
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab",
+        "validation/feeder_integrity_review/tine/SUMMARY.json": "20c40fcd52c6e25c1890df8f45af8391cfe7967badcb020cd838bc96b9ae8af7",
+        "validation/feeder_integrity_review/receiver/COMPONENT_SUMMARY.json": "12d000f008ae95db63ae1d57201bce29267501299510b2f0f6fde216ee576edc",
+        "validation/feeder_integrity_review/CONTACT_ASSESSMENT.json": "199e825da7dcb26940beb978fa7e5f58988908676a10705f96cca28f4281aaca"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/contact_refinement.svg": "8adce4038bb3eb421e4f4f7f4480f97ee95e636852092e7fdabab011384b7b98",
+        "validation/feeder_integrity_review/figures/contact_refinement.pdf": "724229bc3087c2b7ecce536098f25b19f08ee7e89483bc08e9e52cf82ba73107",
+        "validation/feeder_integrity_review/figures/contact_refinement.png": "b32c81b50741435038460fb3e7c1307f275c531abf6f9ebf32f8cb4622de2f5b",
+        "docs/assets/feeder-integrity/contact_refinement.png": "b32c81b50741435038460fb3e7c1307f275c531abf6f9ebf32f8cb4622de2f5b"
+      }
+    },
+    {
+      "evidence_class": "Native CAD render or genuine application export, as explicitly identified by caption",
+      "caption": "FM06_Technical_transfer.png \u00b7 source-backed nominal/component-fixture view",
+      "limitations": "No hardware photograph, actual assembled contact validation, qualification or manufacturing release.",
+      "sources": {
+        "validation/feeder_integrity_review/MANIFEST.json": "6954e939a267e932e97ef817292821dcefbc1cf774e4d63766fe08e662249c68",
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/FM06_Technical_transfer.png": "24329b969efc2ac601117d04037e867a8c784eb700d74831236d732bed5aff02",
+        "docs/assets/feeder-integrity/FM06_Technical_transfer.png": "24329b969efc2ac601117d04037e867a8c784eb700d74831236d732bed5aff02"
+      }
+    },
+    {
+      "evidence_class": "Native CAD render or genuine application export, as explicitly identified by caption",
+      "caption": "FreeCAD_FM06_transfer.png \u00b7 source-backed nominal/component-fixture view",
+      "limitations": "No hardware photograph, actual assembled contact validation, qualification or manufacturing release.",
+      "sources": {
+        "validation/feeder_integrity_review/MANIFEST.json": "6954e939a267e932e97ef817292821dcefbc1cf774e4d63766fe08e662249c68",
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/FreeCAD_FM06_transfer.png": "371580d627a6cc5df91841585d87c0d2890ad3b02f3498cc78b39abd10644cfc"
+      }
+    },
+    {
+      "evidence_class": "Native CAD render or genuine application export, as explicitly identified by caption",
+      "caption": "Gmsh_FLR02_tine.png \u00b7 source-backed nominal/component-fixture view",
+      "limitations": "No hardware photograph, actual assembled contact validation, qualification or manufacturing release.",
+      "sources": {
+        "validation/feeder_integrity_review/MANIFEST.json": "6954e939a267e932e97ef817292821dcefbc1cf774e4d63766fe08e662249c68",
+        "validation/feeder_integrity_review/README.md": "adb6ee56f2a34b1f7cfb20a189c6ee31462894762511e911b996b91233607aab"
+      },
+      "exports": {
+        "validation/feeder_integrity_review/figures/Gmsh_FLR02_tine.png": "b6a101b562f15696ba9512778506a271ace8decd5b19e431892a3ec77a502700"
+      }
     }
   ]
 }
