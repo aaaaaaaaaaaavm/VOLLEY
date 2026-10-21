@@ -19,6 +19,8 @@ run() {
 }
 
 echo "== gates =="
+run "contact evidence" python3 validation/feeder_contact_verification/check_capture.py
+run "release/reset geometry" python3 validation/feeder_release_review/check_capture.py
 run "authorship"         python3 tools/check_authorship.py
 run "links"              python3 tools/check_links.py
 run "website routes"     python3 tools/check_site.py

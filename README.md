@@ -32,6 +32,15 @@ The Gen6 mission reference uses a generic maneuvering OTV in approximately 500 k
 
 [Native FreeCAD](validation/feeder_integrity_review/cad/FM06_3U_transfer.FCStd) · [Assembly STEP](validation/feeder_integrity_review/cad/FM06_3U_transfer.step) · [Part index](validation/feeder_integrity_review/parts/INDEX.json) · [Load/contact report](validation/feeder_integrity_review/FEEDER_INTEGRITY_REVIEW.pdf)
 
+## Feeder release and reset geometry
+
+![Exit-open reference geometry rendered from native FreeCAD solids in Blender Workbench](validation/feeder_release_review/figures/FM07_Technical_exit_open.png)
+
+FM07-R5 adds captive receiver pins, a hinged exit gate and prescribed empty-carrier reset. The nominal checks cover 46 cycle poses, 34 rotary samples and 40 continuous linear sweeps. Twenty assembly STEP files and 74 individual parts pass independent exchange readback. These are geometry results; loaded fits, installed actuation and the seven-concept selection gates remain separate requirements.
+
+[Engineering report](validation/feeder_release_review/FEEDER_RELEASE_AND_RESET.pdf) · [Native CAD, STEP, source and checks](validation/feeder_release_review/README.md) · [Selection-gate assessment](validation/feeder_release_review/comparison_reference/D27_GATE_ASSESSMENT.json)
+
+
 ## Matched orbital delivery
 
 ![Finite-force host schedules and propellant comparison](validation/finite_burn_review/figures/force_fuel_trade.png)
