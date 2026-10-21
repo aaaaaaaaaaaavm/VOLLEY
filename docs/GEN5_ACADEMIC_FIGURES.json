@@ -1,5 +1,5 @@
 {
-  "revision": "20October2026 \u00b7 FBR-01 source-route identity;Gen5technicalfreeze unchanged",
+  "revision": "2026-10-21-FCE12",
   "hardware_measurements": false,
   "boundary": "Legacy graphs remain historical model outputs with current manuscript limitations. STEP-derived views do not prove loaded clearance. This catalog fixes image identity; method/units/case are described by captions and validation records.",
   "figures": [
@@ -7,28 +7,25 @@
       "path": "cad/gen6_feeder/release/Gen6_Feed_One_Cell_Storyboard.jpg",
       "sha256": "82c991832b1a6f4ed37026aa9ae34f0fc72fc792f75af6d5acf94f010574fba6",
       "bytes": 263342,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "cad/gen6_first_article/release/Gen6_G1_A_STEP_derived.jpg",
       "sha256": "d0b014e462162c657004180b230ea56e88693fa9ebf1123919c433fdc5ae6ef8",
       "bytes": 79524,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "cad/gen6_integration_r2/release/Gen6_R1_R2_Handoff_Section.png",
       "sha256": "0683abc71ab3ed60db5c30e57e893d3c475ec29db97c0436dcf1f436128b0b6c",
       "bytes": 97963,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "FreeCAD-derived computed projection; not a solver screenshot"
+      "referenced_by": [],
+      "evidence_class": "FreeCAD-derived computed projection; not a solver screenshot",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "cad/renders/sequence/gen5_operations_hero.png",
@@ -52,17 +49,15 @@
       "path": "docs/assets/mission_sequence.svg",
       "sha256": "14f04aac14eb79d4f2b9c7a6baf21c86ffc816092cc37851fd74c49476f63b88",
       "bytes": 1853,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "figures/gen5_feeder_candidate_r1.png",
       "sha256": "58985597161987ddfc79df042e0b2f58c3909fd0607bc67fad46b517d6d1d24a",
       "bytes": 67184,
       "referenced_by": [
-        "README.md",
         "reports/GEN5_COMPUTATIONAL_REVIEW.md"
       ],
       "evidence_class": "computational plot or diagram; no physical measurement"
@@ -72,7 +67,6 @@
       "sha256": "f1be92a6782c13a99d6fa36cf342c6da5e3fc1cdcc25072020ca22664622f119",
       "bytes": 77802,
       "referenced_by": [
-        "README.md",
         "reports/GEN5_COMPUTATIONAL_REVIEW.md"
       ],
       "evidence_class": "computational plot or diagram; no physical measurement"
@@ -109,7 +103,8 @@
       "sha256": "34c47e784df735d80543c07fbbaf9ae4b7bef926743843aeeb037deeaa8fe82c",
       "bytes": 74550,
       "referenced_by": [
-        "reports/GEN5_COMPUTATIONAL_REVIEW.md"
+        "reports/GEN5_COMPUTATIONAL_REVIEW.md",
+        "README.md"
       ],
       "evidence_class": "computational plot or diagram; no physical measurement"
     },
@@ -135,28 +130,25 @@
       "path": "figures/gen5_packaging_section.svg",
       "sha256": "521723aee22dcc46be593da68730f69ee29c707ad7c739ecdd2e8899db49fc0e",
       "bytes": 56513,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "figures/gen5_reconciled_mass.png",
       "sha256": "a2cfd3d9c7c3dd25e52e90c097f438835832bd037607f6efde0447029a696fdd",
       "bytes": 71597,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "figures/manifest_finite_burn.svg",
       "sha256": "8b3b649dcef4f6cfe7e05b388d97b88dd9fe804c72ffa40f3e02244c79a96ff8",
       "bytes": 68618,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "figures/matched_mission_reference.png",
@@ -171,28 +163,25 @@
       "path": "figures/phasing_reference.svg",
       "sha256": "bebdfa21fb6ccce2b087a9f42c59fdcbdc2e8527a9e5e30b2c8053ae2658fe5a",
       "bytes": 78227,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "figures/precision_delivery_design_space.svg",
       "sha256": "22cc715a646ac6fdc39e4ee3e39a4feaf2506c53eb2afd3270915aa9e0e710f9",
       "bytes": 3727,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "figures/rated_orbit_crosscheck.svg",
       "sha256": "d7fc129f997e93c2859bc14f0913ae28508e45ecb5b3612363135012527fd27c",
       "bytes": 46718,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "computational plot or diagram; no physical measurement"
+      "referenced_by": [],
+      "evidence_class": "computational plot or diagram; no physical measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "validation/orbit_evidence/figures/archived_campaign.png",
@@ -226,8 +215,7 @@
       "sha256": "6241e49a0dce1af9af2ee61473c311e1d9c4a7710436c7042dda2380880831e7",
       "bytes": 247952,
       "referenced_by": [
-        "validation/orbit_evidence/README.md",
-        "README.md"
+        "validation/orbit_evidence/README.md"
       ],
       "evidence_class": "Native solver output plotted with Matplotlib; archived campaign clearly separated; not a GUI screenshot or physical measurement"
     },
@@ -235,10 +223,9 @@
       "path": "figures/gen5_scientific_mass.png",
       "sha256": "5245283936271504138e1fdd53a645f4a6bbbf6370c0154e5f1add53b0ed6fc7",
       "bytes": 144768,
-      "referenced_by": [
-        "README.md"
-      ],
-      "evidence_class": "Computed plot of captured historical model; scientific presentation edition, not hardware measurement"
+      "referenced_by": [],
+      "evidence_class": "Computed plot of captured historical model; scientific presentation edition, not hardware measurement",
+      "navigation_status": "retained research asset; removed from current front page"
     },
     {
       "path": "figures/gen5_scientific_lifetime.png",
@@ -425,8 +412,7 @@
       "sha256": "f4204418f84e7cc404db48cf0ff5418458e8d9324c7da80cd4d5a4369f67743e",
       "bytes": 215453,
       "referenced_by": [
-        "validation/orbit_harmonization/README.md",
-        "README.md"
+        "validation/orbit_harmonization/README.md"
       ],
       "evidence_class": "Native solver numerical consistency; Shared prescribed orientation, one-day J2 case. Diagnostic bars use declared different numerical histories. Millimetre agreement is not physical orbit or release accuracy."
     },
@@ -438,10 +424,26 @@
         "README.md"
       ],
       "evidence_class": "Computed finite-force surrogate control; no host or motor rating"
+    },
+    {
+      "path": "validation/feeder_integrity_review/figures/FM06_Technical_transfer.png",
+      "sha256": "24329b969efc2ac601117d04037e867a8c784eb700d74831236d732bed5aff02",
+      "bytes": 573183,
+      "referenced_by": [
+        "README.md"
+      ],
+      "evidence_class": "STEP-derived Blender render; conceptual operation"
+    },
+    {
+      "path": "validation/feeder_contact_verification/figures/contact_calibration.png",
+      "sha256": "faf8756b9f45f47aa8a408f9a1d21dc824b56cdb7326d338a62007e1b4c4d3e7",
+      "bytes": 141872,
+      "referenced_by": [],
+      "evidence_class": "Native numerical contact calibration; no hardware measurement or delivered-accuracy acceptance"
     }
   ],
   "document_sha256": {
-    "README.md": "0f5b56f5371a56fbc569e7d28a26cb4761736746793c2b956e69be35d9891aee",
+    "README.md": "b8833bbd7d167943337b649901dc62bc0a943ff615cc3d716c443de5435e2a0b",
     "reports/GEN5_COMPUTATIONAL_REVIEW.md": "1541b43f05818888dd0cc1ded1fe42dc1d7e5e73f3f17a8a6ecc45668d6619e6",
     "validation/orbit_evidence/README.md": "3f350ec088a33fb413861c20e88e04946c183bb67c67c2378625103412190967",
     "validation/feeder_review/README.md": "b226b959274eb24030f6f20b4ac58932154fa9b2713ea486bf49a09bb4dba94a",
