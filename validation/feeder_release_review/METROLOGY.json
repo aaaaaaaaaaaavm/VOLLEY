@@ -1,0 +1,87 @@
+{
+  "revision": "FM07-R5",
+  "configurations": [
+    {
+      "size": "1U",
+      "modeled_material_mass_kg": 3.7624438969947906,
+      "CG_mm": [
+        28.415964345889773,
+        -93.11469684831009,
+        42.26842932412238
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.05822772275303571,
+          -0.014720995292720538,
+          0.0049140969639644965
+        ],
+        [
+          -0.014720995292720538,
+          0.03752285386331799,
+          0.008645718701709399
+        ],
+        [
+          0.0049140969639644965,
+          0.008645718701709399,
+          0.08219151302381197
+        ]
+      ],
+      "bounding_box_mm": [
+        -116.0,
+        -339.2,
+        -63.0,
+        235.5,
+        108.0,
+        139.0
+      ],
+      "density_kg_m3": {
+        "aluminium": 2700,
+        "steel": 7850,
+        "polymer": 1200,
+        "catalogue": 1400
+      },
+      "boundary": "Nominal modeled material plus declared component-envelope mass proxies; payload excluded. Motor uses its catalogue 0.179 kg, other catalogue envelopes assume 1400 kg/m3. Envelope inertia is approximate. Catalogue actuator, brake, bearing internals, sensors, harness, power electronics and host mounting hardware are not fully modeled. No installed-system mass claim."
+    },
+    {
+      "size": "3U",
+      "modeled_material_mass_kg": 6.156635596994792,
+      "CG_mm": [
+        138.32434581578255,
+        -78.00386221686773,
+        38.10465555418165
+      ],
+      "inertia_about_CG_kg_m2": [
+        [
+          0.09538096595335427,
+          -0.029789013047697765,
+          0.009975459196524797
+        ],
+        [
+          -0.029789013047697765,
+          0.16578768569020447,
+          0.015834143470202608
+        ],
+        [
+          0.009975459196524797,
+          0.015834143470202608,
+          0.2401886503478304
+        ]
+      ],
+      "bounding_box_mm": [
+        -116.0,
+        -339.2,
+        -63.0,
+        462.5,
+        108.0,
+        139.0
+      ],
+      "density_kg_m3": {
+        "aluminium": 2700,
+        "steel": 7850,
+        "polymer": 1200,
+        "catalogue": 1400
+      },
+      "boundary": "Nominal modeled material plus declared component-envelope mass proxies; payload excluded. Motor uses its catalogue 0.179 kg, other catalogue envelopes assume 1400 kg/m3. Envelope inertia is approximate. Catalogue actuator, brake, bearing internals, sensors, harness, power electronics and host mounting hardware are not fully modeled. No installed-system mass claim."
+    }
+  ]
+}

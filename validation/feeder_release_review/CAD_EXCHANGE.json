@@ -1,0 +1,250 @@
+{
+  "revision": "FM07-R5",
+  "software": {
+    "FreeCAD": "1.0.0",
+    "OpenCascade": "7.8.1"
+  },
+  "poses": [
+    {
+      "size": "1U",
+      "pose": "stored",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241107,
+      "STEP_volume_difference_mm3": 1.8277205526828766e-07,
+      "files": {
+        "cad/FM07_1U_stored.FCStd": "0b13f1a928504955c41fd6ada5f6839005454f065e00ea6c56d4d777ff98c133",
+        "cad/FM07_1U_stored.step": "d2f55be888a3c0f54bca0d26dfa7936f5900ec081cde5aac49e062d1d8da0884"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "transfer",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241114,
+      "STEP_volume_difference_mm3": -3.888271749019623e-08,
+      "files": {
+        "cad/FM07_1U_transfer.FCStd": "18ac3de9110501d9b1b4a621d5a6ca43f7e5f2e07266ff74632e60c81217b045",
+        "cad/FM07_1U_transfer.step": "f39663abcabcde5b8dd67bcf5b9723e437a328cdf81c2b95417996cb4c2f3544"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "sled_captured",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241114,
+      "STEP_volume_difference_mm3": -3.9814040064811707e-08,
+      "files": {
+        "cad/FM07_1U_sled_captured.FCStd": "518625b083835eb667ab7aec6cdba3e5042be56888e0f895d440f7df6b535beb",
+        "cad/FM07_1U_sled_captured.step": "d2a05bece9db40cb54e42f6d9116871d68bcd1356ac3a9e86e856e8ab18bfeb3"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "fork_home",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241112,
+      "STEP_volume_difference_mm3": -3.608874976634979e-08,
+      "files": {
+        "cad/FM07_1U_fork_home.FCStd": "2cb3686755c1fe3c0fe2b259bb77e85f53d04739ad19442e83e87bf3b088648c",
+        "cad/FM07_1U_fork_home.step": "871c1bfc7d80af4906b568cf8479a900f0d2318ebf623f80f6a95bd989159913"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "exit_unlocked",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241112,
+      "STEP_volume_difference_mm3": -3.4226104617118835e-08,
+      "files": {
+        "cad/FM07_1U_exit_unlocked.FCStd": "225902b14bd143c77700b337a6464bc59d27d4855bfb9d982de88779caad4ca8",
+        "cad/FM07_1U_exit_unlocked.step": "def57b3c214989a918463825eaf4713d42f6de2f01d7fc250f30d536a589df94"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "exit_open",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241112,
+      "STEP_volume_difference_mm3": -3.4458935260772705e-08,
+      "files": {
+        "cad/FM07_1U_exit_open.FCStd": "e2481d5a4798f87d3ce8e5423084814422a490760fc64e0045c56afea6205e03",
+        "cad/FM07_1U_exit_open.step": "9cdc60bc1c9a43ea0c5c21026f53cfdc30d64a2e2b52b386e00604e150121450"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "payload_clear",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241114,
+      "STEP_volume_difference_mm3": -7.89295881986618e-08,
+      "files": {
+        "cad/FM07_1U_payload_clear.FCStd": "fdf853fd21f31e9d7934b1582a0b31d100a0ccbe03e41dfe239c76dae8a8ad7a",
+        "cad/FM07_1U_payload_clear.step": "2f5ff16bd3cedde44e060c61f920ae55efbfc41fb935eba1a7894ed1064702f4"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "empty_carrier_home",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241112,
+      "STEP_volume_difference_mm3": -8.475035429000854e-08,
+      "files": {
+        "cad/FM07_1U_empty_carrier_home.FCStd": "d503fdbdc24e455dbe734a36d47ea32fe819f3534b0c6998cd6ec358b69c1cfb",
+        "cad/FM07_1U_empty_carrier_home.step": "6d4009727a1e809be3f9897b426e6eb174a38d3d074ac838a1b868c41800ecf8"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "exit_locked",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241112,
+      "STEP_volume_difference_mm3": -8.568167686462402e-08,
+      "files": {
+        "cad/FM07_1U_exit_locked.FCStd": "337ef607edee053fc64dea6efaa6ac2eecf52b2c1c9cf2bd9a5e43404e1ae863",
+        "cad/FM07_1U_exit_locked.step": "8ab8e1ad2077457a2319159a8153b78c173392481c8993e21fbcb6ad30f44fe5"
+      }
+    },
+    {
+      "size": "1U",
+      "pose": "ready_empty",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 2057915.7092241112,
+      "STEP_volume_difference_mm3": -8.684583008289337e-08,
+      "files": {
+        "cad/FM07_1U_ready_empty.FCStd": "758494307426f6cb5124fd09e0bcb8959f109932eb5ffd890b84d5cd4cd2ddcf",
+        "cad/FM07_1U_ready_empty.step": "2f24795e1b98be0b1ecfcc52bcfd1eb6d8d7d7ee224dfca87482258dc676abd2"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "stored",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599645,
+      "STEP_volume_difference_mm3": 5.615875124931335e-07,
+      "files": {
+        "cad/FM07_3U_stored.FCStd": "3c95ad0deebec4281a4c036520123beaee3448883b1953279787db9947d4f11a",
+        "cad/FM07_3U_stored.step": "43dd803023ba8d52e87fd14fbf5ba845b4aa13eb63db7cb19f0bf343ecf390bd"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "transfer",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599646,
+      "STEP_volume_difference_mm3": -1.126900315284729e-07,
+      "files": {
+        "cad/FM07_3U_transfer.FCStd": "73ae537914f0c91d87edc9c7bbd8d9e797869592500f596fafe69346ff256d94",
+        "cad/FM07_3U_transfer.step": "08b825c89c2ff30b1ff24713aea80dea4fa48031935a57f93b95a76cb293db98"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "sled_captured",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599646,
+      "STEP_volume_difference_mm3": -1.1362135410308838e-07,
+      "files": {
+        "cad/FM07_3U_sled_captured.FCStd": "6b530b0987ec26f67a61cd2480e33b6510688da539105505982508def70e480b",
+        "cad/FM07_3U_sled_captured.step": "4ae8e622e376ea4c3db8b51dc1b0c8575809b297de593daeef6c6c51e021a7d5"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "fork_home",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599647,
+      "STEP_volume_difference_mm3": -1.043081283569336e-07,
+      "files": {
+        "cad/FM07_3U_fork_home.FCStd": "0123f252125022aec877a22902fa9edf44eb650996a115b5a4e3c0288a9b462f",
+        "cad/FM07_3U_fork_home.step": "ea689cbaae6e1815863c18a7f9932a3d0a36922550299a8682f242f087eb1107"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "exit_unlocked",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599647,
+      "STEP_volume_difference_mm3": -1.0058283805847168e-07,
+      "files": {
+        "cad/FM07_3U_exit_unlocked.FCStd": "5cff752fa0f9c763f3fc9399fc3efc17b84e0897e4fdbb3e2965de7186c8b1a3",
+        "cad/FM07_3U_exit_unlocked.step": "0533bc404d8d4e9e62b0056624dc09f868c4c03f5abf85c1c1d1f8432fbf8660"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "exit_open",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599647,
+      "STEP_volume_difference_mm3": -8.940696716308594e-08,
+      "files": {
+        "cad/FM07_3U_exit_open.FCStd": "2d5992de0ea6f2bb4bdd7d06ffaf8df19bdf132084513d03ed70480f65765788",
+        "cad/FM07_3U_exit_open.step": "596ea5a91cc16941a591c7b5d9139ccf5aadcfea49aa63dc24679b54a5f8e880"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "payload_clear",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599647,
+      "STEP_volume_difference_mm3": -1.7881393432617188e-07,
+      "files": {
+        "cad/FM07_3U_payload_clear.FCStd": "79414bed6a6fd51433aec27a26f27aaa78eb5b9b1412bc11b0a6b6d326a9628a",
+        "cad/FM07_3U_payload_clear.step": "6a5ec14577d3cca86486298cfb5d5c5f18fb09547f5d8af413f84e3973bf772b"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "empty_carrier_home",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599646,
+      "STEP_volume_difference_mm3": -1.7974525690078735e-07,
+      "files": {
+        "cad/FM07_3U_empty_carrier_home.FCStd": "feaced65ce0cf4d670bdf64e7325b062b29b032577c43cca31c898d3caadcf30",
+        "cad/FM07_3U_empty_carrier_home.step": "37f41838b29583246856c4d998fe51b894415e7705214369b9cfa92592f3e7e8"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "exit_locked",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599646,
+      "STEP_volume_difference_mm3": -1.73225998878479e-07,
+      "files": {
+        "cad/FM07_3U_exit_locked.FCStd": "f81ec709c1559bf88023883af505f8d91579f2dc98ab6b8c0700a6a15b04cc8c",
+        "cad/FM07_3U_exit_locked.step": "f8ba571848a9d44d83feb7b804f885afb029008cdb2f07474576dab4c5dfaceb"
+      }
+    },
+    {
+      "size": "3U",
+      "pose": "ready_empty",
+      "components": 37,
+      "valid": true,
+      "source_volume_mm3": 5004965.530599646,
+      "STEP_volume_difference_mm3": -1.7695128917694092e-07,
+      "files": {
+        "cad/FM07_3U_ready_empty.FCStd": "42a8707fa33140644e66ce1a6b140268ad9690871722cc0787bef65a73d477dd",
+        "cad/FM07_3U_ready_empty.step": "9dee1dfd752c7132739fad8ffd819bee6527f58a9161c9a7a41c9ba3c8c307fc"
+      }
+    }
+  ],
+  "source_sha256": "a3022d66003eedf6429d7a8489848be3e78f1f42bef1d096d2eac1f86de3c251"
+}

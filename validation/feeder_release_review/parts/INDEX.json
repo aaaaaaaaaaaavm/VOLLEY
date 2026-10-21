@@ -1,0 +1,1041 @@
+{
+  "revision": "FM07-R5",
+  "parts": [
+    {
+      "size": "1U",
+      "name": "payload",
+      "file": "parts/FM07_1U_payload.step",
+      "sha256": "c0815eaa7e7f64666fb3d6cff73c43e887f88daead4d6055e9b34ff5a3ace606",
+      "volume_mm3": 1115886.410687767,
+      "CG_mm": [
+        56.749999999999986,
+        -150.0,
+        72.59999999999998
+      ],
+      "material_basis": "payload",
+      "role": "payload"
+    },
+    {
+      "size": "1U",
+      "name": "support_floor",
+      "file": "parts/FM07_1U_support_floor.step",
+      "sha256": "58ed6c7b57c9bea40b2694c70afabb7c10e9c7190f986f3af7f139323e7c7434",
+      "volume_mm3": 80696.64,
+      "CG_mm": [
+        56.191928437169125,
+        -153.54455233823865,
+        18.999999999999996
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "cassette_L_-8",
+      "file": "parts/FM07_1U_cassette_L_-8.step",
+      "sha256": "ed9afb29daa187da489f0246257249c40b1b5f0f502497c264e0dd000eb7c64b",
+      "volume_mm3": 89488.00000000001,
+      "CG_mm": [
+        -5.499999999999999,
+        -113.99999999999999,
+        80.57142857142856
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "cassette_L_117.5",
+      "file": "parts/FM07_1U_cassette_L_117.5.step",
+      "sha256": "3471b5f0aa88c422217dbe30e2377ac29162e6c62163d3ebd84eb5692615ad93",
+      "volume_mm3": 83367.99999999999,
+      "CG_mm": [
+        119.9967373572594,
+        -115.68841761827082,
+        80.89396411092986
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "rear_wall",
+      "file": "parts/FM07_1U_rear_wall.step",
+      "sha256": "230e59ddd0209e5bb1c56da2b5f865de30d6e91711596a16d7874d253f36463f",
+      "volume_mm3": 61600.000000000015,
+      "CG_mm": [
+        56.75,
+        -214.0,
+        78.0
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "storage_gate",
+      "file": "parts/FM07_1U_storage_gate.step",
+      "sha256": "58ebb87d3c8926b0e1b4bc6f896c0d3245e92b8e1a80455e45c3a58ab396b3a4",
+      "volume_mm3": 52509.25865836534,
+      "CG_mm": [
+        67.35894436898967,
+        -91.0,
+        76.33685325142416
+      ],
+      "material_basis": "aluminium",
+      "role": "gate"
+    },
+    {
+      "size": "1U",
+      "name": "fork_body",
+      "file": "parts/FM07_1U_fork_body.step",
+      "sha256": "3bc5068a79ef52f549d4c0efa584ffa1362eb228909339061796f8c5414298ff",
+      "volume_mm3": 132508.54376660482,
+      "CG_mm": [
+        69.4594544571453,
+        -192.7275644094943,
+        68.47841909458207
+      ],
+      "material_basis": "aluminium",
+      "role": "fork"
+    },
+    {
+      "size": "1U",
+      "name": "captive_guide",
+      "file": "parts/FM07_1U_captive_guide.step",
+      "sha256": "2e4b7caea400d57512aaec3c99392c5a34a77362980532198dc5c4ed7946d3ae",
+      "volume_mm3": 72863.99999999999,
+      "CG_mm": [
+        -58.0,
+        -100.0,
+        49.27272727272728
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "end_block_-238",
+      "file": "parts/FM07_1U_end_block_-238.step",
+      "sha256": "388340add8bf211332d30851d1eb53d39f3b5b948b7b926befa921bc93447de3",
+      "volume_mm3": 1536.0,
+      "CG_mm": [
+        -58.0,
+        -234.0,
+        50.0
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "end_block_30",
+      "file": "parts/FM07_1U_end_block_30.step",
+      "sha256": "87cbd37c0c7f5613f7785b9b24f0324818ac9fe6d4098890bea2f207549c0006",
+      "volume_mm3": 1536.0,
+      "CG_mm": [
+        -58.0,
+        34.0,
+        50.0
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "gate_bolt_guide",
+      "file": "parts/FM07_1U_gate_bolt_guide.step",
+      "sha256": "9bb8324ed3f7adb290c0e28d5632f80839b679ba76a373228af3f1cea2f2db13",
+      "volume_mm3": 13381.24075031608,
+      "CG_mm": [
+        174.07852462930651,
+        -91.00000000000004,
+        -53.04437527576847
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "gate_crossbolt",
+      "file": "parts/FM07_1U_gate_crossbolt.step",
+      "sha256": "d497e27110dd340e4e070158ab77b57af83de99ca07c25933e005d81ae33bc28",
+      "volume_mm3": 1828.4069243892595,
+      "CG_mm": [
+        212.45876288659795,
+        -91.00000000000001,
+        -25.000000000000007
+      ],
+      "material_basis": "steel",
+      "role": "crossbolt"
+    },
+    {
+      "size": "1U",
+      "name": "motor_3242_envelope",
+      "file": "parts/FM07_1U_motor_3242_envelope.step",
+      "sha256": "62369d5928c6ea29be86238df7ea3f19bdcff2f7ecd897931cc09439d03ff209",
+      "volume_mm3": 35547.74919389922,
+      "CG_mm": [
+        -94.0,
+        -317.09999999999997,
+        70.0
+      ],
+      "material_basis": "catalogue",
+      "role": "drive"
+    },
+    {
+      "size": "1U",
+      "name": "motor_shaft_envelope",
+      "file": "parts/FM07_1U_motor_shaft_envelope.step",
+      "sha256": "48f490aa250c31e358cf13d03c615e7f9d6d0dc50766d0f5f98a50920bdad848",
+      "volume_mm3": 255.25440310417062,
+      "CG_mm": [
+        -93.99999999999999,
+        -288.49999999999994,
+        70.00000000000001
+      ],
+      "material_basis": "steel",
+      "role": "drive"
+    },
+    {
+      "size": "1U",
+      "name": "shaft_extension",
+      "file": "parts/FM07_1U_shaft_extension.step",
+      "sha256": "c71493a46f310b7adc469d2dce22d2267559d9fcd67d677a7a651fd685e75560",
+      "volume_mm3": 2277.6546738526004,
+      "CG_mm": [
+        -94.0,
+        -264.5,
+        70.0
+      ],
+      "material_basis": "steel",
+      "role": "drive"
+    },
+    {
+      "size": "1U",
+      "name": "screw_major_envelope",
+      "file": "parts/FM07_1U_screw_major_envelope.step",
+      "sha256": "fdedd6821ca3f0bf3e4f72adc19a10a5d7a9093839d5f377f775d0aa03f8454e",
+      "volume_mm3": 23169.24582022472,
+      "CG_mm": [
+        -94.00000000000001,
+        -102.50000000000001,
+        70.00000000000001
+      ],
+      "material_basis": "steel",
+      "role": "drive"
+    },
+    {
+      "size": "1U",
+      "name": "coupling_envelope",
+      "file": "parts/FM07_1U_coupling_envelope.step",
+      "sha256": "f6c5376f45d40f37d57b7ff24d1a87bf0d8c0852842144b7f7c4b90138e48acc",
+      "volume_mm3": 1930.4065838696863,
+      "CG_mm": [
+        -94.00000000000001,
+        -279.1493427235779,
+        70.00000000000001
+      ],
+      "material_basis": "aluminium",
+      "role": "drive"
+    },
+    {
+      "size": "1U",
+      "name": "bearing_housing",
+      "file": "parts/FM07_1U_bearing_housing.step",
+      "sha256": "b3cf2711e9629f93c049b9fa2360d3c007d7582ee1d1ae0d6fc6cf0478bdc48c",
+      "volume_mm3": 13536.946070110047,
+      "CG_mm": [
+        -94.0,
+        -253.99999999999997,
+        70.00000000000001
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "bearing_ring_A",
+      "file": "parts/FM07_1U_bearing_ring_A.step",
+      "sha256": "795176e24a9a87e18edc0b855e2de4ce72ed4b6093bbef6c1f3d31be2eae8fb4",
+      "volume_mm3": 3350.4378792188086,
+      "CG_mm": [
+        -94.00000000000001,
+        -257.5,
+        70.0
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "bearing_ring_B",
+      "file": "parts/FM07_1U_bearing_ring_B.step",
+      "sha256": "ba21d6767198deafdd46e2d65a1ff5f226059320412932b93f067508297bf0f6",
+      "volume_mm3": 3350.4378792188086,
+      "CG_mm": [
+        -94.00000000000001,
+        -248.49999999999994,
+        70.0
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "shaft_collar_A",
+      "file": "parts/FM07_1U_shaft_collar_A.step",
+      "sha256": "71750df650b4847ac9b9d465ba7fd9983e9efa9c4c8f9bbda54eb81dd1e7bee6",
+      "volume_mm3": 65.95773776211774,
+      "CG_mm": [
+        -94.00000000000001,
+        -263.0,
+        69.99999999999993
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "shaft_collar_B",
+      "file": "parts/FM07_1U_shaft_collar_B.step",
+      "sha256": "58398b2d35ec44ba55db7e63f86fdcd4ab8887125a7cc5c855943e8391eb4f0d",
+      "volume_mm3": 65.95773776211774,
+      "CG_mm": [
+        -94.00000000000001,
+        -242.99999999999994,
+        69.99999999999993
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "nut_SB3700_envelope",
+      "file": "parts/FM07_1U_nut_SB3700_envelope.step",
+      "sha256": "789dc8f290eb37e234d3ff84015e818ef83708434f1801ff68fba190ed06f5f0",
+      "volume_mm3": 3850.0335779467423,
+      "CG_mm": [
+        -94.0,
+        -216.0,
+        69.99999999999999
+      ],
+      "material_basis": "catalogue",
+      "role": "drive"
+    },
+    {
+      "size": "1U",
+      "name": "drive_mount",
+      "file": "parts/FM07_1U_drive_mount.step",
+      "sha256": "e3c56f3dedddf25a7454f9c78e251ea00bb7aa3f561472b7479a036901d4bddd",
+      "volume_mm3": 19824.0,
+      "CG_mm": [
+        -100.66101694915255,
+        -235.52058111380146,
+        31.14527845036319
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "motor_mount_envelope",
+      "file": "parts/FM07_1U_motor_mount_envelope.step",
+      "sha256": "0c04cc957551390cd63d7cab31c2bb330b63fa3910f36bfddc18ca34442dfffb",
+      "volume_mm3": 6982.084710328736,
+      "CG_mm": [
+        -94.0,
+        -292.5,
+        69.99999999999999
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "fork_front",
+      "file": "parts/FM07_1U_fork_front.step",
+      "sha256": "53d6831a9810c167d204d98f9aefd42f844ee969474e85ae91dd4b18a63dc853",
+      "volume_mm3": 2244.3999999999996,
+      "CG_mm": [
+        56.75,
+        -96.81750133666016,
+        131.9256995188024
+      ],
+      "material_basis": "aluminium",
+      "role": "front_barrier"
+    },
+    {
+      "size": "1U",
+      "name": "sled_body",
+      "file": "parts/FM07_1U_sled_body.step",
+      "sha256": "39ac182f2e590b5e9ff78d1a1c7f4f1f0e525c9f74a840d23ce574a4449edb6b",
+      "volume_mm3": 136399.78793220545,
+      "CG_mm": [
+        56.966269881655684,
+        49.03887091312399,
+        21.832862842452766
+      ],
+      "material_basis": "aluminium",
+      "role": "sled"
+    },
+    {
+      "size": "1U",
+      "name": "sled_front_stop",
+      "file": "parts/FM07_1U_sled_front_stop.step",
+      "sha256": "61025eeaa5ef638dba3e33a99e2beedcb76547ed488196861d324e20a1ec8a92",
+      "volume_mm3": 3764.8606999660806,
+      "CG_mm": [
+        116.99977799970036,
+        38.77200945933828,
+        31.100665357033122
+      ],
+      "material_basis": "steel",
+      "role": "exit_gate"
+    },
+    {
+      "size": "1U",
+      "name": "sled_entry_bar",
+      "file": "parts/FM07_1U_sled_entry_bar.step",
+      "sha256": "d989ac51707fed7d901317968cca49760a3a59dcf74f3e7ed60b8aeb0b8beb72",
+      "volume_mm3": 15908.30444801925,
+      "CG_mm": [
+        56.75000000000002,
+        -9.661560412199028,
+        -26.49828761232954
+      ],
+      "material_basis": "steel",
+      "role": "sled_entry"
+    },
+    {
+      "size": "1U",
+      "name": "receiver_lock_pin_0",
+      "file": "parts/FM07_1U_receiver_lock_pin_0.step",
+      "sha256": "49bb97984ccde6092f575706b56aad67f916e6eb71501d56680e20d46a692e29",
+      "volume_mm3": 173.57299411083605,
+      "CG_mm": [
+        3.3212669683257925,
+        -10.0,
+        -4.605328045558034e-17
+      ],
+      "material_basis": "steel",
+      "role": "sled_lock_pin"
+    },
+    {
+      "size": "1U",
+      "name": "receiver_lock_pin_1",
+      "file": "parts/FM07_1U_receiver_lock_pin_1.step",
+      "sha256": "a51487668275b91f7fc0acdfaa58350288349a6032f6cb8f7e8c736b1fd8711b",
+      "volume_mm3": 173.57299411083605,
+      "CG_mm": [
+        98.82126696832579,
+        -10.0,
+        -4.605328045558034e-17
+      ],
+      "material_basis": "steel",
+      "role": "sled_lock_pin"
+    },
+    {
+      "size": "1U",
+      "name": "sled_guide_shoe_0",
+      "file": "parts/FM07_1U_sled_guide_shoe_0.step",
+      "sha256": "c5037d66273377d12ed695297dacdc6489ebd9d154c9d576f3531ccbd907d057",
+      "volume_mm3": 8262.0,
+      "CG_mm": [
+        56.75,
+        23.0,
+        5.470588235294117
+      ],
+      "material_basis": "steel",
+      "role": "sled"
+    },
+    {
+      "size": "1U",
+      "name": "launcher_guide_0",
+      "file": "parts/FM07_1U_launcher_guide_0.step",
+      "sha256": "d12ab7f6d2515070e1465fe32283f1a117e33276919d655c74160c76ab7604ce",
+      "volume_mm3": 30420.0,
+      "CG_mm": [
+        106.75,
+        22.999999999999996,
+        3.15
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "sled_guide_shoe_1",
+      "file": "parts/FM07_1U_sled_guide_shoe_1.step",
+      "sha256": "1a97fab5719b886ce73ed6d6a90d4f5c17638325c86402bd15325baa8ac82ed3",
+      "volume_mm3": 8262.0,
+      "CG_mm": [
+        56.75,
+        81.0,
+        5.470588235294117
+      ],
+      "material_basis": "steel",
+      "role": "sled"
+    },
+    {
+      "size": "1U",
+      "name": "launcher_guide_1",
+      "file": "parts/FM07_1U_launcher_guide_1.step",
+      "sha256": "a0a93fce7beab475fd4a4211148d6c425f29d34a4005f7beae0703f9746817ce",
+      "volume_mm3": 30420.0,
+      "CG_mm": [
+        106.75,
+        80.99999999999997,
+        3.15
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "1U",
+      "name": "exit_hinge_pin",
+      "file": "parts/FM07_1U_exit_hinge_pin.step",
+      "sha256": "c251432230f79f6d9e533c6a0ea7bc87b0e760adfe7ac056ae861f11c9b74b3c",
+      "volume_mm3": 376.0486406346982,
+      "CG_mm": [
+        123.00000000000001,
+        -12.0,
+        30.000000000000004
+      ],
+      "material_basis": "steel",
+      "role": "sled"
+    },
+    {
+      "size": "1U",
+      "name": "exit_lock_pin",
+      "file": "parts/FM07_1U_exit_lock_pin.step",
+      "sha256": "b5efa3f1df765974d4c191c5c0de0e597f45037f44fa117c3c2c36e17db5a975",
+      "volume_mm3": 102.4944603233671,
+      "CG_mm": [
+        123.00000000000001,
+        -4.500000000000001,
+        18.954022988505752
+      ],
+      "material_basis": "steel",
+      "role": "exit_lock_pin"
+    },
+    {
+      "size": "3U",
+      "name": "payload",
+      "file": "parts/FM07_3U_payload.step",
+      "sha256": "48b7936b8e9f90c806ec59139f26306c5f26b15f9f88c5ed1f850c6b691c4957",
+      "volume_mm3": 3347659.232063301,
+      "CG_mm": [
+        170.24999999999997,
+        -150.00000000000003,
+        72.6
+      ],
+      "material_basis": "payload",
+      "role": "payload"
+    },
+    {
+      "size": "3U",
+      "name": "support_floor",
+      "file": "parts/FM07_3U_support_floor.step",
+      "sha256": "8303af93a632df06a33503f6c7c8817dd0ed02558b10c26ecf298c260bf85684",
+      "volume_mm3": 241412.64,
+      "CG_mm": [
+        169.7277676098484,
+        -153.18202669089737,
+        19.0
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "cassette_L_-8",
+      "file": "parts/FM07_3U_cassette_L_-8.step",
+      "sha256": "44433d09682bbdfd6349690e51bcc66b504aea5a1d21dfa9a0f2e595bf072e42",
+      "volume_mm3": 89488.00000000001,
+      "CG_mm": [
+        -5.499999999999999,
+        -113.99999999999999,
+        80.57142857142856
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "cassette_L_344.5",
+      "file": "parts/FM07_3U_cassette_L_344.5.step",
+      "sha256": "99cad2d0e931db36ee323029714ac8faa0f275f14a3bf3413f3873c00e8bb664",
+      "volume_mm3": 83367.99999999999,
+      "CG_mm": [
+        346.9967373572594,
+        -115.68841761827078,
+        80.89396411092984
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "rear_wall",
+      "file": "parts/FM07_3U_rear_wall.step",
+      "sha256": "4ffbb782a85840bae68efbc0e9af01e10bbeee963da57fb9ab509fe7c1e64495",
+      "volume_mm3": 163296.0,
+      "CG_mm": [
+        170.25,
+        -214.0,
+        78.0
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "storage_gate",
+      "file": "parts/FM07_3U_storage_gate.step",
+      "sha256": "5d75e4b9383a8c6af2bac2bad213a57dbdaa52e655196d4d88b130bd9b82f365",
+      "volume_mm3": 143309.25865836538,
+      "CG_mm": [
+        179.13406425102687,
+        -90.99999999999997,
+        73.58904561557513
+      ],
+      "material_basis": "aluminium",
+      "role": "gate"
+    },
+    {
+      "size": "3U",
+      "name": "fork_body",
+      "file": "parts/FM07_3U_fork_body.step",
+      "sha256": "a2ccff84a8d86dbd90c191cbcff6368f059dc7918ffa654c0f638009d915c738",
+      "volume_mm3": 211277.54376660567,
+      "CG_mm": [
+        181.51156851436613,
+        -194.72064408810778,
+        75.56901603939403
+      ],
+      "material_basis": "aluminium",
+      "role": "fork"
+    },
+    {
+      "size": "3U",
+      "name": "captive_guide",
+      "file": "parts/FM07_3U_captive_guide.step",
+      "sha256": "b062424e16374352f5204b89b86cbb37ac8a5175ac10edc4fa51b52c5e4a851b",
+      "volume_mm3": 72863.99999999999,
+      "CG_mm": [
+        -58.0,
+        -100.0,
+        49.27272727272728
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "end_block_-238",
+      "file": "parts/FM07_3U_end_block_-238.step",
+      "sha256": "a82a9cbd199fe736d395aaca4b43b3e2605534c1995d54cbeb9bf8af55f59fd2",
+      "volume_mm3": 1536.0,
+      "CG_mm": [
+        -58.0,
+        -234.0,
+        50.0
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "end_block_30",
+      "file": "parts/FM07_3U_end_block_30.step",
+      "sha256": "682902ee63aaa7001c182c3ff3207c6d82ac41f4654954ad35a44b00d011dd28",
+      "volume_mm3": 1536.0,
+      "CG_mm": [
+        -58.0,
+        34.0,
+        50.0
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "gate_bolt_guide",
+      "file": "parts/FM07_3U_gate_bolt_guide.step",
+      "sha256": "01abb2878c1d35265ab0c28665ff3aec6c3462385519ede892f5c8462039504d",
+      "volume_mm3": 13381.24075031608,
+      "CG_mm": [
+        401.07852462930646,
+        -91.00000000000004,
+        -53.04437527576847
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "gate_crossbolt",
+      "file": "parts/FM07_3U_gate_crossbolt.step",
+      "sha256": "0cc787554fca54cf9d859f43a5cf1043061f9886596fafd2d373484114de8cd7",
+      "volume_mm3": 1828.4069243892595,
+      "CG_mm": [
+        439.45876288659804,
+        -91.00000000000001,
+        -25.000000000000007
+      ],
+      "material_basis": "steel",
+      "role": "crossbolt"
+    },
+    {
+      "size": "3U",
+      "name": "motor_3242_envelope",
+      "file": "parts/FM07_3U_motor_3242_envelope.step",
+      "sha256": "c816e61e04154fe896bf1b190632d3640066cdd35157b3e85c560ee26042f944",
+      "volume_mm3": 35547.74919389922,
+      "CG_mm": [
+        -94.0,
+        -317.09999999999997,
+        70.0
+      ],
+      "material_basis": "catalogue",
+      "role": "drive"
+    },
+    {
+      "size": "3U",
+      "name": "motor_shaft_envelope",
+      "file": "parts/FM07_3U_motor_shaft_envelope.step",
+      "sha256": "9bdec276f93c3c45fb382cd6a15cd20ebd454faecb43d3abfae669748baa9aa3",
+      "volume_mm3": 255.25440310417062,
+      "CG_mm": [
+        -93.99999999999999,
+        -288.49999999999994,
+        70.00000000000001
+      ],
+      "material_basis": "steel",
+      "role": "drive"
+    },
+    {
+      "size": "3U",
+      "name": "shaft_extension",
+      "file": "parts/FM07_3U_shaft_extension.step",
+      "sha256": "bc5d30c6f29b4b81324d76340307eb9d4115cd14d4cf6eda844416d922596efe",
+      "volume_mm3": 2277.6546738526004,
+      "CG_mm": [
+        -94.0,
+        -264.5,
+        70.0
+      ],
+      "material_basis": "steel",
+      "role": "drive"
+    },
+    {
+      "size": "3U",
+      "name": "screw_major_envelope",
+      "file": "parts/FM07_3U_screw_major_envelope.step",
+      "sha256": "c9ae5c15eead156119260d5fb363c5135639f6b2dd50db55b6838be55fcff6ed",
+      "volume_mm3": 23169.24582022472,
+      "CG_mm": [
+        -94.00000000000001,
+        -102.50000000000001,
+        70.00000000000001
+      ],
+      "material_basis": "steel",
+      "role": "drive"
+    },
+    {
+      "size": "3U",
+      "name": "coupling_envelope",
+      "file": "parts/FM07_3U_coupling_envelope.step",
+      "sha256": "19a017fd30cf0074541b7b3767946adba2a3994c7a4bad5880e111023ca3c9eb",
+      "volume_mm3": 1930.4065838696863,
+      "CG_mm": [
+        -94.00000000000001,
+        -279.1493427235779,
+        70.00000000000001
+      ],
+      "material_basis": "aluminium",
+      "role": "drive"
+    },
+    {
+      "size": "3U",
+      "name": "bearing_housing",
+      "file": "parts/FM07_3U_bearing_housing.step",
+      "sha256": "bfc8800135f29deb41be066dd53e8ff9b78ab6d7acfd445b85102d4a4bcd809f",
+      "volume_mm3": 13536.946070110047,
+      "CG_mm": [
+        -94.0,
+        -253.99999999999997,
+        70.00000000000001
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "bearing_ring_A",
+      "file": "parts/FM07_3U_bearing_ring_A.step",
+      "sha256": "018d5325b705c8be820454930b85f8d1b0f2d982608c381915ded02c53854eef",
+      "volume_mm3": 3350.4378792188086,
+      "CG_mm": [
+        -94.00000000000001,
+        -257.5,
+        70.0
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "bearing_ring_B",
+      "file": "parts/FM07_3U_bearing_ring_B.step",
+      "sha256": "599fd06380498528be5a28428d89a3796ce0c6f8b8044ee3626b68536a423f80",
+      "volume_mm3": 3350.4378792188086,
+      "CG_mm": [
+        -94.00000000000001,
+        -248.49999999999994,
+        70.0
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "shaft_collar_A",
+      "file": "parts/FM07_3U_shaft_collar_A.step",
+      "sha256": "45e408ccde52b02fdb353a3ab5ebe69a9127e41c6ca714b0166b7c7917e533ed",
+      "volume_mm3": 65.95773776211774,
+      "CG_mm": [
+        -94.00000000000001,
+        -263.0,
+        69.99999999999993
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "shaft_collar_B",
+      "file": "parts/FM07_3U_shaft_collar_B.step",
+      "sha256": "9a34cb2185ac7931c82037915f7c133107f17cd496a209d83e4885a0689c14de",
+      "volume_mm3": 65.95773776211774,
+      "CG_mm": [
+        -94.00000000000001,
+        -242.99999999999994,
+        69.99999999999993
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "nut_SB3700_envelope",
+      "file": "parts/FM07_3U_nut_SB3700_envelope.step",
+      "sha256": "abe914e2029f3feac92c9490fac0b26eb0a3a40b3c0c1c07f9eda34cf6276af6",
+      "volume_mm3": 3850.0335779467423,
+      "CG_mm": [
+        -94.0,
+        -216.0,
+        69.99999999999999
+      ],
+      "material_basis": "catalogue",
+      "role": "drive"
+    },
+    {
+      "size": "3U",
+      "name": "drive_mount",
+      "file": "parts/FM07_3U_drive_mount.step",
+      "sha256": "53911c438f1a7ce2fe51036e722cf3815341d6940b7b1f84841e6abb7c56b229",
+      "volume_mm3": 19824.0,
+      "CG_mm": [
+        -100.66101694915255,
+        -235.52058111380146,
+        31.14527845036319
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "motor_mount_envelope",
+      "file": "parts/FM07_3U_motor_mount_envelope.step",
+      "sha256": "46dc9dbf2048526c14de2a67d94fa768e6a3e73c9a8ac82930d5be87b132cb74",
+      "volume_mm3": 6982.084710328736,
+      "CG_mm": [
+        -94.0,
+        -292.5,
+        69.99999999999999
+      ],
+      "material_basis": "aluminium",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "fork_front",
+      "file": "parts/FM07_3U_fork_front.step",
+      "sha256": "21ae2d8cb5e34b286b82a114b2229d88092099baa8eb585bfe56a140226df158",
+      "volume_mm3": 6784.4000000000015,
+      "CG_mm": [
+        170.24999999999997,
+        -96.93962620128531,
+        134.9867401686221
+      ],
+      "material_basis": "aluminium",
+      "role": "front_barrier"
+    },
+    {
+      "size": "3U",
+      "name": "sled_body",
+      "file": "parts/FM07_3U_sled_body.step",
+      "sha256": "4ce9a1139f4fd818cba1bb499562526bffe70800f003efbf32a65df600213853",
+      "volume_mm3": 325263.7879322052,
+      "CG_mm": [
+        170.50766553938186,
+        50.61308452945949,
+        17.519213859893874
+      ],
+      "material_basis": "aluminium",
+      "role": "sled"
+    },
+    {
+      "size": "3U",
+      "name": "sled_front_stop",
+      "file": "parts/FM07_3U_sled_front_stop.step",
+      "sha256": "c99d2e47f5aa3b9bd6e7fa9c4ec7cac3af991c887d74432a1db7f16b86188c5e",
+      "volume_mm3": 3764.8606999660806,
+      "CG_mm": [
+        343.9997779997003,
+        38.77200945933827,
+        31.10066535703313
+      ],
+      "material_basis": "steel",
+      "role": "exit_gate"
+    },
+    {
+      "size": "3U",
+      "name": "sled_entry_bar",
+      "file": "parts/FM07_3U_sled_entry_bar.step",
+      "sha256": "929a4e406f3902c9b65802c5357fd2268e3d5f9c79590035e30884b0c60a8798",
+      "volume_mm3": 20448.304448019255,
+      "CG_mm": [
+        170.25000000000003,
+        -9.736701885787822,
+        -33.38139005232953
+      ],
+      "material_basis": "steel",
+      "role": "sled_entry"
+    },
+    {
+      "size": "3U",
+      "name": "receiver_lock_pin_0",
+      "file": "parts/FM07_3U_receiver_lock_pin_0.step",
+      "sha256": "708f11bd7bc64859ab1dfbe421276b14898b38e0ab880fb0277927395817de6f",
+      "volume_mm3": 173.57299411083605,
+      "CG_mm": [
+        3.3212669683257925,
+        -10.0,
+        -4.605328045558034e-17
+      ],
+      "material_basis": "steel",
+      "role": "sled_lock_pin"
+    },
+    {
+      "size": "3U",
+      "name": "receiver_lock_pin_1",
+      "file": "parts/FM07_3U_receiver_lock_pin_1.step",
+      "sha256": "e507dbcc4263daad6898d076ea14cd623ea0b7ca1deb07a23af9d7120123d57e",
+      "volume_mm3": 173.57299411083605,
+      "CG_mm": [
+        325.8212669683257,
+        -10.0,
+        -4.605328045558034e-17
+      ],
+      "material_basis": "steel",
+      "role": "sled_lock_pin"
+    },
+    {
+      "size": "3U",
+      "name": "sled_guide_shoe_0",
+      "file": "parts/FM07_3U_sled_guide_shoe_0.step",
+      "sha256": "08a2e683f9eeba0a6e34a669cacd80948cb2afa90f58cce4f57658f7c78a6a89",
+      "volume_mm3": 23697.999999999996,
+      "CG_mm": [
+        170.25,
+        23.0,
+        5.470588235294119
+      ],
+      "material_basis": "steel",
+      "role": "sled"
+    },
+    {
+      "size": "3U",
+      "name": "launcher_guide_0",
+      "file": "parts/FM07_3U_launcher_guide_0.step",
+      "sha256": "a5564238f37350cf8b3c7fb965348c2265bc0928a4cef15ba2bc08f7d6563ee1",
+      "volume_mm3": 57660.0,
+      "CG_mm": [
+        220.25000000000003,
+        23.0,
+        3.1500000000000004
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "sled_guide_shoe_1",
+      "file": "parts/FM07_3U_sled_guide_shoe_1.step",
+      "sha256": "98e84a270867119d427a9b853a4c17a4a49038fbb007b8c100ea44aed8644bb6",
+      "volume_mm3": 23697.999999999996,
+      "CG_mm": [
+        170.25,
+        81.00000000000001,
+        5.470588235294119
+      ],
+      "material_basis": "steel",
+      "role": "sled"
+    },
+    {
+      "size": "3U",
+      "name": "launcher_guide_1",
+      "file": "parts/FM07_3U_launcher_guide_1.step",
+      "sha256": "1f5a7182b79433d3169ee221dbb5d73f33dc66efdb0fe88841aac3d84a1774f0",
+      "volume_mm3": 57660.0,
+      "CG_mm": [
+        220.25000000000003,
+        81.0,
+        3.1500000000000004
+      ],
+      "material_basis": "steel",
+      "role": "fixed"
+    },
+    {
+      "size": "3U",
+      "name": "exit_hinge_pin",
+      "file": "parts/FM07_3U_exit_hinge_pin.step",
+      "sha256": "14152b8eb0d5b143ff1a0838dcebd6a4efa9a38ce2c074111345579582f264fc",
+      "volume_mm3": 376.0486406346989,
+      "CG_mm": [
+        350.00000000000006,
+        -12.000000000000002,
+        30.000000000000004
+      ],
+      "material_basis": "steel",
+      "role": "sled"
+    },
+    {
+      "size": "3U",
+      "name": "exit_lock_pin",
+      "file": "parts/FM07_3U_exit_lock_pin.step",
+      "sha256": "6ae323e9d44f07e2d851e303ab7d0ecb3acd6f56f10039254482677ab24408a2",
+      "volume_mm3": 102.49446032336695,
+      "CG_mm": [
+        350.00000000000006,
+        -4.5,
+        18.954022988505727
+      ],
+      "material_basis": "steel",
+      "role": "exit_lock_pin"
+    }
+  ]
+}

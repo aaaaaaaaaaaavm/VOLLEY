@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "size": "1U",
+      "component": "fork_body",
+      "symmetric_volume_difference_mm3": 5.820766091346741e-11
+    },
+    {
+      "size": "1U",
+      "component": "sled_entry_bar",
+      "symmetric_volume_difference_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "component": "fork_body",
+      "symmetric_volume_difference_mm3": 5.820766091346741e-11
+    },
+    {
+      "size": "3U",
+      "component": "sled_entry_bar",
+      "symmetric_volume_difference_mm3": 0.0
+    }
+  ],
+  "scope": "The FM07 fork/tines and receiver entry-bar material are unchanged from FM06. Existing isolated component fixtures remain attributed to FM06 and do not validate the changed assembled body, hinge, pins, guides or interfaces."
+}

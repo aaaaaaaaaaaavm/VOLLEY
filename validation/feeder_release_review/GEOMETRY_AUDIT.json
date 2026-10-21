@@ -1,0 +1,1457 @@
+{
+  "revision": "FM07-R5",
+  "CAD_source_sha256": "a3022d66003eedf6429d7a8489848be3e78f1f42bef1d096d2eac1f86de3c251",
+  "configurations": [
+    {
+      "size": "1U",
+      "checks": [
+        {
+          "pose": "stored",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 0,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "gate_open",
+          "state": {
+            "feed": 0,
+            "gate": 120,
+            "bolt": 32,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 0,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "bolt_inserted",
+          "state": {
+            "feed": 0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 0,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "rear_takeup",
+          "state": {
+            "feed": 1.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 0,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "transfer",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "receiver_unlocked",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 12,
+            "receiver_pin": 12,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "receiver_closed",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 0,
+            "receiver_pin": 12,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "sled_captured",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "fork_open",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 12,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "fork_home",
+          "state": {
+            "feed": 0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 12,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "bolt_withdrawn",
+          "state": {
+            "feed": 0,
+            "gate": 120,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 12,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "cell_closed",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 12,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "fork_reset",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "sled_translation",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_unlocked",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_open",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 90,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "payload_clear",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 90,
+            "exit_pin_withdraw": 22,
+            "departure": 263.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "empty_carrier_home",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 90,
+            "exit_pin_withdraw": 22,
+            "departure": 343.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_closed",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 22,
+            "departure": 343.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_locked",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 343.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "receiver_unlock_empty",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 12,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 343.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "receiver_open_empty",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 12,
+            "receiver_pin": 12,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 343.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "ready_empty",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 343.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_5",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 5,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_10",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 10,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_15",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 15,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_20",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 20,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_25",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 25,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_30",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 30,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_35",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 35,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_40",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 40,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_45",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 45,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_50",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 50,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_55",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 55,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_60",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 60,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_65",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 65,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_70",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 70,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_75",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 75,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_80",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 80,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_85",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 85,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        }
+      ]
+    },
+    {
+      "size": "3U",
+      "checks": [
+        {
+          "pose": "stored",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 0,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "gate_open",
+          "state": {
+            "feed": 0,
+            "gate": 120,
+            "bolt": 32,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 0,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "bolt_inserted",
+          "state": {
+            "feed": 0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 0,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "rear_takeup",
+          "state": {
+            "feed": 1.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 0,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "transfer",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "receiver_unlocked",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 12,
+            "receiver_pin": 12,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "receiver_closed",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 0,
+            "receiver_pin": 12,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "sled_captured",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "fork_open",
+          "state": {
+            "feed": 201.0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 12,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "fork_home",
+          "state": {
+            "feed": 0,
+            "gate": 120,
+            "bolt": 0,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 12,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "bolt_withdrawn",
+          "state": {
+            "feed": 0,
+            "gate": 120,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 12,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "cell_closed",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 12,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "fork_reset",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "sled_translation",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_unlocked",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_open",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 90,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "payload_clear",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 90,
+            "exit_pin_withdraw": 22,
+            "departure": 490.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "empty_carrier_home",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 90,
+            "exit_pin_withdraw": 22,
+            "departure": 570.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_closed",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 22,
+            "departure": 570.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_locked",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 570.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "receiver_unlock_empty",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 12,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 570.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "receiver_open_empty",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 12,
+            "receiver_pin": 12,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 570.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "ready_empty",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 12,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 0,
+            "exit_gate_deg": 0,
+            "exit_pin_withdraw": 0,
+            "departure": 570.5
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_5",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 5,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_10",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 10,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_15",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 15,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_20",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 20,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_25",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 25,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_30",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 30,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_35",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 35,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_40",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 40,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_45",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 45,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_50",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 50,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_55",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 55,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_60",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 60,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_65",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 65,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_70",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 70,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_75",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 75,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_80",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 80,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        },
+        {
+          "pose": "exit_angle_85",
+          "state": {
+            "feed": 0,
+            "gate": 0,
+            "bolt": 32,
+            "receiver": 0,
+            "receiver_pin": 0,
+            "front": 0,
+            "payload_feed": 200,
+            "sled": 80,
+            "exit_gate_deg": 85,
+            "exit_pin_withdraw": 22,
+            "departure": 0
+          },
+          "invalid": [],
+          "collisions": []
+        }
+      ]
+    }
+  ],
+  "boundary": "Exact nominal B-rep checks at listed full-cycle and rotary samples. No tolerance/load/contact or continuous rotary-clearance acceptance."
+}

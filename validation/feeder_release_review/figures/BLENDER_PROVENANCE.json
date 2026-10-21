@@ -1,0 +1,36 @@
+{
+  "software": "Blender 4.3.2",
+  "engine": "Blender Workbench technical rendering",
+  "tessellation_source_sha256": "a9e795ad53ed892c156b88ee7a96bfa8c3a680afde593cf3fae327795f836719",
+  "evidence_class": "Rendered actual CAD geometry; nominal prescribed states. Not hardware photographs, solver screenshots, motion/contact/strength/qualification evidence.",
+  "renders": [
+    {
+      "phase": "stored",
+      "source": "FM07_3U_stored.FCStd",
+      "source_sha256": "941bc7e8c5d9289e1beb50d2698aff5fe6d47f8957084deafcd1d87cdeb78255",
+      "image": "FM07_Technical_stored.png",
+      "sha256": "d2fbdb8b86a321d21c22bc64c6a4b946b97d15e010f13953f50520236b977c34"
+    },
+    {
+      "phase": "transfer",
+      "source": "FM07_3U_transfer.FCStd",
+      "source_sha256": "cc45b55c34a13db6e680127787bbad5e8c7ba48f1ab75a4d727b667ad00f0682",
+      "image": "FM07_Technical_transfer.png",
+      "sha256": "35f91126c5936d4ccf02b15f559c0e5f7a6cdfeefa9c4a21cb607a6dba79b51f"
+    },
+    {
+      "phase": "exit_open",
+      "source": "FM07_3U_exit_open.FCStd",
+      "source_sha256": "6cf18d12878e9fcc5168f79bfec297de81c838652e948ef31de057fc353f6ebb",
+      "image": "FM07_Technical_exit_open.png",
+      "sha256": "a38ba6ee3bfc46345f7541cee9112fe29a939adb403ca74e4a3fae35c4666912"
+    },
+    {
+      "phase": "empty_carrier_home",
+      "source": "FM07_3U_empty_carrier_home.FCStd",
+      "source_sha256": "095676ae6516d6ec5527938414013fc67201693cfb7870ed9ee4f7506847dbe6",
+      "image": "FM07_Technical_empty_carrier_home.png",
+      "sha256": "f93f08727ab4aef89a739ee0bb0065e4e7fa1737dbe42103465ac062b0a1ef9d"
+    }
+  ]
+}

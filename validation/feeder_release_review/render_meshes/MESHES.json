@@ -1,0 +1,776 @@
+{
+  "revision": "FM07-R5",
+  "source_sha256": "a3022d66003eedf6429d7a8489848be3e78f1f42bef1d096d2eac1f86de3c251",
+  "tessellation_mm": 0.08,
+  "evidence_class": "Native CAD meshes for labeled visualization; no solver or hardware evidence",
+  "poses": [
+    {
+      "phase": "stored",
+      "source": "FM07_3U_stored.FCStd",
+      "sha256": "3c95ad0deebec4281a4c036520123beaee3448883b1953279787db9947d4f11a",
+      "parts": [
+        {
+          "name": "payload",
+          "file": "stored_payload.obj",
+          "sha256": "8732c8e631c2969bddde7d408fcea9024622eab4bea28480713a1c4c73988913"
+        },
+        {
+          "name": "support_floor",
+          "file": "stored_support_floor.obj",
+          "sha256": "a66bda270bb5975274c6d2dd715809059a516e366dd8f2b2bf7f60f1e699d33d"
+        },
+        {
+          "name": "cassette_L_-8",
+          "file": "stored_cassette_L_-8.obj",
+          "sha256": "7d50f20ade71f3c9a8a62a6b99f207af9d06a0659413bdb2c0fb03ba7907befd"
+        },
+        {
+          "name": "cassette_L_344.5",
+          "file": "stored_cassette_L_344.5.obj",
+          "sha256": "bf702cc0ee4d69205c56bf4b9480f95618c06bbfdc8baedd4bf3bcdee722e9ca"
+        },
+        {
+          "name": "rear_wall",
+          "file": "stored_rear_wall.obj",
+          "sha256": "94fbd761a2ee728ba68f900312407c8b1b116d8aa01f7ea7b44ef8184c51e234"
+        },
+        {
+          "name": "storage_gate",
+          "file": "stored_storage_gate.obj",
+          "sha256": "7a1eb0e711920e485c12f54df4e1a252b22ee0a27f9dfdbf6bb76b53d1216be9"
+        },
+        {
+          "name": "fork_body",
+          "file": "stored_fork_body.obj",
+          "sha256": "5a32ae645f8bf531b31141f05b7d50d9930b084b4b70e36c377255bfdea7ba94"
+        },
+        {
+          "name": "captive_guide",
+          "file": "stored_captive_guide.obj",
+          "sha256": "c99f7b35a3ae90a661f2ecd5c2e865ca987a7645992f5af5ca22138983bb479c"
+        },
+        {
+          "name": "end_block_-238",
+          "file": "stored_end_block_-238.obj",
+          "sha256": "7f80cfe27abc70c13123994ac4b3be9ebfb13b2288652c0a4ecc4c2b4651f810"
+        },
+        {
+          "name": "end_block_30",
+          "file": "stored_end_block_30.obj",
+          "sha256": "5fe9b300d595e8f161f678da430d3cf40e4ebeef336074295652b4eaccd95d7c"
+        },
+        {
+          "name": "gate_bolt_guide",
+          "file": "stored_gate_bolt_guide.obj",
+          "sha256": "1890f1b3608edcbdf1fa4633e1fa9513294830a431b4f5bcf75797a90e2a342e"
+        },
+        {
+          "name": "gate_crossbolt",
+          "file": "stored_gate_crossbolt.obj",
+          "sha256": "942675ffe221b3b25e491694bb7bc081440439a05ce5c1581a1a898c676cc2fd"
+        },
+        {
+          "name": "motor_3242_envelope",
+          "file": "stored_motor_3242_envelope.obj",
+          "sha256": "691293df2138480c6a20e544807abae101a4e5d0bf63c28ce0b10a74a44dc405"
+        },
+        {
+          "name": "motor_shaft_envelope",
+          "file": "stored_motor_shaft_envelope.obj",
+          "sha256": "87babdfcc165af8a2f9d6dbb281157a862bee77d64438add2720add4507e74eb"
+        },
+        {
+          "name": "shaft_extension",
+          "file": "stored_shaft_extension.obj",
+          "sha256": "cba4ac54106c79e9ffa8efb8cc5f55f4bdba876cfb1d16b307878f812bbd772b"
+        },
+        {
+          "name": "screw_major_envelope",
+          "file": "stored_screw_major_envelope.obj",
+          "sha256": "c067f6b9523bfaf278597db26f22907ce6dbc570433cc5f870ff06f4530530a8"
+        },
+        {
+          "name": "coupling_envelope",
+          "file": "stored_coupling_envelope.obj",
+          "sha256": "59cd9e85ed581002f39d85d21385335b022367eaed6d715cbc32fba0538cd0a5"
+        },
+        {
+          "name": "bearing_housing",
+          "file": "stored_bearing_housing.obj",
+          "sha256": "f7015e0d01a6a226bd93009eda56aae7897a3a078bdd2303fcc3ac687c924350"
+        },
+        {
+          "name": "bearing_ring_A",
+          "file": "stored_bearing_ring_A.obj",
+          "sha256": "b1b4d24a2bea4f51cc87d6e8da85da75637b1fe8425025a983194d0d0f1c2a92"
+        },
+        {
+          "name": "bearing_ring_B",
+          "file": "stored_bearing_ring_B.obj",
+          "sha256": "92e6f3b4e0b78cc088915b534e4d246395a689e4f1d92dfd75d280da291fdda0"
+        },
+        {
+          "name": "shaft_collar_A",
+          "file": "stored_shaft_collar_A.obj",
+          "sha256": "13b48a8c1863b8f092b6077753cfd3659d65d13950118b5008a81f8d28fb4ee3"
+        },
+        {
+          "name": "shaft_collar_B",
+          "file": "stored_shaft_collar_B.obj",
+          "sha256": "d447857fab311e6a500174e7e21e8e2f05c36550a2416b73707aec4d7c109bb3"
+        },
+        {
+          "name": "nut_SB3700_envelope",
+          "file": "stored_nut_SB3700_envelope.obj",
+          "sha256": "d17930d5362eefdcbebf333f9738d38817a7c7a4f3e4d995432cc35c1e7cc85c"
+        },
+        {
+          "name": "drive_mount",
+          "file": "stored_drive_mount.obj",
+          "sha256": "df1fe1f0d9e8d9a1e9023b852341be72521a4d1a11ebeb3d3ae82809653a54d3"
+        },
+        {
+          "name": "motor_mount_envelope",
+          "file": "stored_motor_mount_envelope.obj",
+          "sha256": "474623c6338f99785dfe047320fc6024b0805198a2c722c6952fc77df77dc813"
+        },
+        {
+          "name": "fork_front",
+          "file": "stored_fork_front.obj",
+          "sha256": "4c33b6b26d5a020211677005717ad4e828e2808e5cb45136f04c173b9701b264"
+        },
+        {
+          "name": "sled_body",
+          "file": "stored_sled_body.obj",
+          "sha256": "de09b94d2db8365a9d6cb442f6f35279607bf418060133b0c5639cdc59bf58d4"
+        },
+        {
+          "name": "sled_front_stop",
+          "file": "stored_sled_front_stop.obj",
+          "sha256": "60e2efc2d272763158359d4d2e53e72ec853e70313f6c77413d05069346f4ce9"
+        },
+        {
+          "name": "sled_entry_bar",
+          "file": "stored_sled_entry_bar.obj",
+          "sha256": "98f43605805c9ca2923ceff899253f27ddd32035642122267e9ced98d8db3492"
+        },
+        {
+          "name": "receiver_lock_pin_0",
+          "file": "stored_receiver_lock_pin_0.obj",
+          "sha256": "c12b10cebafa0704f10b3184989618de986f997cade12b6714ed430a7dbc267a"
+        },
+        {
+          "name": "receiver_lock_pin_1",
+          "file": "stored_receiver_lock_pin_1.obj",
+          "sha256": "ce65b3182440a5c902789559927fe0615c5e6482e4c78e68f5956ae3a1fb1278"
+        },
+        {
+          "name": "sled_guide_shoe_0",
+          "file": "stored_sled_guide_shoe_0.obj",
+          "sha256": "77435ff10341c827d978c2b1fab7c5fa62dd806542caf6a803e5b75b8034d2b8"
+        },
+        {
+          "name": "launcher_guide_0",
+          "file": "stored_launcher_guide_0.obj",
+          "sha256": "15e90db9d5ce5058836e0afa58448cd574ef1b10ea7a7ea1625f76893f276ed6"
+        },
+        {
+          "name": "sled_guide_shoe_1",
+          "file": "stored_sled_guide_shoe_1.obj",
+          "sha256": "f9bbbbca7f77630044eebb830120123902bae135bbd32603b9e4a312c2e74917"
+        },
+        {
+          "name": "launcher_guide_1",
+          "file": "stored_launcher_guide_1.obj",
+          "sha256": "449fdaedf0bf09b4aac5a74ca82d2c45fac3afe632205e55274628d787f3637f"
+        },
+        {
+          "name": "exit_hinge_pin",
+          "file": "stored_exit_hinge_pin.obj",
+          "sha256": "b3c8d081ce296f4072ed599e96810741678f19ab7dd30ee3b95220774ef2c85e"
+        },
+        {
+          "name": "exit_lock_pin",
+          "file": "stored_exit_lock_pin.obj",
+          "sha256": "d16d21d4080e7ba7d66ada297a1ec88e9d88c3cc84e73a0276fb4cbfa9b23c01"
+        }
+      ]
+    },
+    {
+      "phase": "transfer",
+      "source": "FM07_3U_transfer.FCStd",
+      "sha256": "73ae537914f0c91d87edc9c7bbd8d9e797869592500f596fafe69346ff256d94",
+      "parts": [
+        {
+          "name": "payload",
+          "file": "transfer_payload.obj",
+          "sha256": "442f8f7870f5c1c0ed1b2208d1ee66f732b1a6f712bf03958cebf15f649ef9a2"
+        },
+        {
+          "name": "support_floor",
+          "file": "transfer_support_floor.obj",
+          "sha256": "a66bda270bb5975274c6d2dd715809059a516e366dd8f2b2bf7f60f1e699d33d"
+        },
+        {
+          "name": "cassette_L_-8",
+          "file": "transfer_cassette_L_-8.obj",
+          "sha256": "7d50f20ade71f3c9a8a62a6b99f207af9d06a0659413bdb2c0fb03ba7907befd"
+        },
+        {
+          "name": "cassette_L_344.5",
+          "file": "transfer_cassette_L_344.5.obj",
+          "sha256": "bf702cc0ee4d69205c56bf4b9480f95618c06bbfdc8baedd4bf3bcdee722e9ca"
+        },
+        {
+          "name": "rear_wall",
+          "file": "transfer_rear_wall.obj",
+          "sha256": "94fbd761a2ee728ba68f900312407c8b1b116d8aa01f7ea7b44ef8184c51e234"
+        },
+        {
+          "name": "storage_gate",
+          "file": "transfer_storage_gate.obj",
+          "sha256": "deb807346f3734c81ff59d59982f8f309532676bed9f721f5f377c3bd326ab2f"
+        },
+        {
+          "name": "fork_body",
+          "file": "transfer_fork_body.obj",
+          "sha256": "5c24340757081a1bcacd04f569ca815a0587ed81660fd2f0711286a7c511a859"
+        },
+        {
+          "name": "captive_guide",
+          "file": "transfer_captive_guide.obj",
+          "sha256": "c99f7b35a3ae90a661f2ecd5c2e865ca987a7645992f5af5ca22138983bb479c"
+        },
+        {
+          "name": "end_block_-238",
+          "file": "transfer_end_block_-238.obj",
+          "sha256": "7f80cfe27abc70c13123994ac4b3be9ebfb13b2288652c0a4ecc4c2b4651f810"
+        },
+        {
+          "name": "end_block_30",
+          "file": "transfer_end_block_30.obj",
+          "sha256": "5fe9b300d595e8f161f678da430d3cf40e4ebeef336074295652b4eaccd95d7c"
+        },
+        {
+          "name": "gate_bolt_guide",
+          "file": "transfer_gate_bolt_guide.obj",
+          "sha256": "1890f1b3608edcbdf1fa4633e1fa9513294830a431b4f5bcf75797a90e2a342e"
+        },
+        {
+          "name": "gate_crossbolt",
+          "file": "transfer_gate_crossbolt.obj",
+          "sha256": "0e3d8331c7cff4c144288691017d874bc4b2f9a661562c78ffca278605c2c4f5"
+        },
+        {
+          "name": "motor_3242_envelope",
+          "file": "transfer_motor_3242_envelope.obj",
+          "sha256": "691293df2138480c6a20e544807abae101a4e5d0bf63c28ce0b10a74a44dc405"
+        },
+        {
+          "name": "motor_shaft_envelope",
+          "file": "transfer_motor_shaft_envelope.obj",
+          "sha256": "87babdfcc165af8a2f9d6dbb281157a862bee77d64438add2720add4507e74eb"
+        },
+        {
+          "name": "shaft_extension",
+          "file": "transfer_shaft_extension.obj",
+          "sha256": "cba4ac54106c79e9ffa8efb8cc5f55f4bdba876cfb1d16b307878f812bbd772b"
+        },
+        {
+          "name": "screw_major_envelope",
+          "file": "transfer_screw_major_envelope.obj",
+          "sha256": "c067f6b9523bfaf278597db26f22907ce6dbc570433cc5f870ff06f4530530a8"
+        },
+        {
+          "name": "coupling_envelope",
+          "file": "transfer_coupling_envelope.obj",
+          "sha256": "59cd9e85ed581002f39d85d21385335b022367eaed6d715cbc32fba0538cd0a5"
+        },
+        {
+          "name": "bearing_housing",
+          "file": "transfer_bearing_housing.obj",
+          "sha256": "f7015e0d01a6a226bd93009eda56aae7897a3a078bdd2303fcc3ac687c924350"
+        },
+        {
+          "name": "bearing_ring_A",
+          "file": "transfer_bearing_ring_A.obj",
+          "sha256": "b1b4d24a2bea4f51cc87d6e8da85da75637b1fe8425025a983194d0d0f1c2a92"
+        },
+        {
+          "name": "bearing_ring_B",
+          "file": "transfer_bearing_ring_B.obj",
+          "sha256": "92e6f3b4e0b78cc088915b534e4d246395a689e4f1d92dfd75d280da291fdda0"
+        },
+        {
+          "name": "shaft_collar_A",
+          "file": "transfer_shaft_collar_A.obj",
+          "sha256": "13b48a8c1863b8f092b6077753cfd3659d65d13950118b5008a81f8d28fb4ee3"
+        },
+        {
+          "name": "shaft_collar_B",
+          "file": "transfer_shaft_collar_B.obj",
+          "sha256": "d447857fab311e6a500174e7e21e8e2f05c36550a2416b73707aec4d7c109bb3"
+        },
+        {
+          "name": "nut_SB3700_envelope",
+          "file": "transfer_nut_SB3700_envelope.obj",
+          "sha256": "de0fa55a43acdb2fa18102b2ccef519fbe830bff500a774ecd9a01f1433fdc27"
+        },
+        {
+          "name": "drive_mount",
+          "file": "transfer_drive_mount.obj",
+          "sha256": "df1fe1f0d9e8d9a1e9023b852341be72521a4d1a11ebeb3d3ae82809653a54d3"
+        },
+        {
+          "name": "motor_mount_envelope",
+          "file": "transfer_motor_mount_envelope.obj",
+          "sha256": "474623c6338f99785dfe047320fc6024b0805198a2c722c6952fc77df77dc813"
+        },
+        {
+          "name": "fork_front",
+          "file": "transfer_fork_front.obj",
+          "sha256": "34aa29a15a24c34d9b9d7973cf654598c11037b63dd2d8a0c25292ad9a111eab"
+        },
+        {
+          "name": "sled_body",
+          "file": "transfer_sled_body.obj",
+          "sha256": "de09b94d2db8365a9d6cb442f6f35279607bf418060133b0c5639cdc59bf58d4"
+        },
+        {
+          "name": "sled_front_stop",
+          "file": "transfer_sled_front_stop.obj",
+          "sha256": "60e2efc2d272763158359d4d2e53e72ec853e70313f6c77413d05069346f4ce9"
+        },
+        {
+          "name": "sled_entry_bar",
+          "file": "transfer_sled_entry_bar.obj",
+          "sha256": "98f43605805c9ca2923ceff899253f27ddd32035642122267e9ced98d8db3492"
+        },
+        {
+          "name": "receiver_lock_pin_0",
+          "file": "transfer_receiver_lock_pin_0.obj",
+          "sha256": "c12b10cebafa0704f10b3184989618de986f997cade12b6714ed430a7dbc267a"
+        },
+        {
+          "name": "receiver_lock_pin_1",
+          "file": "transfer_receiver_lock_pin_1.obj",
+          "sha256": "ce65b3182440a5c902789559927fe0615c5e6482e4c78e68f5956ae3a1fb1278"
+        },
+        {
+          "name": "sled_guide_shoe_0",
+          "file": "transfer_sled_guide_shoe_0.obj",
+          "sha256": "77435ff10341c827d978c2b1fab7c5fa62dd806542caf6a803e5b75b8034d2b8"
+        },
+        {
+          "name": "launcher_guide_0",
+          "file": "transfer_launcher_guide_0.obj",
+          "sha256": "15e90db9d5ce5058836e0afa58448cd574ef1b10ea7a7ea1625f76893f276ed6"
+        },
+        {
+          "name": "sled_guide_shoe_1",
+          "file": "transfer_sled_guide_shoe_1.obj",
+          "sha256": "f9bbbbca7f77630044eebb830120123902bae135bbd32603b9e4a312c2e74917"
+        },
+        {
+          "name": "launcher_guide_1",
+          "file": "transfer_launcher_guide_1.obj",
+          "sha256": "449fdaedf0bf09b4aac5a74ca82d2c45fac3afe632205e55274628d787f3637f"
+        },
+        {
+          "name": "exit_hinge_pin",
+          "file": "transfer_exit_hinge_pin.obj",
+          "sha256": "b3c8d081ce296f4072ed599e96810741678f19ab7dd30ee3b95220774ef2c85e"
+        },
+        {
+          "name": "exit_lock_pin",
+          "file": "transfer_exit_lock_pin.obj",
+          "sha256": "d16d21d4080e7ba7d66ada297a1ec88e9d88c3cc84e73a0276fb4cbfa9b23c01"
+        }
+      ]
+    },
+    {
+      "phase": "exit_open",
+      "source": "FM07_3U_exit_open.FCStd",
+      "sha256": "2d5992de0ea6f2bb4bdd7d06ffaf8df19bdf132084513d03ed70480f65765788",
+      "parts": [
+        {
+          "name": "payload",
+          "file": "exit_open_payload.obj",
+          "sha256": "5b781622225c5bca46ad8a9b2a6adb85ef2bddfec38eb1d776de977e171781c9"
+        },
+        {
+          "name": "support_floor",
+          "file": "exit_open_support_floor.obj",
+          "sha256": "a66bda270bb5975274c6d2dd715809059a516e366dd8f2b2bf7f60f1e699d33d"
+        },
+        {
+          "name": "cassette_L_-8",
+          "file": "exit_open_cassette_L_-8.obj",
+          "sha256": "7d50f20ade71f3c9a8a62a6b99f207af9d06a0659413bdb2c0fb03ba7907befd"
+        },
+        {
+          "name": "cassette_L_344.5",
+          "file": "exit_open_cassette_L_344.5.obj",
+          "sha256": "bf702cc0ee4d69205c56bf4b9480f95618c06bbfdc8baedd4bf3bcdee722e9ca"
+        },
+        {
+          "name": "rear_wall",
+          "file": "exit_open_rear_wall.obj",
+          "sha256": "94fbd761a2ee728ba68f900312407c8b1b116d8aa01f7ea7b44ef8184c51e234"
+        },
+        {
+          "name": "storage_gate",
+          "file": "exit_open_storage_gate.obj",
+          "sha256": "7a1eb0e711920e485c12f54df4e1a252b22ee0a27f9dfdbf6bb76b53d1216be9"
+        },
+        {
+          "name": "fork_body",
+          "file": "exit_open_fork_body.obj",
+          "sha256": "5a32ae645f8bf531b31141f05b7d50d9930b084b4b70e36c377255bfdea7ba94"
+        },
+        {
+          "name": "captive_guide",
+          "file": "exit_open_captive_guide.obj",
+          "sha256": "c99f7b35a3ae90a661f2ecd5c2e865ca987a7645992f5af5ca22138983bb479c"
+        },
+        {
+          "name": "end_block_-238",
+          "file": "exit_open_end_block_-238.obj",
+          "sha256": "7f80cfe27abc70c13123994ac4b3be9ebfb13b2288652c0a4ecc4c2b4651f810"
+        },
+        {
+          "name": "end_block_30",
+          "file": "exit_open_end_block_30.obj",
+          "sha256": "5fe9b300d595e8f161f678da430d3cf40e4ebeef336074295652b4eaccd95d7c"
+        },
+        {
+          "name": "gate_bolt_guide",
+          "file": "exit_open_gate_bolt_guide.obj",
+          "sha256": "1890f1b3608edcbdf1fa4633e1fa9513294830a431b4f5bcf75797a90e2a342e"
+        },
+        {
+          "name": "gate_crossbolt",
+          "file": "exit_open_gate_crossbolt.obj",
+          "sha256": "942675ffe221b3b25e491694bb7bc081440439a05ce5c1581a1a898c676cc2fd"
+        },
+        {
+          "name": "motor_3242_envelope",
+          "file": "exit_open_motor_3242_envelope.obj",
+          "sha256": "691293df2138480c6a20e544807abae101a4e5d0bf63c28ce0b10a74a44dc405"
+        },
+        {
+          "name": "motor_shaft_envelope",
+          "file": "exit_open_motor_shaft_envelope.obj",
+          "sha256": "87babdfcc165af8a2f9d6dbb281157a862bee77d64438add2720add4507e74eb"
+        },
+        {
+          "name": "shaft_extension",
+          "file": "exit_open_shaft_extension.obj",
+          "sha256": "cba4ac54106c79e9ffa8efb8cc5f55f4bdba876cfb1d16b307878f812bbd772b"
+        },
+        {
+          "name": "screw_major_envelope",
+          "file": "exit_open_screw_major_envelope.obj",
+          "sha256": "c067f6b9523bfaf278597db26f22907ce6dbc570433cc5f870ff06f4530530a8"
+        },
+        {
+          "name": "coupling_envelope",
+          "file": "exit_open_coupling_envelope.obj",
+          "sha256": "59cd9e85ed581002f39d85d21385335b022367eaed6d715cbc32fba0538cd0a5"
+        },
+        {
+          "name": "bearing_housing",
+          "file": "exit_open_bearing_housing.obj",
+          "sha256": "f7015e0d01a6a226bd93009eda56aae7897a3a078bdd2303fcc3ac687c924350"
+        },
+        {
+          "name": "bearing_ring_A",
+          "file": "exit_open_bearing_ring_A.obj",
+          "sha256": "b1b4d24a2bea4f51cc87d6e8da85da75637b1fe8425025a983194d0d0f1c2a92"
+        },
+        {
+          "name": "bearing_ring_B",
+          "file": "exit_open_bearing_ring_B.obj",
+          "sha256": "92e6f3b4e0b78cc088915b534e4d246395a689e4f1d92dfd75d280da291fdda0"
+        },
+        {
+          "name": "shaft_collar_A",
+          "file": "exit_open_shaft_collar_A.obj",
+          "sha256": "13b48a8c1863b8f092b6077753cfd3659d65d13950118b5008a81f8d28fb4ee3"
+        },
+        {
+          "name": "shaft_collar_B",
+          "file": "exit_open_shaft_collar_B.obj",
+          "sha256": "d447857fab311e6a500174e7e21e8e2f05c36550a2416b73707aec4d7c109bb3"
+        },
+        {
+          "name": "nut_SB3700_envelope",
+          "file": "exit_open_nut_SB3700_envelope.obj",
+          "sha256": "d17930d5362eefdcbebf333f9738d38817a7c7a4f3e4d995432cc35c1e7cc85c"
+        },
+        {
+          "name": "drive_mount",
+          "file": "exit_open_drive_mount.obj",
+          "sha256": "df1fe1f0d9e8d9a1e9023b852341be72521a4d1a11ebeb3d3ae82809653a54d3"
+        },
+        {
+          "name": "motor_mount_envelope",
+          "file": "exit_open_motor_mount_envelope.obj",
+          "sha256": "474623c6338f99785dfe047320fc6024b0805198a2c722c6952fc77df77dc813"
+        },
+        {
+          "name": "fork_front",
+          "file": "exit_open_fork_front.obj",
+          "sha256": "4c33b6b26d5a020211677005717ad4e828e2808e5cb45136f04c173b9701b264"
+        },
+        {
+          "name": "sled_body",
+          "file": "exit_open_sled_body.obj",
+          "sha256": "68c0d7988cea768593c777640befc474621c27a9cfc496007ef5c8e72f703359"
+        },
+        {
+          "name": "sled_front_stop",
+          "file": "exit_open_sled_front_stop.obj",
+          "sha256": "5abb89b190984e68ff0a8c1ef99ac039684fd193d3cf7cdad7a4351f5d386631"
+        },
+        {
+          "name": "sled_entry_bar",
+          "file": "exit_open_sled_entry_bar.obj",
+          "sha256": "273844189feff037ba85cc389900af96400a409fd5eadbf6f5458911e769543d"
+        },
+        {
+          "name": "receiver_lock_pin_0",
+          "file": "exit_open_receiver_lock_pin_0.obj",
+          "sha256": "c7440f6d7c3d64ad05fc96c2214af05b909f9507129dfdbb44a3880de331e583"
+        },
+        {
+          "name": "receiver_lock_pin_1",
+          "file": "exit_open_receiver_lock_pin_1.obj",
+          "sha256": "0bc2b56c76919d03d98499420ba162deb8b4fcb00bb0386ffb28c23731fdcd62"
+        },
+        {
+          "name": "sled_guide_shoe_0",
+          "file": "exit_open_sled_guide_shoe_0.obj",
+          "sha256": "555ae5aee00ffd680afb06cd84668ed59b6728ecc9c5fd9eb6f4ffd53222c260"
+        },
+        {
+          "name": "launcher_guide_0",
+          "file": "exit_open_launcher_guide_0.obj",
+          "sha256": "15e90db9d5ce5058836e0afa58448cd574ef1b10ea7a7ea1625f76893f276ed6"
+        },
+        {
+          "name": "sled_guide_shoe_1",
+          "file": "exit_open_sled_guide_shoe_1.obj",
+          "sha256": "5cd2ad5781bd0289bb3f431e71ba8349b7dd72f1a317d7b2b39e1d9b4ac67c7f"
+        },
+        {
+          "name": "launcher_guide_1",
+          "file": "exit_open_launcher_guide_1.obj",
+          "sha256": "449fdaedf0bf09b4aac5a74ca82d2c45fac3afe632205e55274628d787f3637f"
+        },
+        {
+          "name": "exit_hinge_pin",
+          "file": "exit_open_exit_hinge_pin.obj",
+          "sha256": "ff3ebfc653ad7ba887402cc8d81666691e52c0e0d404431f8814698bcd7723a6"
+        },
+        {
+          "name": "exit_lock_pin",
+          "file": "exit_open_exit_lock_pin.obj",
+          "sha256": "f61c14b0076c6a00c525d2407f3a879ec2afa81387db00c835f92a406f4d9b99"
+        }
+      ]
+    },
+    {
+      "phase": "empty_carrier_home",
+      "source": "FM07_3U_empty_carrier_home.FCStd",
+      "sha256": "feaced65ce0cf4d670bdf64e7325b062b29b032577c43cca31c898d3caadcf30",
+      "parts": [
+        {
+          "name": "payload",
+          "file": "empty_carrier_home_payload.obj",
+          "sha256": "6f4062474fdd6bd9350692ba9ca83f61592cb8721e0140e2c9feaa4aec170af2"
+        },
+        {
+          "name": "support_floor",
+          "file": "empty_carrier_home_support_floor.obj",
+          "sha256": "a66bda270bb5975274c6d2dd715809059a516e366dd8f2b2bf7f60f1e699d33d"
+        },
+        {
+          "name": "cassette_L_-8",
+          "file": "empty_carrier_home_cassette_L_-8.obj",
+          "sha256": "7d50f20ade71f3c9a8a62a6b99f207af9d06a0659413bdb2c0fb03ba7907befd"
+        },
+        {
+          "name": "cassette_L_344.5",
+          "file": "empty_carrier_home_cassette_L_344.5.obj",
+          "sha256": "bf702cc0ee4d69205c56bf4b9480f95618c06bbfdc8baedd4bf3bcdee722e9ca"
+        },
+        {
+          "name": "rear_wall",
+          "file": "empty_carrier_home_rear_wall.obj",
+          "sha256": "94fbd761a2ee728ba68f900312407c8b1b116d8aa01f7ea7b44ef8184c51e234"
+        },
+        {
+          "name": "storage_gate",
+          "file": "empty_carrier_home_storage_gate.obj",
+          "sha256": "7a1eb0e711920e485c12f54df4e1a252b22ee0a27f9dfdbf6bb76b53d1216be9"
+        },
+        {
+          "name": "fork_body",
+          "file": "empty_carrier_home_fork_body.obj",
+          "sha256": "5a32ae645f8bf531b31141f05b7d50d9930b084b4b70e36c377255bfdea7ba94"
+        },
+        {
+          "name": "captive_guide",
+          "file": "empty_carrier_home_captive_guide.obj",
+          "sha256": "c99f7b35a3ae90a661f2ecd5c2e865ca987a7645992f5af5ca22138983bb479c"
+        },
+        {
+          "name": "end_block_-238",
+          "file": "empty_carrier_home_end_block_-238.obj",
+          "sha256": "7f80cfe27abc70c13123994ac4b3be9ebfb13b2288652c0a4ecc4c2b4651f810"
+        },
+        {
+          "name": "end_block_30",
+          "file": "empty_carrier_home_end_block_30.obj",
+          "sha256": "5fe9b300d595e8f161f678da430d3cf40e4ebeef336074295652b4eaccd95d7c"
+        },
+        {
+          "name": "gate_bolt_guide",
+          "file": "empty_carrier_home_gate_bolt_guide.obj",
+          "sha256": "1890f1b3608edcbdf1fa4633e1fa9513294830a431b4f5bcf75797a90e2a342e"
+        },
+        {
+          "name": "gate_crossbolt",
+          "file": "empty_carrier_home_gate_crossbolt.obj",
+          "sha256": "942675ffe221b3b25e491694bb7bc081440439a05ce5c1581a1a898c676cc2fd"
+        },
+        {
+          "name": "motor_3242_envelope",
+          "file": "empty_carrier_home_motor_3242_envelope.obj",
+          "sha256": "691293df2138480c6a20e544807abae101a4e5d0bf63c28ce0b10a74a44dc405"
+        },
+        {
+          "name": "motor_shaft_envelope",
+          "file": "empty_carrier_home_motor_shaft_envelope.obj",
+          "sha256": "87babdfcc165af8a2f9d6dbb281157a862bee77d64438add2720add4507e74eb"
+        },
+        {
+          "name": "shaft_extension",
+          "file": "empty_carrier_home_shaft_extension.obj",
+          "sha256": "cba4ac54106c79e9ffa8efb8cc5f55f4bdba876cfb1d16b307878f812bbd772b"
+        },
+        {
+          "name": "screw_major_envelope",
+          "file": "empty_carrier_home_screw_major_envelope.obj",
+          "sha256": "c067f6b9523bfaf278597db26f22907ce6dbc570433cc5f870ff06f4530530a8"
+        },
+        {
+          "name": "coupling_envelope",
+          "file": "empty_carrier_home_coupling_envelope.obj",
+          "sha256": "59cd9e85ed581002f39d85d21385335b022367eaed6d715cbc32fba0538cd0a5"
+        },
+        {
+          "name": "bearing_housing",
+          "file": "empty_carrier_home_bearing_housing.obj",
+          "sha256": "f7015e0d01a6a226bd93009eda56aae7897a3a078bdd2303fcc3ac687c924350"
+        },
+        {
+          "name": "bearing_ring_A",
+          "file": "empty_carrier_home_bearing_ring_A.obj",
+          "sha256": "b1b4d24a2bea4f51cc87d6e8da85da75637b1fe8425025a983194d0d0f1c2a92"
+        },
+        {
+          "name": "bearing_ring_B",
+          "file": "empty_carrier_home_bearing_ring_B.obj",
+          "sha256": "92e6f3b4e0b78cc088915b534e4d246395a689e4f1d92dfd75d280da291fdda0"
+        },
+        {
+          "name": "shaft_collar_A",
+          "file": "empty_carrier_home_shaft_collar_A.obj",
+          "sha256": "13b48a8c1863b8f092b6077753cfd3659d65d13950118b5008a81f8d28fb4ee3"
+        },
+        {
+          "name": "shaft_collar_B",
+          "file": "empty_carrier_home_shaft_collar_B.obj",
+          "sha256": "d447857fab311e6a500174e7e21e8e2f05c36550a2416b73707aec4d7c109bb3"
+        },
+        {
+          "name": "nut_SB3700_envelope",
+          "file": "empty_carrier_home_nut_SB3700_envelope.obj",
+          "sha256": "d17930d5362eefdcbebf333f9738d38817a7c7a4f3e4d995432cc35c1e7cc85c"
+        },
+        {
+          "name": "drive_mount",
+          "file": "empty_carrier_home_drive_mount.obj",
+          "sha256": "df1fe1f0d9e8d9a1e9023b852341be72521a4d1a11ebeb3d3ae82809653a54d3"
+        },
+        {
+          "name": "motor_mount_envelope",
+          "file": "empty_carrier_home_motor_mount_envelope.obj",
+          "sha256": "474623c6338f99785dfe047320fc6024b0805198a2c722c6952fc77df77dc813"
+        },
+        {
+          "name": "fork_front",
+          "file": "empty_carrier_home_fork_front.obj",
+          "sha256": "4c33b6b26d5a020211677005717ad4e828e2808e5cb45136f04c173b9701b264"
+        },
+        {
+          "name": "sled_body",
+          "file": "empty_carrier_home_sled_body.obj",
+          "sha256": "de09b94d2db8365a9d6cb442f6f35279607bf418060133b0c5639cdc59bf58d4"
+        },
+        {
+          "name": "sled_front_stop",
+          "file": "empty_carrier_home_sled_front_stop.obj",
+          "sha256": "fa947c7a159acffae80e74702b719b95f17d05f9a3cdc609421403ac2680632d"
+        },
+        {
+          "name": "sled_entry_bar",
+          "file": "empty_carrier_home_sled_entry_bar.obj",
+          "sha256": "44238d8cd92fb8d7d3d9ce0f5eb14062d9c1395cd1a57edd876a8a9e4c136406"
+        },
+        {
+          "name": "receiver_lock_pin_0",
+          "file": "empty_carrier_home_receiver_lock_pin_0.obj",
+          "sha256": "c12b10cebafa0704f10b3184989618de986f997cade12b6714ed430a7dbc267a"
+        },
+        {
+          "name": "receiver_lock_pin_1",
+          "file": "empty_carrier_home_receiver_lock_pin_1.obj",
+          "sha256": "ce65b3182440a5c902789559927fe0615c5e6482e4c78e68f5956ae3a1fb1278"
+        },
+        {
+          "name": "sled_guide_shoe_0",
+          "file": "empty_carrier_home_sled_guide_shoe_0.obj",
+          "sha256": "77435ff10341c827d978c2b1fab7c5fa62dd806542caf6a803e5b75b8034d2b8"
+        },
+        {
+          "name": "launcher_guide_0",
+          "file": "empty_carrier_home_launcher_guide_0.obj",
+          "sha256": "15e90db9d5ce5058836e0afa58448cd574ef1b10ea7a7ea1625f76893f276ed6"
+        },
+        {
+          "name": "sled_guide_shoe_1",
+          "file": "empty_carrier_home_sled_guide_shoe_1.obj",
+          "sha256": "f9bbbbca7f77630044eebb830120123902bae135bbd32603b9e4a312c2e74917"
+        },
+        {
+          "name": "launcher_guide_1",
+          "file": "empty_carrier_home_launcher_guide_1.obj",
+          "sha256": "449fdaedf0bf09b4aac5a74ca82d2c45fac3afe632205e55274628d787f3637f"
+        },
+        {
+          "name": "exit_hinge_pin",
+          "file": "empty_carrier_home_exit_hinge_pin.obj",
+          "sha256": "b3c8d081ce296f4072ed599e96810741678f19ab7dd30ee3b95220774ef2c85e"
+        },
+        {
+          "name": "exit_lock_pin",
+          "file": "empty_carrier_home_exit_lock_pin.obj",
+          "sha256": "76ca76bcd7c84e0cecdd3342d5317e6041773b8fec05d51e1c2d3c0441fea257"
+        }
+      ]
+    }
+  ]
+}

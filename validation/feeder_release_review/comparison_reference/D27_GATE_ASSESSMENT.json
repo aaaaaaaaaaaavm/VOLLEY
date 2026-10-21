@@ -1,0 +1,99 @@
+{
+  "decision": "no_eligible_architecture",
+  "weights": {
+    "safety": 0.35,
+    "fit_mass": 0.25,
+    "position": 0.2,
+    "cycle_power": 0.1,
+    "manufacture": 0.1
+  },
+  "candidates": [
+    {
+      "candidate": "Fixed-cell captive lead screw",
+      "ordinal_hypothesis_score": 3.65,
+      "score_interval": [
+        2.65,
+        4.65
+      ],
+      "same_boundary_installed_mass": "not_established",
+      "full_motion_tolerance_load_comparison": "not_established",
+      "independent_power_loss_restraint": "not_established",
+      "eligible_for_selection": false
+    },
+    {
+      "candidate": "Fixed-cell spring follower and two gates",
+      "ordinal_hypothesis_score": 3.0749999999999997,
+      "score_interval": [
+        2.075,
+        4.075
+      ],
+      "same_boundary_installed_mass": "not_established",
+      "full_motion_tolerance_load_comparison": "not_established",
+      "independent_power_loss_restraint": "not_established",
+      "eligible_for_selection": false
+    },
+    {
+      "candidate": "Indexed rack and pawl",
+      "ordinal_hypothesis_score": 2.925,
+      "score_interval": [
+        1.9249999999999998,
+        3.9249999999999994
+      ],
+      "same_boundary_installed_mass": "not_established",
+      "full_motion_tolerance_load_comparison": "not_established",
+      "independent_power_loss_restraint": "not_established",
+      "eligible_for_selection": false
+    },
+    {
+      "candidate": "Geneva indexed drum or tray",
+      "ordinal_hypothesis_score": 2.5,
+      "score_interval": [
+        1.5,
+        3.4999999999999996
+      ],
+      "same_boundary_installed_mass": "not_established",
+      "full_motion_tolerance_load_comparison": "not_established",
+      "independent_power_loss_restraint": "not_established",
+      "eligible_for_selection": false
+    },
+    {
+      "candidate": "Segmented pantograph",
+      "ordinal_hypothesis_score": 2.325,
+      "score_interval": [
+        1.5000000000000002,
+        3.3249999999999997
+      ],
+      "same_boundary_installed_mass": "not_established",
+      "full_motion_tolerance_load_comparison": "not_established",
+      "independent_power_loss_restraint": "not_established",
+      "eligible_for_selection": false
+    },
+    {
+      "candidate": "Nested telescoping carriage",
+      "ordinal_hypothesis_score": 2.6500000000000004,
+      "score_interval": [
+        1.6500000000000001,
+        3.65
+      ],
+      "same_boundary_installed_mass": "not_established",
+      "full_motion_tolerance_load_comparison": "not_established",
+      "independent_power_loss_restraint": "not_established",
+      "eligible_for_selection": false
+    },
+    {
+      "candidate": "Belt or cable shuttle",
+      "ordinal_hypothesis_score": 2.525,
+      "score_interval": [
+        1.7,
+        3.525
+      ],
+      "same_boundary_installed_mass": "not_established",
+      "full_motion_tolerance_load_comparison": "not_established",
+      "independent_power_loss_restraint": "not_established",
+      "eligible_for_selection": false
+    }
+  ],
+  "updated_evidence": "FM07-R5 extends only the lead-screw reference nominal custody/release/reset geometry. FCE12 evaluates FM06 transfer contact, not FM07 assembled hardware. Neither supplies an all-seven installed or loaded fault comparison.",
+  "decision_rule": "Do not rank open or failed mandatory gates as passing. Overlapping ordinal intervals do not justify a selected baseline.",
+  "source_record": "FDR-08, 19 October 2026; FM07-R5 and FCE12, 21 October 2026."
+}
