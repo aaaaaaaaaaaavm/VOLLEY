@@ -1,0 +1,18 @@
+[
+  {
+    "file": "chrono10.tar.gz",
+    "url": "https://github.com/projectchrono/chrono/archive/refs/tags/10.0.0.tar.gz",
+    "status": 200,
+    "final_url": "https://codeload.github.com/projectchrono/chrono/tar.gz/refs/tags/10.0.0",
+    "bytes": 595419864,
+    "sha256": "806e5e24a06f26bbd42344dd1f13d75e3214c9eb29901553574b9c87217d8722"
+  },
+  {
+    "file": "eigen3.4.tar.gz",
+    "url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+    "status": 200,
+    "final_url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+    "bytes": 2705005,
+    "sha256": "8586084f71f9bde545ee7fa6d00288b264a2b7ac3607b974e54d13e7162c1c72"
+  }
+]

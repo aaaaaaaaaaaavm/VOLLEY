@@ -1,0 +1,194 @@
+{
+  "revision": "FM-06",
+  "cases": [
+    {
+      "payload": "1U",
+      "fault": "gate_closes_with_bolt_inserted",
+      "command_mm": 0.5,
+      "obstruction_mm3": 14.011006372946436,
+      "nominal_radial_lost_motion_mm": 0.2
+    },
+    {
+      "payload": "1U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 7,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 117.80972450961727,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "1U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 50,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 235.61944901923448,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "1U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 100,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 235.61944901923448,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "1U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 150,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 235.61944901923448,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "1U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 200,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 235.61944901923448,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "1U",
+      "fault": "feed_without_inserted_bolt",
+      "feed_mm": 6,
+      "obstruction_mm3": 33.00083052528312,
+      "payload_to_gate_nominal_mm": 1
+    },
+    {
+      "payload": "1U",
+      "fault": "receiver_moves_from_locked_open",
+      "independently_retained_pin": 0,
+      "obstruction_mm3": 7.187645947196026,
+      "attempt_mm": 0.5
+    },
+    {
+      "payload": "1U",
+      "fault": "receiver_moves_from_locked_open",
+      "independently_retained_pin": 1,
+      "obstruction_mm3": 7.187645947196026,
+      "attempt_mm": 0.5
+    },
+    {
+      "payload": "1U",
+      "fault": "receiver_moves_from_locked_closed",
+      "independently_retained_pin": 0,
+      "obstruction_mm3": 7.187645947196025,
+      "attempt_mm": 0.5
+    },
+    {
+      "payload": "1U",
+      "fault": "receiver_moves_from_locked_closed",
+      "independently_retained_pin": 1,
+      "obstruction_mm3": 7.1876459471960255,
+      "attempt_mm": 0.5
+    },
+    {
+      "payload": "1U",
+      "fault": "both_receiver_locks_withdrawn_and_bar_closes_on_straddling_payload",
+      "unresolved": true,
+      "penetration_mm3": 824.7999999999993
+    },
+    {
+      "payload": "3U",
+      "fault": "gate_closes_with_bolt_inserted",
+      "command_mm": 0.5,
+      "obstruction_mm3": 14.011006372946436,
+      "nominal_radial_lost_motion_mm": 0.2
+    },
+    {
+      "payload": "3U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 7,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 117.80972450961727,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "3U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 50,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 235.61944901923448,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "3U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 100,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 235.61944901923448,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "3U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 150,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 235.61944901923448,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "3U",
+      "fault": "bolt_withdrawal_during_transfer",
+      "feed_mm": 200,
+      "withdraw_command_mm": 6,
+      "obstruction_mm3": 235.61944901923448,
+      "lug_width_mm": 10,
+      "full_withdrawal_needed_mm": 29
+    },
+    {
+      "payload": "3U",
+      "fault": "feed_without_inserted_bolt",
+      "feed_mm": 6,
+      "obstruction_mm3": 33.00083052528312,
+      "payload_to_gate_nominal_mm": 1
+    },
+    {
+      "payload": "3U",
+      "fault": "receiver_moves_from_locked_open",
+      "independently_retained_pin": 0,
+      "obstruction_mm3": 7.187645947196026,
+      "attempt_mm": 0.5
+    },
+    {
+      "payload": "3U",
+      "fault": "receiver_moves_from_locked_open",
+      "independently_retained_pin": 1,
+      "obstruction_mm3": 7.187645947196026,
+      "attempt_mm": 0.5
+    },
+    {
+      "payload": "3U",
+      "fault": "receiver_moves_from_locked_closed",
+      "independently_retained_pin": 0,
+      "obstruction_mm3": 7.187645947196025,
+      "attempt_mm": 0.5
+    },
+    {
+      "payload": "3U",
+      "fault": "receiver_moves_from_locked_closed",
+      "independently_retained_pin": 1,
+      "obstruction_mm3": 7.1876459471960255,
+      "attempt_mm": 0.5
+    },
+    {
+      "payload": "3U",
+      "fault": "both_receiver_locks_withdrawn_and_bar_closes_on_straddling_payload",
+      "unresolved": true,
+      "penetration_mm3": 824.7999999999988
+    }
+  ],
+  "verified_rigid_obstructions": 22,
+  "retained_counterexamples": 2,
+  "boundary": "Rigid positions. Inserted receiver pins obstruct each endpoint independently; axial pin retention, release actuators, springs, force, wear and sensor qualification remain unimplemented. A shared false release of both pins defeats the geometric hold."
+}

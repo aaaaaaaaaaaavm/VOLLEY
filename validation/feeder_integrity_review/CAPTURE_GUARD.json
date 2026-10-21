@@ -1,0 +1,8 @@
+{
+  "rear_capture_bar_maxY_mm": -0.5,
+  "upper_tower_minY_mm": 103,
+  "lower_far_rail_minY_mm": 101,
+  "nominal_guard_mm": 0.1,
+  "method": "Whole rotated payload bounding box must clear the rear capture-bar plane by0.1mm and remain inside the upper-tower envelope with0.1mm allowance. The lower101mm stop is a stepped obstacle, not a whole-height pocket wall; its contact/clearance is evaluated by the actual closed CAD collision surface.",
+  "boundary": "Nominal unloaded rigid software sequencing guard, not a manufacturing/sensing margin or approved payload accuracy. Full3D captured poses and numerical contact/convergence require independent checking. Earlier101mm whole-height guard protocol is retained and not relabeled as hardware failure."
+}

@@ -1,0 +1,32 @@
+{
+  "h_mm": 4.0,
+  "nodes": 2681,
+  "elements": 1305,
+  "min_scaled_Jacobian": 0.999999999999573,
+  "max_abs_Z_mm_per_N": 0.01012814,
+  "loaded_mean_Z_mm_per_N": 0.010127800685165524,
+  "max_vm_MPa_per_N": 0.694597547607098,
+  "reaction_N": [
+    5.2100000022536896e-08,
+    -6.450000009650125e-07,
+    0.9999999149999995
+  ],
+  "moment_residual_N_mm": [
+    3.435853930966459e-05,
+    2.8108531928694447e-06,
+    -1.6349559714967654e-06
+  ],
+  "hashes": {
+    "mesh.msh": "655e9dcd6c8ecdb5b5a6493cbd7a0497d97f08192de29c040b010cf14b0e25fd",
+    "mesh.inp": "766341eefcff8d10dec8ec919bce0f7619195334b2be20d3547c0a2489f3c401",
+    "unit.cvg": "65086dedb4572132b815ace04b294909c7f6f337111f9704fc310b02320f67f7",
+    "unit.dat": "fdb2cba8f2b9790ad44901b94f4d05fcac9675773ca168b9afe386828d8a1609",
+    "unit.log": "fa6ea93e76bbfca9cec6127a9f07b2be62e98dc422a24df34db1089db5a87da8",
+    "unit.inp": "140d007c261138137dd2406aba82e9a9a29e8ef411c0225e90684524ccab9a0f",
+    "unit.sta": "01e324ec0ea28f4d1fd7f5e2da1277af53812b873e218be1604c17a4c8e4990d",
+    "gmsh.log": "c4015ed8d51e3b29dc6ffe0f740dbeb51e51cf1640c8a91af66af687046a4e53",
+    "unit.12d": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spooles.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "unit.frd": "22087cf0863fcd9134efa8751ba6844c6f091435e725bd528dbe27bfeb7ee1df"
+  }
+}

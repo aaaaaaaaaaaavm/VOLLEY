@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "part": "1U_receiver",
+      "current_sha256": "cd9ecd3a6d91a3ea902ebb503de0dd0cd21c72815d6c090c1dceedef691414c1",
+      "fixture_sha256": "085424aaace6df57b4b42ef974b9537a757bb094956a8784a9f3b58cc0031aa6",
+      "fixture_alignment_translation_mm": [
+        1.4210854715202004e-14,
+        1.7763568394002505e-15,
+        -11.99999999999999
+      ],
+      "symmetric_volume_difference_mm3": 0.0
+    },
+    {
+      "part": "1U_tine",
+      "fixture_sha256": "8e73f7247e247a9fb7b5965999267dbe9578c398ce2cceda76bc29a4b357e3b7",
+      "fixture_material_missing_from_current_fork_mm3": 0.0
+    },
+    {
+      "part": "3U_receiver",
+      "current_sha256": "5224b9110c9433f4ce32f84260407ebe31dc2e48cc01852539423e3aa8429df6",
+      "fixture_sha256": "55897ea499e13a3c13839f02ed9bd8c47796675c9a0f21ca8d1049ec612b07af",
+      "fixture_alignment_translation_mm": [
+        -8.526512829121202e-14,
+        -1.7763568394002505e-15,
+        -12.0
+      ],
+      "symmetric_volume_difference_mm3": 0.0
+    },
+    {
+      "part": "3U_tine",
+      "fixture_sha256": "8e73f7247e247a9fb7b5965999267dbe9578c398ce2cceda76bc29a4b357e3b7",
+      "fixture_material_missing_from_current_fork_mm3": 0.0
+    }
+  ],
+  "boundary": "Rigid material-geometry correspondence only. The isolated fixtures omit current guide/pin contacts, roots and frame compliance; identical component shape does not transfer assembled stiffness or qualification."
+}

@@ -1,0 +1,253 @@
+{
+  "cases": [
+    {
+      "case_id": "FCE08-01",
+      "size": "1U",
+      "dt_s": 0.0005,
+      "csv_sha256": "472a40e8947a5ea93f1c6477b6896eea9cb6989b6d74b654483bb507a96dbbe1",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 1.7919887795869727e-11
+        },
+        {
+          "time_s": 8.0,
+          "payload_fork_intersection_mm3": 385.549239381979,
+          "intersection_bounds_mm": [
+            22.99999993634725,
+            -8.802493322397055,
+            21.305246382126544,
+            90.50000006356214,
+            20.926571660003148,
+            22.600000000017967
+          ],
+          "minimum_distance_mm": 0.0
+        },
+        {
+          "time_s": 10.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 0.0795065510473817
+        },
+        {
+          "time_s": 26.5,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 91.58295471933266
+        }
+      ]
+    },
+    {
+      "case_id": "FCE08-02",
+      "size": "1U",
+      "dt_s": 0.00025,
+      "csv_sha256": "521858cf865e04f7dde7e0d49fe9c8e35a0d858fa32a396965f7bedb4e27c7c2",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 1.7919887795869727e-11
+        },
+        {
+          "time_s": 8.0,
+          "payload_fork_intersection_mm3": 385.7728178388214,
+          "intersection_bounds_mm": [
+            22.999999821957942,
+            -8.801679760397668,
+            21.304824199093026,
+            90.5000001941743,
+            20.93453141407977,
+            22.600000000018007
+          ],
+          "minimum_distance_mm": 0.0
+        },
+        {
+          "time_s": 10.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 0.027991385794203898
+        },
+        {
+          "time_s": 26.5,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 89.69585775234599
+        }
+      ]
+    },
+    {
+      "case_id": "FCE08-03",
+      "size": "1U",
+      "dt_s": 0.000125,
+      "csv_sha256": "e67ad4a27795eb1f952d85a4227cf2856be705cf0ea2e0b0998b9ba846083b44",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 1.7919887795869727e-11
+        },
+        {
+          "time_s": 8.0,
+          "payload_fork_intersection_mm3": 385.7772105207094,
+          "intersection_bounds_mm": [
+            22.99999796061565,
+            -8.801452582321636,
+            21.30472789218722,
+            90.50000203929375,
+            20.936407991929855,
+            22.60000000001801
+          ],
+          "minimum_distance_mm": 0.0
+        },
+        {
+          "time_s": 10.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 0.030022723848808823
+        },
+        {
+          "time_s": 26.5,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 90.2046908418548
+        }
+      ]
+    },
+    {
+      "case_id": "FCE08-04",
+      "size": "3U",
+      "dt_s": 0.0005,
+      "csv_sha256": "13321350c304f6c1d2e0a9f41e374c7501c2b7a3bc6eb889a236b4e6e8826277",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 5.9685589803848416e-12
+        },
+        {
+          "time_s": 8.0,
+          "payload_fork_intersection_mm3": 217.19292709493078,
+          "intersection_bounds_mm": [
+            22.999996586750346,
+            -8.19553909139219,
+            21.6379971721737,
+            317.50000337299485,
+            13.35225413643631,
+            22.600042645176003
+          ],
+          "minimum_distance_mm": 0.0
+        },
+        {
+          "time_s": 10.0,
+          "payload_fork_intersection_mm3": 93.55722052158441,
+          "intersection_bounds_mm": [
+            22.999991414094655,
+            91.6471831540359,
+            22.076572179435562,
+            317.5000085849199,
+            99.88614376640676,
+            22.60000196049936
+          ],
+          "minimum_distance_mm": 0.0
+        },
+        {
+          "time_s": 26.5,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 92.07302864939655
+        }
+      ]
+    },
+    {
+      "case_id": "FCE08-05",
+      "size": "3U",
+      "dt_s": 0.00025,
+      "csv_sha256": "6ba918ab70526800aee33063ae728c017d173bb940a468e94bf3e277cd6b7880",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 5.9685589803848416e-12
+        },
+        {
+          "time_s": 8.0,
+          "payload_fork_intersection_mm3": 218.06500626490185,
+          "intersection_bounds_mm": [
+            22.999989234032373,
+            -8.194753280843793,
+            21.635123847742726,
+            317.50001088916855,
+            13.475341398537712,
+            22.60013482317542
+          ],
+          "minimum_distance_mm": 0.0
+        },
+        {
+          "time_s": 10.0,
+          "payload_fork_intersection_mm3": 103.64314236247853,
+          "intersection_bounds_mm": [
+            22.999866274177904,
+            87.86281420769652,
+            22.02668888578011,
+            317.5001337250902,
+            99.95175904321117,
+            22.600159928897696
+          ],
+          "minimum_distance_mm": 0.0
+        },
+        {
+          "time_s": 26.5,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 91.62448927298817
+        }
+      ]
+    },
+    {
+      "case_id": "FCE08-06",
+      "size": "3U",
+      "dt_s": 0.000125,
+      "csv_sha256": "5f4312ad5115fdb2f218cf02db5e3dc4886b1b666f52736bacfea7f168952b65",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 5.9685589803848416e-12
+        },
+        {
+          "time_s": 8.0,
+          "payload_fork_intersection_mm3": 217.26505696997987,
+          "intersection_bounds_mm": [
+            22.999991061274546,
+            -8.195024990609976,
+            21.637030440641222,
+            317.50000898053565,
+            13.395407233498142,
+            22.60010983613384
+          ],
+          "minimum_distance_mm": 0.0
+        },
+        {
+          "time_s": 10.0,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 0.029929711708875217
+        },
+        {
+          "time_s": 26.5,
+          "payload_fork_intersection_mm3": 0.0,
+          "intersection_bounds_mm": null,
+          "minimum_distance_mm": 90.05692630405284
+        }
+      ]
+    }
+  ],
+  "boundary": "Four discrete-time payload/fork checks per nominal refinement case, using full native B-rep and actual solver COM/quaternions. No all-component or continuous dynamic nonpenetration claim. Positive overlap is retained and precludes a zero-interference claim for the corresponding simulated state."
+}

@@ -1,0 +1,286 @@
+{
+  "method": "Finite rigid stem polygon clipped by guide overlap, unilateral wall limits and pin-centre radial disk. Exact strip width gives angular limit; analytic disk/strip extrema in pin offset, followed by2001angle stations and bounded scalar refinement. Independent polygon clipping checks final feasibility. Deterministic geometry sensitivity, not a statistically bounded tolerance distribution.",
+  "reference_corner_local_YZ_mm": [
+    9.5,
+    30.0
+  ],
+  "cases": [
+    {
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_mm": 0.1,
+      "guide_side_gap_mm": 0.2,
+      "guide_Z_mm": [
+        -8,
+        8
+      ],
+      "theta_deg": 1.4189236652018655,
+      "pin_center_offset_YZ_mm": [
+        -0.0024762358486345,
+        0.09996933657888273
+      ],
+      "dog_corner_Y_excursion_mm": -0.7482600154450088,
+      "guide_clearances_mm": [
+        -1.0547118733938987e-15,
+        8.881784197001252e-16
+      ],
+      "pin_radius_residual_mm": 0.0,
+      "absolute_angular_limit_deg": 1.4189236652018655,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_mm": 0.15,
+      "guide_side_gap_mm": 0.2,
+      "guide_Z_mm": [
+        -8,
+        8
+      ],
+      "theta_deg": 1.4189236652018655,
+      "pin_center_offset_YZ_mm": [
+        -0.0037143537729515557,
+        0.14995400486832408
+      ],
+      "dog_corner_Y_excursion_mm": -0.7494981333693258,
+      "guide_clearances_mm": [
+        -1.0547118733938987e-15,
+        8.881784197001252e-16
+      ],
+      "pin_radius_residual_mm": 0.0,
+      "absolute_angular_limit_deg": 1.4189236652018655,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_mm": 0.2,
+      "guide_side_gap_mm": 0.2,
+      "guide_Z_mm": [
+        -8,
+        8
+      ],
+      "theta_deg": 1.4189236652018655,
+      "pin_center_offset_YZ_mm": [
+        -0.004952471697268613,
+        0.19993867315776548
+      ],
+      "dog_corner_Y_excursion_mm": -0.7507362512936429,
+      "guide_clearances_mm": [
+        -1.6653345369377348e-16,
+        0.0
+      ],
+      "pin_radius_residual_mm": -2.7755575615628914e-17,
+      "absolute_angular_limit_deg": 1.4189236652018655,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_mm": 0.1,
+      "guide_side_gap_mm": 0.2,
+      "guide_Z_mm": [
+        -8,
+        8
+      ],
+      "theta_deg": -1.4189236652018655,
+      "pin_center_offset_YZ_mm": [
+        0.0024762358486345,
+        0.09996933657888273
+      ],
+      "dog_corner_Y_excursion_mm": 0.7424339654327271,
+      "guide_clearances_mm": [
+        7.216449660063518e-16,
+        -8.881784197001252e-16
+      ],
+      "pin_radius_residual_mm": 0.0,
+      "absolute_angular_limit_deg": 1.4189236652018655,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_mm": 0.15,
+      "guide_side_gap_mm": 0.2,
+      "guide_Z_mm": [
+        -8,
+        8
+      ],
+      "theta_deg": -1.4189236652018655,
+      "pin_center_offset_YZ_mm": [
+        0.0037143537729515557,
+        0.14995400486832408
+      ],
+      "dog_corner_Y_excursion_mm": 0.7436720833570442,
+      "guide_clearances_mm": [
+        7.216449660063518e-16,
+        -8.881784197001252e-16
+      ],
+      "pin_radius_residual_mm": 0.0,
+      "absolute_angular_limit_deg": 1.4189236652018655,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_mm": 0.2,
+      "guide_side_gap_mm": 0.2,
+      "guide_Z_mm": [
+        -8,
+        8
+      ],
+      "theta_deg": -1.4189236652018655,
+      "pin_center_offset_YZ_mm": [
+        0.004952471697268613,
+        0.19993867315776548
+      ],
+      "dog_corner_Y_excursion_mm": 0.7449102012813612,
+      "guide_clearances_mm": [
+        -1.6653345369377348e-16,
+        0.0
+      ],
+      "pin_radius_residual_mm": -2.7755575615628914e-17,
+      "absolute_angular_limit_deg": 1.4189236652018655,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_mm": 0.1,
+      "guide_side_gap_mm": 0.05,
+      "guide_Z_mm": [
+        -40,
+        8
+      ],
+      "theta_deg": 0.11933496602331756,
+      "pin_center_offset_YZ_mm": [
+        -0.033520886184537274,
+        0.09421438419584857
+      ],
+      "dog_corner_Y_excursion_mm": -0.09602508862641847,
+      "guide_clearances_mm": [
+        1.8041124150158794e-16,
+        8.171241461241152e-14
+      ],
+      "pin_radius_residual_mm": 1.6930901125533637e-15,
+      "absolute_angular_limit_deg": 0.11933496602331756,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_mm": 0.15,
+      "guide_side_gap_mm": 0.05,
+      "guide_Z_mm": [
+        -40,
+        8
+      ],
+      "theta_deg": 0.11933496602331756,
+      "pin_center_offset_YZ_mm": [
+        -0.033629123194125886,
+        0.14618167488845216
+      ],
+      "dog_corner_Y_excursion_mm": -0.09613332563600707,
+      "guide_clearances_mm": [
+        1.0685896612017132e-15,
+        8.171241461241152e-14
+      ],
+      "pin_radius_residual_mm": 3.941291737419306e-15,
+      "absolute_angular_limit_deg": 0.11933496602331756,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_mm": 0.2,
+      "guide_side_gap_mm": 0.05,
+      "guide_Z_mm": [
+        -40,
+        8
+      ],
+      "theta_deg": 0.11933496602331756,
+      "pin_center_offset_YZ_mm": [
+        -0.033735246871950786,
+        0.19713430223704667
+      ],
+      "dog_corner_Y_excursion_mm": -0.09623944931383198,
+      "guide_clearances_mm": [
+        1.8041124150158794e-16,
+        8.171241461241152e-14
+      ],
+      "pin_radius_residual_mm": 3.191891195797325e-15,
+      "absolute_angular_limit_deg": 0.11933496602331756,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_mm": 0.1,
+      "guide_side_gap_mm": 0.05,
+      "guide_Z_mm": [
+        -40,
+        8
+      ],
+      "theta_deg": -0.11933496602331756,
+      "pin_center_offset_YZ_mm": [
+        0.033520886184537274,
+        0.09421438419584857
+      ],
+      "dog_corner_Y_excursion_mm": 0.09598387758294859,
+      "guide_clearances_mm": [
+        8.189282585391311e-14,
+        0.0
+      ],
+      "pin_radius_residual_mm": 1.6930901125533637e-15,
+      "absolute_angular_limit_deg": 0.11933496602331756,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_mm": 0.15,
+      "guide_side_gap_mm": 0.05,
+      "guide_Z_mm": [
+        -40,
+        8
+      ],
+      "theta_deg": -0.11933496602331756,
+      "pin_center_offset_YZ_mm": [
+        0.033629123194125886,
+        0.14618167488845216
+      ],
+      "dog_corner_Y_excursion_mm": 0.09609211459253719,
+      "guide_clearances_mm": [
+        8.189282585391311e-14,
+        8.881784197001252e-16
+      ],
+      "pin_radius_residual_mm": 3.941291737419306e-15,
+      "absolute_angular_limit_deg": 0.11933496602331756,
+      "search_grid_points": 2001
+    },
+    {
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_mm": 0.2,
+      "guide_side_gap_mm": 0.05,
+      "guide_Z_mm": [
+        -40,
+        8
+      ],
+      "theta_deg": -0.11933496602331756,
+      "pin_center_offset_YZ_mm": [
+        0.033735246871950786,
+        0.19713430223704667
+      ],
+      "dog_corner_Y_excursion_mm": 0.0961982382703621,
+      "guide_clearances_mm": [
+        8.189282585391311e-14,
+        0.0
+      ],
+      "pin_radius_residual_mm": 3.191891195797325e-15,
+      "absolute_angular_limit_deg": 0.11933496602331756,
+      "search_grid_points": 2001
+    }
+  ],
+  "boundary": "Rigid ideal slot/pin section only. Assumed pin radial gaps and exact nominal slot widths; no manufacturing stack, out-of-plane motion, flexible pin/guide/bar, preload, friction, wear, launch loading or actuator proof. FM03 originally had only16mm guide overlap. FM04 has48mm overlap. No assembled stiffness or strength pass."
+}

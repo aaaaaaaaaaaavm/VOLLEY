@@ -1,0 +1,544 @@
+{
+  "revision": "FLR02",
+  "native_cases": [
+    {
+      "h_mm": 4.0,
+      "nodes": 2681,
+      "elements": 1305,
+      "min_scaled_Jacobian": 0.999999999999573,
+      "max_abs_Z_mm_per_N": 0.01012814,
+      "loaded_mean_Z_mm_per_N": 0.010127800685165524,
+      "max_vm_MPa_per_N": 0.694597547607098,
+      "reaction_N": [
+        5.2100000022536896e-08,
+        -6.450000009650125e-07,
+        0.9999999149999995
+      ],
+      "moment_residual_N_mm": [
+        3.435853930966459e-05,
+        2.8108531928694447e-06,
+        -1.6349559714967654e-06
+      ],
+      "hashes": {
+        "mesh.msh": "655e9dcd6c8ecdb5b5a6493cbd7a0497d97f08192de29c040b010cf14b0e25fd",
+        "mesh.inp": "766341eefcff8d10dec8ec919bce0f7619195334b2be20d3547c0a2489f3c401",
+        "unit.cvg": "65086dedb4572132b815ace04b294909c7f6f337111f9704fc310b02320f67f7",
+        "unit.dat": "fdb2cba8f2b9790ad44901b94f4d05fcac9675773ca168b9afe386828d8a1609",
+        "unit.log": "fa6ea93e76bbfca9cec6127a9f07b2be62e98dc422a24df34db1089db5a87da8",
+        "unit.inp": "140d007c261138137dd2406aba82e9a9a29e8ef411c0225e90684524ccab9a0f",
+        "unit.sta": "01e324ec0ea28f4d1fd7f5e2da1277af53812b873e218be1604c17a4c8e4990d",
+        "gmsh.log": "c4015ed8d51e3b29dc6ffe0f740dbeb51e51cf1640c8a91af66af687046a4e53",
+        "unit.12d": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spooles.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "unit.frd": "22087cf0863fcd9134efa8751ba6844c6f091435e725bd528dbe27bfeb7ee1df"
+      },
+      "relative_compliance_change": null
+    },
+    {
+      "h_mm": 2.5,
+      "nodes": 7551,
+      "elements": 4155,
+      "min_scaled_Jacobian": 0.9999999999991296,
+      "max_abs_Z_mm_per_N": 0.0101366,
+      "loaded_mean_Z_mm_per_N": 0.010136199675502383,
+      "max_vm_MPa_per_N": 0.8112368783293095,
+      "reaction_N": [
+        1.5159999993200057e-07,
+        1.0980000227089892e-07,
+        0.9999999599999988
+      ],
+      "moment_residual_N_mm": [
+        6.9202228587528225e-06,
+        4.491854344479407e-06,
+        3.380045963918832e-05
+      ],
+      "hashes": {
+        "mesh.msh": "2e9e301b2da7f9a8cd0bdf7443a636b21723708f3192601b4d53dd907386e00d",
+        "mesh.inp": "15c46a5367eceeaf0383c0abaa549514a304b72039f67838afc3de084c7dcbdc",
+        "unit.cvg": "65086dedb4572132b815ace04b294909c7f6f337111f9704fc310b02320f67f7",
+        "unit.dat": "3c9455d51ad4a9a20ac7911f6ca023f58aa2dc2d3934297979bea88a0db29cc0",
+        "unit.log": "70a2fc22a7809a802120c0ac8d5684e9784ef490d3248d1d07c42e162149f958",
+        "unit.inp": "0f66580e1ee094feb39686bcba8e469d8fc967f429ed240fe27825d33c245c45",
+        "unit.sta": "01e324ec0ea28f4d1fd7f5e2da1277af53812b873e218be1604c17a4c8e4990d",
+        "gmsh.log": "5947659039a5d6d8df0929add8fa7d7f57f3259bb825445cc20037e7a791f84b",
+        "unit.12d": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spooles.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "unit.frd": "0d464bf06dbd52bd9564b9b8925292c9b98233d193be0e7dfb05b8084ac2115e"
+      },
+      "relative_compliance_change": 0.0008293005162671729
+    },
+    {
+      "h_mm": 1.6,
+      "nodes": 23125,
+      "elements": 13878,
+      "min_scaled_Jacobian": 0.9999999999982119,
+      "max_abs_Z_mm_per_N": 0.01014167,
+      "loaded_mean_Z_mm_per_N": 0.010141236504400727,
+      "max_vm_MPa_per_N": 0.8182650236627247,
+      "reaction_N": [
+        1.0259000012002861e-07,
+        1.4312999964405382e-07,
+        0.9999999832800015
+      ],
+      "moment_residual_N_mm": [
+        -2.2186499393228587e-07,
+        2.2141414497411915e-06,
+        2.3705968327902838e-05
+      ],
+      "hashes": {
+        "mesh.msh": "ceb8f7b3cf459decdb45acd3336cbe5900c2e72f4adc4ab31c05d53fc52ff012",
+        "mesh.inp": "318b28775cabd4752836f724572fc5f449103e97c54a82bbd8861f1cbe48395a",
+        "unit.cvg": "65086dedb4572132b815ace04b294909c7f6f337111f9704fc310b02320f67f7",
+        "unit.dat": "b359ccd63eeabb8a8fdd3c4103ced16be11157faa6de2a97887478da0102b1fd",
+        "unit.log": "727119134a7fced5952c7502f9c3af8388348803355b53e3e7a9b5e4c6273645",
+        "unit.inp": "57a143541434959491551b72526a093ef3c32f2b73165765e4a45e65c2700255",
+        "unit.sta": "01e324ec0ea28f4d1fd7f5e2da1277af53812b873e218be1604c17a4c8e4990d",
+        "gmsh.log": "e5c78a7396ac1185fbf4e23944fe80c47a5e00618e2ecf9620b94038f1e73489",
+        "unit.12d": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spooles.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "unit.frd": "ee9b469e2bb8223fc55b782e8d2637424494a12bf98395999939dff25a24e59b"
+      },
+      "relative_compliance_change": 0.0004969149246849547
+    },
+    {
+      "h_mm": 1.0,
+      "nodes": 82344,
+      "elements": 53650,
+      "min_scaled_Jacobian": 0.9999999999978153,
+      "max_abs_Z_mm_per_N": 0.01014508,
+      "loaded_mean_Z_mm_per_N": 0.010144620836210963,
+      "max_vm_MPa_per_N": 0.9291406947662616,
+      "reaction_N": [
+        -3.2027999930677765e-08,
+        5.5497000089888e-07,
+        0.999999979950005
+      ],
+      "moment_residual_N_mm": [
+        -7.311064635473485e-06,
+        2.8001874596839116e-07,
+        1.0743577940619531e-05
+      ],
+      "hashes": {
+        "mesh.msh": "4d6c983c7546dec86f95599773d1b65682966a3fb08dc8e25331ec4bf17f6cb6",
+        "mesh.inp": "5e39212ab42cdd5208d63d9a0dfb0c1df7dd9e502011375bf8bed9ada95c9be8",
+        "unit.cvg": "65086dedb4572132b815ace04b294909c7f6f337111f9704fc310b02320f67f7",
+        "unit.dat": "bd9aec0ad6f389f9a9eeb1a232f87727fb9bdc857ebdfad024e163b4888d28bd",
+        "unit.log": "8abafa1563f3b2a57e90bcc7e805870c6200e610afe5a8dfc92a99c419d6815c",
+        "unit.inp": "e5dbfbfbe69ffcda2669b77687c5bb1fb5998cdbec0d7320850713539de0cf58",
+        "unit.sta": "01e324ec0ea28f4d1fd7f5e2da1277af53812b873e218be1604c17a4c8e4990d",
+        "gmsh.log": "948217889c2a456aa189d4220be7ee547012af3e0c77f0ce692f7b1b0959f81b",
+        "unit.12d": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spooles.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "unit.frd": "962efa46de2f0c0dae3bceb9668f69e53a68c9a2431ce16ac43cb7ec676a2fb6"
+      },
+      "relative_compliance_change": 0.00033371983867724886
+    }
+  ],
+  "Euler_Bernoulli_compliance_mm_per_N": 0.010187142265762431,
+  "Timoshenko_compliance_mm_per_N": 0.010236577900886045,
+  "finest_mean_to_EB_ratio": 0.9958259707735332,
+  "finest_mean_to_Timoshenko_ratio": 0.9910168158181923,
+  "linear_scaled_sensitivity_cases": [
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 0,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 0.0,
+      "max_Z_linear_fixture_mm": 0.0,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.6,
+      "nominal_vm_scaled_MPa": 0.0,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 0,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 0.0,
+      "max_Z_linear_fixture_mm": 0.0,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.6,
+      "nominal_vm_scaled_MPa": 0.0,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 1,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 6.52142225,
+      "max_Z_linear_fixture_mm": 0.06616035044003,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.53383964955997,
+      "nominal_vm_scaled_MPa": 6.059318800229157,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 1,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 13.0428445,
+      "max_Z_linear_fixture_mm": 0.13232070088006,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.46767929911994,
+      "nominal_vm_scaled_MPa": 12.118637600458314,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 5,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 32.60711125,
+      "max_Z_linear_fixture_mm": 0.33080175220015007,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.2691982477998499,
+      "nominal_vm_scaled_MPa": 30.296594001145788,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 5,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 65.2142225,
+      "max_Z_linear_fixture_mm": 0.6616035044003001,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -0.06160350440030016,
+      "nominal_vm_scaled_MPa": 60.593188002291576,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 10,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 65.2142225,
+      "max_Z_linear_fixture_mm": 0.6616035044003001,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -0.06160350440030016,
+      "nominal_vm_scaled_MPa": 60.593188002291576,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 10,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 130.428445,
+      "max_Z_linear_fixture_mm": 1.3232070088006003,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -0.7232070088006003,
+      "nominal_vm_scaled_MPa": 121.18637600458315,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 25,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 163.03555624999998,
+      "max_Z_linear_fixture_mm": 1.65400876100075,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -1.05400876100075,
+      "nominal_vm_scaled_MPa": 151.4829700057289,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 1.33,
+      "acceleration_g": 25,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 326.07111249999997,
+      "max_Z_linear_fixture_mm": 3.3080175220015,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -2.7080175220014997,
+      "nominal_vm_scaled_MPa": 302.9659400114578,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 0,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 0.0,
+      "max_Z_linear_fixture_mm": 0.0,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.6,
+      "nominal_vm_scaled_MPa": 0.0,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 0,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 0.0,
+      "max_Z_linear_fixture_mm": 0.0,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.6,
+      "nominal_vm_scaled_MPa": 0.0,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 1,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 9.80665,
+      "max_Z_linear_fixture_mm": 0.099489248782,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.500510751218,
+      "nominal_vm_scaled_MPa": 9.111757594329559,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 1,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 19.6133,
+      "max_Z_linear_fixture_mm": 0.198978497564,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.401021502436,
+      "nominal_vm_scaled_MPa": 18.223515188659118,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 5,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 49.033249999999995,
+      "max_Z_linear_fixture_mm": 0.49744624391,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.10255375609,
+      "nominal_vm_scaled_MPa": 45.558787971647796,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 5,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 98.06649999999999,
+      "max_Z_linear_fixture_mm": 0.99489248782,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -0.39489248781999997,
+      "nominal_vm_scaled_MPa": 91.11757594329559,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 10,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 98.06649999999999,
+      "max_Z_linear_fixture_mm": 0.99489248782,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -0.39489248781999997,
+      "nominal_vm_scaled_MPa": 91.11757594329559,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 10,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 196.13299999999998,
+      "max_Z_linear_fixture_mm": 1.98978497564,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -1.38978497564,
+      "nominal_vm_scaled_MPa": 182.23515188659118,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 25,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 245.16625,
+      "max_Z_linear_fixture_mm": 2.48723121955,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -1.8872312195499998,
+      "nominal_vm_scaled_MPa": 227.79393985823899,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 2.0,
+      "acceleration_g": 25,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 490.3325,
+      "max_Z_linear_fixture_mm": 4.9744624391,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -4.3744624391,
+      "nominal_vm_scaled_MPa": 455.58787971647797,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 0,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 0.0,
+      "max_Z_linear_fixture_mm": 0.0,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.6,
+      "nominal_vm_scaled_MPa": 0.0,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 0,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 0.0,
+      "max_Z_linear_fixture_mm": 0.0,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.6,
+      "nominal_vm_scaled_MPa": 0.0,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 1,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 19.6133,
+      "max_Z_linear_fixture_mm": 0.198978497564,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.401021502436,
+      "nominal_vm_scaled_MPa": 18.223515188659118,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 1,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 39.2266,
+      "max_Z_linear_fixture_mm": 0.397956995128,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.202043004872,
+      "nominal_vm_scaled_MPa": 36.447030377318235,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 5,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 98.06649999999999,
+      "max_Z_linear_fixture_mm": 0.99489248782,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -0.39489248781999997,
+      "nominal_vm_scaled_MPa": 91.11757594329559,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 5,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 196.13299999999998,
+      "max_Z_linear_fixture_mm": 1.98978497564,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -1.38978497564,
+      "nominal_vm_scaled_MPa": 182.23515188659118,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 10,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 196.13299999999998,
+      "max_Z_linear_fixture_mm": 1.98978497564,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -1.38978497564,
+      "nominal_vm_scaled_MPa": 182.23515188659118,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 10,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 392.26599999999996,
+      "max_Z_linear_fixture_mm": 3.97956995128,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -3.3795699512799997,
+      "nominal_vm_scaled_MPa": 364.47030377318237,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 25,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 490.3325,
+      "max_Z_linear_fixture_mm": 4.9744624391,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -4.3744624391,
+      "nominal_vm_scaled_MPa": 455.58787971647797,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 4.0,
+      "acceleration_g": 25,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 980.665,
+      "max_Z_linear_fixture_mm": 9.9489248782,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -9.3489248782,
+      "nominal_vm_scaled_MPa": 911.1757594329559,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 0,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 0.0,
+      "max_Z_linear_fixture_mm": 0.0,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.6,
+      "nominal_vm_scaled_MPa": 0.0,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 0,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 0.0,
+      "max_Z_linear_fixture_mm": 0.0,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.6,
+      "nominal_vm_scaled_MPa": 0.0,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 1,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 29.41995,
+      "max_Z_linear_fixture_mm": 0.29846774634600004,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.30153225365399994,
+      "nominal_vm_scaled_MPa": 27.335272782988678,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 1,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 58.8399,
+      "max_Z_linear_fixture_mm": 0.5969354926920001,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": 0.0030645073079998975,
+      "nominal_vm_scaled_MPa": 54.670545565977356,
+      "small_deflection_warning_gt_1pct_length": false
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 5,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 147.09975,
+      "max_Z_linear_fixture_mm": 1.49233873173,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -0.8923387317300001,
+      "nominal_vm_scaled_MPa": 136.67636391494338,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 5,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 294.1995,
+      "max_Z_linear_fixture_mm": 2.98467746346,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -2.38467746346,
+      "nominal_vm_scaled_MPa": 273.35272782988676,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 10,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 294.1995,
+      "max_Z_linear_fixture_mm": 2.98467746346,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -2.38467746346,
+      "nominal_vm_scaled_MPa": 273.35272782988676,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 10,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 588.399,
+      "max_Z_linear_fixture_mm": 5.96935492692,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -5.369354926920001,
+      "nominal_vm_scaled_MPa": 546.7054556597735,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 25,
+      "fraction_on_one_tine": 0.5,
+      "load_N": 735.49875,
+      "max_Z_linear_fixture_mm": 7.461693658650001,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -6.861693658650001,
+      "nominal_vm_scaled_MPa": 683.3818195747169,
+      "small_deflection_warning_gt_1pct_length": true
+    },
+    {
+      "payload_kg": 6.0,
+      "acceleration_g": 25,
+      "fraction_on_one_tine": 1.0,
+      "load_N": 1470.9975,
+      "max_Z_linear_fixture_mm": 14.923387317300001,
+      "nominal_0_6mm_slot_gap_minus_linear_deflection_mm": -14.323387317300002,
+      "nominal_vm_scaled_MPa": 1366.7636391494339,
+      "small_deflection_warning_gt_1pct_length": true
+    }
+  ],
+  "boundary": "Unit traction solve on actual isolated tine STEP; ideal clamped root, assumed E69GPa/nu0.33 aluminium. No selected alloy allowable, root/fork flexibility, gravity self-load, actual rail pressure/contact, manufacturing tolerance or qualification. Both equal and one-tine load partitions are sensitivities. The0.6mm gap comparison omits other deflections and tolerances; positive residual alone does not approve a loaded assembly. Large-deflection/stress cases invalidate a small-elastic strength interpretation. Launch restraints must bypass this operating transfer fixture."
+}

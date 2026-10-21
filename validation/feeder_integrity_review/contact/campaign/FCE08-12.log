@@ -1,0 +1,101 @@
+loading payload
+tolerances payload envelope 0.0001 margin 1e-05
+loading support_floor
+tolerances support_floor envelope 0.0001 margin 1e-05
+loading cassette_L_-8
+tolerances cassette_L_-8 envelope 0.0001 margin 1e-05
+loading cassette_L_344.5
+tolerances cassette_L_344.5 envelope 0.0001 margin 1e-05
+loading rear_wall
+tolerances rear_wall envelope 0.0001 margin 1e-05
+loading storage_gate
+tolerances storage_gate envelope 0.0001 margin 1e-05
+loading fork_body
+tolerances fork_body envelope 0.0001 margin 1e-05
+loading captive_guide
+tolerances captive_guide envelope 0.0001 margin 1e-05
+loading end_block_-238
+tolerances end_block_-238 envelope 0.0001 margin 1e-05
+loading end_block_30
+tolerances end_block_30 envelope 0.0001 margin 1e-05
+loading gate_bolt_guide
+tolerances gate_bolt_guide envelope 0.0001 margin 1e-05
+loading gate_crossbolt
+tolerances gate_crossbolt envelope 0.0001 margin 1e-05
+loading motor_3242_envelope
+tolerances motor_3242_envelope envelope 0.0001 margin 1e-05
+loading motor_shaft_envelope
+tolerances motor_shaft_envelope envelope 0.0001 margin 1e-05
+loading shaft_extension
+tolerances shaft_extension envelope 0.0001 margin 1e-05
+loading screw_major_envelope
+tolerances screw_major_envelope envelope 0.0001 margin 1e-05
+loading coupling_envelope
+tolerances coupling_envelope envelope 0.0001 margin 1e-05
+loading bearing_housing
+tolerances bearing_housing envelope 0.0001 margin 1e-05
+loading bearing_ring_A
+tolerances bearing_ring_A envelope 0.0001 margin 1e-05
+loading bearing_ring_B
+tolerances bearing_ring_B envelope 0.0001 margin 1e-05
+loading shaft_collar_A
+tolerances shaft_collar_A envelope 0.0001 margin 1e-05
+loading shaft_collar_B
+tolerances shaft_collar_B envelope 0.0001 margin 1e-05
+loading nut_SB3700_envelope
+tolerances nut_SB3700_envelope envelope 0.0001 margin 1e-05
+loading drive_mount
+tolerances drive_mount envelope 0.0001 margin 1e-05
+loading motor_mount_envelope
+tolerances motor_mount_envelope envelope 0.0001 margin 1e-05
+loading fork_front
+tolerances fork_front envelope 0.0001 margin 1e-05
+loading sled_body
+tolerances sled_body envelope 0.0001 margin 1e-05
+loading sled_front_stop
+tolerances sled_front_stop envelope 0.0001 margin 1e-05
+loading sled_entry_bar
+tolerances sled_entry_bar envelope 0.0001 margin 1e-05
+loading receiver_lock_pin_0
+tolerances receiver_lock_pin_0 envelope 0.0001 margin 1e-05
+loading receiver_lock_pin_1
+tolerances receiver_lock_pin_1 envelope 0.0001 margin 1e-05
+loading sled_guide_shoe_0
+tolerances sled_guide_shoe_0 envelope 0.0001 margin 1e-05
+loading launcher_guide_0
+tolerances launcher_guide_0 envelope 0.0001 margin 1e-05
+loading sled_guide_shoe_1
+tolerances sled_guide_shoe_1 envelope 0.0001 margin 1e-05
+loading launcher_guide_1
+tolerances launcher_guide_1 envelope 0.0001 margin 1e-05
+all bodies and drives initialized; mass-scaled40rad/s critically damped PD,1ms control period
+step 0
+step 1
+step 2
+step 3
+step 4
+step 1000
+step 2000
+step 3000
+step 4000
+step 5000
+step 6000
+step 7000
+step 8000
+step 9000
+step 10000
+step 11000
+step 12000
+step 13000
+step 14000
+step 15000
+step 16000
+step 17000
+step 18000
+step 19000
+step 20000
+step 21000
+step 22000
+abort: transfer or pin withdrawal not confirmed
+WORST_CONTACT 8.137 -1.84436e-05 payload fork_body pA 0.3055,-0.00652321,0.0225916 pB 0.3055,-0.00652321,0.02261 normal 5.99555e-06,3.73896e-11,-1
+Chrono 10.0.0; native dynamics finished; numerical_divergence=0; aborted=1; final_time=11

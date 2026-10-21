@@ -1,0 +1,5 @@
+{
+  "UTC": "2026-10-21T03:33:26.820212+00:00",
+  "issue": "Extending backstop toY5corrected mesh topology but created10mm3fork/sled penetration during final transfer/capture. This attempt is rejected.",
+  "correction": "Start backstop atY7and endY95:3mm near-rail and5mm far-rail face attachments, with1mm nominal gap to the fork corner arm at full feed. New sources and all geometry checks must rerun."
+}

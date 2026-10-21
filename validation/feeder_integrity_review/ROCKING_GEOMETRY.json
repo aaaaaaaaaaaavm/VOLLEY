@@ -1,0 +1,297 @@
+{
+  "cases": [
+    {
+      "size": "1U",
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.1,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.15,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.2,
+      "penetrations": [
+        {
+          "part": "receiver_lock_pin_0",
+          "mm3": 0.600730471191534
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "mm3": 0.6007304711915342
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.1,
+      "penetrations": [
+        {
+          "part": "sled_body",
+          "mm3": 0.10435009347556738
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.15,
+      "penetrations": [
+        {
+          "part": "sled_body",
+          "mm3": 0.06837573730391788
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.2,
+      "penetrations": [
+        {
+          "part": "sled_body",
+          "mm3": 0.03141058298020004
+        },
+        {
+          "part": "receiver_lock_pin_0",
+          "mm3": 0.6007304711915356
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "mm3": 0.6007304711915352
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.1,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.15,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.2,
+      "penetrations": [
+        {
+          "part": "receiver_lock_pin_0",
+          "mm3": 0.6007304711914738
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "mm3": 0.6007304711914734
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.1,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.15,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "1U",
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.2,
+      "penetrations": [
+        {
+          "part": "receiver_lock_pin_0",
+          "mm3": 0.600730471191488
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "mm3": 0.6007304711914875
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.1,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.15,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM03",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.2,
+      "penetrations": [
+        {
+          "part": "receiver_lock_pin_0",
+          "mm3": 0.600730471191534
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "mm3": 0.6007304711915342
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.1,
+      "penetrations": [
+        {
+          "part": "sled_body",
+          "mm3": 0.10435009347556917
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.15,
+      "penetrations": [
+        {
+          "part": "sled_body",
+          "mm3": 0.06837573730392354
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM03",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.2,
+      "penetrations": [
+        {
+          "part": "sled_body",
+          "mm3": 0.03141058298020297
+        },
+        {
+          "part": "receiver_lock_pin_0",
+          "mm3": 0.6007304711915356
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "mm3": 0.6007304711915352
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.1,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.15,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM04",
+      "direction": -1,
+      "radial_pin_clearance_assumed_mm": 0.2,
+      "penetrations": [
+        {
+          "part": "receiver_lock_pin_0",
+          "mm3": 0.6007304711914738
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "mm3": 0.6007304711914734
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.1,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.15,
+      "penetrations": [],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    },
+    {
+      "size": "3U",
+      "revision": "FM04",
+      "direction": 1,
+      "radial_pin_clearance_assumed_mm": 0.2,
+      "penetrations": [
+        {
+          "part": "receiver_lock_pin_0",
+          "mm3": 0.600730471191488
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "mm3": 0.6007304711914875
+        }
+      ],
+      "note": "Actual modeled bore radial clearance is0.15mm;0.1/0.2 sensitivities differ from actual model pin size and are not accepted geometries."
+    }
+  ],
+  "boundary": "Rotated/translated actual receiver solid against actual fixed sled/pins. This checks the2D ideal-slot optimum for overlooked3D nominal interference. It is not loaded contact, strength, tolerances or manufacturing approval. Only0.15mm matches actual modeled pin radial fit."
+}

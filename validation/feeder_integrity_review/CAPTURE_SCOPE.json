@@ -1,0 +1,17 @@
+{
+  "revision": "FM06-R1 / FLR01 / FLR02 / FLR03 / FCE08",
+  "date": "2026-10-21",
+  "receiver_capture": "52 native analyses summarized:40historical FLR01 plus12actual FM06-R1 FLR03. Six finest-3U full input/DAT/log captures included. This package does not contain all52raw solver outputs. Historical FM03 geometry differs from current FM06 and cannot supply its stiffness.",
+  "tine_capture": "Four unit-load native inputs, DAT outputs and logs included; forty scaled sensitivities are linear extrapolations, not forty additional native solves.",
+  "geometry": "Thirty research assembly poses, seventy individual STEP exports and seventy closed contact meshes. Individual parts retain the assembly datum; they are not manufacturing drawings.",
+  "contact": "All twelve FCE08 cases are captured. Engineering acceptance is not established; sequence completion does not validate contact forces, dynamic clearance, precision or hardware reliability.",
+  "missing_hardware": [
+    "Source-rated installed drives/brakes and independent cutoff",
+    "Axial pin retention and actuators",
+    "Approved payload rail-end interfaces and forward-stop release",
+    "Complete free separation, empty-sled return and reset",
+    "Universal mixed-size receiver and installed four/twelve-cell system",
+    "Equivalent seven-architecture trade and fault evidence"
+  ],
+  "boundary": "Separate Gen6 research; evaluated Gen5 remains unchanged. No hardware, reliability, qualification, manufacturing release or complete feeder is claimed."
+}

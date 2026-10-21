@@ -1,0 +1,356 @@
+{
+  "reader": "CadQuery2.8/OpenCascade7.9",
+  "parts": [
+    {
+      "file": "FM06_1U_payload.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 4.521571099758148e-07
+    },
+    {
+      "file": "FM06_1U_support_floor.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 1.4551915228366852e-11
+    },
+    {
+      "file": "FM06_1U_cassette_L_-8.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_cassette_L_117.5.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_rear_wall.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_storage_gate.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_fork_body.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 1.7462298274040222e-10
+    },
+    {
+      "file": "FM06_1U_captive_guide.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_end_block_-238.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_end_block_30.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_gate_bolt_guide.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_gate_crossbolt.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 6.821210263296962e-13
+    },
+    {
+      "file": "FM06_1U_motor_3242_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 7.275957614183426e-12
+    },
+    {
+      "file": "FM06_1U_motor_shaft_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_shaft_extension.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_screw_major_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_coupling_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_bearing_housing.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_bearing_ring_A.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_bearing_ring_B.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_shaft_collar_A.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_shaft_collar_B.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_nut_SB3700_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 4.092726157978177e-12
+    },
+    {
+      "file": "FM06_1U_drive_mount.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_motor_mount_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_fork_front.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_sled_body.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 2.9103830456733704e-11
+    },
+    {
+      "file": "FM06_1U_sled_front_stop.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_sled_entry_bar.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_receiver_lock_pin_0.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_receiver_lock_pin_1.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_sled_guide_shoe_0.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_launcher_guide_0.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_sled_guide_shoe_1.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_1U_launcher_guide_1.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_payload.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 1.3569369912147522e-06
+    },
+    {
+      "file": "FM06_3U_support_floor.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 5.820766091346741e-11
+    },
+    {
+      "file": "FM06_3U_cassette_L_-8.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_cassette_L_344.5.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_rear_wall.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_storage_gate.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_fork_body.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 7.566995918750763e-10
+    },
+    {
+      "file": "FM06_3U_captive_guide.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_end_block_-238.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_end_block_30.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_gate_bolt_guide.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_gate_crossbolt.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 6.821210263296962e-13
+    },
+    {
+      "file": "FM06_3U_motor_3242_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 7.275957614183426e-12
+    },
+    {
+      "file": "FM06_3U_motor_shaft_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_shaft_extension.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_screw_major_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_coupling_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_bearing_housing.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_bearing_ring_A.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_bearing_ring_B.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_shaft_collar_A.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_shaft_collar_B.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_nut_SB3700_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 4.092726157978177e-12
+    },
+    {
+      "file": "FM06_3U_drive_mount.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_motor_mount_envelope.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_fork_front.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_sled_body.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 5.820766091346741e-11
+    },
+    {
+      "file": "FM06_3U_sled_front_stop.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_sled_entry_bar.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_receiver_lock_pin_0.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_receiver_lock_pin_1.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_sled_guide_shoe_0.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_launcher_guide_0.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_sled_guide_shoe_1.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "file": "FM06_3U_launcher_guide_1.step",
+      "independently_valid": true,
+      "volume_difference_mm3": 0.0
+    }
+  ],
+  "boundary": "Independent nominal exchange readback only; no manufacturing or interface approval."
+}

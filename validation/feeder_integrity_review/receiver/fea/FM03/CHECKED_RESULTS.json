@@ -1,0 +1,772 @@
+{
+  "revision": "FM03-stem12",
+  "boundary": "Actual receiver solid; assumed homogeneous steel E200GPa,nu0.3 and fully clamped pin bores. No actual pin/hole contact, support flexibility, clearance take-up, impact, material allowable or assembly qualification. Negative-Y loads move the dogs away from the payload, increasing retention excursion; comparing displacement to0.5mm nominal gap is a scale comparison, not a proved penetration or an acceptance criterion.",
+  "native_cases": [
+    {
+      "case": "1U_receiver_h1.6/split",
+      "mesh": {
+        "part": "1U_sled_entry_bar",
+        "source_step_sha256": "442ae7c8db3afcec574e15d0dc0bf763f4c871603b8a2f0b31c51bd50a3a4621",
+        "gmsh": "4.14.1",
+        "h_max_mm": 1.6,
+        "nodes": 46079,
+        "C3D10_elements": 27681,
+        "min_scaled_Jacobian": 0.6327647363088862,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 2052,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.03784880542070388,
+      "max_abs_Y_mm_at_1000N": 0.03537525,
+      "min_Y_displacement_mm": -0.03537525,
+      "max_Y_displacement_mm": 0.006778074,
+      "loaded_face_mean_displacement_mm": 0.029108349361196717,
+      "loaded_face_max_abs_Y_mm": 0.03536727,
+      "elastic_strain_energy_J": 0.014554174680598391,
+      "max_vm_MPa_at_1000N": 181.33058760364707,
+      "reaction_N": [
+        -7.5513000135502e-07,
+        999.9999930421999,
+        7.627620168992877e-05
+      ],
+      "applied_force_N": [
+        0.0,
+        -1000.0000000000023,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        26000.000000000073,
+        0.0,
+        -56750.00000000234
+      ],
+      "reaction_moment_Nmm": [
+        -26000.00086537881,
+        -0.006337544785125715,
+        56750.00061994619
+      ],
+      "force_balance_relative_error": 7.659660684114353e-08,
+      "moment_balance_relative_error": 1.0294897535570187e-07,
+      "file_hashes": {
+        "split.dat": "8c27bc16d4bc74fa7b7c99fe2123d44b283cdc902086146b03f0f8dd520849b5",
+        "split.inp": "72fb46e27642a0e2cf0d92f3597abaf94ff58b2413c4e1d2e7f788aeccc7f896",
+        "split.log": "838803edd735b43a362dad7928caf78cd496cf78e26fcaaa9470aeaf5c7a15d1",
+        "split.frd": "15ad7ea41aae87ae949f8ed7f775fd058ff6cf9f748e06039552fc73ced60de4"
+      }
+    },
+    {
+      "case": "1U_receiver_h1.6/one_dog",
+      "mesh": {
+        "part": "1U_sled_entry_bar",
+        "source_step_sha256": "442ae7c8db3afcec574e15d0dc0bf763f4c871603b8a2f0b31c51bd50a3a4621",
+        "gmsh": "4.14.1",
+        "h_max_mm": 1.6,
+        "nodes": 46079,
+        "C3D10_elements": 27681,
+        "min_scaled_Jacobian": 0.6327647363088862,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 2052,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.07519718233475463,
+      "max_abs_Y_mm_at_1000N": 0.07030828,
+      "min_Y_displacement_mm": -0.07030828,
+      "max_Y_displacement_mm": 0.01344682,
+      "loaded_face_mean_displacement_mm": 0.05770470746562261,
+      "loaded_face_max_abs_Y_mm": 0.07025335,
+      "elastic_strain_energy_J": 0.02885235373281034,
+      "max_vm_MPa_at_1000N": 349.3413023532065,
+      "reaction_N": [
+        5.032474826166533e-07,
+        1000.0000222874817,
+        0.00010023864031663554
+      ],
+      "applied_force_N": [
+        0.0,
+        -999.9999999999665,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        25999.999999999065,
+        0.0,
+        -104500.00000000006
+      ],
+      "reaction_moment_Nmm": [
+        -26000.00095607326,
+        -0.010690805805879,
+        104500.00225964503
+      ],
+      "force_balance_relative_error": 1.0268773833660317e-07,
+      "moment_balance_relative_error": 1.0185872105539116e-07,
+      "file_hashes": {
+        "one_dog.dat": "fdd4f7371ae8ddd3b5b9b12dd352fae876a0db2da4d13535b3f5327a5afcb5ec",
+        "one_dog.inp": "20af4b49779b3810a097fab27c45e2e1f778e0e43a42f484db99747a53f1cee1",
+        "one_dog.log": "da13eebce2b6466eed6de3a942c67c31cac11163f9d89a69bce2ea5fa7da0bb0",
+        "one_dog.frd": "3368b0caeac46e1c4213b4ad6bb623b823df57a99fec85210b8bc1ce36feabfb"
+      }
+    },
+    {
+      "case": "1U_receiver_h2.5/split",
+      "mesh": {
+        "part": "1U_sled_entry_bar",
+        "source_step_sha256": "442ae7c8db3afcec574e15d0dc0bf763f4c871603b8a2f0b31c51bd50a3a4621",
+        "gmsh": "4.14.1",
+        "h_max_mm": 2.5,
+        "nodes": 26470,
+        "C3D10_elements": 15422,
+        "min_scaled_Jacobian": 0.6175250173908672,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 2052,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.0377196329383908,
+      "max_abs_Y_mm_at_1000N": 0.03526285,
+      "min_Y_displacement_mm": -0.03526285,
+      "max_Y_displacement_mm": 0.006771991,
+      "loaded_face_mean_displacement_mm": 0.02905078284125334,
+      "loaded_face_max_abs_Y_mm": 0.0352525,
+      "elastic_strain_energy_J": 0.014525391420626763,
+      "max_vm_MPa_at_1000N": 179.34901406848815,
+      "reaction_N": [
+        -1.8257759972391263e-06,
+        999.9999287519996,
+        -3.556496869627779e-05
+      ],
+      "applied_force_N": [
+        0.0,
+        -1000.0000000000065,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        26000.000000000742,
+        0.0,
+        -56750.00000000268
+      ],
+      "reaction_moment_Nmm": [
+        -25999.999738299273,
+        0.0032725974354264054,
+        56749.99677961902
+      ],
+      "force_balance_relative_error": 7.96522374957839e-08,
+      "moment_balance_relative_error": 7.36727172885794e-08,
+      "file_hashes": {
+        "split.dat": "b430bb7e24419e250160a54e5b9cd60dafa09e9c1f93287801b7cf250cafa186",
+        "split.inp": "23693792848fdc925dd3abbc4b0a3ef20f5c3142015d0e181b655be9d97657a5",
+        "split.log": "e826926820c8eadfa119f6feec1d99eff12625fb132a6369889fecb0bda6070c",
+        "split.frd": "5a2b94282f60b11a1465e4198712f1f33b8c6ffc988da03cfe1d30c9c45634ad"
+      }
+    },
+    {
+      "case": "1U_receiver_h2.5/one_dog",
+      "mesh": {
+        "part": "1U_sled_entry_bar",
+        "source_step_sha256": "442ae7c8db3afcec574e15d0dc0bf763f4c871603b8a2f0b31c51bd50a3a4621",
+        "gmsh": "4.14.1",
+        "h_max_mm": 2.5,
+        "nodes": 26470,
+        "C3D10_elements": 15422,
+        "min_scaled_Jacobian": 0.6175250173908672,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 2052,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.07495611793469804,
+      "max_abs_Y_mm_at_1000N": 0.07009885,
+      "min_Y_displacement_mm": -0.07009885,
+      "max_Y_displacement_mm": 0.01342993,
+      "loaded_face_mean_displacement_mm": 0.05758307144161247,
+      "loaded_face_max_abs_Y_mm": 0.07002839,
+      "elastic_strain_energy_J": 0.02879153572080554,
+      "max_vm_MPa_at_1000N": 350.3728068157639,
+      "reaction_N": [
+        3.705707009100251e-06,
+        999.9999935403494,
+        -0.00013031614978853412
+      ],
+      "applied_force_N": [
+        0.0,
+        -999.9999999999759,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        26000.000000000044,
+        0.0,
+        -104500.00000000224
+      ],
+      "reaction_moment_Nmm": [
+        -25999.998774231786,
+        0.01371544033681027,
+        104499.99953696187
+      ],
+      "force_balance_relative_error": 1.3052876286580733e-07,
+      "moment_balance_relative_error": 1.2794516781210437e-07,
+      "file_hashes": {
+        "one_dog.dat": "c7f573873c7bdb9f6827027f7a73a60781c19db0a1817b18ff6a043822eb2582",
+        "one_dog.inp": "741f391c6e3b9c4f4eadf8214fc2e7f417bf7cb0ac7b2dba3e840f397533bf82",
+        "one_dog.log": "c66163cf2b99a559947a1db21600d90afc1396d5f5eb8a91b54f9e30e7e73a65",
+        "one_dog.frd": "a7f7f4d8df8cade6f1182a76bfd91e60a751ba91312e08888337800092b2a286"
+      }
+    },
+    {
+      "case": "1U_receiver_h4/split",
+      "mesh": {
+        "part": "1U_sled_entry_bar",
+        "source_step_sha256": "442ae7c8db3afcec574e15d0dc0bf763f4c871603b8a2f0b31c51bd50a3a4621",
+        "gmsh": "4.14.1",
+        "h_max_mm": 4.0,
+        "nodes": 15560,
+        "C3D10_elements": 8746,
+        "min_scaled_Jacobian": 0.5001475374825279,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 1908,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.037488235666490614,
+      "max_abs_Y_mm_at_1000N": 0.03506648,
+      "min_Y_displacement_mm": -0.03506648,
+      "max_Y_displacement_mm": 0.006750245,
+      "loaded_face_mean_displacement_mm": 0.028933032714735758,
+      "loaded_face_max_abs_Y_mm": 0.03504331,
+      "elastic_strain_energy_J": 0.014466516357367733,
+      "max_vm_MPa_at_1000N": 185.35285519993482,
+      "reaction_N": [
+        9.327800174624423e-07,
+        1000.0000297700021,
+        -0.00015019900021329136
+      ],
+      "applied_force_N": [
+        0.0,
+        -999.9999999999899,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        25999.999999998927,
+        0.0,
+        -56750.00000000045
+      ],
+      "reaction_moment_Nmm": [
+        -25999.99843349447,
+        0.012525033523317575,
+        56750.000939619946
+      ],
+      "force_balance_relative_error": 1.5312368651793025e-07,
+      "moment_balance_relative_error": 2.0277221271651627e-07,
+      "file_hashes": {
+        "split.dat": "92e5f83102d9b2389cd0d84890f7c016af28e4eeb765fa60d22b4efe7e0cbda6",
+        "split.inp": "59345e79f1fd867a7f44186015292c2aa2deec6fdd79ff9ec20a1a1cdec2edeb",
+        "split.log": "631975e13e516ed867b5a6d4def9a0a271ea1465357f5c2ca6e408fa723c746e",
+        "split.frd": "891ccca632c2fc1b219b510c939f86382f2a44be0bf579a8574d5b241aea8b6c"
+      }
+    },
+    {
+      "case": "1U_receiver_h4/one_dog",
+      "mesh": {
+        "part": "1U_sled_entry_bar",
+        "source_step_sha256": "442ae7c8db3afcec574e15d0dc0bf763f4c871603b8a2f0b31c51bd50a3a4621",
+        "gmsh": "4.14.1",
+        "h_max_mm": 4.0,
+        "nodes": 15560,
+        "C3D10_elements": 8746,
+        "min_scaled_Jacobian": 0.5001475374825279,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 1908,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.07445817269442331,
+      "max_abs_Y_mm_at_1000N": 0.06967231,
+      "min_Y_displacement_mm": -0.06967231,
+      "max_Y_displacement_mm": 0.01338377,
+      "loaded_face_mean_displacement_mm": 0.057338288407738,
+      "loaded_face_max_abs_Y_mm": 0.06952823,
+      "elastic_strain_energy_J": 0.02866914420386957,
+      "max_vm_MPa_at_1000N": 352.869167320464,
+      "reaction_N": [
+        -1.3104400077082468e-06,
+        999.9999796564093,
+        8.17601996792594e-05
+      ],
+      "applied_force_N": [
+        0.0,
+        -1000.00000000002,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        25999.999999998912,
+        0.0,
+        -104500.00000000316
+      ],
+      "reaction_moment_Nmm": [
+        -26000.000656665397,
+        -0.008372786562897527,
+        104499.99805905594
+      ],
+      "force_balance_relative_error": 8.42633372252834e-08,
+      "moment_balance_relative_error": 8.004636028305039e-08,
+      "file_hashes": {
+        "one_dog.dat": "8e026ce81c80a3030abe0bc41b534084172d3b18f24a8f089d1a46171b07ec87",
+        "one_dog.inp": "f42958c77abd9c3df1b2f96d8c7dda9db8580a82a6888d80fb0abd57c3df6787",
+        "one_dog.log": "eb0ecb36b17d53d8b2c74f626cef4a1779637240c4b58ae7e0874557ed7ddd49",
+        "one_dog.frd": "bee940091231ddd7274f61f91b18012b3d9907d364c5ae7655ff457b35504154"
+      }
+    },
+    {
+      "case": "3U_receiver_h1.6/split",
+      "mesh": {
+        "part": "3U_sled_entry_bar",
+        "source_step_sha256": "bf63bcd3c76747d6eae352b3a5b2e86d3bdf861b9645b0e67880c37f6c6a4d13",
+        "gmsh": "4.14.1",
+        "h_max_mm": 1.6,
+        "nodes": 59259,
+        "C3D10_elements": 34417,
+        "min_scaled_Jacobian": 0.632764736308875,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 2056,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.03785242502267431,
+      "max_abs_Y_mm_at_1000N": 0.03537695,
+      "min_Y_displacement_mm": -0.03537695,
+      "max_Y_displacement_mm": 0.006778739,
+      "loaded_face_mean_displacement_mm": 0.02910880454663659,
+      "loaded_face_max_abs_Y_mm": 0.03536891,
+      "elastic_strain_energy_J": 0.014554402273318298,
+      "max_vm_MPa_at_1000N": 181.19396810491276,
+      "reaction_N": [
+        3.78699995265408e-07,
+        999.9999608486002,
+        5.299000533476317e-06
+      ],
+      "applied_force_N": [
+        0.0,
+        -1000.0000000000002,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        26000.000000000287,
+        0.0,
+        -170250.00000000017
+      ],
+      "reaction_moment_Nmm": [
+        -26000.00001619937,
+        -0.00804550139100968,
+        170249.99781895618
+      ],
+      "force_balance_relative_error": 3.9510187902481475e-08,
+      "moment_balance_relative_error": 4.8401563568615377e-08,
+      "file_hashes": {
+        "split.dat": "71938d6e5b37e231d9745ef1a63788eb5a35ee963488246176b95dc598c958bf",
+        "split.inp": "b9155cb1a789095ee0574e6da3f3b93a9a4e0eab4f51cd11cfc448f7eb8872a3",
+        "split.log": "ac58da842e69badd390dfba89b99dbc5150cd9a3eefe124154c38a9b24a76cbe",
+        "split.frd": "b7d0455079e47a1e01191d230cb1ca000ee30a6fc471a73a89bdb09abf2d8baa"
+      }
+    },
+    {
+      "case": "3U_receiver_h1.6/one_dog",
+      "mesh": {
+        "part": "3U_sled_entry_bar",
+        "source_step_sha256": "bf63bcd3c76747d6eae352b3a5b2e86d3bdf861b9645b0e67880c37f6c6a4d13",
+        "gmsh": "4.14.1",
+        "h_max_mm": 1.6,
+        "nodes": 59259,
+        "C3D10_elements": 34417,
+        "min_scaled_Jacobian": 0.632764736308875,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 2056,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.07555791660902324,
+      "max_abs_Y_mm_at_1000N": 0.07062047,
+      "min_Y_displacement_mm": -0.07062047,
+      "max_Y_displacement_mm": 0.01353748,
+      "loaded_face_mean_displacement_mm": 0.058114346854130416,
+      "loaded_face_max_abs_Y_mm": 0.07060077,
+      "elastic_strain_energy_J": 0.02905717342706533,
+      "max_vm_MPa_at_1000N": 353.5137865308067,
+      "reaction_N": [
+        8.497074062748661e-07,
+        1000.000057023737,
+        0.0001176637150613509
+      ],
+      "applied_force_N": [
+        0.0,
+        -1000.0000000000042,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        26000.000000000637,
+        0.0,
+        -331499.99999999895
+      ],
+      "reaction_moment_Nmm": [
+        -26000.001053044165,
+        -0.03898185534687015,
+        331500.01887704275
+      ],
+      "force_balance_relative_error": 1.3075617746323355e-07,
+      "moment_balance_relative_error": 1.302930250926619e-07,
+      "file_hashes": {
+        "one_dog.dat": "fb963d765b25c70caa131e8798126d34667759d22f415c5c38849e80775eae5f",
+        "one_dog.inp": "4ca4eed58915086e8ffac7438b2e35662d4961ae9bc72f208482d1428291c173",
+        "one_dog.log": "300d5636dc8399f76bbdc1e97ca37367de59671c6b4cc0e68c82ea83420a927e",
+        "one_dog.frd": "d49bc3dbae70b375f72e2f591801f2425b47f1d83eaa81fe690db19fda5d66e1"
+      }
+    },
+    {
+      "case": "3U_receiver_h2.5/split",
+      "mesh": {
+        "part": "3U_sled_entry_bar",
+        "source_step_sha256": "bf63bcd3c76747d6eae352b3a5b2e86d3bdf861b9645b0e67880c37f6c6a4d13",
+        "gmsh": "4.14.1",
+        "h_max_mm": 2.5,
+        "nodes": 30803,
+        "C3D10_elements": 17372,
+        "min_scaled_Jacobian": 0.6525954780580951,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 2056,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.037737347627028905,
+      "max_abs_Y_mm_at_1000N": 0.03527847,
+      "min_Y_displacement_mm": -0.03527847,
+      "max_Y_displacement_mm": 0.006771947,
+      "loaded_face_mean_displacement_mm": 0.029054529265136544,
+      "loaded_face_max_abs_Y_mm": 0.03526713,
+      "elastic_strain_energy_J": 0.01452726463256835,
+      "max_vm_MPa_at_1000N": 180.494507409398,
+      "reaction_N": [
+        4.661999914896964e-07,
+        1000.0000374751986,
+        8.947390104907527e-05
+      ],
+      "applied_force_N": [
+        0.0,
+        -1000.0000000000053,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        26000.000000000626,
+        0.0,
+        -170250.00000000212
+      ],
+      "reaction_moment_Nmm": [
+        -26000.00091154337,
+        -0.019544544383464313,
+        170250.01319692988
+      ],
+      "force_balance_relative_error": 9.700611538328768e-08,
+      "moment_balance_relative_error": 1.370332851329426e-07,
+      "file_hashes": {
+        "split.dat": "29a5e5b6e5f3b1c17d27732fe1eb28995fc3c6c96ad36bd5643e4ad774b6837c",
+        "split.inp": "c944b1bdb20c51ea17464d5d1b2e88f1738e17afc3738df9fb99f6b6315461bf",
+        "split.log": "a7620c639f5c25fbf59d2668a98fcfbf608b67979b33d0a3443c86042ce1c06c",
+        "split.frd": "f395faddd36560fa899e0f4162f842fdccafe620c3a3e97a254ff06bf81486ce"
+      }
+    },
+    {
+      "case": "3U_receiver_h2.5/one_dog",
+      "mesh": {
+        "part": "3U_sled_entry_bar",
+        "source_step_sha256": "bf63bcd3c76747d6eae352b3a5b2e86d3bdf861b9645b0e67880c37f6c6a4d13",
+        "gmsh": "4.14.1",
+        "h_max_mm": 2.5,
+        "nodes": 30803,
+        "C3D10_elements": 17372,
+        "min_scaled_Jacobian": 0.6525954780580951,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 2056,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.07536100409090712,
+      "max_abs_Y_mm_at_1000N": 0.07045077,
+      "min_Y_displacement_mm": -0.07045077,
+      "max_Y_displacement_mm": 0.01351914,
+      "loaded_face_mean_displacement_mm": 0.05800802025255562,
+      "loaded_face_max_abs_Y_mm": 0.0704234,
+      "elastic_strain_energy_J": 0.02900401012627714,
+      "max_vm_MPa_at_1000N": 355.0632634091154,
+      "reaction_N": [
+        1.4056779945028838e-06,
+        1000.0001057241144,
+        -5.857069524577846e-05
+      ],
+      "applied_force_N": [
+        0.0,
+        -999.9999999999769,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        25999.999999999887,
+        0.0,
+        -331499.9999999959
+      ],
+      "reaction_moment_Nmm": [
+        -25999.99929631933,
+        0.019305263986455656,
+        331500.0350559966
+      ],
+      "force_balance_relative_error": 1.208722280711624e-07,
+      "moment_balance_relative_error": 1.2037357535867693e-07,
+      "file_hashes": {
+        "one_dog.dat": "5b65bf5df1a2ee97d8747392f917a42feb32e04861cda2ce6437dead26ae621e",
+        "one_dog.inp": "c51d960f31e7c72598574d7ba6e6c271eebf53f89f8556e345307cb6197cace7",
+        "one_dog.log": "e04a68b56d9bcdae319bfa11f9198208c4ec409669b5412dfc7486b073df2171",
+        "one_dog.frd": "8a836ae83e47f1c3d72a66058b9cbefeb0fcfd235a071ca0e5814e7663796ef9"
+      }
+    },
+    {
+      "case": "3U_receiver_h4/split",
+      "mesh": {
+        "part": "3U_sled_entry_bar",
+        "source_step_sha256": "bf63bcd3c76747d6eae352b3a5b2e86d3bdf861b9645b0e67880c37f6c6a4d13",
+        "gmsh": "4.14.1",
+        "h_max_mm": 4.0,
+        "nodes": 17773,
+        "C3D10_elements": 9678,
+        "min_scaled_Jacobian": 0.5001475374825285,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 1908,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.03749262026617191,
+      "max_abs_Y_mm_at_1000N": 0.0350692,
+      "min_Y_displacement_mm": -0.0350692,
+      "max_Y_displacement_mm": 0.00675009,
+      "loaded_face_mean_displacement_mm": 0.028932908960300062,
+      "loaded_face_max_abs_Y_mm": 0.03504243,
+      "elastic_strain_energy_J": 0.014466454480149597,
+      "max_vm_MPa_at_1000N": 185.20436542333766,
+      "reaction_N": [
+        7.083999927770535e-07,
+        999.9999846670016,
+        -0.00011919199967103111
+      ],
+      "applied_force_N": [
+        0.0,
+        -999.99999999997,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        25999.99999999971,
+        0.0,
+        -170249.9999999979
+      ],
+      "reaction_moment_Nmm": [
+        -25999.998742234562,
+        0.01314843832984991,
+        170250.00617114222
+      ],
+      "force_balance_relative_error": 1.201762644404232e-07,
+      "moment_balance_relative_error": 8.465128423318497e-08,
+      "file_hashes": {
+        "split.dat": "b0823139f0b262e268e80f0c8b301cc68c637511902b9479c7e1f6691a7bc003",
+        "split.inp": "e45fef7674634b9739170ed24727194f3ce9a7c620792829a301155de3388b4c",
+        "split.log": "47ff9da2399f3320f1fe756ab82d38db4720e0fd42823b5cf9825fcd1a45e55f",
+        "split.frd": "fcf1d7f27025a2b24a2607955dcf5cefb10b489253183ad032dae7641f843983"
+      }
+    },
+    {
+      "case": "3U_receiver_h4/one_dog",
+      "mesh": {
+        "part": "3U_sled_entry_bar",
+        "source_step_sha256": "bf63bcd3c76747d6eae352b3a5b2e86d3bdf861b9645b0e67880c37f6c6a4d13",
+        "gmsh": "4.14.1",
+        "h_max_mm": 4.0,
+        "nodes": 17773,
+        "C3D10_elements": 9678,
+        "min_scaled_Jacobian": 0.5001475374825285,
+        "fixed_bore_surfaces": [
+          13,
+          28
+        ],
+        "load_surfaces": [
+          12,
+          23
+        ],
+        "fixed_nodes": 1908,
+        "units": "N,mm,MPa",
+        "support": "Both inserted-pin bore surfaces fully clamped. Overstiff fixture; actual pin/hole/contact/support deformation absent.",
+        "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+        "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+      },
+      "max_displacement_mm_at_1000N": 0.074838110503702,
+      "max_abs_Y_mm_at_1000N": 0.07000002,
+      "min_Y_displacement_mm": -0.07000002,
+      "max_Y_displacement_mm": 0.01347259,
+      "loaded_face_mean_displacement_mm": 0.05775370708984367,
+      "loaded_face_max_abs_Y_mm": 0.06994334,
+      "elastic_strain_energy_J": 0.028876853544922417,
+      "max_vm_MPa_at_1000N": 354.6706106552092,
+      "reaction_N": [
+        -4.009588017298178e-06,
+        1000.0000213245452,
+        -1.6978499595483865e-05
+      ],
+      "applied_force_N": [
+        0.0,
+        -1000.0000000000202,
+        0.0
+      ],
+      "applied_moment_Nmm": [
+        26000.000000001422,
+        0.0,
+        -331500.00000001595
+      ],
+      "reaction_moment_Nmm": [
+        -25999.999820482553,
+        0.005684859530734665,
+        331500.00714679545
+      ],
+      "force_balance_relative_error": 2.75514356861819e-08,
+      "moment_balance_relative_error": 2.7468586089828883e-08,
+      "file_hashes": {
+        "one_dog.dat": "4af3631abc19d9ae21c16b790f2236e857bc105a8cbd11b743c83529ce9680ba",
+        "one_dog.inp": "9c87c57903d20d5282c4e2b389fb7e7554d5f30ca59eb6d5f45634502ca8c19f",
+        "one_dog.log": "e1a0957e1a1098183cf693658ce857068706506af77dc3aa606e5b2de240c154",
+        "one_dog.frd": "0484775c9ff560175485f3bc65b586d9618826822dc1425cbcf002e1593ef20a"
+      }
+    }
+  ],
+  "convergence": [
+    {
+      "size": "1U",
+      "pattern": "split",
+      "finest_case": "1U_receiver_h1.6/split",
+      "previous_case": "1U_receiver_h2.5/split",
+      "last_relative_compliance_change": 0.0019776634954133928,
+      "last_relative_peak_stress_change": 0.01092796070065277
+    },
+    {
+      "size": "1U",
+      "pattern": "one_dog",
+      "finest_case": "1U_receiver_h1.6/one_dog",
+      "previous_case": "1U_receiver_h2.5/one_dog",
+      "last_relative_compliance_change": 0.002107904698808268,
+      "last_relative_peak_stress_change": 0.0029527125925536165
+    },
+    {
+      "size": "3U",
+      "pattern": "split",
+      "finest_case": "3U_receiver_h1.6/split",
+      "previous_case": "3U_receiver_h2.5/split",
+      "last_relative_compliance_change": 0.0018645658021815348,
+      "last_relative_peak_stress_change": 0.0038602868673296635
+    },
+    {
+      "size": "3U",
+      "pattern": "one_dog",
+      "finest_case": "3U_receiver_h1.6/one_dog",
+      "previous_case": "3U_receiver_h2.5/one_dog",
+      "last_relative_compliance_change": 0.0018296101966297283,
+      "last_relative_peak_stress_change": 0.004383073411406089
+    }
+  ]
+}

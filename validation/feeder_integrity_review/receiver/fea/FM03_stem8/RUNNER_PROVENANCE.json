@@ -1,0 +1,5 @@
+{
+  "captured_runner_sha256": "638056c8f4c44a02c4f006a361346583f4bf2073e2f8690337f826e64da01db6",
+  "portable_runner_sha256": "d3099fa0ea7a7c01aa05db823f603c7623721c00182be143234ea5fe3a69980c",
+  "changes": "Environment path resolution and corrected boundary wording only; equations, geometry, meshing, loading, support and native solver input construction unchanged."
+}

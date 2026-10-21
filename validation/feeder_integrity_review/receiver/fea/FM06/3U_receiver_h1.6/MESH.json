@@ -1,0 +1,22 @@
+{
+  "part": "3U_sled_entry_bar",
+  "source_step_sha256": "55897ea499e13a3c13839f02ed9bd8c47796675c9a0f21ca8d1049ec612b07af",
+  "gmsh": "4.14.1",
+  "h_max_mm": 1.6,
+  "nodes": 72013,
+  "C3D10_elements": 42078,
+  "min_scaled_Jacobian": 0.6319701433053944,
+  "fixed_bore_surfaces": [
+    14,
+    30
+  ],
+  "load_surfaces": [
+    3,
+    27
+  ],
+  "fixed_nodes": 2064,
+  "units": "N,mm,MPa",
+  "support": "Both inserted-pin bore surfaces fully clamped. Idealized fixture; assembled stiffness is not established. Actual pin/hole contact, guide-wall bearing and support flexibility are absent.",
+  "material": "Assumed homogeneous steel E200000MPa,nu0.3; no alloy/allowable or plasticity",
+  "loads": "1000N towards negative Y, split evenly or applied entirely to one dog; no pretended provider load requirement"
+}

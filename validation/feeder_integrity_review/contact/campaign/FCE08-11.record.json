@@ -1,0 +1,68 @@
+{
+  "size": "3U",
+  "mass_kg": 4.0,
+  "dt_s": 0.0005,
+  "friction": 0.1,
+  "restitution": 0,
+  "gravity_m_s2": 0,
+  "drive_cap_N": 100,
+  "guide_drag_N": 5,
+  "yaw_deg": 0,
+  "iterations": 2000,
+  "feed_time_s": 10,
+  "mode": "jam",
+  "guard_mm": 0.1,
+  "label": "deliberate_jam",
+  "case_id": "FCE08-11",
+  "exit_code": 11,
+  "wall_s": 1208.0832175879914,
+  "command": [
+    "/workspace/volley-work/2026-10-21-completion/feeder-topology-review/chrono/build/feeder_surface",
+    "/workspace/volley-work/2026-10-21-completion/feeder-topology-review/contact_geometry_surfaces/3U",
+    "/workspace/volley-work/2026-10-21-completion/feeder-topology-review/chrono/campaign_v2/FCE08-11.csv",
+    "4.0",
+    "0.1",
+    "0",
+    "0",
+    "0.0005",
+    "100",
+    "5",
+    "0",
+    "2000",
+    "10",
+    "jam",
+    "0.1"
+  ],
+  "hashes": {
+    "FCE08-11.csv": "5b66cea4ec88d9757d7f9134bcca14067c3fbad9f01b6e5277b6c38ffd3608ea",
+    "FCE08-11.log": "67c11d472d6914d4ae1ce657221886598d7c31a85800f13c199871283b374711",
+    "FCE08-11.csv.metrics.json": "63296f0fb044e34fcdadc2123feef61975e6ae1515076e09fb3614df4159c02d"
+  },
+  "native_metrics": {
+    "native_version": "10.0.0",
+    "steps": 22000,
+    "final_time_s": 11.000000000002,
+    "outside_domain_or_nonfinite": false,
+    "sequence_aborted": true,
+    "maximum_payload_speed_m_s": 0.0319402602910754,
+    "maximum_payload_spin_rad_s": 0.0334979700165907,
+    "maximum_resultant_contact_force_N": 164.206686799515,
+    "maximum_pair_contact_force_N": 118.125829453793,
+    "minimum_reported_contact_distance_m": -1.28861574921757e-06,
+    "maximum_feed_force_N": 100,
+    "positive_mechanical_motor_work_J": 0.232650830868489,
+    "negative_mechanical_motor_work_J": -0.00381704807990051,
+    "maximum_fork_off_axis_m": 3.10737152102245e-10,
+    "maximum_fork_rotation_rad": 0,
+    "payload_momentum_balance_residual_N_s": [
+      1.14232432777304e-16,
+      -6.75637464674525e-13,
+      -7.86878961538654e-17
+    ],
+    "contact_impulse_N_s": [
+      -9.11173081518128e-11,
+      1.16428058315641e-07,
+      3.08591804489422e-11
+    ]
+  }
+}

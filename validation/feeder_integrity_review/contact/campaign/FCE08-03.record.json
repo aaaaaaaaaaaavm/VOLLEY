@@ -1,0 +1,68 @@
+{
+  "size": "1U",
+  "mass_kg": 1.33,
+  "dt_s": 0.000125,
+  "friction": 0.1,
+  "restitution": 0,
+  "gravity_m_s2": 0,
+  "drive_cap_N": 100,
+  "guide_drag_N": 5,
+  "yaw_deg": 0,
+  "iterations": 2000,
+  "feed_time_s": 10,
+  "mode": "none",
+  "guard_mm": 0.1,
+  "label": "time_refinement",
+  "case_id": "FCE08-03",
+  "exit_code": 0,
+  "wall_s": 615.397308707994,
+  "command": [
+    "/workspace/volley-work/2026-10-21-completion/feeder-topology-review/chrono/build/feeder_surface",
+    "/workspace/volley-work/2026-10-21-completion/feeder-topology-review/contact_geometry_surfaces/1U",
+    "/workspace/volley-work/2026-10-21-completion/feeder-topology-review/chrono/campaign_v2/FCE08-03.csv",
+    "1.33",
+    "0.1",
+    "0",
+    "0",
+    "0.000125",
+    "100",
+    "5",
+    "0",
+    "2000",
+    "10",
+    "none",
+    "0.1"
+  ],
+  "hashes": {
+    "FCE08-03.csv": "e67ad4a27795eb1f952d85a4227cf2856be705cf0ea2e0b0998b9ba846083b44",
+    "FCE08-03.log": "5ac0ddd6d452094d213ed86116f1d80bc7669521603a113a9548d7050d70872b",
+    "FCE08-03.csv.metrics.json": "8a741850e8025a81414503306b0910e3d699f08f666c4f7bd6feed4256740b32"
+  },
+  "native_metrics": {
+    "native_version": "10.0.0",
+    "steps": 212000,
+    "final_time_s": 26.500000000081,
+    "outside_domain_or_nonfinite": false,
+    "sequence_aborted": false,
+    "maximum_payload_speed_m_s": 0.0376914075138687,
+    "maximum_payload_spin_rad_s": 0.148408005993953,
+    "maximum_resultant_contact_force_N": 38.9038309259347,
+    "maximum_pair_contact_force_N": 38.9038309259347,
+    "minimum_reported_contact_distance_m": -1.97325280169025e-05,
+    "maximum_feed_force_N": 5.01455328288516,
+    "positive_mechanical_motor_work_J": 1.92009174212584,
+    "negative_mechanical_motor_work_J": -3.77099403259267e-05,
+    "maximum_fork_off_axis_m": 7.64245132246037e-11,
+    "maximum_fork_rotation_rad": 0,
+    "payload_momentum_balance_residual_N_s": [
+      5.87502052215583e-18,
+      7.55865774701783e-14,
+      -1.08895910951728e-15
+    ],
+    "contact_impulse_N_s": [
+      5.73529944011215e-05,
+      -6.80000442939619e-05,
+      -9.55420775882743e-06
+    ]
+  }
+}

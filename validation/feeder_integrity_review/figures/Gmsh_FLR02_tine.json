@@ -1,0 +1,17 @@
+{
+  "viewer": "Gmsh4.14.1",
+  "solver": "CalculiX2.23",
+  "label": "FM04 integral transfer tine / FLR02",
+  "image_role": "Genuine OpenGL viewport export plus complete native application screenshot; no synthetic software UI",
+  "field": "Native DAT nodal U_z in mm per1N transverse end load, undeformed actual tine mesh",
+  "load": "1N transverse end-face shear, fully clamped tine root; assumed aluminium E69GPa/nu0.33. Not actual fork/root flexibility, selected alloy or assembly/contact qualification.",
+  "source_files": {
+    "mesh.msh": "4d6c983c7546dec86f95599773d1b65682966a3fb08dc8e25331ec4bf17f6cb6",
+    "unit.inp": "e5dbfbfbe69ffcda2669b77687c5bb1fb5998cdbec0d7320850713539de0cf58",
+    "unit.dat": "bd9aec0ad6f389f9a9eeb1a232f87727fb9bdc857ebdfad024e163b4888d28bd"
+  },
+  "images": {
+    "Gmsh_FLR02_tine.png": "b6a101b562f15696ba9512778506a271ace8decd5b19e431892a3ec77a502700",
+    "Gmsh_FLR02_tine_application.png": "01ef5620ca4abe5b7e944a555d5e9bbd69d5b0920055e7bf7a7d07b96effc973"
+  }
+}

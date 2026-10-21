@@ -1,0 +1,106 @@
+{
+  "revision": "FM06-R1 / FLR01 / FLR02 / FLR03 / FCE08",
+  "issues": [
+    {
+      "id": "FI-01",
+      "controlled_work_items": "BB-56",
+      "location": "Backstop / near-rail junction",
+      "cause": "Edge-only attachment escaped B-rep validity and solid-count checks.",
+      "severity": "high",
+      "correction": "Backstop Y7\u202695mm provides finite face attachment; original wider correction collided with the fork.",
+      "implementation_status": "implemented_verified_nominal",
+      "verification_or_remaining_work": "Thirty poses,28continuous translations,70closed oriented meshes and independent STEP checks. Attachment strength remains open."
+    },
+    {
+      "id": "FI-02",
+      "controlled_work_items": "BB-56/57",
+      "location": "Receiver / cassette interface",
+      "cause": "Earlier port relief permitted zero-distance contact at some sled stations.",
+      "severity": "high",
+      "correction": "Relieved the cassette port and checked six finite-motion stations per payload.",
+      "implementation_status": "implemented_verified_sampled",
+      "verification_or_remaining_work": "24pair checks retain no penetration and a minimum4mm gap; full toleranced moving clearance is not established."
+    },
+    {
+      "id": "FI-03",
+      "controlled_work_items": "BB-57",
+      "location": "Receiver stem and dog fixture",
+      "cause": "Original thin receiver has large displacement; an earlier stiffness result also refers to a different crossbar revision.",
+      "severity": "high",
+      "correction": "Increase stem cross-section and rerun the actual current solid instead of carrying over historical stiffness.",
+      "implementation_status": "implemented_component_fixture_only",
+      "verification_or_remaining_work": "40historical cases plus12actual-FM06 FLR03 analyses, geometry-lineage checks, mesh refinement and force/moment balance. Actual assembled pin/guide contact remains unverified."
+    },
+    {
+      "id": "FI-04",
+      "controlled_work_items": "BB-56/57",
+      "location": "Receiver guides and pins",
+      "cause": "Short guides permit excessive bounded rigid rocking; longer tight guides can bind under adverse fit inputs.",
+      "severity": "high",
+      "correction": "Increase guide engagement and evaluate rigid play plus width/alignment/thermal/deflection bands.",
+      "implementation_status": "partial_failed_fit_retained",
+      "verification_or_remaining_work": "Rigid excursion reduced, but1117/1215deterministic combinations have nonpositive residual width. Manufacturing process and loaded thermal fit remain open."
+    },
+    {
+      "id": "FI-05",
+      "controlled_work_items": "BB-57",
+      "location": "Integral support tines",
+      "cause": "Payload load can consume the nominal0.6mm slot gap; actual root and frame are flexible.",
+      "severity": "high",
+      "correction": "Add integral supports and run four native unit-load meshes with explicit scaled sensitivities.",
+      "implementation_status": "partial_component_fixture_only",
+      "verification_or_remaining_work": "Unit compliance converges; adverse load partitions and accelerations do not establish loaded assembly clearance or strength."
+    },
+    {
+      "id": "FI-06",
+      "controlled_work_items": "BB-57",
+      "location": "Payload / fork dynamic contact",
+      "cause": "Small reported triangle-contact distances coexist with exact-solid overlap; forces and final pose are step/iteration sensitive.",
+      "severity": "critical",
+      "correction": "Retain failed native cases and reject dynamic-clearance/contact-force acceptance; refine and correlate the model.",
+      "implementation_status": "not_resolved",
+      "verification_or_remaining_work": "FCE08and independent B-rep spot checks demonstrate the numerical limitation. Sequence completion is not acceptance."
+    },
+    {
+      "id": "FI-07",
+      "controlled_work_items": "BB-56/57",
+      "location": "Pins, gate, drive and brake",
+      "cause": "Axial captivity, source-rated actuation, independent drive cutoff and installed arrest load path are missing.",
+      "severity": "critical",
+      "correction": "Select and integrate actual hardware, define fail-safe mechanics and analyze adverse states.",
+      "implementation_status": "not_implemented",
+      "verification_or_remaining_work": "Current source-sized envelopes and force caps are assumptions. No power-loss containment or rated stopping claim."
+    },
+    {
+      "id": "FI-08",
+      "controlled_work_items": "BB-56/57",
+      "location": "Payload rail ends / launch stop",
+      "cause": "Reference contacts do not establish approved rail-end loads; forward stop lacks a complete release mechanism.",
+      "severity": "critical",
+      "correction": "Define actual spacecraft interface and implement/load-check restraint and release geometry.",
+      "implementation_status": "not_implemented",
+      "verification_or_remaining_work": "Native subcycle ends with retained payload; no free separation, empty return or complete reset."
+    },
+    {
+      "id": "FI-09",
+      "controlled_work_items": "BB-56/61",
+      "location": "Mixed-size receiver / four-twelve-cell system",
+      "cause": "Dedicated1U/3Umodels do not demonstrate one shared installed system.",
+      "severity": "high",
+      "correction": "Integrate an actual shared receiver, indexed cassettes, mounting, harness and source-rated hardware.",
+      "implementation_status": "not_implemented",
+      "verification_or_remaining_work": "Mass/CG/inertia are local material proxies, not an installed campaign budget."
+    },
+    {
+      "id": "FI-10",
+      "controlled_work_items": "BB-55/61",
+      "location": "Seven feeder architectures",
+      "cause": "Equivalent complete CAD/mass/load/fault evidence is absent for every candidate.",
+      "severity": "high",
+      "correction": "Apply the safety-led mandatory gates before weighted downselect; retain alternatives in Labs.",
+      "implementation_status": "selection_open",
+      "verification_or_remaining_work": "All seven concepts remain unselected. Greater model maturity alone does not justify baseline selection."
+    }
+  ],
+  "boundary": "Engineering findings linked to the existing private controlled checklist; these local evidence records do not replace its task statuses."
+}

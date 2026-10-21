@@ -1,0 +1,3 @@
+Cannot create cache home directory: '/home/agent/.cache/ezdxf', cache files will not be saved.
+See also issue https://github.com/mozman/ezdxf/issues/923.
+30 STEP files independently valid with expected solid counts

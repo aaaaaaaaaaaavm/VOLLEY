@@ -1,0 +1,29 @@
+{
+  "software": "Blender 4.3.2",
+  "engine": "Blender Workbench technical rendering",
+  "tessellation_source_sha256": "32f64b88e940fef404cc75f7fbbcb97a8d91179ab7ba4dc15a7cfaf4f57b9937",
+  "evidence_class": "Rendered actual CAD geometry; nominal prescribed states. Not hardware photographs, solver screenshots, motion/contact/strength/qualification evidence.",
+  "renders": [
+    {
+      "phase": "stored",
+      "source": "FM06_3U_stored.FCStd",
+      "source_sha256": "6184ae7516465bbbeea88dd97435fd1ba19dd2a715b4eb6e92de0a697702db3a",
+      "image": "FM06_Technical_stored.png",
+      "sha256": "91628cf6c001f2854d51e048b4b44ac36f6d8e0b005cfbad620dc69795edea53"
+    },
+    {
+      "phase": "transfer",
+      "source": "FM06_3U_transfer.FCStd",
+      "source_sha256": "8235d319891519ce75ad7d72f1a3442f8af01839c4442f4532fce5057e4368a1",
+      "image": "FM06_Technical_transfer.png",
+      "sha256": "24329b969efc2ac601117d04037e867a8c784eb700d74831236d732bed5aff02"
+    },
+    {
+      "phase": "fork_home",
+      "source": "FM06_3U_fork_home.FCStd",
+      "source_sha256": "6d875b2f51f37d33e9e496883528f51484228604ee0ce54611f9531f7c732bf3",
+      "image": "FM06_Technical_fork_home.png",
+      "sha256": "b4e3a00e4570165d07181d478e62b24225bab3425ddf6d204bcee6dabce075d4"
+    }
+  ]
+}

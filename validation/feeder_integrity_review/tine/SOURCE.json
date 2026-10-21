@@ -1,0 +1,6 @@
+{
+  "cad_source_sha256": "065761eb9b0b6830d0ae52a87f35599ecbbf10cc49f7f826b99226fd34ca158c",
+  "step_sha256": "8e73f7247e247a9fb7b5965999267dbe9578c398ce2cceda76bc29a4b357e3b7",
+  "volume_mm3": 11118.000000000004,
+  "boundary": "Isolated actual CAD tine. Fully clamped root idealization; fork/root flexibility and support contacts excluded. E69000MPa, nu0.33 assumed aluminium, no alloy allowable."
+}

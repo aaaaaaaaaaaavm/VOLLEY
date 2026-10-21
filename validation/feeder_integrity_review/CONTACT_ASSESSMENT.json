@@ -1,0 +1,389 @@
+{
+  "revision": "FCE08",
+  "cases": [
+    {
+      "case_id": "FCE08-01",
+      "size": "1U",
+      "label": "time_refinement",
+      "dt_s": 0.0005,
+      "iterations": 2000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.4999999999836,
+      "final_CG_mm": [
+        55.742276694800005,
+        50.2906554107,
+        73.13720906510001
+      ],
+      "final_speed_m_s": 8.362107493833038e-05,
+      "final_spin_rad_s": 0.0006470626110696324,
+      "peak_resultant_contact_N": 9.82731918838883,
+      "positive_mechanical_work_J": 1.92008213652026,
+      "native_momentum_residual_N_s": [
+        6.71866533762111e-17,
+        1.10748704044289e-13,
+        -3.95462742414088e-17
+      ],
+      "independent_momentum_residual_N_s": [
+        9.160153104786906e-17,
+        1.1073870227924776e-13,
+        -7.229595611404904e-17
+      ]
+    },
+    {
+      "case_id": "FCE08-02",
+      "size": "1U",
+      "label": "time_refinement",
+      "dt_s": 0.00025,
+      "iterations": 2000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.5000000000355,
+      "final_CG_mm": [
+        57.7317387431,
+        48.699947282,
+        72.9862655173
+      ],
+      "final_speed_m_s": 3.1255902150477055e-05,
+      "final_spin_rad_s": 0.00042298272132570985,
+      "peak_resultant_contact_N": 19.9168975165608,
+      "positive_mechanical_work_J": 1.92024044033394,
+      "native_momentum_residual_N_s": [
+        -5.36747838016105e-17,
+        8.54298524825305e-14,
+        1.53659823444929e-15
+      ],
+      "independent_momentum_residual_N_s": [
+        -4.359847986107335e-17,
+        8.547430477160237e-14,
+        1.5355597720559562e-15
+      ]
+    },
+    {
+      "case_id": "FCE08-03",
+      "size": "1U",
+      "label": "time_refinement",
+      "dt_s": 0.000125,
+      "iterations": 2000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.500000000081,
+      "final_CG_mm": [
+        56.04735059,
+        49.1146529041,
+        73.20131901309999
+      ],
+      "final_speed_m_s": 6.72697269249162e-05,
+      "final_spin_rad_s": 0.0024318985322804494,
+      "peak_resultant_contact_N": 38.9038309259347,
+      "positive_mechanical_work_J": 1.92009174212584,
+      "native_momentum_residual_N_s": [
+        5.87502052215583e-18,
+        7.55865774701783e-14,
+        -1.08895910951728e-15
+      ],
+      "independent_momentum_residual_N_s": [
+        7.501323780884084e-18,
+        7.554789855767491e-14,
+        -1.0889692739126516e-15
+      ]
+    },
+    {
+      "case_id": "FCE08-04",
+      "size": "3U",
+      "label": "time_refinement",
+      "dt_s": 0.0005,
+      "iterations": 2000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.4999999999836,
+      "final_CG_mm": [
+        171.189884505,
+        50.4497966919,
+        73.8758868965
+      ],
+      "final_speed_m_s": 5.6586799495862834e-05,
+      "final_spin_rad_s": 5.942957489745475e-05,
+      "peak_resultant_contact_N": 59.1485592984731,
+      "positive_mechanical_work_J": 1.92264388739336,
+      "native_momentum_residual_N_s": [
+        3.71339244076285e-18,
+        -4.98295225611137e-13,
+        3.44482201011104e-15
+      ],
+      "independent_momentum_residual_N_s": [
+        -4.0007060164715114e-17,
+        -4.982980038792037e-13,
+        3.4274002364519107e-15
+      ]
+    },
+    {
+      "case_id": "FCE08-05",
+      "size": "3U",
+      "label": "time_refinement",
+      "dt_s": 0.00025,
+      "iterations": 2000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.5000000000355,
+      "final_CG_mm": [
+        170.161394315,
+        50.1262633162,
+        73.8360532124
+      ],
+      "final_speed_m_s": 1.4035372811477734e-05,
+      "final_spin_rad_s": 9.19284491763195e-05,
+      "peak_resultant_contact_N": 111.012640868508,
+      "positive_mechanical_work_J": 1.9226483126161,
+      "native_momentum_residual_N_s": [
+        1.02529103100397e-17,
+        -9.94657913365861e-13,
+        -2.74715824090735e-15
+      ],
+      "independent_momentum_residual_N_s": [
+        9.349973188266594e-18,
+        -9.94673100666605e-13,
+        -2.5792017718621885e-15
+      ]
+    },
+    {
+      "case_id": "FCE08-06",
+      "size": "3U",
+      "label": "time_refinement",
+      "dt_s": 0.000125,
+      "iterations": 2000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.500000000081,
+      "final_CG_mm": [
+        170.257289176,
+        48.910513235699995,
+        72.8432751376
+      ],
+      "final_speed_m_s": 0.00027031295532443624,
+      "final_spin_rad_s": 0.004353988166832842,
+      "peak_resultant_contact_N": 146.806993500628,
+      "positive_mechanical_work_J": 1.92356619445037,
+      "native_momentum_residual_N_s": [
+        8.35987637622104e-17,
+        -3.72992543969108e-13,
+        1.43342369224309e-15
+      ],
+      "independent_momentum_residual_N_s": [
+        9.921127504600169e-17,
+        -3.7497695920540863e-13,
+        2.4990860075790877e-16
+      ]
+    },
+    {
+      "case_id": "FCE08-07",
+      "size": "3U",
+      "label": "iteration_refinement",
+      "dt_s": 0.00025,
+      "iterations": 4000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.5000000000355,
+      "final_CG_mm": [
+        171.195563546,
+        51.371633758499996,
+        72.49642010859999
+      ],
+      "final_speed_m_s": 0.00017082054399273564,
+      "final_spin_rad_s": 0.0013378248055971051,
+      "peak_resultant_contact_N": 85.3268381889908,
+      "positive_mechanical_work_J": 1.92306013765221,
+      "native_momentum_residual_N_s": [
+        3.30681662608079e-17,
+        -1.30718607596267e-12,
+        -6.34914213218374e-15
+      ],
+      "independent_momentum_residual_N_s": [
+        -1.5150641158312439e-15,
+        -1.306994985329768e-12,
+        -6.243974521452644e-15
+      ]
+    },
+    {
+      "case_id": "FCE08-08",
+      "size": "3U",
+      "label": "rigid_ground_adverse_mass",
+      "dt_s": 0.0005,
+      "iterations": 2000,
+      "exit_code": 11,
+      "time_s": 10.99,
+      "native_stop_time_s": 11.000000000002,
+      "final_CG_mm": [
+        170.247801848,
+        -47.0746992118,
+        69.0850509524
+      ],
+      "final_speed_m_s": 3.7166968488222533e-06,
+      "final_spin_rad_s": 6.27729411667287e-05,
+      "peak_resultant_contact_N": 966.435605118377,
+      "positive_mechanical_work_J": 1.04852726443183,
+      "native_momentum_residual_N_s": [
+        -1.23460875413827e-16,
+        -1.01486098577587e-12,
+        6.02540239924565e-12
+      ],
+      "independent_momentum_residual_N_s": null
+    },
+    {
+      "case_id": "FCE08-09",
+      "size": "3U",
+      "label": "friction_sensitivity",
+      "dt_s": 0.0005,
+      "iterations": 2000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.4999999999836,
+      "final_CG_mm": [
+        170.249888252,
+        49.959352711,
+        73.4701766658
+      ],
+      "final_speed_m_s": 9.402804745504663e-05,
+      "final_spin_rad_s": 7.113981556965681e-05,
+      "peak_resultant_contact_N": 30.9249005592768,
+      "positive_mechanical_work_J": 1.92235417746396,
+      "native_momentum_residual_N_s": [
+        -4.43037936083402e-20,
+        -6.07696672930841e-15,
+        1.04594067781849e-14
+      ],
+      "independent_momentum_residual_N_s": [
+        -3.0400541872548873e-20,
+        -6.1868980533348605e-15,
+        1.0578018495854824e-14
+      ]
+    },
+    {
+      "case_id": "FCE08-10",
+      "size": "3U",
+      "label": "friction_sensitivity",
+      "dt_s": 0.0005,
+      "iterations": 2000,
+      "exit_code": 0,
+      "time_s": 26.5,
+      "native_stop_time_s": 26.4999999999836,
+      "final_CG_mm": [
+        170.791341908,
+        48.6255635175,
+        72.9827550832
+      ],
+      "final_speed_m_s": 2.5128903047100288e-05,
+      "final_spin_rad_s": 0.0001047486496697317,
+      "peak_resultant_contact_N": 51.2138184746004,
+      "positive_mechanical_work_J": 1.92377223711636,
+      "native_momentum_residual_N_s": [
+        1.77538105744501e-17,
+        -1.04096613209333e-12,
+        -4.63932820111979e-15
+      ],
+      "independent_momentum_residual_N_s": [
+        2.110128478199913e-17,
+        -1.040967539862089e-12,
+        -4.650698771403727e-15
+      ]
+    },
+    {
+      "case_id": "FCE08-11",
+      "size": "3U",
+      "label": "deliberate_jam",
+      "dt_s": 0.0005,
+      "iterations": 2000,
+      "exit_code": 11,
+      "time_s": 10.99,
+      "native_stop_time_s": 11.000000000002,
+      "final_CG_mm": [
+        170.248837288,
+        -101.509992475,
+        72.5976907467
+      ],
+      "final_speed_m_s": 2.9106842150799462e-08,
+      "final_spin_rad_s": 2.4713383243637856e-10,
+      "peak_resultant_contact_N": 164.206686799515,
+      "positive_mechanical_work_J": 0.232650830868489,
+      "native_momentum_residual_N_s": [
+        1.14232432777304e-16,
+        -6.75637464674525e-13,
+        -7.86878961538654e-17
+      ],
+      "independent_momentum_residual_N_s": null
+    },
+    {
+      "case_id": "FCE08-12",
+      "size": "3U",
+      "label": "deliberate_stuck_pin",
+      "dt_s": 0.0005,
+      "iterations": 2000,
+      "exit_code": 11,
+      "time_s": 10.99,
+      "native_stop_time_s": 11.000000000002,
+      "final_CG_mm": [
+        170.364219961,
+        50.0490304179,
+        72.73002892619999
+      ],
+      "final_speed_m_s": 0.00035093145527640747,
+      "final_spin_rad_s": 0.0004999697279411874,
+      "peak_resultant_contact_N": 59.1485592984731,
+      "positive_mechanical_work_J": 0.961597734260435,
+      "native_momentum_residual_N_s": [
+        3.41523684332934e-18,
+        -4.98295259492455e-13,
+        3.44407662111745e-15
+      ],
+      "independent_momentum_residual_N_s": null
+    }
+  ],
+  "time_refinement": [
+    {
+      "case_id": "FCE08-01",
+      "reference_case": "FCE08-03",
+      "dt_s": 0.0005,
+      "final_CG_difference_mm": 1.2166191115113005,
+      "maximum_sampled_CG_difference_mm": 1.250103110965278
+    },
+    {
+      "case_id": "FCE08-02",
+      "reference_case": "FCE08-03",
+      "dt_s": 0.00025,
+      "final_CG_difference_mm": 1.7479680229800463,
+      "maximum_sampled_CG_difference_mm": 1.9100309412563596
+    },
+    {
+      "case_id": "FCE08-03",
+      "reference_case": "FCE08-03",
+      "dt_s": 0.000125,
+      "final_CG_difference_mm": 0.0,
+      "maximum_sampled_CG_difference_mm": 0.0
+    },
+    {
+      "case_id": "FCE08-04",
+      "reference_case": "FCE08-06",
+      "dt_s": 0.0005,
+      "final_CG_difference_mm": 2.0749493128320524,
+      "maximum_sampled_CG_difference_mm": 2.1797749053618936
+    },
+    {
+      "case_id": "FCE08-05",
+      "reference_case": "FCE08-06",
+      "dt_s": 0.00025,
+      "final_CG_difference_mm": 1.5725305683533055,
+      "maximum_sampled_CG_difference_mm": 1.9140891106784985
+    },
+    {
+      "case_id": "FCE08-06",
+      "reference_case": "FCE08-06",
+      "dt_s": 0.000125,
+      "final_CG_difference_mm": 0.0,
+      "maximum_sampled_CG_difference_mm": 0.0
+    }
+  ],
+  "engineering_acceptance": "not_established",
+  "positive_BRep_spot_count": 8,
+  "maximum_spot_intersection_mm3": 385.7772105207094,
+  "interpretation": "Nominal sequence completion and near-zero momentum residual verify execution/bookkeeping only. Time/iteration sensitivity and actual B-rep overlaps prevent contact-load, precision and dynamic clearance acceptance. Rigid bodies, ideal guide joints and unmeasured contact/actuation laws require further model development and physical correlation."
+}

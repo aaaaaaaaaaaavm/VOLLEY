@@ -1,0 +1,242 @@
+[
+  {
+    "size": "1U",
+    "sled_X_mm": 0,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 9.848857801796104,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 0,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_117.5"
+    ],
+    "minimum_distance_mm": 9.848857801796104,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 10,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 19.4164878389476,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 10,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_117.5"
+    ],
+    "minimum_distance_mm": 4.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 15,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 24.331050121192877,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 15,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_117.5"
+    ],
+    "minimum_distance_mm": 4.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 20,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 29.274562336608895,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 20,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_117.5"
+    ],
+    "minimum_distance_mm": 4.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 40,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 49.16299421312742,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 40,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_117.5"
+    ],
+    "minimum_distance_mm": 19.4164878389476,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 80,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 89.08984229416954,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "1U",
+    "sled_X_mm": 80,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_117.5"
+    ],
+    "minimum_distance_mm": 24.82438317461282,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 0,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 9.848857801796104,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 0,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_344.5"
+    ],
+    "minimum_distance_mm": 9.848857801796104,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 10,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 19.4164878389476,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 10,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_344.5"
+    ],
+    "minimum_distance_mm": 4.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 15,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 24.331050121192877,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 15,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_344.5"
+    ],
+    "minimum_distance_mm": 4.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 20,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 29.274562336608895,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 20,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_344.5"
+    ],
+    "minimum_distance_mm": 4.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 40,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 49.16299421312742,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 40,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_344.5"
+    ],
+    "minimum_distance_mm": 19.4164878389476,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 80,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_-8"
+    ],
+    "minimum_distance_mm": 89.08984229416954,
+    "intersection_mm3": 0.0
+  },
+  {
+    "size": "3U",
+    "sled_X_mm": 80,
+    "pair": [
+      "sled_entry_bar",
+      "cassette_L_344.5"
+    ],
+    "minimum_distance_mm": 59.135437767890075,
+    "intersection_mm3": 0.0
+  }
+]

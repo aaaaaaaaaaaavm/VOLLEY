@@ -1,0 +1,236 @@
+{
+  "revision": "FM-06",
+  "method": "Initial solid plus exact boundary-face translation prisms; relative motion; endpoint shape overlap establishes translation premise.",
+  "cases": [
+    {
+      "payload": "1U",
+      "phase": "gate_open",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 20,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_inserted",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "rear_takeup",
+      "rigid_translation_checked": true,
+      "relative_pairs": 22,
+      "exact_prism_tests": 85,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "transfer",
+      "rigid_translation_checked": true,
+      "relative_pairs": 34,
+      "exact_prism_tests": 130,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "receiver_unlocked",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 27,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "receiver_closed",
+      "rigid_translation_checked": true,
+      "relative_pairs": 3,
+      "exact_prism_tests": 29,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_captured",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 27,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_open",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 10,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_home",
+      "rigid_translation_checked": true,
+      "relative_pairs": 33,
+      "exact_prism_tests": 113,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "bolt_withdrawn",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 5,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "cell_closed",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 20,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "fork_reset",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 6,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_translation",
+      "rigid_translation_checked": true,
+      "relative_pairs": 4,
+      "exact_prism_tests": 16,
+      "penetrations": []
+    },
+    {
+      "payload": "1U",
+      "phase": "sled_return",
+      "rigid_translation_checked": true,
+      "relative_pairs": 4,
+      "exact_prism_tests": 16,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "gate_open",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 20,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_inserted",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "rear_takeup",
+      "rigid_translation_checked": true,
+      "relative_pairs": 22,
+      "exact_prism_tests": 85,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "transfer",
+      "rigid_translation_checked": true,
+      "relative_pairs": 34,
+      "exact_prism_tests": 130,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "receiver_unlocked",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 27,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "receiver_closed",
+      "rigid_translation_checked": true,
+      "relative_pairs": 3,
+      "exact_prism_tests": 29,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_captured",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 27,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_open",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 10,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_home",
+      "rigid_translation_checked": true,
+      "relative_pairs": 33,
+      "exact_prism_tests": 113,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "bolt_withdrawn",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 5,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "cell_closed",
+      "rigid_translation_checked": true,
+      "relative_pairs": 6,
+      "exact_prism_tests": 20,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "fork_reset",
+      "rigid_translation_checked": true,
+      "relative_pairs": 2,
+      "exact_prism_tests": 6,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_translation",
+      "rigid_translation_checked": true,
+      "relative_pairs": 4,
+      "exact_prism_tests": 16,
+      "penetrations": []
+    },
+    {
+      "payload": "3U",
+      "phase": "sled_return",
+      "rigid_translation_checked": true,
+      "relative_pairs": 4,
+      "exact_prism_tests": 16,
+      "penetrations": []
+    }
+  ],
+  "total_penetrations": 0,
+  "source_sha256": {
+    "mechanism.py": "c5213575d345a79bddf1a37246ced5b6d5ef68ec4894693aadb54fa41186d6fb",
+    "check_sweeps.py": "234ab21bb86ad8acaa024aa052b8c0ef95a2da44a8472c3a7be797eb361da7d0"
+  },
+  "boundary": "Nominal prescribed rigid translations only. FreeCAD/OCC numerical thresholds are not a manufacturing clearance. No actual joint constraint, force, tolerance, flex, wear or reliability proof."
+}

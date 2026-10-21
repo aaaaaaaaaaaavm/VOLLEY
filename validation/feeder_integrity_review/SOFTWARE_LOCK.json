@@ -1,0 +1,10 @@
+{
+  "native_CAD": "FreeCAD1.0.0/OpenCascade7.8.1",
+  "independent_exchange": "CadQuery2.8.0/OpenCascade7.9",
+  "mesh": "Gmsh4.14.1",
+  "linear_static": "CalculiX2.23",
+  "rigid_contact": "ProjectChrono10.0.0;Eigen3.4.0;GCC14.2;NSC/PSOR/Bullet",
+  "render": "Blender4.3.2Workbench",
+  "plots": "Python3.12.14/NumPy2.3.5/Matplotlib3.10.8",
+  "boundary": "No physical test, hardware validation, provider approval or external technical review."
+}

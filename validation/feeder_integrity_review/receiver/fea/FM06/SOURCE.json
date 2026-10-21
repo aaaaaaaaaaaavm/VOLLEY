@@ -1,0 +1,18 @@
+[
+  {
+    "size": "1U",
+    "source_sha256": "c5213575d345a79bddf1a37246ced5b6d5ef68ec4894693aadb54fa41186d6fb",
+    "file": "1U_sled_entry_bar.step",
+    "sha256": "085424aaace6df57b4b42ef974b9537a757bb094956a8784a9f3b58cc0031aa6",
+    "state": "Receiver closed; receiver=0,payload_feed=200",
+    "volume_mm3": 15908.304448019257
+  },
+  {
+    "size": "3U",
+    "source_sha256": "c5213575d345a79bddf1a37246ced5b6d5ef68ec4894693aadb54fa41186d6fb",
+    "file": "3U_sled_entry_bar.step",
+    "sha256": "55897ea499e13a3c13839f02ed9bd8c47796675c9a0f21ca8d1049ec612b07af",
+    "state": "Receiver closed; receiver=0,payload_feed=200",
+    "volume_mm3": 20448.30444801926
+  }
+]

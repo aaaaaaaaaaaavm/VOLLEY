@@ -1,0 +1,186 @@
+{
+  "software": "CadQuery2.8.0/OpenCascade7.9",
+  "cases": [
+    {
+      "file": "FM06_1U_stored.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701572926
+    },
+    {
+      "file": "FM06_1U_gate_open.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701572828
+    },
+    {
+      "file": "FM06_1U_bolt_inserted.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701572819
+    },
+    {
+      "file": "FM06_1U_rear_takeup.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701572823
+    },
+    {
+      "file": "FM06_1U_transfer.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701570418
+    },
+    {
+      "file": "FM06_1U_receiver_unlocked.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701570418
+    },
+    {
+      "file": "FM06_1U_receiver_closed.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701570418
+    },
+    {
+      "file": "FM06_1U_sled_captured.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701570416
+    },
+    {
+      "file": "FM06_1U_fork_open.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701570407
+    },
+    {
+      "file": "FM06_1U_fork_home.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701570416
+    },
+    {
+      "file": "FM06_1U_bolt_withdrawn.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.370157043
+    },
+    {
+      "file": "FM06_1U_cell_closed.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701570518
+    },
+    {
+      "file": "FM06_1U_fork_reset.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.370157052
+    },
+    {
+      "file": "FM06_1U_sled_translation.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.3701570455
+    },
+    {
+      "file": "FM06_1U_sled_return.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 2051233.370157052
+    },
+    {
+      "file": "FM06_3U_stored.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191533274
+    },
+    {
+      "file": "FM06_3U_gate_open.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191533228
+    },
+    {
+      "file": "FM06_3U_bolt_inserted.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191533226
+    },
+    {
+      "file": "FM06_3U_rear_takeup.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191533215
+    },
+    {
+      "file": "FM06_3U_transfer.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532504
+    },
+    {
+      "file": "FM06_3U_receiver_unlocked.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532507
+    },
+    {
+      "file": "FM06_3U_receiver_closed.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532513
+    },
+    {
+      "file": "FM06_3U_sled_captured.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.19153251
+    },
+    {
+      "file": "FM06_3U_fork_open.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532507
+    },
+    {
+      "file": "FM06_3U_fork_home.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532506
+    },
+    {
+      "file": "FM06_3U_bolt_withdrawn.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532508
+    },
+    {
+      "file": "FM06_3U_cell_closed.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532531
+    },
+    {
+      "file": "FM06_3U_fork_reset.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532533
+    },
+    {
+      "file": "FM06_3U_sled_translation.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532521
+    },
+    {
+      "file": "FM06_3U_sled_return.step",
+      "valid": true,
+      "solids": 35,
+      "volume_mm3": 4998283.191532533
+    }
+  ],
+  "boundary": "Independent exchange topology readback; not a tolerance, material or operational certification."
+}

@@ -1,0 +1,20 @@
+{
+  "1U": {
+    "baseline_case": "1U_receiver_h1/one_dog",
+    "revised_case": "1U_receiver_h1.6/one_dog",
+    "baseline_max_Y_mm": 1.998713,
+    "revised_max_Y_mm": 0.07342949,
+    "baseline_mean_face_mm": 1.6883883967124247,
+    "revised_mean_face_mm": 0.05980241780818853,
+    "mean_fixture_displacement_reduction_fraction": 0.9645801772124033
+  },
+  "3U": {
+    "baseline_case": "3U_receiver_h1/one_dog",
+    "revised_case": "3U_receiver_h1.6/one_dog",
+    "baseline_max_Y_mm": 2.202304,
+    "revised_max_Y_mm": 0.07363168,
+    "baseline_mean_face_mm": 1.882916184243235,
+    "revised_mean_face_mm": 0.05997694094281843,
+    "mean_fixture_displacement_reduction_fraction": 0.9681467813359288
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "changes": [
+    {
+      "path": "contact/feeder_surface.cpp",
+      "captured": "contact/captured/feeder_surface.cpp",
+      "original_sha256": "3ed3ab5c14bdc7e497a516bcaabf05f4ad35972b1716a201728af6b115bfe291",
+      "portable_sha256": "cc8721b76dba377e2f419a5a39aa274b1cda21d1fe948d8dc6922d5517994ee2",
+      "change": "clang-format19.1.7; complete non-whitespace/non-comment token stream checked equal with C++ lexer"
+    },
+    {
+      "path": "contact/CMakeLists.txt",
+      "captured": "contact/captured/CMakeLists.txt",
+      "change": "Removed unrelated diagnostic hybrid target whose source is outside this reviewed campaign. The feeder_surface target and compiler/link requirements are unchanged."
+    },
+    {
+      "path": "tine/run.py",
+      "captured": "tine/captured/run.py",
+      "change": "Resolve Gmsh from the active Python environment and CalculiX from CCX/PATH; native geometry, mesh, loads, supports and result parsing unchanged."
+    },
+    {
+      "path": "check_rocking_geometry.py",
+      "captured": "captured/check_rocking_geometry.py",
+      "change": "Resolve supplied historical FM03 source within the independent package."
+    },
+    {
+      "path": "receiver/plot_review.py",
+      "captured": "receiver/captured/plot_review.py",
+      "change": "Plot export directory resolves to package figures; numerical inputs and plot content unchanged."
+    },
+    {
+      "path": "plot_loads.py",
+      "source_sha256": "c0de11f7a9421056448c2bdbdb5600251e162d4a3329ed6d120a5eea7970889e",
+      "change": "Extracted the tine/guide-play figure sections and changed the local tine input path; the unrelated FM04 STEP storyboard is omitted."
+    }
+  ],
+  "boundary": "Captured native results correspond to the original executed sources. Portable wrappers and a token-equivalent readable C++ source are separately identified; no regenerated result replaces a capture."
+}

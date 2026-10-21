@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.18)
+project(volley_feeder_surface LANGUAGES CXX)
+find_package(Chrono CONFIG REQUIRED)
+add_executable(feeder_surface feeder_surface.cpp)
+target_compile_features(feeder_surface PRIVATE cxx_std_17)
+target_link_libraries(feeder_surface PRIVATE ${CHRONO_TARGETS})
+
+add_executable(feeder_hybrid feeder_hybrid.cpp)
+target_compile_features(feeder_hybrid PRIVATE cxx_std_17)
+target_link_libraries(feeder_hybrid PRIVATE ${CHRONO_TARGETS})

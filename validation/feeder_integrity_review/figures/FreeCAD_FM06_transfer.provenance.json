@@ -1,0 +1,9 @@
+{
+  "evidence_class": "Genuine FreeCAD Qt/Coin application-window capture",
+  "source": "cad/FM06_3U_transfer.FCStd",
+  "source_sha256": "8235d319891519ce75ad7d72f1a3442f8af01839c4442f4532fce5057e4368a1",
+  "image": "figures/FreeCAD_FM06_transfer.png",
+  "image_sha256": "371580d627a6cc5df91841585d87c0d2890ad3b02f3498cc78b39abd10644cfc",
+  "software": "1.0.0",
+  "boundary": "Nominal displayed geometry; material colours are display conventions. No loads, contact, qualification or manufacture proof."
+}
