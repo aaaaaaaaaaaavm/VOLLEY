@@ -1,0 +1,7 @@
+{
+  "native_contact": "Project Chrono 10.0.0 / Bullet / PSOR",
+  "CAD": "FreeCAD 1.0 / OpenCascade 7.8.1 / system Python 3.13",
+  "analysis": "Python 3.12.14 / NumPy 2.3.5 / Matplotlib 3.10.8",
+  "C++": "C++17; clang-format 19.1.7 readable edition; exact executed source retained",
+  "report": "ReportLab 4.4.9; PDF values derive from RESULTS.json"
+}

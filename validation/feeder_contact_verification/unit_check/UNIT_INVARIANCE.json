@@ -1,0 +1,58 @@
+{
+  "cases": [
+    {
+      "exe": "feeder_guarded",
+      "exit": 11,
+      "command": [
+        "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/build/feeder_guarded",
+        "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/geometry_guarded/3U",
+        "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/unit_check/feeder_guarded.csv",
+        "4",
+        ".1",
+        "0",
+        "0",
+        ".0005",
+        "100",
+        "5",
+        "0",
+        "2000",
+        "10",
+        "no_contact",
+        ".1"
+      ]
+    },
+    {
+      "exe": "feeder_mm",
+      "exit": 11,
+      "command": [
+        "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/build/feeder_mm",
+        "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/geometry_guarded/3U",
+        "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/unit_check/feeder_mm.csv",
+        "4",
+        ".1",
+        "0",
+        "0",
+        ".0005",
+        "100",
+        "5",
+        "0",
+        "2000",
+        "10",
+        "no_contact",
+        ".1"
+      ]
+    }
+  ],
+  "samples": 1100,
+  "maximum_SI_differences": {
+    "fork_m": 1.0000247158137299e-14,
+    "fork_v_m_s": 1.0000333894311098e-13,
+    "payload_x_m": 0.0,
+    "payload_y_m": 0.0,
+    "payload_z_m": 0.0,
+    "feed_force_N": 2.7000013336220263e-11,
+    "front_force_N": 8.895031636495481e-12,
+    "receiver_force_N": 0.0
+  },
+  "boundary": "No-contact controller and kinematic units invariance, not contact acceptance."
+}

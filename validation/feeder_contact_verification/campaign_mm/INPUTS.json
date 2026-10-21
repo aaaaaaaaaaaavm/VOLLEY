@@ -1,0 +1,156 @@
+{
+  "revision": "FCE12",
+  "UTC": "2026-10-21T11:26:29.063452+00:00",
+  "CAD": "FM06-R1 unchanged",
+  "representation": "Nine disjoint convex payload support meshes (no hull simplification) plus exact rectilinear collision-domain boxes with12mm X-guard to include the actual cassette guide walls per size. Full CAD mass/inertia retained. Only payload/mechanism contact active; full-state1ms40rad/s ideal PD/prismatic guides,100/20/50/5N assumed drive caps.",
+  "internal_units": {
+    "length": "mm",
+    "mass": "kg",
+    "time": "s",
+    "force": "mN",
+    "output": "SI"
+  },
+  "envelope_m": 5e-06,
+  "safe_margin_m": 0,
+  "protocol_sha256": "9d8bc1a97df4c50e526254dc5981bd5dd4b94da832a4967ede9e96c58758c096",
+  "source_sha256": "d09cf1917cc5033432fd08f0695ff0f843653057da329293b777b898f244a173",
+  "executable_sha256": "b7ba71092692a87185e087bb372631c24384cb6806bd14853a694ed3d4ab0104",
+  "partitions_sha256": {
+    "PAYLOAD_PARTITION.json": "4aaa3ed7aeea397de64c76f5e0faf2a85772816531548339489b371f9649db00",
+    "MECHANISM_PARTITION.json": "95529b38bcde7c779401876d5760ee27d77acd389cffa811079170b5f5b21667"
+  },
+  "cases": [
+    {
+      "size": "1U",
+      "mass_kg": 1.33,
+      "dt_s": 0.0005,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "time_refinement",
+      "case_id": "FCE12-01"
+    },
+    {
+      "size": "1U",
+      "mass_kg": 1.33,
+      "dt_s": 0.00025,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "time_refinement",
+      "case_id": "FCE12-02"
+    },
+    {
+      "size": "1U",
+      "mass_kg": 1.33,
+      "dt_s": 0.000125,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "time_refinement",
+      "case_id": "FCE12-03"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "time_refinement",
+      "case_id": "FCE12-04"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.00025,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "time_refinement",
+      "case_id": "FCE12-05"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.000125,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "time_refinement",
+      "case_id": "FCE12-06"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.00025,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 4000,
+      "mode": "none",
+      "label": "iteration_refinement",
+      "case_id": "FCE12-07"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "mu": 0,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "friction_sensitivity",
+      "case_id": "FCE12-08"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "mu": 0.3,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "friction_sensitivity",
+      "case_id": "FCE12-09"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 6.0,
+      "dt_s": 0.0005,
+      "mu": 0.1,
+      "g": 9.80665,
+      "iterations": 2000,
+      "mode": "none",
+      "label": "rigid_ground_adverse_mass",
+      "case_id": "FCE12-10"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "jam",
+      "label": "deliberate_jam",
+      "case_id": "FCE12-11"
+    },
+    {
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "mode": "stuck_pin",
+      "label": "deliberate_stuck_pin",
+      "case_id": "FCE12-12"
+    }
+  ]
+}

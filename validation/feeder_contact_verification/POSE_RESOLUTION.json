@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "case_id": "FCE12-04",
+      "time_s": 2.0,
+      "delta_mm": [
+        0,
+        0.001,
+        0
+      ],
+      "maximum_remaining_pair_volume_mm3": 0.0,
+      "original_positive_pairs": [
+        {
+          "component": "fork_body",
+          "intersection_mm3": 0.00012378415876624488,
+          "intersection_bounds_mm": [
+            24.999999999635524,
+            -189.97737743290264,
+            24.000000000003336,
+            32.99999999963565,
+            -189.97737435191306,
+            29.500000000003503
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "FCE12-04",
+      "time_s": 12.0,
+      "delta_mm": [
+        0,
+        0.001,
+        0
+      ],
+      "maximum_remaining_pair_volume_mm3": 0.0,
+      "original_positive_pairs": [
+        {
+          "component": "fork_body",
+          "intersection_mm3": 1.0914556890420772e-05,
+          "intersection_bounds_mm": [
+            314.4155811300161,
+            -3.745273074876301e-05,
+            119.17701266924514,
+            315.4999999996338,
+            -7.601163913604483e-06,
+            121.20000000000577
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Full actual geometry at residual sampled states; a1umYtranslation removes all checked positive pairs. Actual raw poses remain unchanged in the primary audit. This bounds these residual sampled contacts only; it is not a continuous clearance certificate or a tolerance margin."
+}

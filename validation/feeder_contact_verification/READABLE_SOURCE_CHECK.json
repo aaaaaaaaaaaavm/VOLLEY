@@ -1,0 +1,14 @@
+{
+  "native_build": "CMake / Project Chrono 10.0.0",
+  "controls": [
+    {
+      "size": "1U",
+      "bit_identical_csv": true
+    },
+    {
+      "size": "3U",
+      "bit_identical_csv": true
+    }
+  ],
+  "scope": "Formatted source compiled and both seven-control planar calibration CSV outputs are byte-identical to the captured source outputs."
+}

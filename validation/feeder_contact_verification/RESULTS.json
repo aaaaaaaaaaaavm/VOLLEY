@@ -1,0 +1,376 @@
+{
+  "revision": "FCE12",
+  "cases": [
+    {
+      "case_id": "FCE12-01",
+      "size": "1U",
+      "mass_kg": 1.33,
+      "dt_s": 0.0005,
+      "label": "time_refinement",
+      "exit_code": 0,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        56.695120813,
+        48.940401501500006,
+        72.84089822429999
+      ],
+      "positive_motor_work_J": 1.91995667132163,
+      "peak_resultant_contact_N": 8.85117949127043,
+      "peak_pair_contact_N": 12.3207282386153,
+      "minimum_reported_contact_um": -0.253911130130291
+    },
+    {
+      "case_id": "FCE12-02",
+      "size": "1U",
+      "mass_kg": 1.33,
+      "dt_s": 0.00025,
+      "label": "time_refinement",
+      "exit_code": 0,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        56.7817237829,
+        50.0127378874,
+        73.3709260135
+      ],
+      "positive_motor_work_J": 1.9199629768504,
+      "peak_resultant_contact_N": 17.6791286648904,
+      "peak_pair_contact_N": 118.902802940062,
+      "minimum_reported_contact_um": -0.608675181865692
+    },
+    {
+      "case_id": "FCE12-03",
+      "size": "1U",
+      "mass_kg": 1.33,
+      "dt_s": 0.000125,
+      "label": "time_refinement",
+      "exit_code": 0,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        55.3589886217,
+        49.6463038077,
+        73.0283229358
+      ],
+      "positive_motor_work_J": 1.9199576719501,
+      "peak_resultant_contact_N": 32.8458058206062,
+      "peak_pair_contact_N": 196.706478514673,
+      "minimum_reported_contact_um": -0.383606180548668
+    },
+    {
+      "case_id": "FCE12-04",
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "label": "time_refinement",
+      "exit_code": 0,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        170.18868880099998,
+        49.6238907594,
+        73.78566059789999
+      ],
+      "positive_motor_work_J": 1.92209341930573,
+      "peak_resultant_contact_N": 3.84359884442867,
+      "peak_pair_contact_N": 19.0826099064743,
+      "minimum_reported_contact_um": -0.833740457892418
+    },
+    {
+      "case_id": "FCE12-05",
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.00025,
+      "label": "time_refinement",
+      "exit_code": 0,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        170.50448414,
+        49.9258755519,
+        73.5070086354
+      ],
+      "positive_motor_work_J": 1.92229499227304,
+      "peak_resultant_contact_N": 28.8152211485727,
+      "peak_pair_contact_N": 472.930400088351,
+      "minimum_reported_contact_um": -0.40649436414241796
+    },
+    {
+      "case_id": "FCE12-06",
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.000125,
+      "label": "time_refinement",
+      "exit_code": 0,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        171.146987542,
+        50.6791730613,
+        72.4253414298
+      ],
+      "positive_motor_work_J": 1.92253898352089,
+      "peak_resultant_contact_N": 73.1020632632818,
+      "peak_pair_contact_N": 266.019514198146,
+      "minimum_reported_contact_um": -1.52915809303522
+    },
+    {
+      "case_id": "FCE12-07",
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.00025,
+      "label": "iteration_refinement",
+      "exit_code": 0,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 4000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        169.685081962,
+        49.9549054851,
+        73.3893086986
+      ],
+      "positive_motor_work_J": 1.92238359797824,
+      "peak_resultant_contact_N": 69.5797064399448,
+      "peak_pair_contact_N": 102.043428955324,
+      "minimum_reported_contact_um": -0.955810770392418
+    },
+    {
+      "case_id": "FCE12-08",
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "label": "friction_sensitivity",
+      "exit_code": 0,
+      "mu": 0,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        170.50552560900002,
+        49.504867596900006,
+        73.0176275045
+      ],
+      "positive_motor_work_J": 1.92388965172824,
+      "peak_resultant_contact_N": 920.179747229746,
+      "peak_pair_contact_N": 2872.13634472343,
+      "minimum_reported_contact_um": -172.31728695333
+    },
+    {
+      "case_id": "FCE12-09",
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "label": "friction_sensitivity",
+      "exit_code": 0,
+      "mu": 0.3,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        169.518428519,
+        49.8102848883,
+        73.2515418055
+      ],
+      "positive_motor_work_J": 1.92241965006558,
+      "peak_resultant_contact_N": 817.144160822067,
+      "peak_pair_contact_N": 29035.912974521,
+      "minimum_reported_contact_um": -73.70971702039239
+    },
+    {
+      "case_id": "FCE12-10",
+      "size": "3U",
+      "mass_kg": 6.0,
+      "dt_s": 0.0005,
+      "label": "rigid_ground_adverse_mass",
+      "exit_code": 0,
+      "mu": 0.1,
+      "g": 9.80665,
+      "iterations": 2000,
+      "last_csv_s": 26.5,
+      "final_COM_mm": [
+        169.99430186799998,
+        49.7721334158,
+        72.0000048398
+      ],
+      "positive_motor_work_J": 2.34258007906333,
+      "peak_resultant_contact_N": 699.503248327413,
+      "peak_pair_contact_N": 542.022469501485,
+      "minimum_reported_contact_um": -10.6337852776051
+    },
+    {
+      "case_id": "FCE12-11",
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "label": "deliberate_jam",
+      "exit_code": 11,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 10.99,
+      "final_COM_mm": [
+        170.24578414200002,
+        -101.500003171,
+        72.6578102224
+      ],
+      "positive_motor_work_J": 0.234517261302797,
+      "peak_resultant_contact_N": 143.795903892944,
+      "peak_pair_contact_N": 83.5438970715088,
+      "minimum_reported_contact_um": -0.833740457892418
+    },
+    {
+      "case_id": "FCE12-12",
+      "size": "3U",
+      "mass_kg": 4.0,
+      "dt_s": 0.0005,
+      "label": "deliberate_stuck_pin",
+      "exit_code": 11,
+      "mu": 0.1,
+      "g": 0,
+      "iterations": 2000,
+      "last_csv_s": 10.99,
+      "final_COM_mm": [
+        170.247412766,
+        50.0043984398,
+        72.6585391845
+      ],
+      "positive_motor_work_J": 0.961054123280383,
+      "peak_resultant_contact_N": 3.84359884442867,
+      "peak_pair_contact_N": 19.0826099064743,
+      "minimum_reported_contact_um": -0.833740457892418
+    }
+  ],
+  "convergence": [
+    {
+      "size": "1U",
+      "last_step_COM_difference_mm": 1.5085841516235958,
+      "last_step_orientation_difference_deg": 0.6396783998646962,
+      "last_step_work_relative_difference": 2.763029819607965e-06,
+      "COM_target_pass": false,
+      "orientation_target_pass": false
+    },
+    {
+      "size": "3U",
+      "last_step_COM_difference_mm": 1.4663804768614168,
+      "last_step_orientation_difference_deg": 0.23230265009421003,
+      "last_step_work_relative_difference": 0.00012691094950034731,
+      "COM_target_pass": false,
+      "orientation_target_pass": false
+    }
+  ],
+  "calibration": [
+    {
+      "size": "1U",
+      "internal_length": "m",
+      "maximum_detected_gap_error_um": 178.390698943986,
+      "missed_negative_gap_m": [
+        -1e-05
+      ],
+      "false_negative_gap_control": true
+    },
+    {
+      "size": "1U",
+      "internal_length": "mm",
+      "maximum_detected_gap_error_um": 0.0042726844549165295,
+      "missed_negative_gap_m": [],
+      "false_negative_gap_control": false
+    },
+    {
+      "size": "3U",
+      "internal_length": "m",
+      "maximum_detected_gap_error_um": 178.54122395510802,
+      "missed_negative_gap_m": [
+        -1e-05
+      ],
+      "false_negative_gap_control": true
+    },
+    {
+      "size": "3U",
+      "internal_length": "mm",
+      "maximum_detected_gap_error_um": 0.0042726844549165295,
+      "missed_negative_gap_m": [],
+      "false_negative_gap_control": false
+    }
+  ],
+  "geometry_audit": {
+    "cases": 7,
+    "sampled_poses": 84,
+    "positive_poses": 2,
+    "maximum_pair_intersection_mm3": 0.00012378415876624488,
+    "residual_resolution": {
+      "checks": [
+        {
+          "case_id": "FCE12-04",
+          "time_s": 2.0,
+          "delta_mm": [
+            0,
+            0.001,
+            0
+          ],
+          "maximum_remaining_pair_volume_mm3": 0.0,
+          "original_positive_pairs": [
+            {
+              "component": "fork_body",
+              "intersection_mm3": 0.00012378415876624488,
+              "intersection_bounds_mm": [
+                24.999999999635524,
+                -189.97737743290264,
+                24.000000000003336,
+                32.99999999963565,
+                -189.97737435191306,
+                29.500000000003503
+              ]
+            }
+          ]
+        },
+        {
+          "case_id": "FCE12-04",
+          "time_s": 12.0,
+          "delta_mm": [
+            0,
+            0.001,
+            0
+          ],
+          "maximum_remaining_pair_volume_mm3": 0.0,
+          "original_positive_pairs": [
+            {
+              "component": "fork_body",
+              "intersection_mm3": 1.0914556890420772e-05,
+              "intersection_bounds_mm": [
+                314.4155811300161,
+                -3.745273074876301e-05,
+                119.17701266924514,
+                315.4999999996338,
+                -7.601163913604483e-06,
+                121.20000000000577
+              ]
+            }
+          ]
+        }
+      ],
+      "scope": "Full actual geometry at residual sampled states; a1umYtranslation removes all checked positive pairs. Actual raw poses remain unchanged in the primary audit. This bounds these residual sampled contacts only; it is not a continuous clearance certificate or a tolerance margin."
+    }
+  },
+  "acceptance": {
+    "analytical_planar_gap_controls": "pass for millimetre internal coordinates, SI output; largest checked error below5nm",
+    "discrete_geometric_resolution": "all84sampled poses are nonintersecting or within a verified1um nonintersecting pose; not continuous loaded clearance",
+    "final_pose_refinement": "not established under provisional50um/0.05deg screen",
+    "contact_force_rating": "not established; rigid NSC contact peaks remain timestep dependent",
+    "complete_feeder": "not established; full release/reset, actual actuation and installed architecture remain separate"
+  },
+  "scope": "Gate-already-open transfer/capture/withdraw subcycle with ideal joints and state feedback; unchanged FM06-R1 material geometry and assumed contact/actuator parameters. No physical correlation."
+}

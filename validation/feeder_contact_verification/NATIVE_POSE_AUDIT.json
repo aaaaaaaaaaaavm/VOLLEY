@@ -1,0 +1,507 @@
+{
+  "cases": [
+    {
+      "case_id": "FCE12-01",
+      "size": "1U",
+      "dt_s": 0.0005,
+      "source_csv_sha256": "1b09429e18fe57eb0b3ed3f35899aa10b701abdc4278cf4f82abb68232e6f359",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 2.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 4.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 6.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 8.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 10.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 11.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 14.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 20.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 26.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        }
+      ]
+    },
+    {
+      "case_id": "FCE12-02",
+      "size": "1U",
+      "dt_s": 0.00025,
+      "source_csv_sha256": "6c4098665979cb1c81b90a775bf288ce1c82820353fc437aadb1fd2e9f4cc50c",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 2.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 4.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 6.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 8.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 10.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 11.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 14.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 20.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 26.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        }
+      ]
+    },
+    {
+      "case_id": "FCE12-03",
+      "size": "1U",
+      "dt_s": 0.000125,
+      "source_csv_sha256": "a4791c61aae05bd7a081331270ed4e52659cd17e18293ea7dcb7aba0c45a2e11",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 2.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 4.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 6.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 8.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 10.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 11.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 14.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 20.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 26.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        }
+      ]
+    },
+    {
+      "case_id": "FCE12-04",
+      "size": "3U",
+      "dt_s": 0.0005,
+      "source_csv_sha256": "737470d3b21f04a44198765892ec567d957e66e5b04894a3387763d6fa97c386",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 2.0,
+          "positive_pairs": [
+            {
+              "component": "fork_body",
+              "intersection_mm3": 0.00012378415876624488,
+              "intersection_bounds_mm": [
+                24.999999999635524,
+                -189.97737743290264,
+                24.000000000003336,
+                32.99999999963565,
+                -189.97737435191306,
+                29.500000000003503
+              ]
+            }
+          ],
+          "total_intersection_mm3": 0.00012378415876624488
+        },
+        {
+          "time_s": 4.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 6.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 8.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 10.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 11.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.0,
+          "positive_pairs": [
+            {
+              "component": "fork_body",
+              "intersection_mm3": 1.0914556890420772e-05,
+              "intersection_bounds_mm": [
+                314.4155811300161,
+                -3.745273074876301e-05,
+                119.17701266924514,
+                315.4999999996338,
+                -7.601163913604483e-06,
+                121.20000000000577
+              ]
+            }
+          ],
+          "total_intersection_mm3": 1.0914556890420772e-05
+        },
+        {
+          "time_s": 12.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 14.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 20.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 26.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        }
+      ]
+    },
+    {
+      "case_id": "FCE12-05",
+      "size": "3U",
+      "dt_s": 0.00025,
+      "source_csv_sha256": "ea5786fb9b333add5340c19a140bd779a1396f7a209197ae13af17e84a7cb07b",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 2.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 4.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 6.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 8.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 10.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 11.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 14.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 20.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 26.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        }
+      ]
+    },
+    {
+      "case_id": "FCE12-06",
+      "size": "3U",
+      "dt_s": 0.000125,
+      "source_csv_sha256": "664fbc654e22069ac8d51fd9f4a4ac15a9f6ffdb79907a941a12240b3fb93849",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 2.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 4.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 6.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 8.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 10.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 11.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 14.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 20.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 26.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        }
+      ]
+    },
+    {
+      "case_id": "FCE12-07",
+      "size": "3U",
+      "dt_s": 0.00025,
+      "source_csv_sha256": "c9ae48e368aa0841c5eb1e86b2fb17597a0ca7d91affe3c7cdcd11dc9e7541a9",
+      "checks": [
+        {
+          "time_s": 0.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 2.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 4.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 6.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 8.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 10.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 11.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 12.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 14.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 20.0,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        },
+        {
+          "time_s": 26.5,
+          "positive_pairs": [],
+          "total_intersection_mm3": 0
+        }
+      ]
+    }
+  ],
+  "scope": "Twelve targeted times per completed nominal/refinement trace, original full native solids. Ideal-joint orientation/position reconstruction for auxiliary bodies is declared. Discrete evidence; not continuous nonpenetration or hardware tolerance acceptance."
+}
