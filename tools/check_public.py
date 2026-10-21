@@ -224,7 +224,7 @@ def main():
             if int(m.group(1)) != v['run_sheet_files']:
                 problems.append(f"{rel}: says {m.group(1)} run sheets, current is "
                                 f"{v['run_sheet_files']} files (counted in validation/)")
-        for m in re.finditer(r'(\d{2,3}) analyses', text):
+        for m in re.finditer(r'(?<![\w-])(\d{2,3}) analyses', text):
             if int(m.group(1)) != v['run_sheet_distinct']:
                 problems.append(f"{rel}: says {m.group(1)} analyses, current is "
                                 f"{v['run_sheet_distinct']} distinct A-numbers")
