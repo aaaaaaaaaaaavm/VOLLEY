@@ -1,0 +1,99 @@
+{
+  "revision": "FDR-08-2026-10-19",
+  "status": "COMPUTATIONAL_CANDIDATE_DESIGN_REVIEW_NOT_HARDWARE_RELEASE",
+  "payloads": [
+    {
+      "class": "1U",
+      "length_mm": 113.5,
+      "width_mm": 100,
+      "height_mm": 100,
+      "nominal_kg": 1.33,
+      "upper_study_kg": 2
+    },
+    {
+      "class": "3U",
+      "length_mm": 340.5,
+      "width_mm": 100,
+      "height_mm": 100,
+      "nominal_kg": 4,
+      "upper_study_kg": 6
+    }
+  ],
+  "stroke_mm": 200,
+  "transfer_duration_s": [
+    2,
+    5,
+    10
+  ],
+  "resistance_N": [
+    5,
+    20,
+    50
+  ],
+  "moving_drive_allowance_kg": [
+    0,
+    0.5,
+    1.5
+  ],
+  "launch_load_g": [
+    5,
+    10,
+    25
+  ],
+  "side_clearance_mm": 2,
+  "manufacturing_each_mm": 0.15,
+  "alignment_deg": [
+    0.1,
+    0.5
+  ],
+  "temperature_C": [
+    -40,
+    20,
+    80
+  ],
+  "reference_temperature_C": 20,
+  "aluminium_cte_K": 2.3e-05,
+  "steel_cte_K": 1.2e-05,
+  "pawl_pitch_mm": 2,
+  "power_loss_response_s": [
+    0.005,
+    0.02,
+    0.05
+  ],
+  "arrest_compliance_mm": [
+    0.2,
+    0.5,
+    1
+  ],
+  "screw_lead_mm": 2,
+  "screw_mean_diameter_mm": 8,
+  "thread_friction": [
+    0.03,
+    0.08,
+    0.15
+  ],
+  "spring_k_N_m": 86.4,
+  "spring_end_force_N": 15,
+  "spring_wire_diameter_mm": 1.2,
+  "spring_mean_diameter_mm": 20,
+  "spring_active_turns": 30,
+  "spring_shear_modulus_Pa": 80000000000,
+  "pantograph_stages": 3,
+  "pantograph_theta_min_deg": 10,
+  "pantograph_theta_max_deg": 70,
+  "telescopic_stages": 3,
+  "weights": {
+    "safety": 0.35,
+    "packaging_mass": 0.25,
+    "position": 0.2,
+    "cycle_power": 0.1,
+    "manufacture": 0.1
+  },
+  "limits_not_supplied": [
+    "Actual payload ICD/contact approval",
+    "Provider environment/host envelope",
+    "Purchased actuator and sensor ratings",
+    "Measured friction, wear, latch response, spring damping and contact law",
+    "Complete launcher field/thermal/arrest interface"
+  ]
+}

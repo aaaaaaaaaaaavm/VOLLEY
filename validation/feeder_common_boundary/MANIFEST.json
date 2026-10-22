@@ -1,0 +1,306 @@
+{
+  "study": "FDR09 common-boundary development findings",
+  "source_capture": "SOURCE_CAPTURE.json",
+  "files": {
+    "INDEPENDENT_STEP.json": {
+      "bytes": 4257,
+      "sha256": "47ede3e3c35588c3cdad2c9809c61baa929b0117c7e221131289c3f12bf0b62d"
+    },
+    "README.md": {
+      "bytes": 2093,
+      "sha256": "f80d4af661fc262954230a4eebfd39f01bd1cbf0be3b3dfc5308af449352d0a7"
+    },
+    "SOURCE_CAPTURE.json": {
+      "bytes": 1717,
+      "sha256": "668594061011485752e1a8a4786224ac0e02773eae2c1c3ba3a9f9377e8ee093"
+    },
+    "actuator_screen.py": {
+      "bytes": 13895,
+      "sha256": "2e9d6ec5ce89a05ce7664039f4ed1f8ff28d1b1065a524e4056b544198ed3e37"
+    },
+    "assemble_evidence.py": {
+      "bytes": 13496,
+      "sha256": "5ecdf23e280652c41521bd503f41b45f9576373078af7f50d5218e9c90b791fe"
+    },
+    "build_comparison.py": {
+      "bytes": 21712,
+      "sha256": "772311cc575c7e0eb690d3212d1091206cdbab6471195ca009e1259d6f5622a7"
+    },
+    "build_lead_trim_R2.py": {
+      "bytes": 5530,
+      "sha256": "b2d29336a894eeebb80209adbf7872373dcebc9e8585942fd7fa7eba9971857f"
+    },
+    "check_capture.py": {
+      "bytes": 1004,
+      "sha256": "6df431131e462a2e3f4467ed26552f53973b0c1aa3b190e482098ac6b20a52e7"
+    },
+    "check_full_rail.py": {
+      "bytes": 4822,
+      "sha256": "f669d587bad54bc56719038af2215a84a53145e8f92555bc02d514e6412680c6"
+    },
+    "check_insert_interface.py": {
+      "bytes": 3414,
+      "sha256": "6e033fdd74257e47e9c94644982f99aacbb686f847c717e66e8793f6fa0d8a47"
+    },
+    "check_step_exchange.py": {
+      "bytes": 3760,
+      "sha256": "c588e1712f291c42e2514abb99eecf0c8da07fbaec8934fc988ebada813709aa"
+    },
+    "comparison_mass.pdf": {
+      "bytes": 20222,
+      "sha256": "769d6d2b32e2a95566058a38532d504b144960a22a33334d10912ad2f91aff01"
+    },
+    "comparison_mass.png": {
+      "bytes": 137802,
+      "sha256": "1977b8ab38ab48784c61554a5420e1a7afd29efd6fe50a18534177088f953d26"
+    },
+    "comparison_mass.svg": {
+      "bytes": 19797,
+      "sha256": "c73b37e0e27af7c59dc545bdf2076948140cb3363d0ddf7fd043801c533a5d7c"
+    },
+    "logs/actuator_screen.log": {
+      "bytes": 496,
+      "sha256": "d98d2ecf87df445642ccc6a4f8d696ed6d3c5968f82464f7003b39024c91cff9"
+    },
+    "logs/build_R1_belt_shuttle.log": {
+      "bytes": 89,
+      "sha256": "07d84d6a39aa9b8ad06bc4d42c210c8aab7f0bb671b849cd1707200672a37c6a"
+    },
+    "logs/build_R1_indexed_drum.log": {
+      "bytes": 88,
+      "sha256": "95b443627f01314f7b330772112b28c363154488a7e36c90ef451f4e45daa6d1"
+    },
+    "logs/build_R1_pantograph.log": {
+      "bytes": 85,
+      "sha256": "d2d801bfa24ed0c84b7c4bf966e560173255ff769bd32d69fb7b4ff4fcd82492"
+    },
+    "logs/build_R1_rack_pawl.log": {
+      "bytes": 83,
+      "sha256": "4ac7d61d1b357d3aa36c10341c54f6cbdb8d67b44ed01a24829b0db4f7564204"
+    },
+    "logs/build_R1_spring_dual_gate.log": {
+      "bytes": 96,
+      "sha256": "13127b834378d25c5fd416ef3f534d083973342ce785bb2dbf765b4a57949dc6"
+    },
+    "logs/build_R1_telescopic.log": {
+      "bytes": 85,
+      "sha256": "5eb8639b4ea81f725dc949d039169c65fd406fca184dd6e1e4f8e9a8058cd3ff"
+    },
+    "logs/build_carrier_R1.log": {
+      "bytes": 139,
+      "sha256": "0321db3ba486ca15c96989e530e95c0f53218bbea93420952d50c37c3d3c6cd4"
+    },
+    "logs/build_initial_step_threshold_failure.log": {
+      "bytes": 852,
+      "sha256": "565a5ddd3d8b528918974162ad1026a3d0286708c79bf5b76f121ad239d3ef31"
+    },
+    "logs/full_rail_sweep.log": {
+      "bytes": 254,
+      "sha256": "7663a0e2a44d7530788d4ba5fc2be5db93a5c0922ccf706e4a65d8286158fab7"
+    },
+    "logs/insert_interface.log": {
+      "bytes": 88,
+      "sha256": "5e9b409f5330970413476f4868e5bdca0d6e87241d343b461d0cec84fb9ba1b7"
+    },
+    "logs/lead_trim_R2.log": {
+      "bytes": 56,
+      "sha256": "051f789c634ea0af10ae5b9744de45b73799b47eb4d595b52814989bf68393aa"
+    },
+    "logs/step_exchange.log": {
+      "bytes": 256,
+      "sha256": "7ca208f6569f0513b7924cec3d7222068987edb1d838c220fe907b06aa253349"
+    },
+    "make_comparison_figure.py": {
+      "bytes": 1869,
+      "sha256": "27c18c68b35be02b7e3ac769f0d1b6711854dfa6ecc6c3375bd26863af7b8fcb"
+    },
+    "release/ACTUATOR_SCREEN.json": {
+      "bytes": 293867,
+      "sha256": "328c93c14bb34c03b11e47f121b7fc249fbaf4b3ab589dfb4428480e47478e9d"
+    },
+    "release/BOM.csv": {
+      "bytes": 110325,
+      "sha256": "9ba06785bbe750f5a108d837876dcbb6bf263870ca67f371f957ccc97e8379d3"
+    },
+    "release/BUILD_RUNTIMES.json": {
+      "bytes": 1521,
+      "sha256": "b828275c4e5b6efd826d6a35c7e505cb84009f79d4df10a620befa540759ed11"
+    },
+    "release/COMPARISON.csv": {
+      "bytes": 1189,
+      "sha256": "84df850dad80df8dc3e4dbcaf167ce67c9327405cb109d4f6f5e2ed5e9a90841"
+    },
+    "release/COMPARISON.json": {
+      "bytes": 456016,
+      "sha256": "1745849f5f938c88b27b2432e4d5d6a6bf03a3bd4ca3684337a21b548214b2dd"
+    },
+    "release/Common_receiver_1U_insert_R1.FCStd": {
+      "bytes": 39585,
+      "sha256": "2a7c1a120512d38221b8d4c402e3f825618f0c4de313d5e606ca43d9589f138e"
+    },
+    "release/Common_receiver_1U_insert_R1.step": {
+      "bytes": 254375,
+      "sha256": "ed97d1fdb5fb68e0d7d9593fa4b302f8aecb147f10517fbceb68080272c3b8d6"
+    },
+    "release/Common_receiver_3U_insert_R1.FCStd": {
+      "bytes": 32531,
+      "sha256": "ab00f94c42e0d1dfaf18b7fa4826b2d14f0a98757d010722e1790f02122340c9"
+    },
+    "release/Common_receiver_3U_insert_R1.step": {
+      "bytes": 213665,
+      "sha256": "9a1674dd605aad4b0f9834fb8a359784bf08ea46a1cff1668022c375ab9e7b4b"
+    },
+    "release/D27_GATES.json": {
+      "bytes": 5835,
+      "sha256": "0a0342661725bcefcff7aab9827329fad7a19620470551996cb443d87dee1400"
+    },
+    "release/FULL_RAIL_SWEEP.json": {
+      "bytes": 25867,
+      "sha256": "2be70b1e8356f5772f70de408d3582fdc3f920a5d446ff3927e39c0853ad44a2"
+    },
+    "release/INSERT_INTERFACE.json": {
+      "bytes": 15165,
+      "sha256": "d416252086d78135327dbb5575fe6d62abbf2eba62d01c195bd1b0a0d3fe5c46"
+    },
+    "release/LEAD_TRIM_R2.json": {
+      "bytes": 56250,
+      "sha256": "40c72850f92ac6ba88072a07f1c2425479c8e9e05b9946744b3a7f9453f6b2bd"
+    },
+    "release/READ_ME.md": {
+      "bytes": 5105,
+      "sha256": "6e3ccffddb0fcc79ef07cd349f5a36ae72b3d19c08c7447ae893622d14097857"
+    },
+    "release/REVIEW.json": {
+      "bytes": 467198,
+      "sha256": "c5d5b0d7ecddb3a269eca1b50681aff5d8beea606b0069b52b0c4290ff6bbb6c"
+    },
+    "release/SPRING_STEP_EXCHANGE.json": {
+      "bytes": 6069,
+      "sha256": "670741e33e41938a03af62a9f23b34591a1ba9244bfee2e6277d9d5b69ebdae6"
+    },
+    "release/belt_shuttle_carrier_R1_comparison.json": {
+      "bytes": 63012,
+      "sha256": "44fce3280ab2e0a9fbbd6c2260c31df3ec5fd497cc03fb239481c57dabc993a2"
+    },
+    "release/belt_shuttle_four_carrier_stowed_R1.FCStd": {
+      "bytes": 1016559,
+      "sha256": "b8942cd8bd8c3d38202ff712cd08d24f6b79432a5b45ae636b126b45dd10cd28"
+    },
+    "release/belt_shuttle_four_carrier_stowed_R1.step": {
+      "bytes": 11338425,
+      "sha256": "ee68e1df526701e248782df57b709d73395152a1cbdb5d91e8a255461129221a"
+    },
+    "release/indexed_drum_carrier_R1_comparison.json": {
+      "bytes": 33439,
+      "sha256": "77a0b51980d3d868064de2038cfed6bd6f5cda709efc35f407471b83844ffd0f"
+    },
+    "release/indexed_drum_four_carrier_stowed_R1.FCStd": {
+      "bytes": 262099,
+      "sha256": "cf0e44fbd72dd5f709c161d49a9460d89e7f5ddf445184eaef2b0158eab2220f"
+    },
+    "release/indexed_drum_four_carrier_stowed_R1.step": {
+      "bytes": 2262432,
+      "sha256": "bcc6a63bbad9cf04a3c159deccadf7226e8bab7f461687ba72436d194c1792fd"
+    },
+    "release/lead_screw_carrier_R1_comparison.json": {
+      "bytes": 59244,
+      "sha256": "b9c1210327aa77e222690a787224ef77e50d04bf98b4eb818be4ddd0ca5de41a"
+    },
+    "release/lead_screw_four_carrier_stowed_R1.FCStd": {
+      "bytes": 1005485,
+      "sha256": "b27c06c50f3fa20a4c3204dbc16cf23161893964155a6d2b1034ebf2236a0d71"
+    },
+    "release/lead_screw_four_carrier_stowed_R1.step": {
+      "bytes": 11248122,
+      "sha256": "7ad68a4308245fbc5cf8f62b53f1a530fc67f1de544bec0a9f629fb75eda0527"
+    },
+    "release/lead_screw_four_carrier_trim_R2.FCStd": {
+      "bytes": 992201,
+      "sha256": "b0ff5454df958568dd3ce6526d8095e0b175556a3cb300000d31221afcfb5000"
+    },
+    "release/lead_screw_four_carrier_trim_R2.step": {
+      "bytes": 11084412,
+      "sha256": "90f6ea304a5b073ff5bb461fd39af6702f115797228fbc818bfaddc580e028fa"
+    },
+    "release/pantograph_carrier_R1_comparison.json": {
+      "bytes": 64100,
+      "sha256": "813460d3d042de157b10a7804698b6150f42133e0779298fb666f360697b38d5"
+    },
+    "release/pantograph_four_carrier_stowed_R1.FCStd": {
+      "bytes": 1005548,
+      "sha256": "a0bb83f69ee73211b3653fde3a32ce79158efc9a5f6a4885c151fc33562090dc"
+    },
+    "release/pantograph_four_carrier_stowed_R1.step": {
+      "bytes": 11220849,
+      "sha256": "ff6ca2fd52514f69a135d0f3894d6180b131385edf1c3ac69be6dcb32304d307"
+    },
+    "release/rack_pawl_carrier_R1_comparison.json": {
+      "bytes": 59513,
+      "sha256": "8d94572c6280bd291c8a57e9e9245130b120d1368ac2df3e9a02590f7697db86"
+    },
+    "release/rack_pawl_four_carrier_stowed_R1.FCStd": {
+      "bytes": 1114320,
+      "sha256": "c6547d17cef8e7c16b3e61a474d3b4c094e98e710804f78682e6474c34bd35d2"
+    },
+    "release/rack_pawl_four_carrier_stowed_R1.step": {
+      "bytes": 12603130,
+      "sha256": "beb3a3d45dd331a2b6305130277831bbb65590f1c2efd75ab634ba77a41bc74c"
+    },
+    "release/spring_dual_gate_carrier_R1_comparison.json": {
+      "bytes": 57967,
+      "sha256": "6f3312377810473b6ce9232227291726cb0f74db0b1e9f7ef1ebfa6b0f843efc"
+    },
+    "release/spring_dual_gate_four_carrier_stowed_R1.FCStd": {
+      "bytes": 1347423,
+      "sha256": "31b513521c2cccd1609eadcdac3b727de02f49166780e662cf052881b8b6f824"
+    },
+    "release/spring_dual_gate_four_carrier_stowed_R1.step": {
+      "bytes": 12596538,
+      "sha256": "f6c1b62d4535d1a117cbab3b707e9c070dc02444a2aa416a0667a8da1a2f6284"
+    },
+    "release/telescopic_carrier_R1_comparison.json": {
+      "bytes": 62427,
+      "sha256": "85b45118402cc534d4c745f7e7bf34273dae429b67c5c94070e3e3f0e033502c"
+    },
+    "release/telescopic_four_carrier_stowed_R1.FCStd": {
+      "bytes": 1007948,
+      "sha256": "8116a4971df4933c5f4e9ef8b663fa33c85da0648d439c4966ee921fc4500723"
+    },
+    "release/telescopic_four_carrier_stowed_R1.step": {
+      "bytes": 11311583,
+      "sha256": "1b3ced931118fd0d7b8ef5d91cae2160c26aafa82e566c11915dc20de3b7579d"
+    },
+    "source/ACT01_SOURCES.json": {
+      "bytes": 3428,
+      "sha256": "6722a00688b18420f6ee2bc940cb8ea69e1c5bc6d4dcf8e37710bf4e8ef69127"
+    },
+    "source/INSERT_INTERFACE_initial_failed_pose.json": {
+      "bytes": 17138,
+      "sha256": "0d154900767e844b460f70410b59ab3b20130b92e042cb2555edf4ce502db6a0"
+    },
+    "source/NEW_SOURCE.json": {
+      "bytes": 179,
+      "sha256": "f34f68be873d51b4f6252768d2ce8cc4a8c69c6d040c0770378ff8caa0c8ca2b"
+    },
+    "source/RATIOS_SOURCE.json": {
+      "bytes": 196,
+      "sha256": "c8bd988b0e4384d4abd08c8a4e9b2bc10f2ee364acba98cf847913423313bef3"
+    },
+    "source/act01_parameters.json": {
+      "bytes": 3175,
+      "sha256": "1d4ffd69ce5211d49671c8c20cae79034bb6a23c50d093932665e9faa0928cda"
+    },
+    "source/fdr08.py": {
+      "bytes": 20464,
+      "sha256": "22d8f20fc43c1fe3b576fa3319ef42311060a272c7f0a6847fdcb31fbac444a8"
+    },
+    "source/requirements.json": {
+      "bytes": 1913,
+      "sha256": "3de840bb8e81f4e2affe047ad2eaa46b22a6cd56fdb2e31b0a0333f6f1586682"
+    },
+    "readback_step.py": {
+      "bytes": 1588,
+      "sha256": "88cd2d6b6cc95d4379cf112e924a969b19bfb974a66ac0424d453e193bc14997"
+    }
+  }
+}

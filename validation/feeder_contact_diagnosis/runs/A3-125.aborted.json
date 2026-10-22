@@ -1,0 +1,36 @@
+{
+  "id": "A3-125",
+  "terminated_UTC": "2026-10-22T17:39:43.561145+00:00",
+  "status": "bounded pilot terminated before full endpoint",
+  "reason": "unpreconditioned APGD with mixed translational/rotational mm coordinates progresses <1 s of 26.5 s in ~60-90s; not accepted as correction or convergence evidence",
+  "command": [
+    "/workspace/volley-work/2026-10-22-contact/build/feeder_probe",
+    "/workspace/volley-work/2026-10-22-contact/geometry_guarded/3U",
+    "/workspace/volley-work/2026-10-22-contact/runs/A3-125.csv",
+    "4.0",
+    "0.1",
+    "0",
+    "0",
+    "0.000125",
+    "100",
+    "5",
+    "0",
+    "2000",
+    "10",
+    "none",
+    "0.1"
+  ],
+  "environment_overrides": {
+    "FCE_SOLVER": "APGD",
+    "FCE_WARM": "0",
+    "OMP_NUM_THREADS": "1"
+  },
+  "source_sha256": "d6a802697c943af23ff54e48a5835da5782ca874e17b005b9fb8d2bae15c006f",
+  "executable_sha256": "f5cc456beeb592a1a9f32435498d551b9ae97e53fba40e0337d8c0e66e3a0e1d",
+  "last_complete_csv_s": 0.34,
+  "output_sha256": {
+    "A3-125.log": "b980fe1d7836e40c282e3d9a06d11a565405ceef319f606bbf581e907cf3eee3",
+    "A3-125.csv.solver.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "A3-125.csv": "5eb993c4057317b2e23912c6737c209097c4a38819fcd2c02f0342242bf84ed7"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "B3-250",
+  "UTC": "2026-10-22T17:40:20.162488+00:00",
+  "CAD": "FM06-R1, not FM07-R6",
+  "command": [
+    "/workspace/volley-work/2026-10-22-contact/build/feeder_bb_probe",
+    "/workspace/volley-work/2026-10-22-contact/geometry_guarded/3U",
+    "/workspace/volley-work/2026-10-22-contact/runs/B3-250.csv",
+    "4.0",
+    "0.1",
+    "0",
+    "0",
+    "0.00025",
+    "100",
+    "5",
+    "0",
+    "2000",
+    "10",
+    "none",
+    "0.1"
+  ],
+  "environment_overrides": {
+    "OMP_NUM_THREADS": "1",
+    "FCE_WARM": "0",
+    "FCE_SOLVER": "BB"
+  },
+  "source_sha256": "91813d7f2ad45ef924ffdb0a9e1c891a30d0faa0bac8d3aa5f5f23b81e9e1857",
+  "executable_sha256": "eb3c549846f45f528bdccac098e4360c1b6eec22d0be37734a03da93785cd3e8"
+}

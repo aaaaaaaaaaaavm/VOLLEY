@@ -1,0 +1,799 @@
+{
+  "revision": "BB64-RAIL-R1-DEVELOPMENT_FINDING",
+  "no_common_rail_acceptance": true,
+  "case_count": 7,
+  "cases": [
+    {
+      "candidate": "lead_screw",
+      "longitudinal_docking_required": true,
+      "dock_positions_mm": [
+        0,
+        250,
+        650,
+        900
+      ],
+      "commanded_travel_mm": 900,
+      "guide_rail_length_mm": 1600,
+      "payload_sweep_bounds_mm": [
+        0,
+        1240.5,
+        0,
+        100,
+        22,
+        122
+      ],
+      "method": "ExactB-rep swept rectangular passive3U payload envelope alongX;includes all4 parked cassette/feed geometries.1U envelopes lie within this maximal envelope.",
+      "intersections": [
+        {
+          "part": "B_3U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436855,
+          "part_bounds_mm": [
+            620.5,
+            628.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436815,
+          "part_bounds_mm": [
+            648.5,
+            656.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000008,
+          "part_bounds_mm": [
+            642.5,
+            650.5,
+            89.99999999999997,
+            540.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Tr8x2_screw_blank",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436866,
+          "part_bounds_mm": [
+            634.5,
+            642.5,
+            89.99999999999997,
+            540.0,
+            80.0,
+            88.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.6548245743679,
+          "part_bounds_mm": [
+            612.0,
+            620.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436764,
+          "part_bounds_mm": [
+            584.0,
+            592.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000001,
+          "part_bounds_mm": [
+            590.0,
+            598.0,
+            -440.0,
+            10.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Tr8x2_screw_blank",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436815,
+          "part_bounds_mm": [
+            598.0,
+            606.0,
+            -440.0,
+            10.0,
+            80.0,
+            88.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        }
+      ],
+      "nominal_payload_corridor_pass": false,
+      "full_carriage_gate_docking_and_tolerance_motion_proven": false,
+      "minimum_corrections": [
+        "Trim both transverse guide shafts AND capture rack20mm from450 to430mm,endY-10/northY110;last bearing[-29,-11]and applied pawl[-19,-18.2]retain nominal support. LeadR2 implements this;loaded retention remainsopen.",
+        "Lead-screw blank likewise endsY+10 and crosses corridor;trim/rework screw/support/coupling toend at or beforeY0 with rated end support. Current catalog10x2 sizing must be reconciled withTr8 CAD.",
+        "Belt front pulley/return arcs protrude into corridor;relocate/re-route their full swept envelope outsideY0..100,Z22..122 and verify clamp travel/tension. No relocation is accepted here.",
+        "Retract dock pins and common side/release barriers in the prescribed travel sequence;prove carrier,insert lock and full carriage clearance,not payload envelope alone."
+      ]
+    },
+    {
+      "candidate": "spring_dual_gate",
+      "longitudinal_docking_required": true,
+      "dock_positions_mm": [
+        0,
+        250,
+        650,
+        900
+      ],
+      "commanded_travel_mm": 900,
+      "guide_rail_length_mm": 1600,
+      "payload_sweep_bounds_mm": [
+        0,
+        1240.5,
+        0,
+        100,
+        22,
+        122
+      ],
+      "method": "ExactB-rep swept rectangular passive3U payload envelope alongX;includes all4 parked cassette/feed geometries.1U envelopes lie within this maximal envelope.",
+      "intersections": [
+        {
+          "part": "B_3U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436855,
+          "part_bounds_mm": [
+            620.5,
+            628.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436815,
+          "part_bounds_mm": [
+            648.5,
+            656.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000008,
+          "part_bounds_mm": [
+            642.5,
+            650.5,
+            89.99999999999997,
+            540.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.6548245743679,
+          "part_bounds_mm": [
+            612.0,
+            620.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436764,
+          "part_bounds_mm": [
+            584.0,
+            592.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000001,
+          "part_bounds_mm": [
+            590.0,
+            598.0,
+            -440.0,
+            10.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        }
+      ],
+      "nominal_payload_corridor_pass": false,
+      "full_carriage_gate_docking_and_tolerance_motion_proven": false,
+      "minimum_corrections": [
+        "Trim both transverse guide shafts AND capture rack20mm from450 to430mm,endY-10/northY110;last bearing[-29,-11]and applied pawl[-19,-18.2]retain nominal support. LeadR2 implements this;loaded retention remainsopen.",
+        "Lead-screw blank likewise endsY+10 and crosses corridor;trim/rework screw/support/coupling toend at or beforeY0 with rated end support. Current catalog10x2 sizing must be reconciled withTr8 CAD.",
+        "Belt front pulley/return arcs protrude into corridor;relocate/re-route their full swept envelope outsideY0..100,Z22..122 and verify clamp travel/tension. No relocation is accepted here.",
+        "Retract dock pins and common side/release barriers in the prescribed travel sequence;prove carrier,insert lock and full carriage clearance,not payload envelope alone."
+      ]
+    },
+    {
+      "candidate": "rack_pawl",
+      "longitudinal_docking_required": true,
+      "dock_positions_mm": [
+        0,
+        250,
+        650,
+        900
+      ],
+      "commanded_travel_mm": 900,
+      "guide_rail_length_mm": 1600,
+      "payload_sweep_bounds_mm": [
+        0,
+        1240.5,
+        0,
+        100,
+        22,
+        122
+      ],
+      "method": "ExactB-rep swept rectangular passive3U payload envelope alongX;includes all4 parked cassette/feed geometries.1U envelopes lie within this maximal envelope.",
+      "intersections": [
+        {
+          "part": "B_3U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436855,
+          "part_bounds_mm": [
+            620.5,
+            628.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436815,
+          "part_bounds_mm": [
+            648.5,
+            656.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000008,
+          "part_bounds_mm": [
+            642.5,
+            650.5,
+            89.99999999999997,
+            540.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.6548245743679,
+          "part_bounds_mm": [
+            612.0,
+            620.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436764,
+          "part_bounds_mm": [
+            584.0,
+            592.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000001,
+          "part_bounds_mm": [
+            590.0,
+            598.0,
+            -440.0,
+            10.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        }
+      ],
+      "nominal_payload_corridor_pass": false,
+      "full_carriage_gate_docking_and_tolerance_motion_proven": false,
+      "minimum_corrections": [
+        "Trim both transverse guide shafts AND capture rack20mm from450 to430mm,endY-10/northY110;last bearing[-29,-11]and applied pawl[-19,-18.2]retain nominal support. LeadR2 implements this;loaded retention remainsopen.",
+        "Lead-screw blank likewise endsY+10 and crosses corridor;trim/rework screw/support/coupling toend at or beforeY0 with rated end support. Current catalog10x2 sizing must be reconciled withTr8 CAD.",
+        "Belt front pulley/return arcs protrude into corridor;relocate/re-route their full swept envelope outsideY0..100,Z22..122 and verify clamp travel/tension. No relocation is accepted here.",
+        "Retract dock pins and common side/release barriers in the prescribed travel sequence;prove carrier,insert lock and full carriage clearance,not payload envelope alone."
+      ]
+    },
+    {
+      "candidate": "indexed_drum",
+      "longitudinal_docking_required": false,
+      "rotating_CAD_material_plus_payload_inertia_about_X_kg_m2": {
+        "nominal": 1.7065846053573417,
+        "upper": 2.128181165357342
+      },
+      "rotating_CAD_material_plus_payload_mass_kg": {
+        "nominal": 22.83451209360309,
+        "upper": 28.17451209360309
+      },
+      "missing_rotating_hardware_and_joint_inertia": true,
+      "full_rotation_and_extraction_clearance_accepted": false,
+      "required_next_correction": "Model extractor transmission,index lock/cell load paths and loaded continuous90deg index sweep",
+      "payload_inertia_basis": "Uniform surrogate boxes at envelope centers,1.33/4kg nominal and2/6kg upper;actual spacecraftCG/tensor not supplied. This is not installed inertia."
+    },
+    {
+      "candidate": "pantograph",
+      "longitudinal_docking_required": true,
+      "dock_positions_mm": [
+        0,
+        250,
+        650,
+        900
+      ],
+      "commanded_travel_mm": 900,
+      "guide_rail_length_mm": 1600,
+      "payload_sweep_bounds_mm": [
+        0,
+        1240.5,
+        0,
+        100,
+        22,
+        122
+      ],
+      "method": "ExactB-rep swept rectangular passive3U payload envelope alongX;includes all4 parked cassette/feed geometries.1U envelopes lie within this maximal envelope.",
+      "intersections": [
+        {
+          "part": "B_3U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436855,
+          "part_bounds_mm": [
+            620.5,
+            628.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436815,
+          "part_bounds_mm": [
+            648.5,
+            656.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000008,
+          "part_bounds_mm": [
+            642.5,
+            650.5,
+            89.99999999999997,
+            540.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.6548245743679,
+          "part_bounds_mm": [
+            612.0,
+            620.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436764,
+          "part_bounds_mm": [
+            584.0,
+            592.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000001,
+          "part_bounds_mm": [
+            590.0,
+            598.0,
+            -440.0,
+            10.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        }
+      ],
+      "nominal_payload_corridor_pass": false,
+      "full_carriage_gate_docking_and_tolerance_motion_proven": false,
+      "minimum_corrections": [
+        "Trim both transverse guide shafts AND capture rack20mm from450 to430mm,endY-10/northY110;last bearing[-29,-11]and applied pawl[-19,-18.2]retain nominal support. LeadR2 implements this;loaded retention remainsopen.",
+        "Lead-screw blank likewise endsY+10 and crosses corridor;trim/rework screw/support/coupling toend at or beforeY0 with rated end support. Current catalog10x2 sizing must be reconciled withTr8 CAD.",
+        "Belt front pulley/return arcs protrude into corridor;relocate/re-route their full swept envelope outsideY0..100,Z22..122 and verify clamp travel/tension. No relocation is accepted here.",
+        "Retract dock pins and common side/release barriers in the prescribed travel sequence;prove carrier,insert lock and full carriage clearance,not payload envelope alone."
+      ]
+    },
+    {
+      "candidate": "telescopic",
+      "longitudinal_docking_required": true,
+      "dock_positions_mm": [
+        0,
+        250,
+        650,
+        900
+      ],
+      "commanded_travel_mm": 900,
+      "guide_rail_length_mm": 1600,
+      "payload_sweep_bounds_mm": [
+        0,
+        1240.5,
+        0,
+        100,
+        22,
+        122
+      ],
+      "method": "ExactB-rep swept rectangular passive3U payload envelope alongX;includes all4 parked cassette/feed geometries.1U envelopes lie within this maximal envelope.",
+      "intersections": [
+        {
+          "part": "B_3U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436855,
+          "part_bounds_mm": [
+            620.5,
+            628.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436815,
+          "part_bounds_mm": [
+            648.5,
+            656.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000008,
+          "part_bounds_mm": [
+            642.5,
+            650.5,
+            89.99999999999997,
+            540.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.6548245743679,
+          "part_bounds_mm": [
+            612.0,
+            620.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436764,
+          "part_bounds_mm": [
+            584.0,
+            592.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000001,
+          "part_bounds_mm": [
+            590.0,
+            598.0,
+            -440.0,
+            10.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        }
+      ],
+      "nominal_payload_corridor_pass": false,
+      "full_carriage_gate_docking_and_tolerance_motion_proven": false,
+      "minimum_corrections": [
+        "Trim both transverse guide shafts AND capture rack20mm from450 to430mm,endY-10/northY110;last bearing[-29,-11]and applied pawl[-19,-18.2]retain nominal support. LeadR2 implements this;loaded retention remainsopen.",
+        "Lead-screw blank likewise endsY+10 and crosses corridor;trim/rework screw/support/coupling toend at or beforeY0 with rated end support. Current catalog10x2 sizing must be reconciled withTr8 CAD.",
+        "Belt front pulley/return arcs protrude into corridor;relocate/re-route their full swept envelope outsideY0..100,Z22..122 and verify clamp travel/tension. No relocation is accepted here.",
+        "Retract dock pins and common side/release barriers in the prescribed travel sequence;prove carrier,insert lock and full carriage clearance,not payload envelope alone."
+      ]
+    },
+    {
+      "candidate": "belt_shuttle",
+      "longitudinal_docking_required": true,
+      "dock_positions_mm": [
+        0,
+        250,
+        650,
+        900
+      ],
+      "commanded_travel_mm": 900,
+      "guide_rail_length_mm": 1600,
+      "payload_sweep_bounds_mm": [
+        0,
+        1240.5,
+        0,
+        100,
+        22,
+        122
+      ],
+      "method": "ExactB-rep swept rectangular passive3U payload envelope alongX;includes all4 parked cassette/feed geometries.1U envelopes lie within this maximal envelope.",
+      "intersections": [
+        {
+          "part": "B_3U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436855,
+          "part_bounds_mm": [
+            620.5,
+            628.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436815,
+          "part_bounds_mm": [
+            648.5,
+            656.5,
+            89.99999999999997,
+            540.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000008,
+          "part_bounds_mm": [
+            642.5,
+            650.5,
+            89.99999999999997,
+            540.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Drive_pulley_-10",
+          "material": "aluminium",
+          "penetration_mm3": 144.04977960577685,
+          "part_bounds_mm": [
+            634.5,
+            642.5,
+            97.99999999999997,
+            121.99999999999997,
+            72.0,
+            96.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "B_3U__Belt_return_-10",
+          "material": "polymer",
+          "penetration_mm3": 204.41372944943416,
+          "part_bounds_mm": [
+            634.5,
+            642.5,
+            96.49999999999997,
+            109.99999999999997,
+            70.5,
+            97.5
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-34",
+          "material": "steel",
+          "penetration_mm3": 502.6548245743679,
+          "part_bounds_mm": [
+            612.0,
+            620.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Guide_shaft_-62",
+          "material": "steel",
+          "penetration_mm3": 502.65482457436764,
+          "part_bounds_mm": [
+            584.0,
+            592.0,
+            -440.0,
+            10.0,
+            48.0,
+            56.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Power_off_capture_rack",
+          "material": "steel",
+          "penetration_mm3": 520.0000000000001,
+          "part_bounds_mm": [
+            590.0,
+            598.0,
+            -440.0,
+            10.0,
+            26.0,
+            34.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Drive_pulley_-10",
+          "material": "aluminium",
+          "penetration_mm3": 144.049779605774,
+          "part_bounds_mm": [
+            598.0,
+            606.0,
+            -22.0,
+            2.0,
+            72.0,
+            96.0
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        },
+        {
+          "part": "C_1U__Belt_return_-10",
+          "material": "polymer",
+          "penetration_mm3": 204.41372944943274,
+          "part_bounds_mm": [
+            598.0,
+            606.0,
+            -10.000000000000002,
+            3.5,
+            70.5,
+            97.5
+          ],
+          "status": "HARD_NOMINAL_PAYLOAD_COLLISION_NO_WAIVER"
+        }
+      ],
+      "nominal_payload_corridor_pass": false,
+      "full_carriage_gate_docking_and_tolerance_motion_proven": false,
+      "minimum_corrections": [
+        "Trim both transverse guide shafts AND capture rack20mm from450 to430mm,endY-10/northY110;last bearing[-29,-11]and applied pawl[-19,-18.2]retain nominal support. LeadR2 implements this;loaded retention remainsopen.",
+        "Lead-screw blank likewise endsY+10 and crosses corridor;trim/rework screw/support/coupling toend at or beforeY0 with rated end support. Current catalog10x2 sizing must be reconciled withTr8 CAD.",
+        "Belt front pulley/return arcs protrude into corridor;relocate/re-route their full swept envelope outsideY0..100,Z22..122 and verify clamp travel/tension. No relocation is accepted here.",
+        "Retract dock pins and common side/release barriers in the prescribed travel sequence;prove carrier,insert lock and full carriage clearance,not payload envelope alone."
+      ]
+    }
+  ],
+  "elapsed_s": 69.28385388800007,
+  "scope": "Existing fullrail integration dependency only. This does not extend FM07 coupon acceptance or select a new architecture."
+}

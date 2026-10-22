@@ -1,0 +1,72 @@
+{
+  "id": "X3-125",
+  "UTC": "2026-10-22T17:44:27.112886+00:00",
+  "CAD": "FM06-R1, not FM07-R6",
+  "command": [
+    "/workspace/volley-work/2026-10-22-contact/build/feeder_box_probe",
+    "/workspace/volley-work/2026-10-22-contact/geometry_guarded/3U",
+    "/workspace/volley-work/2026-10-22-contact/runs/X3-125.csv",
+    "4.0",
+    "0.1",
+    "0",
+    "0",
+    "0.000125",
+    "100",
+    "5",
+    "0",
+    "2000",
+    "10",
+    "none",
+    "0.1"
+  ],
+  "environment_overrides": {
+    "OMP_NUM_THREADS": "1",
+    "FCE_WARM": "0",
+    "FCE_SOLVER": "PSOR"
+  },
+  "source_sha256": "2d7da615efbc6097e6361863aa0cc4aafadc6c6a647850b04dd7f588e61508d5",
+  "executable_sha256": "fd69891762c602c59a5c77bb72b4fec725faac6eece538f74e66dd3429fb04d7",
+  "exit_code": 0,
+  "wall_s": 141.45755221799982,
+  "output_sha256": {
+    "X3-125.csv": "f7c46cee2665098bbdcc7952de284396a78e0e50c501fac541faf2d99fdebb41",
+    "X3-125.csv.metrics.json": "5719b86e4359ba36f1ab954f86840d6fa32df98287a18b0d16c6705321cc7ff5",
+    "X3-125.csv.solver.csv": "e754a2286fe7522c272361d873a69d374d50aae4b79b6dc34e568bb4ff62dff5",
+    "X3-125.csv.solver.json": "f508e2b2481a53282924fcee544dcb4dd72e925e95143662ffed2d2374fc1fad",
+    "X3-125.log": "849075feeda4cff172e1cf28b4a7101a839ff4b01d227c396ddd65a05759eb0e",
+    "X3-125.started.json": "b6a6bb1c4bc8f21498b06b7ea6f72b0a9db3c7aee08ecb03869263acee84725a"
+  },
+  "metrics": {
+    "native_version": "10.0.0",
+    "steps": 212000,
+    "final_time_s": 26.500000000081,
+    "outside_domain_or_nonfinite": false,
+    "sequence_aborted": false,
+    "maximum_payload_speed_m_s": 0.0376929050898364,
+    "maximum_payload_spin_rad_s": 0.149459222439485,
+    "maximum_resultant_contact_force_N": 73.1020632632818,
+    "maximum_pair_contact_force_N": 266.019514198146,
+    "minimum_reported_contact_distance_m": -1.52915809303522e-06,
+    "maximum_feed_force_N": 5.07166637704624,
+    "positive_mechanical_motor_work_J": 1.9225378338366,
+    "negative_mechanical_motor_work_J": -8.86472894541526e-05,
+    "maximum_fork_off_axis_m": 3.14004987417331e-10,
+    "maximum_fork_rotation_rad": 0,
+    "payload_momentum_balance_residual_N_s": [
+      3.43058914609173e-17,
+      3.15282244756077e-14,
+      2.64011035255862e-16
+    ],
+    "contact_impulse_N_s": [
+      0.000445310203205466,
+      -0.000263415742831494,
+      0.000101602964800256
+    ]
+  },
+  "solver_metrics": {
+    "max_solver_error_internal": 8.70164549526186,
+    "saturated_steps": 742,
+    "max_used_iterations": 2000,
+    "max_sampled_joint_residual_mixed": 1.6483381486304e-08
+  }
+}

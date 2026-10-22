@@ -1,0 +1,1824 @@
+{
+  "revision": "FDR09-LEAD-TRIM-R2",
+  "reference_revision": "FDR09-R1-2026-10-22",
+  "changes": [
+    {
+      "part": "A_1U__Driven_fork_frame",
+      "old_volume_mm3": 141263.53880525604,
+      "new_volume_mm3": 141247.36202612924,
+      "material": "aluminium",
+      "mass_delta_kg": -4.3677303642377953e-05
+    },
+    {
+      "part": "A_1U__Guide_shaft_-34",
+      "old_volume_mm3": 22619.46710584651,
+      "new_volume_mm3": 21614.157456697754,
+      "material": "steel",
+      "mass_delta_kg": -0.007891680745817732
+    },
+    {
+      "part": "A_1U__Guide_shaft_-62",
+      "old_volume_mm3": 22619.46710584651,
+      "new_volume_mm3": 21614.157456697754,
+      "material": "steel",
+      "mass_delta_kg": -0.007891680745817732
+    },
+    {
+      "part": "A_1U__Power_off_capture_rack",
+      "old_volume_mm3": 23400.000000001393,
+      "new_volume_mm3": 22359.99999999965,
+      "material": "steel",
+      "mass_delta_kg": -0.00816400000001368
+    },
+    {
+      "part": "A_1U__Tr8x2_screw_blank",
+      "old_volume_mm3": 22619.467105846514,
+      "new_volume_mm3": 22066.546798814685,
+      "material": "steel",
+      "mass_delta_kg": -0.004340424410199857
+    },
+    {
+      "part": "A_1U__Screw_end_bearing_-10",
+      "old_volume_mm3": 1977.2398763530764,
+      "new_volume_mm3": 1977.2398763530764,
+      "material": "steel",
+      "mass_delta_kg": 0.0
+    },
+    {
+      "part": "B_3U__Driven_fork_frame",
+      "old_volume_mm3": 141263.53880525616,
+      "new_volume_mm3": 141247.36202612927,
+      "material": "aluminium",
+      "mass_delta_kg": -4.36773036426137e-05
+    },
+    {
+      "part": "B_3U__Guide_shaft_-34",
+      "old_volume_mm3": 22619.467105846506,
+      "new_volume_mm3": 21614.15745669775,
+      "material": "steel",
+      "mass_delta_kg": -0.007891680745817732
+    },
+    {
+      "part": "B_3U__Guide_shaft_-62",
+      "old_volume_mm3": 22619.467105846506,
+      "new_volume_mm3": 21614.15745669775,
+      "material": "steel",
+      "mass_delta_kg": -0.007891680745817732
+    },
+    {
+      "part": "B_3U__Power_off_capture_rack",
+      "old_volume_mm3": 23400.00000000139,
+      "new_volume_mm3": 22359.999999999658,
+      "material": "steel",
+      "mass_delta_kg": -0.008164000000013593
+    },
+    {
+      "part": "B_3U__Tr8x2_screw_blank",
+      "old_volume_mm3": 22619.467105846514,
+      "new_volume_mm3": 22066.54679881468,
+      "material": "steel",
+      "mass_delta_kg": -0.004340424410199886
+    },
+    {
+      "part": "B_3U__Screw_end_bearing_-10",
+      "old_volume_mm3": 1977.2398763530734,
+      "new_volume_mm3": 1977.2398763530734,
+      "material": "steel",
+      "mass_delta_kg": 0.0
+    },
+    {
+      "part": "C_1U__Driven_fork_frame",
+      "old_volume_mm3": 141263.5388052561,
+      "new_volume_mm3": 141247.36202612927,
+      "material": "aluminium",
+      "mass_delta_kg": -4.367730364245654e-05
+    },
+    {
+      "part": "C_1U__Guide_shaft_-34",
+      "old_volume_mm3": 22619.46710584656,
+      "new_volume_mm3": 21614.1574566978,
+      "material": "steel",
+      "mass_delta_kg": -0.007891680745817762
+    },
+    {
+      "part": "C_1U__Guide_shaft_-62",
+      "old_volume_mm3": 22619.46710584655,
+      "new_volume_mm3": 21614.15745669779,
+      "material": "steel",
+      "mass_delta_kg": -0.007891680745817762
+    },
+    {
+      "part": "C_1U__Power_off_capture_rack",
+      "old_volume_mm3": 23400.000000001393,
+      "new_volume_mm3": 22359.99999999965,
+      "material": "steel",
+      "mass_delta_kg": -0.00816400000001368
+    },
+    {
+      "part": "C_1U__Tr8x2_screw_blank",
+      "old_volume_mm3": 22619.467105846565,
+      "new_volume_mm3": 22066.546798814736,
+      "material": "steel",
+      "mass_delta_kg": -0.004340424410199857
+    },
+    {
+      "part": "C_1U__Screw_end_bearing_-10",
+      "old_volume_mm3": 1977.2398763530732,
+      "new_volume_mm3": 1977.2398763530732,
+      "material": "steel",
+      "mass_delta_kg": 0.0
+    },
+    {
+      "part": "D_3U__Driven_fork_frame",
+      "old_volume_mm3": 141263.5388052562,
+      "new_volume_mm3": 141247.36202612924,
+      "material": "aluminium",
+      "mass_delta_kg": -4.3677303642770855e-05
+    },
+    {
+      "part": "D_3U__Guide_shaft_-34",
+      "old_volume_mm3": 22619.46710584646,
+      "new_volume_mm3": 21614.1574566977,
+      "material": "steel",
+      "mass_delta_kg": -0.007891680745817762
+    },
+    {
+      "part": "D_3U__Guide_shaft_-62",
+      "old_volume_mm3": 22619.467105846456,
+      "new_volume_mm3": 21614.1574566977,
+      "material": "steel",
+      "mass_delta_kg": -0.007891680745817732
+    },
+    {
+      "part": "D_3U__Power_off_capture_rack",
+      "old_volume_mm3": 23400.00000000139,
+      "new_volume_mm3": 22359.999999999658,
+      "material": "steel",
+      "mass_delta_kg": -0.008164000000013593
+    },
+    {
+      "part": "D_3U__Tr8x2_screw_blank",
+      "old_volume_mm3": 22619.467105846463,
+      "new_volume_mm3": 22066.546798814634,
+      "material": "steel",
+      "mass_delta_kg": -0.004340424410199857
+    },
+    {
+      "part": "D_3U__Screw_end_bearing_-10",
+      "old_volume_mm3": 1977.2398763530753,
+      "new_volume_mm3": 1977.2398763530753,
+      "material": "steel",
+      "mass_delta_kg": 0.0
+    }
+  ],
+  "guide_and_capture_rack_length_before_mm": 450,
+  "guide_and_capture_rack_length_after_mm": 430,
+  "screw_blank_length_before_mm": 450,
+  "screw_blank_length_after_mm": 439,
+  "front_screw_bearing_shift_toward_storage_mm": 1,
+  "guide_bearing_seat_relief": "Reopen8mm nominal bearing seat through added guide cheeks;R1 interference16.176779mm3 is retained inR1 evidence and removed only inR2.",
+  "fullrail_payload_sweep_before": [
+    {
+      "part": "B_3U__Guide_shaft_-34",
+      "penetration_mm3": 502.65482457436855,
+      "material": "steel"
+    },
+    {
+      "part": "B_3U__Guide_shaft_-62",
+      "penetration_mm3": 502.65482457436815,
+      "material": "steel"
+    },
+    {
+      "part": "B_3U__Power_off_capture_rack",
+      "penetration_mm3": 520.0000000000008,
+      "material": "steel"
+    },
+    {
+      "part": "B_3U__Tr8x2_screw_blank",
+      "penetration_mm3": 502.65482457436866,
+      "material": "steel"
+    },
+    {
+      "part": "C_1U__Guide_shaft_-34",
+      "penetration_mm3": 502.6548245743679,
+      "material": "steel"
+    },
+    {
+      "part": "C_1U__Guide_shaft_-62",
+      "penetration_mm3": 502.65482457436764,
+      "material": "steel"
+    },
+    {
+      "part": "C_1U__Power_off_capture_rack",
+      "penetration_mm3": 520.0000000000001,
+      "material": "steel"
+    },
+    {
+      "part": "C_1U__Tr8x2_screw_blank",
+      "penetration_mm3": 502.65482457436815,
+      "material": "steel"
+    }
+  ],
+  "fullrail_payload_sweep_after": [],
+  "exact_nominal_payload_sweep_pass": true,
+  "feed_end_support_checks": [
+    {
+      "feed_mm": 0,
+      "guide_bearing_axial_span_mm": [
+        -229,
+        -211
+      ],
+      "guide_shaft_span_mm": [
+        -440,
+        -10
+      ],
+      "guide_bearing_axial_overlap_mm": 18,
+      "guide_end_margin_at_this_position_mm": 201,
+      "pawl_rack": {
+        "a": "Spring_applied_pawl",
+        "b": "Power_off_capture_rack",
+        "distance_mm": 0.0,
+        "penetration_mm3": 0.0,
+        "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+      },
+      "guide_bearing_housing": {
+        "a": "Driven_fork_frame",
+        "b": "Guide_bearing_-62",
+        "distance_mm": 0.0,
+        "penetration_mm3": 0.0,
+        "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+      },
+      "screw_front_bearing": {
+        "a": "Tr8x2_screw_blank",
+        "b": "Screw_end_bearing_-10",
+        "distance_mm": 0.24999999999998965,
+        "penetration_mm3": 0.0,
+        "status": "GAP"
+      },
+      "screw_front_bearing_axial_span_mm": [
+        -11,
+        -1
+      ],
+      "screw_blank_span_mm": [
+        -440,
+        -1
+      ],
+      "screw_front_bearing_axial_overlap_mm": 10,
+      "support_rating_accepted": false
+    },
+    {
+      "feed_mm": 100,
+      "guide_bearing_axial_span_mm": [
+        -129,
+        -111
+      ],
+      "guide_shaft_span_mm": [
+        -440,
+        -10
+      ],
+      "guide_bearing_axial_overlap_mm": 18,
+      "guide_end_margin_at_this_position_mm": 101,
+      "pawl_rack": {
+        "a": "Spring_applied_pawl",
+        "b": "Power_off_capture_rack",
+        "distance_mm": 0.0,
+        "penetration_mm3": 0.0,
+        "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+      },
+      "guide_bearing_housing": {
+        "a": "Driven_fork_frame",
+        "b": "Guide_bearing_-62",
+        "distance_mm": 0.0,
+        "penetration_mm3": 0.0,
+        "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+      },
+      "screw_front_bearing": {
+        "a": "Tr8x2_screw_blank",
+        "b": "Screw_end_bearing_-10",
+        "distance_mm": 0.24999999999998965,
+        "penetration_mm3": 0.0,
+        "status": "GAP"
+      },
+      "screw_front_bearing_axial_span_mm": [
+        -11,
+        -1
+      ],
+      "screw_blank_span_mm": [
+        -440,
+        -1
+      ],
+      "screw_front_bearing_axial_overlap_mm": 10,
+      "support_rating_accepted": false
+    },
+    {
+      "feed_mm": 200,
+      "guide_bearing_axial_span_mm": [
+        -29,
+        -11
+      ],
+      "guide_shaft_span_mm": [
+        -440,
+        -10
+      ],
+      "guide_bearing_axial_overlap_mm": 18,
+      "guide_end_margin_at_this_position_mm": 1,
+      "pawl_rack": {
+        "a": "Spring_applied_pawl",
+        "b": "Power_off_capture_rack",
+        "distance_mm": 0.0,
+        "penetration_mm3": 0.0,
+        "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+      },
+      "guide_bearing_housing": {
+        "a": "Driven_fork_frame",
+        "b": "Guide_bearing_-62",
+        "distance_mm": 0.0,
+        "penetration_mm3": 0.0,
+        "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+      },
+      "screw_front_bearing": {
+        "a": "Tr8x2_screw_blank",
+        "b": "Screw_end_bearing_-10",
+        "distance_mm": 0.24999999999998965,
+        "penetration_mm3": 0.0,
+        "status": "GAP"
+      },
+      "screw_front_bearing_axial_span_mm": [
+        -11,
+        -1
+      ],
+      "screw_blank_span_mm": [
+        -440,
+        -1
+      ],
+      "screw_front_bearing_axial_overlap_mm": 10,
+      "support_rating_accepted": false
+    }
+  ],
+  "material_properties": {
+    "modeled_material_mass_kg": 18.49254671106252,
+    "modeled_material_CG_mm": [
+      594.4327123426082,
+      49.0605928862046,
+      51.81788356087555
+    ],
+    "modeled_material_inertia_CG_kg_m2": [
+      [
+        0.7832979209242751,
+        -0.5823291878025815,
+        0.02323939963018723
+      ],
+      [
+        -0.5823291878025815,
+        3.06640471718638,
+        0.003927647872519346
+      ],
+      [
+        0.02323939963018723,
+        0.003927647872519346,
+        3.7837316177503593
+      ]
+    ],
+    "all_geometry_bounds_mm": [
+      -220.0,
+      1450.0,
+      -445.0,
+      545.0,
+      -6.0,
+      250.0
+    ],
+    "all_geometry_box_litre": 423.2448
+  },
+  "native": {
+    "stem": "lead_screw_four_carrier_trim_R2",
+    "part_count": 141,
+    "step_solid_count": 141,
+    "step_valid": true,
+    "step_volume_error_mm3": -1.434236764907837e-07,
+    "BOM": [
+      {
+        "name": "Common_Receiver_side_gate",
+        "role": "gate",
+        "material": "aluminium",
+        "volume_mm3": 78732.0,
+        "modeled_material_mass_kg": 0.2125764,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Common_Receiver_clamp_5_-1",
+        "role": "clamp",
+        "material": "steel",
+        "volume_mm3": 63.999999999999986,
+        "modeled_material_mass_kg": 0.0005023999999999999,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Common_Receiver_clamp_5_100",
+        "role": "clamp",
+        "material": "steel",
+        "volume_mm3": 63.999999999999986,
+        "modeled_material_mass_kg": 0.0005023999999999999,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Common_Receiver_clamp_327.5_-1",
+        "role": "clamp",
+        "material": "steel",
+        "volume_mm3": 63.999999999999986,
+        "modeled_material_mass_kg": 0.0005023999999999999,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Common_Receiver_clamp_327.5_100",
+        "role": "clamp",
+        "material": "steel",
+        "volume_mm3": 63.999999999999986,
+        "modeled_material_mass_kg": 0.0005023999999999999,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Common_north_side_gate",
+        "role": "gate",
+        "material": "aluminium",
+        "volume_mm3": 78732.0,
+        "modeled_material_mass_kg": 0.2125764,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Common_aft_corner_stop",
+        "role": "receiver",
+        "material": "aluminium",
+        "volume_mm3": 8320.000000000002,
+        "modeled_material_mass_kg": 0.022464000000000005,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Common_leading_corner_stop",
+        "role": "gate",
+        "material": "aluminium",
+        "volume_mm3": 8320.000000000002,
+        "modeled_material_mass_kg": 0.022464000000000005,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Common_receiver_floor_carriage",
+        "role": "receiver",
+        "material": "aluminium",
+        "volume_mm3": 208285.42700758477,
+        "modeled_material_mass_kg": 0.5623706529204789,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Full_rail_shaft_-20",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 80424.7719318987,
+        "modeled_material_mass_kg": 0.6313344596654047,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_-20_-150",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_-20_250",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_-20_650",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_-20_1050",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_-20_1438",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Full_rail_shaft_120",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 80424.77193189871,
+        "modeled_material_mass_kg": 0.6313344596654048,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_120_-150",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_120_250",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_120_650",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_120_1050",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Rail_mount_120_1438",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 864.0,
+        "modeled_material_mass_kg": 0.0023328,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Full_rail_arrest_rack",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 83200.00000000032,
+        "modeled_material_mass_kg": 0.6531200000000025,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Dock_stop_mount_0",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1009.9283060784933,
+        "modeled_material_mass_kg": 0.002726806426411932,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Dock_pin_0",
+        "role": "docking",
+        "material": "steel",
+        "volume_mm3": 201.0619298297466,
+        "modeled_material_mass_kg": 0.0015783361491635106,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Dock_stop_mount_250",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1009.9283060784929,
+        "modeled_material_mass_kg": 0.002726806426411931,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Dock_pin_250",
+        "role": "docking",
+        "material": "steel",
+        "volume_mm3": 201.06192982974684,
+        "modeled_material_mass_kg": 0.0015783361491635125,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Dock_stop_mount_650",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1009.9283060784942,
+        "modeled_material_mass_kg": 0.0027268064264119344,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Dock_pin_650",
+        "role": "docking",
+        "material": "steel",
+        "volume_mm3": 201.06192982974613,
+        "modeled_material_mass_kg": 0.0015783361491635071,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Dock_stop_mount_900",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1009.9283060784942,
+        "modeled_material_mass_kg": 0.0027268064264119344,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Dock_pin_900",
+        "role": "docking",
+        "material": "steel",
+        "volume_mm3": 201.06192982974613,
+        "modeled_material_mass_kg": 0.0015783361491635071,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Full_rail_pulley_-130",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 3619.1147369354408,
+        "modeled_material_mass_kg": 0.00977160978972569,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Full_rail_pulley_1430",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 3619.114736935438,
+        "modeled_material_mass_kg": 0.009771609789725683,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Full_rail_belt_-56",
+        "role": "drive",
+        "material": "polymer",
+        "volume_mm3": 18720.0,
+        "modeled_material_mass_kg": 0.0263952,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Full_rail_belt_-32",
+        "role": "drive",
+        "material": "polymer",
+        "volume_mm3": 18720.0,
+        "modeled_material_mass_kg": 0.0263952,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "Full_rail_drive_envelope",
+        "role": "unselected_actuator",
+        "material": "envelope",
+        "volume_mm3": 144000.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "A_1U__Passive_payload",
+        "role": "payload",
+        "material": "payload",
+        "volume_mm3": 1135000.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "PAYLOAD_EXCLUDED"
+      },
+      {
+        "name": "A_1U__Cassette_floor",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 240570.0,
+        "modeled_material_mass_kg": 0.649539,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Support_bridge",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 218700.0,
+        "modeled_material_mass_kg": 0.59049,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Stored_side_cap_-6",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 90576.0,
+        "modeled_material_mass_kg": 0.2445552,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Stored_side_cap_342.5",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 90576.0,
+        "modeled_material_mass_kg": 0.2445552,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Cassette_rear",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 163296.0,
+        "modeled_material_mass_kg": 0.4408992,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Storage_gate",
+        "role": "gate",
+        "material": "aluminium",
+        "volume_mm3": 137000.0,
+        "modeled_material_mass_kg": 0.3699,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Storage_gate_pin_-16",
+        "role": "latch",
+        "material": "steel",
+        "volume_mm3": 251.32741228718325,
+        "modeled_material_mass_kg": 0.0019729201864543884,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Storage_gate_pin_356.5",
+        "role": "latch",
+        "material": "steel",
+        "volume_mm3": 251.32741228718365,
+        "modeled_material_mass_kg": 0.0019729201864543914,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Driven_fork_frame",
+        "role": "moving",
+        "material": "aluminium",
+        "volume_mm3": 141247.36202612924,
+        "modeled_material_mass_kg": 0.38136787747054895,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Fork_front_barrier",
+        "role": "moving",
+        "material": "aluminium",
+        "volume_mm3": 35752.5,
+        "modeled_material_mass_kg": 0.09653175,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Guide_shaft_-34",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 21614.157456697754,
+        "modeled_material_mass_kg": 0.16967113603507736,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Guide_bearing_-34",
+        "role": "moving",
+        "material": "polymer",
+        "volume_mm3": 2597.7044254370594,
+        "modeled_material_mass_kg": 0.003662763239866254,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Guide_shaft_-62",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 21614.157456697754,
+        "modeled_material_mass_kg": 0.16967113603507736,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Guide_bearing_-62",
+        "role": "moving",
+        "material": "polymer",
+        "volume_mm3": 2597.7044254370603,
+        "modeled_material_mass_kg": 0.003662763239866255,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Power_off_capture_rack",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 22359.99999999965,
+        "modeled_material_mass_kg": 0.17552599999999724,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Spring_applied_pawl",
+        "role": "moving",
+        "material": "steel",
+        "volume_mm3": 163.20000000000027,
+        "modeled_material_mass_kg": 0.0012811200000000021,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Drive_motor_envelope",
+        "role": "unselected_actuator",
+        "material": "envelope",
+        "volume_mm3": 55125.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "A_1U__Position_sensor_-203",
+        "role": "unselected_sensor",
+        "material": "envelope",
+        "volume_mm3": 1728.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "A_1U__Position_sensor_-3",
+        "role": "unselected_sensor",
+        "material": "envelope",
+        "volume_mm3": 1728.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "A_1U__Tr8x2_screw_blank",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 22066.546798814685,
+        "modeled_material_mass_kg": 0.17322239237069526,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Tr8_nut_blank",
+        "role": "drive",
+        "material": "polymer",
+        "volume_mm3": 3188.079723112549,
+        "modeled_material_mass_kg": 0.004495192409588694,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Screw_end_bearing_-440",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 1977.2398763530764,
+        "modeled_material_mass_kg": 0.01552133302937165,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Screw_end_bearing_-10",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 1977.2398763530764,
+        "modeled_material_mass_kg": 0.01552133302937165,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Passive_1U_227mm_insert",
+        "role": "passive_insert",
+        "material": "aluminium",
+        "volume_mm3": 68863.99999999997,
+        "modeled_material_mass_kg": 0.18593279999999993,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Cassette_mount_-12",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1920.0,
+        "modeled_material_mass_kg": 0.005184,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "A_1U__Cassette_mount_340.5",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1920.0,
+        "modeled_material_mass_kg": 0.005184,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Passive_payload",
+        "role": "payload",
+        "material": "payload",
+        "volume_mm3": 3405000.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "PAYLOAD_EXCLUDED"
+      },
+      {
+        "name": "B_3U__Cassette_floor",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 240570.0,
+        "modeled_material_mass_kg": 0.649539,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Support_bridge",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 218700.0,
+        "modeled_material_mass_kg": 0.59049,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Stored_side_cap_-6",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 90576.0,
+        "modeled_material_mass_kg": 0.2445552,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Stored_side_cap_342.5",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 90576.0,
+        "modeled_material_mass_kg": 0.2445552,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Cassette_rear",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 163296.0,
+        "modeled_material_mass_kg": 0.4408992,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Storage_gate",
+        "role": "gate",
+        "material": "aluminium",
+        "volume_mm3": 137000.0,
+        "modeled_material_mass_kg": 0.3699,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Storage_gate_pin_-16",
+        "role": "latch",
+        "material": "steel",
+        "volume_mm3": 251.32741228718376,
+        "modeled_material_mass_kg": 0.0019729201864543923,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Storage_gate_pin_356.5",
+        "role": "latch",
+        "material": "steel",
+        "volume_mm3": 251.32741228718368,
+        "modeled_material_mass_kg": 0.001972920186454392,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Driven_fork_frame",
+        "role": "moving",
+        "material": "aluminium",
+        "volume_mm3": 141247.36202612927,
+        "modeled_material_mass_kg": 0.381367877470549,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Fork_front_barrier",
+        "role": "moving",
+        "material": "aluminium",
+        "volume_mm3": 35752.5,
+        "modeled_material_mass_kg": 0.09653175,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Guide_shaft_-34",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 21614.15745669775,
+        "modeled_material_mass_kg": 0.16967113603507733,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Guide_bearing_-34",
+        "role": "moving",
+        "material": "polymer",
+        "volume_mm3": 2597.7044254370585,
+        "modeled_material_mass_kg": 0.0036627632398662526,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Guide_shaft_-62",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 21614.15745669775,
+        "modeled_material_mass_kg": 0.16967113603507733,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Guide_bearing_-62",
+        "role": "moving",
+        "material": "polymer",
+        "volume_mm3": 2597.704425437063,
+        "modeled_material_mass_kg": 0.003662763239866259,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Power_off_capture_rack",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 22359.999999999658,
+        "modeled_material_mass_kg": 0.1755259999999973,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Spring_applied_pawl",
+        "role": "moving",
+        "material": "steel",
+        "volume_mm3": 163.20000000000073,
+        "modeled_material_mass_kg": 0.0012811200000000056,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Drive_motor_envelope",
+        "role": "unselected_actuator",
+        "material": "envelope",
+        "volume_mm3": 55125.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "B_3U__Position_sensor_-203",
+        "role": "unselected_sensor",
+        "material": "envelope",
+        "volume_mm3": 1728.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "B_3U__Position_sensor_-3",
+        "role": "unselected_sensor",
+        "material": "envelope",
+        "volume_mm3": 1728.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "B_3U__Tr8x2_screw_blank",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 22066.54679881468,
+        "modeled_material_mass_kg": 0.17322239237069523,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Tr8_nut_blank",
+        "role": "drive",
+        "material": "polymer",
+        "volume_mm3": 3188.07972311255,
+        "modeled_material_mass_kg": 0.004495192409588696,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Screw_end_bearing_-440",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 1977.239876353075,
+        "modeled_material_mass_kg": 0.015521333029371637,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Screw_end_bearing_-10",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 1977.2398763530734,
+        "modeled_material_mass_kg": 0.015521333029371625,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Cassette_mount_-12",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1920.0,
+        "modeled_material_mass_kg": 0.005184,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "B_3U__Cassette_mount_340.5",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1920.0,
+        "modeled_material_mass_kg": 0.005184,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Passive_payload",
+        "role": "payload",
+        "material": "payload",
+        "volume_mm3": 1135000.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "PAYLOAD_EXCLUDED"
+      },
+      {
+        "name": "C_1U__Cassette_floor",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 240570.0,
+        "modeled_material_mass_kg": 0.649539,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Support_bridge",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 218700.0,
+        "modeled_material_mass_kg": 0.59049,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Stored_side_cap_-6",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 90576.0,
+        "modeled_material_mass_kg": 0.2445552,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Stored_side_cap_342.5",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 90576.0,
+        "modeled_material_mass_kg": 0.2445552,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Cassette_rear",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 163296.0,
+        "modeled_material_mass_kg": 0.4408992,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Storage_gate",
+        "role": "gate",
+        "material": "aluminium",
+        "volume_mm3": 137000.0,
+        "modeled_material_mass_kg": 0.3699,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Storage_gate_pin_-16",
+        "role": "latch",
+        "material": "steel",
+        "volume_mm3": 251.32741228718268,
+        "modeled_material_mass_kg": 0.001972920186454384,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Storage_gate_pin_356.5",
+        "role": "latch",
+        "material": "steel",
+        "volume_mm3": 251.3274122871843,
+        "modeled_material_mass_kg": 0.0019729201864543966,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Driven_fork_frame",
+        "role": "moving",
+        "material": "aluminium",
+        "volume_mm3": 141247.36202612927,
+        "modeled_material_mass_kg": 0.381367877470549,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Fork_front_barrier",
+        "role": "moving",
+        "material": "aluminium",
+        "volume_mm3": 35752.5,
+        "modeled_material_mass_kg": 0.09653175,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Guide_shaft_-34",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 21614.1574566978,
+        "modeled_material_mass_kg": 0.16967113603507772,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Guide_bearing_-34",
+        "role": "moving",
+        "material": "polymer",
+        "volume_mm3": 2597.7044254370576,
+        "modeled_material_mass_kg": 0.0036627632398662513,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Guide_shaft_-62",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 21614.15745669779,
+        "modeled_material_mass_kg": 0.16967113603507764,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Guide_bearing_-62",
+        "role": "moving",
+        "material": "polymer",
+        "volume_mm3": 2597.7044254370576,
+        "modeled_material_mass_kg": 0.0036627632398662513,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Power_off_capture_rack",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 22359.99999999965,
+        "modeled_material_mass_kg": 0.17552599999999724,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Spring_applied_pawl",
+        "role": "moving",
+        "material": "steel",
+        "volume_mm3": 163.20000000000027,
+        "modeled_material_mass_kg": 0.0012811200000000021,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Drive_motor_envelope",
+        "role": "unselected_actuator",
+        "material": "envelope",
+        "volume_mm3": 55125.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "C_1U__Position_sensor_-203",
+        "role": "unselected_sensor",
+        "material": "envelope",
+        "volume_mm3": 1728.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "C_1U__Position_sensor_-3",
+        "role": "unselected_sensor",
+        "material": "envelope",
+        "volume_mm3": 1728.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "C_1U__Tr8x2_screw_blank",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 22066.546798814736,
+        "modeled_material_mass_kg": 0.17322239237069567,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Tr8_nut_blank",
+        "role": "drive",
+        "material": "polymer",
+        "volume_mm3": 3188.079723112549,
+        "modeled_material_mass_kg": 0.004495192409588694,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Screw_end_bearing_-440",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 1977.2398763530732,
+        "modeled_material_mass_kg": 0.015521333029371623,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Screw_end_bearing_-10",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 1977.2398763530732,
+        "modeled_material_mass_kg": 0.015521333029371623,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Passive_1U_227mm_insert",
+        "role": "passive_insert",
+        "material": "aluminium",
+        "volume_mm3": 68863.99999999997,
+        "modeled_material_mass_kg": 0.18593279999999993,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Cassette_mount_-12",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1920.0,
+        "modeled_material_mass_kg": 0.005184,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "C_1U__Cassette_mount_340.5",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1920.0,
+        "modeled_material_mass_kg": 0.005184,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Passive_payload",
+        "role": "payload",
+        "material": "payload",
+        "volume_mm3": 3405000.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "PAYLOAD_EXCLUDED"
+      },
+      {
+        "name": "D_3U__Cassette_floor",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 240570.0,
+        "modeled_material_mass_kg": 0.649539,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Support_bridge",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 218700.0,
+        "modeled_material_mass_kg": 0.59049,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Stored_side_cap_-6",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 90576.0,
+        "modeled_material_mass_kg": 0.2445552,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Stored_side_cap_342.5",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 90576.0,
+        "modeled_material_mass_kg": 0.2445552,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Cassette_rear",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 163296.0,
+        "modeled_material_mass_kg": 0.4408992,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Storage_gate",
+        "role": "gate",
+        "material": "aluminium",
+        "volume_mm3": 137000.0,
+        "modeled_material_mass_kg": 0.3699,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Storage_gate_pin_-16",
+        "role": "latch",
+        "material": "steel",
+        "volume_mm3": 251.32741228718353,
+        "modeled_material_mass_kg": 0.0019729201864543905,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Storage_gate_pin_356.5",
+        "role": "latch",
+        "material": "steel",
+        "volume_mm3": 251.3274122871843,
+        "modeled_material_mass_kg": 0.0019729201864543966,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Driven_fork_frame",
+        "role": "moving",
+        "material": "aluminium",
+        "volume_mm3": 141247.36202612924,
+        "modeled_material_mass_kg": 0.38136787747054895,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Fork_front_barrier",
+        "role": "moving",
+        "material": "aluminium",
+        "volume_mm3": 35752.5,
+        "modeled_material_mass_kg": 0.09653175,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Guide_shaft_-34",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 21614.1574566977,
+        "modeled_material_mass_kg": 0.16967113603507694,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Guide_bearing_-34",
+        "role": "moving",
+        "material": "polymer",
+        "volume_mm3": 2597.7044254370585,
+        "modeled_material_mass_kg": 0.0036627632398662526,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Guide_shaft_-62",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 21614.1574566977,
+        "modeled_material_mass_kg": 0.16967113603507694,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Guide_bearing_-62",
+        "role": "moving",
+        "material": "polymer",
+        "volume_mm3": 2597.7044254370585,
+        "modeled_material_mass_kg": 0.0036627632398662526,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Power_off_capture_rack",
+        "role": "fixed",
+        "material": "steel",
+        "volume_mm3": 22359.999999999658,
+        "modeled_material_mass_kg": 0.1755259999999973,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Spring_applied_pawl",
+        "role": "moving",
+        "material": "steel",
+        "volume_mm3": 163.20000000000073,
+        "modeled_material_mass_kg": 0.0012811200000000056,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Drive_motor_envelope",
+        "role": "unselected_actuator",
+        "material": "envelope",
+        "volume_mm3": 55125.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "D_3U__Position_sensor_-203",
+        "role": "unselected_sensor",
+        "material": "envelope",
+        "volume_mm3": 1728.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "D_3U__Position_sensor_-3",
+        "role": "unselected_sensor",
+        "material": "envelope",
+        "volume_mm3": 1728.0,
+        "modeled_material_mass_kg": 0.0,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "UNCATALOGUED_NOT_ZERO"
+      },
+      {
+        "name": "D_3U__Tr8x2_screw_blank",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 22066.546798814634,
+        "modeled_material_mass_kg": 0.17322239237069487,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Tr8_nut_blank",
+        "role": "drive",
+        "material": "polymer",
+        "volume_mm3": 3188.07972311255,
+        "modeled_material_mass_kg": 0.004495192409588696,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Screw_end_bearing_-440",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 1977.239876353074,
+        "modeled_material_mass_kg": 0.015521333029371628,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Screw_end_bearing_-10",
+        "role": "drive",
+        "material": "steel",
+        "volume_mm3": 1977.2398763530753,
+        "modeled_material_mass_kg": 0.015521333029371639,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Cassette_mount_-12",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1920.0,
+        "modeled_material_mass_kg": 0.005184,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      },
+      {
+        "name": "D_3U__Cassette_mount_340.5",
+        "role": "fixed",
+        "material": "aluminium",
+        "volume_mm3": 1920.0,
+        "modeled_material_mass_kg": 0.005184,
+        "catalog_id": null,
+        "catalog_mass_kg": null,
+        "mass_status": "CAD_DENSITY_ESTIMATE"
+      }
+    ],
+    "files": {
+      "lead_screw_four_carrier_trim_R2.FCStd": "b0ff5454df958568dd3ce6526d8095e0b175556a3cb300000d31221afcfb5000",
+      "lead_screw_four_carrier_trim_R2.step": "90f6ea304a5b073ff5bb461fd39af6702f115797228fbc818bfaddc580e028fa"
+    }
+  },
+  "not_accepted": [
+    "Screw/front bearing radial0.25mm clearance remains a modeled support gap;no actual rolling elements,rated bearing,housing or retained axial load path supplied.",
+    "Guide end margin1mm at full feed is nominal only;rail retention,loaded deflection and tolerance are unqualified.",
+    "This check clears the payload rectangular corridor only;full receiver carriage,actuator,gates,docking and tolerance sweeps remain open.",
+    "All mandatory loaded/fault/return-custody/installed boundary gates remain failed/open;no selected architecture.",
+    "Catalog10x2/SB3700 actuator option still does not matchTr8 nominal CAD;R2 is not an installed purchased actuator acceptance."
+  ],
+  "all_mandatory_acceptance_gates_pass": false,
+  "elapsed_s": 123.70297126199966
+}

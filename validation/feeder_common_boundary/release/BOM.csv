@@ -1,0 +1,1029 @@
+candidate,part,quantity,mass_basis,mass_kg,source,installed_geometry_or_rating_verified
+lead_screw,Common_Receiver_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+lead_screw,Common_Receiver_clamp_5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+lead_screw,Common_Receiver_clamp_5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+lead_screw,Common_Receiver_clamp_327.5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+lead_screw,Common_Receiver_clamp_327.5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+lead_screw,Common_north_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+lead_screw,Common_aft_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+lead_screw,Common_leading_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+lead_screw,Common_receiver_floor_carriage,1,CAD_DENSITY_ESTIMATE,0.5623706529204789,Native B-rep volume*density,False
+lead_screw,Full_rail_shaft_-20,1,CAD_DENSITY_ESTIMATE,0.6313344596654047,Native B-rep volume*density,False
+lead_screw,Rail_mount_-20_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Rail_mount_-20_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Rail_mount_-20_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Rail_mount_-20_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Rail_mount_-20_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Full_rail_shaft_120,1,CAD_DENSITY_ESTIMATE,0.6313344596654048,Native B-rep volume*density,False
+lead_screw,Rail_mount_120_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Rail_mount_120_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Rail_mount_120_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Rail_mount_120_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Rail_mount_120_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+lead_screw,Full_rail_arrest_rack,1,CAD_DENSITY_ESTIMATE,0.6531200000000025,Native B-rep volume*density,False
+lead_screw,Dock_stop_mount_0,1,CAD_DENSITY_ESTIMATE,0.002726806426411932,Native B-rep volume*density,False
+lead_screw,Dock_pin_0,1,CAD_DENSITY_ESTIMATE,0.0015783361491635106,Native B-rep volume*density,False
+lead_screw,Dock_stop_mount_250,1,CAD_DENSITY_ESTIMATE,0.002726806426411931,Native B-rep volume*density,False
+lead_screw,Dock_pin_250,1,CAD_DENSITY_ESTIMATE,0.0015783361491635125,Native B-rep volume*density,False
+lead_screw,Dock_stop_mount_650,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+lead_screw,Dock_pin_650,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+lead_screw,Dock_stop_mount_900,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+lead_screw,Dock_pin_900,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+lead_screw,Full_rail_pulley_-130,1,CAD_DENSITY_ESTIMATE,0.00977160978972569,Native B-rep volume*density,False
+lead_screw,Full_rail_pulley_1430,1,CAD_DENSITY_ESTIMATE,0.009771609789725683,Native B-rep volume*density,False
+lead_screw,Full_rail_belt_-56,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+lead_screw,Full_rail_belt_-32,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+lead_screw,Full_rail_drive_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,A_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+lead_screw,A_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+lead_screw,A_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+lead_screw,A_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+lead_screw,A_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+lead_screw,A_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+lead_screw,A_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+lead_screw,A_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543884,Native B-rep volume*density,False
+lead_screw,A_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543914,Native B-rep volume*density,False
+lead_screw,A_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3814115547741913,Native B-rep volume*density,False
+lead_screw,A_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+lead_screw,A_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+lead_screw,A_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.003662763239866254,Native B-rep volume*density,False
+lead_screw,A_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+lead_screw,A_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866255,Native B-rep volume*density,False
+lead_screw,A_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+lead_screw,A_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+lead_screw,A_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,A_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,A_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,A_1U__Tr8x2_screw_blank,1,CAD_DENSITY_ESTIMATE,0.1775628167808951,Native B-rep volume*density,False
+lead_screw,A_1U__Tr8_nut_blank,1,CAD_DENSITY_ESTIMATE,0.004495192409588694,Native B-rep volume*density,False
+lead_screw,A_1U__Screw_end_bearing_-440,1,CAD_DENSITY_ESTIMATE,0.01552133302937165,Native B-rep volume*density,False
+lead_screw,A_1U__Screw_end_bearing_-10,1,CAD_DENSITY_ESTIMATE,0.01552133302937165,Native B-rep volume*density,False
+lead_screw,A_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+lead_screw,A_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+lead_screw,A_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+lead_screw,B_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+lead_screw,B_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+lead_screw,B_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+lead_screw,B_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+lead_screw,B_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+lead_screw,B_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+lead_screw,B_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+lead_screw,B_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543923,Native B-rep volume*density,False
+lead_screw,B_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.001972920186454392,Native B-rep volume*density,False
+lead_screw,B_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.38141155477419164,Native B-rep volume*density,False
+lead_screw,B_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+lead_screw,B_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+lead_screw,B_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+lead_screw,B_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+lead_screw,B_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866259,Native B-rep volume*density,False
+lead_screw,B_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+lead_screw,B_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+lead_screw,B_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,B_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,B_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,B_3U__Tr8x2_screw_blank,1,CAD_DENSITY_ESTIMATE,0.1775628167808951,Native B-rep volume*density,False
+lead_screw,B_3U__Tr8_nut_blank,1,CAD_DENSITY_ESTIMATE,0.004495192409588696,Native B-rep volume*density,False
+lead_screw,B_3U__Screw_end_bearing_-440,1,CAD_DENSITY_ESTIMATE,0.015521333029371637,Native B-rep volume*density,False
+lead_screw,B_3U__Screw_end_bearing_-10,1,CAD_DENSITY_ESTIMATE,0.015521333029371625,Native B-rep volume*density,False
+lead_screw,B_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+lead_screw,B_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+lead_screw,C_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+lead_screw,C_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+lead_screw,C_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+lead_screw,C_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+lead_screw,C_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+lead_screw,C_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+lead_screw,C_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+lead_screw,C_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.001972920186454384,Native B-rep volume*density,False
+lead_screw,C_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+lead_screw,C_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3814115547741915,Native B-rep volume*density,False
+lead_screw,C_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+lead_screw,C_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808955,Native B-rep volume*density,False
+lead_screw,C_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+lead_screw,C_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089542,Native B-rep volume*density,False
+lead_screw,C_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+lead_screw,C_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+lead_screw,C_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+lead_screw,C_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,C_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,C_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,C_1U__Tr8x2_screw_blank,1,CAD_DENSITY_ESTIMATE,0.17756281678089553,Native B-rep volume*density,False
+lead_screw,C_1U__Tr8_nut_blank,1,CAD_DENSITY_ESTIMATE,0.004495192409588694,Native B-rep volume*density,False
+lead_screw,C_1U__Screw_end_bearing_-440,1,CAD_DENSITY_ESTIMATE,0.015521333029371623,Native B-rep volume*density,False
+lead_screw,C_1U__Screw_end_bearing_-10,1,CAD_DENSITY_ESTIMATE,0.015521333029371623,Native B-rep volume*density,False
+lead_screw,C_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+lead_screw,C_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+lead_screw,C_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+lead_screw,D_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+lead_screw,D_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+lead_screw,D_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+lead_screw,D_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+lead_screw,D_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+lead_screw,D_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+lead_screw,D_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+lead_screw,D_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543905,Native B-rep volume*density,False
+lead_screw,D_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+lead_screw,D_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3814115547741917,Native B-rep volume*density,False
+lead_screw,D_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+lead_screw,D_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808947,Native B-rep volume*density,False
+lead_screw,D_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+lead_screw,D_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089467,Native B-rep volume*density,False
+lead_screw,D_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+lead_screw,D_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+lead_screw,D_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+lead_screw,D_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,D_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,D_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+lead_screw,D_3U__Tr8x2_screw_blank,1,CAD_DENSITY_ESTIMATE,0.17756281678089472,Native B-rep volume*density,False
+lead_screw,D_3U__Tr8_nut_blank,1,CAD_DENSITY_ESTIMATE,0.004495192409588696,Native B-rep volume*density,False
+lead_screw,D_3U__Screw_end_bearing_-440,1,CAD_DENSITY_ESTIMATE,0.015521333029371628,Native B-rep volume*density,False
+lead_screw,D_3U__Screw_end_bearing_-10,1,CAD_DENSITY_ESTIMATE,0.015521333029371639,Native B-rep volume*density,False
+lead_screw,D_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+lead_screw,D_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+lead_screw,local_lead_screw 3242G024BX4,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+lead_screw,local_lead_screw 32GPT 9:1,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+lead_screw,local_lead_screw MC5005S RS/CO,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+lead_screw,local_lead_screw BXW-01-10L,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.2,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+lead_screw,BB64_common_rail 3242G024BX4,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+lead_screw,BB64_common_rail 32GPT 30:1,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+lead_screw,BB64_common_rail MC5005S RS/CO,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+lead_screw,BB64_common_rail BXW-04-10L,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+lead_screw,Gate opening/latching actuators,,UNRESOLVED_NOT_ZERO,,,False
+lead_screw,Arrest-plunger return spring/release actuator,,UNRESOLVED_NOT_ZERO,,,False
+lead_screw,Position and dock sensors,,UNRESOLVED_NOT_ZERO,,,False
+lead_screw,Complete bearings/couplings/motor flange/brake adapters,,UNRESOLVED_NOT_ZERO,,,False
+lead_screw,Fasteners and retention/preload features,,UNRESOLVED_NOT_ZERO,,,False
+lead_screw,Harness/connectors/power distribution,,UNRESOLVED_NOT_ZERO,,,False
+lead_screw,Flight thermal/structure/EMC provisions,,UNRESOLVED_NOT_ZERO,,,False
+lead_screw,Approved payload and launcher interfaces,,UNRESOLVED_NOT_ZERO,,,False
+spring_dual_gate,Common_Receiver_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+spring_dual_gate,Common_Receiver_clamp_5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+spring_dual_gate,Common_Receiver_clamp_5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+spring_dual_gate,Common_Receiver_clamp_327.5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+spring_dual_gate,Common_Receiver_clamp_327.5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+spring_dual_gate,Common_north_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+spring_dual_gate,Common_aft_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+spring_dual_gate,Common_leading_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+spring_dual_gate,Common_receiver_floor_carriage,1,CAD_DENSITY_ESTIMATE,0.5623706529204789,Native B-rep volume*density,False
+spring_dual_gate,Full_rail_shaft_-20,1,CAD_DENSITY_ESTIMATE,0.6313344596654047,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_-20_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_-20_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_-20_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_-20_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_-20_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Full_rail_shaft_120,1,CAD_DENSITY_ESTIMATE,0.6313344596654048,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_120_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_120_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_120_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_120_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Rail_mount_120_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+spring_dual_gate,Full_rail_arrest_rack,1,CAD_DENSITY_ESTIMATE,0.6531200000000025,Native B-rep volume*density,False
+spring_dual_gate,Dock_stop_mount_0,1,CAD_DENSITY_ESTIMATE,0.002726806426411932,Native B-rep volume*density,False
+spring_dual_gate,Dock_pin_0,1,CAD_DENSITY_ESTIMATE,0.0015783361491635106,Native B-rep volume*density,False
+spring_dual_gate,Dock_stop_mount_250,1,CAD_DENSITY_ESTIMATE,0.002726806426411931,Native B-rep volume*density,False
+spring_dual_gate,Dock_pin_250,1,CAD_DENSITY_ESTIMATE,0.0015783361491635125,Native B-rep volume*density,False
+spring_dual_gate,Dock_stop_mount_650,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+spring_dual_gate,Dock_pin_650,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+spring_dual_gate,Dock_stop_mount_900,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+spring_dual_gate,Dock_pin_900,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+spring_dual_gate,Full_rail_pulley_-130,1,CAD_DENSITY_ESTIMATE,0.00977160978972569,Native B-rep volume*density,False
+spring_dual_gate,Full_rail_pulley_1430,1,CAD_DENSITY_ESTIMATE,0.009771609789725683,Native B-rep volume*density,False
+spring_dual_gate,Full_rail_belt_-56,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+spring_dual_gate,Full_rail_belt_-32,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+spring_dual_gate,Full_rail_drive_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,A_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+spring_dual_gate,A_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543884,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543914,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.37765315477419126,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.003662763239866254,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866255,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,A_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,A_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,A_1U__Captured_spring_wire,1,CAD_DENSITY_ESTIMATE,0.01673493422509259,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Second_escapement_gate,1,CAD_DENSITY_ESTIMATE,0.277425,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Governor_brake_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,A_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+spring_dual_gate,A_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+spring_dual_gate,B_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543923,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.001972920186454392,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.37765315477419115,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866259,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,B_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,B_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,B_3U__Captured_spring_wire,1,CAD_DENSITY_ESTIMATE,0.01673493422509261,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Second_escapement_gate,1,CAD_DENSITY_ESTIMATE,0.277425,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Governor_brake_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,B_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+spring_dual_gate,B_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+spring_dual_gate,C_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.001972920186454384,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.377653154774191,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808955,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089542,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,C_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,C_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,C_1U__Captured_spring_wire,1,CAD_DENSITY_ESTIMATE,0.0167349342250926,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Second_escapement_gate,1,CAD_DENSITY_ESTIMATE,0.277425,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Governor_brake_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,C_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+spring_dual_gate,C_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+spring_dual_gate,D_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543905,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3776531547741911,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808947,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089467,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,D_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,D_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,D_3U__Captured_spring_wire,1,CAD_DENSITY_ESTIMATE,0.016734934225092615,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Second_escapement_gate,1,CAD_DENSITY_ESTIMATE,0.277425,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Governor_brake_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+spring_dual_gate,D_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+spring_dual_gate,D_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+spring_dual_gate,local_spring_dual_gate 3242G024BX4,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+spring_dual_gate,local_spring_dual_gate 32GPT 59:1,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.2,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+spring_dual_gate,local_spring_dual_gate MC5005S RS/CO,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+spring_dual_gate,local_spring_dual_gate BXW-04-10L,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+spring_dual_gate,BB64_common_rail 3242G024BX4,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+spring_dual_gate,BB64_common_rail 32GPT 30:1,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+spring_dual_gate,BB64_common_rail MC5005S RS/CO,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+spring_dual_gate,BB64_common_rail BXW-04-10L,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+spring_dual_gate,Gate opening/latching actuators,,UNRESOLVED_NOT_ZERO,,,False
+spring_dual_gate,Arrest-plunger return spring/release actuator,,UNRESOLVED_NOT_ZERO,,,False
+spring_dual_gate,Position and dock sensors,,UNRESOLVED_NOT_ZERO,,,False
+spring_dual_gate,Complete bearings/couplings/motor flange/brake adapters,,UNRESOLVED_NOT_ZERO,,,False
+spring_dual_gate,Fasteners and retention/preload features,,UNRESOLVED_NOT_ZERO,,,False
+spring_dual_gate,Harness/connectors/power distribution,,UNRESOLVED_NOT_ZERO,,,False
+spring_dual_gate,Flight thermal/structure/EMC provisions,,UNRESOLVED_NOT_ZERO,,,False
+spring_dual_gate,Approved payload and launcher interfaces,,UNRESOLVED_NOT_ZERO,,,False
+rack_pawl,Common_Receiver_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+rack_pawl,Common_Receiver_clamp_5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+rack_pawl,Common_Receiver_clamp_5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+rack_pawl,Common_Receiver_clamp_327.5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+rack_pawl,Common_Receiver_clamp_327.5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+rack_pawl,Common_north_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+rack_pawl,Common_aft_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+rack_pawl,Common_leading_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+rack_pawl,Common_receiver_floor_carriage,1,CAD_DENSITY_ESTIMATE,0.5623706529204789,Native B-rep volume*density,False
+rack_pawl,Full_rail_shaft_-20,1,CAD_DENSITY_ESTIMATE,0.6313344596654047,Native B-rep volume*density,False
+rack_pawl,Rail_mount_-20_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Rail_mount_-20_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Rail_mount_-20_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Rail_mount_-20_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Rail_mount_-20_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Full_rail_shaft_120,1,CAD_DENSITY_ESTIMATE,0.6313344596654048,Native B-rep volume*density,False
+rack_pawl,Rail_mount_120_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Rail_mount_120_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Rail_mount_120_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Rail_mount_120_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Rail_mount_120_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+rack_pawl,Full_rail_arrest_rack,1,CAD_DENSITY_ESTIMATE,0.6531200000000025,Native B-rep volume*density,False
+rack_pawl,Dock_stop_mount_0,1,CAD_DENSITY_ESTIMATE,0.002726806426411932,Native B-rep volume*density,False
+rack_pawl,Dock_pin_0,1,CAD_DENSITY_ESTIMATE,0.0015783361491635106,Native B-rep volume*density,False
+rack_pawl,Dock_stop_mount_250,1,CAD_DENSITY_ESTIMATE,0.002726806426411931,Native B-rep volume*density,False
+rack_pawl,Dock_pin_250,1,CAD_DENSITY_ESTIMATE,0.0015783361491635125,Native B-rep volume*density,False
+rack_pawl,Dock_stop_mount_650,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+rack_pawl,Dock_pin_650,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+rack_pawl,Dock_stop_mount_900,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+rack_pawl,Dock_pin_900,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+rack_pawl,Full_rail_pulley_-130,1,CAD_DENSITY_ESTIMATE,0.00977160978972569,Native B-rep volume*density,False
+rack_pawl,Full_rail_pulley_1430,1,CAD_DENSITY_ESTIMATE,0.009771609789725683,Native B-rep volume*density,False
+rack_pawl,Full_rail_belt_-56,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+rack_pawl,Full_rail_belt_-32,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+rack_pawl,Full_rail_drive_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,A_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+rack_pawl,A_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+rack_pawl,A_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+rack_pawl,A_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+rack_pawl,A_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+rack_pawl,A_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+rack_pawl,A_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+rack_pawl,A_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543884,Native B-rep volume*density,False
+rack_pawl,A_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543914,Native B-rep volume*density,False
+rack_pawl,A_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3825023547741918,Native B-rep volume*density,False
+rack_pawl,A_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+rack_pawl,A_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+rack_pawl,A_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.003662763239866254,Native B-rep volume*density,False
+rack_pawl,A_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+rack_pawl,A_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866255,Native B-rep volume*density,False
+rack_pawl,A_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+rack_pawl,A_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+rack_pawl,A_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,A_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,A_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,A_1U__Driven_rack,1,CAD_DENSITY_ESTIMATE,0.1789799999999997,Native B-rep volume*density,False
+rack_pawl,A_1U__Index_pinion_blank,1,CAD_DENSITY_ESTIMATE,0.035512563356179014,Native B-rep volume*density,False
+rack_pawl,A_1U__Independent_index_pawl,1,CAD_DENSITY_ESTIMATE,0.0004521599999999984,Native B-rep volume*density,False
+rack_pawl,A_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+rack_pawl,A_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+rack_pawl,A_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+rack_pawl,B_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+rack_pawl,B_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+rack_pawl,B_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+rack_pawl,B_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+rack_pawl,B_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+rack_pawl,B_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+rack_pawl,B_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+rack_pawl,B_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543923,Native B-rep volume*density,False
+rack_pawl,B_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.001972920186454392,Native B-rep volume*density,False
+rack_pawl,B_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3825023547741922,Native B-rep volume*density,False
+rack_pawl,B_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+rack_pawl,B_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+rack_pawl,B_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+rack_pawl,B_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+rack_pawl,B_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866259,Native B-rep volume*density,False
+rack_pawl,B_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+rack_pawl,B_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+rack_pawl,B_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,B_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,B_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,B_3U__Driven_rack,1,CAD_DENSITY_ESTIMATE,0.1789799999999997,Native B-rep volume*density,False
+rack_pawl,B_3U__Index_pinion_blank,1,CAD_DENSITY_ESTIMATE,0.035512563356179014,Native B-rep volume*density,False
+rack_pawl,B_3U__Independent_index_pawl,1,CAD_DENSITY_ESTIMATE,0.00045215999999999567,Native B-rep volume*density,False
+rack_pawl,B_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+rack_pawl,B_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+rack_pawl,C_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+rack_pawl,C_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+rack_pawl,C_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+rack_pawl,C_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+rack_pawl,C_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+rack_pawl,C_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+rack_pawl,C_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+rack_pawl,C_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.001972920186454384,Native B-rep volume*density,False
+rack_pawl,C_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+rack_pawl,C_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3825023547741921,Native B-rep volume*density,False
+rack_pawl,C_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+rack_pawl,C_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808955,Native B-rep volume*density,False
+rack_pawl,C_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+rack_pawl,C_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089542,Native B-rep volume*density,False
+rack_pawl,C_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+rack_pawl,C_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+rack_pawl,C_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+rack_pawl,C_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,C_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,C_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,C_1U__Driven_rack,1,CAD_DENSITY_ESTIMATE,0.1789799999999997,Native B-rep volume*density,False
+rack_pawl,C_1U__Index_pinion_blank,1,CAD_DENSITY_ESTIMATE,0.035512563356179014,Native B-rep volume*density,False
+rack_pawl,C_1U__Independent_index_pawl,1,CAD_DENSITY_ESTIMATE,0.0004521599999999984,Native B-rep volume*density,False
+rack_pawl,C_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+rack_pawl,C_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+rack_pawl,C_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+rack_pawl,D_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+rack_pawl,D_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+rack_pawl,D_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+rack_pawl,D_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+rack_pawl,D_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+rack_pawl,D_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+rack_pawl,D_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+rack_pawl,D_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543905,Native B-rep volume*density,False
+rack_pawl,D_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+rack_pawl,D_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.38250235477419203,Native B-rep volume*density,False
+rack_pawl,D_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+rack_pawl,D_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808947,Native B-rep volume*density,False
+rack_pawl,D_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+rack_pawl,D_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089467,Native B-rep volume*density,False
+rack_pawl,D_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+rack_pawl,D_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+rack_pawl,D_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+rack_pawl,D_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,D_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,D_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+rack_pawl,D_3U__Driven_rack,1,CAD_DENSITY_ESTIMATE,0.1789799999999997,Native B-rep volume*density,False
+rack_pawl,D_3U__Index_pinion_blank,1,CAD_DENSITY_ESTIMATE,0.035512563356179014,Native B-rep volume*density,False
+rack_pawl,D_3U__Independent_index_pawl,1,CAD_DENSITY_ESTIMATE,0.00045215999999999567,Native B-rep volume*density,False
+rack_pawl,D_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+rack_pawl,D_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+rack_pawl,local_rack_pawl 3242G024BX4,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+rack_pawl,local_rack_pawl 32GPT 30:1,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+rack_pawl,local_rack_pawl MC5005S RS/CO,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+rack_pawl,local_rack_pawl BXW-04-10L,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+rack_pawl,BB64_common_rail 3242G024BX4,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+rack_pawl,BB64_common_rail 32GPT 30:1,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+rack_pawl,BB64_common_rail MC5005S RS/CO,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+rack_pawl,BB64_common_rail BXW-04-10L,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+rack_pawl,Gate opening/latching actuators,,UNRESOLVED_NOT_ZERO,,,False
+rack_pawl,Arrest-plunger return spring/release actuator,,UNRESOLVED_NOT_ZERO,,,False
+rack_pawl,Position and dock sensors,,UNRESOLVED_NOT_ZERO,,,False
+rack_pawl,Complete bearings/couplings/motor flange/brake adapters,,UNRESOLVED_NOT_ZERO,,,False
+rack_pawl,Fasteners and retention/preload features,,UNRESOLVED_NOT_ZERO,,,False
+rack_pawl,Harness/connectors/power distribution,,UNRESOLVED_NOT_ZERO,,,False
+rack_pawl,Flight thermal/structure/EMC provisions,,UNRESOLVED_NOT_ZERO,,,False
+rack_pawl,Approved payload and launcher interfaces,,UNRESOLVED_NOT_ZERO,,,False
+indexed_drum,Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+indexed_drum,Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+indexed_drum,Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+indexed_drum,Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+indexed_drum,Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+indexed_drum,Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+indexed_drum,Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+indexed_drum,Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543884,Native B-rep volume*density,False
+indexed_drum,Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543914,Native B-rep volume*density,False
+indexed_drum,Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.37765315477419126,Native B-rep volume*density,False
+indexed_drum,Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+indexed_drum,Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+indexed_drum,Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.003662763239866254,Native B-rep volume*density,False
+indexed_drum,Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+indexed_drum,Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866255,Native B-rep volume*density,False
+indexed_drum,Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+indexed_drum,Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+indexed_drum,Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+indexed_drum,Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+indexed_drum,Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+indexed_drum,Other_cell_2_Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+indexed_drum,Other_cell_2_Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+indexed_drum,Other_cell_2_Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+indexed_drum,Other_cell_2_Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+indexed_drum,Other_cell_2_Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+indexed_drum,Other_cell_2_Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+indexed_drum,Other_cell_2_Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543884,Native B-rep volume*density,False
+indexed_drum,Other_cell_2_Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.001972920186454392,Native B-rep volume*density,False
+indexed_drum,Drum_axle,1,CAD_DENSITY_ESTIMATE,2.061504302826191,Native B-rep volume*density,False
+indexed_drum,Drum_rotor_-120,1,CAD_DENSITY_ESTIMATE,0.9637822147321993,Native B-rep volume*density,False
+indexed_drum,Drum_rotor_360.5,1,CAD_DENSITY_ESTIMATE,0.9637822145530627,Native B-rep volume*density,False
+indexed_drum,Common_Receiver_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+indexed_drum,Common_Receiver_clamp_5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+indexed_drum,Common_Receiver_clamp_5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+indexed_drum,Common_Receiver_clamp_327.5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+indexed_drum,Common_Receiver_clamp_327.5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+indexed_drum,Common_north_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+indexed_drum,Common_aft_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+indexed_drum,Common_leading_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+indexed_drum,Common_receiver_floor_carriage,1,CAD_DENSITY_ESTIMATE,0.5623706529204789,Native B-rep volume*density,False
+indexed_drum,Other_cell_1_Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+indexed_drum,Other_cell_1_Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+indexed_drum,Other_cell_1_Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+indexed_drum,Other_cell_1_Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+indexed_drum,Other_cell_1_Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+indexed_drum,Other_cell_1_Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+indexed_drum,Other_cell_1_Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.001972920186454388,Native B-rep volume*density,False
+indexed_drum,Other_cell_1_Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543914,Native B-rep volume*density,False
+indexed_drum,Other_cell_1_Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.1859327999999996,Native B-rep volume*density,False
+indexed_drum,Other_cell_3_Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+indexed_drum,Other_cell_3_Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+indexed_drum,Other_cell_3_Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+indexed_drum,Other_cell_3_Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+indexed_drum,Other_cell_3_Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+indexed_drum,Other_cell_3_Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+indexed_drum,Other_cell_3_Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543957,Native B-rep volume*density,False
+indexed_drum,Other_cell_3_Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.001972920186454399,Native B-rep volume*density,False
+indexed_drum,Other_cell_3_Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593280000000054,Native B-rep volume*density,False
+indexed_drum,local_indexed_drum 3242G024BX4,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+indexed_drum,local_indexed_drum 32GPT 30:1,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+indexed_drum,local_indexed_drum MC5005S RS/CO,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+indexed_drum,local_indexed_drum BXW-04-10L,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+indexed_drum,extractor 3242G024BX4,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+indexed_drum,extractor 32GPT 9:1,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+indexed_drum,extractor MC5005S RS/CO,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+indexed_drum,extractor BXW-01-10L,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.2,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+indexed_drum,Gate opening/latching actuators,,UNRESOLVED_NOT_ZERO,,,False
+indexed_drum,Arrest-plunger return spring/release actuator,,UNRESOLVED_NOT_ZERO,,,False
+indexed_drum,Position and dock sensors,,UNRESOLVED_NOT_ZERO,,,False
+indexed_drum,Complete bearings/couplings/motor flange/brake adapters,,UNRESOLVED_NOT_ZERO,,,False
+indexed_drum,Fasteners and retention/preload features,,UNRESOLVED_NOT_ZERO,,,False
+indexed_drum,Harness/connectors/power distribution,,UNRESOLVED_NOT_ZERO,,,False
+indexed_drum,Flight thermal/structure/EMC provisions,,UNRESOLVED_NOT_ZERO,,,False
+indexed_drum,Approved payload and launcher interfaces,,UNRESOLVED_NOT_ZERO,,,False
+pantograph,Common_Receiver_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+pantograph,Common_Receiver_clamp_5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+pantograph,Common_Receiver_clamp_5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+pantograph,Common_Receiver_clamp_327.5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+pantograph,Common_Receiver_clamp_327.5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+pantograph,Common_north_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+pantograph,Common_aft_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+pantograph,Common_leading_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+pantograph,Common_receiver_floor_carriage,1,CAD_DENSITY_ESTIMATE,0.5623706529204789,Native B-rep volume*density,False
+pantograph,Full_rail_shaft_-20,1,CAD_DENSITY_ESTIMATE,0.6313344596654047,Native B-rep volume*density,False
+pantograph,Rail_mount_-20_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Rail_mount_-20_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Rail_mount_-20_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Rail_mount_-20_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Rail_mount_-20_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Full_rail_shaft_120,1,CAD_DENSITY_ESTIMATE,0.6313344596654048,Native B-rep volume*density,False
+pantograph,Rail_mount_120_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Rail_mount_120_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Rail_mount_120_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Rail_mount_120_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Rail_mount_120_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+pantograph,Full_rail_arrest_rack,1,CAD_DENSITY_ESTIMATE,0.6531200000000025,Native B-rep volume*density,False
+pantograph,Dock_stop_mount_0,1,CAD_DENSITY_ESTIMATE,0.002726806426411932,Native B-rep volume*density,False
+pantograph,Dock_pin_0,1,CAD_DENSITY_ESTIMATE,0.0015783361491635106,Native B-rep volume*density,False
+pantograph,Dock_stop_mount_250,1,CAD_DENSITY_ESTIMATE,0.002726806426411931,Native B-rep volume*density,False
+pantograph,Dock_pin_250,1,CAD_DENSITY_ESTIMATE,0.0015783361491635125,Native B-rep volume*density,False
+pantograph,Dock_stop_mount_650,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+pantograph,Dock_pin_650,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+pantograph,Dock_stop_mount_900,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+pantograph,Dock_pin_900,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+pantograph,Full_rail_pulley_-130,1,CAD_DENSITY_ESTIMATE,0.00977160978972569,Native B-rep volume*density,False
+pantograph,Full_rail_pulley_1430,1,CAD_DENSITY_ESTIMATE,0.009771609789725683,Native B-rep volume*density,False
+pantograph,Full_rail_belt_-56,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+pantograph,Full_rail_belt_-32,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+pantograph,Full_rail_drive_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,A_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+pantograph,A_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+pantograph,A_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+pantograph,A_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+pantograph,A_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+pantograph,A_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+pantograph,A_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+pantograph,A_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543884,Native B-rep volume*density,False
+pantograph,A_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543914,Native B-rep volume*density,False
+pantograph,A_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.37765315477419126,Native B-rep volume*density,False
+pantograph,A_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+pantograph,A_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+pantograph,A_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.003662763239866254,Native B-rep volume*density,False
+pantograph,A_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+pantograph,A_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866255,Native B-rep volume*density,False
+pantograph,A_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+pantograph,A_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+pantograph,A_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,A_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,A_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,A_1U__Scissor_-110_0A,1,CAD_DENSITY_ESTIMATE,0.013413877045147703,Native B-rep volume*density,False
+pantograph,A_1U__Scissor_-110_0B,1,CAD_DENSITY_ESTIMATE,0.013413877045147706,Native B-rep volume*density,False
+pantograph,A_1U__Scissor_-110_1A,1,CAD_DENSITY_ESTIMATE,0.013413877045147701,Native B-rep volume*density,False
+pantograph,A_1U__Scissor_-110_1B,1,CAD_DENSITY_ESTIMATE,0.013413877045147701,Native B-rep volume*density,False
+pantograph,A_1U__Scissor_-110_2A,1,CAD_DENSITY_ESTIMATE,0.013413877045147706,Native B-rep volume*density,False
+pantograph,A_1U__Scissor_-110_2B,1,CAD_DENSITY_ESTIMATE,0.013413877045147701,Native B-rep volume*density,False
+pantograph,A_1U__Scissor_input_actuator,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,A_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+pantograph,A_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+pantograph,A_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+pantograph,B_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+pantograph,B_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+pantograph,B_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+pantograph,B_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+pantograph,B_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+pantograph,B_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+pantograph,B_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+pantograph,B_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543923,Native B-rep volume*density,False
+pantograph,B_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.001972920186454392,Native B-rep volume*density,False
+pantograph,B_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.37765315477419115,Native B-rep volume*density,False
+pantograph,B_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+pantograph,B_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+pantograph,B_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+pantograph,B_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+pantograph,B_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866259,Native B-rep volume*density,False
+pantograph,B_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+pantograph,B_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+pantograph,B_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,B_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,B_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,B_3U__Scissor_-110_0A,1,CAD_DENSITY_ESTIMATE,0.013413877045147727,Native B-rep volume*density,False
+pantograph,B_3U__Scissor_-110_0B,1,CAD_DENSITY_ESTIMATE,0.013413877045147723,Native B-rep volume*density,False
+pantograph,B_3U__Scissor_-110_1A,1,CAD_DENSITY_ESTIMATE,0.013413877045147725,Native B-rep volume*density,False
+pantograph,B_3U__Scissor_-110_1B,1,CAD_DENSITY_ESTIMATE,0.013413877045147732,Native B-rep volume*density,False
+pantograph,B_3U__Scissor_-110_2A,1,CAD_DENSITY_ESTIMATE,0.013413877045147718,Native B-rep volume*density,False
+pantograph,B_3U__Scissor_-110_2B,1,CAD_DENSITY_ESTIMATE,0.013413877045147722,Native B-rep volume*density,False
+pantograph,B_3U__Scissor_input_actuator,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,B_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+pantograph,B_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+pantograph,C_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+pantograph,C_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+pantograph,C_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+pantograph,C_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+pantograph,C_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+pantograph,C_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+pantograph,C_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+pantograph,C_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.001972920186454384,Native B-rep volume*density,False
+pantograph,C_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+pantograph,C_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.377653154774191,Native B-rep volume*density,False
+pantograph,C_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+pantograph,C_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808955,Native B-rep volume*density,False
+pantograph,C_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+pantograph,C_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089542,Native B-rep volume*density,False
+pantograph,C_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+pantograph,C_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+pantograph,C_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+pantograph,C_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,C_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,C_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,C_1U__Scissor_-110_0A,1,CAD_DENSITY_ESTIMATE,0.013413877045147654,Native B-rep volume*density,False
+pantograph,C_1U__Scissor_-110_0B,1,CAD_DENSITY_ESTIMATE,0.01341387704514766,Native B-rep volume*density,False
+pantograph,C_1U__Scissor_-110_1A,1,CAD_DENSITY_ESTIMATE,0.013413877045147656,Native B-rep volume*density,False
+pantograph,C_1U__Scissor_-110_1B,1,CAD_DENSITY_ESTIMATE,0.013413877045147654,Native B-rep volume*density,False
+pantograph,C_1U__Scissor_-110_2A,1,CAD_DENSITY_ESTIMATE,0.013413877045147656,Native B-rep volume*density,False
+pantograph,C_1U__Scissor_-110_2B,1,CAD_DENSITY_ESTIMATE,0.013413877045147656,Native B-rep volume*density,False
+pantograph,C_1U__Scissor_input_actuator,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,C_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+pantograph,C_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+pantograph,C_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+pantograph,D_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+pantograph,D_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+pantograph,D_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+pantograph,D_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+pantograph,D_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+pantograph,D_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+pantograph,D_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+pantograph,D_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543905,Native B-rep volume*density,False
+pantograph,D_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+pantograph,D_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3776531547741911,Native B-rep volume*density,False
+pantograph,D_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+pantograph,D_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808947,Native B-rep volume*density,False
+pantograph,D_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+pantograph,D_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089467,Native B-rep volume*density,False
+pantograph,D_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+pantograph,D_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+pantograph,D_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+pantograph,D_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,D_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,D_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,D_3U__Scissor_-110_0A,1,CAD_DENSITY_ESTIMATE,0.01341387704514775,Native B-rep volume*density,False
+pantograph,D_3U__Scissor_-110_0B,1,CAD_DENSITY_ESTIMATE,0.01341387704514775,Native B-rep volume*density,False
+pantograph,D_3U__Scissor_-110_1A,1,CAD_DENSITY_ESTIMATE,0.013413877045147748,Native B-rep volume*density,False
+pantograph,D_3U__Scissor_-110_1B,1,CAD_DENSITY_ESTIMATE,0.013413877045147755,Native B-rep volume*density,False
+pantograph,D_3U__Scissor_-110_2A,1,CAD_DENSITY_ESTIMATE,0.013413877045147744,Native B-rep volume*density,False
+pantograph,D_3U__Scissor_-110_2B,1,CAD_DENSITY_ESTIMATE,0.01341387704514775,Native B-rep volume*density,False
+pantograph,D_3U__Scissor_input_actuator,1,UNCATALOGUED_NOT_ZERO,,,False
+pantograph,D_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+pantograph,D_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+pantograph,local_pantograph 3242G024BX4,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+pantograph,local_pantograph 32GPT 59:1,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.2,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+pantograph,local_pantograph MC5005S RS/CO,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+pantograph,local_pantograph BXW-04-10L,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+pantograph,BB64_common_rail 3242G024BX4,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+pantograph,BB64_common_rail 32GPT 30:1,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+pantograph,BB64_common_rail MC5005S RS/CO,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+pantograph,BB64_common_rail BXW-04-10L,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+pantograph,Gate opening/latching actuators,,UNRESOLVED_NOT_ZERO,,,False
+pantograph,Arrest-plunger return spring/release actuator,,UNRESOLVED_NOT_ZERO,,,False
+pantograph,Position and dock sensors,,UNRESOLVED_NOT_ZERO,,,False
+pantograph,Complete bearings/couplings/motor flange/brake adapters,,UNRESOLVED_NOT_ZERO,,,False
+pantograph,Fasteners and retention/preload features,,UNRESOLVED_NOT_ZERO,,,False
+pantograph,Harness/connectors/power distribution,,UNRESOLVED_NOT_ZERO,,,False
+pantograph,Flight thermal/structure/EMC provisions,,UNRESOLVED_NOT_ZERO,,,False
+pantograph,Approved payload and launcher interfaces,,UNRESOLVED_NOT_ZERO,,,False
+telescopic,Common_Receiver_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+telescopic,Common_Receiver_clamp_5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+telescopic,Common_Receiver_clamp_5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+telescopic,Common_Receiver_clamp_327.5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+telescopic,Common_Receiver_clamp_327.5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+telescopic,Common_north_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+telescopic,Common_aft_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+telescopic,Common_leading_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+telescopic,Common_receiver_floor_carriage,1,CAD_DENSITY_ESTIMATE,0.5623706529204789,Native B-rep volume*density,False
+telescopic,Full_rail_shaft_-20,1,CAD_DENSITY_ESTIMATE,0.6313344596654047,Native B-rep volume*density,False
+telescopic,Rail_mount_-20_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Rail_mount_-20_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Rail_mount_-20_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Rail_mount_-20_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Rail_mount_-20_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Full_rail_shaft_120,1,CAD_DENSITY_ESTIMATE,0.6313344596654048,Native B-rep volume*density,False
+telescopic,Rail_mount_120_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Rail_mount_120_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Rail_mount_120_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Rail_mount_120_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Rail_mount_120_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+telescopic,Full_rail_arrest_rack,1,CAD_DENSITY_ESTIMATE,0.6531200000000025,Native B-rep volume*density,False
+telescopic,Dock_stop_mount_0,1,CAD_DENSITY_ESTIMATE,0.002726806426411932,Native B-rep volume*density,False
+telescopic,Dock_pin_0,1,CAD_DENSITY_ESTIMATE,0.0015783361491635106,Native B-rep volume*density,False
+telescopic,Dock_stop_mount_250,1,CAD_DENSITY_ESTIMATE,0.002726806426411931,Native B-rep volume*density,False
+telescopic,Dock_pin_250,1,CAD_DENSITY_ESTIMATE,0.0015783361491635125,Native B-rep volume*density,False
+telescopic,Dock_stop_mount_650,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+telescopic,Dock_pin_650,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+telescopic,Dock_stop_mount_900,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+telescopic,Dock_pin_900,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+telescopic,Full_rail_pulley_-130,1,CAD_DENSITY_ESTIMATE,0.00977160978972569,Native B-rep volume*density,False
+telescopic,Full_rail_pulley_1430,1,CAD_DENSITY_ESTIMATE,0.009771609789725683,Native B-rep volume*density,False
+telescopic,Full_rail_belt_-56,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+telescopic,Full_rail_belt_-32,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+telescopic,Full_rail_drive_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,A_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+telescopic,A_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+telescopic,A_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+telescopic,A_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+telescopic,A_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+telescopic,A_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+telescopic,A_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+telescopic,A_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543884,Native B-rep volume*density,False
+telescopic,A_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543914,Native B-rep volume*density,False
+telescopic,A_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3856451547741919,Native B-rep volume*density,False
+telescopic,A_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+telescopic,A_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+telescopic,A_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.003662763239866254,Native B-rep volume*density,False
+telescopic,A_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+telescopic,A_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866255,Native B-rep volume*density,False
+telescopic,A_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+telescopic,A_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+telescopic,A_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,A_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,A_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,A_1U__Nested_stage_0,1,CAD_DENSITY_ESTIMATE,0.03985199999999998,Native B-rep volume*density,False
+telescopic,A_1U__Nested_stage_1,1,CAD_DENSITY_ESTIMATE,0.03013200000000001,Native B-rep volume*density,False
+telescopic,A_1U__Nested_stage_2,1,CAD_DENSITY_ESTIMATE,0.020412,Native B-rep volume*density,False
+telescopic,A_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+telescopic,A_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+telescopic,A_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+telescopic,B_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+telescopic,B_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+telescopic,B_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+telescopic,B_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+telescopic,B_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+telescopic,B_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+telescopic,B_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+telescopic,B_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543923,Native B-rep volume*density,False
+telescopic,B_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.001972920186454392,Native B-rep volume*density,False
+telescopic,B_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.38564515477419187,Native B-rep volume*density,False
+telescopic,B_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+telescopic,B_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+telescopic,B_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+telescopic,B_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+telescopic,B_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866259,Native B-rep volume*density,False
+telescopic,B_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+telescopic,B_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+telescopic,B_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,B_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,B_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,B_3U__Nested_stage_0,1,CAD_DENSITY_ESTIMATE,0.03985199999999998,Native B-rep volume*density,False
+telescopic,B_3U__Nested_stage_1,1,CAD_DENSITY_ESTIMATE,0.03013200000000001,Native B-rep volume*density,False
+telescopic,B_3U__Nested_stage_2,1,CAD_DENSITY_ESTIMATE,0.020412,Native B-rep volume*density,False
+telescopic,B_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+telescopic,B_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+telescopic,C_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+telescopic,C_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+telescopic,C_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+telescopic,C_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+telescopic,C_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+telescopic,C_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+telescopic,C_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+telescopic,C_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.001972920186454384,Native B-rep volume*density,False
+telescopic,C_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+telescopic,C_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.38564515477419187,Native B-rep volume*density,False
+telescopic,C_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+telescopic,C_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808955,Native B-rep volume*density,False
+telescopic,C_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+telescopic,C_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089542,Native B-rep volume*density,False
+telescopic,C_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+telescopic,C_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+telescopic,C_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+telescopic,C_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,C_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,C_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,C_1U__Nested_stage_0,1,CAD_DENSITY_ESTIMATE,0.03985199999999998,Native B-rep volume*density,False
+telescopic,C_1U__Nested_stage_1,1,CAD_DENSITY_ESTIMATE,0.03013200000000001,Native B-rep volume*density,False
+telescopic,C_1U__Nested_stage_2,1,CAD_DENSITY_ESTIMATE,0.020412,Native B-rep volume*density,False
+telescopic,C_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+telescopic,C_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+telescopic,C_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+telescopic,D_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+telescopic,D_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+telescopic,D_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+telescopic,D_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+telescopic,D_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+telescopic,D_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+telescopic,D_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+telescopic,D_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543905,Native B-rep volume*density,False
+telescopic,D_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+telescopic,D_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3856451547741918,Native B-rep volume*density,False
+telescopic,D_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+telescopic,D_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808947,Native B-rep volume*density,False
+telescopic,D_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+telescopic,D_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089467,Native B-rep volume*density,False
+telescopic,D_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+telescopic,D_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+telescopic,D_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+telescopic,D_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,D_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,D_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+telescopic,D_3U__Nested_stage_0,1,CAD_DENSITY_ESTIMATE,0.03985199999999998,Native B-rep volume*density,False
+telescopic,D_3U__Nested_stage_1,1,CAD_DENSITY_ESTIMATE,0.03013200000000001,Native B-rep volume*density,False
+telescopic,D_3U__Nested_stage_2,1,CAD_DENSITY_ESTIMATE,0.020412,Native B-rep volume*density,False
+telescopic,D_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+telescopic,D_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+telescopic,local_telescopic 3242G024BX4,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+telescopic,local_telescopic 32GPT 9:1,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+telescopic,local_telescopic MC5005S RS/CO,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+telescopic,local_telescopic BXW-01-10L,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.2,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+telescopic,BB64_common_rail 3242G024BX4,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+telescopic,BB64_common_rail 32GPT 30:1,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+telescopic,BB64_common_rail MC5005S RS/CO,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+telescopic,BB64_common_rail BXW-04-10L,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+telescopic,Gate opening/latching actuators,,UNRESOLVED_NOT_ZERO,,,False
+telescopic,Arrest-plunger return spring/release actuator,,UNRESOLVED_NOT_ZERO,,,False
+telescopic,Position and dock sensors,,UNRESOLVED_NOT_ZERO,,,False
+telescopic,Complete bearings/couplings/motor flange/brake adapters,,UNRESOLVED_NOT_ZERO,,,False
+telescopic,Fasteners and retention/preload features,,UNRESOLVED_NOT_ZERO,,,False
+telescopic,Harness/connectors/power distribution,,UNRESOLVED_NOT_ZERO,,,False
+telescopic,Flight thermal/structure/EMC provisions,,UNRESOLVED_NOT_ZERO,,,False
+telescopic,Approved payload and launcher interfaces,,UNRESOLVED_NOT_ZERO,,,False
+belt_shuttle,Common_Receiver_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+belt_shuttle,Common_Receiver_clamp_5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+belt_shuttle,Common_Receiver_clamp_5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+belt_shuttle,Common_Receiver_clamp_327.5_-1,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+belt_shuttle,Common_Receiver_clamp_327.5_100,1,CAD_DENSITY_ESTIMATE,0.0005023999999999999,Native B-rep volume*density,False
+belt_shuttle,Common_north_side_gate,1,CAD_DENSITY_ESTIMATE,0.2125764,Native B-rep volume*density,False
+belt_shuttle,Common_aft_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+belt_shuttle,Common_leading_corner_stop,1,CAD_DENSITY_ESTIMATE,0.022464000000000005,Native B-rep volume*density,False
+belt_shuttle,Common_receiver_floor_carriage,1,CAD_DENSITY_ESTIMATE,0.5623706529204789,Native B-rep volume*density,False
+belt_shuttle,Full_rail_shaft_-20,1,CAD_DENSITY_ESTIMATE,0.6313344596654047,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_-20_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_-20_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_-20_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_-20_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_-20_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Full_rail_shaft_120,1,CAD_DENSITY_ESTIMATE,0.6313344596654048,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_120_-150,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_120_250,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_120_650,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_120_1050,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Rail_mount_120_1438,1,CAD_DENSITY_ESTIMATE,0.0023328,Native B-rep volume*density,False
+belt_shuttle,Full_rail_arrest_rack,1,CAD_DENSITY_ESTIMATE,0.6531200000000025,Native B-rep volume*density,False
+belt_shuttle,Dock_stop_mount_0,1,CAD_DENSITY_ESTIMATE,0.002726806426411932,Native B-rep volume*density,False
+belt_shuttle,Dock_pin_0,1,CAD_DENSITY_ESTIMATE,0.0015783361491635106,Native B-rep volume*density,False
+belt_shuttle,Dock_stop_mount_250,1,CAD_DENSITY_ESTIMATE,0.002726806426411931,Native B-rep volume*density,False
+belt_shuttle,Dock_pin_250,1,CAD_DENSITY_ESTIMATE,0.0015783361491635125,Native B-rep volume*density,False
+belt_shuttle,Dock_stop_mount_650,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+belt_shuttle,Dock_pin_650,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+belt_shuttle,Dock_stop_mount_900,1,CAD_DENSITY_ESTIMATE,0.0027268064264119344,Native B-rep volume*density,False
+belt_shuttle,Dock_pin_900,1,CAD_DENSITY_ESTIMATE,0.0015783361491635071,Native B-rep volume*density,False
+belt_shuttle,Full_rail_pulley_-130,1,CAD_DENSITY_ESTIMATE,0.00977160978972569,Native B-rep volume*density,False
+belt_shuttle,Full_rail_pulley_1430,1,CAD_DENSITY_ESTIMATE,0.009771609789725683,Native B-rep volume*density,False
+belt_shuttle,Full_rail_belt_-56,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+belt_shuttle,Full_rail_belt_-32,1,CAD_DENSITY_ESTIMATE,0.0263952,Native B-rep volume*density,False
+belt_shuttle,Full_rail_drive_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,A_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+belt_shuttle,A_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+belt_shuttle,A_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+belt_shuttle,A_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+belt_shuttle,A_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+belt_shuttle,A_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+belt_shuttle,A_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+belt_shuttle,A_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543884,Native B-rep volume*density,False
+belt_shuttle,A_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543914,Native B-rep volume*density,False
+belt_shuttle,A_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3799859547741921,Native B-rep volume*density,False
+belt_shuttle,A_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+belt_shuttle,A_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+belt_shuttle,A_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.003662763239866254,Native B-rep volume*density,False
+belt_shuttle,A_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089508,Native B-rep volume*density,False
+belt_shuttle,A_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866255,Native B-rep volume*density,False
+belt_shuttle,A_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+belt_shuttle,A_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+belt_shuttle,A_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,A_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,A_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,A_1U__Drive_pulley_-430,1,CAD_DENSITY_ESTIMATE,0.009771609789725693,Native B-rep volume*density,False
+belt_shuttle,A_1U__Drive_pulley_-10,1,CAD_DENSITY_ESTIMATE,0.009771609789725692,Native B-rep volume*density,False
+belt_shuttle,A_1U__Belt_span_70.5,1,CAD_DENSITY_ESTIMATE,0.0071064000000000006,Native B-rep volume*density,False
+belt_shuttle,A_1U__Belt_span_96,1,CAD_DENSITY_ESTIMATE,0.0071064000000000006,Native B-rep volume*density,False
+belt_shuttle,A_1U__Belt_carriage_clamp,1,CAD_DENSITY_ESTIMATE,0.006804,Native B-rep volume*density,False
+belt_shuttle,A_1U__Belt_return_-430,1,CAD_DENSITY_ESTIMATE,0.0006777357831589252,Native B-rep volume*density,False
+belt_shuttle,A_1U__Belt_return_-10,1,CAD_DENSITY_ESTIMATE,0.0006777357831589257,Native B-rep volume*density,False
+belt_shuttle,A_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+belt_shuttle,A_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+belt_shuttle,A_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+belt_shuttle,B_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+belt_shuttle,B_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+belt_shuttle,B_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+belt_shuttle,B_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+belt_shuttle,B_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+belt_shuttle,B_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+belt_shuttle,B_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+belt_shuttle,B_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543923,Native B-rep volume*density,False
+belt_shuttle,B_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.001972920186454392,Native B-rep volume*density,False
+belt_shuttle,B_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.379985954774192,Native B-rep volume*density,False
+belt_shuttle,B_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+belt_shuttle,B_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+belt_shuttle,B_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+belt_shuttle,B_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089506,Native B-rep volume*density,False
+belt_shuttle,B_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.003662763239866259,Native B-rep volume*density,False
+belt_shuttle,B_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+belt_shuttle,B_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+belt_shuttle,B_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,B_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,B_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,B_3U__Drive_pulley_-430,1,CAD_DENSITY_ESTIMATE,0.009771609789725693,Native B-rep volume*density,False
+belt_shuttle,B_3U__Drive_pulley_-10,1,CAD_DENSITY_ESTIMATE,0.009771609789725692,Native B-rep volume*density,False
+belt_shuttle,B_3U__Belt_span_70.5,1,CAD_DENSITY_ESTIMATE,0.0071064000000000006,Native B-rep volume*density,False
+belt_shuttle,B_3U__Belt_span_96,1,CAD_DENSITY_ESTIMATE,0.0071064000000000006,Native B-rep volume*density,False
+belt_shuttle,B_3U__Belt_carriage_clamp,1,CAD_DENSITY_ESTIMATE,0.006804,Native B-rep volume*density,False
+belt_shuttle,B_3U__Belt_return_-430,1,CAD_DENSITY_ESTIMATE,0.0006777357831589246,Native B-rep volume*density,False
+belt_shuttle,B_3U__Belt_return_-10,1,CAD_DENSITY_ESTIMATE,0.0006777357831589265,Native B-rep volume*density,False
+belt_shuttle,B_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+belt_shuttle,B_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+belt_shuttle,C_1U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+belt_shuttle,C_1U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+belt_shuttle,C_1U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+belt_shuttle,C_1U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+belt_shuttle,C_1U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+belt_shuttle,C_1U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+belt_shuttle,C_1U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+belt_shuttle,C_1U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.001972920186454384,Native B-rep volume*density,False
+belt_shuttle,C_1U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+belt_shuttle,C_1U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.379985954774192,Native B-rep volume*density,False
+belt_shuttle,C_1U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+belt_shuttle,C_1U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808955,Native B-rep volume*density,False
+belt_shuttle,C_1U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+belt_shuttle,C_1U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089542,Native B-rep volume*density,False
+belt_shuttle,C_1U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662513,Native B-rep volume*density,False
+belt_shuttle,C_1U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.18369000000001093,Native B-rep volume*density,False
+belt_shuttle,C_1U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000021,Native B-rep volume*density,False
+belt_shuttle,C_1U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,C_1U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,C_1U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,C_1U__Drive_pulley_-430,1,CAD_DENSITY_ESTIMATE,0.009771609789725693,Native B-rep volume*density,False
+belt_shuttle,C_1U__Drive_pulley_-10,1,CAD_DENSITY_ESTIMATE,0.009771609789725692,Native B-rep volume*density,False
+belt_shuttle,C_1U__Belt_span_70.5,1,CAD_DENSITY_ESTIMATE,0.0071064000000000006,Native B-rep volume*density,False
+belt_shuttle,C_1U__Belt_span_96,1,CAD_DENSITY_ESTIMATE,0.0071064000000000006,Native B-rep volume*density,False
+belt_shuttle,C_1U__Belt_carriage_clamp,1,CAD_DENSITY_ESTIMATE,0.006804,Native B-rep volume*density,False
+belt_shuttle,C_1U__Belt_return_-430,1,CAD_DENSITY_ESTIMATE,0.0006777357831589252,Native B-rep volume*density,False
+belt_shuttle,C_1U__Belt_return_-10,1,CAD_DENSITY_ESTIMATE,0.0006777357831589257,Native B-rep volume*density,False
+belt_shuttle,C_1U__Passive_1U_227mm_insert,1,CAD_DENSITY_ESTIMATE,0.18593279999999993,Native B-rep volume*density,False
+belt_shuttle,C_1U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+belt_shuttle,C_1U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+belt_shuttle,D_3U__Passive_payload,1,PAYLOAD_EXCLUDED,,,False
+belt_shuttle,D_3U__Cassette_floor,1,CAD_DENSITY_ESTIMATE,0.649539,Native B-rep volume*density,False
+belt_shuttle,D_3U__Support_bridge,1,CAD_DENSITY_ESTIMATE,0.59049,Native B-rep volume*density,False
+belt_shuttle,D_3U__Stored_side_cap_-6,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+belt_shuttle,D_3U__Stored_side_cap_342.5,1,CAD_DENSITY_ESTIMATE,0.2445552,Native B-rep volume*density,False
+belt_shuttle,D_3U__Cassette_rear,1,CAD_DENSITY_ESTIMATE,0.4408992,Native B-rep volume*density,False
+belt_shuttle,D_3U__Storage_gate,1,CAD_DENSITY_ESTIMATE,0.3699,Native B-rep volume*density,False
+belt_shuttle,D_3U__Storage_gate_pin_-16,1,CAD_DENSITY_ESTIMATE,0.0019729201864543905,Native B-rep volume*density,False
+belt_shuttle,D_3U__Storage_gate_pin_356.5,1,CAD_DENSITY_ESTIMATE,0.0019729201864543966,Native B-rep volume*density,False
+belt_shuttle,D_3U__Driven_fork_frame,1,CAD_DENSITY_ESTIMATE,0.3799859547741918,Native B-rep volume*density,False
+belt_shuttle,D_3U__Fork_front_barrier,1,CAD_DENSITY_ESTIMATE,0.09653175,Native B-rep volume*density,False
+belt_shuttle,D_3U__Guide_shaft_-34,1,CAD_DENSITY_ESTIMATE,0.1775628167808947,Native B-rep volume*density,False
+belt_shuttle,D_3U__Guide_bearing_-34,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+belt_shuttle,D_3U__Guide_shaft_-62,1,CAD_DENSITY_ESTIMATE,0.17756281678089467,Native B-rep volume*density,False
+belt_shuttle,D_3U__Guide_bearing_-62,1,CAD_DENSITY_ESTIMATE,0.0036627632398662526,Native B-rep volume*density,False
+belt_shuttle,D_3U__Power_off_capture_rack,1,CAD_DENSITY_ESTIMATE,0.1836900000000109,Native B-rep volume*density,False
+belt_shuttle,D_3U__Spring_applied_pawl,1,CAD_DENSITY_ESTIMATE,0.0012811200000000056,Native B-rep volume*density,False
+belt_shuttle,D_3U__Drive_motor_envelope,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,D_3U__Position_sensor_-203,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,D_3U__Position_sensor_-3,1,UNCATALOGUED_NOT_ZERO,,,False
+belt_shuttle,D_3U__Drive_pulley_-430,1,CAD_DENSITY_ESTIMATE,0.009771609789725693,Native B-rep volume*density,False
+belt_shuttle,D_3U__Drive_pulley_-10,1,CAD_DENSITY_ESTIMATE,0.009771609789725692,Native B-rep volume*density,False
+belt_shuttle,D_3U__Belt_span_70.5,1,CAD_DENSITY_ESTIMATE,0.0071064000000000006,Native B-rep volume*density,False
+belt_shuttle,D_3U__Belt_span_96,1,CAD_DENSITY_ESTIMATE,0.0071064000000000006,Native B-rep volume*density,False
+belt_shuttle,D_3U__Belt_carriage_clamp,1,CAD_DENSITY_ESTIMATE,0.006804,Native B-rep volume*density,False
+belt_shuttle,D_3U__Belt_return_-430,1,CAD_DENSITY_ESTIMATE,0.0006777357831589246,Native B-rep volume*density,False
+belt_shuttle,D_3U__Belt_return_-10,1,CAD_DENSITY_ESTIMATE,0.0006777357831589265,Native B-rep volume*density,False
+belt_shuttle,D_3U__Cassette_mount_-12,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+belt_shuttle,D_3U__Cassette_mount_340.5,1,CAD_DENSITY_ESTIMATE,0.005184,Native B-rep volume*density,False
+belt_shuttle,local_belt_shuttle 3242G024BX4,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+belt_shuttle,local_belt_shuttle 32GPT 30:1,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+belt_shuttle,local_belt_shuttle MC5005S RS/CO,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+belt_shuttle,local_belt_shuttle BXW-04-10L,4,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+belt_shuttle,BB64_common_rail 3242G024BX4,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.179,https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf,False
+belt_shuttle,BB64_common_rail 32GPT 30:1,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.157,https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf,False
+belt_shuttle,BB64_common_rail MC5005S RS/CO,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.23,https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf,False
+belt_shuttle,BB64_common_rail BXW-04-10L,1,CATALOG_PROTOTYPE_OPTION_NOT_INSTALLED_ASSEMBLY,0.6,https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf,False
+belt_shuttle,Gate opening/latching actuators,,UNRESOLVED_NOT_ZERO,,,False
+belt_shuttle,Arrest-plunger return spring/release actuator,,UNRESOLVED_NOT_ZERO,,,False
+belt_shuttle,Position and dock sensors,,UNRESOLVED_NOT_ZERO,,,False
+belt_shuttle,Complete bearings/couplings/motor flange/brake adapters,,UNRESOLVED_NOT_ZERO,,,False
+belt_shuttle,Fasteners and retention/preload features,,UNRESOLVED_NOT_ZERO,,,False
+belt_shuttle,Harness/connectors/power distribution,,UNRESOLVED_NOT_ZERO,,,False
+belt_shuttle,Flight thermal/structure/EMC provisions,,UNRESOLVED_NOT_ZERO,,,False
+belt_shuttle,Approved payload and launcher interfaces,,UNRESOLVED_NOT_ZERO,,,False

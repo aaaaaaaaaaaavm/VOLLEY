@@ -1,0 +1,150 @@
+{
+  "CAD": "FM06-R1 unchanged",
+  "CAD_sha256": "c5213575d345a79bddf1a37246ced5b6d5ef68ec4894693aadb54fa41186d6fb",
+  "deflection_mm": 0.005,
+  "construction": "Core box plus intersections of convex filleted rail prisms with non-overlapping external core-plane slabs. Shared boundaries permitted; positive interior overlap rejected. Homogeneous payload mass/inertia preserved from full native solid, not summed from collision hulls.",
+  "configurations": [
+    {
+      "size": "1U",
+      "missing_volume_mm3": 0.0,
+      "extra_volume_mm3": 0.0,
+      "maximum_pair_overlap_mm3": 0.0,
+      "pieces": [
+        {
+          "index": 0,
+          "volume_mm3": 1112413.5,
+          "vertices": 8,
+          "triangles": 12,
+          "obj_sha256": "4478816d9617e11011a54e8db7968e0efeddf4f4acd55718c546cc5830d66550"
+        },
+        {
+          "index": 1,
+          "volume_mm3": 438.58498039604865,
+          "vertices": 284,
+          "triangles": 564,
+          "obj_sha256": "1fed41a91338e764abff785c98919f606a69a73cde95c05295ba05e910bf24b0"
+        },
+        {
+          "index": 2,
+          "volume_mm3": 429.6426915456111,
+          "vertices": 216,
+          "triangles": 428,
+          "obj_sha256": "c2401d19552e920e7c6d2c09679751a8d25c2b4613b6103285bbf484850e6c10"
+        },
+        {
+          "index": 3,
+          "volume_mm3": 438.5849803960483,
+          "vertices": 284,
+          "triangles": 564,
+          "obj_sha256": "c5d1f06eb2aecb792a185e60e6d809848be7b53f01c63190428b7aa4f4aafe0d"
+        },
+        {
+          "index": 4,
+          "volume_mm3": 429.64269154561316,
+          "vertices": 216,
+          "triangles": 428,
+          "obj_sha256": "949840857a54f1eed3eb522262afffadf91ee0b24e3ac08ed91cab034cd7da73"
+        },
+        {
+          "index": 5,
+          "volume_mm3": 438.584980396046,
+          "vertices": 284,
+          "triangles": 564,
+          "obj_sha256": "92d6d17ed76717d40a16d3a1d3ec40613b8ec8ceab2c106eb0e0e2a8f6e286db"
+        },
+        {
+          "index": 6,
+          "volume_mm3": 429.64269154560964,
+          "vertices": 216,
+          "triangles": 428,
+          "obj_sha256": "92bd095b813862b7c1bf2f22ef4539fed27f5f0df45e454ee3e21bb64af24037"
+        },
+        {
+          "index": 7,
+          "volume_mm3": 438.58498039604615,
+          "vertices": 284,
+          "triangles": 564,
+          "obj_sha256": "081d010b82401bf87f49547c2b38740b0595b24f8afbebe71e249b6f710abc89"
+        },
+        {
+          "index": 8,
+          "volume_mm3": 429.6426915456087,
+          "vertices": 216,
+          "triangles": 428,
+          "obj_sha256": "16ec58dbe19ae9479ce102bfd17ac43cd1c445bb06dcfb1d487cfdf7cc3d3165"
+        }
+      ]
+    },
+    {
+      "size": "3U",
+      "missing_volume_mm3": 0.0,
+      "extra_volume_mm3": 0.0,
+      "maximum_pair_overlap_mm3": 0.0,
+      "pieces": [
+        {
+          "index": 0,
+          "volume_mm3": 3337240.5,
+          "vertices": 8,
+          "triangles": 12,
+          "obj_sha256": "78465ed936624f1d8f075e8aae575a34c4711ca72a792d6656533a22455c0973"
+        },
+        {
+          "index": 1,
+          "volume_mm3": 1315.754941188146,
+          "vertices": 284,
+          "triangles": 564,
+          "obj_sha256": "3b3d46c6b1c1efc4c0f494f048cde511ef8a56f254f63f9efd80a4ed2d5d4272"
+        },
+        {
+          "index": 2,
+          "volume_mm3": 1288.9280746368336,
+          "vertices": 216,
+          "triangles": 428,
+          "obj_sha256": "8c87141abe82d256447b255e2eca29187c1ee32a58b21c64dec2fec8b58b0b2f"
+        },
+        {
+          "index": 3,
+          "volume_mm3": 1315.7549411881448,
+          "vertices": 284,
+          "triangles": 564,
+          "obj_sha256": "66d621bb73f63c00917e709dd7af6fc64e93f61be39d654cc4713d1df2b1555f"
+        },
+        {
+          "index": 4,
+          "volume_mm3": 1288.9280746368395,
+          "vertices": 216,
+          "triangles": 428,
+          "obj_sha256": "c316d65493eb96137ca15acf674f8cfcc34daab4718fcbdb7f8849cddee39bed"
+        },
+        {
+          "index": 5,
+          "volume_mm3": 1315.754941188138,
+          "vertices": 284,
+          "triangles": 564,
+          "obj_sha256": "c25eb171dcb557a39e082ceeabcc87487910ce75b2e4aa7697accae5d447068b"
+        },
+        {
+          "index": 6,
+          "volume_mm3": 1288.9280746368288,
+          "vertices": 216,
+          "triangles": 428,
+          "obj_sha256": "624e2bc9183c5d53dee07c5cf3da0d0691f708bab54d06dac0a259b33f7e7e39"
+        },
+        {
+          "index": 7,
+          "volume_mm3": 1315.7549411881384,
+          "vertices": 284,
+          "triangles": 564,
+          "obj_sha256": "84a96202a2b175dfddf91d20216d6981ecb9e93d6fab2177bb835dddc7b41c27"
+        },
+        {
+          "index": 8,
+          "volume_mm3": 1288.9280746368258,
+          "vertices": 216,
+          "triangles": 428,
+          "obj_sha256": "f0fbc873a43870d0cf0fcaa34246e2d741299a286809b3d2de97a963d0ed69b0"
+        }
+      ]
+    }
+  ]
+}

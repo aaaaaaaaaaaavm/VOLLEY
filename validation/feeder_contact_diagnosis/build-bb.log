@@ -1,0 +1,16 @@
+[0/1] Re-running CMake...
+-- Chrono package prefix directory: /workspace/volley-work/native-tools/chrono10/build
+-- Inclusive list of Chrono components: 
+-- Eigen3 found
+-- OpenMP found
+-- Requested components
+-- Chrono libraries not found for the debug configuration: ChronoModels_robot;Chrono_core
+-- Configuration summary
+--   CHRONO_TARGETS           (Chrono targets): Chrono::ChronoModels_robot;Chrono::Chrono_core
+--   CHRONO_DATA_DIR          (Path to Chrono data folder): /workspace/volley-work/native-tools/chrono10/build/data/
+--   CHRONO_VEHICLE_DATA_DIR  (Path to Chrono::Vehicle data folder): /workspace/volley-work/native-tools/chrono10/build/data/vehicle/
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /workspace/volley-work/2026-10-22-contact/build
+[1/2] Building CXX object CMakeFiles/feeder_bb_probe.dir/feeder_bb_probe.cpp.o
+[2/2] Linking CXX executable feeder_bb_probe

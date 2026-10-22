@@ -1,0 +1,324 @@
+{
+  "sampling_s": 0.01,
+  "caution": "PSOR GetError is maximum reported normal/joint violation; BB GetError is absolute projected-gradient norm but BB stops on relative projected norm. Their raw error values are not interchangeable. Mixed angular/translational constraint residual units must not be interpreted as a position error. Full-budget count is not a proof of every solve failing on its last iteration.",
+  "cases": [
+    {
+      "case": "P3-250",
+      "stages": [
+        {
+          "label": "initial_acceleration",
+          "time_range_s": [
+            0,
+            5
+          ],
+          "samples": 499,
+          "full_budget_samples": 1,
+          "max_reported_native_error": 2.60294227771851e-06,
+          "max_sampled_native_error_time_s": 3.47,
+          "max_sampled_joint_residual_mixed": 1.8997070583291e-10
+        },
+        {
+          "label": "feed_deceleration",
+          "time_range_s": [
+            5,
+            10
+          ],
+          "samples": 500,
+          "full_budget_samples": 45,
+          "max_reported_native_error": 0.012539038159062,
+          "max_sampled_native_error_time_s": 7.93,
+          "max_sampled_joint_residual_mixed": 2.61134910652102e-06
+        },
+        {
+          "label": "dock_capture",
+          "time_range_s": [
+            10,
+            14.5
+          ],
+          "samples": 450,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.95541770614413e-08,
+          "max_sampled_native_error_time_s": 10.04,
+          "max_sampled_joint_residual_mixed": 2.40305587631545e-11
+        },
+        {
+          "label": "withdrawal",
+          "time_range_s": [
+            14.5,
+            26.50001
+          ],
+          "samples": 1201,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.98250786311045e-08,
+          "max_sampled_native_error_time_s": 24.98,
+          "max_sampled_joint_residual_mixed": 3.20675514772149e-14
+        }
+      ]
+    },
+    {
+      "case": "W3-250",
+      "stages": [
+        {
+          "label": "initial_acceleration",
+          "time_range_s": [
+            0,
+            5
+          ],
+          "samples": 499,
+          "full_budget_samples": 1,
+          "max_reported_native_error": 5.17270518685109e-06,
+          "max_sampled_native_error_time_s": 2.84,
+          "max_sampled_joint_residual_mixed": 8.09557433953296e-08
+        },
+        {
+          "label": "feed_deceleration",
+          "time_range_s": [
+            5,
+            10
+          ],
+          "samples": 500,
+          "full_budget_samples": 59,
+          "max_reported_native_error": 0.00384658769579005,
+          "max_sampled_native_error_time_s": 7.76,
+          "max_sampled_joint_residual_mixed": 1.1179436443521e-07
+        },
+        {
+          "label": "dock_capture",
+          "time_range_s": [
+            10,
+            14.5
+          ],
+          "samples": 450,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.96359989078222e-08,
+          "max_sampled_native_error_time_s": 10.93,
+          "max_sampled_joint_residual_mixed": 1.12976294956478e-11
+        },
+        {
+          "label": "withdrawal",
+          "time_range_s": [
+            14.5,
+            26.50001
+          ],
+          "samples": 1201,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.98102443125678e-08,
+          "max_sampled_native_error_time_s": 20.77,
+          "max_sampled_joint_residual_mixed": 3.2014514188233e-14
+        }
+      ]
+    },
+    {
+      "case": "B3-250",
+      "stages": [
+        {
+          "label": "initial_acceleration",
+          "time_range_s": [
+            0,
+            5
+          ],
+          "samples": 499,
+          "full_budget_samples": 2,
+          "max_reported_native_error": 2.18732045431355e-05,
+          "max_sampled_native_error_time_s": 3.91,
+          "max_sampled_joint_residual_mixed": 1.90527770914248e-09
+        },
+        {
+          "label": "feed_deceleration",
+          "time_range_s": [
+            5,
+            10
+          ],
+          "samples": 500,
+          "full_budget_samples": 160,
+          "max_reported_native_error": 0.0212277358819133,
+          "max_sampled_native_error_time_s": 6.81,
+          "max_sampled_joint_residual_mixed": 2.56299012525246e-06
+        },
+        {
+          "label": "dock_capture",
+          "time_range_s": [
+            10,
+            14.5
+          ],
+          "samples": 450,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.35722031429815e-06,
+          "max_sampled_native_error_time_s": 14.34,
+          "max_sampled_joint_residual_mixed": 2.31831796969378e-09
+        },
+        {
+          "label": "withdrawal",
+          "time_range_s": [
+            14.5,
+            26.50001
+          ],
+          "samples": 1201,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 8.55338818499884e-06,
+          "max_sampled_native_error_time_s": 25.56,
+          "max_sampled_joint_residual_mixed": 1.91552923738176e-09
+        }
+      ]
+    },
+    {
+      "case": "B3-125",
+      "stages": [
+        {
+          "label": "initial_acceleration",
+          "time_range_s": [
+            0,
+            5
+          ],
+          "samples": 499,
+          "full_budget_samples": 5,
+          "max_reported_native_error": 0.000109776760531728,
+          "max_sampled_native_error_time_s": 3.03,
+          "max_sampled_joint_residual_mixed": 2.32135734054359e-09
+        },
+        {
+          "label": "feed_deceleration",
+          "time_range_s": [
+            5,
+            10
+          ],
+          "samples": 500,
+          "full_budget_samples": 53,
+          "max_reported_native_error": 0.168675863864114,
+          "max_sampled_native_error_time_s": 8.9,
+          "max_sampled_joint_residual_mixed": 1.32902555318107e-05
+        },
+        {
+          "label": "dock_capture",
+          "time_range_s": [
+            10,
+            14.5
+          ],
+          "samples": 450,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 1.32888636011512e-05,
+          "max_sampled_native_error_time_s": 12.94,
+          "max_sampled_joint_residual_mixed": 1.50446928952432e-09
+        },
+        {
+          "label": "withdrawal",
+          "time_range_s": [
+            14.5,
+            26.50001
+          ],
+          "samples": 1201,
+          "full_budget_samples": 1,
+          "max_reported_native_error": 0.0268925375510199,
+          "max_sampled_native_error_time_s": 18.14,
+          "max_sampled_joint_residual_mixed": 2.57808778769686e-07
+        }
+      ]
+    },
+    {
+      "case": "X3-250",
+      "stages": [
+        {
+          "label": "initial_acceleration",
+          "time_range_s": [
+            0,
+            5
+          ],
+          "samples": 499,
+          "full_budget_samples": 1,
+          "max_reported_native_error": 2.60294227771851e-06,
+          "max_sampled_native_error_time_s": 3.47,
+          "max_sampled_joint_residual_mixed": 1.8997070583291e-10
+        },
+        {
+          "label": "feed_deceleration",
+          "time_range_s": [
+            5,
+            10
+          ],
+          "samples": 500,
+          "full_budget_samples": 45,
+          "max_reported_native_error": 0.012539038159062,
+          "max_sampled_native_error_time_s": 7.93,
+          "max_sampled_joint_residual_mixed": 2.61134910652102e-06
+        },
+        {
+          "label": "dock_capture",
+          "time_range_s": [
+            10,
+            14.5
+          ],
+          "samples": 450,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.95541770614413e-08,
+          "max_sampled_native_error_time_s": 10.04,
+          "max_sampled_joint_residual_mixed": 2.40305587631545e-11
+        },
+        {
+          "label": "withdrawal",
+          "time_range_s": [
+            14.5,
+            26.50001
+          ],
+          "samples": 1201,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.98250786311045e-08,
+          "max_sampled_native_error_time_s": 24.98,
+          "max_sampled_joint_residual_mixed": 3.20675514772149e-14
+        }
+      ]
+    },
+    {
+      "case": "X3-125",
+      "stages": [
+        {
+          "label": "initial_acceleration",
+          "time_range_s": [
+            0,
+            5
+          ],
+          "samples": 499,
+          "full_budget_samples": 1,
+          "max_reported_native_error": 2.28303886018481e-07,
+          "max_sampled_native_error_time_s": 3.13,
+          "max_sampled_joint_residual_mixed": 6.52278231427638e-11
+        },
+        {
+          "label": "feed_deceleration",
+          "time_range_s": [
+            5,
+            10
+          ],
+          "samples": 500,
+          "full_budget_samples": 10,
+          "max_reported_native_error": 6.75582149623157e-05,
+          "max_sampled_native_error_time_s": 8.31,
+          "max_sampled_joint_residual_mixed": 1.6483381486304e-08
+        },
+        {
+          "label": "dock_capture",
+          "time_range_s": [
+            10,
+            14.5
+          ],
+          "samples": 450,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.80494741961951e-08,
+          "max_sampled_native_error_time_s": 10.76,
+          "max_sampled_joint_residual_mixed": 2.89609156157888e-14
+        },
+        {
+          "label": "withdrawal",
+          "time_range_s": [
+            14.5,
+            26.50001
+          ],
+          "samples": 1201,
+          "full_budget_samples": 0,
+          "max_reported_native_error": 9.980088847786e-08,
+          "max_sampled_native_error_time_s": 18.5,
+          "max_sampled_joint_residual_mixed": 2.98682110903657e-14
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "X3-125",
+  "UTC": "2026-10-22T17:44:27.112886+00:00",
+  "CAD": "FM06-R1, not FM07-R6",
+  "command": [
+    "/workspace/volley-work/2026-10-22-contact/build/feeder_box_probe",
+    "/workspace/volley-work/2026-10-22-contact/geometry_guarded/3U",
+    "/workspace/volley-work/2026-10-22-contact/runs/X3-125.csv",
+    "4.0",
+    "0.1",
+    "0",
+    "0",
+    "0.000125",
+    "100",
+    "5",
+    "0",
+    "2000",
+    "10",
+    "none",
+    "0.1"
+  ],
+  "environment_overrides": {
+    "OMP_NUM_THREADS": "1",
+    "FCE_WARM": "0",
+    "FCE_SOLVER": "PSOR"
+  },
+  "source_sha256": "2d7da615efbc6097e6361863aa0cc4aafadc6c6a647850b04dd7f588e61508d5",
+  "executable_sha256": "fd69891762c602c59a5c77bb72b4fec725faac6eece538f74e66dd3429fb04d7"
+}

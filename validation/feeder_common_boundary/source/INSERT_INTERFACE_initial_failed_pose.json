@@ -1,0 +1,487 @@
+{
+  "revision": "FDR09-INSERT-R1",
+  "cases": [
+    {
+      "class": "3U",
+      "satellite_length_mm": 340.5,
+      "satellite_X_min_mm": 0,
+      "satellite_leading_datum_X_mm": 340.5,
+      "same_common_fork_width_mm": 340.5,
+      "same_common_clamp_X_mm": [
+        5,
+        327.5
+      ],
+      "surrogate_clamp_contacts": [
+        {
+          "a": "Common_Receiver_clamp_5_-1",
+          "b": "Passive_3U_payload",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        {
+          "a": "Common_Receiver_clamp_5_100",
+          "b": "Passive_3U_payload",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        {
+          "a": "Common_Receiver_clamp_327.5_-1",
+          "b": "Passive_3U_payload",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        {
+          "a": "Common_Receiver_clamp_327.5_100",
+          "b": "Passive_3U_payload",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        }
+      ],
+      "unresolved_intersections": [
+        {
+          "a": "Common_Receiver_side_gate",
+          "b": "Driven_fork_frame",
+          "volume_mm3": 67300.0,
+          "payload_involved": false,
+          "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+        },
+        {
+          "a": "Common_north_side_gate",
+          "b": "Fork_front_barrier",
+          "volume_mm3": 23835.0,
+          "payload_involved": false,
+          "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+        },
+        {
+          "a": "Common_aft_corner_stop",
+          "b": "Common_receiver_floor_carriage",
+          "volume_mm3": 1664.0,
+          "payload_involved": false,
+          "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+        },
+        {
+          "a": "Common_leading_corner_stop",
+          "b": "Common_receiver_floor_carriage",
+          "volume_mm3": 1664.0,
+          "payload_involved": false,
+          "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+        }
+      ],
+      "insert_mass_properties": null,
+      "insert_to_satellite": null,
+      "native": {
+        "stem": "Common_receiver_3U_insert_R1",
+        "part_count": 12,
+        "step_solid_count": 12,
+        "step_valid": true,
+        "step_volume_error_mm3": -6.984919309616089e-09,
+        "BOM": [
+          {
+            "name": "Common_Receiver_side_gate",
+            "role": "gate",
+            "material": "aluminium",
+            "volume_mm3": 78732.0,
+            "modeled_material_mass_kg": 0.2125764,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_Receiver_clamp_5_-1",
+            "role": "clamp",
+            "material": "steel",
+            "volume_mm3": 63.999999999999986,
+            "modeled_material_mass_kg": 0.0005023999999999999,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_Receiver_clamp_5_100",
+            "role": "clamp",
+            "material": "steel",
+            "volume_mm3": 63.999999999999986,
+            "modeled_material_mass_kg": 0.0005023999999999999,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_Receiver_clamp_327.5_-1",
+            "role": "clamp",
+            "material": "steel",
+            "volume_mm3": 63.999999999999986,
+            "modeled_material_mass_kg": 0.0005023999999999999,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_Receiver_clamp_327.5_100",
+            "role": "clamp",
+            "material": "steel",
+            "volume_mm3": 63.999999999999986,
+            "modeled_material_mass_kg": 0.0005023999999999999,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_north_side_gate",
+            "role": "gate",
+            "material": "aluminium",
+            "volume_mm3": 78732.0,
+            "modeled_material_mass_kg": 0.2125764,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_aft_corner_stop",
+            "role": "receiver",
+            "material": "aluminium",
+            "volume_mm3": 8576.000000000002,
+            "modeled_material_mass_kg": 0.023155200000000004,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_leading_corner_stop",
+            "role": "gate",
+            "material": "aluminium",
+            "volume_mm3": 8576.000000000002,
+            "modeled_material_mass_kg": 0.023155200000000004,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_receiver_floor_carriage",
+            "role": "receiver",
+            "material": "aluminium",
+            "volume_mm3": 208285.42700758477,
+            "modeled_material_mass_kg": 0.5623706529204789,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Passive_3U_payload",
+            "role": "payload",
+            "material": "payload",
+            "volume_mm3": 3405000.0,
+            "modeled_material_mass_kg": 0.0,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "PAYLOAD_EXCLUDED"
+          },
+          {
+            "name": "Driven_fork_frame",
+            "role": "moving",
+            "material": "aluminium",
+            "volume_mm3": 141263.53880525604,
+            "modeled_material_mass_kg": 0.3814115547741913,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Fork_front_barrier",
+            "role": "moving",
+            "material": "aluminium",
+            "volume_mm3": 35752.5,
+            "modeled_material_mass_kg": 0.09653175,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          }
+        ],
+        "files": {
+          "Common_receiver_3U_insert_R1.FCStd": "e7f80418275c59037b9d58d58e240a7412d0fa1d29bfc5aa61798c6e61df2e75",
+          "Common_receiver_3U_insert_R1.step": "3fd5e416cffccaf05efff65f429ddcf8b08dd4051d49ed9e30dcaf8ade2da59b"
+        }
+      },
+      "axial_free_travel_each_direction_mm": 2,
+      "functional_acceptance": false,
+      "open": [
+        "Dedicated insert must remain positively captive through release and empty return;lock not rated",
+        "Leading corner stop lift,lock,actuator and release sequence unaccepted",
+        "Contact surfaces are approved-design surrogates only;actual spacecraftICD pending",
+        "Thermal,tolerance,loaded contact and arbitrary-attitude custody unaccepted"
+      ]
+    },
+    {
+      "class": "1U",
+      "satellite_length_mm": 113.5,
+      "satellite_X_min_mm": 227,
+      "satellite_leading_datum_X_mm": 340.5,
+      "same_common_fork_width_mm": 340.5,
+      "same_common_clamp_X_mm": [
+        5,
+        327.5
+      ],
+      "surrogate_clamp_contacts": [
+        {
+          "a": "Common_Receiver_clamp_5_-1",
+          "b": "Passive_1U_227mm_insert",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        {
+          "a": "Common_Receiver_clamp_5_100",
+          "b": "Passive_1U_227mm_insert",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        {
+          "a": "Common_Receiver_clamp_327.5_-1",
+          "b": "Passive_1U_payload",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        {
+          "a": "Common_Receiver_clamp_327.5_100",
+          "b": "Passive_1U_payload",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        }
+      ],
+      "unresolved_intersections": [
+        {
+          "a": "Common_Receiver_side_gate",
+          "b": "Driven_fork_frame",
+          "volume_mm3": 67300.0,
+          "payload_involved": false,
+          "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+        },
+        {
+          "a": "Common_north_side_gate",
+          "b": "Fork_front_barrier",
+          "volume_mm3": 23835.0,
+          "payload_involved": false,
+          "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+        },
+        {
+          "a": "Common_aft_corner_stop",
+          "b": "Common_receiver_floor_carriage",
+          "volume_mm3": 1664.0,
+          "payload_involved": false,
+          "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+        },
+        {
+          "a": "Common_leading_corner_stop",
+          "b": "Common_receiver_floor_carriage",
+          "volume_mm3": 1664.0,
+          "payload_involved": false,
+          "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+        }
+      ],
+      "insert_mass_properties": {
+        "modeled_material_mass_kg": 0.18593279999999993,
+        "modeled_material_CG_mm": [
+          113.50000000000004,
+          49.99999999999999,
+          71.99999999999993
+        ],
+        "modeled_material_inertia_CG_kg_m2": [
+          [
+            0.0007496792063999985,
+            -6.437301635742187e-19,
+            -1.2874603271484374e-18
+          ],
+          [
+            -6.437301635742187e-19,
+            0.0014095434816000102,
+            -8.851289749145507e-19
+          ],
+          [
+            -1.2874603271484374e-18,
+            -8.851289749145507e-19,
+            0.0014095434816000056
+          ]
+        ],
+        "all_geometry_bounds_mm": [
+          0.0,
+          227.0,
+          0.0,
+          100.0,
+          22.0,
+          122.0
+        ],
+        "all_geometry_box_litre": 2.27
+      },
+      "insert_to_satellite": {
+        "a": "Passive_1U_227mm_insert",
+        "b": "Passive_1U_payload",
+        "distance_mm": 0.0,
+        "penetration_mm3": 0.0,
+        "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+      },
+      "native": {
+        "stem": "Common_receiver_1U_insert_R1",
+        "part_count": 13,
+        "step_solid_count": 13,
+        "step_valid": true,
+        "step_volume_error_mm3": -6.28642737865448e-09,
+        "BOM": [
+          {
+            "name": "Common_Receiver_side_gate",
+            "role": "gate",
+            "material": "aluminium",
+            "volume_mm3": 78732.0,
+            "modeled_material_mass_kg": 0.2125764,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_Receiver_clamp_5_-1",
+            "role": "clamp",
+            "material": "steel",
+            "volume_mm3": 63.999999999999986,
+            "modeled_material_mass_kg": 0.0005023999999999999,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_Receiver_clamp_5_100",
+            "role": "clamp",
+            "material": "steel",
+            "volume_mm3": 63.999999999999986,
+            "modeled_material_mass_kg": 0.0005023999999999999,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_Receiver_clamp_327.5_-1",
+            "role": "clamp",
+            "material": "steel",
+            "volume_mm3": 63.999999999999986,
+            "modeled_material_mass_kg": 0.0005023999999999999,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_Receiver_clamp_327.5_100",
+            "role": "clamp",
+            "material": "steel",
+            "volume_mm3": 63.999999999999986,
+            "modeled_material_mass_kg": 0.0005023999999999999,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_north_side_gate",
+            "role": "gate",
+            "material": "aluminium",
+            "volume_mm3": 78732.0,
+            "modeled_material_mass_kg": 0.2125764,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_aft_corner_stop",
+            "role": "receiver",
+            "material": "aluminium",
+            "volume_mm3": 8576.000000000002,
+            "modeled_material_mass_kg": 0.023155200000000004,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_leading_corner_stop",
+            "role": "gate",
+            "material": "aluminium",
+            "volume_mm3": 8576.000000000002,
+            "modeled_material_mass_kg": 0.023155200000000004,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Common_receiver_floor_carriage",
+            "role": "receiver",
+            "material": "aluminium",
+            "volume_mm3": 208285.42700758477,
+            "modeled_material_mass_kg": 0.5623706529204789,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Passive_1U_payload",
+            "role": "payload",
+            "material": "payload",
+            "volume_mm3": 1135000.0,
+            "modeled_material_mass_kg": 0.0,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "PAYLOAD_EXCLUDED"
+          },
+          {
+            "name": "Passive_1U_227mm_insert",
+            "role": "passive_insert",
+            "material": "aluminium",
+            "volume_mm3": 68863.99999999997,
+            "modeled_material_mass_kg": 0.18593279999999993,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Driven_fork_frame",
+            "role": "moving",
+            "material": "aluminium",
+            "volume_mm3": 141263.53880525604,
+            "modeled_material_mass_kg": 0.3814115547741913,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          },
+          {
+            "name": "Fork_front_barrier",
+            "role": "moving",
+            "material": "aluminium",
+            "volume_mm3": 35752.5,
+            "modeled_material_mass_kg": 0.09653175,
+            "catalog_id": null,
+            "catalog_mass_kg": null,
+            "mass_status": "CAD_DENSITY_ESTIMATE"
+          }
+        ],
+        "files": {
+          "Common_receiver_1U_insert_R1.FCStd": "f840307f81f6ad3beb186d4264fd4bf70aeb0f8f22770be7fe626ea7d14d5e0f",
+          "Common_receiver_1U_insert_R1.step": "a8ec3be179498ceba8224ee6fcfea271fc79da73231edef8fc3ce030de7540dd"
+        }
+      },
+      "axial_free_travel_each_direction_mm": 2,
+      "functional_acceptance": false,
+      "open": [
+        "Dedicated insert must remain positively captive through release and empty return;lock not rated",
+        "Leading corner stop lift,lock,actuator and release sequence unaccepted",
+        "Contact surfaces are approved-design surrogates only;actual spacecraftICD pending",
+        "Thermal,tolerance,loaded contact and arbitrary-attitude custody unaccepted"
+      ]
+    }
+  ],
+  "same_release_datum": true,
+  "one_common_receiver": true,
+  "insert_change_mechanism_required": false,
+  "operating_concept": "Each1U has a dedicated passive locator in a3U outer feed package. Locator transfers with1U,remains captive in common receiver during satellite release,and returns to its dedicated cassette;no active onboard insert changer is assumed. This operating concept requires positive lock/return proof.",
+  "elapsed_s": 25.40476799499993
+}

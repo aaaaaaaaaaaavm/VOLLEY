@@ -1,0 +1,75 @@
+{
+  "method": "CadQuery STEP readback; separate importer using OpenCascade, not a different geometric kernel",
+  "cases": [
+    {
+      "file": "cad/FM07_R6_1U_exit_gate.step",
+      "kind": "part",
+      "valid": true,
+      "solids": 1,
+      "volume_difference_mm3": -6.366462912410498e-12
+    },
+    {
+      "file": "cad/FM07_R6_1U_exit_unlocked.step",
+      "kind": "assembly",
+      "valid": true,
+      "solids": 37,
+      "volume_difference_mm3": -3.9814040064811707e-08
+    },
+    {
+      "file": "cad/FM07_R6_1U_exit_open.step",
+      "kind": "assembly",
+      "valid": true,
+      "solids": 37,
+      "volume_difference_mm3": -4.0279701352119446e-08
+    },
+    {
+      "file": "cad/FM07_R6_1U_empty_carrier_home.step",
+      "kind": "assembly",
+      "valid": true,
+      "solids": 37,
+      "volume_difference_mm3": -9.010545909404755e-08
+    },
+    {
+      "file": "cad/FM07_R6_1U_exit_closed.step",
+      "kind": "assembly",
+      "valid": true,
+      "solids": 37,
+      "volume_difference_mm3": -8.89413058757782e-08
+    },
+    {
+      "file": "cad/FM07_R6_3U_exit_gate.step",
+      "kind": "part",
+      "valid": true,
+      "solids": 1,
+      "volume_difference_mm3": -6.366462912410498e-12
+    },
+    {
+      "file": "cad/FM07_R6_3U_exit_unlocked.step",
+      "kind": "assembly",
+      "valid": true,
+      "solids": 37,
+      "volume_difference_mm3": -9.12696123123169e-08
+    },
+    {
+      "file": "cad/FM07_R6_3U_exit_open.step",
+      "kind": "assembly",
+      "valid": true,
+      "solids": 37,
+      "volume_difference_mm3": -8.195638656616211e-08
+    },
+    {
+      "file": "cad/FM07_R6_3U_empty_carrier_home.step",
+      "kind": "assembly",
+      "valid": true,
+      "solids": 37,
+      "volume_difference_mm3": -1.7229467630386353e-07
+    },
+    {
+      "file": "cad/FM07_R6_3U_exit_closed.step",
+      "kind": "assembly",
+      "valid": true,
+      "solids": 37,
+      "volume_difference_mm3": -1.7043203115463257e-07
+    }
+  ]
+}

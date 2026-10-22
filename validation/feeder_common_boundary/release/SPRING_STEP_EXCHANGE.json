@@ -1,0 +1,173 @@
+{
+  "check": "SPRING_STEP_SERIALIZATION_DIAGNOSTIC",
+  "native_total_volume_mm3": 14141483.043688074,
+  "step_total_volume_mm3": 14141483.530064775,
+  "total_volume_difference_mm3": 0.4863767009228468,
+  "total_volume_relative_difference": 3.439361341524478e-08,
+  "initial_failed_limit": "max(0.01mm3,1e-9*assembly volume)",
+  "current_exchange_volume_limit": "max(0.01mm3,1e-6*assembly volume);numerical serialization only",
+  "exchange_volume_criterion_pass": true,
+  "sampled_surface_diagnostic_limit_mm": 0.001,
+  "sampled_surface_diagnostic_pass": true,
+  "functional_criteria_changed": false,
+  "functional_gates": "0.15mm plunger side clearance,0.2mm pitch backlash,1mm retracted tooth clearance remain separate; none relaxed by STEP exchange criterion. Surface sampling is not a Hausdorff/continuous/tolerance/loaded-motion proof.",
+  "coil_checks": [
+    {
+      "part": "A_1U__Captured_spring_wire",
+      "native_volume_mm3": 2131.8387547888656,
+      "step_volume_mm3": 2131.8387547925718,
+      "native_bbox_mm": [
+        -64.68189838315726,
+        -31.31810161604622,
+        -411.1400674299474,
+        -228.86002070723748,
+        67.31808967200449,
+        100.6823337697005
+      ],
+      "step_bbox_mm": [
+        -64.68189838315,
+        -31.31810161604,
+        -411.1400674299,
+        -228.8600207072,
+        67.318089672005,
+        100.6823337697
+      ],
+      "maximum_bbox_coordinate_change_mm": 4.7407411329913884e-11,
+      "sampled_surface_distances": [
+        {
+          "direction": "native_to_step",
+          "source_surface_vertices_available": 229875,
+          "sampled_vertex_count": 162,
+          "maximum_sampled_surface_distance_mm": 6.195236944910539e-11,
+          "rms_sampled_surface_distance_mm": 3.0874757472227484e-11
+        },
+        {
+          "direction": "step_to_native",
+          "source_surface_vertices_available": 233225,
+          "sampled_vertex_count": 162,
+          "maximum_sampled_surface_distance_mm": 5.7678691168703016e-11,
+          "rms_sampled_surface_distance_mm": 3.20152528529914e-11
+        }
+      ]
+    },
+    {
+      "part": "B_3U__Captured_spring_wire",
+      "native_volume_mm3": 2131.838754788865,
+      "step_volume_mm3": 2131.8387547857988,
+      "native_bbox_mm": [
+        621.8181016160462,
+        655.1818983831572,
+        328.8600207072375,
+        511.1400674299474,
+        67.31808967200449,
+        100.6823337697005
+      ],
+      "step_bbox_mm": [
+        621.81810161604,
+        655.18189838315,
+        328.86002070723,
+        511.14006742994,
+        67.318089672004,
+        100.6823337697
+      ],
+      "maximum_bbox_coordinate_change_mm": 7.503331289626658e-12,
+      "sampled_surface_distances": [
+        {
+          "direction": "native_to_step",
+          "source_surface_vertices_available": 229875,
+          "sampled_vertex_count": 162,
+          "maximum_sampled_surface_distance_mm": 8.388028470946905e-12,
+          "rms_sampled_surface_distance_mm": 3.958530795140788e-12
+        },
+        {
+          "direction": "step_to_native",
+          "source_surface_vertices_available": 229875,
+          "sampled_vertex_count": 162,
+          "maximum_sampled_surface_distance_mm": 8.372509307302032e-12,
+          "rms_sampled_surface_distance_mm": 3.992820754433828e-12
+        }
+      ]
+    },
+    {
+      "part": "C_1U__Captured_spring_wire",
+      "native_volume_mm3": 2131.8387547888656,
+      "step_volume_mm3": 2131.838754794521,
+      "native_bbox_mm": [
+        585.3181016168428,
+        618.6818983839538,
+        -411.1400674299474,
+        -228.86002070723748,
+        67.31808967200449,
+        100.6823337697005
+      ],
+      "step_bbox_mm": [
+        585.31810161684,
+        618.68189838395,
+        -411.1400674299,
+        -228.8600207072,
+        67.318089672005,
+        100.6823337697
+      ],
+      "maximum_bbox_coordinate_change_mm": 4.7407411329913884e-11,
+      "sampled_surface_distances": [
+        {
+          "direction": "native_to_step",
+          "source_surface_vertices_available": 229875,
+          "sampled_vertex_count": 162,
+          "maximum_sampled_surface_distance_mm": 6.447056330649395e-11,
+          "rms_sampled_surface_distance_mm": 3.089011796962586e-11
+        },
+        {
+          "direction": "step_to_native",
+          "source_surface_vertices_available": 233209,
+          "sampled_vertex_count": 162,
+          "maximum_sampled_surface_distance_mm": 7.776548597094147e-11,
+          "rms_sampled_surface_distance_mm": 3.351616357289965e-11
+        }
+      ]
+    },
+    {
+      "part": "D_3U__Captured_spring_wire",
+      "native_volume_mm3": 2131.8387547888665,
+      "step_volume_mm3": 2131.83875480511,
+      "native_bbox_mm": [
+        1271.8181016160463,
+        1305.1818983831572,
+        328.8600207072375,
+        511.1400674299474,
+        67.31808967200449,
+        100.6823337697005
+      ],
+      "step_bbox_mm": [
+        1271.818101616,
+        1305.181898383,
+        328.86002070723,
+        511.14006742994,
+        67.318089672004,
+        100.6823337697
+      ],
+      "maximum_bbox_coordinate_change_mm": 1.5711520973127335e-10,
+      "sampled_surface_distances": [
+        {
+          "direction": "native_to_step",
+          "source_surface_vertices_available": 229875,
+          "sampled_vertex_count": 162,
+          "maximum_sampled_surface_distance_mm": 3.6452461099420617e-10,
+          "rms_sampled_surface_distance_mm": 7.072437152146467e-11
+        },
+        {
+          "direction": "step_to_native",
+          "source_surface_vertices_available": 233239,
+          "sampled_vertex_count": 162,
+          "maximum_sampled_surface_distance_mm": 2.939866587589412e-10,
+          "rms_sampled_surface_distance_mm": 7.171554040496143e-11
+        }
+      ]
+    }
+  ],
+  "elapsed_s": 438.0077192990002,
+  "files": {
+    "spring_dual_gate_four_inventory_stowed.FCStd": "70bbace6f3ab721083e22230be77d34ef368c92e366de9abf89f34b453a11389",
+    "spring_dual_gate_four_inventory_stowed.step": "e802f98b780c5d2527524e7c22f9c4660728f936677a24121e6b4129fda14877"
+  }
+}

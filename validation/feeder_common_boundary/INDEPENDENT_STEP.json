@@ -1,0 +1,132 @@
+{
+  "method": "Separate CadQuery/OCC import; same kernel family, no functional acceptance.1ppm relative serialization volume criterion preserves supplied geometric exchange criterion.",
+  "exchanges": [
+    {
+      "file": "Common_receiver_1U_insert_R1.step",
+      "sha256": "ed97d1fdb5fb68e0d7d9593fa4b302f8aecb147f10517fbceb68080272c3b8d6",
+      "valid": true,
+      "solids": 13,
+      "volume_mm3": 1763525.4658128344,
+      "pass": true
+    },
+    {
+      "file": "Common_receiver_3U_insert_R1.step",
+      "sha256": "9a1674dd605aad4b0f9834fb8a359784bf08ea46a1cff1668022c375ab9e7b4b",
+      "valid": true,
+      "solids": 12,
+      "volume_mm3": 3964661.4658128344,
+      "pass": true
+    },
+    {
+      "file": "belt_shuttle_four_carrier_stowed_R1.step",
+      "sha256": "ee68e1df526701e248782df57b709d73395152a1cbdb5d91e8a255461129221a",
+      "valid": true,
+      "solids": 153,
+      "volume_mm3": 15146292.335361954,
+      "expected": {
+        "solids": 153,
+        "volume": 15146292.335361961
+      },
+      "relative_volume_error": 4.919078829298046e-16,
+      "pass": true
+    },
+    {
+      "file": "indexed_drum_four_carrier_stowed_R1.step",
+      "sha256": "bcc6a63bbad9cf04a3c159deccadf7226e8bab7f461687ba72436d194c1792fd",
+      "valid": true,
+      "solids": 58,
+      "volume_mm3": 13993883.821784437,
+      "expected": {
+        "solids": 58,
+        "volume": 13993883.392859718
+      },
+      "relative_volume_error": 3.065087130071189e-08,
+      "pass": true
+    },
+    {
+      "file": "lead_screw_four_carrier_stowed_R1.step",
+      "sha256": "7ad68a4308245fbc5cf8f62b53f1a530fc67f1de544bec0a9f629fb75eda0527",
+      "valid": true,
+      "solids": 141,
+      "volume_mm3": 15184254.214385137,
+      "expected": {
+        "solids": 141,
+        "volume": 15184254.214385143
+      },
+      "relative_volume_error": 3.680085547039258e-16,
+      "pass": true
+    },
+    {
+      "file": "lead_screw_four_carrier_trim_R2.step",
+      "sha256": "90f6ea304a5b073ff5bb461fd39af6702f115797228fbc818bfaddc580e028fa",
+      "valid": true,
+      "solids": 141,
+      "volume_mm3": 15169775.348847305,
+      "expected": {
+        "solids": 141,
+        "volume": 15169775.348847311
+      },
+      "relative_volume_error": 3.683598022509592e-16,
+      "pass": true
+    },
+    {
+      "file": "pantograph_four_carrier_stowed_R1.step",
+      "sha256": "ff6ca2fd52514f69a135d0f3894d6180b131385edf1c3ac69be6dcb32304d307",
+      "valid": true,
+      "solids": 153,
+      "volume_mm3": 15345648.68755956,
+      "expected": {
+        "solids": 153,
+        "volume": 15345648.687559571
+      },
+      "relative_volume_error": 7.282762119040175e-16,
+      "pass": true
+    },
+    {
+      "file": "rack_pawl_four_carrier_stowed_R1.step",
+      "sha256": "beb3a3d45dd331a2b6305130277831bbb65590f1c2efd75ab634ba77a41bc74c",
+      "valid": true,
+      "solids": 137,
+      "volume_mm3": 15176348.081743155,
+      "expected": {
+        "solids": 137,
+        "volume": 15176348.08174316
+      },
+      "relative_volume_error": 3.682002691026206e-16,
+      "pass": true
+    },
+    {
+      "file": "spring_dual_gate_four_carrier_stowed_R1.step",
+      "sha256": "f6c1b62d4535d1a117cbab3b707e9c070dc02444a2aa416a0667a8da1a2f6284",
+      "valid": true,
+      "solids": 137,
+      "volume_mm3": 15587165.463077653,
+      "expected": {
+        "solids": 137,
+        "volume": 15587165.463077636
+      },
+      "relative_volume_error": 1.075487803269181e-15,
+      "pass": true
+    },
+    {
+      "file": "telescopic_four_carrier_stowed_R1.step",
+      "sha256": "1b3ced931118fd0d7b8ef5d91cae2160c26aafa82e566c11915dc20de3b7579d",
+      "valid": true,
+      "solids": 137,
+      "volume_mm3": 15205398.108058477,
+      "expected": {
+        "solids": 137,
+        "volume": 15205398.108058482
+      },
+      "relative_volume_error": 3.67496819746627e-16,
+      "pass": true
+    }
+  ],
+  "software": {
+    "CadQuery": "2.8.0",
+    "OCP": "7.9.3.1"
+  },
+  "captured_source_sha256": "978c3ad256178ac10d1daec4b8e69483c4b772f8ee57a941ab74bea40c8cc9a1",
+  "distributed_source_sha256": "88cd2d6b6cc95d4379cf112e924a969b19bfb974a66ac0424d453e193bc14997",
+  "source_normalization": "Study-root path made relative; geometry import and acceptance arithmetic unchanged."
+}

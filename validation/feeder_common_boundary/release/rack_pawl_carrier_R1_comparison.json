@@ -1,0 +1,2026 @@
+{
+  "candidate": "rack_pawl",
+  "payload_manifest": {
+    "1U": 2,
+    "3U": 2
+  },
+  "payload_nominal_total_kg": 10.66,
+  "payload_upper_study_total_kg": 16.0,
+  "storage_cells": 4,
+  "receiving_ports_modeled": 1,
+  "local_feed_stations": 4,
+  "rail_dock_positions_mm": [
+    0,
+    250,
+    650,
+    900
+  ],
+  "full_rail_commanded_travel_mm": 900,
+  "BB64_full_rail_integration_acceptance": false,
+  "installed_boundary_complete": false,
+  "boundary_status": "FOUR_CELLS_ONE_RECEIVER_MODELED_INSTALLED_COMPLETENESS_OPEN",
+  "installed_mass_kg": null,
+  "installed_CG_mm": null,
+  "installed_inertia_kg_m2": null,
+  "geometry_revision": "FDR09-R1-2026-10-22",
+  "modeled_material_mass_kg": 18.617611956312295,
+  "modeled_material_CG_mm": [
+    594.6061419650609,
+    49.06690342599629,
+    51.911587713329695
+  ],
+  "modeled_material_inertia_CG_kg_m2": [
+    [
+      0.8092378070042507,
+      -0.6057115167871722,
+      0.023194662700503407
+    ],
+    [
+      -0.6057115167871722,
+      3.0928005166313945,
+      0.003926020041178092
+    ],
+    [
+      0.023194662700503407,
+      0.003926020041178092,
+      3.8356809294375296
+    ]
+  ],
+  "all_geometry_bounds_mm": [
+    -220.0,
+    1450.0,
+    -445.0,
+    545.0,
+    -6.0,
+    250.0
+  ],
+  "all_geometry_box_litre": 423.2448,
+  "stem": "rack_pawl_four_carrier_stowed_R1",
+  "part_count": 137,
+  "step_solid_count": 137,
+  "step_valid": true,
+  "step_volume_error_mm3": -3.427267074584961e-07,
+  "BOM": [
+    {
+      "name": "Common_Receiver_side_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "volume_mm3": 78732.0,
+      "modeled_material_mass_kg": 0.2125764,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Common_Receiver_clamp_5_-1",
+      "role": "clamp",
+      "material": "steel",
+      "volume_mm3": 63.999999999999986,
+      "modeled_material_mass_kg": 0.0005023999999999999,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Common_Receiver_clamp_5_100",
+      "role": "clamp",
+      "material": "steel",
+      "volume_mm3": 63.999999999999986,
+      "modeled_material_mass_kg": 0.0005023999999999999,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Common_Receiver_clamp_327.5_-1",
+      "role": "clamp",
+      "material": "steel",
+      "volume_mm3": 63.999999999999986,
+      "modeled_material_mass_kg": 0.0005023999999999999,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Common_Receiver_clamp_327.5_100",
+      "role": "clamp",
+      "material": "steel",
+      "volume_mm3": 63.999999999999986,
+      "modeled_material_mass_kg": 0.0005023999999999999,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Common_north_side_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "volume_mm3": 78732.0,
+      "modeled_material_mass_kg": 0.2125764,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Common_aft_corner_stop",
+      "role": "receiver",
+      "material": "aluminium",
+      "volume_mm3": 8320.000000000002,
+      "modeled_material_mass_kg": 0.022464000000000005,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Common_leading_corner_stop",
+      "role": "gate",
+      "material": "aluminium",
+      "volume_mm3": 8320.000000000002,
+      "modeled_material_mass_kg": 0.022464000000000005,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Common_receiver_floor_carriage",
+      "role": "receiver",
+      "material": "aluminium",
+      "volume_mm3": 208285.42700758477,
+      "modeled_material_mass_kg": 0.5623706529204789,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Full_rail_shaft_-20",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 80424.7719318987,
+      "modeled_material_mass_kg": 0.6313344596654047,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_-20_-150",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_-20_250",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_-20_650",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_-20_1050",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_-20_1438",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Full_rail_shaft_120",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 80424.77193189871,
+      "modeled_material_mass_kg": 0.6313344596654048,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_120_-150",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_120_250",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_120_650",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_120_1050",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Rail_mount_120_1438",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 864.0,
+      "modeled_material_mass_kg": 0.0023328,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Full_rail_arrest_rack",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 83200.00000000032,
+      "modeled_material_mass_kg": 0.6531200000000025,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Dock_stop_mount_0",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1009.9283060784933,
+      "modeled_material_mass_kg": 0.002726806426411932,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Dock_pin_0",
+      "role": "docking",
+      "material": "steel",
+      "volume_mm3": 201.0619298297466,
+      "modeled_material_mass_kg": 0.0015783361491635106,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Dock_stop_mount_250",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1009.9283060784929,
+      "modeled_material_mass_kg": 0.002726806426411931,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Dock_pin_250",
+      "role": "docking",
+      "material": "steel",
+      "volume_mm3": 201.06192982974684,
+      "modeled_material_mass_kg": 0.0015783361491635125,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Dock_stop_mount_650",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1009.9283060784942,
+      "modeled_material_mass_kg": 0.0027268064264119344,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Dock_pin_650",
+      "role": "docking",
+      "material": "steel",
+      "volume_mm3": 201.06192982974613,
+      "modeled_material_mass_kg": 0.0015783361491635071,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Dock_stop_mount_900",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1009.9283060784942,
+      "modeled_material_mass_kg": 0.0027268064264119344,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Dock_pin_900",
+      "role": "docking",
+      "material": "steel",
+      "volume_mm3": 201.06192982974613,
+      "modeled_material_mass_kg": 0.0015783361491635071,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Full_rail_pulley_-130",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 3619.1147369354408,
+      "modeled_material_mass_kg": 0.00977160978972569,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Full_rail_pulley_1430",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 3619.114736935438,
+      "modeled_material_mass_kg": 0.009771609789725683,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Full_rail_belt_-56",
+      "role": "drive",
+      "material": "polymer",
+      "volume_mm3": 18720.0,
+      "modeled_material_mass_kg": 0.0263952,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Full_rail_belt_-32",
+      "role": "drive",
+      "material": "polymer",
+      "volume_mm3": 18720.0,
+      "modeled_material_mass_kg": 0.0263952,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "Full_rail_drive_envelope",
+      "role": "unselected_actuator",
+      "material": "envelope",
+      "volume_mm3": 144000.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "A_1U__Passive_payload",
+      "role": "payload",
+      "material": "payload",
+      "volume_mm3": 1135000.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "PAYLOAD_EXCLUDED"
+    },
+    {
+      "name": "A_1U__Cassette_floor",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 240570.0,
+      "modeled_material_mass_kg": 0.649539,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Support_bridge",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 218700.0,
+      "modeled_material_mass_kg": 0.59049,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Stored_side_cap_-6",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 90576.0,
+      "modeled_material_mass_kg": 0.2445552,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Stored_side_cap_342.5",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 90576.0,
+      "modeled_material_mass_kg": 0.2445552,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Cassette_rear",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 163296.0,
+      "modeled_material_mass_kg": 0.4408992,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "volume_mm3": 137000.0,
+      "modeled_material_mass_kg": 0.3699,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Storage_gate_pin_-16",
+      "role": "latch",
+      "material": "steel",
+      "volume_mm3": 251.32741228718325,
+      "modeled_material_mass_kg": 0.0019729201864543884,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Storage_gate_pin_356.5",
+      "role": "latch",
+      "material": "steel",
+      "volume_mm3": 251.32741228718365,
+      "modeled_material_mass_kg": 0.0019729201864543914,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Driven_fork_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "volume_mm3": 141667.53880525622,
+      "modeled_material_mass_kg": 0.3825023547741918,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Fork_front_barrier",
+      "role": "moving",
+      "material": "aluminium",
+      "volume_mm3": 35752.5,
+      "modeled_material_mass_kg": 0.09653175,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Guide_shaft_-34",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 22619.46710584651,
+      "modeled_material_mass_kg": 0.17756281678089508,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Guide_bearing_-34",
+      "role": "moving",
+      "material": "polymer",
+      "volume_mm3": 2597.7044254370594,
+      "modeled_material_mass_kg": 0.003662763239866254,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Guide_shaft_-62",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 22619.46710584651,
+      "modeled_material_mass_kg": 0.17756281678089508,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Guide_bearing_-62",
+      "role": "moving",
+      "material": "polymer",
+      "volume_mm3": 2597.7044254370603,
+      "modeled_material_mass_kg": 0.003662763239866255,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Power_off_capture_rack",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 23400.000000001393,
+      "modeled_material_mass_kg": 0.18369000000001093,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Spring_applied_pawl",
+      "role": "moving",
+      "material": "steel",
+      "volume_mm3": 163.20000000000027,
+      "modeled_material_mass_kg": 0.0012811200000000021,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Drive_motor_envelope",
+      "role": "unselected_actuator",
+      "material": "envelope",
+      "volume_mm3": 55125.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "A_1U__Position_sensor_-203",
+      "role": "unselected_sensor",
+      "material": "envelope",
+      "volume_mm3": 1728.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "A_1U__Position_sensor_-3",
+      "role": "unselected_sensor",
+      "material": "envelope",
+      "volume_mm3": 1728.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "A_1U__Driven_rack",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 22799.999999999964,
+      "modeled_material_mass_kg": 0.1789799999999997,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Index_pinion_blank",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 4523.893421169301,
+      "modeled_material_mass_kg": 0.035512563356179014,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Independent_index_pawl",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 57.599999999999795,
+      "modeled_material_mass_kg": 0.0004521599999999984,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Passive_1U_227mm_insert",
+      "role": "passive_insert",
+      "material": "aluminium",
+      "volume_mm3": 68863.99999999997,
+      "modeled_material_mass_kg": 0.18593279999999993,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Cassette_mount_-12",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1920.0,
+      "modeled_material_mass_kg": 0.005184,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "A_1U__Cassette_mount_340.5",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1920.0,
+      "modeled_material_mass_kg": 0.005184,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Passive_payload",
+      "role": "payload",
+      "material": "payload",
+      "volume_mm3": 3405000.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "PAYLOAD_EXCLUDED"
+    },
+    {
+      "name": "B_3U__Cassette_floor",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 240570.0,
+      "modeled_material_mass_kg": 0.649539,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Support_bridge",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 218700.0,
+      "modeled_material_mass_kg": 0.59049,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Stored_side_cap_-6",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 90576.0,
+      "modeled_material_mass_kg": 0.2445552,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Stored_side_cap_342.5",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 90576.0,
+      "modeled_material_mass_kg": 0.2445552,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Cassette_rear",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 163296.0,
+      "modeled_material_mass_kg": 0.4408992,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "volume_mm3": 137000.0,
+      "modeled_material_mass_kg": 0.3699,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Storage_gate_pin_-16",
+      "role": "latch",
+      "material": "steel",
+      "volume_mm3": 251.32741228718376,
+      "modeled_material_mass_kg": 0.0019729201864543923,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Storage_gate_pin_356.5",
+      "role": "latch",
+      "material": "steel",
+      "volume_mm3": 251.32741228718368,
+      "modeled_material_mass_kg": 0.001972920186454392,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Driven_fork_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "volume_mm3": 141667.53880525636,
+      "modeled_material_mass_kg": 0.3825023547741922,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Fork_front_barrier",
+      "role": "moving",
+      "material": "aluminium",
+      "volume_mm3": 35752.5,
+      "modeled_material_mass_kg": 0.09653175,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Guide_shaft_-34",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 22619.467105846506,
+      "modeled_material_mass_kg": 0.17756281678089506,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Guide_bearing_-34",
+      "role": "moving",
+      "material": "polymer",
+      "volume_mm3": 2597.7044254370585,
+      "modeled_material_mass_kg": 0.0036627632398662526,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Guide_shaft_-62",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 22619.467105846506,
+      "modeled_material_mass_kg": 0.17756281678089506,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Guide_bearing_-62",
+      "role": "moving",
+      "material": "polymer",
+      "volume_mm3": 2597.704425437063,
+      "modeled_material_mass_kg": 0.003662763239866259,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Power_off_capture_rack",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 23400.00000000139,
+      "modeled_material_mass_kg": 0.1836900000000109,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Spring_applied_pawl",
+      "role": "moving",
+      "material": "steel",
+      "volume_mm3": 163.20000000000073,
+      "modeled_material_mass_kg": 0.0012811200000000056,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Drive_motor_envelope",
+      "role": "unselected_actuator",
+      "material": "envelope",
+      "volume_mm3": 55125.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "B_3U__Position_sensor_-203",
+      "role": "unselected_sensor",
+      "material": "envelope",
+      "volume_mm3": 1728.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "B_3U__Position_sensor_-3",
+      "role": "unselected_sensor",
+      "material": "envelope",
+      "volume_mm3": 1728.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "B_3U__Driven_rack",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 22799.999999999964,
+      "modeled_material_mass_kg": 0.1789799999999997,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Index_pinion_blank",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 4523.893421169301,
+      "modeled_material_mass_kg": 0.035512563356179014,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Independent_index_pawl",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 57.599999999999454,
+      "modeled_material_mass_kg": 0.00045215999999999567,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Cassette_mount_-12",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1920.0,
+      "modeled_material_mass_kg": 0.005184,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "B_3U__Cassette_mount_340.5",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1920.0,
+      "modeled_material_mass_kg": 0.005184,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Passive_payload",
+      "role": "payload",
+      "material": "payload",
+      "volume_mm3": 1135000.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "PAYLOAD_EXCLUDED"
+    },
+    {
+      "name": "C_1U__Cassette_floor",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 240570.0,
+      "modeled_material_mass_kg": 0.649539,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Support_bridge",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 218700.0,
+      "modeled_material_mass_kg": 0.59049,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Stored_side_cap_-6",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 90576.0,
+      "modeled_material_mass_kg": 0.2445552,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Stored_side_cap_342.5",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 90576.0,
+      "modeled_material_mass_kg": 0.2445552,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Cassette_rear",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 163296.0,
+      "modeled_material_mass_kg": 0.4408992,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "volume_mm3": 137000.0,
+      "modeled_material_mass_kg": 0.3699,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Storage_gate_pin_-16",
+      "role": "latch",
+      "material": "steel",
+      "volume_mm3": 251.32741228718268,
+      "modeled_material_mass_kg": 0.001972920186454384,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Storage_gate_pin_356.5",
+      "role": "latch",
+      "material": "steel",
+      "volume_mm3": 251.3274122871843,
+      "modeled_material_mass_kg": 0.0019729201864543966,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Driven_fork_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "volume_mm3": 141667.53880525634,
+      "modeled_material_mass_kg": 0.3825023547741921,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Fork_front_barrier",
+      "role": "moving",
+      "material": "aluminium",
+      "volume_mm3": 35752.5,
+      "modeled_material_mass_kg": 0.09653175,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Guide_shaft_-34",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 22619.46710584656,
+      "modeled_material_mass_kg": 0.1775628167808955,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Guide_bearing_-34",
+      "role": "moving",
+      "material": "polymer",
+      "volume_mm3": 2597.7044254370576,
+      "modeled_material_mass_kg": 0.0036627632398662513,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Guide_shaft_-62",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 22619.46710584655,
+      "modeled_material_mass_kg": 0.17756281678089542,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Guide_bearing_-62",
+      "role": "moving",
+      "material": "polymer",
+      "volume_mm3": 2597.7044254370576,
+      "modeled_material_mass_kg": 0.0036627632398662513,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Power_off_capture_rack",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 23400.000000001393,
+      "modeled_material_mass_kg": 0.18369000000001093,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Spring_applied_pawl",
+      "role": "moving",
+      "material": "steel",
+      "volume_mm3": 163.20000000000027,
+      "modeled_material_mass_kg": 0.0012811200000000021,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Drive_motor_envelope",
+      "role": "unselected_actuator",
+      "material": "envelope",
+      "volume_mm3": 55125.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "C_1U__Position_sensor_-203",
+      "role": "unselected_sensor",
+      "material": "envelope",
+      "volume_mm3": 1728.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "C_1U__Position_sensor_-3",
+      "role": "unselected_sensor",
+      "material": "envelope",
+      "volume_mm3": 1728.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "C_1U__Driven_rack",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 22799.999999999964,
+      "modeled_material_mass_kg": 0.1789799999999997,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Index_pinion_blank",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 4523.893421169301,
+      "modeled_material_mass_kg": 0.035512563356179014,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Independent_index_pawl",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 57.599999999999795,
+      "modeled_material_mass_kg": 0.0004521599999999984,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Passive_1U_227mm_insert",
+      "role": "passive_insert",
+      "material": "aluminium",
+      "volume_mm3": 68863.99999999997,
+      "modeled_material_mass_kg": 0.18593279999999993,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Cassette_mount_-12",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1920.0,
+      "modeled_material_mass_kg": 0.005184,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "C_1U__Cassette_mount_340.5",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1920.0,
+      "modeled_material_mass_kg": 0.005184,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Passive_payload",
+      "role": "payload",
+      "material": "payload",
+      "volume_mm3": 3405000.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "PAYLOAD_EXCLUDED"
+    },
+    {
+      "name": "D_3U__Cassette_floor",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 240570.0,
+      "modeled_material_mass_kg": 0.649539,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Support_bridge",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 218700.0,
+      "modeled_material_mass_kg": 0.59049,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Stored_side_cap_-6",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 90576.0,
+      "modeled_material_mass_kg": 0.2445552,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Stored_side_cap_342.5",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 90576.0,
+      "modeled_material_mass_kg": 0.2445552,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Cassette_rear",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 163296.0,
+      "modeled_material_mass_kg": 0.4408992,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "volume_mm3": 137000.0,
+      "modeled_material_mass_kg": 0.3699,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Storage_gate_pin_-16",
+      "role": "latch",
+      "material": "steel",
+      "volume_mm3": 251.32741228718353,
+      "modeled_material_mass_kg": 0.0019729201864543905,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Storage_gate_pin_356.5",
+      "role": "latch",
+      "material": "steel",
+      "volume_mm3": 251.3274122871843,
+      "modeled_material_mass_kg": 0.0019729201864543966,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Driven_fork_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "volume_mm3": 141667.5388052563,
+      "modeled_material_mass_kg": 0.38250235477419203,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Fork_front_barrier",
+      "role": "moving",
+      "material": "aluminium",
+      "volume_mm3": 35752.5,
+      "modeled_material_mass_kg": 0.09653175,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Guide_shaft_-34",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 22619.46710584646,
+      "modeled_material_mass_kg": 0.1775628167808947,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Guide_bearing_-34",
+      "role": "moving",
+      "material": "polymer",
+      "volume_mm3": 2597.7044254370585,
+      "modeled_material_mass_kg": 0.0036627632398662526,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Guide_shaft_-62",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 22619.467105846456,
+      "modeled_material_mass_kg": 0.17756281678089467,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Guide_bearing_-62",
+      "role": "moving",
+      "material": "polymer",
+      "volume_mm3": 2597.7044254370585,
+      "modeled_material_mass_kg": 0.0036627632398662526,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Power_off_capture_rack",
+      "role": "fixed",
+      "material": "steel",
+      "volume_mm3": 23400.00000000139,
+      "modeled_material_mass_kg": 0.1836900000000109,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Spring_applied_pawl",
+      "role": "moving",
+      "material": "steel",
+      "volume_mm3": 163.20000000000073,
+      "modeled_material_mass_kg": 0.0012811200000000056,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Drive_motor_envelope",
+      "role": "unselected_actuator",
+      "material": "envelope",
+      "volume_mm3": 55125.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "D_3U__Position_sensor_-203",
+      "role": "unselected_sensor",
+      "material": "envelope",
+      "volume_mm3": 1728.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "D_3U__Position_sensor_-3",
+      "role": "unselected_sensor",
+      "material": "envelope",
+      "volume_mm3": 1728.0,
+      "modeled_material_mass_kg": 0.0,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "UNCATALOGUED_NOT_ZERO"
+    },
+    {
+      "name": "D_3U__Driven_rack",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 22799.999999999964,
+      "modeled_material_mass_kg": 0.1789799999999997,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Index_pinion_blank",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 4523.893421169301,
+      "modeled_material_mass_kg": 0.035512563356179014,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Independent_index_pawl",
+      "role": "drive",
+      "material": "steel",
+      "volume_mm3": 57.599999999999454,
+      "modeled_material_mass_kg": 0.00045215999999999567,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Cassette_mount_-12",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1920.0,
+      "modeled_material_mass_kg": 0.005184,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    },
+    {
+      "name": "D_3U__Cassette_mount_340.5",
+      "role": "fixed",
+      "material": "aluminium",
+      "volume_mm3": 1920.0,
+      "modeled_material_mass_kg": 0.005184,
+      "catalog_id": null,
+      "catalog_mass_kg": null,
+      "mass_status": "CAD_DENSITY_ESTIMATE"
+    }
+  ],
+  "files": {
+    "rack_pawl_four_carrier_stowed_R1.FCStd": "c6547d17cef8e7c16b3e61a474d3b4c094e98e710804f78682e6474c34bd35d2",
+    "rack_pawl_four_carrier_stowed_R1.step": "beb3a3d45dd331a2b6305130277831bbb65590f1c2efd75ab634ba77a41bc74c"
+  },
+  "connection_motion_review": {
+    "nominal_stations": [
+      {
+        "advance_mm": 0,
+        "phase": "stowed",
+        "connections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-34",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "distance_mm": 0.0,
+            "penetration_mm3": 16.17677912703196,
+            "status": "INTERFERENCE"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Power_off_capture_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Driven_fork_frame",
+            "distance_mm": 0.14999999999999858,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Index_pinion_blank",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          }
+        ],
+        "unresolved_intersections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "volume_mm3": 16.176779,
+            "payload_involved": false,
+            "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+          }
+        ]
+      },
+      {
+        "advance_mm": 0,
+        "phase": "transfer",
+        "connections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-34",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "distance_mm": 0.0,
+            "penetration_mm3": 16.17677912703196,
+            "status": "INTERFERENCE"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Power_off_capture_rack",
+            "distance_mm": 1.0,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Driven_fork_frame",
+            "distance_mm": 0.15000000000000568,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Index_pinion_blank",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          }
+        ],
+        "unresolved_intersections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "volume_mm3": 16.176779,
+            "payload_involved": false,
+            "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+          }
+        ]
+      },
+      {
+        "advance_mm": 25,
+        "phase": "transfer",
+        "connections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-34",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "distance_mm": 0.0,
+            "penetration_mm3": 16.17677912703196,
+            "status": "INTERFERENCE"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Power_off_capture_rack",
+            "distance_mm": 1.0,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Driven_fork_frame",
+            "distance_mm": 0.15000000000000568,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Index_pinion_blank",
+            "b": "Driven_rack",
+            "distance_mm": 0.04159457879228928,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          }
+        ],
+        "unresolved_intersections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "volume_mm3": 16.176779,
+            "payload_involved": false,
+            "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+          }
+        ]
+      },
+      {
+        "advance_mm": 100,
+        "phase": "transfer",
+        "connections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-34",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "distance_mm": 0.0,
+            "penetration_mm3": 16.17677912703196,
+            "status": "INTERFERENCE"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Power_off_capture_rack",
+            "distance_mm": 1.0,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Driven_fork_frame",
+            "distance_mm": 0.14999999999999147,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Index_pinion_blank",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          }
+        ],
+        "unresolved_intersections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "volume_mm3": 16.176779,
+            "payload_involved": false,
+            "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+          }
+        ]
+      },
+      {
+        "advance_mm": 175,
+        "phase": "transfer",
+        "connections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-34",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "distance_mm": 0.0,
+            "penetration_mm3": 16.17677912703196,
+            "status": "INTERFERENCE"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Power_off_capture_rack",
+            "distance_mm": 1.0,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Driven_fork_frame",
+            "distance_mm": 0.14999999999998437,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Index_pinion_blank",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          }
+        ],
+        "unresolved_intersections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "volume_mm3": 16.176779,
+            "payload_involved": false,
+            "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+          }
+        ]
+      },
+      {
+        "advance_mm": 200,
+        "phase": "transfer",
+        "connections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-34",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "distance_mm": 0.0,
+            "penetration_mm3": 16.17677912703196,
+            "status": "INTERFERENCE"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Power_off_capture_rack",
+            "distance_mm": 1.0,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Driven_fork_frame",
+            "distance_mm": 0.14999999999999147,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Index_pinion_blank",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          }
+        ],
+        "unresolved_intersections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "volume_mm3": 16.176779,
+            "payload_involved": false,
+            "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+          }
+        ]
+      },
+      {
+        "advance_mm": 200,
+        "phase": "seated",
+        "connections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-34",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "distance_mm": 0.0,
+            "penetration_mm3": 16.17677912703196,
+            "status": "INTERFERENCE"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Power_off_capture_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Spring_applied_pawl",
+            "b": "Driven_fork_frame",
+            "distance_mm": 0.14999999999999858,
+            "penetration_mm3": 0.0,
+            "status": "GAP"
+          },
+          {
+            "a": "Driven_fork_frame",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          },
+          {
+            "a": "Index_pinion_blank",
+            "b": "Driven_rack",
+            "distance_mm": 0.0,
+            "penetration_mm3": 0.0,
+            "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+          }
+        ],
+        "unresolved_intersections": [
+          {
+            "a": "Driven_fork_frame",
+            "b": "Guide_bearing_-62",
+            "volume_mm3": 16.176779,
+            "payload_involved": false,
+            "disposition": "UNRESOLVED; not automatically accepted as intended contact"
+          }
+        ]
+      }
+    ],
+    "power_loss_applied_geometry": [
+      {
+        "fault_advance_mm": 0,
+        "applied_advance_mm": 0,
+        "pitch_only_extra_travel_mm": 0,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999999858,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      },
+      {
+        "fault_advance_mm": 25,
+        "applied_advance_mm": 26,
+        "pitch_only_extra_travel_mm": 1,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999999858,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      },
+      {
+        "fault_advance_mm": 50,
+        "applied_advance_mm": 50,
+        "pitch_only_extra_travel_mm": 0,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999999858,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      },
+      {
+        "fault_advance_mm": 75,
+        "applied_advance_mm": 76,
+        "pitch_only_extra_travel_mm": 1,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999999858,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      },
+      {
+        "fault_advance_mm": 100,
+        "applied_advance_mm": 100,
+        "pitch_only_extra_travel_mm": 0,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999999147,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      },
+      {
+        "fault_advance_mm": 125,
+        "applied_advance_mm": 126,
+        "pitch_only_extra_travel_mm": 1,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999999147,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      },
+      {
+        "fault_advance_mm": 150,
+        "applied_advance_mm": 150,
+        "pitch_only_extra_travel_mm": 0,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999999147,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      },
+      {
+        "fault_advance_mm": 175,
+        "applied_advance_mm": 176,
+        "pitch_only_extra_travel_mm": 1,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999998437,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      },
+      {
+        "fault_advance_mm": 200,
+        "applied_advance_mm": 200,
+        "pitch_only_extra_travel_mm": 0,
+        "pawl_rack": {
+          "a": "Spring_applied_pawl",
+          "b": "Power_off_capture_rack",
+          "distance_mm": 0.0,
+          "penetration_mm3": 0.0,
+          "status": "CONTACT_ONLY_JOINT_UNPROVEN"
+        },
+        "pawl_fork": {
+          "a": "Spring_applied_pawl",
+          "b": "Driven_fork_frame",
+          "distance_mm": 0.14999999999999147,
+          "penetration_mm3": 0.0,
+          "status": "GAP"
+        },
+        "dynamic_or_hardware_acceptance": false
+      }
+    ],
+    "continuous_motion_proven": false,
+    "tolerance_loaded_fault_proven": false
+  }
+}

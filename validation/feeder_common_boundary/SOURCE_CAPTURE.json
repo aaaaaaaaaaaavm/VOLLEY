@@ -1,0 +1,27 @@
+{
+  "software": {
+    "FreeCAD": "1.0.0",
+    "OCC": "7.8.1"
+  },
+  "source_snapshots": {
+    "build_comparison.py": "772311cc575c7e0eb690d3212d1091206cdbab6471195ca009e1259d6f5622a7",
+    "check_full_rail.py": "f669d587bad54bc56719038af2215a84a53145e8f92555bc02d514e6412680c6",
+    "assemble_evidence.py": "5ecdf23e280652c41521bd503f41b45f9576373078af7f50d5218e9c90b791fe",
+    "package_handoff.py": "a6ce8f53fcc0fd29e9259031b71af9eb61327f1977d15577c1d480c615c7d177",
+    "check_insert_interface.py": "6e033fdd74257e47e9c94644982f99aacbb686f847c717e66e8793f6fa0d8a47",
+    "build_lead_trim_R2.py": "b2d29336a894eeebb80209adbf7872373dcebc9e8585942fd7fa7eba9971857f",
+    "check_step_exchange.py": "c588e1712f291c42e2514abb99eecf0c8da07fbaec8934fc988ebada813709aa",
+    "actuator_screen.py": "2e9d6ec5ce89a05ce7664039f4ed1f8ff28d1b1065a524e4056b544198ed3e37",
+    "source/ACT01_SOURCES.json": "6722a00688b18420f6ee2bc940cb8ea69e1c5bc6d4dcf8e37710bf4e8ef69127",
+    "source/NEW_SOURCE.json": "f34f68be873d51b4f6252768d2ce8cc4a8c69c6d040c0770378ff8caa0c8ca2b",
+    "source/INSERT_INTERFACE_initial_failed_pose.json": "0d154900767e844b460f70410b59ab3b20130b92e042cb2555edf4ce502db6a0",
+    "source/RATIOS_SOURCE.json": "c8bd988b0e4384d4abd08c8a4e9b2bc10f2ee364acba98cf847913423313bef3",
+    "source/act01_parameters.json": "1d4ffd69ce5211d49671c8c20cae79034bb6a23c50d093932665e9faa0928cda",
+    "source/requirements.json": "3de840bb8e81f4e2affe047ad2eaa46b22a6cd56fdb2e31b0a0333f6f1586682",
+    "source/fdr08.py": "22d8f20fc43c1fe3b576fa3319ef42311060a272c7f0a6847fdcb31fbac444a8"
+  },
+  "native_step_pair_count": 10,
+  "no_selected_architecture": true,
+  "private_pdf_and_R0_native_excluded": true,
+  "file_count": 68
+}

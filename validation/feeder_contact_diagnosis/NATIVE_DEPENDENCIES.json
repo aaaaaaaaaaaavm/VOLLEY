@@ -1,0 +1,10 @@
+{
+  "Chrono_version": "10.0.0",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+  "library_sha256": {
+    "/workspace/volley-work/native-tools/chrono10/build/lib/libChrono_core.so": "d7925d45a31843fcee02909f1fd5a932c8b56161e6a505ffda0140bbda2a219d",
+    "/workspace/volley-work/native-tools/chrono10/build/lib/libChronoModels_robot.so": "6d5567bc7b1096978539c1893310ceb063d6fb91488ef153239f53a56a99a0e1"
+  },
+  "SDK": "/workspace/volley-work/native-tools/chrono10/build/cmake",
+  "parallel_run_environment": "OMP_NUM_THREADS=1; two independent cases at a time"
+}

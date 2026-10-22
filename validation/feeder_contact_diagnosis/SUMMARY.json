@@ -1,0 +1,438 @@
+{
+  "revision": "FCE13 targeted diagnosis of FCE12",
+  "generated_UTC": "2026-10-22T17:57:09.228365+00:00",
+  "decision": "FAIL: final-state convergence remains unestablished; no numerical correction adopted",
+  "applicability": "FM06-R1 transfer/capture/withdraw numerical subcycle only; no FM07-R6 validation; no feeder selection; no outside expert review",
+  "criteria_unchanged": {
+    "COM_mm": 0.05,
+    "angle_deg": 0.05,
+    "work_relative": 0.01
+  },
+  "observed_sensitivities": [
+    {
+      "label": "FCE12 1U PSOR",
+      "pair": [
+        "FCE12-02",
+        "FCE12-03"
+      ],
+      "COM_delta_mm": 1.5085841516235958,
+      "orientation_delta_deg": 0.6396783998669753,
+      "COM_pass": false,
+      "orientation_pass": false,
+      "net_contact_impulse_delta_N_s": 0.0002449207312996627,
+      "positive_motor_work_relative_delta": 2.763029819607965e-06,
+      "final_speeds_mm_s": [
+        0.18732165840340756,
+        0.0078012697099874035
+      ]
+    },
+    {
+      "label": "FCE12 3U PSOR",
+      "pair": [
+        "FCE12-05",
+        "FCE12-06"
+      ],
+      "COM_delta_mm": 1.4663804768614168,
+      "orientation_delta_deg": 0.2323026501067614,
+      "COM_pass": false,
+      "orientation_pass": false,
+      "net_contact_impulse_delta_N_s": 0.0007750785052733105,
+      "positive_motor_work_relative_delta": 0.00012691094950034731,
+      "final_speeds_mm_s": [
+        0.09125052570367874,
+        0.11419242241036018
+      ]
+    },
+    {
+      "label": "3U PSOR 2k \u2192 4k",
+      "pair": [
+        "FCE12-05",
+        "FCE12-07"
+      ],
+      "COM_delta_mm": 0.8283211584014165,
+      "orientation_delta_deg": 0.209219032441508,
+      "COM_pass": false,
+      "orientation_pass": false,
+      "net_contact_impulse_delta_N_s": 0.0007476694502624312,
+      "positive_motor_work_relative_delta": 4.609158405910474e-05,
+      "final_speeds_mm_s": [
+        0.09125052570367874,
+        0.10685298032266659
+      ]
+    },
+    {
+      "label": "3U cold \u2192 warm PSOR",
+      "pair": [
+        "P3-250",
+        "W3-250"
+      ],
+      "COM_delta_mm": 1.736800558124943,
+      "orientation_delta_deg": 0.4973594675190719,
+      "COM_pass": false,
+      "orientation_pass": false,
+      "net_contact_impulse_delta_N_s": 0.00035733569190149846,
+      "positive_motor_work_relative_delta": 3.4320445831514945e-05,
+      "final_speeds_mm_s": [
+        0.09125052570367874,
+        0.03541009878716009
+      ]
+    },
+    {
+      "label": "3U BB 250 \u2192 125 \u00b5s",
+      "pair": [
+        "B3-250",
+        "B3-125"
+      ],
+      "COM_delta_mm": 1.9264563548729627,
+      "orientation_delta_deg": 0.12009763865874623,
+      "COM_pass": false,
+      "orientation_pass": false,
+      "net_contact_impulse_delta_N_s": 0.0007356731146735015,
+      "positive_motor_work_relative_delta": 0.00030001318951300426,
+      "final_speeds_mm_s": [
+        0.12064954648516028,
+        0.09699234036246315
+      ]
+    },
+    {
+      "label": "3U box core 250 \u2192 125 \u00b5s",
+      "pair": [
+        "X3-250",
+        "X3-125"
+      ],
+      "COM_delta_mm": 0.7161621949355181,
+      "orientation_delta_deg": 0.5643326829076623,
+      "COM_pass": false,
+      "orientation_pass": false,
+      "net_contact_impulse_delta_N_s": 0.0008412263569901077,
+      "positive_motor_work_relative_delta": 0.0001263130219265607,
+      "final_speeds_mm_s": [
+        0.09125052570367874,
+        0.13181715392179968
+      ]
+    },
+    {
+      "label": "3U mesh \u2192 box core at125 \u00b5s",
+      "pair": [
+        "FCE12-06",
+        "X3-125"
+      ],
+      "COM_delta_mm": 0.755420045450334,
+      "orientation_delta_deg": 0.6037478779563173,
+      "COM_pass": false,
+      "orientation_pass": false,
+      "net_contact_impulse_delta_N_s": 0.0006020513620459626,
+      "positive_motor_work_relative_delta": 5.980034669672563e-07,
+      "final_speeds_mm_s": [
+        0.11419242241036018,
+        0.13181715392179968
+      ]
+    }
+  ],
+  "completed_native_runs": {
+    "P3-250": {
+      "wall_s": 88.14163773500002,
+      "metrics": {
+        "native_version": "10.0.0",
+        "steps": 106000,
+        "final_time_s": 26.5000000000355,
+        "outside_domain_or_nonfinite": false,
+        "sequence_aborted": false,
+        "maximum_payload_speed_m_s": 0.0376915761363366,
+        "maximum_payload_spin_rad_s": 0.0699837083861005,
+        "maximum_resultant_contact_force_N": 28.8152211485727,
+        "maximum_pair_contact_force_N": 472.930400088351,
+        "minimum_reported_contact_distance_m": -4.06494364142418e-07,
+        "maximum_feed_force_N": 5.05278363541002,
+        "positive_mechanical_motor_work_J": 1.92229499227304,
+        "negative_mechanical_motor_work_J": -5.14060439279805e-05,
+        "maximum_fork_off_axis_m": 1.75796442425844e-09,
+        "maximum_fork_rotation_rad": 0,
+        "payload_momentum_balance_residual_N_s": [
+          -2.77833311912445e-17,
+          -4.15736889358698e-14,
+          -2.95141515394004e-17
+        ],
+        "contact_impulse_N_s": [
+          -0.000132446509711206,
+          0.000340105976194646,
+          3.51882215577272e-06
+        ]
+      },
+      "solver_metrics": {
+        "max_solver_error_internal": 0.654380908191147,
+        "saturated_steps": 1936,
+        "max_used_iterations": 2000,
+        "max_sampled_joint_residual_mixed": 2.61134910652102e-06
+      },
+      "source_sha256": "d6a802697c943af23ff54e48a5835da5782ca874e17b005b9fb8d2bae15c006f",
+      "executable_sha256": "f5cc456beeb592a1a9f32435498d551b9ae97e53fba40e0337d8c0e66e3a0e1d"
+    },
+    "W3-250": {
+      "wall_s": 93.57110916099998,
+      "metrics": {
+        "native_version": "10.0.0",
+        "steps": 106000,
+        "final_time_s": 26.5000000000355,
+        "outside_domain_or_nonfinite": false,
+        "sequence_aborted": false,
+        "maximum_payload_speed_m_s": 0.0376917170410737,
+        "maximum_payload_spin_rad_s": 0.07588129623372,
+        "maximum_resultant_contact_force_N": 39.0220478066843,
+        "maximum_pair_contact_force_N": 39.0220478066843,
+        "minimum_reported_contact_distance_m": -4.61028981953859e-06,
+        "maximum_feed_force_N": 5.04842635121411,
+        "positive_mechanical_motor_work_J": 1.92236096855853,
+        "negative_mechanical_motor_work_J": -5.74119323871746e-05,
+        "maximum_fork_off_axis_m": 4.25295495822978e-11,
+        "maximum_fork_rotation_rad": 0,
+        "payload_momentum_balance_residual_N_s": [
+          1.35065569839554e-17,
+          5.24913792987469e-14,
+          -2.37171393635549e-16
+        ],
+        "contact_impulse_N_s": [
+          2.45145299143044e-05,
+          4.85347322534495e-05,
+          -0.000130787687191261
+        ]
+      },
+      "solver_metrics": {
+        "max_solver_error_internal": 0.0729841001900642,
+        "saturated_steps": 2444,
+        "max_used_iterations": 2000,
+        "max_sampled_joint_residual_mixed": 1.1179436443521e-07
+      },
+      "source_sha256": "d6a802697c943af23ff54e48a5835da5782ca874e17b005b9fb8d2bae15c006f",
+      "executable_sha256": "f5cc456beeb592a1a9f32435498d551b9ae97e53fba40e0337d8c0e66e3a0e1d"
+    },
+    "B3-250": {
+      "wall_s": 167.5072701260001,
+      "metrics": {
+        "native_version": "10.0.0",
+        "steps": 106000,
+        "final_time_s": 26.5000000000355,
+        "outside_domain_or_nonfinite": false,
+        "sequence_aborted": false,
+        "maximum_payload_speed_m_s": 0.0376936023922211,
+        "maximum_payload_spin_rad_s": 0.0623940329187656,
+        "maximum_resultant_contact_force_N": 28.6319758296469,
+        "maximum_pair_contact_force_N": 47.3794584909582,
+        "minimum_reported_contact_distance_m": -1.03973411023617e-06,
+        "maximum_feed_force_N": 5.05267605269102,
+        "positive_mechanical_motor_work_J": 1.92234891774046,
+        "negative_mechanical_motor_work_J": -5.15259091370534e-05,
+        "maximum_fork_off_axis_m": 1.52548981876255e-08,
+        "maximum_fork_rotation_rad": 8.9406967163086e-08,
+        "payload_momentum_balance_residual_N_s": [
+          -2.58126853225349e-18,
+          5.17363929475323e-17,
+          1.4432899320127e-17
+        ],
+        "contact_impulse_N_s": [
+          0.000230707483754268,
+          -0.000418579293013517,
+          6.68314407630002e-05
+        ]
+      },
+      "solver_metrics": {
+        "max_solver_error_internal": 0.365148374734827,
+        "saturated_steps": 7028,
+        "max_used_iterations": 2000,
+        "max_sampled_joint_residual_mixed": 2.56299012525246e-06
+      },
+      "source_sha256": "91813d7f2ad45ef924ffdb0a9e1c891a30d0faa0bac8d3aa5f5f23b81e9e1857",
+      "executable_sha256": "eb3c549846f45f528bdccac098e4360c1b6eec22d0be37734a03da93785cd3e8"
+    },
+    "B3-125": {
+      "wall_s": 181.73358163400007,
+      "metrics": {
+        "native_version": "10.0.0",
+        "steps": 212000,
+        "final_time_s": 26.500000000081,
+        "outside_domain_or_nonfinite": false,
+        "sequence_aborted": false,
+        "maximum_payload_speed_m_s": 0.0376918057404023,
+        "maximum_payload_spin_rad_s": 0.290719201517401,
+        "maximum_resultant_contact_force_N": 119.671486313716,
+        "maximum_pair_contact_force_N": 4826.79604485511,
+        "minimum_reported_contact_distance_m": -8.79516825079918e-07,
+        "maximum_feed_force_N": 6.13087016473462,
+        "positive_mechanical_motor_work_J": 1.92292582084917,
+        "negative_mechanical_motor_work_J": -5.74724470141648e-05,
+        "maximum_fork_off_axis_m": 1.48642534786512e-08,
+        "maximum_fork_rotation_rad": 3.81655945624879e-07,
+        "payload_momentum_balance_residual_N_s": [
+          4.05231403988182e-18,
+          -6.87158663303933e-17,
+          2.81788481437673e-17
+        ],
+        "contact_impulse_N_s": [
+          -0.000384735410213193,
+          -2.99561323244848e-05,
+          -4.00189915919241e-05
+        ]
+      },
+      "solver_metrics": {
+        "max_solver_error_internal": 1.33067841770244,
+        "saturated_steps": 4424,
+        "max_used_iterations": 2000,
+        "max_sampled_joint_residual_mixed": 1.32902555318107e-05
+      },
+      "source_sha256": "91813d7f2ad45ef924ffdb0a9e1c891a30d0faa0bac8d3aa5f5f23b81e9e1857",
+      "executable_sha256": "eb3c549846f45f528bdccac098e4360c1b6eec22d0be37734a03da93785cd3e8"
+    },
+    "X3-250": {
+      "wall_s": 122.9020042269999,
+      "metrics": {
+        "native_version": "10.0.0",
+        "steps": 106000,
+        "final_time_s": 26.5000000000355,
+        "outside_domain_or_nonfinite": false,
+        "sequence_aborted": false,
+        "maximum_payload_speed_m_s": 0.0376915761363366,
+        "maximum_payload_spin_rad_s": 0.0699837083861005,
+        "maximum_resultant_contact_force_N": 28.8152211485727,
+        "maximum_pair_contact_force_N": 472.930400088351,
+        "minimum_reported_contact_distance_m": -4.06494364142418e-07,
+        "maximum_feed_force_N": 5.05278363541002,
+        "positive_mechanical_motor_work_J": 1.92229499227304,
+        "negative_mechanical_motor_work_J": -5.14060439279805e-05,
+        "maximum_fork_off_axis_m": 1.75796442425844e-09,
+        "maximum_fork_rotation_rad": 0,
+        "payload_momentum_balance_residual_N_s": [
+          -2.77833311912445e-17,
+          -4.15736889358698e-14,
+          -2.95141515394004e-17
+        ],
+        "contact_impulse_N_s": [
+          -0.000132446509711206,
+          0.000340105976194646,
+          3.51882215577272e-06
+        ]
+      },
+      "solver_metrics": {
+        "max_solver_error_internal": 0.654380908191147,
+        "saturated_steps": 1936,
+        "max_used_iterations": 2000,
+        "max_sampled_joint_residual_mixed": 2.61134910652102e-06
+      },
+      "source_sha256": "2d7da615efbc6097e6361863aa0cc4aafadc6c6a647850b04dd7f588e61508d5",
+      "executable_sha256": "fd69891762c602c59a5c77bb72b4fec725faac6eece538f74e66dd3429fb04d7"
+    },
+    "X3-125": {
+      "wall_s": 141.45755221799982,
+      "metrics": {
+        "native_version": "10.0.0",
+        "steps": 212000,
+        "final_time_s": 26.500000000081,
+        "outside_domain_or_nonfinite": false,
+        "sequence_aborted": false,
+        "maximum_payload_speed_m_s": 0.0376929050898364,
+        "maximum_payload_spin_rad_s": 0.149459222439485,
+        "maximum_resultant_contact_force_N": 73.1020632632818,
+        "maximum_pair_contact_force_N": 266.019514198146,
+        "minimum_reported_contact_distance_m": -1.52915809303522e-06,
+        "maximum_feed_force_N": 5.07166637704624,
+        "positive_mechanical_motor_work_J": 1.9225378338366,
+        "negative_mechanical_motor_work_J": -8.86472894541526e-05,
+        "maximum_fork_off_axis_m": 3.14004987417331e-10,
+        "maximum_fork_rotation_rad": 0,
+        "payload_momentum_balance_residual_N_s": [
+          3.43058914609173e-17,
+          3.15282244756077e-14,
+          2.64011035255862e-16
+        ],
+        "contact_impulse_N_s": [
+          0.000445310203205466,
+          -0.000263415742831494,
+          0.000101602964800256
+        ]
+      },
+      "solver_metrics": {
+        "max_solver_error_internal": 8.70164549526186,
+        "saturated_steps": 742,
+        "max_used_iterations": 2000,
+        "max_sampled_joint_residual_mixed": 1.6483381486304e-08
+      },
+      "source_sha256": "2d7da615efbc6097e6361863aa0cc4aafadc6c6a647850b04dd7f588e61508d5",
+      "executable_sha256": "fd69891762c602c59a5c77bb72b4fec725faac6eece538f74e66dd3429fb04d7"
+    }
+  },
+  "partial_APGD_attempts": [
+    {
+      "id": "A3-250",
+      "terminated_UTC": "2026-10-22T17:39:43.558056+00:00",
+      "status": "bounded pilot terminated before full endpoint",
+      "reason": "unpreconditioned APGD with mixed translational/rotational mm coordinates progresses <1 s of 26.5 s in ~60-90s; not accepted as correction or convergence evidence",
+      "command": [
+        "/workspace/volley-work/2026-10-22-contact/build/feeder_probe",
+        "/workspace/volley-work/2026-10-22-contact/geometry_guarded/3U",
+        "/workspace/volley-work/2026-10-22-contact/runs/A3-250.csv",
+        "4.0",
+        "0.1",
+        "0",
+        "0",
+        "0.00025",
+        "100",
+        "5",
+        "0",
+        "2000",
+        "10",
+        "none",
+        "0.1"
+      ],
+      "environment_overrides": {
+        "FCE_SOLVER": "APGD",
+        "FCE_WARM": "0",
+        "OMP_NUM_THREADS": "1"
+      },
+      "source_sha256": "d6a802697c943af23ff54e48a5835da5782ca874e17b005b9fb8d2bae15c006f",
+      "executable_sha256": "f5cc456beeb592a1a9f32435498d551b9ae97e53fba40e0337d8c0e66e3a0e1d",
+      "last_complete_csv_s": 0.85,
+      "output_sha256": {
+        "A3-250.csv.solver.csv": "6fd83b59fd74efd2eb14ed44928a48c5cd146680f002f26111a834e3cbd579fb",
+        "A3-250.csv": "ba3eb4bba3e1d32e024e0418a97f0321b645a4a0cfe29faf52b629586c8f249f",
+        "A3-250.log": "9787fc8af7327b5236516b5b1e366099599306ef95d6c609b2a6b435995c6701"
+      }
+    },
+    {
+      "id": "A3-125",
+      "terminated_UTC": "2026-10-22T17:39:43.561145+00:00",
+      "status": "bounded pilot terminated before full endpoint",
+      "reason": "unpreconditioned APGD with mixed translational/rotational mm coordinates progresses <1 s of 26.5 s in ~60-90s; not accepted as correction or convergence evidence",
+      "command": [
+        "/workspace/volley-work/2026-10-22-contact/build/feeder_probe",
+        "/workspace/volley-work/2026-10-22-contact/geometry_guarded/3U",
+        "/workspace/volley-work/2026-10-22-contact/runs/A3-125.csv",
+        "4.0",
+        "0.1",
+        "0",
+        "0",
+        "0.000125",
+        "100",
+        "5",
+        "0",
+        "2000",
+        "10",
+        "none",
+        "0.1"
+      ],
+      "environment_overrides": {
+        "FCE_SOLVER": "APGD",
+        "FCE_WARM": "0",
+        "OMP_NUM_THREADS": "1"
+      },
+      "source_sha256": "d6a802697c943af23ff54e48a5835da5782ca874e17b005b9fb8d2bae15c006f",
+      "executable_sha256": "f5cc456beeb592a1a9f32435498d551b9ae97e53fba40e0337d8c0e66e3a0e1d",
+      "last_complete_csv_s": 0.34,
+      "output_sha256": {
+        "A3-125.log": "b980fe1d7836e40c282e3d9a06d11a565405ceef319f606bbf581e907cf3eee3",
+        "A3-125.csv.solver.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "A3-125.csv": "5eb993c4057317b2e23912c6737c209097c4a38819fcd2c02f0342242bf84ed7"
+      }
+    }
+  ],
+  "certified_true_solution_error_bound": null,
+  "boundary": "Measured differences are sensitivities, not an upper bound on true discretization or physical error."
+}

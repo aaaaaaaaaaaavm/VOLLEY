@@ -1,0 +1,8 @@
+candidate,cells,common_receivers,modeled_custom_material_kg,catalog_hardware_option_subtotal_kg,partial_dry_option_subtotal_kg,conditional_listed_hardware_lower_bound_kg,full_installed_dry_mass_kg,full_installed_CG_mm,full_installed_inertia_kg_m2,local_option_cycle_s,local_option_gear,nominal_local_payload_intersection_count,all_unresolved_local_intersection_count,applied_pawl_nominal_contact,downselect_eligible,fullrail_payload_collision_count
+lead_screw,4,1,18.60587256388449,4.23,22.83587256388449,4.23,,,,30,32GPT 9:1,0,7,True,False,8
+spring_dual_gate,4,1,18.91507599978795,6.002000000000001,24.917075999787947,6.002000000000001,,,,5,32GPT 59:1,0,7,True,False,6
+rack_pawl,4,1,18.617611956312295,5.83,24.447611956312294,5.83,,,,5,32GPT 30:1,0,7,True,False,6
+indexed_drum,4,1,14.821070331339293,1.932,16.75307033133929,1.932,,,,15,32GPT 30:1,0,7,True,False,0
+pantograph,4,1,18.060369311971122,6.002000000000001,24.062369311971125,6.002000000000001,,,,60,32GPT 59:1,0,7,True,False,6
+telescopic,4,1,18.13198826288758,4.23,22.361988262887582,4.23,,,,15,32GPT 9:1,0,14,True,False,6
+belt_shuttle,4,1,17.91542942747066,5.83,23.74542942747066,5.83,,,,5,32GPT 30:1,0,8,True,False,10

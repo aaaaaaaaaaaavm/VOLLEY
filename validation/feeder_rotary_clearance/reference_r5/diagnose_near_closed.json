@@ -1,0 +1,122 @@
+[
+  {
+    "payload": "1U",
+    "angle_deg": 0,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 0.01,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 0.05,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 0.1,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 0.25,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 0.5,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 0.6,
+    "distance_mm": 0.06771075009842102,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 1,
+    "distance_mm": 0.13424375483902007,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 2,
+    "distance_mm": 0.27514803084865014,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "1U",
+    "angle_deg": 5,
+    "distance_mm": 1.1549266468464012,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 0,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 0.01,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 0.05,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 0.1,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 0.25,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 0.5,
+    "distance_mm": 0.0,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 0.6,
+    "distance_mm": 0.06771075009842102,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 1,
+    "distance_mm": 0.13424375483902007,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 2,
+    "distance_mm": 0.27514803084865647,
+    "intersection_mm3": 0.0
+  },
+  {
+    "payload": "3U",
+    "angle_deg": 5,
+    "distance_mm": 1.1549266468464043,
+    "intersection_mm3": 0.0
+  }
+]

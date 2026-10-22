@@ -1,0 +1,21 @@
+{
+  "revision": "FCE09",
+  "recorded_utc": "2026-10-21T10:58:04.270861+00:00",
+  "purpose": "Correct the collision representation before extending mechanism claims. FM06-R1 design geometry is unchanged.",
+  "mandatory_checks": [
+    "Exact CAD union equivalence and disjoint convex payload cells; no filled panel recess.",
+    "Reproduce FCE08 transformed-solid intersections with both collision representations; require detection for deliberate 0.1/0.5/1mm slab overlaps and no false negative or positive in separated controls.",
+    "Native source, geometry, solver, input and raw output identities.",
+    "Independent transformed B-rep checks across transfer and withdrawal, including the previous failure times.",
+    "Timestep/iteration/surface refinement of displacement, angular motion, impulse and integrated work; do not rate an impulsive NSC force peak.",
+    "Fault cases are distinct from nominal convergence and do not demonstrate physical safe-state reliability."
+  ],
+  "numerical_screen_targets": {
+    "final_COM_difference_mm": 0.05,
+    "final_angle_difference_deg": 0.05,
+    "integrated_work_relative_difference": 0.01,
+    "independent_CAD_penetration_depth_screen_mm": 0.025
+  },
+  "targets_basis": "Provisional numerical model screening thresholds. 25um is half the smallest 50um nominal guide-side clearance; these are not customer delivery requirements, measured contact compliance, process capability or flight acceptance. Positive B-rep intersections must still be reported; screen acceptance cannot be relabeled zero interference.",
+  "scope": "Transfer/capture/withdraw subcycle only. Full release/reset, installed actuation and physical calibration remain separate requirements."
+}

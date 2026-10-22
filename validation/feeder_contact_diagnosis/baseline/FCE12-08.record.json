@@ -1,0 +1,62 @@
+{
+  "size": "3U",
+  "mass_kg": 4.0,
+  "dt_s": 0.0005,
+  "mu": 0,
+  "g": 0,
+  "iterations": 2000,
+  "mode": "none",
+  "label": "friction_sensitivity",
+  "case_id": "FCE12-08",
+  "exit_code": 0,
+  "wall_s": 44.60032788201352,
+  "command": [
+    "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/build/feeder_mm",
+    "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/geometry_guarded/3U",
+    "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/campaign_mm/FCE12-08.csv",
+    "4.0",
+    "0",
+    "0",
+    "0",
+    "0.0005",
+    "100",
+    "5",
+    "0",
+    "2000",
+    "10",
+    "none",
+    "0.1"
+  ],
+  "metrics": {
+    "native_version": "10.0.0",
+    "steps": 53000,
+    "final_time_s": 26.4999999999836,
+    "outside_domain_or_nonfinite": false,
+    "sequence_aborted": false,
+    "maximum_payload_speed_m_s": 0.0997643614180573,
+    "maximum_payload_spin_rad_s": 1.82775797106793,
+    "maximum_resultant_contact_force_N": 920.179747229746,
+    "maximum_pair_contact_force_N": 2872.13634472343,
+    "minimum_reported_contact_distance_m": -0.00017231728695333,
+    "maximum_feed_force_N": 100,
+    "positive_mechanical_motor_work_J": 1.92388965172824,
+    "negative_mechanical_motor_work_J": -0.108786967630055,
+    "maximum_fork_off_axis_m": 3.37940838660403e-07,
+    "maximum_fork_rotation_rad": 7.3608719806452e-06,
+    "payload_momentum_balance_residual_N_s": [
+      4.8017145815038e-16,
+      5.45168035714916e-13,
+      3.5527136788005e-17
+    ],
+    "contact_impulse_N_s": [
+      -0.000389849939626453,
+      6.56488222159188e-05,
+      -0.000514145711493569
+    ]
+  },
+  "hashes": {
+    "FCE12-08.csv": "cc599023861f047ab6a64b7ba3e147674277c46443d0538beba4fa3b9372b179",
+    "FCE12-08.csv.metrics.json": "ba969bb968bc85275fbc14267532e5ba5d63f4a2dd861633e5d90c66847bcb8c",
+    "FCE12-08.log": "06783793505da96d70a306278ec160ef93baf4068dd00dba49dba73e08aeb150"
+  }
+}

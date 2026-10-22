@@ -1,0 +1,12 @@
+# Declared constants and surrogate assumptions
+
+- Lunar GM 4,902,800,118,000 m³/s², Earth GM 398,600,435,507,000 m³/s²: original C0-S1/C0-S2 inputs, citing JPL's DE440 astrodynamic parameter page, https://ssd.jpl.nasa.gov/astro_par.html. These references were already used by the source studies; this subset makes no new external retrieval.
+- Reference lunar radius 1,737,400 m, Earth radius 6,378,137 m and Earth–Moon distance 384,400,000 m are the original engineering reference assumptions. The lunar sphere is not terrain; the reference distance is not an epoch ephemeris.
+- Standard g0 = 9.80665 m/s²; 4 kg payload; 300 kg retained host; 300 km circular Earth departure; lunar staging altitudes 100 × 100, 100 × 1,000 and 100 × 10,000 km; 1/4/12 payloads; assumed Isp 220/320 s; 200 m/s allowance: original C0-S1/C0-S2 surrogate cases.
+- The 1,000 m/s upper speed is a declared investigation point, not demonstrated performance. The comparison speed 4.569852054443217 m/s is the original study speed, not a measured release capability.
+- The 3/10 g acceleration screens appear in the supplied C0-S1 source/criteria. The 25 g value is a historical study ceiling, not a universal CubeSat qualification or customer rating.
+- The 0.08 m historical cell stroke appears in the supplied C0-S2 criteria. The 0.25 m compact-stroke screen was declared by the existing public `analysis/reference_architecture.py`. The 1.3 m acceleration zone and 1.5 m entire track are historical Gen5 values declared in the public `docs/EMOCD_Computation_Results_C1-C10.md`: “1.5 m track (1.3 m acceleration zone + 0.2 m coast-trim zone).” They are comparison geometries, not newly selected hardware.
+
+The separation bounds use α = M/(M+m), reduced mass mα, relative speed u, ideal added energy E = 0.5 mαu² and constant-force relative stroke s ≥ αu²/(2 a_payload,max). A zero-end-preload linear spring needs twice the constant-force stroke at the same peak payload acceleration. This ideal separation screen excludes retained moving-pusher burden, friction, charging/catcher losses and installed energy storage. No efficiency, available bus power or thermal capacity is supplied.
+
+Original numerical JSON and source/criteria snapshots are retained under `inputs/`. Their original Cartesian numerical verification is recorded evidence; the new checker reconstructs only the relevant algebra and hashes, without new orbit integration.

@@ -1,0 +1,162 @@
+{
+  "study": "RVC01",
+  "revision": "FM07-R6-CANDIDATE",
+  "files": {
+    "CONTINUOUS_ROTARY_CLEARANCE.json": {
+      "sha256": "f68e9ee5ceb1ba8721b6ca18fffe4a9a9052eeca1da97e485835bc4d97fd86eb",
+      "bytes": 252453
+    },
+    "DELTA_AND_EXPORT.json": {
+      "sha256": "449df1b206010e211ac57fcb5364033cf127b718c6325a7e48edc6046b874597",
+      "bytes": 10971
+    },
+    "FEEDER_ROTARY_CLEARANCE.pdf": {
+      "sha256": "d4ed2b1e16c051091c8f0d3faa54a50702a415854330dff095a1ca6736310e11",
+      "bytes": 87505
+    },
+    "INDEPENDENT_STEP.json": {
+      "sha256": "e13c0d23678dfe557845f2b8e438a4122b0626c1a23d885a9c2131d8dc8cd3f5",
+      "bytes": 1961
+    },
+    "README.md": {
+      "sha256": "252e21a4c6afdc0712013ee9aa935aa089c3d99e20b57b49419778d0ca5fcb62",
+      "bytes": 3476
+    },
+    "cad/FM07_R6_1U_empty_carrier_home.FCStd": {
+      "sha256": "f05a9aa732ec740b6d754073f17ed091cf9728108a7d1ed32dfa9d56fa3cf1e5",
+      "bytes": 110225
+    },
+    "cad/FM07_R6_1U_empty_carrier_home.step": {
+      "sha256": "293fc27bdf11c4532645791f0338e96c7d455d2b5ce81a9755b2277c71c728fb",
+      "bytes": 784823
+    },
+    "cad/FM07_R6_1U_exit_closed.FCStd": {
+      "sha256": "5b81c42fa80b18e61fb6a44041dd1a6f16c87a25984065b1ac91f7cde8e52f2a",
+      "bytes": 110134
+    },
+    "cad/FM07_R6_1U_exit_closed.step": {
+      "sha256": "c8868dbe64c4ddb61e8f49ac31d90576dafc7d7937c84fa38e471b60db6dedc7",
+      "bytes": 783697
+    },
+    "cad/FM07_R6_1U_exit_gate.step": {
+      "sha256": "4bcc267f58b18515ad860035d8e700928c04a3b15a498cbecaf0904b5f880d57",
+      "bytes": 30403
+    },
+    "cad/FM07_R6_1U_exit_open.FCStd": {
+      "sha256": "af63d12717f22940b0f5bc00e4f88fa13d0556ae8181f830689b26b95394e097",
+      "bytes": 110250
+    },
+    "cad/FM07_R6_1U_exit_open.step": {
+      "sha256": "278a070b0a3499ef850bfe7a6152bd3f09129a9a4fb9c7b78698bbc0ad7a4bcc",
+      "bytes": 785060
+    },
+    "cad/FM07_R6_1U_exit_unlocked.FCStd": {
+      "sha256": "6fd6ff63fe8713bbd184afe70f9633efed3a3fe52a5323d5d7710b709c043cee",
+      "bytes": 110172
+    },
+    "cad/FM07_R6_1U_exit_unlocked.step": {
+      "sha256": "6e91c52e74413747a67ced971e110d6c6f5b4036fc5d49669019599d4674af18",
+      "bytes": 783934
+    },
+    "cad/FM07_R6_3U_empty_carrier_home.FCStd": {
+      "sha256": "a96f7a8429f871c58a9ae1f82275535daf7f5a34cd8bf388a8a13156d50aec0e",
+      "bytes": 110480
+    },
+    "cad/FM07_R6_3U_empty_carrier_home.step": {
+      "sha256": "5f7e8893a959f7e0f8fa158b014c9c739925ffef33f9f73c6abf426b09953e1c",
+      "bytes": 785190
+    },
+    "cad/FM07_R6_3U_exit_closed.FCStd": {
+      "sha256": "c7d7147e85ad6d9a2dba91cbc0e03d818f75c4bec98a1cfb7b0d96b784eaa9e8",
+      "bytes": 110398
+    },
+    "cad/FM07_R6_3U_exit_closed.step": {
+      "sha256": "9956b7e89d9bc0264c3b17789742931ac5603d78c195b46f1b6914f246524b5a",
+      "bytes": 784066
+    },
+    "cad/FM07_R6_3U_exit_gate.step": {
+      "sha256": "e3e1e21ad75f065aa902a962e957b76c7ebad5f8ce841bafbfa764edf9d4e5ba",
+      "bytes": 30403
+    },
+    "cad/FM07_R6_3U_exit_open.FCStd": {
+      "sha256": "2ff0c55cd5b0b3df9c89deb656c5d5ad4a2f6ad0538ccb018d4d73e4b9185840",
+      "bytes": 110508
+    },
+    "cad/FM07_R6_3U_exit_open.step": {
+      "sha256": "296f400c46d249eececb7403d570cf9cad3e3d9beb5ad60ca48439d94a44866b",
+      "bytes": 785252
+    },
+    "cad/FM07_R6_3U_exit_unlocked.FCStd": {
+      "sha256": "a5bd832a61bda2869997459c063727b628c2074506f3d039c261442f8c121db1",
+      "bytes": 110440
+    },
+    "cad/FM07_R6_3U_exit_unlocked.step": {
+      "sha256": "ebb31bdf1165165da04164e4f647ea1c792538793538f91d53cf12e7f37059ea",
+      "bytes": 784126
+    },
+    "check_capture.py": {
+      "sha256": "9a0d86589ac712f607a7ccf3052c5b6d865e2caca91a7e31a707bce849c9774f",
+      "bytes": 2463
+    },
+    "check_rotary.py": {
+      "sha256": "dd915395edf030e707c0ffa68c7c827a29d0b7c468d4fde87264640195e45ad3",
+      "bytes": 8334
+    },
+    "export.log": {
+      "sha256": "585ff6a164dae1b3d35b5e31df2c86c08f1d5b857f43bdace70f03254633bba5",
+      "bytes": 95
+    },
+    "export_delta.py": {
+      "sha256": "65bc63916a8a6cc0e41a19992a0f80484420293b7eaddc89c4fdeca7c65bf368",
+      "bytes": 4912
+    },
+    "figures/rotary_clearance.png": {
+      "sha256": "bfd8f293ddb1096f5506d2ad5d6d5998455429d5d3e439a92f1ac7bce4af447a",
+      "bytes": 77109
+    },
+    "figures/rotary_clearance.svg": {
+      "sha256": "91a80c0b7c144966a2d54333f6d0a9264e01c9948ff05088c90068e04c190426",
+      "bytes": 21943
+    },
+    "fm06.py": {
+      "sha256": "c5213575d345a79bddf1a37246ced5b6d5ef68ec4894693aadb54fa41186d6fb",
+      "bytes": 13611
+    },
+    "mechanism.py": {
+      "sha256": "4cd3525d3975bcfe6288cc227075c3f34d3fae702166c45c417786d9f5a1b9af",
+      "bytes": 5350
+    },
+    "readback_step.py": {
+      "sha256": "e4aeac41b27ffd50b825abaf65d81f1bd83eed3d2f0a4e73251be3306b9e8396",
+      "bytes": 1079
+    },
+    "reference/ct_geometry.py": {
+      "sha256": "adc13047c2ce62db6be3782fdb41e08000fbae2ce3bc47048a490f6a6b83b5ee",
+      "bytes": 4756
+    },
+    "reference_r5/CONTINUOUS_ROTARY_CLEARANCE.json": {
+      "sha256": "a59d401c904131d3a9e46402e63adaf5610b3eaba81ca165e6f72475f1ddb0a3",
+      "bytes": 261486
+    },
+    "reference_r5/contact_witness.json": {
+      "sha256": "58687eacf41c8eff4be0c5555c8c20f460745ff775bcb1150c2868616db1a97b",
+      "bytes": 3988
+    },
+    "reference_r5/diagnose_near_closed.json": {
+      "sha256": "4f864950ec3ec1e643f78fc0201d077096230be83e21f11a072249f78c77dbc7",
+      "bytes": 2199
+    },
+    "reference_r5/mechanism.py": {
+      "sha256": "a3022d66003eedf6429d7a8489848be3e78f1f42bef1d096d2eac1f86de3c251",
+      "bytes": 5334
+    },
+    "report.log": {
+      "sha256": "bff58903c9b9858df78abd074fa2967f23f34fb47b5f4821a74767e2cd01a48d",
+      "bytes": 56
+    },
+    "write_report.py": {
+      "sha256": "c5f7a07676e60ac73a1df2894a09ba5d422fb5acc934f3b2a9792aba280392ae",
+      "bytes": 6938
+    }
+  }
+}

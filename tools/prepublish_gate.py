@@ -108,7 +108,15 @@ def check_evidence_tracking(errors: list[str]) -> None:
     """Every file in a current captured-study manifest must enter the Git payload."""
     import json
     tracked = set(git("ls-files", "-z").decode().split("\0"))
-    for name in ["validation/feeder_contact_verification/MANIFEST.json",
+    for name in ["validation/feeder_common_boundary/MANIFEST.json",
+                 "experiments/feeder_common_boundary/MANIFEST.json",
+                 "validation/extended_feasibility_bounds/MANIFEST.json",
+                 "experiments/extended_feasibility_bounds/MANIFEST.json",
+                 "validation/feeder_rotary_clearance/MANIFEST.json",
+                 "validation/feeder_contact_diagnosis/MANIFEST.json",
+                 "experiments/feeder_rotary_clearance/MANIFEST.json",
+                 "experiments/feeder_contact_diagnosis/MANIFEST.json",
+                 "validation/feeder_contact_verification/MANIFEST.json",
                  "experiments/feeder-contact-verification/MANIFEST.json",
                  "validation/feeder_release_review/MANIFEST.json",
                  "experiments/feeder-release-review/MANIFEST.json",

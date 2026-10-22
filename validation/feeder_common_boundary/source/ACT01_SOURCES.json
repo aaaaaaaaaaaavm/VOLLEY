@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_2232_BX4_DFF.pdf",
+    "bytes": 354533,
+    "sha256": "e23de572743ae1605a88ac0e9eda1d5782840744940d6f6d4d6894c94e9e2ba3",
+    "private_source_filename": "faulhaber_2232_BX4.pdf"
+  },
+  {
+    "url": "https://www.thomsonlinear.com/downloads/screws/Neff_LeadScrews_bruk.pdf",
+    "error": "HTTP Error 403: Forbidden",
+    "private_source_filename": "thomson_lead_screws.pdf"
+  },
+  {
+    "url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_2250_BX4_DFF.pdf",
+    "sha256": "5d9e893aa2a904496fe17c9ea6fd842e9a4a080691a006d43c5b7f04f5078cf4",
+    "bytes": 355796,
+    "private_source_filename": "faulhaber_2250_BX4.pdf"
+  },
+  {
+    "url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf",
+    "sha256": "e73ac873df9eb4055e968d1bffe3cd0be8e79ccadfb6670475d017af6300b963",
+    "bytes": 304429,
+    "private_source_filename": "faulhaber_3242_BX4.pdf"
+  },
+  {
+    "url": "https://www.thomsonlinear.com/downloads/screws/Neff_LeadScrews_bruk.pdf",
+    "review_basis": "Browser PDF text and native page12 screenshot read20October2026; direct shell download403retained; no bypass or local PDF hash claimed.",
+    "relevant_catalog_pages": [
+      5,
+      10,
+      11,
+      12
+    ],
+    "parameters_read": {
+      "screw_part": "SPT10x2M",
+      "root_diameter_mm": 7.4,
+      "efficiency_at_mu_0p1": 0.42,
+      "precision_lead_error_um_per300mm": 75,
+      "standard_lead_error_um_per300mm": 250,
+      "nut_candidate": "SB3700",
+      "nut_OD_mm": 19.1,
+      "nut_length_mm": 19.1,
+      "nut_thread": "M16x1.5",
+      "nut_dynamic_load_N_at500rpm_lubricated_ambient": 310,
+      "nut_static_load_N": 1550,
+      "nut_derating_note": "At1000rpm operating load approximately half500rpm rating; higher speeds not extrapolated as supplier approval.",
+      "nut_temperature_max_C": 82
+    },
+    "private_source_filename": null
+  },
+  {
+    "url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_32L_SB_FMM.pdf",
+    "bytes": 265042,
+    "sha256": "2f59a9f18d36aa927b68d695f5f2066452f08c9988d9ff27b87df749b6fe9b60",
+    "private_source_filename": "faulhaber_32L_SB.pdf"
+  },
+  {
+    "url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_MC5005S_DFF.pdf",
+    "bytes": 339574,
+    "sha256": "c8be2de3f6b978032bdeeabe02943a529d510428a944afc91229c8b38864aa66",
+    "private_source_filename": "faulhaber_MC5005S.pdf"
+  },
+  {
+    "url": "https://www.mikipulley-us.com/documents/Catalog/Catalog_Spring_Actuated_Brake.pdf",
+    "bytes": 4375372,
+    "sha256": "10ffd042fbc1e940f5e3fe32e31f748421bdee854c693f5eb647590438911ecf",
+    "private_source_filename": "bxw_catalog.pdf"
+  },
+  {
+    "url": "https://www.mikipulley-us.com/documents/Manual/BXR-LE_Instruction_manual.pdf",
+    "bytes": 1248120,
+    "sha256": "24e4237156038f596ad8265b2eac4311a6ca306d570a1d63cc5a04f095123603",
+    "private_source_filename": "bxr_le_manual.pdf"
+  },
+  {
+    "url": "https://www.mikipulley.co.jp/en/electromagnetic-clutches-brakes/offbrakes/braking/bxw-l",
+    "review_basis": "Manufacturer HTML table read20October2026; static torque,temperature,inertia,power and armature-time meanings distinguished."
+  },
+  {
+    "url": "https://eshop.faulhaber.com/en/32L-...-SB/Serie-32L-...-SB",
+    "review_basis": "Manufacturer4.5:1 option states354N continuous axial force and8000rpm input. Supplier confirmation for300mm/options remains open."
+  }
+]

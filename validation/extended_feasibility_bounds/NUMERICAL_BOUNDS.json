@@ -1,0 +1,331 @@
+{
+  "study": "BB52 analytical lunar and high-speed feasibility bounds",
+  "scope": "Ideal surrogate-case bounds only; no lifetime, provider, hardware or flight qualification",
+  "source_sha256": "e0e3123365e325ba6377f08def5d285fff7784dd35977cf48973f8322730c01d",
+  "source_provenance": [
+    {
+      "study": "C0-S1",
+      "source": "analysis/lunar_release_scaling.py",
+      "stored_sha256": "5ed2ef32a47e8b930e7b119b76d9b849797902b2f6e797ae4c865804adbd32ba",
+      "current_sha256": "5ed2ef32a47e8b930e7b119b76d9b849797902b2f6e797ae4c865804adbd32ba",
+      "matches": true
+    },
+    {
+      "study": "C0-S1",
+      "source": "validation/C0_S1_lunar_release_scaling.md",
+      "stored_sha256": "232fa12a70b9b42ff35cb6e6d165e61a7c569fb0b4b14dc4ceacbccc537ea944",
+      "current_sha256": "232fa12a70b9b42ff35cb6e6d165e61a7c569fb0b4b14dc4ceacbccc537ea944",
+      "matches": true
+    },
+    {
+      "study": "C0-S2",
+      "source": "analysis/lunar_visual_design.py",
+      "stored_sha256": "d463b20aa651cc79eab9d653f8914b5bb5f93978307b4b55bfa17055b32694d6",
+      "current_sha256": "d463b20aa651cc79eab9d653f8914b5bb5f93978307b4b55bfa17055b32694d6",
+      "matches": true
+    },
+    {
+      "study": "C0-S2",
+      "source": "validation/C0_S2_lunar_visual_design.md",
+      "stored_sha256": "332ebca2013f6735f071a295b3c4dba2d74911a31d7e04a55f140de93927a769",
+      "current_sha256": "05df6683a6a767b655b9bf83fb09cc65a187f555bf915c73cdd28e908dbd70a9",
+      "matches": false
+    }
+  ],
+  "inputs": {
+    "payload_kg": 4.0,
+    "retained_host_kg": 300.0,
+    "g0_m_s2": 9.80665,
+    "legacy_relative_speed_m_s": 4.569852054443217,
+    "required_speed_investigation_m_s": 1000.0,
+    "mu_moon_m3_s2": 4902800118000.0,
+    "moon_reference_radius_m": 1737400.0,
+    "basis": "GM/radii/scenarios reused from C0-S1/C0-S2; 25g is a historical study ceiling, not a payload rating; 1000m/s is a declared investigation point"
+  },
+  "checks": {
+    "S1_case_counts": true,
+    "S1_sources_and_criteria_hash_match": true,
+    "S1_stored_apsides_reconstructed_within_original_1mm_band": true,
+    "momentum_within_original_1e_minus8_band": true,
+    "connected_ideal_transfer_reconstructed_within_1e_minus6_m_s": true,
+    "S2_capture_identity_and_stored_values_within_original_1e_minus6_m_s_band": true,
+    "rocket_boundary_identity_within_original_1e_minus12_relative_band": true,
+    "constant_force_work_identity_1e_minus12_relative": true,
+    "sphere_grazing_reconstruction_1mm": true
+  },
+  "residuals": {
+    "max_stored_S1_apsis_error_m": 3.637978807091713e-09,
+    "max_momentum_residual_kg_m_s": 0.0,
+    "max_transfer_reconstruction_error_m_s": 9.094947017729282e-13,
+    "max_boundary_rocket_relative_error": 4.440892098500626e-16
+  },
+  "B1_capture_and_carrier_boundary": {
+    "transfer": {
+      "departure_kms": 3.1064266302860526,
+      "arrival_vinf_kms": 0.830117066827425,
+      "transfer_apogee_speed_kms": 0.18818633576791777,
+      "moon_speed_kms": 1.0183034025953428,
+      "time_days": 4.979864876109071,
+      "required_moon_initial_phase_deg": 114.6948021439024,
+      "model": "Ideal coplanar tangential patched conics; no finite SOI or epoch targeting"
+    },
+    "capture": [
+      {
+        "staging_apo_km": 100,
+        "capture_m_s": 821.2394078613702,
+        "later_circularization_m_s": 0.0,
+        "capture_plus_circularization_m_s": 821.2394078613702,
+        "stored_capture_error_m_s": 1.1368683772161603e-13,
+        "stored_circularization_error_m_s": 0.0
+      },
+      {
+        "staging_apo_km": 1000,
+        "capture_m_s": 667.769223800484,
+        "later_circularization_m_s": 153.47018406088614,
+        "capture_plus_circularization_m_s": 821.2394078613702,
+        "stored_capture_error_m_s": 1.1368683772161603e-13,
+        "stored_circularization_error_m_s": 5.684341886080802e-14
+      },
+      {
+        "staging_apo_km": 10000,
+        "capture_m_s": 306.64367368506146,
+        "later_circularization_m_s": 514.5957341763087,
+        "capture_plus_circularization_m_s": 821.2394078613702,
+        "stored_capture_error_m_s": 2.8421709430404007e-13,
+        "stored_circularization_error_m_s": 2.2737367544323206e-13
+      }
+    ],
+    "circular_target_mass_cases": [
+      {
+        "apo_km": 100,
+        "isp_s": 220,
+        "payload_count": 1,
+        "dry_plus_payload_kg": 304,
+        "arrival_wet_kg": 488.0313731409576,
+        "arrival_propellant_kg": 184.0313731409576,
+        "leo_wet_if_self_departure_kg": 2059.5263930580595,
+        "leo_propellant_if_self_departure_kg": 1755.5263930580595,
+        "reserve_allowance_ms": 200,
+        "self_departure_to_launcher_departure_wet_mass_ratio": 4.220069664380385
+      },
+      {
+        "apo_km": 100,
+        "isp_s": 220,
+        "payload_count": 4,
+        "dry_plus_payload_kg": 316,
+        "arrival_wet_kg": 507.2957694491533,
+        "arrival_propellant_kg": 191.29576944915328,
+        "leo_wet_if_self_departure_kg": 2140.8234875208773,
+        "leo_propellant_if_self_departure_kg": 1824.8234875208773,
+        "reserve_allowance_ms": 200,
+        "self_departure_to_launcher_departure_wet_mass_ratio": 4.220069664380385
+      },
+      {
+        "apo_km": 100,
+        "isp_s": 220,
+        "payload_count": 12,
+        "dry_plus_payload_kg": 348,
+        "arrival_wet_kg": 558.6674929376751,
+        "arrival_propellant_kg": 210.6674929376751,
+        "leo_wet_if_self_departure_kg": 2357.6157394217257,
+        "leo_propellant_if_self_departure_kg": 2009.6157394217257,
+        "reserve_allowance_ms": 200,
+        "self_departure_to_launcher_departure_wet_mass_ratio": 4.220069664380385
+      },
+      {
+        "apo_km": 100,
+        "isp_s": 320,
+        "payload_count": 1,
+        "dry_plus_payload_kg": 304,
+        "arrival_wet_kg": 420.92606287481925,
+        "arrival_propellant_kg": 116.92606287481925,
+        "leo_wet_if_self_departure_kg": 1132.6951896796309,
+        "leo_propellant_if_self_departure_kg": 828.6951896796309,
+        "reserve_allowance_ms": 200,
+        "self_departure_to_launcher_departure_wet_mass_ratio": 2.690959979868216
+      },
+      {
+        "apo_km": 100,
+        "isp_s": 320,
+        "payload_count": 4,
+        "dry_plus_payload_kg": 316,
+        "arrival_wet_kg": 437.54156535672,
+        "arrival_propellant_kg": 121.54156535672001,
+        "leo_wet_if_self_departure_kg": 1177.4068419038267,
+        "leo_propellant_if_self_departure_kg": 861.4068419038267,
+        "reserve_allowance_ms": 200,
+        "self_departure_to_launcher_departure_wet_mass_ratio": 2.6909599798682153
+      },
+      {
+        "apo_km": 100,
+        "isp_s": 320,
+        "payload_count": 12,
+        "dry_plus_payload_kg": 348,
+        "arrival_wet_kg": 481.84957197512205,
+        "arrival_propellant_kg": 133.84957197512205,
+        "leo_wet_if_self_departure_kg": 1296.6379145016826,
+        "leo_propellant_if_self_departure_kg": 948.6379145016826,
+        "reserve_allowance_ms": 200,
+        "self_departure_to_launcher_departure_wet_mass_ratio": 2.6909599798682153
+      }
+    ]
+  },
+  "B2_engine_only_disposal_thresholds": [
+    {
+      "staging_apo_km": 100,
+      "retrograde_at_apo_to_reference_sphere_grazing_m_s": 23.009546128239435,
+      "prograde_at_peri_to_zero_escape_energy_m_s": 676.6195665161636,
+      "assumed_200m_s_allowance_minus_ideal_escape_m_s": -476.61956651616356,
+      "interpretation": "reference-sphere grazing/zero-energy escape thresholds only; not controlled disposal, Earth return, stable high-lunar orbit or terrain/epoch solution"
+    },
+    {
+      "staging_apo_km": 1000,
+      "retrograde_at_apo_to_reference_sphere_grazing_m_s": 20.136105533558293,
+      "prograde_at_peri_to_zero_escape_energy_m_s": 523.1493824552774,
+      "assumed_200m_s_allowance_minus_ideal_escape_m_s": -323.1493824552774,
+      "interpretation": "reference-sphere grazing/zero-energy escape thresholds only; not controlled disposal, Earth return, stable high-lunar orbit or terrain/epoch solution"
+    },
+    {
+      "staging_apo_km": 10000,
+      "retrograde_at_apo_to_reference_sphere_grazing_m_s": 8.067580878017338,
+      "prograde_at_peri_to_zero_escape_energy_m_s": 162.02383233985483,
+      "assumed_200m_s_allowance_minus_ideal_escape_m_s": 37.976167660145165,
+      "interpretation": "reference-sphere grazing/zero-energy escape thresholds only; not controlled disposal, Earth return, stable high-lunar orbit or terrain/epoch solution"
+    }
+  ],
+  "B3_tangential_release_margin": [
+    {
+      "staging_apo_km": 100,
+      "release_at": "apoapsis",
+      "nominal_relative_command_m_s": -4.569852054443217,
+      "nominal_periapsis_altitude_km": 79.84859705341421,
+      "relative_command_for_reference_sphere_grazing_m_s": -23.316340076615962,
+      "remaining_adverse_command_margin_m_s": 18.746488022172745,
+      "local_periapsis_sensitivity_km_per_m_s": 4.37939710985735,
+      "interpretation": "deterministic tangential one-variable screen; no navigation, pointing or stochastic/3sigma requirement is supplied"
+    },
+    {
+      "staging_apo_km": 1000,
+      "release_at": "apoapsis",
+      "nominal_relative_command_m_s": -4.569852054443217,
+      "nominal_periapsis_altitude_km": 77.06841917653544,
+      "relative_command_for_reference_sphere_grazing_m_s": -20.404586940672406,
+      "remaining_adverse_command_margin_m_s": 15.834734886229189,
+      "local_periapsis_sensitivity_km_per_m_s": 4.98345681923927,
+      "interpretation": "deterministic tangential one-variable screen; no navigation, pointing or stochastic/3sigma requirement is supplied"
+    },
+    {
+      "staging_apo_km": 10000,
+      "release_at": "apoapsis",
+      "nominal_relative_command_m_s": -4.569852054443217,
+      "nominal_periapsis_altitude_km": 43.619454806994185,
+      "relative_command_for_reference_sphere_grazing_m_s": -8.17514862305757,
+      "remaining_adverse_command_margin_m_s": 3.605296568614353,
+      "local_periapsis_sensitivity_km_per_m_s": 12.203315255407468,
+      "interpretation": "deterministic tangential one-variable screen; no navigation, pointing or stochastic/3sigma requirement is supplied"
+    }
+  ],
+  "B3_low_circular_1000m_s_cases": [
+    {
+      "relative_speed_m_s": -1000.0,
+      "payload_delta_v_m_s": -986.8421052631578,
+      "specific_energy_J_kg": -2459249.866221939,
+      "bound": true,
+      "periapsis_altitude_km": -1581.1839037502918,
+      "apoapsis_altitude_km": 100.0
+    },
+    {
+      "relative_speed_m_s": 1000.0,
+      "payload_delta_v_m_s": 986.8421052631578,
+      "specific_energy_J_kg": 764771.4509826526,
+      "bound": false,
+      "periapsis_altitude_km": 99.99999999999977,
+      "apoapsis_altitude_km": null
+    }
+  ],
+  "B4_translation_only_campaign_bound": [
+    {
+      "payload_count": 1,
+      "payload_kg_each": 4.0,
+      "retained_non_payload_kg": 300.0,
+      "initial_carried_mass_kg": 304.0,
+      "max_coherent_recoil_magnitude_at_U_m_s": 0.06012963229530549,
+      "no_release_recoil_m_s": 0.0,
+      "ideal_added_energy_at_1000m_s_J": 1973684.2105263157,
+      "scope": "algebraic translation-only bound; no burns, attitude/inertia, optimized order, navigation, thermal services or actual campaign feasibility"
+    },
+    {
+      "payload_count": 4,
+      "payload_kg_each": 4.0,
+      "retained_non_payload_kg": 300.0,
+      "initial_carried_mass_kg": 316.0,
+      "max_coherent_recoil_magnitude_at_U_m_s": 0.23591243566417955,
+      "no_release_recoil_m_s": 0.0,
+      "ideal_added_energy_at_1000m_s_J": 7896752.703215062,
+      "scope": "algebraic translation-only bound; no burns, attitude/inertia, optimized order, navigation, thermal services or actual campaign feasibility"
+    },
+    {
+      "payload_count": 12,
+      "payload_kg_each": 4.0,
+      "retained_non_payload_kg": 300.0,
+      "initial_carried_mass_kg": 348.0,
+      "max_coherent_recoil_magnitude_at_U_m_s": 0.674072690222634,
+      "no_release_recoil_m_s": 0.0,
+      "ideal_added_energy_at_1000m_s_J": 23704991.46047092,
+      "scope": "algebraic translation-only bound; no burns, attitude/inertia, optimized order, navigation, thermal services or actual campaign feasibility"
+    }
+  ],
+  "B5_high_speed": {
+    "ideal_added_relative_energy_J": 1973684.2105263157,
+    "legacy_speed_ideal_relative_energy_J": 41.21752855164255,
+    "energy_ratio_to_legacy_speed": 47884.58405635441,
+    "stroke_at_acceleration_screens": [
+      {
+        "payload_acceleration_study_g": 3.0,
+        "constant_force_relative_stroke_m": 16771.648239768558,
+        "zero_end_preload_linear_spring_relative_stroke_m": 33543.296479537115,
+        "payload_force_at_study_acceleration_N": 117.6798
+      },
+      {
+        "payload_acceleration_study_g": 10.0,
+        "constant_force_relative_stroke_m": 5031.494471930568,
+        "zero_end_preload_linear_spring_relative_stroke_m": 10062.988943861135,
+        "payload_force_at_study_acceleration_N": 392.26599999999996
+      },
+      {
+        "payload_acceleration_study_g": 25.0,
+        "constant_force_relative_stroke_m": 2012.5977887722267,
+        "zero_end_preload_linear_spring_relative_stroke_m": 4025.1955775444535,
+        "payload_force_at_study_acceleration_N": 980.665
+      }
+    ],
+    "compact_stroke_screens": [
+      {
+        "relative_stroke_m": 0.08,
+        "source_context": "historical MC-L2 working-stroke reference; C0-S2 criteria; retired bank architecture",
+        "minimum_peak_payload_acceleration_g": 628936.8089913209,
+        "max_relative_speed_at_25g_m_s": 6.304730076167681
+      },
+      {
+        "relative_stroke_m": 0.25,
+        "source_context": "reference_architecture.py compact-stroke study screen",
+        "minimum_peak_payload_acceleration_g": 201259.77887722268,
+        "max_relative_speed_at_25g_m_s": 11.145293476022363
+      },
+      {
+        "relative_stroke_m": 1.3,
+        "source_context": "historical Gen5 acceleration zone; EMOCD_Computation_Results_C1-C10.md",
+        "minimum_peak_payload_acceleration_g": 38703.80363023513,
+        "max_relative_speed_at_25g_m_s": 25.415179453756895
+      },
+      {
+        "relative_stroke_m": 1.5,
+        "source_context": "optimistic entire historical Gen5 track, including coast/trim",
+        "minimum_peak_payload_acceleration_g": 33543.296479537115,
+        "max_relative_speed_at_25g_m_s": 27.300282049825054
+      }
+    ],
+    "bus_energy_boundary": "E_bus >= E_relative/eta for efficiency0<eta<=1, with pusher/friction/charging/catcher burden extra. No efficiency, power availability or installed energy store is supplied."
+  },
+  "unresolved_provenance": "The supplied current C0-S2 criteria hash differs from its original result's recorded criteria hash. The mismatch is retained; no stored hash or numerical threshold has been replaced."
+}

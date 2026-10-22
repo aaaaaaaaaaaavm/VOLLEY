@@ -82,3 +82,19 @@ Run `python tools/prepublish_gate.py --all` for publication checks and `python t
 [VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY) · [Thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) · [Paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) · [Labs](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)
 
 Each edition contains its own evidence and documentation. Historical work remains traceable through dated studies and Git history.
+
+## Rotary clearance and contact-model diagnosis
+
+[RVC01: native CAD and STEP](validation/feeder_rotary_clearance/README.md) supplies the separate FM07-R6 candidate. A 0.25 mm gate relief passes four complete-angle nominal screens; eight assemblies and two gate STEP files have checked exchange records. Loaded fit and actuation remain separate criteria.
+
+[FCE13: source, raw data and reproduction](validation/feeder_contact_diagnosis/README.md) adds six completed native Chrono runs on FM06-R1. Solver and equivalent-geometry refinements do not meet the retained pose criteria; no correction is qualified. The study does not establish a release-precision or contact-force rating.
+
+[Current numerical-evidence index](docs/CURRENT_NUMERICAL_EVIDENCE.md) records the dated native studies and their revision-specific scope.
+
+[Reproducible lunar and high-speed bounds](validation/extended_feasibility_bounds/README.md) separate carrier propulsion from payload release. The compact/low-acceleration combination cannot support the 1 km/s investigation point under the declared surrogate assumptions.
+
+## Common-boundary feeder evidence
+
+[FDR09: seven four-cell CAD/STEP concepts](validation/feeder_common_boundary/README.md) uses two 1U and two 3U payloads with one shared receiver. A separate lead-screw R2 correction clears the checked nominal payload corridor; loaded support, insert custody and full installed-system gates remain open. No feeder is selected.
+
+![Partial mass accounting on the declared four-payload boundary](validation/feeder_common_boundary/comparison_mass.png)

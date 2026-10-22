@@ -1,0 +1,369 @@
+{
+  "revision": "FM07-R6-CANDIDATE",
+  "source_change_whitelist_verified": true,
+  "source_sha256": {
+    "mechanism.py": "4cd3525d3975bcfe6288cc227075c3f34d3fae702166c45c417786d9f5a1b9af",
+    "reference_r5/mechanism.py": "a3022d66003eedf6429d7a8489848be3e78f1f42bef1d096d2eac1f86de3c251",
+    "export_delta.py": "65bc63916a8a6cc0e41a19992a0f80484420293b7eaddc89c4fdeca7c65bf368"
+  },
+  "software": {
+    "FreeCAD": [
+      "1",
+      "0",
+      "0",
+      "",
+      "https://code.launchpad.net/~vcs-imports/freecad/trunk",
+      "2026/08/25 11:49:11"
+    ],
+    "OCC": "7.8.1"
+  },
+  "records": [
+    {
+      "kind": "part",
+      "size": "1U",
+      "file": "cad/FM07_R6_1U_exit_gate.step",
+      "volume_mm3": 3723.860699966079,
+      "solids": 1,
+      "sha256": "4bcc267f58b18515ad860035d8e700928c04a3b15a498cbecaf0904b5f880d57"
+    },
+    {
+      "kind": "assembly",
+      "size": "1U",
+      "pose": "exit_unlocked",
+      "components": 37,
+      "source_volume_mm3": 2057874.7092241112,
+      "removed_volume_mm3": 40.999999999999986,
+      "removed_material_mass_kg": 0.00032184999999999994,
+      "removed_CG_mm": [
+        195.50000000000003,
+        51.00000000000001,
+        22.125000000000004
+      ],
+      "subset_verified": true,
+      "max_unchanged_part_difference_mm3": 5.820766091346741e-11,
+      "pair_intersections": [],
+      "files": {
+        "cad/FM07_R6_1U_exit_unlocked.FCStd": "6fd6ff63fe8713bbd184afe70f9633efed3a3fe52a5323d5d7710b709c043cee",
+        "cad/FM07_R6_1U_exit_unlocked.step": "6e91c52e74413747a67ced971e110d6c6f5b4036fc5d49669019599d4674af18"
+      }
+    },
+    {
+      "kind": "assembly",
+      "size": "1U",
+      "pose": "exit_open",
+      "components": 37,
+      "source_volume_mm3": 2057874.7092241112,
+      "removed_volume_mm3": 41.0,
+      "removed_material_mass_kg": 0.00032185000000000004,
+      "removed_CG_mm": [
+        265.99999999999994,
+        -4.5,
+        22.125
+      ],
+      "subset_verified": true,
+      "max_unchanged_part_difference_mm3": 5.820766091346741e-11,
+      "pair_intersections": [],
+      "files": {
+        "cad/FM07_R6_1U_exit_open.FCStd": "af63d12717f22940b0f5bc00e4f88fa13d0556ae8181f830689b26b95394e097",
+        "cad/FM07_R6_1U_exit_open.step": "278a070b0a3499ef850bfe7a6152bd3f09129a9a4fb9c7b78698bbc0ad7a4bcc"
+      }
+    },
+    {
+      "kind": "assembly",
+      "size": "1U",
+      "pose": "empty_carrier_home",
+      "components": 37,
+      "source_volume_mm3": 2057874.7092241112,
+      "removed_volume_mm3": 40.99999999999999,
+      "removed_material_mass_kg": 0.00032185,
+      "removed_CG_mm": [
+        186.00000000000003,
+        -4.499999999999996,
+        22.125
+      ],
+      "subset_verified": true,
+      "max_unchanged_part_difference_mm3": 5.820766091346741e-11,
+      "pair_intersections": [],
+      "files": {
+        "cad/FM07_R6_1U_empty_carrier_home.FCStd": "f05a9aa732ec740b6d754073f17ed091cf9728108a7d1ed32dfa9d56fa3cf1e5",
+        "cad/FM07_R6_1U_empty_carrier_home.step": "293fc27bdf11c4532645791f0338e96c7d455d2b5ce81a9755b2277c71c728fb"
+      }
+    },
+    {
+      "kind": "assembly",
+      "size": "1U",
+      "pose": "exit_closed",
+      "components": 37,
+      "source_volume_mm3": 2057874.7092241112,
+      "removed_volume_mm3": 40.999999999999986,
+      "removed_material_mass_kg": 0.00032184999999999994,
+      "removed_CG_mm": [
+        115.50000000000001,
+        51.00000000000001,
+        22.125000000000004
+      ],
+      "subset_verified": true,
+      "max_unchanged_part_difference_mm3": 5.820766091346741e-11,
+      "pair_intersections": [],
+      "files": {
+        "cad/FM07_R6_1U_exit_closed.FCStd": "5b81c42fa80b18e61fb6a44041dd1a6f16c87a25984065b1ac91f7cde8e52f2a",
+        "cad/FM07_R6_1U_exit_closed.step": "c8868dbe64c4ddb61e8f49ac31d90576dafc7d7937c84fa38e471b60db6dedc7"
+      }
+    },
+    {
+      "kind": "part",
+      "size": "3U",
+      "file": "cad/FM07_R6_3U_exit_gate.step",
+      "volume_mm3": 3723.860699966081,
+      "solids": 1,
+      "sha256": "e3e1e21ad75f065aa902a962e957b76c7ebad5f8ce841bafbfa764edf9d4e5ba"
+    },
+    {
+      "kind": "assembly",
+      "size": "3U",
+      "pose": "exit_unlocked",
+      "components": 37,
+      "source_volume_mm3": 5004924.530599647,
+      "removed_volume_mm3": 40.999999999999986,
+      "removed_material_mass_kg": 0.00032184999999999994,
+      "removed_CG_mm": [
+        422.50000000000006,
+        51.00000000000001,
+        22.125000000000004
+      ],
+      "subset_verified": true,
+      "max_unchanged_part_difference_mm3": 5.820766091346741e-11,
+      "pair_intersections": [],
+      "files": {
+        "cad/FM07_R6_3U_exit_unlocked.FCStd": "a5bd832a61bda2869997459c063727b628c2074506f3d039c261442f8c121db1",
+        "cad/FM07_R6_3U_exit_unlocked.step": "ebb31bdf1165165da04164e4f647ea1c792538793538f91d53cf12e7f37059ea"
+      }
+    },
+    {
+      "kind": "assembly",
+      "size": "3U",
+      "pose": "exit_open",
+      "components": 37,
+      "source_volume_mm3": 5004924.530599647,
+      "removed_volume_mm3": 41.0,
+      "removed_material_mass_kg": 0.00032185000000000004,
+      "removed_CG_mm": [
+        492.9999999999999,
+        -4.5,
+        22.125
+      ],
+      "subset_verified": true,
+      "max_unchanged_part_difference_mm3": 5.820766091346741e-11,
+      "pair_intersections": [],
+      "files": {
+        "cad/FM07_R6_3U_exit_open.FCStd": "2ff0c55cd5b0b3df9c89deb656c5d5ad4a2f6ad0538ccb018d4d73e4b9185840",
+        "cad/FM07_R6_3U_exit_open.step": "296f400c46d249eececb7403d570cf9cad3e3d9beb5ad60ca48439d94a44866b"
+      }
+    },
+    {
+      "kind": "assembly",
+      "size": "3U",
+      "pose": "empty_carrier_home",
+      "components": 37,
+      "source_volume_mm3": 5004924.530599646,
+      "removed_volume_mm3": 41.0,
+      "removed_material_mass_kg": 0.00032185000000000004,
+      "removed_CG_mm": [
+        413.0,
+        -4.5,
+        22.125
+      ],
+      "subset_verified": true,
+      "max_unchanged_part_difference_mm3": 5.820766091346741e-11,
+      "pair_intersections": [],
+      "files": {
+        "cad/FM07_R6_3U_empty_carrier_home.FCStd": "a96f7a8429f871c58a9ae1f82275535daf7f5a34cd8bf388a8a13156d50aec0e",
+        "cad/FM07_R6_3U_empty_carrier_home.step": "5f7e8893a959f7e0f8fa158b014c9c739925ffef33f9f73c6abf426b09953e1c"
+      }
+    },
+    {
+      "kind": "assembly",
+      "size": "3U",
+      "pose": "exit_closed",
+      "components": 37,
+      "source_volume_mm3": 5004924.530599646,
+      "removed_volume_mm3": 40.999999999999986,
+      "removed_material_mass_kg": 0.00032184999999999994,
+      "removed_CG_mm": [
+        342.50000000000006,
+        51.00000000000001,
+        22.125000000000004
+      ],
+      "subset_verified": true,
+      "max_unchanged_part_difference_mm3": 5.820766091346741e-11,
+      "pair_intersections": [],
+      "files": {
+        "cad/FM07_R6_3U_exit_closed.FCStd": "c7d7147e85ad6d9a2dba91cbc0e03d818f75c4bec98a1cfb7b0d96b784eaa9e8",
+        "cad/FM07_R6_3U_exit_closed.step": "9956b7e89d9bc0264c3b17789742931ac5603d78c195b46f1b6914f246524b5a"
+      }
+    }
+  ],
+  "contact_comparison": [
+    {
+      "size": "1U",
+      "angle_deg": 0,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 0.01,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 0.05,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 0.1,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 0.25,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 0.5,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 0.6,
+      "r5_gap_mm": 0.06771075009842102,
+      "r6_gap_mm": 0.2590072309393906,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 1,
+      "r5_gap_mm": 0.13424375483902007,
+      "r6_gap_mm": 0.2837629040471621,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 2,
+      "r5_gap_mm": 0.27514803084865014,
+      "r6_gap_mm": 0.3717612659757465,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "1U",
+      "angle_deg": 5,
+      "r5_gap_mm": 1.1549266468464012,
+      "r6_gap_mm": 1.1816748958981365,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 0,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 0.01,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 0.05,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 0.1,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 0.25,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 0.5,
+      "r5_gap_mm": 0.0,
+      "r6_gap_mm": 0.25,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 0.6,
+      "r5_gap_mm": 0.06771075009842102,
+      "r6_gap_mm": 0.2590072309393906,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 1,
+      "r5_gap_mm": 0.13424375483902007,
+      "r6_gap_mm": 0.2837629040471621,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 2,
+      "r5_gap_mm": 0.27514803084865647,
+      "r6_gap_mm": 0.37176126597575115,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    },
+    {
+      "size": "3U",
+      "angle_deg": 5,
+      "r5_gap_mm": 1.1549266468464043,
+      "r6_gap_mm": 1.1816748958981396,
+      "r5_intersection_mm3": 0.0,
+      "r6_intersection_mm3": 0.0
+    }
+  ],
+  "boundary": "Nominal rigid geometry. Material removal preserves previous nonpenetration under unchanged motions; no load, tolerance, actuator or D27 acceptance. Density-based mass delta is not an installed-system mass."
+}

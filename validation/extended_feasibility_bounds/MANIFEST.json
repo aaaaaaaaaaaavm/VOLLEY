@@ -1,0 +1,77 @@
+{
+  "format_version": 1,
+  "description": "Public reproducible subset of existing analytical bounds; no new model run",
+  "numeric_relative_tolerance": 1e-12,
+  "numeric_absolute_tolerance": 1e-09,
+  "known_C0_S2_criteria_mismatch": {
+    "stored_result_criteria_sha256": "332ebca2013f6735f071a295b3c4dba2d74911a31d7e04a55f140de93927a769",
+    "supplied_criteria_sha256": "05df6683a6a767b655b9bf83fb09cc65a187f555bf915c73cdd28e908dbd70a9",
+    "disposition": "retained, not repaired"
+  },
+  "files": {
+    "MANUSCRIPT_INSERT.md": {
+      "bytes": 1325,
+      "sha256": "2a8f0e81a30e6f9744c7471d50a84bd372b0d898ff07354a6d86d285dafc7e5e"
+    },
+    "NUMERICAL_BOUNDS.json": {
+      "bytes": 14706,
+      "sha256": "8a782b9725b99440e0fb673e47ba1480f472fd05159bfec4b9477d9d754a8b10"
+    },
+    "README.md": {
+      "sha256": "1997727a22704b1518ceb03805c27717f95c3370a9c5d2f1b1b16be3a6000700",
+      "bytes": 2973
+    },
+    "SCENARIO_NOTES.md": {
+      "bytes": 2434,
+      "sha256": "9eff9a8ebd0d96d62799a2c32af1552f5a1e57fd5137a85e6c8393dcbf3db816"
+    },
+    "check_capture.py": {
+      "bytes": 2449,
+      "sha256": "625ddd4606723d02e71f61123cb5f87a0975612ee15215d9a03f21a82a196cd3"
+    },
+    "feasibility_bounds.pdf": {
+      "sha256": "e97ee0e279f26dfd21cde481444c8b8011e018da3f0e78ef20f475cf00259fbe",
+      "bytes": 15969
+    },
+    "feasibility_bounds.png": {
+      "sha256": "a089af5974104f24d1e53d5eb312a7d01f17845d52c5cb09edfe78ec60aa5309",
+      "bytes": 140005
+    },
+    "feasibility_bounds.svg": {
+      "sha256": "c52771a4ac10749735b85a2f0d82774ca626f2a4797d5d66d6018cef14980753",
+      "bytes": 62981
+    },
+    "inputs/C0_S1_lunar_release_scaling.md": {
+      "bytes": 4679,
+      "sha256": "232fa12a70b9b42ff35cb6e6d165e61a7c569fb0b4b14dc4ceacbccc537ea944"
+    },
+    "inputs/C0_S2_lunar_visual_design.md": {
+      "bytes": 3699,
+      "sha256": "05df6683a6a767b655b9bf83fb09cc65a187f555bf915c73cdd28e908dbd70a9"
+    },
+    "inputs/lunar_release_scaling.json": {
+      "bytes": 184223,
+      "sha256": "bd6967381bd52c9cc37b9679f88edcae99686a0e881cea9306fcab44d620f20c"
+    },
+    "inputs/lunar_release_scaling.py": {
+      "bytes": 12734,
+      "sha256": "5ed2ef32a47e8b930e7b119b76d9b849797902b2f6e797ae4c865804adbd32ba"
+    },
+    "inputs/lunar_visual_design.json": {
+      "bytes": 75529,
+      "sha256": "1f15f793330e973d057f29fc0c0add26dd074884e3745995e8a273e07411a739"
+    },
+    "inputs/lunar_visual_design.py": {
+      "bytes": 5502,
+      "sha256": "d463b20aa651cc79eab9d653f8914b5bb5f93978307b4b55bfa17055b32694d6"
+    },
+    "reproduce_bounds.py": {
+      "sha256": "e0e3123365e325ba6377f08def5d285fff7784dd35977cf48973f8322730c01d",
+      "bytes": 13412
+    },
+    "plot_publication.py": {
+      "sha256": "8c5332bf535520ff7b5af6b2c4625b16fbf71d66ba56a2e06e06de63aa9da16b",
+      "bytes": 2340
+    }
+  }
+}

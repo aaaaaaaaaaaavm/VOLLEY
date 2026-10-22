@@ -1,0 +1,21 @@
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Chrono package prefix directory: /workspace/volley-work/native-tools/chrono10/build
+-- Inclusive list of Chrono components: 
+-- Eigen3 found
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5") found components: CXX
+-- OpenMP found
+-- Requested components
+-- Chrono libraries not found for the debug configuration: ChronoModels_robot;Chrono_core
+-- Configuration summary
+--   CHRONO_TARGETS           (Chrono targets): Chrono::ChronoModels_robot;Chrono::Chrono_core
+--   CHRONO_DATA_DIR          (Path to Chrono data folder): /workspace/volley-work/native-tools/chrono10/build/data/
+--   CHRONO_VEHICLE_DATA_DIR  (Path to Chrono::Vehicle data folder): /workspace/volley-work/native-tools/chrono10/build/data/vehicle/
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/volley-work/2026-10-22-contact/build

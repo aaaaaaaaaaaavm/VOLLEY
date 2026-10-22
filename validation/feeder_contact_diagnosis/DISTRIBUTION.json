@@ -1,0 +1,17 @@
+{
+  "study": "FCE13",
+  "original_capture": {
+    "name": "BB57_FCE13_CONTACT_FAILURE_BOUND_20261022.zip",
+    "bytes": 7228408,
+    "sha256": "2e4f9a4b4cf8755ffe8c7286ed1a5fcd39f312a61a73db0cbce76682ab439635"
+  },
+  "omitted_from_source_distribution": [
+    "MANUSCRIPT_INSERT.md",
+    "REPRODUCTION_IDENTITIES.json",
+    "build/feeder_bb_probe",
+    "build/feeder_box_probe",
+    "build/feeder_probe",
+    "SHA256SUMS"
+  ],
+  "decision": "No correction qualified; pose criteria unchanged"
+}

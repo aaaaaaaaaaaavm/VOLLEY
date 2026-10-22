@@ -449,10 +449,46 @@
         "README.md"
       ],
       "evidence_class": "Blender Workbench render of actual FreeCAD geometry; prescribed nominal state, no hardware or launch result"
+    },
+    {
+      "path": "validation/feeder_rotary_clearance/figures/rotary_clearance.png",
+      "sha256": "bfd8f293ddb1096f5506d2ad5d6d5998455429d5d3e439a92f1ac7bce4af447a",
+      "bytes": 77109,
+      "referenced_by": [
+        "Current study, manuscript, academic report or front page as applicable"
+      ],
+      "evidence_class": "Source-linked native/numerical calculation; revision-specific; no hardware measurement"
+    },
+    {
+      "path": "validation/feeder_contact_diagnosis/convergence_publication.png",
+      "sha256": "a903691b8ca43b5bf7bff28dbbcdbc3b05d13f49467e93239abcac4962a16680",
+      "bytes": 249394,
+      "referenced_by": [
+        "Current study, manuscript, academic report or front page as applicable"
+      ],
+      "evidence_class": "Source-linked native/numerical calculation; revision-specific; no hardware measurement"
+    },
+    {
+      "path": "validation/extended_feasibility_bounds/feasibility_bounds.png",
+      "sha256": "a089af5974104f24d1e53d5eb312a7d01f17845d52c5cb09edfe78ec60aa5309",
+      "bytes": 140005,
+      "referenced_by": [
+        "Current study, manuscript, academic report or front page as applicable"
+      ],
+      "evidence_class": "Source-linked native/numerical calculation; revision-specific; no hardware measurement"
+    },
+    {
+      "path": "validation/feeder_common_boundary/comparison_mass.png",
+      "sha256": "1977b8ab38ab48784c61554a5420e1a7afd29efd6fe50a18534177088f953d26",
+      "bytes": 137802,
+      "referenced_by": [
+        "Current study, manuscript, academic report or front page as applicable"
+      ],
+      "evidence_class": "Source-linked native/numerical calculation; revision-specific; no hardware measurement"
     }
   ],
   "document_sha256": {
-    "README.md": "dcdea868623c1a5650c00b19c51c7f7fa248cb21dc60cbae5ad1205bfcd4fd83",
+    "README.md": "f02eca779a75a7e8632725f9c5e469c51227ace8c02fa8530663a80178814e91",
     "reports/GEN5_COMPUTATIONAL_REVIEW.md": "1541b43f05818888dd0cc1ded1fe42dc1d7e5e73f3f17a8a6ecc45668d6619e6",
     "validation/orbit_evidence/README.md": "3f350ec088a33fb413861c20e88e04946c183bb67c67c2378625103412190967",
     "validation/feeder_review/README.md": "b226b959274eb24030f6f20b4ac58932154fa9b2713ea486bf49a09bb4dba94a",

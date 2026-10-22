@@ -1,0 +1,9 @@
+actuator conditional screens 384 elapsed 0.33451933900005315
+lead_screw ('32GPT 9:1', 30, 0.01485, 3600.0, 0.766)
+spring_dual_gate ('32GPT 59:1', 5, 0.03385, 3781.5, 1.209)
+rack_pawl ('32GPT 30:1', 5, 0.04085, 1890.8, 1.166)
+indexed_drum ('32GPT 30:1', 15, 0.03969, 59.4, 1.166)
+pantograph ('32GPT 59:1', 60, 0.02997, 3190.0, 1.209)
+telescopic ('32GPT 9:1', 15, 0.02637, 3600.0, 0.766)
+belt_shuttle ('32GPT 30:1', 5, 0.04085, 1890.8, 1.166)
+common_rail ('32GPT 30:1', 10, 0.04098, 4254.2, 1.166)

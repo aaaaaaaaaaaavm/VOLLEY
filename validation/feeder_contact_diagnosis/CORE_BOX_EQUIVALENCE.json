@@ -1,0 +1,47 @@
+{
+  "purpose": "exact core00 collision primitive replacement only; eight external convex railcells remain unchanged; no full CAD equivalence claim beyond existing FCE12 partition",
+  "cases": [
+    {
+      "size": "1U",
+      "source": "geometry_guarded/1U/payload_cell_00.obj",
+      "sha256": "4478816d9617e11011a54e8db7968e0efeddf4f4acd55718c546cc5830d66550",
+      "vertices": 8,
+      "triangles": 12,
+      "lower_m": [
+        -0.05675,
+        -0.0495,
+        -0.0495
+      ],
+      "upper_m": [
+        0.05675,
+        0.0495,
+        0.0495
+      ],
+      "box_volume_mm3": 1112413.5000000002,
+      "maximum_box_corner_distance_m": 0.0,
+      "all_triangle_faces_on_box_planes": true,
+      "equivalence_pass": true
+    },
+    {
+      "size": "3U",
+      "source": "geometry_guarded/3U/payload_cell_00.obj",
+      "sha256": "78465ed936624f1d8f075e8aae575a34c4711ca72a792d6656533a22455c0973",
+      "vertices": 8,
+      "triangles": 12,
+      "lower_m": [
+        -0.17025,
+        -0.0495,
+        -0.0495
+      ],
+      "upper_m": [
+        0.17025,
+        0.0495,
+        0.0495
+      ],
+      "box_volume_mm3": 3337240.5000000005,
+      "maximum_box_corner_distance_m": 0.0,
+      "all_triangle_faces_on_box_planes": true,
+      "equivalence_pass": true
+    }
+  ]
+}

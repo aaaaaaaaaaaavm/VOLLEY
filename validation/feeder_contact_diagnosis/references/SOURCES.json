@@ -1,0 +1,31 @@
+{
+  "SDK": "Project Chrono10.0.0 local source",
+  "files": {
+    "ChSolverPSOR.cpp": {
+      "source": "/workspace/volley-work/native-tools/chrono10/chrono-10.0.0/src/chrono/solver/ChSolverPSOR.cpp",
+      "sha256": "bc6b648e67586e6a3f11114ef1709ae4a378cb1321ad97dceb565b14d1c125e8"
+    },
+    "ChSolverBB.cpp": {
+      "source": "/workspace/volley-work/native-tools/chrono10/chrono-10.0.0/src/chrono/solver/ChSolverBB.cpp",
+      "sha256": "523f86eb47f1c5b965cfc61faf130cfdde8e781b954ff970a6c71bc4a50848e4"
+    },
+    "ChSolverAPGD.cpp": {
+      "source": "/workspace/volley-work/native-tools/chrono10/chrono-10.0.0/src/chrono/solver/ChSolverAPGD.cpp",
+      "sha256": "b35da42fc439a58171dd1b21aa7a41870ef58e87ce829ddb32553e1e51b0917d"
+    },
+    "ChCollisionModelBullet.cpp": {
+      "source": "/workspace/volley-work/native-tools/chrono10/chrono-10.0.0/src/chrono/collision/bullet/ChCollisionModelBullet.cpp",
+      "sha256": "5136cdd58bee809ff85508c120bd7eec58be0d2b6d509645647e022f1ac7d963"
+    },
+    "ChCollisionSystemBullet.cpp": {
+      "source": "/workspace/volley-work/native-tools/chrono10/chrono-10.0.0/src/chrono/collision/bullet/ChCollisionSystemBullet.cpp",
+      "sha256": "99380f853527bf48a21f88f6b4c2497b38420f57589f12729ba9df3167fb6cea"
+    },
+    "cbtConvexTriangleMeshShape.cpp": {
+      "source": "/workspace/volley-work/native-tools/chrono10/chrono-10.0.0/src/chrono/collision/bullet/BulletCollision/CollisionShapes/cbtConvexTriangleMeshShape.cpp",
+      "sha256": "81c45e04bdd0b1d44c5d383c42025155ad9f38e01967db17ee3fc08d3c9e8bbb"
+    }
+  },
+  "calibration_source": "/workspace/volley-work/2026-10-21-completion/feeder-contact-correction/contact_calibration_mm.cpp",
+  "calibration_context": "existing FCE12 planar controls; unchanged nine-cell payload and mm scaling; no dynamic or rotated-normal convergence claim"
+}

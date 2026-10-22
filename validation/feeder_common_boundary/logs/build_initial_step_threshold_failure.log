@@ -1,0 +1,13 @@
+lead_screw native four inventory complete 162.26
+lead_screw evidence complete 200.12
+Traceback (most recent call last):
+  File "/workspace/volley-work/2026-10-22-feeder-trade/build_comparison.py", line 296, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/workspace/volley-work/2026-10-22-feeder-trade/build_comparison.py", line 275, in main
+    **mass_props(pp),**native_export(c+'_four_inventory_stowed',pp)}
+                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/volley-work/2026-10-22-feeder-trade/build_comparison.py", line 136, in native_export
+    assert abs(read.Volume-vol0)<max(.01,vol0*1e-9),(stem,read.Volume,vol0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('spring_dual_gate_four_inventory_stowed', 14141483.530064775, 14141483.043688074)

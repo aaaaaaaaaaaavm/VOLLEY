@@ -1,0 +1,115 @@
+{
+  "revision": "ACT-01-2026-10-20",
+  "status": "CATALOG_BACKED_GROUND_DRIVE_SCREEN_NOT_FLIGHT_SELECTION",
+  "stroke_m": 0.2,
+  "moving_mass_kg": [
+    2.83,
+    5.5,
+    7.5
+  ],
+  "transfer_time_s": [
+    2,
+    5,
+    10,
+    15,
+    20
+  ],
+  "resistance_N": [
+    5,
+    20,
+    50
+  ],
+  "screw_lead_m": 0.002,
+  "screw_major_m": 0.01,
+  "screw_pitch_diameter_assumed_m": 0.009,
+  "screw_root_m": 0.0074,
+  "unsupported_screw_length_m": 0.276,
+  "thread_half_angle_deg": 15,
+  "thread_friction": [
+    0.03,
+    0.1,
+    0.15
+  ],
+  "nut_drag_Nm": [
+    0,
+    0.005,
+    0.015
+  ],
+  "gear_ratio": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "gear_efficiency_assumed": 0.8,
+  "motor_data_basis": "FAULHABER manufacturer PDFs,edition28July2026,page1;24V columns;ambient22C. No vacuum or radiation qualification inferred.",
+  "motors": [
+    {
+      "id": "2232S024BX4",
+      "diameter_mm": 22,
+      "length_mm": 33.8,
+      "mass_kg": 0.065,
+      "voltage_V": 24,
+      "no_load_rpm": 7100,
+      "slope_rpm_per_mNm": 114,
+      "rated_torque_Nm": 0.0146,
+      "rated_current_A": 0.54,
+      "rated_speed_rpm": 4840,
+      "kT_Nm_A": 0.0324,
+      "no_load_current_A": 0.039,
+      "rotor_inertia_kg_m2": 5.1e-07,
+      "axial_running_load_N": 2,
+      "source_url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_2232_BX4_DFF.pdf"
+    },
+    {
+      "id": "2250S024BX4",
+      "diameter_mm": 22,
+      "length_mm": 51.8,
+      "mass_kg": 0.105,
+      "voltage_V": 24,
+      "no_load_rpm": 6200,
+      "slope_rpm_per_mNm": 40.3,
+      "rated_torque_Nm": 0.0262,
+      "rated_current_A": 0.85,
+      "rated_speed_rpm": 4870,
+      "kT_Nm_A": 0.0375,
+      "no_load_current_A": 0.066,
+      "rotor_inertia_kg_m2": 1e-06,
+      "axial_running_load_N": 2,
+      "source_url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_2250_BX4_DFF.pdf"
+    },
+    {
+      "id": "3242G024BX4",
+      "diameter_mm": 32,
+      "length_mm": 44.2,
+      "mass_kg": 0.179,
+      "voltage_V": 24,
+      "no_load_rpm": 5600,
+      "slope_rpm_per_mNm": 20.4,
+      "rated_torque_Nm": 0.0418,
+      "rated_current_A": 1.21,
+      "rated_speed_rpm": 4600,
+      "kT_Nm_A": 0.0414,
+      "no_load_current_A": 0.089,
+      "rotor_inertia_kg_m2": 3e-06,
+      "axial_running_load_N": 5,
+      "source_url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf"
+    }
+  ],
+  "nut_basis": {
+    "part": "ThomsonSB3700withSPT10x2M",
+    "catalog_dynamic_N_at500rpm": 310,
+    "catalog_static_N": 1550,
+    "catalog_max_temperature_C": 82,
+    "catalog_efficiency_at_mu0p1": 0.42,
+    "load_at1000rpm_factor_approx": 0.5,
+    "above1000rpm": "Supplier rating not established; no extrapolated acceptance.",
+    "source_url": "https://www.thomsonlinear.com/downloads/screws/Neff_LeadScrews_bruk.pdf"
+  },
+  "limits": [
+    "Gear ratios/efficiency are design assumptions; no purchased gearbox selected.",
+    "Motor ratings refer to manufacturer ambient setup,not a vacuum thermal path.",
+    "Nut rating is lubricated/roomtemperature/50percent duty;no flight material acceptance.",
+    "No source-rated controller,bearings,holding brake or complete actuator assembly yet."
+  ]
+}

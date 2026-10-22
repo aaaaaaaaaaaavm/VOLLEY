@@ -1,0 +1,33 @@
+[
+  {
+    "public_path": "/workspace/VOLLEY/validation/feeder_contact_verification/feeder_mm.cpp",
+    "public_sha256": "5f45965623bbe3cf33cd791fc10533949ff405781f7915f62124e8066d55e1fa",
+    "preserved_baseline_path": "baseline/feeder_mm.cpp",
+    "byte_identical_to_preserved_private_baseline": false
+  },
+  {
+    "public_path": "/workspace/VOLLEY/validation/feeder_contact_verification/PROTOCOL.json",
+    "public_sha256": "9d8bc1a97df4c50e526254dc5981bd5dd4b94da832a4967ede9e96c58758c096",
+    "preserved_baseline_path": "baseline/PROTOCOL.json",
+    "byte_identical_to_preserved_private_baseline": true
+  },
+  {
+    "public_path": "/workspace/VOLLEY/validation/feeder_contact_verification/RESULTS.json",
+    "public_sha256": "ecd54fcc7e61efd355df93f5d0b548c416bb12cf074fe738edd4ccaa51bb9927",
+    "preserved_baseline_path": "baseline/RESULTS.json",
+    "byte_identical_to_preserved_private_baseline": true
+  },
+  {
+    "public_path": "/workspace/VOLLEY/validation/feeder_contact_verification/campaign_mm/INPUTS.json",
+    "public_sha256": "dcf450856dfdb69ab91b7200a72205420861134b7f9a9e4a7ae5c833c01600a5",
+    "preserved_baseline_path": "baseline/INPUTS.json",
+    "byte_identical_to_preserved_private_baseline": true
+  },
+  {
+    "public_path": "/workspace/VOLLEY/validation/feeder_contact_verification/captured/feeder_mm.cpp",
+    "public_sha256": "d09cf1917cc5033432fd08f0695ff0f843653057da329293b777b898f244a173",
+    "preserved_baseline_path": "baseline/feeder_mm.cpp",
+    "byte_identical_to_preserved_private_baseline": true,
+    "interpretation": "This captured source is the execution source whose hash is in FCE12 INPUTS; public root feeder_mm.cpp was reformatted after execution."
+  }
+]

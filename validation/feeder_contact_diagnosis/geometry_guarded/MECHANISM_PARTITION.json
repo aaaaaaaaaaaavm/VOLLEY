@@ -1,0 +1,2052 @@
+{
+  "source_CAD_sha256": "c5213575d345a79bddf1a37246ced5b6d5ef68ec4894693aadb54fa41186d6fb",
+  "contact_domain_mm": {
+    "x": "[-12.0,L+12.0]",
+    "z": "[14,128] payload guard; receiver retained initial Z>=8 for its upward12mm stroke",
+    "y": "[-500,500]"
+  },
+  "method": "Orthogonal native B-rep partition by all axis-aligned vertex planes; midpoint occupancy and exact per-cell intersection-volume identity. Greedy merged cells have disjoint grid interiors. Full body mass and inertia are retained. Nonplanar retained geometry is rejected.",
+  "scope": "Only the FCE08 gate-already-open transfer/capture/withdraw subcycle. Geometry outside the guard is intentionally absent from collision; leaving the guard rejects the simulation. This representation cannot be used for unrestricted full-cycle motion.",
+  "configurations": [
+    {
+      "size": "1U",
+      "parts": [
+        {
+          "part": "support_floor",
+          "retained_volume_mm3": 80696.64,
+          "original_volume_mm3": 80696.64,
+          "cell_count": 6,
+          "cells": [
+            {
+              "lo_mm": [
+                -12.0,
+                -212.0,
+                16.0
+              ],
+              "size_mm": [
+                137.5,
+                5.800000000000011,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -12.0,
+                -206.2,
+                16.0
+              ],
+              "size_mm": [
+                34.8,
+                112.19999999999999,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -12.0,
+                -94.0,
+                16.0
+              ],
+              "size_mm": [
+                9.0,
+                7.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                -206.2,
+                16.0
+              ],
+              "size_mm": [
+                43.099999999999994,
+                112.19999999999999,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                90.7,
+                -206.2,
+                16.0
+              ],
+              "size_mm": [
+                34.8,
+                108.19999999999999,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                90.7,
+                -98.0,
+                16.0
+              ],
+              "size_mm": [
+                20.799999999999997,
+                4.0,
+                6.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "cassette_L_-8",
+          "retained_volume_mm3": 89488.00000000001,
+          "original_volume_mm3": 89488.00000000001,
+          "cell_count": 2,
+          "cells": [
+            {
+              "lo_mm": [
+                -11.0,
+                -208.0,
+                124.0
+              ],
+              "size_mm": [
+                17.0,
+                188.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -8.0,
+                -208.0,
+                22.0
+              ],
+              "size_mm": [
+                4.0,
+                188.0,
+                102.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "cassette_L_117.5",
+          "retained_volume_mm3": 78648.0,
+          "original_volume_mm3": 83367.99999999999,
+          "cell_count": 4,
+          "cells": [
+            {
+              "lo_mm": [
+                114.5,
+                -208.0,
+                124.0
+              ],
+              "size_mm": [
+                11.0,
+                110.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                114.5,
+                -84.0,
+                124.0
+              ],
+              "size_mm": [
+                11.0,
+                64.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                117.5,
+                -208.0,
+                22.0
+              ],
+              "size_mm": [
+                4.0,
+                110.0,
+                102.0
+              ]
+            },
+            {
+              "lo_mm": [
+                117.5,
+                -84.0,
+                22.0
+              ],
+              "size_mm": [
+                4.0,
+                64.0,
+                102.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "rear_wall",
+          "retained_volume_mm3": 58300.000000000015,
+          "original_volume_mm3": 61600.000000000015,
+          "cell_count": 1,
+          "cells": [
+            {
+              "lo_mm": [
+                -12.0,
+                -216.0,
+                22.0
+              ],
+              "size_mm": [
+                137.5,
+                4.0,
+                106.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "storage_gate",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 52509.25865836533,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "fork_body",
+          "retained_volume_mm3": 64738.19999999974,
+          "original_volume_mm3": 132508.54376660482,
+          "cell_count": 14,
+          "cells": [
+            {
+              "lo_mm": [
+                -2.5,
+                -206.0,
+                30.0
+              ],
+              "size_mm": [
+                117.5,
+                3.0,
+                90.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -2.5,
+                -203.0,
+                30.0
+              ],
+              "size_mm": [
+                1.0,
+                8.0,
+                90.0
+              ]
+            },
+            {
+              "lo_mm": [
+                20.0,
+                -206.0,
+                120.0
+              ],
+              "size_mm": [
+                73.5,
+                3.0,
+                8.0
+              ]
+            },
+            {
+              "lo_mm": [
+                23.0,
+                -206.0,
+                14.1
+              ],
+              "size_mm": [
+                12.0,
+                109.0,
+                8.500000000000002
+              ]
+            },
+            {
+              "lo_mm": [
+                23.0,
+                -206.0,
+                22.6
+              ],
+              "size_mm": [
+                12.0,
+                3.0,
+                7.399999999999999
+              ]
+            },
+            {
+              "lo_mm": [
+                25.0,
+                -203.0,
+                24.0
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                5.5
+              ]
+            },
+            {
+              "lo_mm": [
+                25.0,
+                -203.0,
+                115.5
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                5.700000000000003
+              ]
+            },
+            {
+              "lo_mm": [
+                25.0,
+                -203.0,
+                124.0
+              ],
+              "size_mm": [
+                8.0,
+                103.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                78.5,
+                -206.0,
+                14.1
+              ],
+              "size_mm": [
+                12.0,
+                109.0,
+                8.500000000000002
+              ]
+            },
+            {
+              "lo_mm": [
+                78.5,
+                -206.0,
+                22.6
+              ],
+              "size_mm": [
+                12.0,
+                3.0,
+                7.399999999999999
+              ]
+            },
+            {
+              "lo_mm": [
+                80.5,
+                -203.0,
+                24.0
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                5.5
+              ]
+            },
+            {
+              "lo_mm": [
+                80.5,
+                -203.0,
+                115.5
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                5.700000000000003
+              ]
+            },
+            {
+              "lo_mm": [
+                80.5,
+                -203.0,
+                124.0
+              ],
+              "size_mm": [
+                8.0,
+                103.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                115.0,
+                -204.0,
+                30.0
+              ],
+              "size_mm": [
+                1.0,
+                9.0,
+                90.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "captive_guide",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 72863.99999999999,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "end_block_-238",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 1536.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "end_block_30",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 1536.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "gate_bolt_guide",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 13381.24075031608,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "gate_crossbolt",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 1828.4069243892595,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "motor_3242_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 35547.74919389922,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "motor_shaft_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 255.25440310417062,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "shaft_extension",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 2277.6546738526004,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "screw_major_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 23169.24582022472,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "coupling_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 1930.4065838696863,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "bearing_housing",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 13536.946070110047,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "bearing_ring_A",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 3350.4378792188086,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "bearing_ring_B",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 3350.4378792188086,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "shaft_collar_A",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 65.95773776211774,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "shaft_collar_B",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 65.95773776211774,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "nut_SB3700_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 3850.0335779467423,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "drive_mount",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 19824.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "motor_mount_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 6982.084710328736,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "fork_front",
+          "retained_volume_mm3": 582.4000000000001,
+          "original_volume_mm3": 2244.3999999999996,
+          "cell_count": 4,
+          "cells": [
+            {
+              "lo_mm": [
+                25.0,
+                -99.0,
+                115.5
+              ],
+              "size_mm": [
+                8.0,
+                4.0,
+                5.700000000000003
+              ]
+            },
+            {
+              "lo_mm": [
+                25.0,
+                -97.0,
+                121.2
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                6.799999999999997
+              ]
+            },
+            {
+              "lo_mm": [
+                80.5,
+                -99.0,
+                115.5
+              ],
+              "size_mm": [
+                8.0,
+                4.0,
+                5.700000000000003
+              ]
+            },
+            {
+              "lo_mm": [
+                80.5,
+                -97.0,
+                121.2
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                6.799999999999997
+              ]
+            }
+          ]
+        },
+        {
+          "part": "sled_body",
+          "retained_volume_mm3": 58689.60000000004,
+          "original_volume_mm3": 131079.53850080434,
+          "cell_count": 26,
+          "cells": [
+            {
+              "lo_mm": [
+                -12.0,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                16.8,
+                114.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -4.0,
+                101.0,
+                22.0
+              ],
+              "size_mm": [
+                26.8,
+                2.0,
+                14.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -3.0,
+                7.0,
+                22.0
+              ],
+              "size_mm": [
+                2.0,
+                88.0,
+                18.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -2.0,
+                0.0,
+                16.0
+              ],
+              "size_mm": [
+                24.8,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -2.0,
+                90.0,
+                16.0
+              ],
+              "size_mm": [
+                24.8,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                3.0,
+                -8.0,
+                14.0
+              ],
+              "size_mm": [
+                1.5999999999999996,
+                1.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                4.8,
+                -0.3,
+                14.0
+              ],
+              "size_mm": [
+                18.0,
+                107.3,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                5.0,
+                0.0,
+                124.0
+              ],
+              "size_mm": [
+                8.0,
+                108.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                5.0,
+                103.0,
+                16.0
+              ],
+              "size_mm": [
+                8.0,
+                5.0,
+                108.0
+              ]
+            },
+            {
+              "lo_mm": [
+                13.2,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                9.600000000000001,
+                6.7,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                13.4,
+                -8.0,
+                14.0
+              ],
+              "size_mm": [
+                1.5999999999999996,
+                1.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                22.8,
+                101.0,
+                22.8
+              ],
+              "size_mm": [
+                94.7,
+                2.0,
+                13.2
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                43.099999999999994,
+                114.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                0.0,
+                16.0
+              ],
+              "size_mm": [
+                43.099999999999994,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                90.0,
+                16.0
+              ],
+              "size_mm": [
+                43.099999999999994,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                101.0,
+                22.0
+              ],
+              "size_mm": [
+                43.099999999999994,
+                2.0,
+                0.8000000000000007
+              ]
+            },
+            {
+              "lo_mm": [
+                90.7,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                9.599999999999994,
+                114.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                90.7,
+                0.0,
+                16.0
+              ],
+              "size_mm": [
+                24.799999999999997,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                90.7,
+                90.0,
+                16.0
+              ],
+              "size_mm": [
+                24.799999999999997,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                90.7,
+                101.0,
+                22.0
+              ],
+              "size_mm": [
+                26.799999999999997,
+                2.0,
+                0.8000000000000007
+              ]
+            },
+            {
+              "lo_mm": [
+                98.5,
+                -8.0,
+                14.0
+              ],
+              "size_mm": [
+                1.5999999999999943,
+                1.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                100.3,
+                -0.3,
+                14.0
+              ],
+              "size_mm": [
+                25.200000000000003,
+                107.3,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                100.5,
+                0.0,
+                124.0
+              ],
+              "size_mm": [
+                8.0,
+                108.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                100.5,
+                103.0,
+                16.0
+              ],
+              "size_mm": [
+                8.0,
+                5.0,
+                108.0
+              ]
+            },
+            {
+              "lo_mm": [
+                108.7,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                16.799999999999997,
+                6.7,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                108.9,
+                -8.0,
+                14.0
+              ],
+              "size_mm": [
+                1.5999999999999943,
+                1.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "sled_front_stop",
+          "retained_volume_mm3": 2952.0,
+          "original_volume_mm3": 2952.0,
+          "cell_count": 1,
+          "cells": [
+            {
+              "lo_mm": [
+                114.5,
+                10.0,
+                22.0
+              ],
+              "size_mm": [
+                2.0,
+                82.0,
+                18.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "sled_entry_bar",
+          "retained_volume_mm3": 1375.9999999999989,
+          "original_volume_mm3": 15908.30444801925,
+          "cell_count": 6,
+          "cells": [
+            {
+              "lo_mm": [
+                5.0,
+                -16.0,
+                8.0
+              ],
+              "size_mm": [
+                8.0,
+                12.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                5.0,
+                -10.0,
+                10.0
+              ],
+              "size_mm": [
+                8.0,
+                9.5,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                5.0,
+                -6.5,
+                14.0
+              ],
+              "size_mm": [
+                8.0,
+                6.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                100.5,
+                -16.0,
+                8.0
+              ],
+              "size_mm": [
+                8.0,
+                12.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                100.5,
+                -10.0,
+                10.0
+              ],
+              "size_mm": [
+                8.0,
+                9.5,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                100.5,
+                -6.5,
+                14.0
+              ],
+              "size_mm": [
+                8.0,
+                6.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "receiver_lock_pin_0",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 138.23007675795088,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 138.23007675795088,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "sled_guide_shoe_0",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 8262.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "launcher_guide_0",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 30420.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "sled_guide_shoe_1",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 8262.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "launcher_guide_1",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 30420.0,
+          "cell_count": 0,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "size": "3U",
+      "parts": [
+        {
+          "part": "support_floor",
+          "retained_volume_mm3": 241412.64,
+          "original_volume_mm3": 241412.64,
+          "cell_count": 6,
+          "cells": [
+            {
+              "lo_mm": [
+                -12.0,
+                -212.0,
+                16.0
+              ],
+              "size_mm": [
+                364.5,
+                5.800000000000011,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -12.0,
+                -206.2,
+                16.0
+              ],
+              "size_mm": [
+                34.8,
+                112.19999999999999,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -12.0,
+                -94.0,
+                16.0
+              ],
+              "size_mm": [
+                9.0,
+                7.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                -206.2,
+                16.0
+              ],
+              "size_mm": [
+                270.1,
+                112.19999999999999,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                317.7,
+                -206.2,
+                16.0
+              ],
+              "size_mm": [
+                34.80000000000001,
+                108.19999999999999,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                317.7,
+                -98.0,
+                16.0
+              ],
+              "size_mm": [
+                20.80000000000001,
+                4.0,
+                6.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "cassette_L_-8",
+          "retained_volume_mm3": 89488.00000000001,
+          "original_volume_mm3": 89488.00000000001,
+          "cell_count": 2,
+          "cells": [
+            {
+              "lo_mm": [
+                -11.0,
+                -208.0,
+                124.0
+              ],
+              "size_mm": [
+                17.0,
+                188.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -8.0,
+                -208.0,
+                22.0
+              ],
+              "size_mm": [
+                4.0,
+                188.0,
+                102.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "cassette_L_344.5",
+          "retained_volume_mm3": 78648.0,
+          "original_volume_mm3": 83367.99999999999,
+          "cell_count": 4,
+          "cells": [
+            {
+              "lo_mm": [
+                341.5,
+                -208.0,
+                124.0
+              ],
+              "size_mm": [
+                11.0,
+                110.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                341.5,
+                -84.0,
+                124.0
+              ],
+              "size_mm": [
+                11.0,
+                64.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                344.5,
+                -208.0,
+                22.0
+              ],
+              "size_mm": [
+                4.0,
+                110.0,
+                102.0
+              ]
+            },
+            {
+              "lo_mm": [
+                344.5,
+                -84.0,
+                22.0
+              ],
+              "size_mm": [
+                4.0,
+                64.0,
+                102.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "rear_wall",
+          "retained_volume_mm3": 154548.0,
+          "original_volume_mm3": 163296.0,
+          "cell_count": 1,
+          "cells": [
+            {
+              "lo_mm": [
+                -12.0,
+                -216.0,
+                22.0
+              ],
+              "size_mm": [
+                364.5,
+                4.0,
+                106.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "storage_gate",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 143309.2586583654,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "fork_body",
+          "retained_volume_mm3": 131476.20000000065,
+          "original_volume_mm3": 211277.54376660567,
+          "cell_count": 14,
+          "cells": [
+            {
+              "lo_mm": [
+                -2.5,
+                -206.0,
+                30.0
+              ],
+              "size_mm": [
+                344.5,
+                3.0,
+                90.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -2.5,
+                -203.0,
+                30.0
+              ],
+              "size_mm": [
+                1.0,
+                8.0,
+                90.0
+              ]
+            },
+            {
+              "lo_mm": [
+                20.0,
+                -206.0,
+                120.0
+              ],
+              "size_mm": [
+                300.5,
+                3.0,
+                8.0
+              ]
+            },
+            {
+              "lo_mm": [
+                23.0,
+                -206.0,
+                14.1
+              ],
+              "size_mm": [
+                12.0,
+                109.0,
+                8.500000000000002
+              ]
+            },
+            {
+              "lo_mm": [
+                23.0,
+                -206.0,
+                22.6
+              ],
+              "size_mm": [
+                12.0,
+                3.0,
+                7.399999999999999
+              ]
+            },
+            {
+              "lo_mm": [
+                25.0,
+                -203.0,
+                24.0
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                5.5
+              ]
+            },
+            {
+              "lo_mm": [
+                25.0,
+                -203.0,
+                115.5
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                5.700000000000003
+              ]
+            },
+            {
+              "lo_mm": [
+                25.0,
+                -203.0,
+                124.0
+              ],
+              "size_mm": [
+                8.0,
+                103.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                305.5,
+                -206.0,
+                14.1
+              ],
+              "size_mm": [
+                12.0,
+                109.0,
+                8.500000000000002
+              ]
+            },
+            {
+              "lo_mm": [
+                305.5,
+                -206.0,
+                22.6
+              ],
+              "size_mm": [
+                12.0,
+                3.0,
+                7.399999999999999
+              ]
+            },
+            {
+              "lo_mm": [
+                307.5,
+                -203.0,
+                24.0
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                5.5
+              ]
+            },
+            {
+              "lo_mm": [
+                307.5,
+                -203.0,
+                115.5
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                5.700000000000003
+              ]
+            },
+            {
+              "lo_mm": [
+                307.5,
+                -203.0,
+                124.0
+              ],
+              "size_mm": [
+                8.0,
+                103.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                342.0,
+                -204.0,
+                30.0
+              ],
+              "size_mm": [
+                1.0,
+                9.0,
+                90.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "captive_guide",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 72863.99999999999,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "end_block_-238",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 1536.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "end_block_30",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 1536.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "gate_bolt_guide",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 13381.24075031608,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "gate_crossbolt",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 1828.4069243892595,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "motor_3242_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 35547.74919389922,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "motor_shaft_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 255.25440310417062,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "shaft_extension",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 2277.6546738526004,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "screw_major_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 23169.24582022472,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "coupling_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 1930.4065838696863,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "bearing_housing",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 13536.946070110047,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "bearing_ring_A",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 3350.4378792188086,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "bearing_ring_B",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 3350.4378792188086,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "shaft_collar_A",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 65.95773776211774,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "shaft_collar_B",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 65.95773776211774,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "nut_SB3700_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 3850.0335779467423,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "drive_mount",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 19824.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "motor_mount_envelope",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 6982.084710328736,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "fork_front",
+          "retained_volume_mm3": 582.4000000000003,
+          "original_volume_mm3": 6784.4000000000015,
+          "cell_count": 4,
+          "cells": [
+            {
+              "lo_mm": [
+                25.0,
+                -99.0,
+                115.5
+              ],
+              "size_mm": [
+                8.0,
+                4.0,
+                5.700000000000003
+              ]
+            },
+            {
+              "lo_mm": [
+                25.0,
+                -97.0,
+                121.2
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                6.799999999999997
+              ]
+            },
+            {
+              "lo_mm": [
+                307.5,
+                -99.0,
+                115.5
+              ],
+              "size_mm": [
+                8.0,
+                4.0,
+                5.700000000000003
+              ]
+            },
+            {
+              "lo_mm": [
+                307.5,
+                -97.0,
+                121.2
+              ],
+              "size_mm": [
+                8.0,
+                2.0,
+                6.799999999999997
+              ]
+            }
+          ]
+        },
+        {
+          "part": "sled_body",
+          "retained_volume_mm3": 144041.59999999998,
+          "original_volume_mm3": 319943.53850080416,
+          "cell_count": 26,
+          "cells": [
+            {
+              "lo_mm": [
+                -12.0,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                16.8,
+                114.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -4.0,
+                101.0,
+                22.0
+              ],
+              "size_mm": [
+                26.8,
+                2.0,
+                14.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -3.0,
+                7.0,
+                22.0
+              ],
+              "size_mm": [
+                2.0,
+                88.0,
+                18.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -2.0,
+                0.0,
+                16.0
+              ],
+              "size_mm": [
+                24.8,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                -2.0,
+                90.0,
+                16.0
+              ],
+              "size_mm": [
+                24.8,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                3.0,
+                -8.0,
+                14.0
+              ],
+              "size_mm": [
+                1.5999999999999996,
+                1.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                4.8,
+                -0.3,
+                14.0
+              ],
+              "size_mm": [
+                18.0,
+                107.3,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                5.0,
+                0.0,
+                124.0
+              ],
+              "size_mm": [
+                8.0,
+                108.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                5.0,
+                103.0,
+                16.0
+              ],
+              "size_mm": [
+                8.0,
+                5.0,
+                108.0
+              ]
+            },
+            {
+              "lo_mm": [
+                13.2,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                9.600000000000001,
+                6.7,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                13.4,
+                -8.0,
+                14.0
+              ],
+              "size_mm": [
+                1.5999999999999996,
+                1.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                22.8,
+                101.0,
+                22.8
+              ],
+              "size_mm": [
+                321.7,
+                2.0,
+                13.2
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                270.1,
+                114.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                0.0,
+                16.0
+              ],
+              "size_mm": [
+                270.1,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                90.0,
+                16.0
+              ],
+              "size_mm": [
+                270.1,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                35.2,
+                101.0,
+                22.0
+              ],
+              "size_mm": [
+                270.1,
+                2.0,
+                0.8000000000000007
+              ]
+            },
+            {
+              "lo_mm": [
+                317.7,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                9.600000000000023,
+                114.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                317.7,
+                0.0,
+                16.0
+              ],
+              "size_mm": [
+                24.80000000000001,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                317.7,
+                90.0,
+                16.0
+              ],
+              "size_mm": [
+                24.80000000000001,
+                10.0,
+                6.0
+              ]
+            },
+            {
+              "lo_mm": [
+                317.7,
+                101.0,
+                22.0
+              ],
+              "size_mm": [
+                26.80000000000001,
+                2.0,
+                0.8000000000000007
+              ]
+            },
+            {
+              "lo_mm": [
+                325.5,
+                -8.0,
+                14.0
+              ],
+              "size_mm": [
+                1.6000000000000227,
+                1.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                327.3,
+                -0.3,
+                14.0
+              ],
+              "size_mm": [
+                25.19999999999999,
+                107.3,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                327.5,
+                0.0,
+                124.0
+              ],
+              "size_mm": [
+                8.0,
+                108.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                327.5,
+                103.0,
+                16.0
+              ],
+              "size_mm": [
+                8.0,
+                5.0,
+                108.0
+              ]
+            },
+            {
+              "lo_mm": [
+                335.7,
+                -7.0,
+                14.0
+              ],
+              "size_mm": [
+                16.80000000000001,
+                6.7,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                335.9,
+                -8.0,
+                14.0
+              ],
+              "size_mm": [
+                1.6000000000000227,
+                1.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "sled_front_stop",
+          "retained_volume_mm3": 2952.0,
+          "original_volume_mm3": 2952.0,
+          "cell_count": 1,
+          "cells": [
+            {
+              "lo_mm": [
+                341.5,
+                10.0,
+                22.0
+              ],
+              "size_mm": [
+                2.0,
+                82.0,
+                18.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "sled_entry_bar",
+          "retained_volume_mm3": 1375.9999999999955,
+          "original_volume_mm3": 20448.304448019255,
+          "cell_count": 6,
+          "cells": [
+            {
+              "lo_mm": [
+                5.0,
+                -16.0,
+                8.0
+              ],
+              "size_mm": [
+                8.0,
+                12.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                5.0,
+                -10.0,
+                10.0
+              ],
+              "size_mm": [
+                8.0,
+                9.5,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                5.0,
+                -6.5,
+                14.0
+              ],
+              "size_mm": [
+                8.0,
+                6.0,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                327.5,
+                -16.0,
+                8.0
+              ],
+              "size_mm": [
+                8.0,
+                12.0,
+                2.0
+              ]
+            },
+            {
+              "lo_mm": [
+                327.5,
+                -10.0,
+                10.0
+              ],
+              "size_mm": [
+                8.0,
+                9.5,
+                4.0
+              ]
+            },
+            {
+              "lo_mm": [
+                327.5,
+                -6.5,
+                14.0
+              ],
+              "size_mm": [
+                8.0,
+                6.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "part": "receiver_lock_pin_0",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 138.23007675795088,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "receiver_lock_pin_1",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 138.23007675795088,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "sled_guide_shoe_0",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 23697.999999999996,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "launcher_guide_0",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 57660.0,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "sled_guide_shoe_1",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 23697.999999999996,
+          "cell_count": 0,
+          "cells": []
+        },
+        {
+          "part": "launcher_guide_1",
+          "retained_volume_mm3": 0.0,
+          "original_volume_mm3": 57660.0,
+          "cell_count": 0,
+          "cells": []
+        }
+      ]
+    }
+  ]
+}

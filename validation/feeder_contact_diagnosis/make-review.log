@@ -1,0 +1,6 @@
+{
+  "decision": "FAIL: final-state convergence remains unestablished; no numerical correction adopted",
+  "completed_runs": 6,
+  "comparison_rows": 7,
+  "plot": "convergence_diagnosis.pdf"
+}

@@ -1,0 +1,46 @@
+{
+  "basis": "Wall runtimes under shared localCPU quota;parallelism differs,not architecture performance.",
+  "candidates": {
+    "spring_dual_gate": {
+      "candidate_build_wall_s": 644.99,
+      "log": "logs/build_R1_spring_dual_gate.log"
+    },
+    "belt_shuttle": {
+      "candidate_build_wall_s": 480.68,
+      "log": "logs/build_R1_belt_shuttle.log"
+    },
+    "telescopic": {
+      "candidate_build_wall_s": 546.45,
+      "log": "logs/build_R1_telescopic.log"
+    },
+    "rack_pawl": {
+      "candidate_build_wall_s": 334.69,
+      "log": "logs/build_R1_rack_pawl.log"
+    },
+    "indexed_drum": {
+      "candidate_build_wall_s": 243.35,
+      "log": "logs/build_R1_indexed_drum.log"
+    },
+    "pantograph": {
+      "candidate_build_wall_s": 507.78,
+      "log": "logs/build_R1_pantograph.log"
+    },
+    "lead_screw": {
+      "candidate_build_wall_s": 127.54,
+      "log": "logs/build_carrier_R1.log"
+    }
+  },
+  "software": {
+    "FreeCAD": "1.0.0",
+    "OCC": "7.8.1"
+  },
+  "commands": [
+    "PYTHONPATH=/usr/lib/freecad-python3/lib /usr/bin/python3 build_comparison.py --candidate NAME",
+    "PYTHONPATH=/usr/lib/freecad-python3/lib /usr/bin/python3 build_comparison.py",
+    "python3 actuator_screen.py",
+    "PYTHONPATH=/usr/lib/freecad-python3/lib /usr/bin/python3 check_full_rail.py",
+    "PYTHONPATH=/usr/lib/freecad-python3/lib /usr/bin/python3 check_insert_interface.py",
+    "PYTHONPATH=/usr/lib/freecad-python3/lib /usr/bin/python3 build_lead_trim_R2.py",
+    "python3 assemble_evidence.py"
+  ]
+}

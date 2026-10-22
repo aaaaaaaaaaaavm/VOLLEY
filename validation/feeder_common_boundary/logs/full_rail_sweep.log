@@ -1,0 +1,6 @@
+lead_screw fullrail exact payload hits 8
+spring_dual_gate fullrail exact payload hits 6
+rack_pawl fullrail exact payload hits 6
+pantograph fullrail exact payload hits 6
+telescopic fullrail exact payload hits 6
+belt_shuttle fullrail exact payload hits 10
