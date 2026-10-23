@@ -1,0 +1,11 @@
+{
+  "FreeCAD": [
+    "1",
+    "0",
+    "0",
+    "",
+    "https://code.launchpad.net/~vcs-imports/freecad/trunk",
+    "2026/08/25 11:49:11"
+  ],
+  "scope": "Native CAD generation runtime; BRep operations use the FreeCAD Open CASCADE backend."
+}

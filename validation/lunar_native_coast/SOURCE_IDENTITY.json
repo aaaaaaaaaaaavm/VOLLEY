@@ -1,0 +1,156 @@
+{
+  "captured_utc": "2026-10-23T04:28:00.889981+00:00",
+  "installed_distribution": "GMAT R2026a; console build Mar 30 2026 10:09:27 (native log)",
+  "files": [
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/bin/GmatConsole-R2026a",
+      "distribution_relative_path": "bin/GmatConsole-R2026a",
+      "bytes": 133528,
+      "sha256": "f7cf5b3188902353ed4245bb21c22c1afa0451efdd221b7e19f6a74dc7ed1d93"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/bin/libGmatBase.so.R2026a",
+      "distribution_relative_path": "bin/libGmatBase.so.R2026a",
+      "bytes": 28817312,
+      "sha256": "1badbadfc62efaf49b260996473883665c976f1e2c131fc59c7521c4d3b87159"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/bin/libGmatUtil.so.R2026a",
+      "distribution_relative_path": "bin/libGmatUtil.so.R2026a",
+      "bytes": 2746992,
+      "sha256": "9c36b2828d3ae0a9b7c0e9ee5203679a8e191dbaf4ff7a2df88871b956260e32"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/gravity/luna/grgm900c.cof",
+      "distribution_relative_path": "data/gravity/luna/grgm900c.cof",
+      "bytes": 3920656,
+      "sha256": "f80c5a30f8aa0c67bcefb6a0ad00ac6a06c8d5a71bee4465d72a50b1b7c16e46"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/gravity/luna/LP165P.cof",
+      "distribution_relative_path": "data/gravity/luna/LP165P.cof",
+      "bytes": 842405,
+      "sha256": "11bf11588a344cc618c8afc3c112d73a4ad319870b44527ea0c4ee73e1c7d5e0"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_ephem/de/leDE1900.421",
+      "distribution_relative_path": "data/planetary_ephem/de/leDE1900.421",
+      "bytes": 13966960,
+      "sha256": "5a423de949103ec14766ebc990e9af96808559d2dc84c261b941fadd754a52a0"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_ephem/spk/DE421AllPlanets.bsp",
+      "distribution_relative_path": "data/planetary_ephem/spk/DE421AllPlanets.bsp",
+      "bytes": 22437888,
+      "sha256": "d6f02ca7f99bcea29c472e4955b52faccd026ae3d5dbc7bd6306979b5b57ea99"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/SPICELunaCurrentKernel.bpc",
+      "distribution_relative_path": "data/planetary_coeff/SPICELunaCurrentKernel.bpc",
+      "bytes": 1770496,
+      "sha256": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/SPICELunaFrameKernel.tf",
+      "distribution_relative_path": "data/planetary_coeff/SPICELunaFrameKernel.tf",
+      "bytes": 21437,
+      "sha256": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/SPICEPlanetaryConstantsKernel.tpc",
+      "distribution_relative_path": "data/planetary_coeff/SPICEPlanetaryConstantsKernel.tpc",
+      "bytes": 131226,
+      "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/SPICEEarthPredictedKernel.bpc",
+      "distribution_relative_path": "data/planetary_coeff/SPICEEarthPredictedKernel.bpc",
+      "bytes": 19179520,
+      "sha256": "f5ed4d1f460dbcf40bf24f657ab9021718048e18fb723093bfd229066b4e3a49"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/SPICEEarthCurrentKernel.bpc",
+      "distribution_relative_path": "data/planetary_coeff/SPICEEarthCurrentKernel.bpc",
+      "bytes": 12094464,
+      "sha256": "6d899c83542e32dfd77f3b3b79383db88860adca59adf60f4823780760589a52"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/earth_latest_high_prec.bpc",
+      "distribution_relative_path": "data/planetary_coeff/earth_latest_high_prec.bpc",
+      "bytes": 5037056,
+      "sha256": "94b3cedf59698eedf429ed50e25a2c9cec3e916cbc1bc5ce405671ce11b3a527"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/eopc04_08.62-now",
+      "distribution_relative_path": "data/planetary_coeff/eopc04_08.62-now",
+      "bytes": 3687646,
+      "sha256": "52c95d6871066e892463328424ca34f5e9cedde92c747465a40f7cd0ecd86ed3"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/NUTATION.DAT",
+      "distribution_relative_path": "data/planetary_coeff/NUTATION.DAT",
+      "bytes": 34933,
+      "sha256": "633423d201aaed4cf4bf49427f85c5c3ed0e6c6f394f68d5c369dac673e31566"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/time/tai-utc.dat",
+      "distribution_relative_path": "data/time/tai-utc.dat",
+      "bytes": 3321,
+      "sha256": "3524e1ae34d67e858873a89e59983bbc5bd100221da898e796c1b36036a310c3"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/time/SPICELeapSecondKernel.tls",
+      "distribution_relative_path": "data/time/SPICELeapSecondKernel.tls",
+      "bytes": 5257,
+      "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/samples/Ex_LunarOrbitStationKeeping.script",
+      "distribution_relative_path": "samples/Ex_LunarOrbitStationKeeping.script",
+      "bytes": 6341,
+      "sha256": "f44788179585482ea909c2b91be2b2b010515280ae466444f14d159feade4977"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/samples/Ex_LunarTransfer.script",
+      "distribution_relative_path": "samples/Ex_LunarTransfer.script",
+      "bytes": 12353,
+      "sha256": "0700f32e05fda23c0060547c087766ce1f58f09809f53a1ad84805bb853da799"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/samples/Ex_SPICECoordinateAxes.script",
+      "distribution_relative_path": "samples/Ex_SPICECoordinateAxes.script",
+      "bytes": 2388,
+      "sha256": "71270c3260f8adfebedee8fc72b6410e1a5f0e7a2cfe3d98db779ab51f0c4887"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/docs/help/html/ForceModel.html",
+      "distribution_relative_path": "docs/help/html/ForceModel.html",
+      "bytes": 99311,
+      "sha256": "1091dfb67dd41e06ebef6e7a2a6c4c28ccfb0c28ac6ba89a222314ac6da718ae"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/docs/help/html/CelestialBody.html",
+      "distribution_relative_path": "docs/help/html/CelestialBody.html",
+      "bytes": 63103,
+      "sha256": "cd4c8a697586d1d3894b6941f6238dee005ceddae6003f6580cc4203ea810eb5"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/docs/help/html/SolarSystem.html",
+      "distribution_relative_path": "docs/help/html/SolarSystem.html",
+      "bytes": 18598,
+      "sha256": "a2dcc25e5f3d21d640f2f623c3342c660b6479ac96ab341525060d388ea7bb5f"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/docs/help/html/ReportFile.html",
+      "distribution_relative_path": "docs/help/html/ReportFile.html",
+      "bytes": 35169,
+      "sha256": "96abcdae69d7294052193e1ae3592ca50ace483037eb42c0d561d1686f3c5b93"
+    },
+    {
+      "path": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/bin/gmat_startup_file.txt",
+      "distribution_relative_path": "bin/gmat_startup_file.txt",
+      "bytes": 10995,
+      "sha256": "306597283230abc86d953491c9e401f2c9139ad9cdefa1f944508da9f631fddf"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "mass_kg": 30,
+  "guard_s": 0,
+  "exact_differences": {
+    "peak_force_N": 0.0,
+    "fuel_used_kg": 0.0,
+    "host_position_error_m": 0.0,
+    "host_velocity_error_m_s": 0.0
+  },
+  "pass": true
+}

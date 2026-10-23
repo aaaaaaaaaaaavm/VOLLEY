@@ -1,0 +1,19 @@
+p100_a100_d20_s120 finished return 0 completed True wall 57.73
+p100_a100_d20_s60 finished return 0 completed True wall 117.54
+p100_a100_d40_s120 finished return 0 completed True wall 144.5
+p100_a100_lp165p_d20_s120_30d finished return 0 completed True wall 10.26
+p100_a100_d80_s120_30d finished return 0 completed True wall 142.8
+p100_a100_i0_d20_s120 finished return 0 completed True wall 90.19
+p100_a1000_d20_s120 finished return 0 completed True wall 93.59
+p100_a1000_d20_s60 finished return 0 completed True wall 229.9
+p100_a1000_d40_s120 finished return 0 completed True wall 204.7
+p100_a1000_lp165p_d20_s120_30d finished return 0 completed True wall 16.55
+p100_a1000_d80_s120_30d finished return 0 completed True wall 75.91
+p100_a10000_d20_s120 finished return 0 completed True wall 10.69
+p100_a1000_i0_d20_s120 finished return 0 completed True wall 48.2
+p100_a10000_d20_s60 finished return 0 completed True wall 19.31
+p100_a10000_d40_s120 finished return 0 completed True wall 22.3
+p100_a10000_lp165p_d20_s120_30d finished return 0 completed True wall 18.05
+p100_a10000_d80_s120_30d finished return 0 completed True wall 56.85
+p100_a10000_i0_d20_s120 finished return 0 completed True wall 33.2
+Finished 18 bounded attempts

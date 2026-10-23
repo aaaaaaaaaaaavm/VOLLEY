@@ -1,0 +1,70 @@
+{
+  "revision": "FM08-R3",
+  "software": "Blender 4.3.2",
+  "engine": "Workbench",
+  "mesh_manifest_sha256": "706149e641c5a4bb644ee1c09d7ab1ce686b536f93b6ba4f6b8988c998194c53",
+  "render_source_sha256": "e242bbf45bee9b2ff45e338a0c37ad6151fc1f49ffda31e9e0754f22200f12fd",
+  "evidence_class": "Technical renders of actual native CAD; nominal prescribed states. No geometry invented, hardware photograph, GUI capture or dynamics rating.",
+  "renders": [
+    {
+      "phase": "stowed",
+      "source": "FM08_R3_four_cell_stowed.FCStd",
+      "source_sha256": "dd4015a4cadc286ec4825dacc495984da46eeb69c65821a29244b01598fd090c",
+      "image": "FM08_stowed.png",
+      "sha256": "d3a33572ed68da14fb49a8775478205528c3ad6bcd7ad72913a9ee4748970f67"
+    },
+    {
+      "phase": "stowed",
+      "view": "Detail crop; neighbouring structures may be truncated",
+      "source": "FM08_R3_four_cell_stowed.FCStd",
+      "source_sha256": "dd4015a4cadc286ec4825dacc495984da46eeb69c65821a29244b01598fd090c",
+      "image": "FM08_detail_stowed.png",
+      "sha256": "d866560a341e3e6ad7bf5d4e83ae3fb9744ccdabea1d29129460c56afa104a3c"
+    },
+    {
+      "phase": "3U_seated",
+      "source": "FM08_R3_four_cell_3U_seated.FCStd",
+      "source_sha256": "80227beef7b9a926c6f306e074fe66236140cbd539efd6ee27d1ef5da58c3f64",
+      "image": "FM08_3U_seated.png",
+      "sha256": "726f06a737f107e5603f0d8539acc4502a7d648626ff4c15500f815760f26d96"
+    },
+    {
+      "phase": "3U_seated",
+      "view": "Detail crop; neighbouring structures may be truncated",
+      "source": "FM08_R3_four_cell_3U_seated.FCStd",
+      "source_sha256": "80227beef7b9a926c6f306e074fe66236140cbd539efd6ee27d1ef5da58c3f64",
+      "image": "FM08_detail_3U_seated.png",
+      "sha256": "e589feb6915b2941d646062e920f6ab2eff3004e3dfc2e524fe5c2d0b0c67157"
+    },
+    {
+      "phase": "launch",
+      "source": "FM08_R3_four_cell_launch.FCStd",
+      "source_sha256": "6c37ccf6dddfcd820236d2c0ec93e20532ef17861322365e75d551f8734e0044",
+      "image": "FM08_launch.png",
+      "sha256": "d90ef01c4bfbbc5193eae6f5719a04b4aa5421b80d80df54ce1220d3447be4e5"
+    },
+    {
+      "phase": "launch",
+      "view": "Detail crop; neighbouring structures may be truncated",
+      "source": "FM08_R3_four_cell_launch.FCStd",
+      "source_sha256": "6c37ccf6dddfcd820236d2c0ec93e20532ef17861322365e75d551f8734e0044",
+      "image": "FM08_detail_launch.png",
+      "sha256": "a10b22b1e5d4b28fdad51b32149feaf4b6e4eacf6c5afe4446d8052e0916a027"
+    },
+    {
+      "phase": "midtransfer",
+      "source": "FM08_R3_four_cell_midtransfer.FCStd",
+      "source_sha256": "ccb687b0912dc7cf465abd78513cc37ffe35c8c341a975f5f14f1dab5672b16d",
+      "image": "FM08_midtransfer.png",
+      "sha256": "b269bfa2ff3a0151314a5f830c020f9cae31d9034e1acf002e6b13f4786e6eea"
+    },
+    {
+      "phase": "midtransfer",
+      "view": "Detail crop; neighbouring structures may be truncated",
+      "source": "FM08_R3_four_cell_midtransfer.FCStd",
+      "source_sha256": "ccb687b0912dc7cf465abd78513cc37ffe35c8c341a975f5f14f1dab5672b16d",
+      "image": "FM08_detail_midtransfer.png",
+      "sha256": "80877d3fb9cf80002b26f2b9c6bf8ee0ef5b26d8fb2b282fee176036aae688e6"
+    }
+  ]
+}

@@ -1,18 +1,23 @@
 # VOLLEY configuration status
 
-**Current academic review: Gen5.** The controlled electromagnetic configuration and its computational cases are the present study. Its final academic freeze is **open**, and the evaluated 3U system **fails** both its installed-mass and side-fed reference-fit criteria. No VOLLEY article has been built, fired, measured, qualified or flown.
+**23 October 2026.** Gen5 is the evaluated computational baseline. Gen6 carries the separately controlled feeder design and service studies. No physical prototype, measured release setting or flight qualification is claimed.
 
-| Configuration | Decision | Evidence boundary |
+| Configuration | Current role | Evidence boundary |
 |:--|:--|:--|
-| **Gen5** | Current computational evaluation for thesis and paper | FreeCAD/STEP reference, source-linked analyses and numerical cross-checks; failed 3U mass and reference fit; no validated operating speed or hardware |
-| **R1** | Unselected geometry candidate | A 570 mm enclosure clears twelve scripted 3U envelope routes; lift actuation, retention, tolerances, installed mass and host fit remain open |
-| **Gen6** | Future scaling research toward a 1 km/s-class objective | No selected architecture, payload class or demonstrated release speed |
-| Spring-cell bank and long gas guide | Historical, unselected studies | Configuration-specific calculations; neither is the current Gen5 system or a validated Gen6 design |
+| Gen5 | Fixed computational feasibility evaluation | Twelve 4 kg 3U payloads; immutable technical record, adverse mass/fit findings and ideal-force comparisons |
+| FM08-R3 / Gen6 | Selected guided lead-screw feeder architecture | Independently restrained 1U/3U cells, fixed 1U spacers, transverse positive feed and one indexed receiver; [design evidence](../validation/selected_feeder/README.md) |
+| Four-payload article | Two 1U and two 3U public-envelope surrogates | Generic maneuvering OTV in approximately 500 km SSO; provisional mounting and environmental assumptions |
+| Twelve-payload expansion | Separate capacity and installed-burden study | [System assessment](../validation/system_feasibility_closure/README.md); no approved host envelope |
+| Rack-and-pawl | Retained feeder runner-up | Revisit if component, packaging or measured fault evidence changes the trade |
+| Other feeder concepts | Research alternatives | [Labs archive](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab); previous failed geometry remains dated evidence |
+| 1 km/s and lunar cases | Separate scaling and feasibility investigations | Energy, stroke, navigation and carrier-propulsion requirements; no achieved capability |
 
-The historical Gen5 periodic-force shot predicted **16.029 m/s at 10.07 g**. A finite-geometry 3-D analytic screen gives **12.448 m/s only under ideal phase**, challenging that speed. An independent 2-D FEM screen and a separate depth-resolved 3-D formulation check stated ideal magnetic quantities; a selected winding, inverter and physical test are still absent. [P118–P122 numerical record](../validation/README.md) · [finding disposition](GEN5_2026_10_09_FINDING_DISPOSITION.md).
+## Engineering interpretation
 
-The current reference places a 205 mm track between two 166 mm side cassettes inside a 526 mm internal width: it is **11 mm short before clearance** and has **32,915 mm³ exact-solid interference per side**. The modeled dry mass is **10.55 kg per carried 3U**, above both the study's economic screen and an approximate 6 kg canister comparator. These are failed selection gates, not manufacturing or qualification results. [Exact-solid fit](../validation/P116_gen5_assembly_packaging.md) · [mass audit](../validation/P117_rated_energy_mass_audit.md).
+The selected feeder is an academic mechanical design evaluated with nominal CAD/STEP, prescribed kinematics, analytical component/load screens and an executable interlock specification. These methods support the declared design boundary. Environmental qualification, physical repeatability, supplier acceptance and provider integration remain future hardware-development activities. Original contact-model sensitivity is retained and supplies no release-precision or peak-contact-load rating.
 
-No sampled matched twelve-shot reference mission closes under the stated host and dispenser assumptions. The separate historical two-payload campaign is a bounded exploration and does not establish a complete Gen5 mission benefit. A named CubeSat, host and provider interface must anchor the next decision. [Matched mission](MATCHED_MISSION_REFERENCE.md) · [freeze readiness](GEN5_FREEZE_READINESS.md) · [current GitHub handoff](https://github.com/aaaaaaaaaaaavm/VOLLEY/issues/42).
+The Gen5 historical periodic-force model gives 16.029 m/s; the ideal finite-geometry screen gives 12.448 m/s under its assumed phase and electrical conditions. Neither is a component-rated release setting. The historical 126.561588 kg mass and 11 mm side-fed fit shortfall remain part of the evaluated baseline. [Frozen evidence](GEN5_TECHNICAL_BASELINE.json).
 
-[STEP-derived intended-operations animation](../cad/renders/sequence/README.md) illustrates store, handoff, acceleration and departure. It does not validate moving clearance, contact, control or braking. A successor revision must close those mechanisms, the installed budgets and the matched mission before selection. Gen6's 1 km/s-class target remains a separate architecture and payload-class trade.
+## Mission reference
+
+The declared comparison uses a generic maneuvering orbital-transfer host and passive CubeSat envelope exemplars. Four releases occur within one orbit, with full position/velocity assessed 24 hours after the final release. Host-assisted spring deployment is included. Reference trajectories are constructed study targets; delivery accuracy and product value are assessed under their explicit resource and error assumptions. A selected rocket, flight host or provider ICD is not implied. [Native campaign evidence](../validation/finite_burn_review/README.md).

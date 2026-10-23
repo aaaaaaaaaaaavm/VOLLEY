@@ -1,0 +1,44 @@
+{
+  "revision": "FM08-R3",
+  "source_render_manifest_sha256": "9713b09d1fb7bbe731126c0a501f53e7d229c11158e61f1794b68d66c65ba00f",
+  "composition_source_sha256": "5be696b025ca71c92c1d2434f7941c105fde793e297da9705d384e3961861554",
+  "evidence_class": "Labeled technical plates of native-CAD render states; not solver screenshots or measured performance. GIF is discrete prescribed poses with illustrative timing.",
+  "exports": [
+    {
+      "path": "FM08_assembly.png",
+      "sha256": "d5c9b16607bd93fa51a2473eff1c6542c37ef515bf5663d380027c0894f0568e"
+    },
+    {
+      "path": "FM08_assembly.jpg",
+      "sha256": "a81d806c12e0734d94b9825e7a0d0e477e0b1495f04d43f84106f205897d6868"
+    },
+    {
+      "path": "FM08_assembly.pdf",
+      "sha256": "5b56b5911eb8941240d52a3e3a59145f2f72ce191a153438894194a7e29f68b8"
+    },
+    {
+      "path": "FM08_assembly.svg",
+      "sha256": "33bddcb9c9e636365c538f831b4f1a1a28935143d5c45b06e2a193c279c64c58"
+    },
+    {
+      "path": "FM08_sequence.png",
+      "sha256": "78bb2d3a887bd460293418dd50d1df912234e23722eee53c47f7543c680db030"
+    },
+    {
+      "path": "FM08_sequence.jpg",
+      "sha256": "c2c699b6cef5a19ed2c69e3471eb820fe5ab39db4dd4762c00390217ac3ed0d7"
+    },
+    {
+      "path": "FM08_sequence.pdf",
+      "sha256": "100e950d3842568c611f6f764891957dbf893cd09b9c9b777c51690b1d33de69"
+    },
+    {
+      "path": "FM08_sequence.svg",
+      "sha256": "9a95d69ad255f4d761e627aef21d75fccd9162b687f3236b351cc3cd2a4fb3f8"
+    },
+    {
+      "path": "FM08_prescribed_sequence.gif",
+      "sha256": "2c0064bd1a1d8d246fe612cc5247e5ad61d70a698cf90ad0916ea486d836d340"
+    }
+  ]
+}

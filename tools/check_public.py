@@ -236,13 +236,19 @@ def main():
         if not os.path.exists(os.path.join(ROOT, rel)):
             problems.append(f'key document missing: {rel}')
 
-    # the profile template forked from its own output once (see profile-readme/HOW_TO_USE.md)
+    # Only the controlled VOLLEY section belongs in this project's source tree.
     tmpl = os.path.join(ROOT, 'tools', 'profile-readme', 'README.md')
     pub = os.path.join(os.path.dirname(ROOT), 'aaaaaaaaaaaavm', 'README.md')
     if os.path.exists(tmpl) and os.path.exists(pub):
-        if open(tmpl, encoding='utf-8').read() != open(pub, encoding='utf-8').read():
-            problems.append('tools/profile-readme/README.md and aaaaaaaaaaaavm/README.md have '
-                            'forked. They did once before; diff them and re-sync')
+        profile = open(pub, encoding='utf-8').read()
+        start, end = '<!-- VOLLEY_PROFILE_START -->', '<!-- VOLLEY_PROFILE_END -->'
+        if profile.count(start) != 1 or profile.count(end) != 1:
+            problems.append('profile README requires one controlled VOLLEY start/end marker pair')
+        else:
+            actual = profile.split(start, 1)[1].split(end, 1)[0].strip()
+            expected = open(tmpl, encoding='utf-8').read().strip()
+            if actual != expected:
+                problems.append('the controlled VOLLEY profile section differs from its source fragment')
 
     if problems:
         print(f'public surfaces: {len(problems)} problem(s)\n')

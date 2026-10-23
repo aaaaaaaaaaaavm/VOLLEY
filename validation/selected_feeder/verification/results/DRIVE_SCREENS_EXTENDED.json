@@ -1,0 +1,68 @@
+[
+  {
+    "kind": "extended_receiver",
+    "resistance_N": 50.0,
+    "time_s": 77.77777777777777,
+    "stroke_mm": 3500.0,
+    "moving_mass_kg_assumed": 10.0,
+    "gear_ratio": 59.4,
+    "assumed_efficiency": 0.5,
+    "peaks": {
+      "force_N": 50.02314285714286,
+      "motor_torque_Nm": 0.020247983314227995,
+      "motor_rpm": 4254.211628846362,
+      "output_torque_Nm": 0.6002777142857143,
+      "output_power_W": 4.502082857142858,
+      "current_A": 0.5780817225658936,
+      "shaft_rpm": 71.6197243913529
+    },
+    "minimum_torque_speed_margin_rpm": 932.7295115433872,
+    "criteria": {
+      "motor_continuous_torque": true,
+      "motor_torque_speed_line": true,
+      "gear_input_speed": true,
+      "gear_continuous_torque": true,
+      "gear_output_power": true,
+      "controller_continuous_current": true,
+      "nut_load_speed_screen": true
+    },
+    "all_declared_sizing_screens_pass": true,
+    "current_based_electrical_energy_bound_J": 1079.0858821230013,
+    "energy_bound_interpretation": "24V times peak modeled motor current times time;not measured busenergy or coupled inverterthermalprediction",
+    "transmission": "Toothed belt / pulley / split clutch",
+    "manufacturer_reference_only": true
+  },
+  {
+    "kind": "extended_receiver",
+    "resistance_N": 100.0,
+    "time_s": 77.77777777777777,
+    "stroke_mm": 3500.0,
+    "moving_mass_kg_assumed": 10.0,
+    "gear_ratio": 59.4,
+    "assumed_efficiency": 0.5,
+    "peaks": {
+      "force_N": 100.02314285714286,
+      "motor_torque_Nm": 0.040450003516248195,
+      "motor_rpm": 4254.211628846362,
+      "output_torque_Nm": 1.2002777142857144,
+      "output_power_W": 9.002082857142858,
+      "current_A": 1.0660532250301498,
+      "shaft_rpm": 71.6197243913529
+    },
+    "minimum_torque_speed_margin_rpm": 520.6082994221742,
+    "criteria": {
+      "motor_continuous_torque": true,
+      "motor_torque_speed_line": true,
+      "gear_input_speed": true,
+      "gear_continuous_torque": true,
+      "gear_output_power": true,
+      "controller_continuous_current": true,
+      "nut_load_speed_screen": true
+    },
+    "all_declared_sizing_screens_pass": true,
+    "current_based_electrical_energy_bound_J": 1989.9660200562794,
+    "energy_bound_interpretation": "24V times peak modeled motor current times time;not measured busenergy or coupled inverterthermalprediction",
+    "transmission": "Toothed belt / pulley / split clutch",
+    "manufacturer_reference_only": true
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "8cd4370f0766728058828f67c8588a9178b294f239537095bd0825d299ce9a5a",
+  "parts": [
+    {
+      "name": "Driven_pusher_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "vertex_count": 1453,
+      "triangle_count": 2930
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 # Current solver and numerical-evidence boundary
 
-**Evidence status: 22 October 2026.** Numerical evidence requires an identified source, input, actual execution and captured output. A prepared deck, package import or parser check is insufficient. Each result applies to its recorded geometry, force model and prescribed controls; use of the same solver on another case does not validate the requested case.
+**Evidence status: 23 October 2026.** Numerical evidence requires an identified source, input, actual execution and captured output. A prepared deck, package import or parser check is insufficient. Each result applies to its recorded geometry, force model and prescribed controls; use of the same solver on another case does not validate the requested case.
+
+## Selected feeder design
+
+[FM08-R3 / FDR10](../validation/selected_feeder/README.md) is the selected academic guided lead-screw architecture. Its native CAD/STEP, nominal motion, analytical component/load/tolerance screens and executable sequence/fault specification have revision-specific evidence. This selection does not convert the earlier contact-model sensitivity into accepted precision or contact-load evidence. [Four/twelve-payload system study](../validation/system_feasibility_closure/README.md).
 
 ## Captured native and numerical studies
 

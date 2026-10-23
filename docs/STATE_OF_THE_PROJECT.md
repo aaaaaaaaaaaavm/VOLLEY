@@ -1,21 +1,21 @@
-# Where VOLLEY stands
+# State of the project
 
-Updated 2026-10-09. [Current configuration status](NEXT_GENERATION_STATUS.md) · [Open review gates](GEN5_FREEZE_READINESS.md) · [Engineering repository](https://github.com/aaaaaaaaaaaavm/VOLLEY)
+**23 October 2026.** VOLLEY combines an evaluated Gen5 electromagnetic deployment study with the separately versioned Gen6 guided lead-screw feeder design.
 
-## Academic review configuration
+## Evaluated Gen5
 
-Gen5 is the controlled computational configuration for the thesis and IEEE-formatted paper. It models a host-mounted, reusable electromagnetic launch path for ordinary 3U CubeSats with sequential side-cassette feed, a permanent-magnet sled, pulse store and eddy-current arrest. The academic review can present the complete *evaluation*, including negative findings. The final design and academic freeze remain open; no hardware has been built or measured, and no provider or payload interface has been approved.
+The immutable Gen5 record retains the finite-force, mass, packaging and mission findings. Its historical periodic-force point is 16.029 m/s; an ideal finite-geometry screen gives 12.448 m/s. No component-rated release speed follows. The historical device mass is 126.562 kg and the side-fed reference has an 11 mm width shortfall. [Configuration and evidence](NEXT_GENERATION_STATUS.md).
 
-The reference arrangement fails an **11 mm transverse fit** and **32,915 mm³ exact-solid overlap per cassette**. A later [all-leaf census](../cad/GEN5_FULL_INTERFERENCE_AUDIT_2026_10_12.md) finds 17 intersecting pairs, including sled/track and sled/stator; widened R1 retains five. Modeled dry mass is **10.55 kg per carried 3U**, failing the study's economic screen and an approximate 6 kg canister comparison. A finite-geometry force screen gives **12.448 m/s at ideal phase** and challenges the historical **16.029 m/s** periodic-model point. Independent 2-D FEM and 3-D numerical checks corroborate selected ideal force quantities, not a rated winding or flight performance. [CAD audit](../validation/P116_gen5_assembly_packaging.md) · [mass audit](../validation/P117_rated_energy_mass_audit.md) · [force audit](../validation/P118_gen5_finite_force_map.md).
+## Selected feeder
 
-A matched reference mission compares the same host, payload and target against a spring class and Gen5 model speeds. No sampled twelve-shot case closes. The earlier two-payload campaign remains a bounded exploratory study. Neither establishes product-market fit, a qualified mission service or an acceptable installed burden. [Mission record](MATCHED_MISSION_REFERENCE.md) · [market and spacecraft fit](../MARKET_AND_CUSTOMER_FIT.md).
+FM08-R3 uses dedicated restrained 1U/3U cassettes, a fixed 1U spacer, a guided screw-driven pusher and one common receiver. FDR10 records the seven-concept ranking, quantitative top-three comparison and declared academic acceptance. Rack-and-pawl is retained as runner-up. [Selected feeder: native CAD, STEP and verification](../validation/selected_feeder/README.md).
 
-## Development boundary
+The declared checks cover represented nominal geometry, prescribed motion, source-based actuator sizing, analytical load/tolerance sensitivities and deterministic sequencing/fault logic. The original rigid-contact study remains separate; its unresolved numerical sensitivity supplies no precision or peak-force rating.
 
-R1 is an unselected widened feeder geometry candidate; it does not replace the evaluated Gen5 results. Gen6 is future research toward a 1 km/s-class objective, with no selected architecture or achieved speed. The independent spring-cell bank and long gas guide are historical, unselected studies. [Configuration details](NEXT_GENERATION_STATUS.md) · [lab vault](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab).
+## Service assessment
 
-The next release decision needs one named payload and host/provider interface, a functioning feeder/release/brake design, moving clearances and tolerances, complete installed budgets, power and force closure, matched mission value, and independent technical review. Instrumented multi-shot hardware tests remain future work. [Issue #42](https://github.com/aaaaaaaaaaaavm/VOLLEY/issues/42) groups those gates.
+The surrogate mission compares commanded deployment with host-assisted springs on common constructed terminal targets. Native Orekit replay, finite-force host manoeuvres and installed-resource assumptions are provided with the results. [Mission evidence](../validation/finite_burn_review/README.md) · [Current system integration](../validation/system_feasibility_closure/README.md).
 
-## How to review the evidence
+## Reading route
 
-Start with the [flagship front page](../README.md), [computational review PDF](../reports/GEN5_COMPUTATIONAL_REVIEW.pdf), [STEP/CAD review](../cad/GEN5_CAD_REVIEW.pdf), [provenance policy](PROVENANCE.md) and [open-problem register](../OPEN_PROBLEMS.md). The [Blender operations storyboard](../cad/renders/sequence/README.md) is a STEP-derived depiction of intent, not a moving-mechanism validation. Dated programme and generation records retain their original assumptions for audit; this page controls the current review interpretation.
+[Project overview](../README.md) · [Gen5 technical record](GEN5_TECHNICAL_BASELINE.json) · [Current numerical evidence](CURRENT_NUMERICAL_EVIDENCE.md) · [CAD index](../cad/README.md) · [Literature](LITERATURE.md). Dated studies retain their own revisions and scope.

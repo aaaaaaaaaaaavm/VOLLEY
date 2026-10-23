@@ -1,0 +1,54 @@
+{
+  "revision": "FM08-R3/FDR10",
+  "local": {
+    "motor": {
+      "id": "3242G024BX4",
+      "catalog_mass_kg": 0.179
+    },
+    "gear": {
+      "id": "32GPT9:1",
+      "actual_ratio": 9.0,
+      "catalog_mass_kg": 0.157
+    },
+    "controller": {
+      "id": "MC5005S RS/CO",
+      "catalog_mass_kg": 0.23
+    },
+    "brake": {
+      "id": "BXW-01-10L-24V",
+      "static_torque_Nm": 0.12,
+      "catalog_mass_kg": 0.2,
+      "coil_power_W": 5.0
+    },
+    "known_hardware_mass_option_kg": 0.766,
+    "prototype_option_only": true,
+    "exact_installed_hardware_accepted": false
+  },
+  "receiver": {
+    "motor": {
+      "id": "3242G024BX4",
+      "catalog_mass_kg": 0.179
+    },
+    "gear": {
+      "id": "32GPT59:1",
+      "actual_ratio": 59.4,
+      "catalog_mass_kg": 0.2
+    },
+    "controller": {
+      "id": "MC5005S RS/CO",
+      "catalog_mass_kg": 0.23
+    },
+    "brake": {
+      "id": "BXW-05-10L-24V",
+      "static_torque_Nm": 2.0,
+      "catalog_mass_kg": 0.8,
+      "coil_power_W": 13.0
+    },
+    "known_hardware_mass_option_kg": 1.409,
+    "prototype_option_only": true,
+    "exact_installed_hardware_accepted": false
+  },
+  "four_primary_drive_subtotal_kg": 4.473,
+  "twelve_primary_drive_subtotal_kg": 10.601,
+  "boundary": "Primary motor/gear/controller/static-brake catalog subtotal only;gate/captureactuation,couplings,supports,harness,thermalmountsandcompleteinstalledmassremainseparatelyaccounted. Historical option examples in catalog_reference.json are not the selected assembly ledger."
+}

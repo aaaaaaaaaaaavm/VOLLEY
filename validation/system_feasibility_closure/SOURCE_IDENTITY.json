@@ -1,0 +1,26 @@
+{
+  "original_FBR01_source_repository_revision": "VOLLEY@fcfa5ccd0b3224efb1dd02d766c9d3e4db56f1e7",
+  "derivative_changes": {
+    "mission/target.py": "Adds explicit pre-release zero-force guard; original captured targeter retained separately.",
+    "build_twelve.py": "Constructs twelve fixed cells with one receiver and an extended4.2mrail from copied selected four-cell source."
+  },
+  "copied_selected_geometry_source_sha256": "6ebbde89b5452a7529a7b860cfcba87afacdf25025d7f6e0e0fb65e2e7bc4b6c",
+  "files": {
+    "source_inputs/FBR01_SUMMARY.json": "93ccab34fd7716890b035af9f247f608f3a86f39cac43d3611b85a8480281167",
+    "source_inputs/EXTENDED_BOUNDS.json": "8a782b9725b99440e0fb673e47ba1480f472fd05159bfec4b9477d9d754a8b10",
+    "source_inputs/FBR01_target.py": "3a1319507b7923c88e585302d7aa1aef326409f8a74ba9d4689c402a7e541881",
+    "source_inputs/FOUR_ASSEMBLY_REPORT.json": "7f4e7c222266464b657ba5b271584984fd4756c3b3791d8f3710138c92415714",
+    "source_inputs/LOCAL_FEED_50N.csv": "be571843cca4cd69846ae380753c7ff298cb7039fb4351fd22186461c6a27503",
+    "source_inputs/SELECTED_CATALOG_OPTIONS.json": "627256f07f48af66c3ab36d801a66979f044e8c33aabf658bb6710813a796ffa",
+    "source_inputs/build_selected_R3.py": "6ebbde89b5452a7529a7b860cfcba87afacdf25025d7f6e0e0fb65e2e7bc4b6c",
+    "mission/target.py": "77ffb5ae5db385eded0af6d43ceb184daf33cd917dba016bd7ef2cd538fc16dc",
+    "mission/SOFTWARE_LOCK.json": "f26f92aa58c235e05d082a039d7787f361198ef12fb81c291841008cb36e610d",
+    "mission/export.py": "1c29b2844fa91771b186956ea45b73c3ce1f6d124425b0f9abe7b769c2283929",
+    "mission/FiniteReplay.java": "1f15a95d50d8d98ae7447147cfcf33f2329c42a90d0b0c6ece3c1ee88057c451",
+    "mission/inputs/12_spring_20kg_events.csv": "21dcb5791e71fe819526d97e5ff2ea0b975507fbb3a94ebfa9fa8c11c89c4254",
+    "mission/inputs/12_volley_3_6_10kg_events.csv": "030af3a8a4c5c515f46f0deddb98bc8a4803d372a7db57890d9fbc8943385881",
+    "mission/inputs/12_volley_3_6_20kg_events.csv": "d8c2467c0ea017404aaddb77be337178f8b28300e19faa917430304ad723103d",
+    "mission/inputs/4_spring_10kg_events.csv": "fa5e88640fbc8cd487e9002f9211c46b81cf2d21e294953bc74f190df6fbd8c8",
+    "mission/inputs/4_volley_3_6_10kg_events.csv": "886984c8b1bfc7adc905a8a7f44e8b8193a4429e23e729ecf8e685828cf6ec16"
+  }
+}

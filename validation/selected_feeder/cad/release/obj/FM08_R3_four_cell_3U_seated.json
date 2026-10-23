@@ -1,0 +1,1085 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "80227beef7b9a926c6f306e074fe66236140cbd539efd6ee27d1ef5da58c3f64",
+  "parts": [
+    {
+      "name": "CellA_1U__Payload_1U",
+      "role": "payload",
+      "material": "payload",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellA_1U__Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellA_1U__Guide_shaft_-20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellA_1U__Guide_bush_-20",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__Guide_shaft_360",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellA_1U__Guide_bush_360",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__Guide_hardstop_-20_-225",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__Guide_hardstop_-20_20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__Guide_hardstop_360_-225",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__Guide_hardstop_360_20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__SPT10x2M_screw_nominal",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 756,
+      "triangle_count": 1508
+    },
+    {
+      "name": "CellA_1U__Screw_end_bearing_-265",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__Screw_end_bearing_85",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__Brake_bearing_coupler",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellA_1U__SB3700_nut_nominal",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellA_1U__Driven_pusher_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "vertex_count": 1453,
+      "triangle_count": 2930
+    },
+    {
+      "name": "CellA_1U__Restraint_pin_-92",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellA_1U__Restraint_pin_390",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellA_1U__Motor_3242BX4_gear32GPT9_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellA_1U__Brake_BXW01_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellA_1U__Controller_MC5005S_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellA_1U__Limit_sensor_-204",
+      "role": "sensor",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellA_1U__Limit_sensor_-4",
+      "role": "sensor",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellA_1U__Fixed_cassette_gantry",
+      "role": "fixed",
+      "material": "aluminium",
+      "vertex_count": 3964,
+      "triangle_count": 8004
+    },
+    {
+      "name": "CellB_3U__Payload_3U",
+      "role": "payload",
+      "material": "payload",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellB_3U__Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellB_3U__Guide_shaft_-20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellB_3U__Guide_bush_-20",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__Guide_shaft_360",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellB_3U__Guide_bush_360",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__Guide_hardstop_-20_-225",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__Guide_hardstop_-20_20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__Guide_hardstop_360_-225",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__Guide_hardstop_360_20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__SPT10x2M_screw_nominal",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 756,
+      "triangle_count": 1508
+    },
+    {
+      "name": "CellB_3U__Screw_end_bearing_-265",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__Screw_end_bearing_85",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__Brake_bearing_coupler",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellB_3U__SB3700_nut_nominal",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellB_3U__Driven_pusher_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "vertex_count": 1453,
+      "triangle_count": 2930
+    },
+    {
+      "name": "CellB_3U__Restraint_pin_-92",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellB_3U__Restraint_pin_390",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellB_3U__Motor_3242BX4_gear32GPT9_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellB_3U__Brake_BXW01_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellB_3U__Controller_MC5005S_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellB_3U__Limit_sensor_-204",
+      "role": "sensor",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellB_3U__Limit_sensor_-4",
+      "role": "sensor",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellB_3U__Fixed_cassette_gantry",
+      "role": "fixed",
+      "material": "aluminium",
+      "vertex_count": 3952,
+      "triangle_count": 7980
+    },
+    {
+      "name": "CellC_1U__Payload_1U",
+      "role": "payload",
+      "material": "payload",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellC_1U__Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellC_1U__Guide_shaft_-20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellC_1U__Guide_bush_-20",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__Guide_shaft_360",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellC_1U__Guide_bush_360",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__Guide_hardstop_-20_-225",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__Guide_hardstop_-20_20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__Guide_hardstop_360_-225",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__Guide_hardstop_360_20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__SPT10x2M_screw_nominal",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 756,
+      "triangle_count": 1508
+    },
+    {
+      "name": "CellC_1U__Screw_end_bearing_-265",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__Screw_end_bearing_85",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__Brake_bearing_coupler",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellC_1U__SB3700_nut_nominal",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellC_1U__Driven_pusher_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "vertex_count": 1453,
+      "triangle_count": 2930
+    },
+    {
+      "name": "CellC_1U__Restraint_pin_-92",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellC_1U__Restraint_pin_390",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellC_1U__Motor_3242BX4_gear32GPT9_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellC_1U__Brake_BXW01_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellC_1U__Controller_MC5005S_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellC_1U__Limit_sensor_-204",
+      "role": "sensor",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellC_1U__Limit_sensor_-4",
+      "role": "sensor",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellC_1U__Fixed_cassette_gantry",
+      "role": "fixed",
+      "material": "aluminium",
+      "vertex_count": 3964,
+      "triangle_count": 8004
+    },
+    {
+      "name": "CellD_3U__Payload_3U",
+      "role": "payload",
+      "material": "payload",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellD_3U__Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellD_3U__Guide_shaft_-20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellD_3U__Guide_bush_-20",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__Guide_shaft_360",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellD_3U__Guide_bush_360",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__Guide_hardstop_-20_-225",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__Guide_hardstop_-20_20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__Guide_hardstop_360_-225",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__Guide_hardstop_360_20",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__SPT10x2M_screw_nominal",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 756,
+      "triangle_count": 1508
+    },
+    {
+      "name": "CellD_3U__Screw_end_bearing_-265",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__Screw_end_bearing_85",
+      "role": "fixed",
+      "material": "steel",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__Brake_bearing_coupler",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellD_3U__SB3700_nut_nominal",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    },
+    {
+      "name": "CellD_3U__Driven_pusher_frame",
+      "role": "moving",
+      "material": "aluminium",
+      "vertex_count": 1453,
+      "triangle_count": 2930
+    },
+    {
+      "name": "CellD_3U__Restraint_pin_-92",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellD_3U__Restraint_pin_390",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellD_3U__Motor_3242BX4_gear32GPT9_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellD_3U__Brake_BXW01_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "CellD_3U__Controller_MC5005S_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellD_3U__Limit_sensor_-204",
+      "role": "sensor",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellD_3U__Limit_sensor_-4",
+      "role": "sensor",
+      "material": "catalog_envelope",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "CellD_3U__Fixed_cassette_gantry",
+      "role": "fixed",
+      "material": "aluminium",
+      "vertex_count": 3952,
+      "triangle_count": 7980
+    },
+    {
+      "name": "Receiver__Floor_carriage",
+      "role": "receiver",
+      "material": "aluminium",
+      "vertex_count": 826,
+      "triangle_count": 1700
+    },
+    {
+      "name": "Receiver__Floor_corner_rail_0",
+      "role": "receiver",
+      "material": "polymer",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Floor_corner_rail_235",
+      "role": "receiver",
+      "material": "polymer",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Floor_corner_rail_324",
+      "role": "receiver",
+      "material": "polymer",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__aft_corner_stop",
+      "role": "receiver",
+      "material": "aluminium",
+      "vertex_count": 20,
+      "triangle_count": 40
+    },
+    {
+      "name": "Receiver__leading_corner_stop",
+      "role": "receiver_gate",
+      "material": "aluminium",
+      "vertex_count": 20,
+      "triangle_count": 40
+    },
+    {
+      "name": "Receiver__1U_retractable_aft_stop",
+      "role": "receiver_gate",
+      "material": "aluminium",
+      "vertex_count": 20,
+      "triangle_count": 40
+    },
+    {
+      "name": "Receiver__Y_capture_tab_5_-1",
+      "role": "receiver_gate",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Y_capture_tab_5_100",
+      "role": "receiver_gate",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Y_capture_tab_235_-1",
+      "role": "receiver_gate",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Y_capture_tab_235_100",
+      "role": "receiver_gate",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Y_capture_tab_320_-1",
+      "role": "receiver_gate",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Y_capture_tab_320_100",
+      "role": "receiver_gate",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Index_clutch_jaw_south",
+      "role": "receiver_gate",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Receiver__Index_clutch_jaw_north",
+      "role": "receiver_gate",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Common__Profile_rail_-25",
+      "role": "rail",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Common__Rail_support_-25",
+      "role": "fixed",
+      "material": "aluminium",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Common__Profile_rail_125",
+      "role": "rail",
+      "material": "steel",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Common__Rail_support_125",
+      "role": "fixed",
+      "material": "aluminium",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Common__Rail_standoff_-25_-60",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_-25_110",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_-25_360",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_-25_610",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_-25_860",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_-25_1110",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_-25_1360",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_-25_1440",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_125_-60",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_125_110",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_125_360",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_125_610",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_125_860",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_125_1110",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_125_1360",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Rail_standoff_125_1440",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 16,
+      "triangle_count": 32
+    },
+    {
+      "name": "Common__Receiver_drive_belt_-68",
+      "role": "rail_drive",
+      "material": "polymer",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Common__Receiver_drive_belt_-42",
+      "role": "rail_drive",
+      "material": "polymer",
+      "vertex_count": 8,
+      "triangle_count": 12
+    },
+    {
+      "name": "Common__Receiver_pulley_-120",
+      "role": "rail_drive",
+      "material": "aluminium",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Receiver_pulley_1420",
+      "role": "rail_drive",
+      "material": "aluminium",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Receiver_motor32GPT59_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Receiver_BXW05_brake_envelope",
+      "role": "catalog",
+      "material": "catalog_envelope",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Receiver_brake_pulley_shaft",
+      "role": "rail_drive",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Dock_socket_0_-4",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 260,
+      "triangle_count": 520
+    },
+    {
+      "name": "Common__Station_dock_pin_0_-4",
+      "role": "docking",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Dock_socket_0_344.5",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 260,
+      "triangle_count": 520
+    },
+    {
+      "name": "Common__Station_dock_pin_0_344.5",
+      "role": "docking",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Dock_socket_250_-4",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 260,
+      "triangle_count": 520
+    },
+    {
+      "name": "Common__Station_dock_pin_250_-4",
+      "role": "docking",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Dock_socket_250_344.5",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 260,
+      "triangle_count": 520
+    },
+    {
+      "name": "Common__Station_dock_pin_250_344.5",
+      "role": "docking",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Dock_socket_650_-4",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 260,
+      "triangle_count": 520
+    },
+    {
+      "name": "Common__Station_dock_pin_650_-4",
+      "role": "docking",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Dock_socket_650_344.5",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 260,
+      "triangle_count": 520
+    },
+    {
+      "name": "Common__Station_dock_pin_650_344.5",
+      "role": "docking",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Dock_socket_900_-4",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 260,
+      "triangle_count": 520
+    },
+    {
+      "name": "Common__Station_dock_pin_900_-4",
+      "role": "docking",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    },
+    {
+      "name": "Common__Dock_socket_900_344.5",
+      "role": "rail",
+      "material": "aluminium",
+      "vertex_count": 260,
+      "triangle_count": 520
+    },
+    {
+      "name": "Common__Station_dock_pin_900_344.5",
+      "role": "docking",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "study": "LNS-01 parametric lunar release navigation sensitivity",
+  "source_sha256": "f7a09efaa8f261f365dbb7448eb96dd5b106098ddce988d68fc5e5ee3d9db453",
+  "model": "two-body lunar osculating periapsis at apolune release; no orbit lifetime integration",
+  "constants": {
+    "mu_moon_m3_s2": 4902800118000.0,
+    "moon_reference_radius_m": 1737400.0,
+    "payload_kg": 4.0,
+    "retained_host_kg": 300.0
+  },
+  "assumptions": [
+    "independent zero-mean Gaussian errors",
+    "declared investigation covariance bands, not supplier/customer/measured data",
+    "spherical lunar reference surface, no terrain, lunar harmonics, solar/Earth perturbation, coverage or communications",
+    "point release, no finite release interval or payload attitude dynamics"
+  ],
+  "finite_difference_checks": [
+    {
+      "staging_apoapsis_km": 100,
+      "jacobian_relative_refinement_difference": 7.869818951848047e-10,
+      "pass_1e_minus4": true
+    },
+    {
+      "staging_apoapsis_km": 1000,
+      "jacobian_relative_refinement_difference": 2.3052992306197828e-10,
+      "pass_1e_minus4": true
+    },
+    {
+      "staging_apoapsis_km": 10000,
+      "jacobian_relative_refinement_difference": 1.8828251576680574e-10,
+      "pass_1e_minus4": true
+    }
+  ],
+  "cases": [
+    {
+      "staging_apoapsis_km": 100,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 79848.59705341421,
+      "assumed_band": {
+        "name": "tight_study_band",
+        "position_1sigma_m": 10.0,
+        "velocity_1sigma_m_s": 0.01,
+        "pointing_1sigma_deg": 0.01,
+        "relative_speed_1sigma_fraction": 0.001
+      },
+      "linearized_periapsis_1sigma_m": 56.95495740430579,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 79846.96801119053,
+          "std_periapsis_altitude_m": 57.427806961210216,
+          "quantiles_m": {
+            "0.135pct": 79677.08869063607,
+            "2.5pct": 79735.76020624331,
+            "50pct": 79846.82834466372,
+            "97.5pct": 79960.18463460772,
+            "99.865pct": 80015.17858101171
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 79847.23482511629,
+          "std_periapsis_altitude_m": 57.33157299216756,
+          "quantiles_m": {
+            "0.135pct": 79684.23168697931,
+            "2.5pct": 79735.34100535604,
+            "50pct": 79846.70513220155,
+            "97.5pct": 79958.34628813888,
+            "99.865pct": 80012.95085758003
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    },
+    {
+      "staging_apoapsis_km": 100,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 79848.59705341421,
+      "assumed_band": {
+        "name": "middle_study_band",
+        "position_1sigma_m": 100.0,
+        "velocity_1sigma_m_s": 0.1,
+        "pointing_1sigma_deg": 0.1,
+        "relative_speed_1sigma_fraction": 0.01
+      },
+      "linearized_periapsis_1sigma_m": 569.5495740430579,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 79831.46399342881,
+          "std_periapsis_altitude_m": 574.2721269547482,
+          "quantiles_m": {
+            "0.135pct": 78132.63237922855,
+            "2.5pct": 78717.18437604437,
+            "50pct": 79829.3219824814,
+            "97.5pct": 80963.8602387319,
+            "99.865pct": 81514.85834662334
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 79834.15229357604,
+          "std_periapsis_altitude_m": 573.3124774312442,
+          "quantiles_m": {
+            "0.135pct": 78205.65688862189,
+            "2.5pct": 78715.38705796146,
+            "50pct": 79828.60633670469,
+            "97.5pct": 80946.35944804033,
+            "99.865pct": 81492.98208137223
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    },
+    {
+      "staging_apoapsis_km": 100,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 79848.59705341421,
+      "assumed_band": {
+        "name": "wide_study_band",
+        "position_1sigma_m": 1000.0,
+        "velocity_1sigma_m_s": 1.0,
+        "pointing_1sigma_deg": 1.0,
+        "relative_speed_1sigma_fraction": 0.05
+      },
+      "linearized_periapsis_1sigma_m": 5425.376609540329,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 79570.42890790774,
+          "std_periapsis_altitude_m": 5434.237970614047,
+          "quantiles_m": {
+            "0.135pct": 64395.0927562892,
+            "2.5pct": 69092.7278015819,
+            "50pct": 79573.56692815176,
+            "97.5pct": 90403.93153544943,
+            "99.865pct": 95591.07475917756
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 79614.4055548231,
+          "std_periapsis_altitude_m": 5429.158038435701,
+          "quantiles_m": {
+            "0.135pct": 64408.90206000026,
+            "2.5pct": 69052.6255281057,
+            "50pct": 79616.96754236263,
+            "97.5pct": 90242.3709552009,
+            "99.865pct": 95391.82209310989
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    },
+    {
+      "staging_apoapsis_km": 1000,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 77068.41917653568,
+      "assumed_band": {
+        "name": "tight_study_band",
+        "position_1sigma_m": 10.0,
+        "velocity_1sigma_m_s": 0.01,
+        "pointing_1sigma_deg": 0.01,
+        "relative_speed_1sigma_fraction": 0.001
+      },
+      "linearized_periapsis_1sigma_m": 58.14061778577499,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 77067.13463333243,
+          "std_periapsis_altitude_m": 58.26276402710667,
+          "quantiles_m": {
+            "0.135pct": 76897.0784263689,
+            "2.5pct": 76952.88272722048,
+            "50pct": 77066.66423103807,
+            "97.5pct": 77179.40043696325,
+            "99.865pct": 77236.77768350544
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 77067.19520562279,
+          "std_periapsis_altitude_m": 58.33280839306107,
+          "quantiles_m": {
+            "0.135pct": 76896.52485540345,
+            "2.5pct": 76954.32353810864,
+            "50pct": 77066.8896485056,
+            "97.5pct": 77179.59271127044,
+            "99.865pct": 77234.62763430095
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    },
+    {
+      "staging_apoapsis_km": 1000,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 77068.41917653568,
+      "assumed_band": {
+        "name": "middle_study_band",
+        "position_1sigma_m": 100.0,
+        "velocity_1sigma_m_s": 0.1,
+        "pointing_1sigma_deg": 0.1,
+        "relative_speed_1sigma_fraction": 0.01
+      },
+      "linearized_periapsis_1sigma_m": 581.40617785775,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 77055.72923317709,
+          "std_periapsis_altitude_m": 582.6240646042949,
+          "quantiles_m": {
+            "0.135pct": 75355.87543467102,
+            "2.5pct": 75913.54444729054,
+            "50pct": 77050.88879862009,
+            "97.5pct": 78178.71060110553,
+            "99.865pct": 78752.8951394233
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 77056.33586389135,
+          "std_periapsis_altitude_m": 583.3241062646591,
+          "quantiles_m": {
+            "0.135pct": 75350.38472593803,
+            "2.5pct": 75927.94729531024,
+            "50pct": 77053.4180749727,
+            "97.5pct": 78180.56414383341,
+            "99.865pct": 78731.39467699167
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    },
+    {
+      "staging_apoapsis_km": 1000,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 77068.41917653568,
+      "assumed_band": {
+        "name": "wide_study_band",
+        "position_1sigma_m": 1000.0,
+        "velocity_1sigma_m_s": 1.0,
+        "pointing_1sigma_deg": 1.0,
+        "relative_speed_1sigma_fraction": 0.05
+      },
+      "linearized_periapsis_1sigma_m": 5469.325123939924,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 76937.60782985343,
+          "std_periapsis_altitude_m": 5470.09291381205,
+          "quantiles_m": {
+            "0.135pct": 61366.64518483517,
+            "2.5pct": 66209.34914725658,
+            "50pct": 76882.29018954793,
+            "97.5pct": 87801.80015122739,
+            "99.865pct": 92692.57615526981
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 76960.30483750174,
+          "std_periapsis_altitude_m": 5477.216971718741,
+          "quantiles_m": {
+            "0.135pct": 61126.02196362915,
+            "2.5pct": 66397.86601415004,
+            "50pct": 76904.63229950808,
+            "97.5pct": 87705.41983762322,
+            "99.865pct": 92589.80799066706
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    },
+    {
+      "staging_apoapsis_km": 10000,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 43619.45480699418,
+      "assumed_band": {
+        "name": "tight_study_band",
+        "position_1sigma_m": 10.0,
+        "velocity_1sigma_m_s": 0.01,
+        "pointing_1sigma_deg": 0.01,
+        "relative_speed_1sigma_fraction": 0.001
+      },
+      "linearized_periapsis_1sigma_m": 135.69273151449298,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 43617.70351072863,
+          "std_periapsis_altitude_m": 134.6576715118464,
+          "quantiles_m": {
+            "0.135pct": 43217.168983338786,
+            "2.5pct": 43351.74852579628,
+            "50pct": 43615.28778148757,
+            "97.5pct": 43879.94089387765,
+            "99.865pct": 44012.928839173386
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 43617.24514345288,
+          "std_periapsis_altitude_m": 135.34479633493424,
+          "quantiles_m": {
+            "0.135pct": 43206.76709713232,
+            "2.5pct": 43353.65670943363,
+            "50pct": 43616.881649914314,
+            "97.5pct": 43878.63944150821,
+            "99.865pct": 44009.8138010048
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    },
+    {
+      "staging_apoapsis_km": 10000,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 43619.45480699418,
+      "assumed_band": {
+        "name": "middle_study_band",
+        "position_1sigma_m": 100.0,
+        "velocity_1sigma_m_s": 0.1,
+        "pointing_1sigma_deg": 0.1,
+        "relative_speed_1sigma_fraction": 0.01
+      },
+      "linearized_periapsis_1sigma_m": 1356.92731514493,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 43602.57781245382,
+          "std_periapsis_altitude_m": 1346.5677385448566,
+          "quantiles_m": {
+            "0.135pct": 39600.019649485694,
+            "2.5pct": 40943.82178774141,
+            "50pct": 43578.01939189795,
+            "97.5pct": 46225.746166626894,
+            "99.865pct": 47557.50740370479
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 43598.00013117424,
+          "std_periapsis_altitude_m": 1353.4342555877972,
+          "quantiles_m": {
+            "0.135pct": 39495.75312372554,
+            "2.5pct": 40962.850660593875,
+            "50pct": 43594.27258479223,
+            "97.5pct": 46212.87120150135,
+            "99.865pct": 47525.83054588511
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    },
+    {
+      "staging_apoapsis_km": 10000,
+      "staging_periapsis_km": 100,
+      "relative_command_m_s": -4.569852054443217,
+      "nominal_payload_periapsis_altitude_m": 43619.45480699418,
+      "assumed_band": {
+        "name": "wide_study_band",
+        "position_1sigma_m": 1000.0,
+        "velocity_1sigma_m_s": 1.0,
+        "pointing_1sigma_deg": 1.0,
+        "relative_speed_1sigma_fraction": 0.05
+      },
+      "linearized_periapsis_1sigma_m": 12680.70178900987,
+      "finite_sample": [
+        {
+          "samples": 4096,
+          "mean_periapsis_altitude_m": 43464.890506041105,
+          "std_periapsis_altitude_m": 12539.730624950585,
+          "quantiles_m": {
+            "0.135pct": 7419.357519762935,
+            "2.5pct": 18674.952095431334,
+            "50pct": 43240.84659666475,
+            "97.5pct": 68354.12894509119,
+            "99.865pct": 80743.92147666487
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.000244140625
+        },
+        {
+          "samples": 8192,
+          "mean_periapsis_altitude_m": 43460.17128791094,
+          "std_periapsis_altitude_m": 12604.44569702301,
+          "quantiles_m": {
+            "0.135pct": 7383.241210426888,
+            "2.5pct": 19109.777867635927,
+            "50pct": 43373.06787674804,
+            "97.5pct": 68079.22095513354,
+            "99.865pct": 80331.50813073805
+          },
+          "sampled_fraction_osculating_periapsis_below_reference_sphere": 0.0001220703125
+        }
+      ],
+      "caveat": "Distribution is conditional on assumed independent Gaussian inputs; no measured reliability or lunar useful lifetime follows."
+    }
+  ]
+}

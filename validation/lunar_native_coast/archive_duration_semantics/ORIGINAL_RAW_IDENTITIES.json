@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/p100_a100_lp165p_d20_s120_30d.csv",
+    "bytes": 8283350,
+    "sha256": "b4febae761dd491470d9d92386c8cf42eac040964850d5bfa865b9905ca1f364",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  },
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/format_check_circular_d20_s120.csv",
+    "bytes": 1489852,
+    "sha256": "e9c8ac23719a6aebb8b656b45781d1d0fdc47238c462ed9bc584f84a2244aba0",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  },
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/p100_a100_i0_d20_s120.csv",
+    "bytes": 51196772,
+    "sha256": "7692afac748173ebb1f0722607a9d60058e71041493a2f597e7b84d92c259203",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  },
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/p100_a100_d40_s120.csv",
+    "bytes": 41571162,
+    "sha256": "973efc6f54f79894fd1fe7f465e766a97f99eb41f9a0af57f52d3ba795595987",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  },
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/pilot_circular_d20_s120_7d.csv",
+    "bytes": 1489852,
+    "sha256": "b78f0852ae17aa723213736fb71d0b1bfd3d818287c3dcbb750645e34f4486fd",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  },
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/p100_a100_d80_s120_30d.csv",
+    "bytes": 17744995,
+    "sha256": "8cd0ebddb8c2f28dd1eabed0d54aa572b347987e1677a3d59c50a6f9a2799139",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  },
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/p100_a100_d20_s60.csv",
+    "bytes": 37015042,
+    "sha256": "2a6f6d604ab87d6302236213a25bbd6edc93a533d2fb505c026cb0845d9f694d",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  },
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/p100_a100_d20_s120.csv",
+    "bytes": 25872965,
+    "sha256": "3bec0352b64293e5839dab9efee219a3372bdcdf69208747c550cf97d3745e7c",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  },
+  {
+    "path": "/workspace/volley-work/2026-10-23-lunar-native/archive_duration_semantics/runs/p100_a1000_d20_s120.csv",
+    "bytes": 28766230,
+    "sha256": "be47e3dce7358da5dc30920eea1e709dee95d58295d56d7183624d20c11aecc4",
+    "disposition": "Retained in original private capture; omitted from compact canonical package."
+  }
+]

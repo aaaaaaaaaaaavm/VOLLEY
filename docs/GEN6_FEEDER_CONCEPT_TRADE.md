@@ -1,4 +1,16 @@
-# Gen6 mixed-size feeder: concept trade, not a selected mechanism
+# Gen6 feeder architecture selection
+
+**23 October 2026 — FDR10 / D27-R2.** The selected academic architecture is the guided lead-screw feeder with independently restrained fixed cells, a fixed 1U spacer and one indexed receiver. The complete seven-concept ranking retains rack-and-pawl as runner-up.
+
+The initial weighted judgment scores are 7.30/10 for lead screw, 7.10 for rack-and-pawl and 6.90 for spring/two-gate. Weights are safety 35%, packaging/mass 25%, positioning 20%, cycle/power 10% and manufacture 10%. Scores describe engineering judgments; the sensitivity study records ranking reversals and does not infer reliability. The top three are compared on the same 200 mm feed, 900 mm receiver travel and assumed 50/100 N resistance cases.
+
+[Selected mechanism, editable CAD/STEP, calculations and interlocks](../validation/selected_feeder/README.md). The selection applies to the declared academic design boundary; physical qualification is future work.
+
+## Historical concept record — 12 October 2026
+
+The following record preserves the original concepts and their earlier selection status. Its provisional ranking and unresolved-detail statements describe those earlier models. Current acceptance is controlled by FDR10 and the selected FM08-R3 evidence.
+
+# Original seven-concept description
 
 **12 October 2026 — engineering concept record.** The service study uses two passive 1U and two passive 3U CubeSats. The original Gen6 first-article FreeCAD/STEP model contains only one 3U dummy; subsequent [four-cell R0 packaging studies](../cad/gen6_four_cell_r0/README.md) place the full mixed-size manifest in two nominal layouts. They still have no working feeder, launch restraint or verified docking. Gen5's original side cassettes overlap its track and are 11 mm too wide for their reference enclosure. The wider Gen5 R1 revision clears the original cassette/track overlap and scripted payload paths, but an all-leaf assembly audit retains five other intersecting pairs. It also has no actuator, positive launch restraint, tolerance closure, or source-rated system mass. These are separate generations and geometry revisions; neither is a working magazine.
 

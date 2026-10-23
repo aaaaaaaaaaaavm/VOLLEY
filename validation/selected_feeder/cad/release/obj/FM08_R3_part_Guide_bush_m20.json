@@ -1,0 +1,14 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "3ef3c76416b1fd94c4d6707f0b319f295dcf3ebc44e6b0660267d290b99fde45",
+  "parts": [
+    {
+      "name": "Guide_bush_-20",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    }
+  ]
+}

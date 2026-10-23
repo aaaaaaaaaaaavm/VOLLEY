@@ -1,0 +1,45 @@
+{
+  "name": "p100_a10000_lp165p_d20_s120_30d",
+  "deck": "/workspace/volley-work/2026-10-23-lunar-native/decks/p100_a10000_lp165p_d20_s120_30d.script",
+  "initial_periapsis_altitude_km": 100,
+  "initial_apogee_altitude_km": 10000,
+  "inclination_MJ2000Eq_deg": 90,
+  "degree_order": 20,
+  "max_step_s": 120,
+  "requested_days": [
+    7,
+    30
+  ],
+  "gravity_file": "LP165P.cof",
+  "Earth_Sun_point_masses": true,
+  "initial_state_km_km_s": [
+    1837.4,
+    0,
+    0,
+    0,
+    1.3153317936929179e-16,
+    2.148099835166683
+  ],
+  "reference_lunar_mu_km3_s2": 4902.79996708864,
+  "reference_spherical_radius_km": 1737.4,
+  "epoch_TAI_Gregorian": "23 Oct 2026 00:00:00.000",
+  "impact_stop_radius_km": 1737.4,
+  "command": [
+    "/workspace/volley-work/runtime-gmat/GMAT/R2026a/bin/GmatConsole",
+    "--startup_file",
+    "/workspace/volley-work/2026-10-23-lunar-native/source/gmat_startup_file.txt",
+    "--logfile",
+    "/workspace/volley-work/2026-10-23-lunar-native/runs/p100_a10000_lp165p_d20_s120_30d_gmat.log",
+    "--run",
+    "/workspace/volley-work/2026-10-23-lunar-native/decks/p100_a10000_lp165p_d20_s120_30d.script",
+    "--exit"
+  ],
+  "cwd": "/workspace/volley-work/runtime-gmat/GMAT/R2026a/bin",
+  "started_utc": "2026-10-23T04:41:41.174405+00:00",
+  "wall_seconds": 18.047761408999577,
+  "execution_status": "finished",
+  "exit_code": 0,
+  "native_completion_message": true,
+  "console_log": "/workspace/volley-work/2026-10-23-lunar-native/runs/p100_a10000_lp165p_d20_s120_30d_console.log",
+  "deck_sha256": "db3db9a0a9b298e4fb50ac36600039b68d36553d77b9fe48dad5e7f9d6635d0e"
+}

@@ -1,0 +1,520 @@
+{
+  "revision": "FM08-R3",
+  "builder_sha256": "6ebbde89b5452a7529a7b860cfcba87afacdf25025d7f6e0e0fb65e2e7bc4b6c",
+  "parts": [
+    {
+      "native": "FM08_R3_part_Storage_gate.FCStd",
+      "step": "FM08_R3_part_Storage_gate.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 0.0,
+      "BOM": [
+        {
+          "name": "Storage_gate",
+          "material": "aluminium",
+          "role": "gate",
+          "volume_mm3": 103350.0,
+          "material_mass_kg": 0.279045,
+          "notes": "Vertical126mm downward travel through dedicated bridge slot, interlocked with receiver and fork position"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.279045,
+        "represented_material_CG_mm": [
+          170.25,
+          -78.5,
+          72.0
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            0.00023274678374999997,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0029922983634374997,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0027599701471875
+          ]
+        ],
+        "bounds_mm": [
+          -2.0,
+          342.5,
+          -80.0,
+          -77.0,
+          22.0,
+          122.0
+        ],
+        "box_volume_litre": 0.10335,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_Storage_gate.FCStd": "b30c03f767f5d3844122690a1f77d72dfce61090e6c4a8019aa45b3590600415",
+        "FM08_R3_part_Storage_gate.step": "e316511a9a97a7cd587a92789f8cb061352cba9e66d5c6f95d46c2221828bc7e"
+      }
+    },
+    {
+      "native": "FM08_R3_part_Guide_bush_m20.FCStd",
+      "step": "FM08_R3_part_Guide_bush_m20.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 0.0,
+      "BOM": [
+        {
+          "name": "Guide_bush_-20",
+          "material": "polymer",
+          "role": "moving",
+          "volume_mm3": 4485.958689877204,
+          "material_mass_kg": 0.006325201752726858,
+          "notes": "8.1mm bore;16mmOD;30mm length; plain-bush material assumption"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.006325201752726858,
+        "represented_material_CG_mm": [
+          -20.0,
+          -200.0,
+          160.00000000000003
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            6.015306399354315e-07,
+            -5.252659320831299e-21,
+            0.0
+          ],
+          [
+            -5.252659320831299e-21,
+            2.5428101696173175e-07,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            6.015306399354315e-07
+          ]
+        ],
+        "bounds_mm": [
+          -27.99751345600653,
+          -12.00248654399347,
+          -215.0,
+          -185.0,
+          152.0,
+          168.0
+        ],
+        "box_volume_litre": 0.007677612917766269,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_Guide_bush_m20.FCStd": "3ef3c76416b1fd94c4d6707f0b319f295dcf3ebc44e6b0660267d290b99fde45",
+        "FM08_R3_part_Guide_bush_m20.step": "44ce661e1b13086916ff580a691892da319b21617834b95c82bde3520cf2e426"
+      }
+    },
+    {
+      "native": "FM08_R3_part_SPT10x2M_screw_nominal.FCStd",
+      "step": "FM08_R3_part_SPT10x2M_screw_nominal.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 0.0,
+      "BOM": [
+        {
+          "name": "SPT10x2M_screw_nominal",
+          "material": "steel",
+          "role": "drive",
+          "volume_mm3": 27426.103865838886,
+          "material_mass_kg": 0.21529491534683523,
+          "notes": "10x2lead;majorblank/root7.4mmloadmodel;threadcontact idealized"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.21529491534683523,
+        "represented_material_CG_mm": [
+          -47.99999999999999,
+          -84.99999999999997,
+          160.00000000000006
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            0.0022001570027285634,
+            -2.3394823074340818e-19,
+            -9.357929229736327e-19
+          ],
+          [
+            -2.3394823074340818e-19,
+            2.63791759679777e-06,
+            -9.357929229736327e-19
+          ],
+          [
+            -9.357929229736327e-19,
+            -9.357929229736327e-19,
+            0.002200157002728567
+          ]
+        ],
+        "bounds_mm": [
+          -52.99844591000408,
+          -43.00155408999592,
+          -265.0,
+          95.0,
+          155.0,
+          165.0
+        ],
+        "box_volume_litre": 0.03598881055202938,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_SPT10x2M_screw_nominal.FCStd": "0a5defe9f96c1c6ced3abb14cbb9b3b078dd2526ac189ae959729da7c7e0f4af",
+        "FM08_R3_part_SPT10x2M_screw_nominal.step": "0ba2cdcfa959276ff5662c80d767bfd29d6f72f9093f6c9d9f5675cf592a2f97"
+      }
+    },
+    {
+      "native": "FM08_R3_part_SB3700_nut_nominal.FCStd",
+      "step": "FM08_R3_part_SB3700_nut_nominal.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 8.640199666842818e-12,
+      "BOM": [
+        {
+          "name": "SB3700_nut_nominal",
+          "material": "polymer",
+          "role": "moving",
+          "volume_mm3": 3972.4425941012155,
+          "material_mass_kg": 0.005601144057682714,
+          "notes": "19.1mmODx19.1mmL;10x2 thread idealized;no thread manufacturing geometry"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.005601144057682714,
+        "represented_material_CG_mm": [
+          -48.0,
+          -199.99999999999997,
+          159.99999999999994
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            3.3299618256437567e-07,
+            -2.1010637283325196e-20,
+            5.252659320831299e-21
+          ],
+          [
+            -2.1010637283325196e-20,
+            3.254334711814834e-07,
+            2.1010637283325196e-20
+          ],
+          [
+            5.252659320831299e-21,
+            2.1010637283325196e-20,
+            3.3299618256437567e-07
+          ]
+        ],
+        "bounds_mm": [
+          -57.5470316881078,
+          -38.45296831189221,
+          -209.55,
+          -190.45000000000002,
+          150.45,
+          169.55
+        ],
+        "box_volume_litre": 0.006965705260277216,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_SB3700_nut_nominal.FCStd": "6117c4f8c7409e6d4d89cc50d5edd19e1c52dc7891ab310e77aa2a8e41d12812",
+        "FM08_R3_part_SB3700_nut_nominal.step": "6f0677087a1a41b721f6b9253926d5fcc3bc724a3b4ab83b8fb0f779e3f3281d"
+      }
+    },
+    {
+      "native": "FM08_R3_part_Driven_pusher_frame.FCStd",
+      "step": "FM08_R3_part_Driven_pusher_frame.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 8.731149137020111e-11,
+      "BOM": [
+        {
+          "name": "Driven_pusher_frame",
+          "material": "aluminium",
+          "role": "moving",
+          "volume_mm3": 76932.23031925227,
+          "material_mass_kg": 0.20771702186198113,
+          "notes": "One connectedrear pusher;rail-contactpads;idealprismaticguide;push-onlycoasttransfer"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.20771702186198113,
+        "represented_material_CG_mm": [
+          135.15600373159936,
+          -203.33066194461992,
+          138.59121368854966
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            0.0002480538732619048,
+            1.5138945740568637e-06,
+            0.00013059160468687303
+          ],
+          [
+            1.5138945740568637e-06,
+            0.006461015543576632,
+            -5.186850052823925e-06
+          ],
+          [
+            0.00013059160468687303,
+            -5.186850052823925e-06,
+            0.006238309484930495
+          ]
+        ],
+        "bounds_mm": [
+          -104.0,
+          402.0,
+          -224.0,
+          -185.0,
+          24.0,
+          173.0
+        ],
+        "box_volume_litre": 2.940366,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_Driven_pusher_frame.FCStd": "8cd4370f0766728058828f67c8588a9178b294f239537095bd0825d299ce9a5a",
+        "FM08_R3_part_Driven_pusher_frame.step": "a04830814993236970a01ea5f2d69294eedb0efee403d994d845841798dce8b1"
+      }
+    },
+    {
+      "native": "FM08_R3_part_Restraint_pin_m92.FCStd",
+      "step": "FM08_R3_part_Restraint_pin_m92.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 0.0,
+      "BOM": [
+        {
+          "name": "Restraint_pin_-92",
+          "material": "steel",
+          "role": "latch",
+          "volume_mm3": 904.7786842338605,
+          "material_mass_kg": 0.007102512671235805,
+          "notes": "6mm nominal;retracted40mm before feed;interlocked"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.007102512671235805,
+        "represented_material_CG_mm": [
+          -92.0,
+          -218.00000000000003,
+          140.0
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            6.220617347889825e-07,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            6.220617347890702e-07,
+            -2.924352884292602e-20
+          ],
+          [
+            0.0,
+            -2.924352884292602e-20,
+            3.1961307020435854e-08
+          ]
+        ],
+        "bounds_mm": [
+          -95.0,
+          -89.0,
+          -220.99906754600244,
+          -215.00093245399756,
+          124.0,
+          156.0
+        ],
+        "box_volume_litre": 0.0011516419376649356,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_Restraint_pin_m92.FCStd": "219f5545b910e160866fe9ccf610033c3a147a3edc57748fd90503ad5db65b55",
+        "FM08_R3_part_Restraint_pin_m92.step": "77a4f1c095070a52c1c3c3f68ed79a28d81092cd4f61a9d3a4867b475f781103"
+      }
+    },
+    {
+      "native": "FM08_R3_part_receiver_Floor_carriage.FCStd",
+      "step": "FM08_R3_part_receiver_Floor_carriage.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 1.7462298274040222e-10,
+      "BOM": [
+        {
+          "name": "Floor_carriage",
+          "material": "aluminium",
+          "role": "receiver",
+          "volume_mm3": 306382.77460556384,
+          "material_mass_kg": 0.8272334914350223,
+          "notes": "Supported linear-profile nominal channels;0.1mm sidegap;not a source-rated bearing"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.8272334914350223,
+        "represented_material_CG_mm": [
+          161.1750633441144,
+          50.26561792782466,
+          15.09007395399398
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            0.0015087456475015473,
+            -5.049762809735841e-05,
+            -5.974134006939054e-07
+          ],
+          [
+            -5.049762809735841e-05,
+            0.011052237545745228,
+            8.769087451023503e-06
+          ],
+          [
+            -5.974134006939054e-07,
+            8.769087451023503e-06,
+            0.012535108990895816
+          ]
+        ],
+        "bounds_mm": [
+          -12.0,
+          352.5,
+          -45.0,
+          150.0,
+          -4.0,
+          20.0
+        ],
+        "box_volume_litre": 1.70586,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_receiver_Floor_carriage.FCStd": "80a1aa4a7d793daf0b6ded638ce7e862c563d5ff968d5c9e78be5e2b16508efb",
+        "FM08_R3_part_receiver_Floor_carriage.step": "8962272e9b6d1016575f5495bc5909e89056f6506f69dc1dfd71ae7f38fe0cde"
+      }
+    },
+    {
+      "native": "FM08_R3_part_receiver_leading_corner_stop.FCStd",
+      "step": "FM08_R3_part_receiver_leading_corner_stop.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 0.0,
+      "BOM": [
+        {
+          "name": "leading_corner_stop",
+          "material": "aluminium",
+          "role": "receiver_gate",
+          "volume_mm3": 20700.000000000004,
+          "material_mass_kg": 0.05589000000000001,
+          "notes": "Leadingstopdown134mmbeforeLSMlaunch;topcap2mmnominalclearance"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.05589000000000001,
+        "represented_material_CG_mm": [
+          343.53536231884055,
+          50.000000000000014,
+          85.02260869565215
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            0.00016714078763165218,
+            -1.6093254089355468e-19,
+            2.209238683826351e-06
+          ],
+          [
+            -1.6093254089355468e-19,
+            9.279941184156675e-05,
+            -8.046627044677734e-20
+          ],
+          [
+            2.209238683826351e-06,
+            -8.046627044677734e-20,
+            7.510524960991231e-05
+          ]
+        ],
+        "bounds_mm": [
+          334.5,
+          346.5,
+          -2.0,
+          102.0,
+          20.0,
+          128.0
+        ],
+        "box_volume_litre": 0.134784,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_receiver_leading_corner_stop.FCStd": "eb2c9404f73ba7e97ba39576d411118cd18d72cebf9435d3b102741e7ad3d41b",
+        "FM08_R3_part_receiver_leading_corner_stop.step": "0c945d9552d8fa581c307ab827e40c72692e306be9c7d357051de2b2649a8b62"
+      }
+    },
+    {
+      "native": "FM08_R3_part_receiver_1U_retractable_aft_stop.FCStd",
+      "step": "FM08_R3_part_receiver_1U_retractable_aft_stop.step",
+      "parts": 1,
+      "step_solids": 1,
+      "step_volume_error_mm3": 0.0,
+      "BOM": [
+        {
+          "name": "1U_retractable_aft_stop",
+          "material": "aluminium",
+          "role": "receiver_gate",
+          "volume_mm3": 12014.000000000004,
+          "material_mass_kg": 0.03243780000000001,
+          "notes": "134mmZretraction;activeonly1U;captivenotlaunched"
+        }
+      ],
+      "mass_properties": {
+        "represented_material_mass_kg": 0.03243780000000001,
+        "represented_material_CG_mm": [
+          225.38505077409687,
+          50.00000000000004,
+          -43.301814549692004
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            9.412507247519548e-05,
+            4.023313522338867e-19,
+            -1.5860399240884067e-06
+          ],
+          [
+            4.023313522338867e-19,
+            5.29320587640177e-05,
+            -1.0058283805847167e-20
+          ],
+          [
+            -1.5860399240884067e-06,
+            -1.0058283805847167e-20,
+            4.162931978882035e-05
+          ]
+        ],
+        "bounds_mm": [
+          223.0,
+          233.0,
+          -2.0,
+          102.0,
+          -114.0,
+          -6.0
+        ],
+        "box_volume_litre": 0.11232,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      },
+      "sha256": {
+        "FM08_R3_part_receiver_1U_retractable_aft_stop.FCStd": "756ed92a80bf757cb89bb74846256672cc32bf9778eeb08499fb8f768456568c",
+        "FM08_R3_part_receiver_1U_retractable_aft_stop.step": "f9401b29ca2e3709d050427cfce355653a382f2cc21f80537ec14a8c44a19d2a"
+      }
+    }
+  ],
+  "scope": "Nominal geometric component references;thread/race/fit/fastener details are not a manufacturing release"
+}

@@ -1,0 +1,47 @@
+{
+  "study": "CAP-12 represented material ledger from actual native assembly",
+  "source_sha256": "6ebbde89b5452a7529a7b860cfcba87afacdf25025d7f6e0e0fb65e2e7bc4b6c",
+  "native_sha256": "968c5bd2098d23e29f555b9c978ae6f529aa80db3d5aead082d231694e4ae513",
+  "captures": [
+    {
+      "parts": 398,
+      "mass_properties": {
+        "represented_material_mass_kg": 72.73046291020425,
+        "represented_material_CG_mm": [
+          1883.728231569218,
+          52.08796526331046,
+          57.07209965753173
+        ],
+        "represented_material_inertia_CG_kg_m2": [
+          [
+            3.513783872476849,
+            -1.5614465154694723,
+            0.006133801805255202
+          ],
+          [
+            -1.5614465154694723,
+            96.54510842860621,
+            -0.08395736615876825
+          ],
+          [
+            0.006133801805255202,
+            -0.08395736615876825,
+            99.07584698915285
+          ]
+        ],
+        "bounds_mm": [
+          -160.0,
+          4050.0,
+          -388.9,
+          488.9,
+          -140.0,
+          248.0
+        ],
+        "box_volume_litre": 1433.868744,
+        "full_installed_mass_kg": null,
+        "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+      }
+    }
+  ],
+  "geometry_acceptance": "Separate assembly interference/STEP report; mass extraction is not geometry acceptance"
+}

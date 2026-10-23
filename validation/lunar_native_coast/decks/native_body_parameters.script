@@ -1,0 +1,23 @@
+% Provisional native lunar coast. Units: km, km/s, seconds, degrees.
+% Initial plane is specified relative to MJ2000Eq, not asserted to be lunar-polar.
+SolarSystem.EphemerisSource = 'DE421';
+SolarSystem.DEFilename = '/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_ephem/de/leDE1900.421';
+SolarSystem.EphemerisUpdateInterval = 0;
+Earth.NutationUpdateInterval = 0;
+Earth.EopFileName = '/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/eopc04_08.62-now';
+Earth.Mu = 398600.435507;
+Sun.Mu = 132712440017.99;
+Luna.Mu = 4902.79996708864;
+Luna.EquatorialRadius = 1737.4;
+Luna.Flattening = 0;
+Luna.PlanetarySpiceKernelName = {'/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/SPICELunaCurrentKernel.bpc'};
+Luna.FrameSpiceKernelName = {'/workspace/volley-work/runtime-gmat/GMAT/R2026a/data/planetary_coeff/SPICELunaFrameKernel.tf'};
+Luna.RotationDataSource = 'SPICE';
+Luna.SpiceFrameId = 'MOON_PA';
+Create CoordinateSystem LunaMJ2000Eq;
+LunaMJ2000Eq.Origin = Luna;
+LunaMJ2000Eq.Axes = MJ2000Eq;
+Create ReportFile BodySnapshot;
+BodySnapshot.Filename = '/workspace/volley-work/2026-10-23-lunar-native/runs/native_body_parameters.txt';
+BeginMissionSequence;
+Write Earth.SpinAxisRAConstant Earth.SpinAxisRARate Earth.SpinAxisDECConstant Earth.SpinAxisDECRate Earth.RotationConstant Earth.RotationRate Earth.NutationUpdateInterval Earth.Mu Earth.EquatorialRadius Earth.Flattening Luna.Mu Luna.EquatorialRadius Sun.Mu {Style = Verbose, MessageWindow = false, ReportFile = BodySnapshot};

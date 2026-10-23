@@ -1,0 +1,14 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "6117c4f8c7409e6d4d89cc50d5edd19e1c52dc7891ab310e77aa2a8e41d12812",
+  "parts": [
+    {
+      "name": "SB3700_nut_nominal",
+      "role": "moving",
+      "material": "polymer",
+      "vertex_count": 504,
+      "triangle_count": 1008
+    }
+  ]
+}

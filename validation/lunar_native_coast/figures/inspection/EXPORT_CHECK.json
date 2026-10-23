@@ -1,0 +1,38 @@
+[
+  {
+    "pdf_basename": "lunar_refinement.pdf",
+    "sha256": "4664b99b552b460f02f7ff048cfab61de39964999478eeb697b4239a739d01de",
+    "width_mm": 180.34000430636934,
+    "min_font_pt_at_180mm": 6.98680253916074,
+    "out_of_page_text": [],
+    "fonts_embedded": true,
+    "png_size": [
+      2130,
+      2340
+    ],
+    "png_dpi": [
+      299.9994,
+      299.9994
+    ],
+    "preview_basename": "lunar_refinement.png",
+    "renderer": "PyMuPDF 1.26.6"
+  },
+  {
+    "pdf_basename": "lunar_sampled_altitude.pdf",
+    "sha256": "ae46a883aa9bdbde37b0724fd1562ab301f08f2f09e17a41ec6c8bd3aeba6d33",
+    "width_mm": 180.34000430636934,
+    "min_font_pt_at_180mm": 8.983031836063809,
+    "out_of_page_text": [],
+    "fonts_embedded": true,
+    "png_size": [
+      2130,
+      2340
+    ],
+    "png_dpi": [
+      299.9994,
+      299.9994
+    ],
+    "preview_basename": "lunar_sampled_altitude.png",
+    "renderer": "PyMuPDF 1.26.6"
+  }
+]

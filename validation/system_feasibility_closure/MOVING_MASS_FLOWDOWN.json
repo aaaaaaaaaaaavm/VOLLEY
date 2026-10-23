@@ -1,0 +1,65 @@
+{
+  "study": "MMF-01 represented moving-mass and feed-energy flowdown",
+  "sources": {
+    "FOUR_ASSEMBLY_REPORT.json": "7f4e7c222266464b657ba5b271584984fd4756c3b3791d8f3710138c92415714",
+    "LOCAL_FEED_50N.csv": "be571843cca4cd69846ae380753c7ff298cb7039fb4351fd22186461c6a27503"
+  },
+  "cell_subtotals": [
+    {
+      "cell": "CellA_1U",
+      "represented_moving_custom_material_kg": 0.2112589694251176,
+      "assumed_upper_payload_kg": 6.0,
+      "represented_plus_upper_payload_kg": 6.211258969425118,
+      "actuator_moving_mass_study_kg": 7.5,
+      "unallocated_headroom_to_study_mass_kg": 1.288741030574882,
+      "complete_moving_installed_mass_accepted": false
+    },
+    {
+      "cell": "CellB_3U",
+      "represented_moving_custom_material_kg": 0.23892856942511764,
+      "assumed_upper_payload_kg": 6.0,
+      "represented_plus_upper_payload_kg": 6.238928569425117,
+      "actuator_moving_mass_study_kg": 7.5,
+      "unallocated_headroom_to_study_mass_kg": 1.2610714305748827,
+      "complete_moving_installed_mass_accepted": false
+    },
+    {
+      "cell": "CellC_1U",
+      "represented_moving_custom_material_kg": 0.2112589694251176,
+      "assumed_upper_payload_kg": 6.0,
+      "represented_plus_upper_payload_kg": 6.211258969425118,
+      "actuator_moving_mass_study_kg": 7.5,
+      "unallocated_headroom_to_study_mass_kg": 1.288741030574882,
+      "complete_moving_installed_mass_accepted": false
+    },
+    {
+      "cell": "CellD_3U",
+      "represented_moving_custom_material_kg": 0.23892856942511762,
+      "assumed_upper_payload_kg": 6.0,
+      "represented_plus_upper_payload_kg": 6.238928569425117,
+      "actuator_moving_mass_study_kg": 7.5,
+      "unallocated_headroom_to_study_mass_kg": 1.2610714305748827,
+      "complete_moving_installed_mass_accepted": false
+    }
+  ],
+  "receiver": {
+    "represented_custom_material_kg": 0.9842480914350223,
+    "assumed_upper_payload_kg": 6.0,
+    "represented_plus_upper_payload_kg": 6.984248091435022,
+    "actuator_moving_mass_study_kg": 10.0,
+    "unallocated_headroom_to_study_mass_kg": 3.0157519085649778,
+    "complete_moving_installed_mass_accepted": false
+  },
+  "coast_feed_energy": {
+    "prescribed_pusher_peak_speed_m_s": 0.013333333333333334,
+    "assumed_payload_upper_mass_kg": 6.0,
+    "ideal_payload_kinetic_energy_at_that_speed_J": 0.0005333333333333334,
+    "boundary": "Conditionalenergyrequirementonly;noguaranteedpayloaddeceleration,contactpeak,coefficientofrestitutionorendstopacceptance"
+  },
+  "limitations": [
+    "Gate/captureactuators,harness,fastenersandunmodeledmovinghardwaremustfitheadroomoractuatormodelrerun",
+    "6kgisstatedpayloadupperstudy,notcustomerapproval",
+    "Pushercannotpull;zeroforcecoastandfarstopcontainmentrequired",
+    "Idealkinematicenergydoesnotboundactualimpactunderunmodeleddisturbance,overspeedorcontinueddriveforce"
+  ]
+}

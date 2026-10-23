@@ -1,0 +1,14 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "0a5defe9f96c1c6ced3abb14cbb9b3b078dd2526ac189ae959729da7c7e0f4af",
+  "parts": [
+    {
+      "name": "SPT10x2M_screw_nominal",
+      "role": "drive",
+      "material": "steel",
+      "vertex_count": 756,
+      "triangle_count": 1508
+    }
+  ]
+}

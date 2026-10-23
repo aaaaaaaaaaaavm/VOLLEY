@@ -1,0 +1,315 @@
+{
+  "revision": "D27-R2/FDR10",
+  "weights": {
+    "safety_and_fault_control": 0.35,
+    "packaging_and_mass": 0.25,
+    "positioning_and_custody": 0.2,
+    "cycle_and_power": 0.1,
+    "manufacturability": 0.1
+  },
+  "ranking": [
+    {
+      "candidate": "lead_screw",
+      "scores_0_to_10": {
+        "safety_and_fault_control": 8,
+        "packaging_and_mass": 6,
+        "positioning_and_custody": 8,
+        "cycle_and_power": 6,
+        "manufacturability": 8
+      },
+      "weighted_score_0_to_10": 7.3,
+      "evidence_type": "Documented engineering judgment;not measured performance or reliability",
+      "reasoning": [
+        "Reversible pusher motion with capped-channel containment and independently proved far/near receiver stops",
+        "Currentsource-backedreferencealready meets30s sizing screen",
+        "Fourlocaldrives and longreceiver increase installedburden"
+      ]
+    },
+    {
+      "candidate": "rack_pawl",
+      "scores_0_to_10": {
+        "safety_and_fault_control": 7,
+        "packaging_and_mass": 7,
+        "positioning_and_custody": 7,
+        "cycle_and_power": 8,
+        "manufacturability": 7
+      },
+      "weighted_score_0_to_10": 7.1,
+      "evidence_type": "Documented engineering judgment;not measured performance or reliability",
+      "reasoning": [
+        "Positive engagement and compact reversible travel",
+        "Toothmesh,backlash,support and controlled anti-backdrive latch require detail",
+        "Runner-up retained;could win if lead-screw mass or contamination control dominates"
+      ]
+    },
+    {
+      "candidate": "spring_dual_gate",
+      "scores_0_to_10": {
+        "safety_and_fault_control": 6,
+        "packaging_and_mass": 8,
+        "positioning_and_custody": 6,
+        "cycle_and_power": 8,
+        "manufacturability": 8
+      },
+      "weighted_score_0_to_10": 6.9,
+      "evidence_type": "Documented engineering judgment;not measured performance or reliability",
+      "reasoning": [
+        "Fast low-active-powertransfer and simple energy source",
+        "Existing15Nendforce fails50Nscreen;increasedpreload needs governedmotion andcustody",
+        "Gate sequencing and reliable rewind add mechanism burden"
+      ]
+    },
+    {
+      "candidate": "belt_shuttle",
+      "scores_0_to_10": {
+        "safety_and_fault_control": 6,
+        "packaging_and_mass": 8,
+        "positioning_and_custody": 6,
+        "cycle_and_power": 7,
+        "manufacturability": 7
+      },
+      "weighted_score_0_to_10": 6.7,
+      "evidence_type": "Documented engineering judgment;not measured performance or reliability",
+      "reasoning": [
+        "Flexible packaging and low driveinertia",
+        "Elastic compliance,pretension,tooth skipand power-off retention require additional control",
+        "Less direct position custody than selected screw reference"
+      ]
+    },
+    {
+      "candidate": "indexed_drum",
+      "scores_0_to_10": {
+        "safety_and_fault_control": 6,
+        "packaging_and_mass": 8,
+        "positioning_and_custody": 6,
+        "cycle_and_power": 6,
+        "manufacturability": 5
+      },
+      "weighted_score_0_to_10": 6.4,
+      "evidence_type": "Documented engineering judgment;not measured performance or reliability",
+      "reasoning": [
+        "Single feedport and inventoryindexing",
+        "Sharedindex fault can block entire manifest;large swept volume androtorlock",
+        "Installedextractor andpositiveindex interface remain conceptual"
+      ]
+    },
+    {
+      "candidate": "telescopic",
+      "scores_0_to_10": {
+        "safety_and_fault_control": 6,
+        "packaging_and_mass": 7,
+        "positioning_and_custody": 6,
+        "cycle_and_power": 5,
+        "manufacturability": 5
+      },
+      "weighted_score_0_to_10": 6.05,
+      "evidence_type": "Documented engineering judgment;not measured performance or reliability",
+      "reasoning": [
+        "Potential compact retractedlength",
+        "Stage synchronization,overlap stiffness,and knownpadintersections complicateintegration",
+        "More slidinginterfaces andconcealedjams"
+      ]
+    },
+    {
+      "candidate": "pantograph",
+      "scores_0_to_10": {
+        "safety_and_fault_control": 5,
+        "packaging_and_mass": 7,
+        "positioning_and_custody": 5,
+        "cycle_and_power": 5,
+        "manufacturability": 5
+      },
+      "weighted_score_0_to_10": 5.5,
+      "evidence_type": "Documented engineering judgment;not measured performance or reliability",
+      "reasoning": [
+        "Potential compactcollapsingstorage",
+        "Near-flat force amplification andmany pivots increase loads/backlash",
+        "Existingoutputdisconnection requires redesign;variablegeometryalignment"
+      ]
+    }
+  ],
+  "selected": "lead_screw",
+  "runner_up": "rack_pawl",
+  "selection_class": "Controlled academic architecture selection subject to selected-design checks;not all-seven qualification",
+  "supersession": "D27-R2 defines the selected academic design-study acceptance boundary dated 23 October 2026. Original FDR09 qualification-gate findings remain unchanged historical evidence.",
+  "common_boundary": "Four fixedindependentlyretained cells,two1U+two3U,one reusable900mmindexedreceiver;200mm localtransfer;50Nstudyresistance;source24Vdrives;50N is assumed,not measured",
+  "sensitivity": [
+    {
+      "case": "equal",
+      "weights": {
+        "safety_and_fault_control": 0.2,
+        "packaging_and_mass": 0.2,
+        "positioning_and_custody": 0.2,
+        "cycle_and_power": 0.2,
+        "manufacturability": 0.2
+      },
+      "ranking": [
+        [
+          "lead_screw",
+          7.2
+        ],
+        [
+          "rack_pawl",
+          7.2
+        ],
+        [
+          "spring_dual_gate",
+          7.2
+        ],
+        [
+          "belt_shuttle",
+          6.8
+        ],
+        [
+          "indexed_drum",
+          6.2
+        ],
+        [
+          "telescopic",
+          5.8
+        ],
+        [
+          "pantograph",
+          5.4
+        ]
+      ]
+    },
+    {
+      "case": "safety_emphasis",
+      "weights": {
+        "safety_and_fault_control": 0.5,
+        "packaging_and_mass": 0.15,
+        "positioning_and_custody": 0.2,
+        "cycle_and_power": 0.05,
+        "manufacturability": 0.1
+      },
+      "ranking": [
+        [
+          "lead_screw",
+          7.6
+        ],
+        [
+          "rack_pawl",
+          7.05
+        ],
+        [
+          "spring_dual_gate",
+          6.6
+        ],
+        [
+          "belt_shuttle",
+          6.45
+        ],
+        [
+          "indexed_drum",
+          6.2
+        ],
+        [
+          "telescopic",
+          6.0
+        ],
+        [
+          "pantograph",
+          5.3
+        ]
+      ]
+    },
+    {
+      "case": "mass_emphasis",
+      "weights": {
+        "safety_and_fault_control": 0.2,
+        "packaging_and_mass": 0.45,
+        "positioning_and_custody": 0.15,
+        "cycle_and_power": 0.1,
+        "manufacturability": 0.1
+      },
+      "ranking": [
+        [
+          "spring_dual_gate",
+          7.3
+        ],
+        [
+          "rack_pawl",
+          7.1
+        ],
+        [
+          "belt_shuttle",
+          7.1
+        ],
+        [
+          "lead_screw",
+          6.9
+        ],
+        [
+          "indexed_drum",
+          6.8
+        ],
+        [
+          "telescopic",
+          6.25
+        ],
+        [
+          "pantograph",
+          5.9
+        ]
+      ]
+    },
+    {
+      "case": "cycle_emphasis",
+      "weights": {
+        "safety_and_fault_control": 0.2,
+        "packaging_and_mass": 0.2,
+        "positioning_and_custody": 0.15,
+        "cycle_and_power": 0.35,
+        "manufacturability": 0.1
+      },
+      "ranking": [
+        [
+          "rack_pawl",
+          7.35
+        ],
+        [
+          "spring_dual_gate",
+          7.3
+        ],
+        [
+          "lead_screw",
+          6.9
+        ],
+        [
+          "belt_shuttle",
+          6.85
+        ],
+        [
+          "indexed_drum",
+          6.3
+        ],
+        [
+          "telescopic",
+          5.75
+        ],
+        [
+          "pantograph",
+          5.4
+        ]
+      ]
+    }
+  ],
+  "score_perturbation_scenarios": 10000,
+  "score_perturbation_winner_counts": {
+    "lead_screw": 6116,
+    "rack_pawl": 2648,
+    "spring_dual_gate": 931,
+    "belt_shuttle": 290,
+    "indexed_drum": 15,
+    "telescopic": 0,
+    "pantograph": 0
+  },
+  "sensitivity_interpretation": "Smallscore margin and ranking reversals mean a transparent engineering choice,not a unique numerical optimum. Keep rack/pawl runner-up and revisit if measured inputs change.",
+  "non_claims": [
+    "Scores are not probabilities or empiricalreliability",
+    "No architecture isflightqualified",
+    "PriorfailedCADdoes notbecomeacceptedthroughranking",
+    "SelectedR3geometry andscreenresultsare separate evidence"
+  ]
+}

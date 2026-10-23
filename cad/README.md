@@ -1,3 +1,5 @@
+> **Current Gen6 feeder:** [FM08-R3 selected guided lead-screw design](../validation/selected_feeder/README.md), with native FreeCAD, STEP and declared analytical/sequence checks. Earlier CAD below remains associated with its original revision.
+
 # CAD
 
 > **Separate Gen6 Go 2 envelope candidates:** [native FreeCAD, STEP, Blender review views and P131 bounds](gen6_first_article/README.md). These are single-dummy first-article studies; their drive, source, restraint and brake are not selected. They do not revise the Gen5 academic geometry below.

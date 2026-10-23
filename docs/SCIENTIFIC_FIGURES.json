@@ -1,5 +1,5 @@
 {
-  "revision": "19 October2026 \u00b7 bounded computational supplements",
+  "revision": "23October2026: current selected feeder and retained figure identities",
   "scope": "Selected current figure sets only. Retained historical graphics are not automatically certified compliant.",
   "figures": [
     {
@@ -966,6 +966,42 @@
       },
       "exports": {
         "validation/feeder_integrity_review/figures/Gmsh_FLR02_tine.png": "b6a101b562f15696ba9512778506a271ace8decd5b19e431892a3ec77a502700"
+      }
+    },
+    {
+      "evidence_class": "Native-CAD technical render with editable publication labels",
+      "caption": "FM08-R3 selected academic feeder: FM08_assembly",
+      "limitations": "Nominal prescribed CAD; not hardware photography, dynamic simulation, loaded-fit or flight qualification.",
+      "sources": {
+        "validation/selected_feeder/cad/build_selected.py": "6ebbde89b5452a7529a7b860cfcba87afacdf25025d7f6e0e0fb65e2e7bc4b6c",
+        "validation/selected_feeder/cad/release/GEOMETRY_REPORT.json": "706149e641c5a4bb644ee1c09d7ab1ce686b536f93b6ba4f6b8988c998194c53",
+        "validation/selected_feeder/cad/render_selected.py": "e242bbf45bee9b2ff45e338a0c37ad6151fc1f49ffda31e9e0754f22200f12fd",
+        "validation/selected_feeder/cad/compose_selected.py": "5be696b025ca71c92c1d2434f7941c105fde793e297da9705d384e3961861554",
+        "validation/selected_feeder/cad/figures/BLENDER_PROVENANCE.json": "9713b09d1fb7bbe731126c0a501f53e7d229c11158e61f1794b68d66c65ba00f"
+      },
+      "exports": {
+        "validation/selected_feeder/cad/figures/FM08_assembly.png": "d5c9b16607bd93fa51a2473eff1c6542c37ef515bf5663d380027c0894f0568e",
+        "validation/selected_feeder/cad/figures/FM08_assembly.jpg": "a81d806c12e0734d94b9825e7a0d0e477e0b1495f04d43f84106f205897d6868",
+        "validation/selected_feeder/cad/figures/FM08_assembly.pdf": "5b56b5911eb8941240d52a3e3a59145f2f72ce191a153438894194a7e29f68b8",
+        "validation/selected_feeder/cad/figures/FM08_assembly.svg": "33bddcb9c9e636365c538f831b4f1a1a28935143d5c45b06e2a193c279c64c58"
+      }
+    },
+    {
+      "evidence_class": "Native-CAD technical render with editable publication labels",
+      "caption": "FM08-R3 selected academic feeder: FM08_sequence",
+      "limitations": "Nominal prescribed CAD; not hardware photography, dynamic simulation, loaded-fit or flight qualification.",
+      "sources": {
+        "validation/selected_feeder/cad/build_selected.py": "6ebbde89b5452a7529a7b860cfcba87afacdf25025d7f6e0e0fb65e2e7bc4b6c",
+        "validation/selected_feeder/cad/release/GEOMETRY_REPORT.json": "706149e641c5a4bb644ee1c09d7ab1ce686b536f93b6ba4f6b8988c998194c53",
+        "validation/selected_feeder/cad/render_selected.py": "e242bbf45bee9b2ff45e338a0c37ad6151fc1f49ffda31e9e0754f22200f12fd",
+        "validation/selected_feeder/cad/compose_selected.py": "5be696b025ca71c92c1d2434f7941c105fde793e297da9705d384e3961861554",
+        "validation/selected_feeder/cad/figures/BLENDER_PROVENANCE.json": "9713b09d1fb7bbe731126c0a501f53e7d229c11158e61f1794b68d66c65ba00f"
+      },
+      "exports": {
+        "validation/selected_feeder/cad/figures/FM08_sequence.png": "78bb2d3a887bd460293418dd50d1df912234e23722eee53c47f7543c680db030",
+        "validation/selected_feeder/cad/figures/FM08_sequence.jpg": "c2c699b6cef5a19ed2c69e3471eb820fe5ab39db4dd4762c00390217ac3ed0d7",
+        "validation/selected_feeder/cad/figures/FM08_sequence.pdf": "100e950d3842568c611f6f764891957dbf893cd09b9c9b777c51690b1d33de69",
+        "validation/selected_feeder/cad/figures/FM08_sequence.svg": "9a95d69ad255f4d761e627aef21d75fccd9162b687f3236b351cc3cd2a4fb3f8"
       }
     }
   ]

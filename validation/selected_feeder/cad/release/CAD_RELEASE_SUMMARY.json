@@ -1,0 +1,53 @@
+{
+  "revision": "FM08-R3",
+  "builder_sha256": "6ebbde89b5452a7529a7b860cfcba87afacdf25025d7f6e0e0fb65e2e7bc4b6c",
+  "architecture": "Independent guided lead-screw pushers, capped channels and one common belt-indexed receiver",
+  "complete_native_step_assembly_states": 5,
+  "nominal_native_step_component_pairs": 9,
+  "features_and_connected_solids_per_assembly": 154,
+  "full_assembly_interference_audits_pass": true,
+  "local_motion_cases": 18,
+  "installed_motion_cases": 115,
+  "installed_motion_failed_cases": 0,
+  "separate_step_imports_pass": true,
+  "stowed_mass_properties": {
+    "represented_material_mass_kg": 25.364309925317908,
+    "represented_material_CG_mm": [
+      592.1419266721906,
+      51.90835518675325,
+      54.70613394484546
+    ],
+    "represented_material_inertia_CG_kg_m2": [
+      [
+        1.1801937646794054,
+        -0.5200262448343245,
+        0.013393099814760369
+      ],
+      [
+        -0.5200262448343245,
+        4.180394307946171,
+        -0.028242101990032697
+      ],
+      [
+        0.013393099814760369,
+        -0.028242101990032697,
+        5.022836970717738
+      ]
+    ],
+    "bounds_mm": [
+      -160.0,
+      1450.0,
+      -388.9,
+      488.9,
+      -140.0,
+      248.0
+    ],
+    "box_volume_litre": 548.344104,
+    "full_installed_mass_kg": null,
+    "mass_boundary": "Customgeometrymaterialonly;payload/catalogpackagesexcluded;catalogledgerseparate;harness/fasteners/gateactuatorsnotcomplete"
+  },
+  "scope": "Nominal academic kinematic design; discrete mechanism motion plus an exact rectangular payload translation corridor. Not loaded-fit, contact-load, manufacturing or flight qualification.",
+  "geometry_report_sha256": "706149e641c5a4bb644ee1c09d7ab1ce686b536f93b6ba4f6b8988c998194c53",
+  "motion_report_sha256": "ee66a0078d232df48459300c1ddc4f845ed229de674dec80e42e424e4b88bfdb",
+  "exchange_report_sha256": "a5ff1982702768fc41772f5b34bdc71e0e92b24fa1abf1e00206c378fc7c94b8"
+}

@@ -1,0 +1,14 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "219f5545b910e160866fe9ccf610033c3a147a3edc57748fd90503ad5db65b55",
+  "parts": [
+    {
+      "name": "Restraint_pin_-92",
+      "role": "latch",
+      "material": "steel",
+      "vertex_count": 252,
+      "triangle_count": 500
+    }
+  ]
+}

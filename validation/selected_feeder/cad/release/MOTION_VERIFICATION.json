@@ -1,0 +1,974 @@
+{
+  "revision": "FM08-R3",
+  "builder_sha256": "6ebbde89b5452a7529a7b860cfcba87afacdf25025d7f6e0e0fb65e2e7bc4b6c",
+  "case_count": 115,
+  "all_sampled_cases_pass": true,
+  "failed_case_count": 0,
+  "cases": [
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 33,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellA_1U",
+      "feed_mm": 0
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 27,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellA_1U",
+      "feed_mm": 50
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 31,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellA_1U",
+      "feed_mm": 100
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 32,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellA_1U",
+      "feed_mm": 150
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 40,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellA_1U",
+      "feed_mm": 200
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 43,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellA_1U",
+      "feed_mm": 200
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 33,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellA_1U",
+      "feed_mm": 150
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 33,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellA_1U",
+      "feed_mm": 100
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 33,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellA_1U",
+      "feed_mm": 50
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 39,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellA_1U",
+      "feed_mm": 0
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 33,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellB_3U",
+      "feed_mm": 0
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 27,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellB_3U",
+      "feed_mm": 50
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 32,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellB_3U",
+      "feed_mm": 100
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 34,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellB_3U",
+      "feed_mm": 150
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 44,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellB_3U",
+      "feed_mm": 200
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 48,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellB_3U",
+      "feed_mm": 200
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 37,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellB_3U",
+      "feed_mm": 150
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 37,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellB_3U",
+      "feed_mm": 100
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 37,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellB_3U",
+      "feed_mm": 50
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 43,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellB_3U",
+      "feed_mm": 0
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 34,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellC_1U",
+      "feed_mm": 0
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 28,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellC_1U",
+      "feed_mm": 50
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 32,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellC_1U",
+      "feed_mm": 100
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 33,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellC_1U",
+      "feed_mm": 150
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 44,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellC_1U",
+      "feed_mm": 200
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 47,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellC_1U",
+      "feed_mm": 200
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 34,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellC_1U",
+      "feed_mm": 150
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 34,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellC_1U",
+      "feed_mm": 100
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 34,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellC_1U",
+      "feed_mm": 50
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 40,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellC_1U",
+      "feed_mm": 0
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 32,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellD_3U",
+      "feed_mm": 0
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 26,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellD_3U",
+      "feed_mm": 50
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 31,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellD_3U",
+      "feed_mm": 100
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 32,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellD_3U",
+      "feed_mm": 150
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 39,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "installed_feed",
+      "cell": "CellD_3U",
+      "feed_mm": 200
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 43,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellD_3U",
+      "feed_mm": 200
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 35,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellD_3U",
+      "feed_mm": 150
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 35,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellD_3U",
+      "feed_mm": 100
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 35,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellD_3U",
+      "feed_mm": 50
+    },
+    {
+      "pass": true,
+      "positive_volume_interferences": [],
+      "tested_bounding_box_pairs": 41,
+      "pair_scope": "Every changed activecell part/receivercapturetab against completeassembly;unchangedpartpairsverifiedin5fullcaptureaudits",
+      "case": "captured_payload_fork_return",
+      "cell": "CellD_3U",
+      "feed_mm": 0
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 0,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 25,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 50,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 75,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 100,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 125,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 150,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 175,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 200,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 225,
+      "tested_bounding_box_pairs": 31,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 250,
+      "tested_bounding_box_pairs": 33,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 275,
+      "tested_bounding_box_pairs": 33,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 300,
+      "tested_bounding_box_pairs": 35,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 325,
+      "tested_bounding_box_pairs": 34,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 350,
+      "tested_bounding_box_pairs": 31,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 375,
+      "tested_bounding_box_pairs": 31,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 400,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 425,
+      "tested_bounding_box_pairs": 28,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 450,
+      "tested_bounding_box_pairs": 26,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 475,
+      "tested_bounding_box_pairs": 28,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 500,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 525,
+      "tested_bounding_box_pairs": 31,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 550,
+      "tested_bounding_box_pairs": 35,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 575,
+      "tested_bounding_box_pairs": 36,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 600,
+      "tested_bounding_box_pairs": 36,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 625,
+      "tested_bounding_box_pairs": 36,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 650,
+      "tested_bounding_box_pairs": 34,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 675,
+      "tested_bounding_box_pairs": 31,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 700,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 725,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 750,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 775,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 800,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 825,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 850,
+      "tested_bounding_box_pairs": 28,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 875,
+      "tested_bounding_box_pairs": 28,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "1U",
+      "index_X_mm": 900,
+      "tested_bounding_box_pairs": 26,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 0,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 25,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 50,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 75,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 100,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 125,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 150,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 175,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 200,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 225,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 250,
+      "tested_bounding_box_pairs": 34,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 275,
+      "tested_bounding_box_pairs": 34,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 300,
+      "tested_bounding_box_pairs": 36,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 325,
+      "tested_bounding_box_pairs": 35,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 350,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 375,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 400,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 425,
+      "tested_bounding_box_pairs": 28,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 450,
+      "tested_bounding_box_pairs": 27,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 475,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 500,
+      "tested_bounding_box_pairs": 31,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 525,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 550,
+      "tested_bounding_box_pairs": 36,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 575,
+      "tested_bounding_box_pairs": 37,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 600,
+      "tested_bounding_box_pairs": 37,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 625,
+      "tested_bounding_box_pairs": 37,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 650,
+      "tested_bounding_box_pairs": 35,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 675,
+      "tested_bounding_box_pairs": 31,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 700,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 725,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 750,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 775,
+      "tested_bounding_box_pairs": 30,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 800,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 825,
+      "tested_bounding_box_pairs": 32,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 850,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 875,
+      "tested_bounding_box_pairs": 29,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "receiver_index",
+      "format": "3U",
+      "index_X_mm": 900,
+      "tested_bounding_box_pairs": 27,
+      "positive_volume_interferences": [],
+      "pass": true
+    },
+    {
+      "case": "exact_rectangular_payload_X_sweep",
+      "X_interval_mm": [
+        0,
+        1240.5
+      ],
+      "positive_volume_interferences": [],
+      "pass": true
+    }
+  ],
+  "numerical_penetration_limit_mm3": 1e-05,
+  "nominal_geometry_only": true,
+  "boundary": "Discrete native BRep comparisons of every moving/changed part against complete assembly; unchanged partpairs referenced to five full capture audits. Receiver rectangular payloadX sweep is a continuous exact geometric envelope; full mechanism motion is sampled, not certifiedcontinuous. Includes knowncatalogenvelopes; no fitted/thread/dynamic/contactloadqualification.",
+  "elapsed_s": 525.0354955109997
+}

@@ -1,7 +1,6 @@
 # Provenance
 
-Publishing under a personal name requires knowing exactly what stands behind each
-claim. This file records that. It is deliberately unflattering.
+This record distinguishes calculated quantities, numerical cross-checks, source references and physical evidence. Revision-specific methods and limitations accompany each captured study.
 
 ## Summary
 
@@ -43,9 +42,9 @@ See [GEN5_CLOSURE.md](GEN5_CLOSURE.md) for the frozen baseline evidence and
 [COMPUTATIONAL_CLOSURE.md](COMPUTATIONAL_CLOSURE.md) for remaining work. A successful
 repository consistency gate is not another independent physical check.
 
-## Errors made and corrected during the work
+## Historical model corrections
 
-Recorded because they calibrate how much to trust the rest:
+The following changes identify superseded assumptions and the studies that replaced them:
 
 1. Regenerative braking was claimed to arrest the sled. False, braking force is bounded
    by the same thrust constant as acceleration and would need more track than exists.

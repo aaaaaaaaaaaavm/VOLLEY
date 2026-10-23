@@ -1,0 +1,171 @@
+{
+  "common_requirements": {
+    "stroke_mm": 200.0,
+    "time_s": 30.0,
+    "local_moving_mass_kg_assumed": 7.5,
+    "resistance_cases_N": [
+      50,
+      100
+    ],
+    "source_motor": "3242G024BX4",
+    "gear_efficiency_assumed": 0.5
+  },
+  "lead_screw_cases": [
+    {
+      "kind": "local_feed",
+      "resistance_N": 50.0,
+      "time_s": 30.0,
+      "stroke_mm": 200.0,
+      "moving_mass_kg_assumed": 7.5,
+      "gear_ratio": 9.0,
+      "assumed_efficiency": 0.5,
+      "peaks": {
+        "force_N": 50.00666666666667,
+        "motor_torque_Nm": 0.014848030431013215,
+        "motor_rpm": 3600.0000000000005,
+        "output_torque_Nm": 0.06642776068935208,
+        "output_power_W": 2.7825195330145247,
+        "current_A": 0.44764807804379747,
+        "shaft_rpm": 400.0
+      },
+      "minimum_torque_speed_margin_rpm": 1697.1001792073298,
+      "criteria": {
+        "motor_continuous_torque": true,
+        "motor_torque_speed_line": true,
+        "gear_input_speed": true,
+        "gear_continuous_torque": true,
+        "gear_output_power": true,
+        "controller_continuous_current": true,
+        "nut_load_speed_screen": true
+      },
+      "all_declared_sizing_screens_pass": true,
+      "current_based_electrical_energy_bound_J": 322.3066161915342,
+      "energy_bound_interpretation": "24V times peak modeled motor current times time;not measured busenergy or coupled inverterthermalprediction",
+      "transmission": "Trapezoidal lead screw",
+      "manufacturer_reference_only": true
+    },
+    {
+      "kind": "local_feed",
+      "resistance_N": 100.0,
+      "time_s": 30.0,
+      "stroke_mm": 200.0,
+      "moving_mass_kg_assumed": 7.5,
+      "gear_ratio": 9.0,
+      "assumed_efficiency": 0.5,
+      "peaks": {
+        "force_N": 100.00666666666666,
+        "motor_torque_Nm": 0.026274898112956087,
+        "motor_rpm": 3600.0000000000005,
+        "output_torque_Nm": 0.11784866525809501,
+        "output_power_W": 4.936433346802587,
+        "current_A": 0.7236593747090841,
+        "shaft_rpm": 400.0
+      },
+      "minimum_torque_speed_margin_rpm": 1463.9920784956953,
+      "criteria": {
+        "motor_continuous_torque": true,
+        "motor_torque_speed_line": true,
+        "gear_input_speed": true,
+        "gear_continuous_torque": true,
+        "gear_output_power": true,
+        "controller_continuous_current": true,
+        "nut_load_speed_screen": true
+      },
+      "all_declared_sizing_screens_pass": true,
+      "current_based_electrical_energy_bound_J": 521.0347497905406,
+      "energy_bound_interpretation": "24V times peak modeled motor current times time;not measured busenergy or coupled inverterthermalprediction",
+      "transmission": "Trapezoidal lead screw",
+      "manufacturer_reference_only": true
+    }
+  ],
+  "rack_reference_cases": [
+    {
+      "kind": "rack_local_reference",
+      "resistance_N": 50.0,
+      "time_s": 30.0,
+      "stroke_mm": 200.0,
+      "moving_mass_kg_assumed": 7.5,
+      "gear_ratio": 59.4,
+      "assumed_efficiency": 0.5,
+      "peaks": {
+        "force_N": 50.00666666666667,
+        "motor_torque_Nm": 0.02021877620471381,
+        "motor_rpm": 630.2535746439056,
+        "output_torque_Nm": 0.6000800000000001,
+        "output_power_W": 0.6667555555555557,
+        "current_A": 0.577376236828836,
+        "shaft_rpm": 10.61032953945969
+      },
+      "minimum_torque_speed_margin_rpm": 4557.283390779933,
+      "criteria": {
+        "motor_continuous_torque": true,
+        "motor_torque_speed_line": true,
+        "gear_input_speed": true,
+        "gear_continuous_torque": true,
+        "gear_output_power": true,
+        "controller_continuous_current": true,
+        "nut_load_speed_screen": true
+      },
+      "all_declared_sizing_screens_pass": true,
+      "current_based_electrical_energy_bound_J": 415.71089051676194,
+      "energy_bound_interpretation": "24V times peak modeled motor current times time;not measured busenergy or coupled inverterthermalprediction",
+      "transmission": "Hypothetical rack-and-pinion reference",
+      "manufacturer_reference_only": true
+    },
+    {
+      "kind": "rack_local_reference",
+      "resistance_N": 100.0,
+      "time_s": 30.0,
+      "stroke_mm": 200.0,
+      "moving_mass_kg_assumed": 7.5,
+      "gear_ratio": 59.4,
+      "assumed_efficiency": 0.5,
+      "peaks": {
+        "force_N": 100.00666666666666,
+        "motor_torque_Nm": 0.04042079640673401,
+        "motor_rpm": 630.2535746439056,
+        "output_torque_Nm": 1.20008,
+        "output_power_W": 1.3334222222222223,
+        "current_A": 1.0653477392930921,
+        "shaft_rpm": 10.61032953945969
+      },
+      "minimum_torque_speed_margin_rpm": 4145.162178658721,
+      "criteria": {
+        "motor_continuous_torque": true,
+        "motor_torque_speed_line": true,
+        "gear_input_speed": true,
+        "gear_continuous_torque": true,
+        "gear_output_power": true,
+        "controller_continuous_current": true,
+        "nut_load_speed_screen": true
+      },
+      "all_declared_sizing_screens_pass": true,
+      "current_based_electrical_energy_bound_J": 767.0503722910263,
+      "energy_bound_interpretation": "24V times peak modeled motor current times time;not measured busenergy or coupled inverterthermalprediction",
+      "transmission": "Hypothetical rack-and-pinion reference",
+      "manufacturer_reference_only": true
+    }
+  ],
+  "rack_interpretation": "Same motor family and 59.4 gearbox driving a12mmpitch-radius pinion. Conditional force/speed sizing only; tooth geometry,mesh,positive retention and installed support are not accepted by this calculation.",
+  "spring_cases": [
+    {
+      "resistance_N": 50.0,
+      "old_end_force_N": 15.0,
+      "old_force_to_demand_ratio": 0.3,
+      "end_force_shortfall_N": 35.0,
+      "ideal_required_push_work_J": 10.0,
+      "minimum_new_end_force_N": 50.0,
+      "governor_requirement": "A resized spring must provide the full force floor over the stroke and limit motion to13.333mm/s under low resistance;storedenergy,captureandrewindlossesrequireseparatedesign."
+    },
+    {
+      "resistance_N": 100.0,
+      "old_end_force_N": 15.0,
+      "old_force_to_demand_ratio": 0.15,
+      "end_force_shortfall_N": 85.0,
+      "ideal_required_push_work_J": 20.0,
+      "minimum_new_end_force_N": 100.0,
+      "governor_requirement": "A resized spring must provide the full force floor over the stroke and limit motion to13.333mm/s under low resistance;storedenergy,captureandrewindlossesrequireseparatedesign."
+    }
+  ],
+  "selection_interpretation": "All top-three architectures can be sized in principle. Lead screw is selected for direct reversible displacement and existing corrected guided CAD. The numerical screen alone does not establish a unique optimum."
+}

@@ -1,0 +1,14 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "eb2c9404f73ba7e97ba39576d411118cd18d72cebf9435d3b102741e7ad3d41b",
+  "parts": [
+    {
+      "name": "leading_corner_stop",
+      "role": "receiver_gate",
+      "material": "aluminium",
+      "vertex_count": 20,
+      "triangle_count": 40
+    }
+  ]
+}

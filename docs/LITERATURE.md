@@ -30,10 +30,18 @@ The [mechanism source record](../validation/feeder_release_review/comparison_ref
 
 ## Claim boundary
 
-The present contribution is the traceable computational evaluation and its explicit engineering limitations. Stacked storage and adjustable electromagnetic release alone do not establish novelty. Comparative claims about reliability, storage density, cost, installed mass or delivered accuracy require equal system boundaries and supporting data. The cited sources do not select a feeder, qualify an interface or establish provider acceptance; the existing engineering criteria and seven-candidate comparison remain applicable.
+The present contribution is the traceable computational evaluation and its explicit engineering limitations. Stacked storage and adjustable electromagnetic release alone do not establish novelty. Comparative claims about reliability, storage density, cost, installed mass or delivered accuracy require equal system boundaries and supporting data. The selected FM08-R3 architecture is supported by its own [FDR10 trade and design evidence](../validation/selected_feeder/README.md). Literature informs the choice; it does not qualify an interface or establish provider acceptance. The original all-seven qualification prerequisite has been replaced by the declared academic D27-R2 selection boundary.
 
 ## Finite-array end effects and actuator precedent
 
 The [targeted source review](END_EFFECT_AND_ACTUATOR_REVIEW_2026_10_22.md) checks selected methods/results/conclusion passages from the nine-page Japanese original of Yamaguchi and Morishita, DOI 10.1541/ieejias.143.570. The English translation is DOI 10.1002/eej.23450. The source uses a 2D model and compares it with 2D JMAG. Its ripple-cancellation arrangement assumes integer magnetic-period length, air-core coils and energized coverage extending one pole pitch beyond each field end. It supplies no universal end-effect correction, finite-width 3D validation or hardware demonstration. VOLLEY must retain its own finite-geometry and real-winding evidence boundaries.
 
 The close double-magnetic-circuit CubeSat actuator study, DOI 10.1109/TIE.2021.3134060, remains metadata/abstract-only after bounded publisher, repository and open-access-location checks. No numerical force-density, interface, measured accuracy or passive-spacecraft compatibility claim is borrowed from it. This unresolved full-text review remains a research dependency rather than a completed verification.
+
+## Selected-drive primary references — 23 October 2026
+
+The selected feeder uses ambient industrial references for sizing. The Thomson primary catalog (printed pp. 11–12) gives the SB3700 nut 310 N dynamic capacity at 500 rpm under its stated lubricated/ambient/duty conditions, 1550 N static capacity, and a 7.4 mm root reference for SPT10×2M. Its approximate speed/load derating is kept separate from space tribology. The selected analytical screen uses a conservative 155 N ceiling at up to 1000 rpm; catalog capacity is not transferred as a vacuum-qualified load.
+
+FAULHABER 3242 BX4, 32GPT and MC5005S primary sheets supply reference motor, gearbox and controller values. Miki Pulley's spring-actuated brake catalog supplies static holding options. [Source metadata, captured identities and calculations](../validation/selected_feeder/verification/catalog_reference.json) distinguish supplier values from assumed efficiency, friction, loads and thermal conditions.
+
+The 23 October bounded access check again found no lawful open full text for DOI 10.1109/TIE.2021.3134060. Its contribution remains abstract-only; no quantitative performance is imported. Public orbital-service descriptions establish the service category but do not supply a matched customer trajectory, installed mass or price for a numerical performance comparison.

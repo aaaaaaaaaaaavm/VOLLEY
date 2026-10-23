@@ -1,0 +1,14 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "756ed92a80bf757cb89bb74846256672cc32bf9778eeb08499fb8f768456568c",
+  "parts": [
+    {
+      "name": "1U_retractable_aft_stop",
+      "role": "receiver_gate",
+      "material": "aluminium",
+      "vertex_count": 20,
+      "triangle_count": 40
+    }
+  ]
+}

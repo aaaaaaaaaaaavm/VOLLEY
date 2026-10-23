@@ -1,0 +1,14 @@
+{
+  "revision": "FM08-R3",
+  "units": "mm",
+  "native_sha256": "b30c03f767f5d3844122690a1f77d72dfce61090e6c4a8019aa45b3590600415",
+  "parts": [
+    {
+      "name": "Storage_gate",
+      "role": "gate",
+      "material": "aluminium",
+      "vertex_count": 8,
+      "triangle_count": 12
+    }
+  ]
+}

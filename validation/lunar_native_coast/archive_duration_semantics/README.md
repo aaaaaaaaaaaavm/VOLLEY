@@ -1,0 +1,3 @@
+# Archived first duration experiment
+
+GMAT ElapsedSecs stop values are durations from each Propagate start, while the reported parameter retains elapsed time from the initial mission epoch. These decks incorrectly supplied cumulative horizons (7,30,90,180 days), producing 7,37,... day checkpoints. They are retained as actual native attempts and excluded from the final horizon/refinement summary. Some running attempts were terminated during correction. The incorrect cumulative-time guard also allowed an extra segment after the first spherical-radius stop in the circular cases; its actual below-sphere samples are retained. They are not evidence of subscriber bracket overshoot. Corrected runs stop at the first spherical crossing; no lifetime qualification follows.

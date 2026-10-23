@@ -1,0 +1,155 @@
+name,material,role,volume_mm3,material_mass_kg,notes
+CellA_1U__Payload_1U,payload,payload,1135000.0,0.0,Public envelope surrogate;1U1.33kg/3U4kg nominal;6kg upper study
+CellA_1U__Storage_gate,aluminium,gate,35250.0,0.095175,"Vertical126mm downward travel through dedicated bridge slot, interlocked with receiver and fork position"
+CellA_1U__Guide_shaft_-20,steel,fixed,16587.60921095411,0.13021273230598976,
+CellA_1U__Guide_bush_-20,polymer,moving,4485.958689877204,0.006325201752726858,8.1mm bore;16mmOD;30mm length; plain-bush material assumption
+CellA_1U__Guide_shaft_360,steel,fixed,16587.6092109541,0.13021273230598968,
+CellA_1U__Guide_bush_360,polymer,moving,4485.9586898772,0.006325201752726853,8.1mm bore;16mmOD;30mm length; plain-bush material assumption
+CellA_1U__Guide_hardstop_-20_-225,steel,fixed,518.362787842316,0.004069147884562181,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellA_1U__Guide_hardstop_-20_20,steel,fixed,518.362787842316,0.004069147884562181,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellA_1U__Guide_hardstop_360_-225,steel,fixed,518.3627878423163,0.004069147884562183,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellA_1U__Guide_hardstop_360_20,steel,fixed,518.3627878423163,0.004069147884562183,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellA_1U__SPT10x2M_screw_nominal,steel,drive,27426.103865838886,0.21529491534683523,10x2lead;majorblank/root7.4mmloadmodel;threadcontact idealized
+CellA_1U__Screw_end_bearing_-265,steel,fixed,3298.6722862692827,0.02589457744721387,22mmOD8mmbore geometric bearing representation;catalograting not asserted
+CellA_1U__Screw_end_bearing_85,steel,fixed,3298.6722862692827,0.02589457744721387,22mmOD8mmbore geometric bearing representation;catalograting not asserted
+CellA_1U__Brake_bearing_coupler,steel,drive,502.65482457436696,0.00394584037290878,Nominal8mmshaftadaptergap;brake5/6mmborecustomadapterfuture
+CellA_1U__SB3700_nut_nominal,polymer,moving,3972.4425941012155,0.005601144057682714,19.1mmODx19.1mmL;10x2 thread idealized;no thread manufacturing geometry
+CellA_1U__Driven_pusher_frame,aluminium,moving,71484.23031925228,0.19300742186198117,One connectedrear pusher;rail-contactpads;idealprismaticguide;push-onlycoasttransfer
+CellA_1U__Restraint_pin_-92,steel,latch,904.7786842338605,0.007102512671235805,6mm nominal;retracted40mm before feed;interlocked
+CellA_1U__Restraint_pin_390,steel,latch,904.7786842338598,0.0071025126712358,6mm nominal;retracted40mm before feed;interlocked
+CellA_1U__Motor_3242BX4_gear32GPT9_envelope,catalog_envelope,catalog,63455.14505426806,0.0,3242body44.2mm+32GPT9body34.7mm;shaft/flanges simplified
+CellA_1U__Brake_BXW01_envelope,catalog_envelope,catalog,43982.29715025711,0.0,0.12Nmstatic/0.2kgsource;40ODx35bboxfrom37ODx31.5source;adapter andspacequalification unverified
+CellA_1U__Controller_MC5005S_envelope,catalog_envelope,catalog,58500.0,0.0,"Source0.230kg;boundingboxstudy,thermal/connectorlayout notrated"
+CellA_1U__Limit_sensor_-204,catalog_envelope,sensor,511.9999999999999,0.0,Presence/home/end sensing functional requirement;not source-rated
+CellA_1U__Limit_sensor_-4,catalog_envelope,sensor,511.9999999999999,0.0,Presence/home/end sensing functional requirement;not source-rated
+CellA_1U__Fixed_cassette_gantry,aluminium,fixed,1631496.2497511078,4.405039874327991,Fused structural fabrication;no overlapping material at beam joints;source defines component dimensions
+CellB_3U__Payload_3U,payload,payload,3405000.0,0.0,Public envelope surrogate;1U1.33kg/3U4kg nominal;6kg upper study
+CellB_3U__Storage_gate,aluminium,gate,103350.0,0.279045,"Vertical126mm downward travel through dedicated bridge slot, interlocked with receiver and fork position"
+CellB_3U__Guide_shaft_-20,steel,fixed,16587.609210954102,0.1302127323059897,
+CellB_3U__Guide_bush_-20,polymer,moving,4485.958689877203,0.0063252017527268565,8.1mm bore;16mmOD;30mm length; plain-bush material assumption
+CellB_3U__Guide_shaft_360,steel,fixed,16587.609210954055,0.13021273230598931,
+CellB_3U__Guide_bush_360,polymer,moving,4485.958689877207,0.006325201752726862,8.1mm bore;16mmOD;30mm length; plain-bush material assumption
+CellB_3U__Guide_hardstop_-20_-225,steel,fixed,518.362787842316,0.004069147884562181,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellB_3U__Guide_hardstop_-20_20,steel,fixed,518.362787842316,0.004069147884562181,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellB_3U__Guide_hardstop_360_-225,steel,fixed,518.3627878423176,0.004069147884562193,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellB_3U__Guide_hardstop_360_20,steel,fixed,518.3627878423176,0.004069147884562193,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellB_3U__SPT10x2M_screw_nominal,steel,drive,27426.10386583888,0.21529491534683518,10x2lead;majorblank/root7.4mmloadmodel;threadcontact idealized
+CellB_3U__Screw_end_bearing_-265,steel,fixed,3298.6722862692827,0.02589457744721387,22mmOD8mmbore geometric bearing representation;catalograting not asserted
+CellB_3U__Screw_end_bearing_85,steel,fixed,3298.6722862692827,0.02589457744721387,22mmOD8mmbore geometric bearing representation;catalograting not asserted
+CellB_3U__Brake_bearing_coupler,steel,drive,502.65482457436667,0.0039458403729087784,Nominal8mmshaftadaptergap;brake5/6mmborecustomadapterfuture
+CellB_3U__SB3700_nut_nominal,polymer,moving,3972.4425941012178,0.005601144057682717,19.1mmODx19.1mmL;10x2 thread idealized;no thread manufacturing geometry
+CellB_3U__Driven_pusher_frame,aluminium,moving,81732.2303192523,0.2206770218619812,One connectedrear pusher;rail-contactpads;idealprismaticguide;push-onlycoasttransfer
+CellB_3U__Restraint_pin_-92,steel,latch,904.7786842338608,0.007102512671235807,6mm nominal;retracted40mm before feed;interlocked
+CellB_3U__Restraint_pin_390,steel,latch,904.778684233862,0.007102512671235816,6mm nominal;retracted40mm before feed;interlocked
+CellB_3U__Motor_3242BX4_gear32GPT9_envelope,catalog_envelope,catalog,63455.14505426807,0.0,3242body44.2mm+32GPT9body34.7mm;shaft/flanges simplified
+CellB_3U__Brake_BXW01_envelope,catalog_envelope,catalog,43982.29715025711,0.0,0.12Nmstatic/0.2kgsource;40ODx35bboxfrom37ODx31.5source;adapter andspacequalification unverified
+CellB_3U__Controller_MC5005S_envelope,catalog_envelope,catalog,58500.0,0.0,"Source0.230kg;boundingboxstudy,thermal/connectorlayout notrated"
+CellB_3U__Limit_sensor_-204,catalog_envelope,sensor,511.9999999999999,0.0,Presence/home/end sensing functional requirement;not source-rated
+CellB_3U__Limit_sensor_-4,catalog_envelope,sensor,511.9999999999999,0.0,Presence/home/end sensing functional requirement;not source-rated
+CellB_3U__Fixed_cassette_gantry,aluminium,fixed,1598193.8497510997,4.315123394327969,Fused structural fabrication;no overlapping material at beam joints;source defines component dimensions
+CellC_1U__Payload_1U,payload,payload,1135000.0,0.0,Public envelope surrogate;1U1.33kg/3U4kg nominal;6kg upper study
+CellC_1U__Storage_gate,aluminium,gate,35250.0,0.095175,"Vertical126mm downward travel through dedicated bridge slot, interlocked with receiver and fork position"
+CellC_1U__Guide_shaft_-20,steel,fixed,16587.609210954146,0.13021273230599004,
+CellC_1U__Guide_bush_-20,polymer,moving,4485.9586898772,0.006325201752726853,8.1mm bore;16mmOD;30mm length; plain-bush material assumption
+CellC_1U__Guide_shaft_360,steel,fixed,16587.609210954055,0.13021273230598931,
+CellC_1U__Guide_bush_360,polymer,moving,4485.958689877206,0.006325201752726861,8.1mm bore;16mmOD;30mm length; plain-bush material assumption
+CellC_1U__Guide_hardstop_-20_-225,steel,fixed,518.3627878423162,0.004069147884562182,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellC_1U__Guide_hardstop_-20_20,steel,fixed,518.3627878423162,0.004069147884562182,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellC_1U__Guide_hardstop_360_-225,steel,fixed,518.3627878423176,0.004069147884562193,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellC_1U__Guide_hardstop_360_20,steel,fixed,518.3627878423176,0.004069147884562193,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellC_1U__SPT10x2M_screw_nominal,steel,drive,27426.10386583888,0.21529491534683518,10x2lead;majorblank/root7.4mmloadmodel;threadcontact idealized
+CellC_1U__Screw_end_bearing_-265,steel,fixed,3298.6722862692827,0.02589457744721387,22mmOD8mmbore geometric bearing representation;catalograting not asserted
+CellC_1U__Screw_end_bearing_85,steel,fixed,3298.6722862692827,0.02589457744721387,22mmOD8mmbore geometric bearing representation;catalograting not asserted
+CellC_1U__Brake_bearing_coupler,steel,drive,502.65482457436804,0.003945840372908789,Nominal8mmshaftadaptergap;brake5/6mmborecustomadapterfuture
+CellC_1U__SB3700_nut_nominal,polymer,moving,3972.4425941012155,0.005601144057682714,19.1mmODx19.1mmL;10x2 thread idealized;no thread manufacturing geometry
+CellC_1U__Driven_pusher_frame,aluminium,moving,71484.23031925228,0.19300742186198117,One connectedrear pusher;rail-contactpads;idealprismaticguide;push-onlycoasttransfer
+CellC_1U__Restraint_pin_-92,steel,latch,904.7786842338631,0.007102512671235825,6mm nominal;retracted40mm before feed;interlocked
+CellC_1U__Restraint_pin_390,steel,latch,904.7786842338598,0.0071025126712358,6mm nominal;retracted40mm before feed;interlocked
+CellC_1U__Motor_3242BX4_gear32GPT9_envelope,catalog_envelope,catalog,63455.14505426803,0.0,3242body44.2mm+32GPT9body34.7mm;shaft/flanges simplified
+CellC_1U__Brake_BXW01_envelope,catalog_envelope,catalog,43982.29715025711,0.0,0.12Nmstatic/0.2kgsource;40ODx35bboxfrom37ODx31.5source;adapter andspacequalification unverified
+CellC_1U__Controller_MC5005S_envelope,catalog_envelope,catalog,58500.0,0.0,"Source0.230kg;boundingboxstudy,thermal/connectorlayout notrated"
+CellC_1U__Limit_sensor_-204,catalog_envelope,sensor,511.9999999999999,0.0,Presence/home/end sensing functional requirement;not source-rated
+CellC_1U__Limit_sensor_-4,catalog_envelope,sensor,511.9999999999999,0.0,Presence/home/end sensing functional requirement;not source-rated
+CellC_1U__Fixed_cassette_gantry,aluminium,fixed,1631496.2497511057,4.4050398743279855,Fused structural fabrication;no overlapping material at beam joints;source defines component dimensions
+CellD_3U__Payload_3U,payload,payload,3405000.0,0.0,Public envelope surrogate;1U1.33kg/3U4kg nominal;6kg upper study
+CellD_3U__Storage_gate,aluminium,gate,103350.0,0.279045,"Vertical126mm downward travel through dedicated bridge slot, interlocked with receiver and fork position"
+CellD_3U__Guide_shaft_-20,steel,fixed,16587.609210954146,0.13021273230599004,
+CellD_3U__Guide_bush_-20,polymer,moving,4485.958689877202,0.006325201752726856,8.1mm bore;16mmOD;30mm length; plain-bush material assumption
+CellD_3U__Guide_shaft_360,steel,fixed,16587.60921095408,0.1302127323059895,
+CellD_3U__Guide_bush_360,polymer,moving,4485.958689877193,0.006325201752726843,8.1mm bore;16mmOD;30mm length; plain-bush material assumption
+CellD_3U__Guide_hardstop_-20_-225,steel,fixed,518.3627878423162,0.004069147884562182,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellD_3U__Guide_hardstop_-20_20,steel,fixed,518.3627878423162,0.004069147884562182,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellD_3U__Guide_hardstop_360_-225,steel,fixed,518.3627878423163,0.004069147884562183,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellD_3U__Guide_hardstop_360_20,steel,fixed,518.3627878423163,0.004069147884562183,Positiveendcollar:5mmnominalmarginbeyondcommandedbearingpositions
+CellD_3U__SPT10x2M_screw_nominal,steel,drive,27426.10386583888,0.21529491534683518,10x2lead;majorblank/root7.4mmloadmodel;threadcontact idealized
+CellD_3U__Screw_end_bearing_-265,steel,fixed,3298.6722862692827,0.02589457744721387,22mmOD8mmbore geometric bearing representation;catalograting not asserted
+CellD_3U__Screw_end_bearing_85,steel,fixed,3298.6722862692827,0.02589457744721387,22mmOD8mmbore geometric bearing representation;catalograting not asserted
+CellD_3U__Brake_bearing_coupler,steel,drive,502.65482457436804,0.003945840372908789,Nominal8mmshaftadaptergap;brake5/6mmborecustomadapterfuture
+CellD_3U__SB3700_nut_nominal,polymer,moving,3972.442594101218,0.005601144057682718,19.1mmODx19.1mmL;10x2 thread idealized;no thread manufacturing geometry
+CellD_3U__Driven_pusher_frame,aluminium,moving,81732.2303192523,0.2206770218619812,One connectedrear pusher;rail-contactpads;idealprismaticguide;push-onlycoasttransfer
+CellD_3U__Restraint_pin_-92,steel,latch,904.7786842338636,0.007102512671235829,6mm nominal;retracted40mm before feed;interlocked
+CellD_3U__Restraint_pin_390,steel,latch,904.7786842338603,0.007102512671235803,6mm nominal;retracted40mm before feed;interlocked
+CellD_3U__Motor_3242BX4_gear32GPT9_envelope,catalog_envelope,catalog,63455.14505426803,0.0,3242body44.2mm+32GPT9body34.7mm;shaft/flanges simplified
+CellD_3U__Brake_BXW01_envelope,catalog_envelope,catalog,43982.29715025711,0.0,0.12Nmstatic/0.2kgsource;40ODx35bboxfrom37ODx31.5source;adapter andspacequalification unverified
+CellD_3U__Controller_MC5005S_envelope,catalog_envelope,catalog,58500.0,0.0,"Source0.230kg;boundingboxstudy,thermal/connectorlayout notrated"
+CellD_3U__Limit_sensor_-204,catalog_envelope,sensor,511.9999999999999,0.0,Presence/home/end sensing functional requirement;not source-rated
+CellD_3U__Limit_sensor_-4,catalog_envelope,sensor,511.9999999999999,0.0,Presence/home/end sensing functional requirement;not source-rated
+CellD_3U__Fixed_cassette_gantry,aluminium,fixed,1598193.8497511048,4.315123394327983,Fused structural fabrication;no overlapping material at beam joints;source defines component dimensions
+Receiver__Floor_carriage,aluminium,receiver,306382.77460556384,0.8272334914350223,Supported linear-profile nominal channels;0.1mm sidegap;not a source-rated bearing
+Receiver__Floor_corner_rail_0,polymer,receiver,1600.0,0.002256,
+Receiver__Floor_corner_rail_235,polymer,receiver,1600.0,0.002256,
+Receiver__Floor_corner_rail_324,polymer,receiver,1600.0,0.002256,
+Receiver__aft_corner_stop,aluminium,receiver,20700.000000000015,0.05589000000000004,Leadingstopdown134mmbeforeLSMlaunch;topcap2mmnominalclearance
+Receiver__leading_corner_stop,aluminium,receiver_gate,20700.000000000004,0.05589000000000001,Leadingstopdown134mmbeforeLSMlaunch;topcap2mmnominalclearance
+Receiver__1U_retractable_aft_stop,aluminium,receiver_gate,12014.000000000004,0.03243780000000001,134mmZretraction;activeonly1U;captivenotlaunched
+Receiver__Y_capture_tab_5_-1,steel,receiver_gate,48.0,0.00037679999999999994,12mmlift;Z24..30closedwithinassumed8.5mmcornerrailzone;closedbeforefeedforkrelease;belowfloorwhenopen
+Receiver__Y_capture_tab_5_100,steel,receiver_gate,48.0,0.00037679999999999994,12mmlift;Z24..30closedwithinassumed8.5mmcornerrailzone;closedbeforefeedforkrelease;belowfloorwhenopen
+Receiver__Y_capture_tab_235_-1,steel,receiver_gate,48.0,0.00037679999999999994,12mmlift;Z24..30closedwithinassumed8.5mmcornerrailzone;closedbeforefeedforkrelease;belowfloorwhenopen
+Receiver__Y_capture_tab_235_100,steel,receiver_gate,48.0,0.00037679999999999994,12mmlift;Z24..30closedwithinassumed8.5mmcornerrailzone;closedbeforefeedforkrelease;belowfloorwhenopen
+Receiver__Y_capture_tab_320_-1,steel,receiver_gate,48.0,0.00037679999999999994,12mmlift;Z24..30closedwithinassumed8.5mmcornerrailzone;closedbeforefeedforkrelease;belowfloorwhenopen
+Receiver__Y_capture_tab_320_100,steel,receiver_gate,48.0,0.00037679999999999994,12mmlift;Z24..30closedwithinassumed8.5mmcornerrailzone;closedbeforefeedforkrelease;belowfloorwhenopen
+Receiver__Index_clutch_jaw_south,steel,receiver_gate,240.0,0.0018839999999999998,"IndexbeltclutchopensbeforeLSM;idealtransmissionassumption,source-ratedclutchfuture"
+Receiver__Index_clutch_jaw_north,steel,receiver_gate,240.0,0.0018839999999999998,"IndexbeltclutchopensbeforeLSM;idealtransmissionassumption,source-ratedclutchfuture"
+Common__Profile_rail_-25,steel,rail,96000.0,0.7535999999999999,Geometric10x6profileblank;source/stiffnessstudy separate
+Common__Rail_support_-25,aluminium,fixed,127999.99999999999,0.34559999999999996,
+Common__Profile_rail_125,steel,rail,96000.0,0.7535999999999999,Geometric10x6profileblank;source/stiffnessstudy separate
+Common__Rail_support_125,aluminium,fixed,127999.99999999999,0.34559999999999996,
+Common__Rail_standoff_-25_-60,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_-25_110,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_-25_360,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_-25_610,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_-25_860,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_-25_1110,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_-25_1360,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_-25_1440,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_125_-60,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_125_110,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_125_360,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_125_610,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_125_860,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_125_1110,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_125_1360,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Rail_standoff_125_1440,aluminium,rail,15679.999999999996,0.04233599999999999,250mmapproxsupportspacing;genericweldedfixture/studyinterfaceatZ-140
+Common__Receiver_drive_belt_-68,polymer,rail_drive,18480.0,0.0260568,Toothed-beltpitch/tension/loadratingundetermined;nominalcloseddrivepath
+Common__Receiver_drive_belt_-42,polymer,rail_drive,18480.0,0.0260568,Toothed-beltpitch/tension/loadratingundetermined;nominalcloseddrivepath
+Common__Receiver_pulley_-120,aluminium,rail_drive,2714.3360527015807,0.007328707342294268,
+Common__Receiver_pulley_1420,aluminium,rail_drive,2714.3360527015784,0.007328707342294262,
+Common__Receiver_motor32GPT59_envelope,catalog_envelope,catalog,70210.82589654755,0.0,3242BX4+32GPT59.4:1sourceoption;adapter/harnessnotmodeled
+Common__Receiver_BXW05_brake_envelope,catalog_envelope,catalog,201061.92982974675,0.0,"2Nm,.8kg,13Wsource;80ODx40bboxconservative;12mmboreadapterrequired"
+Common__Receiver_brake_pulley_shaft,steel,rail_drive,1017.8760197630927,0.007990326755140277,12mmnominaladapterstub;key/couplingdesignfuture
+Common__Dock_socket_0_-4,aluminium,rail,1658.0929459900208,0.004476850954173056,6.2mmboregeometricdockinterface
+Common__Station_dock_pin_0_-4,steel,docking,904.7786842338606,0.007102512671235806,Station-ownedpinretractsbelow-24mmbeforeindex/LSM;closedtop12mmbelowbridgefloor14mm
+Common__Dock_socket_0_344.5,aluminium,rail,1658.0929459900194,0.004476850954173052,6.2mmboregeometricdockinterface
+Common__Station_dock_pin_0_344.5,steel,docking,904.7786842338598,0.0071025126712358,Station-ownedpinretractsbelow-24mmbeforeindex/LSM;closedtop12mmbelowbridgefloor14mm
+Common__Dock_socket_250_-4,aluminium,rail,1658.0929459900212,0.0044768509541730575,6.2mmboregeometricdockinterface
+Common__Station_dock_pin_250_-4,steel,docking,904.7786842338605,0.007102512671235805,Station-ownedpinretractsbelow-24mmbeforeindex/LSM;closedtop12mmbelowbridgefloor14mm
+Common__Dock_socket_250_344.5,aluminium,rail,1658.0929459900187,0.004476850954173051,6.2mmboregeometricdockinterface
+Common__Station_dock_pin_250_344.5,steel,docking,904.7786842338631,0.007102512671235825,Station-ownedpinretractsbelow-24mmbeforeindex/LSM;closedtop12mmbelowbridgefloor14mm
+Common__Dock_socket_650_-4,aluminium,rail,1658.092945990019,0.0044768509541730514,6.2mmboregeometricdockinterface
+Common__Station_dock_pin_650_-4,steel,docking,904.7786842338631,0.007102512671235825,Station-ownedpinretractsbelow-24mmbeforeindex/LSM;closedtop12mmbelowbridgefloor14mm
+Common__Dock_socket_650_344.5,aluminium,rail,1658.092945990019,0.0044768509541730514,6.2mmboregeometricdockinterface
+Common__Station_dock_pin_650_344.5,steel,docking,904.7786842338631,0.007102512671235825,Station-ownedpinretractsbelow-24mmbeforeindex/LSM;closedtop12mmbelowbridgefloor14mm
+Common__Dock_socket_900_-4,aluminium,rail,1658.092945990019,0.0044768509541730514,6.2mmboregeometricdockinterface
+Common__Station_dock_pin_900_-4,steel,docking,904.7786842338631,0.007102512671235825,Station-ownedpinretractsbelow-24mmbeforeindex/LSM;closedtop12mmbelowbridgefloor14mm
+Common__Dock_socket_900_344.5,aluminium,rail,1658.092945990026,0.0044768509541730705,6.2mmboregeometricdockinterface
+Common__Station_dock_pin_900_344.5,steel,docking,904.7786842338619,0.007102512671235815,Station-ownedpinretractsbelow-24mmbeforeindex/LSM;closedtop12mmbelowbridgefloor14mm

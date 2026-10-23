@@ -1,0 +1,77 @@
+{
+  "design_revision": "FM08-R3",
+  "study_revision": "FDR10-R0",
+  "selected": "lead_screw",
+  "runner_up": "rack_pawl",
+  "ranking": [
+    [
+      "lead_screw",
+      7.3
+    ],
+    [
+      "rack_pawl",
+      7.1
+    ],
+    [
+      "spring_dual_gate",
+      6.9
+    ],
+    [
+      "belt_shuttle",
+      6.7
+    ],
+    [
+      "indexed_drum",
+      6.4
+    ],
+    [
+      "telescopic",
+      6.05
+    ],
+    [
+      "pantograph",
+      5.5
+    ]
+  ],
+  "nominal_drive_screens_pass": true,
+  "adverse_screens": [
+    {
+      "kind": "local_feed",
+      "resistance_N": 100.0,
+      "criteria": {
+        "motor_continuous_torque": true,
+        "motor_torque_speed_line": true,
+        "gear_input_speed": true,
+        "gear_continuous_torque": true,
+        "gear_output_power": true,
+        "controller_continuous_current": true,
+        "nut_load_speed_screen": true
+      },
+      "all_declared_sizing_screens_pass": true
+    },
+    {
+      "kind": "common_receiver",
+      "resistance_N": 100.0,
+      "criteria": {
+        "motor_continuous_torque": true,
+        "motor_torque_speed_line": true,
+        "gear_input_speed": true,
+        "gear_continuous_torque": true,
+        "gear_output_power": true,
+        "controller_continuous_current": true,
+        "nut_load_speed_screen": true
+      },
+      "all_declared_sizing_screens_pass": true
+    }
+  ],
+  "logic_assertion_cases": 32821,
+  "expanded_logic_assertion_cases": 98325,
+  "expanded_logic_pass": true,
+  "expanded_drive_cases_pass": true,
+  "logic_pass": true,
+  "geometry_signoff": "SeparateCAD/STEPpackage;mustbefinallylinkedbeforeacceptance",
+  "contact_convergence": "OriginalFM06-R1Chronorigidcontactmodelremainsunconvergedandisnotusedforposeprecisionorpeakcontactloadacceptance",
+  "parameters_sha256": "7ced07573d926508f54978bb0dd9fa416532a56797338811ae60d26808fff3f6",
+  "source_sha256": "bf7b84c707b1562023d00d4b2dded9e9943fac9623aa3c391c24eec0e7aea356",
+  "catalog_capture_sha256": "401d4da4d3b3a0395a42f3b4f140f862c05f9ccaa3489d3863b02f86fb73423d"
+}

@@ -1,0 +1,108 @@
+{
+  "screw": {
+    "end_condition": "Both ends laterallysupported,pinned-pinnedEulerstudy K1;not a detailed bearingalignment model",
+    "euler_buckling_N": 2371.8675309970367,
+    "design_axial_N": 100.00666666666666,
+    "buckling_capacity_to_load": 23.71709417035901,
+    "axial_stress_MPa": 2.3252820076177465,
+    "axial_shortening_mm": 0.004069243513331056
+  },
+  "restraint": {
+    "basis": "Two6mmpins,twoshearplanes each,four5mmlugs;50MPaassumedallowables;payloadcontact/hostfastenersnotqualifiedbythisscreen",
+    "provisional_load_cases": [
+      {
+        "g": 5.0,
+        "payload_force_N": 294.1995,
+        "pin_static_capacity_N_assumed": 5654.8667764616275,
+        "pin_capacity_to_load": 19.221197780627186,
+        "lug_bearing_capacity_N_assumed": 6000.0,
+        "lug_capacity_to_load": 20.394324259558566,
+        "payload_and_carrier_mass_kg_assumed": 7.5,
+        "payload_and_carrier_force_N": 367.749375,
+        "pin_capacity_to_payload_and_carrier_load": 15.376958224501749,
+        "lug_capacity_to_payload_and_carrier_load": 16.315459407646852
+      },
+      {
+        "g": 10.0,
+        "payload_force_N": 588.399,
+        "pin_static_capacity_N_assumed": 5654.8667764616275,
+        "pin_capacity_to_load": 9.610598890313593,
+        "lug_bearing_capacity_N_assumed": 6000.0,
+        "lug_capacity_to_load": 10.197162129779283,
+        "payload_and_carrier_mass_kg_assumed": 7.5,
+        "payload_and_carrier_force_N": 735.49875,
+        "pin_capacity_to_payload_and_carrier_load": 7.688479112250874,
+        "lug_capacity_to_payload_and_carrier_load": 8.157729703823426
+      },
+      {
+        "g": 25.0,
+        "payload_force_N": 1470.9975,
+        "pin_static_capacity_N_assumed": 5654.8667764616275,
+        "pin_capacity_to_load": 3.844239556125437,
+        "lug_bearing_capacity_N_assumed": 6000.0,
+        "lug_capacity_to_load": 4.078864851911713,
+        "payload_and_carrier_mass_kg_assumed": 7.5,
+        "payload_and_carrier_force_N": 1838.7468749999998,
+        "pin_capacity_to_payload_and_carrier_load": 3.0753916449003498,
+        "lug_capacity_to_payload_and_carrier_load": 3.2630918815293706
+      }
+    ]
+  },
+  "guide_and_clearance": {
+    "basis": "Simplysupportedsolidsteelroundguides;centralpointload shared equally. Conservativegeometryscreen;actualsupport/bearingstiffnessnotidentified",
+    "cases": [
+      {
+        "total_side_load_N_assumed": 10.0,
+        "simply_supported_midspan_deflection_mm": 0.09309165348133858,
+        "bending_stress_MPa": 8.206426753175853,
+        "yaw_consumption_mm": 0.29714260686814326,
+        "differential_thermal_consumption_mm": 0.132,
+        "stack_total_mm": 0.7722342603494818,
+        "nominal_clearance_mm": 2.0,
+        "remaining_clearance_mm": 1.2277657396505182,
+        "screen_pass": true
+      },
+      {
+        "total_side_load_N_assumed": 50.0,
+        "simply_supported_midspan_deflection_mm": 0.4654582674066929,
+        "bending_stress_MPa": 41.03213376587926,
+        "yaw_consumption_mm": 0.29714260686814326,
+        "differential_thermal_consumption_mm": 0.132,
+        "stack_total_mm": 1.1446008742748361,
+        "nominal_clearance_mm": 2.0,
+        "remaining_clearance_mm": 0.8553991257251639,
+        "screen_pass": true
+      },
+      {
+        "total_side_load_N_assumed": 75.0,
+        "simply_supported_midspan_deflection_mm": 0.6981874011100393,
+        "bending_stress_MPa": 61.548200648818884,
+        "yaw_consumption_mm": 0.29714260686814326,
+        "differential_thermal_consumption_mm": 0.132,
+        "stack_total_mm": 1.3773300079781827,
+        "nominal_clearance_mm": 2.0,
+        "remaining_clearance_mm": 0.6226699920218173,
+        "screen_pass": true
+      }
+    ]
+  },
+  "power_loss": {
+    "maximum_feed_speed_mm_s": 13.333333333333334,
+    "assumed_sensor_stop_latency_s": 0.05,
+    "travel_during_assumed_sensor_latency_mm": 0.6666666666666667,
+    "moving_kinetic_energy_J": 0.0006666666666666668,
+    "containment_strategy": "Normally engaged screw brake retains the rear pusher boundary; a continuous capped channel and receiver far stops contain possible payload drift. Stop and inhibit; supervised recovery only.",
+    "interpretation": "These are prescribed pusher-motion references, not bounds on free-payload impact after a fault. No dynamic arrest distance, peak impact load, settling time or reliability is accepted by this study."
+  },
+  "backdrive": {
+    "self_locking_assumed": false,
+    "reason": "Friction in space is unknown; screw friction is not a safety lock",
+    "ideal_frictionless_torque_at155N_Nm": 0.049338032358487556,
+    "catalog_static_brake_Nm": 0.12,
+    "static_brake_to_frictionless155N_ratio": 2.4322007640695174,
+    "receiver_reference_static_brake_Nm": 2.0,
+    "receiver_100N_static_holding_demand_Nm": 1.2,
+    "receiver_static_capacity_to_100N_load": 1.6666666666666667,
+    "receiver_holding_screen_pass": true
+  }
+}

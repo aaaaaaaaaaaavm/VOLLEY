@@ -1,0 +1,34 @@
+{
+  "source_path": "/workspace/VOLLEY/analysis/results/lunar_visual_design.json",
+  "source_sha256": "1f15f793330e973d057f29fc0c0add26dd074884e3745995e8a273e07411a739",
+  "assumptions": {
+    "mu_moon_km3s2": 4902.800118,
+    "mu_earth_km3s2": 398600.435507,
+    "moon_radius_km": 1737.4,
+    "earth_radius_km": 6378.137,
+    "distance_km": 384400.0,
+    "payload_kg": 4,
+    "host_kg": 300
+  },
+  "staging": [
+    {
+      "apo_km": 100,
+      "capture_kms": 0.8212394078613703,
+      "circularize_kms": 0.0,
+      "period_h": 1.96318325786103
+    },
+    {
+      "apo_km": 1000,
+      "capture_kms": 0.6677692238004842,
+      "circularize_kms": 0.15347018406088608,
+      "period_h": 2.7268952084618583
+    },
+    {
+      "apo_km": 10000,
+      "capture_kms": 0.30664367368506174,
+      "circularize_kms": 0.5145957341763086,
+      "period_h": 13.93832028406682
+    }
+  ],
+  "disposition": "IDEAL_SCREEN_ONLY; lifetime, encounter targeting, finite burns and disposal remain open"
+}

@@ -1,0 +1,24 @@
+FM08_R3_four_cell_stowed exported 154 hits 0
+FM08_R3_four_cell_1U_seated exported 154 hits 0
+FM08_R3_four_cell_3U_seated exported 154 hits 0
+FM08_R3_four_cell_launch exported 154 hits 0
+FM08_R3_four_cell_midtransfer exported 154 hits 0
+motion 1U 0 0
+motion 1U 25 0
+motion 1U 50 0
+motion 1U 75 0
+motion 1U 100 0
+motion 1U 125 0
+motion 1U 150 0
+motion 1U 175 0
+motion 1U 200 0
+motion 3U 0 0
+motion 3U 25 0
+motion 3U 50 0
+motion 3U 75 0
+motion 3U 100 0
+motion 3U 125 0
+motion 3U 150 0
+motion 3U 175 0
+motion 3U 200 0
+complete 223.52868796999974

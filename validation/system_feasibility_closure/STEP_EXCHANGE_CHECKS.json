@@ -1,0 +1,33 @@
+{
+  "study": "CAP-12 separate STEP import check",
+  "software": {
+    "Python": "3.12.14",
+    "CadQuery": "2.7.0",
+    "OCP": "7.8.1.1"
+  },
+  "checks": [
+    {
+      "file": "FM08_R3_twelve_cell_stowed.step",
+      "sha256": "d79b7ae923f5634271496ebedee6fed666697b52a7b185e6b39f32ab96304a52",
+      "valid": true,
+      "solid_count": 398,
+      "expected_solid_count": 398,
+      "imported_volume_mm3": 53931353.94702541,
+      "expected_BOM_volume_mm3": 53931353.94702363,
+      "relative_volume_difference": 3.3017690681638597e-14,
+      "pass_1ppm": true
+    },
+    {
+      "file": "FM08_R3_twelve_cell_far_3U_seated.step",
+      "sha256": "1c8e9f0c80b08068acadf7b220a23da10c9f9412d7fe6d3e1d581567cb66fbde",
+      "valid": true,
+      "solid_count": 398,
+      "expected_solid_count": 398,
+      "imported_volume_mm3": 53931353.94702541,
+      "expected_BOM_volume_mm3": 53931353.94702363,
+      "relative_volume_difference": 3.3017690681638597e-14,
+      "pass_1ppm": true
+    }
+  ],
+  "scope": "SeparateimportandBRepvalidity/serializationcheck;sameOCCkernelfamily,notphysicalvalidationorindependentkernelcertification"
+}
