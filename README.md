@@ -44,6 +44,12 @@ python3 tools/prepublish_gate.py --all
 
 The interlock example needs only Python 3.12; scientific/native examples have their own [pinned dependencies and instructions](validation/acr1/REPRODUCTION.md). Large raw solver supplement availability is recorded explicitly in its asset inventory. Vendor documents are linked to their publishers.
 
+## Extended engineering studies
+
+[Structural modes and motor normal reaction](docs/ACR1_STRUCTURAL_DYNAMICS.md) · [Native release/contact dynamics](docs/ACR1_RELEASE_DYNAMICS.md) · [Thermal interfaces and source derating](docs/ACR1_THERMAL_ENVIRONMENT.md) · [Finite-host lunar campaigns](docs/PROGRAMME_STUDIES_ACR1.md) · [First-test procedures and fixture STEP](docs/ACR1_FIRST_TEST_PACKAGE.md)
+
+These separately identified studies add native solver histories, refinement, resource flowdown and a concrete path to subsequent measurements. Their operating conditions and source identities accompany each result.
+
 ## Engineering lineage
 
 Original Gen5's 12.448 m/s finite-geometry screen, 16.029 m/s periodic model, 126.562 kg represented dry mass and original 11 mm packaging shortfall remain **historical, separately identified evidence**. The FM08 mixed-size lead-screw subsystem and seven-concept ranking explain architecture development; they do not replace the integrated ACR1 twelve-3U geometry.

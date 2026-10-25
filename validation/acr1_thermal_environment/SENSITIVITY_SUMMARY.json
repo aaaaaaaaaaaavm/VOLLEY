@@ -1,0 +1,39 @@
+{
+  "sample_sets": 64,
+  "max_sample_cell_C": 57.488693681052155,
+  "deterministic_hot_cell_C": 70.94093188344016,
+  "rank_associations": [
+    {
+      "parameter": "optical_fraction",
+      "rho": -0.6546703296703296
+    },
+    {
+      "parameter": "host_interface_C",
+      "rho": 0.3344322344322344
+    },
+    {
+      "parameter": "host_mount_conductance_W_K",
+      "rho": 0.32257326007326004
+    },
+    {
+      "parameter": "electronics_mount_conductance_W_K",
+      "rho": -0.2685897435897435
+    },
+    {
+      "parameter": "rolling_sled_track_conductance_W_K",
+      "rho": 0.2573717948717948
+    },
+    {
+      "parameter": "gfrp_k_W_m_K",
+      "rho": 0.25366300366300365
+    },
+    {
+      "parameter": "heat_capacity_scale",
+      "rho": -0.2153388278388278
+    },
+    {
+      "parameter": "payload_pallet_conductance_W_K",
+      "rho": -0.19024725274725274
+    }
+  ]
+}

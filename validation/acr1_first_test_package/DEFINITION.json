@@ -1,0 +1,102 @@
+{
+  "package_id": "VOLLEY-G6-FIRST-TEST-PREP-R1",
+  "revision_date": "2026-10-25",
+  "status": "Pre-test engineering specification; unfunded and unperformed",
+  "engineering_parent": "VOLLEY-G5-ACR1",
+  "article": "C01 shortened one-wavelength magnetic coupon and separate C02/C03 mechanism tests",
+  "experiments_performed": false,
+  "build_or_purchase_authorized": false,
+  "coupon": {
+    "blocks_per_array": 6,
+    "block_pitch_mm": 8,
+    "block_depth_mm": 90,
+    "block_thickness_mm": 8,
+    "inner_gap_mm": 12,
+    "polarization_reference_T": 1.32,
+    "polarization_increment_deg": 60,
+    "active_bar_width_mm": 7,
+    "active_bar_thickness_mm": 6,
+    "active_bar_depth_mm": 80,
+    "bar_depth_reason": "Ends at Y+/-40 to clear magnet retaining lips at |Y|43..57; leads traverse the central lip gap.",
+    "return_loop_offset_x_mm": 100,
+    "return_loop_depth_mm": 180,
+    "return_wire_area_min_mm2": 1,
+    "gap_tolerance_mm": 0.1,
+    "probe_position_bound_mm": 0.1,
+    "polarization_sensitivity_fraction": 0.03
+  },
+  "fixture": {
+    "plate_mm": [
+      160,
+      150,
+      12
+    ],
+    "plate_inner_face_abs_z_mm": 14,
+    "corner_axes_x_mm": [
+      -65,
+      65
+    ],
+    "corner_axes_y_mm": [
+      -60,
+      60
+    ],
+    "corner_hole_diameter_mm": 8.5,
+    "corner_spacer_mm": [
+      12,
+      8.5,
+      28
+    ],
+    "keeper_lip_mm": [
+      56,
+      14,
+      3
+    ],
+    "keeper_lip_y_abs_range_mm": [
+      43,
+      57
+    ],
+    "keeper_lip_z_abs_range_mm": [
+      3,
+      6
+    ],
+    "keeper_bolt_axes_y_abs_mm": 52,
+    "keeper_spacer_mm": [
+      6,
+      3.2,
+      8
+    ],
+    "plate_E_assumed_Pa": 70000000000,
+    "load_sensitivity_multiplier": 2,
+    "manufacturing_release": false
+  },
+  "static_electrical_limits": {
+    "compliance_max_V": 5,
+    "current_max_A": 4,
+    "pulse_max_s": 0.05,
+    "stored_output_energy_max_J": 0.5,
+    "total_accounted_energy_ceiling_J": 2,
+    "note": "Max supply contribution 1 J plus <=0.5 J stored; reserve <=0.5 J for unaccounted measurement/control allowance. Magnet assembly forces are a separate mechanical hazard. No full ACR1 bank."
+  },
+  "ground_release": {
+    "payload_mass_reference_kg": 4,
+    "carrier_mass_reference_kg": 13.127805767068676,
+    "entry_speed_reference_m_s": 0.2,
+    "entry_speed_band_m_s": [
+      0.195,
+      0.205
+    ],
+    "payload_support_drag_max_N": 0.1,
+    "support_force_uncertainty_expanded_N": 0.02,
+    "allocated_external_brake_force_N": [
+      1.5,
+      2
+    ],
+    "carrier_stop_allocation_m": 0.21,
+    "post_release_record_duration_s": 6,
+    "mechanical_energy_ceiling_J": 0.5,
+    "limits_are": "Allocated first-test rig limits; not spacecraft or flight acceptance limits.",
+    "gravity_boundary": "Horizontal bench with measured low-drag support; out-of-plane motion constrained. Not a six-DOF microgravity demonstration.",
+    "required_relative_aft_coordinate_m": 0.5245,
+    "initial_payload_aft_relative_m": 0.064
+  }
+}

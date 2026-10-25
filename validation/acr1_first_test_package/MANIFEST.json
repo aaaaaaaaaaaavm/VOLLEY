@@ -1,0 +1,29 @@
+{
+  "package_id": "VOLLEY-G6-FIRST-TEST-PREP-R1",
+  "scope": "Exact pre-test packet, including provisional STEP/drawing and printable procedure; no scratch files or fabricated measurements",
+  "files": {
+    "ACCEPTANCE_R1.json": "602d880052e1629caeb53d248392af9cb4191afabc0367a7adfb51005860e4ba",
+    "BOM.csv": "504d4f5203fb7f67818a58775cc6390d86f99697ff672604c33bd7b99976fb48",
+    "DEFINITION.json": "5fcb4a1d96ed814ccb3f2c0dc264f09d0901695cdca2809eb72341ce6eded34e",
+    "MATERIAL_FINDINGS.md": "4fcca4902f27846ebf32ce82b96fb93f5f8ddc77c0ab6174b0f623fb63c060f9",
+    "PLANNED_MATRIX.csv": "2a13d447bc6632a6349e6985fb88125edf616eafa84a0fc466190a12c21bc829",
+    "PREDICTIONS.json": "b86fb28da902c53a2e31a2c65d72ed1f1d24311894fd3b2770f3a80daaec104d",
+    "README.md": "85bfb51c30a26ba25c22f91d9bf63652d6b15f0f034f5d4088be2568dd3eb3a2",
+    "SOURCE_IDENTITIES.json": "f2a768b9b703858362621b42fab1c5b3a925500485f6ff5988611d6f0e1f30d6",
+    "SPEC_LOCK.json": "7f582063ff6d00f4010ab9e1d4f45a364197330bdfc89b96db278c29d2f6da5e",
+    "TEST_PROCEDURE.md": "7a474638353cfb9652309b82dbc60799b3032c148cd7dcadb20f15c10a663fda",
+    "TEST_PROCEDURE.pdf": "9f6dde2c355c4576ea604f0def98a5d43f6add13909f8afb909a68def2c74343",
+    "build_fixture.py": "f67ad38d7d8e9aa3f46e8fce9acf3dc30c544a85165443aa74398c6ccb45d67d",
+    "check_package.py": "fffb4db2200fbb2cc30e2a9b9a1ec4b83b42a1fecde0ecac548887ca03c2cfd5",
+    "geometry/C01_coupon_fixture.step": "89cccb5258eefcf631cc2d034978b8de39396179e93a76574e530b4fee982471",
+    "geometry/C01_fixture_drawing.svg": "40d0cf683e4574e23df337094a62aafb56d2346eb13ffe6012f4488be401b56b",
+    "geometry/GEOMETRY_CHECK.json": "6cf82f517dbf5fedf17610c4302db25934cd475acacd6d0e9a44e5b554e20798",
+    "geometry/NEUTRAL_READBACK.json": "f9e51ab4ff675a30220a4262c09c8ea4a2de0a98d0c685f5a5ef00ec212d7ad7",
+    "predict.py": "eff02fa7485d6f504f5c37dca9953ff7412229167765c0011d9fa3ff2766eee1",
+    "requirements.txt": "576daa9be2630f8172078efb7cb56450abf4fa2c64ac5da6b6a401d978338c3c",
+    "templates/inspection.csv": "1ee2ce626933779821fb76d10331adf652e15915e356b8c8fd1cd4fd09a4735d",
+    "templates/raw_timeseries.csv": "dd3a11d6b2d58a6e554a455543f76d94f241c71a12a9f109d8f601de4eb6cf2d",
+    "templates/run_record.json": "2cc3aacd858667fc716601d71eb8d726edff18f1e04676b749a03a5b68f7d9bf"
+  },
+  "generated_receipt_excluded_from_identity_cycle": "CHECK_RESULT.json"
+}

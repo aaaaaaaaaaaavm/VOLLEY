@@ -19,8 +19,8 @@
       "sha256": "b0ad15366a1ba8e4c2c418d2c3d41bb7d68cf066c76d1317f8fc8b6203159d5a"
     },
     "CAMPAIGN_REPRODUCTION_CHECK.json": {
-      "bytes": 520,
-      "sha256": "3790f3fe5901d76ed650f981351e4278a18008bda60bcfc65942d0044b1cecdd"
+      "bytes": 1310,
+      "sha256": "43df92ad0958bba621cf8dff2a466d9891d3e48cf58f778c8b659502c232893d"
     },
     "CAMPAIGN_RESULTS.json": {
       "bytes": 547117,
@@ -1183,12 +1183,12 @@
       "sha256": "143e2a2384eaf7192dca0f95698dc0c6f4f83f88374d4541b6b0bafcd2ade95f"
     },
     "reproduce_and_compare.py": {
-      "bytes": 2300,
-      "sha256": "b83fb032bb86cd642970638f82178261c3bc827e1de5609b5ebadc878fe6835f"
+      "bytes": 5461,
+      "sha256": "75bc97274becce9b2064a3eaa6c61de9ffb0539ff20fdf8c4b957c686064f6ef"
     },
     "reproduce_campaign.py": {
-      "bytes": 2622,
-      "sha256": "a8d1d450ba9fc3891ce67983cd8a012fa2bc324b6c782503c15bf8f4bcca321d"
+      "bytes": 3093,
+      "sha256": "1e28c29e1bfc64450385e182e9778eb553aa3c87d5630bb31e6ead4c90e65d6f"
     },
     "requirements-python.txt": {
       "bytes": 46,
@@ -1201,6 +1201,18 @@
     "study_inputs.json": {
       "bytes": 2380,
       "sha256": "abf144927395a11765f8f0a16d130ee0e100fa02f21be78f3dd216df9eabc200"
+    },
+    "REPRODUCTION_COMPARISON_FIXTURES.json": {
+      "bytes": 2466,
+      "sha256": "792958c9061b5d02dc45af4484247909c7cf77cae02cf570bb9b3725b267108d"
+    },
+    "check_reproduction_comparison.py": {
+      "bytes": 1308,
+      "sha256": "b8e4c411251ac4bae67a2079c8a3619e366c4c662831669b069ec02274b75d4e"
+    },
+    "REPRODUCTION_COMPARISON_CHECK.json": {
+      "bytes": 5461,
+      "sha256": "c2b567d0da5aeeceb17e13043ad6dbc394f870ba7301682d26ac53dea1ec3a11"
     }
   }
 }

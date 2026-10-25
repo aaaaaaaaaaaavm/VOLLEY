@@ -1,0 +1,170 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "source_sha256": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155",
+  "instrumented_sha256": "817a4cadd27abcc11a25d83019bd5dc009c1bb7faab30c86d6ec5f22ce87ae2d",
+  "instrumentation_change": {
+    "before": "if trace and n%100==0:records.append([t,x,v,current,vc,terminal,ibank,phase])",
+    "after": "if trace:records.append([t,x,v,current,vc,terminal,ibank,0 if phase==\"ACCEL\" else 1,force,1 if attached else 0])"
+  },
+  "algorithm_changed": false,
+  "dt_s": 5e-06,
+  "inputs_sha256": {
+    "home": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+    "force": "546cf2f427f356fc043f7d5cfd3f6af9b4ab5d4ab84b582e1e7c30baf8fd89ec",
+    "brake": "d143d2e7efa0583c7c2ddf73b47479e192891aa2ffbb7d5976747189bda1cd1f",
+    "resistance": "208406e54c88d59a1ff2b177bf9a7babe1010aefeaa91abbade592d7023ac7fc"
+  },
+  "cases": [
+    {
+      "target_m_s": 3,
+      "adverse": false,
+      "inductance_H": 2e-05,
+      "dt_s": 5e-06,
+      "status": "STOPPED",
+      "moving_sled_kg": 13.127805767068676,
+      "reference_rest_host_kg": 687.4289139333248,
+      "release": {
+        "time_s": 0.8669650000014459,
+        "relative_speed_m_s": 2.99984553215141,
+        "position_m": 1.30009088918609,
+        "payload_inertial_delta_v_m_s": 2.9269191513942334,
+        "host_recoil_before_arrest_m_s": -0.07292638075717643
+      },
+      "stop_position_m": 1.5072886374067413,
+      "electrical_brake_command": {
+        "time_s": 0.8669350000014457,
+        "position_m": 1.300000893951737,
+        "relative_speed_m_s": 2.9998239479811866
+      },
+      "peak_payload_normal_reaction_N": 13.509861812784726,
+      "mechanical_friction_dissipation_J": 7.536443187034324,
+      "stop_velocity_m_s": 0.004999253573741257,
+      "time_s": 1.0477800000026305,
+      "cap_draw_J": 379.681857329831,
+      "cap_end_V": 85.69400098988525,
+      "field_energy_end_J": 4.2851908397177365e-05,
+      "diagnostic_time_limit_s": 2.006666666666667,
+      "energy_ledger": {
+        "mechanical_J": 24.76814471673165,
+        "copper_J": 136.06049699483353,
+        "inverter_J": 161.42810401787187,
+        "bank_J": 5.038417294064133,
+        "auxiliary_J": 52.389000000159136
+      },
+      "energy_residual_J": -0.00234854573772517,
+      "peak_phase_current_A": 248.7167698413967,
+      "maximum_cell_terminal_or_internal_V": 2.725424466684853,
+      "actual_modulation_peak": 0.37809439971752734,
+      "nominal_modulation_command_fraction": 0.95,
+      "integral_phase_peak_current_sq_A2s": 10716.678260062617,
+      "conservative_phase_current_sq_with_ripple_A2s": 12944.01993390275,
+      "peak_device_current_A": 32.75466203235306,
+      "peak_bank_current_A": 22.22758749724265,
+      "allocated_peak_Vds_V": 124.55867518749255,
+      "checks": {
+        "released": true,
+        "stopped_inside_210mm": true,
+        "release_speed": true,
+        "cam_open_before_release": true,
+        "phase_current_limit": true,
+        "hot_device_current_with25pct_imbalance": true,
+        "allocated_switch_voltage": true,
+        "cell_charge_voltage": true,
+        "physical_modulation_limit": true,
+        "energy_balance": true
+      },
+      "all_declared_checks_pass": true,
+      "dense_trace_columns": [
+        "time_s",
+        "relative_x_m",
+        "relative_v_m_s",
+        "phase_current_A",
+        "internal_V",
+        "terminal_V",
+        "bank_A",
+        "brake_phase",
+        "net_force_N",
+        "attached_before_event"
+      ],
+      "dense_trace_rows": 209556,
+      "wall_s": 2.977802719000465,
+      "case": "nominal"
+    },
+    {
+      "target_m_s": 3,
+      "adverse": true,
+      "inductance_H": 2e-05,
+      "dt_s": 5e-06,
+      "status": "STOPPED",
+      "moving_sled_kg": 13.127805767068676,
+      "reference_rest_host_kg": 687.4289139333248,
+      "release": {
+        "time_s": 0.9103400000017301,
+        "relative_speed_m_s": 2.9994220369961186,
+        "position_m": 1.3001935862587621,
+        "payload_inertial_delta_v_m_s": 2.9265059514253484,
+        "host_recoil_before_arrest_m_s": -0.07291608557077013
+      },
+      "stop_position_m": 1.507333468368617,
+      "electrical_brake_command": {
+        "time_s": 0.9102800000017297,
+        "position_m": 1.3000136229253867,
+        "relative_speed_m_s": 2.9993047881591752
+      },
+      "peak_payload_normal_reaction_N": 26.827661510906896,
+      "mechanical_friction_dissipation_J": 15.073334683685879,
+      "stop_velocity_m_s": 0.004997290114947851,
+      "time_s": 1.073500000002799,
+      "cap_draw_J": 508.0230812390977,
+      "cap_end_V": 84.89356000406785,
+      "field_energy_end_J": 4.62046824255944e-05,
+      "diagnostic_time_limit_s": 2.006666666666667,
+      "energy_ledger": {
+        "mechanical_J": 32.300171197246726,
+        "copper_J": 209.62528273921103,
+        "inverter_J": 184.85954048695783,
+        "bank_J": 27.56548546525755,
+        "auxiliary_J": 53.67500000016528
+      },
+      "energy_residual_J": -0.0024448544231378388,
+      "peak_phase_current_A": 423.1318849289809,
+      "maximum_cell_terminal_or_internal_V": 2.899987397822942,
+      "actual_modulation_peak": 0.40769511697971034,
+      "nominal_modulation_command_fraction": 0.95,
+      "integral_phase_peak_current_sq_A2s": 14608.642080694139,
+      "conservative_phase_current_sq_with_ripple_A2s": 17070.954736956974,
+      "peak_device_current_A": 54.178068325023155,
+      "peak_bank_current_A": 59.668790786106165,
+      "allocated_peak_Vds_V": 139.54572402137666,
+      "checks": {
+        "released": true,
+        "stopped_inside_210mm": true,
+        "release_speed": true,
+        "cam_open_before_release": true,
+        "phase_current_limit": true,
+        "hot_device_current_with25pct_imbalance": true,
+        "allocated_switch_voltage": true,
+        "cell_charge_voltage": true,
+        "physical_modulation_limit": true,
+        "energy_balance": true
+      },
+      "all_declared_checks_pass": true,
+      "dense_trace_columns": [
+        "time_s",
+        "relative_x_m",
+        "relative_v_m_s",
+        "phase_current_A",
+        "internal_V",
+        "terminal_V",
+        "bank_A",
+        "brake_phase",
+        "net_force_N",
+        "attached_before_event"
+      ],
+      "dense_trace_rows": 214700,
+      "wall_s": 2.9257387359975837,
+      "case": "adverse"
+    }
+  ],
+  "interpretation": "Force-time replay input,not closed-loop contact/source coupling. Core files unchanged."
+}

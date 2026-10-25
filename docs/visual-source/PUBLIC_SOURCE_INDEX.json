@@ -363,6 +363,61 @@
       "sha256": "546cf2f427f356fc043f7d5cfd3f6af9b4ab5d4ab84b582e1e7c30baf8fd89ec"
     },
     {
+      "role": "supplement figure source",
+      "path": "validation/acr1_structural_dynamics/figures/SD01_modes.png",
+      "sha256": "5dd3ecdc053b61cc8b49b99a30066d46adc726c325713cc9bd42dd43c0b1e7be"
+    },
+    {
+      "path": "validation/acr1_structural_dynamics/MODAL_RESULTS.json",
+      "sha256": "3a3ba981e7a5e3e770a217fe4fadb6dbd1bc4830ec0b3379569a06a9a65ef245",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "validation/acr1_structural_dynamics/MODAL_BASIS.npz",
+      "sha256": "aebfb404abe776352bdfc54cb4f25b8fabcbb27fbcbd2d973f5b558c0600cb7d",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "validation/acr1_structural_dynamics/make_report.py",
+      "sha256": "03fdd6e2dfb5461ccbdf8142476fcf75099d672bfe9c966b6ce85d9d4fd0c5fe",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "validation/acr1_structural_dynamics/FIGURE_MANIFEST.json",
+      "sha256": "2654de01cbfe5c2eb7a893f16686da8057c9e41c5d1e078f321b96e664bacd85",
+      "role": "supplement figure input"
+    },
+    {
+      "role": "supplement figure source",
+      "path": "validation/acr1_release_dynamics/DEPARTURE_HISTORIES.png",
+      "sha256": "e7170e079042fb527a23c8ab1b8f089c33686fe2dff9bf9cda99cc875f86ec4b"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/SUMMARY.json",
+      "sha256": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/RESULTS.csv",
+      "sha256": "3a3e900bf11f0729cac00c8ca61fa5d97bb516832693f856c60fe2597cbf4c08",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/summarize.py",
+      "sha256": "1856a9ecc664fe7b9cfb19d3cb329f54491e5cabe44c21ee9b00faa5f521e5fb",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/MANIFEST.json",
+      "sha256": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/SOFTWARE_ENVIRONMENT.json",
+      "sha256": "69f04dbec900766858b5daec8bf6dc068900876261fc9c4d5ed84cee24837620",
+      "role": "supplement figure input"
+    },
+    {
       "role": "CAD view renderer",
       "path": "docs/assets/acr1/render_cad_views.py",
       "sha256": "c72ec143963702e5ccb463325d72159a15c2ba429cfd562ad5ed0cb5d5af7827"

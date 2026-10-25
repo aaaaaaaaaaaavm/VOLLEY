@@ -1,0 +1,12 @@
+{
+  "representative_ideal_phase_max_absolute_normal_N": 7.4996069443806554,
+  "representative_5deg_phase_error_normal_N": 29.091451284663723,
+  "representative_15deg_phase_error_normal_N": 76.68710639847072,
+  "representative_arbitrary_phase_normal_N": 295.7107612743881,
+  "minimum_continuous_harmonic_normal_limit_N": 64.68658102177133,
+  "conditional_station_based_phase_error_limit_deg": 12.6,
+  "fine_step_finite_paired_margin_mm": 0.2827883045700583,
+  "limit_boundary": "Conditional numerical design screen over tested stations and 1\u2013500Hz, not a certified global phase/error/ripple allowance.",
+  "frozen_scalar_X_reproduction_absolute_error_N_per_A": 4.440892098500626e-16,
+  "FE_vs_refined_uniform_normal_relative_difference": 0.0006662451543718846
+}

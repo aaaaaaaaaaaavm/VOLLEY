@@ -1,0 +1,43 @@
+{
+  "status": "Provisional requirements for implementation and measurement; no test has been performed by this computation.",
+  "baseline_source": {
+    "configuration": "Original86.4V initial/2.9V pergroup regenerative ceiling",
+    "catalogue_band_C": [
+      -40,
+      65
+    ],
+    "nominal_temperature_inhibit_C": 60
+  },
+  "derated_candidate": {
+    "configuration": "Separate78.4V initial source",
+    "initial_group_command_V": 2.45,
+    "regenerative_group_command_max_V": 2.47,
+    "absolute_hot_group_voltage_max_V": 2.5,
+    "catalogue_hot_temperature_max_C": 85,
+    "nominal_temperature_inhibit_C": 80
+  },
+  "thermal_path": {
+    "measured_installed_G_min_W_K": 3,
+    "host_interface_max_C": 50,
+    "including": "Copper bulk, two end contacts and both pads, at actual clamp/preload and representative vacuum/temperature conditions.",
+    "required_heat_acceptance": "At least the actual source and normal mount heat histories, including measured added standby. Captured main-resolution direct-path heat export peaks26.1W; this is a modeled value, not a host capability."
+  },
+  "temperature_allowance_K": {
+    "sensor_underread_max": 1,
+    "hottest_cell_to_sensor_gradient_max": 2,
+    "remaining_operating_and_model_margin": 2
+  },
+  "hot_voltage_allowance_pergroup_V": {
+    "imbalance_max": 0.01,
+    "sensing_error_max": 0.005,
+    "control_latency_and_overshoot_max": 0.005,
+    "fast_interconnect_transient_max": 0.01
+  },
+  "required_measurements": [
+    "Measure all 32 group voltages and individual/group currents, source hottest-cell temperatures and case gradients. Verify fault/reset behavior, initial charge and regeneration limits.",
+    "Measure installed path conductance, pad compression and joint repeatability before/after thermal cycling. Validate regulated host temperature at the complete actual heat load.",
+    "Instrument copper, GFRP, magnets, pallet, banks, payload interfaces, inverter cases and source plate during twelve releases spaced450s apart and postcampaign coast. Match actual environmental absorptivity/emissivity.",
+    "Correlate material-property, contact and warpage models. Establish magnet BH(T), GFRP/adhesive properties, actual payload thermal ICD, contamination/outgassing and vacuum friction/wear acceptance."
+  ],
+  "claim_boundary": "None of these allocations establishes supplier, space, vacuum, flight or universal payload qualification. The thermal path is not yet located in CAD."
+}

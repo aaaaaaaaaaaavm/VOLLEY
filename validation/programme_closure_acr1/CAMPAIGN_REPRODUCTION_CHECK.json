@@ -7,8 +7,18 @@
     "T5_R5_searched",
     "unresolved_shared_path_failure"
   ],
-  "relative_tolerance": 1e-11,
-  "absolute_tolerance": 1e-08,
+  "comparison_policy": {
+    "profile": "campaign",
+    "default_float_relative": 1e-11,
+    "default_float_absolute": 1e-08,
+    "discrete": "Dictionary keys, list lengths, integers, booleans, strings and policy subtrees exact",
+    "scientific_acceptance": "Unchanged source criteria; reproduced pass/fail outcomes must match exactly",
+    "mass_absolute_kg": 1e-07,
+    "mass_scope": "Non-residual *_kg floats and propellant at zero-based index 6 of documented 14-component campaign state vectors only",
+    "mass_rationale": "0.1 mg numerical floor; observed CI hardware difference 1.196e-8 kg. Same scale as the separate existing 1e-7 kg native mass-agreement criterion; not a mass/reserve acceptance waiver."
+  },
+  "comparison_fixture_count": 12,
+  "runtime_diagnostics": "Printed to stdout; hardware-dependent errors are not frozen metadata.",
   "native_GMAT_rerun": false,
   "scope": "Actual source search,finite-host state/resource history,negative cadence andblocked-path fault branch reproduced from copied public inputs. Independent native astrodynamics is captured separately."
 }

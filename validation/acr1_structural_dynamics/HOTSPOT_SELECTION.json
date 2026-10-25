@@ -1,0 +1,11 @@
+{
+  "node": 2411,
+  "coordinates_mm": [
+    322.9602958877852,
+    -100.0,
+    1.0611580849203217
+  ],
+  "native_source": "Accepted original chassis.frd nodal stress dataset",
+  "vonMises_MPa": 24.66218744425496,
+  "purpose": "Concrete stress-monitor refinement; original FE mesh/physics unchanged."
+}

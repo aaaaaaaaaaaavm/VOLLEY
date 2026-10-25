@@ -1,0 +1,49 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "CAD_parameter_sha256": "05aff5f00c27ed098d46067c60694758dbd3a186ed5d9011af388a6d973a24a3",
+  "model_sha256": "0af8c4a2f3ab7e6c933c2cb116f37d06db29da969a4d334c6249d7918906d0cd",
+  "finite_field_source_sha256": "99f5ed27abef68dfaa7c651de6f10bba3e2a602d12f83caa064bcecadf06aa07",
+  "scope": "Analytic finite winding field, ideal opposing phase; not a rated brake",
+  "stations": [
+    {
+      "displacement_m": 1.3,
+      "N_per_peak_A": 1.398366543855558
+    },
+    {
+      "displacement_m": 1.325,
+      "N_per_peak_A": 1.3997232983507377
+    },
+    {
+      "displacement_m": 1.35,
+      "N_per_peak_A": 1.3616878833314634
+    },
+    {
+      "displacement_m": 1.375,
+      "N_per_peak_A": 1.261465168521939
+    },
+    {
+      "displacement_m": 1.4,
+      "N_per_peak_A": 1.1613285375804443
+    },
+    {
+      "displacement_m": 1.425,
+      "N_per_peak_A": 1.062514008470244
+    },
+    {
+      "displacement_m": 1.45,
+      "N_per_peak_A": 0.9634644329234483
+    },
+    {
+      "displacement_m": 1.475,
+      "N_per_peak_A": 0.8642655765598568
+    },
+    {
+      "displacement_m": 1.5,
+      "N_per_peak_A": 0.7645118265996892
+    },
+    {
+      "displacement_m": 1.51,
+      "N_per_peak_A": 0.7098137675230056
+    }
+  ]
+}

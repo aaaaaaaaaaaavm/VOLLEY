@@ -1,0 +1,540 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "study": "SD01 representative three-component current-induced PM reaction screen",
+  "records": [
+    {
+      "displacement_m": 0.0,
+      "method": "uniform actual active bars + source return-path transverse quadrature",
+      "per_array_per_phase_field_XYZ_N_per_A": [
+        [
+          [
+            0.463235519701886,
+            -0.09101837947925148,
+            -2.4728034884014007e-05
+          ],
+          [
+            -0.3037476870637715,
+            -0.348100854787789,
+            -4.680542196848621e-05
+          ],
+          [
+            -0.1496666672649528,
+            0.44072289305957946,
+            -3.327377519449175e-05
+          ]
+        ],
+        [
+          [
+            0.45172425523939846,
+            0.09027529957632517,
+            -3.0909432945126844e-05
+          ],
+          [
+            -0.31149888569468787,
+            0.3509734021592443,
+            -3.3413317852349306e-05
+          ],
+          [
+            -0.1496666672649529,
+            -0.4407228930595793,
+            -3.3273775194498516e-05
+          ]
+        ]
+      ],
+      "axial_amplitude_N_per_peak_A": 1.3992570164801479,
+      "opposed_normal_amplitude_any_electrical_phase_N_per_peak_A": 0.6978140425836465,
+      "normal_common_mode_amplitude_N_per_peak_A": 0.0016536496277415702,
+      "supported_max_phase_current_A": 423.1987395580129,
+      "opposed_normal_envelope_at_supported_current_N": 295.31402326728073,
+      "ideal_max_thrust_phase_opposed_normal_N": 0.08628176570996093,
+      "phase_error_brackets": {
+        "0": {
+          "max_abs_opposed_normal_N": 0.08628176570996093
+        },
+        "1": {
+          "max_abs_opposed_normal_N": 5.240208765291079
+        },
+        "5": {
+          "max_abs_opposed_normal_N": 25.824265380650857
+        },
+        "15": {
+          "max_abs_opposed_normal_N": 76.51623203098586
+        },
+        "90": {
+          "max_abs_opposed_normal_N": 295.31401066282814
+        }
+      },
+      "elapsed_s": 12.59976796799674,
+      "active_order": [
+        3,
+        3,
+        5
+      ],
+      "return_order": 5,
+      "return_cross_order": 3
+    },
+    {
+      "displacement_m": 0.65,
+      "method": "uniform actual active bars + source return-path transverse quadrature",
+      "per_array_per_phase_field_XYZ_N_per_A": [
+        [
+          [
+            -0.47135859570368105,
+            -0.030567053494743073,
+            2.5629384411782408e-08
+          ],
+          [
+            0.20372284636299418,
+            0.41557765767671484,
+            -1.0543040877425833e-08
+          ],
+          [
+            0.2587790793190884,
+            -0.38714747214449635,
+            7.529713911146863e-09
+          ]
+        ],
+        [
+          [
+            -0.4596445409353046,
+            0.030318103577658264,
+            1.0138881558440592e-08
+          ],
+          [
+            0.20891403641747786,
+            -0.4190013589442188,
+            4.924956150935349e-09
+          ],
+          [
+            0.2587790793190884,
+            0.3871474721444965,
+            7.529713904386428e-09
+          ]
+        ]
+      ],
+      "axial_amplitude_N_per_peak_A": 1.3990544667896563,
+      "opposed_normal_amplitude_any_electrical_phase_N_per_peak_A": 0.6981479994383986,
+      "normal_common_mode_amplitude_N_per_peak_A": 0.001653131595159406,
+      "supported_max_phase_current_A": 423.1987395580129,
+      "opposed_normal_envelope_at_supported_current_N": 295.4553533872786,
+      "ideal_max_thrust_phase_opposed_normal_N": 0.07249042790138807,
+      "phase_error_brackets": {
+        "0": {
+          "max_abs_opposed_normal_N": 0.07249042790138807
+        },
+        "1": {
+          "max_abs_opposed_normal_N": 5.228886143443028
+        },
+        "5": {
+          "max_abs_opposed_normal_N": 25.822844578117543
+        },
+        "15": {
+          "max_abs_opposed_normal_N": 76.53949050896092
+        },
+        "90": {
+          "max_abs_opposed_normal_N": 295.45534449445915
+        }
+      },
+      "elapsed_s": 28.945620810998662,
+      "active_order": [
+        3,
+        3,
+        5
+      ],
+      "return_order": 5,
+      "return_cross_order": 3
+    },
+    {
+      "displacement_m": 1.3,
+      "method": "uniform actual active bars + source return-path transverse quadrature",
+      "per_array_per_phase_field_XYZ_N_per_A": [
+        [
+          [
+            0.4472127990527302,
+            0.15040181436743785,
+            6.337820928188958e-05
+          ],
+          [
+            -0.08993823432524035,
+            -0.4542920584197518,
+            3.621234293336183e-05
+          ],
+          [
+            -0.3500855382632735,
+            0.306827841664299,
+            4.7563471019696044e-05
+          ]
+        ],
+        [
+          [
+            0.4360755396180825,
+            -0.14917936146806995,
+            5.806790300910734e-05
+          ],
+          [
+            -0.09222050944693612,
+            0.45803414099873996,
+            4.087837486211299e-05
+          ],
+          [
+            -0.3500855382632735,
+            -0.30682784166429894,
+            4.7563471019689945e-05
+          ]
+        ]
+      ],
+      "axial_amplitude_N_per_peak_A": 1.398366543855556,
+      "opposed_normal_amplitude_any_electrical_phase_N_per_peak_A": 0.6978523293760309,
+      "normal_common_mode_amplitude_N_per_peak_A": 0.0016525021498307703,
+      "supported_max_phase_current_A": 423.1987395580129,
+      "opposed_normal_envelope_at_supported_current_N": 295.33022618955954,
+      "ideal_max_thrust_phase_opposed_normal_N": 0.2588693910895365,
+      "phase_error_brackets": {
+        "0": {
+          "max_abs_opposed_normal_N": 0.2588693910895365
+        },
+        "1": {
+          "max_abs_opposed_normal_N": 5.413051124639919
+        },
+        "5": {
+          "max_abs_opposed_normal_N": 25.997599646032814
+        },
+        "15": {
+          "max_abs_opposed_normal_N": 76.68710639847072
+        },
+        "90": {
+          "max_abs_opposed_normal_N": 295.33011273457157
+        }
+      },
+      "elapsed_s": 42.38468601799832,
+      "active_order": [
+        3,
+        3,
+        5
+      ],
+      "return_order": 5,
+      "return_cross_order": 3
+    },
+    {
+      "displacement_m": 0.65,
+      "method": "refined uniform-bar/return quadrature",
+      "per_array_per_phase_field_XYZ_N_per_A": [
+        [
+          [
+            -0.4709099239938299,
+            -0.030597307393083088,
+            2.5629384411662526e-08
+          ],
+          [
+            0.20351785005763126,
+            0.41594025804702894,
+            -1.0543040868165099e-08
+          ],
+          [
+            0.25853538761867917,
+            -0.3874798169259657,
+            7.529713904332926e-09
+          ]
+        ],
+        [
+          [
+            -0.45919585425985415,
+            0.030348357296067646,
+            1.0138881569150303e-08
+          ],
+          [
+            0.20870904668499918,
+            -0.41936395746610416,
+            4.9249561404895185e-09
+          ],
+          [
+            0.25853538761867917,
+            0.3874798169259658,
+            7.529713897663895e-09
+          ]
+        ]
+      ],
+      "axial_amplitude_N_per_peak_A": 1.3977069124453076,
+      "opposed_normal_amplitude_any_electrical_phase_N_per_peak_A": 0.6987515170371899,
+      "normal_common_mode_amplitude_N_per_peak_A": 0.0016531306331056931,
+      "supported_max_phase_current_A": 423.1987395580129,
+      "opposed_normal_envelope_at_supported_current_N": 295.7107612743881,
+      "ideal_max_thrust_phase_opposed_normal_N": 0.07076869758089492,
+      "phase_error_brackets": {
+        "0": {
+          "max_abs_opposed_normal_N": 0.07076869758089492
+        },
+        "1": {
+          "max_abs_opposed_normal_N": 5.231622165016137
+        },
+        "5": {
+          "max_abs_opposed_normal_N": 25.843389700623273
+        },
+        "15": {
+          "max_abs_opposed_normal_N": 76.60393198056074
+        },
+        "90": {
+          "max_abs_opposed_normal_N": 295.71075280630157
+        }
+      },
+      "elapsed_s": 65.99427866399856,
+      "active_order": [
+        5,
+        5,
+        9
+      ],
+      "return_order": 7,
+      "return_cross_order": 3
+    },
+    {
+      "displacement_m": 0.65,
+      "method": "actual connected phase DC FE-current centroid integration",
+      "per_array_per_phase_field_XYZ_N_per_A": [
+        [
+          [
+            0.47099214053560057,
+            0.03064889826947052,
+            3.7256556450881216e-06
+          ],
+          [
+            -0.20305553555306996,
+            -0.415351944835688,
+            9.426554377278581e-06
+          ],
+          [
+            -0.25834867777559833,
+            0.3872206792807851,
+            5.301304680474812e-06
+          ]
+        ],
+        [
+          [
+            0.4584527907473589,
+            -0.030333087475264014,
+            3.778119296480442e-06
+          ],
+          [
+            -0.2086549311883016,
+            0.41943298608933055,
+            -1.1333316659621059e-05
+          ],
+          [
+            -0.2584204302477917,
+            -0.3871764519366589,
+            -4.0160823771459746e-08
+          ]
+        ]
+      ],
+      "axial_amplitude_N_per_peak_A": 1.3966513822791664,
+      "opposed_normal_amplitude_any_electrical_phase_N_per_peak_A": 0.6982859772248539,
+      "normal_common_mode_amplitude_N_per_peak_A": 0.0019540529842831627,
+      "supported_max_phase_current_A": 423.1987395580129,
+      "opposed_normal_envelope_at_supported_current_N": 295.51374541259344,
+      "ideal_max_thrust_phase_opposed_normal_N": 0.041902845655497435,
+      "phase_error_brackets": {
+        "0": {
+          "max_abs_opposed_normal_N": 0.041902845655497435
+        },
+        "1": {
+          "max_abs_opposed_normal_N": 5.199322404545338
+        },
+        "5": {
+          "max_abs_opposed_normal_N": 25.79746310732806
+        },
+        "15": {
+          "max_abs_opposed_normal_N": 76.52505967426036
+        },
+        "90": {
+          "max_abs_opposed_normal_N": 295.51374244175287
+        }
+      },
+      "elapsed_s": 129.1452913289977,
+      "current_inputs": [
+        {
+          "phase": "A",
+          "solution_sha256": "c8aa37a3ffc9e81220e34d5f7a2f1be5b92a2f0853b0c845136d699a43feca60",
+          "result_sha256": "208406e54c88d59a1ff2b177bf9a7babe1010aefeaa91abbade592d7023ac7fc",
+          "linear_tetrahedra": 342741
+        },
+        {
+          "phase": "B",
+          "solution_sha256": "83603bd1e6c254b26928177a70734e20edf8c5dc13f9f2300aa9ddc4401d22f8",
+          "result_sha256": "1a1ed8b5b72ec608a0992ef5e7f765fe36270b958ae34ce32349354e915c1096",
+          "linear_tetrahedra": 133914
+        },
+        {
+          "phase": "C",
+          "solution_sha256": "e35f37ce4710dd96458427b7b5f967f9d55b69073cb1ba478ea9d933df0c1133",
+          "result_sha256": "65210405aec3ce22ab2075c539cdf5fffe8ad2540a2f8640e14b8b67b8688920",
+          "linear_tetrahedra": 130388
+        }
+      ]
+    },
+    {
+      "displacement_m": 1.4,
+      "method": "uniform arrest-region source bars + return quadrature",
+      "per_array_per_phase_field_XYZ_N_per_A": [
+        [
+          [
+            0.2542769306622922,
+            0.2826084013696396,
+            0.00039505039240225184
+          ],
+          [
+            0.1229952441477985,
+            -0.37777498544444715,
+            0.000346942131296902
+          ],
+          [
+            -0.38238463351560104,
+            0.07935874364947493,
+            0.0001721831638059041
+          ]
+        ],
+        [
+          [
+            0.24810188830836225,
+            -0.2804380434452366,
+            -2.5236784471699636e-05
+          ],
+          [
+            0.12585659246718922,
+            0.38072774794424136,
+            -5.22434146735417e-05
+          ],
+          [
+            -0.38238463351560104,
+            -0.07935874364947496,
+            0.00017218316380590283
+          ]
+        ]
+      ],
+      "axial_amplitude_N_per_peak_A": 1.1613285375804425,
+      "opposed_normal_amplitude_any_electrical_phase_N_per_peak_A": 0.5864370244892788,
+      "normal_common_mode_amplitude_N_per_peak_A": 0.0013248309712847908,
+      "supported_max_phase_current_A": 423.1987395580129,
+      "opposed_normal_envelope_at_supported_current_N": 248.17940959401434,
+      "ideal_max_thrust_phase_opposed_normal_N": -7.4996069443806554,
+      "phase_error_brackets": {
+        "0": {
+          "max_abs_opposed_normal_N": 7.4996069443806554
+        },
+        "1": {
+          "max_abs_opposed_normal_N": 11.827814600375598
+        },
+        "5": {
+          "max_abs_opposed_normal_N": 29.091451284663723
+        },
+        "15": {
+          "max_abs_opposed_normal_N": 71.44828747616336
+        },
+        "90": {
+          "max_abs_opposed_normal_N": 248.06607031618276
+        }
+      },
+      "elapsed_s": 7.53294773000016,
+      "active_order": [
+        3,
+        3,
+        5
+      ],
+      "return_order": 5,
+      "return_cross_order": 3,
+      "execution_stage": "additional arrest representatives"
+    },
+    {
+      "displacement_m": 1.507,
+      "method": "uniform arrest-region source bars + return quadrature",
+      "per_array_per_phase_field_XYZ_N_per_A": [
+        [
+          [
+            -0.15038393947508433,
+            0.1763261482955542,
+            0.00040171356039144987
+          ],
+          [
+            0.2459964582474689,
+            0.046481257771130866,
+            0.00010800774736692239
+          ],
+          [
+            -0.08031820621409405,
+            -0.22547431600516582,
+            0.00017002248604427943
+          ]
+        ],
+        [
+          [
+            -0.14703758101314168,
+            -0.17501251449389355,
+            -1.5999433297317534e-05
+          ],
+          [
+            0.2518488860207334,
+            -0.04681477191230034,
+            0.0002568512198055498
+          ],
+          [
+            -0.0803182062140941,
+            0.22547431600516576,
+            0.00017002248604427954
+          ]
+        ]
+      ],
+      "axial_amplitude_N_per_peak_A": 0.736463772316222,
+      "opposed_normal_amplitude_any_electrical_phase_N_per_peak_A": 0.3546923236552337,
+      "normal_common_mode_amplitude_N_per_peak_A": 0.000754151990051998,
+      "supported_max_phase_current_A": 423.1987395580129,
+      "opposed_normal_envelope_at_supported_current_N": 150.10534430179766,
+      "ideal_max_thrust_phase_opposed_normal_N": 6.23788718380179,
+      "phase_error_brackets": {
+        "0": {
+          "max_abs_opposed_normal_N": 6.23788718380179
+        },
+        "1": {
+          "max_abs_opposed_normal_N": 8.854373562651519
+        },
+        "5": {
+          "max_abs_opposed_normal_N": 19.28539150586195
+        },
+        "15": {
+          "max_abs_opposed_normal_N": 44.84189737596368
+        },
+        "90": {
+          "max_abs_opposed_normal_N": 149.97567519915816
+        }
+      },
+      "elapsed_s": 12.876695685001323,
+      "active_order": [
+        3,
+        3,
+        5
+      ],
+      "return_order": 5,
+      "return_cross_order": 3,
+      "execution_stage": "additional arrest representatives"
+    }
+  ],
+  "current_envelope_cases": 18,
+  "supported_max_phase_current_A": 423.1987395580129,
+  "field_axes": "X travel,Y gap,Z depth; CAD X=Xfield,Z=Yfield,Y=-Zfield",
+  "array_order": [
+    "negative-gap(bottom)",
+    "positive-gap(top)"
+  ],
+  "normal_definition": "Positive opposed normal coefficient increases pinch:0.5*(bottom reactionY\u2212top reactionY). Common mode reported separately.",
+  "method": "Per-array magnetostatic reciprocity: reaction on PM array = \u2212integral(J\u00d7B_array)dV over winding; free-space prescribed cuboid sources, prescribed linear DC current.",
+  "limits": [
+    "Representative0/650/1300/1400/1507mm stations only; no full stroke/commutation/active-brake map or rigorous global envelope.",
+    "Source conduction centroid quadrature and current meshes unchanged; uniform bends/returns remain approximations.",
+    "AC skin/proximity, induced/reaction fields, conductive supports, cable currents, steel perturbation and calibrated controller phase errors omitted.",
+    "PM self-mutual3.01kN pinch remains DC and is not included as oscillatory current force.",
+    "No measured load, electromagnetic qualification or physical airgap/rating claim."
+  ],
+  "source_identities": {
+    "validation/acr1/analysis/finite_motor.py": "99f5ed27abef68dfaa7c651de6f10bba3e2a602d12f83caa064bcecadf06aa07",
+    "validation/acr1/analysis/current_field_force.py": "d30f1b2193b8b7ca0697b2fcb130db887b2a25035c67acb214aa2c779810b820",
+    "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+    "validation/acr1/analysis/COUPLED_SHOT.json": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+  }
+}

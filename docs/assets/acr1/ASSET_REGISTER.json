@@ -1206,8 +1206,8 @@
     {
       "asset_id": "VOLLEY_ACR1_film_sources",
       "path": "docs/downloads/VOLLEY_ACR1_film_sources.zip",
-      "sha256": "ab4402f4b5cf3bf134698e2275da48b9289d8be925dca7e9cc3db7dba410603b",
-      "bytes": 14719495,
+      "sha256": "2c769745a3830c1feb7998b49c79f8b308c7b4412a6c34f3d83e654530d58ce6",
+      "bytes": 14976338,
       "configuration": "VOLLEY-G5-ACR1",
       "evidence_class": "editable visual source package",
       "role": "offline download",
@@ -1480,6 +1480,103 @@
       "original_render_script": "docs/visual-source/build_films.py",
       "original_storyboard": "docs/visual-source/STORYBOARD.json",
       "camera_provenance": "docs/assets/acr1/VIEW_PROVENANCE.json"
+    },
+    {
+      "asset_id": "supplement-SD01_modes",
+      "path": "docs/assets/acr1/supplements/SD01_modes.png",
+      "configuration": "VOLLEY-G5-ACR1 / separately identified computational supplement",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "sha256": "5dd3ecdc053b61cc8b49b99a30066d46adc726c325713cc9bd42dd43c0b1e7be",
+      "dimensions_px": [
+        2652,
+        962
+      ],
+      "evidence_class": "computed native solver output",
+      "role": "scientific follow-on result figure",
+      "source_path": "validation/acr1_structural_dynamics/figures/SD01_modes.png",
+      "source_sha256": "5dd3ecdc053b61cc8b49b99a30066d46adc726c325713cc9bd42dd43c0b1e7be",
+      "source_inputs": [
+        {
+          "path": "validation/acr1_structural_dynamics/MODAL_RESULTS.json",
+          "sha256": "3a3ba981e7a5e3e770a217fe4fadb6dbd1bc4830ec0b3379569a06a9a65ef245"
+        },
+        {
+          "path": "validation/acr1_structural_dynamics/MODAL_BASIS.npz",
+          "sha256": "aebfb404abe776352bdfc54cb4f25b8fabcbb27fbcbd2d973f5b558c0600cb7d"
+        },
+        {
+          "path": "validation/acr1_structural_dynamics/make_report.py",
+          "sha256": "03fdd6e2dfb5461ccbdf8142476fcf75099d672bfe9c966b6ce85d9d4fd0c5fe"
+        },
+        {
+          "path": "validation/acr1_structural_dynamics/FIGURE_MANIFEST.json",
+          "sha256": "2654de01cbfe5c2eb7a893f16686da8057c9e41c5d1e078f321b96e664bacd85"
+        }
+      ],
+      "caption": "CalculiX model output \u00b7 SD01 free-free bare-chassis modes. Mode shapes are normalized for display.",
+      "alt_text": "Forty native elastic chassis modes and a normalized numerical mode field.",
+      "software": "CalculiX 2.23 native modal output; source make_report.py plotting pipeline",
+      "model_scope": "Bare-chassis free-free modes; six rigid modes excluded; modal field normalized for display.",
+      "evidence_link": "docs/ACR1_STRUCTURAL_DYNAMICS.md",
+      "camera": null,
+      "scene": null,
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "SUPPLEMENT_FIGURES",
+      "path": "docs/assets/acr1/supplements/SUPPLEMENT_FIGURES.json",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "sha256": "004e9e1051026a4ef21b2e278f3c5f02add47163e74ab609098d5bca55d12816",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "supplement-release_departure_histories",
+      "path": "docs/assets/acr1/supplements/release_departure_histories.png",
+      "configuration": "VOLLEY-G5-ACR1 / separately identified computational supplement",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "sha256": "e7170e079042fb527a23c8ab1b8f089c33686fe2dff9bf9cda99cc875f86ec4b",
+      "dimensions_px": [
+        1800,
+        1260
+      ],
+      "evidence_class": "computed native solver output",
+      "role": "scientific follow-on result figure",
+      "source_path": "validation/acr1_release_dynamics/DEPARTURE_HISTORIES.png",
+      "source_sha256": "e7170e079042fb527a23c8ab1b8f089c33686fe2dff9bf9cda99cc875f86ec4b",
+      "source_inputs": [
+        {
+          "path": "validation/acr1_release_dynamics/SUMMARY.json",
+          "sha256": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c"
+        },
+        {
+          "path": "validation/acr1_release_dynamics/RESULTS.csv",
+          "sha256": "3a3e900bf11f0729cac00c8ca61fa5d97bb516832693f856c60fe2597cbf4c08"
+        },
+        {
+          "path": "validation/acr1_release_dynamics/summarize.py",
+          "sha256": "1856a9ecc664fe7b9cfb19d3cb329f54491e5cabe44c21ee9b00faa5f521e5fb"
+        },
+        {
+          "path": "validation/acr1_release_dynamics/MANIFEST.json",
+          "sha256": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+        },
+        {
+          "path": "validation/acr1_release_dynamics/SOFTWARE_ENVIRONMENT.json",
+          "sha256": "69f04dbec900766858b5daec8bf6dc068900876261fc9c4d5ed84cee24837620"
+        }
+      ],
+      "caption": "MuJoCo model output \u00b7 local departure/contact sensitivities. Contact parameters are declared model inputs.",
+      "alt_text": "Native payload release-speed and angular-rate histories for nominal and perturbed local contact cases.",
+      "software": "MuJoCo 3.3.7 native contact replay; source summarize.py plotting pipeline",
+      "model_scope": "Local payload departure/contact sensitivities under the declared contact and guide assumptions.",
+      "evidence_link": "docs/ACR1_RELEASE_DYNAMICS.md",
+      "camera": null,
+      "scene": null,
+      "release_identity": "containing Git commit or release tag"
     }
   ],
   "path_base": "repository_root",

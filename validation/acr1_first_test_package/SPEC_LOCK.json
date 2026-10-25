@@ -1,0 +1,23 @@
+{
+  "package_id": "VOLLEY-G6-FIRST-TEST-PREP-R1",
+  "locked_UTC": "2026-10-25T09:44:16.843001+00:00",
+  "experiments_performed": false,
+  "freeze_kind": "Pre-test specification issue; not a physical execution/build approval",
+  "pretest_files": {
+    "DEFINITION.json": "5fcb4a1d96ed814ccb3f2c0dc264f09d0901695cdca2809eb72341ce6eded34e",
+    "ACCEPTANCE_R1.json": "602d880052e1629caeb53d248392af9cb4191afabc0367a7adfb51005860e4ba",
+    "BOM.csv": "504d4f5203fb7f67818a58775cc6390d86f99697ff672604c33bd7b99976fb48",
+    "PLANNED_MATRIX.csv": "2a13d447bc6632a6349e6985fb88125edf616eafa84a0fc466190a12c21bc829",
+    "TEST_PROCEDURE.md": "7a474638353cfb9652309b82dbc60799b3032c148cd7dcadb20f15c10a663fda",
+    "TEST_PROCEDURE.pdf": "9f6dde2c355c4576ea604f0def98a5d43f6add13909f8afb909a68def2c74343",
+    "predict.py": "eff02fa7485d6f504f5c37dca9953ff7412229167765c0011d9fa3ff2766eee1",
+    "PREDICTIONS.json": "b86fb28da902c53a2e31a2c65d72ed1f1d24311894fd3b2770f3a80daaec104d",
+    "build_fixture.py": "f67ad38d7d8e9aa3f46e8fce9acf3dc30c544a85165443aa74398c6ccb45d67d",
+    "geometry/C01_fixture_drawing.svg": "40d0cf683e4574e23df337094a62aafb56d2346eb13ffe6012f4488be401b56b",
+    "geometry/C01_coupon_fixture.step": "89cccb5258eefcf631cc2d034978b8de39396179e93a76574e530b4fee982471",
+    "geometry/GEOMETRY_CHECK.json": "6cf82f517dbf5fedf17610c4302db25934cd475acacd6d0e9a44e5b554e20798",
+    "SOURCE_IDENTITIES.json": "f2a768b9b703858362621b42fab1c5b3a925500485f6ff5988611d6f0e1f30d6"
+  },
+  "provenance_refresh_UTC": "2026-10-25T09:51:23.643941+00:00",
+  "provenance_refresh_reason": "Final verified release-supplement capture receipt adds its package-local checker/verification diagnostics; scientific summary, geometry and physical test specification remain byte-identical."
+}

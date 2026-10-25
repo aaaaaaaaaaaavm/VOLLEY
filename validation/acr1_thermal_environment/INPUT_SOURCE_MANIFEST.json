@@ -1,0 +1,87 @@
+[
+  {
+    "path": "inputs/COUPLED_SHOT.json",
+    "original_public_path": "validation/acr1/analysis/COUPLED_SHOT.json",
+    "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+  },
+  {
+    "path": "inputs/POWER_COMPONENT_REFERENCE.json",
+    "original_public_path": "validation/acr1/analysis/POWER_COMPONENT_REFERENCE.json",
+    "sha256": "187905f64ba50273077b2739aa19f71c425bc7e4a7951e72021af554c318810f"
+  },
+  {
+    "path": "inputs/RESOURCE_LEDGER.json",
+    "original_public_path": "validation/acr1/analysis/RESOURCE_LEDGER.json",
+    "sha256": "054a6627261af1a21e9df558700ce00ecf32861e130d73cf01fb102b3a6a5917"
+  },
+  {
+    "path": "inputs/DESIGN_BUDGETS.json",
+    "original_public_path": "validation/acr1/analysis/DESIGN_BUDGETS.json",
+    "sha256": "e904380c58f56397bc75d2bba0104a63d52a9b118e1f0f08d52073dddddb1b5d"
+  },
+  {
+    "path": "inputs/FEEDER_SIZING.json",
+    "original_public_path": "validation/acr1/analysis/FEEDER_SIZING.json",
+    "sha256": "e3d9bc99b18c43d5d5ff529d4f7afcafb52e5da8da3bec53511365965f052ecf"
+  },
+  {
+    "path": "inputs/LIFT_SIZING.json",
+    "original_public_path": "validation/acr1/analysis/LIFT_SIZING.json",
+    "sha256": "b6e8c553a2dcd47322c861b6ac6036813057062cc3408c0a98f68257cd9d2fc6"
+  },
+  {
+    "path": "inputs/PARAMETERS.json",
+    "original_public_path": "validation/acr1/cad/PARAMETERS.json",
+    "sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b"
+  },
+  {
+    "path": "inputs/VOLLEY_G5_ACR1_home.json",
+    "original_public_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+    "sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e"
+  },
+  {
+    "path": "inputs/build_acr1.py",
+    "original_public_path": "validation/acr1/cad/build_acr1.py",
+    "sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8"
+  },
+  {
+    "path": "inputs/cradle_acr1.py",
+    "original_public_path": "validation/acr1/cad/cradle_acr1.py",
+    "sha256": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3"
+  },
+  {
+    "path": "inputs/MISSION_INPUTS.json",
+    "original_public_path": "validation/acr1/mission/MISSION_INPUTS.json",
+    "sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f"
+  },
+  {
+    "path": "inputs/CONDUCTION_PHASE_A.json",
+    "original_public_path": "validation/acr1/analysis/conduction/phase_A/h2/RESULT.json",
+    "sha256": "208406e54c88d59a1ff2b177bf9a7babe1010aefeaa91abbade592d7023ac7fc"
+  },
+  {
+    "path": "inputs/CONDUCTION_PHASE_B.json",
+    "original_public_path": "validation/acr1/analysis/conduction/phase_B/h3/RESULT.json",
+    "sha256": "1a1ed8b5b72ec608a0992ef5e7f765fe36270b958ae34ce32349354e915c1096"
+  },
+  {
+    "path": "inputs/CONDUCTION_PHASE_C.json",
+    "original_public_path": "validation/acr1/analysis/conduction/phase_C/h3/RESULT.json",
+    "sha256": "65210405aec3ce22ab2075c539cdf5fffe8ad2540a2f8640e14b8b67b8688920"
+  },
+  {
+    "path": "inputs/coupled_shot_production.py",
+    "original_public_path": "validation/acr1/analysis/coupled_shot.py",
+    "sha256": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155"
+  },
+  {
+    "path": "inputs/FINITE_MOTOR.json",
+    "original_public_path": "validation/acr1/analysis/FINITE_MOTOR.json",
+    "sha256": "546cf2f427f356fc043f7d5cfd3f6af9b4ab5d4ab84b582e1e7c30baf8fd89ec"
+  },
+  {
+    "path": "inputs/ARREST_FORCE_MAP.json",
+    "original_public_path": "validation/acr1/analysis/ARREST_FORCE_MAP.json",
+    "sha256": "d143d2e7efa0583c7c2ddf73b47479e192891aa2ffbb7d5976747189bda1cd1f"
+  }
+]

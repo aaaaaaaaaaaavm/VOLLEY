@@ -13,8 +13,20 @@
 
 The mission includes the current 156.556720 kg device mass. Its tested preplanned targets show no propellant or initial wet-mass advantage over the ideal ground-pretrimmed spring comparator. No global optimization or unique inflight-retasking benefit is established.
 
+## Extended analyses and first-test definition
+
+Separate supplements extend the ACR1 reference without altering its accepted CAD, source model or ED1 document bytes.
+
+| Study | Result and source | Applicable interpretation |
+|:--|:--|:--|
+| Structural dynamics, SD01 | [Native modes, finite forcing and normal-reaction report](ACR1_STRUCTURAL_DYNAMICS.md) | Forty elastic modes; conditional finite-load clearance and phase-dependent sustained-force limits |
+| Local release and arrest | [42 native MuJoCo runs and refinement](ACR1_RELEASE_DYNAMICS.md) | Nominal local egress, contact sensitivities and keeper-catch behavior for the represented surfaces/history |
+| Environment and source derating | [Coupled radiation/conduction, repeated duty and voltage variant](ACR1_THERMAL_ENVIRONMENT.md) | Declared thermal interfaces and electrical configuration control the usable temperature envelope |
+| Finite-host lunar programme | [Campaign, covariance, native lifetimes and disposal](PROGRAMME_STUDIES_ACR1.md) | Same-source geometry/resource flowdown with explicitly separate lunar orbit and host assumptions |
+| Subsequent Gen6 first measurements | [Procedure, provisional STEP, instruments and predeclared criteria](ACR1_FIRST_TEST_PACKAGE.md) | Unfunded pre-test engineering definition; templates contain no measured data |
+
 ## Reproduce and inspect history
 
 [Portable examples, dependencies and identity checks](../validation/acr1/README.md#reproduce-a-short-example) · [Raw supplement availability](../validation/acr1/SUPPLEMENT_ASSETS.json) · [Pre-ACR1 solver index](CURRENT_NUMERICAL_EVIDENCE_PRE_ACR1_2026-10-23.md) · [Immutable original Gen5 boundary](SOLVER_EVIDENCE_BOUNDARY.md)
 
-Original Gen5, FM08, Chrono contact and earlier orbital captures retain their original numerical findings and limits. The unconverged historical Chrono model provides no accepted final-pose or peak-contact-load rating for ACR1. Native FEMM/Elmer, selected-source ngspice, host attitude/control and atmospheric lifetime requirements are not closed by using a different model or solver. Their separately identified outstanding study criteria remain visible in the historical index and programme records.
+Original Gen5, FM08, Chrono contact and earlier orbital captures retain their original numerical findings and limits. The unconverged historical Chrono model provides no accepted final-pose or peak-contact-load rating for ACR1. Native FEMM/Elmer, selected-source switching simulation, full installed-spacecraft dynamics and measured atmospheric lifetime retain their own model and correlation requirements. The supplements above identify the actual added methods, results and applicable boundaries.

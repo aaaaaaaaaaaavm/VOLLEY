@@ -1,0 +1,137 @@
+{
+  "case": {
+    "id": "half_keeper",
+    "mu": 0.1,
+    "keeper_shift_mm": 6
+  },
+  "dt_s": 0.0001,
+  "solver": "Newton",
+  "iterations": 100,
+  "direct_stiffness_s_minus2": 1000000.0,
+  "direct_damping_s_minus1": 2000,
+  "constant_solimp": 0.95,
+  "representation": "box",
+  "native_version": "3.3.7",
+  "tstart_s": 0.8659650000000001,
+  "duration_s": 0.35000000000000003,
+  "tend_s": 1.2159649999999615,
+  "source_release_s": 0.8669650000014459,
+  "source_stop_s": 1.0477800000026305,
+  "source_release_inertial_kick_m_s": 2.9269191513942334,
+  "payload_final_position_m": [
+    2.096946484681094,
+    -0.0005558234936483227,
+    0.09704208929026266
+  ],
+  "payload_final_quaternion_wxyz": [
+    0.9995184158518874,
+    -9.518066644508895e-05,
+    0.003093686923563112,
+    0.030876470245016455
+  ],
+  "payload_final_velocity_m_s": [
+    0.6745012832621659,
+    1.0682509401211193e-06,
+    6.66344606051983e-08
+  ],
+  "payload_final_omega_deg_s": [
+    0.00028276861086205135,
+    -0.000554017045327965,
+    -0.00018202515677926095
+  ],
+  "orientation_change_deg": 3.556486366060373,
+  "payload_inertial_kick_difference_m_s": -2.2524178681320675,
+  "final_payload_aft_relative_carrier_m": 0.06584727182999212,
+  "rear_contact_first_s": 0.8660650000000001,
+  "rear_contact_last_s": 0.866865,
+  "rear_unload_events_s": [
+    0.866965
+  ],
+  "rear_recontact_events_s": [],
+  "contact_absolute_impulse_by_group_Ns": {
+    "rear": 0.012580850399311538,
+    "keeper": 8.878535350188551,
+    "floor": 0.988902230775854,
+    "cap": 1.0794844766299803,
+    "other": 1.2848742821372923
+  },
+  "post_source_release_absolute_impulse_by_group_Ns": {
+    "keeper": 8.878535350188551,
+    "floor": 0.988902230775854,
+    "cap": 1.0794844766299803,
+    "other": 1.2848742821372923
+  },
+  "max_overlap_m": 0.00016234451941392908,
+  "peak_contact_force_N_unrated": 921.6160845618276,
+  "initial_overlap_m": 0.0,
+  "initial_gap_adjustment_m": {
+    "x": 0,
+    "z": 0
+  },
+  "conservation": {
+    "total_x_momentum_initial_kg_m_s": 1.7763568394002505e-15,
+    "total_x_momentum_residual_kg_m_s": -6.439293542825908e-14,
+    "payload_linear_impulse_residual_Ns": [
+      -1.0658141036401503e-14,
+      6.915007574794657e-17,
+      1.1100403831459048e-16
+    ],
+    "payload_angular_impulse_residual_Nms": [
+      -3.4791368609311147e-09,
+      -1.5434319696913692e-10,
+      1.4416735468408169e-09
+    ],
+    "native_generalized_vs_contact_force_max_N": 2.5431077927142497e-13,
+    "kinetic_energy_change_J": -71.03988203799597,
+    "motor_work_J": -70.67215037428409,
+    "kinetic_minus_motor_work_J": -0.36773166371187926,
+    "energy_scope": "Difference includes unmeasured contact regularization,damping/friction and integration error;not automatically numerical error."
+  },
+  "solver_max_iterations_used": 8,
+  "native_warning_increments": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "wall_s": 3.3239414380004746,
+  "limitations": [
+    "Open-loop source force replay,not perturbed electrical feedback",
+    "Ideal host/carrier X guides;no host attitude/side compliance",
+    "Uniform4kg340.5\u00d7100\u00d7100mm payload surrogate",
+    "Contact regularization/friction/damping unmeasured sensitivities",
+    "Final1ms before source release through arrest and0.35s window;powered return and feeder capture excluded",
+    "Primitive collision surfaces are a documented CAD subset;no complete manufactured model"
+  ],
+  "solver_full_budget_steps": 0,
+  "max_native_termination_gradient": 2.5345754052550836e-11,
+  "payload_initial_position_m": [
+    1.6998101589744972,
+    0.0,
+    0.096
+  ],
+  "payload_initial_velocity_m_s": [
+    2.92379474222315,
+    0.0,
+    0.0
+  ],
+  "payload_initial_omega_deg_s": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "freeflight_position_residual_m": [
+    -0.6261918340715058,
+    -0.0005558234936483227,
+    0.0010420892902626572
+  ],
+  "exact_inertia_kg_m2": [
+    0.006666666666666668,
+    0.04198008333333334,
+    0.04198008333333334
+  ]
+}

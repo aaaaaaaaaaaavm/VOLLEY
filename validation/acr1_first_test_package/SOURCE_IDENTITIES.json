@@ -1,0 +1,79 @@
+{
+  "cutoff_UTC": "2026-10-25",
+  "parent_configuration": "VOLLEY-G5-ACR1",
+  "read_only_parent_inputs": true,
+  "records": [
+    {
+      "path": "docs/BENCHTOP_TESTS.md",
+      "sha256": "243983d30389af5ffedcd6e0286cb0e18f68374a053a69fdc53537e260da1ca2"
+    },
+    {
+      "path": "docs/QUALIFICATION_PLAN.md",
+      "sha256": "b63af27d6e6b861d56f4259d8dc88952c1fae15a3c15b9ac77246df305cb1096"
+    },
+    {
+      "path": "validation/acr1/cad/PARAMETERS.json",
+      "sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b"
+    },
+    {
+      "path": "validation/acr1/cad/release/FINAL_CAD_MANIFEST.json",
+      "sha256": "77b8a5c2b4b30c16f0faa2fbdd7fc243b7952d417a7e962d2e4096ba1e7a1350"
+    },
+    {
+      "path": "validation/acr1/cad/release/MECHANICAL_CAPTURE.md",
+      "sha256": "f7da985546283e959cab09c01ff0ede9bbd97d1b1351aa3e93c363e27124429f"
+    },
+    {
+      "path": "validation/acr1/analysis/finite_motor.py",
+      "sha256": "99f5ed27abef68dfaa7c651de6f10bba3e2a602d12f83caa064bcecadf06aa07"
+    },
+    {
+      "path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+    },
+    {
+      "path": "validation/acr1/analysis/RESOURCE_LEDGER.json",
+      "sha256": "054a6627261af1a21e9df558700ce00ecf32861e130d73cf01fb102b3a6a5917"
+    },
+    {
+      "path": "validation/acr1/analysis/DESIGN_BUDGETS.json",
+      "sha256": "e904380c58f56397bc75d2bba0104a63d52a9b118e1f0f08d52073dddddb1b5d"
+    },
+    {
+      "path": "validation/acr1/analysis/TRANSFER_INTERLOCKS.json",
+      "sha256": "9f291fba1951d8fd64bf8a0d822a01be33f464f6c1099628b1341755899e0d4c"
+    },
+    {
+      "path": "validation/acr1/analysis/FEEDER_SIZING.json",
+      "sha256": "e3d9bc99b18c43d5d5ff529d4f7afcafb52e5da8da3bec53511365965f052ecf"
+    },
+    {
+      "path": "validation/acr1/analysis/LIFT_SIZING.json",
+      "sha256": "b6e8c553a2dcd47322c861b6ac6036813057062cc3408c0a98f68257cd9d2fc6"
+    },
+    {
+      "path": "validation/acr1/analysis/POWER_COMPONENT_REFERENCE.json",
+      "sha256": "187905f64ba50273077b2739aa19f71c425bc7e4a7951e72021af554c318810f"
+    },
+    {
+      "path": "validation/acr1/sources/feeder_catalog_reference.json",
+      "sha256": "401d4da4d3b3a0395a42f3b4f140f862c05f9ccaa3489d3863b02f86fb73423d"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/PHYSICAL_TEST_SPECIFICATION.md",
+      "sha256": "fe10ea64060483d40b2b7afbf701d85052b4e2dc78bf1683f4ca9b5d75f789de"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/SUMMARY.json",
+      "sha256": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/GEOMETRY_AND_INPUTS.json",
+      "sha256": "32b3492831b1232cf257bfdf46a05f3aace3eaf462e9f492787fc057ddd2e256"
+    },
+    {
+      "path": "validation/acr1_release_dynamics/CAPTURE_CHECKS.json",
+      "sha256": "f8deef6de04ac8a3847ff39163ed087396f730b830a7a491e7ba318296353617"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "Numerical reproduction-comparator fixtures, not changed physical simulation inputs or acceptance thresholds.",
+  "cases": [
+    {"id":"observed_CI_propellant_roundoff","profile":"campaign","reference":{"history":[{"propellant_kg":19.966898621291218}]},"reproduced":{"history":[{"propellant_kg":19.966898633250313}]},"expect_pass":true},
+    {"id":"documented_packed_propellant_component","profile":"campaign","reference":{"final_host_state":[0,0,0,0,0,0,19.966898621291218,0,0,0,1,0,0,0]},"reproduced":{"final_host_state":[0,0,0,0,0,0,19.966898633250313,0,0,0,1,0,0,0]},"expect_pass":true},
+    {"id":"meaningful_mass_change_rejected","profile":"campaign","reference":{"propellant_kg":20.0},"reproduced":{"propellant_kg":20.00001},"expect_pass":false},
+    {"id":"conservation_residual_floor_preserved","profile":"campaign","reference":{"mass_closure_residual_kg":0.0},"reproduced":{"mass_closure_residual_kg":0.000000012},"expect_pass":false},
+    {"id":"nonmass_float_floor_preserved","profile":"campaign","reference":{"position_m":[0.0]},"reproduced":{"position_m":[0.00000002]},"expect_pass":false},
+    {"id":"original_arithmetic_profile_unchanged","profile":"default","reference":{"propellant_kg":19.966898621291218},"reproduced":{"propellant_kg":19.966898633250313},"expect_pass":false},
+    {"id":"release_count_change_rejected","profile":"campaign","reference":{"released_payloads":12},"reproduced":{"released_payloads":11},"expect_pass":false},
+    {"id":"fractional_count_rejected","profile":"campaign","reference":{"released_payloads":12},"reproduced":{"released_payloads":12.00000000001},"expect_pass":false},
+    {"id":"policy_change_rejected","profile":"campaign","reference":{"policy":[{"index":1,"sign":1,"roll_deg":0}]},"reproduced":{"policy":[{"index":2,"sign":1,"roll_deg":0}]},"expect_pass":false},
+    {"id":"policy_type_change_rejected","profile":"campaign","reference":{"policy":[{"index":1}]},"reproduced":{"policy":[{"index":1.0}]},"expect_pass":false},
+    {"id":"reserve_outcome_exact_even_with_tiny_mass_change","profile":"campaign","reference":{"final_propellant_kg":8.00000001,"independent_disposal_reserve_pass":true},"reproduced":{"final_propellant_kg":7.99999999,"independent_disposal_reserve_pass":false},"expect_pass":false},
+    {"id":"schema_change_rejected","profile":"campaign","reference":{"nominal_full_manifest_pass":true},"reproduced":{"nominal_full_manifest_pass":true,"extra":1},"expect_pass":false}
+  ]
+}

@@ -1,0 +1,2 @@
+nominal 209556 {'time_s': 0.8669650000014459, 'relative_speed_m_s': 2.99984553215141, 'position_m': 1.30009088918609, 'payload_inertial_delta_v_m_s': 2.9269191513942334, 'host_recoil_before_arrest_m_s': -0.07292638075717643}
+adverse 214700 {'time_s': 0.9103400000017301, 'relative_speed_m_s': 2.9994220369961186, 'position_m': 1.3001935862587621, 'payload_inertial_delta_v_m_s': 2.9265059514253484, 'host_recoil_before_arrest_m_s': -0.07291608557077013}

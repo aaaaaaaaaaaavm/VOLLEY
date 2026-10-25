@@ -1,0 +1,104 @@
+{
+  "NIST_G10CR": {
+    "source_register_id": "NIST_G10CR",
+    "capture_method": "Primary page text independently read through connected web access; direct byte download returned HTTP403. This is a numeric transcription, not an upstream byte-identical snapshot.",
+    "polynomial": "y=10**sum(a[i]*(log10(T))**i)",
+    "normal_conductivity_coefficients": [
+      -4.1236,
+      13.788,
+      -26.068,
+      26.272,
+      -14.663,
+      4.4954,
+      -0.6905,
+      0.0397,
+      0
+    ],
+    "specific_heat_coefficients": [
+      -2.4083,
+      7.6006,
+      -8.2982,
+      7.3301,
+      -4.2386,
+      1.4294,
+      -0.24396,
+      0.015236,
+      0
+    ],
+    "conductivity_fit_range_K": [
+      10,
+      300
+    ],
+    "specific_heat_fit_range_K": [
+      4,
+      300
+    ],
+    "k_at300K_W_m_K": 0.607982754731,
+    "Cp_at300K_J_kg_K": 998.742717,
+    "scope": "Representative G10-CR reference. ACR1 generic GFRP grade is not selected, and hot extrapolation is uncertain."
+  },
+  "EATON_TV_REFERENCE": {
+    "source_register_id": "EATON_TV_REFERENCE",
+    "selected_cell": "TV1860-3R0107-R, frozen 64-cell 32S2P source",
+    "operating_temperature_C": [
+      -40,
+      65
+    ],
+    "extended_temperature_C": 85,
+    "extended_temperature_voltage_V": 2.5,
+    "derating_instruction": "Maximum operating temperature +85\u00b0C with voltage derating to 2.5V. Linear derating applies above65\u00b0C; this study conservatively uses2.5V maximum for the hot variant.",
+    "scope": "Catalogue operating point, no space or vacuum qualification."
+  },
+  "IRFP4668_REFERENCE": {
+    "source_register_id": "IRFP4668_REFERENCE",
+    "junction_absolute_max_C": 175,
+    "thermal_junction_to_case_max_K_W": 0.29,
+    "thermal_case_to_sink_typical_K_W": 0.24,
+    "case_to_sink_condition": "Flat greased surface, typical; not a measured or guaranteed ACR1 interface.",
+    "continuous_current_at_case100C_A": 92,
+    "scope": "No actual junction-temperature history or interface capability is inferred."
+  },
+  "ARNOLD_N48M_REFERENCE": {
+    "source_register_id": "ARNOLD_N48M_REFERENCE",
+    "representative_specific_heat_J_kg_K": 460,
+    "representative_k_W_m_K": 7.6,
+    "Br_reversible_temperature_coefficient_per_K": -0.0012,
+    "coefficient_range_C": [
+      20,
+      100
+    ],
+    "scope": "N48M is a representative reference only, not the selected ACR1 magnet grade. Actual BH(T), corrosion coating, adhesive and irreversible demagnetization acceptance remain open."
+  },
+  "OPTICAL_EXAMPLES": {
+    "source_register_id": "NASA_RP_1121",
+    "buffed_Al": {
+      "alpha": 0.16,
+      "epsilon": 0.03
+    },
+    "buffed_Cu": {
+      "alpha": 0.3,
+      "epsilon": 0.03
+    },
+    "black_anodize": {
+      "alpha": 0.88,
+      "epsilon": 0.88
+    },
+    "black_Cu": {
+      "alpha": 0.98,
+      "epsilon": 0.63
+    },
+    "scope": "Measured examples depend on finish/preparation; no qualified ACR1 coating is selected."
+  },
+  "PAD_AND_BOLT_ALLOCATION": {
+    "source_register_id": "NASA_SST_THERMAL_2026",
+    "illustrative_bolt_conductance_W_K": [
+      0.105,
+      3.51
+    ],
+    "allocation_not_supplier_capability": {
+      "pad_conductivity_W_m_K": 3,
+      "each_end_joint_minimum_W_K": 10
+    },
+    "scope": "The final installed path must be measured in vacuum. This is an engineering allocation and not a selected pad or bolt capability."
+  }
+}

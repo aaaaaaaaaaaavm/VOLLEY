@@ -1,5 +1,5 @@
 {
-  "revision": "23October2026: current selected feeder and retained figure identities",
+  "revision": "ACR1-source-linked-supplements-2026-10-25",
   "scope": "Selected current figure sets only. Retained historical graphics are not automatically certified compliant.",
   "figures": [
     {
@@ -1002,6 +1002,248 @@
         "validation/selected_feeder/cad/figures/FM08_sequence.jpg": "c2c699b6cef5a19ed2c69e3471eb820fe5ab39db4dd4762c00390217ac3ed0d7",
         "validation/selected_feeder/cad/figures/FM08_sequence.pdf": "100e950d3842568c611f6f764891957dbf893cd09b9c9b777c51690b1d33de69",
         "validation/selected_feeder/cad/figures/FM08_sequence.svg": "9a95d69ad255f4d761e627aef21d75fccd9162b687f3236b351cc3cd2a4fb3f8"
+      }
+    },
+    {
+      "evidence_class": "Model output from captured native modes and declared forcing; not hardware or GUI evidence",
+      "caption": "Forty actual free-free elastic modes. The face map is a numerical native modal field, normalized for display; no physical amplitude is implied.",
+      "limitations": "Bare-chassis model, declared damping/forcing/tolerance allocations; installed spacecraft modes and physical correlation are separate.",
+      "sources": {
+        "validation/acr1_structural_dynamics/MODAL_RESULTS.json": "3a3ba981e7a5e3e770a217fe4fadb6dbd1bc4830ec0b3379569a06a9a65ef245",
+        "validation/acr1_structural_dynamics/MODAL_BASIS.npz": "aebfb404abe776352bdfc54cb4f25b8fabcbb27fbcbd2d973f5b558c0600cb7d",
+        "validation/acr1_structural_dynamics/RESPONSE_RESULTS.json": "4513befa31e5371f95966b19485b3e3955f8108ed6a1d863dad2f38e0c28789a",
+        "validation/acr1_structural_dynamics/RESPONSE_CURVES.npz": "60ece77f808244b883d1d96a4e6ca4973f64894c29afbccdb844a34e3aaeb8f3",
+        "validation/acr1_structural_dynamics/CURRENT_NORMAL_FORCE.json": "142ebc00b101cd78668af08a4d9950afd2a4f64fa7b04bbd37eb875329b4a2af",
+        "validation/acr1_structural_dynamics/make_report.py": "03fdd6e2dfb5461ccbdf8142476fcf75099d672bfe9c966b6ce85d9d4fd0c5fe"
+      },
+      "exports": {
+        "validation/acr1_structural_dynamics/figures/SD01_modes.png": "5dd3ecdc053b61cc8b49b99a30066d46adc726c325713cc9bd42dd43c0b1e7be",
+        "validation/acr1_structural_dynamics/figures/SD01_modes.pdf": "56558dda880cfc3bbb2bc0d6a3bdebb0d42ec7791a2d8c8c42d045f2c7fd675b",
+        "validation/acr1_structural_dynamics/figures/SD01_modes.svg": "26a593ce701876be64b7e2e59b72ac01c6c9a7ae01f1c2b8256978d2e9883a36"
+      }
+    },
+    {
+      "evidence_class": "Model output from captured native modes and declared forcing; not hardware or GUI evidence",
+      "caption": "Finite acceleration/release/brake history with explicit normal ripple. Paired margin retains original static/thermal/tolerance allocations and an additional modal residual reserve; individual centring/stator dynamics remain conditional.",
+      "limitations": "Bare-chassis model, declared damping/forcing/tolerance allocations; installed spacecraft modes and physical correlation are separate.",
+      "sources": {
+        "validation/acr1_structural_dynamics/MODAL_RESULTS.json": "3a3ba981e7a5e3e770a217fe4fadb6dbd1bc4830ec0b3379569a06a9a65ef245",
+        "validation/acr1_structural_dynamics/MODAL_BASIS.npz": "aebfb404abe776352bdfc54cb4f25b8fabcbb27fbcbd2d973f5b558c0600cb7d",
+        "validation/acr1_structural_dynamics/RESPONSE_RESULTS.json": "4513befa31e5371f95966b19485b3e3955f8108ed6a1d863dad2f38e0c28789a",
+        "validation/acr1_structural_dynamics/RESPONSE_CURVES.npz": "60ece77f808244b883d1d96a4e6ca4973f64894c29afbccdb844a34e3aaeb8f3",
+        "validation/acr1_structural_dynamics/CURRENT_NORMAL_FORCE.json": "142ebc00b101cd78668af08a4d9950afd2a4f64fa7b04bbd37eb875329b4a2af",
+        "validation/acr1_structural_dynamics/make_report.py": "03fdd6e2dfb5461ccbdf8142476fcf75099d672bfe9c966b6ce85d9d4fd0c5fe"
+      },
+      "exports": {
+        "validation/acr1_structural_dynamics/figures/SD01_finite_response.png": "2c4d3aa5f7379b9b9db5c7631d8657b6df186ccde5c4a292d2e9bc54d0ae50b9",
+        "validation/acr1_structural_dynamics/figures/SD01_finite_response.pdf": "3e278cc45338676157ce5e318b7589c374d96c03b9b3afc3c8fd9269795386d5",
+        "validation/acr1_structural_dynamics/figures/SD01_finite_response.svg": "cd00b1ec147d4e4bbce63586e6b86fa76ef28ea5bf600899947742eb94c276bd"
+      }
+    },
+    {
+      "evidence_class": "Model output from captured native modes and declared forcing; not hardware or GUI evidence",
+      "caption": "A sustained harmonic is separate from the finite chirp. Resonance gives a source-dependent normal-force design limit; the assumed damping and actual assembly spectrum are unmeasured.",
+      "limitations": "Bare-chassis model, declared damping/forcing/tolerance allocations; installed spacecraft modes and physical correlation are separate.",
+      "sources": {
+        "validation/acr1_structural_dynamics/MODAL_RESULTS.json": "3a3ba981e7a5e3e770a217fe4fadb6dbd1bc4830ec0b3379569a06a9a65ef245",
+        "validation/acr1_structural_dynamics/MODAL_BASIS.npz": "aebfb404abe776352bdfc54cb4f25b8fabcbb27fbcbd2d973f5b558c0600cb7d",
+        "validation/acr1_structural_dynamics/RESPONSE_RESULTS.json": "4513befa31e5371f95966b19485b3e3955f8108ed6a1d863dad2f38e0c28789a",
+        "validation/acr1_structural_dynamics/RESPONSE_CURVES.npz": "60ece77f808244b883d1d96a4e6ca4973f64894c29afbccdb844a34e3aaeb8f3",
+        "validation/acr1_structural_dynamics/CURRENT_NORMAL_FORCE.json": "142ebc00b101cd78668af08a4d9950afd2a4f64fa7b04bbd37eb875329b4a2af",
+        "validation/acr1_structural_dynamics/make_report.py": "03fdd6e2dfb5461ccbdf8142476fcf75099d672bfe9c966b6ce85d9d4fd0c5fe"
+      },
+      "exports": {
+        "validation/acr1_structural_dynamics/figures/SD01_harmonic_limit.png": "6219c96c36713b5e319dcedff38e19a78fecce65777993cfdbb6675d323427a0",
+        "validation/acr1_structural_dynamics/figures/SD01_harmonic_limit.pdf": "48b516080f8fd28434d989f0bb1238709b9e4b4f6c01945afadf4310a1b3726a",
+        "validation/acr1_structural_dynamics/figures/SD01_harmonic_limit.svg": "ecf67e14696b5b81aafff71cbeff1ad28c568aa959d76e8e3d572a0c8a92268f"
+      }
+    },
+    {
+      "evidence_class": "Model output from captured native modes and declared forcing; not hardware or GUI evidence",
+      "caption": "Per-array reciprocal J\u00d7B force with PM top/bottom fields separated. Representative source stations only; DC pinch is excluded from these alternating current-force curves.",
+      "limitations": "Bare-chassis model, declared damping/forcing/tolerance allocations; installed spacecraft modes and physical correlation are separate.",
+      "sources": {
+        "validation/acr1_structural_dynamics/MODAL_RESULTS.json": "3a3ba981e7a5e3e770a217fe4fadb6dbd1bc4830ec0b3379569a06a9a65ef245",
+        "validation/acr1_structural_dynamics/MODAL_BASIS.npz": "aebfb404abe776352bdfc54cb4f25b8fabcbb27fbcbd2d973f5b558c0600cb7d",
+        "validation/acr1_structural_dynamics/RESPONSE_RESULTS.json": "4513befa31e5371f95966b19485b3e3955f8108ed6a1d863dad2f38e0c28789a",
+        "validation/acr1_structural_dynamics/RESPONSE_CURVES.npz": "60ece77f808244b883d1d96a4e6ca4973f64894c29afbccdb844a34e3aaeb8f3",
+        "validation/acr1_structural_dynamics/CURRENT_NORMAL_FORCE.json": "142ebc00b101cd78668af08a4d9950afd2a4f64fa7b04bbd37eb875329b4a2af",
+        "validation/acr1_structural_dynamics/make_report.py": "03fdd6e2dfb5461ccbdf8142476fcf75099d672bfe9c966b6ce85d9d4fd0c5fe"
+      },
+      "exports": {
+        "validation/acr1_structural_dynamics/figures/SD01_current_normal.png": "97333daff0c4d9f9b8812d60c813bdbbbfee9d0603f82fb2739878450aa01c8e",
+        "validation/acr1_structural_dynamics/figures/SD01_current_normal.pdf": "d41e061fbbc2c2582933bce79074824e83ce9f7eece7d5d52674dc28d377261d",
+        "validation/acr1_structural_dynamics/figures/SD01_current_normal.svg": "f3467c2f34f72f035e242e7274c909519fe0c57eaab00addf243a89400032154"
+      }
+    },
+    {
+      "evidence_class": "Computed scientific result with source-linked data",
+      "caption": "Engine-only disposal and transfer-energy comparisons for declared lunar starting states.",
+      "limitations": "Declared surrogate lunar host and mission; numerical results are distinct from provider acceptance or measured flight performance.",
+      "sources": {
+        "validation/programme_closure_acr1/complete_studies.py": "50b3dc7bc32b2e2377b96f8430fb8ea6390af84e6789f0c6d661082349066704",
+        "validation/programme_closure_acr1/scientific.mplstyle": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+        "validation/programme_closure_acr1/STUDY_RESULTS.json": "58cdae56b87d0b58a34519015b5e8d616c78eb4090ed300b23a1d4d132768a40"
+      },
+      "exports": {
+        "validation/programme_closure_acr1/figures/lunar_independent_disposal.svg": "73bfe57148cc3c47ce4a6617591d36be1d4f8184734de007598282020c01be8c",
+        "validation/programme_closure_acr1/figures/lunar_independent_disposal.png": "9233ac3e19e729ba7dda3ff7816f4f14984ca4dcfadfb216c3c24614c4a3a0ef",
+        "validation/programme_closure_acr1/figures/lunar_independent_disposal.pdf": "8230420bad30021716ff71a245cf2a6d8b972d06ea5eeebae71e1014dac1fbd1"
+      }
+    },
+    {
+      "evidence_class": "Computed scientific result with source-linked data",
+      "caption": "Eighteen native 30-day lunar release coasts with 20/40-degree gravity sensitivity and sampled altitude limits.",
+      "limitations": "Declared surrogate lunar host and mission; numerical results are distinct from provider acceptance or measured flight performance.",
+      "sources": {
+        "validation/programme_closure_acr1/build_report.py": "bcffc7780126794987c1cb648292df574c50f881838f6a364c210b994e67f4e9",
+        "validation/programme_closure_acr1/scientific.mplstyle": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+        "validation/programme_closure_acr1/LUNAR_NATIVE_RESULTS.json": "fc8495ff5f7f0fef1cbd20de01318f0d5b6d76c89a0e6a293b5a5a8961f86924"
+      },
+      "exports": {
+        "validation/programme_closure_acr1/figures/lunar_release_lifetime.svg": "dd4c402350516b3d056ca412c151ec324c662da3075b71f57e013f4fcad681ff",
+        "validation/programme_closure_acr1/figures/lunar_release_lifetime.png": "718c8b9ae3022c17c8016793e046570fd330c61f230269dbb8a082613b43ec0b",
+        "validation/programme_closure_acr1/figures/lunar_release_lifetime.pdf": "734a2d594afc2d677ac64dd30aac4dfa26fa166978151ce2f495e9987e125667"
+      }
+    },
+    {
+      "evidence_class": "Computed scientific result with source-linked data",
+      "caption": "Finite-host campaign mass, propellant, angular rate and matched release-policy histories.",
+      "limitations": "Declared surrogate lunar host and mission; numerical results are distinct from provider acceptance or measured flight performance.",
+      "sources": {
+        "validation/programme_closure_acr1/campaign_report.py": "3aa6356ffe1d6f1832cef806e4fc543bbf38228580faa3b2f603ce45ab49b26d",
+        "validation/programme_closure_acr1/scientific.mplstyle": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+        "validation/programme_closure_acr1/CAMPAIGN_RESULTS.json": "797643a8353341e18c9fc4b885396b1619ece4b6e0cf93dd41bc006f02f5fcb4",
+        "validation/programme_closure_acr1/campaign/T5_R20_searched.json": "c562a7a31e03c11c1a33d4b51d4e39fec1298ade770ed2c38e31de9fc3bdc0df",
+        "validation/programme_closure_acr1/CAMPAIGN_NATIVE_RESULTS.json": "a304f3b035480ff7f77be42970e7505c9be804dd09c61c0a1b827551047e1573",
+        "validation/programme_closure_acr1/CAMPAIGN_DISPOSAL_RESULTS.json": "1ef7d65acdc89cedad59a37f25c3eceb10755f8a73393eae46f77aeec8574971"
+      },
+      "exports": {
+        "validation/programme_closure_acr1/figures/lunar_campaign_resources.svg": "33f889c00a2b1fff8bf54d7240e8438a7f0e6bbcfbd741de51ae07bab13b5950",
+        "validation/programme_closure_acr1/figures/lunar_campaign_resources.png": "e3e5bcff449827d8a2a9b0e5d442b5a91fef6c96968eb024d08d619c0892380e",
+        "validation/programme_closure_acr1/figures/lunar_campaign_resources.pdf": "dae28580654634785bf4f182b7bb7ff182efff7588dcd8d06e483a6d2b16b65c"
+      }
+    },
+    {
+      "evidence_class": "Computed scientific result with source-linked data",
+      "caption": "Native release-model position/orientation refinement at common endpoints.",
+      "limitations": "Declared local history, contact model and surface subset; physical repeatability and complete host behavior require subsequent correlation.",
+      "sources": {
+        "validation/acr1_release_dynamics/summarize.py": "1856a9ecc664fe7b9cfb19d3cb329f54491e5cabe44c21ee9b00faa5f521e5fb",
+        "validation/acr1_release_dynamics/SUMMARY.json": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c",
+        "validation/acr1_release_dynamics/CAMPAIGN.json": "b375b2e58912f147a09c7a30ca38d1b63915d8828ff9c0912fa7f4f0e050d5e8",
+        "validation/acr1_release_dynamics/GEOMETRY_AND_INPUTS.json": "32b3492831b1232cf257bfdf46a05f3aace3eaf462e9f492787fc057ddd2e256",
+        "validation/acr1_release_dynamics/MANIFEST.json": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+      },
+      "exports": {
+        "validation/acr1_release_dynamics/REFINEMENT.png": "50b432563fcf77d27e4e9cf85e2e3bcc8a9dc2b59e213b6203912db3cafd25ac",
+        "validation/acr1_release_dynamics/REFINEMENT.pdf": "c3e7535bfcb6e5f052096d8677c688c1cb26c3971ce5515afc8ba8c89c1a5422"
+      }
+    },
+    {
+      "evidence_class": "Computed scientific result with source-linked data",
+      "caption": "Computed nominal and perturbed payload departure histories from native MuJoCo traces.",
+      "limitations": "Declared local history, contact model and surface subset; physical repeatability and complete host behavior require subsequent correlation.",
+      "sources": {
+        "validation/acr1_release_dynamics/summarize.py": "1856a9ecc664fe7b9cfb19d3cb329f54491e5cabe44c21ee9b00faa5f521e5fb",
+        "validation/acr1_release_dynamics/SUMMARY.json": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c",
+        "validation/acr1_release_dynamics/CAMPAIGN.json": "b375b2e58912f147a09c7a30ca38d1b63915d8828ff9c0912fa7f4f0e050d5e8",
+        "validation/acr1_release_dynamics/GEOMETRY_AND_INPUTS.json": "32b3492831b1232cf257bfdf46a05f3aace3eaf462e9f492787fc057ddd2e256",
+        "validation/acr1_release_dynamics/MANIFEST.json": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+      },
+      "exports": {
+        "validation/acr1_release_dynamics/DEPARTURE_HISTORIES.png": "e7170e079042fb527a23c8ab1b8f089c33686fe2dff9bf9cda99cc875f86ec4b",
+        "validation/acr1_release_dynamics/DEPARTURE_HISTORIES.pdf": "a4a1013c9591f7eb6370e4fbfe98c897fbf848408f1429f6052ff174aa39f172"
+      }
+    },
+    {
+      "evidence_class": "Computed scientific result with source-linked data",
+      "caption": "Actual native final poses plotted with the CAD-derived collision surfaces.",
+      "limitations": "Declared local history, contact model and surface subset; physical repeatability and complete host behavior require subsequent correlation.",
+      "sources": {
+        "validation/acr1_release_dynamics/summarize.py": "1856a9ecc664fe7b9cfb19d3cb329f54491e5cabe44c21ee9b00faa5f521e5fb",
+        "validation/acr1_release_dynamics/SUMMARY.json": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c",
+        "validation/acr1_release_dynamics/CAMPAIGN.json": "b375b2e58912f147a09c7a30ca38d1b63915d8828ff9c0912fa7f4f0e050d5e8",
+        "validation/acr1_release_dynamics/GEOMETRY_AND_INPUTS.json": "32b3492831b1232cf257bfdf46a05f3aace3eaf462e9f492787fc057ddd2e256",
+        "validation/acr1_release_dynamics/MANIFEST.json": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+      },
+      "exports": {
+        "validation/acr1_release_dynamics/NATIVE_POSE_CAPTURE.png": "188890c9a4f3757d5d4c878c53994dfa0dfd83cbb44b77785398f459ff2e760a"
+      }
+    },
+    {
+      "evidence_class": "CAD-derived engineering outline drawing",
+      "caption": "Dimensioned provisional one-period magnetic coupon fixture with controlled source dimensions and allocated supports.",
+      "limitations": "Provisional test fixture; no manufacturing, joint/load or physical-test release.",
+      "sources": {
+        "validation/acr1_first_test_package/build_fixture.py": "f67ad38d7d8e9aa3f46e8fce9acf3dc30c544a85165443aa74398c6ccb45d67d",
+        "validation/acr1_first_test_package/DEFINITION.json": "5fcb4a1d96ed814ccb3f2c0dc264f09d0901695cdca2809eb72341ce6eded34e",
+        "validation/acr1_first_test_package/geometry/GEOMETRY_CHECK.json": "6cf82f517dbf5fedf17610c4302db25934cd475acacd6d0e9a44e5b554e20798",
+        "validation/acr1_first_test_package/geometry/NEUTRAL_READBACK.json": "f9e51ab4ff675a30220a4262c09c8ea4a2de0a98d0c685f5a5ef00ec212d7ad7"
+      },
+      "exports": {
+        "validation/acr1_first_test_package/geometry/C01_fixture_drawing.svg": "40d0cf683e4574e23df337094a62aafb56d2346eb13ffe6012f4488be401b56b"
+      }
+    },
+    {
+      "evidence_class": "Computed thermal/electrical model output",
+      "caption": "Twenty-four-node temperature histories through the twelve-release campaign and one subsequent orbit.",
+      "limitations": "Declared radiation, material, heat-load and contact assumptions; physical source placement, regulated host interface and vacuum-joint correlation are separate requirements.",
+      "sources": {
+        "validation/acr1_thermal_environment/make_figures.py": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae",
+        "validation/acr1_thermal_environment/results/reference_1mps.json": "68f2b623da147a5efa05a55ba06caeb53615f812e47a0e948b65ffd219f7968e",
+        "validation/acr1_thermal_environment/results/hot_1mps.json": "5956114979a51bafdc7f136cc86eec7c501ef4e57f002d9f86f04520a2101e9e",
+        "validation/acr1_thermal_environment/THERMAL_CORRECTIONS.json": "ffd8acb81b6eb23dbf7f95dc0a59270b0c153c3a818fa705703a5d96a7a26639"
+      },
+      "exports": {
+        "validation/acr1_thermal_environment/figures/duty_temperatures.png": "fbef8c9948fa082b3f3cf3e142a815fd2525fbde325fe3adf9299032dfa096bb",
+        "validation/acr1_thermal_environment/figures/duty_temperatures.pdf": "155ed8412770cdb6b6086ffd925886386a36831d2897a2d9e3da3a4f7f490312",
+        "validation/acr1_thermal_environment/figures/duty_temperatures.svg": "ee5cf77925e7f52fb8567c2c290788a2b3b5e152b1fce8dd4f047095e6ec9601"
+      }
+    },
+    {
+      "evidence_class": "Computed thermal/electrical model output",
+      "caption": "Computed heat-path boundaries, refined operating candidates and their declared temperature allocations.",
+      "limitations": "Declared radiation, material, heat-load and contact assumptions; physical source placement, regulated host interface and vacuum-joint correlation are separate requirements.",
+      "sources": {
+        "validation/acr1_thermal_environment/make_figures.py": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae",
+        "validation/acr1_thermal_environment/THERMAL_CORRECTIONS.json": "ffd8acb81b6eb23dbf7f95dc0a59270b0c153c3a818fa705703a5d96a7a26639",
+        "validation/acr1_thermal_environment/NUMERICAL_VERIFICATION.json": "c4e54ceea96ded329e4f00f9f4db9311846118647aa21144b723e41cbb2c2589"
+      },
+      "exports": {
+        "validation/acr1_thermal_environment/figures/conductance_correction.png": "663eb88303a67b5225a2a8d1bac65b4b5f8afca128a861925a822f992662a2cb",
+        "validation/acr1_thermal_environment/figures/conductance_correction.pdf": "c0a5f4646407df0b79b5500d1f5c737e31893d517e5ea9606229edff2eb89fd8",
+        "validation/acr1_thermal_environment/figures/conductance_correction.svg": "7ba3e082dfd2fe99f8ad2d906cd92c95991d5b12839d0d5438fee80b621ddbe2"
+      }
+    },
+    {
+      "evidence_class": "Computed thermal/electrical model output",
+      "caption": "Declared thermal parameter sensitivities and numerical refinement of the operating-envelope study.",
+      "limitations": "Declared radiation, material, heat-load and contact assumptions; physical source placement, regulated host interface and vacuum-joint correlation are separate requirements.",
+      "sources": {
+        "validation/acr1_thermal_environment/make_figures.py": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae",
+        "validation/acr1_thermal_environment/THERMAL_RESULTS.json": "d9f5962a8c3e0968da77b2b2e5c6b6d036b2ebf769e20fe4d13f5962c2366965",
+        "validation/acr1_thermal_environment/THERMAL_INPUTS.json": "1d608b4b301acfac976ecd830516b0b3918d4e8465fd718a5671e6316dc628a9"
+      },
+      "exports": {
+        "validation/acr1_thermal_environment/figures/uncertainty_sensitivity.png": "79978b932477b18b532d318b16f4a2eb4ad36bafff83c766cf1765a9d2f7c34d",
+        "validation/acr1_thermal_environment/figures/uncertainty_sensitivity.pdf": "df00a820a190a9afb5db2f63ab85f829f252ef5fc2c9c9957604264901edf066",
+        "validation/acr1_thermal_environment/figures/uncertainty_sensitivity.svg": "ffd7dedda22fe7723ce56b45faa4a20800587e8ba6b01f64a2b1b017bcd8a858"
+      }
+    },
+    {
+      "evidence_class": "Computed thermal/electrical model output",
+      "caption": "Eighteen source-coupled shot cases using the separately identified 78.4 V voltage configuration.",
+      "limitations": "Declared radiation, material, heat-load and contact assumptions; physical source placement, regulated host interface and vacuum-joint correlation are separate requirements.",
+      "sources": {
+        "validation/acr1_thermal_environment/make_figures.py": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae",
+        "validation/acr1_thermal_environment/DERATED_SOURCE_RESULTS.json": "a8e2f6bf1da5bcd667c5f7d2ae8f52bc8d3e2bccaaf08e06c781ef1eaadaf8a7",
+        "validation/acr1_thermal_environment/inputs/COUPLED_SHOT.json": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+      },
+      "exports": {
+        "validation/acr1_thermal_environment/figures/derated_source.png": "2b5502d4fe91122937fdf5276b3c866a202e5a9bfd5317b2f1b558d26eca3a86",
+        "validation/acr1_thermal_environment/figures/derated_source.pdf": "6968a392bbbb50066176041a660dcac307aac3489df2da2658c9cc2f5a772ae1",
+        "validation/acr1_thermal_environment/figures/derated_source.svg": "7c1af617d46877df52ce3c2c8516c6ea45936ed620afc223a48d69ed467ae5c5"
       }
     }
   ]

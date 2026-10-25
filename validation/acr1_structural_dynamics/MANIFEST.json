@@ -1,0 +1,164 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "study_id": "SD01",
+  "date": "2026-10-25",
+  "role": "Separate follow-on conditional structural/current-normal evidence; does not supersede frozen engineering/static/ED1 captures",
+  "files": {
+    "CURRENT_NORMAL_FORCE.json": {
+      "bytes": 16768,
+      "sha256": "142ebc00b101cd78668af08a4d9950afd2a4f64fa7b04bbd37eb875329b4a2af"
+    },
+    "FIGURE_MANIFEST.json": {
+      "bytes": 3556,
+      "sha256": "2654de01cbfe5c2eb7a893f16686da8057c9e41c5d1e078f321b96e664bacd85"
+    },
+    "FINITE_CASES.csv": {
+      "bytes": 11973,
+      "sha256": "60ceb3d3504ac5579b0e80fe18f08d2f8649e40405fe056c8cda441f113aa016"
+    },
+    "HOTSPOT_SELECTION.json": {
+      "bytes": 302,
+      "sha256": "014d21eae132fa3e5f8aa1bf375ff8fb03e1042c041a836014cc16d1e0e992f5"
+    },
+    "MODAL_BASIS.npz": {
+      "bytes": 7935887,
+      "sha256": "aebfb404abe776352bdfc54cb4f25b8fabcbb27fbcbd2d973f5b558c0600cb7d"
+    },
+    "MODAL_INPUT.json": {
+      "bytes": 56139,
+      "sha256": "d7f03fa87250289f30b80b48725115b3b5db2ba8f61dcdc5a9defddb61752e78"
+    },
+    "MODAL_RESULTS.json": {
+      "bytes": 3459,
+      "sha256": "3a3ba981e7a5e3e770a217fe4fadb6dbd1bc4830ec0b3379569a06a9a65ef245"
+    },
+    "PHYSICS_LIMIT_COMPARISON.json": {
+      "bytes": 766,
+      "sha256": "7e36a940aa5a0a5f6995cf4aed3e1fe07c52baebc3794a57fd693361d363675a"
+    },
+    "README.md": {
+      "bytes": 6111,
+      "sha256": "2857c46fe5a746f281834cbd3f59b3eb9fb2d70ea4bcf12c49b80fce7336024b"
+    },
+    "RESPONSE_CURVES.npz": {
+      "bytes": 696600,
+      "sha256": "60ece77f808244b883d1d96a4e6ca4973f64894c29afbccdb844a34e3aaeb8f3"
+    },
+    "RESPONSE_RESULTS.json": {
+      "bytes": 52947,
+      "sha256": "4513befa31e5371f95966b19485b3e3955f8108ed6a1d863dad2f38e0c28789a"
+    },
+    "SOURCE_SHOT_FORCE.csv": {
+      "bytes": 40239,
+      "sha256": "dc21ede123ffb83d03d8e1de83182ee6ce83c61f871d42a3842de2007ee63148"
+    },
+    "STRUCTURAL_DYNAMICS_REPORT.md": {
+      "bytes": 10362,
+      "sha256": "927f1996911640098ce5843388157befe1e338b99bbc2209f95af5e9555b6481"
+    },
+    "STRUCTURAL_DYNAMICS_REPORT.pdf": {
+      "bytes": 715199,
+      "sha256": "994f800d07f442562a8187f8201dc2b6a0d546ff5d737ba4d982399d2965c79a"
+    },
+    "check_capture.py": {
+      "bytes": 4094,
+      "sha256": "89be384b98e79c88dcac20e5c62aaee78d9898974e1017ed99ae5db56803ace5"
+    },
+    "collect_modes.py": {
+      "bytes": 8611,
+      "sha256": "28d634c91cef8cc57b24ce0b55b47874092cbdbdc2c6ddb70224e91bcf7220fc"
+    },
+    "current_normal_force.py": {
+      "bytes": 7771,
+      "sha256": "6fecc303596af0b9d070a4ef06fae6da2c76e1c9c6c6607f2e83c6dedbb236cc"
+    },
+    "figures/SD01_current_normal.pdf": {
+      "bytes": 20842,
+      "sha256": "d41e061fbbc2c2582933bce79074824e83ce9f7eece7d5d52674dc28d377261d"
+    },
+    "figures/SD01_current_normal.png": {
+      "bytes": 171092,
+      "sha256": "97333daff0c4d9f9b8812d60c813bdbbbfee9d0603f82fb2739878450aa01c8e"
+    },
+    "figures/SD01_current_normal.svg": {
+      "bytes": 24528,
+      "sha256": "f3467c2f34f72f035e242e7274c909519fe0c57eaab00addf243a89400032154"
+    },
+    "figures/SD01_finite_response.pdf": {
+      "bytes": 119894,
+      "sha256": "3e278cc45338676157ce5e318b7589c374d96c03b9b3afc3c8fd9269795386d5"
+    },
+    "figures/SD01_finite_response.png": {
+      "bytes": 274724,
+      "sha256": "2c4d3aa5f7379b9b9db5c7631d8657b6df186ccde5c4a292d2e9bc54d0ae50b9"
+    },
+    "figures/SD01_finite_response.svg": {
+      "bytes": 273417,
+      "sha256": "cd00b1ec147d4e4bbce63586e6b86fa76ef28ea5bf600899947742eb94c276bd"
+    },
+    "figures/SD01_harmonic_limit.pdf": {
+      "bytes": 16936,
+      "sha256": "48b516080f8fd28434d989f0bb1238709b9e4b4f6c01945afadf4310a1b3726a"
+    },
+    "figures/SD01_harmonic_limit.png": {
+      "bytes": 117392,
+      "sha256": "6219c96c36713b5e319dcedff38e19a78fecce65777993cfdbb6675d323427a0"
+    },
+    "figures/SD01_harmonic_limit.svg": {
+      "bytes": 22128,
+      "sha256": "ecf67e14696b5b81aafff71cbeff1ad28c568aa959d76e8e3d572a0c8a92268f"
+    },
+    "figures/SD01_modes.pdf": {
+      "bytes": 63338,
+      "sha256": "56558dda880cfc3bbb2bc0d6a3bdebb0d42ec7791a2d8c8c42d045f2c7fd675b"
+    },
+    "figures/SD01_modes.png": {
+      "bytes": 171725,
+      "sha256": "5dd3ecdc053b61cc8b49b99a30066d46adc726c325713cc9bd42dd43c0b1e7be"
+    },
+    "figures/SD01_modes.svg": {
+      "bytes": 194050,
+      "sha256": "26a593ce701876be64b7e2e59b72ac01c6c9a7ae01f1c2b8256978d2e9883a36"
+    },
+    "make_report.py": {
+      "bytes": 18657,
+      "sha256": "03fdd6e2dfb5461ccbdf8142476fcf75099d672bfe9c966b6ce85d9d4fd0c5fe"
+    },
+    "prepare_modal.py": {
+      "bytes": 3443,
+      "sha256": "d4a5988180064134e1dda6919c8b70fd5588f5855bcf20d7bbd57c44e96d5826"
+    },
+    "requirements.txt": {
+      "bytes": 151,
+      "sha256": "d0ad1b89b4d015bb9c442400822f9c198603400452656d4c3e02f2fbc5a021b6"
+    },
+    "respond.py": {
+      "bytes": 10225,
+      "sha256": "f8010339cedb43aafd93b72a0d107a392952f95796d2b5edab8f7a162202cf6d"
+    },
+    "runs/free_free/SOLVER_STDOUT.txt": {
+      "bytes": 6240,
+      "sha256": "532d51e4abd7fbd49ee442ae7554c1ebcbd5321e72f60ba55003f0ede75a4cb5"
+    },
+    "runs/free_free/modal.dat": {
+      "bytes": 12815234,
+      "sha256": "462cb42878c92b8fc8ef2ce4302e826ebe41dd2758f9f9e61aef4172f69b5a1e"
+    },
+    "runs/free_free/modal.frd": {
+      "bytes": 13899252,
+      "sha256": "219e1bca7931bd565be8f6fe04af13cc90e66186d15d823fc4029ac5346bb3bc"
+    },
+    "runs/free_free/modal.inp": {
+      "bytes": 9967526,
+      "sha256": "dfef2b99b3b7c48a23eb066b3357a33c4284fa031285b6cb76361eeebdfe9d99"
+    },
+    "runs/free_free/modal.sta": {
+      "bytes": 98,
+      "sha256": "20946efba93047e4092386fb9fedd29e43961806698459a19066356660f2e1a9"
+    },
+    "scientific.mplstyle": {
+      "bytes": 512,
+      "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+    }
+  }
+}

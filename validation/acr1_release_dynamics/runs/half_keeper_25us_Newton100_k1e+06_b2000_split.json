@@ -1,0 +1,137 @@
+{
+  "case": {
+    "id": "half_keeper",
+    "mu": 0.1,
+    "keeper_shift_mm": 6
+  },
+  "dt_s": 2.5e-05,
+  "solver": "Newton",
+  "iterations": 100,
+  "direct_stiffness_s_minus2": 1000000.0,
+  "direct_damping_s_minus1": 2000,
+  "constant_solimp": 0.95,
+  "representation": "split",
+  "native_version": "3.3.7",
+  "tstart_s": 0.8659650000000001,
+  "duration_s": 0.35000000000000003,
+  "tend_s": 1.2159649999997797,
+  "source_release_s": 0.8669650000014459,
+  "source_stop_s": 1.0477800000026305,
+  "source_release_inertial_kick_m_s": 2.9269191513942334,
+  "payload_final_position_m": [
+    2.0967659724508567,
+    0.00029823766869408353,
+    0.09701722539939867
+  ],
+  "payload_final_quaternion_wxyz": [
+    0.9996287827560837,
+    0.0004403137209940434,
+    0.0031443760456333148,
+    0.027059484634821267
+  ],
+  "payload_final_velocity_m_s": [
+    0.6744843203669848,
+    -9.28936304678972e-07,
+    2.0377881864564326e-07
+  ],
+  "payload_final_omega_deg_s": [
+    -1.7819823396149305e-05,
+    -0.0007024876142532355,
+    -0.0008565554982787352
+  ],
+  "orientation_change_deg": 3.122447411083479,
+  "payload_inertial_kick_difference_m_s": -2.252434831027249,
+  "final_payload_aft_relative_carrier_m": 0.06580666786949216,
+  "rear_contact_first_s": 0.8659900000000001,
+  "rear_contact_last_s": 0.8669400000000022,
+  "rear_unload_events_s": [
+    0.8669650000000022
+  ],
+  "rear_recontact_events_s": [],
+  "contact_absolute_impulse_by_group_Ns": {
+    "rear": 0.012488303539924833,
+    "floor": 1.2663425316278576,
+    "keeper": 8.92811241361972,
+    "cap": 1.289618688193724,
+    "other": 1.7006475369772895
+  },
+  "post_source_release_absolute_impulse_by_group_Ns": {
+    "keeper": 8.92811241361972,
+    "floor": 1.2662756797615096,
+    "cap": 1.289618688193724,
+    "other": 1.7006475369772895
+  },
+  "max_overlap_m": 7.112733159949996e-05,
+  "peak_contact_force_N_unrated": 927.8386146286136,
+  "initial_overlap_m": 0.0,
+  "initial_gap_adjustment_m": {
+    "x": 0,
+    "z": 0
+  },
+  "conservation": {
+    "total_x_momentum_initial_kg_m_s": 1.7763568394002505e-15,
+    "total_x_momentum_residual_kg_m_s": -7.904787935331115e-14,
+    "payload_linear_impulse_residual_Ns": [
+      -8.881784197001252e-15,
+      -5.727001514623138e-17,
+      -1.1966775599690348e-17
+    ],
+    "payload_angular_impulse_residual_Nms": [
+      4.287730073120548e-09,
+      -4.040655292278534e-09,
+      6.4356349397274036e-09
+    ],
+    "native_generalized_vs_contact_force_max_N": 4.696037092872503e-13,
+    "kinetic_energy_change_J": -71.04007742318932,
+    "motor_work_J": -70.69535881869177,
+    "kinetic_minus_motor_work_J": -0.3447186044975439,
+    "energy_scope": "Difference includes unmeasured contact regularization,damping/friction and integration error;not automatically numerical error."
+  },
+  "solver_max_iterations_used": 8,
+  "native_warning_increments": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "wall_s": 17.327419674998964,
+  "limitations": [
+    "Open-loop source force replay,not perturbed electrical feedback",
+    "Ideal host/carrier X guides;no host attitude/side compliance",
+    "Uniform4kg340.5\u00d7100\u00d7100mm payload surrogate",
+    "Contact regularization/friction/damping unmeasured sensitivities",
+    "Final1ms before source release through arrest and0.35s window;powered return and feeder capture excluded",
+    "Primitive collision surfaces are a documented CAD subset;no complete manufactured model"
+  ],
+  "solver_full_budget_steps": 0,
+  "max_native_termination_gradient": 1.3437624541877827e-08,
+  "payload_initial_position_m": [
+    1.6998101589744972,
+    0.0,
+    0.096
+  ],
+  "payload_initial_velocity_m_s": [
+    2.92379474222315,
+    0.0,
+    0.0
+  ],
+  "payload_initial_omega_deg_s": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "freeflight_position_residual_m": [
+    -0.626372346301743,
+    0.00029823766869408353,
+    0.0010172253993986635
+  ],
+  "exact_inertia_kg_m2": [
+    0.006666666666666668,
+    0.04198008333333334,
+    0.04198008333333334
+  ]
+}

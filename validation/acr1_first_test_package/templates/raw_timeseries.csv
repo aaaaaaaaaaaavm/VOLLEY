@@ -1,0 +1,1 @@
+run_id,test_id,time_s,source_voltage_V,signed_current_A,source_energy_integral_J,force_X_N,field_normal_T,carrier_aft_X_mm,payload_aft_X_mm,keeper_A_stroke_mm,keeper_B_stroke_mm,rear_contact_force_N,support_drag_N,brake_force_N,temperature_C,launch_permission,proof_flags,observed_event

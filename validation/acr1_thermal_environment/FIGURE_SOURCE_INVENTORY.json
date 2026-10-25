@@ -1,0 +1,90 @@
+[
+  {
+    "figure": "duty_temperatures",
+    "description": "Actual24-node histories; release campaign ends90min, followed byoneorbit. Each source limit applies only tosourcecells,not othermaterials.",
+    "source_script": "make_figures.py",
+    "source_sha256": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae",
+    "inputs": [
+      {
+        "path": "results/reference_1mps.json",
+        "sha256": "68f2b623da147a5efa05a55ba06caeb53615f812e47a0e948b65ffd219f7968e"
+      },
+      {
+        "path": "results/hot_1mps.json",
+        "sha256": "5956114979a51bafdc7f136cc86eec7c501ef4e57f002d9f86f04520a2101e9e"
+      },
+      {
+        "path": "THERMAL_CORRECTIONS.json",
+        "sha256": "ffd8acb81b6eb23dbf7f95dc0a59270b0c153c3a818fa705703a5d96a7a26639"
+      }
+    ],
+    "files": [
+      "figures/duty_temperatures.png",
+      "figures/duty_temperatures.pdf",
+      "figures/duty_temperatures.svg"
+    ]
+  },
+  {
+    "figure": "conductance_correction",
+    "description": "Actual bounded solver trials andrefinement; interpolated lines join sampled evaluations anddo notextend thetested envelope.",
+    "source_script": "make_figures.py",
+    "source_sha256": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae",
+    "inputs": [
+      {
+        "path": "THERMAL_CORRECTIONS.json",
+        "sha256": "ffd8acb81b6eb23dbf7f95dc0a59270b0c153c3a818fa705703a5d96a7a26639"
+      },
+      {
+        "path": "NUMERICAL_VERIFICATION.json",
+        "sha256": "c4e54ceea96ded329e4f00f9f4db9311846118647aa21144b723e41cbb2c2589"
+      }
+    ],
+    "files": [
+      "figures/conductance_correction.png",
+      "figures/conductance_correction.pdf",
+      "figures/conductance_correction.svg"
+    ]
+  },
+  {
+    "figure": "uncertainty_sensitivity",
+    "description": "Latin-hypercube64designpoints,not a probability orreliability claim. The sampledset missesthe deterministichotcorner. Association isnot causalvariance decomposition; unusedcase-to-sinkparameter hasno networkeffect.",
+    "source_script": "make_figures.py",
+    "source_sha256": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae",
+    "inputs": [
+      {
+        "path": "THERMAL_RESULTS.json",
+        "sha256": "d9f5962a8c3e0968da77b2b2e5c6b6d036b2ebf769e20fe4d13f5962c2366965"
+      },
+      {
+        "path": "THERMAL_INPUTS.json",
+        "sha256": "1d608b4b301acfac976ecd830516b0b3918d4e8465fd718a5671e6316dc628a9"
+      }
+    ],
+    "files": [
+      "figures/uncertainty_sensitivity.png",
+      "figures/uncertainty_sensitivity.pdf",
+      "figures/uncertainty_sensitivity.svg"
+    ]
+  },
+  {
+    "figure": "derated_source",
+    "description": "All18unchanged-production cases; exact actual heatledgers used inhot thermalvariant. The30mV/cell margin is a controlallocation requiring32-group sensing andphysical transient verification.",
+    "source_script": "make_figures.py",
+    "source_sha256": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae",
+    "inputs": [
+      {
+        "path": "DERATED_SOURCE_RESULTS.json",
+        "sha256": "a8e2f6bf1da5bcd667c5f7d2ae8f52bc8d3e2bccaaf08e06c781ef1eaadaf8a7"
+      },
+      {
+        "path": "inputs/COUPLED_SHOT.json",
+        "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+      }
+    ],
+    "files": [
+      "figures/derated_source.png",
+      "figures/derated_source.pdf",
+      "figures/derated_source.svg"
+    ]
+  }
+]

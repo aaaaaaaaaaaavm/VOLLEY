@@ -1,0 +1,54 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "study": "SD01",
+  "sources": {
+    "MODAL_RESULTS.json": "3a3ba981e7a5e3e770a217fe4fadb6dbd1bc4830ec0b3379569a06a9a65ef245",
+    "MODAL_BASIS.npz": "aebfb404abe776352bdfc54cb4f25b8fabcbb27fbcbd2d973f5b558c0600cb7d",
+    "RESPONSE_RESULTS.json": "4513befa31e5371f95966b19485b3e3955f8108ed6a1d863dad2f38e0c28789a",
+    "RESPONSE_CURVES.npz": "60ece77f808244b883d1d96a4e6ca4973f64894c29afbccdb844a34e3aaeb8f3",
+    "CURRENT_NORMAL_FORCE.json": "142ebc00b101cd78668af08a4d9950afd2a4f64fa7b04bbd37eb875329b4a2af",
+    "make_report.py": "03fdd6e2dfb5461ccbdf8142476fcf75099d672bfe9c966b6ce85d9d4fd0c5fe"
+  },
+  "figures": [
+    {
+      "id": "SD01_modes",
+      "caption": "Forty actual free-free elastic modes. The face map is a numerical native modal field, normalized for display; no physical amplitude is implied.",
+      "evidence_class": "Model output from captured native modes and declared forcing; not hardware or GUI evidence",
+      "exports": {
+        "figures/SD01_modes.png": "5dd3ecdc053b61cc8b49b99a30066d46adc726c325713cc9bd42dd43c0b1e7be",
+        "figures/SD01_modes.pdf": "56558dda880cfc3bbb2bc0d6a3bdebb0d42ec7791a2d8c8c42d045f2c7fd675b",
+        "figures/SD01_modes.svg": "26a593ce701876be64b7e2e59b72ac01c6c9a7ae01f1c2b8256978d2e9883a36"
+      }
+    },
+    {
+      "id": "SD01_finite_response",
+      "caption": "Finite acceleration/release/brake history with explicit normal ripple. Paired margin retains original static/thermal/tolerance allocations and an additional modal residual reserve; individual centring/stator dynamics remain conditional.",
+      "evidence_class": "Model output from captured native modes and declared forcing; not hardware or GUI evidence",
+      "exports": {
+        "figures/SD01_finite_response.png": "2c4d3aa5f7379b9b9db5c7631d8657b6df186ccde5c4a292d2e9bc54d0ae50b9",
+        "figures/SD01_finite_response.pdf": "3e278cc45338676157ce5e318b7589c374d96c03b9b3afc3c8fd9269795386d5",
+        "figures/SD01_finite_response.svg": "cd00b1ec147d4e4bbce63586e6b86fa76ef28ea5bf600899947742eb94c276bd"
+      }
+    },
+    {
+      "id": "SD01_harmonic_limit",
+      "caption": "A sustained harmonic is separate from the finite chirp. Resonance gives a source-dependent normal-force design limit; the assumed damping and actual assembly spectrum are unmeasured.",
+      "evidence_class": "Model output from captured native modes and declared forcing; not hardware or GUI evidence",
+      "exports": {
+        "figures/SD01_harmonic_limit.png": "6219c96c36713b5e319dcedff38e19a78fecce65777993cfdbb6675d323427a0",
+        "figures/SD01_harmonic_limit.pdf": "48b516080f8fd28434d989f0bb1238709b9e4b4f6c01945afadf4310a1b3726a",
+        "figures/SD01_harmonic_limit.svg": "ecf67e14696b5b81aafff71cbeff1ad28c568aa959d76e8e3d572a0c8a92268f"
+      }
+    },
+    {
+      "id": "SD01_current_normal",
+      "caption": "Per-array reciprocal J\u00d7B force with PM top/bottom fields separated. Representative source stations only; DC pinch is excluded from these alternating current-force curves.",
+      "evidence_class": "Model output from captured native modes and declared forcing; not hardware or GUI evidence",
+      "exports": {
+        "figures/SD01_current_normal.png": "97333daff0c4d9f9b8812d60c813bdbbbfee9d0603f82fb2739878450aa01c8e",
+        "figures/SD01_current_normal.pdf": "d41e061fbbc2c2582933bce79074824e83ce9f7eece7d5d52674dc28d377261d",
+        "figures/SD01_current_normal.svg": "f3467c2f34f72f035e242e7274c909519fe0c57eaab00addf243a89400032154"
+      }
+    }
+  ]
+}

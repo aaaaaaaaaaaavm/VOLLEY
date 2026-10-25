@@ -1,0 +1,40 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "phase": "A",
+  "method": "Linear tetrahedral DC conduction FEM",
+  "input_step_sha256": "b10c2306b947dfa7d65022e8959f76e2ca95ff7bac17786a8e4002755a18864b",
+  "model_sha256": "a980a863d9613ca913564f2d83d7fc834865a3c31a78fc70a75d43d994705d40",
+  "interface_sha256": "1315af372b7e984231e5cfb07866b1ac94af5519aed16e1b53f05ca6b42e16dc",
+  "gmsh_version": "4.13.1",
+  "max_mesh_size_mm": 2.0,
+  "nodes": 111164,
+  "elements": 342741,
+  "connected_mesh_components": 1,
+  "terminal_faces": [
+    [
+      997
+    ],
+    [
+      7
+    ]
+  ],
+  "resistance_ohm_at20C": 0.0056954747953368735,
+  "current_at1V_A": 175.57798707471102,
+  "ground_current_A": -175.5779870685571,
+  "energy_at1V_W": 175.57798707331875,
+  "current_balance_relative_error": 3.5049526833175e-11,
+  "energy_balance_relative_error": 7.929615103545646e-12,
+  "copper_volume_m3": 0.00041479899999999977,
+  "resistivity_ohm_m": 1.7e-08,
+  "potential_range_V": [
+    0.0,
+    1.0
+  ],
+  "wall_seconds": 31.927864590000354,
+  "limitations": [
+    "Uniform copper resistivity and perfect continuous CAD joints",
+    "DC only; no skin/proximity/eddy-current or temperature coupling",
+    "Zero-radius corner peak current densities require mesh/fillet interpretation",
+    "Phase-A result cannot silently be assigned to other phases without a geometry check"
+  ]
+}

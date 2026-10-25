@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "path_base": "repository_root",
+  "page": "docs/evidence.html",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "broken": [],
+      "supplements": 2,
+      "altMissing": 0
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "broken": [],
+      "supplements": 2,
+      "altMissing": 0
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "overflow": false,
+      "broken": [],
+      "supplements": 2,
+      "altMissing": 0
+    }
+  ],
+  "sourceDocumentTargets": [
+    {
+      "path": "docs/ACR1_STRUCTURAL_DYNAMICS.md",
+      "exists": true
+    },
+    {
+      "path": "docs/ACR1_RELEASE_DYNAMICS.md",
+      "exists": true
+    },
+    {
+      "path": "docs/ACR1_THERMAL_ENVIRONMENT.md",
+      "exists": true
+    },
+    {
+      "path": "docs/PROGRAMME_STUDIES_ACR1.md",
+      "exists": true
+    },
+    {
+      "path": "docs/ACR1_FIRST_TEST_PACKAGE.md",
+      "exists": true
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/visual-source/supplement-qa/evidence-desktop.png",
+      "sha256": "fd4e1f69d9fb956baacd38babbfbd393a6706c55f539696cec1ee910f15df9e1",
+      "evidence_class": "actual Chromium changed-section capture"
+    },
+    {
+      "path": "docs/visual-source/supplement-qa/evidence-tablet.png",
+      "sha256": "a2710e7bd6b67702103cf1bc1936e7969a036fedf86c2d712a8a97c180190989",
+      "evidence_class": "actual Chromium changed-section capture"
+    },
+    {
+      "path": "docs/visual-source/supplement-qa/evidence-mobile.png",
+      "sha256": "a1a2296b0957366ad18765498424a368cd9333655c51f653d4d031de54eb7146",
+      "evidence_class": "actual Chromium changed-section capture"
+    }
+  ]
+}

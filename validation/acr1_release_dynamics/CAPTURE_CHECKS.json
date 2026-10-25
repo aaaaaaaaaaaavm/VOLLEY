@@ -1,0 +1,101 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "date_utc": "2026-10-25",
+  "adopted_runs": 42,
+  "core_source_pins": [
+    {
+      "path": "validation/acr1/cad/build_acr1.py",
+      "sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+      "current_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+      "unchanged": true
+    },
+    {
+      "path": "validation/acr1/cad/cradle_acr1.py",
+      "sha256": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+      "current_sha256": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+      "unchanged": true
+    },
+    {
+      "path": "validation/acr1/cad/sled_latches.py",
+      "sha256": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+      "current_sha256": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+      "unchanged": true
+    },
+    {
+      "path": "validation/acr1/cad/PARAMETERS.json",
+      "sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+      "current_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+      "unchanged": true
+    },
+    {
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+      "sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+      "current_sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+      "unchanged": true
+    },
+    {
+      "path": "validation/acr1/analysis/coupled_shot.py",
+      "sha256": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155",
+      "current_sha256": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155",
+      "unchanged": true
+    },
+    {
+      "path": "validation/acr1/analysis/DESIGN_BUDGETS.json",
+      "sha256": "e904380c58f56397bc75d2bba0104a63d52a9b118e1f0f08d52073dddddb1b5d",
+      "current_sha256": "e904380c58f56397bc75d2bba0104a63d52a9b118e1f0f08d52073dddddb1b5d",
+      "unchanged": true
+    },
+    {
+      "path": "validation/acr1/verification/COUPLED_SHOT_REVIEW.json",
+      "sha256": "8beb07acd3b2e82c4d41c5172c8b70820cb08ad362e20bf0dea47972291552d2",
+      "current_sha256": "8beb07acd3b2e82c4d41c5172c8b70820cb08ad362e20bf0dea47972291552d2",
+      "unchanged": true
+    }
+  ],
+  "source_replay_declared_checks_pass": true,
+  "JSON_and_local_links_valid": true,
+  "native_warning_count": 0,
+  "solver_iteration_budget_exhaustions": 1,
+  "CG_fault_orientation_reference_screen_pass": false,
+  "full_P3_BB_complete": false,
+  "physical_measurements": false,
+  "figures": [
+    {
+      "path": "REFINEMENT.png",
+      "pixels": [
+        1980,
+        756
+      ],
+      "format_valid": true,
+      "visually_inspected": true,
+      "sha256": "50b432563fcf77d27e4e9cf85e2e3bcc8a9dc2b59e213b6203912db3cafd25ac"
+    },
+    {
+      "path": "DEPARTURE_HISTORIES.png",
+      "pixels": [
+        1800,
+        1260
+      ],
+      "format_valid": true,
+      "visually_inspected": true,
+      "sha256": "e7170e079042fb527a23c8ab1b8f089c33686fe2dff9bf9cda99cc875f86ec4b"
+    },
+    {
+      "path": "NATIVE_POSE_CAPTURE.png",
+      "pixels": [
+        2160,
+        900
+      ],
+      "format_valid": true,
+      "visually_inspected": true,
+      "sha256": "188890c9a4f3757d5d4c878c53994dfa0dfd83cbb44b77785398f459ff2e760a"
+    }
+  ],
+  "package_local_checker": {
+    "path": "check_capture.py",
+    "runtime": "stdlib and NumPy;no MuJoCo",
+    "result": "PASS",
+    "scope": "Exact publish set and source identities;dense source work balance;raw freeflight conservation;21 native endpoint refinements;reported contact diagnostics reaggregation",
+    "limitation": "Per-step native contact wrenches unavailable;full contact balance not independently rebuilt"
+  }
+}

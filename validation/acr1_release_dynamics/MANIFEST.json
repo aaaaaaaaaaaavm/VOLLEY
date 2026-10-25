@@ -1,0 +1,1166 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "date_utc": "2026-10-25",
+  "publish_set": "Exact scientific source/data/figures and labeled exploratory history;no engine binaries,scratch or build logs",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "CAMPAIGN.json",
+      "bytes": 177986,
+      "sha256": "b375b2e58912f147a09c7a30ca38d1b63915d8828ff9c0912fa7f4f0e050d5e8"
+    },
+    {
+      "path": "CAPTURE_CHECKS.json",
+      "bytes": 3769,
+      "sha256": "f8deef6de04ac8a3847ff39163ed087396f730b830a7a491e7ba318296353617"
+    },
+    {
+      "path": "DEPARTURE_HISTORIES.pdf",
+      "bytes": 20190,
+      "sha256": "a4a1013c9591f7eb6370e4fbfe98c897fbf848408f1429f6052ff174aa39f172"
+    },
+    {
+      "path": "DEPARTURE_HISTORIES.png",
+      "bytes": 121581,
+      "sha256": "e7170e079042fb527a23c8ab1b8f089c33686fe2dff9bf9cda99cc875f86ec4b"
+    },
+    {
+      "path": "GEOMETRY_AND_INPUTS.json",
+      "bytes": 17494,
+      "sha256": "32b3492831b1232cf257bfdf46a05f3aace3eaf462e9f492787fc057ddd2e256"
+    },
+    {
+      "path": "NATIVE_POSE_CAPTURE.png",
+      "bytes": 301530,
+      "sha256": "188890c9a4f3757d5d4c878c53994dfa0dfd83cbb44b77785398f459ff2e760a"
+    },
+    {
+      "path": "PHYSICAL_TEST_SPECIFICATION.md",
+      "bytes": 4571,
+      "sha256": "fe10ea64060483d40b2b7afbf701d85052b4e2dc78bf1683f4ca9b5d75f789de"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 4918,
+      "sha256": "d17711739236c24fce7fa10fa872b7471eceb1f5e1a8a28eae284236ae91fd33"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3305,
+      "sha256": "91aa54a6de32a168ad61f44cdbd09ff8ed483198631191bb15c2d8fdb4a5cc56"
+    },
+    {
+      "path": "REFINEMENT.csv",
+      "bytes": 2272,
+      "sha256": "d66e7ba87f6fc623d82b7ce90d2fd9a6fba231a68e1635a92c9d5982aa6b4b52"
+    },
+    {
+      "path": "REFINEMENT.pdf",
+      "bytes": 24958,
+      "sha256": "c3e7535bfcb6e5f052096d8677c688c1cb26c3971ce5515afc8ba8c89c1a5422"
+    },
+    {
+      "path": "REFINEMENT.png",
+      "bytes": 115835,
+      "sha256": "50b432563fcf77d27e4e9cf85e2e3bcc8a9dc2b59e213b6203912db3cafd25ac"
+    },
+    {
+      "path": "RESULTS.csv",
+      "bytes": 9285,
+      "sha256": "3a3e900bf11f0729cac00c8ca61fa5d97bb516832693f856c60fe2597cbf4c08"
+    },
+    {
+      "path": "SOFTWARE_ENVIRONMENT.json",
+      "bytes": 502,
+      "sha256": "69f04dbec900766858b5daec8bf6dc068900876261fc9c4d5ed84cee24837620"
+    },
+    {
+      "path": "SOLVER_AND_CONTACT_SENSITIVITY.csv",
+      "bytes": 1018,
+      "sha256": "e0b2d9fbdeebd727b88d703454a5c46441ff3d986eec432d604f631108862cb5"
+    },
+    {
+      "path": "SOURCE_REPLAY.json",
+      "bytes": 6458,
+      "sha256": "8c6808f11b71382148aa3f1155fdf76e509469cd773fa3b1f6084eb1c63718df"
+    },
+    {
+      "path": "SUMMARY.json",
+      "bytes": 23061,
+      "sha256": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c"
+    },
+    {
+      "path": "campaign.log",
+      "bytes": 6943,
+      "sha256": "ee3635df77cc74cac985494391281ee106c111e5767fd8639f6cbf94d2a709e7"
+    },
+    {
+      "path": "check_capture.py",
+      "bytes": 13708,
+      "sha256": "51a1292d3fc2058a0fc4cd6ce61c9adbdb0120e1b46feaeb1ffd89335a92c776"
+    },
+    {
+      "path": "extract_source.py",
+      "bytes": 1965,
+      "sha256": "82ab5da3e384e55d3a774c0234dfdd3ecd7f20c6d60f53ecdf26611a521e481c"
+    },
+    {
+      "path": "history/INITIAL_SURFACE_SUBSET_MATRIX_NOT_ADOPTED.json",
+      "bytes": 105268,
+      "sha256": "87fadc2694a219608d81455c891795e72f9281cfb582d06742a390013019abca"
+    },
+    {
+      "path": "history/README.md",
+      "bytes": 729,
+      "sha256": "8c24b90d099eb91a5af5002895adcfe96dd78819b07da80e52c852d9ad9a9638"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 213903,
+      "sha256": "7fe0527dfbb54a642e7c161bfb4675f598d9f47e93aac332973f3215526fd5d3"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3531,
+      "sha256": "fe95bde55937bfb527bf33d9a7d4b7c1dcea83be68837413989199da9389f776"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3772,
+      "sha256": "618220e3acd899c96539baac455f7fac9fa4a8da3ee074fcc1d93b776148d52b"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 217631,
+      "sha256": "6e516a8f5f6d2a53f115ce03bfec75de441786cd50b1cf1c5bcea5ca9cb3492e"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3557,
+      "sha256": "c0e6449a1b98ded2caba295b57f18ab3d4b998f7753d9f8172abe9501bd54faa"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3773,
+      "sha256": "a265ffad00cb0bdffdcb90301a02404fa509e402315db1daba82889e0d2b002e"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 216305,
+      "sha256": "1a9ebc09f0e368ca77409ed76fa1ea0f2568cfd4e4c5bf6d02e1f9d3469ec491"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3534,
+      "sha256": "7d1afe17b8b22ff24e241bde56f5335166adc00ad81466ad1fb863927002a2f6"
+    },
+    {
+      "path": "history/initial_surface_subset/aligned_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3771,
+      "sha256": "e6bda152465df8731dec17d03ccd7eba9f24ac02d9df4800a7262eca4db54e22"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 217748,
+      "sha256": "f9b76714a2dd4b010e64d4e94f45effec95c73e88aff9dfd95058113438e8404"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3605,
+      "sha256": "8e723ccc40e6028fbcb103ec34202be0ceae957648f21fc0bb9f3fe5e866699b"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3772,
+      "sha256": "618220e3acd899c96539baac455f7fac9fa4a8da3ee074fcc1d93b776148d52b"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 217717,
+      "sha256": "ff4559675d40dd9328ed3bda1f67505160f99925309997b9a4022a1dda623dd1"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3603,
+      "sha256": "b9aee191aeb90d0a1db0ce200391c2e450b450dd5eccaf07e2fb82b3d45c4251"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3773,
+      "sha256": "a265ffad00cb0bdffdcb90301a02404fa509e402315db1daba82889e0d2b002e"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 217760,
+      "sha256": "4995704322bdd6bc571e7f3b42cdd4b859f5c74c9ddd0a0eb45596b27f1f6e07"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3599,
+      "sha256": "feb4061afea67c812163f39dc824594c262fffb4bfc559f87ae8179e447b6345"
+    },
+    {
+      "path": "history/initial_surface_subset/freeflight_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3771,
+      "sha256": "e6bda152465df8731dec17d03ccd7eba9f24ac02d9df4800a7262eca4db54e22"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 255026,
+      "sha256": "726ff54817e908cf41aecc77be2ec567520129bd8a9856e3629509e7b305d3f9"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3978,
+      "sha256": "2477d04a7a331888979ba03c6716aa6c6742327a2187e109a765c4cfc5e3ca1d"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3774,
+      "sha256": "009ed2aaf3e82e2449e3a218afd5b1ead00aeb52a0ce33cad0ba0676c41cb24b"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 254942,
+      "sha256": "fda1fc29433966a928749b6e538988539b8e49c0adf0054789c28c80692bd2fd"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3994,
+      "sha256": "f14c59bfce0ea7f9692be403ab6f368bb0ef7c325653e8f908ef6ec3d497622e"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3775,
+      "sha256": "a89646c8284ce5bbb4217f4ed2ce5eb400f0f0c0b91d9522efaaff11863c4bcd"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 255707,
+      "sha256": "8addd9693f9eabde79be47eb2d456574091b17ce404748da4f451e95d95a1075"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3977,
+      "sha256": "c959c0e377a96b686b33560094385a304c121688c2a74a2649a3e0dc75462a4a"
+    },
+    {
+      "path": "history/initial_surface_subset/half_keeper_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3773,
+      "sha256": "3b16721746dfc55de055c484aca908e20d3c2021a304de88e332d72bb508db41"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 259598,
+      "sha256": "457d98db85c6588c3a3365273d12793257350fc88c4bd02dbb6d51ab5cd900fe"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3751,
+      "sha256": "bb0c9eb5e0fe468d93fd9b9f2fde35adde312401676b53ab4b21312ae8b220d0"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3774,
+      "sha256": "1a26b7df880d6b4819a66c411f6c2619b45e6832468468b213308a9ca3b2fe21"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 258612,
+      "sha256": "9acfac58498b448c7ac76dc936d8444750f2a603e1ed8730c13155f6903fdf5c"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3757,
+      "sha256": "0a4397b1354cff1549a01897fb9c7a6a195bc0a84281a12e2b615bf7a9d356dc"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3775,
+      "sha256": "d8267a2309dfd771d5f976228c50b5efbfad6f8b02931c935cb7fc88bd0291a3"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 260140,
+      "sha256": "f3a276008c4cb1490e62b44b317213178b2e4fc8921d3bf4b67fd037cfc332da"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3754,
+      "sha256": "afdea3b2e576c2cac9d5bc338409d6db4f11aae7c99e88c397daf2d6c1060634"
+    },
+    {
+      "path": "history/initial_surface_subset/offset_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3773,
+      "sha256": "7be7d6959b37858958ebba9c567913400a4c1c7fd0c91962e216dad43698b896"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 256712,
+      "sha256": "4d9a3ec6e2402a1d909bc9a5d7062c8811e28906f9a45a202f84287851ab7354"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3769,
+      "sha256": "ccdcfb29742f310313f6e527709a4bdfc6226b39f8d41d9fa477c75606acbbb8"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3196,
+      "sha256": "a872410dbb08cadfa4d018caae70c82fd71e8d76635918a64df4fe805a0b021a"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 258488,
+      "sha256": "3d8f18a81cf40d86f87726af029ead644484dd00fa8ea0f44f4fb814a0943a9c"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3796,
+      "sha256": "0f3d2cbca5fd96cb41e49a522dd4cd09e5393067ade4c1c47087a7d8dfa8c6b3"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3197,
+      "sha256": "77ae86dfa2a8a81e57dfaf560b30929beca7eab329669c2f37e20b63df88069f"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 260277,
+      "sha256": "479ed539a3bb04b6452431d89ec37079695c7e90d50eb86b6a29b2691826560e"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3780,
+      "sha256": "01bd48cbb1afccf74cf066c03f00b22d5d07fdf987a18b4c46374eab8d351a33"
+    },
+    {
+      "path": "history/initial_surface_subset/one_rear_pad_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3195,
+      "sha256": "2385b78804ba59d0d47de72129eaad4a1115377629d7f83fab44a110ca97638c"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 143819,
+      "sha256": "bd74bf8fe51ed7b1631641686b36490c1873814e4f893be2e226c43d5cf4e68d"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3314,
+      "sha256": "790c76c6d34a2ca626fc13dcdc7e1288af1fadccc0805b358995433547cee84e"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3774,
+      "sha256": "1a26b7df880d6b4819a66c411f6c2619b45e6832468468b213308a9ca3b2fe21"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 143844,
+      "sha256": "0f1a599ced2c792de8d7e6ae7eefe8a4ec121a429dc1a317b6306e76ff80bc3e"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3315,
+      "sha256": "f18436e3b57259c073688df4c8582afd2e4aa91c5623237c5ef6f8786183e7a8"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3775,
+      "sha256": "d8267a2309dfd771d5f976228c50b5efbfad6f8b02931c935cb7fc88bd0291a3"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 143852,
+      "sha256": "1b1903daecd77738793d634b4cc330dba1b74b61053cd5dd675d475fe22842a7"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3306,
+      "sha256": "5925328090497be3356cbdb9846cd37e54ab4f716869887aa74e2c26ea36edf2"
+    },
+    {
+      "path": "history/initial_surface_subset/pitch_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3773,
+      "sha256": "7be7d6959b37858958ebba9c567913400a4c1c7fd0c91962e216dad43698b896"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 254610,
+      "sha256": "ca3e935d2f9750a60ca6ca5584832b78c9b3cd78b2c267c25d9c9a115338dc23"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3782,
+      "sha256": "11cc01ab9cbc9e0a3aa1cf24f6951b2d34c9b4b08a489fe30f5aa22fa6524ce4"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3774,
+      "sha256": "1a26b7df880d6b4819a66c411f6c2619b45e6832468468b213308a9ca3b2fe21"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 253986,
+      "sha256": "b95ebc8cfa4963738cb61f95094f0177c9512e7b964be02c8fb6757dcc3f8787"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3820,
+      "sha256": "83358ef782aab2271ec8a705a62b85f4424b5cd2ff92be680235a1d70bd7940e"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3775,
+      "sha256": "d8267a2309dfd771d5f976228c50b5efbfad6f8b02931c935cb7fc88bd0291a3"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 253897,
+      "sha256": "ba9ae0624c852ddf104519885100f240fb1d14580a19dd7dbbed1e70defd14b7"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3777,
+      "sha256": "ced3559a32261ee43ecfabb74134ee0f1508b18a32c473253a070a661ff16090"
+    },
+    {
+      "path": "history/initial_surface_subset/rates_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3773,
+      "sha256": "7be7d6959b37858958ebba9c567913400a4c1c7fd0c91962e216dad43698b896"
+    },
+    {
+      "path": "history/initial_surface_subset/source_adverse_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 216852,
+      "sha256": "a02c82ee381749e6b48a58dfbe91543887b0a8fbd56a3b9c3f252057ca8b6beb"
+    },
+    {
+      "path": "history/initial_surface_subset/source_adverse_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3566,
+      "sha256": "25140106229b5f3f87d3c69b141543e60e666c2409b18eda2199b1ec8f2b076f"
+    },
+    {
+      "path": "history/initial_surface_subset/source_adverse_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3774,
+      "sha256": "1a26b7df880d6b4819a66c411f6c2619b45e6832468468b213308a9ca3b2fe21"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 261124,
+      "sha256": "1eb27a3bbf6c95f03f6775b12b6e9ea945f71801f83e6f256bc7a96c435baf99"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3740,
+      "sha256": "77bb47a6eef01c80cd3fe8a9b4564903352568b309d9ad4c6b9836d2f2976115"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3774,
+      "sha256": "1a26b7df880d6b4819a66c411f6c2619b45e6832468468b213308a9ca3b2fe21"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 262916,
+      "sha256": "3aa4e8e6b2ab1ec1442fa038f7be860baea461cad9d00c78e373e1752e3c15df"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3812,
+      "sha256": "314b70b66ee9d7778c99666973702ac573145e1c72aab3af9d7a22d2a02edf24"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3775,
+      "sha256": "d8267a2309dfd771d5f976228c50b5efbfad6f8b02931c935cb7fc88bd0291a3"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 261830,
+      "sha256": "855d8a7b239c667d51b44d70e52c3ad63e6e7b1b2e404ce8c06a6c0ff40fc797"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3744,
+      "sha256": "56c4ccf3646547b0010bc2db75e477575b0c63989e9f560ca90b601bad39d376"
+    },
+    {
+      "path": "history/initial_surface_subset/yaw_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 3773,
+      "sha256": "7be7d6959b37858958ebba9c567913400a4c1c7fd0c91962e216dad43698b896"
+    },
+    {
+      "path": "release_model.py",
+      "bytes": 17452,
+      "sha256": "ab929077e8ac8ac48f3c0add3129cf2c316b03b1f0e3554fdf4c5f02577f026a"
+    },
+    {
+      "path": "requirements-runtime.txt",
+      "bytes": 141,
+      "sha256": "aa0b521457d68df5d229d5532224ffe66833415d0f2c223e590d63ec18a56d27"
+    },
+    {
+      "path": "run_campaign.py",
+      "bytes": 1866,
+      "sha256": "73c16b64c50ed5cf1857bc8cbfe8a7343e553e27225cae3b3733316f320eb047"
+    },
+    {
+      "path": "runs/aligned_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 213903,
+      "sha256": "7fe0527dfbb54a642e7c161bfb4675f598d9f47e93aac332973f3215526fd5d3"
+    },
+    {
+      "path": "runs/aligned_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3530,
+      "sha256": "ab59f65d6f9ad1ec96d5cf86bbf9bc58b1c1ca5d628ea46ce7b4a844565bb294"
+    },
+    {
+      "path": "runs/aligned_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6763,
+      "sha256": "989dcd371cca757fc81464d0e56b4740e505f4b2614af8025ac7657ec5162de2"
+    },
+    {
+      "path": "runs/aligned_12.5us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 215663,
+      "sha256": "3d38cb2a80a8d96decab396ca1cc29e66da0043da36a983d485ae40fd3184748"
+    },
+    {
+      "path": "runs/aligned_12.5us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3558,
+      "sha256": "95d9e32cfaabbe9c00487568da64d1ec51073f5a4eb16ec2efef8e2c660d08ee"
+    },
+    {
+      "path": "runs/aligned_12.5us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6765,
+      "sha256": "9ff05d47417985967aa76318cae191872321bca91d712db6e6a51afc21e93de0"
+    },
+    {
+      "path": "runs/aligned_25us_CG200_k1e+06_b2000_box.csv",
+      "bytes": 257300,
+      "sha256": "1ea7d907f5e449a05bc47706e70f1654d650f2aa16bd9283804919ac828c9353"
+    },
+    {
+      "path": "runs/aligned_25us_CG200_k1e+06_b2000_box.json",
+      "bytes": 3745,
+      "sha256": "b20c3320392725996cb6111100a066bb75c7cf8f8aad97f75155e5cc51b372c0"
+    },
+    {
+      "path": "runs/aligned_25us_CG200_k1e+06_b2000_box.xml",
+      "bytes": 6760,
+      "sha256": "cd8d08a9aad24bd09904426629d48ad54444466d625bbf1d70aec6942b93e465"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k100000_b632.456_box.csv",
+      "bytes": 214397,
+      "sha256": "b19032cfbc8aa86a191cdfe994ccfb25007673563b4ccda205c30f5a6b696a30"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k100000_b632.456_box.json",
+      "bytes": 3568,
+      "sha256": "460b415ee2eecb97915efd26f0aeb145911321e41cb58a310b76074d835e2da4"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k100000_b632.456_box.xml",
+      "bytes": 6776,
+      "sha256": "1c8ffcb540a6392cb07d80921d39bd58c6b74fd2e78931e17b12d6443a4e98bd"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b0_box.csv",
+      "bytes": 216730,
+      "sha256": "3cd4c5d56112aedfe524a42dde64ac158032cfe8eb8451ba62b9be92823caf28"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b0_box.json",
+      "bytes": 3556,
+      "sha256": "5bef4407421fe9753803f3a6657610ae8a7bd4a72e74c4afa79155f4b5e8ba49"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b0_box.xml",
+      "bytes": 6760,
+      "sha256": "db1f364b7bf61c4eaf1931bff9ec95d7c7135f8cd2f2f1548dd1eab754579ab9"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 217631,
+      "sha256": "6e516a8f5f6d2a53f115ce03bfec75de441786cd50b1cf1c5bcea5ca9cb3492e"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3558,
+      "sha256": "9ea6f107bb9098f22df303168161267c6ca3be56d9daaefde5c5331c6bd2af19"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "47ba6a250dfad7aab481796cf12d3eb07e00822630758c98071dcb20d4b95bf4"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b2000_split.csv",
+      "bytes": 262991,
+      "sha256": "ac8455109c0f72914c32985b85b7922caa8a9279623255700fdf95889d78ce48"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b2000_split.json",
+      "bytes": 3736,
+      "sha256": "e05193af8dacc6109e093ac799d8be1fe6da6b9a6e6df380990028db40df8d81"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b2000_split.xml",
+      "bytes": 9277,
+      "sha256": "fe0f446a5231cd568448359b910c230814466dab60ed30e2d08b74a908e67152"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b400_box.csv",
+      "bytes": 216826,
+      "sha256": "dc86286b91f4c5ef05ac2f10baa8074f919e39e9130e35614d2123c2d242a0b4"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b400_box.json",
+      "bytes": 3561,
+      "sha256": "4c1e4eda723883eb4a493cca45e11bdc37162091bf211bfe534fc8c1ed376307"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+06_b400_box.xml",
+      "bytes": 6763,
+      "sha256": "15dd4ac28c7ea85ed3dfecbb85e4fe83696102731ac13340db966f77aad0472c"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+07_b6324.56_box.csv",
+      "bytes": 216287,
+      "sha256": "2456e2a4f793daf341b514c212b2136ba924ff5b7a7b50bee17654c2aca06b31"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+07_b6324.56_box.json",
+      "bytes": 3571,
+      "sha256": "29cf2483ccfac7bca3fb6ccfdaafae08a8dc615e80c901f16ee1daac31857014"
+    },
+    {
+      "path": "runs/aligned_25us_Newton100_k1e+07_b6324.56_box.xml",
+      "bytes": 6778,
+      "sha256": "c9963585d172987923ae24549cdc281ae17c49bed248acec03ad107d57bd95d3"
+    },
+    {
+      "path": "runs/aligned_25us_Newton200_k1e+06_b2000_box.csv",
+      "bytes": 217631,
+      "sha256": "6e516a8f5f6d2a53f115ce03bfec75de441786cd50b1cf1c5bcea5ca9cb3492e"
+    },
+    {
+      "path": "runs/aligned_25us_Newton200_k1e+06_b2000_box.json",
+      "bytes": 3558,
+      "sha256": "de2d1c1d3f8bd8cffba1675c6794012e48208fe3a66eeaa89bd00fdf13b98ebe"
+    },
+    {
+      "path": "runs/aligned_25us_Newton200_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "6b0617d36ea7cdc06413895ea046d19bdcaf7d51345ffa200dbe58ae8938c792"
+    },
+    {
+      "path": "runs/aligned_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 216305,
+      "sha256": "1a9ebc09f0e368ca77409ed76fa1ea0f2568cfd4e4c5bf6d02e1f9d3469ec491"
+    },
+    {
+      "path": "runs/aligned_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3533,
+      "sha256": "cb875735082fd29f2b4bade0d3c33ba397be577ea6514cfd6ec76631753a3714"
+    },
+    {
+      "path": "runs/aligned_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6762,
+      "sha256": "590045b3dc9ce7f6b524a68a6244902ad3e5dfe8a122f79af951110014d7ac00"
+    },
+    {
+      "path": "runs/freeflight_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 217748,
+      "sha256": "f9b76714a2dd4b010e64d4e94f45effec95c73e88aff9dfd95058113438e8404"
+    },
+    {
+      "path": "runs/freeflight_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3605,
+      "sha256": "7ac0b4c346bab84efde2671a4673694050524344fe5b5dd31d10f41c57d8f0f5"
+    },
+    {
+      "path": "runs/freeflight_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6763,
+      "sha256": "989dcd371cca757fc81464d0e56b4740e505f4b2614af8025ac7657ec5162de2"
+    },
+    {
+      "path": "runs/freeflight_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 217717,
+      "sha256": "ff4559675d40dd9328ed3bda1f67505160f99925309997b9a4022a1dda623dd1"
+    },
+    {
+      "path": "runs/freeflight_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3604,
+      "sha256": "51a65c56015e25acf3e1bee99671b86c771859dd6518b46e208f60ae37313a35"
+    },
+    {
+      "path": "runs/freeflight_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "47ba6a250dfad7aab481796cf12d3eb07e00822630758c98071dcb20d4b95bf4"
+    },
+    {
+      "path": "runs/freeflight_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 217760,
+      "sha256": "4995704322bdd6bc571e7f3b42cdd4b859f5c74c9ddd0a0eb45596b27f1f6e07"
+    },
+    {
+      "path": "runs/freeflight_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3599,
+      "sha256": "6eeae71e100781a63fdc5b81a49985d15130de34ba72430e50ce6d0a580a1859"
+    },
+    {
+      "path": "runs/freeflight_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6762,
+      "sha256": "590045b3dc9ce7f6b524a68a6244902ad3e5dfe8a122f79af951110014d7ac00"
+    },
+    {
+      "path": "runs/half_keeper_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 255470,
+      "sha256": "cf514f0a5e47fc5ed025c7e50f1cf8e327beccbc2240baf969e324544d7a7ffd"
+    },
+    {
+      "path": "runs/half_keeper_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3941,
+      "sha256": "9402b86473ca2c4f6787f1ef6875e403f0b250f8873501b463e7fe5d5b34aef2"
+    },
+    {
+      "path": "runs/half_keeper_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6765,
+      "sha256": "83eb0d3e2ea5c1cae53255630afd7db2aba76071a4488808531fbc5e8206a7b4"
+    },
+    {
+      "path": "runs/half_keeper_12.5us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 254619,
+      "sha256": "988c512731c718424392488b8c59f5c03bdc3f28b002649f63317c67f59a9d0a"
+    },
+    {
+      "path": "runs/half_keeper_12.5us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 4000,
+      "sha256": "994f629218afefa946166194e6def2983b1ecb4d8d8d6898113d6681cdeafe66"
+    },
+    {
+      "path": "runs/half_keeper_12.5us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6767,
+      "sha256": "d5e341f2478a1a3eafa42b3a01ab248ce7ba9fa4f2bf022f0908046eced6a53c"
+    },
+    {
+      "path": "runs/half_keeper_25us_CG200_k1e+06_b2000_box.csv",
+      "bytes": 253514,
+      "sha256": "22d25ea023dc4ba107002240acb3b870de38861098a7663d54f46b4b50d583d9"
+    },
+    {
+      "path": "runs/half_keeper_25us_CG200_k1e+06_b2000_box.json",
+      "bytes": 3992,
+      "sha256": "5778d39d3638d68c9cc9e3fba0a5ce5d36e0da731e5cc5084e76c37e26627c34"
+    },
+    {
+      "path": "runs/half_keeper_25us_CG200_k1e+06_b2000_box.xml",
+      "bytes": 6762,
+      "sha256": "d34f29fe617a18b5db74b355ce91b591ccf2af0859f4947bffe641f65b282b4b"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 254241,
+      "sha256": "2988d2442b5a65b25a123525de42971a97d5bbb6d0d4f014556862ab4ee0f8a6"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3989,
+      "sha256": "575636a6e759b242707b11d6a35a2162464ebaeead77e1e7dedc082250750eca"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6766,
+      "sha256": "0ca5b8636b9394e2832a605b779fa0ed233ac093dfc158c712a911e575ec3359"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton100_k1e+06_b2000_split.csv",
+      "bytes": 255994,
+      "sha256": "6420ee5cefb67129f944aed4174b1d6d3abef4f88582022fcd9d41d979871362"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton100_k1e+06_b2000_split.json",
+      "bytes": 3995,
+      "sha256": "10d67e2c90f06340cdb345ef206111d61fd758720e2d470989012a6669fea98f"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton100_k1e+06_b2000_split.xml",
+      "bytes": 9279,
+      "sha256": "47a8dcc4c76e96da9845e30b34e5307cc2468ca4d3af2a566d04ef3976cbbd67"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton200_k1e+06_b2000_box.csv",
+      "bytes": 254241,
+      "sha256": "2988d2442b5a65b25a123525de42971a97d5bbb6d0d4f014556862ab4ee0f8a6"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton200_k1e+06_b2000_box.json",
+      "bytes": 3988,
+      "sha256": "c68590d826ce1ef29e7986feb02d6e3c68d2ff4e02a369374409ccaee2c335e7"
+    },
+    {
+      "path": "runs/half_keeper_25us_Newton200_k1e+06_b2000_box.xml",
+      "bytes": 6766,
+      "sha256": "1be6b8789d19e94bfa29a0f9e006bfcfc8a68a702187451cbec4b0a96b88049f"
+    },
+    {
+      "path": "runs/half_keeper_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 254628,
+      "sha256": "e1b5465b1f76280c66717606b045a02b99e1aca634b8c35aed24eac2f3768c9e"
+    },
+    {
+      "path": "runs/half_keeper_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3967,
+      "sha256": "224e036c48a45802f6f965a7d7cc846452aa5b61747eb98ea79283ba9fa39c5c"
+    },
+    {
+      "path": "runs/half_keeper_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "bb52a0b2f995b4f7c0a29866642d8ea2b6cdc28050eb49d98f308f146c362933"
+    },
+    {
+      "path": "runs/half_keeper_mu0.3_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 251919,
+      "sha256": "fc7cb6e4336022fb1d2e1611d7f1f542b8f69f81e7a39dcf9cc4d586334a2e57"
+    },
+    {
+      "path": "runs/half_keeper_mu0.3_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3991,
+      "sha256": "c969aa6bc0e7d6d56e7ffdc5c0796a5dbb83c0fd387d08da1a3add50a9b284e6"
+    },
+    {
+      "path": "runs/half_keeper_mu0.3_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6766,
+      "sha256": "7d0f8cce504f51eb89a7d947ff14a7b27f2329dd7d6936c45835994adbc0474f"
+    },
+    {
+      "path": "runs/half_keeper_mu0_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 255519,
+      "sha256": "bec206bc2f3b681ebf55863207d0111f37a99b401631a8edbefff8188e04f5a4"
+    },
+    {
+      "path": "runs/half_keeper_mu0_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 4001,
+      "sha256": "ce7ae603003544aa2339d410447c67f8cadbb225a1e96b271e2b933fda43b369"
+    },
+    {
+      "path": "runs/half_keeper_mu0_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "aa89e25ce16f18833f124f36d180d9262e3e111da19012e82fd5efc89cc1704a"
+    },
+    {
+      "path": "runs/offset_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 259598,
+      "sha256": "457d98db85c6588c3a3365273d12793257350fc88c4bd02dbb6d51ab5cd900fe"
+    },
+    {
+      "path": "runs/offset_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3752,
+      "sha256": "a2ec69f8d8af80ef6bb776ce51f3e991957eae8e591fe160f2141ba9d3bf0bdf"
+    },
+    {
+      "path": "runs/offset_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6765,
+      "sha256": "0fd2aa695512fd713d9ccdad0e6f96c964553e1322ddc1786428f02d566b7471"
+    },
+    {
+      "path": "runs/offset_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 258612,
+      "sha256": "9acfac58498b448c7ac76dc936d8444750f2a603e1ed8730c13155f6903fdf5c"
+    },
+    {
+      "path": "runs/offset_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3757,
+      "sha256": "1baccbf0eaf0c60579b001601b9ff072bd20e31513f2ee851459ce91306fb531"
+    },
+    {
+      "path": "runs/offset_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6766,
+      "sha256": "5619483e0fd0dbb6fafae49be31ae434dfacd1f7f4fb4003dcb6a9eb7072c8ef"
+    },
+    {
+      "path": "runs/offset_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 260140,
+      "sha256": "f3a276008c4cb1490e62b44b317213178b2e4fc8921d3bf4b67fd037cfc332da"
+    },
+    {
+      "path": "runs/offset_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3754,
+      "sha256": "ba8a5004bff2f3da07af82f0730117953ae9707a4b1d18c2e870893ae4679ce0"
+    },
+    {
+      "path": "runs/offset_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "8ab3b56a5a232bf184aaf4972d2e9e3f2661a784cf152db401932460880cfb06"
+    },
+    {
+      "path": "runs/one_rear_pad_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 256712,
+      "sha256": "4d9a3ec6e2402a1d909bc9a5d7062c8811e28906f9a45a202f84287851ab7354"
+    },
+    {
+      "path": "runs/one_rear_pad_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3770,
+      "sha256": "8c7b74b47efeb3502b8facdabc7a46df3f83ce4ca7ef669b334b704362fde155"
+    },
+    {
+      "path": "runs/one_rear_pad_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6187,
+      "sha256": "ce5cfb744e650b84d50c5c9de6804f9e2a7a231417d943ed33b57b182c7c8b58"
+    },
+    {
+      "path": "runs/one_rear_pad_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 258488,
+      "sha256": "3d8f18a81cf40d86f87726af029ead644484dd00fa8ea0f44f4fb814a0943a9c"
+    },
+    {
+      "path": "runs/one_rear_pad_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3796,
+      "sha256": "1ae103116fb70ce2a69debefd095fa30c2fb4b690ce3bc26e93d5258fc34e6dd"
+    },
+    {
+      "path": "runs/one_rear_pad_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6188,
+      "sha256": "23f25a2ce567ecf4d3853ae804218e356092a997e83ba016d5e8230885a38546"
+    },
+    {
+      "path": "runs/one_rear_pad_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 260277,
+      "sha256": "479ed539a3bb04b6452431d89ec37079695c7e90d50eb86b6a29b2691826560e"
+    },
+    {
+      "path": "runs/one_rear_pad_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3780,
+      "sha256": "113c52399edb1dfed6ff10a47ee801d1458af7f2024c8d906558d7137b69debd"
+    },
+    {
+      "path": "runs/one_rear_pad_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6186,
+      "sha256": "701ed2da0f03bbd50572db9c6f102d169dd1246c066c04a5bac7f44050317031"
+    },
+    {
+      "path": "runs/pitch_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 143819,
+      "sha256": "bd74bf8fe51ed7b1631641686b36490c1873814e4f893be2e226c43d5cf4e68d"
+    },
+    {
+      "path": "runs/pitch_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3314,
+      "sha256": "726c5e75bbdd58e6191bf2f889f67f8b6aff86f5ea5aad18b03eb747da679ad5"
+    },
+    {
+      "path": "runs/pitch_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6765,
+      "sha256": "0fd2aa695512fd713d9ccdad0e6f96c964553e1322ddc1786428f02d566b7471"
+    },
+    {
+      "path": "runs/pitch_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 143844,
+      "sha256": "0f1a599ced2c792de8d7e6ae7eefe8a4ec121a429dc1a317b6306e76ff80bc3e"
+    },
+    {
+      "path": "runs/pitch_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3315,
+      "sha256": "e4ec795d67046f84c6c9ea7887035265eabdffc123f9a876cb3e999692acf680"
+    },
+    {
+      "path": "runs/pitch_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6766,
+      "sha256": "5619483e0fd0dbb6fafae49be31ae434dfacd1f7f4fb4003dcb6a9eb7072c8ef"
+    },
+    {
+      "path": "runs/pitch_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 143852,
+      "sha256": "1b1903daecd77738793d634b4cc330dba1b74b61053cd5dd675d475fe22842a7"
+    },
+    {
+      "path": "runs/pitch_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3307,
+      "sha256": "8c87c54f5c7b59c52de39a8e80ce8abbb81dc4034f77b6173613921e64e6b9d4"
+    },
+    {
+      "path": "runs/pitch_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "8ab3b56a5a232bf184aaf4972d2e9e3f2661a784cf152db401932460880cfb06"
+    },
+    {
+      "path": "runs/rates_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 254610,
+      "sha256": "ca3e935d2f9750a60ca6ca5584832b78c9b3cd78b2c267c25d9c9a115338dc23"
+    },
+    {
+      "path": "runs/rates_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3783,
+      "sha256": "e6a7c233c19674e95b25cb63eaa4c5c309b4284b1fc9bce297871a1c3f9ae868"
+    },
+    {
+      "path": "runs/rates_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6765,
+      "sha256": "0fd2aa695512fd713d9ccdad0e6f96c964553e1322ddc1786428f02d566b7471"
+    },
+    {
+      "path": "runs/rates_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 253986,
+      "sha256": "b95ebc8cfa4963738cb61f95094f0177c9512e7b964be02c8fb6757dcc3f8787"
+    },
+    {
+      "path": "runs/rates_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3820,
+      "sha256": "7685a3f697d403bae64e35daa05f8dd7f008ba9315140b94e3283885d7f3e434"
+    },
+    {
+      "path": "runs/rates_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6766,
+      "sha256": "5619483e0fd0dbb6fafae49be31ae434dfacd1f7f4fb4003dcb6a9eb7072c8ef"
+    },
+    {
+      "path": "runs/rates_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 253897,
+      "sha256": "ba9ae0624c852ddf104519885100f240fb1d14580a19dd7dbbed1e70defd14b7"
+    },
+    {
+      "path": "runs/rates_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3777,
+      "sha256": "03aa9135b6c5112256d3dab85a59abfd70f7b06ed215b1aa5eeb0d58cd9c3cad"
+    },
+    {
+      "path": "runs/rates_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "8ab3b56a5a232bf184aaf4972d2e9e3f2661a784cf152db401932460880cfb06"
+    },
+    {
+      "path": "runs/source_adverse_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 216852,
+      "sha256": "a02c82ee381749e6b48a58dfbe91543887b0a8fbd56a3b9c3f252057ca8b6beb"
+    },
+    {
+      "path": "runs/source_adverse_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3566,
+      "sha256": "dd555d31fb7741ac3feca9cf9548e3684e6d9a55b9b898d0791ce5d2a9c8c583"
+    },
+    {
+      "path": "runs/source_adverse_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6765,
+      "sha256": "0fd2aa695512fd713d9ccdad0e6f96c964553e1322ddc1786428f02d566b7471"
+    },
+    {
+      "path": "runs/source_adverse_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 215014,
+      "sha256": "40f14f65f49890486b5e1bb7769d4a2d8146fbcc9d255308459e89d26c1858c5"
+    },
+    {
+      "path": "runs/source_adverse_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3574,
+      "sha256": "fc29addac04e72473a1ed383e15f335f6df539f66d3b50cc674be780b960bd94"
+    },
+    {
+      "path": "runs/source_adverse_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6766,
+      "sha256": "5619483e0fd0dbb6fafae49be31ae434dfacd1f7f4fb4003dcb6a9eb7072c8ef"
+    },
+    {
+      "path": "runs/source_adverse_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 212076,
+      "sha256": "ee0444303031ac76f1c781e5b6e495ba38eeba94eda6c72e7b30dfeaa2c3013b"
+    },
+    {
+      "path": "runs/source_adverse_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3558,
+      "sha256": "9c7f17208e7d4982eb0a495e68bec5fa18b019ae4abdc177c39c5203de3125a3"
+    },
+    {
+      "path": "runs/source_adverse_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "8ab3b56a5a232bf184aaf4972d2e9e3f2661a784cf152db401932460880cfb06"
+    },
+    {
+      "path": "runs/yaw_100us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 261124,
+      "sha256": "1eb27a3bbf6c95f03f6775b12b6e9ea945f71801f83e6f256bc7a96c435baf99"
+    },
+    {
+      "path": "runs/yaw_100us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3740,
+      "sha256": "7eb813437105c8e6bb9e9e945524b3f90d4f0e90a31631cd7aa4dbbf18aca268"
+    },
+    {
+      "path": "runs/yaw_100us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6765,
+      "sha256": "0fd2aa695512fd713d9ccdad0e6f96c964553e1322ddc1786428f02d566b7471"
+    },
+    {
+      "path": "runs/yaw_12.5us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 259261,
+      "sha256": "e715fdbc5cb72990fb864610ea333a22c6115f5597953425fa01783c331941ae"
+    },
+    {
+      "path": "runs/yaw_12.5us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3878,
+      "sha256": "c0188219be15355fb1ed3e9a5c24cc3f1f8f35040409b2c6fe72f08be3c2ab4c"
+    },
+    {
+      "path": "runs/yaw_12.5us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6767,
+      "sha256": "d6b9d6971f40b3ccecf75d070cdf7090571898c6235f3b459965ce04fbc54b96"
+    },
+    {
+      "path": "runs/yaw_25us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 262916,
+      "sha256": "3aa4e8e6b2ab1ec1442fa038f7be860baea461cad9d00c78e373e1752e3c15df"
+    },
+    {
+      "path": "runs/yaw_25us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3811,
+      "sha256": "e13bcbd9fe005cd339f70e695561bd0f7863f92357239c1cd8961090194b6be8"
+    },
+    {
+      "path": "runs/yaw_25us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6766,
+      "sha256": "5619483e0fd0dbb6fafae49be31ae434dfacd1f7f4fb4003dcb6a9eb7072c8ef"
+    },
+    {
+      "path": "runs/yaw_50us_Newton100_k1e+06_b2000_box.csv",
+      "bytes": 261830,
+      "sha256": "855d8a7b239c667d51b44d70e52c3ad63e6e7b1b2e404ce8c06a6c0ff40fc797"
+    },
+    {
+      "path": "runs/yaw_50us_Newton100_k1e+06_b2000_box.json",
+      "bytes": 3744,
+      "sha256": "302f7679f11a77016e91243b0b882ecd7aaba5a331053f69e7369754c987f18f"
+    },
+    {
+      "path": "runs/yaw_50us_Newton100_k1e+06_b2000_box.xml",
+      "bytes": 6764,
+      "sha256": "8ab3b56a5a232bf184aaf4972d2e9e3f2661a784cf152db401932460880cfb06"
+    },
+    {
+      "path": "source_adverse.npz",
+      "bytes": 10960317,
+      "sha256": "d4a8eb9035e1dc3d1fed7b04ef46de2d20858fcc614b0c78b940747493473d09"
+    },
+    {
+      "path": "source_extraction.log",
+      "bytes": 454,
+      "sha256": "5f778b1d91302e7ffe39bf2dedb48baa6f680b718cb1971d08a8950653e8999a"
+    },
+    {
+      "path": "source_nominal.npz",
+      "bytes": 10237519,
+      "sha256": "7c7e98ec97420a446e9877feaa523593e07efd72201668de955f981395f60d74"
+    },
+    {
+      "path": "summarize.py",
+      "bytes": 10606,
+      "sha256": "1856a9ecc664fe7b9cfb19d3cb329f54491e5cabe44c21ee9b00faa5f521e5fb"
+    }
+  ],
+  "main_report": {
+    "path": "docs/ACR1_RELEASE_DYNAMICS.md",
+    "sha256": "e66ce67223b7add5be615c8895f444678c3ced72781d149579a3d195a2896919"
+  }
+}

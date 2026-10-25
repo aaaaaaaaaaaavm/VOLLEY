@@ -1,0 +1,144 @@
+{
+  "revision": "N5-R1 pre-test criteria",
+  "status": "Frozen specification before experiments; no measurements exist",
+  "flight_acceptance": false,
+  "experiments_performed": false,
+  "general": {
+    "ambient_before_run_C": [
+      18,
+      22
+    ],
+    "stop_conductor_temperature_C": 40,
+    "current_compliance_max_V": 5,
+    "current_hard_limit_A": 4,
+    "pulse_hard_limit_s": 0.05,
+    "source_accounted_energy_max_J": 2,
+    "output_stored_energy_max_J": 0.5,
+    "magnet_fixture_load_screen_multiplier": 2,
+    "fixture_execution_gate": "Actual material/fastener/load-path review, captive magnet insertion, guard, static load proof and loaded gap inspection must precede powered measurements. CAD/beam screen alone does not clear this gate.",
+    "fixture_proof_load_each_plate_N": 724,
+    "fixture_proof_per_keeper_support_N": 61,
+    "permanent_gap_change_after_proof_max_mm": 0.02
+  },
+  "C01_field": {
+    "x_stations_mm": [
+      -20,
+      -12,
+      -4,
+      4,
+      12,
+      20
+    ],
+    "repeats_per_station": 3,
+    "comparison": "Signed CAD-Z normal field; source model field-Y component",
+    "expanded_measurement_uncertainty_max_T": 0.02,
+    "guarded_model_band": "abs(Bmeas-Bpred)+U95 <= max(0.02 T,0.15*abs(Bpred))",
+    "loaded_gap_band_mm": [
+      11.9,
+      12.1
+    ],
+    "maximum_probe_position_error_mm": 0.1,
+    "magnet_polarization_reference_T": 1.32,
+    "polarization_pretest_input_band_fraction": 0.03,
+    "note": "Remanence band is an input allocation requiring a material certificate or independent calibration. Unknown grade/Br prevents a quantitative model-validation pass."
+  },
+  "C01_force": {
+    "x_stations_mm": [
+      -20,
+      4
+    ],
+    "current_A": [
+      -4,
+      -2,
+      -1,
+      1,
+      2,
+      4
+    ],
+    "repeats_each": 5,
+    "force_sensor_range_N": 1,
+    "expanded_force_uncertainty_max_N": 0.002,
+    "current_expanded_uncertainty_max_fraction": 0.01,
+    "guarded_model_band": "abs(Fmeas-Kloop*Imeas)+U95 <= max(0.005 N,0.15*abs(Kloop*Imeas))",
+    "maximum_force_zero_shift_N": 0.001,
+    "lead_and_support_parasitic_bound_N": 0.0005,
+    "note": "Compare the complete specified loop, including modeled return force. Full ACR1 phase force coefficient is not the coupon coefficient.",
+    "residual_expanded_uncertainty": "U_residual =sqrt(U_force^2 +(Kloop*U_current)^2), adding covariance or conservative terms when correlated; compare residual with U_residual."
+  },
+  "C02_custody": {
+    "payload_mass_kg": [
+      3.995,
+      4.005
+    ],
+    "transfer_stroke_mm": 250,
+    "minimum_transfer_duration_s": 40,
+    "maximum_pusher_speed_mm_s": 11.71875,
+    "commissioning_push_force_limit_N": 25,
+    "immediate_stop_push_force_N": 30,
+    "proof_dwell_s": 10,
+    "additional_horizontal_proof_load_N": 20,
+    "maximum_custody_motion_during_dwell_mm": 0.1,
+    "expanded_position_uncertainty_max_mm": 0.02,
+    "faults": [
+      "POWER_LOSS",
+      "JAM",
+      "SENSOR_DISAGREEMENT",
+      "TIMEOUT",
+      "HOST_COAST_PROOF_FALSE",
+      "SINGLE_CAPTURE_PROOF_MISSING",
+      "HOME_PIN_NOT_CLEAR",
+      "HALF_OPEN_KEEPER"
+    ],
+    "false_positive_launch_permissions_allowed": 0,
+    "capture_before_previous_holder_release_required": true,
+    "scope": "Single-cell slow horizontal bench; vertical indexing, launch restraints and hardware fault reliability are not qualified."
+  },
+  "C03_ground_release": {
+    "payload_mass_kg": [
+      3.995,
+      4.005
+    ],
+    "carrier_mass_kg": [
+      13.077805767,
+      13.177805767
+    ],
+    "commissioning_speeds_m_s": [
+      0.05,
+      0.1
+    ],
+    "final_speed_band_m_s": [
+      0.195,
+      0.205
+    ],
+    "expanded_velocity_uncertainty_max_m_s": 0.002,
+    "support_drag_max_N": 0.1,
+    "expanded_drag_uncertainty_max_N": 0.02,
+    "external_calibrated_brake_force_N": [
+      1.5,
+      2
+    ],
+    "stop_condition": "carrier_stop_distance + U95_position <=0.210 m",
+    "egress_condition": "payload_aft_minus_carrier_aft - U95_relative_position >=0.5245 m by6 s, with no keeper/pallet recontact detected",
+    "expanded_relative_position_uncertainty_max_m": 0.01,
+    "forekeeper_open_stroke_mm": 12,
+    "cam_open_complete_by_carrier_aft_X_mm": 1495,
+    "release_station_carrier_aft_X_mm": 1500,
+    "post_release_record_duration_s": 6,
+    "final_nominal_trials": 10,
+    "mechanical_energy_ceiling_J": 0.5,
+    "backup_catcher_proved_energy_capacity_min_J": 1,
+    "recontact_detection_threshold_N": 0.2,
+    "expanded_contact_force_uncertainty_max_N": 0.05,
+    "fault_partial_keeper_dynamic_test_authorized": false,
+    "scope": "Support-dependent planar counterpart; external brake is a bench device, not validation of ACR1 active LSM arrest. Actual 3m/s source-coupled test remains subsequent.",
+    "brake_force_expanded_uncertainty_max_N": 0.05,
+    "brake_guard_rule": "Measured brake force interval including U95 must lie inside1.5..2N.",
+    "brake_force_measurement_scope": "Total opposing X force on carrier, external brake plus support/guide drag; characterize both separately and combined."
+  },
+  "decision": {
+    "accept": "All relevant geometry/input/readiness gates and uncertainty-guarded comparisons pass; report only the tested scope.",
+    "rework": "Band overlaps after uncertainty, zero/span drift, unbounded support force or incomplete input certificates: retain data as inconclusive, correct rig/metrology under a new recorded setup, then repeat the predefined comparison.",
+    "stop": "Any loss of custody, missing proof with launch enabled, keeper contact, guard/catcher failure, exceeded electrical/temperature/energy limit or residual outside band after calibration checks: inhibit motion/current, retain data and do not raise limits.",
+    "revision_rule": "Do not widen bands or replace the prediction after seeing validation data. A changed model/fixture gets a new issue and separate fit/validation data."
+  }
+}

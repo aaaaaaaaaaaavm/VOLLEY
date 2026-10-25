@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14",
+  "mujoco": "3.3.7",
+  "numpy": "2.5.4",
+  "binary_sha256": "23841520ecf60ad648405674a757f260949f7cf6b44deb284398b9851b3f061d",
+  "binary_in_public_package": false,
+  "requirements": [
+    "mujoco==3.3.7",
+    "numpy==2.5.4"
+  ],
+  "execution": "PYTHONPATH=/tmp/acr1-mujoco-runtime python run_campaign.py",
+  "model_type": "Native compiled MuJoCo dynamics;not an analytic mock",
+  "runtime_scope": "Separate binary environment;requirements-runtime.txt captures dependencies"
+}

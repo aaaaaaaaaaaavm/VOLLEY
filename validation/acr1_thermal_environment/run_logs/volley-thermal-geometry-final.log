@@ -1,0 +1,13 @@
+{"samples": 4096, "stage": 0, "row_error": 1.331035281992854e-11}
+{"samples": 4096, "stage": 1, "row_error": 1.4236944956280695e-11}
+{"samples": 4096, "stage": 2, "row_error": 1.2662315640454835e-11}
+{"samples": 4096, "stage": 3, "row_error": 1.0894063429134349e-11}
+{"samples": 4096, "stage": 4, "row_error": 1.260203053021769e-11}
+{"samples": 4096, "stage": 5, "row_error": 1.0606293621151508e-11}
+{"samples": 4096, "stage": 6, "row_error": 1.008870764707126e-11}
+{"samples": 4096, "stage": 7, "row_error": 1.3012146915514222e-11}
+{"samples": 4096, "stage": 8, "row_error": 1.0530132321662222e-11}
+{"samples": 4096, "stage": 9, "row_error": 1.0229705971198655e-11}
+{"samples": 4096, "stage": 10, "row_error": 1.1515455256017049e-11}
+{"samples": 4096, "stage": 11, "row_error": 1.1943224187405121e-11}
+{"samples": 4096, "stage": 12, "row_error": 1.2597922705026576e-11}

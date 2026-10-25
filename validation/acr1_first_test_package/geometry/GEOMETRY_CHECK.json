@@ -1,0 +1,762 @@
+{
+  "software": {
+    "cadquery": "2.7.0",
+    "python": "3.12.14"
+  },
+  "status": "PROVISIONAL geometry; no load/build/test authorization",
+  "definition_sha256": "5fcb4a1d96ed814ccb3f2c0dc264f09d0901695cdca2809eb72341ce6eded34e",
+  "builder_sha256": "f67ad38d7d8e9aa3f46e8fce9acf3dc30c544a85165443aa74398c6ccb45d67d",
+  "STEP_sha256": "89cccb5258eefcf631cc2d034978b8de39396179e93a76574e530b4fee982471",
+  "parts": [
+    {
+      "part": "Plate_-1",
+      "material_basis": "aluminium reference; grade/allowables unselected",
+      "valid": true,
+      "volume_mm3": 284118.12245351856,
+      "bounds_mm": {
+        "xmin": -80.0,
+        "xmax": 80.0,
+        "ymin": -75.0,
+        "ymax": 75.0,
+        "zmin": -26.0,
+        "zmax": -14.0
+      }
+    },
+    {
+      "part": "Magnet_-1_0",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": -24.0,
+        "xmax": -16.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Magnet_-1_1",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": -16.0,
+        "xmax": -8.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Magnet_-1_2",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": -8.0,
+        "xmax": 0.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Magnet_-1_3",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": 0.0,
+        "xmax": 8.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Magnet_-1_4",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": 8.0,
+        "xmax": 16.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Magnet_-1_5",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": 16.0,
+        "xmax": 24.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_lip_-1_-50",
+      "material_basis": "aluminium reference; no joint proof implied",
+      "valid": true,
+      "volume_mm3": 2207.235410522583,
+      "bounds_mm": {
+        "xmin": -28.0,
+        "xmax": 28.0,
+        "ymin": -57.0,
+        "ymax": -43.0,
+        "zmin": -6.0,
+        "zmax": -3.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_-50_0",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.85485351294605,
+      "bounds_mm": {
+        "xmin": -23.0,
+        "xmax": -17.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_-50_1",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": -15.0,
+        "xmax": -9.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_-50_2",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": -7.0,
+        "xmax": -1.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_-50_3",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": 1.0,
+        "xmax": 7.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_-50_4",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": 9.0,
+        "xmax": 15.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_-50_5",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.85485351294605,
+      "bounds_mm": {
+        "xmin": 17.0,
+        "xmax": 23.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_lip_-1_50",
+      "material_basis": "aluminium reference; no joint proof implied",
+      "valid": true,
+      "volume_mm3": 2207.2354105225827,
+      "bounds_mm": {
+        "xmin": -28.0,
+        "xmax": 28.0,
+        "ymin": 43.0,
+        "ymax": 57.0,
+        "zmin": -6.0,
+        "zmax": -3.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_50_0",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.85485351294605,
+      "bounds_mm": {
+        "xmin": -23.0,
+        "xmax": -17.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_50_1",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": -15.0,
+        "xmax": -9.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_50_2",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": -7.0,
+        "xmax": -1.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_50_3",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": 1.0,
+        "xmax": 7.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_50_4",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": 9.0,
+        "xmax": 15.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_-1_50_5",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.85485351294605,
+      "bounds_mm": {
+        "xmin": 17.0,
+        "xmax": 23.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": -14.0,
+        "zmax": -6.0
+      }
+    },
+    {
+      "part": "Plate_1",
+      "material_basis": "aluminium reference; grade/allowables unselected",
+      "valid": true,
+      "volume_mm3": 284118.12245351856,
+      "bounds_mm": {
+        "xmin": -80.0,
+        "xmax": 80.0,
+        "ymin": -75.0,
+        "ymax": 75.0,
+        "zmin": 14.0,
+        "zmax": 26.0
+      }
+    },
+    {
+      "part": "Magnet_1_0",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": -24.0,
+        "xmax": -16.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Magnet_1_1",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": -16.0,
+        "xmax": -8.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Magnet_1_2",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": -8.0,
+        "xmax": 0.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Magnet_1_3",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": 0.0,
+        "xmax": 8.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Magnet_1_4",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": 8.0,
+        "xmax": 16.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Magnet_1_5",
+      "material_basis": "NdFeB; Br1.32T model input, grade/certificate unselected",
+      "valid": true,
+      "volume_mm3": 5759.999999999999,
+      "bounds_mm": {
+        "xmin": 16.0,
+        "xmax": 24.0,
+        "ymin": -45.0,
+        "ymax": 45.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_lip_1_-50",
+      "material_basis": "aluminium reference; no joint proof implied",
+      "valid": true,
+      "volume_mm3": 2207.235410522583,
+      "bounds_mm": {
+        "xmin": -28.0,
+        "xmax": 28.0,
+        "ymin": -57.0,
+        "ymax": -43.0,
+        "zmin": 3.0,
+        "zmax": 6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_-50_0",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.85485351294605,
+      "bounds_mm": {
+        "xmin": -23.0,
+        "xmax": -17.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_-50_1",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": -15.0,
+        "xmax": -9.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_-50_2",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": -7.0,
+        "xmax": -1.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_-50_3",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": 1.0,
+        "xmax": 7.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_-50_4",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": 9.0,
+        "xmax": 15.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_-50_5",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.85485351294605,
+      "bounds_mm": {
+        "xmin": 17.0,
+        "xmax": 23.0,
+        "ymin": -55.0,
+        "ymax": -49.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_lip_1_50",
+      "material_basis": "aluminium reference; no joint proof implied",
+      "valid": true,
+      "volume_mm3": 2207.2354105225827,
+      "bounds_mm": {
+        "xmin": -28.0,
+        "xmax": 28.0,
+        "ymin": 43.0,
+        "ymax": 57.0,
+        "zmin": 3.0,
+        "zmax": 6.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_50_0",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.85485351294605,
+      "bounds_mm": {
+        "xmin": -23.0,
+        "xmax": -17.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_50_1",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": -15.0,
+        "xmax": -9.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_50_2",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": -7.0,
+        "xmax": -1.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_50_3",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": 1.0,
+        "xmax": 7.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_50_4",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.8548535129461,
+      "bounds_mm": {
+        "xmin": 9.0,
+        "xmax": 15.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Keeper_spacer_1_50_5",
+      "material_basis": "nonmagnetic spacer allocation",
+      "valid": true,
+      "volume_mm3": 161.85485351294605,
+      "bounds_mm": {
+        "xmin": 17.0,
+        "xmax": 23.0,
+        "ymin": 49.0,
+        "ymax": 55.0,
+        "zmin": 6.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Corner_spacer_-65_-60",
+      "material_basis": "nonmagnetic compression spacer allocation",
+      "valid": true,
+      "volume_mm3": 1577.8649102654729,
+      "bounds_mm": {
+        "xmin": -71.0,
+        "xmax": -59.0,
+        "ymin": -66.0,
+        "ymax": -54.0,
+        "zmin": -14.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Corner_spacer_-65_60",
+      "material_basis": "nonmagnetic compression spacer allocation",
+      "valid": true,
+      "volume_mm3": 1577.8649102654729,
+      "bounds_mm": {
+        "xmin": -71.0,
+        "xmax": -59.0,
+        "ymin": 54.0,
+        "ymax": 66.0,
+        "zmin": -14.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Corner_spacer_65_-60",
+      "material_basis": "nonmagnetic compression spacer allocation",
+      "valid": true,
+      "volume_mm3": 1577.8649102654729,
+      "bounds_mm": {
+        "xmin": 59.0,
+        "xmax": 71.0,
+        "ymin": -66.0,
+        "ymax": -54.0,
+        "zmin": -14.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Corner_spacer_65_60",
+      "material_basis": "nonmagnetic compression spacer allocation",
+      "valid": true,
+      "volume_mm3": 1577.8649102654729,
+      "bounds_mm": {
+        "xmin": 59.0,
+        "xmax": 71.0,
+        "ymin": 54.0,
+        "ymax": 66.0,
+        "zmin": -14.0,
+        "zmax": 14.0
+      }
+    },
+    {
+      "part": "Force_bar_at_minus20mm",
+      "material_basis": "copper",
+      "valid": true,
+      "volume_mm3": 3360.0,
+      "bounds_mm": {
+        "xmin": -23.5,
+        "xmax": -16.5,
+        "ymin": -40.0,
+        "ymax": 40.0,
+        "zmin": -3.0,
+        "zmax": 3.0
+      }
+    },
+    {
+      "part": "Return_wire_0_0",
+      "material_basis": "copper wire area1mm2 allocation",
+      "valid": true,
+      "volume_mm3": 50.0,
+      "bounds_mm": {
+        "xmin": -20.564189583547755,
+        "xmax": -19.435810416452245,
+        "ymin": 40.0,
+        "ymax": 90.0,
+        "zmin": -0.5641895835477563,
+        "zmax": 0.5641895835477563
+      }
+    },
+    {
+      "part": "Return_wire_0_1",
+      "material_basis": "copper wire area1mm2 allocation",
+      "valid": true,
+      "volume_mm3": 99.9999999999998,
+      "bounds_mm": {
+        "xmin": -20.0,
+        "xmax": 80.0,
+        "ymin": 89.43581041645224,
+        "ymax": 90.56418958354776,
+        "zmin": -0.5641895835477563,
+        "zmax": 0.5641895835477563
+      }
+    },
+    {
+      "part": "Return_wire_0_2",
+      "material_basis": "copper wire area1mm2 allocation",
+      "valid": true,
+      "volume_mm3": 84.9999999999998,
+      "bounds_mm": {
+        "xmin": 79.43581041645224,
+        "xmax": 80.56418958354776,
+        "ymin": 5.0,
+        "ymax": 90.0,
+        "zmin": -0.5641895835477563,
+        "zmax": 0.5641895835477563
+      }
+    },
+    {
+      "part": "Return_wire_1_0",
+      "material_basis": "copper wire area1mm2 allocation",
+      "valid": true,
+      "volume_mm3": 84.9999999999998,
+      "bounds_mm": {
+        "xmin": 79.43581041645224,
+        "xmax": 80.56418958354776,
+        "ymin": -90.0,
+        "ymax": -5.0,
+        "zmin": -0.5641895835477563,
+        "zmax": 0.5641895835477563
+      }
+    },
+    {
+      "part": "Return_wire_1_1",
+      "material_basis": "copper wire area1mm2 allocation",
+      "valid": true,
+      "volume_mm3": 99.9999999999998,
+      "bounds_mm": {
+        "xmin": -20.0,
+        "xmax": 80.0,
+        "ymin": -90.56418958354776,
+        "ymax": -89.43581041645224,
+        "zmin": -0.5641895835477563,
+        "zmax": 0.5641895835477563
+      }
+    },
+    {
+      "part": "Return_wire_1_2",
+      "material_basis": "copper wire area1mm2 allocation",
+      "valid": true,
+      "volume_mm3": 50.0,
+      "bounds_mm": {
+        "xmin": -20.564189583547755,
+        "xmax": -19.435810416452245,
+        "ymin": -90.0,
+        "ymax": -40.0,
+        "zmin": -0.5641895835477563,
+        "zmax": 0.5641895835477563
+      }
+    }
+  ],
+  "omissions": [
+    "Fastener thread/head/nut details and certified grades",
+    "Load-cell gantry and electrical isolation/insulation",
+    "Probe stage and actual lead connectors",
+    "Protective guard and magnet insertion tooling",
+    "Complete C02/C03 mechanism fixtures"
+  ],
+  "drawing_axes": "CAD X travel, Y magnet depth, Z gap; field model X travel,Y gap,Z depth"
+}

@@ -1,0 +1,124 @@
+{
+  "case": {
+    "id": "pitch",
+    "mu": 0.1,
+    "pitch_deg": 0.1
+  },
+  "dt_s": 0.0001,
+  "solver": "Newton",
+  "iterations": 100,
+  "direct_stiffness_s_minus2": 1000000.0,
+  "direct_damping_s_minus1": 2000,
+  "constant_solimp": 0.95,
+  "representation": "box",
+  "native_version": "3.3.7",
+  "tstart_s": 0.8659650000000001,
+  "duration_s": 0.35000000000000003,
+  "tend_s": 1.2159649999999615,
+  "source_release_s": 0.8669650000014459,
+  "source_stop_s": 1.0477800000026305,
+  "source_release_inertial_kick_m_s": 2.9269191513942334,
+  "payload_final_position_m": [
+    2.7232253258650716,
+    0.0,
+    0.09629706599995858
+  ],
+  "payload_final_quaternion_wxyz": [
+    0.9999996192282494,
+    0.0,
+    0.0008726645152351496,
+    0.0
+  ],
+  "payload_final_velocity_m_s": [
+    2.92379474222315,
+    0.0,
+    0.0
+  ],
+  "payload_final_omega_deg_s": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "orientation_change_deg": 0.0,
+  "payload_inertial_kick_difference_m_s": -0.0031244091710833644,
+  "final_payload_aft_relative_carrier_m": 0.8859049730350788,
+  "rear_contact_first_s": null,
+  "rear_contact_last_s": null,
+  "rear_unload_events_s": [],
+  "rear_recontact_events_s": [],
+  "contact_absolute_impulse_by_group_Ns": {},
+  "post_source_release_absolute_impulse_by_group_Ns": {},
+  "max_overlap_m": 0.0,
+  "peak_contact_force_N_unrated": 0.0,
+  "initial_overlap_m": 0.0,
+  "initial_gap_adjustment_m": {
+    "x": 8.700711278214479e-05,
+    "z": 0.0002970659999585734
+  },
+  "conservation": {
+    "total_x_momentum_initial_kg_m_s": 1.7763568394002505e-15,
+    "total_x_momentum_residual_kg_m_s": 3.552713678800501e-14,
+    "payload_linear_impulse_residual_Ns": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "payload_angular_impulse_residual_Nms": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "native_generalized_vs_contact_force_max_N": 0.0,
+    "kinetic_energy_change_J": -57.838232256231585,
+    "motor_work_J": -57.838232256231635,
+    "kinetic_minus_motor_work_J": 4.973799150320701e-14,
+    "energy_scope": "Difference includes unmeasured contact regularization,damping/friction and integration error;not automatically numerical error."
+  },
+  "solver_max_iterations_used": 0,
+  "native_warning_increments": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "wall_s": 2.5396197800000664,
+  "limitations": [
+    "Open-loop source force replay,not perturbed electrical feedback",
+    "Ideal host/carrier X guides;no host attitude/side compliance",
+    "Uniform4kg340.5\u00d7100\u00d7100mm payload surrogate",
+    "Contact regularization/friction/damping unmeasured sensitivities",
+    "Final1ms before source release through arrest and0.35s window;powered return and feeder capture excluded",
+    "Primitive collision surfaces are a documented CAD subset;no complete manufactured model"
+  ],
+  "solver_full_budget_steps": 0,
+  "max_native_termination_gradient": 0.0,
+  "payload_initial_position_m": [
+    1.6998971660872793,
+    0.0,
+    0.09629706599995858
+  ],
+  "payload_initial_velocity_m_s": [
+    2.92379474222315,
+    0.0,
+    0.0
+  ],
+  "payload_initial_omega_deg_s": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "freeflight_position_residual_m": [
+    -3.1019631308026874e-13,
+    0.0,
+    0.0
+  ],
+  "exact_inertia_kg_m2": [
+    0.006666666666666668,
+    0.04198008333333334,
+    0.04198008333333334
+  ]
+}

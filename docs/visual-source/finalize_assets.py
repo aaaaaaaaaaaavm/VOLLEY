@@ -39,6 +39,9 @@ for p in sorted(A.rglob('*')):
   if p.stem in sources:
    source,caption=sources[p.stem];r.update({'evidence_class':'computed result','role':'scientific figure','source_path':'validation/acr1/'+source,'source_sha256':sha(ROOT.parent/'validation/acr1'/source),'caption':caption,'alt_text':caption,'software':'frozen source-defined scientific plotting pipeline','camera':None,'scene':None,'evidence_link':'evidence.html'if not p.stem.startswith('MISSION')else'orbital-analysis.html'})
   if p.stem=='ACR1_social_preview':r.update({'evidence_class':'CAD-derived editorial composite','role':'1200x630 social preview','source_path':'assets/acr1/01_assembly_isometric.jpg','source_sha256':sha(A/'01_assembly_isometric.jpg'),'caption':'G5 ACR1 computational design study; unaltered accepted assembly render in an editorial card.','alt_text':'VOLLEY commanded CubeSat deployment computational design study, beside the ACR1 assembly render.','software':'Pillow 12.3.0; finalize_assets.py','camera':view['views'][0]['camera'],'scene':'VOLLEY_G5_ACR1_scientific_views.blend'})
+# Exact supplemental figures and their native-source provenance.
+for metadata in json.loads((A/'supplements/SUPPLEMENT_FIGURES.json').read_text())['assets']:
+ key=metadata['path'].removeprefix('docs/');record=lookup[key];record.update(metadata)
 for p in sorted((ROOT/'downloads').glob('*')):
  if p.is_file():records.append({'asset_id':p.stem,'path':str(p.relative_to(ROOT)),'sha256':sha(p),'bytes':p.stat().st_size,'configuration':'VOLLEY-G5-ACR1','evidence_class':'source or academic document package','role':'offline download','release':'ACR1-WEB-R1','status':'current','caption':'Frozen academic bytes or a documented source-only web derivative; no numerical evidence changed.'})
 for p in sorted((ROOT/'films').glob('*/FILM_MANIFEST.json')):

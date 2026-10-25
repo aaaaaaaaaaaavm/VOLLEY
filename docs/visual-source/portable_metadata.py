@@ -113,6 +113,9 @@ def public_source_index():
      if(REPO/candidate).is_file():path=candidate
     if not(REPO/path).is_file():raise FileNotFoundError(path)
     refs.append({'role':'storyboard evidence','source_label':label,'path':path,'sha256':digest(REPO/path)})
+ for asset in json.loads((DOCS/'assets/acr1/supplements/SUPPLEMENT_FIGURES.json').read_text())['assets']:
+  refs.append({'role':'supplement figure source','path':asset['source_path'],'sha256':asset['source_sha256']})
+  refs.extend(dict(x,role='supplement figure input')for x in asset['source_inputs'])
  refs.append({'role':'CAD view renderer','path':'docs/assets/acr1/render_cad_views.py','sha256':raw['render_script_sha256']})
  refs=list({(r['role'],r['path'],r.get('view'),r.get('source_label')):r for r in refs}.values())
  index={'revision':'ACR1-public-source-index-R1','path_base':'repository_root','release_identity':RELEASE_IDENTITY,'configuration':'VOLLEY-G5-ACR1','raw_capture':'docs/assets/acr1/VIEW_PROVENANCE.json','scene':scene_reference(),'archive_members':[{'role':'visualization mesh','view':v['view_id'],'archive_path':SCENE_ARCHIVE,'member_path':'meshes/'+Path(v['source_mesh_file']).name,'member_sha256':v['source_mesh_sha256']}for v in raw['views']],'files':refs}

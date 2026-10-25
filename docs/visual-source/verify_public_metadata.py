@@ -21,6 +21,7 @@ for r in register['assets']:
  file(r['path'],r['sha256'])
  for key in ['source_path','transcript','captions','source_pins','evidence_link','generator','raw_capture','camera_provenance','original_render_script','original_storyboard']:
   if key in r:file(r[key])
+ for source_input in r.get('source_inputs',[]):file(source_input['path'],source_input['sha256'])
  if isinstance(r.get('source'),dict):
   source=r['source']
   for key in ['native','step','bom']:file(source[key+'_path'],source[key+'_sha256'])

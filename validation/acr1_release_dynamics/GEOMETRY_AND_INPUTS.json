@@ -1,0 +1,982 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "surrogate": {
+    "mass_kg": 4.0,
+    "dimensions_m": [
+      0.3405,
+      0.1,
+      0.1
+    ],
+    "uniform_box_principal_inertia_kg_m2": [
+      0.006666666666666668,
+      0.04198008333333334,
+      0.04198008333333334
+    ]
+  },
+  "collision_surfaces": [
+    {
+      "name": "base_top",
+      "lo_mm": [
+        0,
+        -100,
+        14
+      ],
+      "size_mm": [
+        488,
+        170,
+        16
+      ],
+      "source": "build_acr1.sled top plate;remote bores outside payload corridor"
+    },
+    {
+      "name": "base_bottom",
+      "lo_mm": [
+        0,
+        -100,
+        -30
+      ],
+      "size_mm": [
+        488,
+        170,
+        16
+      ],
+      "source": "build_acr1.sled bottom plate;remote bores outside payload corridor"
+    },
+    {
+      "name": "base_web",
+      "lo_mm": [
+        0,
+        -100,
+        -30
+      ],
+      "size_mm": [
+        488,
+        20,
+        60
+      ],
+      "source": "build_acr1.sled negative web;remote bores outside payload corridor"
+    },
+    {
+      "name": "seat_0_-50",
+      "lo_mm": [
+        64.0,
+        -50,
+        30
+      ],
+      "size_mm": [
+        64,
+        8,
+        16
+      ],
+      "source": "build_acr1.sled raised seats"
+    },
+    {
+      "name": "seat_0_42",
+      "lo_mm": [
+        64.0,
+        42,
+        30
+      ],
+      "size_mm": [
+        64,
+        8,
+        16
+      ],
+      "source": "build_acr1.sled raised seats"
+    },
+    {
+      "name": "seat_124_-50",
+      "lo_mm": [
+        188.0,
+        -50,
+        30
+      ],
+      "size_mm": [
+        96,
+        8,
+        16
+      ],
+      "source": "build_acr1.sled raised seats"
+    },
+    {
+      "name": "seat_124_42",
+      "lo_mm": [
+        188.0,
+        42,
+        30
+      ],
+      "size_mm": [
+        96,
+        8,
+        16
+      ],
+      "source": "build_acr1.sled raised seats"
+    },
+    {
+      "name": "seat_288_-50",
+      "lo_mm": [
+        352.0,
+        -50,
+        30
+      ],
+      "size_mm": [
+        52.5,
+        8,
+        16
+      ],
+      "source": "build_acr1.sled raised seats"
+    },
+    {
+      "name": "seat_288_42",
+      "lo_mm": [
+        352.0,
+        42,
+        30
+      ],
+      "size_mm": [
+        52.5,
+        8,
+        16
+      ],
+      "source": "build_acr1.sled raised seats"
+    },
+    {
+      "name": "pallet_slat_90",
+      "lo_mm": [
+        154.0,
+        -50,
+        38
+      ],
+      "size_mm": [
+        24,
+        100,
+        6
+      ],
+      "source": "cradle_acr1.pallet slat"
+    },
+    {
+      "name": "pallet_90_-50",
+      "lo_mm": [
+        154.0,
+        -50,
+        44
+      ],
+      "size_mm": [
+        24,
+        8,
+        2
+      ],
+      "source": "cradle_acr1.pallet top rail pads"
+    },
+    {
+      "name": "pallet_90_42",
+      "lo_mm": [
+        154.0,
+        42,
+        44
+      ],
+      "size_mm": [
+        24,
+        8,
+        2
+      ],
+      "source": "cradle_acr1.pallet top rail pads"
+    },
+    {
+      "name": "pallet_slat_230",
+      "lo_mm": [
+        294.0,
+        -50,
+        38
+      ],
+      "size_mm": [
+        24,
+        100,
+        6
+      ],
+      "source": "cradle_acr1.pallet slat"
+    },
+    {
+      "name": "pallet_230_-50",
+      "lo_mm": [
+        294.0,
+        -50,
+        44
+      ],
+      "size_mm": [
+        24,
+        8,
+        2
+      ],
+      "source": "cradle_acr1.pallet top rail pads"
+    },
+    {
+      "name": "pallet_230_42",
+      "lo_mm": [
+        294.0,
+        42,
+        44
+      ],
+      "size_mm": [
+        24,
+        8,
+        2
+      ],
+      "source": "cradle_acr1.pallet top rail pads"
+    },
+    {
+      "name": "pallet_crossbar",
+      "lo_mm": [
+        -32,
+        -10,
+        38
+      ],
+      "size_mm": [
+        546.5,
+        20,
+        6
+      ],
+      "source": "cradle_acr1.pallet axial crossbar"
+    },
+    {
+      "name": "pallet_cross_70",
+      "lo_mm": [
+        131.0,
+        -55.5,
+        38
+      ],
+      "size_mm": [
+        14,
+        111,
+        6
+      ],
+      "source": "cradle_acr1.pallet cross strip"
+    },
+    {
+      "name": "pallet_foot_70_-50",
+      "lo_mm": [
+        131.0,
+        -50,
+        30
+      ],
+      "size_mm": [
+        14,
+        8,
+        8
+      ],
+      "source": "cradle_acr1.pallet foot"
+    },
+    {
+      "name": "pallet_foot_70_42",
+      "lo_mm": [
+        131.0,
+        42,
+        30
+      ],
+      "size_mm": [
+        14,
+        8,
+        8
+      ],
+      "source": "cradle_acr1.pallet foot"
+    },
+    {
+      "name": "pallet_cross_270",
+      "lo_mm": [
+        331.0,
+        -55.5,
+        38
+      ],
+      "size_mm": [
+        14,
+        111,
+        6
+      ],
+      "source": "cradle_acr1.pallet cross strip"
+    },
+    {
+      "name": "pallet_foot_270_-50",
+      "lo_mm": [
+        331.0,
+        -50,
+        30
+      ],
+      "size_mm": [
+        14,
+        8,
+        8
+      ],
+      "source": "cradle_acr1.pallet foot"
+    },
+    {
+      "name": "pallet_foot_270_42",
+      "lo_mm": [
+        331.0,
+        42,
+        30
+      ],
+      "size_mm": [
+        14,
+        8,
+        8
+      ],
+      "source": "cradle_acr1.pallet foot"
+    },
+    {
+      "name": "pallet_grip_-22",
+      "lo_mm": [
+        -32,
+        -10,
+        34
+      ],
+      "size_mm": [
+        20,
+        20,
+        11.5
+      ],
+      "source": "cradle_acr1.pallet grip end;upper face0.5mm below payload;hole stays below upper face"
+    },
+    {
+      "name": "pallet_grip_504.5",
+      "lo_mm": [
+        494.5,
+        -10,
+        34
+      ],
+      "size_mm": [
+        20,
+        20,
+        11.5
+      ],
+      "source": "cradle_acr1.pallet grip end;upper face0.5mm below payload;hole stays below upper face"
+    },
+    {
+      "name": "pallet_keystrip_40",
+      "lo_mm": [
+        32,
+        -99.5,
+        38
+      ],
+      "size_mm": [
+        16,
+        99.5,
+        6
+      ],
+      "source": "cradle_acr1.pallet lock strip;key bore outside payload corridor"
+    },
+    {
+      "name": "pallet_keystrip_468",
+      "lo_mm": [
+        460,
+        -99.5,
+        38
+      ],
+      "size_mm": [
+        16,
+        99.5,
+        6
+      ],
+      "source": "cradle_acr1.pallet lock strip;key bore outside payload corridor"
+    },
+    {
+      "name": "rear_pad_-50_48",
+      "lo_mm": [
+        62,
+        -50,
+        48
+      ],
+      "size_mm": [
+        2,
+        8,
+        6
+      ],
+      "source": "build_acr1.sled designated rear rail-contact pads"
+    },
+    {
+      "name": "rear_support_-50_48",
+      "lo_mm": [
+        50,
+        -56,
+        48
+      ],
+      "size_mm": [
+        12,
+        14,
+        6
+      ],
+      "source": "build_acr1.sled rear pad support"
+    },
+    {
+      "name": "rear_pad_-50_138",
+      "lo_mm": [
+        62,
+        -50,
+        138
+      ],
+      "size_mm": [
+        2,
+        8,
+        6
+      ],
+      "source": "build_acr1.sled designated rear rail-contact pads"
+    },
+    {
+      "name": "rear_support_-50_138",
+      "lo_mm": [
+        50,
+        -56,
+        138
+      ],
+      "size_mm": [
+        12,
+        14,
+        6
+      ],
+      "source": "build_acr1.sled rear pad support"
+    },
+    {
+      "name": "rear_pad_42_48",
+      "lo_mm": [
+        62,
+        42,
+        48
+      ],
+      "size_mm": [
+        2,
+        8,
+        6
+      ],
+      "source": "build_acr1.sled designated rear rail-contact pads"
+    },
+    {
+      "name": "rear_support_42_48",
+      "lo_mm": [
+        50,
+        42,
+        48
+      ],
+      "size_mm": [
+        12,
+        14,
+        6
+      ],
+      "source": "build_acr1.sled rear pad support"
+    },
+    {
+      "name": "rear_pad_42_138",
+      "lo_mm": [
+        62,
+        42,
+        138
+      ],
+      "size_mm": [
+        2,
+        8,
+        6
+      ],
+      "source": "build_acr1.sled designated rear rail-contact pads"
+    },
+    {
+      "name": "rear_support_42_138",
+      "lo_mm": [
+        50,
+        42,
+        138
+      ],
+      "size_mm": [
+        12,
+        14,
+        6
+      ],
+      "source": "build_acr1.sled rear pad support"
+    },
+    {
+      "name": "pillar_24_-1",
+      "lo_mm": [
+        88.0,
+        -66,
+        30
+      ],
+      "size_mm": [
+        20,
+        6,
+        118
+      ],
+      "source": "build_acr1.sled outboard cap pillar"
+    },
+    {
+      "name": "cap_24_-1",
+      "lo_mm": [
+        88.0,
+        -66,
+        148
+      ],
+      "size_mm": [
+        20,
+        24,
+        6
+      ],
+      "source": "sled_latches.build closed capture cap;2mm upper gap"
+    },
+    {
+      "name": "capneck_24_-1",
+      "lo_mm": [
+        94.0,
+        -68,
+        152
+      ],
+      "size_mm": [
+        8,
+        6,
+        12
+      ],
+      "source": "sled_latches.build cap neck;bores outside nearest surface"
+    },
+    {
+      "name": "guide_24_-1",
+      "lo_mm": [
+        88.0,
+        -154,
+        142
+      ],
+      "size_mm": [
+        20,
+        96,
+        6
+      ],
+      "source": "sled_latches.build fixed cap rail"
+    },
+    {
+      "name": "guide_lower_lip_24_-1",
+      "lo_mm": [
+        83.0,
+        -69,
+        146
+      ],
+      "size_mm": [
+        25,
+        8,
+        2
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "guide_web_24_-1",
+      "lo_mm": [
+        83.0,
+        -69,
+        142
+      ],
+      "size_mm": [
+        4,
+        8,
+        26
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "guide_upper_lip_24_-1",
+      "lo_mm": [
+        83.0,
+        -69,
+        166
+      ],
+      "size_mm": [
+        25,
+        8,
+        2
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "pillar_24_1",
+      "lo_mm": [
+        88.0,
+        60,
+        30
+      ],
+      "size_mm": [
+        20,
+        6,
+        118
+      ],
+      "source": "build_acr1.sled outboard cap pillar"
+    },
+    {
+      "name": "cap_24_1",
+      "lo_mm": [
+        88.0,
+        42,
+        148
+      ],
+      "size_mm": [
+        20,
+        24,
+        6
+      ],
+      "source": "sled_latches.build closed capture cap;2mm upper gap"
+    },
+    {
+      "name": "capneck_24_1",
+      "lo_mm": [
+        94.0,
+        62,
+        152
+      ],
+      "size_mm": [
+        8,
+        6,
+        12
+      ],
+      "source": "sled_latches.build cap neck;bores outside nearest surface"
+    },
+    {
+      "name": "guide_24_1",
+      "lo_mm": [
+        88.0,
+        58,
+        142
+      ],
+      "size_mm": [
+        20,
+        96,
+        6
+      ],
+      "source": "sled_latches.build fixed cap rail"
+    },
+    {
+      "name": "guide_lower_lip_24_1",
+      "lo_mm": [
+        83.0,
+        61,
+        146
+      ],
+      "size_mm": [
+        25,
+        8,
+        2
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "guide_web_24_1",
+      "lo_mm": [
+        83.0,
+        61,
+        142
+      ],
+      "size_mm": [
+        4,
+        8,
+        26
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "guide_upper_lip_24_1",
+      "lo_mm": [
+        83.0,
+        61,
+        166
+      ],
+      "size_mm": [
+        25,
+        8,
+        2
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "pillar_296.5_-1",
+      "lo_mm": [
+        360.5,
+        -66,
+        30
+      ],
+      "size_mm": [
+        20,
+        6,
+        118
+      ],
+      "source": "build_acr1.sled outboard cap pillar"
+    },
+    {
+      "name": "cap_296.5_-1",
+      "lo_mm": [
+        360.5,
+        -66,
+        148
+      ],
+      "size_mm": [
+        20,
+        24,
+        6
+      ],
+      "source": "sled_latches.build closed capture cap;2mm upper gap"
+    },
+    {
+      "name": "capneck_296.5_-1",
+      "lo_mm": [
+        366.5,
+        -68,
+        152
+      ],
+      "size_mm": [
+        8,
+        6,
+        12
+      ],
+      "source": "sled_latches.build cap neck;bores outside nearest surface"
+    },
+    {
+      "name": "guide_296.5_-1",
+      "lo_mm": [
+        360.5,
+        -154,
+        142
+      ],
+      "size_mm": [
+        20,
+        96,
+        6
+      ],
+      "source": "sled_latches.build fixed cap rail"
+    },
+    {
+      "name": "guide_lower_lip_296.5_-1",
+      "lo_mm": [
+        355.5,
+        -69,
+        146
+      ],
+      "size_mm": [
+        25,
+        8,
+        2
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "guide_web_296.5_-1",
+      "lo_mm": [
+        355.5,
+        -69,
+        142
+      ],
+      "size_mm": [
+        4,
+        8,
+        26
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "guide_upper_lip_296.5_-1",
+      "lo_mm": [
+        355.5,
+        -69,
+        166
+      ],
+      "size_mm": [
+        25,
+        8,
+        2
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "pillar_296.5_1",
+      "lo_mm": [
+        360.5,
+        60,
+        30
+      ],
+      "size_mm": [
+        20,
+        6,
+        118
+      ],
+      "source": "build_acr1.sled outboard cap pillar"
+    },
+    {
+      "name": "cap_296.5_1",
+      "lo_mm": [
+        360.5,
+        42,
+        148
+      ],
+      "size_mm": [
+        20,
+        24,
+        6
+      ],
+      "source": "sled_latches.build closed capture cap;2mm upper gap"
+    },
+    {
+      "name": "capneck_296.5_1",
+      "lo_mm": [
+        366.5,
+        62,
+        152
+      ],
+      "size_mm": [
+        8,
+        6,
+        12
+      ],
+      "source": "sled_latches.build cap neck;bores outside nearest surface"
+    },
+    {
+      "name": "guide_296.5_1",
+      "lo_mm": [
+        360.5,
+        58,
+        142
+      ],
+      "size_mm": [
+        20,
+        96,
+        6
+      ],
+      "source": "sled_latches.build fixed cap rail"
+    },
+    {
+      "name": "guide_lower_lip_296.5_1",
+      "lo_mm": [
+        355.5,
+        61,
+        146
+      ],
+      "size_mm": [
+        25,
+        8,
+        2
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "guide_web_296.5_1",
+      "lo_mm": [
+        355.5,
+        61,
+        142
+      ],
+      "size_mm": [
+        4,
+        8,
+        26
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "guide_upper_lip_296.5_1",
+      "lo_mm": [
+        355.5,
+        61,
+        166
+      ],
+      "size_mm": [
+        25,
+        8,
+        2
+      ],
+      "source": "sled_latches.build fixed cap guide rectangular members"
+    },
+    {
+      "name": "forekeeper_-1",
+      "lo_mm": [
+        406.5,
+        -62,
+        50
+      ],
+      "size_mm": [
+        6,
+        8,
+        8
+      ],
+      "source": "sled_latches.build keeper rectangular contact tab"
+    },
+    {
+      "name": "forepost_-1",
+      "lo_mm": [
+        406.5,
+        -66,
+        30
+      ],
+      "size_mm": [
+        10,
+        6,
+        16
+      ],
+      "source": "build_acr1.sled fore support;below payload excepttop"
+    },
+    {
+      "name": "forekeeper_1",
+      "lo_mm": [
+        406.5,
+        54,
+        50
+      ],
+      "size_mm": [
+        6,
+        8,
+        8
+      ],
+      "source": "sled_latches.build keeper rectangular contact tab"
+    },
+    {
+      "name": "forepost_1",
+      "lo_mm": [
+        406.5,
+        60,
+        30
+      ],
+      "size_mm": [
+        10,
+        6,
+        16
+      ],
+      "source": "build_acr1.sled fore support;below payload excepttop"
+    }
+  ],
+  "geometry_coverage": "CAD-builder-derived rectangular surface union;remote bore/drives omission described in PROTOCOL.md;not complete CAD tessellation",
+  "input_pins": [
+    {
+      "path": "validation/acr1/cad/build_acr1.py",
+      "sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8"
+    },
+    {
+      "path": "validation/acr1/cad/cradle_acr1.py",
+      "sha256": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3"
+    },
+    {
+      "path": "validation/acr1/cad/sled_latches.py",
+      "sha256": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe"
+    },
+    {
+      "path": "validation/acr1/cad/PARAMETERS.json",
+      "sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b"
+    },
+    {
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+      "sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e"
+    },
+    {
+      "path": "validation/acr1/analysis/coupled_shot.py",
+      "sha256": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155"
+    },
+    {
+      "path": "validation/acr1/analysis/DESIGN_BUDGETS.json",
+      "sha256": "e904380c58f56397bc75d2bba0104a63d52a9b118e1f0f08d52073dddddb1b5d"
+    },
+    {
+      "path": "validation/acr1/verification/COUPLED_SHOT_REVIEW.json",
+      "sha256": "8beb07acd3b2e82c4d41c5172c8b70820cb08ad362e20bf0dea47972291552d2"
+    }
+  ],
+  "prior_Chrono_diagnosis": {
+    "path": "validation/feeder_contact_diagnosis/REPORT.md",
+    "sha256": "3c48ad1eb00001987ba3b5e30b2c34ba194bb2857c2d995fc0707ba1a4fe0fb6",
+    "decision": "FM06-R1 failed contact pose convergence;not transferred to ACR1"
+  }
+}

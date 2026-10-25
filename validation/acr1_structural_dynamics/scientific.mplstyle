@@ -1,0 +1,23 @@
+# Scientific report defaults; inspect the final-size export.
+figure.facecolor: white
+axes.facecolor: white
+savefig.facecolor: white
+font.family: DejaVu Sans
+font.size: 10
+axes.titlesize: 11
+axes.labelsize: 10
+xtick.labelsize: 9
+ytick.labelsize: 9
+legend.fontsize: 9
+axes.spines.top: False
+axes.spines.right: False
+axes.axisbelow: True
+axes.grid: False
+grid.color: .85
+grid.linewidth: .5
+lines.linewidth: 1.5
+savefig.dpi: 300
+svg.fonttype: none
+svg.hashsalt: volley-scientific-v2
+pdf.fonttype: 42
+ps.fonttype: 42

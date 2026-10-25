@@ -1,0 +1,11 @@
+{
+  "package_id": "VOLLEY-G6-FIRST-TEST-PREP-R1",
+  "result": "PASS",
+  "packet_files_checked": 22,
+  "parent_source_identities_checked": 18,
+  "pretest_lock_records": 13,
+  "valid_provisional_geometry_solids": 53,
+  "performed_experiments": 0,
+  "data_templates_empty": true,
+  "scope": "Preparation identities, numerical consistency and framing; no physical build/test/qualification acceptance."
+}

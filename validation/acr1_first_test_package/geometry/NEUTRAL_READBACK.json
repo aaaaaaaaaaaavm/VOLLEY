@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "STEP_sha256": "89cccb5258eefcf631cc2d034978b8de39396179e93a76574e530b4fee982471",
+  "imported_valid_solids": 53,
+  "native_sum_volume_mm3": 660211.1626745,
+  "imported_volume_mm3": 660211.1626745007,
+  "relative_volume_difference": 1.0579826129143808e-15,
+  "method": "Separate STEP serialization readback using CadQuery/OpenCASCADE; same kernel family as export. Not fixture structural or hardware validation."
+}

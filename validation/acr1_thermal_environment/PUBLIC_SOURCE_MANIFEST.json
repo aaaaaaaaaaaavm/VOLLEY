@@ -1,0 +1,937 @@
+{
+  "study": "ACR1-THERM-ENV-01",
+  "scope": "Self-contained supplement and its public report. Original public ACR1 source identities pinned separately.",
+  "excluded_generated_receipts": [
+    "CAPTURE_CHECKS.json",
+    "PUBLIC_SOURCE_MANIFEST.json"
+  ],
+  "files": [
+    {
+      "path": "CRITERION_RECOMMENDATIONS.json",
+      "bytes": 2104,
+      "sha256": "00d749355df56401684fb4eaf5611d77b2bf5ae76bfe9ac812e97eacca253dc4"
+    },
+    {
+      "path": "DERATED_SOURCE_RESULTS.json",
+      "bytes": 48642,
+      "sha256": "a8e2f6bf1da5bcd667c5f7d2ae8f52bc8d3e2bccaaf08e06c781ef1eaadaf8a7"
+    },
+    {
+      "path": "ENVIRONMENT.json",
+      "bytes": 128,
+      "sha256": "72cc60efa252e3f1f4bea5fc7e2b0e3b50eae2fa23d6a36bde431c84af14ba7e"
+    },
+    {
+      "path": "FIGURE_SOURCE_INVENTORY.json",
+      "bytes": 3430,
+      "sha256": "fd294a2a2a98b02a9a490d645b89c647a975902b8d62ce439a6ab9fb88f99a66"
+    },
+    {
+      "path": "INPUT_SOURCE_MANIFEST.json",
+      "bytes": 3575,
+      "sha256": "80b0877adc616fd4477c98b6c2e81d8a92e50bcfdbaf1c3270201bf58954fb42"
+    },
+    {
+      "path": "NUMERICAL_VERIFICATION.json",
+      "bytes": 101382,
+      "sha256": "c4e54ceea96ded329e4f00f9f4db9311846118647aa21144b723e41cbb2c2589"
+    },
+    {
+      "path": "PHYSICAL_INTERFACE_TEST_GATES.json",
+      "bytes": 2457,
+      "sha256": "3188dc4a62f3fa1a5ebfcb511b99cc4d06deff0d6850e60267588d549652cef6"
+    },
+    {
+      "path": "PORTABLE_REPLAY.json",
+      "bytes": 1563,
+      "sha256": "202dd60b462e5d33588bf9eca148278cd3e68fa3a8ad25cda4ee7ca73779b21f"
+    },
+    {
+      "path": "PRIMARY_FACTS.json",
+      "bytes": 3362,
+      "sha256": "e53b9007b9e76770160d5f1bded52a9b950cc88ca4df244fa7cbc96bb9d362c3"
+    },
+    {
+      "path": "PRIMARY_SOURCE_REGISTER.json",
+      "bytes": 4898,
+      "sha256": "b2690336e5c43060adfbc69f72d7bdcde4d7bd7163c3965b8cec64bb4bc6ae80"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3815,
+      "sha256": "9f099ffb13a50b2e98fd1efe205c8f8a00bae1e6ffb5a3a3d465c3563fca3f6e"
+    },
+    {
+      "path": "SENSITIVITY_SUMMARY.json",
+      "bytes": 882,
+      "sha256": "8912127b400e8c297792ac2969056793c7880afe3785a6be8949283b62c17cde"
+    },
+    {
+      "path": "THERMAL_CORRECTIONS.json",
+      "bytes": 4085834,
+      "sha256": "ffd8acb81b6eb23dbf7f95dc0a59270b0c153c3a818fa705703a5d96a7a26639"
+    },
+    {
+      "path": "THERMAL_INPUTS.json",
+      "bytes": 5153,
+      "sha256": "1d608b4b301acfac976ecd830516b0b3918d4e8465fd718a5671e6316dc628a9"
+    },
+    {
+      "path": "THERMAL_RESULTS.json",
+      "bytes": 1058168,
+      "sha256": "d9f5962a8c3e0968da77b2b2e5c6b6d036b2ebf769e20fe4d13f5962c2366965"
+    },
+    {
+      "path": "cad_radiation_geometry.py",
+      "bytes": 12414,
+      "sha256": "034034af770fe5b6060c6f2d8f6c57e881642360d52c5c128c116814e628c881"
+    },
+    {
+      "path": "capture_inputs.py",
+      "bytes": 5572,
+      "sha256": "92d6406420b6451f53c21dbb740240713cd8c07ae78bceda626d07b90594f6d6"
+    },
+    {
+      "path": "capture_primary_facts.py",
+      "bytes": 3032,
+      "sha256": "a0573f684f313df1b32e7436286509b18c14357dc5d52baa848b648c745dad72"
+    },
+    {
+      "path": "check_capture.py",
+      "bytes": 5477,
+      "sha256": "bccf809884eb29af4b76b75b9db0a008da7ee00e08756bd4b1addff5b3822d03"
+    },
+    {
+      "path": "derated_source/PARAMETER_ADAPTER_RECORD.json",
+      "bytes": 690,
+      "sha256": "65685919a5c4bf842d75bc3011a4ef31e53035366fd479bb84918c50bfb3a5c2"
+    },
+    {
+      "path": "derated_source_variant.py",
+      "bytes": 7023,
+      "sha256": "4ddc7ee282ffde22fc9fa6226c81f72e5c2ce14a41a7a3d6c46b2f0abd4a6516"
+    },
+    {
+      "path": "figures/conductance_correction.pdf",
+      "bytes": 16983,
+      "sha256": "c0a5f4646407df0b79b5500d1f5c737e31893d517e5ea9606229edff2eb89fd8"
+    },
+    {
+      "path": "figures/conductance_correction.png",
+      "bytes": 139289,
+      "sha256": "663eb88303a67b5225a2a8d1bac65b4b5f8afca128a861925a822f992662a2cb"
+    },
+    {
+      "path": "figures/conductance_correction.svg",
+      "bytes": 21051,
+      "sha256": "7ba3e082dfd2fe99f8ad2d906cd92c95991d5b12839d0d5438fee80b621ddbe2"
+    },
+    {
+      "path": "figures/derated_source.pdf",
+      "bytes": 19750,
+      "sha256": "6968a392bbbb50066176041a660dcac307aac3489df2da2658c9cc2f5a772ae1"
+    },
+    {
+      "path": "figures/derated_source.png",
+      "bytes": 160067,
+      "sha256": "2b5502d4fe91122937fdf5276b3c866a202e5a9bfd5317b2f1b558d26eca3a86"
+    },
+    {
+      "path": "figures/derated_source.svg",
+      "bytes": 28520,
+      "sha256": "7c1af617d46877df52ce3c2c8516c6ea45936ed620afc223a48d69ed467ae5c5"
+    },
+    {
+      "path": "figures/duty_temperatures.pdf",
+      "bytes": 21846,
+      "sha256": "155ed8412770cdb6b6086ffd925886386a36831d2897a2d9e3da3a4f7f490312"
+    },
+    {
+      "path": "figures/duty_temperatures.png",
+      "bytes": 223349,
+      "sha256": "fbef8c9948fa082b3f3cf3e142a815fd2525fbde325fe3adf9299032dfa096bb"
+    },
+    {
+      "path": "figures/duty_temperatures.svg",
+      "bytes": 61182,
+      "sha256": "ee5cf77925e7f52fb8567c2c290788a2b3b5e152b1fce8dd4f047095e6ec9601"
+    },
+    {
+      "path": "figures/uncertainty_sensitivity.pdf",
+      "bytes": 21468,
+      "sha256": "df00a820a190a9afb5db2f63ab85f829f252ef5fc2c9c9957604264901edf066"
+    },
+    {
+      "path": "figures/uncertainty_sensitivity.png",
+      "bytes": 178296,
+      "sha256": "79978b932477b18b532d318b16f4a2eb4ad36bafff83c766cf1765a9d2f7c34d"
+    },
+    {
+      "path": "figures/uncertainty_sensitivity.svg",
+      "bytes": 35635,
+      "sha256": "ffd7dedda22fe7723ce56b45faa4a20800587e8ba6b01f64a2b1b017bcd8a858"
+    },
+    {
+      "path": "freeze_manifest.py",
+      "bytes": 1206,
+      "sha256": "74008695f5faa669e7cd30d9267b95c663405b0021e5eeaa06f47fc82a9e5ca2"
+    },
+    {
+      "path": "geometry/CAD_SOURCE.json",
+      "bytes": 263,
+      "sha256": "3cfb65b93a6855e2a84c549a5504eae57ead4ba34d8ca38b8f7d678cda6aaa2e"
+    },
+    {
+      "path": "geometry/RADIATION_4096.json",
+      "bytes": 9075,
+      "sha256": "074f04ac16ee7be941d0f8652777b4f77cb533594acc1813a32a347f241ce719"
+    },
+    {
+      "path": "geometry/RADIATION_8192.json",
+      "bytes": 9091,
+      "sha256": "b8d84f669d41eef37043f9da2c5407a06ebc5e66ae17e17455c3fae74cb26bef"
+    },
+    {
+      "path": "geometry/RADIATION_S01_4096.json",
+      "bytes": 8804,
+      "sha256": "f16f31b5084c1cd91c6be358065e04bc8a7d1252c75dc4fa28c3e898a1fbe56c"
+    },
+    {
+      "path": "geometry/RADIATION_S01_8192.json",
+      "bytes": 8817,
+      "sha256": "c7698f7a2a1dec20885961c95161c00d9306231ad470829a549a9c9ecdb5edc9"
+    },
+    {
+      "path": "geometry/RADIATION_S02_4096.json",
+      "bytes": 8532,
+      "sha256": "52a4ac8c34ffbf4778ea8e5c6c81c83e0672bbeaa1a6d427cef5e05e54760462"
+    },
+    {
+      "path": "geometry/RADIATION_S02_8192.json",
+      "bytes": 8543,
+      "sha256": "682265d53d853cd9e061ed8a4315032287b0fd0365274973bd76c2013499cd55"
+    },
+    {
+      "path": "geometry/RADIATION_S03_4096.json",
+      "bytes": 8260,
+      "sha256": "79d3ab9c36c3b75dd12eff7de6aa0c5a3b1994f5da4eb907d7fe2c5dd3bcac8c"
+    },
+    {
+      "path": "geometry/RADIATION_S03_8192.json",
+      "bytes": 8271,
+      "sha256": "36e7ff8cc48cf011aed87ab5ce0316b0adce4daacf5193331390945aaa3718e8"
+    },
+    {
+      "path": "geometry/RADIATION_S04_4096.json",
+      "bytes": 7990,
+      "sha256": "9f5b349363f410fe9d94a3b112666078b0f6200eca486f551519de1c92cc4217"
+    },
+    {
+      "path": "geometry/RADIATION_S04_8192.json",
+      "bytes": 7998,
+      "sha256": "6c5bda35dc43583ee026299f084761920acca1bc57cd310f68a0397210eaacf5"
+    },
+    {
+      "path": "geometry/RADIATION_S05_4096.json",
+      "bytes": 7718,
+      "sha256": "75476d70075d858a5d7da85c1bc27ed18f16e0888206890874125d5e2efd4841"
+    },
+    {
+      "path": "geometry/RADIATION_S05_8192.json",
+      "bytes": 7733,
+      "sha256": "66b6d9d07a64c16b8cd72b8f5dc340c1ed93674cb4024269d3257eb3c8013911"
+    },
+    {
+      "path": "geometry/RADIATION_S06_4096.json",
+      "bytes": 7445,
+      "sha256": "234cded3445d2fcd9c5a9dce9c0f6359e3ebc955fa8e9c79b75c86c9fb887031"
+    },
+    {
+      "path": "geometry/RADIATION_S06_8192.json",
+      "bytes": 7462,
+      "sha256": "7d58a539e9a9d0dfeeda4a62e3b8e2afe358abf1fd79a548b5c5a74509743af2"
+    },
+    {
+      "path": "geometry/RADIATION_S07_4096.json",
+      "bytes": 7194,
+      "sha256": "126075658f09345fc7cbcffa2b4a412a3d56a867b1dd1767f61cc6a5543bd4e6"
+    },
+    {
+      "path": "geometry/RADIATION_S07_8192.json",
+      "bytes": 7210,
+      "sha256": "0a300f7a6612b058038ec9d010abe38bd5a83ce71415bace1cb2f2c1e7378ab8"
+    },
+    {
+      "path": "geometry/RADIATION_S08_4096.json",
+      "bytes": 6949,
+      "sha256": "4ba9afd4bcbebb9cb6de1e6e86043ecfda5b778102d353842e8e5d11573b6837"
+    },
+    {
+      "path": "geometry/RADIATION_S08_8192.json",
+      "bytes": 6948,
+      "sha256": "8af1bff24c2c000cb2b733a2ba41be46c799e9096417ad132de26154b834117f"
+    },
+    {
+      "path": "geometry/RADIATION_S09_4096.json",
+      "bytes": 6695,
+      "sha256": "cbccff102b1126601c474fe5130e2d8221d571dcc849dc8f47e81bd7f4572f59"
+    },
+    {
+      "path": "geometry/RADIATION_S09_8192.json",
+      "bytes": 6699,
+      "sha256": "82ace56c07bf916ff8233ef03904fae4c841bd51790bbdd32b3054066127a261"
+    },
+    {
+      "path": "geometry/RADIATION_S10_4096.json",
+      "bytes": 6446,
+      "sha256": "1b331e16cd5982e6693644501c2b89f2dbf83370bd9da025a2223a0e1e81a46a"
+    },
+    {
+      "path": "geometry/RADIATION_S10_8192.json",
+      "bytes": 6446,
+      "sha256": "db20cb9c2b5ac96706df2491711da3ed9748fd4f6f5f05522ec778eff2ac54ba"
+    },
+    {
+      "path": "geometry/RADIATION_S11_4096.json",
+      "bytes": 6196,
+      "sha256": "2f7d2336badf23bf6c4205e43f44fdb01dd59ba5ea64885b33a94cbd09872750"
+    },
+    {
+      "path": "geometry/RADIATION_S11_8192.json",
+      "bytes": 6201,
+      "sha256": "3f8e7da66feba06ebfa2a1a90a55f559ced94aeac97ca36fa04cc26754e9472e"
+    },
+    {
+      "path": "geometry/RADIATION_S12_4096.json",
+      "bytes": 5947,
+      "sha256": "cf43762b3f68b59f2cc22b9b5d3fa8832b749dc49bf4192e6fd6ed4add27fab8"
+    },
+    {
+      "path": "geometry/RADIATION_S12_8192.json",
+      "bytes": 5949,
+      "sha256": "a1effc4c64a9a1478047a037eafceee094edc22b10ee437bd8a3fdca482ab6a1"
+    },
+    {
+      "path": "geometry/cad_mesh.npz",
+      "bytes": 957483,
+      "sha256": "6bc6e188d0a0a67a92e72ab090f5a0b39ab4fddb3950c63f40e14bfafed031e4"
+    },
+    {
+      "path": "geometry/contacts_4096_node00.npz",
+      "bytes": 632,
+      "sha256": "3769a55376e29cb1435dffc612f320aa1fcd48a5eee7a594392f156231a75c5f"
+    },
+    {
+      "path": "geometry/contacts_4096_node01.npz",
+      "bytes": 2226,
+      "sha256": "4d10affb36bcd403e3c478148b74c7c55fc0503c110e2a517fc4937d2e1721ed"
+    },
+    {
+      "path": "geometry/contacts_4096_node02.npz",
+      "bytes": 2201,
+      "sha256": "76b4f9b0a9538a41293bc659eb250476f8221cbb6552e99700aeb7077706ca0f"
+    },
+    {
+      "path": "geometry/contacts_4096_node03.npz",
+      "bytes": 2146,
+      "sha256": "9fbe56ee820d0c6c58790f1c7fe0ac1a0a383b7a60ba562cfd6f80ca4f00308e"
+    },
+    {
+      "path": "geometry/contacts_4096_node04.npz",
+      "bytes": 4915,
+      "sha256": "78c5938524847a35c1ad45923d7e3aa9a8ded5720739807d5d36bf96904e7b5c"
+    },
+    {
+      "path": "geometry/contacts_4096_node05.npz",
+      "bytes": 729,
+      "sha256": "0582e2de6ac532a3b13b6c071b599f0f56f6c1722b9a97702c95a54ef1970c26"
+    },
+    {
+      "path": "geometry/contacts_4096_node08.npz",
+      "bytes": 1549,
+      "sha256": "d8418e6c24d78eb5dc77531b4622ddffecee1e35988ba3ad383595990a08903d"
+    },
+    {
+      "path": "geometry/contacts_4096_node09.npz",
+      "bytes": 1575,
+      "sha256": "7b923fcd9036b2331bf01f648995812b5e8c44d6907394c3e4c48791e2e0fe8c"
+    },
+    {
+      "path": "geometry/contacts_4096_node10.npz",
+      "bytes": 1604,
+      "sha256": "351293701ee9b3409fe02e3ce2adba003b998c4937e350be337c8dd4ceee31c4"
+    },
+    {
+      "path": "geometry/contacts_4096_node11.npz",
+      "bytes": 1576,
+      "sha256": "d64c43bd5f48effc0f7e0f4d3ee477308da49cdc78bd5dfe0728cbe2df23a5c0"
+    },
+    {
+      "path": "geometry/contacts_4096_node12.npz",
+      "bytes": 1546,
+      "sha256": "53d9da8727b4a57418c2e66cb75675c8e67f69a0d06efbd734dd18744067d1a5"
+    },
+    {
+      "path": "geometry/contacts_4096_node13.npz",
+      "bytes": 1555,
+      "sha256": "bbc6b35b88e87e336bd7a4865be9b1f313170fc43220ea465af6732962615703"
+    },
+    {
+      "path": "geometry/contacts_4096_node14.npz",
+      "bytes": 1525,
+      "sha256": "df14a87e5c818840fd5e79e4b015f86ad450b27833fa087009624dbe9065564a"
+    },
+    {
+      "path": "geometry/contacts_4096_node15.npz",
+      "bytes": 1560,
+      "sha256": "a64b371344f8c37f178122438659349dff4a7374c659ca9085c011c1f3b44262"
+    },
+    {
+      "path": "geometry/contacts_4096_node16.npz",
+      "bytes": 1550,
+      "sha256": "9c7d7c1b03e28e4fa927c35502cd631fbc422e638eb17a73875dd65d49d9f905"
+    },
+    {
+      "path": "geometry/contacts_4096_node17.npz",
+      "bytes": 1624,
+      "sha256": "c55a22bb5f78ea5af860b93c9b74af0ecee44f096ac524792a532bf3fb2e1e82"
+    },
+    {
+      "path": "geometry/contacts_4096_node18.npz",
+      "bytes": 1559,
+      "sha256": "1a81f0a884f068f162e64c49d0384c4e080625d07b7e074f4bec485f1ac41bd9"
+    },
+    {
+      "path": "geometry/contacts_4096_node19.npz",
+      "bytes": 1561,
+      "sha256": "93a5391e743db92b9d75409503a6ef5ddb1ea95d7cd54f03173bb654c245981e"
+    },
+    {
+      "path": "geometry/contacts_4096_node20.npz",
+      "bytes": 746,
+      "sha256": "9932c8ec571e7a2178486e129277bc1d29783a9969bad01bc9d855156ec45e03"
+    },
+    {
+      "path": "geometry/contacts_4096_node21.npz",
+      "bytes": 1449,
+      "sha256": "96aa84b32106c8e5e10a58e5fa6d70a596ddd3b842a8d61d5197a133629ad178"
+    },
+    {
+      "path": "geometry/contacts_4096_node22.npz",
+      "bytes": 1393,
+      "sha256": "2a38b9d27d5eed8b4d2caa3afee6451a864891fb8f0cd59591a118d63c06669e"
+    },
+    {
+      "path": "geometry/contacts_4096_node23.npz",
+      "bytes": 658,
+      "sha256": "afaf7c7e823ed417ec48453c51369e4ca27abcb9a2611d93636adec3676f7ff5"
+    },
+    {
+      "path": "geometry/contacts_8192_node00.npz",
+      "bytes": 686,
+      "sha256": "c8a878e55d854c4b288ff69b96bbfbdf6646bdcf26335259369f84badda246d7"
+    },
+    {
+      "path": "geometry/contacts_8192_node01.npz",
+      "bytes": 3801,
+      "sha256": "5b4409b316095984d1a2ac77ae9cb4c65f6bd887d11f72e56bb67e80fe78e374"
+    },
+    {
+      "path": "geometry/contacts_8192_node02.npz",
+      "bytes": 3781,
+      "sha256": "a02a86fef1cfe628b2a91af12ba2196c5ac78b0602860f4d0d1f15d76b9fe7f4"
+    },
+    {
+      "path": "geometry/contacts_8192_node03.npz",
+      "bytes": 3708,
+      "sha256": "af366a8a7b12761dd207c633c287a5c7191cc9deb36be8770023075fdf8c225a"
+    },
+    {
+      "path": "geometry/contacts_8192_node04.npz",
+      "bytes": 9218,
+      "sha256": "834100ff9f004d8d469e3fd36f0c10e60f9c679a8e7e835bed43f6daed551746"
+    },
+    {
+      "path": "geometry/contacts_8192_node05.npz",
+      "bytes": 867,
+      "sha256": "f1ef15b25e7f044988479a120016a4b290f99c40f5d40557497230d775fb8621"
+    },
+    {
+      "path": "geometry/contacts_8192_node08.npz",
+      "bytes": 2539,
+      "sha256": "2621e43b0daff9870585ef58b1484212add201bbaa678638c78f8f4eac38a29d"
+    },
+    {
+      "path": "geometry/contacts_8192_node09.npz",
+      "bytes": 2559,
+      "sha256": "16f09f4e8fabbc4217ea7361aee8c80865636223e7aed63dab88a5e6c36ab19b"
+    },
+    {
+      "path": "geometry/contacts_8192_node10.npz",
+      "bytes": 2523,
+      "sha256": "ec6df7cb6bddd98a110a419f4e2784806b49d03b6a488947f9e1f3ec0a8cee93"
+    },
+    {
+      "path": "geometry/contacts_8192_node11.npz",
+      "bytes": 2559,
+      "sha256": "d580428b9be7e2752900d303e0a3240748d4e4d4b849b71f85030d50f0050026"
+    },
+    {
+      "path": "geometry/contacts_8192_node12.npz",
+      "bytes": 2499,
+      "sha256": "05f4c00d858353a2d27ad323e5df07f11af62bc03e7ec06de06f36b498fc0f9a"
+    },
+    {
+      "path": "geometry/contacts_8192_node13.npz",
+      "bytes": 2502,
+      "sha256": "124713d8d288b1702c7c382fd033b64d395c377250ce95621294a30a041abe73"
+    },
+    {
+      "path": "geometry/contacts_8192_node14.npz",
+      "bytes": 2489,
+      "sha256": "c358e59e586dc53c47361a1c5446c5339a3265e87c1efb3d5d35cb824df078c0"
+    },
+    {
+      "path": "geometry/contacts_8192_node15.npz",
+      "bytes": 2506,
+      "sha256": "0acf6d05e1c6c2f943a54e311435a9eae8fe3d818f44156be028e1a2c5900530"
+    },
+    {
+      "path": "geometry/contacts_8192_node16.npz",
+      "bytes": 2485,
+      "sha256": "aca9418b5f5b51a284fdf5b3db5c4352c683888937e8c03bbad446dcbf2d6dcd"
+    },
+    {
+      "path": "geometry/contacts_8192_node17.npz",
+      "bytes": 2690,
+      "sha256": "e102e832d784e6cca2943ba8ee827602133182c8880b2a545ae9a8db95e9f68e"
+    },
+    {
+      "path": "geometry/contacts_8192_node18.npz",
+      "bytes": 2523,
+      "sha256": "8bcc4a90a9006e023ad87d0327af26c4b74f3cf433c5ef6166e5a700ee8fb8b4"
+    },
+    {
+      "path": "geometry/contacts_8192_node19.npz",
+      "bytes": 2525,
+      "sha256": "87c80ce80b420f6211a2294d4d5295828ff4fae9dc95feca835a334680209930"
+    },
+    {
+      "path": "geometry/contacts_8192_node20.npz",
+      "bytes": 881,
+      "sha256": "4d361d25f1dd718c1a84902f4b7774ee6c796493fe6c614c106358811cceb5d5"
+    },
+    {
+      "path": "geometry/contacts_8192_node21.npz",
+      "bytes": 2283,
+      "sha256": "1ec25a2b3607a9ae2524c19caa7df64d48804a137698101991598167912e9ee2"
+    },
+    {
+      "path": "geometry/contacts_8192_node22.npz",
+      "bytes": 2246,
+      "sha256": "eb490039a6de1f0a3125056bdf57cb4e83f5d696df3eee072fc854b1f01ed8f2"
+    },
+    {
+      "path": "geometry/contacts_8192_node23.npz",
+      "bytes": 736,
+      "sha256": "9a569f1fa5370a85f19f44a669a5fe7ba2a0acf80c43d1c45b973b99d2b69496"
+    },
+    {
+      "path": "geometry/radiation_4096.npz",
+      "bytes": 57413,
+      "sha256": "13f9632e6496771900287db0fbe714ba84712c5c5c4b3e0cb35846fcebaeb0cf"
+    },
+    {
+      "path": "geometry/radiation_8192.npz",
+      "bytes": 58648,
+      "sha256": "6be30813167e4fe9ccb6756edc287ae2fab15254e4e25fcb6fe63b8a3412e153"
+    },
+    {
+      "path": "geometry/radiation_s01_4096.npz",
+      "bytes": 55279,
+      "sha256": "3ba2bbad51fa020cce9753b200b18cd24208c0e5449085a166243365737f9b63"
+    },
+    {
+      "path": "geometry/radiation_s01_8192.npz",
+      "bytes": 56511,
+      "sha256": "eb5cbfc819f458d3abff0cdccf830291b136524fc5c598052c84dba643643aa1"
+    },
+    {
+      "path": "geometry/radiation_s02_4096.npz",
+      "bytes": 53111,
+      "sha256": "11d56b21b3d2851b2de31a36878710f75dd3356b5ce9e5f7421119bc9b8660ca"
+    },
+    {
+      "path": "geometry/radiation_s02_8192.npz",
+      "bytes": 54231,
+      "sha256": "95b47383c1f9bd03beb57b4f024e07c5260c669e70c93156480e053264217f19"
+    },
+    {
+      "path": "geometry/radiation_s03_4096.npz",
+      "bytes": 50938,
+      "sha256": "49716272bd90b93e93eee506fc8363d81eb6b0bf987cc8d7d487b8ea1820574d"
+    },
+    {
+      "path": "geometry/radiation_s03_8192.npz",
+      "bytes": 51938,
+      "sha256": "ef49102d85e612ad6e1c2c8513712559c943c9891ee4aefdd17abfac70f2c2b8"
+    },
+    {
+      "path": "geometry/radiation_s04_4096.npz",
+      "bytes": 48684,
+      "sha256": "1a99613c869664c8248b53ca69aaae07bf837923c98f573b7cd31e819b77eb97"
+    },
+    {
+      "path": "geometry/radiation_s04_8192.npz",
+      "bytes": 49524,
+      "sha256": "c1f7e2ff980760e1f857bae4416a4bd8f327aa7275cd2497d8c0f99087c877ea"
+    },
+    {
+      "path": "geometry/radiation_s05_4096.npz",
+      "bytes": 46575,
+      "sha256": "95afc615c484d4039d63b7d6ddf8500318562c7bc9142a8d8cc5ecbd717251fe"
+    },
+    {
+      "path": "geometry/radiation_s05_8192.npz",
+      "bytes": 47417,
+      "sha256": "4e9cfc76de8790f2df61ddc58a3c19f57a93879c132c411a13bfd6a19c816b70"
+    },
+    {
+      "path": "geometry/radiation_s06_4096.npz",
+      "bytes": 44335,
+      "sha256": "22a104569a1dcadf5c9330842965463f6ad78ada32bcb6dad0a108f95054a6eb"
+    },
+    {
+      "path": "geometry/radiation_s06_8192.npz",
+      "bytes": 45031,
+      "sha256": "dd3bd0f52bd63bd5af9ed2c7bd34124b46e3bbfad2343efec027819720fbbf66"
+    },
+    {
+      "path": "geometry/radiation_s07_4096.npz",
+      "bytes": 42149,
+      "sha256": "2d87d2441f3d9c15892ab58cfb8fe0f7344ac577a901fad029486bb2e22d1aab"
+    },
+    {
+      "path": "geometry/radiation_s07_8192.npz",
+      "bytes": 42848,
+      "sha256": "7471971be692bf6e62d464703009b54cbc30477578785f34fad2136cbafb2c65"
+    },
+    {
+      "path": "geometry/radiation_s08_4096.npz",
+      "bytes": 39773,
+      "sha256": "44c2439863747aa728058bdbc7f887d9c48e60644015e0d439338218cdd72c61"
+    },
+    {
+      "path": "geometry/radiation_s08_8192.npz",
+      "bytes": 40252,
+      "sha256": "15f35ee58663139660553216076bb5145ab101e8672bdd18b61e22ae09389ab3"
+    },
+    {
+      "path": "geometry/radiation_s09_4096.npz",
+      "bytes": 37677,
+      "sha256": "e845799ab85cb86c9a9d049fa3ae4819f9363d9ff44e42670aaf832f0655634d"
+    },
+    {
+      "path": "geometry/radiation_s09_8192.npz",
+      "bytes": 38073,
+      "sha256": "fbf9fcdf34b0abaa458c0bb511e13ffdc4aa0b61a7a4e95505829aada1c530bf"
+    },
+    {
+      "path": "geometry/radiation_s10_4096.npz",
+      "bytes": 35096,
+      "sha256": "6788f1040b067b4d5af31236fc359447ecc4b30877750b13e9ad82b0e52dd27c"
+    },
+    {
+      "path": "geometry/radiation_s10_8192.npz",
+      "bytes": 35494,
+      "sha256": "dee74d38cdabf8c8bc178b87dfcc4d3721cd492f2614292ebfe7a1270824e4d6"
+    },
+    {
+      "path": "geometry/radiation_s11_4096.npz",
+      "bytes": 32125,
+      "sha256": "6c47e8d6955610dfb7aea1ed0d8d29dd4a2b2e8620d048e54beffb96e64184e8"
+    },
+    {
+      "path": "geometry/radiation_s11_8192.npz",
+      "bytes": 32438,
+      "sha256": "209ca8cd831cbd2d996e51c538fd19256c52de9c99595ea95f597fecf0deebc2"
+    },
+    {
+      "path": "geometry/radiation_s12_4096.npz",
+      "bytes": 29167,
+      "sha256": "6765316f6ad69d7bdd4d61aeab59fbfc44d724cd4f7551988db60b63dd7aa5ac"
+    },
+    {
+      "path": "geometry/radiation_s12_8192.npz",
+      "bytes": 29410,
+      "sha256": "a3d4e68d9ebbc3642a0974294ae62ad46537cc526ddcec9a9c877413a5c374f9"
+    },
+    {
+      "path": "inputs/ARREST_FORCE_MAP.json",
+      "bytes": 1266,
+      "sha256": "d143d2e7efa0583c7c2ddf73b47479e192891aa2ffbb7d5976747189bda1cd1f"
+    },
+    {
+      "path": "inputs/CONDUCTION_PHASE_A.json",
+      "bytes": 1363,
+      "sha256": "208406e54c88d59a1ff2b177bf9a7babe1010aefeaa91abbade592d7023ac7fc"
+    },
+    {
+      "path": "inputs/CONDUCTION_PHASE_B.json",
+      "bytes": 1366,
+      "sha256": "1a1ed8b5b72ec608a0992ef5e7f765fe36270b958ae34ce32349354e915c1096"
+    },
+    {
+      "path": "inputs/CONDUCTION_PHASE_C.json",
+      "bytes": 1362,
+      "sha256": "65210405aec3ce22ab2075c539cdf5fffe8ad2540a2f8640e14b8b67b8688920"
+    },
+    {
+      "path": "inputs/COUPLED_SHOT.json",
+      "bytes": 215697,
+      "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+    },
+    {
+      "path": "inputs/DESIGN_BUDGETS.json",
+      "bytes": 12823,
+      "sha256": "e904380c58f56397bc75d2bba0104a63d52a9b118e1f0f08d52073dddddb1b5d"
+    },
+    {
+      "path": "inputs/FEEDER_SIZING.json",
+      "bytes": 4345,
+      "sha256": "e3d9bc99b18c43d5d5ff529d4f7afcafb52e5da8da3bec53511365965f052ecf"
+    },
+    {
+      "path": "inputs/FINITE_MOTOR.json",
+      "bytes": 13762,
+      "sha256": "546cf2f427f356fc043f7d5cfd3f6af9b4ab5d4ab84b582e1e7c30baf8fd89ec"
+    },
+    {
+      "path": "inputs/LIFT_SIZING.json",
+      "bytes": 9959,
+      "sha256": "b6e8c553a2dcd47322c861b6ac6036813057062cc3408c0a98f68257cd9d2fc6"
+    },
+    {
+      "path": "inputs/MISSION_INPUTS.json",
+      "bytes": 3859,
+      "sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f"
+    },
+    {
+      "path": "inputs/PARAMETERS.json",
+      "bytes": 8677,
+      "sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b"
+    },
+    {
+      "path": "inputs/POWER_COMPONENT_REFERENCE.json",
+      "bytes": 3648,
+      "sha256": "187905f64ba50273077b2739aa19f71c425bc7e4a7951e72021af554c318810f"
+    },
+    {
+      "path": "inputs/RESOURCE_LEDGER.json",
+      "bytes": 2200,
+      "sha256": "054a6627261af1a21e9df558700ce00ecf32861e130d73cf01fb102b3a6a5917"
+    },
+    {
+      "path": "inputs/VOLLEY_G5_ACR1_home.json",
+      "bytes": 147539,
+      "sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e"
+    },
+    {
+      "path": "inputs/build_acr1.py",
+      "bytes": 23832,
+      "sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8"
+    },
+    {
+      "path": "inputs/coupled_shot_production.py",
+      "bytes": 10741,
+      "sha256": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155"
+    },
+    {
+      "path": "inputs/cradle_acr1.py",
+      "bytes": 7854,
+      "sha256": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3"
+    },
+    {
+      "path": "inputs/thermal_corrections_1WK_diagnostic.py",
+      "bytes": 8128,
+      "sha256": "fe3053854e773d78fbd0b9345218b6790c45a7b30f808e52cb9694d4d3a60f33"
+    },
+    {
+      "path": "inputs/thermal_corrections_2p5WK_diagnostic.py",
+      "bytes": 8197,
+      "sha256": "33eeb7e905f9ed490e57222741099577dbb3c6dfca7a257607813d14ac1408cd"
+    },
+    {
+      "path": "make_figures.py",
+      "bytes": 7335,
+      "sha256": "fb2ae6002857bc52920408eac21143f98ed475bae5e0e438d9a713289f2629ae"
+    },
+    {
+      "path": "portable_replay.py",
+      "bytes": 2251,
+      "sha256": "c8a5bb81c9389e3c4e87f1660de3d69776139cb8bc18505139ee4206fd3f1fd1"
+    },
+    {
+      "path": "requirements-geometry.txt",
+      "bytes": 120,
+      "sha256": "bd3a72714a11d4ba9eed286704120b55197860a03dca8d42fafadcca1651b80a"
+    },
+    {
+      "path": "requirements-python.txt",
+      "bytes": 46,
+      "sha256": "815360a00e0e1d7a128cade3de11b66d3fe997cbd6e2c69f8081eb9bc8b88197"
+    },
+    {
+      "path": "results/NUMERICAL_VERIFICATION_2P5WK_DIAGNOSTIC.json",
+      "bytes": 93029,
+      "sha256": "63be0ffc56664ea4a37682c50f1cde78b126e3a039eb5cf807a5e392e294ef1a"
+    },
+    {
+      "path": "results/PROBE_DIAGNOSTIC.json",
+      "bytes": 16933,
+      "sha256": "1081cd195bfb27c46517921346cb4ed15f6723ca845d2d5f4fc8d5f9ac530e2c"
+    },
+    {
+      "path": "results/THERMAL_CORRECTIONS_1WK_DIAGNOSTIC.json",
+      "bytes": 4088652,
+      "sha256": "c3cd87c1f250f6bb72eba14b6b8df450a070ae6fe68d096f3d1a77937823672f"
+    },
+    {
+      "path": "results/THERMAL_CORRECTIONS_2P5WK_DIAGNOSTIC.json",
+      "bytes": 4085324,
+      "sha256": "fabc535a63a30b182f9489a7bf1655b737efe3ad0cd491399fbbec0e1caeef82"
+    },
+    {
+      "path": "results/cold_1mps.json",
+      "bytes": 291117,
+      "sha256": "98056a786fb5667e7510d22c447627a10050bc7e68f93622ee147cd301095cc9"
+    },
+    {
+      "path": "results/cold_3mps.json",
+      "bytes": 290857,
+      "sha256": "053f07f9640a3f3ed832d00e3cb0eec6eb8d41e6048eb702bb9d333998e9ddb7"
+    },
+    {
+      "path": "results/hot_1mps.json",
+      "bytes": 290336,
+      "sha256": "5956114979a51bafdc7f136cc86eec7c501ef4e57f002d9f86f04520a2101e9e"
+    },
+    {
+      "path": "results/hot_3mps.json",
+      "bytes": 290301,
+      "sha256": "4d1dab7609d08f37dd0035bb18b6304247b3793f39451dba5068b3fb6e3b22c8"
+    },
+    {
+      "path": "results/reference_1mps.json",
+      "bytes": 289255,
+      "sha256": "68f2b623da147a5efa05a55ba06caeb53615f812e47a0e948b65ffd219f7968e"
+    },
+    {
+      "path": "results/reference_3mps.json",
+      "bytes": 289794,
+      "sha256": "55661b6759450ca9d273c3e877bccc7bede5c5a576cb9cb3b1c5b4236d4fa81b"
+    },
+    {
+      "path": "run_logs/volley-thermal-corrections-3WK.log",
+      "bytes": 1130,
+      "sha256": "77235000a1973e21c45fa2612f8109142fd3e3071d5f0c3a2ce02b261aea9b97"
+    },
+    {
+      "path": "run_logs/volley-thermal-corrections-final.log",
+      "bytes": 1131,
+      "sha256": "b5de3c1ccc4ebd5b39768fec7e3415a7992bb440133030bd588a237dfe673da2"
+    },
+    {
+      "path": "run_logs/volley-thermal-corrections.log",
+      "bytes": 1117,
+      "sha256": "3cfb2608573f87a7ef9a16de276fb20f2dd8c1e6251187ebc614bb4d6e83966a"
+    },
+    {
+      "path": "run_logs/volley-thermal-derated-source.log",
+      "bytes": 843,
+      "sha256": "ac60aee36162568691cd36ba885d089914c359ffda8dd4f7988c4165ed00f1f3"
+    },
+    {
+      "path": "run_logs/volley-thermal-final.log",
+      "bytes": 3027,
+      "sha256": "73bec9195c66f98a6d4da60a5dfeda6988c8f81e6d5e4cea5f75f526b5c138e4"
+    },
+    {
+      "path": "run_logs/volley-thermal-geometry-final.log",
+      "bytes": 871,
+      "sha256": "36b66984a04b686e2a49775065e2422762dcfced934139ba7a9abdba4cfbbf2e"
+    },
+    {
+      "path": "run_logs/volley-thermal-geometry-refined-final.log",
+      "bytes": 871,
+      "sha256": "a6b72636071617e837ff8b7ae55d53e060d31bfb187ba8fd172c98aad2f0e798"
+    },
+    {
+      "path": "run_logs/volley-thermal-portable.log",
+      "bytes": 672,
+      "sha256": "ff4f9be6ecbf57a02a7142b7a752ce03c550fe7c35971099035d72b2f1ddef82"
+    },
+    {
+      "path": "run_logs/volley-thermal-verification-3WK.log",
+      "bytes": 1032,
+      "sha256": "3ff00df1f2af47ad225cc88ff945fc9ff97af4f75a0e2cd1da1cb7090cc43f32"
+    },
+    {
+      "path": "run_logs/volley-thermal-verification-final.log",
+      "bytes": 1109,
+      "sha256": "f520971f9fe29bccbd1269bd61f0d09b5aa604e8e9800a87cc8b7495f6959949"
+    },
+    {
+      "path": "run_logs/volley-thermal-verification.log",
+      "bytes": 1029,
+      "sha256": "fbc2325fe33bd83152508845e28df7a0172a15be3e2ee132d32f34375642739f"
+    },
+    {
+      "path": "scientific.mplstyle",
+      "bytes": 512,
+      "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+    },
+    {
+      "path": "sources/NASA_ARC_8070_1.pdf",
+      "bytes": 1010063,
+      "sha256": "c46567ec191da70a654e7b5f8f6ad0aef45495199873ace33ec6b945a1c8cdc3"
+    },
+    {
+      "path": "sources/NASA_EARTH_GUIDELINES.pdf",
+      "bytes": 1513959,
+      "sha256": "a6ea8902b65e59ef3932d1a1f84c5b3a45938f240344b1d8a7465e79a625467e"
+    },
+    {
+      "path": "sources/NASA_RP_1121.pdf",
+      "bytes": 1823086,
+      "sha256": "03282ed76b9b25fad264631ef9d4a80807840490f39de37a843c6d9dcfd2bcf1"
+    },
+    {
+      "path": "sources/NASA_SST_THERMAL_2026.html",
+      "bytes": 401897,
+      "sha256": "2bcaab0f7a655d21434e673c57c7d9ebe03fbe03c597ad9122a0b283e093c309"
+    },
+    {
+      "path": "thermal_corrections.py",
+      "bytes": 8343,
+      "sha256": "d4bf11be09a00fcc01baf9da970aac771241e40d097b70e012004777bb8e1560"
+    },
+    {
+      "path": "thermal_network.py",
+      "bytes": 20431,
+      "sha256": "bae8e9fe0b71fc9ae7b2f55beee98810a490f0ca885f7e8d5d230561e57d2fc3"
+    },
+    {
+      "path": "verify_numerics.py",
+      "bytes": 4065,
+      "sha256": "06711d9f72ea61c18f1b153903f57c6c1c604555b9ae344d64f64bd04f743d37"
+    },
+    {
+      "path": "../../docs/ACR1_THERMAL_ENVIRONMENT.md",
+      "bytes": 21342,
+      "sha256": "af33672f2cb0bee2d973e92442d4ccc9c4b5cd6ac679f8db3debc10c4492990b"
+    }
+  ],
+  "count": 185,
+  "total_bytes": 24027728
+}

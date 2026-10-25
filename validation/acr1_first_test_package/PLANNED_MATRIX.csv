@@ -1,0 +1,8 @@
+group,condition,planned_repetitions,status
+C01H,X=-20/-12/-4/+4/+12/+20mm; unpowered normal field,3 each;18 total,NOT RUN
+C01F,X=-20/+4mm; I=-4/-2/-1/+1/+2/+4A;<=50ms,5 each;60 total,NOT RUN
+C02,One cell250mm physical witness;24 inhibited logic transitions,1 complete witnessed sequence,NOT RUN
+C02F,Each8 listed missing-proof/fault conditions;drive disabled,1 per fault minimum,NOT RUN
+C03C,Commissioning at0.05 and0.1m/s;record measured support/brake inputs,3 per speed before freezing final counterpart inputs,NOT RUN
+C03V,Separate nominal validation0.195..0.205m/s,10 final trials,NOT RUN
+C03F,Half-open keeper detection/inhibit;no dynamic catch,1 disabled-drive proof,NOT RUN

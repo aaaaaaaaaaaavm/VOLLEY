@@ -1,0 +1,1740 @@
+{
+  "study": "ACR1-THERM-ENV-01",
+  "checker_sha256": "bccf809884eb29af4b76b75b9db0a008da7ee00e08756bd4b1addff5b3822d03",
+  "manifest_sha256": "0f306cea302c046e60df8ce06cdc3aa8f147f7a401bbc62bcbba563fce01c6d6",
+  "package_only": false,
+  "all_checks_pass": true,
+  "count": 344,
+  "checks": [
+    {
+      "name": "manifest:CRITERION_RECOMMENDATIONS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:DERATED_SOURCE_RESULTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:ENVIRONMENT.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:FIGURE_SOURCE_INVENTORY.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:INPUT_SOURCE_MANIFEST.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:NUMERICAL_VERIFICATION.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:PHYSICAL_INTERFACE_TEST_GATES.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:PORTABLE_REPLAY.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:PRIMARY_FACTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:PRIMARY_SOURCE_REGISTER.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:README.md",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:SENSITIVITY_SUMMARY.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:THERMAL_CORRECTIONS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:THERMAL_INPUTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:THERMAL_RESULTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:cad_radiation_geometry.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:capture_inputs.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:capture_primary_facts.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:check_capture.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:derated_source/PARAMETER_ADAPTER_RECORD.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:derated_source_variant.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/conductance_correction.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/conductance_correction.png",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/conductance_correction.svg",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/derated_source.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/derated_source.png",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/derated_source.svg",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/duty_temperatures.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/duty_temperatures.png",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/duty_temperatures.svg",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/uncertainty_sensitivity.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/uncertainty_sensitivity.png",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:figures/uncertainty_sensitivity.svg",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:freeze_manifest.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/CAD_SOURCE.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S01_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S01_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S02_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S02_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S03_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S03_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S04_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S04_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S05_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S05_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S06_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S06_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S07_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S07_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S08_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S08_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S09_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S09_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S10_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S10_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S11_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S11_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S12_4096.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/RADIATION_S12_8192.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/cad_mesh.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node00.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node01.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node02.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node03.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node04.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node05.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node08.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node09.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node10.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node11.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node12.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node13.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node14.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node15.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node16.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node17.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node18.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node19.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node20.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node21.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node22.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_4096_node23.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node00.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node01.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node02.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node03.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node04.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node05.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node08.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node09.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node10.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node11.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node12.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node13.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node14.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node15.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node16.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node17.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node18.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node19.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node20.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node21.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node22.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/contacts_8192_node23.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s01_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s01_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s02_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s02_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s03_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s03_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s04_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s04_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s05_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s05_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s06_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s06_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s07_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s07_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s08_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s08_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s09_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s09_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s10_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s10_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s11_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s11_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s12_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:geometry/radiation_s12_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/ARREST_FORCE_MAP.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/CONDUCTION_PHASE_A.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/CONDUCTION_PHASE_B.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/CONDUCTION_PHASE_C.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/COUPLED_SHOT.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/DESIGN_BUDGETS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/FEEDER_SIZING.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/FINITE_MOTOR.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/LIFT_SIZING.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/MISSION_INPUTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/PARAMETERS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/POWER_COMPONENT_REFERENCE.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/RESOURCE_LEDGER.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/VOLLEY_G5_ACR1_home.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/build_acr1.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/coupled_shot_production.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/cradle_acr1.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/thermal_corrections_1WK_diagnostic.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:inputs/thermal_corrections_2p5WK_diagnostic.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:make_figures.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:portable_replay.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:requirements-geometry.txt",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:requirements-python.txt",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/NUMERICAL_VERIFICATION_2P5WK_DIAGNOSTIC.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/PROBE_DIAGNOSTIC.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/THERMAL_CORRECTIONS_1WK_DIAGNOSTIC.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/THERMAL_CORRECTIONS_2P5WK_DIAGNOSTIC.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/cold_1mps.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/cold_3mps.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/hot_1mps.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/hot_3mps.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/reference_1mps.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:results/reference_3mps.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-corrections-3WK.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-corrections-final.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-corrections.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-derated-source.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-final.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-geometry-final.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-geometry-refined-final.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-portable.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-verification-3WK.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-verification-final.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:run_logs/volley-thermal-verification.log",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:scientific.mplstyle",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:sources/NASA_ARC_8070_1.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:sources/NASA_EARTH_GUIDELINES.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:sources/NASA_RP_1121.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:sources/NASA_SST_THERMAL_2026.html",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:thermal_corrections.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:thermal_network.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:verify_numerics.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "manifest:../../docs/ACR1_THERMAL_ENVIRONMENT.md",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/COUPLED_SHOT.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/COUPLED_SHOT.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/POWER_COMPONENT_REFERENCE.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/POWER_COMPONENT_REFERENCE.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/RESOURCE_LEDGER.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/RESOURCE_LEDGER.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/DESIGN_BUDGETS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/DESIGN_BUDGETS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/FEEDER_SIZING.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/FEEDER_SIZING.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/LIFT_SIZING.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/LIFT_SIZING.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/PARAMETERS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/cad/PARAMETERS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/VOLLEY_G5_ACR1_home.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/build_acr1.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/cad/build_acr1.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/cradle_acr1.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/cad/cradle_acr1.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/MISSION_INPUTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/mission/MISSION_INPUTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/CONDUCTION_PHASE_A.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/conduction/phase_A/h2/RESULT.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/CONDUCTION_PHASE_B.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/conduction/phase_B/h3/RESULT.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/CONDUCTION_PHASE_C.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/conduction/phase_C/h3/RESULT.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/coupled_shot_production.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/coupled_shot.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/FINITE_MOTOR.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/FINITE_MOTOR.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "copied_input:inputs/ARREST_FORCE_MAP.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_core_unchanged:validation/acr1/analysis/ARREST_FORCE_MAP.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "primary_snapshot:NASA_ARC_8070_1",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "primary_snapshot:NASA_RP_1121",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "primary_snapshot:NASA_SST_THERMAL_2026",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "primary_snapshot:NASA_EARTH_GUIDELINES",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s01_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s01_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s01_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s02_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s02_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s02_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s03_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s03_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s03_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s04_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s04_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s04_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s05_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s05_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s05_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s06_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s06_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s06_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s07_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s07_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s07_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s08_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s08_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s08_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s09_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s09_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s09_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s10_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s10_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s10_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s11_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s11_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s11_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s12_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s12_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s12_4096.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s01_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s01_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s01_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s02_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s02_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s02_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s03_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s03_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s03_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s04_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s04_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s04_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s05_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s05_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s05_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s06_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s06_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s06_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s07_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s07_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s07_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s08_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s08_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s08_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s09_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s09_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s09_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s10_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s10_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s10_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s11_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s11_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s11_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_reciprocity:geometry/radiation_s12_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "radiation_area_conservation:geometry/radiation_s12_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "source_no_invented_radiator:geometry/radiation_s12_8192.npz",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "actual_BOM_mass_plus_source_allowance",
+      "pass_": true,
+      "detail": {
+        "network_kg": 204.5567197003935,
+        "BOM_plus7_kg": 204.55671970039353
+      }
+    },
+    {
+      "name": "current_result_source:thermal_network.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "current_result_source:thermal_corrections.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "current_result_source:verify_numerics.py",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "current_voltage_adapter",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "current_numerical_solver",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "only_three_voltage_parameters_AST_restoration",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "18_actual_derated_cases_pass_original_and_extra_gates",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "18_case_combinations_exact",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "original_hot_failure_retained",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "all_numerical_gates_pass",
+      "pass_": true,
+      "detail": {
+        "max_time_step_peak_delta_K": 0.02631306906437203,
+        "max_ray_peak_delta_K": 2.4120486378540704,
+        "max_global_energy_balance_residual_J": 3.1315721571445465e-07,
+        "max_independent_radiosity_balance_residual_W": 6.548361852765083e-10,
+        "max_periodic_delta_K": 0.018600393725080266,
+        "max_periodic_validation_orbits": 6
+      }
+    },
+    {
+      "name": "final_refined_60C_gate:corrected86p4V_cases",
+      "pass_": true,
+      "detail": 59.000160204251756
+    },
+    {
+      "name": "final_refined_60C_gate:combined78p4V_path_cases",
+      "pass_": true,
+      "detail": 59.060838474521915
+    },
+    {
+      "name": "derating_alone_catalogue_pass_monitor_margin_fail_retained",
+      "pass_": true,
+      "detail": 84.42441403118175
+    },
+    {
+      "name": "initial_2p5WK_margin_failure_retained",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "final_conductance_and_mass_allocation",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "portable18_case_output_bit_identical",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "portable_script_identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_source:duty_temperatures",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:duty_temperatures:results/reference_1mps.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:duty_temperatures:results/hot_1mps.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:duty_temperatures:THERMAL_CORRECTIONS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/duty_temperatures.png",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/duty_temperatures.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/duty_temperatures.svg",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_source:conductance_correction",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:conductance_correction:THERMAL_CORRECTIONS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:conductance_correction:NUMERICAL_VERIFICATION.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/conductance_correction.png",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/conductance_correction.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/conductance_correction.svg",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_source:uncertainty_sensitivity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:uncertainty_sensitivity:THERMAL_RESULTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:uncertainty_sensitivity:THERMAL_INPUTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/uncertainty_sensitivity.png",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/uncertainty_sensitivity.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/uncertainty_sensitivity.svg",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_source:derated_source",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:derated_source:DERATED_SOURCE_RESULTS.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_input:derated_source:inputs/COUPLED_SHOT.json",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/derated_source.png",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/derated_source.pdf",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "figure_exists:figures/derated_source.svg",
+      "pass_": true,
+      "detail": null
+    }
+  ]
+}

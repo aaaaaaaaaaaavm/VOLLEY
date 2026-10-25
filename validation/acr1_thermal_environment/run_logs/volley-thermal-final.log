@@ -1,0 +1,70 @@
+{"case": "cold_1mps", "cell_max_C": -9.976468595652136, "copper_screen_C": 12.46243451174621, "magnet_max_C": 7.318811057735161, "energy_residual_J": 2.3137545213103294e-08}
+{"case": "cold_3mps", "cell_max_C": -10.191485934082095, "copper_screen_C": 12.677829024864195, "magnet_max_C": 7.320306729580352, "energy_residual_J": 3.573950380086899e-08}
+{"case": "reference_1mps", "cell_max_C": 14.922729953881287, "copper_screen_C": 13.67562821626268, "magnet_max_C": 9.95469755210911, "energy_residual_J": 3.716559149324894e-08}
+{"case": "reference_3mps", "cell_max_C": 14.705623041412707, "copper_screen_C": 13.89103395069327, "magnet_max_C": 9.95595786417266, "energy_residual_J": 1.2456439435482025e-08}
+{"case": "hot_1mps", "cell_max_C": 70.94093188344016, "copper_screen_C": 1.2677101412685374, "magnet_max_C": 62.745910132908534, "energy_residual_J": 1.5240220818668604e-07}
+{"case": "hot_3mps", "cell_max_C": 70.73772854363784, "copper_screen_C": 1.4832040603481573, "magnet_max_C": 62.745910132908534, "energy_residual_J": 1.1127849575132132e-07}
+Completeduncertaintyinput1/64
+Completeduncertaintyinput2/64
+Completeduncertaintyinput3/64
+Completeduncertaintyinput4/64
+Completeduncertaintyinput5/64
+Completeduncertaintyinput6/64
+Completeduncertaintyinput7/64
+Completeduncertaintyinput8/64
+Completeduncertaintyinput9/64
+Completeduncertaintyinput10/64
+Completeduncertaintyinput11/64
+Completeduncertaintyinput12/64
+Completeduncertaintyinput13/64
+Completeduncertaintyinput14/64
+Completeduncertaintyinput15/64
+Completeduncertaintyinput16/64
+Completeduncertaintyinput17/64
+Completeduncertaintyinput18/64
+Completeduncertaintyinput19/64
+Completeduncertaintyinput20/64
+Completeduncertaintyinput21/64
+Completeduncertaintyinput22/64
+Completeduncertaintyinput23/64
+Completeduncertaintyinput24/64
+Completeduncertaintyinput25/64
+Completeduncertaintyinput26/64
+Completeduncertaintyinput27/64
+Completeduncertaintyinput28/64
+Completeduncertaintyinput29/64
+Completeduncertaintyinput30/64
+Completeduncertaintyinput31/64
+Completeduncertaintyinput32/64
+Completeduncertaintyinput33/64
+Completeduncertaintyinput34/64
+Completeduncertaintyinput35/64
+Completeduncertaintyinput36/64
+Completeduncertaintyinput37/64
+Completeduncertaintyinput38/64
+Completeduncertaintyinput39/64
+Completeduncertaintyinput40/64
+Completeduncertaintyinput41/64
+Completeduncertaintyinput42/64
+Completeduncertaintyinput43/64
+Completeduncertaintyinput44/64
+Completeduncertaintyinput45/64
+Completeduncertaintyinput46/64
+Completeduncertaintyinput47/64
+Completeduncertaintyinput48/64
+Completeduncertaintyinput49/64
+Completeduncertaintyinput50/64
+Completeduncertaintyinput51/64
+Completeduncertaintyinput52/64
+Completeduncertaintyinput53/64
+Completeduncertaintyinput54/64
+Completeduncertaintyinput55/64
+Completeduncertaintyinput56/64
+Completeduncertaintyinput57/64
+Completeduncertaintyinput58/64
+Completeduncertaintyinput59/64
+Completeduncertaintyinput60/64
+Completeduncertaintyinput61/64
+Completeduncertaintyinput62/64
+Completeduncertaintyinput63/64
+Completeduncertaintyinput64/64

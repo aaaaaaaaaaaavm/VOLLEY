@@ -1,0 +1,14 @@
+{
+  "study": "ACR1-THERM-PORTABLE-01",
+  "source_sha256": "c8a5bb81c9389e3c4e87f1660de3d69776139cb8bc18505139ee4206fd3f1fd1",
+  "isolated_temporary_directory": true,
+  "repository_parent_not_used_by_runtime": true,
+  "inputs": "Copied self-contained study only; no sibling ACR1 or private workspace paths used.",
+  "production18_case_output_bit_identical": true,
+  "production18_case_output_sha256": "a8e2f6bf1da5bcd667c5f7d2ae8f52bc8d3e2bccaaf08e06c781ef1eaadaf8a7",
+  "refined_hot_corrected_corner_max_peak_delta_K": 0.0,
+  "refined_cell_max_C": 59.000160204251756,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "all_replay_checks_pass": true,
+  "stdout": "1 False 3e-06 STOPPED True 2.45\n1 False 2e-05 STOPPED True 2.45\n1 False 0.0001 STOPPED True 2.45\n1 True 3e-06 STOPPED True 2.45\n1 True 2e-05 STOPPED True 2.45\n1 True 0.0001 STOPPED True 2.469999240626465\n2 False 3e-06 STOPPED True 2.45\n2 False 2e-05 STOPPED True 2.45\n2 False 0.0001 STOPPED True 2.469999470550173\n2 True 3e-06 STOPPED True 2.45\n2 True 2e-05 STOPPED True 2.4684924442696183\n2 True 0.0001 STOPPED True 2.469999738630651\n3 False 3e-06 STOPPED True 2.45\n3 False 2e-05 STOPPED True 2.4618675251081408\n3 False 0.0001 STOPPED True 2.4699999719916583\n3 True 3e-06 STOPPED True 2.45\n3 True 2e-05 STOPPED True 2.469999630742809\n3 True 0.0001 STOPPED True 2.4699994601931574\n{\n  \"all18pass\": true,\n  \"nominal_headroom_J\": 791.9999999999959,\n  \"adverse_headroom_J\": 498.95999999999736,\n  \"adverse_control_headroom_J\": 198.3743999999996\n}\n"
+}

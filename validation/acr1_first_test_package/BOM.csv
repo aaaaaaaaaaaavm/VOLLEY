@@ -1,0 +1,24 @@
+item,quantity,basis,selection_or_allocation,source_or_requirement,procurement_state
+NdFeB blocks,12,8x90x8mm; six per opposed array; 60deg sequence,CAD-derived dimensions; Br1.32T model allocation; grade/certificate unselected,../acr1/cad/PARAMETERS.json,Not ordered; no quote
+Active copper bar,1,7x80x6mm,First-test geometry derived from 7x6 ACR1 section; shortened depth for keeper clearance,DEFINITION.json,Not ordered; no quote
+Copper return wire,1,>=1mm2 section; defined Xbar+100mm and Y+/-90mm route,First-test allocation with explicit return-force model,PREDICTIONS.json,Not ordered; no quote
+Aluminium plates,2,160x150x12mm; drilled drawing,Provisional geometry; grade/E70GPa assumed; load review required,geometry/C01_fixture_drawing.svg,Not ordered; no quote
+Corner compression spacers,4,OD12 ID8.5 length28mm,Nonmagnetic material and strength allocation; loaded gap set by actual metrology,geometry/C01_coupon_fixture.step,Not ordered; no quote
+Corner threaded rods/nuts/washers,4 sets,M8 reference; stack length52mm plus washers/nuts,Hardware grade/length and magnetic response unselected,geometry/C01_fixture_drawing.svg,Not ordered; no quote
+Magnet keeper lips,4,56x14x3mm with six holes each,Provisional mechanical retention; certified joint design unavailable,geometry/C01_fixture_drawing.svg,Not ordered; no quote
+Keeper compression spacers,24,OD6 ID3.2 length8mm,Nonmagnetic material allocation,geometry/C01_coupon_fixture.step,Not ordered; no quote
+Keeper screws/nuts,24 sets,M3x30 approximate stack; actual engagement verified before release,Fastener allocation; no grade/strength claim,geometry/C01_fixture_drawing.svg,Not ordered; no quote
+Hall probe and translation stage,1 set,Signed normal field +/-2T; U95<=0.02T; position<=0.1mm,Instrument requirement; existing lab availability unconfirmed,ACCEPTANCE_R1.json,No instrument selected or booked
+Axial force measurement,1 set,+/-1N range; U95<=0.002N; resolution<=0.0005N,Instrument requirement; isolated from magnet normal load,ACCEPTANCE_R1.json,No instrument selected or booked
+Low-energy DC pulse source/shunt/timer,1 set,<=5V <=4A <=50ms; stored output<=0.5J; total<=2J,Instrument/protection allocation; not full ACR1 capacitor bank,ACCEPTANCE_R1.json,No source selected or booked
+Common-clock DAQ and optical gates,1 set,>=10kS/s current/voltage; >=1kS/s slow mechanics; baseline200mm +/-1mm,Instrument allocation; calibration evidence required,TEST_PROCEDURE.md,No instrument selected or booked
+4kg inert payload surrogate,1,340.5x100x100mm; inertia measured or separately identified,Envelope sourced; internal inertia/contact properties not inherited,../acr1/cad/PARAMETERS.json,Not built; no quote
+Pusher/pallet/capture/keeper test parts,1 selected-cell set,Exact source ACR1 cell/pallet/latch dimensions,Reuse controlled geometry; added single-cell mount not modeled,../acr1/cad/release/FINAL_CAD_MANIFEST.json,Not built; no quote
+Feed motor/gear reference,1 optional,FAULHABER 3242G024BX4 plus 32GPT 9:1; source catalog reference,Source-backed reference only; manual force-limited commissioning may substitute with declared kinematic scope,../acr1/sources/feeder_catalog_reference.json,No purchase or fit approval
+Lift motor/gear reference,0 first-rig items,3242G024BX4 plus 32GPT nominal 20:1 exact 19.8:1,Source-backed orbit study reference; vertical ground lift excluded from first rig,../acr1/analysis/LIFT_SIZING.json,No purchase
+Low-drag payload support,1,Measured drag + uncertainty <=0.1N; planar rolling/air support,Requirement; ordinary tabletop sliding is unacceptable for C03,ACCEPTANCE_R1.json,Availability unconfirmed
+External bench brake and passive catcher,1 set,Calibrated1.5..2N brake; catcher proved>=1J; full guarded corridor,Test-fixture allocation; not ACR1 LSM brake hardware,ACCEPTANCE_R1.json,Not selected or built
+Submicrometre displacement metrology,0 mandatory first-rig items,U95<=0.05um if claiming actual51.817MN/m rail stiffness,Additional measurement requirement for stiffness correlation; C02/C03 do not close it,TEST_PROCEDURE.md,Availability unconfirmed
+C02 push-force channel,1,0..100N range;U95<=0.2N,Instrument requirement; separate from coupon cell,ACCEPTANCE_R1.json,Not selected
+C03 brake/drag/contact channels,1 set,0..5N brake U95<=0.05N;0..1N drag U95<=0.02N;contact U95<=0.05N,Instrument requirements; range and bandwidth verified,ACCEPTANCE_R1.json,Not selected
+Fixture/catcher static-proof instrumentation,1,>=1000N load range with calibrated displacement,Requirement for reviewed724N plate path and catcher force-stroke proof,ACCEPTANCE_R1.json,Not selected

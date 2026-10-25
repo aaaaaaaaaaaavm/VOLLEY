@@ -1,0 +1,146 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "native_solver": "CalculiX2.23",
+  "native_job_finished": true,
+  "rigid_modes": [
+    [
+      1.0,
+      -1.992746e-05,
+      0.0,
+      0.0,
+      0.004464018
+    ],
+    [
+      2.0,
+      -1.670296e-05,
+      0.0,
+      0.0,
+      0.004086925
+    ],
+    [
+      3.0,
+      2.240983e-06,
+      0.001496991,
+      0.0002382536,
+      0.0
+    ],
+    [
+      4.0,
+      4.072257e-06,
+      0.002017983,
+      0.000321172,
+      0.0
+    ],
+    [
+      5.0,
+      1.842934e-05,
+      0.004292941,
+      0.0006832428,
+      0.0
+    ],
+    [
+      6.0,
+      3.44067e-05,
+      0.005865722,
+      0.0009335587,
+      0.0
+    ]
+  ],
+  "elastic_frequencies_Hz": [
+    131.4105,
+    132.2775,
+    132.8705,
+    146.5736,
+    184.5201,
+    237.6912,
+    240.4704,
+    240.8131,
+    243.7759,
+    303.1254,
+    388.8318,
+    413.6197,
+    414.4528,
+    415.9068,
+    417.3888,
+    485.3774,
+    527.5457,
+    599.7184,
+    644.8623,
+    769.4389,
+    774.5488,
+    810.6661,
+    822.2556,
+    1022.784,
+    1330.103,
+    1387.925,
+    1420.006,
+    1537.712,
+    1585.998,
+    1623.126,
+    1689.631,
+    1733.08,
+    1827.588,
+    1861.873,
+    1882.517,
+    1884.695,
+    1906.921,
+    1911.629,
+    1971.854,
+    2052.744
+  ],
+  "modal_normalization": "Native mass normalized; N/mm/s/tonne consistent units; modal mass1",
+  "bare_chassis_mass_kg": 8.417049702464174,
+  "static_compliance_convergence": [
+    {
+      "elastic_modes": 10,
+      "peak_paired_closure_mm": 0.005529571628416532,
+      "max_spatial_error_against_accepted_static_mm": 0.28226540125213334
+    },
+    {
+      "elastic_modes": 20,
+      "peak_paired_closure_mm": 0.2477086030025713,
+      "max_spatial_error_against_accepted_static_mm": 0.03905944605877018
+    },
+    {
+      "elastic_modes": 40,
+      "peak_paired_closure_mm": 0.2910026845016007,
+      "max_spatial_error_against_accepted_static_mm": 0.0084678364075014
+    }
+  ],
+  "accepted_static_nodal_von_Mises_max_MPa": 24.66218744425496,
+  "accepted_static_nodal_peak_node": 2411,
+  "accepted_static_nodal_peak_coordinates_mm": [
+    322.9602958877852,
+    -100.0,
+    1.0611580849203217
+  ],
+  "accepted_static_nodal_peak_tensor_frd_order_MPa": [
+    2.09107,
+    0.159925,
+    24.6123,
+    -0.788942,
+    1.40022,
+    -3.9178
+  ],
+  "stress_monitor_points": 148,
+  "C3D10_stress_recovery_max_relative_component_error": 0.0021302790299426665,
+  "stress_component_order": [
+    "xx",
+    "yy",
+    "zz",
+    "xy",
+    "xz",
+    "yz"
+  ],
+  "source_identities": {
+    "chassis.dat": "a2bff93d2fa9a2bb56d123915be989adc3f623a5c3310bd4f851d1d4949e314f",
+    "chassis.frd": "2d8cdd6c2d1d4594685fc08dd123ea62f3b8a6866b426a9bcfc3e2ca4a56eb87",
+    "MESH.json": "39a01a812c9398c2f1c4685f419f4864e8b091be16dde020b6a1e67b5c231bbd",
+    "PAIRED_PATCH_DISPLACEMENT.npz": "740b2507936ca6a52fb3df5422759d944b9331acec4a52b409bd43f6c690a5de",
+    "modal.inp": "dfef2b99b3b7c48a23eb066b3357a33c4284fa031285b6cb76361eeebdfe9d99",
+    "modal.dat": "462cb42878c92b8fc8ef2ce4302e826ebe41dd2758f9f9e61aef4172f69b5a1e",
+    "SOLVER_STDOUT.txt": "532d51e4abd7fbd49ee442ae7554c1ebcbd5321e72f60ba55003f0ede75a4cb5"
+  },
+  "mesh_boundary": "One accepted actual C3D10 mesh; mesh-converged modal/stress qualification is not asserted.",
+  "force_boundary": "3010.480631N permanent-magnet DC pinch is static preload, not a full-amplitude oscillatory rating. Current-induced normal ripple remains an explicit bracket."
+}

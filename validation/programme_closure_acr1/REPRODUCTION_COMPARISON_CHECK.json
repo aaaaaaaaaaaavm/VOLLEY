@@ -1,0 +1,166 @@
+{
+  "scope": "Comparator regression evidence only; no physics source/results or acceptance thresholds changed",
+  "all_fixtures_pass": true,
+  "fixture_count": 12,
+  "comparison_policy": {
+    "profile": "campaign",
+    "default_float_relative": 1e-11,
+    "default_float_absolute": 1e-08,
+    "discrete": "Dictionary keys, list lengths, integers, booleans, strings and policy subtrees exact",
+    "scientific_acceptance": "Unchanged source criteria; reproduced pass/fail outcomes must match exactly",
+    "mass_absolute_kg": 1e-07,
+    "mass_scope": "Non-residual *_kg floats and propellant at zero-based index 6 of documented 14-component campaign state vectors only",
+    "mass_rationale": "0.1 mg numerical floor; observed CI hardware difference 1.196e-8 kg. Same scale as the separate existing 1e-7 kg native mass-agreement criterion; not a mass/reserve acceptance waiver."
+  },
+  "fixtures": [
+    {
+      "id": "observed_CI_propellant_roundoff",
+      "expected_pass": true,
+      "actual_pass": true,
+      "diagnostics": {
+        "campaign_mass_kg": {
+          "path": "observed_CI_propellant_roundoff.history[0].propellant_kg",
+          "reference": 19.966898621291218,
+          "reproduced": 19.966898633250313,
+          "absolute_error": 1.1959095047586743e-08,
+          "absolute_floor": 1e-07,
+          "relative_tolerance": 1e-11,
+          "effective_limit": 1e-07,
+          "maximum_fraction_of_budget": 0.11959095047586743
+        }
+      }
+    },
+    {
+      "id": "documented_packed_propellant_component",
+      "expected_pass": true,
+      "actual_pass": true,
+      "diagnostics": {
+        "campaign_mass_kg": {
+          "path": "documented_packed_propellant_component.final_host_state[6]",
+          "reference": 19.966898621291218,
+          "reproduced": 19.966898633250313,
+          "absolute_error": 1.1959095047586743e-08,
+          "absolute_floor": 1e-07,
+          "relative_tolerance": 1e-11,
+          "effective_limit": 1e-07,
+          "maximum_fraction_of_budget": 0.11959095047586743
+        }
+      }
+    },
+    {
+      "id": "meaningful_mass_change_rejected",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {
+        "campaign_mass_kg": {
+          "path": "meaningful_mass_change_rejected.propellant_kg",
+          "reference": 20.0,
+          "reproduced": 20.00001,
+          "absolute_error": 9.999999999621423e-06,
+          "absolute_floor": 1e-07,
+          "relative_tolerance": 1e-11,
+          "effective_limit": 1e-07,
+          "maximum_fraction_of_budget": 99.99999999621423
+        }
+      }
+    },
+    {
+      "id": "conservation_residual_floor_preserved",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {
+        "default_float": {
+          "path": "conservation_residual_floor_preserved.mass_closure_residual_kg",
+          "reference": 0.0,
+          "reproduced": 1.2e-08,
+          "absolute_error": 1.2e-08,
+          "absolute_floor": 1e-08,
+          "relative_tolerance": 1e-11,
+          "effective_limit": 1e-08,
+          "maximum_fraction_of_budget": 1.2
+        }
+      }
+    },
+    {
+      "id": "nonmass_float_floor_preserved",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {
+        "default_float": {
+          "path": "nonmass_float_floor_preserved.position_m[0]",
+          "reference": 0.0,
+          "reproduced": 2e-08,
+          "absolute_error": 2e-08,
+          "absolute_floor": 1e-08,
+          "relative_tolerance": 1e-11,
+          "effective_limit": 1e-08,
+          "maximum_fraction_of_budget": 2.0
+        }
+      }
+    },
+    {
+      "id": "original_arithmetic_profile_unchanged",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {
+        "default_float": {
+          "path": "original_arithmetic_profile_unchanged.propellant_kg",
+          "reference": 19.966898621291218,
+          "reproduced": 19.966898633250313,
+          "absolute_error": 1.1959095047586743e-08,
+          "absolute_floor": 1e-08,
+          "relative_tolerance": 1e-11,
+          "effective_limit": 1e-08,
+          "maximum_fraction_of_budget": 1.1959095047586743
+        }
+      }
+    },
+    {
+      "id": "release_count_change_rejected",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {}
+    },
+    {
+      "id": "fractional_count_rejected",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {}
+    },
+    {
+      "id": "policy_change_rejected",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {}
+    },
+    {
+      "id": "policy_type_change_rejected",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {}
+    },
+    {
+      "id": "reserve_outcome_exact_even_with_tiny_mass_change",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {
+        "campaign_mass_kg": {
+          "path": "reserve_outcome_exact_even_with_tiny_mass_change.final_propellant_kg",
+          "reference": 8.00000001,
+          "reproduced": 7.99999999,
+          "absolute_error": 2.0000000766629e-08,
+          "absolute_floor": 1e-07,
+          "relative_tolerance": 1e-11,
+          "effective_limit": 1e-07,
+          "maximum_fraction_of_budget": 0.20000000766629
+        }
+      }
+    },
+    {
+      "id": "schema_change_rejected",
+      "expected_pass": false,
+      "actual_pass": false,
+      "diagnostics": {}
+    }
+  ]
+}

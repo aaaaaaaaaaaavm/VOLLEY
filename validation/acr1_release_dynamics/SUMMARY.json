@@ -1,0 +1,696 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "native_engine": "MuJoCo3.3.7",
+  "planned_runs": 42,
+  "completed_runs": 42,
+  "failed_runs": [],
+  "refinement_pairs": [
+    {
+      "case": "aligned",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 0.005568767009744846,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 1.5920237731670284e-05,
+      "omega_vector_difference_deg_s": 1.972565711672598e-15,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "aligned",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 0.00391602601057528,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 1.1202918850372612e-05,
+      "omega_vector_difference_deg_s": 1.058242508116784e-15,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "aligned",
+      "coarse_dt_us": 25.0,
+      "fine_dt_us": 12.5,
+      "COM_difference_mm": 0.0006374486405391622,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 1.8353196500342506e-06,
+      "omega_vector_difference_deg_s": 1.1020733200660758e-15,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "freeflight",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 1.0982326218707586e-09,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 7.979727989493322e-21,
+      "omega_vector_difference_deg_s": 4.51238876155074e-09,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "freeflight",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 4.5563553977799333e-10,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 3.885780586188041e-20,
+      "omega_vector_difference_deg_s": 2.2561940434591337e-09,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "half_keeper",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 0.06735103968325991,
+      "orientation_difference_deg": 0.029340863663077053,
+      "speed_vector_difference_m_s": 1.9470380879460333e-06,
+      "omega_vector_difference_deg_s": 9.473549316109165e-06,
+      "within_inherited_0p05mm_0p05deg_reference": false
+    },
+    {
+      "case": "half_keeper",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 0.02342215496881191,
+      "orientation_difference_deg": 0.0005939810698701984,
+      "speed_vector_difference_m_s": 1.8272105989249313e-05,
+      "omega_vector_difference_deg_s": 2.3900486331923763e-05,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "half_keeper",
+      "coarse_dt_us": 25.0,
+      "fine_dt_us": 12.5,
+      "COM_difference_mm": 0.015210001085062616,
+      "orientation_difference_deg": 0.00031087679351297497,
+      "speed_vector_difference_m_s": 5.707782802063411e-06,
+      "omega_vector_difference_deg_s": 1.3711532563951731e-05,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "offset",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 0.005570859775976397,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 1.592616735562433e-05,
+      "omega_vector_difference_deg_s": 1.4934365561072688e-05,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "offset",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 0.003916707820994004,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 1.120484875351568e-05,
+      "omega_vector_difference_deg_s": 5.496940629238546e-06,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "one_rear_pad",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 0.016479513298888717,
+      "orientation_difference_deg": 0.015442305981936584,
+      "speed_vector_difference_m_s": 4.719446261404517e-05,
+      "omega_vector_difference_deg_s": 0.04430125662188234,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "one_rear_pad",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 0.004062933432957899,
+      "orientation_difference_deg": 0.008103626555396912,
+      "speed_vector_difference_m_s": 1.1633749529546597e-05,
+      "omega_vector_difference_deg_s": 0.023238445052355828,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "pitch",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 1.0982326159592048e-09,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 0.0,
+      "omega_vector_difference_deg_s": 0.0,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "pitch",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 4.5563552930616424e-10,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 0.0,
+      "omega_vector_difference_deg_s": 0.0,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "rates",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 0.007360569671033287,
+      "orientation_difference_deg": 0.0015120685604009959,
+      "speed_vector_difference_m_s": 2.105778591474898e-05,
+      "omega_vector_difference_deg_s": 0.004330210081707442,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "rates",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 0.005868229561345836,
+      "orientation_difference_deg": 0.0026083068551663435,
+      "speed_vector_difference_m_s": 1.6799273785308013e-05,
+      "omega_vector_difference_deg_s": 0.007465400933789052,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "source_adverse",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 0.015830341567379946,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 4.5275663667965205e-05,
+      "omega_vector_difference_deg_s": 7.285975689465585e-15,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "source_adverse",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 0.002619796907410432,
+      "orientation_difference_deg": 0.0,
+      "speed_vector_difference_m_s": 7.547416008613084e-06,
+      "omega_vector_difference_deg_s": 3.6542663735092635e-15,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "yaw",
+      "coarse_dt_us": 100.0,
+      "fine_dt_us": 50.0,
+      "COM_difference_mm": 0.008844674968204652,
+      "orientation_difference_deg": 0.0015696047412730404,
+      "speed_vector_difference_m_s": 2.529510425877193e-05,
+      "omega_vector_difference_deg_s": 0.004488943051540342,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    },
+    {
+      "case": "yaw",
+      "coarse_dt_us": 50.0,
+      "fine_dt_us": 25.0,
+      "COM_difference_mm": 0.05643042180886654,
+      "orientation_difference_deg": 0.010014684372657089,
+      "speed_vector_difference_m_s": 0.00016163510339747258,
+      "omega_vector_difference_deg_s": 0.028685314962088832,
+      "within_inherited_0p05mm_0p05deg_reference": false
+    },
+    {
+      "case": "yaw",
+      "coarse_dt_us": 25.0,
+      "fine_dt_us": 12.5,
+      "COM_difference_mm": 0.03403390217998948,
+      "orientation_difference_deg": 0.006877070565193663,
+      "speed_vector_difference_m_s": 9.756136054208624e-05,
+      "omega_vector_difference_deg_s": 0.01970982165877434,
+      "within_inherited_0p05mm_0p05deg_reference": true
+    }
+  ],
+  "solver_contact_comparisons": [
+    {
+      "case": "aligned",
+      "variant": "Newton/200/box/k=1000000.0/b=2000",
+      "COM_difference_mm": 0.0,
+      "orientation_difference_deg": 0.0,
+      "velocity_difference_m_s": 0.0
+    },
+    {
+      "case": "aligned",
+      "variant": "CG/200/box/k=1000000.0/b=2000",
+      "COM_difference_mm": 0.0005614549436197695,
+      "orientation_difference_deg": 1.2074182697257337e-05,
+      "velocity_difference_m_s": 1.6069955227242097e-06
+    },
+    {
+      "case": "aligned",
+      "variant": "Newton/100/split/k=1000000.0/b=2000",
+      "COM_difference_mm": 0.0008699056985859029,
+      "orientation_difference_deg": 0.00011045072698570005,
+      "velocity_difference_m_s": 2.4883121981649037e-06
+    },
+    {
+      "case": "half_keeper",
+      "variant": "Newton/200/box/k=1000000.0/b=2000",
+      "COM_difference_mm": 0.0,
+      "orientation_difference_deg": 0.0,
+      "velocity_difference_m_s": 0.0
+    },
+    {
+      "case": "half_keeper",
+      "variant": "CG/200/box/k=1000000.0/b=2000",
+      "COM_difference_mm": 0.04894735019969462,
+      "orientation_difference_deg": 0.05928274427418495,
+      "velocity_difference_m_s": 0.00015707603083785275
+    },
+    {
+      "case": "half_keeper",
+      "variant": "Newton/100/split/k=1000000.0/b=2000",
+      "COM_difference_mm": 0.04451245593266253,
+      "orientation_difference_deg": 0.04022739054821339,
+      "velocity_difference_m_s": 5.385738353890058e-08
+    },
+    {
+      "case": "aligned",
+      "variant": "Newton/100/box/k=100000.0/b=632.4555320336759",
+      "COM_difference_mm": 0.014430185723668387,
+      "orientation_difference_deg": 0.0,
+      "velocity_difference_m_s": 4.1261049169794006e-05
+    },
+    {
+      "case": "aligned",
+      "variant": "Newton/100/box/k=10000000.0/b=6324.555320336759",
+      "COM_difference_mm": 0.004581788110247231,
+      "orientation_difference_deg": 0.0,
+      "velocity_difference_m_s": 1.3049895629002606e-05
+    },
+    {
+      "case": "aligned",
+      "variant": "Newton/100/box/k=1000000.0/b=0",
+      "COM_difference_mm": 0.022422670658439614,
+      "orientation_difference_deg": 0.0,
+      "velocity_difference_m_s": 6.411525199112589e-05
+    },
+    {
+      "case": "aligned",
+      "variant": "Newton/100/box/k=1000000.0/b=400",
+      "COM_difference_mm": 0.013633837703697083,
+      "orientation_difference_deg": 0.0,
+      "velocity_difference_m_s": 3.897370884775597e-05
+    }
+  ],
+  "full_P3_BB_criterion_complete": false,
+  "numerical_scope": "Local six-DOF surrogate release/contact replay with finite X translation;not physical repeatability or full source/host/mechanism closure",
+  "maximum_total_x_momentum_residual_Ns": 2.4868995751603507e-13,
+  "maximum_payload_linear_impulse_residual_Ns": 3.0198125881645466e-14,
+  "maximum_payload_angular_impulse_residual_Nms": 3.4947103169453135e-08,
+  "maximum_contact_vs_generalized_force_error_N": 4.696037092872503e-13,
+  "maximum_native_iterations": 200,
+  "full_budget_steps": 1,
+  "native_warning_increments": 0,
+  "aligned_25us": {
+    "case": {
+      "id": "aligned",
+      "mu": 0
+    },
+    "dt_s": 2.5e-05,
+    "solver": "Newton",
+    "iterations": 100,
+    "direct_stiffness_s_minus2": 1000000.0,
+    "direct_damping_s_minus1": 2000,
+    "constant_solimp": 0.95,
+    "representation": "box",
+    "native_version": "3.3.7",
+    "tstart_s": 0.8659650000000001,
+    "duration_s": 0.35000000000000003,
+    "tend_s": 1.2159649999997797,
+    "source_release_s": 0.8669650000014459,
+    "source_stop_s": 1.0477800000026305,
+    "source_release_inertial_kick_m_s": 2.9269191513942334,
+    "payload_final_position_m": [
+      2.724228202892211,
+      9.529852666219261e-19,
+      0.096
+    ],
+    "payload_final_quaternion_wxyz": [
+      1.0,
+      4.3838143404375765e-18,
+      0.0,
+      0.0
+    ],
+    "payload_final_velocity_m_s": [
+      2.9269128316663964,
+      2.7254206699129377e-18,
+      -2.5238994306676818e-18
+    ],
+    "payload_final_omega_deg_s": [
+      -2.4256346191791013e-30,
+      9.93476468549447e-16,
+      1.0354258544801914e-15
+    ],
+    "orientation_change_deg": 0.0,
+    "payload_inertial_kick_difference_m_s": -6.319727837045264e-06,
+    "final_payload_aft_relative_carrier_m": 0.8872222443920268,
+    "rear_contact_first_s": 0.8659900000000001,
+    "rear_contact_last_s": 0.8669400000000022,
+    "rear_unload_events_s": [
+      0.8669650000000022
+    ],
+    "rear_recontact_events_s": [],
+    "contact_absolute_impulse_by_group_Ns": {
+      "rear": 0.012472357772986824
+    },
+    "post_source_release_absolute_impulse_by_group_Ns": {},
+    "max_overlap_m": 2.2894006967543595e-08,
+    "peak_contact_force_N_unrated": 0.88661510864804,
+    "initial_overlap_m": 0.0,
+    "initial_gap_adjustment_m": {
+      "x": 0,
+      "z": 0
+    },
+    "conservation": {
+      "total_x_momentum_initial_kg_m_s": 1.7763568394002505e-15,
+      "total_x_momentum_residual_kg_m_s": -1.0835776720341528e-13,
+      "payload_linear_impulse_residual_Ns": [
+        -1.510944147575799e-15,
+        0.0,
+        0.0
+      ],
+      "payload_angular_impulse_residual_Nms": [
+        1.3028916073779605e-35,
+        -9.129693085542508e-21,
+        -4.696513920592303e-21
+      ],
+      "native_generalized_vs_contact_force_max_N": 0.0,
+      "kinetic_energy_change_J": -57.80160649994495,
+      "motor_work_J": -57.80160589661462,
+      "kinetic_minus_motor_work_J": -6.033303350250208e-07,
+      "energy_scope": "Difference includes unmeasured contact regularization,damping/friction and integration error;not automatically numerical error."
+    },
+    "solver_max_iterations_used": 1,
+    "native_warning_increments": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "wall_s": 12.408384627997293,
+    "limitations": [
+      "Open-loop source force replay,not perturbed electrical feedback",
+      "Ideal host/carrier X guides;no host attitude/side compliance",
+      "Uniform4kg340.5\u00d7100\u00d7100mm payload surrogate",
+      "Contact regularization/friction/damping unmeasured sensitivities",
+      "Final1ms before source release through arrest and0.35s window;powered return and feeder capture excluded",
+      "Primitive collision surfaces are a documented CAD subset;no complete manufactured model"
+    ],
+    "solver_full_budget_steps": 0,
+    "max_native_termination_gradient": 3.3886990163052392e-15,
+    "payload_initial_position_m": [
+      1.6998101589744972,
+      0.0,
+      0.096
+    ],
+    "payload_initial_velocity_m_s": [
+      2.92379474222315,
+      0.0,
+      0.0
+    ],
+    "payload_initial_omega_deg_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "freeflight_position_residual_m": [
+      0.001089884139611419,
+      9.529852666219261e-19,
+      0.0
+    ],
+    "exact_inertia_kg_m2": [
+      0.006666666666666668,
+      0.04198008333333334,
+      0.04198008333333334
+    ]
+  },
+  "half_keeper_25us": {
+    "case": {
+      "id": "half_keeper",
+      "mu": 0.1,
+      "keeper_shift_mm": 6
+    },
+    "dt_s": 2.5e-05,
+    "solver": "Newton",
+    "iterations": 100,
+    "direct_stiffness_s_minus2": 1000000.0,
+    "direct_damping_s_minus1": 2000,
+    "constant_solimp": 0.95,
+    "representation": "box",
+    "native_version": "3.3.7",
+    "tstart_s": 0.8659650000000001,
+    "duration_s": 0.35000000000000003,
+    "tend_s": 1.2159649999997797,
+    "source_release_s": 0.8669650000014459,
+    "source_stop_s": 1.0477800000026305,
+    "source_release_inertial_kick_m_s": 2.9269191513942334,
+    "payload_final_position_m": [
+      2.096768907312302,
+      0.0002648560625695781,
+      0.09704652409721959
+    ],
+    "payload_final_quaternion_wxyz": [
+      0.9996286850215248,
+      8.944815536972081e-05,
+      0.003154104288052728,
+      0.02706539686213175
+    ],
+    "payload_final_velocity_m_s": [
+      0.674484340060484,
+      -9.229235021068992e-07,
+      1.5401306679225103e-07
+    ],
+    "payload_final_omega_deg_s": [
+      -1.608519377165074e-05,
+      -0.0006836250805124839,
+      -0.0008551807319085072
+    ],
+    "orientation_change_deg": 3.1228584504780885,
+    "payload_inertial_kick_difference_m_s": -2.2524348113337496,
+    "final_payload_aft_relative_carrier_m": 0.06580990275752832,
+    "rear_contact_first_s": 0.8659900000000001,
+    "rear_contact_last_s": 0.8669400000000022,
+    "rear_unload_events_s": [
+      0.8669650000000022
+    ],
+    "rear_recontact_events_s": [],
+    "contact_absolute_impulse_by_group_Ns": {
+      "rear": 0.012472357772986824,
+      "keeper": 8.898985081991276,
+      "floor": 1.2173285971253294,
+      "cap": 1.276195104631264,
+      "other": 1.6451924930968054
+    },
+    "post_source_release_absolute_impulse_by_group_Ns": {
+      "keeper": 8.898985081991276,
+      "floor": 1.2173285971253294,
+      "cap": 1.276195104631264,
+      "other": 1.6451924930968054
+    },
+    "max_overlap_m": 7.144451087625187e-05,
+    "peak_contact_force_N_unrated": 927.80930744886,
+    "initial_overlap_m": 0.0,
+    "initial_gap_adjustment_m": {
+      "x": 0,
+      "z": 0
+    },
+    "conservation": {
+      "total_x_momentum_initial_kg_m_s": 1.7763568394002505e-15,
+      "total_x_momentum_residual_kg_m_s": -2.34035013590983e-13,
+      "payload_linear_impulse_residual_Ns": [
+        -2.3092638912203256e-14,
+        -2.7025433215095707e-17,
+        -2.1891143005313765e-17
+      ],
+      "payload_angular_impulse_residual_Nms": [
+        4.384515277941082e-09,
+        -4.1805820829444e-09,
+        6.492921524565501e-09
+      ],
+      "native_generalized_vs_contact_force_max_N": 4.591667681496435e-13,
+      "kinetic_energy_change_J": -71.04007742319067,
+      "motor_work_J": -70.69527750618356,
+      "kinetic_minus_motor_work_J": -0.34479991700710855,
+      "energy_scope": "Difference includes unmeasured contact regularization,damping/friction and integration error;not automatically numerical error."
+    },
+    "solver_max_iterations_used": 8,
+    "native_warning_increments": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "wall_s": 11.165691138998227,
+    "limitations": [
+      "Open-loop source force replay,not perturbed electrical feedback",
+      "Ideal host/carrier X guides;no host attitude/side compliance",
+      "Uniform4kg340.5\u00d7100\u00d7100mm payload surrogate",
+      "Contact regularization/friction/damping unmeasured sensitivities",
+      "Final1ms before source release through arrest and0.35s window;powered return and feeder capture excluded",
+      "Primitive collision surfaces are a documented CAD subset;no complete manufactured model"
+    ],
+    "solver_full_budget_steps": 0,
+    "max_native_termination_gradient": 1.5395236422003616e-08,
+    "payload_initial_position_m": [
+      1.6998101589744972,
+      0.0,
+      0.096
+    ],
+    "payload_initial_velocity_m_s": [
+      2.92379474222315,
+      0.0,
+      0.0
+    ],
+    "payload_initial_omega_deg_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "freeflight_position_residual_m": [
+      -0.6263694114402976,
+      0.0002648560625695781,
+      0.0010465240972195866
+    ],
+    "exact_inertia_kg_m2": [
+      0.006666666666666668,
+      0.04198008333333334,
+      0.04198008333333334
+    ]
+  },
+  "no_contact_control_25us": {
+    "case": {
+      "id": "freeflight",
+      "mu": 0,
+      "disable_contact": true,
+      "initial_z_gap_m": 0.0005,
+      "initial_omega_deg_s": [
+        1,
+        1,
+        1
+      ],
+      "vy_m_s": 0.002
+    },
+    "dt_s": 2.5e-05,
+    "solver": "Newton",
+    "iterations": 100,
+    "direct_stiffness_s_minus2": 1000000.0,
+    "direct_damping_s_minus1": 2000,
+    "constant_solimp": 0.95,
+    "representation": "box",
+    "native_version": "3.3.7",
+    "tstart_s": 0.8659650000000001,
+    "duration_s": 0.35000000000000003,
+    "tend_s": 1.2159649999997797,
+    "source_release_s": 0.8669650000014459,
+    "source_stop_s": 1.0477800000026305,
+    "source_release_inertial_kick_m_s": 2.9269191513942334,
+    "payload_final_position_m": [
+      2.7231383187538434,
+      0.000699999999999999,
+      0.0965
+    ],
+    "payload_final_quaternion_wxyz": [
+      0.9999860066904329,
+      0.0030542959652310833,
+      0.0030621544463164596,
+      0.0030464585382859533
+    ],
+    "payload_final_velocity_m_s": [
+      2.92379474222315,
+      0.002,
+      4.5449755070592276e-20
+    ],
+    "payload_final_omega_deg_s": [
+      0.9999686127324326,
+      1.0051409925203494,
+      0.9948639919492974
+    ],
+    "orientation_change_deg": 0.6062173381933117,
+    "payload_inertial_kick_difference_m_s": -0.0031244091710833644,
+    "final_payload_aft_relative_carrier_m": 0.885195781066923,
+    "rear_contact_first_s": null,
+    "rear_contact_last_s": null,
+    "rear_unload_events_s": [],
+    "rear_recontact_events_s": [],
+    "contact_absolute_impulse_by_group_Ns": {},
+    "post_source_release_absolute_impulse_by_group_Ns": {},
+    "max_overlap_m": 0.0,
+    "peak_contact_force_N_unrated": 0.0,
+    "initial_overlap_m": 0,
+    "initial_gap_adjustment_m": {
+      "x": 0,
+      "z": 0.0005
+    },
+    "conservation": {
+      "total_x_momentum_initial_kg_m_s": 1.7763568394002505e-15,
+      "total_x_momentum_residual_kg_m_s": -9.414691248821327e-14,
+      "payload_linear_impulse_residual_Ns": [
+        0.0,
+        0.0,
+        1.817990202823691e-19
+      ],
+      "payload_angular_impulse_residual_Nms": [
+        1.6427626403289763e-12,
+        5.652448994974968e-13,
+        5.557714661749702e-13
+      ],
+      "native_generalized_vs_contact_force_max_N": 0.0,
+      "kinetic_energy_change_J": -57.83823393958768,
+      "motor_work_J": -57.838233939587816,
+      "kinetic_minus_motor_work_J": 1.3500311979441904e-13,
+      "energy_scope": "Difference includes unmeasured contact regularization,damping/friction and integration error;not automatically numerical error."
+    },
+    "solver_max_iterations_used": 0,
+    "native_warning_increments": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "wall_s": 10.366728838002018,
+    "limitations": [
+      "Open-loop source force replay,not perturbed electrical feedback",
+      "Ideal host/carrier X guides;no host attitude/side compliance",
+      "Uniform4kg340.5\u00d7100\u00d7100mm payload surrogate",
+      "Contact regularization/friction/damping unmeasured sensitivities",
+      "Final1ms before source release through arrest and0.35s window;powered return and feeder capture excluded",
+      "Primitive collision surfaces are a documented CAD subset;no complete manufactured model"
+    ],
+    "solver_full_budget_steps": 0,
+    "max_native_termination_gradient": 0.0,
+    "payload_initial_position_m": [
+      1.6998101589744972,
+      0.0,
+      0.0965
+    ],
+    "payload_initial_velocity_m_s": [
+      2.92379474222315,
+      0.002,
+      0.0
+    ],
+    "payload_initial_omega_deg_s": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "freeflight_position_residual_m": [
+      1.2436718321851004e-12,
+      -1.0842021724855044e-18,
+      0.0
+    ],
+    "exact_inertia_kg_m2": [
+      0.006666666666666668,
+      0.04198008333333334,
+      0.04198008333333334
+    ]
+  },
+  "physics_parameter_interpretation": "Contact stiffness,damping and friction are unmeasured sensitivity values;native contact-force peaks unrated."
+}

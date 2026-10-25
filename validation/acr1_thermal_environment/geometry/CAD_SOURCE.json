@@ -1,0 +1,8 @@
+{
+  "solids": 387,
+  "max_mapping_cost_mm": 0.0013147563040927423,
+  "input_step_sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+  "cadquery_version": "2.7.0",
+  "tessellation_linear_tolerance_mm": 1,
+  "angular_tolerance_rad": 0.3
+}

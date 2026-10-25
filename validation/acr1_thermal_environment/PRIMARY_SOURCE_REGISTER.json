@@ -1,0 +1,90 @@
+[
+  {
+    "id": "NASA_ARC_8070_1",
+    "url": "https://www.nasa.gov/sites/default/files/atoms/files/std8070.1.pdf",
+    "accessed_utc": "2026-10-25",
+    "version": "NASA Ames ARC-STD-8070.1,18December2018,sections3.4.3.1.1/3.4.3.1.3",
+    "use": "Government reference environmental bands1322/1367/1414Wm-2 andEarthIR234\u00b17Wm-2; applicability is Ames missions,not universalVOLLEY compliance.",
+    "bytes": 1010063,
+    "sha256": "c46567ec191da70a654e7b5f8f6ad0aef45495199873ace33ec6b945a1c8cdc3",
+    "local_public_path": "sources/NASA_ARC_8070_1.pdf",
+    "full_manufacturer_PDF_redistributed": false
+  },
+  {
+    "id": "NASA_RP_1121",
+    "url": "https://ntrs.nasa.gov/api/citations/19840015630/downloads/19840015630.pdf",
+    "accessed_utc": "2026-10-25",
+    "version": "NASA-RP-1121,JohnHenninger,April1984",
+    "use": "Measured optical examples depend on surface preparation; unknown ACR1 finish is investigated,not silently assigned a qualified coating.",
+    "bytes": 1823086,
+    "sha256": "03282ed76b9b25fad264631ef9d4a80807840490f39de37a843c6d9dcfd2bcf1",
+    "local_public_path": "sources/NASA_RP_1121.pdf",
+    "full_manufacturer_PDF_redistributed": false
+  },
+  {
+    "id": "NASA_SST_THERMAL_2026",
+    "url": "https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/",
+    "accessed_utc": "2026-10-25",
+    "version": "NASA SmallSpacecraftTechnology,chapter7,7May2026,sections7.1/7.2.3",
+    "use": "Vacuum conduction/radiation balance; illustrative bolt conductances0.105\u20133.51W/K per listed screw/interface class,not actual ACR1 mounting acceptance.",
+    "bytes": 401897,
+    "sha256": "2bcaab0f7a655d21434e673c57c7d9ebe03fbe03c597ad9122a0b283e093c309",
+    "local_public_path": "sources/NASA_SST_THERMAL_2026.html",
+    "full_manufacturer_PDF_redistributed": false
+  },
+  {
+    "id": "NIST_G10CR",
+    "url": "https://trc.nist.gov/cryogenics/materials/G-10%20CR%20Fiberglass%20Epoxy/G10CRFiberglassEpoxy_rev.htm",
+    "accessed_utc": "2026-10-25",
+    "version": "NIST CryogenicMaterialsPropertyDatabase,G10-CR,fits4\u2013300K",
+    "use": "At300K:normal conductivity0.607983W/mK,specific heat998.743J/kgK. Generic GFRP grade and hot-temperature extrapolation remain uncertain.",
+    "download_status": "HTTP403",
+    "sha256": null,
+    "local_public_path": null,
+    "extraction_note": "Primary page independently read through connected web source; no upstream byte hash is fabricated. Structured numeric fact capture retained separately."
+  },
+  {
+    "id": "NASA_EARTH_GUIDELINES",
+    "url": "https://ntrs.nasa.gov/api/citations/20020004360/downloads/20020004360.pdf",
+    "accessed_utc": "2026-10-25",
+    "version": "NASA/TM-2001-211221,Anderson etal,Guidelines forselection ofnearEarththermalparameters",
+    "use": "Thermal-response-time dependent albedo/OLR guidance; our selected broad investigation band is not a percentile or provider-specific environment.",
+    "bytes": 1513959,
+    "sha256": "a6ea8902b65e59ef3932d1a1f84c5b3a45938f240344b1d8a7465e79a625467e",
+    "local_public_path": "sources/NASA_EARTH_GUIDELINES.pdf",
+    "full_manufacturer_PDF_redistributed": false
+  },
+  {
+    "id": "ARNOLD_N48M_REFERENCE",
+    "url": "https://www.arnoldmagnetics.com/wp-content/uploads/2017/11/N48M-151021.pdf",
+    "accessed_utc": "2026-10-25",
+    "version": "Arnold N48M material sheet,Rev210802",
+    "use": "Representative NdFeB specific heat0.11cal/gK\u2248460J/kgK;Br coefficient\u22120.12%/K over20\u2013100C. This grade is not selected for ACR1; no universal magnet limit is assigned.",
+    "bytes": 244710,
+    "sha256": "0b5d2bf6d8fbbd8a64ae53a5dce9e4e7421baf31c79dd50dc0be6192b0e92094",
+    "local_public_path": null,
+    "full_manufacturer_PDF_redistributed": false
+  },
+  {
+    "id": "EATON_TV_REFERENCE",
+    "url": "https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-tv-supercapacitors-cylindrical-cells-data-sheet.pdf",
+    "accessed_utc": "2026-10-25",
+    "version": "Frozen Eaton TV source reference",
+    "use": "Selected cell catalogue operation\u221240..65C; extended85C point requires2.5V/cell. No vacuum/space qualification follows.",
+    "bytes": 351266,
+    "sha256": "eaddcdbd008e4be6d20a667e49ca14c4a98c904793e8d482132895a639f95cea",
+    "local_public_path": null,
+    "full_manufacturer_PDF_redistributed": false
+  },
+  {
+    "id": "IRFP4668_REFERENCE",
+    "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irfp4668-datasheet-en.pdf",
+    "accessed_utc": "2026-10-25",
+    "version": "Frozen Infineon IRFP4668 reference",
+    "use": "Junction/case thermal resistance and absolute-temperature/current limits are distinct from mounting and flight acceptance.",
+    "bytes": 1160740,
+    "sha256": "117c4a335eea1b0fae0d870222393b871b58ad73c04a1b502f009aeff66e54a8",
+    "local_public_path": null,
+    "full_manufacturer_PDF_redistributed": false
+  }
+]

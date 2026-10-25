@@ -1,0 +1,26 @@
+{
+  "task_id": "PLAN-P2",
+  "criterion": "Vacuum heat paths, repeated-duty properties and contamination",
+  "recommended_overall_state": "partial",
+  "tracker_changed": false,
+  "bounded_computational_work": {
+    "status": "complete within declared scope",
+    "evidence": ["THERMAL_INPUTS.json", "THERMAL_RESULTS.json", "THERMAL_CORRECTIONS.json", "DERATED_SOURCE_RESULTS.json", "NUMERICAL_VERIFICATION.json", "PORTABLE_REPLAY.json"],
+    "scope": "Actual ACR1 CAD/source/duty based conduction and radiation, twelve-release removal/custody, parameter sensitivity, source thermal corrections, separately named margin-bearing78.4V production variant, numerical and conservation checks."
+  },
+  "retained_failures": [
+    "Unmodified86.4V hot source exceeds65C; refined maximum71.77522C.",
+    "Initial1W/K path fails65C in the declared contact corner.",
+    "Initial2.5W/K path reaches60.29C in refinement and misses the chosen5K monitoring allowance.",
+    "78.4V derating alone reaches84.42441C in the refined contact corner, below85C but above the selected80C monitoring allocation."
+  ],
+  "final_bounded_option": "Measured direct sourceplate-to-regulated-hostG>=3W/K,host<=50C,represented loads/contact cases and verified5K temperature error/gradient budget. Refined corner59.00016C at86.4V and59.06084C at78.4V.",
+  "external_physical_and_interface_gates": [
+    "Named materials, BH(T), adhesives, GFRP grade, finishes, contamination and applicable outgassing requirements.",
+    "Actual source/control/harness CAD and short thermal-path routing, collision/compliance/preload checks and measured installed vacuum conductance.",
+    "Regulated host heat acceptance, actual standby and payload dissipation, temperature histories and sensor gradients.",
+    "Cell capacitance/ESR versus temperature/age,32-group imbalance/sensing, charge/regeneration response, circuit transient/fault verification.",
+    "Vacuum repeated duty, local gradient/warpage/contact correlation, lubricant/wear and payload cleanliness acceptance."
+  ],
+  "source_or_core_revision_authorized_by_this_recommendation": false
+}

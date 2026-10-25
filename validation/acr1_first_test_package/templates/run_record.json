@@ -1,0 +1,19 @@
+{
+  "template_only": true,
+  "experiment_performed": false,
+  "run_id": null,
+  "test_id": null,
+  "definition_and_criteria_hashes": null,
+  "actual_date_and_operator": null,
+  "article_and_material_identities": null,
+  "calibration_records": null,
+  "initial_state_and_environment": null,
+  "identification_or_validation_dataset": null,
+  "measured_inputs": null,
+  "raw_trace_paths": [],
+  "actual_uncertainty_budget": null,
+  "all_trials_retained": null,
+  "result_pass_inconclusive_failed_stopped": null,
+  "deviations_and_safe_disposition": null,
+  "external_acceptance_claimed": false
+}

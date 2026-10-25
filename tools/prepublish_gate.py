@@ -169,7 +169,7 @@ def check_evidence_tracking(errors: list[str]) -> None:
                  "validation/programme_closure_acr1/MANIFEST.json",
                  "validation/acr1_structural_dynamics/MANIFEST.json",
                  "validation/acr1_release_dynamics/MANIFEST.json",
-                 "validation/acr1_thermal_environment/MANIFEST.json",
+                 "validation/acr1_thermal_environment/PUBLIC_SOURCE_MANIFEST.json",
                  "validation/acr1_first_test_package/MANIFEST.json",
                  "validation/selected_feeder/MANIFEST.json", "experiments/selected_feeder/MANIFEST.json",
                  "validation/system_feasibility_closure/MANIFEST.json", "experiments/system_feasibility_closure/MANIFEST.json",
@@ -203,7 +203,15 @@ def check_evidence_tracking(errors: list[str]) -> None:
         # Separate, unindexed studies remain drafts until deliberately staged.
         if name not in tracked or not manifest.is_file():
             continue
-        for relative in ["MANIFEST.json", *json.loads(manifest.read_text())["files"]]:
+        records = json.loads(manifest.read_text())["files"]
+        if isinstance(records, dict):
+            members = list(records)
+        elif isinstance(records, list) and all(isinstance(item, dict) and isinstance(item.get("path"), str) for item in records):
+            members = [item["path"] for item in records]
+        else:
+            errors.append(f"{name}: unsupported captured-file manifest schema")
+            continue
+        for relative in [manifest.name, *members]:
             path = (manifest.parent / relative).resolve()
             if path.suffix == ".FCBak" or path.name == "spooles.out":
                 errors.append(f"{name}: uncontrolled backup/scratch artifact in release: {relative}")

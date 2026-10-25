@@ -1,0 +1,21 @@
+time_step cold 1 0.004035963949178267
+time_step cold 3 0.0040359639495477495
+time_step reference 1 0.02631306906437203
+time_step reference 3 0.026296374884509532
+time_step hot 1 2.885451215206558e-05
+time_step hot 3 2.885445491074279e-05
+ray_samples cold 3 1.5004233428280145
+ray_samples reference 3 1.2458977424288378
+ray_samples hot 1 2.4120486378540704
+combined_time_and_ray corrected86p4V_cases 2.3737776635144314 59.000160204251756
+combined_time_and_ray combined78p4V_path_cases 2.3737776635144314 59.060838474521915
+combined_time_and_ray derated78p4V_cases 2.483556652484708 84.42441403118175
+{
+  "max_time_step_peak_delta_K": 0.02631306906437203,
+  "max_ray_peak_delta_K": 2.4120486378540704,
+  "max_global_energy_balance_residual_J": 3.1315721571445465e-07,
+  "max_independent_radiosity_balance_residual_W": 6.548361852765083e-10,
+  "max_periodic_delta_K": 0.018600393725080266,
+  "max_periodic_validation_orbits": 6
+}
+{'time_step_below_0p1K': True, 'energy_balance_below_0p01J': True, 'independent_radiosity_below_1e8W': True, 'periodic_below_0p02K': True, 'corrected_corner_refined_below60C': True}

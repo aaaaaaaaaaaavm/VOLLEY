@@ -1,0 +1,25 @@
+{
+  "original_source_sha256": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155",
+  "adapter_sha256": "4ddc7ee282ffde22fc9fa6226c81f72e5c2ce14a41a7a3d6c46b2f0abd4a6516",
+  "original_AST_restored_identically": true,
+  "runtime_parameter_accesses": [
+    {
+      "line": 32,
+      "original_literal": 86.4,
+      "parameter": "THERMAL_INITIAL_BANK_V"
+    },
+    {
+      "line": 72,
+      "original_literal": 2.9,
+      "parameter": "THERMAL_REGEN_CELL_V"
+    },
+    {
+      "line": 128,
+      "original_literal": 86.4,
+      "parameter": "THERMAL_INITIAL_BANK_V"
+    }
+  ],
+  "initial_bank_V": 78.4,
+  "regenerative_control_bank_V": 79.04,
+  "absolute_catalogue_bank_V": 80
+}

@@ -1,0 +1,128 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "cad_parameter_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+  "model_sha256": "b81a8a165938e3148acf37e0f525b1b798d650a945d947e780ab446b1cf0f59c",
+  "catalog_sha256": "401d4da4d3b3a0395a42f3b4f140f862c05f9ccaa3489d3863b02f86fb73423d",
+  "assumptions": {
+    "profile": "quintic rest-to-rest",
+    "moving_mass_study_kg": 7.5,
+    "screw_efficiency": 0.42,
+    "gear_efficiency": 0.5,
+    "steel_E_Pa": 200000000000.0,
+    "guide_end_condition": "simply supported; equal sharing between two shafts",
+    "motor_catalog_environment": "catalog reference, no space qualification implied"
+  },
+  "stroke_mm": 250.0,
+  "duration_s": 40,
+  "screw_euler_N": 2668.078719441111,
+  "feed_cases": [
+    {
+      "resistance_N": 25,
+      "motor_rpm_peak": 3164.0625,
+      "motor_torque_peak_Nm": 0.004211587713756498,
+      "motor_current_peak_A": 0.1907291718298671,
+      "torque_speed_margin_rpm": 2350.044356109136,
+      "euler_factor": 106.69427384764612,
+      "checks": {
+        "motor_torque": true,
+        "torque_speed": true,
+        "gear_speed": true,
+        "nut_catalog_500rpm": true,
+        "buckling_factor_2": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "resistance_N": 50,
+      "motor_rpm_peak": 3164.0625,
+      "motor_torque_peak_Nm": 0.008422035943700818,
+      "motor_current_peak_A": 0.29243081989615505,
+      "torque_speed_margin_rpm": 2264.151212218271,
+      "euler_factor": 53.354354679643265,
+      "checks": {
+        "motor_torque": true,
+        "torque_speed": true,
+        "gear_speed": true,
+        "nut_catalog_500rpm": true,
+        "buckling_factor_2": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "resistance_N": 100,
+      "motor_rpm_peak": 3164.0625,
+      "motor_torque_peak_Nm": 0.016842932403589462,
+      "motor_current_peak_A": 0.49583411602873095,
+      "torque_speed_margin_rpm": 2092.3649244365433,
+      "euler_factor": 26.678982145006668,
+      "checks": {
+        "motor_torque": true,
+        "torque_speed": true,
+        "gear_speed": true,
+        "nut_catalog_500rpm": true,
+        "buckling_factor_2": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "resistance_N": 155,
+      "motor_rpm_peak": 3164.0625,
+      "motor_torque_peak_Nm": 0.026105918509466967,
+      "motor_current_peak_A": 0.7195777417745645,
+      "torque_speed_margin_rpm": 1903.4000078766421,
+      "euler_factor": 17.212659753839567,
+      "checks": {
+        "motor_torque": true,
+        "torque_speed": true,
+        "gear_speed": true,
+        "nut_catalog_500rpm": true,
+        "buckling_factor_2": true
+      },
+      "pass_declared_screens": true
+    }
+  ],
+  "guide_clearance_sensitivity": [
+    {
+      "transverse_total_N": 10,
+      "deflection_mm": 0.03813034126595628,
+      "allocated_manufacturing_mm": 0.3,
+      "yaw_mm": 0.29714260686814326,
+      "thermal_mm": 0.096,
+      "remaining_side_clearance_mm": 1.2687270518659002,
+      "positive_margin": true
+    },
+    {
+      "transverse_total_N": 25,
+      "deflection_mm": 0.09532585316489073,
+      "allocated_manufacturing_mm": 0.3,
+      "yaw_mm": 0.29714260686814326,
+      "thermal_mm": 0.096,
+      "remaining_side_clearance_mm": 1.2115315399669657,
+      "positive_margin": true
+    },
+    {
+      "transverse_total_N": 50,
+      "deflection_mm": 0.19065170632978146,
+      "allocated_manufacturing_mm": 0.3,
+      "yaw_mm": 0.29714260686814326,
+      "thermal_mm": 0.096,
+      "remaining_side_clearance_mm": 1.116205686802075,
+      "positive_margin": true
+    },
+    {
+      "transverse_total_N": 100,
+      "deflection_mm": 0.3813034126595629,
+      "allocated_manufacturing_mm": 0.3,
+      "yaw_mm": 0.29714260686814326,
+      "thermal_mm": 0.096,
+      "remaining_side_clearance_mm": 0.9255539804722936,
+      "positive_margin": true
+    }
+  ],
+  "scope_conditions": [
+    "Actual CAD pusher plus4kg payload lies within7.5kg moving-mass sizing allowance; see RESOURCE_LEDGER.json",
+    "Guide clearances use declared alignment, thermal and load allocations, not manufactured measurements",
+    "Integrated lift, pallet and lock geometry is verified in cad/release; lift sizing is in LIFT_SIZING.json",
+    "Catalog references do not confer vacuum qualification or hardware reliability"
+  ]
+}

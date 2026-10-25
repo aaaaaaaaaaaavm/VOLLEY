@@ -1,0 +1,237 @@
+{
+  "package_id": "VOLLEY-G6-FIRST-TEST-PREP-R1",
+  "prediction_only": true,
+  "measurements": null,
+  "definition_sha256": "5fcb4a1d96ed814ccb3f2c0dc264f09d0901695cdca2809eb72341ce6eded34e",
+  "model_sha256": "eff02fa7485d6f504f5c37dca9953ff7412229167765c0011d9fa3ff2766eee1",
+  "parent_field_source_sha256": "99f5ed27abef68dfaa7c651de6f10bba3e2a602d12f83caa064bcecadf06aa07",
+  "parent_parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "magpylib": "5.2.3"
+  },
+  "field_scan": [
+    {
+      "x_mm": -20,
+      "B_normal_T": 0.5082740687803758,
+      "B_vector_field_axes_T": [
+        -2.6020852139652106e-18,
+        0.5082740687803758,
+        0.0
+      ]
+    },
+    {
+      "x_mm": -12,
+      "B_normal_T": 0.2910996430140416,
+      "B_vector_field_axes_T": [
+        2.862293735361732e-17,
+        0.2910996430140416,
+        -4.930380657631324e-32
+      ]
+    },
+    {
+      "x_mm": -4,
+      "B_normal_T": -0.4018987602611735,
+      "B_vector_field_axes_T": [
+        -5.551115123125783e-17,
+        -0.4018987602611735,
+        1.3226405364998838e-32
+      ]
+    },
+    {
+      "x_mm": 4,
+      "B_normal_T": -0.7561524163214728,
+      "B_vector_field_axes_T": [
+        5.1662233518934286e-17,
+        -0.7561524163214728,
+        9.860761315262648e-32
+      ]
+    },
+    {
+      "x_mm": 12,
+      "B_normal_T": -0.38925010229017704,
+      "B_vector_field_axes_T": [
+        4.163336342344337e-17,
+        -0.38925010229017704,
+        -2.465190328815662e-32
+      ]
+    },
+    {
+      "x_mm": 20,
+      "B_normal_T": 0.23799627177722282,
+      "B_vector_field_axes_T": [
+        -1.3877787807814457e-17,
+        0.23799627177722282,
+        -7.395570986446986e-32
+      ]
+    }
+  ],
+  "force_scan": [
+    {
+      "x_mm": -24,
+      "active_N_per_A": -0.02553635358222524,
+      "return_N_per_A": -0.0031696182763753292,
+      "total_N_per_A": -0.02870597185860057,
+      "fine_total_N_per_A": -0.028705920523408222,
+      "quadrature_change_N_per_A": 5.1335192348313935e-08
+    },
+    {
+      "x_mm": -20,
+      "active_N_per_A": -0.03967789712713142,
+      "return_N_per_A": -0.005222313797324262,
+      "total_N_per_A": -0.04490021092445568,
+      "fine_total_N_per_A": -0.04489989572149869,
+      "quadrature_change_N_per_A": 3.152029569930895e-07
+    },
+    {
+      "x_mm": -16,
+      "active_N_per_A": -0.03952738264120977,
+      "return_N_per_A": -0.005222844726916824,
+      "total_N_per_A": -0.044750227368126595,
+      "fine_total_N_per_A": -0.04475001135810438,
+      "quadrature_change_N_per_A": 2.1601002221822985e-07
+    },
+    {
+      "x_mm": -12,
+      "active_N_per_A": -0.022877638333188847,
+      "return_N_per_A": -0.002810004917115555,
+      "total_N_per_A": -0.025687643250304402,
+      "fine_total_N_per_A": -0.02568760423586723,
+      "quadrature_change_N_per_A": 3.901443717049813e-08
+    },
+    {
+      "x_mm": -8,
+      "active_N_per_A": 0.0036338630729082578,
+      "return_N_per_A": 0.0010005696085554241,
+      "total_N_per_A": 0.0046344326814636815,
+      "fine_total_N_per_A": 0.004634419295838464,
+      "quadrature_change_N_per_A": 1.3385625218052116e-08
+    },
+    {
+      "x_mm": -4,
+      "active_N_per_A": 0.03123740690080689,
+      "return_N_per_A": 0.004972842898989149,
+      "total_N_per_A": 0.036210249799796035,
+      "fine_total_N_per_A": 0.03621022516512667,
+      "quadrature_change_N_per_A": 2.463466937038805e-08
+    },
+    {
+      "x_mm": 0,
+      "active_N_per_A": 0.05163396512405261,
+      "return_N_per_A": 0.007920464257103238,
+      "total_N_per_A": 0.05955442938115585,
+      "fine_total_N_per_A": 0.05955439280982819,
+      "quadrature_change_N_per_A": 3.657132766239635e-08
+    },
+    {
+      "x_mm": 4,
+      "active_N_per_A": 0.05895012371303766,
+      "return_N_per_A": 0.00889488143497668,
+      "total_N_per_A": 0.06784500514801434,
+      "fine_total_N_per_A": 0.06784496919712713,
+      "quadrature_change_N_per_A": 3.59508872116443e-08
+    },
+    {
+      "x_mm": 8,
+      "active_N_per_A": 0.05105443402097778,
+      "return_N_per_A": 0.007695851314069077,
+      "total_N_per_A": 0.05875028533504686,
+      "fine_total_N_per_A": 0.05875024871711598,
+      "quadrature_change_N_per_A": 3.661793087240267e-08
+    },
+    {
+      "x_mm": 12,
+      "active_N_per_A": 0.030399368508417745,
+      "return_N_per_A": 0.004571949926644088,
+      "total_N_per_A": 0.034971318435061835,
+      "fine_total_N_per_A": 0.034971313635562856,
+      "quadrature_change_N_per_A": 4.799498977067773e-09
+    },
+    {
+      "x_mm": 16,
+      "active_N_per_A": 0.003746515795715773,
+      "return_N_per_A": 0.0005942407984301384,
+      "total_N_per_A": 0.004340756594145912,
+      "fine_total_N_per_A": 0.004340852912677568,
+      "quadrature_change_N_per_A": 9.631853165677391e-08
+    },
+    {
+      "x_mm": 20,
+      "active_N_per_A": -0.018108902695721987,
+      "return_N_per_A": -0.00272840336179559,
+      "total_N_per_A": -0.020837306057517577,
+      "fine_total_N_per_A": -0.020837111628257663,
+      "quadrature_change_N_per_A": 1.944292599134409e-07
+    },
+    {
+      "x_mm": 24,
+      "active_N_per_A": -0.02460223872889489,
+      "return_N_per_A": -0.0038408818686634866,
+      "total_N_per_A": -0.028443120597558377,
+      "fine_total_N_per_A": -0.028443137434425426,
+      "quadrature_change_N_per_A": 1.683686704900128e-08
+    }
+  ],
+  "force_stations_frozen_before_tests": [
+    {
+      "x_mm": -20,
+      "active_N_per_A": -0.03967789712713142,
+      "return_N_per_A": -0.005222313797324262,
+      "total_N_per_A": -0.04490021092445568,
+      "fine_total_N_per_A": -0.04489989572149869,
+      "quadrature_change_N_per_A": 3.152029569930895e-07
+    },
+    {
+      "x_mm": 4,
+      "active_N_per_A": 0.05895012371303766,
+      "return_N_per_A": 0.00889488143497668,
+      "total_N_per_A": 0.06784500514801434,
+      "fine_total_N_per_A": 0.06784496919712713,
+      "quadrature_change_N_per_A": 3.59508872116443e-08
+    }
+  ],
+  "normal_attraction_screen": [
+    {
+      "plane_step_mm": 2.0,
+      "force_each_array_N": 361.8422923716172
+    },
+    {
+      "plane_step_mm": 1.0,
+      "force_each_array_N": 361.8422924318048
+    }
+  ],
+  "fixture_screen": {
+    "load_multiplier": 2,
+    "load_each_plate_N": 723.6845848636096,
+    "plate_simple_beam_deflection_mm": 0.021907173624136776,
+    "paired_plate_closure_mm": 0.04381434724827355,
+    "per_corner_compression_N": 180.9211462159024,
+    "per_small_keeper_bolt_nominal_share_N": 60.30704873863414,
+    "scope": "Equal sharing and simple beam only; no joint, lip, contact-pressure or assembled proof test."
+  },
+  "ground_counterpart": {
+    "loaded_kinetic_energy_J": 0.34255611534137353,
+    "carrier_kinetic_energy_J": 0.2625561153413735,
+    "nominal_carrier_stop_m": 0.17503741022758235,
+    "nominal_payload_travel_6s_m": 0.7500000000000001,
+    "initial_payload_aft_relative_m": 0.064,
+    "nominal_relative_aft_coordinate_m": 0.6389625897724177,
+    "gravity_slide_drag_at_mu0p1_N": 3.92266,
+    "four_rail_elastic_displacement_at26p8635N_um": 0.5184315708705357
+  },
+  "instrument_allocated_expanded_uncertainty": {
+    "Hall_position_equivalent_bound_T": 0.00800502903884348,
+    "Hall_absolute_T": 0.014970214423435508,
+    "force_absolute_N": 0.001414213562373095,
+    "time_of_flight_speed_m_s_at0p2": 0.0011551623262554922,
+    "scope": "Allocation RSS of independent rectangular error terms, k=2; not instrument calibration or model uncertainty."
+  },
+  "full_reference_bank_initial_energy_J": 23328.000000000004,
+  "limits": [
+    "One wavelength instead of seven; no inheritance of full-stator phase coefficient.",
+    "Return-wire force modeled as a line; wire routing must match; current crowding/support magnetic perturbations unmeasured.",
+    "Rig instrument limits and tolerances are pre-test allocations, not measured properties.",
+    "Ground rolling/air-bearing support changes the physical boundary and does not validate six-DOF tip-off."
+  ]
+}

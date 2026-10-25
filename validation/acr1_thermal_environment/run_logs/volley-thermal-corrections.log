@@ -1,0 +1,25 @@
+{"context": "reference_hot", "unmodified_hot_max_C": 70.94093188344016, "minimum_direct_source_host_G_for_65C_W_K": 0.2779515582244265, "minimum_direct_source_host_G_for_60C_W_K": 0.7738201260569676, "maximum_host_interface_without_direct_strap_for65C_C": 38.50668001312677}
+{"context": "bounded_contact_corner", "unmodified_hot_max_C": 83.03709764260611, "minimum_direct_source_host_G_for_65C_W_K": 1.2606088043834884, "minimum_direct_source_host_G_for_60C_W_K": 2.433603777675033, "maximum_host_interface_without_direct_strap_for65C_C": null, "no_strap_interface_disposition": "No65Csolution inside the declared[-20,65]C interface investigation band; no colderhost is invented."}
+{
+  "allocated_G": 1.0,
+  "series_G": 1.2244897959183674,
+  "path_mass_kg": 0.37725,
+  "corrected_caps": [
+    58.69061304883638,
+    58.63129568107024,
+    66.65469420527074,
+    66.90405366180045
+  ],
+  "derated_caps": [
+    70.84427737627311,
+    70.73136611452344,
+    82.7808719427145,
+    83.0967573868952
+  ],
+  "combined_caps": [
+    58.62683845404615,
+    58.64438771860182,
+    66.63474516911936,
+    66.96417825086212
+  ]
+}
