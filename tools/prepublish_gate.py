@@ -71,17 +71,19 @@ def indexed_paths(root: Path) -> tuple[frozenset[str], frozenset[str]]:
     return _indexed_paths(root, state)
 
 
-def changed_paths(base: str | None, all_files: bool) -> list[str]:
+def changed_paths(base: str | None, all_files: bool, include_untracked: bool = False) -> list[str]:
     if all_files:
         raw = git("ls-files", "-z")
-        # Include a prepared working-tree packet before it has been staged.
-        raw += git("ls-files", "--others", "--exclude-standard", "-z")
     else:
         if not base:
             raise ValueError("pass --base <published commit> or --all")
         raw = git("diff", "--name-only", "--diff-filter=ACMR", "-z", base, "HEAD")
         # A developer may run the gate before committing; include staged and working edits.
         raw += git("diff", "--name-only", "--diff-filter=ACMR", "-z", "HEAD")
+    # Untracked files are not part of a Git publication. Draft inspection may
+    # opt in; indexed-link checks still reject any published page that relies
+    # on an omitted untracked target.
+    if include_untracked:
         raw += git("ls-files", "--others", "--exclude-standard", "-z")
     return sorted(set(p.decode() for p in raw.split(b"\0") if p))
 
@@ -224,9 +226,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", help="published commit to compare to HEAD")
     parser.add_argument("--all", action="store_true", help="scan every tracked file for a release candidate")
+    parser.add_argument("--include-untracked", action="store_true", help="also inspect untracked drafts; not the default publication set")
     args = parser.parse_args()
     try:
-        paths = changed_paths(args.base, args.all)
+        paths = changed_paths(args.base, args.all, args.include_untracked)
     except (ValueError, subprocess.CalledProcessError) as exc:
         print(f"FAIL: cannot determine publication set: {exc}", file=sys.stderr)
         return 2
