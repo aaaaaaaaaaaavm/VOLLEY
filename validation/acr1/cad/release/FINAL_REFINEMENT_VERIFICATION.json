@@ -1,0 +1,365 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "source_sha256": {
+    "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+    "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+    "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+    "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+    "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+    "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+  },
+  "baseline_report": "MOTION_VERIFICATION_BASELINE_PALLET.json",
+  "baseline_source_sha256": {
+    "build_acr1.py": "f33d0a87e1f174acdfaae29655f2c34eeba583d8ac042dd8dded16e34af9a785",
+    "cradle_acr1.py": "1846373b17d77d79c3aab7bea72e288f85cc308e656697b20da858c2ff8c2565",
+    "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+    "PARAMETERS.json": "e870f0132948b76ee6c8664056ced731ce39360d57c2eedfc9f17ffb7576e067"
+  },
+  "baseline_case_count": 143,
+  "final_native_case_count": 19,
+  "proofs": [
+    {
+      "proof": "Final pallet is a strict material subset of the143-case tested pallet",
+      "added_mm3": 0.0,
+      "removed_mm3": 2000.0000000000032,
+      "pass": true
+    },
+    {
+      "proof": "Closed lock geometry is identical: Pallet_bayonet_lock_40",
+      "symmetric_difference_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "proof": "Closed lock geometry is identical: Pallet_bayonet_lock_468",
+      "symmetric_difference_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "proof": "Web-bore reduction only restores chassis material",
+      "removed_mm3": 0.0,
+      "added_mm3": 14325.66250036945,
+      "pass": true
+    },
+    {
+      "proof": "A conservative box containing every restored web point over all1510mm carrier translation has no fixed-world collision",
+      "envelope_bounds_mm": [
+        233.1,
+        2184.9,
+        -96.9,
+        -83.1,
+        -30.0,
+        30.0
+      ],
+      "pass": true,
+      "audit": {
+        "pass_all": true,
+        "tested_pairs": 1,
+        "interferences": []
+      }
+    },
+    {
+      "proof": "New open-lock material cannot meet lifted pallet/payload/carriage at any Z>=46: lower regions are XY-disjoint, upper regions stay aboveZ35",
+      "added_lock_max_z_mm": 35.0,
+      "tested_lower_region_pairs": 42,
+      "XY_overlaps": [],
+      "pass": true
+    }
+  ],
+  "final_native_cases": [
+    {
+      "pass_all": true,
+      "tested_pairs": 147,
+      "interferences": [],
+      "case": "final12mm_lock_insertion_and_rotation",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "pin_lift_mm": 0,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 147,
+      "interferences": [],
+      "case": "final12mm_lock_insertion_and_rotation",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "pin_lift_mm": 4,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 147,
+      "interferences": [],
+      "case": "final12mm_lock_insertion_and_rotation",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "pin_lift_mm": 8,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 147,
+      "interferences": [],
+      "case": "final12mm_lock_insertion_and_rotation",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "pin_lift_mm": 12,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 147,
+      "interferences": [],
+      "case": "final12mm_lock_insertion_and_rotation",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "pin_lift_mm": 12,
+      "bayonet_turn_deg": 30
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 147,
+      "interferences": [],
+      "case": "final12mm_lock_insertion_and_rotation",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "pin_lift_mm": 12,
+      "bayonet_turn_deg": 60
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 147,
+      "interferences": [],
+      "case": "final12mm_lock_insertion_and_rotation",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "pin_lift_mm": 12,
+      "bayonet_turn_deg": 90
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 25
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 50
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 75
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 90
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 100
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 110
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 150
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 2,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 400
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 0,
+      "interferences": [],
+      "case": "payload_departure_over_retained_pallet",
+      "evidence_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "payload_relative_advance_mm": 600
+    }
+  ],
+  "all_refinement_checks_pass": true,
+  "elapsed_s": 42.919632873999944,
+  "boundary": "Exact material containment,rigid-part identity and conservative continuous separation carry135 unchanged-motion baseline cases to the final bounded refinement;8 old lock-travel cases are superseded;new12mm lock path and0..600mm payload departure are directly audited. No loaded/flight qualification."
+}

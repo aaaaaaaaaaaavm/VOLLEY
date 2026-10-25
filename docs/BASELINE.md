@@ -7,9 +7,10 @@
 > Flagship commit at generation: `12a2bda` · Phase **I** · governed by
 > [`docs/programme/ENGINEERING_PROGRAMME.md`](programme/ENGINEERING_PROGRAMME.md)
 
-This is the engineering baseline the Phase I deliverables (portfolio, IEEE paper, thesis)
-are developed against. Dossier §2 requires it to be stable. The change-control rule below is
-what makes "stable" mean something.
+This table preserves the original Phase I model and its historical numerical inputs.
+The current integrated academic reference is [VOLLEY-G5-ACR1](../validation/acr1/README.md),
+with a separately captured 1–3 m/s range, geometry, mass and mission evidence. The historical
+change-control discussion below applies to the original model recorded by this table.
 
 **These are model outputs.** Nothing here has been measured. See
 [`PROVENANCE.md`](PROVENANCE.md) before citing any of it.

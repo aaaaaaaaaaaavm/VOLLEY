@@ -1,0 +1,453 @@
+{
+  "study": "G5-MISSION-01",
+  "native_run_count": 9,
+  "native_runs": [
+    {
+      "stem": "uniform_2_gen5_f0.35",
+      "name": "uniform_2_gen5_f0.35",
+      "step": 60,
+      "category": "nominal",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/uniform_2_gen5_f0.35.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/uniform_2_gen5_f0.35",
+        "60",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": true,
+      "command_csv_sha256": "8a38ef05a3e4a41b2c4bd4c140e135fb88a8ed8d078b1f92819c849e5d8086fd",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 6.84090448605e-06,
+      "max_payload_target_velocity_error_m_s": 7.56400825596e-09,
+      "max_host_position_difference_m": 4.62653115163e-06,
+      "max_host_velocity_difference_m_s": 5.04987738953e-09,
+      "max_host_mass_difference_kg": 3.41060513165e-13,
+      "max_independent_mass_flow_residual_kg": 6.821210263296962e-13,
+      "max_momentum_residual_kg_m_s": 1.04287597742e-09,
+      "max_payload_J2_coast_relative_energy_change": 2.403193016955992e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 9.187313959213071e-15,
+      "output_sha256": {
+        "uniform_2_gen5_f0.35.log": "d8ea399d31dd7ba6234c8061f0125547e5cf362827acd3125d055ee70a7901cc",
+        "uniform_2_gen5_f0.35_host.csv": "6fa26e7e598b3d4053466b6536fd857fcee7f41382739674f55ec7c8ebdb7f87",
+        "uniform_2_gen5_f0.35_payload.csv": "de10e3fbbcd3fae04318bc740b779d8aa7f8b2f8f28b5772fe68cebe16a797b6"
+      }
+    },
+    {
+      "stem": "uniform_2_spring_fixed2_f0.35_shared_narrow",
+      "name": "uniform_2_spring_fixed2_f0.35_shared_narrow",
+      "step": 60,
+      "category": "nominal",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/uniform_2_spring_fixed2_f0.35_shared_narrow.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/uniform_2_spring_fixed2_f0.35_shared_narrow",
+        "60",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": false,
+      "command_csv_sha256": "73d69f12d9a9630d583dd5c0984f0406007410a68271ec8dcfe1ef4f99973142",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 7.70880324044e-06,
+      "max_payload_target_velocity_error_m_s": 8.55288959293e-09,
+      "max_host_position_difference_m": 2.55953462997e-06,
+      "max_host_velocity_difference_m_s": 2.81587245176e-09,
+      "max_host_mass_difference_kg": 4.54747350886e-13,
+      "max_independent_mass_flow_residual_kg": 9.094947017729282e-13,
+      "max_momentum_residual_kg_m_s": 9.31322574615e-10,
+      "max_payload_J2_coast_relative_energy_change": 1.914844492670828e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 1.21555250405166e-14,
+      "output_sha256": {
+        "uniform_2_spring_fixed2_f0.35_shared_narrow.log": "6e839077460cbff1b0d25ca022c43b5faf7cec475eceecc1b9e3e9a591d1d750",
+        "uniform_2_spring_fixed2_f0.35_shared_narrow_host.csv": "4998ed0ea07cf85fdc3e67425c12bae4aa534561e74b1e9dac9694e7feaf035e",
+        "uniform_2_spring_fixed2_f0.35_shared_narrow_payload.csv": "30493902b70fc011d086ebd9fc465e131bb16953e16051fc32de5b3d363a1e4c"
+      }
+    },
+    {
+      "stem": "uniform_2_spring_pretrim_f0.35_shared_narrow",
+      "name": "uniform_2_spring_pretrim_f0.35_shared_narrow",
+      "step": 60,
+      "category": "nominal",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/uniform_2_spring_pretrim_f0.35_shared_narrow.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/uniform_2_spring_pretrim_f0.35_shared_narrow",
+        "60",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": false,
+      "command_csv_sha256": "df8770c51c8d96612da62b2fc7acc21adc28c2707d1595d49ab61a2e50fa8a87",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 1.00138497301e-05,
+      "max_payload_target_velocity_error_m_s": 1.10964025606e-08,
+      "max_host_position_difference_m": 1.50136052354e-06,
+      "max_host_velocity_difference_m_s": 1.71610383968e-09,
+      "max_host_mass_difference_kg": 1.36424205266e-12,
+      "max_independent_mass_flow_residual_kg": 7.958078640513122e-13,
+      "max_momentum_residual_kg_m_s": 9.33139791123e-10,
+      "max_payload_J2_coast_relative_energy_change": 2.6730720783584432e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 1.4134332952245543e-14,
+      "output_sha256": {
+        "uniform_2_spring_pretrim_f0.35_shared_narrow.log": "6694a0a84508bf746989f72d1ea4ad5113373de57511076e34212319c2e697f7",
+        "uniform_2_spring_pretrim_f0.35_shared_narrow_host.csv": "ac688b7741236c7163401008ebb04dd9dc7f12f42884943cfb3fac38977542b2",
+        "uniform_2_spring_pretrim_f0.35_shared_narrow_payload.csv": "ad6b24fa181e9f1293c362230afdff76a618dfaea0708747a1e06e6dccbaf789"
+      }
+    },
+    {
+      "stem": "alternating_1_3_gen5_f0.35",
+      "name": "alternating_1_3_gen5_f0.35",
+      "step": 60,
+      "category": "nominal",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/alternating_1_3_gen5_f0.35.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/alternating_1_3_gen5_f0.35",
+        "60",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": false,
+      "command_csv_sha256": "94ec405b328cfc380453129352d7889a9f18cdf9c68b7b44c70cb876d8613991",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 9.49169446028e-06,
+      "max_payload_target_velocity_error_m_s": 1.05067772385e-08,
+      "max_host_position_difference_m": 5.87105614844e-06,
+      "max_host_velocity_difference_m_s": 6.4858059024e-09,
+      "max_host_mass_difference_kg": 3.41060513165e-13,
+      "max_independent_mass_flow_residual_kg": 7.958078640513122e-13,
+      "max_momentum_residual_kg_m_s": 9.59985336665e-10,
+      "max_payload_J2_coast_relative_energy_change": 2.569585090893526e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 1.3994825052033541e-14,
+      "output_sha256": {
+        "alternating_1_3_gen5_f0.35.log": "4c792fa9eb93896da6d07f5b6e94604d8b0c249c73392e549a265af501dda65c",
+        "alternating_1_3_gen5_f0.35_host.csv": "01b2b403b57170d784ad04244a783175496a89e57ee9fdb6d384d120f3445e23",
+        "alternating_1_3_gen5_f0.35_payload.csv": "fcb3d95492943aa2a545eb40a8fcd18d82a79545cb595743c26ada306b265ed0"
+      }
+    },
+    {
+      "stem": "alternating_1_3_spring_pretrim_f0.35",
+      "name": "alternating_1_3_spring_pretrim_f0.35",
+      "step": 60,
+      "category": "nominal",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/alternating_1_3_spring_pretrim_f0.35.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/alternating_1_3_spring_pretrim_f0.35",
+        "60",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": false,
+      "command_csv_sha256": "34f07f8272950d64b177dc0d328c3c4408f9ea44a4768fd5bb79b68cb263b614",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 7.71092935067e-06,
+      "max_payload_target_velocity_error_m_s": 8.49724839e-09,
+      "max_host_position_difference_m": 2.08498046079e-06,
+      "max_host_velocity_difference_m_s": 2.31830690088e-09,
+      "max_host_mass_difference_kg": 9.09494701773e-13,
+      "max_independent_mass_flow_residual_kg": 1.2505552149377763e-12,
+      "max_momentum_residual_kg_m_s": 9.31322574615e-10,
+      "max_payload_J2_coast_relative_energy_change": 2.402562059985446e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 1.1308948531010781e-14,
+      "output_sha256": {
+        "alternating_1_3_spring_pretrim_f0.35.log": "cd6ff974178674b11f056908b5bae54b5595ba17fe30dc72dea5b65d90c7cd3d",
+        "alternating_1_3_spring_pretrim_f0.35_host.csv": "548c798b941b7c9af9b883e53fc8c8f294ccbeb33a13cf2bbee165040eaeef76",
+        "alternating_1_3_spring_pretrim_f0.35_payload.csv": "a15bc57fb6fe84f916fa7957076daefca6181ab9b84fed180ad00d25b46664a6"
+      }
+    },
+    {
+      "stem": "alternating_1_3_spring_pretrim_f0.35_shared_narrow",
+      "name": "alternating_1_3_spring_pretrim_f0.35_shared_narrow",
+      "step": 60,
+      "category": "nominal",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/alternating_1_3_spring_pretrim_f0.35_shared_narrow.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/alternating_1_3_spring_pretrim_f0.35_shared_narrow",
+        "60",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": false,
+      "command_csv_sha256": "cc15deedf90c6d7ed8086e8c4b24eb5ff9302b2534cd38db30f2c9354b29d8cb",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 8.85387969765e-06,
+      "max_payload_target_velocity_error_m_s": 9.79183945289e-09,
+      "max_host_position_difference_m": 4.04629264288e-07,
+      "max_host_velocity_difference_m_s": 4.85141166997e-10,
+      "max_host_mass_difference_kg": 7.95807864051e-13,
+      "max_independent_mass_flow_residual_kg": 9.094947017729282e-13,
+      "max_momentum_residual_kg_m_s": 9.3857033042e-10,
+      "max_payload_J2_coast_relative_energy_change": 2.1713001386732873e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 1.0884862961097875e-14,
+      "output_sha256": {
+        "alternating_1_3_spring_pretrim_f0.35_shared_narrow.log": "5457424220178a1b9deeaee78074b7a33f63d648f081ee1b686d8e382c5e4629",
+        "alternating_1_3_spring_pretrim_f0.35_shared_narrow_host.csv": "b6b4abc4a01ec0cbf3b60aa317a05d7a38d0b1d8f067d37f6670b149aea557f8",
+        "alternating_1_3_spring_pretrim_f0.35_shared_narrow_payload.csv": "00efd6f008091ab9c589da6d6b1f67cb95e187b9430a02be55d547fad3800ffa"
+      }
+    },
+    {
+      "stem": "alternating_1_3_spring_fixed2_f0.45",
+      "name": "alternating_1_3_spring_fixed2_f0.45",
+      "step": 60,
+      "category": "diagnostic_above_force_ceiling",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/alternating_1_3_spring_fixed2_f0.45.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/alternating_1_3_spring_fixed2_f0.45",
+        "60",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": false,
+      "command_csv_sha256": "cac4e3eacee7faa3a48de7e47c36ebcfe958236d702a991c8d459e7ee32fcb27",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 1.00608973574e-05,
+      "max_payload_target_velocity_error_m_s": 1.10862510101e-08,
+      "max_host_position_difference_m": 2.57911229068e-07,
+      "max_host_velocity_difference_m_s": 2.00873286117e-10,
+      "max_host_mass_difference_kg": 5.68434188608e-13,
+      "max_independent_mass_flow_residual_kg": 9.094947017729282e-13,
+      "max_momentum_residual_kg_m_s": 9.59985336665e-10,
+      "max_payload_J2_coast_relative_energy_change": 2.402562875336712e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 1.1450310387648416e-14,
+      "output_sha256": {
+        "alternating_1_3_spring_fixed2_f0.45.log": "5cc42e3239a67917589cd0f782ee7afabfed3db238ebaea652013f741c03771d",
+        "alternating_1_3_spring_fixed2_f0.45_host.csv": "91c635ed4fecac76d6ef399d51b8925fcf3b639f13db42fa901ad889df0753b6",
+        "alternating_1_3_spring_fixed2_f0.45_payload.csv": "5fc9367ac78b26df1a14eba71b5c914f711d51a9ea75aa86b439fbb13500f4da"
+      }
+    },
+    {
+      "stem": "uniform_2_gen5_f0.35",
+      "name": "uniform_2_gen5_f0.35_refine30",
+      "step": 30,
+      "category": "step_refinement",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/uniform_2_gen5_f0.35.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/uniform_2_gen5_f0.35_refine30",
+        "30",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": false,
+      "command_csv_sha256": "8a38ef05a3e4a41b2c4bd4c140e135fb88a8ed8d078b1f92819c849e5d8086fd",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 5.81548902465e-06,
+      "max_payload_target_velocity_error_m_s": 6.41932302253e-09,
+      "max_host_position_difference_m": 9.04408636796e-06,
+      "max_host_velocity_difference_m_s": 9.96411571914e-09,
+      "max_host_mass_difference_kg": 5.68434188608e-13,
+      "max_independent_mass_flow_residual_kg": 1.0231815394945443e-12,
+      "max_momentum_residual_kg_m_s": 9.3857033042e-10,
+      "max_payload_J2_coast_relative_energy_change": 1.4264941762925087e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 9.328658154352632e-15,
+      "output_sha256": {
+        "uniform_2_gen5_f0.35_refine30.log": "d64a7a206dad02849c8d5e93c6047b0e0f11e394c6b9156fd712ea834d38cbf0",
+        "uniform_2_gen5_f0.35_refine30_host.csv": "a6c753822fcd4791fb5ea2df4fd652f8c2556ad0151ffea59b358d543e9111ac",
+        "uniform_2_gen5_f0.35_refine30_payload.csv": "f4b6f62273a1d321f8bdda750d4aa4dfe351f783848511d06365e66388d10744"
+      }
+    },
+    {
+      "stem": "alternating_1_3_gen5_f0.35",
+      "name": "alternating_1_3_gen5_f0.35_refine30",
+      "step": 30,
+      "category": "step_refinement",
+      "command": [
+        "java",
+        "-cp",
+        "/workspace/volley-work/2026-10-18/jars/*",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/FiniteReplay.java",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/release/alternating_1_3_gen5_f0.35.csv",
+        "/workspace/volley-work/2026-10-24-gen5-acr1/mission/native/alternating_1_3_gen5_f0.35_refine30",
+        "30",
+        "1",
+        "1",
+        "0",
+        "91800"
+      ],
+      "reused_exact_command_bytes_from_actual_prior_run": false,
+      "command_csv_sha256": "94ec405b328cfc380453129352d7889a9f18cdf9c68b7b44c70cb876d8613991",
+      "native_source_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9",
+      "payload_count": 12,
+      "max_payload_target_position_error_m": 1.12472029436e-05,
+      "max_payload_target_velocity_error_m_s": 1.23467972631e-08,
+      "max_host_position_difference_m": 1.24585554034e-07,
+      "max_host_velocity_difference_m_s": 1.25576980346e-10,
+      "max_host_mass_difference_kg": 4.54747350886e-13,
+      "max_independent_mass_flow_residual_kg": 7.958078640513122e-13,
+      "max_momentum_residual_kg_m_s": 9.31322574615e-10,
+      "max_payload_J2_coast_relative_energy_change": 1.7482357172961408e-14,
+      "max_payload_J2_coast_relative_axial_angular_momentum_change": 9.892732564900255e-15,
+      "output_sha256": {
+        "alternating_1_3_gen5_f0.35_refine30.log": "34048ef4fd1af1e88cdf95cbcdc396e39264df22337a3cc951fec109bb45caf8",
+        "alternating_1_3_gen5_f0.35_refine30_host.csv": "8b38cfe076e67a87df579e8c3641a2b304d150423b68c08353ac9057b519cf68",
+        "alternating_1_3_gen5_f0.35_refine30_payload.csv": "adb6877d9cd4f7639c752948f838396f4d23231455e07fd0f8bac5612eed6254"
+      }
+    }
+  ],
+  "conservation_and_guards": [
+    {
+      "case": "uniform_2_gen5_f0.35",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 4.440892098500626e-16,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "uniform_2_spring_fixed2_f0.35_shared_narrow",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "uniform_2_spring_fixed2_f0.35",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "uniform_2_spring_fixed2_f0.45",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "uniform_2_spring_pretrim_f0.35_shared_narrow",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "uniform_2_spring_pretrim_f0.35",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "uniform_2_spring_pretrim_f0.45",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "alternating_1_3_gen5_f0.35",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 4.440892098500626e-16,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "alternating_1_3_spring_fixed2_f0.35_shared_narrow",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "alternating_1_3_spring_fixed2_f0.35",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "alternating_1_3_spring_fixed2_f0.45",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "alternating_1_3_spring_pretrim_f0.35_shared_narrow",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "alternating_1_3_spring_pretrim_f0.35",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    },
+    {
+      "case": "alternating_1_3_spring_pretrim_f0.45",
+      "mass_flow_recoil_continuity_guards_pass": true,
+      "actual_released_payload_kg": 48.0,
+      "Gen5_recoil_mapping_max_error_m_s": 0.0,
+      "loading_coast_requirement_applied_only_to_Gen5": true
+    }
+  ],
+  "native_step_refinement": [
+    {
+      "case": "uniform_2_gen5_f0.35",
+      "max_terminal_PV_position_change_m": 1.1228210459343746e-05,
+      "pass_1mm": true
+    },
+    {
+      "case": "alternating_1_3_gen5_f0.35",
+      "max_terminal_PV_position_change_m": 1.2177464706956444e-05,
+      "pass_1mm": true
+    }
+  ],
+  "all_declared_numerical_checks_pass": true,
+  "scope": "Independent numerical consistency of the declared synthetic fixed-axis J2 point-release model; errors are not flight delivery accuracy."
+}

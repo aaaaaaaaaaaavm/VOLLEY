@@ -1,21 +1,11 @@
-# State of the project
+# Current engineering status
 
-**23 October 2026.** VOLLEY combines an evaluated Gen5 electromagnetic deployment study with the separately versioned Gen6 guided lead-screw feeder design.
+**25 October 2026 — VOLLEY-G5-ACR1.** The academic engineering reference is frozen: eight native/STEP states, 154 accepted installed-motion/refinement checks, supported modeled 1–3 m/s settings, same-revision mass/source/arrest budgets and a twelve-release synthetic mission with nine independent Orekit replays.
 
-## Evaluated Gen5
+[Source, raw results and software locks](../validation/acr1/README.md) · [Current numerical evidence](CURRENT_NUMERICAL_EVIDENCE.md) · [Earlier status](STATE_OF_THE_PROJECT_PRE_ACR1_2026-10-23.md)
 
-The immutable Gen5 record retains the finite-force, mass, packaging and mission findings. Its historical periodic-force point is 16.029 m/s; an ideal finite-geometry screen gives 12.448 m/s. No component-rated release speed follows. The historical device mass is 126.562 kg and the side-fed reference has an 11 mm width shortfall. [Configuration and evidence](NEXT_GENERATION_STATUS.md).
+Represented CAD dry mass is 149.556720 kg. A separate 7 kg power/control allowance gives mission device mass 156.556720 kg; its spatial location is not included in CAD inertia. The mission uses twelve 4 kg payloads and a generic 500 kg initial wet bus (480 kg dry plus 20 kg propellant), nominal 500 km SSO and common full-PV target epoch 24 h after last release. No propellant or initial wet-mass advantage over ideal pretrimmed springs is found in the tested preplanned targets.
 
-## Selected feeder
+The report/paper/presentation editions have distinct academic roles. The paper is IEEE-formatted, unsubmitted and has no selected venue. Actual similarity outcomes, institutional approvals and event/rehearsal records are external evidence and are not inferred from this package.
 
-FM08-R3 uses dedicated restrained 1U/3U cassettes, a fixed 1U spacer, a guided screw-driven pusher and one common receiver. FDR10 records the seven-concept ranking, quantitative top-three comparison and declared academic acceptance. Rack-and-pawl is retained as runner-up. [Selected feeder: native CAD, STEP and verification](../validation/selected_feeder/README.md).
-
-The declared checks cover represented nominal geometry, prescribed motion, source-based actuator sizing, analytical load/tolerance sensitivities and deterministic sequencing/fault logic. The original rigid-contact study remains separate; its unresolved numerical sensitivity supplies no precision or peak-force rating.
-
-## Service assessment
-
-The surrogate mission compares commanded deployment with host-assisted springs on common constructed terminal targets. Native Orekit replay, finite-force host manoeuvres and installed-resource assumptions are provided with the results. [Mission evidence](../validation/finite_burn_review/README.md) · [Current system integration](../validation/system_feasibility_closure/README.md).
-
-## Reading route
-
-[Project overview](../README.md) · [Gen5 technical record](GEN5_TECHNICAL_BASELINE.json) · [Current numerical evidence](CURRENT_NUMERICAL_EVIDENCE.md) · [CAD index](../cad/README.md) · [Literature](LITERATURE.md). Dated studies retain their own revisions and scope.
+Original Gen5/FM08 results remain dated history. Mixed-size Gen6, lunar, higher-speed and other agreed numerical programme criteria are tracked separately; this release does not claim their universal completion. Physical measurements, environmental qualification, provider acceptance and a flight system remain subsequent development.

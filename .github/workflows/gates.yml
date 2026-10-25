@@ -69,6 +69,21 @@ jobs:
             python3 tools/check_authorship.py
           fi
           git checkout -q --detach "$TEST_COMMIT"
+      - name: current ACR1 captured engineering and public claims
+        run: python3 tools/check_acr1_public.py
+      - name: ACR1 raw solver distribution and controlled drawings
+        run: |
+          if ! command -v pdfinfo >/dev/null || ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y poppler-utils
+          fi
+          python3 validation/acr1/supplements/materialize.py --verify-only
+          python3 cad/drawings/acr1/check_drawings.py
+      - name: Source-linked lunar and host programme studies
+        run: |
+          python3 validation/programme_closure_acr1/check_capture.py
+          python3 validation/programme_closure_acr1/reproduce_and_compare.py
+          python3 validation/programme_closure_acr1/reproduce_campaign.py
       - name: mission freshness diagnostics
         run: python3 tools/diagnose_mission_freshness.py
       - name: one-event mission and mass screen

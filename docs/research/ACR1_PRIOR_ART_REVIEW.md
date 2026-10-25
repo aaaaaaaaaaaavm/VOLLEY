@@ -1,0 +1,48 @@
+# ACR1 closest-source technical review
+
+**Review date:** 25 October 2026. **Baseline:** frozen 55-page report and 9-page unsubmitted paper, VOLLEY-G5-ACR1, 24 October 2026. This is an automated technical review with primary-source reading. It is separate from the guide, coauthor, independent human reviewer and venue review.
+
+The bounded quantitative comparison is complete for the accessible core: adjustable electromagnetic release, stack transport and receiving, the higher-speed induction-launch regime, finite Halbach end effects, a conventional dispenser interface and the orbital transport service category. The frozen contribution statement survives this check. One bibliography error requires a controlled derivative correction: **H. Q. Yamaguchi should be H. Yamaguchi**. The English translation and Japanese original need distinct source identities. The frozen sent files were not edited.
+
+[Machine-readable source cards and comparison](../../validation/literature_acr1/SOURCES_AND_COMPARISON.json), [CSV table](../../validation/literature_acr1/QUANTITATIVE_COMPARISON.csv) and [review checks](../../validation/literature_acr1/REVIEW_CHECKS.json) retain source grades, page/section context, units, test conditions and limitations. Existing private PDFs were reread and their hashes recomputed where available; no third-party PDF is copied into this directory.
+
+## Quantitative comparison
+
+| Source and actual evidence | Verified result and conditions | Comparison with current ACR1 |
+|---|---|---|
+| [Zhao et al. 2022](https://doi.org/10.3390/rs14174205), complete publisher PDF; §§2–5, especially §5.4 pp.17–18 | Counterweighted laboratory release: 1 kg dummy, 0.67–1.42 m/s; 3 kg dummy, 0.40–0.85 m/s; 0.5–2.5 A. The authors report model differences below 11%, with collision and armature-reaction omissions. | Adjustable electromagnetic release, repeatable actuation, stack transfer and opposed release windows are prior art. The error is a model/test difference, not shot dispersion. ACR1's 4 kg surrogate and 1–3 m/s model commands have different mass, frame and evidence class. |
+| Same work, §5.3 pp.14–16 | Adjacent-cell transport about 120 mm in 0.409 s; peak 0.56 m/s at 5 A; measured peak acceleration 11.7 m/s². | Transport and ejection are separate observables. Prototype test results do not establish ACR1 reliability, velocity accuracy or zero-gravity throughput. |
+| [Zhao et al. 2025](https://doi.org/10.3390/aerospace12060466), complete publisher PDF; §§2.3,4.4,5–6 | Zero-gravity receiving simulation: first layer about 3.05 s, average 32.8 mm/s; second about 2.88 s, 35.1 mm/s; contact peaks about 1200 N. Gravity-assisted laboratory pushes are about 0.20/0.246 s for aligned/offset cases. | The frozen report correctly attributes 1200 N to simulation. Neither 32.8 mm/s nor the faster laboratory transfer is an ejection rating. Housing grooves and iron patches prevent assuming an unchanged generic CubeSat interface. |
+| [Feng et al. 2025](https://doi.org/10.1155/ijae/3000765), publisher full HTML; §2.5 Tables 2–4 and §3 | Simulated induction launcher: 20 kg armature plus payload, three 1.3 m stages; about 230–321.56 m/s at 10–16 kV; initial capacitor energy 2.70–6.91 MJ; efficiency 19.9–14.9%. | Different acceleration/interface regime. Derived spatial mean acceleration at 321.56 m/s over 3.9 m is 13,256.5 m/s², about 1352 g. It is a kinematic screen, not measured acceleration. No hardware dispersion is reported. |
+| [Yamaguchi and Morishita 2023 original](https://doi.org/10.1541/ieejias.143.570), selected full-text Japanese methods/results/conclusion | Two-dimensional, infinite-width field model; conditional cancellation uses integer magnetic periods, air-core coils and energized coverage extending one pole pitch beyond both field ends (§4 pp.575–577). Hardware demonstration is future work (§5 p.578). | Motivates actual finite geometry and handover checks. Supplies no universal correction factor, finite-width 3D validation or measured ACR1 force. |
+| [NRCSD IDD, Rev.–, 29 May 2018](https://s3vi.ndc.nasa.gov/ssri-kb/static/resources/Nanoracks-CubeSat-Deployer-NRCSD-IDD.pdf), relevant full-text sections | §3.3 p.11: spring/pusher architecture. §4.1.2 p.24: 1U 2.4 kg, 3U 4.8 kg. §4.1.6 p.25: payload survival of 0.5–2.0 m/s and 5°/s/axis; target tip-off below 2°/s/axis. | Survival requirements are not measured release distributions. They are specific to ISS/NRCSD and do not approve ACR1's 3 m/s command or define ION's dispenser. |
+| [D-Orbit primary service description](https://dorbit.space/launch-deployment/), complete relevant service sections | ION uses propulsion and configurable proprietary or third-party dispensers to deliver spacecraft to customized orbital slots. | Establishes a competent service alternative. No reviewed source assigns the study's 500 kg host, 220 s Isp, force ceilings or 72 kg reference dispenser to ION. |
+
+Feng's methods, simulation settings, energy definitions, reachability assumptions and conclusions were checked directly in the publisher full text. The quoted 20 kg includes armature mass under equation (9). Its use of the word experimental in the reachable-set discussion does not identify a physical experiment. Initial capacitor energy must not be compared as an efficiency advantage against another system's net draw without reconciling the energy boundaries.
+
+## Current contribution and conventional benchmark
+
+ACR1 contributes a traceable computational evaluation of a specific twelve-cell retained-carrier mechanism, with finite force and current models, source-limited launch and arrest, actual-carrier elasticity and a common-state mission comparison. The closest full texts preclude claims of first programmable electromagnetic release, first stacked transport or first electromagnetic separation. The frozen report and paper already concede these principles.
+
+Current supported release commands are 1–3 m/s for a 4 kg surrogate with 13.128 kg retained moving mass. The dry study mass is 156.557 kg, comprising 149.557 kg represented material plus a 7 kg power/control allocation. Other sources' unreported installed masses and measured dispersions remain unavailable; neither is filled with zero or inferred from a component illustration.
+
+The frozen matched mission uses its own declared host and target states. Its 72 kg spring-class device is an assumption, not a supplier measurement. The dry-device penalty is 84.557 kg. For alternating targets at the 5 N ceiling, VOLLEY uses 0.2899 kg propellant and ideal pretrim spring uses 0.0536 kg. The uniform family has similar VOLLEY/pretrim consumption and a lower sampled fixed-2 result. These findings support the stated absence of mass or fuel advantage. Pretrim assigns energy before the campaign; demonstrating value from in-flight retasking requires an explicit retasking mission. Sampled policies establish neither a global spring optimum nor global spring infeasibility.
+
+## Citation disposition for the next controlled derivative
+
+| Frozen location | Finding | Required or bounded action |
+|---|---|---|
+| Report reference [8]; paper bibliography item end | H. Q. Yamaguchi is inconsistent with the primary author record, Hiroto Yamaguchi. | Correct to H. Yamaguchi; M. Morishita is correct. Translation: Electrical Engineering in Japan 216(4), e23450 (2023), DOI 10.1002/eej.23450. |
+| Same citation | Actual reading evidence is the Japanese original, not a full English-translation review. | Identify the original read: IEEJ Transactions on Industry Applications 143(8), pp.570–578 (2023), DOI 10.1541/ieejias.143.570; retain the translation as a related version if useful. Do not imply identical pagination. |
+| Report reference [6]; paper bibliography item feng | Correct identity; DOI omitted. | Add 10.1155/ijae/3000765 for resolution. No result correction needed. |
+| Zhao 2022/2025 discussion | Quoted release speeds, test conditions, receiving simulation and interface attribution agree with the primary texts. | Keep current distinction between measured release, simulated transport/contact and ACR1 computation. |
+
+The older docs/PRIOR_ART.md includes historical Gen5 numbers and a later boundary note. It must not be used as the current numerical comparison or as support for an exclusive operational electromagnetic-launch claim. This review uses the frozen ACR1 values instead.
+
+## Closure and limits
+
+The accessible core quantitative comparison is delivered. **BB-21 remains partial under a strict requirement to read every closest full text**: the [double-magnetic-circuit VCA article](https://doi.org/10.1109/TIE.2021.3134060) is still closed access at its [UTS primary repository](https://opus.lib.uts.edu.au/handle/10453/167406). Its abstract identifies prototype tests but supplies no verified force density, dispersion or payload-interface numbers here. The existing bounded negative access search is reused; no access bypass, author outreach or new provider survey was performed. The Japanese original review remains selected relevant passages, with no complete English translation claimed.
+
+Q-SAT DOI 10.1016/j.actaastro.2021.03.026 remains a broader electromagnetic-separation lead with metadata/abstract evidence in the existing record. No numerical Q-SAT or flight-performance claim is introduced. A systematic patent/database search, complete residual full-text acquisition, and independent human review are outside this delivered automated comparison and remain visibly separate. None of those boundaries invalidates the bounded completed computational study.
+
+The paper remains unsubmitted. This review creates no approval, acceptance or publication status; Friday 30 October is the planned editorial freeze, not a completed event.

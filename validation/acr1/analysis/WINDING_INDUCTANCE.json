@@ -1,0 +1,115 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "CAD_parameter_sha256": "05aff5f00c27ed098d46067c60694758dbd3a186ed5d9011af388a6d973a24a3",
+  "model_sha256": "7f8e45ded4f7eb69f2b755410e51ed4a3c0bed44a4fcdb95f5ca74f88d87d844",
+  "phase_order": [
+    "A",
+    "B",
+    "C"
+  ],
+  "cases": [
+    {
+      "panel_step_m": 0.01,
+      "radius_scale": 1,
+      "panels": [
+        1522,
+        1521,
+        1348
+      ],
+      "partial_L_matrix_H": [
+        [
+          5.5662561708730974e-06,
+          1.068443228664421e-06,
+          6.486082111396556e-07
+        ],
+        [
+          1.068443228664421e-06,
+          5.56901023135821e-06,
+          6.489954713123706e-07
+        ],
+        [
+          6.486082111396556e-07,
+          6.489954713123706e-07,
+          5.292560626904457e-06
+        ]
+      ],
+      "balanced_effective_inductance_eigenvalues_H": [
+        4.499189104297369e-06,
+        4.875330974382176e-06
+      ]
+    },
+    {
+      "panel_step_m": 0.005,
+      "radius_scale": 1,
+      "panels": [
+        2825,
+        2825,
+        2621
+      ],
+      "partial_L_matrix_H": [
+        [
+          5.774241090143976e-06,
+          1.0761014950618196e-06,
+          6.5330582565639e-07
+        ],
+        [
+          1.0761014950618196e-06,
+          5.777192404640299e-06,
+          6.536961684702449e-07
+        ],
+        [
+          6.5330582565639e-07,
+          6.536961684702449e-07,
+          5.509491312814332e-06
+        ]
+      ],
+      "balanced_effective_inductance_eigenvalues_H": [
+        4.699614235098852e-06,
+        5.085599977174583e-06
+      ]
+    },
+    {
+      "panel_step_m": 0.005,
+      "radius_scale": 0.7,
+      "panels": [
+        2825,
+        2825,
+        2621
+      ],
+      "partial_L_matrix_H": [
+        [
+          6.509751427915033e-06,
+          1.0508668049959462e-06,
+          6.288510226578301e-07
+        ],
+        [
+          1.0508668049959462e-06,
+          6.512704963043906e-06,
+          6.292414190197489e-07
+        ],
+        [
+          6.288510226578301e-07,
+          6.292414190197489e-07,
+          6.208109422141779e-06
+        ]
+      ],
+      "balanced_effective_inductance_eigenvalues_H": [
+        5.46036029876297e-06,
+        5.820710745521826e-06
+      ]
+    }
+  ],
+  "convention": "Balanced three-phase effective differential inductance; same peak-phase convention as force model",
+  "path_lengths_m": {
+    "A": 12.756000000000075,
+    "B": 12.756000000000073,
+    "C": 11.94500000000004
+  },
+  "uncertainty": "Numerical refinement and radius sensitivity do not establish harness geometry, permeance or AC-loss accuracy.",
+  "limitations": [
+    "Ideal shared source/star endpoints for balanced-current field energy",
+    "Estimated lead routing and21mm2 lead section, not a detailed harness CAD release",
+    "Rectangular conductors represented by regularized current centrelines",
+    "No skin/proximity, phase-imbalance, conductive-support eddies or permeability feedback"
+  ]
+}

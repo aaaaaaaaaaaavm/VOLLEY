@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "path_base": "repository_root",
+  "registered_assets_verified": 56,
+  "asset_register_sha256": "00abe90bf5c036434e6c52cd6be824adfb75c2b4c97b6215a620f9ef2806916f",
+  "bundled_academic_binaries": false,
+  "external_academic_ed1_hashes": "Matched to owning Thesis repository; see EXTERNAL_ACADEMIC_DOWNLOADS.json",
+  "portable_metadata_checks": "docs/visual-source/PUBLIC_METADATA_QA.json"
+}

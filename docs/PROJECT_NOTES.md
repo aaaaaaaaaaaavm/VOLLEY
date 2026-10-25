@@ -1,137 +1,18 @@
-> Current reading guide, 2026-09-06: this file retains early project notes and historical
-> operating points. Use [CONTRIBUTING.md](CONTRIBUTING.md) for working rules,
-> [BASELINE.md](BASELINE.md) for Gen5 numbers, [PROVENANCE.md](PROVENANCE.md) for evidence
-> and [STATE_OF_THE_PROJECT.md](STATE_OF_THE_PROJECT.md) for the active handoff.
-> References below to no FEA, Gen3 as current, old licences and early work queues are historical.
+# Engineering record guide
 
-> Superseded by ADR-030, 2026-08-13; annotated 2026-08-21. The audit note below is retained
-> as history and is no longer the operating point. Current: 10.54 N per kA/m, 16.029 m/s,
-> 10.07 g, 47.0 J recovered over a 39 mm regenerative section, 1162 J to the brake, 18.8 % net
-> efficiency, and a 9.0 K per-shot brake-fin transient. ADR-030 both depth-resolved the thrust
-> constant and shortened the regenerative stator from 240 mm to 39 mm, because 240 mm of regen
-> plus a 300 mm eddy fin were oversubscribed in a 339 mm section (P28). Every recovery figure
-> below predates that. P97.
+**25 October 2026.** VOLLEY-G5-ACR1 is the current integrated computational reference. It evaluates commanded CubeSat deployment from retained storage through carrier return and accounts for the resulting host burden.
 
-> Numerical audit correction, 2026-08-03. The current operating point is 11.03 N per
-> kA/m, 16.029 m/s, 10.07 g, 291.4 J recovered, 934.7 J to the brake, and 20.99% net
-> efficiency. A13's former residual-rate/cadence conclusion is superseded, A6's 3.7e-8
-> result is only a fixed-shape sensitivity, and the corrected brake-fin transient is 7 K
-> per shot. Values below that describe earlier audit states are retained as history.
-# Project notes: context for working on this repo
+## Find the right record
 
-Start here before changing anything.
+| Reader need | Evidence route |
+|:--|:--|
+| Configuration, operating range and principal findings | [Current engineering status](STATE_OF_THE_PROJECT.md) and [numerical evidence](CURRENT_NUMERICAL_EVIDENCE.md) |
+| Exact source, raw numerical output and portable examples | [ACR1 package](../validation/acr1/README.md) |
+| Native CAD, STEP and represented mass | [State inventory](../validation/acr1/cad/release/FINAL_CAD_MANIFEST.json) and [resource ledger](../validation/acr1/analysis/RESOURCE_LEDGER.json) |
+| Method capabilities and verification boundaries | [Engineering methods](SKILLS.md) and [provenance](PROVENANCE.md) |
+| Literature and contribution relative to prior work | [Related-work review](RELATED_WORK.md) |
+| Earlier results and unresolved scientific questions | [Historical issue register](../OPEN_PROBLEMS.md) and [original Gen5 baseline](BASELINE.md) |
+| Separate Gen6 and extended numerical studies | [Configuration map](NEXT_GENERATION_STATUS.md) and [programme results](PROGRAMME_STUDIES_ACR1.md) |
+| Source changes and future publication identities | [Configuration continuity](CONTINUITY.md) and [release policy](../RELEASE_POLICY.md) |
 
-## What this project is
-
-VOLLEY (Electromagnetic Orbital CubeSat Deployer) is a magazine-fed electromagnetic
-deployer that ejects unmodified CubeSats from a host stage at programmable velocity,
-targeting the gap between spring deployers (~2 m/s) and propulsive transfer vehicles
-(100s m/s). Adityavardhan Mishra, Department of Mechanical Engineering, Symbiosis
-Institute of Technology, Pune. Project started April 2021.
-
-Current maturity: TRL 2-3. Analysis, CAD, and four of nine validations run. No hardware.
-
-## Ground rules
-
-1. Provenance is the point. Nothing in this repository has been validated by
-   hardware, FEA, or third-party review. See `PROVENANCE.md`. When you add anything,
-   mark its verification status. Never let a computed number pass as a measured one.
-
-2. Do not reconstruct from general knowledge. If a value's origin cannot be traced
- to a script in `analysis/`, say so rather than filling the gap plausibly. Several
-   numbers in this project were wrong for exactly that reason and were only caught by
-   re-running them.
-
-3. The scripts are the source of truth, not the paper. This principle already caught
-   four paper errors (P1, P4), corrected on 2026-07-23; see `CHANGELOG.md`. If the paper
-   and a script ever disagree again, fix the paper to match the scripts, not the other
-   way round.
-
-4. Assume the model is wrong until it agrees with something else. The three results
-   with genuine cross-checks (field model vs magpylib and vs a meshed FEM; decay vs
-   Cowell RK4; the pulse chain vs ngspice) are the most trustworthy things here.
-   Everything single-sourced is weaker. The pulse chain earned its place the hard way:
-   the second method found a loss the first had no term for at all (P24).
-
-## Layout
-
-```
-analysis/          current scripts, these reproduce the paper's headline numbers
-  verify_field.py    magpylib cross-check of the Halbach airgap field
-  motor_model.py     winding-resolved Kt, shot sim, closed-loop dispersion  <- headline
-  mass_properties.py parametric solid mass rollup (feeds M_SLED in motor_model)
-  astro.py           lifetime, seeding, conjunction, Cowell cross-validation
-  sizing.py          mechanical, thermal, electrical, tolerance margins
-  femm/              FEMM cross-section DXF + run sheet for analysis A1
-  results/*.json     outputs, regenerated by running the scripts
-cad/               Fusion 360 CAD: parameters.json (geometry truth), renders
-  step/gen3/         CURRENT generation + monolithic EMOCD_Gen3.step
-  step/gen1|gen2/    heritage, superseded -- known defects, see CHANGELOG_CAD.md
-  CHANGELOG_CAD.md   generation history, per-file inventory, defect IDs
-legacy/            SUPERSEDED scripts. They produce older numbers (e.g. 22.4 m/s).
-                   Kept for history. Do not cite them.
-paper/             paper.tex (IEEEtran), figures, compiled PDF
-docs/              computation notes, FEMM run sheet, decision log, related work, these notes
-validation/        cross-check plan with pre-declared acceptance bands; A1, A4, A5, A8 run
-docs/PROVENANCE.md what stands behind each claim, and what was never verified
-docs/INVENTORY.md  complete indexed catalogue of the work
-OPEN_PROBLEMS.md   unsolved items, known errors (P1-P24), and the fix list
-docs/DECISION_LOG.md  why each design change happened, including reversals
-```
-
-## Reproducing
-
-```bash
-pip install -r requirements.txt
-cd analysis
-python3 verify_field.py       # ~10 s
-python3 mass_properties.py    # instant
-python3 motor_model.py        # ~2 min (magpylib field integration + 800-run MC)
-python3 sizing.py             # instant
-python3 astro.py              # ~10 min (decay integrations + 30-day propagations)
-```
-
-Dependency order: `mass_properties.py` produces the sled mass that `motor_model.py`
-hard-codes as `M_SLED`. It currently carries the 9.445 kg CAD-derived from the Gen3 CAD
-solids, not the 4.86 kg parametric estimate that preceded it (P15). If you change the mass model, update that
-constant and re-run the motor model, then the paper.
-
-## Locked design decisions (do not silently revisit)
-
-- Ironless double-sided Halbach linear synchronous motor, NOT a coilgun. The payload's
-  own g-limit caps exit velocity at ~26-35 m/s regardless of launcher, which erases the
-  coilgun's only advantage while keeping its costs (armature bolted to the customer
-  satellite, microsecond pulse timing, no abort). Efficiency is not a cost: that
-  claim rested on a single-stage figure and was withdrawn as false, see ADR-003.
-- Reusable sled carries the magnets; the customer CubeSat is never modified.
-- Eddy-current brake for arrest. Motor regeneration alone cannot stop the sled,
-  braking force is bounded by the same thrust constant as acceleration.
-- ~~Sled kinetic energy is dissipated in the brake, NOT recovered.~~ Corrected 2026-07-31
-  by A11: 240 mm of added stator downstream of release returns 296.6 J, 23.0 % of the
-  sled's 1291 J, at the same sheet-current rating. 952 J still goes to the brake, so the
-  arrest decision above is unaffected. Efficiency is electrical-to-payload net of that credit,
-  21.2 % at the CAD-derived sled mass (19.0 % before regeneration; 32 % at the superseded
-  4.86 kg parametric estimate). The old line stays struck through rather than deleted: the
-  claim was published for five years and a reader should be able to see it change.
-- Attached mode carries no CMGs or thrusters; the host stage absorbs recoil.
-- Two transverse cassettes of six, alternating feed for CoM symmetry.
-- Retention gate carries ascent preload directly into structure, bypassing the release
-  mechanism (this is the NanoRacks ball-lock lesson and is deliberate).
-
-## Immediate work queue
-
-> Superseded as the authoritative list. The frozen baseline is [`../BASELINE.md`](BASELINE.md),
-> the sequenced plan is [`../ROADMAP.md`](ROADMAP.md), and deferred work is
-> [`VAULT.md`](VAULT.md). This section is kept only so the file is not misleading;
-> update those three, not this.
-
-As of 2026-07-29: P1, P4 fixed in the paper; P5, P8, P11, P12, P15 closed; the measured
-9.445 kg sled is adopted and the rated point is 16.537 m/s (ADR-012). Live items are P9
-(envelope), P14 (Gen3 CAD defects, two of them upstream of K<sub>t</sub>), P16 (the
-ballistic-coefficient half still untested), P17 (attraction 37 % high), P19 (A5 still
-predates the current operating point) and P24 (the bank ESR, propagated, but the
-12 mohm behind it is unsourced).
-
-Next engineering work is B-1, the Halbach pair on a gaussmeter. K<sub>t</sub> is now
-checked against a meshed FEM as well as magpylib, so the open gap is no longer a second
-model: it is that nothing has been measured at any scale.
+The source/result cutoff for the current ACR1 package is 24–25 October 2026. Original Gen5/FM08 records keep their dated inputs and outcomes. Technical renders describe represented geometry; numerical agreement describes checked model relations. Physical performance and environmental/provider acceptance require separate evidence.

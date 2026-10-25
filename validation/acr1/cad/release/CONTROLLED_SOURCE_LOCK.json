@@ -1,0 +1,14 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "locked_utc": "2026-10-24T19:08:01.530281+00:00",
+  "source_sha256": {
+    "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+    "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+    "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+    "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+    "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+    "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+  },
+  "baseline": "Final captive carrier pallet;fourfeet;12mm/90deg positiveZ bayonet locks;6.2mm webbores;0.5mm pallet front-ear flightclearance;26mm lift grip pins;no horizontal fork drive;16mm/20mm Csection and42x8mm arrays/216bars/C-return/21mm2 necks retained",
+  "boundary": "Reference catalog actuators are explicitly unselected;nominal academic geometry only;143 baseline native cases and exact refinement proofs plus final direct lock/departure checks"
+}

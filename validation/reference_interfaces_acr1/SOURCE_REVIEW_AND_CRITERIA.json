@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-25",
+  "review_kind": "automated_public_reference_and_existing_Drive_evidence_review",
+  "scope": "W08 D/H/L reference preparation; no contacts, providerselection, publication, commit or new mechanics/mission rerun",
+  "prior_market_sha256": "66ad18c61c6ac3ce963cd6832a86a0e919acceab383faf10eabc73daec77f666",
+  "Drive_read_records": [
+    {
+      "file_id": "1gGDzdnV6cEMih5l_c0wRZkgwX8g_uw7JsgEblFZJjDs",
+      "url": "https://docs.google.com/document/d/1gGDzdnV6cEMih5l_c0wRZkgwX8g_uw7JsgEblFZJjDs/edit",
+      "mime_type": "text/plain",
+      "modified_time": "2026-09-29T14:07:35.517Z",
+      "read_date_utc": "2026-10-25",
+      "readable_characters": 52985,
+      "status": "read_without_download_or_write",
+      "disposition": "Market hypothesis and public context only; no inferred demand, pricing or achieved velocity"
+    },
+    {
+      "file_id": "1ijp-R79e9zXbYW-z7d5nlBQN_wiSUwf1",
+      "url": "https://drive.google.com/file/d/1ijp-R79e9zXbYW-z7d5nlBQN_wiSUwf1/view",
+      "mime_type": "text/markdown",
+      "modified_time": "2026-09-30T06:06:07.745Z",
+      "read_date_utc": "2026-10-25",
+      "readable_characters": 8195,
+      "status": "read_without_download_or_write",
+      "disposition": "Independent internal evidence check; no human/external review invented"
+    },
+    {
+      "file_id": "1dwnwmfMdkDE62zz2RIhFt6pSR2xxiPuN",
+      "url": "https://drive.google.com/file/d/1dwnwmfMdkDE62zz2RIhFt6pSR2xxiPuN/view",
+      "mime_type": "text/markdown",
+      "modified_time": "2026-09-26T16:34:25.103Z",
+      "read_date_utc": "2026-10-25",
+      "readable_characters": 11223,
+      "status": "read_without_download_or_write",
+      "disposition": "Historical family packing/mass/velocity calculations excluded from current rating"
+    },
+    {
+      "file_id": "16V9v-P90CDWzz6VEb11Yfqu7blKnJa7z",
+      "url": "https://drive.google.com/file/d/16V9v-P90CDWzz6VEb11Yfqu7blKnJa7z/view",
+      "mime_type": "text/markdown",
+      "modified_time": "2026-09-28T01:41:15.200Z",
+      "read_date_utc": "2026-10-25",
+      "readable_characters": 4098,
+      "status": "read_without_download_or_write",
+      "disposition": "Historical mission-fit constraints; current ACR1 replaces previous sampled-mission outcomes"
+    },
+    {
+      "file_id": "1cNc7fc26bCYYdZr_wGMC4o9pjV989rGZ",
+      "url": "https://drive.google.com/file/d/1cNc7fc26bCYYdZr_wGMC4o9pjV989rGZ/view",
+      "mime_type": "application/pdf",
+      "modified_time": "2026-09-26T01:56:20.000Z",
+      "read_date_utc": "2026-10-25",
+      "readable_characters": 22185,
+      "status": "read_without_download_or_write",
+      "disposition": "Historical ANYA class study; engine and stage assumptions do not define current ACR1 host"
+    }
+  ],
+  "source_lookup_notes": [
+    "Read existing market/host/source records before targeted primary-source checks",
+    "Stripe Directory skill/setup inspected; CLI unavailable in environment; no provider selected, engaged, provisioned or contacted. Existing named engineering references verified at primary sources.",
+    "POEM official mission and re-entry accounts, Electron V7.0 guide, Nova Rev1.2 guide, ION primary service description and MinXSS author paper read at cited sections",
+    "SwissCube current direct page body extraction lacked the project paragraph; existing dated primary review retained and fresh search excerpt labeled",
+    "No third-party PDF copied into public source tree"
+  ],
+  "criterion_recommendations": [
+    {
+      "id": "PLAN-D0",
+      "recommendation": "partial",
+      "evidence": "ACR1 twelve-payload target states, success gates and timing are frozen; broader common 2/4/12 cases are not closed by these records."
+    },
+    {
+      "id": "PLAN-D1",
+      "recommendation": "partial",
+      "evidence": "Dated equal-capacity Nova and NRCSD cards now exist, including bare mass, independence and services; full mounted volume, sequencer/harness and supplier mission ICD remain unknown."
+    },
+    {
+      "id": "PLAN-D2",
+      "recommendation": "partial",
+      "evidence": "Current same-input host+spring model includes device mass, fuel, release recoil and schedules; full product-installed volume/power/thermal/reliability boundary remains incomplete."
+    },
+    {
+      "id": "PLAN-D3",
+      "recommendation": "partial",
+      "evidence": "Flown ION service category is sourced. No provider-specific same-target input budget or quote supports a numerical ION resource result."
+    },
+    {
+      "id": "PLAN-D4",
+      "recommendation": "partial",
+      "evidence": "ACR1 twelve-release full-state/time/fuel outcomes are normalized; broader manifests, uncertainty and actual customer outcomes remain untested."
+    },
+    {
+      "id": "PLAN-D5",
+      "recommendation": "partial",
+      "evidence": "Bounded negative mass/fuel decision is supported for preplanned ACR1 cases. Complete installed-system decision across actual products and OTV offers still needs missing interface/operations/risk inputs."
+    },
+    {
+      "id": "PLAN-D6",
+      "recommendation": "partial",
+      "evidence": "Four requested comparison files are prepared locally with supported claims and source boundaries. No publication was authorized or performed; complete broader comparison evidence remains partial."
+    },
+    {
+      "id": "PLAN-H0",
+      "recommendation": "partial",
+      "evidence": "Quantified ACR1 accommodation, loaded mass, energy, schedule and recoil demand sheet delivered. Real load spectra, inertia, pointing/nav tolerance, power/thermal allocation and disposal authority remain unresolved."
+    },
+    {
+      "id": "PLAN-H1",
+      "recommendation": "done_bounded_reference_cards",
+      "evidence": "Four dated evidence-classified cards with knowns, unknowns and approval boundaries delivered. This closes reference-card preparation, not provider interface acceptance."
+    },
+    {
+      "id": "PLAN-H2",
+      "recommendation": "open",
+      "evidence": "No demonstrated viable named-host 2/4/12 matched campaign; generic twelve-payload result cannot stand in for provider-specific cases."
+    },
+    {
+      "id": "PLAN-H3",
+      "recommendation": "partial",
+      "evidence": "Finite-host linear event mapping and initial recoil are quantified; real host inertia, torque authority, corridor/plume and attitude recovery not established."
+    },
+    {
+      "id": "PLAN-H4",
+      "recommendation": "open",
+      "evidence": "Mounted/free-flying break-even condition stated, without a comparable real bus/service allocation or complete numeric map."
+    },
+    {
+      "id": "PLAN-H5",
+      "recommendation": "done_preparation",
+      "evidence": "Notional adapter/load-path SVG and six concrete interface question groups delivered. No provider exchange or approved drawing inferred."
+    },
+    {
+      "id": "PLAN-H6",
+      "recommendation": "done_reference_architectures",
+      "evidence": "POEM-like, commercial OTV, commercial small-launch and host-agnostic references classified; standard Electron screen records adverse result. No viable flight host selected."
+    },
+    {
+      "id": "PLAN-L0",
+      "recommendation": "partial",
+      "evidence": "Card inputs preserve distinct launch/carrier boundaries; common 1/4/12 lunar cases belong to the separate lunar study and are not re-evaluated here."
+    },
+    {
+      "id": "PLAN-L1",
+      "recommendation": "partial",
+      "evidence": "Documented POEM LEO starting state separated from generic SSO and tailored launcher injection; exact per-provider separation PV/epoch plus carrier-only lunar budget remain missing."
+    },
+    {
+      "id": "PLAN-L2",
+      "recommendation": "partial",
+      "evidence": "Curie guide thrust/dry-stage facts and POEM services are sourced; no unverified Isp/restart/endurance/reserve imported. Historical ANYA assumptions remain separate."
+    },
+    {
+      "id": "PLAN-L3",
+      "recommendation": "open_in_this_review",
+      "evidence": "No same-lunar-staging TLI/LOI/disposal calculation performed here; use the separate programme owner's actual evidence before changing tracker status."
+    },
+    {
+      "id": "PLAN-L4",
+      "recommendation": "partial",
+      "evidence": "Mass/power/operations demands bounded for ACR1; transfer, thermal, cost and provider-total lunar burden remain unclosed here."
+    },
+    {
+      "id": "PLAN-L5",
+      "recommendation": "done_evidence_classification",
+      "evidence": "Flight service/platform, manufacturer flight claim, catalog ground reference and computational concept classes are explicit. Classification does not upgrade ACR1 maturity."
+    },
+    {
+      "id": "PLAN-L6",
+      "recommendation": "done_reference_set",
+      "evidence": "Indian POEM-like, commercial small-launch Electron/Kick Stage and generic architectures are documented, with ION as extra OTV reference. Lunar mission viability remains separate."
+    }
+  ],
+  "tracker_automatically_changed": false,
+  "external_evidence_limits": [
+    "No customer interview,actual bid or willingness-to-pay datum",
+    "No signed provider ICD or installation budget",
+    "No supplier/host quote or approved payload",
+    "No generic-host attitude-control implementation or qualification"
+  ],
+  "current_claim_disposition": {
+    "current_reference": "ACR1 twelve 4 kg 3U surrogates,1–3 m/s supported computational commands",
+    "Gen6": "future separate mixed 1U/3U and scaling research",
+    "market_advantage": "No fuel or initial wet-mass advantage over ideal preplanned pretrim spring in tested same-input cases",
+    "retasking": "Candidate value requiring actual mission/customer evidence; not simulated as a late-change benefit"
+  }
+}

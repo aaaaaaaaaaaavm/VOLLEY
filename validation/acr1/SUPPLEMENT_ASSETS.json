@@ -1,0 +1,272 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "asset": "VOLLEY_G5_ACR1_RAW_SOLVER_SUPPLEMENT.zip",
+  "bytes": 48246658,
+  "sha256": "53caa2eb6cb82566ebeb12587b15b676c749a3ce602aa96949390e06e464e217",
+  "availability": "available_in_repository",
+  "download_url": null,
+  "extract_to": "validation/acr1",
+  "scope": "Raw owned conductor/structural solver inputs and outputs distributed as two repository-contained exact byte parts; no vendor PDFs, extracted publisher text or private coordination records.",
+  "files": {
+    "analysis/conduction/phase_A/h2/gmsh.log": {
+      "bytes": 252810,
+      "sha256": "1684d90a0d1737f388e2174bceb76aabb491cd0cdc2478bed8453adda7e89127"
+    },
+    "analysis/conduction/phase_A/h2/input_phase.brep": {
+      "bytes": 1425240,
+      "sha256": "b10c2306b947dfa7d65022e8959f76e2ca95ff7bac17786a8e4002755a18864b"
+    },
+    "analysis/conduction/phase_A/h2/interface_capture.json": {
+      "bytes": 1902,
+      "sha256": "1315af372b7e984231e5cfb07866b1ac94af5519aed16e1b53f05ca6b42e16dc"
+    },
+    "analysis/conduction/phase_A/h2/model_capture.py": {
+      "bytes": 5644,
+      "sha256": "a980a863d9613ca913564f2d83d7fc834865a3c31a78fc70a75d43d994705d40"
+    },
+    "analysis/conduction/phase_A/h2/phase_A.msh": {
+      "bytes": 22139322,
+      "sha256": "b05383354aa5fd6411623e6c73c4c6e2618f5d611b544c078862258909e1b2c2"
+    },
+    "analysis/conduction/phase_A/h3/gmsh.log": {
+      "bytes": 251055,
+      "sha256": "e5fe52898b361240412589f8d1ce3ee8e07a29ab13143dbcc0b640312652f131"
+    },
+    "analysis/conduction/phase_A/h3/input_phase.brep": {
+      "bytes": 1425240,
+      "sha256": "b10c2306b947dfa7d65022e8959f76e2ca95ff7bac17786a8e4002755a18864b"
+    },
+    "analysis/conduction/phase_A/h3/interface_capture.json": {
+      "bytes": 1902,
+      "sha256": "1315af372b7e984231e5cfb07866b1ac94af5519aed16e1b53f05ca6b42e16dc"
+    },
+    "analysis/conduction/phase_A/h3/model_capture.py": {
+      "bytes": 5644,
+      "sha256": "a980a863d9613ca913564f2d83d7fc834865a3c31a78fc70a75d43d994705d40"
+    },
+    "analysis/conduction/phase_A/h3/phase_A.msh": {
+      "bytes": 9762057,
+      "sha256": "fe2fc6f24e607a491986546fa7100a15cc2878eb3d25c35917aad14d3eee22ef"
+    },
+    "analysis/conduction/phase_B/h3/gmsh.log": {
+      "bytes": 251063,
+      "sha256": "1a4867a8851ac3230fb04f8f397dd25e1545121d18d8ca800be66a0e70f20593"
+    },
+    "analysis/conduction/phase_B/h3/input_phase.brep": {
+      "bytes": 1422144,
+      "sha256": "34a5116bf07e4d2e7540f25b534d7a90a770752d8f611e90e68287f918a925a5"
+    },
+    "analysis/conduction/phase_B/h3/interface_capture.json": {
+      "bytes": 1902,
+      "sha256": "1315af372b7e984231e5cfb07866b1ac94af5519aed16e1b53f05ca6b42e16dc"
+    },
+    "analysis/conduction/phase_B/h3/model_capture.py": {
+      "bytes": 5644,
+      "sha256": "a980a863d9613ca913564f2d83d7fc834865a3c31a78fc70a75d43d994705d40"
+    },
+    "analysis/conduction/phase_B/h3/phase_A.msh": {
+      "bytes": 9769175,
+      "sha256": "e4dddf56d1f05b782c2f565ea8b6cfe76115c790d0ae3bfaeaf79cf4ad541ab0"
+    },
+    "analysis/conduction/phase_C/h3/gmsh.log": {
+      "bytes": 220394,
+      "sha256": "c80c9b1d6eb3e5330e3ef235041d6bb8557a5a46f028171e2297466f0bf7d349"
+    },
+    "analysis/conduction/phase_C/h3/input_phase.brep": {
+      "bytes": 1286179,
+      "sha256": "86e51968a22fb90b936e404bb50dc037188ffebfa6fc9e27d027ff27bbe2f715"
+    },
+    "analysis/conduction/phase_C/h3/interface_capture.json": {
+      "bytes": 1902,
+      "sha256": "1315af372b7e984231e5cfb07866b1ac94af5519aed16e1b53f05ca6b42e16dc"
+    },
+    "analysis/conduction/phase_C/h3/model_capture.py": {
+      "bytes": 5644,
+      "sha256": "a980a863d9613ca913564f2d83d7fc834865a3c31a78fc70a75d43d994705d40"
+    },
+    "analysis/conduction/phase_C/h3/phase_A.msh": {
+      "bytes": 9452633,
+      "sha256": "5e704d555f63069404e22eac72770624c0462ae1abe6423897fc98b11178e45a"
+    },
+    "verification/cframe_fea/h12/MESH.json": {
+      "bytes": 554761,
+      "sha256": "1e13c9b28075bc6f4dfd865131cbc062616af4c529f5e101a894b4302e50a406"
+    },
+    "verification/cframe_fea/h12/ccx.log": {
+      "bytes": 2267,
+      "sha256": "37c85cb070f16faae0872e0c625157e32ff3e8dbea95347ea8dc3042c9a0b481"
+    },
+    "verification/cframe_fea/h12/cframe.12d": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verification/cframe_fea/h12/cframe.cvg": {
+      "bytes": 274,
+      "sha256": "65086dedb4572132b815ace04b294909c7f6f337111f9704fc310b02320f67f7"
+    },
+    "verification/cframe_fea/h12/cframe.dat": {
+      "bytes": 406050,
+      "sha256": "26d4ad214fddd02c8dbb0cdb7f6cb6e2c3a93a194270018ff5d1846e8a14464d"
+    },
+    "verification/cframe_fea/h12/cframe.frd": {
+      "bytes": 2017806,
+      "sha256": "2bcbc471a366ed3ed6e510a00d0a1d3fa671eb7a92cabb6d6db90e491803ccbd"
+    },
+    "verification/cframe_fea/h12/cframe.inp": {
+      "bytes": 472673,
+      "sha256": "b68601df98ac2b852e401602796aa80cdfbd43f31c4a2dfb03afb92d9e5d5ead"
+    },
+    "verification/cframe_fea/h12/cframe.sta": {
+      "bytes": 170,
+      "sha256": "01e324ec0ea28f4d1fd7f5e2da1277af53812b873e218be1604c17a4c8e4990d"
+    },
+    "verification/cframe_fea/h12/gmsh.log": {
+      "bytes": 29136,
+      "sha256": "436ee5aecfb3242b23375452fcf0522e2d723ec90de446d0c749bc844584e5c1"
+    },
+    "verification/cframe_fea/h12/mesh.msh": {
+      "bytes": 479922,
+      "sha256": "037fcef0bdecebd4c44ab31326b3d9e7e84d8010e5aeaffd6e0550d00eb70ea8"
+    },
+    "verification/cframe_fea/h12/mesh_export.inp": {
+      "bytes": 516038,
+      "sha256": "63bef0859c99503f6667c7cd22c42c6da50d799fb3e07f92a2879497caf92a97"
+    },
+    "verification/cframe_fea/h12/spooles.out": {
+      "bytes": 19,
+      "sha256": "bedddf5984cf0f318d2b23cf53cf6bdec6111fc8ab6e5d8e04f044785239d510"
+    },
+    "verification/cframe_fea/h8/MESH.json": {
+      "bytes": 1455597,
+      "sha256": "6330fc0b457a1d183bfc451ef4b491028b845d95c3ea597fd2f1ea1e698385c8"
+    },
+    "verification/cframe_fea/h8/ccx.log": {
+      "bytes": 2268,
+      "sha256": "f34796f33e42275c6c8718f103bf0dfbd2d2f867103c9b278cc6a5a8509c5a1b"
+    },
+    "verification/cframe_fea/h8/cframe.12d": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verification/cframe_fea/h8/cframe.cvg": {
+      "bytes": 274,
+      "sha256": "65086dedb4572132b815ace04b294909c7f6f337111f9704fc310b02320f67f7"
+    },
+    "verification/cframe_fea/h8/cframe.dat": {
+      "bytes": 958628,
+      "sha256": "d1f5c5e8233cff242cef783430af95412eee46e6670b697671894716f00cc5c9"
+    },
+    "verification/cframe_fea/h8/cframe.frd": {
+      "bytes": 4926746,
+      "sha256": "95309baf898932b16cfc5c76fb7860d2e0c2e5f2893fc7a55fee891b08718dd0"
+    },
+    "verification/cframe_fea/h8/cframe.inp": {
+      "bytes": 1353536,
+      "sha256": "4ad1817a45fa3d8214b38888bc1929bff5658229a525a3352c9a4536153d55f0"
+    },
+    "verification/cframe_fea/h8/cframe.sta": {
+      "bytes": 170,
+      "sha256": "01e324ec0ea28f4d1fd7f5e2da1277af53812b873e218be1604c17a4c8e4990d"
+    },
+    "verification/cframe_fea/h8/gmsh.log": {
+      "bytes": 29538,
+      "sha256": "ee029515ca14478035ff4608d5c6951ccb767dde7f93ad8c12cd5a78b1c1f673"
+    },
+    "verification/cframe_fea/h8/mesh.msh": {
+      "bytes": 1364256,
+      "sha256": "4efd818028a51eedb591947f4534d11ac2e7982ae72dbaa9b31317c0693ea692"
+    },
+    "verification/cframe_fea/h8/mesh_export.inp": {
+      "bytes": 1475483,
+      "sha256": "233a15ba469e1da171cde44d7d65560e44d566a585539dcf561600c001154b61"
+    },
+    "verification/cframe_fea/h8/spooles.out": {
+      "bytes": 19,
+      "sha256": "bedddf5984cf0f318d2b23cf53cf6bdec6111fc8ab6e5d8e04f044785239d510"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/ACTUAL_CHASSIS_FIGURE.json": {
+      "bytes": 529,
+      "sha256": "988e06fd67b1c2be919f4fcb522382986986feb57a6543bf0ab0eca5b72d0103"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/CONTROLLED_SOURCE_LOCK.json": {
+      "bytes": 1134,
+      "sha256": "dc784b6888220f3e41e5b3c35850e1422430eeb3197752b2b0b132f0ff637632"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/FINAL_CAD_IDENTITY.json": {
+      "bytes": 552,
+      "sha256": "cdf12fda2069f8ace792c62e9bb07ca7fae903140ddabb165ff2318b691ed13d"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/MESH.json": {
+      "bytes": 10563961,
+      "sha256": "39a01a812c9398c2f1c4685f419f4864e8b091be16dde020b6a1e67b5c231bbd"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/PAIRED_PATCH_DISPLACEMENT.npz": {
+      "bytes": 273513,
+      "sha256": "740b2507936ca6a52fb3df5422759d944b9331acec4a52b409bd43f6c690a5de"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/ccx.log": {
+      "bytes": 2271,
+      "sha256": "4eed92b4c3ee69cfecf9cde74a3c017de1d58f6df9e9207390a77584d61be5b4"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/chassis.12d": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/chassis.cvg": {
+      "bytes": 274,
+      "sha256": "65086dedb4572132b815ace04b294909c7f6f337111f9704fc310b02320f67f7"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/chassis.dat": {
+      "bytes": 5963888,
+      "sha256": "a2bff93d2fa9a2bb56d123915be989adc3f623a5c3310bd4f851d1d4949e314f"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/chassis.frd": {
+      "bytes": 32128237,
+      "sha256": "2d8cdd6c2d1d4594685fc08dd123ea62f3b8a6866b426a9bcfc3e2ca4a56eb87"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/chassis.inp": {
+      "bytes": 10058329,
+      "sha256": "e62f404781d0ad7e43897daa2e98c3af21eabb639ecfd435ac51b0db1b8d9255"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/chassis.sta": {
+      "bytes": 170,
+      "sha256": "01e324ec0ea28f4d1fd7f5e2da1277af53812b873e218be1604c17a4c8e4990d"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/gmsh.log": {
+      "bytes": 149635,
+      "sha256": "99344f31bbce324ea48ea1463e20666ac4fccf4a6e9b690fc4ed22529ebb95f9"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/mesh.msh": {
+      "bytes": 10002081,
+      "sha256": "783e0d1c3329eea1214bd583930146756845a34d43ed9a2488457a21edf4ce6b"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/mesh_export.inp": {
+      "bytes": 10651698,
+      "sha256": "431216a3fdafc20e09a78bfd853949201744bcf66e7d73aebea79e05629a39f3"
+    },
+    "verification/chassis_fea/d4b53d520c1bc0d3_h8/spooles.out": {
+      "bytes": 19,
+      "sha256": "bedddf5984cf0f318d2b23cf53cf6bdec6111fc8ab6e5d8e04f044785239d510"
+    }
+  },
+  "distribution": {
+    "method": "two_ordered_exact_byte_parts",
+    "parts": [
+      {
+        "order": 1,
+        "path": "supplements/VOLLEY_G5_ACR1_RAW_SOLVER_SUPPLEMENT.zip.part001",
+        "bytes": 25000000,
+        "sha256": "c0be4643a105b43f0d23b2dc3b30046581fd3ae7e70a79f9a8bbe01e01310ae7"
+      },
+      {
+        "order": 2,
+        "path": "supplements/VOLLEY_G5_ACR1_RAW_SOLVER_SUPPLEMENT.zip.part002",
+        "bytes": 23246658,
+        "sha256": "7a33ebd64e510094e87bfd5776aaa4318e16ffed2fa14065646667ad2645671e"
+      }
+    ],
+    "materializer": "supplements/materialize.py",
+    "archive_assembly": "Concatenate part001 then part002; byte-identical to the original frozen raw solver ZIP.",
+    "no_external_download_required": true
+  }
+}

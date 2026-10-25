@@ -1,0 +1,14 @@
+{
+  "script_sha256": "bc1d6ee6bef91c15bcafa9fd840f057642e8753298f3b08d1c4410465141629a",
+  "GMAT_binary_sha256": "f7cf5b3188902353ed4245bb21c22c1afa0451efdd221b7e19f6a74dc7ed1d93",
+  "gravity_file_sha256": "f80c5a30f8aa0c67bcefb6a0ad00ac6a06c8d5a71bee4465d72a50b1b7c16e46",
+  "supporting_runtime_sha256": {
+    "bin/gmat_startup_file.txt": "306597283230abc86d953491c9e401f2c9139ad9cdefa1f944508da9f631fddf",
+    "bin/libGmatBase.so.R2026a": "1badbadfc62efaf49b260996473883665c976f1e2c131fc59c7521c4d3b87159",
+    "bin/libGmatUtil.so.R2026a": "9c36b2828d3ae0a9b7c0e9ee5203679a8e191dbaf4ff7a2df88871b956260e32",
+    "data/planetary_ephem/de/leDE1900.421": "5a423de949103ec14766ebc990e9af96808559d2dc84c261b941fadd754a52a0",
+    "data/planetary_coeff/SPICELunaCurrentKernel.bpc": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+    "data/planetary_coeff/SPICELunaFrameKernel.tf": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+    "data/time/tai-utc.dat": "3524e1ae34d67e858873a89e59983bbc5bd100221da898e796c1b36036a310c3"
+  }
+}

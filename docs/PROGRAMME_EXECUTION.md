@@ -1,9 +1,11 @@
 # Programme execution and architecture decision record
 
+> **Historical programme checkpoint — 16–28 September 2026; retained 25 October 2026.** The workstream labels and next-step statements below describe that dated checkpoint. Current integrated evidence is [ACR1](../validation/acr1/README.md); [configuration status](NEXT_GENERATION_STATUS.md) and [programme studies](PROGRAMME_STUDIES_ACR1.md) identify current and separately versioned results. Historical cross-project comparisons do not create current VOLLEY dependencies.
+
 > **Architecture disposition, 2026-09-28:** The separate motor-charged spring-cell bank is withdrawn as VOLLEY's next architecture. It is retained here only as a dated study. Any selection or current-reference wording below describes the former decision and is superseded. A reusable shared launch path with sequential loading is the open design objective; no speed envelope is validated. See [current status](NEXT_GENERATION_STATUS.md).
 
 
-[Resume work and coordinate changes](CONTINUITY.md) · [Mission and redesign](workstreams/MISSION_AND_REDESIGN.md) · [Engineering closure](workstreams/ENGINEERING_CLOSURE.md)
+[Configuration and evidence continuity](CONTINUITY.md) · [Mission and redesign](workstreams/MISSION_AND_REDESIGN.md) · [Engineering closure](workstreams/ENGINEERING_CLOSURE.md)
 
 Adityavardhan Mishra · 2026-09-16
 

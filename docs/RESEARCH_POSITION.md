@@ -1,5 +1,7 @@
 # Where this project stands against the published work, and what to do about it
 
+> **Historical research-position record — pre-ACR1; retained 25 October 2026.** The adoption/defer statements below describe the earlier literature-driven work programme. The current contribution and source-access grades are recorded in [related work](RELATED_WORK.md); current integrated results are in [ACR1](../validation/acr1/README.md). These historical actions are not a new current task list.
+
 [`PRIOR_ART.md`](PRIOR_ART.md) records what five works say and what reading them changed.
 [`LITERATURE.md`](LITERATURE.md) is a 163-entry reading list with provenance markers. Neither
 answers the question a reviewer will actually ask, which is what this project intends to *do*

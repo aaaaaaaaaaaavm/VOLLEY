@@ -1,0 +1,28 @@
+{
+  "revision": "ED1-external-academic-downloads-R1",
+  "scope": "Main links to the academic edition in its owning repository; no academic PDF/DOCX is bundled in Main.",
+  "artifacts": [
+    {
+      "artifact": "GEN5_FINAL_YEAR_REPORT.pdf",
+      "role": "current ED1 citation-corrected academic report,55pages",
+      "repository": "VOLLEY-thesis",
+      "source_path": "current/academic/GEN5_FINAL_YEAR_REPORT.pdf",
+      "edition": "ED1,25October2026",
+      "sha256": "3739d382a3538862373eae1e2d3fb28eef7e8189020f855aaf04ff1cbada1f3c",
+      "download_url": "https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY-thesis/main/current/academic/GEN5_FINAL_YEAR_REPORT.pdf",
+      "browser_url": "https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/blob/main/current/academic/GEN5_FINAL_YEAR_REPORT.pdf",
+      "stored_in_main_repository": false
+    },
+    {
+      "artifact": "GEN5_FINAL_YEAR_REPORT.docx",
+      "role": "current ED1 editable academic report",
+      "repository": "VOLLEY-thesis",
+      "source_path": "current/academic/GEN5_FINAL_YEAR_REPORT.docx",
+      "edition": "ED1,25October2026",
+      "sha256": "b28497f536e914d14d9c1c586d95619f77baae50c2967e70cb53a2761be06dea",
+      "download_url": "https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY-thesis/main/current/academic/GEN5_FINAL_YEAR_REPORT.docx",
+      "browser_url": "https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/blob/main/current/academic/GEN5_FINAL_YEAR_REPORT.docx",
+      "stored_in_main_repository": false
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+family,force_ceiling_N,VOLLEY_fuel_kg,fixed2_spring_fuel_kg,ideal_pretrim_fuel_kg,VOLLEY_dry_kg,spring_assumed_dry_kg,scope
+uniform2,1 or5,0.052443,0.046957,0.052443,156.55671970039353,72,same 12 targets/host/epoch; sampled policies; no fuel or wet-mass advantage
+alternating1/3,1,no tested pass,no tested pass,0.075002,156.55671970039353,72,bounded policy failure; not global infeasibility
+alternating1/3,5,0.289874,no tested pass,0.053645,156.55671970039353,72,same 12 targets/host/epoch; preplanned; no late retasking simulated
+actual ION or Nova installation,unknown,not calculated,not calculated,not calculated,installation-specific,installation-specific,provider data missing; do not insert fake budget or substitute bare39.96kg into frozen result

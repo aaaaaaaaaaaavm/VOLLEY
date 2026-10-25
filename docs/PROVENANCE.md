@@ -1,5 +1,10 @@
 # Provenance
 
+## Current ACR1 capture
+
+The [VOLLEY-G5-ACR1 package](../validation/acr1/README.md) contains the current integrated source/result/native identities, software locks and portable examples. Its [promotion ledger](../validation/acr1/PROMOTION_ORIGIN.json) distinguishes exact frozen captures from public documentation adapters; the [payload manifest](../validation/acr1/MANIFEST.json) covers every supplied file. Original Gen5/FM08 evidence below retains its original revision and scope.
+
+
 This record distinguishes calculated quantities, numerical cross-checks, source references and physical evidence. Revision-specific methods and limitations accompany each captured study.
 
 ## Summary

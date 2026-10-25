@@ -1,0 +1,110 @@
+{
+  "study": "G5-MISSION-01",
+  "payload_manifest": {
+    "count": 12,
+    "format": "3U",
+    "mass_each_kg": 4,
+    "total_kg": 48
+  },
+  "mass_basis": {
+    "bus_initial_wet_kg": 500,
+    "bus_dry_kg": 480,
+    "initial_propellant_kg": 20,
+    "Gen5_CAD_device_dry_kg": 149.55671970039353,
+    "explicit_Gen5_power_control_allowance_kg": 7,
+    "Gen5_total_device_kg": 156.55671970039353,
+    "spring_device_kg": 72,
+    "spring_basis": "Declared12x6kg class-study assumption, not a vendor quote.",
+    "initial_Gen5_wet_kg": 704.5567197004,
+    "initial_spring_wet_kg": 620,
+    "Gen5_extra_device_kg": 84.55671970039353
+  },
+  "host_propulsion": {
+    "Isp_s": 220,
+    "standard_gravity_m_s2": 9.80665,
+    "force_authority_cases_N": [
+      1,
+      5
+    ],
+    "same_hardware_for_both": true
+  },
+  "timing": {
+    "release_slots_s": [
+      450,
+      900,
+      1350,
+      1800,
+      2250,
+      2700,
+      3150,
+      3600,
+      4050,
+      4500,
+      4950,
+      5400
+    ],
+    "common_evaluation_s": 91800,
+    "after_final_release_s": 86400,
+    "pre_release_zero_force_guard_s": 5,
+    "post_release_zero_force_guard_s": 20,
+    "Gen5_required_loading_coast_s": 400,
+    "spring_loading_coast_requirement_s": 0,
+    "declared_Gen5_worst_cycle_s": 355,
+    "Gen5_cycle_elements_s": {
+      "empty_lift": 22,
+      "pickup": 4,
+      "loaded_rise": 120,
+      "feed": 40,
+      "lower": 120,
+      "custody": 10,
+      "empty_park": 22,
+      "shot_and_return": 17
+    },
+    "reserve_inside_loading_coast_s": 45
+  },
+  "control_candidates": {
+    "Gen5": "Two constant inertial finite-force windows at the edges of each leg, maximumduration leaving400s zero-force loading coast. Command interpolates nominal measured1/2/3m/s release data and is clipped to supported1..3m/s command range.",
+    "spring_fixed2": "Fixed2m/s separation speed as neutral class-study midpoint.",
+    "spring_pretrim": "Ideal per-payload ground energy table compensates predictable finite-host recoil; speeds/energies frozen after targeting and before native replay. No inflight retasking is simulated.",
+    "spring_schedules": [
+      "The same optional400s-coast short-window policy",
+      "35percent-duration windows separated by coast",
+      "45percent-duration windows separated by coast"
+    ]
+  },
+  "input_sha256": {
+    "analysis/COUPLED_SHOT.json": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+    "analysis/coupled_shot.py": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155",
+    "cad/release/VOLLEY_G5_ACR1_home.json": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e"
+  },
+  "measured_reusable_sled_kg": 13.127805767068676,
+  "critical_recoil_mapping_reference_checks": [
+    {
+      "command_m_s": 1,
+      "measured_release_m_s": 0.9998940689026699,
+      "mission_initial_mass_kg": 704.5567197004,
+      "effective_payload_retainedhost_relative_speed_m_s": 0.9811569491876353,
+      "inertial_payload_kick_m_s": 0.9755865987999199,
+      "coupled_reference_kick_m_s": 0.9755865987999198,
+      "difference_m_s": 1.1102230246251565e-16
+    },
+    {
+      "command_m_s": 2,
+      "measured_release_m_s": 1.999861183465598,
+      "mission_initial_mass_kg": 704.5567197004,
+      "effective_payload_retainedhost_relative_speed_m_s": 1.9623855752252484,
+      "inertial_payload_kick_m_s": 1.951244467516789,
+      "coupled_reference_kick_m_s": 1.9512444675167886,
+      "difference_m_s": 4.440892098500626e-16
+    },
+    {
+      "command_m_s": 3,
+      "measured_release_m_s": 2.99986398873585,
+      "mission_initial_mass_kg": 704.5567197004,
+      "effective_payload_retainedhost_relative_speed_m_s": 2.9436492231582814,
+      "inertial_payload_kick_m_s": 2.9269371592982703,
+      "coupled_reference_kick_m_s": 2.92693715929827,
+      "difference_m_s": 4.440892098500626e-16
+    }
+  ]
+}

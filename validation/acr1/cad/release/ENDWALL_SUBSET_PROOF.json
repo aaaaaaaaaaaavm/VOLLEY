@@ -1,0 +1,14 @@
+[
+  {
+    "wall": "rear",
+    "added_material_mm3": 0.0,
+    "removed_material_mm3": 2330.0,
+    "new_connected_solids": 1
+  },
+  {
+    "wall": "front",
+    "added_material_mm3": 0.0,
+    "removed_material_mm3": 2085.0000000000014,
+    "new_connected_solids": 1
+  }
+]

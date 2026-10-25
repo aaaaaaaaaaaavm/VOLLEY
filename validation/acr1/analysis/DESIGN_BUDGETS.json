@@ -1,0 +1,332 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "model_sha256": "bd1ae57850d476a49f5badf653c4ab5c0ce9de848ee2f59448473b77dc851294",
+  "inputs_sha256": {
+    "coupled": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+    "parameters": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+    "home": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+    "feeder_sizing": "e3d9bc99b18c43d5d5ff529d4f7afcafb52e5da8da3bec53511365965f052ecf",
+    "actual_chassis": "8b0f48e5a7827dfd00e5c4f88ab8a832381fd16b0b91e8e8c06526b60481bd4c"
+  },
+  "magnetic_face_budget": {
+    "nominal_each_mm": 1,
+    "actual_FE_paired_closure_at130pct_mm": 0.371778355,
+    "allocated_bounds": {
+      "guide_centring_mm": 0.2,
+      "surface_flatness_mm": 0.15,
+      "assembly_mm": 0.15,
+      "differential_thermal_mm": 0.05
+    },
+    "minimum_individual_face_budget_mm": 0.26411082249999995,
+    "interpretation": "Paired FE closure split about stated centring allocation; manufacturing/assembly bounds are design allocations, not measured tolerances."
+  },
+  "endwall_rigid_stack": [
+    {
+      "differential_temperature_K": 0,
+      "nominal_mm": 0.5,
+      "machining_allocation_mm": 0.1,
+      "docking_repeatability_allocation_mm": 0.1,
+      "differential_CTE_assumed_um_mK": 12,
+      "differential_thermal_mm": 0.0,
+      "rigid_stack_residual_mm": 0.30000000000000004
+    },
+    {
+      "differential_temperature_K": 20,
+      "nominal_mm": 0.5,
+      "machining_allocation_mm": 0.1,
+      "docking_repeatability_allocation_mm": 0.1,
+      "differential_CTE_assumed_um_mK": 12,
+      "differential_thermal_mm": 0.08172,
+      "rigid_stack_residual_mm": 0.21828000000000003
+    },
+    {
+      "differential_temperature_K": 40,
+      "nominal_mm": 0.5,
+      "machining_allocation_mm": 0.1,
+      "docking_repeatability_allocation_mm": 0.1,
+      "differential_CTE_assumed_um_mK": 12,
+      "differential_thermal_mm": 0.16344,
+      "rigid_stack_residual_mm": 0.13656000000000004
+    },
+    {
+      "differential_temperature_K": 60,
+      "nominal_mm": 0.5,
+      "machining_allocation_mm": 0.1,
+      "docking_repeatability_allocation_mm": 0.1,
+      "differential_CTE_assumed_um_mK": 12,
+      "differential_thermal_mm": 0.24516000000000002,
+      "rigid_stack_residual_mm": 0.05484000000000003
+    }
+  ],
+  "endwall_scope": "Rigid datum/tolerance budget only; elastic retainer contact and manufactured docking repeatability need prototype correlation. No flight compliance is asserted.",
+  "guide_clearance": [
+    {
+      "transverse_total_N": 10,
+      "deflection_mm": 0.03813034126595628,
+      "allocated_manufacturing_mm": 0.3,
+      "yaw_mm": 0.29714260686814326,
+      "thermal_mm": 0.096,
+      "remaining_side_clearance_mm": 1.2687270518659002,
+      "positive_margin": true
+    },
+    {
+      "transverse_total_N": 25,
+      "deflection_mm": 0.09532585316489073,
+      "allocated_manufacturing_mm": 0.3,
+      "yaw_mm": 0.29714260686814326,
+      "thermal_mm": 0.096,
+      "remaining_side_clearance_mm": 1.2115315399669657,
+      "positive_margin": true
+    },
+    {
+      "transverse_total_N": 50,
+      "deflection_mm": 0.19065170632978146,
+      "allocated_manufacturing_mm": 0.3,
+      "yaw_mm": 0.29714260686814326,
+      "thermal_mm": 0.096,
+      "remaining_side_clearance_mm": 1.116205686802075,
+      "positive_margin": true
+    },
+    {
+      "transverse_total_N": 100,
+      "deflection_mm": 0.3813034126595629,
+      "allocated_manufacturing_mm": 0.3,
+      "yaw_mm": 0.29714260686814326,
+      "thermal_mm": 0.096,
+      "remaining_side_clearance_mm": 0.9255539804722936,
+      "positive_margin": true
+    }
+  ],
+  "copper_thermal": {
+    "material_assumptions": {
+      "copper_density_kg_m3": 8960,
+      "copper_Cp_J_kgK": 385,
+      "copper_k_W_mK": 400,
+      "resistivity_20C_ohm_m": 1.7e-08,
+      "temperature_coefficient_K_inv": 0.00393
+    },
+    "copper_mass_from_FE_volumes_kg": 11.060734719999992,
+    "phase_current_density": [
+      {
+        "phase": "A",
+        "J_per_phase_A_volume99_A_m2_A": 55575.42138209628,
+        "J_per_phase_A_mesh_max_A_m2_A": 101237.554833008,
+        "native_conduction_result_sha256": "208406e54c88d59a1ff2b177bf9a7babe1010aefeaa91abbade592d7023ac7fc"
+      },
+      {
+        "phase": "B",
+        "J_per_phase_A_volume99_A_m2_A": 55814.17972285951,
+        "J_per_phase_A_mesh_max_A_m2_A": 86763.11102325488,
+        "native_conduction_result_sha256": "1a1ed8b5b72ec608a0992ef5e7f765fe36270b958ae34ce32349354e915c1096"
+      },
+      {
+        "phase": "C",
+        "J_per_phase_A_volume99_A_m2_A": 55386.447774839406,
+        "J_per_phase_A_mesh_max_A_m2_A": 91175.69155999176,
+        "native_conduction_result_sha256": "65210405aec3ce22ab2075c539cdf5fffe8ad2540a2f8640e14b8b67b8688920"
+      }
+    ],
+    "cases": [
+      {
+        "target_m_s": 1,
+        "adverse": false,
+        "L_H": 3e-06,
+        "bulk_copper_rise_K_upper": 0.0501172878302181,
+        "volume99_local_adiabatic_rise_K_upper": 0.5274962899466962,
+        "mesh_max_local_adiabatic_rise_K_observation": 1.7354560145662856
+      },
+      {
+        "target_m_s": 1,
+        "adverse": false,
+        "L_H": 2e-05,
+        "bulk_copper_rise_K_upper": 0.002204940043002849,
+        "volume99_local_adiabatic_rise_K_upper": 0.030214029565839174,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.09940376896227605
+      },
+      {
+        "target_m_s": 1,
+        "adverse": false,
+        "L_H": 0.0001,
+        "bulk_copper_rise_K_upper": 0.00112268260756271,
+        "volume99_local_adiabatic_rise_K_upper": 0.009490345266729797,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.031223113958054976
+      },
+      {
+        "target_m_s": 1,
+        "adverse": true,
+        "L_H": 3e-06,
+        "bulk_copper_rise_K_upper": 0.060224264140035504,
+        "volume99_local_adiabatic_rise_K_upper": 0.694166685692539,
+        "mesh_max_local_adiabatic_rise_K_observation": 2.283799474529757
+      },
+      {
+        "target_m_s": 1,
+        "adverse": true,
+        "L_H": 2e-05,
+        "bulk_copper_rise_K_upper": 0.0034094569289822127,
+        "volume99_local_adiabatic_rise_K_upper": 0.048424981789433476,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.15931756773157096
+      },
+      {
+        "target_m_s": 1,
+        "adverse": true,
+        "L_H": 0.0001,
+        "bulk_copper_rise_K_upper": 0.002100100149484244,
+        "volume99_local_adiabatic_rise_K_upper": 0.01759977249421548,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.0579030253144927
+      },
+      {
+        "target_m_s": 2,
+        "adverse": false,
+        "L_H": 3e-06,
+        "bulk_copper_rise_K_upper": 0.03321155348207769,
+        "volume99_local_adiabatic_rise_K_upper": 0.4248956413088314,
+        "mesh_max_local_adiabatic_rise_K_observation": 1.3979011991665837
+      },
+      {
+        "target_m_s": 2,
+        "adverse": false,
+        "L_H": 2e-05,
+        "bulk_copper_rise_K_upper": 0.009545408237334315,
+        "volume99_local_adiabatic_rise_K_upper": 0.08154765388158153,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.2682907332236617
+      },
+      {
+        "target_m_s": 2,
+        "adverse": false,
+        "L_H": 0.0001,
+        "bulk_copper_rise_K_upper": 0.009014336890334072,
+        "volume99_local_adiabatic_rise_K_upper": 0.057430460620644296,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.1889454773482499
+      },
+      {
+        "target_m_s": 2,
+        "adverse": true,
+        "L_H": 3e-06,
+        "bulk_copper_rise_K_upper": 0.04096506529822961,
+        "volume99_local_adiabatic_rise_K_upper": 0.554618332276243,
+        "mesh_max_local_adiabatic_rise_K_observation": 1.824687185259239
+      },
+      {
+        "target_m_s": 2,
+        "adverse": true,
+        "L_H": 2e-05,
+        "bulk_copper_rise_K_upper": 0.013913240974616752,
+        "volume99_local_adiabatic_rise_K_upper": 0.12004990221314533,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.39496263540536086
+      },
+      {
+        "target_m_s": 2,
+        "adverse": true,
+        "L_H": 0.0001,
+        "bulk_copper_rise_K_upper": 0.013298234323418789,
+        "volume99_local_adiabatic_rise_K_upper": 0.08721280480138395,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.2869290069415495
+      },
+      {
+        "target_m_s": 3,
+        "adverse": false,
+        "L_H": 3e-06,
+        "bulk_copper_rise_K_upper": 0.04766886335256699,
+        "volume99_local_adiabatic_rise_K_upper": 0.5562115776748998,
+        "mesh_max_local_adiabatic_rise_K_observation": 1.8299289421445026
+      },
+      {
+        "target_m_s": 3,
+        "adverse": false,
+        "L_H": 2e-05,
+        "bulk_copper_rise_K_upper": 0.03195241111616802,
+        "volume99_local_adiabatic_rise_K_upper": 0.22215435692417437,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.7308849791628349
+      },
+      {
+        "target_m_s": 3,
+        "adverse": false,
+        "L_H": 0.0001,
+        "bulk_copper_rise_K_upper": 0.03166598987928584,
+        "volume99_local_adiabatic_rise_K_upper": 0.19144781493128285,
+        "mesh_max_local_adiabatic_rise_K_observation": 0.6298608506453038
+      },
+      {
+        "target_m_s": 3,
+        "adverse": true,
+        "L_H": 3e-06,
+        "bulk_copper_rise_K_upper": 0.06666791140416957,
+        "volume99_local_adiabatic_rise_K_upper": 0.7583732477733719,
+        "mesh_max_local_adiabatic_rise_K_observation": 2.4950382385958796
+      },
+      {
+        "target_m_s": 3,
+        "adverse": true,
+        "L_H": 2e-05,
+        "bulk_copper_rise_K_upper": 0.049223731139607284,
+        "volume99_local_adiabatic_rise_K_upper": 0.3444557348390563,
+        "mesh_max_local_adiabatic_rise_K_observation": 1.1332549406910455
+      },
+      {
+        "target_m_s": 3,
+        "adverse": true,
+        "L_H": 0.0001,
+        "bulk_copper_rise_K_upper": 0.04930428578102648,
+        "volume99_local_adiabatic_rise_K_upper": 0.3069887326691428,
+        "mesh_max_local_adiabatic_rise_K_observation": 1.0099889850762394
+      }
+    ],
+    "90mm_diffusion_time_s": 69.8544,
+    "reference_intershot_s": 450,
+    "12shot_no_external_cooling_bulk_rise_K_upper": 0.8000149368500349,
+    "local_recovery_estimate_K": 3.2950531754459145,
+    "scope": "Adiabatic pulse bound with DC FE current field and ripple-current upper integral. Mesh corner maximum is an observation, not a converged physical hotspot rating. Local recovery assumes repeated-cell thermal diffusion between450s shots; external cooling is not credited."
+  },
+  "contact_energy": {
+    "peak_payload_axial_normal_N": 26.863496837701028,
+    "surrogate_pitch_yaw_inertia_kg_m2": 0.04198008333333334,
+    "surrogate_roll_inertia_kg_m2": 0.006666666666666668,
+    "rail_geometry_assumed_mm": [
+      8,
+      8,
+      340.5
+    ],
+    "rail_E_Pa_assumed": 70000000000.0,
+    "rear_pad_geometry_mm": [
+      8,
+      6,
+      4
+    ],
+    "cases": [
+      {
+        "active_reference_rails": 1,
+        "effective_axial_stiffness_N_m": 12954216.867469877,
+        "stored_elastic_energy_J": 2.785376645041917e-05,
+        "pitch_yaw_energy_bound_deg_s": 2.087170591908323,
+        "all_axis_energy_bound_deg_s": 5.237514335307735
+      },
+      {
+        "active_reference_rails": 2,
+        "effective_axial_stiffness_N_m": 25908433.734939754,
+        "stored_elastic_energy_J": 1.3926883225209585e-05,
+        "pitch_yaw_energy_bound_deg_s": 1.4758524790315153,
+        "all_axis_energy_bound_deg_s": 3.703481903057853
+      },
+      {
+        "active_reference_rails": 4,
+        "effective_axial_stiffness_N_m": 51816867.46987951,
+        "stored_elastic_energy_J": 6.963441612604792e-06,
+        "pitch_yaw_energy_bound_deg_s": 1.0435852959541616,
+        "all_axis_energy_bound_deg_s": 2.6187571676538677
+      }
+    ],
+    "scope": "Elastic-energy upper bounds for a declared four-rail payload surrogate; not measured tip-off, a universal CubeSat property, or a rigid-contact peak-force prediction. Actual payload inertia/stiffness and guide/friction coupling require physical correlation."
+  },
+  "nominal_feed_capture": {
+    "payload_kg": 4,
+    "maximum_commanded_pusher_speed_m_s": 0.01171875,
+    "free_payload_kinetic_energy_J": 0.000274658203125,
+    "two_3mm_steel_keepers_effective_length_m_assumed": 0.118,
+    "parallel_cantilever_stiffness_N_m_assumed": 2903.956735255004,
+    "elastic_impact_deflection_mm": 0.4349268447510793,
+    "peak_total_impact_force_N": 1.263008740158104,
+    "scope": "Low-speed nominal feed capture bound; excludes stored jam energy, guide play and measured restitution."
+  },
+  "qualification_boundary": "The budgets complete the stated computational characterization; provider-specific environmental acceptance and physical correlation belong to hardware development."
+}

@@ -1,0 +1,143 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "cad_manifest_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/FINAL_CAD_MANIFEST.json",
+  "cad_manifest_sha256": "77b8a5c2b4b30c16f0faa2fbdd7fc243b7952d417a7e962d2e4096ba1e7a1350",
+  "states": [
+    {
+      "state": "home",
+      "mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/home.json",
+      "mesh_sha256": "7419819c2833fd23417620fa1b9df8fc858ae987db842c209671dfc81408db7d",
+      "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.FCStd",
+      "native_sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a",
+      "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.step",
+      "step_sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+      "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+      "bom_sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+      "source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "independent_step_readback": {
+        "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+        "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+        "pass": true
+      },
+      "tessellation": {
+        "tool": "FreeCAD MeshPart.meshFromShape",
+        "linear_deflection_mm": 0.3,
+        "angular_deflection_rad": 0.15,
+        "relative": false,
+        "units": "meters;native coordinates divided by1000",
+        "purpose": "Visualization only;not analysis mesh"
+      },
+      "object_count": 387,
+      "triangle_count": 242510
+    },
+    {
+      "state": "handoff",
+      "mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/handoff.json",
+      "mesh_sha256": "b27ab7dccb27482143f6d22822efc5ba7b8d259bd798174c08fbf934ecf26c88",
+      "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_handoff.FCStd",
+      "native_sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778",
+      "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_handoff.step",
+      "step_sha256": "1ae09dc2389748777c7565f421354c50a3d8c28e7205b9c8eff5febd17e675be",
+      "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_handoff.json",
+      "bom_sha256": "de093f3314fee1bcffefbe56fb20dbbc631fde3d744032d16fca4c4e67184293",
+      "source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "independent_step_readback": {
+        "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+        "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+        "pass": true
+      },
+      "tessellation": {
+        "tool": "FreeCAD MeshPart.meshFromShape",
+        "linear_deflection_mm": 0.3,
+        "angular_deflection_rad": 0.15,
+        "relative": false,
+        "units": "meters;native coordinates divided by1000",
+        "purpose": "Visualization only;not analysis mesh"
+      },
+      "object_count": 387,
+      "triangle_count": 242510
+    },
+    {
+      "state": "captured",
+      "mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/captured.json",
+      "mesh_sha256": "0baf59d0ce9a93ff474d4dddaf1af81c4ef5d6108197ec385d0f89465d1dadef",
+      "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.FCStd",
+      "native_sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd",
+      "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.step",
+      "step_sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302",
+      "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.json",
+      "bom_sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7",
+      "source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "independent_step_readback": {
+        "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+        "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+        "pass": true
+      },
+      "tessellation": {
+        "tool": "FreeCAD MeshPart.meshFromShape",
+        "linear_deflection_mm": 0.3,
+        "angular_deflection_rad": 0.15,
+        "relative": false,
+        "units": "meters;native coordinates divided by1000",
+        "purpose": "Visualization only;not analysis mesh"
+      },
+      "object_count": 387,
+      "triangle_count": 242512
+    },
+    {
+      "state": "clear",
+      "mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/clear.json",
+      "mesh_sha256": "49b7f1c696dcc4706df94d2b2cd45ec1d52d8e6aa533aae6e111bab259b2af50",
+      "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.FCStd",
+      "native_sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3",
+      "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.step",
+      "step_sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922",
+      "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.json",
+      "bom_sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19",
+      "source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "independent_step_readback": {
+        "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+        "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+        "pass": true
+      },
+      "tessellation": {
+        "tool": "FreeCAD MeshPart.meshFromShape",
+        "linear_deflection_mm": 0.3,
+        "angular_deflection_rad": 0.15,
+        "relative": false,
+        "units": "meters;native coordinates divided by1000",
+        "purpose": "Visualization only;not analysis mesh"
+      },
+      "object_count": 387,
+      "triangle_count": 242510
+    }
+  ]
+}

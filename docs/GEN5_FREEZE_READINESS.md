@@ -1,3 +1,5 @@
+> **Historical study record — ACR1 public reference:** [VOLLEY-G5-ACR1](../validation/acr1/README.md) is the current integrated academic reference. Values/status below retain their dated study/configuration meaning and do not set ACR1 operating points.
+
 # Gen5 academic freeze readiness
 
 **Technical evidence revision, 16 October 2026; academic approval pending.** Gen5 is the selected academic configuration; Gen6 is future work. This page records what the computational study can support today and what still prevents a defensible final freeze. The [configuration index](GEN5_CONFIGURATION_INDEX.json) hashes the model inputs and eight STEP parts. Its `COMPUTATIONAL_DESIGN_REVIEW_CANDIDATE` status is deliberate: a hash proves identity, not correctness.

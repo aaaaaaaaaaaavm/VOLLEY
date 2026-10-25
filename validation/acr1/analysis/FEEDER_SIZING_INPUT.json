@@ -1,0 +1,354 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "units": "mm",
+  "manifest": {
+    "banks": 2,
+    "levels_per_bank": 6,
+    "format": "3U",
+    "payload_mm": [
+      340.5,
+      100,
+      100
+    ],
+    "assigned_payload_mass_kg": 4.0
+  },
+  "launch": {
+    "home_aft_x": 200,
+    "release_aft_x": 1500,
+    "arrest_aft_x": 1710,
+    "carrier_length": 488,
+    "rail_length": 2250,
+    "powered_travel": 1300,
+    "brake_travel": 210,
+    "payload_aft_relative_x": 64,
+    "payload_floor_z": 46,
+    "carrier_top_plate_z": [
+      14,
+      30
+    ],
+    "carrier_bottom_plate_z": [
+      -30,
+      -14
+    ],
+    "carrier_plate_width": 170,
+    "roller_radius": 15,
+    "roller_width": 16,
+    "roller_centre_y": 78,
+    "roller_relative_x": [
+      119,
+      369
+    ],
+    "rail_inner_y": 72,
+    "rail_outer_y": 110,
+    "guide_rail_z": [
+      16,
+      24
+    ],
+    "negative_side_web_width": 20,
+    "positive_roller_z": -40,
+    "stator_support_topology": "Open +Y C carrier, lowered +Y wheels, fixed lateral support through middle throat",
+    "carrier_negative_web_y": [
+      -100,
+      -80
+    ],
+    "roller_negative_centre_y": -114,
+    "arrest_architecture": "Same LSM under controlled regeneration; no auxiliary pole/fin brake installed;210mm arrest allocation retained",
+    "forekeeper": {
+      "stroke_y_mm": 12,
+      "closed_inner_abs_y_mm": 42,
+      "open_inner_abs_y_mm": 54,
+      "payload_side_clearance_open_mm": 4,
+      "cam_ramp_carrier_aft_x_mm": [
+        1445,
+        1495
+      ],
+      "release_margin_x_mm": 5,
+      "cam_hold_through_aft_x_mm": 1710,
+      "spring_closed_preload_N": 5,
+      "spring_rate_N_per_mm": 0.5,
+      "spring_open_force_N": 11,
+      "cam_nominal_running_clearance_mm": 0.1
+    },
+    "home_index_lock_interface": {
+      "type": "Host-provided retracting6mm pin in carrier reference lug;engage only at aft200;retract before translation",
+      "bore_diameter_mm": 6.2,
+      "centre_at_home_x_mm": 220,
+      "centre_z_mm": 36,
+      "carrier_lug_y_mm": [
+        -100,
+        -80
+      ],
+      "required_pin_retracted_tip_abs_y_mm": 150,
+      "external_pin_hardware_selected": false
+    },
+    "carrier_home_full_x_mm": [
+      168,
+      714.5
+    ],
+    "pallet_lock_bores": "Two6.2mm vertical shaft bores in20mm negative web atlocalX40/468,Y-90;head stows above carrier top30"
+  },
+  "magnetic": {
+    "array_mount_relative_x": [
+      74,
+      414
+    ],
+    "array_active_relative_x": [
+      76,
+      412
+    ],
+    "blocks_per_array": 42,
+    "block_pitch": 8,
+    "block_depth_y": 90,
+    "block_thickness_z": 8,
+    "array_inner_z": 6,
+    "array_outer_z": 14,
+    "stator_belts": 216,
+    "stator_pitch": 8,
+    "stator_bar_width_x": 7,
+    "stator_x_start": 230,
+    "stator_pitch_span": 1728,
+    "stator_active_depth_y": 90,
+    "stator_z": [
+      -5,
+      5
+    ],
+    "conductor_representation": "Three connected series phase conductors;active7x6mm,7x3mm endlinks;21mm2 return/interface current-density rating required",
+    "active_copper_z": [
+      -3,
+      3
+    ],
+    "active_copper_cross_section_mm2": 42,
+    "endlink_cross_section_mm": [
+      7,
+      3
+    ],
+    "endlink_phase_z_mm": [
+      [
+        -5,
+        -2
+      ],
+      [
+        -1.5,
+        1.5
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "endlink_extent_abs_y": 71,
+    "interphase_nominal_z_gap": 0.5,
+    "active_GFRP_z": [
+      [
+        -5,
+        -3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "outer_GFRP_z": [
+      [
+        -7,
+        -5
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "endlink_minimum_section_mm2": 21,
+    "outer_support_board_extent_abs_y": 78
+  },
+  "storage": {
+    "first_payload_floor_z": 180,
+    "level_pitch_z": 130,
+    "payload_centre_y_abs": 250,
+    "feed_stroke": 250,
+    "nominal_feed_time_s": 40,
+    "local_guide_diameter": 10,
+    "local_guide_span": 330,
+    "local_guide_height_above_floor": 50,
+    "local_screw_nominal_diameter": 10,
+    "local_screw_lead": 2,
+    "local_screw_root_diameter": 7.4,
+    "local_bush_length": 30,
+    "channel_side_clearance": 2,
+    "channel_top_clearance": 2,
+    "guide_start_y": -435,
+    "guide_end_y": -105,
+    "guide_carriage_offset_behind_payload_rear": 76,
+    "motor_outer_y_abs": 573.9,
+    "channel_central_clear_abs_y_mm": 100,
+    "local_bush_start_behind_payload_rear_mm": 91,
+    "local_screw_threaded_span_mm": 315,
+    "local_screw_threaded_end_y_mm": -120,
+    "local_screw_front_journal_y_mm": [
+      -120,
+      -100
+    ],
+    "front_guide_support_y_mm": [
+      -110,
+      -100
+    ],
+    "front_screw_bearing_y_mm": [
+      -115,
+      -107
+    ],
+    "pusher_arm_route": "Outboard X bypass straps clear front guide supports;1mm bushing/guide-support end clearance at fullfeed"
+  },
+  "cradle": {
+    "load_floor_z": 46,
+    "floor_tine_thickness": 8,
+    "fixed_column_x_relative_payload": [
+      -134,
+      480.5
+    ],
+    "reference_operation": "Powered vertical indexing and constrained handoff in host coast; no gravity-assisted movement",
+    "fixed_column_y_mm": [
+      -200,
+      220
+    ],
+    "fixed_column_x_mm": [
+      130,
+      744.5
+    ],
+    "lift_screw_diameter": 16,
+    "lift_screw_lead": 4,
+    "lift_screw_root_study_diameter": 11,
+    "lift_motor_gear_ratio": 19.8,
+    "maximum_lift_time_s": 120,
+    "roof_underside_above_floor": 108,
+    "seat_transfer_lowering": 0,
+    "park_floor_z": 190,
+    "custody": "Captive shuttle pallet stays on carrier through release/arrest/return;lift carries X endframes and110mm Ykeepers;no horizontal withdrawal mechanism",
+    "endwall_x_mm": {
+      "rear": [
+        262.5,
+        263.5
+      ],
+      "front": [
+        605,
+        606
+      ]
+    },
+    "endwall_payload_gap_mm": {
+      "rear": 0.5,
+      "front": 0.5
+    },
+    "endwall_hardware_gap_mm": {
+      "rear": 0.5,
+      "front": 0.5
+    },
+    "Y_keeper": {
+      "open_stroke_up_mm": 110,
+      "closed_tab_z_relative_floor_mm": [
+        2,
+        8
+      ],
+      "open_tab_z_relative_floor_mm": [
+        112,
+        118
+      ],
+      "guide_rod_diameter_mm": 3,
+      "guide_bore_diameter_mm": 3.2,
+      "guide_housing_z_relative_floor_mm": [
+        120,
+        136
+      ],
+      "holding": "Self-locking screw drive plus normally applied holding brake required",
+      "actuator_reference_envelope_mm": {
+        "diameter": 12,
+        "closed_length": 160,
+        "stroke": 110
+      },
+      "actuator_reference_axes_y_mm": 0,
+      "guide_cable_outer_diameter_mm": 3.8,
+      "hardware_selected": false
+    },
+    "pallet": {
+      "type": "One captive connected aluminium shuttle pallet",
+      "top_rail_contact_z_mm": 46,
+      "bottom_feet_z_mm": [
+        30,
+        38
+      ],
+      "crossbar_y_mm": [
+        -10,
+        10
+      ],
+      "grip_x_home_mm": [
+        178,
+        704.5
+      ],
+      "grip_pin_diameter_mm": 6,
+      "grip_bore_diameter_mm": 6.2,
+      "grip_pin_y_stroke_mm": 26,
+      "pallet_lock_x_relative_carrier_mm": [
+        40,
+        468
+      ],
+      "pallet_lock_y_mm": -90,
+      "lock_stroke_z_mm": 12,
+      "lock_rotation_deg": 90,
+      "lock_head_mm": [
+        12,
+        4,
+        3
+      ],
+      "entry_key_slot_mm": [
+        13,
+        5
+      ],
+      "stem_diameter_mm": 6,
+      "key_round_bore_diameter_mm": 7,
+      "lock_actuator_reference_mm": {
+        "diameter": 16,
+        "length": 40,
+        "stroke": 12,
+        "rotation": 90
+      },
+      "handoff_sequence": [
+        "land pallet feet",
+        "close upper capture caps and engage independent cap lockpins",
+        "engage both sled pins vertically12mm",
+        "rotate both bayonet heads90deg",
+        "verify all captures",
+        "open overhead Ykeepers",
+        "retract both lift grips",
+        "raise lift clear"
+      ],
+      "retained_subsystem": "sled_pallet",
+      "lifted_subsystem": "cradle_pallet",
+      "carrier_arrest_max_x_mm": 2224.5,
+      "carrier_shaft_bore_diameter_mm": 6.2,
+      "stowed_head_z_mm": [
+        32,
+        35
+      ],
+      "captured_head_z_mm": [
+        44,
+        47
+      ],
+      "grip_ear_z_mm": [
+        34,
+        45.5
+      ],
+      "forward_flight_clearance_mm": 0.5
+    },
+    "lift_pallet_grip_x_mm": [
+      178,
+      704.5
+    ]
+  },
+  "materials_kg_m3": {
+    "aluminium": 2700,
+    "steel": 7850,
+    "copper": 8960,
+    "ndfeb": 7500,
+    "polymer": 1410,
+    "insulator": 1800
+  },
+  "scope": "Controlled academic mechanical revision; geometry, source-backed sizing and same-revision calculations required. Not manufacturing or flight qualification. Original Gen5 and FM08 records remain unchanged."
+}

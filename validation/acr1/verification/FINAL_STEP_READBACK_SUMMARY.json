@@ -1,0 +1,245 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "scope": "Independent serialization readback of8 immutable final e1179e88 native/STEP state pairs only.",
+  "method": "Separate CadQuery2.8/OCP7.9.3.1 import versus native FreeCAD1.0.0 object/solid counts, volumes and per-solid placement diagnostics. Shared OpenCASCADE kernel family.",
+  "source_builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+  "all_eight_states_pass": true,
+  "volume_gate": "Absolute difference <=max(0.01mm3,1e-6*native volume), unchanged from first failed capture.",
+  "max_relative_volume_difference": 1.437304857853991e-11,
+  "max_per_solid_bounds_difference_mm": 1.0000007932831068e-07,
+  "max_per_solid_centroid_difference_mm": 5.7709267207550715e-05,
+  "states": [
+    {
+      "state": "home",
+      "source_identity": {
+        "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "native_json_sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+        "step_sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+        "native_FCStd_sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a"
+      },
+      "native_parts": 387,
+      "native_solids": 387,
+      "imported_solids": 387,
+      "valid": true,
+      "native_volume_mm3": 88031520.04445927,
+      "imported_volume_mm3": 88031520.04567611,
+      "absolute_volume_difference_mm3": 0.0012168437242507935,
+      "relative_volume_difference": 1.3822818504511124e-11,
+      "volume_tolerance_mm3": 88.03152004445927,
+      "inputs_unchanged": true,
+      "pass": true,
+      "per_solid_diagnostic": {
+        "method": "One-to-one minimum-cost match by volume and centroid; diagnostics supplement aggregate serialization gate.",
+        "max_absolute_volume_difference_mm3": 0.001691314777417574,
+        "max_centroid_difference_mm": 5.7709267207550715e-05,
+        "max_bounds_difference_mm": 1.0000002248489182e-07
+      },
+      "report_sha256": "732e50adc2e0d7b9145d7189f6433507940c3ff0f5109bd617adf6f991cfb2fc",
+      "report_relative_path": "verification/step_readback/frozen_e1179e886282/home/STEP_READBACK.json"
+    },
+    {
+      "state": "captured",
+      "source_identity": {
+        "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "native_json_sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7",
+        "step_sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302",
+        "native_FCStd_sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd"
+      },
+      "native_parts": 387,
+      "native_solids": 387,
+      "imported_solids": 387,
+      "valid": true,
+      "native_volume_mm3": 88031520.04458635,
+      "imported_volume_mm3": 88031520.04565531,
+      "absolute_volume_difference_mm3": 0.0010689646005630493,
+      "relative_volume_difference": 1.214297560716478e-11,
+      "volume_tolerance_mm3": 88.03152004458634,
+      "inputs_unchanged": true,
+      "pass": true,
+      "per_solid_diagnostic": {
+        "method": "One-to-one minimum-cost match by volume and centroid; diagnostics supplement aggregate serialization gate.",
+        "max_absolute_volume_difference_mm3": 0.0016728413065720815,
+        "max_centroid_difference_mm": 5.7709267207550715e-05,
+        "max_bounds_difference_mm": 1.0000007932831068e-07
+      },
+      "report_sha256": "6f2fb7afab3085d1e288a0c6377d109d8765396bb219c22ab9fa81ec8cb93637",
+      "report_relative_path": "verification/step_readback/frozen_e1179e886282/captured/STEP_READBACK.json"
+    },
+    {
+      "state": "lower",
+      "source_identity": {
+        "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "native_json_sha256": "82202ca7e1b63616de5f31b2241497fe2db6e555422950b72721e40e03fc65b2",
+        "step_sha256": "63bda40ba16f5d5b9a8444d1c9fe4606897b4d60aa5f7c370cecb51f59894e5f",
+        "native_FCStd_sha256": "14ab24cfbe04a0991781368d164749a5bc63dc944df80f7153db8db5eab294ff"
+      },
+      "native_parts": 387,
+      "native_solids": 387,
+      "imported_solids": 387,
+      "valid": true,
+      "native_volume_mm3": 88031520.04445927,
+      "imported_volume_mm3": 88031520.0456761,
+      "absolute_volume_difference_mm3": 0.0012168288230895996,
+      "relative_volume_difference": 1.3822649233763711e-11,
+      "volume_tolerance_mm3": 88.03152004445927,
+      "inputs_unchanged": true,
+      "pass": true,
+      "per_solid_diagnostic": {
+        "method": "One-to-one minimum-cost match by volume and centroid; diagnostics supplement aggregate serialization gate.",
+        "max_absolute_volume_difference_mm3": 0.0016913146973820403,
+        "max_centroid_difference_mm": 5.7709267207550715e-05,
+        "max_bounds_difference_mm": 1.0000002248489182e-07
+      },
+      "report_sha256": "1dbf20bdc6977d7b46b63ba625d85cccc2ace92d51db0e0f7c3bda95c5543b3f",
+      "report_relative_path": "verification/step_readback/frozen_e1179e886282/lower/STEP_READBACK.json"
+    },
+    {
+      "state": "handoff",
+      "source_identity": {
+        "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "native_json_sha256": "de093f3314fee1bcffefbe56fb20dbbc631fde3d744032d16fca4c4e67184293",
+        "step_sha256": "1ae09dc2389748777c7565f421354c50a3d8c28e7205b9c8eff5febd17e675be",
+        "native_FCStd_sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778"
+      },
+      "native_parts": 387,
+      "native_solids": 387,
+      "imported_solids": 387,
+      "valid": true,
+      "native_volume_mm3": 88031520.04445927,
+      "imported_volume_mm3": 88031520.0456761,
+      "absolute_volume_difference_mm3": 0.0012168288230895996,
+      "relative_volume_difference": 1.3822649233763711e-11,
+      "volume_tolerance_mm3": 88.03152004445927,
+      "inputs_unchanged": true,
+      "pass": true,
+      "per_solid_diagnostic": {
+        "method": "One-to-one minimum-cost match by volume and centroid; diagnostics supplement aggregate serialization gate.",
+        "max_absolute_volume_difference_mm3": 0.0016913146973820403,
+        "max_centroid_difference_mm": 5.7709267207550715e-05,
+        "max_bounds_difference_mm": 1.0000002248489182e-07
+      },
+      "report_sha256": "31de8f34848d514e8d9887a272882dee4015c02f0690b8cf5ba3b2dd4e2b474e",
+      "report_relative_path": "verification/step_readback/frozen_e1179e886282/handoff/STEP_READBACK.json"
+    },
+    {
+      "state": "withdrawn",
+      "source_identity": {
+        "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "native_json_sha256": "c4a1df9da3f9748ae5324e624f4ed6bb771a906fb5aa98c7e0f3845fbacf996a",
+        "step_sha256": "cf089a122a36b3f75b9b5f437e624f45604756673f61109ad8978e5c2d65a008",
+        "native_FCStd_sha256": "d021caa203be2b9c82ed0479be5bfd59c9a1ddd57e5e1ac1b9f288e1757619e7"
+      },
+      "native_parts": 387,
+      "native_solids": 387,
+      "imported_solids": 387,
+      "valid": true,
+      "native_volume_mm3": 88031520.04445927,
+      "imported_volume_mm3": 88031520.0456761,
+      "absolute_volume_difference_mm3": 0.0012168288230895996,
+      "relative_volume_difference": 1.3822649233763711e-11,
+      "volume_tolerance_mm3": 88.03152004445927,
+      "inputs_unchanged": true,
+      "pass": true,
+      "per_solid_diagnostic": {
+        "method": "One-to-one minimum-cost match by volume and centroid; diagnostics supplement aggregate serialization gate.",
+        "max_absolute_volume_difference_mm3": 0.0016913146973820403,
+        "max_centroid_difference_mm": 5.7709267207550715e-05,
+        "max_bounds_difference_mm": 1.0000002248489182e-07
+      },
+      "report_sha256": "b69e334837726a132f6866c520c64e694e48263ea78499e3c447404bf9757e78",
+      "report_relative_path": "verification/step_readback/frozen_e1179e886282/withdrawn/STEP_READBACK.json"
+    },
+    {
+      "state": "clear",
+      "source_identity": {
+        "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "native_json_sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19",
+        "step_sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922",
+        "native_FCStd_sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3"
+      },
+      "native_parts": 387,
+      "native_solids": 387,
+      "imported_solids": 387,
+      "valid": true,
+      "native_volume_mm3": 88031520.04445927,
+      "imported_volume_mm3": 88031520.04567611,
+      "absolute_volume_difference_mm3": 0.0012168437242507935,
+      "relative_volume_difference": 1.3822818504511124e-11,
+      "volume_tolerance_mm3": 88.03152004445927,
+      "inputs_unchanged": true,
+      "pass": true,
+      "per_solid_diagnostic": {
+        "method": "One-to-one minimum-cost match by volume and centroid; diagnostics supplement aggregate serialization gate.",
+        "max_absolute_volume_difference_mm3": 0.001691314777417574,
+        "max_centroid_difference_mm": 5.7709267207550715e-05,
+        "max_bounds_difference_mm": 1.0000002248489182e-07
+      },
+      "report_sha256": "e82033e047406296c2b281063c54777b4be47c18be27b120ed46dbdc771249f6",
+      "report_relative_path": "verification/step_readback/frozen_e1179e886282/clear/STEP_READBACK.json"
+    },
+    {
+      "state": "release",
+      "source_identity": {
+        "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "native_json_sha256": "c0b8b80ab6cbf50a23f6766bcf4a2230935db3a5d4689b977b97e3d9f8e152fc",
+        "step_sha256": "92f95a037af9d29f3581cccf6cc13991447b285421ce5a2d5d0a7dec0b18032e",
+        "native_FCStd_sha256": "64c981d5412139bc323e1f1673202ee325ebf006fcbd518b78012b63c6014ffe"
+      },
+      "native_parts": 387,
+      "native_solids": 387,
+      "imported_solids": 387,
+      "valid": true,
+      "native_volume_mm3": 88031241.82501493,
+      "imported_volume_mm3": 88031241.82623196,
+      "absolute_volume_difference_mm3": 0.0012170225381851196,
+      "relative_volume_difference": 1.3824893446400194e-11,
+      "volume_tolerance_mm3": 88.03124182501493,
+      "inputs_unchanged": true,
+      "pass": true,
+      "per_solid_diagnostic": {
+        "method": "One-to-one minimum-cost match by volume and centroid; diagnostics supplement aggregate serialization gate.",
+        "max_absolute_volume_difference_mm3": 0.001691314777417574,
+        "max_centroid_difference_mm": 5.770784006093427e-05,
+        "max_bounds_difference_mm": 1.0000002248489182e-07
+      },
+      "report_sha256": "d3da3d6346bfc074b1107e0c2b6c35f3a0a6665fca3ab5677b047d495e369b2b",
+      "report_relative_path": "verification/step_readback/frozen_e1179e886282/release/STEP_READBACK.json"
+    },
+    {
+      "state": "arrest",
+      "source_identity": {
+        "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "native_json_sha256": "1ef828b951cdef80b5e4c85802dbe282b90fc46264c51f3a86472a4218d49985",
+        "step_sha256": "ec4f4c59f2024448657ce34380fcba610a60be8911c0356fe152e6916bb3be9c",
+        "native_FCStd_sha256": "31518e9d406e76998c9e6ba8b6f1f472c7984550a9ff93d4c1f5f165a9269d3b"
+      },
+      "native_parts": 386,
+      "native_solids": 386,
+      "imported_solids": 386,
+      "valid": true,
+      "native_volume_mm3": 84626241.82501473,
+      "imported_volume_mm3": 84626241.82623106,
+      "absolute_volume_difference_mm3": 0.0012163370847702026,
+      "relative_volume_difference": 1.437304857853991e-11,
+      "volume_tolerance_mm3": 84.62624182501472,
+      "inputs_unchanged": true,
+      "pass": true,
+      "per_solid_diagnostic": {
+        "method": "One-to-one minimum-cost match by volume and centroid; diagnostics supplement aggregate serialization gate.",
+        "max_absolute_volume_difference_mm3": 0.001691314777417574,
+        "max_centroid_difference_mm": 5.770296414903124e-05,
+        "max_bounds_difference_mm": 1.0000002248489182e-07
+      },
+      "report_sha256": "e5146c1597256b7d7a46b27467f39288db5e593103635ef35ca358e9b8c0b459",
+      "report_relative_path": "verification/step_readback/frozen_e1179e886282/arrest/STEP_READBACK.json"
+    }
+  ]
+}

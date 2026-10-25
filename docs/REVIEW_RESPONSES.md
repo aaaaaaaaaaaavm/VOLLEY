@@ -1,5 +1,7 @@
 # Review responses
 
+> **Historical review register — August 2026; retained 25 October 2026.** The questions, responses and aggregate dispositions below refer to their dated configurations. They do not establish external approval of ACR1. Read the [current engineering status](STATE_OF_THE_PROJECT.md) and [current evidence package](../validation/acr1/README.md) for the completed computational study and its remaining physical evidence boundary.
+
 A reviewer's register, answered or conceded, question by question.
 
 Thirty-five questions. Items 1-3, 7-8, 14-16 and 20-21 were raised in review by a former ISRO

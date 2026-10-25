@@ -1,0 +1,1539 @@
+{
+  "revision": "ACR1-WEB-R1",
+  "source_root": "validation/acr1",
+  "release_identity": "containing Git commit or release tag",
+  "assets": [
+    {
+      "asset_id": "01_assembly_isometric",
+      "path": "docs/assets/acr1/01_assembly_isometric.jpg",
+      "sha256": "06299aff49fa623566d86280cb27661ba1075a2e60f991989a8e9242b639a689",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled scientific view",
+      "camera": {
+        "location_m": [
+          4.636751651763916,
+          -3.511751651763916,
+          3.8532514572143555
+        ],
+        "rotation_euler_rad": [
+          0.9553165435791016,
+          -1.1763476237547366e-07,
+          0.7853981852531433
+        ],
+        "ortho_scale_m": 4.131031513214111,
+        "frame_height_m": 3.098273730358562
+      },
+      "software": "Blender Workbench 4.3.2",
+      "dimensions_px": [
+        2800,
+        2100
+      ],
+      "source": {
+        "state": "home",
+        "native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.FCStd",
+        "native_sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a",
+        "step_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.step",
+        "step_sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+        "bom_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+        "bom_sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+        "source_sha256": {
+          "validation/acr1/cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "validation/acr1/cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "validation/acr1/cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "validation/acr1/cad/verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "validation/acr1/cad/verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      },
+      "alt_text": "Integrated assembly with two six-level banks and central guide track",
+      "caption": "All CAD parts present; view framing may crop distant geometry",
+      "release_identity": "containing Git commit or release tag",
+      "raw_capture": "docs/assets/acr1/01_assembly_isometric_provenance.json"
+    },
+    {
+      "asset_id": "01_assembly_isometric",
+      "path": "docs/assets/acr1/01_assembly_isometric.png",
+      "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled scientific view",
+      "camera": {
+        "location_m": [
+          4.636751651763916,
+          -3.511751651763916,
+          3.8532514572143555
+        ],
+        "rotation_euler_rad": [
+          0.9553165435791016,
+          -1.1763476237547366e-07,
+          0.7853981852531433
+        ],
+        "ortho_scale_m": 4.131031513214111,
+        "frame_height_m": 3.098273730358562
+      },
+      "software": "Blender Workbench 4.3.2",
+      "dimensions_px": [
+        2800,
+        2100
+      ],
+      "source": {
+        "state": "home",
+        "native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.FCStd",
+        "native_sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a",
+        "step_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.step",
+        "step_sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+        "bom_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+        "bom_sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+        "source_sha256": {
+          "validation/acr1/cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "validation/acr1/cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "validation/acr1/cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "validation/acr1/cad/verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "validation/acr1/cad/verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      },
+      "alt_text": "Integrated assembly with two six-level banks and central guide track",
+      "caption": "All CAD parts present; view framing may crop distant geometry",
+      "release_identity": "containing Git commit or release tag",
+      "raw_capture": "docs/assets/acr1/01_assembly_isometric_provenance.json"
+    },
+    {
+      "asset_id": "01_assembly_isometric_provenance",
+      "path": "docs/assets/acr1/01_assembly_isometric_provenance.json",
+      "sha256": "60e155794f570284ea251056e300fbba7fcdfe6877a58d3b46ec1621afaf1f69",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "02_handoff_pallet_locks",
+      "path": "docs/assets/acr1/02_handoff_pallet_locks.jpg",
+      "sha256": "9d7124a1cf8579cab251c39feb31a1bae4945d1dc70f3b9505a2dfa7050aa10a",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled scientific view",
+      "camera": {
+        "location_m": [
+          2.5876383781433105,
+          -5.167332649230957,
+          2.3133440017700195
+        ],
+        "rotation_euler_rad": [
+          1.1902899742126465,
+          7.410240421279468e-09,
+          0.3947911262512207
+        ],
+        "ortho_scale_m": 0.6666666865348816,
+        "frame_height_m": 0.5
+      },
+      "software": "Blender Workbench 4.3.2",
+      "dimensions_px": [
+        2800,
+        2100
+      ],
+      "source": {
+        "state": "handoff",
+        "native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.FCStd",
+        "native_sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778",
+        "step_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.step",
+        "step_sha256": "1ae09dc2389748777c7565f421354c50a3d8c28e7205b9c8eff5febd17e675be",
+        "bom_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.json",
+        "bom_sha256": "de093f3314fee1bcffefbe56fb20dbbc631fde3d744032d16fca4c4e67184293",
+        "source_sha256": {
+          "validation/acr1/cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "validation/acr1/cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "validation/acr1/cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "validation/acr1/cad/verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "validation/acr1/cad/verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      },
+      "alt_text": "Pallet bayonet locks and engaged lift grips",
+      "caption": "Detail: storage banks, host ladder and fixed lift frame hidden",
+      "release_identity": "containing Git commit or release tag",
+      "raw_capture": "docs/assets/acr1/02_handoff_pallet_locks_provenance.json"
+    },
+    {
+      "asset_id": "02_handoff_pallet_locks",
+      "path": "docs/assets/acr1/02_handoff_pallet_locks.png",
+      "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled scientific view",
+      "camera": {
+        "location_m": [
+          2.5876383781433105,
+          -5.167332649230957,
+          2.3133440017700195
+        ],
+        "rotation_euler_rad": [
+          1.1902899742126465,
+          7.410240421279468e-09,
+          0.3947911262512207
+        ],
+        "ortho_scale_m": 0.6666666865348816,
+        "frame_height_m": 0.5
+      },
+      "software": "Blender Workbench 4.3.2",
+      "dimensions_px": [
+        2800,
+        2100
+      ],
+      "source": {
+        "state": "handoff",
+        "native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.FCStd",
+        "native_sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778",
+        "step_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.step",
+        "step_sha256": "1ae09dc2389748777c7565f421354c50a3d8c28e7205b9c8eff5febd17e675be",
+        "bom_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.json",
+        "bom_sha256": "de093f3314fee1bcffefbe56fb20dbbc631fde3d744032d16fca4c4e67184293",
+        "source_sha256": {
+          "validation/acr1/cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "validation/acr1/cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "validation/acr1/cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "validation/acr1/cad/verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "validation/acr1/cad/verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      },
+      "alt_text": "Pallet bayonet locks and engaged lift grips",
+      "caption": "Detail: storage banks, host ladder and fixed lift frame hidden",
+      "release_identity": "containing Git commit or release tag",
+      "raw_capture": "docs/assets/acr1/02_handoff_pallet_locks_provenance.json"
+    },
+    {
+      "asset_id": "02_handoff_pallet_locks_provenance",
+      "path": "docs/assets/acr1/02_handoff_pallet_locks_provenance.json",
+      "sha256": "ca1e43191362bcf0d5c87bcc79c02ec6cd51e5d3a60ecceb0f6957289d94c9df",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "03_captured_source_level",
+      "path": "docs/assets/acr1/03_captured_source_level.jpg",
+      "sha256": "9728b73c49ffe19c6eb0c25e6d21731b6047f402f89ea71638f00e784a927f18",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled scientific view",
+      "camera": {
+        "location_m": [
+          3.4517273902893066,
+          -4.555165767669678,
+          2.935805082321167
+        ],
+        "rotation_euler_rad": [
+          1.1447492837905884,
+          -8.606912160757929e-08,
+          0.5880027413368225
+        ],
+        "ortho_scale_m": 2.6910533905029297,
+        "frame_height_m": 2.0182899929381706
+      },
+      "software": "Blender Workbench 4.3.2",
+      "dimensions_px": [
+        2800,
+        2100
+      ],
+      "source": {
+        "state": "captured",
+        "native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.FCStd",
+        "native_sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd",
+        "step_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.step",
+        "step_sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302",
+        "bom_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.json",
+        "bom_sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7",
+        "source_sha256": {
+          "validation/acr1/cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "validation/acr1/cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "validation/acr1/cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "validation/acr1/cad/verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "validation/acr1/cad/verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242512
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      },
+      "alt_text": "Lift holds captured payload and pallet at source level 5",
+      "caption": "All CAD parts present; view framing may crop distant geometry",
+      "release_identity": "containing Git commit or release tag",
+      "raw_capture": "docs/assets/acr1/03_captured_source_level_provenance.json"
+    },
+    {
+      "asset_id": "03_captured_source_level",
+      "path": "docs/assets/acr1/03_captured_source_level.png",
+      "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled scientific view",
+      "camera": {
+        "location_m": [
+          3.4517273902893066,
+          -4.555165767669678,
+          2.935805082321167
+        ],
+        "rotation_euler_rad": [
+          1.1447492837905884,
+          -8.606912160757929e-08,
+          0.5880027413368225
+        ],
+        "ortho_scale_m": 2.6910533905029297,
+        "frame_height_m": 2.0182899929381706
+      },
+      "software": "Blender Workbench 4.3.2",
+      "dimensions_px": [
+        2800,
+        2100
+      ],
+      "source": {
+        "state": "captured",
+        "native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.FCStd",
+        "native_sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd",
+        "step_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.step",
+        "step_sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302",
+        "bom_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.json",
+        "bom_sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7",
+        "source_sha256": {
+          "validation/acr1/cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "validation/acr1/cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "validation/acr1/cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "validation/acr1/cad/verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "validation/acr1/cad/verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242512
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      },
+      "alt_text": "Lift holds captured payload and pallet at source level 5",
+      "caption": "All CAD parts present; view framing may crop distant geometry",
+      "release_identity": "containing Git commit or release tag",
+      "raw_capture": "docs/assets/acr1/03_captured_source_level_provenance.json"
+    },
+    {
+      "asset_id": "03_captured_source_level_provenance",
+      "path": "docs/assets/acr1/03_captured_source_level_provenance.json",
+      "sha256": "d1fddefb2bfe462e183efcb6c7ac1b4eef5f299abde33c584ae3c65e6f364440",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "04_clear_docked",
+      "path": "docs/assets/acr1/04_clear_docked.jpg",
+      "sha256": "d7128d9e7c7a690629999769aa19beece22a1c9b39f090f7b2fc1834e74c88a8",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled scientific view",
+      "camera": {
+        "location_m": [
+          6.1002516746521,
+          -1.3128262758255005,
+          1.7547996044158936
+        ],
+        "rotation_euler_rad": [
+          1.3155678510665894,
+          -7.430895010429595e-08,
+          1.34269380569458
+        ],
+        "ortho_scale_m": 1.0666667222976685,
+        "frame_height_m": 0.8
+      },
+      "software": "Blender Workbench 4.3.2",
+      "dimensions_px": [
+        2800,
+        2100
+      ],
+      "source": {
+        "state": "clear",
+        "native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.FCStd",
+        "native_sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3",
+        "step_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.step",
+        "step_sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922",
+        "bom_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.json",
+        "bom_sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19",
+        "source_sha256": {
+          "validation/acr1/cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "validation/acr1/cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "validation/acr1/cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "validation/acr1/cad/verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "validation/acr1/cad/verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      },
+      "alt_text": "Docked pallet below withdrawn custody frame",
+      "caption": "All CAD parts present; view framing may crop distant geometry",
+      "release_identity": "containing Git commit or release tag",
+      "raw_capture": "docs/assets/acr1/04_clear_docked_provenance.json"
+    },
+    {
+      "asset_id": "04_clear_docked",
+      "path": "docs/assets/acr1/04_clear_docked.png",
+      "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled scientific view",
+      "camera": {
+        "location_m": [
+          6.1002516746521,
+          -1.3128262758255005,
+          1.7547996044158936
+        ],
+        "rotation_euler_rad": [
+          1.3155678510665894,
+          -7.430895010429595e-08,
+          1.34269380569458
+        ],
+        "ortho_scale_m": 1.0666667222976685,
+        "frame_height_m": 0.8
+      },
+      "software": "Blender Workbench 4.3.2",
+      "dimensions_px": [
+        2800,
+        2100
+      ],
+      "source": {
+        "state": "clear",
+        "native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.FCStd",
+        "native_sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3",
+        "step_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.step",
+        "step_sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922",
+        "bom_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.json",
+        "bom_sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19",
+        "source_sha256": {
+          "validation/acr1/cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "validation/acr1/cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "validation/acr1/cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "validation/acr1/cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "validation/acr1/cad/verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "validation/acr1/cad/verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      },
+      "alt_text": "Docked pallet below withdrawn custody frame",
+      "caption": "All CAD parts present; view framing may crop distant geometry",
+      "release_identity": "containing Git commit or release tag",
+      "raw_capture": "docs/assets/acr1/04_clear_docked_provenance.json"
+    },
+    {
+      "asset_id": "04_clear_docked_provenance",
+      "path": "docs/assets/acr1/04_clear_docked_provenance.json",
+      "sha256": "e58b1aa06711dbc683e4e600d38363939efc5d326e4606f5f01afc5867d1ca65",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "ACR1_social_preview",
+      "path": "docs/assets/acr1/ACR1_social_preview.png",
+      "sha256": "87328ae3ed8122bfad5d7b87411ceb601559ce731af94dfe88e2aa7ac6d4fa55",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "CAD-derived editorial composite",
+      "release_identity": "containing Git commit or release tag",
+      "generator": "docs/visual-source/finalize_assets.py",
+      "software": "Pillow 12.3.0",
+      "dimensions_px": [
+        1200,
+        630
+      ],
+      "role": "1200x630 social preview",
+      "source_path": "docs/assets/acr1/01_assembly_isometric.jpg",
+      "source_sha256": "06299aff49fa623566d86280cb27661ba1075a2e60f991989a8e9242b639a689",
+      "caption": "G5 ACR1 computational design study; unaltered accepted assembly render in an editorial card.",
+      "alt_text": "VOLLEY commanded CubeSat deployment computational design study, beside the ACR1 assembly render.",
+      "camera": {
+        "location_m": [
+          4.636751651763916,
+          -3.511751651763916,
+          3.8532514572143555
+        ],
+        "rotation_euler_rad": [
+          0.9553165435791016,
+          -1.1763476237547366e-07,
+          0.7853981852531433
+        ],
+        "ortho_scale_m": 4.131031513214111,
+        "frame_height_m": 3.098273730358562
+      },
+      "scene": {
+        "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+        "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+        "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+      }
+    },
+    {
+      "asset_id": "BRAND_KIT",
+      "path": "docs/assets/acr1/BRAND_KIT.json",
+      "sha256": "94a87517bd292c3671f8d12f9d00e6927aedfb423597d9c24f6ca2728eb0ede6",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "CORE_SURFACE_VISUAL_VERIFICATION",
+      "path": "docs/assets/acr1/CORE_SURFACE_VISUAL_VERIFICATION.json",
+      "sha256": "0c1b98aecdd5683c3b14000d461b5794ae49d78f48cb3f41365e23f55a0e2eb9",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "EXTERNAL_ACADEMIC_DOWNLOADS",
+      "path": "docs/assets/acr1/EXTERNAL_ACADEMIC_DOWNLOADS.json",
+      "sha256": "7da5375254894dd539bb4814bc733168dbe3f26a26e846d1a5adba4706cefb5e",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MESH_PROVENANCE",
+      "path": "docs/assets/acr1/MESH_PROVENANCE.json",
+      "sha256": "d791962304533365807bdd5c770527c143d553da1b8ae63c09941d93e18ebb66",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_INPUTS",
+      "path": "docs/assets/acr1/MISSION_INPUTS.json",
+      "sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_NATIVE_AGREEMENT",
+      "path": "docs/assets/acr1/MISSION_NATIVE_AGREEMENT.pdf",
+      "sha256": "3c8c54e47a540e3e20bb342c1177a93642c8d087aee767e67d929e9351bfda77",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_NATIVE_AGREEMENT",
+      "path": "docs/assets/acr1/MISSION_NATIVE_AGREEMENT.png",
+      "sha256": "025d1d49b5887769ecd7271ef30a3b6f80eb7112b3c6f2a664c6906a42edf1e3",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result",
+      "release_identity": "containing Git commit or release tag",
+      "dimensions_px": [
+        2280,
+        836
+      ],
+      "role": "scientific figure",
+      "source_path": "validation/acr1/mission/NATIVE_REPLAY_CHECKS.json",
+      "source_sha256": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691",
+      "caption": "Native Orekit numerical replay and step-refinement agreement.",
+      "alt_text": "Native Orekit numerical replay and step-refinement agreement.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/orbital-analysis.html"
+    },
+    {
+      "asset_id": "MISSION_NATIVE_AGREEMENT",
+      "path": "docs/assets/acr1/MISSION_NATIVE_AGREEMENT.svg",
+      "sha256": "5a6aaaa73412e231c9a04cc1b866b1267de476eae767365873cc7968454c308e",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_REPORT",
+      "path": "docs/assets/acr1/MISSION_REPORT.md",
+      "sha256": "a6e1a3d2091b21edfe0cd3e78f23772a0ec4e15631eff2c8bf91a56e63fd65b2",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_RESOURCES",
+      "path": "docs/assets/acr1/MISSION_RESOURCES.pdf",
+      "sha256": "aa1fe7235974f6187dbcae45881fb6c73bb2f7bdc1a440ccd4cf25b873285691",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_RESOURCES",
+      "path": "docs/assets/acr1/MISSION_RESOURCES.png",
+      "sha256": "86794a4cbaf3b02d9f251ba616a4453b727660c5de2ed44c22fbcde2b3011909",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result",
+      "release_identity": "containing Git commit or release tag",
+      "dimensions_px": [
+        2280,
+        912
+      ],
+      "role": "scientific figure",
+      "source_path": "validation/acr1/mission/MISSION_RESULTS.csv",
+      "source_sha256": "7acb70e5d23bcac84630eab0c101568f916f66e1647e320cf99bbe8357b39209",
+      "caption": "Bounded same-input mission fuel and wet-mass comparison.",
+      "alt_text": "Bounded same-input mission fuel and wet-mass comparison.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/orbital-analysis.html"
+    },
+    {
+      "asset_id": "MISSION_RESOURCES",
+      "path": "docs/assets/acr1/MISSION_RESOURCES.svg",
+      "sha256": "f2b40e6564fc7140566e2e8bee57bd50c7ce3cd6866696c60105408e5b1f2d2e",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_RESULTS",
+      "path": "docs/assets/acr1/MISSION_RESULTS.csv",
+      "sha256": "7acb70e5d23bcac84630eab0c101568f916f66e1647e320cf99bbe8357b39209",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_TARGETS",
+      "path": "docs/assets/acr1/MISSION_TARGETS.pdf",
+      "sha256": "3cf505aa5435bf4fa99130a900cd1188fa609b1e29d69e33c63bb52303430d04",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_TARGETS",
+      "path": "docs/assets/acr1/MISSION_TARGETS.png",
+      "sha256": "175594c388830c1e4243bce857e7c2cf46a251b1a104e3742d324f69c10c7fdb",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result",
+      "release_identity": "containing Git commit or release tag",
+      "dimensions_px": [
+        2280,
+        912
+      ],
+      "role": "scientific figure",
+      "source_path": "validation/acr1/mission/TARGETS.json",
+      "source_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "caption": "Frozen synthetic target families and common-epoch positions.",
+      "alt_text": "Frozen synthetic target families and common-epoch positions.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/orbital-analysis.html"
+    },
+    {
+      "asset_id": "MISSION_TARGETS",
+      "path": "docs/assets/acr1/MISSION_TARGETS.svg",
+      "sha256": "70be7ccfebd9c5f7c2b415cbcf38594b5c990df2128a287c8e17bd797336389b",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "NATIVE_REPLAY_CHECKS",
+      "path": "docs/assets/acr1/NATIVE_REPLAY_CHECKS.json",
+      "sha256": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "SELECTED_CASES",
+      "path": "docs/assets/acr1/SELECTED_CASES.json",
+      "sha256": "1901e736aa6980f823b8cf3b9b6a3e623efe8c1742324bc28366184e924df46b",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "TARGETS",
+      "path": "docs/assets/acr1/TARGETS.json",
+      "sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "VIEW_PROVENANCE",
+      "path": "docs/assets/acr1/VIEW_PROVENANCE.json",
+      "sha256": "44b3eecf038c3adcc1f0288cc92b3cd6c36fdf583b89279b35d9e40bf54e2f11",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "VISUALS_MANIFEST",
+      "path": "docs/assets/acr1/VISUALS_MANIFEST.json",
+      "sha256": "e3f9be9cd160fec01e62d30d7bbaa402ac9ee36bf9546be3edd0e54927313d2c",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "coupled_shot_reference",
+      "path": "docs/assets/acr1/coupled_shot_reference.pdf",
+      "sha256": "329e5a15b1fa41a86f8aa8566fb4f275caf110d438d547b711761c82b17e4d5d",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "coupled_shot_reference",
+      "path": "docs/assets/acr1/coupled_shot_reference.png",
+      "sha256": "d47e8dd86b3e9faba3911b7f3da9f8df6772317945450f50a9d6dec4357fe839",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result",
+      "release_identity": "containing Git commit or release tag",
+      "dimensions_px": [
+        1483,
+        1383
+      ],
+      "role": "scientific figure",
+      "source_path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "caption": "Coupled modeled release, electrical and arrest histories.",
+      "alt_text": "Coupled modeled release, electrical and arrest histories.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/evidence.html"
+    },
+    {
+      "asset_id": "favicon",
+      "path": "docs/assets/acr1/favicon.svg",
+      "sha256": "302e5a0126f6e1a6b49735fdfe1abce7325596dee84de36b2f3dbdbf24a6dadd",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "feeder_transfer_profile",
+      "path": "docs/assets/acr1/feeder_transfer_profile.pdf",
+      "sha256": "138a234d8688f4534e7eee39c69a2b71044682d468c1cd2e9d113934ce350e78",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "feeder_transfer_profile",
+      "path": "docs/assets/acr1/feeder_transfer_profile.png",
+      "sha256": "49e92970ce0b3bc16bedc019ea504cc85555934f439e336e26f38a511afbc022",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result",
+      "release_identity": "containing Git commit or release tag",
+      "dimensions_px": [
+        1979,
+        657
+      ],
+      "role": "scientific figure",
+      "source_path": "validation/acr1/analysis/FEEDER_PROFILES.csv",
+      "source_sha256": "4f84b5d96a451d07f85cf08a3c44cfb182e751d98b5a9434d94b61e2c618fdfe",
+      "caption": "Prescribed feeder transfer profile with units.",
+      "alt_text": "Prescribed feeder transfer profile with units.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/evidence.html"
+    },
+    {
+      "asset_id": "finite_force_coefficient",
+      "path": "docs/assets/acr1/finite_force_coefficient.pdf",
+      "sha256": "6ad0201aac7e56db3cce2579d675097c11ce433caf9138be7764036e90de948b",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "finite_force_coefficient",
+      "path": "docs/assets/acr1/finite_force_coefficient.png",
+      "sha256": "8c553ff9aa80e26c47f45068587be6a809c8986a6eb62a0fe43020940a94cca8",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result",
+      "release_identity": "containing Git commit or release tag",
+      "dimensions_px": [
+        1380,
+        729
+      ],
+      "role": "scientific figure",
+      "source_path": "validation/acr1/analysis/FINITE_MOTOR.json",
+      "source_sha256": "546cf2f427f356fc043f7d5cfd3f6af9b4ab5d4ab84b582e1e7c30baf8fd89ec",
+      "caption": "Finite-geometry force coefficient over the modeled stroke.",
+      "alt_text": "Finite-geometry force coefficient over the modeled stroke.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/evidence.html"
+    },
+    {
+      "asset_id": "magnetic_gap_section",
+      "path": "docs/assets/acr1/magnetic_gap_section.pdf",
+      "sha256": "e60e764c41482e6d7e625efeeb5f27f4ff158e74d66ad5d32dd0d72c953f7bb2",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "magnetic_gap_section",
+      "path": "docs/assets/acr1/magnetic_gap_section.png",
+      "sha256": "5e1cd6923ed0b732374231c0e17d3dc6e67ea5294a7177b412f545637bde7411",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result",
+      "release_identity": "containing Git commit or release tag",
+      "dimensions_px": [
+        1360,
+        619
+      ],
+      "role": "scientific figure",
+      "source_path": "validation/acr1/analysis/FINITE_MOTOR_INPUT.json",
+      "source_sha256": "979529a7413c9811a20dee7d109f063c20bd9791759d5101b0b7a6ec6935385c",
+      "caption": "Scientific section through the controlled magnetic gap geometry.",
+      "alt_text": "Scientific section through the controlled magnetic gap geometry.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/evidence.html"
+    },
+    {
+      "asset_id": "render_cad_views",
+      "path": "docs/assets/acr1/render_cad_views.py",
+      "sha256": "c72ec143963702e5ccb463325d72159a15c2ba429cfd562ad5ed0cb5d5af7827",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "shot_energy_ledger",
+      "path": "docs/assets/acr1/shot_energy_ledger.pdf",
+      "sha256": "fff6a5ec875d3475f80cf5491811f44da7959b2ad5c99933f854433807ed9bea",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "shot_energy_ledger",
+      "path": "docs/assets/acr1/shot_energy_ledger.png",
+      "sha256": "bafd5579ec0de422c662aac377095dd1c15c579fc6d7ede28019c55c22a2c78c",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result",
+      "release_identity": "containing Git commit or release tag",
+      "dimensions_px": [
+        1483,
+        703
+      ],
+      "role": "scientific figure",
+      "source_path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "caption": "Computed component energy ledger for the reference shot.",
+      "alt_text": "Computed component energy ledger for the reference shot.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/evidence.html"
+    },
+    {
+      "asset_id": "trajectory-explorer",
+      "path": "docs/assets/acr1/trajectory-explorer.json",
+      "sha256": "84cffe1e8b917d2234c5d43a7c389da6eec90447b58674f123e6f8025c22bb28",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "reviewer": "Source and caption checks recorded in the linked verification files.",
+      "evidence_class": "computed result or provenance/source file; see original file metadata",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_NATIVE_AGREEMENT",
+      "path": "docs/assets/acr1/figures/MISSION_NATIVE_AGREEMENT.png",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "sha256": "025d1d49b5887769ecd7271ef30a3b6f80eb7112b3c6f2a664c6906a42edf1e3",
+      "dimensions_px": [
+        2280,
+        836
+      ],
+      "evidence_class": "computed result",
+      "role": "scientific figure",
+      "source_path": "validation/acr1/mission/NATIVE_REPLAY_CHECKS.json",
+      "source_sha256": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691",
+      "caption": "Native Orekit numerical replay and step-refinement agreement.",
+      "alt_text": "Native Orekit numerical replay and step-refinement agreement.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/orbital-analysis.html",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_RESOURCES",
+      "path": "docs/assets/acr1/figures/MISSION_RESOURCES.png",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "sha256": "86794a4cbaf3b02d9f251ba616a4453b727660c5de2ed44c22fbcde2b3011909",
+      "dimensions_px": [
+        2280,
+        912
+      ],
+      "evidence_class": "computed result",
+      "role": "scientific figure",
+      "source_path": "validation/acr1/mission/MISSION_RESULTS.csv",
+      "source_sha256": "7acb70e5d23bcac84630eab0c101568f916f66e1647e320cf99bbe8357b39209",
+      "caption": "Bounded same-input mission fuel and wet-mass comparison.",
+      "alt_text": "Bounded same-input mission fuel and wet-mass comparison.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/orbital-analysis.html",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "MISSION_TARGETS",
+      "path": "docs/assets/acr1/figures/MISSION_TARGETS.png",
+      "configuration": "VOLLEY-G5-ACR1",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "sha256": "175594c388830c1e4243bce857e7c2cf46a251b1a104e3742d324f69c10c7fdb",
+      "dimensions_px": [
+        2280,
+        912
+      ],
+      "evidence_class": "computed result",
+      "role": "scientific figure",
+      "source_path": "validation/acr1/mission/TARGETS.json",
+      "source_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "caption": "Frozen synthetic target families and common-epoch positions.",
+      "alt_text": "Frozen synthetic target families and common-epoch positions.",
+      "software": "frozen source-defined scientific plotting pipeline",
+      "camera": null,
+      "scene": null,
+      "evidence_link": "docs/orbital-analysis.html",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "VOLLEY_ACR1_film_sources",
+      "path": "docs/downloads/VOLLEY_ACR1_film_sources.zip",
+      "sha256": "ab4402f4b5cf3bf134698e2275da48b9289d8be925dca7e9cc3db7dba410603b",
+      "bytes": 14719495,
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "editable visual source package",
+      "role": "offline download",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "caption": "Source-only visual package with retained source identities and third-party notices.",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "VOLLEY_G5_ACR1_editable_scene",
+      "path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "sha256": "2aa3689d91210cbed378e97188a87e40f645fc102e004f7c077a6ab26748d1c0",
+      "bytes": 21521208,
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "editable visual source package",
+      "role": "offline download",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "caption": "Source-only visual package with retained source identities and third-party notices.",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "film-custody",
+      "path": "docs/films/custody/FILM_MANIFEST.json",
+      "sha256": "d4acc4bf98a3c645886c753883bd205d2d2d60beb93e08a2cf58e6f53c274e7f",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "source-driven editorial film; CAD renders, computed results and explicitly conceptual diagrams",
+      "role": "Continuous payload custody.",
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "duration_s": 78,
+      "caption": "Continuous payload custody.",
+      "alt_text": "Continuous payload custody.",
+      "transcript": "docs/films/custody/transcript.json",
+      "captions": "docs/films/custody/captions.vtt",
+      "scene": {
+        "editorial_sources": [
+          "docs/visual-source/build_films.py",
+          "docs/visual-source/STORYBOARD.json"
+        ],
+        "cad_scene": {
+          "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+          "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+          "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+        }
+      },
+      "software": {
+        "package": "ACR1 source-driven editorial films",
+        "rebuild": "python3 docs/visual-source/build_films.py prepare; python3 docs/visual-source/build_films.py animatic; python3 docs/visual-source/build_films.py render",
+        "python_packages": [
+          "Pillow 12.3.0",
+          "NumPy"
+        ],
+        "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+        "font": "DejaVuSans, DejaVuSans-Bold and DejaVuSansMono; installed runtime dependencies",
+        "font_sha256": {
+          "DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+          "DejaVuSans-Bold.ttf": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+          "DejaVuSansMono.ttf": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8"
+        },
+        "renderer": "Pillow vector/text compositor + unchanged source images; FFmpeg H.264/VP9 encoders",
+        "cad_scene": {
+          "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+          "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+          "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+        },
+        "motion_class": "conceptual diagrams; computed mission host trajectory",
+        "archive_frames": "lossless 1280x720 PNG storyboard states; individual film directories",
+        "path_base": "repository_root",
+        "release_identity": "containing Git commit or release tag",
+        "font_license": "docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt",
+        "source_package_unpack_directory": "docs/"
+      },
+      "source_pins": "docs/visual-source/SOURCE_PINS.json",
+      "camera": "Source-specific; see camera provenance.",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "release_identity": "containing Git commit or release tag",
+      "original_render_script": "docs/visual-source/build_films.py",
+      "original_storyboard": "docs/visual-source/STORYBOARD.json",
+      "camera_provenance": "docs/assets/acr1/VIEW_PROVENANCE.json"
+    },
+    {
+      "asset_id": "film-methods",
+      "path": "docs/films/methods/FILM_MANIFEST.json",
+      "sha256": "2aca85d2deccb0aaa855a88be120d11ac94f4c7c935d1a99dd494a07cb15bcab",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "source-driven editorial film; CAD renders, computed results and explicitly conceptual diagrams",
+      "role": "Geometry. Models. Results.",
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "duration_s": 54,
+      "caption": "Geometry. Models. Results.",
+      "alt_text": "Geometry. Models. Results.",
+      "transcript": "docs/films/methods/transcript.json",
+      "captions": "docs/films/methods/captions.vtt",
+      "scene": {
+        "editorial_sources": [
+          "docs/visual-source/build_films.py",
+          "docs/visual-source/STORYBOARD.json"
+        ],
+        "cad_scene": {
+          "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+          "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+          "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+        }
+      },
+      "software": {
+        "package": "ACR1 source-driven editorial films",
+        "rebuild": "python3 docs/visual-source/build_films.py prepare; python3 docs/visual-source/build_films.py animatic; python3 docs/visual-source/build_films.py render",
+        "python_packages": [
+          "Pillow 12.3.0",
+          "NumPy"
+        ],
+        "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+        "font": "DejaVuSans, DejaVuSans-Bold and DejaVuSansMono; installed runtime dependencies",
+        "font_sha256": {
+          "DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+          "DejaVuSans-Bold.ttf": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+          "DejaVuSansMono.ttf": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8"
+        },
+        "renderer": "Pillow vector/text compositor + unchanged source images; FFmpeg H.264/VP9 encoders",
+        "cad_scene": {
+          "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+          "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+          "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+        },
+        "motion_class": "conceptual diagrams; computed mission host trajectory",
+        "archive_frames": "lossless 1280x720 PNG storyboard states; individual film directories",
+        "path_base": "repository_root",
+        "release_identity": "containing Git commit or release tag",
+        "font_license": "docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt",
+        "source_package_unpack_directory": "docs/"
+      },
+      "source_pins": "docs/visual-source/SOURCE_PINS.json",
+      "camera": "Source-specific; see camera provenance.",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "release_identity": "containing Git commit or release tag",
+      "original_render_script": "docs/visual-source/archive/build_films_R1.py",
+      "original_storyboard": "docs/visual-source/archive/STORYBOARD_R1.json",
+      "camera_provenance": "docs/assets/acr1/VIEW_PROVENANCE.json"
+    },
+    {
+      "asset_id": "film-mission",
+      "path": "docs/films/mission/FILM_MANIFEST.json",
+      "sha256": "df2ec885c7aa5bf836bde4d390e11cf704174492d20eac10299593c0937a1754",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "source-driven editorial film; CAD renders, computed results and explicitly conceptual diagrams",
+      "role": "A host-assisted delivery study.",
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "duration_s": 108,
+      "caption": "A host-assisted delivery study.",
+      "alt_text": "A host-assisted delivery study.",
+      "transcript": "docs/films/mission/transcript.json",
+      "captions": "docs/films/mission/captions.vtt",
+      "scene": {
+        "editorial_sources": [
+          "docs/visual-source/build_films.py",
+          "docs/visual-source/STORYBOARD.json"
+        ],
+        "cad_scene": {
+          "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+          "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+          "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+        }
+      },
+      "software": {
+        "package": "ACR1 source-driven editorial films",
+        "rebuild": "python3 docs/visual-source/build_films.py prepare; python3 docs/visual-source/build_films.py animatic; python3 docs/visual-source/build_films.py render",
+        "python_packages": [
+          "Pillow 12.3.0",
+          "NumPy"
+        ],
+        "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+        "font": "DejaVuSans, DejaVuSans-Bold and DejaVuSansMono; installed runtime dependencies",
+        "font_sha256": {
+          "DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+          "DejaVuSans-Bold.ttf": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+          "DejaVuSansMono.ttf": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8"
+        },
+        "renderer": "Pillow vector/text compositor + unchanged source images; FFmpeg H.264/VP9 encoders",
+        "cad_scene": {
+          "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+          "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+          "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+        },
+        "motion_class": "conceptual diagrams; computed mission host trajectory",
+        "archive_frames": "lossless 1280x720 PNG storyboard states; individual film directories",
+        "path_base": "repository_root",
+        "release_identity": "containing Git commit or release tag",
+        "font_license": "docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt",
+        "source_package_unpack_directory": "docs/"
+      },
+      "source_pins": "docs/visual-source/SOURCE_PINS.json",
+      "camera": "Source-specific; see camera provenance.",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "release_identity": "containing Git commit or release tag",
+      "original_render_script": "docs/visual-source/build_films.py",
+      "original_storyboard": "docs/visual-source/STORYBOARD.json",
+      "camera_provenance": "docs/assets/acr1/VIEW_PROVENANCE.json"
+    },
+    {
+      "asset_id": "film-overview",
+      "path": "docs/films/overview/FILM_MANIFEST.json",
+      "sha256": "5279417ef205d02dd0df56b7f61809a33eb12964b8c9b6eb5fa66b297aad431d",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "source-driven editorial film; CAD renders, computed results and explicitly conceptual diagrams",
+      "role": "One path. Commanded departures.",
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "duration_s": 72,
+      "caption": "One path. Commanded departures.",
+      "alt_text": "One path. Commanded departures.",
+      "transcript": "docs/films/overview/transcript.json",
+      "captions": "docs/films/overview/captions.vtt",
+      "scene": {
+        "editorial_sources": [
+          "docs/visual-source/build_films.py",
+          "docs/visual-source/STORYBOARD.json"
+        ],
+        "cad_scene": {
+          "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+          "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+          "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+        }
+      },
+      "software": {
+        "package": "ACR1 source-driven editorial films",
+        "rebuild": "python3 docs/visual-source/build_films.py prepare; python3 docs/visual-source/build_films.py animatic; python3 docs/visual-source/build_films.py render",
+        "python_packages": [
+          "Pillow 12.3.0",
+          "NumPy"
+        ],
+        "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+        "font": "DejaVuSans, DejaVuSans-Bold and DejaVuSansMono; installed runtime dependencies",
+        "font_sha256": {
+          "DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+          "DejaVuSans-Bold.ttf": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+          "DejaVuSansMono.ttf": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8"
+        },
+        "renderer": "Pillow vector/text compositor + unchanged source images; FFmpeg H.264/VP9 encoders",
+        "cad_scene": {
+          "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+          "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+          "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+        },
+        "motion_class": "conceptual diagrams; computed mission host trajectory",
+        "archive_frames": "lossless 1280x720 PNG storyboard states; individual film directories",
+        "path_base": "repository_root",
+        "release_identity": "containing Git commit or release tag",
+        "font_license": "docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt",
+        "source_package_unpack_directory": "docs/"
+      },
+      "source_pins": "docs/visual-source/SOURCE_PINS.json",
+      "camera": "Source-specific; see camera provenance.",
+      "release": "ACR1-WEB-R1",
+      "status": "current",
+      "release_identity": "containing Git commit or release tag",
+      "original_render_script": "docs/visual-source/build_films.py",
+      "original_storyboard": "docs/visual-source/STORYBOARD.json",
+      "camera_provenance": "docs/assets/acr1/VIEW_PROVENANCE.json"
+    }
+  ],
+  "path_base": "repository_root",
+  "reviewer": "Source identity, captions and display checks are recorded in the linked verification files.",
+  "verification": "docs/visual-source/FINAL_ASSET_IDENTITY_REVIEW.json",
+  "public_source_index": "docs/visual-source/PUBLIC_SOURCE_INDEX.json",
+  "raw_capture_policy": "Original capture paths are retained inside immutable provenance files; public file locations are indexed here.",
+  "external_academic_downloads": {
+    "revision": "ED1-external-academic-downloads-R1",
+    "scope": "Main links to the academic edition in its owning repository; no academic PDF/DOCX is bundled in Main.",
+    "artifacts": [
+      {
+        "artifact": "GEN5_FINAL_YEAR_REPORT.pdf",
+        "role": "current ED1 citation-corrected academic report,55pages",
+        "repository": "VOLLEY-thesis",
+        "source_path": "current/academic/GEN5_FINAL_YEAR_REPORT.pdf",
+        "edition": "ED1,25October2026",
+        "sha256": "3739d382a3538862373eae1e2d3fb28eef7e8189020f855aaf04ff1cbada1f3c",
+        "download_url": "https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY-thesis/main/current/academic/GEN5_FINAL_YEAR_REPORT.pdf",
+        "browser_url": "https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/blob/main/current/academic/GEN5_FINAL_YEAR_REPORT.pdf",
+        "stored_in_main_repository": false
+      },
+      {
+        "artifact": "GEN5_FINAL_YEAR_REPORT.docx",
+        "role": "current ED1 editable academic report",
+        "repository": "VOLLEY-thesis",
+        "source_path": "current/academic/GEN5_FINAL_YEAR_REPORT.docx",
+        "edition": "ED1,25October2026",
+        "sha256": "b28497f536e914d14d9c1c586d95619f77baae50c2967e70cb53a2761be06dea",
+        "download_url": "https://raw.githubusercontent.com/aaaaaaaaaaaavm/VOLLEY-thesis/main/current/academic/GEN5_FINAL_YEAR_REPORT.docx",
+        "browser_url": "https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/blob/main/current/academic/GEN5_FINAL_YEAR_REPORT.docx",
+        "stored_in_main_repository": false
+      }
+    ],
+    "path_base": "source_repository_root"
+  },
+  "retired_asset_groups": [
+    {
+      "path": "docs/assets/sequence/",
+      "status": "historical",
+      "configuration": "original Gen5; superseded for current ACR1 front door",
+      "evidence_route": "docs/historical-index.html"
+    },
+    {
+      "path": "docs/assets/selected-feeder/",
+      "status": "historical/subsystem identity preserved",
+      "configuration": "FM08, not integrated ACR1",
+      "evidence_route": "docs/historical-feeder-analysis.html"
+    }
+  ],
+  "academic_release_policy": {
+    "edition": "ED1 citation-corrected final-year report and companion manuscript",
+    "release_cutoff": "2026-10-30 evening Asia/Kolkata",
+    "thesis_policy": "Preserve the thesis edition as a fixed release; later research is versioned separately.",
+    "manuscript_status": "IEEE-formatted and unsubmitted"
+  }
+}

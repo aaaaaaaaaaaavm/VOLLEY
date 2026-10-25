@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:10.000
+Retain the inventory. Two fixed six-level banks hold twelve nominal 3U payloads. Select one cell and inhibit host burns during feeding.
+
+2
+00:00:10.000 --> 00:00:20.000
+Capture the selected payload. The guided pusher feeds the lift. At source level 5 the payload floor is Z830 mm; the lift grips hold its pallet.
+
+3
+00:00:20.000 --> 00:00:32.000
+Overlap the restraints. At handoff, positive carrier bayonets and outboard lift grip pins establish dual custody. The storage banks and fixed frame are hidden in this view for access.
+
+4
+00:00:32.000 --> 00:00:44.000
+Prove the clear state. Payload floor Z46 mm. Raised custody frame floor Z190 mm. Prove pallet locks, pusher withdrawal and a clear path before enabling launch.
+
+5
+00:00:44.000 --> 00:01:00.000
+Retain the pallet during recovery. The payload departs along +X. Carrier and captive pallet arrest together, then return as one retained assembly for the next transfer.
+
+6
+00:01:00.000 --> 00:01:18.000
+Fault → inhibit → retain → verify. Inhibit launch, retain the payload, isolate the cell, supervise reset, then verify before continuing. Physical fault-response validation is subsequent work.

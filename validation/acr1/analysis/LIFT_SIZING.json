@@ -1,0 +1,275 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "CAD_parameter_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+  "cradle_source_sha256": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+  "model_sha256": "79752bab40b76e596babf6bacc9d89ba06b2d3ba1562732213e55d118838b76e",
+  "ratio_source_sha256": "e9b1708dc5d9503bca20e294960fd700a6569c445163c85ac9f8160edbd6d611",
+  "reference": {
+    "motor": "3242G024BX4",
+    "gear": "32GPT20:1 nominal,19.8:1 exact",
+    "gear_mass_kg": 0.157,
+    "motor_mass_kg": 0.179,
+    "gear_body_length_mm": 34.7,
+    "motor_gear_length_mm": 78.9,
+    "sources": [
+      "https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf",
+      "https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf",
+      "https://www.faulhaber.com/fileadmin/Import/Media/EN_GEARHEADS_REDUCTION_RATIOS.pdf"
+    ]
+  },
+  "assumptions": {
+    "stroke_mm": 784.0,
+    "time_s": 120.0,
+    "screw_lead_mm": 4.0,
+    "root_diameter_study_mm": 11.0,
+    "supported_span_mm": 1120.0,
+    "steel_E_Pa": 200000000000.0,
+    "screw_efficiency": 0.42,
+    "gear_efficiency": 0.5,
+    "common_output_drag_Nm": 0.015,
+    "rotor_and_gear_inertia_kg_m2": 3.195e-06,
+    "phase": "quintic rest-to-rest",
+    "holding_brake_static_Nm": 2,
+    "equal_load_sharing": "Twin mechanically synchronized screws; skew/load imbalance requires sensitivity"
+  },
+  "screw_euler_N_each": 1130.9263813283976,
+  "cases": [
+    {
+      "moving_mass_study_kg": 10,
+      "resistance_N": 50,
+      "gravity_m_s2": 0,
+      "axial_force_total_peak_N": 50.003143345492,
+      "motor_torque_peak_Nm": 0.009202228672267112,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1774.6715565620652,
+      "current_peak_A": 0.311276054885679,
+      "screw_euler_factor_equal_share": 45.23421151803872,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 10,
+      "resistance_N": 50,
+      "gravity_m_s2": 9.80665,
+      "axial_force_total_peak_N": 148.069643345492,
+      "motor_torque_peak_Nm": 0.024216916721061105,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1468.3719203666678,
+      "current_peak_A": 0.6739496792526837,
+      "screw_euler_factor_equal_share": 15.275600802111727,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 10,
+      "resistance_N": 100,
+      "gravity_m_s2": 0,
+      "axial_force_total_peak_N": 100.003143345492,
+      "motor_torque_peak_Nm": 0.016857589090347694,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1618.5022040332215,
+      "current_peak_A": 0.4961881422789298,
+      "screw_euler_factor_equal_share": 22.61781667044725,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 10,
+      "resistance_N": 100,
+      "gravity_m_s2": 9.80665,
+      "axial_force_total_peak_N": 198.069643345492,
+      "motor_torque_peak_Nm": 0.03187227713914169,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1312.202567837824,
+      "current_peak_A": 0.8588617666459345,
+      "screw_euler_factor_equal_share": 11.419482180373574,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 20,
+      "resistance_N": 50,
+      "gravity_m_s2": 0,
+      "axial_force_total_peak_N": 50.006286690984,
+      "motor_torque_peak_Nm": 0.009202709941120307,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1774.6715565620652,
+      "current_peak_A": 0.3112876797372055,
+      "screw_euler_factor_equal_share": 45.23136814045026,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 20,
+      "resistance_N": 50,
+      "gravity_m_s2": 9.80665,
+      "axial_force_total_peak_N": 246.139286690984,
+      "motor_torque_peak_Nm": 0.03923208603870829,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1162.0722841712704,
+      "current_peak_A": 1.0366349284712149,
+      "screw_euler_factor_equal_share": 9.18932037654128,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 20,
+      "resistance_N": 100,
+      "gravity_m_s2": 0,
+      "axial_force_total_peak_N": 100.006286690984,
+      "motor_torque_peak_Nm": 0.016858070359200894,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1618.5022040332215,
+      "current_peak_A": 0.4961997671304563,
+      "screw_euler_factor_equal_share": 22.61710575901936,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 20,
+      "resistance_N": 100,
+      "gravity_m_s2": 9.80665,
+      "axial_force_total_peak_N": 296.139286690984,
+      "motor_torque_peak_Nm": 0.046887446456788884,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1005.9029316424267,
+      "current_peak_A": 1.2215470158644657,
+      "screw_euler_factor_equal_share": 7.6378004010558636,
+      "checks": {
+        "motor_continuous_torque": false,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": false
+    },
+    {
+      "moving_mass_study_kg": 30,
+      "resistance_N": 50,
+      "gravity_m_s2": 0,
+      "axial_force_total_peak_N": 50.009430036476,
+      "motor_torque_peak_Nm": 0.009203191209973502,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1774.6715565620652,
+      "current_peak_A": 0.3112993045887319,
+      "screw_euler_factor_equal_share": 45.228525120303104,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 30,
+      "resistance_N": 50,
+      "gravity_m_s2": 9.80665,
+      "axial_force_total_peak_N": 344.208930036476,
+      "motor_torque_peak_Nm": 0.05424725535635548,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 855.772647975873,
+      "current_peak_A": 1.399320177689746,
+      "screw_euler_factor_equal_share": 6.571162353100791,
+      "checks": {
+        "motor_continuous_torque": false,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": false
+    },
+    {
+      "moving_mass_study_kg": 30,
+      "resistance_N": 100,
+      "gravity_m_s2": 0,
+      "axial_force_total_peak_N": 100.009430036476,
+      "motor_torque_peak_Nm": 0.01685855162805409,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 1618.5022040332215,
+      "current_peak_A": 0.49621139198198283,
+      "screw_euler_factor_equal_share": 22.616394892280052,
+      "checks": {
+        "motor_continuous_torque": true,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": true
+    },
+    {
+      "moving_mass_study_kg": 30,
+      "resistance_N": 100,
+      "gravity_m_s2": 9.80665,
+      "axial_force_total_peak_N": 394.208930036476,
+      "motor_torque_peak_Nm": 0.06190261577443607,
+      "motor_rpm_peak": 3638.25,
+      "torque_speed_margin_rpm": 699.6032954470284,
+      "current_peak_A": 1.584232265082997,
+      "screw_euler_factor_equal_share": 5.737700468752717,
+      "checks": {
+        "motor_continuous_torque": false,
+        "torque_speed_margin": true,
+        "gear_10000rpm_limit": true,
+        "gear_continuous_3Nm": true,
+        "screw_buckling_factor_2_equal_share": true
+      },
+      "pass_declared_screens": false
+    }
+  ],
+  "mass_basis": "Actual cradle+pallet+payload7.573043kg is below the conservative10kg lowest sizing case. See RESOURCE_LEDGER.json;10/20/30kg cases retain allowance and load sensitivity.",
+  "interpretation": "Coast operation is the reference. Ground gravity cases are separate handling sensitivities; a failed case is not a hidden operational rating.",
+  "no_claims": [
+    "Catalog space qualification",
+    "Nut load/life acceptance",
+    "Brake dynamic arrest",
+    "Measured transmission efficiency",
+    "Measured synchronization accuracy"
+  ]
+}

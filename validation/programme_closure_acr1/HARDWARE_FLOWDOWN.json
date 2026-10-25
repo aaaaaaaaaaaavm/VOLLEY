@@ -1,0 +1,106 @@
+{
+  "study": "PCS-LUNAR-C7-FLOWDOWN-01",
+  "configuration": "LUNAR-PCS-01 requirements investigation,not a new near-term LEO rating",
+  "power": {
+    "source_model": "24V catalog-reference motors; peak current conservatively held over full motion times,not measured average service.",
+    "feed_peak_current_A": 0.7195777417745645,
+    "lift_peak_current_A": 0.4961881422789298,
+    "feed_upper_energy_J": 690.7946321035819,
+    "lift_upper_energy_J": 3382.018377773186,
+    "loading_motion_times_s": {
+      "feed": 40,
+      "lift_empty": 22,
+      "lift_loaded": 120,
+      "lower": 120,
+      "park": 22
+    },
+    "represented_loads_average_upper_W": 12.973002459313106,
+    "represented_loads_peak_upper_W": 21.192172684398724,
+    "represented_thermal_average_upper_W": 12.93553790318878,
+    "required_additional_terms": [
+      "controller/encoder/communications standby",
+      "brake and lock/keeper/index actuators",
+      "harness and drive losses",
+      "host-provided home index pin",
+      "thermal control,heaters and contamination allowances"
+    ],
+    "host_requirement_expression": "Continuous allocation >= 12.973W + unallocated service terms; peak allocation >= 21.192W + concurrent unallocated terms. Host24V availability and return/grounding are acceptance inputs,not facts."
+  },
+  "requirements": [
+    {
+      "id": "C7-V",
+      "requirement": "Post-arrest separation command and vector",
+      "value": "Accepted modeled command1\u20133m/s; actual finite-host relative speeds in this12-shot campaign 0.960300\u20132.873143m/s.6prograde/6retrograde. Direction is body+X; all retargeting consumes finite slew time.",
+      "downstream": "N2,N3",
+      "evidence": "campaign/T5_R20_searched.json",
+      "acceptance": "Imposed source-calibrated point-event mapping; source-rated physical pulse/contact and actual payload release accuracy remain external."
+    },
+    {
+      "id": "C7-Q",
+      "requirement": "Increment and3sigma state accuracy",
+      "value": "Declared1km osculating-perilune error band: speed3sigma<= 0.192240m/s at the standalone+3m/s reference with10m/0.01m/s navigation sigma and0.1deg pointing sigma. Quantization-only necessary increment<= 0.221980m/s; allocate finer when other speed errors consume budget.",
+      "downstream": "N2,N5",
+      "evidence": "NAVIGATION_REQUIREMENTS.json",
+      "acceptance": "Study requirements only. Independent speed/angle saturation is not a joint guarantee. Measured sensor/control covariance and perturbed campaign Monte Carlo not supplied. The harmonic native host endpoint differs from the open-loop point-gravity planner by about1.63km/1.49m/s,exceeding the assumed10m/0.01m/s navigation bands; full-force navigation/planning/feedback is required before combining the standalone covariance with a campaign precision claim."
+    },
+    {
+      "id": "C7-A",
+      "requirement": "Finite host control authority and recovery",
+      "value": "Surviving tested reference uses20N main thrust,Isp220s,5Nm attitude couple,>= 18.567deg/s rate and declared inertia tensor. Cold-gas couple uses60s Isp and0.5m lever.20s guard,400s loading coast,5s preguard and450s slots are included.",
+      "downstream": "N3,N5",
+      "evidence": "CAMPAIGN_RESULTS.json",
+      "acceptance": "An operational demand,not a supplier capability.5deg/s and double-inertia cases retain missed-slot failures; a real host must demonstrate allocated authority/plume/pointing and resources."
+    },
+    {
+      "id": "C7-M",
+      "requirement": "Mass properties and load path",
+      "value": "Actual source ACR1 dry156.556720kg including unlocated7kg allowance; loaded204.556720kg. Eight-state geometry box2.250x1.240x1.3489m. Campaign uses280kg complete dry retained core with declared inertia,actual CAD payload coordinates and per-shot updated CG/inertia. Payload axial computational load26.8635N and100N guide sensitivity remain source budgets.",
+      "downstream": "N2,N3,N5",
+      "evidence": "STUDY_RESULTS.json;inputs/DESIGN_BUDGETS.json",
+      "acceptance": "Manufactured mass/CG/inertia,external mounting bolts,launch/environment loads and provider interface approval remain external."
+    },
+    {
+      "id": "C7-R",
+      "requirement": "Retention duration and custody",
+      "value": "At least5400s from staging campaign start through final nominal release; failed payloads remain captive through abort and independently available disposal. Launch/transfer waiting must be added: ideal Earth\u2013Moon flight is about5days,not a validated retention rating.355s source cycle inside400s coast; captivity/capture precedes prior restraint release.",
+      "downstream": "N2,N5",
+      "evidence": "campaign_inputs.json;inputs/MISSION_INPUTS.json",
+      "acceptance": "Current native custody geometry is retained. Physical latch endurance,launch/thermal retention and failed-path clearance tests remain external; no impossible automatic fault reset is claimed."
+    },
+    {
+      "id": "C7-E",
+      "requirement": "Pulse and bus services",
+      "value": "64cells32s2p,86.4V internal initial bank.1\u20133m/s maximum captured pulse 992.126J; known represented service upper envelope 12.973W average/21.192W peak plus named unallocated services.24V is the motor/charger-interface design request.",
+      "downstream": "N3,N5",
+      "evidence": "H0_DEMAND_SHEET.md",
+      "acceptance": "Host bus quality/isolation,fault current/charger efficiency,standby/brake/lock services and actual circuit/pulse/vacuum acceptance remain external."
+    },
+    {
+      "id": "C7-T",
+      "requirement": "Thermal,vacuum and material properties",
+      "value": "Represented thermal upper envelope 12.936W over450s plus unallocated heater/control/actuator terms. Pulse loss and copper/tolerance budgets are source linked. Eaton cell catalog operating range\u221240..65degC is a reference limit,not space qualification.",
+      "downstream": "N2,N3,N5",
+      "evidence": "inputs/DESIGN_BUDGETS.json;inputs/POWER_COMPONENT_REFERENCE.json",
+      "acceptance": "Required sink/interface temperatures,radiator view factors,thermal contact/conduction,cycling,outgassing,vacuum friction and contamination acceptance must be measured/agreed. No approved lunar radiator is inferred."
+    },
+    {
+      "id": "C7-EMC",
+      "requirement": "EMC,grounding and magnetic interface",
+      "value": "40kHz source PWM;86.4V internal bank; source-rated current/voltage/ripple design budgets retained. Separate structure/return/bonding and exclusion-zone interfaces must be allocated around the LSM and pulse wiring.",
+      "downstream": "N3,N5",
+      "evidence": "inputs/POWER_COMPONENT_REFERENCE.json",
+      "acceptance": "Provider conducted/radiated/transient limits,magnetic cleanliness,shielding/harness/bonding tests and payload susceptibility are missing acceptance inputs,not fabricated compliance."
+    },
+    {
+      "id": "C7-F",
+      "requirement": "Release count,cadence and abort/disposal",
+      "value": "12command attempts at450s spacing; successful reference releases12. Modeled pre-command isolated-cell fault yields11releases/1retained; unresolved shared-path fault atslot6 stops after5releases with7retained. Engine-only disposal remains independent of successful releases; surviving campaign leaves 18.233629kg versus8kg reserved floor. Additional actual terminal-state disposal replays for nominal/isolated-cell/shared-path-abort cases all hit the sphere with<= 6.510957kg additional propellant,below8kg,after coasting to apolune and finite attitude preparation.",
+      "downstream": "N2,N3,N5",
+      "evidence": "CAMPAIGN_RESULTS.json;DISPOSAL_NATIVE_RESULTS.json",
+      "acceptance": "Sensor/interlock/abort actuation must implement those controlled states. A real impact site,engine/propellant capability and disposal authorization remain external."
+    }
+  ],
+  "source_campaign": "CAMPAIGN_RESULTS.json",
+  "source_native": "CAMPAIGN_NATIVE_RESULTS.json",
+  "near_term_configuration": "VOLLEY-G5-ACR1 unchanged; lunar flowdown does not redefine its test-article target"
+}

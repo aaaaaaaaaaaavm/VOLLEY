@@ -1,0 +1,273 @@
+{
+  "overview": {
+    "title": "One path. Commanded departures.",
+    "duration_s": 72,
+    "scope": "System overview / ACR1",
+    "slides": [
+      {
+        "duration_s": 12,
+        "title": "An integrated twelve-3U study.",
+        "text": "Twelve 4 kg 3U envelopes. Two six-level storage banks. One reusable electromagnetic carrier.",
+        "asset": "01_assembly_isometric.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 12,
+        "title": "Select. Feed. Capture.",
+        "text": "A guided lead screw transfers one payload sideways into the Z-indexed lift. The lift holds the payload and captive pallet.",
+        "asset": "03_captured_source_level.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 12,
+        "title": "Transfer custody positively.",
+        "text": "Carrier bayonets and lift grip pins overlap custody at handoff. Prove the destination restraint before releasing the other.",
+        "asset": "02_handoff_pallet_locks.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 12,
+        "title": "Dock. Prove. Clear.",
+        "text": "The pallet locks to the carrier. The custody frame withdraws clear of the launch path before the shot is enabled.",
+        "asset": "04_clear_docked.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 12,
+        "title": "Only the payload departs.",
+        "text": "The captive pallet stays on the carrier through arrest and return. The diagram explains the sequence; its timing and motion are conceptual.",
+        "asset": null,
+        "kind": "recovery",
+        "source": "cad/release/FINAL_CAD_MANIFEST.json; analysis/COUPLED_SHOT.json",
+        "label": "Conceptual motion / not time-scaled / not a dynamics simulation"
+      },
+      {
+        "duration_s": 12,
+        "title": "Evaluate the complete trade.",
+        "text": "Modeled 1\u20133 m/s commands. Installed device allocation 156.557 kg. These preplanned mission cases show no advantage over the ideal ground-pretrimmed spring comparator.",
+        "asset": "MISSION_RESOURCES.png",
+        "kind": "plot",
+        "source": "mission/MISSION_RESULTS.csv",
+        "label": "Computed result / G5-MISSION-01"
+      }
+    ]
+  },
+  "custody": {
+    "title": "Continuous payload custody.",
+    "duration_s": 78,
+    "scope": "Feeder, carrier and modeled fault branch / ACR1",
+    "slides": [
+      {
+        "duration_s": 10,
+        "title": "Retain the inventory.",
+        "text": "Two fixed six-level banks hold twelve nominal 3U payloads. Select one cell and inhibit host burns during feeding.",
+        "asset": "01_assembly_isometric.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 10,
+        "title": "Capture the selected payload.",
+        "text": "The guided pusher feeds the lift. At source level 5 the payload floor is Z830 mm; the lift grips hold its pallet.",
+        "asset": "03_captured_source_level.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 12,
+        "title": "Overlap the restraints.",
+        "text": "At handoff, positive carrier bayonets and outboard lift grip pins establish dual custody. The storage banks and fixed frame are hidden in this view for access.",
+        "asset": "02_handoff_pallet_locks.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 12,
+        "title": "Prove the clear state.",
+        "text": "Payload floor Z46 mm. Raised custody frame floor Z190 mm. Prove pallet locks, pusher withdrawal and a clear path before enabling launch.",
+        "asset": "04_clear_docked.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 16,
+        "title": "Retain the pallet during recovery.",
+        "text": "The payload departs. Carrier and captive pallet arrest together, then return as one retained assembly. This explanatory diagram is not measured motion.",
+        "asset": null,
+        "kind": "recovery",
+        "source": "cad/release/FINAL_CAD_MANIFEST.json; analysis/COUPLED_SHOT.json",
+        "label": "Conceptual motion / not time-scaled / not a dynamics simulation"
+      },
+      {
+        "duration_s": 18,
+        "title": "Fault \u2192 inhibit \u2192 retain \u2192 verify.",
+        "text": "Modeled custody/interlock logic; physical fault-response validation is subsequent work. A fault does not authorize an automatic restart.",
+        "asset": null,
+        "kind": "fault",
+        "source": "analysis/TRANSFER_INTERLOCKS.json",
+        "label": "Modeled fault/isolation branch / physical validation subsequent"
+      }
+    ]
+  },
+  "mission": {
+    "title": "A host-assisted delivery study.",
+    "duration_s": 108,
+    "scope": "G5-MISSION-01 / frozen twelve-release Gen5 case",
+    "slides": [
+      {
+        "duration_s": 12,
+        "title": "One common starting state.",
+        "text": "Nominal 500 km SSO. Twelve 4 kg 3U payloads. Generic host: 500 kg wet bus, including 20 kg fuel once; Isp 220 s.",
+        "asset": "01_assembly_isometric.jpg",
+        "kind": "image",
+        "source": "mission/MISSION_INPUTS.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 12,
+        "title": "Twelve scheduled releases.",
+        "text": "Actual computed Gen5 host history, uniform-2 target family. Markers identify the frozen release epochs; the inertial X/Z projection preserves the numerical trajectory.",
+        "asset": null,
+        "kind": "trajectory",
+        "source": "mission/release/uniform_2_gen5_f0.35_trajectory.csv; mission/TARGETS.json",
+        "label": "Computed host trajectory / fixed-axis J2 / X\u2013Z projection"
+      },
+      {
+        "duration_s": 12,
+        "title": "Host manoeuvre. Point. Release.",
+        "text": "Host burns provide the departure state and direction. The launcher adds the coupled release contribution. The propagated state depends on both.",
+        "asset": null,
+        "kind": "mission_flow",
+        "source": "mission/MISSION_REPORT.md",
+        "label": "Conceptual operations diagram / generic host study"
+      },
+      {
+        "duration_s": 12,
+        "title": "Frozen full-state targets.",
+        "text": "Uniform synthetic 2 m/s or alternating 1/3 m/s along-track target families. All payloads and retained host are compared at t = 91800 s: 24 h after the final release.",
+        "asset": "MISSION_TARGETS.png",
+        "kind": "plot",
+        "source": "mission/TARGETS.json",
+        "label": "Computed target states / synthetic study cases"
+      },
+      {
+        "duration_s": 12,
+        "title": "Coast for loading and safe release.",
+        "text": "Gen5 reserves 400 s of zero-force loading coast per payload for the declared 355 s cycle. Both architectures keep 5 s pre-release and 20 s post-release zero-force guards.",
+        "asset": null,
+        "kind": "timeline",
+        "source": "mission/MISSION_REPORT.md",
+        "label": "Source-derived operation timing / one 450 s release leg"
+      },
+      {
+        "duration_s": 12,
+        "title": "The spring comparator matters.",
+        "text": "The ideal ground-pretrimmed spring closes both target families at the 1 N and 5 N gates. Preplanned targets give no established Gen5 propellant or initial wet-mass advantage.",
+        "asset": "MISSION_RESOURCES.png",
+        "kind": "plot",
+        "source": "mission/MISSION_RESULTS.csv",
+        "label": "Computed result / bounded candidate policies"
+      },
+      {
+        "duration_s": 12,
+        "title": "Replay checks numerical consistency.",
+        "text": "Native Orekit 13.1.6 replay and 60\u219230 s refinement agree within the declared numerical residuals. Numerical agreement is not physical delivery accuracy.",
+        "asset": "MISSION_NATIVE_AGREEMENT.png",
+        "kind": "plot",
+        "source": "mission/NATIVE_REPLAY_CHECKS.json",
+        "label": "Computed numerical agreement / no physical accuracy inference"
+      },
+      {
+        "duration_s": 12,
+        "title": "Know the model boundary.",
+        "text": "Fixed-axis J2 point masses and constant inertial force. Drag, higher gravity, attitude/plume allocation, navigation and finite exit geometry are outside this study.",
+        "asset": null,
+        "kind": "boundary",
+        "source": "mission/MISSION_REPORT.md",
+        "label": "Generic host study / modeled target states"
+      },
+      {
+        "duration_s": 12,
+        "title": "A reproducible system result.",
+        "text": "The tested uniform family closes within the host gates; alternating Gen5 closes at 5 N. Its retained-device penalty is 84.55672 kg. Inspect the frozen inputs and same-input comparison.",
+        "asset": "MISSION_RESOURCES.png",
+        "kind": "plot",
+        "source": "mission/MISSION_RESULTS.csv; mission/MISSION_REPORT.md",
+        "label": "Computed result / synthetic preplanned target families"
+      }
+    ]
+  },
+  "methods": {
+    "title": "Geometry. Models. Results.",
+    "duration_s": 54,
+    "scope": "Engineering methods and configuration / ACR1",
+    "slides": [
+      {
+        "duration_s": 9,
+        "title": "Start with a controlled configuration.",
+        "text": "VOLLEY-G5-ACR1: twelve 4 kg 3U payloads, two six-level banks, guided screw transfer, indexed lift and captive carrier pallet.",
+        "asset": "01_assembly_isometric.jpg",
+        "kind": "image",
+        "source": "visuals/VIEW_PROVENANCE.json",
+        "label": "CAD-derived Blender render"
+      },
+      {
+        "duration_s": 9,
+        "title": "Resolve the finite geometry.",
+        "text": "Native geometry defines the magnetic gap, conductor placement and finite stator. CAD/STEP is preserved beside the computational model.",
+        "asset": "magnetic_gap_section.png",
+        "kind": "plot",
+        "source": "analysis/FINITE_MOTOR.json",
+        "label": "Scientific section / controlled geometry"
+      },
+      {
+        "duration_s": 9,
+        "title": "Couple the source and moving system.",
+        "text": "The evaluated 1\u20133 m/s commands include finite force, electrical behavior, release recoil and carrier arrest within the declared computational assumptions.",
+        "asset": "coupled_shot_reference.png",
+        "kind": "plot",
+        "source": "analysis/COUPLED_SHOT.json",
+        "label": "Computed coupled-shot result"
+      },
+      {
+        "duration_s": 9,
+        "title": "Account for the whole shot.",
+        "text": "The ledger records mechanical energy and copper, inverter, bank and auxiliary terms. Installed device allocation is 149.55672 kg CAD mass plus 7 kg.",
+        "asset": "shot_energy_ledger.png",
+        "kind": "plot",
+        "source": "analysis/COUPLED_SHOT.json",
+        "label": "Computed energy ledger / model result"
+      },
+      {
+        "duration_s": 9,
+        "title": "Replay the mission independently.",
+        "text": "Frozen synthetic target PV states, continuous host arcs, release momentum and independent mass-flow checks support numerical consistency.",
+        "asset": "MISSION_NATIVE_AGREEMENT.png",
+        "kind": "plot",
+        "source": "mission/NATIVE_REPLAY_CHECKS.json",
+        "label": "Computed numerical agreement / Orekit replay"
+      },
+      {
+        "duration_s": 9,
+        "title": "Use the result to set the next gate.",
+        "text": "The evaluated integrated configuration has a traceable computational record. Gen6 mixed-size work and instrumented hardware correlation remain separately identified development.",
+        "asset": "MISSION_RESOURCES.png",
+        "kind": "plot",
+        "source": "mission/MISSION_REPORT.md",
+        "label": "Computed study result / subsequent development identified"
+      }
+    ]
+  }
+}

@@ -1,7 +1,10 @@
 # Open problems, known errors, and the fix list
 
-Two categories: P-items are errors in the currently published paper and should be
-fixed first. E-items are genuinely unsolved engineering.
+> **Historical issue register — retained 25 October 2026.** Entries below describe the original Gen5 and other dated study configurations. Their titles, classifications and generated counts remain the historical register; they are not an ACR1 completion percentage. Current integrated results and reproduction are in [VOLLEY-G5-ACR1](validation/acr1/README.md), with the current conclusion in [engineering status](docs/STATE_OF_THE_PROJECT.md).
+>
+> The completed ACR1 computational study does not close every historical scientific question. An issue transfers only when its stated configuration, inputs and acceptance evidence apply. [Gen6 configuration status](docs/NEXT_GENERATION_STATUS.md), [prototype requirements](docs/PROTOTYPE_READINESS.md) and [separate programme studies](docs/PROGRAMME_STUDIES_ACR1.md) identify subsequent work and remaining evidence.
+
+The original register distinguishes P-items (reported errors and corrections in the paper/design record at their stated revision) from E-items (unresolved engineering questions). Read each entry’s configuration, date and status with its finding.
 
 > ## How to read the counts
 >

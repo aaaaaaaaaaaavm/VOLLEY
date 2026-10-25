@@ -1,0 +1,13 @@
+family,force_authority_N,architecture,best_tested_case,fuel_used_kg,peak_force_N,status
+uniform_2,1.0,gen5,uniform_2_gen5_f0.35,0.052442570534026345,0.6778266648828832,Closed within declaredcandidate bounds
+uniform_2,1.0,spring_fixed2,uniform_2_spring_fixed2_f0.35_shared_narrow,0.04695730638331952,0.6562694751538798,Closed within declaredcandidate bounds
+uniform_2,1.0,spring_pretrim,uniform_2_spring_pretrim_f0.35_shared_narrow,0.0524425463628404,0.6778264021166079,Closed within declaredcandidate bounds
+uniform_2,5.0,gen5,uniform_2_gen5_f0.35,0.052442570534026345,0.6778266648828832,Closed within declaredcandidate bounds
+uniform_2,5.0,spring_fixed2,uniform_2_spring_fixed2_f0.35_shared_narrow,0.04695730638331952,0.6562694751538798,Closed within declaredcandidate bounds
+uniform_2,5.0,spring_pretrim,uniform_2_spring_pretrim_f0.35_shared_narrow,0.0524425463628404,0.6778264021166079,Closed within declaredcandidate bounds
+alternating_1_3,1.0,gen5,,,,No tested candidate within force ceiling; no global infeasibility inference
+alternating_1_3,1.0,spring_fixed2,,,,No tested candidate within force ceiling; no global infeasibility inference
+alternating_1_3,1.0,spring_pretrim,alternating_1_3_spring_pretrim_f0.35,0.07500241715229095,0.18443248977525928,Closed within declaredcandidate bounds
+alternating_1_3,5.0,gen5,alternating_1_3_gen5_f0.35,0.28987406979751995,4.204211850600141,Closed within declaredcandidate bounds
+alternating_1_3,5.0,spring_fixed2,,,,No tested candidate within force ceiling; no global infeasibility inference
+alternating_1_3,5.0,spring_pretrim,alternating_1_3_spring_pretrim_f0.35_shared_narrow,0.05364511037964803,1.0167379799295009,Closed within declaredcandidate bounds

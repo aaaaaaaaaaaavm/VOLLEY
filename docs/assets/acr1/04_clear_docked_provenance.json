@@ -1,0 +1,123 @@
+{
+  "view_id": "04_clear_docked",
+  "state": "clear",
+  "render_engine": "Blender Workbench 4.3.2",
+  "projection": "ORTHOGRAPHIC",
+  "resolution_px": [
+    2800,
+    2100
+  ],
+  "source_mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/clear.json",
+  "source_mesh_sha256": "49b7f1c696dcc4706df94d2b2cd45ec1d52d8e6aa533aae6e111bab259b2af50",
+  "native_provenance": {
+    "state": "clear",
+    "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.FCStd",
+    "native_sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3",
+    "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.step",
+    "step_sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922",
+    "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.json",
+    "bom_sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19",
+    "source_sha256": {
+      "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+      "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+      "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+      "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+      "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+      "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+    },
+    "independent_step_readback": {
+      "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+      "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+      "pass": true
+    },
+    "tessellation": {
+      "tool": "FreeCAD MeshPart.meshFromShape",
+      "linear_deflection_mm": 0.3,
+      "angular_deflection_rad": 0.15,
+      "relative": false,
+      "units": "meters;native coordinates divided by1000",
+      "purpose": "Visualization only;not analysis mesh"
+    },
+    "object_count": 387,
+    "triangle_count": 242510
+  },
+  "camera": {
+    "location_m": [
+      6.1002516746521,
+      -1.3128262758255005,
+      1.7547996044158936
+    ],
+    "rotation_euler_rad": [
+      1.3155678510665894,
+      -7.430895010429595e-08,
+      1.34269380569458
+    ],
+    "ortho_scale_m": 1.0666667222976685,
+    "frame_height_m": 0.8
+  },
+  "CAD_object_count": 387,
+  "rendered_CAD_object_count": 387,
+  "hidden_CAD_objects": [],
+  "hidden_parts_disclosure": "All CAD parts present; view framing may crop distant geometry",
+  "annotation_targets_m": [
+    {
+      "text": "Raised custody frame (floor Z190)",
+      "uv": [
+        0.055,
+        0.66
+      ],
+      "target": [
+        0.605,
+        -0.046,
+        0.25
+      ],
+      "target_projected_uv": [
+        0.49191197752952576,
+        0.4596262276172638
+      ]
+    },
+    {
+      "text": "Payload on locked pallet",
+      "uv": [
+        0.055,
+        0.32
+      ],
+      "target": [
+        0.6045,
+        0,
+        0.096
+      ],
+      "target_projected_uv": [
+        0.5338138937950134,
+        0.2767985761165619
+      ]
+    },
+    {
+      "text": "Pallet stays with the carrier",
+      "uv": [
+        0.56,
+        0.24
+      ],
+      "target": [
+        0.7145,
+        0,
+        0.045
+      ],
+      "target_projected_uv": [
+        0.5571334958076477,
+        0.18129876255989075
+      ]
+    }
+  ],
+  "fabricated_geometry": "None. Text, leader lines, scale bar, and annotation backing panels are separate display-only objects.",
+  "outputs": {
+    "04_clear_docked.png": {
+      "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+      "bytes": 3671106
+    },
+    "04_clear_docked.jpg": {
+      "sha256": "d7128d9e7c7a690629999769aa19beece22a1c9b39f090f7b2fc1834e74c88a8",
+      "bytes": 560202
+    }
+  }
+}

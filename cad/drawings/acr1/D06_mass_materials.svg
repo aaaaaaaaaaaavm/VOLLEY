@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1680 1188">
+<rect width="1680" height="1188" fill="white"/>
+<g font-family="DejaVu Sans, sans-serif">
+<rect x="26" y="26" width="1628" height="1136" fill="none" stroke="#172631" stroke-width="2"/>
+<text x="52" y="64" font-size="23" fill="#176d89" font-weight="700">VOLLEY-G5-ACR1</text>
+<text x="52" y="97" font-size="24" fill="#172631" font-weight="700">Mass properties, material classes and fabrication boundary</text>
+<text x="52" y="124" font-size="15" fill="#526572" font-weight="400">OUTLINE / PRELIMINARY ENGINEERING — dimensions in mm; no general manufacturing tolerance assigned</text>
+<line x1="26" y1="140" x2="1654" y2="140" stroke="#172631" stroke-width="1.3"/>
+<line x1="26" y1="1080" x2="1654" y2="1080" stroke="#172631" stroke-width="1.3"/>
+<text x="48" y="1111" font-size="16" fill="#172631" font-weight="700">D06  |  Revision A  |  25 October 2026  |  A3 landscape</text>
+<text x="48" y="1138" font-size="15" fill="#526572" font-weight="400">Source: frozen ACR1 native geometry and paired BOM/verification. Do not scale; stated dimensions govern.</text>
+<text x="1190" y="1111" font-size="16" fill="#172631" font-weight="400">Academic engineering outline</text>
+<text x="1190" y="1138" font-size="16" fill="#172631" font-weight="700">NOT A MANUFACTURING RELEASE</text>
+<text x="65" y="190" font-size="18" fill="#172631" font-weight="400">HOME native assembly: 387 parts; loaded 197.556720 kg = dry 149.556720 + payload 48.000000.</text>
+<text x="65" y="225" font-size="18" fill="#172631" font-weight="400">Represented dry CG (mm): X 628.361876; Y -4.213144; Z 267.524868.</text>
+<text x="65" y="260" font-size="18" fill="#172631" font-weight="400">Loaded native CG (mm): X 581.198863; Y -3.189484; Z 337.372183.</text>
+<text x="65" y="295" font-size="18" fill="#172631" font-weight="400">Retained sled with pallet: 13.127806 kg. Mission device: 156.556720 kg; loaded device: 204.556720 kg.</text>
+<text x="65" y="330" font-size="18" fill="#172631" font-weight="400">Extra 7.000 kg power/control allowance has NO assigned position and is excluded from CAD CG/inertia.</text>
+<text x="65" y="420" font-size="18" fill="#172631" font-weight="400">Represented dry inertia about its own CG [kg·m²], full tensor, source sign convention:</text>
+<text x="150" y="465" font-size="22" fill="#172631" font-weight="400">[  29.675715228     0.060095224     12.702423066 ]</text>
+<text x="150" y="502" font-size="22" fill="#172631" font-weight="400">[  0.060095224     62.806994278     0.035579787 ]</text>
+<text x="150" y="539" font-size="22" fill="#172631" font-weight="400">[  12.702423066     0.035579787     54.885372840 ]</text>
+<text x="65" y="625" font-size="18" fill="#172631" font-weight="400">Materials are assigned density classes; no alloy temper, coating, bond specification or supplier certification is assigned.</text>
+<text x="65" y="661" font-size="18" fill="#172631" font-weight="400">Aluminium 2700; steel 7850; copper 8960; NdFeB 7500; polymer 1410; insulator 1800 kg/m³.</text>
+<text x="65" y="697" font-size="18" fill="#172631" font-weight="400">Catalog/payload envelope mass distributions remain approximate; see exact per-group source boundaries.</text>
+<text x="65" y="733" font-size="18" fill="#172631" font-weight="400">BOM_HOME.csv contains all native part labels, assigned masses, CG coordinates, volumes and source notes.</text>
+<text x="65" y="769" font-size="18" fill="#172631" font-weight="400">MASS_PROPERTIES.json retains all eight native-state accepted group CG/inertia records.</text>
+<text x="65" y="865" font-size="17" fill="#172631" font-weight="400">PRELIMINARY FABRICATION ROUTE</text>
+<text x="65" y="900" font-size="17" fill="#172631" font-weight="400">Frame/pallet: stock machining and joint/inspection planning remain to be detailed from the owned solid model.</text>
+<text x="65" y="935" font-size="17" fill="#172631" font-weight="400">Copper phases: preserve connected topology, minimum return section and insulation gaps; joining/insulation process unselected.</text>
+<text x="65" y="970" font-size="17" fill="#172631" font-weight="400">Guides, screws, bearings, brakes and actuators: source envelope/reference only where catalog interfaces are unselected.</text>
+<text x="65" y="1005" font-size="17" fill="#172631" font-weight="400">No fastener torque, interference fit, vacuum material compatibility or supplier acceptance is invented by these sheets.</text>
+</g></svg>

@@ -1,0 +1,50 @@
+[
+  {
+    "start_s": 0,
+    "end_s": 10,
+    "title": "Retain the inventory.",
+    "text": "Two fixed six-level banks hold twelve nominal 3U payloads. Select one cell and inhibit host burns during feeding.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 10,
+    "end_s": 20,
+    "title": "Capture the selected payload.",
+    "text": "The guided pusher feeds the lift. At source level 5 the payload floor is Z830 mm; the lift grips hold its pallet.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 20,
+    "end_s": 32,
+    "title": "Overlap the restraints.",
+    "text": "At handoff, positive carrier bayonets and outboard lift grip pins establish dual custody. The storage banks and fixed frame are hidden in this view for access.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 32,
+    "end_s": 44,
+    "title": "Prove the clear state.",
+    "text": "Payload floor Z46 mm. Raised custody frame floor Z190 mm. Prove pallet locks, pusher withdrawal and a clear path before enabling launch.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 44,
+    "end_s": 60,
+    "title": "Retain the pallet during recovery.",
+    "text": "The payload departs along +X. Carrier and captive pallet arrest together, then return as one retained assembly for the next transfer.",
+    "source": "cad/release/FINAL_CAD_MANIFEST.json; analysis/COUPLED_SHOT.json",
+    "evidence_class": "Operating-sequence schematic \u00b7 illustrative timing"
+  },
+  {
+    "start_s": 60,
+    "end_s": 78,
+    "title": "Fault \u2192 inhibit \u2192 retain \u2192 verify.",
+    "text": "Inhibit launch, retain the payload, isolate the cell, supervise reset, then verify before continuing. Physical fault-response validation is subsequent work.",
+    "source": "analysis/TRANSFER_INTERLOCKS.json",
+    "evidence_class": "Modeled fault and isolation sequence"
+  }
+]

@@ -1,3 +1,5 @@
+> **Historical study record — ACR1 public reference:** [VOLLEY-G5-ACR1](../validation/acr1/README.md) is the current integrated academic reference. Values/status below retain their dated study/configuration meaning and do not set ACR1 operating points.
+
 # Build readiness
 
 Updated 2026-09-14. I have not released either VOLLEY configuration for full-system manufacture.

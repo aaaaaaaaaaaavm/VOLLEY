@@ -1,0 +1,5446 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "state": "captured",
+  "source_sha256": {
+    "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+    "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+    "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+    "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+    "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+    "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+  },
+  "physical_pallet_count": 1,
+  "pose_description": "captured",
+  "builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+  "parameters_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+  "parts": 387,
+  "solids": 387,
+  "BOM": [
+    {
+      "name": "Host_mount_ladder",
+      "material": "aluminium",
+      "subsystem": "fixed",
+      "solids": 1,
+      "volume_mm3": 7474239.999999944,
+      "mass_kg": 20.18044799999985,
+      "CG_mm": [
+        971.1245665111167,
+        0.0,
+        -161.46037590444053
+      ],
+      "note": "Generic mounting datum Z=-150; provider load/interface approval separate"
+    },
+    {
+      "name": "Track_minusY",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 3564000.0,
+      "mass_kg": 9.6228,
+      "CG_mm": [
+        1125.0,
+        -131.87878787878788,
+        -8.222222222222221
+      ],
+      "note": "Asymmetric guide datum; 1mm nominal wheel radial clearance"
+    },
+    {
+      "name": "Track_support_-1_40",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 17160.000000000004,
+      "mass_kg": 0.04633200000000001,
+      "CG_mm": [
+        47.999999999999986,
+        -131.99999999999997,
+        -95.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_-1_400",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 17160.000000000004,
+      "mass_kg": 0.04633200000000001,
+      "CG_mm": [
+        407.9999999999999,
+        -131.99999999999997,
+        -95.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_-1_800",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 17160.000000000004,
+      "mass_kg": 0.04633200000000001,
+      "CG_mm": [
+        808.0,
+        -131.99999999999997,
+        -95.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_-1_1200",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 17160.000000000004,
+      "mass_kg": 0.04633200000000001,
+      "CG_mm": [
+        1207.9999999999993,
+        -131.99999999999997,
+        -95.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_-1_1600",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 17160.000000000004,
+      "mass_kg": 0.04633200000000001,
+      "CG_mm": [
+        1607.9999999999998,
+        -131.99999999999997,
+        -95.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_-1_2000",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 17160.000000000004,
+      "mass_kg": 0.04633200000000001,
+      "CG_mm": [
+        2007.9999999999986,
+        -131.99999999999997,
+        -95.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_-1_2190",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 17160.000000000004,
+      "mass_kg": 0.04633200000000001,
+      "CG_mm": [
+        2198.0,
+        -131.99999999999997,
+        -95.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_plusY",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 3612047.9999999953,
+      "mass_kg": 9.752529599999987,
+      "CG_mm": [
+        1123.9491302441181,
+        95.74357815842984,
+        -47.72613652974712
+      ],
+      "note": "Asymmetric guide datum; 1mm nominal wheel radial clearance;integral lateral stator support arms"
+    },
+    {
+      "name": "Track_support_1_40",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 10920.0,
+      "mass_kg": 0.029484000000000003,
+      "CG_mm": [
+        48.0,
+        99.99999999999996,
+        -114.99999999999993
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_1_400",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 10920.0,
+      "mass_kg": 0.029484000000000003,
+      "CG_mm": [
+        408.0,
+        99.99999999999996,
+        -114.99999999999993
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_1_800",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 10920.0,
+      "mass_kg": 0.029484000000000003,
+      "CG_mm": [
+        808.0,
+        99.99999999999996,
+        -114.99999999999993
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_1_1200",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 10920.0,
+      "mass_kg": 0.029484000000000003,
+      "CG_mm": [
+        1208.0,
+        99.99999999999996,
+        -114.99999999999993
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_1_1600",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 10920.0,
+      "mass_kg": 0.029484000000000003,
+      "CG_mm": [
+        1608.0,
+        99.99999999999996,
+        -114.99999999999993
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_1_2000",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 10920.0,
+      "mass_kg": 0.029484000000000003,
+      "CG_mm": [
+        2007.9999999999989,
+        99.99999999999996,
+        -114.99999999999993
+      ],
+      "note": ""
+    },
+    {
+      "name": "Track_support_1_2190",
+      "material": "aluminium",
+      "subsystem": "track",
+      "solids": 1,
+      "volume_mm3": 10920.0,
+      "mass_kg": 0.029484000000000003,
+      "CG_mm": [
+        2197.9999999999995,
+        99.99999999999996,
+        -114.99999999999993
+      ],
+      "note": ""
+    },
+    {
+      "name": "Stator_phase_A",
+      "material": "copper",
+      "subsystem": "stator",
+      "solids": 1,
+      "volume_mm3": 414798.9999999991,
+      "mass_kg": 3.7165990399999926,
+      "CG_mm": [
+        1085.4999999999984,
+        0.2791315793914542,
+        -0.7123124694128923
+      ],
+      "note": "72 active7x6mm sections,71 flattened7x3mm Ulinks;21mm2 minimum interface/endlink section,0.5mm nominal interphase Zgap;Cseries initial direction reversed"
+    },
+    {
+      "name": "Stator_phase_C",
+      "material": "copper",
+      "subsystem": "stator",
+      "solids": 1,
+      "volume_mm3": 404859.00000000023,
+      "mass_kg": 3.627536640000002,
+      "CG_mm": [
+        1093.5000000000002,
+        -0.2678302816535913,
+        6.891130831994777e-17
+      ],
+      "note": "72 active7x6mm sections,71 flattened7x3mm Ulinks;21mm2 minimum interface/endlink section,0.5mm nominal interphase Zgap;Cseries initial direction reversed"
+    },
+    {
+      "name": "Stator_phase_B",
+      "material": "copper",
+      "subsystem": "stator",
+      "solids": 1,
+      "volume_mm3": 414798.9999999986,
+      "mass_kg": 3.7165990399999878,
+      "CG_mm": [
+        1101.500000000004,
+        0.2791315793914765,
+        0.7123124694128934
+      ],
+      "note": "72 active7x6mm sections,71 flattened7x3mm Ulinks;21mm2 minimum interface/endlink section,0.5mm nominal interphase Zgap;Cseries initial direction reversed"
+    },
+    {
+      "name": "Stator_GFRP_board_-1",
+      "material": "insulator",
+      "subsystem": "stator_support",
+      "solids": 1,
+      "volume_mm3": 556799.9999999999,
+      "mass_kg": 1.0022399999999998,
+      "CG_mm": [
+        1094.0000000000002,
+        2.090792417868801e-15,
+        -4.775
+      ],
+      "note": "2mm active-face boards; stepped outer wings outsideabsY47"
+    },
+    {
+      "name": "Stator_GFRP_board_1",
+      "material": "insulator",
+      "subsystem": "stator_support",
+      "solids": 1,
+      "volume_mm3": 556799.9999999999,
+      "mass_kg": 1.0022399999999998,
+      "CG_mm": [
+        1094.0000000000002,
+        -1.2544754507212806e-15,
+        4.775
+      ],
+      "note": "2mm active-face boards; stepped outer wings outsideabsY47"
+    },
+    {
+      "name": "Bank_mount_-1",
+      "material": "aluminium",
+      "subsystem": "bank_mount",
+      "solids": 1,
+      "volume_mm3": 1224576.000000006,
+      "mass_kg": 3.3063552000000165,
+      "CG_mm": [
+        434.2499999999992,
+        -354.57878645343243,
+        454.7403574788326
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_mount_1",
+      "material": "aluminium",
+      "subsystem": "bank_mount",
+      "solids": 1,
+      "volume_mm3": 1224576.000000007,
+      "mass_kg": 3.306355200000019,
+      "CG_mm": [
+        434.2499999999975,
+        354.57878645343067,
+        454.7403574788311
+      ],
+      "note": ""
+    },
+    {
+      "name": "Forekeeper_fixed_cam_-1",
+      "material": "steel",
+      "subsystem": "release_cam",
+      "solids": 1,
+      "volume_mm3": 24679.999999999953,
+      "mass_kg": 0.19373799999999966,
+      "CG_mm": [
+        2002.5295786061592,
+        -190.12606158833074,
+        -5.957860615883412
+      ],
+      "note": "12mm spring keeper opening over aft1445..1495;5mm pre-release margin;holds open through aft1710 arrest;0.1mm nominal roller running clearance"
+    },
+    {
+      "name": "Forekeeper_fixed_cam_1",
+      "material": "steel",
+      "subsystem": "release_cam",
+      "solids": 1,
+      "volume_mm3": 24679.999999999953,
+      "mass_kg": 0.19373799999999966,
+      "CG_mm": [
+        2002.5295786061592,
+        190.12606158833074,
+        -5.957860615883412
+      ],
+      "note": "12mm spring keeper opening over aft1445..1495;5mm pre-release margin;holds open through aft1710 arrest;0.1mm nominal roller running clearance"
+    },
+    {
+      "name": "Bank_south_L0_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912975,
+      "mass_kg": 0.009004296708526687,
+      "CG_mm": [
+        235.03024367689434,
+        -196.0,
+        185.00000000000006
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L0_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        235.03024367689437,
+        -196.00000000000003,
+        275.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L0_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912975,
+      "mass_kg": 0.009004296708526687,
+      "CG_mm": [
+        633.4697563231056,
+        -196.0,
+        184.99999999999997
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L0_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        633.4697563231056,
+        -196.00000000000003,
+        275.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L0_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115787,
+      "mass_kg": 0.20345739422810893,
+      "CG_mm": [
+        243.99999999999997,
+        -269.99999999999994,
+        229.99999999999997
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L0_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.4731472962894,
+      "mass_kg": 0.005048467137687768,
+      "CG_mm": [
+        244.0,
+        -376.00000000000006,
+        230.00000000000003
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L0_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.13939211583,
+      "mass_kg": 0.2034573942281093,
+      "CG_mm": [
+        624.5000000000001,
+        -269.99999999999994,
+        230.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L0_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.4731472962812,
+      "mass_kg": 0.005048467137687757,
+      "CG_mm": [
+        624.5000000000001,
+        -376.0000000000001,
+        230.00000000000006
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L0_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.661445317084,
+      "mass_kg": 0.2099926923457391,
+      "CG_mm": [
+        216.0,
+        -277.5,
+        229.99999999999994
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_south_L0_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620165,
+      "mass_kg": 0.020555855422668294,
+      "CG_mm": [
+        215.99999999999997,
+        -440.9999999999999,
+        229.99999999999991
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L0_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620165,
+      "mass_kg": 0.020555855422668294,
+      "CG_mm": [
+        215.99999999999997,
+        -111.0,
+        229.99999999999991
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L0_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.8381302208177,
+      "mass_kg": 0.0055156917636113535,
+      "CG_mm": [
+        215.99999999999997,
+        -380.44999999999993,
+        229.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L0_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157258,
+      "mass_kg": 0.18504691588324598,
+      "CG_mm": [
+        414.15472751359636,
+        -342.85100178562345,
+        229.99999999999991
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_south_L0_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.29715025711,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        -477.49999999999994,
+        229.99999999999994
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_south_L0_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.145054268076,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        -534.4499999999999,
+        230.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_south_L0_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718334,
+      "mass_kg": 0.0019729201864543892,
+      "CG_mm": [
+        216.00000000000003,
+        -457.5000000000001,
+        230.00000000000003
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L0_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227444,
+      "mass_kg": 3.73489777959141,
+      "CG_mm": [
+        419.44835268743844,
+        -240.62369312827073,
+        189.4870560509549
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_south_L0_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        -250.0,
+        229.99999999999997
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_south_L1_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        235.03024367689437,
+        -196.00000000000003,
+        315.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L1_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        235.03024367689437,
+        -196.00000000000003,
+        405.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L1_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        633.4697563231056,
+        -196.00000000000003,
+        315.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L1_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        633.4697563231056,
+        -196.00000000000003,
+        404.99999999999994
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L1_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.1393921158,
+      "mass_kg": 0.20345739422810905,
+      "CG_mm": [
+        243.99999999999997,
+        -269.99999999999994,
+        360.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L1_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296283,
+      "mass_kg": 0.00504846713768776,
+      "CG_mm": [
+        244.00000000000006,
+        -376.0000000000001,
+        360.00000000000006
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L1_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115852,
+      "mass_kg": 0.20345739422810946,
+      "CG_mm": [
+        624.5,
+        -269.99999999999994,
+        359.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L1_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296274,
+      "mass_kg": 0.005048467137687747,
+      "CG_mm": [
+        624.5000000000001,
+        -375.99999999999994,
+        360.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L1_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.6614453171,
+      "mass_kg": 0.20999269234573922,
+      "CG_mm": [
+        216.0,
+        -277.49999999999994,
+        359.9999999999999
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_south_L1_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620163,
+      "mass_kg": 0.020555855422668284,
+      "CG_mm": [
+        216.00000000000006,
+        -441.0,
+        360.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L1_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620163,
+      "mass_kg": 0.020555855422668284,
+      "CG_mm": [
+        216.00000000000006,
+        -111.00000000000001,
+        360.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L1_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.8381302208145,
+      "mass_kg": 0.005515691763611348,
+      "CG_mm": [
+        215.99999999999997,
+        -380.44999999999993,
+        359.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L1_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157255,
+      "mass_kg": 0.1850469158832459,
+      "CG_mm": [
+        414.1547275135962,
+        -342.8510017856235,
+        360.00000000000006
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_south_L1_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.297150257116,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        -477.50000000000006,
+        360.0
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_south_L1_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        -534.4499999999999,
+        360.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_south_L1_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718353,
+      "mass_kg": 0.001972920186454391,
+      "CG_mm": [
+        216.00000000000003,
+        -457.50000000000006,
+        360.00000000000006
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L1_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227456,
+      "mass_kg": 3.7348977795914133,
+      "CG_mm": [
+        419.44835268743805,
+        -240.6236931282706,
+        319.48705605095483
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_south_L1_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        -250.0,
+        360.0
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_south_L2_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        235.03024367689437,
+        -196.00000000000003,
+        445.0000000000001
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L2_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        -195.99999999999997,
+        534.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L2_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        633.4697563231056,
+        -196.00000000000003,
+        445.00000000000006
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L2_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        -195.99999999999997,
+        534.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L2_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.1393921158,
+      "mass_kg": 0.20345739422810905,
+      "CG_mm": [
+        243.99999999999997,
+        -269.99999999999994,
+        489.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L2_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.4731472962826,
+      "mass_kg": 0.005048467137687759,
+      "CG_mm": [
+        243.99999999999997,
+        -375.99999999999994,
+        490.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L2_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115852,
+      "mass_kg": 0.20345739422810946,
+      "CG_mm": [
+        624.5,
+        -269.99999999999994,
+        489.99999999999983
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L2_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296274,
+      "mass_kg": 0.005048467137687747,
+      "CG_mm": [
+        624.5000000000001,
+        -375.99999999999994,
+        490.00000000000006
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L2_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.6614453171,
+      "mass_kg": 0.20999269234573922,
+      "CG_mm": [
+        216.0,
+        -277.49999999999994,
+        490.0
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_south_L2_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620163,
+      "mass_kg": 0.020555855422668284,
+      "CG_mm": [
+        216.00000000000006,
+        -441.0,
+        490.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L2_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620163,
+      "mass_kg": 0.020555855422668284,
+      "CG_mm": [
+        216.00000000000006,
+        -111.00000000000001,
+        490.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L2_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.8381302208145,
+      "mass_kg": 0.005515691763611348,
+      "CG_mm": [
+        215.99999999999997,
+        -380.44999999999993,
+        489.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L2_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157257,
+      "mass_kg": 0.18504691588324593,
+      "CG_mm": [
+        414.15472751359613,
+        -342.8510017856234,
+        489.9999999999999
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_south_L2_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.297150257116,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        -477.50000000000006,
+        490.0
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_south_L2_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        -534.4499999999999,
+        490.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_south_L2_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718353,
+      "mass_kg": 0.001972920186454391,
+      "CG_mm": [
+        216.00000000000003,
+        -457.50000000000006,
+        489.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L2_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227458,
+      "mass_kg": 3.734897779591414,
+      "CG_mm": [
+        419.4483526874384,
+        -240.62369312827053,
+        449.4870560509548
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_south_L2_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        -250.0,
+        490.0
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_south_L3_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        -195.99999999999997,
+        574.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L3_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        -195.99999999999997,
+        664.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L3_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        -195.99999999999997,
+        574.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L3_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        -195.99999999999997,
+        664.9999999999997
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L3_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.13939211583,
+      "mass_kg": 0.2034573942281093,
+      "CG_mm": [
+        243.99999999999997,
+        -269.99999999999994,
+        619.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L3_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296285,
+      "mass_kg": 0.005048467137687761,
+      "CG_mm": [
+        244.00000000000006,
+        -376.0,
+        620.0000000000002
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L3_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115874,
+      "mass_kg": 0.2034573942281096,
+      "CG_mm": [
+        624.5000000000001,
+        -270.0,
+        620.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L3_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296277,
+      "mass_kg": 0.005048467137687751,
+      "CG_mm": [
+        624.5,
+        -376.0,
+        620.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L3_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.661445317128,
+      "mass_kg": 0.20999269234573947,
+      "CG_mm": [
+        215.99999999999997,
+        -277.50000000000006,
+        620.0
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_south_L3_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        -441.0,
+        619.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L3_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        -111.0,
+        619.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L3_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.8381302208163,
+      "mass_kg": 0.005515691763611352,
+      "CG_mm": [
+        216.0,
+        -380.45,
+        619.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L3_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157258,
+      "mass_kg": 0.18504691588324598,
+      "CG_mm": [
+        414.154727513596,
+        -342.85100178562357,
+        619.9999999999999
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_south_L3_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.2971502571,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        -477.49999999999994,
+        619.9999999999999
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_south_L3_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        -534.4499999999999,
+        620.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_south_L3_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718365,
+      "mass_kg": 0.001972920186454392,
+      "CG_mm": [
+        216.00000000000003,
+        -457.5,
+        620.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L3_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227465,
+      "mass_kg": 3.7348977795914156,
+      "CG_mm": [
+        419.4483526874385,
+        -240.62369312827042,
+        579.4870560509545
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_south_L3_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        -250.0,
+        620.0
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_south_L4_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        -195.99999999999997,
+        704.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L4_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        -195.99999999999997,
+        794.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L4_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        -195.99999999999997,
+        704.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L4_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        -195.99999999999997,
+        794.9999999999997
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L4_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.13939211583,
+      "mass_kg": 0.2034573942281093,
+      "CG_mm": [
+        243.99999999999997,
+        -269.99999999999994,
+        750.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L4_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296285,
+      "mass_kg": 0.005048467137687761,
+      "CG_mm": [
+        244.00000000000009,
+        -376.0,
+        750.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L4_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115874,
+      "mass_kg": 0.2034573942281096,
+      "CG_mm": [
+        624.5000000000001,
+        -270.0,
+        749.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L4_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296277,
+      "mass_kg": 0.005048467137687751,
+      "CG_mm": [
+        624.5,
+        -376.0,
+        750.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L4_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.661445317128,
+      "mass_kg": 0.20999269234573947,
+      "CG_mm": [
+        215.99999999999997,
+        -277.50000000000006,
+        750.0
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_south_L4_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        -441.0,
+        749.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L4_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        -111.0,
+        749.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L4_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.8381302208163,
+      "mass_kg": 0.005515691763611352,
+      "CG_mm": [
+        216.0,
+        -380.45,
+        750.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L4_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157261,
+      "mass_kg": 0.18504691588324604,
+      "CG_mm": [
+        414.15472751359624,
+        -342.85100178562357,
+        749.9999999999995
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_south_L4_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.2971502571,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        -477.49999999999994,
+        750.0
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_south_L4_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        -534.4499999999999,
+        750.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_south_L4_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718365,
+      "mass_kg": 0.001972920186454392,
+      "CG_mm": [
+        216.00000000000003,
+        -457.5,
+        750.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L4_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.473922745,
+      "mass_kg": 3.734897779591412,
+      "CG_mm": [
+        419.4483526874388,
+        -240.6236931282706,
+        709.4870560509545
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_south_L4_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        -250.0,
+        750.0
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_south_L5_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        195.0302436768943,
+        -195.99999999999997,
+        834.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L5_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        195.0302436768943,
+        -195.99999999999997,
+        925.0000000000001
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L5_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        673.4697563231053,
+        -195.99999999999997,
+        834.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L5_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        673.4697563231053,
+        -195.99999999999997,
+        924.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_south_L5_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.13939211583,
+      "mass_kg": 0.2034573942281093,
+      "CG_mm": [
+        243.99999999999997,
+        -269.99999999999994,
+        880.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L5_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296284,
+      "mass_kg": 0.0050484671376877606,
+      "CG_mm": [
+        244.00000000000003,
+        -126.00000000000003,
+        880.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L5_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115874,
+      "mass_kg": 0.2034573942281096,
+      "CG_mm": [
+        624.5000000000001,
+        -270.0,
+        880.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L5_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296277,
+      "mass_kg": 0.005048467137687751,
+      "CG_mm": [
+        624.5,
+        -125.99999999999997,
+        879.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L5_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.661445317128,
+      "mass_kg": 0.20999269234573947,
+      "CG_mm": [
+        215.99999999999997,
+        -277.50000000000006,
+        880.0
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_south_L5_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        -441.0,
+        880.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L5_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        -111.0,
+        880.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L5_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.8381302208136,
+      "mass_kg": 0.005515691763611347,
+      "CG_mm": [
+        216.00000000000003,
+        -130.45000000000002,
+        880.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L5_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157264,
+      "mass_kg": 0.18504691588324615,
+      "CG_mm": [
+        414.1547275135965,
+        -92.85100178562357,
+        879.9999999999999
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_south_L5_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.2971502571,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        -477.49999999999994,
+        879.9999999999999
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_south_L5_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        -534.4499999999999,
+        880.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_south_L5_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718365,
+      "mass_kg": 0.001972920186454392,
+      "CG_mm": [
+        216.00000000000003,
+        -457.5,
+        880.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_south_L5_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227446,
+      "mass_kg": 3.7348977795914107,
+      "CG_mm": [
+        419.448352687439,
+        -240.62369312827065,
+        839.4870560509555
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_north_L0_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912975,
+      "mass_kg": 0.009004296708526687,
+      "CG_mm": [
+        235.03024367689434,
+        196.0,
+        185.00000000000006
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L0_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        235.03024367689437,
+        196.00000000000003,
+        275.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L0_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912975,
+      "mass_kg": 0.009004296708526687,
+      "CG_mm": [
+        633.4697563231056,
+        196.0,
+        184.99999999999997
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L0_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        633.4697563231056,
+        196.00000000000003,
+        275.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L0_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115787,
+      "mass_kg": 0.20345739422810893,
+      "CG_mm": [
+        243.99999999999997,
+        269.99999999999994,
+        229.99999999999997
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L0_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.4731472962894,
+      "mass_kg": 0.005048467137687768,
+      "CG_mm": [
+        244.0,
+        376.00000000000006,
+        230.00000000000003
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L0_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.13939211583,
+      "mass_kg": 0.2034573942281093,
+      "CG_mm": [
+        624.5000000000001,
+        269.99999999999994,
+        230.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L0_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.4731472962812,
+      "mass_kg": 0.005048467137687757,
+      "CG_mm": [
+        624.5000000000001,
+        376.0000000000001,
+        230.00000000000006
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L0_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.661445317084,
+      "mass_kg": 0.2099926923457391,
+      "CG_mm": [
+        216.0,
+        277.5,
+        229.99999999999994
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_north_L0_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620165,
+      "mass_kg": 0.020555855422668294,
+      "CG_mm": [
+        215.99999999999997,
+        440.9999999999999,
+        229.99999999999991
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L0_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620165,
+      "mass_kg": 0.020555855422668294,
+      "CG_mm": [
+        215.99999999999997,
+        111.0,
+        229.99999999999991
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L0_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.8381302208213,
+      "mass_kg": 0.005515691763611358,
+      "CG_mm": [
+        215.99999999999994,
+        380.45000000000005,
+        229.99999999999997
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L0_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157258,
+      "mass_kg": 0.18504691588324598,
+      "CG_mm": [
+        414.15472751359636,
+        342.85100178562345,
+        229.99999999999991
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_north_L0_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.29715025711,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        477.49999999999994,
+        229.99999999999994
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_north_L0_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.145054268076,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        534.4499999999999,
+        230.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_north_L0_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718334,
+      "mass_kg": 0.0019729201864543892,
+      "CG_mm": [
+        216.00000000000003,
+        457.5000000000001,
+        230.00000000000003
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L0_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227444,
+      "mass_kg": 3.73489777959141,
+      "CG_mm": [
+        419.44835268743844,
+        240.62369312827073,
+        189.4870560509549
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_north_L0_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        250.0,
+        229.99999999999997
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_north_L1_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        235.03024367689437,
+        196.00000000000003,
+        315.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L1_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        235.03024367689437,
+        196.00000000000003,
+        405.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L1_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        633.4697563231056,
+        196.00000000000003,
+        315.0
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L1_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        633.4697563231056,
+        196.00000000000003,
+        404.99999999999994
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L1_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.1393921158,
+      "mass_kg": 0.20345739422810905,
+      "CG_mm": [
+        243.99999999999997,
+        269.99999999999994,
+        360.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L1_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296283,
+      "mass_kg": 0.00504846713768776,
+      "CG_mm": [
+        244.00000000000006,
+        376.0000000000001,
+        360.00000000000006
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L1_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115852,
+      "mass_kg": 0.20345739422810946,
+      "CG_mm": [
+        624.5,
+        269.99999999999994,
+        359.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L1_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296274,
+      "mass_kg": 0.005048467137687747,
+      "CG_mm": [
+        624.5000000000001,
+        375.99999999999994,
+        360.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L1_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.6614453171,
+      "mass_kg": 0.20999269234573922,
+      "CG_mm": [
+        216.0,
+        277.49999999999994,
+        359.9999999999999
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_north_L1_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620163,
+      "mass_kg": 0.020555855422668284,
+      "CG_mm": [
+        216.00000000000006,
+        441.0,
+        360.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L1_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620163,
+      "mass_kg": 0.020555855422668284,
+      "CG_mm": [
+        216.00000000000006,
+        111.00000000000001,
+        360.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L1_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.838130220818,
+      "mass_kg": 0.005515691763611354,
+      "CG_mm": [
+        216.0,
+        380.45,
+        359.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L1_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157252,
+      "mass_kg": 0.18504691588324584,
+      "CG_mm": [
+        414.1547275135959,
+        342.8510017856236,
+        359.99999999999983
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_north_L1_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.297150257116,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        477.50000000000006,
+        360.0
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_north_L1_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        534.4499999999999,
+        360.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_north_L1_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718353,
+      "mass_kg": 0.001972920186454391,
+      "CG_mm": [
+        216.00000000000003,
+        457.50000000000006,
+        360.00000000000006
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L1_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227456,
+      "mass_kg": 3.7348977795914133,
+      "CG_mm": [
+        419.44835268743805,
+        240.6236931282707,
+        319.4870560509544
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_north_L1_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        250.0,
+        360.0
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_north_L2_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        235.03024367689437,
+        196.00000000000003,
+        445.0000000000001
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L2_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        195.99999999999997,
+        534.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L2_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.044166691298,
+      "mass_kg": 0.00900429670852669,
+      "CG_mm": [
+        633.4697563231056,
+        196.00000000000003,
+        445.00000000000006
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L2_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        195.99999999999997,
+        534.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L2_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.1393921158,
+      "mass_kg": 0.20345739422810905,
+      "CG_mm": [
+        243.99999999999997,
+        269.99999999999994,
+        489.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L2_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.4731472962826,
+      "mass_kg": 0.005048467137687759,
+      "CG_mm": [
+        243.99999999999997,
+        375.99999999999994,
+        490.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L2_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115852,
+      "mass_kg": 0.20345739422810946,
+      "CG_mm": [
+        624.5,
+        269.99999999999994,
+        489.99999999999983
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L2_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296274,
+      "mass_kg": 0.005048467137687747,
+      "CG_mm": [
+        624.5000000000001,
+        375.99999999999994,
+        490.00000000000006
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L2_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.6614453171,
+      "mass_kg": 0.20999269234573922,
+      "CG_mm": [
+        216.0,
+        277.49999999999994,
+        490.0
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_north_L2_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620163,
+      "mass_kg": 0.020555855422668284,
+      "CG_mm": [
+        216.00000000000006,
+        441.0,
+        490.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L2_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.580308620163,
+      "mass_kg": 0.020555855422668284,
+      "CG_mm": [
+        216.00000000000006,
+        111.00000000000001,
+        490.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L2_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.838130220818,
+      "mass_kg": 0.005515691763611354,
+      "CG_mm": [
+        216.0,
+        380.45,
+        490.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L2_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157254,
+      "mass_kg": 0.18504691588324587,
+      "CG_mm": [
+        414.1547275135961,
+        342.85100178562334,
+        489.9999999999999
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_north_L2_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.297150257116,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        477.50000000000006,
+        490.0
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_north_L2_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        534.4499999999999,
+        490.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_north_L2_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718353,
+      "mass_kg": 0.001972920186454391,
+      "CG_mm": [
+        216.00000000000003,
+        457.50000000000006,
+        489.99999999999994
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L2_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227453,
+      "mass_kg": 3.734897779591413,
+      "CG_mm": [
+        419.44835268743856,
+        240.62369312827062,
+        449.4870560509553
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_north_L2_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        250.0,
+        490.0
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_north_L3_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        195.99999999999997,
+        574.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L3_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        195.99999999999997,
+        664.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L3_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        195.99999999999997,
+        574.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L3_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        195.99999999999997,
+        664.9999999999997
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L3_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.13939211583,
+      "mass_kg": 0.2034573942281093,
+      "CG_mm": [
+        243.99999999999997,
+        269.99999999999994,
+        619.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L3_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296285,
+      "mass_kg": 0.005048467137687761,
+      "CG_mm": [
+        244.00000000000006,
+        376.0,
+        620.0000000000002
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L3_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115874,
+      "mass_kg": 0.2034573942281096,
+      "CG_mm": [
+        624.5000000000001,
+        270.0,
+        620.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L3_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296277,
+      "mass_kg": 0.005048467137687751,
+      "CG_mm": [
+        624.5,
+        376.0,
+        620.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L3_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.661445317128,
+      "mass_kg": 0.20999269234573947,
+      "CG_mm": [
+        215.99999999999997,
+        277.50000000000006,
+        620.0
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_north_L3_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        441.0,
+        619.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L3_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        111.0,
+        619.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L3_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.838130220798,
+      "mass_kg": 0.005515691763611326,
+      "CG_mm": [
+        215.99999999999997,
+        380.45,
+        619.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L3_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157255,
+      "mass_kg": 0.1850469158832459,
+      "CG_mm": [
+        414.15472751359596,
+        342.85100178562345,
+        619.9999999999999
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_north_L3_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.2971502571,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        477.49999999999994,
+        619.9999999999999
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_north_L3_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        534.4499999999999,
+        620.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_north_L3_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718365,
+      "mass_kg": 0.001972920186454392,
+      "CG_mm": [
+        216.00000000000003,
+        457.5,
+        620.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L3_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227465,
+      "mass_kg": 3.7348977795914156,
+      "CG_mm": [
+        419.4483526874385,
+        240.62369312827042,
+        579.4870560509545
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_north_L3_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        250.0,
+        620.0
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_north_L4_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        195.99999999999997,
+        704.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L4_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        195.99999999999997,
+        794.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L4_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        195.99999999999997,
+        704.9999999999998
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L4_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        195.99999999999997,
+        794.9999999999997
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L4_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.13939211583,
+      "mass_kg": 0.2034573942281093,
+      "CG_mm": [
+        243.99999999999997,
+        269.99999999999994,
+        750.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L4_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296285,
+      "mass_kg": 0.005048467137687761,
+      "CG_mm": [
+        244.00000000000009,
+        376.0,
+        750.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L4_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115874,
+      "mass_kg": 0.2034573942281096,
+      "CG_mm": [
+        624.5000000000001,
+        270.0,
+        749.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L4_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296277,
+      "mass_kg": 0.005048467137687751,
+      "CG_mm": [
+        624.5,
+        376.0,
+        750.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L4_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.661445317128,
+      "mass_kg": 0.20999269234573947,
+      "CG_mm": [
+        215.99999999999997,
+        277.50000000000006,
+        750.0
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_north_L4_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        441.0,
+        749.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L4_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        111.0,
+        749.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L4_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.838130220798,
+      "mass_kg": 0.005515691763611326,
+      "CG_mm": [
+        215.99999999999997,
+        380.45,
+        750.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L4_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157258,
+      "mass_kg": 0.18504691588324598,
+      "CG_mm": [
+        414.15472751359624,
+        342.85100178562357,
+        749.9999999999992
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_north_L4_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.2971502571,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        477.49999999999994,
+        750.0
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_north_L4_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        534.4499999999999,
+        750.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_north_L4_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718365,
+      "mass_kg": 0.001972920186454392,
+      "CG_mm": [
+        216.00000000000003,
+        457.5,
+        750.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L4_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.473922745,
+      "mass_kg": 3.734897779591412,
+      "CG_mm": [
+        419.4483526874388,
+        240.6236931282706,
+        709.4870560509545
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_north_L4_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        250.0,
+        750.0
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Bank_north_L5_Storage_keeper_-1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        195.99999999999997,
+        834.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L5_Storage_keeper_-1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        235.03024367689426,
+        195.99999999999997,
+        924.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L5_Storage_keeper_1_5",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        195.99999999999997,
+        834.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L5_Storage_keeper_1_95",
+      "material": "steel",
+      "subsystem": "cell_gate",
+      "solids": 1,
+      "volume_mm3": 1147.0441666912943,
+      "mass_kg": 0.009004296708526661,
+      "CG_mm": [
+        633.4697563231056,
+        195.99999999999997,
+        924.9999999999999
+      ],
+      "note": "40mm outward translation; normally locked actuation requirement"
+    },
+    {
+      "name": "Bank_north_L5_Guide_shaft_244",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.13939211583,
+      "mass_kg": 0.2034573942281093,
+      "CG_mm": [
+        243.99999999999997,
+        269.99999999999994,
+        880.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L5_Guide_bush_244",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296284,
+      "mass_kg": 0.0050484671376877606,
+      "CG_mm": [
+        244.00000000000003,
+        376.0000000000001,
+        880.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L5_Guide_shaft_624.5",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 25918.139392115874,
+      "mass_kg": 0.2034573942281096,
+      "CG_mm": [
+        624.5000000000001,
+        270.0,
+        880.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L5_Guide_bush_624.5",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3580.473147296277,
+      "mass_kg": 0.005048467137687751,
+      "CG_mm": [
+        624.5,
+        376.0,
+        879.9999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L5_Lead_screw_10x2",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 26750.661445317128,
+      "mass_kg": 0.20999269234573947,
+      "CG_mm": [
+        215.99999999999997,
+        277.50000000000006,
+        880.0
+      ],
+      "note": "Nominal shaft and journals; thread detail idealized"
+    },
+    {
+      "name": "Bank_north_L5_Screw_bearing_-445",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        441.0,
+        880.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L5_Screw_bearing_-115",
+      "material": "steel",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 2618.5803086201645,
+      "mass_kg": 0.02055585542266829,
+      "CG_mm": [
+        216.00000000000003,
+        111.0,
+        880.0000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L5_Lead_nut_SB3700",
+      "material": "polymer",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 3911.838130220798,
+      "mass_kg": 0.005515691763611326,
+      "CG_mm": [
+        216.00000000000003,
+        380.45,
+        880.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L5_Pusher_frame",
+      "material": "aluminium",
+      "subsystem": "cell_pusher",
+      "solids": 1,
+      "volume_mm3": 68535.89477157252,
+      "mass_kg": 0.18504691588324584,
+      "CG_mm": [
+        414.1547275135966,
+        342.85100178562374,
+        880.0
+      ],
+      "note": "Guided push-only frame with corner-zone pads; no gravity feed"
+    },
+    {
+      "name": "Bank_north_L5_Brake_BXW01_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 43982.2971502571,
+      "mass_kg": 0.2,
+      "CG_mm": [
+        215.99999999999997,
+        477.49999999999994,
+        879.9999999999999
+      ],
+      "note": "0.12Nm source-backed brake envelope; adapter/space rating separate"
+    },
+    {
+      "name": "Bank_north_L5_Motor_3242_gear9_reference",
+      "material": "catalog",
+      "subsystem": "cell_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.14505426809,
+      "mass_kg": 0.42,
+      "CG_mm": [
+        216.0,
+        534.4499999999999,
+        880.0
+      ],
+      "note": "3242BX4+32GPT9:1 envelope; sizing rerun for new stroke"
+    },
+    {
+      "name": "Bank_north_L5_Drive_coupler",
+      "material": "steel",
+      "subsystem": "cell_drive",
+      "solids": 1,
+      "volume_mm3": 251.32741228718365,
+      "mass_kg": 0.001972920186454392,
+      "CG_mm": [
+        216.00000000000003,
+        457.5,
+        880.0
+      ],
+      "note": ""
+    },
+    {
+      "name": "Bank_north_L5_Fixed_channel_frame",
+      "material": "aluminium",
+      "subsystem": "cell_fixed",
+      "solids": 1,
+      "volume_mm3": 1383295.4739227446,
+      "mass_kg": 3.7348977795914107,
+      "CG_mm": [
+        419.448352687439,
+        240.62369312827065,
+        839.4870560509561
+      ],
+      "note": "Manufactured pusher-arm windows and separate longitudinal retention rails"
+    },
+    {
+      "name": "Bank_north_L5_Stored_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        250.0,
+        879.9999999999999
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    },
+    {
+      "name": "Pallet_bayonet_lock_40",
+      "material": "steel",
+      "subsystem": "sled_pallet_lock",
+      "solids": 1,
+      "volume_mm3": 1176.0131867042437,
+      "mass_kg": 0.009231703515628313,
+      "CG_mm": [
+        240.0,
+        -90.00000000000001,
+        10.533371949878179
+      ],
+      "note": "12mm vertical stroke then90deg quarterturn;12x4mm head positively captures keyed pallet in Z;capture before lift grips retract"
+    },
+    {
+      "name": "Pallet_lock_actuator_reference_40",
+      "material": "catalog",
+      "subsystem": "sled_pallet_lock",
+      "solids": 1,
+      "volume_mm3": 7720.778105462277,
+      "mass_kg": 0.06,
+      "CG_mm": [
+        239.99999999999997,
+        -89.99999999999999,
+        -50.00000000000001
+      ],
+      "note": "16mmODx40mm allocation;12mm stroke plus90deg rotation;spring-applied hold;hardware selection separate"
+    },
+    {
+      "name": "Pallet_bayonet_lock_468",
+      "material": "steel",
+      "subsystem": "sled_pallet_lock",
+      "solids": 1,
+      "volume_mm3": 1176.0131867042473,
+      "mass_kg": 0.009231703515628343,
+      "CG_mm": [
+        667.9999999999999,
+        -89.99999999999999,
+        10.533371949878196
+      ],
+      "note": "12mm vertical stroke then90deg quarterturn;12x4mm head positively captures keyed pallet in Z;capture before lift grips retract"
+    },
+    {
+      "name": "Pallet_lock_actuator_reference_468",
+      "material": "catalog",
+      "subsystem": "sled_pallet_lock",
+      "solids": 1,
+      "volume_mm3": 7720.778105462282,
+      "mass_kg": 0.06,
+      "CG_mm": [
+        667.9999999999999,
+        -90.0,
+        -50.0
+      ],
+      "note": "16mmODx40mm allocation;12mm stroke plus90deg rotation;spring-applied hold;hardware selection separate"
+    },
+    {
+      "name": "Sled_cap_24_-1",
+      "material": "aluminium",
+      "subsystem": "sled_gate",
+      "solids": 1,
+      "volume_mm3": 3260.6185952268747,
+      "mass_kg": 0.008803670207112563,
+      "CG_mm": [
+        298.10359507935345,
+        -105.33327899196114,
+        151.9678719032314
+      ],
+      "note": "Tr4x1 driven captive slide with independent3mm positive locking pin"
+    },
+    {
+      "name": "Sled_cap_screw_24_-1",
+      "material": "steel",
+      "subsystem": "sled_latch_drive",
+      "solids": 1,
+      "volume_mm3": 1130.9733552923292,
+      "mass_kg": 0.008878140839044785,
+      "CG_mm": [
+        298.0,
+        -100.99999999999999,
+        159.99999999999997
+      ],
+      "note": "Nominal4x1 drive; thread contact idealized"
+    },
+    {
+      "name": "Sled_cap_lockpin_24_-1",
+      "material": "steel",
+      "subsystem": "sled_latch_pin",
+      "solids": 1,
+      "volume_mm3": 169.64600329384933,
+      "mass_kg": 0.0013317211258567175,
+      "CG_mm": [
+        291.00000000000006,
+        -63.00000000000001,
+        132.00000000000003
+      ],
+      "note": "Normally engaged spring plunger specification; retract26mm before cap motion"
+    },
+    {
+      "name": "Sled_cap_motor_reference_24_-1",
+      "material": "catalog",
+      "subsystem": "sled_catalog",
+      "solids": 1,
+      "volume_mm3": 3392.9200658769773,
+      "mass_kg": 0.03,
+      "CG_mm": [
+        298.0,
+        -161.0,
+        160.0
+      ],
+      "note": "Design allocation12mmODx30; purchased actuator and space qualification not selected"
+    },
+    {
+      "name": "Sled_cap_24_1",
+      "material": "aluminium",
+      "subsystem": "sled_gate",
+      "solids": 1,
+      "volume_mm3": 3260.618595226875,
+      "mass_kg": 0.008803670207112564,
+      "CG_mm": [
+        298.1035950793534,
+        105.33327899196114,
+        151.96787190323144
+      ],
+      "note": "Tr4x1 driven captive slide with independent3mm positive locking pin"
+    },
+    {
+      "name": "Sled_cap_screw_24_1",
+      "material": "steel",
+      "subsystem": "sled_latch_drive",
+      "solids": 1,
+      "volume_mm3": 1130.9733552923292,
+      "mass_kg": 0.008878140839044785,
+      "CG_mm": [
+        298.0,
+        100.99999999999999,
+        159.99999999999997
+      ],
+      "note": "Nominal4x1 drive; thread contact idealized"
+    },
+    {
+      "name": "Sled_cap_lockpin_24_1",
+      "material": "steel",
+      "subsystem": "sled_latch_pin",
+      "solids": 1,
+      "volume_mm3": 169.64600329384933,
+      "mass_kg": 0.0013317211258567175,
+      "CG_mm": [
+        291.00000000000006,
+        63.00000000000001,
+        132.00000000000003
+      ],
+      "note": "Normally engaged spring plunger specification; retract26mm before cap motion"
+    },
+    {
+      "name": "Sled_cap_motor_reference_24_1",
+      "material": "catalog",
+      "subsystem": "sled_catalog",
+      "solids": 1,
+      "volume_mm3": 3392.9200658769773,
+      "mass_kg": 0.03,
+      "CG_mm": [
+        298.0,
+        161.0,
+        160.0
+      ],
+      "note": "Design allocation12mmODx30; purchased actuator and space qualification not selected"
+    },
+    {
+      "name": "Sled_cap_296.5_-1",
+      "material": "aluminium",
+      "subsystem": "sled_gate",
+      "solids": 1,
+      "volume_mm3": 3260.618595226874,
+      "mass_kg": 0.008803670207112561,
+      "CG_mm": [
+        570.6035950793537,
+        -105.33327899196118,
+        151.96787190323144
+      ],
+      "note": "Tr4x1 driven captive slide with independent3mm positive locking pin"
+    },
+    {
+      "name": "Sled_cap_screw_296.5_-1",
+      "material": "steel",
+      "subsystem": "sled_latch_drive",
+      "solids": 1,
+      "volume_mm3": 1130.9733552923249,
+      "mass_kg": 0.00887814083904475,
+      "CG_mm": [
+        570.4999999999999,
+        -100.99999999999999,
+        160.0
+      ],
+      "note": "Nominal4x1 drive; thread contact idealized"
+    },
+    {
+      "name": "Sled_cap_lockpin_296.5_-1",
+      "material": "steel",
+      "subsystem": "sled_latch_pin",
+      "solids": 1,
+      "volume_mm3": 169.6460032938491,
+      "mass_kg": 0.0013317211258567156,
+      "CG_mm": [
+        563.5000000000001,
+        -63.00000000000001,
+        132.0
+      ],
+      "note": "Normally engaged spring plunger specification; retract26mm before cap motion"
+    },
+    {
+      "name": "Sled_cap_motor_reference_296.5_-1",
+      "material": "catalog",
+      "subsystem": "sled_catalog",
+      "solids": 1,
+      "volume_mm3": 3392.9200658769787,
+      "mass_kg": 0.03,
+      "CG_mm": [
+        570.5,
+        -161.0,
+        159.99999999999997
+      ],
+      "note": "Design allocation12mmODx30; purchased actuator and space qualification not selected"
+    },
+    {
+      "name": "Sled_cap_296.5_1",
+      "material": "aluminium",
+      "subsystem": "sled_gate",
+      "solids": 1,
+      "volume_mm3": 3260.6185952268743,
+      "mass_kg": 0.008803670207112561,
+      "CG_mm": [
+        570.6035950793536,
+        105.33327899196118,
+        151.96787190323147
+      ],
+      "note": "Tr4x1 driven captive slide with independent3mm positive locking pin"
+    },
+    {
+      "name": "Sled_cap_screw_296.5_1",
+      "material": "steel",
+      "subsystem": "sled_latch_drive",
+      "solids": 1,
+      "volume_mm3": 1130.9733552923249,
+      "mass_kg": 0.00887814083904475,
+      "CG_mm": [
+        570.4999999999999,
+        100.99999999999999,
+        160.0
+      ],
+      "note": "Nominal4x1 drive; thread contact idealized"
+    },
+    {
+      "name": "Sled_cap_lockpin_296.5_1",
+      "material": "steel",
+      "subsystem": "sled_latch_pin",
+      "solids": 1,
+      "volume_mm3": 169.6460032938491,
+      "mass_kg": 0.0013317211258567156,
+      "CG_mm": [
+        563.5000000000001,
+        63.00000000000001,
+        132.0
+      ],
+      "note": "Normally engaged spring plunger specification; retract26mm before cap motion"
+    },
+    {
+      "name": "Sled_cap_motor_reference_296.5_1",
+      "material": "catalog",
+      "subsystem": "sled_catalog",
+      "solids": 1,
+      "volume_mm3": 3392.9200658769787,
+      "mass_kg": 0.03,
+      "CG_mm": [
+        570.5,
+        161.0,
+        159.99999999999997
+      ],
+      "note": "Design allocation12mmODx30; purchased actuator and space qualification not selected"
+    },
+    {
+      "name": "Sled_fore_keeper_-1",
+      "material": "steel",
+      "subsystem": "sled_gate",
+      "solids": 1,
+      "volume_mm3": 898.9824372536066,
+      "mass_kg": 0.007057012132440812,
+      "CG_mm": [
+        609.5000024704372,
+        -66.25906870733868,
+        54.22364943120714
+      ],
+      "note": "Spring closed;12mm transverse stroke;inner edge42 closed/54 open;fixed50mm track ramp completes5mm before release"
+    },
+    {
+      "name": "Sled_fore_spring_reference_-1",
+      "material": "steel",
+      "subsystem": "sled_latch_spring",
+      "solids": 1,
+      "volume_mm3": 255.034491618418,
+      "mass_kg": 0.002,
+      "CG_mm": [
+        609.5,
+        -67.0,
+        54.00000000000001
+      ],
+      "note": "Annular spring envelope;closed preload5N;rate0.5N/mm;open force11N;22/10mm working lengths;wire/qualification selection separate"
+    },
+    {
+      "name": "Sled_fore_keeper_1",
+      "material": "steel",
+      "subsystem": "sled_gate",
+      "solids": 1,
+      "volume_mm3": 898.9824371396986,
+      "mass_kg": 0.007057012131546634,
+      "CG_mm": [
+        609.5000024704021,
+        66.25906870357521,
+        54.22364943114871
+      ],
+      "note": "Spring closed;12mm transverse stroke;inner edge42 closed/54 open;fixed50mm track ramp completes5mm before release"
+    },
+    {
+      "name": "Sled_fore_spring_reference_1",
+      "material": "steel",
+      "subsystem": "sled_latch_spring",
+      "solids": 1,
+      "volume_mm3": 255.034491618418,
+      "mass_kg": 0.002,
+      "CG_mm": [
+        609.5,
+        67.0,
+        54.00000000000001
+      ],
+      "note": "Annular spring envelope;closed preload5N;rate0.5N/mm;open force11N;22/10mm working lengths;wire/qualification selection separate"
+    },
+    {
+      "name": "Sled_axle_119_-1",
+      "material": "steel",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 1709.0264035528462,
+      "mass_kg": 0.013415857267889844,
+      "CG_mm": [
+        319.00000000000006,
+        -107.0,
+        -1.4634709122551095e-15
+      ],
+      "note": ""
+    },
+    {
+      "name": "Sled_wheel_119_-1",
+      "material": "steel",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 10464.770792813746,
+      "mass_kg": 0.08214845072358791,
+      "CG_mm": [
+        319.0,
+        -114.00000000000001,
+        -3.585043302992964e-16
+      ],
+      "note": "8.2mm geometric bore; bearing realization separate"
+    },
+    {
+      "name": "Sled_axle_119_1",
+      "material": "steel",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 1709.0264035528462,
+      "mass_kg": 0.013415857267889844,
+      "CG_mm": [
+        319.00000000000006,
+        71.00000000000001,
+        -39.99999999999999
+      ],
+      "note": ""
+    },
+    {
+      "name": "Sled_wheel_119_1",
+      "material": "steel",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 10464.770792813746,
+      "mass_kg": 0.08214845072358791,
+      "CG_mm": [
+        319.0,
+        77.99999999999999,
+        -40.0
+      ],
+      "note": "8.2mm geometric bore; bearing realization separate"
+    },
+    {
+      "name": "Sled_axle_369_-1",
+      "material": "steel",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 1709.0264035528512,
+      "mass_kg": 0.013415857267889882,
+      "CG_mm": [
+        568.9999999999999,
+        -107.0,
+        1.2639066969475907e-15
+      ],
+      "note": ""
+    },
+    {
+      "name": "Sled_wheel_369_-1",
+      "material": "steel",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 10464.770792813748,
+      "mass_kg": 0.08214845072358792,
+      "CG_mm": [
+        569.0,
+        -114.00000000000001,
+        3.704544746426062e-15
+      ],
+      "note": "8.2mm geometric bore; bearing realization separate"
+    },
+    {
+      "name": "Sled_axle_369_1",
+      "material": "steel",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 1709.0264035528508,
+      "mass_kg": 0.013415857267889878,
+      "CG_mm": [
+        569.0000000000001,
+        71.00000000000001,
+        -40.00000000000001
+      ],
+      "note": ""
+    },
+    {
+      "name": "Sled_wheel_369_1",
+      "material": "steel",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 10464.770792813748,
+      "mass_kg": 0.08214845072358792,
+      "CG_mm": [
+        569.0,
+        78.0,
+        -40.0
+      ],
+      "note": "8.2mm geometric bore; bearing realization separate"
+    },
+    {
+      "name": "Sled_connected_chassis",
+      "material": "aluminium",
+      "subsystem": "sled",
+      "solids": 1,
+      "volume_mm3": 3117425.8157274723,
+      "mass_kg": 8.417049702464176,
+      "CG_mm": [
+        442.59127575948384,
+        -20.59612984685071,
+        5.497005281020054
+      ],
+      "note": "16mm open-C plates and20mmnegativeweb;actual axle bores;home lock6mm reference-pin interface at aft+20,Y-100..-80,Z36;host retracting pin required"
+    },
+    {
+      "name": "Magnet_-1_00",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        280.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_01",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        288.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_02",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        296.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_03",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        304.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_04",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        312.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_05",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        320.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_06",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        328.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_07",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        336.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_08",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        344.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_09",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        352.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_10",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        360.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_11",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        368.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_12",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        376.00000000000006,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_13",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        384.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_14",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        392.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_15",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        400.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_16",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        408.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_17",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        416.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_18",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        424.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_19",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        432.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_20",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        440.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_21",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        448.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_22",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        456.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_23",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        464.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_24",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        472.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_25",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        480.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_26",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        488.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_27",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        496.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_28",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        504.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_29",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        512.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_30",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        520.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_31",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        528.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_32",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        536.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_33",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        544.0,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_34",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        552.0000000000001,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_35",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        560.0000000000001,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_36",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        568.0000000000001,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_37",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        576.0000000000001,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_38",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        584.0000000000001,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_39",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        592.0000000000001,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_40",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        600.0000000000001,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_-1_41",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        608.0000000000001,
+        -7.771561172376097e-16,
+        -10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_00",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        280.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_01",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        288.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_02",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        296.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_03",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        304.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_04",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        312.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_05",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        320.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_06",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        328.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_07",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        336.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_08",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        344.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_09",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        352.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_10",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        360.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_11",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        368.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_12",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        376.00000000000006,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_13",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        384.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_14",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        392.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_15",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        400.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_16",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        408.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_17",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        416.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_18",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        424.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_19",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        432.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_20",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        440.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_21",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        448.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_22",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        456.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_23",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        464.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_24",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        472.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_25",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        480.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_26",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        488.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_27",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        496.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_28",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        504.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_29",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        512.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_30",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        520.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_31",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        528.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_32",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        536.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_33",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        544.0,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_34",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        552.0000000000001,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_35",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        560.0000000000001,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_36",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        568.0000000000001,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_37",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        576.0000000000001,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_38",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        584.0000000000001,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_39",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        592.0000000000001,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_40",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        600.0000000000001,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Magnet_1_41",
+      "material": "ndfeb",
+      "subsystem": "sled_magnet",
+      "solids": 1,
+      "volume_mm3": 5759.999999999999,
+      "mass_kg": 0.043199999999999995,
+      "CG_mm": [
+        608.0000000000001,
+        -7.771561172376097e-16,
+        10.000000000000002
+      ],
+      "note": "42 discrete 8mm blocks; 336mm active length; 2mm mounting-end margins"
+    },
+    {
+      "name": "Lift_Tr16x4_screw_-200",
+      "material": "steel",
+      "subsystem": "lift_drive",
+      "solids": 1,
+      "volume_mm3": 227727.76827341688,
+      "mass_kg": 1.7876629809463225,
+      "CG_mm": [
+        69.99999999999997,
+        -199.99999999999997,
+        455.1759187727623
+      ],
+      "note": "16x4 nominal screw;12mm journals; source-backed rating separate"
+    },
+    {
+      "name": "Lift_bearing_-200_-114",
+      "material": "steel",
+      "subsystem": "lift_fixed",
+      "solids": 1,
+      "volume_mm3": 3990.8279797081864,
+      "mass_kg": 0.031327999640709266,
+      "CG_mm": [
+        70.00000000000001,
+        -199.99999999999997,
+        -110.0
+      ],
+      "note": "6001 nominal12x28x8 bearing envelope"
+    },
+    {
+      "name": "Lift_bearing_-200_1006",
+      "material": "steel",
+      "subsystem": "lift_fixed",
+      "solids": 1,
+      "volume_mm3": 3990.8279797081864,
+      "mass_kg": 0.031327999640709266,
+      "CG_mm": [
+        70.00000000000001,
+        -199.99999999999997,
+        1010.0
+      ],
+      "note": "6001 nominal12x28x8 bearing envelope"
+    },
+    {
+      "name": "Lift_sync_pulley_-200",
+      "material": "aluminium",
+      "subsystem": "lift_drive",
+      "solids": 1,
+      "volume_mm3": 5405.864142738102,
+      "mass_kg": 0.014595833185392875,
+      "CG_mm": [
+        70.0,
+        -199.99999999999997,
+        1033.0000000000002
+      ],
+      "note": ""
+    },
+    {
+      "name": "Lift_Tr16x4_screw_220",
+      "material": "steel",
+      "subsystem": "lift_drive",
+      "solids": 1,
+      "volume_mm3": 227727.76827341688,
+      "mass_kg": 1.7876629809463225,
+      "CG_mm": [
+        69.99999999999997,
+        219.99999999999997,
+        455.1759187727623
+      ],
+      "note": "16x4 nominal screw;12mm journals; source-backed rating separate"
+    },
+    {
+      "name": "Lift_bearing_220_-114",
+      "material": "steel",
+      "subsystem": "lift_fixed",
+      "solids": 1,
+      "volume_mm3": 3990.8279797081864,
+      "mass_kg": 0.031327999640709266,
+      "CG_mm": [
+        70.00000000000001,
+        220.00000000000003,
+        -110.0
+      ],
+      "note": "6001 nominal12x28x8 bearing envelope"
+    },
+    {
+      "name": "Lift_bearing_220_1006",
+      "material": "steel",
+      "subsystem": "lift_fixed",
+      "solids": 1,
+      "volume_mm3": 3990.8279797081864,
+      "mass_kg": 0.031327999640709266,
+      "CG_mm": [
+        70.00000000000001,
+        220.00000000000003,
+        1010.0
+      ],
+      "note": "6001 nominal12x28x8 bearing envelope"
+    },
+    {
+      "name": "Lift_sync_pulley_220",
+      "material": "aluminium",
+      "subsystem": "lift_drive",
+      "solids": 1,
+      "volume_mm3": 5405.864142738102,
+      "mass_kg": 0.014595833185392875,
+      "CG_mm": [
+        70.0,
+        219.99999999999997,
+        1033.0000000000002
+      ],
+      "note": ""
+    },
+    {
+      "name": "Lift_sync_belt",
+      "material": "polymer",
+      "subsystem": "lift_drive",
+      "solids": 1,
+      "volume_mm3": 11512.56625003693,
+      "mass_kg": 0.016232718412552073,
+      "CG_mm": [
+        69.99999999999996,
+        10.000000000000119,
+        1033.0000000000016
+      ],
+      "note": "Twin-screw synchronization; teeth/tension rating separate"
+    },
+    {
+      "name": "Lift_holding_brake_reference",
+      "material": "catalog",
+      "subsystem": "lift_catalog",
+      "solids": 1,
+      "volume_mm3": 201061.92982974675,
+      "mass_kg": 0.8,
+      "CG_mm": [
+        70.0,
+        -200.00000000000003,
+        1060.0
+      ],
+      "note": "2Nm BXW05 normally applied reference; adapters required"
+    },
+    {
+      "name": "Lift_motor_gear_reference",
+      "material": "catalog",
+      "subsystem": "lift_catalog",
+      "solids": 1,
+      "volume_mm3": 63455.145054268105,
+      "mass_kg": 0.336,
+      "CG_mm": [
+        70.00000000000001,
+        -200.00000000000003,
+        1119.45
+      ],
+      "note": "3242BX4+32GPT20 exact19.8:1 reference;120s traverse sizing"
+    },
+    {
+      "name": "Lift_connected_fixed_frame",
+      "material": "aluminium",
+      "subsystem": "lift_fixed",
+      "solids": 1,
+      "volume_mm3": 1907476.1582979131,
+      "mass_kg": 5.150185627404366,
+      "CG_mm": [
+        422.3058849656376,
+        9.999999999999012,
+        726.6263712941213
+      ],
+      "note": ""
+    },
+    {
+      "name": "Lift_pallet_grip_pin_178",
+      "material": "steel",
+      "subsystem": "cradle_grip",
+      "solids": 1,
+      "volume_mm3": 862.3671834104008,
+      "mass_kg": 0.006769582389771646,
+      "CG_mm": [
+        178.00000000000003,
+        -11.327868852459018,
+        824.9999999999999
+      ],
+      "note": "26mm captive Y withdrawal;16mm pallet engagement;open only after both pallet bayonet locks are engaged"
+    },
+    {
+      "name": "Lift_pallet_grip_actuator_reference_178",
+      "material": "catalog",
+      "subsystem": "cradle_catalog",
+      "solids": 1,
+      "volume_mm3": 2114.9201743966496,
+      "mass_kg": 0.03,
+      "CG_mm": [
+        178.0,
+        -59.0,
+        824.9999999999999
+      ],
+      "note": "10mmODx30mm allocation;26mm stroke;normally engaged positive holding pin;selection separate"
+    },
+    {
+      "name": "Lift_pallet_grip_pin_704.5",
+      "material": "steel",
+      "subsystem": "cradle_grip",
+      "solids": 1,
+      "volume_mm3": 862.3671834104,
+      "mass_kg": 0.006769582389771641,
+      "CG_mm": [
+        704.5,
+        -11.32786885245902,
+        824.9999999999999
+      ],
+      "note": "26mm captive Y withdrawal;16mm pallet engagement;open only after both pallet bayonet locks are engaged"
+    },
+    {
+      "name": "Lift_pallet_grip_actuator_reference_704.5",
+      "material": "catalog",
+      "subsystem": "cradle_catalog",
+      "solids": 1,
+      "volume_mm3": 2114.9201743966537,
+      "mass_kg": 0.03,
+      "CG_mm": [
+        704.5,
+        -59.0,
+        824.9999999999999
+      ],
+      "note": "10mmODx30mm allocation;26mm stroke;normally engaged positive holding pin;selection separate"
+    },
+    {
+      "name": "Cradle_Y_keeper_70_-1",
+      "material": "steel",
+      "subsystem": "cradle_keeper",
+      "solids": 1,
+      "volume_mm3": 1052.9037880495234,
+      "mass_kg": 0.00826529473618876,
+      "CG_mm": [
+        338.0,
+        -53.366817115271814,
+        892.5821102929193
+      ],
+      "note": "110mm upward retraction;3mm rod in3.2mm overhead guide;tab clears payload top by12mm when open;positive holding linear actuator required"
+    },
+    {
+      "name": "Cradle_keeper_actuator_reference_70_-1",
+      "material": "catalog",
+      "subsystem": "cradle_catalog",
+      "solids": 1,
+      "volume_mm3": 18802.245409707553,
+      "mass_kg": 0.12,
+      "CG_mm": [
+        324.46250178810527,
+        -1.7674176465052922,
+        1046.7710642729016
+      ],
+      "note": "110mm stroke;12mmODx160mm central actuator allocation;3.8mmOD guided push/pull cable;self-locking screw plus normally applied holding brake required;hardware/load/life selection separate"
+    },
+    {
+      "name": "Cradle_Y_keeper_70_1",
+      "material": "steel",
+      "subsystem": "cradle_keeper",
+      "solids": 1,
+      "volume_mm3": 1052.9037880495239,
+      "mass_kg": 0.008265294736188764,
+      "CG_mm": [
+        337.99999999999994,
+        53.3668171152718,
+        892.5821102929191
+      ],
+      "note": "110mm upward retraction;3mm rod in3.2mm overhead guide;tab clears payload top by12mm when open;positive holding linear actuator required"
+    },
+    {
+      "name": "Cradle_keeper_actuator_reference_70_1",
+      "material": "catalog",
+      "subsystem": "cradle_catalog",
+      "solids": 1,
+      "volume_mm3": 18802.24689051677,
+      "mass_kg": 0.12,
+      "CG_mm": [
+        351.53749781711053,
+        1.7674191046202352,
+        1046.7710701525846
+      ],
+      "note": "110mm stroke;12mmODx160mm central actuator allocation;3.8mmOD guided push/pull cable;self-locking screw plus normally applied holding brake required;hardware/load/life selection separate"
+    },
+    {
+      "name": "Cradle_Y_keeper_270_-1",
+      "material": "steel",
+      "subsystem": "cradle_keeper",
+      "solids": 1,
+      "volume_mm3": 1052.9037880495225,
+      "mass_kg": 0.008265294736188752,
+      "CG_mm": [
+        538.0000000000001,
+        -53.366817115271814,
+        892.5821102929194
+      ],
+      "note": "110mm upward retraction;3mm rod in3.2mm overhead guide;tab clears payload top by12mm when open;positive holding linear actuator required"
+    },
+    {
+      "name": "Cradle_keeper_actuator_reference_270_-1",
+      "material": "catalog",
+      "subsystem": "cradle_catalog",
+      "solids": 1,
+      "volume_mm3": 18802.24535396063,
+      "mass_kg": 0.12,
+      "CG_mm": [
+        524.4625017504725,
+        -1.7674175239851864,
+        1046.7710640445168
+      ],
+      "note": "110mm stroke;12mmODx160mm central actuator allocation;3.8mmOD guided push/pull cable;self-locking screw plus normally applied holding brake required;hardware/load/life selection separate"
+    },
+    {
+      "name": "Cradle_Y_keeper_270_1",
+      "material": "steel",
+      "subsystem": "cradle_keeper",
+      "solids": 1,
+      "volume_mm3": 1052.9037880495225,
+      "mass_kg": 0.008265294736188752,
+      "CG_mm": [
+        538.0000000000001,
+        53.36681711527181,
+        892.5821102929192
+      ],
+      "note": "110mm upward retraction;3mm rod in3.2mm overhead guide;tab clears payload top by12mm when open;positive holding linear actuator required"
+    },
+    {
+      "name": "Cradle_keeper_actuator_reference_270_1",
+      "material": "catalog",
+      "subsystem": "cradle_catalog",
+      "solids": 1,
+      "volume_mm3": 18802.246950706613,
+      "mass_kg": 0.12,
+      "CG_mm": [
+        551.5374977795906,
+        1.7674192523242744,
+        1046.7710703931407
+      ],
+      "note": "110mm stroke;12mmODx160mm central actuator allocation;3.8mmOD guided push/pull cable;self-locking screw plus normally applied holding brake required;hardware/load/life selection separate"
+    },
+    {
+      "name": "Lift_connected_carriage",
+      "material": "aluminium",
+      "subsystem": "cradle",
+      "solids": 1,
+      "volume_mm3": 965566.9966844915,
+      "mass_kg": 2.6070308910481272,
+      "CG_mm": [
+        412.7576133877629,
+        24.264096960789722,
+        908.6946913270211
+      ],
+      "note": "High endcrossheads, central topbridge, bored outboard nut brackets"
+    },
+    {
+      "name": "Lift_Tr16x4_nut_-200",
+      "material": "polymer",
+      "subsystem": "cradle",
+      "solids": 1,
+      "volume_mm3": 11469.70345084405,
+      "mass_kg": 0.01617228186569011,
+      "CG_mm": [
+        70.0,
+        -199.99999999999997,
+        812.9999999999998
+      ],
+      "note": "Nominal captive nut; load/life rating separate"
+    },
+    {
+      "name": "Lift_Tr16x4_nut_220",
+      "material": "polymer",
+      "subsystem": "cradle",
+      "solids": 1,
+      "volume_mm3": 11469.70345084405,
+      "mass_kg": 0.01617228186569011,
+      "CG_mm": [
+        70.0,
+        220.0,
+        812.9999999999998
+      ],
+      "note": "Nominal captive nut; load/life rating separate"
+    },
+    {
+      "name": "Captive_payload_pallet",
+      "material": "aluminium",
+      "subsystem": "cradle_pallet",
+      "solids": 1,
+      "volume_mm3": 128543.43431677374,
+      "mass_kg": 0.34706727265528914,
+      "CG_mm": [
+        441.38817156347045,
+        -6.716326139425223,
+        824.7631617658132
+      ],
+      "note": "One physical pallet;four8mm feet seat on carrier top30;Y0 crossbar;outboard6.2mm lift-grip bores;two keyed positiveZ bayonet lock interfaces;stays on carrier through shot andreturn"
+    },
+    {
+      "name": "Transferred_3U",
+      "material": "payload",
+      "subsystem": "payload",
+      "solids": 1,
+      "volume_mm3": 3405000.0,
+      "mass_kg": 4.0,
+      "CG_mm": [
+        434.24999999999994,
+        -5.3421127857440717e-17,
+        879.9999999999999
+      ],
+      "note": "Public 3U envelope, 4kg assigned mass; actual payload/provider approval separate"
+    }
+  ],
+  "scope": "Nominal academic assembly; no loaded or provider qualification",
+  "audit": {
+    "pass_all": true,
+    "tested_pairs": 1196,
+    "interferences": []
+  },
+  "all_parts_single_connected_solid": true,
+  "elapsed_s": 28.530424053000388
+}

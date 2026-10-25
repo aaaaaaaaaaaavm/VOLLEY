@@ -1,0 +1,27 @@
+{
+  "package": "ACR1 source-driven editorial films",
+  "rebuild": "python3 docs/visual-source/build_films.py prepare; python3 docs/visual-source/build_films.py animatic; python3 docs/visual-source/build_films.py render",
+  "python_packages": [
+    "Pillow 12.3.0",
+    "NumPy"
+  ],
+  "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "font": "DejaVuSans, DejaVuSans-Bold and DejaVuSansMono; installed runtime dependencies",
+  "font_sha256": {
+    "DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+    "DejaVuSans-Bold.ttf": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+    "DejaVuSansMono.ttf": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8"
+  },
+  "renderer": "Pillow vector/text compositor + unchanged source images; FFmpeg H.264/VP9 encoders",
+  "cad_scene": {
+    "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+    "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+    "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+  },
+  "motion_class": "conceptual diagrams; computed mission host trajectory",
+  "archive_frames": "lossless 1280x720 PNG storyboard states; individual film directories",
+  "path_base": "repository_root",
+  "release_identity": "containing Git commit or release tag",
+  "font_license": "docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt",
+  "source_package_unpack_directory": "docs/"
+}

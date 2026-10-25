@@ -1,0 +1,42 @@
+[
+  {
+    "film": "custody",
+    "duration_s": 78.0,
+    "dimensions": [
+      640,
+      360
+    ],
+    "frames": "156",
+    "codec": "h264"
+  },
+  {
+    "film": "methods",
+    "duration_s": 54.0,
+    "dimensions": [
+      640,
+      360
+    ],
+    "frames": "108",
+    "codec": "h264"
+  },
+  {
+    "film": "mission",
+    "duration_s": 108.0,
+    "dimensions": [
+      640,
+      360
+    ],
+    "frames": "216",
+    "codec": "h264"
+  },
+  {
+    "film": "overview",
+    "duration_s": 72.0,
+    "dimensions": [
+      640,
+      360
+    ],
+    "frames": "144",
+    "codec": "h264"
+  }
+]

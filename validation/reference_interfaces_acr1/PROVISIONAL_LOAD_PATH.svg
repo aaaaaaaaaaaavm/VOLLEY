@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-labelledby="title desc">
+<title id="title">ACR1 provisional load path</title><desc id="desc">Notional flow of storage, launch and arrest reactions into the counted generic mounting ladder, then through an unspecified adapter into host primary structure. Not to scale and not an approved interface.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#245a73"/></marker></defs>
+<rect width="1100" height="660" fill="#f7fafb"/>
+<g font-family="Arial,sans-serif" fill="#173746"><text x="42" y="48" font-size="28" font-weight="bold">ACR1 provisional attachment and load path</text><text x="42" y="78" font-size="17">Topology only • not to scale • no bolt pattern or provider approval</text>
+<rect x="44" y="115" width="440" height="150" rx="8" fill="#e3eef2" stroke="#245a73" stroke-width="2"/>
+<text x="68" y="149" font-size="20" font-weight="bold">Retained machine</text><text x="68" y="180" font-size="17">12 fixed 3U cells • lift • captive pallet</text><text x="68" y="208" font-size="17">2250 × 1240 × 1348.9 mm bounding box</text><text x="68" y="236" font-size="17">204.556720 kg loaded study device</text>
+<rect x="612" y="115" width="442" height="150" rx="8" fill="#e3eef2" stroke="#245a73" stroke-width="2"/>
+<text x="636" y="149" font-size="20" font-weight="bold">Launch and arrest path</text><text x="636" y="180" font-size="17">Motor / guide / brake supports</text><text x="636" y="208" font-size="17">1300 mm powered stroke</text><text x="636" y="236" font-size="17">Keep departure corridor clear of host</text>
+<path d="M264 266V315M832 266V315" stroke="#245a73" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="150" y="322" width="800" height="80" rx="7" fill="#bdd5df" stroke="#245a73" stroke-width="2"/>
+<text x="174" y="354" font-size="20" font-weight="bold">Generic Host_mount_ladder — already counted in CAD</text><text x="174" y="383" font-size="17">20.180448 kg • generic mounting datum Z = −150 mm</text>
+<path d="M550 402V435" stroke="#245a73" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="220" y="442" width="660" height="68" rx="7" fill="#fff3d7" stroke="#a27524" stroke-dasharray="7 5" stroke-width="2"/>
+<text x="244" y="472" font-size="20" font-weight="bold">Provider adapter / local reinforcement — unspecified</text><text x="244" y="496" font-size="16">Size joints, stiffness, loads, bonding and thermal paths; add installed mass once</text>
+<path d="M550 510V543" stroke="#245a73" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="150" y="550" width="800" height="55" rx="7" fill="#d2e8d9" stroke="#3f7055" stroke-width="2"/>
+<text x="174" y="585" font-size="20" font-weight="bold">Host primary structure — actual surfaces and allowable loads required</text>
+<text x="42" y="640" font-size="15">25 October 2026 • Source: ACR1 native home BOM and declared mission mass • Project reference sketch</text></g></svg>

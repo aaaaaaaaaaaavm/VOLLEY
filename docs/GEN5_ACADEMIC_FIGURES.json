@@ -1,7 +1,7 @@
 {
   "revision": "2026-10-21-FM07-FCE12",
   "hardware_measurements": false,
-  "boundary": "Legacy graphs remain historical model outputs with current manuscript limitations. STEP-derived views do not prove loaded clearance. This catalog fixes image identity; method/units/case are described by captions and validation records.",
+  "boundary": "Legacy graphs remain historical model outputs with current manuscript limitations. STEP-derived views do not prove loaded clearance. This catalog fixes image identity; method/units/case are described by captions and validation records. Historical README source identity now points to the exact preserved pre-ACR1 file; current ACR1 sources/exports have their own manifest.",
   "figures": [
     {
       "path": "cad/gen6_feeder/release/Gen6_Feed_One_Cell_Storyboard.jpg",
@@ -488,11 +488,11 @@
     }
   ],
   "document_sha256": {
-    "README.md": "dee90d814743bcf06611d655170b1810d811cf919890d1d1fd4bfa9f11fa47c8",
     "reports/GEN5_COMPUTATIONAL_REVIEW.md": "1541b43f05818888dd0cc1ded1fe42dc1d7e5e73f3f17a8a6ecc45668d6619e6",
     "validation/orbit_evidence/README.md": "3f350ec088a33fb413861c20e88e04946c183bb67c67c2378625103412190967",
     "validation/feeder_review/README.md": "b226b959274eb24030f6f20b4ac58932154fa9b2713ea486bf49a09bb4dba94a",
     "validation/coupled_delivery/README.md": "2969768ba2bff29cf6f80fcf51a1a7828ad01b6fc8a0a1bb1500518bc7ee7fbd",
-    "validation/orbit_harmonization/README.md": "b1923a072300b7f5162b5c17249205a3e86b0c1ff9c4b385e44566986d89bd4c"
+    "validation/orbit_harmonization/README.md": "b1923a072300b7f5162b5c17249205a3e86b0c1ff9c4b385e44566986d89bd4c",
+    "README_PRE_ACR1_2026-10-23.md": "dee90d814743bcf06611d655170b1810d811cf919890d1d1fd4bfa9f11fa47c8"
   }
 }

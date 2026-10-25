@@ -1,10 +1,10 @@
 # Inventory
 
-Complete index of the work. Read alongside `PROVENANCE.md`.
+> **Historical inventory — pre-ACR1; retained 25 October 2026.** This catalog describes earlier project artifacts. The current integrated source/result inventory is [ACR1](../validation/acr1/README.md), with exact membership in its [manifest](../validation/acr1/MANIFEST.json). Earlier file locations and maturity statements below retain their historical scope.
 
-Baseline: nothing in this list has been validated by hardware, FEA, or third-party
-review. Every entry is a model output or a design decision, and several superseded
-entries are kept only so the record of what changed stays legible.
+Index of the earlier work. Read alongside [provenance](PROVENANCE.md).
+
+The inventory contains model outputs and design decisions, including superseded entries. Later electromagnetic and structural finite-element records are available in the current source package. Numerical analysis remains distinct from hardware measurement and external acceptance.
 
 ---
 

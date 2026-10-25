@@ -1,0 +1,46 @@
+A host-assisted delivery study.
+
+0–12 s | One common starting state.
+Nominal 500 km SSO. Twelve 4 kg 3U payloads. Generic host: 500 kg wet bus, including 20 kg fuel once; Isp 220 s.
+Evidence: CAD-derived Blender render
+Source: mission/MISSION_INPUTS.json
+
+12–24 s | Twelve scheduled releases.
+Actual computed Gen5 host history, uniform-2 target family. Markers identify the frozen release epochs; the inertial X/Z projection preserves the numerical trajectory.
+Evidence: Computed host trajectory / fixed-axis J2 / X–Z projection
+Source: mission/release/uniform_2_gen5_f0.35_trajectory.csv; mission/TARGETS.json
+
+24–36 s | Host manoeuvre. Point. Release.
+Host burns provide the departure state and direction. The launcher adds the coupled release contribution. The propagated state depends on both.
+Evidence: Conceptual operations diagram / generic host study
+Source: mission/MISSION_REPORT.md
+
+36–48 s | Frozen full-state targets.
+Uniform synthetic 2 m/s or alternating 1/3 m/s along-track target families. All payloads and retained host are compared at t = 91800 s: 24 h after the final release.
+Evidence: Computed target states / synthetic study cases
+Source: mission/TARGETS.json
+
+48–60 s | Coast for loading and safe release.
+Gen5 reserves 400 s of zero-force loading coast per payload for the declared 355 s cycle. Both architectures keep 5 s pre-release and 20 s post-release zero-force guards.
+Evidence: Source-derived operation timing / one 450 s release leg
+Source: mission/MISSION_REPORT.md
+
+60–72 s | Command flexibility and installed cost.
+The ideal ground-pretrimmed spring closes both target families at the 1 N and 5 N gates. Preplanned targets give no established Gen5 propellant or initial wet-mass advantage.
+Evidence: Computed result / bounded candidate policies
+Source: mission/MISSION_RESULTS.csv
+
+72–84 s | Independent replay of target states.
+Native Orekit 13.1.6 replay and 60→30 s refinement agree within the declared numerical residuals. Numerical agreement is not physical delivery accuracy.
+Evidence: Computed numerical agreement / native Orekit replay
+Source: mission/NATIVE_REPLAY_CHECKS.json
+
+84–96 s | Mission model and applicability.
+Fixed-axis J2 point masses and constant inertial force. Drag, higher gravity, attitude/plume allocation, navigation and finite exit geometry are outside this study.
+Evidence: Generic host study / modeled target states
+Source: mission/MISSION_REPORT.md
+
+96–108 s | Twelve releases. One resource account.
+Twelve commanded releases share one coupled resource account: payloads, retained device, host burns, source energy and carrier recovery. Inspect the frozen target states and same-input policies.
+Evidence: Computed result / synthetic preplanned target families
+Source: mission/MISSION_RESULTS.csv; mission/MISSION_REPORT.md

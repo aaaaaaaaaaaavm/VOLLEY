@@ -1,0 +1,37 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:12.000
+One common starting state. Nominal 500 km SSO. Twelve 4 kg 3U payloads. Generic host: 500 kg wet bus, including 20 kg fuel once; Isp 220 s.
+
+2
+00:00:12.000 --> 00:00:24.000
+Twelve scheduled releases. Actual computed Gen5 host history, uniform-2 target family. Markers identify the frozen release epochs; the inertial X/Z projection preserves the numerical trajectory.
+
+3
+00:00:24.000 --> 00:00:36.000
+Host manoeuvre. Point. Release. Host burns provide the departure state and direction. The launcher adds the coupled release contribution. The propagated state depends on both.
+
+4
+00:00:36.000 --> 00:00:48.000
+Frozen full-state targets. Uniform synthetic 2 m/s or alternating 1/3 m/s along-track target families. All payloads and retained host are compared at t = 91800 s: 24 h after the final release.
+
+5
+00:00:48.000 --> 00:01:00.000
+Coast for loading and safe release. Gen5 reserves 400 s of zero-force loading coast per payload for the declared 355 s cycle. Both architectures keep 5 s pre-release and 20 s post-release zero-force guards.
+
+6
+00:01:00.000 --> 00:01:12.000
+Command flexibility and installed cost. The ideal ground-pretrimmed spring closes both target families at the 1 N and 5 N gates. Preplanned targets give no established Gen5 propellant or initial wet-mass advantage.
+
+7
+00:01:12.000 --> 00:01:24.000
+Independent replay of target states. Native Orekit 13.1.6 replay and 60→30 s refinement agree within the declared numerical residuals. Numerical agreement is not physical delivery accuracy.
+
+8
+00:01:24.000 --> 00:01:36.000
+Mission model and applicability. Fixed-axis J2 point masses and constant inertial force. Drag, higher gravity, attitude/plume allocation, navigation and finite exit geometry are outside this study.
+
+9
+00:01:36.000 --> 00:01:48.000
+Twelve releases. One resource account. Twelve commanded releases share one coupled resource account: payloads, retained device, host burns, source energy and carrier recovery. Inspect the frozen target states and same-input policies.

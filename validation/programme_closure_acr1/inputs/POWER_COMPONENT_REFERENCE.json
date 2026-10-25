@@ -1,0 +1,87 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "status": "Selected catalog reference design; final circuit acceptance follows numerical gates",
+  "sources": {
+    "eaton_tv": {
+      "url": "https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-tv-supercapacitors-cylindrical-cells-data-sheet.pdf",
+      "bytes": 351266,
+      "sha256": "eaddcdbd008e4be6d20a667e49ca14c4a98c904793e8d482132895a639f95cea"
+    },
+    "irfp4668": {
+      "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irfp4668-datasheet-en.pdf",
+      "sha256": "117c4a335eea1b0fae0d870222393b871b58ad73c04a1b502f009aeff66e54a8",
+      "bytes": 1160740
+    },
+    "ucc21520": {
+      "url": "https://www.ti.com/lit/ds/symlink/ucc21520.pdf",
+      "sha256": "9fa909613e47da0f18592efd501b78b7eff435c289bcf2db1e84e7e3190085c3",
+      "bytes": 2527695
+    }
+  },
+  "pulse_store": {
+    "cell": "EatonTV1860-3R0107-R",
+    "series_groups": 32,
+    "parallel_cells_per_group": 2,
+    "total_cells": 64,
+    "nominal_cell_F": 100,
+    "initial_minimum_cell_F": 90,
+    "maximum_initial_cell_ESR_ohm": 0.011,
+    "cell_charge_command_V": 2.7,
+    "maximum_working_cell_V": 3,
+    "cell_mass_kg_typical": 0.02,
+    "cell_dimensions_max_mm": [
+      18.5,
+      60.5
+    ],
+    "nominal_bank_F": 6.25,
+    "nominal_bank_ESR_ohm": 0.176,
+    "end_of_life_sensitivity_bank_F": 3.9375,
+    "end_of_life_sensitivity_bank_ESR_ohm": 0.352,
+    "bare_cells_mass_kg": 1.28,
+    "catalog_1second_pulse_figure_A": 71,
+    "pulse_figure_interpretation": "Derived typical pulse-performance figure, not a guaranteed vacuum or repeated-pulse acceptance rating",
+    "operating_temperature_C": [
+      -40,
+      65
+    ],
+    "extended_temperature_derating": "2.5V/cell at85C; reference calculations do not establish hot-case compliance",
+    "balance_resistor_per_parallel_group_ohm": 200,
+    "balance_dissipation_W": 1.1664,
+    "protection_requirement": "Group voltage monitoring, inhibited charging at overvoltage, branch fault protection, local isolated discharge and current monitoring"
+  },
+  "inverter": {
+    "topology": "Three half bridges;10parallelMOSFETs per switch position",
+    "switch": "IRFP4668PbF",
+    "switch_quantity": 60,
+    "Vds_minimum_breakdown_V": 200,
+    "Id_continuous_A_at25C_case": 130,
+    "Id_continuous_A_at100C_case": 92,
+    "Rds_max_ohm_at25C": 0.0097,
+    "Rds_hot_multiplier_assumed": 2,
+    "Qg_max_C": 2.41e-07,
+    "junction_to_case_max_K_W": 0.29,
+    "nominal_gate_V": 10,
+    "PWM_Hz": 40000,
+    "mean_peak_phase_current_limit_A": 600,
+    "worst_device_sharing_factor_assumed": 1.25,
+    "allocated_commutation_loop_H": 3e-08,
+    "minimum_effective_current_fall_s_assumed": 2e-07,
+    "notes": "Voltage transient allocation and thermal mounting must be checked; absolute maximum ratings alone are not design acceptance"
+  },
+  "gate_drive": {
+    "driver": "TIUCC21520DW",
+    "quantity": 30,
+    "configuration": "One isolated dual output per high/low MOSFET pair; individual gate resistors",
+    "source_peak_A": 4,
+    "sink_peak_A": 6,
+    "maximum_gate_charge_average_power_W": 5.784,
+    "notes": "Per-device200ns total-charge requirement1.205A; driver peak rating is sufficient as a catalog screen. Circuit delays/dead time need implementation."
+  },
+  "remaining_same_revision_checks": [
+    "Source/current transient and stroke closure",
+    "PWM ripple and allocated device voltage/current margins",
+    "Thermal pulse and campaign budget",
+    "Physical source and inverter mounting/harness allowances",
+    "Published operating point must follow the supported cases"
+  ]
+}

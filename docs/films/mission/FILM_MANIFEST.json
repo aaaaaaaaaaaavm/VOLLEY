@@ -1,0 +1,166 @@
+{
+  "configuration": "VOLLEY-G5-ACR1",
+  "film": "mission",
+  "title": "A host-assisted delivery study.",
+  "duration_s": 108,
+  "dimensions_px": [
+    1280,
+    720
+  ],
+  "fps": 12,
+  "codec": "H.264 yuv420p / VP9",
+  "audio": "none; explicit playback; captions and transcript supplied",
+  "master": "docs/films/mission/film.mp4",
+  "editable_source": [
+    "docs/visual-source/build_films.py",
+    "docs/visual-source/STORYBOARD.json"
+  ],
+  "cad_scene": {
+    "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+    "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+    "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+  },
+  "sources": "docs/visual-source/SOURCE_PINS.json",
+  "captions": "docs/films/mission/captions.vtt",
+  "transcript": "docs/films/mission/transcript.json",
+  "poster": "docs/films/mission/poster.jpg",
+  "source_files": [
+    {
+      "path": "docs/films/mission/animatic.mp4",
+      "sha256": "f3e71222f561eb4934bf559964bf0c6e2901878ad21bb626526b15a196748f4c"
+    },
+    {
+      "path": "docs/films/mission/captions.vtt",
+      "sha256": "eae925c8f7f30ae3651bd61857d2c9faae0d2039c39205a762105ee163b4f6e7"
+    },
+    {
+      "path": "docs/films/mission/film.mp4",
+      "sha256": "8291a5f37907b2f2818c5ee424a39862fdf402969fb2af6118e41f735bdb7f1b"
+    },
+    {
+      "path": "docs/films/mission/film.webm",
+      "sha256": "f046c9f6d396ddd447f4aca2fc05e6cbd258396887fa88ab15f15ba226e52627"
+    },
+    {
+      "path": "docs/films/mission/poster.jpg",
+      "sha256": "c45e50a4492e638a47edb2c9a00cfc6af4aedf8cef7754dc015ac5d094b272c8"
+    },
+    {
+      "path": "docs/films/mission/storyboard-01.jpg",
+      "sha256": "29d188622c175091b8a41b613432ca90f2b2a67e2694f24141d401e15b8053a3"
+    },
+    {
+      "path": "docs/films/mission/storyboard-01.png",
+      "sha256": "962805030473176f912c74fc5f5aef4831947440c7ac9ed102ad22d3831d3f5e"
+    },
+    {
+      "path": "docs/films/mission/storyboard-02.jpg",
+      "sha256": "5c72be295d0f2c298d122a41442d8aee3242f35e695adb322149860e68b610df"
+    },
+    {
+      "path": "docs/films/mission/storyboard-02.png",
+      "sha256": "c4fb7c1ea496f8011478b7e2898569c9af4dd42964ee2b50193e01298e0faa34"
+    },
+    {
+      "path": "docs/films/mission/storyboard-03.jpg",
+      "sha256": "85b93404c3eaed8c83c20c7df42d5f1f4c05d6e4826cc220b0570288f507b5e7"
+    },
+    {
+      "path": "docs/films/mission/storyboard-03.png",
+      "sha256": "f8baa3d1a2d72207c910f69a9bfa3a6b0893698b22003bbaf19db9048b8390ec"
+    },
+    {
+      "path": "docs/films/mission/storyboard-04.jpg",
+      "sha256": "d6514368afa4d920004721e346de157027724f64e8a46c201f102c8c7dafd780"
+    },
+    {
+      "path": "docs/films/mission/storyboard-04.png",
+      "sha256": "def9da2ac9def9c11abd961c520bed17863a6708cc1b7458ccc6d04be7e2ec53"
+    },
+    {
+      "path": "docs/films/mission/storyboard-05.jpg",
+      "sha256": "db6e4629845403031944033bfeeb7624d447026b4d6fdebd7845e9fb1cab4a54"
+    },
+    {
+      "path": "docs/films/mission/storyboard-05.png",
+      "sha256": "be4ec9b869e5d1a276828deebb8acbeb143d12bfd704a369710141b33515d930"
+    },
+    {
+      "path": "docs/films/mission/storyboard-06.jpg",
+      "sha256": "06ff76cd162129d47ab9f91a63f8588eec401959ff40df7c56538b16d9f5df3b"
+    },
+    {
+      "path": "docs/films/mission/storyboard-06.png",
+      "sha256": "9b78e85ece3e588ab5730a9428bf5497c5e3bd445a49a89123f53e62bfc667db"
+    },
+    {
+      "path": "docs/films/mission/storyboard-07.jpg",
+      "sha256": "8600b2d9c919c44cce945096751cf5d69fa6764a177483af16ff7d07ad1206a7"
+    },
+    {
+      "path": "docs/films/mission/storyboard-07.png",
+      "sha256": "f28514d03c630124155321c287f76ab2ba001a36e839c2daa47ed6518ba37092"
+    },
+    {
+      "path": "docs/films/mission/storyboard-08.jpg",
+      "sha256": "5e2a161500283542152ebc69fd0a0dc86cd4678a0ddce7a16263b5ec06eeeced"
+    },
+    {
+      "path": "docs/films/mission/storyboard-08.png",
+      "sha256": "7a476b997f27f0aebb2d72fd18a956b92df5bb3b4c46ec626fd644aa4c2e6ccb"
+    },
+    {
+      "path": "docs/films/mission/storyboard-09.jpg",
+      "sha256": "5a7ad0142121ec27b3023dbcc6bd11ae4b4fab7a66838a6f52e95373f33328df"
+    },
+    {
+      "path": "docs/films/mission/storyboard-09.png",
+      "sha256": "48f1d01b9e5e002981f63d6592a14708c968a8e629fb595e487e59ed15e9a6a0"
+    },
+    {
+      "path": "docs/films/mission/storyboard-contact-sheet.jpg",
+      "sha256": "70d87daa56759e39559f970f7b76edc27ec5a74e5058b1bc4cc8ee74f2fe4f08"
+    },
+    {
+      "path": "docs/films/mission/transcript.json",
+      "sha256": "2cbc8dec6375d42432ea624d35d5ca835e22c65cdf4d93d1a43d1b62b76a40d9"
+    },
+    {
+      "path": "docs/films/mission/transcript.txt",
+      "sha256": "fafabfe6edb15db8df86635b6329280c1db9b4f797f643d55704c26ea47caa06"
+    }
+  ],
+  "render_script_sha256": "984e7855c21cf363f5aa5f7bef46273d4054d4db39c66491e0d18f8f3e5314ad",
+  "storyboard_sha256": "82b2547ce6017785e86dc010c5ae3566a7e20c8de05bb1831082c47696557d47",
+  "software": {
+    "package": "ACR1 source-driven editorial films",
+    "rebuild": "python3 docs/visual-source/build_films.py prepare; python3 docs/visual-source/build_films.py animatic; python3 docs/visual-source/build_films.py render",
+    "python_packages": [
+      "Pillow 12.3.0",
+      "NumPy"
+    ],
+    "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "font": "DejaVuSans, DejaVuSans-Bold and DejaVuSansMono; installed runtime dependencies",
+    "font_sha256": {
+      "DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+      "DejaVuSans-Bold.ttf": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+      "DejaVuSansMono.ttf": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8"
+    },
+    "renderer": "Pillow vector/text compositor + unchanged source images; FFmpeg H.264/VP9 encoders",
+    "cad_scene": {
+      "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+      "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+    },
+    "motion_class": "conceptual diagrams; computed mission host trajectory",
+    "archive_frames": "lossless 1280x720 PNG storyboard states; individual film directories",
+    "path_base": "repository_root",
+    "release_identity": "containing Git commit or release tag",
+    "font_license": "docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt",
+    "source_package_unpack_directory": "docs/"
+  },
+  "archival_derivatives": "lossless storyboard-*.png and H.264 editorial master film.mp4",
+  "revision": "R3 scientific framing and portable source index",
+  "path_base": "repository_root",
+  "release_identity": "containing Git commit or release tag"
+}

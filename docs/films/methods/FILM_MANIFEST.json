@@ -1,0 +1,144 @@
+{
+  "configuration": "VOLLEY-G5-ACR1",
+  "film": "methods",
+  "title": "Geometry. Models. Results.",
+  "duration_s": 54,
+  "dimensions_px": [
+    1280,
+    720
+  ],
+  "fps": 12,
+  "codec": "H.264 yuv420p / VP9",
+  "audio": "none; explicit playback; captions and transcript supplied",
+  "master": "docs/films/methods/film.mp4",
+  "editable_source": [
+    "docs/visual-source/build_films.py",
+    "docs/visual-source/STORYBOARD.json"
+  ],
+  "cad_scene": {
+    "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+    "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+    "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+  },
+  "sources": "docs/visual-source/SOURCE_PINS.json",
+  "captions": "docs/films/methods/captions.vtt",
+  "transcript": "docs/films/methods/transcript.json",
+  "poster": "docs/films/methods/poster.jpg",
+  "source_files": [
+    {
+      "path": "docs/films/methods/animatic.mp4",
+      "sha256": "32015f7de3a9102d223677f017d478d6dfeb5974ca1ddb5a064bd217aabbf5c7"
+    },
+    {
+      "path": "docs/films/methods/captions.vtt",
+      "sha256": "e5177ad39747f8b26c5354d05bdf192e4c41b72e7cda20ed04acc3d68ed803b2"
+    },
+    {
+      "path": "docs/films/methods/film.mp4",
+      "sha256": "ae51dacfdd316c555fb60e95a2410f218f5ac5f1062f5b2af7a27d4de21cbe93"
+    },
+    {
+      "path": "docs/films/methods/film.webm",
+      "sha256": "61a1fc076bd61a0c42920d4a6d86e05aabf6b8777759efa58d4417bc9bb28187"
+    },
+    {
+      "path": "docs/films/methods/poster.jpg",
+      "sha256": "fb731bbc76e0ddcde43a6e60174d5921804d074317cc83901bf22654e3be40d2"
+    },
+    {
+      "path": "docs/films/methods/storyboard-01.jpg",
+      "sha256": "ed3bae5b85741348dce7cce42e1abdcbb99fdb086d5bdb878f4f451825abe44e"
+    },
+    {
+      "path": "docs/films/methods/storyboard-01.png",
+      "sha256": "6cf9431faa8f9770f2766c42ba1aefb232ec431bdee2886cd0e291be7df8e83c"
+    },
+    {
+      "path": "docs/films/methods/storyboard-02.jpg",
+      "sha256": "d50fdb0cbb722b9c9652c060e6987fe7560ee065afbc17a437fc51d57064a6a6"
+    },
+    {
+      "path": "docs/films/methods/storyboard-02.png",
+      "sha256": "671e2b1d0a3cb39dd0015f057e2b2e88e72218b55c4d3b409b9c33b5bf62c153"
+    },
+    {
+      "path": "docs/films/methods/storyboard-03.jpg",
+      "sha256": "144523b5076db15d60aec2946fc1608adaea7bc8949ea0521a7afc90451e52fb"
+    },
+    {
+      "path": "docs/films/methods/storyboard-03.png",
+      "sha256": "0675eabd155ff607e7f005979c981a1d8aef33f786484e71bbc19f5569f05d1b"
+    },
+    {
+      "path": "docs/films/methods/storyboard-04.jpg",
+      "sha256": "75dc920a59d398ebc7d3a8270eff620c2db43a9d3710f2a2f8d70836c9d38022"
+    },
+    {
+      "path": "docs/films/methods/storyboard-04.png",
+      "sha256": "eb76208f84ac4117eaf4cfefb897789473d5a9371f3c3a7bd26875de6691b8c8"
+    },
+    {
+      "path": "docs/films/methods/storyboard-05.jpg",
+      "sha256": "6ca3ef3ce1477be6ac65b6a52bc6f4692f05e68244e0b3bfe155ef3d95479b33"
+    },
+    {
+      "path": "docs/films/methods/storyboard-05.png",
+      "sha256": "9cf3efbc14df93deb7b57afa29525d138f1d451ce32a28610b9fa3cd9b1de8eb"
+    },
+    {
+      "path": "docs/films/methods/storyboard-06.jpg",
+      "sha256": "f30015a2b214d5037fbc25c617df7d31de3a182485d5c86c9a14b577827befa3"
+    },
+    {
+      "path": "docs/films/methods/storyboard-06.png",
+      "sha256": "6c6eeba04f3e36deb478f0efb870e1b122d4d4659a2791f3727afd920bda667a"
+    },
+    {
+      "path": "docs/films/methods/storyboard-contact-sheet.jpg",
+      "sha256": "8c590ed98cffa87af615c602bcfffd5c966e309adc6e88e6ff9083214f91eb6f"
+    },
+    {
+      "path": "docs/films/methods/transcript.json",
+      "sha256": "e5811b5fe276722a426339790b5b7ee4b2063c9514a36ef0e4c89519a49d1123"
+    },
+    {
+      "path": "docs/films/methods/transcript.txt",
+      "sha256": "26565ff352c4c0d9095d2c25e6cfce662b5b37f9f3bfebc0b196199a05c28862"
+    }
+  ],
+  "render_script_sha256": "b5b13de746ec7def2e9a1b1199b6057bee57553911f021f0818ef12a9b5afd61",
+  "storyboard_sha256": "d7d8b32e221a3f86b7fbf16be267b30eaf51dbcc8d841571793e30bf482f54e5",
+  "software": {
+    "package": "ACR1 source-driven editorial films",
+    "rebuild": "python3 docs/visual-source/build_films.py prepare; python3 docs/visual-source/build_films.py animatic; python3 docs/visual-source/build_films.py render",
+    "python_packages": [
+      "Pillow 12.3.0",
+      "NumPy"
+    ],
+    "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "font": "DejaVuSans, DejaVuSans-Bold and DejaVuSansMono; installed runtime dependencies",
+    "font_sha256": {
+      "DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+      "DejaVuSans-Bold.ttf": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+      "DejaVuSansMono.ttf": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8"
+    },
+    "renderer": "Pillow vector/text compositor + unchanged source images; FFmpeg H.264/VP9 encoders",
+    "cad_scene": {
+      "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+      "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+    },
+    "motion_class": "conceptual diagrams; computed mission host trajectory",
+    "archive_frames": "lossless 1280x720 PNG storyboard states; individual film directories",
+    "path_base": "repository_root",
+    "release_identity": "containing Git commit or release tag",
+    "font_license": "docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt",
+    "source_package_unpack_directory": "docs/"
+  },
+  "archival_derivatives": "lossless storyboard-*.png and H.264 editorial master film.mp4",
+  "render_script_archive": "docs/visual-source/archive/build_films_R1.py",
+  "revision_note": "Original rendered bytes retained. R2 changes the recovery diagram used only by overview/custody; current builder retains identical mission/methods composition.",
+  "storyboard_archive": "docs/visual-source/archive/STORYBOARD_R1.json",
+  "path_base": "repository_root",
+  "release_identity": "containing Git commit or release tag"
+}

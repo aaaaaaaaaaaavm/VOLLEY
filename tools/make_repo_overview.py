@@ -41,8 +41,8 @@ def validation_counts() -> tuple[int, int]:
 
 
 def render() -> str:
-    shot = load("motor_results.json")["shot"]
-    energy = load("sizing.json")["energy_closure"]
+    current = json.loads((ROOT / "validation/acr1/ENGINEERING_DEFINITION_R1.json").read_text())
+    mass = current["mass_basis"]
     run_sheets, analyses = validation_counts()
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">',
@@ -55,7 +55,7 @@ def render() -> str:
 
     stages = [
         ("HOST", "controlled orbital state", VIOLET),
-        ("LOAD", "one sequential path sought", CYAN),
+        ("LOAD", "captive pallet transfer", CYAN),
         ("COMMAND", "departure condition", AMBER),
         ("RELEASE", "spacecraft is on its own", GREEN),
     ]
@@ -67,21 +67,21 @@ def render() -> str:
 
     cards = [
         (
-            72, "GEN5 · FROZEN BASELINE", CYAN,
+            72, "ACR1 · CURRENT REFERENCE", CYAN,
             [
-                "self-contained Halbach LSM · 1.3 m acceleration",
-                f"{shot['v_exit']:.3f} m/s · {shot['a_g']:.3f} g · {shot['t_ms']:.1f} ms",
-                f"{shot['E_drawn'] / 1000:.3f} kJ gross · {energy['closure_pct']:.1f}% energy closure",
-                "structural FEA · CFD · control design · second CAD implementation",
+                "twelve 4 kg 3U surrogates · 1.300 m powered travel",
+                "1–3 m/s supported modeled command range",
+                f"{mass['CAD_dry_kg']:.3f} kg CAD dry + 7 kg installed allocation",
+                "8 native/STEP states · 154 accepted motion checks",
             ],
         ),
         (
-            816, "NEXT DESIGN · NOT SELECTED", AMBER,
+            816, "MISSION · SAME-TARGET COMPARISON", AMBER,
             [
-                "shared reusable launcher and feeder are design goals",
-                "motor-charged cell bank is a withdrawn comparator",
-                "S4 two-payload speed does not set a product maximum",
-                "P92 open · full manifest, installed mass and provider interface unproven",
+                "twelve releases · 500 km nominal SSO surrogate",
+                "common full-state targets 24 h after final release",
+                "9 native Orekit replays under shared J2 assumptions",
+                "No mass/fuel advantage over ideal pretrimmed springs",
             ],
         ),
     ]
@@ -100,7 +100,7 @@ def render() -> str:
         txt(604, 802, "0 built · 0 fired · 0 measured", 23, INK, 650),
         box(1080, 728, 444, 98, stroke=AMBER, fill="#18160f"),
         txt(1108, 766, "MATURITY", 13, AMBER, 700),
-        txt(1108, 802, "Phase I · TRL 2–3 design study", 23, INK, 650),
+        txt(1108, 802, "Computational reference design", 23, INK, 650),
         txt(1494, 870, "MODEL OUTPUT UNLESS A SOURCE SAYS OTHERWISE", 15, MUTED, 650, "end"),
         "</svg>",
     ]

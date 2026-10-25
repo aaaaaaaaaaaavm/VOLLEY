@@ -1,0 +1,159 @@
+{
+  "study": "ACR1 isolated open C-frame quarter-symmetry3D elasticity comparison",
+  "generated_UTC": "2026-10-24T17:12:04.794139+00:00",
+  "records": [
+    {
+      "mesh": "h12",
+      "h_max_mm": 12.0,
+      "nodes": 7186,
+      "C3D10_elements": 3703,
+      "minimum_scaled_jacobian": 0.9999999999982306,
+      "connected_components": 1,
+      "pressure_patch_area_quarter_mm2": 15119.999999999998,
+      "normal_full_array_force_N": 3010.4806312835844,
+      "applied_force_N": [
+        0.0,
+        0.0,
+        -1505.240315641794
+      ],
+      "summed_support_reaction_N": [
+        2.1302000031475643e-05,
+        2.07023e-10,
+        1505.2407980799978
+      ],
+      "net_force_N": [
+        2.1302000031475643e-05,
+        2.07023e-10,
+        0.00048243820378957025
+      ],
+      "force_balance_relative_error": 3.208180536845522e-07,
+      "net_moment_Nmm": [
+        -0.04654981217670695,
+        -0.04577279668592382,
+        -0.0011426094825424116
+      ],
+      "max_loaded_face_inward_displacement_mm": 0.1424237,
+      "max_loaded_face_node_xyz_mm": [
+        0.0,
+        45.0,
+        14.0
+      ],
+      "force_weighted_mean_loaded_face_displacement_mm": 0.07655083833578227,
+      "global_max_inward_displacement_mm": 0.1758162,
+      "nominal_remaining_1mm_face_envelope_gap_mm": 0.8575763000000001,
+      "solver_version_from_log": "2.23, Copyright(C) 1998-2025 Guido Dhondt",
+      "job_finished": true,
+      "source_hashes": {
+        "MESH.json": "1e13c9b28075bc6f4dfd865131cbc062616af4c529f5e101a894b4302e50a406",
+        "mesh.msh": "037fcef0bdecebd4c44ab31326b3d9e7e84d8010e5aeaffd6e0550d00eb70ea8",
+        "cframe.inp": "b68601df98ac2b852e401602796aa80cdfbd43f31c4a2dfb03afb92d9e5d5ead",
+        "ccx.log": "37c85cb070f16faae0872e0c625157e32ff3e8dbea95347ea8dc3042c9a0b481",
+        "cframe.dat": "26d4ad214fddd02c8dbb0cdb7f6cb6e2c3a93a194270018ff5d1846e8a14464d"
+      }
+    },
+    {
+      "mesh": "h8",
+      "h_max_mm": 8.0,
+      "nodes": 17206,
+      "C3D10_elements": 9603,
+      "minimum_scaled_jacobian": 0.9999999999996887,
+      "connected_components": 1,
+      "pressure_patch_area_quarter_mm2": 15119.999999999998,
+      "normal_full_array_force_N": 3010.4806312835844,
+      "applied_force_N": [
+        0.0,
+        0.0,
+        -1505.2403156417918
+      ],
+      "summed_support_reaction_N": [
+        2.118699996042639e-05,
+        9.193306e-10,
+        1505.240217889998
+      ],
+      "net_force_N": [
+        2.118699996042639e-05,
+        9.193306e-10,
+        -9.775179387361277e-05
+      ],
+      "force_balance_relative_error": 6.644886369034814e-08,
+      "net_moment_Nmm": [
+        0.005194589424220908,
+        0.022323861165205017,
+        0.001802477337965236
+      ],
+      "max_loaded_face_inward_displacement_mm": 0.144103,
+      "max_loaded_face_node_xyz_mm": [
+        0.0,
+        45.0,
+        14.0
+      ],
+      "force_weighted_mean_loaded_face_displacement_mm": 0.07762307864759892,
+      "global_max_inward_displacement_mm": 0.1777739,
+      "nominal_remaining_1mm_face_envelope_gap_mm": 0.855897,
+      "solver_version_from_log": "2.23, Copyright(C) 1998-2025 Guido Dhondt",
+      "job_finished": true,
+      "source_hashes": {
+        "MESH.json": "6330fc0b457a1d183bfc451ef4b491028b845d95c3ea597fd2f1ea1e698385c8",
+        "mesh.msh": "4efd818028a51eedb591947f4534d11ac2e7982ae72dbaa9b31317c0693ea692",
+        "cframe.inp": "4ad1817a45fa3d8214b38888bc1929bff5658229a525a3352c9a4536153d55f0",
+        "ccx.log": "f34796f33e42275c6c8718f103bf0dfbd2d2f867103c9b278cc6a5a8509c5a1b",
+        "cframe.dat": "d1f5c5e8233cff242cef783430af95412eee46e6670b697671894716f00cc5c9"
+      }
+    }
+  ],
+  "h12_to_h8_max_loaded_face_relative_change": 0.011653470087368218,
+  "fine_max_loaded_face_closure_mm": 0.144103,
+  "fine_nominal_remaining_face_gap_mm": 0.855897,
+  "field_feedback_sensitivity": {
+    "component_FEA_linear_compliance_mm_per_N": 4.786710749856528e-05,
+    "interpolated_equilibrium_closure_mm": 0.1500870305418162,
+    "remaining_face_gap_mm": 0.8499129694581837,
+    "iterations": [
+      {
+        "iteration": 0,
+        "closure_each_face_mm": 0.144103,
+        "force_N": 3130.509710820018,
+        "next_closure_mm": 0.14984844485312432
+      },
+      {
+        "iteration": 1,
+        "closure_each_face_mm": 0.14984844485312432,
+        "force_N": 3135.295318643099,
+        "next_closure_mm": 0.1500775180572377
+      },
+      {
+        "iteration": 2,
+        "closure_each_face_mm": 0.1500775180572377,
+        "force_N": 3135.4861227576084,
+        "next_closure_mm": 0.1500866512982981
+      },
+      {
+        "iteration": 3,
+        "closure_each_face_mm": 0.1500866512982981,
+        "force_N": 3135.493730194628,
+        "next_closure_mm": 0.1500870154443037
+      },
+      {
+        "iteration": 4,
+        "closure_each_face_mm": 0.1500870154443037,
+        "force_N": 3135.494033506211,
+        "next_closure_mm": 0.15008702996295184
+      },
+      {
+        "iteration": 5,
+        "closure_each_face_mm": 0.15008702996295184,
+        "force_N": 3135.494045599366,
+        "next_closure_mm": 0.1500870305418162
+      }
+    ],
+    "meaning": "Field/compliancefixedpointusescoarseinterpolatednormalforcecurvesandlinearcomponentcompliance;notanassemblednonlinearmagnetomechanicalsolution."
+  },
+  "limits": [
+    "Onlyuniform488mmCsection,16mmplates/20mmweb;noattachedmagnets/bond,backstop,rollers,manufacturingjoints/cradle/flexiblesupports.",
+    "QuarterX/ZsymmetryandoneUyconstraintremoveidealrigidmotion;actualasymmetricattachmentsnotincluded.",
+    "Actualcuboidforce3010.48Nredistributeduniformlyover336x90mm;notlocalphysicalMaxwelltractiononmagnet/bond.",
+    "Two mesh sizes give a refinement comparison, not a certified error bound or continuum extrapolation.",
+    "LinearE70000MPa,nu0.33assumed;noalloystrength,plasticity,fatigue,bucklingcontactorflightqualification.",
+    "A positive isolated component residual does not establish assembled operating gap or an achieved release speed."
+  ]
+}

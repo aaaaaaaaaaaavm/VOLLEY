@@ -1,0 +1,46 @@
+{
+  "date_utc": "2026-10-25",
+  "method": "Read existing results; recompute table arithmetic only; no new solver run",
+  "inputs": [
+    {
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+      "sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e"
+    },
+    {
+      "path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+    },
+    {
+      "path": "validation/acr1/analysis/POWER_COMPONENT_REFERENCE.json",
+      "sha256": "187905f64ba50273077b2739aa19f71c425bc7e4a7951e72021af554c318810f"
+    },
+    {
+      "path": "validation/acr1/analysis/FEEDER_SIZING.json",
+      "sha256": "e3d9bc99b18c43d5d5ff529d4f7afcafb52e5da8da3bec53511365965f052ecf"
+    },
+    {
+      "path": "validation/acr1/analysis/LIFT_SIZING.json",
+      "sha256": "b6e8c553a2dcd47322c861b6ac6036813057062cc3408c0a98f68257cd9d2fc6"
+    },
+    {
+      "path": "validation/acr1/mission/MISSION_INPUTS.json",
+      "sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f"
+    },
+    {
+      "path": "validation/acr1/mission/MISSION_REPORT.md",
+      "sha256": "1f200e71ecac7632be3d9a21851c3e73b0fb8b7f91568ffa287e4f3a03bd0b2c"
+    }
+  ],
+  "formulas": [
+    "dry study=CAD+7",
+    "loaded=dry study+48",
+    "Nova bare=3\u00d713.32",
+    "force per g=loaded\u00d79.80665",
+    "payload impulse=4\u00d7computed inertial kick",
+    "post-arrest recoil=-impulse/remaining host mass",
+    "lower average=maximum net bank draw/450"
+  ],
+  "frozen_academic_files_written": false,
+  "provider_contacts": false,
+  "external_publication": false
+}

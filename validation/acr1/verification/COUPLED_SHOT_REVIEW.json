@@ -1,0 +1,373 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "scope": "Independent implementation review and instrumented timestep audit of six 3m/s averaged-model cases only.",
+  "production_source_sha256": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155",
+  "production_output_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+  "input_sha256": {
+    "home": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+    "force": "546cf2f427f356fc043f7d5cfd3f6af9b4ab5d4ab84b582e1e7c30baf8fd89ec",
+    "brake": "d143d2e7efa0583c7c2ddf73b47479e192891aa2ffbb7d5976747189bda1cd1f",
+    "resistance": "208406e54c88d59a1ff2b177bf9a7babe1010aefeaa91abbade592d7023ac7fc"
+  },
+  "snapshot_relative_path": "verification/coupled_shot_snapshots/560088cb2a05e270/01aac645e7ba951a",
+  "reviewed_sled_mass_kg": 13.127805767068676,
+  "reviewed_dry_CAD_mass_kg": 149.55671970039353,
+  "equations_checked": [
+    "Balanced peak phase convention: Pmotor=1.5*vq*iq, F=k*iq, eq=k*v/1.5, copper=1.5*R*iq^2.",
+    "Field energy=0.75*L*iq^2; aggregate triangular PWM copper contribution=R*delta_i_pp^2/4.",
+    "Thevenin root Ib=2*P/(Vc+sqrt(Vc^2-4*Rs*P)); source discharge dVc/dt=-Ib/C; Pmax=Vc^2/(4*Rs).",
+    "32S2P 100F cells yield6.25F;32/2*11mohm yields176mohm;0.9*0.7 capacitance and2x ESR adverse factors match reference.",
+    "Host and accelerated/braking reduced masses exclude the moving sled from host;4kg payload remains attached through current reversal and is removed from arrest at zero rear reaction.",
+    "Independent motor-work balance:0.5*(mu_attached-mu_sled)*v_release^2+0.5*mu_sled*v_stop^2+friction_dissipation equals signed motor work.",
+    "Regeneration terminal cap obeys Pdc>=Vlimit*(Vc-Vlimit)/Rsrc with Vlimit=32*2.9V; positive source-power cap is0.8*Vc^2/(4*Rsrc).",
+    "Brake current reference divides remaining relative kinetic energy by trapezoidal integral k(x)dx through1.507m;3mm reserved inside1.510m allocation.",
+    "Rds hot factor,10-way current sharing,25percent imbalance, triangular ripple peak,6W gate-drive allocation and source ESR loss match declared allocations."
+  ],
+  "reporting_findings": [
+    "Peak capacitor and terminal bank voltages must be included when evaluating the cell-voltage gate.",
+    "Inductance results are sampled sensitivity cases; a partial-inductance estimate is not a complete AC model.",
+    "Voltage modulation uses previous terminal voltage; instrumented actual-terminal modulation ratio quantifies the algebraic lag.",
+    "Release event is detected after an integration step and spatial arrest reserve includes the resulting discretization overshoot.",
+    "This review is tied to the current home capture hashes and must refresh after final mechanical mass update."
+  ],
+  "cases": [
+    {
+      "adverse": false,
+      "inductance_H": 3e-06,
+      "production_dt_s": 2e-05,
+      "audit_dt_s": 5e-06,
+      "baseline_status": "STOPPED",
+      "refined_status": "STOPPED",
+      "refined_declared_checks_pass": true,
+      "refined_checks": {
+        "released": true,
+        "stopped_inside_210mm": true,
+        "release_speed": true,
+        "cam_open_before_release": true,
+        "phase_current_limit": true,
+        "hot_device_current_with25pct_imbalance": true,
+        "allocated_switch_voltage": true,
+        "cell_charge_voltage": true,
+        "physical_modulation_limit": true,
+        "energy_balance": true
+      },
+      "refined_peak_cell_terminal_or_internal_V": 2.7,
+      "stop_position_change_mm": -5.4405298044457595e-05,
+      "peak_phase_current_change_A": -0.028695661258325345,
+      "cap_draw_change_J": 0.0007709058138516411,
+      "refined_energy_residual_J": -0.002358050506116582,
+      "independent_reduced_mass_mechanical_work_J": 24.76814471673612,
+      "independent_mechanical_work_residual_J": -4.46931380793103e-12,
+      "refined_release": {
+        "time_s": 0.8669650000014459,
+        "relative_speed_m_s": 2.99984553215141,
+        "position_m": 1.30009088918609,
+        "payload_inertial_delta_v_m_s": 2.9269191513942334,
+        "host_recoil_before_arrest_m_s": -0.07292638075717643
+      },
+      "refined_electrical_brake_command": {
+        "time_s": 0.8669350000014457,
+        "position_m": 1.300000893951737,
+        "relative_speed_m_s": 2.9998239479811866
+      },
+      "refined_stop_position_m": 1.5072886374067413,
+      "refined_peak_phase_current_A": 248.71676984139668,
+      "refined_peak_device_current_A": 42.10280846485939,
+      "refined_audit": {
+        "max_cap_V": 86.4,
+        "max_terminal_V": 86.4,
+        "min_terminal_V": 82.56060773000914,
+        "max_power_budget_ratio": 0.16174544165907678,
+        "max_regen_budget_ratio": 0.0,
+        "max_modulation_ratio": 0.06839494177079422,
+        "limited_steps": 0,
+        "regen_limited_steps": 0,
+        "infeasible_zero_voltage_steps": 0
+      }
+    },
+    {
+      "adverse": false,
+      "inductance_H": 2e-05,
+      "production_dt_s": 2e-05,
+      "audit_dt_s": 5e-06,
+      "baseline_status": "STOPPED",
+      "refined_status": "STOPPED",
+      "refined_declared_checks_pass": true,
+      "refined_checks": {
+        "released": true,
+        "stopped_inside_210mm": true,
+        "release_speed": true,
+        "cam_open_before_release": true,
+        "phase_current_limit": true,
+        "hot_device_current_with25pct_imbalance": true,
+        "allocated_switch_voltage": true,
+        "cell_charge_voltage": true,
+        "physical_modulation_limit": true,
+        "energy_balance": true
+      },
+      "refined_peak_cell_terminal_or_internal_V": 2.725424466684853,
+      "stop_position_change_mm": -5.4405298044457595e-05,
+      "peak_phase_current_change_A": -0.028695661258296923,
+      "cap_draw_change_J": 0.00019798848995833396,
+      "refined_energy_residual_J": -0.00234854573772517,
+      "independent_reduced_mass_mechanical_work_J": 24.768144716736124,
+      "independent_mechanical_work_residual_J": -4.472866521609831e-12,
+      "refined_release": {
+        "time_s": 0.8669650000014459,
+        "relative_speed_m_s": 2.99984553215141,
+        "position_m": 1.30009088918609,
+        "payload_inertial_delta_v_m_s": 2.9269191513942334,
+        "host_recoil_before_arrest_m_s": -0.07292638075717643
+      },
+      "refined_electrical_brake_command": {
+        "time_s": 0.8669350000014457,
+        "position_m": 1.300000893951737,
+        "relative_speed_m_s": 2.9998239479811866
+      },
+      "refined_stop_position_m": 1.5072886374067413,
+      "refined_peak_phase_current_A": 248.7167698413967,
+      "refined_peak_device_current_A": 32.75466203235306,
+      "refined_audit": {
+        "max_cap_V": 86.4,
+        "max_terminal_V": 87.21358293391529,
+        "min_terminal_V": 82.06110937731331,
+        "max_power_budget_ratio": 0.21716336204107545,
+        "max_regen_budget_ratio": 0.1707092965709838,
+        "max_modulation_ratio": 0.3979941049658183,
+        "limited_steps": 0,
+        "regen_limited_steps": 0,
+        "infeasible_zero_voltage_steps": 0
+      }
+    },
+    {
+      "adverse": false,
+      "inductance_H": 0.0001,
+      "production_dt_s": 2e-05,
+      "audit_dt_s": 5e-06,
+      "baseline_status": "STOPPED",
+      "refined_status": "STOPPED",
+      "refined_declared_checks_pass": true,
+      "refined_checks": {
+        "released": true,
+        "stopped_inside_210mm": true,
+        "release_speed": true,
+        "cam_open_before_release": true,
+        "phase_current_limit": true,
+        "hot_device_current_with25pct_imbalance": true,
+        "allocated_switch_voltage": true,
+        "cell_charge_voltage": true,
+        "physical_modulation_limit": true,
+        "energy_balance": true
+      },
+      "refined_peak_cell_terminal_or_internal_V": 2.798824717315183,
+      "stop_position_change_mm": -2.5173260587152413e-05,
+      "peak_phase_current_change_A": -0.037983230684659475,
+      "cap_draw_change_J": -0.03229282304459957,
+      "refined_energy_residual_J": -0.002352754801943749,
+      "independent_reduced_mass_mechanical_work_J": 24.76845543631002,
+      "independent_mechanical_work_residual_J": -6.302514066192089e-12,
+      "refined_release": {
+        "time_s": 0.8669900000014461,
+        "relative_speed_m_s": 2.9998724414333684,
+        "position_m": 1.3001658861923608,
+        "payload_inertial_delta_v_m_s": 2.9269454065103284,
+        "host_recoil_before_arrest_m_s": -0.07292703492303962
+      },
+      "refined_electrical_brake_command": {
+        "time_s": 0.8669350000014457,
+        "position_m": 1.300000893951737,
+        "relative_speed_m_s": 2.9998239479811866
+      },
+      "refined_stop_position_m": 1.5072889643369618,
+      "refined_peak_phase_current_A": 249.2464363045643,
+      "refined_peak_device_current_A": 31.488995736317612,
+      "refined_audit": {
+        "max_cap_V": 86.4,
+        "max_terminal_V": 89.56239095408586,
+        "min_terminal_V": 62.228218470135936,
+        "max_power_budget_ratio": 0.9999743541488931,
+        "max_regen_budget_ratio": 0.5055818933859706,
+        "max_modulation_ratio": 1.0043407849613049,
+        "limited_steps": 2,
+        "regen_limited_steps": 0,
+        "infeasible_zero_voltage_steps": 0
+      }
+    },
+    {
+      "adverse": true,
+      "inductance_H": 3e-06,
+      "production_dt_s": 2e-05,
+      "audit_dt_s": 5e-06,
+      "baseline_status": "STOPPED",
+      "refined_status": "STOPPED",
+      "refined_declared_checks_pass": true,
+      "refined_checks": {
+        "released": true,
+        "stopped_inside_210mm": true,
+        "release_speed": true,
+        "cam_open_before_release": true,
+        "phase_current_limit": true,
+        "hot_device_current_with25pct_imbalance": true,
+        "allocated_switch_voltage": true,
+        "cell_charge_voltage": true,
+        "physical_modulation_limit": true,
+        "energy_balance": true
+      },
+      "refined_peak_cell_terminal_or_internal_V": 2.7,
+      "stop_position_change_mm": -2.4197545744897297e-05,
+      "peak_phase_current_change_A": -0.07021161292465194,
+      "cap_draw_change_J": 0.027060121392764813,
+      "refined_energy_residual_J": -0.002464903272169459,
+      "independent_reduced_mass_mechanical_work_J": 32.30015729149471,
+      "independent_mechanical_work_residual_J": -1.8829382497642655e-12,
+      "refined_release": {
+        "time_s": 0.9103400000017301,
+        "relative_speed_m_s": 2.9994208269346765,
+        "position_m": 1.3001935862225706,
+        "payload_inertial_delta_v_m_s": 2.9265047707805545,
+        "host_recoil_before_arrest_m_s": -0.07291605615412167
+      },
+      "refined_electrical_brake_command": {
+        "time_s": 0.9102800000017297,
+        "position_m": 1.3000136229253867,
+        "relative_speed_m_s": 2.9993047881591752
+      },
+      "refined_stop_position_m": 1.50733346573571,
+      "refined_peak_phase_current_A": 423.12852794508825,
+      "refined_peak_device_current_A": 61.2628963400947,
+      "refined_audit": {
+        "max_cap_V": 86.4,
+        "max_terminal_V": 86.4,
+        "min_terminal_V": 64.02575907150833,
+        "max_power_budget_ratio": 0.9137006682313937,
+        "max_regen_budget_ratio": 0.0,
+        "max_modulation_ratio": 0.115024854867697,
+        "limited_steps": 0,
+        "regen_limited_steps": 0,
+        "infeasible_zero_voltage_steps": 0
+      }
+    },
+    {
+      "adverse": true,
+      "inductance_H": 2e-05,
+      "production_dt_s": 2e-05,
+      "audit_dt_s": 5e-06,
+      "baseline_status": "STOPPED",
+      "refined_status": "STOPPED",
+      "refined_declared_checks_pass": true,
+      "refined_checks": {
+        "released": true,
+        "stopped_inside_210mm": true,
+        "release_speed": true,
+        "cam_open_before_release": true,
+        "phase_current_limit": true,
+        "hot_device_current_with25pct_imbalance": true,
+        "allocated_switch_voltage": true,
+        "cell_charge_voltage": true,
+        "physical_modulation_limit": true,
+        "energy_balance": true
+      },
+      "refined_peak_cell_terminal_or_internal_V": 2.899987397822942,
+      "stop_position_change_mm": -2.1564638741367048e-05,
+      "peak_phase_current_change_A": -0.06685462903197958,
+      "cap_draw_change_J": 0.027152443842055618,
+      "refined_energy_residual_J": -0.0024448544231378388,
+      "independent_reduced_mass_mechanical_work_J": 32.3001711972488,
+      "independent_mechanical_work_residual_J": -2.0747847884194925e-12,
+      "refined_release": {
+        "time_s": 0.9103400000017301,
+        "relative_speed_m_s": 2.9994220369961186,
+        "position_m": 1.3001935862587621,
+        "payload_inertial_delta_v_m_s": 2.9265059514253484,
+        "host_recoil_before_arrest_m_s": -0.07291608557077013
+      },
+      "refined_electrical_brake_command": {
+        "time_s": 0.9102800000017297,
+        "position_m": 1.3000136229253867,
+        "relative_speed_m_s": 2.9993047881591752
+      },
+      "refined_stop_position_m": 1.507333468368617,
+      "refined_peak_phase_current_A": 423.1318849289809,
+      "refined_peak_device_current_A": 54.178068325023155,
+      "refined_audit": {
+        "max_cap_V": 86.4,
+        "max_terminal_V": 92.79959673033414,
+        "min_terminal_V": 63.90402631655628,
+        "max_power_budget_ratio": 0.9308862725201719,
+        "max_regen_budget_ratio": 0.99993956272656,
+        "max_modulation_ratio": 0.4291527547154846,
+        "limited_steps": 1,
+        "regen_limited_steps": 1,
+        "infeasible_zero_voltage_steps": 0
+      }
+    },
+    {
+      "adverse": true,
+      "inductance_H": 0.0001,
+      "production_dt_s": 2e-05,
+      "audit_dt_s": 5e-06,
+      "baseline_status": "STOPPED",
+      "refined_status": "STOPPED",
+      "refined_declared_checks_pass": true,
+      "refined_checks": {
+        "released": true,
+        "stopped_inside_210mm": true,
+        "release_speed": true,
+        "cam_open_before_release": true,
+        "phase_current_limit": true,
+        "hot_device_current_with25pct_imbalance": true,
+        "allocated_switch_voltage": true,
+        "cell_charge_voltage": true,
+        "physical_modulation_limit": true,
+        "energy_balance": true
+      },
+      "refined_peak_cell_terminal_or_internal_V": 2.899999962046838,
+      "stop_position_change_mm": 0.0006698717873732107,
+      "peak_phase_current_change_A": -0.06340540026303643,
+      "cap_draw_change_J": 0.01323947570637074,
+      "refined_energy_residual_J": -0.0024666460679597622,
+      "independent_reduced_mass_mechanical_work_J": 32.30352963702728,
+      "independent_mechanical_work_residual_J": 2.7569058147491887e-12,
+      "refined_release": {
+        "time_s": 0.9104550000017309,
+        "relative_speed_m_s": 2.9997626595592517,
+        "position_m": 1.300538553234981,
+        "payload_inertial_delta_v_m_s": 2.926838293438544,
+        "host_recoil_before_arrest_m_s": -0.07292436612070755
+      },
+      "refined_electrical_brake_command": {
+        "time_s": 0.9102800000017297,
+        "position_m": 1.3000136229253867,
+        "relative_speed_m_s": 2.9993047881591752
+      },
+      "refined_stop_position_m": 1.5072780133053814,
+      "refined_peak_phase_current_A": 420.04025584854685,
+      "refined_peak_device_current_A": 52.76324052391635,
+      "refined_audit": {
+        "max_cap_V": 86.4,
+        "max_terminal_V": 92.79999878549881,
+        "min_terminal_V": 61.440765711526,
+        "max_power_budget_ratio": 0.9999999867050933,
+        "max_regen_budget_ratio": 0.9999998328562986,
+        "max_modulation_ratio": 1.008753335021473,
+        "limited_steps": 1045,
+        "regen_limited_steps": 635,
+        "infeasible_zero_voltage_steps": 0
+      }
+    }
+  ],
+  "summary": {
+    "all_refined_cases_pass": true,
+    "max_absolute_stop_position_change_mm": 0.0006698717873732107,
+    "max_absolute_peak_current_change_A": 0.07021161292465194,
+    "max_absolute_energy_residual_J": 0.0024666460679597622,
+    "max_absolute_independent_mechanical_work_residual_J": 6.302514066192089e-12,
+    "max_power_budget_ratio": 0.9999999867050933,
+    "max_fraction_of_ideal_SVPWM_voltage": 0.9583156682703993,
+    "source_limiter_zero_voltage_feasible": true
+  },
+  "limitations": [
+    "Instrumented function shares production integration equations; no independent magnetic field or switching-physics validation is implied.",
+    "No overall assembly or hardware completion conclusion."
+  ]
+}

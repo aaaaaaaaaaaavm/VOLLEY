@@ -1,0 +1,29 @@
+{
+  "revision": "ACR1-WEB-R1",
+  "descriptor": "Commanded CubeSat deployment \u2014 computational design study.",
+  "palette": {
+    "charcoal": "#11161c",
+    "off_white": "#f6f5f1",
+    "aluminium": "#aab1b6",
+    "active_path": "#bfe3cf",
+    "evaluated": "#bfe3cf",
+    "development": "#efd199",
+    "archive": "#b7bcc6"
+  },
+  "fonts": {
+    "web": "system-ui, sans-serif",
+    "data": "ui-monospace, monospace"
+  },
+  "wordmark": {
+    "type": "VOLLEY in system sans bold",
+    "minimum_web_width_px": 96,
+    "clear_space": "one cap height"
+  },
+  "caption_fields": [
+    "configuration",
+    "evidence_class",
+    "state_or_method",
+    "source_link"
+  ],
+  "figure_policy": "Original accepted exports are unaltered; display with contain, link to full size; retain source units and precision."
+}

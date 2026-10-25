@@ -1,23 +1,24 @@
 # VOLLEY configuration status
 
-**23 October 2026.** Gen5 is the evaluated computational baseline. Gen6 carries the separately controlled feeder design and service studies. No physical prototype, measured release setting or flight qualification is claimed.
+**25 October 2026.** VOLLEY-G5-ACR1 is the completed integrated computational reference. Gen6 contains separately versioned mixed-size feeder and service studies and the proposed physical development stage.
 
-| Configuration | Current role | Evidence boundary |
+| Configuration | Role | Evidence boundary |
 |:--|:--|:--|
-| Gen5 | Fixed computational feasibility evaluation | Twelve 4 kg 3U payloads; immutable technical record, adverse mass/fit findings and ideal-force comparisons |
-| FM08-R3 / Gen6 | Selected guided lead-screw feeder architecture | Independently restrained 1U/3U cells, fixed 1U spacers, transverse positive feed and one indexed receiver; [design evidence](../validation/selected_feeder/README.md) |
-| Four-payload article | Two 1U and two 3U public-envelope surrogates | Generic maneuvering OTV in approximately 500 km SSO; provisional mounting and environmental assumptions |
-| Twelve-payload expansion | Separate capacity and installed-burden study | [System assessment](../validation/system_feasibility_closure/README.md); no approved host envelope |
-| Rack-and-pawl | Retained feeder runner-up | Revisit if component, packaging or measured fault evidence changes the trade |
-| Other feeder concepts | Research alternatives | [Labs archive](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab); previous failed geometry remains dated evidence |
-| 1 km/s and lunar cases | Separate scaling and feasibility investigations | Energy, stroke, navigation and carrier-propulsion requirements; no achieved capability |
+| [VOLLEY-G5-ACR1](../validation/acr1/README.md) | Current integrated academic reference | Twelve 4 kg 3U surrogates; eight native/STEP states, 154 motion/refinement checks and modeled 1–3 m/s cases |
+| [Original Gen5](GEN5_TECHNICAL_BASELINE.json) | Historical electromagnetic comparison | Its original speed, mass, geometry and adverse findings retain their source identity |
+| [FM08-R3 mixed-size feeder](../validation/selected_feeder/README.md) | Selected guided lead-screw subsystem and design lineage | Two 1U/two 3U surrogates, fixed 1U spacers and indexed receiver; separate geometry from ACR1 |
+| [Four/twelve-payload Gen6 capacity studies](../validation/system_feasibility_closure/README.md) | Separate integration and installed-burden investigations | Declared mixed-size manifests and surrogate host assumptions; no approved host envelope |
+| [Seven feeder concepts](GEN6_FEEDER_CONCEPT_TRADE.md) | Architecture trade and retained alternatives | Rack-and-pawl runner-up; scores are engineering judgments rather than measured reliability |
+| [Lunar and higher-speed programme studies](PROGRAMME_STUDIES_ACR1.md) | Separately identified feasibility and incompatibility findings | Each source package identifies completed calculations and remaining criteria; no achieved hardware capability |
 
-## Engineering interpretation
+## Current engineering result
 
-The selected feeder is an academic mechanical design evaluated with nominal CAD/STEP, prescribed kinematics, analytical component/load screens and an executable interlock specification. These methods support the declared design boundary. Environmental qualification, physical repeatability, supplier acceptance and provider integration remain future hardware-development activities. Original contact-model sensitivity is retained and supplies no release-precision or peak-contact-load rating.
+ACR1 uses guided pushers, a restrained indexed cradle and a single pallet that remains with the carrier during launch, arrest and return. Represented CAD dry mass is 149.556720 kg; the separate 7 kg electrical/control allowance gives 156.556720 kg device mass for mission accounting. It has no assigned position in CAD inertia.
 
-The Gen5 historical periodic-force model gives 16.029 m/s; the ideal finite-geometry screen gives 12.448 m/s under its assumed phase and electrical conditions. Neither is a component-rated release setting. The historical 126.561588 kg mass and 11 mm side-fed fit shortfall remain part of the evaluated baseline. [Frozen evidence](GEN5_TECHNICAL_BASELINE.json).
+The same-revision shot model supports 1–3 m/s computational commands, including active source-aware arrest. The complete timestep audit covers the six principal 3 m/s cases. Nominal geometry, numerical checks and catalog-based sizing define the study boundary; physical repeatability, environmental qualification and provider acceptance require subsequent evidence.
 
-## Mission reference
+## Mission and development boundaries
 
-The declared comparison uses a generic maneuvering orbital-transfer host and passive CubeSat envelope exemplars. Four releases occur within one orbit, with full position/velocity assessed 24 hours after the final release. Host-assisted spring deployment is included. Reference trajectories are constructed study targets; delivery accuracy and product value are assessed under their explicit resource and error assumptions. A selected rocket, flight host or provider ICD is not implied. [Native campaign evidence](../validation/finite_burn_review/README.md).
+The current ACR1 comparison uses twelve releases from a generic 500 kg initial wet bus in nominal 500 km SSO. Full position/velocity targets share an epoch 24 hours after the final release. The tested preplanned families show no propellant or initial wet-mass advantage over ideal ground-pretrimmed springs. [Mission evidence](../validation/acr1/mission/MISSION_REPORT.md).
+
+The earlier mixed four-payload mission, original Gen5 campaigns and historical 16.029/12.448 m/s models remain separate studies. They do not set ACR1 commands or demonstrate customer value. Future physical mixed-size handling requires its own interfaces, restraints, motion, source and mass checks. [Prototype review requirements](PROTOTYPE_READINESS.md) identify those evidence stages.

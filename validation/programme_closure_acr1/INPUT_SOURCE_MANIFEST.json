@@ -1,0 +1,95 @@
+[
+  {
+    "path": "inputs/RESOURCE_LEDGER.json",
+    "original_public_path": "validation/acr1/analysis/RESOURCE_LEDGER.json",
+    "sha256": "054a6627261af1a21e9df558700ce00ecf32861e130d73cf01fb102b3a6a5917"
+  },
+  {
+    "path": "inputs/COUPLED_SHOT.json",
+    "original_public_path": "validation/acr1/analysis/COUPLED_SHOT.json",
+    "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+  },
+  {
+    "path": "inputs/POWER_COMPONENT_REFERENCE.json",
+    "original_public_path": "validation/acr1/analysis/POWER_COMPONENT_REFERENCE.json",
+    "sha256": "187905f64ba50273077b2739aa19f71c425bc7e4a7951e72021af554c318810f"
+  },
+  {
+    "path": "inputs/DESIGN_BUDGETS.json",
+    "original_public_path": "validation/acr1/analysis/DESIGN_BUDGETS.json",
+    "sha256": "e904380c58f56397bc75d2bba0104a63d52a9b118e1f0f08d52073dddddb1b5d"
+  },
+  {
+    "path": "inputs/MISSION_INPUTS.json",
+    "original_public_path": "validation/acr1/mission/MISSION_INPUTS.json",
+    "sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f"
+  },
+  {
+    "path": "inputs/MISSION_COMPARISON.json",
+    "original_public_path": "validation/acr1/mission/MISSION_COMPARISON.json",
+    "sha256": "635b011caf6a02dd509cceba7be9bf03ddf534cef2aabf99c6dd83200cb6ede4"
+  },
+  {
+    "path": "inputs/PARAMETERS.json",
+    "original_public_path": "validation/acr1/cad/PARAMETERS.json",
+    "sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b"
+  },
+  {
+    "path": "inputs/SIGNATURES_arrest.json",
+    "basis": "Accepted native CAD solid-signature capture, reused without rerunning geometry",
+    "supporting_public_native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_arrest.FCStd",
+    "sha256": "f689aeb9ca3f6d076d905236cdd77a870b38a0a99382893dde1942b6bc915380"
+  },
+  {
+    "path": "inputs/SIGNATURES_captured.json",
+    "basis": "Accepted native CAD solid-signature capture, reused without rerunning geometry",
+    "supporting_public_native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.FCStd",
+    "sha256": "a43ab656fb38a299aa71bd98ef4d9f0eab5cb2c10874a10c190d2c590e475591"
+  },
+  {
+    "path": "inputs/SIGNATURES_clear.json",
+    "basis": "Accepted native CAD solid-signature capture, reused without rerunning geometry",
+    "supporting_public_native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.FCStd",
+    "sha256": "27da58e50f2f726fa114f61163482850ca43e4d499cc58c5f9b7c81c49319c27"
+  },
+  {
+    "path": "inputs/SIGNATURES_handoff.json",
+    "basis": "Accepted native CAD solid-signature capture, reused without rerunning geometry",
+    "supporting_public_native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.FCStd",
+    "sha256": "260e0bfa4c963d4b8a844b93346e3ddda8f034d20d03f7a0736463452984bd81"
+  },
+  {
+    "path": "inputs/SIGNATURES_home.json",
+    "basis": "Accepted native CAD solid-signature capture, reused without rerunning geometry",
+    "supporting_public_native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.FCStd",
+    "sha256": "1b763282759b7f2cc2fc58d5ae601dee7ed77dbd2ba5af9cff50f994761149d2"
+  },
+  {
+    "path": "inputs/SIGNATURES_lower.json",
+    "basis": "Accepted native CAD solid-signature capture, reused without rerunning geometry",
+    "supporting_public_native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_lower.FCStd",
+    "sha256": "3d57f13f311a96b55965f42c8a99325da927da668a27d5082762883a616a9c87"
+  },
+  {
+    "path": "inputs/SIGNATURES_release.json",
+    "basis": "Accepted native CAD solid-signature capture, reused without rerunning geometry",
+    "supporting_public_native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_release.FCStd",
+    "sha256": "8e3e3a1e40360e9e55669ffe34f8561ad91b8ec5565b772ea509551c23c9d7c2"
+  },
+  {
+    "path": "inputs/SIGNATURES_withdrawn.json",
+    "basis": "Accepted native CAD solid-signature capture, reused without rerunning geometry",
+    "supporting_public_native_path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_withdrawn.FCStd",
+    "sha256": "7cc43c023d497426acde19ff8c2c03c66b2952dc251a36744caf6afcd632e65e"
+  },
+  {
+    "path": "inputs/FEEDER_SIZING.json",
+    "original_public_path": "validation/acr1/analysis/FEEDER_SIZING.json",
+    "sha256": "e3d9bc99b18c43d5d5ff529d4f7afcafb52e5da8da3bec53511365965f052ecf"
+  },
+  {
+    "path": "inputs/LIFT_SIZING.json",
+    "original_public_path": "validation/acr1/analysis/LIFT_SIZING.json",
+    "sha256": "b6e8c553a2dcd47322c861b6ac6036813057062cc3408c0a98f68257cd9d2fc6"
+  }
+]

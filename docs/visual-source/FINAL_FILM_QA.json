@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "path_base": "repository_root",
+  "revision": "R3 overview/custody/mission framing; methods original bytes retained",
+  "films": [
+    {
+      "path": "docs/films/custody/film.mp4",
+      "sha256": "46011dfe45dd564971f58ab52fa706eaa3ab45a82ffa773e98268329e2700f2f",
+      "duration_s": 78.0,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "codec": "h264",
+      "full_decode": "passed"
+    },
+    {
+      "path": "docs/films/custody/film.webm",
+      "sha256": "d06183e38e0bd8d25f78494083b9c3c2ba7bfd9b6f22f850cf5b8fd0021c3e46",
+      "duration_s": 78.0,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "codec": "vp9",
+      "full_decode": "passed"
+    },
+    {
+      "path": "docs/films/methods/film.mp4",
+      "sha256": "ae51dacfdd316c555fb60e95a2410f218f5ac5f1062f5b2af7a27d4de21cbe93",
+      "duration_s": 54.0,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "codec": "h264",
+      "full_decode": "passed"
+    },
+    {
+      "path": "docs/films/methods/film.webm",
+      "sha256": "61a1fc076bd61a0c42920d4a6d86e05aabf6b8777759efa58d4417bc9bb28187",
+      "duration_s": 54.0,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "codec": "vp9",
+      "full_decode": "passed"
+    },
+    {
+      "path": "docs/films/mission/film.mp4",
+      "sha256": "8291a5f37907b2f2818c5ee424a39862fdf402969fb2af6118e41f735bdb7f1b",
+      "duration_s": 108.0,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "codec": "h264",
+      "full_decode": "passed"
+    },
+    {
+      "path": "docs/films/mission/film.webm",
+      "sha256": "f046c9f6d396ddd447f4aca2fc05e6cbd258396887fa88ab15f15ba226e52627",
+      "duration_s": 108.0,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "codec": "vp9",
+      "full_decode": "passed"
+    },
+    {
+      "path": "docs/films/overview/film.mp4",
+      "sha256": "f3a9d1c31aaa9d15661cf5adb4f1b8c850ceb92bfffd85443b8e7ca7ff521d20",
+      "duration_s": 72.0,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "codec": "h264",
+      "full_decode": "passed"
+    },
+    {
+      "path": "docs/films/overview/film.webm",
+      "sha256": "85b69b4e9841d00d5533918f1a3a90a975c8df1cef1bd39591e90b94dc1cd0f9",
+      "duration_s": 72.0,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "codec": "vp9",
+      "full_decode": "passed"
+    }
+  ],
+  "source_caption_transcript_consistency": "passed",
+  "text_sprite_checks": "All generated recovery frames plus101semantic poses pass text/sprite bounding-box nonoverlap."
+}

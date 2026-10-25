@@ -1,0 +1,357 @@
+{
+  "analysis": "ACR1 actual cuboid normal-attraction Maxwell plane integral",
+  "generated_UTC": "2026-10-24T17:04:13.118523+00:00",
+  "cad_parameter_sha256": "979529a7413c9811a20dee7d109f063c20bd9791759d5101b0b7a6ec6935385c",
+  "field_module_sha256_at_import": "99f5ed27abef68dfaa7c651de6f10bba3e2a602d12f83caa064bcecadf06aa07",
+  "make_field_source_sha256": "2ff0b33f315bc46238612e9f8af826f96e8e3ef4bbdaddbd136bf66eda5173e7",
+  "script_sha256": "08d6130dcbfeccccc4c874627c4e3f5d90a18ef6ca7451f369e021fe0d412ed5",
+  "software": {
+    "numpy": "2.4.6",
+    "magpylib": "5.2.3"
+  },
+  "geometry": {
+    "arrays": 2,
+    "blocks_per_array": 42,
+    "pitch_mm": 8,
+    "block_dimensions_field_X_Y_Z_mm": [
+      8,
+      8,
+      90
+    ],
+    "polarization_T": 1.32,
+    "top_angle_deg": "90-60*i",
+    "bottom_angle_deg": "90+60*i",
+    "field_axes": "Xtravel,Ygap,Zdepth;CADXtravel,Zgap,Ydepth",
+    "nominal_array_inner_abs_gap_mm": 6
+  },
+  "method": "F=integral(By^2-Bx^2-Bz^2)/(2mu0)dX dZ overY0separatingplane;compositetrapezoidalquadrature,wide-domainandgridrefinement. Forceononearray;opposedarrayfeelsequalopposite. SIunitsT,m,mu0=4pi1e-7.",
+  "records": [
+    {
+      "closure_each_face_mm": 0.0,
+      "array_inner_abs_gap_axis_mm": 6.0,
+      "domain_X_mm": 600.0,
+      "domain_depth_mm": 220.0,
+      "grid_step_mm": 2.0,
+      "shape": [
+        301,
+        111
+      ],
+      "points": 33411,
+      "force_one_array_N": 3010.480633566849,
+      "max_midplane_B_T": 0.7618233809639734,
+      "max_midplane_stress_Pa": 230923.82104352562,
+      "wall_s": 2.0397017499999492
+    },
+    {
+      "closure_each_face_mm": 0.0,
+      "array_inner_abs_gap_axis_mm": 6.0,
+      "domain_X_mm": 600.0,
+      "domain_depth_mm": 220.0,
+      "grid_step_mm": 1.0,
+      "shape": [
+        601,
+        221
+      ],
+      "points": 132821,
+      "force_one_array_N": 3010.4806310619956,
+      "max_midplane_B_T": 0.7618233809639734,
+      "max_midplane_stress_Pa": 230923.82104352562,
+      "wall_s": 7.672919844000717
+    },
+    {
+      "closure_each_face_mm": 0.0,
+      "array_inner_abs_gap_axis_mm": 6.0,
+      "domain_X_mm": 600.0,
+      "domain_depth_mm": 220.0,
+      "grid_step_mm": 0.5,
+      "shape": [
+        1201,
+        441
+      ],
+      "points": 529641,
+      "force_one_array_N": 3010.4806312835844,
+      "max_midplane_B_T": 0.7618233809639734,
+      "max_midplane_stress_Pa": 230923.82104352562,
+      "wall_s": 33.315161309999894
+    },
+    {
+      "closure_each_face_mm": 0.0,
+      "array_inner_abs_gap_axis_mm": 6.0,
+      "domain_X_mm": 800.0,
+      "domain_depth_mm": 300.0,
+      "grid_step_mm": 1.0,
+      "shape": [
+        801,
+        301
+      ],
+      "points": 241101,
+      "force_one_array_N": 3010.4818245607134,
+      "max_midplane_B_T": 0.7618233809639731,
+      "max_midplane_stress_Pa": 230923.82104352544,
+      "wall_s": 14.503375635999873
+    },
+    {
+      "closure_each_face_mm": 0.2,
+      "array_inner_abs_gap_axis_mm": 5.8,
+      "domain_X_mm": 600.0,
+      "domain_depth_mm": 220.0,
+      "grid_step_mm": 2.0,
+      "shape": [
+        301,
+        111
+      ],
+      "points": 33411,
+      "force_one_array_N": 3177.0685286879343,
+      "max_midplane_B_T": 0.7811218152570342,
+      "max_midplane_stress_Pa": 242771.48470109765,
+      "wall_s": 2.7353395260006437
+    },
+    {
+      "closure_each_face_mm": 0.5,
+      "array_inner_abs_gap_axis_mm": 5.5,
+      "domain_X_mm": 600.0,
+      "domain_depth_mm": 220.0,
+      "grid_step_mm": 2.0,
+      "shape": [
+        301,
+        111
+      ],
+      "points": 33411,
+      "force_one_array_N": 3444.7718313331297,
+      "max_midplane_B_T": 0.8109347187413722,
+      "max_midplane_stress_Pa": 261656.74172808242,
+      "wall_s": 2.6653338749993054
+    },
+    {
+      "closure_each_face_mm": 0.8,
+      "array_inner_abs_gap_axis_mm": 5.2,
+      "domain_X_mm": 600.0,
+      "domain_depth_mm": 220.0,
+      "grid_step_mm": 2.0,
+      "shape": [
+        301,
+        111
+      ],
+      "points": 33411,
+      "force_one_array_N": 3735.54791127485,
+      "max_midplane_B_T": 0.8417911632779651,
+      "max_midplane_stress_Pa": 281947.9005987465,
+      "wall_s": 2.167928523000228
+    },
+    {
+      "closure_each_face_mm": 0.1863310914742954,
+      "array_inner_abs_gap_axis_mm": 5.813668908525704,
+      "domain_X_mm": 600.0,
+      "domain_depth_mm": 220.0,
+      "grid_step_mm": 1.0,
+      "shape": [
+        601,
+        221
+      ],
+      "points": 132821,
+      "force_one_array_N": 3165.3894791936377,
+      "max_midplane_B_T": 0.7797882322177911,
+      "max_midplane_stress_Pa": 241943.24111789558,
+      "wall_s": 7.782572621000327
+    }
+  ],
+  "nominal_reference_force_N": 3010.4806312835844,
+  "grid_2to1_relative_change": 8.320443684226833e-10,
+  "grid_1to0p5_relative_change": 7.36057997151525e-11,
+  "domain_600x220to800x300_relative_change_at1mm": 3.9644774072449405e-07,
+  "frame_feedback": {
+    "model": "Approximate linear single-webplate-strip+Cframecompliance,notassembledFEA. Uniformforcepatch336x90redistributionassumed;magneticforcevarieswithgap. Fixedpointsinterpolatedfromexplicitfieldgapcasesanddirectcheckedatnominalwidth.",
+    "plate_mm": 16,
+    "web_mm": 20,
+    "web_y_mm": [
+      -100,
+      -80
+    ],
+    "E_MPa": 70000.0,
+    "compliance_mm_per_N": 5.8859678099755526e-05,
+    "solutions": [
+      {
+        "effective_axial_width_fraction": 1.0,
+        "linear_compliance_mm_per_N": 5.8859678099755526e-05,
+        "interpolated_fixed_point_closure_mm": 0.1863310914742954,
+        "remaining_1mm_face_envelope_gap_mm": 0.8136689085257046,
+        "iterations": [
+          {
+            "iteration": 0,
+            "closure_each_face_mm": 0.17719592086985794,
+            "force_N": 3158.074110975609,
+            "next_closure_mm": 0.18588322558719597
+          },
+          {
+            "iteration": 1,
+            "closure_each_face_mm": 0.18588322558719597,
+            "force_N": 3165.310110011293,
+            "next_closure_mm": 0.18630913416116646
+          },
+          {
+            "iteration": 2,
+            "closure_each_face_mm": 0.18630913416116646,
+            "force_N": 3165.6648660755523,
+            "next_closure_mm": 0.1863300149889127
+          },
+          {
+            "iteration": 3,
+            "closure_each_face_mm": 0.1863300149889127,
+            "force_N": 3165.682258541265,
+            "next_closure_mm": 0.1863310387038459
+          },
+          {
+            "iteration": 4,
+            "closure_each_face_mm": 0.1863310387038459,
+            "force_N": 3165.683111233845,
+            "next_closure_mm": 0.1863310888930567
+          },
+          {
+            "iteration": 5,
+            "closure_each_face_mm": 0.1863310888930567,
+            "force_N": 3165.6831530384197,
+            "next_closure_mm": 0.1863310913536605
+          },
+          {
+            "iteration": 6,
+            "closure_each_face_mm": 0.1863310913536605,
+            "force_N": 3165.6831550879538,
+            "next_closure_mm": 0.1863310914742954
+          }
+        ],
+        "inside_sampled_closure_interval": true,
+        "direct_field_force_N": 3165.3894791936377,
+        "direct_field_closure_mm": 0.18631380580569032,
+        "direct_residual_mm": 1.728566860509373e-05
+      },
+      {
+        "effective_axial_width_fraction": 0.75,
+        "linear_compliance_mm_per_N": 7.847957079967404e-05,
+        "interpolated_fixed_point_closure_mm": 0.25305011668709576,
+        "remaining_1mm_face_envelope_gap_mm": 0.7469498833129042,
+        "iterations": [
+          {
+            "iteration": 0,
+            "closure_each_face_mm": 0.23626122782647727,
+            "force_N": 3209.426030178327,
+            "next_closure_mm": 0.2518743773616968
+          },
+          {
+            "iteration": 1,
+            "closure_each_face_mm": 0.2518743773616968,
+            "force_N": 3223.358335829232,
+            "next_closure_mm": 0.2529677787294297
+          },
+          {
+            "iteration": 2,
+            "closure_each_face_mm": 0.2529677787294297,
+            "force_N": 3224.3340263534287,
+            "next_closure_mm": 0.25304435050300195
+          },
+          {
+            "iteration": 3,
+            "closure_each_face_mm": 0.25304435050300195,
+            "force_N": 3224.402354742344,
+            "next_closure_mm": 0.2530497128856375
+          },
+          {
+            "iteration": 4,
+            "closure_each_face_mm": 0.2530497128856375,
+            "force_N": 3224.4071398341493,
+            "next_closure_mm": 0.2530500884175886
+          },
+          {
+            "iteration": 5,
+            "closure_each_face_mm": 0.2530500884175886,
+            "force_N": 3224.407474937961,
+            "next_closure_mm": 0.2530501147163919
+          },
+          {
+            "iteration": 6,
+            "closure_each_face_mm": 0.2530501147163919,
+            "force_N": 3224.4074984055496,
+            "next_closure_mm": 0.2530501165581182
+          },
+          {
+            "iteration": 7,
+            "closure_each_face_mm": 0.2530501165581182,
+            "force_N": 3224.407500049004,
+            "next_closure_mm": 0.25305011668709576
+          }
+        ],
+        "inside_sampled_closure_interval": true
+      },
+      {
+        "effective_axial_width_fraction": 0.5,
+        "linear_compliance_mm_per_N": 0.00011771935619951105,
+        "interpolated_fixed_point_closure_mm": 0.3944261949925752,
+        "remaining_1mm_face_envelope_gap_mm": 0.6055738050074249,
+        "iterations": [
+          {
+            "iteration": 0,
+            "closure_each_face_mm": 0.3543918417397159,
+            "force_N": 3314.8392151385888,
+            "next_closure_mm": 0.3902207383110072
+          },
+          {
+            "iteration": 1,
+            "closure_each_face_mm": 0.3902207383110072,
+            "force_N": 3346.8109282794812,
+            "next_closure_mm": 0.3939844277985485
+          },
+          {
+            "iteration": 2,
+            "closure_each_face_mm": 0.3939844277985485,
+            "force_N": 3350.1694352993004,
+            "next_closure_mm": 0.39437978908271315
+          },
+          {
+            "iteration": 3,
+            "closure_each_face_mm": 0.39437978908271315,
+            "force_N": 3350.5222337043306,
+            "next_closure_mm": 0.3944213202838215
+          },
+          {
+            "iteration": 4,
+            "closure_each_face_mm": 0.3944213202838215,
+            "force_N": 3350.559293836662,
+            "next_closure_mm": 0.39442568297874026
+          },
+          {
+            "iteration": 5,
+            "closure_each_face_mm": 0.39442568297874026,
+            "force_N": 3350.5631868627893,
+            "next_closure_mm": 0.3944261412632696
+          },
+          {
+            "iteration": 6,
+            "closure_each_face_mm": 0.3944261412632696,
+            "force_N": 3350.5635958103962,
+            "next_closure_mm": 0.3944261894043186
+          },
+          {
+            "iteration": 7,
+            "closure_each_face_mm": 0.3944261894043186,
+            "force_N": 3350.563638768789,
+            "next_closure_mm": 0.39442619446135296
+          },
+          {
+            "iteration": 8,
+            "closure_each_face_mm": 0.39442619446135296,
+            "force_N": 3350.563643281405,
+            "next_closure_mm": 0.3944261949925752
+          }
+        ],
+        "inside_sampled_closure_interval": true
+      }
+    ]
+  },
+  "limits": [
+    "Sharedanalyticcuboidfieldlawwithrootfinite_motor.py;notindependentFEMorfieldmeasurement.",
+    "Linearuniformmagnetization,relativepermeabilityassumptionsandnoironsupportorcurrentreactionfieldperturbation.",
+    "Maxwellplanefringestressisaforceintegral,notlocalbond/contacttractionorrealplate-loadmap.",
+    "Fixedpointcomplianceisaprovisionalstructuralsensitivity;actualassembledsupports,joints,bonds,temperatureandtransient loadsremainoutsideit.",
+    "Positivecomputedremaininggapdoesnotestablishhardwareflightqualificationorapositioningaccuracyrating."
+  ],
+  "wall_s": 73.15473020599984
+}

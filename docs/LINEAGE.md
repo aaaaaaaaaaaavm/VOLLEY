@@ -1,3 +1,5 @@
+> **Historical study record — ACR1 public reference:** [VOLLEY-G5-ACR1](../validation/acr1/README.md) is the current integrated academic reference. Values/status below retain their dated study/configuration meaning and do not set ACR1 operating points.
+
 # What this project was always walking toward
 
 A reader meeting this repository today finds the last-mile delivery concept as a 2026 idea.

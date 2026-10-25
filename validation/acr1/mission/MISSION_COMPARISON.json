@@ -1,0 +1,962 @@
+{
+  "study": "G5-MISSION-01",
+  "cases": [
+    {
+      "study": "G5-MISSION-01",
+      "family": "uniform_2",
+      "architecture": "gen5",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        704.5567197004
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 156.5567197004,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905004844,
+        -756475.2294178876,
+        6214472.267723232,
+        -6931.645291368885,
+        -529.281642430699,
+        3093.8364955542233,
+        656.504277129866
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.052442570534026345,
+      "fuel_remaining_kg": 19.947557429465974,
+      "peak_force_N": 0.6778266648828832,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 2.843835230767206e-06,
+      "host_velocity_error_m_s": 3.1117957861201615e-09,
+      "minimum_loading_coast_s": 400.0,
+      "elapsed_s": 5.111212090998379,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": true,
+      "spring_loading_coast_required": false,
+      "case_stem": "uniform_2_gen5_f0.35"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "uniform_2",
+      "architecture": "spring_fixed2",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905006446,
+        -756475.2294178718,
+        6214472.267723122,
+        -6931.645291368834,
+        -529.2816424307182,
+        3093.836495554412,
+        571.9530426936167
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.04695730638331952,
+      "fuel_remaining_kg": 19.95304269361668,
+      "peak_force_N": 0.6562694751538798,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 2.6516212249733608e-06,
+      "host_velocity_error_m_s": 2.9171722231872693e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.691939803999048,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": true,
+      "spring_loading_coast_required": false,
+      "case_stem": "uniform_2_spring_fixed2_f0.35_shared_narrow"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "uniform_2",
+      "architecture": "spring_fixed2",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905055652,
+        -756475.2294175088,
+        6214472.2677210085,
+        -6931.64529136635,
+        -529.28164243136,
+        3093.836495559727,
+        571.9302714992359
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.06972850076408577,
+      "fuel_remaining_kg": 19.930271499235914,
+      "peak_force_N": 0.06864692080676417,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 2.7172893685820694e-06,
+      "host_velocity_error_m_s": 2.9858699653293162e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.659714985000392,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": false,
+      "spring_loading_coast_required": false,
+      "case_stem": "uniform_2_spring_fixed2_f0.35"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "uniform_2",
+      "architecture": "spring_fixed2",
+      "fraction": 0.45,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.290507689,
+        -756475.2294173397,
+        6214472.267720025,
+        -6931.645291365319,
+        -529.2816424316538,
+        3093.8364955621328,
+        571.9176258778662
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.08237412213384232,
+      "fuel_remaining_kg": 19.917625877866158,
+      "peak_force_N": 0.05929125523412476,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 5.062290107585373e-06,
+      "host_velocity_error_m_s": 5.61741561389055e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.570489384001121,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": false,
+      "spring_loading_coast_required": false,
+      "case_stem": "uniform_2_spring_fixed2_f0.45"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "uniform_2",
+      "architecture": "spring_pretrim",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905042325,
+        -756475.2294176001,
+        6214472.26772153,
+        -6931.6452913670555,
+        -529.2816424311965,
+        3093.836495558337,
+        571.9475574536372
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.0524425463628404,
+      "fuel_remaining_kg": 19.94755745363716,
+      "peak_force_N": 0.6778264021166079,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 1.283399557644238e-06,
+      "host_velocity_error_m_s": 1.4185270564094246e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.843499966998934,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": true,
+      "spring_loading_coast_required": false,
+      "case_stem": "uniform_2_spring_pretrim_f0.35_shared_narrow"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "uniform_2",
+      "architecture": "spring_pretrim",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905083993,
+        -756475.2294172953,
+        6214472.267719788,
+        -6931.645291364922,
+        -529.2816424317432,
+        3093.836495562864,
+        571.9251831340626
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.07481686593735049,
+      "fuel_remaining_kg": 19.92518313406265,
+      "peak_force_N": 0.1229552461689807,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 5.8100861879445625e-06,
+      "host_velocity_error_m_s": 6.452930977698223e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.739165189999767,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": false,
+      "spring_loading_coast_required": false,
+      "case_stem": "uniform_2_spring_pretrim_f0.35"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "uniform_2",
+      "architecture": "spring_pretrim",
+      "fraction": 0.45,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.290503995,
+        -756475.2294176084,
+        6214472.267721582,
+        -6931.645291367227,
+        -529.281642431171,
+        3093.8364955581083,
+        571.9116119280797
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.08838807192034892,
+      "fuel_remaining_kg": 19.91161192807965,
+      "peak_force_N": 0.10674314170959572,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 1.0449955205989387e-06,
+      "host_velocity_error_m_s": 1.13850602190028e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.696079370000007,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": false,
+      "spring_loading_coast_required": false,
+      "case_stem": "uniform_2_spring_pretrim_f0.45"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "alternating_1_3",
+      "architecture": "gen5",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        704.5567197004
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 156.5567197004,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905082596,
+        -756475.2294172894,
+        6214472.267719716,
+        -6931.645291365086,
+        -529.281642431734,
+        3093.8364955627685,
+        656.2668456306025
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.28987406979751995,
+      "fuel_remaining_kg": 19.71012593020248,
+      "peak_force_N": 4.204211850600141,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 5.710724473311393e-06,
+      "host_velocity_error_m_s": 6.2971550862955445e-09,
+      "minimum_loading_coast_s": 400.0,
+      "elapsed_s": 4.366887791999034,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": false,
+          "feasible_in_declared_candidate": false
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": true,
+      "spring_loading_coast_required": false,
+      "case_stem": "alternating_1_3_gen5_f0.35"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "alternating_1_3",
+      "architecture": "spring_fixed2",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.290504683,
+        -756475.2294175702,
+        6214472.267721373,
+        -6931.645291366805,
+        -529.2816424312538,
+        3093.836495558809,
+        565.1776855859673
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 6.8223144140326895,
+      "fuel_remaining_kg": 13.17768558596731,
+      "peak_force_N": 50.91430483270366,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 1.7607614650832087e-06,
+      "host_velocity_error_m_s": 1.9554132419734188e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 3.9623289439987275,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": false,
+          "feasible_in_declared_candidate": false
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": false,
+          "feasible_in_declared_candidate": false
+        }
+      },
+      "shared_narrow_window_policy": true,
+      "spring_loading_coast_required": false,
+      "case_stem": "alternating_1_3_spring_fixed2_f0.35_shared_narrow"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "alternating_1_3",
+      "architecture": "spring_fixed2",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905055294,
+        -756475.2294175021,
+        6214472.267720976,
+        -6931.6452913663925,
+        -529.2816424313703,
+        3093.8364955597544,
+        564.8513262363023
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 7.1486737636977296,
+      "fuel_remaining_kg": 12.85132623630227,
+      "peak_force_N": 8.686047350425467,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 2.6970637889453166e-06,
+      "host_velocity_error_m_s": 2.992984396429273e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.000272212999334,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": false,
+          "feasible_in_declared_candidate": false
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": false,
+          "feasible_in_declared_candidate": false
+        }
+      },
+      "shared_narrow_window_policy": false,
+      "spring_loading_coast_required": false,
+      "case_stem": "alternating_1_3_spring_fixed2_f0.35"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "alternating_1_3",
+      "architecture": "spring_fixed2",
+      "fraction": 0.45,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905032854,
+        -756475.2294176661,
+        6214472.267721892,
+        -6931.645291367576,
+        -529.2816424310743,
+        3093.836495557319,
+        564.5169574014951
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 7.4830425985048805,
+      "fuel_remaining_kg": 12.51695740149512,
+      "peak_force_N": 7.537263690014201,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 2.69199450704258e-07,
+      "host_velocity_error_m_s": 2.711748287900133e-10,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 3.960251717000574,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": false,
+          "feasible_in_declared_candidate": false
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": false,
+          "feasible_in_declared_candidate": false
+        }
+      },
+      "shared_narrow_window_policy": false,
+      "spring_loading_coast_required": false,
+      "case_stem": "alternating_1_3_spring_fixed2_f0.45"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "alternating_1_3",
+      "architecture": "spring_pretrim",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.290505923,
+        -756475.2294174755,
+        6214472.267720806,
+        -6931.645291366204,
+        -529.2816424314177,
+        3093.836495560176,
+        571.9463548896204
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.05364511037964803,
+      "fuel_remaining_kg": 19.946354889620352,
+      "peak_force_N": 1.0167379799295009,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 3.1263058798620384e-06,
+      "host_velocity_error_m_s": 3.4570033460730876e-09,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.916843916998914,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": false,
+          "feasible_in_declared_candidate": false
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": true,
+      "spring_loading_coast_required": false,
+      "case_stem": "alternating_1_3_spring_pretrim_f0.35_shared_narrow"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "alternating_1_3",
+      "architecture": "spring_pretrim",
+      "fraction": 0.35,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.2905038344,
+        -756475.2294176288,
+        6214472.26772169,
+        -6931.64529136725,
+        -529.281642431148,
+        3093.8364955579314,
+        571.9249975828477
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.07500241715229095,
+      "fuel_remaining_kg": 19.92499758284771,
+      "peak_force_N": 0.18443248977525928,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 8.533238007661378e-07,
+      "host_velocity_error_m_s": 9.660215713179782e-10,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.668748924999818,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": false,
+      "spring_loading_coast_required": false,
+      "case_stem": "alternating_1_3_spring_pretrim_f0.35"
+    },
+    {
+      "study": "G5-MISSION-01",
+      "family": "alternating_1_3",
+      "architecture": "spring_pretrim",
+      "fraction": 0.45,
+      "max_step_s": 60.0,
+      "source_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "targets_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "calibration_source_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "initial_time_s": 0.0,
+      "initial_state": [
+        6878137.0,
+        0.0,
+        0.0,
+        0.0,
+        -980.7085691262173,
+        7549.173060771443,
+        620.0
+      ],
+      "initial_bus_dry_kg": 480.0,
+      "initial_propellant_kg": 20.0,
+      "initial_bus_wet_kg": 500.0,
+      "device_retained_dry_kg": 72.0,
+      "payload_total_kg": 48.0,
+      "final_time_s": 91800.0,
+      "final_host_target": [
+        2837487.29050305,
+        -756475.2294176864,
+        6214472.267722022,
+        -6931.64529136766,
+        -529.2816424310454,
+        3093.836495557063
+      ],
+      "final_host_state": [
+        2837487.290503379,
+        -756475.2294176539,
+        6214472.26772182,
+        -6931.645291367533,
+        -529.2816424310971,
+        3093.836495557478,
+        571.9113917824227
+      ],
+      "completed_targeting": true,
+      "fuel_used_kg": 0.08860821757730264,
+      "fuel_remaining_kg": 19.911391782422697,
+      "peak_force_N": 0.1601143592652899,
+      "fuel_limit_pass": true,
+      "host_position_error_m": 3.8727150418729296e-07,
+      "host_velocity_error_m_s": 4.373402616081625e-10,
+      "minimum_loading_coast_s": null,
+      "elapsed_s": 4.828611330000058,
+      "authority_results": {
+        "1.0": {
+          "force_limit_N": 1.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        },
+        "5.0": {
+          "force_limit_N": 5.0,
+          "force_limit_pass": true,
+          "feasible_in_declared_candidate": true
+        }
+      },
+      "shared_narrow_window_policy": false,
+      "spring_loading_coast_required": false,
+      "case_stem": "alternating_1_3_spring_pretrim_f0.45"
+    }
+  ],
+  "construction": "Chief J2 coast from common500km nominal SSO. At each fixed release epoch, add synthetic +along-track1/2/3m/s inertial velocity increment to chief PV. Propagate that full PV under J2 to the common24h-after-last-release epoch. No architecture mass or thrust authority enters target construction.",
+  "force_authority_cases_N": [
+    1,
+    5
+  ],
+  "spring_fixed_speed_basis": "Declared neutral2m/s midpoint class assumption; no vendor quote.",
+  "spring_pretrim_basis": "Analytical per-payload separation energy compensates predictable finite-host recoil for requested targetkick; table frozen after planning before native replay. It supplies no inflightretasking.",
+  "Gen5_coast_allocation_s": 400,
+  "declared_worst_cycle_s": 355,
+  "common_pre_post_guards_s": [
+    5,
+    20
+  ],
+  "limitations": [
+    "Two-window policies and sampled fractions are constructed candidates, not global optima.",
+    "Bounded candidate failure at a force ceiling is not a global infeasibility proof.",
+    "Fixed-axis J2 without drag or third bodies; constant inertial force and Isp220s surrogate host hardware.",
+    "Synthetic target families are not customer requirements or an orbital safety/conjunction assessment."
+  ]
+}

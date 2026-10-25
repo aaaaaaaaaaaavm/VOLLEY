@@ -1,0 +1,168 @@
+{
+  "selected": [
+    {
+      "family": "uniform_2",
+      "force_authority_N": 1.0,
+      "architecture": "gen5",
+      "best_tested_case": "uniform_2_gen5_f0.35",
+      "fuel_used_kg": 0.052442570534026345,
+      "peak_force_N": 0.6778266648828832,
+      "status": "Closed within declaredcandidate bounds"
+    },
+    {
+      "family": "uniform_2",
+      "force_authority_N": 1.0,
+      "architecture": "spring_fixed2",
+      "best_tested_case": "uniform_2_spring_fixed2_f0.35_shared_narrow",
+      "fuel_used_kg": 0.04695730638331952,
+      "peak_force_N": 0.6562694751538798,
+      "status": "Closed within declaredcandidate bounds"
+    },
+    {
+      "family": "uniform_2",
+      "force_authority_N": 1.0,
+      "architecture": "spring_pretrim",
+      "best_tested_case": "uniform_2_spring_pretrim_f0.35_shared_narrow",
+      "fuel_used_kg": 0.0524425463628404,
+      "peak_force_N": 0.6778264021166079,
+      "status": "Closed within declaredcandidate bounds"
+    },
+    {
+      "family": "uniform_2",
+      "force_authority_N": 5.0,
+      "architecture": "gen5",
+      "best_tested_case": "uniform_2_gen5_f0.35",
+      "fuel_used_kg": 0.052442570534026345,
+      "peak_force_N": 0.6778266648828832,
+      "status": "Closed within declaredcandidate bounds"
+    },
+    {
+      "family": "uniform_2",
+      "force_authority_N": 5.0,
+      "architecture": "spring_fixed2",
+      "best_tested_case": "uniform_2_spring_fixed2_f0.35_shared_narrow",
+      "fuel_used_kg": 0.04695730638331952,
+      "peak_force_N": 0.6562694751538798,
+      "status": "Closed within declaredcandidate bounds"
+    },
+    {
+      "family": "uniform_2",
+      "force_authority_N": 5.0,
+      "architecture": "spring_pretrim",
+      "best_tested_case": "uniform_2_spring_pretrim_f0.35_shared_narrow",
+      "fuel_used_kg": 0.0524425463628404,
+      "peak_force_N": 0.6778264021166079,
+      "status": "Closed within declaredcandidate bounds"
+    },
+    {
+      "family": "alternating_1_3",
+      "force_authority_N": 1.0,
+      "architecture": "gen5",
+      "best_tested_case": null,
+      "fuel_used_kg": null,
+      "peak_force_N": null,
+      "status": "No tested candidate within force ceiling; no global infeasibility inference"
+    },
+    {
+      "family": "alternating_1_3",
+      "force_authority_N": 1.0,
+      "architecture": "spring_fixed2",
+      "best_tested_case": null,
+      "fuel_used_kg": null,
+      "peak_force_N": null,
+      "status": "No tested candidate within force ceiling; no global infeasibility inference"
+    },
+    {
+      "family": "alternating_1_3",
+      "force_authority_N": 1.0,
+      "architecture": "spring_pretrim",
+      "best_tested_case": "alternating_1_3_spring_pretrim_f0.35",
+      "fuel_used_kg": 0.07500241715229095,
+      "peak_force_N": 0.18443248977525928,
+      "status": "Closed within declaredcandidate bounds"
+    },
+    {
+      "family": "alternating_1_3",
+      "force_authority_N": 5.0,
+      "architecture": "gen5",
+      "best_tested_case": "alternating_1_3_gen5_f0.35",
+      "fuel_used_kg": 0.28987406979751995,
+      "peak_force_N": 4.204211850600141,
+      "status": "Closed within declaredcandidate bounds"
+    },
+    {
+      "family": "alternating_1_3",
+      "force_authority_N": 5.0,
+      "architecture": "spring_fixed2",
+      "best_tested_case": null,
+      "fuel_used_kg": null,
+      "peak_force_N": null,
+      "status": "No tested candidate within force ceiling; no global infeasibility inference"
+    },
+    {
+      "family": "alternating_1_3",
+      "force_authority_N": 5.0,
+      "architecture": "spring_pretrim",
+      "best_tested_case": "alternating_1_3_spring_pretrim_f0.35_shared_narrow",
+      "fuel_used_kg": 0.05364511037964803,
+      "peak_force_N": 1.0167379799295009,
+      "status": "Closed within declaredcandidate bounds"
+    }
+  ],
+  "native_jobs": [
+    {
+      "stem": "uniform_2_gen5_f0.35",
+      "name": "uniform_2_gen5_f0.35",
+      "step": 60,
+      "category": "nominal"
+    },
+    {
+      "stem": "uniform_2_spring_fixed2_f0.35_shared_narrow",
+      "name": "uniform_2_spring_fixed2_f0.35_shared_narrow",
+      "step": 60,
+      "category": "nominal"
+    },
+    {
+      "stem": "uniform_2_spring_pretrim_f0.35_shared_narrow",
+      "name": "uniform_2_spring_pretrim_f0.35_shared_narrow",
+      "step": 60,
+      "category": "nominal"
+    },
+    {
+      "stem": "alternating_1_3_spring_pretrim_f0.35",
+      "name": "alternating_1_3_spring_pretrim_f0.35",
+      "step": 60,
+      "category": "nominal"
+    },
+    {
+      "stem": "alternating_1_3_gen5_f0.35",
+      "name": "alternating_1_3_gen5_f0.35",
+      "step": 60,
+      "category": "nominal"
+    },
+    {
+      "stem": "alternating_1_3_spring_pretrim_f0.35_shared_narrow",
+      "name": "alternating_1_3_spring_pretrim_f0.35_shared_narrow",
+      "step": 60,
+      "category": "nominal"
+    },
+    {
+      "stem": "alternating_1_3_spring_fixed2_f0.45",
+      "name": "alternating_1_3_spring_fixed2_f0.45",
+      "step": 60,
+      "category": "diagnostic_above_force_ceiling"
+    },
+    {
+      "stem": "uniform_2_gen5_f0.35",
+      "name": "uniform_2_gen5_f0.35_refine30",
+      "step": 30,
+      "category": "step_refinement"
+    },
+    {
+      "stem": "alternating_1_3_gen5_f0.35",
+      "name": "alternating_1_3_gen5_f0.35_refine30",
+      "step": 30,
+      "category": "step_refinement"
+    }
+  ]
+}

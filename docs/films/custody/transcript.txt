@@ -1,0 +1,31 @@
+Continuous payload custody.
+
+0–10 s | Retain the inventory.
+Two fixed six-level banks hold twelve nominal 3U payloads. Select one cell and inhibit host burns during feeding.
+Evidence: CAD-derived Blender render
+Source: visuals/VIEW_PROVENANCE.json
+
+10–20 s | Capture the selected payload.
+The guided pusher feeds the lift. At source level 5 the payload floor is Z830 mm; the lift grips hold its pallet.
+Evidence: CAD-derived Blender render
+Source: visuals/VIEW_PROVENANCE.json
+
+20–32 s | Overlap the restraints.
+At handoff, positive carrier bayonets and outboard lift grip pins establish dual custody. The storage banks and fixed frame are hidden in this view for access.
+Evidence: CAD-derived Blender render
+Source: visuals/VIEW_PROVENANCE.json
+
+32–44 s | Prove the clear state.
+Payload floor Z46 mm. Raised custody frame floor Z190 mm. Prove pallet locks, pusher withdrawal and a clear path before enabling launch.
+Evidence: CAD-derived Blender render
+Source: visuals/VIEW_PROVENANCE.json
+
+44–60 s | Retain the pallet during recovery.
+The payload departs along +X. Carrier and captive pallet arrest together, then return as one retained assembly for the next transfer.
+Evidence: Operating-sequence schematic · illustrative timing
+Source: cad/release/FINAL_CAD_MANIFEST.json; analysis/COUPLED_SHOT.json
+
+60–78 s | Fault → inhibit → retain → verify.
+Inhibit launch, retain the payload, isolate the cell, supervise reset, then verify before continuing. Physical fault-response validation is subsequent work.
+Evidence: Modeled fault and isolation sequence
+Source: analysis/TRANSFER_INTERLOCKS.json

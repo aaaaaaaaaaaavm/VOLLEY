@@ -1,0 +1,55 @@
+{
+  "study": "PCS-LUNAR-COVARIANCE-01",
+  "source_sha256": "958425eff7088d3bab089df9717613e417774158728e462a18ee7d5c7e5f1395",
+  "inputs_sha256": "abf144927395a11765f8f0a16d130ee0e100fa02f21be78f3dd216df9eabc200",
+  "requirements": {
+    "case_apolune_km": 1000,
+    "relative_command_m_s": 3,
+    "position_1sigma_m": 10,
+    "velocity_1sigma_m_s": 0.01,
+    "pointing_1sigma_deg": 0.1,
+    "study_perilune_error_3sigma_m": 1000,
+    "study_plane_error_3sigma_rad": 0.001,
+    "sample_power": 14,
+    "seed": 20261025
+  },
+  "nominal_osculating_perilune_altitude_m": 115227.60301082046,
+  "assumed_independent_normal_inputs": true,
+  "finite_difference_relative_refinement": 1.885612761545033e-10,
+  "linear_speed_1sigma_requirement_m_s": 0.06448381321711669,
+  "finite_sample_speed_1sigma_requirement_m_s": 0.06407996453903499,
+  "finite_sample_speed_3sigma_requirement_m_s": 0.19223989361710497,
+  "necessary_command_increment_if_uniform_quantization_alone_m_s": 0.22197950865764113,
+  "linear_single_axis_pointing_1sigma_budget_deg": 7.75399498351516,
+  "finite_sample_pointing_1sigma_budget_deg": 8.051616068442229,
+  "finite_sample_pointing_3sigma_budget_deg": 24.154848205326687,
+  "saturated_pointing_band_plane_99p73pct_rad": 0.0010000000000000002,
+  "monte_carlo": [
+    {
+      "samples": 4096,
+      "perilune_error_mean_m": -0.039648791025456376,
+      "perilune_error_std_m": 331.3591931600786,
+      "perilune_error_quantiles_m": [
+        -999.3900475052563,
+        -0.09866957820486277,
+        992.9053331018431
+      ],
+      "plane_error_99p73pct_rad": 2.8141202480191644e-05,
+      "minimum_osculating_perilune_altitude_m": 113992.12711132481
+    },
+    {
+      "samples": 16384,
+      "perilune_error_mean_m": -0.014349999545657965,
+      "perilune_error_std_m": 331.28731180046225,
+      "perilune_error_quantiles_m": [
+        -1000.0000000011894,
+        -0.18664905976038426,
+        996.032446921359
+      ],
+      "plane_error_99p73pct_rad": 2.845443481362798e-05,
+      "minimum_osculating_perilune_altitude_m": 113992.12711132481
+    }
+  ],
+  "interpretation": "Study targets, not customer requirements. Increment is an upper necessary bound if quantization alone uses the entire speed budget; shared error allocation requires finer increments. Speed/pointing limits are independently saturated and cannot be combined as a joint accuracy guarantee; joint MC uses fixed0.1deg pointing.",
+  "limits": "Two-body osculating-element covariance at release; no perturbed30day covariance/terrain/contact or measured accuracy. Native nominal lifetime results remain separate."
+}

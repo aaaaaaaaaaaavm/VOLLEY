@@ -1,0 +1,132 @@
+[
+  {
+    "path": "docs/visual-source/inputs/COUPLED_SHOT.json",
+    "path_base": "repository_root",
+    "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+  },
+  {
+    "path": "docs/visual-source/inputs/FINAL_CAD_MANIFEST.json",
+    "path_base": "repository_root",
+    "sha256": "77b8a5c2b4b30c16f0faa2fbdd7fc243b7952d417a7e962d2e4096ba1e7a1350"
+  },
+  {
+    "path": "docs/visual-source/inputs/MISSION_REPORT.md",
+    "path_base": "repository_root",
+    "sha256": "a6e1a3d2091b21edfe0cd3e78f23772a0ec4e15631eff2c8bf91a56e63fd65b2"
+  },
+  {
+    "path": "docs/visual-source/inputs/MISSION_RESULTS.csv",
+    "path_base": "repository_root",
+    "sha256": "7acb70e5d23bcac84630eab0c101568f916f66e1647e320cf99bbe8357b39209"
+  },
+  {
+    "path": "docs/visual-source/inputs/NATIVE_REPLAY_CHECKS.json",
+    "path_base": "repository_root",
+    "sha256": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691"
+  },
+  {
+    "path": "docs/visual-source/inputs/TARGETS.json",
+    "path_base": "repository_root",
+    "sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e"
+  },
+  {
+    "path": "docs/visual-source/inputs/TRANSFER_INTERLOCKS.json",
+    "path_base": "repository_root",
+    "sha256": "9f291fba1951d8fd64bf8a0d822a01be33f464f6c1099628b1341755899e0d4c"
+  },
+  {
+    "path": "docs/visual-source/inputs/uniform_2_gen5_f0.35.json",
+    "path_base": "repository_root",
+    "sha256": "16e6c5dc93e60634b6ace5977873c9ff7de4127d1c5ce6527a479ffc079bba01"
+  },
+  {
+    "path": "docs/visual-source/inputs/uniform_2_gen5_f0.35_trajectory.csv",
+    "path_base": "repository_root",
+    "sha256": "456c85e08af446c7770e9a7a87d7829474b95bee30c6423c42399cc815c10724"
+  },
+  {
+    "path": "docs/assets/acr1/01_assembly_isometric.png",
+    "path_base": "repository_root",
+    "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422"
+  },
+  {
+    "path": "docs/assets/acr1/02_handoff_pallet_locks.png",
+    "path_base": "repository_root",
+    "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123"
+  },
+  {
+    "path": "docs/assets/acr1/03_captured_source_level.png",
+    "path_base": "repository_root",
+    "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861"
+  },
+  {
+    "path": "docs/assets/acr1/04_clear_docked.png",
+    "path_base": "repository_root",
+    "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d"
+  },
+  {
+    "path": "docs/assets/acr1/ACR1_social_preview.png",
+    "path_base": "repository_root",
+    "sha256": "87328ae3ed8122bfad5d7b87411ceb601559ce731af94dfe88e2aa7ac6d4fa55"
+  },
+  {
+    "path": "docs/assets/acr1/MISSION_NATIVE_AGREEMENT.png",
+    "path_base": "repository_root",
+    "sha256": "025d1d49b5887769ecd7271ef30a3b6f80eb7112b3c6f2a664c6906a42edf1e3"
+  },
+  {
+    "path": "docs/assets/acr1/MISSION_RESOURCES.png",
+    "path_base": "repository_root",
+    "sha256": "86794a4cbaf3b02d9f251ba616a4453b727660c5de2ed44c22fbcde2b3011909"
+  },
+  {
+    "path": "docs/assets/acr1/MISSION_TARGETS.png",
+    "path_base": "repository_root",
+    "sha256": "175594c388830c1e4243bce857e7c2cf46a251b1a104e3742d324f69c10c7fdb"
+  },
+  {
+    "path": "docs/assets/acr1/coupled_shot_reference.png",
+    "path_base": "repository_root",
+    "sha256": "d47e8dd86b3e9faba3911b7f3da9f8df6772317945450f50a9d6dec4357fe839"
+  },
+  {
+    "path": "docs/assets/acr1/feeder_transfer_profile.png",
+    "path_base": "repository_root",
+    "sha256": "49e92970ce0b3bc16bedc019ea504cc85555934f439e336e26f38a511afbc022"
+  },
+  {
+    "path": "docs/assets/acr1/finite_force_coefficient.png",
+    "path_base": "repository_root",
+    "sha256": "8c553ff9aa80e26c47f45068587be6a809c8986a6eb62a0fe43020940a94cca8"
+  },
+  {
+    "path": "docs/assets/acr1/magnetic_gap_section.png",
+    "path_base": "repository_root",
+    "sha256": "5e1cd6923ed0b732374231c0e17d3dc6e67ea5294a7177b412f545637bde7411"
+  },
+  {
+    "path": "docs/assets/acr1/shot_energy_ledger.png",
+    "path_base": "repository_root",
+    "sha256": "bafd5579ec0de422c662aac377095dd1c15c579fc6d7ede28019c55c22a2c78c"
+  },
+  {
+    "path": "docs/assets/acr1/01_assembly_isometric.jpg",
+    "path_base": "repository_root",
+    "sha256": "06299aff49fa623566d86280cb27661ba1075a2e60f991989a8e9242b639a689"
+  },
+  {
+    "path": "docs/assets/acr1/02_handoff_pallet_locks.jpg",
+    "path_base": "repository_root",
+    "sha256": "9d7124a1cf8579cab251c39feb31a1bae4945d1dc70f3b9505a2dfa7050aa10a"
+  },
+  {
+    "path": "docs/assets/acr1/03_captured_source_level.jpg",
+    "path_base": "repository_root",
+    "sha256": "9728b73c49ffe19c6eb0c25e6d21731b6047f402f89ea71638f00e784a927f18"
+  },
+  {
+    "path": "docs/assets/acr1/04_clear_docked.jpg",
+    "path_base": "repository_root",
+    "sha256": "d7128d9e7c7a690629999769aa19beece22a1c9b39f090f7b2fc1834e74c88a8"
+  }
+]

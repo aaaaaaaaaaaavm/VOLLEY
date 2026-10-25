@@ -1,3 +1,5 @@
+> **Historical study record — ACR1 public reference:** [VOLLEY-G5-ACR1](../../validation/acr1/README.md) is the current integrated academic reference. Values/status below retain their dated study/configuration meaning and do not set ACR1 operating points.
+
 # Gen5, the frozen baseline
 
 > The later gas-guide target named in this historical record has also been withdrawn. See [current status](../NEXT_GENERATION_STATUS.md).

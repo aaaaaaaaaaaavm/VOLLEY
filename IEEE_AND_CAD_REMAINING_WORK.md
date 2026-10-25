@@ -1,4 +1,20 @@
+> **Historical planning matrix — 9 October 2026; retained 25 October 2026.** The original priorities below describe pre-ACR1 configurations and are preserved for traceability. They do not reopen completed ACR1 calculations or define the current release checklist.
+
 # Gen5 remaining-work matrix: academic review, IEEE paper, and hardware release
+
+## Current ACR1 disposition — 25 October 2026
+
+[ACR1 source and results](validation/acr1/README.md) define the completed integrated computational reference: eight native/STEP states, 154 motion/refinement checks, coupled source/release/arrest results and a matched twelve-payload mission. [Current numerical evidence](docs/CURRENT_NUMERICAL_EVIDENCE.md) identifies the supported findings and assumptions. The earlier fit/mass/speed findings below retain their original configuration.
+
+| Current boundary | Reading route |
+|:--|:--|
+| Completed computational reference and reproducible examples | [ACR1 package](validation/acr1/README.md) |
+| Separately versioned mixed-size Gen6 development | [Configuration status](docs/NEXT_GENERATION_STATUS.md) and [prototype review requirements](docs/PROTOTYPE_READINESS.md) |
+| Existing lunar/high-speed and other programme findings | [Programme studies](docs/PROGRAMME_STUDIES_ACR1.md); each study retains its own remaining criteria |
+| Physical testing, environmental qualification and approved interfaces | Future evidence tied to a named article and provider requirements |
+| Manuscript submission and academic release identity | [Release policy](RELEASE_POLICY.md); IEEE formatting does not establish venue acceptance |
+
+## Archived matrix — 9 October 2026
 
 **Status: 9 October 2026.** Gen5 is a controlled computational *review candidate*, not a validated product or completed academic freeze. Gen6's 1 km/s-class objective is future research. This list is a decision and evidence plan; it does not turn an unrun analysis into a passed test. See `docs/GEN5_FREEZE_READINESS.md` in the flagship for C-00–C-20 dispositions. The paper and thesis copies of this file are standalone.
 
@@ -48,6 +64,6 @@ The present 3U configuration fails its chosen installed-mass screen (10.547 kg p
 4. Reconcile every headline number and figure with one configuration, remove stale historical prose, rebuild all PDFs, run link and hash checks, and capture a clean verification log. The local dirty-tree artifact gate currently cannot establish a clean release snapshot even though the published CAD files exist.
 5. Obtain an independent technical read; resolve or sign an exception list. Apply the college's actual report template and a selected IEEE venue's rules. No venue is selected at this date, and the current paper is IEEE-*formatted*, not accepted or submission-compliant.
 
-**What I can execute:** literature and product-document audit; independent Python checks; parametric CAD/STEP and engineering drawings; available open-source solver input, runs, convergence, plots and reports; code and manuscript repair; source/PDF/deck builds; traceability, checksums and GitHub publication. I can investigate and install additional open-source solvers if permitted and if the compute environment supports them. This environment currently supports scripted FreeCAD, Blender, Python and LaTeX; it has not yielded a trustworthy interactive FreeCAD/OpenGL screenshot. I will label software outputs accurately.
+**Implementation routes in this historical matrix:** parametric CAD/STEP, open-source numerical solvers, source-driven plots, manuscript builds and identity checks. A proposed tool or an available runtime is not evidence of an executed analysis. Technical renders and genuine application captures retain distinct labels.
 
 **What needs external evidence:** a named payload and host/provider ICD, supplier component curves and quotations, a college submission template and IEEE venue, an independent reviewer, and any physical measurement or qualification. No amount of code can certify an actual CubeSat, launch interface or flight article without those inputs and tests.

@@ -1,0 +1,1145 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "source_sha256": {
+    "build_acr1.py": "f33d0a87e1f174acdfaae29655f2c34eeba583d8ac042dd8dded16e34af9a785",
+    "cradle_acr1.py": "1846373b17d77d79c3aab7bea72e288f85cc308e656697b20da858c2ff8c2565",
+    "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+    "PARAMETERS.json": "e870f0132948b76ee6c8664056ced731ce39360d57c2eedfc9f17ffb7576e067"
+  },
+  "case_count": 143,
+  "failed_case_count": 0,
+  "all_sampled_cases_pass": true,
+  "cases": [
+    {
+      "pass_all": true,
+      "tested_pairs": 139,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 46
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 141,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 50
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 141,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 54
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 97,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 60
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 99,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 90
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 97,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 120
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 103,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 150
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 103,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 164
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 105,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 180
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 98,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 190
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 85,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 210
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 89,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 240
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 93,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 270
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 87,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 300
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 94,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 310
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 85,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 340
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 89,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 370
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 93,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 400
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 87,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 430
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 94,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 440
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 85,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 470
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 89,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 500
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 93,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 530
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 87,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 560
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 94,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 570
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 85,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 600
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 89,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 630
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 93,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 660
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 87,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 690
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 93,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 700
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 84,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 730
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 88,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 760
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 92,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 790
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 84,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 820
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 84,
+      "interferences": [],
+      "case": "captured_vertical_transit",
+      "floor_z_mm": 830
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 128,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 0,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 124,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 0,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 131,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 0,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 138,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 0,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 134,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 0,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 1,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 113,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 1,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 120,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 1,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 127,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 1,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 123,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 1,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 2,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 113,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 2,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 120,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 2,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 127,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 2,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 123,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 2,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 3,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 113,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 3,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 120,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 3,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 127,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 3,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 123,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 3,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 4,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 113,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 4,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 120,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 4,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 127,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 4,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 123,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 4,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 108,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 5,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 104,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 5,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 111,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 5,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 118,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 5,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 114,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": -1,
+      "level": 5,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 128,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 0,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 128,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 0,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 134,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 0,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 137,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 0,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 133,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 0,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 1,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 1,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 123,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 1,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 126,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 1,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 122,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 1,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 2,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 2,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 123,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 2,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 126,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 2,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 122,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 2,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 3,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 3,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 123,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 3,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 126,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 3,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 122,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 3,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 4,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 4,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 123,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 4,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 126,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 4,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 122,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 4,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 108,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 5,
+      "feed_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 108,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 5,
+      "feed_mm": 62.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 114,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 5,
+      "feed_mm": 125
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 117,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 5,
+      "feed_mm": 187.5
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 113,
+      "interferences": [],
+      "case": "installed_cell_feed",
+      "side": 1,
+      "level": 5,
+      "feed_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 727,
+      "interferences": [],
+      "case": "pallet_capture_before_grip_release",
+      "pin_lift_mm": 0,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 727,
+      "interferences": [],
+      "case": "pallet_capture_before_grip_release",
+      "pin_lift_mm": 8,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 729,
+      "interferences": [],
+      "case": "pallet_capture_before_grip_release",
+      "pin_lift_mm": 16,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 729,
+      "interferences": [],
+      "case": "pallet_capture_before_grip_release",
+      "pin_lift_mm": 24,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 729,
+      "interferences": [],
+      "case": "pallet_capture_before_grip_release",
+      "pin_lift_mm": 26,
+      "bayonet_turn_deg": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 729,
+      "interferences": [],
+      "case": "pallet_capture_before_grip_release",
+      "pin_lift_mm": 26,
+      "bayonet_turn_deg": 30
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 729,
+      "interferences": [],
+      "case": "pallet_capture_before_grip_release",
+      "pin_lift_mm": 26,
+      "bayonet_turn_deg": 60
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 729,
+      "interferences": [],
+      "case": "pallet_capture_before_grip_release",
+      "pin_lift_mm": 26,
+      "bayonet_turn_deg": 90
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 406,
+      "interferences": [],
+      "case": "keeper_upward_retraction",
+      "keeper_stroke_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "keeper_upward_retraction",
+      "keeper_stroke_mm": 30
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "keeper_upward_retraction",
+      "keeper_stroke_mm": 60
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "keeper_upward_retraction",
+      "keeper_stroke_mm": 90
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "keeper_upward_retraction",
+      "keeper_stroke_mm": 110
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "pallet_grip_release_after_sled_capture",
+      "grip_withdraw_mm": 0
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "pallet_grip_release_after_sled_capture",
+      "grip_withdraw_mm": 6
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "pallet_grip_release_after_sled_capture",
+      "grip_withdraw_mm": 13
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "pallet_grip_release_after_sled_capture",
+      "grip_withdraw_mm": 20
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "pallet_grip_release_after_sled_capture",
+      "grip_withdraw_mm": 26
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 402,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 46
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 401,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 50
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 401,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 54
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 349,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 60
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 353,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 90
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 349,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 120
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 353,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 150
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 353,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 164
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 362,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 180
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 361,
+      "interferences": [],
+      "case": "lift_rise_from_retained_pallet",
+      "floor_z_mm": 190
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 459,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 200
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 459,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 454,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 350
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 395,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 500
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 327,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 750
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 323,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1000
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 323,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1250
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 327,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1445
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 327,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1450
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 327,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1455
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 328,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1465
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 329,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1475
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 329,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1485
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 329,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1495
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 327,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1500
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 328,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1540
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 322,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1580
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 311,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1620
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 301,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1660
+    },
+    {
+      "pass_all": true,
+      "tested_pairs": 290,
+      "interferences": [],
+      "case": "carrier_pallet_launch_arrest_return_path",
+      "carrier_aft_x_mm": 1710
+    }
+  ],
+  "elapsed_s": 824.6173977639992,
+  "boundary": "Changed-part sampled nominal native BRep geometry against all12 installed cells;not continuous collision detection or loaded/contact/flight qualification;no horizontal pallet withdrawal."
+}

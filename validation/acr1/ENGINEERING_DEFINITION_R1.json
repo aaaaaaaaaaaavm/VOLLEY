@@ -1,0 +1,115 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "record": "Derived engineering definition R1; does not supersede verification gates",
+  "definition_parent_sha256": "225596f694fb1dba518c133085eded0d7208a0c0be83f0f2e1eb9fe789f79c91",
+  "captured_utc": "2026-10-24T17:07:39.400954+00:00",
+  "CAD_parameter_sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+  "magnetic_geometry": {
+    "active_magnet_length_mm": 336,
+    "mounting_envelope_mm": 340,
+    "blocks_per_array": 42,
+    "block_pitch_mm": 8,
+    "magnetization_increment_deg": 60,
+    "wavelength_mm": 48,
+    "magnet_inner_faces_mm": [
+      -6,
+      6
+    ],
+    "active_copper_faces_mm": [
+      -3,
+      3
+    ],
+    "GFRP_active_package_faces_mm": [
+      -5,
+      5
+    ],
+    "nominal_magnet_package_clearance_each_face_mm": 1,
+    "active_bar_section_mm2": 42,
+    "minimum_return_or_transition_section_mm2": 21
+  },
+  "definition_clarification": "R0 conductor_thickness_mm=10 described the retained package envelope. It is not 10mm of copper. The current CAD specifies6mm copper plus2mm GFRP on each active face. New models use this distinction.",
+  "mechanical_status": "Eight frozen native/STEP assembly states pass independent readback;154 accepted installed-motion cases; captive pallet transfers by12mm bayonet insertion and90degree rotation.",
+  "performance_status": "Supported modeled1\u20133m/s range across nominal/adverse source and3/20/100microhenry sensitivities; principal case3m/s. See verified COUPLED_SHOT and review receipt.",
+  "mass_basis": {
+    "configuration_id": "VOLLEY-G5-ACR1",
+    "installed_electrical_control_allowance_kg": 7.0,
+    "items": [
+      {
+        "item": "64 capacitor cells",
+        "mass_kg": 1.28,
+        "basis": "64 \u00d720g catalog typical"
+      },
+      {
+        "item": "Cell cage",
+        "mass_kg": 0.42,
+        "basis": "design allocation"
+      },
+      {
+        "item": "Balancing and protection",
+        "mass_kg": 0.2,
+        "basis": "design allocation"
+      },
+      {
+        "item": "60 MOSFET packages",
+        "mass_kg": 0.36,
+        "basis": "package mass allocation"
+      },
+      {
+        "item": "30 driver packages",
+        "mass_kg": 0.012,
+        "basis": "package mass allocation"
+      },
+      {
+        "item": "Boards and local interconnect",
+        "mass_kg": 0.7,
+        "basis": "design allocation"
+      },
+      {
+        "item": "Thermal plate",
+        "mass_kg": 0.9,
+        "basis": "design allocation"
+      },
+      {
+        "item": "DC-link capacitors",
+        "mass_kg": 0.5,
+        "basis": "design allocation"
+      },
+      {
+        "item": "Charger",
+        "mass_kg": 0.5,
+        "basis": "design allocation"
+      },
+      {
+        "item": "Controls and encoders",
+        "mass_kg": 0.6,
+        "basis": "design allocation"
+      },
+      {
+        "item": "Harness and bus",
+        "mass_kg": 0.8,
+        "basis": "design allocation"
+      },
+      {
+        "item": "Fasteners and support",
+        "mass_kg": 0.6,
+        "basis": "design allocation"
+      },
+      {
+        "item": "Mass reserve",
+        "mass_kg": 0.128,
+        "basis": "allocation"
+      }
+    ],
+    "CAD_dry_kg": 149.55671970039353,
+    "device_including_allowance_kg": 156.55671970039353,
+    "loaded_device_kg": 204.55671970039353,
+    "moving_sled_with_pallet_kg": 13.127805767068676,
+    "lift_cradle_plus_pallet_plus_payload_kg": 7.5730430711591,
+    "scope": "The7kg allowance is included in host mass, but not spatially modeled in CAD CG/inertia. Values other than bare cell typical mass are allocations, not measured installed masses. Supplier acceptance and physical integration are future hardware work."
+  },
+  "verification_sources": [
+    "cad/release/FINAL_CAD_MANIFEST.json",
+    "verification/FINAL_STEP_READBACK_SUMMARY.json",
+    "verification/COUPLED_SHOT_REVIEW.json"
+  ]
+}

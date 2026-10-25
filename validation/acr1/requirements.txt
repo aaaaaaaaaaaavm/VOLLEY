@@ -1,0 +1,9 @@
+# Captured ACR1 Python 3.12 environment. Native tool locks are in release/SOFTWARE_ENVIRONMENT.json.
+numpy==2.4.6
+scipy==1.17.1
+matplotlib==3.11.1
+magpylib==5.2.3
+meshio==5.3.5
+# Optional conductor/FEA rebuild; system libGLU and CalculiX 2.23 are separate.
+gmsh==4.13.1
+scikit-fem==12.0.2

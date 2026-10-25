@@ -1,0 +1,752 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "render_script_sha256": "c72ec143963702e5ccb463325d72159a15c2ba429cfd562ad5ed0cb5d5af7827",
+  "blend_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/VOLLEY_G5_ACR1_scientific_views.blend",
+  "blend_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06",
+  "views": [
+    {
+      "view_id": "01_assembly_isometric",
+      "state": "home",
+      "render_engine": "Blender Workbench 4.3.2",
+      "projection": "ORTHOGRAPHIC",
+      "resolution_px": [
+        2800,
+        2100
+      ],
+      "source_mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/home.json",
+      "source_mesh_sha256": "7419819c2833fd23417620fa1b9df8fc858ae987db842c209671dfc81408db7d",
+      "native_provenance": {
+        "state": "home",
+        "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.FCStd",
+        "native_sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a",
+        "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.step",
+        "step_sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+        "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+        "bom_sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+        "source_sha256": {
+          "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "camera": {
+        "location_m": [
+          4.636751651763916,
+          -3.511751651763916,
+          3.8532514572143555
+        ],
+        "rotation_euler_rad": [
+          0.9553165435791016,
+          -1.1763476237547366e-07,
+          0.7853981852531433
+        ],
+        "ortho_scale_m": 4.131031513214111,
+        "frame_height_m": 3.098273730358562
+      },
+      "CAD_object_count": 387,
+      "rendered_CAD_object_count": 387,
+      "hidden_CAD_objects": [],
+      "hidden_parts_disclosure": "All CAD parts present; view framing may crop distant geometry",
+      "annotation_targets_m": [
+        {
+          "text": "12 installed storage cells",
+          "uv": [
+            0.055,
+            0.8
+          ],
+          "target": [
+            0.434,
+            -0.25,
+            0.49
+          ],
+          "target_projected_uv": [
+            0.33892935514450073,
+            0.5972438454627991
+          ]
+        },
+        {
+          "text": "Carrier and captive pallet",
+          "uv": [
+            0.055,
+            0.26
+          ],
+          "target": [
+            0.434,
+            0,
+            0.041
+          ],
+          "target_projected_uv": [
+            0.38172173500061035,
+            0.5118592381477356
+          ]
+        },
+        {
+          "text": "Fixed stator and 2250 mm guide track",
+          "uv": [
+            0.55,
+            0.27
+          ],
+          "target": [
+            1.6,
+            0,
+            0
+          ],
+          "target_projected_uv": [
+            0.5813054442405701,
+            0.3474147617816925
+          ]
+        }
+      ],
+      "fabricated_geometry": "None. Text, leader lines, scale bar, and annotation backing panels are separate display-only objects.",
+      "outputs": {
+        "01_assembly_isometric.png": {
+          "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+          "bytes": 2092045
+        },
+        "01_assembly_isometric.jpg": {
+          "sha256": "06299aff49fa623566d86280cb27661ba1075a2e60f991989a8e9242b639a689",
+          "bytes": 479303
+        }
+      }
+    },
+    {
+      "view_id": "02_handoff_pallet_locks",
+      "state": "handoff",
+      "render_engine": "Blender Workbench 4.3.2",
+      "projection": "ORTHOGRAPHIC",
+      "resolution_px": [
+        2800,
+        2100
+      ],
+      "source_mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/handoff.json",
+      "source_mesh_sha256": "b27ab7dccb27482143f6d22822efc5ba7b8d259bd798174c08fbf934ecf26c88",
+      "native_provenance": {
+        "state": "handoff",
+        "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_handoff.FCStd",
+        "native_sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778",
+        "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_handoff.step",
+        "step_sha256": "1ae09dc2389748777c7565f421354c50a3d8c28e7205b9c8eff5febd17e675be",
+        "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_handoff.json",
+        "bom_sha256": "de093f3314fee1bcffefbe56fb20dbbc631fde3d744032d16fca4c4e67184293",
+        "source_sha256": {
+          "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "camera": {
+        "location_m": [
+          2.5876383781433105,
+          -5.167332649230957,
+          2.3133440017700195
+        ],
+        "rotation_euler_rad": [
+          1.1902899742126465,
+          7.410240421279468e-09,
+          0.3947911262512207
+        ],
+        "ortho_scale_m": 0.6666666865348816,
+        "frame_height_m": 0.5
+      },
+      "CAD_object_count": 387,
+      "rendered_CAD_object_count": 168,
+      "hidden_CAD_objects": [
+        "Host_mount_ladder",
+        "Bank_mount_-1",
+        "Bank_mount_1",
+        "Bank_south_L0_Storage_keeper_-1_5",
+        "Bank_south_L0_Storage_keeper_-1_95",
+        "Bank_south_L0_Storage_keeper_1_5",
+        "Bank_south_L0_Storage_keeper_1_95",
+        "Bank_south_L0_Guide_shaft_244",
+        "Bank_south_L0_Guide_bush_244",
+        "Bank_south_L0_Guide_shaft_624.5",
+        "Bank_south_L0_Guide_bush_624.5",
+        "Bank_south_L0_Lead_screw_10x2",
+        "Bank_south_L0_Screw_bearing_-445",
+        "Bank_south_L0_Screw_bearing_-115",
+        "Bank_south_L0_Lead_nut_SB3700",
+        "Bank_south_L0_Pusher_frame",
+        "Bank_south_L0_Brake_BXW01_reference",
+        "Bank_south_L0_Motor_3242_gear9_reference",
+        "Bank_south_L0_Drive_coupler",
+        "Bank_south_L0_Fixed_channel_frame",
+        "Bank_south_L0_Stored_3U",
+        "Bank_south_L1_Storage_keeper_-1_5",
+        "Bank_south_L1_Storage_keeper_-1_95",
+        "Bank_south_L1_Storage_keeper_1_5",
+        "Bank_south_L1_Storage_keeper_1_95",
+        "Bank_south_L1_Guide_shaft_244",
+        "Bank_south_L1_Guide_bush_244",
+        "Bank_south_L1_Guide_shaft_624.5",
+        "Bank_south_L1_Guide_bush_624.5",
+        "Bank_south_L1_Lead_screw_10x2",
+        "Bank_south_L1_Screw_bearing_-445",
+        "Bank_south_L1_Screw_bearing_-115",
+        "Bank_south_L1_Lead_nut_SB3700",
+        "Bank_south_L1_Pusher_frame",
+        "Bank_south_L1_Brake_BXW01_reference",
+        "Bank_south_L1_Motor_3242_gear9_reference",
+        "Bank_south_L1_Drive_coupler",
+        "Bank_south_L1_Fixed_channel_frame",
+        "Bank_south_L1_Stored_3U",
+        "Bank_south_L2_Storage_keeper_-1_5",
+        "Bank_south_L2_Storage_keeper_-1_95",
+        "Bank_south_L2_Storage_keeper_1_5",
+        "Bank_south_L2_Storage_keeper_1_95",
+        "Bank_south_L2_Guide_shaft_244",
+        "Bank_south_L2_Guide_bush_244",
+        "Bank_south_L2_Guide_shaft_624.5",
+        "Bank_south_L2_Guide_bush_624.5",
+        "Bank_south_L2_Lead_screw_10x2",
+        "Bank_south_L2_Screw_bearing_-445",
+        "Bank_south_L2_Screw_bearing_-115",
+        "Bank_south_L2_Lead_nut_SB3700",
+        "Bank_south_L2_Pusher_frame",
+        "Bank_south_L2_Brake_BXW01_reference",
+        "Bank_south_L2_Motor_3242_gear9_reference",
+        "Bank_south_L2_Drive_coupler",
+        "Bank_south_L2_Fixed_channel_frame",
+        "Bank_south_L2_Stored_3U",
+        "Bank_south_L3_Storage_keeper_-1_5",
+        "Bank_south_L3_Storage_keeper_-1_95",
+        "Bank_south_L3_Storage_keeper_1_5",
+        "Bank_south_L3_Storage_keeper_1_95",
+        "Bank_south_L3_Guide_shaft_244",
+        "Bank_south_L3_Guide_bush_244",
+        "Bank_south_L3_Guide_shaft_624.5",
+        "Bank_south_L3_Guide_bush_624.5",
+        "Bank_south_L3_Lead_screw_10x2",
+        "Bank_south_L3_Screw_bearing_-445",
+        "Bank_south_L3_Screw_bearing_-115",
+        "Bank_south_L3_Lead_nut_SB3700",
+        "Bank_south_L3_Pusher_frame",
+        "Bank_south_L3_Brake_BXW01_reference",
+        "Bank_south_L3_Motor_3242_gear9_reference",
+        "Bank_south_L3_Drive_coupler",
+        "Bank_south_L3_Fixed_channel_frame",
+        "Bank_south_L3_Stored_3U",
+        "Bank_south_L4_Storage_keeper_-1_5",
+        "Bank_south_L4_Storage_keeper_-1_95",
+        "Bank_south_L4_Storage_keeper_1_5",
+        "Bank_south_L4_Storage_keeper_1_95",
+        "Bank_south_L4_Guide_shaft_244",
+        "Bank_south_L4_Guide_bush_244",
+        "Bank_south_L4_Guide_shaft_624.5",
+        "Bank_south_L4_Guide_bush_624.5",
+        "Bank_south_L4_Lead_screw_10x2",
+        "Bank_south_L4_Screw_bearing_-445",
+        "Bank_south_L4_Screw_bearing_-115",
+        "Bank_south_L4_Lead_nut_SB3700",
+        "Bank_south_L4_Pusher_frame",
+        "Bank_south_L4_Brake_BXW01_reference",
+        "Bank_south_L4_Motor_3242_gear9_reference",
+        "Bank_south_L4_Drive_coupler",
+        "Bank_south_L4_Fixed_channel_frame",
+        "Bank_south_L4_Stored_3U",
+        "Bank_south_L5_Storage_keeper_-1_5",
+        "Bank_south_L5_Storage_keeper_-1_95",
+        "Bank_south_L5_Storage_keeper_1_5",
+        "Bank_south_L5_Storage_keeper_1_95",
+        "Bank_south_L5_Guide_shaft_244",
+        "Bank_south_L5_Guide_bush_244",
+        "Bank_south_L5_Guide_shaft_624.5",
+        "Bank_south_L5_Guide_bush_624.5",
+        "Bank_south_L5_Lead_screw_10x2",
+        "Bank_south_L5_Screw_bearing_-445",
+        "Bank_south_L5_Screw_bearing_-115",
+        "Bank_south_L5_Lead_nut_SB3700",
+        "Bank_south_L5_Pusher_frame",
+        "Bank_south_L5_Brake_BXW01_reference",
+        "Bank_south_L5_Motor_3242_gear9_reference",
+        "Bank_south_L5_Drive_coupler",
+        "Bank_south_L5_Fixed_channel_frame",
+        "Bank_north_L0_Storage_keeper_-1_5",
+        "Bank_north_L0_Storage_keeper_-1_95",
+        "Bank_north_L0_Storage_keeper_1_5",
+        "Bank_north_L0_Storage_keeper_1_95",
+        "Bank_north_L0_Guide_shaft_244",
+        "Bank_north_L0_Guide_bush_244",
+        "Bank_north_L0_Guide_shaft_624.5",
+        "Bank_north_L0_Guide_bush_624.5",
+        "Bank_north_L0_Lead_screw_10x2",
+        "Bank_north_L0_Screw_bearing_-445",
+        "Bank_north_L0_Screw_bearing_-115",
+        "Bank_north_L0_Lead_nut_SB3700",
+        "Bank_north_L0_Pusher_frame",
+        "Bank_north_L0_Brake_BXW01_reference",
+        "Bank_north_L0_Motor_3242_gear9_reference",
+        "Bank_north_L0_Drive_coupler",
+        "Bank_north_L0_Fixed_channel_frame",
+        "Bank_north_L0_Stored_3U",
+        "Bank_north_L1_Storage_keeper_-1_5",
+        "Bank_north_L1_Storage_keeper_-1_95",
+        "Bank_north_L1_Storage_keeper_1_5",
+        "Bank_north_L1_Storage_keeper_1_95",
+        "Bank_north_L1_Guide_shaft_244",
+        "Bank_north_L1_Guide_bush_244",
+        "Bank_north_L1_Guide_shaft_624.5",
+        "Bank_north_L1_Guide_bush_624.5",
+        "Bank_north_L1_Lead_screw_10x2",
+        "Bank_north_L1_Screw_bearing_-445",
+        "Bank_north_L1_Screw_bearing_-115",
+        "Bank_north_L1_Lead_nut_SB3700",
+        "Bank_north_L1_Pusher_frame",
+        "Bank_north_L1_Brake_BXW01_reference",
+        "Bank_north_L1_Motor_3242_gear9_reference",
+        "Bank_north_L1_Drive_coupler",
+        "Bank_north_L1_Fixed_channel_frame",
+        "Bank_north_L1_Stored_3U",
+        "Bank_north_L2_Storage_keeper_-1_5",
+        "Bank_north_L2_Storage_keeper_-1_95",
+        "Bank_north_L2_Storage_keeper_1_5",
+        "Bank_north_L2_Storage_keeper_1_95",
+        "Bank_north_L2_Guide_shaft_244",
+        "Bank_north_L2_Guide_bush_244",
+        "Bank_north_L2_Guide_shaft_624.5",
+        "Bank_north_L2_Guide_bush_624.5",
+        "Bank_north_L2_Lead_screw_10x2",
+        "Bank_north_L2_Screw_bearing_-445",
+        "Bank_north_L2_Screw_bearing_-115",
+        "Bank_north_L2_Lead_nut_SB3700",
+        "Bank_north_L2_Pusher_frame",
+        "Bank_north_L2_Brake_BXW01_reference",
+        "Bank_north_L2_Motor_3242_gear9_reference",
+        "Bank_north_L2_Drive_coupler",
+        "Bank_north_L2_Fixed_channel_frame",
+        "Bank_north_L2_Stored_3U",
+        "Bank_north_L3_Storage_keeper_-1_5",
+        "Bank_north_L3_Storage_keeper_-1_95",
+        "Bank_north_L3_Storage_keeper_1_5",
+        "Bank_north_L3_Storage_keeper_1_95",
+        "Bank_north_L3_Guide_shaft_244",
+        "Bank_north_L3_Guide_bush_244",
+        "Bank_north_L3_Guide_shaft_624.5",
+        "Bank_north_L3_Guide_bush_624.5",
+        "Bank_north_L3_Lead_screw_10x2",
+        "Bank_north_L3_Screw_bearing_-445",
+        "Bank_north_L3_Screw_bearing_-115",
+        "Bank_north_L3_Lead_nut_SB3700",
+        "Bank_north_L3_Pusher_frame",
+        "Bank_north_L3_Brake_BXW01_reference",
+        "Bank_north_L3_Motor_3242_gear9_reference",
+        "Bank_north_L3_Drive_coupler",
+        "Bank_north_L3_Fixed_channel_frame",
+        "Bank_north_L3_Stored_3U",
+        "Bank_north_L4_Storage_keeper_-1_5",
+        "Bank_north_L4_Storage_keeper_-1_95",
+        "Bank_north_L4_Storage_keeper_1_5",
+        "Bank_north_L4_Storage_keeper_1_95",
+        "Bank_north_L4_Guide_shaft_244",
+        "Bank_north_L4_Guide_bush_244",
+        "Bank_north_L4_Guide_shaft_624.5",
+        "Bank_north_L4_Guide_bush_624.5",
+        "Bank_north_L4_Lead_screw_10x2",
+        "Bank_north_L4_Screw_bearing_-445",
+        "Bank_north_L4_Screw_bearing_-115",
+        "Bank_north_L4_Lead_nut_SB3700",
+        "Bank_north_L4_Pusher_frame",
+        "Bank_north_L4_Brake_BXW01_reference",
+        "Bank_north_L4_Motor_3242_gear9_reference",
+        "Bank_north_L4_Drive_coupler",
+        "Bank_north_L4_Fixed_channel_frame",
+        "Bank_north_L4_Stored_3U",
+        "Bank_north_L5_Storage_keeper_-1_5",
+        "Bank_north_L5_Storage_keeper_-1_95",
+        "Bank_north_L5_Storage_keeper_1_5",
+        "Bank_north_L5_Storage_keeper_1_95",
+        "Bank_north_L5_Guide_shaft_244",
+        "Bank_north_L5_Guide_bush_244",
+        "Bank_north_L5_Guide_shaft_624.5",
+        "Bank_north_L5_Guide_bush_624.5",
+        "Bank_north_L5_Lead_screw_10x2",
+        "Bank_north_L5_Screw_bearing_-445",
+        "Bank_north_L5_Screw_bearing_-115",
+        "Bank_north_L5_Lead_nut_SB3700",
+        "Bank_north_L5_Pusher_frame",
+        "Bank_north_L5_Brake_BXW01_reference",
+        "Bank_north_L5_Motor_3242_gear9_reference",
+        "Bank_north_L5_Drive_coupler",
+        "Bank_north_L5_Fixed_channel_frame",
+        "Bank_north_L5_Stored_3U",
+        "Lift_connected_fixed_frame"
+      ],
+      "hidden_parts_disclosure": "Detail: storage banks, host ladder and fixed lift frame hidden",
+      "annotation_targets_m": [
+        {
+          "text": "Rear keyed bayonet lock",
+          "uv": [
+            0.045,
+            0.23
+          ],
+          "target": [
+            0.24,
+            -0.09,
+            0.0455
+          ],
+          "target_projected_uv": [
+            0.17865391075611115,
+            0.44064825773239136
+          ]
+        },
+        {
+          "text": "Forward keyed bayonet lock",
+          "uv": [
+            0.57,
+            0.21
+          ],
+          "target": [
+            0.668,
+            -0.09,
+            0.0455
+          ],
+          "target_projected_uv": [
+            0.7712692618370056,
+            0.3183750510215759
+          ]
+        },
+        {
+          "text": "Outboard lift grip (engaged)",
+          "uv": [
+            0.61,
+            0.73
+          ],
+          "target": [
+            0.7045,
+            0,
+            0.041
+          ],
+          "target_projected_uv": [
+            0.8737308382987976,
+            0.36129921674728394
+          ]
+        },
+        {
+          "text": "Four feet: Z30 to Z38",
+          "uv": [
+            0.045,
+            0.36
+          ],
+          "target": [
+            0.338,
+            -0.046,
+            0.034
+          ],
+          "target_projected_uv": [
+            0.3397308588027954,
+            0.4214645028114319
+          ]
+        },
+        {
+          "text": "3U payload envelope",
+          "uv": [
+            0.045,
+            0.78
+          ],
+          "target": [
+            0.434,
+            0,
+            0.11
+          ],
+          "target_projected_uv": [
+            0.49919235706329346,
+            0.5667068362236023
+          ]
+        }
+      ],
+      "fabricated_geometry": "None. Text, leader lines, scale bar, and annotation backing panels are separate display-only objects.",
+      "outputs": {
+        "02_handoff_pallet_locks.png": {
+          "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123",
+          "bytes": 3199036
+        },
+        "02_handoff_pallet_locks.jpg": {
+          "sha256": "9d7124a1cf8579cab251c39feb31a1bae4945d1dc70f3b9505a2dfa7050aa10a",
+          "bytes": 484896
+        }
+      }
+    },
+    {
+      "view_id": "03_captured_source_level",
+      "state": "captured",
+      "render_engine": "Blender Workbench 4.3.2",
+      "projection": "ORTHOGRAPHIC",
+      "resolution_px": [
+        2800,
+        2100
+      ],
+      "source_mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/captured.json",
+      "source_mesh_sha256": "0baf59d0ce9a93ff474d4dddaf1af81c4ef5d6108197ec385d0f89465d1dadef",
+      "native_provenance": {
+        "state": "captured",
+        "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.FCStd",
+        "native_sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd",
+        "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.step",
+        "step_sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302",
+        "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.json",
+        "bom_sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7",
+        "source_sha256": {
+          "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242512
+      },
+      "camera": {
+        "location_m": [
+          3.4517273902893066,
+          -4.555165767669678,
+          2.935805082321167
+        ],
+        "rotation_euler_rad": [
+          1.1447492837905884,
+          -8.606912160757929e-08,
+          0.5880027413368225
+        ],
+        "ortho_scale_m": 2.6910533905029297,
+        "frame_height_m": 2.0182899929381706
+      },
+      "CAD_object_count": 387,
+      "rendered_CAD_object_count": 387,
+      "hidden_CAD_objects": [],
+      "hidden_parts_disclosure": "All CAD parts present; view framing may crop distant geometry",
+      "annotation_targets_m": [
+        {
+          "text": "Captured 3U payload",
+          "uv": [
+            0.055,
+            0.81
+          ],
+          "target": [
+            0.434,
+            0,
+            0.88
+          ],
+          "target_projected_uv": [
+            0.5058901309967041,
+            0.6913142204284668
+          ]
+        },
+        {
+          "text": "Pallet carried by lift grips",
+          "uv": [
+            0.57,
+            0.67
+          ],
+          "target": [
+            0.434,
+            0,
+            0.825
+          ],
+          "target_projected_uv": [
+            0.5058901309967041,
+            0.6664994359016418
+          ]
+        },
+        {
+          "text": "Source cell: south bank, level 5",
+          "uv": [
+            0.055,
+            0.59
+          ],
+          "target": [
+            0.605,
+            -0.15,
+            0.935
+          ],
+          "target_projected_uv": [
+            0.5278427600860596,
+            0.6711500287055969
+          ]
+        }
+      ],
+      "fabricated_geometry": "None. Text, leader lines, scale bar, and annotation backing panels are separate display-only objects.",
+      "outputs": {
+        "03_captured_source_level.png": {
+          "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+          "bytes": 2576504
+        },
+        "03_captured_source_level.jpg": {
+          "sha256": "9728b73c49ffe19c6eb0c25e6d21731b6047f402f89ea71638f00e784a927f18",
+          "bytes": 539348
+        }
+      }
+    },
+    {
+      "view_id": "04_clear_docked",
+      "state": "clear",
+      "render_engine": "Blender Workbench 4.3.2",
+      "projection": "ORTHOGRAPHIC",
+      "resolution_px": [
+        2800,
+        2100
+      ],
+      "source_mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/clear.json",
+      "source_mesh_sha256": "49b7f1c696dcc4706df94d2b2cd45ec1d52d8e6aa533aae6e111bab259b2af50",
+      "native_provenance": {
+        "state": "clear",
+        "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.FCStd",
+        "native_sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3",
+        "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.step",
+        "step_sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922",
+        "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_clear.json",
+        "bom_sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19",
+        "source_sha256": {
+          "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+          "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+          "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+          "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+          "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+          "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+        },
+        "independent_step_readback": {
+          "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+          "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+          "pass": true
+        },
+        "tessellation": {
+          "tool": "FreeCAD MeshPart.meshFromShape",
+          "linear_deflection_mm": 0.3,
+          "angular_deflection_rad": 0.15,
+          "relative": false,
+          "units": "meters;native coordinates divided by1000",
+          "purpose": "Visualization only;not analysis mesh"
+        },
+        "object_count": 387,
+        "triangle_count": 242510
+      },
+      "camera": {
+        "location_m": [
+          6.1002516746521,
+          -1.3128262758255005,
+          1.7547996044158936
+        ],
+        "rotation_euler_rad": [
+          1.3155678510665894,
+          -7.430895010429595e-08,
+          1.34269380569458
+        ],
+        "ortho_scale_m": 1.0666667222976685,
+        "frame_height_m": 0.8
+      },
+      "CAD_object_count": 387,
+      "rendered_CAD_object_count": 387,
+      "hidden_CAD_objects": [],
+      "hidden_parts_disclosure": "All CAD parts present; view framing may crop distant geometry",
+      "annotation_targets_m": [
+        {
+          "text": "Raised custody frame (floor Z190)",
+          "uv": [
+            0.055,
+            0.66
+          ],
+          "target": [
+            0.605,
+            -0.046,
+            0.25
+          ],
+          "target_projected_uv": [
+            0.49191197752952576,
+            0.4596262276172638
+          ]
+        },
+        {
+          "text": "Payload on locked pallet",
+          "uv": [
+            0.055,
+            0.32
+          ],
+          "target": [
+            0.6045,
+            0,
+            0.096
+          ],
+          "target_projected_uv": [
+            0.5338138937950134,
+            0.2767985761165619
+          ]
+        },
+        {
+          "text": "Pallet stays with the carrier",
+          "uv": [
+            0.56,
+            0.24
+          ],
+          "target": [
+            0.7145,
+            0,
+            0.045
+          ],
+          "target_projected_uv": [
+            0.5571334958076477,
+            0.18129876255989075
+          ]
+        }
+      ],
+      "fabricated_geometry": "None. Text, leader lines, scale bar, and annotation backing panels are separate display-only objects.",
+      "outputs": {
+        "04_clear_docked.png": {
+          "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+          "bytes": 3671106
+        },
+        "04_clear_docked.jpg": {
+          "sha256": "d7128d9e7c7a690629999769aa19beece22a1c9b39f090f7b2fc1834e74c88a8",
+          "bytes": 560202
+        }
+      }
+    }
+  ]
+}

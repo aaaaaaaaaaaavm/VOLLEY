@@ -1,0 +1,976 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "model_sha256": "0ab537f7a3138c21e2c371febdedddcd73c18cfb274c6d23ac02e3607c1ac450",
+  "accepted_nominal_commands": 24,
+  "tests": 166,
+  "all_passed": true,
+  "records": [
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "STOWED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "STOWED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "STOWED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "STOWED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "STOWED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "EMPTY_DOCKED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "EMPTY_DOCKED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "EMPTY_DOCKED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "EMPTY_DOCKED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "EMPTY_DOCKED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_GRIPPED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_GRIPPED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_GRIPPED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_GRIPPED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_GRIPPED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_UNLOCKED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_UNLOCKED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_UNLOCKED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_UNLOCKED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_UNLOCKED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "INDEXED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "INDEXED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "INDEXED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "INDEXED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "INDEXED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "DOCKED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "DOCKED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "DOCKED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "DOCKED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "DOCKED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_OPEN",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_OPEN",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_OPEN",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_OPEN",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_OPEN",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CAPTURED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CAPTURED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CAPTURED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CAPTURED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CAPTURED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PUSHER_CLEAR",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PUSHER_CLEAR",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PUSHER_CLEAR",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PUSHER_CLEAR",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PUSHER_CLEAR",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_LOCKED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_LOCKED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_LOCKED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_LOCKED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CELL_LOCKED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LOWERED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LOWERED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LOWERED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LOWERED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LOWERED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SEATED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SEATED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SEATED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SEATED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SEATED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_LOCKED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_LOCKED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_LOCKED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_LOCKED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "PALLET_LOCKED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SLED_CAPTURED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SLED_CAPTURED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SLED_CAPTURED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SLED_CAPTURED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "SLED_CAPTURED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CRADLE_OPEN",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CRADLE_OPEN",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CRADLE_OPEN",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CRADLE_OPEN",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CRADLE_OPEN",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "GRIPS_RELEASED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "GRIPS_RELEASED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "GRIPS_RELEASED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "GRIPS_RELEASED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "GRIPS_RELEASED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LIFT_CLEAR",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LIFT_CLEAR",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LIFT_CLEAR",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LIFT_CLEAR",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "LIFT_CLEAR",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CARRIER_UNLOCKED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CARRIER_UNLOCKED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CARRIER_UNLOCKED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CARRIER_UNLOCKED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "CARRIER_UNLOCKED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "ARMED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "ARMED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "ARMED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "ARMED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "ARMED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FIRING",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FIRING",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FIRING",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FIRING",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "FIRING",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RELEASED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RELEASED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RELEASED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RELEASED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RELEASED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RETURNED",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RETURNED",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RETURNED",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RETURNED",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "RETURNED",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "HOME",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "HOME",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "HOME",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "HOME",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "HOME",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "COMPLETE",
+      "fault": "POWER_LOSS",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "COMPLETE",
+      "fault": "JAM",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "COMPLETE",
+      "fault": "SENSOR_DISAGREEMENT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "COMPLETE",
+      "fault": "TIMEOUT",
+      "passed": true
+    },
+    {
+      "test": "fault_latch_and_no_unproved_recovery",
+      "phase": "COMPLETE",
+      "fault": "HOST_BURN",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "STOWED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "EMPTY_DOCKED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "PALLET_GRIPPED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "PALLET_UNLOCKED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "INDEXED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "DOCKED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "CELL_OPEN",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "FED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "CAPTURED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "PUSHER_CLEAR",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "CELL_LOCKED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "LOWERED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "SEATED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "PALLET_LOCKED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "SLED_CAPTURED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "CRADLE_OPEN",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "GRIPS_RELEASED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "LIFT_CLEAR",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "CARRIER_UNLOCKED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "ARMED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "FIRING",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "RELEASED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "RETURNED",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "HOME",
+      "passed": true
+    },
+    {
+      "test": "launch_phase_guard",
+      "phase": "COMPLETE",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "host_coast",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "pallet_locked_a",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "pallet_locked_b",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "cradle_clear_a",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "cradle_clear_b",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "carrier_pin_clear_a",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "carrier_pin_clear_b",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "bank_locked",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "source_ready",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "brake_ready",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "launch_path_clear",
+      "passed": true
+    },
+    {
+      "test": "independent_launch_hazard",
+      "missing_proof": "mission_release_window_authorized",
+      "passed": true
+    },
+    {
+      "test": "capture_before_release",
+      "command": "UNLOCK_SLED_PALLET",
+      "missing_proof": "lift_grip_a",
+      "passed": true
+    },
+    {
+      "test": "capture_before_release",
+      "command": "UNLOCK_SLED_PALLET",
+      "missing_proof": "lift_grip_b",
+      "passed": true
+    },
+    {
+      "test": "capture_before_release",
+      "command": "RELEASE_LIFT_GRIPS",
+      "missing_proof": "pallet_locked_a",
+      "passed": true
+    },
+    {
+      "test": "capture_before_release",
+      "command": "RELEASE_LIFT_GRIPS",
+      "missing_proof": "pallet_locked_b",
+      "passed": true
+    }
+  ],
+  "scope": "Captive-pallet command/proof specification. pulse_enabled is positive-launch permission; active arrest/return has its own source-aware control. No measured sensor or hardware fault coverage.",
+  "hardware_dependencies": [
+    "Independent position and capture proof channels with disagreement detection",
+    "Normally retained storage and captive cradle during power loss",
+    "Passive cam opening over carrier aft1445..1495mm and proved departure before empty return",
+    "Encoder-based release window, source inhibit and brake-ready proof",
+    "No continuation around a failed cell without independently proved clear common path"
+  ]
+}

@@ -1,5 +1,7 @@
 # From the Gen5 finding to a flight development decision
 
+> **Historical development roadmap — 10 October 2026; retained 25 October 2026.** The original reference cases and staged development gates below remain traceable. The completed [ACR1 computational reference](../validation/acr1/README.md), [current configuration map](NEXT_GENERATION_STATUS.md) and [prototype review requirements](PROTOTYPE_READINESS.md) supersede earlier current-selection wording. Mixed-size physical Gen6 work remains separately versioned.
+
 **Decision record, 10 October 2026.** Gen5 is the evaluated computational baseline, including failed fit, mass and mission screens. Gen6 is the proposed **first instrumented prototype programme**, conditional on a selected mission and architecture. Gen7–Gen9 below are development gates, not completed designs, schedules, speed promises or flight bookings. A product must sell a delivered spacecraft state with an accepted interface and operational risk, not merely an impressive exit velocity.
 
 Go 2 now supplies [two FreeCAD/STEP first-article envelopes and a G1 comparison](GEN6_GO2_ARCHITECTURE_SCREEN.md) plus [P131 necessary mass, load and tolerance bounds](../validation/P131_gen6_go2_article_bounds.md). Neither candidate has a complete drive, source, brake, restraint or installed BOM, so G1 remains **open**.

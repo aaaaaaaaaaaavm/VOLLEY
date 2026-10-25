@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "path_base": "repository_root",
+  "resolved_file_references": 413,
+  "unique_resolved_files": 195,
+  "registered_assets": 56,
+  "source_index_files": 60,
+  "immutable_view_capture": "byte-identical to accepted scene-package capture",
+  "release_identity": "containing Git commit or release tag",
+  "checks": [
+    "All registered output hashes match",
+    "All referenced native/STEP/BOM/generator/readback hashes match",
+    "All current source/index paths resolve in the declared public repository",
+    "All film source/storyboard/input identities match their recorded versions",
+    "Current generated records contain no execution-workspace paths or owner-publication state",
+    "Academic downloads resolve against their explicitly named source repository"
+  ]
+}

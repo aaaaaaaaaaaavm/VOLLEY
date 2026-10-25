@@ -1,0 +1,8 @@
+id,feature,source_nominal_or_budget,proposed_inspection,acceptance_basis,actual_result
+I01,assembly envelope,2250 × 1240 × 1348.9 mm home,datum-referenced coordinate inspection,nominal CAD outline; no general tolerance assigned,NOT_PERFORMED
+I02,magnet/package faces,1 mm nominal each;0.264111 mm allocated residual,noncontact gap map through travel,source face stack; as-built/load validation required,NOT_PERFORMED
+I03,cradle endwalls,0.5 mm each,dimensional stack and docking repeatability capture,0.1 machining +0.1 docking allocations; temperature table D05,NOT_PERFORMED
+I04,cassette channel,2 mm side/top nominal,gauged surrogate sweep each12 routes,include guide deflection/manufacturing/yaw/thermal budget,NOT_PERFORMED
+I05,pallet and grip,Ø6 pins;Ø6.2 bores;12 mm bayonet stroke;90deg rotation,dimensional and positive-custody sequence inspection,nominal fit only; actual tolerances/interfaces require release,NOT_PERFORMED
+I06,supplier interfaces,reference envelopes;hardware_selected flags retained,supplier drawing and as-built interface match,external confirmation pending; no invented bolt/flange fit,NOT_PERFORMED
+I07,mass/materials,native BOM149.556720 kg dry +7kg allowance,weigh installed parts;record material certifications,as-built ledger supersedes modeled density/envelope assumptions,NOT_PERFORMED

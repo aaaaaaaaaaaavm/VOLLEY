@@ -1,0 +1,50 @@
+[
+  {
+    "start_s": 0,
+    "end_s": 9,
+    "title": "Start with a controlled configuration.",
+    "text": "VOLLEY-G5-ACR1: twelve 4 kg 3U payloads, two six-level banks, guided screw transfer, indexed lift and captive carrier pallet.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 9,
+    "end_s": 18,
+    "title": "Resolve the finite geometry.",
+    "text": "Native geometry defines the magnetic gap, conductor placement and finite stator. CAD/STEP is preserved beside the computational model.",
+    "source": "analysis/FINITE_MOTOR.json",
+    "evidence_class": "Scientific section / controlled geometry"
+  },
+  {
+    "start_s": 18,
+    "end_s": 27,
+    "title": "Couple the source and moving system.",
+    "text": "The evaluated 1\u20133 m/s commands include finite force, electrical behavior, release recoil and carrier arrest within the declared computational assumptions.",
+    "source": "analysis/COUPLED_SHOT.json",
+    "evidence_class": "Computed coupled-shot result"
+  },
+  {
+    "start_s": 27,
+    "end_s": 36,
+    "title": "Account for the whole shot.",
+    "text": "The ledger records mechanical energy and copper, inverter, bank and auxiliary terms. Installed device allocation is 149.55672 kg CAD mass plus 7 kg.",
+    "source": "analysis/COUPLED_SHOT.json",
+    "evidence_class": "Computed energy ledger / model result"
+  },
+  {
+    "start_s": 36,
+    "end_s": 45,
+    "title": "Replay the mission independently.",
+    "text": "Frozen synthetic target PV states, continuous host arcs, release momentum and independent mass-flow checks support numerical consistency.",
+    "source": "mission/NATIVE_REPLAY_CHECKS.json",
+    "evidence_class": "Computed numerical agreement / Orekit replay"
+  },
+  {
+    "start_s": 45,
+    "end_s": 54,
+    "title": "Use the result to set the next gate.",
+    "text": "The evaluated integrated configuration has a traceable computational record. Gen6 mixed-size work and instrumented hardware correlation remain separately identified development.",
+    "source": "mission/MISSION_REPORT.md",
+    "evidence_class": "Computed study result / subsequent development identified"
+  }
+]

@@ -2,79 +2,56 @@
 
 ### Commanded electromagnetic CubeSat deployment
 
-VOLLEY studies controlled deployment of passive CubeSats from a maneuvering orbital-transfer host. The design combines individually restrained storage cells, a guided feeder, a reusable launch carrier and electromagnetic acceleration. Its service objective is to deliver different commanded orbital states while accounting for the host manoeuvres, installed equipment and operating resources required.
+VOLLEY combines restrained CubeSat storage, guided feed, a captive transfer pallet and a reusable electromagnetic launch sled on a maneuvering host. The current **VOLLEY-G5-ACR1** academic reference carries **twelve 4 kg 3U envelope surrogates** and evaluates commanded release settings of **1, 2 and 3 m/s** over **1.300 m** powered travel.
 
-[Project website](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Selected feeder](validation/selected_feeder/README.md) · [CAD and STEP](cad/README.md) · [Numerical evidence](docs/CURRENT_NUMERICAL_EVIDENCE.md)
+[Project website](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Current engineering package](validation/acr1/README.md) · [CAD and STEP](cad/README.md) · [Numerical evidence](docs/CURRENT_NUMERICAL_EVIDENCE.md)
 
-## The selected feeder
+![ACR1 integrated twelve-3U assembly rendered from controlled native geometry](docs/assets/acr1/01_assembly_isometric.jpg)
 
-![FM08-R3 guided lead-screw four-cell feeder, rendered from native CAD](validation/selected_feeder/cad/figures/FM08_assembly.png)
+*CAD-derived Blender render of the ACR1 academic reference.*
 
-*Blender technical render from the FM08-R3 native geometry. Colours distinguish payloads, structural parts and restraints; the view represents the academic design.*
+## How the machine works
 
-**FM08-R3 uses guided lead-screw transfer from separate fixed cassettes to one indexed receiver.** Each stored satellite is restrained independently. A fixed spacer adapts a 1U cell to the common leading datum and remains inside the cassette. A guided pusher moves the payload through a capped transfer channel into the receiver, whose far-side stops are closed before feeding. Seating and receiver capture must be proved before the pusher returns. The storage barrier closes before launch is enabled.
+Two fixed six-cell banks retain the payloads individually. Guided lead-screw pushers transfer one satellite to the indexed captive cradle. The cradle docks a reusable pallet to the launch sled and withdraws before arming. The sled accelerates the payload; release cams open the restraint, active electromagnetic arrest stops the retained sled, and the pallet returns with it. The executable sequence requires custody, path, source and brake proofs before launch.
 
-| Design parameter | Declared reference |
+[Eight native/STEP assembly states](validation/acr1/cad/release/FINAL_CAD_MANIFEST.json) · [Installed motion verification](validation/acr1/cad/release/MOTION_VERIFICATION.json) · [Command and fault specification](validation/acr1/analysis/TRANSFER_INTERLOCKS.json)
+
+[Dimensioned drawing set](cad/drawings/acr1/ACR1_DRAWING_SET.pdf) · [Drawing, BOM and inspection index](docs/ACR1_DRAWING_INDEX.md)
+
+## What this revision delivers
+
+| Current ACR1 result | Evidence and interpretation |
 |:--|:--|
-| Initial manifest | Two 1U and two 3U public-envelope surrogates |
-| Transfer direction | Sideways across the 100 mm spacecraft width |
-| Local commanded stroke | 200 mm in 30 s |
-| Common receiver indexing | 900 mm in 20 s |
-| Transfer drive | Guided 10×2 mm lead-screw pusher; nominal 9:1 geared motor |
-| Receiver drive | Toothed-belt indexer with nominal 59:1 gearbox; actual ratio 59.4 |
-| Power basis | 24 V catalog reference drives; declared study assumptions |
-| Receiver and cell custody | Independent storage restraints, capped transfer channel, far stops and receiver capture |
+| Eight FreeCAD/STEP states; 154 accepted motion checks | Nominal geometry, custody and installed motion/refinement; independent STEP readback |
+| Supported commands 1–3 m/s | Eighteen averaged source/release/arrest cases across nominal/adverse source and 3/20/100 µH sensitivities |
+| 149.556720 kg CAD dry mass | Plus a separate 7.000 kg installed power/control allocation; mission device mass 156.556720 kg |
+| Twelve releases from a 500 km nominal SSO host | Common position/velocity target epoch 24 h after final release; nine independent Orekit replays |
+| Same-target spring comparison | No propellant or initial wet-mass advantage over the ideal ground-pretrimmed spring comparator in the tested preplanned cases |
 
-![Selected feeder sequence, rendered from native CAD states](validation/selected_feeder/cad/figures/FM08_sequence.png)
+[Configuration and resource basis](validation/acr1/ENGINEERING_DEFINITION_R1.json) · [Coupled model and audit](validation/acr1/verification/COUPLED_SHOT_REVIEW.md) · [Mission findings](validation/acr1/mission/MISSION_REPORT.md)
 
-*Prescribed nominal states show storage, transfer, receiver capture and release preparation. These views illustrate the checked geometry; they do not measure release dynamics.*
+These are computational design results. The project has no measured release performance or flight qualification. Catalog ratings, synthetic mission targets and tolerance/material allocations retain their declared boundaries. The additional 7 kg is included in mission mass and has no spatial assignment in CAD inertia.
 
-[Editable FreeCAD and STEP](validation/selected_feeder/cad/README.md) · [Trade, calculations and interlocks](validation/selected_feeder/verification/REPORT.md) · [Reproduction and acceptance record](validation/selected_feeder/README.md)
+## Reproduce and inspect
 
-### Why lead screw?
+The self-contained [ACR1 package](validation/acr1/README.md) includes exact sources, inputs, all eight native/STEP states, result JSON, mission command/replay outputs, software locks and hash manifests. Its portable runner executes selected examples in a new scratch directory.
 
-The seven-concept trade uses safety 35%, packaging/mass 25%, positioning 20%, cycle/power 10% and manufacture 10%. The top three judgment scores are **7.30/10 lead screw**, **7.10 rack-and-pawl**, and **6.90 spring/two-gate**. The small margin and sensitivity to priorities are retained. Guided transfer, contained handoff and a direct sizing path support the chosen architecture; rack-and-pawl remains the runner-up. These scores describe design judgments and do not estimate reliability.
+```bash
+python3 validation/acr1/check_capture.py
+python3 validation/acr1/reproduce.py interlocks --output /tmp/volley-acr1-interlocks
+python3 tools/prepublish_gate.py --all
+```
 
-[Full ranking and common-input comparison](validation/selected_feeder/verification/REPORT.md) · [Alternative concepts and earlier CAD](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab#readme)
+The interlock example needs only Python 3.12; scientific/native examples have their own [pinned dependencies and instructions](validation/acr1/REPRODUCTION.md). Large raw solver supplement availability is recorded explicitly in its asset inventory. Vendor documents are linked to their publishers.
 
-## Gen5: evaluated computational baseline
+## Engineering lineage
 
-Gen5 is the fixed twelve-3U electromagnetic configuration evaluated in the academic study. Gen6 contains the separately versioned feeder and capacity development.
+Original Gen5's 12.448 m/s finite-geometry screen, 16.029 m/s periodic model, 126.562 kg represented dry mass and original 11 mm packaging shortfall remain **historical, separately identified evidence**. The FM08 mixed-size lead-screw subsystem and seven-concept ranking explain architecture development; they do not replace the integrated ACR1 twelve-3U geometry.
 
-| Gen5 quantity | Result and interpretation |
-|:--|:--|
-| Ideal finite-geometry release screen | 12.448 m/s under assumed phase/electrical conditions |
-| Historical periodic-force model | 16.029 m/s; retained for model comparison |
-| Historical modeled dry mass | 126.562 kg, or 10.547 kg per 3U slot |
-| Evaluated side-fed packaging | 11 mm width shortfall in the original reference |
-| Performance status | Computational results; no component-rated or measured release setting |
-
-[Immutable Gen5 technical record](docs/GEN5_TECHNICAL_BASELINE.json) · [Computational engineering report](reports/GEN5_COMPUTATIONAL_REVIEW.pdf) · [Finite-force cross-check](validation/P121_gen5_finite_force_surface3d.md)
-
-## Commanded orbital delivery
-
-![Finite-force host-control schedules and resource comparison](validation/finite_burn_review/figures/force_fuel_trade.png)
-
-The declared service reference is a generic maneuvering OTV in approximately 500 km sun-synchronous orbit. Four satellites are released within one orbital period; full position/velocity targets are compared at one common epoch 24 hours after the final release. The host-assisted spring alternative uses the same mission boundary.
-
-The earlier finite-force twelve-release 35%/35% study gives 33.83 N peak/23.12 kg propellant for its spring input and 18.00 N/6.12 kg for its imposed VOLLEY input. Both reach the constructed targets under a 100 N/30 kg allowance, while the assumed device-mass premium exceeds the propellant saving. Those inputs do not rate a physical launcher.
-
-[Native Orekit and finite-force evidence](validation/finite_burn_review/README.md) · [Four/twelve-payload integration and updated resource assessment](validation/system_feasibility_closure/README.md) · [Market and customer fit](MARKET_AND_CUSTOMER_FIT.md)
-
-## Methods and evidence
-
-The repository contains editable FreeCAD geometry, STEP exchanges, electromagnetic and structural calculations, native solver inputs/outputs, orbital propagation, source-linked figures and executable checks. The selected feeder uses nominal geometry, prescribed kinematics, analytical load/tolerance screens and a deterministic fault/interlock specification.
-
-No physical prototype, measured release precision or flight qualification is claimed. The historical Chrono transfer model remains numerically sensitive and supplies no accepted peak-contact-load or precision rating. Catalog components are ambient reference choices; spacecraft compatibility and environmental qualification require later hardware and provider work.
-
-[Current numerical evidence](docs/CURRENT_NUMERICAL_EVIDENCE.md) · [Literature](docs/LITERATURE.md) · [Geometry and numerical history](validation/README.md)
-
-## Reproduce the work
-
-Each captured study includes its source, inputs, software versions, raw results and hash manifest. Native CAD reconstruction uses FreeCAD; STEP allows neutral geometry exchange. Blender views are labeled as renders. Run `python tools/prepublish_gate.py --all` for publication consistency, then the study-specific commands for engineering reproduction.
+[Original Gen5 technical record](docs/GEN5_TECHNICAL_BASELINE.json) · [Earlier FM08 feeder and trade](validation/selected_feeder/README.md) · [Pre-ACR1 front page](README_PRE_ACR1_2026-10-23.md) · [Research archive](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)
 
 ## Project editions
 
-[Thesis: college report and presentation](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) · [Paper: IEEE-formatted manuscript and reproduction](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) · [Labs: alternatives and experiments](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)
+[Thesis: report and presentation](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) · [Paper: manuscript and methods](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) · [Labs: alternatives and investigations](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)
 
-Each edition includes its own relevant evidence. The manuscript is unsubmitted and its IEEE venue remains unselected. The 1 km/s-class and lunar investigations are separate feasibility studies, with their assumptions and negative findings retained.
+The manuscript remains IEEE-formatted and unsubmitted; a venue is unselected. Mixed-size Gen6, lunar, higher-speed and hardware-development studies retain their own identities and acceptance criteria. The current engineering release does not imply programme-wide completion.

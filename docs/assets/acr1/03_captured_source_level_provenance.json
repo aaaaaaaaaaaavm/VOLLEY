@@ -1,0 +1,123 @@
+{
+  "view_id": "03_captured_source_level",
+  "state": "captured",
+  "render_engine": "Blender Workbench 4.3.2",
+  "projection": "ORTHOGRAPHIC",
+  "resolution_px": [
+    2800,
+    2100
+  ],
+  "source_mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/captured.json",
+  "source_mesh_sha256": "0baf59d0ce9a93ff474d4dddaf1af81c4ef5d6108197ec385d0f89465d1dadef",
+  "native_provenance": {
+    "state": "captured",
+    "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.FCStd",
+    "native_sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd",
+    "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.step",
+    "step_sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302",
+    "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_captured.json",
+    "bom_sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7",
+    "source_sha256": {
+      "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+      "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+      "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+      "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+      "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+      "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+    },
+    "independent_step_readback": {
+      "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+      "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+      "pass": true
+    },
+    "tessellation": {
+      "tool": "FreeCAD MeshPart.meshFromShape",
+      "linear_deflection_mm": 0.3,
+      "angular_deflection_rad": 0.15,
+      "relative": false,
+      "units": "meters;native coordinates divided by1000",
+      "purpose": "Visualization only;not analysis mesh"
+    },
+    "object_count": 387,
+    "triangle_count": 242512
+  },
+  "camera": {
+    "location_m": [
+      3.4517273902893066,
+      -4.555165767669678,
+      2.935805082321167
+    ],
+    "rotation_euler_rad": [
+      1.1447492837905884,
+      -8.606912160757929e-08,
+      0.5880027413368225
+    ],
+    "ortho_scale_m": 2.6910533905029297,
+    "frame_height_m": 2.0182899929381706
+  },
+  "CAD_object_count": 387,
+  "rendered_CAD_object_count": 387,
+  "hidden_CAD_objects": [],
+  "hidden_parts_disclosure": "All CAD parts present; view framing may crop distant geometry",
+  "annotation_targets_m": [
+    {
+      "text": "Captured 3U payload",
+      "uv": [
+        0.055,
+        0.81
+      ],
+      "target": [
+        0.434,
+        0,
+        0.88
+      ],
+      "target_projected_uv": [
+        0.5058901309967041,
+        0.6913142204284668
+      ]
+    },
+    {
+      "text": "Pallet carried by lift grips",
+      "uv": [
+        0.57,
+        0.67
+      ],
+      "target": [
+        0.434,
+        0,
+        0.825
+      ],
+      "target_projected_uv": [
+        0.5058901309967041,
+        0.6664994359016418
+      ]
+    },
+    {
+      "text": "Source cell: south bank, level 5",
+      "uv": [
+        0.055,
+        0.59
+      ],
+      "target": [
+        0.605,
+        -0.15,
+        0.935
+      ],
+      "target_projected_uv": [
+        0.5278427600860596,
+        0.6711500287055969
+      ]
+    }
+  ],
+  "fabricated_geometry": "None. Text, leader lines, scale bar, and annotation backing panels are separate display-only objects.",
+  "outputs": {
+    "03_captured_source_level.png": {
+      "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+      "bytes": 2576504
+    },
+    "03_captured_source_level.jpg": {
+      "sha256": "9728b73c49ffe19c6eb0c25e6d21731b6047f402f89ea71638f00e784a927f18",
+      "bytes": 539348
+    }
+  }
+}

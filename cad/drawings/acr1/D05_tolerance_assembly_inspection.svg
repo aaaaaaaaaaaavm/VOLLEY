@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1680 1188">
+<rect width="1680" height="1188" fill="white"/>
+<g font-family="DejaVu Sans, sans-serif">
+<rect x="26" y="26" width="1628" height="1136" fill="none" stroke="#172631" stroke-width="2"/>
+<text x="52" y="64" font-size="23" fill="#176d89" font-weight="700">VOLLEY-G5-ACR1</text>
+<text x="52" y="97" font-size="24" fill="#172631" font-weight="700">Datum, tolerance-budget and assembly inspection notes</text>
+<text x="52" y="124" font-size="15" fill="#526572" font-weight="400">OUTLINE / PRELIMINARY ENGINEERING — dimensions in mm; no general manufacturing tolerance assigned</text>
+<line x1="26" y1="140" x2="1654" y2="140" stroke="#172631" stroke-width="1.3"/>
+<line x1="26" y1="1080" x2="1654" y2="1080" stroke="#172631" stroke-width="1.3"/>
+<text x="48" y="1111" font-size="16" fill="#172631" font-weight="700">D05  |  Revision A  |  25 October 2026  |  A3 landscape</text>
+<text x="48" y="1138" font-size="15" fill="#526572" font-weight="400">Source: frozen ACR1 native geometry and paired BOM/verification. Do not scale; stated dimensions govern.</text>
+<text x="1190" y="1111" font-size="16" fill="#172631" font-weight="400">Academic engineering outline</text>
+<text x="1190" y="1138" font-size="16" fill="#172631" font-weight="700">NOT A MANUFACTURING RELEASE</text>
+<text x="65" y="188" font-size="18" fill="#172631" font-weight="400">PROJECT REFERENCE DATUMS (preliminary; no supplier datum scheme assigned)</text>
+<text x="65" y="221" font-size="18" fill="#172631" font-weight="400">A: generic mounting plane Z = -150. B: launch direction +X. C: launcher median plane Y = 0.</text>
+<text x="65" y="254" font-size="18" fill="#172631" font-weight="400">Dimensions are basic CAD nominal values. A general ± tolerance or GD&amp;T release is not assigned.</text>
+<line x1="55" y1="285" x2="1625" y2="285" stroke="#172631" stroke-width="1.3"/>
+<text x="65" y="328" font-size="18" fill="#172631" font-weight="400">MAGNET/PACKAGE INDIVIDUAL-FACE STACK — declared allocation, not a measured fit</text>
+<text x="65" y="362" font-size="18" fill="#172631" font-weight="400">Nominal 1.000 − FE paired closure 0.371778/2 − guide centring 0.200 − flatness 0.150</text>
+<text x="65" y="396" font-size="18" fill="#172631" font-weight="400">− assembly 0.150 − differential thermal 0.050 = 0.264111 mm residual per face.</text>
+<text x="65" y="430" font-size="18" fill="#172631" font-weight="400">FE closure uses the declared 130% load screen; load/material/mesh limits remain in the source report.</text>
+<text x="65" y="510" font-size="18" fill="#172631" font-weight="400">CRADLE ENDWALL STACK — each nominal axial gap 0.500</text>
+<text x="65" y="544" font-size="18" fill="#172631" font-weight="400">Machining allocation 0.100 + docking allocation 0.100; differential CTE assumption 12 µm/(m·K).</text>
+<text x="65" y="578" font-size="18" fill="#172631" font-weight="400">340.5 mm reference length: residual 0.300000 / 0.218280 / 0.136560 / 0.054840 mm</text>
+<text x="65" y="612" font-size="18" fill="#172631" font-weight="400">at differential temperature 0 / 20 / 40 / 60 K. Elastic contacts need later correlation.</text>
+<text x="65" y="690" font-size="17" fill="#172631" font-weight="400">ASSEMBLY AND INSPECTION SEQUENCE</text>
+<text x="65" y="728" font-size="17" fill="#172631" font-weight="400">1  Identify each part against BOM_HOME.csv and frozen native labels; verify material class and mass assignment.</text>
+<text x="65" y="766" font-size="17" fill="#172631" font-weight="400">2  Establish project mounting and rail datums; inspect rail straightness/parallelism within the allocated stack.</text>
+<text x="65" y="804" font-size="17" fill="#172631" font-weight="400">3  Assemble insulated stator and sled; inspect both face gaps over home-to-release travel before energizing.</text>
+<text x="65" y="842" font-size="17" fill="#172631" font-weight="400">4  Verify cassette guide/channel clearance, screw support alignment and each of twelve prescribed transfer routes.</text>
+<text x="65" y="880" font-size="17" fill="#172631" font-weight="400">5  Land pallet; inspect caps, lockpins, both bayonet/grip overlaps and capture-before-release order.</text>
+<text x="65" y="918" font-size="17" fill="#172631" font-weight="400">6  Inspect cam opening/running clearances and full cradle withdrawal; execute powerless/manual custody checks.</text>
+<text x="65" y="956" font-size="17" fill="#172631" font-weight="400">7  Record as-built dimensions, exceptions and inspection instrument calibration before a hardware test release.</text>
+<text x="65" y="1030" font-size="16" fill="#172631" font-weight="400">Acceptance checklist: INSPECTION_PLAN.csv. No inspection, material certification, torque or physical test is recorded here.</text>
+</g></svg>

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "path_base": "repository_root",
+  "archives": [
+    {
+      "path": "docs/downloads/VOLLEY_ACR1_film_sources.zip",
+      "sha256": "ab4402f4b5cf3bf134698e2275da48b9289d8be925dca7e9cc3db7dba410603b",
+      "entries": 60,
+      "academic_binaries": [],
+      "coauthor_string_hits": [],
+      "font_license_notice_retained": true,
+      "result": "passed"
+    },
+    {
+      "path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "sha256": "2aa3689d91210cbed378e97188a87e40f645fc102e004f7c077a6ab26748d1c0",
+      "entries": 14,
+      "academic_binaries": [],
+      "coauthor_string_hits": [],
+      "font_license_notice_retained": true,
+      "result": "passed"
+    }
+  ],
+  "method": "Every uncompressed ZIP member inspected for academic binaries and coauthor strings; third-party font notice retained.",
+  "academic_downloads": "External Thesis ED1 URLs only."
+}

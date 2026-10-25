@@ -1,0 +1,71 @@
+{
+  "study": "PCS-ACR1-01",
+  "figures": [
+    {
+      "stem": "lunar_independent_disposal",
+      "generator": "complete_studies.py",
+      "data": [
+        "STUDY_RESULTS.json"
+      ],
+      "role": "Finite engine-only disposal and explicitly different launch-delivery energy boundaries; declared surrogate,not a supplier orqualified lunar system.",
+      "generator_sha256": "50b3dc7bc32b2e2377b96f8430fb8ea6390af84e6789f0c6d661082349066704",
+      "source_data_sha256": {
+        "STUDY_RESULTS.json": "58cdae56b87d0b58a34519015b5e8d616c78eb4090ed300b23a1d4d132768a40"
+      },
+      "output_sha256": {
+        "figures/lunar_independent_disposal.svg": "73bfe57148cc3c47ce4a6617591d36be1d4f8184734de007598282020c01be8c",
+        "figures/lunar_independent_disposal.png": "9233ac3e19e729ba7dda3ff7816f4f14984ca4dcfadfb216c3c24614c4a3a0ef",
+        "figures/lunar_independent_disposal.pdf": "8230420bad30021716ff71a245cf2a6d8b972d06ea5eeebae71e1014dac1fbd1"
+      },
+      "style": "scientific.mplstyle",
+      "style_sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+      "image_kind": "Scientific plot from actual numerical outputs,no synthesized software interface"
+    },
+    {
+      "stem": "lunar_release_lifetime",
+      "generator": "build_report.py",
+      "data": [
+        "LUNAR_NATIVE_RESULTS.json"
+      ],
+      "role": "18actual signed-release native30day lunar coasts; sampled spherical-altitude floor and20/40-degree sensitivity,not terrain/lifetime qualification.",
+      "generator_sha256": "bcffc7780126794987c1cb648292df574c50f881838f6a364c210b994e67f4e9",
+      "source_data_sha256": {
+        "LUNAR_NATIVE_RESULTS.json": "fc8495ff5f7f0fef1cbd20de01318f0d5b6d76c89a0e6a293b5a5a8961f86924"
+      },
+      "output_sha256": {
+        "figures/lunar_release_lifetime.svg": "dd4c402350516b3d056ca412c151ec324c662da3075b71f57e013f4fcad681ff",
+        "figures/lunar_release_lifetime.png": "718c8b9ae3022c17c8016793e046570fd330c61f230269dbb8a082613b43ec0b",
+        "figures/lunar_release_lifetime.pdf": "734a2d594afc2d677ac64dd30aac4dfa26fa166978151ce2f495e9987e125667"
+      },
+      "style": "scientific.mplstyle",
+      "style_sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+      "image_kind": "Scientific plot from actual numerical outputs,no synthesized software interface"
+    },
+    {
+      "stem": "lunar_campaign_resources",
+      "generator": "campaign_report.py",
+      "data": [
+        "CAMPAIGN_RESULTS.json",
+        "campaign/T5_R20_searched.json",
+        "CAMPAIGN_NATIVE_RESULTS.json",
+        "CAMPAIGN_DISPOSAL_RESULTS.json"
+      ],
+      "role": "Finite-source/attitude campaign mass,propellant,rate andmatched policy histories; source-calibrated imposed release,not a physical pulse/contact validation.",
+      "generator_sha256": "3aa6356ffe1d6f1832cef806e4fc543bbf38228580faa3b2f603ce45ab49b26d",
+      "source_data_sha256": {
+        "CAMPAIGN_RESULTS.json": "797643a8353341e18c9fc4b885396b1619ece4b6e0cf93dd41bc006f02f5fcb4",
+        "campaign/T5_R20_searched.json": "c562a7a31e03c11c1a33d4b51d4e39fec1298ade770ed2c38e31de9fc3bdc0df",
+        "CAMPAIGN_NATIVE_RESULTS.json": "a304f3b035480ff7f77be42970e7505c9be804dd09c61c0a1b827551047e1573",
+        "CAMPAIGN_DISPOSAL_RESULTS.json": "1ef7d65acdc89cedad59a37f25c3eceb10755f8a73393eae46f77aeec8574971"
+      },
+      "output_sha256": {
+        "figures/lunar_campaign_resources.svg": "33f889c00a2b1fff8bf54d7240e8438a7f0e6bbcfbd741de51ae07bab13b5950",
+        "figures/lunar_campaign_resources.png": "e3e5bcff449827d8a2a9b0e5d442b5a91fef6c96968eb024d08d619c0892380e",
+        "figures/lunar_campaign_resources.pdf": "dae28580654634785bf4f182b7bb7ff182efff7588dcd8d06e483a6d2b16b65c"
+      },
+      "style": "scientific.mplstyle",
+      "style_sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
+      "image_kind": "Scientific plot from actual numerical outputs,no synthesized software interface"
+    }
+  ]
+}

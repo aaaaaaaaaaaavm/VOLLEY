@@ -1,0 +1,202 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "units": "mm",
+  "manifest": {
+    "banks": 2,
+    "levels_per_bank": 6,
+    "format": "3U",
+    "payload_mm": [
+      340.5,
+      100,
+      100
+    ],
+    "assigned_payload_mass_kg": 4.0
+  },
+  "launch": {
+    "home_aft_x": 200,
+    "release_aft_x": 1500,
+    "arrest_aft_x": 1710,
+    "carrier_length": 488,
+    "rail_length": 2250,
+    "powered_travel": 1300,
+    "brake_travel": 210,
+    "payload_aft_relative_x": 64,
+    "payload_floor_z": 46,
+    "carrier_top_plate_z": [
+      14,
+      30
+    ],
+    "carrier_bottom_plate_z": [
+      -30,
+      -14
+    ],
+    "carrier_plate_width": 170,
+    "roller_radius": 15,
+    "roller_width": 16,
+    "roller_centre_y": 78,
+    "roller_relative_x": [
+      119,
+      369
+    ],
+    "rail_inner_y": 72,
+    "rail_outer_y": 110,
+    "guide_rail_z": [
+      16,
+      24
+    ],
+    "negative_side_web_width": 20,
+    "positive_roller_z": -40,
+    "stator_support_topology": "Open +Y C carrier, lowered +Y wheels, fixed lateral support through middle throat",
+    "carrier_negative_web_y": [
+      -100,
+      -80
+    ],
+    "roller_negative_centre_y": -114
+  },
+  "magnetic": {
+    "array_mount_relative_x": [
+      74,
+      414
+    ],
+    "array_active_relative_x": [
+      76,
+      412
+    ],
+    "blocks_per_array": 42,
+    "block_pitch": 8,
+    "block_depth_y": 90,
+    "block_thickness_z": 8,
+    "array_inner_z": 6,
+    "array_outer_z": 14,
+    "stator_belts": 216,
+    "stator_pitch": 8,
+    "stator_bar_width_x": 7,
+    "stator_x_start": 230,
+    "stator_pitch_span": 1728,
+    "stator_active_depth_y": 90,
+    "stator_z": [
+      -5,
+      5
+    ],
+    "conductor_representation": "Three connected series phase conductors;active7x6mm,7x3mm endlinks;21mm2 return/interface current-density rating required",
+    "active_copper_z": [
+      -3,
+      3
+    ],
+    "active_copper_cross_section_mm2": 42,
+    "endlink_cross_section_mm": [
+      7,
+      3
+    ],
+    "endlink_phase_z_mm": [
+      [
+        -5,
+        -2
+      ],
+      [
+        -1.5,
+        1.5
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "endlink_extent_abs_y": 71,
+    "interphase_nominal_z_gap": 0.5,
+    "active_GFRP_z": [
+      [
+        -5,
+        -3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "outer_GFRP_z": [
+      [
+        -7,
+        -5
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "endlink_minimum_section_mm2": 21,
+    "outer_support_board_extent_abs_y": 78
+  },
+  "storage": {
+    "first_payload_floor_z": 180,
+    "level_pitch_z": 130,
+    "payload_centre_y_abs": 250,
+    "feed_stroke": 250,
+    "nominal_feed_time_s": 40,
+    "local_guide_diameter": 10,
+    "local_guide_span": 375,
+    "local_guide_height_above_floor": 50,
+    "local_screw_nominal_diameter": 10,
+    "local_screw_lead": 2,
+    "local_screw_root_diameter": 7.4,
+    "local_bush_length": 30,
+    "channel_side_clearance": 2,
+    "channel_top_clearance": 2,
+    "guide_start_y": -435,
+    "guide_end_y": -60,
+    "guide_carriage_offset_behind_payload_rear": 65,
+    "motor_outer_y_abs": 573.9
+  },
+  "cradle": {
+    "load_floor_z": 46,
+    "jaw_station_relative_x": [
+      144,
+      194
+    ],
+    "jaw_width_x": 24,
+    "floor_tine_thickness": 8,
+    "jaw_open_lateral_travel": 90,
+    "fork_withdraw_y": 150,
+    "fixed_column_y_abs": 150,
+    "fixed_column_x_relative_payload": [
+      -90,
+      430.5
+    ],
+    "reference_operation": "Powered vertical indexing and constrained handoff in host coast; no gravity-assisted movement",
+    "fixed_column_y_mm": [
+      -200,
+      220
+    ],
+    "fixed_column_x_mm": [
+      134,
+      744.5
+    ],
+    "lift_screw_diameter": 16,
+    "lift_screw_lead": 4,
+    "lift_screw_root_study_diameter": 11,
+    "lift_motor_gear_ratio": 19.8,
+    "maximum_lift_time_s": 120,
+    "fork_guide_x_mm": [
+      178,
+      704.5
+    ],
+    "fork_guide_y_mm": [
+      -50,
+      300
+    ],
+    "roof_underside_above_floor": 108,
+    "seat_transfer_lowering": 3,
+    "withdrawn_rise_floor_z": 164,
+    "park_floor_z": 190,
+    "custody": "Central comb platform,capped X endwalls,12mm vertical Ycornerkeepers;no translating Cjaws"
+  },
+  "materials_kg_m3": {
+    "aluminium": 2700,
+    "steel": 7850,
+    "copper": 8960,
+    "ndfeb": 7500,
+    "polymer": 1410,
+    "insulator": 1800
+  },
+  "scope": "Controlled academic mechanical revision; geometry, source-backed sizing and same-revision calculations required. Not manufacturing or flight qualification. Original Gen5 and FM08 records remain unchanged."
+}

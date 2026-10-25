@@ -1,0 +1,13 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "locked_utc": "2026-10-24T18:53:27.989939+00:00",
+  "source_sha256": {
+    "build_acr1.py": "f33d0a87e1f174acdfaae29655f2c34eeba583d8ac042dd8dded16e34af9a785",
+    "cradle_acr1.py": "1846373b17d77d79c3aab7bea72e288f85cc308e656697b20da858c2ff8c2565",
+    "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+    "PARAMETERS.json": "e870f0132948b76ee6c8664056ced731ce39360d57c2eedfc9f17ffb7576e067",
+    "verify_motion.py": "58adc0c3a30de5316b91b26a7e127eea9c784761ef20990c94c44deee7ae2667"
+  },
+  "baseline": "Captive carrier pallet;four feet;keyed26mm/90deg positiveZ locks atlocalX40/468,Y-90;26mm lift grip pins;no horizontal fork drive;unchanged16mm/20mm Csection and42x8mm arrays/216bars/C-return/21mm2 necks",
+  "boundary": "Reference catalog actuators are explicitly unselected;nominal academic geometry only"
+}

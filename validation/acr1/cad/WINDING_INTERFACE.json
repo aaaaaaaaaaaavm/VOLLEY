@@ -1,0 +1,25 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "coordinate_units": "mm",
+  "active_bar_cross_section_mm": [7, 6],
+  "active_bar_cross_section_mm2": 42,
+  "endlink_and_interface_minimum_cross_section_mm": [7, 3],
+  "endlink_and_interface_minimum_cross_section_mm2": 21,
+  "phase_endlink_z_mm": {"A": [-5, -2], "C": [-1.5, 1.5], "B": [2, 5]},
+  "nominal_interphase_z_gap_mm": 0.5,
+  "active_bars_per_phase": 72,
+  "series_endlinks_per_phase": 71,
+  "phase_current_direction": "Positive A/B enters first bar at negative Y and exits its positive Y face; positive C enters at positive Y and exits negative Y. Consecutive same-phase bars alternate direction.",
+  "terminals": {
+    "A": {"start_face_center": [233.5, -45, 0], "end_face_center": [1937.5, -45, 0], "face_size_x_z": [7, 6]},
+    "C": {"start_face_center": [241.5, 45, 0], "end_face_center": [1945.5, 45, 0], "face_size_x_z": [7, 6]},
+    "B": {"start_face_center": [249.5, -45, 0], "end_face_center": [1953.5, -45, 0], "face_size_x_z": [7, 6]}
+  },
+  "lead_and_bus_allocation": {
+    "status": "Protected routing allocation; leads and joints are not yet detailed physical conductors and are excluded from coil-solid mass/resistance.",
+    "A_B_negative_side": {"y_interval": [-78, -71], "z": "same separated phase lane as associated endlinks", "aft_exit_x_max": 150, "forward_exit_x_min": 2220},
+    "C_positive_side": {"y_exit_min": 110, "z_interval": [-5, 5], "route": "Open positive-Y carrier throat; separate from fixed support arms below Z=-7"},
+    "topology": "Three separately accessible series windings; star or delta interconnection is an external inverter/interface decision. No internal star point is assumed.",
+    "ratings": "Current-density, bend/joint resistance, creepage, vacuum insulation, harness heating and inverter voltage are same-revision analysis requirements. The 21mm2 neck governs conservative current density."
+  }
+}

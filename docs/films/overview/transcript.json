@@ -1,0 +1,50 @@
+[
+  {
+    "start_s": 0,
+    "end_s": 12,
+    "title": "An integrated twelve-3U study.",
+    "text": "Twelve 4 kg 3U envelopes. Two six-level storage banks. One reusable electromagnetic carrier.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 12,
+    "end_s": 24,
+    "title": "Select. Feed. Capture.",
+    "text": "A guided lead screw transfers one payload sideways into the Z-indexed lift. The lift holds the payload and captive pallet.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 24,
+    "end_s": 36,
+    "title": "Transfer custody positively.",
+    "text": "Carrier bayonets and lift grip pins overlap custody at handoff. Prove the destination restraint before releasing the other.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 36,
+    "end_s": 48,
+    "title": "Dock. Prove. Clear.",
+    "text": "The pallet locks to the carrier. The custody frame withdraws clear of the launch path before the shot is enabled.",
+    "source": "visuals/VIEW_PROVENANCE.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 48,
+    "end_s": 60,
+    "title": "Only the payload departs.",
+    "text": "The payload departs along +X. The captive pallet remains locked to the carrier through arrest and return to its loading datum.",
+    "source": "cad/release/FINAL_CAD_MANIFEST.json; analysis/COUPLED_SHOT.json",
+    "evidence_class": "Operating-sequence schematic \u00b7 illustrative timing"
+  },
+  {
+    "start_s": 60,
+    "end_s": 72,
+    "title": "Evaluate the complete trade.",
+    "text": "Modeled 1\u20133 m/s commands. Installed device allocation 156.557 kg. These preplanned mission cases show no advantage over the ideal ground-pretrimmed spring comparator.",
+    "source": "mission/MISSION_RESULTS.csv",
+    "evidence_class": "Computed result / G5-MISSION-01"
+  }
+]

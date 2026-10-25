@@ -1,0 +1,487 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "cad_parameters_sha256": "979529a7413c9811a20dee7d109f063c20bd9791759d5101b0b7a6ec6935385c",
+  "model_sha256": "99f5ed27abef68dfaa7c651de6f10bba3e2a602d12f83caa064bcecadf06aa07",
+  "convention": "Balanced three-phase peak phase current; N/A at independently optimized electrical phase",
+  "field_axes": "Xtravel,Ygap,Zdepth; CAD Xtravel,Zgap,Ydepth",
+  "magnets": {
+    "blocks_per_array": 42,
+    "block_pitch_mm": 8,
+    "wavelength_mm": 48,
+    "polarization_T": 1.32,
+    "top_angle_deg": "90-60*i",
+    "bottom_angle_deg": "90+60*i"
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "magpylib": "5.2.3"
+  },
+  "stations": [
+    {
+      "displacement_m": 0.0,
+      "active_N_per_A": 1.3285610486679147,
+      "with_return_N_per_A": 1.3992570164801479,
+      "active_phase_coeff_N_per_A": [
+        0.8686289216206707,
+        -0.584119097019495,
+        -0.28461375109647374
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.04633085332061411,
+        -0.03112747573896383,
+        -0.01471958343343155
+      ]
+    },
+    {
+      "displacement_m": 0.05,
+      "active_N_per_A": 1.3286571452752476,
+      "with_return_N_per_A": 1.3990405604626175,
+      "active_phase_coeff_N_per_A": [
+        0.8838686663779547,
+        -0.39178173886693696,
+        -0.49210749803339154
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.047120780354414596,
+        -0.0208753161097855,
+        -0.02543413317258939
+      ]
+    },
+    {
+      "displacement_m": 0.1,
+      "active_N_per_A": 1.328556820286036,
+      "with_return_N_per_A": 1.3985934774845923,
+      "active_phase_coeff_N_per_A": [
+        0.8387248795192923,
+        -0.17287650188451556,
+        -0.6658551704932523
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.044728831999822825,
+        -0.009202028902365033,
+        -0.034430357596670194
+      ]
+    },
+    {
+      "displacement_m": 0.15000000000000002,
+      "active_N_per_A": 1.328683675711639,
+      "with_return_N_per_A": 1.398386248293682,
+      "active_phase_coeff_N_per_A": [
+        0.7364743813058607,
+        0.057988733412835995,
+        -0.7944660675879279
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.0392892054724655,
+        0.0030854406811244703,
+        -0.041068153955638634
+      ]
+    },
+    {
+      "displacement_m": 0.2,
+      "active_N_per_A": 1.328571696558167,
+      "with_return_N_per_A": 1.398014507564744,
+      "active_phase_coeff_N_per_A": [
+        0.5839899181506027,
+        0.2847052222234294,
+        -0.8686966562240759
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.031149976724883375,
+        0.01516747515133084,
+        -0.04489132194288006
+      ]
+    },
+    {
+      "displacement_m": 0.25,
+      "active_N_per_A": 1.3286715927956207,
+      "with_return_N_per_A": 1.3980544747774848,
+      "active_phase_coeff_N_per_A": [
+        0.3917568674163286,
+        0.49212608325066065,
+        -0.8838838211843582
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.020879378840994365,
+        0.026239083175763064,
+        -0.045668289045691604
+      ]
+    },
+    {
+      "displacement_m": 0.30000000000000004,
+      "active_N_per_A": 1.3285646444761012,
+      "with_return_N_per_A": 1.3981190426458465,
+      "active_phase_coeff_N_per_A": [
+        0.17286831042437867,
+        0.6658611944871146,
+        -0.8387300479267757
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.009203032250187338,
+        0.03552519445363956,
+        -0.04335027548057278
+      ]
+    },
+    {
+      "displacement_m": 0.35000000000000003,
+      "active_N_per_A": 1.3286880219849602,
+      "with_return_N_per_A": 1.3985543233926356,
+      "active_phase_coeff_N_per_A": [
+        -0.05799234060051082,
+        0.7944685863171909,
+        -0.7364766076604784
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.0030850958892975995,
+        0.04237409564684551,
+        -0.03807734470537104
+      ]
+    },
+    {
+      "displacement_m": 0.4,
+      "active_N_per_A": 1.3285742417178192,
+      "with_return_N_per_A": 1.3987825075150608,
+      "active_phase_coeff_N_per_A": [
+        -0.28470711548735556,
+        0.8686978859222649,
+        -0.5839910260918381
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.015167328632962265,
+        0.046317222633839,
+        -0.030189711355167403
+      ]
+    },
+    {
+      "displacement_m": 0.45,
+      "active_N_per_A": 1.328673145962679,
+      "with_return_N_per_A": 1.3992190482447275,
+      "active_phase_coeff_N_per_A": [
+        -0.49212720276308186,
+        0.8838844856277055,
+        -0.39175747374553666
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.026239010989483277,
+        0.047118352713328114,
+        -0.020237207593598247
+      ]
+    },
+    {
+      "displacement_m": 0.5,
+      "active_N_per_A": 1.3285656216900683,
+      "with_return_N_per_A": 1.3993696464363028,
+      "active_phase_coeff_N_per_A": [
+        -0.6658619191868528,
+        0.8387304317684003,
+        -0.17286866351910068
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.03552515468463703,
+        0.04472816922126303,
+        -0.00892069552360883
+      ]
+    },
+    {
+      "displacement_m": 0.55,
+      "active_N_per_A": 1.328688654125243,
+      "with_return_N_per_A": 1.399555974214302,
+      "active_phase_coeff_N_per_A": [
+        -0.7944690930624139,
+        0.736476838059872,
+        0.05799212794874989
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.0423740715849721,
+        0.039288967250820234,
+        0.0029905421708309545
+      ]
+    },
+    {
+      "displacement_m": 0.6000000000000001,
+      "active_N_per_A": 1.3285746663342421,
+      "with_return_N_per_A": 1.399266157226473,
+      "active_phase_coeff_N_per_A": [
+        -0.8686982673286825,
+        0.5839911650366647,
+        0.28470698770729796
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.04631720670372892,
+        0.031149874625269573,
+        0.014701498835022676
+      ]
+    },
+    {
+      "displacement_m": 0.65,
+      "active_N_per_A": 1.3286734505836229,
+      "with_return_N_per_A": 1.3990544667896578,
+      "active_phase_coeff_N_per_A": [
+        -0.8838847955742257,
+        0.3917575529808832,
+        0.4921271312973963
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.0471183410647609,
+        0.020879329799589105,
+        0.025431027340781395
+      ]
+    },
+    {
+      "displacement_m": 0.7000000000000001,
+      "active_N_per_A": 1.3285658657113457,
+      "with_return_N_per_A": 1.3986014657585444,
+      "active_phase_coeff_N_per_A": [
+        -0.8387307054900638,
+        0.17286869911861608,
+        0.665861889750475
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.044728159630930894,
+        0.009203007193552878,
+        0.03442955025687153
+      ]
+    },
+    {
+      "displacement_m": 0.75,
+      "active_N_per_A": 1.3286888803028059,
+      "with_return_N_per_A": 1.3983909680820958,
+      "active_phase_coeff_N_per_A": [
+        -0.7364771023552547,
+        -0.05799212926685116,
+        0.7944691001394536
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.0392889581825874,
+        -0.0030851085419616353,
+        0.04106786827123918
+      ]
+    },
+    {
+      "displacement_m": 0.8,
+      "active_N_per_A": 1.3285749070847193,
+      "with_return_N_per_A": 1.3980174755028156,
+      "active_phase_coeff_N_per_A": [
+        -0.5839914446260505,
+        -0.2847070261876466,
+        0.86869831222722
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.031149864706515457,
+        -0.015167333752206448,
+        0.04489119642650816
+      ]
+    },
+    {
+      "displacement_m": 0.8500000000000001,
+      "active_N_per_A": 1.3286737306263097,
+      "with_return_N_per_A": 1.3980564783999885,
+      "active_phase_coeff_N_per_A": [
+        -0.39175787598529443,
+        -0.4921272142325114,
+        0.8838848868788716
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.020879317388581165,
+        -0.026239010338791214,
+        0.04566822234304921
+      ]
+    },
+    {
+      "displacement_m": 0.9,
+      "active_N_per_A": 1.3285662016224926,
+      "with_return_N_per_A": 1.3981205145926987,
+      "active_phase_coeff_N_per_A": [
+        -0.17286910399489233,
+        -0.6658620340936006,
+        0.8387308621756083
+      ],
+      "return_phase_coeff_N_per_A": [
+        -0.00920298979489077,
+        -0.035525148045869905,
+        0.043350231265209996
+      ]
+    },
+    {
+      "displacement_m": 0.9500000000000001,
+      "active_N_per_A": 1.3286892743679717,
+      "with_return_N_per_A": 1.398555510480775,
+      "active_phase_coeff_N_per_A": [
+        0.05799158193127813,
+        -0.7944693392365159,
+        0.7364773614886241
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.003085135396418772,
+        -0.04237405662417276,
+        0.03807730561122329
+      ]
+    },
+    {
+      "displacement_m": 1.0,
+      "active_N_per_A": 1.3285753289870172,
+      "with_return_N_per_A": 1.3987835346826145,
+      "active_phase_coeff_N_per_A": [
+        0.28470622959150466,
+        -0.8686987113491934,
+        0.5839918791622607
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.015167379098807198,
+        -0.04631717743872218,
+        0.030189663772292853
+      ]
+    },
+    {
+      "displacement_m": 1.05,
+      "active_N_per_A": 1.3286740627566682,
+      "with_return_N_per_A": 1.3992199077188046,
+      "active_phase_coeff_N_per_A": [
+        0.49212595907362344,
+        -0.8838855807001587,
+        0.39175863827711477
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.026239094704676936,
+        -0.047118283211136765,
+        0.020237131533316594
+      ]
+    },
+    {
+      "displacement_m": 1.1,
+      "active_N_per_A": 1.3285660705098232,
+      "with_return_N_per_A": 1.399370067360007,
+      "active_phase_coeff_N_per_A": [
+        0.6658598573872856,
+        -0.8387321548991465,
+        0.1728705444334499
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.0355253248767491,
+        -0.044728036348522314,
+        0.008920545556804556
+      ]
+    },
+    {
+      "displacement_m": 1.1500000000000001,
+      "active_N_per_A": 1.328687443692395,
+      "with_return_N_per_A": 1.3995549094158957,
+      "active_phase_coeff_N_per_A": [
+        0.7944650399868229,
+        -0.7364800372395273,
+        -0.05798853629051849
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.04237449255647432,
+        -0.03928865945982755,
+        -0.0029909008892626725
+      ]
+    },
+    {
+      "displacement_m": 1.2000000000000002,
+      "active_N_per_A": 1.3285670035285106,
+      "with_return_N_per_A": 1.3992595737096776,
+      "active_phase_coeff_N_per_A": [
+        0.8686883576667761,
+        -0.5839983938278153,
+        -0.284698557299642
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.04631854687727009,
+        -0.031148980487270887,
+        -0.014702587701134733
+      ]
+    },
+    {
+      "displacement_m": 1.25,
+      "active_N_per_A": 1.328633554292613,
+      "with_return_N_per_A": 1.3990221104651592,
+      "active_phase_coeff_N_per_A": [
+        0.8838502906568722,
+        -0.39177949396066697,
+        -0.49209982709482464
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.04712482107298813,
+        -0.020875662508879282,
+        -0.02543585147130633
+      ]
+    },
+    {
+      "displacement_m": 1.3,
+      "active_N_per_A": 1.3282150070872005,
+      "with_return_N_per_A": 1.398366543855558,
+      "active_phase_coeff_N_per_A": [
+        0.8384715832328197,
+        -0.17298686478237812,
+        -0.6656908939297753
+      ],
+      "return_phase_coeff_N_per_A": [
+        0.04481675543799446,
+        -0.00917187898979874,
+        -0.03448018259677246
+      ]
+    }
+  ],
+  "quadrature_convergence": [
+    {
+      "x_m": 0,
+      "coarse_N_per_A": 1.3285610486679147,
+      "fine_N_per_A": 1.3272329876509141,
+      "relative_change": 0.00100062387640855,
+      "endturn_line_coeff_N_per_A": [
+        0.04876886278130558,
+        -0.03273834050219628,
+        -0.015714130146782263
+      ],
+      "endturn_transverse_averaged_coeff_N_per_A": [
+        0.04633091003717714,
+        -0.03112751218714209,
+        -0.014719597603474808
+      ],
+      "total_endturn_refined_N_per_A": 1.397929076923646
+    },
+    {
+      "x_m": 0.65,
+      "coarse_N_per_A": 1.3286734505836229,
+      "fine_N_per_A": 1.327325823337031,
+      "relative_change": 0.0010152949810045087,
+      "endturn_line_coeff_N_per_A": [
+        -0.049563640984034915,
+        0.02197474927357098,
+        0.02706739787658769
+      ],
+      "endturn_transverse_averaged_coeff_N_per_A": [
+        -0.047118400289700026,
+        0.020879356670676863,
+        0.025431048641274427
+      ],
+      "total_endturn_refined_N_per_A": 1.3977069124453092
+    },
+    {
+      "x_m": 1.3,
+      "coarse_N_per_A": 1.3282150070872005,
+      "fine_N_per_A": 1.3267562056816087,
+      "relative_change": 0.0010995248406186287,
+      "endturn_line_coeff_N_per_A": [
+        0.04721330177791495,
+        -0.00969411261549525,
+        -0.036737331930876395
+      ],
+      "endturn_transverse_averaged_coeff_N_per_A": [
+        0.044816808800855874,
+        -0.009171892382708893,
+        -0.03448020722037279
+      ],
+      "total_endturn_refined_N_per_A": 1.3969076959108442
+    }
+  ],
+  "active_work_J_per_A": 1.7271996864430836,
+  "limitations": [
+    "Analytic cuboid source shares its field law with prior work; not independent FEM",
+    "Return correction averages rectangular sections along a center path; corner current crowding and true joints require a conduction solution",
+    "No steel-support field perturbation, mutual inductance, phase-current dynamics or temperature dependence",
+    "No speed rating without same-revision mass, source, controller and braking analysis"
+  ]
+}

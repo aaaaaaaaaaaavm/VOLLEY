@@ -1,0 +1,14 @@
+{
+  "study": "PCS-LUNAR-CAMPAIGN-01",
+  "isolated_reproduction_pass": true,
+  "search_candidates": 7152,
+  "reproduced_cases": [
+    "T5_R20_searched",
+    "T5_R5_searched",
+    "unresolved_shared_path_failure"
+  ],
+  "relative_tolerance": 1e-11,
+  "absolute_tolerance": 1e-08,
+  "native_GMAT_rerun": false,
+  "scope": "Actual source search,finite-host state/resource history,negative cadence andblocked-path fault branch reproduced from copied public inputs. Independent native astrodynamics is captured separately."
+}

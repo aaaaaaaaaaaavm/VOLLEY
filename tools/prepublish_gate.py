@@ -12,6 +12,7 @@ import argparse
 import re
 import subprocess
 import sys
+from functools import lru_cache
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -32,19 +33,65 @@ def git(*args: str) -> bytes:
     return subprocess.check_output(["git", *args], cwd=ROOT, stderr=subprocess.DEVNULL)
 
 
+@lru_cache(maxsize=32)
+def _index_location(root: Path) -> Path:
+    """Resolve the real index for this checkout, including Git worktrees."""
+    raw = subprocess.check_output(
+        ["git", "rev-parse", "--git-path", "index"], cwd=root,
+        stderr=subprocess.DEVNULL).decode().strip()
+    path = Path(raw)
+    return (path if path.is_absolute() else root / path).resolve()
+
+
+@lru_cache(maxsize=32)
+def _indexed_paths(root: Path, index_state: tuple) -> tuple[frozenset[str], frozenset[str]]:
+    """Cache this index generation per repository, never a global imported ROOT."""
+    raw = subprocess.check_output(
+        ["git", "ls-files", "--cached", "-z"], cwd=root,
+        stderr=subprocess.DEVNULL)
+    files = frozenset(name.decode() for name in raw.split(b"\0") if name)
+    directories = {""} if files else set()
+    for name in files:
+        parent = Path(name).parent
+        while parent != Path("."):
+            directories.add(parent.as_posix())
+            parent = parent.parent
+    return files, frozenset(directories)
+
+
+def indexed_paths(root: Path) -> tuple[frozenset[str], frozenset[str]]:
+    """Refresh cached membership when staging changes the exact Git index."""
+    root = root.resolve()
+    try:
+        info = _index_location(root).stat()
+        state = (info.st_dev, info.st_ino, info.st_size,
+                 info.st_mtime_ns, info.st_ctime_ns)
+    except FileNotFoundError:
+        state = ()
+    return _indexed_paths(root, state)
+
+
 def changed_paths(base: str | None, all_files: bool) -> list[str]:
     if all_files:
         raw = git("ls-files", "-z")
+        # Include a prepared working-tree packet before it has been staged.
+        raw += git("ls-files", "--others", "--exclude-standard", "-z")
     else:
         if not base:
             raise ValueError("pass --base <published commit> or --all")
         raw = git("diff", "--name-only", "--diff-filter=ACMR", "-z", base, "HEAD")
         # A developer may run the gate before committing; include staged and working edits.
         raw += git("diff", "--name-only", "--diff-filter=ACMR", "-z", "HEAD")
+        raw += git("ls-files", "--others", "--exclude-standard", "-z")
     return sorted(set(p.decode() for p in raw.split(b"\0") if p))
 
 
 def markdown_links(path: Path, rel: str, errors: list[str]) -> None:
+    try:
+        indexed_files, indexed_directories = indexed_paths(ROOT)
+    except (OSError, subprocess.CalledProcessError) as exc:
+        errors.append(f"{rel}: cannot read publication Git index: {exc}")
+        return
     fenced = False
     for number, line in enumerate(path.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
         if line.lstrip().startswith(("```", "~~~")):
@@ -63,6 +110,14 @@ def markdown_links(path: Path, rel: str, errors: list[str]) -> None:
             resolved = (path.parent / target).resolve()
             if not resolved.is_relative_to(ROOT.resolve()) or not resolved.exists():
                 errors.append(f"{rel}:{number}: missing or external local link: {target}")
+                continue
+            relative = resolved.relative_to(ROOT.resolve()).as_posix()
+            if resolved.is_dir():
+                directory = "" if relative == "." else relative
+                if directory not in indexed_directories:
+                    errors.append(f"{rel}:{number}: local link directory has no indexed descendant: {target}")
+            elif relative not in indexed_files:
+                errors.append(f"{rel}:{number}: local link target is absent from Git index: {target}")
 
 
 def check(path_name: str, errors: list[str]) -> None:
@@ -108,7 +163,7 @@ def check_evidence_tracking(errors: list[str]) -> None:
     """Every file in a current captured-study manifest must enter the Git payload."""
     import json
     tracked = set(git("ls-files", "-z").decode().split("\0"))
-    for name in ["validation/selected_feeder/MANIFEST.json", "experiments/selected_feeder/MANIFEST.json",
+    for name in ["validation/acr1/MANIFEST.json", "validation/selected_feeder/MANIFEST.json", "experiments/selected_feeder/MANIFEST.json",
                  "validation/system_feasibility_closure/MANIFEST.json", "experiments/system_feasibility_closure/MANIFEST.json",
                  "validation/lunar_native_coast/MANIFEST.json", "experiments/lunar_native_coast/MANIFEST.json",
                  "validation/feeder_common_boundary/MANIFEST.json",

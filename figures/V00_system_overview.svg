@@ -10,7 +10,7 @@
 <line x1="402" y1="284" x2="444" y2="284" stroke="#3f718c" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="454" y="218" width="326" height="132" rx="18" fill="#0c1d2a" stroke="#38d6e8"/>
 <text x="480" y="262" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="700" text-anchor="start">LOAD</text>
-<text x="480" y="302" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="21" font-weight="650" text-anchor="start">one sequential path sought</text>
+<text x="480" y="302" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="21" font-weight="650" text-anchor="start">captive pallet transfer</text>
 <line x1="784" y1="284" x2="826" y2="284" stroke="#3f718c" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="836" y="218" width="326" height="132" rx="18" fill="#0c1d2a" stroke="#ffb454"/>
 <text x="862" y="262" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="700" text-anchor="start">COMMAND</text>
@@ -20,25 +20,25 @@
 <text x="1244" y="262" fill="#61d6a3" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="700" text-anchor="start">RELEASE</text>
 <text x="1244" y="302" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="21" font-weight="650" text-anchor="start">spacecraft is on its own</text>
 <rect x="72" y="400" width="708" height="278" rx="18" fill="#0c1d2a" stroke="#38d6e8"/>
-<text x="102" y="448" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="700" text-anchor="start">GEN5 · FROZEN BASELINE</text>
+<text x="102" y="448" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="700" text-anchor="start">ACR1 · CURRENT REFERENCE</text>
 <text x="102" y="498" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="130" y="498" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">self-contained Halbach LSM · 1.3 m acceleration</text>
+<text x="130" y="498" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">twelve 4 kg 3U surrogates · 1.300 m powered travel</text>
 <text x="102" y="541" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="130" y="541" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">16.029 m/s · 10.068 g · 162.3 ms</text>
+<text x="130" y="541" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">1–3 m/s supported modeled command range</text>
 <text x="102" y="584" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="130" y="584" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">2.782 kJ gross · 100.0% energy closure</text>
+<text x="130" y="584" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">149.557 kg CAD dry + 7 kg installed allocation</text>
 <text x="102" y="627" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="130" y="627" fill="#8fa7ba" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">structural FEA · CFD · control design · second CAD implementation</text>
+<text x="130" y="627" fill="#8fa7ba" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">8 native/STEP states · 154 accepted motion checks</text>
 <rect x="816" y="400" width="708" height="278" rx="18" fill="#0c1d2a" stroke="#ffb454"/>
-<text x="846" y="448" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="700" text-anchor="start">NEXT DESIGN · NOT SELECTED</text>
+<text x="846" y="448" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="700" text-anchor="start">MISSION · SAME-TARGET COMPARISON</text>
 <text x="846" y="498" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="874" y="498" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">shared reusable launcher and feeder are design goals</text>
+<text x="874" y="498" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">twelve releases · 500 km nominal SSO surrogate</text>
 <text x="846" y="541" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="874" y="541" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">motor-charged cell bank is a withdrawn comparator</text>
+<text x="874" y="541" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">common full-state targets 24 h after final release</text>
 <text x="846" y="584" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="874" y="584" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">S4 two-payload speed does not set a product maximum</text>
+<text x="874" y="584" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">9 native Orekit replays under shared J2 assumptions</text>
 <text x="846" y="627" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="20" font-weight="700" text-anchor="start">•</text>
-<text x="874" y="627" fill="#8fa7ba" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">P92 open · full manifest, installed mass and provider interface unproven</text>
+<text x="874" y="627" fill="#8fa7ba" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="500" text-anchor="start">No mass/fuel advantage over ideal pretrimmed springs</text>
 <rect x="72" y="728" width="448" height="98" rx="18" fill="#091720" stroke="#38d6e8"/>
 <text x="100" y="766" fill="#38d6e8" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700" text-anchor="start">DECLARED RECORD</text>
 <text x="100" y="802" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="650" text-anchor="start">78 run sheets · 73 analyses</text>
@@ -47,6 +47,6 @@
 <text x="604" y="802" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="650" text-anchor="start">0 built · 0 fired · 0 measured</text>
 <rect x="1080" y="728" width="444" height="98" rx="18" fill="#18160f" stroke="#ffb454"/>
 <text x="1108" y="766" fill="#ffb454" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700" text-anchor="start">MATURITY</text>
-<text x="1108" y="802" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="650" text-anchor="start">Phase I · TRL 2–3 design study</text>
+<text x="1108" y="802" fill="#e8f0f7" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="650" text-anchor="start">Computational reference design</text>
 <text x="1494" y="870" fill="#8fa7ba" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="650" text-anchor="end">MODEL OUTPUT UNLESS A SOURCE SAYS OTHERWISE</text>
 </svg>

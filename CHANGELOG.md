@@ -1,5 +1,11 @@
 # Change log / audit record
 
+## 2026-10-25: current ACR1 public engineering package
+
+Promoted the captured VOLLEY-G5-ACR1 integrated twelve-3U academic reference with all eight native/STEP states, 154 accepted installed-motion/refinement cases, source/result locks, same-revision mass and source/arrest models, and nine independent mission replays. Portable scratch examples include the actual custody/fault specification and pinned scientific/native dependencies.
+
+Current public pages use the supported modeled 1–3 m/s range, 149.556720 kg CAD dry mass plus the separate 7 kg installed allocation, and the bounded same-target mission conclusion. Original Gen5 and FM08 studies remain separately identified history. The raw solver supplement has its own checksum and publication-availability record. No physical validation or wider-programme completion is inferred.
+
 ## 2026-10-09: finite-stator finding, R1 feeder geometry and matched reference
 
 P118 integrated the existing 3-D analytic cuboid field through the finite 162-belt Gen5 stator. The result is 1.042 kJ ideal work and 12.448 m/s geometry-only under ideal phase, challenging the historical periodic-force 16.029 m/s shot. It is not independent FEM. Quadrature/station convergence is recorded. The [change-impact record](docs/GEN5_2026_10_09_FINDING_DISPOSITION.md) identifies every coupled shot, power, control and orbital claim that must be rerun before a corrected performance rating.

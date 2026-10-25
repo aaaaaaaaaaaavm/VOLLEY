@@ -1,0 +1,371 @@
+{
+  "revision": "ACR1-public-source-index-R1",
+  "path_base": "repository_root",
+  "release_identity": "containing Git commit or release tag",
+  "configuration": "VOLLEY-G5-ACR1",
+  "raw_capture": "docs/assets/acr1/VIEW_PROVENANCE.json",
+  "scene": {
+    "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+    "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+    "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+  },
+  "archive_members": [
+    {
+      "role": "visualization mesh",
+      "view": "01_assembly_isometric",
+      "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "member_path": "meshes/home.json",
+      "member_sha256": "7419819c2833fd23417620fa1b9df8fc858ae987db842c209671dfc81408db7d"
+    },
+    {
+      "role": "visualization mesh",
+      "view": "02_handoff_pallet_locks",
+      "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "member_path": "meshes/handoff.json",
+      "member_sha256": "b27ab7dccb27482143f6d22822efc5ba7b8d259bd798174c08fbf934ecf26c88"
+    },
+    {
+      "role": "visualization mesh",
+      "view": "03_captured_source_level",
+      "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "member_path": "meshes/captured.json",
+      "member_sha256": "0baf59d0ce9a93ff474d4dddaf1af81c4ef5d6108197ec385d0f89465d1dadef"
+    },
+    {
+      "role": "visualization mesh",
+      "view": "04_clear_docked",
+      "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "member_path": "meshes/clear.json",
+      "member_sha256": "49b7f1c696dcc4706df94d2b2cd45ec1d52d8e6aa533aae6e111bab259b2af50"
+    }
+  ],
+  "files": [
+    {
+      "role": "native",
+      "view": "01_assembly_isometric",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.FCStd",
+      "sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a"
+    },
+    {
+      "role": "step",
+      "view": "01_assembly_isometric",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.step",
+      "sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922"
+    },
+    {
+      "role": "bom",
+      "view": "01_assembly_isometric",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+      "sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e"
+    },
+    {
+      "role": "independent STEP readback",
+      "view": "01_assembly_isometric",
+      "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+      "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77"
+    },
+    {
+      "role": "CAD generator source",
+      "path": "validation/acr1/cad/build_acr1.py",
+      "sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8"
+    },
+    {
+      "role": "CAD generator source",
+      "path": "validation/acr1/cad/cradle_acr1.py",
+      "sha256": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3"
+    },
+    {
+      "role": "CAD generator source",
+      "path": "validation/acr1/cad/sled_latches.py",
+      "sha256": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe"
+    },
+    {
+      "role": "CAD generator source",
+      "path": "validation/acr1/cad/PARAMETERS.json",
+      "sha256": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b"
+    },
+    {
+      "role": "CAD generator source",
+      "path": "validation/acr1/cad/verify_motion.py",
+      "sha256": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a"
+    },
+    {
+      "role": "CAD generator source",
+      "path": "validation/acr1/cad/verify_final_refinement.py",
+      "sha256": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+    },
+    {
+      "role": "native",
+      "view": "02_handoff_pallet_locks",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.FCStd",
+      "sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778"
+    },
+    {
+      "role": "step",
+      "view": "02_handoff_pallet_locks",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.step",
+      "sha256": "1ae09dc2389748777c7565f421354c50a3d8c28e7205b9c8eff5febd17e675be"
+    },
+    {
+      "role": "bom",
+      "view": "02_handoff_pallet_locks",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_handoff.json",
+      "sha256": "de093f3314fee1bcffefbe56fb20dbbc631fde3d744032d16fca4c4e67184293"
+    },
+    {
+      "role": "independent STEP readback",
+      "view": "02_handoff_pallet_locks",
+      "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+      "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77"
+    },
+    {
+      "role": "native",
+      "view": "03_captured_source_level",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.FCStd",
+      "sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd"
+    },
+    {
+      "role": "step",
+      "view": "03_captured_source_level",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.step",
+      "sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302"
+    },
+    {
+      "role": "bom",
+      "view": "03_captured_source_level",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_captured.json",
+      "sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7"
+    },
+    {
+      "role": "independent STEP readback",
+      "view": "03_captured_source_level",
+      "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+      "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77"
+    },
+    {
+      "role": "native",
+      "view": "04_clear_docked",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.FCStd",
+      "sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3"
+    },
+    {
+      "role": "step",
+      "view": "04_clear_docked",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.step",
+      "sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922"
+    },
+    {
+      "role": "bom",
+      "view": "04_clear_docked",
+      "path": "validation/acr1/cad/release/VOLLEY_G5_ACR1_clear.json",
+      "sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19"
+    },
+    {
+      "role": "independent STEP readback",
+      "view": "04_clear_docked",
+      "path": "validation/acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+      "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/COUPLED_SHOT.json",
+      "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/FINAL_CAD_MANIFEST.json",
+      "sha256": "77b8a5c2b4b30c16f0faa2fbdd7fc243b7952d417a7e962d2e4096ba1e7a1350"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/MISSION_REPORT.md",
+      "sha256": "a6e1a3d2091b21edfe0cd3e78f23772a0ec4e15631eff2c8bf91a56e63fd65b2"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/MISSION_RESULTS.csv",
+      "sha256": "7acb70e5d23bcac84630eab0c101568f916f66e1647e320cf99bbe8357b39209"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/NATIVE_REPLAY_CHECKS.json",
+      "sha256": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/TARGETS.json",
+      "sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/TRANSFER_INTERLOCKS.json",
+      "sha256": "9f291fba1951d8fd64bf8a0d822a01be33f464f6c1099628b1341755899e0d4c"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/uniform_2_gen5_f0.35.json",
+      "sha256": "16e6c5dc93e60634b6ace5977873c9ff7de4127d1c5ce6527a479ffc079bba01"
+    },
+    {
+      "role": "film input",
+      "path": "docs/visual-source/inputs/uniform_2_gen5_f0.35_trajectory.csv",
+      "sha256": "456c85e08af446c7770e9a7a87d7829474b95bee30c6423c42399cc815c10724"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/01_assembly_isometric.png",
+      "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/02_handoff_pallet_locks.png",
+      "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/03_captured_source_level.png",
+      "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/04_clear_docked.png",
+      "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/ACR1_social_preview.png",
+      "sha256": "87328ae3ed8122bfad5d7b87411ceb601559ce731af94dfe88e2aa7ac6d4fa55"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/MISSION_NATIVE_AGREEMENT.png",
+      "sha256": "025d1d49b5887769ecd7271ef30a3b6f80eb7112b3c6f2a664c6906a42edf1e3"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/MISSION_RESOURCES.png",
+      "sha256": "86794a4cbaf3b02d9f251ba616a4453b727660c5de2ed44c22fbcde2b3011909"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/MISSION_TARGETS.png",
+      "sha256": "175594c388830c1e4243bce857e7c2cf46a251b1a104e3742d324f69c10c7fdb"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/coupled_shot_reference.png",
+      "sha256": "d47e8dd86b3e9faba3911b7f3da9f8df6772317945450f50a9d6dec4357fe839"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/feeder_transfer_profile.png",
+      "sha256": "49e92970ce0b3bc16bedc019ea504cc85555934f439e336e26f38a511afbc022"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/finite_force_coefficient.png",
+      "sha256": "8c553ff9aa80e26c47f45068587be6a809c8986a6eb62a0fe43020940a94cca8"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/magnetic_gap_section.png",
+      "sha256": "5e1cd6923ed0b732374231c0e17d3dc6e67ea5294a7177b412f545637bde7411"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/shot_energy_ledger.png",
+      "sha256": "bafd5579ec0de422c662aac377095dd1c15c579fc6d7ede28019c55c22a2c78c"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/01_assembly_isometric.jpg",
+      "sha256": "06299aff49fa623566d86280cb27661ba1075a2e60f991989a8e9242b639a689"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/02_handoff_pallet_locks.jpg",
+      "sha256": "9d7124a1cf8579cab251c39feb31a1bae4945d1dc70f3b9505a2dfa7050aa10a"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/03_captured_source_level.jpg",
+      "sha256": "9728b73c49ffe19c6eb0c25e6d21731b6047f402f89ea71638f00e784a927f18"
+    },
+    {
+      "role": "film input",
+      "path": "docs/assets/acr1/04_clear_docked.jpg",
+      "sha256": "d7128d9e7c7a690629999769aa19beece22a1c9b39f090f7b2fc1834e74c88a8"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "visuals/VIEW_PROVENANCE.json",
+      "path": "docs/assets/acr1/VIEW_PROVENANCE.json",
+      "sha256": "44b3eecf038c3adcc1f0288cc92b3cd6c36fdf583b89279b35d9e40bf54e2f11"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "cad/release/FINAL_CAD_MANIFEST.json",
+      "path": "validation/acr1/cad/release/FINAL_CAD_MANIFEST.json",
+      "sha256": "77b8a5c2b4b30c16f0faa2fbdd7fc243b7952d417a7e962d2e4096ba1e7a1350"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "analysis/COUPLED_SHOT.json",
+      "path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "mission/MISSION_RESULTS.csv",
+      "path": "validation/acr1/mission/MISSION_RESULTS.csv",
+      "sha256": "7acb70e5d23bcac84630eab0c101568f916f66e1647e320cf99bbe8357b39209"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "analysis/TRANSFER_INTERLOCKS.json",
+      "path": "validation/acr1/analysis/TRANSFER_INTERLOCKS.json",
+      "sha256": "9f291fba1951d8fd64bf8a0d822a01be33f464f6c1099628b1341755899e0d4c"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "mission/MISSION_INPUTS.json",
+      "path": "validation/acr1/mission/MISSION_INPUTS.json",
+      "sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "mission/release/uniform_2_gen5_f0.35_trajectory.csv",
+      "path": "validation/acr1/mission/release/uniform_2_gen5_f0.35_trajectory.csv",
+      "sha256": "456c85e08af446c7770e9a7a87d7829474b95bee30c6423c42399cc815c10724"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "mission/TARGETS.json",
+      "path": "validation/acr1/mission/TARGETS.json",
+      "sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "mission/MISSION_REPORT.md",
+      "path": "validation/acr1/mission/MISSION_REPORT.md",
+      "sha256": "1f200e71ecac7632be3d9a21851c3e73b0fb8b7f91568ffa287e4f3a03bd0b2c"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "mission/NATIVE_REPLAY_CHECKS.json",
+      "path": "validation/acr1/mission/NATIVE_REPLAY_CHECKS.json",
+      "sha256": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691"
+    },
+    {
+      "role": "storyboard evidence",
+      "source_label": "analysis/FINITE_MOTOR.json",
+      "path": "validation/acr1/analysis/FINITE_MOTOR.json",
+      "sha256": "546cf2f427f356fc043f7d5cfd3f6af9b4ab5d4ab84b582e1e7c30baf8fd89ec"
+    },
+    {
+      "role": "CAD view renderer",
+      "path": "docs/assets/acr1/render_cad_views.py",
+      "sha256": "c72ec143963702e5ccb463325d72159a15c2ba429cfd562ad5ed0cb5d5af7827"
+    }
+  ]
+}

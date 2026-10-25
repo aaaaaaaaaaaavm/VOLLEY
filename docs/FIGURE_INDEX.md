@@ -1,5 +1,10 @@
 # Figure evidence index
 
+## Current ACR1 figure routes
+
+The [current engineering package](../validation/acr1/README.md) links same-revision native geometry, model plots and mission figures. Current captures and captions are identified by its [payload manifest](../validation/acr1/MANIFEST.json), [mission figure source capture](../validation/acr1/mission/FIGURE_SOURCE_CAPTURE.json) and [native chassis figure](../validation/acr1/verification/chassis_fea/d4b53d520c1bc0d3_h8/ACTUAL_CHASSIS_RESULT.png). The original figure index below remains historical evidence for its named configurations.
+
+
 A figure without provenance is decoration. This index covers the manuscript and
 presentation figures and names their evidence class. Other mission illustrations
 and historical drawings have their own captions at point of use. A Monte Carlo

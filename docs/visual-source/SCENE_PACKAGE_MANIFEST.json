@@ -1,0 +1,67 @@
+{
+  "path_base": "repository_root",
+  "member_path_base": "archive_root",
+  "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+  "release_identity": "containing Git commit or release tag",
+  "package_sha256": "2aa3689d91210cbed378e97188a87e40f645fc102e004f7c077a6ab26748d1c0",
+  "role": "web source-only derivative; frozen source files unchanged; rendered views served separately",
+  "original_archive_sha256": "a34a89c43e05fd59d3e7fe11501765534902b7ee71ddc67a94b3071ece3c1e5c",
+  "files": [
+    {
+      "name": "MESH_PROVENANCE.json",
+      "sha256": "d791962304533365807bdd5c770527c143d553da1b8ae63c09941d93e18ebb66"
+    },
+    {
+      "name": "README.md",
+      "sha256": "3b0eed76f04e0bb2210048e9c8f0bc2d579e1d76fc28dd698b9421ec0a6912db"
+    },
+    {
+      "name": "READ_ONLY_INPUT_CHECK.json",
+      "sha256": "4414453942b59e687227eafea1d72711911ea60591b79a43d923f2abeb4408ca"
+    },
+    {
+      "name": "VIEW_PROVENANCE.json",
+      "sha256": "44b3eecf038c3adcc1f0288cc92b3cd6c36fdf583b89279b35d9e40bf54e2f11"
+    },
+    {
+      "name": "VISUALS_MANIFEST.json",
+      "sha256": "e3f9be9cd160fec01e62d30d7bbaa402ac9ee36bf9546be3edd0e54927313d2c"
+    },
+    {
+      "name": "VOLLEY_G5_ACR1_scientific_views.blend",
+      "sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+    },
+    {
+      "name": "export_native_meshes.py",
+      "sha256": "f627cdbd6671c80b8caa7c3bb229722485bf5e60dc367587f2f9bc9c728322bd"
+    },
+    {
+      "name": "render_cad_views.py",
+      "sha256": "c72ec143963702e5ccb463325d72159a15c2ba429cfd562ad5ed0cb5d5af7827"
+    },
+    {
+      "name": "meshes/captured.json",
+      "sha256": "0baf59d0ce9a93ff474d4dddaf1af81c4ef5d6108197ec385d0f89465d1dadef"
+    },
+    {
+      "name": "meshes/clear.json",
+      "sha256": "49b7f1c696dcc4706df94d2b2cd45ec1d52d8e6aa533aae6e111bab259b2af50"
+    },
+    {
+      "name": "meshes/handoff.json",
+      "sha256": "b27ab7dccb27482143f6d22822efc5ba7b8d259bd798174c08fbf934ecf26c88"
+    },
+    {
+      "name": "meshes/home.json",
+      "sha256": "7419819c2833fd23417620fa1b9df8fc858ae987db842c209671dfc81408db7d"
+    },
+    {
+      "name": "WEB_PACKAGE_NOTE.txt",
+      "sha256": "4b9cdae751036cdcb94ca3f6f3eeb783d50753a4f132a8906c7d6c97a2358256"
+    },
+    {
+      "name": "THIRD_PARTY_FONT_LICENSE.txt",
+      "sha256": "899eae0d0a59e1c2e60438211c0f00cb446a5f82b96602d87a4b0c87f1584f12"
+    }
+  ]
+}

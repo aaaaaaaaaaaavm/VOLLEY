@@ -1,3 +1,5 @@
+> **Historical study record — ACR1 public reference:** [VOLLEY-G5-ACR1](validation/acr1/README.md) is the current integrated academic reference. Values/status below retain their dated study/configuration meaning and do not set ACR1 operating points.
+
 # Go 3 academic release review — 12 October 2026
 
 **Disposition: review candidate, not an engineering or flight design freeze.** The completed Gen5 research result is an adverse system-level computational finding for the specified twelve-3U configuration. Gen6 P130–P132 are a separately identified, post-study mission and first-article screen. This record is a claim checklist for a college examiner, an IEEE reviewer and a deployment-mechanism engineer. It is not an independent third-party review.

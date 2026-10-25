@@ -1,0 +1,75 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "date_utc": "2026-10-25",
+  "dimensions_mm": [
+    2250,
+    1240,
+    1348.9
+  ],
+  "powered_stroke_mm": 1300,
+  "arrest_allocation_mm": 210,
+  "bounding_volume_m3": 3.763431,
+  "rectangular_footprint_m2": 2.79,
+  "represented_dry_kg": 149.55671970039353,
+  "separate_power_control_allocation_kg": 7,
+  "dry_study_kg": 156.55671970039353,
+  "payload_kg": 48,
+  "loaded_study_kg": 204.55671970039353,
+  "per_payload_dry_allocation_kg": 13.046393308366127,
+  "counted_generic_ladder_kg": 20.18044799999985,
+  "new_provider_adapter_reinforcement_mass_kg": null,
+  "launch_force_per_imposed_g_N": 2006.0161552498641,
+  "launch_force_formula": "F = loaded mass × g0 × actual vector load factors; dynamic/joint response separate",
+  "initial_three_m_s_payload_inertial_kick_m_s": 2.9269371592982703,
+  "initial_three_m_s_payload_momentum_Ns": 11.707748637193081,
+  "initial_post_arrest_retainedhost_recoil_m_s": -0.016712063860011398,
+  "supported_production_peak_pre_arrest_host_recoil_abs_m_s": 0.07292769243254077,
+  "host_torque_impulse_relation": "angular impulse = r cross J; delta omega requires actual inertia tensor",
+  "illustrative_1mrad_at3m_s_transverse_error_m_s": 0.003,
+  "pointing_limit": null,
+  "actual_host_inertia_tensor": null,
+  "net_bank_draw_J_range": [
+    229.48762909734057,
+    992.1264774513041
+  ],
+  "shot_replenishment_only_lower_average_W": 2.2047255054473425,
+  "power_exclusions": [
+    "charger inefficiency",
+    "handling",
+    "standby",
+    "balancing",
+    "thermal control",
+    "host operations"
+  ],
+  "host_supply_voltage_V": null,
+  "total_host_average_power_W": null,
+  "release_slot_s": 450,
+  "loading_coast_s": 400,
+  "declared_cycle_s": 355,
+  "release_guard_s": {
+    "before": 5,
+    "after": 20
+  },
+  "source_bank": {
+    "arrangement": "32S2P",
+    "initial_V": 86.4,
+    "nominal_F": 6.25,
+    "nominal_ESR_ohm": 0.176
+  },
+  "source_boundary": "Internal source values are not host supply requirements.",
+  "conventional_study_mass_kg": 72,
+  "dry_penalty_vs_study_kg": 84.55671970039353,
+  "Nova_three_pod_bare_mass_kg": 39.96,
+  "dry_difference_vs_Nova_bare_kg": 116.59671970039352,
+  "Electron_nominal_500kmSSO_payload_kg": 200,
+  "loaded_excess_before_new_adapter_kg": 4.556719700393529,
+  "fit_screen": "Declared protected box fails standard 1200mm diameter; customexpanded case not evaluated.",
+  "no_claims": [
+    "provider-approved load path",
+    "payload qualification",
+    "actual total host power",
+    "attitude recovery",
+    "customer requirement",
+    "flight accuracy"
+  ]
+}

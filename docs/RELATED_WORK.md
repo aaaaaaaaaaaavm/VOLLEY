@@ -1,9 +1,18 @@
 # Literature review
 
-Dossier §6: the literature review exists to identify better ideas, competing approaches,
-hidden assumptions, previous failures, and engineering tradeoffs, and to preserve the
-analyses so accumulated knowledge is not lost. This file is that record. It is not a
-bibliography; the paper has one.
+## Current ACR1 review — 25 October 2026
+
+The current study contributes a configuration-specific integration and computational evaluation of custody, finite electromagnetic force, source-limited release/arrest and host burden. Adjustable electromagnetic CubeSat deployment is established prior art.
+
+The [current source registry](../validation/literature_acr1/SOURCES_AND_COMPARISON.json), [quantitative comparison](../validation/literature_acr1/QUANTITATIVE_COMPARISON.csv) and [access/read record](../validation/literature_acr1/SEARCH_AND_READ_RECORD.json) distinguish primary full text, selected original-language readings and metadata-only leads. They retain the source locations and conditions used for the ACR1 comparison. A technical source review is not external peer review.
+
+Zhao 2022 supplies laboratory release evidence for its stated dummies and gravity-compensated rig. Zhao 2025 separates slow transport simulations and laboratory receiving behavior. Feng 2025 supplies a simulated higher-speed/reachable-domain comparison. The voice-coil actuator paper remains a metadata/abstract lead until its full text is available. Third-party measurements do not establish ACR1 performance.
+
+## Historical source dossier — July–October 2026
+
+The dated entries below retain their original configuration, reading status and follow-up questions. Their original Gen5 values and proposed adoption steps do not describe the [current ACR1 package](../validation/acr1/README.md).
+
+This dossier records source claims, methods, interface differences and the design lessons considered in earlier VOLLEY revisions. The academic manuscript contains its own bibliography.
 
 ## How to read an entry
 
@@ -99,7 +108,7 @@ neighbour to this design's topology that has turned up so far.
 
 | | |
 |---|---|
-| Claim | A high-density multi-species CubeSat storage and transport system, with a prototype built and measured: pushing speed 32.8 mm/s during the transport stroke, and collisions observed in both simulation and experiment |
+| Claim | A high-density multi-species CubeSat storage and transport system with simulation and laboratory tests. The 32.8 mm/s transport value is simulated; it is not a measured ejection speed. Receiving collisions are discussed in simulation and experiment. Corrected against the 25 October primary-source review |
 | Method | Simulation plus hardware experiment |
 | VOLLEY takes | The rig itself is the most useful thing here, a template for what a credible bench verification of a transport mechanism looks like. Directly informs B-1 and B-2 in `BENCHTOP_TESTS.md` |
 | VOLLEY differs | Storage and transport, not ejection. What they measured is a slow pusher at 32.8 mm/s, not an electromagnetic launch, the maturity gap against this project is real but narrower than "they have experiment and we do not" suggests |

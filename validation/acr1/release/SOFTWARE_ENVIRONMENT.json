@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1",
+    "magpylib": "5.2.3",
+    "meshio": "5.3.5"
+  },
+  "native_tools": {
+    "FreeCAD": "1.0.0",
+    "CalculiX": "2.23",
+    "Blender": "4.3.2",
+    "Gmsh": "4.13.1"
+  },
+  "method": "Recorded versions; clean-machine numerical rebuild is not asserted by this inventory. Orekit/JVM and serializer versions are in their independent evidence records.",
+  "separate_document_environment": {
+    "python-pptx": "1.0.2",
+    "python-docx": "1.2.0"
+  }
+}

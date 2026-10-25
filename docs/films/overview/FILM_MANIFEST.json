@@ -1,0 +1,142 @@
+{
+  "configuration": "VOLLEY-G5-ACR1",
+  "film": "overview",
+  "title": "One path. Commanded departures.",
+  "duration_s": 72,
+  "dimensions_px": [
+    1280,
+    720
+  ],
+  "fps": 12,
+  "codec": "H.264 yuv420p / VP9",
+  "audio": "none; explicit playback; captions and transcript supplied",
+  "master": "docs/films/overview/film.mp4",
+  "editable_source": [
+    "docs/visual-source/build_films.py",
+    "docs/visual-source/STORYBOARD.json"
+  ],
+  "cad_scene": {
+    "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+    "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+    "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+  },
+  "sources": "docs/visual-source/SOURCE_PINS.json",
+  "captions": "docs/films/overview/captions.vtt",
+  "transcript": "docs/films/overview/transcript.json",
+  "poster": "docs/films/overview/poster.jpg",
+  "source_files": [
+    {
+      "path": "docs/films/overview/animatic.mp4",
+      "sha256": "9b2f7f2a661c7303aaba648052d4c46ae9ef9f602158c47dbdabf49f591c4464"
+    },
+    {
+      "path": "docs/films/overview/captions.vtt",
+      "sha256": "f980546a4e139b87574c6ade1e2e918fce8f767dfc683143bf7250d4daa0044e"
+    },
+    {
+      "path": "docs/films/overview/film.mp4",
+      "sha256": "f3a9d1c31aaa9d15661cf5adb4f1b8c850ceb92bfffd85443b8e7ca7ff521d20"
+    },
+    {
+      "path": "docs/films/overview/film.webm",
+      "sha256": "85b69b4e9841d00d5533918f1a3a90a975c8df1cef1bd39591e90b94dc1cd0f9"
+    },
+    {
+      "path": "docs/films/overview/poster.jpg",
+      "sha256": "8a8498f0f358c9366078511a3208246d927b86e7a24f7636f6f8434df4477284"
+    },
+    {
+      "path": "docs/films/overview/storyboard-01.jpg",
+      "sha256": "254a5c878f7ac86c4e20d8699a4aa4e6acce3328372d3c5d44cfae85e42bb605"
+    },
+    {
+      "path": "docs/films/overview/storyboard-01.png",
+      "sha256": "8297a8f364635387228f9ef44856b40bd00bbf590c49def6faba428d56114531"
+    },
+    {
+      "path": "docs/films/overview/storyboard-02.jpg",
+      "sha256": "a803c4afe5e25e6cd6418d9b1ac535bcb1584806742d5c289427d13a1b18892e"
+    },
+    {
+      "path": "docs/films/overview/storyboard-02.png",
+      "sha256": "ec0349fc59cf19d53b68fdea2a8d4dc96cfcc6075470f8c7e6a1f606049346b9"
+    },
+    {
+      "path": "docs/films/overview/storyboard-03.jpg",
+      "sha256": "3d082ee7b0c76c5c734bbe02783b26a58a7edb1e831869a8a477c5ade286e676"
+    },
+    {
+      "path": "docs/films/overview/storyboard-03.png",
+      "sha256": "1e9895fa53cad7bae4ede4393ea72c60b009f575a9467674aad8f64a7bf878ba"
+    },
+    {
+      "path": "docs/films/overview/storyboard-04.jpg",
+      "sha256": "0d2f1a460c00a3a30e45fd7af0eaf0f7db52cf47b3a83cedb54560552a954593"
+    },
+    {
+      "path": "docs/films/overview/storyboard-04.png",
+      "sha256": "0058ea424f1d06f7887f473027f663f91459220c4e2d9b981e06e441651e194c"
+    },
+    {
+      "path": "docs/films/overview/storyboard-05.jpg",
+      "sha256": "5a010cb0d3be240ecdc20f7db735b2960b4567c5f64e02055ffa05872142c68d"
+    },
+    {
+      "path": "docs/films/overview/storyboard-05.png",
+      "sha256": "03cbb32a12d3494689024527fef424203009c495aab5ae096c801be070524cde"
+    },
+    {
+      "path": "docs/films/overview/storyboard-06.jpg",
+      "sha256": "549a5c2fdd50947bd852cbb845e2c8a8b24aad220594e022237be10e8913bedd"
+    },
+    {
+      "path": "docs/films/overview/storyboard-06.png",
+      "sha256": "cd8665e77b76cb244be59a055d108ede0c303280bcdefe61099d89b97c16efc2"
+    },
+    {
+      "path": "docs/films/overview/storyboard-contact-sheet.jpg",
+      "sha256": "0c4a1f7c66bfdc4da604a31285d946a46e08f6f9e93935d3dd00a4da0ab94994"
+    },
+    {
+      "path": "docs/films/overview/transcript.json",
+      "sha256": "1cd90fa72df89781c36a90f00c7299b25a2ec1b3df2d3f03674a71f1fca652cf"
+    },
+    {
+      "path": "docs/films/overview/transcript.txt",
+      "sha256": "8dc50e255d3b53f7d5e70e7830b5697e86a7dad791e68dbcbfaeafd8a92c6785"
+    }
+  ],
+  "render_script_sha256": "984e7855c21cf363f5aa5f7bef46273d4054d4db39c66491e0d18f8f3e5314ad",
+  "storyboard_sha256": "82b2547ce6017785e86dc010c5ae3566a7e20c8de05bb1831082c47696557d47",
+  "software": {
+    "package": "ACR1 source-driven editorial films",
+    "rebuild": "python3 docs/visual-source/build_films.py prepare; python3 docs/visual-source/build_films.py animatic; python3 docs/visual-source/build_films.py render",
+    "python_packages": [
+      "Pillow 12.3.0",
+      "NumPy"
+    ],
+    "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "font": "DejaVuSans, DejaVuSans-Bold and DejaVuSansMono; installed runtime dependencies",
+    "font_sha256": {
+      "DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+      "DejaVuSans-Bold.ttf": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+      "DejaVuSansMono.ttf": "54bf827eb99404e8f430c330ad30f063334f637eba0109b6a18d4f566a8e9dd8"
+    },
+    "renderer": "Pillow vector/text compositor + unchanged source images; FFmpeg H.264/VP9 encoders",
+    "cad_scene": {
+      "archive_path": "docs/downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+      "member_path": "VOLLEY_G5_ACR1_scientific_views.blend",
+      "member_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06"
+    },
+    "motion_class": "conceptual diagrams; computed mission host trajectory",
+    "archive_frames": "lossless 1280x720 PNG storyboard states; individual film directories",
+    "path_base": "repository_root",
+    "release_identity": "containing Git commit or release tag",
+    "font_license": "docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt",
+    "source_package_unpack_directory": "docs/"
+  },
+  "archival_derivatives": "lossless storyboard-*.png and H.264 editorial master film.mp4",
+  "revision": "R3 scientific framing and portable source index",
+  "path_base": "repository_root",
+  "release_identity": "containing Git commit or release tag"
+}

@@ -1,0 +1,87 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "drawing_revision": "A",
+  "scope": "Six source-derived academic outline/interface sheets and preliminary manufacturing/inspection notes;no manufacturing release",
+  "files": {
+    "ACR1_DRAWING_SET.pdf": {
+      "bytes": 223782,
+      "sha256": "81bb18512ed197acce1a37c0baaf8d2b7e9ef2d9400e1c280c9a1825b5583c7e"
+    },
+    "BOM_HOME.csv": {
+      "bytes": 70649,
+      "sha256": "b9a727093a3c2390a125e486335c275b3f998e0b3f09b85dda141b29c50f8d71"
+    },
+    "D01_general_arrangement.pdf": {
+      "bytes": 63747,
+      "sha256": "2e2982cb8ec36e91a6a69c5ace9d95948f07dadc3c88415be638b32cedb196fa"
+    },
+    "D01_general_arrangement.svg": {
+      "bytes": 307278,
+      "sha256": "a3115f402d023d3ba5fad6866daba8bbe379bc917618d9118ca5978a1ae012a6"
+    },
+    "D02_motor_section.pdf": {
+      "bytes": 29067,
+      "sha256": "2173e014f9f75ffaf078740b8bf7d60565cd039850affe838e6490d54b619067"
+    },
+    "D02_motor_section.svg": {
+      "bytes": 15539,
+      "sha256": "278ca733fd965ffaeaa204f03514c3e576f1869776f191ea4ac7596178032a19"
+    },
+    "D03_feed_lift_interfaces.pdf": {
+      "bytes": 33337,
+      "sha256": "2d307f788759575b7f62eaf7a9f1b500c5d31e6ceddf45462dbfcaba3a83bcb9"
+    },
+    "D03_feed_lift_interfaces.svg": {
+      "bytes": 47623,
+      "sha256": "8e7ff710c5c29cad230e9030287a411773b927c14e6e8fe5da9875bc38ce01e6"
+    },
+    "D04_pallet_sled_interfaces.pdf": {
+      "bytes": 38679,
+      "sha256": "0036842eb97679dbb71331cd549e1487f925c8b809afa5e14041e3ed8fbcde03"
+    },
+    "D04_pallet_sled_interfaces.svg": {
+      "bytes": 95797,
+      "sha256": "7d43aa19a674c0d6b077669fdab35fd8d4fc1b6c554666f98feef6a902a1accf"
+    },
+    "D05_tolerance_assembly_inspection.pdf": {
+      "bytes": 30893,
+      "sha256": "61b4876ac0ea0a33e347787d9d4986cef018e0da4543e7ce6369cdc7f1e70727"
+    },
+    "D05_tolerance_assembly_inspection.svg": {
+      "bytes": 4854,
+      "sha256": "c1232c27181d6b90b2ba2eb0f9ef61282afa1803432ed287965c58c5986c7d17"
+    },
+    "D06_mass_materials.pdf": {
+      "bytes": 29059,
+      "sha256": "bde75f045f9ed9745cfc73f16c1658510172c25002a9ad9596009604720e43a4"
+    },
+    "D06_mass_materials.svg": {
+      "bytes": 4512,
+      "sha256": "4f3d10e6df3a78a8e12361bd6425ea0f025a3b4e22268ffb75cde22dad59d6b4"
+    },
+    "INSPECTION_PLAN.csv": {
+      "bytes": 1335,
+      "sha256": "3cf2c0884657b132aca7222b5cc5095525f53319f7d4b636842e9a201865dadd"
+    },
+    "MASS_PROPERTIES.json": {
+      "bytes": 93091,
+      "sha256": "8e402f99ba20a41a46a7067e8d8c95159969a452ada7d651ea3f6e74b21a6f79"
+    },
+    "PROJECTION_CAPTURE.json": {
+      "bytes": 40135,
+      "sha256": "c8a52d8b40af61cf243ef02b77f22e3db655ca9ed5a74e9983e8713b03266750"
+    },
+    "README.md": {
+      "bytes": 1214,
+      "sha256": "edad2271f75d67de380574d765e691d5209b3ce780142093a7ede8e3392fcbf6"
+    },
+    "build_drawings.py": {
+      "bytes": 19628,
+      "sha256": "b878fc0622559ef5dfb00428fa0434aeca23893b95374371caf7d07b79a2ebce"
+    },
+    "check_drawings.py": {
+      "bytes": 3297,
+      "sha256": "c20ebbe050da38805fb76ab2087a1c764267c363c31306bb256f7956d2adb619"
+    }
+  }
+}

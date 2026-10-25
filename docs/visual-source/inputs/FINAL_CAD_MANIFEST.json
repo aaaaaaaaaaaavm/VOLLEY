@@ -1,0 +1,280 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "captured_utc": "2026-10-24T19:14:50.210119+00:00",
+  "source_sha256": {
+    "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+    "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+    "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+    "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+    "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+    "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+  },
+  "states": [
+    {
+      "state": "home",
+      "parts": 387,
+      "solids": 387,
+      "all_single_connected": true,
+      "native_interference_pass": true,
+      "physical_pallet_count": 1,
+      "total_mass_kg": 197.55671970039353,
+      "sled_prefix_mass_kg": 13.127805767068676,
+      "files": {
+        "VOLLEY_G5_ACR1_home.FCStd": {
+          "sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a",
+          "bytes": 1212253
+        },
+        "VOLLEY_G5_ACR1_home.step": {
+          "sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+          "bytes": 10277872
+        },
+        "VOLLEY_G5_ACR1_home.json": {
+          "sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+          "bytes": 147539
+        }
+      }
+    },
+    {
+      "state": "captured",
+      "parts": 387,
+      "solids": 387,
+      "all_single_connected": true,
+      "native_interference_pass": true,
+      "physical_pallet_count": 1,
+      "total_mass_kg": 197.55671970039353,
+      "sled_prefix_mass_kg": 12.780738494413388,
+      "files": {
+        "VOLLEY_G5_ACR1_captured.FCStd": {
+          "sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd",
+          "bytes": 1289002
+        },
+        "VOLLEY_G5_ACR1_captured.step": {
+          "sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302",
+          "bytes": 10282264
+        },
+        "VOLLEY_G5_ACR1_captured.json": {
+          "sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7",
+          "bytes": 147609
+        }
+      }
+    },
+    {
+      "state": "lower",
+      "parts": 387,
+      "solids": 387,
+      "all_single_connected": true,
+      "native_interference_pass": true,
+      "physical_pallet_count": 1,
+      "total_mass_kg": 197.55671970039353,
+      "sled_prefix_mass_kg": 12.780738494413388,
+      "files": {
+        "VOLLEY_G5_ACR1_lower.FCStd": {
+          "sha256": "14ab24cfbe04a0991781368d164749a5bc63dc944df80f7153db8db5eab294ff",
+          "bytes": 1344431
+        },
+        "VOLLEY_G5_ACR1_lower.step": {
+          "sha256": "63bda40ba16f5d5b9a8444d1c9fe4606897b4d60aa5f7c370cecb51f59894e5f",
+          "bytes": 10276382
+        },
+        "VOLLEY_G5_ACR1_lower.json": {
+          "sha256": "82202ca7e1b63616de5f31b2241497fe2db6e555422950b72721e40e03fc65b2",
+          "bytes": 147603
+        }
+      }
+    },
+    {
+      "state": "handoff",
+      "parts": 387,
+      "solids": 387,
+      "all_single_connected": true,
+      "native_interference_pass": true,
+      "physical_pallet_count": 1,
+      "total_mass_kg": 197.55671970039353,
+      "sled_prefix_mass_kg": 13.127805767068676,
+      "files": {
+        "VOLLEY_G5_ACR1_handoff.FCStd": {
+          "sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778",
+          "bytes": 1390483
+        },
+        "VOLLEY_G5_ACR1_handoff.step": {
+          "sha256": "1ae09dc2389748777c7565f421354c50a3d8c28e7205b9c8eff5febd17e675be",
+          "bytes": 10276788
+        },
+        "VOLLEY_G5_ACR1_handoff.json": {
+          "sha256": "de093f3314fee1bcffefbe56fb20dbbc631fde3d744032d16fca4c4e67184293",
+          "bytes": 147612
+        }
+      }
+    },
+    {
+      "state": "withdrawn",
+      "parts": 387,
+      "solids": 387,
+      "all_single_connected": true,
+      "native_interference_pass": true,
+      "physical_pallet_count": 1,
+      "total_mass_kg": 197.55671970039353,
+      "sled_prefix_mass_kg": 13.127805767068676,
+      "files": {
+        "VOLLEY_G5_ACR1_withdrawn.FCStd": {
+          "sha256": "d021caa203be2b9c82ed0479be5bfd59c9a1ddd57e5e1ac1b9f288e1757619e7",
+          "bytes": 1443810
+        },
+        "VOLLEY_G5_ACR1_withdrawn.step": {
+          "sha256": "cf089a122a36b3f75b9b5f437e624f45604756673f61109ad8978e5c2d65a008",
+          "bytes": 10276964
+        },
+        "VOLLEY_G5_ACR1_withdrawn.json": {
+          "sha256": "c4a1df9da3f9748ae5324e624f4ed6bb771a906fb5aa98c7e0f3845fbacf996a",
+          "bytes": 147697
+        }
+      }
+    },
+    {
+      "state": "clear",
+      "parts": 387,
+      "solids": 387,
+      "all_single_connected": true,
+      "native_interference_pass": true,
+      "physical_pallet_count": 1,
+      "total_mass_kg": 197.55671970039353,
+      "sled_prefix_mass_kg": 13.127805767068676,
+      "files": {
+        "VOLLEY_G5_ACR1_clear.FCStd": {
+          "sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3",
+          "bytes": 1482154
+        },
+        "VOLLEY_G5_ACR1_clear.step": {
+          "sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922",
+          "bytes": 10277592
+        },
+        "VOLLEY_G5_ACR1_clear.json": {
+          "sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19",
+          "bytes": 147572
+        }
+      }
+    },
+    {
+      "state": "release",
+      "parts": 387,
+      "solids": 387,
+      "all_single_connected": true,
+      "native_interference_pass": true,
+      "physical_pallet_count": 1,
+      "total_mass_kg": 197.5567197004025,
+      "sled_prefix_mass_kg": 13.127805767077662,
+      "files": {
+        "VOLLEY_G5_ACR1_release.FCStd": {
+          "sha256": "64c981d5412139bc323e1f1673202ee325ebf006fcbd518b78012b63c6014ffe",
+          "bytes": 1534465
+        },
+        "VOLLEY_G5_ACR1_release.step": {
+          "sha256": "92f95a037af9d29f3581cccf6cc13991447b285421ce5a2d5d0a7dec0b18032e",
+          "bytes": 10303177
+        },
+        "VOLLEY_G5_ACR1_release.json": {
+          "sha256": "c0b8b80ab6cbf50a23f6766bcf4a2230935db3a5d4689b977b97e3d9f8e152fc",
+          "bytes": 147180
+        }
+      }
+    },
+    {
+      "state": "arrest",
+      "parts": 386,
+      "solids": 386,
+      "all_single_connected": true,
+      "native_interference_pass": true,
+      "physical_pallet_count": 1,
+      "total_mass_kg": 193.5567197003975,
+      "sled_prefix_mass_kg": 13.127805767072639,
+      "files": {
+        "VOLLEY_G5_ACR1_arrest.FCStd": {
+          "sha256": "31518e9d406e76998c9e6ba8b6f1f472c7984550a9ff93d4c1f5f165a9269d3b",
+          "bytes": 1576861
+        },
+        "VOLLEY_G5_ACR1_arrest.step": {
+          "sha256": "ec4f4c59f2024448657ce34380fcba610a60be8911c0356fe152e6916bb3be9c",
+          "bytes": 10296700
+        },
+        "VOLLEY_G5_ACR1_arrest.json": {
+          "sha256": "1ef828b951cdef80b5e4c85802dbe282b90fc46264c51f3a86472a4218d49985",
+          "bytes": 146730
+        }
+      }
+    }
+  ],
+  "evidence_files": {
+    "Sled_connected_chassis_final.brep": {
+      "sha256": "d4b53d520c1bc0d33c1c36c29dddeb775d0b4147ec24dbb342a4fc43e97460a1",
+      "bytes": 176313
+    },
+    "CONTROLLED_SOURCE_LOCK.json": {
+      "sha256": "dc784b6888220f3e41e5b3c35850e1422430eeb3197752b2b0b132f0ff637632",
+      "bytes": 1134
+    },
+    "CONTROLLED_SOURCE_BASELINE_PALLET.json": {
+      "sha256": "c9412125235530f433de3bf7101d6609159b1bc845c265ee6e68614c69294264",
+      "bytes": 896
+    },
+    "MOTION_VERIFICATION_BASELINE_PALLET.json": {
+      "sha256": "b6759d3f8f6dcef07e389e007b3b929c1b4d25d11491eba3f6e5f04b17220ad7",
+      "bytes": 25820
+    },
+    "MOTION_VERIFICATION.json": {
+      "sha256": "94397ed52b572de5f5d1a9602b918935a9264875a0b5e92fa414e5edf7841104",
+      "bytes": 111040
+    },
+    "FINAL_REFINEMENT_VERIFICATION.json": {
+      "sha256": "7ea762595dc3020e91839c5534e2d08472376ebef2b8d650936ead708f08c301",
+      "bytes": 18338
+    },
+    "ENDWALL_SUBSET_PROOF.json": {
+      "sha256": "fcfb3dd6a56923bedfd146ca3a87a38a421f2b0255a05f84b3e94faf8935fd8d",
+      "bytes": 268
+    },
+    "MECHANICAL_CAPTURE.md": {
+      "sha256": "f7da985546283e959cab09c01ff0ede9bbd97d1b1351aa3e93c363e27124429f",
+      "bytes": 4784
+    }
+  },
+  "refinement_proof_dependencies": {
+    "refinement_baseline/Pallet_bayonet_lock_40_locked.brep": {
+      "sha256": "b607d99d6e86d945b68ce664bafbb63ad760fcece06e6a18900d8f7549d8bc68",
+      "bytes": 6458
+    },
+    "refinement_baseline/Pallet_bayonet_lock_40_open.brep": {
+      "sha256": "8de23aaec80f89f874ad05d7abd04d45bbdb8f42a6788b6e444c7cec54a23624",
+      "bytes": 6458
+    },
+    "refinement_baseline/Pallet_bayonet_lock_468_locked.brep": {
+      "sha256": "e36dc6d672db9518dad9de1f5ce3ede7a959b1155cc0fdd5fdb0592618a89ef9",
+      "bytes": 6395
+    },
+    "refinement_baseline/Pallet_bayonet_lock_468_open.brep": {
+      "sha256": "4fabf33e9a6c92b065f9a333cdb2da5bb17bca28ca986119ebfc908d0c1c1304",
+      "bytes": 6458
+    },
+    "refinement_baseline/Sled_connected_chassis_final_web62_candidate.brep": {
+      "sha256": "d4b53d520c1bc0d33c1c36c29dddeb775d0b4147ec24dbb342a4fc43e97460a1",
+      "bytes": 176313
+    },
+    "refinement_baseline/Sled_connected_chassis_locked.brep": {
+      "sha256": "1c444205595ccb995da4a2d35623e88302439fc7a0ba9f6a6beb1743b2b8631f",
+      "bytes": 176234
+    },
+    "refinement_baseline/Sled_connected_chassis_open.brep": {
+      "sha256": "1c444205595ccb995da4a2d35623e88302439fc7a0ba9f6a6beb1743b2b8631f",
+      "bytes": 176234
+    },
+    "refinement_baseline/pallet.brep": {
+      "sha256": "2512e9483776849b89523d943205a9068d9b54e69dd7edb673818bd3bbb51c1d",
+      "bytes": 67295
+    },
+    "refinement_baseline/source_lock.json": {
+      "sha256": "c9412125235530f433de3bf7101d6609159b1bc845c265ee6e68614c69294264",
+      "bytes": 896
+    }
+  },
+  "selected_architecture": "One captive pallet retained on the carrier during launch, arrest, and return; no horizontal fork drive; LSM active arrest; auxiliary pole/fin archive is unselected",
+  "scope": "Nominal academic mechanical capture. Actuator references and the host index-pin interface require hardware selection and qualification. The full motion baseline is sampled; final bounded refinements have exact geometry proofs."
+}

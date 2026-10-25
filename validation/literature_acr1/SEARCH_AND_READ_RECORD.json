@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-25",
+  "method": "Bounded targeted source verification against frozen ACR1 report55pp/paper9pp; reuse prior full-text and access records; no new broad vendor survey, patent search or outreach.",
+  "inclusion": "Closest adjustable CubeSat release and magazine transport; finite Halbach force/end effects; conventional dispenser requirements and already-selected orbital-service category reference.",
+  "queries": [
+    "\"Design and Reachable Domain Analysis\" 3000765 pdf",
+    "\"A High Thrust Density Voice Coil Actuator\" pdf",
+    "\"Q-SAT\" electromagnetic \"2021.03.026\""
+  ],
+  "existing_records_reused": [
+    "docs/FEEDER_FULL_TEXT_REVIEW_2026_10_19.md",
+    "docs/FEEDER_FULL_TEXT_SOURCES.json",
+    "docs/END_EFFECT_AND_ACTUATOR_REVIEW_2026_10_22.md",
+    "docs/GEN6_GO1_PUBLIC_REFERENCE_AUDIT.md",
+    "private 2026-10-23-literature/SEARCH_RECORD.json",
+    "private 2026-10-23-literature/PRIMARY_READBACK.json"
+  ],
+  "access_results": [
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1155/ijae/3000765",
+      "result": "Web tool internal error"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1155/ijae/3000765",
+      "result": "No verified PDF reading copy obtained"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/ijae/3000765",
+      "result": "Publisher full HTML, 751 extracted lines; methods, Tables2–4, simulation and reachability assumptions/results/conclusion read"
+    },
+    {
+      "url": "https://www.mdpi.com/2072-4292/14/17/4205",
+      "result": "Web fetch429; existing complete publisher PDF reread and hash recomputed"
+    },
+    {
+      "url": "https://opus.lib.uts.edu.au/handle/10453/167406",
+      "result": "Primary repository accessible; explicitly closed access and unavailable; abstract metadata only"
+    },
+    {
+      "url": "https://www.jstage.jst.go.jp/article/ieejias/143/8/143_570/_article/-char/en",
+      "result": "Primary original metadata accessible; authors verified; existing nine-page original reread at selected relevant passages and hash recomputed"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/eej.23450",
+      "result": "Web tool internal error; existing Crossref translation record confirms Hiroto Yamaguchi and Mimpei Morishita"
+    },
+    {
+      "url": "https://s3vi.ndc.nasa.gov/ssri-kb/static/resources/Nanoracks-CubeSat-Deployer-NRCSD-IDD.pdf",
+      "result": "Primary53-page PDF accessible; relevant spring/mechanical/mass/velocity-tipoff sections read"
+    },
+    {
+      "url": "https://dorbit.space/launch-deployment/",
+      "result": "Complete relevant live service sections read; no suitable host performance/ICD numbers"
+    },
+    {
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/integration-launch-and-deployment/",
+      "result": "Context corroboration for orbital transport; no new market ranking or numerical performance attribution"
+    }
+  ],
+  "scope_limit": "Representative exact targeted query strings and decisive source accesses, not an exhaustive transcript. Original reading PDFs stay private. No approval, human peer review, submission or acceptance inferred."
+}

@@ -1,0 +1,1633 @@
+{
+  "study": "PCS-ACR1-01",
+  "source_sha256": "50b3dc7bc32b2e2377b96f8430fb8ea6390af84e6789f0c6d661082349066704",
+  "inputs_sha256": {
+    "COUPLED_SHOT.json": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+    "DESIGN_BUDGETS.json": "e904380c58f56397bc75d2bba0104a63d52a9b118e1f0f08d52073dddddb1b5d",
+    "FEEDER_SIZING.json": "e3d9bc99b18c43d5d5ff529d4f7afcafb52e5da8da3bec53511365965f052ecf",
+    "LIFT_SIZING.json": "b6e8c553a2dcd47322c861b6ac6036813057062cc3408c0a98f68257cd9d2fc6",
+    "MISSION_COMPARISON.json": "635b011caf6a02dd509cceba7be9bf03ddf534cef2aabf99c6dd83200cb6ede4",
+    "MISSION_INPUTS.json": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f",
+    "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+    "POWER_COMPONENT_REFERENCE.json": "187905f64ba50273077b2739aa19f71c425bc7e4a7951e72021af554c318810f",
+    "RESOURCE_LEDGER.json": "054a6627261af1a21e9df558700ce00ecf32861e130d73cf01fb102b3a6a5917",
+    "SIGNATURES_arrest.json": "f689aeb9ca3f6d076d905236cdd77a870b38a0a99382893dde1942b6bc915380",
+    "SIGNATURES_captured.json": "a43ab656fb38a299aa71bd98ef4d9f0eab5cb2c10874a10c190d2c590e475591",
+    "SIGNATURES_clear.json": "27da58e50f2f726fa114f61163482850ca43e4d499cc58c5f9b7c81c49319c27",
+    "SIGNATURES_handoff.json": "260e0bfa4c963d4b8a844b93346e3ddda8f034d20d03f7a0736463452984bd81",
+    "SIGNATURES_home.json": "1b763282759b7f2cc2fc58d5ae601dee7ed77dbd2ba5af9cff50f994761149d2",
+    "SIGNATURES_lower.json": "3d57f13f311a96b55965f42c8a99325da927da668a27d5082762883a616a9c87",
+    "SIGNATURES_release.json": "8e3e3a1e40360e9e55669ffe34f8561ad91b8ec5565b772ea509551c23c9d7c2",
+    "SIGNATURES_withdrawn.json": "7cc43c023d497426acde19ff8c2c03c66b2952dc251a36744caf6afcd632e65e"
+  },
+  "study_inputs_sha256": "abf144927395a11765f8f0a16d130ee0e100fa02f21be78f3dd216df9eabc200",
+  "host_demand": {
+    "configuration": "VOLLEY-G5-ACR1",
+    "dry_device_including_7kg_allocation_kg": 156.55671970039353,
+    "loaded_device_kg": 204.55671970039353,
+    "retained_moving_sled_pallet_kg": 13.127805767068676,
+    "payload_count": 12,
+    "payload_each_kg": 4,
+    "eight_native_state_bounds": [
+      {
+        "state": "arrest",
+        "bounds_mm": [
+          0.0,
+          2250.0,
+          -620.0,
+          620.0,
+          -190.0,
+          1158.9
+        ],
+        "native_FCStd_sha256": "31518e9d406e76998c9e6ba8b6f1f472c7984550a9ff93d4c1f5f165a9269d3b"
+      },
+      {
+        "state": "captured",
+        "bounds_mm": [
+          0.0,
+          2250.0,
+          -620.0,
+          620.0,
+          -190.0,
+          1158.9
+        ],
+        "native_FCStd_sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd"
+      },
+      {
+        "state": "clear",
+        "bounds_mm": [
+          0.0,
+          2250.0,
+          -620.0,
+          620.0,
+          -190.0,
+          1158.9
+        ],
+        "native_FCStd_sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3"
+      },
+      {
+        "state": "handoff",
+        "bounds_mm": [
+          0.0,
+          2250.0,
+          -620.0,
+          620.0,
+          -190.0,
+          1158.9
+        ],
+        "native_FCStd_sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778"
+      },
+      {
+        "state": "home",
+        "bounds_mm": [
+          0.0,
+          2250.0,
+          -620.0,
+          620.0,
+          -190.0,
+          1158.9
+        ],
+        "native_FCStd_sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a"
+      },
+      {
+        "state": "lower",
+        "bounds_mm": [
+          0.0,
+          2250.0,
+          -620.0,
+          620.0,
+          -190.0,
+          1158.9
+        ],
+        "native_FCStd_sha256": "14ab24cfbe04a0991781368d164749a5bc63dc944df80f7153db8db5eab294ff"
+      },
+      {
+        "state": "release",
+        "bounds_mm": [
+          0.0,
+          2250.0,
+          -620.0,
+          620.0,
+          -190.0,
+          1158.9
+        ],
+        "native_FCStd_sha256": "64c981d5412139bc323e1f1673202ee325ebf006fcbd518b78012b63c6014ffe"
+      },
+      {
+        "state": "withdrawn",
+        "bounds_mm": [
+          0.0,
+          2250.0,
+          -620.0,
+          620.0,
+          -190.0,
+          1158.9
+        ],
+        "native_FCStd_sha256": "d021caa203be2b9c82ed0479be5bfd59c9a1ddd57e5e1ac1b9f288e1757619e7"
+      }
+    ],
+    "geometric_state_union_dimensions_m": [
+      2.25,
+      1.24,
+      1.3489
+    ],
+    "geometric_state_union_box_m3": 3.763431,
+    "envelope_scope": "Union of8 accepted native solid-signature states, not a continuous swept envelope or provider clearance.7kg unlocated power/control allowance and external service/inspection volumes require accommodation.",
+    "rail_length_m": 2.25,
+    "supported_command_m_s": [
+      1,
+      3
+    ],
+    "source_cells": 64,
+    "source_charge_voltage_V": 86.4,
+    "pulse_energy_max_all_18_cases_J": 992.1264774513041,
+    "pulse_local_loss_upper_from_ledger_J": 975.2674271953581,
+    "pulse_loss_average_over_450s_W": 2.167260949323018,
+    "energy_replenishment_at_assumed_80pct_charger_efficiency_W": 2.755906881809178,
+    "balance_dissipation_W": 1.1664,
+    "host_power_scope": "Pulse recharge and balancing only; feeder/lift/standby/charger thermal services are additional, not zero.",
+    "declared_cycle_s": 355,
+    "required_zero_force_loading_coast_s": 400,
+    "mission_release_spacing_s": 450,
+    "single_axis_attitude_sensitivities": [
+      {
+        "inertia_kg_m2": 20,
+        "thrust_axis_offset_m": 0,
+        "release_angular_impulse_N_m_s": 0.0,
+        "unrecovered_rate_deg_s": 0.0,
+        "minimum_recovery_torque_N_m_for_20s": 0.0
+      },
+      {
+        "inertia_kg_m2": 20,
+        "thrust_axis_offset_m": 0.1,
+        "release_angular_impulse_N_m_s": 1.170788718329679,
+        "unrecovered_rate_deg_s": 3.354062613091077,
+        "minimum_recovery_torque_N_m_for_20s": 0.05853943591648395
+      },
+      {
+        "inertia_kg_m2": 20,
+        "thrust_axis_offset_m": 0.5,
+        "release_angular_impulse_N_m_s": 5.853943591648394,
+        "unrecovered_rate_deg_s": 16.77031306545538,
+        "minimum_recovery_torque_N_m_for_20s": 0.2926971795824197
+      },
+      {
+        "inertia_kg_m2": 100,
+        "thrust_axis_offset_m": 0,
+        "release_angular_impulse_N_m_s": 0.0,
+        "unrecovered_rate_deg_s": 0.0,
+        "minimum_recovery_torque_N_m_for_20s": 0.0
+      },
+      {
+        "inertia_kg_m2": 100,
+        "thrust_axis_offset_m": 0.1,
+        "release_angular_impulse_N_m_s": 1.170788718329679,
+        "unrecovered_rate_deg_s": 0.6708125226182153,
+        "minimum_recovery_torque_N_m_for_20s": 0.05853943591648395
+      },
+      {
+        "inertia_kg_m2": 100,
+        "thrust_axis_offset_m": 0.5,
+        "release_angular_impulse_N_m_s": 5.853943591648394,
+        "unrecovered_rate_deg_s": 3.3540626130910765,
+        "minimum_recovery_torque_N_m_for_20s": 0.2926971795824197
+      },
+      {
+        "inertia_kg_m2": 500,
+        "thrust_axis_offset_m": 0,
+        "release_angular_impulse_N_m_s": 0.0,
+        "unrecovered_rate_deg_s": 0.0,
+        "minimum_recovery_torque_N_m_for_20s": 0.0
+      },
+      {
+        "inertia_kg_m2": 500,
+        "thrust_axis_offset_m": 0.1,
+        "release_angular_impulse_N_m_s": 1.170788718329679,
+        "unrecovered_rate_deg_s": 0.13416250452364306,
+        "minimum_recovery_torque_N_m_for_20s": 0.05853943591648395
+      },
+      {
+        "inertia_kg_m2": 500,
+        "thrust_axis_offset_m": 0.5,
+        "release_angular_impulse_N_m_s": 5.853943591648394,
+        "unrecovered_rate_deg_s": 0.6708125226182153,
+        "minimum_recovery_torque_N_m_for_20s": 0.2926971795824197
+      }
+    ],
+    "release_cases": [
+      {
+        "command_m_s": 1,
+        "max_cap_draw_J": 992.1264774513041,
+        "min_payload_inertial_kick_m_s": 0.9749684176870893,
+        "max_payload_inertial_kick_m_s": 0.9755865987999198,
+        "post_arrest_host_momentum_N_s": 3.9023463951996793,
+        "reference_post_arrest_host_recoil_m_s": 0.0055703503877152965,
+        "transient_sled_recoil_max_m_s": 0.02430747010274998
+      },
+      {
+        "command_m_s": 2,
+        "max_cap_draw_J": 611.3486155234947,
+        "min_payload_inertial_kick_m_s": 1.9508711886327597,
+        "max_payload_inertial_kick_m_s": 1.9512444675167886,
+        "post_arrest_host_momentum_N_s": 7.804977870067154,
+        "reference_post_arrest_host_recoil_m_s": 0.011141107708459396,
+        "transient_sled_recoil_max_m_s": 0.04861671594880926
+      },
+      {
+        "command_m_s": 3,
+        "max_cap_draw_J": 711.0500277296647,
+        "min_payload_inertial_kick_m_s": 2.926518795913633,
+        "max_payload_inertial_kick_m_s": 2.926971795824197,
+        "post_arrest_host_momentum_N_s": 11.707887183296789,
+        "reference_post_arrest_host_recoil_m_s": 0.016712261625730723,
+        "transient_sled_recoil_max_m_s": 0.07292769243254077
+      }
+    ],
+    "structural_budget_min_guide_margin_mm": 0.9255539804722936,
+    "magnetic_face_budget_mm": 0.26411082249999995,
+    "pointing_requirement": "No real customer accuracy requirement or provider attitude authority supplied; sensitivity table is the numerical demand for selected offsets/inertias.",
+    "disposal_requirement": "Host-provided disposal must remain available with zero payload releases.",
+    "source_classification": "Accepted same-revision model plus explicitly declared charger/inertia/offset assumptions; no provider approval."
+  },
+  "installed_comparison": {
+    "study": "Matched ACR1 campaign installed-mass necessary bounds",
+    "rows": [
+      {
+        "family": "uniform_2",
+        "force_ceiling_N": 1,
+        "comparator": "spring_fixed2",
+        "gen5_candidate_pass": true,
+        "spring_candidate_pass": true,
+        "gen5_fuel_kg": 0.052442570534026345,
+        "spring_fuel_kg": 0.04695730638331952,
+        "propellant_saving_kg": -0.005485264150706826,
+        "gen5_added_dry_mass_kg": 84.55671970039353,
+        "required_unmodeled_spring_installed_burden_for_mass_crossover_kg": 84.56220496454424,
+        "scope": "Same targets/epoch/Isp/bus/reserve; dry-device proxy differs. Full installed comparator unknown."
+      },
+      {
+        "family": "uniform_2",
+        "force_ceiling_N": 1,
+        "comparator": "spring_pretrim",
+        "gen5_candidate_pass": true,
+        "spring_candidate_pass": true,
+        "gen5_fuel_kg": 0.052442570534026345,
+        "spring_fuel_kg": 0.0524425463628404,
+        "propellant_saving_kg": -2.4171185941668227e-08,
+        "gen5_added_dry_mass_kg": 84.55671970039353,
+        "required_unmodeled_spring_installed_burden_for_mass_crossover_kg": 84.55671972456472,
+        "scope": "Same targets/epoch/Isp/bus/reserve; dry-device proxy differs. Full installed comparator unknown."
+      },
+      {
+        "family": "uniform_2",
+        "force_ceiling_N": 5,
+        "comparator": "spring_fixed2",
+        "gen5_candidate_pass": true,
+        "spring_candidate_pass": true,
+        "gen5_fuel_kg": 0.052442570534026345,
+        "spring_fuel_kg": 0.04695730638331952,
+        "propellant_saving_kg": -0.005485264150706826,
+        "gen5_added_dry_mass_kg": 84.55671970039353,
+        "required_unmodeled_spring_installed_burden_for_mass_crossover_kg": 84.56220496454424,
+        "scope": "Same targets/epoch/Isp/bus/reserve; dry-device proxy differs. Full installed comparator unknown."
+      },
+      {
+        "family": "uniform_2",
+        "force_ceiling_N": 5,
+        "comparator": "spring_pretrim",
+        "gen5_candidate_pass": true,
+        "spring_candidate_pass": true,
+        "gen5_fuel_kg": 0.052442570534026345,
+        "spring_fuel_kg": 0.0524425463628404,
+        "propellant_saving_kg": -2.4171185941668227e-08,
+        "gen5_added_dry_mass_kg": 84.55671970039353,
+        "required_unmodeled_spring_installed_burden_for_mass_crossover_kg": 84.55671972456472,
+        "scope": "Same targets/epoch/Isp/bus/reserve; dry-device proxy differs. Full installed comparator unknown."
+      },
+      {
+        "family": "alternating_1_3",
+        "force_ceiling_N": 1,
+        "comparator": "spring_fixed2",
+        "gen5_candidate_pass": false,
+        "spring_candidate_pass": false,
+        "gen5_fuel_kg": null,
+        "spring_fuel_kg": null,
+        "propellant_saving_kg": null,
+        "gen5_added_dry_mass_kg": 84.55671970039353,
+        "required_unmodeled_spring_installed_burden_for_mass_crossover_kg": null,
+        "scope": "Same targets/epoch/Isp/bus/reserve; dry-device proxy differs. Full installed comparator unknown."
+      },
+      {
+        "family": "alternating_1_3",
+        "force_ceiling_N": 1,
+        "comparator": "spring_pretrim",
+        "gen5_candidate_pass": false,
+        "spring_candidate_pass": true,
+        "gen5_fuel_kg": null,
+        "spring_fuel_kg": 0.07500241715229095,
+        "propellant_saving_kg": null,
+        "gen5_added_dry_mass_kg": 84.55671970039353,
+        "required_unmodeled_spring_installed_burden_for_mass_crossover_kg": null,
+        "scope": "Same targets/epoch/Isp/bus/reserve; dry-device proxy differs. Full installed comparator unknown."
+      },
+      {
+        "family": "alternating_1_3",
+        "force_ceiling_N": 5,
+        "comparator": "spring_fixed2",
+        "gen5_candidate_pass": true,
+        "spring_candidate_pass": false,
+        "gen5_fuel_kg": 0.28987406979751995,
+        "spring_fuel_kg": null,
+        "propellant_saving_kg": null,
+        "gen5_added_dry_mass_kg": 84.55671970039353,
+        "required_unmodeled_spring_installed_burden_for_mass_crossover_kg": null,
+        "scope": "Same targets/epoch/Isp/bus/reserve; dry-device proxy differs. Full installed comparator unknown."
+      },
+      {
+        "family": "alternating_1_3",
+        "force_ceiling_N": 5,
+        "comparator": "spring_pretrim",
+        "gen5_candidate_pass": true,
+        "spring_candidate_pass": true,
+        "gen5_fuel_kg": 0.28987406979751995,
+        "spring_fuel_kg": 0.05364511037964803,
+        "propellant_saving_kg": -0.23622895941787192,
+        "gen5_added_dry_mass_kg": 84.55671970039353,
+        "required_unmodeled_spring_installed_burden_for_mass_crossover_kg": 84.7929486598114,
+        "scope": "Same targets/epoch/Isp/bus/reserve; dry-device proxy differs. Full installed comparator unknown."
+      }
+    ],
+    "fuel_reserve_kg": 20,
+    "dry_penalty_kg": 84.55671970039353,
+    "optimistic_lower_net_mass_penalty_even_if_all_20kg_fuel_saved_kg": 64.55671970039353,
+    "conclusion": "At the accepted device proxies, no propellant-only crossover is possible inside the common 20kg reserve. No full installed-system commercial winner follows.",
+    "mounted_vs_free_flying": "Any added autonomous bus mass must be offset by omitted host accommodation/service burden plus fuel savings. At these proxies, even eliminating the entire common20kg fuel allocation leaves64.56kg penalty before an autonomous bus. Real bus/host prices, reliability, power/thermal accommodation and interfaces are unknown."
+  },
+  "lunar": {
+    "study": "PCS-LUNAR-ENGINE-01",
+    "configuration": "LUNAR-PCS-01 surrogate",
+    "separate_start_energy_budgets": [
+      {
+        "staging_apo_km": 100,
+        "payload_count": 1,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 820.3113681110574,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 1834.903151845281,
+        "total_propellant_mass_fraction": 0.8452234387878217,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 100,
+        "payload_count": 4,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 820.3113681110574,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 1907.333539418121,
+        "total_propellant_mass_fraction": 0.8448095239334479,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 100,
+        "payload_count": 12,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 820.3113681110574,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 2100.481239612361,
+        "total_propellant_mass_fraction": 0.8438453084872438,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 100,
+        "payload_count": 1,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 820.3113681110574,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 444.63248557866183,
+        "total_propellant_mass_fraction": 0.3612702418034268,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 100,
+        "payload_count": 4,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 820.3113681110574,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 462.1837679041353,
+        "total_propellant_mass_fraction": 0.35956210374442366,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 100,
+        "payload_count": 12,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 820.3113681110574,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 508.9871874387313,
+        "total_propellant_mass_fraction": 0.3555829928636808,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 1000,
+        "payload_count": 1,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 666.8411840501714,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 1708.9123927157736,
+        "total_propellant_mass_fraction": 0.8338124287643136,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 1000,
+        "payload_count": 4,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 666.8411840501714,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 1776.369460849291,
+        "total_propellant_mass_fraction": 0.8333679977483508,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 1000,
+        "payload_count": 12,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 666.8411840501714,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 1956.254975872004,
+        "total_propellant_mass_fraction": 0.8323326948452651,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 1000,
+        "payload_count": 1,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 666.8411840501714,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 414.10249039316176,
+        "total_propellant_mass_fraction": 0.31417944448882307,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 1000,
+        "payload_count": 4,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 666.8411840501714,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 430.44864132973396,
+        "total_propellant_mass_fraction": 0.312345372758984,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 1000,
+        "payload_count": 12,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 666.8411840501714,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 474.0383771605931,
+        "total_propellant_mass_fraction": 0.3080728991507764,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 10000,
+        "payload_count": 1,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 305.7156339347489,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 1445.5253025877755,
+        "total_propellant_mass_fraction": 0.8035316299952799,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 10000,
+        "payload_count": 4,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 305.7156339347489,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 1502.585511900451,
+        "total_propellant_mass_fraction": 0.8030062198419423,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 10000,
+        "payload_count": 12,
+        "starting_boundary": "500km_LEO",
+        "carrier_TLI_delta_v_m_s": 3058.201461589035,
+        "carrier_LOI_delta_v_m_s": 305.7156339347489,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 1654.7460700675852,
+        "total_propellant_mass_fraction": 0.8017822758832094,
+        "assumed_Isp_s": 220,
+        "delivery_state": "500km circular Earth orbit",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 10000,
+        "payload_count": 1,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 305.7156339347489,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 350.2787095929762,
+        "total_propellant_mass_fraction": 0.18921706566177565,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 10000,
+        "payload_count": 4,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 305.7156339347489,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 364.10550076112,
+        "total_propellant_mass_fraction": 0.18704881035511256,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      },
+      {
+        "staging_apo_km": 10000,
+        "payload_count": 12,
+        "starting_boundary": "TLI_apogee_384400km",
+        "carrier_TLI_delta_v_m_s": 0,
+        "carrier_LOI_delta_v_m_s": 305.7156339347489,
+        "independent_disposal_reserve_kg": 20,
+        "carrier_required_initial_wet_kg": 400.97694387617014,
+        "total_propellant_mass_fraction": 0.18199785546449498,
+        "assumed_Isp_s": 220,
+        "delivery_state": "ideal lunar-encounter arrival Vinf from a500km-origin transfer; TLI launch energy supplied upstream",
+        "scope": "Ideal coplanar patched-conic lower bound; finite LOI/TLI, targeting, tanks, gravity loss and launch mass availability unclosed."
+      }
+    ],
+    "disposal_alternatives": [
+      {
+        "staging_apo_km": 100,
+        "alternative": "lunar_impact",
+        "ideal_delta_v_m_s": 47.706657768358475,
+        "disposition": "Finite-burn independent spherical-impact solution calculated; site/approval/environmental policy external."
+      },
+      {
+        "staging_apo_km": 100,
+        "alternative": "lunar_escape",
+        "ideal_delta_v_m_s": 676.6195665161638,
+        "disposition": "Zero lunar-energy threshold only; long-term heliocentric/Earth encounter fate unverified."
+      },
+      {
+        "staging_apo_km": 100,
+        "alternative": "10000km_circular_high_lunar",
+        "ideal_delta_v_m_s": 824.6301201350191,
+        "disposition": "Impulsive reshaping bound only; stable disposal and lunar Hill-region perturbations unverified."
+      },
+      {
+        "staging_apo_km": 100,
+        "alternative": "Earth_return",
+        "ideal_delta_v_m_s": null,
+        "disposition": "No valid Earth-return solution: lunar escape energy alone does not target Earth. Epoch, departure asymptote, atmosphere/entry and risk unknown; retained as infeasible-to-claim."
+      },
+      {
+        "staging_apo_km": 1000,
+        "alternative": "lunar_impact",
+        "ideal_delta_v_m_s": 41.56725392629945,
+        "disposition": "Finite-burn independent spherical-impact solution calculated; site/approval/environmental policy external."
+      },
+      {
+        "staging_apo_km": 1000,
+        "alternative": "lunar_escape",
+        "ideal_delta_v_m_s": 523.1493824552778,
+        "disposition": "Zero lunar-energy threshold only; long-term heliocentric/Earth encounter fate unverified."
+      },
+      {
+        "staging_apo_km": 1000,
+        "alternative": "10000km_circular_high_lunar",
+        "ideal_delta_v_m_s": 671.1599360741329,
+        "disposition": "Impulsive reshaping bound only; stable disposal and lunar Hill-region perturbations unverified."
+      },
+      {
+        "staging_apo_km": 1000,
+        "alternative": "Earth_return",
+        "ideal_delta_v_m_s": null,
+        "disposition": "No valid Earth-return solution: lunar escape energy alone does not target Earth. Epoch, departure asymptote, atmosphere/entry and risk unknown; retained as infeasible-to-claim."
+      },
+      {
+        "staging_apo_km": 10000,
+        "alternative": "lunar_impact",
+        "ideal_delta_v_m_s": 16.463837824545024,
+        "disposition": "Finite-burn independent spherical-impact solution calculated; site/approval/environmental policy external."
+      },
+      {
+        "staging_apo_km": 10000,
+        "alternative": "lunar_escape",
+        "ideal_delta_v_m_s": 162.0238323398553,
+        "disposition": "Zero lunar-energy threshold only; long-term heliocentric/Earth encounter fate unverified."
+      },
+      {
+        "staging_apo_km": 10000,
+        "alternative": "10000km_circular_high_lunar",
+        "ideal_delta_v_m_s": 310.0343859587105,
+        "disposition": "Impulsive reshaping bound only; stable disposal and lunar Hill-region perturbations unverified."
+      },
+      {
+        "staging_apo_km": 10000,
+        "alternative": "Earth_return",
+        "ideal_delta_v_m_s": null,
+        "disposition": "No valid Earth-return solution: lunar escape energy alone does not target Earth. Epoch, departure asymptote, atmosphere/entry and risk unknown; retained as infeasible-to-claim."
+      }
+    ],
+    "finite_host_single_release_map": [
+      {
+        "staging_apo_km": 100,
+        "relative_command_m_s": -3,
+        "payload_delta_v_m_s": -2.9605263157894735,
+        "retained_host_recoil_m_s": 0.039473684210526314,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 86.7398414641325,
+        "payload_apolune_altitude_km": 100.0,
+        "host_perilune_altitude_km": 99.99999999999977,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      },
+      {
+        "staging_apo_km": 100,
+        "relative_command_m_s": 0,
+        "payload_delta_v_m_s": 0.0,
+        "retained_host_recoil_m_s": -0.0,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 99.99999999999977,
+        "payload_apolune_altitude_km": 99.99999999999977,
+        "host_perilune_altitude_km": 99.99999999999977,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      },
+      {
+        "staging_apo_km": 100,
+        "relative_command_m_s": 3,
+        "payload_delta_v_m_s": 2.9605263157894735,
+        "retained_host_recoil_m_s": -0.039473684210526314,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 100.00000000000023,
+        "payload_apolune_altitude_km": 113.38086745398914,
+        "host_perilune_altitude_km": 99.82240738924452,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      },
+      {
+        "staging_apo_km": 1000,
+        "relative_command_m_s": -3,
+        "payload_delta_v_m_s": -2.9605263157894735,
+        "retained_host_recoil_m_s": 0.039473684210526314,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 84.91026689680484,
+        "payload_apolune_altitude_km": 1000.0,
+        "host_perilune_altitude_km": 100.20212395767612,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      },
+      {
+        "staging_apo_km": 1000,
+        "relative_command_m_s": 0,
+        "payload_delta_v_m_s": 0.0,
+        "retained_host_recoil_m_s": -0.0,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 99.99999999999977,
+        "payload_apolune_altitude_km": 1000.0000000000005,
+        "host_perilune_altitude_km": 99.99999999999977,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      },
+      {
+        "staging_apo_km": 1000,
+        "relative_command_m_s": 3,
+        "payload_delta_v_m_s": 2.9605263157894735,
+        "retained_host_recoil_m_s": -0.039473684210526314,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 115.2276030108203,
+        "payload_apolune_altitude_km": 1000.0000000000005,
+        "host_perilune_altitude_km": 99.7979005520865,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      },
+      {
+        "staging_apo_km": 10000,
+        "relative_command_m_s": -3,
+        "payload_delta_v_m_s": -2.9605263157894735,
+        "retained_host_recoil_m_s": 0.039473684210526314,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 62.84889776656223,
+        "payload_apolune_altitude_km": 10000.0,
+        "host_perilune_altitude_km": 100.49895121153509,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      },
+      {
+        "staging_apo_km": 10000,
+        "relative_command_m_s": 0,
+        "payload_delta_v_m_s": 0.0,
+        "retained_host_recoil_m_s": -0.0,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 99.99999999999727,
+        "payload_apolune_altitude_km": 10000.0,
+        "host_perilune_altitude_km": 99.99999999999727,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      },
+      {
+        "staging_apo_km": 10000,
+        "relative_command_m_s": 3,
+        "payload_delta_v_m_s": 2.9605263157894735,
+        "retained_host_recoil_m_s": -0.039473684210526314,
+        "momentum_residual_kg_m_s": 0.0,
+        "payload_perilune_altitude_km": 137.6868210616476,
+        "payload_apolune_altitude_km": 10000.000000000002,
+        "host_perilune_altitude_km": 99.50114402504005,
+        "scope": "Last-payload snapshot,300kg retained wet reference; not full campaign."
+      }
+    ],
+    "engine_only_finite_disposal_cases": [
+      {
+        "staging_apo_km": 100,
+        "failed_retained_payload_count": 0,
+        "assumed_initial_wet_mass_kg": 300,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 713.9344477153268,
+        "disposal_propellant_kg": 6.618277557625106,
+        "integral_thrust_delta_v_m_s": 48.128483065034786,
+        "burnout_perilune_altitude_km": -99.99999999994319,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 2032.9204054412594,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          1482685.7508264228,
+          1073324.2304371402,
+          0.0,
+          -956.6866348416366,
+          1272.1661650009955,
+          0.0,
+          293.3817224423749
+        ],
+        "impact_state_SI": [
+          -436324.69794734626,
+          1681719.2149586556,
+          0.0,
+          -1598.8774965413984,
+          -513.8251040965969,
+          0.0,
+          293.3817224423749
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 100,
+        "failed_retained_payload_count": 1,
+        "assumed_initial_wet_mass_kg": 304,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 723.6258882781276,
+        "disposal_propellant_kg": 6.708118640070552,
+        "integral_thrust_delta_v_m_s": 48.1400753177087,
+        "burnout_perilune_altitude_km": -99.99999999998836,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 2037.4979588281526,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          1473316.8345418219,
+          1085829.7916717161,
+          0.0,
+          -967.9060842352566,
+          1263.8540555172362,
+          0.0,
+          297.29188135992945
+        ],
+        "impact_state_SI": [
+          -443228.30883353425,
+          1679912.9222220315,
+          0.0,
+          -1596.7491877259567,
+          -520.3618983613117,
+          0.0,
+          297.29188135992945
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 100,
+        "failed_retained_payload_count": 4,
+        "assumed_initial_wet_mass_kg": 316,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 752.7430545121497,
+        "disposal_propellant_kg": 6.978039062659661,
+        "integral_thrust_delta_v_m_s": 48.1758644794421,
+        "burnout_perilune_altitude_km": -99.9999999999993,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 2051.2248567973397,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          1444517.0862673365,
+          1122908.4353085726,
+          0.0,
+          -1001.1896123245255,
+          1238.293547907513,
+          0.0,
+          309.02196093734034
+        ],
+        "impact_state_SI": [
+          -463890.6555968842,
+          1674325.004188223,
+          0.0,
+          -1590.2047350934054,
+          -539.9136542680828,
+          0.0,
+          309.02196093734034
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 100,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 830.7223833695521,
+        "disposal_propellant_kg": 7.700918934596359,
+        "integral_thrust_delta_v_m_s": 48.2788410890345,
+        "burnout_perilune_altitude_km": -100.0,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 2087.793740336022,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          1362699.332682217,
+          1218397.0804506755,
+          0.0,
+          -1087.0426500445574,
+          1165.6006234472081,
+          0.0,
+          340.29908106540364
+        ],
+        "impact_state_SI": [
+          -518623.9632062657,
+          1658188.1512024582,
+          0.0,
+          -1571.5881942808296,
+          -591.6114223919474,
+          0.0,
+          340.29908106540364
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 100,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 822.4151595358566,
+        "disposal_propellant_kg": 7.62390974525033,
+        "integral_thrust_delta_v_m_s": 47.790665570422014,
+        "burnout_perilune_altitude_km": -98.12031015564571,
+        "burn_execution_multiplier": 0.99,
+        "pointing_error_deg": -1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 2084.7955452792576,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          1371344.0787421793,
+          1208585.9593485799,
+          0.0,
+          -1079.121305033962,
+          1173.6755525075473,
+          0.0,
+          340.37609025474967
+        ],
+        "impact_state_SI": [
+          -515588.44530920975,
+          1659134.507827389,
+          0.0,
+          -1573.4337658135635,
+          -588.0380429583446,
+          0.0,
+          340.37609025474967
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 100,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 822.4151595358566,
+        "disposal_propellant_kg": 7.623909745250387,
+        "integral_thrust_delta_v_m_s": 47.790665570422476,
+        "burnout_perilune_altitude_km": -98.14925101166847,
+        "burn_execution_multiplier": 0.99,
+        "pointing_error_deg": 1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 2104.304887974813,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          1372041.1116801111,
+          1208777.6456822834,
+          0.0,
+          -1077.4019858645793,
+          1174.4352290678069,
+          0.0,
+          340.3760902547496
+        ],
+        "impact_state_SI": [
+          -543420.9907425262,
+          1650227.980256186,
+          0.0,
+          -1563.3092878550674,
+          -614.4336164568181,
+          0.0,
+          340.3760902547496
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 100,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 839.0296072032476,
+        "disposal_propellant_kg": 7.777928123942274,
+        "integral_thrust_delta_v_m_s": 48.76712709356206,
+        "burnout_perilune_altitude_km": -101.79604615976312,
+        "burn_execution_multiplier": 1.01,
+        "pointing_error_deg": -1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 2071.814018285641,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          1353269.1683227706,
+          1227945.2301442723,
+          0.0,
+          -1096.6457839432658,
+          1156.6944894057117,
+          0.0,
+          340.2220718760577
+        ],
+        "impact_state_SI": [
+          -494542.18351173087,
+          1665528.9816534114,
+          0.0,
+          -1579.2742336889037,
+          -569.4417027188249,
+          0.0,
+          340.2220718760577
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 100,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 839.0296072032476,
+        "disposal_propellant_kg": 7.777928123942331,
+        "integral_thrust_delta_v_m_s": 48.76712709356206,
+        "burnout_perilune_altitude_km": -101.82669195612799,
+        "burn_execution_multiplier": 1.01,
+        "pointing_error_deg": 1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 2091.3224486343406,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          1353995.0567293854,
+          1228149.8437492345,
+          0.0,
+          -1094.891596939065,
+          1157.4911531637442,
+          0.0,
+          340.22207187605767
+        ],
+        "impact_state_SI": [
+          -522465.8852872833,
+          1656981.641030152,
+          0.0,
+          -1569.4682303443587,
+          -595.9206298472263,
+          0.0,
+          340.22207187605767
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 1000,
+        "failed_retained_payload_count": 0,
+        "assumed_initial_wet_mass_kg": 300,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 622.9979728230791,
+        "disposal_propellant_kg": 5.775283032182529,
+        "integral_thrust_delta_v_m_s": 41.93818076879175,
+        "burnout_perilune_altitude_km": -100.0000000004503,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 3979.094244759352,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          2612284.83706771,
+          722865.3271311233,
+          0.0,
+          -398.0933999614474,
+          1102.978570325677,
+          0.0,
+          294.22471696781747
+        ],
+        "impact_state_SI": [
+          -1283647.7942669687,
+          1170814.7164575388,
+          0.0,
+          -1028.0557277508697,
+          -1531.1048280166654,
+          0.0,
+          294.22471696781747
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 1000,
+        "failed_retained_payload_count": 1,
+        "assumed_initial_wet_mass_kg": 304,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 631.4565085929886,
+        "disposal_propellant_kg": 5.853694905479188,
+        "integral_thrust_delta_v_m_s": 41.94837011348476,
+        "burnout_perilune_altitude_km": -100.00000000046705,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 3980.0282310535736,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          2608875.1477533807,
+          732360.2322915499,
+          0.0,
+          -403.43145024354385,
+          1101.4671011852336,
+          0.0,
+          298.1463050945208
+        ],
+        "impact_state_SI": [
+          -1284225.60489624,
+          1170180.9072655758,
+          0.0,
+          -1027.2993526937275,
+          -1531.6009904308319,
+          0.0,
+          298.1463050945208
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 1000,
+        "failed_retained_payload_count": 4,
+        "assumed_initial_wet_mass_kg": 316,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 656.8698639197302,
+        "disposal_propellant_kg": 6.0892804550505275,
+        "integral_thrust_delta_v_m_s": 41.97982671886151,
+        "burnout_perilune_altitude_km": -100.0000000005199,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 3982.8261929517125,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          2598357.9353285762,
+          760808.4112238997,
+          0.0,
+          -419.45241806391493,
+          1096.7998629405972,
+          0.0,
+          309.9107195449495
+        ],
+        "impact_state_SI": [
+          -1285958.6994251022,
+          1168276.073269028,
+          0.0,
+          -1025.0267348679188,
+          -1533.0876078557774,
+          0.0,
+          309.9107195449495
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 1000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 724.9326494263191,
+        "disposal_propellant_kg": 6.720232508518677,
+        "integral_thrust_delta_v_m_s": 42.07032642212853,
+        "burnout_perilune_altitude_km": -99.99999999943236,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 3990.2599916573386,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          2568177.79459357,
+          836383.8899287751,
+          0.0,
+          -462.2266346573498,
+          1083.3638455285877,
+          0.0,
+          341.2797674914813
+        ],
+        "impact_state_SI": [
+          -1290578.9130588665,
+          1163170.163461819,
+          0.0,
+          -1018.9392359877851,
+          -1537.0390330431223,
+          0.0,
+          341.2797674914813
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 1000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 717.683322932056,
+        "disposal_propellant_kg": 6.653030183433543,
+        "integral_thrust_delta_v_m_s": 41.645536350397066,
+        "burnout_perilune_altitude_km": -98.17652317879651,
+        "burn_execution_multiplier": 0.99,
+        "pointing_error_deg": -1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 3992.969366790749,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          2571252.054655092,
+          828497.811257912,
+          0.0,
+          -458.491490596363,
+          1085.1431313337337,
+          0.0,
+          341.34696981656646
+        ],
+        "impact_state_SI": [
+          -1295549.227437484,
+          1157631.6163988176,
+          0.0,
+          -1014.671547087347,
+          -1540.2115157402213,
+          0.0,
+          341.34696981656646
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 1000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 717.683322932056,
+        "disposal_propellant_kg": 6.653030183433543,
+        "integral_thrust_delta_v_m_s": 41.645536350397066,
+        "burnout_perilune_altitude_km": -98.05661656044214,
+        "burn_execution_multiplier": 0.99,
+        "pointing_error_deg": 1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 4001.4819454599974,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          2571772.2323285406,
+          828553.3512268268,
+          0.0,
+          -457.0286628225454,
+          1085.3807504327365,
+          0.0,
+          341.34696981656646
+        ],
+        "impact_state_SI": [
+          -1300190.282090149,
+          1152416.5871586273,
+          0.0,
+          -1008.6264083414245,
+          -1544.1331396576827,
+          0.0,
+          341.34696981656646
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 1000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 732.1819759205823,
+        "disposal_propellant_kg": 6.787434833603925,
+        "integral_thrust_delta_v_m_s": 42.49520014866347,
+        "burnout_perilune_altitude_km": -101.88564496264118,
+        "burn_execution_multiplier": 1.01,
+        "pointing_error_deg": -1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 3979.315070184901,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          2564539.6668420127,
+          844203.420645841,
+          0.0,
+          -467.43858892485736,
+          1081.3391781390658,
+          0.0,
+          341.2125651663961
+        ],
+        "impact_state_SI": [
+          -1281186.3203816023,
+          1173507.7215199952,
+          0.0,
+          -1028.8925331593352,
+          -1530.0952780229236,
+          0.0,
+          341.2125651663961
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 1000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 732.1819759205823,
+        "disposal_propellant_kg": 6.787434833603925,
+        "integral_thrust_delta_v_m_s": 42.49520014866347,
+        "burnout_perilune_altitude_km": -101.7625955887693,
+        "burn_execution_multiplier": 1.01,
+        "pointing_error_deg": 1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 3987.9419738596844,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          2565081.275992722,
+          844262.4802484179,
+          0.0,
+          -465.9450648873437,
+          1081.5871138860934,
+          0.0,
+          341.2125651663961
+        ],
+        "impact_state_SI": [
+          -1285952.2027731936,
+          1168283.2243008416,
+          0.0,
+          -1022.8085929435649,
+          -1534.122858737973,
+          0.0,
+          341.2125651663961
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 10000,
+        "failed_retained_payload_count": 0,
+        "assumed_initial_wet_mass_kg": 300,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 246.03972640104078,
+        "disposal_propellant_kg": 2.280824527707182,
+        "integral_thrust_delta_v_m_s": 16.46531887867562,
+        "burnout_perilune_altitude_km": -100.0000000000035,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 24157.676494423347,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          11736340.617755176,
+          80710.05964200849,
+          0.0,
+          -8.538113723102484,
+          319.77482474930326,
+          0.0,
+          297.7191754722928
+        ],
+        "impact_state_SI": [
+          -1505366.6402885462,
+          867427.2524577304,
+          0.0,
+          -651.6659242895998,
+          -2118.0239473558277,
+          0.0,
+          297.7191754722928
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 10000,
+        "failed_retained_payload_count": 1,
+        "assumed_initial_wet_mass_kg": 304,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 249.3208558711278,
+        "disposal_propellant_kg": 2.311241081502885,
+        "integral_thrust_delta_v_m_s": 16.46535864049736,
+        "burnout_perilune_altitude_km": -100.00000000000233,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 24157.8096639706,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          11736312.173463967,
+          81786.32076193094,
+          0.0,
+          -8.651984869255402,
+          319.7740217190904,
+          0.0,
+          301.6887589184971
+        ],
+        "impact_state_SI": [
+          -1505371.8428454292,
+          867418.223677686,
+          0.0,
+          -651.6532207484364,
+          -2118.0278439690446,
+          0.0,
+          301.6887589184971
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 10000,
+        "failed_retained_payload_count": 4,
+        "assumed_initial_wet_mass_kg": 316,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 259.1643885499857,
+        "disposal_propellant_kg": 2.402492080281206,
+        "integral_thrust_delta_v_m_s": 16.465481087073414,
+        "burnout_perilune_altitude_km": -100.00000000000233,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 24158.208978069615,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          11736224.57822371,
+          85015.13466204095,
+          0.0,
+          -8.993605435414507,
+          319.77154873995255,
+          0.0,
+          313.5975079197188
+        ],
+        "impact_state_SI": [
+          -1505387.450132497,
+          867391.1372521466,
+          0.0,
+          -651.615110110583,
+          -2118.0395323646003,
+          0.0,
+          313.5975079197188
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 10000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 285.41492223393703,
+        "disposal_propellant_kg": 2.6458383966161705,
+        "integral_thrust_delta_v_m_s": 16.46583079419079,
+        "burnout_perilune_altitude_km": -99.99999999999977,
+        "burn_execution_multiplier": 1.0,
+        "pointing_error_deg": 0,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 24159.272391721137,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          11735974.398014452,
+          93625.54070719783,
+          0.0,
+          -9.904648612127245,
+          319.7644855296153,
+          0.0,
+          345.35416160338383
+        ],
+        "impact_state_SI": [
+          -1505429.0668208182,
+          867318.9060380256,
+          0.0,
+          -651.5134814729124,
+          -2118.070690879819,
+          0.0,
+          345.35416160338383
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 10000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 282.5607730115977,
+        "disposal_propellant_kg": 2.6193800126500264,
+        "integral_thrust_delta_v_m_s": 16.300548877032625,
+        "burnout_perilune_altitude_km": -98.04159763183003,
+        "burn_execution_multiplier": 0.99,
+        "pointing_error_deg": -1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 24157.678975833864,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          11735963.039215261,
+          92712.90148591003,
+          0.0,
+          -10.085689504463975,
+          319.9319878119209,
+          0.0,
+          345.38061998735
+        ],
+        "impact_state_SI": [
+          -1509681.8344700271,
+          859895.0625926476,
+          0.0,
+          -645.8813527715404,
+          -2119.8207451541325,
+          0.0,
+          345.38061998735
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 10000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 282.5607730115977,
+        "disposal_propellant_kg": 2.6193800126500264,
+        "integral_thrust_delta_v_m_s": 16.300548877032625,
+        "burnout_perilune_altitude_km": -98.04309618342668,
+        "burn_execution_multiplier": 0.99,
+        "pointing_error_deg": 1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 24178.133434970674,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          11736042.012932835,
+          92713.09581581931,
+          0.0,
+          -9.53069150897974,
+          319.93397152458107,
+          0.0,
+          345.38061998735
+        ],
+        "impact_state_SI": [
+          -1510162.1648821183,
+          859051.2183557831,
+          0.0,
+          -644.6928461272797,
+          -2120.181561038528,
+          0.0,
+          345.38061998735
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 10000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 288.2690714562764,
+        "disposal_propellant_kg": 2.6722967805823714,
+        "integral_thrust_delta_v_m_s": 16.631125374466137,
+        "burnout_perilune_altitude_km": -101.89691061656805,
+        "burn_execution_multiplier": 1.01,
+        "pointing_error_deg": -1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 24140.538829562858,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          11735904.900656553,
+          94538.22114024614,
+          0.0,
+          -10.284113130173363,
+          319.5999622933924,
+          0.0,
+          345.32770321941763
+        ],
+        "impact_state_SI": [
+          -1500826.7893898413,
+          875258.6521993253,
+          0.0,
+          -658.0895229660101,
+          -2116.0126398618772,
+          0.0,
+          345.32770321941763
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      },
+      {
+        "staging_apo_km": 10000,
+        "failed_retained_payload_count": 12,
+        "assumed_initial_wet_mass_kg": 348,
+        "thrust_N": 20,
+        "Isp_s": 220,
+        "burn_duration_s": 288.2690714562764,
+        "disposal_propellant_kg": 2.6722967805823146,
+        "integral_thrust_delta_v_m_s": 16.63112537446566,
+        "burnout_perilune_altitude_km": -101.89853946618805,
+        "burn_execution_multiplier": 1.01,
+        "pointing_error_deg": 1,
+        "impact_event_within_24h": true,
+        "time_from_burn_start_to_spherical_impact_s": 24161.379155798768,
+        "propellant_reserve_20kg_pass": true,
+        "burnout_state_SI": [
+          11735987.073761916,
+          94538.4270049256,
+          0.0,
+          -9.718152572884462,
+          319.60202016346926,
+          0.0,
+          345.3277032194177
+        ],
+        "impact_state_SI": [
+          -1501324.329870773,
+          874404.9499734498,
+          0.0,
+          -656.8820279509833,
+          -2116.38681678398,
+          0.0,
+          345.3277032194177
+        ],
+        "scope": "Two-body finite continuous retrograde engine burn, then numerical coast to spherical surface; not epoch/site targeting, approval or supplier capability."
+      }
+    ],
+    "no_release_dependency": true,
+    "no_recoil_credit": true,
+    "limits": "Spherical two-body engine/coast solution. Native perturbed lifetime results are separate. A landing/impact site, engine selection, covariance, topography, exact targeting and authorization are absent."
+  },
+  "verification": {
+    "all_engine_only_disposal_cases_hit": true,
+    "finer_step_burn_duration_difference_s": 3.728928277269006e-11,
+    "finer_step_propellant_difference_kg": 3.694822225952521e-12,
+    "finer_step_impact_time_difference_s": 3.637978807091713e-12,
+    "finite_burn_step_refinement_pass": true
+  }
+}

@@ -1,3 +1,5 @@
+> **Historical study record — ACR1 public reference:** [VOLLEY-G5-ACR1](../validation/acr1/README.md) is the current integrated academic reference. Values/status below retain their dated study/configuration meaning and do not set ACR1 operating points.
+
 # The mission VOLLEY actually flies
 
 > **Historical architecture narrative.** The sections below preserve the earlier concept and its assumptions. For the current mission, reopened historical study selection and evidence boundaries, read [the front page](../README.md) and [project continuity](CONTINUITY.md). In particular, conventional release speeds can differ, host structure is not free installed hardware, and no primary-mission isolation or provider accommodation has been demonstrated.

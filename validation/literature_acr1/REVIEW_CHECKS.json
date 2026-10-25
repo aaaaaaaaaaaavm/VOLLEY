@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "review_date_utc": "2026-10-25",
+  "review_type": "automated_primary_source_technical_review",
+  "independent_human_review": false,
+  "external_peer_review": false,
+  "paper_submission_status": "unsubmitted",
+  "planned_freeze": "2026-10-30",
+  "source_count": 8,
+  "quantitative_rows": 16,
+  "core_comparison_delivered": true,
+  "BB21_strict_all_closest_fulltext_status": "partial",
+  "residuals": [
+    "V22 closed-access full text unavailable; primary metadata/abstract only",
+    "E23 selected Japanese original passages, not complete English translation",
+    "Broader Q-SAT and systematic patent/database review not closed"
+  ],
+  "material_result_or_novelty_contradictions": [],
+  "citation_corrections": [
+    {
+      "location": "report ref8 / paper bibitem end",
+      "from": "H. Q. Yamaguchi",
+      "to": "H. Yamaguchi",
+      "evidence": "J-STAGE original and existing Crossref original/translation primary records"
+    },
+    {
+      "location": "end-effect citation identity",
+      "action": "Identify Japanese original actually read, DOI10.1541/ieejias.143.570; translation DOI10.1002/eej.23450 is related version"
+    },
+    {
+      "location": "Feng citation",
+      "action": "Add DOI10.1155/ijae/3000765"
+    }
+  ],
+  "frozen_checks": [
+    {
+      "path": "GEN5_FINAL_YEAR_REPORT.md",
+      "expected_sha256": "0dbf624af075b4afd1584174d25138f4acffa07a069a41264266c6f94f1d9786",
+      "observed_sha256": "0dbf624af075b4afd1584174d25138f4acffa07a069a41264266c6f94f1d9786",
+      "frozen_unchanged": true
+    },
+    {
+      "path": "GEN5_FINAL_YEAR_REPORT.pdf",
+      "expected_sha256": "67db0ff61a563bd195f84539a64ac4e257c862f4138c18bfd37282e2db4659c3",
+      "observed_sha256": "67db0ff61a563bd195f84539a64ac4e257c862f4138c18bfd37282e2db4659c3",
+      "frozen_unchanged": true
+    },
+    {
+      "path": "paper/paper.tex",
+      "expected_sha256": "a045926305baa45f4240b0e9c9a738d2ba9478d3ff2e207af66098ef2d85b824",
+      "observed_sha256": "a045926305baa45f4240b0e9c9a738d2ba9478d3ff2e207af66098ef2d85b824",
+      "frozen_unchanged": true
+    },
+    {
+      "path": "paper/paper.pdf",
+      "expected_sha256": "b7dc232dff8ce81bad5cefeadfc59e0ccee41a678b9029356f353054858c2688",
+      "observed_sha256": "b7dc232dff8ce81bad5cefeadfc59e0ccee41a678b9029356f353054858c2688",
+      "frozen_unchanged": true
+    }
+  ],
+  "derived_arithmetic": {
+    "Feng_spatial_mean_acceleration_m_s2": 13256.517128205129,
+    "Feng_spatial_mean_g_using9p80665": 1351.7885443250375,
+    "ACR1_dry_mass_penalty_kg": 84.55699999999999,
+    "ACR1_alternating_fuel_difference_kg": 0.23629999999999998
+  },
+  "distribution": "No third-party PDF copied; URLs and paraphrased evidence only"
+}

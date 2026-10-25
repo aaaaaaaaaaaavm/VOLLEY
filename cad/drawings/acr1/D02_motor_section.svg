@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1680 1188">
+<rect width="1680" height="1188" fill="white"/>
+<g font-family="DejaVu Sans, sans-serif">
+<rect x="26" y="26" width="1628" height="1136" fill="none" stroke="#172631" stroke-width="2"/>
+<text x="52" y="64" font-size="23" fill="#176d89" font-weight="700">VOLLEY-G5-ACR1</text>
+<text x="52" y="97" font-size="24" fill="#172631" font-weight="700">Motor section and launch datums</text>
+<text x="52" y="124" font-size="15" fill="#526572" font-weight="400">OUTLINE / PRELIMINARY ENGINEERING — dimensions in mm; no general manufacturing tolerance assigned</text>
+<line x1="26" y1="140" x2="1654" y2="140" stroke="#172631" stroke-width="1.3"/>
+<line x1="26" y1="1080" x2="1654" y2="1080" stroke="#172631" stroke-width="1.3"/>
+<text x="48" y="1111" font-size="16" fill="#172631" font-weight="700">D02  |  Revision A  |  25 October 2026  |  A3 landscape</text>
+<text x="48" y="1138" font-size="15" fill="#526572" font-weight="400">Source: frozen ACR1 native geometry and paired BOM/verification. Do not scale; stated dimensions govern.</text>
+<text x="1190" y="1111" font-size="16" fill="#172631" font-weight="400">Academic engineering outline</text>
+<text x="1190" y="1138" font-size="16" fill="#172631" font-weight="700">NOT A MANUFACTURING RELEASE</text>
+<text x="75" y="185" font-size="16" fill="#176d89" font-weight="700">SECTION A-A at X = 400  |  scale 1:2</text>
+<polyline points="656.000,482.000 656.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="656.000,482.000 456.000,482.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="698.000,486.000 656.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="456.000,482.000 456.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="456.000,486.000 414.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="698.000,480.000 698.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="414.000,480.000 446.000,480.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="414.000,486.000 414.000,480.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="446.000,470.000 446.000,480.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="666.000,480.000 698.000,480.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="666.000,470.000 666.000,480.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="446.000,470.000 666.000,470.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="414.000,473.000 428.000,473.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="414.000,479.000 414.000,473.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="428.000,473.000 428.000,479.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="428.000,479.000 414.000,479.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="698.000,472.000 684.000,472.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="698.000,466.000 698.000,472.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="684.000,466.000 684.000,472.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="684.000,466.000 698.000,466.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="462.000,486.000 650.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="462.000,490.000 462.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="650.000,490.000 650.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="712.000,490.000 650.000,490.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="462.000,490.000 400.000,490.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="458.000,486.000 458.000,482.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="400.000,486.000 458.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="458.000,482.000 654.000,482.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="400.000,490.000 400.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="654.000,486.000 654.000,482.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="654.000,486.000 712.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="712.000,490.000 712.000,486.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="462.000,466.000 650.000,466.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="462.000,462.000 462.000,466.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="650.000,462.000 650.000,466.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="650.000,462.000 712.000,462.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="400.000,462.000 462.000,462.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="654.000,466.000 654.000,470.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="654.000,466.000 712.000,466.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="654.000,470.000 458.000,470.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="712.000,462.000 712.000,466.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="458.000,466.000 458.000,470.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="400.000,466.000 458.000,466.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="400.000,462.000 400.000,466.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="356.000,536.000 356.000,416.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="356.000,536.000 696.000,536.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="356.000,416.000 456.000,416.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="696.000,416.000 696.000,448.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="656.000,416.000 696.000,416.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="396.000,448.000 696.000,448.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="396.000,448.000 396.000,504.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="396.000,504.000 696.000,504.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="696.000,504.000 696.000,536.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="456.000,384.000 456.000,416.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="472.000,416.000 640.000,416.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="472.000,384.000 472.000,416.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="640.000,384.000 640.000,416.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="656.000,384.000 656.000,416.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="456.000,384.000 472.000,384.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="640.000,384.000 656.000,384.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="466.000,488.000 466.000,504.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="466.000,488.000 646.000,488.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="466.000,504.000 646.000,504.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="646.000,488.000 646.000,504.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="466.000,448.000 466.000,464.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="466.000,448.000 646.000,448.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="466.000,464.000 646.000,464.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="646.000,448.000 646.000,464.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="308.000,444.000 308.000,508.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="308.000,444.000 340.000,444.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="308.000,508.000 340.000,508.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="340.000,428.000 340.000,444.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="340.000,508.000 340.000,524.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="304.000,428.000 340.000,428.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="308.000,524.000 308.000,556.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="308.000,524.000 340.000,524.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="264.000,556.000 308.000,556.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="264.000,436.000 264.000,556.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="264.000,436.000 304.000,436.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="304.000,428.000 304.000,436.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="736.000,516.000 752.000,516.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="736.000,508.000 736.000,516.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="776.000,516.000 752.000,516.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="752.000,516.000 752.000,498.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="700.000,508.000 736.000,508.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="732.000,604.000 732.000,636.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="700.000,604.000 732.000,604.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="732.000,636.000 776.000,636.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="700.000,588.000 700.000,604.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="700.000,588.000 732.000,588.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="732.000,524.000 732.000,588.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="700.000,524.000 732.000,524.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="700.000,508.000 700.000,524.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="776.000,516.000 776.000,636.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="776.000,516.000 776.000,490.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="648.000,498.000 648.000,490.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="648.000,498.000 752.000,498.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<polyline points="648.000,490.000 776.000,490.000" fill="none" stroke="#172631" stroke-width="0.75"/>
+<line x1="646.0" y1="464.0" x2="927" y2="464.0" stroke="#526572" stroke-width="0.8"/>
+<line x1="646.0" y1="488.0" x2="927" y2="488.0" stroke="#526572" stroke-width="0.8"/>
+<line x1="920" y1="464.0" x2="920" y2="488.0" stroke="#526572" stroke-width="0.9"/>
+<line x1="915" y1="469.0" x2="925" y2="459.0" stroke="#172631" stroke-width="1.3"/>
+<line x1="915" y1="493.0" x2="925" y2="483.0" stroke="#172631" stroke-width="1.3"/>
+<text x="930" y="476.0" font-size="16" fill="#172631" font-weight="400">12.0</text>
+<line x1="616.0" y1="466.0" x2="837" y2="466.0" stroke="#526572" stroke-width="0.8"/>
+<line x1="616.0" y1="486.0" x2="837" y2="486.0" stroke="#526572" stroke-width="0.8"/>
+<line x1="830" y1="466.0" x2="830" y2="486.0" stroke="#526572" stroke-width="0.9"/>
+<line x1="825" y1="471.0" x2="835" y2="461.0" stroke="#172631" stroke-width="1.3"/>
+<line x1="825" y1="491.0" x2="835" y2="481.0" stroke="#172631" stroke-width="1.3"/>
+<text x="840" y="476.0" font-size="16" fill="#172631" font-weight="400">10.0</text>
+<line x1="586.0" y1="470.0" x2="747" y2="470.0" stroke="#526572" stroke-width="0.8"/>
+<line x1="586.0" y1="482.0" x2="747" y2="482.0" stroke="#526572" stroke-width="0.8"/>
+<line x1="740" y1="470.0" x2="740" y2="482.0" stroke="#526572" stroke-width="0.9"/>
+<line x1="735" y1="475.0" x2="745" y2="465.0" stroke="#172631" stroke-width="1.3"/>
+<line x1="735" y1="487.0" x2="745" y2="477.0" stroke="#172631" stroke-width="1.3"/>
+<text x="750" y="476.0" font-size="16" fill="#172631" font-weight="400">6.0</text>
+<text x="1010" y="185" font-size="16" fill="#172631" font-weight="400">Nominal transverse stack (Z):</text>
+<text x="1010" y="212" font-size="16" fill="#172631" font-weight="400">Upper magnet inner face   +6</text>
+<text x="1010" y="239" font-size="16" fill="#172631" font-weight="400">Upper GFRP outer face     +5</text>
+<text x="1010" y="266" font-size="16" fill="#172631" font-weight="400">Upper copper face        +3</text>
+<text x="1010" y="293" font-size="16" fill="#172631" font-weight="400">Lower copper face        -3</text>
+<text x="1010" y="320" font-size="16" fill="#172631" font-weight="400">Lower GFRP outer face    -5</text>
+<text x="1010" y="347" font-size="16" fill="#172631" font-weight="400">Lower magnet inner face  -6</text>
+<text x="1010" y="374" font-size="16" fill="#172631" font-weight="400"></text>
+<text x="1010" y="401" font-size="16" fill="#172631" font-weight="400">Each magnet/package face gap: 1</text>
+<text x="1010" y="428" font-size="16" fill="#172631" font-weight="400">Copper active thickness: 6</text>
+<text x="1010" y="455" font-size="16" fill="#172631" font-weight="400">GFRP: 2 each active face</text>
+<text x="1010" y="482" font-size="16" fill="#172631" font-weight="400">Active bar: 7 × 6 = 42 mm²</text>
+<text x="1010" y="509" font-size="16" fill="#172631" font-weight="400">Return minimum: 7 × 3 = 21 mm²</text>
+<text x="1010" y="536" font-size="16" fill="#172631" font-weight="400"></text>
+<text x="1010" y="563" font-size="16" fill="#172631" font-weight="400">These are CAD nominal dimensions.</text>
+<text x="1010" y="590" font-size="16" fill="#172631" font-weight="400">Airgap budget is on sheet D05.</text>
+<text x="1010" y="617" font-size="16" fill="#172631" font-weight="400">No blanket fit/flatness grade set.</text>
+<text x="75" y="912" font-size="17" fill="#172631" font-weight="400">Active magnet X relative to carrier aft: 76 to 412 (336 active; 340 mounting envelope).</text>
+<text x="75" y="940" font-size="17" fill="#172631" font-weight="400">Home active X: 276 to 612. Release active X: 1576 to 1912.</text>
+<text x="75" y="968" font-size="17" fill="#172631" font-weight="400">216 stator belts at 8 pitch: X 230 to 1958; end allowance 46 at home/release.</text>
+<text x="75" y="996" font-size="17" fill="#172631" font-weight="400">Payload floor Z = 46. Carrier top plate Z = 14 to 30; bottom plate Z = -30 to -14.</text>
+<text x="75" y="1024" font-size="17" fill="#172631" font-weight="400">Native rails: -Y bounds Y -146 to -108, Z -40 to 24; +Y bounds Y 46 to 110, Z -80 to -7.</text>
+</g></svg>

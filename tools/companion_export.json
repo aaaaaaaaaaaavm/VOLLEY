@@ -1,6 +1,6 @@
 {
   "flagship_source_snapshot_commit": "06ebd07",
-  "note": "The paper and thesis retain a dated source snapshot. This record checks exact common results, not recency of all flagship work or published remote checkout content.",
+  "note": "Current ACR1 exact shared engineering pins are verified separately from the preserved five-file historical snapshot. Academic manuscripts are independently authored and carry their own ED1 source/output identities. No remote synchronization is inferred.",
   "pinned_common_files_sha256": {
     "analysis/mass_properties.py": "b8547e763806b0c740ee342c3278d85b1295d18f7cfe52be5239c9136c08d777",
     "analysis/motor_model.py": "aafef3beb496e8db3bb96c9314bd604a5976c24ccc856335bf2db67f3f8fa0f2",
@@ -8,5 +8,161 @@
     "analysis/results/mass_properties.json": "57f9ed579f3b24b00cd01dfa5a678e8421598546f122515d89eeff61d362c1c3",
     "analysis/results/motor_results.json": "afadd4d66271d9d1476b294ecea2723500ad813c0adc6d9648a07b83692c3875"
   },
-  "publication_scope": "pinned Gen5 academic results; companion repositories independently authored"
+  "publication_scope": "Current ACR1 engineering agreement and complete available package manifests, plus dated historical pins; academic editorial files retain their independent manifests.",
+  "schema_version": 2,
+  "historical_companion_prefix": "archive/2026-10-23-pre-acr1",
+  "current_acr1": {
+    "configuration_id": "VOLLEY-G5-ACR1",
+    "flagship_prefix": "validation/acr1",
+    "companion_prefix": "current",
+    "flagship_manifest": "validation/acr1/MANIFEST.json",
+    "companion_manifest": "current/MANIFEST.sha256",
+    "companion_root_manifest": "ARTIFACT_MANIFEST.sha256",
+    "files_sha256": {
+      "analysis/coupled_shot.py": "560088cb2a05e270b621700df4de1598cb209237b726bd5569e639c5a0f38155",
+      "analysis/COUPLED_SHOT.json": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "analysis/finite_motor.py": "99f5ed27abef68dfaa7c651de6f10bba3e2a602d12f83caa064bcecadf06aa07",
+      "analysis/FINITE_MOTOR.json": "546cf2f427f356fc043f7d5cfd3f6af9b4ab5d4ab84b582e1e7c30baf8fd89ec",
+      "analysis/arrest_force.py": "0af8c4a2f3ab7e6c933c2cb116f37d06db29da969a4d334c6249d7918906d0cd",
+      "analysis/ARREST_FORCE_MAP.json": "d143d2e7efa0583c7c2ddf73b47479e192891aa2ffbb7d5976747189bda1cd1f",
+      "analysis/current_field_force.py": "d30f1b2193b8b7ca0697b2fcb130db887b2a25035c67acb214aa2c779810b820",
+      "analysis/CURRENT_FIELD_FORCE.json": "0328a31527f75f9ab214e74952a6319dba295ca50d48f0eba19be7226772d076",
+      "analysis/surface_charge_check.py": "c79ddfb879987461d8bb3624df161ceea08874cc57f3499d6ca5c161c680d62d",
+      "analysis/SURFACE_CHARGE_CHECK.json": "baea34ac67dc69e368c4bb48f64fded0348f676238b82975be7c41e0f6e9c8da",
+      "analysis/transfer_interlocks.py": "0ab537f7a3138c21e2c371febdedddcd73c18cfb274c6d23ac02e3607c1ac450",
+      "analysis/TRANSFER_INTERLOCKS.json": "9f291fba1951d8fd64bf8a0d822a01be33f464f6c1099628b1341755899e0d4c",
+      "analysis/feeder_sizing.py": "b81a8a165938e3148acf37e0f525b1b798d650a945d947e780ab446b1cf0f59c",
+      "analysis/FEEDER_SIZING.json": "e3d9bc99b18c43d5d5ff529d4f7afcafb52e5da8da3bec53511365965f052ecf",
+      "analysis/RESOURCE_LEDGER.json": "054a6627261af1a21e9df558700ce00ecf32861e130d73cf01fb102b3a6a5917",
+      "cad/PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+      "cad/build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+      "cad/cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+      "cad/sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+      "cad/release/VOLLEY_G5_ACR1_home.json": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+      "cad/release/VOLLEY_G5_ACR1_home.FCStd": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a",
+      "cad/release/VOLLEY_G5_ACR1_home.step": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+      "cad/release/FINAL_CAD_MANIFEST.json": "77b8a5c2b4b30c16f0faa2fbdd7fc243b7952d417a7e962d2e4096ba1e7a1350",
+      "cad/release/MOTION_VERIFICATION.json": "94397ed52b572de5f5d1a9602b918935a9264875a0b5e92fa414e5edf7841104",
+      "cad/release/FINAL_REFINEMENT_VERIFICATION.json": "7ea762595dc3020e91839c5534e2d08472376ebef2b8d650936ead708f08c301",
+      "verification/COUPLED_SHOT_REVIEW.json": "8beb07acd3b2e82c4d41c5172c8b70820cb08ad362e20bf0dea47972291552d2",
+      "verification/MASS_CG_INERTIA_SUMMARY.json": "e31a4050250f5f8c96296a8509f830b0f4ecb30ace7e8954c3cad461487cc971",
+      "mission/mission_model.py": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "mission/MISSION_INPUTS.json": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f",
+      "mission/MISSION_CAPTURE.json": "584bdc90278c3a6c17283bcad214ec353a2d534d3b53d9a516f5c3618ded00ac",
+      "mission/MISSION_COMPARISON.json": "635b011caf6a02dd509cceba7be9bf03ddf534cef2aabf99c6dd83200cb6ede4",
+      "mission/SELECTED_CASES.json": "1901e736aa6980f823b8cf3b9b6a3e623efe8c1742324bc28366184e924df46b",
+      "mission/TARGETS.json": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "mission/NATIVE_REPLAY_CHECKS.json": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691"
+    },
+    "fact_checks": [
+      {
+        "path": "cad/PARAMETERS.json",
+        "keys": [
+          "configuration_id"
+        ],
+        "expected": "VOLLEY-G5-ACR1",
+        "operation": "equals"
+      },
+      {
+        "path": "cad/release/FINAL_CAD_MANIFEST.json",
+        "keys": [
+          "states"
+        ],
+        "expected": 8,
+        "operation": "length"
+      },
+      {
+        "path": "cad/release/MOTION_VERIFICATION.json",
+        "keys": [
+          "case_count"
+        ],
+        "expected": 154,
+        "operation": "equals"
+      },
+      {
+        "path": "cad/release/MOTION_VERIFICATION.json",
+        "keys": [
+          "failed_case_count"
+        ],
+        "expected": 0,
+        "operation": "equals"
+      },
+      {
+        "path": "cad/release/MOTION_VERIFICATION.json",
+        "keys": [
+          "all_sampled_cases_pass"
+        ],
+        "expected": true,
+        "operation": "equals"
+      },
+      {
+        "path": "analysis/TRANSFER_INTERLOCKS.json",
+        "keys": [
+          "accepted_nominal_commands"
+        ],
+        "expected": 24,
+        "operation": "equals"
+      },
+      {
+        "path": "analysis/TRANSFER_INTERLOCKS.json",
+        "keys": [
+          "tests"
+        ],
+        "expected": 166,
+        "operation": "equals"
+      },
+      {
+        "path": "analysis/TRANSFER_INTERLOCKS.json",
+        "keys": [
+          "all_passed"
+        ],
+        "expected": true,
+        "operation": "equals"
+      },
+      {
+        "path": "analysis/RESOURCE_LEDGER.json",
+        "keys": [
+          "CAD_dry_kg"
+        ],
+        "expected": 149.55671970039353,
+        "operation": "equals"
+      },
+      {
+        "path": "analysis/RESOURCE_LEDGER.json",
+        "keys": [
+          "installed_electrical_control_allowance_kg"
+        ],
+        "expected": 7.0,
+        "operation": "equals"
+      },
+      {
+        "path": "analysis/COUPLED_SHOT.json",
+        "keys": [
+          "cases"
+        ],
+        "expected": {
+          "count": 18,
+          "all_passed": true
+        },
+        "operation": "supported_shot_cases"
+      },
+      {
+        "path": "mission/MISSION_CAPTURE.json",
+        "keys": [
+          "accepted_native_replay_case_count"
+        ],
+        "expected": 9,
+        "operation": "equals"
+      },
+      {
+        "path": "mission/MISSION_CAPTURE.json",
+        "keys": [
+          "all_declared_numerical_checks_pass"
+        ],
+        "expected": true,
+        "operation": "equals"
+      }
+    ],
+    "boundary": "Portable document/native-replay adapters and academic editorial source differ by declared role; the listed principal physics, results, CAD home and mission captures must match exactly."
+  }
 }

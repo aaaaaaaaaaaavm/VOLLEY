@@ -1,0 +1,36 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "CAD_parameter_sha256": "98b460a5a9ff5632cafd00741bc379100cd4af5c9807e7646066fb2ba0a82f05",
+  "source_sha256": "d30f1b2193b8b7ca0697b2fcb130db887b2a25035c67acb214aa2c779810b820",
+  "displacement_m": 0.65,
+  "phases": [
+    {
+      "phase": "A",
+      "FE_result_sha256": "208406e54c88d59a1ff2b177bf9a7babe1010aefeaa91abbade592d7023ac7fc",
+      "solution_sha256": "c8aa37a3ffc9e81220e34d5f7a2f1be5b92a2f0853b0c845136d699a43feca60",
+      "phase_force_N_per_A": 0.9294449312829591
+    },
+    {
+      "phase": "B",
+      "FE_result_sha256": "1a1ed8b5b72ec608a0992ef5e7f765fe36270b958ae34ce32349354e915c1096",
+      "solution_sha256": "83603bd1e6c254b26928177a70734e20edf8c5dc13f9f2300aa9ddc4401d22f8",
+      "phase_force_N_per_A": -0.4117104667413716
+    },
+    {
+      "phase": "C",
+      "FE_result_sha256": "65210405aec3ce22ab2075c539cdf5fffe8ad2540a2f8640e14b8b67b8688920",
+      "solution_sha256": "e35f37ce4710dd96458427b7b5f967f9d55b69073cb1ba478ea9d933df0c1133",
+      "phase_force_N_per_A": -0.5167691080233899
+    }
+  ],
+  "force_amplitude_N_per_peak_phase_A": 1.396651382279166,
+  "uniform_bar_and_approximate_return_N_per_A": 1.3990545496111717,
+  "relative_difference": -0.0017177080998547437,
+  "method": "Volume integration of actual linear-tetrahedron DC current density with analytic PM field at element centroids",
+  "scope": "One interior station, all three actual connected phases. MeshesA2mm/B,C3mm. Not a transient electromagnetic or hardware test.",
+  "limitations": [
+    "Centroid quadrature and linear current elements; sharp-corner current concentrations mesh dependent",
+    "Detailed lead currents, AC skin/proximity and conductive/magnetic reaction omitted",
+    "This cross-check does not replace the full position map or its stated uncertainty"
+  ]
+}

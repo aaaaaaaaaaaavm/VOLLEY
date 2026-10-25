@@ -1,0 +1,123 @@
+{
+  "view_id": "01_assembly_isometric",
+  "state": "home",
+  "render_engine": "Blender Workbench 4.3.2",
+  "projection": "ORTHOGRAPHIC",
+  "resolution_px": [
+    2800,
+    2100
+  ],
+  "source_mesh_file": "/workspace/volley-work/2026-10-24-gen5-acr1/visuals/meshes/home.json",
+  "source_mesh_sha256": "7419819c2833fd23417620fa1b9df8fc858ae987db842c209671dfc81408db7d",
+  "native_provenance": {
+    "state": "home",
+    "native_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.FCStd",
+    "native_sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a",
+    "step_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.step",
+    "step_sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+    "bom_path": "/workspace/volley-work/2026-10-24-gen5-acr1/cad/release/VOLLEY_G5_ACR1_home.json",
+    "bom_sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+    "source_sha256": {
+      "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+      "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+      "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+      "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+      "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+      "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+    },
+    "independent_step_readback": {
+      "path": "/workspace/volley-work/2026-10-24-gen5-acr1/verification/FINAL_STEP_READBACK_SUMMARY.json",
+      "sha256": "4cb25a4904842381a52d4d279d95a7582e2354368c9877ed0c3ea3c9ee3a5c77",
+      "pass": true
+    },
+    "tessellation": {
+      "tool": "FreeCAD MeshPart.meshFromShape",
+      "linear_deflection_mm": 0.3,
+      "angular_deflection_rad": 0.15,
+      "relative": false,
+      "units": "meters;native coordinates divided by1000",
+      "purpose": "Visualization only;not analysis mesh"
+    },
+    "object_count": 387,
+    "triangle_count": 242510
+  },
+  "camera": {
+    "location_m": [
+      4.636751651763916,
+      -3.511751651763916,
+      3.8532514572143555
+    ],
+    "rotation_euler_rad": [
+      0.9553165435791016,
+      -1.1763476237547366e-07,
+      0.7853981852531433
+    ],
+    "ortho_scale_m": 4.131031513214111,
+    "frame_height_m": 3.098273730358562
+  },
+  "CAD_object_count": 387,
+  "rendered_CAD_object_count": 387,
+  "hidden_CAD_objects": [],
+  "hidden_parts_disclosure": "All CAD parts present; view framing may crop distant geometry",
+  "annotation_targets_m": [
+    {
+      "text": "12 installed storage cells",
+      "uv": [
+        0.055,
+        0.8
+      ],
+      "target": [
+        0.434,
+        -0.25,
+        0.49
+      ],
+      "target_projected_uv": [
+        0.33892935514450073,
+        0.5972438454627991
+      ]
+    },
+    {
+      "text": "Carrier and captive pallet",
+      "uv": [
+        0.055,
+        0.26
+      ],
+      "target": [
+        0.434,
+        0,
+        0.041
+      ],
+      "target_projected_uv": [
+        0.38172173500061035,
+        0.5118592381477356
+      ]
+    },
+    {
+      "text": "Fixed stator and 2250 mm guide track",
+      "uv": [
+        0.55,
+        0.27
+      ],
+      "target": [
+        1.6,
+        0,
+        0
+      ],
+      "target_projected_uv": [
+        0.5813054442405701,
+        0.3474147617816925
+      ]
+    }
+  ],
+  "fabricated_geometry": "None. Text, leader lines, scale bar, and annotation backing panels are separate display-only objects.",
+  "outputs": {
+    "01_assembly_isometric.png": {
+      "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+      "bytes": 2092045
+    },
+    "01_assembly_isometric.jpg": {
+      "sha256": "06299aff49fa623566d86280cb27661ba1075a2e60f991989a8e9242b639a689",
+      "bytes": 479303
+    }
+  }
+}

@@ -1,0 +1,515 @@
+{
+  "scope": "Original40 computational programme rows only; recommendations require acceptance at the stated modeling boundary and do not change tracker states.",
+  "records": [
+    {
+      "task_id": "PLAN-C0",
+      "criterion": "Payload, carrier, target lifetime and disposal assumptions",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "study_inputs.json"
+      ],
+      "conclusion": "Frozen lunar payload,280kg dry/20kg reserve carrier,30day study floor and independent disposal; customer acceptance external.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-C1",
+      "criterion": "Bounded TLI, LOI, reserve and disposal mass fractions",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Ideal TLI/LOI mass fractions,1/4/12 manifests and separate starting energies; finite TLI/LOI and selected source-rated carrier remain unclosed.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-C2",
+      "criterion": "Useful bound target orbits mapped to release vector and recoil",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "STUDY_RESULTS.json",
+        "LUNAR_NATIVE_RESULTS.json"
+      ],
+      "conclusion": "Nine signed apolune release maps with exact finite-host split/recoil and native30day20/40-degree cases; last-payload snapshots only.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-D0",
+      "criterion": "Declared payload/mission cases and success criteria",
+      "recommendation": "partial",
+      "evidence": [
+        "inputs/MISSION_INPUTS.json",
+        "inputs/MISSION_COMPARISON.json"
+      ],
+      "conclusion": "Matched current twelve3U ACR1 targets/epoch retained; actual customers and original business templates remain unverified.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-D1",
+      "criterion": "Dated source-backed current comparator matrix covering equivalent manifest capacity, sequencer, interface, installed hardware and evidence maturity",
+      "recommendation": "partial",
+      "evidence": [
+        "../finite_burn_review/",
+        "../../MARKET_AND_CUSTOMER_FIT.md"
+      ],
+      "conclusion": "Existing source-backed comparator cards retained; no new primary-source/provider capability check made here.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-D2",
+      "criterion": "Matched host maneuver + conventional release case using the same installed mass, volume, power, thermal, propellant, operations and retained-hardware accounting boundary",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json",
+        "inputs/MISSION_COMPARISON.json"
+      ],
+      "conclusion": "Matched host-assisted current spring/ACR1 comparison and necessary mass bound; full installed power/thermal/operations/reliability boundary remains incomplete.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-D3",
+      "criterion": "Flown orbital-transport service comparator under the same mission targets with dated source-backed service and interface assumptions",
+      "recommendation": "incomplete",
+      "evidence": [
+        "../finite_burn_review/"
+      ],
+      "conclusion": "Existing OTV provider evidence retained; same-target actual provider-service campaign absent.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-H1",
+      "criterion": "Traceable facts and explicit unknowns for candidate hosts",
+      "recommendation": "incomplete",
+      "evidence": [
+        "../finite_burn_review/"
+      ],
+      "conclusion": "Historical source cards retained. Current primary-source recheck and concrete host ICD absent.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-H3",
+      "criterion": "Host-specific mass/inertia, exact recoil/attitude impulse, clearance and recovery bounds with real control authority and independent dynamics evidence",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json",
+        "../acr1/mission/NATIVE_REPLAY_CHECKS.json"
+      ],
+      "conclusion": "Current finite-force recoil/recovery evidence retained plus numeric angular-impulse demands; real host mass/inertia/control authority and independent attitude dynamics absent.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-L0",
+      "criterion": "Same mass, retention and staging target across providers",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "1/4/12 same lunar mass/staging/disposal assumptions calculated; no matched named-provider capacity closure.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-L2",
+      "criterion": "Source-backed Isp/thrust/restart/endurance/mass/services",
+      "recommendation": "incomplete",
+      "evidence": [
+        "study_inputs.json"
+      ],
+      "conclusion": "20N/220s is an investigation assumption,not an engine card; no supplier restart/endurance/mass/services inferred.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-N0",
+      "criterion": "Dated reference article/payload/mission, reviewer-feedback map, explicit acceptance bands, decision record, and named payload/host/provider-ICD surrogate",
+      "recommendation": "partial",
+      "evidence": [
+        "study_inputs.json",
+        "inputs/MISSION_INPUTS.json"
+      ],
+      "conclusion": "Controlled ACR1 and separate lunar study criteria declared. Actual customer/provider ICD still absent; Gen6mixed studies not merged.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-N1",
+      "criterion": "Reproducible 2/4/12-payload campaign with conserved/limiting checks, resource/error histories, failures, bounded release-state budget and independent astrodynamics cross-check",
+      "recommendation": "partial",
+      "evidence": [
+        "../acr1/mission/MISSION_COMPARISON.json",
+        "../acr1/mission/NATIVE_REPLAY_CHECKS.json"
+      ],
+      "conclusion": "Accepted current twelve3U finite-host campaign retained; full common2/4/12 failure/resource/uncertainty campaign not completed by these extensions.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-N2",
+      "criterion": "Named candidate or justified rejection, force/travel/energy/load specification, sensitivities, 6-DOF contact/recontact closure and discriminating coupon rationale",
+      "recommendation": "partial",
+      "evidence": [
+        "../acr1/analysis/DESIGN_BUDGETS.json"
+      ],
+      "conclusion": "Current Gen5 mechanism calculations retained. Gen6 contact/recontact selection/correlation gates remain separate and unresolved.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-N3",
+      "criterion": "Sourced full installed mass/energy/thermal/fault ledger, bounded unknowns, packaging/load paths, failure consequences and dated keep/modify/reject decision",
+      "recommendation": "partial",
+      "evidence": [
+        "inputs/RESOURCE_LEDGER.json",
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Current ACR1 modeled installed mass/allocation and host demands retained; Gen6 missing hardware and real fault architecture not inferred closed.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-N5",
+      "criterion": "Controlled states/faults, provisional geometry, BOM, fixture, assembly/inspection, instrumentation/calibration/uncertainty and frozen acceptance/rework/stop criteria",
+      "recommendation": "partial",
+      "evidence": [
+        "../acr1/analysis/DESIGN_BUDGETS.json"
+      ],
+      "conclusion": "Accepted computational geometry/budgets retained; source-rated first article,instrumentation,calibration/build release and measurements external.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-C3",
+      "criterion": "Lunar gravity, Sun/Earth perturbations, ephemeris, lifetime",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "../lunar_native_coast/RESULTS.json",
+        "LUNAR_NATIVE_RESULTS.json"
+      ],
+      "conclusion": "Reused18 longer-horizon native coast cases and18 new signed-release cases with explicit lunar harmonics,Earth/Sun ephemerides and gravity-degree sensitivity; no terrain/mission qualification.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-C4",
+      "criterion": "Monte Carlo 3-sigma speed/angular requirements",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "NAVIGATION_REQUIREMENTS.json"
+      ],
+      "conclusion": "16,384-sample inverse speed/angle requirements for declared1km/1mrad study bands,4K comparison and derivative refinement; osculating covariance only, measured/perturbed-lifetime accuracy external.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-C5",
+      "criterion": "After every release, updated carrier mass/translational state/attitude/angular momentum/propellant/recovery time, optimized release order/direction and retained infeasible manifests",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "CAMPAIGN_RESULTS.json",
+        "CAMPAIGN_NATIVE_RESULTS.json",
+        "CAMPAIGN_DISPOSAL_RESULTS.json",
+        "CAMPAIGN_REPORT.md",
+        "campaign_inputs.json"
+      ],
+      "conclusion": "Completed20actual finite-host policy/authority/fault campaigns,7152cell/order/sign/roll candidates,full per-release mass/CG/inertia/state/quaternion/angular-momentum/propellant recovery records,retained missed-slot cases,independent native host replay and24actual-state payload30day lifetime replays. Surviving demanding5Nm/20deg/s allocated case is conditional; actual host,physical source/contact validation and precise customer-placement acceptance remain external.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-C6",
+      "criterion": "Valid engine-only disposal solution independent of successful CubeSat releases, with any release recoil treated only as a bounded deterministic trim credit",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "DISPOSAL_NATIVE_RESULTS.json",
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "24 actual native finite-engine disposal replays,including all12 failed releases retained and duration/pointing errors; independent reserve and zero recoil credit. Earth-return/high-lunar/escape comparisons retain unsupported paths as unclosed. Site/approval/supplier capability external.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-C7",
+      "criterion": "Velocity range, minimum increment, 3-sigma accuracy, pointing, structural loads, retention duration, thermal/vacuum/EMC, release count/cadence, carrier services and abort/safe modes flowed into N2/N3/N5",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "HARDWARE_FLOWDOWN.json",
+        "C7_HARDWARE_REQUIREMENTS.md",
+        "H0_DEMAND_SHEET.md"
+      ],
+      "conclusion": "Nine explicit hardware/service/abort requirement rows translate the surviving bounded campaign into N2/N3/N5. Values and evidence are source-linked; missing real provider/physical thermal,vacuum,EMC,material andmeasurement inputs remain acceptance gates. Near-term LEO article is not redefined.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-D4",
+      "criterion": "Same orbital separation, time, fuel and useful-state metrics",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json",
+        "inputs/MISSION_COMPARISON.json"
+      ],
+      "conclusion": "Matched current target-state/time/fuel outcomes retained; broader provider/Gen6 alternatives are not replaced by the ACR1 campaign.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-D5",
+      "criterion": "Same manifest/missions and full installed mass, volume, power, thermal, operations and reliability accounting across VOLLEY, conventional release, host-assisted release and relevant OTV alternatives",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "84.556720kg proxy dry penalty and64.556720kg optimistic lower net penalty under20kg reserve; full installed supplier/volume/power/thermal/reliability comparison absent.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-D6",
+      "criterion": "Four source-backed comparison files and bounded public claims",
+      "recommendation": "partial",
+      "evidence": [
+        "README.md",
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Public source/result/figure/verification package prepared locally; no remote publication or four original comparison-file completion claim.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-H0",
+      "criterion": "Calculated envelope, loads, power, pointing, recoil and disposal needs",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "H0_DEMAND_SHEET.md",
+        "HARDWARE_FLOWDOWN.json",
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Numeric actual geometry/mass,modeled drive/pulse/average/peak power andheat,loads,pointing/navigation,recoil/attitude anddisposal demands calculated. Unallocated controller,lock/brake,harness/heater/host services remain explicit additive terms,not zero; demand sheet is complete at the represented-model boundary,not full installed host acceptance.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-H2",
+      "criterion": "Same 2/4/12-payload cases across viable hosts",
+      "recommendation": "incomplete",
+      "evidence": [
+        "../acr1/mission/MISSION_COMPARISON.json"
+      ],
+      "conclusion": "Generic500kg host,twelve3U campaign retained; common2/4/12 real-host runs absent.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-H4",
+      "criterion": "Break-even map under comparable host credits",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Necessary mounted/free-flight mass accommodation condition retained; no source-backed autonomous bus/host-service break-even map.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-H5",
+      "criterion": "One-page question sets and notional load-path sketches",
+      "recommendation": "bounded_study_complete",
+      "evidence": [
+        "H5_PROVIDER_QUESTIONS.md",
+        "H5_INTERFACE_SKETCH.md",
+        "H0_DEMAND_SHEET.md"
+      ],
+      "conclusion": "Prepared three concrete question sets andnotional actual-coordinate load-path/electrical/mission interface sketches. No provider contact,answers,approved bolt pattern orcompliance fabricated.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-H6",
+      "criterion": "At least three evidence-classified reference hosts",
+      "recommendation": "incomplete",
+      "evidence": [
+        "study_inputs.json"
+      ],
+      "conclusion": "Generic host and independent lunar surrogate are not three evidence-classified real host selections.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-L1",
+      "criterion": "Per-provider delivered state at separation plus carrier-only delta-v budget; no comparison that treats LEO delivery and TLI/direct-lunar delivery as equivalent carrier starting conditions",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "LEO versus launch-supplied-TLI boundaries explicitly separated; per-provider delivered states require primary-source recheck.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-L3",
+      "criterion": "TLI, LOI, reshaping and disposal closure",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json",
+        "DISPOSAL_NATIVE_RESULTS.json"
+      ],
+      "conclusion": "Same staging orbit,ideal TLI/LOI and independent finite disposal calculated; no viable actual source-rated carrier or finite TLI/LOI closure.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-L4",
+      "criterion": "Mass, propellant, transfer, operations, power, thermal and cost",
+      "recommendation": "partial",
+      "evidence": [
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Mass/propellant/transfer-energy and disposal burden quantified; installed power/thermal/operations/provider cost remain incomplete.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-L5",
+      "criterion": "Separate flight proven, ground tested and concept claims",
+      "recommendation": "incomplete",
+      "evidence": [
+        "study_inputs.json"
+      ],
+      "conclusion": "Model/surrogate/catalog/source evidence classes explicit; no new current provider flight/ground/concept classification.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-L6",
+      "criterion": "Indian, commercial small-launch and host-agnostic cases",
+      "recommendation": "incomplete",
+      "evidence": [
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Host-agnostic energy boundaries computed; Indian and commercial small-launch reference architectures lack current provider closure.",
+      "tracker_state_changed": false,
+      "additional_reference_evidence": [
+        "../reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+        "../../docs/REFERENCE_INTERFACES_ACR1.md"
+      ]
+    },
+    {
+      "task_id": "PLAN-P1",
+      "criterion": "Controlled load paths, stress/modes, fits and tolerance closure",
+      "recommendation": "partial",
+      "evidence": [
+        "inputs/DESIGN_BUDGETS.json"
+      ],
+      "conclusion": "Accepted ACR1 structural/tolerance allocations reused; no transfer to unselected Gen6 configuration or measured manufactured fits.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-P2",
+      "criterion": "Vacuum heat paths, repeated-duty properties and contamination",
+      "recommendation": "partial",
+      "evidence": [
+        "inputs/DESIGN_BUDGETS.json",
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Accepted thermal/material sensitivities and source-derived pulse losses retained; measured repeated-duty/vacuum/contact properties and contamination acceptance external.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-P3",
+      "criterion": "Off-axis, shock, wear, faults, recontact and discrepancy disposition supported by independent solver/raw-output evidence and targeted measurements",
+      "recommendation": "partial",
+      "evidence": [
+        "inputs/DESIGN_BUDGETS.json",
+        "NAVIGATION_REQUIREMENTS.json"
+      ],
+      "conclusion": "Analytical contact/uncertainty limits explicit; no new independent contact raw solver or targeted physical measurements supplied.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-P5",
+      "criterion": "Controlled CAD/STEP, dimensioned drawings, tolerance stack, BOM/interface revision and source-freshness evidence for the selected configuration",
+      "recommendation": "partial",
+      "evidence": [
+        "inputs/SIGNATURES_home.json",
+        "../acr1/cad/release/"
+      ],
+      "conclusion": "Controlled current native source identities retained; complete manufactured/selected Gen6 drawings and release not established.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-P6",
+      "criterion": "Measurements, model correlation, discrepancy log, independent disposition and publication/provenance review",
+      "recommendation": "partial",
+      "evidence": [
+        "check_capture.py"
+      ],
+      "conclusion": "Numerical/source checks reproduced; no model-correlated measurements or independent expert disposition fabricated.",
+      "tracker_state_changed": false
+    },
+    {
+      "task_id": "PLAN-P7",
+      "criterion": "Specific envelope, loads, services, policy and acceptance inputs",
+      "recommendation": "incomplete",
+      "evidence": [
+        "STUDY_RESULTS.json"
+      ],
+      "conclusion": "Numeric host demand supplied for external review; actual host/customer policy,ICD,load and acceptance inputs remain external.",
+      "tracker_state_changed": false
+    }
+  ]
+}

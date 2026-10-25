@@ -1,0 +1,45 @@
+{
+  "configuration": "VOLLEY-G5-ACR1",
+  "review_type": "automated source and semantic checks + human-readable editorial artifacts",
+  "automated_checks": [
+    "overview: captive pallet invariant and text/sprite nonoverlap at101conceptual poses; payload departs along+X; carrier returns",
+    "custody: captive pallet invariant and text/sprite nonoverlap at101conceptual poses; payload departs along+X; carrier returns",
+    "All four accepted image hashes match frozen view provenance",
+    "All source pins match",
+    "Twelve-release source schedule and numeric trajectory retained",
+    "All four duration bands met; captions/transcripts/posters and stills exist",
+    "Conceptual motion and fault branch explicitly identified",
+    "No arbitrary orbital or inclination changes; computed host history used"
+  ],
+  "storyboard_editorial_review": "R3 recovery/fault frames and all mission panels inspected: neutral evidence-class labels, one fault-validation qualification, retained comparator conclusion and numerical/physical accuracy distinction. Text/sprite bounds verified in every generated recovery frame.",
+  "release_identity": "containing Git commit or release tag",
+  "expensive_render_gate": "Passed for source-driven R3 overview/custody/mission exports",
+  "animatic_review": {
+    "status": "passed",
+    "changed_films": [
+      "overview",
+      "custody",
+      "mission"
+    ],
+    "unchanged_films": [
+      "methods"
+    ],
+    "dimensions_px": [
+      640,
+      360
+    ],
+    "fps": 2,
+    "review_frames": [
+      "docs/visual-source/animatic-R3-overview-review.png",
+      "docs/visual-source/animatic-R3-custody-review.png",
+      "docs/visual-source/animatic-R3-mission-review.png"
+    ],
+    "durations_s": {
+      "overview": 72,
+      "custody": 78,
+      "mission": 108,
+      "methods": 54
+    }
+  },
+  "review_time_utc": "2026-10-25T08:09:23.166867+00:00"
+}

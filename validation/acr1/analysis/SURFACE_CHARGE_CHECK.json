@@ -1,0 +1,70 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "method": "Independent source-face quadrature with exact depth integration",
+  "CAD_parameter_sha256": "98b460a5a9ff5632cafd00741bc379100cd4af5c9807e7646066fb2ba0a82f05",
+  "source_sha256": "c79ddfb879987461d8bb3624df161ceea08874cc57f3499d6ca5c161c680d62d",
+  "reference_source_sha256": "99f5ed27abef68dfaa7c651de6f10bba3e2a602d12f83caa064bcecadf06aa07",
+  "cases": [
+    {
+      "face_order": 10,
+      "x_m": 0,
+      "surface_charge_N_per_A": 1.3285610397721406,
+      "analytic_cuboid_N_per_A": 1.3285610486679147,
+      "relative_difference": 6.695796272406094e-09
+    },
+    {
+      "face_order": 10,
+      "x_m": 0.65,
+      "surface_charge_N_per_A": 1.3286734580826458,
+      "analytic_cuboid_N_per_A": 1.3286734505836229,
+      "relative_difference": 5.643992476001786e-09
+    },
+    {
+      "face_order": 10,
+      "x_m": 1.3,
+      "surface_charge_N_per_A": 1.3282150038073035,
+      "analytic_cuboid_N_per_A": 1.3282150070872005,
+      "relative_difference": 2.4694021699393384e-09
+    },
+    {
+      "face_order": 10,
+      "x_m": 1.51,
+      "surface_charge_N_per_A": 0.6765310820839512,
+      "analytic_cuboid_N_per_A": 0.6765310800358685,
+      "relative_difference": 3.027329806227594e-09
+    },
+    {
+      "face_order": 16,
+      "x_m": 0,
+      "surface_charge_N_per_A": 1.328561048668125,
+      "analytic_cuboid_N_per_A": 1.3285610486679147,
+      "relative_difference": 1.5827367592542224e-13
+    },
+    {
+      "face_order": 16,
+      "x_m": 0.65,
+      "surface_charge_N_per_A": 1.3286734505844258,
+      "analytic_cuboid_N_per_A": 1.3286734505836229,
+      "relative_difference": 6.042969331977181e-13
+    },
+    {
+      "face_order": 16,
+      "x_m": 1.3,
+      "surface_charge_N_per_A": 1.3282150070871115,
+      "analytic_cuboid_N_per_A": 1.3282150070872005,
+      "relative_difference": 6.703725383302484e-14
+    },
+    {
+      "face_order": 16,
+      "x_m": 1.51,
+      "surface_charge_N_per_A": 0.6765310800358706,
+      "analytic_cuboid_N_per_A": 0.6765310800358685,
+      "relative_difference": 3.117999762370059e-15
+    }
+  ],
+  "limitations": [
+    "Shared uniform NdFeB polarization1.32T, air/permeability assumptions and current geometry",
+    "Checks active-copper force component; return contribution has a separate approximate integration",
+    "Not a physical magnetic test or a nonlinear3D FEM solution"
+  ]
+}

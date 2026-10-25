@@ -1,0 +1,108 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "purpose": "Scientific CAD-derived submission figures",
+  "native_builder_sha256": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+  "view_count": 4,
+  "images": 8,
+  "all_images_visually_reviewed": true,
+  "all_inputs_unchanged": true,
+  "render_dimensions_px": [
+    2800,
+    2100
+  ],
+  "files": {
+    "README.md": {
+      "sha256": "3b0eed76f04e0bb2210048e9c8f0bc2d579e1d76fc28dd698b9421ec0a6912db",
+      "bytes": 3410
+    },
+    "render_cad_views.py": {
+      "sha256": "c72ec143963702e5ccb463325d72159a15c2ba429cfd562ad5ed0cb5d5af7827",
+      "bytes": 12561
+    },
+    "export_native_meshes.py": {
+      "sha256": "f627cdbd6671c80b8caa7c3bb229722485bf5e60dc367587f2f9bc9c728322bd",
+      "bytes": 2851
+    },
+    "VOLLEY_G5_ACR1_scientific_views.blend": {
+      "sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06",
+      "bytes": 58345728
+    },
+    "VIEW_PROVENANCE.json": {
+      "sha256": "44b3eecf038c3adcc1f0288cc92b3cd6c36fdf583b89279b35d9e40bf54e2f11",
+      "bytes": 28254
+    },
+    "MESH_PROVENANCE.json": {
+      "sha256": "d791962304533365807bdd5c770527c143d553da1b8ae63c09941d93e18ebb66",
+      "bytes": 8432
+    },
+    "READ_ONLY_INPUT_CHECK.json": {
+      "sha256": "4414453942b59e687227eafea1d72711911ea60591b79a43d923f2abeb4408ca",
+      "bytes": 2926
+    },
+    "renders/01_assembly_isometric.jpg": {
+      "sha256": "06299aff49fa623566d86280cb27661ba1075a2e60f991989a8e9242b639a689",
+      "bytes": 479303
+    },
+    "renders/01_assembly_isometric.png": {
+      "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+      "bytes": 2092045
+    },
+    "renders/01_assembly_isometric_provenance.json": {
+      "sha256": "60e155794f570284ea251056e300fbba7fcdfe6877a58d3b46ec1621afaf1f69",
+      "bytes": 3975
+    },
+    "renders/02_handoff_pallet_locks.jpg": {
+      "sha256": "9d7124a1cf8579cab251c39feb31a1bae4945d1dc70f3b9505a2dfa7050aa10a",
+      "bytes": 484896
+    },
+    "renders/02_handoff_pallet_locks.png": {
+      "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123",
+      "bytes": 3199036
+    },
+    "renders/02_handoff_pallet_locks_provenance.json": {
+      "sha256": "ca1e43191362bcf0d5c87bcc79c02ec6cd51e5d3a60ecceb0f6957289d94c9df",
+      "bytes": 12991
+    },
+    "renders/03_captured_source_level.jpg": {
+      "sha256": "9728b73c49ffe19c6eb0c25e6d21731b6047f402f89ea71638f00e784a927f18",
+      "bytes": 539348
+    },
+    "renders/03_captured_source_level.png": {
+      "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+      "bytes": 2576504
+    },
+    "renders/03_captured_source_level_provenance.json": {
+      "sha256": "d1fddefb2bfe462e183efcb6c7ac1b4eef5f299abde33c584ae3c65e6f364440",
+      "bytes": 4005
+    },
+    "renders/04_clear_docked.jpg": {
+      "sha256": "d7128d9e7c7a690629999769aa19beece22a1c9b39f090f7b2fc1834e74c88a8",
+      "bytes": 560202
+    },
+    "renders/04_clear_docked.png": {
+      "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+      "bytes": 3671106
+    },
+    "renders/04_clear_docked_provenance.json": {
+      "sha256": "e58b1aa06711dbc683e4e600d38363939efc5d326e4606f5f01afc5867d1ca65",
+      "bytes": 3954
+    },
+    "meshes/captured.json": {
+      "sha256": "0baf59d0ce9a93ff474d4dddaf1af81c4ef5d6108197ec385d0f89465d1dadef",
+      "bytes": 7098217
+    },
+    "meshes/clear.json": {
+      "sha256": "49b7f1c696dcc4706df94d2b2cd45ec1d52d8e6aa533aae6e111bab259b2af50",
+      "bytes": 7097723
+    },
+    "meshes/handoff.json": {
+      "sha256": "b27ab7dccb27482143f6d22822efc5ba7b8d259bd798174c08fbf934ecf26c88",
+      "bytes": 7098371
+    },
+    "meshes/home.json": {
+      "sha256": "7419819c2833fd23417620fa1b9df8fc858ae987db842c209671dfc81408db7d",
+      "bytes": 7097700
+    }
+  },
+  "boundary": "No geometry edits. Handoff detail omissions are disclosed. Annotation objects are display graphics,not hardware."
+}

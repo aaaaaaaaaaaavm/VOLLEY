@@ -1,0 +1,40 @@
+{
+  "adapter_sha256": "143e2a2384eaf7192dca0f95698dc0c6f4f83f88374d4541b6b0bafcd2ade95f",
+  "captured_source_path": "campaign_native/point_mass.script",
+  "captured_source_sha256": "25d12d95b7c966d7ceb6b5f578a0da4d81d5f6fdd3a2ea13df0defc1063ae454",
+  "translated_source_sha256": "483db42b3abf1d112af7c0b08c15b38b16a9c08d7e75b42688ffe0c27448701e",
+  "selected_GMAT_binary_sha256": "f7cf5b3188902353ed4245bb21c22c1afa0451efdd221b7e19f6a74dc7ed1d93",
+  "selected_gravity_sha256": "f80c5a30f8aa0c67bcefb6a0ad00ac6a06c8d5a71bee4465d72a50b1b7c16e46",
+  "selected_data_sha256": {
+    "bin/gmat_startup_file.txt": "306597283230abc86d953491c9e401f2c9139ad9cdefa1f944508da9f631fddf",
+    "data/planetary_ephem/de/leDE1900.421": "5a423de949103ec14766ebc990e9af96808559d2dc84c261b941fadd754a52a0",
+    "data/planetary_coeff/SPICELunaCurrentKernel.bpc": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+    "data/planetary_coeff/SPICELunaFrameKernel.tf": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+    "data/time/tai-utc.dat": "3524e1ae34d67e858873a89e59983bbc5bd100221da898e796c1b36036a310c3"
+  },
+  "selected_runtime_matches_captured_core_inputs": true,
+  "translated_startup_sha256": "47217e87836852b90ac691c4d21c21d8d4c9507600aa6d4e61215d431a61a7cd",
+  "original_sources_modified": false,
+  "invocation": [
+    "/workspace/volley-work/runtime-gmat/GMAT/R2026a/bin/GmatConsole-R2026a",
+    "--startup_file",
+    "/tmp/volley-pcs-portable-validated/gmat_startup_file.txt",
+    "--logfile",
+    "/tmp/volley-pcs-portable-validated/native_gmat.log",
+    "--run",
+    "/tmp/volley-pcs-portable-validated/point_mass.script",
+    "--exit"
+  ],
+  "exit_code": 0,
+  "mission_run_completed": true,
+  "reports": [
+    {
+      "path": "point_mass_host.txt",
+      "sha256": "c6858f586a78916d94fb59e12be53cfa3ff605aceed07fa7f5dee18f97c31193",
+      "gzip_sha256": "5785696329d93f7fc075b428336c9b9e28aae66fcb928bddd1dd72c4bfa66ae6",
+      "captured_decompressed_sha256": "c6858f586a78916d94fb59e12be53cfa3ff605aceed07fa7f5dee18f97c31193",
+      "identical_decompressed_output": true
+    }
+  ],
+  "interpretation": "Path/startup adapter run. Original executed source identities remain unchanged. A changed runtime is recorded as changed evidence,not relabeled as the accepted capture."
+}

@@ -1,5 +1,7 @@
 # Prior art
 
+> **Historical source review — July 2026; retained 25 October 2026.** The dated readings and corrections below belong to earlier VOLLEY revisions. The [current related-work review](RELATED_WORK.md) and [ACR1 source registry](../validation/literature_acr1/SOURCES_AND_COMPARISON.json) identify the sources and conditions used by the current study. Third-party source credits and original findings remain attached to this dossier.
+
 > All five works below have been read. Metadata verified against the publisher record; all
 > numbers quoted are the authors' own unless marked *derived here*, in which case the arithmetic is
 > shown. This file was first written from abstracts alone on 2026-07-29 and three of its

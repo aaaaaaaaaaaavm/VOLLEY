@@ -1,0 +1,149 @@
+{
+  "configuration_id": "VOLLEY-G5-ACR1",
+  "study": "Full actual chassis single-solid BREP; balanced normal attraction;6scalar rigid-mode-removing constraints",
+  "final_CAD_identity_status": "Final source-generated chassis BREP byte-identical to analyzed candidate; seeFINAL_CAD_IDENTITY.json. Overall assembly scope remains excluded.",
+  "input_BREP_sha256": "d4b53d520c1bc0d33c1c36c29dddeb775d0b4147ec24dbb342a4fc43e97460a1",
+  "h_max_mm": 8.0,
+  "nodes": 112519,
+  "C3D10_elements": 62198,
+  "minimum_scaled_jacobian": 0.07541886793629994,
+  "connected_mesh_components": 1,
+  "normal_force_each_array_N": 3010.4806312835844,
+  "pressure_patch_areas_mm2": {
+    "upper": 30239.99999999975,
+    "lower": 30239.99999999979
+  },
+  "volume_before_fragment_mm3": 3117425.815727472,
+  "volume_after_fragment_mm3": 3117425.8157274765,
+  "rigid_constraint_rank": 6,
+  "constraints": [
+    {
+      "node": 2111,
+      "axis": 1,
+      "coordinates_mm": [
+        200.0,
+        -100.0,
+        0.0
+      ]
+    },
+    {
+      "node": 2111,
+      "axis": 2,
+      "coordinates_mm": [
+        200.0,
+        -100.0,
+        0.0
+      ]
+    },
+    {
+      "node": 2111,
+      "axis": 3,
+      "coordinates_mm": [
+        200.0,
+        -100.0,
+        0.0
+      ]
+    },
+    {
+      "node": 2386,
+      "axis": 2,
+      "coordinates_mm": [
+        688.0,
+        -100.0,
+        0.0
+      ]
+    },
+    {
+      "node": 2386,
+      "axis": 3,
+      "coordinates_mm": [
+        688.0,
+        -100.0,
+        0.0
+      ]
+    },
+    {
+      "node": 2164,
+      "axis": 3,
+      "coordinates_mm": [
+        200.0,
+        -80.0,
+        0.0
+      ]
+    }
+  ],
+  "net_force_N": [
+    2.139261e-09,
+    2.6114260000000003e-09,
+    -7.853973918009749e-09
+  ],
+  "net_moment_Nmm": [
+    -4.3263909723635157e-07,
+    4.096785298345299e-06,
+    1.251831124e-06
+  ],
+  "force_balance_relative_to_total_absolute_load": 1.4198291224010217e-12,
+  "moment_balance_relative_to_force_times488mm": 1.465361242673167e-12,
+  "paired_face_closure": {
+    "max_face_separation_reduction_mm": 0.28598334973500683,
+    "sample_xy_mm": [
+      446.0,
+      44.9999999
+    ],
+    "sample_count": 9969,
+    "maximum_patch_midside_affinity_error_mm": 1.139086659085919e-13,
+    "remaining_sum_of_two_nominal_1mm_gaps_mm": 1.7140166502649932,
+    "method": "Exact6-node quadratic surface displacement interpolation at commonXY after checking affine patch geometry: union of patch nodes and2mm grid; boundary queries inset1e-7mm for robust triangulation. Rigid translation and infinitesimal rigid rotation cancel in lowerUz\u2212upperUz."
+  },
+  "per_face_web_gauge": {
+    "upper": {
+      "max_inward_Uz_in_web_321_gauge_mm": 0.1405379,
+      "node": 3745,
+      "coordinates_mm": [
+        448.0,
+        45.0,
+        14.0
+      ],
+      "nominal_1mm_minus_inward_Uz_in_same_gauge_mm": 0.8594621
+    },
+    "lower": {
+      "max_inward_Uz_in_web_321_gauge_mm": 0.1454581,
+      "node": 928,
+      "coordinates_mm": [
+        444.0,
+        45.0,
+        -14.0
+      ],
+      "nominal_1mm_minus_inward_Uz_in_same_gauge_mm": 0.8545419
+    }
+  },
+  "declared_load_sensitivity_1p3": {
+    "method": "Linear elasticity scaling of the same native solution; no additional solve and no magnetic-field uncertainty probability implied.",
+    "normal_force_each_array_N": 3913.62482066866,
+    "max_paired_face_separation_reduction_mm": 0.3717783546555089,
+    "remaining_sum_of_two_nominal_1mm_gaps_mm": 1.628221645344491,
+    "max_inward_Uz_web_gauge_mm": {
+      "upper": 0.18269927,
+      "lower": 0.18909553
+    }
+  },
+  "solver_version": "2.23, Copyright(C) 1998-2025 Guido Dhondt",
+  "job_finished": true,
+  "sources_sha256": {
+    "CHASSIS_INPUT.brep": "d4b53d520c1bc0d33c1c36c29dddeb775d0b4147ec24dbb342a4fc43e97460a1",
+    "MESH.json": "39a01a812c9398c2f1c4685f419f4864e8b091be16dde020b6a1e67b5c231bbd",
+    "mesh.msh": "783e0d1c3329eea1214bd583930146756845a34d43ed9a2488457a21edf4ce6b",
+    "chassis.inp": "e62f404781d0ad7e43897daa2e98c3af21eabb639ecfd435ac51b0db1b8d9255",
+    "chassis.dat": "a2bff93d2fa9a2bb56d123915be989adc3f623a5c3310bd4f851d1d4949e314f",
+    "ccx.log": "4eed92b4c3ee69cfecf9cde74a3c017de1d58f6df9e9207390a77584d61be5b4",
+    "postprocess_actual.py": "4ef8d31d2f30534a2f688e34b0e1e48fab6b900839f02a74025fda3ae87ebf6e"
+  },
+  "limits": [
+    "Actual exported chassis holes and integral supports are included; separate magnets, bonds, joints, rollers, stator and complete assembly constraints are excluded.",
+    "Material E70GPa and nu0.33 assumed; load is the3010.48N array total redistributed uniformly over each336x90mm patch.",
+    "Absolute face displacements depend on the declared rigid-motion gauge; paired face separation is gauge invariant. Positive summed gap does not prove both individual assembled gaps.",
+    "One native mesh is a bounded geometry-delta check. A second mesh is added only if controlling loaded-clearance uncertainty requires it.",
+    "No whole-product or hardware qualification conclusion."
+  ],
+  "final_CAD_identity_sha256": "cdf12fda2069f8ace792c62e9bb07ca7fae903140ddabb165ff2318b691ed13d"
+}

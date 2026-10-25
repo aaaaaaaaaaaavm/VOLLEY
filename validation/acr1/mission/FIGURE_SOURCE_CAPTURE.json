@@ -1,0 +1,22 @@
+{
+  "source_sha256": {
+    "MISSION_INPUTS.json": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f",
+    "TARGETS.json": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+    "MISSION_COMPARISON.json": "635b011caf6a02dd509cceba7be9bf03ddf534cef2aabf99c6dd83200cb6ede4",
+    "SELECTED_CASES.json": "1901e736aa6980f823b8cf3b9b6a3e623efe8c1742324bc28366184e924df46b",
+    "NATIVE_REPLAY_CHECKS.json": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691",
+    "report_and_plot.py": "678cfbb2e23cb4568f2554f7c1fe6d6f7a978661d9d4c7dd9ef8a183e127a196"
+  },
+  "figures": {
+    "MISSION_NATIVE_AGREEMENT.pdf": "3c8c54e47a540e3e20bb342c1177a93642c8d087aee767e67d929e9351bfda77",
+    "MISSION_NATIVE_AGREEMENT.png": "025d1d49b5887769ecd7271ef30a3b6f80eb7112b3c6f2a664c6906a42edf1e3",
+    "MISSION_NATIVE_AGREEMENT.svg": "5a6aaaa73412e231c9a04cc1b866b1267de476eae767365873cc7968454c308e",
+    "MISSION_RESOURCES.pdf": "aa1fe7235974f6187dbcae45881fb6c73bb2f7bdc1a440ccd4cf25b873285691",
+    "MISSION_RESOURCES.png": "86794a4cbaf3b02d9f251ba616a4453b727660c5de2ed44c22fbcde2b3011909",
+    "MISSION_RESOURCES.svg": "f2b40e6564fc7140566e2e8bee57bd50c7ce3cd6866696c60105408e5b1f2d2e",
+    "MISSION_TARGETS.pdf": "3cf505aa5435bf4fa99130a900cd1188fa609b1e29d69e33c63bb52303430d04",
+    "MISSION_TARGETS.png": "175594c388830c1e4243bce857e7c2cf46a251b1a104e3742d324f69c10c7fdb",
+    "MISSION_TARGETS.svg": "70be7ccfebd9c5f7c2b415cbcf38594b5c990df2128a287c8e17bd797336389b"
+  },
+  "scope": "Figures derive directly from current targeter/native data; no synthetic software-interface imagery."
+}

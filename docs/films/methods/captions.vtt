@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.000
+Start with a controlled configuration. VOLLEY-G5-ACR1: twelve 4 kg 3U payloads, two six-level banks, guided screw transfer, indexed lift and captive carrier pallet.
+
+2
+00:00:09.000 --> 00:00:18.000
+Resolve the finite geometry. Native geometry defines the magnetic gap, conductor placement and finite stator. CAD/STEP is preserved beside the computational model.
+
+3
+00:00:18.000 --> 00:00:27.000
+Couple the source and moving system. The evaluated 1–3 m/s commands include finite force, electrical behavior, release recoil and carrier arrest within the declared computational assumptions.
+
+4
+00:00:27.000 --> 00:00:36.000
+Account for the whole shot. The ledger records mechanical energy and copper, inverter, bank and auxiliary terms. Installed device allocation is 149.55672 kg CAD mass plus 7 kg.
+
+5
+00:00:36.000 --> 00:00:45.000
+Replay the mission independently. Frozen synthetic target PV states, continuous host arcs, release momentum and independent mass-flow checks support numerical consistency.
+
+6
+00:00:45.000 --> 00:00:54.000
+Use the result to set the next gate. The evaluated integrated configuration has a traceable computational record. Gen6 mixed-size work and instrumented hardware correlation remain separately identified development.

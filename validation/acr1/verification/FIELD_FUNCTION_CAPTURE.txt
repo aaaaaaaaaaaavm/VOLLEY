@@ -1,0 +1,11 @@
+def make_field(p):
+    m=p['magnetic']; magnets=[]
+    n=m['blocks_per_array']; pitch=m['block_pitch']/1000
+    for side in [-1,1]:
+        for i in range(n):
+            angle=math.radians(90-side*i*60)
+            magnets.append(magpy.magnet.Cuboid(
+                polarization=[1.32*math.cos(angle),1.32*math.sin(angle),0],
+                dimension=(pitch,m['block_thickness_z']/1000,m['block_depth_y']/1000),
+                position=((i-(n-1)/2)*pitch,side*(m['array_inner_z']+m['block_thickness_z']/2)/1000,0)))
+    return magpy.Collection(magnets)

@@ -1,96 +1,25 @@
-# Licensing
+# Licensing and source rights
 
-The whole of this repository is licensed under the Creative Commons Attribution 4.0
-International License (CC BY 4.0). The full legal text is in [`LICENSE`](LICENSE); the
-attribution form is in [`NOTICE`](NOTICE).
+Project-created source, CAD, calculations, figures and results in this repository are distributed under [CC BY 4.0](LICENSE). The attribution form is in [NOTICE](NOTICE). This notice does not change the terms of imported software, fonts or publisher material.
 
-A single licence, at the root, with no directory split.
+## Current engineering package
 
-| Directory | Licence |
-|---|---|
-| `analysis/` | CC BY 4.0 |
-| `cad/` | CC BY 4.0 |
-| `docs/` | CC BY 4.0 |
-| `legacy/` | CC BY 4.0 |
-| `paper/` | CC BY 4.0, except the IEEE manuscript, see below |
-| `tools/` | CC BY 4.0 |
-| `validation/` | CC BY 4.0 |
-| `wiki/` | CC BY 4.0 |
-| `.github/` | CC BY 4.0 |
-| Root files | CC BY 4.0 |
+The [ACR1 package](validation/acr1/README.md) contains project-created models and computational records. Manufacturer PDFs and full publisher-text extracts are excluded. Source URLs, original hashes and factual catalogue selections identify the component data used by the study.
 
-## Why one licence rather than a code/documents split
+The large raw solver supplement contains project-created conductor and structural inputs and outputs. Its distribution manifest records the original archive, constituent data hashes and reconstruction method.
 
-A split placing a code licence on `analysis/` and `tools/` was considered and rejected.
-This repository does not separate cleanly into code and documents: `validation/` holds fourteen
-Python files alongside its run sheets, `cad/` holds three generator scripts including the one
-that produces the geometry, and `paper/` holds three figure generators. More importantly,
-`analysis/` is not incidental tooling, `motor_model.py` computes the thrust constant and the
-operating point, and `sizing.py` sets the geometry. That code is the design expressed
-executably, not machinery around it.
+Optional Orekit and Hipparchus dependencies are acquired from the versioned URLs in the software lock. Their original licences apply; the jars are not redistributed in the source package. Native tools such as FreeCAD, OpenCASCADE, Gmsh, CalculiX and Blender retain their respective licences.
 
-A carve-out would therefore have drawn a line through the middle of the same disclosure. One
-licence over everything is the simpler and more defensible position.
+## Imported font notice
 
-## What this change does not do
+The editable Blender scene includes a packed DejaVu font. Its Bitstream Vera/DejaVu terms are retained in [the font notice](docs/visual-source/THIRD_PARTY_FONT_LICENSE.txt) and in the scene-source archive. The font is covered by those terms, rather than the project's CC BY licence. Rendered project figures retain the project attribution and their source records.
 
-This is not retroactive. Snapshots of this repository taken before this change, clones,
-forks, archives, and every commit reachable before it, remain available under the MIT
-licence they carried at the time. The previous licence text is retained at
-[`LICENSE-MIT-superseded`](LICENSE-MIT-superseded) for that reason. Nothing here revokes rights
-already granted.
+## Academic and research editions
 
-## The IEEE manuscript
+Main, Labs, Thesis and Paper are independently navigable editions with their own current source and citation records. Cite the actual repository, configuration and revision used. Mirrored engineering evidence is the same evidence and should not be counted as an independent validation study.
 
-`paper/` contains two different things:
+The [thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) and [paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) editions retain their own root licence and per-file third-party notices, including the unmodified IEEEtran class where supplied. IEEE formatting does not imply a copyright transfer, submission or acceptance. Any future publishing agreement applies only when actually executed and must identify the affected manuscript version.
 
-- The reproducibility package, `make_figures.py`, `make_animation.py`, `figures/`, and the
-  build notes, is CC BY 4.0 like the rest of the repository.
-- The manuscript itself (`paper.tex` and the compiled PDF) is CC BY 4.0 as published here
-  today, and that position is provisional. If the manuscript is accepted for publication, an
-  IEEE copyright transfer would supersede this licence for the accepted version. This
-  repository cannot license rights it has transferred. See [`paper/README.md`](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper).
+## Historical snapshots
 
-## Citation, across the programme
-
-One work, one citation. `CITATION.cff` in this repository is the only citation record in the
-programme, and the generated companions carry it verbatim rather than declaring titles of their
-own. A companion that is a copy of this work should not become a second citable identity for it,
-that is the same fork-of-truth problem `ADR-015` exists to prevent, applied to metadata.
-
-`VOLLEY-lab` carries no `CITATION.cff` deliberately. Its own README states that nothing in it
-should be cited, and adding a citation file would contradict that in the same repository. The
-contradiction is removed rather than annotated: cite this repository instead.
-
-## The generated companions are deliberately not yet relicensed
-
-`VOLLEY-paper` and `VOLLEY-thesis` are both generated by `tools/export_companion.py`. They are
-now handled separately.
-
-`VOLLEY-thesis` is CC BY 4.0, relicensed 2026-08-10. Its manifest carries `LICENSE`, `NOTICE`,
-`LICENSING.md`, `LICENSE-MIT-superseded` and `CITATION.cff`, so regeneration maintains the licence
-rather than wiping it. It was held only because it shared an export run with the paper companion,
-and it carries no manuscript rights issue of its own.
-
-`VOLLEY-paper` remains MIT, deliberately. Relicensing it sets terms for a manuscript whose
-rights may transfer to IEEE on acceptance, and this repository cannot license rights it has
-transferred. The hold is wired into the manifest rather than left to discipline: that companion's
-`LICENSE` is sourced from `LICENSE-MIT-superseded`, so a plain `export_companion.py` run
-cannot relicense it by accident. `NOTICE`, `LICENSING.md` and `CITATION.cff` are excluded from
-it for the same reason, a citation file declaring CC BY 4.0 beside an MIT `LICENSE` would be a
-contradiction inside one repository.
-
-To release the hold once the manuscript's status is settled, `PAPER_MANIFEST` carries the
-five lines to restore, commented, immediately above the mapping that implements the hold.
-
-`VOLLEY-lab` and the three tool repositories were relicensed directly on 2026-08-10:
-`VOLLEY-lab`, `pulsed-linear-motor-design-lab` and `orbital-deployment-trade-study` to CC BY 4.0,
-and `engineering-evidence-toolkit` to Apache-2.0, the last because it contains no part of the
-deployer design, its original code being `src/engtrace/` and its `reference/volley/` copies being
-repository tooling rather than the motor model.
-
-## Attribution
-
-CC BY 4.0 requires credit, a link to the licence, and an indication of whether changes were
-made. The last of those is the one most often skipped, and for an engineering record where
-numbers have moved and are documented as having moved, it is the one that matters most.
+Earlier snapshots retain the rights granted with them. [The superseded MIT text](LICENSE-MIT-superseded) is preserved for that history; current publication does not revoke previously granted rights. Source and experiment archives retain their dated licences and attribution records.

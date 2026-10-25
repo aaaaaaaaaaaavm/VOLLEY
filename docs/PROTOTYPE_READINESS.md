@@ -1,10 +1,12 @@
 # VOLLEY prototype design-review requirements
 
-VOLLEY remains a computational design study. This record defines the evidence required before a named future article can receive a build/test release. It does not declare a surviving hardware configuration, completed prototype or flight acceptance. The [project boundary](PROJECT_BOUNDARY.md) excludes separate side-project completion dependencies.
+**25 October 2026.** VOLLEY-G5-ACR1 is the completed computational design reference. This record defines the evidence required before a named future article can receive a build/test release. Physical prototyping and flight acceptance remain subsequent stages. The [project boundary](PROJECT_BOUNDARY.md) excludes separate side-project completion dependencies.
 
 ## Evaluated and future configurations
 
-Gen5 is the evaluated twelve-3U configuration, including its geometric interference, mass and performance limitations. Gen6 is separately versioned. The current reference investigates a shared reusable launch path, passive mixed 1U/3U payloads, independently retained cells, a maneuvering surrogate host and commanded departure states. No feed mechanism, actual host/provider interface, winding, drive or source is selected from conceptual preference alone.
+[ACR1](../validation/acr1/README.md) evaluates twelve nominal 4 kg 3U surrogates with guided lead-screw feed, a positively restrained transfer cradle and retained launch sled. The selected FM08-R3 mixed-size feeder remains a separate subsystem study. Original Gen5 interference, mass and performance findings retain their historical configuration.
+
+Gen6 physical development and mixed 1U/3U handling are separately versioned. They require a named test article, payload/contact envelopes, installed hardware and instrumentation tied to the intended operating cases. Existing computational selection does not provide measured reliability, actual host/provider acceptance or hardware ratings.
 
 ## Review gates
 

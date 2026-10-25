@@ -1,0 +1,74 @@
+[
+  {
+    "start_s": 0,
+    "end_s": 12,
+    "title": "One common starting state.",
+    "text": "Nominal 500 km SSO. Twelve 4 kg 3U payloads. Generic host: 500 kg wet bus, including 20 kg fuel once; Isp 220 s.",
+    "source": "mission/MISSION_INPUTS.json",
+    "evidence_class": "CAD-derived Blender render"
+  },
+  {
+    "start_s": 12,
+    "end_s": 24,
+    "title": "Twelve scheduled releases.",
+    "text": "Actual computed Gen5 host history, uniform-2 target family. Markers identify the frozen release epochs; the inertial X/Z projection preserves the numerical trajectory.",
+    "source": "mission/release/uniform_2_gen5_f0.35_trajectory.csv; mission/TARGETS.json",
+    "evidence_class": "Computed host trajectory / fixed-axis J2 / X\u2013Z projection"
+  },
+  {
+    "start_s": 24,
+    "end_s": 36,
+    "title": "Host manoeuvre. Point. Release.",
+    "text": "Host burns provide the departure state and direction. The launcher adds the coupled release contribution. The propagated state depends on both.",
+    "source": "mission/MISSION_REPORT.md",
+    "evidence_class": "Conceptual operations diagram / generic host study"
+  },
+  {
+    "start_s": 36,
+    "end_s": 48,
+    "title": "Frozen full-state targets.",
+    "text": "Uniform synthetic 2 m/s or alternating 1/3 m/s along-track target families. All payloads and retained host are compared at t = 91800 s: 24 h after the final release.",
+    "source": "mission/TARGETS.json",
+    "evidence_class": "Computed target states / synthetic study cases"
+  },
+  {
+    "start_s": 48,
+    "end_s": 60,
+    "title": "Coast for loading and safe release.",
+    "text": "Gen5 reserves 400 s of zero-force loading coast per payload for the declared 355 s cycle. Both architectures keep 5 s pre-release and 20 s post-release zero-force guards.",
+    "source": "mission/MISSION_REPORT.md",
+    "evidence_class": "Source-derived operation timing / one 450 s release leg"
+  },
+  {
+    "start_s": 60,
+    "end_s": 72,
+    "title": "Command flexibility and installed cost.",
+    "text": "The ideal ground-pretrimmed spring closes both target families at the 1 N and 5 N gates. Preplanned targets give no established Gen5 propellant or initial wet-mass advantage.",
+    "source": "mission/MISSION_RESULTS.csv",
+    "evidence_class": "Computed result / bounded candidate policies"
+  },
+  {
+    "start_s": 72,
+    "end_s": 84,
+    "title": "Independent replay of target states.",
+    "text": "Native Orekit 13.1.6 replay and 60\u219230 s refinement agree within the declared numerical residuals. Numerical agreement is not physical delivery accuracy.",
+    "source": "mission/NATIVE_REPLAY_CHECKS.json",
+    "evidence_class": "Computed numerical agreement / native Orekit replay"
+  },
+  {
+    "start_s": 84,
+    "end_s": 96,
+    "title": "Mission model and applicability.",
+    "text": "Fixed-axis J2 point masses and constant inertial force. Drag, higher gravity, attitude/plume allocation, navigation and finite exit geometry are outside this study.",
+    "source": "mission/MISSION_REPORT.md",
+    "evidence_class": "Generic host study / modeled target states"
+  },
+  {
+    "start_s": 96,
+    "end_s": 108,
+    "title": "Twelve releases. One resource account.",
+    "text": "Twelve commanded releases share one coupled resource account: payloads, retained device, host burns, source energy and carrier recovery. Inspect the frozen target states and same-input policies.",
+    "source": "mission/MISSION_RESULTS.csv; mission/MISSION_REPORT.md",
+    "evidence_class": "Computed result / synthetic preplanned target families"
+  }
+]

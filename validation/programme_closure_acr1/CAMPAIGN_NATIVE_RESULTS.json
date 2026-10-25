@@ -1,0 +1,241 @@
+{
+  "study": "PCS-LUNAR-CAMPAIGN-NATIVE-01",
+  "generator_sha256": "943a1404c4c066918c160d7909fcfb241e10fbdeb5baabcd9cb6b49453391372",
+  "campaign_sha256": "c562a7a31e03c11c1a33d4b51d4e39fec1298ade770ed2c38e31de9fc3bdc0df",
+  "GMAT_binary_sha256": "f7cf5b3188902353ed4245bb21c22c1afa0451efdd221b7e19f6a74dc7ed1d93",
+  "gravity_sha256": "f80c5a30f8aa0c67bcefb6a0ad00ac6a06c8d5a71bee4465d72a50b1b7c16e46",
+  "cases": [
+    {
+      "mode": "point_mass",
+      "script_sha256": "25d12d95b7c966d7ceb6b5f578a0da4d81d5f6fdd3a2ea13df0defc1063ae454",
+      "host_history_sha256": "22eb4071bd5146bdf7e410c8d23f48b89ab6f46802d4943c8620713e4ebdab3d",
+      "events": 108,
+      "final_native_time_s": 5427.293341385666,
+      "final_python_time_s": 5427.293348814432,
+      "final_position_difference_vs_python_m": 0.011137444012477484,
+      "final_velocity_difference_vs_python_m_s": 8.717546695396641e-06,
+      "final_mass_difference_kg": 4.596302005666075e-09,
+      "final_native_state_SI": [
+        1647237.175488321,
+        0.002480854163877666,
+        895284.5613911923,
+        -713.0546079445335,
+        1.148581274534877e-05,
+        1605.718944848927
+      ],
+      "payload_lifetime": []
+    },
+    {
+      "mode": "harmonic20",
+      "script_sha256": "e31fbee0e01af49c332464a645da445b140f44b3a12373681c0abb212c942066",
+      "host_history_sha256": "12d751c3dfae15a65c496ac9691badc98db99916cfc43daaf901fded879abf0b",
+      "events": 108,
+      "final_native_time_s": 5427.293341385666,
+      "final_python_time_s": 5427.293348814432,
+      "final_position_difference_vs_python_m": 1634.5703748582537,
+      "final_velocity_difference_vs_python_m_s": 1.53620391822364,
+      "final_mass_difference_kg": 4.596302005666075e-09,
+      "final_native_state_SI": [
+        1646015.072754119,
+        -215.909102014848,
+        896348.3751783788,
+        -714.548374367289,
+        0.3136729416393091,
+        1605.545091341088
+      ],
+      "payload_lifetime": [
+        {
+          "payload": 1,
+          "elapsed_s": 2592000.000000943,
+          "min_sampled_altitude_km": 84.96164094786695,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "2870ae5084326cb5d52f90298a6d03a6112b982bc294ca356ecfb385f942f0ff"
+        },
+        {
+          "payload": 2,
+          "elapsed_s": 2592000.0000006286,
+          "min_sampled_altitude_km": 84.79795833610001,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "a91993025d127209f282ca17ae8e70bd5a6fae0efc423dcf372511be04ba093b"
+        },
+        {
+          "payload": 3,
+          "elapsed_s": 2592000.000000943,
+          "min_sampled_altitude_km": 84.49374451159588,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "69488d4ac2f9150ce95b934866f127cd8cea84bd3a5b782f83f6b219675f213c"
+        },
+        {
+          "payload": 4,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 84.06500228803793,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "ac72ea4ea46874e1a7d2eb2d6e1806a8e61d09d7d2ac4cbf203733ddadb5ad4b"
+        },
+        {
+          "payload": 5,
+          "elapsed_s": 2591999.999999057,
+          "min_sampled_altitude_km": 87.04702265761989,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "59ff621847bfde408b72bd42f66e8a7992f216bfa00b9c2354332af0681723bd"
+        },
+        {
+          "payload": 6,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 85.73001341633199,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "5de851ddb5a91187ffb192afb43d4f678d5e1c01713ad913564bd41b6d1e60bc"
+        },
+        {
+          "payload": 7,
+          "elapsed_s": 2591999.9999993714,
+          "min_sampled_altitude_km": 75.66351483676885,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "4d025095a06f11de44b8d3e0ef2db41077de4067c3bd86d7adf87c1d785fafe3"
+        },
+        {
+          "payload": 8,
+          "elapsed_s": 2592000.000000943,
+          "min_sampled_altitude_km": 77.1452916501828,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "e6a93621ee8263faa95a43d8cda592bbdda62f200c2effb3b606710851adc7a6"
+        },
+        {
+          "payload": 9,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 77.74213064142691,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "6422d36b5342e77aa70b28820881dda7e93af1eef431f3235182b8a7a907d870"
+        },
+        {
+          "payload": 10,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 79.233147976488,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "b9f2258aed8ddfd1da08fd429e2ce1272947e22c8ecc3b2f50ead7eae3f86ae4"
+        },
+        {
+          "payload": 11,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 79.75589224115083,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "ba108ea6198ecb426a61c607dba12bf0643f627d4add15527086415552667c78"
+        },
+        {
+          "payload": 12,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 79.16137637362999,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "33ca8bb399c3319f82f2d75a37638bbdfbb6fc16f115ec6c2f78a104c75ea570"
+        }
+      ]
+    },
+    {
+      "mode": "harmonic40",
+      "script_sha256": "be0c71f6a58e54d9e49964a11f93c9d5492ffbafcc30718b314c59794843a3b5",
+      "host_history_sha256": "0102873c6aa9ac54125ab41cd1743da4591020a7eb5f69aebc9722843a217b7a",
+      "events": 108,
+      "final_native_time_s": 5427.293341699988,
+      "final_python_time_s": 5427.293348814432,
+      "final_position_difference_vs_python_m": 1633.6378461430443,
+      "final_velocity_difference_vs_python_m_s": 1.494259983088899,
+      "final_mass_difference_kg": 4.596302005666075e-09,
+      "final_native_state_SI": [
+        1646022.084630618,
+        -230.9643415937899,
+        896351.8071571889,
+        -714.5082227943745,
+        0.3047687739127225,
+        1605.5547398967951
+      ],
+      "payload_lifetime": [
+        {
+          "payload": 1,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 84.91639805244881,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "69cc225367435eed6ee045cea1bf0c7ccf949805f01e6590ea47c2cf279655ca"
+        },
+        {
+          "payload": 2,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 84.73853216771886,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "b76e7d8e83fe031cf25c1d831eb9b73f938aca4985475e6388d71f2ebcb4245a"
+        },
+        {
+          "payload": 3,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 84.42560189311894,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "73055c0d0946912c9b4b35d33ebad000d691cbe811770a163f6d0e92bcb02ed6"
+        },
+        {
+          "payload": 4,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 84.02525171679486,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "3e07e0a19c94733e4afe23355e9902f74a2d0da86b1f2bcce46da727c27dafc9"
+        },
+        {
+          "payload": 5,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 86.97788814964497,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "58f3eea84f58981b33345482e8b9592d397f9f040704cc06a7b865daf1ece4dc"
+        },
+        {
+          "payload": 6,
+          "elapsed_s": 2592000.0000006286,
+          "min_sampled_altitude_km": 85.71472434335783,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "a74b86ab307ff8aa26b96b9f46544241c70eb80f5083f4c33f27eb80fb87304c"
+        },
+        {
+          "payload": 7,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 75.63722756303582,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "e5d0d575a228fe7e9897ef9266f29fc6d366619482e795e9f43b4e6cbe343d82"
+        },
+        {
+          "payload": 8,
+          "elapsed_s": 2592000.000000943,
+          "min_sampled_altitude_km": 77.1080157937879,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "7f34cc6412ef14cba29398453b06869a23a82d01ad72912b982ff5eb0428354c"
+        },
+        {
+          "payload": 9,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 77.68904765093293,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "db2f283cc1ee8c9dc07c685df156844da9d841d2b76069800fff7df7c150f692"
+        },
+        {
+          "payload": 10,
+          "elapsed_s": 2591999.999999057,
+          "min_sampled_altitude_km": 79.16883278655791,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "f92ef94a8dd88261c4ab54d7214b6dc67936f9776b48154ff82d786b5c0fbc82"
+        },
+        {
+          "payload": 11,
+          "elapsed_s": 2592000.0,
+          "min_sampled_altitude_km": 79.72780064229096,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "babeda92989a1d6c445e27159c511fcafb9b9a5b9f8123ebede333a2326fe917"
+        },
+        {
+          "payload": 12,
+          "elapsed_s": 2592000.000000943,
+          "min_sampled_altitude_km": 79.12792217452284,
+          "native30day_sampled_floor_pass": true,
+          "history_sha256": "1cc81c0ffcd58dc88c9e80c5a6922f0aee5e4598dda04559ca324f3fc1d58442"
+        }
+      ]
+    }
+  ],
+  "attitude_scope": "Native astrodynamics only. Frozen Python finite attitude commands and zero-resultant ACS mass consumption are imposed,not independently solved by GMAT.",
+  "interpretation": "Point-mass run compares identical dynamics.20/40-degree+Earth/Sun replay measures open-loop environment sensitivity and native30day useful-floor outcomes for the actual released states."
+}

@@ -1,3 +1,5 @@
+> **Historical study record — ACR1 public reference:** [VOLLEY-G5-ACR1](../validation/acr1/README.md) is the current integrated academic reference. Values/status below retain their dated study/configuration meaning and do not set ACR1 operating points.
+
 # Six generations, and what each one was for
 
 > **Current status, 2026-09-28:** The gas-guide generation below is a withdrawn architecture study. Its tables compare dated model configurations and do not rank complete installed systems or qualify payloads. No next-generation architecture is selected; see [current status](NEXT_GENERATION_STATUS.md).

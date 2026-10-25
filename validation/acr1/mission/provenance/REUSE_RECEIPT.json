@@ -1,0 +1,18 @@
+{
+  "reused_pipeline_source_sha256": {
+    "target.py": "77ffb5ae5db385eded0af6d43ceb184daf33cd917dba016bd7ef2cd538fc16dc",
+    "export.py": "1c29b2844fa91771b186956ea45b73c3ce1f6d124425b0f9abe7b769c2283929",
+    "FiniteReplay.java": "1f15a95d50d8d98ae7447147cfcf33f2329c42a90d0b0c6ece3c1ee88057c451",
+    "SOFTWARE_LOCK.json": "f26f92aa58c235e05d082a039d7787f361198ef12fb81c291841008cb36e610d",
+    "retarget_selected_mass.py": "eb84fef054a544afa3b31d83eae65ab007e40793b798f5626d6e640cea38f6a5",
+    "replay_and_check.py": "f24b3aee03a190d9901fa2ed1102a824adc5e71e6fa8fec98087309ba97fd41d"
+  },
+  "jars_verified_against_original_lock": true,
+  "jar_directory": "/workspace/volley-work/2026-10-18/jars",
+  "current_runtime": {
+    "Python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "NumPy": "2.4.6",
+    "SciPy": "1.17.1",
+    "Matplotlib": "3.11.1"
+  }
+}

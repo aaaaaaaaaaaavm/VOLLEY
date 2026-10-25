@@ -1,0 +1,720 @@
+{
+  "revision": "ACR1-core-visual-verification-R2",
+  "verification_time_utc": "2026-10-25T07:42:09.511470+00:00",
+  "status": "source file identity verified",
+  "method": "Raw SHA-256 equality of accepted unchanged CAD-derived display exports across the four core surfaces. Source/export records independently checked for seven supporting repositories.",
+  "four_core_surfaces": [
+    {
+      "asset": "01_assembly_isometric.png",
+      "configuration": "VOLLEY-G5-ACR1",
+      "frozen_source_sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+      "copies": [
+        {
+          "repository": "VOLLEY",
+          "path": "docs/assets/acr1/01_assembly_isometric.png",
+          "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-lab",
+          "path": "figures/acr1/01_assembly_isometric.png",
+          "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-thesis",
+          "path": "current/academic/assets/01_assembly_isometric.png",
+          "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-paper",
+          "path": "current/academic/assets/01_assembly_isometric.png",
+          "sha256": "b2a46ac8ea7f187d9f6769a38f90438de78ff62f11243078caa71e1555b35422",
+          "available_locally": true
+        }
+      ]
+    },
+    {
+      "asset": "02_handoff_pallet_locks.png",
+      "configuration": "VOLLEY-G5-ACR1",
+      "frozen_source_sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123",
+      "copies": [
+        {
+          "repository": "VOLLEY",
+          "path": "docs/assets/acr1/02_handoff_pallet_locks.png",
+          "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-lab",
+          "path": "figures/acr1/02_handoff_pallet_locks.png",
+          "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-thesis",
+          "path": "current/academic/assets/02_handoff_pallet_locks.png",
+          "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-paper",
+          "path": "current/academic/assets/02_handoff_pallet_locks.png",
+          "sha256": "f075051e21796cf090b7b4da086bafb859114d59f6ae60c150f4099622b13123",
+          "available_locally": true
+        }
+      ]
+    },
+    {
+      "asset": "03_captured_source_level.png",
+      "configuration": "VOLLEY-G5-ACR1",
+      "frozen_source_sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+      "copies": [
+        {
+          "repository": "VOLLEY",
+          "path": "docs/assets/acr1/03_captured_source_level.png",
+          "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-lab",
+          "path": "figures/acr1/03_captured_source_level.png",
+          "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-thesis",
+          "path": "current/academic/assets/03_captured_source_level.png",
+          "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-paper",
+          "path": "current/academic/assets/03_captured_source_level.png",
+          "sha256": "3136a96d7e7f7abf50d686149def0ce295fea72c43b7d709fcd1f176b0308861",
+          "available_locally": true
+        }
+      ]
+    },
+    {
+      "asset": "04_clear_docked.png",
+      "configuration": "VOLLEY-G5-ACR1",
+      "frozen_source_sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+      "copies": [
+        {
+          "repository": "VOLLEY",
+          "path": "docs/assets/acr1/04_clear_docked.png",
+          "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-lab",
+          "path": "figures/acr1/04_clear_docked.png",
+          "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-thesis",
+          "path": "current/academic/assets/04_clear_docked.png",
+          "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+          "available_locally": true
+        },
+        {
+          "repository": "VOLLEY-paper",
+          "path": "current/academic/assets/04_clear_docked.png",
+          "sha256": "0f24049a07677a8521ab41878115d2f55ef249ae5e57219fb972938b9ddb5e0d",
+          "available_locally": true
+        }
+      ]
+    }
+  ],
+  "shared_scientific_guide": [
+    {
+      "repository": "VOLLEY",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "VOLLEY-lab",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "VOLLEY-thesis",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "VOLLEY-paper",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "spacecraft-separation-dynamics",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "orbital-deployment-trade-study",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "pulsed-linear-motor-design-lab",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "scientific-run-registry",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "engineering-evidence-toolkit",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "parametric-cad-evidence-pipeline",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    },
+    {
+      "repository": "constraint-floor",
+      "path": "docs/FIGURE_STANDARD.md",
+      "sha256": "34fe0ace1462665c201f15ef67562698210ca53525180e052a198885cfced004"
+    }
+  ],
+  "supporting_repository_figures": [
+    {
+      "repository": "spacecraft-separation-dynamics",
+      "figure_manifest": "docs/SCIENTIFIC_FIGURES.json",
+      "verified_hash_references": 7,
+      "checks": [
+        {
+          "role": "sources",
+          "path": "tools/generate_figure.py",
+          "sha256": "2276200098942d557a0585989dbaf4ff06267669f129e613714a7ea72dfbe2bb"
+        },
+        {
+          "role": "sources",
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        },
+        {
+          "role": "sources",
+          "path": "src/separation_dynamics/__init__.py",
+          "sha256": "5c4b972a6c7f5bb5e75e31d3de799842ec135cd0f85f42d20d3843b027ae349d"
+        },
+        {
+          "role": "sources",
+          "path": "src/separation_dynamics/core.py",
+          "sha256": "5adc585017ee91dfda631d5aadee813a94f3f81aafbf102038648494774062d9"
+        },
+        {
+          "role": "exports",
+          "path": "figures/phase-drift.svg",
+          "sha256": "108ce5a75d5adf19d668d3828e3e813613a17d104d80e47814e68dee2bf5e703"
+        },
+        {
+          "role": "exports",
+          "path": "figures/phase-drift.pdf",
+          "sha256": "cd0515bcfc4626e6d8ace40f82f9e2f7dc2903131b6bee1090463c0231ec0304"
+        },
+        {
+          "role": "exports",
+          "path": "figures/phase-drift.png",
+          "sha256": "eea38fd1cd972616e38eeff7b26e5188cfbb9b49c160c80e596656e08ded30fc"
+        }
+      ],
+      "new_illustration": "none; existing source-linked technical figures retained"
+    },
+    {
+      "repository": "orbital-deployment-trade-study",
+      "figure_manifest": "docs/SCIENTIFIC_FIGURES.json",
+      "verified_hash_references": 27,
+      "checks": [
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "66ee51f2df16507916e4a16a80681d661b4fc4a0de20b3c4c9a96c7321ba0aa6"
+        },
+        {
+          "role": "sources",
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        },
+        {
+          "role": "sources",
+          "path": "cases/hosted_6u_example.json",
+          "sha256": "d21ef5d49e1ac567235968ceaf3e9db769721960f69db5175f7e425fcaa4f00b"
+        },
+        {
+          "role": "sources",
+          "path": "cases/volley_reference.json",
+          "sha256": "a8ea30b5d980d26318e73c63e07a3f5433e3802349cb8fb52b38b013f14682a2"
+        },
+        {
+          "role": "sources",
+          "path": "src/orbital_trade/__init__.py",
+          "sha256": "fbbeeab6ad4cab51d0d04ea5aa356892cc7414d7f20136b41ef375f8dcebb4dd"
+        },
+        {
+          "role": "sources",
+          "path": "src/orbital_trade/core.py",
+          "sha256": "cbb5422913d1f079858370cdfe65d29c65cb06d5473e6988c42595555626b4e9"
+        },
+        {
+          "role": "exports",
+          "path": "figures/deployment-trade.svg",
+          "sha256": "176709b355349d52745b9c6f2f2e98d51138a392b05e8c017aba70d4f8300549"
+        },
+        {
+          "role": "exports",
+          "path": "figures/deployment-trade.pdf",
+          "sha256": "185d9853d0b0340416f738feb330fe33d62348a695e8114076221004787c5f9e"
+        },
+        {
+          "role": "exports",
+          "path": "figures/deployment-trade.png",
+          "sha256": "fad7262d58d067a9568059c0035269d326128aceca395c5459ba576fccf671c9"
+        },
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "66ee51f2df16507916e4a16a80681d661b4fc4a0de20b3c4c9a96c7321ba0aa6"
+        },
+        {
+          "role": "sources",
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        },
+        {
+          "role": "sources",
+          "path": "cases/hosted_6u_example.json",
+          "sha256": "d21ef5d49e1ac567235968ceaf3e9db769721960f69db5175f7e425fcaa4f00b"
+        },
+        {
+          "role": "sources",
+          "path": "cases/volley_reference.json",
+          "sha256": "a8ea30b5d980d26318e73c63e07a3f5433e3802349cb8fb52b38b013f14682a2"
+        },
+        {
+          "role": "sources",
+          "path": "src/orbital_trade/__init__.py",
+          "sha256": "fbbeeab6ad4cab51d0d04ea5aa356892cc7414d7f20136b41ef375f8dcebb4dd"
+        },
+        {
+          "role": "sources",
+          "path": "src/orbital_trade/core.py",
+          "sha256": "cbb5422913d1f079858370cdfe65d29c65cb06d5473e6988c42595555626b4e9"
+        },
+        {
+          "role": "exports",
+          "path": "figures/disturbance-budget.svg",
+          "sha256": "22e5249f8c056a439923036b56a0d1043482c4696a1ebb6d2ffb10e35098bfbe"
+        },
+        {
+          "role": "exports",
+          "path": "figures/disturbance-budget.pdf",
+          "sha256": "4021ffc17cd8b282f80002733d6890ce1623cd5656ce118ebf251ad5dd633e5c"
+        },
+        {
+          "role": "exports",
+          "path": "figures/disturbance-budget.png",
+          "sha256": "8acbf734ae3935e98ef4487f7b9a4347afd5120c76f4f0ed2913485f68578953"
+        },
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "66ee51f2df16507916e4a16a80681d661b4fc4a0de20b3c4c9a96c7321ba0aa6"
+        },
+        {
+          "role": "sources",
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        },
+        {
+          "role": "sources",
+          "path": "cases/hosted_6u_example.json",
+          "sha256": "d21ef5d49e1ac567235968ceaf3e9db769721960f69db5175f7e425fcaa4f00b"
+        },
+        {
+          "role": "sources",
+          "path": "cases/volley_reference.json",
+          "sha256": "a8ea30b5d980d26318e73c63e07a3f5433e3802349cb8fb52b38b013f14682a2"
+        },
+        {
+          "role": "sources",
+          "path": "src/orbital_trade/__init__.py",
+          "sha256": "fbbeeab6ad4cab51d0d04ea5aa356892cc7414d7f20136b41ef375f8dcebb4dd"
+        },
+        {
+          "role": "sources",
+          "path": "src/orbital_trade/core.py",
+          "sha256": "cbb5422913d1f079858370cdfe65d29c65cb06d5473e6988c42595555626b4e9"
+        },
+        {
+          "role": "exports",
+          "path": "figures/orbit-envelope.svg",
+          "sha256": "d26752b4d07a88bf9c19fb9b1d65f688406c0b2308a8fc1856131c64bbfcae42"
+        },
+        {
+          "role": "exports",
+          "path": "figures/orbit-envelope.pdf",
+          "sha256": "31806a1225783352430afa90597766bec9958c58426a66c17d5adc739f201d81"
+        },
+        {
+          "role": "exports",
+          "path": "figures/orbit-envelope.png",
+          "sha256": "f8e9fca5d0482708e4f69c60294dac1a22c1e7812a4b8aed68be93e1dc29455e"
+        }
+      ],
+      "new_illustration": "none; existing source-linked technical figures retained"
+    },
+    {
+      "repository": "pulsed-linear-motor-design-lab",
+      "figure_manifest": "docs/SCIENTIFIC_FIGURES.json",
+      "verified_hash_references": 27,
+      "checks": [
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "c7411f26faeeea850ed81f6520d27a57fb65a2d30f68206e18f6cb741afba09f"
+        },
+        {
+          "role": "sources",
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        },
+        {
+          "role": "sources",
+          "path": "cases/desktop_stage.json",
+          "sha256": "78e5e1b888a34ed25f34b40de67bab110e80e111c38d3a9ee2603ae891a14fbd"
+        },
+        {
+          "role": "sources",
+          "path": "cases/volley_reference.json",
+          "sha256": "aac1e723a0242c1fccbf8a285ffaca0934720997e789d21bfd1931039f7a80b6"
+        },
+        {
+          "role": "sources",
+          "path": "src/plmd/__init__.py",
+          "sha256": "3dbb7abc5ed48959049a6329ad300f2cd4e3ff27e75e10e90e93439e780f52be"
+        },
+        {
+          "role": "sources",
+          "path": "src/plmd/core.py",
+          "sha256": "1bdc9a29ef6e28455071009f87dbc9a9694da6083265aa4bba6009ceb2ef580c"
+        },
+        {
+          "role": "exports",
+          "path": "figures/design-screen.svg",
+          "sha256": "12cc440caf9c83e73f017061d628f94e16e563f15b79962f289cc24b0d1f8f97"
+        },
+        {
+          "role": "exports",
+          "path": "figures/design-screen.pdf",
+          "sha256": "a8fe352b5cd2684a14d5ed29f78ffb40370912cfd4b8b0b0970721aba983b20a"
+        },
+        {
+          "role": "exports",
+          "path": "figures/design-screen.png",
+          "sha256": "a396d104913ce19d7d3be7c0a82cd46ad2dcba6b7cc58e0743dff8cc7b252610"
+        },
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "c7411f26faeeea850ed81f6520d27a57fb65a2d30f68206e18f6cb741afba09f"
+        },
+        {
+          "role": "sources",
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        },
+        {
+          "role": "sources",
+          "path": "cases/desktop_stage.json",
+          "sha256": "78e5e1b888a34ed25f34b40de67bab110e80e111c38d3a9ee2603ae891a14fbd"
+        },
+        {
+          "role": "sources",
+          "path": "cases/volley_reference.json",
+          "sha256": "aac1e723a0242c1fccbf8a285ffaca0934720997e789d21bfd1931039f7a80b6"
+        },
+        {
+          "role": "sources",
+          "path": "src/plmd/__init__.py",
+          "sha256": "3dbb7abc5ed48959049a6329ad300f2cd4e3ff27e75e10e90e93439e780f52be"
+        },
+        {
+          "role": "sources",
+          "path": "src/plmd/core.py",
+          "sha256": "1bdc9a29ef6e28455071009f87dbc9a9694da6083265aa4bba6009ceb2ef580c"
+        },
+        {
+          "role": "exports",
+          "path": "figures/force-energy.svg",
+          "sha256": "17906443d9102f66b20bea70c2c62571fcde4676e43d249c48732827421581ac"
+        },
+        {
+          "role": "exports",
+          "path": "figures/force-energy.pdf",
+          "sha256": "f5cf20d86f1f62532215bbed7ba4db3734f9ad1ae7a9348f5e52816ad405c8e9"
+        },
+        {
+          "role": "exports",
+          "path": "figures/force-energy.png",
+          "sha256": "df0f863f2dabcddd414ff3abe626cddae638a085d26ff9eaee3a1cbcdc714d52"
+        },
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "c7411f26faeeea850ed81f6520d27a57fb65a2d30f68206e18f6cb741afba09f"
+        },
+        {
+          "role": "sources",
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        },
+        {
+          "role": "sources",
+          "path": "cases/desktop_stage.json",
+          "sha256": "78e5e1b888a34ed25f34b40de67bab110e80e111c38d3a9ee2603ae891a14fbd"
+        },
+        {
+          "role": "sources",
+          "path": "cases/volley_reference.json",
+          "sha256": "aac1e723a0242c1fccbf8a285ffaca0934720997e789d21bfd1931039f7a80b6"
+        },
+        {
+          "role": "sources",
+          "path": "src/plmd/__init__.py",
+          "sha256": "3dbb7abc5ed48959049a6329ad300f2cd4e3ff27e75e10e90e93439e780f52be"
+        },
+        {
+          "role": "sources",
+          "path": "src/plmd/core.py",
+          "sha256": "1bdc9a29ef6e28455071009f87dbc9a9694da6083265aa4bba6009ceb2ef580c"
+        },
+        {
+          "role": "exports",
+          "path": "figures/source-window.svg",
+          "sha256": "4a224a9ad46f98fcaabf292671b58cb80bba38cc51ee814740349b08ee280220"
+        },
+        {
+          "role": "exports",
+          "path": "figures/source-window.pdf",
+          "sha256": "9a0fdb2038fe826bb32bccd61c24e2bd9cd9cb7d68613f41d92b0d5c3a18551e"
+        },
+        {
+          "role": "exports",
+          "path": "figures/source-window.png",
+          "sha256": "a7c025efd8b0b8c4cf665dc7eed53ae102c1c2001b7127e76ef3f3c1da56b6f3"
+        }
+      ],
+      "new_illustration": "none; existing source-linked technical figures retained"
+    },
+    {
+      "repository": "scientific-run-registry",
+      "figure_manifest": "docs/SCIENTIFIC_FIGURES.json",
+      "verified_hash_references": 4,
+      "checks": [
+        {
+          "role": "sources",
+          "path": "tools/generate_figure.py",
+          "sha256": "1167a494814274e9c2d2b5cd87ad8c4085622760dc6ae2af387676f316fb9360"
+        },
+        {
+          "role": "exports",
+          "path": "figures/run-lineage.svg",
+          "sha256": "671f4a84aa3b7aaff5841b372e6086d359e701face513e1871d00209807285d4"
+        },
+        {
+          "role": "exports",
+          "path": "figures/run-lineage.pdf",
+          "sha256": "373d91eefeb980b3546836079e7f3d3f6284dfd29aa5f7cd80f7e59638d9db30"
+        },
+        {
+          "role": "exports",
+          "path": "figures/run-lineage.png",
+          "sha256": "4277a1b3f59a981be773f135a605b16bbd41406fc020d5f6e9878be82667a469"
+        }
+      ],
+      "new_illustration": "none; existing source-linked technical figures retained"
+    },
+    {
+      "repository": "engineering-evidence-toolkit",
+      "figure_manifest": "docs/SCIENTIFIC_FIGURES.json",
+      "verified_hash_references": 15,
+      "checks": [
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "b3103d931fa1ca64ecab769955da46ac30cf85ce1b0f493f9349b2c66b85afa6"
+        },
+        {
+          "role": "sources",
+          "path": "examples/sample_project/engtrace.json",
+          "sha256": "5745751dc8a101c1f1c3757935ec19792037efed52ada2b1ce8eda996ea6bc7e"
+        },
+        {
+          "role": "exports",
+          "path": "figures/evidence-chain.svg",
+          "sha256": "576b2ea6b86a84d015185d07c3509ef6e83f2a614f2ece682666c367ea949bd5"
+        },
+        {
+          "role": "exports",
+          "path": "figures/evidence-chain.pdf",
+          "sha256": "dfb42c8b29dcf2f052bff8339d4a2f1f7f10a5ad5d50f1b84702ea9dc920eac4"
+        },
+        {
+          "role": "exports",
+          "path": "figures/evidence-chain.png",
+          "sha256": "b8c232f262bba1e4c106b9ae5759bd48a6166be010d12809479748ddd8700b31"
+        },
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "b3103d931fa1ca64ecab769955da46ac30cf85ce1b0f493f9349b2c66b85afa6"
+        },
+        {
+          "role": "sources",
+          "path": "examples/sample_project/engtrace.json",
+          "sha256": "5745751dc8a101c1f1c3757935ec19792037efed52ada2b1ce8eda996ea6bc7e"
+        },
+        {
+          "role": "exports",
+          "path": "figures/failure-matrix.svg",
+          "sha256": "ba8ff8461ce1553902090919f19303a5df6703b522217013f3970c447ec96bb0"
+        },
+        {
+          "role": "exports",
+          "path": "figures/failure-matrix.pdf",
+          "sha256": "ef91ec80851917c26b32f6b5fa4f09ce0618d2d84dd61828c5d7e98bc27b71df"
+        },
+        {
+          "role": "exports",
+          "path": "figures/failure-matrix.png",
+          "sha256": "6071852e9c7c3211539067137825c52db7ff5212213a6e4d041935443fa4c09d"
+        },
+        {
+          "role": "sources",
+          "path": "tools/generate_readme_figure.py",
+          "sha256": "b3103d931fa1ca64ecab769955da46ac30cf85ce1b0f493f9349b2c66b85afa6"
+        },
+        {
+          "role": "sources",
+          "path": "examples/sample_project/engtrace.json",
+          "sha256": "5745751dc8a101c1f1c3757935ec19792037efed52ada2b1ce8eda996ea6bc7e"
+        },
+        {
+          "role": "exports",
+          "path": "figures/sample-coverage.svg",
+          "sha256": "02bee63c9ffe16342ae9b72be563c55aca497deeb93b3486bc687e403ef36c96"
+        },
+        {
+          "role": "exports",
+          "path": "figures/sample-coverage.pdf",
+          "sha256": "8be97dcc9017d858242da91972d3d57e11999c600c106be74350ec2199878322"
+        },
+        {
+          "role": "exports",
+          "path": "figures/sample-coverage.png",
+          "sha256": "5dd4806b1cde81cbf82f44db6377233907e1984d54f11ec4481a300ce61ddb1f"
+        }
+      ],
+      "new_illustration": "none; existing source-linked technical figures retained"
+    },
+    {
+      "repository": "parametric-cad-evidence-pipeline",
+      "figure_manifest": "docs/SCIENTIFIC_FIGURES.json",
+      "verified_hash_references": 4,
+      "checks": [
+        {
+          "role": "sources",
+          "path": "tools/generate_figure.py",
+          "sha256": "893d445dcf58071eafac5f7d057c0d1a75d15bbe47035aee1c83869eeffa239a"
+        },
+        {
+          "role": "exports",
+          "path": "figures/evidence-chain.svg",
+          "sha256": "d0842a55bfc1cff8a06d6c58489ad9be2985b34d9546a345bc505013d69ff91b"
+        },
+        {
+          "role": "exports",
+          "path": "figures/evidence-chain.pdf",
+          "sha256": "56f950a78976b2fb546b86e9641b7f904ee0f42127a38920783bd1357f49fcb1"
+        },
+        {
+          "role": "exports",
+          "path": "figures/evidence-chain.png",
+          "sha256": "7f50c620ef5f3fe2f0b5ded655066d3720fbc22835bb70069ff684f5867e457e"
+        }
+      ],
+      "new_illustration": "none; existing source-linked technical figures retained"
+    },
+    {
+      "repository": "constraint-floor",
+      "figure_manifest": "docs/SCIENTIFIC_FIGURES.json",
+      "verified_hash_references": 8,
+      "checks": [
+        {
+          "role": "sources",
+          "path": "tools/generate_figure.py",
+          "sha256": "e5813e8f37d1549fd3e65c2969deb0e706c47c22c11ccef6b5bc00cb6ee8c0e0"
+        },
+        {
+          "role": "sources",
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        },
+        {
+          "role": "sources",
+          "path": "examples/architecture.json",
+          "sha256": "b714e6893894c3e6d74fdc6f3e7ed9e131cceebcc6ed2e7d6d7d64cbb0f04b8d"
+        },
+        {
+          "role": "sources",
+          "path": "src/constraint_floor/__init__.py",
+          "sha256": "12a86df3c5ca3a5eb4e1024b10a398e6f1ea1bb27546cb14df1532089c4a6e7c"
+        },
+        {
+          "role": "sources",
+          "path": "src/constraint_floor/core.py",
+          "sha256": "6e4965d2ab71538270dcbe069f1c3cadf6bc42da592e0475fcdc0e0441531318"
+        },
+        {
+          "role": "exports",
+          "path": "figures/constraint-floor.svg",
+          "sha256": "cfcc2638b55e70efe36b4c2a166f307cab76529a622ce920225ced35217aee24"
+        },
+        {
+          "role": "exports",
+          "path": "figures/constraint-floor.pdf",
+          "sha256": "841df90b39aa17a60eb9b919cad4804ff5c222d96517002982f36e86fbf589a4"
+        },
+        {
+          "role": "exports",
+          "path": "figures/constraint-floor.png",
+          "sha256": "8d50dd05a10ae2d889a687448975b713a9a5c183d1bbb1a4b22b844ab6fb1756"
+        }
+      ],
+      "new_illustration": "none; existing source-linked technical figures retained"
+    }
+  ],
+  "license_review": {
+    "current_renders": "Project-created geometry/renders under CC BY 4.0, retaining repository NOTICE and LICENSING.md",
+    "redistributed_third_party_material_added": "none",
+    "academic_institution_logo_added": "none",
+    "packed_scene_font": "DejaVu/Bitstream Vera notice retained in editable-scene ZIP and visual-source/THIRD_PARTY_FONT_LICENSE.txt; font retains its own terms."
+  },
+  "privacy_review": {
+    "assets_added": "CAD-derived project views and source/camera metadata only",
+    "private_correspondence_planning_event_photos_added": false,
+    "academic_author_identity": "Retained only according to the academic edition\u2019s own NOTICE; no new person attribution added to Main/Labs."
+  },
+  "evidence_boundary": "Visual equality and scientific presentation checks establish source identity and usability; no hardware, physics or flight qualification is inferred.",
+  "path_base": "each named repository root"
+}

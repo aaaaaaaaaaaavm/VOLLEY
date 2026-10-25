@@ -209,6 +209,13 @@ def main():
                 if re.search(pat, line) and not exempt(lines, i, rel, pat):
                     problems.append(f'{rel}:{i + 1}: "{pat}" -- {why}\n      {line.strip()[:110]}')
 
+    # ACR1 has its own source-pinned current facts. Keep original numerical/register
+    # checks below as historical-study consistency checks.
+    import subprocess
+    current = subprocess.run([sys.executable, os.path.join(ROOT, "tools", "check_acr1_public.py")])
+    if current.returncode:
+        problems.append("current ACR1 engineering/public consistency gate failed")
+
     # the register count, wherever a surface states one
     for rel in SURFACES:
         path = os.path.join(ROOT, rel)

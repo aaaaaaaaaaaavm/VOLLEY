@@ -1,0 +1,93 @@
+{
+  "review": "Compact independent review of actual-Cu DC FEM formulation and terminal registration",
+  "reviewed_UTC": "2026-10-24T17:27:03.042667+00:00",
+  "model_sha256": "a980a863d9613ca913564f2d83d7fc834865a3c31a78fc70a75d43d994705d40",
+  "interface_sha256": "1315af372b7e984231e5cfb07866b1ac94af5519aed16e1b53f05ca6b42e16dc",
+  "formulation_review": [
+    "M rows[1,x,y,z] and inverse-column shape coefficients givecorrect linear-tet gradients; sigma*volume*gradNi\u00b7gradNj stiffness has SI conductance units.",
+    "Gmsh coordinates convert mm\u2192m once; rho1.7e-8ohm*m;four-node potentialfieldandtetvolume determinantsare consistent.",
+    "One-voltstart andzero-voltendDirichletfaces chosenbyexplicit42mm2facebbox/terminalcoordinates;remainingexteriorsarenaturallyinsulating.",
+    "TerminalreactionK*V sumspositivecurrent;R=1/currentat1V. Jouleenergyintegral equalsV*I;balances~1e-10supportarithmeticandlinear-solveconsistency.",
+    "PositiveA/BstartterminalnegativeY andpositiveCstartterminalpositiveY mapfirst-barcurrentstoA+,C-,B+;thismatchesinterfaceafterCADfirst-CU reversal.",
+    "Connectedvolumeandmeshchecked;thisdoesnotestablishphysicalbrazejointresistanceorinterphaseinsulationqualification."
+  ],
+  "captured_cases": [
+    {
+      "phase": "A",
+      "h_mm": 2.0,
+      "R_mOhm": 5.695474795336874,
+      "nodes": 111164,
+      "elements": 342741,
+      "current_balance_relative_error": 3.5049526833175e-11,
+      "energy_balance_relative_error": 7.929615103545646e-12,
+      "potential_range": [
+        0.0,
+        1.0
+      ],
+      "interface_capture_sha256_matches_current": true,
+      "input_step_sha256": "b10c2306b947dfa7d65022e8959f76e2ca95ff7bac17786a8e4002755a18864b"
+    },
+    {
+      "phase": "A",
+      "h_mm": 3.0,
+      "R_mOhm": 5.660038304835422,
+      "nodes": 50629,
+      "elements": 133669,
+      "current_balance_relative_error": 4.4617373305280904e-11,
+      "energy_balance_relative_error": 4.114262528147715e-11,
+      "potential_range": [
+        0.0,
+        1.0
+      ],
+      "interface_capture_sha256_matches_current": true,
+      "input_step_sha256": "b10c2306b947dfa7d65022e8959f76e2ca95ff7bac17786a8e4002755a18864b"
+    },
+    {
+      "phase": "B",
+      "h_mm": 3.0,
+      "R_mOhm": 5.660496877971895,
+      "nodes": 50795,
+      "elements": 133914,
+      "current_balance_relative_error": 1.2539579764141394e-10,
+      "energy_balance_relative_error": 9.51252335572857e-11,
+      "potential_range": [
+        0.0,
+        1.0
+      ],
+      "interface_capture_sha256_matches_current": true,
+      "input_step_sha256": "34a5116bf07e4d2e7540f25b534d7a90a770752d8f611e90e68287f918a925a5"
+    },
+    {
+      "phase": "C",
+      "h_mm": 3.0,
+      "R_mOhm": 5.617814869097557,
+      "nodes": 49382,
+      "elements": 130388,
+      "current_balance_relative_error": 2.0463996307647604e-11,
+      "energy_balance_relative_error": 1.904103596642017e-11,
+      "potential_range": [
+        0.0,
+        1.0
+      ],
+      "interface_capture_sha256_matches_current": true,
+      "input_step_sha256": "86e51968a22fb90b936e404bb50dc037188ffebfa6fc9e27d027ff27bbe2f715"
+    }
+  ],
+  "phase_A_h3_to_h2_relative_R_change": 0.006221867671237007,
+  "path_comparison": {
+    "rho_ohm_m": 1.7e-08,
+    "active_bar_series_R_mOhm": 2.6228571428571428,
+    "full_6mm_stub_R_mOhm": 0.5747619047619047,
+    "thin21mm2_Ucenterline_R_mOhm": 2.8163333333333336,
+    "simple_total_without_vertical_risers_mOhm": 6.013952380952381,
+    "assumed_centerline": "72x90mmactive42mm2;71links each2x10mmfull42mm2stub plus[2x12.5mmradial+24mmcross]at21mm2",
+    "interpretation": "~6.014mOhm1Dcenterlineestimate is above5.695mOhm3DFEM;finite-widthcorners/sharedjunctionsoverlapandactualcurrentpathsareabsentfrom1Dsum. This is a scale comparison,not an exact bound or independent conductivity-physics validation."
+  },
+  "disposition": "Formulation and terminal registration coherent for ideal DC copper-solid resistance. Values remain geometry-specific20Cresults; no source/thermal/current-density rating inferred.",
+  "limits_and_small_corrections": [
+    "PhaseB/Cwereonlyh3coarse;do notassignArefinementasverifiedB/Caccuracy oroverinterpret~0.75%phaseCspread.",
+    "Actualleads/buses/contactjointsareexcludedbyWINDING_INTERFACEallocation;addseparatelybeforetotalinvertervoltageandheatbudget.",
+    "Sharpzero-radiusJpeaksaremesh-dependent;noACskin/proximity/eddy-currentorhotresistivitycorrection.",
+    "Outputmeshfilenamephase_A.mshisreusedinsideB/Cfolders;rawdataremainphase-taggedcorrectly,butdeliverynamingcanbephase-specificwithoutchangingresults."
+  ]
+}
