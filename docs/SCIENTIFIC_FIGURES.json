@@ -1133,7 +1133,7 @@
         "validation/acr1_release_dynamics/SUMMARY.json": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c",
         "validation/acr1_release_dynamics/CAMPAIGN.json": "b375b2e58912f147a09c7a30ca38d1b63915d8828ff9c0912fa7f4f0e050d5e8",
         "validation/acr1_release_dynamics/GEOMETRY_AND_INPUTS.json": "32b3492831b1232cf257bfdf46a05f3aace3eaf462e9f492787fc057ddd2e256",
-        "validation/acr1_release_dynamics/MANIFEST.json": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+        "validation/acr1_release_dynamics/MANIFEST.json": "109beb848c2a8de8863bb1d18a6debf25b008d35f1478da303dfd41ff3d1c058"
       },
       "exports": {
         "validation/acr1_release_dynamics/REFINEMENT.png": "50b432563fcf77d27e4e9cf85e2e3bcc8a9dc2b59e213b6203912db3cafd25ac",
@@ -1149,7 +1149,7 @@
         "validation/acr1_release_dynamics/SUMMARY.json": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c",
         "validation/acr1_release_dynamics/CAMPAIGN.json": "b375b2e58912f147a09c7a30ca38d1b63915d8828ff9c0912fa7f4f0e050d5e8",
         "validation/acr1_release_dynamics/GEOMETRY_AND_INPUTS.json": "32b3492831b1232cf257bfdf46a05f3aace3eaf462e9f492787fc057ddd2e256",
-        "validation/acr1_release_dynamics/MANIFEST.json": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+        "validation/acr1_release_dynamics/MANIFEST.json": "109beb848c2a8de8863bb1d18a6debf25b008d35f1478da303dfd41ff3d1c058"
       },
       "exports": {
         "validation/acr1_release_dynamics/DEPARTURE_HISTORIES.png": "e7170e079042fb527a23c8ab1b8f089c33686fe2dff9bf9cda99cc875f86ec4b",
@@ -1165,7 +1165,7 @@
         "validation/acr1_release_dynamics/SUMMARY.json": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c",
         "validation/acr1_release_dynamics/CAMPAIGN.json": "b375b2e58912f147a09c7a30ca38d1b63915d8828ff9c0912fa7f4f0e050d5e8",
         "validation/acr1_release_dynamics/GEOMETRY_AND_INPUTS.json": "32b3492831b1232cf257bfdf46a05f3aace3eaf462e9f492787fc057ddd2e256",
-        "validation/acr1_release_dynamics/MANIFEST.json": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+        "validation/acr1_release_dynamics/MANIFEST.json": "109beb848c2a8de8863bb1d18a6debf25b008d35f1478da303dfd41ff3d1c058"
       },
       "exports": {
         "validation/acr1_release_dynamics/NATIVE_POSE_CAPTURE.png": "188890c9a4f3757d5d4c878c53994dfa0dfd83cbb44b77785398f459ff2e760a"
