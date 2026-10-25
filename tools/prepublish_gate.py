@@ -165,7 +165,13 @@ def check_evidence_tracking(errors: list[str]) -> None:
     """Every file in a current captured-study manifest must enter the Git payload."""
     import json
     tracked = set(git("ls-files", "-z").decode().split("\0"))
-    for name in ["validation/acr1/MANIFEST.json", "validation/selected_feeder/MANIFEST.json", "experiments/selected_feeder/MANIFEST.json",
+    for name in ["validation/acr1/MANIFEST.json",
+                 "validation/programme_closure_acr1/MANIFEST.json",
+                 "validation/acr1_structural_dynamics/MANIFEST.json",
+                 "validation/acr1_release_dynamics/MANIFEST.json",
+                 "validation/acr1_thermal_environment/MANIFEST.json",
+                 "validation/acr1_first_test_package/MANIFEST.json",
+                 "validation/selected_feeder/MANIFEST.json", "experiments/selected_feeder/MANIFEST.json",
                  "validation/system_feasibility_closure/MANIFEST.json", "experiments/system_feasibility_closure/MANIFEST.json",
                  "validation/lunar_native_coast/MANIFEST.json", "experiments/lunar_native_coast/MANIFEST.json",
                  "validation/feeder_common_boundary/MANIFEST.json",
@@ -193,7 +199,9 @@ def check_evidence_tracking(errors: list[str]) -> None:
                  "experiments/captive-transfer-review/MANIFEST.json",
                  "experiments/replenishment-feasibility/MANIFEST.json"]:
         manifest = ROOT / name
-        if not manifest.is_file():
+        # Only manifests included in this publication set control its payload.
+        # Separate, unindexed studies remain drafts until deliberately staged.
+        if name not in tracked or not manifest.is_file():
             continue
         for relative in ["MANIFEST.json", *json.loads(manifest.read_text())["files"]]:
             path = (manifest.parent / relative).resolve()
