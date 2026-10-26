@@ -1308,6 +1308,24 @@
         "docs/assets/acr1/polish/operating_sequence.png": "6f4cebbede545ff8b505345c01f6912cb56195f03cf4ee57fcec5b904de9ea58",
         "docs/assets/acr1/polish/operating_sequence.webp": "035784105f3107ca2356a998c4c7adcc2330d30718b047411757c5aa99d5b132"
       }
+    },
+    {
+      "evidence_class": "CAD-derived Blender operating sequence and computed planar orbital illustration",
+      "caption": "Complete storage-to-orbit explanatory film and its source-linked still alternatives; captions identify edited motion, comparison assumptions and current/historical/future speed cases.",
+      "limitations": "Rigid-part illustration and synthetic two-body scenarios; no measured contact motion, hardware qualification or new release-speed rating. Ideal preset-spring comparison retained.",
+      "sources": {
+        "docs/films/delivery-journey/ANIMATION_PROVENANCE.json": "ad536efc7e02ccbd70a895577b37ce963cd46e9226df756bfbba2cd5fb02ccdb",
+        "docs/films/delivery-journey/PHYSICS_RESULTS.json": "8266e68257f8b7b5fd8ccb76afa0c61ae450b3060aadcff5ec6d453541f24a67",
+        "docs/films/delivery-journey/FINAL_DELIVERY_CHECKS.json": "fb899057604cf2f2e11e5b3002181cd8d2c6bb1f4f74608f93b7422833b5df0d",
+        "docs/visual-source/delivery/STORYBOARD.json": "1baa7414b380723cf34557e5420f6b6e1dc49b9cd111b5f13ec0d1579bb325ed",
+        "docs/visual-source/delivery/mechanism/animate_mechanism.py": "be006046937b231a2debcc2a067991621899800fd403e535f6e3a536a3284c19",
+        "docs/visual-source/delivery/orbit/physics.py": "3a0e4064267eab0c7bf1766734fd8cd418fb4c4c23fd7bee0f62d2268223e494"
+      },
+      "exports": {
+        "docs/films/delivery-journey/poster.jpg": "9edebeaff07c056160727f4cca2bfd46768a457bffa15df57019daaa88069603",
+        "docs/films/delivery-journey/mechanism-storyboard.jpg": "b824f09044ca5c29bd9486b475279b805f6e1cd21586ddffff06839df75d8313",
+        "docs/films/delivery-journey/orbit-storyboard.jpg": "7f5a341a33750991a872a14da37f8be23f13b8aae7fbbfec0d876f8b28eab475"
+      }
     }
   ]
 }

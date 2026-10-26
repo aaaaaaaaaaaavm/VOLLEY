@@ -13,6 +13,8 @@ VOLLEY combines restrained CubeSat storage, guided feed, a captive transfer pall
 [Guided-feed close-up](docs/assets/acr1/polish/feeder_detail_annotated.png) · [Four-state custody sequence](docs/assets/acr1/polish/operating_sequence.png) · [Caption and visibility notes](docs/assets/acr1/polish/CAPTIONS.md)
 
 
+[Watch the complete storage-to-orbit film](https://aaaaaaaaaaaavm.github.io/VOLLEY/delivery-film.html) · [Download MP4](docs/films/delivery-journey/film.mp4) · [Editable film sources](docs/downloads/VOLLEY_delivery_film_sources.zip)
+
 ## How the machine works
 
 Two fixed six-cell banks retain the payloads individually. Guided lead-screw pushers transfer one satellite to the indexed captive cradle. The cradle docks a reusable pallet to the launch sled and withdraws before arming. The sled accelerates the payload; release cams open the restraint, active electromagnetic arrest stops the retained sled, and the pallet returns with it. The executable sequence requires custody, path, source and brake proofs before launch.
@@ -56,6 +58,8 @@ These separately identified studies add native solver histories, refinement, res
 ### Partial-occupancy mission comparison
 
 The [two/four-payload supplement](validation/acr1_partial_occupancy/REPORT.md) adds 28 finite-force candidate trajectories and 17 native Orekit replays. Its [common-case tables](validation/acr1_partial_occupancy/technical/README.md) compare two, four and twelve deployments while retaining the complete hardware mass. The accepted twelve-payload academic issue remains unchanged.
+
+[Higher-speed design constraints and Gen6 attached-shoe trade](docs/HIGHER_SPEED_DESIGN_SPACE.md) · unchanged-configuration screen and separately identified research bounds.
 
 ## Engineering lineage
 

@@ -1786,6 +1786,39 @@
       "camera_provenance": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
       "release_identity": "containing Git commit or release tag",
       "status": "current"
+    },
+    {
+      "asset_id": "delivery-journey-film",
+      "path": "docs/films/delivery-journey/film.mp4",
+      "sha256": "6751e1a73f886232faa8588b74bd3e0e3a8de5e29bfb472441cfa576963ba059",
+      "configuration": "VOLLEY-G5-ACR1 / FILM-PLANAR-ILLUSTRATION-01",
+      "evidence_class": "Source-driven explanatory film",
+      "caption": "Storage, feed, carrier launch/recovery, representative passive canister and host-assisted orbital comparison; edited motion and distinct speed evidence classes.",
+      "status": "current",
+      "source_path": "docs/films/delivery-journey/FILM_MANIFEST.json",
+      "generator": "docs/visual-source/delivery/combine_delivery.py"
+    },
+    {
+      "asset_id": "delivery-journey-poster",
+      "path": "docs/films/delivery-journey/poster.jpg",
+      "sha256": "9edebeaff07c056160727f4cca2bfd46768a457bffa15df57019daaa88069603",
+      "configuration": "VOLLEY-G5-ACR1 / FILM-PLANAR-ILLUSTRATION-01",
+      "evidence_class": "CAD-derived animation still",
+      "caption": "First inventory pose from the actual Blender animation; nominal CubeSat envelopes.",
+      "status": "current",
+      "source_path": "docs/films/delivery-journey/FILM_MANIFEST.json",
+      "generator": "docs/visual-source/delivery/combine_delivery.py"
+    },
+    {
+      "asset_id": "delivery-journey-sources",
+      "path": "docs/downloads/VOLLEY_delivery_film_sources.zip",
+      "sha256": "b4ec902cbdf75c4bb5038cf370e1d63811ca4a123712d73e53ee50f1e7c5d217",
+      "configuration": "VOLLEY-G5-ACR1 / FILM-PLANAR-ILLUSTRATION-01",
+      "evidence_class": "Editable source archive",
+      "caption": "Portable generators, baked CAD-derived Blender scene, orbital data, captions and verification records.",
+      "status": "current",
+      "source_path": "docs/films/delivery-journey/FILM_MANIFEST.json",
+      "generator": "docs/visual-source/delivery/combine_delivery.py"
     }
   ],
   "path_base": "repository_root",

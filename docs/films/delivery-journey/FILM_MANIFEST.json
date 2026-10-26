@@ -1,0 +1,89 @@
+{
+  "configuration": "VOLLEY-G5-ACR1 / FILM-PLANAR-ILLUSTRATION-01",
+  "film": "delivery-journey",
+  "title": "VOLLEY from cassette to orbit",
+  "duration_s": 190,
+  "dimensions_px": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audio": "none; English on-screen explanation and optional closed captions",
+  "path_base": "repository_root",
+  "master": "docs/films/delivery-journey/film.mp4",
+  "captions": "docs/films/delivery-journey/captions.vtt",
+  "transcript": "docs/films/delivery-journey/TRANSCRIPT.md",
+  "poster": "docs/films/delivery-journey/poster.jpg",
+  "sources": "docs/visual-source/delivery/STORYBOARD.json",
+  "editable_source": [
+    "docs/visual-source/delivery/build_comparison.py",
+    "docs/visual-source/delivery/build_page.py",
+    "docs/visual-source/delivery/combine_delivery.py",
+    "docs/visual-source/delivery/mechanism/animate_mechanism.py",
+    "docs/visual-source/delivery/mechanism/compose_mechanism.py",
+    "docs/visual-source/delivery/mechanism/finish_render_settings.py",
+    "docs/visual-source/delivery/orbit/orbit_film.py",
+    "docs/visual-source/delivery/orbit/physics.py",
+    "docs/visual-source/delivery/orbit/prepare_delivery.py"
+  ],
+  "cad_scene": {
+    "archive_path": "docs/downloads/VOLLEY_delivery_film_sources.zip",
+    "member_path": "mechanism/VOLLEY_ACR1_operating_cycle.blend",
+    "member_sha256": "667f89fa71b1b2011b41404794ef397a6ee9274d9c42946a22686f270963aa30"
+  },
+  "render_script_archive": "docs/visual-source/delivery/combine_delivery.py",
+  "render_script_sha256": "243772c0d438492108ce27f6ad4880f6076bd693dfd27d0701cd9b15bd0b9821",
+  "storyboard_archive": "docs/visual-source/delivery/STORYBOARD.json",
+  "storyboard_sha256": "1baa7414b380723cf34557e5420f6b6e1dc49b9cd111b5f13ec0d1579bb325ed",
+  "source_files": [
+    {
+      "path": "docs/films/delivery-journey/ANIMATION_PROVENANCE.json",
+      "sha256": "ad536efc7e02ccbd70a895577b37ce963cd46e9226df756bfbba2cd5fb02ccdb"
+    },
+    {
+      "path": "docs/films/delivery-journey/FINAL_DELIVERY_CHECKS.json",
+      "sha256": "fb899057604cf2f2e11e5b3002181cd8d2c6bb1f4f74608f93b7422833b5df0d"
+    },
+    {
+      "path": "docs/films/delivery-journey/PHYSICS_RESULTS.json",
+      "sha256": "8266e68257f8b7b5fd8ccb76afa0c61ae450b3060aadcff5ec6d453541f24a67"
+    },
+    {
+      "path": "docs/films/delivery-journey/TRANSCRIPT.md",
+      "sha256": "0450fac7e711bd91c23c1c920c80f8de77c0eb69df48d30755ccf047bd19ee63"
+    },
+    {
+      "path": "docs/films/delivery-journey/captions.vtt",
+      "sha256": "306a2053fce170eb945324e076e0e4d12852d56cf7c4338aaf0f0955878e6b88"
+    },
+    {
+      "path": "docs/films/delivery-journey/comparison.mp4",
+      "sha256": "d306d8902efef6c337225697826c77a0d17409a419908443bd3a690133ef71ab"
+    },
+    {
+      "path": "docs/films/delivery-journey/film.mp4",
+      "sha256": "6751e1a73f886232faa8588b74bd3e0e3a8de5e29bfb472441cfa576963ba059"
+    },
+    {
+      "path": "docs/films/delivery-journey/mechanism-storyboard.jpg",
+      "sha256": "b824f09044ca5c29bd9486b475279b805f6e1cd21586ddffff06839df75d8313"
+    },
+    {
+      "path": "docs/films/delivery-journey/mechanism.mp4",
+      "sha256": "d4bf2658e82a8d8cb9d822c92a537c9677c948ab2477ecfec9af6e54ef7d47d3"
+    },
+    {
+      "path": "docs/films/delivery-journey/orbit-storyboard.jpg",
+      "sha256": "7f5a341a33750991a872a14da37f8be23f13b8aae7fbbfec0d876f8b28eab475"
+    },
+    {
+      "path": "docs/films/delivery-journey/orbital.mp4",
+      "sha256": "a022aeb36bc1a9af546c2440535fc375dd1cd34bd37374a2535ec8288bd8da61"
+    },
+    {
+      "path": "docs/films/delivery-journey/poster.jpg",
+      "sha256": "9edebeaff07c056160727f4cca2bfd46768a457bffa15df57019daaa88069603"
+    }
+  ],
+  "claims": "Current ACR1 command points1/2/3m/s; historical16.029 and future1000/3500m/s kinematic cases are separate. Generic maneuverable host; matched preset-spring orbit retained. Display motion is not contact dynamics or measured delivery accuracy."
+}

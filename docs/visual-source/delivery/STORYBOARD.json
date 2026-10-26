@@ -1,0 +1,34 @@
+{
+  "film": "VOLLEY from cassette to orbit",
+  "duration_s": 190,
+  "chapters": [
+    {
+      "start_s": 0,
+      "end_s": 70,
+      "title": "Storage, guided feed and launch",
+      "class": "CAD-derived rigid-part animation; edited timing"
+    },
+    {
+      "start_s": 70,
+      "end_s": 90,
+      "title": "Deployment principles",
+      "class": "Original unscaled explanatory schematics"
+    },
+    {
+      "start_s": 90,
+      "end_s": 190,
+      "title": "Host-assisted orbital delivery",
+      "class": "Computed planar two-body illustrations; synthetic comparison"
+    }
+  ],
+  "current_command_points_m_s": [
+    1,
+    2,
+    3
+  ],
+  "historical_example_m_s": 16.029,
+  "future_kinematic_examples_m_s": [
+    1000,
+    3500
+  ]
+}

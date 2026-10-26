@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "matches_accepted_commit": true
+    },
+    {
+      "path": "validation/acr1/mission/MISSION_INPUTS.json",
+      "matches_accepted_commit": true
+    },
+    {
+      "path": "validation/acr1/mission/MISSION_REPORT.md",
+      "matches_accepted_commit": true
+    },
+    {
+      "path": "validation/reference_interfaces_acr1/SOURCE_CARDS.json",
+      "matches_accepted_commit": true
+    },
+    {
+      "path": "README_PRE_ACR1_2026-10-23.md",
+      "matches_accepted_commit": true
+    }
+  ],
+  "current_mapping_public_name": "modeled_release_m_s",
+  "physical_calibration_claimed": false
+}

@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "media": [
+    {
+      "file": "VOLLEY_orbit_comparison_100s.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 2400,
+      "duration_s": 100.0,
+      "audio": false,
+      "sha256": "a022aeb36bc1a9af546c2440535fc375dd1cd34bd37374a2535ec8288bd8da61",
+      "bytes": 1011595
+    },
+    {
+      "file": "segments/01_orbit_chapter.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 480,
+      "duration_s": 20.0,
+      "audio": false,
+      "sha256": "28f1501ddea46cd3509073a687fbaf9fc94e0fd18f91d42cc1848b451675f798",
+      "bytes": 173631
+    },
+    {
+      "file": "segments/02_orbit_chapter.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 480,
+      "duration_s": 20.0,
+      "audio": false,
+      "sha256": "8afb6d8c43940b64f3b842a62c775bfd51e0332ba19603540cf0aa90c5c5a528",
+      "bytes": 149403
+    },
+    {
+      "file": "segments/03_orbit_chapter.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 480,
+      "duration_s": 20.0,
+      "audio": false,
+      "sha256": "9bceaeae98d105a1c93c99e78870e7cc9320c8954504f9962fb0babe676e1611",
+      "bytes": 239348
+    },
+    {
+      "file": "segments/04_orbit_chapter.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 480,
+      "duration_s": 20.0,
+      "audio": false,
+      "sha256": "e4d53a2ebd0a4990d946c8ffba87f817e2200d6a6b90f802ac532f9b4db4ab2a",
+      "bytes": 190511
+    },
+    {
+      "file": "segments/05_orbit_chapter.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 480,
+      "duration_s": 20.0,
+      "audio": false,
+      "sha256": "9bcb12bfa5dff26e73eff11d861691b9545d090436d7890d4a12d5e67ef4aadf",
+      "bytes": 261750
+    }
+  ],
+  "caption_cues": 21,
+  "caption_span_s": 100,
+  "physics": [
+    {
+      "id": "chief",
+      "max_relative_energy_change": 1.786949996922469e-14,
+      "max_relative_angular_momentum_change": 8.968981527676914e-15,
+      "independent_analytic_max_position_difference_m": 1.0689269283509305e-05,
+      "passed": true
+    },
+    {
+      "id": "illustrative_low",
+      "max_relative_energy_change": 6.391619291803842e-15,
+      "max_relative_angular_momentum_change": 3.1824576166201867e-15,
+      "independent_analytic_max_position_difference_m": 2.523107554637072e-06,
+      "passed": true
+    },
+    {
+      "id": "spring1",
+      "max_relative_energy_change": 6.132024722200087e-15,
+      "max_relative_angular_momentum_change": 3.1821235140538393e-15,
+      "independent_analytic_max_position_difference_m": 2.6768683189392924e-06,
+      "passed": true
+    },
+    {
+      "id": "current3",
+      "max_relative_energy_change": 6.1351652536232886e-15,
+      "max_relative_angular_momentum_change": 2.8920998231057432e-15,
+      "independent_analytic_max_position_difference_m": 2.5875258858285583e-06,
+      "passed": true
+    },
+    {
+      "id": "preset_match",
+      "max_relative_energy_change": 6.1351652536232886e-15,
+      "max_relative_angular_momentum_change": 2.8920998231057432e-15,
+      "independent_analytic_max_position_difference_m": 2.5875258858285583e-06,
+      "passed": true
+    },
+    {
+      "id": "historical16",
+      "max_relative_energy_change": 1.8076691013070478e-14,
+      "max_relative_angular_momentum_change": 8.950000036651712e-15,
+      "independent_analytic_max_position_difference_m": 8.488825399891469e-06,
+      "passed": true
+    },
+    {
+      "id": "future1000",
+      "max_relative_energy_change": 4.3607202790997065e-15,
+      "max_relative_angular_momentum_change": 3.1939282013665885e-15,
+      "independent_analytic_max_position_difference_m": 1.2914816012707997e-06,
+      "passed": true
+    },
+    {
+      "id": "future3500",
+      "max_relative_energy_change": 3.9693249700123484e-13,
+      "max_relative_angular_momentum_change": 2.9662007828228215e-14,
+      "independent_analytic_max_position_difference_m": 2.0047462056687044e-06,
+      "passed": true
+    }
+  ],
+  "readability_review": "Full-size stills reviewed across all5 chapters; key type32px+,footers/axes24\u201328px; Earth/curve overlap removed in final layout; tiny offsets explicitly zoomed.",
+  "limiting_checks": [
+    "zero-kick circular",
+    "preset/current equal-kick exact overlap",
+    "ideal Hohmann arrival/circularization",
+    "3500m/s positive energy escape"
+  ],
+  "accepted_sources_modified": false,
+  "original_studies_rerun": false
+}

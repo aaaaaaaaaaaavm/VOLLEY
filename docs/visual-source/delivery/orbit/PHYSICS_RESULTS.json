@@ -1,0 +1,315 @@
+{
+  "study": "FILM-PLANAR-ILLUSTRATION-01",
+  "constants": {
+    "mu_Earth_m3_s2": 398600441800000.0,
+    "reference_radius_m": 6378137.0
+  },
+  "initial_altitude_km": 600,
+  "host_transfer": {
+    "initial_altitude_km": 500,
+    "target_circular_altitude_km": 600,
+    "first_burn_m_s": 27.42051205426924,
+    "second_circularizing_burn_m_s": 27.32174181251321,
+    "total_m_s": 54.74225386678245,
+    "coast_seconds": 2869.496407507399,
+    "assumptions": "Ideal impulsive coplanar Hohmann; generic restart-capable maneuverable host; no selected rocket/provider"
+  },
+  "current_command_mapping": {
+    "command_m_s": 3,
+    "mission_initial_mass_kg": 704.5567197004,
+    "effective_payload_retainedhost_relative_speed_m_s": 2.9436492231582814,
+    "inertial_payload_kick_m_s": 2.9269371592982703,
+    "coupled_reference_kick_m_s": 2.92693715929827,
+    "difference_m_s": 4.440892098500626e-16,
+    "modeled_release_m_s": 2.99986398873585
+  },
+  "spring_example": {
+    "relative_speed_m_s": 1,
+    "inertial_kick_m_s": 0.9935483870967742,
+    "host_plus_device_plus_payload_mass_kg": 620,
+    "disclaimer": "Representative passive P-POD-style example; neither universal product rating nor measured capability"
+  },
+  "ideal_preset_spring": {
+    "relative_speed_m_s": 2.945943244748259,
+    "inertial_kick_m_s": 2.9269371592982703,
+    "reduced_mass_energy_J": 17.245181504474797,
+    "assumption": "Ground-set ideal energy benchmark; no catalog product with this energy is selected"
+  },
+  "cases": [
+    {
+      "id": "chief",
+      "inertial_kick_m_s": 0.0,
+      "meaning": "unreleased circular chief",
+      "perigee_altitude_km": 600.0,
+      "apogee_altitude_km": 600.0000000000028,
+      "period_minutes": 96.68719643210866,
+      "phase_24h_wrapped_deg": 8.611092211592271e-11,
+      "specific_energy_J_kg": -28560663.24005963,
+      "specific_angular_momentum_m2_s": 52739818838.71926,
+      "semimajor_axis_m": 6978137.000000001,
+      "eccentricity": 2.220446049250313e-16,
+      "extra_prograde_burn_at_apogee_to_circularize_m_s": 9.094947017729282e-13,
+      "final_state_SI": [
+        5470228.1904670345,
+        -4332551.157803789,
+        4692.48993694017,
+        5924.682664230695
+      ],
+      "orbit_type": "ellipse"
+    },
+    {
+      "id": "illustrative_low",
+      "inertial_kick_m_s": 0.2,
+      "meaning": "illustrative inertial kick; outside current evaluated range",
+      "perigee_altitude_km": 599.9999999999982,
+      "apogee_altitude_km": 600.738684640278,
+      "period_minutes": 96.69487279601103,
+      "phase_24h_wrapped_deg": -0.42944650307440463,
+      "specific_energy_J_kg": -28559151.647018325,
+      "specific_angular_momentum_m2_s": 52741214466.119255,
+      "semimajor_axis_m": 6978506.342320139,
+      "eccentricity": 5.2925698139638655e-05,
+      "extra_prograde_burn_at_apogee_to_circularize_m_s": 0.19999470750190085,
+      "final_state_SI": [
+        5437664.793409994,
+        -4373480.931118506,
+        4736.639379078028,
+        5889.5893146905255
+      ],
+      "orbit_type": "ellipse"
+    },
+    {
+      "id": "spring1",
+      "inertial_kick_m_s": 0.9935483870967742,
+      "meaning": "representative 1 m/s relative spring, not universal P-POD rating",
+      "perigee_altitude_km": 600.0,
+      "apogee_altitude_km": 603.6705582013149,
+      "period_minutes": 96.72534264315146,
+      "phase_24h_wrapped_deg": -2.1340680731277373,
+      "specific_energy_J_kg": -28553153.641704585,
+      "specific_angular_momentum_m2_s": 52746751955.48055,
+      "semimajor_axis_m": 6979972.279100657,
+      "eccentricity": 0.0002629350128156016,
+      "extra_prograde_burn_at_apogee_to_circularize_m_s": 0.993417776348906,
+      "final_state_SI": [
+        5305433.443708719,
+        -4533531.768939199,
+        4909.212759185303,
+        5747.066714669401
+      ],
+      "orbit_type": "ellipse"
+    },
+    {
+      "id": "current3",
+      "inertial_kick_m_s": 2.9269371592982703,
+      "meaning": "source-coupled modeled ACR1 3 m/s command; finite-host mapping",
+      "perigee_altitude_km": 600.0000000000009,
+      "apogee_altitude_km": 610.8201778681213,
+      "period_minutes": 96.79965933684745,
+      "phase_24h_wrapped_deg": -6.291574226988018,
+      "specific_energy_J_kg": -28538537.560061093,
+      "specific_angular_momentum_m2_s": 52760243407.20724,
+      "semimajor_axis_m": 6983547.088934061,
+      "eccentricity": 0.0007746906930194974,
+      "extra_prograde_burn_at_apogee_to_circularize_m_s": 2.925803643043764,
+      "final_state_SI": [
+        4963595.07959828,
+        -4907025.894327453,
+        5311.445445561856,
+        5378.529602315651
+      ],
+      "orbit_type": "ellipse"
+    },
+    {
+      "id": "preset_match",
+      "inertial_kick_m_s": 2.9269371592982703,
+      "meaning": "ideal ground-preset spring matched to current inertial kick",
+      "perigee_altitude_km": 600.0000000000009,
+      "apogee_altitude_km": 610.8201778681213,
+      "period_minutes": 96.79965933684745,
+      "phase_24h_wrapped_deg": -6.291574226988018,
+      "specific_energy_J_kg": -28538537.560061093,
+      "specific_angular_momentum_m2_s": 52760243407.20724,
+      "semimajor_axis_m": 6983547.088934061,
+      "eccentricity": 0.0007746906930194974,
+      "extra_prograde_burn_at_apogee_to_circularize_m_s": 2.925803643043764,
+      "final_state_SI": [
+        4963595.07959828,
+        -4907025.894327453,
+        5311.445445561856,
+        5378.529602315651
+      ],
+      "orbit_type": "ellipse"
+    },
+    {
+      "id": "historical16",
+      "inertial_kick_m_s": 16.029,
+      "meaning": "historical periodic-field speed used only as kinematic input; not current rating",
+      "perigee_altitude_km": 600.0,
+      "apogee_altitude_km": 659.5134428554652,
+      "period_minutes": 97.30630701480362,
+      "phase_24h_wrapped_deg": -34.57803816643838,
+      "specific_energy_J_kg": -28439389.754243612,
+      "specific_angular_momentum_m2_s": 52851671396.69226,
+      "semimajor_axis_m": 7007893.721427733,
+      "eccentricity": 0.004246171904226603,
+      "extra_prograde_burn_at_apogee_to_circularize_m_s": 15.995004874402184,
+      "final_state_SI": [
+        2051220.3605660712,
+        -6691733.812007239,
+        7210.711884964018,
+        2242.327034120476
+      ],
+      "orbit_type": "ellipse"
+    },
+    {
+      "id": "future1000",
+      "inertial_kick_m_s": 1000.0,
+      "meaning": "future 1 km/s inertial kinematic scenario; not achieved hardware",
+      "perigee_altitude_km": 600.0000000000009,
+      "apogee_altitude_km": 6084.996462119183,
+      "period_minutes": 158.96506785863647,
+      "phase_24h_wrapped_deg": 76.39551374364817,
+      "specific_energy_J_kg": -20502798.033526808,
+      "specific_angular_momentum_m2_s": 59717955838.71927,
+      "semimajor_axis_m": 9720635.231059592,
+      "eccentricity": 0.2821315856289617,
+      "extra_prograde_burn_at_apogee_to_circularize_m_s": 863.72666087173,
+      "final_state_SI": [
+        5766913.959745205,
+        4508111.854637007,
+        -4110.7841660034655,
+        7141.788709801518
+      ],
+      "orbit_type": "ellipse"
+    },
+    {
+      "id": "future3500",
+      "inertial_kick_m_s": 3500.0,
+      "meaning": "future 3.5 km/s inertial kinematic scenario; not achieved hardware",
+      "perigee_altitude_km": 600.0000000000009,
+      "apogee_altitude_km": null,
+      "period_minutes": null,
+      "phase_24h_wrapped_deg": -174.8217601820776,
+      "specific_energy_J_kg": 4016864.9828052223,
+      "specific_angular_momentum_m2_s": 77163298338.71927,
+      "semimajor_axis_m": -49615862.557774216,
+      "eccentricity": 1.140643266896236,
+      "extra_prograde_burn_at_apogee_to_circularize_m_s": null,
+      "final_state_SI": [
+        -274281181.906089,
+        179497044.55451384,
+        -2828.6706663071786,
+        1569.8296299047347
+      ],
+      "orbit_type": "hyperbola"
+    }
+  ],
+  "checks": [
+    {
+      "id": "chief",
+      "max_relative_energy_change": 1.786949996922469e-14,
+      "max_relative_angular_momentum_change": 8.968981527676914e-15,
+      "independent_analytic_max_position_difference_m": 1.0689269283509305e-05,
+      "passed": true
+    },
+    {
+      "id": "illustrative_low",
+      "max_relative_energy_change": 6.391619291803842e-15,
+      "max_relative_angular_momentum_change": 3.1824576166201867e-15,
+      "independent_analytic_max_position_difference_m": 2.523107554637072e-06,
+      "passed": true
+    },
+    {
+      "id": "spring1",
+      "max_relative_energy_change": 6.132024722200087e-15,
+      "max_relative_angular_momentum_change": 3.1821235140538393e-15,
+      "independent_analytic_max_position_difference_m": 2.6768683189392924e-06,
+      "passed": true
+    },
+    {
+      "id": "current3",
+      "max_relative_energy_change": 6.1351652536232886e-15,
+      "max_relative_angular_momentum_change": 2.8920998231057432e-15,
+      "independent_analytic_max_position_difference_m": 2.5875258858285583e-06,
+      "passed": true
+    },
+    {
+      "id": "preset_match",
+      "max_relative_energy_change": 6.1351652536232886e-15,
+      "max_relative_angular_momentum_change": 2.8920998231057432e-15,
+      "independent_analytic_max_position_difference_m": 2.5875258858285583e-06,
+      "passed": true
+    },
+    {
+      "id": "historical16",
+      "max_relative_energy_change": 1.8076691013070478e-14,
+      "max_relative_angular_momentum_change": 8.950000036651712e-15,
+      "independent_analytic_max_position_difference_m": 8.488825399891469e-06,
+      "passed": true
+    },
+    {
+      "id": "future1000",
+      "max_relative_energy_change": 4.3607202790997065e-15,
+      "max_relative_angular_momentum_change": 3.1939282013665885e-15,
+      "independent_analytic_max_position_difference_m": 1.2914816012707997e-06,
+      "passed": true
+    },
+    {
+      "id": "future3500",
+      "max_relative_energy_change": 3.9693249700123484e-13,
+      "max_relative_angular_momentum_change": 2.9662007828228215e-14,
+      "independent_analytic_max_position_difference_m": 2.0047462056687044e-06,
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "source_pins": [
+    {
+      "id": "current_source",
+      "path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/analysis/COUPLED_SHOT.json"
+    },
+    {
+      "id": "mission_mapping",
+      "path": "validation/acr1/mission/MISSION_INPUTS.json",
+      "sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/MISSION_INPUTS.json"
+    },
+    {
+      "id": "mission_methods",
+      "path": "validation/acr1/mission/MISSION_REPORT.md",
+      "sha256": "1f200e71ecac7632be3d9a21851c3e73b0fb8b7f91568ffa287e4f3a03bd0b2c",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/MISSION_REPORT.md"
+    },
+    {
+      "id": "reference_cards",
+      "path": "validation/reference_interfaces_acr1/SOURCE_CARDS.json",
+      "sha256": "221a7916d43344a53a138e3cd9516d36b998cd6555ad66ac7fb861f72812b978",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/reference_interfaces_acr1/SOURCE_CARDS.json"
+    },
+    {
+      "id": "historical_speed",
+      "path": "README_PRE_ACR1_2026-10-23.md",
+      "sha256": "dee90d814743bcf06611d655170b1810d811cf919890d1d1fd4bfa9f11fa47c8",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/README_PRE_ACR1_2026-10-23.md"
+    }
+  ],
+  "display_conventions": {
+    "phase": "Signed Earth-centered azimuth relative to unburned circular chief after24h,wrapped to\u00b1180deg; not target accuracy",
+    "orbit_view": "Same-plane physical position ratios, planet reference sphere; tiny offsets also shown in explicit radial/co-rotating zooms",
+    "future": "Independent kinematic scenes, never attached to current rail"
+  },
+  "limitations": [
+    "No plane-change maneuver",
+    "No navigation-accuracy claim",
+    "No terrain/drag/J2/third-body modeling",
+    "No hardware capability beyond source-supported1\u20133m/s commands"
+  ]
+}

@@ -1,0 +1,2357 @@
+{
+  "configuration": "VOLLEY-G5-ACR1",
+  "duration_s": 70,
+  "fps": 24,
+  "frames": 1680,
+  "render_size": [
+    1280,
+    720
+  ],
+  "source_blend_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06",
+  "source_script_sha256": "be006046937b231a2debcc2a067991621899800fd403e535f6e3a536a3284c19",
+  "geometry_objects": 387,
+  "all_source_meshes_preserved": true,
+  "display_timing": "Edited; feeder/lift time compression and launch slow motion, not simulation time",
+  "detail_visibility": "Other banks, bank mounts and host mounting ladder hidden during details; nominal spring reference envelopes omitted throughout",
+  "not_shown": "Real host mounts, sensing electronics and payload details beyond accepted envelope; purchased thread/spring detail",
+  "animation_invariants": {
+    "sampled_frames": 1680,
+    "all_pass": true,
+    "checks": [
+      "carrier_pallet_x_equal",
+      "payload_transfers_only_at_source_height",
+      "launch_only_with_clear_lift",
+      "unselected_inventory_static"
+    ]
+  },
+  "source_meshes": [
+    {
+      "cad_name": "Host_mount_ladder",
+      "source_mesh_sha256": "8a1aec8bbe80330cd68dca98a163510bdc90a974cfd619e7ca1bb17164c9b292",
+      "subsystem": "fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_minusY",
+      "source_mesh_sha256": "a82dd90a1375b9d029edec33ed26b6fd29d526f661b8bddc09bc04d458ac7c64",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_-1_40",
+      "source_mesh_sha256": "8aba30af9743908f9a1cd428ab3002fc852b4221e8233850778d0c1c542e59f0",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_-1_400",
+      "source_mesh_sha256": "35bb93aa89d22ae9a57c8cf410bfb9cf3e8ec5c5eb938292c5ef90fe0e062471",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_-1_800",
+      "source_mesh_sha256": "8df371ba646783876b291a3581a270a0bd0ce1005a3683f7003012123a45529f",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_-1_1200",
+      "source_mesh_sha256": "93174daa169094cca3d4d1bc6b54410397c8914b95bda758cb2a9197b8b67346",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_-1_1600",
+      "source_mesh_sha256": "0eaabacbbb619f8110b4bef3aa625a7627e3f0217af40d9a0ccfe7780a2adca9",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_-1_2000",
+      "source_mesh_sha256": "5ac99d711afd80f7a2bee6df70fff39d13147ca837d247a96062eb0d2ecaa4f9",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_-1_2190",
+      "source_mesh_sha256": "ffbf3e5b81c4c33ac71e454749a5d2ff9143725a6199f548feb4144896910ecd",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_plusY",
+      "source_mesh_sha256": "3ca388e3c134fc57909f2b061cdd219843042a11e11de04f4af328b83e2af8d0",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_1_40",
+      "source_mesh_sha256": "ab9a5643708c57fd9602244c3a888bb96b631fb44b26ed6f0038119483a37319",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_1_400",
+      "source_mesh_sha256": "0adf8552a5f25dac5c8cc26c740cc4eadc22b0f9101dada69b351dd11dac4ff0",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_1_800",
+      "source_mesh_sha256": "f06e191cda8ac4f79cf96e56efc58d6a099df202cc5fd76732783edcfb4482e7",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_1_1200",
+      "source_mesh_sha256": "c58c0d125a75ddb3f7371dfb5bc45ad186c15d74f6e00acf689abaf5f9256220",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_1_1600",
+      "source_mesh_sha256": "5475cdc9b51fd23f8bc3f4d714b0f62f9ecabbbb0758b82170a5abe412fc72aa",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_1_2000",
+      "source_mesh_sha256": "a670f98aec69fcc153ebc9a6d215ad30b11ff3fa5e781260130154d444dd6521",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Track_support_1_2190",
+      "source_mesh_sha256": "084f0529039b30268acb783fd996dab11a90a7e2a8d7323a07b6e8336625e220",
+      "subsystem": "track",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Stator_phase_A",
+      "source_mesh_sha256": "657cb43ce2c9a2587f04efcf66d70ed2a10e04c6b845bc922fec4e437d3e0fbc",
+      "subsystem": "stator",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Stator_phase_C",
+      "source_mesh_sha256": "329f7a859d29b2cfc4749f09967c95be90b30451c185ee40c8e6af8cf7eb2470",
+      "subsystem": "stator",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Stator_phase_B",
+      "source_mesh_sha256": "5d920fffdbd250315cde5a882f13e45b3fc7d734efe3e716465c229624cd9324",
+      "subsystem": "stator",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Stator_GFRP_board_-1",
+      "source_mesh_sha256": "4f06e12bccc7baca85a27abf09f7b9a80264a78727d335db7ce42a548630c1f1",
+      "subsystem": "stator_support",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Stator_GFRP_board_1",
+      "source_mesh_sha256": "7e58abc8233581ac85bd3ab3cc0cdcd7f3f657ea7249f691e3d56f830477dc57",
+      "subsystem": "stator_support",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_mount_-1",
+      "source_mesh_sha256": "57f163b7540fda5bbb105d539831eab6f1c85f744f2084a7b08e2cb9a48887ff",
+      "subsystem": "bank_mount",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_mount_1",
+      "source_mesh_sha256": "337cc9694839c5ff5349950ee6f9d806162964e47c7322e69d3d776fada8a13a",
+      "subsystem": "bank_mount",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Forekeeper_fixed_cam_-1",
+      "source_mesh_sha256": "9fe5ca4e4e859c74496a861d6f775f0654e058d8a2b5a9dffb4c25370e15e4b6",
+      "subsystem": "release_cam",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Forekeeper_fixed_cam_1",
+      "source_mesh_sha256": "743fa71aff0b118e2bd7d7f98b6a202f11ec8b37e26d6f2d926e99da2b872694",
+      "subsystem": "release_cam",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Storage_keeper_-1_5",
+      "source_mesh_sha256": "36ec190df0bbb4b34cddf3dc78d7f811bd56b40840cbc0ec6b23b96334c4077b",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Storage_keeper_-1_95",
+      "source_mesh_sha256": "cbe798c72ccd26738f371b653ed9369208033f0a5d387fae0fd9c78cec80bffc",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Storage_keeper_1_5",
+      "source_mesh_sha256": "46492fb8c52a6119be4bfc43ab43b2aa95f37313d4dfca543863f96ca30daff7",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Storage_keeper_1_95",
+      "source_mesh_sha256": "bf7e0c7ae39932bed08c5ea792db3b66ea3101a5a807e4882a3373ef8188ece5",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Guide_shaft_244",
+      "source_mesh_sha256": "c7fb6e54d6280b146180afe3ca6d1fac8729b3f29a1cbf2567705852d9d66726",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Guide_bush_244",
+      "source_mesh_sha256": "404f0c86af7d7da88d73d13dcbbb166e5504168ac0f8cdaafbabd335d146b653",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Guide_shaft_624.5",
+      "source_mesh_sha256": "2ee31587e2834544f2d5222e81092c7e46d8069bab7bc3f9e74ca2196983302c",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Guide_bush_624.5",
+      "source_mesh_sha256": "a76d2a2c52f0e0623bee397572893b56d78f2d41ba66ac35f26c659ef3c6a417",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Lead_screw_10x2",
+      "source_mesh_sha256": "6999489cfa88949569d7ab57923c7e1df25a3539c0e83a3fe505325ce093ef5f",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Screw_bearing_-445",
+      "source_mesh_sha256": "78623ad8a8576fa304cbde1108e3822430f09545bf43234a4c22dee62da47af4",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Screw_bearing_-115",
+      "source_mesh_sha256": "b67857cd114b874e53ed061cbfadc32b44953b96629db360e16a468eaec6a0a2",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Lead_nut_SB3700",
+      "source_mesh_sha256": "f7fee075913dacb80be6a6eb30ba43e33e1fc196b0985a60b8521d0feabb3ecc",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Pusher_frame",
+      "source_mesh_sha256": "c4d557f7d8dacc41a25dc3128c012ed347b3aff3d683c67026ca7bbd7667ae1d",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Brake_BXW01_reference",
+      "source_mesh_sha256": "5f1c96764d5d8accbacc801e43c4bb07644f0ad0a61e7dbb027d15d393a5177b",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "d99b47745a319587a4c8a24fda5f59c4a7a15434d8c411a70080762ae3bf30aa",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Drive_coupler",
+      "source_mesh_sha256": "5fd15030407f86a4d280b067a02e6931c7fc8be87c398061f09efb1f4c6184a2",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Fixed_channel_frame",
+      "source_mesh_sha256": "1578ce5b5a58fe45e95e51ab97c2875abf7c3b7dfbcdbe31cb82f9677b22a947",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L0_Stored_3U",
+      "source_mesh_sha256": "62747d34d25466b6f6f0807e75a1c291442ae353a50e8e59419ef393cdced177",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Storage_keeper_-1_5",
+      "source_mesh_sha256": "cfa006947d4311d1616fbe364c05dfbc2d68d273e32342ceadd007df6be93590",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Storage_keeper_-1_95",
+      "source_mesh_sha256": "d3f9c94b58be29127d3dfa725143eeacdf5556fb5b9514758002e7650f61046d",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Storage_keeper_1_5",
+      "source_mesh_sha256": "2a17f98ff1d5e98da0f9001b2c4ffb3b39c2b422fe1c0722439b427d751a355c",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Storage_keeper_1_95",
+      "source_mesh_sha256": "cc2ece13227cd20e9589dee046ae6158e0a3c35534fd7960e2d5d37bfd8c8dc7",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Guide_shaft_244",
+      "source_mesh_sha256": "109d64c3ca97b8574b9c7b8aab2245f781c25dcebb8e3c3317c0b5e0952b8e3a",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Guide_bush_244",
+      "source_mesh_sha256": "c11ce19674ee3cd76d02beb0cf32ed68e9a5bd1fdcef9ae6ede7dfeefb1fe025",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Guide_shaft_624.5",
+      "source_mesh_sha256": "ec2d0bbada4d5c1c2157e2b862f33f8627bc1a66b56d9b3c5d8ea7f392830c83",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Guide_bush_624.5",
+      "source_mesh_sha256": "16555feb8280acf233bc9409fbd375832b4951be79fc14dfef048aebcd894afd",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Lead_screw_10x2",
+      "source_mesh_sha256": "2be3291cfdcd70dbe7e6c49423165876f5e4231f343e354ca056132245fd178e",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Screw_bearing_-445",
+      "source_mesh_sha256": "b1383e99567cea67902b107ed6ed83b2c6dd6d08d6bcbe91a9f70c6e5c3a234f",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Screw_bearing_-115",
+      "source_mesh_sha256": "a36625873cc851260d898ff5771e3815b2555cb2c0cd0d1fadafad2cf44c7ee4",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Lead_nut_SB3700",
+      "source_mesh_sha256": "c6b9371ee745ea7ec3821bab6fc7a894074ee449084a56c387a8f0fe730a83f3",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Pusher_frame",
+      "source_mesh_sha256": "b50176ec6e7ae3da18e5e6d6d239214af770b9421a5642abd065b2b509ba209f",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Brake_BXW01_reference",
+      "source_mesh_sha256": "563474dc963cf0a753327184ffb987558c1b8bcad39451ac393b1e9ed23dd4ff",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "83d9736a4a3e7d1848e9188013b0451dfca6c5f0d739e819110e7009cd8f43d3",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Drive_coupler",
+      "source_mesh_sha256": "2ed1b65d63f1abf6089f5c8ce7c655cb6e66b92a2d4b40cacd75b31c052933f2",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Fixed_channel_frame",
+      "source_mesh_sha256": "e7528ed4703d6dfd6b28d8b881e21d8a43be3f309a70ab461115e60eae579e94",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L1_Stored_3U",
+      "source_mesh_sha256": "ad519c6f09bc0231438ba9c22755448e01d13a8d9d9446f9d86c03ce102f7053",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Storage_keeper_-1_5",
+      "source_mesh_sha256": "cbac77ff93ff1fda257df382814de96302e503224800ff0a819e4ae237e08328",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Storage_keeper_-1_95",
+      "source_mesh_sha256": "b7682dfd54abd56e2140ec8f301a9578e8a5db3eee76d6c819f567558cbb88e2",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Storage_keeper_1_5",
+      "source_mesh_sha256": "faf32d746cd0199b9530db1e5cbec2f23eb7a41b834a7a8d9c60f7f0f32901cb",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Storage_keeper_1_95",
+      "source_mesh_sha256": "755ae9a5bfa0dd6030ae1a1ef2c4ae963318e0ba20409e788910066aac7e9cae",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Guide_shaft_244",
+      "source_mesh_sha256": "8bb107ec326321c941625ad33789edb8c7cbaaf4e7bf3849fe83d6e35cd7abc8",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Guide_bush_244",
+      "source_mesh_sha256": "9a33bef878eaf7da8957c66476967bff41dfcba4d471c03ffc46e901d05ae2d4",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Guide_shaft_624.5",
+      "source_mesh_sha256": "1eaf5e6a7d513e5a09cc0081b4ff6caaa3fcb48be3c34cd78a37ccc472be8b4d",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Guide_bush_624.5",
+      "source_mesh_sha256": "c865d2792def63af2a7ff83d8479702270697df9016dd6f279ef88d134894d08",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Lead_screw_10x2",
+      "source_mesh_sha256": "e938040839152a2a066c06539cebc9bf7589491fb3fc6d4453f25cbd0630b4a8",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Screw_bearing_-445",
+      "source_mesh_sha256": "9dd24f3125649ba4df9a21dfe35cdb0c88976cc445f3b70621fef5f858a90bbf",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Screw_bearing_-115",
+      "source_mesh_sha256": "fea3be5b9c073497f08f13d5fdd2e1f13a34fed6936fbef9caf95a7382e91342",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Lead_nut_SB3700",
+      "source_mesh_sha256": "c0715e18b20270588da9da1ac35de122fbcdfd29fbba5957ebb4a95459176977",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Pusher_frame",
+      "source_mesh_sha256": "b9d452f0727127386d8914b5549afc78f2b08bea53e16843d5507500235605f4",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Brake_BXW01_reference",
+      "source_mesh_sha256": "3b8e2655567d09673dab495b06d01c94ff0a073bde7a5e135910192b1ca83c00",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "23231bdbb6013a1e0bfb2b1a1eceef3704fd0dabe3aabe593f5184c983d69012",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Drive_coupler",
+      "source_mesh_sha256": "a87afa9b32ec76b4139917d400a784b1781499b1efd8e7834de3d71f515e65e9",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Fixed_channel_frame",
+      "source_mesh_sha256": "e2ac9475d7c09ebe7ba446828dc329dce5adf4d490ddd71f4e7b401dc7fcb61a",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L2_Stored_3U",
+      "source_mesh_sha256": "519eaf287532547a3cfa8a904835fc31bfe5cdc835a5f56460a6f04310d8821e",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Storage_keeper_-1_5",
+      "source_mesh_sha256": "b93ebdaf64d18c56fd0ccbbe18366de3cddd0ef76fe23e20fbdcea324e7d3102",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Storage_keeper_-1_95",
+      "source_mesh_sha256": "647f81a70356208784091b74d411f14cc3cecaf50318f6370d010fe78a5a4ee4",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Storage_keeper_1_5",
+      "source_mesh_sha256": "bbd90ac139f1153ced41f2bf79a8b61a1ab0f8d718cb94165bc678600b2e2d58",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Storage_keeper_1_95",
+      "source_mesh_sha256": "9b388af704486c512ed9f3c1a68990eca71f580c7b679f6a5ca08adaf6db23be",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Guide_shaft_244",
+      "source_mesh_sha256": "7b370d0e3e947ee0c680a4637d254f5cc2913adefd20074fbce2a8630556142d",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Guide_bush_244",
+      "source_mesh_sha256": "82dcc36d5a33d8cbb12f581bce7e57aa2e43d88fcbe228f85b15354cfa48d343",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Guide_shaft_624.5",
+      "source_mesh_sha256": "4e05b0a481f4f42cef14ced10b4304bc3f1eab5799d9581f32ead9260116d1ef",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Guide_bush_624.5",
+      "source_mesh_sha256": "bd3477737bac3d6ea80fa837f08baf0cda0cf3acb9000f1b2c3bc0b57acd8cfb",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Lead_screw_10x2",
+      "source_mesh_sha256": "eb419f0bdcd42e7cc18a9d314a8b840f1b4e676fd0da24140f160669d5ccdc54",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Screw_bearing_-445",
+      "source_mesh_sha256": "fd4a8b73a79ba5d48ef88503112b4361d73cd40d0ed08895843a399130c9dac1",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Screw_bearing_-115",
+      "source_mesh_sha256": "7382abfa3062101c0f32b060da1496aa1d2289328e51e43061d995cfe2decabd",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Lead_nut_SB3700",
+      "source_mesh_sha256": "e34e557c504896a6b6898913a1fe56b8d4c2d70aaea371551de98d1c68b43997",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Pusher_frame",
+      "source_mesh_sha256": "d1e30023eee17c5b4f20d78684a741431b441c1912a878818d8da672f85c243d",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Brake_BXW01_reference",
+      "source_mesh_sha256": "84f4b70345d8036b395e4fb507324f63a9f27868d94fe4eaec74f4b2b17c94b6",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "ec4bd54696f4dfe170a3de88543e344bc6b22356d952f39bedd14dac16a84fd8",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Drive_coupler",
+      "source_mesh_sha256": "52c92207ae40ce387323903904f20aebdb31aa5a87b656e1c116d25ae7601b66",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Fixed_channel_frame",
+      "source_mesh_sha256": "4f6cef9d727e0c4ee6264a71fa79275a9e298073ebd12e31ad2d1cc215f7b466",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L3_Stored_3U",
+      "source_mesh_sha256": "d869ce974e3bfb169009d3bf7e21ff4b1dcb1d4055adba41b76a8eaa9013bc41",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Storage_keeper_-1_5",
+      "source_mesh_sha256": "d287e10eddec6bb3b6b2eb8a071ff7370e0675386542f43a008df70f9a8a6256",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Storage_keeper_-1_95",
+      "source_mesh_sha256": "e3ba5ff25cc36c1b7af8c3a8814204588931f8ebbe88e185c56ba66bd74bba06",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Storage_keeper_1_5",
+      "source_mesh_sha256": "c7a37d34e38d83035451cf4e33aad277add68e1b9ba27ff6a5c86b90a27a3231",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Storage_keeper_1_95",
+      "source_mesh_sha256": "dc7c35ad036ddaa3b401efcb8e35bd448a9a93807427ee1028d705ea9225f854",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Guide_shaft_244",
+      "source_mesh_sha256": "5ef6a0cca598be20de05295bd9465b6ea180a31655e49b59d428d6efc7ef2c46",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Guide_bush_244",
+      "source_mesh_sha256": "92c613d2c002ce368560202bde86e67494df766496e5f24677380ccf12d099f0",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Guide_shaft_624.5",
+      "source_mesh_sha256": "0c5adcc1a8714220d4f93a92375649332ec878b93609eac0d8a1bd913eeee6c5",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Guide_bush_624.5",
+      "source_mesh_sha256": "4febed61675022b3c6bd6545639b4f966fa1e6c7557dc1c20f03cf9ee2c9a206",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Lead_screw_10x2",
+      "source_mesh_sha256": "5cf64dbe598638a2297e9b4f6877f9676e896b2e7f56e86bbfa79c29576c3a02",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Screw_bearing_-445",
+      "source_mesh_sha256": "0bbed4498490c33decf440a7799480db5e64d172d0ccb9d181cbaa6ba4c36353",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Screw_bearing_-115",
+      "source_mesh_sha256": "443ef8295272a8d13f13706a369b8bde6b6afc02ff4689613d15500dde694bb6",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Lead_nut_SB3700",
+      "source_mesh_sha256": "8b637ea46d84a819594af7d2c3aabcbf0f91195d8d54a2ef78c95f00d972b9f5",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Pusher_frame",
+      "source_mesh_sha256": "68fe17e4dbce9e78aebe65c6c0761945a20986a2f786337973191d73c12da6d7",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Brake_BXW01_reference",
+      "source_mesh_sha256": "d9ebf011dbd9df5e0a935494b5b6f4f205c2d58ebf6ca045c4fb57aa039db773",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "ad7f53b55c10ecbe7025987e41ddd1b946fa04819be838aa773dade6a0084461",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Drive_coupler",
+      "source_mesh_sha256": "6d6bb058fb60ef0240121c5ad57169552b7d3e709d2ce2839f472efbe7fab80b",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Fixed_channel_frame",
+      "source_mesh_sha256": "874fff2daa9ce050466fb704e74d966aabffda2026b3090fef8e64e034a9cf3f",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L4_Stored_3U",
+      "source_mesh_sha256": "e8fa255b20d50d5f7f38963b19b952d07fb0ba6c2ef95e5d6c6b03fc5d30e977",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Storage_keeper_-1_5",
+      "source_mesh_sha256": "f9a5784348d8fc152d7d43022a138e6d0085297973eeaf2e8392bc00dedb2ab6",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Storage_keeper_-1_95",
+      "source_mesh_sha256": "0b81116f708461a767ccaec3ca49c5aedfb91df001bb6af58c1b82bd30cb0aab",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Storage_keeper_1_5",
+      "source_mesh_sha256": "884f5a97ca00e53898c96bede1a52a4c25e8fbd1591f971315461615d0f610f5",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Storage_keeper_1_95",
+      "source_mesh_sha256": "b6c922d9747b57168cf8c815f4581501f63b90931b77b0226906088321d45391",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Guide_shaft_244",
+      "source_mesh_sha256": "7e99e992d8b0be4b7f087ccbfc6d96c532f7cd47befb2ff6d0e67caaffccd68b",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Guide_bush_244",
+      "source_mesh_sha256": "2b29962b6f2f577e7ac678131cbf4707c65366feffce51bb323dd9671bcadd5e",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Guide_shaft_624.5",
+      "source_mesh_sha256": "3a147c75c4fe239399e2277b4d02df8227cbf57d09f5e1278e127dab2275643d",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Guide_bush_624.5",
+      "source_mesh_sha256": "6ccf1317ba9c16a45180fcb1437ec60092b09408ce6253d3567e09bc0fbe670e",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Lead_screw_10x2",
+      "source_mesh_sha256": "daf91858b2b27b47c0c592710bf3785d44703f5a7f6b11347365af2365f96fa4",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Screw_bearing_-445",
+      "source_mesh_sha256": "e1d0dbf81e39596faa436f1cc8eb731c69bc4d74a962f76c4d873c55798bdec0",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Screw_bearing_-115",
+      "source_mesh_sha256": "94779c52298c34aab90906965359d21ebf0232be25a113a5b2df430740ad8f68",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Lead_nut_SB3700",
+      "source_mesh_sha256": "301ca6c29e596f6fe81f21ad936e315702d06a191e3201ebaacd6cf5912f1eaa",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Pusher_frame",
+      "source_mesh_sha256": "695359c11310ac4d10aac4c9a89734e2a1431d184df3600a14bfad6271da8c0a",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Brake_BXW01_reference",
+      "source_mesh_sha256": "7f39ce0ea1cae867182996e37afdc5f4cb48f9af9b15a62a93ab21d8d95b3f97",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "d68a301796a9bae8612ba572144da8364fe3735a9fff7edb542247a44f35d830",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Drive_coupler",
+      "source_mesh_sha256": "617b24a0d52318e55a46a09d9ab4dfb5bab574af00f525dc7c5c991b6ca3a1e3",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_south_L5_Fixed_channel_frame",
+      "source_mesh_sha256": "48702d411e9be111b1ae2d279787b0132b438c11e53c11c736634f68d93174b6",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Storage_keeper_-1_5",
+      "source_mesh_sha256": "52d41dbec998d950027747bfccd972681914693873617b07da2d18f136a75aae",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Storage_keeper_-1_95",
+      "source_mesh_sha256": "e49b635a6d3a646ae4bd98d78c1a6cb40210ee61122a5beed36372ba2af3af33",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Storage_keeper_1_5",
+      "source_mesh_sha256": "b2709e48981b792ec0bf783e21bb4f81e88fad26a7ec2998b073099a470aea61",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Storage_keeper_1_95",
+      "source_mesh_sha256": "febea97e698416bf5684b90bc83f590f7b4279702cda92e5f244bf4d831f1122",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Guide_shaft_244",
+      "source_mesh_sha256": "c3885daf18ae7b0faf2ec7ba92a78f7428101682c115a6032e8a35cb9a119993",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Guide_bush_244",
+      "source_mesh_sha256": "476e9662861ef2388ad9afff24b3f85bdfd1bb5947f4c300ef1d6d0e99737770",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Guide_shaft_624.5",
+      "source_mesh_sha256": "62055e47a859f9c4de4ad9ea949d897a918a57594c2db450e8ada8d186ad5779",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Guide_bush_624.5",
+      "source_mesh_sha256": "ecee3f0457702f0ba921e323b9da71e7bc803b703ba80ccfdf46f9d57929e267",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Lead_screw_10x2",
+      "source_mesh_sha256": "e547074e4c531567bb6d30481670be671dd4daf640835062e47b51b61f034706",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Screw_bearing_-445",
+      "source_mesh_sha256": "d779d6efdcecc8e4c10e098b10a91e023d5d62b29fd54535ff1be24270cb5eef",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Screw_bearing_-115",
+      "source_mesh_sha256": "96219dc132b16c9324be9a0b88c62ff2bc39070c1abbe348a85bd4aae7a688e7",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Lead_nut_SB3700",
+      "source_mesh_sha256": "a35ead8f456cc824b0e8bee92fc98f970e3fd5917970be8f649ebd482300106b",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Pusher_frame",
+      "source_mesh_sha256": "41a3264c828e6d435e0c21beea74ae5580e886d72f0455360a0cb901a3f1db19",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Brake_BXW01_reference",
+      "source_mesh_sha256": "4d7052682d5eebebde5eb3cc1d402232bd0d42d801c9294cca767645a05db696",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "240090d357dc7b340175af8e014817751d2c02f34662321deb10f554efb033e9",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Drive_coupler",
+      "source_mesh_sha256": "a6d8705a0606301c07265c25bf6fc38f07c5fe60fb1b1ea2ecccf22c09e7371f",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Fixed_channel_frame",
+      "source_mesh_sha256": "a97950c295c72b1fa1b7c81c421edd859eb48218c52e6c590860ace4e2318c4b",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L0_Stored_3U",
+      "source_mesh_sha256": "2fd67b1a1e2dd5e1f088a85a7115ac5d798e3d87459c2f3f68afb657effcb76c",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Storage_keeper_-1_5",
+      "source_mesh_sha256": "1a8162bb307759a423d4cfcaa4c0ea2fcbb98ff0c9e968cc62c27576d269c6a4",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Storage_keeper_-1_95",
+      "source_mesh_sha256": "3da929748d938b81f245c6f0f06c03db8f9394830d8a922f08ead0742d59c440",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Storage_keeper_1_5",
+      "source_mesh_sha256": "6645ec40042654ab2234629e65e050bc42958117e71705d3fb1e7f18610a0af0",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Storage_keeper_1_95",
+      "source_mesh_sha256": "4839683c45b82d8ba14c01755c862cd2d4adc8ed6a06a98479e72bf3264c1b40",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Guide_shaft_244",
+      "source_mesh_sha256": "801671befd790073c5a54335a59a660efc39be0f225bb1ce0ef1888af5375ebd",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Guide_bush_244",
+      "source_mesh_sha256": "166ab81a398c59ab9582157f52bcecdc01849cdd093b92fbcd6f794524e7b51f",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Guide_shaft_624.5",
+      "source_mesh_sha256": "cc6b6f138f12edaabb2d092d38e049809f45dabdf829325808bffec591d4c090",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Guide_bush_624.5",
+      "source_mesh_sha256": "c78a14a68a51bb5884b4bcd1929c4b51b59734929244a9e4ce1c50e4651edace",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Lead_screw_10x2",
+      "source_mesh_sha256": "26a4696728c0b9735bc18904f9f07238b74280c1f06613142fe44fdb6cffd972",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Screw_bearing_-445",
+      "source_mesh_sha256": "4c36ef5feb6b63b826452612fb42ebc893591d6aad89851ec4e46486a92205f3",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Screw_bearing_-115",
+      "source_mesh_sha256": "e7f8ee39512139245aba27d6efa3cde999e9d157768904fec863012a58618a8c",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Lead_nut_SB3700",
+      "source_mesh_sha256": "23f21439ed8fe8f02b3e17c00e0165dedc2947db6f46dfa98e5a03e171623ee5",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Pusher_frame",
+      "source_mesh_sha256": "9b4c3b51e6cce5339558b956edec70ec7777ac81c54170bd01c2cb24ed15cf96",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Brake_BXW01_reference",
+      "source_mesh_sha256": "eae9981028560fd22261eafd129b58baaa9cc3e33f4ac6f439f5a75492198576",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "deb10b28d12ca001d1988c39a60cecb222e2feeb45b0adb4b5376e2966b5ba8d",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Drive_coupler",
+      "source_mesh_sha256": "15457dff198b12a11de3ad5c7c45a3c7f4b62a961c1eca6376f8ed083c7bcd2e",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Fixed_channel_frame",
+      "source_mesh_sha256": "2012d710f24bc113030471e923c467f34f32d9172d0184f361b0a2f2c56ef78b",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L1_Stored_3U",
+      "source_mesh_sha256": "a8d56506bfab004d69db0e2ef3cdfce4f4ddb3c3e76d827d6a21a92009afc3c1",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Storage_keeper_-1_5",
+      "source_mesh_sha256": "7c79d90e1725033b0ce6d038d64b9026442a133f9cf1a3051422149c739a98ba",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Storage_keeper_-1_95",
+      "source_mesh_sha256": "24eb6e3f0996ac7639095302be2d9769806f4ec8322065beff606246b22502d9",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Storage_keeper_1_5",
+      "source_mesh_sha256": "e120703845b08cc4e53e9a1489fcab2665db840c133cbabf1165593d836c2043",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Storage_keeper_1_95",
+      "source_mesh_sha256": "0fc8dc013f5c7804ef32bfa83daa172c23fdb78b647f17c6430d1ab16fef843f",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Guide_shaft_244",
+      "source_mesh_sha256": "201c0ff32f17ec29b1973d2cd3908e3472cce2f604daacfa2f6953c8799441eb",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Guide_bush_244",
+      "source_mesh_sha256": "46d2b8423229728c4bc399af328e5fab01772b93d4e052dfc66a2ac91c6ef7a3",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Guide_shaft_624.5",
+      "source_mesh_sha256": "3758f8d206aee37c772b353b84edecfb4620313440cc9f26a62efbe318035baf",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Guide_bush_624.5",
+      "source_mesh_sha256": "e0a8095525a00f99588bec17e69adb226612df7aa362b4e27c34cecba1b29ad9",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Lead_screw_10x2",
+      "source_mesh_sha256": "2b588af6e88f17fdd88c10108c36127b0f36a2fbdb9a86a7114da077547504f6",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Screw_bearing_-445",
+      "source_mesh_sha256": "bf7357f606380d55e55fc961878250dfb378c9b32df44c0e197cc1ac9e6b790d",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Screw_bearing_-115",
+      "source_mesh_sha256": "891c3108bea81b693878b9925de058c585e78a2479cc857dfb2229286c42e651",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Lead_nut_SB3700",
+      "source_mesh_sha256": "2e83c101039f6a2ea55a6c82a92dcab32bef6cde924ca1f1058a4ef859f75faf",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Pusher_frame",
+      "source_mesh_sha256": "53b1f4730aa30ca86c0f4f83b7aee7905cfe6220e53072bebd7d6521c0d414c6",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Brake_BXW01_reference",
+      "source_mesh_sha256": "9a35e305ab2689148a14a8f6b72eba80f75b207e3bbd32fc82eb4f51e44f4662",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "4b3d6513e3fe2acb518c952f8c10f07f16832072ed4db9e075bfe593aae36bd3",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Drive_coupler",
+      "source_mesh_sha256": "1bf1df4610d0c4e1accdfbbd8695ba8b9f0dc5d32538e675da268b19525423d3",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Fixed_channel_frame",
+      "source_mesh_sha256": "b53097beb882467760df126bead08cd58b70e5b550c6a2d52775c8682bb2b6b4",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L2_Stored_3U",
+      "source_mesh_sha256": "6cecdaa48f0342ae604734af31e6811bfc0f44a02ce1b372ad5412181c7162db",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Storage_keeper_-1_5",
+      "source_mesh_sha256": "33ff499ed76570b2d2e153596b604ac905c344ce5451d09fd11f3374e479b78c",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Storage_keeper_-1_95",
+      "source_mesh_sha256": "9c966d25f981cdb5cbb91e756cd0a34407217e79bd0390dbcb21468e40d9f4a0",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Storage_keeper_1_5",
+      "source_mesh_sha256": "23cecb896fce9675843917831f7660fef6b3bc4dfa3610f10f0c40f9a54bb3f7",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Storage_keeper_1_95",
+      "source_mesh_sha256": "a20c246c7630e3fa0b77658205ae6325d02f3af66f338912186673dafdda9403",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Guide_shaft_244",
+      "source_mesh_sha256": "5cccdcf00aad087dead3400ca346537529157ec3246990328c205a7922b208fd",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Guide_bush_244",
+      "source_mesh_sha256": "a997ed5b4f5b2a5debcb323ed7ae563ae58faf21ea6d09f9b0585b9beae4d34f",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Guide_shaft_624.5",
+      "source_mesh_sha256": "2604b825ef6c5ab7fe017e1a9cb69257d86cb3f1089ac6ba3204e23af77162f0",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Guide_bush_624.5",
+      "source_mesh_sha256": "f4cedd1f7edd196dd8592730c9c8cab236a3baf01ffceaee840ed640674e5e9c",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Lead_screw_10x2",
+      "source_mesh_sha256": "139635aadb10c54ce609980333a3a41a6e10940a6d1686df2f44d94bfb6823b6",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Screw_bearing_-445",
+      "source_mesh_sha256": "6c2e87ab6cd203b5ea44ab10c440ca7419c1b610003fbd4ef647aa8a4171f410",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Screw_bearing_-115",
+      "source_mesh_sha256": "c9a9fe2c29b575134e266b7b8f6e660b6e90b7efa6452c6d5b1e39b09c742c3e",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Lead_nut_SB3700",
+      "source_mesh_sha256": "d7df03cbb1e7071d544bcd922e07ed3e364575cae421ca7cf0e39133769a0d88",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Pusher_frame",
+      "source_mesh_sha256": "357141cb856558b966733392ce02fd3a6c4bb894eb6590859615c023c7107853",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Brake_BXW01_reference",
+      "source_mesh_sha256": "71a07a4e6488303fe34755808d4da0dfcd24f52db0ec9ec5cf5aede9d15c638a",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "39d95043204427735a60d28366fc757a8ca61d0a70dd189e1c23be2d78ef8a74",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Drive_coupler",
+      "source_mesh_sha256": "524dd3d39cc209efe74b9a518176bb5a91341ec58f15c572bd646b23f9794419",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Fixed_channel_frame",
+      "source_mesh_sha256": "82a8e8cc463c86e406613dd63943697839886730e013e1c4bde05f3ca73851b5",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L3_Stored_3U",
+      "source_mesh_sha256": "8f85cea4b47a5db52219d3f08024a85c833e498e100ae774ebd2166059925a78",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Storage_keeper_-1_5",
+      "source_mesh_sha256": "700aa3ce9788391d7bde5f1c80dcb97020ba5bc8343bb5fa5fa256f181bc5ed9",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Storage_keeper_-1_95",
+      "source_mesh_sha256": "6fbbf56ad1009282994a29f56fa2ba3b696702f0a66016bc3a0442de8ee6b459",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Storage_keeper_1_5",
+      "source_mesh_sha256": "01de8c70aadfafbd2f8f4357dc3de7c4feca09b1810b475942f5e85fbc6e2a9d",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Storage_keeper_1_95",
+      "source_mesh_sha256": "681be52727b04f83c5e41b075e7abc2319197477168af79da3f954894ffce79a",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Guide_shaft_244",
+      "source_mesh_sha256": "d1a9f06e8f4f6478249b5d51c968dc8d95d56839b9fad39594aa7d86ae9fa0c6",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Guide_bush_244",
+      "source_mesh_sha256": "ea5187ba2797682b306f1ea9c187ef8d00bca719719e5b5a7e057b5f556b521c",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Guide_shaft_624.5",
+      "source_mesh_sha256": "581b05a6690d5a663bc5183292c1118cf14866844192686d8ecb3fa7ab2f8e91",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Guide_bush_624.5",
+      "source_mesh_sha256": "c2355fedecd2f0fa2f69f48d28f0a1e43adae10263f8cc25f8dac243d6107408",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Lead_screw_10x2",
+      "source_mesh_sha256": "cf8134dc1741e111a555282ff5fa85996fe992f2b06e734044d6c3a3846a4f99",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Screw_bearing_-445",
+      "source_mesh_sha256": "07f4689721adfcf22b62a1105bf2bf5e72c25cb81611a30df1873bd340d37745",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Screw_bearing_-115",
+      "source_mesh_sha256": "c3ccfae8638c3cf55d172756421470d05a5a311fbf848048d9c6d537770096c3",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Lead_nut_SB3700",
+      "source_mesh_sha256": "78771acdf4707d995e8e73f2e5460137fab53b94ba047e40b888319c2c33ccc9",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Pusher_frame",
+      "source_mesh_sha256": "3a3fcd8eadd5e32780961c176e45d7a078f84b636813238472f9d4679ae514af",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Brake_BXW01_reference",
+      "source_mesh_sha256": "9bbff0158d143a0b6dd6664448490123109323c234246e08e44f2c14410d0a86",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "0d9e42c6fc737dd92a04603a949052885a5197754d09b5388f943c199c76394f",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Drive_coupler",
+      "source_mesh_sha256": "6f0dc4e81cf2963abb3003035554ef9574efb0fd3ef30f971c21c47aeed8e3aa",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Fixed_channel_frame",
+      "source_mesh_sha256": "97ed54e073f99faf872a4491e36d3ef9b794815f89b1f46c8d844dbd27240124",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L4_Stored_3U",
+      "source_mesh_sha256": "a0f2583e777d74bd2db749e7010cea3ea34c1c831cd7b66228e1fe88b62a177d",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Storage_keeper_-1_5",
+      "source_mesh_sha256": "d5e770f3419347deccad4949714c3e81f9ba38a7ff89c71ceee0753ba5b48c06",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Storage_keeper_-1_95",
+      "source_mesh_sha256": "f134d2e51e4669d268d1e0ae00638467b194cc92f287ba84748c27f3fc610ea8",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Storage_keeper_1_5",
+      "source_mesh_sha256": "6cdb553259fef053000c01d8e8874fa82a8f62ca1d5afcac01850fb68663e05b",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Storage_keeper_1_95",
+      "source_mesh_sha256": "591cda1bb98247cdc41cfbc9686cb79d77406cd8268c28dcd0ffc2478889826f",
+      "subsystem": "cell_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Guide_shaft_244",
+      "source_mesh_sha256": "31cc5ee0b076e0f696d7afdc1c58742b71191720b988a3f89d0c51667284263a",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Guide_bush_244",
+      "source_mesh_sha256": "1187158260ccc5a902eb428367acf43b2641185629ebea8bd5a734633a493365",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Guide_shaft_624.5",
+      "source_mesh_sha256": "b76bd514d95f471d95dd9877d55a7ecf79cd13ebe622c1c40dc20ecbbe8dcd40",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Guide_bush_624.5",
+      "source_mesh_sha256": "f0d6baccca8cee0a7c889929ee99d86fe0ac40b904be3c5c5cd3b1cc2b14fa11",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Lead_screw_10x2",
+      "source_mesh_sha256": "d34d8a43915523b30b3d0d249d5190e6906d8cd730c149263d05b1b722689528",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Screw_bearing_-445",
+      "source_mesh_sha256": "4032a4799eeea3831f7755d45deee280b4eaef3d2c4de8130d95f44f8afd06de",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Screw_bearing_-115",
+      "source_mesh_sha256": "62b6795d01c61e18fec35a55e7cd1b2af7a04b6123b628881e5c242562e91383",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Lead_nut_SB3700",
+      "source_mesh_sha256": "45a9ec75b17104e9a595ca92b5fadfe6c39dc37baad5d4967632f0fbcdce305b",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Pusher_frame",
+      "source_mesh_sha256": "700cee840421ce47027de76300033d89cc8e1734dc03def946f62e4fbc822e68",
+      "subsystem": "cell_pusher",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Brake_BXW01_reference",
+      "source_mesh_sha256": "818ddad76231257ce094aa155a99bdddb8c9f0983af16a2165776738d132cbf7",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Motor_3242_gear9_reference",
+      "source_mesh_sha256": "ce62d9c95559898a86e78ce92269a9fce37bac440e59d362f6cd8dd8abbe1f0d",
+      "subsystem": "cell_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Drive_coupler",
+      "source_mesh_sha256": "2de7cd6e9d620825f5f84d263bbe882f3444ec3eb7dc94883cb16f4bdf4ec4fa",
+      "subsystem": "cell_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Fixed_channel_frame",
+      "source_mesh_sha256": "7072a1a58c07ec04118f2146ed54ffce035a9a4a30e8251159a61ae9b09b5110",
+      "subsystem": "cell_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Bank_north_L5_Stored_3U",
+      "source_mesh_sha256": "cfc8125886e048b9b71f54e66297a61aa228228b5e10dac358c27f31463b6016",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Pallet_bayonet_lock_40",
+      "source_mesh_sha256": "2f23f070dda99a7c4c2655cb58930340766ca782a823cc1315186266b9a3008c",
+      "subsystem": "sled_pallet_lock",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Pallet_lock_actuator_reference_40",
+      "source_mesh_sha256": "a5ffd162c5f05f7fa8c8acadd1594b2746e527e6c29b6fb322f1072cb05aa6df",
+      "subsystem": "sled_pallet_lock",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Pallet_bayonet_lock_468",
+      "source_mesh_sha256": "e8bf716f6b33abe61feac117c78c9fe8fde084db9149f58f30a3895e5c1a7e61",
+      "subsystem": "sled_pallet_lock",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Pallet_lock_actuator_reference_468",
+      "source_mesh_sha256": "0ed10954703abcd321b96928d4cc4aae080790e617ff64d94336895ea92aff05",
+      "subsystem": "sled_pallet_lock",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_24_-1",
+      "source_mesh_sha256": "80561e6f00ef952dfbeb8acf36944373e6f8f8a94cf9c2a8c83b6347ec33f1a4",
+      "subsystem": "sled_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_screw_24_-1",
+      "source_mesh_sha256": "d8e2ab40d1aaa7f5ad6517ba91758bfa7da8c61d84c194c681291ca7ae134d3c",
+      "subsystem": "sled_latch_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_lockpin_24_-1",
+      "source_mesh_sha256": "22a10e2d990a445e7bcd54d264bc734ed8c3e71eb43164dd59246ff9687130f6",
+      "subsystem": "sled_latch_pin",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_motor_reference_24_-1",
+      "source_mesh_sha256": "1d645924e85e07e0d57b4c7785d3fc427807b95bfe82a4eff97528adb2d771cf",
+      "subsystem": "sled_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_24_1",
+      "source_mesh_sha256": "4806598763f1cd50e8e8698ff1bbc64c27746d86c0c2cd5759da7707d2773686",
+      "subsystem": "sled_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_screw_24_1",
+      "source_mesh_sha256": "196788fc0fa2955b6ee21988617ec6df221983c47d0c4168666189bc135f1f76",
+      "subsystem": "sled_latch_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_lockpin_24_1",
+      "source_mesh_sha256": "1cfcbc4afc25539857903777fe382afd7c765f676f25ee637ec254564069a443",
+      "subsystem": "sled_latch_pin",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_motor_reference_24_1",
+      "source_mesh_sha256": "864dc6a6b658bdce266381cadeba6a909aa5b651ccbed1f55a132df1a2bdb7be",
+      "subsystem": "sled_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_296.5_-1",
+      "source_mesh_sha256": "68264bad420962e18d5d884ddae6ec4a799f91fca9a85396a10f345b1d797c73",
+      "subsystem": "sled_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_screw_296.5_-1",
+      "source_mesh_sha256": "bf879a42a5ff0d98ede708adbd68d96169857727bf6d007a11158ae16dbac042",
+      "subsystem": "sled_latch_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_lockpin_296.5_-1",
+      "source_mesh_sha256": "38ad805c3bfa95a53a7ca6b55932a2857744f9666f89bfcf5463b67a26790733",
+      "subsystem": "sled_latch_pin",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_motor_reference_296.5_-1",
+      "source_mesh_sha256": "db7d92d5495b22ccdfb14812cc28c051cf49ccb688a0575feccc408947d4dc07",
+      "subsystem": "sled_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_296.5_1",
+      "source_mesh_sha256": "91324d7633c7d494ebd338893e95a67bdf9a1916284680901e6cfcfbfcbfd2fd",
+      "subsystem": "sled_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_screw_296.5_1",
+      "source_mesh_sha256": "88c94d9ecfecc4e8332dffd14f11262b41096a0c088d14dcd695b1b1dbeb2bb3",
+      "subsystem": "sled_latch_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_lockpin_296.5_1",
+      "source_mesh_sha256": "1f9893b8535277ffcbc92b01b386bcb9ab4ae30cd56e9333d5000e3bc0ba8e22",
+      "subsystem": "sled_latch_pin",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_cap_motor_reference_296.5_1",
+      "source_mesh_sha256": "4faa3138407a1c966f3a305b2a06690a6cfd6e7334e201940207c672a0cf85cb",
+      "subsystem": "sled_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_fore_keeper_-1",
+      "source_mesh_sha256": "4207eb8a0e21b5223c5e8dedf3b59ac53b5f3e0c73c6579978902cd5e074890f",
+      "subsystem": "sled_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_fore_spring_reference_-1",
+      "source_mesh_sha256": "164af1f9ad0261c0ea657d1f66c9c8607423cdb53079946572165cd6a8ffea24",
+      "subsystem": "sled_latch_spring",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_fore_keeper_1",
+      "source_mesh_sha256": "374857ed49c70de2276dc9c9ad06b3b54c485f958bc78fada873336ce0e2d3ae",
+      "subsystem": "sled_gate",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_fore_spring_reference_1",
+      "source_mesh_sha256": "5190e24a9566f73bdf7ef7670e59bbdbe0e70f76afdeb7a2520ccb23b7a92175",
+      "subsystem": "sled_latch_spring",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_axle_119_-1",
+      "source_mesh_sha256": "6d177050b07f67507960ca201327cf9e74ce312ecaa7e0b146fdb3522add2566",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_wheel_119_-1",
+      "source_mesh_sha256": "bc007f71294ab58721520941d4c87a53a59462c33bebfcd7170f939d6c513384",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_axle_119_1",
+      "source_mesh_sha256": "13852bf4e72ea197023ca2f605e0bdef37c6b7cb720b1bf30ffdddf6848a8107",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_wheel_119_1",
+      "source_mesh_sha256": "4b50723d6a0440d57005064201d73e6cd17e71da2155a38d07cd1a5514b71c91",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_axle_369_-1",
+      "source_mesh_sha256": "6864cf199f3fce16f7e38d5f7b2d209732c9fc41515a79a77af3e23a3d8489f5",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_wheel_369_-1",
+      "source_mesh_sha256": "c6c6ba0cd6f892286848a800a7cfbd3faaeb6ae3f9f1867c6287c9ef4439179a",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_axle_369_1",
+      "source_mesh_sha256": "4a272c49efbb81959df9ae45d0e04c524595be0e3c92a478c20964fd1acd5bf7",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_wheel_369_1",
+      "source_mesh_sha256": "3041bc5f0e731b91cca8068f1fcae96952c7294771d768ab089829b0c129e5ac",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Sled_connected_chassis",
+      "source_mesh_sha256": "ea11599649ae9824a626aab84367a37dce74e1345eeec65947e548c7d0d812c6",
+      "subsystem": "sled",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_00",
+      "source_mesh_sha256": "cfeb134a0645036c6e764f879d5d605407242022e354c48a692340a993f0d320",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_01",
+      "source_mesh_sha256": "adc8b5ecdf8bf1d803072b1e2ef8b3ea579e65d472a958433a28e99b4f57dc70",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_02",
+      "source_mesh_sha256": "eb792879dec2d15f9b5a91af206fb3e011377c1502b1d56b4a833947caa8e02f",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_03",
+      "source_mesh_sha256": "6a48ed8471d86a2a038cdec00264710df38373dc73ef0248cec0ba8f5b07d962",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_04",
+      "source_mesh_sha256": "5d3bc1833fecdd2cbbd0d5fcbaad40d816a2c058b008c878d78ffe53016d73a9",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_05",
+      "source_mesh_sha256": "4c2ad898903a843801f04e8964bc2446732ba0871a413e016a7f4cd31f044d61",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_06",
+      "source_mesh_sha256": "30e183ee005e6f77547a909fdc78a3a14104c7ed9606596197e300a327580ea0",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_07",
+      "source_mesh_sha256": "314ba867ac520697d884a01794b197e68539408be11a0e20f85d0028fd5e025d",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_08",
+      "source_mesh_sha256": "33ceae177eb57e5d4c6b51c771b5c2974bae7ca9f129fdc437edc4adeae6a701",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_09",
+      "source_mesh_sha256": "dcf10c3f4bfdd31526988522b0aa3257406b48cde39b48e38b30b2899ced3104",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_10",
+      "source_mesh_sha256": "df41b923bfcef0419b8c4095c48b4156a9f81ed4c03a270a9ad9cf611c6d96a0",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_11",
+      "source_mesh_sha256": "821a78a96ba2430719e98c182285c837ab36426a3174c8ded7ce563f2426a410",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_12",
+      "source_mesh_sha256": "9e8237621755660e1870a06ab6106816be171c55f38cd9d32cd4e756f9bea4d4",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_13",
+      "source_mesh_sha256": "4fa4e18c14e4fb0cab8740117fe077098a63173276050dea22be38ee2c631c05",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_14",
+      "source_mesh_sha256": "1bd0e264cd2af883c00489c912c72bc4bff774c8730d2dc821759ca41c32192a",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_15",
+      "source_mesh_sha256": "8d60cac2b5f42fb1f1ec2a8ed1672e050c310f1600237db32f00d293905b7acd",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_16",
+      "source_mesh_sha256": "7e0ce226a78b461744d26e08de4ac184a09f170e2ccada742731b74b3f77bfaa",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_17",
+      "source_mesh_sha256": "4658bfa96eb41a5a18389cc30e4edc04e616507b714aebf2ec6df2098cad25aa",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_18",
+      "source_mesh_sha256": "c1798ca3dcb8663183a323c4f4ffd3a800cb658d68447ad97f3e389738a977b4",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_19",
+      "source_mesh_sha256": "1951402b727a928c4e95586fe0e65120301aca4a6444a266d00cbbe98b9ebcdd",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_20",
+      "source_mesh_sha256": "bb7414b3e11384bdbc747b7094cdd0a8f80d6faf67a5d09f4615d47cb2c6d9ff",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_21",
+      "source_mesh_sha256": "d652d5897e0c76a1e36aaebd0ba9907e75e65cf9a055e96d82bb861aa5e12b69",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_22",
+      "source_mesh_sha256": "ca3d1456d0de5b9a8a2536507a602e6377118e08cfb8345f277634f6cb0d7328",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_23",
+      "source_mesh_sha256": "4834d61dc6a8faff9c2becc1478b79384c9a1db41635298fd009d09c431bb737",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_24",
+      "source_mesh_sha256": "125c734d022582407ad31de694afae8bb0de8cb6bf66fd0064c48457c9f8d226",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_25",
+      "source_mesh_sha256": "088f1562be01ac9a6fc764a9311c970c4c5f940a9f643920ebe7593720f86a69",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_26",
+      "source_mesh_sha256": "903cd56dee7b2d3667b0effdf38788d72dec8670d69e2d5c479c615ef3dd58b3",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_27",
+      "source_mesh_sha256": "0fd857a9804551bc3b9880d7e68a43880ba2a2e2a6ffb03c5ab07ea719e076e5",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_28",
+      "source_mesh_sha256": "5af6965781ca64e555b1fb829a923af5a44bb40b83a45b547f4e630fffb54f6c",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_29",
+      "source_mesh_sha256": "a8ac68b05303c31c6897a0e9bc7c7088ff9e88e8d15acbf999845e7bd3e618db",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_30",
+      "source_mesh_sha256": "d0dff3e720857586a1db993583511052f34d11c9b3c8a62293619c38169096cd",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_31",
+      "source_mesh_sha256": "dfa6900e8624f234b40f1d813cedf379184c292e9f952ef5fbb36cd5d912098c",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_32",
+      "source_mesh_sha256": "fc3a136d51bfe46cf0b7a8c05cc1996e27dfe2535db3e64f227a3511e236276f",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_33",
+      "source_mesh_sha256": "04d377d7301c1892f8e4f2ff6cbba9fc30860ab795c0335e80463519662aa4fe",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_34",
+      "source_mesh_sha256": "b8742004dfc8617c7630080657aec9b00e96f73f39a86f167c5d64eea5ff2d28",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_35",
+      "source_mesh_sha256": "dbd6bff67929d05fd32e91bb84b415b3d57b7ef755cf4fb76944fc6155344098",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_36",
+      "source_mesh_sha256": "3097ab3678231cb0fa3d6611df25d9cb6597cd446f0e92a9b42433431ac66883",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_37",
+      "source_mesh_sha256": "3943c584af4d767a56aa66195ba7276ed97c46575897dbcba4c9c7d6eafe2d1b",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_38",
+      "source_mesh_sha256": "9cb49832e911d1b055a9dd4205b835c265a4922145375547e68cd7f39f4122c7",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_39",
+      "source_mesh_sha256": "4627faf0c8c1ddd15754ba80b73c3cfd2cbc1b7af1b0b5e350152eb8ddee4d78",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_40",
+      "source_mesh_sha256": "64c415fd9e30bb1c45c53b774ab0928ce3821a5b6ae55ad1c74ae10df40f2ea6",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_-1_41",
+      "source_mesh_sha256": "6b914257e093d7f22c06b02f601018d6027b3d06331ed3f8a974e23f1320ec42",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_00",
+      "source_mesh_sha256": "10e5539410dacf85aad4f7d3b7a4ac208afb57162f86fccc204a808e98058793",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_01",
+      "source_mesh_sha256": "6342b982f33872744b32b427b96704b4a4ffd691d4aa6330643367a5f1ab2c04",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_02",
+      "source_mesh_sha256": "309cdbaaa104ba954a0cc1aa509c724bd9f0ef9ea73f12e084a87e9dcab4a210",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_03",
+      "source_mesh_sha256": "3bbfbc6994b2c3a5e36de24d0ec76b2a470037c8dc93395861eaaaf1805583d8",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_04",
+      "source_mesh_sha256": "80dd92fe941e7e8ce76f5c940602c3975539e8e8d985097e5273edd9b3abca17",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_05",
+      "source_mesh_sha256": "94449a5bd9220e4b82e50c4b87af602a5a73dd23cf28e30b09811cd5865afed2",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_06",
+      "source_mesh_sha256": "a43a209b538f458cbb50e3d0d05f5b38e963c6dce3bce721a7b2064775948da7",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_07",
+      "source_mesh_sha256": "2b4704eb3836e6bef2d221cd3933e96f0465eb2c1cf3e79c9a81ceb85f68c447",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_08",
+      "source_mesh_sha256": "641c8653d825d94e3ab5299b370f41a98e131edbad59bec94376df37da7a50d0",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_09",
+      "source_mesh_sha256": "a602cb9b41c0ae42b9a5c997db2725dc436fbab6730f582311ef62e6d6247f78",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_10",
+      "source_mesh_sha256": "9d5e5ee10e43cc6b08214b8bcc3fc8d817032cff59cba4907ad79e88c38aa5ab",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_11",
+      "source_mesh_sha256": "63729f2de4e745a8e216fbb451522f4a2cb5f75e6fa282777143097797821083",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_12",
+      "source_mesh_sha256": "13e088efbf4ed8c70bcc5a93c4fa543657f7a740428a7a5e8f2af934a8f9f460",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_13",
+      "source_mesh_sha256": "5c6f044507ce0e6654f6dc6d4de03708eec6ba17095ec9d81f9a0aaff9f68385",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_14",
+      "source_mesh_sha256": "0885e71c32ca329075761d7554f7385d383fbfa330e6889081eea7a1c255a2af",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_15",
+      "source_mesh_sha256": "6b690f2d1b0627e5c6b8f2a670c5d42457c48f70a3b5aaf21ef5db451dbd0b54",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_16",
+      "source_mesh_sha256": "777c272c590b1d979f62c5c20c91a9d20536231146218e44e73502ce9439e4ba",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_17",
+      "source_mesh_sha256": "7b497d2d8f2531fb91eeea6a5581eeb04b49e3795ebe7e8cef4e2c4345b7450a",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_18",
+      "source_mesh_sha256": "5509488cd004ecf9179ef606b28dbe3078796ec1314f032ebef32c747ff574de",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_19",
+      "source_mesh_sha256": "620508db68e6e15e65c768b54e84ddf8733a74c5e78566fc3dcf6675a8df5da2",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_20",
+      "source_mesh_sha256": "0292d11a4e181a56c25b544187f43e87e63dbd5e9d8981b68dece62befc0507c",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_21",
+      "source_mesh_sha256": "7bf71382b4c96a15a4f66cf7c2b1a88b0a7ede5dc4c5980108bc44c0b93eedba",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_22",
+      "source_mesh_sha256": "3d0dddd718c546fd1b0685e1c96ef9d26717203aceb5538f57dbac5e2ed3770c",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_23",
+      "source_mesh_sha256": "d71ae935d1829f58766b4e299844445d586bb11f449e864f5656745560264bb0",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_24",
+      "source_mesh_sha256": "d0e2f28ccffaf24a3e42ab789f7bc9930c3d2f52ea5594b2907372299cb297af",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_25",
+      "source_mesh_sha256": "18c7434a804995f1f024205acbe3fcbf930aa371901ef0f809c41d96a5c24eb7",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_26",
+      "source_mesh_sha256": "668b2216792508af3b874f80c6b25ddd98bcb43ae32de278a11d994cb1f8b164",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_27",
+      "source_mesh_sha256": "219e51706ea999da66f6a5110ca06607776496833b47950b7b403066506baf0f",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_28",
+      "source_mesh_sha256": "5763df487c0737d87d385e2cc4e63e5f7a73ad74848b1a824ebfd3d6da29774d",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_29",
+      "source_mesh_sha256": "7d3f17049e036271bfc3fc4511877d407ef43483c65ef47e3272296dd917bd97",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_30",
+      "source_mesh_sha256": "b9cefd711ea5106e9fc01c43d3f598054b41bfe5268e0bc2d3f6eb3317ebc8e6",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_31",
+      "source_mesh_sha256": "ebd54127056086542671205c8e78972ce04f40743d702ff1ee10c27ea5e744e8",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_32",
+      "source_mesh_sha256": "7513384d841c2071fa49961177cb95ddf3207b483695afd3e255512325f16122",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_33",
+      "source_mesh_sha256": "048f4f6696413d446f2a617a57621a977ffc281c32d65c2b9e3df0a1f3b32c87",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_34",
+      "source_mesh_sha256": "dccd1ae2017bbe5a612da7773e9dec8ab357661267e59921d51bd4667758fc36",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_35",
+      "source_mesh_sha256": "4f30aa10f38e4bc01ab0cbe56ed308e55cb4dac00a74e6b75a0a7fbdf9b6d0a4",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_36",
+      "source_mesh_sha256": "cead63e0baf45102572083bfad657735cb32821b3fc9f656a4c5294ce04412f8",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_37",
+      "source_mesh_sha256": "3ea9c32f2bad709fbe1b33462939e2112764eb5989d41af9338ccbcf40fb4732",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_38",
+      "source_mesh_sha256": "4ebc5e295ed8db4edd97f62e6f9b8d72b3e8300e0df5fcb23dbed5a9b3771717",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_39",
+      "source_mesh_sha256": "32044851ce162af7e4a7e13d4eb9887ef15f81994f1aed39818f940e469867b5",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_40",
+      "source_mesh_sha256": "1bb65895906c52d01af526eb515b2003e1337af2abad44531986b641ec43dfaa",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Magnet_1_41",
+      "source_mesh_sha256": "fc43594a76ed32fc51682e84ffff748922846f484d852242ff0c8bf719b05252",
+      "subsystem": "sled_magnet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_Tr16x4_screw_-200",
+      "source_mesh_sha256": "d6c6974a6d971bb0c111e6f36fa619874693af7d3cb47efaafba9bf5784a10b8",
+      "subsystem": "lift_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_bearing_-200_-114",
+      "source_mesh_sha256": "53eb9b304f38afe332fbd1d933eb01e0dd1198792948ac33c455676f60f10cc5",
+      "subsystem": "lift_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_bearing_-200_1006",
+      "source_mesh_sha256": "8b64770928b82fec3edd7a04b8ff38ebc528e28ca75deea5ec8fb1b092b2c97c",
+      "subsystem": "lift_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_sync_pulley_-200",
+      "source_mesh_sha256": "3a10f7b0d4f56687592fd49f8e47458fc1f24a4e4b5c13be8da651e6d10658fa",
+      "subsystem": "lift_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_Tr16x4_screw_220",
+      "source_mesh_sha256": "615f632cf1af9c38392b9e0e3d06b080818ebd90e2e2c48ad8f3879449ac1b16",
+      "subsystem": "lift_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_bearing_220_-114",
+      "source_mesh_sha256": "97a6a5f949b5ec6e75b8c103230c16a7d136d79fc4758b03f0c47de7130fd026",
+      "subsystem": "lift_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_bearing_220_1006",
+      "source_mesh_sha256": "9db2e320c9bc22ec439c2c920d2a9f40f5841d9aac1534be7130a7c0b161254e",
+      "subsystem": "lift_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_sync_pulley_220",
+      "source_mesh_sha256": "37e66d79129bb37a42e5376d11333a56704c16e710eccb7735c44cdb8099d5d6",
+      "subsystem": "lift_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_sync_belt",
+      "source_mesh_sha256": "a23eea04ef64119117b828ac6dd289e0a489cc4f9ba28e6bf04439abdb2cfb14",
+      "subsystem": "lift_drive",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_holding_brake_reference",
+      "source_mesh_sha256": "ec3bba8e7dbcbac84aad415b83f4cbc68927b44ce92cdc3b9706cd2f847a8c1a",
+      "subsystem": "lift_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_motor_gear_reference",
+      "source_mesh_sha256": "3a86f0fd3a9434255731699219732254b59ed4f9b8f4ee65824bd8412dd03d6d",
+      "subsystem": "lift_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_connected_fixed_frame",
+      "source_mesh_sha256": "5536b53cbf613d653f4d6d28ecede55bcbb9237f138bbe95d0474e75861bb665",
+      "subsystem": "lift_fixed",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_pallet_grip_pin_178",
+      "source_mesh_sha256": "159f59ad71cc1ef272429f22bc217aa3d277fea0f2db52dedcb480ba1f4f61c4",
+      "subsystem": "cradle_grip",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_pallet_grip_actuator_reference_178",
+      "source_mesh_sha256": "e5aacfb6cf37190193a576df0c82ab4a3a3fe64eb288a73138add73bcd88fe1d",
+      "subsystem": "cradle_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_pallet_grip_pin_704.5",
+      "source_mesh_sha256": "3834b221512a7ab201a085fc13c3459acf4dd92f03a9e53ef281f02281e4fbae",
+      "subsystem": "cradle_grip",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_pallet_grip_actuator_reference_704.5",
+      "source_mesh_sha256": "b46f05da1f316af7a579f6d1c09a763ca3cbd43f185cb2afac6892e03ac4ae9f",
+      "subsystem": "cradle_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Cradle_Y_keeper_70_-1",
+      "source_mesh_sha256": "3848563efe0ae83cc5d785450273c539fcf63bc26a12e914c10a1eee55795302",
+      "subsystem": "cradle_keeper",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Cradle_keeper_actuator_reference_70_-1",
+      "source_mesh_sha256": "0c50130783ee96a1246a1a1f5890b6533fa089b2c362e3265deded3cbec63392",
+      "subsystem": "cradle_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Cradle_Y_keeper_70_1",
+      "source_mesh_sha256": "3221fc742ba21cfb7b402c4f5da7714f6cb8654ce4bde203e29c3d9e00179458",
+      "subsystem": "cradle_keeper",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Cradle_keeper_actuator_reference_70_1",
+      "source_mesh_sha256": "d3d9dbd7995f67be576da098cdf545799cf884ab9c15e30020d3f72e0ec33b66",
+      "subsystem": "cradle_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Cradle_Y_keeper_270_-1",
+      "source_mesh_sha256": "dc3fc12442e991b9179af7814c7a5cc7340e003e2fec6fb8426df54a9dabfd9a",
+      "subsystem": "cradle_keeper",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Cradle_keeper_actuator_reference_270_-1",
+      "source_mesh_sha256": "ebe75021cc9d8192d2a0b269d5cef0f89fbb592ff27138bb6eaecc5addb0d1dc",
+      "subsystem": "cradle_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Cradle_Y_keeper_270_1",
+      "source_mesh_sha256": "abf80508945a5395d2b2e25ca5909b92320f853019e8e2629a55f8d928be54ae",
+      "subsystem": "cradle_keeper",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Cradle_keeper_actuator_reference_270_1",
+      "source_mesh_sha256": "21c9493766288475c62a05b80b2449310f1e266706c134b0e57624a7bc1a3fbf",
+      "subsystem": "cradle_catalog",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_connected_carriage",
+      "source_mesh_sha256": "d48a0b91819d2376fb99a248a3419208c373e7c3b879d4fbd48d79496d215629",
+      "subsystem": "cradle",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_Tr16x4_nut_-200",
+      "source_mesh_sha256": "cf44eb694fb09136c49178ca124e14a9314ed463bcd2b41cc5f833af7e01302e",
+      "subsystem": "cradle",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Lift_Tr16x4_nut_220",
+      "source_mesh_sha256": "e38bdcb3c9da41e834358b59c2026c9a3a3af3d4f3ad439864c0be8c0b6506fe",
+      "subsystem": "cradle",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Captive_payload_pallet",
+      "source_mesh_sha256": "c1cca0e51e09d305d38beda29d0626592e42ced5bda0fcb7edc1d1e42f64bac2",
+      "subsystem": "cradle_pallet",
+      "source_state": "03_captured_source_level"
+    },
+    {
+      "cad_name": "Transferred_3U",
+      "source_mesh_sha256": "9c74b9d3e1ff0db55bd72096436d8aa861dd7ce30058c770c6a00287f6d0902b",
+      "subsystem": "payload",
+      "source_state": "03_captured_source_level"
+    }
+  ],
+  "render_settings": {
+    "engine": "Blender 4.3.2 Workbench",
+    "antialiasing": "FXAA",
+    "cavity": "WORLD",
+    "shadows": false
+  }
+}

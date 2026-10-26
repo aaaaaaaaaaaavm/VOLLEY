@@ -1,0 +1,46 @@
+{
+  "film": "VOLLEY from cassette to orbit",
+  "duration_s": 190,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 4560,
+  "audio": false,
+  "full_decode_pass": true,
+  "caption_cues": 35,
+  "caption_end_s": 190.0,
+  "chapters": [
+    {
+      "path": "mechanism/mechanism.mp4",
+      "duration_s": 70,
+      "frames": 1680,
+      "sha256": "d4bf2658e82a8d8cb9d822c92a537c9677c948ab2477ecfec9af6e54ef7d47d3"
+    },
+    {
+      "path": "comparison/comparison.mp4",
+      "duration_s": 20,
+      "frames": 480,
+      "sha256": "d306d8902efef6c337225697826c77a0d17409a419908443bd3a690133ef71ab"
+    },
+    {
+      "path": "orbit/VOLLEY_orbit_comparison_100s.mp4",
+      "duration_s": 100,
+      "frames": 2400,
+      "sha256": "a022aeb36bc1a9af546c2440535fc375dd1cd34bd37374a2535ec8288bd8da61"
+    }
+  ],
+  "source_scope": "CAD-derived edited mechanism motion; original principle schematics; invariant-checked planar two-body orbital illustrations",
+  "current_command_points_m_s": [
+    1,
+    2,
+    3
+  ],
+  "historical_periodic_model_example_m_s": 16.029,
+  "future_kinematic_examples_m_s": [
+    1000,
+    3500
+  ],
+  "claims": "Future and historical speeds are not current ACR1 ratings; same-host preset-spring comparator preserved",
+  "sha256": "6751e1a73f886232faa8588b74bd3e0e3a8de5e29bfb472441cfa576963ba059",
+  "bytes": 5108962
+}
