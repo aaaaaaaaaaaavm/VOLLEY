@@ -1326,6 +1326,23 @@
         "docs/films/delivery-journey/mechanism-storyboard.jpg": "b824f09044ca5c29bd9486b475279b805f6e1cd21586ddffff06839df75d8313",
         "docs/films/delivery-journey/orbit-storyboard.jpg": "7f5a341a33750991a872a14da37f8be23f13b8aae7fbbfec0d876f8b28eab475"
       }
+    },
+    {
+      "evidence_class": "Native ANSYS-result-derived numerical postprocessing",
+      "caption": "Matched-load ACR1 bare-chassis paired closure and patch-boundary profile compared with the CalculiX reference.",
+      "limitations": "Linear-elastic component model; three-mesh sensitivity is not formal convergence or installed hardware correlation; selected upstream budget basis remains explicit.",
+      "sources": {
+        "validation/acr1_ansys_crosscheck/ACR1_STATIC_CROSSCHECK.json": "3bb9676d0f0eda5a07d74c3715a06c216c2b7e3f3988f711f8a03648b9e44459",
+        "validation/acr1_ansys_crosscheck/PUBLIC_MANIFEST.json": "fe3a176b7375a156141cf0703c887ec9b5f547d96a47a4dd10d7a16f2bb61a98",
+        "validation/acr1_ansys_crosscheck/plot_crosscheck.py": "d71b18470e8d91ebec74149cd0ba8e659bd7f7e189f13a45dd8a7cb22b7041ec",
+        "validation/acr1_ansys_crosscheck/extracted/closure_samples_h4p5.csv": "c1bd4e48125c9ee76e8919c14cbd8b35bcfa8c921993dab3b83a7ee9d349efc8"
+      },
+      "exports": {
+        "validation/acr1_ansys_crosscheck/figures/ACR1_ANSYS_crosscheck_regenerated.png": "fad1ce35ca873dca37d87313a417dc3737d8678cd1cbb4c6036ad862da2c512f",
+        "validation/acr1_ansys_crosscheck/figures/ACR1_ANSYS_crosscheck_regenerated.pdf": "f3295cc21b47bc32b824bf08542f96fb8f455953109d57d3cd3f30d1a29ff982",
+        "validation/acr1_ansys_crosscheck/figures/ACR1_ANSYS_crosscheck_regenerated.svg": "2f2db7a19b13bc9c54c42ebf07579cffdf38bfd4e8e593b741587d96a89500d2",
+        "docs/assets/acr1/supplements/ANSYS_static_crosscheck.png": "fad1ce35ca873dca37d87313a417dc3737d8678cd1cbb4c6036ad862da2c512f"
+      }
     }
   ]
 }

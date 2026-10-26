@@ -1,0 +1,505 @@
+{
+  "scope": "Matched-load linear-elastic bare-chassis numerical cross-check; not whole-assembly or hardware qualification.",
+  "configuration": "VOLLEY-G5-ACR1",
+  "material": {
+    "name": "AL_ASSUMED",
+    "E_GPa": 70.0,
+    "nu": 0.33,
+    "rho_kg_m3": 2700.0,
+    "note": "Preserved owner material; not a new alloy specification."
+  },
+  "load": {
+    "method": "Consistent nodal forces from exact affine T6 surface integration; no imprint available in Mechanical.",
+    "patch_x_mm": [
+      276.0,
+      612.0
+    ],
+    "patch_y_mm": [
+      -45.0,
+      45.0
+    ],
+    "patch_z_mm": {
+      "upper": 14.0,
+      "lower": -14.0
+    },
+    "patch_area_each_mm2": 30240.0,
+    "pressure_Pa": 99552.93092868997,
+    "target_force_each_N": 3010.4806312835844,
+    "upper_direction": "-Z",
+    "lower_direction": "+Z",
+    "combined_force_N": [
+      0.0,
+      0.0,
+      3.7127190211094785e-11
+    ],
+    "combined_moment_Nmm": [
+      -3.706349716026125e-08,
+      -5.9395688367658295e-09,
+      0.0
+    ],
+    "max_midside_affinity_error_mm": 7.071897440728104e-10
+  },
+  "constraints": {
+    "type": "six scalar 3-2-1 constraints",
+    "locations": [
+      {
+        "xyz_mm": [
+          200.0,
+          -100.0,
+          0.0
+        ],
+        "dofs": [
+          "UX",
+          "UY",
+          "UZ"
+        ]
+      },
+      {
+        "xyz_mm": [
+          688.0,
+          -100.0,
+          0.0
+        ],
+        "dofs": [
+          "UY",
+          "UZ"
+        ]
+      },
+      {
+        "xyz_mm": [
+          200.0,
+          -80.0,
+          0.0
+        ],
+        "dofs": [
+          "UZ"
+        ]
+      }
+    ],
+    "resolved_nodes": {
+      "h4p5": [
+        {
+          "constraint": "C1",
+          "x_mm": 200.0,
+          "y_mm": -100.0,
+          "z_mm": 0.0,
+          "dofs": "UX;UY;UZ",
+          "node_id": 312,
+          "distance_mm": 0.0
+        },
+        {
+          "constraint": "C2",
+          "x_mm": 688.0,
+          "y_mm": -100.0,
+          "z_mm": 0.0,
+          "dofs": "UY;UZ",
+          "node_id": 434,
+          "distance_mm": 0.0
+        },
+        {
+          "constraint": "C3",
+          "x_mm": 200.0,
+          "y_mm": -80.0,
+          "z_mm": 0.0,
+          "dofs": "UZ",
+          "node_id": 19295,
+          "distance_mm": 0.0
+        }
+      ],
+      "h5p5": [
+        {
+          "constraint": "C1",
+          "x_mm": 200.0,
+          "y_mm": -100.0,
+          "z_mm": 0.0,
+          "dofs": "UX;UY;UZ",
+          "node_id": 11302,
+          "distance_mm": 0.0
+        },
+        {
+          "constraint": "C2",
+          "x_mm": 688.0,
+          "y_mm": -100.0,
+          "z_mm": 0.0,
+          "dofs": "UY;UZ",
+          "node_id": 11801,
+          "distance_mm": 0.0
+        },
+        {
+          "constraint": "C3",
+          "x_mm": 200.0,
+          "y_mm": -80.0,
+          "z_mm": 0.0,
+          "dofs": "UZ",
+          "node_id": 818,
+          "distance_mm": 0.0
+        }
+      ],
+      "h4p0": [
+        {
+          "constraint": "C1",
+          "x_mm": 200.0,
+          "y_mm": -100.0,
+          "z_mm": 0.0,
+          "dofs": "UX;UY;UZ",
+          "node_id": 17895,
+          "distance_mm": 0.0
+        },
+        {
+          "constraint": "C2",
+          "x_mm": 688.0,
+          "y_mm": -100.0,
+          "z_mm": 0.0,
+          "dofs": "UY;UZ",
+          "node_id": 18585,
+          "distance_mm": 0.0
+        },
+        {
+          "constraint": "C3",
+          "x_mm": 200.0,
+          "y_mm": -80.0,
+          "z_mm": 0.0,
+          "dofs": "UZ",
+          "node_id": 22729,
+          "distance_mm": 0.0
+        }
+      ]
+    },
+    "note": "Exact coordinates; no fixed-face substitution."
+  },
+  "static": {
+    "h5p5": {
+      "element_size_mm": 5.5,
+      "nodes": 59677,
+      "elements": 31470,
+      "closure_max_mm": 0.2852406354826581,
+      "closure_max_xy_mm": [
+        446.0000001,
+        44.9999999
+      ],
+      "closure_at_446_45_mm": 0.28524063548265044,
+      "closure_error_vs_calculix_pct": -0.2597054174786512,
+      "equilibrium_force_residual_N": 1.1294360013331387e-06,
+      "equilibrium_moment_residual_Nmm": 0.0002827929400706655,
+      "sample_count": 9351
+    },
+    "h4p5": {
+      "element_size_mm": 4.5,
+      "nodes": 81355,
+      "elements": 43563,
+      "closure_max_mm": 0.28639191411004894,
+      "closure_max_xy_mm": [
+        446.0000001,
+        44.9999999
+      ],
+      "closure_at_446_45_mm": 0.28639191411016834,
+      "closure_error_vs_calculix_pct": 0.14286299374445605,
+      "equilibrium_force_residual_N": 1.779214388141014e-06,
+      "equilibrium_moment_residual_Nmm": 0.0012541165468933073,
+      "sample_count": 11448
+    },
+    "h4p0": {
+      "element_size_mm": 4.0,
+      "nodes": 98542,
+      "elements": 53210,
+      "closure_max_mm": 0.28758919214871803,
+      "closure_max_xy_mm": [
+        446.0000001,
+        44.9999999
+      ],
+      "closure_at_446_45_mm": 0.28758919214871037,
+      "closure_error_vs_calculix_pct": 0.5615160516160048,
+      "equilibrium_force_residual_N": 6.180654807155047e-07,
+      "equilibrium_moment_residual_Nmm": 0.00032386181281833574,
+      "sample_count": 11516
+    }
+  },
+  "reference_closure_mm": 0.28598334973500683,
+  "reference_point_mm": [
+    446,
+    45
+  ],
+  "successive_refinement_relative_changes_pct": [
+    0.4036166254652862,
+    0.41805581082468013
+  ],
+  "full_mesh_span_pct_of_reference": 0.821221469094656,
+  "primary_native_result": {
+    "reader": "ansys-mapdl-reader 0.56.0; system Python 3.13; VTK parsing disabled (numerical extraction only)",
+    "rst_sha256": "56760b05514d06c8eae453051c686d86428b186203ee63e627875bb3feb9d81e",
+    "nsets": 1,
+    "nodes": 81355,
+    "elements": 43563,
+    "time_values": [
+      1.0
+    ],
+    "displacement_units": "metres in RST; converted to mm using native MKS input declaration",
+    "direct_sample_count": 11448,
+    "direct_sample_max_mm": 0.28639191411004894,
+    "max_point_mm": [
+      446.0000001,
+      44.9999999
+    ],
+    "at_exact_446_45_mm": 0.2863919143755794,
+    "max_native_vs_delivered_closure_difference_mm": 4.9998061246725456e-11,
+    "max_upper_sample_difference_mm": 4.999675673467152e-11,
+    "max_lower_sample_difference_mm": 4.9999407392142814e-11,
+    "reaction_entries": [
+      {
+        "node": 434,
+        "dof": 2,
+        "force_N": -1.543967929857476e-06
+      },
+      {
+        "node": 434,
+        "dof": 3,
+        "force_N": -9.858446299304546e-07
+      },
+      {
+        "node": 312,
+        "dof": 1,
+        "force_N": -2.9577177679263045e-08
+      },
+      {
+        "node": 312,
+        "dof": 2,
+        "force_N": 2.477382961690866e-07
+      },
+      {
+        "node": 312,
+        "dof": 3,
+        "force_N": -4.5569395021316517e-07
+      },
+      {
+        "node": 19295,
+        "dof": 3,
+        "force_N": 2.2309357121733098e-07
+      }
+    ],
+    "reaction_force_N": [
+      -2.9577177679263045e-08,
+      -1.2962296336883894e-06,
+      -1.2184450089262888e-06
+    ],
+    "reaction_moment_Nmm": [
+      0.0001263063723169755,
+      0.0007247811811913196,
+      -0.0010156599942760525
+    ],
+    "equilibrium_force_residual_N": 1.779214388141014e-06,
+    "equilibrium_moment_residual_Nmm": 0.0012541165468933073
+  },
+  "reference_BREP_compatibility": {
+    "owner_reference": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3117425.815727472,
+      "bounds_mm": [
+        200.0,
+        -154.0,
+        -40.000000000000014,
+        688.0,
+        154.0,
+        168.0
+      ]
+    },
+    "frozen_native_chassis": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3117425.815727472,
+      "bounds_mm": [
+        200.0,
+        -154.0,
+        -40.000000000000014,
+        688.0,
+        154.0,
+        168.0
+      ]
+    },
+    "owner_minus_frozen_mm3": 0.0,
+    "frozen_minus_owner_mm3": 0.0,
+    "FreeCAD_version": [
+      "1",
+      "0",
+      "0",
+      "",
+      "https://code.launchpad.net/~vcs-imports/freecad/trunk",
+      "2026/08/25 11:49:11"
+    ]
+  },
+  "per_mesh_native_deck_proof": {
+    "h5p5": {
+      "nodes": 59677,
+      "elements": 31470,
+      "reintegrated_patches": {
+        "top": {
+          "faces": 719,
+          "area_mm2": 30240.00000000004,
+          "force_N": -3010.480631283588,
+          "moment_Nmm": [
+            -3.0482283364108298e-12,
+            1336653.4002899108,
+            0.0
+          ],
+          "max_affinity_error_mm": 5.042071266823652e-08
+        },
+        "bottom": {
+          "faces": 700,
+          "area_mm2": 30240.00000000001,
+          "force_N": 3010.4806312835854,
+          "moment_Nmm": [
+            -1.269029326067539e-11,
+            -1336653.4002899104,
+            0.0
+          ],
+          "max_affinity_error_mm": 5.0487661606828885e-08
+        }
+      },
+      "native_loads": {
+        "top": {
+          "commands": 1524,
+          "force_N": -3010.480631283585,
+          "moment_Nmm": [
+            -2.9930706801906126e-09,
+            1336653.4002883201,
+            0.0
+          ]
+        },
+        "bottom": {
+          "commands": 1489,
+          "force_N": 3010.4806312835835,
+          "moment_Nmm": [
+            1.0728180654950847e-07,
+            -1336653.400285083,
+            0.0
+          ]
+        }
+      },
+      "max_independent_nodal_force_difference_N": 3.060216924311021e-08,
+      "material_commands": [
+        "MP,DENS,1,2700,\t! kg m^-3",
+        "MP,EX,1,70000000000,\t! Pa",
+        "MP,NUXY,1,0.33,"
+      ],
+      "components": 1,
+      "quadratic_min_jacobian_mm3_9_sites": 0.2476704492003853,
+      "quadratic_elements_with_nonpositive_sampled_jacobian": 0
+    },
+    "h4p5": {
+      "nodes": 81355,
+      "elements": 43563,
+      "reintegrated_patches": {
+        "top": {
+          "faces": 1065,
+          "area_mm2": 30239.99999999997,
+          "force_N": -3010.4806312835813,
+          "moment_Nmm": [
+            -2.1316282072803006e-13,
+            1336653.400289907,
+            0.0
+          ],
+          "max_affinity_error_mm": 5.055941035777019e-08
+        },
+        "bottom": {
+          "faces": 1027,
+          "area_mm2": 30240.00000000003,
+          "force_N": 3010.480631283587,
+          "moment_Nmm": [
+            1.1723955140041653e-13,
+            -1336653.4002899115,
+            0.0
+          ],
+          "max_affinity_error_mm": 5.042071289723604e-08
+        }
+      },
+      "native_loads": {
+        "top": {
+          "commands": 2240,
+          "force_N": -3010.4806312835703,
+          "moment_Nmm": [
+            -1.6283694392882353e-08,
+            1336653.4002919523,
+            0.0
+          ]
+        },
+        "bottom": {
+          "commands": 2162,
+          "force_N": 3010.480631283605,
+          "moment_Nmm": [
+            1.3970232970450525e-07,
+            -1336653.4002903586,
+            0.0
+          ]
+        }
+      },
+      "max_independent_nodal_force_difference_N": 2.7975423311232817e-08,
+      "material_commands": [
+        "MP,DENS,1,2700,\t! kg m^-3",
+        "MP,EX,1,70000000000,\t! Pa",
+        "MP,NUXY,1,0.33,"
+      ],
+      "components": 1,
+      "quadratic_min_jacobian_mm3_9_sites": 0.12422326268388945,
+      "quadratic_elements_with_nonpositive_sampled_jacobian": 0
+    },
+    "h4p0": {
+      "nodes": 98542,
+      "elements": 53210,
+      "reintegrated_patches": {
+        "top": {
+          "faces": 1403,
+          "area_mm2": 30239.999999999985,
+          "force_N": -3010.4806312835826,
+          "moment_Nmm": [
+            -1.3503864693120704e-11,
+            1336653.4002899078,
+            0.0
+          ],
+          "max_affinity_error_mm": 5.0420769037332535e-08
+        },
+        "bottom": {
+          "faces": 1430,
+          "area_mm2": 30239.999999999975,
+          "force_N": 3010.4806312835817,
+          "moment_Nmm": [
+            3.72399888703967e-11,
+            -1336653.4002899055,
+            0.0
+          ],
+          "max_affinity_error_mm": 5.030163010244131e-08
+        }
+      },
+      "native_loads": {
+        "top": {
+          "commands": 2930,
+          "force_N": -3010.4806312835995,
+          "moment_Nmm": [
+            -5.410059884525253e-07,
+            1336653.400288645,
+            0.0
+          ]
+        },
+        "bottom": {
+          "commands": 2981,
+          "force_N": 3010.480631283592,
+          "moment_Nmm": [
+            1.1421271040035208e-07,
+            -1336653.4002878682,
+            0.0
+          ]
+        }
+      },
+      "max_independent_nodal_force_difference_N": 2.539390830946786e-08,
+      "material_commands": [
+        "MP,DENS,1,2700,\t! kg m^-3",
+        "MP,EX,1,70000000000,\t! Pa",
+        "MP,NUXY,1,0.33,"
+      ],
+      "components": 1,
+      "quadratic_min_jacobian_mm3_9_sites": 0.1546768745730092,
+      "quadratic_elements_with_nonpositive_sampled_jacobian": 0
+    }
+  },
+  "modal_scope": "Only ordered-frequency agreement was reviewed; MAC/subspace identity not demonstrated.",
+  "raw_RST_publication": "Original native RST kept private because standard header contains workstation/user metadata; public numerical values were independently extracted and hash-pinned to that source."
+}

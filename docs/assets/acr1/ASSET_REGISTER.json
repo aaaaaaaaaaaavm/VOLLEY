@@ -1796,7 +1796,8 @@
       "caption": "Storage, feed, carrier launch/recovery, representative passive canister and host-assisted orbital comparison; edited motion and distinct speed evidence classes.",
       "status": "current",
       "source_path": "docs/films/delivery-journey/FILM_MANIFEST.json",
-      "generator": "docs/visual-source/delivery/combine_delivery.py"
+      "generator": "docs/visual-source/delivery/combine_delivery.py",
+      "release_identity": "containing Git commit or release tag"
     },
     {
       "asset_id": "delivery-journey-poster",
@@ -1807,18 +1808,32 @@
       "caption": "First inventory pose from the actual Blender animation; nominal CubeSat envelopes.",
       "status": "current",
       "source_path": "docs/films/delivery-journey/FILM_MANIFEST.json",
-      "generator": "docs/visual-source/delivery/combine_delivery.py"
+      "generator": "docs/visual-source/delivery/combine_delivery.py",
+      "release_identity": "containing Git commit or release tag"
     },
     {
       "asset_id": "delivery-journey-sources",
       "path": "docs/downloads/VOLLEY_delivery_film_sources.zip",
       "sha256": "b4ec902cbdf75c4bb5038cf370e1d63811ca4a123712d73e53ee50f1e7c5d217",
       "configuration": "VOLLEY-G5-ACR1 / FILM-PLANAR-ILLUSTRATION-01",
-      "evidence_class": "Editable source archive",
-      "caption": "Portable generators, baked CAD-derived Blender scene, orbital data, captions and verification records.",
+      "evidence_class": "editable visual source package",
+      "caption": "Source-only visual package with retained source identities and third-party notices.",
       "status": "current",
       "source_path": "docs/films/delivery-journey/FILM_MANIFEST.json",
-      "generator": "docs/visual-source/delivery/combine_delivery.py"
+      "generator": "docs/visual-source/delivery/combine_delivery.py",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "ANSYS-static-crosscheck",
+      "path": "docs/assets/acr1/supplements/ANSYS_static_crosscheck.png",
+      "sha256": "fad1ce35ca873dca37d87313a417dc3737d8678cd1cbb4c6036ad862da2c512f",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "Native-result-derived numerical field",
+      "caption": "Matched-load bare-chassis paired closure; ANSYS and CalculiX comparison.",
+      "status": "current",
+      "generator": "validation/acr1_ansys_crosscheck/plot_crosscheck.py",
+      "source_path": "validation/acr1_ansys_crosscheck/ACR1_STATIC_CROSSCHECK.json",
+      "release_identity": "containing Git commit or release tag"
     }
   ],
   "path_base": "repository_root",

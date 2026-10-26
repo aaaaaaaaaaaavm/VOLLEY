@@ -34,4 +34,8 @@ Original Gen5, FM08, Chrono contact and earlier orbital captures retain their or
 
 ## Higher-speed design constraints
 
-The separate [unchanged-configuration screen](HIGHER_SPEED_DESIGN_SPACE.md) contains22 higher-target cases and4 timestep refinements. It establishes source/arrest design constraints and a distinct Gen6 flyaway-shoe trade. Current ACR1 command points remain1,2 and3m/s. Requested speeds and hypothetical altered configurations are not operating ratings.
+The separate [unchanged-configuration screen](HIGHER_SPEED_DESIGN_SPACE.md) contains 22 higher-target cases and 4 timestep refinements. It establishes source/arrest design constraints and a distinct Gen6 flyaway-shoe trade. Current ACR1 command points remain 1, 2 and 3 m/s. Requested speeds and hypothetical altered configurations are not operating ratings.
+
+## Independent ANSYS chassis comparison
+
+The [matched-load static supplement](ACR1_ANSYS_CROSSCHECK.md) gives 0.286392 mm primary paired closure against the 0.285983 mm CalculiX reference (+0.143%). Three mesh levels and 11,448 independently read primary samples support the stated comparison. The existing conditional clearance formula is evaluated separately against the new mesh values; the selected upstream model is unchanged.

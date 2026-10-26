@@ -1,10 +1,10 @@
 {
   "status": "passed",
   "path_base": "repository_root",
-  "resolved_file_references": 538,
-  "unique_resolved_files": 258,
-  "registered_assets": 69,
-  "source_index_files": 95,
+  "resolved_file_references": 521,
+  "unique_resolved_files": 253,
+  "registered_assets": 70,
+  "source_index_files": 75,
   "immutable_view_capture": "byte-identical to accepted scene-package capture",
   "release_identity": "containing Git commit or release tag",
   "checks": [

@@ -91,6 +91,8 @@ jobs:
           python3 validation/acr1_release_dynamics/check_capture.py
           python3 validation/acr1_thermal_environment/check_capture.py
           python3 validation/acr1_first_test_package/check_package.py
+      - name: Captured ANSYS static cross-check
+        run: python3 validation/acr1_ansys_crosscheck/check_capture.py
       - name: mission freshness diagnostics
         run: python3 tools/diagnose_mission_freshness.py
       - name: one-event mission and mass screen

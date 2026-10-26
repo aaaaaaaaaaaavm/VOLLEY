@@ -1,0 +1,218 @@
+{
+  "files": [
+    {
+      "path": "geometry/CHASSIS_INPUT.brep",
+      "bytes": 192055,
+      "sha256": "d1df5d712b4d31e6d27a409eb82b09fc6f73664e4a557dded166cd873cf71547",
+      "source": "01_SOURCES/CALCULIX_REFERENCE/CHASSIS_INPUT.brep",
+      "source_sha256": "d1df5d712b4d31e6d27a409eb82b09fc6f73664e4a557dded166cd873cf71547",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "inputs/static_h5p5.dat",
+      "bytes": 7422509,
+      "sha256": "ba590228202642ae101cdaa5566584127ed1792307e9c53a6b5e28ae5721b5c1",
+      "source": "02_NATIVE_ANSYS/results/static_h5p5/ds.dat",
+      "source_sha256": "eff4c1ec780b1eb1a791171e84a72fb154fc1d6587e2ea83fb1763dec493a059",
+      "transformation": "Private workstation paths/host identifier redacted; APDL directory strings set to ./; numerical content unchanged."
+    },
+    {
+      "path": "logs/static_h5p5.out",
+      "bytes": 415285,
+      "sha256": "e542ca426aedfb5a1678591f5f18520ccf7adbf7999699c2d2610d0326da624c",
+      "source": "02_NATIVE_ANSYS/results/static_h5p5/solve.out",
+      "source_sha256": "34f01d15dc03fa84ef8fabffa7069bef917d043bbf8692a8e6d38752b3a7623f",
+      "transformation": "Private workstation paths and host identifier redacted; solver numerical messages retained."
+    },
+    {
+      "path": "extracted/closure_samples_h5p5.csv",
+      "bytes": 1180969,
+      "sha256": "2d1450d0da8b57eb89d1e51d03545e644fe180b4ad0ed53a212a0b4958b01fda",
+      "source": "05_RESULTS/corrected_h5p5_closure_samples.csv",
+      "source_sha256": "2d1450d0da8b57eb89d1e51d03545e644fe180b4ad0ed53a212a0b4958b01fda",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "loads/loads_h5p5.csv",
+      "bytes": 79075,
+      "sha256": "ba997eeb8837fb7656df52e498a888a11adcb81300c5e9c2c623d9e73f3ebfb8",
+      "source": "06_EXTRACTED/loads_h5p5/loads_corrected.csv",
+      "source_sha256": "ba997eeb8837fb7656df52e498a888a11adcb81300c5e9c2c623d9e73f3ebfb8",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h5p5/nodes.csv",
+      "bytes": 2859150,
+      "sha256": "75d2f492d8f5427668d3f409d32a4bd4937ac6114f669e271115635031ee8a75",
+      "source": "06_EXTRACTED/mesh_h5p5/nodes.csv",
+      "source_sha256": "75d2f492d8f5427668d3f409d32a4bd4937ac6114f669e271115635031ee8a75",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h5p5/elements.csv",
+      "bytes": 2184267,
+      "sha256": "6136d0826604b7d80e77e36393c25b72fef89da1b2e1ee5ac05fc069975d26ae",
+      "source": "06_EXTRACTED/mesh_h5p5/elements.csv",
+      "source_sha256": "6136d0826604b7d80e77e36393c25b72fef89da1b2e1ee5ac05fc069975d26ae",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h5p5/faces.csv",
+      "bytes": 769777,
+      "sha256": "5976ab7f8de4953cc15342d8e7c76f1a18bd1ab17cd12ff301a6a7b280e5d16f",
+      "source": "06_EXTRACTED/mesh_h5p5/faces.csv",
+      "source_sha256": "5976ab7f8de4953cc15342d8e7c76f1a18bd1ab17cd12ff301a6a7b280e5d16f",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "inputs/static_h4p5.dat",
+      "bytes": 10191501,
+      "sha256": "e6610dd5a39298e0fcb73feab7b9cd2519174a7f25419be9f48f8115aa007751",
+      "source": "02_NATIVE_ANSYS/results/static_h4p5/ds.dat",
+      "source_sha256": "ef395bb302ca8b358064384b0fc501a9d6e2bb3b74e8e46c2d99dfb254f99335",
+      "transformation": "Private workstation paths/host identifier redacted; APDL directory strings set to ./; numerical content unchanged."
+    },
+    {
+      "path": "logs/static_h4p5.out",
+      "bytes": 594576,
+      "sha256": "04a043cf967db456ecf574c74153fff85abeba2458f0fef6dbfd70de56ee24d1",
+      "source": "02_NATIVE_ANSYS/results/static_h4p5/solve.out",
+      "source_sha256": "c7ae572656df24147dfe804c8634823f3d71224462874aaa8079409680e04860",
+      "transformation": "Private workstation paths and host identifier redacted; solver numerical messages retained."
+    },
+    {
+      "path": "extracted/closure_samples_h4p5.csv",
+      "bytes": 1445712,
+      "sha256": "c1bd4e48125c9ee76e8919c14cbd8b35bcfa8c921993dab3b83a7ee9d349efc8",
+      "source": "05_RESULTS/corrected_h4p5_closure_samples.csv",
+      "source_sha256": "c1bd4e48125c9ee76e8919c14cbd8b35bcfa8c921993dab3b83a7ee9d349efc8",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "loads/loads_h4p5.csv",
+      "bytes": 115991,
+      "sha256": "3f9c731e285318c342d1050f328c98120646dc73ac952e9b4464971621644cde",
+      "source": "06_EXTRACTED/loads_h4p5/loads_corrected.csv",
+      "source_sha256": "3f9c731e285318c342d1050f328c98120646dc73ac952e9b4464971621644cde",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h4p5/nodes.csv",
+      "bytes": 3900841,
+      "sha256": "8f16de66e87e9ffc7fcb56acf825aaad4c8aefc99d5e17177b6d7b91297c6bc2",
+      "source": "06_EXTRACTED/mesh_h4p5_legacy/nodes.csv",
+      "source_sha256": "8f16de66e87e9ffc7fcb56acf825aaad4c8aefc99d5e17177b6d7b91297c6bc2",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h4p5/elements.csv",
+      "bytes": 3109115,
+      "sha256": "2b5dffbc14ac0ab6c1e046acdfcb8ce2b4144e708b69248739256a918694e6fe",
+      "source": "06_EXTRACTED/mesh_h4p5_legacy/elements.csv",
+      "source_sha256": "2b5dffbc14ac0ab6c1e046acdfcb8ce2b4144e708b69248739256a918694e6fe",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h4p5/faces.csv",
+      "bytes": 1034726,
+      "sha256": "58252227377060e7c14e264d3b7ad227cf3f97b7cee431307e69ff124b9c0480",
+      "source": "06_EXTRACTED/mesh_h4p5_legacy/faces.csv",
+      "source_sha256": "58252227377060e7c14e264d3b7ad227cf3f97b7cee431307e69ff124b9c0480",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "inputs/static_h4p0.dat",
+      "bytes": 12406088,
+      "sha256": "ab4c9f455e3a9c08c8f3baa634c2d5dce5586559ef1f7de2dcae50daf08551ec",
+      "source": "02_NATIVE_ANSYS/results/static_h4p0/ds.dat",
+      "source_sha256": "7d2741c0941f95fac629ee83d6f9a27694f30e46974840b3141ecb9e5fb7a688",
+      "transformation": "Private workstation paths/host identifier redacted; APDL directory strings set to ./; numerical content unchanged."
+    },
+    {
+      "path": "logs/static_h4p0.out",
+      "bytes": 789127,
+      "sha256": "9bf12e56be42c694d902b1065c0595e96a651127a095b0d3d8a78a83bcd3936f",
+      "source": "02_NATIVE_ANSYS/results/static_h4p0/solve.out",
+      "source_sha256": "debec6091d17960194ccef9f5df8ca0e8246f8b6f8df94ce59fa5980d2391e23",
+      "transformation": "Private workstation paths and host identifier redacted; solver numerical messages retained."
+    },
+    {
+      "path": "extracted/closure_samples_h4p0.csv",
+      "bytes": 1454405,
+      "sha256": "073936592da8a602d5d27dc57aff561a1bb46390b23f813d6f4dfe9b232441ca",
+      "source": "05_RESULTS/corrected_h4p0_closure_samples.csv",
+      "source_sha256": "073936592da8a602d5d27dc57aff561a1bb46390b23f813d6f4dfe9b232441ca",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "loads/loads_h4p0.csv",
+      "bytes": 156507,
+      "sha256": "b9ca6279e34366530bfd2084ef2ff1387aec19ad8cac4c77c19de637407ef385",
+      "source": "06_EXTRACTED/loads_h4p0/loads_corrected.csv",
+      "source_sha256": "b9ca6279e34366530bfd2084ef2ff1387aec19ad8cac4c77c19de637407ef385",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h4p0/nodes.csv",
+      "bytes": 4725480,
+      "sha256": "12d10772fd5c625b7620d5ba2235c49e6f6d61d0accac05eb784b52ed923b12c",
+      "source": "06_EXTRACTED/mesh_h4p0/nodes.csv",
+      "source_sha256": "12d10772fd5c625b7620d5ba2235c49e6f6d61d0accac05eb784b52ed923b12c",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h4p0/elements.csv",
+      "bytes": 3824590,
+      "sha256": "9f48845629fc79da7c33c943f61197da9a0c9ac0a8766525e813c25166ea4d4c",
+      "source": "06_EXTRACTED/mesh_h4p0/elements.csv",
+      "source_sha256": "9f48845629fc79da7c33c943f61197da9a0c9ac0a8766525e813c25166ea4d4c",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "mesh/h4p0/faces.csv",
+      "bytes": 1246009,
+      "sha256": "71dc8da0fee777f890abe8cb9d718d877e73e59ab96cd7affa73334a37f9742a",
+      "source": "06_EXTRACTED/mesh_h4p0/faces.csv",
+      "source_sha256": "71dc8da0fee777f890abe8cb9d718d877e73e59ab96cd7affa73334a37f9742a",
+      "transformation": "verbatim"
+    },
+    {
+      "path": "ACR1_STATIC_CROSSCHECK.json",
+      "bytes": 13075,
+      "sha256": "3bb9676d0f0eda5a07d74c3715a06c216c2b7e3f3988f711f8a03648b9e44459",
+      "source": null,
+      "source_sha256": null,
+      "transformation": "Selected verified scientific values; personal paths omitted."
+    },
+    {
+      "path": "figures/ACR1_ANSYS_corrected_closure.png",
+      "bytes": 179752,
+      "sha256": "34fae80718b9f0b172bf2029e793482a794c9bf9661405e2b5843d4657662cb5",
+      "source": "extracted/closure_samples_h4p5.csv + ACR1_STATIC_CROSSCHECK.json",
+      "transformation": "Matplotlib scientific plot; all 11448 primary samples independently matched to native RST within 5e-11 mm; not a GUI screenshot."
+    },
+    {
+      "path": "figures/ACR1_ANSYS_corrected_closure.pdf",
+      "bytes": 104028,
+      "sha256": "480fe8ef8cdaf0043c0a5f94019386547ac900a741f7c2851fbeffd243ca7046",
+      "source": "extracted/closure_samples_h4p5.csv + ACR1_STATIC_CROSSCHECK.json",
+      "transformation": "Matplotlib scientific plot; all 11448 primary samples independently matched to native RST within 5e-11 mm; not a GUI screenshot."
+    },
+    {
+      "path": "figures/ACR1_ANSYS_corrected_closure.svg",
+      "bytes": 390289,
+      "sha256": "393c5dd412b185faf11b226af2e4184f3647b84d5bdc9e4c7d616a9e2ae75a48",
+      "source": "extracted/closure_samples_h4p5.csv + ACR1_STATIC_CROSSCHECK.json",
+      "transformation": "Matplotlib scientific plot; all 11448 primary samples independently matched to native RST within 5e-11 mm; not a GUI screenshot."
+    },
+    {
+      "path": "README.md",
+      "bytes": 2009,
+      "sha256": "6cac66b43932a067afb92a228013e3c804cf5ccc3ab26026fb95f1285c9d86f7",
+      "source": null,
+      "source_sha256": null,
+      "transformation": "Public scientific scope and reproduction note; captured-output checker and plot instructions added."
+    }
+  ],
+  "publication_scope": "Selected accepted static cross-check only. No remote writes performed."
+}

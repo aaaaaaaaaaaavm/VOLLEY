@@ -51,6 +51,8 @@ The interlock example needs only Python 3.12; scientific/native examples have th
 
 ## Extended engineering studies
 
+[ANSYS–CalculiX chassis cross-check](docs/ACR1_ANSYS_CROSSCHECK.md) · matched 3.01048 kN opposed-patch loads, three mesh levels and independently read native results.
+
 [Structural modes and motor normal reaction](docs/ACR1_STRUCTURAL_DYNAMICS.md) · [Native release/contact dynamics](docs/ACR1_RELEASE_DYNAMICS.md) · [Thermal interfaces and source derating](docs/ACR1_THERMAL_ENVIRONMENT.md) · [Finite-host lunar campaigns](docs/PROGRAMME_STUDIES_ACR1.md) · [First-test procedures and fixture STEP](docs/ACR1_FIRST_TEST_PACKAGE.md)
 
 These separately identified studies add native solver histories, refinement, resource flowdown and a concrete path to subsequent measurements. Their operating conditions and source identities accompany each result.

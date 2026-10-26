@@ -1,0 +1,9 @@
+{
+  "basis": "Sensitivity of the existing conditional budget; selected upstream CalculiX model unchanged",
+  "formula": "1 - 1.3 * paired_closure_mm / 2 - (0.20 + 0.15 + 0.15 + 0.05)",
+  "reference_margin_mm": 0.2641108226722455,
+  "primary_mesh_margin_mm": 0.2638452558284681,
+  "finest_mesh_margin_mm": 0.26306702510333324,
+  "finest_vs_reference_reduction_um": 1.0437975689122636,
+  "assumptions": "Existing centred face allocation,1.3responsefactor anddeclaredtoleranceallocations;notmeasuredinstalledclearance"
+}
