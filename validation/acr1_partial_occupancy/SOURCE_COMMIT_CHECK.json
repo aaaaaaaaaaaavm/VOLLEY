@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "repo_path": "validation/acr1/mission/mission_model.py",
+      "accepted_commit_bytes_match": true
+    },
+    {
+      "repo_path": "validation/acr1/mission/provenance/target.py",
+      "accepted_commit_bytes_match": true
+    },
+    {
+      "repo_path": "validation/acr1/mission/FiniteReplay.java",
+      "accepted_commit_bytes_match": true
+    },
+    {
+      "repo_path": "validation/acr1/mission/TARGETS.json",
+      "accepted_commit_bytes_match": true
+    },
+    {
+      "repo_path": "validation/acr1/mission/MISSION_INPUTS.json",
+      "accepted_commit_bytes_match": true
+    },
+    {
+      "repo_path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "accepted_commit_bytes_match": true
+    }
+  ],
+  "accepted_twelve_payload_files_modified": false
+}

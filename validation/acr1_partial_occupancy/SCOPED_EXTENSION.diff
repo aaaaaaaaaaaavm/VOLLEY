@@ -1,0 +1,33 @@
+--- accepted/mission_model.py
++++ partial_occupancy/model/mission_model.py
+@@ -13,7 +13,7 @@
+ spec=importlib.util.spec_from_file_location('captured_fbr_arc',H/'provenance/target.py');reference=importlib.util.module_from_spec(spec);spec.loader.exec_module(reference)
+ arc=reference.arc
+ MU,RE,J2,ISP,G0=reference.MU,reference.RE,reference.J2,reference.ISP,reference.G0
+-CAD_DEVICE=149.5567197004;GEN5_DEVICE=CAD_DEVICE+7.;SPRING_DEVICE=72.;SLED=13.127805767068676;PAYLOAD=4.
++CAD_DEVICE=149.55671970039353;GEN5_DEVICE=CAD_DEVICE+7.;SPRING_DEVICE=72.;SLED=13.127805767068676;PAYLOAD=4.
+ BUS_DRY=480.;PROPELLANT=20.;INITIAL_WET_BUS=BUS_DRY+PROPELLANT
+ TIMES=np.arange(1,13)*450.;LAST=float(TIMES[-1]);FINAL=LAST+86400.;PRE_GUARD=5.;POST_GUARD=20.;LOADING_COAST=400.
+ RADIUS=RE+500000.;PERIOD=2*np.pi*np.sqrt(RADIUS**3/MU)
+@@ -76,7 +76,7 @@
+     return dict(end=z,force=sol.x.reshape(2,3),times=times,coast_s=times[2]-times[1],position_residual_m=float(np.linalg.norm(r[:3])*dt),velocity_residual_m_s=float(np.linalg.norm(r[3:])),root_success=bool(sol.success),root_message=str(sol.message),evaluations=int(sol.nfev),targeting_pass=bool(np.linalg.norm(r[:3])*dt<.001 and np.linalg.norm(r[3:])<1e-6))
+ 
+ def run(family,architecture,fraction=.35,step=60.,shared_narrow=False):
+-    started=time.monotonic();device=GEN5_DEVICE if architecture=='gen5'else SPRING_DEVICE;s=np.r_[INITIAL,INITIAL_WET_BUS+device+12*PAYLOAD];initial=s.copy();now=0.;events=[];deliveries=[];legs=[];trajectory=[]
++    count=len(family['shots']);started=time.monotonic();device=GEN5_DEVICE if architecture=='gen5'else SPRING_DEVICE;s=np.r_[INITIAL,INITIAL_WET_BUS+device+count*PAYLOAD];initial=s.copy();now=0.;events=[];deliveries=[];legs=[];trajectory=[]
+     def segment(a,b,F,label):
+         nonlocal s
+         if b-a<1e-9:return
+@@ -96,10 +96,10 @@
+             deliveries.append(dict(payload=shot['payload'],release_s=end,child_state=child.tolist(),target=goal.tolist(),terminal_state=terminal.tolist(),position_error_m=float(np.linalg.norm(terminal[:3]-goal[:3])),velocity_error_m_s=float(np.linalg.norm(terminal[3:]-goal[3:])),momentum_error_kg_m_s=float(np.linalg.norm(momentum)),u_sep_m_s=u.tolist(),mass_before_kg=M,**release))
+             events.append(dict(kind='shot',start_s=end,end_s=end,payload=shot['payload'],payload_mass_kg=PAYLOAD,u_m_s=u.tolist(),before=before.tolist(),after=s.tolist(),target=goal.tolist(),**release))
+         now=end
+-    completed=len(deliveries)==12 and len(legs)==13 and all(q['targeting_pass']for q in legs)
++    completed=len(deliveries)==count and len(legs)==count+1 and all(q['targeting_pass']for q in legs)
+     if completed:segment(now,FINAL,np.zeros(3),'final_host_coast')
+     used=initial[6]-s[6]-len(deliveries)*PAYLOAD;peak=max((np.linalg.norm(F)for q in legs for F in q['force']),default=0.)
+-    r=dict(study='G5-MISSION-01',family=family['name'],architecture=architecture,fraction=fraction,max_step_s=step,source_sha256=sha(__file__),targets_sha256=sha(H/'TARGETS.json'),calibration_source_sha256=CALIBRATION['source_sha256'],initial_time_s=0.,initial_state=initial.tolist(),initial_bus_dry_kg=BUS_DRY,initial_propellant_kg=PROPELLANT,initial_bus_wet_kg=INITIAL_WET_BUS,device_retained_dry_kg=device,payload_total_kg=48.,final_time_s=FINAL,final_host_target=family['host_target'],final_host_state=s.tolist(),legs=legs,events=events,deliveries=deliveries,completed_targeting=completed,fuel_used_kg=float(used),fuel_remaining_kg=float(PROPELLANT-used),peak_force_N=float(peak),fuel_limit_pass=bool(used<=PROPELLANT),host_position_error_m=float(np.linalg.norm(s[:3]-family['host_target'][:3]))if completed else None,host_velocity_error_m_s=float(np.linalg.norm(s[3:6]-family['host_target'][3:]))if completed else None,minimum_loading_coast_s=min([q['coast_s']for q in legs[:12]])if architecture=='gen5'else None,elapsed_s=time.monotonic()-started)
++    r=dict(study='G5-MISSION-01',family=family['name'],architecture=architecture,fraction=fraction,max_step_s=step,source_sha256=sha(__file__),targets_sha256=sha(H/'TARGETS.json'),calibration_source_sha256=CALIBRATION['source_sha256'],initial_time_s=0.,initial_state=initial.tolist(),initial_bus_dry_kg=BUS_DRY,initial_propellant_kg=PROPELLANT,initial_bus_wet_kg=INITIAL_WET_BUS,device_retained_dry_kg=device,payload_total_kg=count*PAYLOAD,final_time_s=FINAL,final_host_target=family['host_target'],final_host_state=s.tolist(),legs=legs,events=events,deliveries=deliveries,completed_targeting=completed,fuel_used_kg=float(used),fuel_remaining_kg=float(PROPELLANT-used),peak_force_N=float(peak),fuel_limit_pass=bool(used<=PROPELLANT),host_position_error_m=float(np.linalg.norm(s[:3]-family['host_target'][:3]))if completed else None,host_velocity_error_m_s=float(np.linalg.norm(s[3:6]-family['host_target'][3:]))if completed else None,minimum_loading_coast_s=min([q['coast_s']for q in legs[:count]])if architecture=='gen5'else None,elapsed_s=time.monotonic()-started)
+     r['authority_results']={str(limit):dict(force_limit_N=limit,force_limit_pass=bool(peak<=limit),feasible_in_declared_candidate=bool(completed and used<=PROPELLANT and peak<=limit))for limit in [1.,5.]}
+     r['shared_narrow_window_policy']=bool(shared_narrow or architecture=='gen5');r['spring_loading_coast_required']=False
+     stem=case_stem(r);r['case_stem']=stem;out=H/'release';out.mkdir(exist_ok=True);(out/(stem+'.json')).write_text(json.dumps(r,indent=2)+'\n');np.savetxt(out/(stem+'_trajectory.csv'),trajectory,delimiter=',',header='t_s,x_m,y_m,z_m,vx_m_s,vy_m_s,vz_m_s,mass_kg',comments='')

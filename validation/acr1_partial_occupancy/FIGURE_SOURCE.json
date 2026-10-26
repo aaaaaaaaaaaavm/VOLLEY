@@ -1,0 +1,15 @@
+{
+  "evidence_class": "Computed plot",
+  "caption": "Computed host propellant at 5 N allocated authority for two, four and twelve same-size 3U payloads. Full retained hardware is counted at every occupancy. The alternating family has no tested ACR1 pass at 1 N; blank points denote no tested pass, not zero fuel. These are numerical mission comparisons, not physical delivery accuracy.",
+  "limitations": "Frozen full-state targets and shared J2 assumptions; point releases; no provider compatibility or measured precision.",
+  "sources": {
+    "validation/acr1_partial_occupancy/plot_comparison.py": "aa301b1f54a8652f2b20f22e139a5e1e34ebcffad5665a9490f14e3b4f284e14",
+    "validation/acr1_partial_occupancy/technical/SELECTED_MISSION_OUTCOMES.csv": "d6f0f586222b40aaf70365fae780cc8068f440ee87f40be381fd208f5296fa12",
+    "tools/scientific.mplstyle": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+  },
+  "exports": {
+    "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.pdf": "715768563d835bfbee0a20155a2fb9532a352667ab2f86206e8822e6eed84bf3",
+    "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.png": "e8e1fd456433da5f268eeff22c8a7d321033fb7a9f8e478d52ce5279b28731b8",
+    "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.svg": "df17caa60eb7a4d04892172e138393f2c5f6b5c63ca88254e043133ad0052d12"
+  }
+}

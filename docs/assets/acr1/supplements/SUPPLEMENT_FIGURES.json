@@ -68,7 +68,7 @@
         },
         {
           "path": "validation/acr1_release_dynamics/MANIFEST.json",
-          "sha256": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+          "sha256": "109beb848c2a8de8863bb1d18a6debf25b008d35f1478da303dfd41ff3d1c058"
         },
         {
           "path": "validation/acr1_release_dynamics/SOFTWARE_ENVIRONMENT.json",
@@ -84,6 +84,43 @@
       "software": "MuJoCo 3.3.7 native contact replay; source summarize.py plotting pipeline",
       "model_scope": "Local payload departure/contact sensitivities under the declared contact and guide assumptions.",
       "evidence_link": "docs/ACR1_RELEASE_DYNAMICS.md",
+      "camera": null,
+      "scene": null,
+      "status": "current",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "supplement-partial-occupancy-propellant",
+      "path": "docs/assets/acr1/supplements/partial_occupancy_propellant.png",
+      "sha256": "e8e1fd456433da5f268eeff22c8a7d321033fb7a9f8e478d52ce5279b28731b8",
+      "configuration": "ACR1-PARTIAL-OCCUPANCY-01",
+      "evidence_class": "computed mission comparison",
+      "role": "scientific follow-on result figure",
+      "source_path": "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.png",
+      "source_sha256": "e8e1fd456433da5f268eeff22c8a7d321033fb7a9f8e478d52ce5279b28731b8",
+      "source_inputs": [
+        {
+          "path": "validation/acr1_partial_occupancy/plot_comparison.py",
+          "sha256": "aa301b1f54a8652f2b20f22e139a5e1e34ebcffad5665a9490f14e3b4f284e14"
+        },
+        {
+          "path": "validation/acr1_partial_occupancy/technical/SELECTED_MISSION_OUTCOMES.csv",
+          "sha256": "d6f0f586222b40aaf70365fae780cc8068f440ee87f40be381fd208f5296fa12"
+        },
+        {
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        }
+      ],
+      "dimensions_px": [
+        2220,
+        1050
+      ],
+      "caption": "Computed host propellant at 5 N allocated authority for two, four and twelve same-size 3U payloads. Full retained hardware is counted at every occupancy. The alternating family has no tested ACR1 pass at 1 N; blank points denote no tested pass, not zero fuel. These are numerical mission comparisons, not physical delivery accuracy.",
+      "alt_text": "Host propellant comparison across two, four and twelve payloads for uniform and alternating target families.",
+      "software": "Python / Matplotlib; plot_comparison.py",
+      "model_scope": "Frozen full-state targets and shared J2 assumptions; point releases; no provider compatibility or measured precision.",
+      "evidence_link": "validation/acr1_partial_occupancy/REPORT.md",
       "camera": null,
       "scene": null,
       "status": "current",

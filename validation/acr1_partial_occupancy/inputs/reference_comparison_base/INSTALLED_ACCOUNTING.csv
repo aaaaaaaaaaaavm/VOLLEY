@@ -1,0 +1,13 @@
+term,ACR1,spring_proxy,nova_bare,units,boundary
+device_dry,156.55671970039353,72,39.96,kg,ACR1 includes 7 kg; proxy assumed; Nova excludes installation
+payload,48,48,48,kg,same 12 x 4 kg; actual Nova mission approval absent
+host_wet,500,500,,kg,surrogate includes 20 kg propellant; no real Nova host selected
+represented_geometry_box,3.763431,,,m3,not operational/clearance envelope
+represented_average_power_upper,12.973002459313106,,,W,additional controller/lock/brake/harness/heater services unknown
+represented_peak_power_upper,21.192172684398724,,,W,additional concurrent services unknown
+represented_average_heat_upper,12.93553790318878,,,W,actual heat path and sink acceptance required
+release_slot,450,450,,s,common frozen surrogate targets; no product duty certification
+required_loading_coast,400,0,,s,spring has no imposed mechanism coast; guards 5/20 s both
+external_adapter_reinforcement_harness,,,,kg,unknown; never zero
+reliability_and_fault_probability,,,,probability,deterministic fault consequences only; no observed rates
+installed_cost,,,,currency,no quotes or supplier engagement

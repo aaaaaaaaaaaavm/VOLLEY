@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "repo_path": "validation/acr1/mission/mission_model.py",
+      "accepted_commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "captured_path": "model/mission_model.py",
+      "accepted_sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f"
+    },
+    {
+      "repo_path": "validation/acr1/mission/provenance/target.py",
+      "accepted_commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "captured_path": "model/provenance/target.py",
+      "accepted_sha256": "77ffb5ae5db385eded0af6d43ceb184daf33cd917dba016bd7ef2cd538fc16dc"
+    },
+    {
+      "repo_path": "validation/acr1/mission/FiniteReplay.java",
+      "accepted_commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "captured_path": "model/FiniteReplay.java",
+      "accepted_sha256": "af0280825d09294091fc17e53d22992f5059e17ca856405480c983d18be7d1e9"
+    },
+    {
+      "repo_path": "validation/acr1/mission/TARGETS.json",
+      "accepted_commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "captured_path": "model/TARGETS.json",
+      "accepted_sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e"
+    },
+    {
+      "repo_path": "validation/acr1/mission/MISSION_INPUTS.json",
+      "accepted_commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "captured_path": "model/MISSION_INPUTS.json",
+      "accepted_sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f"
+    },
+    {
+      "repo_path": "validation/acr1/analysis/COUPLED_SHOT.json",
+      "accepted_commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "captured_path": "analysis/COUPLED_SHOT.json",
+      "accepted_sha256": "176f0e325089c5b3798407810fc6d147398c1b939bedf74ea4baf9fa6061d2e1"
+    }
+  ],
+  "model_extension_sha256": "b3c835f010d9e52a197ce7cf500a9b181796013d6c4fefd5ebc9ec4fc6d1bb80",
+  "purpose": "Only arbitrary payload-count bookkeeping and exact dry-mass precision; solver/commands/thresholds unchanged"
+}

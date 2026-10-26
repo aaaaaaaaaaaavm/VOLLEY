@@ -1,0 +1,318 @@
+{
+  "date_utc": "2026-10-26",
+  "sources": [
+    {
+      "input": "cards",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/reference_interfaces_acr1/SOURCE_CARDS.json",
+      "bytes": 14517,
+      "sha256": "221a7916d43344a53a138e3cd9516d36b998cd6555ad66ac7fb861f72812b978",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/reference_interfaces_acr1/SOURCE_CARDS.json"
+    },
+    {
+      "input": "reference_review",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json",
+      "bytes": 9688,
+      "sha256": "a22a822e9bcaa243d8b7bf016ed3f381d1b03a2f315ce7d8d35feba4c2bca167",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/reference_interfaces_acr1/SOURCE_REVIEW_AND_CRITERIA.json"
+    },
+    {
+      "input": "host_demand",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/reference_interfaces_acr1/HOST_DEMAND.json",
+      "bytes": 2593,
+      "sha256": "12eab745ec018d76f8f93ead34bb413c3c8b0f8f654a3670f96a70e2b0393adc",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/reference_interfaces_acr1/HOST_DEMAND.json"
+    },
+    {
+      "input": "study",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/STUDY_RESULTS.json",
+      "bytes": 65572,
+      "sha256": "58cdae56b87d0b58a34519015b5e8d616c78eb4090ed300b23a1d4d132768a40",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/STUDY_RESULTS.json"
+    },
+    {
+      "input": "study_inputs",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/study_inputs.json",
+      "bytes": 2380,
+      "sha256": "abf144927395a11765f8f0a16d130ee0e100fa02f21be78f3dd216df9eabc200",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/study_inputs.json"
+    },
+    {
+      "input": "recommendations",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/CRITERION_RECOMMENDATIONS.json",
+      "bytes": 24064,
+      "sha256": "7a13ed154f5ada3dabfd9d265ac9da87f642269913c8dbc01df5a3c7ef5e0479",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/CRITERION_RECOMMENDATIONS.json"
+    },
+    {
+      "input": "mission_inputs",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1/mission/MISSION_INPUTS.json",
+      "bytes": 3859,
+      "sha256": "40144519717a84babf0ba2ea211adbfd57c4d1ddb0110119eba9b0200d81f28f",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/MISSION_INPUTS.json"
+    },
+    {
+      "input": "targets",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1/mission/TARGETS.json",
+      "bytes": 24097,
+      "sha256": "43b1d2bce760f49f1e7a1333c1ddfee4a34f278eb390369abc4b6894553dca2e",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/TARGETS.json"
+    },
+    {
+      "input": "mission",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1/mission/MISSION_COMPARISON.json",
+      "bytes": 31244,
+      "sha256": "635b011caf6a02dd509cceba7be9bf03ddf534cef2aabf99c6dd83200cb6ede4",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/MISSION_COMPARISON.json"
+    },
+    {
+      "input": "selected",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1/mission/SELECTED_CASES.json",
+      "bytes": 5338,
+      "sha256": "1901e736aa6980f823b8cf3b9b6a3e623efe8c1742324bc28366184e924df46b",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/SELECTED_CASES.json"
+    },
+    {
+      "input": "mission_native",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1/mission/NATIVE_REPLAY_CHECKS.json",
+      "bytes": 21902,
+      "sha256": "0fa56fff1c061555f9ae58bf7f47fcf9ad509818ad313dedfd71b8dbc8305691",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/NATIVE_REPLAY_CHECKS.json"
+    },
+    {
+      "input": "campaign",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/CAMPAIGN_RESULTS.json",
+      "bytes": 547117,
+      "sha256": "797643a8353341e18c9fc4b885396b1619ece4b6e0cf93dd41bc006f02f5fcb4",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/CAMPAIGN_RESULTS.json"
+    },
+    {
+      "input": "campaign_native",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/CAMPAIGN_NATIVE_RESULTS.json",
+      "bytes": 9951,
+      "sha256": "a304f3b035480ff7f77be42970e7505c9be804dd09c61c0a1b827551047e1573",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/CAMPAIGN_NATIVE_RESULTS.json"
+    },
+    {
+      "input": "campaign_disposal",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/CAMPAIGN_DISPOSAL_RESULTS.json",
+      "bytes": 6999,
+      "sha256": "1ef7d65acdc89cedad59a37f25c3eceb10755f8a73393eae46f77aeec8574971",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/CAMPAIGN_DISPOSAL_RESULTS.json"
+    },
+    {
+      "input": "lunar_native",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/LUNAR_NATIVE_RESULTS.json",
+      "bytes": 91055,
+      "sha256": "fc8495ff5f7f0fef1cbd20de01318f0d5b6d76c89a0e6a293b5a5a8961f86924",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/LUNAR_NATIVE_RESULTS.json"
+    },
+    {
+      "input": "disposal_native",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/DISPOSAL_NATIVE_RESULTS.json",
+      "bytes": 15633,
+      "sha256": "7e1099643c14c93dc746b40ebf07556a25a851596d321525ec16bad0d35cb9c6",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/DISPOSAL_NATIVE_RESULTS.json"
+    },
+    {
+      "input": "navigation",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/NAVIGATION_REQUIREMENTS.json",
+      "bytes": 2601,
+      "sha256": "d78b106450ae512f69d89eb7dd04b03d6ed12d12f8b320f5c2aaf9687cd5b7f1",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/NAVIGATION_REQUIREMENTS.json"
+    },
+    {
+      "input": "flowdown",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/HARDWARE_FLOWDOWN.json",
+      "bytes": 8059,
+      "sha256": "5e917d40fb2f84feb2eb3bd6dcabfa58667807bf49f1f093dcfafa8acdd4ae47",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/HARDWARE_FLOWDOWN.json"
+    },
+    {
+      "input": "drawings",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "docs/ACR1_DRAWING_INDEX.md",
+      "bytes": 5187,
+      "sha256": "8abe5ee070910a93d7a5ffe7e34d41d83fedb4120a3709d097629ca7c681eb2a",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/docs/ACR1_DRAWING_INDEX.md"
+    },
+    {
+      "input": "drawing_manifest",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "cad/drawings/acr1/MANIFEST.json",
+      "bytes": 3130,
+      "sha256": "ba2457dba76ec1ba5bb64c0b7cdfbdeb5f4bd9ed5369a7792330e1bc38cf04a2",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/cad/drawings/acr1/MANIFEST.json"
+    },
+    {
+      "input": "first_test",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1_first_test_package/README.md",
+      "bytes": 3793,
+      "sha256": "85bfb51c30a26ba25c22f91d9bf63652d6b15f0f034f5d4088be2568dd3eb3a2",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1_first_test_package/README.md"
+    },
+    {
+      "input": "first_test_check",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1_first_test_package/CHECK_RESULT.json",
+      "bytes": 400,
+      "sha256": "74ae1c91d327c361469260e3bc98280557313c4aa874be83e96f5d349d9b8865",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1_first_test_package/CHECK_RESULT.json"
+    },
+    {
+      "input": "published_deployer_comparison",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/reference_interfaces_acr1/DEPLOYER_COMPARISON.csv",
+      "bytes": 1402,
+      "sha256": "6798cabe356262d50307794740d12eb66419ea8acaed0a5a099735f1c85ff7b8",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/reference_interfaces_acr1/DEPLOYER_COMPARISON.csv"
+    },
+    {
+      "input": "published_mission_comparison",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/reference_interfaces_acr1/MISSION_LEVEL_COMPARISON.csv",
+      "bytes": 759,
+      "sha256": "062badd28e6c541990e36cefc400eab18fd50aae0614e07bb3eeaaa2ca9b668c",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/reference_interfaces_acr1/MISSION_LEVEL_COMPARISON.csv"
+    },
+    {
+      "input": "published_host_matrix",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/reference_interfaces_acr1/HOST_INTEGRATION_MATRIX.csv",
+      "bytes": 3247,
+      "sha256": "4e27e1ec85bb5b0428d5bb9cbee00414955fd26b8b16b7b9288c6c2f96f872c6",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/reference_interfaces_acr1/HOST_INTEGRATION_MATRIX.csv"
+    },
+    {
+      "input": "published_position",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/reference_interfaces_acr1/COMPETITIVE_POSITION.md",
+      "bytes": 3147,
+      "sha256": "aa9021ba94925dbe93cc8e98b6e40ed5b5f9f81a271116ab239aae8de2ba106a",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/reference_interfaces_acr1/COMPETITIVE_POSITION.md"
+    },
+    {
+      "input": "provider_questions",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/H5_PROVIDER_QUESTIONS.md",
+      "bytes": 4207,
+      "sha256": "3c4a6cc88cb53c0f68ad21741570f8c83f920f1b94fad1f9d513d936ddc27ba5",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/H5_PROVIDER_QUESTIONS.md"
+    },
+    {
+      "input": "interface_sketch",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/programme_closure_acr1/H5_INTERFACE_SKETCH.md",
+      "bytes": 3096,
+      "sha256": "888f29081fee9aaaf192d32cd7629cdb02921b906fa1590185602c6981739de6",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/programme_closure_acr1/H5_INTERFACE_SKETCH.md"
+    },
+    {
+      "input": "release_summary",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1_release_dynamics/SUMMARY.json",
+      "bytes": 23061,
+      "sha256": "f85f60108ca4d1a5b59fc7fdb0ec3a413a3d51d947fcf7fb1a1ee38d0231b22c",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1_release_dynamics/SUMMARY.json"
+    },
+    {
+      "input": "release_report",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "docs/ACR1_RELEASE_DYNAMICS.md",
+      "bytes": 9121,
+      "sha256": "888aefc2f625b548cb94fab98d8321053b244be7da4c370539b6663ef63ef746",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/docs/ACR1_RELEASE_DYNAMICS.md"
+    },
+    {
+      "input": "mission_model_source",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1/mission/mission_model.py",
+      "bytes": 12976,
+      "sha256": "d790fab387b9ec926b18def4c140565687e2e56170bfe36b63f21b8c6fcf552f",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/mission_model.py"
+    },
+    {
+      "input": "mission_native_source",
+      "repository": "aaaaaaaaaaaavm/VOLLEY",
+      "commit": "ca67ea95bf5729aa293da3728f79e23d79da9262",
+      "path": "validation/acr1/mission/native_checks.py",
+      "bytes": 9182,
+      "sha256": "3d160111bd9eb39638fa7ff9e047f988318fa7abe899ab36932d8dfb2633cd77",
+      "url": "https://github.com/aaaaaaaaaaaavm/VOLLEY/blob/ca67ea95bf5729aa293da3728f79e23d79da9262/validation/acr1/mission/native_checks.py"
+    },
+    {
+      "input": "partial_occupancy_summary",
+      "path": "PARTIAL_OCCUPANCY_SUMMARY.json",
+      "sha256": "b28f979a5fc2977455dac9530d5f239d6e4695720b9263c545ecd466986181a5",
+      "bytes": 62639,
+      "revision": "ACR1-PARTIAL-OCCUPANCY-01; newly executed 26 October 2026",
+      "commit": null
+    },
+    {
+      "input": "partial_occupancy_independent",
+      "path": "PARTIAL_OCCUPANCY_INDEPENDENT_CHECKS.json",
+      "sha256": "ad847092c272c887edc237475c41396fb8796f94b1cb2fb04e810ec7c182cab5",
+      "bytes": 59690,
+      "revision": "ACR1-PARTIAL-OCCUPANCY-01; newly executed 26 October 2026",
+      "commit": null
+    },
+    {
+      "input": "partial_occupancy_definitions",
+      "path": "PARTIAL_OCCUPANCY_CASE_DEFINITIONS.json",
+      "sha256": "fde1dd407b499146b7c681b7917761cac1995e281024934d130b670a7db5d70a",
+      "bytes": 14167,
+      "revision": "ACR1-PARTIAL-OCCUPANCY-01; newly executed 26 October 2026",
+      "commit": null
+    }
+  ],
+  "method": "Accepted twelve-payload results and dated primary sources reused; new 28 partial-occupancy finite-force policies and 17 actual native replays captured separately."
+}

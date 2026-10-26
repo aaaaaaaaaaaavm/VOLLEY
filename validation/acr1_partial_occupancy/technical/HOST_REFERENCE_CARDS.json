@@ -1,0 +1,332 @@
+{
+  "hosts": [
+    {
+      "id": "POEM",
+      "name": "ISRO POEM-like spent PS4 platform",
+      "class": "Indian hosted-platform reference",
+      "source_date": "2025-04-04",
+      "accessed_utc": "2026-10-25",
+      "maturity": "flight_hosted_experiments",
+      "primary_urls": [
+        "https://new1.isro.gov.in/Atomospheric_Re_entry_of_POEM4.html",
+        "https://www.isro.gov.in/POEM-3_Mission_achieves_Payload_objectives.html"
+      ],
+      "locations": [
+        "POEM-4 re-entry account paragraphs1–2",
+        "POEM-3 objectives account27January 2024 paragraphs1–3"
+      ],
+      "facts": {
+        "POEM4_post_primary_altitude_km": 475,
+        "POEM4_experiment_altitude_km": 350,
+        "POEM4_inclination_deg": 55.2,
+        "POEM4_payload_count": 24,
+        "POEM4_passivated_after_lowering": true,
+        "POEM3_services": [
+          "three-axis attitude control",
+          "power generation",
+          "telecommand and telemetry"
+        ]
+      },
+      "can_manoeuvre": "PS4 engine restarts used before passivation; no post-passivation repeating translational reserve credited. Attitude control is not a numerical delivery-thrust allocation.",
+      "fit_status": "unknown_no_public_ACR1_accommodation_ICD",
+      "fit_reason": "Reviewed sources give no usable 2250×1240×1348.9mm allocation or 204.55672 kg combined payload acceptance.",
+      "ACR1_mission_match": "No: documented350 km / 55.2 deg POEM-4 state differs from500 km SSO surrogate.",
+      "provider_approval": false,
+      "unknowns": [
+        "loaded mass and inertia allocation",
+        "available volume and mounting",
+        "electrical power allocated to this payload",
+        "safe firing corridor",
+        "RCS force/impulse allocation",
+        "duration and navigation",
+        "release authorization",
+        "disposal/passivation sequencing"
+      ],
+      "source_pin": {
+        "input": "cards",
+        "json_pointer": "/hosts/0",
+        "sha256": "221a7916d43344a53a138e3cd9516d36b998cd6555ad66ac7fb861f72812b978"
+      },
+      "current_review_date_utc": "2026-10-26",
+      "review_type": "reuse of dated primary-source review checked 2026-10-25; no fresh web recertification"
+    },
+    {
+      "id": "ION",
+      "name": "D-Orbit ION Satellite Carrier",
+      "class": "commercial OTV service reference",
+      "source_date": "live page accessed2026-10-25",
+      "accessed_utc": "2026-10-25",
+      "maturity": "flown_service_category",
+      "primary_urls": [
+        "https://dorbit.space/launch-deployment/"
+      ],
+      "corroborating_url": "https://www.nasa.gov/smallsat-institute/sst-soa/integration-launch-and-deployment/",
+      "locations": [
+        "Precision Deployment",
+        "Precise Deployment and Phasing for Constellations",
+        "ION Satellite Carrier"
+      ],
+      "facts": {
+        "propulsion_enabled": true,
+        "dispenser_options": [
+          "proprietary",
+          "third-party"
+        ],
+        "custom_orbit_slots_provider_described": true
+      },
+      "can_manoeuvre": "Provider describes orbital transport and customized deployment; no actual mission thrust, Isp, reserve or restart allocation imported.",
+      "fit_status": "unknown_no_public_ACR1_accommodation_ICD",
+      "fit_reason": "Service description does not establish usable volume, available mass or acceptance of ACR1.",
+      "ACR1_mission_match": "Generic maneuvering-host comparison represents the buyer's alternative in principle; it is not a prediction of ION.",
+      "provider_approval": false,
+      "unknowns": [
+        "specific configuration and mass",
+        "payload bay and exit corridor",
+        "electrical/thermal allocation",
+        "actual release impulse",
+        "mission force and propellant",
+        "navigation/attitude authority",
+        "quote and contract boundary"
+      ],
+      "source_pin": {
+        "input": "cards",
+        "json_pointer": "/hosts/1",
+        "sha256": "221a7916d43344a53a138e3cd9516d36b998cd6555ad66ac7fb861f72812b978"
+      },
+      "current_review_date_utc": "2026-10-26",
+      "review_type": "reuse of dated primary-source review checked 2026-10-25; no fresh web recertification"
+    },
+    {
+      "id": "ELECTRON",
+      "name": "Rocket Lab Electron Kick Stage",
+      "class": "commercial small-launch reference",
+      "source_date": "Payload User's GuideV7.0 cover1November2022",
+      "accessed_utc": "2026-10-25",
+      "maturity": "flight_demonstrated_stage_with_primary_manual",
+      "primary_urls": [
+        "https://rocketlabcorp.com/assets/Electron-Payload-User-Guide-7.0-v6.pdf",
+        "https://rocketlabcorp.com/updates/rocket-lab-demonstrates-new-orbital-maneuvering-capability-with-most-complex-kick-stage-mission-yet/"
+      ],
+      "locations": [
+        "Guide printedp11/PDFindex11",
+        "printedpp16–20/PDFindices16–20",
+        "printedpp22,25–27/PDFindices22,25–27",
+        "Flight account26January 2021"
+      ],
+      "facts": {
+        "nominal_payload_to500kmSSO_kg": 200,
+        "standard_fairing_diameter_m": 1.2,
+        "standard_fairing_height_m": 2.5,
+        "kickstage_catalog_dry_mass_kg": 40,
+        "kickstage_catalog_thrust_N": 120,
+        "kickstage_RCS_thrusters": 6,
+        "expanded_fairings": "nonstandard service; revised envelope required",
+        "curie": "restartable storable bipropellant"
+      },
+      "can_manoeuvre": "Flight account reports orbital raise and subsequent deorbit burn. Mission-specific force, minimum impulse, propellant, endurance and reserve remain unspecified.",
+      "fit_status": "fails_standard_nominal_screen_custom_case_unresolved",
+      "fit_reason": "ACR1loaded 204.55672 kg exceeds nominal 200kg to500 km SSO before additional adapter; declared box minimum dimension 1240mm exceeds standard 1200mm fairing diameter. Custom expanded services require new mission-specific screen.",
+      "ACR1_mission_match": "Not with unchanged standard nominal allocation. No rebaselining to guide 40 kg stage / 120 N occurs.",
+      "provider_approval": false,
+      "unknowns": [
+        "custom fairing fit and performance",
+        "adapter envelope/load capacity",
+        "hosted payload power/coast duration",
+        "safe sequential release corridor",
+        "specific propellant and GNC allocation"
+      ],
+      "source_pin": {
+        "input": "cards",
+        "json_pointer": "/hosts/2",
+        "sha256": "221a7916d43344a53a138e3cd9516d36b998cd6555ad66ac7fb861f72812b978"
+      },
+      "current_review_date_utc": "2026-10-26",
+      "review_type": "reuse of dated primary-source review checked 2026-10-25; no fresh web recertification"
+    },
+    {
+      "id": "GENERIC",
+      "name": "ACR1 host-agnostic maneuvering surrogate",
+      "class": "project computational reference",
+      "source_date": "2026-10-24",
+      "accessed_utc": "2026-10-25",
+      "maturity": "concept_computational",
+      "primary_urls": [],
+      "project_sources": [
+        "validation/acr1/mission/MISSION_INPUTS.json",
+        "validation/acr1/mission/MISSION_REPORT.md",
+        "validation/acr1/cad/release/VOLLEY_G5_ACR1_home.json"
+      ],
+      "facts": {
+        "orbit_altitude_km": 500,
+        "inclination_deg": 97.401808,
+        "wet_bus_kg": 500,
+        "dry_bus_kg": 480,
+        "propellant_kg": 20,
+        "Isp_s": 220,
+        "force_ceilings_N": [
+          1,
+          5
+        ],
+        "manifest_payload_kg": 48
+      },
+      "can_manoeuvre": "Assumed constant-inertial-resultant force; numerical trajectory replay supports declared policies, without a selected thruster/attitude implementation.",
+      "fit_status": "geometry_represented_external_host_fit_unverified",
+      "fit_reason": "Generic ladder datum represented in CAD; no real host volume, structural attachment or signed ICD.",
+      "ACR1_mission_match": "Yes, by definition of the declared synthetic same-input cases; not a customer mission.",
+      "provider_approval": false,
+      "unknowns": [
+        "actual bus design and thermal/power services",
+        "host inertia and torque authority",
+        "adapter and coupled loads",
+        "navigation and conjunction constraints",
+        "engine-only disposal approval"
+      ],
+      "source_pin": {
+        "input": "cards",
+        "json_pointer": "/hosts/3",
+        "sha256": "221a7916d43344a53a138e3cd9516d36b998cd6555ad66ac7fb861f72812b978"
+      },
+      "current_review_date_utc": "2026-10-26",
+      "review_type": "reuse of dated primary-source review checked 2026-10-25; no fresh web recertification"
+    }
+  ],
+  "components": [
+    {
+      "id": "NOVA12S4",
+      "category": "conventional deployer",
+      "source_url": "https://www.exolaunch.com/documents/EXOpod_Nova_User_Manual_June_2024.pdf",
+      "revision": "1.2, June 2024",
+      "accessed_utc": "2026-10-25",
+      "source_locations": [
+        "§2.2 p13 Fig12",
+        "§3.2 pp19–20 Table4",
+        "§2.4 p17",
+        "§4.2.4 p35",
+        "§5.1 p38"
+      ],
+      "maturity": "flight_heritage_reported_by_manufacturer",
+      "facts": {
+        "slots_per_pod": 4,
+        "slot_type": "3U",
+        "bare_pod_mass_kg": 13.32,
+        "mass_tolerance_percent": 5,
+        "pods_for12_payloads": 3,
+        "bare_mass_for12_kg": 39.96
+      },
+      "excluded": [
+        "slot adapters",
+        "fasteners",
+        "host adapter/reinforcement",
+        "harness and sequencer installation"
+      ],
+      "services": "Independent isolated slots; redundant magnetic doorlocks and telemetry; spring release energy and satellite-specific velocities in mission ICD.",
+      "comparison_boundary": "Not the72 kg frozen mission input. No fuel recalculation or complete installed-system mass advantage inferred."
+    },
+    {
+      "id": "NRCSD",
+      "category": "conventional interface precedent",
+      "source_url": "https://s3vi.ndc.nasa.gov/ssri-kb/static/resources/Nanoracks-CubeSat-Deployer-NRCSD-IDD.pdf",
+      "revision": "NR-NRCSD-S0003Rev. –,29 May 2018",
+      "accessed_utc": "2026-10-25",
+      "source_locations": [
+        "§3.3 p11",
+        "§4.1.2 p24",
+        "§4.1.6 p25"
+      ],
+      "maturity": "flight_interface_primary",
+      "facts": {
+        "survival_release_m_s": [
+          0.5,
+          2
+        ],
+        "survival_tipoff_deg_s_axis": 5,
+        "threeU_mass_limit_kg": 4.8
+      },
+      "comparison_boundary": "ISS-specific payload requirements; not an ACR1approval or measured dispersion."
+    },
+    {
+      "id": "FEED_MOTOR",
+      "category": "catalog actuator reference",
+      "source_url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_3242_BX4_DFF.pdf",
+      "revision": "existing ACR1 catalog capture",
+      "source_locations": [
+        "ACR1 sources/feeder_catalog_reference.json",
+        "ACR1 analysis/FEEDER_SIZING.json",
+        "ACR1 analysis/LIFT_SIZING.json"
+      ],
+      "maturity": "commercial_catalog_ground_reference_no_space_qualification",
+      "facts": {
+        "part": "3242G024BX4",
+        "voltage_V": 24,
+        "catalog_motor_mass_kg": 0.179,
+        "catalog_rated_torque_Nm": 0.0418,
+        "feed_stroke_mm": 250,
+        "feed_time_s": 40,
+        "lift_stroke_mm": 784,
+        "lift_time_s": 120
+      },
+      "comparison_boundary": "Feed uses9:1 reference; lift nominal 20:1/exact 19.8:1; catalogue fit does not qualify lubricant, vacuum, radiation or control electronics."
+    },
+    {
+      "id": "GEAR",
+      "category": "catalog gearhead reference",
+      "source_url": "https://www.faulhaber.com/fileadmin/Import/Media/EN_32GPT_FMM.pdf",
+      "revision": "existing July2026 capture",
+      "source_locations": [
+        "ACR1 sources/feeder_catalog_reference.json",
+        "ACR1 analysis/LIFT_SIZING.json"
+      ],
+      "maturity": "commercial_catalog_ground_reference_no_space_qualification",
+      "facts": {
+        "family": "32GPT",
+        "gear_mass_reference_kg": 0.157,
+        "body_length_reference_mm": 34.7,
+        "screen_assumed_efficiency": 0.5
+      },
+      "comparison_boundary": "Published maximum efficiency is not assumed operating efficiency; vacuum options require manufacturer confirmation; no procurement or supplier acceptance."
+    },
+    {
+      "id": "PULSE_BANK",
+      "category": "catalog power-source reference",
+      "source_url": "https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-tv-supercapacitors-cylindrical-cells-data-sheet.pdf",
+      "revision": "ACR1 captured hash eaddcdbd008e",
+      "source_locations": [
+        "ACR1 analysis/POWER_COMPONENT_REFERENCE.json",
+        "ACR1 analysis/COUPLED_SHOT.json"
+      ],
+      "maturity": "catalog_components_computational_assembly",
+      "facts": {
+        "cell": "TV1860-3R0107-R",
+        "arrangement": "32S2P",
+        "cells": 64,
+        "initial_V": 86.4,
+        "nominal_F": 6.25,
+        "nominal_ESR_ohm": 0.176,
+        "adverse_F": 3.9375,
+        "adverse_ESR_ohm": 0.352,
+        "bare_cell_mass_kg": 1.28
+      },
+      "comparison_boundary": "Bank is internal to7 kg power/control allocation; not a host voltage requirement. No repeated-vacuum pulse or radiation acceptance inferred."
+    },
+    {
+      "id": "INVERTER",
+      "category": "catalog switch/driver reference",
+      "source_url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irfp4668-datasheet-en.pdf",
+      "secondary_primary_url": "https://www.ti.com/lit/ds/symlink/ucc21520.pdf",
+      "revision": "ACR1 captured sources",
+      "source_locations": [
+        "ACR1 analysis/POWER_COMPONENT_REFERENCE.json"
+      ],
+      "maturity": "catalog_components_computational_circuit",
+      "facts": {
+        "MOSFET": "IRFP4668PbF",
+        "switch_quantity": 60,
+        "driver": "UCC21520",
+        "driver_quantity": 30,
+        "PWM_Hz": 40000
+      },
+      "comparison_boundary": "Absolute ratings and modeled sharing/parasitics are not flight qualification or actual thermal mounting acceptance."
+    }
+  ],
+  "no_provider_contact": true
+}

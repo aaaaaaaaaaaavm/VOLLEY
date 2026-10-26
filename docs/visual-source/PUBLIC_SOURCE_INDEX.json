@@ -409,12 +409,32 @@
     },
     {
       "path": "validation/acr1_release_dynamics/MANIFEST.json",
-      "sha256": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca",
+      "sha256": "109beb848c2a8de8863bb1d18a6debf25b008d35f1478da303dfd41ff3d1c058",
       "role": "supplement figure input"
     },
     {
       "path": "validation/acr1_release_dynamics/SOFTWARE_ENVIRONMENT.json",
       "sha256": "69f04dbec900766858b5daec8bf6dc068900876261fc9c4d5ed84cee24837620",
+      "role": "supplement figure input"
+    },
+    {
+      "role": "supplement figure source",
+      "path": "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.png",
+      "sha256": "e8e1fd456433da5f268eeff22c8a7d321033fb7a9f8e478d52ce5279b28731b8"
+    },
+    {
+      "path": "validation/acr1_partial_occupancy/plot_comparison.py",
+      "sha256": "aa301b1f54a8652f2b20f22e139a5e1e34ebcffad5665a9490f14e3b4f284e14",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "validation/acr1_partial_occupancy/technical/SELECTED_MISSION_OUTCOMES.csv",
+      "sha256": "d6f0f586222b40aaf70365fae780cc8068f440ee87f40be381fd208f5296fa12",
+      "role": "supplement figure input"
+    },
+    {
+      "path": "tools/scientific.mplstyle",
+      "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9",
       "role": "supplement figure input"
     },
     {

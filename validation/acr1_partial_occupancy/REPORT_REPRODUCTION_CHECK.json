@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "packet_local_inputs_only": true,
+  "all_19_technical_outputs_byte_identical": true,
+  "command": [
+    "python",
+    "build_report.py"
+  ],
+  "stdout": "PASS: actual two/four results reported; refreshed 19 engineering comparison files, 84 candidate/force rows, 36 selected rows; original pre-run packet preserved\n"
+}

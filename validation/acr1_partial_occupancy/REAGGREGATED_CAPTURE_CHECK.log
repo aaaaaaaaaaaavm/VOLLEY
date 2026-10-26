@@ -1,0 +1,18 @@
+{"name": "n2_alternating_1_3_spring_pretrim_f0.35_shared_narrow", "category": "selected_feasible", "max_payload_position_error_m": 7.80504708851e-06, "max_host_position_difference_m": 4.35854770963e-06}
+{"name": "n2_alternating_1_3_gen5_f0.35", "category": "selected_feasible", "max_payload_position_error_m": 4.33025254092e-06, "max_host_position_difference_m": 3.23659099805e-06}
+{"name": "n2_uniform_2_gen5_f0.35", "category": "selected_feasible", "max_payload_position_error_m": 3.42659929806e-06, "max_host_position_difference_m": 6.08601518519e-06}
+{"name": "n2_alternating_1_3_spring_fixed2_f0.35", "category": "selected_feasible", "max_payload_position_error_m": 1.03621473932e-05, "max_host_position_difference_m": 2.98683699204e-06}
+{"name": "n2_uniform_2_spring_fixed2_f0.35_shared_narrow", "category": "selected_feasible", "max_payload_position_error_m": 6.66017243867e-06, "max_host_position_difference_m": 4.30916864153e-06}
+{"name": "n2_uniform_2_spring_pretrim_f0.35_shared_narrow", "category": "selected_feasible", "max_payload_position_error_m": 4.41983745302e-06, "max_host_position_difference_m": 5.5853726752e-06}
+{"name": "n4_alternating_1_3_spring_pretrim_f0.35", "category": "selected_feasible", "max_payload_position_error_m": 7.77655689625e-06, "max_host_position_difference_m": 1.27338562039e-05}
+{"name": "n4_alternating_1_3_gen5_f0.35", "category": "selected_feasible", "max_payload_position_error_m": 5.26631774312e-06, "max_host_position_difference_m": 7.46218215913e-06}
+{"name": "n4_alternating_1_3_spring_fixed2_f0.35", "category": "selected_feasible", "max_payload_position_error_m": 5.95760265774e-06, "max_host_position_difference_m": 7.07138271769e-06}
+{"name": "n4_uniform_2_gen5_f0.35", "category": "selected_feasible", "max_payload_position_error_m": 7.17415876136e-06, "max_host_position_difference_m": 5.82587911746e-06}
+{"name": "n4_alternating_1_3_spring_pretrim_f0.35_shared_narrow", "category": "selected_feasible", "max_payload_position_error_m": 4.62714566758e-06, "max_host_position_difference_m": 5.39877902553e-06}
+{"name": "n4_uniform_2_spring_pretrim_f0.35_shared_narrow", "category": "selected_feasible", "max_payload_position_error_m": 6.87586118951e-06, "max_host_position_difference_m": 6.1044266011e-06}
+{"name": "n4_uniform_2_spring_fixed2_f0.35_shared_narrow", "category": "selected_feasible", "max_payload_position_error_m": 8.91342088884e-06, "max_host_position_difference_m": 6.81972155922e-06}
+{"name": "n2_uniform_2_gen5_f0.35_refine30", "category": "step_refinement", "max_payload_position_error_m": 7.07114469582e-06, "max_host_position_difference_m": 1.81886023569e-06}
+{"name": "n2_alternating_1_3_gen5_f0.35_refine30", "category": "step_refinement", "max_payload_position_error_m": 7.86244565005e-06, "max_host_position_difference_m": 4.50994983503e-06}
+{"name": "n4_uniform_2_gen5_f0.35_refine30", "category": "step_refinement", "max_payload_position_error_m": 2.47380544204e-06, "max_host_position_difference_m": 6.23439854686e-06}
+{"name": "n4_alternating_1_3_gen5_f0.35_refine30", "category": "step_refinement", "max_payload_position_error_m": 6.39746166624e-06, "max_host_position_difference_m": 4.45936104424e-06}
+PASS 28 candidate conservation/guard checks; 17 actual native endpoint replays; 4 step refinements

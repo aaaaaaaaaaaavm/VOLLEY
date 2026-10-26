@@ -166,6 +166,7 @@ def check_evidence_tracking(errors: list[str]) -> None:
     import json
     tracked = set(git("ls-files", "-z").decode().split("\0"))
     for name in ["validation/acr1/MANIFEST.json",
+                 "validation/acr1_partial_occupancy/MANIFEST.json",
                  "validation/programme_closure_acr1/MANIFEST.json",
                  "validation/acr1_structural_dynamics/MANIFEST.json",
                  "validation/acr1_release_dynamics/MANIFEST.json",

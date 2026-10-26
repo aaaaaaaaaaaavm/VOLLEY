@@ -1,0 +1,96 @@
+{
+  "configuration": "VOLLEY-G5-ACR1",
+  "derivative": "Blender camera/material/visibility polish, 26 October 2026",
+  "source_pins": "SOURCE_PINS.json",
+  "provenance": "POLISH_PROVENANCE.json",
+  "captions": "CAPTIONS.md",
+  "assets": [
+    {
+      "id": "assembly-hero-polish",
+      "png": "assembly_hero.png",
+      "webp": "assembly_hero.webp",
+      "pixels": [
+        2000,
+        1250
+      ],
+      "alt": "CAD-derived render of all 387 represented VOLLEY Gen5 ACR1 parts in the home pose; teal marks the selected feed and captive-pallet path.",
+      "hidden_objects": 0
+    },
+    {
+      "id": "guided-feeder-detail-polish",
+      "png": "feeder_detail_annotated.png",
+      "webp": "feeder_detail_annotated.webp",
+      "pixels": [
+        1800,
+        1650
+      ],
+      "alt": "CAD-derived isolated south-bank level-5 lead-screw and guided-pusher subassembly; payload envelope and fixed channel frame are hidden; four markers identify accepted part locations.",
+      "hidden_objects": 371
+    },
+    {
+      "id": "custody-sequence-polish",
+      "png": "operating_sequence.png",
+      "webp": "operating_sequence.webp",
+      "pixels": [
+        2000,
+        900
+      ],
+      "alt": "Four CAD-derived ACR1 poses show home, captured, handoff and clear; other banks and host ladder are hidden to reveal lift and captive-pallet custody."
+    }
+  ],
+  "files": {
+    "CAPTIONS.md": {
+      "bytes": 1382,
+      "sha256": "6a5ba4388e2f1098e25edbb6ed20926f293f61b2a84ca458bc241fe2fb3e12d7"
+    },
+    "POLISH_PROVENANCE.json": {
+      "bytes": 458116,
+      "sha256": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260"
+    },
+    "README_DELTA.md": {
+      "bytes": 1713,
+      "sha256": "3b67422cd4b3cb4b99e15b2ed54840baa227b37839a9c5f45e08d0c5e4d3cab4"
+    },
+    "SOURCE_PINS.json": {
+      "bytes": 5882,
+      "sha256": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598"
+    },
+    "assembly_hero.png": {
+      "bytes": 2600132,
+      "sha256": "89a1b86700541d65c7945fbe4bca8ea86f2e7fdef6ccb5a0052581fe3d3752aa"
+    },
+    "assembly_hero.webp": {
+      "bytes": 146040,
+      "sha256": "8177af1df74c206c9deca63bc0f00345295600df7b225a565e34bec58af4036a"
+    },
+    "compose_editorial.py": {
+      "bytes": 3114,
+      "sha256": "07497ebc97db472bd10e39987e494646ffc56d97241b8d2d77ab55648dd007c2"
+    },
+    "feeder_detail_annotated.png": {
+      "bytes": 1717273,
+      "sha256": "ad7e94cd594d5f4f0e2316e4d827658054e4a3007f308ee42fe51465c0149a6e"
+    },
+    "feeder_detail_annotated.webp": {
+      "bytes": 79178,
+      "sha256": "e164a31c2c047f7219f57669b2c36d4ac1c121702bef64a20017b32c84be759c"
+    },
+    "operating_sequence.png": {
+      "bytes": 476537,
+      "sha256": "6f4cebbede545ff8b505345c01f6912cb56195f03cf4ee57fcec5b904de9ea58"
+    },
+    "operating_sequence.webp": {
+      "bytes": 126972,
+      "sha256": "035784105f3107ca2356a998c4c7adcc2330d30718b047411757c5aa99d5b132"
+    },
+    "polish_acr1.py": {
+      "bytes": 8039,
+      "sha256": "25175034108f301bf4d185bde93332ac35e93d93ddef515c1867a1bce2909e60"
+    },
+    "VOLLEY_ACR1_polish_sources.zip": {
+      "bytes": 121660,
+      "sha256": "b49d90906abc585c679f025ab12fd145f62c3ec873287570d7bdeac99f2d78dc"
+    }
+  },
+  "editable_delta_package": "VOLLEY_ACR1_polish_sources.zip"
+}

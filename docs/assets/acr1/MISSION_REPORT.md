@@ -20,7 +20,7 @@ The targeter uses two constant-force windows per leg and continuous propellant m
 
 The fixed spring baseline uses a declared 2 m/s relative separation speed. The stronger ideal spring comparator uses a per-payload ground energy table that compensates predictable finite-host recoil. Those speed/energy values are frozen after mission planning and before native replay. Preplanned variable release energy is therefore represented explicitly; no late target change or inflight retasking is simulated.
 
-Gen5 commands interpolate measured nominal 1/2/3 m/s coupled-shot release data and remain within the supported command range. Its reusable sled is retained. With pre-release total mass `M`, payload `m=4 kg`, sled `s=13.127805767 kg` and measured sled–host release speed `V`, the post-return payload–retained-host separation speed is
+Gen5 commands interpolate computed nominal 1/2/3 m/s coupled-shot release data and remain within the supported command range. Its reusable sled is retained. With pre-release total mass `M`, payload `m=4 kg`, sled `s=13.127805767 kg` and computed sled–host release speed `V`, the post-return payload–retained-host separation speed is
 
 `u_sep = V × (M − m − s) / (M − m)`
 
@@ -39,7 +39,7 @@ All fourteen constructed targeter candidates close the requested full PV states 
 
 ![Mission resources](figures/MISSION_RESOURCES.png)
 
-The 84.556720 kg retained-device penalty is separate from propellant consumption. In this fixed 20 kg fuel-budget comparison, the measured fuel differences do not offset it. The study does not establish a unique inflight-retasking benefit, because all targets were known before the ground energy tables were set.
+The 84.556720 kg retained-device penalty is separate from propellant consumption. In this fixed 20 kg fuel-budget comparison, the computed fuel differences do not offset it. The study does not establish a unique inflight-retasking benefit, because all targets were known before the ground energy tables were set.
 
 ## Native replay and numerical checks
 

@@ -1,9 +1,10 @@
 {
   "status": "passed",
   "path_base": "repository_root",
-  "registered_assets_verified": 59,
-  "asset_register_sha256": "4e38c1752cc7892374a9494bad3eccd1a182c44b3fd8ad6a05aa58dd3e46d701",
+  "registered_assets_verified": 66,
+  "asset_register_sha256": "68f9b33da38775895514133907daf102bfd33f772941b71ee07afd2724e7a9d4",
   "bundled_academic_binaries": false,
   "external_academic_ed1_hashes": "Matched to owning Thesis repository; see EXTERNAL_ACADEMIC_DOWNLOADS.json",
-  "portable_metadata_checks": "docs/visual-source/PUBLIC_METADATA_QA.json"
+  "portable_metadata_checks": "docs/visual-source/PUBLIC_METADATA_QA.json",
+  "current_addition": "Source-linked partial-occupancy comparison and three Blender display derivatives; frozen hardware and academic documents unchanged."
 }

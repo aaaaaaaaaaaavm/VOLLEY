@@ -760,7 +760,7 @@
     {
       "asset_id": "MISSION_REPORT",
       "path": "docs/assets/acr1/MISSION_REPORT.md",
-      "sha256": "a6e1a3d2091b21edfe0cd3e78f23772a0ec4e15631eff2c8bf91a56e63fd65b2",
+      "sha256": "1f200e71ecac7632be3d9a21851c3e73b0fb8b7f91568ffa287e4f3a03bd0b2c",
       "configuration": "VOLLEY-G5-ACR1",
       "release": "ACR1-WEB-R1",
       "status": "current",
@@ -1484,14 +1484,8 @@
     {
       "asset_id": "supplement-SD01_modes",
       "path": "docs/assets/acr1/supplements/SD01_modes.png",
-      "configuration": "VOLLEY-G5-ACR1 / separately identified computational supplement",
-      "release": "ACR1-WEB-R1",
-      "status": "current",
       "sha256": "5dd3ecdc053b61cc8b49b99a30066d46adc726c325713cc9bd42dd43c0b1e7be",
-      "dimensions_px": [
-        2652,
-        962
-      ],
+      "configuration": "VOLLEY-G5-ACR1 / separately identified computational supplement",
       "evidence_class": "computed native solver output",
       "role": "scientific follow-on result figure",
       "source_path": "validation/acr1_structural_dynamics/figures/SD01_modes.png",
@@ -1514,6 +1508,10 @@
           "sha256": "2654de01cbfe5c2eb7a893f16686da8057c9e41c5d1e078f321b96e664bacd85"
         }
       ],
+      "dimensions_px": [
+        2652,
+        962
+      ],
       "caption": "CalculiX model output \u00b7 SD01 free-free bare-chassis modes. Mode shapes are normalized for display.",
       "alt_text": "Forty native elastic chassis modes and a normalized numerical mode field.",
       "software": "CalculiX 2.23 native modal output; source make_report.py plotting pipeline",
@@ -1521,6 +1519,7 @@
       "evidence_link": "docs/ACR1_STRUCTURAL_DYNAMICS.md",
       "camera": null,
       "scene": null,
+      "status": "current",
       "release_identity": "containing Git commit or release tag"
     },
     {
@@ -1529,20 +1528,14 @@
       "configuration": "VOLLEY-G5-ACR1",
       "release": "ACR1-WEB-R1",
       "status": "current",
-      "sha256": "004e9e1051026a4ef21b2e278f3c5f02add47163e74ab609098d5bca55d12816",
+      "sha256": "10f108499290794969bfc49896ee8891a9f5f31986624ecee932726bfd977f0e",
       "release_identity": "containing Git commit or release tag"
     },
     {
       "asset_id": "supplement-release_departure_histories",
       "path": "docs/assets/acr1/supplements/release_departure_histories.png",
-      "configuration": "VOLLEY-G5-ACR1 / separately identified computational supplement",
-      "release": "ACR1-WEB-R1",
-      "status": "current",
       "sha256": "e7170e079042fb527a23c8ab1b8f089c33686fe2dff9bf9cda99cc875f86ec4b",
-      "dimensions_px": [
-        1800,
-        1260
-      ],
+      "configuration": "VOLLEY-G5-ACR1 / separately identified computational supplement",
       "evidence_class": "computed native solver output",
       "role": "scientific follow-on result figure",
       "source_path": "validation/acr1_release_dynamics/DEPARTURE_HISTORIES.png",
@@ -1562,12 +1555,16 @@
         },
         {
           "path": "validation/acr1_release_dynamics/MANIFEST.json",
-          "sha256": "77cb4de1a7e550527b2d6d25770b281d25f405830578cd251104ecd434589cca"
+          "sha256": "109beb848c2a8de8863bb1d18a6debf25b008d35f1478da303dfd41ff3d1c058"
         },
         {
           "path": "validation/acr1_release_dynamics/SOFTWARE_ENVIRONMENT.json",
           "sha256": "69f04dbec900766858b5daec8bf6dc068900876261fc9c4d5ed84cee24837620"
         }
+      ],
+      "dimensions_px": [
+        1800,
+        1260
       ],
       "caption": "MuJoCo model output \u00b7 local departure/contact sensitivities. Contact parameters are declared model inputs.",
       "alt_text": "Native payload release-speed and angular-rate histories for nominal and perturbed local contact cases.",
@@ -1576,7 +1573,219 @@
       "evidence_link": "docs/ACR1_RELEASE_DYNAMICS.md",
       "camera": null,
       "scene": null,
+      "status": "current",
       "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "supplement-partial-occupancy-propellant",
+      "path": "docs/assets/acr1/supplements/partial_occupancy_propellant.png",
+      "sha256": "e8e1fd456433da5f268eeff22c8a7d321033fb7a9f8e478d52ce5279b28731b8",
+      "configuration": "ACR1-PARTIAL-OCCUPANCY-01",
+      "evidence_class": "computed mission comparison",
+      "role": "scientific follow-on result figure",
+      "source_path": "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.png",
+      "source_sha256": "e8e1fd456433da5f268eeff22c8a7d321033fb7a9f8e478d52ce5279b28731b8",
+      "source_inputs": [
+        {
+          "path": "validation/acr1_partial_occupancy/plot_comparison.py",
+          "sha256": "aa301b1f54a8652f2b20f22e139a5e1e34ebcffad5665a9490f14e3b4f284e14"
+        },
+        {
+          "path": "validation/acr1_partial_occupancy/technical/SELECTED_MISSION_OUTCOMES.csv",
+          "sha256": "d6f0f586222b40aaf70365fae780cc8068f440ee87f40be381fd208f5296fa12"
+        },
+        {
+          "path": "tools/scientific.mplstyle",
+          "sha256": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+        }
+      ],
+      "dimensions_px": [
+        2220,
+        1050
+      ],
+      "caption": "Computed host propellant at 5 N allocated authority for two, four and twelve same-size 3U payloads. Full retained hardware is counted at every occupancy. The alternating family has no tested ACR1 pass at 1 N; blank points denote no tested pass, not zero fuel. These are numerical mission comparisons, not physical delivery accuracy.",
+      "alt_text": "Host propellant comparison across two, four and twelve payloads for uniform and alternating target families.",
+      "software": "Python / Matplotlib; plot_comparison.py",
+      "model_scope": "Frozen full-state targets and shared J2 assumptions; point releases; no provider compatibility or measured precision.",
+      "evidence_link": "validation/acr1_partial_occupancy/REPORT.md",
+      "camera": null,
+      "scene": null,
+      "status": "current",
+      "release_identity": "containing Git commit or release tag"
+    },
+    {
+      "asset_id": "polish-assembly_hero-png",
+      "path": "docs/assets/acr1/polish/assembly_hero.png",
+      "sha256": "89a1b86700541d65c7945fbe4bca8ea86f2e7fdef6ccb5a0052581fe3d3752aa",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled display derivative",
+      "dimensions_px": [
+        2000,
+        1250
+      ],
+      "caption": "CAD-derived render of all 387 represented VOLLEY Gen5 ACR1 parts in the home pose; teal marks the selected feed and captive-pallet path.",
+      "alt_text": "CAD-derived render of all 387 represented VOLLEY Gen5 ACR1 parts in the home pose; teal marks the selected feed and captive-pallet path.",
+      "source_inputs": [
+        {
+          "path": "docs/assets/acr1/polish/SOURCE_PINS.json",
+          "sha256": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598"
+        },
+        {
+          "path": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+          "sha256": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260"
+        }
+      ],
+      "software": "Blender Workbench 4.3.2; source delta scripts and frozen CAD scene",
+      "evidence_link": "docs/assets/acr1/polish/CAPTIONS.md",
+      "camera_provenance": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+      "release_identity": "containing Git commit or release tag",
+      "status": "current"
+    },
+    {
+      "asset_id": "polish-assembly_hero-webp",
+      "path": "docs/assets/acr1/polish/assembly_hero.webp",
+      "sha256": "8177af1df74c206c9deca63bc0f00345295600df7b225a565e34bec58af4036a",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled display derivative",
+      "dimensions_px": [
+        2000,
+        1250
+      ],
+      "caption": "CAD-derived render of all 387 represented VOLLEY Gen5 ACR1 parts in the home pose; teal marks the selected feed and captive-pallet path.",
+      "alt_text": "CAD-derived render of all 387 represented VOLLEY Gen5 ACR1 parts in the home pose; teal marks the selected feed and captive-pallet path.",
+      "source_inputs": [
+        {
+          "path": "docs/assets/acr1/polish/SOURCE_PINS.json",
+          "sha256": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598"
+        },
+        {
+          "path": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+          "sha256": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260"
+        }
+      ],
+      "software": "Blender Workbench 4.3.2; source delta scripts and frozen CAD scene",
+      "evidence_link": "docs/assets/acr1/polish/CAPTIONS.md",
+      "camera_provenance": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+      "release_identity": "containing Git commit or release tag",
+      "status": "current"
+    },
+    {
+      "asset_id": "polish-feeder_detail_annotated-png",
+      "path": "docs/assets/acr1/polish/feeder_detail_annotated.png",
+      "sha256": "ad7e94cd594d5f4f0e2316e4d827658054e4a3007f308ee42fe51465c0149a6e",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled display derivative",
+      "dimensions_px": [
+        1800,
+        1650
+      ],
+      "caption": "CAD-derived isolated south-bank level-5 lead-screw and guided-pusher subassembly; payload envelope and fixed channel frame are hidden; four markers identify accepted part locations.",
+      "alt_text": "CAD-derived isolated south-bank level-5 lead-screw and guided-pusher subassembly; payload envelope and fixed channel frame are hidden; four markers identify accepted part locations.",
+      "source_inputs": [
+        {
+          "path": "docs/assets/acr1/polish/SOURCE_PINS.json",
+          "sha256": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598"
+        },
+        {
+          "path": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+          "sha256": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260"
+        }
+      ],
+      "software": "Blender Workbench 4.3.2; source delta scripts and frozen CAD scene",
+      "evidence_link": "docs/assets/acr1/polish/CAPTIONS.md",
+      "camera_provenance": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+      "release_identity": "containing Git commit or release tag",
+      "status": "current"
+    },
+    {
+      "asset_id": "polish-feeder_detail_annotated-webp",
+      "path": "docs/assets/acr1/polish/feeder_detail_annotated.webp",
+      "sha256": "e164a31c2c047f7219f57669b2c36d4ac1c121702bef64a20017b32c84be759c",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled display derivative",
+      "dimensions_px": [
+        1800,
+        1650
+      ],
+      "caption": "CAD-derived isolated south-bank level-5 lead-screw and guided-pusher subassembly; payload envelope and fixed channel frame are hidden; four markers identify accepted part locations.",
+      "alt_text": "CAD-derived isolated south-bank level-5 lead-screw and guided-pusher subassembly; payload envelope and fixed channel frame are hidden; four markers identify accepted part locations.",
+      "source_inputs": [
+        {
+          "path": "docs/assets/acr1/polish/SOURCE_PINS.json",
+          "sha256": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598"
+        },
+        {
+          "path": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+          "sha256": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260"
+        }
+      ],
+      "software": "Blender Workbench 4.3.2; source delta scripts and frozen CAD scene",
+      "evidence_link": "docs/assets/acr1/polish/CAPTIONS.md",
+      "camera_provenance": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+      "release_identity": "containing Git commit or release tag",
+      "status": "current"
+    },
+    {
+      "asset_id": "polish-operating_sequence-png",
+      "path": "docs/assets/acr1/polish/operating_sequence.png",
+      "sha256": "6f4cebbede545ff8b505345c01f6912cb56195f03cf4ee57fcec5b904de9ea58",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled display derivative",
+      "dimensions_px": [
+        2000,
+        900
+      ],
+      "caption": "Four CAD-derived ACR1 poses show home, captured, handoff and clear; other banks and host ladder are hidden to reveal lift and captive-pallet custody.",
+      "alt_text": "Four CAD-derived ACR1 poses show home, captured, handoff and clear; other banks and host ladder are hidden to reveal lift and captive-pallet custody.",
+      "source_inputs": [
+        {
+          "path": "docs/assets/acr1/polish/SOURCE_PINS.json",
+          "sha256": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598"
+        },
+        {
+          "path": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+          "sha256": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260"
+        }
+      ],
+      "software": "Blender Workbench 4.3.2; source delta scripts and frozen CAD scene",
+      "evidence_link": "docs/assets/acr1/polish/CAPTIONS.md",
+      "camera_provenance": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+      "release_identity": "containing Git commit or release tag",
+      "status": "current"
+    },
+    {
+      "asset_id": "polish-operating_sequence-webp",
+      "path": "docs/assets/acr1/polish/operating_sequence.webp",
+      "sha256": "035784105f3107ca2356a998c4c7adcc2330d30718b047411757c5aa99d5b132",
+      "configuration": "VOLLEY-G5-ACR1",
+      "evidence_class": "native-CAD-derived Blender render",
+      "role": "controlled display derivative",
+      "dimensions_px": [
+        2000,
+        900
+      ],
+      "caption": "Four CAD-derived ACR1 poses show home, captured, handoff and clear; other banks and host ladder are hidden to reveal lift and captive-pallet custody.",
+      "alt_text": "Four CAD-derived ACR1 poses show home, captured, handoff and clear; other banks and host ladder are hidden to reveal lift and captive-pallet custody.",
+      "source_inputs": [
+        {
+          "path": "docs/assets/acr1/polish/SOURCE_PINS.json",
+          "sha256": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598"
+        },
+        {
+          "path": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+          "sha256": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260"
+        }
+      ],
+      "software": "Blender Workbench 4.3.2; source delta scripts and frozen CAD scene",
+      "evidence_link": "docs/assets/acr1/polish/CAPTIONS.md",
+      "camera_provenance": "docs/assets/acr1/polish/POLISH_PROVENANCE.json",
+      "release_identity": "containing Git commit or release tag",
+      "status": "current"
     }
   ],
   "path_base": "repository_root",

@@ -6,9 +6,12 @@ VOLLEY combines restrained CubeSat storage, guided feed, a captive transfer pall
 
 [Project website](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Current engineering package](validation/acr1/README.md) · [CAD and STEP](cad/README.md) · [Numerical evidence](docs/CURRENT_NUMERICAL_EVIDENCE.md)
 
-![ACR1 integrated twelve-3U assembly rendered from controlled native geometry](docs/assets/acr1/01_assembly_isometric.jpg)
+<p><a href="docs/assets/acr1/polish/assembly_hero.png"><img src="docs/assets/acr1/polish/assembly_hero.webp" alt="CAD-derived render of all 387 represented VOLLEY Gen5 ACR1 parts in the home pose; teal marks the selected feed and captive-pallet path." width="760"></a></p>
 
-*CAD-derived Blender render of the ACR1 academic reference.*
+*CAD-derived Blender render · ACR1 home pose · all 387 represented objects present. Teal identifies the selected feed/pallet path; surface colours are display choices. [View provenance](docs/assets/acr1/polish/POLISH_PROVENANCE.json).*
+
+[Guided-feed close-up](docs/assets/acr1/polish/feeder_detail_annotated.png) · [Four-state custody sequence](docs/assets/acr1/polish/operating_sequence.png) · [Caption and visibility notes](docs/assets/acr1/polish/CAPTIONS.md)
+
 
 ## How the machine works
 
@@ -49,6 +52,10 @@ The interlock example needs only Python 3.12; scientific/native examples have th
 [Structural modes and motor normal reaction](docs/ACR1_STRUCTURAL_DYNAMICS.md) · [Native release/contact dynamics](docs/ACR1_RELEASE_DYNAMICS.md) · [Thermal interfaces and source derating](docs/ACR1_THERMAL_ENVIRONMENT.md) · [Finite-host lunar campaigns](docs/PROGRAMME_STUDIES_ACR1.md) · [First-test procedures and fixture STEP](docs/ACR1_FIRST_TEST_PACKAGE.md)
 
 These separately identified studies add native solver histories, refinement, resource flowdown and a concrete path to subsequent measurements. Their operating conditions and source identities accompany each result.
+
+### Partial-occupancy mission comparison
+
+The [two/four-payload supplement](validation/acr1_partial_occupancy/REPORT.md) adds 28 finite-force candidate trajectories and 17 native Orekit replays. Its [common-case tables](validation/acr1_partial_occupancy/technical/README.md) compare two, four and twelve deployments while retaining the complete hardware mass. The accepted twelve-payload academic issue remains unchanged.
 
 ## Engineering lineage
 

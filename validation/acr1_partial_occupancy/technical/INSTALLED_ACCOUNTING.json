@@ -1,0 +1,119 @@
+{
+  "unknown_representation": null,
+  "unknown_meaning": "unmeasured/unallocated; never interpreted as zero",
+  "rows": [
+    {
+      "term": "device_dry",
+      "ACR1": 156.55671970039353,
+      "spring_proxy": 72,
+      "nova_bare": 39.96,
+      "units": "kg",
+      "boundary": "ACR1 includes 7 kg; proxy assumed; Nova excludes installation"
+    },
+    {
+      "term": "payload",
+      "ACR1": 48,
+      "spring_proxy": 48,
+      "nova_bare": 48,
+      "units": "kg",
+      "boundary": "same 12 x 4 kg; actual Nova mission approval absent"
+    },
+    {
+      "term": "host_wet",
+      "ACR1": 500,
+      "spring_proxy": 500,
+      "nova_bare": null,
+      "units": "kg",
+      "boundary": "surrogate includes 20 kg propellant; no real Nova host selected"
+    },
+    {
+      "term": "represented_geometry_box",
+      "ACR1": 3.763431,
+      "spring_proxy": null,
+      "nova_bare": null,
+      "units": "m3",
+      "boundary": "not operational/clearance envelope"
+    },
+    {
+      "term": "represented_average_power_upper",
+      "ACR1": 12.973002459313106,
+      "spring_proxy": null,
+      "nova_bare": null,
+      "units": "W",
+      "boundary": "additional controller/lock/brake/harness/heater services unknown"
+    },
+    {
+      "term": "represented_peak_power_upper",
+      "ACR1": 21.192172684398724,
+      "spring_proxy": null,
+      "nova_bare": null,
+      "units": "W",
+      "boundary": "additional concurrent services unknown"
+    },
+    {
+      "term": "represented_average_heat_upper",
+      "ACR1": 12.93553790318878,
+      "spring_proxy": null,
+      "nova_bare": null,
+      "units": "W",
+      "boundary": "actual heat path and sink acceptance required"
+    },
+    {
+      "term": "release_slot",
+      "ACR1": 450,
+      "spring_proxy": 450,
+      "nova_bare": null,
+      "units": "s",
+      "boundary": "common frozen surrogate targets; no product duty certification"
+    },
+    {
+      "term": "required_loading_coast",
+      "ACR1": 400,
+      "spring_proxy": 0,
+      "nova_bare": null,
+      "units": "s",
+      "boundary": "spring has no imposed mechanism coast; guards 5/20 s both"
+    },
+    {
+      "term": "external_adapter_reinforcement_harness",
+      "ACR1": null,
+      "spring_proxy": null,
+      "nova_bare": null,
+      "units": "kg",
+      "boundary": "unknown; never zero"
+    },
+    {
+      "term": "reliability_and_fault_probability",
+      "ACR1": null,
+      "spring_proxy": null,
+      "nova_bare": null,
+      "units": "probability",
+      "boundary": "deterministic fault consequences only; no observed rates"
+    },
+    {
+      "term": "installed_cost",
+      "ACR1": null,
+      "spring_proxy": null,
+      "nova_bare": null,
+      "units": "currency",
+      "boundary": "no quotes or supplier engagement"
+    }
+  ],
+  "source_pins": [
+    {
+      "input": "study",
+      "json_pointer": "/host_demand",
+      "sha256": "58cdae56b87d0b58a34519015b5e8d616c78eb4090ed300b23a1d4d132768a40"
+    },
+    {
+      "input": "flowdown",
+      "json_pointer": "/power",
+      "sha256": "5e917d40fb2f84feb2eb3bd6dcabfa58667807bf49f1f093dcfafa8acdd4ae47"
+    },
+    {
+      "input": "cards",
+      "json_pointer": "/components/0",
+      "sha256": "221a7916d43344a53a138e3cd9516d36b998cd6555ad66ac7fb861f72812b978"
+    }
+  ]
+}

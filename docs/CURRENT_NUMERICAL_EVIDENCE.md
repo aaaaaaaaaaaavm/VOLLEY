@@ -1,6 +1,6 @@
 # Current numerical evidence — VOLLEY-G5-ACR1
 
-**Captured 24–25 October 2026.** The [self-contained current package](../validation/acr1/README.md) is the engineering reference. Each result applies to its exact geometry, model and declared assumptions. Source locks and output hashes distinguish executed evidence from prepared inputs.
+**Core captured 24–25 October 2026; supplements extend through 26 October.** The [self-contained current package](../validation/acr1/README.md) is the engineering reference. Each result applies to its exact geometry, model and declared assumptions. Source locks and output hashes distinguish executed evidence from prepared inputs.
 
 | Method | Current captured result | Boundary |
 |:--|:--|:--|
@@ -23,6 +23,7 @@ Separate supplements extend the ACR1 reference without altering its accepted CAD
 | Local release and arrest | [42 native MuJoCo runs and refinement](ACR1_RELEASE_DYNAMICS.md) | Nominal local egress, contact sensitivities and keeper-catch behavior for the represented surfaces/history |
 | Environment and source derating | [Coupled radiation/conduction, repeated duty and voltage variant](ACR1_THERMAL_ENVIRONMENT.md) | Declared thermal interfaces and electrical configuration control the usable temperature envelope |
 | Finite-host lunar programme | [Campaign, covariance, native lifetimes and disposal](PROGRAMME_STUDIES_ACR1.md) | Same-source geometry/resource flowdown with explicitly separate lunar orbit and host assumptions |
+| Partial-occupancy missions | [Two/four-payload finite-force study](../validation/acr1_partial_occupancy/REPORT.md) | Twenty-eight new candidate trajectories and seventeen native Orekit replays; full retained hardware, same-size 3U surrogates and frozen target subsets |
 | Subsequent Gen6 first measurements | [Procedure, provisional STEP, instruments and predeclared criteria](ACR1_FIRST_TEST_PACKAGE.md) | Unfunded pre-test engineering definition; templates contain no measured data |
 
 ## Reproduce and inspect history

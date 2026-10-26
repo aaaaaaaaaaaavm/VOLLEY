@@ -81,6 +81,7 @@ jobs:
           python3 cad/drawings/acr1/check_drawings.py
       - name: Source-linked lunar and host programme studies
         run: |
+          python3 validation/acr1_partial_occupancy/check_capture.py
           python3 validation/programme_closure_acr1/check_capture.py
           python3 validation/programme_closure_acr1/reproduce_and_compare.py
           python3 validation/programme_closure_acr1/reproduce_campaign.py

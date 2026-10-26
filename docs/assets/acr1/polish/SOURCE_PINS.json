@@ -1,0 +1,105 @@
+{
+  "configuration": "VOLLEY-G5-ACR1",
+  "source_archive_site_path": "downloads/VOLLEY_G5_ACR1_editable_scene.zip",
+  "source_archive_sha256": "2aa3689d91210cbed378e97188a87e40f645fc102e004f7c077a6ab26748d1c0",
+  "source_scene_basename": "VOLLEY_G5_ACR1_scientific_views.blend",
+  "source_scene_sha256": "6b58172c7bd34c6c4355ba45af08fd8e350085d4762322330e361639bd1a9e06",
+  "source_states": {
+    "home": {
+      "mesh_json_basename": "home.json",
+      "mesh_json_sha256": "7419819c2833fd23417620fa1b9df8fc858ae987db842c209671dfc81408db7d",
+      "native_sha256": "46c7e3f1a5904e766adae2f0e37e30b1cadaf1e993df13846729318b6446040a",
+      "step_sha256": "77c949d42eeda86a9470405dded81ae05ff57074a20ea303383140dd08936922",
+      "bom_sha256": "01aac645e7ba951a1d3cc90ccbea9dc310a3ad863bf1dbc4d95bbb48f66b745e",
+      "cad_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "objects": 387,
+      "tessellation": {
+        "tool": "FreeCAD MeshPart.meshFromShape",
+        "linear_deflection_mm": 0.3,
+        "angular_deflection_rad": 0.15,
+        "relative": false,
+        "units": "meters;native coordinates divided by1000",
+        "purpose": "Visualization only;not analysis mesh"
+      }
+    },
+    "captured": {
+      "mesh_json_basename": "captured.json",
+      "mesh_json_sha256": "0baf59d0ce9a93ff474d4dddaf1af81c4ef5d6108197ec385d0f89465d1dadef",
+      "native_sha256": "40be4905cc594c292f4e6282b763e6530be2aa73624c01b4353998fbbad992cd",
+      "step_sha256": "d1b572c12e9503037132157149fd3e1fcfc1bda45ef86c8be0a7d28892645302",
+      "bom_sha256": "e402399f510028a516c26f9bca0fa0baab6fcb363ee44431a7179a51f7ceedb7",
+      "cad_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "objects": 387,
+      "tessellation": {
+        "tool": "FreeCAD MeshPart.meshFromShape",
+        "linear_deflection_mm": 0.3,
+        "angular_deflection_rad": 0.15,
+        "relative": false,
+        "units": "meters;native coordinates divided by1000",
+        "purpose": "Visualization only;not analysis mesh"
+      }
+    },
+    "handoff": {
+      "mesh_json_basename": "handoff.json",
+      "mesh_json_sha256": "b27ab7dccb27482143f6d22822efc5ba7b8d259bd798174c08fbf934ecf26c88",
+      "native_sha256": "4e0f2b7c0f9ac751e6675cba65d6910df17733c8a29612931705b7c853521778",
+      "step_sha256": "1ae09dc2389748777c7565f421354c50a3d8c28e7205b9c8eff5febd17e675be",
+      "bom_sha256": "de093f3314fee1bcffefbe56fb20dbbc631fde3d744032d16fca4c4e67184293",
+      "cad_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "objects": 387,
+      "tessellation": {
+        "tool": "FreeCAD MeshPart.meshFromShape",
+        "linear_deflection_mm": 0.3,
+        "angular_deflection_rad": 0.15,
+        "relative": false,
+        "units": "meters;native coordinates divided by1000",
+        "purpose": "Visualization only;not analysis mesh"
+      }
+    },
+    "clear": {
+      "mesh_json_basename": "clear.json",
+      "mesh_json_sha256": "49b7f1c696dcc4706df94d2b2cd45ec1d52d8e6aa533aae6e111bab259b2af50",
+      "native_sha256": "d607bf2fc17f10c5cb09c89f52b20973f8b81976c082abbaf9c87fc7152b60e3",
+      "step_sha256": "e4191a053e7ffe9fdd46d7d6fc23c74a09a6330b45d6c317047cbbcc62acd922",
+      "bom_sha256": "a96dd3a8b2058bece45c8d650ccf945cd7498869ab45c38895e8ed5183c59c19",
+      "cad_source_sha256": {
+        "build_acr1.py": "e1179e8862821862db7649bfac1aa2ba660526dfc5f3f5edc229532b75da52c8",
+        "cradle_acr1.py": "40b8983dc6f029e6123c8d8464885268befa85355e5c063bab7bb38d22dbccc3",
+        "sled_latches.py": "a858ba02233847178aa86ca8926fcc79d049ad0faf46bd0b6bc4fac2016e94fe",
+        "PARAMETERS.json": "5f285fffa17f8a1ece39f5e8f9ab1ecb14417e75dde51edc104b5f3625eecc0b",
+        "verify_motion.py": "549311953d435671913df663ffffe287dc83aa0350702eb277489f40cdafb68a",
+        "verify_final_refinement.py": "2bcd6036f5be725e69380b52f9f3da4f8617d512860ec42d701fc2e558174376"
+      },
+      "objects": 387,
+      "tessellation": {
+        "tool": "FreeCAD MeshPart.meshFromShape",
+        "linear_deflection_mm": 0.3,
+        "angular_deflection_rad": 0.15,
+        "relative": false,
+        "units": "meters;native coordinates divided by1000",
+        "purpose": "Visualization only;not analysis mesh"
+      }
+    }
+  }
+}

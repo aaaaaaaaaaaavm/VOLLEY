@@ -1,5 +1,5 @@
 {
-  "revision": "ACR1-source-linked-supplements-2026-10-25",
+  "revision": "ACR1-source-linked-supplements-2026-10-26",
   "scope": "Selected current figure sets only. Retained historical graphics are not automatically certified compliant.",
   "figures": [
     {
@@ -1244,6 +1244,69 @@
         "validation/acr1_thermal_environment/figures/derated_source.png": "2b5502d4fe91122937fdf5276b3c866a202e5a9bfd5317b2f1b558d26eca3a86",
         "validation/acr1_thermal_environment/figures/derated_source.pdf": "6968a392bbbb50066176041a660dcac307aac3489df2da2658c9cc2f5a772ae1",
         "validation/acr1_thermal_environment/figures/derated_source.svg": "7c1af617d46877df52ce3c2c8516c6ea45936ed620afc223a48d69ed467ae5c5"
+      }
+    },
+    {
+      "evidence_class": "Computed plot",
+      "caption": "Computed host propellant at 5 N allocated authority for two, four and twelve same-size 3U payloads. Full retained hardware is counted at every occupancy. The alternating family has no tested ACR1 pass at 1 N; blank points denote no tested pass, not zero fuel. These are numerical mission comparisons, not physical delivery accuracy.",
+      "limitations": "Frozen full-state targets and shared J2 assumptions; point releases; no provider compatibility or measured precision.",
+      "sources": {
+        "validation/acr1_partial_occupancy/plot_comparison.py": "aa301b1f54a8652f2b20f22e139a5e1e34ebcffad5665a9490f14e3b4f284e14",
+        "validation/acr1_partial_occupancy/technical/SELECTED_MISSION_OUTCOMES.csv": "d6f0f586222b40aaf70365fae780cc8068f440ee87f40be381fd208f5296fa12",
+        "tools/scientific.mplstyle": "d4860a7e8084c777d4b3875c211322351109204c77c76c7434cda50763c3c8b9"
+      },
+      "exports": {
+        "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.pdf": "715768563d835bfbee0a20155a2fb9532a352667ab2f86206e8822e6eed84bf3",
+        "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.png": "e8e1fd456433da5f268eeff22c8a7d321033fb7a9f8e478d52ce5279b28731b8",
+        "validation/acr1_partial_occupancy/figures/partial_occupancy_propellant.svg": "df17caa60eb7a4d04892172e138393f2c5f6b5c63ca88254e043133ad0052d12"
+      }
+    },
+    {
+      "evidence_class": "Native-CAD-derived Blender render",
+      "caption": "CAD-derived render of all 387 represented VOLLEY Gen5 ACR1 parts in the home pose; teal marks the selected feed and captive-pallet path.",
+      "limitations": "Material/camera/visibility derivative of frozen nominal CAD poses; see local captions for omitted components; no physical measurement or interpolated-motion claim.",
+      "sources": {
+        "docs/assets/acr1/polish/POLISH_ASSETS.json": "ff94e6b07e094081fe099c8d9e4c7edb4a4bb412925250374c64646ed9c696ed",
+        "docs/assets/acr1/polish/POLISH_PROVENANCE.json": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260",
+        "docs/assets/acr1/polish/SOURCE_PINS.json": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598",
+        "docs/assets/acr1/polish/polish_acr1.py": "25175034108f301bf4d185bde93332ac35e93d93ddef515c1867a1bce2909e60",
+        "docs/assets/acr1/polish/compose_editorial.py": "07497ebc97db472bd10e39987e494646ffc56d97241b8d2d77ab55648dd007c2"
+      },
+      "exports": {
+        "docs/assets/acr1/polish/assembly_hero.png": "89a1b86700541d65c7945fbe4bca8ea86f2e7fdef6ccb5a0052581fe3d3752aa",
+        "docs/assets/acr1/polish/assembly_hero.webp": "8177af1df74c206c9deca63bc0f00345295600df7b225a565e34bec58af4036a"
+      }
+    },
+    {
+      "evidence_class": "Native-CAD-derived Blender render",
+      "caption": "CAD-derived isolated south-bank level-5 lead-screw and guided-pusher subassembly; payload envelope and fixed channel frame are hidden; four markers identify accepted part locations.",
+      "limitations": "Material/camera/visibility derivative of frozen nominal CAD poses; see local captions for omitted components; no physical measurement or interpolated-motion claim.",
+      "sources": {
+        "docs/assets/acr1/polish/POLISH_ASSETS.json": "ff94e6b07e094081fe099c8d9e4c7edb4a4bb412925250374c64646ed9c696ed",
+        "docs/assets/acr1/polish/POLISH_PROVENANCE.json": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260",
+        "docs/assets/acr1/polish/SOURCE_PINS.json": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598",
+        "docs/assets/acr1/polish/polish_acr1.py": "25175034108f301bf4d185bde93332ac35e93d93ddef515c1867a1bce2909e60",
+        "docs/assets/acr1/polish/compose_editorial.py": "07497ebc97db472bd10e39987e494646ffc56d97241b8d2d77ab55648dd007c2"
+      },
+      "exports": {
+        "docs/assets/acr1/polish/feeder_detail_annotated.png": "ad7e94cd594d5f4f0e2316e4d827658054e4a3007f308ee42fe51465c0149a6e",
+        "docs/assets/acr1/polish/feeder_detail_annotated.webp": "e164a31c2c047f7219f57669b2c36d4ac1c121702bef64a20017b32c84be759c"
+      }
+    },
+    {
+      "evidence_class": "Native-CAD-derived Blender render",
+      "caption": "Four CAD-derived ACR1 poses show home, captured, handoff and clear; other banks and host ladder are hidden to reveal lift and captive-pallet custody.",
+      "limitations": "Material/camera/visibility derivative of frozen nominal CAD poses; see local captions for omitted components; no physical measurement or interpolated-motion claim.",
+      "sources": {
+        "docs/assets/acr1/polish/POLISH_ASSETS.json": "ff94e6b07e094081fe099c8d9e4c7edb4a4bb412925250374c64646ed9c696ed",
+        "docs/assets/acr1/polish/POLISH_PROVENANCE.json": "5f4e4c1cbed9729331959719937c00b2340c877dbcf778fcd8a65af844a40260",
+        "docs/assets/acr1/polish/SOURCE_PINS.json": "f8c4843394edd1cfcdecfa129e05582eae4d03f2ca3a0445d6cc1eb516cb6598",
+        "docs/assets/acr1/polish/polish_acr1.py": "25175034108f301bf4d185bde93332ac35e93d93ddef515c1867a1bce2909e60",
+        "docs/assets/acr1/polish/compose_editorial.py": "07497ebc97db472bd10e39987e494646ffc56d97241b8d2d77ab55648dd007c2"
+      },
+      "exports": {
+        "docs/assets/acr1/polish/operating_sequence.png": "6f4cebbede545ff8b505345c01f6912cb56195f03cf4ee57fcec5b904de9ea58",
+        "docs/assets/acr1/polish/operating_sequence.webp": "035784105f3107ca2356a998c4c7adcc2330d30718b047411757c5aa99d5b132"
       }
     }
   ]
