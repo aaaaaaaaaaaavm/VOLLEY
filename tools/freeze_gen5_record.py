@@ -47,7 +47,12 @@ def build():
     for rel in paths:
         p = ROOT / rel
         records[rel] = {"sha256": hashlib.sha256(p.read_bytes()).hexdigest(), "bytes": p.stat().st_size}
+    assert hashlib.sha256((ROOT / "archive/gen5-2026-10-16-r2/GEN5_TECHNICAL_BASELINE.json").read_bytes()).hexdigest() == "4ced0a71594f948ce61f8cc9eed9ef52dbf9b324fde221cea34007118d9fa3eb", "Original source identity manifest changed"
     return {"configuration_id": "VOLLEY-GEN5-EVALUATED-2026-10-16-R2",
+            "distribution_revision": "P1",
+            "parent_manifest": "archive/gen5-2026-10-16-r2/GEN5_TECHNICAL_BASELINE.json",
+            "parent_manifest_sha256": "4ced0a71594f948ce61f8cc9eed9ef52dbf9b324fde221cea34007118d9fa3eb",
+            "distribution_change": "Private storage routes removed from A15 explanatory metadata; engineering source, numerical results, CAD and scientific conclusions unchanged",
             "status": "FROZEN_TECHNICAL_EVIDENCE_RECORD; ACADEMIC_SUBMISSION_APPROVAL_PENDING",
             "scope": "Twelve 4 kg 3U conceptual Gen5 payloads; evaluated adverse configuration",
             "geometry_changed_from_12_October": False,

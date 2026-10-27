@@ -11,7 +11,7 @@ Flagship project record: purpose, generation history, integrated engineering wor
 | [.githooks/](../.githooks/) | 1 | Local publication hooks |
 | [.github/](../.github/) | 4 | Continuous integration and repository settings |
 | [analysis/](../analysis/) | 245 | Analytical models, controlled inputs and numerical results |
-| [archive/](../archive/) | 1 | Superseded concepts, earlier document issues and retained design history |
+| [archive/](../archive/) | 2 | Superseded concepts, earlier document issues and retained design history |
 | [cad/](../cad/) | 383 | Native CAD, STEP exchange, drawings and geometry-derived views |
 | [docs/](../docs/) | 605 | Project documentation, website, scientific figure guidance and navigation |
 | [figures/](../figures/) | 68 | Published scientific figures, CAD views and provenance |

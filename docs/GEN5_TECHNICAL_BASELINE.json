@@ -1,5 +1,9 @@
 {
   "configuration_id": "VOLLEY-GEN5-EVALUATED-2026-10-16-R2",
+  "distribution_revision": "P1",
+  "parent_manifest": "archive/gen5-2026-10-16-r2/GEN5_TECHNICAL_BASELINE.json",
+  "parent_manifest_sha256": "4ced0a71594f948ce61f8cc9eed9ef52dbf9b324fde221cea34007118d9fa3eb",
+  "distribution_change": "Private storage routes removed from A15 explanatory metadata; engineering source, numerical results, CAD and scientific conclusions unchanged",
   "status": "FROZEN_TECHNICAL_EVIDENCE_RECORD; ACADEMIC_SUBMISSION_APPROVAL_PENDING",
   "scope": "Twelve 4 kg 3U conceptual Gen5 payloads; evaluated adverse configuration",
   "geometry_changed_from_12_October": false,
@@ -206,8 +210,8 @@
       "bytes": 1325
     },
     "validation/A15_poem_campaign.md": {
-      "sha256": "f42abdeb4c8bda25edd502ca6c27f072c9403d78c8c7b49ef1fc6c3bbd1ad4d0",
-      "bytes": 4687
+      "sha256": "a855f8a84ad74ce60c5a426343476fee1d1d0e89d29d5d474d15f1f9927524e9",
+      "bytes": 4635
     },
     "validation/gmat/orbit_state.py": {
       "sha256": "b327a120da417ee1c9efeb2e6be62db5c1542ca16f39859eb66eb9fd2e382b1d",
@@ -226,8 +230,8 @@
       "bytes": 4766
     },
     "validation/gmat/evidence/A15_R1_NATIVE_CAPTURE.json": {
-      "sha256": "21f706ac4b8a15fecdcd52c0ebb575a302d4a2f822e1bf46b278a8c113f1b697",
-      "bytes": 5486
+      "sha256": "23307b9e6cff49903f52425e781b641cf819db5ec8da48f1e1a972ebd5d96d43",
+      "bytes": 5514
     },
     "validation/results/A15_R1_gmat_r2026a_review.json": {
       "sha256": "a8d12a2f17c871513eea5052a810965472ec5bd3dcfa06d144751b7c99247022",
