@@ -17,7 +17,7 @@ VOLLEY combines individually restrained satellite storage, guided feed and a reu
 | Evaluated release commands | **1, 2 and 3 m/s** |
 | Powered travel | **1.300 m** |
 | Architecture | Two fixed six-cell banks; guided lead-screw feed; indexed lift; captive pallet and retained magnetic carrier |
-| Installed mass basis | **149.557 kg** represented dry CAD + **7 kg** electrical/control allowance |
+| Installed mass basis | **149.556720 kg** represented dry CAD + **7 kg** electrical/control allowance |
 | Mission reference | Manoeuvring host in nominal 500 km SSO; common target-state epoch 24 hours after the final release |
 
 ## From storage to commanded release
@@ -43,7 +43,7 @@ VOLLEY combines individually restrained satellite storage, guided feed and a reu
 | Launch and recovery | Eighteen source-coupled cases across nominal/adverse source conditions and 3/20/100 µH sensitivities | [Coupled shot and numerical audit](validation/acr1/verification/COUPLED_SHOT_REVIEW.md) |
 | Chassis response | Matched ANSYS/CalculiX bare-chassis static comparison: 0.143% primary peak-displacement difference | [Loads, meshes and native-result readback](docs/ACR1_ANSYS_CROSSCHECK.md) |
 | Orbital delivery | Twelve-release, common-target campaigns with changing host mass and recoil; nine native Orekit replay cases | [Mission study](validation/acr1/mission/MISSION_REPORT.md) |
-| Installed-resource trade | Target-dependent service value; the tested preplanned cases favour ideal ground-pretrimmed springs on fuel and initial wet mass | [Same-target comparison](validation/acr1/mission/MISSION_RESULTS.csv) |
+| Installed-resource trade | No propellant or initial wet-mass advantage over ideal ground-pretrimmed springs in the tested preplanned cases | [Same-target comparison](validation/acr1/mission/MISSION_RESULTS.csv) |
 
 The study evaluates the complete retained-carrier system boundary, including its installed burden. It is a **computational design study**; measured release distributions, environmental qualification and provider acceptance belong to physical development. Each linked analysis states its assumptions and numerical checks.
 

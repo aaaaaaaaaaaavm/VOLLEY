@@ -43,6 +43,12 @@ jobs:
           python3 -m pip install --upgrade -q pip
           python3 -m pip install -q -r requirements.txt -r requirements-dev.txt
 
+      - name: PDF audience inspection dependency
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y poppler-utils
+          fi
       - name: prepublication file gate
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
