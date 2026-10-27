@@ -1,76 +1,76 @@
 # VOLLEY
-
 ### Commanded electromagnetic CubeSat deployment
 
-VOLLEY combines restrained CubeSat storage, guided feed, a captive transfer pallet and a reusable electromagnetic launch sled on a maneuvering host. The current **VOLLEY-G5-ACR1** academic reference carries **twelve 4 kg 3U envelope surrogates** and evaluates commanded release settings of **1, 2 and 3 m/s** over **1.300 m** powered travel.
+**One host. Sequential deployment. A commanded release for each spacecraft.**
 
-[Project website](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Current engineering package](validation/acr1/README.md) · [CAD and STEP](cad/README.md) · [Numerical evidence](docs/CURRENT_NUMERICAL_EVIDENCE.md)
+VOLLEY combines individually restrained satellite storage, guided feed and a reusable electromagnetic launch sled. The host provides the major orbital manoeuvres; VOLLEY supplies the local departure condition. **Gen5 ACR1** brings the storage-to-release cycle into one computational engineering reference, with native CAD, STEP assemblies, coupled motor/source calculations and matched orbital delivery studies.
 
-<p><a href="docs/assets/acr1/polish/assembly_hero.png"><img src="docs/assets/acr1/polish/assembly_hero.webp" alt="CAD-derived render of all 387 represented VOLLEY Gen5 ACR1 parts in the home pose; teal marks the selected feed and captive-pallet path." width="760"></a></p>
+[Explore the project](https://aaaaaaaaaaaavm.github.io/VOLLEY/) · [Watch the deployment film](https://aaaaaaaaaaaavm.github.io/VOLLEY/delivery-film.html) · [Engineering package](validation/acr1/README.md) · [CAD and drawings](cad/README.md)
 
-*CAD-derived Blender render · ACR1 home pose · all 387 represented objects present. Teal identifies the selected feed/pallet path; surface colours are display choices. [View provenance](docs/assets/acr1/polish/POLISH_PROVENANCE.json).*
+<p><a href="docs/assets/acr1/polish/assembly_hero.png"><img src="docs/assets/acr1/polish/assembly_hero.webp" alt="VOLLEY Gen5 ACR1 assembly: two satellite storage banks beside a central transfer and launch mechanism" width="900"></a></p>
 
-[Guided-feed close-up](docs/assets/acr1/polish/feeder_detail_annotated.png) · [Four-state custody sequence](docs/assets/acr1/polish/operating_sequence.png) · [Caption and visibility notes](docs/assets/acr1/polish/CAPTIONS.md)
+*CAD-derived Blender render · Gen5 ACR1 home state. Teal identifies the feed and captive-pallet path. [Geometry and render provenance](docs/assets/acr1/polish/POLISH_PROVENANCE.json).*
 
-
-[Watch the complete storage-to-orbit film](https://aaaaaaaaaaaavm.github.io/VOLLEY/delivery-film.html) · [Download MP4](docs/films/delivery-journey/film.mp4) · [Editable film sources](docs/downloads/VOLLEY_delivery_film_sources.zip)
-
-## How the machine works
-
-Two fixed six-cell banks retain the payloads individually. Guided lead-screw pushers transfer one satellite to the indexed captive cradle. The cradle docks a reusable pallet to the launch sled and withdraws before arming. The sled accelerates the payload; release cams open the restraint, active electromagnetic arrest stops the retained sled, and the pallet returns with it. The executable sequence requires custody, path, source and brake proofs before launch.
-
-[Eight native/STEP assembly states](validation/acr1/cad/release/FINAL_CAD_MANIFEST.json) · [Installed motion verification](validation/acr1/cad/release/MOTION_VERIFICATION.json) · [Command and fault specification](validation/acr1/analysis/TRANSFER_INTERLOCKS.json)
-
-[Dimensioned drawing set](cad/drawings/acr1/ACR1_DRAWING_SET.pdf) · [Drawing, BOM and inspection index](docs/ACR1_DRAWING_INDEX.md)
-
-## What this revision delivers
-
-| Current ACR1 result | Evidence and interpretation |
+| Reference configuration | Gen5 ACR1 |
 |:--|:--|
-| Eight FreeCAD/STEP states; 154 accepted motion checks | Nominal geometry, custody and installed motion/refinement; independent STEP readback |
-| Supported commands 1–3 m/s | Eighteen averaged source/release/arrest cases across nominal/adverse source and 3/20/100 µH sensitivities |
-| 149.556720 kg CAD dry mass | Plus a separate 7.000 kg installed power/control allocation; mission device mass 156.556720 kg |
-| Twelve releases from a 500 km nominal SSO host | Common position/velocity target epoch 24 h after final release; nine independent Orekit replays |
-| Same-target spring comparison | No propellant or initial wet-mass advantage over the ideal ground-pretrimmed spring comparator in the tested preplanned cases |
+| Payload manifest | Twelve 4 kg 3U envelope surrogates |
+| Evaluated release commands | **1, 2 and 3 m/s** |
+| Powered travel | **1.300 m** |
+| Architecture | Two fixed six-cell banks; guided lead-screw feed; indexed lift; captive pallet and retained magnetic carrier |
+| Installed mass basis | **149.557 kg** represented dry CAD + **7 kg** electrical/control allowance |
+| Mission reference | Manoeuvring host in nominal 500 km SSO; common target-state epoch 24 hours after the final release |
 
-[Configuration and resource basis](validation/acr1/ENGINEERING_DEFINITION_R1.json) · [Coupled model and audit](validation/acr1/verification/COUPLED_SHOT_REVIEW.md) · [Mission findings](validation/acr1/mission/MISSION_REPORT.md)
+## From storage to commanded release
 
-These are computational design results. The project has no measured release performance or flight qualification. Catalog ratings, synthetic mission targets and tolerance/material allocations retain their declared boundaries. The additional 7 kg is included in mission mass and has no spatial assignment in CAD inertia.
+1. **Retain** each satellite independently in its storage cell.
+2. **Feed** the selected payload into the guided transfer cradle.
+3. **Dock** the captive pallet to the launch carrier and prove receiving custody.
+4. **Accelerate** using the finite linear synchronous motor and local energy source.
+5. **Release** the satellite at the commanded departure condition.
+6. **Arrest and recover** the retained carrier and pallet for the next cycle.
 
-## Reproduce and inspect
+<p><a href="docs/assets/acr1/polish/operating_sequence.png"><img src="docs/assets/acr1/polish/operating_sequence.webp" alt="Four CAD-derived states showing storage, guided feed, pallet handoff and carrier launch" width="900"></a></p>
 
-The self-contained [ACR1 package](validation/acr1/README.md) includes exact sources, inputs, all eight native/STEP states, result JSON, mission command/replay outputs, software locks and hash manifests. Its portable runner executes selected examples in a new scratch directory.
+*CAD-derived operating sequence. The animation explains the mechanism; the linked motion and interlock records contain its computational checks.*
+
+[Feeder detail](docs/assets/acr1/polish/feeder_detail_annotated.png) · [Native assembly states](validation/acr1/cad/release/FINAL_CAD_MANIFEST.json) · [Motion checks](validation/acr1/cad/release/MOTION_VERIFICATION.json) · [Command and fault specification](validation/acr1/analysis/TRANSFER_INTERLOCKS.json)
+
+## Engineering results
+
+| Study | Result | Inspect |
+|:--|:--|:--|
+| Mechanical integration | Eight native/STEP assembly states; 154 accepted sampled motion/refinement cases | [CAD exchange and verification](validation/acr1/cad/release/) |
+| Launch and recovery | Eighteen source-coupled cases across nominal/adverse source conditions and 3/20/100 µH sensitivities | [Coupled shot and numerical audit](validation/acr1/verification/COUPLED_SHOT_REVIEW.md) |
+| Chassis response | Matched ANSYS/CalculiX bare-chassis static comparison: 0.143% primary peak-displacement difference | [Loads, meshes and native-result readback](docs/ACR1_ANSYS_CROSSCHECK.md) |
+| Orbital delivery | Twelve-release, common-target campaigns with changing host mass and recoil; nine native Orekit replay cases | [Mission study](validation/acr1/mission/MISSION_REPORT.md) |
+| Installed-resource trade | Target-dependent service value; the tested preplanned cases favour ideal ground-pretrimmed springs on fuel and initial wet mass | [Same-target comparison](validation/acr1/mission/MISSION_RESULTS.csv) |
+
+The study evaluates the complete retained-carrier system boundary, including its installed burden. It is a **computational design study**; measured release distributions, environmental qualification and provider acceptance belong to physical development. Each linked analysis states its assumptions and numerical checks.
+
+## CAD, source and reproducibility
+
+[Dimensioned A3 drawing set](cad/drawings/acr1/ACR1_DRAWING_SET.pdf) · [Drawing/BOM index](docs/ACR1_DRAWING_INDEX.md) · [Numerical methods](docs/SKILLS.md) · [Reproduction guide](validation/acr1/REPRODUCTION.md)
 
 ```bash
 python3 validation/acr1/check_capture.py
 python3 validation/acr1/reproduce.py interlocks --output /tmp/volley-acr1-interlocks
-python3 tools/prepublish_gate.py --all
 ```
 
-The interlock example needs only Python 3.12; scientific/native examples have their own [pinned dependencies and instructions](validation/acr1/REPRODUCTION.md). Large raw solver supplement availability is recorded explicitly in its asset inventory. Vendor documents are linked to their publishers.
+The engineering package contains configuration parameters, native CAD/STEP states, source, captured numerical outputs, software identities and manifests. The interlock example uses Python 3.12; native and scientific examples list their additional dependencies.
 
-## Extended engineering studies
+## Research beyond the academic reference
 
-[ANSYS–CalculiX chassis cross-check](docs/ACR1_ANSYS_CROSSCHECK.md) · matched 3.01048 kN opposed-patch loads, three mesh levels and independently read native results.
+Higher-speed launchers and alternative payload interfaces are evaluated as separate configurations. The [research overview](docs/HIGHER_SPEED_DESIGN_SPACE.md) connects the current-model speed envelope, published experimental comparison, new 10 m/s designs and ideal lunar-delivery calculations. These studies preserve the Gen5 reference and its **1–3 m/s** evaluated command cases.
 
-[Structural modes and motor normal reaction](docs/ACR1_STRUCTURAL_DYNAMICS.md) · [Native release/contact dynamics](docs/ACR1_RELEASE_DYNAMICS.md) · [Thermal interfaces and source derating](docs/ACR1_THERMAL_ENVIRONMENT.md) · [Finite-host lunar campaigns](docs/PROGRAMME_STUDIES_ACR1.md) · [First-test procedures and fixture STEP](docs/ACR1_FIRST_TEST_PACKAGE.md)
+[Structural dynamics](docs/ACR1_STRUCTURAL_DYNAMICS.md) · [Release dynamics](docs/ACR1_RELEASE_DYNAMICS.md) · [Thermal study](docs/ACR1_THERMAL_ENVIRONMENT.md) · [First-test fixtures and procedures](docs/ACR1_FIRST_TEST_PACKAGE.md)
 
-These separately identified studies add native solver histories, refinement, resource flowdown and a concrete path to subsequent measurements. Their operating conditions and source identities accompany each result.
+## Explore the project
 
-### Partial-occupancy mission comparison
+| Repository | Purpose |
+|:--|:--|
+| **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Integrated system, engineering results, CAD and project website |
+| **[VOLLEY Labs](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | Research experiments, mechanism alternatives and design lineage |
+| **[VOLLEY Thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis)** | Standalone academic report, presentation and supporting engineering record |
+| **[VOLLEY Paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | IEEE-formatted manuscript, local methods, data and reproduction |
 
-The [two/four-payload supplement](validation/acr1_partial_occupancy/REPORT.md) adds 28 finite-force candidate trajectories and 17 native Orekit replays. Its [common-case tables](validation/acr1_partial_occupancy/technical/README.md) compare two, four and twelve deployments while retaining the complete hardware mass. The accepted twelve-payload academic issue remains unchanged.
-
-[Higher-speed design constraints and Gen6 attached-shoe trade](docs/HIGHER_SPEED_DESIGN_SPACE.md) · unchanged-configuration screen and separately identified research bounds.
-
-## Engineering lineage
-
-Original Gen5's 12.448 m/s finite-geometry screen, 16.029 m/s periodic model, 126.562 kg represented dry mass and original 11 mm packaging shortfall remain **historical, separately identified evidence**. The FM08 mixed-size lead-screw subsystem and seven-concept ranking explain architecture development; they do not replace the integrated ACR1 twelve-3U geometry.
-
-[Original Gen5 technical record](docs/GEN5_TECHNICAL_BASELINE.json) · [Earlier FM08 feeder and trade](validation/selected_feeder/README.md) · [Pre-ACR1 front page](README_PRE_ACR1_2026-10-23.md) · [Research archive](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)
-
-## Project editions
-
-[Thesis: report and presentation](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) · [Paper: manuscript and methods](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper) · [Labs: alternatives and investigations](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)
-
-The manuscript remains IEEE-formatted and unsubmitted; a venue is unselected. Mixed-size Gen6, lunar, higher-speed and hardware-development studies retain their own identities and acceptance criteria. The current engineering release does not imply programme-wide completion.
+[Design history](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab) · [Scientific figure conventions](docs/FIGURE_STANDARD.md) · [Citation](CITATION.cff) · [Licensing](LICENSING.md)

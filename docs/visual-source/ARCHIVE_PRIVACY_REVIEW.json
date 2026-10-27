@@ -4,7 +4,7 @@
   "archives": [
     {
       "path": "docs/downloads/VOLLEY_ACR1_film_sources.zip",
-      "sha256": "2c769745a3830c1feb7998b49c79f8b308c7b4412a6c34f3d83e654530d58ce6",
+      "sha256": "6952962453b9f627596c1d3f2b7ad62629bc782dbe6908608559353ced28bfff",
       "entries": 63,
       "academic_binaries": [],
       "coauthor_string_hits": [],
@@ -21,6 +21,6 @@
       "result": "passed"
     }
   ],
-  "method": "Every uncompressed ZIP member inspected for academic binaries and coauthor strings; third-party font notice retained.",
-  "academic_downloads": "External Thesis ED1 URLs only."
+  "method": "ZIP member inspection for unintended academic binaries, personal schedules, private storage links and coauthor audience boundary; third-party font notice retained.",
+  "academic_downloads": "Academic documents are linked to their independently versioned Thesis editions."
 }

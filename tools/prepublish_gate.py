@@ -251,6 +251,8 @@ def main() -> int:
         print(f"FAIL: cannot determine publication set: {exc}", file=sys.stderr)
         return 2
     errors: list[str] = []
+    from public_audience import audit_publication
+    errors.extend(audit_publication(ROOT, paths))
     check_evidence_tracking(errors)
     check_outer_hashes(errors)
     for name in paths:

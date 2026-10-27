@@ -1,6 +1,6 @@
 # A15: twelve-payload orbital screen
 
-**Status: R1 rerun in GMAT R2026a on 30 September 2026; partial evidence.** This study tests orbital outcomes for twelve specified post-release states. It does not simulate a sequence of physical launches from a changing host. The [raw R1 reports, scripts, logs and independent review](https://drive.google.com/file/d/1aHwr5eszoDd9ywXlpL9qCrOCdsdMIxqD/view) are retained together. [Run instructions](gmat/RUN_POEM.md) identify the current generator and parser.
+**Status: R1 rerun in GMAT R2026a on 30 September 2026; partial evidence.** This study tests orbital outcomes for twelve specified post-release states. It does not simulate a sequence of physical launches from a changing host. The raw R1 reports, scripts, logs and independent review (retained separately) are retained together. [Run instructions](gmat/RUN_POEM.md) identify the current generator and parser.
 
 The previous A15 report used a 16.388 m/s input and treated a 367° raw RAAN difference as fleet plane spread. A circular spread cannot exceed 360°. That report also relied on a generator with a mixed kilometre/SI mean-motion calculation and a mean anomaly written as GMAT true anomaly. Its R2022a raw output is absent from the checked repository, so the earlier numerical verdicts cannot be verified or reused. The earlier report is retained outside this publication candidate for provenance. This file records the corrected 16.029 m/s R1 run only.
 

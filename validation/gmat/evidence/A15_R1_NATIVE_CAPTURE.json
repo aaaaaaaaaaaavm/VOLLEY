@@ -4,7 +4,7 @@
   "reparsed_date": "2026-10-16",
   "native_execution_repeated_today": false,
   "capture_zip_sha256": "a6b1ebeb0a94926d113c6da4373a89510b55a3194483e9e48796aa1406b450f1",
-  "raw_bundle_url": "https://drive.google.com/file/d/1aHwr5eszoDd9ywXlpL9qCrOCdsdMIxqD/view",
+  "raw_bundle_url": null,
   "files": {
     "review_sources/VOLLEY/validation/gmat/output/r1/sat11.txt": {
       "bytes": 14182658,
@@ -118,5 +118,6 @@
       "bytes": 14672,
       "sha256": "bb8888adfc3a5eab93fe8f116c8b0087977d80390fcef7566d89370cc4c7ea29"
     }
-  }
+  },
+  "raw_bundle_distribution": "Separate retained solver archive; not bundled in this checkout."
 }

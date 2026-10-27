@@ -2,7 +2,7 @@
 
 This run checks a specified set of twelve payload orbits after ideal instantaneous releases. It does not simulate a loading mechanism, a release force history, or a host that changes state after each shot. The current reproducible R1 input uses a 4 kg payload, a 300 kg retained host, a 16.029 m/s *relative* separation speed, and shots spaced 1200 s apart.
 
-The earlier A15 report used a 16.388 m/s input and reported a 367° RAAN spread. That number is not a valid circular spread. Its R2022a report files are absent from this checkout, so those verdicts remain historical, unverified claims. The current R2026a R1 raw reports and review are in the [versioned audit bundle](https://drive.google.com/file/d/1aHwr5eszoDd9ywXlpL9qCrOCdsdMIxqD/view). R2 and R3 orbit definitions still lack verified provenance.
+The earlier A15 report used a 16.388 m/s input and reported a 367° RAAN spread. That number is not a valid circular spread. Its R2022a report files are absent from this checkout, so those verdicts remain historical, unverified claims. The current R2026a R1 raw reports and review are in the versioned audit bundle (retained separately). R2 and R3 orbit definitions still lack verified provenance.
 
 ## Generate the inputs
 

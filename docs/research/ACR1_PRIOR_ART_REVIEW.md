@@ -45,4 +45,4 @@ The accessible core quantitative comparison is delivered. **BB-21 remains partia
 
 Q-SAT DOI 10.1016/j.actaastro.2021.03.026 remains a broader electromagnetic-separation lead with metadata/abstract evidence in the existing record. No numerical Q-SAT or flight-performance claim is introduced. A systematic patent/database search, complete residual full-text acquisition, and independent human review are outside this delivered automated comparison and remain visibly separate. None of those boundaries invalidates the bounded completed computational study.
 
-The paper remains unsubmitted. This review creates no approval, acceptance or publication status; Friday 30 October is the planned editorial freeze, not a completed event.
+The manuscript is IEEE-formatted and unsubmitted. This literature comparison is separate from peer review.
