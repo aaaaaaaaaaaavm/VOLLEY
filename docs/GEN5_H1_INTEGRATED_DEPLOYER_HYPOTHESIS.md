@@ -1,6 +1,6 @@
 # H1 — whole-system reassessment of a captive passive armature
 
-**Status: unselected research hypothesis, 10 October 2026.** This is a proposed *reassessment* of [VOLLEY-lab PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-19_induction_drive_legacy_study.md) after the evaluated Gen5 snapshot. PII-19 already used a light captive passive plate and left the spacecraft unmodified. H1 asks whether coupling that old drive idea to a credible shared structure, feed and matched mission changes its whole-system result. It is neither a revised Gen5 performance claim nor the Gen6 1 km/s programme. No H1 CAD, drive rating, twelve-shot trajectory, supplier mass or hardware test exists. No mechanism or patent novelty is claimed.
+**Status: unselected research hypothesis, 10 October 2026.** This is a proposed *reassessment* of [VOLLEY-lab PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/archive/concepts/PII-19_induction_drive_legacy_study.md) after the evaluated Gen5 snapshot. PII-19 already used a light captive passive plate and left the spacecraft unmodified. H1 asks whether coupling that old drive idea to a credible shared structure, feed and matched mission changes its whole-system result. It is neither a revised Gen5 performance claim nor the Gen6 1 km/s programme. No H1 CAD, drive rating, twelve-shot trajectory, supplier mass or hardware test exists. No mechanism or patent novelty is claimed.
 
 ## Why a motor improvement alone cannot solve the present problem
 
@@ -44,7 +44,7 @@ The reason to investigate moving mass is physical, not a predicted redesign resu
 - [US10538348B2](https://patents.google.com/patent/US10538348B2/en) describes captive satellite restraint and pusher elements; the presence of broad related claims prevents an unsupported novelty assertion here.
 - [NASA's ST5 structural review](https://ntrs.nasa.gov/citations/20070016620) documents a multifunctional electronics enclosure and integrated deployment mechanism.
 - VOLLEY's own [A30](../validation/A30_rail_drive.md) and [A31](../validation/A31_plate_drive_normal_force.md) already explored plate induction drive. H1's contribution, if one survives the evidence programme, would have to be a **specific validated system integration and trade**, not "electromagnetic deployment," "a pusher," or "a passive armature."
-- [VOLLEY-lab PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/PII-19_induction_drive_legacy_study.md) already proposed a deployer-owned passive plate shuttle, with no spacecraft modification. Its pulse source and installed-mass problem are direct antecedents and must not be hidden by calling H1 a new launcher.
+- [VOLLEY-lab PII-19](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/archive/concepts/PII-19_induction_drive_legacy_study.md) already proposed a deployer-owned passive plate shuttle, with no spacecraft modification. Its pulse source and installed-mass problem are direct antecedents and must not be hidden by calling H1 a new launcher.
 
 This is an initial source screen, not a freedom-to-operate or exhaustive patent review. The IEEE paper should not describe H1 as a demonstrated invention.
 

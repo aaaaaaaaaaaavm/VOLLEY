@@ -22,3 +22,11 @@ The gate is intentionally incremental for routine pushes because older historica
 ## Public audience boundary
 
 Public pages contain engineering explanations, methods, results, references, reproducibility instructions and identified release history. Personal schedules, submission correspondence, rehearsal logistics, grading forecasts, private storage links and conversation excerpts belong in private project records. They must not enter README files, generated pages, metadata, issues, release text, document archives or packaged sources. Release dates identify completed artifacts; personal deadlines do not describe a technical result.
+
+## Maintained front pages and archive navigation
+
+The repository front page is an independently maintained document. Routine source, result or document updates change the relevant content and preserve the established layout. Structural redesign requires an explicit maintainer decision; evidence export and publication are not authority to regenerate a landing page. The checked layout specification records the maintained section structure.
+
+The flagship describes the whole project and its generation history. Labs retains a complete catalogue with recent work highlighted. Academic repositories follow their own manuscript/report structure and carry local evidence. Superseded ideas remain discoverable through the archive. File-location changes update links, code paths, indexes and affected manifests before publication. Immutable scientific captures retain their identities.
+
+Run `python tools/check_repository_layout.py --write` after staging a changed file inventory, then stage the refreshed repository map. The publication gate checks section structure, navigation freshness and full Labs study coverage.

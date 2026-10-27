@@ -473,20 +473,30 @@ def build(kind, manifest, readme, out_root, commit):
     # the .cls, the built PDF, the CV and the archive. Wiping the destination, which is
     # what this did until 2026-08-13, would delete the paper.
     for _, rel in manifest:
+        if rel == "README.md":
+            continue
         victim = os.path.join(dest, rel)
         if os.path.isdir(victim):
             shutil.rmtree(victim)
         elif os.path.exists(victim):
             os.remove(victim)
     os.makedirs(dest, exist_ok=True)
-    n = sum(copy(src, os.path.join(dest, rel)) for src, rel in manifest)
-    with open(os.path.join(dest, "README.md"), "w") as f:
-        f.write(banner(commit, kind) + "\n---\n\n" + readme)
+    n = sum(copy(src, os.path.join(dest, rel)) for src, rel in manifest if rel != "README.md")
+    landing = os.path.join(dest, "README.md")
+    if not os.path.exists(landing):
+        with open(landing, "w") as f:
+            f.write(readme)
+    else:
+        print("  Preserved independently maintained README.md")
     with open(os.path.join(dest, ".gitignore"), "w") as f:
         f.write("__pycache__/\n*.pyc\n*.aux\n*.log\n*.out\npaper.pdf\n")
     if kind == "thesis":
         os.makedirs(os.path.join(dest, "university"), exist_ok=True)
-        with open(os.path.join(dest, "university", "README.md"), "w") as f:
+        university_readme = os.path.join(dest, "university", "README.md")
+        if os.path.exists(university_readme):
+            print("  Preserved independently maintained university/README.md")
+            return
+        with open(university_readme, "w") as f:
             f.write("# University-specific material\n\n"
                     "**This directory is never touched by `export_companion.py`.** Submission "
                     "forms, templates, formatting mandates and viva material go here.\n\n"

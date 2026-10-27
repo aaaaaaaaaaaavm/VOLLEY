@@ -253,6 +253,11 @@ def main() -> int:
     errors: list[str] = []
     from public_audience import audit_publication
     errors.extend(audit_publication(ROOT, paths))
+    from check_repository_layout import check as check_repository_layout
+    try:
+        check_repository_layout(ROOT)
+    except ValueError as exc:
+        errors.append(str(exc))
     check_evidence_tracking(errors)
     check_outer_hashes(errors)
     for name in paths:
