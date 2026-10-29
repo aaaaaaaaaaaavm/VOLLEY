@@ -114,7 +114,7 @@ Higher-speed launchers and alternative payload interfaces are evaluated as separ
 |:--|:--|
 | **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Integrated system, engineering results, CAD and project website |
 | **[VOLLEY Labs](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | Research experiments, mechanism alternatives and design lineage |
-| **[VOLLEY Thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis)** | Standalone academic report, presentation and supporting engineering record |
+| **[VOLLEY Thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis)** | Standalone academic report, [technical presentation](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/tree/main/editions/presentation-2026-10) and supporting engineering record |
 | **[VOLLEY Paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | IEEE-formatted manuscript, local methods, data and reproduction |
 
 [Repository and archive map](docs/REPOSITORY_MAP.md) · [Design history](docs/HISTORY.md) · [Scientific figure conventions](docs/FIGURE_STANDARD.md) · [Citation](CITATION.cff) · [Licensing](LICENSING.md)
