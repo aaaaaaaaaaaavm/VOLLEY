@@ -147,13 +147,9 @@ PAPER_MANIFEST = [
     # HAS BEEN SELECTED, so there is no transfer to anticipate, and a licence cannot be held
     # open against a hypothetical. If a venue is selected and requires a transfer, that is a
     # decision taken then, on the accepted version, and recorded then.
-    #
-    # LICENSE-MIT-superseded is still shipped, under its own name, because the repository was
-    # MIT for a period and deleting that would erase the history rather than supersede it.
     ("LICENSE", "LICENSE"),
     ("NOTICE", "NOTICE"),
     ("LICENSING.md", "LICENSING.md"),
-    ("LICENSE-MIT-superseded", "LICENSE-MIT-superseded"),
     ("CITATION.cff", "CITATION.cff"),
 ]
 
@@ -178,7 +174,6 @@ THESIS_MANIFEST = [
     ("LICENSE", "LICENSE"),
     ("NOTICE", "NOTICE"),
     ("LICENSING.md", "LICENSING.md"),
-    ("LICENSE-MIT-superseded", "LICENSE-MIT-superseded"),
     ("CITATION.cff", "CITATION.cff"),
 ]
 

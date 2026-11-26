@@ -105,8 +105,8 @@ down what stopped it.
 Attribution requires credit, a link to the licence, and **an indication of whether changes were
 made**.
 
-**Not retroactive:** snapshots taken before this change remain available under the MIT licence
-they carried at the time, retained at [`LICENSE-MIT-superseded`](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab/blob/main/LICENSE-MIT-superseded).
+Earlier snapshots retain the licence terms and attribution notices carried by
+their original revisions.
 
 This repository carries copies of VOLLEY analysis code under `reference/volley/`. CC BY 4.0 does
 not license patent rights, which is why a patent-granting licence was not used here.

@@ -35,7 +35,6 @@ Root files contain project navigation, citation, licensing, repository configura
 - [GO3_ACADEMIC_RELEASE_REVIEW.md](../GO3_ACADEMIC_RELEASE_REVIEW.md)
 - [IEEE_AND_CAD_REMAINING_WORK.md](../IEEE_AND_CAD_REMAINING_WORK.md)
 - [LICENSE](../LICENSE)
-- [LICENSE-MIT-superseded](../LICENSE-MIT-superseded)
 - [LICENSING.md](../LICENSING.md)
 - [MARKET_AND_CUSTOMER_FIT.md](../MARKET_AND_CUSTOMER_FIT.md)
 - [NOTICE](../NOTICE)

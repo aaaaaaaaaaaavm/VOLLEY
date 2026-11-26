@@ -22,4 +22,4 @@ The [thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis) and [paper](https:
 
 ## Historical snapshots
 
-Earlier snapshots retain the rights granted with them. [The superseded MIT text](LICENSE-MIT-superseded) is preserved for that history; current publication does not revoke previously granted rights. Source and experiment archives retain their dated licences and attribution records.
+Earlier snapshots retain the licence terms and attribution notices carried by their original revisions.
