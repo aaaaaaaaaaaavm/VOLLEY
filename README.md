@@ -106,6 +106,10 @@ The engineering package contains configuration parameters, native CAD/STEP state
 
 Higher-speed launchers and alternative payload interfaces are evaluated as separate configurations. The [research overview](docs/HIGHER_SPEED_DESIGN_SPACE.md) connects the current-model speed envelope, published experimental comparison, new 10 m/s designs and ideal lunar-delivery calculations. These studies preserve the Gen5 reference and its **1–3 m/s** evaluated command cases.
 
+The Gen6 programme starts with an instrumented mixed 1U/3U prototype study. Feed and docking tests would measure transfer forces and lock sequencing. Integrated tests would compare measured release, carrier arrest and recovery against the model. See the [prototype readiness review](docs/PROTOTYPE_READINESS.md).
+
+An orbital transfer or rideshare operator is the first customer to investigate. A candidate use case is a mission that needs to revise individual delivery targets after integration. The [market and payload review](MARKET_AND_CUSTOMER_FIT.md) sets out what a buyer would need to verify against host manoeuvres and conventional deployment.
+
 [Structural dynamics](docs/ACR1_STRUCTURAL_DYNAMICS.md) · [Release dynamics](docs/ACR1_RELEASE_DYNAMICS.md) · [Thermal study](docs/ACR1_THERMAL_ENVIRONMENT.md) · [First-test fixtures and procedures](docs/ACR1_FIRST_TEST_PACKAGE.md)
 
 ## Explore the project
@@ -114,7 +118,9 @@ Higher-speed launchers and alternative payload interfaces are evaluated as separ
 |:--|:--|
 | **[VOLLEY](https://github.com/aaaaaaaaaaaavm/VOLLEY)** | Integrated system, engineering results, CAD and project website |
 | **[VOLLEY Labs](https://github.com/aaaaaaaaaaaavm/VOLLEY-lab)** | Research experiments, mechanism alternatives and design lineage |
-| **[VOLLEY Thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis)** | Standalone academic report, [technical presentation](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/tree/main/editions/presentation-2026-10) and supporting engineering record |
-| **[VOLLEY Paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | IEEE-formatted manuscript, local methods, data and reproduction |
+| **[VOLLEY Thesis](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis)** | Archived academic report, [technical presentation](https://github.com/aaaaaaaaaaaavm/VOLLEY-thesis/tree/main/editions/presentation-2026-10) and supporting engineering record |
+| **[VOLLEY Paper](https://github.com/aaaaaaaaaaaavm/VOLLEY-paper)** | Unsubmitted IEEE-formatted manuscript, local methods, data and reproduction |
+
+The [engineering evidence toolkit](https://github.com/aaaaaaaaaaaavm/engineering-evidence-toolkit) and [scientific run registry](https://github.com/aaaaaaaaaaaavm/scientific-run-registry) document transferable ways to organise model inputs and results. [GatewayCX](https://github.com/aaaaaaaaaaaavm/GatewayCX) studies communications. It could inform tracking and data handover in a future mission.
 
 [Repository and archive map](docs/REPOSITORY_MAP.md) · [Design history](docs/HISTORY.md) · [Scientific figure conventions](docs/FIGURE_STANDARD.md) · [Citation](CITATION.cff) · [Licensing](LICENSING.md)
